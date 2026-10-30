@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2025-09-25T20:05:06.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "title": "Check for Understanding",
+    "long_instructions": "What are the most important things a protocol needs to account for when ensuring packets are reliably transmitted and reassembled?",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "encrypted_solution": "YB6rZyrJaJe/N89yASFaXdEXdwCPc5nosEGbjaoeqTEqQbzd/PaiPsdRRiPl\nL8pxBBwh9d49AmyyF3pa06DwU97O0F7W3DA+oOy9qL8xKD6mFPmSDwgYTo1N\nlYf2yAoNTF1XvlGuKWSWpwEbj5nYD8Zxir3W9lhpB5lX5HuHEWXwatnWRteQ\nzrAofOSVVj1d8awVnawfzZcdM6/DUrla/4M1kCFjdddsfPq2y45NBUvdqNcs\nxuekjWQ+1QGtCRv9B1JA3/0TqAMEgrhrE8t9RN9NNhtJwEf3+MsivoOVGSEK\n1ozh+NLO2DnXKg/iVcdMNcbhmra07tp7hEhxRuUylQQTpF27q12yUAwpkQU4\nMfhl2RKbytwH3o3I8v64eiSQcSo7L8JBg3b2g0lile7biHWU4i0jbP12+3p8\nyhngaPt2i6KbQngC4lMRIhmbqJuro952VJlf2oURpll07BYdz0u55WjPAibT\ncqSKDRbnmDlUF0L9HwQC3a7JLEZ4uWOQrDACWPHGZZKwZVBEqPFqwFaDELbv\n7RT5sqKNXd+B+KjFT664v0R0oxGzbUtWQN/nKd02WkeQAdTnWSMBlLNUfQ==\n",
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T20:05:06.932+00:00\",\"changed\":[\"cloned from \\\"networks-internet-lesson5-level2_2025\\\"\"],\"cloned_from\":\"networks-internet-lesson5-level2_2025\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

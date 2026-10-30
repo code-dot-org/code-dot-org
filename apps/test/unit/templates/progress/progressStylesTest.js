@@ -1,150 +1,123 @@
-import {expect} from '../../../util/reconfiguredChai';
-import {levelProgressStyle} from '@cdo/apps/templates/progress/progressStyles';
-import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
-import color from '@cdo/apps/util/color';
+import {
+  levelHoverClass,
+  levelProgressStyle,
+} from '@cdo/apps/templates/progress/progressStyles';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
+
+// Semantic-token strings the live styles resolve to (see progressStyles.js).
+// Tests previously asserted on exact legacy hex literals from util/color;
+// we now check on the matching CSS variable strings.
+const NEUTRAL_BG = 'var(--background-neutral-primary)';
+const NEUTRAL_BORDER = 'var(--borders-neutral-primary)';
+const SUCCESS_BG = 'var(--background-success-primary)';
+const SUCCESS_BG_MID = 'var(--background-success-mid)';
+const SUCCESS_BORDER = 'var(--background-success-primary)';
+const ERROR_BG = 'var(--background-error-primary)';
+const ERROR_BORDER = 'var(--borders-error-primary)';
 
 describe('progressStyles', () => {
   describe('levelProgressStyle', () => {
-    it('when level is assessment and levelStatus is not tried has expected background and border color', () => {
-      const progressStyle = levelProgressStyle(
-        LevelStatus.not_tried,
-        LevelKind.assessment
-      );
+    // Assessment levels no longer get their own (purple) styling; they are
+    // denoted by a star badge instead. All levels style by status alone.
+    it('when levelStatus is not tried has expected background and border color', () => {
+      const progressStyle = levelProgressStyle(LevelStatus.not_tried);
 
-      expect(progressStyle.backgroundColor).to.equal(color.level_not_tried);
-      expect(progressStyle.borderColor).to.equal(color.lighter_gray);
+      expect(progressStyle.backgroundColor).toBe(NEUTRAL_BG);
+      expect(progressStyle.borderColor).toBe(NEUTRAL_BORDER);
     });
 
-    it('when level is assessment and levelStatus is attempted has expected background and border color', () => {
-      const progressStyle = levelProgressStyle(
-        LevelStatus.attempted,
-        LevelKind.assessment
-      );
+    it('when levelStatus is attempted has expected background and border color', () => {
+      const progressStyle = levelProgressStyle(LevelStatus.attempted);
 
-      expect(progressStyle.backgroundColor).to.equal(color.level_not_tried);
-      expect(progressStyle.borderColor).to.equal(color.level_submitted);
+      expect(progressStyle.backgroundColor).toBe(NEUTRAL_BG);
+      expect(progressStyle.borderColor).toBe(SUCCESS_BORDER);
     });
 
-    it('when level is assessment and levelStatus is submitted has expected background and border color', () => {
-      const progressStyle = levelProgressStyle(
-        LevelStatus.submitted,
-        LevelKind.assessment
-      );
+    it('when levelStatus is submitted has expected background and border color', () => {
+      const progressStyle = levelProgressStyle(LevelStatus.submitted);
 
-      expect(progressStyle.backgroundColor).to.equal(color.level_submitted);
-      expect(progressStyle.borderColor).to.equal(color.level_submitted);
+      expect(progressStyle.backgroundColor).toBe(SUCCESS_BG);
+      expect(progressStyle.borderColor).toBe(SUCCESS_BORDER);
     });
 
-    it('when level is assessment and levelStatus is completed has expected background and border color', () => {
+    it('when levelStatus is completed assessment has expected background and border color', () => {
       const progressStyle = levelProgressStyle(
-        LevelStatus.completed_assessment,
-        LevelKind.assessment
+        LevelStatus.completed_assessment
       );
 
-      expect(progressStyle.backgroundColor).to.equal(color.level_submitted);
-      expect(progressStyle.borderColor).to.equal(color.level_submitted);
+      expect(progressStyle.backgroundColor).toBe(SUCCESS_BG);
+      expect(progressStyle.borderColor).toBe(SUCCESS_BORDER);
     });
 
-    it('when level is assessment and levelStatus is perfect has expected background and border color', () => {
-      const progressStyle = levelProgressStyle(
+    it('when levelStatus is perfect has expected background and border color', () => {
+      const progressStyle = levelProgressStyle(LevelStatus.perfect);
+
+      expect(progressStyle.backgroundColor).toBe(SUCCESS_BG);
+      expect(progressStyle.borderColor).toBe(SUCCESS_BORDER);
+    });
+
+    it('when levelStatus is free_play_complete has expected background and border color', () => {
+      const progressStyle = levelProgressStyle(LevelStatus.free_play_complete);
+
+      expect(progressStyle.backgroundColor).toBe(SUCCESS_BG);
+      expect(progressStyle.borderColor).toBe(SUCCESS_BORDER);
+    });
+
+    it('when levelStatus is passed has expected background and border color', () => {
+      const progressStyle = levelProgressStyle(LevelStatus.passed);
+
+      expect(progressStyle.backgroundColor).toBe(SUCCESS_BG_MID);
+      expect(progressStyle.borderColor).toBe(SUCCESS_BG_MID);
+    });
+
+    it('when levelStatus is reviewed rejected has expected background and border color', () => {
+      const progressStyle = levelProgressStyle(LevelStatus.review_rejected);
+
+      expect(progressStyle.backgroundColor).toBe(ERROR_BG);
+      expect(progressStyle.borderColor).toBe(ERROR_BORDER);
+    });
+
+    it('when levelStatus is reviewed completed has expected background and border color', () => {
+      const progressStyle = levelProgressStyle(LevelStatus.review_accepted);
+
+      expect(progressStyle.backgroundColor).toBe(SUCCESS_BG);
+      expect(progressStyle.borderColor).toBe(SUCCESS_BORDER);
+    });
+  });
+
+  describe('levelHoverClass', () => {
+    it('treats every finished status as completed', () => {
+      [
         LevelStatus.perfect,
-        LevelKind.assessment
-      );
-
-      expect(progressStyle.backgroundColor).to.equal(color.level_submitted);
-      expect(progressStyle.borderColor).to.equal(color.level_submitted);
-    });
-
-    it('when level is not assessment and levelStatus is not tried has expected background and border color', () => {
-      const progressStyle = levelProgressStyle(
-        LevelStatus.not_tried,
-        LevelKind.level
-      );
-
-      expect(progressStyle.backgroundColor).to.equal(color.level_not_tried);
-      expect(progressStyle.borderColor).to.equal(color.lighter_gray);
-    });
-
-    it('when level is not assessment and levelStatus is attempted has expected background and border color', () => {
-      const progressStyle = levelProgressStyle(
-        LevelStatus.attempted,
-        LevelKind.level
-      );
-
-      expect(progressStyle.backgroundColor).to.equal(color.level_not_tried);
-      expect(progressStyle.borderColor).to.equal(color.level_perfect);
-    });
-
-    it('when level is not assessment and levelStatus is perfect has expected background and border color', () => {
-      const progressStyle = levelProgressStyle(
-        LevelStatus.perfect,
-        LevelKind.level
-      );
-
-      expect(progressStyle.backgroundColor).to.equal(color.level_perfect);
-      expect(progressStyle.borderColor).to.equal(color.level_perfect);
-    });
-
-    it('when level is not assessment and levelStatus is free_play_complete has expected background and border color', () => {
-      const progressStyle = levelProgressStyle(
-        LevelStatus.free_play_complete,
-        LevelKind.level
-      );
-
-      expect(progressStyle.backgroundColor).to.equal(color.level_perfect);
-      expect(progressStyle.borderColor).to.equal(color.level_perfect);
-    });
-
-    it('when level is not assessment and levelStatus is passed has expected background and border color', () => {
-      const progressStyle = levelProgressStyle(
         LevelStatus.passed,
-        LevelKind.level
-      );
-
-      expect(progressStyle.backgroundColor).to.equal(color.level_passed);
-      expect(progressStyle.borderColor).to.equal(color.level_perfect);
-    });
-
-    it('when level is not assessment and levelStatus is submitted has expected background and border color', () => {
-      const progressStyle = levelProgressStyle(
         LevelStatus.submitted,
-        LevelKind.level
-      );
-
-      expect(progressStyle.backgroundColor).to.equal(color.level_submitted);
-      expect(progressStyle.borderColor).to.equal(color.level_submitted);
-    });
-
-    it('when level is not assessment and levelStatus is completed assessment (submittable) has expected background and border color', () => {
-      const progressStyle = levelProgressStyle(
+        LevelStatus.free_play_complete,
         LevelStatus.completed_assessment,
-        LevelKind.level
-      );
-
-      expect(progressStyle.backgroundColor).to.equal(color.level_submitted);
-      expect(progressStyle.borderColor).to.equal(color.level_submitted);
-    });
-
-    it('when level is not assessment and levelStatus is reviewed rejected has expected background and border color', () => {
-      const progressStyle = levelProgressStyle(
-        LevelStatus.review_rejected,
-        LevelKind.level
-      );
-
-      expect(progressStyle.backgroundColor).to.equal(
-        color.level_review_rejected
-      );
-      expect(progressStyle.borderColor).to.equal(color.level_review_rejected);
-    });
-
-    it('when level is not assessment and levelStatus is reviewed completed has expected background and border color', () => {
-      const progressStyle = levelProgressStyle(
         LevelStatus.review_accepted,
-        LevelKind.level
+      ].forEach(status =>
+        expect(levelHoverClass(status)).toBe('hover-completed')
       );
+    });
 
-      expect(progressStyle.backgroundColor).to.equal(color.level_perfect);
-      expect(progressStyle.borderColor).to.equal(color.level_perfect);
+    it('treats an attempted level as in progress', () => {
+      expect(levelHoverClass(LevelStatus.attempted)).toBe('hover-in-progress');
+    });
+
+    it('gives a rejected review its own class', () => {
+      expect(levelHoverClass(LevelStatus.review_rejected)).toBe(
+        'hover-rejected'
+      );
+    });
+
+    it('falls back to not started for unstarted and unknown statuses', () => {
+      [
+        LevelStatus.not_tried,
+        LevelStatus.dots_disabled,
+        undefined,
+        'a status that does not exist',
+      ].forEach(status =>
+        expect(levelHoverClass(status)).toBe('hover-not-started')
+      );
     });
   });
 });

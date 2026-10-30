@@ -197,7 +197,7 @@ var _collideWith = function(p5Inst, type, target, callback) {
  * @private
  * @param {p5} p5Inst
  * @param {string} type - 'overlap', 'displace', 'collide' or 'bounce'
- *        +Code.org-specific modifictions:
+ *        +CodeAI-specific modifictions:
  *        'isTouching' is the same as 'overlap' (no callback expected)
  *        'bounceOff' is 'bounce' but with other treated as immovable.
  *        'collide' gets treated like 'bounce' when the other is immovable
@@ -255,7 +255,7 @@ function _collideWithOne(p5Inst, type, other, callback) {
     this.collider.updateFromSprite(this);
   }
 
-  // Code.org Customizations:
+  // CodeAI Customizations:
   // Create special behaviors for certain collision types by temporarily
   // overriding type and sprite properties.
   // See another block near the end of this method that puts them back.
@@ -318,7 +318,7 @@ function _collideWithOne(p5Inst, type, other, callback) {
     other.velocity.sub(otherInitialVelocity).add(otherFinalVelocity);
   }
 
-  // Code.org Customizations:
+  // CodeAI Customizations:
   // Restore sprite properties now that velocity changes have been made.
   // See another block before velocity changes that sets these up.
   type = originalType;

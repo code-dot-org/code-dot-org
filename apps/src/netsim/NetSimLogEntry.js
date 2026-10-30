@@ -1,20 +1,22 @@
 /**
  * @overview Simulation entity for router log entries.
  */
-var moment = require('moment');
-var utils = require('../utils'); // Provides Function.prototype.inherits
 var _ = require('lodash');
+var moment = require('moment');
+
 var i18n = require('@cdo/netsim/locale');
-var NetSimEntity = require('./NetSimEntity');
-var Packet = require('./Packet');
-var NetSimNodeFactory = require('./NetSimNodeFactory');
+
+var utils = require('../utils'); // Provides Function.prototype.inherits
+
 var DataConverters = require('./DataConverters');
+var BITS_PER_BYTE = require('./NetSimConstants').BITS_PER_BYTE;
+var NetSimEntity = require('./NetSimEntity');
+var NetSimLogger = require('./NetSimLogger');
+var NetSimNodeFactory = require('./NetSimNodeFactory');
+var Packet = require('./Packet');
 var formatBinary = DataConverters.formatBinary;
 var base64ToBinary = DataConverters.base64ToBinary;
 var binaryToBase64 = DataConverters.binaryToBase64;
-var NetSimLogger = require('./NetSimLogger');
-
-var BITS_PER_BYTE = require('./NetSimConstants').BITS_PER_BYTE;
 var logger = NetSimLogger.getSingleton();
 
 /**

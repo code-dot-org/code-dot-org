@@ -1,0 +1,93 @@
+{
+  "_warnings": [
+    "FORCE_BREAKING on 2026-05-19: 'root.usage.promptTokens' changed from required to optional — hard-breaking contract change; ensure all consumers are updated atomically or schema is pre-production",
+    "FORCE_BREAKING on 2026-05-19: 'root.usage.completionTokens' changed from required to optional — hard-breaking contract change; ensure all consumers are updated atomically or schema is pre-production",
+    "FORCE_BREAKING on 2026-05-19: 'root.usage' changed from required to optional — hard-breaking contract change; ensure all consumers are updated atomically or schema is pre-production"
+  ],
+  "type": "object",
+  "properties": {
+    "text": {
+      "type": "string"
+    },
+    "finishReason": {
+      "type": "string"
+    },
+    "usage": {
+      "type": "object",
+      "properties": {
+        "promptTokens": {
+          "type": "number"
+        },
+        "completionTokens": {
+          "type": "number"
+        },
+        "totalTokens": {
+          "type": "number"
+        },
+        "inputTokens": {
+          "type": "number"
+        },
+        "outputTokens": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    },
+    "output": {},
+    "warnings": {
+      "type": "array",
+      "items": {}
+    },
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "mediaType": {
+            "type": "string"
+          },
+          "base64": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "mediaType",
+          "base64"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "response": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "timestamp": {
+          "type": "string"
+        },
+        "modelId": {
+          "type": "string"
+        },
+        "headers": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "body": {}
+      },
+      "required": [
+        "id",
+        "timestamp",
+        "modelId"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "finishReason"
+  ],
+  "additionalProperties": false,
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

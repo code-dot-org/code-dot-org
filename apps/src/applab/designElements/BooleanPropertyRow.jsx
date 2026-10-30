@@ -1,5 +1,8 @@
+import Checkbox from '@code-dot-org/component-library/checkbox';
+import {Box} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import * as rowStyle from './rowStyle';
 
 export default class BooleanPropertyRow extends React.Component {
@@ -20,24 +23,17 @@ export default class BooleanPropertyRow extends React.Component {
   };
 
   render() {
-    let classes = 'custom-checkbox fa';
-    if (this.state.isChecked) {
-      classes += ' fa-check-square-o';
-    } else {
-      classes += ' fa-square-o';
-    }
-
     return (
-      <div style={rowStyle.container}>
-        <div style={rowStyle.description}>{this.props.desc}</div>
-        <div>
-          <div
-            className={classes}
-            style={rowStyle.checkbox}
-            onClick={this.handleClick}
-          />
-        </div>
-      </div>
+      <Box style={rowStyle.container}>
+        <Checkbox
+          checked={this.state.isChecked}
+          name={''}
+          size="s"
+          label={this.props.desc}
+          onChange={this.handleClick}
+          textThickness="thick"
+        />
+      </Box>
     );
   }
 }

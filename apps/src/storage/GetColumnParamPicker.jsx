@@ -1,10 +1,12 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import msg from '@cdo/locale';
-import color from '../util/color';
+
+import fontConstants from '@cdo/apps/fontConstants';
 import {getStore} from '@cdo/apps/redux';
 import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
-import fontConstants from '@cdo/apps/fontConstants';
+import msg from '@cdo/locale';
+
+import color from '../util/color';
 
 export const ParamType = {
   TABLE: 'TABLE',
@@ -23,12 +25,8 @@ export default class GetColumnParamPicker extends React.Component {
 
   componentDidMount() {
     if (this.props.param === ParamType.COLUMN) {
-      const reduxState = getStore().getState();
       Applab.storage
-        .getColumnsForTable(
-          this.props.table,
-          reduxState.data.tableListMap[this.props.table]
-        )
+        .getColumnsForTable(this.props.table)
         .then(columns => this.setState({columns: columns}));
     }
   }

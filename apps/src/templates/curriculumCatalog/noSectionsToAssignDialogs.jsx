@@ -1,9 +1,11 @@
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
+
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import i18n from '@cdo/locale';
-import Button from '@cdo/apps/templates/Button';
-import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
-import Typography from '@cdo/apps/componentLibrary/typography';
+
 import style from './no_sections_to_assign_dialog.module.scss';
 
 const signInURL = `/users/sign_in?user_return_to=${location.pathname}`;
@@ -69,11 +71,11 @@ const NoSectionsToAssignBaseDialog = ({
 
   return (
     <AccessibleDialog onClose={onClose} className={style.dialogContainer}>
-      <Typography semanticTag="h3" visualAppearance="heading-lg" tabIndex="0">
+      <Typography tabIndex="0" variant="h3" gutterBottom>
         {headerText}
       </Typography>
       <hr />
-      <Typography semanticTag="p" visualAppearance="body-two">
+      <Typography variant="body2" gutterBottom>
         {helpText}
       </Typography>
       <div className={style.lowerContainer}>

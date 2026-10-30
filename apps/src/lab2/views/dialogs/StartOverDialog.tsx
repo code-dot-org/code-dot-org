@@ -1,41 +1,63 @@
-import Typography from '@cdo/apps/componentLibrary/typography';
 import React from 'react';
-import {BaseDialogProps} from './DialogManager';
-import moduleStyles from './start-over-dialog.module.scss';
-const commonI18n = require('@cdo/locale');
+
+import musicI18n from '@cdo/apps/music/locale';
+import {commonI18n} from '@cdo/apps/types/locale';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import {TEXT_BASED_LABS} from '../../constants';
+import {AppName} from '../../types';
+
+import GenericDialog, {GenericDialogProps} from './GenericDialog';
+
+// Lab-specific messages for starting over.
+const LAB_SPECIFIC_MESSAGES: {[appName in AppName]?: string} = {
+  ailab:
+    'Starting over will wipe your current trained model and any training history. This cannot be reversed.',
+  aichat:
+    "This will reset this level to its start state and remove any model customizations or model card information you've added or changed.",
+  music: musicI18n.startOverMusicWorkspace(),
+};
 
 /**
  * Start Over dialog used in Lab2 labs.
  */
-const StartOverDialog: React.FunctionComponent<BaseDialogProps> = ({
+
+export type StartOverDialogProps = GenericDialogProps & {
+  handleConfirm: () => void;
+  handleCancel?: () => void;
+};
+
+const StartOverDialog: React.FunctionComponent<StartOverDialogProps> = ({
   handleConfirm,
-  handleCancel,
+  handleCancel = () => {},
 }) => {
+  const currentAppName = useAppSelector(
+    state => state.lab.levelProperties?.appName
+  );
+
+  const isTextWorkspace =
+    currentAppName && TEXT_BASED_LABS.includes(currentAppName);
+
+  const dialogMessage =
+    (currentAppName && LAB_SPECIFIC_MESSAGES[currentAppName]) ||
+    (isTextWorkspace
+      ? commonI18n.startOverWorkspaceText()
+      : commonI18n.startOverWorkspace());
+
   return (
-    <div className={moduleStyles.startOverDialog}>
-      <Typography semanticTag="h1" visualAppearance="heading-lg">
-        {commonI18n.startOverTitle()}
-      </Typography>
-      <Typography semanticTag="p" visualAppearance="body-two">
-        {commonI18n.startOverWorkspace()}
-      </Typography>
-      <div className={moduleStyles.buttonContainer}>
-        <button
-          className={moduleStyles.cancel}
-          type="button"
-          onClick={handleCancel}
-        >
-          {commonI18n.cancel()}
-        </button>
-        <button
-          className={moduleStyles.startOver}
-          type="button"
-          onClick={handleConfirm}
-        >
-          {commonI18n.startOver()}
-        </button>
-      </div>
-    </div>
+    <GenericDialog
+      title={commonI18n.startOverTitle()}
+      message={dialogMessage}
+      buttons={{
+        confirm: {
+          callback: handleConfirm,
+          text: commonI18n.startOver(),
+        },
+        cancel: {
+          callback: handleCancel,
+        },
+      }}
+    />
   );
 };
 

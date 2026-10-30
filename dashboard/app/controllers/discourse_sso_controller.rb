@@ -40,6 +40,6 @@ class DiscourseSsoController < ApplicationController
     sso.add_groups = add_groups.join(',')
     sso.remove_groups = remove_groups.join(',')
 
-    redirect_to sso.to_url(sso.return_sso_url)
+    redirect_to sso.to_url(sso.return_sso_url), allow_other_host: true
   end
 end

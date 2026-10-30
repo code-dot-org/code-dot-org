@@ -1,0 +1,35 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-08-20T20:36:51.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "aif-y2-ml-fundamentals-lesson8-level1-choice3-2026 + template",
+    "long_instructions": "**☑️ Do This:**\r\n- Edit the values of the delivery date’s features.\r\n- Run your program again.\r\n- Pay attention to how the prediction changes. You’ll answer a question about this later.\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "display_name": "The Philippine Archipelago",
+    "bubble_choice_description": "Wind and waves won't wait.",
+    "thumbnail_url": "https://images.code.org/129f3fb63d43ea512661a9d54920e018-philippines.jpg"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-08-20 20:40:14 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-08-20 20:44:04 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

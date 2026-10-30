@@ -1,6 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 50,
   "created_at": "2022-09-19T23:01:04.000Z",
   "level_num": "custom",
@@ -90,7 +89,7 @@
     "debugger_disabled": "true",
     "hide_animation_mode": "false",
     "pause_animations_by_default": "false",
-    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"91f10853-18cd-4566-b11e-e0ec3a42b694\",\r\n    \"835b990e-3801-47b7-a12e-5c0979be890e\",\r\n    \"32670e18-1679-4c1d-b293-b7cb3871c22a\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"91f10853-18cd-4566-b11e-e0ec3a42b694\": {\r\n      \"name\": \"frog\",\r\n      \"sourceUrl\": \"https://studio.code.org/media?u=https%3A%2F%2Fstudio.code.org%2Fv3%2Fanimations%2FbxS7XEWi1VaoTNG6cCQcDA%2F91f10853-18cd-4566-b11e-e0ec3a42b694.png%3Fversion%3DRRKaOh.vyil2LwCZ9PFimdAdmbwLmbTX\",\r\n      \"frameSize\": {\r\n        \"x\": 104,\r\n        \"y\": 70\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"RRKaOh.vyil2LwCZ9PFimdAdmbwLmbTX\"\r\n    },\r\n    \"835b990e-3801-47b7-a12e-5c0979be890e\": {\r\n      \"name\": \"mushroom\",\r\n      \"sourceUrl\": \"https://studio.code.org/media?u=https%3A%2F%2Fstudio.code.org%2Fv3%2Fanimations%2FbxS7XEWi1VaoTNG6cCQcDA%2F835b990e-3801-47b7-a12e-5c0979be890e.png%3Fversion%3DDi9TFsxRE2sotd3Kh0HrTFu4SUaJFwaN\",\r\n      \"frameSize\": {\r\n        \"x\": 60,\r\n        \"y\": 63\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"Di9TFsxRE2sotd3Kh0HrTFu4SUaJFwaN\"\r\n    },\r\n    \"32670e18-1679-4c1d-b293-b7cb3871c22a\": {\r\n      \"name\": \"fly\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/5_Mj297CD1ZOpafuDnOOtqCqIHeQVxg./category_animals/fly.png\",\r\n      \"frameSize\": {\r\n        \"x\": 67,\r\n        \"y\": 47\r\n      },\r\n      \"frameCount\": 2,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"5_Mj297CD1ZOpafuDnOOtqCqIHeQVxg.\"\r\n    }\r\n  }\r\n}",
+    "start_animations": "{\n  \"orderedKeys\": [\n    \"91f10853-18cd-4566-b11e-e0ec3a42b694\",\n    \"835b990e-3801-47b7-a12e-5c0979be890e\",\n    \"32670e18-1679-4c1d-b293-b7cb3871c22a\"\n  ],\n  \"propsByKey\": {\n    \"91f10853-18cd-4566-b11e-e0ec3a42b694\": {\n      \"name\": \"frog\",\n      \"sourceUrl\": \"https://studio.code.org/v3/animations/bxS7XEWi1VaoTNG6cCQcDA/91f10853-18cd-4566-b11e-e0ec3a42b694.png?version=RRKaOh.vyil2LwCZ9PFimdAdmbwLmbTX\",\n      \"frameSize\": {\n        \"x\": 104,\n        \"y\": 70\n      },\n      \"frameCount\": 1,\n      \"looping\": true,\n      \"frameDelay\": 12,\n      \"version\": \"RRKaOh.vyil2LwCZ9PFimdAdmbwLmbTX\"\n    },\n    \"835b990e-3801-47b7-a12e-5c0979be890e\": {\n      \"name\": \"mushroom\",\n      \"sourceUrl\": \"https://studio.code.org/v3/animations/bxS7XEWi1VaoTNG6cCQcDA/835b990e-3801-47b7-a12e-5c0979be890e.png?version=Di9TFsxRE2sotd3Kh0HrTFu4SUaJFwaN\",\n      \"frameSize\": {\n        \"x\": 60,\n        \"y\": 63\n      },\n      \"frameCount\": 1,\n      \"looping\": true,\n      \"frameDelay\": 12,\n      \"version\": \"Di9TFsxRE2sotd3Kh0HrTFu4SUaJFwaN\"\n    },\n    \"32670e18-1679-4c1d-b293-b7cb3871c22a\": {\n      \"name\": \"fly\",\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/5_Mj297CD1ZOpafuDnOOtqCqIHeQVxg./category_animals/fly.png\",\n      \"frameSize\": {\n        \"x\": 67,\n        \"y\": 47\n      },\n      \"frameCount\": 2,\n      \"looping\": true,\n      \"frameDelay\": 2,\n      \"version\": \"5_Mj297CD1ZOpafuDnOOtqCqIHeQVxg.\"\n    }\n  }\n}",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
     "instructions_important": "false",
@@ -106,11 +105,9 @@
     "mini_rubric": "false",
     "libraries_enabled": "false",
     "validation_enabled": "false",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
+  "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-09-19T23:01:04.118+00:00\",\"changed\":[\"cloned from \\\"CSD U3 abstraction sidescroll template_2022\\\"\"],\"cloned_from\":\"CSD U3 abstraction sidescroll template_2022\"},{\"changed_at\":\"2023-05-03 17:12:56 +0000\",\"changed\":[\"start_blocks\",\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-25 19:28:17 +0000\",\"changed\":[\"start_blocks\",\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-08-15 16:22:54 +0000\",\"changed\":[\"start_blocks\",\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>

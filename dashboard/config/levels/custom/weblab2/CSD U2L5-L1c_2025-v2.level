@@ -1,0 +1,66 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-01T20:46:14.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Debug missing paragraph",
+    "long_instructions": "# Debug: Missing Paragraph and List\r\n\r\n\r\nIt looks like a paragraph is missing from the preview and the lists aren't quite right. Can you find and fix the bugs? \r\n \r\n# Do this\r\n\r\n1) Find and fix the problems that are causing the bugs.",
+    "bubble_choice_description": "Use your debugging skills to figure out why the paragraph has disappeared.",
+    "thumbnail_url": "https://images.code.org/83b9723f9f3389674374366a73e59d06-image-1585676172131.png",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "true",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html> \n<html>\n  <head>\n  </head>\n  <body>\n <h1>Fun Family Activities</h1>\n    <p>Pick one of these fun things to do with your family</p>\n    <h2>Indoor Activities</h2>\n    <p> Board games are a great indoor activity! Here are my top 3 favorites:</p>\n    <ol>\n    <li>Settlers of Catan</li>\n    <p>One of my favorites is Settlers of Catan. It's a relatively simple game that can accommodate up to 6 players</p>\n    <li>Blukus</li>\n    <p>Blokus is a game of spatial reasoning and problem-solving, so everyone's mind gets a workout!</p>\n    <li>Azul</li>\n    <p>This is a fun, creative game where players take turns drafting colored tiles from suppliers to their player board. Later, players score points based on how they've placed their tiles to decorate the palace</p>\n    <h2>Fishing</h2>\n    <p. My dad really likes fishing because he thinks it is calming, although it might be a little boring. He says \"It's called fishing, not catching\"</p\n    <h2>Going outside</h2>\n    <p>Sometimes you just need to get some fresh air and enjoy the outside. Whether that's going to a local park or driving to a trail to go on a hike.</p>\n  </body>\n</html>",
+          "active": true,
+          "folderId": "0"
+        }
+      },
+      "openFiles": [
+        "1"
+      ]
+    },
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMrWt2HFvH/UaEd1Aw6m\nH7NPCh2Lr52063tDqEoStRSedn5LQYmzKopHnMdxEddzMa1ry9pfnBII8zb7\nMD3Gw+QxEX86iJuKhBFDqXvjC26WIR0dnDES221G1n9EocbLnjZ1guRSAQrg\nQcuAjg9STZA3qykwMh/oK8Tg7BhKIMNcep/+3rPQbY59vPvLP1SbrMzCwY+/\nwvR3mq1q6gdqyvO09Zy1GUAOKbt+HNpG47Kbnxzj+re8kvFmWtzdnjUem0/+\nwKDZ+JiXDuBC6vKapTU4jjzfZGwgyReLRsXt6NdUPhliuPjwylje3OQLZyLh\nlspdxIcMviZHT8NI5E6Kt8iBiNsqbpzpg+0NM5ZBnAj8BUZ6CwSzyPetRtiE\nWdaUESWiXTVn6RaQXwlhe4VaXS1IH9iLyanrQRqp7AzNQz8ZXBYHOSFHthgj\nORUBCIuxyR6Ozn+xeUzfy1qNRo75HodvD5yBGe0rAc6iKLSBjYQhu3deiM+z\nn9aDh8taPQOMgm+msQhv+X+7K2WUaVqJ/o5JLCgwbvj4TTBwb61ir8ad0FO2\nkpXmcOF+LsAfCZMkHA+LQskUZU06cFsx3xyVkWfgP/e1J+x+n/WZSTJ86Ry3\n7VXfl3ioHQQ0h+C3TXjXIYowk9oiLiamm+VS1q7xN0jL7BAjSIWVrCR6PCTv\nKdv9IWfbncbCyCINkd1uKe7KtRQSMWr6CWUX8f4Beor7uqdHUV3ZUTL666MU\nslqLzsx6P3wCADkC+LLNnQAbLtCQf/Em0CNxLAEYknJsCgvoSq8J5jWXfgoi\nLfQ/sUuhViuFAa0W5IDJAf37YK4cxC4RPp3yv053gLoAtkZFZIVQC+v6yvuc\nBIS0Rwm7C01w2JzUS37AdWCt4TjZEHnHuI3IZ/d//hL7/1xehw5h8cPvxS1R\n+bbQgayqjRSxMLGdGFhof0pE2SQW0kU/0dPEJ/wnRKQ+cRen1z4iEkkTD5yy\nzL3UNzhQFy4dIDEqeRzDs7zMAW6SXsUgqpYKOKHgtDNz05EzmB8/NuJfMLi5\nKbkiFw5ob254QmOeGHk8a523ppDj0i4VXfqTay0Ev8DAWIcrF7CNtHmRB4Ox\nUHR6aRNsmwmP846Msrd9UANW5X1GbboAEVoz9l2H2sUkWljp4SrVnnxhyiPk\nr1RNPkdb9fI5yCrXXPYYp9dPOOutK1aVkr5tjtexd1+pvk6Pg/qlgsklUxL/\nrWPwhKY+YaHhg9GahdfXpH2oAWamPmN+8S0/0EkBM7cMlTWnYTeuSXrCQqNZ\nx/4flQK4cY6XbUlpI5rfAetmxUMOWWjn3Mprjv9hpAetrwKuU0eTFlSLBefv\nsB0Fu+lkT0uRvXs6FKUVhJUYIWb/hy07CpmSTdD9NRu51F/LCt2RLiJswAXf\n9OUwXvoRLy2mB64iyYeWxpvbVHs7JmG5p4CzsszN30/9x7FUJ11N5OQBa0N3\n+oGo45htn5u2blUXDKqBM/92aYuK8LNu2u3wciWiDY//MzqHzU2xEdPM0+Z0\n4wS3L6paecwuGJBXR1q7GIWdERwy6CwJ+7Gjj5obq2teX13KLr1kFXCmZ1ja\nIXDew3jDFBOdRf84L9f8qmSUaFh+bq+asmrFS45v5HFwDZVkGZ9BKBaz8hFD\nEw0DXRAVpKU0D4Qgsg2Ul8Z1uas1Bf7ZEzGUwR/DvX2YS/r8pQFw1nTCJ996\nJji3L1LhqZsXoKAPp9aVq1+bmeJyZrGv+CBBxCskelyJmC0mZa1XympUQgFh\nl1QonVsjerckiF+Vq08Dl9zI/bqb/gjgMfapTqYEvFSGk56ffazg/F8mwEQA\nNh0pMgqr+hIZfA++oJnesRRsJ42ZFAGUogUYa/k=\n",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "name_suffix": "_2025-v2"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:46:14.845+00:00\",\"changed\":[\"cloned from \\\"CSD U2L5-L1c-2025\\\"\"],\"cloned_from\":\"CSD U2L5-L1c-2025\"},{\"changed_at\":\"2026-10-19 18:24:17 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-19 18:26:09 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-19 18:31:37 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

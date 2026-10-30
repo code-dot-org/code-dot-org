@@ -19,9 +19,11 @@ All other methods return information or data.  They may also perform an action i
 
 Let’s look at an example of one of these methods now.  Let’s look at the `hasPaint()` method from the `Painter` class.  
 
-In the UML diagram above, you can see the word `boolean` before the name of the method (`hasPaint`).  This tells us that the `hasPaint()` method will return a boolean (a `true` or a `false`) value
+In the UML diagram above, you can see the word `boolean` before the name of the method (`hasPaint`). This tells us that the `hasPaint()` method will return a boolean (a `true` or a `false`) value
 
-While the UML diagram provides a high-level view of the attributes and behaviors in a class, the documentation provides more detail about individual methods.  Let’s look at the documentation of the `hasPaint()` method.  As you review the documentation, what information in the documentation seems important?
+While the UML diagram provides a high-level view of the attributes and behaviors in a class, the documentation provides more detail about individual methods. 
+
+Let’s look at the documentation of the `hasPaint()` method. As you review the documentation, what information in the documentation seems important?
 
 <img src="https://images.code.org/5ea6890b4e4ea7c8283a9f5a01f66b62-image-1674251301854.48.05 PM.png" style="width:50%" alt="UML diagram">
 

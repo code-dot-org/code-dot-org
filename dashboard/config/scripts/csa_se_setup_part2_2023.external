@@ -6,7 +6,7 @@ markdown <<MARKDOWN
 
 ## If you're on a Windows PC
 
-1. Navigate to [**https://maven.apache.org/download.cgi**](https://maven.apache.org/download.cgi).
+1. Navigate to <a href="https://maven.apache.org/download.cgi" target="_blank">**https://maven.apache.org/download.cgi**</a>.
 
 2. Choose the **Binary zip archive**.
 
@@ -16,7 +16,7 @@ markdown <<MARKDOWN
 
 ![](https://images.code.org/99be181148998229ff273fca30086c98-image-1691876999931.png)
 
-4. In the window that appears, click the **Browse** button. Select your **Windows (C:)** directory, then click the **Select Folder** button.
+4. In the window that appears, click the **Browse** button. Select your **C:** directory, then click the **Select Folder** button.
 
 ![](https://images.code.org/5362707545e4d6375799d284b9e05085-image-1691877057122.png)
 
@@ -50,7 +50,7 @@ markdown <<MARKDOWN
 
 ## If you're on a Mac
 
-1. Navigate to [**https://maven.apache.org/download.cgi**](https://maven.apache.org/download.cgi).
+1. Navigate to <a href="https://maven.apache.org/download.cgi" target="_blank">**https://maven.apache.org/download.cgi**</a>.
 
 2. Choose the **Binary tar.gz archive**.
 

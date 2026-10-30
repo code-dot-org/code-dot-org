@@ -1,0 +1,12 @@
+name 'k5_ai_sorting_emojis_question'
+question 'AI Bot is choosing a background based on an emoji. It selected a colorful, happy background. Which emoji is most closely associated with colorful and happy?'
+
+wrong '🪩 Disco Ball'
+right '🌈 Rainbow'
+wrong '🏁 Black and White Flag'
+wrong '👀 Eyes'
+
+allow_multiple_attempts true
+markdown <<MARKDOWN
+
+MARKDOWN

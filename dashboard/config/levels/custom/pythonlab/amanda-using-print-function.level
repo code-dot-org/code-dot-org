@@ -1,0 +1,31 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-09-15T21:00:29.000Z",
+  "level_num": "custom",
+  "user_id": 19028,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "c5a4a166-fb09-43aa-abe6-61f0a2c2e3b9": {
+          "id": "c5a4a166-fb09-43aa-abe6-61f0a2c2e3b9",
+          "name": "main.py",
+          "contents": "# This program uses the print() function to display messages.\n\nprint(\"Hello, I am a computer!\")\nprint(\"I can follow your instructions precisely.\")\nprint(\"Let's make some changes together.\")\n\n# Try changing the message above or adding a new print() statement below!",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "c5a4a166-fb09-43aa-abe6-61f0a2c2e3b9"
+      ]
+    },
+    "long_instructions": "TODOs:\r\n- Run main.py to see the program's initial output.\r\n- Locate the lines in main.py that use the print() function.\r\n- Modify the text inside the parentheses of one existing print() statement.\r\n- Add a brand new print() statement to main.py with your own message.\r\n- Run main.py again to observe your changes in the output.\r\n- Experiment by adding more print() statements with different messages.",
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMofPVCzjHuNOMVOQrCz\nMET1PfIqa2n5ex0ex/qSKr9INzAieqB04T/q1u24q30ZqycvL18OPupeS7jT\nxXgO8P9E9TLP4wRskZQYnH+Ei0GTA8KyAk9WFVI/WFoPVVfvbU+XGyfHEcvd\n4OfVdCnwwsPBtCsewC9u+xXOYF3kuMyoOUcYz7oWgaQgqDGQKvGVjzu2x1lh\nFe2f684ajCCCr9rPoy61devrkkvtVEF3CHDwi0lLzuVb+Cgq07uiL8PL/CYI\n6dkbuoinV1HyufNwcbnx2k2uPr8hr/Le4wrrp37iOEdT544VU3aOc0Yq8rxS\n0DPdCeGsWmAcBIm9+fLtMbwLkYHE296xGN+jmgWGba84vY7xU/+NyHUJLSuN\nfbjLa+dqmdr9fW+0bm3l3r7dDfy7ijAVNYeGLSXvU12mp1PtLsJwB2h5pGfk\nOxxva1GpK07TJyyifRDRuRpmZA7+FzRKVuhm8Fw5obZnqwDIs95gHwl9gYF8\nDLKs8WK3ptYTrTijxNOCLh+Xq6abXEVKeZJaoZMxDZVcIj8Er3nGz1PkmQ==\n",
+    "generate_outline": "Learn how to make your Python programs communicate by using the `print()` function. You'll modify existing code to display your own custom messages in the console."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-15 21:00:33 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-09-15 21:00:33 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-09-15 21:01:10 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-09-15 21:01:10 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+}]]></config>
+</Pythonlab>

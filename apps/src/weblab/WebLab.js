@@ -1,32 +1,33 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import weblabI18n from '@cdo/weblab/locale';
-import consoleApi from '../consoleApi';
-import WebLabView from './WebLabView';
+import {Provider} from 'react-redux';
+
+import project from '@cdo/apps/code-studio/initApp/project';
+import {queryParams} from '@cdo/apps/code-studio/utils';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
+import {FatalErrorType} from '@cdo/apps/weblab/constants';
 import {
   DisallowedHtmlWarningDialog,
   FatalErrorDialog,
   ResetSuccessDialog,
   UploadErrorDialog,
 } from '@cdo/apps/weblab/dialogs/';
-import {Provider} from 'react-redux';
-import {initializeSubmitHelper, onSubmitComplete} from '../submitHelper';
-import dom from '../dom';
-import reducers from './reducers';
-import * as actions from './actions';
-var filesApi = require('@cdo/apps/clientApi').files;
-var assetListStore = require('../code-studio/assets/assetListStore');
-import project from '@cdo/apps/code-studio/initApp/project';
-import {getStore} from '../redux';
-import {TestResults} from '../constants';
-import {FatalErrorType} from '@cdo/apps/weblab/constants';
-import {queryParams} from '@cdo/apps/code-studio/utils';
-import {reload} from '../utils';
-import firehoseClient from '../lib/util/firehose';
-import {getCurrentId} from '../code-studio/initApp/project';
-import logToCloud from '../logToCloud';
+import weblabI18n from '@cdo/weblab/locale';
 
-export const WEBLAB_FOOTER_HEIGHT = 30;
+import consoleApi from '../consoleApi';
+import {TestResults} from '../constants';
+import dom from '../dom';
+import logToCloud from '../logToCloud';
+import {getStore} from '../redux';
+import {initializeSubmitHelper, onSubmitComplete} from '../submitHelper';
+import {reload} from '../utils';
+
+import * as actions from './actions';
+import reducers from './reducers';
+import WebLabView from './WebLabView';
+
+var filesApi = require('@cdo/apps/clientApi').files;
+
+var assetListStore = require('../code-studio/assets/assetListStore');
 
 /**
  * An instantiable WebLab class
@@ -93,9 +94,11 @@ WebLab.prototype.init = function (config) {
 
   this.skin = config.skin;
   this.level = config.level;
+  this.channel = config.channel;
   this.suppliedFilesVersionId = queryParams('version');
   this.initialFilesVersionId = this.suppliedFilesVersionId;
   this.disallowedHtmlTags = config.disallowedHtmlTags;
+  this.disallowedHtmlAttrs = config.disallowedHtmlAttrs;
   getStore().dispatch(actions.changeMaxProjectCapacity(MAX_PROJECT_CAPACITY));
 
   this.brambleHost = null;
@@ -120,18 +123,6 @@ WebLab.prototype.init = function (config) {
       filesApi.deleteAll(
         xhr => {
           this.fileEntries = null;
-          firehoseClient.putRecord(
-            {
-              study: 'weblab_loading_investigation',
-              study_group: 'empty_manifest',
-              event: 'clear_puzzle_success',
-              project_id: getCurrentId(),
-              data_json: JSON.stringify({
-                responseText: xhr.responseText,
-              }),
-            },
-            {includeUserId: true}
-          );
           // The project has been reset, reload() the page now - don't resolve
           // the promise, because that will lead to a project.save() that we
           // don't want or need in this scenario.
@@ -234,7 +225,7 @@ WebLab.prototype.init = function (config) {
     }
   }
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={getStore()}>
       <WebLabView
         onAddFileHTML={onAddFileHTML.bind(this)}
@@ -249,7 +240,10 @@ WebLab.prototype.init = function (config) {
         onMount={() => this.onMount(config)}
       />
     </Provider>,
-    document.getElementById(config.containerId)
+    document.getElementById(config.containerId),
+    {
+      legacyReactDomRender: true,
+    }
   );
 
   window.addEventListener('beforeunload', this.beforeUnload.bind(this));
@@ -278,6 +272,7 @@ WebLab.prototype.onMount = function (config) {
   this.studioApp_.alertIfCompletedWhilePairing(config);
   this.studioApp_.initVersionHistoryUI(config);
   this.studioApp_.initTimeSpent();
+  this.studioApp_.alertIfAbusiveProject();
 
   let finishButton = document.getElementById('finishButton');
   if (finishButton) {
@@ -515,19 +510,6 @@ WebLab.prototype.setupReduxSubscribers = function (store) {
 WebLab.prototype.onIsRunningChange = function () {};
 
 WebLab.prototype.onFilesReady = function (files, filesVersionId) {
-  // Gather information when the weblab manifest is empty but should
-  // contain references to files (i.e. after changes have been made to the project)
-  if (filesVersionId && files && files.length === 0) {
-    firehoseClient.putRecord(
-      {
-        study: 'weblab_loading_investigation',
-        study_group: 'empty_manifest',
-        event: 'get_empty_manifest',
-        project_id: getCurrentId(),
-      },
-      {includeUserId: true}
-    );
-  }
   assetListStore.reset(files);
   this.fileEntries = assetListStore.list().map(fileEntry => ({
     name: fileEntry.filename,
@@ -656,26 +638,14 @@ WebLab.prototype.redux = function () {
   };
 };
 
-/**
- * Expose New Relic page action hook for use by the enclosed Bramble application.
- * Defined here instead of in CdoBramble.js because logToCloud relies on window.newrelic
- * being set. Bramble is hosted within an iframe, so window is different in that context.
- */
+// Bramble runs inside an iframe with its own window, so it cannot import logToCloud
+// directly. Expose the host page's facade through the WebLab instance.
 WebLab.prototype.addPageAction = function (...args) {
   logToCloud.addPageAction(...args);
 };
 
-// Some temporary logging to diagnose possible loading issues.
-WebLab.prototype.tempLog = function (event, data = null) {
-  firehoseClient.putRecord(
-    {
-      study: 'weblab_loading_investigation_2022',
-      event: event,
-      data_json: data === null ? null : JSON.stringify(data),
-    },
-    {includeUserId: true}
-  );
-};
+// Leave an empty function to avoid issues with CdoBramble
+WebLab.prototype.tempLog = function () {};
 
 WebLab.prototype.syncBrambleFiles = function (callback = () => {}) {
   this.brambleHost?.syncFiles(
@@ -709,6 +679,14 @@ WebLab.prototype.onBrambleReady = function () {
   }
 
   this.syncBrambleFiles();
+};
+
+WebLab.prototype.getCode = function () {
+  if (!this.brambleHost?.getConcatenatedCodeString) {
+    console.error('[WebLab] getConcatenatedCodeString unavailable');
+    return Promise.resolve('');
+  }
+  return this.brambleHost.getConcatenatedCodeString();
 };
 
 WebLab.prototype.brambleApi = function () {

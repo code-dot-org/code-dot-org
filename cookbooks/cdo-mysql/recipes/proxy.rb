@@ -13,18 +13,17 @@
 #   action :upgrade
 # end
 
-# Use patched ProxySQL with fix for Aurora 2.09 bug.
-# See: https://github.com/sysown/proxysql/issues/3082
-proxysql_filename = 'proxysql_2.0.15-ubuntu18_amd64.deb'
+proxysql_filename = 'proxysql_2.7.0-ubuntu20_amd64.deb'
 proxysql_file = "#{Chef::Config[:file_cache_path]}/#{proxysql_filename}"
 remote_file proxysql_file do
-  source "https://github.com/wjordan/proxysql/releases/download/v2.0.15-aurora_2.09_fix/#{proxysql_filename}"
-  checksum "29fe79e54bce0f532084bfd8e5a13a55f1f8530f92be8a0e7db847aefcb1762f"
+  source "https://github.com/sysown/proxysql/releases/download/v2.7.0/#{proxysql_filename}"
+  checksum "5e92844617aa1666a65475bd22c7fda1939ef5604e4b7ea08625ff2465b87482"
   action :create_if_missing
 end
+
 dpkg_package('proxysql') do
   source proxysql_file
-  version '2.0.15'
+  version '2.7.0'
   options '--force-confold'
 end
 

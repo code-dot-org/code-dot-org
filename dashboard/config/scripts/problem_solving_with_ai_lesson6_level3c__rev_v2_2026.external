@@ -1,0 +1,24 @@
+name 'problem-solving-with-ai-lesson6-level3c_-rev_v2_2026'
+title ' Software Engineering Hiring Manager'
+display_name ' Software Engineering Hiring Manager'
+bubble_choice_description 'Six people applied for an open Software Engineering position at your company. Choose two candidates to interview.'
+thumbnail_url 'https://images.code.org/153fcb7390fdee2ba5aa16c032dfcbcb-image-1742423020518.png'
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
+
+markdown <<MARKDOWN
+## Review Applicant Resumes
+
+Six people applied for an open Software Engineering position at your company. **Choose two candidates to interview.**
+
+Write down your selection and what qualities or information you prioritized. You may choose to use Page 2 of this lesson's <a href="https://docs.google.com/document/d/1KWiPmB-kVpuTPXPSq2xXnhdQfoMkgSYgaJRKFPeI_NA/edit?tab=t.0#heading=h.aja5sw9sqnkf" target="blank" rel="noopener noreferrer">Activity Guide</a> to record your answers.
+
+<div>
+<img style=" float: left; width:25%; padding-top:10px" src="https://images.code.org/153fcb7390fdee2ba5aa16c032dfcbcb-image-1742423020518.png" />
+
+<div style="float: left; width: 70%; padding-left:20px">
+
+> Click to view their resumes [here](https://drive.google.com/file/d/1ZhSc-MrovRCU7S9HCk6I8enHvDxg_dsG/view?usp=drive_link).
+MARKDOWN

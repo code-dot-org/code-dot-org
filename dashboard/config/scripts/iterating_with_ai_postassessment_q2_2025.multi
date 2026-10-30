@@ -1,0 +1,16 @@
+name 'iterating-with-ai-postassessment-q2_2025'
+
+question 'When reviewing AI-generated pseudocode for a loop, you notice there is no "update" step for the loop variable. What is the most likely result if this code is run?'
+
+right 'The loop will become "infinite" because the stopping condition will never be reached.'
+wrong 'The loop will finish faster than expected.'
+wrong 'The loop will run once and then stop correctly.'
+wrong 'The loop will skip every other item in the dataset.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 1
+
+If the state of the loop (the variable being checked) never changes toward the stopping condition, the condition remains true forever, resulting in an infinite loop.
+MARKDOWN

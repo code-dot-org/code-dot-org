@@ -1,0 +1,143 @@
+name 'pl-aif-2-U1-prompting-rope-cfu'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Prompt Practice: Building Better Website Prompts
+
+Strong website prompts help AI generate layouts, content, and styling that better match the purpose of the site and the people using it.
+
+---
+
+## Part 1: Which Prompt Will Build the Better Website?
+
+A student wants to create a homepage for a middle school robotics club.
+
+**Before clicking, think about which prompt would give the AI enough information to build a better website**.
+
+<div style="display:grid;grid-template-columns:repeat(2, 1fr);gap:20px;margin:24px 0;">
+
+  <details style="background:#F5F7F8;border-radius:14px;padding:18px;box-shadow:2px 2px 8px rgba(0,0,0,0.08);">
+    <summary style="cursor:pointer;font-size:18px;font-weight:700;list-style:none;">
+      Prompt A
+
+  <div style="margin-top:14px;font-size:16px;line-height:1.6;">
+      <div style="background:white;border-radius:10px;padding:14px 16px;margin-bottom:14px;">
+        “Make me a robotics website.”
+      </div>
+    </summary>
+
+
+
+  <div style="background:#FFF4F4;border-radius:12px;padding:14px 16px;font-size:15px;line-height:1.5;">
+        ⚠️ This prompt is very vague. The AI does not know:
+        <ul>
+          <li>Who the website is for</li>
+          <li>What sections should appear</li>
+          <li>What style or structure is needed</li>
+        </ul>
+      </div>
+    </div>
+
+  </details>
+
+  <details style="background:#F5F7F8;border-radius:14px;padding:18px;box-shadow:2px 2px 8px rgba(0,0,0,0.08);">
+    <summary style="cursor:pointer;font-size:18px;font-weight:700;list-style:none;">
+      Prompt B
+
+  <div style="margin-top:14px;font-size:16px;line-height:1.6;">
+
+  <div style="background:white;border-radius:10px;padding:14px 16px;margin-bottom:14px;">
+        “Create a beginner-friendly homepage for middle school students joining a robotics club. Include a large title, navigation bar, welcome paragraph, three reasons to join, and a footer with meeting times. Use simple HTML and beginner CSS with blue and gray colors.”
+      </div>
+    </summary>
+
+
+
+  <div style="background:#EAF7F8;border-left:6px solid #008C95;border-radius:12px;padding:14px 16px;font-size:15px;line-height:1.5;">
+        ✅ This prompt gives the AI:
+        <ul>
+          <li>A clear audience</li>
+          <li>A defined structure</li>
+          <li>Styling expectations</li>
+          <li>Constraints for beginner code</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </details>
+
+</div>
+
+---
+
+## Part 2: What’s Missing?
+
+A student writes the following prompt:
+
+<div style="background:#F5F7F8;border-radius:14px;padding:18px;margin:24px 0;font-size:17px;line-height:1.6;">
+“Make a homepage for a gaming website with HTML and CSS.”
+</div>
+
+**Before clicking, think about what information the AI still needs in order to build a strong result.**
+
+<div style="display:grid;grid-template-columns:repeat(2, 1fr);gap:16px;margin:24px 0;">
+
+  <details style="background:#F5F7F8;border-radius:14px;padding:16px;box-shadow:2px 2px 8px rgba(0,0,0,0.08);">
+    <summary style="cursor:pointer;font-size:17px;font-weight:700;list-style:none;">
+      👥 Audience
+    </summary>
+
+  <div style="margin-top:12px;font-size:15px;line-height:1.5;">
+      Who is the website for? Younger players? Competitive gamers? Parents?
+    </div>
+  </details>
+
+  <details style="background:#F5F7F8;border-radius:14px;padding:16px;box-shadow:2px 2px 8px rgba(0,0,0,0.08);">
+    <summary style="cursor:pointer;font-size:17px;font-weight:700;list-style:none;">
+      📐 Structure
+    </summary>
+
+  <div style="margin-top:12px;font-size:15px;line-height:1.5;">
+      What sections should the homepage include? Navigation? Cards? Footer?
+    </div>
+  </details>
+
+  <details style="background:#F5F7F8;border-radius:14px;padding:16px;box-shadow:2px 2px 8px rgba(0,0,0,0.08);">
+    <summary style="cursor:pointer;font-size:17px;font-weight:700;list-style:none;">
+      🎨 Design Details
+    </summary>
+
+  <div style="margin-top:12px;font-size:15px;line-height:1.5;">
+      What colors, fonts, or style should the website use?
+    </div>
+  </details>
+
+  <details style="background:#F5F7F8;border-radius:14px;padding:16px;box-shadow:2px 2px 8px rgba(0,0,0,0.08);">
+    <summary style="cursor:pointer;font-size:17px;font-weight:700;list-style:none;">
+      ⚙️ Constraints
+    </summary>
+
+  <div style="margin-top:12px;font-size:15px;line-height:1.5;">
+      Should the code stay beginner-friendly? Use semantic HTML? Avoid advanced CSS?
+    </div>
+  </details>
+
+</div>
+
+<div style="background-color:#B7E0E5;border-radius:30px;color:#000000;width:95%;padding:18px 24px;margin:24px 0;">
+
+<p style="font-size:18px;line-height:1.5;margin:0;">
+<strong>💡 Teacher Tip:</strong> Students often focus on what the website should look like, but forget to describe the audience, structure, or constraints. Encourage them to think like a designer explaining their vision to another person.
+</p>
+
+</div>
+
+---
+
+
+<p style="font-size:17px;line-height:1.6;">
+As you move into the coding levels, notice how adding more detail changes the AI’s response. Strong prompting is not about “getting the answer,” but about clearly communicating the website you want to build.
+</p>
+MARKDOWN

@@ -1,6 +1,7 @@
+import {Button} from '@mui/material';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+
 import ProgrammingEnvironmentIndex, {
   ProgrammingEnvironmentCard,
 } from '@cdo/apps/templates/codeDocs/ProgrammingEnvironmentIndex';
@@ -27,7 +28,7 @@ describe('ProgrammingEnvironmentIndex', () => {
         ]}
       />
     );
-    expect(wrapper.find('ProgrammingEnvironmentCard').length).to.equal(2);
+    expect(wrapper.find('ProgrammingEnvironmentCard').length).toBe(2);
   });
 });
 
@@ -44,13 +45,13 @@ describe('ProgrammingEnvironmentCard', () => {
         }}
       />
     );
-    expect(wrapper.find('h2').length).to.equal(1);
+    expect(wrapper.find('h2').length).toBe(1);
     expect(wrapper.text().includes('Sprite Lab'));
-    expect(wrapper.find('EnhancedSafeMarkdown').props().markdown).to.equal(
+    expect(wrapper.find('EnhancedSafeMarkdown').props().markdown).toBe(
       'description of spritelab'
     );
-    expect(wrapper.find('img').props().src).to.equal('code.org/spritelab');
-    expect(wrapper.find('Button').props().href).to.equal('/docs/spritelab');
+    expect(wrapper.find('img').props().src).toBe('code.org/spritelab');
+    expect(wrapper.find(Button).props().href).toBe('/docs/spritelab');
   });
 
   it('doesnt render description and image for each IDE if there arent ones', () => {
@@ -63,11 +64,11 @@ describe('ProgrammingEnvironmentCard', () => {
         }}
       />
     );
-    expect(wrapper.find('h2').length).to.equal(1);
+    expect(wrapper.find('h2').length).toBe(1);
     expect(wrapper.text().includes('Sprite Lab'));
-    expect(wrapper.find('EnhancedSafeMarkdown').length).to.equal(0);
-    expect(wrapper.find('img').length).to.equal(0);
-    expect(wrapper.find('Button').props().href).to.equal('/docs/spritelab');
+    expect(wrapper.find('EnhancedSafeMarkdown').length).toBe(0);
+    expect(wrapper.find('img').length).toBe(0);
+    expect(wrapper.find(Button).props().href).toBe('/docs/spritelab');
   });
 
   it('doesnt render title if there isnt one', () => {
@@ -81,11 +82,11 @@ describe('ProgrammingEnvironmentCard', () => {
         }}
       />
     );
-    expect(wrapper.find('h2').length).to.equal(0);
-    expect(wrapper.find('EnhancedSafeMarkdown').props().markdown).to.equal(
+    expect(wrapper.find('h2').length).toBe(0);
+    expect(wrapper.find('EnhancedSafeMarkdown').props().markdown).toBe(
       'description of spritelab'
     );
-    expect(wrapper.find('img').props().src).to.equal('code.org/spritelab');
-    expect(wrapper.find('Button').props().href).to.equal('/docs/spritelab');
+    expect(wrapper.find('img').props().src).toBe('code.org/spritelab');
+    expect(wrapper.find(Button).props().href).toBe('/docs/spritelab');
   });
 });

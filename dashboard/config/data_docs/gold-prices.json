@@ -1,0 +1,5 @@
+{
+  "key": "gold-prices",
+  "name": "Gold Historical Prices",
+  "content": "Description: Dataset about gold prices from 1979-2024\r\n\r\n[Source](https://www.gold.org/goldhub/data/gold-prices)\r\n* Data was processed to remove commas from numerical values over 1000\r\n\r\nColumns:\r\n\r\n* Date (string): Date in MM/DD/YYYY format of the day the price of gold was recorded\r\n* United States Dollar (number): the price of gold in United States Dollars\r\n* Euro (number): the price of gold in Euros\r\n* Euro (number): the price of gold in Euros\r\n* Euro (number): the price of gold in Euros\r\n* Euro (number): the price of gold in Euros\r\n* Euro (number): the price of gold in Euros\r\n* Euro (number): the price of gold in Euros\r\n"
+}

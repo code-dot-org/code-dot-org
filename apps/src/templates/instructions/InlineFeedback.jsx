@@ -1,10 +1,11 @@
+import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
+
+import SafeMarkdown from '../SafeMarkdown';
+
 import ChatBubble from './ChatBubble';
 import {convertXmlToBlockly} from './utils';
-import SafeMarkdown from '../SafeMarkdown';
 
 class InlineFeedback extends Component {
   static propTypes = {
@@ -54,4 +55,4 @@ class InlineFeedback extends Component {
   }
 }
 
-export default Radium(InlineFeedback);
+export default InlineFeedback;

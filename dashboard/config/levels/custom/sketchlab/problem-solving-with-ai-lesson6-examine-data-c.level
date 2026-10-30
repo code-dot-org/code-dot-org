@@ -1,0 +1,15 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 75,
+  "created_at": "2026-07-31T18:30:10.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##Hiring Manager Data\r\n\r\n\r\n\r\n\r\n",
+    "require_edit_to_continue": "true"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-07-31 18:30:11 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Sketchlab>

@@ -1,0 +1,18 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2026-09-15T07:01:59.000Z",
+  "level_num": "custom",
+  "user_id": 574,
+  "properties": {
+    "skip_dialog": true,
+    "skip_sound": true,
+    "long_instructions": "You’ve created your first web page about your pet fish! Reflect on what you learned about HTML's basic structure and content tags. What other elements or features might you want to add to your pet fish page in the future?",
+    "placeholder": "Describe what you learned and what you'd add next.",
+    "encrypted_solution": "E174OTinq88fYMPYzwZJ0JIT5V1OvBrs1V8Rp58YMX0gDh+b9K8Od2FbTgP7\nUSp5jSggL3aUUAxGMBe/ead+720x5j7oOPjyvwxdZlb2O/5z1vBVBY8JB8j9\nOwVx/LC/H9CRWkJDkrhLR46zLRbnJHL+hZ5ewuxxYpWCGE6VF4/rSFDojh2/\nFLdSynqcume/BXxuTk9BYRU+Q2iKby4usZVOUCx/i2ANebRrEw59LluqMT0J\na4hdl5XTicFxCO/otQsFy18pKdq7zfjshqwujBHsJP/CbAsace07mHfKT8vb\nQFs7VjKvy2oow2gkbDi3Is8w9uPo1ALsqFixOlQRGV+kPvlINaX5pIkJtiBY\n65lmqNc06dcPYm96LlMfyUXCAOuESEUaTgd+6qZzBqLW2JQ/fKqQGgZQFjvd\niVV6wKGwLhgG4WepmtEcaSa1hP5OkoCG8ud4yYbaZQcmIsMuwpCHhf9z5ate\nnN372cyTIUVKOoIrXbpik5W2GC4nmJbdO1AeAFWVxcS1//xhjaP7MFjm8pM6\njUHoRFWcTTKdYNGhyrE1EpoY5hil/xcroLo6OYsxD84C2xfkm+v7Q9Ytklp1\nX5GdqhLERr+A1CSI73Zi5CTC4zea5BcV1pTqod0fI0DWhazXBFQFEQd/D5UA\npX3rQjvzPGtDgEIFH8WqKalybick4sel/AzLL8UixO4urPStdGbsYFMpz3Ov\nuYiq59NLzHjHhNZli7HoavNCN2IrCC4bGVVaAMcE+Wjt3IYb\n",
+    "generate_outline": "Reflect on the web page you've created. Describe what you learned about HTML and what other elements you might want to add to your pet fish page in the future."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-15 07:02:07 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-15 07:02:41 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-15 07:02:41 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-15 07:02:41 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</FreeResponse>

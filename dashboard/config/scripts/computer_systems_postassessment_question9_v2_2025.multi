@@ -1,0 +1,17 @@
+name 'computer-systems-postassessment-question9_v2-2025'
+title 'Computer Systems and Devices Post-Assessment: Question 9'
+
+wrong 'A collection of programs installed on a device'
+right 'A combination of hardware and software that processes information'
+wrong 'The physical devices that connect to the internet'
+wrong 'A single piece of hardware'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+A computer system consists of multiple components working together. Which statement best describes this system?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 1: Introduction to Computer Systems
+MARKDOWN

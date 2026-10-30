@@ -1,20 +1,65 @@
-import {
-  DialogContext,
-  DialogType,
-} from '@cdo/apps/lab2/views/dialogs/DialogManager';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography, Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
-import React, {useCallback, useContext} from 'react';
+import React, {memo, useCallback, useContext} from 'react';
 import {useSelector} from 'react-redux';
+
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
+import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWithTooltip';
+import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
+import {commonI18n} from '@cdo/apps/types/locale';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import {getBaseAssetUrl} from '../appConfig';
 import {AnalyticsContext} from '../context';
-import {MusicState} from '../redux/musicRedux';
-import moduleStyles from './undo-redo-buttons.module.scss';
 import musicI18n from '../locale';
+import MusicLibrary, {SoundFolder} from '../player/MusicLibrary';
+
+import moduleStyles from './HeaderButtons.module.scss';
+
+interface CurrentPackProps {
+  packFolder: SoundFolder;
+}
+
+const CurrentPack: React.FunctionComponent<CurrentPackProps> = ({
+  packFolder,
+}) => {
+  const library = MusicLibrary.getInstance();
+
+  let packImageSrc = null;
+
+  if (library && packFolder) {
+    const libraryGroupPath = library.getPath();
+    packImageSrc =
+      packFolder.imageSrc &&
+      `${getBaseAssetUrl()}${libraryGroupPath}/${packFolder.path}/${
+        packFolder.imageSrc
+      }`;
+  }
+
+  return (
+    <div data-notranslate className={moduleStyles.currentPack}>
+      {packImageSrc && (
+        <img
+          src={packImageSrc}
+          className={moduleStyles.buttonWideImage}
+          alt=""
+        />
+      )}
+      <Typography variant="body4">
+        {packFolder.name} &bull; {packFolder.artist}
+      </Typography>
+    </div>
+  );
+};
 
 interface HeaderButtonsProps {
   onClickUndo: () => void;
   onClickRedo: () => void;
   clearCode: () => void;
+  allowPackSelection: boolean;
+  skipUrl: string | undefined;
+  hideChaff: () => void;
 }
 
 /**
@@ -24,12 +69,25 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
   onClickUndo,
   onClickRedo,
   clearCode,
+  allowPackSelection,
+  skipUrl,
+  hideChaff,
 }) => {
-  const {canUndo, canRedo} = useSelector(
-    (state: {music: MusicState}) => state.music.undoStatus
-  );
+  const readOnlyWorkspace: boolean = useSelector(isReadOnlyWorkspace);
+  const canUndo = useAppSelector(state => state.music.canUndo);
+  const canRedo = useAppSelector(state => state.music.canRedo);
+  const currentPackId = useAppSelector(state => state.music.packId);
   const analyticsReporter = useContext(AnalyticsContext);
-  const dialogControl = useContext(DialogContext);
+  const dialogControl = useDialogControl();
+  const containerRef = React.useRef<HTMLDivElement>(null);
+
+  const library = MusicLibrary.getInstance();
+
+  let packFolder = null;
+
+  if (library && currentPackId) {
+    packFolder = library.getAllowedFolderForFolderId(currentPackId);
+  }
 
   const onClickUndoRedo = useCallback(
     (action: 'undo' | 'redo') => {
@@ -49,71 +107,110 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
   );
 
   const onClickStartOver = useCallback(() => {
+    // Hide any custom fields that are showing.
+    hideChaff();
+
     if (dialogControl) {
-      dialogControl.showDialog(DialogType.StartOver, clearCode);
+      dialogControl.showDialog({
+        type: DialogType.StartOver,
+        handleConfirm: clearCode,
+      });
     }
 
     if (analyticsReporter) {
       analyticsReporter.onButtonClicked('startOver');
     }
-  }, [dialogControl, analyticsReporter, clearCode]);
+  }, [hideChaff, dialogControl, analyticsReporter, clearCode]);
 
-  const onFeedbackClicked = () => {
-    if (analyticsReporter) {
-      analyticsReporter.onButtonClicked('feedback');
+  const onClickSkip = useCallback(() => {
+    if (dialogControl) {
+      dialogControl.showDialog({
+        type: DialogType.Skip,
+        handleConfirm: () => {
+          if (skipUrl) {
+            window.location.href = skipUrl;
+          }
+        },
+      });
     }
-    window.open(
-      'https://docs.google.com/forms/d/e/1FAIpQLScnUgehPPNjhSNIcCpRMcHFgtE72TlfTOh6GkER6aJ-FtIwTQ/viewform?usp=sf_link',
-      '_blank'
-    );
-  };
+  }, [dialogControl, skipUrl]);
 
   return (
-    <div className={moduleStyles.container}>
-      <button
-        onClick={onClickStartOver}
-        type="button"
-        className={classNames(moduleStyles.button)}
-      >
-        <FontAwesome
-          title={musicI18n.startOver()}
-          icon="refresh"
-          className={'icon'}
-        />
-      </button>
-      <button
-        onClick={() => onClickUndoRedo('undo')}
-        type="button"
-        className={classNames(
-          moduleStyles.button,
-          !canUndo && moduleStyles.buttonDisabled
-        )}
-      >
-        <FontAwesome title={musicI18n.undo()} icon="undo" className={'icon'} />
-      </button>
-      <button
-        onClick={() => onClickUndoRedo('redo')}
-        type="button"
-        className={classNames(
-          moduleStyles.button,
-          !canRedo && moduleStyles.buttonDisabled
-        )}
-      >
-        <FontAwesome title={musicI18n.redo()} icon="redo" className={'icon'} />
-      </button>
-      <button
-        onClick={onFeedbackClicked}
-        type="button"
-        className={classNames(moduleStyles.button)}
-      >
-        <FontAwesome
-          title={musicI18n.feedback()}
-          icon="commenting"
-          className={'icon'}
-        />
-      </button>
+    <div className={moduleStyles.container} ref={containerRef} tabIndex={-1}>
+      {/* Show static pack information. */}
+      {!allowPackSelection && packFolder && (
+        <CurrentPack packFolder={packFolder} />
+      )}
+      {/* Show Start Over button, possibly with pack information inside it. */}
+      {!readOnlyWorkspace && (
+        <>
+          <button
+            onClick={onClickStartOver}
+            type="button"
+            id="start-over-button"
+            className={classNames(
+              moduleStyles.startOverButton,
+              allowPackSelection &&
+                packFolder &&
+                moduleStyles.startOverButtonWithPack
+            )}
+          >
+            {allowPackSelection && packFolder && (
+              <CurrentPack packFolder={packFolder} />
+            )}
+            <FontAwesomeV6Icon iconName="refresh" iconStyle="solid" />
+          </button>
+        </>
+      )}
+      {!readOnlyWorkspace && (
+        <>
+          {/* Undo button. */}
+          <IconButtonWithTooltip
+            id="undo"
+            label={musicI18n.undo()}
+            icon={{iconName: 'undo', iconStyle: 'solid'}}
+            variant="text"
+            color="secondary"
+            size="extraSmall"
+            tooltipDirection="onBottom"
+            hideTooltipTail={true}
+            disabled={!canUndo}
+            onClick={() => onClickUndoRedo('undo')}
+            containerRef={containerRef}
+          />
+          {/* Redo button. */}
+          <IconButtonWithTooltip
+            id="redo"
+            label={musicI18n.redo()}
+            icon={{iconName: 'redo', iconStyle: 'solid'}}
+            variant="text"
+            color="secondary"
+            size="extraSmall"
+            tooltipDirection="onBottom"
+            hideTooltipTail={true}
+            disabled={!canRedo}
+            onClick={() => onClickUndoRedo('redo')}
+            containerRef={containerRef}
+          />
+        </>
+      )}
+      {/* Skip to Project button. */}
+      {skipUrl && (
+        <MuiButton
+          variant="text"
+          color="secondary"
+          size="extraSmall"
+          onClick={onClickSkip}
+          type="button"
+          endIcon={
+            <FontAwesomeV6Icon iconStyle="solid" iconName="arrow-right" />
+          }
+        >
+          {commonI18n.skipToProject()}
+        </MuiButton>
+      )}
     </div>
   );
 };
 
-export default HeaderButtons;
+export default memo(HeaderButtons);

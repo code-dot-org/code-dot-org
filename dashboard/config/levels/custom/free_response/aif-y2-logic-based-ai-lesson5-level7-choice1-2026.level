@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2026-07-28T02:51:01.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "title": "Check Your Understanding",
+    "display_name": "Music Streaming",
+    "long_instructions": "Your friend is writing code to play two different songs. Unfortunately, the code doesn’t work. Read your friend’s code, explain what the problem is, and suggest how you would fix it.\r\n\r\n```python\r\ndef play_song(song, artist):\r\n    print(f\"Now playing: {song} by {artist}\")\r\n\r\nplay_song(\"Blinding Lights\")\r\nplay_song(\"the Weeknd\")\r\nplay_song(\"Rolling in the Deep\")\r\nplay_song(\"Adele\")\r\n```",
+    "bubble_choice_description": "Build a music streaming program that plays a user's favorite songs.",
+    "thumbnail_url": "https://images.code.org/b5c3f8b3c478a343a54414661b294a40-music.png",
+    "stay_on_level_after_submit": "false",
+    "encrypted_solution": "kMrCryiPOL1+kS8sdP3O5TeyjrItmaI0WN3xCtbpOUEwSRxyhl20ww7v+Ufs\nlPPDsAlsEAC7t01u5gyGUa72+hIUvmgaz08Ap+CZ0hpb0voXjMaicZmqczoY\nhXAfMnsrQUoo2ANpfIKj/Q+9T3b1ozgYPwvCQXu4uT8xC0JHXm4hSTFcdKpv\nOWo2N57fBsc0/0ChS046RIjs4r/RQSqSLA==\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

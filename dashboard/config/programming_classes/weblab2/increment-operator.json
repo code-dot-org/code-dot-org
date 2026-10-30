@@ -1,0 +1,14 @@
+{
+  "category_key": "javascript",
+  "content": "# Increment Operator\n\nThe increment operator `++` adds `1` to a number variable. Use `++` when your app needs to increase a value, such as a score, count, or step number.",
+  "examples": "[{\"name\":\"Increase Favorites\",\"description\":\"Add one to the favorites count when a button is clicked.\",\"code\":\"```\\nfavoriteButton.addEventListener(\\\"click\\\", () =\\u003e {\\n  favoritesCount++;\\n  countText.textContent = favoritesCount;\\n});\\n```\"}]",
+  "external_documentation": "",
+  "fields": "[]",
+  "key": "increment-operator",
+  "name": "Increment Operator",
+  "syntax": "`favoritesCount++;`",
+  "tips": "- Use `++` after a number variable to add `1`.\n- `favoritesCount++;` means the same thing as `favoritesCount = favoritesCount + 1;`.\n- Use `let` for a variable that will change.\n- Do not use `++` on strings or Boolean values.\n- In Web Lab, `++` is often used inside button click functions to update counts.",
+  "methods": [
+
+  ]
+}

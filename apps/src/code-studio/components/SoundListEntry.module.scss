@@ -1,0 +1,33 @@
+.root {
+  float: left;
+  width: 215px;
+  min-height: 48px;
+  cursor: pointer;
+  margin: 5px;
+  padding: 6px;
+  border: solid 0;
+  border-radius: 5px;
+}
+
+.selected {
+  background-color: var(--background-brand-purple-light);
+}
+
+.notSelected {
+  background-color: var(--background-neutral-primary);
+}
+
+.icon {
+  float: left;
+}
+
+.metadata {
+  float: left;
+  width: 175px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.time {
+  color: var(--text-neutral-tertiary);
+}

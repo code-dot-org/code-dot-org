@@ -1,11 +1,12 @@
 import $ from 'jquery';
-import React from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
+import React from 'react';
 import {connect} from 'react-redux';
-import {ViewType} from '../viewAsRedux';
+
 import {lessonIsLockedForAllStudents} from '@cdo/apps/templates/progress/progressHelpers';
+
 import {isLessonHiddenForSection} from '../hiddenLessonRedux';
+import {ViewType} from '../viewAsRedux';
 
 /**
  * When viewing a puzzle, we want teachers to be able to toggle between what the
@@ -97,11 +98,19 @@ class TeacherContentToggle extends React.Component {
       <div style={styles.container}>
         <div style={contentStyle} ref="content" />
         <div
-          style={[frameStyle, !showLockedLessonMessage && styles.hidden]}
+          style={
+            showLockedLessonMessage
+              ? frameStyle
+              : {...frameStyle, ...styles.hidden}
+          }
           ref="lockMessage"
         />
         <div
-          style={[frameStyle, !showHiddenLessonMessage && styles.hidden]}
+          style={
+            showHiddenLessonMessage
+              ? frameStyle
+              : {...frameStyle, ...styles.hidden}
+          }
           ref="hiddenMessage"
         />
       </div>
@@ -118,7 +127,7 @@ const styles = {
   },
 };
 
-export const UnconnectedTeacherContentToggle = Radium(TeacherContentToggle);
+export const UnconnectedTeacherContentToggle = TeacherContentToggle;
 
 // Exported so that it can be tested
 export const mapStateToProps = state => {

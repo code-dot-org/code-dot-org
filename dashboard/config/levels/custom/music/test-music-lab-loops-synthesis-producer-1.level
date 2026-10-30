@@ -1,0 +1,296 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-03-13T22:28:35.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "### Loop a Backbeat for 24 Measures\r\n\r\nMaria is making a song that lasts for 24 measures. She has enough lyrics to fill her song, but she needs a catchy backbeat. Create a combination of sounds that uses at least one beat, one bass, and one effect. Code it in a way that will make that loop last for 24 measures. ",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "packId": "chainsmokers_coldplay_something_just_like_this",
+      "sounds": {
+        "chainsmokers_coldplay_something_just_like_this": [
+          "vocals_do_do_do_low",
+          "vocals_do_do_do_high",
+          "vocals_hook_high",
+          "vocals_hook_low",
+          "vocals_prechorus_1",
+          "vocals_prechorus_2",
+          "vocals_prechorus_3",
+          "vocals_prechorus_4",
+          "vocals_verse_1",
+          "vocals_verse_2",
+          "vocals_verse_3",
+          "vocals_verse_4",
+          "drums_drop_beat",
+          "drums_fill",
+          "drums_live_beat",
+          "drums_live_build",
+          "drums_perc_build",
+          "drums_riser",
+          "drums_tom_build",
+          "drums_verse_beat",
+          "bass_live_1",
+          "bass_live_2",
+          "bass_live_3",
+          "bass_sub",
+          "bass_synth",
+          "guitar_acoustic",
+          "guitar_chime",
+          "guitar_intro",
+          "guitar_lead_1",
+          "guitar_lead_2",
+          "guitar_muted_1",
+          "guitar_muted_2",
+          "guitar_verse_1",
+          "guitar_verse_2",
+          "piano_build",
+          "piano_full_1",
+          "piano_full_2",
+          "piano_melody",
+          "wurly",
+          "synth_arp",
+          "synth_drop_1",
+          "synth_drop_2",
+          "synth_lead",
+          "vocals_glitch",
+          "drums_crash",
+          "drums_vibraslap",
+          "vocals_ahh_swell",
+          "vocals_ohahh"
+        ]
+      },
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Effects": [
+            "set_volume_effect_at_current_location_simple2",
+            "set_filter_effect_at_current_location_simple2",
+            "set_delay_effect_at_current_location_simple2"
+          ],
+          "Functions": [
+
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential",
+            "repeat_simple2"
+          ]
+        }
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_sequential",
+                  "id": "6=d1op5BSyH~yCwuPLe:",
+                  "deletable": false,
+                  "editable": false,
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "3SL.B/,ON@$;*.9P;pmR",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "fields": {
+                          "sound": "chainsmokers_coldplay_something_just_like_this/vocals_verse_1"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "MPb[,q|g,E.S(:1OQWq5",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "fields": {
+                              "sound": "chainsmokers_coldplay_something_just_like_this/vocals_verse_2"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "0N#8i#Fb7xt8t^Yujtn^",
+                                "deletable": false,
+                                "movable": false,
+                                "editable": false,
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "fields": {
+                                  "sound": "chainsmokers_coldplay_something_just_like_this/vocals_verse_3"
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": "1Y@B:pdW|lQF$fnVJ0eD",
+                                    "deletable": false,
+                                    "movable": false,
+                                    "editable": false,
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "fields": {
+                                      "sound": "chainsmokers_coldplay_something_just_like_this/vocals_verse_4"
+                                    },
+                                    "next": {
+                                      "block": {
+                                        "type": "play_sound_at_current_location_simple2",
+                                        "id": "play_sound_at_current_location_simple2",
+                                        "deletable": false,
+                                        "editable": false,
+                                        "extraState": {
+                                          "disableNextConnection": false
+                                        },
+                                        "fields": {
+                                          "sound": "chainsmokers_coldplay_something_just_like_this/vocals_do_do_do_low"
+                                        },
+                                        "next": {
+                                          "block": {
+                                            "type": "play_sound_at_current_location_simple2",
+                                            "id": "oN1@qC)Z(jqh$}$qpLjM",
+                                            "deletable": false,
+                                            "movable": false,
+                                            "editable": false,
+                                            "extraState": {
+                                              "disableNextConnection": false
+                                            },
+                                            "fields": {
+                                              "sound": "chainsmokers_coldplay_something_just_like_this/vocals_do_do_do_high"
+                                            },
+                                            "next": {
+                                              "block": {
+                                                "type": "play_sound_at_current_location_simple2",
+                                                "id": "`,h1R|Giotmh.RR7u1x^",
+                                                "deletable": false,
+                                                "movable": false,
+                                                "editable": false,
+                                                "extraState": {
+                                                  "disableNextConnection": false
+                                                },
+                                                "fields": {
+                                                  "sound": "chainsmokers_coldplay_something_just_like_this/vocals_prechorus_1"
+                                                },
+                                                "next": {
+                                                  "block": {
+                                                    "type": "play_sound_at_current_location_simple2",
+                                                    "id": ":BZqqmcZp)PaBR89X,p^",
+                                                    "deletable": false,
+                                                    "movable": false,
+                                                    "editable": false,
+                                                    "extraState": {
+                                                      "disableNextConnection": false
+                                                    },
+                                                    "fields": {
+                                                      "sound": "chainsmokers_coldplay_something_just_like_this/vocals_prechorus_2"
+                                                    },
+                                                    "next": {
+                                                      "block": {
+                                                        "type": "play_sound_at_current_location_simple2",
+                                                        "id": "RH28anxrCiL_.@TE^*Jh",
+                                                        "deletable": false,
+                                                        "movable": false,
+                                                        "editable": false,
+                                                        "extraState": {
+                                                          "disableNextConnection": false
+                                                        },
+                                                        "fields": {
+                                                          "sound": "chainsmokers_coldplay_something_just_like_this/vocals_prechorus_3"
+                                                        },
+                                                        "next": {
+                                                          "block": {
+                                                            "type": "play_sound_at_current_location_simple2",
+                                                            "id": "IDPCX9$YS}Ho5lCeO]r^",
+                                                            "deletable": false,
+                                                            "movable": false,
+                                                            "editable": false,
+                                                            "extraState": {
+                                                              "disableNextConnection": false
+                                                            },
+                                                            "fields": {
+                                                              "sound": "chainsmokers_coldplay_something_just_like_this/vocals_prechorus_4"
+                                                            },
+                                                            "next": {
+                                                              "block": {
+                                                                "type": "play_sound_at_current_location_simple2",
+                                                                "id": "bYf#GI@AL-({6x;@)bhO",
+                                                                "deletable": false,
+                                                                "movable": false,
+                                                                "editable": false,
+                                                                "extraState": {
+                                                                  "disableNextConnection": false
+                                                                },
+                                                                "fields": {
+                                                                  "sound": "chainsmokers_coldplay_something_just_like_this/vocals_hook_high"
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-13 22:56:22 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 23:00:47 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 23:01:41 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 23:02:24 +0000\",\"changed\":[\"hide_share_and_remix\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 23:04:12 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 23:04:23 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-17 18:48:43 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

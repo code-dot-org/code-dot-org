@@ -1,0 +1,57 @@
+name 'HoAI_pilot_5_extro_-pl'
+title 'Review'
+description 'description here'
+
+markdown <<MARKDOWN
+<div style="padding:60px 20px 40px; text-align:center;">
+<h1 style="font-size:44px; color:#8148B2; margin:0;">Congratulations!</h1>
+<h2 style="font-size:24px; color:#1a8a9a; margin:10px 0;">Take a moment to reflect before you move on.</h2>
+</div>
+
+<section style="max-width:1100px; margin:60px auto 40px; padding:0 24px; display:flex; align-items:center; gap:36px; flex-wrap:wrap;">
+
+<div style="flex:1 1 480px; position:relative; min-height:300px;">
+<div style="position:absolute; right:0; top:18px; width:72%; height:72%; background:radial-gradient(120% 90% at 70% 20%, #f4f8ff 0%, #eef4ff 60%, #ffffff 100%); border-radius:28px;"></div>
+<img src="https://images.code.org/664e0bd0bb52519bb4ac2040efe26063-Screenshot 2025-11-05 at 12.09.47 PM.png" alt="Sparky the AI guide"
+style="position:relative; width:58%; max-width:360px; height:auto; display:block;">
+<div style="position:absolute; right:6px; top:8px; max-width:420px; background:#fff; border-radius:14px; padding:18px 20px; box-shadow:0 10px 24px rgba(0,0,0,.08);">
+<div style="position:absolute; left:-14px; top:28px; width:0; height:0; border-top:12px solid transparent; border-bottom:12px solid transparent; border-right:14px solid #fff;"></div>
+<p style="margin:0; font-size:18px; line-height:1.6;">
+Think about...
+<ul>
+<li style="margin:0; font-size:16px; line-height:1.6;">What is one new idea or concept about how AI works that you understand more clearly now?</li>
+<li style="margin:0; font-size:16px; line-height:1.6;">What’s one way you could bring what you learned today into your classroom or teaching practice?</li>
+</ul>
+</p>
+</div>
+
+<div style="max-width:1100px; margin:40px auto; padding:0 24px;">
+<div style="display:flex; flex-wrap:nowrap; gap:24px; align-items:stretch; justify-content:space-between;">
+
+<!-- Dropdown 1 -->
+<details style="flex:0 0 50%; display:block; box-sizing:border-box; background:#f3f0ff; border-left:4px solid #7b3fe4; border-radius:8px; padding:16px 20px; font-size:17px; color:#333; cursor:pointer; box-shadow:0 6px 14px rgba(0,0,0,0.05);">
+<summary style="font-weight:600; font-size:18px; color:#333; list-style:none; outline:none;">Want to do this activity with your students?
+</summary>
+<div style="margin-top:12px; font-size:16px; line-height:1.6; color:#444;">
+<p style="margin:0 0 8px;">Bring <a href="studio.code.org/courses/mix-move-ai-2025/units/1" target="_blank">Mix & Move with AI</a> to your classroom for a hands-on intro to how AI and coding work together.</p>
+</div>
+</details>
+
+<!-- Dropdown 2 -->
+<details style="flex:0 0 50%; display:block; box-sizing:border-box; background:#f3f0ff; border-left:4px solid #7b3fe4; border-radius:8px; padding:16px 20px; font-size:17px; color:#333; cursor:pointer; box-shadow:0 6px 14px rgba(0,0,0,0.05);">
+<summary style="font-weight:600; font-size:18px; color:#333; list-style:none; outline:none;">Want to learn more about AI?
+</summary>
+<div style="margin-top:12px; font-size:16px; line-height:1.6; color:#444;">
+<p style="margin:0 0 8px;">Check out <a href="https://studio.code.org/courses/self-paced-pl-ai-101-2024" target="_blank">AI 101 Professional Learning for Educators</a>: a free, foundational online learning series about AI and its transformative potential in education.</p>
+</div>
+</details>
+
+</div>
+</div>
+
+
+</section>
+
+MARKDOWN
+
+"First, team up with AI to create your own star dancer. Next, remix a track to set the vibe. Finally, code an original dance routine to bring your dancer and music to life!"

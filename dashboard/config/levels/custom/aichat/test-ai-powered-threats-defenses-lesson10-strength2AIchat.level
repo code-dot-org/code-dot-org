@@ -1,0 +1,54 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-08-01T15:36:34.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Code Review with AI\r\n\r\nUse AI Chat to review the code for security issues.\r\n\r\n### Do This:\r\n\r\n1. Attach the code snippet from the library to your chat and ask AI chat to review the code for security issues.\r\n\r\n2. Follow up and ask AI Chat to explain possible fixes to the issues it identifies.\r\n\r\n\r\n**Try it out!**\r\n\r\n:::details [<i class=\"fa fa-briefcase\" aria-hidden=\"true\"></i> **Need a starting prompt?**]\r\n>Can you review this code and help me find any security problems, especially related to how it handles encryption or sensitive data? Let me know if there are things like hardcoded keys, missing encryption, or anything that might leak secrets.\r\n:::",
+    "submittable": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "Keep your responses concise and clear. \n\nIf students don't ask you explicitly, ask them if they would like to hear about potential fixes to the issues you have identified.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "starter_assets": {
+      "Sample Code - Save My Notes.pdf": "bd159713-91c1-4acc-9b8a-f292c87dcc5c.pdf"
+    },
+    "offer_browser_tts": "false",
+    "disable_edit_run_for_submission": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-08-01T15:36:34.621+00:00\",\"changed\":[\"cloned from \\\"test-ai-powered-threats-defenses-lesson3-level2\\\"\"],\"cloned_from\":\"test-ai-powered-threats-defenses-lesson3-level2\"},{\"changed_at\":\"2025-08-01 15:41:31 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-08-01 15:41:57 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-08-01 15:42:14 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-08-01 15:42:38 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+}]]></config>
+</Aichat>

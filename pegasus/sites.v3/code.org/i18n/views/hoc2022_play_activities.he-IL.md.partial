@@ -1,7 +1,0 @@
-{{ featured_tutorial, title: "שלום עולם: כדורגל"body: "את/ה הקפטן של הקבוצה בזמן שאתם מקודדים סצנות אינטרקאטיביות על מגרש הכדורגל". "גווווווווווווווווול! , image: "/images/hoc2022-hello-world-soccer.png", url: "https://studio.code.org/s/hello-world-soccer-2022/reset" }}
-
-{{ featured_tutorial, title: "ספורט" body: "צרו משחק כדורסל או ערבבו ושלבו בין כמה סוגי ספורט" image: "/shared/images/courses/logo_tall_sports.jpg", url: "https://code.org/athletes" }}
-
-{{ featured_tutorial, title: "קוד Flappy": body: "רוצים לכתוב משחק משלכם מפחות מ-10 דקות? "נסו את מערך הדרכה קוד Flappy שלנו" image: "/shared/images/courses/logo_tall_flappy.jpg", url: "https://studio.code.org/s/flappy/reset" }}
-
-{{ featured_tutorial, title: "מיינקראפט שעת קוד" body: "מיינקארפט חוזר אל שעת קוד עם פעילות אינטראקטיבית חדשה! מסע אל תוך מיינקראפט עם קוד", , image: "/images/hoc2022-mc-escape.png", url: "https://aka.ms/HourofCode2022" }}

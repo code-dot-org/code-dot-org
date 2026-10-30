@@ -1,0 +1,164 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-03-26T22:30:31.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "#### Investigate\r\n\r\nLet's fix the version of the song that we just saw:\r\n\r\n1) Move the <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-boombox\" style=\"color: #58BEF9; margin-right: 2px\"></i> Bass </span> track into the <code style=\"background-color: rgb(0, 148, 202); color: white; border: none; box-shadow: inset -1px -1px 1px rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">play together</code> block [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=id:bass_block---id-up-inside:play_sounds_together).\r\n2) Drag out a new <code style=\"background-color: rgb(116, 53, 178); color: white; border: none; box-shadow: inset -1px -1px 1px rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">play</code> block into the <code style=\"background-color: rgb(0, 148, 202); color: white; border: none; box-shadow: inset -1px -1px 1px rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">play together</code> block [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=flyout-first-block---id-up-inside:play_sounds_together).\r\n3) Set the track to a <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-drum\" style=\"color: #E565F5; margin-right: 2px\"></i> Beat </span>.\r\n\r\nPress the <code style=\"background-color: #fca401; color: white; border: none; box-shadow: inset -1px -1px 1px1 rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">Run</code> button! You should hear 4 tracks playing together!\r\n\r\nIf you're stuck, try clicking the <i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i> icons for hints!\r\n",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "sounds": {
+        "carly_rae_jepsen_call_me_maybe": [
+          "hey_i_just_met_you",
+          "strings_big",
+          "bass",
+          "drums_full"
+        ]
+      },
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ]
+        },
+        "type": "flyout"
+      },
+      "packId": "carly_rae_jepsen_call_me_maybe",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "play_sounds_together",
+                  "deletable": false,
+                  "movable": false,
+                  "editable": false,
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "play_sound_at_current_location_simple2",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "fields": {
+                          "sound": "carly_rae_jepsen_call_me_maybe/hey_i_just_met_you"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "g?.Wt;h[;suX(UtaXH37",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "fields": {
+                              "sound": "carly_rae_jepsen_call_me_maybe/strings_big"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "play_sound_at_current_location_simple2",
+                      "id": "bass_block",
+                      "deletable": false,
+                      "editable": false,
+                      "extraState": {
+                        "disableNextConnection": false
+                      },
+                      "fields": {
+                        "sound": "carly_rae_jepsen_call_me_maybe/bass"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "showSoundFilters": true,
+      "showSoundsPanelInSoundsMode": true,
+      "toolboxDefinition": {
+        "contents": [
+          {
+            "kind": "block",
+            "type": "play_sound_at_current_location_simple2",
+            "editable": false,
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "sound": "carly_rae_jepsen_call_me_maybe/drums_full"
+            },
+            "enabled": true
+          }
+        ],
+        "kind": "flyoutToolbox"
+      }
+    },
+    "project_template_level_name": "test-music-lab-sequences-explore-play-template-parent",
+    "validations": [
+      {
+        "key": "test-music-lab-sequences-explore-play-together-1_677a6641-8fdf-4f4d-9567-c5a659bac0d2",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot says: \"You Did It!\"",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds_together",
+            "value": 4
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-sequences-explore-play-together-1_b86aaf4f-99ab-4ecf-aa0b-b7aa3f931dd9",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening and checking if you pass the level.\n\nIf your song has already ended: something is not quite right!",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "encrypted_exemplar_sources": "UGYNk6iye9eaFwUY05FzzO/7y8j7ObxryFbKvBPuF528qP4MtsSFqDeG//aJ\nl0T6lfe2BzN4biKVeTvfD80/YL+3G5Bj3YmNK3/UM/xNlM4UFpxqaM8r0Ju1\nAECRzcycDraxxDvwhRR3E1WGqwBVYl2igtUE+clNUhMch5zn39NedMm86QQD\nSNE/vqliphrufSGnbbJ7q2y+Nx6eM5RXJ+lZZk4sqapSH+vKD0pDXXdgOc+W\nOubeIkjQXgAlbS41Zryd0OBtFrr6KBsLWVi2pFWmfWGL+SqWwfPA9yl3s8fF\nP82w3iwd2TI5hv7nXrKCCCdcIC1Gsr76K3reAXTwhLnoSYxA+Y0s+ldrfTsK\nwa6E8t98HD9Hkmnig6JhAqa6AUKg0Fz0CgxxS4a9jSLwQLBFEghMFE1FSjpi\n3FZ35AOwqUHR4f967j7AkCni7+UqwfwYfFW5MDu4xNrIh53+PShW82Krgr/X\nQAMrNyeo0N7T31DHHSax/4n2Bofg9ZOPnGt97fhMkU63MU3pfg2kmgOoF5Rd\nkIKRKqjsD+mh/Ks9FNDvt8oh/u5PjDAzRIRyj8dEPnlmUlSzR4khuBaJ6clX\n6U+dNcEhuvOXyslJCObkLzID/1OAPdd3vCEr/zklwUjRcoSTJS3567psdXW0\ndz83+fxVhgtEUzoSXLMxI8l0rDEiFr9+bRSJgHDcppZURu/+ODCu3tKYYU/k\nMuWnZL7KJRe533p+3YAAg8YTK4kCr2zYO6CFKimaFdxwHGNP+QEGP7zpf9vw\n90F5eaLgiSHCI8AnK9Zt7d5/NV65mcTD8F1RQhTP2aNkUJWOT4DO9+K2kxM0\nkLKfPg0MgVTHmIMsTowjqh/7/rbBO9Bq/5t8s4AvVUIBuPr8uG0P2B3JxRE6\n+ZYD5HrtN3P9PmWFvweJlFbQDExgCKDbC5LLpeFoHdccQa6hlWj58mdLXLQv\nCWALpPOZD7msBZlVbA9cOvEIVSFeeQuHVoWorNdfp82xPYKnSPsBFbVpdoHz\nVKWlrqJ5fwEaT7tvls6jQi0abNmUaBhZg2Hea5uvgvmF6KEBawHCCWscwKER\nPVaK60PluuvtjT0Pah77QiHsDP/r3hV9scKOVv5IDWspyauT7p9/8Kxo/KWO\nZxE4ojEzCSTBw8I84/jqAYNxANgP8AdKRhEClMP0hOxgrl9CikUwsoWB4HVA\nk2QaX6v+dYsnXTvSfq7UDt2wuDi/UM55oGXIyVtwnRmQ9ha28yBW/4A8wYQ6\niW2pqO7WKwTZDI+Qv4nf0bXbM+cxuQcjrRMJKdSAQebh3I42Z8nx3mHvnpGL\nYO8=\n",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-26T22:30:31.225+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-play-together-1\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-play-together-1\"},{\"changed_at\":\"2025-03-26 22:30:35 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

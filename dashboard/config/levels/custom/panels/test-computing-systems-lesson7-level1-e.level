@@ -1,0 +1,36 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-01-15T19:51:49.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "Scientist Sam\n\nJob/Hobby: Data scientist and researcher\n\nPurpose: Data analysis, simulations, and machine learning.\n\n\n",
+        "imageUrl": "https://images.code.org/807ec6657d55ff383675c87c7c8b7441-updateSign.png",
+        "key": "undefined-031fe85f-4e54-4fe0-b3a7-24c6bde9c151",
+        "fadeInOverPrevious": false
+      },
+      {
+        "text": "Budget: $3,000",
+        "imageUrl": "https://images.code.org/807ec6657d55ff383675c87c7c8b7441-updateSign.png",
+        "key": "undefined-14706a7d-89bf-4177-9129-aefdc10f29d6"
+      },
+      {
+        "text": "Important Info: Needs robust backup solutions and Linux compatibility\n\nPreferences:\n* High-performance CPU and GPU for computations.\n* 64 GB RAM or more for large datasets.\n* Reliable cooling system.",
+        "imageUrl": "https://images.code.org/807ec6657d55ff383675c87c7c8b7441-updateSign.png",
+        "key": "undefined-fbda9709-191d-4453-b773-2d163636fe7a",
+        "layout": "text-bottom-left"
+      }
+    ],
+    "display_name": "Scientist Sam",
+    "bubble_choice_description": "Data scientist and researcher",
+    "thumbnail_url": "https://images.code.org/7d9f664976350e98df3b1e1fd24323a6-updateSign.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-01-15T19:51:49.330+00:00\",\"changed\":[\"cloned from \\\"test-computing-systems-lesson7-level1-d\\\"\"],\"cloned_from\":\"test-computing-systems-lesson7-level1-d\"},{\"changed_at\":\"2025-01-15 19:52:44 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-15 19:55:53 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-15 20:01:46 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 15:14:23 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 15:16:20 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

@@ -1,76 +1,254 @@
 require 'test_helper'
 
 class ApplicationControllerTest < ActionDispatch::IntegrationTest
-  def setup
-    Cpa.stubs(:cpa_experience).
-      with(any_parameters).
-      returns(Cpa::NEW_USER_LOCKOUT)
-  end
+  describe 'CAP lockout' do
+    let(:user) {create(:student)}
 
-  test "accounts needing permission should be locked out" do
-    # Test matrix for the user states which require parent permission.
-    [
-      [:U13, :in_colorado, :without_parent_permission],
-      [:U13, :in_colorado, :without_parent_permission, :google_sso_provider],
-      [:U13, :in_colorado, :migrated_imported_from_clever, :with_google_authentication_option],
-    ].each do |traits|
-      user = create(:student, *traits)
+    let(:user_is_locked_out?) {true}
+
+    let(:expect_grace_period_handler_call) {Services::ChildAccount::GracePeriodHandler.expects(:call).with(user: user)}
+    let(:expect_lockout_handler_call) {Services::ChildAccount::LockoutHandler.expects(:call).with(user: user)}
+
+    before do
+      Services::ChildAccount::LockoutHandler.stubs(:call).with(user: user).returns(user_is_locked_out?)
+
       sign_in user
-      get '/home'
-      assert_redirected_to '/lockout', "failed to redirect to /lockout for user with traits #{traits}"
+    end
+
+    it 'calls CAP grace period handler' do
+      expect_grace_period_handler_call.once
+      get root_path
+    end
+
+    it 'calls CAP lockout handler' do
+      expect_lockout_handler_call.once
+      get root_path
+    end
+
+    it 'redirects to the lockout page' do
+      get root_path
+      assert_redirected_to lockout_path
+    end
+
+    it 'allows current user data retrieving' do
+      get api_v1_users_current_path
+      refute_redirect_to lockout_path
+    end
+
+    it 'allows sign out' do
+      get destroy_user_session_path
+      refute_redirect_to lockout_path
+    end
+
+    it 'allows CSRF token retrieving' do
+      get get_token_path
+      refute_redirect_to lockout_path
+    end
+
+    it 'allows changing language' do
+      post locale_path
+      refute_redirect_to lockout_path
+    end
+
+    it 'avoids infinite redirect loop to lockout page' do
+      get lockout_path
+      refute_redirect_to lockout_path
+    end
+
+    it 'allows access to policy consent API' do
+      get policy_compliance_child_account_consent_path
+      refute_redirect_to lockout_path
+    end
+
+    context 'when a Global Edition region is active' do
+      before do
+        cookies[:ge_region] = 'cn'
+        cookies[:language_] = 'zh-CN'
+      end
+
+      it 'allows an unprefixed request to the policy consent API' do
+        post '/policy_compliance/child_account_consent', as: :json
+
+        # Missing parent_email proves the request reached the consent controller.
+        must_respond_with :bad_request
+      end
+    end
+
+    it 'allows student change account information' do
+      patch users_set_student_information_path
+      refute_redirect_to lockout_path
+    end
+
+    it 'allows student to visit the join page' do
+      get student_user_new_path
+      refute_redirect_to lockout_path
+    end
+
+    it 'allows student to join a section' do
+      post student_register_path
+      refute_redirect_to lockout_path
+    end
+
+    context 'when user is not sign in' do
+      before do
+        sign_out user
+
+        expect_grace_period_handler_call.never
+        expect_lockout_handler_call.never
+      end
+
+      it 'does not redirect to lockout page' do
+        get root_path
+        refute_redirect_to lockout_path
+      end
+    end
+
+    context 'when user is not locked out' do
+      let(:user_is_locked_out?) {false}
+
+      it 'does not redirect to lockout page' do
+        get root_path
+        refute_redirect_to lockout_path
+      end
+    end
+
+    context 'when error is raised during grace period handling' do
+      let(:error) {StandardError.new('expected_error')}
+
+      before do
+        Services::ChildAccount::GracePeriodHandler.stubs(:call).with(user: user).raises(error)
+      end
+
+      it 'does not call CAP grace period handler' do
+        expect_grace_period_handler_call.never
+        get root_path
+      end
+
+      it 'does not call CAP lockout handler' do
+        expect_lockout_handler_call.never
+        get root_path
+      end
+
+      it 'notifies Honeybadger about error' do
+        request_path = root_path
+
+        Honeybadger.expects(:notify).with(
+          error,
+          error_message: 'Failed to apply the Child Account Policy to the user',
+          context: {
+            user_id: user.id,
+            request_path: request_path,
+          }
+        ).once
+
+        get request_path
+      end
+
+      it 'does not redirect to lockout page' do
+        get root_path
+        refute_redirect_to lockout_path
+      end
     end
   end
 
-  test "account with permission should NOT be locked out" do
-    user = create(:locked_out_child, :with_parent_permission)
-    sign_in user
-    get '/home'
-    assert_response :success
-  end
+  describe 'LMS lockout' do
+    let(:user) do
+      create(:student)
+    end
 
-  test "accounts NOT needing permission should NOT be locked out" do
-    # Test matrix for the user states which don't require parent permission.
-    [
-      [:student_in_word_section, :U13, :in_colorado],
-      [:student_in_picture_section, :U13, :in_colorado],
-      [:student, :U13, :in_colorado, :migrated_imported_from_clever],
-      [:student, :U13, :unknown_us_region],
-      [:student, :not_U13, :in_colorado],
-    ].each do |traits|
-      user = create(*traits)
+    before do
+      user.authentication_options << build(:lti_authentication_option)
+      user.save
+
       sign_in user
-      get '/home'
-      assert_response :success, "expected 200 response for user with traits #{traits}"
+    end
+
+    describe 'with session initialized' do
+      before do
+        Policies::Lti.stubs(:account_linking?).returns(true)
+      end
+
+      it 'should redirect to landing path' do
+        get root_path
+
+        assert_redirected_to lti_v1_account_linking_landing_path
+      end
+
+      it 'should NOT redirect to landing path for allow listed paths' do
+        get destroy_user_session_path
+
+        assert_redirected_to root_path
+      end
     end
   end
 
-  test "locked out account can still sign out" do
-    user = create(:locked_out_child)
-    sign_in user
-    sign_in user
-    get '/users/sign_out'
-    refute_redirect_to '/lockout'
+  describe 'persist_brand_params' do
+    let(:cookie_key) {environment_specific_cookie_name(Cdo::Brand::BRAND_COOKIE_NAME)}
+
+    before do
+      DCDO.stubs(:get)
+      DCDO.stubs(:get).with('brand-router-enabled', false).returns(true)
+    end
+
+    it 'does nothing when brand router is disabled' do
+      DCDO.stubs(:get).with('brand-router-enabled', false).returns(false)
+      get root_path, params: {brand: 'codeai-audit'}
+      assert_nil cookies[cookie_key]
+    end
+
+    it 'sets brand cookie from URL param' do
+      get root_path, params: {brand: 'codeai-audit'}
+      assert_equal 'codeai-audit', response.cookies[cookie_key]
+    end
+
+    it 'ignores unknown brand codes' do
+      get root_path, params: {brand: 'unknown'}
+      assert_nil cookies[cookie_key]
+    end
+
+    it 'clears brand cookie on brand-reset' do
+      cookies[cookie_key] = 'codeai-audit'
+      get root_path, params: {'brand-reset' => '1'}
+      assert_nil response.cookies[cookie_key]
+    end
+
+    it 'does not set cookie when no brand param present' do
+      get root_path
+      assert_nil cookies[cookie_key]
+    end
   end
 
-  test "locked out account can still change the language" do
-    user = create(:locked_out_child)
-    sign_in user
-    post '/locale'
-    refute_redirect_to '/lockout'
+  describe 'exception handling' do
+    it 'gracefully handles UnsafeRedirectErrors' do
+      Rails.logger.expects(:warn).once
+      get home_set_locale_path, params: {locale: 'ar-SA', user_return_to: '../invalid/path'}
+      assert_response :not_found
+    end
   end
 
-  test "locked out account can access the policy consent routes" do
-    user = create(:locked_out_child)
-    sign_in user
-    get '/policy_compliance/child_account_consent'
-    refute_redirect_to '/lockout'
-    post '/policy_compliance/child_account_consent'
-    refute_redirect_to '/lockout'
+  describe 'open redirect protection' do
+    before do
+      sign_in create(:teacher)
+    end
+
+    it 'allows redirects to the code.org host' do
+      user_return_to = CDO.code_org_url('/afe', 'https:')
+      get api_v1_users_cached_page_auth_redirect_path, params: {user_return_to: user_return_to}
+      assert_redirected_to user_return_to
+    end
+
+    it 'rejects redirects to other hosts' do
+      get api_v1_users_cached_page_auth_redirect_path, params: {user_return_to: 'https://some-other-site.com/afe'}
+      assert_response :not_found
+    end
   end
 
-  test "an anonymous user should not be redirected to the lockout page." do
-    get '/'
-    refute_redirect_to '/lockout'
+  describe '#root_url' do
+    subject(:root_url_helper) {root_url}
+
+    it 'returns canonical studio root URL' do
+      _root_url_helper.must_equal CDO.studio_url('/')
+    end
   end
 
   # Assert that the response is not a redirection to the given path.

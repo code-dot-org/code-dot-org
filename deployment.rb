@@ -25,13 +25,6 @@ def rack_env?(*env)
   e.include? rack_env.to_sym
 end
 
-def with_rack_env(temporary_env)
-  require 'mocha/api'
-  CDO.stubs(rack_env: temporary_env)
-  yield
-  CDO.unstub(:rack_env)
-end
-
 def deploy_dir(*dirs)
   CDO.dir(*dirs)
 end
@@ -42,6 +35,14 @@ end
 
 def apps_dir(*dirs)
   deploy_dir('apps', *dirs)
+end
+
+def config_dir(*dirs)
+  deploy_dir('config', *dirs)
+end
+
+def python_dir(*dirs)
+  deploy_dir('python', *dirs)
 end
 
 def tools_dir(*dirs)
@@ -56,8 +57,20 @@ def dashboard_dir(*dirs)
   deploy_dir('dashboard', *dirs)
 end
 
+def dashboard_engines_dir(*dirs)
+  deploy_dir('dashboard', 'engines', *dirs)
+end
+
 def dashboard_legacy_dir(*dirs)
   deploy_dir('dashboard', 'legacy', *dirs)
+end
+
+def frontend_dir(*dirs)
+  deploy_dir('frontend', *dirs)
+end
+
+def vite_dir(*dirs)
+  frontend_dir('apps', 'studio', *dirs)
 end
 
 def pegasus_dir(*paths)
@@ -66,10 +79,6 @@ end
 
 def shared_dir(*dirs)
   deploy_dir('shared', *dirs)
-end
-
-def shared_js_dir(*dirs)
-  deploy_dir('shared/js', *dirs)
 end
 
 def lib_dir(*dirs)
@@ -86,4 +95,17 @@ end
 
 def shared_constants_file
   lib_dir('cdo', 'shared_constants.rb')
+end
+
+# List of paths that, if changed, should trigger an apps build.
+# This contains the apps source itself and any other dependency that affects the apps build,
+# e.g. shared constants (which generate js apps code during apps/script/generateSharedConstants)
+def apps_build_trigger_paths
+  [
+    apps_dir,
+    config_dir('global_editions'),
+    shared_constants_file,
+    shared_constants_dir,
+    frontend_dir
+  ]
 end

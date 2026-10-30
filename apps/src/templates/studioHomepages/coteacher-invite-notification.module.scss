@@ -1,0 +1,27 @@
+// Strip default `<button>` chrome so the info-circle reads as an inline icon
+// while remaining a focusable trigger for the tooltip.
+.tooltipTrigger {
+  margin-inline-start: 0.5rem;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--text-neutral-secondary);
+  cursor: pointer;
+  vertical-align: middle;
+  line-height: 1;
+
+  &:hover,
+  &:focus-visible {
+    color: var(--text-neutral-primary);
+  }
+}
+
+.notificationContainer {
+  box-sizing: border-box;
+  margin-bottom: 20px;
+
+  h3 {
+    display: flex;
+    align-items: center;
+  }
+}

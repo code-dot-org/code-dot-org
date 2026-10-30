@@ -1,7 +1,9 @@
-import * as utils from './utils';
-import {PALETTES} from '../constants';
-import {APP_WIDTH, APP_HEIGHT} from '../../constants';
 import drawHeart from '@code-dot-org/dance-party/src/shapes/heart';
+
+import {APP_WIDTH, APP_HEIGHT} from '../../constants';
+import {PALETTES} from '../constants';
+
+import * as utils from './utils';
 
 export const commands = {
   setBackground(color) {
@@ -88,7 +90,7 @@ export const commands = {
                 .createVector(0, 1)
                 .rotate(this.p5.random(0, 360)),
               size: 0.01,
-              color: utils.randomColorFromPalette(palette),
+              color: utils.randomColorFromPalette(PALETTES[palette]),
             });
           }
           this.p5.noStroke();
@@ -116,7 +118,7 @@ export const commands = {
             x: utils.randomInt(0, 400),
             y: utils.randomInt(0, 400),
             size: utils.randomInt(15, 30),
-            color: utils.randomColorFromPalette(palette),
+            color: utils.randomColorFromPalette(PALETTES[palette]),
           });
           this.p5.noStroke();
           stars.forEach(star => {
@@ -144,7 +146,7 @@ export const commands = {
           x: utils.randomInt(0, 400),
           y: utils.randomInt(0, 400),
           radius: utils.randomInt(20, 60),
-          hex: utils.randomColorFromPalette(palette),
+          hex: utils.randomColorFromPalette(PALETTES[palette]),
           alpha: utils.randomInt(1, 79),
           delta: utils.randomInt(0, 1) ? 0.5 : -0.5,
         });
@@ -413,7 +415,7 @@ export const commands = {
             x: utils.randomInt(-APP_WIDTH, APP_WIDTH - maxDropLength),
             y: utils.randomInt(-50, -20),
             length: utils.randomInt(10, maxDropLength),
-            color: utils.randomColorFromPalette(palette),
+            color: utils.randomColorFromPalette(PALETTES[palette]),
           });
           this.p5.push();
           this.p5.background('white');
@@ -444,7 +446,10 @@ export const commands = {
             y: APP_HEIGHT + 10,
             velocityX: this.p5.random(-2, 2),
             size: this.p5.random(6, 12, 18),
-            color: this.getP5Color(utils.randomColorFromPalette(palette), 60),
+            color: this.getP5Color(
+              utils.randomColorFromPalette(PALETTES[palette]),
+              60
+            ),
           });
           this.p5.push();
           this.p5.noStroke();
@@ -473,7 +478,7 @@ export const commands = {
             velocityX: this.p5.random(-2, 2),
             size: this.p5.random(6, 12, 18),
             spin: 1,
-            color: utils.randomColorFromPalette(palette),
+            color: utils.randomColorFromPalette(PALETTES[palette]),
           });
           this.p5.push();
           this.p5.background('white');
@@ -505,7 +510,10 @@ export const commands = {
               y: utils.randomInt(10, APP_HEIGHT - 10),
               rotation: utils.randomInt(0, 359),
               size: utils.randomInt(10, 120),
-              color: this.getP5Color(utils.randomColorFromPalette(palette), 60),
+              color: this.getP5Color(
+                utils.randomColorFromPalette(PALETTES[palette]),
+                60
+              ),
             });
           }
           this.p5.push();

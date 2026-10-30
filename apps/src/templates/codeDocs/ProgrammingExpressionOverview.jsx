@@ -1,16 +1,16 @@
+import PropTypes from 'prop-types';
 import React, {createRef, useEffect} from 'react';
 import ReactDOM from 'react-dom';
-import PropTypes from 'prop-types';
+
+import {createVideoWithFallback} from '@cdo/apps/code-studio/videos';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
+import i18n from '@cdo/locale';
+
+import {embedBlocklyBlock} from '../utils/embeddedBlocklyRenderUtils';
+
 import Example from './Example';
 import ParametersTable from './ParametersTable';
-import {createVideoWithFallback} from '@cdo/apps/code-studio/videos';
-import i18n from '@cdo/locale';
-import {
-  convertXmlToBlockly,
-  shrinkBlockSpaceContainer,
-} from '@cdo/apps/templates/instructions/utils';
-import {parseElement} from '@cdo/apps/xml';
+
 import '../../../style/curriculum/documentation_tables.scss';
 
 const VIDEO_WIDTH = 560;
@@ -23,6 +23,7 @@ export default function ProgrammingExpressionOverview({
 }) {
   const titleRef = React.createRef();
   const videoRef = createRef();
+  const isBlockly = programmingEnvironmentLanguage === 'blockly';
 
   useEffect(() => {
     if (programmingExpression.video) {
@@ -34,19 +35,7 @@ export default function ProgrammingExpressionOverview({
       );
     }
     if (titleRef.current && programmingExpression.blockName) {
-      convertXmlToBlockly(titleRef.current);
-      const blocksDom = parseElement(
-        `<block type='${programmingExpression.blockName}' />`
-      );
-      const blockSpace = Blockly.createEmbeddedWorkspace(
-        titleRef.current,
-        blocksDom,
-        {
-          noScrolling: true,
-          inline: false,
-        }
-      );
-      shrinkBlockSpaceContainer(blockSpace, true);
+      embedBlocklyBlock(titleRef.current, programmingExpression.blockName);
     }
   }, [programmingExpression, titleRef, videoRef]);
 
@@ -141,10 +130,15 @@ export default function ProgrammingExpressionOverview({
       )}
       {programmingExpression.parameters?.length > 0 && (
         <div>
-          <h2>{i18n.parametersHeader()}</h2>
+          <h2>
+            {isBlockly
+              ? i18n.blockFieldsAndInputsHeader()
+              : i18n.parametersHeader()}
+          </h2>
           <ParametersTable
             parameters={programmingExpression.parameters}
             programmingEnvironmentLanguage={programmingEnvironmentLanguage}
+            isBlockly
           />
         </div>
       )}

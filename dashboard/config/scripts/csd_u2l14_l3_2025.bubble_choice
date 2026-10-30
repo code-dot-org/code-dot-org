@@ -1,0 +1,12 @@
+name 'CSD U2L14-L3-2025'
+display_name 'Chapter 1 Project - Option 3'
+description 'Demonstrate your skills and knowledge by building a webpage for a new user from start to finish!'
+
+sublevels
+level 'CSD U2L14-L3a-2025'
+level 'CSD U2L14-L3b-2025'
+level 'CSD U2L14-L3c-2025'
+level 'CSD U2L14-L3d-2025'
+level 'CSD U2L14-L3e-2025'
+
+uses_lab2

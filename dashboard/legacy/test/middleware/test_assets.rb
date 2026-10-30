@@ -4,7 +4,7 @@ require_relative '../../middleware/helpers/asset_bucket'
 
 class AssetsTest < FilesApiTestBase
   def setup
-    NewRelic::Agent.reset_stub
+    ObservabilityTestRecorder.install
 
     # Ensure the s3 path starts empty.
     delete_all_assets('assets_test/1/1')
@@ -124,7 +124,7 @@ class AssetsTest < FilesApiTestBase
     @api.get_object('nonexistent.jpg')
     assert not_found?
 
-    assert_newrelic_metrics %w(
+    assert_recorded_metric_names %w(
       Custom/ListRequests/AssetBucket/BucketHelper.list
       Custom/ListRequests/AssetBucket/BucketHelper.app_size
       Custom/ListRequests/AssetBucket/BucketHelper.app_size
@@ -196,7 +196,7 @@ class AssetsTest < FilesApiTestBase
     @api.delete_object(first_asset)
     @api.delete_object(second_asset)
 
-    assert_newrelic_metrics %w(
+    assert_recorded_metric_names %w(
       Custom/ListRequests/AssetBucket/BucketHelper.app_size
       Custom/ListRequests/AssetBucket/BucketHelper.app_size
       Custom/ListRequests/AssetBucket/BucketHelper.list
@@ -256,7 +256,7 @@ class AssetsTest < FilesApiTestBase
 
     @api.delete_object(asset_name)
 
-    assert_newrelic_metrics %w(
+    assert_recorded_metric_names %w(
       Custom/ListRequests/AssetBucket/BucketHelper.app_size
       Custom/ListRequests/AssetBucket/BucketHelper.list
     )
@@ -289,7 +289,7 @@ class AssetsTest < FilesApiTestBase
     assert_nil dest_file_infos[1]
     assert_fileinfo_equal(expected_sound_info, dest_file_infos[0])
 
-    assert_newrelic_metrics %w(
+    assert_recorded_metric_names %w(
       Custom/ListRequests/AssetBucket/BucketHelper.app_size
       Custom/ListRequests/AssetBucket/BucketHelper.app_size
       Custom/ListRequests/AssetBucket/BucketHelper.copy_files
@@ -324,8 +324,8 @@ class AssetsTest < FilesApiTestBase
     # Can't test abuse score functionality, since it's been moved to Rails.
     #src_api.patch_abuse(10)
 
-    expected_image_info = {'filename' =>  image_filename, 'category' => 'image', 'size' => image_body.length}
-    expected_sound_info = {'filename' =>  sound_filename, 'category' => 'audio', 'size' => sound_body.length}
+    expected_image_info = {'filename' => image_filename, 'category' => 'image', 'size' => image_body.length}
+    expected_sound_info = {'filename' => sound_filename, 'category' => 'audio', 'size' => sound_body.length}
 
     copy_file_infos = JSON.parse(copy_all(@channel_id, dest_channel_id))
     dest_file_infos = dest_api.list_objects
@@ -341,7 +341,7 @@ class AssetsTest < FilesApiTestBase
     assert_equal 0, AssetBucket.new.get_abuse_score(dest_channel_id, image_filename)
     assert_equal 0, AssetBucket.new.get_abuse_score(dest_channel_id, sound_filename)
 
-    assert_newrelic_metrics %w(
+    assert_recorded_metric_names %w(
       Custom/ListRequests/AssetBucket/BucketHelper.app_size
       Custom/ListRequests/AssetBucket/BucketHelper.app_size
       Custom/ListRequests/AssetBucket/BucketHelper.copy_files
@@ -378,7 +378,7 @@ class AssetsTest < FilesApiTestBase
       refute successful?, 'Non-owner cannot delete a file'
     end
 
-    assert_newrelic_metrics %w(
+    assert_recorded_metric_names %w(
       Custom/ListRequests/AssetBucket/BucketHelper.app_size
     )
 
@@ -402,7 +402,7 @@ class AssetsTest < FilesApiTestBase
     post_asset_file(@api, "file4.jpg", "ABCD", 'image/jpeg')
     assert last_response.client_error?, "Error when exceeding max app size."
 
-    assert_newrelic_metrics %w(
+    assert_recorded_metric_names %w(
       Custom/FilesApi/FileTooLarge_assets
       Custom/ListRequests/AssetBucket/BucketHelper.app_size
       Custom/ListRequests/AssetBucket/BucketHelper.app_size
@@ -421,11 +421,10 @@ class AssetsTest < FilesApiTestBase
     AssetBucket.any_instance.unstub(:max_resize_size)
   end
 
-  def test_assets_quota_newrelic_logging
+  def test_assets_quota_observability_logging
     FilesApi.any_instance.stubs(:max_file_size).returns(5)
     FilesApi.any_instance.stubs(:max_app_size).returns(10)
     AssetBucket.any_instance.stubs(:max_resize_size).returns(5)
-    CDO.stubs(:newrelic_logging).returns(true)
 
     post_asset_file(@api, "file1.jpg", "1234567890ABC", 'image/jpeg')
     assert last_response.client_error?, "Error when file is larger than max file size."
@@ -449,7 +448,7 @@ class AssetsTest < FilesApiTestBase
     assert_assets_custom_metric 3, 'QuotaExceeded'
     assert_assets_custom_event 2, 'QuotaExceeded'
 
-    assert_newrelic_metrics %w(
+    assert_recorded_metric_names %w(
       Custom/FilesApi/FileTooLarge_assets
       Custom/ListRequests/AssetBucket/BucketHelper.app_size
       Custom/ListRequests/AssetBucket/BucketHelper.app_size
@@ -466,7 +465,6 @@ class AssetsTest < FilesApiTestBase
     FilesApi.any_instance.unstub(:max_file_size)
     FilesApi.any_instance.unstub(:max_app_size)
     AssetBucket.any_instance.unstub(:max_resize_size)
-    CDO.unstub(:newrelic_logging)
   end
 
   def test_assets_resize
@@ -502,47 +500,44 @@ class AssetsTest < FilesApiTestBase
     @api.get_object filename, '', 'HTTP_IF_MODIFIED_SINCE' => v2_last_modified
     assert_equal 304, last_response.status
 
-    assert_newrelic_metrics []
+    assert_recorded_metric_names []
   end
 
   def test_invalid_mime_type_returns_unsupported_media_type
     @api.get_object 'filewithinvalidmimetype.asdasdas%25dasdasd'
     assert_equal 415, last_response.status # 415 = Unsupported media type
-    assert_newrelic_metrics []
+    assert_recorded_metric_names []
   end
 
   def test_bad_channel_id
     get "/v3/assets/undefined"
     assert_equal 400, last_response.status
-    assert_newrelic_metrics []
+    assert_recorded_metric_names []
   end
 
-  # Methods below this line are test utilities, not actual tests
-  private
-
-  def post_asset(api, uploaded_file)
+  private def post_asset(api, uploaded_file)
     body = {files: [uploaded_file]}
     headers = {'CONTENT_TYPE' => 'multipart/form-data'}
     api.post_object '', body, headers
   end
 
-  def post_asset_file(api, filename, file_contents, content_type)
+  private def post_asset_file(api, filename, file_contents, content_type)
     file, tmp_filename = api.create_temp_file(filename, file_contents, content_type)
     response = post_asset(api, file)
     [response, tmp_filename]
   end
 
-  def delete_all_assets(bucket)
+  private def delete_all_assets(bucket)
     delete_all_objects(CDO.assets_s3_bucket, bucket)
   end
 
-  def copy_all(src_channel_id, dest_channel_id)
+  private def copy_all(src_channel_id, dest_channel_id)
     AssetBucket.new.copy_files(src_channel_id, dest_channel_id).to_json
   end
 
-  def assert_assets_custom_metric(index, metric_type, length_msg = nil, expected_value = 1)
+  private def assert_assets_custom_metric(index, metric_type, length_msg = nil, expected_value = 1)
     # Filter out metrics from other test cases.
-    metrics = NewRelic::Agent.get_metrics %r{^Custom/FilesApi}
+    metrics = ObservabilityTestRecorder.matching %r{^Custom/FilesApi}
     length_msg ||= "custom metrics recorded: #{index}"
     assert_equal index, metrics.length, length_msg
     last_metric = metrics.last
@@ -550,9 +545,10 @@ class AssetsTest < FilesApiTestBase
     assert_equal expected_value, last_metric.last, "#{metric_type} metric value"
   end
 
-  def assert_assets_custom_event(index, event_type)
-    # Filter out events from other test cases.
-    events = NewRelic::Agent.get_events %r{^FilesApi}
+  private def assert_assets_custom_event(index, event_type)
+    # Marker attributes are flat names like "FilesApiQuotaExceeded";
+    # the per-field attributes ("FilesApiQuotaExceeded.quota_type" etc) are excluded.
+    events = ObservabilityTestRecorder.matching %r{^FilesApi[A-Z][A-Za-z]+\z}
     assert_equal index, events.length, "custom events recorded: #{index}"
     assert_equal "FilesApi#{event_type}", events.last.first, "#{event_type} event recorded"
   end

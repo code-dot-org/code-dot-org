@@ -1,6 +1,7 @@
 require_relative '../../deployment'
 require 'cdo/chat_client'
 require 'cdo/rake_utils'
+require 'cdo/python_venv'
 require lib_dir 'cdo/data/logging/rake_task_event_logger'
 include TimedTaskWithLogging
 
@@ -15,11 +16,6 @@ namespace :lint do
     RakeUtils.bundle_exec 'haml-lint dashboard pegasus shared'
   end
 
-  desc 'Lints SCSS code with scss-lint.'
-  timed_task_with_logging :scss do
-    RakeUtils.bundle_exec 'scss-lint'
-  end
-
   desc 'Lints JavaScript code.'
   timed_task_with_logging :javascript do
     Dir.chdir(apps_dir) do
@@ -32,14 +28,24 @@ namespace :lint do
       ChatClient.log 'Linting <b>apps</b> JavaScript...'
       RakeUtils.system 'npm run lint'
     end
-    Dir.chdir(shared_js_dir) do
-      ChatClient.log 'Linting <b>shared</b> JavaScript...'
-      # Use vanilla eslint parser, because babel-eslint always allows es6
-      RakeUtils.system '../../apps/node_modules/eslint/bin/eslint.js *.js'
+  end
+
+  # lint python:
+  desc 'Lints Python code.'
+  timed_task_with_logging :python do
+    Dir.chdir(python_dir) do
+      PythonVenv.lint
     end
   end
 
-  timed_task_with_logging all: [:ruby, :haml, :scss, :javascript]
+  desc 'Check for Rails code loader errors.'
+  timed_task_with_logging :zeitwerk do
+    Dir.chdir(dashboard_dir) do
+      RakeUtils.rake_stream_output('zeitwerk:check')
+    end
+  end
+
+  timed_task_with_logging all: [:ruby, :haml, :javascript, :python, :zeitwerk]
 end
 desc 'Lints all code.'
 timed_task_with_logging lint: ['lint:all']

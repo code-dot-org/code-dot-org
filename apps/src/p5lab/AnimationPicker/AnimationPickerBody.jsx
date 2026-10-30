@@ -1,24 +1,26 @@
 /** Body of the animation picker dialog */
+import {Button as MuiButton, Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
-import color from '@cdo/apps/util/color';
-import msg from '@cdo/locale';
-import ScrollableList from '../AnimationTab/ScrollableList.jsx';
-import * as dialogStyles from './styles';
-import AnimationPickerListItem, {
-  getCategory,
-} from './AnimationPickerListItem.jsx';
-import SearchBar from '@cdo/apps/templates/SearchBar';
+
 import {
   searchAssets,
   filterAnimations,
 } from '@cdo/apps/code-studio/assets/searchAssets';
-import Button from '@cdo/apps/templates/Button';
 import {AnimationProps} from '@cdo/apps/p5lab/shapes';
+import SearchBar from '@cdo/apps/sharedComponents/SearchBar.jsx';
 import {isMobileDevice} from '@cdo/apps/util/browser-detector';
+import msg from '@cdo/locale';
+
+import ScrollableList from '../AnimationTab/ScrollableList.jsx';
+
 import {PICKER_TYPE} from './AnimationPicker.jsx';
-import style from './animation-picker-body.module.scss';
+import AnimationPickerListItem, {
+  getCategory,
+} from './AnimationPickerListItem.jsx';
 import AnimationUploadButton from './AnimationUploadButton.jsx';
+
+import style from './animation-picker-body.module.scss';
 
 const MAX_SEARCH_RESULTS = 40;
 const LEVEL_COSTUMES = 'level_costumes';
@@ -40,6 +42,8 @@ export default class AnimationPickerBody extends React.Component {
     selectedAnimations: PropTypes.arrayOf(AnimationProps).isRequired,
     pickerType: PropTypes.string.isRequired,
     shouldWarnOnAnimationUpload: PropTypes.bool.isRequired,
+    uploadsEnabled: PropTypes.bool.isRequired,
+    projectType: PropTypes.string,
   };
 
   state = {
@@ -232,24 +236,29 @@ export default class AnimationPickerBody extends React.Component {
     // OR they are searching but there were no results,
     // AND they are not in animationJsonMode.
     // animationJsonMode is used for the Generate Animation JSON levelbuilder tool in SelectStartAnimations.
+    // Note that if the project is blocked for abuse, then uploadsEnabled is set to false and
+    // the upload button will be hidden.
     const showDrawAndUploadButtons =
       ((!searching && (!inCategory || isBackgroundsTab)) ||
         results.length === 0) &&
       !animationJsonMode;
+    const uploadsEnabled = this.props.uploadsEnabled;
 
     return (
       <div style={{marginBottom: 10}}>
         {shouldDisplaySecondDoneButton && (
-          <Button
-            text={msg.done()}
+          <MuiButton
+            color="primary"
+            variant="contained"
             onClick={onAnimationSelectionComplete}
-            color={Button.ButtonColor.brandSecondaryDefault}
-          />
+          >
+            {msg.done()}
+          </MuiButton>
         )}
-        <h1 style={dialogStyles.title}>
+        <Typography variant="h4" component="h1" className={style.title}>
           {!animationJsonMode && msg.animationPicker_title({assetType})}
-        </h1>
-        {showDrawAndUploadButtons && (
+        </Typography>
+        {uploadsEnabled && (
           <WarningLabel>{msg.animationPicker_warning()}</WarningLabel>
         )}
         <SearchBar
@@ -290,14 +299,17 @@ export default class AnimationPickerBody extends React.Component {
                 <AnimationPickerListItem
                   label={msg.animationPicker_drawYourOwn()}
                   isBackgroundsTab={isBackgroundsTab}
-                  icon="pencil"
+                  icon="pen"
                   onClick={onDrawYourOwnClick}
                 />
-                <AnimationUploadButton
-                  onUploadClick={onUploadClick}
-                  shouldWarnOnAnimationUpload={shouldWarnOnAnimationUpload}
-                  isBackgroundsTab={isBackgroundsTab}
-                />
+                {uploadsEnabled && (
+                  <AnimationUploadButton
+                    onUploadClick={onUploadClick}
+                    shouldWarnOnAnimationUpload={shouldWarnOnAnimationUpload}
+                    isBackgroundsTab={isBackgroundsTab}
+                    projectType={this.props.projectType}
+                  />
+                )}
               </div>
             )}
             {searchQuery === '' &&
@@ -309,12 +321,14 @@ export default class AnimationPickerBody extends React.Component {
         </div>
         {(searchQuery !== '' || categoryQuery !== '') && (
           <div className={style.footer}>
-            <Button
+            <MuiButton
               className="ui-test-selector-done-button"
-              text={msg.done()}
+              color="primary"
+              variant="contained"
               onClick={onAnimationSelectionComplete}
-              color={Button.ButtonColor.brandSecondaryDefault}
-            />
+            >
+              {msg.done()}
+            </MuiButton>
           </div>
         )}
       </div>
@@ -323,7 +337,7 @@ export default class AnimationPickerBody extends React.Component {
 }
 
 export const WarningLabel = ({children}) => (
-  <span style={{color: color.red}}>{children}</span>
+  <span className={style.warning}>{children}</span>
 );
 WarningLabel.propTypes = {
   children: PropTypes.node,

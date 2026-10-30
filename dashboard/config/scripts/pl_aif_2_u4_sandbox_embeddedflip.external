@@ -1,0 +1,34 @@
+name 'pl-aif-2-U4-sandbox-embeddedflip'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Seeing the Filters
+
+Filters shape what shows up in a feed, but they are not always easy to notice. In the last level, you compared two feeds and saw how filters can emphasize some ideas while leaving others out.
+
+In this level, you’ll review a few key terms and think about how platforms can make filtering more transparent.
+
+### **Terms to Know**
+
+<div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+
+<iframe
+  src="https://micahkennedy.github.io/flipcard/flip-card.html?data=cards/unit4.json&card=active-filter"
+  width="320"
+  height="220"
+  style="border:none;"
+  title="Active filter vocabulary flip card">
+</iframe>
+
+<iframe
+  src="https://micahkennedy.github.io/flipcard/flip-card.html?data=cards/unit4.json&card=filter-bubble"
+  width="320"
+  height="220"
+  style="border:none;"
+  title="Filter bubble vocabulary flip card">
+</iframe>
+
+</div>
+
+MARKDOWN

@@ -1,0 +1,40 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-09-15T21:26:41.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "5577968e-d8fe-4526-ac6e-5045a441fbe2": {
+          "id": "5577968e-d8fe-4526-ac6e-5045a441fbe2",
+          "name": "neighborhood.py",
+          "contents": "_x = 0\n_y = 0\n_direction = 0 # 0: East, 1: North, 2: West, 3: South\n_painted_cells = {}\n\ndef set_paint(level):\n    # This function is called but its specific effect on `paint()` isn't defined here.\n    # We'll just acknowledge it for now.\n    print(f\"DEBUG: Painter received set_paint({level}) command.\")\n\ndef move():\n    global _x, _y\n    if _direction == 0: # East\n        _x += 1\n    elif _direction == 1: # North\n        _y += 1\n    elif _direction == 2: # West\n        _x -= 1\n    elif _direction == 3: # South\n        _y -= 1\n    print(f\"DEBUG: Painter moved to ({_x}, {_y}).\")\n\ndef paint(color):\n    _painted_cells[(_x, _y)] = color\n    print(f\"DEBUG: Painter painted ({_x}, {_y}) {color}.\")\n\ndef turn_left():\n    global _direction\n    _direction = (_direction + 1) % 4\n    directions_map = {0: \"East\", 1: \"North\", 2: \"West\", 3: \"South\"}\n    print(f\"DEBUG: Painter turned left. Now facing {directions_map[_direction]}.\")\n\ndef print_final_state():\n    directions_map = {0: \"East\", 1: \"North\", 2: \"West\", 3: \"South\"}\n    print(\"\\n--- Final Painter State ---\")\n    print(f\"Position: ({_x}, {_y})\")\n    print(f\"Direction: {directions_map[_direction]}\")\n    print(f\"Painted cells: {_painted_cells}\")\n    print(\"---------------------------\\n\")\n",
+          "folderId": "0",
+          "active": false
+        },
+        "002f8d77-da3a-47e1-a5a5-cba5d723f67f": {
+          "id": "002f8d77-da3a-47e1-a5a5-cba5d723f67f",
+          "name": "main.py",
+          "contents": "from neighborhood import *\n\n# The Painter starts at (0, 0), facing east.\n# Paint a short path for the block party.\nset_paint(6)\n\nmove()\npaint(\"white\")\nmove()\nturn_left()\nmove()\npaint(\"white\")\nturn_left()\nturn_left()\nturn_left()\nmove()\npaint(\"white\")\n\n# Print the final state for verification\nprint_final_state()\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "5577968e-d8fe-4526-ac6e-5045a441fbe2",
+        "002f8d77-da3a-47e1-a5a5-cba5d723f67f"
+      ]
+    },
+    "long_instructions": "TODOs:\r\n- Review the current code in `main.py` to understand the Painter's existing path.\r\n- Modify the `move()`, `turn_left()`, and `paint()` calls in `main.py` to make the Painter take a different route.\r\n- Ensure the Painter decorates a different sidewalk square or takes a slightly longer path.\r\n- Run `main.py` to observe the Painter's new actions.\r\n- Explain which specific lines of code you changed in `main.py` and why you made those changes to alter the Painter's path.",
+    "encrypted_exemplar_sources": "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\n",
+    "generate_outline": "Change the route so the Painter decorates a different sidewalk square or takes a slightly longer path around an obstacle. Check: Student can explain which lines changed and why.",
+    "generate_supplied_code": "from neighborhood import *\r\n\r\n# The Painter starts at (0, 0), facing east.\r\n# Paint a short path for the block party.\r\nset_paint(6)\r\n\r\nmove()\r\npaint(\"white\")\r\nmove()\r\nturn_left()\r\nmove()\r\npaint(\"white\")\r\nturn_left()\r\nturn_left()\r\nturn_left()\r\nmove()\r\npaint(\"white\")"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-15 21:26:46 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-15 21:26:47 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-15 21:27:27 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-15 21:27:28 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Pythonlab>

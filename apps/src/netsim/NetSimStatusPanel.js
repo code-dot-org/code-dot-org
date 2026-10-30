@@ -5,9 +5,11 @@
 
 require('../utils'); // For Function.prototype.inherits()
 import $ from 'jquery';
+
 var i18n = require('@cdo/netsim/locale');
-var markup = require('./NetSimStatusPanel.html.ejs');
+
 var NetSimPanel = require('./NetSimPanel.js');
+var markup = require('./NetSimStatusPanel.html.ejs');
 var NetSimUtils = require('./NetSimUtils');
 
 /**
@@ -65,7 +67,7 @@ NetSimStatusPanel.prototype.render = function (data) {
 
   // Add a button to the panel header
   this.addButton(
-    i18n.disconnectButton({caret: '<i class="fa fa-caret-left"></i>'}),
+    i18n.disconnectButton({caret: '<i class="fa-solid fa-caret-left"></i>'}),
     this.disconnectCallback_
   );
 

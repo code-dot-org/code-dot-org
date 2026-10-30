@@ -1,0 +1,14 @@
+{
+  "category_key": "javascript",
+  "content": "# For Each\n\nThe `forEach()` method runs the same code once for each item in a group. Use `forEach()` when your app needs to add behavior to multiple elements, such as several buttons.",
+  "examples": "[{\"name\":\"Add Clicks to Buttons\",\"description\":\"Add a click event to each button in a group.\",\"code\":\"```\\njobButtons.forEach((button) =\\u003e {\\n  button.addEventListener(\\\"click\\\", () =\\u003e {\\n    message.textContent = \\\"You selected a job.\\\";\\n  });\\n});\\n```\"}]",
+  "external_documentation": "",
+  "fields": "[]",
+  "key": "for-each",
+  "name": "For Each",
+  "syntax": "`jobButtons.forEach((button) => { ... });`\n",
+  "tips": "- Use `forEach()` on a group of items, such as elements from `querySelectorAll`.\n- The variable inside parentheses, like `button`, represents one item at a time.\n- Put the code you want to repeat inside the curly braces `{ }`.\n- `forEach()` does not run on just one element from `getElementById`.\n- In Web Lab, `forEach()` is often used to add event listeners to multiple buttons.",
+  "methods": [
+
+  ]
+}

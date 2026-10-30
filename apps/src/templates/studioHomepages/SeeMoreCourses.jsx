@@ -1,11 +1,15 @@
-import React, {Component} from 'react';
-import i18n from '@cdo/locale';
-import CourseCard from './CourseCard';
-import ContentContainer from '../ContentContainer';
-import Button from '../Button';
-import shapes from './shapes';
-import color from '../../util/color';
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+
+import i18n from '@cdo/locale';
+
+import ContentContainer from '../ContentContainer';
+
+import CourseCard from './CourseCard';
+import shapes from './shapes';
+
+import styles from './see-more-courses.module.scss';
 
 // This component - used on the teacher and student homepages -
 // shows a button to view more courses if the user has more than a few courses.
@@ -34,42 +38,34 @@ export default class SeeMoreCourses extends Component {
       <div>
         {this.state.open && courses && (
           <ContentContainer heading="" linkText="" link="" showLink={false}>
-            {courses.map((course, index) => (
-              <div key={index}>
+            <div className={styles.courseCards}>
+              {courses.map((course, index) => (
                 <CourseCard
+                  key={index}
                   title={course.title}
                   description={course.description}
                   link={course.link}
                   isProfessionalLearningCourse={isProfessionalLearningCourse}
                 />
-                {index % 2 === 0 && <div style={styles.spacer}>.</div>}
-              </div>
-            ))}
+              ))}
+            </div>
           </ContentContainer>
         )}
         {!this.state.open && (
-          <Button
-            onClick={this.showMoreCourses.bind(this)}
-            color={Button.ButtonColor.neutralDark}
-            icon="caret-down"
-            text={i18n.viewMore()}
-            style={styles.button}
-          />
+          <div className={styles.viewMoreContainer}>
+            <MuiButton
+              onClick={this.showMoreCourses.bind(this)}
+              variant="outlined"
+              color="tertiary"
+              size="small"
+              startIcon={<i className="fa fa-caret-down" />}
+              className={`${styles.button} ui-test-view-more-courses`}
+            >
+              {i18n.viewMore()}
+            </MuiButton>
+          </div>
         )}
       </div>
     );
   }
 }
-
-const styles = {
-  spacer: {
-    width: 20,
-    float: 'left',
-    color: color.white,
-  },
-  button: {
-    float: 'right',
-    margin: 0,
-    marginBottom: 20,
-  },
-};

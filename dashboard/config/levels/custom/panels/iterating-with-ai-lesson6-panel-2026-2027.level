@@ -1,0 +1,56 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-06-02T17:11:15.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "A **Responsible AI Specialist** helps make digital systems more fair, safe, transparent, and accountable. They study how technology affects real people.",
+        "imageUrl": "https://images.code.org/2f90ec4357a4743546e965dceb341436-compressedImage (1).jpeg",
+        "key": "iterating-with-ai-lesson6-panel-2026-2027-822774fd-a519-4d5b-a55e-fbab9abe770d",
+        "layout": "text-top-right",
+        "fadeInOverPrevious": true,
+        "typing": true
+      },
+      {
+        "text": "They begin by learning how a system makes decisions. They look at the rules, data, and settings that shape what users see.",
+        "imageUrl": "https://images.code.org/9d8714b36caeb2629b556797bf647829-Gemini_Generated_Image_jmych4jmych4jmyc.png",
+        "key": "iterating-with-ai-lesson6-panel-2026-2027-45888006-1014-4819-babd-f5ba85858084",
+        "layout": "text-bottom-right",
+        "fadeInOverPrevious": true,
+        "typing": true
+      },
+      {
+        "text": "Next, they ask who could be helped, harmed, confused, or left out. Their job is to notice problems that may not be obvious at first.",
+        "imageUrl": "https://images.code.org/9a06543bd1d6de1ec81c8bb7c06c2e6c-ChatGPT Image Jun 2, 2026, 04_33_15 PM (1).png",
+        "key": "iterating-with-ai-lesson6-panel-2026-2027-5e067202-953c-4731-b6f5-50a97057a2c7",
+        "layout": "text-bottom-right",
+        "typing": true,
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "Bias can hide inside rules, data, or default settings. A Responsible AI Specialist tests whether the system works differently for different people.",
+        "imageUrl": "https://images.code.org/6b383d13da88122347ef087c0f782788-ChatGPT Image Jun 2, 2026, 04_27_51 PM (1).png",
+        "key": "iterating-with-ai-lesson6-panel-2026-2027-773b72b9-04f2-4a6b-8519-1abf5576df97",
+        "typing": true,
+        "fadeInOverPrevious": true,
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "They work with engineers, designers, and product managers to improve the system. Their recommendations might make the system clearer, more flexible, or easier for users to control.",
+        "imageUrl": "https://images.code.org/4a4aad886ee8c67e99b5afeeb9e2cc60-ChatGPT Image Jun 2, 2026, 04_31_08 PM (1).png",
+        "key": "iterating-with-ai-lesson6-panel-2026-2027-3557326c-9c9d-498d-bdb6-76689604f78b",
+        "typing": true,
+        "fadeInOverPrevious": true
+      }
+    ],
+    "use_links": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-06-02 17:18:44 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-02 17:26:59 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-02 17:37:44 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-02 17:41:08 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-02 17:42:16 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-02 20:18:56 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-02 20:30:05 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-02 20:31:58 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-02 20:34:06 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-02 20:37:39 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Panels>

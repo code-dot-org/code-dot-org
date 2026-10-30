@@ -1,14 +1,20 @@
+import Link from '@code-dot-org/component-library/link';
+import orderBy from 'lodash/orderBy';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import i18n from '@cdo/locale';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
-import wrappedSortable from '../tables/wrapped_sortable';
+
+import {
+  getSelectedCourseName,
+  getSelectedUnitPosition,
+} from '@cdo/apps/redux/unitSelectionRedux';
+import {nestedUnitUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
+import i18n from '@cdo/locale';
+
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
-import orderBy from 'lodash/orderBy';
-import {getSelectedScriptName} from '@cdo/apps/redux/unitSelectionRedux';
-import {scriptUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
+import wrappedSortable from '../tables/wrapped_sortable';
 
 class StatsTable extends Component {
   static propTypes = {
@@ -17,7 +23,8 @@ class StatsTable extends Component {
     studentsCompletedLevelCount: PropTypes.object,
 
     // Provided by redux.
-    scriptName: PropTypes.string,
+    courseVersionName: PropTypes.string,
+    unitPosition: PropTypes.number,
     participantType: PropTypes.string,
   };
 
@@ -32,20 +39,24 @@ class StatsTable extends Component {
   };
 
   nameFormatter = (name, {rowData}) => {
-    const {sectionId, scriptName} = this.props;
-    const studentUrl = scriptUrlForStudent(sectionId, scriptName, rowData.id);
+    const {sectionId, courseVersionName, unitPosition} = this.props;
+    const studentUrl = nestedUnitUrlForStudent(
+      sectionId,
+      courseVersionName,
+      unitPosition,
+      rowData.id
+    );
 
     if (studentUrl) {
       return (
-        <a
+        <Link
           className="uitest-display-name-cell"
           style={tableLayoutStyles.link}
           href={studentUrl}
-          target="_blank"
-          rel="noopener noreferrer"
+          openInNewTab
         >
           {name}
-        </a>
+        </Link>
       );
     } else {
       return <span className="uitest-display-name-cell">{name}</span>;
@@ -201,7 +212,8 @@ const styles = {
 
 export const UnconnectedStatsTable = StatsTable;
 export default connect(state => ({
-  scriptName: getSelectedScriptName(state),
+  courseVersionName: getSelectedCourseName(state),
+  unitPosition: getSelectedUnitPosition(state),
   participantType:
     state.teacherSections.sections[state.teacherSections.selectedSectionId]
       .participantType,

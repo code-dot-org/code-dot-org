@@ -1,12 +1,12 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import i18n from '@cdo/locale';
+import React from 'react';
 
 import {
   NavigationBar,
   NavigationCategory,
   NavigationItem,
 } from '@cdo/apps/templates/NavigationBar';
+import i18n from '@cdo/locale';
 
 export default function PageContainer({
   children,
@@ -42,6 +42,7 @@ export default function PageContainer({
                   indentLevel={1}
                   href={doc.link}
                   isActive={doc.id === currentDocId}
+                  blockName={doc.blockName}
                 />
               ))}
             </NavigationCategory>

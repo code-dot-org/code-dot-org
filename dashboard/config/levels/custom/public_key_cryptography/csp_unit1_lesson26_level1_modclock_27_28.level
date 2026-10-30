@@ -1,0 +1,19 @@
+<PublicKeyCryptography>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 57,
+  "created_at": "2026-09-11T04:57:15.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skip_dialog": true,
+    "href": "public_key_cryptography/public_key_cryptography.html.haml",
+    "cryptography_widget_view": "1",
+    "parent_level_id": 13504,
+    "name_suffix": "_2019",
+    "encrypted": "false"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2026-09-11T04:57:15.825+00:00\",\"changed\":[\"cloned from \\\"The Modulo Clock_2019\\\"\"],\"cloned_from\":\"The Modulo Clock_2019\"},{\"changed_at\":\"2026-09-11 05:03:19 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</PublicKeyCryptography>

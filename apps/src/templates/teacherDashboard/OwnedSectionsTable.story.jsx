@@ -1,12 +1,14 @@
 import React from 'react';
 import {Provider} from 'react-redux';
 import {combineReducers, createStore} from 'redux';
-import OwnedSectionsTable from './OwnedSectionsTable';
+
+import {courseOfferings} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
 import teacherSections, {
   setCourseOfferings,
   setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {courseOfferings} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
+
+import OwnedSectionsTable from './OwnedSectionsTable';
 
 const serverSections = [
   {

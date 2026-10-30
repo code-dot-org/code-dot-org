@@ -1,19 +1,27 @@
-import React, {useCallback} from 'react';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
-import {Triggers} from '@cdo/apps/music/constants';
-import moduleStyles from './controls.module.scss';
-import BeatPad from './BeatPad';
+import React, {memo, useCallback} from 'react';
 import {useDispatch} from 'react-redux';
+
+import {useSetupBlockColor} from '@cdo/apps/blockly/utils/useSetupBlockColor';
+import {submitPredictResponse} from '@cdo/apps/lab2/redux/predictLevelRedux';
+import {Trigger} from '@cdo/apps/music/constants';
+import {getRunButtonSx} from '@cdo/apps/templates/runButtonSx';
+import {commonI18n} from '@cdo/apps/types/locale';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+
 import {
   moveStartPlayheadPositionBackward,
   moveStartPlayheadPositionForward,
 } from '../redux/musicRedux';
-import {useMusicSelector} from './types';
-import {commonI18n} from '@cdo/apps/types/locale';
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
+
+import BeatPad from './BeatPad';
+
+import moduleStyles from './controls.module.scss';
 
 const LoadingProgress: React.FunctionComponent = () => {
-  const progressValue = useMusicSelector(
+  const progressValue = useAppSelector(
     state => state.music.soundLoadingProgress
   );
 
@@ -41,7 +49,7 @@ const LoadingProgress: React.FunctionComponent = () => {
 };
 
 const SkipControls: React.FunctionComponent = () => {
-  const isPlaying = useMusicSelector(state => state.music.isPlaying);
+  const isPlaying = useAppSelector(state => state.music.isPlaying);
   const dispatch = useDispatch();
 
   const onClickSkip = useCallback(
@@ -98,7 +106,8 @@ const SkipControls: React.FunctionComponent = () => {
 interface ControlsProps {
   setPlaying: (value: boolean) => void;
   playTrigger: (id: string) => void;
-  hasTrigger: (id: string) => boolean;
+  triggers: Trigger[];
+  isPredictLevel?: boolean;
   enableSkipControls?: boolean;
 }
 
@@ -109,45 +118,54 @@ interface ControlsProps {
 const Controls: React.FunctionComponent<ControlsProps> = ({
   setPlaying,
   playTrigger,
-  hasTrigger,
+  triggers,
+  isPredictLevel,
   enableSkipControls = false,
 }) => {
-  const isPlaying = useMusicSelector(state => state.music.isPlaying);
-  const isLoading = useMusicSelector(
-    state => state.music.soundLoadingProgress < 1
-  );
-
+  const dispatch = useAppDispatch();
+  const isPlaying = useAppSelector(state => state.music.isPlaying);
+  const disableRun = useAppSelector(({predictLevel, music}) => {
+    const hasPredictResponse = !!predictLevel.response;
+    const isLoading = music.soundLoadingProgress < 1;
+    return isLoading || (isPredictLevel && !hasPredictResponse);
+  });
+  // Follows the "when run" block color under Blockly accessibility themes.
+  const setupBlockColor = useSetupBlockColor();
   return (
-    <div id="controls" className={moduleStyles.controlsContainer}>
+    <div
+      id="controls"
+      className={moduleStyles.controlsContainer}
+      data-theme="Dark"
+    >
       <div id="controls-section" className={moduleStyles.section}>
-        <button
+        <MuiButton
           id="run-button"
-          className={classNames(
-            moduleStyles.runButton,
-            isLoading && moduleStyles.disabled
-          )}
-          onClick={() => setPlaying(!isPlaying)}
+          variant="contained"
+          size="medium"
+          color="primary"
+          className={moduleStyles.runButton}
+          onClick={() => {
+            dispatch(submitPredictResponse({appType: 'music'}));
+            setPlaying(!isPlaying);
+          }}
           type="button"
-          disabled={isLoading}
+          disabled={disableRun}
+          sx={getRunButtonSx(setupBlockColor)}
+          startIcon={
+            <FontAwesomeV6Icon
+              iconName={isPlaying ? 'stop' : 'play'}
+              iconStyle="solid"
+            />
+          }
         >
-          <FontAwesomeV6Icon
-            iconName={isPlaying ? 'stop' : 'play'}
-            iconStyle="solid"
-            className={moduleStyles.icon}
-          />
-          <div className={moduleStyles.text}>
-            {isPlaying ? commonI18n.stop() : commonI18n.runProgram()}
-          </div>
-        </button>
+          {isPlaying ? commonI18n.stop() : commonI18n.runProgram()}
+        </MuiButton>
         {enableSkipControls && <SkipControls />}
       </div>
-      <BeatPad
-        triggers={Triggers.filter(trigger => hasTrigger(trigger.id))}
-        playTrigger={playTrigger}
-      />
+      <BeatPad triggers={triggers} playTrigger={playTrigger} />
       <LoadingProgress />
     </div>
   );
 };
 
-export default Controls;
+export default memo(Controls);

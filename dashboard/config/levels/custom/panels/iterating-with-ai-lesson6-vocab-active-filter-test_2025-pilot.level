@@ -1,0 +1,23 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-12-22T17:40:43.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# Active Filter\n\n**Active filters** are the current rules that are being applied to a set of data and are clearly shown to the user. \n\nThey explain how the data is being limited right now.\n\n**Example:** A label that describes your rule, like _\"Showing only comedy movies with a rating of 4 or higher\"_ is an example of displaying **active filters.**\n",
+        "imageUrl": "https://images.code.org/88ab029c263550c4ec496e0e5c4d219f-active filters.png",
+        "key": "undefined-ea03636a-a1b5-4568-be2b-86c3c6462665",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "name_suffix": "_2025-pilot"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-12-22T17:40:43.786+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson6-vocab-active-filter-test-2025\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson6-vocab-active-filter-test-2025\"}]"
+}]]></config>
+</Panels>

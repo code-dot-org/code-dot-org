@@ -1,17 +1,18 @@
 import $ from 'jquery';
-import assetUrl from '@cdo/apps/code-studio/assetUrl';
-import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
 import jsonic from 'jsonic';
+
+import {getDefaultListMetadata} from '@cdo/apps/assetManagement/animationLibraryApi';
 import {installCustomBlocks} from '@cdo/apps/block_utils';
-import {customInputTypes as spritelabCustomInputTypes} from '@cdo/apps/p5lab/spritelab/blocks';
+import {loadBlocksToWorkspace} from '@cdo/apps/blockly/utils';
+import assetUrl from '@cdo/apps/code-studio/assetUrl';
+import initializeCodeMirror6 from '@cdo/apps/code-studio/initializeCodeMirror6';
 import {customInputTypes as dancelabCustomInputTypes} from '@cdo/apps/dance/blockly/blocks';
-import {valueTypeTabShapeMap} from '@cdo/apps/p5lab/spritelab/constants';
 import animationList, {
   setInitialAnimationList,
 } from '@cdo/apps/p5lab/redux/animationList';
-import {getDefaultListMetadata} from '@cdo/apps/assetManagement/animationLibraryApi';
+import {customInputTypes as spritelabCustomInputTypes} from '@cdo/apps/p5lab/spritelab/blocks';
+import {valueTypeTabShapeMap} from '@cdo/apps/p5lab/spritelab/constants';
 import {getStore, registerReducers} from '@cdo/apps/redux';
-import {BlocklyVersion} from '@cdo/apps/blockly/constants';
 
 const VALID_COLOR = 'black';
 const INVALID_COLOR = '#d00';
@@ -19,6 +20,8 @@ const INVALID_COLOR = '#d00';
 let poolField, nameField, helperEditor, configEditor, validationDiv;
 let hasLintingErrors = false;
 let isValidBlockConfig = false;
+let originalBlockName;
+let saveButton;
 
 $(document).ready(() => {
   registerReducers({animationList: animationList});
@@ -36,6 +39,9 @@ function initializeEditPage(defaultSprites) {
 
   poolField = document.getElementById('block_pool');
   nameField = document.getElementById('block_name');
+  saveButton = document.getElementById('block_submit');
+  originalBlockName = nameField.value;
+
   Blockly.inject(document.getElementById('blockly-container'), {
     assetUrl,
     valueTypeTabShapeMap: valueTypeTabShapeMap(Blockly),
@@ -59,14 +65,18 @@ function initializeEditPage(defaultSprites) {
   );
 
   const helperCodeElement = document.getElementById('block_helper_code');
-  configEditor = initializeCodeMirror(blockConfigElement, 'application/json', {
+  configEditor = initializeCodeMirror6(blockConfigElement, 'json', {
     callback: validateBlockConfig,
     onUpdateLinting: onUpdateLinting,
   });
 
-  helperEditor = initializeCodeMirror(helperCodeElement, 'javascript', {
+  helperEditor = initializeCodeMirror6(helperCodeElement, 'javascript', {
     callback: _ => validateBlockConfig(),
     onUpdateLinting: onUpdateLinting,
+    lintConfig: {
+      es5: true,
+      disableRecommendedJsConfig: true,
+    },
   });
   poolField.addEventListener('change', updateBlockPreview);
 
@@ -79,7 +89,7 @@ function initializeEditPage(defaultSprites) {
   $('.alert.alert-success').delay(5000).fadeOut(1000);
 }
 
-function onUpdateLinting(_, errors) {
+function onUpdateLinting(errors) {
   if (errors.length) {
     hasLintingErrors = true;
   } else {
@@ -102,9 +112,7 @@ const setSubmitButtonState = () => {
 
 function validateBlockConfig(editor) {
   try {
-    if (editor) {
-      JSON.parse(editor.getValue());
-    }
+    validateJSON(editor);
     updateBlockPreview();
     validateBlockRenders();
     isValidBlockConfig = true;
@@ -117,12 +125,40 @@ function validateBlockConfig(editor) {
   }
 }
 
-// Only apply this validation to pools being rendered in Google Blockly,
-// as those are the pools where we have UI tests and want to prevent
-// levelbuilder changes from causing them to fail
+// Ensure that the block config is valid JSON and meets other specific requirements.
+function validateJSON(editor) {
+  if (editor) {
+    // If the value isn't valid JSON, JSON.parse will throw
+    const json = JSON.parse(editor.getValue());
+
+    validateTextFieldNames(json);
+  }
+}
+
+// Ensure that text field names are supported for share filtering.
+function validateTextFieldNames(json) {
+  const allowedNames = ['SPEECH', 'TEXT', 'TEXT1', 'TITLE'];
+  if (json.args) {
+    for (const arg of json.args) {
+      if (
+        arg.field === true &&
+        arg.type === 'String' &&
+        !allowedNames.includes(arg.name)
+      ) {
+        throw new Error(
+          `Invalid name '${
+            arg.name
+          }' for text field. Allowed names are: ${allowedNames.join(
+            ', '
+          )}. (This is required for share filtering.)`
+        );
+      }
+    }
+  }
+}
+
 function validateBlockRenders() {
   if (
-    Blockly.version === BlocklyVersion.GOOGLE &&
     Blockly.mainBlockSpace.getAllBlocks().some(block => !!block.unknownBlock)
   ) {
     throw 'Blockly is unable to render a block with the given configuration.';
@@ -140,15 +176,17 @@ function updateBlockPreview() {
   const parsedConfig = jsonic(configEditor.getValue());
 
   // Only Dancelab and Spritelab use customInputTypes.
-  const customInputTypes =
-    poolField.value === 'Dancelab'
-      ? dancelabCustomInputTypes
-      : spritelabCustomInputTypes;
+  const customInputTypes = ['Dancelab', 'GeneratedDancers'].includes(
+    poolField.value
+  )
+    ? dancelabCustomInputTypes
+    : spritelabCustomInputTypes;
 
   const blockName = getBlockName(
     parsedConfig.func || parsedConfig.name,
     poolField.value
   );
+  checkBlockNameChanges(blockName);
   nameField.value = blockName;
   // Calling this function just so that we can catch and show errors (if any)
   installCustomBlocks({
@@ -166,11 +204,23 @@ function updateBlockPreview() {
   });
   const block = `<block type="${blockName}" />`;
   Blockly.mainBlockSpace.clear();
-  Blockly.cdoUtils.loadBlocksToWorkspace(Blockly.mainBlockSpace, block);
-  Blockly.addChangeListener(Blockly.mainBlockSpace, onBlockSpaceChange);
+  loadBlocksToWorkspace(Blockly.mainBlockSpace, block);
+  Blockly.mainBlockSpace.addChangeListener(onBlockSpaceChange);
 }
 
 function onBlockSpaceChange() {
   document.getElementById('code-preview').innerText =
     Blockly.getWorkspaceCode();
+}
+
+function checkBlockNameChanges(blockName) {
+  // Add a prompt to the "Update Block" button if the user has changed the block name or pool.
+  if (originalBlockName && blockName !== originalBlockName) {
+    saveButton.setAttribute(
+      'data-confirm',
+      `Are you sure you want to update ${originalBlockName}?\n\n` +
+        `This will affect everywhere that this block is used.\n\n` +
+        `If you change the block pool or block name, this could break existing levels or projects.`
+    );
+  }
 }

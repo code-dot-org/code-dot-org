@@ -1,10 +1,11 @@
+import $ from 'jquery';
+
 import {
   isUnsupportedBrowser,
   isIE11,
   isMobileDevice,
   isStorageAvailable,
 } from '@cdo/apps/util/browser-detector';
-import $ from 'jquery';
 
 export var checkForUnsupportedBrowsersOnLoad = function () {
   $(document).ready(function () {

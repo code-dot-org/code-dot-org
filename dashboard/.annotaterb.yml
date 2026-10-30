@@ -1,0 +1,8 @@
+---
+:classified_sort: false
+:exclude_fixtures: true
+:exclude_tests: true
+:show_foreign_keys: false
+:with_comment: false
+:with_column_comments: false
+:with_table_comments: false

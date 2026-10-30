@@ -1,13 +1,11 @@
-import {assert, expect} from '../../../util/reconfiguredChai';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {UnconnectedCourseOverview as CourseOverview} from '@cdo/apps/templates/courseOverview/CourseOverview';
+
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import * as utils from '@cdo/apps/utils';
-import sinon from 'sinon';
+import {NotificationType} from '@cdo/apps/sharedComponents/Notification';
+import {UnconnectedCourseOverview as CourseOverview} from '@cdo/apps/templates/courseOverview/CourseOverview';
+
 import {VisibilityType} from '../../../../src/code-studio/announcementsRedux';
-import {NotificationType} from '@cdo/apps/templates/Notification';
-import {courseOfferings} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
 
 const defaultProps = {
   name: 'csp',
@@ -27,6 +25,7 @@ const defaultProps = {
       title: 'CSP Unit 1',
       name: 'csp1',
       description: 'desc',
+      path: '/courses/csp/units/1',
     },
     {
       course_id: 30,
@@ -34,6 +33,7 @@ const defaultProps = {
       title: 'CSP Unit 2',
       name: 'csp2',
       description: 'desc',
+      path: '/courses/csp/units/2',
     },
   ],
   isVerifiedInstructor: true,
@@ -69,7 +69,7 @@ const fakeTeacherAndStudentAnnouncement = {
 describe('CourseOverview', () => {
   it('has correct course description for instructor', () => {
     const wrapper = shallow(<CourseOverview {...defaultProps} />);
-    expect(wrapper.find('SafeMarkdown').prop('markdown')).to.equal(
+    expect(wrapper.find('SafeMarkdown').prop('markdown')).toBe(
       '# Teacher description \n This is the course description with [link](https://studio.code.org/home) **Bold** *italics* '
     );
   });
@@ -82,7 +82,7 @@ describe('CourseOverview', () => {
         viewAs={ViewType.Participant}
       />
     );
-    expect(wrapper.find('SafeMarkdown').prop('markdown')).to.equal(
+    expect(wrapper.find('SafeMarkdown').prop('markdown')).toBe(
       '# Student description \n This is the course description with [link](https://studio.code.org/home) **Bold** *italics* '
     );
   });
@@ -97,7 +97,9 @@ describe('CourseOverview', () => {
         ]}
       />
     );
-    assert.equal(wrapper.find('Announcements').props().announcements.length, 2);
+    expect(wrapper.find('Announcements').props().announcements.length).toEqual(
+      2
+    );
   });
 
   it('has participant announcement if viewing as participant', () => {
@@ -108,19 +110,14 @@ describe('CourseOverview', () => {
         announcements={[fakeStudentAnnouncement]}
       />
     );
-    assert.equal(wrapper.find('Announcements').props().announcements.length, 1);
-  });
-
-  it('renders a top row for instructors', () => {
-    const wrapper = shallow(
-      <CourseOverview {...defaultProps} isInstructor={true} />
+    expect(wrapper.find('Announcements').props().announcements.length).toEqual(
+      1
     );
-    assert.equal(wrapper.find('CourseOverviewTopRow').length, 1);
   });
 
   it('renders a CourseScript for each script', () => {
     const wrapper = shallow(<CourseOverview {...defaultProps} />);
-    assert.equal(wrapper.find('Connect(CourseScript)').length, 2);
+    expect(wrapper.find('Connect(CourseScript)').length).toEqual(2);
   });
 
   describe('VerifiedResourcesNotification', () => {
@@ -132,71 +129,28 @@ describe('CourseOverview', () => {
 
     it('is shown to unverified instructors if course has verified resources', () => {
       const wrapper = shallow(<CourseOverview {...propsToShow} />);
-      assert.equal(wrapper.find('VerifiedResourcesNotification').length, 1);
+      expect(wrapper.find('VerifiedResourcesNotification').length).toEqual(1);
     });
 
     it('is not shown if instructor is verified', () => {
       const wrapper = shallow(
         <CourseOverview {...propsToShow} isVerifiedInstructor={true} />
       );
-      assert.equal(wrapper.find('VerifiedResourcesNotification').length, 0);
+      expect(wrapper.find('VerifiedResourcesNotification').length).toEqual(0);
     });
 
     it('is not shown if course does not have verified resources', () => {
       const wrapper = shallow(
         <CourseOverview {...propsToShow} hasVerifiedResources={false} />
       );
-      assert.equal(wrapper.find('VerifiedResourcesNotification').length, 0);
+      expect(wrapper.find('VerifiedResourcesNotification').length).toEqual(0);
     });
 
     it('is not shown while viewing as participant', () => {
       const wrapper = shallow(
         <CourseOverview {...propsToShow} viewAs={ViewType.Participant} />
       );
-      assert.equal(wrapper.find('VerifiedResourcesNotification').length, 0);
-    });
-  });
-
-  describe('versions dropdown', () => {
-    beforeEach(() => {
-      sinon.stub(utils, 'navigateToHref');
-    });
-
-    afterEach(() => {
-      utils.navigateToHref.restore();
-    });
-
-    it('appears when two versions are present and viewable', () => {
-      const wrapper = shallow(
-        <CourseOverview
-          {...defaultProps}
-          versions={courseOfferings['2'].course_versions}
-          isInstructor={true}
-        />
-      );
-
-      const versionSelector = wrapper.find('AssignmentVersionSelector');
-      expect(versionSelector.length).to.equal(1);
-      const renderedVersions = versionSelector.props().courseVersions;
-      assert.equal(2, Object.values(renderedVersions).length);
-    });
-
-    it('does not appear when only one version is viewable', () => {
-      const wrapper = shallow(
-        <CourseOverview
-          {...defaultProps}
-          versions={courseOfferings['3'].course_versions}
-          isInstructor={true}
-        />
-      );
-      expect(wrapper.find('AssignmentVersionSelector').length).to.equal(0);
-    });
-
-    it('does not appear when no versions are present', () => {
-      const wrapper = shallow(
-        <CourseOverview {...defaultProps} isInstructor={true} />
-      );
-      expect(wrapper.find('AssignmentVersionSelector').length).to.equal(0);
+      expect(wrapper.find('VerifiedResourcesNotification').length).toEqual(0);
     });
   });
 });

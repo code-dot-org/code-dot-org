@@ -1,0 +1,13 @@
+{
+  "key": "multimodal-basics",
+  "description": "Explains how AI processes multiple inputs (text, images, sound) to understand the world.",
+  "s3_uri": "s3://cdo-supplemental-curricular-content/json-videos/multimodal-basics.json",
+  "labs": [
+
+  ],
+  "json_schema_version": 1,
+  "audience": "Student",
+  "objective_keys": [
+    "beaec579-1df2-4014-bfc7-8df13308ced1"
+  ]
+}

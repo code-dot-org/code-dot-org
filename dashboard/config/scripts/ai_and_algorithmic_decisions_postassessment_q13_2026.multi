@@ -1,0 +1,14 @@
+name 'ai-and-algorithmic-decisions-postassessment-q13_2026'
+
+question 'A smart-home app turns on the porch light when motion is detected but only if it is not already bright outside. Which combination of operators handles this?'
+
+wrong 'AND only — both conditions must be true.'
+right 'AND with NOT — motion is detected AND it is NOT already bright.'
+wrong 'OR only — either condition triggers the light.'
+wrong 'No operator — the light just runs on a timer.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 10
+MARKDOWN

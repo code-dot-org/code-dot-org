@@ -1,0 +1,9 @@
+name 'aif-y2-working-with-data-lesson10-level1-2026'
+display_name 'Writing Questions'
+description 'Choose a research question to explore.'
+
+sublevels
+level 'aif-y2-working-with-data-lesson10-level1-choice1-2026'
+level 'aif-y2-working-with-data-lesson10-level1-choice2-2026'
+
+uses_lab2

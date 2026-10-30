@@ -2,8 +2,8 @@ require 'test_helper'
 
 class CourseUnitTest < ActionView::TestCase
   setup do
-    @plc_course = create :plc_course
-    @user = create :teacher
+    @plc_course = create(:plc_course)
+    @user = create(:teacher)
   end
 
   test 'Launching course units works with no created unit assignments' do
@@ -26,9 +26,7 @@ class CourseUnitTest < ActionView::TestCase
     course_unit_assertions
   end
 
-  private
-
-  def course_unit_assertions
+  private def course_unit_assertions
     assert @course_unit.started
     assert_equal 1, @course_unit.plc_unit_assignment.size
     assignment = @course_unit.plc_unit_assignment.first

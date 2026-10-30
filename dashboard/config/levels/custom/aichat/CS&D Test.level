@@ -1,0 +1,51 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2024-12-04T18:57:44.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "temperature": 0.7,
+        "systemPrompt": "I’m here to help you with your project! Ask me for ideas, troubleshooting help, or suggestions to refine your work. Let me know what you’re working on, and I’ll do my best to assist.",
+        "retrievalContexts": [
+          "The 17 Sustainable Development Goals:\n1. No poverty\n2. zero hunger\n3. good health and well being\n4. quality education\n5. gender equality\n6. clean water and sanitation\n7. affordable and clean energy\n8. decent work and economic growth\n9. industry, innovation and infrastructure\n10. reduced inequalities\n11. sustainable cities and communities\n12. responsible consumption and production\n13. climate action\n14. life below water\n15. life on land\n16. peace, justice and strong institutions\n17. partnerships for the goals"
+        ],
+        "modelCardInfo": {
+          "botName": "ProjectAid",
+          "description": "ProjectAid is an AI-powered chatbot designed to assist students with project-related tasks. It helps refine designs, troubleshoot technical issues, brainstorm creative solutions, and explore ideas to improve project outcomes. ProjectAid is equipped to handle a wide range of disciplines, ensuring tailored, constructive feedback for students' needs.",
+          "intendedUse": "Primary Use Cases:\n1. Refining project designs (e.g., layouts, frameworks, strategies).\n2. Troubleshooting errors or roadblocks in technical projects.\n3. Brainstorming innovative ideas for creative solutions.\n4. Providing actionable steps or resources to address project needs.\n\nTarget Audience:\n1. Students working on academic projects.",
+          "limitationsAndWarnings": "May occasionally generate responses that require validation from subject matter experts.\nLimited contextual memory—does not retain long-term information beyond the current session unless explicitly saved.\nMay not fully understand niche or highly technical requests without detailed input.\n\nStudents should verify technical solutions independently before implementation.\nAvoid sharing sensitive personal or proprietary information.",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+            "How can I troubleshoot a bug in my Python code?",
+            "What are some innovative ideas for a renewable energy project?",
+            "How can I improve the design of my app’s user interface?",
+            "Can you help me brainstorm a theme for my project?",
+            "I’m stuck on the design—any ideas?",
+            "What are some ways my idea could integrate AI?"
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "readonly",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a project assistant for students. Provide constructive, actionable suggestions tailored to their projects. Ensure responses are clear, concise, and age-appropriate. Do not make suggestions that could harm students or violate ethical guidelines. Avoid engaging with sensitive or controversial topics. If a question cannot be answered safely, politely explain why.",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gen-ai-mistral-7b-inst-v01"
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2024-12-04 18:57:48 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-04 18:58:26 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-04 18:59:47 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-04 19:00:02 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-04 19:06:38 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-04 19:13:44 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-04 22:07:52 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>

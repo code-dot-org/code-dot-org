@@ -1,0 +1,50 @@
+name 'pl-aif-2-U4-types-of-loops-2_pl'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Why Iteration Matters
+
+Many programs don’t just run one step and stop. They repeat actions over and over—checking for new input, updating a screen, or responding to a user. 
+
+This repeated execution of instructions is called **iteration**, and it’s a core idea behind how web apps and programs work.
+
+Before we look at how iteration appears in code, let’s ground the idea in a familiar situation.
+
+
+
+## What is Iteration?
+
+Instead of writing the same instructions over and over, programmers use loops to tell the computer how and when to repeat steps.
+
+<div style="background-color: #e4e2f8; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 80%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 12pt; margin-top: 12px; line-height: 120%;">📖 <strong>Iteration</strong> is the process of repeating a set of steps in a program.
+</p>
+</div>
+
+<div style="clear:both;"></div>
+
+<img src="https://images.code.org/c4bb7cf4e168492738989f3ac3a13c5e-image-1781707167171.png" alt="icon of looping arrows" width="210px" style="border-radius:10px; float:left; margin: -25px 0px 0px -20px;">
+
+**In web apps and other programs, iteration is used to:**
+
+- Check for user input repeatedly
+
+- Update information on the screen
+
+- Process lists of data
+
+- Keep a program running until something changes
+
+
+
+<div style="clear:both;"></div>
+
+---
+
+## Next up
+
+Let's dive deeper into the two types of loops.
+
+
+MARKDOWN

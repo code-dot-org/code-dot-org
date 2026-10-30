@@ -1,0 +1,16 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 75,
+  "created_at": "2026-06-14T18:28:54.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "iterating-with-ai-lesson11-level2a-template-v1-2026",
+    "long_instructions": "# App Wireframe\r\n\r\n**Goal:** Create a detailed wireframe of your dashboard layout.\r\n\r\nUse the `App View` section to plan how users will explore your dashboard.\r\n\r\n1. Drag and drop UI components from the `Wireframe Elements` box to mock up the layout of your application in the `App View` section.\r\n2. Annotate your layout to show the filters, sort controls, data card display area, and which dataset fields each part of the UI will use.\r\n3. For each filter, note which field it controls.\r\n4. Indicate where transparent labels will go, such as `Showing X of Y results`.\r\n5. Add your completed wireframe to your Backpack.",
+    "name_suffix": "_2026"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-06-14T18:28:54.187+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson11-level3-test_2025-pilot_2026\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson11-level3-test_2025-pilot_2026\"},{\"changed_at\":\"2026-06-14 18:29:33 +0000\",\"changed\":[\"project_template_level_name\",\"bubble_choice_description\",\"thumbnail_url\",\"display_name\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-06-14 18:36:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Sketchlab>

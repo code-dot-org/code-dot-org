@@ -1,0 +1,59 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-01T20:46:51.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Young Adult Novels\r\n\r\nLet's continue practicing using classes with this article on different young adult novels.\r\n\r\n# Do This\r\n\r\n1) Give each heading and paragraph tag class attribute names.\r\n   - *The first novel's heading and paragraph has already been done as an example.*\r\n2) Go into the stylesheet and give each novel heading and paragraph a different style including:\r\n   - Color\r\n   - Font\r\n   - Border style\r\n   - Border color\r\n   - Background color\r\n3) Add any other stylings you think make the article look better!\r\n\r\n::: details [Help & Tips]\r\n- [<i class=\"fa-regular fa-map\"></i> Classes](https://studio.code.org/courses/csd-2024/guides/classes)\r\n- [<i class=\"fa-solid fa-book\"></i> Layout Properties](https://studio.code.org/courses/csd-2024/guides/layout-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Body Styling](https://studio.code.org/courses/csd-2024/guides/body-styling)\r\n- [<i class=\"fa-solid fa-book\"></i> Images in HTML](https://studio.code.org/courses/csd-2024/guides/images-in-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Text Properties](https://studio.code.org/courses/csd-2024/guides/text-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Creative Commons Search](https://studio.code.org/courses/csd-2024/guides/creative-commons-search)\r\n- [<i class=\"fa-solid fa-book\"></i> Style Sheets](https://studio.code.org/courses/csd-2024/guides/style-sheets)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Lists](https://studio.code.org/courses/csd-2024/guides/lists)\r\n- [<i class=\"fa-solid fa-book\"></i> Headings and Paragraphs](https://studio.code.org/courses/csd-2024/guides/headings-and-paragraphs)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Tags](https://studio.code.org/courses/csd-2024/guides/html-tags)\r\n- [<i class=\"fa-solid fa-book\"></i> Debugging in HTML](https://studio.code.org/courses/csd-2022/guides/debugging-html)\r\n:::",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    <!-- young adult novels info -->\n    <h1>Young Adult Novels</h1>\n    \n    <p>There are many popular young adult novels that have been widely read and enjoyed by teenagers and adults alike. Here are some examples:</p>\n    \n    <!-- Hunger Games section -->\n    <h2 class=\"hunger-games\">The Hunger Games</h2>\n    \n    <p class=\"hunger-games\">Written by Suzanne Collins, this dystopian series follows the story of a young girl named Katniss Everdeen, who is forced to compete in a deadly televised competition in a post-apocalyptic world. The series explores themes of survival, sacrifice, and political oppression, and has been popular among teenage and young adult readers.</p>\n    \n    <!-- 1) Give each heading and paragraph tag class names -->\n    \n    <!-- Fault in Our Stars section -->\n    <h2>The Fault in Our Stars</h2>\n    \n    <p>Written by John Green, this novel follows the story of two teenagers with cancer who fall in love. The book explores themes of love, mortality, and the human experience, and has been widely read and praised for its emotional depth and honesty.</p>\n    \n    <!-- Divergent section -->\n    <h2>Divergent Series</h2>\n    \n    <p>Written by Veronica Roth, this dystopian series follows the story of a young girl named Tris Prior, who must navigate a world where people are divided into different factions based on their personalities. The series explores themes of identity, individuality, and social control, and has been popular among teenage and young adult readers.</p>\n    \n    <!-- Maze Runner section -->\n    <h2>The Maze Runner</h2>\n    \n    <p>This series, written by James Dashner follows the story of a group of teenagers who are trapped in a deadly maze and must find a way to escape. The series explores themes of survival, trust, and the human condition, and has been popular among teenage and young adult readers.</p>\n    \n    <!-- Harry Potter section -->\n    <h2>Harry Potter</h2>\n    \n    <p>This series, written by J.K. Rowling, follows the story of a young boy named Harry Potter, who discovers that he is a wizard and attends a magical school called Hogwarts. The series explores themes of friendship, loyalty, and coming of age, and has been beloved by readers of all ages.</p>\n    \n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "/* 2) Give each novel heading and paragraph a different style including: color, font, border style, border color, and background color */\n\nbody {\n  background: rgba(234, 242, 255, 0.18);\n}\np {\n  font-family: monospace;\n}\nh1 {\n  text-align: center;\n  border-style: solid;\n  border-color:cornflowerblue; \n  background-color:azure\n}\n\n.hunger-games {\n  border-style:ridge;\n  border-color:crimson;\n  background-color:rgba(220, 20, 60, 0.13);\n  color:#0b0000;\n  font-family: fantasy;\n  letter-spacing: 3px;\n  padding: 5px;\n}",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nkVCKXLJzlzpCrtWS8A==\n",
+    "name_suffix": "_2025-v2"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:46:51.815+00:00\",\"changed\":[\"cloned from \\\"CSD U2L11-L4-2025\\\"\"],\"cloned_from\":\"CSD U2L11-L4-2025\"}]"
+}]]></config>
+</Weblab2>

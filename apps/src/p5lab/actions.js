@@ -1,7 +1,9 @@
 /** @file Redux action-creators for Game Lab.
  *  @see http://redux.js.org/docs/basics/Actions.html */
 import $ from 'jquery';
+
 import {setAllowInstructionsResize} from '../redux/instructions';
+
 import {P5LabInterfaceMode} from './constants';
 
 /** @enum {string} */

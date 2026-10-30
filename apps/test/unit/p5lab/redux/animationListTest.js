@@ -1,5 +1,9 @@
+import _ from 'lodash';
 import {combineReducers} from 'redux';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
+import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
+import {EMPTY_IMAGE} from '@cdo/apps/p5lab/constants';
 import reducer, {
   START_LOADING_FROM_SOURCE,
   DONE_LOADING_FROM_SOURCE,
@@ -16,23 +20,22 @@ import reducer, {
   saveAnimation,
 } from '@cdo/apps/p5lab/redux/animationList';
 import animationTab from '@cdo/apps/p5lab/redux/animationTab';
-import {EMPTY_IMAGE} from '@cdo/apps/p5lab/constants';
-import {createStore} from '../../../util/redux';
-import {expect} from '../../../util/reconfiguredChai';
-import {setExternalGlobals} from '../../../util/testUtils';
-import commonReducers from '@cdo/apps/redux/commonReducers';
-import pageConstantsReducer, {
-  setPageConstants,
-} from '@cdo/apps/redux/pageConstants';
-const project = require('@cdo/apps/code-studio/initApp/project');
-import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
-import _ from 'lodash';
 import {
   getStore,
   registerReducers,
   stubRedux,
   restoreRedux,
 } from '@cdo/apps/redux';
+import commonReducers from '@cdo/apps/redux/commonReducers';
+import pageConstantsReducer, {
+  setPageConstants,
+} from '@cdo/apps/redux/pageConstants';
+
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+import {createStore} from '../../../util/redux';
+import {setExternalGlobals} from '../../../util/testUtils';
+
+const project = require('@cdo/apps/code-studio/initApp/project');
 
 describe('animationList', function () {
   setExternalGlobals(beforeEach, afterEach);
@@ -51,7 +54,7 @@ describe('animationList', function () {
   describe('animationSourceUrl', function () {
     const key = 'foo';
 
-    before(() => assetPrefix.init({}));
+    beforeAll(() => assetPrefix.init({}));
 
     it(`returns the sourceUrl from props if it exists and is not an uploaded image`, function () {
       const props = {sourceUrl: 'bar'};
@@ -332,6 +335,23 @@ describe('animationList', function () {
       ).to.equal('images (1).jpg_1_2');
     });
 
+    it('should rename a duplicate to a name no other animation has', function () {
+      let animationList = createAnimationList(5);
+      animationList.propsByKey['animation_1'].name = 'cat';
+      animationList.propsByKey['animation_2'].name = 'cat';
+      animationList.propsByKey['animation_3'].name = 'cat_1';
+      animationList.propsByKey['animation_4'].name = 'cat_1_copy_1';
+      animationList.propsByKey['animation_5'].name = 'cat_2';
+      store.dispatch(setInitialAnimationList(animationList));
+
+      expect(
+        store.getState().animationList.propsByKey['animation_2'].name
+      ).to.equal('cat_3');
+      expect(
+        store.getState().animationList.propsByKey['animation_5'].name
+      ).to.equal('cat_2');
+    });
+
     it('when animationList has migratable animations, check that animation is substituted', function () {
       let animationList = createAnimationList(2, true);
       let defaultSprites = createAnimationList(2);
@@ -539,6 +559,19 @@ describe('animationList', function () {
       ).to.equal('animation_3');
     });
 
+    it('new blank animations skip a name in use when a copy ends in the same number', function () {
+      let animationList = createAnimationList(3);
+      animationList.propsByKey['animation_2'].name = 'animation_1_copy_1';
+      animationList.propsByKey['animation_3'].name = 'animation_2';
+      store.dispatch(setInitialAnimationList(animationList));
+      store.dispatch(addBlankAnimation('ANIMATION'));
+
+      let blankAnimationKey = store.getState().animationList.orderedKeys[3];
+      expect(
+        store.getState().animationList.propsByKey[blankAnimationKey].name
+      ).to.equal('animation_3');
+    });
+
     it('new blank animations get name next available number appended when available number is in the middle of the list', function () {
       const key1 = 'animation_2';
       let animationList = createAnimationList(3);
@@ -712,7 +745,7 @@ describe('animationList', function () {
       });
     });
 
-    it('Uses media proxy for non-curriculum.code.org absolute URLs', function () {
+    it('Does not use media proxy for absolute URLs', function () {
       const serializedList = {
         orderedKeys: ['foo'],
         propsByKey: {
@@ -725,7 +758,7 @@ describe('animationList', function () {
         orderedKeys: ['foo'],
         propsByKey: {
           foo: {
-            sourceUrl: `${document.location.origin}/media?u=http%3A%2F%2Fhost.com%2Fsome-absolute-url`,
+            sourceUrl: `http://host.com/some-absolute-url`,
           },
         },
       });

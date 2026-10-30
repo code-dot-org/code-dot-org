@@ -1,5 +1,10 @@
 <Javalab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 68,
+  "created_at": "2022-01-21T23:29:04.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
@@ -14,14 +19,13 @@
         "isVisible": true
       }
     },
-    "submittable": "false"
+    "submittable": "false",
+    "encrypted_examples": [
+
+    ],
+    "ai_tutor_available": "true"
   },
-  "game_id": 68,
-  "created_at": "2022-05-19T00:55:40.000Z",
-  "level_num": "custom",
-  "user_id": 1,
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-12T15:52:42.996-08:00\",\"changed\":[\"cloned from \\\"Allthethings Java Lab 4\\\"\"],\"cloned_from\":\"Allthethings Java Lab 4\"},{\"changed_at\":\"2022-01-12 15:53:35 -0800\",\"changed\":[\"teacher_markdown\",\"long_instructions\"],\"changed_by_id\":6959,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2022-01-12 15:54:05 -0800\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"tts_long_instructions_override\"],\"changed_by_id\":6959,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2022-01-12 15:55:32 -0800\",\"changed\":[\"start_sources\"],\"changed_by_id\":6959,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2022-01-12 15:59:14 -0800\",\"changed\":[],\"changed_by_id\":6959,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2022-01-12 15:59:33 -0800\",\"changed\":[],\"changed_by_id\":6959,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2022-01-12 15:59:51 -0800\",\"changed\":[],\"changed_by_id\":6959,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2022-08-31 09:43:40 -0700\",\"changed\":[\"start_sources\"],\"changed_by_id\":4,\"changed_by_email\":\"dev@levelbuilder.com\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-12T15:52:42.996-08:00\",\"changed\":[\"cloned from \\\"Allthethings Java Lab 4\\\"\"],\"cloned_from\":\"Allthethings Java Lab 4\"},{\"changed_at\":\"2022-01-12 15:53:35 -0800\",\"changed\":[\"teacher_markdown\",\"long_instructions\"],\"changed_by_id\":6959,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2022-01-12 15:54:05 -0800\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"tts_long_instructions_override\"],\"changed_by_id\":6959,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2022-01-12 15:55:32 -0800\",\"changed\":[\"start_sources\"],\"changed_by_id\":6959,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2022-01-12 15:59:14 -0800\",\"changed\":[],\"changed_by_id\":6959,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2022-01-12 15:59:33 -0800\",\"changed\":[],\"changed_by_id\":6959,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2022-01-12 15:59:51 -0800\",\"changed\":[],\"changed_by_id\":6959,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2022-08-31 09:43:40 -0700\",\"changed\":[\"start_sources\"],\"changed_by_id\":4,\"changed_by_email\":\"dev@levelbuilder.com\"},{\"changed_at\":\"2024-09-06 00:24:01 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":781,\"changed_by_email\":\"erin.bond@code.org\"}]"
 }]]></config>
 </Javalab>

@@ -131,5 +131,7 @@ module Pd
       VIRTUAL_8_CATEGORY => [1].freeze,
       CSF_CATEGORY => CSF_SURVEY_INDEXES.values.freeze
     }
+
+    BUILD_YOUR_OWN_FACILITATOR_POST_SURVEY = 'form/professional_learning_facilitator_post_workshop_survey'.freeze
   end
 end

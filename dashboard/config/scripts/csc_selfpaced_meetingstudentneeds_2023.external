@@ -11,10 +11,10 @@ markdown <<MARKDOWN
 
 
 
-#### What did you notice and wonder... 
+What did you notice and wonder... 
 
-* #### about Sprite Lab? 
-* #### your students' needs when using Sprite Lab? 
+* about Sprite Lab? 
+* your students' needs when using Sprite Lab? 
 
 ***
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
@@ -22,11 +22,11 @@ markdown <<MARKDOWN
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:225px;">
     <p><img src="https://images.code.org/9b6959aa8dfe1ff674aad8c0a78119ec-image-1680739466965.gif" alt= "sprite moving to a set location" style="float: left; height: 300px; clear: both; margin: 0 20px 20px 0;">
 
-#### **... students can**
+**... students can**
 
-* #### choose among different sprites?
-* #### give sprites a location and behaviors?
-* #### change and set the size of sprites?
+* choose among different sprites?
+* give sprites a location and behaviors?
+* change and set the size of sprites?
 </p>
 
 <br>
@@ -46,10 +46,10 @@ markdown <<MARKDOWN
 <p><img src="https://images.code.org/a699901168d72010283137be13ffbf10-image-1680736491646.gif" alt= "sprite moving and compass rose giving its direction" style="float: left; height: 300px; width: 275px; clear: both ; margin: 0 20px 20px 0;">
 
 
-#### **... events can happen**
+**... events can happen**
 
-* #### with a click?
-* #### when sprites touch?
+* with a click?
+* when sprites touch?
 
 </p>
 </div>
@@ -60,8 +60,8 @@ markdown <<MARKDOWN
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:40px;">
 
 
-* #### ... what challenges might my students have with sprites?
-* #### ... what challenges might my students have with events?
+* ... what challenges might my students have with sprites?
+* ... what challenges might my students have with events?
 
 
 </div>
@@ -70,10 +70,10 @@ markdown <<MARKDOWN
 ***
 
 
-#### Before sharing CS Connections with your students, prepare by making note of the challenges you encountered and how you overcame those challenges. Do this while working through examples in this module as well as lesson levels in the modules you plan to teach.  
+Before sharing CS Connections with your students, prepare by making note of the challenges you encountered and how you overcame those challenges. Do this while working through examples in this module as well as lesson levels in the modules you plan to teach.  
 
 
-#### Your students are likely to face these challenges too and you will be ready to guide them!
+Your students are likely to face these challenges too and you will be ready to guide them!
 
 
 

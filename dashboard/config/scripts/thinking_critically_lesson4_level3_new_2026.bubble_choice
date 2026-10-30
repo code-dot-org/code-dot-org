@@ -1,0 +1,12 @@
+name 'thinking_critically_lesson4_level3-new_2026'
+display_name 'Saving Evidence into the Backpack'
+description 'Choose the exploration that you completed below and learn how to save your chats into the backpack for use in your project.'
+
+sublevels
+level 'thinking_critically_lesson4_level3a-new_2026'
+level 'thinking_critically_lesson4_level3b-new_2026'
+level 'thinking_critically_lesson4_level3c-new_2026'
+level 'thinking_critically_lesson4_level3d-new_2026'
+level 'thinking_critically_lesson4_level3e-new_2026'
+
+uses_lab2

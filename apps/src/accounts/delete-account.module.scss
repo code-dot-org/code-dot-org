@@ -1,0 +1,21 @@
+.container {
+  padding-top: 20px;
+}
+
+.hr {
+  border-color: var(--borders-error-primary);
+}
+
+.header {
+  color: var(--text-error-primary);
+}
+
+.warning {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: flex-end;
+}

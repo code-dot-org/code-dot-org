@@ -1,0 +1,13 @@
+{
+  "key": "image-observation",
+  "description": "Shows how AI can infer \"hidden clues\" like location or time from background details in a photo.",
+  "s3_uri": "s3://cdo-supplemental-curricular-content/json-videos/image-observation.json",
+  "labs": [
+
+  ],
+  "json_schema_version": 1,
+  "audience": "Student",
+  "objective_keys": [
+    "aa988ebf-db14-4b02-bf20-49a810b81531"
+  ]
+}

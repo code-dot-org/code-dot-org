@@ -1,28 +1,35 @@
-import {assert} from '../../../util/reconfiguredChai';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
+
 import LessonExtrasFlagIcon from '@cdo/apps/templates/progress/LessonExtrasFlagIcon';
-import color from '@cdo/apps/util/color';
 
 describe('LessonExtrasFlagIcon', () => {
   it('has a grey flag icon when not selected, not perfect', () => {
     const wrapper = shallow(<LessonExtrasFlagIcon />);
-    assert.equal(
-      wrapper.find('i').at(1).props().style.color,
-      color.lighter_gray
+    expect(wrapper.find('i').at(1).props().style.color).toEqual(
+      'var(--text-neutral-tertiary)'
     );
   });
 
   it('has a charcoal flag icon when selected, not perfect', () => {
     const wrapper = shallow(<LessonExtrasFlagIcon isSelected={true} />);
-    assert.equal(wrapper.find('i').at(1).props().style.color, color.charcoal);
+    expect(wrapper.find('i').at(1).props().style.color).toEqual(
+      'var(--text-neutral-primary)'
+    );
   });
 
   it('has a green flag icon when level result is perfect', () => {
     const wrapper = shallow(<LessonExtrasFlagIcon isPerfect={true} />);
-    assert.equal(
-      wrapper.find('i').at(1).props().style.color,
-      color.level_perfect
+    expect(wrapper.find('i').at(1).props().style.color).toEqual(
+      'var(--text-success-primary)'
+    );
+  });
+
+  it('has an orange flag icon when hovered', () => {
+    const wrapper = shallow(<LessonExtrasFlagIcon />);
+    wrapper.find('span').simulate('mouseEnter');
+    expect(wrapper.find('i').at(1).props().style.color).toEqual(
+      'var(--text-accent-orange-primary)'
     );
   });
 });

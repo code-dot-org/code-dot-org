@@ -1,0 +1,10 @@
+name 'gen-ai-humanities-research-L2e'
+title 'Scorecard'
+
+question 'How quickly were you typically able to find the information?'
+right '1'
+right '2'
+right '3'
+right '4'
+right '5'
+allow_multiple_attempts false

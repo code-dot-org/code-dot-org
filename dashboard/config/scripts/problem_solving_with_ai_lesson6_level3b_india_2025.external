@@ -1,0 +1,26 @@
+name 'problem-solving-with-ai-lesson6-level3b_india-2025'
+title 'College Admissions Officer'
+display_name 'College Admissions Officer'
+bubble_choice_description 'Six Class 12 students have applied to your college for an undergraduate degree. Decide which two students to admit.'
+thumbnail_url 'https://images.code.org/4e78bbe2bee75906387075079bab9c9b-image-1742422973369.png'
+
+
+
+markdown <<MARKDOWN
+## Review College Applications
+
+The following 6 Class 12 students have applied to your college for an undergraduate degree. **Choose 2 students to accept:**
+
+>1. **Hi, my name is Jyoti.** I've been passionate about environmental science since middle school, and I love working on sustainability projects in my community. I'm a strong student, expecting a 96% in my CBSE Class 12 Boards (Science stream with Biology). My CUET score is 780/800. I'm applying to this college because of its strong environmental studies program and the research opportunities available for undergraduates. Outside of school, I run a community garden and volunteer for a local conservation NGO.
+
+
+>2. **Hey, I’m Rohan.** I've been playing tabla since I was eight, and music has always been a big part of my life. I'm in my school's music society and also compose my own tracks. I scored 78% in my Class 12 Boards (Arts stream). I want to attend this college because of its strong performing arts program and the chance to collaborate with other passionate musicians. I also love working with younger students, and I hope to help teach music in some capacity while I'm in college.
+
+>3. **Hi, I’m Aryan.** I'm a robotics enthusiast who loves coding and problem-solving. I've competed in national robotics olympiads for the past three years, and I spend a lot of my free time tinkering with Arduino projects. I scored 92% in my Class 12 Boards (PCM - Physics, Chemistry, Mathematics). My JEE Main percentile is 98.5. I'm excited about this college's engineering program and its hands-on approach to learning. I'm also looking forward to joining the robotics club and working on innovative tech projects with other students.
+
+>4. **Hi, my name is Meera.** I'm a dedicated athlete and team captain of my school's football team. Sports have taught me leadership, discipline, and resilience, and I hope to continue playing in college. I scored 85% in my Class 12 Boards (Commerce stream). I'm applying to this college because it has a great balance of strong academics and competitive athletics, and I hope to trial for your sports quota. I also love that the campus fosters a close-knit community, which is something I value in a college experience.
+
+>5. **Hey, I’m Jatin.**I've always been drawn to storytelling, whether through writing, film, or photography. I run my school's literary magazine and have had my short stories published in a few student-run journals. I scored 94% in my Class 12 Boards (Arts stream). My CUET score is 760/800. This college's Mass Media and Creative Writing program really excites me, and I'm eager to take workshops with experienced writers. I also want to explore documentary filmmaking and see how I can merge my love for writing and visual storytelling.
+
+>6. **Hi, I’m Karan.** I love working with my hands and figuring out how things work, which is why I'm drawn to mechanics and automotive technology. I've spent the past two summers working at an auto shop, and I plan to get my full certification as a mechanic. I scored 65% in my Class 12 Boards, and while I didn't take the CUET, I have completed an ITI (Industrial Training Institute) certification in motor mechanics. I'm interested in this college because of its strong vocational programs and hands-on training opportunities. I'm excited to turn my passion into a career.
+MARKDOWN

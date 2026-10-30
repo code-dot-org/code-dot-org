@@ -1,0 +1,18 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2026-09-15T20:35:04.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "skip_dialog": true,
+    "skip_sound": true,
+    "long_instructions": "Now that you've predicted and run the Boba Run Splitter, investigate its code. Describe how it fits the five-step scaffold, explain its use of operators like `*` and `%`, and answer the targeted questions in the instructions regarding its design and output.",
+    "placeholder": "Describe your findings and answers.",
+    "encrypted_solution": "H/VppJGdASuMyE3GXt77qucbscsrnV/g1rf3cWi1JqVbcTsxR7RYkQH5O64S\n8Ro+y9kF5hwsl3pcLn/nenFldjhgCqlgBqDEY6G4tc2J6Uqcc/Pb4TYk2KY4\nQg3HY4SEcAyLWDRmU8U7qi7NbFjCLEW/SwpC5VEPThVNp8h37gAn2RGUS7bb\nYJ4ZPTgijIvyERvu/sIR4ShFzbiCZxwmKyqjVpJcwaiwIH16Pb72xp/xEjw0\nm7EMas0u4XY5xW/qFPM318oFQQ19jTu0kBrguRJqR1Rlh+8FaM7CZeyuEkHi\nXjWr277H+wv9yG5c5estSJJHRc+uinGKjngNR4RudkA98PMjcS1KotNDzGZr\nDukLReYaY2J4fqAlXpiRtaMWILaeUegB+QKwfumTbeGgZQ5rVa0E+xNxSnoQ\n6UqpkgIBTSlpFneA3PMqFp3W09R1gdpA2HAXufnX0ORBWpnANeAboiN+eLzm\n1llOiTAQtz/xUSwu/4RZy8zZbNLlQb+51m5a/iNcX3ZV2kGcI2DQhKPOA93p\n4jwSo4FmejdDv15iPZrYkJ/kj6fZ8nJ9mimZIU5L743GNAjX4SGKBPkIxPvK\nduw2CZn1KSKNrRn9Z4U7bHmsmdHPjtBo6uZKx635tdbFkeotKek74Wd2Vhg2\nPZTl2LA4H8USLqNMjNihaZf9brA/c6OnNKzZlWBJAXDhKJuQtZqD8/jEDuat\nOdpSe1cWcLUXgiZx5Rnt+zzzbaCKi1aZ4GY5cb4SYbYHfNswZEUp4+Z+NpDM\n2nFbF5mmLDcjhThzRxK1G59Xavf8cFSj68ETU4d3aIbZP020GY4oViZCGGIO\npF7l7lIlZfgYy/Y7szxLSsn7Asma63Nf6BosdFgUDRKy+7n54JMVtLLH0MSM\n9SX7fjWVlc++jCfVEfpPxzxubUmJbyMo2L+ianQVJXW/g8rI60mPWbcyD3T1\n1YRgPNE+tf/Ho/nh1nzmbTsDS4dgCErUInaQkePGGMzDsw0hV8ml5guUkbto\nc0IHEj0afqtZQG+JDEhz0bwclw==\n",
+    "generate_outline": "With insight from the Mod Widget, annotate the Boba Run Splitter code with the five-step scaffold (top comment, printed explanation, inputs, expressions, printed result). Inventory one line using each of `* - round() % /` and explain its job for the user. Answer targeted questions: why convert money to cents, why `round()` not `int()` on `total_cents`, rewrite `* 1.18` as two lines, diagnose misleading output for cents ending in 0, and suggest prompt changes for a new user."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-15 20:35:11 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-15 20:35:46 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-15 20:35:46 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-15 20:35:46 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</FreeResponse>

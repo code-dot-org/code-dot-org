@@ -1,0 +1,39 @@
+name 'csaif_pl_checkreview-functions-22-2_Python_2025'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Reviewing Check for Understanding 
+
+The previous level asked you to **identify which option correctly defines a function for the painter to turn right**. 
+
+Let's take a look. 
+<table style="width: 100%; border-collapse: separate; border-spacing: 0 20px;">
+  <tr>
+    <td style="width: 33%;"><img src="https://images.code.org/ec08ed532bb06832510a6cccffd4bb92-image-1784158994785.42.49 PM.png" alt="A code snippet that reads custom.turn_right(aria)" style="width: 100%;"></td>
+    <td style="text-align: left; padding: 10px; border: 1px solid transparent; font-size:14pt;">
+      In this option, the function is being <i>called</i>, not defined.
+    </td>
+  </tr>
+  <tr>
+    <td style="width: 33%;"><img src="https://images.code.org/d5ec19d31f86a4401f169d6e396f19c3-image-1784158994772.42.21 PM.png" alt="A code snippet that is missing a color after def turn_right(painter) " style="width: 100%;"></td>
+    <td style="text-align: left; padding: 10px; border: 1px solid transparent; font-size:14pt;">
+      In this option, the colon <code>:</code> is left off the header which will result in an error.
+    </td>
+  </tr>
+  <tr>
+    <td style="width: 33%;"><img src="https://images.code.org/b1fc5d6373768d934a185a0d24122b55-image-1784158994756.41.54 PM.png" alt="A code snippet with the incorrect parameter three" style="width: 100%;"></td>
+    <td style="text-align: left; padding: 10px; border: 1px solid transparent; font-size:14pt;">
+      The use of the <i> number 3</i> is incorrect syntax in this option.
+    </td>
+  </tr>
+  <tr>
+    <td style="width: 33%;"><img src="https://images.code.org/afc73d6ddc98d0fb2deec61cd295c634-image-1784158757022.38.38 PM.png" alt="The correct code snippet" style="width: 100%;"></td>
+    <td style="text-align: left; padding: 10px; border: 1px solid transparent; font-size:14pt;">
+      This is the correct option. The function is correctly defined.
+    </td>
+  </tr>
+</table>
+
+## Let's continue! 
+MARKDOWN

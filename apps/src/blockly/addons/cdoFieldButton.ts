@@ -1,22 +1,22 @@
-import GoogleBlockly, {BlockSvg, FieldValidator} from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 
 interface ColorOverrides {
-  button: string | undefined;
-  icon: string | undefined;
-  text: string | undefined;
+  button?: string;
+  icon?: string;
+  text?: string;
 }
 
 interface CdoFieldButtonOptions {
-  value: string | undefined;
-  validator: FieldValidator<string> | null;
+  value?: string;
+  validator?: BlocklyCore.FieldValidator<string> | null;
   onClick: () => void;
-  transformText: ((text: string) => string) | undefined;
-  icon: SVGElement | undefined;
-  colorOverrides: ColorOverrides | undefined;
-  allowReadOnlyClick: boolean | undefined;
+  transformText?: (text: string) => string;
+  icon?: SVGElement;
+  colorOverrides?: ColorOverrides;
+  allowReadOnlyClick?: boolean;
 }
 
-export default class CdoFieldButton extends GoogleBlockly.Field {
+export default class CdoFieldButton extends BlocklyCore.Field {
   private onClick: () => void | undefined;
   private transformText: ((text: string) => string) | undefined;
   private icon: SVGElement | undefined;
@@ -55,10 +55,10 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
     this.allowReadOnlyClick = allowReadOnlyClick;
   }
 
-  static fromJson(options: CdoFieldButtonOptions) {
+  static fromJson(_options: BlocklyCore.FieldConfig) {
+    const options = _options as CdoFieldButtonOptions;
     return new CdoFieldButton(options);
   }
-
   /**
    * Create the block UI for this field.
    * @override
@@ -66,7 +66,7 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
   initView() {
     super.initView();
     if (this.icon) {
-      const sourceBlock = this.getSourceBlock() as BlockSvg;
+      const sourceBlock = this.getSourceBlock() as BlocklyCore.BlockSvg;
       this.icon.style.fill =
         this.colorOverrides?.icon || sourceBlock?.style.colourPrimary;
       // Make the icon centered on Safari.
@@ -82,9 +82,6 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
    */
   getDisplayText_() {
     const text = this.getText();
-    if (!text) {
-      return GoogleBlockly.Field.NBSP;
-    }
     // The transformText function customizes the text for display.
     if (this.transformText) {
       return this.transformText(text);
@@ -118,7 +115,7 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
    * @override
    */
   applyColour() {
-    const sourceBlock = this.getSourceBlock() as BlockSvg;
+    const sourceBlock = this.getSourceBlock() as BlocklyCore.BlockSvg;
     const buttonColor = this.colorOverrides?.button;
     const textColor = this.colorOverrides?.text;
     const iconColor = this.colorOverrides?.icon;

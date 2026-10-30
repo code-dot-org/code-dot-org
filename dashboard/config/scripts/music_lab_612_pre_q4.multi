@@ -1,0 +1,25 @@
+name 'music-lab-612-pre-q4'
+
+question '**What change should Ethan make so the Drum Fill plays during the entire Chorus 1 part?**'
+
+wrong 'Add another play Chorus 1 block'
+right 'Set the play Drum Fill to repeat 4 times'
+wrong 'Remove the play Chorus 1 block'
+wrong 'Set the play Drum Fill to repeat 6 times'
+
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Topic: Loops
+
+Skill: Design songs with sections that repeat using loop blocks
+
+Appears in Lesson: Loops - Synthesis
+MARKDOWN
+
+markdown <<MARKDOWN
+Ethan is trying to make his 1-measure Drum Fill play for the full 4 measures of the Chorus 1 vocals. Take a look at his code and the timeline.
+
+<img src="https://images.code.org/9b1a24447ebed30127ada7e438f01644-image-1750274387459.png" width="300">
+MARKDOWN

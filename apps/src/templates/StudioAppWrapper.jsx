@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import {connect} from 'react-redux';
+
 import FixZoomHelper from '@cdo/apps/templates/FixZoomHelper';
 import HideToolbarHelper from '@cdo/apps/templates/HideToolbarHelper';
 import RotateContainer from '@cdo/apps/templates/RotateContainer';
-import {connect} from 'react-redux';
 import StudioAppIdleTimer from '@cdo/apps/templates/StudioAppIdleTimer';
 
 /**

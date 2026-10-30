@@ -1,0 +1,37 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import classNames from 'classnames';
+import React from 'react';
+
+import {computeMaterialType} from './LessonMaterialTypes';
+import {RESOURCE_ICONS} from './ResourceIconType';
+
+import styles from './lesson-materials.module.scss';
+
+type ResourceIconProps = {
+  resourceType: string;
+  resourceUrl: string;
+};
+
+const computeIconType = (resourceType: string, resourceUrl: string) => {
+  const materialType = computeMaterialType(resourceType, resourceUrl);
+  return RESOURCE_ICONS[materialType];
+};
+
+const ResourceIcon: React.FC<ResourceIconProps> = ({
+  resourceType,
+  resourceUrl,
+}) => {
+  const iconType = computeIconType(resourceType, resourceUrl);
+
+  return (
+    <div
+      // eslint-disable-next-line react/forbid-dom-props
+      data-testid={'resource-icon-' + iconType.icon}
+      className={classNames(styles.resourceIconContainer, iconType.class)}
+    >
+      <FontAwesomeV6Icon iconName={iconType.icon} className={styles.icon} />
+    </div>
+  );
+};
+
+export default ResourceIcon;

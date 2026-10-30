@@ -2,7 +2,7 @@
 # https://github.com/rails/rails/pull/28083
 module ConnectionPoolLockThread
   def initialize(spec)
-    super(spec)
+    super
     @lock_thread = false
   end
 

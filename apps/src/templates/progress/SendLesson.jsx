@@ -1,8 +1,10 @@
-import React from 'react';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
+import React from 'react';
+
 import i18n from '@cdo/locale';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
-import Button from '@cdo/apps/templates/Button';
+
 import SendLessonDialog from './SendLessonDialog';
 
 export default class SendLesson extends React.Component {
@@ -10,7 +12,6 @@ export default class SendLesson extends React.Component {
     lessonUrl: PropTypes.string.isRequired,
     lessonTitle: PropTypes.string,
     courseid: PropTypes.number,
-    analyticsData: PropTypes.string,
     buttonStyle: PropTypes.object,
   };
 
@@ -25,16 +26,6 @@ export default class SendLesson extends React.Component {
 
   openDialog() {
     this.setState({isDialogOpen: true});
-
-    firehoseClient.putRecord(
-      {
-        study: 'send-to-students-button',
-        study_group: 'v0',
-        event: event,
-        data_json: this.props.analyticsData,
-      },
-      {includeUserId: true}
-    );
   }
 
   closeDialog() {
@@ -44,13 +35,18 @@ export default class SendLesson extends React.Component {
   render() {
     return (
       <div className="uitest-sendlesson">
-        <Button
+        <MuiButton
           onClick={this.openDialog}
-          text={i18n.sendLessonButton()}
-          icon="share-square-o"
-          color={Button.ButtonColor.gray}
+          variant="outlined"
+          color="secondary"
+          size="small"
+          startIcon={
+            <FontAwesomeV6Icon iconName="share-from-square" iconStyle="solid" />
+          }
           style={this.props.buttonStyle}
-        />
+        >
+          {i18n.sendLessonButton()}
+        </MuiButton>
         {this.state.isDialogOpen && (
           <SendLessonDialog
             isOpen={true}
@@ -58,7 +54,6 @@ export default class SendLesson extends React.Component {
             lessonUrl={this.props.lessonUrl}
             lessonTitle={this.props.lessonTitle}
             courseid={this.props.courseid}
-            analyticsData={this.props.analyticsData}
           />
         )}
       </div>

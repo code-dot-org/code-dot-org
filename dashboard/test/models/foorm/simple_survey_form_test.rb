@@ -10,7 +10,7 @@ class Foorm::SimpleSurveyFormTest < ActiveSupport::TestCase
     ]
 
     VALID_PATHS.each do |path|
-      simple_survey_form = build :foorm_simple_survey_form, path: path
+      simple_survey_form = build(:foorm_simple_survey_form, path: path)
       assert simple_survey_form.valid?
     end
   end
@@ -23,7 +23,7 @@ class Foorm::SimpleSurveyFormTest < ActiveSupport::TestCase
     ]
 
     INVALID_PATHS.each do |path|
-      simple_survey_form = build :foorm_simple_survey_form, path: path
+      simple_survey_form = build(:foorm_simple_survey_form, path: path)
       refute simple_survey_form.valid?
     end
   end

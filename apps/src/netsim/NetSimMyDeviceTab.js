@@ -2,13 +2,14 @@
  * @overview UI controller for the "My Device" tab in the left column.
  */
 import $ from 'jquery';
-var markup = require('./NetSimMyDeviceTab.html.ejs');
+
 var NetSimBitRateControl = require('./NetSimBitRateControl');
-var NetSimPulseRateControl = require('./NetSimPulseRateControl');
 var NetSimChunkSizeControl = require('./NetSimChunkSizeControl');
 var NetSimEncodingControl = require('./NetSimEncodingControl');
-var NetSimMetronome = require('./NetSimMetronome');
 var NetSimGlobals = require('./NetSimGlobals');
+var NetSimMetronome = require('./NetSimMetronome');
+var markup = require('./NetSimMyDeviceTab.html.ejs');
+var NetSimPulseRateControl = require('./NetSimPulseRateControl');
 
 /**
  * Generator and controller for "My Device" tab.

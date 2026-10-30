@@ -1,0 +1,18 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2026-10-16T21:51:49.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "skip_dialog": true,
+    "skip_sound": true,
+    "long_instructions": "You've worked hard on your project! Now, write a short description for a share card that explains what your site is, who you made it for, and what part you're proudest of.",
+    "placeholder": "Describe your site, its audience, and what you're proudest of...",
+    "encrypted_solution": "9Eul99hrhHnVxRpjfIgCMVV12RMfnL+hyWhjcDpKHkTMWZ4sGOkGQQ58rJ07\nKPnEQ1ehL+xYlDupP3PJhC/vddQ5dYp8+ViTzrAERRiUtrRq1zGkCl+mfwnJ\n+bbpiAjqXQmJtmMDltkrC35IC67ReJiSOHGY6IKU5vJL8aoVYllT2cX953Ca\nxOzUy7qoMefpEoyZIbb02d3IsmIZ6Jp5i7SGnycIGs0qrlXkCbSdkBCGqKGl\nhbTFc57RjTF0D8E8mL3HSsulj0I0p/Gbh6lLi6sFkE5ekn5e5ywCcEtLYeLv\nfj6HqKm8V+h29vlnAUtw/S1SPl0bpJlO5qLdfOGag+h2Qks92vuqbiYztxYW\nS3tiSRCbpfzG2/ZdeeC9lTEYnQ6plis7AfLSlwK22GFcwQ==\n",
+    "generate_outline": "Write a brief description for a share card: what your site is, who it's for, and what you're most proud of. Your honest reflection will be part of your shared project."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-16 21:51:54 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-16 21:52:17 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-16 21:52:18 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-16 21:52:18 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</FreeResponse>

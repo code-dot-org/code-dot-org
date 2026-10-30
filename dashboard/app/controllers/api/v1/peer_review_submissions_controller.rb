@@ -59,12 +59,10 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
       select('max(peer_reviews.id) id, submitter_id, level_id')
 
     # This query gets matching fully-hydrated models in the correct order.
-    real_reviews = PeerReview.find(reviews.map(&:id))
+    real_reviews = PeerReview.includes(:script).find(reviews.map(&:id))
 
     real_reviews.each do |review|
-      script = Unit.find(review.script_id)
-      # Pull out any that are tied to deprecated scripts/units
-      submissions[review.user_level.id] = PeerReview.get_submission_summary_for_user_level(review.user_level, review.script) unless script.deprecated?
+      submissions[review.user_level.id] = PeerReview.get_submission_summary_for_user_level(review.user_level, review.script) unless review.script&.deprecated?
     end
 
     render json: {
@@ -94,13 +92,12 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
       where(submitter_id: enrollments.map(&:user_id)).
       pluck(:submitter_id, :script_id, :level_id, :created_at).
       group_by {|pr| pr[0..2]}. # group by [submitter_id, script_id, level_id]
-      map {|k, prs| [k, prs.map {|pr| pr[3]}]}. # only keep :created_at in values
-      to_h
+      transform_values {|prs| prs.map {|pr| pr[3]}} # only keep :created_at in values
 
     enrollments.each do |enrollment|
       peer_review_submissions = Hash.new
 
-      UserLevel.where(user: enrollment.user, level: peer_reviewable_levels, script: script).each do |user_level|
+      UserLevel.where(user: enrollment.user, level: peer_reviewable_levels, script: script).includes(:level).each do |user_level|
         submission_times = submission_times_by_user_script_level[[user_level.user_id, user_level.script_id, user_level.level_id]]
         peer_review_submissions[user_level.level.name] = {
           status: result_to_status(user_level.best_result),

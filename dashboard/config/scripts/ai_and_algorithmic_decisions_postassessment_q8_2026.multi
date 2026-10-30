@@ -1,0 +1,14 @@
+name 'ai-and-algorithmic-decisions-postassessment-q8_2026'
+
+question 'Before writing any code for a new feature, a student is asked to sketch a flowchart and answer two questions: "What should this system do?" and "What should this system never do?" What SPEC principle is this practicing?'
+
+right 'Specify — articulating intent before any AI interaction or code is written.'
+wrong 'Predict — guessing what AI will produce.'
+wrong 'Explain — justifying decisions about AI output.'
+wrong 'Claim — identifying what you can rebuild without AI.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 5
+MARKDOWN

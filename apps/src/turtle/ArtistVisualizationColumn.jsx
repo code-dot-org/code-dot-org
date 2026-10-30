@@ -1,12 +1,14 @@
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 import GameButtons from '@cdo/apps/templates/GameButtons';
-import BelowVisualization from '../templates/BelowVisualization';
-
-import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
-import SaveImageButton from './SaveImageButton';
 import msg from '@cdo/locale';
+
+import BelowVisualization from '../templates/BelowVisualization';
+import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
+
+import SaveImageButton from './SaveImageButton';
 
 export default class ArtistVisualizationColumn extends React.Component {
   static propTypes = {
@@ -25,7 +27,7 @@ export default class ArtistVisualizationColumn extends React.Component {
             <SaveImageButton displayCanvas={this.props.displayCanvas} />
           )}
           <div id="slider-cell">
-            <svg id="slider" version="1.1" width="150" height="50">
+            <svg id="slider" width="150" height="50">
               {/* Slow icon. */}
               <clipPath id="slowClipPath">
                 <rect width="26" height="12" x="5" y="14" />
@@ -51,33 +53,28 @@ export default class ArtistVisualizationColumn extends React.Component {
                 clipPath="url(#fastClipPath)"
               />
             </svg>
-            {
-              ' ' /* Explicitly insert whitespace so that this behaves like our ejs file*/
-            }
             <img
               id="spinner"
-              style={styles.invisible}
+              style={{display: 'none'}}
               src="/blockly/media/turtle/loading.gif"
               height="15"
               width="15"
               alt=""
-            />{' '}
-            {this.props.showFinishButton && (
-              <button type="button" id="finishButton" className="share">
-                <img src="/blockly/media/1x1.gif" alt="" />
-                {msg.finish()}
-              </button>
-            )}
+            />
           </div>
+          {this.props.showFinishButton && (
+            <MuiButton
+              id="finishButton"
+              variant="contained"
+              color="primary"
+              size="medium"
+            >
+              {msg.finish()}
+            </MuiButton>
+          )}
         </GameButtons>
         <BelowVisualization />
       </span>
     );
   }
 }
-
-const styles = {
-  invisible: {
-    visibility: 'hidden',
-  },
-};

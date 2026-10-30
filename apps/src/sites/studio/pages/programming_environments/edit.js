@@ -1,11 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import getScriptData from '@cdo/apps/util/getScriptData';
-import ProgrammingEnvironmentEditor from '@cdo/apps/lib/levelbuilder/code-docs-editor/ProgrammingEnvironmentEditor';
-import ExpandableImageDialog from '@cdo/apps/templates/lessonOverview/ExpandableImageDialog';
-import instructionsDialog from '@cdo/apps/redux/instructionsDialog';
-import {getStore, registerReducers} from '@cdo/apps/redux';
 import {Provider} from 'react-redux';
+
+import ProgrammingEnvironmentEditor from '@cdo/apps/levelbuilder/code-docs-editor/ProgrammingEnvironmentEditor';
+import {getStore, registerReducers} from '@cdo/apps/redux';
+import instructionsDialog from '@cdo/apps/redux/instructionsDialog';
+import ExpandableImageDialog from '@cdo/apps/templates/lessonOverview/ExpandableImageDialog';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
+import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {
   // instructionsDialog reducer is needed for the ExpandableImageDialog
@@ -15,7 +16,7 @@ $(document).ready(() => {
   const store = getStore();
 
   const programmingEnvironment = getScriptData('programmingEnvironment');
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={store}>
       <>
         <ProgrammingEnvironmentEditor

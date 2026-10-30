@@ -5,12 +5,12 @@
 
 import $ from 'jquery';
 import _ from 'lodash';
-import {makeEnum} from '@cdo/apps/utils';
 
 import {
   NO_SECTION,
   SELECT_SECTION,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {makeEnum} from '@cdo/apps/utils';
 
 export const LockStatus = makeEnum('Locked', 'Editable', 'ReadonlyAnswers');
 
@@ -91,7 +91,7 @@ export default function reducer(state = initialState, action) {
       return state;
     }
 
-    const sectionId = action.sectionId;
+    const sectionId = action.payload;
     if (sectionId === NO_SECTION) {
       return {
         ...state,

@@ -1,0 +1,146 @@
+@use '@code-dot-org/component-library-styles/typography.module.scss' as
+  typography;
+
+// Tags common styles
+.tags {
+  display: flex;
+  column-gap: 0.5em;
+
+  .tag {
+    display: flex;
+    align-items: baseline;
+    gap: 2px;
+    color: var(--text-neutral-primary);
+    padding: 2px 12px;
+    background: var(--background-brand-teal-light);
+    border-radius: 6.25rem;
+    max-width: 15em;
+
+    span {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    i {
+      display: flex;
+      justify-content: center;
+    }
+
+    &:has(i:first-child) {
+      padding-inline-start: 8px;
+    }
+
+    &:has(i:last-child),
+    &:has(button:last-child) {
+      padding-inline-end: 8px;
+    }
+  }
+
+  // Colors. The default tag keeps whatever the base rule sets. Each color is
+  // doubled up on .tag so it outranks `.tags .tag` above, which sets a
+  // background of its own, on specificity rather than on source order.
+  .tag.tag-pink {
+    background: var(--background-accent-pink-light);
+    color: var(--text-accent-pink-secondary);
+    // The TA lettermark fills more of its box than the icons the base 2px gap
+    // was set for, so the label would otherwise sit against it.
+    gap: 6px;
+
+    span {
+      color: var(--text-accent-pink-secondary);
+    }
+
+    i {
+      color: var(--text-accent-pink-primary-fixed);
+    }
+  }
+}
+
+// Sizes
+.tags-l {
+  .tag {
+    span {
+      @include typography.overline-one;
+      line-height: 1.5;
+      margin-bottom: 0;
+    }
+
+    i {
+      font-size: 0.875rem;
+      line-height: 1.25;
+      width: 1.25rem;
+      height: 1.125rem;
+    }
+  }
+}
+
+.tags-m {
+  .tag {
+    span {
+      @include typography.overline-two;
+      line-height: 1.54;
+      margin-bottom: 0;
+    }
+
+    i {
+      font-size: 0.75rem;
+      line-height: 1.25;
+      width: 1.125rem;
+      height: 0.9375rem;
+    }
+  }
+}
+
+.tags-s {
+  .tag {
+    min-height: 24px;
+    span {
+      @include typography.overline-three;
+      line-height: 1.8;
+      margin-bottom: 0;
+    }
+
+    i {
+      font-size: 0.625rem;
+      line-height: 1.25;
+      width: 1rem;
+      height: 0.8125rem;
+    }
+  }
+}
+
+// CodeAI (CADS) brand overrides.
+[data-brand='codeai-next'] {
+  .tags {
+    .tag {
+      background: var(--background-brand-light);
+      border: 1px solid var(--border-brand-mid);
+      border-radius: var(--shape-sm, 0.375rem);
+      color: var(--text-brand-secondary);
+
+      span {
+        // CADS tags use the Label style, not an overline.
+        text-transform: none;
+        letter-spacing: normal;
+        color: var(--text-brand-secondary);
+      }
+    }
+
+    // Repeated here because this brand gives every tag a border and colors the
+    // label on the span itself, both more specific than the block above.
+    .tag.tag-pink {
+      background: var(--background-accent-pink-light);
+      border-color: var(--border-accent-pink-primary);
+      color: var(--text-accent-pink-secondary);
+
+      span {
+        color: var(--text-accent-pink-secondary);
+      }
+
+      i {
+        color: var(--text-accent-pink-primary-fixed);
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.outputContainer {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+
+  &.vertical {
+    flex-direction: column;
+  }
+
+  &.horizontal {
+    flex-direction: row;
+  }
+}
+
+.flexShrink0 {
+  flex-shrink: 0;
+}

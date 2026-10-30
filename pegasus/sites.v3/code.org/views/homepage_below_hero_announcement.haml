@@ -1,8 +1,0 @@
-- below_hero_announcement = Homepage.get_below_hero_announcement
-- if below_hero_announcement[:showing]
-  .below_hero_announcement
-    .text
-      = I18n.t(below_hero_announcement[:text])
-      &nbsp;
-      %a.link{href: below_hero_announcement[:link], target: "_blank"}
-        = I18n.t(below_hero_announcement[:link_text])

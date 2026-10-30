@@ -1,0 +1,123 @@
+.fileTabs {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding-inline: var(--spacing-p-xxs);
+  padding-block: 0.25rem;
+  overflow-x: auto;
+  max-width: 100%;
+  background-color: var(--background-neutral-primary);
+  scroll-padding-inline-start: 1rem;
+  scrollbar-width: thin;
+  box-sizing: border-box;
+}
+
+.fileTab {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.375rem;
+  box-sizing: border-box;
+  height: 24px;
+  padding-block: 2px;
+  padding-inline: var(--spacing-p-xxs);
+  cursor: pointer;
+  white-space: nowrap;
+  font-size: 12px;
+  color: var(--text-neutral-secondary);
+  background-color: var(--background-neutral-primary);
+  border: 1px solid var(--border-neutral-secondary);
+  border-radius: var(--shape-sm);
+
+  .label p,
+  .label i {
+    color: inherit;
+    font-size: inherit;
+  }
+
+  .closeButton {
+    flex: 0 0 10px;
+    width: 10px;
+    height: 10px;
+    color: var(--text-neutral-tertiary);
+
+    i {
+      width: 10px;
+      font-size: 12px;
+      line-height: 10px;
+      color: inherit;
+    }
+  }
+
+  &:not(.active, .aiTutorVersionActive) .closeButton:hover,
+  &:not(.active, .aiTutorVersionActive) .closeButton:active {
+    color: var(--text-neutral-primary);
+  }
+
+  &:hover:not(.active, .aiTutorVersionActive, .aiTutorVersionInactive),
+  &:active:not(.active, .aiTutorVersionActive, .aiTutorVersionInactive) {
+    background-color: var(--background-neutral-tertiary);
+  }
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+
+  i {
+    flex: 0 0 12px;
+    width: 12px;
+    font-size: inherit;
+    text-align: center;
+  }
+}
+
+.label:focus-visible,
+.fileTab .closeButton:focus-visible {
+  outline: 2px solid var(--border-focused-primary);
+  border-radius: var(--shape-sm);
+  z-index: 10;
+}
+
+.label:focus-visible {
+  outline-offset: 0;
+}
+
+.fileTab .closeButton:focus-visible {
+  outline-offset: 4px;
+}
+
+.active,
+.aiTutorVersionActive {
+  color: var(--text-selected-primary);
+  background-color: var(--background-selected-primary);
+  border-color: transparent;
+
+  .closeButton,
+  .closeButton:hover,
+  .closeButton:active {
+    color: var(--text-selected-primary);
+  }
+
+  .closeButton:hover,
+  .closeButton:active {
+    opacity: 0.9;
+  }
+
+  .label:focus-visible,
+  .closeButton:focus-visible {
+    outline-color: var(--border-focused-inverse);
+  }
+}
+
+.aiTutorVersionInactive {
+  color: var(--text-neutral-primary);
+  background-color: var(--background-brand-light);
+  border-color: var(--border-brand-mid);
+
+  &:hover,
+  &:active {
+    border-color: var(--border-brand-primary);
+  }
+}

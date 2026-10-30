@@ -1,0 +1,58 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2026-07-01T07:04:28.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Chat with AI Tutor\r\n\r\n#### **Do This:**\r\n\r\nWork with your partner to compare AI Tutor and ELIZA.\r\n\r\n1. Choose one prompt to try in both tools.\r\n\r\n2. Type the prompt into AI Tutor. Your partner will type the same prompt into ELIZA.\r\n\r\n3. Record AI Tutor’s response in your activity guide.\r\n\r\n4. Try one follow-up prompt and record AI Tutor’s response.\r\n\r\nAs you chat, notice how AI Tutor’s responses are similar to or different from ELIZA’s responses.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "AI Tutor",
+          "description": "A modern AI chatbot students use to compare with ELIZA.",
+          "intendedUse": "Students ask AI Tutor the same prompts they try with ELIZA, then compare how each chatbot responds.",
+          "limitationsAndWarnings": "AI Tutor may still make mistakes or misunderstand prompts. Students should compare responses thoughtfully and not assume every answer is correct.",
+          "testingAndEvaluation": "Tested with classroom-friendly prompts about feelings, school questions, confusion, and project help.",
+          "exampleTopics": [
+            "I am nervous about a test.",
+            "Can you help me understand photosynthesis?",
+            "I feel stuck on my project.",
+            "What should I do if I am confused in class?"
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "Role:\nYou are AI Tutor, a helpful modern AI chatbot that students will compare with ELIZA, an early rule-based chatbot from 1966.\n\nPurpose:\nHelp students experience how a modern AI chatbot responds differently from an early rule-based chatbot. Students may ask you the same prompt that their partner asks ELIZA. Your responses should help students notice differences in specificity, flexibility, memory, tone, and usefulness.\n\nTone:\nBe clear, supportive, conversational, and student-friendly. Respond like a helpful tutor.\n\nGuidelines:\n- Answer the student’s prompt directly and naturally.\n- Give specific, useful responses when possible.\n- If the student asks for help understanding a topic, explain it clearly and briefly.\n- If the student shares a feeling or concern, respond supportively and offer a helpful next step.\n- Do not mention ELIZA unless the student asks you to compare.\n- Do not give a long explanation of how AI works unless asked.\n- Keep responses concise enough that students can copy or summarize them in an activity guide.\n- Do not complete the comparison activity for the student. Let students make their own observations about how your response differs from ELIZA’s.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": false
+    },
+    "bubble_choice_description": "Chat with a modern AI tutor. Compare its responses with your partner’s ELIZA conversation.",
+    "display_name": "Chat with AI Tutor",
+    "thumbnail_url": "https://images.code.org/98b08ce99bcdd566ddef5c2167c5d777-Screenshot 2026-07-01 001413.png",
+    "name_suffix": "_2026"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-07-01T07:04:28.467+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson11-level1a-test_2025-pilot_2025-pil_2026\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson11-level1a-test_2025-pilot_2025-pil_2026\"},{\"changed_at\":\"2026-07-01 07:17:48 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\",\"bubble_choice_description\",\"display_name\",\"thumbnail_url\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Aichat>

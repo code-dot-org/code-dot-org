@@ -1,15 +1,12 @@
 .sass-cache
 /.bundle
 /config/application.yml
-/config/locales/*en-PLOC.yml
+/config/locales/*/en-PLOC.yml
 /config/real_secret_words.csv
 
 # build dependency accounting stuff
 /config/scripts/.dropbox
 /config/scripts/.hints_imported
-/config/scripts/.matches_seeded
-/config/scripts/.multis_seeded
-/config/scripts/.dsls_seeded
 /config/scripts/.seeded
 
 # unit test and ui test artifacts
@@ -24,3 +21,8 @@
 
 /public/code-studio-package
 /public/apps-package
+/public/studio-package
+/public/frontend-studio
+
+# Vite Ruby
+/public/vite*

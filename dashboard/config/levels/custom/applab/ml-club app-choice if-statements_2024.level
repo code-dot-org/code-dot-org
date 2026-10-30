@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2023-11-28T21:29:48.000Z",
   "level_num": "custom",
@@ -8,7 +9,7 @@
     "skin": "applab",
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "# Create Unique Prediction Screens\r\n\r\nKim and Nico want to make it so the user goes to a new screen depending on the recommended club that they get. This means once the user presses the Predict button, they'll be taken to a different screen depending on what their recommendation was.\r\n\r\n# Do This:\r\n\r\n- In Design Mode:\r\n\t- Create a new screen for one of the club recommendations. Give it a unique ID.\r\n    - Add a Label element to the screen describing the club. Give it a unique ID.\r\n    - Add an image to the screen representing the club. Give it a unique ID.\r\n    - Add a Button element to the screen so the user can click to go back to the home screen. Give it a unique ID.\r\n- Repeat this process for each club. You should have 5 new screens when you are done\r\n- In The Code:\r\n\t- Inside the [`onEvent()`(#fff176)](/docs/applab/onEvent/) block: add an [`if-statement`(#64B5F6)](/docs/applab/ifBlock/) to check the result of the `value` variable.\r\n    - Inside the [`if-statement`(#64B5F6)](/docs/applab/ifBlock/): use a [`setScreen()`(#fff176)](/docs/applab/setScreen/) block to change the screen depending on what the value was.\r\n    - Add an [`onEvent()`(#fff176)](/docs/applab/onEvent/) for the home button you created on this club's new screen\r\n    - Inside the [`onEvent()`(#fff176)](/docs/applab/onEvent/): use a [`setScreen()`(#fff176)](/docs/applab/setScreen/) block to return to the welcome screen of the app.\r\n- Repeat this process for each of the clubs\r\n\r\nWhen you finish, continue to the next level to review your app.",
+    "long_instructions": "# Create Unique Prediction Screens\r\n\r\nKim and Nico want to make it so the user goes to a new screen depending on the recommended club that they get. This means once the user presses the Predict button, they'll be taken to a different screen depending on what their recommendation was.\r\n\r\n# Do This:\r\n\r\n- In Design Mode:\r\n\t- Create a new screen for one of the club recommendations. Give it a unique ID.\r\n    - Add a Label element to the screen describing the club. Give it a unique ID.\r\n    - Add an image to the screen representing the club. Give it a unique ID.\r\n    - Add a Button element to the screen so the user can click to go back to the home screen. Give it a unique ID.\r\n- Repeat this process for each club. You should have 5 new screens when you are done\r\n- In The Code:\r\n\t- Inside the [`getPrediction()`(#d3e965)](/docs/applab/getPrediction/) block: add an [`if-statement`(#64B5F6)](/docs/applab/ifBlock/) to check the result of the `value` variable.\r\n    - Inside the [`if-statement`(#64B5F6)](/docs/applab/ifBlock/): use a [`setScreen()`(#fff176)](/docs/applab/setScreen/) block to change the screen depending on what the value was.\r\n    - Add an [`onEvent()`(#fff176)](/docs/applab/onEvent/) for the home button you created on this club's new screen\r\n    - Inside the [`onEvent()`(#fff176)](/docs/applab/onEvent/): use a [`setScreen()`(#fff176)](/docs/applab/setScreen/) block to return to the welcome screen of the app.\r\n- Repeat this process for each of the clubs\r\n\r\nWhen you finish, continue to the next level to review your app.",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",
@@ -43,7 +44,6 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "true",
-    "makerlab_enabled": "false",
     "parent_level_id": 28746,
     "encrypted": "false",
     "mini_rubric": "false",
@@ -69,11 +69,11 @@
     "video_key": "csp_applab_conditionals_2A",
     "name_suffix": "_2024",
     "teacher_markdown": "**Supporting Students:** These levels are similar to similar customizations students completed in previous lessons. If students get stuck, consider referring them to these previous lessons:\r\n- Adding multiple screens for the resulting prediction: [Lesson 10 - Model Cards in App Lab](../../../../10/levels/5)",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": "nmPo8qsi18esIbOEbC994RGwSCBTzcnFkC+8cGpJ/7e3kMX3rC5YFcy+2X5K\n4RSHIcUyCGSnJO0FzKC5tSKCTw==\n"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-11-28T21:29:48.920+00:00\",\"changed\":[\"cloned from \\\"ml-club app-choice if-statements_2023\\\"\"],\"cloned_from\":\"ml-club app-choice if-statements_2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-11-28T21:29:48.920+00:00\",\"changed\":[\"cloned from \\\"ml-club app-choice if-statements_2023\\\"\"],\"cloned_from\":\"ml-club app-choice if-statements_2023\"},{\"changed_at\":\"2025-08-21 22:01:03 +0000\",\"changed\":[\"long_instructions\",\"makerlab_enabled\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-08-21 22:06:27 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

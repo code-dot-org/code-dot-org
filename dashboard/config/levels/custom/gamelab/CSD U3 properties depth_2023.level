@@ -1,5 +1,9 @@
 <Gamelab>
   <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2022-09-19T22:53:40.000Z",
+  "level_num": "custom",
+  "user_id": 324,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -90,7 +94,7 @@
     "start_blocks": "//1) Using either the sprite already created for you or with any other sprites of your choosing, \r\n//play around with the height and width properties and think about when you would want to use these properties \r\n//versus using the scale property\r\nvar sprite = createSprite(200, 200);\r\nsprite.setAnimation(\"giraffe_tall\");\r\ndrawSprites();\r\n",
     "display_name": "New Blocks : Height & Width",
     "thumbnail_url": "https://images.code.org/8cb0da8ea0dd8cad1a1da900b6179130-image-1567803441902.PNG",
-    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"e2fc4d28-e322-4e68-919f-eca313919e2f\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"e2fc4d28-e322-4e68-919f-eca313919e2f\": {\r\n      \"name\": \"giraffe_tall\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/api/v1/animation-library/sGjRJ0xluFptEaNvhyKISaTKN2sTzZwJ/category_animals/giraffe_tall.png\",\r\n      \"frameSize\": {\r\n        \"x\": 160,\r\n        \"y\": 300\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"sGjRJ0xluFptEaNvhyKISaTKN2sTzZwJ\"\r\n    }\r\n  }\r\n}",
+    "start_animations": "{\n  \"orderedKeys\": [\n    \"e2fc4d28-e322-4e68-919f-eca313919e2f\"\n  ],\n  \"propsByKey\": {\n    \"e2fc4d28-e322-4e68-919f-eca313919e2f\": {\n      \"name\": \"giraffe_tall\",\n      \"sourceUrl\": \"/api/v1/animation-library/sGjRJ0xluFptEaNvhyKISaTKN2sTzZwJ/category_animals/giraffe_tall.png\",\n      \"frameSize\": {\n        \"x\": 160,\n        \"y\": 300\n      },\n      \"frameCount\": 1,\n      \"looping\": true,\n      \"frameDelay\": 2,\n      \"version\": \"sGjRJ0xluFptEaNvhyKISaTKN2sTzZwJ\"\n    }\n  }\n}",
     "encrypted_examples": "VEwU/cGOv4ZIRa3cIYLkbPlA1kAEc6x3kU/TFMduSI9a8Vfxb4Sn++EgpkRl\nLnVAeyaOywqv6dOqxuYMM84ofg==\n",
     "libraries_enabled": "false",
     "reference_links": [
@@ -104,14 +108,10 @@
       "/courses/csd-2022/guides/sprite-interactions"
     ],
     "bubble_choice_description": "Stretch your sprite horizontally or vertically.",
-    "preload_asset_list": null,
-    "validation_enabled": "false"
+    "validation_enabled": "false",
+    "preload_asset_list": null
   },
-  "game_id": 50,
   "published": true,
-  "created_at": "2022-09-19T22:53:40.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-09-19T22:53:40.772+00:00\",\"changed\":[\"cloned from \\\"CSD U3 properties depth_2022\\\"\"],\"cloned_from\":\"CSD U3 properties depth_2022\"},{\"changed_at\":\"2023-01-10 23:59:12 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-10 23:59:50 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-11 00:00:22 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>

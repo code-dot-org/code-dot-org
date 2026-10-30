@@ -5,9 +5,44 @@ class UsersHelperTest < ActionView::TestCase
   include UsersHelper
   include SharedConstants
 
+  class CountryCodeTest < ActionView::TestCase
+    setup do
+      @country_code = 'US'
+      @request = ActionDispatch::Request.new({'HTTP_CLOUDFRONT_VIEWER_COUNTRY' => @country_code.downcase})
+    end
+
+    test 'returns country code of student' do
+      student_country_code = 'UA'
+
+      student = build(:student, country_code: student_country_code)
+
+      assert_equal student_country_code, country_code(student, @request)
+    end
+
+    test 'returns nil if country code of student is not set' do
+      student = build(:student, country_code: nil)
+
+      assert_nil country_code(student, @request)
+    end
+
+    test 'returns country code of teacher' do
+      teacher_country_code = 'UA'
+
+      teacher = build(:teacher, country_code: teacher_country_code)
+
+      assert_equal teacher_country_code, country_code(teacher, @request)
+    end
+
+    test 'returns request country code when teacher country_code is not set' do
+      teacher = build(:teacher, country_code: '')
+
+      assert_equal @country_code, country_code(teacher, @request)
+    end
+  end
+
   def test_summarize_user_progress
-    script = create(:script, :with_levels, levels_count: 3)
-    user = create :user
+    script = create(:script, :in_single_unit_course, :with_levels, levels_count: 3)
+    user = create(:user)
 
     # Verify results for no completed levels.
     assert_equal(
@@ -22,8 +57,8 @@ class UsersHelperTest < ActionView::TestCase
     )
 
     # Verify results for two completed levels for one script.
-    ul1 = create :user_level, user: user, best_result: ActivityConstants::BEST_PASS_RESULT, script: script, level: script.script_levels[1].level
-    ul3 = create :user_level, user: user, best_result: 20, script: script, level: script.script_levels[2].level
+    ul1 = create(:user_level, user: user, best_result: ActivityConstants::BEST_PASS_RESULT, script: script, level: script.script_levels[1].level)
+    ul3 = create(:user_level, user: user, best_result: 20, script: script, level: script.script_levels[2].level)
 
     assert_equal(
       {
@@ -52,17 +87,42 @@ class UsersHelperTest < ActionView::TestCase
     assert_in_delta 66.67, percent_complete_total(script, user)
   end
 
+  # A predict level migrated from the legacy contained-level model keeps its
+  # contained_level_names. Progress recorded before migration lives on the
+  # contained level, but should still surface as the parent level's progress.
+  def test_summarize_user_progress_migrated_predict_reads_legacy_contained_progress
+    user = create(:user)
+    script = create(:script, :in_single_unit_course)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+
+    contained = create(:multi, name: 'legacy predict contained')
+    level = create(:level, type: 'Javalab', name: 'migrated predict in script', properties: {predict_settings: {isPredictLevel: true}})
+    level.contained_level_names = [contained.name]
+    level.save!
+    create(:script_level, script: script, levels: [level], lesson: lesson)
+
+    # Pre-migration progress was recorded against the contained level.
+    create(:user_level, user: user, script: script, level: contained, best_result: ActivityConstants::BEST_PASS_RESULT)
+
+    progress = summarize_user_progress(script, user)[:progress]
+    assert_equal(
+      {status: LEVEL_STATUS.perfect, result: ActivityConstants::BEST_PASS_RESULT},
+      progress[level.id]
+    )
+  end
+
   def test_summarize_user_progress_with_pages
-    user = create :user
-    script = create :script
-    lesson_group = create :lesson_group, script: script
-    lesson = create :lesson, script: script, lesson_group: lesson_group
+    user = create(:user)
+    script = create(:script, :in_single_unit_course)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
 
     # Create some levels to be embedded in the LevelGroup.
-    sub_level1 = create :text_match, name: 'level_free_response', type: 'TextMatch'
-    sub_level2 = create :multi, name: 'level_multi_unsubmitted', type: 'Multi'
-    sub_level3 = create :multi, name: 'level_multi_correct', type: 'Multi'
-    sub_level4 = create :multi, name: 'level_multi_incorrect', type: 'Multi'
+    sub_level1 = create(:text_match, name: 'level_free_response', type: 'TextMatch')
+    sub_level2 = create(:multi, name: 'level_multi_unsubmitted', type: 'Multi')
+    sub_level3 = create(:multi, name: 'level_multi_correct', type: 'Multi')
+    sub_level4 = create(:multi, name: 'level_multi_incorrect', type: 'Multi')
 
     # Create a LevelGroup level from DSL.
     level_group_dsl = <<-DSL
@@ -80,21 +140,23 @@ class UsersHelperTest < ActionView::TestCase
     level = LevelGroup.create_from_level_builder({}, {name: 'LevelGroupLevel1', dsl_text: level_group_dsl})
 
     # Create a ScriptLevel joining this level to the script.
-    script_level = create :script_level, script: script, levels: [level], assessment: true, lesson: lesson
+    script_level = create(:script_level, script: script, levels: [level], assessment: true, lesson: lesson)
 
     # The Activity record will point at a LevelSource with JSON data in which
     # page one has all valid answers and page two has no valid answers.
-    level_source = create :level_source,
+    level_source = create(:level_source,
       data: "{\"#{sub_level1.id}\":{\"valid\":true},\"#{sub_level2.id}\":{\"valid\":true},\"#{sub_level3.id}\":{\"valid\":false},\"#{sub_level4.id}\":{\"valid\":false}}"
+)
 
     # Create a UserLevel joining this level to the user.
-    ul = create :user_level, user: user, best_result: ActivityConstants::BEST_PASS_RESULT, level: level, script: script, level_source: level_source
+    ul = create(:user_level, user: user, best_result: ActivityConstants::BEST_PASS_RESULT, level: level, script: script, level_source: level_source)
 
     # And now create the Activity record.
-    create :activity, level_id: level.id,
+    create(:activity, level_id: level.id,
       user_id: user.id,
       level_source_id: level_source.id,
       test_result: Activity::BEST_PASS_RESULT
+)
 
     # Validate.
     assert_equal(
@@ -117,18 +179,18 @@ class UsersHelperTest < ActionView::TestCase
   end
 
   def test_summarize_user_progress_with_bubble_choice
-    user = create :user
-    script = create :script
-    lesson_group = create :lesson_group, script: script
-    lesson = create :lesson, script: script, lesson_group: lesson_group
+    user = create(:user)
+    script = create(:script, :in_single_unit_course)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
 
     # Create BubbleChoice level with sublevels, script_level, and user_levels.
-    sublevel1 = create :level, name: 'choice_1'
-    sublevel2 = create :level, name: 'choice_2'
-    level = create :bubble_choice_level, sublevels: [sublevel1, sublevel2]
-    script_level = create :script_level, script: script, levels: [level], lesson: lesson
-    create :user_level, user: user, level: sublevel1, script: script, best_result: ActivityConstants::BEST_PASS_RESULT
-    create :user_level, user: user, level: sublevel2, script: script, best_result: 20
+    sublevel1 = create(:level, name: 'choice_1')
+    sublevel2 = create(:level, name: 'choice_2')
+    level = create(:bubble_choice_level, sublevels: [sublevel1, sublevel2])
+    script_level = create(:script_level, script: script, levels: [level], lesson: lesson)
+    create(:user_level, user: user, level: sublevel1, script: script, best_result: ActivityConstants::BEST_PASS_RESULT)
+    create(:user_level, user: user, level: sublevel2, script: script, best_result: 20)
 
     expected_summary = {
       lockableAuthorized: false,
@@ -154,21 +216,46 @@ class UsersHelperTest < ActionView::TestCase
     assert_equal expected_summary, summarize_user_progress(script, user)
   end
 
+  # A bubble choice sublevel that is a migrated predict level keeps its
+  # contained_level_names; legacy progress on the contained level should surface
+  # for both the sublevel and the parent bubble choice.
+  def test_summarize_user_progress_with_bubble_choice_migrated_predict_sublevel
+    user = create(:user)
+    script = create(:script, :in_single_unit_course)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+
+    contained = create(:multi, name: 'bc predict contained')
+    predict_sublevel = create(:level, type: 'Javalab', name: 'bc migrated predict sublevel', properties: {predict_settings: {isPredictLevel: true}})
+    predict_sublevel.contained_level_names = [contained.name]
+    predict_sublevel.save!
+    level = create(:bubble_choice_level, sublevels: [predict_sublevel])
+    create(:script_level, script: script, levels: [level], lesson: lesson)
+
+    # Pre-migration progress was recorded against the contained level.
+    create(:user_level, user: user, level: contained, script: script, best_result: ActivityConstants::BEST_PASS_RESULT)
+
+    progress = summarize_user_progress(script, user)[:progress]
+    expected = {status: LEVEL_STATUS.perfect, result: ActivityConstants::BEST_PASS_RESULT}
+    assert_equal expected, progress[predict_sublevel.id]
+    assert_equal expected, progress[level.id]
+  end
+
   def test_summarize_user_progress_with_locked
-    user = create :user
-    script = create :script
-    lesson_group = create :lesson_group, script: script
+    user = create(:user)
+    script = create(:script, :in_single_unit_course)
+    lesson_group = create(:lesson_group, script: script)
 
     # Create a LevelGroup level.
-    level = create :level_group, :with_sublevels, name: 'LevelGroupLevel1'
-    level.properties['title'] =  'Long assessment 1'
+    level = create(:level_group, :with_sublevels, name: 'LevelGroupLevel1')
+    level.properties['title'] = 'Long assessment 1'
     level.properties['submittable'] = true
     level.save!
 
-    lesson = create :lesson, name: 'Lesson1', script: script, lockable: true, lesson_group: lesson_group
+    lesson = create(:lesson, name: 'Lesson1', script: script, lockable: true, lesson_group: lesson_group)
 
     # Create a ScriptLevel joining this level to the script.
-    create :script_level, script: script, levels: [level], assessment: true, lesson: lesson
+    create(:script_level, script: script, levels: [level], assessment: true, lesson: lesson)
 
     # No user level exists, show locked progress
     assert UserLevel.find_by(user: user, level: level).nil?
@@ -178,12 +265,12 @@ class UsersHelperTest < ActionView::TestCase
     )
 
     # Now "unlock" it by creating a non-submitted UserLevel
-    user_level = create :user_level, user: user, best_result: nil, level: level, script: script, locked: false, readonly_answers: false, submitted: false
+    user_level = create(:user_level, user: user, best_result: nil, level: level, script: script, locked: false, readonly_answers: false, submitted: false)
     assert_equal({level.id => {status: "not_tried"}}, summarize_user_progress(script, user)[:progress], 'not_tried status since we dont have a result')
 
     # put in in "view answers" mode
     user_level.really_destroy!
-    user_level = create :user_level, user: user, best_result: ActivityConstants::BEST_PASS_RESULT, level: level, script: script, locked: false, readonly_answers: true, submitted: true
+    user_level = create(:user_level, user: user, best_result: ActivityConstants::BEST_PASS_RESULT, level: level, script: script, locked: false, readonly_answers: true, submitted: true)
     assert_equal(
       {
         level.id => {status: LEVEL_STATUS.submitted, result: ActivityConstants::BEST_PASS_RESULT, pages_completed: [nil, nil]},
@@ -193,7 +280,7 @@ class UsersHelperTest < ActionView::TestCase
 
     # now submit it
     user_level.really_destroy!
-    user_level = create :user_level, user: user, best_result: ActivityConstants::BEST_PASS_RESULT, level: level, script: script, locked: true, readonly_answers: false, submitted: true
+    user_level = create(:user_level, user: user, best_result: ActivityConstants::BEST_PASS_RESULT, level: level, script: script, locked: true, readonly_answers: false, submitted: true)
     assert_equal(
       {
         level.id => {
@@ -209,8 +296,8 @@ class UsersHelperTest < ActionView::TestCase
 
     # unlock it again
     user_level.really_destroy!
-    level_source = create :level_source, data: "{}"
-    user_level = create :user_level, user: user, best_result: ActivityConstants::BEST_PASS_RESULT, level: level, script: script, locked: false, readonly_answers: false, submitted: false, level_source: level_source
+    level_source = create(:level_source, data: "{}")
+    user_level = create(:user_level, user: user, best_result: ActivityConstants::BEST_PASS_RESULT, level: level, script: script, locked: false, readonly_answers: false, submitted: false, level_source: level_source)
     assert_equal(
       {
         level.id => {status: LEVEL_STATUS.perfect, result: ActivityConstants::BEST_PASS_RESULT, pages_completed: [nil, nil]},
@@ -221,7 +308,7 @@ class UsersHelperTest < ActionView::TestCase
 
     # now lock it
     user_level.really_destroy!
-    user_level = create :user_level, user: user, best_result: ActivityConstants::UNSUBMITTED_RESULT, level: level, script: script, locked: true, readonly_answers: false, submitted: false
+    user_level = create(:user_level, user: user, best_result: ActivityConstants::UNSUBMITTED_RESULT, level: level, script: script, locked: true, readonly_answers: false, submitted: false)
     assert_equal(
       {
         level.id => {status: LEVEL_STATUS.attempted, result: ActivityConstants::UNSUBMITTED_RESULT, locked: true, pages_completed: [nil, nil]},
@@ -232,7 +319,7 @@ class UsersHelperTest < ActionView::TestCase
 
     # appears submitted while viewing answers
     user_level.really_destroy!
-    create :user_level, user: user, best_result: ActivityConstants::BEST_PASS_RESULT, level: level, script: script, readonly_answers: true, submitted: true
+    create(:user_level, user: user, best_result: ActivityConstants::BEST_PASS_RESULT, level: level, script: script, readonly_answers: true, submitted: true)
     assert_equal(
       {
         level.id => {
@@ -248,28 +335,28 @@ class UsersHelperTest < ActionView::TestCase
   end
 
   def test_summarize_user_progress_non_lockable
-    user = create :user
-    script = create :script
-    lesson_group = create :lesson_group, script: script
+    user = create(:user)
+    script = create(:script, :in_single_unit_course)
+    lesson_group = create(:lesson_group, script: script)
 
     # Create a LevelGroup level.
-    level = create :level_group, :with_sublevels, name: 'LevelGroupLevel1'
-    level.properties['title'] =  'Long assessment 1'
+    level = create(:level_group, :with_sublevels, name: 'LevelGroupLevel1')
+    level.properties['title'] = 'Long assessment 1'
     level.properties['submittable'] = true
     level.save!
 
     # create a lesson that is NOT lockable
-    lesson = create :lesson, name: 'Lesson1', script: script, lockable: false, lesson_group: lesson_group
+    lesson = create(:lesson, name: 'Lesson1', script: script, lockable: false, lesson_group: lesson_group)
 
     # Create a ScriptLevel joining this level to the script.
-    create :script_level, script: script, levels: [level], assessment: true, lesson: lesson
+    create(:script_level, script: script, levels: [level], assessment: true, lesson: lesson)
 
     # No user level exists, no progress
     assert UserLevel.find_by(user: user, level: level).nil?
     assert_equal({}, summarize_user_progress(script, user)[:progress])
 
     # now create a non-submitted user level
-    user_level = create :user_level, user: user, best_result: ActivityConstants::UNSUBMITTED_RESULT, level: level, script: script, locked: true, readonly_answers: nil, submitted: false
+    user_level = create(:user_level, user: user, best_result: ActivityConstants::UNSUBMITTED_RESULT, level: level, script: script, locked: true, readonly_answers: nil, submitted: false)
     assert_equal(
       {
         level.id => {status: LEVEL_STATUS.attempted, result: ActivityConstants::UNSUBMITTED_RESULT, pages_completed: [nil, nil]}
@@ -279,7 +366,7 @@ class UsersHelperTest < ActionView::TestCase
 
     # now create a submitted user level
     user_level.really_destroy!
-    create :user_level, user: user, best_result: ActivityConstants::BEST_PASS_RESULT, level: level, script: script, locked: true, readonly_answers: nil, submitted: true
+    create(:user_level, user: user, best_result: ActivityConstants::BEST_PASS_RESULT, level: level, script: script, locked: true, readonly_answers: nil, submitted: true)
     assert_equal(
       {
         level.id => {status: LEVEL_STATUS.submitted, result: ActivityConstants::BEST_PASS_RESULT, pages_completed: [nil, nil]},
@@ -289,41 +376,48 @@ class UsersHelperTest < ActionView::TestCase
   end
 
   def test_script_progress_for_users
-    user_1 = create :user
-    user_2 = create :user
+    user_1 = create(:user)
+    user_2 = create(:user)
+    user_3 = create(:user)
 
-    teacher = create :teacher
-    section = create :section, teacher: teacher
+    teacher = create(:teacher)
+    section = create(:section, teacher: teacher)
     section.students << user_1 # we query for feedback where student is currently in section
     section.students << user_2
+    section.students << user_3
 
     # set up progress
-    script = create :script
+    script = create(:script, :in_single_unit_course)
 
-    lesson_group = create :lesson_group, script: script
-    lesson = create :lesson, script: script, lesson_group: lesson_group
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
 
     # Create BubbleChoice level with sublevels, script_level, and user_levels.
-    sublevel1 = create :level, name: 'choice_1'
-    sublevel1_contained_level = create :free_response, name: "choice_1 contained"
+    sublevel1 = create(:level, name: 'choice_1')
+    sublevel1_contained_level = create(:free_response, name: "choice_1 contained")
     sublevel1.contained_level_names = [sublevel1_contained_level.name]
     sublevel1.save!
 
-    sublevel2 = create :level, name: 'choice_2'
-    level = create :bubble_choice_level, sublevels: [sublevel1, sublevel2]
-    create :script_level, script: script, levels: [level], lesson: lesson
+    sublevel2 = create(:level, name: 'choice_2')
+    level = create(:bubble_choice_level, sublevels: [sublevel1, sublevel2])
+    create(:script_level, script: script, levels: [level], lesson: lesson)
 
     # for user_1
-    sublevel1_user_level = create :user_level, user: user_1, level: sublevel1_contained_level, script: script, best_result: ActivityConstants::BEST_PASS_RESULT, time_spent: 180
-    sublevel2_user_level = create :user_level, user: user_1, level: sublevel2, script: script, best_result: 20, time_spent: 300
+    sublevel1_user_level = create(:user_level, user: user_1, level: sublevel1_contained_level, script: script, best_result: ActivityConstants::BEST_PASS_RESULT, time_spent: 180)
+    sublevel2_user_level = create(:user_level, user: user_1, level: sublevel2, script: script, best_result: 20, time_spent: 300)
 
     sublevel1_last_progress = UserLevel.find(sublevel1_user_level.id).updated_at.to_i
     sublevel2_last_progress = UserLevel.find(sublevel2_user_level.id).updated_at.to_i
 
     # for user_2
-    sublevel1_user_level_2 = create :user_level, user: user_2, level: sublevel1_contained_level, script: script, best_result: ActivityConstants::BEST_PASS_RESULT, time_spent: 180
-    sublevel2_user_level_2 = create :user_level, user: user_2, level: sublevel2, script: script, best_result: 20, time_spent: 300
-    create :teacher_feedback, student: user_2, teacher: teacher, level: sublevel2, script: script, review_state: TeacherFeedback::REVIEW_STATES.keepWorking
+    sublevel1_user_level_2 = create(:user_level, user: user_2, level: sublevel1_contained_level, script: script, best_result: ActivityConstants::BEST_PASS_RESULT, time_spent: 180)
+    sublevel2_user_level_2 = create(:user_level, user: user_2, level: sublevel2, script: script, best_result: 20, time_spent: 300)
+    # Travel forward to ensure teacher_feedback.updated_at > user_level.updated_at,
+    # making the teacher_feedback_new flag deterministically true.
+    travel 1.second
+    create(:teacher_feedback, student: user_2, teacher: teacher, level: sublevel2, script: script, review_state: TeacherFeedback::REVIEW_STATES.keepWorking)
+    create(:teacher_feedback, student: user_3, teacher: teacher, level: sublevel1, script: script, review_state: TeacherFeedback::REVIEW_STATES.keepWorking)
+    create(:teacher_feedback, student: user_3, teacher: teacher, level: sublevel2, script: script, comment: 'Better get working on this one!')
 
     sublevel1_last_progress_2 = UserLevel.find(sublevel1_user_level_2.id).updated_at.to_i
     sublevel2_last_progress_2 = UserLevel.find(sublevel2_user_level_2.id).updated_at.to_i
@@ -362,26 +456,51 @@ class UsersHelperTest < ActionView::TestCase
             result: 20,
             last_progress_at: sublevel2_last_progress_2,
             time_spent: 300,
-            teacher_feedback_review_state: TeacherFeedback::REVIEW_STATES.keepWorking
+            teacher_feedback_review_state: TeacherFeedback::REVIEW_STATES.keepWorking,
+            teacher_feedback_new: true
           },
           level.id => {
             status: LEVEL_STATUS.passed,
             result: 20,
             last_progress_at: sublevel2_last_progress_2,
             time_spent: 480, # sum of time spent on sublevels
+            teacher_feedback_review_state: TeacherFeedback::REVIEW_STATES.keepWorking,
+            teacher_feedback_new: true
+          }
+        },
+        user_3.id => {
+          sublevel1.id => {
+            status: LEVEL_STATUS.not_tried,
+            teacher_feedback_new: true,
             teacher_feedback_review_state: TeacherFeedback::REVIEW_STATES.keepWorking
+          },
+          sublevel2.id => {
+            status: LEVEL_STATUS.not_tried,
+            teacher_feedback_commented: true,
+            teacher_feedback_new: true
+          },
+          level.id => {
+            status: LEVEL_STATUS.not_tried,
+            teacher_feedback_review_state: TeacherFeedback::REVIEW_STATES.keepWorking,
+            teacher_feedback_new: true
           }
         }
       },
       {
-        user_1.id => sublevel1_last_progress,
-        user_2.id => sublevel2_last_progress_2
+        user_1.id => sublevel2_last_progress,
+        user_2.id => sublevel2_last_progress_2,
+        user_3.id => nil
       }
     ]
 
-    assert_equal expected_progress, script_progress_for_users(
-      [user_1, user_2], script
-    )
+    progress, last_progress_times = script_progress_for_users([user_1, user_2, user_3], script)
+
+    assert_equal expected_progress[0][user_1.id], progress[user_1.id]
+    assert_equal expected_progress[0][user_2.id], progress[user_2.id]
+    assert_equal expected_progress[0][user_3.id], progress[user_3.id]
+
+    assert_equal expected_progress[1], last_progress_times
+    travel_back
   end
 
   def test_level_with_best_progress_one_level
@@ -439,13 +558,13 @@ class UsersHelperTest < ActionView::TestCase
   end
 
   def test_move_sections_and_destroy_source_user
-    teacher = create :teacher
-    coteacher = create :teacher
-    section = create :section, user: teacher
-    create :section_instructor, section: section, instructor: coteacher
-    section2 = create :section, user: coteacher
-    section_instructor2 = create :section_instructor, section: section2, instructor: teacher
-    destination_teacher = create :teacher
+    teacher = create(:teacher)
+    coteacher = create(:teacher)
+    section = create(:section, user: teacher)
+    create(:section_instructor, section: section, instructor: coteacher)
+    section2 = create(:section, user: coteacher)
+    section_instructor2 = create(:section_instructor, section: section2, instructor: teacher)
+    destination_teacher = create(:teacher)
 
     move_sections_and_destroy_source_user(source_user: teacher, destination_user: destination_teacher, takeover_type: 'type', provider: 'provider')
 
@@ -457,5 +576,62 @@ class UsersHelperTest < ActionView::TestCase
     assert_equal 2, coteacher.sections_instructed.count
     assert_equal destination_teacher.id, section.user.id
     assert_equal destination_teacher.id, section_instructor2.instructor.id
+  end
+
+  def test_move_sections_and_destroy_source_user_skips_conflicting_demo_sections
+    # Both source and destination already own a demo section with the same demo_type.
+    # The transfer must not raise RecordInvalid; the source demo section is dropped.
+    source_teacher = create(:teacher)
+    destination_teacher = create(:teacher)
+    demo_type = 'ai_tutor'
+    _source_demo = create(:section, user: source_teacher, demo_type: demo_type)
+    dest_demo = create(:section, user: destination_teacher, demo_type: demo_type)
+    regular_section = create(:section, user: source_teacher)
+
+    result = move_sections_and_destroy_source_user(
+      source_user: source_teacher,
+      destination_user: destination_teacher,
+      takeover_type: 'oauth',
+      provider: 'google_oauth2'
+    )
+
+    assert result, 'expected successful merge'
+    assert_equal destination_teacher.id, regular_section.reload.user_id
+    assert_equal destination_teacher.id, dest_demo.reload.user_id
+    # Source was destroyed; destination still has exactly 2 sections (dest_demo + regular)
+    assert_equal 2, Section.where(user: destination_teacher).count
+    assert_raises(ActiveRecord::RecordNotFound) {User.find(source_teacher.id)}
+  end
+
+  describe '.account_linking_lock_reason' do
+    let(:user) {build_stubbed(:user)}
+
+    let(:user_cap_compliant?) {true}
+    let(:user_in_grace_period?) {false}
+
+    before do
+      Policies::ChildAccount.stubs(:compliant?).with(user).returns(user_cap_compliant?)
+      Policies::ChildAccount::ComplianceState.stubs(:grace_period?).with(user).returns(user_in_grace_period?)
+    end
+
+    it 'returns nil' do
+      _(account_linking_lock_reason(user)).must_be_nil
+    end
+
+    context 'when user is not compliant with CAP' do
+      let(:user_cap_compliant?) {false}
+
+      it 'returns lock reason message' do
+        _(account_linking_lock_reason(user)).must_equal 'Uh oh! You must obtain parental permission before creating a linked account. Please log in to the account you are trying to link and obtain parental consent.'
+      end
+    end
+
+    context 'when user is in grace period' do
+      let(:user_in_grace_period?) {true}
+
+      it 'returns lock reason message' do
+        _(account_linking_lock_reason(user)).must_equal 'Uh oh! You must obtain parental permission before creating a linked account. Please log in to the account you are trying to link and obtain parental consent.'
+      end
+    end
   end
 end

@@ -1,0 +1,16 @@
+name 'Data Sci U2 Post Q10_2024-pilot'
+
+question 'When dealing with a DataFrame containing several columns with missing values, which approach would you take to prepare the dataset for analysis, and why?'
+
+wrong 'Use the `dropna()` function to remove all rows containing any missing values, ensuring that the remaining data is complete and reliable for analysis.'
+wrong 'Apply the `fillna()` function with the column mean or median to replace missing values, maintaining the overall data structure and preventing loss of potentially valuable information.'
+wrong 'Utilize `interpolate()` to estimate missing values based on adjacent data points, which is particularly useful for time series data.'
+right 'Use a combination of `dropna()` and `fillna()` to selectively remove or fill missing data based on the importance of each column to the overall analysis.'
+
+
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+
+MARKDOWN

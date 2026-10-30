@@ -1,0 +1,13 @@
+@use '@fontsource/barlow-semi-condensed/scss/mixins' as BarlowSemiCondensed;
+
+/**
+ * Typically only used in headings
+ */
+@include BarlowSemiCondensed.faces(
+  $family: 'Barlow Semi Condensed Medium',
+  $weights: 500
+);
+@include BarlowSemiCondensed.faces(
+  $family: 'Barlow Semi Condensed Semibold',
+  $weights: 600
+);

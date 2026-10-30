@@ -5,7 +5,8 @@
     "login_required": true,
     "properties": {
       "is_migrated": true,
-      "professional_learning_course": "CS in Algebra Support"
+      "professional_learning_course": "CS in Algebra Support",
+      "is_deprecated": true
     },
     "new_name": null,
     "family_name": null,

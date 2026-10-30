@@ -5,14 +5,15 @@
  * into test.
  */
 
+import Immutable from 'immutable';
 import _ from 'lodash';
-import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+import {createStore} from 'redux';
+
 import {
   levelProgressFromServer,
   lessonProgressForSection,
 } from '@cdo/apps/templates/progress/progressHelpers';
-import {createStore} from 'redux';
-import Immutable from 'immutable';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 export const fakeLesson = (
   name,
@@ -141,6 +142,7 @@ export const createStoreWithHiddenLesson = (viewAs, lessonId) => {
       scriptName: 'script-name',
       scriptId: 17,
       unitProgressHasLoaded: true,
+      unitHasUnnumberedLessons: false,
     },
     currentUser: {
       userId: 1,
@@ -196,6 +198,7 @@ export const fakeLessonWithLevels = (overrideFields = {}, levelCount = 1) => {
   return {
     id: lessonId++,
     name: `Lesson - ${position}`,
+    title: `Lesson ${position}: Lesson - ${position}`,
     lockable: false,
     relative_position: position,
     position: position,
@@ -214,7 +217,7 @@ export const fakeStudents = studentCount => {
     }));
 };
 
-export const fakeScriptData = (overrideFields = {}) => {
+export const fakeUnitData = (overrideFields = {}) => {
   return {
     id: 1,
     name: 'csd1-2020',
@@ -269,7 +272,7 @@ export const fakeProgressTableReduxInitialState = (
     lessons = [lesson1, lesson2];
   }
   if (!scriptData) {
-    scriptData = fakeScriptData({lessons: lessons});
+    scriptData = fakeUnitData({lessons: lessons});
   }
   const levelProgressData = fakeStudentLevelProgress(
     scriptData.lessons[0].levels,
@@ -277,6 +280,7 @@ export const fakeProgressTableReduxInitialState = (
   );
 
   const sectionId = randomNumberUpTo100();
+  const courseVersionId = randomNumberUpTo100();
 
   return {
     currentUser: {
@@ -308,9 +312,25 @@ export const fakeProgressTableReduxInitialState = (
         scriptData,
         students
       ),
-      lessonOfInterest: 1,
     },
-    unitSelection: {scriptId: scriptData.id},
+    unitSelection: {
+      scriptId: scriptData.id,
+      courseVersionId: courseVersionId,
+      coursesWithProgress: [
+        {
+          id: courseVersionId,
+          course_name: scriptData.name,
+          units: [
+            {
+              id: scriptData.id,
+              key: scriptData.name,
+              name: scriptData.title,
+              position: 1,
+            },
+          ],
+        },
+      ],
+    },
     locales: {localeCode: 'en-US'},
   };
 };

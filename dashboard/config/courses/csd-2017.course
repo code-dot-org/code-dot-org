@@ -8,6 +8,14 @@
     "csd5-2017",
     "csd6-2017"
   ],
+  "original_script_names": [
+    "csd3-2017",
+    "csd1-2017",
+    "csd2-2017",
+    "csd4-2017",
+    "csd6-2017",
+    "csd5-2017"
+  ],
   "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

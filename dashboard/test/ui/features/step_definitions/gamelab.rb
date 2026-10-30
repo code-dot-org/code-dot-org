@@ -1,20 +1,20 @@
 # Gamelab-specific cucumber step definitions
 
-# Which lesson of allthethings.script contains the gamelab levels; this way we
+# Which lesson of ui-test-all-the-levels contains the gamelab levels; this way we
 # only have to update in one place if this changes.
-GAMELAB_ALLTHETHINGS_LESSON = 19
+GAMELAB_STUDENT_LABS_LESSON = 19
 
 Given /^I start a new Game ?Lab project$/ do
   steps <<-STEPS
     And I am on "http://studio.code.org/projects/gamelab/new"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
   STEPS
 end
 
 Given /^I am on the (\d+)(?:st|nd|rd|th)? Game ?Lab test level$/ do |level_index|
   steps <<-STEPS
-    And I am on "http://studio.code.org/s/allthethings/lessons/#{GAMELAB_ALLTHETHINGS_LESSON}/levels/#{level_index}"
-    And I wait for the page to fully load
+    And I am on "http://studio.code.org/courses/ui-test-all-the-levels/units/1/lessons/#{GAMELAB_STUDENT_LABS_LESSON}/levels/#{level_index}"
+    And I wait for the lab page to fully load
   STEPS
 end
 
@@ -31,7 +31,10 @@ When /^I (?:reset the game|press reset)$/ do
 end
 
 When /^I switch to(?: the)? animation (?:mode|tab)$/ do
-  steps 'When I press "animationMode"'
+  steps <<-STEPS
+    When I press "animationMode"
+    And I wait to see "#newListItem"
+  STEPS
 end
 
 When /^I switch to(?: the)? code (?:mode|tab) in Game Lab$/ do
@@ -85,7 +88,7 @@ Then /^I add the bear animal head animation from the library$/ do
 end
 
 Then /^I append gamelab code to draw a ninja$/ do
-  code = <<~CODE.gsub(/\n/, '\\n')
+  code = <<~CODE.gsub("\n", '\\n')
     function draw() {
       noStroke();
 

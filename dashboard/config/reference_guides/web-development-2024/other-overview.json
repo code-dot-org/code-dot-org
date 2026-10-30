@@ -1,0 +1,9 @@
+{
+  "key": "other-overview",
+  "course_version_key": "2024",
+  "course_offering_key": "web-development",
+  "parent_reference_guide_key": "other",
+  "display_name": "Overview",
+  "content": "This category includes other useful concepts that may not fit in other categories.",
+  "position": 0
+}

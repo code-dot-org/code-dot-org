@@ -1,0 +1,11 @@
+name 'capstone-project-lesson1-level2-2026'
+display_name 'Milestone 2'
+description '**Goal:** I can explain how this version of my product works as a system, including user interactions and logic.
+
+Build on your Level 1 sketch to show how users move through your app, what the app checks or decides, and what users see as a result.'
+
+sublevels
+level 'capstone-project-lesson1-level2a-2026'
+level 'capstone-project-lesson1-level2b-2026'
+
+uses_lab2

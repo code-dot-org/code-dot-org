@@ -1,0 +1,106 @@
+name 'pl-aif-2-U3-parallel-arrays-5-2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Parallel Arrays
+
+Once you have a schema, one way to store the data in JavaScript is with **parallel arrays**. Each array represents one “column” from the schema, and the same index across arrays refers to the same item.
+
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;"> 📖
+<strong>Parallel arrays-</strong> multiple arrays that stay “in sync” with each other
+</p>
+</div>
+
+---
+## Parallel Arrays in a Music App
+
+<img src="https://images.code.org/e3815e7ed54603e735e4cfb18bdef643-image-1765393090426.png" alt="code for arrays for the shcema in a music app- title, artist, length, favorite" width="650px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
+
+
+<h3 style="margin-top:30px;">How to Read Parallel Arrays</h3>
+
+<p style="font-size:16px;line-height:1.5;">
+Each index across the arrays describes one song.
+Think of each index like a row in a table.
+</p>
+
+<div style="display:grid;grid-template-columns:repeat(2, 1fr);gap:18px;margin:24px 0;">
+
+<div style="background:#F5F7F8;border-radius:14px;padding:18px;box-shadow:2px 2px 8px rgba(0,0,0,0.1);">
+    <h4 style="margin-top:0;">🎵 Index 0</h4>
+
+  <p><strong>songTitles[0]</strong> → "Golden Hour"</p>
+
+  <p><strong>songArtists[0]</strong> → "JVKE"</p>
+
+  <p><strong>songLengths[0]</strong> → 210</p>
+
+  <p><strong>songIsFavorite[0]</strong> → true</p>
+
+  <p style="margin-top:14px;font-style:italic;color:#555;">
+      These values all describe the same song.
+    </p>
+  </div>
+
+  <div style="background:#F5F7F8;border-radius:14px;padding:18px;box-shadow:2px 2px 8px rgba(0,0,0,0.1);">
+    <h4 style="margin-top:0;">🎵 Index 1</h4>
+
+  <p><strong>songTitles[1]</strong> → "Levitating"</p>
+
+  <p><strong>songArtists[1]</strong> → "Dua Lipa"</p>
+
+  <p><strong>songLengths[1]</strong> → 203</p>
+
+  <p><strong>songIsFavorite[1]</strong> → false</p>
+
+  <p style="margin-top:14px;font-style:italic;color:#555;">
+      These values describe the second song.
+    </p>
+  </div>
+
+</div>
+
+<div style="background-color:#B7E0E5;border-radius:30px;color:#000000;width:95%;padding:18px 24px;margin:24px 0;">
+
+<p style="font-size:18px;line-height:1.5;margin:0;">
+<strong>💡 Key Idea:</strong> Parallel arrays stay “in sync” by index. Each index acts like a row connecting related pieces of information together.
+</p>
+
+</div>
+
+All of the values at index 1 describe the second song, and so on.
+
+We call these **parallel arrays** because they run side-by-side and stay lined up by index. Each index acts like a “row” in a table.
+
+---
+
+## Why Schema and Parallel Arrays Matter in Your Teaching
+
+<div style="background-color:#f7f8fa; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 95%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;"">
+  <img 
+    src="https://images.code.org/fe4fef3adb3a958ff0fc5afe01bdccc1-image-1765393562055.png" 
+    alt="icon of hand with hovering lightbulb" 
+    width="120px"
+    style="border-radius:10px; float:left; margin: 10px 30px 40px 20px;"
+  >
+
+  <p>Using schema and parallel arrays helps students see data as organized and meaningful, not just a list of random values.</p>
+
+  <p>It also connects their work to real apps they recognize and gives them practice keeping data aligned across arrays.</p>
+</div>
+
+<div style="clear:both;"></div>
+
+---
+
+
+## 🔍 Check for Understandng
+> #### Before moving on, define the following term in your own words: **parallel arrays**.
+> - #### What does it mean for parallel arrays to stay “in sync” by index?
+
+
+<details> <summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;"> Check your thinking </summary> <div style="margin-top:16px; background:#f7f8fa;"> <p style = "font-size: 14pt;"><b>Parallel arrays</b> are multiple arrays that store related data separately but correspond to each other.</p> <p style = "font-size: 14pt;">Staying “in sync” means that values at the same index across all arrays refer to the same item or record.</p> <p style = "font-size: 14pt;">Each index acts like a row of data, connecting information across the arrays.</p> </div> </details>
+MARKDOWN

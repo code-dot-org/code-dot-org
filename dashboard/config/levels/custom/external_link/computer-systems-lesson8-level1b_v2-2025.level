@@ -1,0 +1,20 @@
+<ExternalLink>
+  <config><![CDATA[{
+  "game_id": 55,
+  "created_at": "2025-09-25T20:00:08.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Scenario B\r\n\r\nThe library is running out of shelf space and needs to display only new books.\r\n\r\n---\r\n\r\n### Do This:\r\n\r\n* Use the library books dataset linked below.\r\n* Work with the data to help achieve the goal.\r\n* Complete template in your Processing Library Data activity guide.",
+    "link_title": "Library Books Dataset",
+    "url": "https://docs.google.com/spreadsheets/d/1PTUtOodDTW-5tsD2-rGgKBvY0OWvq9SwBxyJoTjbrhU/edit?usp=sharing",
+    "display_name": "Scenario B",
+    "bubble_choice_description": "The library is running out of shelf space and needs to display only new books.",
+    "thumbnail_url": "https://images.code.org/f2597a51e8a5715843704705ad3580fa-DALL·E 2025-02-03 17.35.51 - A minimalist, flat icon representing shelf space and book organization. The icon features a neatly arranged stack of books on a shelf, symbolizing lib.webp",
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T20:00:08.732+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson8-level1b_2025\\\"\"],\"cloned_from\":\"computer-systems-lesson8-level1b_2025\"}]"
+}]]></config>
+</ExternalLink>

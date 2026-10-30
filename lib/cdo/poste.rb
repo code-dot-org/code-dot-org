@@ -15,7 +15,7 @@ module Poste
   end
 
   def self.emails_dir(*paths)
-    pegasus_dir 'emails', *paths
+    lib_dir 'cdo/poste/emails', *paths
   end
 
   def self.decrypt(encrypted)
@@ -190,6 +190,20 @@ module Poste
 end
 
 class Deliverer
+  # Attempt SMTP connections up to 5 times, retrying on the following error types AND message match.
+  CONNECTION_ATTEMPTS = 5
+  RETRYABLE_ERROR_TYPES = [
+    Net::SMTPServerBusy,
+    Net::SMTPAuthenticationError,
+    EOFError
+  ].freeze
+  RETRYABLE_ERROR_MESSAGES = [
+    'Too many connections, try again later',
+    'Temporary authentication failure',
+    'end of file reached'
+  ].map(&:freeze).freeze
+  RETRYABLE_ERROR_MESSAGE_MATCH = Regexp.new RETRYABLE_ERROR_MESSAGES.map {|m| "(#{m})"}.join('|')
+
   def initialize(params)
     @params = params.dup
     @smtp = reset_connection
@@ -339,19 +353,6 @@ class Deliverer
     end
   end
 
-  # Attempt SMTP connections up to 5 times, retrying on the following error types AND message match.
-  CONNECTION_ATTEMPTS = 5
-  RETRYABLE_ERROR_TYPES = [
-    Net::SMTPServerBusy,
-    Net::SMTPAuthenticationError,
-    EOFError
-  ].freeze
-  RETRYABLE_ERROR_MESSAGES = [
-    'Too many connections, try again later',
-    'Temporary authentication failure',
-    'end of file reached'
-  ].map(&:freeze).freeze
-  RETRYABLE_ERROR_MESSAGE_MATCH = Regexp.new RETRYABLE_ERROR_MESSAGES.map {|m| "(#{m})"}.join('|')
   private def smtp_connect
     Retryable.retryable(
       tries: CONNECTION_ATTEMPTS,
@@ -521,7 +522,7 @@ module Poste2
         contact_email: recipient[:email],
         hashed_email: Digest::MD5.hexdigest(recipient[:email]),
         message_id: message_id,
-        params: (params).to_json,
+        params: params.to_json,
       }
     )
   end
@@ -539,6 +540,11 @@ module Poste2
     ]
 
     def initialize(settings = nil)
+      # The mail gem expects to be able to initialize the configured delivery
+      # method with some settings. We therefore declare an empty initializer to
+      # support that pattern, despite us not actually needing any settings.
+      #
+      # See https://github.com/mikel/mail/blob/2.8.1/lib/mail/message.rb#L278
     end
 
     def deliver!(mail)

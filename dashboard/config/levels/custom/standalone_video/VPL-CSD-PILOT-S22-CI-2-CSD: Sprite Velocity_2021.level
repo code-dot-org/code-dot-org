@@ -9,7 +9,7 @@
     "parent_level_id": 20802,
     "name_suffix": "_2021",
     "encrypted": "false",
-    "long_instructions": "#####This video is included in the CS Discoveries curriculum to introduce students to introduce students to the `velocity` block in Game Lab.\r\n\r\n## As you watch the video, consider the following:\r\n\r\n#### Why might students want to use a velocity block instead of the counter pattern?\r\n"
+    "long_instructions": "#####This video is included in the CS Discoveries curriculum to introduce students to introduce students to the `velocity` block in Game Lab.\r\n\r\n## As you watch the video, consider the following:\r\n\r\nWhy might students want to use a velocity block instead of the counter pattern?\r\n"
   },
   "level_num": "custom",
   "game_id": 54,

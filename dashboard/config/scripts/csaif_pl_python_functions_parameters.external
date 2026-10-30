@@ -1,0 +1,69 @@
+name 'csaif_pl_python-functions-parameters'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<h1>Functions with Parameters</h1>
+<p>Let's review. In the previous level, you explored using two files: <code style="font-size:14px;">custom.py</code> and <code style="font-size:14px;">main.py</code>.</p>
+<p>This setup is common when working with objects in code and will be used by your students when programming in the Neighborhood.</p>
+<p>Remember, <code style="font-size:14px;">custom.py</code> is where you define the functions you create, and <code style="font-size:14px;">main.py</code> is where you run your main program and call the functions.</p>
+
+<div style="background-color: #E4E2F8; color: #222222; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+<p>Using multiple files helps new programmers build clean, organized code and develop good coding habits.</p>
+</div>
+
+<h2>Functions with Parameters</h2>
+<p>In this example, a function, <code style="font-size:14px;">paint&#95;line()</code>, is created to paint two consecutive squares (or a line) a certain color in the neighborhood.</p>
+<p>The function is also called, or used, to paint the line blue.</p>
+
+<details style="background-color: #F7F7FB; border: 1px solid #E4E2F8; border-radius: 10px; padding: 12px 16px; margin-bottom: 16px;">
+<summary style="cursor: pointer; font-weight: bold; color: #1F1976;font-size: 18px;">Why would a coder code it this way?</summary>
+<div style="margin-top: 10px;">
+<p>Defining a function like this means you can run the function multiple times and just change the color each time by putting in a different value.</p>
+</div>
+</details>
+
+<div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin: 20px 0;">
+
+  <div style="background-color: #F7F7FB; border: 1px solid #E4E2F8; border-radius: 12px; padding: 20px; width: 350px; text-align: center;">
+    <p>A <b>parameter</b> is a placeholder in the function definition that specifies what kind of input the function will take.</p>
+    <div style="text-align:left; padding:16px 18px; box-sizing:border-box; overflow-x:auto; white-space:nowrap; background-color:#1C1F2A; color:#FFFFFF; border-radius:10px; font-family:'Courier New',Courier,monospace; font-size:16px; line-height:1.8; margin-top: 14px;">
+      <span style="color:#6FCAFF;">def</span> <span style="color:#F07FB0;">paint&#95;line</span>(<span style="text-decoration: underline; text-decoration-color: #7CDB87; text-decoration-thickness: 2px;">color</span>):<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#F07FB0;">painter</span>.<span style="color:#F07FB0;">paint</span>(<span style="text-decoration: underline; text-decoration-color: #7CDB87; text-decoration-thickness: 2px;">color</span>)<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#F07FB0;">painter</span>.<span style="color:#F07FB0;">move</span>()<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#F07FB0;">painter</span>.<span style="color:#F07FB0;">paint</span>(<span style="text-decoration: underline; text-decoration-color: #7CDB87; text-decoration-thickness: 2px;">color</span>)<br>
+      <br>
+      <span style="color:#F07FB0;">paint&#95;line</span>(<span style="color:#ACA8EA;">"blue"</span>)
+    </div>
+  </div>
+
+  <div style="background-color: #F7F7FB; border: 1px solid #E4E2F8; border-radius: 12px; padding: 20px; width: 350px; text-align: center;">
+    <p>An <b>argument</b> is the actual value passed into a function when you call it.</p>
+    <div style="text-align:left; padding:16px 18px; box-sizing:border-box; overflow-x:auto; white-space:nowrap; background-color:#1C1F2A; color:#FFFFFF; border-radius:10px; font-family:'Courier New',Courier,monospace; font-size:16px; line-height:1.8; margin-top: 14px;">
+      <span style="color:#6FCAFF;">def</span> <span style="color:#F07FB0;">paint&#95;line</span>(color):<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#F07FB0;">painter</span>.<span style="color:#F07FB0;">paint</span>(color)<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#F07FB0;">painter</span>.<span style="color:#F07FB0;">move</span>()<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#F07FB0;">painter</span>.<span style="color:#F07FB0;">paint</span>(color)<br>
+      <br>
+      <span style="color:#F07FB0;">paint&#95;line</span>(<span style="text-decoration: underline; text-decoration-color: #7CDB87; text-decoration-thickness: 2px; color:#ACA8EA;">"blue"</span>)
+    </div>
+  </div>
+
+</div>
+
+<hr>
+
+<h2>Using Parameters in Custom.py</h2>
+<p>When defining a function in the <code style="font-size:14px;">custom.py</code> file, the <code style="font-size:14px;">painter</code> object is added inside the parentheses, or as a <b>parameter</b>.</p>
+<p>Here, painter is added as a parameter. This makes the code usable for any painter object you later create.</p>
+
+<div style="max-width: 320px; margin: 16px auto; border-radius: 10px; overflow: hidden;">
+  <div style="background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-family: 'Courier New', Courier, monospace; font-size: 14px; padding: 8px 14px;">custom.py</div>
+  <div style="background-color:#1C1F2A; color:#FFFFFF; padding:14px 16px; font-family:'Courier New',Courier,monospace; font-size:16px; line-height:1.8;">
+    <span style="color:#6FCAFF;">def</span> <span style="color:#F07FB0;">turn&#95;right</span>(painter):<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#F07FB0;">painter</span>.<span style="color:#F07FB0;">turn&#95;left</span>()<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#F07FB0;">painter</span>.<span style="color:#F07FB0;">turn&#95;left</span>()<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#F07FB0;">painter</span>.<span style="color:#F07FB0;">turn&#95;left</span>()
+  </div>
+</div>
+MARKDOWN

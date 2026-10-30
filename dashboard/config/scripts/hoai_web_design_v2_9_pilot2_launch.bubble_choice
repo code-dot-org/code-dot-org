@@ -1,0 +1,13 @@
+name 'hoai-web-design-v2-9_pilot2_launch'
+display_name 'Learn more about an HTML Element'
+description 'Choose at least one HTML element to learn more about with AI Tutor. Once you\'ve explored one: you can either choose more elements to explore, or continue to the next level.'
+
+sublevels
+level 'hoai-web-design-v2-9a_pilot2_launch'
+level 'hoai-web-design-v2-9b_pilot2_launch'
+level 'hoai-web-design-v2-9c_pilot2_launch'
+level 'hoai-web-design-v2-9d_pilot2_launch'
+level 'hoai-web-design-v2-9e_pilot2_launch'
+
+uses_lab2
+navigation_type 'next_level'

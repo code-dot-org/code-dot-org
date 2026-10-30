@@ -1,0 +1,85 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-07-08T14:55:38.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n  <title>Boredom Buster</title>\n  <link rel=\"stylesheet\" href=\"style.css\" />\n</head>\n<body>\n\n  <header>\n    <h1>Boredom Buster</h1>\n    <p>Not sure what to do? Let us decide for you.</p>\n  </header>\n\n  <main>\n    <button id=\"fetchButton\">Give me something to do</button>\n\n    <div class=\"activity-card\">\n      <p class=\"card-label\">TODAY'S ACTIVITY</p>\n      <p id=\"activityText\">Your activity will appear here.</p>\n    </div>\n  </main>\n\n  <script src=\"helpers.js\"></script>\n  <script src=\"script.js\"></script>\n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;\n  background-color: #F0F7FF;\n  background-image: radial-gradient(#C8DFFB 1.5px, transparent 1.5px);\n  background-size: 28px 28px;\n  color: #1A2E4A;\n  padding: 32px 20px;\n  line-height: 1.4;\n  min-height: 100vh;\n}\n\nheader {\n  max-width: 480px;\n  margin: 0 auto 28px;\n  text-align: center;\n}\n\nheader h1 {\n  font-size: 2rem;\n  font-weight: 800;\n  color: #1A6FD4;\n  margin-bottom: 6px;\n  letter-spacing: -0.01em;\n}\n\nheader p {\n  color: #5A7A9A;\n  font-size: 0.95rem;\n}\n\nmain {\n  max-width: 480px;\n  margin: 0 auto;\n  display: flex;\n  flex-direction: column;\n  gap: 20px;\n}\n\nbutton {\n  display: block;\n  width: 100%;\n  padding: 16px;\n  font-size: 1rem;\n  font-weight: 700;\n  color: white;\n  background-color: #1A6FD4;\n  border: none;\n  border-radius: 100px;\n  cursor: pointer;\n  box-shadow: 0 4px 0 #104FA0;\n  transition: transform 0.1s ease, box-shadow 0.1s ease;\n}\n\nbutton:hover {\n  background-color: #155BBF;\n}\n\nbutton:active {\n  transform: translateY(3px);\n  box-shadow: 0 1px 0 #104FA0;\n}\n\n.activity-card {\n  background: #FFFFFF;\n  border: 2px dashed #A8C8F0;\n  border-radius: 16px;\n  padding: 28px 24px;\n  text-align: center;\n}\n\n.card-label {\n  font-size: 10px;\n  font-weight: 700;\n  letter-spacing: 0.18em;\n  color: #5A7A9A;\n  margin-bottom: 12px;\n}\n\n#activityText {\n  font-size: 1.2rem;\n  font-weight: 500;\n  color: #1A2E4A;\n  line-height: 1.5;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "const btn = document.getElementById(\"fetchButton\");\n\nconst API_URL = \"fake-boredom-buster-url.com\";\n\nconst fetchActivity = async () => {\n  \n  const response = await fetch(API_URL);\n  \n  const data = await response.json();\n\n  // These lines are never reached\n  showActivity(data.activity);\n};\n\nbtn.addEventListener(\"click\", () => {\n  fetchActivity();\n});",
+          "folderId": "0",
+          "active": true
+        },
+        "4": {
+          "id": "4",
+          "name": "helpers.js",
+          "contents": "// Updates the activity text on the page.\nconst showActivity = (text) => {\n  const activityText = document.getElementById(\"activityText\");\n  activityText.textContent = text;\n};",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "3"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nArKoqcQM6DA7wkrtbEbod6k1E+QZ\n",
+    "encrypted": "false",
+    "long_instructions": "## Modify & Make \r\n\r\nUse `try...catch` to give the app a safety net. \r\n\r\n#### Do This:\r\n\r\n1. Wrap the `fetch()` and `await` lines inside a try block.\r\n2. Add a `catch` block that shows an error message using showActivity().\r\n\r\n   **Example:**\r\n    ```\r\n    showActivity(\"Oops! Try again!\")\r\n    ```",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "name_suffix": "_2026",
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildJavaScript",
+        "explainCode",
+        "documentation"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "level_system_prompt": "You are an AI Tutor helping a beginner add error handling to an async JavaScript function using try...catch.\r\n\r\nThe student is starting with this code:\r\n\r\nconst API_URL = \"fake-boredom-buster-url.com\";\r\n\r\nconst fetchActivity = async () => {\r\n  const response = await fetch(API_URL);\r\n  const data = await response.json();\r\n\r\n  // These lines are never reached\r\n  showActivity(data.activity);\r\n};\r\n\r\ndocument.getElementById(\"fetchButton\").addEventListener(\"click\", () => {\r\n  fetchActivity();\r\n});\r\n\r\nThe correct solution wraps the risky code in a try block and handles the failure in a catch block:\r\n\r\nconst fetchActivity = async () => {\r\n  try {\r\n    const response = await fetch(API_URL);\r\n    const data = await response.json();\r\n    showActivity(data.activity);\r\n  } catch (error) {\r\n    showActivity(\"Something went wrong. Please try again.\");\r\n  }\r\n};\r\n\r\nThe URL is intentionally fake so the catch block always fires. That's expected.\r\n\r\nWhen a student asks for help, give them the solution directly. Then explain in 1–2 sentences: the try block runs the risky code, and if anything goes wrong the catch block runs instead — so the app never crashes silently.\r\n\r\nKeep responses short and friendly."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-07-08T14:55:38.617+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson8-level2-2026\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson8-level2-2026\"}]"
+}]]></config>
+</Weblab2>

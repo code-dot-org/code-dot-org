@@ -1,0 +1,7 @@
+name 'CSD games movement2 practice choice_-pr-2024'
+display_name 'Sprite Movement Practice'
+description 'Practice using the new ways to move sprites.'
+
+sublevels
+level 'CSD U3 abstraction accelerateY up_-pr-2024'
+level 'CSD U3 practice deceleration_-pr-2024'

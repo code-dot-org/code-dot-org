@@ -1,0 +1,61 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import classNames from 'classnames';
+import React from 'react';
+
+import moduleStyles from './suggested-prompt.module.scss';
+
+/**
+ * Renders clickable tags that can be customized with list of suggested prompts.
+ */
+export interface SuggestedPrompt {
+  onClick: (prompt: SuggestedPrompt) => void;
+  label: string;
+  show: boolean;
+  selected: boolean;
+  icon?: string;
+}
+
+interface SuggestedPromptsProps {
+  suggestedPrompts: Array<SuggestedPrompt>;
+  canToggle?: boolean;
+}
+
+const SuggestedPrompts: React.FC<SuggestedPromptsProps> = ({
+  suggestedPrompts,
+  // If true, other chips aren't disabled when one is selected.
+  canToggle = false,
+}) => {
+  const hasSelection = suggestedPrompts.some(prompt => prompt.selected);
+  const visiblePrompts = suggestedPrompts.filter(prompt => prompt.show);
+
+  return (
+    <div
+      className={moduleStyles.prompts}
+      role="group"
+      aria-label="Suggested Prompts"
+    >
+      {visiblePrompts.map(prompt => {
+        const isDisabled = !canToggle && hasSelection && !prompt.selected;
+
+        return (
+          <button
+            key={prompt.label}
+            type="button"
+            className={classNames(moduleStyles.prompt, {
+              [moduleStyles.selected]: prompt.selected,
+              [moduleStyles.disabled]: isDisabled,
+            })}
+            onClick={() => !isDisabled && prompt.onClick(prompt)}
+            aria-disabled={isDisabled}
+            aria-pressed={prompt.selected}
+            aria-label={prompt.label}
+          >
+            <span>{prompt.label}</span>
+            {prompt.icon && <FontAwesomeV6Icon iconName={prompt.icon} />}
+          </button>
+        );
+      })}
+    </div>
+  );
+};
+export default SuggestedPrompts;

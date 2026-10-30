@@ -1,9 +1,10 @@
-import React, {Component} from 'react';
-import PropTypes from 'prop-types';
-import handleLaunchImmersiveReader from '@cdo/apps/util/immersive_reader';
 import {renderButtons} from '@microsoft/immersive-reader-sdk';
-import cookies from 'js-cookie';
 import classNames from 'classnames';
+import cookies from 'js-cookie';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+
+import handleLaunchImmersiveReader from '@cdo/apps/util/immersive_reader';
 
 class ImmersiveReaderButton extends Component {
   static propTypes = {

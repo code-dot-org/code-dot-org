@@ -23,7 +23,7 @@ module LessonImportHelper
     raise unless [:development, :adhoc, :levelbuilder].include? rack_env
 
     # course version id should always be present for CSF/CSD/CSP 2020 courses and hoc courses.
-    if (['Vocabulary', 'Resource'] & models_to_import).any?
+    if ['Vocabulary', 'Resource'].intersect?(models_to_import)
       course_version_id = lesson.script&.get_course_version&.id
       raise "Unit must have course version" unless course_version_id
     end
@@ -42,6 +42,7 @@ module LessonImportHelper
         lesson.purpose = cb_lesson_data['cs_content']
         lesson.preparation = cb_lesson_data['prep']
         lesson.creative_commons_license = cb_lesson_data['creative_commons_license']
+        lesson.background = cb_lesson_data['background']
         lesson.assessment_opportunities = cb_lesson_data['assessment'] unless cb_lesson_data['assessment'].blank?
         lesson.save!
 
@@ -144,7 +145,7 @@ module LessonImportHelper
   end
 
   def self.create_activity_sections(activity_markdown, lesson_activity_id, levels)
-    activity_markdown.gsub!(/slide!!!slide-\d+(?:<!-- place where you'd like the icon -->)?/, '<i class="fa fa-list-alt" aria-hidden="true"></i>')
+    activity_markdown.gsub!(/slide!!!slide-\d+(?:<!-- place where you'd like the icon -->)?/, '<i class="fa-solid fa-rectangle-list" aria-hidden="true"></i>')
     activity_markdown.gsub!(/\[\/?guide\]/, '')
     tip_matches = find_tips(activity_markdown).select {|m| m[1] != 'say'}.map {|m| {index: activity_markdown.index(m[0]), type: 'tip', match: m, substring: m[0]}}
     name_matches = find_activity_section_names(activity_markdown).map {|m| {index: activity_markdown.index(m[0]), type: 'name', match: m, substring: m[0]}}

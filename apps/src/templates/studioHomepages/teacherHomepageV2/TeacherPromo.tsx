@@ -1,0 +1,145 @@
+import CloseButton from '@code-dot-org/component-library/closeButton';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography, Button as MuiButton} from '@mui/material';
+import classNames from 'classnames';
+import _ from 'lodash';
+import React, {useCallback} from 'react';
+
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import i18n from '@cdo/locale';
+
+import styles from './teacherHomepage.module.scss';
+
+export interface TeacherPromoInfo {
+  id: string;
+  announcementType: string;
+  backgroundColor: string;
+  buttonLabel: string;
+  buttonTarget: string;
+  title: string;
+  description: string;
+  image: string | null;
+  isClosable: boolean;
+  partnerLogo: string | null;
+  isExternal: boolean;
+  position: number | null;
+}
+
+interface TeacherPromoAdditionalProps {
+  onClose: (id: string) => void;
+}
+
+const announcementTypes = [
+  {text: 'New Curriculum', icon: 'book-open-cover'},
+  {text: 'Announcement', icon: 'bullhorn'},
+  {text: 'New Feature', icon: 'circle-plus'},
+  {text: 'Hour of Code', icon: 'clock'},
+  {text: 'Teacher Resources', icon: 'folder-open'},
+  {text: 'Professional Learning', icon: 'head-side-gear'},
+];
+
+const getIconType = (announcementText: string): string => {
+  const entry = announcementTypes.find(type => type.text === announcementText);
+  return entry ? entry.icon : 'bullhorn';
+};
+
+type TeacherPromoProps = TeacherPromoInfo & TeacherPromoAdditionalProps;
+
+const TeacherPromo: React.FC<TeacherPromoProps> = ({
+  id,
+  announcementType,
+  backgroundColor,
+  title,
+  description,
+  buttonLabel,
+  buttonTarget,
+  image,
+  isClosable,
+  partnerLogo,
+  isExternal,
+  onClose,
+  position = null,
+}) => {
+  const trackEvent = useCallback(
+    (eventName: string) => {
+      analyticsReporter.sendEvent(eventName, {
+        contentfulEntryID: id,
+        announcementType,
+        position,
+      });
+    },
+    [id, announcementType, position]
+  );
+
+  return (
+    <li
+      className={classNames(
+        styles.promotion,
+        styles[`promotion-${_.lowerCase(backgroundColor)}`]
+      )}
+      key={id}
+    >
+      {isClosable && (
+        <CloseButton
+          className={styles.closeButton}
+          aria-label={i18n.closeDialog()}
+          onClick={() => {
+            onClose(id);
+            trackEvent(EVENTS.PROMOTION_DISMISSED);
+          }}
+        />
+      )}
+      <Typography
+        className={styles.promotionType}
+        variant="overline2"
+        gutterBottom
+      >
+        <FontAwesomeV6Icon iconName={getIconType(announcementType)} />{' '}
+        {announcementType}
+      </Typography>
+      <Typography className={styles.promotionTitle} variant="h5" gutterBottom>
+        {title}
+      </Typography>
+      {image && (
+        <img src={image} alt={title} className={styles.promotionImage} />
+      )}
+      <Typography variant="body3" gutterBottom>
+        {description}
+      </Typography>
+      {partnerLogo && (
+        <Typography
+          className={styles.promotionPartnerLogo}
+          variant="body3"
+          gutterBottom
+        >
+          <Typography variant="strong">{i18n.partnershipWith()}</Typography>
+          <img
+            src={partnerLogo}
+            alt="Partner Logo"
+            className={styles.partnerLogo}
+          />
+        </Typography>
+      )}
+      <MuiButton
+        variant="outlined"
+        color="secondary"
+        size="small"
+        className={styles.promotionButton}
+        href={buttonTarget}
+        endIcon={
+          isExternal ? (
+            <FontAwesomeV6Icon iconName="arrow-up-right-from-square" />
+          ) : undefined
+        }
+        onClick={() => {
+          trackEvent(EVENTS.PROMOTION_CLICKED);
+        }}
+      >
+        {buttonLabel}
+      </MuiButton>
+    </li>
+  );
+};
+
+export default TeacherPromo;

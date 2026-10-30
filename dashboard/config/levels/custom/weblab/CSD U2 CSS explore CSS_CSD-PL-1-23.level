@@ -1,0 +1,32 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2024-05-04T01:31:58.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "long_instructions": "# Adding Style\r\n\r\nThis Web Lab project is using a new language to add style to the page. With a partner explore both the `index.html` and `style.css` files. Be ready to discuss the following questions.\r\n\r\n1) What changes is this new language making to the page?\r\n* How is this language different from HTML?\r\n* How are the `index.html` and `style.css` files connected?",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "submittable": "false",
+    "start_sources": "              {\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html> \\n<html> \\n<head>\\n   <link rel=\\\"stylesheet\\\" href=\\\"style.css\\\">\\n</head>\\n<body>\\n  \\n  <!-- text to help us explore -->\\n  <h1>We're about to learn a new language!</h1>\\n  <h2>And it's going to help us add STYLE</h2>\\n  <h1>But how does it work?</h1>\\n</body>\\n</html>\"\r\n    },\r\n    {\r\n      \"name\": \"style.css\",\r\n      \"data\": \"h1 {\\n    color: blue;\\n    text-align: center;\\n}\\n\\nh2 {\\ntext-align: right;\\n  color: red;\\n}\"\r\n    }\r\n  ]\r\n}\r\n            ",
+    "display_name": "Exploration: Adding Style",
+    "teacher_markdown": "Have students explore this level with a partner. Afterwards lead a short share out so that partners can share with the class their responses to the three questions in the instructions. The subsequent video should help reinforce what students discovered so there's no need to lead a lengthy debrief conversation.",
+    "parent_level_id": 20017,
+    "name_suffix": "_CSD-PL-1-23",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "validation_enabled": "false",
+    "reference_links": [
+      "/courses/csd-2024/guides/formatting-html",
+      "/courses/csd-2024/guides/lists",
+      "/courses/csd-2024/guides/headings-and-paragraphs",
+      "/courses/csd-2024/guides/html-tags"
+    ],
+    "map_reference": "/courses/csd-2024/guides/web-lab"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-05-04T01:31:58.423+00:00\",\"changed\":[\"cloned from \\\"CSD U2 CSS explore CSS_2024\\\"\"],\"cloned_from\":\"CSD U2 CSS explore CSS_2024\"}]"
+}]]></config>
+</Weblab>

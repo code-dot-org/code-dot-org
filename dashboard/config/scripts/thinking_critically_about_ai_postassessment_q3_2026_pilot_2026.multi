@@ -1,0 +1,14 @@
+name 'thinking-critically-about-ai-postassessment-q3_2026-pilot_2026'
+
+question 'A student creates a set of user guidelines for their class AI tool. Which guideline reflects the MOST sophisticated understanding of responsible AI use?'
+
+wrong '"Always run your prompt through a spell-checker before submitting it to the AI."'
+wrong '"Never use AI for creative projects because it replaces human imagination."'
+wrong '"Trust AI outputs that include specific numbers and statistics, since those are harder to make up."'
+right '"Treat AI outputs as a starting point for your own thinking — verify claims, check for bias, and make the final decision yourself."'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 4
+MARKDOWN

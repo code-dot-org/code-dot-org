@@ -1,0 +1,12 @@
+@use '@code-dot-org/component-library-styles/mixins.scss' as mixins;
+
+.categorySelectionContainer {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.125rem;
+
+  > span {
+    @include mixins.label-three;
+    margin-bottom: 0;
+  }
+}

@@ -55,6 +55,7 @@
     "short_instructions": "Destroy the ice and get {currentPlayerName} to the Minecart.",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"All you need to have the Agent do is clear the path to the Minecart.\",\"hint_id\":\"MC_HOC_2017_07_Cole_c\",\"hint_type\":\"general\",\"hint_path\":\"[[4,9],[4,1]]\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/2ff7d57c9048d09e9029d7c8cbba3534/MC_HOC_2017_07_Cole.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"To solve this puzzle, figure out what the `clear path` function does and call it as many times as you need using the small green `clear path` block from the toolbox.\",\"hint_id\":\"MC_HOC_2017_07_Cole_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f701a497936593a99d5e42a35e574669/MC_HOC_2017_07_Cole.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Try mixing the function blocks with other blocks from the toolbox to help you solve this puzzle.\",\"hint_id\":\"MC_HOC_2017_07_Cole_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/33104ae12f4186f8bb8fcef688109b5a/MC_HOC_2017_07_Cole.mp3\"}]",
     "songs": "[\"vignette1\", \"vignette2-quiet\", \"vignette3\", \"vignette4-intro\", \"vignette5-shortpiano\", \"vignette7-funky-chirps-short\", \"vignette8-free-play\"]",
+    "top_level_procedure_autopopulate": "true",
     "parent_level_id": 21547,
     "name_suffix": "2022",
     "preload_asset_list": null,
@@ -97,9 +98,6 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="procedures_callnoreturn">
-          <mutation name="clear path"/>
-        </block>
         <block type="craft_moveForward"/>
         <block type="craft_turn">
           <title name="DIR">left</title>

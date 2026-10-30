@@ -1,0 +1,14 @@
+{
+  "category_key": "javascript",
+  "content": "# Arguments\n\nArguments are the actual values placed inside the parentheses when a function is called. They fill in the function’s parameters so the function can use those values.",
+  "examples": "[{\"name\":\"Call a Function with Arguments\",\"description\":\"This calls `orderPizza()` with the arguments `3` and `\\\"mushroom\\\"`.\",\"code\":\"```\\nconst orderPizza = (quantity, topping) =\\u003e {\\n  orderText.textContent = quantity + \\\" \\\" + topping + \\\" pizzas\\\";\\n};\\n\\norderPizza(3, \\\"mushroom\\\");\\n```\"}]",
+  "external_documentation": "",
+  "fields": "[]",
+  "key": "arguments",
+  "name": "Arguments",
+  "syntax": "`orderPizza(3, \"mushroom\");`",
+  "tips": "- Put arguments inside the parentheses when calling a function.\n- Separate multiple arguments with commas.\n- The order of arguments matters. They match the parameters in the same order.\n- Strings need quotation marks, like `\"mushroom\"`.\n- In Web Lab, arguments often appear when calling functions that update the page with different text, numbers, images, or choices.",
+  "methods": [
+
+  ]
+}

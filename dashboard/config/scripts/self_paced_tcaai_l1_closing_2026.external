@@ -1,0 +1,37 @@
+name 'self-paced-TCaAI-L1-Closing_2026'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Great Job! 🎉
+
+So far, you can:
+
+* Describe the structure and goals of the Thinking Critically About AI unit
+* Explain how students investigate AI systems through testing, evidence collection, and reflection
+* Identify the major concepts students explore, including prompting, bias, verification, privacy, and responsible AI use
+* Explore the digital tools students use to build and revise their Generate and Judge Guide
+
+## Up Next
+
+In the next section of this professional learning module, you will explore the major ideas and instructional moves that shape student learning throughout the unit.
+
+___
+
+<table width="100%" cellspacing="0" cellpadding="0" style="border-collapse: collapse; margin-bottom: 20px;">
+  <tr>
+    <td style="width: 33.3%; background-color: #026C7A; color: #ffffff; padding: 20px; text-align: center; font-size: 16px; font-weight: bold; border-top-left-radius: 10px; border-bottom-left-radius: 10px;">
+      🌟<br>
+      Introduction to Thinking Critically About AI
+    </td>
+    <td style="width: 33.3%; background-color: #F7F8FA; color: #000000; padding: 20px; text-align: center; font-size: 16px; font-weight: bold;">
+      🧠<br>
+      Big Ideas in Thinking Critically About AI
+    </td>
+    <td style="width: 33.3%; background-color: #F7F8FA; color: #000000; padding: 20px; text-align: center; font-size: 16px; font-weight: bold; border-top-right-radius: 10px; border-bottom-right-radius: 10px;">
+      📑<br>
+      The Generate and Judge Project
+    </td>
+  </tr>
+</table>
+MARKDOWN

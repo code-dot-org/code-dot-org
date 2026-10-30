@@ -64,7 +64,7 @@ class LevelDslTest < ActiveSupport::TestCase
   end
 
   test 'test Evaluation Question' do
-    script = create :script
+    script = create(:script)
     lesson1 = create(:lesson, name: 'Lesson1', script: script)
     lesson2 = create(:lesson, name: 'Lesson2', script: script)
     input_dsl = <<~DSL

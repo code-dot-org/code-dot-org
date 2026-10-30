@@ -1,9 +1,10 @@
 /** A single list item representing an animation. */
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import color from '@cdo/apps/util/color';
-import * as shapes from '../shapes';
+
+import {P5LabInterfaceMode} from '../constants';
 import {
   setAnimationName,
   cloneAnimation,
@@ -13,10 +14,10 @@ import {
   isNameUnique,
 } from '../redux/animationList';
 import {selectAnimation, selectBackground} from '../redux/animationTab';
+import * as shapes from '../shapes';
+
 import ListItemButtons from './ListItemButtons';
 import ListItemThumbnail from './ListItemThumbnail';
-import _ from 'lodash';
-import {P5LabInterfaceMode} from '../constants';
 
 /**
  * A single list item representing an animation.  Displays an animated
@@ -57,6 +58,7 @@ class AnimationListItem extends React.Component {
       frameDelay: frameDelay,
       name: name,
       isNameValid: true,
+      isFocused: false,
     };
   }
 
@@ -83,6 +85,14 @@ class AnimationListItem extends React.Component {
       );
     }, 200);
   }
+
+  onFocus = () => {
+    this.setState({isFocused: true});
+  };
+
+  onBlur = () => {
+    this.setState({isFocused: false});
+  };
 
   onSelect = () => {
     if (this.props.interfaceMode === P5LabInterfaceMode.BACKGROUND) {
@@ -181,19 +191,22 @@ class AnimationListItem extends React.Component {
   };
 
   render() {
-    const {allAnimationsSingleFrame, isSelected, isSpriteLab, labType, style} =
+    const {allAnimationsSingleFrame, isSpriteLab, labType, style, isSelected} =
       this.props;
+
     const animationProps = Object.assign(
       {},
       this.getAnimationProps(this.props),
       {frameDelay: this.state.frameDelay}
     );
-    const name = this.state.name;
+
+    const {name, isFocused} = this.state;
+
     let animationName;
     if (isSelected) {
       let invalidNameStyle = this.state.isNameValid
         ? {}
-        : {backgroundColor: color.lightest_red};
+        : {backgroundColor: 'var(--background-error-light)'};
       animationName = (
         <div style={styles.nameInputWrapper}>
           <input
@@ -214,12 +227,19 @@ class AnimationListItem extends React.Component {
     const arrowStyle = isSelected ? styles.rightArrow : {};
 
     return (
-      <button style={tileStyle} onClick={this.onSelect} type="button">
+      <button
+        style={tileStyle}
+        onClick={this.onSelect}
+        onFocus={this.onFocus}
+        onBlur={this.onBlur}
+        type="button"
+      >
         <div style={arrowStyle} />
         <ListItemThumbnail
           ref="thumbnail"
           animationProps={animationProps}
           isSelected={isSelected}
+          isFocused={isFocused}
           singleFrameAnimation={allAnimationsSingleFrame}
         />
         {!isSpriteLab && animationName}
@@ -260,7 +280,7 @@ const styles = {
     margin: '5px 0 0 0',
   },
   selectedTile: {
-    backgroundColor: color.purple,
+    backgroundColor: 'var(--background-brand-purple-primary)',
   },
   nameLabel: {
     marginLeft: 4,
@@ -289,7 +309,7 @@ const styles = {
     height: 0,
     borderTop: '10px solid transparent',
     borderBottom: '10px solid transparent',
-    borderLeft: '10px solid ' + color.purple,
+    borderLeft: '10px solid var(--background-brand-purple-primary)',
     position: 'absolute',
     right: '-10px',
     top: 80,

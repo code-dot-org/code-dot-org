@@ -1,9 +1,9 @@
+import {Tooltip} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import ReactTooltip from 'react-tooltip';
-import _ from 'lodash';
-import TeacherInfoBox from '@cdo/apps/templates/progress/TeacherInfoBox';
+
 import HiddenForSectionToggle from '@cdo/apps/templates/progress/HiddenForSectionToggle';
+import TeacherInfoBox from '@cdo/apps/templates/progress/TeacherInfoBox';
 import i18n from '@cdo/locale';
 
 export default class CourseScriptTeacherInfo extends Component {
@@ -16,27 +16,24 @@ export default class CourseScriptTeacherInfo extends Component {
   render() {
     const {disabled, isHidden, onToggleHiddenScript} = this.props;
 
-    // Note: Students should always have no (owned) sections
-    const tooltipId = _.uniqueId();
+    const toggle = (
+      <HiddenForSectionToggle
+        hidden={isHidden}
+        disabled={disabled}
+        onChange={onToggleHiddenScript}
+      />
+    );
 
     return (
       <TeacherInfoBox>
-        <div data-tip data-for={tooltipId} aria-describedby={tooltipId}>
-          <HiddenForSectionToggle
-            hidden={isHidden}
-            disabled={disabled}
-            onChange={onToggleHiddenScript}
-          />
-        </div>
-        <ReactTooltip
-          id={tooltipId}
-          role="tooltip"
-          wrapper="span"
-          effect="solid"
-          disable={!disabled}
-        >
-          {i18n.hiddenScriptTooltip()}
-        </ReactTooltip>
+        {disabled ? (
+          <Tooltip title={i18n.hiddenScriptTooltip()} placement="top">
+            {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex -- the control inside is disabled, so this wrapper is the only way to reach the reason */}
+            <div tabIndex={0}>{toggle}</div>
+          </Tooltip>
+        ) : (
+          <div>{toggle}</div>
+        )}
       </TeacherInfoBox>
     );
   }

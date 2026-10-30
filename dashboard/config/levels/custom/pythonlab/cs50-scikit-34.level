@@ -1,0 +1,42 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-02-18T17:04:18.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "ai_tutor_available": "true",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# CIW AI Associate Standard: 5.3\n# Standard Description: Describe how predictions or decisions are made with AI models.\n#\n# Rationale: AI doesn't just say \"Yes\" or \"No\". Internally, it calculates a \n# PROBABILITY (like 78% likely to rain). A \"Decision\" is made by comparing \n# that probability to a threshold (usually 50%). This tutorial shows how \n# to look under the hood of a prediction.\n\n\"\"\"\nWelcome! How does an AI \"make up its mind\"? \nIt's actually a two-step process:\n1. Prediction: The AI calculates a probability (e.g., 0.85).\n2. Decision: The computer compares that number to a limit (e.g., Is 0.85 > 0.5?).\n\nIf the limit (threshold) is 0.5, then 0.85 becomes a \"YES\".\n\"\"\"\n\nimport numpy as np\nfrom sklearn.linear_model import LogisticRegression\n\n# --- OUR DATA ---\n# X = Height of a Wave (meters)\n# y = 0 (Safe to swim) or 1 (Danger!)\nX = np.array([0.5, 0.8, 1.2, 1.5, 2.0, 2.5, 3.0, 4.0]).reshape(-1, 1)\ny = np.array([0, 0, 0, 0, 1, 1, 1, 1])\n\n# --- THE MODEL ---\nmodel = LogisticRegression()\nmodel.fit(X, y)\n\n# --- LOOKING UNDER THE HOOD ---\nprint(\"--- Step 1: Probabilities ---\")\n# Let's predict for a 2.2 meter wave\nnew_wave = [[2.2]]\nprob = model.predict_proba(new_wave)\n\nprint(f\"Wave Height: {new_wave[0][0]} meters\")\nprint(f\"Probability of being Safe (0): {prob[0][0]:.2%}\")\nprint(f\"Probability of being Dangerous (1): {prob[0][1]:.2%}\")\n\nprint(\"\\n--- Step 2: The Decision ---\")\n# The standard decision threshold is 0.5 (50%)\nprediction = model.predict(new_wave)\ndecision = \"DANGEROUS\" if prediction[0] == 1 else \"SAFE\"\n\nprint(f\"Final AI Decision: {decision}\")\nprint(f\"Reason: {prob[0][1]:.2f} is greater than 0.50\")\n\n\"\"\"\n--- YOUR TURN ---\nWhat if we want to be VERY safe? We can change the threshold!\n1. If our threshold is 0.10 (10%), would a wave with a 15% danger \n   chance be called \"Dangerous\"?\n2. Why might a doctor use a LOWER threshold (like 0.10) for \n   detecting a serious disease?\n\"\"\"\n\n# STARTING CODE FOR STUDENT:\n# TODO: Answer the questions!\n# Threshold_010_Result = \"___\"\n# Doctor_Reason = \"___\"\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFTDG6jyYgtI/CEUE/82dEkG4hlI8OLsdjJD0In8S\n03BB+jPkGgyYB0/9C3zqHMHEFpKeCsugYbpGMxzBNwrd7qASagJaFzMnVUyM\n2TXS7Hau9lj7JpZIHXn9fmxXRRANWTctDHAgY9Xzm2aa+5ykT2V3BpEyRA7L\nFcrysxe0rL64sOHkfo+EIHT3XYC5E1JjATiUDst47JOZbkOoy8InKo8H8/60\nR+NBILNZ2kkE64r3TLqT5JbKjOCiAEHgC/HDBHvr5AogOBx1PmqhymXrKj9C\nzHdPi5bu5L6KHhsAPFU9j6IdDdhUG7zn1jKW+kr/oOSRbqnDriJ3Pn4XdAG6\nJ/B88uEwJov0MkFgqhFOUM2jtOUt4co+XI/YTLgI7dmBBRUbkJhSLglPldgR\nbbjFqceiP1tRLdqNm3/w9qWhlwArU707gUtYNurYLb5pZvzpJ4G4GZgNal9p\nxyJlWAR0ZD2mkZ40B/iY7VOAbidatvrz8eQzJazhGZgbzFoaz/8IV/dVRan5\niz1/dt9KUHEvkLK+TcJgMF096zfShTuIsV/QUwpyGql0CNRwJgKiQvTEv5K7\nkDCRM1FB9Hdp6eUdJ1cIEicOWEOyljumpW3otDHYlkE0Hn2ssefoK4b24YOE\n54EwpJ23DBHDPbl+Vq+79HVvX1ZLk/CpCtBwVf7YoL6Ug7GvAiNlFBS/9jgC\n5ZCua39hjI8dcvRgtHBMd0NXqXg5192kOOYntUdRX4Zb3F0s24rMMggA/OjG\n4RRaIjEyXy1+vsSz7ztJNrnfhMr3ctxugY4L0HXI+sK/bqFIyNhIq6inBmk3\nR34xG0qcQ5RbupyJaP7RPV6iqK/Iqezif9UsVsmLj4J55ObQDD9uxlq2WYa9\nWTGF+OWRvpvVIvTZfsg7M2pPqGggC6Mt7iFZHN5nfeEq5bjWvgLsJP2gpFhS\nxsmRrnBqsUwUmOCxfqc7VpNFKju/ftccZTh3G7MUjQ8l4x1v1NcVifDp6vZM\n3QvcUvlYU6pCNiiU7TFI5gLs8g6z7tdQ7hEHjQ85MU/6htJv/+vgvyY3DkGo\nkvN9a4ouuaArZ26hvMRVVyHoe7SYVY41a8ctZv9HAD2iwVh1Pf5Tm/11ayo4\nG4aGYERmYRoZFzOZbbbnL3dTJb6DVqOOlfZVUk8QSDUzR6sEqQHDzb64A1GY\nB6SW0SwdHRMmHhBMcpkMGVgRL6mcv8YZOUMFpsqoYDyrTsrxfq1AMiBWpDUI\nWBfrWVF5xvMyofXqt8AXRDuGX0rDi6VjoYK2+zcbiQ==\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-18T17:04:18.217+00:00\",\"changed\":[\"cloned from \\\"cs50-scikit-33\\\"\"],\"cloned_from\":\"cs50-scikit-33\"},{\"changed_at\":\"2026-02-18 17:04:20 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:49:56 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:50:04 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Pythonlab>

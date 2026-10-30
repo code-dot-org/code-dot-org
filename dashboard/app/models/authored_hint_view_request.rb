@@ -36,6 +36,32 @@ require 'dynamic_config/gatekeeper'
 MAX_INT_VALUE = (2**31) - 1
 
 class AuthoredHintViewRequest < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :confidential,
+    user_id: :confidential,
+    script_id: :confidential,
+    level_id: :confidential,
+    hint_id: :confidential,
+    hint_class: :confidential,
+    hint_type: :confidential,
+    prev_time: :confidential,
+    prev_attempt: :confidential,
+    prev_test_result: :confidential,
+    prev_level_source_id: :confidential,
+    next_time: :confidential,
+    next_attempt: :confidential,
+    next_test_result: :confidential,
+    next_level_source_id: :confidential,
+    final_time: :confidential,
+    final_attempt: :confidential,
+    final_test_result: :confidential,
+    final_level_source_id: :confidential,
+    created_at: :confidential,
+    updated_at: :confidential,
+  )
+
   belongs_to :user, optional: true
   belongs_to :script, class_name: 'Unit'
   belongs_to :level

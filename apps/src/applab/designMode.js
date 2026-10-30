@@ -3,30 +3,32 @@ import 'jquery-ui/ui/effects/effect-drop';
 import 'jquery-ui/ui/widgets/draggable';
 import 'jquery-ui/ui/widgets/droppable';
 import 'jquery-ui/ui/widgets/resizable';
+import objectFitImages from 'object-fit-images';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import RGBColor from 'rgbcolor';
-import objectFitImages from 'object-fit-images';
-import DesignWorkspace from './DesignWorkspace';
+
+import autogenerateML from '@cdo/apps/applab/ai';
+import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
+
 import * as assetPrefix from '../assetManagement/assetPrefix';
-import elementLibrary from './designElements/library';
-import * as elementUtils from './designElements/elementUtils';
-import {singleton as studioApp} from '../StudioApp';
+import {ImageMode} from '../code-studio/components/AssetManager';
 import {KeyCodes, NOTIFICATION_ALERT_TYPE} from '../constants';
-import * as applabConstants from './constants';
-import sanitizeHtml from './sanitizeHtml';
-import * as utils from '../utils';
-import * as gridUtils from './gridUtils';
 import logToCloud from '../logToCloud';
+import {getStore} from '../redux';
+import {singleton as studioApp} from '../StudioApp';
+import * as utils from '../utils';
+
+import * as applabConstants from './constants';
+import * as elementUtils from './designElements/elementUtils';
+import elementLibrary from './designElements/library';
+import DesignWorkspace from './DesignWorkspace';
+import * as gridUtils from './gridUtils';
+import {resolveAppLabImagePath} from './imageUrlUtils';
 import {actions} from './redux/applab';
 import * as screens from './redux/screens';
-import {getStore} from '../redux';
-import firehoseClient from '../lib/util/firehose';
-import project from '../code-studio/initApp/project';
-import {ImageMode} from '../code-studio/components/AssetManager';
-import autogenerateML from '@cdo/apps/applab/ai';
-import MetricsReporter from '@cdo/apps/lib/metrics/MetricsReporter';
+import sanitizeHtml from './sanitizeHtml';
 
 var designMode = {};
 export default designMode;
@@ -371,7 +373,9 @@ designMode.updateProperty = function (
       }
 
       var backgroundImage = new Image();
-      backgroundImage.src = `${assetPrefix.fixPath(value)}${cacheBustSuffix}`;
+      backgroundImage.src = `${resolveAppLabImagePath(
+        value
+      )}${cacheBustSuffix}`;
       element.style.backgroundImage = 'url("' + backgroundImage.src + '")';
 
       // do not resize if only the asset path has changed (e.g. on remix).
@@ -396,7 +400,7 @@ designMode.updateProperty = function (
         url = assetPrefix.renderIconToString(value, element);
       } else {
         const screenImage = new Image();
-        screenImage.src = `${assetPrefix.fixPath(value)}${cacheBustSuffix}`;
+        screenImage.src = `${resolveAppLabImagePath(value)}${cacheBustSuffix}`;
         url = screenImage.src;
       }
       element.style.backgroundImage = 'url("' + url + '")';
@@ -419,7 +423,7 @@ designMode.updateProperty = function (
         element.src =
           value === ''
             ? '/blockly/media/1x1.gif'
-            : `${assetPrefix.fixPath(value)}${cacheBustSuffix}`;
+            : `${resolveAppLabImagePath(value)}${cacheBustSuffix}`;
       }
       break;
     case 'hidden':
@@ -612,27 +616,12 @@ designMode.readProperty = function (element, name) {
   }
 };
 
-const FIREHOSE_STUDY = 'applab';
-const FIREHOSE_GROUP = 'design_mode';
-
 designMode.onDuplicate = function (element, prevThemeName, event) {
   let isScreen = $(element).hasClass('screen');
   if (isScreen) {
     const newScreenId = duplicateScreen(element);
     return elementUtils.getPrefixedElementById(newScreenId);
   }
-
-  firehoseClient.putRecord({
-    study: FIREHOSE_STUDY,
-    study_group: FIREHOSE_GROUP,
-    event: 'duplicate_element',
-    project_id: project.getCurrentId(),
-    data_json: JSON.stringify({
-      elementId: element.id,
-      elementTag: element.tagName,
-      elementClass: element.className,
-    }),
-  });
   var duplicateElement = $(element).clone()[0];
   var dupLeft = parseInt(element.style.left, 10) + 10;
   var dupTop = parseInt(element.style.top, 10) + 10;
@@ -699,18 +688,6 @@ designMode.hasCustomizedThemeProperties = function (element) {
 var batchChangeId = 1;
 
 designMode.onRestoreThemeDefaults = function (element) {
-  firehoseClient.putRecord({
-    study: FIREHOSE_STUDY,
-    study_group: FIREHOSE_GROUP,
-    event: 'restore_theme_defaults',
-    project_id: project.getCurrentId(),
-    data_json: JSON.stringify({
-      elementId: element.id,
-      elementTag: element.tagName,
-      elementClass: element.className,
-    }),
-  });
-
   const currentThemeValue = elementLibrary.getCurrentTheme(
     designMode.activeScreen()
   );
@@ -841,16 +818,6 @@ designMode.changeThemeForScreen = function (screenElement, themeValue) {
 };
 
 function duplicateScreen(element) {
-  firehoseClient.putRecord({
-    study: FIREHOSE_STUDY,
-    study_group: FIREHOSE_GROUP,
-    event: 'duplicate_screen',
-    project_id: project.getCurrentId(),
-    data_json: JSON.stringify({
-      elementId: element.id,
-    }),
-  });
-
   const sourceScreen = $(element);
   const sourceScreenId = elementUtils.getId(element);
   const newScreenId = designMode.createScreen();
@@ -903,19 +870,6 @@ function duplicateScreen(element) {
 }
 
 designMode.onCopyElementToScreen = function (element, destScreen) {
-  firehoseClient.putRecord({
-    study: FIREHOSE_STUDY,
-    study_group: FIREHOSE_GROUP,
-    event: 'copy_to_screen',
-    project_id: project.getCurrentId(),
-    data_json: JSON.stringify({
-      elementId: element.id,
-      elementTag: element.tagName,
-      elementClass: element.className,
-      destinationScreen: destScreen,
-    }),
-  });
-
   const sourceElement = $(element);
   const prevThemeName = elementLibrary.getCurrentTheme(
     designMode.activeScreen()
@@ -959,17 +913,6 @@ designMode.onDeletePropertiesButton = function (element, event) {
 };
 
 function deleteElement(element) {
-  firehoseClient.putRecord({
-    study: FIREHOSE_STUDY,
-    study_group: FIREHOSE_GROUP,
-    event: 'delete_element',
-    project_id: project.getCurrentId(),
-    data_json: JSON.stringify({
-      elementId: element.id,
-      elementTag: element.tagName,
-      elementClass: element.className,
-    }),
-  });
   var isScreen = $(element).hasClass('screen');
   if ($(element.parentNode).is('.ui-resizable')) {
     element = element.parentNode;
@@ -1227,6 +1170,7 @@ function sanitizeLevelDom(levelDom) {
     '#codeApp',
     '#visualizationColumn',
     '#visualizationResizeBar',
+    '#null',
     '.editor-column',
   ];
 
@@ -1753,11 +1697,14 @@ designMode.renderDesignWorkspace = function (element) {
     ),
     autogenerateML,
   };
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={getStore()}>
       <DesignWorkspace {...props} />
     </Provider>,
-    designWorkspace
+    designWorkspace,
+    {
+      legacyReactDomRender: true,
+    }
   );
 };
 

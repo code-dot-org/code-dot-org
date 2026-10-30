@@ -1,0 +1,569 @@
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
+import TextField from '@code-dot-org/component-library/textField';
+import Toggle from '@code-dot-org/component-library/toggle';
+import {Alert, Tooltip} from '@mui/material';
+import {pick} from 'lodash';
+import React, {useEffect, useId, useRef, useState} from 'react';
+
+import {networkErrorMessage} from '@cdo/apps/quiz/networkError';
+import HttpClient from '@cdo/apps/util/HttpClient';
+
+import styles from './quiz-configuration-panel.module.scss';
+
+export interface QuizConfigurationData {
+  displayName?: string;
+  customIntroText?: string;
+  timeLimitMinutes?: number;
+  showCorrectness: boolean;
+  revealAnswerExplanation: boolean;
+  showIntroScreen: boolean;
+  purpose?: string;
+  allowMultipleAttempts: boolean;
+  showQuestionsAfterSubmit: boolean;
+}
+
+const INTRO_SCREEN_LOCKED_MESSAGE =
+  'A timed quiz must have an intro screen, remove the time limit first.';
+
+const PURPOSE_OPTIONS = [
+  {
+    value: 'check_for_understanding',
+    text: 'Check for understanding',
+    chooserDescription: 'A quick signal check during a lesson.',
+  },
+  {
+    value: 'practice',
+    text: 'Practice',
+    chooserDescription: 'For building skill on the content.',
+  },
+  {
+    value: 'exam',
+    text: 'Exam',
+    chooserDescription: 'A formal assessment of learning.',
+  },
+  {
+    value: 'exam_simulation',
+    text: 'Exam simulation',
+    chooserDescription: 'Cert-style timed exam practice.',
+  },
+];
+
+interface QuizConfigurableFields {
+  showIntroScreen: boolean;
+  timeLimitMinutes: number | null;
+  allowMultipleAttempts: boolean;
+  showCorrectness: boolean;
+  revealAnswerExplanation: boolean;
+  showQuestionsAfterSubmit: boolean;
+}
+
+// Applied once, only when a purpose is chosen for the first time.
+const PURPOSE_DEFAULTS: Record<string, QuizConfigurableFields> = {
+  check_for_understanding: {
+    showIntroScreen: false,
+    timeLimitMinutes: null,
+    allowMultipleAttempts: true,
+    showCorrectness: true,
+    revealAnswerExplanation: true,
+    showQuestionsAfterSubmit: true,
+  },
+  practice: {
+    showIntroScreen: false,
+    timeLimitMinutes: null,
+    allowMultipleAttempts: true,
+    showCorrectness: true,
+    revealAnswerExplanation: true,
+    showQuestionsAfterSubmit: true,
+  },
+  exam: {
+    showIntroScreen: true,
+    timeLimitMinutes: null,
+    allowMultipleAttempts: false,
+    showCorrectness: false,
+    revealAnswerExplanation: false,
+    showQuestionsAfterSubmit: false,
+  },
+  exam_simulation: {
+    showIntroScreen: true,
+    timeLimitMinutes: null,
+    allowMultipleAttempts: true,
+    showCorrectness: true,
+    revealAnswerExplanation: false,
+    showQuestionsAfterSubmit: false,
+  },
+};
+
+const ConfigCard: React.FunctionComponent<{
+  label: string;
+  children: React.ReactNode;
+}> = ({label, children}) => (
+  <fieldset className={styles.configCard}>
+    <legend className={styles.configCardHeader}>{label}</legend>
+    <div className={styles.configCardContent}>{children}</div>
+  </fieldset>
+);
+
+interface QuizConfigurationPanelProps {
+  quizId: number;
+  initialValues: QuizConfigurationData;
+  // Called on success with the server's values for the fields this save sent,
+  // so a caller can sync its own copy of the configuration without a reload.
+  onSaved: (updated: Partial<QuizConfigurationData>) => void;
+}
+
+const QuizConfigurationPanel: React.FunctionComponent<
+  QuizConfigurationPanelProps
+> = ({quizId, initialValues, onSaved}) => {
+  // Kept as a string while editing so the field can be genuinely empty
+  // (no time limit) rather than snapping to 0 - converted to a number or null on save.
+  const [timeLimitMinutes, setTimeLimitMinutes] = useState(
+    initialValues.timeLimitMinutes?.toString() || ''
+  );
+  const [timeLimitMinutesAtFocus, setTimeLimitMinutesAtFocus] =
+    useState(timeLimitMinutes);
+  const [showCorrectness, setShowCorrectness] = useState(
+    initialValues.showCorrectness
+  );
+  const [revealAnswerExplanation, setRevealAnswerExplanation] = useState(
+    initialValues.revealAnswerExplanation
+  );
+  const [showIntroScreen, setShowIntroScreen] = useState(
+    initialValues.showIntroScreen
+  );
+  // The workspace's intro screen card can also turn this off.
+  useEffect(() => {
+    setShowIntroScreen(initialValues.showIntroScreen);
+  }, [initialValues.showIntroScreen]);
+  // The backend requires the intro screen while a time limit is saved.
+  const isIntroScreenLocked =
+    !!initialValues.timeLimitMinutes && showIntroScreen;
+  const introScreenLockedMessageId = useId();
+  const [purpose, setPurpose] = useState(initialValues.purpose || '');
+  const [allowMultipleAttempts, setAllowMultipleAttempts] = useState(
+    initialValues.allowMultipleAttempts
+  );
+  const [showQuestionsAfterSubmit, setShowQuestionsAfterSubmit] = useState(
+    initialValues.showQuestionsAfterSubmit
+  );
+  const [savingField, setSavingField] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  const [timeLimitError, setTimeLimitError] = useState<string | null>(null);
+  const [displayName, setDisplayName] = useState(
+    initialValues.displayName ?? ''
+  );
+  const [displayNameAtFocus, setDisplayNameAtFocus] = useState(displayName);
+
+  const panelRef = useRef<HTMLDivElement>(null);
+  const previousSavingFieldRef = useRef<string | null>(null);
+  useEffect(() => {
+    if (previousSavingFieldRef.current && !savingField) {
+      panelRef.current
+        ?.querySelector<HTMLElement>(
+          `[name="${previousSavingFieldRef.current}"]`
+        )
+        ?.focus();
+    }
+    previousSavingFieldRef.current = savingField;
+  }, [savingField]);
+
+  // Every field autosaves individually.
+  const handleSave = async (
+    updatedConfigValues: Partial<QuizConfigurableFields> & {
+      purpose?: string | null;
+      displayName?: string | null;
+    } = {},
+    savingFieldName: string | null = null
+  ): Promise<boolean> => {
+    setError(null);
+    setTimeLimitError(null);
+    // Blank means "no time limit" which will be set to null. Otherwise, we need a positive integer.
+    const parsedTimeLimitMinutes =
+      'timeLimitMinutes' in updatedConfigValues
+        ? updatedConfigValues.timeLimitMinutes ?? null
+        : timeLimitMinutes === ''
+        ? null
+        : Number(timeLimitMinutes);
+    if (
+      parsedTimeLimitMinutes !== null &&
+      (!Number.isInteger(parsedTimeLimitMinutes) || parsedTimeLimitMinutes <= 0)
+    ) {
+      const message =
+        'Time limit must be a whole number of minutes greater than 0, or left blank for no limit.';
+      setError(message);
+      setTimeLimitError(message);
+      return false;
+    }
+    const effectiveShowIntroScreen =
+      updatedConfigValues.showIntroScreen ?? showIntroScreen;
+    if (parsedTimeLimitMinutes !== null && !effectiveShowIntroScreen) {
+      setError('Show intro screen is required when a time limit is set.');
+      return false;
+    }
+    setSavingField(savingFieldName);
+    try {
+      // Only the field(s) this save actually touches are sent.
+      const body: Partial<QuizConfigurableFields> & {
+        purpose?: string | null;
+      } = {...updatedConfigValues};
+      if (savingFieldName === 'timeLimitMinutes') {
+        body.timeLimitMinutes = parsedTimeLimitMinutes;
+      }
+      const response = await HttpClient.put(
+        `/levels/${quizId}/quiz_configuration`,
+        JSON.stringify(body),
+        true,
+        {'Content-Type': 'application/json'}
+      );
+      const saved: QuizConfigurationData = await response.json();
+      onSaved(pick(saved, Object.keys(body)));
+      return true;
+    } catch (error) {
+      setError(await networkErrorMessage(error));
+      return false;
+    } finally {
+      setSavingField(null);
+    }
+  };
+
+  const handleChoosePurpose = (purposeValue: string) => {
+    const defaults = PURPOSE_DEFAULTS[purposeValue];
+    setPurpose(purposeValue);
+    setShowIntroScreen(defaults.showIntroScreen);
+    setTimeLimitMinutes(defaults.timeLimitMinutes?.toString() ?? '');
+    setAllowMultipleAttempts(defaults.allowMultipleAttempts);
+    setShowCorrectness(defaults.showCorrectness);
+    setRevealAnswerExplanation(defaults.revealAnswerExplanation);
+    setShowQuestionsAfterSubmit(defaults.showQuestionsAfterSubmit);
+    void handleSave(
+      {
+        purpose: purposeValue,
+        ...defaults,
+      },
+      'purpose'
+    ).then(ok => {
+      if (!ok) setPurpose('');
+    });
+  };
+
+  const handlePurposeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const newPurpose = e.target.value;
+    const previous = purpose;
+    setPurpose(newPurpose);
+    void handleSave({purpose: newPurpose}, 'purpose').then(ok => {
+      if (!ok) setPurpose(previous);
+    });
+  };
+
+  const handleShowIntroScreenChange = (
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    const checked = e.target.checked;
+    setShowIntroScreen(checked);
+    void handleSave({showIntroScreen: checked}, 'showIntroScreen').then(ok => {
+      if (!ok) setShowIntroScreen(!checked);
+    });
+  };
+
+  const handleTimeLimitFocus = () => {
+    setTimeLimitMinutesAtFocus(timeLimitMinutes);
+  };
+
+  const handleTimeLimitBlur = () => {
+    if (timeLimitMinutes !== timeLimitMinutesAtFocus) {
+      void handleSave(undefined, 'timeLimitMinutes');
+    }
+  };
+
+  const handleAllowMultipleAttemptsChange = (
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    const checked = e.target.checked;
+    setAllowMultipleAttempts(checked);
+    void handleSave(
+      {allowMultipleAttempts: checked},
+      'allowMultipleAttempts'
+    ).then(ok => {
+      if (!ok) setAllowMultipleAttempts(!checked);
+    });
+  };
+
+  const handleShowCorrectnessChange = (
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    const checked = e.target.checked;
+    const previousReveal = revealAnswerExplanation;
+    setShowCorrectness(checked);
+    if (!checked) {
+      setRevealAnswerExplanation(false);
+    }
+    void handleSave(
+      {
+        showCorrectness: checked,
+        ...(!checked && {revealAnswerExplanation: false}),
+      },
+      'showCorrectness'
+    ).then(ok => {
+      if (!ok) {
+        setShowCorrectness(!checked);
+        if (!checked) {
+          setRevealAnswerExplanation(previousReveal);
+        }
+      }
+    });
+  };
+
+  const handleRevealAnswerExplanationChange = (
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    const checked = e.target.checked;
+    setRevealAnswerExplanation(checked);
+    void handleSave(
+      {revealAnswerExplanation: checked},
+      'revealAnswerExplanation'
+    ).then(ok => {
+      if (!ok) setRevealAnswerExplanation(!checked);
+    });
+  };
+
+  const handleShowQuestionsAfterSubmitChange = (
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    const checked = e.target.checked;
+    const previousReveal = revealAnswerExplanation;
+    setShowQuestionsAfterSubmit(checked);
+    if (!checked) {
+      setRevealAnswerExplanation(false);
+    }
+    void handleSave(
+      {
+        showQuestionsAfterSubmit: checked,
+        ...(!checked && {revealAnswerExplanation: false}),
+      },
+      'showQuestionsAfterSubmit'
+    ).then(ok => {
+      if (!ok) {
+        setShowQuestionsAfterSubmit(!checked);
+        if (!checked) {
+          setRevealAnswerExplanation(previousReveal);
+        }
+      }
+    });
+  };
+
+  const handleDisplayNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setDisplayName(e.target.value);
+  };
+
+  const handleDisplayNameFocus = () => {
+    setDisplayNameAtFocus(displayName);
+  };
+
+  const handleDisplayNameBlur = () => {
+    if (displayName === displayNameAtFocus) {
+      return;
+    }
+    const previous = displayNameAtFocus;
+    void handleSave({displayName}, 'displayName').then(ok => {
+      if (!ok) setDisplayName(previous);
+    });
+  };
+
+  return (
+    <div className={styles.panel} ref={panelRef}>
+      {error && (
+        <Alert severity="error" role="alert">
+          {error}
+        </Alert>
+      )}
+
+      {!purpose && (
+        <div className={styles.chooserSection}>
+          <div className={styles.chooserHeader}>
+            <p className={styles.chooserTitle}>What is this quiz for?</p>
+            <p className={styles.chooserSubtitle}>
+              Applies typical settings (you can change these).
+            </p>
+          </div>
+          <div className={styles.optionsList}>
+            {PURPOSE_OPTIONS.map(option => (
+              <button
+                key={option.value}
+                type="button"
+                className={styles.optionCard}
+                disabled={savingField === 'purpose'}
+                onClick={() => handleChoosePurpose(option.value)}
+              >
+                <span className={styles.optionName}>{option.text}</span>
+                <span className={styles.optionDescription}>
+                  {option.chooserDescription}
+                </span>
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+      {purpose && (
+        <>
+          <div className={styles.section}>
+            <SimpleDropdown
+              name="purpose"
+              size="s"
+              color="gray"
+              labelText="Purpose"
+              items={PURPOSE_OPTIONS}
+              selectedValue={purpose}
+              disabled={savingField === 'purpose'}
+              onChange={handlePurposeChange}
+              styleAsFormField
+              className={styles.fullWidthDropdown}
+            />
+          </div>
+          <ConfigCard label="content">
+            <div className={styles.cardRow}>
+              <TextField
+                label="Quiz display name"
+                name="displayName"
+                size="s"
+                inputType="text"
+                color="gray"
+                className={styles.fullWidthField}
+                helperMessage="Leave unset to use level name as quiz title"
+                value={displayName}
+                onChange={handleDisplayNameChange}
+                onFocus={handleDisplayNameFocus}
+                onBlur={handleDisplayNameBlur}
+              />
+            </div>
+            <div className={styles.cardRow}>
+              <div className={styles.toggleWithHelper}>
+                <Tooltip
+                  title={isIntroScreenLocked ? INTRO_SCREEN_LOCKED_MESSAGE : ''}
+                  placement="top-end"
+                >
+                  <div className={styles.toggleRow}>
+                    <span className={styles.toggleLabel}>
+                      Show intro screen
+                    </span>
+                    <Toggle
+                      name="showIntroScreen"
+                      aria-label="Show intro screen"
+                      size="s"
+                      disabled={
+                        savingField === 'showIntroScreen' || isIntroScreenLocked
+                      }
+                      aria-describedby={
+                        isIntroScreenLocked
+                          ? introScreenLockedMessageId
+                          : undefined
+                      }
+                      checked={showIntroScreen}
+                      onChange={handleShowIntroScreenChange}
+                    />
+                  </div>
+                </Tooltip>
+                {/* A disabled toggle can't take focus, so the tooltip is mouse-only. */}
+                {isIntroScreenLocked && (
+                  <span
+                    id={introScreenLockedMessageId}
+                    className={styles.visuallyHidden}
+                  >
+                    {INTRO_SCREEN_LOCKED_MESSAGE}
+                  </span>
+                )}
+                <p className={styles.cardHelperText}>
+                  Edit intro screen contents in the workspace
+                </p>
+              </div>
+            </div>
+          </ConfigCard>
+          <ConfigCard label="rules">
+            <div className={styles.cardRow}>
+              <TextField
+                label="Set time limit"
+                name="timeLimitMinutes"
+                inputType="number"
+                min={1}
+                step={1}
+                size="s"
+                color="gray"
+                className={styles.fullWidthField}
+                placeholder="minutes"
+                helperMessage="Leave unset for no time limit"
+                errorMessage={timeLimitError ?? undefined}
+                disabled={savingField === 'timeLimitMinutes'}
+                value={timeLimitMinutes}
+                onChange={e => setTimeLimitMinutes(e.target.value)}
+                onFocus={handleTimeLimitFocus}
+                onBlur={handleTimeLimitBlur}
+              />
+            </div>
+            <div className={styles.cardRow}>
+              <div className={styles.toggleRow}>
+                <span className={styles.toggleLabel}>
+                  Allow multiple attempts
+                </span>
+                <Toggle
+                  name="allowMultipleAttempts"
+                  aria-label="Allow multiple attempts"
+                  size="s"
+                  disabled={savingField === 'allowMultipleAttempts'}
+                  checked={allowMultipleAttempts}
+                  onChange={handleAllowMultipleAttemptsChange}
+                />
+              </div>
+            </div>
+          </ConfigCard>
+          <ConfigCard label="feedback">
+            <div className={styles.cardRow}>
+              <div className={styles.toggleRow}>
+                <span className={styles.toggleLabel}>
+                  Show questions after submit
+                </span>
+                <Toggle
+                  name="showQuestionsAfterSubmit"
+                  aria-label="Show questions after submit"
+                  size="s"
+                  disabled={savingField === 'showQuestionsAfterSubmit'}
+                  checked={showQuestionsAfterSubmit}
+                  onChange={handleShowQuestionsAfterSubmitChange}
+                />
+              </div>
+            </div>
+            <div className={styles.cardRow}>
+              <div className={styles.toggleRow}>
+                <span className={styles.toggleLabel}>Show correctness</span>
+                <Toggle
+                  name="showCorrectness"
+                  aria-label="Show correctness"
+                  size="s"
+                  disabled={savingField === 'showCorrectness'}
+                  checked={showCorrectness}
+                  onChange={handleShowCorrectnessChange}
+                />
+              </div>
+              {showCorrectness && showQuestionsAfterSubmit && (
+                <div className={styles.conditionalWrap}>
+                  <div className={styles.toggleRow}>
+                    <span className={styles.toggleLabel}>
+                      Reveal answer and explanation
+                    </span>
+                    <Toggle
+                      name="revealAnswerExplanation"
+                      aria-label="Reveal answer and explanation"
+                      size="s"
+                      disabled={savingField === 'revealAnswerExplanation'}
+                      checked={revealAnswerExplanation}
+                      onChange={handleRevealAnswerExplanationChange}
+                    />
+                  </div>
+                </div>
+              )}
+            </div>
+          </ConfigCard>
+        </>
+      )}
+    </div>
+  );
+};
+
+export default QuizConfigurationPanel;

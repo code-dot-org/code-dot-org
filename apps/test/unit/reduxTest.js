@@ -1,4 +1,5 @@
-import {expect} from 'chai';
+import {expect} from 'chai'; // eslint-disable-line no-restricted-imports
+
 import {
   stubRedux,
   restoreRedux,

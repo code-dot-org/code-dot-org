@@ -1,0 +1,104 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "ui": "tui",
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      "outputs": ["dist/**"]
+    },
+    "clean": {
+      "cache": false,
+      "dependsOn": ["^clean"]
+    },
+    "//#format": {},
+    "//#format:fix": {},
+    "release:dryrun": {
+      "dependsOn": ["build", "lint", "test"]
+    },
+    "lint": {
+      "dependsOn": [
+        "build",
+        "^lint",
+        "prettier",
+        "stylelint",
+        "typecheck",
+        "//#format"
+      ]
+    },
+    "lint:fix": {
+      "dependsOn": [
+        "build",
+        "^lint:fix",
+        "prettier:fix",
+        "stylelint:fix",
+        "//#format:fix"
+      ]
+    },
+    "prettier": {
+      "dependsOn": ["^prettier"]
+    },
+    "prettier:fix": {
+      "dependsOn": ["^prettier:fix"]
+    },
+    "stylelint": {
+      "dependsOn": ["^stylelint"]
+    },
+    "stylelint:fix": {
+      "dependsOn": ["^stylelint:fix"]
+    },
+    "typecheck": {
+      "dependsOn": ["^build", "^typecheck"]
+    },
+    "test": {
+      "dependsOn": ["^build", "^test"]
+    },
+    "test:ui": {
+      "cache": false,
+      "dependsOn": ["^build", "^test:ui"],
+      "passThroughEnv": [
+        "APPLITOOLS_API_KEY",
+        "APPLITOOLS_BATCH_ID",
+        "APPLITOOLS_BATCH_NAME",
+        "APPLITOOLS_BRANCH",
+        "HOME",
+        "PLAYWRIGHT_BROWSERS_PATH",
+        "PLAYWRIGHT_PROVIDER",
+        "STAGE",
+        "TARGET_URL",
+        "VISUAL_PROVIDER"
+      ]
+    },
+    "test:ui:ci": {
+      "cache": false,
+      "dependsOn": ["build", "^test:ui:ci"],
+      "passThroughEnv": [
+        "APPLITOOLS_API_KEY",
+        "APPLITOOLS_BATCH_ID",
+        "APPLITOOLS_BATCH_NAME",
+        "APPLITOOLS_BRANCH",
+        "APPLITOOLS_SHOULD_REPORT_FAILURE",
+        "GITHUB_*",
+        "HOME",
+        "PLAYWRIGHT_BROWSERS_PATH",
+        "PLAYWRIGHT_PROVIDER",
+        "STAGE",
+        "TARGET_URL",
+        "VISUAL_PROVIDER"
+      ]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true,
+      "dependsOn": ["^build"]
+    },
+    "deploy": {
+      "cache": false,
+      "dependsOn": ["build"]
+    },
+    "release": {
+      "cache": false,
+      "dependsOn": ["release:dryrun"]
+    }
+  }
+}

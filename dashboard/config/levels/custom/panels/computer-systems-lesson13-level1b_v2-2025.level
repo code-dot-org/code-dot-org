@@ -1,0 +1,50 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-09-25T20:01:04.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "true",
+    "panels": [
+      {
+        "text": "## Target 2.3\nSupport small-scale food producers to enhance agricultural productivity and incomes.\n\n---\n\n* Small-scale farmers produce a large share of the world’s food but often face economic challenges.\n* Improving access to technology, better seeds, and data-driven farming can boost productivity.\n* Climate change, water shortages, and soil depletion threaten small farms.\n* AI, IoT sensors, and mobile apps can help farmers monitor weather, soil conditions, and crop health.\n* Expanding market access and fair trade opportunities helps increase farmer incomes.",
+        "imageUrl": "https://images.code.org/c7df9bfd85d903f570957c10c72a8acc-Pasted Graphic 12.png",
+        "key": "undefined-0c1fb390-a121-4557-8293-598810105ff5",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Target 6.1\nEnsure equitable access to clean and safe drinking water.\n\n---\n\n* Millions of people worldwide lack reliable access to safe drinking water.\n* Contaminated water can spread diseases like cholera and dysentery.\n* Water filtration, purification, and real-time monitoring improve safety.\n* IoT sensors and AI can detect contamination and send alerts.\n* Governments and organizations work to expand water infrastructure and reduce pollution sources.",
+        "imageUrl": "https://images.code.org/202b9a87c90f457ba55798d3f78f89d3-Pasted Graphic 13.png",
+        "key": "undefined-ca8e36c6-6a0a-4a28-8b84-9d8916597600",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Target 6.3\nUse real-time systems to monitor and reduce water pollution.\n\n---\n\n* Water pollution comes from industrial waste, agricultural runoff, and plastic contamination.\n* Polluted water harms ecosystems, drinking supplies, and marine life.\n* Sensors and AI-driven monitoring can track pollution levels in real time.\n* Smart filtration systems and wastewater treatment help reduce contamination.\n* Reducing plastic waste and chemical runoff prevents further pollution.",
+        "imageUrl": "https://images.code.org/2729156d633678c30217528bcc42d838-Pasted Graphic 14.png",
+        "key": "computer-systems-category-1-bb1d2416-8b0a-4842-a58a-8538eb9357db",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Target 12.2\nImprove resource efficiency and reduce waste to optimize material use.\n\n---\n\n* Overuse of natural resources leads to depletion of forests, minerals, and clean water.\n* Sustainable production and recycling help conserve materials and energy.\n* AI and data analytics can optimize supply chains and reduce waste.\n* Businesses use circular economy models to reuse materials and extend product life.\n* Consumers can reduce waste by choosing eco-friendly products and responsible consumption.",
+        "imageUrl": "https://images.code.org/95e681ebf6bdf8e2eb2743b069aeef7c-Pasted Graphic 15.png",
+        "key": "computer-systems-category-1-95acf92d-4511-460e-8d55-3eb50c6fba19",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Target 15.5\nTrack and prevent biodiversity loss to protect endangered species.\n\n---\n\n* Habitat destruction and poaching threaten wildlife populations.\n* Losing species disrupts ecosystems and food chains.\n* Satellite imaging, drones, and tracking collars help monitor endangered species.\n* AI-powered models predict habitat loss and climate threats.\n* Conservation efforts focus on protected areas, anti-poaching technologies, and habitat restoration.",
+        "imageUrl": "https://images.code.org/9148efe4101e596f8655c8ffc0e06f95-Pasted Graphic 16.png",
+        "key": "computer-systems-category-1-a645bb31-bb05-4f65-9ac1-bb632f240484",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "bubble_choice_description": "Design computer systems to improve how we use food, water, and natural resources while protecting the environment.",
+    "display_name": "Resource Management",
+    "thumbnail_url": "https://images.code.org/bab2aca7303bc4c001cbc2867b02e939-Pasted Graphic 28.png",
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T20:01:04.484+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson13-level1b_2025\\\"\"],\"cloned_from\":\"computer-systems-lesson13-level1b_2025\"}]"
+}]]></config>
+</Panels>

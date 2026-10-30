@@ -1,10 +1,12 @@
-import React from 'react';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
-import i18n from '@cdo/locale';
-import Button from '@cdo/apps/templates/Button';
-import UnitCalendarDialog from './UnitCalendarDialog';
+import React from 'react';
+
 import {unitCalendarLesson} from '@cdo/apps/templates/progress/unitCalendarLessonShapes';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import i18n from '@cdo/locale';
+
+import UnitCalendarDialog from './UnitCalendarDialog';
 
 export default class UnitCalendarButton extends React.Component {
   static propTypes = {
@@ -22,17 +24,6 @@ export default class UnitCalendarButton extends React.Component {
 
   openDialog = () => {
     this.setState({isDialogOpen: true});
-    firehoseClient.putRecord(
-      {
-        study: 'script_overview_actions',
-        study_group: 'unit_calendar',
-        event: 'open_unit_calendar',
-        data_json: JSON.stringify({
-          script_id: this.props.scriptId,
-        }),
-      },
-      {includeUserId: true}
-    );
   };
 
   closeDialog = () => {
@@ -42,24 +33,24 @@ export default class UnitCalendarButton extends React.Component {
   render() {
     return (
       <div>
-        <Button
+        <MuiButton
           onClick={this.openDialog}
-          text={i18n.viewCalendarButton()}
-          icon="calendar"
-          color={Button.ButtonColor.blue}
+          variant="contained"
+          color="primary"
+          startIcon={<FontAwesomeV6Icon iconName="calendar" />}
           style={styles.button}
+        >
+          {i18n.viewCalendarButton()}
+        </MuiButton>
+        <UnitCalendarDialog
+          isOpen={this.state.isDialogOpen}
+          handleClose={this.closeDialog}
+          lessons={this.props.lessons}
+          weeklyInstructionalMinutes={
+            this.props.weeklyInstructionalMinutes || 225
+          }
+          scriptId={this.props.scriptId}
         />
-        {this.state.isDialogOpen && (
-          <UnitCalendarDialog
-            isOpen={true}
-            handleClose={this.closeDialog}
-            lessons={this.props.lessons}
-            weeklyInstructionalMinutes={
-              this.props.weeklyInstructionalMinutes || 225
-            }
-            scriptId={this.props.scriptId}
-          />
-        )}
       </div>
     );
   }
@@ -67,7 +58,7 @@ export default class UnitCalendarButton extends React.Component {
 
 const styles = {
   button: {
-    margin: 0,
-    boxShadow: 'inset 0 2px 0 0 rgb(255 255 255 / 40%)',
+    margin: '5px 0px 0px',
+    boxShadow: 'none',
   },
 };

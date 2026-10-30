@@ -1,0 +1,35 @@
+.teacherOnboardingModal {
+  max-height: calc(95vh - 100px);
+  overflow: hidden;
+
+  > div:nth-of-type(2) {
+    flex: 1 1 auto;
+    min-height: 0;
+    max-height: none;
+    overflow: auto;
+    align-self: stretch;
+  }
+}
+
+.onboardingContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: start;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sectionHeading {
+  color: var(--text-brand-teal-primary);
+  margin-bottom: 0;
+}
+
+.componentsList {
+  margin: 0;
+  padding-inline-start: 1.5rem;
+}

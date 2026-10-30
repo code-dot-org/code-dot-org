@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import Foorm from '../../Foorm';
 import {connect} from 'react-redux';
+
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+
+import Foorm from '../../Foorm';
 
 // Preview panel for Foorm editor.
 class FoormEntityEditorPreview extends Component {
@@ -20,7 +22,7 @@ class FoormEntityEditorPreview extends Component {
     return this.props.errorMessages.map((errorMessage, i) => {
       return (
         <div style={styles.errorMessage} key={i}>
-          <FontAwesome icon="exclamation-triangle" /> {errorMessage}
+          <FontAwesome icon="triangle-exclamation" /> {errorMessage}
         </div>
       );
     });

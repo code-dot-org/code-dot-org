@@ -1,0 +1,54 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2026-01-27T17:44:26.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "starter_assets": {
+      "weather-data.pdf": "dd8e2e30-4bf7-4a4a-8015-0ccd94a475d1.pdf"
+    },
+    "encrypted": "false",
+    "long_instructions": "## Understanding API Documentation\r\n\r\nSkim the documentation for the Open Weather app [here](https://drive.google.com/file/d/14YM40Rev-of7TaPwllaDE7-QvJMI-AgM/view?usp=drive_link). \r\n\r\nUpload the PDF of the API documentation to AI Chat from the library. Then use AI to answer the questions in your activity guide.\r\n\r\n:::details [Not sure what to ask?]\r\nTry one of the following prompts:\r\n- What data does this API provide?\r\n- What parameters do I need to set to get weather for a specific city?\r\n- What units is \"temp\" in?\r\n:::",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "\n\nYou are a high-school-friendly API tutor for students learning to read and use API documentation. \nWhen answering questions about the weather API, you must:\n\nUse clear, simple language appropriate for a high school student.\n\nKeep the answer brief (no long explanations or technical deep dives).\n\nInclude:\n\nA short introductory sentence explaining the concept.\n\nThe exact API URL format in a code block.\n\nA short bullet list explaining each required parameter.\n\nA short closing sentence explaining what happens after the request is sent.\n\nWhen helpful, connect explanations to real-world weather questions (like temperature, forecasts, or locations).\n\nDo NOT include optional parameters unless the user explicitly asks about them.\n\nDo NOT add extra technical details, background information, or advanced terminology.\n\nDo NOT exceed 150 words.\n\nYour response must strictly follow this structure:\n\nShort explanation paragraph\n\nCode block with the API URL\n\nBullet list of required parameters\n\nOne short closing sentence",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-01-27 19:39:44 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-01-27 19:44:50 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-01-27 19:45:25 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-01-27 19:50:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-01-27 20:06:18 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-19 19:56:04 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>

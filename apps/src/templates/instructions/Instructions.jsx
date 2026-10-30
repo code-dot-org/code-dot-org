@@ -1,11 +1,13 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import MarkdownInstructions from './MarkdownInstructions';
-import InputOutputTable from './InputOutputTable';
-import AniGifPreview from './AniGifPreview';
-import ImmersiveReaderButton from './ImmersiveReaderButton';
-import ExampleImage from './ExampleImage';
+
 import i18n from '@cdo/locale';
+
+import AniGifPreview from './AniGifPreview';
+import ExampleImage from './ExampleImage';
+import ImmersiveReaderButton from './ImmersiveReaderButton';
+import InputOutputTable from './InputOutputTable';
+import MarkdownInstructions from './MarkdownInstructions';
 
 /**
  * A component for displaying our level instructions text, and possibly also
@@ -17,6 +19,7 @@ export default class Instructions extends React.Component {
   static propTypes = {
     instructions: PropTypes.string,
     imgURL: PropTypes.string,
+    imgAlt: PropTypes.string,
     authoredHints: PropTypes.element,
     inputOutputTable: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.number)),
     inTopPane: PropTypes.bool,
@@ -41,6 +44,7 @@ export default class Instructions extends React.Component {
       noInstructionsWhenCollapsed,
       inputOutputTable,
       imgURL,
+      imgAlt,
       authoredHints,
     } = this.props;
 
@@ -64,8 +68,8 @@ export default class Instructions extends React.Component {
           </>
         )}
         {inputOutputTable && <InputOutputTable data={inputOutputTable} />}
-        {imgURL && !inTopPane && <ExampleImage src={imgURL} />}
-        {imgURL && inTopPane && <AniGifPreview />}
+        {imgURL && !inTopPane && <ExampleImage src={imgURL} alt={imgAlt} />}
+        {imgURL && inTopPane && <AniGifPreview alt={imgAlt} />}
         {authoredHints}
       </div>
     );

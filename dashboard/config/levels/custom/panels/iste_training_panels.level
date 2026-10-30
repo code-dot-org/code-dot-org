@@ -1,0 +1,39 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-06-25T13:51:04.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "true",
+    "panels": [
+      {
+        "text": "## AI Learns from Examples\n\nAI models learn from large collections of training data, such as images, text, or other examples. When an AI image tool creates a “healthy meal,” it is not using personal judgment or real-world understanding. It is using patterns from examples it has seen before. Responsible AI use means remembering that AI outputs come from data, and that data may not represent every person, culture, or situation equally.",
+        "imageUrl": "https://images.code.org/0b0b46989e897ca4dae4989158f5588e-iste_healthy_train_panel.png",
+        "key": "Generate_dancer_info-93102ee9-aa96-4429-aafb-52f8fe7fd787",
+        "layout": "text-top-right",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "## AI Finds Repeated Features\n\nAs AI looks across many examples, it starts to notice features that show up again and again. For a “healthy meal,” it might connect healthy eating with chicken, leafy greens, tomatoes, broccoli, or a certain style of plate. These patterns can be useful, but they can also narrow what AI treats as normal. Responsible AI use means asking, “What pattern is AI repeating, and what might be missing?”",
+        "imageUrl": "https://images.code.org/8e8467b5dac9b39d466920cb9922c64d-iste_healthy_pattern_panel.png",
+        "key": "Generate_dancer_info-e349bed8-89d6-4efc-8a0e-29b8a1e5afb1",
+        "layout": "text-top-right",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "## AI Fills in the Gaps\n\nWhen a prompt is broad, AI often fills in missing details using the patterns it has learned. That is why a simple prompt like “healthy meal” may produce a familiar-looking image instead of showing many different healthy foods from different cultures, diets, or needs. Responsible AI use means checking the output, noticing assumptions, and adding more specific context when the first result is too narrow.",
+        "imageUrl": "https://images.code.org/18a7f8939b588b0dd0422aad446024b6-iste_healthy_output_panel.png",
+        "key": "Generate_dancer_info-35731f8b-92f2-4309-954a-d8481cc58b14",
+        "layout": "text-top-right",
+        "fadeInOverPrevious": true
+      }
+    ],
+    "name_suffix": "_2026",
+    "use_links": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-06-25T13:51:04.300+00:00\",\"changed\":[\"cloned from \\\"iste_prompting_panels\\\"\"],\"cloned_from\":\"iste_prompting_panels\"},{\"changed_at\":\"2026-06-25 14:13:40 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22603,\"changed_by_email\":\"sam.morris+level@code.org\"}]"
+}]]></config>
+</Panels>

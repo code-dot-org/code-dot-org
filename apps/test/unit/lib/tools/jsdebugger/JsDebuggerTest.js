@@ -1,15 +1,12 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
+import {act} from 'react-dom/test-utils';
 import {Provider} from 'react-redux';
-import {mount} from 'enzyme';
-import {expect} from '../../../../util/deprecatedChai';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
+import dom from '@cdo/apps/dom';
 import JsDebugger from '@cdo/apps/lib/tools/jsdebugger/JsDebugger';
 import {actions, reducers} from '@cdo/apps/lib/tools/jsdebugger/redux';
-import {
-  allowConsoleWarnings,
-  createMouseEvent,
-} from '../../../../util/testUtils.js';
-import * as utils from '@cdo/apps/utils';
 import {
   getStore,
   registerReducers,
@@ -18,8 +15,14 @@ import {
 } from '@cdo/apps/redux';
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
-import {sandboxDocumentBody} from '../../../../util/testUtils';
-import dom from '@cdo/apps/dom';
+import * as utils from '@cdo/apps/utils';
+
+import {expect} from '../../../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
+import {
+  allowConsoleWarnings,
+  createMouseEvent,
+  sandboxDocumentBody,
+} from '../../../../util/testUtils.js';
 
 describe('The JSDebugger component', () => {
   // TODO: (madelynkasula) Silences componentWillUpdate deprecation warning due to React 16 upgrade.
@@ -88,8 +91,8 @@ describe('The JSDebugger component', () => {
 
   const debugAreaEl = () => root.find('#debug-area');
   const paneHeader = () => root.find('PaneHeader');
-  const closeIcon = () => paneHeader().find('.fa-chevron-circle-down');
-  const openIcon = () => paneHeader().find('.fa-chevron-circle-up');
+  const closeIcon = () => paneHeader().find('.fa-chevron-down');
+  const openIcon = () => paneHeader().find('.fa-chevron-up');
   const resizeBar = () => root.find('#debugResizeBar');
   const watchersResizeBar = () => root.find('#watchersResizeBar');
   const debugConsole = () => root.find('#debug-console');
@@ -110,7 +113,9 @@ describe('The JSDebugger component', () => {
 
   describe('clicking the close icon', () => {
     beforeEach(() => {
-      jsDebugger.instance().slideToggle();
+      act(() => {
+        jsDebugger.instance().slideToggle();
+      });
       jsDebugger.update();
     });
 
@@ -129,7 +134,9 @@ describe('The JSDebugger component', () => {
 
     describe('Then clicking the open icon', () => {
       beforeEach(() => {
-        jsDebugger.instance().slideToggle();
+        act(() => {
+          jsDebugger.instance().slideToggle();
+        });
         jsDebugger.update();
       });
 
@@ -152,17 +159,23 @@ describe('The JSDebugger component', () => {
 
       describe('And resizing the debug area with other code', () => {
         beforeEach(() => {
-          jsDebugger.instance().setDebugHeight(350);
+          act(() => {
+            jsDebugger.instance().setDebugHeight(350);
+          });
           jsDebugger.update();
         });
 
         it('will make closing and opening the debugger return to the same height', () => {
           expect(debugAreaEl().instance().style.height).to.equal('350px');
           // close
-          jsDebugger.instance().slideToggle();
+          act(() => {
+            jsDebugger.instance().slideToggle();
+          });
           jsDebugger.update();
           // re-open
-          jsDebugger.instance().slideToggle();
+          act(() => {
+            jsDebugger.instance().slideToggle();
+          });
           jsDebugger.update();
           expect(debugAreaEl().instance().style.height).to.equal('350px');
         });
@@ -198,17 +211,30 @@ describe('The JSDebugger component', () => {
 
       describe('when the mouse is moved', () => {
         it('changes the height of the debugger', () => {
-          document.body.dispatchEvent(
-            createMouseEvent('touchmove', 0, window.innerHeight - 200)
+          const mouseEvent = createMouseEvent(
+            'touchmove',
+            0,
+            window.innerHeight - 200
           );
+
+          mouseEvent.pageY = 568;
+
+          document.body.dispatchEvent(mouseEvent);
           jsDebugger.update();
           expect(debugAreaEl().instance().style.height).to.equal('200px');
         });
 
         it('and will do so multiple times', () => {
-          document.body.dispatchEvent(
-            createMouseEvent('touchmove', 0, window.innerHeight - 180)
+          const mouseEvent = createMouseEvent(
+            'touchmove',
+            0,
+            window.innerHeight - 200
           );
+
+          mouseEvent.pageY = 588;
+
+          document.body.dispatchEvent(mouseEvent);
+
           jsDebugger.update();
           expect(debugAreaEl().instance().style.height).to.equal('180px');
         });

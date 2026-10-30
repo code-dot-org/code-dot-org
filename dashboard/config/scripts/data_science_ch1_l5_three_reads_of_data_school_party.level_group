@@ -1,0 +1,10 @@
+name 'Data Science Ch1 L5 Three Reads of Data - School Party'
+title 'Three Reads of Data - School Party Survey'
+submittable 'false'
+anonymous 'false'
+
+page
+text 'Data Science Ch1 L5 Three Reads of Data - School Party Data'
+level 'Data Science Ch1 L5 Three Reads of Data - School Party Read1'
+level 'Data Science Ch1 L5 Three Reads of Data - School Party Read2'
+level 'Data Science Ch1 L5 Three Reads of Data - School Party Read3'

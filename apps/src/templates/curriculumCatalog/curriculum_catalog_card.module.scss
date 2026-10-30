@@ -1,5 +1,5 @@
 @use 'sass:math';
-@import 'phase1-design-system';
+@import '2022-rebrand-update';
 @import 'breakpoints';
 
 $border-radius: 4px;
@@ -8,7 +8,7 @@ $container-width: 309px;
 .curriculumCatalogCardContainer {
   display: flex;
   flex-flow: column;
-  background-color: $neutral_light;
+  background-color: var(--background-neutral-primary);
   border-radius: $border-radius;
   width: $container-width;
 
@@ -16,6 +16,10 @@ $container-width: 309px;
     height: 140px;
     object-fit: cover;
     border-radius: $border-radius $border-radius 0 0;
+  }
+
+  .iconWithDescription {
+    margin: 0 0 0.5em 0;
   }
 }
 
@@ -31,18 +35,18 @@ $container-width: 309px;
   display: flex;
   flex-flow: column;
   height: 100%;
-  border: 1px solid $neutral_dark20;
+  border: 1px solid var(--borders-neutral-primary);
   border-top: 0;
   border-radius: 0 0 $border-radius $border-radius;
   padding: 1.25em 1em;
 
   i {
-    color: $neutral_dark80;
+    color: var(--text-neutral-secondary);
   }
 
   h4 {
     margin-bottom: 0.75em;
-    color: $neutral_dark;
+    color: var(--text-neutral-primary);
 
     // Shows max two lines before truncating with ellipsis
     // See https://css-tricks.com/line-clampin/
@@ -65,67 +69,15 @@ $container-width: 309px;
   }
 }
 
-.labelsContainer {
-  display: flex;
-  column-gap: 0.5em;
-
-  > div {
-    // font styles
-    @include main-font-semi-bold;
-    font-size: 0.75em;
-    line-height: 0.875em;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: $neutral-dark;
-
-    // label styles
-    padding: 0.6em 0.75em 0 0.75em;
-    background-color: $brand_primary_light;
-    border-radius: 1em;
-
-    // ellipsis overflow
-    max-width: 15em;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-}
-
-.labelTooltip {
-  opacity: 1;
-  margin-bottom: 0.75em;
-  pointer-events: none;
-
-  :global(.tooltip-inner) { /* stylelint-disable-line selector-pseudo-class-no-unknown */
-    border-radius: 5px;
-    color: #fff;
-    background-color: #222;
-
-    p {
-      color: #fff;
-      margin: 0;
-    }
-  }
-
-  :global(.tooltip-arrow) { /* stylelint-disable-line selector-pseudo-class-no-unknown */
-    left: 50%;
-    bottom: 0;
-    border: 15px solid transparent;
-    border-top: 15px solid #222;
-    transform: translate(-50%, calc(100% - 8px));
-  }
-}
-
 .iconWithDescription {
   display: flex;
   align-items: center;
   column-gap: 0.5em;
-  margin: 0 0 0.5em 0;
 
   > p {
     font-size: 0.875em;
     margin: 0;
-    color: $neutral_dark;
+    color: var(--text-neutral-primary);
   }
 
   i {
@@ -195,24 +147,26 @@ $container-width: 309px;
   }
 
   .arrowContainer:before {
-    background: $neutral_light;
+    background: var(--background-neutral-secondary);
   }
 }
 
 .expandedCard {
   .curriculumInfoContainer {
-    border-color: $neutral-dark !important;
+    border-color: var(--borders-neutral-solid) !important;
   }
 }
 
-.buttonFlex {
+button.buttonFlex {
   flex: 1;
 }
 
-// !important tags needed here in order to override Button styling that makes the Learn More button appear at all times.
-.teacherAndSignedOutLearnMoreButton {
-  display: none !important;
+.buttonsContainer a.teacherAndSignedOutLearnMoreButton,
+.wideCardButtonsContainer a.teacherAndSignedOutLearnMoreButton {
+  display: none;
   text-align: center;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .studentLearnMoreButton {
@@ -228,17 +182,90 @@ $container-width: 309px;
     display: none !important;
   }
 
-  .teacherAndSignedOutLearnMoreButton {
+  .buttonsContainer a.teacherAndSignedOutLearnMoreButton {
     display: block !important;
   }
 
-  .quickViewButton {
+  button.quickViewButton {
     display: none !important;
   }
 
   .expandedCard {
     .curriculumInfoContainer {
-      border-color: $neutral_dark20 !important;
+      border-color: var(--borders-neutral-primary) !important;
     }
   }
+
+  .wideCardButtonsContainer a.teacherAndSignedOutLearnMoreButton {
+    display: block;
+  }
+}
+
+@media screen and (max-width: $width-sm) {
+  .wideCardImg {
+    display: none;
+  }
+}
+
+.wideCard {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  align-items: flex-start;
+  gap: 10px;
+  flex: 1 0 0;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid var(--borders-neutral-solid);
+  background: var(--background-neutral-primary);
+
+  img {
+    min-height: 320px;
+    height: 100%;
+    width: 50%;
+    object-fit: cover;
+    border-radius: $border-radius $border-radius 0 0;
+  }
+
+  .curriculumInfoContainer {
+    display: flex;
+    padding: 16px 24px 20px 14px;
+    flex-direction: column;
+    gap: 16px;
+    flex: 1 0 0;
+    min-height: 269px;
+    justify-content: space-between;
+    border: none;
+
+    h4 {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.wideCardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-self: stretch;
+}
+
+.wideCard .buttonsContainer {
+  align-items: flex-start;
+  flex-direction: row;
+  gap: 12px;
+  align-self: stretch;
+}
+
+p.wideCardDescription {
+  margin-bottom: 0.5em;
+}
+
+.wideCardAspects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
 }

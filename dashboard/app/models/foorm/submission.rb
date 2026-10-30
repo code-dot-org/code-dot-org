@@ -11,6 +11,17 @@
 #
 
 class Foorm::Submission < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :restricted,
+    form_name: :restricted,
+    form_version: :restricted,
+    answers: :restricted,
+    created_at: :restricted,
+    updated_at: :restricted,
+  )
+
   include Pd::Foorm::Constants
 
   has_one :workshop_metadata, class_name: 'Pd::WorkshopSurveyFoormSubmission', foreign_key: :foorm_submission_id
@@ -123,9 +134,9 @@ class Foorm::Submission < ApplicationRecord
   def formatted_answers_with_facilitator_number(number)
     return {} unless workshop_metadata.facilitator_specific?
 
-    formatted_answers.map do |question_id, answer_text|
-      [question_id + "_#{number}", answer_text]
-    end.to_h
+    formatted_answers.transform_keys do |question_id|
+      question_id + "_#{number}"
+    end
   end
 
   # Store the JSON parsable "{}" if we attempt to store a blank submission,

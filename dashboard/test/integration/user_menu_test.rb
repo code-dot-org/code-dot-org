@@ -27,7 +27,7 @@ class UserMenuTest < ActionDispatch::IntegrationTest
   end
 
   test 'student does not see links to teacher dashboard' do
-    student = create :student
+    student = create(:student)
     sign_in student
 
     get '/home'
@@ -44,13 +44,13 @@ class UserMenuTest < ActionDispatch::IntegrationTest
   end
 
   test 'should show sign out link for signed in user' do
-    student = create :student
+    student = create(:student)
     sign_in student
 
     get '/home'
 
     assert_response :success
-    assert_select 'a[href="//test-studio.code.org/users/sign_out"]', 'Sign out'
+    assert_select 'a[href="https://test-studio.code.org/users/sign_out"]', 'Sign out'
   end
 
   test "don't show link to pair programming when not in a section" do

@@ -1,18 +1,52 @@
+import {render, screen} from '@testing-library/react';
 import React from 'react';
-import {shallow} from 'enzyme';
-import {assert} from '../../../util/reconfiguredChai';
+import {Provider} from 'react-redux';
+
+import isRtlReducer from '@cdo/apps/code-studio/isRtlRedux';
+import responsive from '@cdo/apps/code-studio/responsiveRedux';
+import {
+  getStore,
+  registerReducers,
+  restoreRedux,
+  stubRedux,
+} from '@cdo/apps/redux';
+import currentUser, {
+  setInitialData,
+} from '@cdo/apps/templates/currentUserRedux';
 import ProjectHeader from '@cdo/apps/templates/projects/ProjectHeader.jsx';
-import HeaderBanner from '@cdo/apps/templates/HeaderBanner';
 
 describe('ProjectHeader', () => {
-  it('Project count data renders properly in subheading ', () => {
-    const wrapper = shallow(
-      <ProjectHeader canViewAdvancedTools={true} projectCount={200} />
+  let store;
+  beforeEach(() => {
+    stubRedux();
+    registerReducers({currentUser, responsive, isRtl: isRtlReducer});
+    store = getStore();
+    store.dispatch(
+      setInitialData({
+        id: 1,
+        name: 'test_user',
+        has_completed_ai_differentiation_welcome: true,
+      })
     );
+  });
 
-    assert.equal(
-      wrapper.find(HeaderBanner).props().subHeadingText,
-      'Over 200 million projects created'
+  afterEach(() => {
+    restoreRedux();
+  });
+
+  function renderDefault() {
+    render(
+      <Provider store={store}>
+        <ProjectHeader canViewAdvancedTools={true} projectCount={200} />
+      </Provider>
     );
+  }
+
+  it('renders the correct project count in subheading', () => {
+    renderDefault();
+
+    expect(
+      screen.getByText('Over 200 million projects created!')
+    ).toBeInTheDocument();
   });
 });

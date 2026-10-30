@@ -21,7 +21,7 @@ class AccountPurger
   attr_reader :dry_run
   alias :dry_run? :dry_run
 
-  def initialize(dry_run: false, log: STDERR, bypass_safety_constraints: false)
+  def initialize(dry_run: false, log: $stderr, bypass_safety_constraints: false)
     @dry_run = dry_run
     raise ArgumentError, 'dry_run must be boolean' unless [true, false].include? @dry_run
 

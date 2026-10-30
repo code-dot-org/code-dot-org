@@ -17,7 +17,7 @@
       .question School Country
       %select#school-country.form-control{name: "#{form_name}[country]", type: "select", required: false}
         %option{value: "", selected: true, disabled: true}
-        - COUNTRY_CODE_TO_COUNTRY_NAME.keys.each do |code|
+        - COUNTRY_CODE_TO_COUNTRY_NAME.each_key do |code|
           %option{value: code}= country_name_from_code(code)
 
     .form-group
@@ -89,9 +89,9 @@
 
   $(document).ready(function() {
     var options = #{existing_school_info.to_json};
-    var suppressScrolling = #{!!(local_assigns[:suppress_scrolling])};
+    var suppressScrolling = #{!!local_assigns[:suppress_scrolling]};
     options['suppressScrolling'] = suppressScrolling;
-    options['assumeUsa'] = #{!!(local_assigns[:assume_usa])};
+    options['assumeUsa'] = #{!!local_assigns[:assume_usa]};
 
     // Send through some values that the JavaScript will need.
     window.schoolInfoManager = new SchoolInfoManager(options);

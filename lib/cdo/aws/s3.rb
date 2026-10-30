@@ -9,8 +9,8 @@ module AWS
   module S3
     mattr_accessor :s3
 
-    # AWS SDK client plugin to log 'slow' (as defined by :notify_timeout) S3 responses to Honeybadger,
-    # recording the request headers in the error context for further investigation.
+    # AWS SDK client plugin to log 'slow' (as defined by :notify_timeout) S3 responses to CloudWatch Metrics. Track S3
+    # API calls that take an unusually long time because that ties up our fixed pool of HTTP worker threads per vCPU.
     class SlowAwsResponseNotifier < Seahorse::Client::Plugin
       option(:notify_timeout, 5) # seconds
 
@@ -19,15 +19,13 @@ module AWS
           start_time = Time.now
           response = @handler.call(context)
           duration = Time.now - start_time
-          if duration > context.config.notify_timeout
-            Honeybadger.notify(
-              error_class: "SlowAWSResponse",
-              error_message: "Slow AWS response",
-              context: response.context.
-                http_response.headers.to_h.
-                slice('x-amz-request-id', 'x-amz-id-2').
-                merge(duration: duration)
-            )
+          # Only track long S3 API calls issued by web application server code on our production or managed test systems.
+          if CDO.running_web_application? &&
+              (CDO.rack_env?(:production) || CDO.test_system?) &&
+              duration > context.config.notify_timeout
+
+            Cdo::Metrics.put('S3Client', 'SlowResponse', 1, {Host: CDO.dashboard_hostname})
+            Cdo::Metrics.put('S3Client', 'SlowResponseDuration', duration, {Host: CDO.dashboard_hostname})
           end
           response
         end
@@ -39,7 +37,7 @@ module AWS
     # An exception class used to wrap the underlying Amazon NoSuchKey exception.
     class NoSuchKey < RuntimeError
       def initialize(message = nil)
-        super(message)
+        super
       end
     end
 
@@ -47,7 +45,17 @@ module AWS
     # the credentials specified in the CDO config.
     # @return [Aws::S3::Client]
     def self.connect_v2!
-      self.s3 ||= Aws::S3::Client.new
+      self.s3 ||= if CDO.aws_s3_emulated
+                    Aws::S3::Client.new(
+                      endpoint: CDO.aws_s3_endpoint,
+                      access_key_id: CDO.aws_s3_access_key_id,
+                      secret_access_key: CDO.aws_s3_secret_access_key,
+                      region: CDO.aws_region,
+                      force_path_style: true,
+                    )
+                  else
+                    Aws::S3::Client.new
+                  end
 
       # Adjust s3_timeout using a dynamic variable,
       # updating the S3 client if the variable changes.
@@ -69,11 +77,24 @@ module AWS
       connect_v2!
     end
 
+    # Returns the S3 bucket holding runtime-generated user content (podcasts,
+    # etc) for the current environment. See user_content_s3_bucket in
+    # config.yml.erb for per-env values (development borrows the test bucket).
+    # Returns nil in environments without a configured bucket, in which case
+    # callers should treat the content as unavailable.
+    def self.user_content_bucket
+      CDO.user_content_s3_bucket
+    end
+
     # Returns the value of the specified S3 key in bucket.
     # @param [String] bucket
     # @param [String] key
     # @return [String]
     def self.download_from_bucket(bucket, key, options = {})
+      # If we are emulating S3 (usually for local development environments), we
+      # first attempt to lazily populate the emulated bucket.
+      Cdo::LocalDevelopment.populate_local_s3_bucket(bucket, key) if CDO.aws_s3_emulated
+
       create_client.get_object(bucket: bucket, key: key).body.read.force_encoding(Encoding::BINARY)
     rescue Aws::S3::Errors::NoSuchKey
       raise NoSuchKey.new("No such key `#{key}'")
@@ -299,7 +320,7 @@ module AWS
     # @return [String] a direct link to the file in the S3 console
     # @raise [Exception] if the provided link isn't a presigned S3 URL
     def self.get_console_link_from_presigned(presigned_url)
-      presigned_regex = /^https\:\/\/([a-z0-9][a-z0-9-]{1,61}[a-z0-9])\.s3\.amazonaws.com\/(.*)\?.*$/
+      presigned_regex = /^https:\/\/([a-z0-9][a-z0-9-]{1,61}[a-z0-9])\.s3\.amazonaws.com\/(.*)\?.*$/
       unless presigned_url.match(presigned_regex)
         raise ArgumentError.new("expected presigned S3 URL like 'https://bucket-name.s3.amazonaws.com/prefix/filename?with=any&query=params'")
       end

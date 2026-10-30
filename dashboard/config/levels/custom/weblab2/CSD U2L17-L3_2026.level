@@ -1,0 +1,112 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-01T20:51:02.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Naming Links\r\n\r\n\r\nJust like images and files, links should have clear names that help someone understand what page they are linked to.\r\n\r\n# Do This\r\n1) Read the code or click on the links to see where they go.\r\n* Change the names of the links to make it clear where they will take you.\r\n\r\n::: details [Help & Tips]\r\n- [<i class=\"fa-regular fa-map\"></i> Hyperlinks](https://studio.code.org/courses/csd-2024/guides/hyperlinks)\r\n- [<i class=\"fa-solid fa-book\"></i> Flex Children](https://studio.code.org/courses/csd-2024/guides/flex-children)\r\n- [<i class=\"fa-solid fa-book\"></i> Flexbox](https://studio.code.org/courses/csd-2024/guides/flexbox)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Selectors](https://studio.code.org/courses/csd-2024/guides/html-selectors)\r\n- [<i class=\"fa-solid fa-book\"></i> Div Tags](https://studio.code.org/courses/csd-2024/guides/div)\r\n- [<i class=\"fa-solid fa-book\"></i> Classes](https://studio.code.org/courses/csd-2024/guides/classes)\r\n- [<i class=\"fa-solid fa-book\"></i> Layout Properties](https://studio.code.org/courses/csd-2024/guides/layout-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Body Styling](https://studio.code.org/courses/csd-2024/guides/body-styling)\r\n- [<i class=\"fa-solid fa-book\"></i> Images in HTML](https://studio.code.org/courses/csd-2024/guides/images-in-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Text Properties](https://studio.code.org/courses/csd-2024/guides/text-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Creative Commons Search](https://studio.code.org/courses/csd-2024/guides/creative-commons-search)\r\n- [<i class=\"fa-solid fa-book\"></i> Style Sheets](https://studio.code.org/courses/csd-2024/guides/style-sheets)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Lists](https://studio.code.org/courses/csd-2024/guides/lists)\r\n- [<i class=\"fa-solid fa-book\"></i> Headings and Paragraphs](https://studio.code.org/courses/csd-2024/guides/headings-and-paragraphs)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Tags](https://studio.code.org/courses/csd-2024/guides/html-tags)\r\n- [<i class=\"fa-solid fa-book\"></i> Debugging in HTML](https://studio.code.org/courses/csd-2022/guides/debugging-html)\r\n:::",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    <h1>Flowers</h1>\n    <p> These are all the pages that I have made about flowers.  You can go to the pages by clicking on the links under the headers below.</p>\n    <h2> \n      Roses \n    </h2>\n    <p>The rose might be the most famous type of flower, and even Shakespeare wrote about it.  (<a href=\"rose.html\">Learn more.</a>)\n    <h2> \n      Daisies \n    </h2>\n    <p>Daisies aren't as famous as roses, but they are a pretty, everyday flower. If you want to learn more about daisies, I have a page at <a href=\"daisy.html\">daisy.html</a>.</p>\n    <h2> \n      Sunflower\n    </h2>\n    <p>The last flower is the sunflower, which is also the only one on the list that creates yummy seeds to eat.  I hope you like it, too. <a href=\"sunflower.html\">Please click on my link to learn more about sunflowers, because you for sure will not regret it!</a></p>\n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "daisy.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n<body>\n    <a href=\"index.html\">Back to Home</a>\n  <h1>Daisies</h1>\n  <h2> Fun Facts </h2>\n  <ul>\n    <li>They are the largest family of plants in the entire world</li>\n    <h6> The family of daisies make up almost 10% of all plants on this earth. That's incredible. </h6>\n    <li>Bees are a huge fan of daisies</li>\n    <h6> They are vital in the honey making process </h6>\n    <li>You can find them on every continent except Antartica</li>\n    <h6> And if not carefully grown and contained, they can actually turn into weeds! </h6>\n    <li>Daisy leaves are put into salads to eat</li>\n    <h6> They are apparently a good source of Vitamin C (I do not like salads though) </h6>\n  </ul>\n</body>\n</html>",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "rose.html",
+          "language": "html",
+          "contents": "<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    <a href=\"index.html\">Back to Home</a>\n    <h1>Roses</h1>\n    <img src=\"thorns.jpg\" alt=\"thorns\">\n    <h6> Myriam Zilles, Pixabay, Pixabay License </h6>\n    <p> Roses are my least favorite flower because of their thorns. But I guess I can put some fun facts about them up here too. </p>\n    <ol>\n      <li>Roses are well known as symbols of love</li>\n      <li>Roses are used in perfumes a lot because of their nice scent</li>\n      <li>It is England's country flower and the state flower of four states in the United States.</li>\n    </ol>\n    \n  </body>\n</html>",
+          "folderId": "0",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "sunflower.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    <a href=\"index.html\">Back to Home</a>\n    <h1>\n      Sunflowers\n    </h1>\n    <h3>\n      Why I Love Them\n    </h3>\n    <p>\n      Sunflowers are my personal favorite flowers. My parents used to always grow them in our backyard and they would always grow so high. The tallest sunflower that ever grew I believe was about 30 feet tall! That's taller than any human! But to get that tall they need a lot of sun, at least 6-8 hours of sun a day.  \n    </p>\n    <img src=\"sunflower.jpg\" alt=\"sunflower field\">\n    <h6> Bruno Glastch, Pixabay, Pixabay License </h6>\n  </body>\n</html> ",
+          "folderId": "0",
+          "active": true
+        },
+        "5": {
+          "id": "5",
+          "name": "thorns.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L17-L3-2025/uuid/d9065bcd-a82d-44f8-a2d8-3959839a5c81.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "sunflower.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L17-L3-2025/uuid/5549a5df-9e26-426a-9dd5-d9baae187dcf.jpg",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "name_suffix": "_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:51:02.532+00:00\",\"changed\":[\"cloned from \\\"CSD U2L17-L3-2025\\\"\"],\"cloned_from\":\"CSD U2L17-L3-2025\"}]"
+}]]></config>
+</Weblab2>

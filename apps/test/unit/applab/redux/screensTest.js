@@ -1,20 +1,21 @@
-import {expect} from '../../../util/reconfiguredChai';
-import {allowConsoleErrors} from '../../../util/testUtils';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import {
-  sources as sourcesApi,
-  channels as channelsApi,
-  assets as assetsApi,
-} from '@cdo/apps/clientApi';
-import {createStore} from '../../../util/redux';
+import * as importFuncs from '@cdo/apps/applab/import';
 import screensReducer, {
   toggleImportScreen,
   changeScreen,
   fetchProject,
   importIntoProject,
 } from '@cdo/apps/applab/redux/screens';
-import * as importFuncs from '@cdo/apps/applab/import';
+import {
+  sources as sourcesApi,
+  channels as channelsApi,
+  assets as assetsApi,
+} from '@cdo/apps/clientApi';
+
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+import {createStore} from '../../../util/redux';
+import {allowConsoleErrors} from '../../../util/testUtils';
 
 describe('Applab Screens Reducer', function () {
   var store;

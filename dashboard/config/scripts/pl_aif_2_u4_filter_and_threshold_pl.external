@@ -1,0 +1,149 @@
+name 'pl-aif-2-U4-filter-and-threshold_pl'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Filters, Labels, and What Gets Seen
+
+When you browse a website or app, filters help narrow down large lists of items.
+
+But filters don’t just organize information. They also shape what feels easy to find and what gets overlooked.
+
+## Two Websites, Same Goal
+Below are two websites that sell similar products.
+Both allow users to filter results, but they do it differently.
+
+<div style="background:#ececec; border-radius:12px; padding:16px; margin:18px auto; max-width:85%;">
+
+  <p style="font-size:12pt; margin-top:0;">
+    <strong>Look at each retail website’s filtering system.</strong>
+  </p>
+
+  <ul>
+    <li style="font-size:12pt;">Which do you prefer?</li>
+    <li style="font-size:12pt;">Which would be easier to use?</li>
+  </ul>
+
+</div>
+
+
+
+ <div style="display:flex; gap:40px; align-items:flex-start; justify-content:center;">
+
+  <!-- Website 1 -->
+  <div>
+    <h2 style="text-align:center; margin-top:0;">Website 1</h2>
+
+  <div style="border:1px solid #999; width:250px; background:white;">
+      <div style="padding:10px; border-bottom:1px solid #ddd;">
+        <strong>All Filters</strong>
+      </div>
+
+  <ul style="list-style:none; margin:0; padding:0;">
+        <li style="padding:8px; border-bottom:1px solid #eee;">Deals</li>
+        <li style="padding:8px; border-bottom:1px solid #eee;">New &amp; Top Rated</li>
+        <li style="padding:8px; border-bottom:1px solid #eee;">Category</li>
+        <li style="padding:8px; border-bottom:1px solid #eee;">Item Type</li>
+        <li style="padding:8px; border-bottom:1px solid #eee;">Size</li>
+        <li style="padding:8px; border-bottom:1px solid #eee;">Brand</li>
+        <li style="padding:8px; border-bottom:1px solid #eee;">Size Grouping</li>
+        <li style="padding:8px; border-bottom:1px solid #eee;">Color</li>
+        <li style="padding:8px; border-bottom:1px solid #eee;">Price</li>
+        <li style="padding:8px; border-bottom:1px solid #eee;">Guest Rating</li>
+        <li style="padding:8px; border-bottom:1px solid #eee;">Material</li>
+        <li style="padding:8px; border-bottom:1px solid #eee;">Pattern</li>
+        <li style="padding:8px;">Occasion</li>
+      </ul>
+
+  <div style="padding:10px; font-size:12px; border-top:1px solid #ddd;">
+        14,277 results for women's clothing
+      </div>
+
+  <div style="display:flex; justify-content:space-around; padding:10px; border-top:1px solid #ddd;">
+        <button>Clear</button>
+        <button>See Results</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Website 2 -->
+  <div>
+    <h2 style="text-align:center; margin-top:0;">Website 2</h2>
+
+  <div style="border:1px solid #999; width:300px; background:white;">
+      <div style="padding:10px; border-bottom:1px solid #ddd;">
+        <strong>All Filters</strong>
+      </div>
+
+  <ul style="list-style:none; margin:0; padding:0;">
+        <li style="padding:12px; border-bottom:1px solid #eee;">Size</li>
+        <li style="padding:12px; border-bottom:1px solid #eee;">Color</li>
+        <li style="padding:12px; border-bottom:1px solid #eee;">Brand</li>
+        <li style="padding:12px; border-bottom:1px solid #eee;">Price</li>
+        <li style="padding:12px; border-bottom:1px solid #eee;">Free Pickup</li>
+        <li style="padding:12px;">Availability</li>
+      </ul>
+
+  <div style="display:flex; justify-content:space-between; padding:10px; border-top:1px solid #ddd;">
+        <button>Clear All</button>
+        <button>View Results (7572)</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<br>
+
+<details style="background-color:#ececec;padding:12px;margin-bottom:10px;border:1px solid #D9E3E5;border-radius:8px;box-shadow:2px 2px 8px rgba(0,0,0,0.06);">
+  <summary style="font-size:12pt; font-weight:bold;">🔎 Check your thinking</summary>
+
+<div style="margin-top:12px; line-height:140%;">
+
+<p style="font-size:12pt; margin-top:0;">
+      Take a closer look at the filters each site offers:
+    </p>
+
+<ul>
+      <li style="font-size:12pt;">
+        <strong>Website 1</strong> has many filters (Deals, Rating, Occasion, Price, Category)
+      </li>
+      <li style="font-size:12pt; margin-top:8px;">
+        <strong>Website 2</strong> has fewer filters and simpler labels
+      </li>
+    </ul>
+
+<p style="font-size:12pt; margin-top:12px;">
+      <strong>This design choice affects:</strong>
+    </p>
+
+<ul>
+      <li style="font-size:12pt;">What items appear first</li>
+      <li style="font-size:12pt;">What feels easy vs. hard to find</li>
+      <li style="font-size:12pt;">Which users feel supported — and which feel overwhelmed</li>
+    </ul>
+
+  </div>
+</details>
+
+ <p style="font-size:12pt; margin-top:0;">
+      A user searching for <strong>Deals</strong> or <strong>Occasion</strong> may succeed on Website 1.
+    </p>
+
+<p style="font-size:12pt;">
+      That same user may struggle on Website 2, not because the items don’t exist, but because the filters don’t.
+    </p>
+
+ <p style="font-size:12pt; margin-bottom:0;"><b>
+      Filters don’t just show things, they also exclude things.</b>
+    </p>
+
+
+
+<div style="background-color:#e4e2f8; border-radius:10px; padding:14px; margin:18px auto; max-width:85%;"> <p style="font-size:12pt; margin:0; line-height:135%;"><strong>📖 Design tradeoff:</strong> More filters can help some users search precisely, but can make others feel lost or overloaded.</p> </div>
+
+
+
+
+
+MARKDOWN

@@ -1,0 +1,14 @@
+name 'ai-and-algorithmic-decisions-preassessment-q8_2026'
+
+question 'A student writes `const addItem = () => { ... }` and then writes `addItem()` somewhere else. What did the second line do?'
+
+wrong 'Defined the function for the first time.'
+wrong 'Created a new variable named addItem.'
+wrong 'Deleted the function.'
+right 'Called the function so its steps ran.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 4
+MARKDOWN

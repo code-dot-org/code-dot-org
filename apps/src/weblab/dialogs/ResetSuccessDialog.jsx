@@ -1,7 +1,8 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
+
+import StylizedBaseDialog from '@cdo/apps/sharedComponents/StylizedBaseDialog';
 import i18n from '@cdo/weblab/locale';
-import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
 
 export default function ResetSuccessDialog({isOpen, handleClose, ...props}) {
   return (

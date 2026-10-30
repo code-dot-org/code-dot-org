@@ -1,14 +1,17 @@
 import React from 'react';
-import {createStore, combineReducers} from 'redux';
 import {Provider} from 'react-redux';
-import LessonProgress from './LessonProgress';
+import {createStore, combineReducers} from 'redux';
+
+import {TestResults} from '@cdo/apps/constants';
+
 import lessonLock from '../../lessonLockRedux';
 import progress, {
   initProgress,
   mergeResults,
   setLessonExtrasEnabled,
 } from '../../progressRedux';
-import {TestResults} from '@cdo/apps/constants';
+
+import LessonProgress from './LessonProgress';
 
 const activityPuzzle = {
   ids: ['123'],
@@ -27,7 +30,7 @@ const conceptPuzzle = {
   activeId: '5086',
   position: 2,
   kind: 'puzzle',
-  icon: 'fa-file-text',
+  icon: 'fa-file-lines',
   title: 2,
   url: 'http://studio.code.org/s/csp1-2019/lessons/2/levels/1',
   freePlay: false,
@@ -40,7 +43,7 @@ const assessment1 = {
   activeId: '2441',
   position: 3,
   kind: 'assessment',
-  icon: 'fa-check-square-o',
+  icon: 'fa-square-check',
   title: 3,
   url: 'http://studio.code.org/s/csp1-2019/lessons/2/levels/3',
   freePlay: false,
@@ -52,7 +55,7 @@ const assessment2 = {
   activeId: '2444',
   position: 4,
   kind: 'assessment',
-  icon: 'fa-check-square-o',
+  icon: 'fa-square-check',
   title: 4,
   url: 'http://studio.code.org/s/csp1-2019/lessons/2/levels/4',
   freePlay: false,
@@ -64,7 +67,7 @@ const assessment3 = {
   activeId: '2744',
   position: 5,
   kind: 'assessment',
-  icon: 'fa-check-square-o',
+  icon: 'fa-square-check',
   title: 5,
   url: 'http://studio.code.org/s/csp1-2019/lessons/2/levels/5',
   freePlay: false,

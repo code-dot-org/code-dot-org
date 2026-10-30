@@ -1,0 +1,43 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-04-20T07:23:24.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "ai-and-algorithmic-decisions-lesson11-template-revised_2026",
+    "long_instructions": "## Build Your First Interaction\r\n\r\nIn this level, you’ll start building your app.\r\n\r\n1. Open your project in WebLab.  \r\n2. Import your project overview, wireframe, and flowchart from your Backpack.  \r\n3. Use these to guide your build.  \r\n4. Use AI Tutor to help you create your app’s structure (HTML/CSS) and connect your JavaScript.  \r\n5. Implement your first working interaction based on your plan.\r\n\r\nFocus on getting one part of your app working before adding more.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "require_edit_to_continue": "true",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML",
+        "buildJavaScript",
+        "buildJSON",
+        "documentation"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-20T07:23:24.542+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson11-level1-revised_2026\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson11-level1-revised_2026\"},{\"changed_at\":\"2026-04-20 07:25:19 +0000\",\"changed\":[\"long_instructions\",\"initial_view_mode\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-20 07:26:08 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

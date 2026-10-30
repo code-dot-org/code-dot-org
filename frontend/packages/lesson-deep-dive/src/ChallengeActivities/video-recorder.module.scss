@@ -1,0 +1,65 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 12px;
+  width: 100%;
+  min-height: 0;
+  padding: 16px 0;
+  align-items: center;
+  justify-self: center;
+}
+
+// Sized from the available height, not the content: aspect-ratio derives the
+// width from that height (rather than the other way around) because height
+// is the only explicit dimension here.
+.previewWrapper {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #000;
+  line-height: 0;
+  height: 100%;
+  max-width: 100%;
+  aspect-ratio: 9 / 16;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  display: block;
+  object-fit: cover;
+}
+
+.countdownRing {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 64px;
+  height: 64px;
+  display: grid;
+  place-items: center;
+  background: rgb(0 0 0 / 0.45);
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgb(0 0 0 / 0.6);
+}
+
+.countdownRingSvg {
+  grid-area: 1 / 1;
+  width: 100%;
+  height: 100%;
+}
+
+.countdownNumber {
+  grid-area: 1 / 1;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.error {
+  color: var(--text-error-primary);
+  font-size: 0.9rem;
+  margin: 8px 0;
+}

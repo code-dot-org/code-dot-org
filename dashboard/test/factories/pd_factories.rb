@@ -61,41 +61,22 @@ FactoryBot.define do
     association :workshop, factory: :workshop
     start {Time.zone.today + 9.hours}
     self.end {start + duration_hours.hours}
+    session_format {Pd::SharedWorkshopConstants::PD_SESSION_FORMATS.first[:value]}
 
     trait :with_assigned_code do
       after :build, &:assign_code
     end
   end
 
-  factory :pd_payment_term, class: 'Pd::PaymentTerm' do
-    start_date {Time.zone.today}
-    fixed_payment {50}
-  end
-
   factory :pd_teachercon_survey, class: 'Pd::TeacherconSurvey' do
     association :pd_enrollment, factory: :pd_enrollment, strategy: :create
 
-    transient do
-      randomized_survey_answers {false}
-    end
-
-    after(:build) do |survey, evaluator|
+    after(:build) do |survey, _|
       if survey.form_data.presence.nil?
         enrollment = survey.pd_enrollment
         workshop = enrollment.workshop
 
-        survey_hash = build :pd_teachercon_survey_hash
-
-        if evaluator.randomized_survey_answers
-          survey_hash.each do |k, _|
-            survey_hash[k] =
-              if Pd::TeacherconSurvey.options.key? k.underscore.to_sym
-                Pd::TeacherconSurvey.options[k.underscore.to_sym].sample
-              else
-                SecureRandom.hex[0..8]
-              end
-          end
-        end
+        survey_hash = build(:pd_teachercon_survey_hash)
 
         Pd::TeacherconSurvey.facilitator_required_fields.each do |field|
           survey_hash[field] = {}
@@ -107,15 +88,15 @@ FactoryBot.define do
           Pd::TeacherconSurvey.facilitator_required_fields.each do |field|
             if Pd::TeacherconSurvey.options.key? field
               answers = Pd::TeacherconSurvey.options.key? field
-              survey_hash[field][facilitator.name] = evaluator.randomized_survey_answers ? answers.sample : answers.last
+              survey_hash[field][facilitator.name] = answers.last
             else
-              survey_hash[field][facilitator.name] = evaluator.randomized_survey_answers ? SecureRandom.hex[0..8] : 'Free Response'
+              survey_hash[field][facilitator.name] = 'Free Response'
             end
           end
         end
 
         if Pd::TeacherconSurvey::DISAGREES.include?(survey_hash['personalLearningNeedsMet'])
-          survey_hash[:how_could_improve] = evaluator.randomized_survey_answers ? SecureRandom.hex[0..8] : 'Rant about how to improve things'
+          survey_hash[:how_could_improve] = 'Rant about how to improve things'
         end
 
         survey.update_form_data_hash(survey_hash)
@@ -185,7 +166,7 @@ FactoryBot.define do
     code {SecureRandom.hex(10)}
 
     trait :from_user do
-      user {create :teacher}
+      user {create(:teacher)}
       full_name {user.name} # sets first_name and last_name
       email {user.email}
     end
@@ -230,7 +211,7 @@ FactoryBot.define do
       if evaluator.attended
         attended_sessions = evaluator.attended == true ? evaluator.workshop.sessions : evaluator.attended
         attended_sessions.each do |session|
-          create :pd_attendance, session: session, teacher: teacher
+          create(:pd_attendance, session: session, teacher: teacher)
         end
       end
 
@@ -249,13 +230,6 @@ FactoryBot.define do
           scholarship_params
       end
     end
-  end
-
-  factory :pd_district_payment_term, class: 'Pd::DistrictPaymentTerm' do
-    association :school_district
-    course {Pd::Workshop::COURSES.first}
-    rate_type {Pd::DistrictPaymentTerm::RATE_TYPES.first}
-    rate {10}
   end
 
   factory :pd_course_facilitator, class: 'Pd::CourseFacilitator' do
@@ -442,7 +416,7 @@ FactoryBot.define do
     association :user, factory: [:teacher, :with_school_info], strategy: :create
     course {'csp'}
     transient do
-      form_data_hash {build :pd_teacher_application_hash_common, course.to_sym}
+      form_data_hash {build(:pd_teacher_application_hash_common, course.to_sym)}
     end
     form_data {form_data_hash.to_json}
 
@@ -505,7 +479,7 @@ FactoryBot.define do
       form_data_hash do
         build(
           :pd_principal_approval_application_hash_common,
-          "approved_#{approved.downcase}".to_sym,
+          :"approved_#{approved.downcase}",
           course: course,
         )
       end

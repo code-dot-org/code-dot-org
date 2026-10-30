@@ -1,6 +1,7 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {mount} from 'enzyme';
-import {expect} from '../../../../util/reconfiguredChai';
+import {act} from 'react-dom/test-utils';
+
 import InternationalOptIn from '@cdo/apps/code-studio/pd/international_opt_in/InternationalOptIn';
 
 describe('InternationalOptInTest', () => {
@@ -10,7 +11,9 @@ describe('InternationalOptInTest', () => {
       workshopCourse: ['workshopCourse'],
       emailOptIn: ['emailOptIn'],
       legalOptIn: ['legalOptIn'],
-      workshopOrganizer: ['workshopOrganizer'],
+      workshopOrganizer: {
+        afghanistan: ['CodeAI', 'My organizer is not listed'],
+      },
       colombianSchoolData: {
         department: {
           municipality: {
@@ -35,9 +38,9 @@ describe('InternationalOptInTest', () => {
       workshopOrganizer: 'Workshop Organizer',
       workshopCourse: 'Workshop Course',
       emailOptIn:
-        'Can we email you about Code.org’s international program, updates to our courses, or other computer science news?',
+        'Can we email you about CodeAI’s international program, updates to our courses, or other computer science news?',
       legalOptIn:
-        'By submitting this form, you are agreeing to allow Code.org to share information on how you use Code.org and the Professional Learning resources with the Code.org International Partner(s) in your country. We will share with these partners your contact information (such as name and email address), the information you provide about your school, which courses/units you are using, and aggregate data about these courses (such as the number of students using each course). We will not share any information about individual students with our partners: all student information will be de-identified and aggregated. Our International Partners and facilitators are contractually obliged to treat this information with the same level of confidentiality as Code.org.',
+        'By submitting this form, you are agreeing to allow CodeAI to share information on how you use CodeAI and the Professional Learning resources with the CodeAI International Partner(s) in your country. We will share with these partners your contact information (such as name and email address), the information you provide about your school, which courses/units you are using, and aggregate data about these courses (such as the number of students using each course). We will not share any information about individual students with our partners: all student information will be de-identified and aggregated. Our International Partners and facilitators are contractually obliged to treat this information with the same level of confidentiality as CodeAI.',
       colombianSchoolCity: 'School City',
       colombianChileanSchoolDepartment: 'School Department',
       colombianSchoolMunicipality: 'School Municipality',
@@ -47,6 +50,24 @@ describe('InternationalOptInTest', () => {
     },
   };
 
+  describe('supported country interface', () => {
+    it('enables free-text school fields and includes CodeAI as an organizer', () => {
+      const wrapper = mount(<InternationalOptIn {...defaultProps} />);
+
+      act(() => {
+        wrapper.setState({data: {schoolCountry: 'Afghanistan'}});
+      });
+
+      expect(wrapper.find('input#schoolCity').prop('disabled')).toBe(false);
+      expect(wrapper.find('input#schoolName').prop('disabled')).toBe(false);
+      expect(
+        wrapper
+          .find('select#workshopOrganizer option')
+          .map(option => option.prop('value'))
+      ).toEqual(['', 'CodeAI', 'My organizer is not listed']);
+    });
+  });
+
   describe('Colombian school interface', () => {
     it('requires you to select a country before enabling school name and city inputs', () => {
       const wrapper = mount(<InternationalOptIn {...defaultProps} />);
@@ -54,96 +75,118 @@ describe('InternationalOptInTest', () => {
 
       inputIds.forEach(id => {
         const node = wrapper.find(`input#${id}`);
-        expect(node.prop('disabled')).to.be.true;
+        expect(node.prop('disabled')).toBe(true);
       });
 
-      wrapper.setState({data: {schoolCountry: 'selected country'}});
+      act(() => {
+        wrapper.setState({data: {schoolCountry: 'selected country'}});
+      });
 
       inputIds.forEach(id => {
         const node = wrapper.find(`input#${id}`);
-        expect(node.prop('disabled')).to.be.false;
+        expect(node.prop('disabled')).toBe(false);
       });
     });
 
     it('displays school name and city as selects rather than inputs when Colombia is selected', () => {
       const wrapper = mount(<InternationalOptIn {...defaultProps} />);
 
-      expect(wrapper.find('input#schoolCity')).to.have.lengthOf(1);
-      expect(wrapper.find('input#schoolName')).to.have.lengthOf(1);
-      expect(wrapper.find('select#schoolCity')).to.have.lengthOf(0);
-      expect(wrapper.find('select#schoolName')).to.have.lengthOf(0);
+      expect(wrapper.find('input#schoolCity')).toHaveLength(1);
+      expect(wrapper.find('input#schoolName')).toHaveLength(1);
+      expect(wrapper.find('select#schoolCity')).toHaveLength(0);
+      expect(wrapper.find('select#schoolName')).toHaveLength(0);
 
-      wrapper.setState({
-        data: {schoolCountry: 'someplace other than Colombia'},
+      act(() => {
+        wrapper.setState({
+          data: {schoolCountry: 'someplace other than Colombia'},
+        });
       });
 
-      expect(wrapper.find('input#schoolCity')).to.have.lengthOf(1);
-      expect(wrapper.find('input#schoolName')).to.have.lengthOf(1);
-      expect(wrapper.find('select#schoolCity')).to.have.lengthOf(0);
-      expect(wrapper.find('select#schoolName')).to.have.lengthOf(0);
+      expect(wrapper.find('input#schoolCity')).toHaveLength(1);
+      expect(wrapper.find('input#schoolName')).toHaveLength(1);
+      expect(wrapper.find('select#schoolCity')).toHaveLength(0);
+      expect(wrapper.find('select#schoolName')).toHaveLength(0);
 
-      wrapper.setState({data: {schoolCountry: 'Colombia'}});
+      act(() => {
+        wrapper.setState({data: {schoolCountry: 'Colombia'}});
+      });
 
-      expect(wrapper.find('input#schoolCity')).to.have.lengthOf(0);
-      expect(wrapper.find('input#schoolName')).to.have.lengthOf(0);
-      expect(wrapper.find('select#schoolCity')).to.have.lengthOf(1);
-      expect(wrapper.find('select#schoolName')).to.have.lengthOf(1);
+      expect(wrapper.find('input#schoolCity')).toHaveLength(0);
+      expect(wrapper.find('input#schoolName')).toHaveLength(0);
+      expect(wrapper.find('select#schoolCity')).toHaveLength(1);
+      expect(wrapper.find('select#schoolName')).toHaveLength(1);
     });
 
     it('displays extra inputs when Colombia is selected', () => {
       const wrapper = mount(<InternationalOptIn {...defaultProps} />);
 
-      expect(wrapper.find('select#schoolDepartment')).to.have.lengthOf(0);
-      expect(wrapper.find('select#schoolMunicipality')).to.have.lengthOf(0);
+      expect(wrapper.find('select#schoolDepartment')).toHaveLength(0);
+      expect(wrapper.find('select#schoolMunicipality')).toHaveLength(0);
 
-      wrapper.setState({
-        data: {schoolCountry: 'someplace other than Colombia'},
+      act(() => {
+        wrapper.setState({
+          data: {schoolCountry: 'someplace other than Colombia'},
+        });
       });
 
-      expect(wrapper.find('select#schoolDepartment')).to.have.lengthOf(0);
-      expect(wrapper.find('select#schoolMunicipality')).to.have.lengthOf(0);
+      expect(wrapper.find('select#schoolDepartment')).toHaveLength(0);
+      expect(wrapper.find('select#schoolMunicipality')).toHaveLength(0);
 
-      wrapper.setState({data: {schoolCountry: 'Colombia'}});
+      act(() => {
+        wrapper.setState({data: {schoolCountry: 'Colombia'}});
+      });
 
-      expect(wrapper.find('select#schoolDepartment')).to.have.lengthOf(1);
-      expect(wrapper.find('select#schoolMunicipality')).to.have.lengthOf(1);
+      expect(wrapper.find('select#schoolDepartment')).toHaveLength(1);
+      expect(wrapper.find('select#schoolMunicipality')).toHaveLength(1);
     });
 
     it('requires each Colombian school data field be selected in order', () => {
       const wrapper = mount(<InternationalOptIn {...defaultProps} />);
-      wrapper.setState({data: {schoolCountry: 'Colombia'}});
-
-      expect(wrapper.find('select#schoolMunicipality').prop('disabled')).to.be
-        .true;
-      expect(wrapper.find('select#schoolCity').prop('disabled')).to.be.true;
-      expect(wrapper.find('select#schoolName').prop('disabled')).to.be.true;
-
-      wrapper.setState({
-        data: {schoolDepartment: 'department', ...wrapper.state().data},
+      act(() => {
+        wrapper.setState({data: {schoolCountry: 'Colombia'}});
       });
 
-      expect(wrapper.find('select#schoolMunicipality').prop('disabled')).to.be
-        .false;
-      expect(wrapper.find('select#schoolCity').prop('disabled')).to.be.true;
-      expect(wrapper.find('select#schoolName').prop('disabled')).to.be.true;
+      expect(wrapper.find('select#schoolMunicipality').prop('disabled')).toBe(
+        true
+      );
+      expect(wrapper.find('select#schoolCity').prop('disabled')).toBe(true);
+      expect(wrapper.find('select#schoolName').prop('disabled')).toBe(true);
 
-      wrapper.setState({
-        data: {schoolMunicipality: 'municipality', ...wrapper.state().data},
+      act(() => {
+        wrapper.setState({
+          data: {schoolDepartment: 'department', ...wrapper.state().data},
+        });
       });
 
-      expect(wrapper.find('select#schoolMunicipality').prop('disabled')).to.be
-        .false;
-      expect(wrapper.find('select#schoolCity').prop('disabled')).to.be.false;
-      expect(wrapper.find('select#schoolName').prop('disabled')).to.be.true;
+      expect(wrapper.find('select#schoolMunicipality').prop('disabled')).toBe(
+        false
+      );
+      expect(wrapper.find('select#schoolCity').prop('disabled')).toBe(true);
+      expect(wrapper.find('select#schoolName').prop('disabled')).toBe(true);
 
-      wrapper.setState({
-        data: {schoolCity: 'city', ...wrapper.state().data},
+      act(() => {
+        wrapper.setState({
+          data: {schoolMunicipality: 'municipality', ...wrapper.state().data},
+        });
       });
 
-      expect(wrapper.find('select#schoolMunicipality').prop('disabled')).to.be
-        .false;
-      expect(wrapper.find('select#schoolCity').prop('disabled')).to.be.false;
-      expect(wrapper.find('select#schoolName').prop('disabled')).to.be.false;
+      expect(wrapper.find('select#schoolMunicipality').prop('disabled')).toBe(
+        false
+      );
+      expect(wrapper.find('select#schoolCity').prop('disabled')).toBe(false);
+      expect(wrapper.find('select#schoolName').prop('disabled')).toBe(true);
+
+      act(() => {
+        wrapper.setState({
+          data: {schoolCity: 'city', ...wrapper.state().data},
+        });
+      });
+
+      expect(wrapper.find('select#schoolMunicipality').prop('disabled')).toBe(
+        false
+      );
+      expect(wrapper.find('select#schoolCity').prop('disabled')).toBe(false);
+      expect(wrapper.find('select#schoolName').prop('disabled')).toBe(false);
     });
 
     it('populates the Colombian school data fields based on earlier selections', () => {
@@ -177,34 +220,38 @@ describe('InternationalOptInTest', () => {
         },
       };
       const wrapper = mount(<InternationalOptIn {...props} />);
-      wrapper.setState({data: {schoolCountry: 'Colombia'}});
+      act(() => {
+        wrapper.setState({data: {schoolCountry: 'Colombia'}});
+      });
 
       // initially, only departments are available; everything else is empty
       const departments = wrapper
         .find('select#schoolDepartment')
         .children()
         .map(option => option.prop('value'));
-      expect(departments).to.eql([
+      expect(departments).toEqual([
         '',
         'Not applicable',
         'department 1',
         'department 2',
       ]);
-      expect(
-        wrapper.find('select#schoolMunicipality').children()
-      ).to.have.lengthOf(2);
-      expect(wrapper.find('select#schoolCity').children()).to.have.lengthOf(2);
-      expect(wrapper.find('select#schoolName').children()).to.have.lengthOf(2);
+      expect(wrapper.find('select#schoolMunicipality').children()).toHaveLength(
+        2
+      );
+      expect(wrapper.find('select#schoolCity').children()).toHaveLength(2);
+      expect(wrapper.find('select#schoolName').children()).toHaveLength(2);
 
       // after selecting a department, municipality becomes available
-      wrapper.setState({
-        data: {schoolDepartment: 'department 1', ...wrapper.state().data},
+      act(() => {
+        wrapper.setState({
+          data: {schoolDepartment: 'department 1', ...wrapper.state().data},
+        });
       });
       let municipalities = wrapper
         .find('select#schoolMunicipality')
         .children()
         .map(option => option.prop('value'));
-      expect(municipalities).to.eql([
+      expect(municipalities).toEqual([
         '',
         'Not applicable',
         'municipality 1-1',
@@ -212,14 +259,16 @@ describe('InternationalOptInTest', () => {
       ]);
 
       // selecting a different department will change the municipalities available
-      wrapper.setState({
-        data: {...wrapper.state().data, schoolDepartment: 'department 2'},
+      act(() => {
+        wrapper.setState({
+          data: {...wrapper.state().data, schoolDepartment: 'department 2'},
+        });
       });
       municipalities = wrapper
         .find('select#schoolMunicipality')
         .children()
         .map(option => option.prop('value'));
-      expect(municipalities).to.eql([
+      expect(municipalities).toEqual([
         '',
         'Not applicable',
         'municipality 2-1',
@@ -227,18 +276,25 @@ describe('InternationalOptInTest', () => {
       ]);
 
       // likewise, municipality and city selections unlock in turn
-      expect(wrapper.find('select#schoolCity').children()).to.have.lengthOf(2);
-      expect(wrapper.find('select#schoolName').children()).to.have.lengthOf(2);
-      wrapper.setState({
-        data: {...wrapper.state().data, schoolMunicipality: 'municipality 2-1'},
+      expect(wrapper.find('select#schoolCity').children()).toHaveLength(2);
+      expect(wrapper.find('select#schoolName').children()).toHaveLength(2);
+      act(() => {
+        wrapper.setState({
+          data: {
+            ...wrapper.state().data,
+            schoolMunicipality: 'municipality 2-1',
+          },
+        });
       });
-      expect(wrapper.find('select#schoolCity').children()).to.have.lengthOf(4);
-      expect(wrapper.find('select#schoolName').children()).to.have.lengthOf(2);
-      wrapper.setState({
-        data: {...wrapper.state().data, schoolCity: 'city 2-1-1'},
+      expect(wrapper.find('select#schoolCity').children()).toHaveLength(4);
+      expect(wrapper.find('select#schoolName').children()).toHaveLength(2);
+      act(() => {
+        wrapper.setState({
+          data: {...wrapper.state().data, schoolCity: 'city 2-1-1'},
+        });
       });
-      expect(wrapper.find('select#schoolCity').children()).to.have.lengthOf(4);
-      expect(wrapper.find('select#schoolName').children()).to.have.lengthOf(4);
+      expect(wrapper.find('select#schoolCity').children()).toHaveLength(4);
+      expect(wrapper.find('select#schoolName').children()).toHaveLength(4);
     });
   });
 
@@ -246,78 +302,94 @@ describe('InternationalOptInTest', () => {
     it('displays school name and city as selects rather than inputs when Chile is selected', () => {
       const wrapper = mount(<InternationalOptIn {...defaultProps} />);
 
-      expect(wrapper.find('input#schoolCity')).to.have.lengthOf(1);
-      expect(wrapper.find('input#schoolName')).to.have.lengthOf(1);
-      expect(wrapper.find('select#schoolName')).to.have.lengthOf(0);
+      expect(wrapper.find('input#schoolCity')).toHaveLength(1);
+      expect(wrapper.find('input#schoolName')).toHaveLength(1);
+      expect(wrapper.find('select#schoolName')).toHaveLength(0);
 
-      wrapper.setState({
-        data: {schoolCountry: 'someplace other than Chile'},
+      act(() => {
+        wrapper.setState({
+          data: {schoolCountry: 'someplace other than Chile'},
+        });
       });
 
-      expect(wrapper.find('input#schoolCity')).to.have.lengthOf(1);
-      expect(wrapper.find('input#schoolName')).to.have.lengthOf(1);
-      expect(wrapper.find('select#schoolName')).to.have.lengthOf(0);
+      expect(wrapper.find('input#schoolCity')).toHaveLength(1);
+      expect(wrapper.find('input#schoolName')).toHaveLength(1);
+      expect(wrapper.find('select#schoolName')).toHaveLength(0);
 
-      wrapper.setState({data: {schoolCountry: 'Chile'}});
+      act(() => {
+        wrapper.setState({data: {schoolCountry: 'Chile'}});
+      });
 
-      expect(wrapper.find('input#schoolCity')).to.have.lengthOf(0);
-      expect(wrapper.find('input#schoolName')).to.have.lengthOf(0);
-      expect(wrapper.find('select#schoolName')).to.have.lengthOf(1);
+      expect(wrapper.find('input#schoolCity')).toHaveLength(0);
+      expect(wrapper.find('input#schoolName')).toHaveLength(0);
+      expect(wrapper.find('select#schoolName')).toHaveLength(1);
     });
 
     it('displays extra inputs when Chile is selected', () => {
       const wrapper = mount(<InternationalOptIn {...defaultProps} />);
 
-      expect(wrapper.find('select#schoolDepartment')).to.have.lengthOf(0);
-      expect(wrapper.find('select#schoolCommune')).to.have.lengthOf(0);
-      expect(wrapper.find('select#schoolId')).to.have.lengthOf(0);
+      expect(wrapper.find('select#schoolDepartment')).toHaveLength(0);
+      expect(wrapper.find('select#schoolCommune')).toHaveLength(0);
+      expect(wrapper.find('select#schoolId')).toHaveLength(0);
 
-      wrapper.setState({
-        data: {schoolCountry: 'someplace other than Chile'},
+      act(() => {
+        wrapper.setState({
+          data: {schoolCountry: 'someplace other than Chile'},
+        });
       });
 
-      expect(wrapper.find('select#schoolDepartment')).to.have.lengthOf(0);
-      expect(wrapper.find('select#schoolCommune')).to.have.lengthOf(0);
-      expect(wrapper.find('select#schoolId')).to.have.lengthOf(0);
+      expect(wrapper.find('select#schoolDepartment')).toHaveLength(0);
+      expect(wrapper.find('select#schoolCommune')).toHaveLength(0);
+      expect(wrapper.find('select#schoolId')).toHaveLength(0);
 
-      wrapper.setState({data: {schoolCountry: 'Chile'}});
+      act(() => {
+        wrapper.setState({data: {schoolCountry: 'Chile'}});
+      });
 
-      expect(wrapper.find('select#schoolDepartment')).to.have.lengthOf(1);
-      expect(wrapper.find('select#schoolCommune')).to.have.lengthOf(1);
-      expect(wrapper.find('select#schoolId')).to.have.lengthOf(1);
+      expect(wrapper.find('select#schoolDepartment')).toHaveLength(1);
+      expect(wrapper.find('select#schoolCommune')).toHaveLength(1);
+      expect(wrapper.find('select#schoolId')).toHaveLength(1);
     });
 
     it('requires each Chilean school data field be selected in order', () => {
       const wrapper = mount(<InternationalOptIn {...defaultProps} />);
-      wrapper.setState({data: {schoolCountry: 'Chile'}});
-
-      expect(wrapper.find('select#schoolCommune').prop('disabled')).to.be.true;
-      expect(wrapper.find('select#schoolName').prop('disabled')).to.be.true;
-      expect(wrapper.find('select#schoolId').prop('disabled')).to.be.true;
-
-      wrapper.setState({
-        data: {schoolDepartment: 'department', ...wrapper.state().data},
+      act(() => {
+        wrapper.setState({data: {schoolCountry: 'Chile'}});
       });
 
-      expect(wrapper.find('select#schoolCommune').prop('disabled')).to.be.false;
-      expect(wrapper.find('select#schoolName').prop('disabled')).to.be.true;
-      expect(wrapper.find('select#schoolId').prop('disabled')).to.be.true;
+      expect(wrapper.find('select#schoolCommune').prop('disabled')).toBe(true);
+      expect(wrapper.find('select#schoolName').prop('disabled')).toBe(true);
+      expect(wrapper.find('select#schoolId').prop('disabled')).toBe(true);
 
-      wrapper.setState({
-        data: {schoolCommune: 'commune', ...wrapper.state().data},
+      act(() => {
+        wrapper.setState({
+          data: {schoolDepartment: 'department', ...wrapper.state().data},
+        });
       });
 
-      expect(wrapper.find('select#schoolCommune').prop('disabled')).to.be.false;
-      expect(wrapper.find('select#schoolName').prop('disabled')).to.be.false;
-      expect(wrapper.find('select#schoolId').prop('disabled')).to.be.true;
+      expect(wrapper.find('select#schoolCommune').prop('disabled')).toBe(false);
+      expect(wrapper.find('select#schoolName').prop('disabled')).toBe(true);
+      expect(wrapper.find('select#schoolId').prop('disabled')).toBe(true);
 
-      wrapper.setState({
-        data: {schoolName: 'name', ...wrapper.state().data},
+      act(() => {
+        wrapper.setState({
+          data: {schoolCommune: 'commune', ...wrapper.state().data},
+        });
       });
 
-      expect(wrapper.find('select#schoolCommune').prop('disabled')).to.be.false;
-      expect(wrapper.find('select#schoolName').prop('disabled')).to.be.false;
-      expect(wrapper.find('select#schoolId').prop('disabled')).to.be.false;
+      expect(wrapper.find('select#schoolCommune').prop('disabled')).toBe(false);
+      expect(wrapper.find('select#schoolName').prop('disabled')).toBe(false);
+      expect(wrapper.find('select#schoolId').prop('disabled')).toBe(true);
+
+      act(() => {
+        wrapper.setState({
+          data: {schoolName: 'name', ...wrapper.state().data},
+        });
+      });
+
+      expect(wrapper.find('select#schoolCommune').prop('disabled')).toBe(false);
+      expect(wrapper.find('select#schoolName').prop('disabled')).toBe(false);
+      expect(wrapper.find('select#schoolId').prop('disabled')).toBe(false);
     });
 
     it('populates the Chilean school data fields based on earlier selections', () => {
@@ -351,34 +423,36 @@ describe('InternationalOptInTest', () => {
         },
       };
       const wrapper = mount(<InternationalOptIn {...props} />);
-      wrapper.setState({data: {schoolCountry: 'Chile'}});
+      act(() => {
+        wrapper.setState({data: {schoolCountry: 'Chile'}});
+      });
 
       // initially, only departments are available; everything else is empty
       const departments = wrapper
         .find('select#schoolDepartment')
         .children()
         .map(option => option.prop('value'));
-      expect(departments).to.eql([
+      expect(departments).toEqual([
         '',
         'Not applicable',
         'department 1',
         'department 2',
       ]);
-      expect(wrapper.find('select#schoolCommune').children()).to.have.lengthOf(
-        2
-      );
-      expect(wrapper.find('select#schoolName').children()).to.have.lengthOf(2);
-      expect(wrapper.find('select#schoolId').children()).to.have.lengthOf(2);
+      expect(wrapper.find('select#schoolCommune').children()).toHaveLength(2);
+      expect(wrapper.find('select#schoolName').children()).toHaveLength(2);
+      expect(wrapper.find('select#schoolId').children()).toHaveLength(2);
 
       // after selecting a department, municipality becomes available
-      wrapper.setState({
-        data: {schoolDepartment: 'department 1', ...wrapper.state().data},
+      act(() => {
+        wrapper.setState({
+          data: {schoolDepartment: 'department 1', ...wrapper.state().data},
+        });
       });
       let commune = wrapper
         .find('select#schoolCommune')
         .children()
         .map(option => option.prop('value'));
-      expect(commune).to.eql([
+      expect(commune).toEqual([
         '',
         'Not applicable',
         'commune 1-1',
@@ -386,14 +460,16 @@ describe('InternationalOptInTest', () => {
       ]);
 
       // selecting a different department will change the communes available
-      wrapper.setState({
-        data: {...wrapper.state().data, schoolDepartment: 'department 2'},
+      act(() => {
+        wrapper.setState({
+          data: {...wrapper.state().data, schoolDepartment: 'department 2'},
+        });
       });
       commune = wrapper
         .find('select#schoolCommune')
         .children()
         .map(option => option.prop('value'));
-      expect(commune).to.eql([
+      expect(commune).toEqual([
         '',
         'Not applicable',
         'commune 2-1',
@@ -401,18 +477,22 @@ describe('InternationalOptInTest', () => {
       ]);
 
       // likewise, name and id selections unlock in turn
-      expect(wrapper.find('select#schoolName').children()).to.have.lengthOf(2);
-      expect(wrapper.find('select#schoolId').children()).to.have.lengthOf(2);
-      wrapper.setState({
-        data: {...wrapper.state().data, schoolCommune: 'commune 2-1'},
+      expect(wrapper.find('select#schoolName').children()).toHaveLength(2);
+      expect(wrapper.find('select#schoolId').children()).toHaveLength(2);
+      act(() => {
+        wrapper.setState({
+          data: {...wrapper.state().data, schoolCommune: 'commune 2-1'},
+        });
       });
-      expect(wrapper.find('select#schoolName').children()).to.have.lengthOf(4);
-      expect(wrapper.find('select#schoolId').children()).to.have.lengthOf(2);
-      wrapper.setState({
-        data: {...wrapper.state().data, schoolName: 'name 2-1-1'},
+      expect(wrapper.find('select#schoolName').children()).toHaveLength(4);
+      expect(wrapper.find('select#schoolId').children()).toHaveLength(2);
+      act(() => {
+        wrapper.setState({
+          data: {...wrapper.state().data, schoolName: 'name 2-1-1'},
+        });
       });
-      expect(wrapper.find('select#schoolName').children()).to.have.lengthOf(4);
-      expect(wrapper.find('select#schoolId').children()).to.have.lengthOf(4);
+      expect(wrapper.find('select#schoolName').children()).toHaveLength(4);
+      expect(wrapper.find('select#schoolId').children()).toHaveLength(4);
     });
   });
 
@@ -420,70 +500,88 @@ describe('InternationalOptInTest', () => {
     it('displays school name and city as selects rather than inputs when Uzbekistan is selected', () => {
       const wrapper = mount(<InternationalOptIn {...defaultProps} />);
 
-      expect(wrapper.find('input#schoolCity')).to.have.lengthOf(1);
-      expect(wrapper.find('input#schoolName')).to.have.lengthOf(1);
-      expect(wrapper.find('select#schoolName')).to.have.lengthOf(0);
+      expect(wrapper.find('input#schoolCity')).toHaveLength(1);
+      expect(wrapper.find('input#schoolName')).toHaveLength(1);
+      expect(wrapper.find('select#schoolName')).toHaveLength(0);
 
-      wrapper.setState({
-        data: {schoolCountry: 'someplace other than Uzbekistan'},
+      act(() => {
+        wrapper.setState({
+          data: {schoolCountry: 'someplace other than Uzbekistan'},
+        });
       });
 
-      expect(wrapper.find('input#schoolCity')).to.have.lengthOf(1);
-      expect(wrapper.find('input#schoolName')).to.have.lengthOf(1);
-      expect(wrapper.find('select#schoolName')).to.have.lengthOf(0);
+      expect(wrapper.find('input#schoolCity')).toHaveLength(1);
+      expect(wrapper.find('input#schoolName')).toHaveLength(1);
+      expect(wrapper.find('select#schoolName')).toHaveLength(0);
 
-      wrapper.setState({data: {schoolCountry: 'Uzbekistan'}});
+      act(() => {
+        wrapper.setState({data: {schoolCountry: 'Uzbekistan'}});
+      });
 
-      expect(wrapper.find('input#schoolCity')).to.have.lengthOf(0);
-      expect(wrapper.find('input#schoolName')).to.have.lengthOf(0);
-      expect(wrapper.find('select#schoolName')).to.have.lengthOf(1);
+      expect(wrapper.find('input#schoolCity')).toHaveLength(0);
+      expect(wrapper.find('input#schoolName')).toHaveLength(0);
+      expect(wrapper.find('select#schoolName')).toHaveLength(1);
     });
 
     it('displays extra inputs when Uzbekistan is selected', () => {
       const wrapper = mount(<InternationalOptIn {...defaultProps} />);
 
-      expect(wrapper.find('select#schoolDepartment')).to.have.lengthOf(0);
-      expect(wrapper.find('select#schoolMunicipality')).to.have.lengthOf(0);
-      expect(wrapper.find('select#schoolName')).to.have.lengthOf(0);
+      expect(wrapper.find('select#schoolDepartment')).toHaveLength(0);
+      expect(wrapper.find('select#schoolMunicipality')).toHaveLength(0);
+      expect(wrapper.find('select#schoolName')).toHaveLength(0);
 
-      wrapper.setState({
-        data: {schoolCountry: 'someplace other than Uzbekistan'},
+      act(() => {
+        wrapper.setState({
+          data: {schoolCountry: 'someplace other than Uzbekistan'},
+        });
       });
 
-      expect(wrapper.find('select#schoolDepartment')).to.have.lengthOf(0);
-      expect(wrapper.find('select#schoolMunicipality')).to.have.lengthOf(0);
-      expect(wrapper.find('select#schoolName')).to.have.lengthOf(0);
+      expect(wrapper.find('select#schoolDepartment')).toHaveLength(0);
+      expect(wrapper.find('select#schoolMunicipality')).toHaveLength(0);
+      expect(wrapper.find('select#schoolName')).toHaveLength(0);
 
-      wrapper.setState({data: {schoolCountry: 'Uzbekistan'}});
+      act(() => {
+        wrapper.setState({data: {schoolCountry: 'Uzbekistan'}});
+      });
 
-      expect(wrapper.find('select#schoolDepartment')).to.have.lengthOf(1);
-      expect(wrapper.find('select#schoolMunicipality')).to.have.lengthOf(1);
-      expect(wrapper.find('select#schoolName')).to.have.lengthOf(1);
+      expect(wrapper.find('select#schoolDepartment')).toHaveLength(1);
+      expect(wrapper.find('select#schoolMunicipality')).toHaveLength(1);
+      expect(wrapper.find('select#schoolName')).toHaveLength(1);
     });
 
     it('requires each Uzbekistan school data field be selected in order', () => {
       const wrapper = mount(<InternationalOptIn {...defaultProps} />);
-      wrapper.setState({data: {schoolCountry: 'Uzbekistan'}});
 
-      expect(wrapper.find('select#schoolMunicipality').prop('disabled')).to.be
-        .true;
-      expect(wrapper.find('select#schoolName').prop('disabled')).to.be.true;
-
-      wrapper.setState({
-        data: {schoolDepartment: 'department', ...wrapper.state().data},
+      act(() => {
+        wrapper.setState({data: {schoolCountry: 'Uzbekistan'}});
       });
 
-      expect(wrapper.find('select#schoolMunicipality').prop('disabled')).to.be
-        .false;
-      expect(wrapper.find('select#schoolName').prop('disabled')).to.be.true;
+      expect(wrapper.find('select#schoolMunicipality').prop('disabled')).toBe(
+        true
+      );
+      expect(wrapper.find('select#schoolName').prop('disabled')).toBe(true);
 
-      wrapper.setState({
-        data: {schoolMunicipality: 'district', ...wrapper.state().data},
+      act(() => {
+        wrapper.setState({
+          data: {schoolDepartment: 'department', ...wrapper.state().data},
+        });
       });
 
-      expect(wrapper.find('select#schoolMunicipality').prop('disabled')).to.be
-        .false;
-      expect(wrapper.find('select#schoolName').prop('disabled')).to.be.false;
+      expect(wrapper.find('select#schoolMunicipality').prop('disabled')).toBe(
+        false
+      );
+      expect(wrapper.find('select#schoolName').prop('disabled')).toBe(true);
+
+      act(() => {
+        wrapper.setState({
+          data: {schoolMunicipality: 'district', ...wrapper.state().data},
+        });
+      });
+
+      expect(wrapper.find('select#schoolMunicipality').prop('disabled')).toBe(
+        false
+      );
+      expect(wrapper.find('select#schoolName').prop('disabled')).toBe(false);
     });
 
     it('populates the Uzbekistan school data fields based on earlier selections', () => {
@@ -505,33 +603,37 @@ describe('InternationalOptInTest', () => {
         },
       };
       const wrapper = mount(<InternationalOptIn {...props} />);
-      wrapper.setState({data: {schoolCountry: 'Uzbekistan'}});
+      act(() => {
+        wrapper.setState({data: {schoolCountry: 'Uzbekistan'}});
+      });
 
       // initially, only departments are available; everything else is empty
       const departments = wrapper
         .find('select#schoolDepartment')
         .children()
         .map(option => option.prop('value'));
-      expect(departments).to.eql([
+      expect(departments).toEqual([
         '',
         'Not applicable',
         'department 1',
         'department 2',
       ]);
-      expect(
-        wrapper.find('select#schoolMunicipality').children()
-      ).to.have.lengthOf(2);
-      expect(wrapper.find('select#schoolName').children()).to.have.lengthOf(2);
+      expect(wrapper.find('select#schoolMunicipality').children()).toHaveLength(
+        2
+      );
+      expect(wrapper.find('select#schoolName').children()).toHaveLength(2);
 
       // after selecting a department, district becomes available
-      wrapper.setState({
-        data: {schoolDepartment: 'department 1', ...wrapper.state().data},
+      act(() => {
+        wrapper.setState({
+          data: {schoolDepartment: 'department 1', ...wrapper.state().data},
+        });
       });
       let commune = wrapper
         .find('select#schoolMunicipality')
         .children()
         .map(option => option.prop('value'));
-      expect(commune).to.eql([
+      expect(commune).toEqual([
         '',
         'Not applicable',
         'district 1-1',
@@ -539,14 +641,16 @@ describe('InternationalOptInTest', () => {
       ]);
 
       // selecting a different department will change the districts available
-      wrapper.setState({
-        data: {...wrapper.state().data, schoolDepartment: 'department 2'},
+      act(() => {
+        wrapper.setState({
+          data: {...wrapper.state().data, schoolDepartment: 'department 2'},
+        });
       });
       commune = wrapper
         .find('select#schoolMunicipality')
         .children()
         .map(option => option.prop('value'));
-      expect(commune).to.eql([
+      expect(commune).toEqual([
         '',
         'Not applicable',
         'district 2-1',
@@ -554,11 +658,13 @@ describe('InternationalOptInTest', () => {
       ]);
 
       // after selecting a district, school becomes available
-      expect(wrapper.find('select#schoolName').children()).to.have.lengthOf(2);
-      wrapper.setState({
-        data: {...wrapper.state().data, schoolMunicipality: 'district 2-1'},
+      expect(wrapper.find('select#schoolName').children()).toHaveLength(2);
+      act(() => {
+        wrapper.setState({
+          data: {...wrapper.state().data, schoolMunicipality: 'district 2-1'},
+        });
       });
-      expect(wrapper.find('select#schoolName').children()).to.have.lengthOf(4);
+      expect(wrapper.find('select#schoolName').children()).toHaveLength(4);
     });
   });
 });

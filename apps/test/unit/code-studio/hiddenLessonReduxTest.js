@@ -1,5 +1,5 @@
-import {assert} from 'chai';
-import sinon from 'sinon';
+import {assert} from 'chai'; // eslint-disable-line no-restricted-imports
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import reducer, {
   toggleHiddenLesson,

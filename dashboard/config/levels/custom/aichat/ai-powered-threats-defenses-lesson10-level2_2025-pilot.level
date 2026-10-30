@@ -1,0 +1,57 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-08-19T16:23:48.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##  AI Metadata Inference Assistant\r\n\r\nSimulate how an AI might analyze encrypted messaging **metadata** to make inferences about what's happening — even without reading the messages themselves.\r\n\r\n### Do This:\r\n\r\nYou’ve already looked at the metadata for a few sample conversations and made your own guesses. Now see what the AI comes up with.\r\n\r\n1. Load Chat 1 Messaging Metadata from the library.\r\n2. Ask the AI to describe what kind of conversation it might be.\r\n3. Does the AI make the same inferences as you?\r\n4. What patterns does it seem to pick up on?\r\n5. Repeat for Chat 2 and Chat 3.\r\n\r\nCompare the AI’s responses to your own predictions.\r\n\r\n---\r\n**Try it out!** \r\n\r\n:::details [<i class=\"fa fa-briefcase\" aria-hidden=\"true\"></i> **Need a starting prompt?**]\r\n>Here’s the message metadata table. What might be going on in this conversation? Why might someone flag this as a problem?\r\n:::\r\n&nbsp\r\n\r\n\r\n::: details [<i class=\"fa fa-file-image-o\" aria-hidden=\"true\"></i> **How do I add the chat metadata?**]\r\n- Click the button labeled **Add** below your chat input.\r\n- Choose **From Library**\r\n- Then browse the existing files.\r\n- When you find the chat metadata that you want to upload, click the checkbox next to it to select it and then click **Attach**.\r\n- You should see the file get added to the message being sent to AI Chat.\r\n:::\r\n",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-2.5-flash-lite",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a simulated AI system that analyzes encrypted messaging metadata — including timestamps, sender/receiver pairs, and message lengths — to infer what kind of conversation might be happening.\n\nYou cannot see the content of the messages, only metadata. Use patterns in the metadata to suggest possible interpretations of the conversation. Your analysis should consider:\n\n- Timing of messages (rapid, delayed, during school hours, etc.)\n- Message length (short replies, long blocks of text)\n- Sender/receiver ratio (one-sided vs. back-and-forth)\n- Behavioral patterns (e.g., repetition, high frequency, bursts of messages)\n\nYour job is to guess what kind of interaction this might be — for example: casual chatting, venting, arguing, coordinating plans, working on schoolwork, or something else.\n\nYou should also assess whether the pattern might be flagged by an AI system as potentially concerning, and briefly explain why (e.g., unusual timing, one-sided conversation, matches known risk patterns).\n\nAvoid wild speculation. Provide 1–2 reasonable interpretations, explain your reasoning, and acknowledge uncertainty when appropriate.\n",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gemini-2.5-flash-lite"
+      ],
+      "multimodalEnabled": true
+    },
+    "name_suffix": "_2025",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "starter_assets": {
+      "Chat 1_ Messaging Metadata .pdf": "5a4dae25-b7dc-4b70-b72f-9269b21098e5.pdf",
+      "Chat 2_ Messaging Metadata .pdf": "0d0e8fd0-1cf7-49f9-83fa-aa72b4bd0013.pdf",
+      "Chat 3_ Messaging Metadata .pdf": "204ea4cc-146f-4f25-a157-4f57ba28d53f.pdf"
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2025-08-19T16:23:48.906+00:00\",\"changed\":[\"cloned from \\\"test-ai-powered-threats-defenses-lesson10-level2-2\\\"\"],\"cloned_from\":\"test-ai-powered-threats-defenses-lesson10-level2-2\"},{\"changed_at\":\"2025-08-19 16:24:20 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Aichat>

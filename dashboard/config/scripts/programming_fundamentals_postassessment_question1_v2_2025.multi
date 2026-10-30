@@ -1,0 +1,24 @@
+name 'programming-fundamentals-postassessment-question1_v2-2025'
+title 'Programming Fundamentals Post-Assessment: Question 1'
+
+wrong '`0 1 2 3 4`'
+wrong '`0 2 4 6 8`'
+right '`0 2 4`'
+wrong '`0 2 4 6`'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+What is the output of the following code?
+
+```
+count = 0  
+while count < 5:  
+    print(count, end=" ")  
+    count += 2  
+```
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 8: Introduction to Loops
+MARKDOWN

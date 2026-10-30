@@ -43,6 +43,8 @@
   "hafezTitle": "My Brilliant Image",
   "harjoLines": "Remember the sky that you were born under,\nknow each of the star's stories.\nRemember the moon, know who she is.\nRemember the sun's birth at dawn, that is the\nstrongest point of time. Remember sundown\nand the giving away to night.",
   "harjoTitle": "Remember",
+  "hopeLines": "Fannie Akpik\nleads her dance group\nat the high school hallway in Utqiagvik.\nVoice\nclear as a loon's call,\ntender\nas the warm center of the lagoon where dreams come to surface.\nSongs erupted from the Qargi,\nflash in the dark,\npiece of the moon bitten off,\nlanding at the tip of the drum stick.",
+  "hopeTitle": "Dance Practice",
   "hoplerLines": "And the sky!\nNooned with the steadfast blue enthusiasm\nOf an empty nursery.\nCrooked lizards grassed in yellow shade.\nThe grass was lizarding,\nGreen and on a rampage.\nShade tenacious in the crook of a bent stem.\nNoon. This noon—\nSkyed, blue and full of hum, full of bloom.\nThe grass was lizarding.",
   "hoplerTitle": "In the Garden",
   "hughes1Lines": "To fling my arms wide\nIn the face of the sun,\nDance! Whirl! Whirl!\nTill the quick day is done.\nRest at pale evening...\nA tall, slim tree...\nNight coming tenderly\n  Black like me.",
@@ -75,6 +77,8 @@
   "poem": "Poem:",
   "poLines": "The birds have vanished into the sky,\nAnd now the last cloud drains away.\nWe sit together, the mountain and me,\nUntil only the mountain remains.",
   "poTitle": "Mountain",
+  "priestLines": "When we speak, whether or not\nwe agree, the trees will turn\nthe breath of our words\nfrom carbon dioxide back into air—\n   \ngive us new breath\nfor new words,\nnew chances to listen,\nnew chances to be heard.",
+  "priestTitle": "The Forest for the Trees",
   "profanityFoundError": "Your poem contains inappropriate language so it will not be saved. Please update your poem to remove the {wordCount, plural, one {word} other {words}} \"{words}\".",
   "reinfFeedbackMsg": "You're finished! Click \"Continue\" to move on to the next level.",
   "removedSprite": "You're missing a sprite. Find this block and add it to your code: \n<xml><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"ocean_wave\"</title><title name=\"LOCATION\">'{\"x\":200,\"y\":243}'</title></block></xml>",
@@ -117,6 +121,8 @@
   "twainTitle": "Warm Summer Sun",
   "tzuLines": "Be content with what you have;\nRejoice in the way things are.\nWhen you realize there is nothing lacking,\nThe whole world belongs to you.",
   "tzuTitle": "Rejoice",
+  "whitneyLines": "Does anyone know how to get to sleep?\nReally, I already tried counting sheep.\nEveryone thinks it truly works.\nAhhh! these wooly puffballs are giving me weird smirks.\nMaybe I should try screaming… Oh!\nSorry! I must have been dreaming.",
+  "whitneyTitle": "I Can’t Sleep",
   "wordsworthLines": "I wandered lonely as a cloud\nThat floats on high o'er vales and hills,\nWhen all at once I saw a crowd,\nA host, of golden daffodils;\nBeside the lake, beneath the trees,\nFluttering and dancing in the breeze.",
   "wordsworthTitle": "I Wandered Lonely as a Cloud"
 }

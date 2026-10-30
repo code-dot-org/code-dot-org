@@ -16,7 +16,7 @@
     "contained_level_names": [
       "CSA CB_Lab Magpie-L4-FR1_2022"
     ],
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-07-12 14:57:25 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-07-12 17:40:14 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-07-12 17:41:19 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"

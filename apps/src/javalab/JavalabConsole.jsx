@@ -1,22 +1,24 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import PropTypes from 'prop-types';
-import javalabMsg from '@cdo/javalab/locale';
-import color from '@cdo/apps/util/color';
+
 import {KeyCodes} from '@cdo/apps/constants';
-import {
-  appendInputLog,
-  clearConsoleLogs,
-  closePhotoPrompter,
-} from './redux/consoleRedux';
-import {DisplayTheme} from './DisplayTheme';
 import CommandHistory from '@cdo/apps/lib/tools/jsdebugger/CommandHistory';
 import PaneHeader, {
   PaneSection,
   PaneButton,
 } from '@cdo/apps/templates/PaneHeader';
-import PhotoSelectionView from './components/PhotoSelectionView';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import color from '@cdo/apps/util/color';
+import javalabMsg from '@cdo/javalab/locale';
+
+import PhotoSelectionView from './components/PhotoSelectionView';
+import {DisplayTheme} from './DisplayTheme';
+import {
+  appendInputLog,
+  clearConsoleLogs,
+  closePhotoPrompter,
+} from './redux/consoleRedux';
 
 /**
  * Set the cursor position to the end of the text content in a div element.
@@ -89,7 +91,11 @@ class JavalabConsole extends React.Component {
         lines[++currentLine] = '';
       } else if (log.type === 'markdown') {
         lines[++currentLine] = (
-          <SafeMarkdown markdown={log.text} openExternalLinksInNewTab={true} />
+          <SafeMarkdown
+            markdown={log.text}
+            localized={false}
+            openExternalLinksInNewTab={true}
+          />
         );
       } else {
         const text = log.type === 'input' ? log.text + '\n' : log.text;
@@ -214,9 +220,10 @@ class JavalabConsole extends React.Component {
       <div style={style}>
         <PaneHeader
           id="pane-header"
-          style={styles.header}
-          hasFocus
-          isOldPurpleColor
+          style={{
+            backgroundColor: '#7665a0',
+            paddingLeft: '0.125rem',
+          }}
         >
           <PaneSection
             className={'pane-header-section pane-header-section-left'}
@@ -237,7 +244,7 @@ class JavalabConsole extends React.Component {
               onClick={() => {
                 clearConsoleLogs();
               }}
-              iconClass="fa fa-eraser"
+              iconProps={{iconName: 'eraser', iconStyle: 'solid'}}
               label={javalabMsg.clearConsole()}
             />
           </PaneSection>
@@ -305,7 +312,6 @@ const styles = {
     color: color.black,
   },
   container: {
-    marginTop: 30,
     display: 'flex',
     flexGrow: 1,
     overflowY: 'hidden',

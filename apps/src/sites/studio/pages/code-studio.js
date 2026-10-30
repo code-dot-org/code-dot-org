@@ -6,31 +6,47 @@
  * Note: This is included _after_ application.js.erb during our transition period,
  * so when moving things preserve the include order as much as possible.
  */
+import '@code-dot-org/component-library-styles/fontVariables.css';
+import '@code-dot-org/component-library-styles/shapeAndSpacingVariables.css';
+import '@code-dot-org/component-library-styles/primitiveColors.css';
+import '@code-dot-org/component-library-styles/colors.css';
+import '@code-dot-org/component-library-styles/brandOverrides.css';
+import {injectFontAwesome} from '@code-dot-org/fonts';
 import $ from 'jquery';
+import 'bootstrap-sass';
 import React from 'react';
-import ReactDOM from 'react-dom';
-import {getStore} from '@cdo/apps/code-studio/redux';
-import {setRtlFromDOM} from '@cdo/apps/code-studio/isRtlRedux';
-import initSigninState from '@cdo/apps/code-studio/initSigninState';
-import initResponsive from '@cdo/apps/code-studio/responsive';
+
 import hashEmail from '@cdo/apps/code-studio/hashEmail';
+import initSigninState from '@cdo/apps/code-studio/initSigninState';
+import {setRtlFromDOM} from '@cdo/apps/code-studio/isRtlRedux';
+import {
+  registerGetResult,
+  registerLevel,
+  onAnswerChanged,
+} from '@cdo/apps/code-studio/levels/codeStudioLevels';
+import {getStore} from '@cdo/apps/code-studio/redux';
+import initResponsive from '@cdo/apps/code-studio/responsive';
+import {initHamburger} from '@cdo/apps/hamburger/hamburger.js';
 import GDPRDialog from '@cdo/apps/templates/GDPRDialog';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
+// disable import/order rule to import consoleShim after setting store.
+// This might be safe to remove but needs investigation whether any behavior is changed by order.
+/* eslint-disable import/order*/
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 const store = getStore();
 store.dispatch(setRtlFromDOM());
-
 // Shim window.console to be safe in IE
 require('@cdo/apps/code-studio/consoleShim')(window);
+/* eslint-enable import/order*/
 
-var Sounds = require('@cdo/apps/Sounds');
-var activateReferenceAreaOnLoad = require('@cdo/apps/code-studio/reference_area');
 import {checkForUnsupportedBrowsersOnLoad} from '@cdo/apps/util/unsupportedBrowserWarning';
-import {initHamburger} from '@cdo/apps/hamburger/hamburger.js';
+
+var activateReferenceAreaOnLoad = require('@cdo/apps/code-studio/reference_area');
+var Sounds = require('@cdo/apps/Sounds');
 
 window.React = require('react');
 window.ReactDOM = require('react-dom');
-window.Radium = require('radium');
 
 // Prevent callstack exceptions when opening multiple dialogs
 // http://stackoverflow.com/a/15856139/2506748
@@ -53,11 +69,6 @@ window.dashboard.pairing = require('@cdo/apps/code-studio/pairing');
 window.dashboard.project = require('@cdo/apps/code-studio/initApp/project');
 
 // only stick the necessary methods onto dashboard.codeStudioLevels
-import {
-  registerGetResult,
-  registerLevel,
-  onAnswerChanged,
-} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 window.dashboard.codeStudioLevels = {
   registerGetResult,
   registerLevel,
@@ -77,7 +88,7 @@ window.Multi = require('@cdo/apps/code-studio/levels/multi');
 window.TextMatch = require('@cdo/apps/code-studio/levels/textMatch');
 
 // Wrap existing window onerror caller with a script error check.  If we have a
-// script error and a url, throw that so that we have the info in New Relic.
+// script error and a url, rethrow it so the URL reaches browser observability.
 var windowOnError = window.onerror;
 
 window.onerror = function (msg, url, ln) {
@@ -106,7 +117,7 @@ $(document).ready(function () {
   if (document.querySelector(`script[data-gdpr]`)) {
     const gdprData = getScriptData('gdpr');
     if (gdprData.show_gdpr_dialog && gdprData.current_user_id) {
-      ReactDOM.render(
+      createReactRoot(
         <GDPRDialog
           isDialogOpen={gdprData.show_gdpr_dialog}
           currentUserId={gdprData.current_user_id}
@@ -133,3 +144,4 @@ checkForUnsupportedBrowsersOnLoad();
 initHamburger();
 initSigninState(userType, under13);
 initResponsive();
+injectFontAwesome();

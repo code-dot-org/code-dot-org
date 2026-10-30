@@ -1,0 +1,9 @@
+{
+  "key": "design-mode",
+  "course_version_key": "2024",
+  "course_offering_key": "focus-on-creativity",
+  "parent_reference_guide_key": "app-lab",
+  "display_name": "Design Mode",
+  "content": "In App Lab \"Design Mode\" lets you drag and drop User Interface elements into the app. Just as you created paper prototypes by drawing all of the interface elements on paper, Design Mode allows you to create digital prototypes by dragging and dropping different elements on the screen.\n\n## Tour of Design Mode\n\n![](https://images.code.org/01a31ac3be66deb6d01a92a1edfffd21-image-1476726587662.png)\n\n[diagram_nums]\n\n1. You'll see a new set of switches above the app area that let you flip back and forth between \"Design Mode\" and Code Mode\".\n2. Adding an element is as easy as dragging and dropping it into the app wherever you want. Once it's on the app screen you can reposition it, resize it and change lots of other properties about it.\n3. The **Properties** tab shows you everything you can change about the look and feel of a UI element.\n4. The **element ID** is important because it's how you refer to the element in your code. We'll discuss element IDs later on.\n5. You can make the text that the user sees on the button be whatever you like.\n6. Scroll down to see whether other properties for a UI element might be \"hiding\" down below.\n\n[/diagram_nums]",
+  "position": 7
+}

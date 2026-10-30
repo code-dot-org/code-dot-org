@@ -1,0 +1,14 @@
+name 'ai-powered-threats-defenses-preassessment-q2_2025-pilot_2025'
+
+question ‘Which of the following threats spreads without needing to attach to a file?’
+
+wrong ‘Virus’
+right ‘Worm’
+wrong ‘Trojan’
+wrong ‘Keylogger’
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 2: Cybersecurity Threats
+MARKDOWN

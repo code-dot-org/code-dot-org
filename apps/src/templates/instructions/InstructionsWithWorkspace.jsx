@@ -2,9 +2,15 @@ import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import CodeWorkspaceContainer from '../CodeWorkspaceContainer';
-import TopInstructions from './TopInstructions';
+
+import {shouldShowAiTutor} from '@cdo/apps/aichat/helpers/aiChatAccess';
+import {AI_TUTOR_LEGACY_LABS} from '@cdo/apps/aiTutor/views/legacyLabs/constants';
+
+import {AiTutorContainer} from '../../aiTutor/views/legacyLabs/AiTutorContainer';
 import {setInstructionsMaxHeightAvailable} from '../../redux/instructions';
+import CodeWorkspaceContainer from '../CodeWorkspaceContainer';
+
+import TopInstructions from './TopInstructions';
 
 /**
  * A component representing the right side of the screen in our app. In particular
@@ -18,14 +24,22 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
     children: PropTypes.node,
     instructionsStyle: PropTypes.object,
     workspaceStyle: PropTypes.object,
+    collapseIcon: PropTypes.node,
+    expandIcon: PropTypes.node,
+    upIcon: PropTypes.node,
+    downIcon: PropTypes.node,
 
     // Provided by redux
     instructionsHeight: PropTypes.number.isRequired,
     setInstructionsMaxHeightAvailable: PropTypes.func.isRequired,
+    labType: PropTypes.string,
+    aiChatAccessLevel: PropTypes.string,
+    isShareView: PropTypes.bool,
   };
 
-  // only used so that we can rerender when resized
   state = {
+    tutorLayout: {isVisible: false, isOpen: false},
+    // only used so that we can rerender when resized
     windowWidth: undefined,
     windowHeight: undefined,
   };
@@ -84,6 +98,10 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
     setInstructionsMaxHeightAvailable(maxInstructionsHeight);
   };
 
+  handleLayoutChange = tutorLayout => {
+    this.setState({tutorLayout});
+  };
+
   componentDidMount() {
     window.addEventListener('resize', this.onResize);
   }
@@ -93,18 +111,60 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
   }
 
   render() {
-    const {instructionsStyle, workspaceStyle, instructionsHeight, children} =
-      this.props;
+    let {
+      instructionsStyle,
+      workspaceStyle,
+      instructionsHeight,
+      labType,
+      aiChatAccessLevel,
+      isShareView,
+      children,
+    } = this.props;
+
+    const aiTutorAvailableForLevel =
+      window?.appOptions?.level?.aiTutorAvailable ?? false;
+
+    const shouldMountAiTutorContainer =
+      !isShareView &&
+      AI_TUTOR_LEGACY_LABS.includes(labType) &&
+      shouldShowAiTutor({
+        appName: labType,
+        isTutorLevel: aiTutorAvailableForLevel,
+        aiChatAccessLevel,
+      });
+
+    const chatContainerSpace = 335; // 325px chat container + 10px margin = 335px
+    const sidebarSpace = 55; // 45px sidebar + 10px margin = 55px
+    const tutorSpace = this.state.tutorLayout.isOpen
+      ? chatContainerSpace
+      : sidebarSpace;
+
+    if (this.state.tutorLayout.isVisible) {
+      instructionsStyle = {...instructionsStyle, right: tutorSpace};
+      workspaceStyle = {...workspaceStyle, right: tutorSpace};
+    }
 
     return (
       <span>
-        <TopInstructions mainStyle={instructionsStyle} />
+        <TopInstructions
+          mainStyle={instructionsStyle}
+          collapseIcon={this.props.collapseIcon}
+          expandIcon={this.props.expandIcon}
+          upIcon={this.props.upIcon}
+          downIcon={this.props.downIcon}
+        />
         <CodeWorkspaceContainer
           ref={this.setCodeWorkspaceContainerRef}
-          style={{...workspaceStyle, top: instructionsHeight}}
+          style={{
+            ...workspaceStyle,
+            top: instructionsHeight,
+          }}
         >
           {children}
         </CodeWorkspaceContainer>
+        {shouldMountAiTutorContainer && (
+          <AiTutorContainer onLayoutChange={this.handleLayoutChange} />
+        )}
       </span>
     );
   }
@@ -113,6 +173,9 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
 export default connect(
   state => ({
     instructionsHeight: state.instructions.renderedHeight,
+    labType: state.pageConstants.appType,
+    isShareView: state.pageConstants.isShareView,
+    aiChatAccessLevel: state.currentUser.aiChatAccessLevel,
   }),
   dispatch => ({
     setInstructionsMaxHeightAvailable(maxHeight) {

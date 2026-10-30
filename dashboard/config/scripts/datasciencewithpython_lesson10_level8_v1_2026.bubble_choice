@@ -1,0 +1,11 @@
+name 'datasciencewithpython-lesson10-level8-v1-2026'
+display_name 'Practice Data Analysis'
+description 'Choose one of the options below!'
+
+sublevels
+level 'datasciencewithpython-lesson10-level8a-v1-2026'
+level 'datasciencewithpython-lesson10-level8b-v1-2026'
+level 'datasciencewithpython-lesson10-level8c-v1-2026'
+level 'datasciencewithpython-lesson10-level8d-v1-2026'
+
+uses_lab2

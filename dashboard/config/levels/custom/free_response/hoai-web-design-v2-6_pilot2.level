@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-04-06T18:24:17.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "title": "Reflection: Your First Version",
+    "long_instructions": "Congratulations - you set a vision, and used an AI Assistant to help bring it to life! But, that's just the first step. AI-generated results don't always match what we imagined, for example: the content, the color theme, or the layout.\r\n\r\n**What's one example of a mismatch between what you can imagine and what was generated? What do you think caused the gap?**\r\n\r\n_(There is no \"right\" or \"wrong\" answer to this question - it's just a moment of reflection that sets up the next part of the activity!)_",
+    "stay_on_level_after_submit": "false",
+    "submittable": "false",
+    "allow_multiple_attempts": "false",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_pilot2"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-06T18:24:17.374+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-v2-6\\\"\"],\"cloned_from\":\"hoai-web-design-v2-6\"},{\"changed_at\":\"2026-04-07 02:56:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

@@ -1,0 +1,91 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2024-07-10T18:56:48.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "onEvent": null,
+      "ledScreen.on": null,
+      "ledScreen.off": null,
+      "ledScreen.toggle": null,
+      "ledScreen.clear": null,
+      "ledScreen.scrollNumber": null,
+      "ledScreen.scrollString": null,
+      "playSound": {
+        "paletteParams": [
+          "url"
+        ],
+        "params": [
+          "\"sound://default.mp3\""
+        ]
+      }
+    },
+    "edit_code": true,
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "disable_if_else_editing": "false",
+    "free_play": "false",
+    "validation_enabled": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "execute_palette_apis_only": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "hide_view_data_button": "true",
+    "show_debug_watch": "true",
+    "expand_debugger": "false",
+    "fail_on_lint_errors": "false",
+    "debugger_disabled": "false",
+    "makerlab_enabled": "microbit",
+    "long_instructions": "# Yes / No Buttons\r\n\r\nCreate an app that lets you respond to yes or no questions. The app should consider **accessibility**, which means providing responses with both audio and visuals:\r\n\r\n- For audio, the app should play a sound representing the user's choice\r\n- For visuals, the app should display an image on the `ledScreen`\r\n\r\n# Do This:\r\n\r\n1. Add code to represent the Yes response in your app. Remember that your representation should include both sound and visuals.\r\n2. Add code to represent the No response in your app. Remember that your representation should include both sound and visuals.\r\n\r\n**Run your code!** Try giving the micro:bit to your neighbor and asking them a yes or no question, then seeing if you can tell how they responded just by looking at the micro:bit and listening to the app.",
+    "top_level_procedure_autopopulate": "false",
+    "parent_level_id": 20396,
+    "reference_links": [
+      "/courses/csd-2022/guides/microbit-overview",
+      "/courses/csd-2022/guides/microbit-display",
+      "/maker/setup"
+    ],
+    "mini_rubric": "false",
+    "text_mode_at_start": "false",
+    "encrypted": "false",
+    "widget_mode": "false",
+    "libraries_enabled": "false",
+    "ai_enabled": "false",
+    "display_name": "Yes / No Responder",
+    "thumbnail_url": "https://images.code.org/7f8fca3bef40cd07285bdab6b8858b1a-mb-Challenge.png",
+    "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"><button id=\"yesButton\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 100px; width: 100px; background-color: rgb(0, 200, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 30px; position: absolute; left: 110px; top: 90px;\">Yes</button><button id=\"noButton\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 100px; width: 100px; background-color: rgb(255, 0, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 30px; position: absolute; left: 110px; top: 225px;\">No</button></div></div>",
+    "bubble_choice_description": "Create an app that lets the user respond with yes or no using sounds and images.",
+    "encrypted_examples": "u12hEmNZ/t1pDft+eG1zqkF4Hvpaqg4oSoIPBxwTtZAzRhB1C9xbuvo7xwhF\nFzNNX/90pjqL95SAe7gMWYPjnA==\n",
+    "start_blocks": "//1) Add code to represent the Yes response in your app. Remember that your representation should include both sound and visuals.\r\nonEvent(\"yesButton\", \"click\", function( ) {\r\n\r\n});\r\n//2) Add code to represent the No response in your app. Remember that your representation should include both sound and visuals.\r\nonEvent(\"noButton\", \"click\", function( ) {\r\n\r\n});\r\n",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-07-10T18:56:48.192+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Outputs - ChalC_mb2022\\\"\"],\"cloned_from\":\"CSD U6 - Board Outputs - ChalC_mb2022\"}]"
+}]]></config>
+  <blocks/>
+</Applab>

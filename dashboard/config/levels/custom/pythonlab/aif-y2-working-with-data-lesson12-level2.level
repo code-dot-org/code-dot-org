@@ -1,0 +1,33 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-09-08T01:03:29.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "aif-y2-working-with-data-lesson12 + template",
+    "long_instructions": "Now, you need to read your data.\r\n\r\n**☑️ Do This:**\r\n- Use the `read_column` function to read each column from your CSV. \r\n- Store each column’s values in a variable.\r\n- Print out each variable to make sure your data looks correct.\r\n\r\n**💻 Coding Tip**\r\n\r\nRefer to the CSV documentation in your Project Planning Guide.\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFWiKRlEU3AhzJ03hqjb+XzLCCXZv1+siyYp+7GIM\nB0Eph5734nRztfGxOzeSh74puCsy4Vs6bxgOrtrqdpV9kfbSjhu40Vt9HGq5\nLlt2thiDzdGpIMFSY8NdLvdHyQt5yhJcJ9yphzkWnFL2B7g1PfC4QNnXaW1V\nI5b5r+47fc9H+fLnWte0BE23qh2AjDDHXDNAyLSjfwfcM+t2/kUBhmz1PMvq\nNZPvW92QCWPZANOMq5rtJNH/23mp1grvdkYWoykE7Yb3tmB4PmenV0zPuBUZ\nEZ7JrH3HwmAAgtyzxl2pgi4AbAJHDZIw8yryzD1XjpDMRaaJym1LwMt04Qv3\nale3fVaQBIc0/aUOk9Ip/Hw+jwpdtajAhlvFVeUDWIUUfgyDZJmGrTUYMkkQ\nwM0x1XXu9sO5EVqJRPcuwD/AoXmNTctgVjpQRwhY3PlfIF/XrLQn1JMc3I0E\n1sh1OsqobdXyIB0RZwZQHXOLjpztZQNJ5m7LXiLMOVQ6tzl67FvTGtuNRkai\n6a2wNweXgqAlfC5Kms6sUAK7v3tSPeiQ09BZLTzuSuvKbWBjEoeLTAxD/P52\nmgGnnEWg3ut8yMgAfZRjygFSXDHQ5iit0eVLf+/CziXE9mOJyGUgiU0sHV2J\nsqNnh2AKpctrYIDg2C6kjcl/4XOOVUREw8OfmhJlAp9z9EidEKWFD4wfxwZk\n2cBM8ai4xY+4ysvEJwT/EE0I37eZwyDndumBRoICadUZZgbqgjdhq6/8cEQj\n2a2hTqVcURCnSgxcy5wLlySUlwBJ3NxaNAJBHueW0Ws6li0So0G0YqvhQGmQ\neB3NcqMTWI5X035gInQSEjDHQFT/JXhgoyP34eTXhMD8cBzroDIjHNcKWcTA\nVCwOMerbYBTgHqv4610tXzqnzpPi8oLU9Q2PQLZkNQnCH1DW0k6KgkKI4oxm\nH2ygVYu1rE6maJgDvTheY0jSDCPMLBt8OuvevpOyM91nXZ+aqMtQf8/FEYZg\ncBA13cDh6BP1dkjZowZkMJZs+31QMgCWyvhOC+TmE62N0QG9lijzSMziU8t6\nJaR3DLtY17uGZHCE+p7OAr+bjZ77v6z4D+ZXzFApoTwB/9OEW6KyZqKfzWd6\nNU+Dc2KCHvsAl6VdUoG9kl7FRoHCs/RVUOk2+1k91DarzWvk6YAErcLZFKUU\nC6zDZafgjdG6oLnv6F6w0yHllh0DGX8/pH/cED8uyxFOPG9ykAwAlEYHcEPR\nRMgOnhUSXwufc3c4WD8MgkghrMbzcnoELckUqQ/BofY6yHBiZH2ZfFBf6OLf\ndyJn9pSuGX7F99fnD+Gx+jXkDFB0pXXzvZApkktm49NbTPsNhSCo/Z5mQT+d\njcR4LXy83/lXuLgltBDTpkTK5VdZeUFMeTBxS4hjiSJVrdQaWQjtTvjsnRGy\n+51p3t5k+hhsNfye0KSS8FNOqVPolVrioceYiyxZKhsItXDej/t/8WgmzmiS\nZ4a3uCreBcPR+Grlbn59vHQZmj2g1QOl3A679dyw6AGqjh6NnXYuXXssNUM/\noca5bOxczVA2FXhZJg6ue6tc5izCvbwuV5e2p9PzC0PBtoQuDq9l11NpLdiR\nRKFboryZ0ko1tO6wb5WPncvCuQSqqwsdIWAHNJq2/iQMiBlwPVLZZa8gPN3u\nmJ2lql4cILk+JHiY71Ju5ceEzEdY6XJ1VQZGuTHiNoLH3DRmvF8tFV7WO43F\nhiQ/+5eosw0VMGrVxkU+IHUYAHB+Y4kcWMR7IyXRNn9JCdZ6u1tB5fGYIIn3\nenCKrZ4kUNpn+sv6Z34P7Qo8kChGWK+gt5DEeyyGon1yeI+V43WarbBm\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-08 01:04:03 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-08 01:05:02 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

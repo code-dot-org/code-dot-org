@@ -60,9 +60,9 @@
     "libraries_enabled": "false",
     "ai_enabled": "false",
     "reference_links": [
-      "/courses/csd-2022/guides/playing-notes",
-      "/courses/csd-2022/guides/arrays",
-      "/courses/csd-2022/guides/modifying-arrays",
+      "/courses/csd-2024/guides/playing-notes",
+      "/courses/csd-2024/guides/arrays",
+      "/courses/csd-2024/guides/modifying-arrays",
       "/maker/setup"
     ],
     "starter_assets": {

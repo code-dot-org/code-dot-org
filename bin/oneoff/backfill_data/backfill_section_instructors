@@ -5,7 +5,7 @@ require_relative '../../../dashboard/config/environment'
 # This script backfills the section_instructors table to ensure that older
 # sections have their owner represented in this table.
 
-CDO.log = Logger.new(STDOUT)
+CDO.log = Logger.new($stdout)
 ActiveRecord::Base.record_timestamps = false
 
 options = {actually_update: false, start_with: 1}

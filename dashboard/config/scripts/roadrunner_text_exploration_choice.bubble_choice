@@ -1,0 +1,15 @@
+name 'roadrunner-text-exploration-choice'
+display_name 'Explore AI\'s Text Transfer Skills'
+description <<MARKDOWN
+You've learned how AI generates text and how to refine your prompts for better results. Now it's your turn to put those skills to the test!
+
+Dive into an independent exploration to see how AI can adapt, summarize, or creatively transform text based on different needs and audiences. Choose an option below, or craft your own unique challenge.
+MARKDOWN
+
+sublevels
+level 'roadrunner-text-exploration-choice-summarize-text'
+level 'roadrunner-text-exploration-choice-audience-adaptation'
+level 'roadrunner-text-exploration-choice-descriptive-writing'
+level 'roadrunner-text-exploration-choice-my-own-prompt'
+
+uses_lab2

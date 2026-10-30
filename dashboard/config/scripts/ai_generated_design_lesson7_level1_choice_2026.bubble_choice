@@ -1,0 +1,10 @@
+name 'ai-generated-design-lesson7-level1_choice_2026'
+display_name 'Build a User Persona and Problem Statement'
+description 'Build a user persona and write a clear problem statement based on your chosen scenario. Focus on understanding the user\’s needs before jumping to solutions.'
+
+sublevels
+level 'ai-generated-design-lesson7-level1_v3_2026'
+level 'ai-generated-design-lesson7-level3_2026'
+
+
+uses_lab2

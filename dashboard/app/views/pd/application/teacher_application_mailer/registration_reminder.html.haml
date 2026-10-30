@@ -1,4 +1,4 @@
-- registration_url = "https://studio.code.org/pd/workshops/#{@application.workshop.id}/enroll"
+- registration_url = "https://studio.code.org/professional-learning/workshops/#{@application.workshop.id}"
 
 %p
   Hello
@@ -10,9 +10,9 @@
   Professional Learning program in partnership with
   - if @application.regional_partner
     = @application.effective_regional_partner_name
-    and Code.org!
+    and CodeAI!
   - else
-    Code.org!
+    CodeAI!
   We have not yet received your workshop registration.
 
 %p
@@ -45,9 +45,7 @@
     Start talking with your administration, colleagues, students, and parents
     about the course you will be teaching next year, and encourage a diverse
     group of students to enroll. Once you register for the program, you will
-    receive a welcome kit complete with recruitment tips and tools. In the
-    meantime, please check out these
-    = link_to('recruitment resources', 'https://code.org/educate/resources/recruit') + '.'
+    receive a welcome kit complete with recruitment tips and tools.
   %li
     = render partial: 'interested_teachers'
 

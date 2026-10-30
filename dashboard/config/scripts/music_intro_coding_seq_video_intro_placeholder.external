@@ -1,0 +1,9 @@
+name 'music-intro-coding-seq-video-intro-placeholder'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+#A new intro video will go here! 
+
+![](https://images.code.org/f0b84d85a6f0093cc091758c1ecb412b-image-1724795623779.jpg)
+MARKDOWN

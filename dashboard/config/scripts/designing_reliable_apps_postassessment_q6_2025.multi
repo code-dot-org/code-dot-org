@@ -1,0 +1,14 @@
+name 'designing-reliable-apps-postassessment-q6_2025'
+
+question 'A developer\'s fetch request fails because the API URL has a typo. Which part of this code handles the failure? fetch("https://bad-url.example").then(res => res.json()).then(data => show(data)).catch(err => console.log("Failed:", err));'
+
+right 'The .catch() block — it runs when the Promise is rejected due to the failed request'
+wrong 'The first .then() block — it handles all network communication including failures'
+wrong 'The second .then() block — it handles cases where data is undefined or missing'
+wrong 'None of them — a typo in the URL causes the program to crash before the Promise chain runs'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 3
+MARKDOWN

@@ -1,7 +1,0 @@
-{{ featured_tutorial, title: "מסיבת ריקודים", body: "תקודדו מסיבת ריקודים! בהשתתפות ביונסה, הארי סטיילס, ליזו, ליל נס X, סלינה גומז, מוזיקה מ"/אנקאנטו/" של דיסני, ועוד!"image: "/images/hoc2022-dance-party.png", url: "https://code.org/dance" }}
-
-{{ featured_tutorial, title: "אומנות שירה" body: הוסיפו אומנות ואמנימציה לשיר קלאסי בפעילות שעת קוד זו!". image: "/shared/images/courses/logo_tall_poem-art.jpg", url: "https://studio.code.org/s/poem-art-2021/reset" }}
-
-{{ featured_tutorial, title: "אמן", body: "ציירו תמונות ועיצובים מגניבים עם האמן!"image: "/shared/images/courses/logo_tall_artist.jpg", url: "https://studio.code.org/s/artist/reset" }}
-
-{{ featured_tutorial, title: "מעבדת משחק אינפיניטי" body: "השתמשו בPlay Lab כדי ליצור סיפור או משחק בכיכובם של דמויות אינפיניטי של דיסני", image: "/shared/images/courses/logo_tall_infinity.jpg", url: "https://studio.code.org/s/infinity/reset" }}

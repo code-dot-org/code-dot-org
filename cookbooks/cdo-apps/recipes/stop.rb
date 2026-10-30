@@ -4,7 +4,7 @@
 ruby_block 'stop services' do
   block {}
 
-  services = %w(pegasus dashboard nginx)
+  services = %w(dashboard nginx)
   actions = %i(stop disable)
 
   services.each do |service|

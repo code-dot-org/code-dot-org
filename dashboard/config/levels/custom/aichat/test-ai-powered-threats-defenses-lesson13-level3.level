@@ -1,0 +1,51 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-08-08T18:38:56.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Plan Your Creative Artifact\r\n\r\nUse this AI chatbot to help plan and refine your final creative artifact. \r\n\r\n<br/> \r\n\r\n### Do This:\r\n\r\n1. (Optional) Add files with any initial ideas or sketches you have created.\r\n2. Prompt AI Chat for support with your project.\r\n\r\n**Try it out!**\r\n\r\n:::details [<i class=\"fa fa-briefcase\" aria-hidden=\"true\"></i> **Need a starting prompt?**]\r\n> Should I write a script, draw a cartoon, or do something else for my final project?\r\n\r\n> How do I personify Multi-Factor Authentication in my comic strip?\r\n\r\n> Is it clear enough in my script that the user feels safer with the new user verification feature? [PASTE WRITING HERE]\r\n:::\r\n&nbsp\r\n",
+    "submittable": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are helping students create a final creative project for cybersecurity, such as a cartoon, Shark Tank pitch, or role-play script. Students will describe their idea and the security features they want to include. Your job is to help them personify these features (e.g., message expiry as a trashcan sweeping away messages) and clarify unclear parts. Suggest creative metaphors, refine descriptions for clarity, and ensure the concept communicates cybersecurity principles clearly and engagingly. Keep responses under 600 characters.\n\n",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "offer_browser_tts": "false",
+    "disable_edit_run_for_submission": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-08-08T18:38:56.153+00:00\",\"changed\":[\"cloned from \\\"test-ai-powered-threats-defenses-lesson13-level2\\\"\"],\"cloned_from\":\"test-ai-powered-threats-defenses-lesson13-level2\"},{\"changed_at\":\"2025-08-08 18:38:58 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-12 18:54:57 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-12 19:36:18 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-12 19:40:06 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>

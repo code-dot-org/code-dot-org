@@ -18,6 +18,19 @@
 #
 
 class SchoolDistrict < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :confidential,
+    name: :confidential,
+    city: :confidential,
+    state: :confidential,
+    zip: :confidential,
+    last_known_school_year_open: :confidential,
+    created_at: :confidential,
+    updated_at: :confidential,
+  )
+
   include Seeded
 
   has_many :regional_partners_school_districts
@@ -34,7 +47,7 @@ class SchoolDistrict < ApplicationRecord
   # Gets the seeding file name.
   # @param stub_school_data [Boolean] True for stub file.
   def self.get_seed_filename(stub_school_data)
-    stub_school_data ? 'test/fixtures/school_districts.tsv' : 'config/school_districts.tsv'
+    stub_school_data ? 'test/fixtures/files/school_districts.tsv' : 'config/school_districts.tsv'
   end
 
   # Seeds all the data from the source file.
@@ -161,6 +174,51 @@ class SchoolDistrict < ApplicationRecord
           }
         end
       end
+
+      CDO.log.info "Seeding 2022-2023 school district data"
+      import_options_2223 = {col_sep: ",", headers: true, quote_char: "\x00", encoding: 'bom|utf-8'}
+      AWS::S3.seed_from_file('cdo-nces', "2022-2023/ccd/district.csv") do |filename|
+        SchoolDistrict.merge_from_csv(filename, import_options_2223, true, is_dry_run: false, ignore_attributes: ['last_known_school_year_open']) do |row|
+          {
+            id:                           row['Agency ID - NCES Assigned [District] Latest available year'].tr('"=', '').to_i,
+            name:                         row['Agency Name'].upcase,
+            city:                         row['Location City [District] 2022-23'].to_s.upcase.presence,
+            state:                        row['Location State Abbr [District] 2022-23'].strip.to_s.upcase.presence,
+            zip:                          row['Location ZIP [District] 2022-23'].tr('"=', ''),
+            last_known_school_year_open:  OPEN_SCHOOL_STATUSES.include?(row['Updated Status [District] 2022-23']) ? '2022-2023' : nil
+          }
+        end
+      end
+
+      CDO.log.info "Seeding 2023-2024 school district data"
+      import_options_2324 = {col_sep: ",", headers: true, quote_char: "\x00", encoding: 'bom|utf-8'}
+      AWS::S3.seed_from_file('cdo-nces', "2023-2024/ccd/district.csv") do |filename|
+        SchoolDistrict.merge_from_csv(filename, import_options_2324, true, is_dry_run: false, ignore_attributes: ['last_known_school_year_open']) do |row|
+          {
+            id:                           row['Agency ID - NCES Assigned [District] Latest available year'].tr('"=', '').to_i,
+            name:                         row['Agency Name'].upcase,
+            city:                         row['Location City [District] 2023-24'].to_s.upcase.presence,
+            state:                        row['Location State Abbr [District] 2023-24'].strip.to_s.upcase.presence,
+            zip:                          row['Location ZIP [District] 2023-24'].tr('"=', ''),
+            last_known_school_year_open:  OPEN_SCHOOL_STATUSES.include?(row['Updated Status [District] 2023-24']) ? '2023-2024' : nil
+          }
+        end
+      end
+
+      CDO.log.info "Seeding 2024-2025 school district data"
+      import_options_2324 = {col_sep: ",", headers: true, quote_char: "\x00", encoding: 'bom|utf-8'}
+      AWS::S3.seed_from_file('cdo-nces', "2024-2025/ccd/district.csv") do |filename|
+        SchoolDistrict.merge_from_csv(filename, import_options_2324, true, is_dry_run: false, ignore_attributes: ['last_known_school_year_open']) do |row|
+          {
+            id:                           row['Agency ID - NCES Assigned [District] Latest available year'].tr('"=', '').to_i,
+            name:                         row['Agency Name'].upcase,
+            city:                         row['Location City [District] 2024-25'].to_s.upcase.presence,
+            state:                        row['Location State Abbr [District] 2024-25'].strip.to_s.upcase.presence,
+            zip:                          row['Location ZIP [District] 2024-25'].tr('"=', ''),
+            last_known_school_year_open:  OPEN_SCHOOL_STATUSES.include?(row['Updated Status [District] 2024-25']) ? '2024-2025' : nil
+          }
+        end
+      end
     end
   end
 
@@ -234,7 +292,7 @@ class SchoolDistrict < ApplicationRecord
       if !new_districts.empty? && is_dry_run
         summary_message <<
           "Districts#{future_tense_dry_run} added:\n" \
-          "#{new_districts.map {|district| district[:name]}.join("\n")}\n"
+          "#{new_districts.pluck(:name).join("\n")}\n"
       end
 
       CDO.log.info summary_message

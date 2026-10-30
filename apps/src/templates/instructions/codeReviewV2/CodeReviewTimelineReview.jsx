@@ -1,19 +1,20 @@
-import React, {useState} from 'react';
+import moment from 'moment';
 import PropTypes from 'prop-types';
+import React, {useState} from 'react';
 import {connect} from 'react-redux';
+
+import {queryParams} from '@cdo/apps/code-studio/utils';
+import fontConstants from '@cdo/apps/fontConstants';
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+import CodeReviewCommentEditor from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewCommentEditor';
+import CodeReviewError from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewError';
 import CodeReviewTimelineElement, {
   codeReviewTimelineElementType,
 } from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineElement';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import Button from '@cdo/apps/templates/Button';
-import moment from 'moment';
-import javalabMsg from '@cdo/javalab/locale';
 import Comment from '@cdo/apps/templates/instructions/codeReviewV2/Comment';
-import CodeReviewCommentEditor from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewCommentEditor';
 import {reviewShape} from '@cdo/apps/templates/instructions/codeReviewV2/shapes';
-import CodeReviewError from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewError';
-import {queryParams} from '@cdo/apps/code-studio/utils';
-import fontConstants from '@cdo/apps/fontConstants';
+import javalabMsg from '@cdo/javalab/locale';
 
 const CodeReviewTimelineReview = ({
   review,
@@ -58,7 +59,7 @@ const CodeReviewTimelineReview = ({
       >
         <div style={styles.header}>
           <div style={styles.icon}>
-            <FontAwesome icon="comments-o" />
+            <FontAwesome icon="comments" iconStyle="regular" />
           </div>
           <div style={styles.title}>
             <div style={styles.codeReviewTitle}>

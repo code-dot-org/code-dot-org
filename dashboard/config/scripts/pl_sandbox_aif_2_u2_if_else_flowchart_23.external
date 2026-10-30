@@ -1,0 +1,134 @@
+name 'pl_sandbox_aif_2_U2-if-else-flowchart-23'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Flowcharts and Conditionals 
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Flowchart</strong> a diagram that shows the steps in a process using shapes and arrows. Flowcharts make it easier to plan out and visualize how a program or process works.
+</p>
+</div>
+<br>
+
+
+---
+
+## Conditionals in flowcharts
+
+Let's take a look at the flowchart below. 
+
+This flowchart simulates a simple program that checks the value of the score to determine if the game is won.
+
+<img src="https://images.code.org/3beb270ece0b218a2c2753df93083649-image-1762364855399.png" alt="icon of hand pressing a button" width="350px" style="border-radius:10px; float:left; margin: 0 20px 0px 0px;">
+
+
+## Trace the Decision
+
+Before looking at the code, use the flowchart logic to predict what the program will display.
+
+<div style="display:grid; grid-template-columns:repeat(2, 1fr); gap:16px; margin:24px 0;">
+
+  <details style="background:#F5F7F8; border-radius:14px; padding:18px; box-shadow:2px 2px 8px rgba(0,0,0,0.1);">
+    <summary style="cursor:pointer; font-size:18pt; font-weight:700; list-style:none;">
+      Score = 120
+    </summary>
+    <div style="margin-top:14px; font-size:14pt; line-height:1.5;">
+      ✅ <strong>Displays:</strong> “You win!”<br><br>
+      The condition <code>score > 100</code> is true because 120 is greater than 100.
+    </div>
+  </details>
+
+  <details style="background:#F5F7F8; border-radius:14px; padding:18px; box-shadow:2px 2px 8px rgba(0,0,0,0.1);">
+    <summary style="cursor:pointer; font-size:18pt; font-weight:700; list-style:none;">
+      Score = 75
+    </summary>
+    <div style="margin-top:14px; font-size:14pt; line-height:1.5;">
+      ✅ <strong>Displays:</strong> “Keep trying!”<br><br>
+      The condition <code>score > 100</code> is false because 75 is not greater than 100.
+    </div>
+  </details>
+
+</div>
+
+<div style="clear:both;"></div>
+
+---
+
+## Match the Flowchart to the Code
+
+Click each part of the code to see what part of the flowchart it connects to.
+
+<div style="background:#F5F7F8; border-radius:14px; padding:18px; margin:24px 0;">
+
+  <details style="margin-bottom:12px;">
+    <summary style="cursor:pointer; list-style:none;">
+      <code style="font-size:16pt; background:#ffffff; padding:8px 12px; border-radius:8px; display:inline-block;">
+        if (score > 100)
+      </code>
+    </summary>
+    <div style="margin-top:10px; font-size:14pt; line-height:1.5;">
+      🔷This matches the decision diamond in the flowchart. It asks the question: “Is the score greater than 100?”
+    </div>
+  </details>
+
+  <details style="margin-bottom:12px;">
+    <summary style="cursor:pointer; list-style:none;">
+      <code style="font-size:16pt; background:#ffffff; padding:8px 12px; border-radius:8px; display:inline-block;">
+        display "You win!"
+      </code>
+    </summary>
+    <div style="margin-top:10px; font-size:14pt; line-height:1.5;">
+      🟦 This happens when the condition is true.
+    </div>
+  </details>
+
+  <details>
+    <summary style="cursor:pointer; list-style:none;">
+      <code style="font-size:16pt; background:#ffffff; padding:8px 12px; border-radius:8px; display:inline-block;">
+        else display "Keep trying!"
+      </code>
+    </summary>
+    <div style="margin-top:10px; font-size:14pt; line-height:1.5;">
+      🟦 This happens when the condition is false.
+    </div>
+  </details>
+
+</div>
+
+</div>
+
+Flowcharts help students see how a program makes decisions **step by step**. 
+
+In JavaScript, the logic from the flowchart is written with an **if/else statement**.
+
+<img src="https://images.code.org/160426fe400df8ee9b5a33be77e7380e-image-1762365311358.png" alt="icon of hand pressing a button" width="350px" style="border-radius:10px; float:left; margin: 20px 40px 10px 20px;">
+
+<br>
+
+- The decision diamond becomes the **condition** inside the parentheses ()
+- The `if` block runs if the condition is true, and the `else` block runs if it’s false.
+
+<div style="clear:both;"></div>
+
+<div style="background-color: #B7E0E5; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; ">
+<b> 💡Teacher Tip: </b>Each shape in the flowchart connects directly to part of the code. The question becomes the condition, and the arrows become the paths the program can take. Encourage students to trace the code back to the flowchart to check their logic. This helps students see that their code is following the exact plan they created, building confidence and accuracy in their thinking.
+</p>
+
+</div>
+
+
+
+
+## Let's practice!
+
+
+
+
+
+
+
+
+MARKDOWN

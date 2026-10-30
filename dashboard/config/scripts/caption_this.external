@@ -1,0 +1,27 @@
+name 'Caption This'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+### ✏️ Caption This!
+
+Add a humorous or insightful caption for this image:
+
+<img src="https://images.code.org/5b945603bb271e94668991780def9e73-router.png" 
+     alt="Router with network cables" 
+     style="max-width: 220px; display: block; margin: 12px 0;">
+
+
+<p><strong>Your caption:</strong></p>
+<input type="text" placeholder="Type your caption here">
+
+
+
+::: details [Need some inspiration? Click to reveal examples.]
+
+- “When your Internet takes a detour before reaching its destination.”  
+- “Router: the unsung hero making your memes load on time.”  
+- “Packets may wander, but they always find their way home.”
+
+:::
+MARKDOWN

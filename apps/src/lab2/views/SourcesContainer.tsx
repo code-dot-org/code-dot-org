@@ -1,0 +1,250 @@
+import {isEqual} from 'lodash';
+import React, {
+  createContext,
+  ReactNode,
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useState,
+  useRef,
+} from 'react';
+
+import {toolboxToWorkspaceBlocks} from '@cdo/apps/blockly/utils/toolbox';
+import {sendStartedReportIfNotStarted} from '@cdo/apps/code-studio/progressRedux';
+import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
+import {
+  BlocklyLevelProperties,
+  LabProps,
+  LevelProperties,
+  ProjectSources,
+} from '@cdo/apps/lab2/types';
+import StartOverDialog, {
+  MessageType,
+} from '@cdo/apps/lab2/views/dialogs/dsco/StartOverDialog';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
+
+import ProjectManager from '../projects/ProjectManager';
+import getInitialSources, {
+  getStartOverSources,
+} from '../utils/getInitialSources';
+
+const getToolboxEditSources = (levelProperties: LevelProperties) => ({
+  source: toolboxToWorkspaceBlocks(
+    (levelProperties as BlocklyLevelProperties).toolboxDefinition
+  ),
+});
+
+interface SourcesContextType<T extends ProjectSources = ProjectSources> {
+  currentSources: T;
+  updateSources: (
+    newSourcesOrUpdater: T | ((prev: T) => T),
+    forceSave?: boolean
+  ) => void;
+  showStartOverDialog: (type: MessageType, message?: string) => void;
+  setReinitializationHandler: (handler: () => void) => void;
+  startOver: () => void;
+}
+
+const SourcesContext = createContext<SourcesContextType | null>(null);
+
+export function useSources<T extends ProjectSources = ProjectSources>() {
+  const context = useContext(SourcesContext);
+  if (context === null) {
+    throw new Error('useSources must be used within a SourcesProvider');
+  }
+  // The SourcesContext object has to be created without a specific type,
+  // so TS complains about casting context to a parameterized type.
+  // Cast to unknown to get the correctly typed object.
+  return context as unknown as SourcesContextType<T>;
+}
+
+interface SourcesContainerProps extends LabProps {
+  children: ReactNode;
+  defaultSources: ProjectSources;
+  /**
+   * Optionally supply a custom ProjectManager to use in place of the Lab2Registry's ProjectManager.
+   * Currently only used in very specific multi-project scenarios.
+   */
+  projectManager?: ProjectManager;
+  checkSourcesChangedForProgressReport?: (
+    prevSources: ProjectSources,
+    newSources: ProjectSources
+  ) => boolean;
+  /** Called whenever checkSourcesChangedForProgressReport returns true. */
+  onMeaningfulSourceChange?: () => void;
+}
+
+/**
+ * Manages sources for a Lab.
+ */
+const SourcesContainer: React.FC<SourcesContainerProps> = ({
+  levelProperties,
+  initialSources,
+  defaultSources,
+  children,
+  projectManager,
+  checkSourcesChangedForProgressReport,
+  onMeaningfulSourceChange,
+}) => {
+  const [currentSources, setCurrentSources] = useState<ProjectSources>(
+    () =>
+      getInitialSources(
+        levelProperties,
+        initialSources,
+        getToolboxEditSources(levelProperties)
+      ) || defaultSources
+  );
+
+  // When we use this value to decide whether to save sources or not,
+  // we want to make sure that we have the most up-to-date version of the readonly state of the workspace.
+  // In order to achieve this, we re-fetch the current value and save it to a ref on each render.
+  const readonlyWorkspace = useAppSelector(isReadOnlyWorkspace);
+  const readonlyWorkspaceRef = useRef(readonlyWorkspace);
+  readonlyWorkspaceRef.current = readonlyWorkspace;
+
+  const [startOverProps, setStartOverProps] = useState<{
+    type: MessageType;
+    message?: string;
+  }>();
+
+  const reinitializationHandler = useRef<() => void>();
+  const setReinitializationHandler = useCallback((handler: () => void) => {
+    reinitializationHandler.current = handler;
+  }, []);
+  const currentLevelStatus = useAppSelector(
+    state => getCurrentLevel(state)?.status
+  );
+  // Store currentLevelStatus as a ref to avoid it being a dependency of updateSources.
+  const currentLevelStatusRef = useRef(currentLevelStatus);
+  currentLevelStatusRef.current = currentLevelStatus;
+
+  const dispatch = useAppDispatch();
+
+  const onMeaningfulSourceChangeRef = useRef(onMeaningfulSourceChange);
+  onMeaningfulSourceChangeRef.current = onMeaningfulSourceChange;
+
+  const reinitializeSources = useCallback(
+    (sources: ProjectSources, save: boolean = false) => {
+      setCurrentSources(sources);
+      if (save && !readonlyWorkspaceRef.current) {
+        (
+          projectManager || Lab2Registry.getInstance().getProjectManager()
+        )?.save(sources, true);
+      }
+
+      if (reinitializationHandler.current) {
+        reinitializationHandler.current();
+      }
+    },
+    [projectManager, setCurrentSources, reinitializationHandler]
+  );
+
+  useEffect(() => {
+    reinitializeSources(
+      getInitialSources(
+        levelProperties,
+        initialSources,
+        getToolboxEditSources(levelProperties)
+      ) || defaultSources
+    );
+  }, [reinitializeSources, levelProperties, initialSources, defaultSources]);
+
+  // Sources to reset to when starting over. Depends on the level edit mode.
+  const startOverSources: ProjectSources = useMemo(
+    () =>
+      getStartOverSources(
+        levelProperties,
+        defaultSources,
+        getToolboxEditSources(levelProperties)
+      ),
+    [defaultSources, levelProperties]
+  );
+
+  // In order to avoid possible stale state updates,
+  // we support passing a function that can take in the most up-to-date state as an argument
+  // and return new state.
+  const updateSources = useCallback(
+    (
+      newSourcesOrUpdater:
+        | ProjectSources
+        | ((prev: ProjectSources) => ProjectSources),
+      forceSave = false
+    ) => {
+      setCurrentSources(prev => {
+        // Handle both direct value and updater function
+        const newSources =
+          typeof newSourcesOrUpdater === 'function'
+            ? newSourcesOrUpdater(prev)
+            : newSourcesOrUpdater;
+
+        // Perform a deep equality check to prevent unnecessary re-renders
+        if (isEqual(prev, newSources)) {
+          return prev;
+        }
+
+        // Save if needed
+        if (!readonlyWorkspaceRef.current) {
+          (
+            projectManager || Lab2Registry.getInstance().getProjectManager()
+          )?.save(newSources, forceSave);
+
+          // If sources have changed in a way that is meaningful for progress reporting,
+          // optionally notify callers and send a 'started' report if the level is not yet tried.
+          if (checkSourcesChangedForProgressReport?.(prev, newSources)) {
+            onMeaningfulSourceChangeRef.current?.();
+            if (currentLevelStatusRef.current === LevelStatus.not_tried) {
+              dispatch(sendStartedReportIfNotStarted(levelProperties.appName));
+            }
+          }
+        }
+
+        return newSources;
+      });
+    },
+    [
+      projectManager,
+      checkSourcesChangedForProgressReport,
+      dispatch,
+      levelProperties.appName,
+    ]
+  );
+
+  const onStartOver = useCallback(() => {
+    reinitializeSources(startOverSources as ProjectSources, true);
+    setStartOverProps(undefined);
+  }, [reinitializeSources, startOverSources]);
+
+  const showStartOverDialog = useCallback(
+    (type: MessageType, message?: string) => {
+      setStartOverProps({type, message});
+    },
+    []
+  );
+
+  return (
+    <SourcesContext.Provider
+      value={{
+        currentSources,
+        updateSources,
+        showStartOverDialog,
+        setReinitializationHandler,
+        startOver: onStartOver,
+      }}
+    >
+      {children}
+      {startOverProps && (
+        <StartOverDialog
+          onConfirm={onStartOver}
+          onCancel={() => setStartOverProps(undefined)}
+          {...startOverProps}
+        />
+      )}
+    </SourcesContext.Provider>
+  );
+};
+
+export default SourcesContainer;

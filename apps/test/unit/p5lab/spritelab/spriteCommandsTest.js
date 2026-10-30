@@ -1,9 +1,9 @@
-import {expect} from '../../../util/reconfiguredChai';
-import {commands} from '@cdo/apps/p5lab/spritelab/commands/spriteCommands';
 import {commands as actionCommands} from '@cdo/apps/p5lab/spritelab/commands/actionCommands';
-import CoreLibrary from '@cdo/apps/p5lab/spritelab/CoreLibrary';
-import createP5Wrapper from '../../../util/gamelab/TestableP5Wrapper';
+import {commands} from '@cdo/apps/p5lab/spritelab/commands/spriteCommands';
 import {MAX_NUM_SPRITES} from '@cdo/apps/p5lab/spritelab/constants';
+import CoreLibrary from '@cdo/apps/p5lab/spritelab/CoreLibrary';
+
+import createP5Wrapper from '../../../util/gamelab/TestableP5Wrapper';
 
 describe('Sprite Commands', () => {
   let coreLibrary;
@@ -30,32 +30,36 @@ describe('Sprite Commands', () => {
     coreLibrary.addSprite({name: sprite2Name, animation: 'b'});
     coreLibrary.addSprite({name: sprite3Name, animation: 'a'});
 
-    expect(
-      commands.countByAnimation.apply(coreLibrary, [{costume: 'a'}])
-    ).to.equal(2);
-    expect(
-      commands.countByAnimation.apply(coreLibrary, [{costume: 'b'}])
-    ).to.equal(1);
-    expect(
-      commands.countByAnimation.apply(coreLibrary, [{costume: 'c'}])
-    ).to.equal(0);
+    expect(commands.countByAnimation.apply(coreLibrary, [{costume: 'a'}])).toBe(
+      2
+    );
+    expect(commands.countByAnimation.apply(coreLibrary, [{costume: 'b'}])).toBe(
+      1
+    );
+    expect(commands.countByAnimation.apply(coreLibrary, [{costume: 'c'}])).toBe(
+      0
+    );
 
     expect(
       commands.countByAnimation.apply(coreLibrary, [{name: sprite1Name}])
-    ).to.equal(1);
+    ).toBe(1);
   });
 
   it('destroy single sprite', () => {
     coreLibrary.addSprite({name: sprite1Name});
     coreLibrary.addSprite({name: sprite2Name});
 
-    expect(coreLibrary.getSpriteIdsInUse()).to.have.members([0, 1]);
+    expect(coreLibrary.getSpriteIdsInUse()).toEqual(
+      expect.arrayContaining([0, 1])
+    );
 
     commands.destroy.apply(coreLibrary, [{name: sprite1Name}]);
-    expect(coreLibrary.getSpriteIdsInUse()).to.have.members([1]);
+    expect(coreLibrary.getSpriteIdsInUse()).toEqual(
+      expect.arrayContaining([1])
+    );
 
     commands.destroy.apply(coreLibrary, [{name: sprite2Name}]);
-    expect(coreLibrary.getSpriteIdsInUse()).to.have.members([]);
+    expect(coreLibrary.getSpriteIdsInUse()).toEqual(expect.arrayContaining([]));
   });
 
   it('destroy animation group', () => {
@@ -65,7 +69,9 @@ describe('Sprite Commands', () => {
 
     commands.destroy.apply(coreLibrary, [{costume: 'a'}]);
 
-    expect(coreLibrary.getSpriteIdsInUse()).to.have.members([1]);
+    expect(coreLibrary.getSpriteIdsInUse()).toEqual(
+      expect.arrayContaining([1])
+    );
   });
 
   it('getProp for single sprite', () => {
@@ -82,16 +88,16 @@ describe('Sprite Commands', () => {
 
     expect(
       commands.getProp.apply(coreLibrary, [{name: sprite1Name}, 'x'])
-    ).to.equal(123);
+    ).toBe(123);
     expect(
       commands.getProp.apply(coreLibrary, [{name: sprite1Name}, 'y'])
-    ).to.equal(400 - 321);
+    ).toBe(400 - 321);
     expect(
       commands.getProp.apply(coreLibrary, [{name: sprite1Name}, 'costume'])
-    ).to.equal('label');
+    ).toBe('label');
     expect(
       commands.getProp.apply(coreLibrary, [{name: sprite1Name}, 'anotherProp'])
-    ).to.equal('value');
+    ).toBe('value');
   });
 
   it('getProp for animation group uses the first sprite in the group', () => {
@@ -106,9 +112,9 @@ describe('Sprite Commands', () => {
       location: {x: 321, y: 123},
     });
 
-    expect(
-      commands.getProp.apply(coreLibrary, [{costume: 'label'}, 'x'])
-    ).to.equal(123);
+    expect(commands.getProp.apply(coreLibrary, [{costume: 'label'}, 'x'])).toBe(
+      123
+    );
   });
 
   it('setAnimation for single sprite', () => {
@@ -119,7 +125,7 @@ describe('Sprite Commands', () => {
     ]);
     expect(
       commands.getProp.apply(coreLibrary, [{name: sprite1Name}, 'costume'])
-    ).to.equal('costume_label');
+    ).toBe('costume_label');
   });
 
   it('setAnimation for animation group', () => {
@@ -129,7 +135,7 @@ describe('Sprite Commands', () => {
 
     commands.setAnimation.apply(coreLibrary, [{costume: 'a'}, 'costume_label']);
 
-    expect(coreLibrary.getAnimationsInUse()).to.deep.equal(['costume_label']);
+    expect(coreLibrary.getAnimationsInUse()).toEqual(['costume_label']);
   });
 
   describe('makeNumSprites', () => {
@@ -137,14 +143,14 @@ describe('Sprite Commands', () => {
       commands.makeNumSprites.apply(coreLibrary, [10, 'costume_label']);
       expect(
         coreLibrary.getSpriteArray({costume: 'costume_label'}).length
-      ).to.equal(10);
+      ).toBe(10);
     });
 
     it(`caps at ${MAX_NUM_SPRITES} sprites - makeNumSprites called once`, () => {
       commands.makeNumSprites.apply(coreLibrary, [100000000, 'costume_label']);
       expect(
         coreLibrary.getSpriteArray({costume: 'costume_label'}).length
-      ).to.equal(MAX_NUM_SPRITES);
+      ).toBe(MAX_NUM_SPRITES);
     });
 
     it(`caps at ${MAX_NUM_SPRITES} sprites - makeNumSprites called multiple times`, () => {
@@ -153,7 +159,7 @@ describe('Sprite Commands', () => {
       }
       expect(
         coreLibrary.getSpriteArray({costume: 'costume_label'}).length
-      ).to.equal(MAX_NUM_SPRITES);
+      ).toBe(MAX_NUM_SPRITES);
     });
   });
 
@@ -164,14 +170,14 @@ describe('Sprite Commands', () => {
         'costume_label',
         'burst',
       ]);
-      expect(coreLibrary.getNumberOfSprites()).to.equal(MAX_NUM_SPRITES);
+      expect(coreLibrary.getNumberOfSprites()).toBe(MAX_NUM_SPRITES);
     });
 
     it(`caps at ${MAX_NUM_SPRITES} sprites - makeBurst called multiple times`, () => {
       for (let i = 0; i < 5; i++) {
         commands.makeBurst.apply(coreLibrary, [500, 'costume_label', 'burst']);
       }
-      expect(coreLibrary.getNumberOfSprites()).to.equal(MAX_NUM_SPRITES);
+      expect(coreLibrary.getNumberOfSprites()).toBe(MAX_NUM_SPRITES);
     });
   });
 });

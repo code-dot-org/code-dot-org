@@ -1,0 +1,9 @@
+name 'programming-fundamentals-lesson6-level9_2025-launch_pilot-2025'
+display_name 'Call It Again'
+description 'Choose **ONE** scenario and practice defining a function and calling it multiple times to repeat an action.'
+
+sublevels
+level 'programming-fundamentals-lesson6-level9a_2025-launch_pilot-2025'
+level 'programming-fundamentals-lesson6-level9b_2025-launch_pilot-2025'
+level 'programming-fundamentals-lesson6-level9c_2025-launch_pilot-2025'
+level 'programming-fundamentals-lesson6-level9d_2025-launch_pilot-2025'

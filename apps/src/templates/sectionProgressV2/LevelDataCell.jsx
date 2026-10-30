@@ -1,15 +1,53 @@
-import PropTypes from 'prop-types';
-import React from 'react';
-import {studentLevelProgressType} from '../progress/progressTypes';
-import classNames from 'classnames';
-import styles from './progress-table-v2.module.scss';
-import queryString from 'query-string';
 import {Link} from '@dsco_/link';
-import ProgressIcon from './ProgressIcon';
-import {ITEM_TYPE} from './ItemType';
-import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import queryString from 'query-string';
+import React from 'react';
+import {connect} from 'react-redux';
 
-const navigateToLevelOverviewUrl = (levelUrl, studentId, sectionId) => {
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
+import i18n from '@cdo/locale';
+
+import {commentLeft, studentNeedsFeedback} from '../progress/progressHelpers';
+import {studentLevelProgressType} from '../progress/progressTypes';
+
+import {ITEM_TYPE} from './ItemType';
+import {formatTimeSpent, formatLastUpdated} from './MetadataHelpers';
+import ProgressIcon from './ProgressIcon';
+
+import legendStyles from './progress-table-legend.module.scss';
+import styles from './progress-table-v2.module.scss';
+
+const levelClickedAmplitude = (sectionId, isAssessment) => () => {
+  analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_VIEW_LEVEL_DETAILS, {
+    sectionId: sectionId,
+    isAssessment: isAssessment,
+  });
+};
+
+export const getStudentRowHeaderId = studentId => `s-${studentId}`;
+export const getLessonColumnHeaderId = lessonId => `l-${lessonId}`;
+export const getLevelColumnHeaderId = (levelId, parentLevelId) =>
+  parentLevelId !== undefined
+    ? `lvl-${parentLevelId}.${levelId}`
+    : `lvl-${levelId}`;
+
+const getHeadersForCell = (studentId, levelId, parentLevelId, lessonId) => {
+  return (
+    getStudentRowHeaderId(studentId) +
+    ' ' +
+    getLevelColumnHeaderId(levelId) +
+    ' ' +
+    (parentLevelId !== undefined
+      ? getLevelColumnHeaderId(levelId, parentLevelId) + ' '
+      : '') +
+    getLessonColumnHeaderId(lessonId)
+  );
+};
+
+export const navigateToLevelOverviewUrl = (levelUrl, studentId, sectionId) => {
   if (!levelUrl) {
     return null;
   }
@@ -27,57 +65,171 @@ const navigateToLevelOverviewUrl = (levelUrl, studentId, sectionId) => {
   return levelUrl;
 };
 
-export default function LevelDataCell({
+export const getLevelCellValue = (
+  studentLevelProgress,
+  level,
+  expandedChoiceLevel
+) => {
+  if (expandedChoiceLevel) {
+    return ITEM_TYPE.CHOICE_LEVEL;
+  }
+  if (
+    studentLevelProgress?.teacherFeedbackReviewState === 'keepWorking' &&
+    studentLevelProgress?.teacherFeedbackNew
+  ) {
+    return ITEM_TYPE.KEEP_WORKING;
+  }
+  if (
+    !studentLevelProgress ||
+    studentLevelProgress.status === LevelStatus.not_tried
+  ) {
+    return ITEM_TYPE.NO_PROGRESS;
+  }
+  if (
+    studentLevelProgress.status === LevelStatus.perfect ||
+    studentLevelProgress.status === LevelStatus.submitted ||
+    studentLevelProgress.status === LevelStatus.free_play_complete ||
+    studentLevelProgress.status === LevelStatus.completed_assessment ||
+    studentLevelProgress.status === LevelStatus.passed
+  ) {
+    if (level.isValidated) {
+      return ITEM_TYPE.VALIDATED;
+    } else {
+      return ITEM_TYPE.SUBMITTED;
+    }
+  }
+  if (studentLevelProgress.status === LevelStatus.attempted) {
+    return ITEM_TYPE.IN_PROGRESS;
+  }
+  return ITEM_TYPE.NO_PROGRESS;
+};
+
+function LevelDataCell({
   level,
   studentId,
   sectionId,
   studentLevelProgress,
   expandedChoiceLevel,
+  className,
+  linkClassName,
+  parentLevelId,
+  lessonId,
+  metadataExpanded,
+  index,
 }) {
-  const itemType = React.useMemo(() => {
+  const itemType = React.useMemo(
+    () => getLevelCellValue(studentLevelProgress, level, expandedChoiceLevel),
+    [studentLevelProgress, level, expandedChoiceLevel]
+  );
+
+  const feedbackStyle = React.useMemo(() => {
     if (expandedChoiceLevel) {
-      return ITEM_TYPE.CHOICE_LEVEL;
-    }
-    if (studentLevelProgress?.teacherFeedbackReviewState === 'keepWorking') {
-      return ITEM_TYPE.KEEP_WORKING;
-    }
-    if (
-      !studentLevelProgress ||
-      studentLevelProgress.status === LevelStatus.not_tried
-    ) {
       return;
     }
-    if (
-      studentLevelProgress.status === LevelStatus.perfect ||
-      studentLevelProgress.status === LevelStatus.submitted ||
-      studentLevelProgress.status === LevelStatus.free_play_complete ||
-      studentLevelProgress.status === LevelStatus.completed_assessment
-    ) {
-      if (level.isValidated) {
-        return ITEM_TYPE.VALIDATED;
-      } else {
-        return ITEM_TYPE.SUBMITTED;
-      }
+    if (commentLeft(studentLevelProgress)) {
+      return legendStyles.feedbackGiven;
     }
-    if (
-      studentLevelProgress.status === LevelStatus.attempted ||
-      studentLevelProgress.status === LevelStatus.passed
-    ) {
-      return ITEM_TYPE.IN_PROGRESS;
+    if (studentNeedsFeedback(studentLevelProgress, level)) {
+      return legendStyles.needsFeedback;
     }
   }, [studentLevelProgress, level, expandedChoiceLevel]);
 
-  return (
+  const levelCellUnexpanded = (
     <Link
+      id={'ui-test' + level.path?.replaceAll('/', '-') + '-cell-data'}
       href={navigateToLevelOverviewUrl(level.url, studentId, sectionId)}
       openInNewTab
       external
-      className={classNames(styles.gridBox, styles.gridBoxLevel)}
+      onClick={levelClickedAmplitude(sectionId, level.kind === 'assessment')}
+      className={classNames(styles.expandedLevelLink, linkClassName)}
     >
-      {itemType && <ProgressIcon itemType={itemType} />}
+      {itemType ? (
+        <ProgressIcon itemType={itemType} />
+      ) : (
+        <div className={styles.expandedLevelEmpty} />
+      )}
     </Link>
   );
+
+  if (metadataExpanded) {
+    return (
+      <td
+        className={styles.lessonDataCellExpanded}
+        headers={getHeadersForCell(
+          studentId,
+          level.id,
+          parentLevelId,
+          lessonId
+        )}
+      >
+        <div
+          className={classNames(
+            styles.gridBox,
+            styles.gridBoxLevel,
+            index % 2 === 0
+              ? styles.lighterBackground
+              : styles.darkerBackground,
+            feedbackStyle,
+            className
+          )}
+        >
+          {levelCellUnexpanded}
+        </div>
+        <div
+          className={classNames(
+            styles.gridBox,
+            styles.gridBoxMetadata,
+            index % 2 === 0
+              ? styles.lighterBackground
+              : styles.darkerBackground,
+            {
+              [styles.gridBoxChoiceSubLevel]: level.parentLevelId !== undefined,
+            }
+          )}
+          aria-label={i18n.timeSpentMins()}
+        >
+          {!level.parentLevelId && formatTimeSpent(studentLevelProgress)}
+        </div>
+        <div
+          className={classNames(
+            styles.gridBox,
+            styles.gridBoxMetadata,
+            index % 2 === 0
+              ? styles.lighterBackground
+              : styles.darkerBackground,
+            {
+              [styles.gridBoxChoiceSubLevel]: level.parentLevelId !== undefined,
+            }
+          )}
+          aria-label={i18n.lastUpdated()}
+        >
+          {!level.parentLevelId && formatLastUpdated(studentLevelProgress)}
+        </div>
+      </td>
+    );
+  }
+
+  return (
+    <td
+      className={classNames(
+        styles.gridBox,
+        styles.gridBoxLevel,
+        feedbackStyle,
+        className,
+        index % 2 === 0 ? styles.lighterBackground : styles.darkerBackground
+      )}
+      headers={getHeadersForCell(studentId, level.id, parentLevelId, lessonId)}
+    >
+      {levelCellUnexpanded}
+    </td>
+  );
 }
+
+export const UnconnectedLevelDataCell = LevelDataCell;
+
+export default connect(state => ({
+  sectionId: state.teacherSections.selectedSectionId,
+}))(LevelDataCell);
 
 LevelDataCell.propTypes = {
   studentId: PropTypes.number,
@@ -85,4 +237,10 @@ LevelDataCell.propTypes = {
   studentLevelProgress: studentLevelProgressType,
   level: PropTypes.object.isRequired,
   expandedChoiceLevel: PropTypes.bool,
+  parentLevelId: PropTypes.string,
+  lessonId: PropTypes.number.isRequired,
+  className: PropTypes.string,
+  linkClassName: PropTypes.string,
+  metadataExpanded: PropTypes.bool,
+  index: PropTypes.number,
 };

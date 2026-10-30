@@ -1,0 +1,10 @@
+name 'building-data-driven-systems-lesson3-level4-test-2025'
+display_name 'Social Media Scheduler, Part 1'
+description 'Choose one of the professions below and assist with updating their social media scheduler based on unique events that occur. Note: choose the same profession throughout the level sequence. The code you create will carry forward as you progress'
+
+sublevels
+level 'building-data-driven-systems-lesson3-level4a-test-2025'
+level 'building-data-driven-systems-lesson3-level4b-test-2025'
+level 'building-data-driven-systems-lesson3-level4c-test-2025'
+
+uses_lab2

@@ -1,0 +1,21 @@
+name 'music-lab-612-post_2025-v2'
+title 'Music Lab Post-Assessment'
+submittable 'true'
+anonymous 'false'
+activity_guide_level 'false'
+
+page
+text 'music-lab-612-post-intro_2025-v2'
+level 'music-lab-612-post-q1_2025-v2'
+level 'music-lab-612-post-q2_2025-v2'
+level 'music-lab-612-post-q3_2025-v2'
+level 'music-lab-612-post-q4_2025-v2'
+level 'music-lab-612-post-q5_2025-v2'
+level 'music-lab-612-post-q6_2025-v2'
+
+page
+level 'music-lab-612-post-q7_2025-v2'
+level 'music-lab-612-post-q8_2025-v2'
+level 'music-lab-612-post-q9_2025-v2'
+level 'music-lab-612-post-q10_2025-v2'
+level 'music-lab-612-post-careersQ_2025-v2'

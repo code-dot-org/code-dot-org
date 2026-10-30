@@ -1,0 +1,10 @@
+name 'ai-generated-design-lesson13-level1_2026'
+display_name 'Design Your App Layout'
+description 'Design your app layout. Identify key elements, user inputs, and outputs before building your app.'
+
+sublevels
+level 'ai-generated-design-lesson13-wireframe_v2_2026'
+level 'ai-generated-design-lesson13-level1e_2026'
+
+uses_lab2
+navigation_type 'next_level'

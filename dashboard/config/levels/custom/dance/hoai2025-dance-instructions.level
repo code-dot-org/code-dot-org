@@ -1,0 +1,103 @@
+<Dancelab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 63,
+  "created_at": "2025-10-19T04:43:34.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "dance",
+    "block_pools": [
+      "Dancelab",
+      "GeneratedDancers"
+    ],
+    "helper_libraries": [
+      "DanceLab"
+    ],
+    "hide_animation_mode": true,
+    "show_type_hints": true,
+    "encrypted": "false",
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "use_modal_function_editor": "false",
+    "hide_share_and_remix": "true",
+    "disable_if_else_editing": "false",
+    "free_play": "false",
+    "validation_enabled": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "hide_pause_button": "false",
+    "default_song": "introtoshamstep_47SOUL",
+    "long_instructions": "### Welcome to the party!\r\n\r\n- Connect a dancer block to When Run.\r\n- Click Run to start dancing.",
+    "uses_lab2": "true",
+    "guide_mode": "instructions",
+    "toolbox_definition": {
+      "contents": [
+        {
+          "kind": "block",
+          "type": "GeneratedDancers_makeAnonymousDanceSprite",
+          "id": "vzvF:!o_2n#y..Ztz|Vu",
+          "fields": {
+            "COSTUME": "\"GENERATED_DANCER\"",
+            "LOCATION": "<field name=\"LOCATION\">{x: 200, y: 100}</field>"
+          },
+          "enabled": true
+        }
+      ],
+      "kind": "flyoutToolbox"
+    },
+    "start_sources": {
+      "source": {
+        "blocks": {
+          "blocks": [
+            {
+              "id": "when-run-block",
+              "type": "Dancelab_whenRun",
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
+      "selectedSong": "asitwas_harrystyles"
+    },
+    "validation_code": "if (nativeAPI.getTime(\"measures\") >= 4.5) {\r\n  if (sprites.length === 0) {\r\n    nativeAPI.fail(\"dance-fail\");\r\n  } else {\r\n    nativeAPI.pass();\r\n  }\r\n}",
+    "validations": [
+      {
+        "key": "dance-pass",
+        "message": "That looks great!",
+        "next": true,
+        "conditions": [
+          {
+            "name": "pass"
+          }
+        ]
+      },
+      {
+        "key": "dance-fail",
+        "message": "Make sure you add a dancer.",
+        "next": false,
+        "conditions": [
+          {
+            "name": "dance-fail"
+          }
+        ]
+      }
+    ],
+    "generate_dancer_mode": "false",
+    "ai_code_generate": "false",
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-19T04:43:34.232+00:00\",\"changed\":[\"cloned from \\\"hoai2025-dance-preview\\\"\"],\"cloned_from\":\"hoai2025-dance-preview\"},{\"changed_at\":\"2025-10-19 04:44:42 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-21 18:58:14 +0000\",\"changed\":[\"validation_code\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-21 18:59:24 +0000\",\"changed\":[\"validation_code\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-21 19:00:04 +0000\",\"changed\":[\"validation_code\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-02 23:10:29 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-02 23:14:49 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-02 23:29:11 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-04 18:36:21 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Dancelab>

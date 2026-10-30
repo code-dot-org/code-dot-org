@@ -1,9 +1,10 @@
-import {BlockSvg, Workspace, FieldDropdown} from 'blockly';
-import {FieldKey, GeneratedEffect} from '../types';
-import danceMetricsReporter from '../../danceMetricsReporter';
+import * as BlocklyCore from 'blockly/core';
 
-import {getValidateAndSetFieldValueWithInvalidValueLogger} from './validateAndSetFieldValue';
+import danceMetricsReporter from '../../danceMetricsReporter';
+import {FieldKey, GeneratedEffect} from '../types';
+
 import {generateAiEffectBlocks} from './generateAiEffectBlocks';
+import {getValidateAndSetFieldValueWithInvalidValueLogger} from './validateAndSetFieldValue';
 
 const validateAndSetFieldValue =
   getValidateAndSetFieldValueWithInvalidValueLogger(
@@ -16,32 +17,32 @@ const validateAndSetFieldValue =
  * and attaches them to each other.
  */
 export const generateAiEffectBlocksFromResult = (
-  workspace: Workspace,
+  workspace: BlocklyCore.Workspace,
   effect: GeneratedEffect
-): [BlockSvg, BlockSvg] => {
+): [BlocklyCore.BlockSvg, BlocklyCore.BlockSvg] => {
   const blocksSvg = generateAiEffectBlocks(workspace);
 
   // Foreground block.
   validateAndSetFieldValue(
-    blocksSvg[0].getField('EFFECT') as FieldDropdown,
+    blocksSvg[0].getField('EFFECT') as BlocklyCore.FieldDropdown,
     effect.foregroundEffect,
     {logValues: FieldKey.FOREGROUND_EFFECT}
   );
 
   // Background block.
   validateAndSetFieldValue(
-    blocksSvg[1].getField('EFFECT') as FieldDropdown,
+    blocksSvg[1].getField('EFFECT') as BlocklyCore.FieldDropdown,
     effect.backgroundEffect,
     {logValues: FieldKey.BACKGROUND_EFFECT}
   );
   validateAndSetFieldValue(
-    blocksSvg[1].getField('PALETTE') as FieldDropdown,
+    blocksSvg[1].getField('PALETTE') as BlocklyCore.FieldDropdown,
     effect.backgroundColor,
     {logValues: FieldKey.BACKGROUND_PALETTE}
   );
 
   // Connect the blocks.
-  blocksSvg[0].nextConnection.connect(blocksSvg[1].previousConnection);
+  blocksSvg[0].nextConnection!.connect(blocksSvg[1].previousConnection!);
 
   return blocksSvg;
 };

@@ -1,29 +1,36 @@
+import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
-import i18n from '@cdo/locale';
+
 import {UnconnectedManageStudentsActionsHeaderCell as ManageStudentsActionsHeaderCell} from '@cdo/apps/templates/manageStudents/ManageStudentsActionsHeaderCell';
+import i18n from '@cdo/locale';
+
+import {expect} from '../../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
+
+function optionLabels(wrapper) {
+  return wrapper
+    .find(ActionDropdown)
+    .prop('options')
+    .map(opt => opt.label);
+}
 
 describe('ManageStudentsActionsCell', () => {
   it('renders the edit all option', () => {
     const wrapper = shallow(<ManageStudentsActionsHeaderCell />);
-    const editAllString = i18n.editAll();
-    expect(wrapper).to.contain(editAllString);
+    expect(optionLabels(wrapper)).to.include(i18n.editAll());
   });
 
   it('renders the control project sharing option if the share column is hidden', () => {
     const wrapper = shallow(
       <ManageStudentsActionsHeaderCell isShareColumnVisible={false} />
     );
-    const controlProjectSharing = i18n.controlProjectSharing();
-    expect(wrapper).to.contain(controlProjectSharing);
+    expect(optionLabels(wrapper)).to.include(i18n.controlProjectSharing());
   });
 
   it('renders the hide project sharing option if the share column is visible', () => {
     const wrapper = shallow(
       <ManageStudentsActionsHeaderCell isShareColumnVisible={true} />
     );
-    const hideProjectSharing = i18n.hideProjectSharingColumn();
-    expect(wrapper).to.contain(hideProjectSharing);
+    expect(optionLabels(wrapper)).to.include(i18n.hideProjectSharingColumn());
   });
 });

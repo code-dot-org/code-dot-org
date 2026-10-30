@@ -2,13 +2,16 @@
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import fontConstants from '@cdo/apps/fontConstants';
+
+import WidgetContinueButton from '../templates/WidgetContinueButton';
 import color from '../util/color';
-import ModuloClock from './ModuloClock';
+
+import {GoButton} from './cryptographyFields';
 import IntegerDropdown from './IntegerDropdown';
 import IntegerTextbox from './IntegerTextbox';
-import {GoButton} from './cryptographyFields';
-import WidgetContinueButton from '../templates/WidgetContinueButton';
+import ModuloClock from './ModuloClock';
 import {AnyChildren} from './types';
 
 const style = {

@@ -1,0 +1,13 @@
+@use '@cdo/apps/lab2/views/components/layout/variables.scss' as variables;
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: variables.$z-index-floating-ui;
+}
+
+.hiddenInput {
+  display: none;
+}

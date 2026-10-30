@@ -4,10 +4,11 @@
  * renderApplication to render the loaded application data.
  */
 
+import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
-import Spinner from '../components/spinner';
-import $ from 'jquery';
+
+import Spinner from '../../../sharedComponents/Spinner';
 
 export default class ApplicationLoader extends React.Component {
   static propTypes = {

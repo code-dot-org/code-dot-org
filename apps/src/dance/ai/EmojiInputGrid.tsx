@@ -1,9 +1,9 @@
 import React from 'react';
-import moduleStyles from './dance-ai-modal.module.scss';
-
-import {EmojiItem} from './types';
 
 import EmojiIcon, {EmojiIconProps} from './EmojiIcon';
+import {EmojiItem} from './types';
+
+import moduleStyles from './dance-ai-modal.module.scss';
 
 type EmojiInputGrid = {
   inputLibrary: {items: EmojiItem[]};

@@ -1,0 +1,14 @@
+name 'thinking-critically-about-ai-preassessment-q8_2026-pilot'
+
+question 'An AI generates a news article that is written clearly and includes realistic-sounding facts. A student assumes it must be accurate because it sounds so professional. What mistake is the student making?'
+
+wrong 'The student is right — a professionally written article is always trustworthy.'
+wrong 'The student should only trust AI news articles if they are very short.'
+wrong 'The student is confused about the difference between AI and search engines.'
+right 'The student is confusing how convincing something sounds with whether it is actually accurate.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 5
+MARKDOWN

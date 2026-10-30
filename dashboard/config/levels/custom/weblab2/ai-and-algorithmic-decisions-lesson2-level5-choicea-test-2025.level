@@ -1,0 +1,90 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-10-16T17:43:32.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <title>Weekday Reminder App</title>\n    <link rel=\"stylesheet\" href=\"style.css\" />\n    <script defer src=\"script.js\"></script>\n  </head>\n  <body>\n    <h1 class=\"title\">Remind-Meow! Weekday Helper</h1>\n    <main class=\"container\">\n      <section class=\"left\">\n        <img id=\"main-img\" src=\"main-image.png\" alt=\"Reminder illustration\" />\n      </section>\n      <section class=\"right\">\n        <div id=\"output\" class=\"output\" aria-live=\"polite\">Click a weekday to see your reminder.</div>\n        <div class=\"buttons\">\n          <button id=\"mon-btn\" type=\"button\">Monday</button>\n          <button id=\"tue-btn\" type=\"button\">Tuesday</button>\n          <button id=\"wed-btn\" type=\"button\">Wednesday</button>\n          <button id=\"thu-btn\" type=\"button\">Thursday</button>\n          <button id=\"fri-btn\" type=\"button\">Friday</button>\n        </div>\n      </section>\n    </main>\n  </body>\n</html>\n\n",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// SELECTORS and LISTENERS: connect user actions (clicks) to handlers for specific UI elements\ndocument.querySelector('#mon-btn').addEventListener('click', () => {\n  // UI CHANGE: show a new message in the output box\n  document.querySelector('#output').textContent = 'Monday reminder: Bring your notebook and charge your laptop.';\n});\n\n// TODO: Attach an event listener to the Tuesday button\n\n  // TODO: update text for Tuesday\n\n// TODO: Attach an event listener to the Wednesday button\n\n  // TODO: update text for Wednesday\n\n// TODO: Attach an event listener to the Thursday button\n\n  // TODO: update text for Thursday\n\n// TODO: Attach an event listener to the Friday button\n\n  // TODO: update text for Friday\n\n",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "style.css",
+          "language": "css",
+          "contents": "* { box-sizing: border-box; }\nhtml, body { height: 100%; }\nbody { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; background: #f7f7fb; color: #222; }\n\n.title { text-align: center; margin: 16px 0 0; font-size: 1.75rem; letter-spacing: 0.5px; }\n\n.container { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; padding: 24px; max-width: 1000px; margin: 0 auto; }\n.left { background: #fff; border: 2px solid #ddd; border-radius: 12px; padding: 16px; display: flex; align-items: center; justify-content: center; overflow: hidden; }\n#main-img { display: block; max-width: 100%; height: auto; border-radius: 8px; object-fit: contain; }\n\n.right { display: flex; flex-direction: column; gap: 24px; }\n.output { min-height: 120px; border: 2px dashed #9aa4b2; border-radius: 12px; padding: 16px; background: #fff; font-size: 1.1rem; line-height: 1.4; }\n\n.buttons { display: flex; flex-direction: column; gap: 12px; width: 240px; margin-inline: auto; }\n.buttons button { padding: 12px 16px; font-size: 1rem; border-radius: 12px; border: 2px solid #333; background: #fff; cursor: pointer; }\n.buttons button:hover { background: #f0f4ff; }\n.buttons button:active { transform: translateY(1px); }\n\n@media (max-width: 800px) {\n  .container { grid-template-columns: 1fr; }\n  .buttons { width: 100%; }\n}\n\n",
+          "folderId": "0",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "requirements.md",
+          "language": "md",
+          "contents": "# UI Elements\n\n- **Image**: `main-img`\n- **Output text box**: `output`\n- **Buttons**:\n  - `mon-btn` (Monday)\n  - `tue-btn` (Tuesday)\n  - `wed-btn` (Wednesday)\n  - `thu-btn` (Thursday)\n  - `fri-btn` (Friday)\n\n## Behavior\n- **Click a button** updates `#output` with a hardcoded reminder.\n- **App load** shows a starter message in `#output`.\n- **No console errors** and repeated clicks are safe.\n",
+          "folderId": "0",
+          "active": true
+        },
+        "6": {
+          "id": "6",
+          "name": "main-image.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson2-level5-choicea-test-2025/uuid/c8664b89-719b-4738-9f07-8fdf3b27cd85.png",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "5",
+        "2",
+        "1",
+        "3"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nQq26MJHLyY5UWnQ=\n",
+    "encrypted": "false",
+    "display_name": "Reminder App",
+    "bubble_choice_description": "Create a web app to get important reminders for each day of the week.",
+    "thumbnail_url": "https://images.code.org/ada2e954b5acca9f1307f5f63ef0859d-reminderImage.png",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "outline",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "long_instructions": "##Reminder App\r\n\r\n**Dcoument the UI** (buttons and output) in the Activity Guide\r\n\r\n**Explore**: Create additional buttons in HTML; `querySelector` each; add `click` listeners; in handlers, update `output` text.\r\n\r\n**Test every button** with the debug checklist; fix issues.\r\n\r\n**Use AI** to clarify terms, generate short display text (Reminders/Days), and translate errors."
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-16 18:23:57 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-16 18:24:12 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-16 18:27:38 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-16 18:28:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-16 18:43:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-16 18:43:16 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-16 18:47:52 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-16 18:50:46 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-16 18:51:48 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-16 20:03:45 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-16 20:06:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-16 20:07:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-16 20:10:49 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-16 20:43:39 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-17 13:21:07 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-17 13:32:28 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-17 13:34:13 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-17 13:35:38 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-28 19:48:18 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-28 19:49:00 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-28 19:49:33 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-28 19:49:39 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-31 17:51:52 +0000\",\"changed\":[\"ai_tutor_mode\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

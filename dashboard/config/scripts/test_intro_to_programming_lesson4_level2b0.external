@@ -1,0 +1,17 @@
+name 'test-intro-to-programming-lesson4-level2b0'
+title 'Designing an Algorithm - Access to Laptops'
+description 'description here'
+
+markdown <<MARKDOWN
+# Recommending Extracurricular Activities
+
+## Scenario Introduction
+
+##### You are designing an algorithm to recommend extracurricular activities to students based on their interests and available time.
+
+## Background Information:
+
+- Students would like to be matched with activities they'll enjoy while considering their time constraints, transportation availability, and conflicts with other commitments.
+
+
+MARKDOWN

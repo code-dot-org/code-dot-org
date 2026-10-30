@@ -1,41 +1,71 @@
-import {SoundLoadCallbacks} from '../types';
-import SoundCache from './SoundCache';
-import {GrainPlayer, Player, Sampler, Transport, getContext, start} from 'tone';
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
-import {AudioPlayer, SampleEvent, SamplerSequence} from './types';
+import {
+  Filter,
+  GrainPlayer,
+  PingPongDelay,
+  Player,
+  Sampler,
+  ToneAudioNode,
+  Transport,
+  getContext,
+  start,
+} from 'tone';
 import {BarsBeatsSixteenths} from 'tone/build/esm/core/type/Units';
 import {Source, SourceOptions} from 'tone/build/esm/source/Source';
-import {DEFAULT_BPM} from '../constants';
+
+import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+
+import {BUS_EFFECT_COMBINATIONS, DEFAULT_BPM} from '../constants';
+import {SoundLoadCallbacks} from '../types';
+
+import {Effects} from './interfaces/Effects';
+import SoundCache from './SoundCache';
+import {
+  InstrumentData,
+  PlayerEvent,
+  SampleEvent,
+  SamplerSequence,
+} from './types';
+import {generateEffectsKeyString} from './utils';
+
+const EMPTY_EFFECTS_KEY = '';
 
 /**
- * An {@link AudioPlayer} implementation using the Tone.js library.
+ * A player implementation using the Tone.js library.
  *
  * TODO:
- * - Effects
  * - Sample sequences
  */
-class ToneJSPlayer implements AudioPlayer {
-  private samplers: {[instrument: string]: Sampler};
+class ToneJSPlayer {
+  private samplers: {[instrument: string]: {[effectsKey: string]: Sampler}};
+  private previewSamplers: {[instrument: string]: Sampler};
   private activePlayers: Source<SourceOptions>[];
   private currentPreview: {
-    id: string;
-    player: Source<SourceOptions>;
+    url: string;
+    player?: Source<SourceOptions>;
   } | null;
+  private effectBusses: {[key: string]: ToneAudioNode};
+  private registeredCallbacks: {
+    [event in PlayerEvent]?: ((payload?: string) => void)[];
+  };
+  private loadingInstruments: {[instrumentName: string]: boolean};
+  private currentSequencePreviewTimer: NodeJS.Timeout | null;
 
   constructor(
     bpm = DEFAULT_BPM,
-    private readonly soundCache: SoundCache = new SoundCache(),
+    private readonly soundCache: SoundCache = SoundCache.getInstance(),
     private readonly metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter()
   ) {
     Transport.bpm.value = bpm;
     this.activePlayers = [];
     this.samplers = {};
+    this.previewSamplers = {};
     this.currentPreview = null;
-  }
-
-  supportsSamplers(): boolean {
-    return true;
+    this.effectBusses = {};
+    this.registeredCallbacks = {};
+    this.loadingInstruments = {};
+    this.currentSequencePreviewTimer = null;
+    this.generateEffectBusses();
   }
 
   getCurrentPlaybackPosition(): number {
@@ -44,7 +74,7 @@ class ToneJSPlayer implements AudioPlayer {
     );
   }
 
-  goToPosition(position: number) {
+  jumpToPosition(position: number) {
     Transport.position = this.playbackTimeToTransportTime(position);
   }
 
@@ -60,8 +90,23 @@ class ToneJSPlayer implements AudioPlayer {
     Transport.loopEnd = this.playbackTimeToTransportTime(endPosition);
   }
 
-  async loadSounds(sampleIds: string[], callbacks?: SoundLoadCallbacks) {
-    return this.soundCache.loadSounds(sampleIds, callbacks);
+  async loadSounds(
+    sampleUrls: string[],
+    instruments: InstrumentData[],
+    callbacks?: SoundLoadCallbacks
+  ) {
+    // Combine sound sample URLs and instrument sample URLs to load together.
+    const urlsToLoad = [...sampleUrls];
+    for (const {instrumentName, sampleMap} of instruments) {
+      urlsToLoad.push(...Object.values(sampleMap));
+      this.loadingInstruments[instrumentName] = true;
+    }
+    await this.soundCache.loadSounds(urlsToLoad, callbacks);
+
+    for (const {instrumentName, sampleMap} of instruments) {
+      // Instrument loads should now be instantaneous since the samples are already loaded.
+      await this.loadInstrument(instrumentName, sampleMap);
+    }
   }
 
   async loadInstrument(
@@ -69,6 +114,10 @@ class ToneJSPlayer implements AudioPlayer {
     sampleMap: {[note: number]: string},
     callbacks?: SoundLoadCallbacks
   ) {
+    if (this.samplers[instrumentName]) {
+      return;
+    }
+    this.loadingInstruments[instrumentName] = true;
     const urls: {[note: number]: AudioBuffer} = {};
     await this.soundCache.loadSounds(Object.values(sampleMap), callbacks);
     Object.keys(sampleMap).forEach(note => {
@@ -78,26 +127,60 @@ class ToneJSPlayer implements AudioPlayer {
       }
     });
 
-    const sampler = new Sampler(urls).toDestination();
-    this.samplers[instrumentName] = sampler;
+    // Create a separate sampler for each set of effects
+    const effectsSamplers: {[effectsKey: string]: Sampler} = {
+      // Default Sampler without effects
+      [EMPTY_EFFECTS_KEY]: new Sampler(urls).toDestination(),
+    };
+    for (const keyString of Object.keys(this.effectBusses)) {
+      const sampler = new Sampler(urls);
+      sampler.connect(this.effectBusses[keyString]);
+      effectsSamplers[keyString] = sampler;
+    }
+
+    this.samplers[instrumentName] = effectsSamplers;
+    // Create a separate sampler without effects for previews
+    this.previewSamplers[instrumentName] = new Sampler(urls).toDestination();
+    for (const callback of this.registeredCallbacks['InstrumentLoaded'] || []) {
+      callback(instrumentName);
+    }
+    this.loadingInstruments[instrumentName] = false;
+  }
+
+  isInstrumentLoading(instrumentName: string): boolean {
+    return this.loadingInstruments[instrumentName];
+  }
+
+  isInstrumentLoaded(instrumentName: string): boolean {
+    return this.samplers[instrumentName] !== undefined;
   }
 
   async playSampleImmediately(sample: SampleEvent, onStop?: () => void) {
     await this.startContextIfNeeded();
-    if (this.currentPreview) {
-      this.currentPreview.player.stop();
-    }
+    this.cancelPreviews();
 
-    const buffer = await this.soundCache.loadSound(sample.sampleId);
+    this.currentPreview = {url: sample.sampleUrl};
+
+    const buffer = await this.soundCache.loadSound(sample.sampleUrl);
     if (!buffer) {
       this.metricsReporter.logWarning(
         'Could not load sound which should have been in cache: ' +
-          sample.sampleId
+          sample.sampleUrl
       );
       return;
     }
 
-    const playbackRate = Transport.bpm.value / sample.originalBpm;
+    if (this.currentPreview?.url !== sample.sampleUrl) {
+      console.log(
+        `Sample preview ${sample.sampleUrl} playback canceled after load but before play.`
+      );
+      return;
+    }
+
+    const playbackRate = sample.disableTempoAdjustment
+      ? 1
+      : Transport.bpm.value / sample.originalBpm;
+
     const player = this.createPlayer(
       buffer,
       playbackRate,
@@ -107,7 +190,7 @@ class ToneJSPlayer implements AudioPlayer {
     player.onstop = () => {
       player.dispose();
 
-      if (this.currentPreview?.id === sample.sampleId) {
+      if (this.currentPreview?.url === sample.sampleUrl) {
         this.currentPreview = null;
       }
 
@@ -115,7 +198,7 @@ class ToneJSPlayer implements AudioPlayer {
     };
 
     player.start();
-    this.currentPreview = {id: sample.sampleId, player};
+    this.currentPreview.player = player;
   }
 
   async playSamplesImmediately() {
@@ -124,66 +207,136 @@ class ToneJSPlayer implements AudioPlayer {
     );
   }
 
-  async playSequenceImmediately({instrument, events}: SamplerSequence) {
-    if (this.samplers[instrument] === undefined) {
+  async playSequenceImmediately(
+    {instrument, events}: SamplerSequence,
+    length: number,
+    onTick?: (tick: number) => void,
+    onStop?: () => void
+  ) {
+    this.cancelPreviews();
+    if (this.previewSamplers[instrument] === undefined) {
       this.metricsReporter.logError(`Instrument not loaded: ${instrument}`);
       return;
     }
 
+    let lastSampleStart = 0;
     await this.startContextIfNeeded();
     events.forEach(({notes, playbackPosition}) => {
-      this.samplers[instrument].triggerAttack(
-        notes,
-        `+${Transport.toSeconds(
-          this.playbackTimeToTransportTime(playbackPosition)
-        )}`
+      // While playback time and transport times are 1-based (allowing for playing
+      // a sound early if pickupLength is specified), playing a sound immediately
+      // requires the playback time to be 0-based.
+      const immediatePlaybackTime = playbackPosition - 1;
+      const offsetSeconds = Transport.toSeconds(
+        this.playbackTimeToTransportTime(immediatePlaybackTime)
       );
+      lastSampleStart = Math.max(lastSampleStart, offsetSeconds);
+      this.previewSamplers[instrument]
+        .unsync()
+        .triggerAttack(notes, `+${offsetSeconds}`, 1);
     });
+
+    // Play every tick (quarter note) of the sequence.
+    let tick = 1;
+    this.currentSequencePreviewTimer = setInterval(() => {
+      if (tick <= length * 4 * 4) {
+        onTick?.(tick++);
+      } else {
+        if (this.currentSequencePreviewTimer) {
+          clearInterval(this.currentSequencePreviewTimer);
+        }
+        onStop?.();
+      }
+    }, Transport.toSeconds('16n') * 1000);
   }
 
   cancelPreviews() {
-    if (this.currentPreview) {
-      this.currentPreview.player.stop();
+    this.currentPreview?.player?.stop();
+
+    if (this.currentSequencePreviewTimer) {
+      clearInterval(this.currentSequencePreviewTimer);
+      this.currentSequencePreviewTimer = null;
     }
 
-    Object.values(this.samplers).forEach(sampler => sampler.releaseAll());
+    this.currentPreview = null;
+
+    // Release all preview samplers
+    Object.values(this.previewSamplers).forEach(sampler =>
+      sampler.releaseAll()
+    );
   }
 
   setBpm(bpm: number) {
+    if (Transport.bpm.value === bpm) {
+      return;
+    }
     Transport.bpm.value = bpm;
+    // We need to regenerate all effect busses when BPM changes as some effects (e.g. delay) are BPM-dependent.
+    this.generateEffectBusses();
+    // We also need to regenerate samplers so that they connect themselves to the new effects busses.
+    this.samplers = {};
   }
 
-  scheduleSample(sample: SampleEvent) {
-    const buffer = this.soundCache.getSound(sample.sampleId);
+  scheduleSample(sample: SampleEvent, onSampleStart: (id: string) => void) {
+    const buffer = this.soundCache.getSound(sample.sampleUrl);
     if (!buffer) {
       this.metricsReporter.logWarning(
         'Could not load sound which should have been in cache: ' +
-          sample.sampleId
+          sample.sampleUrl
       );
       return;
     }
 
     const playbackRate = Transport.bpm.value / sample.originalBpm;
-    const player = this.createPlayer(buffer, playbackRate, sample.pitchShift)
-      .toDestination()
+    const player = this.createPlayer(buffer, playbackRate, sample.pitchShift);
+
+    if (sample.effects) {
+      this.connectNodeToEffects(player, sample.effects);
+      if (sample.effects.volume && sample.effects.volume !== 'normal') {
+        player.volume.value = sample.effects.volume === 'low' ? -9 : -4;
+      }
+    } else {
+      player.toDestination();
+    }
+
+    player
       .sync()
-      .start(this.playbackTimeToTransportTime(sample.playbackPosition));
+      .start(
+        this.playbackTimeToTransportTime(
+          sample.playbackPosition - (sample.pickupLength || 0)
+        )
+      );
 
     this.activePlayers.push(player);
+
+    // Schedule a callback to report the sound ID after the sound has been played.
+    Transport.scheduleOnce(
+      () => onSampleStart(sample.id),
+      this.playbackTimeToTransportTime(sample.playbackPosition)
+    );
   }
 
-  scheduleSamplerSequence({instrument, events}: SamplerSequence) {
+  scheduleSamplerSequence({instrument, events, effects}: SamplerSequence) {
     if (this.samplers[instrument] === undefined) {
       this.metricsReporter.logError(`Instrument not loaded: ${instrument}`);
       return;
     }
 
+    let velocity = 1;
+    if (effects?.volume && effects?.volume !== 'normal') {
+      velocity = effects.volume === 'low' ? 0.4 : 0.75;
+    }
+
+    const effectKeyString = effects
+      ? generateEffectsKeyString(effects)
+      : EMPTY_EFFECTS_KEY;
+
     events.forEach(({notes, playbackPosition}) => {
-      this.samplers[instrument]
+      this.samplers[instrument][effectKeyString]
         .sync()
         .triggerAttack(
           notes,
-          this.playbackTimeToTransportTime(playbackPosition)
+          this.playbackTimeToTransportTime(playbackPosition),
+          velocity
         );
     });
   }
@@ -199,6 +352,7 @@ class ToneJSPlayer implements AudioPlayer {
   }
 
   stop() {
+    Transport.cancel();
     Transport.stop();
     this.stopAllPlayers();
   }
@@ -208,12 +362,20 @@ class ToneJSPlayer implements AudioPlayer {
     Transport.cancel();
   }
 
+  registerCallback(
+    event: PlayerEvent,
+    callback: (payload?: string) => void
+  ): void {
+    if (!this.registeredCallbacks[event]) {
+      this.registeredCallbacks[event] = [];
+    }
+    this.registeredCallbacks[event]?.push(callback);
+  }
+
   private stopAllPlayers() {
     this.activePlayers.forEach(player => player.dispose());
     this.activePlayers = [];
-    Object.values(this.samplers).forEach(sampler =>
-      sampler.releaseAll().unsync()
-    );
+    this.stopAllSamplers();
   }
 
   private async startContextIfNeeded() {
@@ -226,7 +388,7 @@ class ToneJSPlayer implements AudioPlayer {
     transportTime: BarsBeatsSixteenths
   ): number {
     const [bar, beat, sixteenths] = transportTime.split(':').map(Number);
-    return bar + 1 + beat / 4 + sixteenths / 16;
+    return bar + beat / 4 + sixteenths / 16;
   }
 
   private playbackTimeToTransportTime(
@@ -234,8 +396,10 @@ class ToneJSPlayer implements AudioPlayer {
   ): BarsBeatsSixteenths {
     const bar = Math.floor(playbackPosition);
     const beat = Math.floor((playbackPosition - bar) * 4);
-    const sixteenths = Math.floor((playbackPosition - bar - beat / 4) * 16);
-    return `${bar - 1}:${beat}:${sixteenths}`;
+    const sixteenths = (playbackPosition - bar - beat / 4) * 16;
+    // Round sixteenths note value to 3 decimal places.
+    const sixteenthsRounded = Math.round(sixteenths * 1000) / 1000;
+    return `${bar}:${beat}:${sixteenthsRounded}`;
   }
 
   private createPlayer(
@@ -244,16 +408,61 @@ class ToneJSPlayer implements AudioPlayer {
     pitchShift: number
   ): Source<SourceOptions> {
     if (pitchShift === 0 && playbackRate === 1) {
-      return new Player(buffer).toDestination();
+      return new Player(buffer);
     } else {
       const player = new GrainPlayer({
         url: buffer,
         grainSize: playbackRate * 0.1,
-      }).toDestination();
+      });
 
       player.detune = pitchShift * 100;
       player.playbackRate = playbackRate;
       return player;
+    }
+  }
+
+  private stopAllSamplers() {
+    Object.values(this.samplers).forEach(samplerList =>
+      Object.values(samplerList).forEach(sampler => sampler.releaseAll())
+    );
+  }
+
+  private generateEffectBusses() {
+    // Dispose of all existing effect busses
+    Object.values(this.effectBusses).forEach(node => node.dispose());
+    BUS_EFFECT_COMBINATIONS.forEach(effects => {
+      const {filter, delay} = effects;
+      let firstNode, lastNode;
+      if (filter) {
+        const filterNode = new Filter(filter === 'low' ? 800 : 3000, 'lowpass');
+        firstNode = filterNode;
+        lastNode = filterNode;
+      }
+
+      if (delay) {
+        const delayNode = new PingPongDelay('8n', delay === 'low' ? 0.2 : 0.5);
+        delayNode.wet.value = delay === 'low' ? 0.1 : 0.25;
+        if (!firstNode) {
+          firstNode = delayNode;
+        } else {
+          firstNode.connect(delayNode);
+        }
+        lastNode = delayNode;
+      }
+
+      if (firstNode && lastNode) {
+        this.effectBusses[generateEffectsKeyString(effects)] = firstNode;
+        lastNode.toDestination();
+      }
+    });
+  }
+
+  private connectNodeToEffects(node: ToneAudioNode, effects: Effects) {
+    const key = generateEffectsKeyString(effects);
+    if (this.effectBusses[key]) {
+      node.connect(this.effectBusses[key]);
+    } else {
+      node.toDestination();
     }
   }
 }

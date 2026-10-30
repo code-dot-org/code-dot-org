@@ -4,6 +4,11 @@
   var shouldShowTab = require('./NetSimUtils').shouldShowTab;
   var NetSimTabType = require('./NetSimConstants').NetSimTabType;
 
+  /**
+   * This block destructures the local variables for use within this ejs template.
+   */
+  var level = locals.level;
+
   var showInstructions = shouldShowTab(level, NetSimTabType.INSTRUCTIONS);
   var showMyDevice = shouldShowTab(level, NetSimTabType.MY_DEVICE);
   var showRouter = shouldShowTab(level, NetSimTabType.ROUTER);

@@ -1,0 +1,23 @@
+name 'music-lab-612-post'
+title 'Music Lab Post-Assessment'
+submittable 'true'
+anonymous 'false'
+activity_guide_level 'false'
+
+page
+text 'music-lab-612-post-intro'
+level 'music-lab-612-post-q1'
+level 'music-lab-612-post-q2'
+level 'music-lab-612-post-q3'
+level 'music-lab-612-post-q4'
+level 'music-lab-612-post-q5'
+level 'music-lab-612-post-q6'
+
+page
+level 'music-lab-612-post-q7'
+level 'music-lab-612-post-q8'
+level 'music-lab-612-post-q9'
+level 'music-lab-612-post-q10'
+level 'music-lab-612-post-careersQ'
+
+

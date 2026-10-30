@@ -1,15 +1,16 @@
-import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import PadAndCenter from '@cdo/apps/templates/teacherDashboard/PadAndCenter';
-import i18n from '@cdo/locale';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import Button from '@cdo/apps/templates/Button';
-import color from '@cdo/apps/util/color';
+import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {beginEditingSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+
 import fontConstants from '@cdo/apps/fontConstants';
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import BaseDialog from '@cdo/apps/templates/BaseDialog';
+import PadAndCenter from '@cdo/apps/templates/teacherDashboard/PadAndCenter';
+import {beginEditingSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
 
 class InitialSectionCreationInterstitial extends Component {
   static propTypes = {
@@ -28,6 +29,7 @@ class InitialSectionCreationInterstitial extends Component {
   beginEditingSection = () => {
     this.setState({isOpen: false});
     analyticsReporter.sendEvent(EVENTS.SECTION_SETUP_SIGN_IN_EVENT);
+    analyticsReporter.sendEvent(EVENTS.SECTION_SETUP_STARTED, {});
     this.props.beginEditingSection();
   };
 

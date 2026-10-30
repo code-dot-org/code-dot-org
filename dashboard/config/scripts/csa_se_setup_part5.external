@@ -8,7 +8,7 @@ markdown <<MARKDOWN
 
 ⚠️ **Do this step** ***after*** **you have received confirmation that you have verified student access on GitHub.**
 
-Navigate to [**github.com/features/copilot**](https://github.com/features/copilot) and click the **Get GitHub Copilot** button.
+Navigate to <a href="https://github.com/features/copilot" target="_blank">**github.com/features/copilot**</a> and click the **Get GitHub Copilot** button.
 
 ## Adding GitHub Copilot to VS Code
 

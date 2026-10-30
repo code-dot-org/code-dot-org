@@ -1,0 +1,70 @@
+name 'pl_sandbox_aif-2-U3-pl-context_2026'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Getting Ready for the Curriculum
+
+<img src="https://images.code.org/11d7634b4267f4aa8afc6a3caa340a9b-MS17.png" alt="Insert alt text here" style="width: 35%; border-radius: 10px; margin: 0px 0px 10px 10px; float: right;">
+
+This professional learning module is designed to give you a guided preview of the **key concepts and instructional approaches** used throughout the curriculum.
+
+Think of this module as a head start, an opportunity to build familiarity with the ideas students will encounter and to begin thinking about how you might teach them in your classroom.
+
+While this module highlights important concepts and teaching strategies, it is not intended to cover every lesson or every concept in depth. We still recommend **taking time to review individual lessons and lesson materials** before teaching them with students.
+
+<br>
+
+## This Module Covers:
+
+<div style="width: 100%; margin: 25px 0px;">
+<!-- Top Row -->
+  <div style="display: flex; justify-content: center; gap: 15px; margin-bottom: 15px;">
+
+<div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; width: 30%; min-height: 180px; text-align: center; box-shadow: 2px 2px 8px rgba(0,0,0,0.1); box-sizing: border-box;">
+      <p style="font-size: 16pt; font-weight: bold; margin-bottom: 10px;">⚡ Event-Based Programming</p>
+      <p style="font-size: 14pt; line-height: 1.3; margin: 0;">
+        Learn how programs respond to user actions and interactions.
+      </p>
+    </div>
+
+<div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; width: 30%; min-height: 180px; text-align: center; box-shadow: 2px 2px 8px rgba(0,0,0,0.1); box-sizing: border-box;">
+      <p style="font-size: 16pt; font-weight: bold; margin-bottom: 10px;">📦 Variables</p>
+      <p style="font-size: 14pt; line-height: 1.3; margin: 0;">
+        Explore how programs store and update information.
+      </p>
+    </div>
+
+<div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; width: 30%; min-height: 180px; text-align: center; box-shadow: 2px 2px 8px rgba(0,0,0,0.1); box-sizing: border-box;">
+      <p style="font-size: 16pt; font-weight: bold; margin-bottom: 10px;">🧩 Functions</p>
+      <p style="font-size: 14pt; line-height: 1.3; margin: 0;">
+        Understand how reusable blocks of code help organize programs.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- Bottom Row -->
+  <div style="display: flex; justify-content: center; gap: 15px;">
+
+<div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; width: 30%; min-height: 180px; text-align: center; box-shadow: 2px 2px 8px rgba(0,0,0,0.1); box-sizing: border-box;">
+      <p style="font-size: 16pt; font-weight: bold; margin-bottom: 10px;">🔀 Conditionals</p>
+      <p style="font-size: 14pt; line-height: 1.3; margin: 0;">
+        Discover how programs make decisions based on conditions.
+      </p>
+    </div>
+
+<div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; width: 30%; min-height: 180px; text-align: center; box-shadow: 2px 2px 8px rgba(0,0,0,0.1); box-sizing: border-box;">
+      <p style="font-size: 16pt; font-weight: bold; margin-bottom: 10px;">🤖 AI-Supported Pedagogy</p>
+      <p style="font-size: 14pt; line-height: 1.3; margin: 0;">
+        Explore instructional strategies for teaching JavaScript concepts alongside responsible and meaningful AI use.
+      </p>
+    </div>
+
+  </div>
+
+</div>
+
+--- 
+As you move through the module, focus on building confidence with the concepts, noticing instructional strategies, and making connections to how students may experience the learning in your classroom.
+MARKDOWN

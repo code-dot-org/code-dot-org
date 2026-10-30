@@ -1,0 +1,63 @@
+/* AWS Device Farm browser configurations.
+   - Desktop entries use a Desktop Browser Testing (TestGrid) project.
+   - Mobile entries use a standard Device Farm project; "device_arns" is the
+   set of physical devices to pick from at provisioning time (one chosen at
+   random among the healthiest availability tier). Update this list when the
+   pool composition changes in the AWS console. The runner routes each entry
+   to the correct project ARN based on the "mobile" flag. */
+
+[
+  {
+    "name": "Chrome",
+    "browserName": "chrome",
+    "browserVersion": "latest"
+  },
+  {
+    "name": "Firefox",
+    "browserName": "firefox",
+    "browserVersion": "latest"
+  },
+  {
+    "name": "iPhone",
+    "mobile": true,
+    "device_arns": [
+      "arn:aws:devicefarm:us-west-2::device:08F72C60B7B24959BF218606D3F29E69",
+      "arn:aws:devicefarm:us-west-2::device:10C84C97B24C4933A61F197B41535C49",
+      "arn:aws:devicefarm:us-west-2::device:297E84F959BA411FBB8D5F42817177FF",
+      "arn:aws:devicefarm:us-west-2::device:3D8FC46FCD034EF8B617E538C1651422",
+      "arn:aws:devicefarm:us-west-2::device:45CA0C2042C84B70AF9F5502643B6E08",
+      "arn:aws:devicefarm:us-west-2::device:6200F380A4874FEB9C72EED72B863B67",
+      "arn:aws:devicefarm:us-west-2::device:94D6E95F3E114FFBA13C488241621118",
+      "arn:aws:devicefarm:us-west-2::device:9925BE912BAB41E486DAE529E633C214",
+      "arn:aws:devicefarm:us-west-2::device:A9474A8588194075AB3C43B8706132FE",
+      "arn:aws:devicefarm:us-west-2::device:C2B3E436BB134046AF6D50DDFC2C14F1",
+      "arn:aws:devicefarm:us-west-2::device:C3481B68E9EA4202BBF6F9D215E9AE5F",
+      "arn:aws:devicefarm:us-west-2::device:C5DDD26CF7CD4A9BB5995E392492582D",
+      "arn:aws:devicefarm:us-west-2::device:D90C481A1E514635A3526724DC492978",
+      "arn:aws:devicefarm:us-west-2::device:EB3EBEBD9E6D4ED2A1A69A0399AC25E5",
+      "arn:aws:devicefarm:us-west-2::device:EEED8AB9E08F4B6C862F982EDA0A0C34"
+    ],
+    "platformName": "iOS",
+    "browserName": "Safari",
+    "appium:orientation": "LANDSCAPE",
+    "appium:safariInitialUrl": "about:blank",
+    "appium:webviewConnectTimeout": 30000
+  },
+  {
+    "name": "iPad",
+    "mobile": true,
+    "device_arns": [
+      "arn:aws:devicefarm:us-west-2::device:0A5D934CFF7E4B5BB2612E922588C354",
+      "arn:aws:devicefarm:us-west-2::device:30FFDD10560948EABAF2288A9BF0397C",
+      "arn:aws:devicefarm:us-west-2::device:90C71CE33598459E9266A61A095FC1E3",
+      "arn:aws:devicefarm:us-west-2::device:DA4173B905884C2DA13C0D88ED325F8C",
+      "arn:aws:devicefarm:us-west-2::device:E05780F151C14A9E9135E20F3EA3AC2A",
+      "arn:aws:devicefarm:us-west-2::device:F30C04464C40471CA1DD9C66B12F837F"
+    ],
+    "platformName": "iOS",
+    "browserName": "Safari",
+    "appium:orientation": "LANDSCAPE",
+    "appium:safariInitialUrl": "about:blank",
+    "appium:webviewConnectTimeout": 30000
+  }
+]

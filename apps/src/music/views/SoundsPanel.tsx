@@ -1,14 +1,34 @@
-import React, {useCallback} from 'react';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import classNames from 'classnames';
-import {baseAssetUrl} from '../constants';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
+import FocusLock from 'react-focus-lock';
+
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+
+import {getBaseAssetUrl} from '../appConfig';
+import musicI18n from '../locale';
+import MusicLibrary, {
+  SoundData,
+  SoundFolder,
+  SoundType,
+} from '../player/MusicLibrary';
+import SoundStyle from '../utils/SoundStyle';
+
 import styles from './soundsPanel.module.scss';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import MusicLibrary, {SoundData, SoundFolder} from '../player/MusicLibrary';
 
 /*
  * Renders a UI for previewing and choosing samples. This is currently used within a
  * custom Blockly Field {@link FieldSounds}
  */
+
+type Mode = 'packs' | 'sounds';
+type Filter = 'all' | SoundType;
+
+type SoundEntry = {
+  folder: SoundFolder;
+  sound: SoundData;
+};
 
 const getLengthRepresentation = (length: number) => {
   const lengthToSymbol: {[length: number]: string} = {
@@ -22,21 +42,29 @@ interface FolderPanelRowProps {
   libraryGroupPath: string;
   playingPreview: string;
   folder: SoundFolder;
+  currentValue: SoundFolder;
+  onSelect: (path: SoundFolder) => void;
   onPreview: (path: string) => void;
+  currentFolderRefCallback: (ref: HTMLDivElement) => void;
 }
 
 const FolderPanelRow: React.FunctionComponent<FolderPanelRowProps> = ({
   libraryGroupPath,
   playingPreview,
   folder,
+  currentValue,
+  onSelect,
   onPreview,
+  currentFolderRefCallback,
 }) => {
-  const previewSound = folder.sounds.find(sound => sound.preview);
-  const soundPath = previewSound && folder.path + '/' + previewSound.src;
+  const previewSound = folder.sounds.find(sound => sound.type === 'preview');
+  const soundPath = previewSound && folder.id + '/' + previewSound.src;
   const isPlayingPreview = previewSound && playingPreview === soundPath;
   const imageSrc =
     folder.imageSrc &&
-    `${baseAssetUrl}${libraryGroupPath}/${folder.path}/${folder.imageSrc}`;
+    `${getBaseAssetUrl()}${libraryGroupPath}/${folder.path}/${folder.imageSrc}`;
+
+  const isSelected = folder.id === currentValue.id;
 
   const onPreviewClick = useCallback(
     (e: Event) => {
@@ -49,7 +77,23 @@ const FolderPanelRow: React.FunctionComponent<FolderPanelRowProps> = ({
   );
 
   return (
-    <div className={classNames('sounds-panel-folder-row', styles.folderRow)}>
+    <div
+      className={classNames(
+        'sounds-panel-folder-row',
+        classNames(styles.folderRow, isSelected && styles.folderRowSelected)
+      )}
+      onClick={() => onSelect(folder)}
+      onKeyDown={event => {
+        if (event.key === 'Enter') {
+          onSelect(folder);
+        }
+      }}
+      ref={isSelected ? currentFolderRefCallback : null}
+      aria-label={folder.name}
+      tabIndex={0}
+      role="tab"
+      aria-selected={isSelected}
+    >
       <div className={styles.folderRowLeft}>
         {imageSrc && (
           <img src={imageSrc} className={styles.folderImage} alt="" />
@@ -57,6 +101,9 @@ const FolderPanelRow: React.FunctionComponent<FolderPanelRowProps> = ({
       </div>
       <div className={styles.folderRowMiddle}>
         <div className={styles.folderRowMiddleName}>{folder.name}</div>
+        {folder.artist && (
+          <div className={styles.folderRowMiddleSubTitle}>{folder.artist}</div>
+        )}
       </div>
       <div className={styles.folderRowRight}>
         <div className={styles.length}>&nbsp;</div>
@@ -64,7 +111,7 @@ const FolderPanelRow: React.FunctionComponent<FolderPanelRowProps> = ({
           <div className={styles.previewContainer}>
             <FontAwesome
               title={undefined}
-              icon={'play-circle'}
+              icon={'circle-play'}
               className={classNames(
                 styles.preview,
                 isPlayingPreview && styles.previewPlaying
@@ -83,8 +130,10 @@ interface SoundsPanelRowProps {
   playingPreview: string;
   folder: SoundFolder;
   sound: SoundData;
+  showingSoundsOnly: boolean;
   onSelect: (path: string) => void;
   onPreview: (path: string) => void;
+  currentSoundRefCallback: (ref: HTMLDivElement) => void;
 }
 
 const SoundsPanelRow: React.FunctionComponent<SoundsPanelRowProps> = ({
@@ -92,21 +141,28 @@ const SoundsPanelRow: React.FunctionComponent<SoundsPanelRowProps> = ({
   playingPreview,
   folder,
   sound,
+  showingSoundsOnly,
   onSelect,
   onPreview,
+  currentSoundRefCallback,
 }) => {
-  const soundPath = folder.path + '/' + sound.src;
+  const soundPath = folder.id + '/' + sound.src;
   const isSelected = soundPath === currentValue;
   const isPlayingPreview = playingPreview === soundPath;
-  const typeIconPath = `/blockly/media/music/icon-${sound.type}.png`;
-  const onPreviewClick = useCallback(
-    (e: Event) => {
-      if (!isPlayingPreview) {
-        onPreview(soundPath);
-      }
+
+  const onSoundSelect = useCallback(() => {
+    if (!isPlayingPreview) {
+      onPreview(soundPath);
+    }
+    onSelect(soundPath);
+  }, [isPlayingPreview, onPreview, onSelect, soundPath]);
+
+  const onSoundClick = useCallback(
+    (e: React.MouseEvent<HTMLDivElement>) => {
       e.stopPropagation();
+      onSoundSelect();
     },
-    [isPlayingPreview, onPreview, soundPath]
+    [onSoundSelect]
   );
 
   return (
@@ -116,26 +172,53 @@ const SoundsPanelRow: React.FunctionComponent<SoundsPanelRowProps> = ({
         styles.soundRow,
         isSelected && styles.soundRowSelected
       )}
-      onClick={() => onSelect(folder.path + '/' + sound.src)}
+      onClick={onSoundClick}
+      onKeyDown={event => {
+        if (event.key === 'Enter') {
+          onSoundSelect();
+        }
+      }}
+      ref={isSelected ? currentSoundRefCallback : null}
+      aria-label={
+        sound.name +
+        musicI18n.measureLength() +
+        String(getLengthRepresentation(sound.length))
+      }
+      tabIndex={0}
+      role="button"
     >
       <div className={styles.soundRowLeft}>
-        <img src={typeIconPath} className={styles.typeIcon} alt="" />
-      </div>
-      <div className={styles.soundRowMiddle}>{sound.name}</div>
-      <div className={styles.soundRowRight}>
-        <div className={styles.length}>
-          {getLengthRepresentation(sound.length)}
+        <FontAwesomeV6Icon
+          iconName={SoundStyle[sound.type]?.icon || ''}
+          className={classNames(
+            styles.typeIcon,
+            SoundStyle[sound.type]?.classNameColor
+          )}
+          iconStyle="regular"
+        />
+        <div
+          className={classNames(
+            styles.name,
+            sound.type === 'vocal' && styles.nameVocal
+          )}
+        >
+          {sound.name}
         </div>
-        <div className={styles.previewContainer}>
-          <FontAwesome
-            title={undefined}
-            icon={'play-circle'}
-            className={classNames(
-              styles.preview,
-              isPlayingPreview && styles.previewPlaying
-            )}
-            onClick={onPreviewClick}
-          />
+      </div>
+      {showingSoundsOnly && (
+        <div className={styles.soundRowMiddle}>
+          {folder.name} &bull; {folder.artist}
+        </div>
+      )}
+      <div className={styles.soundRowRight}>
+        <div
+          className={classNames(
+            styles.length,
+            styles.lengthNoMarginRight,
+            isSelected && styles.lengthNoMarginRightSelected
+          )}
+        >
+          {getLengthRepresentation(sound.length)}
         </div>
       </div>
     </div>
@@ -146,6 +229,10 @@ interface SoundsPanelProps {
   library: MusicLibrary;
   currentValue: string;
   playingPreview: string;
+  showSoundFilters: boolean;
+  defaultMode: Mode;
+  sortUnrestrictedPacksByType: boolean;
+  onClose: () => void;
   onSelect: (path: string) => void;
   onPreview: (path: string) => void;
 }
@@ -154,54 +241,206 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
   library,
   currentValue,
   playingPreview,
+  showSoundFilters,
+  defaultMode,
+  sortUnrestrictedPacksByType,
+  onClose,
   onSelect,
   onPreview,
 }) => {
-  const folders = library.getAllowedSounds(undefined);
-  const libraryGroupPath = library.groups[0].path;
+  const folders = library.getAvailableSounds();
+  const libraryGroupPath = library.getPath();
 
-  // Generate a flat list of entries to render.  We need a flat list because
-  // we will make the headers sticky.
-  const entries: {
-    type: 'folder' | 'sound';
-    folder: SoundFolder;
-    sound?: SoundData;
-  }[] = [];
-  folders.forEach(folder => {
-    entries.push({type: 'folder', folder: folder});
-    folder.sounds.forEach(sound => {
-      entries.push({type: 'sound', folder: folder, sound: sound});
+  const [selectedFolder, setSelectedFolder] = useState<SoundFolder>(
+    library.getAllowedFolderForSoundId(currentValue) || folders[0]
+  );
+  const [mode, setMode] = useState<Mode>(defaultMode);
+  const [filter, setFilter] = useState<Filter>('all');
+  const [isFocusSet, setIsFocusSet] = useState(false);
+
+  const currentFolderRef: React.MutableRefObject<HTMLDivElement | null> =
+    useRef(null);
+
+  const onModeChange = useCallback((value: Mode) => {
+    setMode(value);
+  }, []);
+
+  const onFilterChange = useCallback((value: Filter) => {
+    setFilter(value);
+  }, []);
+
+  useEffect(() => {
+    // This timeout allows the initial scroll-to-current-selection to work
+    // when wrapping the content with FocusLock.
+    setTimeout(() => {
+      currentFolderRef.current?.scrollIntoView();
+    }, 0);
+  }, []);
+
+  const currentFolderRefCallback = (ref: HTMLDivElement) => {
+    currentFolderRef.current = ref;
+  };
+
+  const currentSoundRefCallback = (ref: HTMLDivElement) => {
+    if (!isFocusSet && ref) {
+      setTimeout(() => {
+        ref.focus();
+        setIsFocusSet(true);
+      }, 0);
+    }
+  };
+
+  let possibleSoundEntries: SoundEntry[] = [];
+  let rightColumnSoundEntries: SoundEntry[] = [];
+
+  if (mode === 'packs') {
+    folders.sort((a, b) =>
+      a.restricted === b.restricted ? 0 : a.restricted ? -1 : 1
+    );
+    possibleSoundEntries = selectedFolder.sounds.map(sound => ({
+      folder: selectedFolder,
+      sound,
+    }));
+  } else {
+    folders.forEach(folder => {
+      folder.sounds.forEach(sound => {
+        possibleSoundEntries.push({folder, sound});
+      });
     });
-  });
+    if (sortUnrestrictedPacksByType) {
+      const soundTypes: SoundType[] = ['beat', 'bass', 'lead', 'fx', 'vocal'];
+      possibleSoundEntries.sort((a, b) => {
+        if (a.folder.artist === 'Code.org' && b.folder.artist === 'Code.org') {
+          const aOrder = soundTypes.indexOf(a.sound.type);
+          const bOrder = soundTypes.indexOf(b.sound.type);
+          return aOrder - bOrder;
+        }
+        return 0;
+      });
+    }
+  }
+
+  if (filter === 'all') {
+    rightColumnSoundEntries = possibleSoundEntries.filter(
+      soundEntry => soundEntry.sound.type !== 'preview'
+    );
+  } else {
+    rightColumnSoundEntries = possibleSoundEntries.filter(
+      soundEntry =>
+        soundEntry.sound.type === filter && soundEntry.sound.type !== 'preview'
+    );
+  }
+
+  const availableSoundTypes: {[key: string]: boolean} = {
+    all: true,
+    ...library.getAvailableSoundTypes(),
+  };
+
+  const allFilterButtons = [
+    {label: musicI18n.soundsFilterAll(), value: 'all'},
+    {label: musicI18n.soundsFilterBeats(), value: 'beat'},
+    {label: musicI18n.soundsFilterBass(), value: 'bass'},
+    {label: musicI18n.soundsFilterLeads(), value: 'lead'},
+    {label: musicI18n.soundsFilterEffects(), value: 'fx'},
+    {label: musicI18n.soundsFilterVocals(), value: 'vocal'},
+  ];
+
+  const filterButtons = allFilterButtons.filter(
+    filterButton => availableSoundTypes[filterButton.value]
+  );
+
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
+    if (event.key === 'Escape') {
+      onClose();
+    }
+  };
 
   return (
-    <div id="sounds-panel" className={styles.soundsPanel}>
-      {entries.map((entry, entryIndex) => {
-        if (entry.type === 'folder') {
-          return (
-            <FolderPanelRow
-              key={entryIndex}
-              libraryGroupPath={libraryGroupPath}
-              playingPreview={playingPreview}
-              folder={entry.folder}
-              onPreview={onPreview}
+    <FocusLock>
+      {/* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions */}
+      <div
+        id="sounds-panel"
+        className={classNames(styles.soundsPanel)}
+        aria-modal
+        role="dialog"
+        onKeyDown={handleKeyDown}
+      >
+        {showSoundFilters && (
+          <div
+            id="sounds-panel-top"
+            className={styles.soundsPanelTop}
+            data-theme="Dark"
+          >
+            <SegmentedButtons
+              selectedButtonValue={mode}
+              buttons={[
+                {label: musicI18n.soundsFilterPacks(), value: 'packs'},
+                {label: musicI18n.soundsFilterSounds(), value: 'sounds'},
+              ]}
+              onChange={value => onModeChange(value as Mode)}
+              className={styles.segmentedButtons}
+              size="s"
             />
-          );
-        } else if (entry.sound && !entry.sound.preview) {
-          return (
-            <SoundsPanelRow
-              key={entryIndex}
-              currentValue={currentValue}
-              playingPreview={playingPreview}
-              folder={entry.folder}
-              sound={entry.sound}
-              onSelect={onSelect}
-              onPreview={onPreview}
+
+            <SegmentedButtons
+              selectedButtonValue={filter}
+              buttons={filterButtons}
+              onChange={value => onFilterChange(value as Filter)}
+              className={styles.segmentedButtons}
+              size="s"
             />
-          );
-        }
-      })}
-    </div>
+          </div>
+        )}
+        <div id="sounds-panel-body" className={styles.soundsPanelBody}>
+          {mode === 'packs' && (
+            <div
+              id="sounds-panel-left"
+              role="tablist"
+              aria-orientation="vertical"
+              className={styles.leftColumn}
+            >
+              {folders.map((folder, folderIndex) => {
+                return (
+                  <FolderPanelRow
+                    key={folderIndex}
+                    libraryGroupPath={libraryGroupPath}
+                    playingPreview={playingPreview}
+                    folder={folder}
+                    currentValue={selectedFolder}
+                    onSelect={setSelectedFolder}
+                    onPreview={onPreview}
+                    currentFolderRefCallback={currentFolderRefCallback}
+                  />
+                );
+              })}
+            </div>
+          )}
+          <div
+            id="sounds-panel-right"
+            className={styles.rightColumn}
+            tabIndex={0}
+            role="tabpanel"
+            aria-label={'Sounds Panel, ' + selectedFolder.name}
+          >
+            {rightColumnSoundEntries.map((soundEntry, soundIndex) => {
+              return (
+                <SoundsPanelRow
+                  key={soundIndex}
+                  currentValue={currentValue}
+                  playingPreview={playingPreview}
+                  folder={soundEntry.folder}
+                  sound={soundEntry.sound}
+                  showingSoundsOnly={mode === 'sounds'}
+                  onSelect={onSelect}
+                  onPreview={onPreview}
+                  currentSoundRefCallback={currentSoundRefCallback}
+                />
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    </FocusLock>
   );
 };
 

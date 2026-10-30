@@ -1,0 +1,24 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2025-07-18T15:19:10.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "contained_level_names": [
+      "CSA U2L2-L2 Contained_pilot_oo2025_pl"
+    ],
+    "project_template_level_name": "CSA U2L2-Constructors PBT_pilot_oo2025_pl",
+    "name_suffix": "_pl",
+    "ai_tutor_available": "true",
+    "tts_long_instructions_override": "Take some time to explore this code. Make sure to click on the Vlogger.java file and see what you notice about the Vlogger Class. "
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-07-18T15:19:10.376+00:00\",\"changed\":[\"cloned from \\\"pl-java-class-design-no-arg-predict-13\\\"\"],\"cloned_from\":\"pl-java-class-design-no-arg-predict-13\"}]"
+}]]></config>
+</Javalab>

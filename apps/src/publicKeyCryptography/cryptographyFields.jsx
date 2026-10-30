@@ -1,10 +1,11 @@
 /** @file Input fields specific to the cryptography widget */
+import classNames from 'classnames';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
-import classNames from 'classnames';
-import IntegerDropdown from './IntegerDropdown';
+
 import {primesInRange, privateKeyList} from './cryptographyMath';
+import IntegerDropdown from './IntegerDropdown';
 import {LINE_HEIGHT, COLORS} from './style';
 
 const BUTTON_VERTICAL_PADDING = 6;

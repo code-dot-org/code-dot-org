@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2023-11-28T21:21:48.000Z",
   "level_num": "custom",
@@ -69,11 +70,11 @@
     "start_blocks": "//1) Screen 1 Bugs\r\nonEvent(\"trial1CheckButton\", \"click\", function( ) {\r\n  var trial1Answer = getProperty(\"trial1Dropdown\", \"options\");\r\n  if (trial1Answer == \"Mountain Ibex\") {\r\n    setScreen(\"trial2\");\r\n  }\r\n  if (trial1Answer != \"Mountain Ibex\") {\r\n    setText(\"trial1Result\", \"Try Again!\");\r\n  }\r\n});\r\n\r\n//2) Screen 2 Bugs\r\nonEvent(\"trial2CheckButton\", \"click\", function( ) {\r\n  var trial2Answer = getProperty(\"trial2Slider\", \"value\");\r\n  if (trial2Answer == 35) {\r\n    setScreen(\"trial3\");\r\n  }\r\n  if (trial2Answer != 35) {\r\n    setText(\"trial2Result\", \"Try Again!\");\r\n  }\r\n});\r\n\r\n//3) Screen 3 Bugs\r\nonEvent(\"trial3CheckButton\", \"click\", function( ) {\r\n  var trial3Answer = getText(\"trial3Input\");\r\n  if (trial3Input == \"Open Sesame\") {\r\n    setScreen(\"finalScreen\");\r\n  }\r\n  if (trial3Input != \"Open Sesame\") {\r\n    setText(\"trial3Result\", \"Try Again!\");\r\n  }\r\n});\r\n\r\n//There are no bugs in the code below\r\n//You do not need to check here to complete this level\r\nonEvent(\"trial2Slider\", \"input\", function( ) {\r\n  var trial2Number = getProperty(\"trial2Slider\", \"value\");\r\n  setText(\"trial2SliderLabel\", trial2Number);\r\n});\r\n",
     "teacher_markdown": "**Screen 1 Bug:** Students need to change the `getProperty` block to get the `value` from the dropdown instead of `options`\r\n\r\n**Screen 2 Bug:** Students need to go into Design Mode and change the max value of the slider from 10 to something greater or equal to 35\r\n\r\n**Screen 3 Bug:** Students need to use the correct variable in the code, replacing `trial3Input` (which is the ID of the design element) with `trial3Answer` (which is the actual variable in the code)",
     "bubble_choice_description": "This app is meant to ask a series of secret questions to unlock the final screen, but each question has a bug.",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": "svS2XfEb1oOB8cT6DlXzIDxQ9VSsJnec4OWIEQcEbgu6BANFbEPLa0qiY/eh\n9sI+hc3aJQh4ted4+Uv/Uz8EwQ==\n"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-11-28T21:21:48.051+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Screen Inputs - PracD_2023\\\"\"],\"cloned_from\":\"CSD U6 - Screen Inputs - PracD_2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-11-28T21:21:48.051+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Screen Inputs - PracD_2023\\\"\"],\"cloned_from\":\"CSD U6 - Screen Inputs - PracD_2023\"},{\"changed_at\":\"2025-03-14 23:26:06 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

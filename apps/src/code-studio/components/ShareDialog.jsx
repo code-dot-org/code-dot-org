@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+
 import ShareAllowedDialog from './ShareAllowedDialog';
 import ShareDisallowedDialog from './ShareDisallowedDialog';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
 
 class ShareDialog extends Component {
   static propTypes = {
@@ -17,12 +18,9 @@ class ShareDialog extends Component {
     thumbnailUrl: PropTypes.string,
     isAbusive: PropTypes.bool,
     canPrint: PropTypes.bool,
-    canPublish: PropTypes.bool,
-    isPublished: PropTypes.bool,
     channelId: PropTypes.string,
     appType: PropTypes.string,
     onClickPopup: PropTypes.func,
-    hideBackdrop: BaseDialog.propTypes.hideBackdrop,
     canShareSocial: PropTypes.bool,
     userSharingDisabled: PropTypes.bool,
   };

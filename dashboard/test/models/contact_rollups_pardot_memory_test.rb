@@ -28,10 +28,11 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
   test 'download_pardot_ids updates existing mappings' do
     email = 'test@domain.com'
     base_time = Time.now.utc - 1.day
-    create :contact_rollups_pardot_memory,
+    create(:contact_rollups_pardot_memory,
       email: email,
       pardot_id: 1,
       pardot_id_updated_at: base_time
+)
 
     PardotV2.stubs(:retrieve_prospects).
       once.
@@ -45,45 +46,6 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
       first
   end
 
-  test 'download_pardot_prospects' do
-    prospects = [
-      {'id' => '1', 'email' => 'alex@rollups.com', 'db_Opt_In' => 'Yes'},
-      {'id' => '2', 'email' => 'beta@rollups.com', 'db_City' => 'Seattle'},
-    ]
-    PardotV2.stubs(:retrieve_prospects).once.yields(prospects)
-
-    ContactRollupsPardotMemory.download_pardot_prospects
-
-    prospects.each do |prospect|
-      record = ContactRollupsPardotMemory.
-        find_by(email: prospect['email'], pardot_id: prospect['id'].to_i)
-
-      refute_nil record
-      refute_nil record.pardot_id_updated_at
-      refute_nil record.data_synced_at
-      assert_equal prospect.except('email', 'id'), record.data_synced
-    end
-  end
-
-  test 'download_deleted_pardot_prospects' do
-    deleted_prospects = [
-      {'id' => '1', 'email' => 'earth@rollups.com'},
-      {'id' => '2', 'email' => 'mars@rollups.com'},
-      # There could be multiple prospects with the same email address, but with different pardot_id.
-      {'id' => '3', 'email' => 'earth@rollups.com'}
-    ]
-    PardotV2.stubs(:retrieve_prospects).once.yields(deleted_prospects)
-
-    ContactRollupsPardotMemory.download_deleted_pardot_prospects
-
-    deleted_prospects.each do |prospect|
-      record = ContactRollupsPardotMemory.find_by(email: prospect['email'])
-      refute_nil record
-      refute_nil record.data_rejected_at
-      assert_equal PardotHelpers::ERROR_PROSPECT_DELETED_FROM_PARDOT, record.data_rejected_reason
-    end
-  end
-
   test 'query_new_contacts' do
     assert_equal 0, ContactRollupsProcessed.count
 
@@ -93,7 +55,7 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
       {email: 'delta', pardot_id: nil, data_rejected_reason: PardotHelpers::ERROR_INVALID_EMAIL},
       {email: 'omega', pardot_id: nil, data_rejected_reason: PardotHelpers::ERROR_PROSPECT_DELETED_FROM_PARDOT}
     ]
-    pardot_memory_records.each {|record| create :contact_rollups_pardot_memory, record}
+    pardot_memory_records.each {|record| create(:contact_rollups_pardot_memory, record)}
 
     processed_contact_records = [
       {email: 'alpha'},
@@ -102,7 +64,7 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
       {email: 'delta'},
       {email: 'omega'}
     ]
-    processed_contact_records.each {|record| create :contact_rollups_processed, record}
+    processed_contact_records.each {|record| create(:contact_rollups_processed, record)}
 
     # Execute SQL query to find new contacts to add to Pardot
     results = ActiveRecord::Base.connection.
@@ -115,7 +77,7 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
   end
 
   test 'create_new_pardot_prospects' do
-    contact = create :contact_rollups_processed,
+    contact = create(:contact_rollups_processed,
       data: {
         'opt_in' => 1,
         'user_id' => 111,
@@ -130,6 +92,7 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
         'postal_code' => '98101',
         'country' => 'United States',
       }
+)
     refute ContactRollupsPardotMemory.find_by_email(contact.email)
     PardotV2.expects(:submit_batch_request).once.returns([])
 
@@ -188,11 +151,29 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
         data_synced: {db_Opt_In: 'Yes'},
         data_rejected_reason: PardotHelpers::ERROR_PROSPECT_DELETED_FROM_PARDOT
       },
+      {
+        email: 'stale-invalid-id',
+        pardot_id: 6,
+        pardot_id_updated_at: base_time - 2.days,
+        data_synced_at: base_time - 1.day,
+        data_synced: {db_Opt_In: 'Yes'},
+        data_rejected_at: base_time,
+        data_rejected_reason: PardotHelpers::ERROR_INVALID_PROSPECT_ID
+      },
+      {
+        email: 'refreshed-invalid-id',
+        pardot_id: 7,
+        pardot_id_updated_at: base_time + 1.day,
+        data_synced_at: base_time - 1.day,
+        data_synced: {db_Opt_In: 'Yes'},
+        data_rejected_at: base_time,
+        data_rejected_reason: PardotHelpers::ERROR_INVALID_PROSPECT_ID
+      },
       # dummy records
       {email: 'delta', pardot_id: nil},
       {email: 'epsilon', pardot_id: 4},
     ]
-    pardot_memory_records.each {|record| create :contact_rollups_pardot_memory, record}
+    pardot_memory_records.each {|record| create(:contact_rollups_pardot_memory, record)}
 
     # 3 cases that require updating contacts, and one that doesn't (deleted prospect)
     processed_contact_records = [
@@ -204,11 +185,15 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
       {email: 'gamma', data: {opt_in: 1}, data_updated_at: base_time},
       # Case 4 (should be ignored): prospect has been deleted from Pardot
       {email: 'omega', data: {opt_in: 1}, data_updated_at: base_time},
+      # Case 5 (should be ignored): invalid Pardot ID has not changed since its rejection
+      {email: 'stale-invalid-id', data: {opt_in: 0}, data_updated_at: base_time},
+      # Case 6: invalid Pardot ID was refreshed after its rejection
+      {email: 'refreshed-invalid-id', data: {opt_in: 0}, data_updated_at: base_time},
       # dummy records
       {email: 'delta'},
       {email: 'zeta'},
     ]
-    processed_contact_records.each {|record| create :contact_rollups_processed, record}
+    processed_contact_records.each {|record| create(:contact_rollups_processed, record)}
 
     # Execute SQL query
     results = ActiveRecord::Base.connection.
@@ -219,7 +204,8 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
     expected_results = [
       {'email' => 'alpha', 'pardot_id_changed' => 0},
       {'email' => 'beta', 'pardot_id_changed' => 0},
-      {'email' => 'gamma', 'pardot_id_changed' => 1}
+      {'email' => 'gamma', 'pardot_id_changed' => 1},
+      {'email' => 'refreshed-invalid-id', 'pardot_id_changed' => 1}
     ]
     assert_equal expected_results, results
   end
@@ -228,21 +214,23 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
     email = 'test@domain.com'
     last_sync_time = Time.now.utc - 7.days
     # current data
-    create :contact_rollups_pardot_memory,
+    create(:contact_rollups_pardot_memory,
       email: email,
       data_synced: {
         'db_Opt_In' => 'No',
         'db_Professional_Learning_Attended' => COURSE_CSF
       },
       data_synced_at: last_sync_time
+)
 
     # new data
-    create :contact_rollups_processed,
+    create(:contact_rollups_processed,
       email: email,
       data: {
         'opt_in' => 1,
         'professional_learning_attended' => "#{COURSE_CSD},#{COURSE_CSF}",
       }
+)
 
     PardotV2.expects(:submit_batch_request).once.returns([])
 
@@ -278,7 +266,7 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
       {email: 'beta', pardot_id: 2, data_synced: {db_Opt_In: 'No'}},
       {email: 'gamma', pardot_id: 3, data_synced: {db_Opt_In: 'Yes'}},
     ]
-    pardot_memory_records.each {|record| create :contact_rollups_pardot_memory, record}
+    pardot_memory_records.each {|record| create(:contact_rollups_pardot_memory, record)}
 
     submissions = [
       {email: 'alpha', id: 1, db_Opt_In: 'Yes'},
@@ -315,9 +303,10 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
 
   test 'delete_pardot_prospects deletes Pardot prospect and local record' do
     email_to_delete = 'hard_delete@me.com'
-    create :contact_rollups_pardot_memory,
+    create(:contact_rollups_pardot_memory,
       email: email_to_delete,
       marked_for_deletion_at: Time.now.utc
+)
 
     PardotV2.expects(:delete_prospects_by_email).
       once.with(email_to_delete).
@@ -329,9 +318,10 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
 
   test 'delete_pardot_prospects does not delete local record if Pardot deletion fails' do
     email_to_delete = 'hard_delete@me.com'
-    create :contact_rollups_pardot_memory,
+    create(:contact_rollups_pardot_memory,
       email: email_to_delete,
       marked_for_deletion_at: Time.now.utc
+)
 
     PardotV2.expects(:delete_prospects_by_email).
       once.with(email_to_delete).
@@ -343,9 +333,9 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
 
   test 'delete_pardot_prospects finds all contacts marked for deletion' do
     assert_equal 0, ContactRollupsPardotMemory.count
-    create_list :contact_rollups_pardot_memory, 3
+    create_list(:contact_rollups_pardot_memory, 3)
 
-    contacts_to_delete = create_list :contact_rollups_pardot_memory, 2, marked_for_deletion_at: Time.now.utc
+    contacts_to_delete = create_list(:contact_rollups_pardot_memory, 2, marked_for_deletion_at: Time.now.utc)
     emails_to_delete = contacts_to_delete.pluck(:email)
 
     PardotV2.expects(:delete_prospects_by_email).

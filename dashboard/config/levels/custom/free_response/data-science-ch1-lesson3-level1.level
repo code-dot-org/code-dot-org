@@ -1,0 +1,24 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-06-11T17:21:47.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "title": "Check for Understanding",
+    "long_instructions": "**Directions:**  Read the student conversations presented in the three different scenarios. For each scenario, compose a statement that provides guidance about ethical data collection based on the conversation between classmates.\r\n\r\n\r\n<table style=\"width: 100%; border-collapse: collapse; border: 2px solid black;\">\r\n <tr>\r\n    <td colspan=\"3\" style=\"border: 1px solid black; padding: 10px;\">\r\n      <h1 style=\"text-align: center;\">Party Planning: Food Allergies</h1>\r\n    </td>\r\n  </tr>\r\n  <tr>\r\n    <td style=\"text-align: center; border: 1px solid black; padding: 10px;\"><img src=\"https://images.code.org/f2eed9e0ea3d6831513593aa4e22715e-image-1718126411527.png\" alt=\"First Image\" width=\"100\"></td>\r\n    <td style=\"text-align: center; border: 1px solid black; padding: 10px;\"><img src=\"https://images.code.org/1bbc85a2d6f1a8e451bef3b1eb8ab7da-image-1718127335468.png\" alt=\"Second Image\" width=\"100\"></td>\r\n    <td style=\"text-align: center; border: 1px solid black; padding: 10px;\"><img src=\"https://images.code.org/994e6bda34788751fef656f2332e595f-image-1718127355721.png\" alt=\"Third Image\" width=\"100\"></td>\r\n  </tr>\r\n  <tr>\r\n    <td style=\"text-align: center; border: 1px solid black; padding: 10px;\">\r\n      <h2>Desiree</h2>\r\n      <p style=\"text-align: left;\">“I think that we need to account for student food allergies at our party! I know that I am allergic to pineapple– which some people love on their pizza for some reason. We should send around a survey and collect student names, grade, ID numbers, and the different allergies that they have. That way we can accommodate everyone!”</p>\r\n    </td>\r\n    <td style=\"text-align: center; border: 1px solid black; padding: 10px;\">\r\n      <h2>Tabor</h2>\r\n      <p style=\"text-align: left;\">“Totally get where you’re coming from with that. I worry that having student ID numbers might be little bit too much information, though. Like our usernames on the school network and our lunch PINs rely on that number. I think that might be a little too strange for people to be giving that up.”</p>\r\n    </td>\r\n    <td style=\"text-align: center; border: 1px solid black; padding: 10px;\">\r\n      <h2>Julia</h2>\r\n      <p style=\"text-align: left;\">“Here’s the thing- I have food allergies, too, so I get the importance of collecting the information, Desiree. What I’m not comfortable with, however, is filling out a survey that links me to my personal medical history in our data collection. I don’t think that we should be asking students for that information.”</p>\r\n    </td>\r\n  </tr>\r\n</table>\r\n\r\n\r\n\r\n### Write a **statement** based on this scenario that provides guidance about ethical data collection:\r\n\r\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2024-06-11 17:21:55 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"},{\"changed_at\":\"2024-06-11 17:42:13 +0000\",\"changed\":[\"title\",\"long_instructions\"],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"},{\"changed_at\":\"2024-06-11 17:45:28 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"},{\"changed_at\":\"2024-06-11 17:46:03 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"},{\"changed_at\":\"2024-06-11 17:47:36 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"},{\"changed_at\":\"2024-06-11 17:49:19 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"},{\"changed_at\":\"2024-06-11 20:08:33 +0000\",\"changed\":[\"title\",\"long_instructions\"],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"},{\"changed_at\":\"2024-06-11 20:09:06 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

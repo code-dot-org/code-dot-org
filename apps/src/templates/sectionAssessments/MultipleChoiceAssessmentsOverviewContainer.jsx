@@ -1,14 +1,17 @@
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
+
+import i18n from '@cdo/locale';
+
+import {multipleChoiceDataPropType} from './assessmentDataShapes';
 import MultipleChoiceAssessmentsOverviewTable from './MultipleChoiceAssessmentsOverviewTable';
 import {
   getMultipleChoiceSectionSummary,
   countSubmissionsForCurrentAssessment,
   ALL_STUDENT_FILTER,
 } from './sectionAssessmentsRedux';
-import {connect} from 'react-redux';
-import {multipleChoiceDataPropType} from './assessmentDataShapes';
-import i18n from '@cdo/locale';
 
 class MultipleChoiceAssessmentsOverviewContainer extends Component {
   static propTypes = {
@@ -30,12 +33,12 @@ class MultipleChoiceAssessmentsOverviewContainer extends Component {
       <div>
         {questionAnswerData.length > 0 && studentId === ALL_STUDENT_FILTER && (
           <div>
-            <h2>
+            <Typography variant="h6" component="h2" gutterBottom>
               {i18n.multipleChoiceQuestionsOverview({
                 numSubmissions: totalStudentSubmissions,
                 numStudents: totalStudentCount,
               })}
-            </h2>
+            </Typography>
             <MultipleChoiceAssessmentsOverviewTable
               questionAnswerData={questionAnswerData}
               openDialog={this.props.openDialog}

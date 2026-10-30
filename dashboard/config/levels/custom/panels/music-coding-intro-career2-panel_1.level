@@ -1,0 +1,22 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-01-07T23:37:15.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "###Placholder for a video about music producers putting the music all together. ",
+        "imageUrl": "https://images.code.org/90f57e370f4adfb12bb0e05d5534b247-Henny producer.jpg",
+        "key": "music-coding-intro-career2-panel-4fdc5ab8-db98-4480-922d-1f5c4ba12284"
+      }
+    ],
+    "name_suffix": "_1"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-01-07T23:37:15.213+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-career2-panel\\\"\"],\"cloned_from\":\"music-coding-intro-career2-panel\"}]"
+}]]></config>
+</Panels>

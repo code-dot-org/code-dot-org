@@ -1,0 +1,58 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: Common resources for our Contentful integration
+
+<%
+cname_records = [
+  {
+    name: "_093bc52dedbcf23cb32745d5ca3ce1f6.contentful-images.code.org.",
+    resource_record: "_b1583cf73939fdb573d56981a8d9b041.xlfgrmvvlj.acm-validations.aws."
+  },
+  {
+    name: "_1ec30862705318998d99105341016725.contentful-downloads.code.org.",
+    resource_record: "_af0aa1179db61a32e0b81927ce3b6cfb.xlfgrmvvlj.acm-validations.aws."
+  },
+  {
+    name: "_3a0221ce9d50e0d8e98eeaaf2b76b743.contentful-videos.code.org.",
+    resource_record: "_10f3ae34cd71f16aed82e87596752d8a.xlfgrmvvlj.acm-validations.aws."
+  },
+  {
+    name: "_b4465755914b1d33ea68f251b4605a10.contentful-assets.code.org.",
+    resource_record: "_c8d3b907a56cad556a1ab8cb462d70f2.xlfgrmvvlj.acm-validations.aws."
+  },
+  {
+    name: "contentful-images.code.org.",
+    resource_record: "2yiy0qEwjW5xQJ6poYTwaj.images.enterprise.contentful.com"
+  },
+  {
+    name: "contentful-downloads.code.org.",
+    resource_record: "2yiy0qEwjW5xQJ6poYTwaj.downloads.enterprise.contentful.com"
+  },
+  {
+    name: "contentful-videos.code.org.",
+    resource_record: "2yiy0qEwjW5xQJ6poYTwaj.videos.enterprise.contentful.com"
+  },
+  {
+    name: "contentful-assets.code.org.",
+    resource_record: "2yiy0qEwjW5xQJ6poYTwaj.assets.enterprise.contentful.com"
+  }
+]
+%>
+
+Parameters:
+  CodeDotOrgHostedZoneId:
+    Type: String
+    Description: The ID of the "code.org" hosted zone in Route 53.
+
+Resources:
+  ContentfulCNAMERecords:
+    Type: AWS::Route53::RecordSetGroup
+    Properties:
+      HostedZoneId: !Ref CodeDotOrgHostedZoneId
+      RecordSets:
+        <%- cname_records.each do |record| -%>
+        - Name: "<%= record[:name] %>"
+          Type: CNAME
+          TTL: 3600
+          ResourceRecords:
+            - "<%= record[:resource_record] %>"
+        <%- end -%>

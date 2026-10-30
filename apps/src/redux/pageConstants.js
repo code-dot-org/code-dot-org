@@ -16,6 +16,7 @@ var ALLOWED_KEYS = new Set([
   'hasDataMode',
   'hasDesignMode',
   'inStartBlocksMode',
+  'inToolboxBlocksMode',
   'isChallengeLevel',
   'isEmbedView',
   'isResponsive',
@@ -86,7 +87,6 @@ var ALLOWED_KEYS = new Set([
   'aiModelId',
   'aiModelName',
   'isCurriculumLevel',
-  'recaptchaSiteKey',
 ]);
 
 const initialState = {

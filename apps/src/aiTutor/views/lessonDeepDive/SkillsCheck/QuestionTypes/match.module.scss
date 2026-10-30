@@ -1,0 +1,14 @@
+.optionsRows {
+  display: flex;
+  flex-direction: row;
+  gap: 45px;
+  width: 100%;
+  padding: 16px 0;
+}
+
+.optionsContainer {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}

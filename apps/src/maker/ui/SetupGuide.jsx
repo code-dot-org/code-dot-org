@@ -1,0 +1,80 @@
+import Alert from '@code-dot-org/component-library/alert';
+import PropTypes from 'prop-types';
+import React from 'react';
+
+import applabI18n from '@cdo/applab/locale';
+import SetupInstructions from '@cdo/apps/maker/ui/SetupInstructions';
+import {
+  MAKER_SUPPORT_CHROME_VERSION_URL,
+  MIN_CHROME_VERSION,
+} from '@cdo/apps/maker/util/makerConstants';
+import Notification, {
+  NotificationType,
+} from '@cdo/apps/sharedComponents/Notification';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import i18n from '@cdo/locale';
+
+import {getChromeVersion} from '../util/browserChecks';
+
+export default class SetupGuide extends React.Component {
+  setupGuideContent = {
+    id: 'general-description',
+    title: applabI18n.makerSetupGeneralTitle(),
+    description: applabI18n.makerSetupGeneralDescription(),
+  };
+
+  render() {
+    const chromeVersion = getChromeVersion();
+
+    return (
+      <div>
+        {chromeVersion && chromeVersion < MIN_CHROME_VERSION && (
+          <Notification
+            type={NotificationType.warning}
+            notice={i18n.makerSetupDeprecationNoticeOldChromeTitle()}
+            details={i18n.makerSetupDeprecationNoticeOldChromeDetails({
+              minChromeVersion: MIN_CHROME_VERSION,
+            })}
+            detailsLinkText={i18n.makerSetupSupportLinkText()}
+            detailsLink={MAKER_SUPPORT_CHROME_VERSION_URL}
+            dismissible
+          />
+        )}
+
+        <h1>{applabI18n.makerSetupPageTitle()}</h1>
+
+        <Alert
+          text={applabI18n.chrome133PlusBugCallout()}
+          link={{
+            href: 'https://support.code.org/hc/en-us/articles/23490873779853-Installing-the-Circuit-Playground-Firmata-Application-for-Code-org',
+            text: i18n.learnMore(),
+          }}
+          type={'warning'}
+        />
+
+        <HeaderCard {...this.setupGuideContent} />
+
+        <div id="setup-status-mount">
+          <SetupInstructions />
+        </div>
+      </div>
+    );
+  }
+}
+
+function HeaderCard({id, title, description, divStyle}) {
+  return (
+    <div id={id} style={divStyle}>
+      <h2>{title}</h2>
+      <div className="description-content">
+        <SafeMarkdown markdown={description} openExternalLinksInNewTab={true} />
+      </div>
+    </div>
+  );
+}
+HeaderCard.propTypes = {
+  id: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  divStyle: PropTypes.object,
+};

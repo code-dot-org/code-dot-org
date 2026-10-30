@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/SpaceGrotesk/SpaceGrotesk-Medium.woff2') format('woff2');
+}
+
+.bannerWrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.heroBannerSection {
+  padding: 0;
+}
+
+// Targets HeroBanner's inner wrapper div. announcementBannerProps must never be
+// passed here — it renders a div before the wrapper, shifting :first-child.
+.heroBannerSection > div:first-child {
+  padding: 32px 24px 16px;
+  border-radius: 4px;
+}
+
+.heading {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+}
+
+.heroBannerSection p {
+  font-family: var(--font-family-main);
+}
+
+.bannerWrapper .dismissButtonStyle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: var(--text-neutral-white-fixed);
+  border-radius: 4px;
+  margin: 4px;
+  z-index: 1;
+
+  &:hover,
+  &:active {
+    color: var(--text-neutral-placeholder);
+  }
+}

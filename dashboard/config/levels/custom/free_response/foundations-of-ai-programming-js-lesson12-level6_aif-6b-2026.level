@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2026-08-25T21:13:04.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "title": "Milestone 2 Reflection",
+    "long_instructions": "Describe one challenge you faced while building your app, how you addressed it, and how testing or AI support helped you improve your solution",
+    "stay_on_level_after_submit": "false",
+    "height": "100",
+    "placeholder": "enter response here...",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_aif-6b-2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-08-25T21:13:04.984+00:00\",\"changed\":[\"cloned from \\\"foundations-of-ai-programming-js-lesson12-level6_2026\\\"\"],\"cloned_from\":\"foundations-of-ai-programming-js-lesson12-level6_2026\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

@@ -1,0 +1,4 @@
+// A bare span is display: inline, which shifts the button in block layouts.
+.disabledWrapper {
+  display: inline-flex;
+}

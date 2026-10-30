@@ -1,7 +1,13 @@
+import '@code-dot-org/component-library-styles/shapeAndSpacingVariables.css';
+import '@code-dot-org/component-library-styles/primitiveColors.css';
+import '@code-dot-org/component-library-styles/colors.css';
+import '@code-dot-org/component-library-styles/brandOverrides.css';
+import {injectFontAwesome} from '@code-dot-org/fonts';
 import $ from 'jquery';
-import {initializeRTL} from 'storybook-addon-rtl';
 
-initializeRTL();
+import {MuiDecorator} from './decorators';
+
+injectFontAwesome();
 
 //Stub jquery fileupload library function
 $.fn.fileupload = () => {};
@@ -9,11 +15,10 @@ $.fn.fileupload = () => {};
 export const parameters = {
   options: {
     storySort: {
-      order: [
-        'DesignSystem',
-        'templates',
-        'code-studio',
-      ],
-    }
-  }
+      method: 'alphabetical',
+      order: ['DesignSystem', 'templates', 'code-studio'],
+    },
+  },
 };
+export const decorators = [MuiDecorator];
+export const tags = ['autodocs'];

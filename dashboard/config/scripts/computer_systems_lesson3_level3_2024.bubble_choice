@@ -1,0 +1,9 @@
+name 'computer-systems-lesson3-level3-2024'
+display_name 'Troubleshooting Hardware Sample Scenarios'
+description 'Select one of the devices below and assist the user by employing a structured troubleshooting approach'
+
+sublevels
+level 'computer-systems-lesson3-level3a-2024'
+level 'computer-systems-lesson3-level3b-2024'
+level 'computer-systems-lesson3-level3c-2024'
+level 'computer-systems-lesson3-level3d-2024'

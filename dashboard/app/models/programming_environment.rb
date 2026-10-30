@@ -45,9 +45,9 @@ class ProgrammingEnvironment < ApplicationRecord
     environment_config.symbolize_keys
   end
 
-  def self.seed_all(glob = "config/programming_environments/*.json")
+  def self.seed_all(root_dir: Rails.root, glob: "config/programming_environments/*.json")
     removed_records = all.pluck(:name)
-    Dir.glob(Rails.root.join(glob)).each do |path|
+    Dir.glob(root_dir.join(glob)).each do |path|
       removed_records -= [ProgrammingEnvironment.seed_record(path)]
     end
     where(name: removed_records).destroy_all
@@ -111,6 +111,7 @@ class ProgrammingEnvironment < ApplicationRecord
 
   def summarize_for_show
     {
+      name: name,
       title: title,
       description: localize_description,
       projectUrl: project_url,
@@ -142,19 +143,19 @@ class ProgrammingEnvironment < ApplicationRecord
   end
 
   def categories_for_navigation
-    Rails.cache.fetch("programming_environment/#{name}/categories_for_navigation", force: !Unit.should_cache?) do
+    Rails.cache.fetch("programming_environment/#{name}/categories_for_navigation/#{I18n.locale}", force: !Unit.should_cache?) do
       categories.select(&:should_be_in_navigation?).map(&:summarize_for_navigation)
     end
   end
 
   def categories_for_get
-    Rails.cache.fetch("programming_environment/#{name}/categories_for_get", force: !Unit.should_cache?) do
+    Rails.cache.fetch("programming_environment/#{name}/categories_for_get/#{I18n.locale}", force: !Unit.should_cache?) do
       categories.select(&:should_be_in_navigation?).map(&:summarize_for_get)
     end
   end
 
   def self.get_published_environments_from_cache
-    Rails.cache.fetch("published_programming_environments", force: !Unit.should_cache?) do
+    Rails.cache.fetch("published_programming_environments/#{I18n.locale}", force: !Unit.should_cache?) do
       @programming_environments = ProgrammingEnvironment.where(published: true).order(:name).map(&:summarize_for_index)
     end
   end

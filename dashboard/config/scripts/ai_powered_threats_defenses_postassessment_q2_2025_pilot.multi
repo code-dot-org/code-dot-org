@@ -1,0 +1,14 @@
+name 'ai-powered-threats-defenses-postassessment-q2_2025-pilot'
+
+question ‘Which of the following best describes a system vulnerability?’
+
+wrong ‘A strong password requirement to stop hackers’
+right ‘A default setting that unintentionally gives attackers access’
+wrong ‘A program that scans your computer for malware’
+wrong ‘An alert system that notifies users of suspicious activity’
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 2: Cybersecurity Threats
+MARKDOWN

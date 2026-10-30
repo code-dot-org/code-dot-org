@@ -1,0 +1,22 @@
+name 'problem-solving-with-ai-lesson6-level3c_v2-2025'
+title ' Software Engineering Hiring Manager'
+display_name ' Software Engineering Hiring Manager'
+bubble_choice_description 'Six people applied for an open Software Engineering position at your company. Choose two candidates to interview.'
+thumbnail_url 'https://images.code.org/153fcb7390fdee2ba5aa16c032dfcbcb-image-1742423020518.png'
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
+
+markdown <<MARKDOWN
+## Review Applicant Resumes
+
+Six people applied for an open Software Engineering position at your company. **Choose two candidates to interview.**
+
+<div>
+<img style=" float: left; width:25%; padding-top:10px" src="https://images.code.org/153fcb7390fdee2ba5aa16c032dfcbcb-image-1742423020518.png" />
+
+<div style="float: left; width: 70%; padding-left:20px">
+
+> Click to view their resumes [here](https://drive.google.com/file/d/1ZhSc-MrovRCU7S9HCk6I8enHvDxg_dsG/view?usp=drive_link).
+MARKDOWN

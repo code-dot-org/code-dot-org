@@ -1,0 +1,54 @@
+<h1>Chat</h1>
+
+<div id="messages">
+</div>
+
+<form id="send-message">
+  <input type="text" id="message" name="message">
+  <input type="submit" value="Send">
+</form>
+
+<script type="module">
+  import * as ActionCable from "https://esm.sh/@rails/actioncable@8.0.201";
+
+  console.log('loading chatter.js, v3');
+
+  // ActionCable is currently imported globally in code-studio.js, not a good look, but
+  // reduces file count for a simple-as-possible demo
+  const consumer = ActionCable.createConsumer();
+
+  const chatter = consumer.subscriptions.create('ChatterChannel', {
+    connected() {
+      console.log('connected');
+    },
+    received(data) {
+      console.log('received:', data);
+
+      // Add received message to #messages
+      const messagesDiv = document.getElementById('messages');
+      const messageElement = document.createElement('div');
+      messageElement.textContent = data.message;
+      messagesDiv.appendChild(messageElement);
+    },
+    speak(message) {
+      this.perform('speak', {
+        message
+      });
+    },
+  });
+
+  // When you click send button, call chat.speak(message)
+  document.addEventListener('DOMContentLoaded', function() {
+    document
+      .getElementById('send-message')
+      .addEventListener('submit', function(e) {
+        e.preventDefault();
+        const messageInput = document.querySelector('input[name="message"]');
+        const message = messageInput.value.trim();
+        chatter.speak(message);
+        messageInput.value = '';
+      });
+  });
+
+  console.log('chatter.js is ready to go');
+</script>

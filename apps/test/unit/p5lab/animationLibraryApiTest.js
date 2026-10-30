@@ -1,12 +1,16 @@
-import sinon from 'sinon';
-import {expect, assert} from '../../util/reconfiguredChai';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import {
   regenerateDefaultSpriteMetadata,
   buildAnimationMetadata,
   buildMap,
   generateAnimationMetadataForFile,
   generateLevelAnimationsManifest,
+  getManifest,
 } from '@cdo/apps/assetManagement/animationLibraryApi';
+
+import {expect, assert} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+
 import testAnimationLibrary from './testAnimationLibrary.json';
 
 describe('animationLibraryApi', () => {
@@ -102,6 +106,70 @@ describe('animationLibraryApi', () => {
 
   afterEach(() => {
     fetchSpy.restore();
+  });
+
+  describe('getManifest', () => {
+    function stubManifest(locale) {
+      fetchSpy
+        .withArgs(`/api/v1/animation-library/manifest/spritelab/${locale}`)
+        .resolves({ok: true, json: () => ({locale})});
+    }
+
+    beforeEach(() => {
+      fetchSpy.resolves({ok: false, status: 404});
+      sinon.stub(console, 'warn');
+    });
+
+    afterEach(() => {
+      console.warn.restore();
+    });
+
+    it('returns manifest for locale', async () => {
+      stubManifest('es_mx');
+      expect(await getManifest('spritelab', 'es_mx')).to.deep.equal({
+        locale: 'es_mx',
+      });
+    });
+
+    it('returns manifest for locale fallback when locale has none', async () => {
+      stubManifest('es_mx');
+      expect(await getManifest('spritelab', 'es_la')).to.deep.equal({
+        locale: 'es_mx',
+      });
+      expect(console.warn).calledOnceWith(
+        sinon.match('animation manifest for locale es_la')
+      );
+    });
+
+    it('returns default manifest when locale and its fallback have none', async () => {
+      const manifest = await getManifest('spritelab', 'pt_pt');
+      expect(manifest).to.equal(JSON.stringify(animationLibrary));
+      expect(fetchSpy).calledWith(
+        '/api/v1/animation-library/manifest/spritelab/pt_br'
+      );
+    });
+
+    it('rejects without trying locale fallback when request fails with other than 404', async () => {
+      stubManifest('es_mx');
+      fetchSpy
+        .withArgs('/api/v1/animation-library/manifest/spritelab/es_la')
+        .resolves({ok: false, status: 500});
+      let error;
+      await getManifest('spritelab', 'es_la').catch(e => (error = e));
+      expect(error).to.be.an('error');
+      expect(fetchSpy).not.calledWith(
+        '/api/v1/animation-library/manifest/spritelab/es_mx'
+      );
+    });
+
+    it('rejects when no manifest exists', async () => {
+      fetchSpy
+        .withArgs('/api/v1/animation-library/manifest/spritelab/en_us')
+        .resolves({ok: false, status: 404});
+      let error;
+      await getManifest('spritelab', 'ko_kr').catch(e => (error = e));
+      expect(error).to.be.an('error');
+    });
   });
 
   describe('regenerateDefaultSpriteMetadata', () => {

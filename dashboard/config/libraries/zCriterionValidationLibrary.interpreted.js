@@ -243,16 +243,25 @@ function drawHandsOnUnclickedSprites(){
   for(var i=0;i<spriteIds.length;i++){
     var foundClick=false;
     for(var j=0;j<eventLog.length;j++){
-      if(eventLog[j].includes(i)){
+      // Split the log entry to separate the command from the sprite ID
+      var parts = eventLog[j].split(":");
+      // Assuming the sprite ID is always the second part and trimming any spaces
+      var spriteIdFromLog = parseInt(parts[1].trim(), 10);
+
+      // Now check if this is the sprite ID we are currently considering
+      if(spriteIdFromLog == spriteIds[i]){
+        console.log([spriteIdFromLog, spriteIds[i], eventLog[j]]);
         foundClick=true;
-        if(validationProps.clickedSprites.indexOf(i)==-1){
-          validationProps.clickedSprites.push(i);
+        if(validationProps.clickedSprites.indexOf(spriteIds[i])==-1){
+          validationProps.clickedSprites.push(spriteIds[i]);
         }
       }
     }
     if(!foundClick){
-      drawRings(getProp({id: i}, "x"),400-getProp({id: i}, "y"));
-      drawHand(getProp({id: i}, "x"),400-getProp({id: i}, "y"));
+      drawRings(getProp({id: spriteIds[i]}, "x"),400-getProp({id: spriteIds[i]}, "y"));
+      drawHand(getProp({id: spriteIds[i]}, "x"),400-getProp({id: spriteIds[i]}, "y"));
+    } else {
+      console.log([i, spriteIds[i]]);
     }
   }
 }

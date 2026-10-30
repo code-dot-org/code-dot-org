@@ -1,18 +1,18 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
-import {mount} from 'enzyme';
-import {expect} from '../../util/reconfiguredChai';
-import Notification from '@cdo/apps/templates/Notification';
-import Button from '@cdo/apps/templates//Button';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {combineReducers, createStore} from 'redux';
+
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+import Notification from '@cdo/apps/sharedComponents/Notification';
 
 const announcement = {
   heading: 'Go beyond an Hour of Code',
   buttonText: 'Go Beyond',
   description:
-    "Go Beyond an Hour of Code and explore computer science concepts with your students every week. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels - and it's free. No experience required - find the next step that's right for your classroom.",
+    "Go Beyond an Hour of Code and explore computer science concepts with your students every week. CodeAI offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels - and it's free. No experience required - find the next step that's right for your classroom.",
   link: 'https://hourofcode.com/beyond',
 };
 
@@ -20,7 +20,7 @@ const announcementNoLink = {
   heading: 'Go beyond an Hour of Code',
   buttonText: 'Go Beyond',
   description:
-    "Go Beyond an Hour of Code and explore computer science concepts with your students every week. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels - and it's free. No experience required - find the next step that's right for your classroom.",
+    "Go Beyond an Hour of Code and explore computer science concepts with your students every week. CodeAI offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels - and it's free. No experience required - find the next step that's right for your classroom.",
 };
 
 const information = {
@@ -104,10 +104,8 @@ describe('Notification', () => {
               </div>
               <div>
                 <Button
-                  __useDeprecatedTag
                   href={announcement.link}
                   text={announcement.buttonText}
-                  target="_blank"
                 />
               </div>
             </div>
@@ -163,7 +161,7 @@ describe('Notification', () => {
         <div>
           <div>
             <div>
-              <FontAwesome icon="info-circle" />
+              <FontAwesome icon="circle-info" />
             </div>
             <div>
               <div>
@@ -221,7 +219,7 @@ describe('Notification', () => {
         <div>
           <div>
             <div>
-              <FontAwesome icon="exclamation-triangle" />
+              <FontAwesome icon="triangle-exclamation" />
             </div>
             <div>
               <div>
@@ -250,7 +248,7 @@ describe('Notification', () => {
         <div>
           <div>
             <div>
-              <FontAwesome icon="exclamation-triangle" />
+              <FontAwesome icon="triangle-exclamation" />
             </div>
             <div>
               <div>
@@ -287,12 +285,7 @@ describe('Notification', () => {
                 <div>{findCourse.details}</div>
               </div>
               <div>
-                <Button
-                  __useDeprecatedTag
-                  href={findCourse.link}
-                  text={findCourse.buttonText}
-                  target="_blank"
-                />
+                <Button href={findCourse.link} text={findCourse.buttonText} />
               </div>
             </div>
           </div>
@@ -310,10 +303,10 @@ describe('Notification', () => {
         dismissible={false}
       />
     );
-    expect(wrapper.find('FontAwesome').length).to.equal(1);
-    expect(wrapper.find('FontAwesome').at(0).props().icon).to.equal('users');
-    expect(wrapper.text()).to.include(collaborate.notice);
-    expect(wrapper.text()).to.include(collaborate.details);
+    expect(wrapper.find('FontAwesome').length).toBe(1);
+    expect(wrapper.find('FontAwesome').at(0).props().icon).toBe('users');
+    expect(wrapper.text()).toContain(collaborate.notice);
+    expect(wrapper.text()).toContain(collaborate.details);
   });
   it('renders a dismissible notification', () => {
     const wrapper = wrapped(
@@ -324,11 +317,9 @@ describe('Notification', () => {
         dismissible={true}
       />
     );
-    expect(wrapper.find('FontAwesome').length).to.equal(2);
-    expect(wrapper.find('FontAwesome').at(0).props().icon).to.equal(
-      'info-circle'
-    );
-    expect(wrapper.find('FontAwesome').at(1).props().icon).to.equal('times');
+    expect(wrapper.find('FontAwesome').length).toBe(2);
+    expect(wrapper.find('FontAwesome').at(0).props().icon).toBe('circle-info');
+    expect(wrapper.find('FontAwesome').at(1).props().icon).toBe('xmark');
   });
   it('renders a tooltip', () => {
     const wrapper = wrapped(
@@ -340,16 +331,12 @@ describe('Notification', () => {
         tooltipText={information.tooltip}
       />
     );
-    expect(wrapper.find('FontAwesome').length).to.equal(2);
-    expect(wrapper.find('FontAwesome').at(0).props().icon).to.equal(
-      'info-circle'
-    );
-    expect(wrapper.find('FontAwesome').at(1).props().icon).to.equal(
-      'info-circle'
-    );
+    expect(wrapper.find('FontAwesome').length).toBe(2);
+    expect(wrapper.find('FontAwesome').at(0).props().icon).toBe('circle-info');
+    expect(wrapper.find('FontAwesome').at(1).props().icon).toBe('circle-info');
 
-    expect(wrapper.text()).to.include(information.notice);
-    expect(wrapper.text()).to.include(information.details);
-    expect(wrapper.text()).to.include(information.tooltip);
+    expect(wrapper.text()).toContain(information.notice);
+    expect(wrapper.text()).toContain(information.details);
+    expect(wrapper.text()).toContain(information.tooltip);
   });
 });

@@ -34,6 +34,16 @@
 # https://docs.google.com/document/d/10mqXBdkFo5nWhjGWJO6D_NMl4Qg74qb7P6Fdvb2P7sc/edit?usp=sharing
 #
 class ParentLevelsChildLevel < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :public,
+    parent_level_id: :public,
+    child_level_id: :public,
+    position: :public,
+    kind: :public,
+  )
+
   belongs_to :parent_level, class_name: 'Level', optional: true
   belongs_to :child_level, class_name: 'Level', optional: true
   validates_uniqueness_of :child_level, scope: :parent_level, message: ->(plcl, _data) {"child_level #{plcl.child_level&.name&.dump} is already taken for parent_level #{plcl.parent_level&.name&.dump}"}
@@ -49,6 +59,23 @@ class ParentLevelsChildLevel < ApplicationRecord
 
   VALID_KINDS.each do |kind|
     scope kind, -> {where(kind: kind)}
+  end
+
+  # A parent level and its children must be in the same partition; see
+  # dashboard/config/PARTITIONS.md. Validating here covers every path
+  # that writes parent/child rows. Level's children_stay_within_partition
+  # validation is the name-based complement, catching names which resolve to
+  # no level at all.
+  validate :validate_within_partition
+  def validate_within_partition
+    return unless parent_level && child_level
+    return if Policies::LevelFiles.same_partition?(parent_level.name, child_level.name)
+    add_child_error(
+      "#{child_level.name.dump} must be in the same partition as its parent #{parent_level.name.dump} " \
+      "(\"UI Test \", standalone project, or production); copy it " \
+      "#{Policies::LevelFiles.copy_into_partition_of(parent_level.name)}. Delete the old level and its file, " \
+      "unless they already exist outside of your development environment"
+    )
   end
 
   validate :validate_child_level_type

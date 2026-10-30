@@ -1,18 +1,23 @@
 import $ from 'jquery';
-import {getStore} from '@cdo/apps/redux';
 import React from 'react';
 import {Provider} from 'react-redux';
-import ReactDOM from 'react-dom';
+
+import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
 import TeacherContentToggle from '@cdo/apps/code-studio/components/TeacherContentToggle';
 import {getHiddenLessons} from '@cdo/apps/code-studio/hiddenLessonRedux';
-import {renderTeacherPanel} from '@cdo/apps/code-studio/teacherPanelHelpers';
-import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
+import {
+  renderTeacherPanel,
+  renderTeacherPanelHandle,
+} from '@cdo/apps/code-studio/teacherPanelHelpers';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {getStore} from '@cdo/apps/redux';
 import {
   setUserRoleInCourse,
   CourseRoles,
 } from '@cdo/apps/templates/currentUserRedux';
-import {queryParams} from '@cdo/apps/code-studio/utils';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
+import experiments from '@cdo/apps/util/experiments';
 
 $(document).ready(initPage);
 
@@ -46,12 +51,19 @@ function initPage() {
     : true;
 
   if (shouldRenderTeacherPanel) {
-    renderTeacherPanel(
-      store,
-      teacherPanelData.script_id,
-      teacherPanelData.script_name,
-      teacherPanelData.page_type
-    );
+    if (
+      teacherPanelData.is_instructor &&
+      experiments.isEnabled('ta-teacher-panel')
+    ) {
+      renderTeacherPanelHandle(store);
+    } else {
+      renderTeacherPanel(
+        store,
+        teacherPanelData.script_id,
+        teacherPanelData.script_name,
+        teacherPanelData.page_type
+      );
+    }
   }
 }
 
@@ -62,7 +74,7 @@ function renderTeacherContentToggle(store) {
     .insertAfter(levelContent)[0];
   const isBlocklyOrDroplet = !!(window.appOptions && appOptions.app);
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={store}>
       <InstructorsOnly>
         <TeacherContentToggle isBlocklyOrDroplet={isBlocklyOrDroplet} />

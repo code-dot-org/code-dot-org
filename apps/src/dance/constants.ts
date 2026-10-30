@@ -12,6 +12,13 @@ export const MIN_GAME_WIDTH = MIN_VISUALIZATION_WIDTH;
 /** @const {number} */
 export const GAME_HEIGHT = 400;
 
+/**
+ * A keyword used to indentify generated dancers, as opposed to
+ * other costume-based dancer groups.
+ * @const {string}
+ */
+export const GENERATED_DANCER = 'GENERATED_DANCER';
+
 export const DancelabReservedWords = [
   'sprites',
   'MOVES',

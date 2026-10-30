@@ -1,0 +1,28 @@
+name 'sp_PL_CV_check_ideaing_bias_24_24'
+editor_experiment ''
+title 'Evaluating Datasets for Bias'
+type 'multi2'
+question 'Scenario: In the Auto-Doggie Door project, students use MediaPipe Studio to analyze images of dogs to determine if a door should unlock based on the detection confidence score.
+
+**Which of the following steps would be most beneficial in helping students understand the impact of training data bias on their project? (Choose two)**'
+
+right 'Have students upload various images of different dog breeds to see which ones are detected more frequently.'
+
+wrong 'Ask students to develop their own object detection algorithms from scratch without any provided tools.'
+
+right 'Conduct a discussion on why certain breeds may be detected less often and how this could impact the functionality of their Auto-Doggie Door.'
+
+wrong 'Have students take notes on the confidence scores without further analysis or discussion.'
+
+wrong 'Assign a reading on the theoretical aspects of machine learning without any practical application.'
+
+
+
+
+
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
+
+allow_multiple_attempts true

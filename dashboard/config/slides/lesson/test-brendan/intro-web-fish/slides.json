@@ -1,0 +1,83 @@
+{
+  "ownerKind": "lesson",
+  "ownerId": 8897093,
+  "slides": [
+    {
+      "key": "12d6a653-b2b2-4a59-a793-2cffb6b062d2",
+      "description": "Introduce the concept of a web page and how it's more than just what appears on screen. Establish that web pages are built from underlying code, which the browser interprets and displays.",
+      "panel": {
+        "key": "16cf1a3a-c4ef-4b4f-abb4-ab1f9dc609a5",
+        "text": "When you visit a web page, you see colorful pictures and words. But just like a movie has a script, every web page has special instructions, called **code**, that tell your web browser exactly what to show and how to show it. We'll start by learning **HTML**, the language for building the structure of a web page!",
+        "imageUrl": "https://images.code.org/f804a54f10e2eb8d620b723ec3ea46af-My Pet Fish Webpage: Part 1 - Getting Started-slide-panel-1-e82bf35f-2db9-4e4a-970f-dd2b73c23d82.png",
+        "layout": "text-top-center",
+        "teacherNote": "Before showing this slide, ask students what they think a web page is made of, or what happens when they type a website address. Emphasize that the beautiful visuals they see are just the *result* of instructions given by underlying code, similar to how a video game is built on code they don't see directly. This distinction is crucial for understanding why we write HTML."
+      }
+    },
+    {
+      "key": "0aad1b69-cb6d-4168-9348-0c3f1bc46c83",
+      "description": "Present HTML (HyperText Markup Language) as the foundational language for creating web pages. Explain that HTML provides structure and meaning to web content, rather than just styling it.",
+      "panel": {
+        "key": "2e62f8d8-1d1c-471e-b14c-5b0257129242",
+        "text": "The web pages you see are built with **HTML**, which stands for **HyperText Markup Language**. Think of HTML like a blueprint for a building: it tells your web browser what each part of the page is, like a main title, a paragraph, or an image. It gives your page **structure** and **meaning**!",
+        "imageUrl": "https://images.code.org/522edee1b9dbf2ae91a59c8706c0e98f-My Pet Fish Webpage: Part 1 - Getting Started-slide-panel-2-8aa937ee-4971-4e2f-adc9-65e4f7ee0270.png",
+        "layout": "text-bottom-center",
+        "teacherNote": "Before this slide, ask students if they know what a blueprint is for a house. Use that analogy to explain how HTML is like the blueprint for a webpage. Emphasize the core concept that HTML provides structure and meaning to content, not styling. This distinction (structure vs. presentation) is key and often a point of confusion for beginners when they later encounter CSS."
+      }
+    },
+    {
+      "key": "7caedec3-69d9-4398-b943-c0dfaa9cffee",
+      "description": "Frame the current lesson's project: creating a simple web page about a pet fish. Set the stage for building a personalized, structured web document using HTML.",
+      "panel": {
+        "key": "866d2cd6-04fa-469c-a45d-f1b3f08e0cf2",
+        "text": "Get ready to build your very own web page about your pet fish! Using HTML, you'll give your page a title, and then add your fish's name with an `<h1>` tag and a description with a `<p>` tag.",
+        "imageUrl": "https://images.code.org/e3007a136c4a0f64bc1ccaaaccaa4a60-My Pet Fish Webpage: Part 1 - Getting Started-slide-panel-3-715b196e-5fa4-4a88-8c0b-15c97135d6ec.png",
+        "layout": "text-top-left",
+        "teacherNote": "Before starting, ask students to think about their pet fish (or an imaginary one if they don't have one). Encourage them to brainstorm a name and one or two interesting facts they might put on their page. Reinforce that HTML tags like `<h1>` and `<p>` are how we tell the browser what kind of information each piece of text is."
+      }
+    },
+    {
+      "key": "84cb7f91-1891-4379-90fd-132cb4bb2729",
+      "description": "Introduce the fundamental structural tags of an HTML document: `<!DOCTYPE html>`, `<html>`, `<head>`, and `<body>`. Briefly explain the role of each in organizing the overall page content.",
+      "panel": {
+        "key": "9df53869-818c-4c8c-b66a-2a74ed131f36",
+        "text": "Every web page needs a basic structure, like the framework of a house. We start with `<!DOCTYPE html>` to tell the browser it's an HTML file. Then, everything is nested inside the `<html>` tag. Inside `<html>`, there are two main parts: the `<head>` for information about the page (like its title), and the `<body>` where all the content you actually see, like your fish's name and description, will go!",
+        "imageUrl": "https://images.code.org/aa58ecfc3d32c1e62466a0b54587571e-My Pet Fish Webpage: Part 1 - Getting Started-slide-panel-4-563f190a-e721-4dfa-b572-8cec9ec6924b.png",
+        "layout": "text-top-left",
+        "teacherNote": "Before showing this slide, ask students what are the basic parts of a letter or a book (e.g., title, author, main content). This helps them think about organization. Emphasize that the `<head>` section is for information *about* the page, which the browser uses, while the `<body>` is for what people *see*. A common misconception is to put visible content in the `<head>`."
+      }
+    },
+    {
+      "key": "8202a560-03ad-47c6-9c1d-91338458c992",
+      "description": "Focus on the `<title>` tag within the `<head>` section. Explain its purpose in defining the text that appears in the browser tab or window, and its importance for clarity and search engines.",
+      "panel": {
+        "key": "71a10747-61ac-4ed4-8aa1-fd71272ceefd",
+        "text": "Inside the `<head>` section, we use the `<title>` tag. This tag doesn't change what you see on the web page itself, but it sets the text that appears in your browser tab or window! It's super important for helping people know what your page is about, and for search engines to understand your content.",
+        "imageUrl": "https://images.code.org/4e07cbef8dd06c8cd5380bb5d45c899f-My Pet Fish Webpage: Part 1 - Getting Started-slide-panel-5-d7288440-bcc1-4022-be90-037e1fc10cff.png",
+        "layout": "text-top-left",
+        "teacherNote": "Before displaying, ask students where they usually see the 'name' of a webpage when they're browsing (e.g., in the browser tab). Emphasize that the `<title>` tag is for this specific purpose and is not part of the visible content within the main browser window. This helps distinguish meta-information (head) from display content (body)."
+      }
+    },
+    {
+      "key": "828d932b-49bf-4c50-a032-9d97652d72ac",
+      "description": "Introduce the `<h1>` tag as a primary heading element. Explain its use for the most important heading on a page, connecting it to giving the pet fish's name prominent display.",
+      "panel": {
+        "key": "85e590b3-9491-4f81-b142-38e8faf6be7c",
+        "text": "Now that we know about the `<head>` section, let's look at the `<body>`! Inside the `<body>`, we use the `<h1>` tag for the most important heading on our page. This is where you'll put your pet fish's name to make it stand out big and bold!",
+        "imageUrl": "https://images.code.org/db45137ffd839cb5c897c34529058bd8-My Pet Fish Webpage: Part 1 - Getting Started-slide-panel-6-c9524d92-0910-45dc-a2a7-a65d2132b733.png",
+        "layout": "text-top-center",
+        "teacherNote": "Before this slide, ask students to identify the main title or headline on a few familiar websites. Emphasize that the `<h1>` tag is generally for the *single* most important heading on a page, distinct from the page's `<title>` in the browser tab. You can briefly mention that HTML also has `<h2>`, `<h3>` and so on for subheadings, but for now, we're focusing on the primary `<h1>`."
+      }
+    },
+    {
+      "key": "c1de07b4-006b-4ea8-9851-5ef16741d29c",
+      "description": "Introduce the `<p>` tag for structuring paragraphs of text. Show its utility for adding descriptive content about the pet fish, following the main heading.",
+      "panel": {
+        "key": "d2549cfb-1124-4d66-abe6-ae06affdbf0b",
+        "text": "After your pet fish's name, you'll want to share some cool facts! For paragraphs of text, like a description of your fish, we use the `<p>` tag. This tag helps organize your writing into neat blocks, making it easy to read all about your aquatic friend!",
+        "imageUrl": "https://images.code.org/24097d7b2e8c50f5217dc2623cc39076-My Pet Fish Webpage: Part 1 - Getting Started-slide-panel-7-43fce5e0-5afb-44af-8faa-a20de343056b.png",
+        "layout": "text-top-center",
+        "teacherNote": "Before this slide, ask students how they would describe their pet (or an imaginary one) to a friend and how they might organize that information. This helps them understand the need for descriptive paragraphs. Emphasize that the `<p>` tag is crucial for breaking up longer text, improving readability, and giving meaning to the content beyond just a heading."
+      }
+    }
+  ]
+}

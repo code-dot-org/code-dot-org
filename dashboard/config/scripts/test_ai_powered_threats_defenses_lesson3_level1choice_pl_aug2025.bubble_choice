@@ -1,0 +1,9 @@
+name 'test-ai-powered-threats-defenses-lesson3-level1choice-pl_aug2025'
+display_name 'Phishing Attacks'
+description 'Choose a user persona to learn about how do cyber attacks exploit human vulnerabilities, i.e. trust, emotion, and predictable behavior.'
+
+sublevels
+level 'test-ai-powered-threats-defenses-lesson3-level1-pl_aug2025'
+level 'test-ai-powered-threats-defenses-lesson3-level1b-pl_aug2025'
+level 'test-ai-powered-threats-defenses-lesson3-level1c-pl_aug2025'
+level 'test-ai-powered-threats-defenses-lesson3-level1d-pl_aug2025'

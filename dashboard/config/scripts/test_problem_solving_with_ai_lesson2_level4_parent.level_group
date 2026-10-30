@@ -1,0 +1,12 @@
+name 'test-problem-solving-with-ai-lesson2-level4-parent'
+title 'Check Your Understanding'
+submittable 'false'
+anonymous 'false'
+activity_guide_level 'true'
+
+page
+level 'test-problem-solving-with-ai-lesson2-level4-fr1'
+level 'test-problem-solving-with-ai-lesson2-level4-mc2'
+level 'test-problem-solving-with-ai-lesson2-level4-fr3'
+
+

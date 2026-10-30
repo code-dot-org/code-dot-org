@@ -2,12 +2,13 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import ProjectUpdatedAt from './ProjectUpdatedAt';
 import {
   setProjectUpdatedError,
   setProjectUpdatedSaving,
   setProjectUpdatedSaved,
 } from '../../projectRedux';
+
+import ProjectUpdatedAt from './ProjectUpdatedAt';
 
 // Levelbuilder-only UI for saving changes to a level.
 class LevelBuilderSaveButton extends React.Component {
@@ -18,6 +19,7 @@ class LevelBuilderSaveButton extends React.Component {
     setProjectUpdatedSaved: PropTypes.func.isRequired,
     overrideHeaderText: PropTypes.string,
     overrideOnSaveUrl: PropTypes.string,
+    onChangedWidth: PropTypes.func,
   };
 
   onSave = () => {
@@ -41,7 +43,7 @@ class LevelBuilderSaveButton extends React.Component {
           <div className="project_name header_text">
             {this.props.overrideHeaderText || 'Levelbuilder: edit start code'}
           </div>
-          <ProjectUpdatedAt />
+          <ProjectUpdatedAt onContentUpdated={this.props.onChangedWidth} />
         </div>
         <div className="project_remix header_button" onClick={this.onSave}>
           Save

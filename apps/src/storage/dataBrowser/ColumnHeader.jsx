@@ -1,16 +1,20 @@
 /**
  * @overview Component for adding a new column to the specified table.
  */
-import ColumnMenu from './ColumnMenu';
-import Dialog from '../../templates/Dialog';
-import FontAwesome from '../../templates/FontAwesome';
+import TextField from '@code-dot-org/component-library/textField';
+import {Typography} from '@mui/material';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import color from '../../util/color';
-import dataStyles from './data-styles.module.scss';
+
+import Dialog from '../../legacySharedComponents/Dialog';
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
 import {valueOr} from '../../utils';
-import classNames from 'classnames';
+
+import ColumnMenu from './ColumnMenu';
+
 import style from './column-header.module.scss';
+import dataStyles from './data-styles.module.scss';
 
 const INITIAL_STATE = {
   newName: undefined,
@@ -117,11 +121,10 @@ class ColumnHeader extends React.Component {
 
   render() {
     const inputStyle = {
-      ...{
-        display: this.props.isEditing ? null : 'none',
-        backgroundColor: this.isInputValid() ? null : color.lightest_red,
-        minWidth: 80,
-      },
+      backgroundColor: this.isInputValid()
+        ? null
+        : 'var(--background-error-light)',
+      minWidth: 80,
     };
     return (
       <th
@@ -137,7 +140,9 @@ class ColumnHeader extends React.Component {
           )}
         >
           <div className={classNames(style.columnName, 'test-tableNameDiv')}>
-            {this.props.columnName}
+            <Typography variant="body3" component="span" color="inherit">
+              {this.props.columnName}
+            </Typography>
           </div>
           {!this.props.readOnly && (
             <div className={style.iconWrapper}>
@@ -168,15 +173,20 @@ class ColumnHeader extends React.Component {
           onConfirm={this.handleConfirmDelete}
           title="Delete column"
         />
-        <input
-          ref={input => (this.input = input)}
-          className={dataStyles.input}
-          style={inputStyle}
-          value={valueOr(this.state.newName, this.props.columnName)}
-          onBlur={this.handleBlur}
-          onChange={this.handleChange}
-          onKeyUp={this.handleKeyUp}
-        />
+        {this.props.isEditing && (
+          <TextField
+            ref={input => (this.input = input)}
+            name="columnName"
+            className={dataStyles.dataField}
+            color="gray"
+            size="s"
+            style={inputStyle}
+            value={valueOr(this.state.newName, this.props.columnName)}
+            onBlur={this.handleBlur}
+            onChange={this.handleChange}
+            onKeyUp={this.handleKeyUp}
+          />
+        )}
       </th>
     );
   }

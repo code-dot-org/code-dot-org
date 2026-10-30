@@ -1,0 +1,10 @@
+name 'pl_sandbox_aif_2_U1-like-a-user-choice_8'
+display_name 'See It Like a User'
+description  ' #### This is an example of a **choice level** from lesson 2. You and your students only need to complete one of the three choices.
+#### Choose one of the three app examples to explore. As you look at the app, try to see it like a user.
+#### This activity helps you practice thinking from a users point of view—the foundation of great user experience design.'
+
+sublevels
+level 'ai-generated-design-lesson2-level1-choicea-test-2025'
+level 'ai-generated-design-lesson2-level1-choiceb-test-2025'
+level 'ai-generated-design-lesson2-level1-choicec-test-2025'

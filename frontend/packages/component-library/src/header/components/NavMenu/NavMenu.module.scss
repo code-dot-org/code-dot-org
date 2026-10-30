@@ -1,0 +1,89 @@
+// NavMenu styles. These override MUI's List / Link theme styles; they win
+// because MUI's emotion styles are in `@layer mui` (enableCssLayer) and these
+// module classes are unlayered. @media values are static px (originals derive
+// from HEADER_BREAKPOINTS).
+
+// Horizontal nav link list. Hidden below the desktopNav breakpoint; the
+// hamburger drawer covers that range.
+.navList {
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  margin-left: 16px;
+  // Spacing comes from link padding, not container gap.
+  gap: 0;
+
+  @media (min-width: 1061px) {
+    display: flex;
+  } // HEADER_BREAKPOINTS.desktopNav
+
+  // Signed-out marketing nav only (durable class; the app sets it only for
+  // the signed-out marketing item set). Fills the space between the logo and
+  // the right cluster so the alignEnd items' auto margin below reaches it,
+  // and collapses on its own staged schedule (960/1079px, measured against
+  // the 8-link marketing list) instead of the standard desktopNav breakpoint.
+  &:global(.marketing-nav) {
+    @media (min-width: 960px) {
+      display: flex;
+      flex-grow: 1;
+    }
+
+    @media (max-width: 959px) {
+      display: none;
+    }
+  }
+}
+
+// Each list item — shrinks to content width (MUI ListItem defaults to full width).
+.navItem {
+  width: auto;
+  padding: 0;
+}
+
+// Marketing nav only: About/Donate fold into the hamburger first (both have
+// counterparts there), before the row itself collapses at 959px.
+.navItemAlignEnd {
+  :global(.marketing-nav) & {
+    @media (max-width: 1079px) {
+      display: none;
+    }
+  }
+}
+
+// Only the first alignEnd item carries the auto margin (RTL-safe via the
+// logical property) so it — and every item after it — pushes to the bar's
+// trailing edge.
+.navItemAlignEndFirst {
+  margin-inline-start: auto;
+}
+
+// Each nav link — text-width anchor, full toolbar height for the underline.
+// Pill treatment: padded, rounded, semi-bold.
+.navLink {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 5px 10px;
+  border-radius: 0.5rem;
+  font-weight: var(--font-weight-semi-bold);
+  text-decoration: none;
+  white-space: nowrap;
+
+  &:hover,
+  &:active {
+    box-shadow: none;
+    background-color: var(--neutral-white-alpha-10);
+  }
+
+  &:active {
+    background-color: var(--neutral-white-alpha-30);
+  }
+
+  // Match the header's other controls; without this the link falls back to the UA ring.
+  &:focus-visible {
+    outline: 1px solid var(--border-neutral-white-fixed);
+    outline-offset: 2px;
+  }
+}

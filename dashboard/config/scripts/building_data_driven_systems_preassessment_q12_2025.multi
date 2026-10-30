@@ -1,0 +1,16 @@
+name 'building-data-driven-systems-preassessment-q12_2025'
+
+question 'A user wants to see only the "Action" movies in a large database. Which logic should the developer implement?'
+
+wrong 'A `.sort()` function to move Action movies to the top.'
+right 'A `.filter()` function that returns only objects where `genre === "Action"`.'
+wrong 'A `.map()` function that changes all movie genres to "Action".'
+wrong 'A `.push()` function to add more action movies to the array.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 8
+
+Filtering is used to narrow down a dataset based on a specific condition without changing the items themselves.
+MARKDOWN

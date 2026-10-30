@@ -1,0 +1,26 @@
+# Validate the Kubernetes manifests before matching changes reach k8s-gitops.
+# Image publication belongs to the root docker family workflows.
+
+name: k8s-validate
+
+on:
+  workflow_call:
+
+jobs:
+  validate:
+    name: validate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout sources
+        uses: actions/checkout@v6.0.2
+        with:
+          sparse-checkout: |
+            k8s
+
+      - name: Setup Helm
+        uses: azure/setup-helm@v4
+        with:
+          version: v3.19.0
+
+      - name: Verify worker priority modes
+        run: ruby k8s/bin/verify-worker-priorities

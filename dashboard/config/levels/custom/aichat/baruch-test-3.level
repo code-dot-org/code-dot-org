@@ -1,0 +1,53 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2024-04-25T01:41:52.000Z",
+  "level_num": "custom",
+  "user_id": 4,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Sample Instructions\r\n\r\nFinally, let's make our chatbot more accurate with retrieval!\r\n\r\n### Do This\r\n\r\nAdd facts in the retrieval tab\r\n\r\n",
+    "system_prompt": "deprecated",
+    "bot_title": "deprecated",
+    "bot_description": "deprecated",
+    "disable_projects": true,
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "temperature": "0.8",
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+            "",
+            "",
+            ""
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "readonly",
+        "temperature": "editable",
+        "systemPrompt": "editable",
+        "retrievalContexts": "editable",
+        "modelCardInfo": "editable"
+      },
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+
+      ]
+    },
+    "project_template_level_name": "baruch-test-base1"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-04-25T01:41:52.181+00:00\",\"changed\":[\"cloned from \\\"baruch-test-1\\\"\"],\"cloned_from\":\"baruch-test-1\"},{\"changed_at\":\"2024-04-25 01:55:39 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18972,\"changed_by_email\":\"sarah.judd@code.org\"},{\"changed_at\":\"2024-04-25 01:59:19 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18972,\"changed_by_email\":\"sarah.judd@code.org\"},{\"changed_at\":\"2024-05-03 17:32:51 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Aichat>

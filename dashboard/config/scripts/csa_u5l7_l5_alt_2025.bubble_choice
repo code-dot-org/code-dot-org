@@ -1,0 +1,9 @@
+name 'CSA U5L7-L5_alt-2025'
+display_name 'Skill Building: The indexOf() Method'
+description 'Practice using the `indexOf()` method.'
+
+sublevels
+level 'CSA U5L7-L5a_alt-2025'
+level 'CSA U5L7-L5b_alt-2025'
+level 'CSA U5L7-L5c_alt-2025'
+level 'CSA U5L7-L5d_alt-2025'

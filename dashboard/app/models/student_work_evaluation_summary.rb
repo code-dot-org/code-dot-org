@@ -1,0 +1,33 @@
+# == Schema Information
+#
+# Table name: student_work_evaluation_summaries
+#
+#  id                                 :bigint           not null, primary key
+#  student_work_evaluation_id         :bigint           not null
+#  student_work_evaluation_summary_id :bigint           not null
+#  created_at                         :datetime         not null
+#  updated_at                         :datetime         not null
+#
+# Indexes
+#
+#  fk_rails_49598559b9  (student_work_evaluation_id)
+#  fk_rails_d50fa61780  (student_work_evaluation_summary_id)
+#
+class StudentWorkEvaluationSummary < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :confidential,
+    student_work_evaluation_id: :confidential,
+    student_work_evaluation_summary_id: :confidential,
+    created_at: :confidential,
+    updated_at: :confidential,
+  )
+
+  # student_work_evaluation_id is the ID of the StudentWorkEvaluation that was summarized
+  # student_work_evaluation_summary_id is the ID of the StudentWorkEvaluation that is the summary
+  # Rows were only ever written by the removed per-skill evaluation, which
+  # rolled UserLevelSkillEvaluations up into a UserLevelEvaluation.
+  belongs_to :student_work_evaluation, class_name: 'StudentWorkEvaluation'
+  belongs_to :student_work_evaluation_summary, class_name: 'UserLevelEvaluation'
+end

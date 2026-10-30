@@ -1,0 +1,394 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-03-22T02:28:52.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "serialized_maze": [
+      [
+        {
+          "tileType": 1,
+          "value": 12,
+          "assetId": 303
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ]
+    ],
+    "enable_micro_bit": "false",
+    "mini_app": "neighborhood",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "long_instructions": "## Do This:\r\n\r\n1. Run the code and observe what happens. \r\n2. Run the test to see if that gives you any insights into the bug.\r\n3. Decide which debugging strategy would be useful for this buggy program. \r\n4. Iteratively refine and test the updates you make to the code.\r\n\r\n---\r\n\r\n**Unit Guide**\r\n\r\nDocument your experience with this debugging challenge:\r\n- What strategy did you use? \r\n- How did it help?\r\n- When might it be most useful in the future?",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "from neighborhood import Painter\n\ndef paint_two():\n    painter.paint(\"red\")\n    painter.move()\n    painter.paint(\"blue\")\n\npaint_two()\nsam = painter()\npaint_two()\n",
+          "folderId": "0",
+          "active": false,
+          "open": true,
+          "type": "locked_starter"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "teacher_markdown": "**Error Type**: Instantiation Error (Object used before creation)\r\n\r\n**Expected Outcome**: The `Painter` should paint a red and a blue tile.\r\n\r\nDebugging Challenge\r\n\r\n- The program crashes with a `NameError` because `painter` is used before it is created.\r\n- Students must identify and fix the order in which the `Painter` object is created and used.\r\n- Hint for students: Can you use a method on an object before it exists?",
+    "display_name": "Debugging Challenge 1",
+    "thumbnail_url": "https://images.code.org/eb83f018e45b3fced66e6e72b45f9ddf-debugging.png",
+    "bubble_choice_description": "You’ve written a simple function to paint two colors, but something isn’t quite right. Instead of smoothly painting the path, your program refuses to cooperate. What’s stopping the `Painter` from doing its job?",
+    "validation_file": {
+      "id": "2",
+      "name": "main_test.py",
+      "language": "py",
+      "contents": "import unittest\nfrom unittest_runner import ValidationProtocol\n\nclass TestDebugPaintTwo(unittest.TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"\n        Retrieve the NeighborhoodLog once for all tests.\n        \"\"\"\n        cls.neighborhood_log = ValidationProtocol().get_neighborhood_log()\n        painter_logs = cls.neighborhood_log.painter_logs\n        cls.painter_log = painter_logs[0] if painter_logs else None\n\n    def test_step1_single_painter(self):\n        \"\"\"\n        A Painter is created.\n        \"\"\"\n        self.assertIsNotNone(\n            self.painter_log,\n            \"No Painter object found. Did you create one?\"\n        )\n        self.assertEqual(\n            len(self.neighborhood_log.painter_logs),\n            1,\n            \"We found more than one Painter object or none at all.\"\n        )\n\n    def test_step2_paint_count(self):\n        \"\"\"\n        Paint four times.\n        \"\"\"\n        if self.painter_log is None:\n            self.skipTest(\"No Painter found.\")\n\n        self.assertTrue(\n            self.painter_log.did_action_exactly(\"PAINT\", 4),\n            \"The Painter should paint four times total.\"\n        )\n\n    def test_step3_final_output(self):\n        \"\"\"\n        Paint a red, blue, red, blue line.\n        \"\"\"\n        if self.painter_log is None:\n            self.skipTest(\"No Painter found.\")\n\n        # Build an 8x8 grid with all None\n        grid_size = 8\n        expected_output = [[None for _ in range(grid_size)] for _ in range(grid_size)]\n\n        # final_output[y][x]\n        # y=0 => the top row, x indexes columns\n        expected_output[0][1] = \"red\"\n        expected_output[0][2] = \"blue\"\n        expected_output[0][3] = \"red\"\n        expected_output[0][4] = \"blue\"\n\n        self.assertTrue(\n            self.neighborhood_log.final_output_matches(expected_output),\n            \"The Painter should paint red, blue, red, blue in a line.\"\n        )\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    },
+    "name_suffix": "_2025-preview"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-03-22T02:28:52.552+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson7-level6a_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson7-level6a_2025\"}]"
+}]]></config>
+</Pythonlab>

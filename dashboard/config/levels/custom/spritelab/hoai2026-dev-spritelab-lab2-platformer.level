@@ -1,0 +1,133 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 64,
+  "created_at": "2026-08-10T00:00:00.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "uses_lab2": "true",
+    "block_pools": [
+      "GamelabJr",
+      "GameDev"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab",
+      "zGameDev"
+    ],
+    "standalone_app_name": "spritelab",
+    "skin": "gamelab",
+    "hide_custom_blocks": true,
+    "hide_share_and_remix": "true",
+    "encrypted": "false",
+    "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
+    "level_mode": {
+      "kind": "world",
+      "imageType": "block",
+      "imageRole": "block",
+      "sentence": "block",
+      "imageFirst": true,
+      "generatedInstructions": "**AI generated an image based on your prompt.**",
+      "paintInstructions": "**Draw a block.**"
+    },
+    "image_role_defaults": {
+      "block": "block"
+    },
+    "pinned_scene": {
+      "id": "platform-scene",
+      "name": "Platformer",
+      "type": "platform"
+    },
+    "objectives": {
+      "title": "**Make this world yours**",
+      "items": [
+        {
+          "text": "Prompt AI to make a block.",
+          "check": {
+            "kind": "image",
+            "imageType": "block"
+          }
+        },
+        {
+          "text": "Add platforms on the grid.",
+          "check": {
+            "kind": "world",
+            "changed": true
+          }
+        },
+        {
+          "text": "Click **Play** and jump to the top.",
+          "check": {
+            "kind": "reach",
+            "height": 0.7
+          }
+        }
+      ]
+    },
+    "long_instructions": "# Make this world yours\nMake your own block, then add platforms on the grid. Click **Play** and get to the top.",
+    "header_label": "Make a platformer",
+    "world_start_pattern": [
+      [
+        "..........",
+        "..........",
+        "..........",
+        "..........",
+        "....BB....",
+        "..........",
+        ".BB....BB.",
+        "....S.....",
+        "...BBBB...",
+        ".........."
+      ],
+      [
+        "..........",
+        "..........",
+        "..........",
+        "..........",
+        ".....BB...",
+        "..........",
+        "...BB...BB",
+        ".S........",
+        "BBB...BB..",
+        ".........."
+      ],
+      [
+        "..........",
+        "..........",
+        "..........",
+        "..........",
+        ".BB....BB.",
+        "..........",
+        "..BB..BB..",
+        "....S.....",
+        "...BBBB...",
+        ".........."
+      ],
+      [
+        "..........",
+        "..........",
+        "..........",
+        "BBB.......",
+        ".....BB...",
+        "..........",
+        "...BB..BB.",
+        ".S........",
+        "BBB..BBBBB",
+        ".........."
+      ],
+      [
+        "..........",
+        "..........",
+        "..........",
+        "..........",
+        "..........",
+        "...BBBB...",
+        "..........",
+        "BB......BB",
+        "....S.....",
+        "...BBBB..."
+      ]
+    ]
+  }
+}]]></config>
+</GamelabJr>

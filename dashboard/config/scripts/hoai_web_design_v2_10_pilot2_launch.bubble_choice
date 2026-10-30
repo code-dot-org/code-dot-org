@@ -1,0 +1,13 @@
+name 'hoai-web-design-v2-10_pilot2_launch'
+display_name 'Learn about a CSS Rule'
+description 'Choose at least one CSS rule to learn more about with AI Tutor. Once you\'ve explored one: you can either choose more rules to explore, or continue to the next level.'
+
+sublevels
+level 'hoai-web-design-v2-10a_pilot2_launch'
+level 'hoai-web-design-v2-10b_pilot2_launch'
+level 'hoai-web-design-v2-10c_pilot2_launch'
+level 'hoai-web-design-v2-10d_pilot2_launch'
+level 'hoai-web-design-v2-10e_pilot2_launch'
+
+uses_lab2
+navigation_type 'next_level'

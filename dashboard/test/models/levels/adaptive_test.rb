@@ -1,0 +1,183 @@
+require 'test_helper'
+
+class AdaptiveTest < ActiveSupport::TestCase
+  setup do
+    @dir = Pathname.new(Dir.mktmpdir)
+    @dir.join('skills').mkpath
+    @dir.join('sample.json').write({'id' => 'sample', 'title' => 'Sample'}.to_json)
+    @dir.join('needs-skill.json').write({
+      'id' => 'needs-skill',
+      'steps' => [{'id' => 'tree', 'kind' => 'skillTree', 'skills' => [{'skillId' => 'ghost'}]}],
+    }.to_json
+)
+    AdaptiveContent.stubs(:content_dir).returns(@dir)
+    AdaptiveContent.reset_cache!
+  end
+
+  teardown do
+    AdaptiveContent.reset_cache!
+    FileUtils.remove_entry(@dir)
+  end
+
+  test "uses_lab2? is true" do
+    assert create(:adaptive).uses_lab2?
+  end
+
+  test "counts as a level with essential AI chat tools" do
+    assert_includes Level.with_essential_ai_chat_tools, create(:adaptive)
+  end
+
+  test "requires a content id whose file exists" do
+    refute build(:adaptive, adaptive_id: nil).valid?
+    refute build(:adaptive, adaptive_id: 'missing').valid?
+    refute build(:adaptive, adaptive_id: '../sample').valid?
+    assert build(:adaptive, adaptive_id: 'sample').valid?
+  end
+
+  test "lab2 properties include the parsed content" do
+    level = create(:adaptive)
+    script_level = create(:script_level, levels: [level])
+
+    properties = level.summarize_for_lab2_properties(script_level.script, script_level, create(:student))
+
+    assert_equal 'adaptive', properties[:appName]
+    assert_equal 'sample', properties['adaptiveId']
+    assert_equal 'Sample', properties[:pathway]['title']
+  end
+
+  test "lab2 properties carry no user-specific keys" do
+    level = create(:adaptive)
+    script_level = create(:script_level, levels: [level])
+
+    properties = level.summarize_for_lab2_properties(script_level.script, script_level, create(:student))
+
+    assert_empty properties.keys.map(&:to_s).grep(/state|progress/i)
+  end
+
+  test "lab2 properties inline each referenced level's properties" do
+    template = create(:weblab2, name: 'adaptive-test-template')
+    sandbox = create(:weblab2, name: 'adaptive-test-sandbox')
+    write_levels_pathway
+
+    pathway = create(:adaptive, adaptive_id: 'levels').summarize_for_lab2_properties(nil, nil, create(:student))[:pathway]
+
+    assert_equal template.id, pathway['project']['levelProperties'][:id]
+    try, ghost, read = pathway['checkpoints'][0]['steps']
+    assert_equal sandbox.id, try['levelProperties'][:id]
+    assert_equal 'weblab2', try['levelProperties'][:appName]
+    refute ghost.key?('levelProperties'), 'an unknown level name passes through unresolved'
+    refute read.key?('levelProperties'), 'only level steps are resolved'
+  end
+
+  test "resolving levels leaves the cached pathway untouched" do
+    create(:weblab2, name: 'adaptive-test-sandbox')
+    write_levels_pathway
+
+    create(:adaptive, adaptive_id: 'levels').summarize_for_lab2_properties(nil, nil, create(:student))
+
+    cached = AdaptiveContent.load('levels')
+    refute cached['project'].key?('levelProperties')
+    refute cached['checkpoints'][0]['steps'][0].key?('levelProperties')
+  end
+
+  test "lab2 properties inline resolved video URLs for video steps" do
+    video = Video.create!(key: 'adaptive-test-video', youtube_code: 'abc123', download: 'https://videos.code.org/youtube/adaptive-test-video.mp4')
+    write_video_pathway
+
+    pathway = create(:adaptive, adaptive_id: 'video').summarize_for_lab2_properties(nil, nil, create(:student))[:pathway]
+
+    watch, panels = pathway['checkpoints'][0]['steps']
+    assert_equal 'video', watch['kind']
+    assert watch['src'].include?('abc123'), 'src must contain the youtube code'
+    assert_equal video.download, watch['download']
+    assert_equal video.thumbnail_url, watch['thumbnail']
+    refute panels.key?('src'), 'only video steps are resolved'
+  end
+
+  test "video step with unknown key passes through unresolved" do
+    write_video_pathway
+
+    pathway = create(:adaptive, adaptive_id: 'video').summarize_for_lab2_properties(nil, nil, create(:student))[:pathway]
+
+    watch = pathway['checkpoints'][0]['steps'][0]
+    refute watch.key?('src'), 'missing video key passes through unresolved'
+  end
+
+  test "resolving videos leaves the cached pathway untouched" do
+    Video.create!(key: 'adaptive-test-video', youtube_code: 'abc123', download: 'https://videos.code.org/youtube/adaptive-test-video.mp4')
+    write_video_pathway
+
+    create(:adaptive, adaptive_id: 'video').summarize_for_lab2_properties(nil, nil, create(:student))
+
+    cached = AdaptiveContent.load('video')
+    refute cached['checkpoints'][0]['steps'][0].key?('src')
+  end
+
+  test "find_step finds authored steps and the project screen's step" do
+    write_levels_pathway
+    level = create(:adaptive, adaptive_id: 'levels')
+
+    assert_equal 'level', level.find_step('try')['kind']
+    assert_equal 'panels', level.find_step('read')['kind']
+    project = level.find_step('project')
+    assert_equal 'level', project['kind']
+    assert_equal 'adaptive-test-template', project['level']
+    assert_nil level.find_step('unknown')
+  end
+
+  test "step_levels lists each existing level step's level by step id, the project included" do
+    template = create(:weblab2, name: 'adaptive-test-template')
+    sandbox = create(:weblab2, name: 'adaptive-test-sandbox')
+    write_levels_pathway
+    level = create(:adaptive, adaptive_id: 'levels')
+
+    assert_equal({'try' => sandbox, 'project' => template}, level.step_levels)
+  end
+
+  test "lookups are empty without content" do
+    level = build(:adaptive, adaptive_id: 'levels')
+
+    assert_nil level.find_step('try')
+    assert_empty level.step_levels
+  end
+
+  test "sharing_levels lists every level with the same content id, by name" do
+    second = create(:adaptive, name: 'Adaptive B', adaptive_id: 'sample')
+    first = create(:adaptive, name: 'Adaptive A', adaptive_id: 'sample')
+    create(:adaptive, name: 'Adaptive C', adaptive_id: 'needs-skill')
+
+    assert_equal [first, second], second.sharing_levels
+  end
+
+  private def write_levels_pathway
+    @dir.join('levels.json').write({
+      'id' => 'levels',
+      'project' => {'templateLevel' => 'adaptive-test-template', 'description' => 'A site.'},
+      'checkpoints' => [{
+        'id' => 'basics',
+        'steps' => [
+          {'id' => 'try', 'kind' => 'level', 'level' => 'adaptive-test-sandbox'},
+          {'id' => 'ghost', 'kind' => 'level', 'level' => 'adaptive-test-missing'},
+          {'id' => 'read', 'kind' => 'panels', 'panels' => []},
+        ],
+      }],
+    }.to_json
+)
+    AdaptiveContent.reset_cache!
+  end
+
+  private def write_video_pathway
+    @dir.join('video.json').write({
+      'id' => 'video',
+      'checkpoints' => [{
+        'id' => 'intro',
+        'steps' => [
+          {'id' => 'watch', 'kind' => 'video', 'videoKey' => 'adaptive-test-video'},
+          {'id' => 'read', 'kind' => 'panels', 'panels' => []},
+        ],
+      }],
+    }.to_json
+)
+    AdaptiveContent.reset_cache!
+  end
+end

@@ -1,0 +1,19 @@
+name 'programming-fundamentals-lesson6-level7_2025-launch_v2-2025'
+
+title 'Check Your Understanding'
+
+wrong 'The `def` keyword'
+right 'A colon (`:`) at the end of the function header'
+wrong 'Parentheses around `"Hello!"`'
+wrong 'The function name'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+What is missing from this function definition?
+
+```
+def greet()
+   print("Hello!")
+```
+MARKDOWN

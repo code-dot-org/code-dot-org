@@ -1,47 +1,254 @@
-import React, {useState, useCallback} from 'react';
-import Button from '@cdo/apps/templates/Button';
-import moduleStyles from './userChatMessageEditor.module.scss';
-import aichatI18n from '../locale';
-import {AichatState, submitChatMessage} from '../redux/aichatRedux';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
-import {useSelector} from 'react-redux';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
+
+import {type SpeechToTextAnalytics} from '@cdo/apps/aiComponentLibrary/userMessageEditor/speechToTextButton/SpeechToTextButton';
+import UserMessageEditor from '@cdo/apps/aiComponentLibrary/userMessageEditor/UserMessageEditor';
+import AiTutorEnglishOnlyWarning from '@cdo/apps/aiTutor/views/AiTutorEnglishOnlyWarning';
+import {isViewingAiTutorVersionFileUpdates} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import experiments from '@cdo/apps/util/experiments';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
+
+import {
+  selectIsWaitingForChatResponse,
+  sendAnalytics,
+  submitChatContents,
+  uploadFiles,
+} from '../redux';
+import {
+  AiChatClientType,
+  ChatButtonAndKey,
+  ModelParameters,
+  AnalyticsProperties,
+} from '../types';
+import {getAllowedFileTypes} from '../utils';
+
+import UploadButton, {UploadButtonProps} from './assets/UploadButton';
+
+import moduleStyles from './UserChatMessageEditor.module.scss';
+
+interface UserChatMessageEditorProps {
+  modelParameters: ModelParameters;
+  clientType: AiChatClientType;
+  editorContainerClassName?: string;
+  chatButtons?: ChatButtonAndKey[];
+  hiddenContextCallback?: () => Promise<string>;
+  multimodalAvailable?: boolean;
+  currentLevelId: number | null;
+  levelSystemPrompt?: string;
+  sendDisabled?: boolean;
+  onMessageSent?: () => void;
+
+  // Forwarded to submitChatContents, which invokes it once for a schema lab's
+  // response after that response has been logged.
+  onSchemaResponse?: (response: unknown) => void;
+
+  // Forwarded to submitChatContents, which applies it to prior turns before
+  // sending them to the model.
+  formatSchemaResponseForDisplay?: (response: unknown) => string;
+
+  /** UploadButton props */
+  uploadDisabled?: UploadButtonProps['isDisabled'];
+  levelName?: UploadButtonProps['levelName'];
+  buildAssetUrl?: UploadButtonProps['buildAssetUrl'];
+  hasStarterAssets?: UploadButtonProps['hasStarterAssets'];
+  onAssetUploaded?: UploadButtonProps['onAssetUploaded'];
+  chatDisabled?: boolean;
+}
 
 /**
  * Renders the AI Chat Lab user chat message editor component.
  */
-const UserChatMessageEditor: React.FunctionComponent = () => {
+const UserChatMessageEditor: React.FunctionComponent<
+  UserChatMessageEditorProps
+> = ({
+  modelParameters,
+  clientType,
+  editorContainerClassName,
+  chatButtons,
+  hiddenContextCallback,
+  multimodalAvailable,
+  currentLevelId,
+  levelSystemPrompt,
+  levelName,
+  hasStarterAssets,
+  buildAssetUrl,
+  uploadDisabled,
+  onAssetUploaded,
+  chatDisabled,
+  sendDisabled = false,
+  onMessageSent,
+  onSchemaResponse,
+  formatSchemaResponseForDisplay,
+}) => {
   const [userMessage, setUserMessage] = useState<string>('');
-
-  const isWaitingForChatResponse = useSelector(
-    (state: {aichat: AichatState}) => state.aichat.isWaitingForChatResponse
+  const isWaitingForChatResponse = useAppSelector(
+    selectIsWaitingForChatResponse
   );
 
-  // TODO: If systemPrompt is undefined, handle this error case.
+  const viewingAiTutorVersionFileUpdates = useAppSelector(
+    isViewingAiTutorVersionFileUpdates
+  );
+  const chatAssets = useAppSelector(state =>
+    state.aichat.stagedFiles.map(file =>
+      file.projectFilename
+        ? {...file.asset, filename: file.projectFilename}
+        : file.asset
+    )
+  );
+  const uploadsPending = useAppSelector(state =>
+    state.aichat.stagedFiles.some(file => file.status === 'uploading')
+  );
+  const userAddedSelectionContext = useAppSelector(
+    state => state.aichat.userAddedSelectionContext
+  );
+
   const dispatch = useAppDispatch();
-  const handleSubmit = useCallback(() => {
-    if (!isWaitingForChatResponse) {
-      dispatch(submitChatMessage(userMessage));
-      setUserMessage('');
+
+  const inputRef = useRef<HTMLTextAreaElement>(null);
+
+  const disabled =
+    isWaitingForChatResponse ||
+    sendDisabled ||
+    uploadsPending ||
+    viewingAiTutorVersionFileUpdates ||
+    !!chatDisabled;
+
+  const clearUserMessage = () => setUserMessage('');
+
+  const handleSubmit = useCallback(
+    async (message: string, analyticsProperties?: AnalyticsProperties) => {
+      if (!disabled) {
+        const hiddenContext = await hiddenContextCallback?.();
+        dispatch(
+          submitChatContents({
+            text: message,
+            modelParameters,
+            clientType,
+            hiddenContext,
+            analyticsProperties,
+            assets:
+              multimodalAvailable && chatAssets.length > 0
+                ? chatAssets
+                : undefined,
+            userAddedSelectionContext:
+              Object.values(userAddedSelectionContext).length > 0
+                ? Object.values(userAddedSelectionContext)
+                : undefined,
+            levelName,
+            levelSystemPrompt,
+            onSchemaResponse,
+            formatSchemaResponseForDisplay,
+          })
+        );
+        onMessageSent?.();
+        clearUserMessage();
+      }
+    },
+    [
+      disabled,
+      hiddenContextCallback,
+      dispatch,
+      modelParameters,
+      clientType,
+      multimodalAvailable,
+      chatAssets,
+      userAddedSelectionContext,
+      levelName,
+      levelSystemPrompt,
+      onMessageSent,
+      onSchemaResponse,
+      formatSchemaResponseForDisplay,
+    ]
+  );
+
+  useEffect(() => {
+    clearUserMessage();
+  }, [currentLevelId]);
+
+  useEffect(() => {
+    if (!disabled) {
+      // Return focus to user input textarea after user submits chat message and response displayed
+      // or after user updates model customizations.
+      inputRef.current?.focus();
     }
-  }, [userMessage, dispatch, isWaitingForChatResponse]);
+  }, [disabled]);
+
+  const speechToTextEnabled =
+    modelParameters.selectedModelId === AiChatModelIds.GEMINI_2_5_FLASH_IMAGE ||
+    experiments.isEnabledAllowingQueryString(experiments.ENABLE_SPEECH_TO_TEXT);
+
+  const acceptedFileTypes = getAllowedFileTypes(
+    modelParameters.selectedModelId
+  );
+
+  const canUploadFiles =
+    multimodalAvailable && buildAssetUrl && acceptedFileTypes.length > 0;
+
+  const onPaste = useCallback(
+    (e: React.ClipboardEvent<HTMLTextAreaElement>) => {
+      if (!canUploadFiles) {
+        return;
+      }
+      const files = Array.from(e.clipboardData.items)
+        .filter(({type}) => acceptedFileTypes.includes(type))
+        .map(item => item.getAsFile())
+        .filter(item => item !== null);
+      dispatch(uploadFiles({files, buildAssetUrl, onAssetUploaded}));
+    },
+    [
+      canUploadFiles,
+      buildAssetUrl,
+      dispatch,
+      acceptedFileTypes,
+      onAssetUploaded,
+    ]
+  );
+
+  const onSpeechToTextFinished = useCallback(
+    (analytics: SpeechToTextAnalytics) => {
+      if (speechToTextEnabled) {
+        dispatch(sendAnalytics(EVENTS.AICHAT_DICTATION_COMPLETED, analytics));
+      }
+    },
+    [dispatch, speechToTextEnabled]
+  );
 
   return (
-    <div className={moduleStyles.UserChatMessageEditor}>
-      <textarea
-        className={moduleStyles.textArea}
-        placeholder={aichatI18n.userChatMessagePlaceholder()}
-        onChange={e => setUserMessage(e.target.value)}
-        value={userMessage}
-      />
-      <Button
-        key="submit"
-        text="Submit"
-        icon="arrow-up"
-        onClick={() => handleSubmit()}
-        color={Button.ButtonColor.brandSecondaryDefault}
-        disabled={isWaitingForChatResponse}
-      />
-    </div>
+    <>
+      {chatButtons && chatButtons.length > 0 && !chatDisabled && (
+        <div className={moduleStyles.chatButtonsContainer}>
+          {chatButtons.map(({ChatButton, key}) => (
+            <ChatButton key={key} onClick={handleSubmit} disabled={disabled} />
+          ))}
+        </div>
+      )}
+      <UserMessageEditor
+        userMessage={userMessage}
+        onChange={setUserMessage}
+        onSubmit={handleSubmit}
+        disabled={disabled}
+        editorContainerClassName={editorContainerClassName}
+        speechToTextEnabled={speechToTextEnabled}
+        onSpeechToTextFinished={onSpeechToTextFinished}
+        onPaste={onPaste}
+        ref={inputRef}
+      >
+        {canUploadFiles && levelName && (
+          <div className={moduleStyles.buttonRow}>
+            <UploadButton
+              isDisabled={!!uploadDisabled || disabled}
+              levelName={levelName}
+              hasStarterAssets={hasStarterAssets}
+              buildAssetUrl={buildAssetUrl}
+              acceptedFileTypes={acceptedFileTypes}
+              onAssetUploaded={onAssetUploaded}
+            />
+          </div>
+        )}
+      </UserMessageEditor>
+      <AiTutorEnglishOnlyWarning />
+    </>
   );
 };
 

@@ -1,0 +1,15 @@
+name 'Data Sci U2 Post Q8_2024-pilot'
+
+question 'How can you filter a DataFrame to select rows where the "Email" column ends with "@example.com"?'
+
+wrong '`df[df["Email"].startswith("@example.com")] `'
+wrong '`df[df["Email"].contains("@example.com")]`'
+right '`df[df["Email"].str.endswith("@example.com")]`'
+wrong '`df[df["Email"].str.contains("@example.com")]`'
+
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+
+MARKDOWN

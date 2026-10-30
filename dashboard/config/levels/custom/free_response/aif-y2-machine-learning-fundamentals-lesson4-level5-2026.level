@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-08-19T18:59:12.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "skip_dialog": true,
+    "skip_sound": true,
+    "encrypted": "false",
+    "title": "Check Your Understanding",
+    "long_instructions": "\r\n**Label each of these scenarios as examples of classification and regression.**\r\n\r\n1. Anita needs to decide how many gallons of milk to order for next week. Using how much she's gone through in past weeks, she arrives at a prediction of about 48 gallons.\r\n2. Anita wants to know whether tomorrow will be slow or busy so she can decide how many workers to schedule. Looking at past days with similar weather and events, her prediction is a 15% chance \"slow\" and an 85% chance \"busy.\"\r\n3. Anita wants to estimate how much money the Parlor will take in tomorrow so she knows what to expect in the register. Drawing on sales from similar days, her prediction is about $640.\r\n4. Anita is testing a new flavor and wants to know whether customers will like it. Based on how customers rated past new flavors, her prediction is a 70% chance \"Yes\" and a 30% chance \"No.\"\r\n\r\nFor example:\r\n\r\n> 1. Classification\r\n> 2. Classification\r\n> 3. Regression\r\n> 4. Regression",
+    "stay_on_level_after_submit": "false",
+    "submittable": "false",
+    "allow_multiple_attempts": "false",
+    "height": "150",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "optional": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-08-19 19:17:17 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

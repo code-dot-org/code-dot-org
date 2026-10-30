@@ -1,0 +1,111 @@
+name 'csaif_pl_ai_rev_litB_-launch'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# AI Literacy: What It Is & What It Isn’t
+
+<body style="margin:0; padding:20px; background-color:#ffffff; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+
+<div style="max-width:980px; margin:0 auto;">
+
+<div style="display:flex; flex-wrap:wrap; gap:16px;">
+
+<div style="flex:1 1 320px; background-color:#f3fbfc; border-radius:6px; box-sizing:border-box; overflow:hidden;">
+<div style="background-color:#1b798c; color:#ffffff; padding:10px 14px; font-weight:600; font-size:20px;">AI Literacy Is</div>
+<div style="padding:14px 16px 16px 16px;">
+
+<div style="display:flex; align-items:flex-start; margin-bottom:10px;">
+<div style="width:30px; height:30px; border-radius:50%; background-color:#e0f4f7; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">💡</div>
+<div style="font-size:16px; color:#333333;"><strong>Knowing the basics of how AI works</strong></div>
+</div>
+
+<div style="display:flex; align-items:flex-start; margin-bottom:10px;">
+<div style="width:30px; height:30px; border-radius:50%; background-color:#e0f4f7; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">✅</div>
+<div style="font-size:16px; color:#333333;"><strong>Checking, questioning, and improving AI outputs</strong></div>
+</div>
+
+<div style="display:flex; align-items:flex-start; margin-bottom:10px;">
+<div style="width:30px; height:30px; border-radius:50%; background-color:#e0f4f7; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">🧠</div>
+<div style="font-size:16px; color:#333333;"><strong>Using problem-solving, reasoning, and ethics</strong></div>
+</div>
+
+<div style="display:flex; align-items:flex-start; margin-bottom:10px;">
+<div style="width:30px; height:30px; border-radius:50%; background-color:#e0f4f7; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">👀</div>
+<div style="font-size:16px; color:#333333;"><strong>Applying human judgment and oversight</strong></div>
+</div>
+
+<div style="display:flex; align-items:flex-start; margin-bottom:10px;">
+<div style="width:30px; height:30px; border-radius:50%; background-color:#e0f4f7; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">🛠️</div>
+<div style="font-size:16px; color:#333333;"><strong>Recognizing where AI appears in everyday tools</strong></div>
+</div>
+
+<div style="display:flex; align-items:flex-start; margin-bottom:10px;">
+<div style="width:30px; height:30px; border-radius:50%; background-color:#e0f4f7; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">⚖️</div>
+<div style="font-size:16px; color:#333333;"><strong>Considering benefits, risks, and impacts</strong></div>
+</div>
+
+<div style="display:flex; align-items:flex-start; margin-bottom:10px;">
+<div style="width:30px; height:30px; border-radius:50%; background-color:#e0f4f7; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">✏️</div>
+<div style="font-size:16px; color:#333333;"><strong>Creating with AI responsibly and transparently</strong></div>
+</div>
+
+<div style="display:flex; align-items:flex-start;">
+<div style="width:30px; height:30px; border-radius:50%; background-color:#e0f4f7; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">🌍</div>
+<div style="font-size:16px; color:#333333;"><strong>Being prepared for an AI-powered world</strong></div>
+</div>
+
+</div>
+</div>
+
+<div style="flex:1 1 320px; background-color:#fff7f0; border-radius:6px; box-sizing:border-box; overflow:hidden;">
+<div style="background-color:#e57a24; color:#ffffff; padding:10px 14px; font-weight:600; font-size:20px;">AI Literacy Is NOT</div>
+<div style="padding:14px 16px 16px 16px;">
+
+<div style="display:flex; align-items:flex-start; margin-bottom:10px;">
+<div style="width:30px; height:30px; border-radius:50%; background-color:#ffe1c5; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">🔤</div>
+<div style="font-size:16px; color:#333333;"><strong>Memorizing technical jargon</strong></div>
+</div>
+
+<div style="display:flex; align-items:flex-start; margin-bottom:10px;">
+<div style="width:30px; height:30px; border-radius:50%; background-color:#ffe1c5; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">🤖</div>
+<div style="font-size:16px; color:#333333;"><strong>Blindly trusting AI</strong></div>
+</div>
+
+<div style="display:flex; align-items:flex-start; margin-bottom:10px;">
+<div style="width:30px; height:30px; border-radius:50%; background-color:#ffe1c5; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">🧱</div>
+<div style="font-size:16px; color:#333333;"><strong>Building advanced AI systems</strong></div>
+</div>
+
+<div style="display:flex; align-items:flex-start; margin-bottom:10px;">
+<div style="width:30px; height:30px; border-radius:50%; background-color:#ffe1c5; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">✨</div>
+<div style="font-size:16px; color:#333333;"><strong>Treating AI as magical or mysterious</strong></div>
+</div>
+
+<div style="display:flex; align-items:flex-start; margin-bottom:10px;">
+<div style="width:30px; height:30px; border-radius:50%; background-color:#ffe1c5; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">🛌</div>
+<div style="font-size:16px; color:#333333;"><strong>Using AI without thinking</strong></div>
+</div>
+
+<div style="display:flex; align-items:flex-start; margin-bottom:10px;">
+<div style="width:30px; height:30px; border-radius:50%; background-color:#ffe1c5; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">❌</div>
+<div style="font-size:16px; color:#333333;"><strong>Assuming AI is always good</strong></div>
+</div>
+
+<div style="display:flex; align-items:flex-start; margin-bottom:10px;">
+<div style="width:30px; height:30px; border-radius:50%; background-color:#ffe1c5; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">🎯</div>
+<div style="font-size:16px; color:#333333;"><strong>Replacing human judgment</strong></div>
+</div>
+
+<div style="display:flex; align-items:flex-start;">
+<div style="width:30px; height:30px; border-radius:50%; background-color:#ffe1c5; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">📅</div>
+<div style="font-size:16px; color:#333333;"><strong>Seeing AI literacy as “a future skill” instead of a current one</strong></div>
+</div>
+
+</div>
+</div>
+
+</div>
+
+</div>
+MARKDOWN

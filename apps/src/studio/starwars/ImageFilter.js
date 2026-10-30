@@ -1,7 +1,7 @@
 /** @file Wrapper for an SVG filter definition with animation capabilities */
 
-import * as utils from '@cdo/apps/utils';
 import {SVG_NS} from '@cdo/apps/constants';
+import * as utils from '@cdo/apps/utils';
 
 // Unique element ID that increments by 1 each time an element is created
 var uniqueId = 0;

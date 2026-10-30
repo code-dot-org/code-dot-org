@@ -1,0 +1,50 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-06-29T17:09:30.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "require_edit_to_continue": true,
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "949717bf-3151-4c1b-91f8-d50cec19fb1c": {
+          "id": "949717bf-3151-4c1b-91f8-d50cec19fb1c",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>AI Mood Classifier Analysis</title>\n    <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n    <div class=\"container\">\n        <h1>Analyze This AI Program</h1>\n        <p>You are evaluating a simple AI program designed to classify a user's mood from text input and suggest a song.</p>\n\n        <div class=\"scenario\">\n            <h2>Scenario:</h2>\n            <h3>User Input:</h3>\n            <p>\"I had a really tough day, nothing went right. I just want to chill.\"</p>\n            <h3>AI Program Output:</h3>\n            <div class=\"ai-output\">\n                <p><strong>Mood Classification:</strong> Sad</p>\n                <p><strong>Suggested Song:</strong> \"Happy\" by Pharrell Williams</p>\n            </div>\n        </div>\n\n        <div class=\"analysis-section\">\n            <h2>Your Analysis:</h2>\n            <p>Based on what you've learned about user-centered AI design, identify the shortcomings of this AI program's output. Consider fairness, accuracy, and usefulness for a real user.</p>\n            <!-- \n                --------------------------------------------------------------------------------------\n                YOUR ANALYSIS GOES BELOW THIS LINE. \n                Write your thoughts here as HTML comments, explaining where the AI falls short \n                and how it could be improved.\n                --------------------------------------------------------------------------------------\n            -->\n\n            <!-- \n                Example considerations:\n                - Is \"Sad\" the best classification for \"tough day\"? Is it fair to label it that way?\n                - Is suggesting \"Happy\" a good response to \"Sad\" or \"tough day\" when the user wants to \"chill\"? Why or why not? What might be a negative impact of this suggestion?\n                - What other information might the AI need from the user to give a better suggestion? How could the program be more useful?\n            -->\n\n            <!-- \n                Write your detailed analysis and proposed improvements here:\n                \n                Shortcoming 1 (e.g., Accuracy/Fairness/Usefulness): \n                Explanation: \n                \n                Shortcoming 2 (e.g., Accuracy/Fairness/Usefulness): \n                Explanation: \n\n                Possible Improvements:\n                1. \n                2. \n\n            -->\n            \n            <p>Once you're done, remember to save your changes!</p>\n        </div>\n    </div>\n    <script src=\"script.js\"></script>\n</body>\n</html>",
+          "folderId": "0",
+          "type": "starter",
+          "active": true
+        },
+        "eb3b2c8a-f81c-42db-807c-e6890b1fc01d": {
+          "id": "eb3b2c8a-f81c-42db-807c-e6890b1fc01d",
+          "name": "style.css",
+          "contents": "body {\n    font-family: sans-serif;\n    margin: 20px;\n    background-color: #f4f4f4;\n    color: #333;\n    line-height: 1.6;\n}\n\n.container {\n    max-width: 800px;\n    margin: 0 auto;\n    background-color: #fff;\n    padding: 20px 30px;\n    border-radius: 8px;\n    box-shadow: 0 2px 10px rgba(0,0,0,0.1);\n}\n\nh1, h2, h3 {\n    color: #0056b3;\n}\n\n.scenario {\n    border: 1px solid #ddd;\n    padding: 15px;\n    margin-bottom: 20px;\n    background-color: #e9f7ff;\n    border-radius: 5px;\n}\n\n.ai-output {\n    background-color: #fff;\n    border: 1px dashed #ccc;\n    padding: 10px;\n    margin-top: 10px;\n    border-radius: 3px;\n}\n\n.ai-output p {\n    margin: 5px 0;\n}\n\n.analysis-section {\n    border-top: 2px solid #0056b3;\n    padding-top: 20px;\n    margin-top: 30px;\n}\n\n.analysis-section p {\n    margin-bottom: 10px;\n}",
+          "folderId": "0",
+          "type": "starter",
+          "active": false
+        },
+        "1cebf64f-a029-4028-8282-7381d91bd911": {
+          "id": "1cebf64f-a029-4028-8282-7381d91bd911",
+          "name": "script.js",
+          "contents": "// This script is linked to index.html, but you don't need to modify it for this level.\n// Your task is to analyze the AI's output and add comments to index.html!\nconsole.log(\"Welcome to the AI Mood Classifier Analysis!\");\n",
+          "folderId": "0",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "949717bf-3151-4c1b-91f8-d50cec19fb1c",
+        "eb3b2c8a-f81c-42db-807c-e6890b1fc01d",
+        "1cebf64f-a029-4028-8282-7381d91bd911"
+      ]
+    },
+    "long_instructions": "In the last level, you carefully analyzed an AI program's output and identified its shortcomings in `index.html`. Now it's time to put on your designer hat and propose solutions!\r\n\r\nYour task is to brainstorm and write down concrete improvements that would make this AI program more user-friendly, fair, and robust. Think about how you could address the issues you found, such as inaccurate classifications, unhelpful suggestions, or potential negative impacts.\r\n\r\nOpen `index.html` again. Continue adding to the HTML comments within the `<div class=\"analysis-section\">` to propose your improvements. Consider:\r\n\r\n*   **More User Input:** What additional questions could the AI ask to better understand the user's mood or preference?\r\n*   **Conditional Logic:** How could the program use rules (like \"IF mood is Sad AND user wants to chill, THEN suggest a calm song, NOT a hyper one\") to provide better recommendations?\r\n*   **User Feedback:** Could the program allow users to say \"not helpful\" and provide an alternative?\r\n*   **Options and Disclaimers:** Instead of one suggestion, could it offer a few? Could it include a message like \"This is just a suggestion, your feelings are valid\"?\r\n\r\nWrite your proposed improvements clearly in `index.html`. Be specific about what changes you would make to the AI's logic or user interaction.",
+    "generate_outline": "Based on the shortcomings identified in the previous level, students will brainstorm and propose concrete improvements to make the AI program more user-friendly, fair, or robust. This could involve adding disclaimers, user feedback mechanisms, or simple conditional logic to handle edge cases."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-06-29 17:09:42 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-29 17:09:42 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-29 17:10:22 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

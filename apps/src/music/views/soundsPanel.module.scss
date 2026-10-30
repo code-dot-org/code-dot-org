@@ -1,31 +1,72 @@
-@import "color.scss";
+@import 'color.scss';
 
 .soundsPanel {
-  background-color: $neutral_dark;
   user-select: none;
-  width: 300px;
+  width: 600px;
   height: 290px;
-  overflow-x: hidden;
-  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+
+  &Top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    gap: 8px;
+
+    .segmentedButtons {
+      span {
+        user-select: none;
+      }
+    }
+  }
+
+  &Body {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    flex: 1;
+    gap: 5px;
+
+    .leftColumn {
+      background-color: $neutral_dark;
+      flex: 1;
+      overflow-y: scroll;
+      scroll-padding: 1px 0;
+    }
+
+    .rightColumn {
+      background-color: $neutral_dark;
+      flex: 1;
+      overflow-y: scroll;
+      scroll-padding: 1px 0;
+    }
+  }
 
   .folderRow {
-    position: sticky;
-    top: 0;
     padding: 6px 0;
-    margin-bottom: 6px;
-    background-color: $neutral_dark;
+    margin: 1px 1px 6px 1px;
     overflow: hidden;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $neutral_dark90;
+    }
+
+    &:focus-visible {
+      outline: $neutral_light solid 1px;
+    }
+
+    &Selected {
+      background-color: $neutral_dark80;
+    }
 
     &:first-child {
-      margin-top: 0;
-    }
-    &:not(:first-child) {
-      margin-top: 14px;
+      margin-top: 1px;
     }
 
     &Left {
-      width: 65px;
-      height: 65px;
+      width: 55px;
+      height: 55px;
       margin: 0 6px 0 4px;
       float: left;
     }
@@ -35,11 +76,12 @@
       float: left;
 
       &Name {
-        font-size: 18px;
+        font-size: 16px;
       }
 
       &SubTitle {
         font-size: 11px;
+        line-height: 2em;
       }
     }
 
@@ -52,34 +94,67 @@
 
   .soundRow {
     overflow: hidden;
-    padding: 4px 0;
+    font-size: 14px;
+    margin: 1px;
+    padding: 6px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+
     &:hover {
       background-color: $neutral_dark90;
+
+      .lengthNoMarginRight {
+        color: $neutral_dark30;
+      }
     }
+
+    &:focus-visible {
+      outline: $neutral_light solid 1px;
+    }
+
     &Selected {
       background-color: $neutral_dark80;
     }
 
     &Left {
-      width: 15px;
-      margin: 0 6px 0 4px;
-      float: left;
+      display: flex;
+      align-items: center;
+      width: calc(100% - 30px);
 
       .typeIcon {
-        width: 13px;
+        margin-right: 6px;
+        margin-left: 4px;
+        width: 24px;
+        text-align: center;
+        flex-shrink: 0;
+      }
+
+      .name {
+        font-size: 14px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        &Vocal {
+          font-style: italic;
+        }
       }
     }
 
     &Middle {
-      width: calc(100% - 25px - 58px);
-      float: left;
+      font-size: 11px;
+      min-width: 240px;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     &Right {
-      float: right;
-      width: 43px;
+      display: flex;
       margin-right: 15px;
-
     }
   }
 
@@ -90,6 +165,14 @@
     margin-right: 10px;
     color: $neutral_dark50;
     text-align: right;
+
+    &NoMarginRight {
+      margin-right: 0;
+
+      &Selected {
+        color: $neutral_dark20;
+      }
+    }
   }
 
   .previewContainer {

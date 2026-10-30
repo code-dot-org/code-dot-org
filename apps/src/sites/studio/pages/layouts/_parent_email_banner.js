@@ -1,5 +1,6 @@
 import $ from 'jquery';
-import AddParentEmailController from '@cdo/apps/lib/ui/accounts/AddParentEmailController';
+
+import AddParentEmailController from '@cdo/apps/accounts/AddParentEmailController';
 
 $(document).ready(() => {
   const dismissButton = document.getElementById('not_now');

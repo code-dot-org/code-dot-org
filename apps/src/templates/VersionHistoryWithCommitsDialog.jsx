@@ -1,13 +1,14 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {sources as sourcesApi} from '../clientApi';
+
 import project from '@cdo/apps/code-studio/initApp/project';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
-import * as utils from '../utils';
-import i18n from '@cdo/locale';
-import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
-import Button from '@cdo/apps/templates/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import StylizedBaseDialog from '@cdo/apps/sharedComponents/StylizedBaseDialog';
 import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
+
+import {sources as sourcesApi} from '../clientApi';
+import * as utils from '../utils';
 
 const DEFAULT_FILE_NAME = 'main.json';
 
@@ -106,22 +107,6 @@ export default class VersionHistoryWithCommitsDialog extends React.Component {
 
   onClearPuzzle = () => {
     this.setState({showSpinner: true});
-    firehoseClient.putRecord(
-      {
-        study: 'project-data-integrity',
-        study_group: 'v4',
-        event: 'clear-puzzle',
-        project_id: project.getCurrentId(),
-        data_json: JSON.stringify({
-          isOwner: project.isOwner(),
-          currentUrl: window.location.href,
-          shareUrl: project.getShareUrl(),
-          isProjectTemplateLevel: this.props.isProjectTemplateLevel,
-          currentSourceVersionId: project.getCurrentSourceVersionId(),
-        }),
-      },
-      {includeUserId: true}
-    );
 
     this.props
       .handleClearPuzzle()
@@ -146,7 +131,10 @@ export default class VersionHistoryWithCommitsDialog extends React.Component {
             ...styles.defaultBody,
           }}
         >
-          <i className="fa fa-spinner fa-spin" style={{fontSize: '32px'}} />
+          <i
+            className="fa-solid fa-spinner fa-spin"
+            style={{fontSize: '32px'}}
+          />
         </div>
       );
     } else if (this.state.confirmingClearPuzzle) {

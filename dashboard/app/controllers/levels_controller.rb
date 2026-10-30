@@ -6,29 +6,28 @@ EMPTY_XML = '<xml></xml>'.freeze
 
 class LevelsController < ApplicationController
   include LevelsHelper
+  include Widget2Helper
   include ActiveSupport::Inflector
   before_action :authenticate_user!, except: [:show, :level_properties, :embed_level, :get_rubric, :get_serialized_maze]
-  before_action :require_levelbuilder_mode_or_test_env, except: [:show, :level_properties, :embed_level, :get_rubric, :get_serialized_maze]
+  before_action :require_levelbuilder_mode_or_test_env, except: [:show, :level_properties, :embed_level, :get_rubric, :get_serialized_maze, :extra_links]
   load_and_authorize_resource except: [:create]
 
-  before_action :set_level, only: [:show, :edit, :update, :destroy]
+  before_action :set_level, only: [:show, :edit, :update, :destroy, :build_quiz_questions]
 
   LEVELS_PER_PAGE = 30
 
   # All level types that can be requested via /levels/new
   LEVEL_CLASSES = [
+    Adaptive,
     Aichat,
     Ailab,
     Applab,
     Artist,
     Bounce,
     BubbleChoice,
-    Calc,
-    ContractMatch,
     Craft,
     CurriculumReference,
     Dancelab,
-    Eval,
     EvaluationMulti,
     External,
     ExternalLink,
@@ -53,6 +52,8 @@ class LevelsController < ApplicationController
     Poetry,
     PublicKeyCryptography,
     Pythonlab,
+    Quiz,
+    Sketchlab,
     StandaloneVideo,
     StarWarsGrid,
     Studio,
@@ -127,6 +128,19 @@ class LevelsController < ApplicationController
     @levels = @levels.left_joins(:user).where(levels: {user_id: params[:owner_id]}) if params[:owner_id].present?
   end
 
+  # GET /levels/by_name?name=...&type=...
+  # Exact-name lookup. The :name index on levels makes this O(1) and
+  # avoids a LIKE %name% scan when the caller already has the full name.
+  # `:type` is optional and narrows by Rails STI class name. Returns 200
+  # with an empty body on miss rather than 404, since "not yet created" is
+  # an expected path for callers that probe before POSTing.
+  def by_name
+    scope = @levels
+    scope = scope.where(type: params[:type]) if params[:type].present?
+    level = scope.find_by(name: params[:name])
+    render json: level ? level.summarize_for_edit : {}
+  end
+
   # GET /levels/1
   # GET /levels/1.json
   def show
@@ -139,15 +153,29 @@ class LevelsController < ApplicationController
       full_width: true,
       no_footer: @game&.no_footer?,
       small_footer: @game&.uses_small_footer? || @level&.enable_scrolling?,
-      has_i18n: @game.has_i18n?,
-      blocklyVersion: params[:blocklyVersion]
+      has_i18n: @game.has_i18n?
     )
   end
 
   # Get a JSON summary of a level's properties, used in modern labs that don't
-  # reload the page between level views.
+  # reload the page between level views. Returns a mapping of level ID to properties,
+  # in the case that the level contains sublevels (e.g. BubbleChoice).
   def level_properties
-    render json: @level.summarize_for_lab2_properties(nil)
+    # TODO: TEACH-1864 pass in unit_group_unit
+    properties = {}
+    additional_parameters = {}
+    # This action is open to signed out users and the parameter names a directory to
+    # read, so honor it only for a user who could edit a widget2.
+    if params[:widget2].present? && can?(:manage, :widget2)
+      additional_parameters[:widget2_start_sources] = params[:widget2]
+    end
+    properties[@level.id] = @level.summarize_for_lab2_properties(nil, nil, current_user, **additional_parameters)
+    if @level.is_a?(BubbleChoice)
+      @level.sublevels.each do |sublevel|
+        properties[sublevel.id] = sublevel.summarize_for_lab2_properties(nil, nil, current_user)
+      end
+    end
+    render json: properties
   end
 
   # GET /levels/1/edit
@@ -159,10 +187,15 @@ class LevelsController < ApplicationController
     bubble_choice_parents = BubbleChoice.parent_levels(@level.name)
     any_parent_in_script = bubble_choice_parents.any? {|pl| pl.script_levels.any?}
     @in_script = @level.script_levels.any? || any_parent_in_script
-    @standalone = ProjectsController::STANDALONE_PROJECTS.values.map {|h| h[:name]}.include?(@level.name)
+    @standalone = Policies::StandaloneProjects.project_level_name?(@level.name)
+    # The header label shows only in a simple-progress unit's header.
+    @show_header_label = @level.header_label.present? ||
+      @level.script_levels.map(&:script).compact.any?(&:simple_progress?)
     if @level.is_a? Applab
-      fb = FirebaseHelper.new('shared')
-      @dataset_library_manifest = fb.get_library_manifest
+      @dataset_library_manifest = DatablockStorageLibraryManifest.instance.library_manifest
+    end
+    if @level.is_a? Weblab2
+      @widget2_ids = get_widget2_ids
     end
   end
 
@@ -193,7 +226,8 @@ class LevelsController < ApplicationController
   # Action for using blockly workspace as a toolbox/startblock editor.
   # Expects params[:type] which can be either 'toolbox_blocks' or 'start_blocks'
   # Javalab also uses this route to edit starter code, and sets the type param
-  # to 'start_sources'
+  # to 'start_sources'.
+  # Widget2 also uses this route to edit widget2 starter code, with type "widget2_sources'.
   def edit_blocks
     type = params[:type]
     blocks_xml = @level.properties[type].presence || @level[type] || EMPTY_XML
@@ -239,6 +273,19 @@ class LevelsController < ApplicationController
 
     @is_start_mode = type == 'start_blocks'
 
+    show
+    render :show
+  end
+
+  # GET /levels/:id/build_quiz_questions
+  #
+  # Renders the lab2 show page, but with is_building_quiz_questions threaded
+  # through app_options (see LevelsHelper#lab2_options) so the
+  # question-building UI is shown instead of the quiz-taking UI.
+  def build_quiz_questions
+    return head :not_found unless @level.is_a?(Quiz)
+
+    level_view_options(@level.id, is_building_quiz_questions: true)
     show
     render :show
   end
@@ -297,25 +344,21 @@ class LevelsController < ApplicationController
     end
 
     update_level_params = level_params.to_h
-
-    # Parse the incoming level_data JSON so that it's stored in the database as a
-    # first-order member of the properties JSON, rather than simply as a string of
-    # JSON belonging to a single property.
-    update_level_params[:level_data] = JSON.parse(level_params[:level_data]) if level_params[:level_data]
-    # Update level data with validations, and remove from level properties.
-    # We can remove this once validations are read from level properties directly.
-    update_level_params[:level_data]["validations"] = JSON.parse(update_level_params[:validations]) if update_level_params[:validations]
-    update_level_params[:validations] = nil if level_params[:validations]
+    handle_json_params(update_level_params)
 
     @level.assign_attributes(update_level_params)
     @level.log_changes(current_user)
 
     if @level.save
       reset = !!params[:reset]
-      redirect = if reset
-                   params["redirect"] || level_url(@level, show_callouts: 1, reset: reset)
+      redirect = if params[:redirect_start_mode]
+                   edit_blocks_level_path(@level, :start_sources)
                  else
-                   params["redirect"] || level_url(@level, show_callouts: 1)
+                   if reset
+                     params["redirect"] ? params["redirect"] + "?reset=true" : level_url(@level, show_callouts: 1, reset: reset)
+                   else
+                     params["redirect"] || level_url(@level, show_callouts: 1)
+                   end
                  end
       render json: {redirect: redirect}
     else
@@ -335,6 +378,7 @@ class LevelsController < ApplicationController
     if @level.respond_to?(:validation)
       @level.validation = changes["validation"]
     end
+    @level.clear_lab2_starter_assets if @level.respond_to?(:clear_lab2_starter_assets)
     return update_properties(ignored_keys: ["validation"])
   end
 
@@ -351,6 +395,32 @@ class LevelsController < ApplicationController
     # We tend to respond with a redirect URL in this controller,
     # but it is not used in this case.
     render json: {redirect: level_url(@level)}
+  end
+
+  # PATCH /levels/:id/update_bubble_choice_settings
+  def update_bubble_choice_settings
+    changes = JSON.parse(request.body.read)
+    # Handle display_name
+    if @level.respond_to?(:display_name) || !@level.properties.key?("display_name")
+      @level.properties["display_name"] = changes["display_name"]
+    end
+
+    # Handle bubble_choice_description
+    if @level.respond_to?(:bubble_choice_description) || !@level.properties.key?("bubble_choice_description")
+      @level.properties["bubble_choice_description"] = changes["bubble_choice_description"]
+    end
+
+    # Handle thumbnail_url
+    if @level.respond_to?(:thumbnail_url) || !@level.properties.key?("thumbnail_url")
+      @level.properties["thumbnail_url"] = changes["thumbnail_url"]
+    end
+
+    @level.log_changes(current_user)
+    if @level.save
+      render json: {message: 'Level updated successfully', level: @level}, status: :ok
+    else
+      render json: {errors: @level.errors.full_messages}, status: :unprocessable_entity
+    end
   end
 
   # POST /levels
@@ -380,6 +450,7 @@ class LevelsController < ApplicationController
     # safely convert params to hash now so that if they are modified later, it
     # will not result in a ActionController::UnfilteredParameters error.
     create_level_params = level_params.to_h
+    handle_json_params(create_level_params)
 
     # Give platformization partners permission to edit any levels they create.
     editor_experiment = Experiment.get_editor_experiment(current_user)
@@ -392,7 +463,9 @@ class LevelsController < ApplicationController
     rescue ActiveRecord::RecordInvalid => exception
       render(status: :not_acceptable, plain: exception) && return
     end
-    if params[:do_not_redirect]
+    if params[:redirect_start_mode]
+      render json: {redirect: edit_blocks_level_path(@level, :start_sources)}
+    elsif params[:do_not_redirect]
       render json: @level
     else
       render json: {redirect: edit_level_path(@level)}
@@ -403,12 +476,20 @@ class LevelsController < ApplicationController
   # DELETE /levels/1.json
   def destroy
     result = @level.destroy
-    if result
-      flash.notice = "Deleted #{@level.name.inspect}"
-      redirect_to(params[:redirect] || levels_url)
+    if request.format.symbol == :json
+      if result
+        return render json: {redirect: levels_url}
+      else
+        return render status: :unprocessable_entity, plain: "Could not delete. Error(s): #{@level.errors.full_messages.join('. ')}"
+      end
     else
-      flash.alert = @level.errors.full_messages.join(". ")
-      redirect_to(edit_level_path(@level))
+      if result
+        flash.notice = "Deleted #{@level.name.inspect}"
+        redirect_to(params[:redirect] || levels_url)
+      else
+        flash.alert = @level.errors.full_messages.join(". ")
+        redirect_to(edit_level_path(@level))
+      end
     end
   end
 
@@ -421,10 +502,6 @@ class LevelsController < ApplicationController
         @game = Game.custom_artist
       elsif @type_class <= Studio
         @game = Game.custom_studio
-      elsif @type_class <= Calc
-        @game = Game.calc
-      elsif @type_class <= Eval
-        @game = Game.eval
       elsif @type_class <= Applab
         @game = Game.applab
       elsif @type_class <= Gamelab
@@ -457,6 +534,9 @@ class LevelsController < ApplicationController
         @game = Game.panels
       elsif @type_class == Weblab2
         @game = Game.weblab2
+        @widget2_ids = get_widget2_ids
+      elsif @type_class == Adaptive
+        @game = Game.adaptive
       end
       @level = @type_class.new
       render :edit
@@ -495,6 +575,111 @@ class LevelsController < ApplicationController
     )
     view_options(full_width: true)
     render 'levels/show'
+  end
+
+  # GET /levels/:id/extra_links
+  # Get the "extra links" for the level, for use by levelbuilders and project validators.
+  # Project validators can view a subset of the links/information.
+  # This is used by lab2 levels that cannot use the haml "extra links" box
+  # as that box will not refresh when changing levels.
+  def extra_links
+    links = {}
+
+    links[@level.name] = [{text: level_path(@level), url: level_url(@level)}]
+    links[@level.name] << {text: "#{level_path(@level)} (reset version history)", url: "#{level_url(@level)}?reset=true"}
+    if @level.level_concept_difficulty && !@level.level_concept_difficulty.concept_difficulties_as_string.empty?
+      links[@level.name] << {text: "LCD: #{@level.level_concept_difficulty.concept_difficulties_as_string}", url: ''}
+    end
+
+    if params[:scriptLevelId]
+      script_level = ScriptLevel.find_by(id: params[:scriptLevelId].to_i)
+    end
+
+    is_standalone_project = Policies::StandaloneProjects.project_level_name?(@level.name)
+
+    # Curriculum writers rarely need to edit standalone project levels, and accidental edits to these levels
+    # can be quite disruptive. As a workaround you can navigate directly to the edit url for these levels.
+    # We allow editing from the test environment to enable UI testing of the edit page.
+    if (Rails.application.config.levelbuilder_mode || rack_env?(:test)) && !is_standalone_project
+      can_edit_level = can? :edit, @level
+
+      if can_edit_level
+        links[@level.name] << {text: '[E]dit', url: edit_level_path(@level), access_key: 'e'}
+
+        if @level.channel_backed?
+          links[@level.name] << {text: "[s]tart", url: edit_blocks_level_path(@level, :start_sources), access_key: 's'}
+          links[@level.name] << {text: "e[x]emplar", url: edit_exemplar_level_path(@level), access_key: 'x'}
+
+          if @level.is_a?(Blockly)
+            links[@level.name] << {text: "[t]oolbox", url: edit_blocks_level_path(@level, :toolbox_blocks), access_key: 't'}
+          end
+        end
+
+        if @level.is_a?(Quiz)
+          links[@level.name] << {text: 'Build quiz questions', url: build_quiz_questions_level_path(@level)}
+        end
+      else
+        links[@level.name] << {text: '(Cannot edit)', url: ''}
+      end
+
+      if @level.is_a?(LevelGroup)
+        links["Sublevels"] = @level.levels.map {|sublevel| {text: sublevel.name, url: level_path(sublevel)}}
+      end
+
+      if project_template_level_name = @level.properties['project_template_level_name']
+        project_template_level = Level.find_by_name(project_template_level_name)
+        if project_template_level
+          links["Template Level"] = [
+            {text: project_template_level_name, url: level_path(project_template_level)}
+          ]
+          template_level_edit_link = can_edit_level ?
+            {text: 'Edit', url: edit_level_path(project_template_level)} :
+            {text: '(Cannot edit)', url: ''}
+          links["Template Level"] << template_level_edit_link
+        else
+          links["Template Level"] = [{text: "No template level found with name \"#{project_template_level_name}\"", url: ''}]
+        end
+      end
+    elsif script_level
+      links[@level.name] << {
+        text: 'edit on levelbuilder',
+        url: URI.join("https://levelbuilder-studio.code.org/", build_script_level_path(script_level)).to_s
+      }
+    end
+
+    script_level_path_links = []
+    script_levels = @level.script_levels.includes(:script)
+
+    script_levels.each do |sl|
+      script_level_path = build_script_level_path(sl)
+
+      script_level_path_links << {
+        script: sl.script.name,
+        path: script_level_path
+      }
+    end
+
+    parent_level_path_links = []
+    @level.levels_parent_levels&.each do |levels_parent_level|
+      parent_level_path_links << {
+        level_name: levels_parent_level.parent_level.name,
+        path: level_url(levels_parent_level.parent_level),
+        kind: levels_parent_level.kind,
+        position: levels_parent_level.position
+      }
+    end
+    # TODO: Not present here, but present in original extra links. Some of these can be handled on the client side.
+    # Anything project-specific should be handled via a separate API, as this controller has no context for projects.
+    # Gamelab show animation json, list contained levels, Blockly helpers, are not included yet as they are not needed yet.
+
+    render json: {
+      links: links,
+      can_clone: can?(:clone, @level),
+      can_delete: can?(:delete, @level),
+      level_name: @level.name,
+      script_level_path_links: script_level_path_links,
+      parent_level_path_links: parent_level_path_links
+    }
   end
 
   # Use callbacks to share common setup or constraints between actions.
@@ -545,6 +730,9 @@ class LevelsController < ApplicationController
 
       # Dance Party-specific
       {song_selection: []},
+
+      # Web Lab 2-specific
+      {available_ai_tutor_modes: []}
     ]
 
     # http://stackoverflow.com/questions/8929230/why-is-the-first-element-always-blank-in-my-rails-multi-select
@@ -558,7 +746,8 @@ class LevelsController < ApplicationController
       :helper_libraries,
       :block_pools,
       :available_poems,
-      :song_selection
+      :song_selection,
+      :available_ai_tutor_modes
     ]
     multiselect_params.each do |param|
       params[:level][param].delete_if(&:empty?) if params[:level][param].is_a? Array
@@ -572,6 +761,18 @@ class LevelsController < ApplicationController
 
     permitted_params.concat(Level.permitted_params)
     params[:level].permit(permitted_params)
+  end
+
+  private def handle_json_params(level_params)
+    # Parse a few specific JSON fields used by modern (Lab2) labs so that they are
+    # stored in the database as a first-order member of the properties JSON, rather
+    # than simply as a string of JSON belonging to a single property.
+    [:level_data, :aichat_settings, :validations, :panels, :predict_settings, :product_tours, :exemplar_settings, :ai_tutor_prompt_settings, :widget2].each do |key|
+      level_params[key] = JSON.parse(level_params[key]) if level_params[key]
+    end
+    # Delete validations from level data if present. We'll use the validations in level properties instead.
+    level_params[:level_data].delete('validations') if level_params[:level_data]&.key?('validations')
+    level_params
   end
 
   private def set_solution_image_url(level)
@@ -595,13 +796,13 @@ class LevelsController < ApplicationController
       {
         study: 'level-save-error',
         # Make it easy to count most frequent field name in which errors occur.
-        event: level.errors.keys.first,
+        event: level.errors.attribute_names.first,
         # Level ids are different on levelbuilder, so use the level name. The
         # level name can be joined on, against the levels table, to determine the
         # level type or other level properties.
         data_string: level.name,
         data_json: {
-          errors: level.errors.to_h,
+          errors: level.errors.to_hash,
           # User ids are different on levelbuilder, so use the email.
           user_email: current_user.email,
         }.to_json

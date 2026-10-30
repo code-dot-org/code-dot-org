@@ -1,21 +1,21 @@
 import classNames from 'classnames';
-import {connect} from 'react-redux';
-import React from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
-import commonStyles from '../commonStyles';
-import color from '../util/color';
-import {singleton as studioApp} from '../StudioApp';
+import React from 'react';
+import {connect} from 'react-redux';
+
 import project from '../code-studio/initApp/project';
-import VisualizationOverlay from '../templates/VisualizationOverlay';
+import commonStyles from '../commonStyles';
+import MakerStatusOverlay from '../maker/ui/MakerStatusOverlay';
+import {singleton as studioApp} from '../StudioApp';
 import {
   VISUALIZATION_DIV_ID,
   isResponsiveFromState,
 } from '../templates/ProtectedVisualizationDiv';
-import * as applabConstants from './constants';
+import VisualizationOverlay from '../templates/VisualizationOverlay';
+
 import AppLabCrosshairOverlay from './AppLabCrosshairOverlay';
 import AppLabTooltipOverlay from './AppLabTooltipOverlay';
-import MakerStatusOverlay from '../lib/kits/maker/ui/MakerStatusOverlay';
+import * as applabConstants from './constants';
 
 class Visualization extends React.Component {
   static propTypes = {
@@ -50,6 +50,13 @@ class Visualization extends React.Component {
   };
 
   render() {
+    const {
+      isResponsive,
+      isShareView,
+      playspacePhoneFrame,
+      isRunning,
+      isPaused,
+    } = this.props;
     const appWidth = applabConstants.getAppWidth(this.props);
     const appHeight =
       applabConstants.APP_HEIGHT - applabConstants.FOOTER_HEIGHT;
@@ -58,17 +65,16 @@ class Visualization extends React.Component {
       <div
         id={VISUALIZATION_DIV_ID}
         className={this.getVisualizationClassNames()}
-        style={[
-          !this.props.isResponsive && {
+        data-notranslate="true"
+        style={combineStyles(
+          !isResponsive && {
             ...styles.nonResponsive,
             width: appWidth, // Required for the project share page.
           },
-          this.props.isShareView && styles.share,
-          this.props.playspacePhoneFrame && styles.phoneFrame,
-          this.props.playspacePhoneFrame &&
-            this.props.isRunning &&
-            styles.phoneFrameRunning,
-        ]}
+          isShareView && styles.share,
+          playspacePhoneFrame && styles.phoneFrame,
+          playspacePhoneFrame && isRunning && styles.phoneFrameRunning
+        )}
       >
         <div id="divApplab" className="appModern" />
         <div
@@ -87,16 +93,18 @@ class Visualization extends React.Component {
           handleTryAgain={this.handleTryAgain}
         />
         <div
-          style={[
-            {...styles.screenBlock, ...{width: appWidth}},
-            !(this.props.isPaused && this.props.playspacePhoneFrame) &&
-              commonStyles.hidden,
-          ]}
+          style={combineStyles(
+            {...styles.screenBlock, width: appWidth},
+            !(isPaused && playspacePhoneFrame) && commonStyles.hidden
+          )}
         />
       </div>
     );
   }
 }
+
+const combineStyles = (...styles) =>
+  Object.assign({}, ...styles.filter(Boolean));
 
 const styles = {
   nonResponsive: {
@@ -108,10 +116,10 @@ const styles = {
   },
   phoneFrame: {
     marginBottom: 0,
-    borderColor: color.lighter_gray,
+    borderColor: 'var(--background-neutral-quinary)',
   },
   phoneFrameRunning: {
-    borderColor: color.charcoal,
+    borderColor: 'var(--background-neutral-octonary)',
   },
   screenBlock: {
     backgroundColor: 'rgba(255, 255, 255, 0.5)',
@@ -138,4 +146,4 @@ export default connect(state => ({
   playspacePhoneFrame: state.pageConstants.playspacePhoneFrame,
   isResponsive: isResponsiveFromState(state),
   widgetMode: state.pageConstants.widgetMode,
-}))(Radium(Visualization));
+}))(Visualization);

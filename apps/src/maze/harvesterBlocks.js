@@ -2,10 +2,13 @@
  * Blocks specific to Harvester
  */
 
-var msg = require('./locale');
+import CdoFieldDropdown from '@cdo/apps/blockly/addons/cdoFieldDropdown';
+import {INFINITE_LOOP_TRAP} from '@cdo/apps/blockly/utils';
+
 var blockUtils = require('../block_utils');
 var BlockStyles = require('../blockly/constants').BlockStyles;
-var BlockColors = require('../blockly/constants').BlockColors;
+
+var msg = require('./locale');
 
 const CROPS = ['corn', 'pumpkin', 'lettuce'];
 
@@ -17,11 +20,7 @@ function addIfAtSpecificCropBlock(blockly, generator, crop) {
   blockly.Blocks[`harvester_ifAt${capitalizeFirstLetter(crop)}`] = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.LOGIC,
-        BlockStyles.LOGIC
-      );
+      this.setStyle(BlockStyles.LOGIC);
       this.appendDummyInput().appendField(
         [msg.ifCode(), msg.at(), msg[crop]()].join(' ')
       );
@@ -46,11 +45,7 @@ function addIfAtSpecificCropElseBlock(blockly, generator, crop) {
   blockly.Blocks[`harvester_ifAt${capitalizeFirstLetter(crop)}Else`] = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.LOGIC,
-        BlockStyles.LOGIC
-      );
+      this.setStyle(BlockStyles.LOGIC);
       this.appendDummyInput().appendField(
         [msg.ifCode(), msg.at(), msg[crop]()].join(' ')
       );
@@ -77,11 +72,7 @@ function addUntilAtSpecificCropBlock(blockly, generator, crop) {
   blockly.Blocks[`harvester_untilAt${capitalizeFirstLetter(crop)}`] = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.LOOP,
-        BlockStyles.LOOP
-      );
+      this.setStyle(BlockStyles.LOOP);
       this.appendDummyInput().appendField(
         [msg.repeatUntil(), msg.at(), msg[crop]()].join(' ')
       );
@@ -95,7 +86,7 @@ function addUntilAtSpecificCropBlock(blockly, generator, crop) {
   generator[`harvester_untilAt${capitalizeFirstLetter(crop)}`] = function () {
     var atCrop = `Maze.at${capitalizeFirstLetter(crop)}('block_id_${this.id}')`;
     var branch = generator.statementToCode(this, 'DO');
-    branch = Blockly.getInfiniteLoopTrap() + branch;
+    branch = INFINITE_LOOP_TRAP + branch;
     var code = `while (!${atCrop}) {\n${branch}}\n`;
     return code;
   };
@@ -105,11 +96,7 @@ function addIfSpecificCropHasBlock(blockly, generator, crop) {
   blockly.Blocks[`harvester_ifHas${capitalizeFirstLetter(crop)}`] = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.LOGIC,
-        BlockStyles.LOGIC
-      );
+      this.setStyle(BlockStyles.LOGIC);
       this.appendDummyInput().appendField(
         [msg.ifCode(), msg[`has${crop}`]()].join(' ')
       );
@@ -134,11 +121,7 @@ function addIfSpecificCropHasElseBlock(blockly, generator, crop) {
   blockly.Blocks[`harvester_ifHas${capitalizeFirstLetter(crop)}Else`] = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.LOGIC,
-        BlockStyles.LOGIC
-      );
+      this.setStyle(BlockStyles.LOGIC);
       this.appendDummyInput().appendField(
         [msg.ifCode(), msg[`has${crop}`]()].join(' ')
       );
@@ -165,11 +148,7 @@ function addWhileSpecificCropHasBlock(blockly, generator, crop) {
   blockly.Blocks[`harvester_whileHas${capitalizeFirstLetter(crop)}`] = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.LOOP,
-        BlockStyles.LOOP
-      );
+      this.setStyle(BlockStyles.LOOP);
       this.appendDummyInput().appendField(
         [msg.whileMsg(), msg[`has${crop}`]()].join(' ')
       );
@@ -185,7 +164,7 @@ function addWhileSpecificCropHasBlock(blockly, generator, crop) {
       this.id
     }')`;
     var branch = generator.statementToCode(this, 'DO');
-    branch = Blockly.getInfiniteLoopTrap() + branch;
+    branch = INFINITE_LOOP_TRAP + branch;
     var code = `while (${argument}) {\n${branch}}\n`;
     return code;
   };
@@ -195,11 +174,7 @@ function addUntilSpecificCropHasBlock(blockly, generator, crop) {
   blockly.Blocks[`harvester_untilHas${capitalizeFirstLetter(crop)}`] = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.LOOP,
-        BlockStyles.LOOP
-      );
+      this.setStyle(BlockStyles.LOOP);
       this.appendDummyInput().appendField(
         [msg.repeatUntil(), msg[`has${crop}`]()].join(' ')
       );
@@ -215,7 +190,7 @@ function addUntilSpecificCropHasBlock(blockly, generator, crop) {
       this.id
     }')`;
     var branch = generator.statementToCode(this, 'DO');
-    branch = Blockly.getInfiniteLoopTrap() + branch;
+    branch = INFINITE_LOOP_TRAP + branch;
     var code = `while (!${argument}) {\n${branch}}\n`;
     return code;
   };
@@ -261,14 +236,10 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.harvester_ifAtCrop = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.LOGIC,
-        BlockStyles.LOGIC
-      );
+      this.setStyle(BlockStyles.LOGIC);
       this.appendDummyInput().appendField([msg.ifCode(), msg.at()].join(' '));
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(AT_OPTIONS),
+        new CdoFieldDropdown(AT_OPTIONS),
         'LOC'
       );
       this.setInputsInline(true);
@@ -288,14 +259,10 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.harvester_ifAtCropElse = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.LOGIC,
-        BlockStyles.LOGIC
-      );
+      this.setStyle(BlockStyles.LOGIC);
       this.appendDummyInput().appendField([msg.ifCode(), msg.at()].join(' '));
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(AT_OPTIONS),
+        new CdoFieldDropdown(AT_OPTIONS),
         'LOC'
       );
       this.setInputsInline(true);
@@ -317,16 +284,12 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.harvester_untilAtCrop = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.LOOP,
-        BlockStyles.LOOP
-      );
+      this.setStyle(BlockStyles.LOOP);
       this.appendDummyInput().appendField(
         [msg.repeatUntil(), msg.at()].join(' ')
       );
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(AT_OPTIONS),
+        new CdoFieldDropdown(AT_OPTIONS),
         'LOC'
       );
       this.setInputsInline(true);
@@ -339,7 +302,7 @@ exports.install = function (blockly, blockInstallOptions) {
   generator.harvester_untilAtCrop = function () {
     var atCrop = `Maze.at${this.getFieldValue('LOC')}('block_id_${this.id}')`;
     var branch = generator.statementToCode(this, 'DO');
-    branch = Blockly.getInfiniteLoopTrap() + branch;
+    branch = INFINITE_LOOP_TRAP + branch;
     var code = `while (!${atCrop}) {\n${branch}}\n`;
     return code;
   };
@@ -347,14 +310,10 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.harvester_ifHasCrop = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.LOGIC,
-        BlockStyles.LOGIC
-      );
+      this.setStyle(BlockStyles.LOGIC);
       this.appendDummyInput().appendField(msg.ifCode());
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(HAS_OPTIONS),
+        new CdoFieldDropdown(HAS_OPTIONS),
         'LOC'
       );
       this.setInputsInline(true);
@@ -376,14 +335,10 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.harvester_ifHasCropElse = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.LOGIC,
-        BlockStyles.LOGIC
-      );
+      this.setStyle(BlockStyles.LOGIC);
       this.appendDummyInput().appendField(msg.ifCode());
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(HAS_OPTIONS),
+        new CdoFieldDropdown(HAS_OPTIONS),
         'LOC'
       );
       this.setInputsInline(true);
@@ -407,14 +362,10 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.harvester_whileHasCrop = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.LOOP,
-        BlockStyles.LOOP
-      );
+      this.setStyle(BlockStyles.LOOP);
       this.appendDummyInput().appendField(msg.whileMsg());
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(HAS_OPTIONS),
+        new CdoFieldDropdown(HAS_OPTIONS),
         'LOC'
       );
       this.setInputsInline(true);
@@ -429,7 +380,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.id
     }')`;
     var branch = generator.statementToCode(this, 'DO');
-    branch = Blockly.getInfiniteLoopTrap() + branch;
+    branch = INFINITE_LOOP_TRAP + branch;
     var code = `while (${argument}) {\n${branch}}\n`;
     return code;
   };
@@ -437,14 +388,10 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.harvester_untilHasCrop = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.LOOP,
-        BlockStyles.LOOP
-      );
+      this.setStyle(BlockStyles.LOOP);
       this.appendDummyInput().appendField(msg.repeatUntil());
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(HAS_OPTIONS),
+        new CdoFieldDropdown(HAS_OPTIONS),
         'LOC'
       );
       this.setInputsInline(true);
@@ -459,7 +406,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.id
     }')`;
     var branch = generator.statementToCode(this, 'DO');
-    branch = Blockly.getInfiniteLoopTrap() + branch;
+    branch = INFINITE_LOOP_TRAP + branch;
     var code = `while (!${argument}) {\n${branch}}\n`;
     return code;
   };

@@ -1,0 +1,14 @@
+name 'ai-and-algorithmic-decisions-preassessment-q10_2026'
+
+question 'You are designing a feature where tapping a heart icon either likes or unlikes a post. You decide to sketch a flowchart before writing any JavaScript. Why?'
+
+right 'The flowchart is a behavioral spec — it shows what should happen for every user action before any code is written.'
+wrong 'Flowcharts are required by the browser before code can run.'
+wrong 'Flowcharts replace the need for code entirely.'
+wrong 'Flowcharts make the app load faster.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 5
+MARKDOWN

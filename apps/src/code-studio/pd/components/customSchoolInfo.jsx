@@ -2,9 +2,11 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {FormGroup, ControlLabel, HelpBlock} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import Select from 'react-select';
+
+import {STATES} from '../../../geographyConstants';
 import {ButtonList} from '../form_components/ButtonList.jsx';
 import FieldGroup from '../form_components/FieldGroup';
-import {STATES} from '../../../geographyConstants';
+
 import {SchoolInfoPropType} from './constants';
 
 const VALIDATION_STATE_ERROR = 'error';

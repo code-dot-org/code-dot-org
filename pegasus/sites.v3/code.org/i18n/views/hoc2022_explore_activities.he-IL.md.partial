@@ -1,7 +1,0 @@
-{{ featured_tutorial, title: "שלום עולם: חלל" body: "צרו סצנות בין-גלקטיות עם דמויות וצלילים שיגרמו לכם להגיד, "\שלום עולמות\", image: "/images/hoc2022-hello-world-space.png", url: "https://studio.code.org/s/hello-world-space-2022/reset" }}
-
-{{ featured_tutorial, title: "NASA's Space Jam" צרו מערכת שמש ממש מגניבה, תוך כדי שאתם לומדים על מוזיקה, אסטרונומיה, וקידוד תוך כדי התהליך!"
-
-{{ featured_tutorial, title: "מלחמת הכוכבים" body: " למדו לתכנת דרואידים, וצרו משחק מלחמת הכוכבים משלכם בגלקסיה רחוקה, רחוקה" ", image: "/shared/images/courses/logo_tall_starwars.jpg", url: "https://code.org/starwars" }}
-
-{{ featured_tutorial, title: "SciGirls Code Quest", body: "בהרפתקת קידוד זו, תקחו את Subby הצוללת לאתגרים תת-מימיים" image: "/images/hoc2022-scigirls-code-quest.png", url: "https://pbskids.org/scigirls/games/code-quest" }}

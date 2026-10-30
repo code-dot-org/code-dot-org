@@ -1,86 +1,76 @@
+import {fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
-import {expect} from '../../../util/reconfiguredChai';
+
 import TextConsole, {
   AUTO_CLOSE_TIME,
 } from '@cdo/apps/p5lab/spritelab/TextConsole';
-import {mount} from 'enzyme';
-import sinon from 'sinon';
 
 describe('Sprite Lab Text Console', () => {
-  let wrapper;
+  let rerender;
 
   beforeEach(() => {
-    wrapper = mount(<TextConsole consoleMessages={[]} />);
+    ({rerender} = render(<TextConsole consoleMessages={[]} />));
   });
 
   it('is initially closed', () => {
-    expect(wrapper.state().open).to.be.false;
+    expect(screen.getByText('+', {selector: 'button'})).not.toBeVisible();
   });
 
   it('and the button text is +', () => {
-    const button = wrapper.findWhere(node => {
-      return node.type() === 'button' && node.text() === '+';
-    });
-    expect(button).to.have.lengthOf(1);
+    expect(screen.getByText('+', {selector: 'button'})).toBeInTheDocument();
   });
 
   describe('after a line is added', () => {
-    let clock;
     beforeEach(() => {
-      clock = sinon.useFakeTimers();
-      wrapper.setProps({consoleMessages: ['hello world2']});
+      jest.useFakeTimers();
+      rerender(<TextConsole consoleMessages={['hello world2']} />);
     });
 
     afterEach(() => {
-      clock.restore();
+      jest.useRealTimers();
     });
 
     it('opens', () => {
-      expect(wrapper.state().open).to.be.true;
+      expect(screen.getByRole('button', {name: '-'})).toBeInTheDocument();
     });
 
     it('the button text is -', () => {
-      const button = wrapper.findWhere(node => {
-        return node.type() === 'button' && node.text() === '-';
-      });
-      expect(button).to.have.lengthOf(1);
+      expect(screen.getByRole('button', {name: '-'})).toBeInTheDocument();
     });
 
     it('closes after AUTO_CLOSE_TIME ms', () => {
-      clock.tick(AUTO_CLOSE_TIME);
-      expect(wrapper.state().open).to.be.false;
-
-      const button = wrapper.findWhere(node => {
-        return node.type() === 'button' && node.text() === '+';
-      });
-      expect(button).to.have.lengthOf(1);
+      expect(screen.getByRole('button', {name: '-'})).toBeInTheDocument();
+      jest.advanceTimersByTime(AUTO_CLOSE_TIME);
+      expect(screen.queryByRole('button', {name: '-'})).not.toBeInTheDocument();
+      expect(screen.getByRole('button', {name: '+'})).toBeInTheDocument();
     });
 
     describe('and the console is toggled', () => {
+      let toggleButton;
+
       beforeEach(() => {
-        wrapper.instance().toggleConsole();
+        toggleButton = screen.getByRole('button');
+        fireEvent.click(toggleButton);
       });
 
       it('closes', () => {
-        expect(wrapper.state().open).to.be.false;
+        expect(screen.getByRole('button', {name: '+'})).toBeInTheDocument();
       });
 
       it('the button becomes visible', () => {
-        expect(wrapper.instance().getButtonStyle().display).to.not.equal(
-          'none'
-        );
+        expect(screen.getByRole('button')).toBeVisible();
       });
 
       it('opens when toggled again', () => {
-        wrapper.instance().toggleConsole(AUTO_CLOSE_TIME);
-        expect(wrapper.state().open).to.be.true;
+        fireEvent.click(toggleButton);
+        expect(screen.getByRole('button', {name: '-'})).toBeInTheDocument();
       });
 
       it('opens and stays open when the button is clicked', () => {
-        wrapper.instance().toggleConsole();
-        expect(wrapper.state().open).to.be.true;
-        clock.tick(AUTO_CLOSE_TIME * 2);
-        expect(wrapper.state().open).to.be.true;
+        fireEvent.click(toggleButton);
+        expect(screen.getByRole('button', {name: '-'})).toBeInTheDocument();
+        jest.advanceTimersByTime(AUTO_CLOSE_TIME * 2);
+        expect(screen.getByRole('button', {name: '-'})).toBeInTheDocument();
       });
     });
   });

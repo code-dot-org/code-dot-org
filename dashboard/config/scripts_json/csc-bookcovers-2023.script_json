@@ -4,20 +4,21 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "curriculum_umbrella": "CSC",
+      "content_area": "curriculum_k_5",
+      "curriculum_umbrella": "CSC K-5",
       "hideable_lessons": true,
-      "is_course": true,
       "is_migrated": true,
+      "show_calendar": true,
       "tts": true,
-      "version_year": "2023"
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
-    "family_name": "csc-bookcovers",
-    "serialized_at": "2023-10-24 20:46:15 UTC",
-    "published_state": "stable",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "family_name": null,
+    "serialized_at": "2025-04-03 01:05:44 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csc-bookcovers-2023"
     }
@@ -81,7 +82,7 @@
       "relative_position": 3,
       "properties": {
         "overview": "In this lesson, students will use the skills they learned in the first lesson to make an interactive book cover for a book of their choice. They will warm with a spiraled review of some of the coding blocks needed. Then students will be instructed to code a Sprite Lab project step by step that includes the title, author, main characters, setting and summary of a book. Next class, students will present their work to their classmates.\n\nNote that this is a project progression, meaning student code will follow them from one level to the next. Encourage students to press “Run” on each level to save their code before progressing to the next level.",
-        "preparation": "- Play through the levels and review the lesson <a href=\"https://docs.google.com/document/d/1r7dnygat_SH_us1TWYil-Bx5ulROZ2PDbF-Njcz27RM/template/preview\" target=\"_blank\">slides</a>.\n- Decide on pacing between student work time and whole group instruction.\n- It may be helpful to make your own book cover to share with students.\n- Be sure students have the planning guide they used to plan their digital book cover in the previous lesson.\n\n##### Optional\n- Familiarize yourself with how to upload custom sprite costumes and backgrounds with this <a href=\"https://youtu.be/CHipUGfL_0M\" target=\"_blank\">video</a>.",
+        "preparation": "- Play through the levels and review the lesson <a href=\"https://docs.google.com/presentation/d/1GTaZX9z0b-dwk6Z48TSwqwhjZ9pO9Onk7w8n9xNt_Zk/template/preview\" target=\"_blank\">slides</a>.\n- Decide on pacing between student work time and whole group instruction.\n- It may be helpful to make your own book cover to share with students.\n- Be sure students have the planning guide they used to plan their digital book cover in the previous lesson.\n\n##### Optional\n- Familiarize yourself with how to upload custom sprite costumes and backgrounds with this <a href=\"https://youtu.be/CHipUGfL_0M\" target=\"_blank\">video</a>.",
         "student_overview": "In this lesson, you will code your own digital book cover. First, you will select the background and characters. Then, you will program the characters to introduce themselves. And you'll finish by including the summary of the book when you press the up arrow. You can be very creative by drawing your own sprites, using some from the library or even uploading your own images. \n\nYou will follow the plan you designed last class. Follow the directions in each level carefully. In this project, your code will follow you from level to level. \nNext class, you will present your work."
       },
       "seeding_key": {
@@ -1907,7 +1908,7 @@
       }
     },
     {
-      "name": "Book Cover",
+      "name": "Book Covers",
       "url": "https://docs.google.com/presentation/d/1GTaZX9z0b-dwk6Z48TSwqwhjZ9pO9Onk7w8n9xNt_Zk/template/preview",
       "key": "book_cover",
       "properties": {

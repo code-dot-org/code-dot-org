@@ -1,0 +1,28 @@
+name 'computer-systems-lesson3-level5a_v2-2025'
+title 'Wearable Technology'
+description 'Discover how engineers create smart devices that integrate with the body and everyday life.'
+display_name 'Wearable Technology'
+bubble_choice_description 'Discover how engineers create smart devices that integrate with the body and everyday life.'
+thumbnail_url 'https://images.code.org/fc3e310f2a251c9087b228640fd14fce-Wearable-Technology.png'
+
+markdown <<MARKDOWN
+# Wearable Technology
+
+Discover how engineers create smart devices that integrate with the body and everyday life.
+
+As you watch, be prepared to reflect on the following in the next activity:
+
+- What kind of hardware components are used by people in this career?  
+- What kind of troubleshooting might they need to do? Put another way, what kinds of bugs could they run into?  
+
+**Note**: This video opens in a new tab ⧉.  
+
+<div style="text-align: center; margin-top: 20px;">
+  <a href="https://docs.google.com/presentation/d/1IGiJi1HiD-pGHOvnEhdkCVR54ruFQH8PRqLQlkFT-WI/edit?slide=id.g2694c47731d_3_332#slide=id.g2694c47731d_3_332" target="_blank" rel="noopener noreferrer">
+    <img src="https://images.code.org/fc3e310f2a251c9087b228640fd14fce-Wearable-Technology.png" 
+         alt="YouTube Video Thumbnail" 
+         style="width: 80%; max-width: 600px; border-radius: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);">
+  </a>
+</div>
+
+MARKDOWN

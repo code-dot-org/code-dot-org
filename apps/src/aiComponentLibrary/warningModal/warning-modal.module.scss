@@ -1,0 +1,19 @@
+.chatWarningModal {
+  max-height: calc(95vh - 100px);
+  overflow: hidden;
+
+  > div:nth-of-type(2) {
+    flex: 1 1 auto;
+    min-height: 0;
+    max-height: none;
+    overflow: auto;
+    align-self: stretch;
+  }
+}
+
+.warningContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: start;
+}

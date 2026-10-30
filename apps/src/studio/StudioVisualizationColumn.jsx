@@ -1,22 +1,25 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+
+import SwipePrompt from '@cdo/apps/templates/SwipePrompt';
+
+import ArrowButtons from '../templates/ArrowButtons';
+import CrosshairOverlay from '../templates/CrosshairOverlay';
+import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
+import TooltipOverlay, {coordinatesProvider} from '../templates/TooltipOverlay';
+import VisualizationOverlay from '../templates/VisualizationOverlay';
+
 var msg = require('@cdo/locale');
 
-var GameButtons = require('../templates/GameButtons').default;
 var BelowVisualization = require('../templates/BelowVisualization');
-import ArrowButtons from '../templates/ArrowButtons';
-import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
-import VisualizationOverlay from '../templates/VisualizationOverlay';
-import CrosshairOverlay from '../templates/CrosshairOverlay';
-import TooltipOverlay, {coordinatesProvider} from '../templates/TooltipOverlay';
-import SwipePrompt from '@cdo/apps/templates/SwipePrompt';
+var GameButtons = require('../templates/GameButtons').default;
 
 var StudioVisualizationColumn = function (props) {
   return (
     <span>
       <ProtectedVisualizationDiv>
         <SwipePrompt />
-        <svg version="1.1" id="svgStudio" />
+        <svg id="svgStudio" />
         <VisualizationOverlay width={400} height={400}>
           <CrosshairOverlay />
           <TooltipOverlay

@@ -1,11 +1,19 @@
 /**
  * @file Main entry point for scripts used on all level editing pages.
  */
-import _ from 'lodash';
-import codemirror from 'codemirror';
-import copyToClipboard from '@cdo/apps/util/copyToClipboard';
-import {convertXmlToBlockly} from '@cdo/apps/templates/instructions/utils';
 import $ from 'jquery';
+import _ from 'lodash';
+
+import {
+  getProjectXml,
+  removeIdsFromBlocks,
+} from '@cdo/apps/blockly/addons/cdoXml';
+import {loadBlocksToWorkspace} from '@cdo/apps/blockly/utils';
+import initializeCodeMirror6 from '@cdo/apps/code-studio/initializeCodeMirror6';
+// Injects the raw properties editor onto Lab2 Sprite Lab level edit pages.
+import '@cdo/apps/code-studio/spriteLab2ExtraProperties';
+import {convertXmlToBlockly} from '@cdo/apps/templates/instructions/utils';
+import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 
 $(document).ready(initPage);
 
@@ -24,7 +32,7 @@ function initPage() {
 
 window.levelbuilder = window.levelbuilder || {};
 _.extend(window.levelbuilder, {
-  initializeCodeMirror: require('@cdo/apps/code-studio/initializeCodeMirror'),
+  initializeCodeMirror6: initializeCodeMirror6,
   initializeBlockPreview: require('@cdo/apps/code-studio/initializeBlockPreview'),
   jsonEditor: require('@cdo/apps/code-studio/jsonEditor'),
   acapela: require('@cdo/apps/code-studio/acapela'),
@@ -40,18 +48,22 @@ window.levelbuilder.installBlocks = function (app, blockly, options) {
 };
 
 window.levelbuilder.copyWorkspaceToClipboard = function () {
-  const str = Blockly.Xml.domToPrettyText(
-    Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)
-  );
+  const workspaceXml = getProjectXml(Blockly.mainBlockSpace);
+  removeIdsFromBlocks(workspaceXml);
+
+  const str = Blockly.Xml.domToPrettyText(workspaceXml);
   copyToClipboard(str);
   localStorage.setItem('blockXml', str);
 };
 
 window.levelbuilder.copySelectedBlockToClipboard = function () {
   if (Blockly.selected) {
-    const str = Blockly.Xml.domToPrettyText(
-      Blockly.Xml.blockToDom(Blockly.selected)
-    );
+    const xmlContainer = document.createElementNS('', 'xml');
+    const blockElement = Blockly.Xml.blockToDom(Blockly.selected);
+    xmlContainer.appendChild(blockElement);
+    removeIdsFromBlocks(xmlContainer);
+
+    const str = Blockly.Xml.domToPrettyText(xmlContainer);
     copyToClipboard(str);
     localStorage.setItem('blockXml', str);
   }
@@ -60,20 +72,13 @@ window.levelbuilder.copySelectedBlockToClipboard = function () {
 window.levelbuilder.pasteBlocksToWorkspace = function () {
   let str = localStorage.getItem('blockXml');
 
-  if (str.startsWith('<block') && str.endsWith('</block>')) {
-    // If a single block has been copied, wrap it in <xml></xml>
-    str = `<xml>${str}</xml>`;
-  }
   if (!(str.startsWith('<xml') && str.endsWith('</xml>'))) {
     // str is not valid block xml.
     return;
   }
 
-  Blockly.cdoUtils.loadBlocksToWorkspace(Blockly.mainBlockSpace, str);
+  loadBlocksToWorkspace(Blockly.mainBlockSpace, str);
 };
-
-// TODO: Remove when global `CodeMirror` is no longer required.
-window.CodeMirror = codemirror;
 
 // TODO: Extract .js from _authored_hints.haml and _instructions.haml, then remove this
 window.convertXmlToBlockly = convertXmlToBlockly;

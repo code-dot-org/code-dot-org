@@ -1,0 +1,149 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-02-20T06:03:15.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Individual Ids",
+    "long_instructions": "# Individual Ids\r\n\r\nYou can also use the `id` attribute to single out just one element for a rule-set.  \r\n\r\n# Do This\r\n\r\n1) Look at the image element with the `<img id=\"notes\" src=\"Raseone-Music.png\" alt=\"music notes\">` tag, and notice the `id` attribute.\r\n* In `style.css`, look at the rule-set with the `#notes` selector.  Notice how it uses a `#` instead of a period.\r\n* Add a new image into the page from the available files, and give it its own style.\r\n\r\n::: details [Help & Tips]\r\n- [<i class=\"fa-regular fa-map\"></i> Classes](https://studio.code.org/courses/csd-2024/guides/classes)\r\n- [<i class=\"fa-solid fa-book\"></i> Layout Properties](https://studio.code.org/courses/csd-2024/guides/layout-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Body Styling](https://studio.code.org/courses/csd-2024/guides/body-styling)\r\n- [<i class=\"fa-solid fa-book\"></i> Images in HTML](https://studio.code.org/courses/csd-2024/guides/images-in-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Text Properties](https://studio.code.org/courses/csd-2024/guides/text-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Creative Commons Search](https://studio.code.org/courses/csd-2024/guides/creative-commons-search)\r\n- [<i class=\"fa-solid fa-book\"></i> Style Sheets](https://studio.code.org/courses/csd-2024/guides/style-sheets)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Lists](https://studio.code.org/courses/csd-2024/guides/lists)\r\n- [<i class=\"fa-solid fa-book\"></i> Headings and Paragraphs](https://studio.code.org/courses/csd-2024/guides/headings-and-paragraphs)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Tags](https://studio.code.org/courses/csd-2024/guides/html-tags)\r\n- [<i class=\"fa-solid fa-book\"></i> Debugging in HTML](https://studio.code.org/courses/csd-2022/guides/debugging-html)\r\n:::",
+    "bubble_choice_description": "Learn how to use the id attribute to give  a style to a single element.",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\" type=\"text/css\" />\n    <link href=\"https://fonts.googleapis.com/css?family=Beth+Ellen&display=swap\" rel=\"stylesheet\">\n  </head>\n\n  <body>\n    <h1>Musical Instruments</h1>\n    <h2>A Guide</h2>\n    <img id=\"notes2\" src=\"extranotes2.png\" alt=\"music notes\"/>\n    <img id=\"notes\" src=\"Raseone-Music.png\" alt=\"music notes\">\n    <h6>Music is a beautiful piece of art that so  many people around the world love listening to. But sometimes, rather than listen to the music, we want to be the ones creating it. But with so many instruments out there, it can be hard to choose! So this website is here to hopefully make that choice a lot easier.</h6>\n\n\n\n    <h3>Woodwinds</h3>\n    <img src=\"clarinets.png\" alt=\"clarinets\">\n    <p>Woodwind instruments used to all be made out of wood, hence the name woodwinds. Nowadays, that has changed, but the idea of them has not. Woodwinds are typically these tube like instruments that you play by blowing air into its mouthpiece. And you can change the pitch by covering the different holes on them. Many woodwinds need a thin piece of wood called a reed to blow on and have it vibrate to create a sound. Many common woodwinds include clarinets, saxophones, oboes, bassoons, and flutes.  </p>\n\n    <h5>Alexander Lesnitsky, pixabay, Pixabay License</h5> <br>\n\n    <h3>Brass</h3>\n    <img src=\"high-brass.jpg\" alt=\"high brass\">\n    <p>Brass instruments, as the name suggests are typically made out of brass and have valves or slides to help change pitch. Brass instruments are a group of instruments known as lip vibrated instruments. This means that players vibrate their lips against a cup mouthpiece to produce a sound out of the bell shape ends of the instruments. And with the valves or slides, how the player vibrates their lips can affect the sound. Common brass instruments include the trumpet, french horn, trombone, baritone, and tuba.</p>\n    <h5>Nevilley, Wikimedia Commons, CC-BY-SA</h5><br>\n\n\n    <h3> Strings </h3>\n    <img src=\"basses.jpg\" alt=\"double basses\">\n    <p>Most string instruments are made out of wood, but they arre string instruments because of the strings on them that actually help make the sound for the hollow, wooden body. Strings are normally played with a bow or can be plucked to make noises. And different hand positions for holding the strings of the instrument changes the note being played. Common string instruments include violin, viola, cello, bass, guitar, and harp.</p>\n\n    <h5>Robert Allman, pixabay, Pixabay License</h5> <br>\n\n\n    <h3>Percussion</h3>\n    <img src=\"percussion.jpg\" alt=\"percussion\"> \n    <p>Percussion instruments are any instruments that can be played by striking or scraping them. And because of that, percussion is an incredibly broad category with a lot of variety. Some percussion instruments don't care about pitch as much or just stay the same pitch, like a drum while instruments like chimes have a wide variety of notes to play. Many common percussion instruments include piano, xylophone, drums, triangle, chimes, and gong.</p>\n\n    <h5>Marco Bicca, Unsplash, Pixabay License</h5>\n\n    <h4>So what instrument do you want to play?</h4> <br>\n  </body>\n</html>\n",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  background: darkred;\n  color: floralwhite;\n  font-family: 'Beth Ellen', cursive;\n}\np {\n\n  margin: 10px;\n  font-size: 14px;\n  text-align: left;\n}\nh1 {\n  font-weight: bold;\n  text-align: center\n}\nh2 {\n  text-align: center\n}\n\nh3 { \n\n}\nh4 {\n}\nh5 {\n  text-align: right;\n}\nh6 {\n  font-style: italic;\n  text-align: center;\n}\n\nhr {\n  width: 100%;\n}\nimg {\n  float: right;\n  width: 220px;\n  border-radius: 20px;\n  margin: 10px;\n}\n\n#notes {\n  float: right;\n  width: 100px;\n  background-color: white;\n  box-shadow: 6px 6px gray;\n}\n\n#notes2 {\n  float: left;\n  width: 100px;\n  background-color: white;\n  box-shadow: -6px 6px gray;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "Raseone-Music.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L11-L8a-2025/uuid/2cd4a063-f197-45c8-b8fd-dab9194590ec.png",
+          "type": "starter",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "extranotes1.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L11-L8a-2025/uuid/d736b85f-38c8-4c01-84de-f4e6b86ee5bf.png",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "extranotes2.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L11-L8a-2025/uuid/3ad37fec-a1a0-407e-9e05-6d7ffc407082.png",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "percussion.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L11-L8a-2025/uuid/05b99e36-f847-4a2f-882c-0a562375af59.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "high-brass.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L11-L8a-2025/uuid/ad2ee389-fbb7-45c2-923e-9033773cf9d8.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "8": {
+          "id": "8",
+          "name": "extranotes3.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L11-L8a-2025/uuid/e9794b8e-9ea5-4db8-b3fe-85c997739231.png",
+          "type": "starter",
+          "active": false
+        },
+        "9": {
+          "id": "9",
+          "name": "clarinets.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L11-L8a-2025/uuid/dc26fae6-6dae-4533-a24a-e60cac602d94.png",
+          "type": "starter",
+          "active": false
+        },
+        "10": {
+          "id": "10",
+          "name": "basses.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L11-L8a-2025/uuid/9457e58e-677b-4ca8-881a-4d78f21cdf4e.jpg",
+          "type": "starter",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n",
+    "thumbnail_url": "https://images.code.org/5764ef0f778d593ed0f70d1f1be98604-image-1588247056327.43.51 AM.png"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-20 06:04:26 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-02-20 06:04:27 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-02-20 06:04:48 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-02-20 06:15:49 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-02-20 06:15:56 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

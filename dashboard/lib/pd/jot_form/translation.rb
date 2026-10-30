@@ -77,9 +77,7 @@ module Pd
         end
       end
 
-      protected
-
-      def parse_jotform_questions(jotform_questions)
+      protected def parse_jotform_questions(jotform_questions)
         # Questions are in one of several categories:
         # 1. Text replacement, with name ending in '-summary'.
         #    These replace the text of the base named question and are otherwise ignored.
@@ -105,14 +103,14 @@ module Pd
       # and removes the common `control_` prefix.
       # @param jotform_entity [Hash]
       # @return [String]
-      def get_type(jotform_entity)
+      protected def get_type(jotform_entity)
         Question.sanitize_type jotform_entity['type']
       end
 
       # Parses a JotForm question, optionally replacing its text
       # @param jotform_question [Hash] JSON.parsed jotform question
       # @param replacement_text_by_name [Hash] mapping of question name to replacement text where applicable
-      def parse_jotform_question(jotform_question, replacement_text_by_name)
+      protected def parse_jotform_question(jotform_question, replacement_text_by_name)
         type = get_type(jotform_question)
         text = replacement_text_by_name[jotform_question['name']] || jotform_question['text']
         text = jotform_question['name'] if text.empty?
@@ -122,7 +120,7 @@ module Pd
         klass.from_jotform_question(sanitized_question_data)
       end
 
-      def parse_jotform_submission(jotform_submission)
+      protected def parse_jotform_submission(jotform_submission)
         submission_id = jotform_submission['id'].to_i
 
         # Some entries show up with no answers. Skip those.
@@ -166,7 +164,7 @@ module Pd
       # For each datetime hash, turn it into a "mm/dd/yyyy" string.
       # For each non-datetime hash, also remove "\\" pairs from each string as
       # well, which are appearing in strings such as "I\\'m a teacher."
-      def strip_answer(answer)
+      protected def strip_answer(answer)
         case answer
         when String
           answer.strip

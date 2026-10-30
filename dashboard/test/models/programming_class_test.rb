@@ -2,9 +2,9 @@ require 'test_helper'
 
 class ProgrammingClassTest < ActiveSupport::TestCase
   test "can serialize and seed programming class" do
-    programming_environment = create :programming_environment
-    category = create :programming_environment_category, programming_environment: programming_environment, name: 'World', color: '#ABCDEF'
-    programming_class = create :programming_class, key: 'myExp', examples: '[myexamples]', content: 'some content', programming_environment_id: programming_environment.id, programming_environment_category_id: category.id
+    programming_environment = create(:programming_environment)
+    category = create(:programming_environment_category, programming_environment: programming_environment, name: 'World', color: '#ABCDEF')
+    programming_class = create(:programming_class, key: 'myExp', examples: '[myexamples]', content: 'some content', programming_environment_id: programming_environment.id, programming_environment_category_id: category.id)
     serialization = programming_class.serialize
     previous_programming_class = programming_class.freeze
     programming_class.destroy!
@@ -18,11 +18,11 @@ class ProgrammingClassTest < ActiveSupport::TestCase
   end
 
   test "can serialize and seed programming class with methods" do
-    programming_environment = create :programming_environment
-    category = create :programming_environment_category, programming_environment: programming_environment, name: 'World', color: '#ABCDEF'
-    programming_class = create :programming_class, key: 'myExp', examples: '[myexamples]', content: 'some content', programming_environment_id: programming_environment.id, programming_environment_category_id: category.id
-    create :programming_method, programming_class: programming_class
-    create :programming_method, programming_class: programming_class
+    programming_environment = create(:programming_environment)
+    category = create(:programming_environment_category, programming_environment: programming_environment, name: 'World', color: '#ABCDEF')
+    programming_class = create(:programming_class, key: 'myExp', examples: '[myexamples]', content: 'some content', programming_environment_id: programming_environment.id, programming_environment_category_id: category.id)
+    create(:programming_method, programming_class: programming_class)
+    create(:programming_method, programming_class: programming_class)
     serialization = programming_class.serialize
     previous_programming_class = programming_class.freeze
     programming_class.destroy!
@@ -37,11 +37,11 @@ class ProgrammingClassTest < ActiveSupport::TestCase
   end
 
   test "seed_all adds, updates, and removes programming classes" do
-    programming_environment = create :programming_environment
-    category = create :programming_environment_category, programming_environment: programming_environment, name: 'World', color: '#ABCDEF'
-    create :programming_class, key: 'to_delete', programming_environment: programming_environment, programming_environment_category: category
-    to_update = create :programming_class, key: 'to_update', name: 'Old Name', programming_environment: programming_environment, programming_environment_category: category
-    to_create = build :programming_class, key: 'to_create', programming_environment: programming_environment, programming_environment_category: category
+    programming_environment = create(:programming_environment)
+    category = create(:programming_environment_category, programming_environment: programming_environment, name: 'World', color: '#ABCDEF')
+    create(:programming_class, key: 'to_delete', programming_environment: programming_environment, programming_environment_category: category)
+    to_update = create(:programming_class, key: 'to_update', name: 'Old Name', programming_environment: programming_environment, programming_environment_category: category)
+    to_create = build(:programming_class, key: 'to_create', programming_environment: programming_environment, programming_environment_category: category)
 
     Dir.stubs(:glob).returns(["#{programming_environment.name}/#{to_update.key}.json", "#{programming_environment.name}/#{to_create.key}.json"])
 
@@ -67,18 +67,18 @@ class ProgrammingClassTest < ActiveSupport::TestCase
   end
 
   test 'summarize_programming_methods groups methods by overload' do
-    programming_class = create :programming_class
-    programming_method1 = create :programming_method, programming_class: programming_class
-    create :programming_method, programming_class: programming_class, overload_of: programming_method1.key
-    create :programming_method, programming_class: programming_class, overload_of: programming_method1.key
-    programming_method2 = create :programming_method, programming_class: programming_class
-    create :programming_method, programming_class: programming_class, overload_of: programming_method2.key
-    programming_method3 = create :programming_method, programming_class: programming_class
+    programming_class = create(:programming_class)
+    programming_method1 = create(:programming_method, programming_class: programming_class)
+    create(:programming_method, programming_class: programming_class, overload_of: programming_method1.key)
+    create(:programming_method, programming_class: programming_class, overload_of: programming_method1.key)
+    programming_method2 = create(:programming_method, programming_class: programming_class)
+    create(:programming_method, programming_class: programming_class, overload_of: programming_method2.key)
+    programming_method3 = create(:programming_method, programming_class: programming_class)
 
     method_summary = programming_class.summarize_programming_methods
 
     assert_equal 3, method_summary.length
-    assert_equal([programming_method1.key, programming_method2.key, programming_method3.key], method_summary.map {|m| m[:key]})
+    assert_equal([programming_method1.key, programming_method2.key, programming_method3.key], method_summary.pluck(:key))
     assert_equal 2, method_summary[0][:overloads].length
     assert_equal 1, method_summary[1][:overloads].length
     assert_equal 0, method_summary[2][:overloads].length

@@ -4,13 +4,13 @@ description 'description here'
 
 markdown <<MARKDOWN
 # Module Roadmap
-#### The purpose of the page is... 
+The purpose of the page is... 
 
 
-#### This page should include: 
-* #### List of each lesson titles
-* #### Descriptions of each lesson
-* #### Emojis to add visual effects 
+This page should include: 
+* List of each lesson titles
+* Descriptions of each lesson
+* Emojis to add visual effects 
 
 ## Exemplar:
 

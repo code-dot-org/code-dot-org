@@ -44,7 +44,7 @@ class CodeReview < ApplicationRecord
   def self.open_for_project?(channel:)
     return false unless channel
 
-    _, project_id = storage_decrypt_channel_id(channel)
+    _, project_id = get_storage_id_and_project_id(channel)
     CodeReview.exists?(project_id: project_id, closed_at: nil)
   end
 

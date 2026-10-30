@@ -14,7 +14,7 @@
           }
     = f.text_area 'data_tables', placeholder: 'Insert JSON Data', rows: 4, value: @level.data_tables or ''
     :javascript
-      levelbuilder.initializeCodeMirror('level_data_tables', 'javascript');
+      levelbuilder.initializeCodeMirror6('level_data_tables', 'javascript');
 
   = render partial: 'levels/editors/fields/key_value_data', locals: {f: f}
 

@@ -1,5 +1,4 @@
 require 'rest-client'
-require 'cdo/cache_method'
 
 class TestFlakiness
   def self.sauce_username
@@ -89,9 +88,7 @@ class TestFlakiness
   CACHE_FILENAME = (File.dirname(__FILE__) + "/../../dashboard/tmp/cache/test_summary.json").freeze
   CACHE_TTL = 86400 # 1 day of seconds
 
-  using CacheMethod
-
-  cached def self.test_summary
+  def self.test_summary
     if File.exist?(CACHE_FILENAME) &&
         (Time.now - File.mtime(CACHE_FILENAME)) < CACHE_TTL
       return JSON.parse(File.read(CACHE_FILENAME))
@@ -102,21 +99,21 @@ class TestFlakiness
     end
   end
 
-  cached def self.test_flakiness
+  def self.test_flakiness
     test_summary.transform_values {|s| s['fail_rate']}
   end
 
-  cached def self.test_duration
+  def self.test_duration
     test_summary.transform_values {|s| s['duration'].round(2)}
   end
 
-  cached def self.test_estimate
+  def self.test_estimate
     test_summary.transform_values {|s| (recommend_reruns(s['fail_rate']).first * s['duration']).round(2)}
   end
 
   # Retrieves / calculates flakiness for given test run identifier.
   # Combines all values containing the provided identifier as a prefix into a combined summary.
-  cached def self.summary_for(method, test_run_identifier)
+  def self.summary_for(method, test_run_identifier)
     flakiness = self.method(method).call
 
     # Combine all scenario-specific identifiers.
@@ -135,7 +132,7 @@ class TestFlakiness
     end
   end
 
-  cached def self.from_timestamp
+  def self.from_timestamp
     return nil unless File.exist?(FLAKINESS_TIMESTAMP_FILENAME)
     timestamp = JSON.parse(File.read(FLAKINESS_TIMESTAMP_FILENAME))['timestamp']
     return nil unless timestamp.is_a?(Integer)

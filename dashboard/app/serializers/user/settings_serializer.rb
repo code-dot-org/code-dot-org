@@ -1,0 +1,134 @@
+# A named allowlist, deliberately narrower than the legacy account-edit
+# payload. NEVER serialize: oauth/refresh tokens, authentication_id,
+# hashed_email, encrypted_password, secret words/pictures, failed_attempts,
+# locked_at, IPs, or admin flags. Field visibility (student
+# email masking, edit-affordance gating) is computed server-side, not the client.
+class User::SettingsSerializer
+  def initialize(user, country_code:)
+    @user = user
+    @country_code = country_code
+  end
+
+  def as_json(*)
+    {
+      user_type: user.user_type,
+      given_name: user.given_name,
+      family_name: user.family_name,
+      display_name: user.name,
+      username: user.username,
+      # User#email is '' for students with no stored cleartext address;
+      # .presence turns that masking into an absent field.
+      email: user.email.presence,
+      has_password: user.encrypted_password.present?,
+      can_edit_email: user.can_edit_email?,
+      can_edit_password: user.can_edit_password?,
+      # Entitlement to add a first password (SSO-only accounts); false for
+      # oauth-only students, sponsored, and LTI-restricted users.
+      should_see_add_password_form: user.should_see_add_password_form?,
+      should_see_edit_email_link: user.should_see_edit_email_link?,
+      authentication_options: serialized_authentication_options,
+      can_change_user_type: user.can_change_own_user_type?,
+      can_delete_own_account: user.can_delete_own_account?,
+      age: user.age,
+      us_state: user.us_state,
+      # The raw gender string the student entered, round-tripped so the free-text
+      # field re-renders what they typed. Only the student view surfaces it.
+      gender: user.gender_student_input,
+      # The client gates the US-state field on this.
+      is_usa: Policies::User.in_usa?(@country_code),
+      # Student-only "For Parents and Guardians" value; absent when unset.
+      parent_email: user.parent_email.presence,
+      dependent_students_count: dependent_students_count,
+      age_options: age_options,
+      us_state_options: us_state_options,
+      **educator_profile,
+      integrations: integrations,
+    }
+  end
+
+  private attr_reader :user
+
+  private def serialized_authentication_options
+    Queries::User::LinkedAccounts.call(user: user).map do |option|
+      {
+        id: option.id,
+        credential_type: option.credential_type,
+        email: option.email.presence,
+      }
+    end
+  end
+
+  private def dependent_students_count
+    Queries::User::DependentStudentsCount.call(user_id: user.id)
+  end
+
+  # {value, text} pairs for the Age and US-state dropdowns, from the canonical
+  # Rails sources so the client never duplicates the lists.
+  private def age_options
+    User::AGE_DROPDOWN_OPTIONS.map {|age| {value: age.to_s, text: age.to_s}}
+  end
+
+  private def us_state_options
+    User.us_state_dropdown_options.map {|code, name| {value: code, text: name}}
+  end
+
+  # Teacher-only: for students these keys are absent from the payload, not null.
+  private def educator_profile
+    return {} unless user.teacher?
+
+    {
+      educator_role: user.educator_role,
+      educator_role_options: educator_role_options,
+      school_info: school_info,
+    }
+  end
+
+  private def integrations
+    {
+      can_manage_linked_accounts: user.migrated? && !Policies::Lti.restricted_user?(user),
+      is_google_classroom_student: user.google_classroom_student?,
+      is_clever_student: user.clever_student?,
+      personal_account_linking_enabled: Policies::ChildAccount.personal_account_linking_enabled?(
+        user, request_in_usa: Policies::User.in_usa?(@country_code)
+      ),
+      lms_name: Queries::Lti.get_lms_name_from_user(user),
+      **lti_roster_sync,
+    }
+  end
+
+  private def lti_roster_sync
+    return {} unless user.teacher? && Policies::Lti.lti?(user) && lti_roster_sync_shown_in_region?
+
+    {lti_roster_sync_enabled: user.lti_roster_sync_enabled == true}
+  end
+
+  private def lti_roster_sync_shown_in_region?
+    pages = Cdo::GlobalEdition.region_config(Cdo::GlobalEdition.current_region, :pages) || []
+    pages.none? do |page|
+      page[:path] == '/users/edit' && page.dig(:components, :LtiRosterSyncSettings) == false
+    end
+  end
+
+  # From the canonical Rails source; :label becomes :text to match the other
+  # option lists above.
+  private def educator_role_options
+    SharedConstants::EDUCATOR_ROLES.map do |role|
+      {value: role[:value], text: role[:label], category: role[:category]}
+    end
+  end
+
+  # Deliberately narrower than the query: user_school_info_id is an internal id
+  # the client has no use for. school_id is opaque, so it is always a String.
+  private def school_info
+    school = Queries::SchoolInfo.current_school(user)
+    return nil unless school
+
+    {
+      school_name: school[:school_name],
+      school_type: school[:school_type],
+      school_id: school[:school_id]&.to_s,
+      school_zip: school[:school_zip],
+      country: school[:country],
+    }
+  end
+end

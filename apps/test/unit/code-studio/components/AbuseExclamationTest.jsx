@@ -1,6 +1,6 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+
 import AbuseExclamation from '@cdo/apps/code-studio/components/AbuseExclamation';
 
 describe('AbuseExclamation', () => {
@@ -13,11 +13,12 @@ describe('AbuseExclamation', () => {
           edit_project: 'edit project',
           go_to_code_studio: 'go to code studio',
         }}
-        isOwner
+        isOwner={false}
+        channelId="test-channel-id"
       />
     );
-    expect(wrapper.find('AbuseError').length).to.equal(1);
-    expect(wrapper.find('AlertExclamation').length).to.equal(1);
+    expect(wrapper.find('AbuseError').length).toBe(1);
+    expect(wrapper.find('AlertExclamation').length).toBe(1);
   });
 
   it('shows edit link if isOwner is true', () => {
@@ -29,13 +30,30 @@ describe('AbuseExclamation', () => {
           edit_project: 'edit project',
           go_to_code_studio: 'go to code studio',
         }}
-        isOwner
+        isOwner={true}
       />
     );
-    expect(wrapper.find('a').text()).to.contain('edit project');
+    expect(wrapper.find('a').text()).toContain('edit project');
   });
 
-  it('shows code studio link if isOwener is false', () => {
+  it('shows view link if canViewFlaggedProject is true', () => {
+    const wrapper = shallow(
+      <AbuseExclamation
+        i18n={{
+          tos: 'terms of service',
+          contact_us: 'contact us',
+          edit_project: 'edit project',
+          view_project: 'view project',
+          go_to_code_studio: 'go to code studio',
+        }}
+        isOwner={false}
+        canViewFlaggedProject={true}
+      />
+    );
+    expect(wrapper.find('a').text()).toContain('view project');
+  });
+
+  it('shows code studio link if isOwner is false', () => {
     const wrapper = shallow(
       <AbuseExclamation
         i18n={{
@@ -47,6 +65,6 @@ describe('AbuseExclamation', () => {
         isOwner={false}
       />
     );
-    expect(wrapper.find('a').text()).to.contain('go to code studio');
+    expect(wrapper.find('a').text()).toContain('go to code studio');
   });
 });

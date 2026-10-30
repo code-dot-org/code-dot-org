@@ -3,13 +3,21 @@ class PairingsController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   def show
-    render json: {pairings: pairings_summary, sections: sections_summary}
+    render json: {
+      pairings: pairings_summary,
+      sections: sections_summary,
+      selectedSectionId: selected_section_id
+    }
   end
 
   def update
     self.pairings = {pairings: params[:pairings], section_id: params[:sectionId]}
 
-    render json: {pairings: pairings_summary, sections: sections_summary}
+    render json: {
+      pairings: pairings_summary,
+      sections: sections_summary,
+      selectedSectionId: selected_section_id
+    }
   end
 
   # Serialization helpers
@@ -27,10 +35,16 @@ class PairingsController < ApplicationController
         id: section.id,
         name: section.name,
         students:
-          (section.students - [current_user]).map do |student|
+          (section.students - [current_user]).reject {|s| Policies::DemoSections.demo_student?(s.id)}.map do |student|
             {id: student.id, name: student.name}
           end
       }
     end
+  end
+
+  private def selected_section_id
+    section_id = session[:pairing_section_id]
+    return nil unless section_id
+    current_user.sections_as_student.exists?(id: section_id, pairing_allowed: true) ? section_id : nil
   end
 end

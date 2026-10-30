@@ -1,0 +1,42 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-02-18T16:58:02.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "ai_tutor_available": "true",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# CIW AI Associate Standard: 2.6\n# Standard Description: Explain the importance of feature engineering.\n#\n# Rationale: Feature Engineering isn't just about scaling numbers; it's also \n# about CREATING new information. Often, the \"raw\" data doesn't tell the whole \n# story. By combining or extracting data, we can create a feature that is \n# much more powerful. For example, knowing the \"Date\" is okay, but knowing \n# \"Is it a Weekend?\" might be much more useful for predicting sales.\n\n\"\"\"\nWelcome! Feature Engineering is like being a chef. \nYou take raw ingredients (raw data) and you combine them to make \nsomething better (new features).\n\nSometimes, a computer is \"blind\" to certain patterns. We use feature \nengineering to \"point\" at the patterns so the AI can see them easily.\n\"\"\"\n\nimport pandas as pd\n\n# --- OUR RAW DATA ---\n# Imagine we are tracking sales for a lemonade stand.\ndata = {\n    'Date': ['2026-07-04', '2026-07-05', '2026-07-06', '2026-07-07'],\n    'Lemons_Used': [10, 15, 5, 8],\n    'Sugar_Used_Cups': [2, 3, 1, 2],\n    'Sales_Total': [50, 75, 20, 35]\n}\ndf = pd.DataFrame(data)\n\nprint(\"--- Original Sales Data ---\")\nprint(df)\nprint(\"\\n\")\n\n# --- FEATURE 1: COMBINING DATA ---\nprint(\"--- Step 1: Combining Features (Efficiency) ---\")\n# Instead of just Lemons and Sugar, maybe the RATIO is what matters.\n# Let's create a 'Sweetness_Ratio' feature.\ndf['Sweetness_Ratio'] = df['Sugar_Used_Cups'] / df['Lemons_Used']\n\n# --- FEATURE 2: EXTRACTING DATA ---\nprint(\"--- Step 2: Extracting Information (Is it a Weekend?) ---\")\n# The AI doesn't automatically know that July 4th and 5th were Saturday and Sunday!\n# We convert the 'Date' column and extract the day of the week.\ndf['Date'] = pd.to_datetime(df['Date'])\ndf['Day_of_Week'] = df['Date'].dt.day_name()\ndf['Is_Weekend'] = df['Date'].dt.dayofweek // 5 == 1 # Returns True for Sat/Sun\n\nprint(\"--- Data with New Engineered Features ---\")\nprint(df[['Date', 'Sweetness_Ratio', 'Day_of_Week', 'Is_Weekend', 'Sales_Total']])\nprint(\"\\n\")\nprint(\"Now the AI can easily see if weekends or sweetness impact sales!\")\n\n\"\"\"\n--- YOUR TURN ---\nWe have data about a runner. \n1. Create a new feature called 'Pace' by dividing 'Minutes' by 'Miles'.\n2. Create a new feature called 'Is_Long_Run' that is True if Miles > 5.\n\"\"\"\n\n# STARTING CODE FOR STUDENT:\nruns = pd.DataFrame({\n    'Date': ['2026-01-01', '2026-01-02', '2026-01-03'],\n    'Miles': [3, 10, 2],\n    'Minutes': [24, 90, 16]\n})\n\n# TODO: Create 'Pace' (Minutes per Mile)\n# TODO: Create 'Is_Long_Run' (Miles > 5)\n\nprint(\"Engineer some new features for the runner!\")\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFTDG6jyYgtI/CEUE/82dEkG4hlI8OLsdjJD0In8S\n03BB+jPkGgyYB0/9C3zqHMHEFpKeCsugYbpGMxzBNwrd7qASagJaFzMnVUyM\n2TXS7Hau9lj7JpZIHXn9fmxXRRANWXnRwr91HK8H+85kpbRghA1tivQJEjHr\nE8AFxy2T3KX7A/s1xb9VhwZ1YWgeOwUMx/8JOs41uzWbBMAEwolpZGFVdnLJ\nHrB+KN5pcZXF/Fh5yNnRZRQjq/5hI38ba8OzdSkuUvD4GBeiFXURhcdo9Ur8\nB903liTyjHVIwmIe1GmylIvY7+NNxLCBlHfa3jI2lONg/HuM3bXDKNn1nrrF\n20RfmMfNQI1QwyYQH5VlRndRaavehT5PtPB7GTazGDvmf8fPyv5ydNSN3xhz\nlYpJnZDrfcoS25dJXSUoDisgUm7/+HetXq7LQZFId0x+WysDAg58NrJeH7pF\nLwdNz+GfDgUdl/VUXj6mBhO611Tvwl+f9lEx7DpTdONOVtG5H5TH0DcsTvJb\nUuQZxHeOONtnobX4w2zD5vwAstfGq5DWewWbhxtS48k5D/qLfOHRAx30mi3R\nR1e6YbmNnptj6DcglVDinzbC+YuEUE+GvOxIhDcU1T0u2o3rfzVSv7//cq6c\n8HFQYqemMmfcpese0Zx4dnYnzznaJF6yHabK0X71YC/lZ8DwPIx1jEX4Y7pL\naiy3Df3iD1rhngDDh5CUGDbH3BTlMeloPhpyoExrwE6A3yCLvQC1/bda+x4/\n11RnJnggYLutqGI5mR/C2OETYrsg89uae+5Ob39zeNIgI2ioDwY6yleUHXn2\nQZdN2hvML4pwdIzGmOgPy2Dl+lRLxe8onpIqBO7ght/MpfTlE37gPQsRBODA\nf8sxeSaHP5Q2PLJ8/ciCFnAUua7i3c3Fh3h1k7kNGmAbp9ZY5vw/d5UWvhkF\nLfs9yio5IMrEK2loLX1yi6KDcJv0ZTbAh0hFB0LMeK7yZWLGlQwexqJsfxT/\n6juYn471p/RoU32Bw5DPBpbuT2lxV+xJVOLknSYtf0R5ccYRCUH0bGhHys89\npSnQ1YqMdGHAthpYipv3RqCkH4nPrxn9UcJGHVckO7V9jta0n3UTAPZOxG2L\nJmAsDA+FehqrrmMwJEqHd/C6RGhDI23VXD7C7MazJdN1zKmjGeFJ3/vdvBE/\nbEBTjPnSjgbWHklrSE8TEeW0oVegGMgG5LlW8gyf+IaqGHz+F0UV/E7l7sVF\ngFieKEd9WC9/OK3GD0nfWMqv07MS4c/9yO0pPAxn8AANVCHbEfJkzRNvZo4d\ndV0=\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-18T16:58:02.617+00:00\",\"changed\":[\"cloned from \\\"cs50-scikit-14\\\"\"],\"cloned_from\":\"cs50-scikit-14\"},{\"changed_at\":\"2026-02-18 16:58:05 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:32:26 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:32:53 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:33:00 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Pythonlab>

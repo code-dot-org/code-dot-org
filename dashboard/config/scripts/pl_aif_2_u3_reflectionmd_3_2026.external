@@ -1,0 +1,54 @@
+name 'pl-aif-2-U3-reflectionmd-3_2026'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Task List (Lesson Overview)
+
+<p>
+In the upcoming activity from <strong>Lesson 3</strong>, students will build a simple <strong>Task List</strong> app while learning how JavaScript arrays can be updated as information changes.
+</p>
+
+<div style="display:flex; gap:24px; align-items:flex-start; flex-wrap:wrap; margin:24px 0;">
+
+  <!-- Image -->
+  <div style="flex:1; min-width:250px;">
+    <img src="https://images.code.org/484b1d57a78c9c157a09aa50dcde634d-image-1784044143867.png"
+         alt="Task List app activity preview"
+         style="width:80%; border-radius:10px;">
+  </div>
+
+  <!-- Text -->
+  <div style="flex:1; min-width:350px;">
+
+<h2>Activity Sequence</h2>
+
+  <p style="margin-top:0;">
+  The activity is divided into a sequence of short levels. In each level, students use a different array method to modify the task list:
+  </p>
+
+  <ul style="margin-top:8px; line-height:1.7;">
+    <li><code>push()</code> adds a new task to the end of the list.</li>
+    <li><code>unshift()</code> adds a high-priority task to the beginning.</li>
+    <li><code>shift()</code> removes the first task.</li>
+    <li><code>pop()</code> removes the last task.</li>
+  </ul>
+
+  <p>
+  As students progress, they see how each method changes both the array and the app, reinforcing the connection between the code and the user interface.
+  </p>
+
+  </div>
+
+</div>
+
+<p>
+In this professional learning module, you'll experience the activity from the student's perspective by completing <strong>only the first level</strong>, where you'll use <code>push()</code> to add a new task to the task list.
+</p>
+
+<p>
+This focused practice lets you experience the instructional flow before exploring the rest of the sequence with students.
+</p>
+
+
+MARKDOWN

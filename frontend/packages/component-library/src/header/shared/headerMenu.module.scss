@@ -1,0 +1,45 @@
+// Shared header dropdown surface — Help / Account / Create menus (Menu paper +
+// list slots, each MenuItem) and the hamburger Popover (paper slot). These
+// override MUI's Paper / List / MenuItem theme styles; they win because MUI's
+// emotion styles are in `@layer mui` (enableCssLayer) and these module classes
+// are unlayered, so no compound `&.MuiPaper-root` qualifier is needed.
+// Reproduces the legacy header dropdown panel.
+
+// Dropdown/popover panel surface (legacy #hamburger-contents).
+.menuPaper {
+  margin-top: 4px;
+  background-color: var(--background-neutral-primary);
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 4px;
+  box-shadow:
+    rgb(0 0 0 / 0.1) 0 10px 15px -3px,
+    rgb(0 0 0 / 0.05) 0 4px 6px -2px;
+}
+
+// Menu `list` slot. 6px inset + 228px content + 1px border = 242px, matching prod.
+.menuList {
+  min-width: 240px;
+  padding: 6px;
+}
+
+// Shared menu row (polymorphic MenuItem rendered as an anchor). Line-height is
+// pinned to 20px (prod); the inherited 1.48 ratio overshoots.
+.menuItem {
+  display: block;
+  min-height: 0;
+  padding: 10px;
+  color: var(--text-neutral-primary);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  white-space: nowrap;
+
+  &:visited,
+  &:active {
+    color: var(--text-neutral-primary);
+  }
+
+  &:hover {
+    background-color: var(--background-neutral-tertiary);
+  }
+}

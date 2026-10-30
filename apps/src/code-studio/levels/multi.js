@@ -1,18 +1,21 @@
 import $ from 'jquery';
 import React from 'react';
+
+import {
+  LegacyIncorrectDialog,
+  LegacyTooFewDialog,
+} from '@cdo/apps/legacySharedComponents/LegacyDialogContents';
+import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/metrics/analyticsUtils';
+
+import {TestResults} from '../../constants';
+import Sounds from '../../Sounds';
+import {sourceForLevel} from '../clientState';
+
 import {
   registerGetResult,
   onAnswerChanged,
   resetContainedLevel,
 } from './codeStudioLevels';
-import {sourceForLevel} from '../clientState';
-import Sounds from '../../Sounds';
-import {
-  LegacyIncorrectDialog,
-  LegacyTooFewDialog,
-} from '@cdo/apps/lib/ui/LegacyDialogContents';
-import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/lib/util/analyticsUtils';
-import {TestResults} from '../../constants';
 
 var Multi = function (
   levelId,
@@ -70,9 +73,7 @@ var Multi = function (
 };
 
 Multi.prototype.enableButton = function (enable) {
-  var button = $('#' + this.id + ' .submitButton');
-  button.prop('disabled', !enable);
-  button.prop('tagName', 'BUTTON');
+  $('#' + this.id + ' .submitButton').attr('disabled', !enable);
 };
 
 Multi.prototype.choiceClicked = function (button) {
@@ -162,17 +163,22 @@ Multi.prototype.ready = function () {
     }
   }
 
-  $('#' + this.id + ' .answerbutton').on('click', event => {
-    this.choiceClicked($(event.currentTarget));
-  });
+  $('#' + this.id + ' .answerbutton').click(
+    $.proxy(function (event) {
+      this.choiceClicked($(event.currentTarget));
+    }, this)
+  );
 
-  $('#' + this.id + ' #voteform img').on('dragstart', event => {
-    // Prevent button images from being dragged, click the button instead.
-    var button = $(event.currentTarget).parent().parent().parent();
-    this.choiceClicked(button);
-    event.preventDefault();
-    event.stopPropagation();
-  });
+  $('#' + this.id + ' #voteform img').on(
+    'dragstart',
+    $.proxy(function (event) {
+      // Prevent button images from being dragged, click the button instead.
+      var button = $(event.currentTarget).parent().parent().parent();
+      this.choiceClicked(button);
+      event.preventDefault();
+      event.stopPropagation();
+    }, this)
+  );
 
   this.enableButton(false);
 
@@ -195,11 +201,11 @@ Multi.prototype.ready = function () {
   }
 
   if (this.standalone) {
-    $('.submitButton').on('click', this.submitButtonClick.bind(this));
+    $('.submitButton').click($.proxy(this.submitButtonClick, this));
   } else {
     var resetButton = $('#reset-predict-progress-button');
     if (resetButton) {
-      resetButton.on('click', () => resetContainedLevel());
+      resetButton.click(() => resetContainedLevel());
     }
   }
 
@@ -212,7 +218,9 @@ Multi.prototype.lockAnswers = function () {
   if (this.allowMultipleAttempts) {
     return;
   }
-  $('#' + this.id + ' .answerbutton').addClass('lock-answers');
+  $('#' + this.id + ' .answerbutton')
+    .addClass('lock-answers')
+    .attr('tabindex', '-1');
   $('#reset-predict-progress-button')?.prop('disabled', false);
 };
 

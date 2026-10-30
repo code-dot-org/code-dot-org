@@ -1,11 +1,12 @@
-import React from 'react';
 import {action} from '@storybook/addon-actions';
-import {UnconnectedMoveStudents as MoveStudents} from './MoveStudents';
+import React from 'react';
+
 import {
   blankStudentTransfer,
   blankStudentTransferStatus,
   TransferStatus,
 } from './manageStudentsRedux';
+import {UnconnectedMoveStudents as MoveStudents} from './MoveStudents';
 
 const studentData = [
   {id: 1, name: 'Student A'},

@@ -1,22 +1,29 @@
-import {expect} from '../../../../util/reconfiguredChai';
+import {Button as MuiButton} from '@mui/material';
+import {render, screen} from '@testing-library/react';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import i18n from '@cdo/locale';
-import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import {UnconnectedUnitOverviewTopRow as UnitOverviewTopRow} from '@cdo/apps/code-studio/components/progress/UnitOverviewTopRow';
-import Button from '@cdo/apps/templates/Button';
-import DropdownButton from '@cdo/apps/templates/DropdownButton';
-import SectionAssigner from '@cdo/apps/templates/teacherDashboard/SectionAssigner';
+import {Provider} from 'react-redux';
+
 import BulkLessonVisibilityToggle from '@cdo/apps/code-studio/components/progress/BulkLessonVisibilityToggle';
-import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
-import ResourcesDropdown from '@cdo/apps/code-studio/components/progress/ResourcesDropdown';
 import UnitCalendarButton from '@cdo/apps/code-studio/components/progress/UnitCalendarButton';
+import {UnconnectedUnitOverviewTopRow as UnitOverviewTopRow} from '@cdo/apps/code-studio/components/progress/UnitOverviewTopRow';
+import progress, {initProgress} from '@cdo/apps/code-studio/progressRedux';
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {getStore, registerReducers} from '@cdo/apps/redux';
+import teacherSections, {
+  selectSection,
+  setSections,
+  setStudentsForCurrentSection,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import i18n from '@cdo/locale';
+
 import {testLessons} from './unitCalendarTestData';
 
 const defaultProps = {
   sectionsForDropdown: [],
   scriptId: 42,
   scriptName: 'test-script',
+  scriptPath: '/courses/test-course/units/1',
   unitTitle: 'Unit test script title',
   unitAllowsHiddenLessons: true,
   viewAs: ViewType.Participant,
@@ -26,12 +33,76 @@ const defaultProps = {
   isMigrated: false,
   unitCompleted: false,
   hasPerLevelResults: false,
-  isProfessionalLearningCourse: false,
   publishedState: 'stable',
   isUnitWithLevels: true,
 };
 
+const SECTIONS = [
+  {
+    id: 11,
+    name: 'Period 1',
+    hidden: false,
+    course_id: 1,
+    course_offering_id: 11,
+    participant_type: 'student',
+    code: 'aaa',
+  },
+  {
+    id: 12,
+    name: 'Period 2',
+    hidden: false,
+    course_id: null,
+    course_offering_id: null,
+    participant_type: 'student',
+    code: 'bbb',
+  },
+];
+
+const STUDENTS = [
+  {
+    id: 1,
+    familyName: 'hill',
+    name: 'bobby',
+    userType: 'student',
+  },
+  {
+    id: 2,
+    familyName: 'morgendorffer',
+    name: 'daria',
+    userType: 'student',
+  },
+];
+
+const PROGRESS = {
+  currentLevelId: 1,
+  currentLessonId: 1,
+  lessons: [],
+  lessonGroups: [],
+};
+
 describe('UnitOverviewTopRow', () => {
+  let store;
+
+  beforeEach(() => {
+    store = getStore();
+    registerReducers({progress, teacherSections});
+    store.dispatch(setSections(SECTIONS));
+    store.dispatch(selectSection(11));
+    store.dispatch(setStudentsForCurrentSection(11, STUDENTS));
+    store.dispatch(initProgress(PROGRESS));
+  });
+
+  afterEach(() => {
+    jest.restoreAllMocks();
+  });
+
+  // Buttons are MUI Buttons with text as children — find by href + the rendered
+  // text, since enzyme's shallow render keeps the children prop accessible.
+  const findButtonByHref = (wrapper, href, text) =>
+    wrapper
+      .find(MuiButton)
+      .filterWhere(b => b.prop('href') === href && b.prop('children') === text);
+
   it('renders "Try Now" for participant if not unitCompleted and not hasPerLevelResults', () => {
     const wrapper = shallow(
       <UnitOverviewTopRow
@@ -41,51 +112,30 @@ describe('UnitOverviewTopRow', () => {
         hasPerLevelResults={false}
       />
     );
-
     expect(
-      wrapper.containsMatchingElement(
-        <div>
-          <div>
-            <Button
-              __useDeprecatedTag
-              href="/s/test-script/next"
-              text={i18n.tryNow()}
-              size={Button.ButtonSize.large}
-            />
-            <Button
-              __useDeprecatedTag
-              href="//support.code.org"
-              text={i18n.getHelp()}
-              color={Button.ButtonColor.white}
-              size={Button.ButtonSize.large}
-            />
-          </div>
-          <div />
-          <div>
-            <span>
-              <ProgressDetailToggle />
-            </span>
-          </div>
-        </div>
-      )
-    ).to.be.true;
+      findButtonByHref(
+        wrapper,
+        '/courses/test-course/units/1/next',
+        i18n.tryNow()
+      ).length
+    ).toBe(1);
+    expect(
+      findButtonByHref(wrapper, '//support.code.org', i18n.getHelp()).length
+    ).toBe(1);
+    expect(wrapper.find('Connect(ProgressDetailToggle)')).toHaveLength(1);
   });
 
   it('does not render "Try Now" if unit has no levels', () => {
     const wrapper = shallow(
       <UnitOverviewTopRow {...defaultProps} isUnitWithLevels={false} />
     );
-
     expect(
-      wrapper.containsMatchingElement(
-        <Button
-          __useDeprecatedTag
-          href="/s/test-script/next"
-          text={i18n.tryNow()}
-          size={Button.ButtonSize.large}
-        />
-      )
-    ).to.be.false;
+      findButtonByHref(
+        wrapper,
+        '/courses/test-course/units/1/next',
+        i18n.tryNow()
+      ).length
+    ).toBe(0);
   });
 
   it('renders "Continue" for participant if has level results and not unitCompleted', () => {
@@ -97,17 +147,13 @@ describe('UnitOverviewTopRow', () => {
         hasPerLevelResults={true}
       />
     );
-
     expect(
-      wrapper.containsMatchingElement(
-        <Button
-          __useDeprecatedTag
-          href="/s/test-script/next"
-          text={i18n.continue()}
-          size={Button.ButtonSize.large}
-        />
-      )
-    ).to.be.true;
+      findButtonByHref(
+        wrapper,
+        '/courses/test-course/units/1/next',
+        i18n.continue()
+      ).length
+    ).toBe(1);
   });
 
   it('renders "Print Certificate" for participant', () => {
@@ -118,56 +164,13 @@ describe('UnitOverviewTopRow', () => {
         unitCompleted={true}
       />
     );
-
     expect(
-      wrapper.containsMatchingElement(
-        <Button
-          __useDeprecatedTag
-          href="/s/test-script/next"
-          text={i18n.printCertificate()}
-          size={Button.ButtonSize.large}
-        />
-      )
-    ).to.be.true;
-  });
-
-  it('does not render "Print Certificate" button for participant in professional learning course', () => {
-    const wrapper = shallow(
-      <UnitOverviewTopRow
-        {...defaultProps}
-        viewAs={ViewType.Participant}
-        unitCompleted={true}
-        isProfessionalLearningCourse={true}
-      />
-    );
-
-    expect(
-      wrapper.containsMatchingElement(
-        <Button
-          __useDeprecatedTag
-          href="/s/test-script/next"
-          text={i18n.printCertificate()}
-          size={Button.ButtonSize.large}
-        />
-      )
-    ).to.be.false;
-  });
-
-  it('renders SectionAssigner for instructor', () => {
-    const wrapper = shallow(
-      <UnitOverviewTopRow {...defaultProps} viewAs={ViewType.Instructor} />
-    );
-
-    expect(
-      wrapper.containsMatchingElement(
-        <SectionAssigner
-          sections={defaultProps.sectionsForDropdown}
-          courseId={defaultProps.currentCourseId}
-          scriptId={defaultProps.scriptId}
-          showAssignButton={defaultProps.showAssignButton}
-        />
-      )
-    ).to.be.true;
+      findButtonByHref(
+        wrapper,
+        '/courses/test-course/units/1/next',
+        i18n.printCertificate()
+      ).length
+    ).toBe(1);
   });
 
   it('renders BulkLessonVisibilityToggle for instructor', () => {
@@ -181,53 +184,7 @@ describe('UnitOverviewTopRow', () => {
           lessons={defaultProps.unitCalendarLessons}
         />
       )
-    ).to.be.true;
-  });
-
-  describe('instructor resources', () => {
-    it('renders resources for instructor on a migrated script', () => {
-      const wrapper = shallow(
-        <UnitOverviewTopRow
-          {...defaultProps}
-          viewAs={ViewType.Instructor}
-          isMigrated={true}
-          teacherResources={[
-            {
-              id: 1,
-              key: 'curriculum',
-              name: 'Curriculum',
-              url: 'https://example.com/a',
-            },
-            {
-              id: 2,
-              key: 'vocabulary',
-              name: 'Vocabulary',
-              url: 'https://example.com/b',
-            },
-          ]}
-        />
-      );
-      expect(
-        wrapper.containsMatchingElement(
-          <ResourcesDropdown
-            resources={[
-              {
-                id: 1,
-                key: 'curriculum',
-                name: 'Curriculum',
-                url: 'https://example.com/a',
-              },
-              {
-                id: 2,
-                key: 'vocabulary',
-                name: 'Vocabulary',
-                url: 'https://example.com/b',
-              },
-            ]}
-          />
-        )
-      ).to.be.true;
-    });
+    ).toBe(true);
   });
 
   it('renders the unit calendar when showCalendar true for instructor', () => {
@@ -248,7 +205,7 @@ describe('UnitOverviewTopRow', () => {
           scriptId={42}
         />
       )
-    ).to.be.true;
+    ).toBe(true);
   });
 
   it('does not render the unit calendar when showCalendar false for instructor', () => {
@@ -268,7 +225,7 @@ describe('UnitOverviewTopRow', () => {
           scriptId={42}
         />
       )
-    ).to.be.false;
+    ).toBe(false);
   });
 
   it('does not render the unit calendar for participant', () => {
@@ -289,71 +246,27 @@ describe('UnitOverviewTopRow', () => {
           scriptId={42}
         />
       )
-    ).to.be.false;
-  });
-
-  it('renders dropdown button with links to printing options when published state is not pilot or indevelopment', () => {
-    const wrapper = shallow(
-      <UnitOverviewTopRow
-        {...defaultProps}
-        scriptOverviewPdfUrl="/link/to/script_overview.pdf"
-        scriptResourcesPdfUrl="/link/to/script_resources.pdf"
-        viewAs={ViewType.Instructor}
-      />
-    );
-    expect(wrapper.find(DropdownButton).length).to.equal(1);
-    const dropdownLinks = wrapper.find(DropdownButton).first().props().children;
-    expect(dropdownLinks.map(link => link.props.href)).to.eql([
-      '/link/to/script_overview.pdf',
-      '/link/to/script_resources.pdf',
-    ]);
-    expect(dropdownLinks.map(link => link.props.children)).to.eql([
-      'Print Lesson Plans',
-      'Print Handouts',
-    ]);
-  });
-
-  it('does not render printing option dropdown for participants', () => {
-    const wrapper = shallow(
-      <UnitOverviewTopRow
-        {...defaultProps}
-        scriptOverviewPdfUrl="/link/to/script_overview.pdf"
-        scriptResourcesPdfUrl="/link/to/script_resources.pdf"
-        viewAs={ViewType.Participant}
-      />
-    );
-    expect(wrapper.find(DropdownButton).length).to.equal(0);
+    ).toBe(false);
   });
 
   it('renders RTL without errors', () => {
     expect(() => {
       shallow(<UnitOverviewTopRow {...defaultProps} isRtl={true} />);
-    }).not.to.throw();
+    }).not.toThrow();
   });
 
-  it('does not render the printing options drop down if the course is in pilot', () => {
-    const wrapper = shallow(
-      <UnitOverviewTopRow
-        {...defaultProps}
-        publishedState="pilot"
-        scriptOverviewPdfUrl="/link/to/script_overview.pdf"
-        scriptResourcesPdfUrl="/link/to/script_resources.pdf"
-        viewAs={ViewType.Instructor}
-      />
+  it('renders student select dropdown if user is teacher', () => {
+    render(
+      <Provider store={store}>
+        <UnitOverviewTopRow
+          {...defaultProps}
+          publishedState="in_development"
+          scriptOverviewPdfUrl="/link/to/script_overview.pdf"
+          scriptResourcesPdfUrl="/link/to/script_resources.pdf"
+          viewAs={ViewType.Instructor}
+        />
+      </Provider>
     );
-    expect(wrapper.find(DropdownButton).length).to.equal(0);
-  });
-
-  it('does not render the printing options drop down if the course is in development', () => {
-    const wrapper = shallow(
-      <UnitOverviewTopRow
-        {...defaultProps}
-        publishedState="in_development"
-        scriptOverviewPdfUrl="/link/to/script_overview.pdf"
-        scriptResourcesPdfUrl="/link/to/script_resources.pdf"
-        viewAs={ViewType.Instructor}
-      />
-    );
-    expect(wrapper.find(DropdownButton).length).to.equal(0);
+    screen.getByLabelText(i18n.viewingProgressFor());
   });
 });

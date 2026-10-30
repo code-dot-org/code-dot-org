@@ -1,0 +1,27 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2024-08-27T15:41:06.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "panels": [
+      {
+        "text": "### Role\nYou can also direct a chatbot to take on a certain role to influence it's responses. For example:\n- \"Act as a [X]...\"\n- \"You are an expert in [X]...\"",
+        "imageUrl": "https://images.code.org/2abee9303600945b5ccb6b46341351c5-Role Tone 1.png",
+        "key": "game_design_spr_types-6451ed33-47e5-458c-9da1-d89e123d039c"
+      },
+      {
+        "text": "### Tone\nYou can also direct a chatbot on the tone or voice to use when responding. For example:\n- \"Your responses should be [X]\"\n- \"Use [X] language to respond\"\n- \"Respond with a [X] tone\"",
+        "imageUrl": "https://images.code.org/6893dad7f465d084a81672fe3ac62a79-Role Tone 2.png",
+        "key": "game_design_spr_types-53c92e2f-0462-48a7-8070-e1224840f013",
+        "layout": "text-top-left"
+      }
+    ],
+    "name_suffix": "_2024"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-08-27T15:41:06.916+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-prompt-practice-L4_2024\\\"\"],\"cloned_from\":\"gen-ai-customizing-prompt-practice-L4_2024\"}]"
+}]]></config>
+</Panels>

@@ -1,0 +1,69 @@
+// 24px rounded-square swatches, 4px gap, 4px padding around the grid.
+// Width caps at 5 swatches per row.
+//   5 * 24 (swatch) + 4 * 4 (gap) + 2 * 4 (padding) = 144px
+.swatchGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 4px;
+  max-width: 144px;
+}
+
+.swatch {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  min-height: 24px;
+  padding: 0;
+  border-radius: 4px;
+  border: 1px solid var(--borders-neutral-primary);
+
+  &:hover {
+    border-color: var(--text-neutral-primary);
+  }
+}
+
+// The :global chain outranks MUI's focus-visible box-shadow.
+.swatch.swatchSelected:global(.MuiIconButton-root),
+.swatch.swatchSelected.customSwatch {
+  box-shadow:
+    0 0 0 1px var(--background-neutral-primary),
+    0 0 0 3px var(--text-neutral-primary);
+}
+
+// Match the swatch shape instead of MUI's default focus-visible radius.
+.swatch:global(.MuiIconButton-root):focus-visible {
+  border-radius: 4px;
+}
+
+// Wraps the hidden <input type="color">.
+.customSwatch {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text-neutral-primary);
+
+  // Propagate the hidden input's focus state to the label.
+  &:focus-within {
+    outline: 2px solid var(--borders-brand-teal-primary);
+    outline-offset: 2px;
+  }
+}
+
+.customSwatchIcon {
+  font-size: 13px;
+  pointer-events: none;
+}
+
+.customSwatchInput {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: none;
+  opacity: 0;
+  cursor: pointer;
+}

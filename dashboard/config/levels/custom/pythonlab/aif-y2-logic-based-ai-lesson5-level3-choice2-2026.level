@@ -1,0 +1,51 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-07-28T02:31:54.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "You’re building a program that recommends movies for users to watch.\r\n\r\n**Do This**\r\n\r\n1. Update the definition of `print_recommendation` to print a recommendation of a movie to watch.\r\n2. Call your `print_recommendation` function.\r\n\r\n**💻 Coding Tip**\r\n\r\nTo “call” a function is to tell the computer to run it. To call a function in Python, use its name followed by parentheses. For example, to call a function named `hello`, you could write:\r\n\r\n```python\r\nhello()\r\n```",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "def print_recommendation():\n  # TODO 1: Fill in the message with a recommendation of a movie to watch\n  print(\"\")\n\n# TODO 2: Call your print_recommendation function",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "display_name": "Movie Recommendations",
+    "bubble_choice_description": "Build a program that recommends movies for users to watch.",
+    "thumbnail_url": "https://images.code.org/60cb2f27cdeaa8bc6b577afd8bcaf82b-movie.png",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMrTmQO2YMJd3wWj\nI/5DK1RQOWzf4rhOdHeupMce+xlgo8A9A9Y1+Z4dvtvF4hiGDt+c3Ss+3ctg\nxwaLeM7eFsOlV7CC8DgfM9w93QeRxXQsVk3UGNc0lfhZlwyMFIWkzii1APls\nJKilg0z2GBANou83aAQBWV3STiLyfqVu5Jh8IjoHeM6g7QaU/yMIkVZds62j\n57jUwUfyiiTFAisYqDAxMUlWE70SDJ9ez6qMcOOEiTuLBthB491xrN8L+GJB\nPqM=\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-07-28 02:32:02 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-07-28 02:35:10 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-23 14:48:26 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 17:08:50 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 17:08:56 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>

@@ -1,0 +1,22 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-11-20T17:49:17.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# State Variable\n\nA **state variable** is a value in your program that keeps track of “where you are” so the code knows when to stop or change behavior.\n\n**Example:** In `while (userOnline == true)`, the state variable is `userOnline`.",
+        "imageUrl": "https://images.code.org/ce99fc94dd7e950161c286ff71d0c681-Screenshot 2025-11-20 at 10.58.06 AM.png",
+        "key": "undefined-ea03636a-a1b5-4568-be2b-86c3c6462665",
+        "layout": "text-bottom-right"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-20T17:49:17.715+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson1-vocab-panel-iteration-test-2025\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson1-vocab-panel-iteration-test-2025\"},{\"changed_at\":\"2025-11-20 17:52:25 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 17:57:25 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 17:58:45 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

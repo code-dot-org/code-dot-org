@@ -1,7 +1,7 @@
-import GathererHandler from './gatherer';
-
-import mazeMsg from '../locale';
 import {HarvesterTerminationValue, TestResults} from '../../constants.js';
+import mazeMsg from '../locale';
+
+import GathererHandler from './gatherer';
 
 export default class HarvesterHandler extends GathererHandler {
   constructor(maze, config) {

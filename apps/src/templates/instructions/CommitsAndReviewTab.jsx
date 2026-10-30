@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React, {
   useState,
   useEffect,
@@ -5,22 +6,22 @@ import React, {
   useMemo,
   forwardRef,
 } from 'react';
-import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-import color from '@cdo/apps/util/color';
-import javalabMsg from '@cdo/javalab/locale';
-import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
+
+import project from '@cdo/apps/code-studio/initApp/project';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import CodeReviewDataApi from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewDataApi';
-import ReviewNavigator from '@cdo/apps/templates/instructions/codeReviewV2/ReviewNavigator';
-import CodeReviewTimeline from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimeline';
-import Button from '@cdo/apps/templates/Button';
 import {
   setIsReadOnlyWorkspace,
   setHasOpenCodeReview,
 } from '@cdo/apps/javalab/redux/javalabRedux';
-import project from '@cdo/apps/code-studio/initApp/project';
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
+import CodeReviewDataApi from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewDataApi';
 import CodeReviewError from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewError';
+import CodeReviewTimeline from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimeline';
+import ReviewNavigator from '@cdo/apps/templates/instructions/codeReviewV2/ReviewNavigator';
+import color from '@cdo/apps/util/color';
+import javalabMsg from '@cdo/javalab/locale';
 
 export const VIEWING_CODE_REVIEW_URL_PARAM = 'viewingCodeReview';
 

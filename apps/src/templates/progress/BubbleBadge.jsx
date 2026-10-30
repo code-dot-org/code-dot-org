@@ -1,8 +1,9 @@
-import React from 'react';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import PropTypes from 'prop-types';
-import color from '@cdo/apps/util/color';
-import FontAwesome from '../FontAwesome';
+import React from 'react';
+
 import {makeEnum} from '@cdo/apps/utils';
+
 import {BubbleSize, BubbleShape} from './BubbleFactory';
 
 export const BadgeType = makeEnum('assessment', 'keepWorking');
@@ -78,17 +79,22 @@ KeepWorkingBadge.propTypes = {
 export function AssessmentBadge() {
   return (
     <span className="fa-stack" style={styles.container}>
-      <FontAwesome
-        icon="circle"
+      <FontAwesomeV6Icon
+        iconName="circle"
         className="fa-stack-2x"
-        style={styles.purple}
+        style={styles.badgeBackground}
       />
-      <FontAwesome
-        icon="circle-thin"
+      <FontAwesomeV6Icon
+        iconName="circle"
+        iconStyle="regular"
         className="fa-stack-2x"
-        style={styles.white}
+        style={styles.badgeOutline}
       />
-      <FontAwesome icon="check" className="fa-stack-1x" style={styles.white} />
+      <FontAwesomeV6Icon
+        iconName="star"
+        className="fa-stack-1x"
+        style={styles.badgeStar}
+      />
     </span>
   );
 }
@@ -98,24 +104,39 @@ AssessmentBadge.propTypes = {
 };
 
 const styles = {
+  // fa-stack defaults to a 2.5em-wide box (25px at this font size); pin it
+  // to 20x20 so the container matches the 2em circle drawn inside it.
   container: {
     fontSize: 10,
+    width: 20,
+    height: 20,
   },
+  // The badge overhangs its bubble into the neighboring cell, where the gray
+  // connector bar (ProgressBubbleSet) would otherwise paint over it in DOM
+  // order; z-index lifts the badge above the z-auto bars.
   bubblePosition: {
     position: 'absolute',
-    top: -7,
-    right: -7,
+    top: -4,
+    right: -10,
+    zIndex: 1,
   },
   diamondBubblePosition: {
     position: 'absolute',
-    top: -13,
-    right: -17,
+    top: -10,
+    right: -20,
+    zIndex: 1,
   },
-  purple: {
-    color: color.purple,
+  badgeBackground: {
+    color: 'var(--background-neutral-primary)',
   },
-  white: {
-    color: color.white,
+  badgeOutline: {
+    color: 'var(--text-neutral-primary)',
+  },
+  badgeStar: {
+    color: 'var(--text-neutral-primary)',
+    // The star glyph rides low in the fa-stack line box; nudge it up so it
+    // sits centered in the badge circle.
+    transform: 'translateY(-1px)',
   },
   keepWorkingSmallBadgePosition: {
     position: 'absolute',
@@ -129,7 +150,7 @@ const styles = {
   },
   keepWorkingBadge: {
     borderRadius: '50%',
-    backgroundColor: color.red,
+    backgroundColor: 'var(--background-error-primary)',
   },
   keepWorkingBadgeFullSize: {
     width: 10,

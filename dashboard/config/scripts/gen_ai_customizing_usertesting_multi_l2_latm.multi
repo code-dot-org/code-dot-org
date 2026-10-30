@@ -1,0 +1,21 @@
+name 'gen-ai-customizing-usertesting-multi-L2_latm'
+question 'Given this new information, what do you think we should do?'
+
+wrong '🟢Launch it anyway - no action needed!'
+wrong '🟡Launch the chatbot, but follow-up with a quick fix to address the issue'
+wrong '🟠Delay the launch until we fix the issue'
+wrong '🔴Cancel the project altogether - this issue is too serious'
+
+allow_multiple_attempts false
+markdown <<MARKDOWN
+## Alice's Recycle Chatbot
+
+#### Alice got a lot of useful data from testing her chatbot with users!
+
+#### One thing people reported is that some of the advice from the chatbot is incorrect - it doesn’t always get it right when something can or can’t be recycled.
+
+#### Now Alice needs to make a decision about what to do with this new information
+
+<hr />
+
+MARKDOWN

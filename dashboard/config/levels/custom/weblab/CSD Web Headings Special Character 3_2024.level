@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "# Extra Code: Special Character \"&\"\r\n\r\nThe ampersand character (**&**) can cause errors in your HTML code because it is actually used for other special characters like less than symbols (**<** is encoded as `&lt;`), and double quotation marks (**\"** is encoded as`&quot`). \r\n\r\nTo use the **&** character in a paragraph correctly, you need the special code `&amp;`.\r\n*Yes, you need an ampersand to encode an ampersand!*\r\n<br>In this activity, you'll make up a list some of your favorite things and practice using ampersands. \r\n\r\n# Do This\r\n1) Read the HTML and look for where the `&amp;` code is used correctly.\r\n* Replace the ampersand that is causing pink code with the special code for the symbol.\r\n* Fill in the blank categories or add your own using the new code. Try to come up with answers that use the symbol!\r\n",
+    "long_instructions": "# Extra Code: Special Character \"&\"\r\n\r\nThe ampersand character (**&**) can cause errors in your HTML code because it is actually used for other special characters like less than symbols (**<** is encoded as `&lt;`), and double quotation marks (**\"** is encoded as`&quot;`). \r\n\r\nTo use the **&** character in a paragraph correctly, you need the special code `&amp;`.\r\n*Yes, you need an ampersand to encode an ampersand!*\r\n<br>In this activity, you'll make up a list some of your favorite things and practice using ampersands. \r\n\r\n# Do This\r\n1) Read the HTML and look for where the `&amp;` code is used correctly.\r\n* Replace the ampersand that is causing pink code with the special code for the symbol.\r\n* Fill in the blank categories or add your own using the new code. Try to come up with answers that use the symbol!\r\n",
     "mini_rubric": "false",
     "hide_share_and_remix": "false",
     "submittable": "false",
@@ -26,6 +26,6 @@
     "validation_enabled": "false"
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-11-28T16:58:31.786+00:00\",\"changed\":[\"cloned from \\\"CSD Web Headings Special Character 3_2023\\\"\"],\"cloned_from\":\"CSD Web Headings Special Character 3_2023\"},{\"changed_at\":\"2024-02-15 17:20:58 +0000\",\"changed\":[\"start_sources\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-11-28T16:58:31.786+00:00\",\"changed\":[\"cloned from \\\"CSD Web Headings Special Character 3_2023\\\"\"],\"cloned_from\":\"CSD Web Headings Special Character 3_2023\"},{\"changed_at\":\"2024-02-15 17:20:58 +0000\",\"changed\":[\"start_sources\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-24 20:34:16 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab>

@@ -1,0 +1,14 @@
+{
+  "category_key": "javascript",
+  "content": "# Input Event\n\nThe `\"input\"` event happens when a user changes the value of an input element. Use it with `addEventListener()` when you want the page to update while the user types, moves a slider, or changes a control.",
+  "examples": "[{\"name\":\"Update Text From a Slider\",\"description\":\"This runs `updateThermometer` when the slider value changes.\",\"code\":\"```\\nconst slider = document.getElementById(\\\"temperatureSlider\\\");\\nconst temperatureText = document.getElementById(\\\"temperatureText\\\");\\n\\nconst updateThermometer = () =\\u003e {\\n  temperatureText.textContent = slider.value;\\n};\\n\\nslider.addEventListener(\\\"input\\\", updateThermometer);\\n```\"}]",
+  "external_documentation": "",
+  "fields": "[]",
+  "key": "input-event",
+  "name": "Input Event",
+  "syntax": "`slider.addEventListener(\"input\", updateThermometer);`",
+  "tips": "- Write `\"input\"` in quotation marks inside `addEventListener()`.\n- Use the `\"input\"` event when the page should respond as a value changes.\n- The function after `\"input\"` is the event handler. It runs when the input changes.\n- Make sure the input element has been selected before adding an input event to it.\n- In Web Lab, `\"input\"` often appears with sliders, text fields, and controls that update the page immediately.",
+  "methods": [
+
+  ]
+}

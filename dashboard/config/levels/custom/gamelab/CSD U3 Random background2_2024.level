@@ -52,9 +52,9 @@
     "parent_level_id": 20654,
     "name_suffix": "_2024",
     "reference_links": [
-      "/courses/csd-2022/guides/drawing-shapes"
+      "/courses/csd-2024/guides/drawing-shapes"
     ],
-    "map_reference": "/courses/csd-2022/guides/shapes-and-parameters",
+    "map_reference": "/courses/csd-2024/guides/shapes-and-parameters",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "mini_rubric": "false",

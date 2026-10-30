@@ -1,0 +1,14 @@
+name 'thinking-critically-about-ai-preassessment-q6_2026-pilot'
+
+question 'Which of the following is a potential environmental concern about using AI systems?'
+
+right 'Running AI systems requires significant amounts of electricity and natural resources.'
+wrong 'AI systems spread computer viruses that damage the environment.'
+wrong 'AI tools create too much paper waste when printing outputs.'
+wrong 'AI systems make students less likely to go outside.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 3
+MARKDOWN

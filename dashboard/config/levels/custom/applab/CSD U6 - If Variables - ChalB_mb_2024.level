@@ -1,0 +1,116 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2024-07-10T18:57:08.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "onEvent": null,
+      "ifBlock": null,
+      "addOperator": null,
+      "subtractOperator": null,
+      "multiplyOperator": null,
+      "divideOperator": null,
+      "equalityOperator": null,
+      "inequalityOperator": null,
+      "greaterThanOperator": null,
+      "greaterThanOrEqualOperator": null,
+      "lessThanOperator": null,
+      "lessThanOrEqualOperator": null,
+      "declareAssign_x": null,
+      "declareNoAssign_x": null,
+      "assign_x": null,
+      "onBoardEvent": {
+        "dropdown": {
+          "0": [
+            "buttonA",
+            "buttonB"
+          ],
+          "1": [
+            "\"down\"",
+            "\"up\""
+          ]
+        }
+      },
+      "setProperty": null,
+      "setText": null,
+      "randomNumber_min_max": null,
+      "ledScreen.on": null,
+      "ledScreen.off": null,
+      "ledScreen.toggle": null,
+      "ledScreen.clear": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "instructions_important": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "disable_if_else_editing": "false",
+    "free_play": "false",
+    "validation_enabled": "true",
+    "submittable": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "execute_palette_apis_only": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "hide_view_data_button": "true",
+    "show_debug_watch": "true",
+    "expand_debugger": "false",
+    "fail_on_lint_errors": "false",
+    "debugger_disabled": "false",
+    "makerlab_enabled": "microbit",
+    "long_instructions": "<!--\r\nmarkdown=\"1\" style=\"float: right; margin: 20px;\">\r\n\r\n![expandable](https://images.code.org/3441200bfbe8b152e33637e0f5b38510-image-1650059782558.gif)\r\n\r\n<br/>\r\n\r\nClick to expand\r\n\r\n</div>\r\n--->\r\n\r\n# Water Level App\r\n\r\nCreate an app that simulates an automatic bathtub filler, where the water level rises to a set point. You should use the A button to raise the water, and the B button to lower the water. When the water goes past the black line of the bathtub, the micro:bit should light up the LEDs to let you know you're at risk of overflowing!\r\n\r\n## Do This\r\n\r\n_Note: You can click the instructions below to expand them and see more specific instructions_\r\n\r\n1) ::: details [When the A button is pressed, the water rises up the screen]\r\n\t- Use the [Counter Pattern](/docs/concepts/patterns/counter-patterns-with-event/) to change the `waterY` variable. Don't forget: moving up means subtracting so the y position gets smaller\r\n\t- Use [`setProperty()`(#fff176)](/docs/applab/setProperty/) to update the y position of the water image\r\n    :::\r\n2) ::: details [If the water gets to the black line, light up at least 4 LEDs on the `ledScreen`]\r\n\t- Add an [`if statement`(#64B5F6)](/docs/applab/ifBlock/) to check the waterY variable.\r\n    - If it's above the black line: use [`ledScreen.on()`(#f78183)](/docs/ide/applab/expressions/ledScreen.on) to light up the screen\r\n    :::\r\n3) ::: details [When the B button is pressed, the water lowers on the screen]\r\n\t- Use the [Counter Pattern](/docs/concepts/patterns/counter-patterns-with-event/) to change the `waterY` variable. Don't forget: moving down means adding so the y position gets smaller\r\n\t- Use [`setProperty()`(#fff176)](/docs/applab/setProperty/) to update the y position of the water image\r\n    :::",
+    "parent_level_id": 20595,
+    "mini_rubric": "false",
+    "text_mode_at_start": "false",
+    "encrypted": "false",
+    "libraries_enabled": "false",
+    "widget_mode": "false",
+    "ai_enabled": "false",
+    "reference_links": [
+      "/courses/csd-2022/guides/if-statements-2",
+      "/courses/csd-2022/guides/booleans-and-comparison-operators",
+      "/courses/csd-2022/guides/variables",
+      "/courses/csd-2022/guides/counter-patterns-with-event",
+      "/maker/setup"
+    ],
+    "callout_json": "[]",
+    "display_name": "Water Level App",
+    "thumbnail_url": "https://images.code.org/4430a8e05ed636c4097aacc54ba65e67-image-1650059809647.png",
+    "starter_assets": {
+      "water-rising.png": "6965b6aa-3a6f-44a1-b89b-6f3006bd678e.png"
+    },
+    "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"><img src=\"/level_starter_assets/CSD U6 - If Variables - ChalB_2022/water-rising.png\" data-canonical-image-url=\"image://water-rising.png\" data-image-type=\"file\" data-object-fit=\"cover\" id=\"waterImage\" style=\"height: 315px; width: 320px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; position: absolute; left: 1.66533e-16px; margin: 0px; top: 400px;\"><label style=\"margin: 0px; line-height: 1; overflow: hidden; overflow-wrap: break-word; max-width: 320px; border-style: solid; text-rendering: optimizespeed; color: rgb(77, 87, 95); background-color: rgb(0, 0, 0); border-color: rgb(77, 87, 95); border-radius: 0px; border-width: 0px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 13px; padding: 2px 15px; width: 320px; position: absolute; left: 0px; top: 275px; height: 5px;\" id=\"line\"></label><label style=\"margin: 0px; line-height: 1; overflow: hidden; overflow-wrap: break-word; max-width: 320px; border-style: solid; text-rendering: optimizespeed; color: rgb(77, 87, 95); background-color: rgba(0, 0, 0, 0); border-color: rgb(77, 87, 95); border-radius: 0px; border-width: 0px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; padding: 2px 15px; width: 320px; height: 95px; position: absolute; left: 0px; top: 10px; text-align: center;\" id=\"directionsLabel\">Press the left and right buttons to raise and lower the water in the bath tub. If the water gets too close to the edge, the app will buzz to warn you!</label></div></div>",
+    "bubble_choice_description": "Create an app that simulates an automatic bathtub filler, where the water level rises to a set point.",
+    "start_blocks": "var waterY = 400;\r\nonBoardEvent(buttonA, \"down\", function() {\r\n  //1) When the A button is pressed, the water rises up the screen\r\n  \r\n  //2) If the water gets to the black line, the circuit playground should buzz\r\n  \r\n});\r\nonBoardEvent(buttonB, \"down\", function() {\r\n  //3) When the B button is pressed, the water lowers on the screen\r\n  \r\n});\r\n",
+    "encrypted_examples": "yAQZOjOk/mCeyxU2FvdtdUHwXwfBkw+XBkSKuU0sphaiJfuwv3H1ggfKtxkN\nIAaqBBGcD3kkhgg1ZF1PnznSVg==\n",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-07-10T18:57:08.751+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - If Variables - ChalB_mb2022\\\"\"],\"cloned_from\":\"CSD U6 - If Variables - ChalB_mb2022\"}]"
+}]]></config>
+  <blocks/>
+</Applab>

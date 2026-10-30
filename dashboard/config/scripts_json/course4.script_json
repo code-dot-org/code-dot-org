@@ -8,30 +8,42 @@
         {
           "key": "d79fdf44-5b59-4229-bca8-f8b4e2786ccb",
           "notice": "Course Warning",
-          "details": "We are in the process of fully removing the Course 4 content and course from Code.org within the next 6-8 months, as we no longer actively support this older offering. Any existing bugs or seemingly-missing content within Course 4 content will unfortunately not be addressed or fixed, as we work towards fully removing it and dedicate our staff resources on new content offerings.",
+          "details": "We are in the process of fully removing all Course 4 content from Code.org as we no longer support this older offering. The course will be removed from the site in September, 2025. Until that time, we have made the course unassignable, and no bugs or missing content will be addressed or fixed. Our recommended replacement course is CS Fundamentals Course F. ",
           "link": "https://support.code.org/hc/en-us/articles/16268528601101-List-of-Deprecated-or-Non-Supported-Code-org-Courses",
-          "type": "warning",
+          "type": "failure",
           "visibility": "Teacher-only",
           "dismissible": false,
           "buttonText": "Learn More"
+        },
+        {
+          "key": "4bdda9c9-0bed-4ecf-a3bc-d3da4ad31a29",
+          "notice": "CS Fundamentals now available in Filipino!",
+          "details": "With generous support from HP, we translated CS Fundamentals into Filipino. We invite you to begin using the CS Fundamentals created for all elementary and beginner secondary students. Sa bukas na suporta mula sa HP, isinalin namin ang CS Fundamentals sa Filipino. Inaanyayahan namin kayong simulan ang paggamit ng CS Fundamentals sa Filipino.",
+          "link": "https://studio.code.org/s/coursed-2021?lang=fil-PH",
+          "type": "bullhorn",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "CSF Kursong D "
         }
       ],
+      "content_area": "curriculum_k_5",
       "curriculum_path": "https://code.org/curriculum/course4/{LESSON}/Teacher",
       "curriculum_umbrella": "CSF",
       "hideable_lessons": true,
-      "is_course": true,
+      "is_deprecated": true,
       "is_migrated": true,
       "tts": true,
       "use_legacy_lesson_plans": true,
       "version_year": "unversioned"
     },
     "new_name": null,
-    "family_name": "course4",
-    "serialized_at": "2024-01-05 15:46:13 UTC",
-    "published_state": "stable",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "family_name": null,
+    "serialized_at": "2025-07-18 18:00:00 UTC",
+    "hide_within_course": false,
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "course4"
     }

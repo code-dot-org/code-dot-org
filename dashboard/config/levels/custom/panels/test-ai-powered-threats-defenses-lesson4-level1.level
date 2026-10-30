@@ -1,0 +1,49 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-07-24T20:41:02.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "##What Would You Do?\n\nYou get a text from a number claiming to be your bank. It says your account is locked and urges you to click a link.\n\nYou’ve just encountered a **smishing attack**, a type of **social engineering**.",
+        "imageUrl": "https://images.code.org/76fa07ab8146915e32c336f68ddedfbc-locked_phone.png",
+        "key": "test-ai-powered-threats-defenses-lesson3-level3-6ea9678a-ce7e-41b9-abb2-d878eb87ac30",
+        "typing": false,
+        "fadeInOverPrevious": true,
+        "layout": "text-top-right"
+      },
+      {
+        "text": "##What Is Social Engineering?\n\n**Social engineering** is when someone tricks you into giving up private info or doing something risky.\n\nInstead of hacking a system, they “hack” the human. \n\nThese attacks often use urgency, fear, or curiosity to manipulate people.",
+        "imageUrl": "https://images.code.org/d5f08cbfb0c3795d019e93f06dbe156c-Screenshot 2025-07-24 150917.png",
+        "key": "test-ai-powered-threats-defenses-lesson3-level3-91f6e938-059e-4b97-b572-350b4fa8bbb8",
+        "fadeInOverPrevious": true,
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "##What Is Smishing?\n\n**Smishing = SMS + phishing**\n\nIt’s a scam that comes through your text messages.\n\nAttackers pretend to be banks, delivery services, or even your boss to get you to click a link or reply.",
+        "imageUrl": "https://images.code.org/aa3d0e4a7a5cb90566b59e7c31da9c65-Screenshot 2025-07-24 151417.png",
+        "key": "test-ai-powered-threats-defenses-lesson3-level3-79557c5a-46fd-42a9-8bcd-652ea77a7ed0",
+        "layout": "text-top-right"
+      },
+      {
+        "text": "##How AI Makes Smishing Worse\n\nAI tools can scan public info and craft scam messages that sound real—using your name, job, or recent purchases. \n\nThis makes it harder to tell real from fake. Even smart people fall for it.",
+        "imageUrl": "https://images.code.org/8bcf8f7be094d9458e2d0926f339f872-Screenshot 2025-07-24 152911.png",
+        "key": "test-ai-powered-threats-defenses-lesson3-level3-10f16dff-0ead-45fb-8aaf-e7607fe82cca",
+        "layout": "text-top-center"
+      },
+      {
+        "text": "##Real-Life Example\n\nNow it’s your turn! Open a **new tab** and do a **quick search:** “*Recent smishing scam*”\n\nFind a real-world example that looks interesting and answer:\n* What was the scam trying to do?\n* Who was targeted?\n* What tricks did they use?",
+        "imageUrl": "https://images.code.org/eb6940181f7c0a52954e8b602384ea86-Screenshot 2025-07-24 153557.png",
+        "key": "test-ai-powered-threats-defenses-lesson4-level1-7e8bd43d-18c4-4bad-845f-a3ffcef8a820",
+        "layout": "text-top-left"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2025-07-24T20:41:02.319+00:00\",\"changed\":[\"cloned from \\\"test-ai-powered-threats-defenses-lesson3-level3\\\"\"],\"cloned_from\":\"test-ai-powered-threats-defenses-lesson3-level3\"},{\"changed_at\":\"2025-07-24 20:41:06 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-24 21:00:02 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-24 22:39:24 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

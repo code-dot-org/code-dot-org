@@ -1,0 +1,26 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-06-18T22:31:47.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "true",
+    "panels": [
+      {
+        "text": "Designing a website starts with understanding who it is for. A web designer has to think about the **audience**, choose the **content** that matters most, organize that content into a clear **structure**, and use **style choices** - like color, typography, and imagery - to shape how the audience feels and what they notice first. Each design choice helps turn an idea into an experience that makes sense to the people who will actually use it.",
+        "imageUrl": "https://images.code.org/ce4520bb80ddbbed1ce192c889203bd1-iste_design_journey.png",
+        "key": "undefined-904541ec-483c-456e-aadb-a278e20e7bfe",
+        "layout": "text-bottom-right",
+        "typing": false,
+        "fadeInOverPrevious": true
+      }
+    ],
+    "name_suffix": "_iste-2026",
+    "use_links": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-06-18T22:31:47.718+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-v2-1_pilot2_launch\\\"\"],\"cloned_from\":\"hoai-web-design-v2-1_pilot2_launch\"},{\"changed_at\":\"2026-06-22 17:40:27 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22603,\"changed_by_email\":\"sam.morris+level@code.org\"},{\"changed_at\":\"2026-06-22 18:57:40 +0000\",\"changed\":[],\"changed_by_id\":22603,\"changed_by_email\":\"sam.morris+level@code.org\"},{\"changed_at\":\"2026-06-22 18:58:49 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22603,\"changed_by_email\":\"sam.morris+level@code.org\"},{\"changed_at\":\"2026-06-22 21:14:14 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22603,\"changed_by_email\":\"sam.morris+level@code.org\"},{\"changed_at\":\"2026-06-22 21:15:49 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22603,\"changed_by_email\":\"sam.morris+level@code.org\"},{\"changed_at\":\"2026-06-22 21:22:36 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22603,\"changed_by_email\":\"sam.morris+level@code.org\"},{\"changed_at\":\"2026-06-22 21:23:48 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22603,\"changed_by_email\":\"sam.morris+level@code.org\"}]"
+}]]></config>
+</Panels>

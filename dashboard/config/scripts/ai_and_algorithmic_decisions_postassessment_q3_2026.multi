@@ -1,0 +1,14 @@
+name 'ai-and-algorithmic-decisions-postassessment-q3_2026'
+
+question 'A student asks AI to add an event listener to a button with id `submitBtn`. The AI returns code that uses `document.getElementById("submit-button")`. The button still doesn''t work. Which named AI failure mode best describes what happened?'
+
+right 'Context blindness — AI cannot see the actual page and guessed an id based on patterns from similar pages.'
+wrong 'A network outage at the AI service.'
+wrong 'A bug in the JavaScript language itself.'
+wrong 'The button is broken at the hardware level.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 2
+MARKDOWN

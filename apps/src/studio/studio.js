@@ -6,60 +6,67 @@
  */
 
 import $ from 'jquery';
-import * as constants from './constants';
-import * as utils from '../utils';
 import _ from 'lodash';
-import AppView from '../templates/AppView';
-import BigGameLogic from './customLogic/bigGameLogic';
-import CollisionMaskWalls from './collisionMaskWalls';
-import Hammer from '../third-party/hammer';
-import GlowFilter from './starwars/GlowFilter';
-import InputPrompt from '../templates/InputPrompt';
-import Item from './Item';
-import JSInterpreter from '../lib/tools/jsinterpreter/JSInterpreter';
-import JsInterpreterLogger from '../JsInterpreterLogger';
-import MusicController from '../MusicController';
-import ObstacleZoneWalls from './obstacleZoneWalls';
-import Projectile from './projectile';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import RocketHeightLogic from './customLogic/rocketHeightLogic';
-import SamBatLogic from './customLogic/samBatLogic';
-import Sprite from './Sprite';
-import StudioVisualizationColumn from './StudioVisualizationColumn';
-import ThreeSliceAudio from './ThreeSliceAudio';
-import TileWalls from './tileWalls';
-import api from './api';
-import blocks from './blocks';
-import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
-import commonMsg from '@cdo/locale';
-import dom from '../dom';
-import dropletConfig from './dropletConfig';
-import paramLists from './paramLists.js';
-import studioCell from './cell';
-import studioMsg from './locale';
-import {GridTurn, GridMove, GridMoveAndCancel} from './spriteActions';
 import {Provider} from 'react-redux';
-import {singleton as studioApp} from '../StudioApp';
-import {outputError, injectErrorHandler} from '../lib/util/javascriptMode';
-import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
+
+import {loadBlocksToWorkspace, getCode} from '@cdo/apps/blockly/utils';
+import {
+  showArrowButtons,
+  dismissSwipeOverlay,
+} from '@cdo/apps/templates/arrowDisplayRedux';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
+import commonMsg from '@cdo/locale';
+
+import {blockAsXmlNode, cleanBlocks} from '../block_utils';
+import project from '../code-studio/initApp/project';
+import {TestResults, ResultType, KeyCodes, SVG_NS} from '../constants';
 import {
   getContainedLevelResultInfo,
   postContainedLevelAttempt,
   runAfterPostContainedLevel,
 } from '../containedLevels';
+import dom from '../dom';
+import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
+import JsInterpreterLogger from '../JsInterpreterLogger';
+import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
+import JSInterpreter from '../lib/tools/jsinterpreter/JSInterpreter';
+import {outputError, injectErrorHandler} from '../lib/util/javascriptMode';
+import MusicController from '../MusicController';
 import {getStore} from '../redux';
 import Sounds from '../Sounds';
-import {captureThumbnailFromSvg} from '../util/thumbnail';
-import project from '../code-studio/initApp/project';
-import {blockAsXmlNode, cleanBlocks} from '../block_utils';
-import {parseElement} from '../xml';
-import {getRandomDonorTwitter} from '../util/twitterHelper';
+import {singleton as studioApp} from '../StudioApp';
+import AppView from '../templates/AppView';
+import InputPrompt from '../templates/InputPrompt';
+import Hammer from '../third-party/hammer';
 import {muteCookieWithLevel} from '../util/muteCookieHelpers';
-import {
-  showArrowButtons,
-  dismissSwipeOverlay,
-} from '@cdo/apps/templates/arrowDisplayRedux';
+import {captureThumbnailFromSvg} from '../util/thumbnail';
+import {getRandomDonorTwitter} from '../util/twitterHelper';
+import * as utils from '../utils';
+import {parseElement} from '../xml';
+
+import api from './api';
+import blocks from './blocks';
+import studioCell from './cell';
+import CollisionMaskWalls from './collisionMaskWalls';
+import * as constants from './constants';
+import BigGameLogic from './customLogic/bigGameLogic';
+import RocketHeightLogic from './customLogic/rocketHeightLogic';
+import SamBatLogic from './customLogic/samBatLogic';
+import dropletConfig from './dropletConfig';
+import Item from './Item';
+import studioMsg from './locale';
+import ObstacleZoneWalls from './obstacleZoneWalls';
+import paramLists from './paramLists.js';
+import Projectile from './projectile';
+import Sprite from './Sprite';
+import {GridTurn, GridMove, GridMoveAndCancel} from './spriteActions';
+import GlowFilter from './starwars/GlowFilter';
+import StudioVisualizationColumn from './StudioVisualizationColumn';
+import ThreeSliceAudio from './ThreeSliceAudio';
+import TileWalls from './tileWalls';
 
 // tests don't have svgelement
 import '../util/svgelement-polyfill';
@@ -71,9 +78,6 @@ var SquareType = constants.SquareType;
 var Emotions = constants.Emotions;
 const turnRight90 = constants.turnRight90;
 const turnLeft90 = constants.turnLeft90;
-
-import {TestResults, ResultType, KeyCodes, SVG_NS} from '../constants';
-import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 
 // Whether we are showing debug information
 var showDebugInfo = false;
@@ -114,15 +118,6 @@ const EdgeClassNames = ['top', 'left', 'bottom', 'right'];
 
 let level;
 let skin;
-
-// These skins can be published as projects.
-const PUBLISHABLE_SKINS = [
-  'gumball',
-  'studio',
-  'iceage',
-  'infinity',
-  'hoc2015',
-];
 
 //TODO: Make configurable.
 studioApp().setCheckForEmptyBlocks(true);
@@ -423,7 +418,6 @@ Studio.loadLevel = function () {
         staticPlayer: true,
       });
   }
-  blocks.registerCustomGameLogic(Studio.customLogic);
 
   // Custom game logic doesn't work yet in the interpreter.
   Studio.legacyRuntime = !!Studio.customLogic;
@@ -2289,12 +2283,6 @@ Studio.init = function (config) {
       Blockly.HSV_SATURATION = 0.6;
 
       Blockly.SNAP_RADIUS *= Studio.scale.snapRadius;
-
-      if (Blockly.contractEditor) {
-        Blockly.contractEditor.registerTestHandler(
-          Studio.getStudioExampleFailure
-        );
-      }
     }
 
     drawMap();
@@ -2410,11 +2398,14 @@ Studio.init = function (config) {
     />
   );
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={getStore()}>
       <AppView visualizationColumn={visualizationColumn} onMount={onMount} />
     </Provider>,
-    document.getElementById(config.containerId)
+    document.getElementById(config.containerId),
+    {
+      legacyReactDomRender: true,
+    }
   );
 };
 
@@ -2529,7 +2520,7 @@ Studio.prepareForRemix = function () {
   cleanBlocks(blocksDom);
 
   Blockly.mainBlockSpace.clear();
-  Blockly.cdoUtils.loadBlocksToWorkspace(
+  loadBlocksToWorkspace(
     Blockly.mainBlockSpace,
     Blockly.Xml.domToText(blocksDom)
   );
@@ -2942,45 +2933,6 @@ Studio.getGoalAssetFromSkin = function () {
 };
 
 /**
- * Runs test of a given example
- * @param exampleBlock
- * @returns {string} string to display after example execution
- */
-Studio.getStudioExampleFailure = function (exampleBlock) {
-  try {
-    var actualBlock = exampleBlock.getInputTargetBlock('ACTUAL');
-    var expectedBlock = exampleBlock.getInputTargetBlock('EXPECTED');
-
-    studioApp().feedback_.throwOnInvalidExampleBlocks(
-      actualBlock,
-      expectedBlock
-    );
-
-    var defCode = Blockly.Generator.blockSpaceToCode('JavaScript', [
-      'functional_definition',
-    ]);
-    var exampleCode = Blockly.Generator.blocksToCode('JavaScript', [
-      exampleBlock,
-    ]);
-    if (exampleCode) {
-      var resultBoolean = CustomMarshalingInterpreter.evalWith(
-        defCode + '; return' + exampleCode,
-        {
-          Studio: api,
-          Globals: Studio.Globals,
-        },
-        {legacy: true}
-      );
-      return resultBoolean ? null : 'Does not match definition.';
-    } else {
-      return 'No example code.';
-    }
-  } catch (error) {
-    return 'Execution error: ' + error.message;
-  }
-};
-
-/**
  * Click the run button.  Start the program.
  */
 // XXX This is the only method used by the templates!
@@ -2995,9 +2947,6 @@ Studio.runButtonClick = function () {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
   studioApp().toggleRunReset('reset');
-  if (studioApp().isUsingBlockly()) {
-    Blockly.mainBlockSpace.traceOn(true);
-  }
 
   // Stop the music the first time the run button is pressed (hoc2015)
   Studio.musicController.fadeOut();
@@ -3079,7 +3028,6 @@ Studio.displayFeedback = function () {
   };
 
   if (!Studio.waitingForReport) {
-    const saveToProjectGallery = PUBLISHABLE_SKINS.includes(skin.id);
     const isSignedIn =
       getStore().getState().currentUser.signInState === SignInState.SignedIn;
     studioApp().displayFeedback({
@@ -3096,12 +3044,13 @@ Studio.displayFeedback = function () {
         !level.projectTemplateLevelName,
       feedbackImage: Studio.feedbackImage,
       twitter: skin.twitterOptions || twitterOptions,
-      // save to the project gallery
-      saveToProjectGallery: saveToProjectGallery,
+      // Do not allow saving to the project gallery because converting from level to standalone
+      // project is problematic.
+      saveToProjectGallery: false,
       disableSaveToGallery: !isSignedIn,
       message: Studio.message,
       appStrings: appStrings,
-      // Currently only true for Artist levels
+      // Currently only true for Artist levels.
       enablePrinting: level.enablePrinting,
     });
   }
@@ -3168,17 +3117,32 @@ var registerHandlers = function (
   matchParam2Val,
   argNames
 ) {
-  var blocks = Blockly.mainBlockSpace.getTopBlocks();
-  for (var x = 0; blocks[x]; x++) {
-    var block = blocks[x];
-    // default title values to '0' for case when there is only one sprite
-    // and no title value is set through a dropdown
-    var titleVal1 = block.getFieldValue(nameParam1) || '0';
-    var titleVal2 = block.getFieldValue(nameParam2) || '0';
+  const blocks = [...Blockly.mainBlockSpace.getTopBlocks()];
+
+  // Account for hidden blocks, e.g. function definitions or blocks from
+  // legacy levels that were set as invisible to the user.
+  const hiddenWorkspace = Blockly.getHiddenDefinitionWorkspace();
+  if (hiddenWorkspace) {
+    blocks.push(...hiddenWorkspace.getTopBlocks());
+  }
+
+  for (let x = 0; blocks[x]; x++) {
+    const block = blocks[x];
+    // default field values to '0' for case when there is only one sprite
+    // and no field value is set through a dropdown
+    const fieldVal1 =
+      typeof nameParam1 !== 'string'
+        ? '0'
+        : block.getFieldValue(nameParam1) || '0';
+    const fieldVal2 =
+      typeof nameParam2 !== 'string'
+        ? '0'
+        : block.getFieldValue(nameParam2) || '0';
+
     if (
       block.type === blockName &&
-      (!nameParam1 || matchParam1Val === titleVal1) &&
-      (!nameParam2 || matchParam2Val === titleVal2)
+      (!nameParam1 || matchParam1Val === fieldVal1) &&
+      (!nameParam2 || matchParam2Val === fieldVal2)
     ) {
       var code = Blockly.Generator.blocksToCode('JavaScript', [block]);
       if (code) {
@@ -3367,19 +3331,6 @@ var defineProcedures = function (blockType) {
  * @returns {boolean} True if we have a pre-execution failure
  */
 Studio.checkForBlocklyPreExecutionFailure = function () {
-  if (studioApp().hasUnfilledFunctionalBlock()) {
-    Studio.result = false;
-    Studio.testResults = TestResults.EMPTY_FUNCTIONAL_BLOCK;
-    // Some of our levels (i.e. big game) have a different top level block, but
-    // those should be undeletable/unmovable and not hit this. If they do,
-    // they'll still get the generic unfilled block message
-    Studio.message = studioApp().getUnfilledFunctionalBlockError(
-      'functional_start_setValue'
-    );
-    Studio.preExecutionFailure = true;
-    return true;
-  }
-
   if (studioApp().hasUnwantedExtraTopBlocks()) {
     Studio.result = false;
     Studio.testResults = TestResults.EXTRA_TOP_BLOCKS_FAIL;
@@ -3387,71 +3338,7 @@ Studio.checkForBlocklyPreExecutionFailure = function () {
     return true;
   }
 
-  if (studioApp().hasEmptyFunctionOrVariableName()) {
-    Studio.result = false;
-    Studio.testResults = TestResults.EMPTY_FUNCTION_NAME;
-    Studio.message = commonMsg.unnamedFunction();
-    Studio.preExecutionFailure = true;
-    return true;
-  }
-
-  var outcome = Studio.checkExamples_();
-  if (outcome.result !== undefined) {
-    Object.assign(Studio, outcome);
-    Studio.preExecutionFailure = true;
-    return true;
-  }
-
   return false;
-};
-
-/**
- * @returns {Object} outcome
- * @returns {boolean} outcome.result
- * @returns {number} outcome.testResults
- * @returns {string} outcome.message
- */
-Studio.checkExamples_ = function () {
-  var outcome = {};
-  if (!level.examplesRequired) {
-    return outcome;
-  }
-
-  var exampleless = studioApp().getFunctionWithoutTwoExamples();
-  if (exampleless) {
-    outcome.result = ResultType.FAILURE;
-    outcome.testResults = TestResults.EXAMPLE_FAILED;
-    outcome.message = commonMsg.emptyExampleBlockErrorMsg({
-      functionName: exampleless,
-    });
-    return outcome;
-  }
-
-  var unfilled = studioApp().getUnfilledFunctionalExample();
-  if (unfilled) {
-    outcome.result = ResultType.FAILURE;
-    outcome.testResults = TestResults.EXAMPLE_FAILED;
-
-    var name = unfilled
-      .getRootBlock()
-      .getInputTargetBlock('ACTUAL')
-      .getFieldValue('NAME');
-    outcome.message = commonMsg.emptyExampleBlockErrorMsg({functionName: name});
-    return outcome;
-  }
-
-  var failingBlockName = studioApp().checkForFailingExamples(
-    Studio.getStudioExampleFailure
-  );
-  if (failingBlockName) {
-    outcome.result = false;
-    outcome.testResults = TestResults.EXAMPLE_FAILED;
-    outcome.message = commonMsg.exampleErrorMessage({
-      functionName: failingBlockName,
-    });
-  }
-
-  return outcome;
 };
 
 /**
@@ -3568,14 +3455,6 @@ Studio.execute = function () {
     }
 
     registerHandlers(handlers, 'when_run', 'whenGameStarts');
-    registerHandlers(handlers, 'functional_start_setSpeeds', 'whenGameStarts');
-    registerHandlers(
-      handlers,
-      'functional_start_setBackgroundAndSpeeds',
-      'whenGameStarts'
-    );
-    registerHandlers(handlers, 'functional_start_setFuncs', 'whenGameStarts');
-    registerHandlers(handlers, 'functional_start_setValue', 'whenGameStarts');
     registerHandlers(handlers, 'studio_whenLeft', 'when-left');
     registerHandlers(handlers, 'studio_whenRight', 'when-right');
     registerHandlers(handlers, 'studio_whenUp', 'when-up');
@@ -3685,17 +3564,12 @@ Studio.execute = function () {
     if (Studio.legacyRuntime) {
       defineProcedures('procedures_defreturn');
       defineProcedures('procedures_defnoreturn');
-      defineProcedures('functional_definition');
     } else {
       const generator = Blockly.Generator.blockSpaceToCode.bind(
         Blockly.Generator,
         'JavaScript'
       );
-      const code = [
-        'procedures_defreturn',
-        'procedures_defnoreturn',
-        'functional_definition',
-      ]
+      const code = ['procedures_defreturn', 'procedures_defnoreturn']
         .map(generator)
         .join(';');
 
@@ -3814,7 +3688,7 @@ Studio.sendPuzzleReport = function (onComplete = Studio.onReportComplete) {
 
     program = studioApp().getCode();
   } else {
-    program = Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
+    program = getCode(Blockly.mainBlockSpace);
   }
 
   Studio.waitingForReport = true;
@@ -5433,6 +5307,9 @@ Studio.paramAsNumber = function (value) {
 };
 
 Studio.adjustScore = function (value) {
+  // Resetting the scoreText ensures the new score player score
+  // is used when displayScore updates the play area.
+  Studio.scoreText = null;
   Studio.playerScore += value;
 
   Studio.displayFloatingScore(value);
@@ -6050,9 +5927,12 @@ Studio.askForInput = function (question, callback) {
     Studio.queueCallback(callback, [value]);
   }
 
-  ReactDOM.render(
+  createReactRoot(
     <InputPrompt question={question} onInputReceived={onInputReceived} />,
-    target
+    target,
+    {
+      legacyReactDomRender: true,
+    }
   );
 };
 

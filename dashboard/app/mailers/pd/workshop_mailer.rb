@@ -35,7 +35,7 @@ class Pd::WorkshopMailer < ApplicationMailer
 
   after_action :save_timestamp
 
-  def teacher_enrollment_receipt(enrollment)
+  def teacher_enrollment_receipt(enrollment, to_email = '')
     @enrollment = enrollment
     @workshop = enrollment.workshop
     @cancel_url = url_for controller: 'pd/workshop_enrollment', action: :cancel, code: enrollment.code
@@ -55,7 +55,7 @@ class Pd::WorkshopMailer < ApplicationMailer
     mail content_type: 'text/html',
       from: from,
       subject: teacher_enrollment_subject(@workshop),
-      to: email_address(@enrollment.full_name, @enrollment.email),
+      to: email_address(@enrollment.full_name, to_email.presence || @enrollment.email),
       reply_to: reply_to
   end
 
@@ -65,18 +65,18 @@ class Pd::WorkshopMailer < ApplicationMailer
 
     mail content_type: 'text/html',
       from: from_no_reply,
-      subject: 'Code.org workshop registration',
+      subject: 'CodeAI workshop registration',
       to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
 
-  def teacher_cancel_receipt(enrollment)
+  def teacher_cancel_receipt(enrollment, to_email = '')
     @enrollment = enrollment
     @workshop = enrollment.workshop
 
     mail content_type: 'text/html',
       from: from_teacher,
-      subject: 'Code.org workshop cancellation',
-      to: email_address(@enrollment.full_name, @enrollment.email),
+      subject: 'CodeAI workshop cancellation',
+      to: email_address(@enrollment.full_name, to_email.presence || @enrollment.email),
       reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
 
@@ -86,48 +86,21 @@ class Pd::WorkshopMailer < ApplicationMailer
 
     mail content_type: 'text/html',
       from: from_no_reply,
-      subject: 'Code.org workshop cancellation',
+      subject: 'CodeAI workshop cancellation',
       to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
 
   def organizer_should_close_reminder(workshop)
     @workshop = workshop
+    workshop_title = @workshop.name.presence || @workshop.course
 
     mail content_type: 'text/html',
       from: from_no_reply,
-      subject: "Your #{@workshop.course} workshop is still open, please close it",
+      subject: "Your #{workshop_title} workshop is still open, please close it",
       to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
 
-  def teacher_enrollment_reminder(enrollment, options = nil)
-    @enrollment = enrollment
-    @workshop = enrollment.workshop
-    @organizer = @workshop.organizer
-    @regional_partner_name = @workshop.regional_partner&.name
-    @cancel_url = url_for controller: 'pd/workshop_enrollment', action: :cancel, code: enrollment.code
-    @is_reminder = true
-    @pre_workshop_survey_url = enrollment.pre_workshop_survey_url
-    @is_first_pre_survey_email = options.nil? ? true : options[:days_before] == INITIAL_PRE_SURVEY_DAYS_BEFORE
-
-    # Facilitator training workshops use a different email address
-    if @enrollment.workshop.course == Pd::Workshop::COURSE_FACILITATOR
-      from = from_facilitators
-      reply_to = from_facilitators
-    else
-      from = from_teacher
-      reply_to = email_address(@workshop.organizer.name, @workshop.organizer.email)
-    end
-
-    return if @workshop.suppress_reminders? || @workshop.suppress_email?
-
-    mail content_type: 'text/html',
-      from: from,
-      subject: teacher_enrollment_subject(@workshop),
-      to: email_address(@enrollment.full_name, @enrollment.email),
-      reply_to: reply_to
-  end
-
-  def teacher_pre_workshop_csa(enrollment)
+  def teacher_pre_workshop_csa(enrollment, to_email = '')
     @enrollment = enrollment
     @workshop = enrollment.workshop
     @cancel_url = url_for controller: 'pd/workshop_enrollment', action: :cancel, code: enrollment.code
@@ -135,7 +108,7 @@ class Pd::WorkshopMailer < ApplicationMailer
     mail content_type: 'text/html',
       from: from_teacher,
       subject: 'Preparing for your Computer Science A summer workshop',
-      to: email_address(@enrollment.full_name, @enrollment.email),
+      to: email_address(@enrollment.full_name, to_email.presence || @enrollment.email),
       reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
 
@@ -165,25 +138,6 @@ class Pd::WorkshopMailer < ApplicationMailer
          reply_to: from_facilitators
   end
 
-  def facilitator_post_workshop(user, workshop)
-    @user = user
-    @workshop = workshop
-    survey_params = "workshop_id=#{workshop.id}"
-    @survey_url = CDO.studio_url "pd/workshop_survey/facilitator_post_foorm?#{survey_params}", CDO.default_scheme
-
-    @regional_partner_name = @workshop.regional_partner&.name
-    @deadline = (Time.now + 10.days).strftime('%B %-d, %Y').strip
-    @workshop_date = @workshop.sessions.size == 1 ?
-                       @workshop.sessions.first.start.strftime('%B %-d, %Y').strip :
-                       @workshop.friendly_date_range
-
-    mail content_type: 'text/html',
-         from: from_facilitators,
-         subject: 'How did your workshop go?',
-         to: email_address(@user.name, @user.email),
-         reply_to: from_facilitators
-  end
-
   def organizer_enrollment_reminder(workshop)
     @workshop = workshop
     @cancel_url = '#'
@@ -196,18 +150,6 @@ class Pd::WorkshopMailer < ApplicationMailer
          subject: teacher_enrollment_subject(@workshop),
          to: email_address(@workshop.organizer.name, @workshop.organizer.email),
          reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
-  end
-
-  def detail_change_notification(enrollment)
-    @enrollment = enrollment
-    @workshop = enrollment.workshop
-    @cancel_url = url_for controller: 'pd/workshop_enrollment', action: :cancel, code: enrollment.code
-
-    mail content_type: 'text/html',
-      from: from_teacher,
-      subject: detail_change_notification_subject(@workshop),
-      to: email_address(@enrollment.full_name, @enrollment.email),
-      reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
 
   def facilitator_detail_change_notification(user, workshop)
@@ -245,26 +187,6 @@ class Pd::WorkshopMailer < ApplicationMailer
       reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
 
-  # Exit survey email
-  # @param enrollment [Pd::Enrollment]
-  def exit_survey(enrollment)
-    @workshop = enrollment.workshop
-    @teacher = enrollment.user
-    @enrollment = enrollment
-    @survey_url = enrollment.exit_survey_url
-
-    content_type = 'text/html'
-    if @workshop.course == Pd::Workshop::COURSE_CSF
-      attachments['certificate.jpg'] = generate_csf_certificate
-      content_type = 'multipart/mixed'
-    end
-
-    mail content_type: content_type,
-      from: from_survey,
-      subject: "Help us improve Code.org #{@workshop.course} workshops!",
-      to: email_address(@enrollment.full_name, @enrollment.email)
-  end
-
   def teacher_follow_up(enrollment)
     @enrollment = enrollment
     @workshop = enrollment.workshop
@@ -298,19 +220,19 @@ class Pd::WorkshopMailer < ApplicationMailer
   end
 
   private def from_teacher
-    email_address('Code.org', 'teacher@code.org')
+    email_address('CodeAI', 'teacher@code.org')
   end
 
   private def from_facilitators
-    email_address('Code.org', 'facilitators@code.org')
+    email_address('CodeAI', 'facilitators@code.org')
   end
 
   private def from_no_reply
-    email_address('Code.org', 'noreply@code.org')
+    email_address('CodeAI', 'noreply@code.org')
   end
 
   private def from_survey
-    email_address('Code.org', 'survey@code.org')
+    email_address('CodeAI', 'survey@code.org')
   end
 
   private def get_details_partial(course, subject)
@@ -332,7 +254,7 @@ class Pd::WorkshopMailer < ApplicationMailer
         "You're enrolled! View details for your upcoming #{workshop.course} workshop"
       end
     else
-      'Your upcoming Code.org workshop and next steps'
+      'Your upcoming CodeAI workshop and next steps'
     end
   end
 
@@ -340,7 +262,7 @@ class Pd::WorkshopMailer < ApplicationMailer
     if workshop.course == Pd::Workshop::COURSE_ADMIN_COUNSELOR
       "Details for your upcoming #{workshop.course_name} workshop have changed"
     else
-      'Details for your upcoming Code.org workshop have changed'
+      'Details for your upcoming CodeAI workshop have changed'
     end
   end
 

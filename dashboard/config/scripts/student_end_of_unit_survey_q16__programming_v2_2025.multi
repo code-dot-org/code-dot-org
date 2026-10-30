@@ -1,0 +1,13 @@
+name 'student-end-of-unit-survey-q16_-programming_v2-2025'
+
+question 'Which option best reflects your classroom experience most often?'
+
+right 'My teacher teaches the entire lesson.'
+right 'My teacher introduces the activities and then I progress on my own, reaching out to my teacher when I want their feedback.'
+right 'I go through the activities on my own.'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+
+MARKDOWN

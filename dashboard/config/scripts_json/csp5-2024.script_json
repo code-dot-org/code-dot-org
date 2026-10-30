@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "content_area": "curriculum_9_12",
       "curriculum_umbrella": "CSP",
       "has_lesson_plan": true,
       "has_verified_resources": true,
@@ -13,12 +14,12 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
-      "version_year": "2021",
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-01-12 21:34:59 UTC",
+    "serialized_at": "2025-01-22 19:00:03 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -805,7 +806,7 @@
       "key": "35e6cccb-7e2c-45b5-84a7-4b196a429470",
       "position": 8,
       "properties": {
-        "description": "Now let's explore metadata in App Lab in the datasets you've used in previous units. Where can we find this information? What can it tell us about the data? How can it help us organize the data?",
+        "description": "Now let's explore metadata in App Lab datasets. Where can we find this information? What can it tell us about the data? How can it help us organize the data?",
         "remarks": true
       },
       "seeding_key": {
@@ -1357,7 +1358,7 @@
       "key": "bb7221eb-d910-4024-88db-8b345d44619b",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the video [Data Visualizer in App Lab - Part 2](https://youtu.be/OjUEFHo3Yw0)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Distribute:** Give students access to [r exploring_two_columns/csp/2024], ideally in digital form.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the video [Data Visualizer in App Lab - Part 2](https://youtu.be/RspulOZZTtM)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Distribute:** Give students access to [r exploring_two_columns/csp/2024], ideally in digital form.",
         "name": "Making Crosstab Charts",
         "tips": [
           {
@@ -2177,6 +2178,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Pre-Unit Pulse - Data Q1_2024"
+        ],
         "progression": "The Pre-Unit Pulse"
       },
       "bonus": false,
@@ -2199,6 +2203,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Pre-Unit Pulse - Data Q2_2024"
+        ],
         "progression": "The Pre-Unit Pulse"
       },
       "bonus": false,
@@ -2221,6 +2228,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Pre-Unit Pulse - Data Q3_2024"
+        ],
         "progression": "The Pre-Unit Pulse"
       },
       "bonus": false,
@@ -2243,6 +2253,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U9L1 Metadata_2024"
+        ],
         "progression": "Exploring Metadata"
       },
       "bonus": false,
@@ -2265,6 +2278,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U9L1 google trends CFU_2024"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2287,6 +2303,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U9L2 Making Bar Charts and Histograms_2024"
+        ],
         "progression": "Making Bar Charts and Histograms"
       },
       "bonus": false,
@@ -2309,6 +2328,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U9L2 CFU Histogram vs Bar Chart_2024"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2331,6 +2353,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U9L3 Data Cleaning_2024"
+        ],
         "progression": "Cleaning Data"
       },
       "bonus": false,
@@ -2353,6 +2378,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U9L3 Data Filtering_2024"
+        ],
         "progression": "Filtering Data"
       },
       "bonus": false,
@@ -2375,6 +2403,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U9L3 CFU manually cleaning data_2024"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2397,6 +2428,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U9L4 Making Crosstabs and Scatter Plots_2024"
+        ],
         "progression": "Crosstab and Scatter Charts"
       },
       "bonus": false,
@@ -2419,6 +2453,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Which Type of Chart_2024"
+        ],
         "progression": "Which Type of Chart?"
       },
       "bonus": false,
@@ -2441,6 +2478,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U9L4 CFU Two Column vs One_2024"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2463,6 +2503,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U9L5 CSP CFU Terms2022_2024"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2485,6 +2528,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Video_Machine_Learning_2024"
+        ],
         "progression": "AI for Oceans - Machine Learning"
       },
       "bonus": false,
@@ -2507,6 +2553,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_FishVTrash_2024"
+        ],
         "progression": "AI for Oceans - Machine Learning"
       },
       "bonus": false,
@@ -2529,6 +2578,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_CreaturesVTrashDemo_2024"
+        ],
         "progression": "AI for Oceans - Machine Learning"
       },
       "bonus": false,
@@ -2551,6 +2603,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_CreaturesVTrash_2024"
+        ],
         "progression": "AI for Oceans - Machine Learning"
       },
       "bonus": false,
@@ -2573,6 +2628,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Video_Training_Data_2024"
+        ],
         "progression": "AI for Oceans - Machine Learning"
       },
       "bonus": false,
@@ -2595,6 +2653,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Short_2024"
+        ],
         "progression": "AI for Oceans - Machine Learning"
       },
       "bonus": false,
@@ -2617,6 +2678,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Long_2024"
+        ],
         "progression": "AI for Oceans - Machine Learning"
       },
       "bonus": false,
@@ -2639,6 +2703,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U9L6 CFU ML Bias_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -2661,6 +2728,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U9L5 Cropping Widget_2024"
+        ],
         "progression": "Cropping Widget"
       },
       "bonus": false,
@@ -2683,6 +2753,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp_U9L7_CFU12022_2024"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2705,6 +2778,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U9L7 Free Response_2024"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2727,6 +2803,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U9 Data Story Day 1_2024"
+        ],
         "progression": "Data Story Workspace"
       },
       "bonus": false,
@@ -2749,6 +2828,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP U9 Data Story Day 2_2024"
+        ],
         "progression": "Data Story Workspace"
       },
       "bonus": false,
@@ -2771,6 +2853,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 9 AP-Style Assessment 2022_2024"
+        ],
         "progression": "Unit Assessment - Data"
       },
       "bonus": false,
@@ -2793,6 +2878,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp-post-survey-2021-markdown-with-link-to-survey_csp5_2024"
+        ],
         "progression": "Post-Course Survey Instructions"
       },
       "bonus": false,
@@ -3196,7 +3284,7 @@
     },
     {
       "name": "Assessment Day - Data",
-      "url": "https://docs.google.com/presentation/d/18tJ6kC-TCmAxEJTN3n4TTiFsKBltoKv7bI3AbNe4WPA/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1g5KdQf8dJt3_JT3YyLyRDjEykQyXgjHtbiJ1DZ9wodM/template/preview",
       "key": "assessment_day_-_data",
       "properties": {
         "audience": "Teacher",
@@ -3269,7 +3357,7 @@
     },
     {
       "name": "CSP Unit 5 - Data",
-      "url": "https://docs.google.com/presentation/d/1Ocs-BeSnKsCKjCRhk43YR4cwGo8EzdEAYmT-Okz88Yc/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1lvfv9i1bouF7X0Vu0nwlbbQx-m2M9j5IIeLa6J8Uo3k/template/preview",
       "key": "csp_unit_5_-_data",
       "properties": {
         "audience": "Teacher",
@@ -3281,11 +3369,10 @@
     },
     {
       "name": "CSP Unit 5 - Lesson 1 - Learning from Data",
-      "url": "https://docs.google.com/presentation/d/1X9KdBT0PzWgwTBdh5-35-8Bkwm1HyuFwdf6TFYcmZSo/copy",
+      "url": "https://docs.google.com/presentation/d/19vCthigc18Zw6hA9Ux_bvdNIWrBvq6ZBI3qFwPYCGFc/template/preview",
       "key": "csp_unit_5_-_lesson_1_-_learning_from_data",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1X9KdBT0PzWgwTBdh5-35-8Bkwm1HyuFwdf6TFYcmZSo/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -3294,11 +3381,10 @@
     },
     {
       "name": "CSP Unit 5 - Lesson 2 - Exploring One Column",
-      "url": "https://docs.google.com/presentation/d/1jrF77jto1ZR_XWchlm0DHNxLygkx5L-FQQlqr9VYTU8/copy",
+      "url": "https://docs.google.com/presentation/d/1FrQ2MEvdPU0nAo5lrPpwczwqCnVV7ud4wn6W0yDvcU4/template/preview",
       "key": "csp_unit_5_-_lesson_2_-_exploring_one_column",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1jrF77jto1ZR_XWchlm0DHNxLygkx5L-FQQlqr9VYTU8/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -3307,11 +3393,10 @@
     },
     {
       "name": "CSP Unit 5 - Lesson 3 - Filtering and Cleaning Data",
-      "url": "https://docs.google.com/presentation/d/1ZA_vZPjoF1TbWAq0k-_VkIIP3M8WNdTyGWMeAAx0YhI/copy",
+      "url": "https://docs.google.com/presentation/d/11e-Az-Foy836UecoGL8TOYMkA3febRHFTGhURpvb2ZI/template/preview",
       "key": "csp_unit_5_-_lesson_3_-_filtering_and_cleaning_data",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1ZA_vZPjoF1TbWAq0k-_VkIIP3M8WNdTyGWMeAAx0YhI/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -3320,11 +3405,10 @@
     },
     {
       "name": "CSP Unit 5 - Lesson 4 - Exploring Two Columns",
-      "url": "https://docs.google.com/presentation/d/14G7ptwES6IcNnpXccTD-09noprIzbdnXuYM3aVEeFJE/copy",
+      "url": "https://docs.google.com/presentation/d/1ed8qAREqkWH_x68_pCLfvn8REze-zJC1uLOAz5srKaM/template/preview",
       "key": "csp_unit_5_-_lesson_4_-_exploring_two_columns",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/14G7ptwES6IcNnpXccTD-09noprIzbdnXuYM3aVEeFJE/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -3333,11 +3417,10 @@
     },
     {
       "name": "CSP Unit 5 - Lesson 5 - Big, Open, and Crowdsourced Data",
-      "url": "https://docs.google.com/presentation/d/1VIGRaI9M3G4HXKyPQOOvxucg5q5C4tLaVSxClSvC6Ng/copy",
+      "url": "https://docs.google.com/presentation/d/16mcg5Y16KcrZKIAAtcYE0j4XIBLClcFUF-hC88GGIXE/template/preview",
       "key": "csp_unit_5_-_lesson_5_-_big_open_and_crowdsourced_data",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1VIGRaI9M3G4HXKyPQOOvxucg5q5C4tLaVSxClSvC6Ng/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -3346,11 +3429,10 @@
     },
     {
       "name": "CSP Unit 5 - Lesson 6 - Machine Learning",
-      "url": "https://docs.google.com/presentation/d/1R0cyJ3KIqc0-joNe2yHOkrhC1UZrDU3OsJN9ctp885k/copy",
+      "url": "https://docs.google.com/presentation/d/1fl470YLtoJAlRs35Wta-O-ezGmHqeYZtkpqM9CnUzVw/template/preview",
       "key": "csp_unit_5_-_lesson_6_-_machine_learning",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1R0cyJ3KIqc0-joNe2yHOkrhC1UZrDU3OsJN9ctp885k/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -3359,15 +3441,24 @@
     },
     {
       "name": "CSP Unit 5 - Lesson 7 - Algorithmic Bias",
-      "url": "https://docs.google.com/presentation/d/1ySR0KHBdwpQIugYalf5NRnlGvI9YMeAEgvKmZtw8jcs/copy",
+      "url": "https://docs.google.com/presentation/d/1hsem9Jlm0L-B_SJ_M37ePSbEQJmGk899Rk3UCsJhNFI/template/preview",
       "key": "csp_unit_5_-_lesson_7_-_algorithmic_bias",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1ySR0KHBdwpQIugYalf5NRnlGvI9YMeAEgvKmZtw8jcs/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "csp_unit_5_-_lesson_7_-_algorithmic_bias"
+      }
+    },
+    {
+      "name": "CSP Unit 5 - Slides",
+      "url": "https://docs.google.com/presentation/d/1lvfv9i1bouF7X0Vu0nwlbbQx-m2M9j5IIeLa6J8Uo3k/template/preview",
+      "key": "csp_unit_5_-_slides_1",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_5_-_slides_1"
       }
     },
     {
@@ -3384,7 +3475,7 @@
     },
     {
       "name": "Data Visualizer in App Lab - Part 1",
-      "url": "https://youtu.be/OjUEFHo3Yw0",
+      "url": "https://youtu.be/_85Vep7wczw",
       "key": "data_visualizer_in_app_lab_-_part_1",
       "properties": {
         "audience": "Student",
@@ -3396,7 +3487,7 @@
     },
     {
       "name": "Data Visualizer in App Lab - Part 2",
-      "url": "https://youtu.be/4vaWVvrnsFk",
+      "url": "https://youtu.be/RspulOZZTtM",
       "key": "data_visualizer_in_app_lab_-_part_2",
       "properties": {
         "audience": "Student",
@@ -3495,11 +3586,10 @@
     },
     {
       "name": "Project - Tell a Data Story",
-      "url": "https://docs.google.com/presentation/d/1fQ--8Xzl2xepnwUavthElckf2uc8iQft-4ZXKS95uwA/copy",
+      "url": "https://docs.google.com/presentation/d/1NnoRvjjSRLYRG-xcFU9MJ4xiSzaMhoQLDm_H1i3SwL4/template/preview",
       "key": "project_-_tell_a_data_story",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1fQ--8Xzl2xepnwUavthElckf2uc8iQft-4ZXKS95uwA/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -3862,6 +3952,12 @@
     {
       "seeding_key": {
         "resource.key": "course_vocabulary",
+        "script.name": "csp5-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csp_unit_5_-_slides_1",
         "script.name": "csp5-2024"
       }
     },

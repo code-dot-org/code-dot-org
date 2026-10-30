@@ -1,0 +1,13 @@
+name 'CSD U2 CSS practice_pilot_CSD-PL-23'
+display_name 'Styling Text with CSS'
+description 'Try out your new skills on these different challenges!'
+
+sublevels
+level 'CSD Web Headings Forgot Dash in Font Size_CSD-PL-23'
+level 'CSD Web Headings Missing Paragraph Tag_CSD-PL-23'
+level 'CSD Web Headings Wrong Tag in Rule Set_CSD-PL-23'
+level 'CSD Web Headings Debug RGB_CSD-PL-23'
+level 'CSD Web Headings Stylesheet Not Linked_CSD-PL-23'
+level 'CSD Web Headings Add Heading Rule_CSD-PL-23'
+level 'CSD Web Headings Add Paragraph Rule_CSD-PL-23'
+level 'CSD Web Headings Add Style Sheet_CSD-PL-23'

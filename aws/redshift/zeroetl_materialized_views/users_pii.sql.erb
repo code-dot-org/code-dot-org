@@ -1,0 +1,56 @@
+-- GENERATED FILE -- do not edit by hand.
+-- Regenerated from the ActiveRecord model by `rake db:migrate` and by
+-- `rake analytics_export:generate_materialized_view_templates`; edits here are overwritten.
+-- Committing a change to this file does NOT update the materialized view in Redshift. That
+-- needs a coordinated DROP/CREATE -- see aws/redshift/zeroetl_materialized_views/README.md
+-- and coordinate with the data (RED) and Infrastructure Engineering teams.
+CREATE MATERIALIZED VIEW learning_platform_<%=environment_type%>_pii.users
+  BACKUP NO
+  DISTSTYLE KEY DISTKEY ("id")
+  AUTO REFRESH NO
+AS SELECT
+  "id",
+  "studio_person_id",
+  "email",
+  "parent_email",
+  "reset_password_sent_at",
+  "remember_created_at",
+  "sign_in_count",
+  "current_sign_in_at",
+  "last_sign_in_at",
+  "current_sign_in_ip",
+  "last_sign_in_ip",
+  "created_at",
+  "updated_at",
+  "username",
+  "provider",
+  "uid",
+  "admin",
+  "gender",
+  "name",
+  "locale",
+  "birthday",
+  "user_type",
+  "school",
+  "full_address",
+  "school_info_id",
+  "total_lines",
+  "active",
+  "hashed_email",
+  "deleted_at",
+  "purged_at",
+  "properties",
+  "invitation_created_at",
+  "invitation_sent_at",
+  "invitation_accepted_at",
+  "invitation_limit",
+  "invited_by_id",
+  "invited_by_type",
+  "invitations_count",
+  "terms_of_service_version",
+  "urm",
+  "races",
+  "primary_contact_info_id",
+  "cap_status",
+  "cap_status_date"
+FROM <%=environment_type%>_learningplatform_mysql_zeroetl.dashboard_<%=environment_type%>.users;

@@ -1,0 +1,62 @@
+import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
+import {Typography} from '@mui/material';
+import React, {useState} from 'react';
+
+import {ModelDescription} from '@cdo/apps/aichat/types';
+
+import styles from './compare-models-dialog.module.scss';
+
+const ModelDescriptionPanel: React.FunctionComponent<{
+  initialSelectedModelId: string;
+  availableModels: ModelDescription[];
+  dropdownName: string;
+}> = ({initialSelectedModelId, availableModels, dropdownName}) => {
+  const getModelFromId = (modelId: string): ModelDescription => {
+    return (
+      availableModels.find(model => model.id === modelId) || availableModels[0]
+    );
+  };
+
+  const [selectedModel, setSelectedModel] = useState<ModelDescription>(
+    getModelFromId(initialSelectedModelId)
+  );
+
+  const onDropdownChange = (value: string) => {
+    setSelectedModel(getModelFromId(value));
+  };
+
+  return (
+    <div className={styles.modelDescriptionPanelContainer}>
+      <SimpleDropdown
+        labelText={'Choose a model'}
+        isLabelVisible={false}
+        onChange={event => onDropdownChange(event.target.value)}
+        items={availableModels.map(model => {
+          return {value: model.id, text: model.name};
+        })}
+        selectedValue={selectedModel.id}
+        name={dropdownName}
+        size="s"
+        className={styles.compareModelsDropdown}
+      />
+      <br />
+      <div className={styles.modelDescriptionContainer}>
+        <Typography variant="strong">{'Overview'}</Typography>
+        <div className={styles.textContainer}>
+          <Typography className={styles.modelText} variant="body3" gutterBottom>
+            {selectedModel.overview}
+          </Typography>
+        </div>
+        <br />
+        <Typography variant="strong">{'Training Data'}</Typography>
+        <div className={styles.textContainer}>
+          <Typography className={styles.modelText} variant="body3" gutterBottom>
+            {selectedModel.trainingData}
+          </Typography>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ModelDescriptionPanel;

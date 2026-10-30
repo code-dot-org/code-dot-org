@@ -1,0 +1,17 @@
+name 'computer-systems-preassessment-question11_v2-2025'
+title 'Computer Systems and Devices Pre-Assessment: Question 11'
+
+wrong 'The price of AI software'
+right 'The risk of bias in decision-making'
+wrong 'The speed of AI processing'
+wrong 'The colors of AI interfaces'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Which of these is an ethical concern in AI?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 12: Just Because We Can, Should We?
+MARKDOWN

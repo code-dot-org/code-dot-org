@@ -1,0 +1,16 @@
+name 'building-data-driven-systems-postassessment-q9_2025'
+
+question 'A developer writes `const result = dataset.find(item => item.id === 101);`. What is the developer trying to do?'
+
+wrong 'Transform the entire dataset into a new list.'
+wrong 'Add a new item with the ID of 101.'
+right 'Retrieve a single specific object from a list of objects based on a unique identifier.'
+wrong 'Sort the list so that ID 101 is at the top.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 5
+
+When working with lists of objects, the `.find()` method (or similar retrieval logic) is used to pick out one specific item that matches a condition, such as a unique ID.
+MARKDOWN

@@ -1,0 +1,41 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-06-29T17:06:28.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "require_edit_to_continue": true,
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "3f30e149-e2e6-4b76-a330-af0a7817e6c0": {
+          "id": "3f30e149-e2e6-4b76-a330-af0a7817e6c0",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>AI Fact Checker</title>\n    <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n    <header>\n        <h1>Spot the AI Mistakes!</h1>\n        <p>Generative AI can sometimes get things wrong. Can you find the errors?</p>\n    </header>\n\n    <main>\n        <section class=\"ai-response-card\">\n            <h2>AI Response 1</h2>\n            <p class=\"prompt\">Prompt: \"Tell me about the capital of Australia.\"\n            </p>\n            <p class=\"response\">\n                The capital city of Australia is Sydney. It's famous for its beautiful Opera House and Harbour Bridge. Many people visit Sydney every year to experience its vibrant culture and stunning beaches. \n            </p>\n        </section>\n\n        <section class=\"ai-response-card\">\n            <h2>AI Response 2</h2>\n            <p class=\"prompt\">Prompt: \"What is the largest ocean on Earth?\"\n            </p>\n            <p class=\"response\">\n                The largest ocean on Earth is the Atlantic Ocean. It separates Europe and Africa from the Americas and is known for its role in historical exploration and trade routes.\n            </p>\n        </section>\n\n        <section class=\"ai-response-card\">\n            <h2>AI Response 3</h2>\n            <p class=\"prompt\">Prompt: \"Who invented the telephone?\"\n            </p>\n            <p class=\"response\">\n                Thomas Edison invented the first working telephone in 1876. His invention revolutionized communication and led to the widespread use of telephones around the world.\n            </p>\n        </section>\n    </main>\n</body>\n</html>",
+          "folderId": "0",
+          "type": "starter",
+          "active": true
+        },
+        "400bc84e-0d5d-40e2-8283-c0fb26377af2": {
+          "id": "400bc84e-0d5d-40e2-8283-c0fb26377af2",
+          "name": "style.css",
+          "contents": "body {\n    font-family: sans-serif;\n    margin: 20px;\n    background-color: #f4f4f4;\n    color: #333;\n}\n\nheader {\n    text-align: center;\n    margin-bottom: 40px;\n}\n\nh1 {\n    color: #2c3e50;\n}\n\n.ai-response-card {\n    background-color: #ffffff;\n    border-radius: 8px;\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n    margin-bottom: 20px;\n    padding: 20px;\n}\n\n.prompt {\n    font-style: italic;\n    color: #7f8c8d;\n    margin-bottom: 10px;\n}\n\n.response {\n    line-height: 1.6;\n}\n\n/* Example for highlighting errors (students can add this) */\n.error {\n    background-color: yellow;\n    color: red;\n    font-weight: bold;\n}\n",
+          "folderId": "0",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "3f30e149-e2e6-4b76-a330-af0a7817e6c0",
+        "400bc84e-0d5d-40e2-8283-c0fb26377af2"
+      ]
+    },
+    "long_instructions": "In this level, you'll put on your detective hat and act as a fact-checker for an AI! Generative AI models are incredibly powerful, but they sometimes make mistakes or even 'hallucinate' information that sounds convincing but isn't true.\r\n\r\nYour task is to identify these errors in the provided AI-generated responses within the `index.html` file. Read each response carefully and look for anything that seems incorrect or fabricated.\r\n\r\nOnce you spot a mistake, you have a few ways to highlight it directly in `index.html`:\r\n\r\n1.  **Change the text** directly to correct the incorrect information.\r\n2.  **Add a comment** next to the incorrect information using HTML comments (`<!-- Like this -->`).\r\n3.  **Wrap the incorrect text** in a `<span>` tag with a class, like `<span class=\"error\">incorrect text</span>`. You can then add a rule to the `style.css` file to make this text stand out (e.g., `background-color: yellow; color: red;`).\r\n\r\nBe ready to explain *why* the AI's information is wrong for each example!",
+    "generate_outline": "Provide students with several examples of AI-generated text or images containing clear hallucinations or factually incorrect information. Students should identify the incorrect parts and explain why they are wrong, perhaps by highlighting or rewriting sections."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-06-29 17:06:41 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-29 17:06:41 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-29 17:07:21 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

@@ -1,0 +1,299 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-04-27T20:24:54.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "### AI can make art. \nBut it learned from work made by human artists. Is that fair? Is it creative? Is it right?",
+        "imageUrl": "https://images.code.org/507ee853b29e2f61cafa2dec48c21a2d-art_panel_1.png",
+        "key": "thinking_critically_lesson5_level2panels_2026-61c12f93-e668-4a3b-ab10-8b09009a01a3",
+        "layout": "text-top-center",
+        "links": [
+          {
+            "text": "AI and Fairness",
+            "x": 33,
+            "y": 84,
+            "targetKey": "thinking_critically_lesson5_level2panels_2026-371c1d10-09fe-49b6-8cd1-f79f8f6ee6bf",
+            "width": 11
+          },
+          {
+            "text": "AI and Ethics",
+            "x": 72,
+            "y": 62,
+            "targetKey": "thinking_critically_lesson5_level2panels_2026-0c70d15f-04dc-42e5-8c8e-6a62cafa5f48",
+            "width": 15
+          },
+          {
+            "text": "AI and Creativity",
+            "x": 28,
+            "y": 43,
+            "targetKey": "thinking_critically_lesson5_level2panels_2026-c16be7f1-46e7-4448-997e-d22428db25ea",
+            "width": 13
+          }
+        ]
+      },
+      {
+        "text": "#Is AI fair to artists?\nAI studies billions of images to find patterns — like how you might read many books to improve your writing.",
+        "imageUrl": "https://images.code.org/84809987ed7e5fa4b0607414e36763ac-art_panel_2.png",
+        "key": "thinking_critically_lesson5_level2panels_2026-371c1d10-09fe-49b6-8cd1-f79f8f6ee6bf",
+        "links": [
+          {
+            "text": "New Images into Math",
+            "x": 20,
+            "y": 21,
+            "targetKey": "thinking_critically_lesson5_level2panels_2026-90b1d169-1598-430a-94ed-8b32367dbe0f",
+            "width": 15
+          },
+          {
+            "text": "New Images from Patterns",
+            "x": 38,
+            "y": 47,
+            "targetKey": "thinking_critically_lesson5_level2panels_2026-d8f2b85b-3a5e-4133-a024-2381dcceff16",
+            "width": 11
+          },
+          {
+            "text": "Trained on Patterns",
+            "x": 20,
+            "y": 81,
+            "targetKey": "thinking_critically_lesson5_level2panels_2026-bed6cab6-30c1-4d4e-8e8f-694f3b73f732",
+            "width": 15
+          },
+          {
+            "text": "< Back",
+            "x": 85,
+            "y": 85,
+            "targetKey": "thinking_critically_lesson5_level2panels_2026-61c12f93-e668-4a3b-ab10-8b09009a01a3",
+            "width": 15
+          }
+        ]
+      },
+      {
+        "text": "AI looks through millions of images to find shapes, colors, and patterns that show up again and again.\n\n",
+        "imageUrl": "https://images.code.org/8e4c625550007ef5ad89496553eacd10-art_panel_3.png",
+        "key": "thinking_critically_lesson5_level2panels_2026-90b1d169-1598-430a-94ed-8b32367dbe0f",
+        "layout": "text-top-left",
+        "links": [
+          {
+            "text": "< Back",
+            "x": 18,
+            "y": 85,
+            "targetKey": "thinking_critically_lesson5_level2panels_2026-371c1d10-09fe-49b6-8cd1-f79f8f6ee6bf",
+            "width": 17
+          }
+        ],
+        "showContinueButton": true
+      },
+      {
+        "text": "AI does not save the images it studies. Instead, it records numbers that describe the patterns it sees.",
+        "imageUrl": "https://images.code.org/57fcc352d5f0dbb7b53464e54ba93303-art_panel_4.png",
+        "key": "thinking_critically_lesson5_level2panels_2026-d8f2b85b-3a5e-4133-a024-2381dcceff16",
+        "layout": "text-top-left",
+        "links": [
+          {
+            "text": "< Back",
+            "x": 18,
+            "y": 85,
+            "targetKey": "thinking_critically_lesson5_level2panels_2026-371c1d10-09fe-49b6-8cd1-f79f8f6ee6bf",
+            "width": 16
+          }
+        ],
+        "showContinueButton": true
+      },
+      {
+        "text": "After training, AI mixes what it learned to make new images. It is not copying any one image directly.",
+        "imageUrl": "https://images.code.org/10ae5c0c531fd1b4f40adc6fb2152a9d-art_panel_5.png",
+        "key": "thinking_critically_lesson5_level2panels_2026-bed6cab6-30c1-4d4e-8e8f-694f3b73f732",
+        "layout": "text-top-left",
+        "links": [
+          {
+            "text": "< Back",
+            "x": 16,
+            "y": 86,
+            "targetKey": "thinking_critically_lesson5_level2panels_2026-371c1d10-09fe-49b6-8cd1-f79f8f6ee6bf",
+            "width": 16
+          }
+        ],
+        "showContinueButton": true
+      },
+      {
+        "text": "#Is AI creative?\n\nWhen you look at a painting, you see a story.\nWhen AI looks at the same painting, it sees patterns — shapes, colors, and lines.\nAI does not copy the image. It breaks down how the artist made it and stores that as numbers.",
+        "imageUrl": "https://images.code.org/f1b7eb3546a5ffab7e75b7bcb9c0d0ae-art_panel_6.png",
+        "key": "thinking_critically_lesson5_level2panels_2026-c16be7f1-46e7-4448-997e-d22428db25ea",
+        "links": [
+          {
+            "text": "Color Patterns",
+            "x": 18,
+            "y": 50,
+            "targetKey": "thinking_critically_lesson5_level2panels_2026-e365cc66-bf8a-4df1-ae4d-4da6b0c457d9",
+            "width": 23
+          },
+          {
+            "text": "Light & Contrast",
+            "x": 43,
+            "y": 72,
+            "targetKey": "thinking_critically_lesson5_level2panels_2026-44fd41c5-4038-4316-97e8-69e5e375959d",
+            "width": 18
+          },
+          {
+            "text": "Brushstroke Math",
+            "x": 32,
+            "y": 18,
+            "targetKey": "thinking_critically_lesson5_level2panels_2026-71536ebe-b760-4a4f-8904-5463b564b75d",
+            "width": 19
+          },
+          {
+            "text": "< Back",
+            "x": 87,
+            "y": 86,
+            "targetKey": "thinking_critically_lesson5_level2panels_2026-61c12f93-e668-4a3b-ab10-8b09009a01a3",
+            "width": 15
+          }
+        ]
+      },
+      {
+        "text": "###AI sees patterns in brushstroke size\nAI checks whether brushstrokes are long and smooth, or short and choppy.\n",
+        "imageUrl": "https://images.code.org/21ce8204d6660a53c4969d4c1bfec0fd-art_panel_7.png",
+        "key": "thinking_critically_lesson5_level2panels_2026-71536ebe-b760-4a4f-8904-5463b564b75d",
+        "links": [
+          {
+            "text": "< Back",
+            "x": 18,
+            "y": 85,
+            "targetKey": "thinking_critically_lesson5_level2panels_2026-c16be7f1-46e7-4448-997e-d22428db25ea",
+            "width": 15
+          }
+        ],
+        "layout": "text-top-left",
+        "showContinueButton": true
+      },
+      {
+        "text": "###AI sees patterns in how colors are used\n\nAI notes which colors appear most often and how they are placed next to each other.\n\n",
+        "imageUrl": "https://images.code.org/4e28d634b77901758b113e50d130b0fd-art_panel_8.png",
+        "key": "thinking_critically_lesson5_level2panels_2026-e365cc66-bf8a-4df1-ae4d-4da6b0c457d9",
+        "layout": "text-top-left",
+        "links": [
+          {
+            "text": "< Back",
+            "x": 18,
+            "y": 86,
+            "targetKey": "thinking_critically_lesson5_level2panels_2026-c16be7f1-46e7-4448-997e-d22428db25ea",
+            "width": 15
+          }
+        ],
+        "showContinueButton": true
+      },
+      {
+        "text": "###AI sees patterns in light and shadow\nAI learns how an artist uses light and shadow to make a flat image look three-dimensional.",
+        "imageUrl": "https://images.code.org/a6d6353a24b0ff93d97f46bafba570c9-art_panel_9.png",
+        "key": "thinking_critically_lesson5_level2panels_2026-44fd41c5-4038-4316-97e8-69e5e375959d",
+        "layout": "text-top-left",
+        "links": [
+          {
+            "text": "< Back",
+            "x": 18,
+            "y": 85,
+            "targetKey": "thinking_critically_lesson5_level2panels_2026-c16be7f1-46e7-4448-997e-d22428db25ea",
+            "width": 15
+          }
+        ],
+        "showContinueButton": true
+      },
+      {
+        "text": "Is it okay for AI to learn from artists' work — or is that stealing?\n",
+        "imageUrl": "https://images.code.org/0c626a55633647fd887eb59fa6b57f64-art_panel_10.png",
+        "key": "thinking_critically_lesson5_level2panels_2026-0c70d15f-04dc-42e5-8c8e-6a62cafa5f48",
+        "layout": "text-top-right",
+        "links": [
+          {
+            "text": "How to be more fair",
+            "x": 13,
+            "y": 87,
+            "targetKey": "thinking_critically_lesson5_level2panels_2026-7a996cfe-0d33-4b6d-acb8-d63d8e6b114e",
+            "width": 20
+          },
+          {
+            "text": "Artists learn from artists",
+            "x": 13,
+            "y": 41,
+            "targetKey": "thinking_critically_lesson5_level2panels_2026-bd952ac1-d8b8-41ef-b664-354663330928",
+            "width": 23
+          },
+          {
+            "text": "Art used without credit",
+            "x": 51,
+            "y": 72,
+            "targetKey": "thinking_critically_lesson5_level2panels_2026-9eff3e43-15b6-4bed-a52d-0a1b46844bee",
+            "width": 23
+          },
+          {
+            "text": "< Back",
+            "x": 90,
+            "y": 89,
+            "targetKey": "thinking_critically_lesson5_level2panels_2026-61c12f93-e668-4a3b-ab10-8b09009a01a3",
+            "width": 16
+          }
+        ]
+      },
+      {
+        "text": "Some artists worry that their work was used to train AI without their permission or any credit.",
+        "imageUrl": "https://images.code.org/6463131f018e8b9ad71b1ef9cfe7c241-art_panel_11.png",
+        "key": "thinking_critically_lesson5_level2panels_2026-7a996cfe-0d33-4b6d-acb8-d63d8e6b114e",
+        "links": [
+          {
+            "text": "< Back",
+            "x": 18,
+            "y": 85,
+            "targetKey": "thinking_critically_lesson5_level2panels_2026-0c70d15f-04dc-42e5-8c8e-6a62cafa5f48",
+            "width": 16
+          }
+        ],
+        "layout": "text-top-left",
+        "showContinueButton": true
+      },
+      {
+        "text": "Some people argue that AI is just inspired by patterns, the same way human artists learn by studying other artists.",
+        "imageUrl": "https://images.code.org/77c2f226c046d8a0a31449b8899a9e89-art_panel_12.png",
+        "key": "thinking_critically_lesson5_level2panels_2026-bd952ac1-d8b8-41ef-b664-354663330928",
+        "links": [
+          {
+            "text": "< Back",
+            "x": 18,
+            "y": 84,
+            "targetKey": "thinking_critically_lesson5_level2panels_2026-0c70d15f-04dc-42e5-8c8e-6a62cafa5f48",
+            "width": 14
+          }
+        ],
+        "layout": "text-top-left",
+        "showContinueButton": true
+      },
+      {
+        "text": "Some new ideas: give artists credit when their work is used, pay them for it, or let them choose if their work can be used to train AI.",
+        "imageUrl": "https://images.code.org/ea39ead9c927ca9a8567e4656d417e2e-art_panel_13.png",
+        "key": "thinking_critically_lesson5_level2panels_2026-9eff3e43-15b6-4bed-a52d-0a1b46844bee",
+        "links": [
+          {
+            "text": "< Back",
+            "x": 18,
+            "y": 84,
+            "targetKey": "thinking_critically_lesson5_level2panels_2026-0c70d15f-04dc-42e5-8c8e-6a62cafa5f48",
+            "width": 15
+          }
+        ],
+        "layout": "text-top-left",
+        "showContinueButton": true
+      }
+    ],
+    "use_links": "true",
+    "display_name": "Impact on Artists",
+    "bubble_choice_description": "Explore how AI impacts artists",
+    "thumbnail_url": "https://images.code.org/0e22ed062569a627207c0038ea5285e8-one-two.jpg"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-27T20:24:54.813+00:00\",\"changed\":[\"cloned from \\\"thinking_critically_lesson5_level2panels_2026\\\"\"],\"cloned_from\":\"thinking_critically_lesson5_level2panels_2026\"},{\"changed_at\":\"2026-04-27 20:34:31 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-27 20:39:08 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-27 20:40:30 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-27 20:45:24 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-27 20:45:55 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-27 20:47:16 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-27 20:50:38 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-05-01 16:33:54 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>

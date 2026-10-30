@@ -1,0 +1,618 @@
+import type {z} from 'zod';
+
+import type {
+  CurrentUserResponseSignedIn,
+  UserSettingsResponseSchema,
+} from '@code-dot-org/core/api';
+
+// Wire (snake_case) settings body, typed as the schema's input so fixture
+// drift fails tsc here.
+export type UserSettingsWire = z.input<typeof UserSettingsResponseSchema>;
+
+// What a scenario seeds: the per-user fields, minus the static age/us_state
+// option lists (the mock server injects those on read, like Rails does).
+export type UsersSettingsSeed = Omit<
+  UserSettingsWire,
+  'age_options' | 'us_state_options'
+>;
+
+export const USERS_SCENARIO_TAGS = [
+  'teacher',
+  'student',
+  'sso-teacher',
+  'sso-student',
+  'minimal',
+  'student-no-parent',
+  'one-dependent',
+  'teacher-locked-type',
+  'age-state-unset',
+  'long-strings',
+  'student-can-switch',
+  'teacher-no-dependents',
+  'sso-teacher-dependents',
+  'teacher-no-school',
+  'multi-sso-teacher',
+  'lti-teacher',
+  'lti-only-teacher',
+  'restricted-lti-teacher',
+  'rostered-student',
+  'cap-locked-student',
+  'unmigrated-teacher',
+  'all-connected-teacher',
+] as const;
+
+export type UsersScenarioTag = (typeof USERS_SCENARIO_TAGS)[number];
+
+export interface UsersScenario {
+  currentUser: CurrentUserResponseSignedIn;
+  settings: UsersSettingsSeed;
+  /** Cleartext password the mock auth checks accept; absent for SSO-only. */
+  password?: string;
+  /** What this scenario is for; shown in the standalone scenario switcher. */
+  description: string;
+}
+
+const baseCurrentUser: CurrentUserResponseSignedIn = {
+  is_signed_in: true,
+  id: 1,
+  username: 'ada_lovelace',
+  display_name: 'Ada Lovelace',
+  short_name: 'Ada',
+  user_type: 'teacher',
+  is_verified_instructor: true,
+  is_levelbuilder: false,
+  educator_role: 'classroom_teacher',
+  grades_teaching: ['9', '10'],
+  under_13: false,
+  over_21: true,
+  age: '21+',
+  country_code: 'US',
+  us_state_code: 'WA',
+  child_account_compliance_state: null,
+  sharing_disabled: false,
+  mute_music: false,
+  sort_by_family_name: false,
+  has_seen_homepage_welcome: true,
+  has_dismissed_personalization_alert: false,
+  ai_chat_access_level: 0,
+  us_only_aichat_models_disabled: false,
+  ai_rubrics_disabled: false,
+  ai_differentiation_enabled: true,
+  has_seen_ai_assessments_announcement: true,
+  has_completed_ai_differentiation_welcome: true,
+  is_lti: false,
+  in_section: null,
+  created_at: '2020-01-01T00:00:00Z',
+};
+
+// The Integrations tab's block, as Rails serves it.
+const integrations: UsersSettingsSeed['integrations'] = {
+  can_manage_linked_accounts: true,
+  is_google_classroom_student: false,
+  is_clever_student: false,
+  personal_account_linking_enabled: true,
+  lms_name: null,
+};
+
+const teacher: UsersScenario = {
+  currentUser: {...baseCurrentUser},
+  settings: {
+    user_type: 'teacher',
+    given_name: 'Ada',
+    family_name: 'Lovelace',
+    display_name: 'Ada Lovelace',
+    username: 'ada_lovelace',
+    email: 'ada@example.com',
+    has_password: true,
+    can_edit_email: true,
+    can_edit_password: true,
+    should_see_add_password_form: false,
+    should_see_edit_email_link: true,
+    authentication_options: [
+      {id: 101, credential_type: 'email', email: 'ada@example.com'},
+    ],
+    can_change_user_type: true,
+    can_delete_own_account: true,
+    age: '21+',
+    us_state: 'WA',
+    gender: null,
+    is_usa: true,
+    parent_email: null,
+    dependent_students_count: 2,
+    integrations,
+    // Teacher-only keys: a student's seed omits them, like the Rails serializer.
+    educator_role: 'classroom_teacher',
+    school_info: {
+      school_name: 'Example Elementary School',
+      school_type: 'public',
+      school_id: '100000000001',
+      school_zip: '98101',
+      country: 'US',
+    },
+  },
+  password: 'currentpass',
+  description: 'Educator with a password + email; can change type and delete.',
+};
+
+const student: UsersScenario = {
+  currentUser: {
+    ...baseCurrentUser,
+    id: 2,
+    user_type: 'student',
+    username: 'curious_otter_42',
+    display_name: 'Example Student',
+    short_name: 'Example',
+    is_verified_instructor: false,
+    educator_role: null,
+    grades_teaching: [],
+    over_21: false,
+    age: 14,
+  },
+  // Masked email: a word/picture-style student has no stored cleartext address.
+  settings: {
+    user_type: 'student',
+    given_name: 'Example',
+    family_name: null,
+    display_name: 'Example Student',
+    username: 'curious_otter_42',
+    email: null,
+    has_password: true,
+    can_edit_email: true,
+    can_edit_password: true,
+    should_see_add_password_form: false,
+    should_see_edit_email_link: true,
+    authentication_options: [],
+    can_change_user_type: false,
+    can_delete_own_account: true,
+    age: 14,
+    us_state: 'WA',
+    gender: 'Example gender',
+    is_usa: true,
+    parent_email: 'parent@example.com',
+    dependent_students_count: 0,
+    integrations,
+  },
+  password: 'currentpass',
+  description:
+    'Student: display name only, masked email, existing parent email.',
+};
+
+const ssoTeacher: UsersScenario = {
+  currentUser: {
+    ...baseCurrentUser,
+    id: 3,
+    username: 'grace_hopper',
+    display_name: 'Grace Hopper',
+    short_name: 'Grace',
+  },
+  // No password; only a Google authentication option.
+  settings: {
+    user_type: 'teacher',
+    given_name: 'Grace',
+    family_name: 'Hopper',
+    display_name: 'Grace Hopper',
+    username: 'grace_hopper',
+    email: 'grace@example.com',
+    has_password: false,
+    can_edit_email: true,
+    can_edit_password: true,
+    should_see_add_password_form: true,
+    should_see_edit_email_link: true,
+    authentication_options: [
+      {id: 301, credential_type: 'google_oauth2', email: 'grace@example.com'},
+    ],
+    can_change_user_type: true,
+    can_delete_own_account: true,
+    age: '21+',
+    us_state: null,
+    gender: null,
+    is_usa: true,
+    parent_email: null,
+    dependent_students_count: 0,
+    integrations,
+    educator_role: 'school_admin',
+    school_info: {
+      school_name: 'Example Middle School',
+      school_type: 'public',
+      school_id: '100000000002',
+      school_zip: '98101',
+      country: 'US',
+    },
+  },
+  description: 'Google-only educator: no password, shows Create password.',
+};
+
+// Oauth-only student: legacy routes them to "Create personal login", not
+// add-password, so the entitlement is false.
+const ssoStudent: UsersScenario = {
+  currentUser: {
+    ...baseCurrentUser,
+    id: 4,
+    user_type: 'student',
+    username: 'brave_fox_88',
+    display_name: 'Example SSO Student',
+    short_name: 'Example',
+    is_verified_instructor: false,
+    educator_role: null,
+    grades_teaching: [],
+    over_21: false,
+    age: 13,
+  },
+  settings: {
+    user_type: 'student',
+    given_name: 'Example',
+    family_name: null,
+    display_name: 'Example SSO Student',
+    username: 'brave_fox_88',
+    email: null,
+    has_password: false,
+    can_edit_email: true,
+    can_edit_password: true,
+    should_see_add_password_form: false,
+    // Oauth-only students don't see edit-email (no stored cleartext address).
+    should_see_edit_email_link: false,
+    authentication_options: [
+      {id: 401, credential_type: 'google_oauth2', email: null},
+    ],
+    can_change_user_type: false,
+    can_delete_own_account: true,
+    age: 13,
+    us_state: 'WA',
+    gender: null,
+    is_usa: true,
+    parent_email: null,
+    dependent_students_count: 0,
+    integrations,
+  },
+  description: 'Google-only student: no add-password, no edit-email link.',
+};
+
+// A word/picture student with optional fields null and edits locked; exercises
+// the all-null / empty-affordance paths.
+const minimal: UsersScenario = {
+  currentUser: {
+    ...baseCurrentUser,
+    id: 5,
+    user_type: 'student',
+    username: 'coder',
+    display_name: 'coder',
+    short_name: 'coder',
+    is_verified_instructor: false,
+    educator_role: null,
+    grades_teaching: [],
+    over_21: false,
+    age: 9,
+    us_state_code: null,
+  },
+  settings: {
+    user_type: 'student',
+    given_name: null,
+    family_name: null,
+    display_name: 'coder',
+    username: 'coder',
+    email: null,
+    has_password: false,
+    can_edit_email: false,
+    can_edit_password: false,
+    should_see_add_password_form: false,
+    should_see_edit_email_link: false,
+    authentication_options: [],
+    can_change_user_type: false,
+    can_delete_own_account: false,
+    age: null,
+    us_state: null,
+    gender: null,
+    is_usa: false,
+    parent_email: null,
+    dependent_students_count: 0,
+    // No age or state yet, so linking a personal login stays locked.
+    integrations: {...integrations, personal_account_linking_enabled: false},
+  },
+  description: 'Word/picture student, everything locked (no edit, no delete).',
+};
+
+// QA-only scenarios filling gaps the base five can't reach. Not shipped.
+
+// Student with no parent email yet: exercises the pure parent-email ADD path
+// (base `student` already has one, so only tests update/remove).
+const studentNoParent: UsersScenario = {
+  ...student,
+  currentUser: {...student.currentUser, id: 6},
+  settings: {...student.settings, parent_email: null},
+  description: 'Student with no parent email — the add-parent flow.',
+};
+
+// Deletable teacher with exactly one dependent: verifies the SINGULAR delete
+// copy ("1 dependent student account", no trailing "s"); base teacher has 2.
+const oneDependent: UsersScenario = {
+  ...teacher,
+  currentUser: {...teacher.currentUser, id: 7},
+  settings: {...teacher.settings, dependent_students_count: 1},
+  description: 'Deletable account with 1 dependent — singular delete copy.',
+};
+
+// Teacher who can't change account type: the type switcher should be absent.
+const teacherLockedType: UsersScenario = {
+  ...teacher,
+  currentUser: {...teacher.currentUser, id: 8},
+  settings: {...teacher.settings, can_change_user_type: false},
+  description: "Educator who can't change type — switcher hidden.",
+};
+
+// Student with age + state unset but editable: verifies the disabled "Select …"
+// placeholder shows, and that once a value is picked it can't be re-blanked.
+const ageStateUnset: UsersScenario = {
+  ...student,
+  currentUser: {...student.currentUser, id: 9, us_state_code: null},
+  settings: {
+    ...student.settings,
+    age: null,
+    us_state: null,
+    parent_email: null,
+  },
+  description: 'Student with age/state unset — placeholders + reblank guard.',
+};
+
+// Overflow / truncation / unicode probe: very long names + an emoji display
+// name, at narrow viewports.
+const longStrings: UsersScenario = {
+  currentUser: {
+    ...baseCurrentUser,
+    id: 10,
+    display_name:
+      'Maximiliana Wolfeschlegelsteinhausenbergerdorff 🦄✨ the Magnificent',
+  },
+  settings: {
+    user_type: 'teacher',
+    given_name:
+      'Maximilianaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
+    family_name:
+      'Wolfeschlegelsteinhausenbergerdorffwelchevoralternwarengewissenhaft',
+    display_name:
+      'Maximiliana Wolfeschlegelsteinhausenbergerdorff 🦄✨ the Magnificent',
+    username: 'maximiliana_wolfeschlegelsteinhausenbergerdorff_the_magnificent',
+    email:
+      'maximiliana.wolfeschlegelsteinhausenbergerdorff.the.magnificent@an-extremely-long-subdomain.example.org',
+    has_password: true,
+    can_edit_email: true,
+    can_edit_password: true,
+    should_see_add_password_form: false,
+    should_see_edit_email_link: true,
+    authentication_options: [
+      {
+        id: 1001,
+        credential_type: 'email',
+        email:
+          'maximiliana.wolfeschlegelsteinhausenbergerdorff.the.magnificent@an-extremely-long-subdomain.example.org',
+      },
+    ],
+    can_change_user_type: true,
+    can_delete_own_account: true,
+    age: '21+',
+    us_state: 'WA',
+    gender: null,
+    is_usa: true,
+    parent_email: null,
+    dependent_students_count: 0,
+    integrations,
+    educator_role: 'other',
+    school_info: {
+      school_name:
+        'The Wolfeschlegelsteinhausenbergerdorff Regional Consolidated Magnet School for the Advancement of Computer Science',
+      school_type: 'charter',
+      school_id: null,
+      school_zip: '98101',
+      country: 'US',
+    },
+  },
+  password: 'currentpass',
+  description: 'Very long + emoji names — overflow / truncation probe.',
+};
+
+// Student who CAN change type: exercises the student -> educator path, where
+// the confirm modal additionally prompts for a (required) email address.
+const studentCanSwitch: UsersScenario = {
+  ...student,
+  currentUser: {...student.currentUser, id: 11},
+  settings: {...student.settings, can_change_user_type: true},
+  description:
+    'Student who can change type — becoming an educator needs an email.',
+};
+
+// Educator with no dependent students: gets the full teacher disclaimer, but
+// neither the personal-login guidance step nor the acknowledgments.
+const teacherNoDependents: UsersScenario = {
+  ...teacher,
+  currentUser: {...teacher.currentUser, id: 12},
+  settings: {...teacher.settings, dependent_students_count: 0},
+  description:
+    'Educator with no dependent students — delete skips guidance and acknowledgments.',
+};
+
+// The heaviest delete gate with no password to fall back on: five
+// acknowledgments plus the typed string are the only things standing in the way.
+const ssoTeacherDependents: UsersScenario = {
+  ...ssoTeacher,
+  currentUser: {...ssoTeacher.currentUser, id: 13},
+  settings: {...ssoTeacher.settings, dependent_students_count: 2},
+  description:
+    'Google-only educator with 2 dependent students — no password, all five acknowledgments.',
+};
+
+const teacherNoSchool: UsersScenario = {
+  ...teacher,
+  currentUser: {...teacher.currentUser, id: 14, educator_role: null},
+  settings: {...teacher.settings, educator_role: null, school_info: null},
+  description: 'Educator with no school and no role — empty state of both.',
+};
+
+const multiSsoTeacher: UsersScenario = {
+  ...teacher,
+  currentUser: {...teacher.currentUser, id: 15},
+  settings: {
+    ...teacher.settings,
+    authentication_options: [
+      {id: 1501, credential_type: 'email', email: 'ada@example.com'},
+      {id: 1502, credential_type: 'google_oauth2', email: 'ada@example.com'},
+      {
+        id: 1503,
+        credential_type: 'microsoft_v2_auth',
+        email: 'ada@example.org',
+      },
+      {id: 1504, credential_type: 'classlink', email: 'ada@example.net'},
+    ],
+  },
+  description:
+    'Educator with Google, Microsoft and ClassLink logins — every row disconnectable.',
+};
+
+const ltiIntegrations = {
+  ...integrations,
+  lms_name: 'canvas_cloud',
+  lti_roster_sync_enabled: true,
+};
+
+const ltiTeacher: UsersScenario = {
+  ...teacher,
+  currentUser: {...teacher.currentUser, id: 16, is_lti: true},
+  settings: {
+    ...teacher.settings,
+    authentication_options: [
+      {id: 1601, credential_type: 'email', email: 'ada@example.com'},
+      {id: 1602, credential_type: 'lti_v1', email: 'ada@lms.example.com'},
+    ],
+    integrations: ltiIntegrations,
+  },
+  description:
+    'Canvas educator with a password — can unlink Canvas; roster sync on.',
+};
+
+const ltiOnlyTeacher: UsersScenario = {
+  ...ssoTeacher,
+  currentUser: {...ssoTeacher.currentUser, id: 17, is_lti: true},
+  settings: {
+    ...ssoTeacher.settings,
+    authentication_options: [
+      {id: 1701, credential_type: 'lti_v1', email: 'grace@lms.example.com'},
+    ],
+    integrations: {
+      ...ltiIntegrations,
+      lms_name: 'schoology',
+      lti_roster_sync_enabled: false,
+    },
+  },
+  description:
+    'Schoology-only educator — unlinking would lock them out; roster sync off.',
+};
+
+const restrictedLtiTeacher: UsersScenario = {
+  ...ltiTeacher,
+  currentUser: {...ltiTeacher.currentUser, id: 18},
+  settings: {
+    ...ltiTeacher.settings,
+    integrations: {...ltiIntegrations, can_manage_linked_accounts: false},
+  },
+  description:
+    'Educator in a restricted LMS deployment — roster sync only, no linked accounts.',
+};
+
+const rosteredStudent: UsersScenario = {
+  ...ssoStudent,
+  currentUser: {...ssoStudent.currentUser, id: 19},
+  settings: {
+    ...ssoStudent.settings,
+    authentication_options: [
+      {id: 1901, credential_type: 'google_oauth2', email: null},
+      {id: 1902, credential_type: 'clever', email: null},
+    ],
+    integrations: {
+      ...integrations,
+      is_google_classroom_student: true,
+      is_clever_student: true,
+    },
+  },
+  description:
+    'Student in Google Classroom and Clever sections — neither can be disconnected.',
+};
+
+const capLockedStudent: UsersScenario = {
+  ...student,
+  currentUser: {...student.currentUser, id: 20, age: 10, under_13: true},
+  settings: {
+    ...student.settings,
+    age: 10,
+    us_state: 'CO',
+    integrations: {...integrations, personal_account_linking_enabled: false},
+  },
+  description:
+    'Under-13 student awaiting parental permission — personal logins locked.',
+};
+
+const unmigratedTeacher: UsersScenario = {
+  ...teacher,
+  currentUser: {...teacher.currentUser, id: 21},
+  settings: {
+    ...teacher.settings,
+    integrations: {...integrations, can_manage_linked_accounts: false},
+  },
+  description:
+    'Educator not yet migrated to multiple logins — nothing to manage, tab hidden.',
+};
+
+const allConnectedTeacher: UsersScenario = {
+  ...teacher,
+  currentUser: {...teacher.currentUser, id: 22, is_lti: true},
+  settings: {
+    ...teacher.settings,
+    authentication_options: [
+      {id: 2201, credential_type: 'email', email: 'ada@example.com'},
+      {id: 2202, credential_type: 'google_oauth2', email: 'ada@example.com'},
+      {
+        id: 2203,
+        credential_type: 'microsoft_v2_auth',
+        email: 'ada@example.org',
+      },
+      {id: 2204, credential_type: 'clever', email: null},
+      {id: 2205, credential_type: 'classlink', email: 'ada@example.net'},
+      {id: 2206, credential_type: 'facebook', email: 'ada@example.com'},
+      {
+        id: 2207,
+        credential_type: 'lti_v1',
+        email: 'ada@district-a.example.com',
+      },
+      {
+        id: 2208,
+        credential_type: 'lti_v1',
+        email: 'ada@district-b.example.com',
+      },
+    ],
+    integrations: ltiIntegrations,
+  },
+  description:
+    'Educator with every provider and two Canvas logins linked — only Schoology left.',
+};
+
+export const ACCOUNT_SCENARIOS: Record<UsersScenarioTag, UsersScenario> = {
+  teacher,
+  student,
+  'sso-teacher': ssoTeacher,
+  'sso-student': ssoStudent,
+  minimal,
+  'student-no-parent': studentNoParent,
+  'one-dependent': oneDependent,
+  'teacher-locked-type': teacherLockedType,
+  'age-state-unset': ageStateUnset,
+  'long-strings': longStrings,
+  'student-can-switch': studentCanSwitch,
+  'teacher-no-dependents': teacherNoDependents,
+  'sso-teacher-dependents': ssoTeacherDependents,
+  'teacher-no-school': teacherNoSchool,
+  'multi-sso-teacher': multiSsoTeacher,
+  'lti-teacher': ltiTeacher,
+  'lti-only-teacher': ltiOnlyTeacher,
+  'restricted-lti-teacher': restrictedLtiTeacher,
+  'rostered-student': rosteredStudent,
+  'cap-locked-student': capLockedStudent,
+  'unmigrated-teacher': unmigratedTeacher,
+  'all-connected-teacher': allConnectedTeacher,
+};

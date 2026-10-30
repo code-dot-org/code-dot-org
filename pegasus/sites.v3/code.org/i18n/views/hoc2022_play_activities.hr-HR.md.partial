@@ -1,7 +1,0 @@
-{{ featured_tutorial, title: "Pozdrav svijete: nogomet", body: "Vi ste kapetan momčadi dok kodirate interaktivne scene na nogometnom igralištu. GOOOOOLLL!", image: "/images/hoc2022-hello-world-soccer.png", url: "https://studio.code.org/s/hello-world-soccer-2022/reset" }}
-
-{{ featured_tutorial, title: "Sportovi", body: "Napravite košarkašku igru ili kombinirajte različite sportove.", image: "/shared/images/courses/logo_tall_sports.jpg", url: "https://code.org/athletes" }}
-
-{{ featured_tutorial, title: "Lepršavi kȏd", body: "Želite li napisati vlastitu igru za manje od 10 minuta? Isprobajte naš vodič za lepršavi kȏd!", image: "/shared/images/courses/logo_tall_flappy.jpg", url: "https://studio.code.org/s/flappy/reset" }}
-
-{{ featured_tutorial, title: "Sat kodiranja za Minecraft", body: "Minecraft se vratio za Sat kodiranja s potpuno novom aktivnošću! Putovanje kroz Minecraft s kȏdom.", image: "/images/hoc2022-mc-escape.png", url: "https://aka.ms/HourofCode2022" }}

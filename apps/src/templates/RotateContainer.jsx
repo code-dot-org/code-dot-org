@@ -1,7 +1,8 @@
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import msg from '@cdo/locale';
-import _ from 'lodash';
 
 /**
  * "Rotate your device" overlay.
@@ -40,7 +41,7 @@ export default class RotateContainer extends React.Component {
     let rotateContainerInnerStyle = {
       ...styles.rotateContainerInner,
       backgroundImage:
-        'url(' + this.props.assetUrl('media/turnphone_horizontal.png') + ')',
+        'url(' + this.props.assetUrl('media/turnphone_horizontal.svg') + ')',
     };
     let rotateTextStyle = {...styles.rotateText};
     let paragraphStyle = {...styles.paragraph};

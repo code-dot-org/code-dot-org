@@ -1,12 +1,16 @@
-import {assert} from '../util/reconfiguredChai';
-var testUtils = require('../util/testUtils');
-import {setupTestBlockly, getStudioAppSingleton} from './util/testBlockly';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
-var testCollectionUtils = require('./util/testCollectionUtils');
-var sharedFunctionalBlocks = require('@cdo/apps/sharedFunctionalBlocks');
+import {getCode} from '@cdo/apps/blockly/utils';
 import {TestResults} from '@cdo/apps/constants';
 import * as redux from '@cdo/apps/redux';
-import sinon from 'sinon';
+
+import {assert} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+
+import {setupTestBlockly, getStudioAppSingleton} from './util/testBlockly';
+
+var testUtils = require('../util/testUtils');
+
+var testCollectionUtils = require('./util/testCollectionUtils');
 
 /**
  * Loads blocks into the workspace, then calls
@@ -33,7 +37,7 @@ describe('checkForEmptyContainerBlockFailure_', function () {
 
     // make sure we loaded correctly. text wont match exactly, but make sure if
     // we had xml, we loaded something
-    var loaded = Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
+    var loaded = getCode(Blockly.mainBlockSpace);
     assert(
       !args.blockXml || loaded,
       'either we didnt have  input xml' + 'or we did, and we loaded something'
@@ -141,158 +145,6 @@ describe('checkForEmptyContainerBlockFailure_', function () {
   });
 });
 
-/**
- * Loads blocks into the workspace, then calls
- * checkForEmptyContainerBlockFailure_ and validates
- * that the result matches the expected result.
- */
-describe('throwOnInvalidExampleBlocks', function () {
-  var studioApp;
-
-  // create our environment
-  beforeEach(function () {
-    setupTestBlockly();
-    studioApp = getStudioAppSingleton();
-    sharedFunctionalBlocks.install(Blockly, Blockly.JavaScript, null);
-  });
-
-  it('throws on unfilled result', function () {
-    studioApp.loadBlocks(
-      '<xml>' +
-        '  <block type="functional_example" inline="false">' +
-        '  <functional_input name="ACTUAL">' +
-        '    <block type="functional_call" inline="false">' +
-        '      <mutation name="aqua-star">' +
-        '        <arg name="radius" type="Number"></arg>' +
-        '      </mutation>' +
-        '      <functional_input name="ARG0">' +
-        '        <block type="functional_math_number">' +
-        '          <title name="NUM">1</title>' +
-        '        </block>' +
-        '      </functional_input>' +
-        '    </block>' +
-        '  </functional_input>' +
-        '  <functional_input name="EXPECTED">' +
-        '    <block type="functional_plus" inline="false"></block>' +
-        '  </functional_input>' +
-        ' </block>' +
-        '</xml>'
-    );
-    assert.throws(
-      function () {
-        var exampleBlock = Blockly.mainBlockSpace
-          .getTopBlocks()
-          .filter(function (block) {
-            return block.type === 'functional_example';
-          })[0];
-        var actualBlock = exampleBlock.getInputTargetBlock('ACTUAL');
-        var expectedBlock = exampleBlock.getInputTargetBlock('EXPECTED');
-        studioApp.feedback_.throwOnInvalidExampleBlocks(
-          actualBlock,
-          expectedBlock
-        );
-      },
-      Error,
-      'Result has unfilled inputs'
-    );
-  });
-
-  it('throws on unfilled call', function () {
-    studioApp.loadBlocks(
-      '<xml>' +
-        '<block type="functional_example" inline="false">' +
-        '  <functional_input name="ACTUAL">' +
-        '    <block type="functional_call" inline="false">' +
-        '      <mutation name="aqua-star">' +
-        '        <arg name="radius" type="Number"></arg>' +
-        '      </mutation>' +
-        '    </block>' +
-        '  </functional_input>' +
-        '  <functional_input name="EXPECTED">' +
-        '    <block type="functional_plus" inline="false">' +
-        '      <functional_input name="ARG1">' +
-        '        <block type="functional_math_number">' +
-        '          <title name="NUM">1</title>' +
-        '        </block>' +
-        '      </functional_input>' +
-        '      <functional_input name="ARG2">' +
-        '        <block type="functional_math_number">' +
-        '          <title name="NUM">1</title>' +
-        '        </block>' +
-        '      </functional_input>' +
-        '    </block>' +
-        '  </functional_input>' +
-        '</block>' +
-        '</xml>'
-    );
-    assert.throws(
-      function () {
-        var exampleBlock = Blockly.mainBlockSpace
-          .getTopBlocks()
-          .filter(function (block) {
-            return block.type === 'functional_example';
-          })[0];
-        var actualBlock = exampleBlock.getInputTargetBlock('ACTUAL');
-        var expectedBlock = exampleBlock.getInputTargetBlock('EXPECTED');
-        studioApp.feedback_.throwOnInvalidExampleBlocks(
-          actualBlock,
-          expectedBlock
-        );
-      },
-      Error,
-      'Call has unfilled inputs'
-    );
-  });
-
-  it("doesn't throw on filled call and result blocks", function () {
-    studioApp.loadBlocks(
-      '<xml>' +
-        '  <block type="functional_example" inline="false">' +
-        '    <functional_input name="ACTUAL">' +
-        '      <block type="functional_call" inline="false">' +
-        '        <mutation name="aqua-star">' +
-        '          <arg name="radius" type="Number"></arg>' +
-        '        </mutation>' +
-        '        <functional_input name="ARG0">' +
-        '          <block type="functional_math_number">' +
-        '            <title name="NUM">1</title>' +
-        '          </block>' +
-        '        </functional_input>' +
-        '      </block>' +
-        '    </functional_input>' +
-        '    <functional_input name="EXPECTED">' +
-        '      <block type="functional_plus" inline="false">' +
-        '        <functional_input name="ARG1">' +
-        '          <block type="functional_math_number">' +
-        '            <title name="NUM">1</title>' +
-        '          </block>' +
-        '        </functional_input>' +
-        '        <functional_input name="ARG2">' +
-        '          <block type="functional_math_number">' +
-        '            <title name="NUM">1</title>' +
-        '          </block>' +
-        '        </functional_input>' +
-        '      </block>' +
-        '    </functional_input>' +
-        '  </block>' +
-        '</xml>'
-    );
-    assert.doesNotThrow(function () {
-      var exampleBlock = Blockly.mainBlockSpace
-        .getTopBlocks()
-        .filter(function (block) {
-          return block.type === 'functional_example';
-        })[0];
-      var actualBlock = exampleBlock.getInputTargetBlock('ACTUAL');
-      var expectedBlock = exampleBlock.getInputTargetBlock('EXPECTED');
-      studioApp.feedback_.throwOnInvalidExampleBlocks(
-        actualBlock,
-        expectedBlock
-      );
-    }, Error);
-  });
-});
-
 describe('getUserBlocks_', function () {
   var studioApp;
 
@@ -307,7 +159,7 @@ describe('getUserBlocks_', function () {
 
     // make sure we loaded correctly. text wont match exactly, but make sure if
     // we had xml, we loaded something
-    var loaded = Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
+    var loaded = getCode(Blockly.mainBlockSpace);
     assert(loaded, "we didn't correctly load our test blocks");
 
     var userBlocks = studioApp.feedback_.getUserBlocks_();
@@ -335,10 +187,10 @@ describe('getUserBlocks_', function () {
       '</xml>',
     ];
 
-    var readOnly = Blockly.readOnly;
-    Blockly.readOnly = true;
+    var readOnly = Blockly.mainBlockSpace.readOnly;
+    Blockly.mainBlockSpace.readOnly = true;
     validateNumUserBlocks(testBlockXml.join(''), 3);
-    Blockly.readOnly = readOnly;
+    Blockly.mainBlockSpace.readOnly = readOnly;
   });
 });
 
@@ -417,7 +269,7 @@ describe('getMissingBlocks_ tests', function () {
 
     // make sure we loaded correctly. text wont match exactly, but make sure if
     // we had xml, we loaded something
-    var loaded = Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
+    var loaded = getCode(Blockly.mainBlockSpace);
     assert(
       !options.userBlockXml || loaded,
       'either we didnt have  input xml' + 'or we did, and we loaded something'
@@ -719,107 +571,6 @@ describe('getCountableBlocks_', function () {
         '</xml>'
     );
     assert.equal(0, count);
-  });
-
-  it('counts all other blocks', function () {
-    var count;
-
-    count = countBlocks(
-      '<xml>' +
-        '<block type="controls_repeat">' +
-        '<title name="TIMES">4</title>' +
-        '<statement name="DO">' +
-        '<block type="text_print"></block>' +
-        '</statement>' +
-        '</block>' +
-        '</xml>'
-    );
-    assert.equal(2, count);
-
-    count = countBlocks(
-      '<xml>' +
-        '<block type="procedures_defnoreturn">' +
-        '<mutation/>' +
-        '<title name="NAME">do something</title>' +
-        '</block>' +
-        '</xml>'
-    );
-    assert.equal(3, count);
-
-    count = countBlocks(
-      '<xml>' +
-        '<block type="procedures_defnoreturn">' +
-        '<mutation/>' +
-        '<title name="NAME">do something</title>' +
-        '<statement name="STACK">' +
-        '<block type="text_print"></block>' +
-        '</statement>' +
-        '</block>' +
-        '</xml>'
-    );
-    assert.equal(5, count);
-
-    count = countBlocks(
-      '<xml>' +
-        ' <block type="variables_set">' +
-        '   <title name="VAR">length</title>' +
-        '   <value name="VALUE">' +
-        '     <block type="math_number">' +
-        '       <title name="NUM">50</title>' +
-        '     </block>' +
-        '   </value>' +
-        '   <next>' +
-        '     <block type="controls_repeat_ext">' +
-        '       <value name="TIMES">' +
-        '         <block type="math_number">' +
-        '           <title name="NUM">100</title>' +
-        '         </block>' +
-        '       </value>' +
-        '       <statement name="DO">' +
-        '         <block type="controls_repeat_ext">' +
-        '           <value name="TIMES">' +
-        '             <block type="math_number">' +
-        '               <title name="NUM">3</title>' +
-        '             </block>' +
-        '           </value>' +
-        '           <statement name="DO">' +
-        '             <block type="draw_move">' +
-        '               <title name="DIR">moveForward</title>' +
-        '               <value name="VALUE">' +
-        '                 <block type="variables_get">' +
-        '                   <title name="VAR">length</title>' +
-        '                 </block>' +
-        '               </value>' +
-        '               <next>' +
-        '                 <block type="draw_turn">' +
-        '                   <title name="DIR">turnLeft</title>' +
-        '                   <value name="VALUE">' +
-        '                     <block type="math_number">' +
-        '                       <title name="NUM">120</title>' +
-        '                     </block>' +
-        '                   </value>' +
-        '                 </block>' +
-        '               </next>' +
-        '             </block>' +
-        '           </statement>' +
-        '           <next>' +
-        '             <block type="draw_move">' +
-        '               <title name="DIR">moveForward</title>' +
-        '               <value name="VALUE">' +
-        '                 <block type="variables_get">' +
-        '                   <title name="VAR">length</title>' +
-        '                 </block>' +
-        '               </value>' +
-        '             </block>' +
-        '           </next>' +
-        '         </block>' +
-        '       </statement>' +
-        '     </block>' +
-        '   </next>' +
-        ' </block>' +
-        '</xml>'
-    );
-    assert.equal(17, count);
   });
 });
 

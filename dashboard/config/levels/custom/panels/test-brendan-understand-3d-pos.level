@@ -1,0 +1,45 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-05-28T16:59:13.000Z",
+  "level_num": "custom",
+  "user_id": 574,
+  "properties": {
+    "panels": [
+      {
+        "key": "test-brendan-understand-3d-pos-102ff710-0f6e-49f2-ae90-678d555c5f76",
+        "text": "Remember our X, Y, and Z axes? These aren't just for points; they also define where an entire 3D *object* sits in our virtual world.",
+        "imageUrl": "https://images.code.org/321862d58ebb2d46662b8e31ba6e52c9-test-brendan-understand-3d-pos-panel-1-ce0d088a-cf70-4f7e-afec-1dd813506258.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "test-brendan-understand-3d-pos-5838aa35-b796-44ee-b22f-ae1fe39f6a1c",
+        "text": "By changing an object's **X-coordinate**, we move it horizontally. Increase X to go right, decrease X to go left.",
+        "imageUrl": "https://images.code.org/76a7303ed01888ad3f226b4a783d4db2-test-brendan-understand-3d-pos-panel-2-1146a0c0-28ed-4b75-8d00-f0226f59ba30.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "test-brendan-understand-3d-pos-32a1ddcd-8c4b-4163-a310-802b7f8b843d",
+        "text": "Adjusting the **Y-coordinate** moves the object vertically. Increase Y to go up, decrease Y to go down.",
+        "imageUrl": "https://images.code.org/9ef5fb6525f15153f8cede0462714745-test-brendan-understand-3d-pos-panel-3-ce8e0c3e-6294-449a-ad1c-d5035d2d1ac3.png",
+        "layout": "text-top-right"
+      },
+      {
+        "key": "test-brendan-understand-3d-pos-98ba2ffb-5fe8-40be-8843-e3596406e04c",
+        "text": "And modifying the **Z-coordinate** moves it forward or backward in space. Increase Z to move forward, decrease Z to move backward.",
+        "imageUrl": "https://images.code.org/a42c1dd370dbd0c0453ae64b26a5cb26-test-brendan-understand-3d-pos-panel-4-4c883ef7-7b8d-48fc-9f0c-ae919c4ecf48.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "test-brendan-understand-3d-pos-6a6ddc42-a765-4e59-853a-4bb8f535c975",
+        "text": "This act of changing an object's position along any of these axes is called **translation**. It's how we place things exactly where we want them in our 3D scene.",
+        "imageUrl": "https://images.code.org/4054d902ec190f3b8fda9c2cebd69429-test-brendan-understand-3d-pos-panel-5-b7bc5ffc-d97f-4e2a-9824-d5cce53350c5.png",
+        "layout": "text-bottom-left"
+      }
+    ],
+    "generate_outline": "Explain how objects are positioned in 3D space using their X, Y, and Z coordinates. Illustrate how changing these values moves the object along each axis, introducing terms like translation."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-28 16:59:55 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-28 16:59:56 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

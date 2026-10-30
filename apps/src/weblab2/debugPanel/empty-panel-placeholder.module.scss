@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+.innerContainer {
+  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.iconCircle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 100px;
+  background-color: var(--background-neutral-septenary);
+  color: var(--background-neutral-primary);
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.description {
+  color: var(--text-neutral-secondary);
+  margin-bottom: 0;
+}
+
+.title {
+  margin-bottom: 2px;
+}

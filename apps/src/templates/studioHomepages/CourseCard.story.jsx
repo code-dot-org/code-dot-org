@@ -1,7 +1,9 @@
 import React from 'react';
-import CourseCard from './CourseCard';
 import {Provider} from 'react-redux';
+
 import {reduxStore} from '@cdo/storybook/decorators';
+
+import CourseCard from './CourseCard';
 
 const exampleCard = {
   title: 'CSP Unit 2 - Digital Information',
@@ -35,4 +37,11 @@ export const PLCourseCard = Template.bind({});
 PLCourseCard.args = {
   ...examplePLCard,
   isProfessionalLearningCourse: true,
+};
+
+export const LongTitleCourseCard = Template.bind({});
+LongTitleCourseCard.args = {
+  ...exampleCard,
+  title:
+    'Computer Science Discoveries Computer Science Discoveries Computer Science Discoveries',
 };

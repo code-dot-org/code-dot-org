@@ -3,9 +3,8 @@ Feature: Managing code review groups in the "Manage Students" tab of the teacher
 
 Background:
   Given I create a levelbuilder named "Dumbledore"
-  And I create a new student section assigned to "ui-test-csa-family-script"
+  And I create a new student section assigned to course "ui-test-csa-family-script" unit 1 and save the section
   And I sign in as "Dumbledore" and go home
-  And I save the student section url
   And I save the section id from row 0 of the section table
   Given I create a student named "Hermione"
   And I join the section
@@ -28,6 +27,6 @@ Background:
 
   Scenario: Enable code review for a section
     Given I open the code review groups management dialog
-    When I click selector ".toggle-input"
+    When I click selector "#uitest-code-review-groups-toggle"
     # We display a message with the number of days until code review groups expire when code review is enabled
     Then element "#uitest-code-review-groups-status-message" eventually contains text "Code review will be automatically disabled"

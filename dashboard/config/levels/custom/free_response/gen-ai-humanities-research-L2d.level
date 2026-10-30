@@ -1,0 +1,24 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-06-21T19:02:46.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Sonja wants to know who the greatest painter of all time is, so she can study their art.\r\n\r\n**1. Artists the search engine recommends:**\r\n\r\n**2. Sonja noticed that almost all the artists were European men. Help her find great artists who are not European men.**\r\n\r\n**3. Find and verify a painting made by an artist of your choice from the list.**",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "encrypted_solution": "3tgVrwg+EULcSuZKPVGV1o6EHvW4yoHF22J3GR+MlLRQYjJ6FrYjnjLcP7Ap\nqyszpEKbueOxwAiXstMVgp2BMIjxNEqucRcxHr/preKyhzYm4qeuowl2aDCT\nlUIP73qJr1CwcEyjz+QfQJUxVloXDH8h9XMKy7rZviNvDFygznd+DglJEaHK\nZpEEJMTMTbl9nr71eWc0ugz/hx3N/EkrJVxD5IkEd6oxNo0tWbtZ5NVEMNn9\n9qTWu6MJrugE3aJHjG1MUbNFzdP2TfgJmorLvebvyVBI/uzBEJa+/SnkWOeU\nlB6g5ZiGSw5CVGrRyBZm1W6wA8fg/9H/MG3YQjlJBxIDIhJHCfWDQqxh0TKP\nUCQeoJtyu5qe/EC0VrG3Sb3Wg25zeigNr0NRQAIWm1ODPrWmERVViVie54gs\nekdVMG19uz61bjf0XuyLDaCktD98igupq9IHAsOYNtH2XE9cifvdnb7M0wD/\n2AcxfxXScr9KdaaBqKxVMIdfRZ8LED2wmCo3t8xuz8Rxd+lqbINLIhspUQj7\nkYTjFqMq8C+TL0PC6DePD7MYwPE9YLUW1xO4KqPLdjlVGvC48ml8uVdGEDwD\nojFu7hVSbOT0a7R4rEmuvwS+q8Q5155yk9Cib3jheyAVCrfFWwi7Nw4h/Qp2\nXU37c99NrqeBFA93m/Bllbi0OqvY2J/FYdzHmrfv+wsP0pz/EKzP4psur9kY\nBxKqcoS989ay2Gsyzt6D35Ra56PN2cVf/IYWKbutR/2tDtCK1v7jOa+mHjvX\nz9hHWnSvoCoyNF47pImEQMeAzXw2bmHKJMNHgJWpc+8KzGHQeQv0dsvEIppx\nC08O+6y8IfxAdbuwziO2XY6Z9CmRyweUC20wNQaSSRRb3QTbluHY0qrFSuCk\nvLmM+3NZGf3pV4WWyIX7u10nVC2ICDLjnGwd46fNy9YZRYSFJbdxg1+Zsi1E\nmsnG+W7coJwiAT1CN6HvT7MRJVqMVuC1old0WgeVcZd6kCa2YnYgseAMWDM5\nMn1pYJQ6Sb0I44YYX7P2LHK3r1beb++yr84RSbLg8GARaWJjmqXzA+jnC1Ci\nmqRQqHOfhg1x4ZLi4BEtjpGn/pStF6R2buTv9a5ryEouQ9ysZwBpHPfOvBAq\nqLTYmg7tiK5N\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-06-21T19:02:46.734+00:00\",\"changed\":[\"cloned from \\\"gen-ai-humanities-research-L2c\\\"\"],\"cloned_from\":\"gen-ai-humanities-research-L2c\"},{\"changed_at\":\"2024-06-21 19:11:53 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2024-06-21 22:04:10 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2024-06-21 22:04:46 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

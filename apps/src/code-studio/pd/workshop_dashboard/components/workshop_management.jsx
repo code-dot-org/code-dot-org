@@ -3,20 +3,21 @@
  */
 import PropTypes from 'prop-types';
 import React from 'react';
-import {connect} from 'react-redux';
 import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+import {connect} from 'react-redux';
+
+import {RouterContext} from '@cdo/apps/code-studio/legacyDashboardRoutingCompatibility';
 import {
   WorkshopTypes,
   SubjectNames,
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+
 import ConfirmationDialog from '../../components/confirmation_dialog';
 import {PermissionPropType} from '../permission';
 import {shouldUseFoormSurvey} from '../workshop_summary_utils';
 
 export class WorkshopManagement extends React.Component {
-  static contextTypes = {
-    router: PropTypes.object.isRequired,
-  };
+  static contextType = RouterContext;
 
   static propTypes = {
     permission: PermissionPropType.isRequired,

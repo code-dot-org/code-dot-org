@@ -1,8 +1,0 @@
-#audienceblocks{style: "text-align:center; margin-top:10px"}
-  - blocks = Homepage.get_blocks(request)
-  - blocks.each do |block|
-    .block
-      - if block[:type] == "block"
-        = view :homepage_quarterslot_links, entry: block
-      - elsif block[:type] == "blockshort"
-        = view :homepage_quarterslot, entry: block

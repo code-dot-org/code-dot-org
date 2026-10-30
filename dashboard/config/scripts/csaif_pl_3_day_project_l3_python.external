@@ -1,0 +1,43 @@
+name 'csaif_pl_3-day-project-L3-Python'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<h1>Final Project: 3-Day Process Overview</h1>
+<img src="https://images.code.org/2f240c0830b7787ebb5a3391d2bc3b19-image-1741792735598.png" alt="Pixel art house" style="border-radius:10px; float: right; height: 120px; margin: 0px 0px 10px 20px;">
+<p>In this project, students will use coding to create a picture that represents them using programming concepts they've learned.</p>
+<p>Over three days, they will plan, develop, review, and refine their work, with structured support through a <a href="https://docs.google.com/document/d/1CNal1TCRTr9jHg_aFT53MCiJEJNLBtzGeNYLrCRg8ng/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Project Planning Guide</a> and peer feedback using the TAG Method.</p>
+<div style="clear:both;"></div>
+
+<h2>Daily Overview</h2>
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin-bottom: 16px;">
+<h3>Day 1: Brainstorm, Plan, and Decompose</h3>
+<p style="margin: 8px 0 0 0;">• Students brainstorm ideas for their coded picture, what elements represent their identity, interests, or personality?</p>
+<p style="margin: 6px 0 0 0;">• Using the <a href="https://docs.google.com/document/d/1CNal1TCRTr9jHg_aFT53MCiJEJNLBtzGeNYLrCRg8ng/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Project Planning Guide</a>, they break down their idea into smaller coding tasks (decomposing the problem).</p>
+<p style="margin: 6px 0 0 0;">• They sketch a flowchart or pseudocode to outline their approach.</p>
+<p style="margin: 6px 0 0 0;">• By the end of Day 1, students should have a clear plan for how they will structure their code.</p>
+</div>
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin-bottom: 16px;">
+<h3>Day 2: Develop & Peer Review (TAG Feedback)</h3>
+<p style="margin: 8px 0 0 0;">• Students begin coding their picture based on their plan.</p>
+<p style="margin: 6px 0 0 0;">• Midway through, they pause for peer review using the TAG Method:</p>
+<p style="margin: 6px 0 0 24px;">◦ Tell something they like</p>
+<p style="margin: 4px 0 0 24px;">◦ Ask a question</p>
+<p style="margin: 4px 0 0 24px;">◦ Give a suggestion</p>
+<p style="margin: 10px 0 0 0;">• After receiving feedback, they revise and continue developing their project.</p>
+</div>
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin-bottom: 16px;">
+<h3>Day 3: Finalize, Showcase & Reflect</h3>
+<p style="margin: 8px 0 0 0;">• Students finalize their coded picture, making last improvements.</p>
+<p style="margin: 6px 0 0 0;">• They showcase their work in a gallery walk or short presentations.</p>
+<p style="margin: 6px 0 0 0;">• A reflection activity helps them think about their process:</p>
+<p style="margin: 6px 0 0 24px;">◦ What went well?</p>
+<p style="margin: 4px 0 0 24px;">◦ What challenges did they overcome?</p>
+<p style="margin: 4px 0 0 24px;">◦ How did feedback shape their final product?</p>
+</div>
+
+<p>This structured approach ensures students think critically, iterate on their work, and develop independence in coding while also learning how to give and apply feedback effectively.</p>
+MARKDOWN

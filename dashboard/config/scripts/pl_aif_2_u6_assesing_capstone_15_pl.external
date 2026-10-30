@@ -1,0 +1,37 @@
+name 'pl-aif-2-U6-assesing-capstone-15_pl'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Assessment Specifics for the Capstone
+
+## Where to Look for Evidence
+
+Assessment in this capstone goes beyond just grading the final software. Teachers should use a combination of student artifacts to assess the five core rubric categories:
+
+* **`capstone.md`File**: Provides evidence for **Project Planning & Intentional Design** and **Responsible AI & Ethical Reflection**  
+* **Kanban Board**: Provides evidence for **Collaboration & Professional Practice**  
+* **Final App Version**: Provides evidence for **Functionality & Technical Implementation** and **User-Centered Design & Usability**  
+* **Final Reflection (Self-Assessment)**: Provides evidence of **synthesis, decision-making, and student growth over time**
+
+---
+
+## The Golden Rule of Capstone Assessment
+
+<img src="https://images.code.org/4744e1aeac7e04783949237f25a14f7b-image-1777043655396.png"  
+     alt="teacher evaluating students discussing process"  
+     style="width: 30%; border-radius: 10px; margin: 0px 0px 10px 10px; float: right;">
+
+**Assessment must value reasoned decisions and clarity, not just feature count.**
+
+When reviewing student work, prioritize evidence of:
+
+* Thoughtful **planning**
+* Iterative **testing**
+* Clear **intentional tradeoffs**
+* Meaningful **reflection**
+
+Much of this evidence will be found in the **Capstone.md File**, not just the final product.
+
+
+MARKDOWN

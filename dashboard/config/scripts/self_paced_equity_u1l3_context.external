@@ -1,0 +1,13 @@
+name 'self-paced-equity-U1L3-context'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Why Identity?
+
+Set the following context for educators:
+Their many identities, experiences, beliefs, and socialization are all key components that make up who they are as an educator
+Our goal is to build a reflexive practice that will inform their work toward inclusion
+To do this, we’ll need to think about our own identities
+
+MARKDOWN

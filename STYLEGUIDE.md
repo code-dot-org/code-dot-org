@@ -13,7 +13,7 @@ Some lint and style rules are enforced by [Rubocop](https://github.com/bbatsov/r
 - Be consistent with surrounding code. When working in a new file, take a bit of time to get a feel for the style. The intent is to keep the code readable and not interrupt the flow.
   - If there are conflicting styles in the surrounding code, go with the one closest to the standards listed below.
   - When possible, clean up the less preferred style when it's simple to do so.
-  -If it's a quick clean-up, modify the file to align with standards.
+  - If it's a quick clean-up, modify the file to align with standards.
 - Prefer helpers from already-included libraries—i.e., do a quick search to make sure you're not reinventing a wheel. Lodash, Google Closure tools, and standard Ruby libraries often have well-tested helpers for common operations.
 - Prefer extracting descriptively-named methods and variables over introducing redundant comments.
 - Remove anything Git's diff view complains about: No trailing whitespace at the ends of lines, single newline at end of document. Configure your editor to do this automatically.
@@ -64,6 +64,79 @@ Fallback: https://github.com/styleguide/ruby
     first_method.
     second_method
   ```
+  
+### Writing Unit Tests
+Our unit testing library is [Minitest](https://github.com/minitest/minitest). 
+
+When writing unit tests we recommend you use the [Specs Syntax](https://github.com/minitest/minitest?tab=readme-ov-file#specs-). Our default Minitest Spec has been extended to include some RSpec features such as [`subject`](https://rspec.info/features/3-13/rspec-core/subject/explicit-subject/) or [`let!`](https://rspec.info/features/3-13/rspec-core/helper-methods/let/)
+
+This documentation represents a collection of references and resources for following best practices of Specs Syntax. It is intended to guide developers in writing clean, maintainable, and consistent unit tests using the Specs Syntax.
+
+However, it is important to acknowledge most of our codebase does not actually follow this recommendation. This document serves as a guide to encourage moving towards these best practices when writing new code or refactoring existing tests. 
+Additionally, note that multiple syntaxes can exist in the same test file, and this flexibility accommodates different styles and transitions.
+
+#### General Guidelines
+- Group related tests using `describe` blocks.
+- Use `let` to define memoized helper methods and lazy-loaded variables.
+- Use `before` blocks for setup tasks that need to be run before each example.
+- Use `subject` to explicitly define the value that is returned by the subject method in the example scope.
+- Prefer `.must_` methods over `expect` or `assert_` syntax for assertions, for consistency. See all possible expectations [here](https://github.com/minitest/minitest/blob/v5.18.0/lib/minitest/expectations.rb).
+
+You can find more detailed guidelines and examples of best practices at [betterspecs.org](https://www.betterspecs.org/). 
+
+#### Example Structure
+- Describe the method or class being tested. Use the Ruby documentation convention of `.` (or `::`) when referring to a class method's name and # when referring to an instance method's name.
+- Use context blocks to describe different states or conditions. When describing a context, start its description with 'when', 'with' or 'without'.
+- Write test cases using `it` blocks for individual behaviours.
+
+#### Example
+```ruby
+class FooTest < ActiveSupport::TestCase
+  # `described_class` is a helper method that returns the class or module that is currently being tested, 
+  # e.g. `MyClass` is returned when described_class is used in `MyClassTest`.
+  let(:described_instance) {described_class.new}
+
+  before do
+    # Setup code
+  end
+
+  describe '#my_method' do
+    subject(:my_method) {described_instance.my_method(argument)}
+
+    let(:argument) {'argument'}
+
+    context 'when condition A is met' do
+      let(:argument) {'argument_a'}
+
+      it 'returns expected result' do
+        # `_my_method` is a helper method assertion method defined for the test `subject`.
+        _my_method.must_equal 'expected result for argument_a'
+      end
+    end
+
+    context 'when condition B is met' do
+      let(:argument) {'argument_b'}
+
+      it 'returns another result' do
+        _my_method.must_equal 'expected result for argument_b'
+      end
+    end
+  end
+end
+```
+
+See a real example of specs syntax in our codebase in the `Queries::SectionTest` [test](https://github.com/code-dot-org/code-dot-org/blob/012a3bcb13f4a265d6570b8995ae872e92a0ab42/dashboard/test/lib/queries/section_test.rb) for the `Queries::Section` [Module](https://github.com/code-dot-org/code-dot-org/blob/012a3bcb13f4a265d6570b8995ae872e92a0ab42/dashboard/lib/queries/section.rb).
+
+It is possible to find different syntaxes in the same test file, such as in [omniauth_callbacks_controller_test.rb](https://github.com/code-dot-org/code-dot-org/blob/3b0560085295c0a6ddbf91e3a2fed02c57d842a1/dashboard/test/controllers/omniauth_callbacks_controller_test.rb#L1562C3-L1619C14).
+
+### References and Resources for Unit Test Syntax
+For more information on writing unit tests and understanding the specs syntax, refer to the following resources:
+
+- [Minitest Documentation](https://github.com/minitest/minitest)
+- [Minitest Styleguide](https://minitest.rubystyle.guide/)
+- [BetterSpecs](https://www.betterspecs.org/)
+- [RSpec Styleguide](https://rspec.rubystyle.guide/) (we do not use RSpec, but the style guide applies to Minitest/specs)
+
 
 ### Rails
 
@@ -78,6 +151,73 @@ Fallback: http://matthewpaulmoore.com/post/5190436725/ruby-on-rails-code-quality
 * <a name="rails-instance-variables"></a>
   Helpers shouldn't set instance variables. Prefer directly returning a value from the helper.
   <sup>[[link](#rails-instance-variables)]</sup>
+
+* <a name="rails-route-lookup"></a>
+  Use `rails routes` to find named Rails routes instead of guessing paths.
+  <sup>[[link](#rails-route-lookup)]</sup>
+
+  See the [Rails routing guide](https://guides.rubyonrails.org/v7.0.10/routing.html#listing-existing-routes).
+
+  Search Dashboard Rails routes from the repo root.
+
+  ```bash
+  cd dashboard && bundle exec rails routes -g script
+  cd dashboard && bundle exec rails routes -g script_lesson_script_level
+  cd dashboard && bundle exec rails routes -g '/s/'
+  ```
+
+  Route prefixes identify named Rails routes. For example:
+
+  ```text
+  Prefix: script_lesson_script_level
+  URI Pattern: /s/:script_id/lessons/:lesson_position/levels/:id
+  ```
+
+  Rails route helpers generated from that prefix are:
+
+  ```ruby
+  script_lesson_script_level_url(...)
+  script_lesson_script_level_path(...)
+  ```
+
+  The generated JavaScript helpers use the same names. See [Studio route helpers](#js-studio-route-helpers).
+
+* <a name="rails-route-helpers"></a>
+  Prefer Rails route helpers over `CDO.studio_url` when a named Dashboard Rails route exists.
+  Route helpers keep URL construction tied to `config/routes.rb`;
+  `CDO.studio_url` with a path string duplicates route knowledge in the caller.
+  <sup>[[link](#rails-route-helpers)]</sup>
+
+  ```ruby
+  # bad
+  overview_url = CDO.studio_url(script_path(unit))
+
+  # good
+  overview_url = script_url(unit)
+  ```
+
+  ```ruby
+  # bad
+  url = CDO.studio_url(
+    "/s/#{script.name}/lessons/#{lesson.absolute_position}/levels/#{script_level.position}"
+  )
+
+  # good
+  url = script_lesson_script_level_url(script, lesson, script_level)
+  ```
+
+  Use `_url` when the caller needs an absolute Studio URL. Use `_path` when only the path is needed.
+
+  In controllers, views, and helpers, Rails route helpers are normally available directly.
+  In models and service objects, include `Rails.application.routes.url_helpers` or call through that module.
+
+  ```ruby
+  # good, outside controllers and views
+  url = Rails.application.routes.url_helpers.script_url(unit)
+  ```
+
+  Use `CDO.studio_url` only for static assets, origin-only values, legacy paths,
+  or fully dynamic paths that do not map cleanly to a named Rails route.
 
 ## JavaScript
 
@@ -196,6 +336,54 @@ Default: https://google.github.io/styleguide/javascriptguide.xml
     foo: foo
   }
   ```
+
+* <a name="js-studio-route-helpers"></a>
+  Prefer generated Studio route helpers over manually assembled Studio URLs when a named Dashboard Rails route exists.
+  The helpers in `@cdo/generated-scripts/studioRoutes` are generated from Rails routes,
+  so Dashboard remains the source of truth for route paths.
+  <sup>[[link](#js-studio-route-helpers)]</sup>
+
+  See the [JsRoutes documentation](https://github.com/railsware/js-routes/blob/v2.3.7/Readme.md).
+  See [Rails route lookup](#rails-route-lookup) to find the route prefix.
+
+  ```javascript
+  // bad
+  const url = studio(
+      `/s/${scriptId}/lessons/${lessonPosition}/levels/${levelId}`);
+  ```
+
+  ```javascript
+  // good
+  import {
+    script_lesson_script_level_url
+  } from '@cdo/generated-scripts/studioRoutes';
+
+  const url = script_lesson_script_level_url({
+    script_id: 'coursea-2025',
+    lesson_position: 1,
+    id: 2
+  });
+  ```
+
+  Use `_url` when the caller needs an absolute Studio URL. Use `_path` when only the path is needed.
+
+  Prefer named params. Extra params that are not part of the route path are added as query params.
+
+  ```javascript
+  // good
+  const url = script_lesson_script_level_url({
+    script_id: 'coursea-2025',
+    lesson_position: 1,
+    id: 2,
+    section_id: 123,
+    user_type: 'teacher'
+  });
+
+  // okay, but named params are clearer.
+  const url = script_lesson_script_level_url('coursea-2025', 1, 2);
+  ```
+
+  Use `studio(relativeUrl)` only for legacy paths or fully dynamic paths that do not map cleanly to a named Rails route.
 
 * <a name="js-avoid-inlinejs"></a>
   Avoid inline Javacript in HAML and ERB views. Inline Javascript is

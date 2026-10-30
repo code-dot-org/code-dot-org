@@ -1,0 +1,58 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-09-25T19:58:13.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "### Comparison Operators \nComparison operators are used to compare two values and determine the relationship between them. \n\nThey return True or False based on whether the condition is met, helping programs make decisions.",
+        "imageUrl": "https://images.code.org/0dd50487b7c9f9a3ff8a9881384cdc3b-Screen Shot 2025-01-28 at 11.12.45 AM.png",
+        "key": "python-intro-console-lesson9-slidesOperators-711a24b8-1168-4ad3-9154-e7c19237a473",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "### What does == mean? \n\n- The == operator checks if two things are the same. \n- If the values are the same, it returns true. Otherwise, it returns false. \n- In this example, since both x and y are 5, the code `x == y` will return true.",
+        "imageUrl": "https://images.code.org/c400658bb67cac159e962e1df3ff9e1e-Screen Shot 2025-01-28 at 11.10.17 AM.png",
+        "key": "python-intro-console-lesson9-slidesOperators-81f997b3-6d6b-45dc-8bfd-13e54d0b1971",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "### What does != mean?\n\n- The != operator checks if two values are not equal.\n- If the values are not the same, it returns true. Otherwise, it returns false.\n- In this example, `print(5 != 3)` would return true.\n- However, in this example. `print(4 != 4)` would return false.",
+        "imageUrl": "https://images.code.org/36ba624b82854f9db053b78735c3d6e2-Screen Shot 2025-01-28 at 10.43.17 AM.png",
+        "key": "python-intro-console-lesson9-slidesOperators-ae082a9e-8c30-4eec-9662-cb04af12d1f4",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "### Comparison Operators >= and <=\n- `>=` checks if one value is greater than or equal to another.\n- `<=` checks if one value is less than or equal to another.\n\nThe output for the following are: \n- 5 >= 3 True\n- 4 <= 4 True\n- 2 >= 6 False ",
+        "imageUrl": "https://images.code.org/9a40492db513d9d2d931446056744e96-Screen Shot 2025-01-28 at 10.49.37 AM.png",
+        "key": "python-intro-console-lesson9-slidesOperators-653f17b6-a16f-49c3-a4a9-6d1c51e6b5f2",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "### Augmented Assignment Operator +=\n- `+=` adds a value to a variable and updates the variable with the new value.\n- This is a shorthand for variable = variable + value.\n\nStep-by-step explanation: \n1. Start with x = 5.\n2. Add 3 to the value of x.\n3. Update x with the new value (8).",
+        "imageUrl": "https://images.code.org/b874922996225d192d4b88c2d7873c86-Screen Shot 2025-01-28 at 10.52.30 AM.png",
+        "key": "python-intro-console-lesson9-slidesOperators-e47f75f3-3adf-4a2a-8a11-3a2ea3d15871",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "### Augmented Assignment Operator -=\n - `-=` subtracts a value from a variable and updates the variable with the new value.\n- This is a shorthand for variable = variable - value.\n\nStep-by-step explanation: \n1. Start with x = 10.\n2. Subtract 4 from the value of x.\n3. Update x with the new value (6).",
+        "imageUrl": "https://images.code.org/36c23899afa5623b5902d719598cc09d-Screen Shot 2025-01-28 at 10.54.28 AM.png",
+        "key": "python-intro-console-lesson9-slidesOperators-99c8c4cf-7451-478f-85db-6a065c677dbe",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "### Summary of Operators \n\n- `==` means equal to\n- `!=` means not equal to\n- `>=` means greater than or equal to \n- `<=` means less than or equal to \n- `+=` means add and assign \n- `-=` means subtract and assign ",
+        "imageUrl": "https://images.code.org/454be6bf07d498d63c8214f10f06938d-Screen Shot 2025-01-28 at 11.16.19 AM.png",
+        "key": "python-intro-console-lesson9-slidesOperators-9736f141-ce1c-48c6-b551-838993006c32"
+      }
+    ],
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:58:13.676+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson17-level1_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson17-level1_2025\"}]"
+}]]></config>
+</Panels>

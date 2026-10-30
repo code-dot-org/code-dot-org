@@ -1,0 +1,10 @@
+name 'HoAI26-Choice-MoreBlocks'
+display_name 'Code'
+description "More blocks to code with!"
+uses_lab2
+
+sublevels
+level 'HoAI26-Playtest1-Platform-SimpleCode4'
+level 'HoAI26-Playtest1-Story-SimpleCode4'
+
+navigation_type 'next_sublevel'

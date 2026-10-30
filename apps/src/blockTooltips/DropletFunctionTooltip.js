@@ -1,4 +1,5 @@
-var msg = require('@cdo/locale');
+import localization from '@cdo/apps/localization';
+import msg from '@cdo/locale';
 
 /**
  * @fileoverview Representation of a droplet function/block's tooltip
@@ -75,7 +76,7 @@ var DropletFunctionTooltip = function (appMsg, definition) {
 
   var signatureOverride = this.getLocalization(this.signatureOverrideKey());
   if (signatureOverride) {
-    this.signatureOverride = signatureOverride();
+    this.signatureOverride = localization.translate(signatureOverride());
   }
 
   /** @type {Array.<parameterInfo>} */

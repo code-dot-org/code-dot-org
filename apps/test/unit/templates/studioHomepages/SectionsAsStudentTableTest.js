@@ -1,12 +1,14 @@
+import {Button as MuiButton} from '@mui/material';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
-import {mount} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
-import i18n from '@cdo/locale';
-import {joinedSections} from './homepagesTestData';
-import SectionsAsStudentTable from '@cdo/apps/templates/studioHomepages/SectionsAsStudentTable';
 import {combineReducers, createStore} from 'redux';
+
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
+import SectionsAsStudentTable from '@cdo/apps/templates/studioHomepages/SectionsAsStudentTable';
+import i18n from '@cdo/locale';
+
+import {joinedSections} from './homepagesTestData';
 
 const store = createStore(combineReducers({isRtl}));
 
@@ -36,21 +38,21 @@ describe('SectionsAsStudentTable', () => {
     const wrapper = wrapped(
       <SectionsAsStudentTable sections={joinedSections} canLeave={false} />
     );
-    expect(wrapper.find('Button').exists()).to.be.false;
+    expect(wrapper.find(MuiButton).exists()).toBe(false);
   });
 
   it('shows a leave section button for students who do not have teacher-managed accounts', () => {
     const wrapper = wrapped(
       <SectionsAsStudentTable sections={joinedSections} canLeave={true} />
     );
-    expect(wrapper.find('Button').exists()).to.be.true;
+    expect(wrapper.find(MuiButton).exists()).toBe(true);
   });
 
   it('renders a row for each joined section', () => {
     const wrapper = wrapped(
       <SectionsAsStudentTable sections={joinedSections} canLeave={false} />
     );
-    expect(wrapper.find('.test-row')).to.have.length(4);
+    expect(wrapper.find('.test-row')).toHaveLength(5);
     expect(wrapper.containsMatchingElement(<div>Current unit:</div>));
     joinedSections.forEach(section => {
       expect(
@@ -96,8 +98,34 @@ describe('SectionsAsStudentTable', () => {
     expect(wrapper.containsMatchingElement(<td>ClassOneCode</td>));
     expect(wrapper.containsMatchingElement(<td>ClassTwoCode</td>));
     expect(wrapper.containsMatchingElement(<td>Google Classroom</td>));
-    expect(wrapper.containsMatchingElement(<td>DoNotShowThis</td>)).to.be.false;
+    expect(wrapper.containsMatchingElement(<td>DoNotShowThis</td>)).toBe(false);
     expect(wrapper.containsMatchingElement(<td>Clever</td>));
-    expect(wrapper.containsMatchingElement(<td>OrThisEither</td>)).to.be.false;
+    expect(wrapper.containsMatchingElement(<td>OrThisEither</td>)).toBe(false);
+    expect(wrapper.containsMatchingElement(<td>ClassLink</td>));
+    expect(wrapper.containsMatchingElement(<td>OrThisAsWell</td>)).toBe(false);
+  });
+
+  it('does not show a unit link for a single-unit course', () => {
+    const singleUnitCourseSection = [
+      {
+        name: 'Period 5',
+        loginType: 'picture',
+        teacherName: 'Ms. Frizzle',
+        assignedTitle: 'Single Unit Course',
+        linkToAssigned:
+          'https://studio.code.org/courses/ui-test-single-unit-course',
+        code: 'ClassFiveCode',
+      },
+    ];
+
+    const wrapper = wrapped(
+      <SectionsAsStudentTable
+        sections={singleUnitCourseSection}
+        canLeave={false}
+      />
+    );
+    expect(wrapper.containsMatchingElement(<div>Current unit:</div>)).toBe(
+      false
+    );
   });
 });

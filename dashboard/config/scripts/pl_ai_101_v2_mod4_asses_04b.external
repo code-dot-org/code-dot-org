@@ -1,0 +1,23 @@
+name 'pl-ai-101-V2-mod4-asses-04b'
+title 'Elementary School'
+display_name 'Elementary School'
+bubble_choice_description '5th Grade Science'
+thumbnail_url 'https://images.code.org/5394516c25f360d45e47665aa5eecd86-Screenshot 2026-02-13 at 1.22.31 PM.png'
+
+markdown <<MARKDOWN
+# 5th Grade Science
+
+Mr. Chen is teaching a unit on how plants grow, and his goal is for students to clearly explain the process using key ideas like sunlight, water, and air. He wants students to build their understanding and practice explaining it in their own words. While he’s interested in using AI, he knows his students are still developing their ability to evaluate information independently, so he decides to keep its role simple and structured.
+
+He designs this as an AI-integrated assignment, where AI is used as a comparison tool rather than something students rely on to generate answers.
+
+To set expectations, Mr. Chen makes the task very clear. Students will first write their own explanation of how plants grow without using AI. Then, as a class, they will look at an AI-generated explanation together. Their job is not to critique it formally, but to notice similarities and differences between their own thinking and the AI example. Students are not allowed to copy from the AI response—they are responsible for improving their own work.
+
+As he designs the lesson, Mr. Chen builds in structured steps to make student thinking visible. Students begin by writing their own explanation, which helps him see what they already understand. Then he shares a short AI-generated explanation with the class and models how to think about it: pointing out what it explains clearly and what might be missing.
+
+Students then work in pairs to engage with the AI example in a simple, concrete way. They identify one thing the AI explained well and one thing that is different or missing compared to their own writing. This keeps the task focused and accessible, while still encouraging careful thinking.
+
+After that, students return to their original explanations and revise them. They may add missing ideas, clarify their explanations, or reorganize their thinking. The emphasis is on improving their own work—not adopting the AI’s wording.
+
+When grading, Mr. Chen focuses on understanding, clarity, and revision. He looks for whether students include key ideas about how plants grow, whether they can explain those ideas in their own words, and whether their work improves after the comparison step. He is not expecting formal analysis of the AI, but he does look for evidence that students noticed something and used it to strengthen their thinking.
+MARKDOWN

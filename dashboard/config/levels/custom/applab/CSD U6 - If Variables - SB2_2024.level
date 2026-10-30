@@ -56,9 +56,9 @@
     "text_mode_at_start": "false",
     "encrypted": "false",
     "reference_links": [
-      "/courses/csd-2022/guides/designing-screens-with-code",
-      "/courses/csd-2022/guides/if-statements-2",
-      "/courses/csd-2022/guides/variables"
+      "/courses/csd-2024/guides/designing-screens-with-code",
+      "/courses/csd-2024/guides/if-statements-2",
+      "/courses/csd-2024/guides/variables"
     ],
     "widget_mode": "false",
     "libraries_enabled": "false",

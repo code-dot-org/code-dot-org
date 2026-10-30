@@ -1,7 +1,9 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/deprecatedChai';
+
 import CodeWritten from '@cdo/apps/templates/feedback/CodeWritten';
+
+import {expect} from '../../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
 const DEFAULT_PROPS = {
   numLinesWritten: 0,
@@ -66,9 +68,8 @@ describe('CodeWritten', () => {
               fontSize: 14,
               lineHeight: '20px',
               fontWeight: 'normal',
-              outline: 'none',
               padding: 5,
-              fontColor: 'black',
+              color: 'black',
               marginLeft: 40,
               display: 'list-item',
             }}

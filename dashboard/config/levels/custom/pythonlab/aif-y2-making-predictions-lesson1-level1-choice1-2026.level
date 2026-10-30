@@ -1,0 +1,55 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-10-10T21:09:18.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Kai's Esports Squad",
+    "long_instructions": "If the squad practices 7 hours next week, what match score should they expect?\r\n\r\nThe client’s records are in the program: hours practiced per week, and average match score, for five weeks of data. Right now the program stops with an error.\r\n\r\n**☑️ Do This:**\r\n- Run this program and notice the error in the console. Consider why the error might be happening.\r\n- `scikit-learn` requires that each input example is wrapped in its own list, like `[[1], [2], [3]]`. Rewrite hours as a list of lists, then run the program again.\r\n- Make the prediction you made on paper: `value = model.predict([[7]])[0]`, then print it with `print(f\"Prediction for 7: {value}\")`.\r\n- If time allows, discuss with your partner: if the client asked you to predict for 20 hours of practice, could your paper plot have answered that?\r\n\r\n**💻 Coding Tip**\r\n\r\n`model.fit(inputs, outputs)` trains the model, and `scikit-learn` expects every input wrapped in its own list. `model.predict([[7]])` returns a list holding one prediction, so `[0]` takes the number out of it.",
+    "bubble_choice_description": "Help Kai predict how their esports squad will perform.",
+    "thumbnail_url": "https://images.code.org/b57095224c1a072e385de9dc4abe76af-esports.jpg",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "documentation",
+        "explainCode",
+        "hint",
+        "debug"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "from sklearn.linear_model import LinearRegression\n\n# TODO 1: Fix the definition of hours\nhours = [1, 3, 5, 8, 10]\nscores = [27, 34, 37, 50, 58]\n\n# This line confirms how many examples the data holds:\nprint(\"Data loaded:\", len(hours), \"examples\")\n\n# This line creates a new, untrained model:\nmodel = LinearRegression()\n\n# This line trains the model on the client's data:\nmodel.fit(hours, scores)\n\n# TODO 2: Predict the value you made on paper",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMqt96wIEhYqTDWD\nbXtBYaGnCmWNd+XHYXQyDwSM06FbPJK0+y6Oiz/ULxadyZxPMKWEQE2BBl6l\nUeHHPd5wWCvYy30y2qUrr8kFg5HOiIRHnYGw6xBLwdU/vkusUOzHiTlQSvBe\nSAoVaw0wsw7L0e0wxcYdqQCG79ZQbKxbOMTtkUV1iE1gHBimFhCaBRsyzGGI\n3b76XsON1AjxgYqJoHoCIS4jydb/VVXC+PAwT9w2DzOnV/d3x+Gs3SlblJ2W\nQYBVUcnf80gyzivi/K634CTSjMR6ctWdX+GMAiF7iqVuBHUfqmgC+KheX+gR\nu+M00ZmHGlHoMHypPIVqYy0HJus2NBvCtiHsvkeAtdSiSZezlidM7xo0c/ZP\nD+Kgv2QQTKG0p+9BQz58GLja9HdqPGqmn6ZuJqUS96uno+QqNiKAo3JXY0z3\nqKLVE+MWr+pf0k8=\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-10-10 21:14:21 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-10 21:14:59 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-10 21:15:10 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-10 21:16:04 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

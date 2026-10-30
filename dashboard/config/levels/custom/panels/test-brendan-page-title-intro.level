@@ -1,0 +1,33 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-06-29T19:40:00.000Z",
+  "level_num": "custom",
+  "user_id": 574,
+  "properties": {
+    "panels": [
+      {
+        "key": "test-brendan-page-title-intro-ae7c9fbc-a699-4211-a010-4f7ab52a128f",
+        "text": "Remember the `<head>` section we just talked about? It's like the brain of your web page, holding important information *about* the page itself.",
+        "imageUrl": "https://images.code.org/80bc231607f289f6c2dbbba81d81e91d-test-brendan-page-title-intro-panel-1-8fe70294-27c7-4c8d-aa16-ff61eedd1be1.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "test-brendan-page-title-intro-9f92a7b3-dde3-4493-9e1f-de0a7625b0af",
+        "text": "Inside the `<head>` is a special tag called `<title>`. Whatever text you put between the `<title>` tags is what shows up in your browser's tab or window bar!",
+        "imageUrl": "https://images.code.org/dbfe8d0f108a8a6ca25080c4a0b8ece8-test-brendan-page-title-intro-panel-2-e1ec9bb1-dbf9-40f6-98b9-e7f7b1940aa1.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "test-brendan-page-title-intro-d3cfe414-6608-4f79-93cd-951261082934",
+        "text": "This title is super helpful! It lets you quickly see what each page is about, especially when you have lots of tabs open. Think of it as a clear name tag for your web page.",
+        "imageUrl": "https://images.code.org/c5973c322e986a32fd762371603a58e9-test-brendan-page-title-intro-panel-3-afd008f6-6077-4ad3-a525-58bfabe4d96d.png",
+        "layout": "text-bottom-center"
+      }
+    ],
+    "generate_outline": "Explain the purpose of the <title> tag within the <head> section of an HTML document. Show where the title appears in a web browser (e.g., tab or window bar) and why it's important for organization."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-06-29 19:40:27 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-29 19:40:27 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

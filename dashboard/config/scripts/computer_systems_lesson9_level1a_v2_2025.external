@@ -1,0 +1,22 @@
+name 'computer-systems-lesson9-level1a_v2-2025'
+title 'Voice Assistants'
+description ''
+display_name 'Voice Assistants'
+thumbnail_url 'https://images.code.org/73c71526714694c9745c84a1273d94c6-voice.png'
+
+markdown <<MARKDOWN
+## Voice Assistants
+
+Watch the video and respond to the questions in your activity guide. 
+
+**Note**: This video opens in a new tab.
+
+<div style="text-align: center; margin-top: 20px;">
+  <a href="https://docs.google.com/presentation/d/1426PdbblrbQnqStYFtC3sll5Q94PbAvzKntTqH_TD9o/edit?slide=id.g2694c47731d_3_332#slide=id.g2694c47731d_3_332" target="_blank" rel="noopener noreferrer">
+    <img src="https://images.code.org/696d355ba602562ec34011284ea87495-VOICE.png" 
+         alt="YouTube Video Thumbnail" 
+         style="width: 80%; max-width: 600px; border-radius: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);">
+  </a>
+</div>
+
+MARKDOWN

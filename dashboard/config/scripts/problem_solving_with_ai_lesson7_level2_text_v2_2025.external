@@ -1,0 +1,13 @@
+name 'problem-solving-with-ai-lesson7-level2-text_v2-2025'
+title 'AI Hallucinations and Their Impacts'
+description 'description here'
+
+markdown <<MARKDOWN
+## AI Hallucinations and Their Impacts
+
+Read over the two brief conversations with AI that contain hallucinations. Think about what would happen if you prompted AI and got back the following misinformation. 
+
+For each scenario, consider what impact it could have. Then reflect on why hallucinations appear convincing and how they can be combated.
+
+
+MARKDOWN

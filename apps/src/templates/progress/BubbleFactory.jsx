@@ -1,15 +1,22 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import classNames from 'classnames';
 import {uniqueId} from 'lodash';
+import PropTypes from 'prop-types';
 import queryString from 'query-string';
-import i18n from '@cdo/locale';
+import React from 'react';
+
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {currentLocation, makeEnum} from '@cdo/apps/utils';
-import TooltipWithIcon from './TooltipWithIcon';
+import i18n from '@cdo/locale';
+
 import {getIconForLevel, isLevelAssessment} from './progressHelpers';
-import {flex, font, marginLeftRight, marginTopBottom} from './progressStyles';
+import {
+  flex,
+  levelHoverClass,
+  marginLeftRight,
+  marginTopBottom,
+} from './progressStyles';
 import {levelWithProgressType} from './progressTypes';
+import TooltipWithIcon from './TooltipWithIcon';
 import './styles.scss';
 
 export const BubbleSize = makeEnum('dot', 'letter', 'full');
@@ -86,19 +93,37 @@ DiamondContainer.propTypes = {
   children: PropTypes.node,
 };
 
+const handleKeyDown = (event, clickEvent) => {
+  if (event.key === 'Enter' || event.key === ' ') {
+    clickEvent();
+  }
+};
+
 export function BubbleLink({url, onClick, children, a11y_description}) {
-  return (
+  const commonProps = {
+    onClick,
+    className: 'progress-bubble-link',
+    title: a11y_description,
+  };
+
+  return url ? (
+    <a href={url} {...commonProps}>
+      {children}
+    </a>
+  ) : (
+    // Anchor tags without href attributes are not recognizable by assistive tech.
+    // Adding additional props to make it tab navigable and screen reader accessible.
     <a
-      href={url}
-      onClick={onClick}
-      className="progress-bubble-link"
-      title={a11y_description}
-      aria-label={a11y_description}
+      role="button"
+      tabIndex={0}
+      onKeyDown={e => handleKeyDown(e, onClick)}
+      {...commonProps}
     >
       {children}
     </a>
   );
 }
+
 BubbleLink.propTypes = {
   url: PropTypes.string,
   onClick: PropTypes.func,
@@ -197,8 +222,10 @@ export function getBubbleShape(isUnplugged, isConcept) {
     : BubbleShape.circle;
 }
 
-export function getBubbleClassNames(isEnabled) {
-  return classNames('progress-bubble', {enabled: isEnabled});
+export function getBubbleClassNames(isEnabled, levelStatus) {
+  return classNames('progress-bubble', levelHoverClass(levelStatus), {
+    enabled: isEnabled,
+  });
 }
 
 export function getBubbleUrl(
@@ -210,7 +237,7 @@ export function getBubbleUrl(
   if (!levelUrl) {
     return null;
   }
-  const params = preserveQueryParams
+  const current_loc_query_params = preserveQueryParams
     ? queryString.parse(currentLocation().search)
     : {};
 
@@ -218,7 +245,13 @@ export function getBubbleUrl(
   // between levels backed by different projects or between a project level and
   // a non-project level puts the user in an error state since the version id doesn't
   // exist.
-  delete params.version;
+  delete current_loc_query_params.version;
+
+  const level_url_query_params =
+    levelUrl.split('?').length > 1
+      ? queryString.parse(levelUrl.split('?')[1])
+      : {};
+  const params = {...current_loc_query_params, ...level_url_query_params};
 
   if (sectionId) {
     params.section_id = sectionId;
@@ -226,8 +259,9 @@ export function getBubbleUrl(
   if (studentId) {
     params.user_id = studentId;
   }
+
   if (Object.keys(params).length) {
-    return `${levelUrl}?${queryString.stringify(params)}`;
+    return `${levelUrl.split('?')[0]}?${queryString.stringify(params)}`;
   }
   return levelUrl;
 }
@@ -299,7 +333,7 @@ const fontSizes = {
 const bubbleStyles = {
   main: {
     ...flex,
-    ...font,
+    fontWeight: 600,
     ...marginTopBottom(3),
     boxSizing: 'border-box',
     letterSpacing: -0.11,

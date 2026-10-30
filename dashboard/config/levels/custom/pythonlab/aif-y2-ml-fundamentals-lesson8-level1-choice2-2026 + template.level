@@ -1,0 +1,55 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-08-20T15:01:06.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "from helpers import train_model, training_data, visualize_model\n\nneighbors = 1\npredict_delivery = train_model(training_data, neighbors)\n\ntoday = {\"daylight_hours\": 7, \"snowfall\": 6}\nvisualize_model(predict_delivery, today)",
+          "folderId": "0",
+          "active": true
+        },
+        "1": {
+          "id": "1",
+          "name": "helpers.py",
+          "contents": "import matplotlib.pyplot as plt\n\nON_TIME = \"On Time\"\nLATE = \"Late\"\n\nSTYLES = {\n    ON_TIME: {\"color\": \"#0072B2\", \"marker\": \"o\"},\n    LATE: {\"color\": \"#E69F00\", \"marker\": \"s\"},\n}\n\nFEATURES = [\"daylight_hours\", \"snowfall\"]\ntraining_data = [\n    {\"daylight_hours\": 4, \"snowfall\": 12, \"label\": LATE},\n    {\"daylight_hours\": 5, \"snowfall\": 11, \"label\": LATE},\n    {\"daylight_hours\": 6, \"snowfall\": 10, \"label\": LATE},\n    {\"daylight_hours\": 7, \"snowfall\": 8, \"label\": LATE},\n    {\"daylight_hours\": 6, \"snowfall\": 9, \"label\": LATE},\n    {\"daylight_hours\": 10, \"snowfall\": 3, \"label\": ON_TIME},\n    {\"daylight_hours\": 12, \"snowfall\": 2, \"label\": ON_TIME},\n    {\"daylight_hours\": 9, \"snowfall\": 4, \"label\": ON_TIME},\n    {\"daylight_hours\": 11, \"snowfall\": 3, \"label\": ON_TIME},\n    {\"daylight_hours\": 8, \"snowfall\": 5, \"label\": ON_TIME},\n]\n\n\ndef _ranges(points, today, features):\n    result = {}\n    for name in features:\n        values = [point[name] for point in points] + [today[name]]\n        span = max(values) - min(values)\n        result[name] = span if span != 0 else 1\n    return result\n\n\ndef _distance(a, b, ranges, features):\n    total = 0\n    for name in features:\n        total += ((a[name] - b[name]) / ranges[name]) ** 2\n    return total**0.5\n\n\ndef _prettify(name):\n    return name.replace(\"_\", \" \").title()\n\n\ndef train_model(training_data, neighbors):\n    def model(today, return_neighbors=False):\n        \"\"\"\n        By default, model returns its prediction.\n        If return_neighbors is True, model returns the nearest neighbors instead, for use in visualization.\n        \"\"\"\n        ranges = _ranges(training_data, today, FEATURES)\n\n        ordered = sorted(\n            training_data, key=lambda point: _distance(today, point, ranges, FEATURES)\n        )\n        k = max(1, min(neighbors, len(training_data)))\n        nearest = ordered[:k]\n        if return_neighbors:\n            return nearest\n\n        counts = {}\n        for point in nearest:\n            counts[point[\"label\"]] = counts.get(point[\"label\"], 0) + 1\n        top = max(counts.values())\n        winners = [label for label, count in counts.items() if count == top]\n        prediction = nearest[0][\"label\"] if len(winners) > 1 else winners[0]\n        return prediction\n\n    return model\n\n\ndef visualize_model(model, today):\n    \"\"\"Generate a visualization.\"\"\"\n    x_name = FEATURES[0]\n    y_name = FEATURES[1]\n    ranges = _ranges(training_data, today, FEATURES)\n\n    nearest = model(today, return_neighbors=True)\n    prediction = model(today)\n\n    fig, ax = plt.subplots(figsize=(8, 6))\n\n    for point in nearest:\n        ax.plot(\n            [today[x_name], point[x_name]],\n            [today[y_name], point[y_name]],\n            color=\"0.6\",\n            linestyle=\"--\",\n            linewidth=1.2,\n            zorder=1,\n        )\n\n    for label, style in STYLES.items():\n        xs = [point[x_name] for point in training_data if point[\"label\"] == label]\n        ys = [point[y_name] for point in training_data if point[\"label\"] == label]\n        ax.scatter(\n            xs,\n            ys,\n            color=style[\"color\"],\n            marker=style[\"marker\"],\n            s=140,\n            edgecolors=\"black\",\n            linewidths=0.8,\n            label=label,\n            zorder=2,\n        )\n\n    ax.scatter(\n        [today[x_name]],\n        [today[y_name]],\n        color=\"black\",\n        marker=\"*\",\n        s=420,\n        edgecolors=\"white\",\n        linewidths=1.2,\n        label=\"Today\",\n        zorder=3,\n    )\n\n    ax.set_aspect(ranges[x_name] / ranges[y_name])\n    ax.set_xlabel(_prettify(x_name), fontsize=12)\n    ax.set_ylabel(_prettify(y_name), fontsize=12)\n    ax.set_title(\n        \"Nearest Neighbors Prediction: \" + prediction, fontsize=14, fontweight=\"bold\"\n    )\n\n    ax.grid(True, linestyle=\":\", linewidth=0.6, alpha=0.6)\n    ax.legend(loc=\"best\", fontsize=11)\n    fig.tight_layout()\n\n    print(\"Prediction for today:\", prediction)\n    plt.show()\n",
+          "folderId": "0",
+          "active": false,
+          "type": "support"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-08-20 19:58:46 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-08-20 20:00:58 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-08-20 20:02:53 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-08-20 20:04:32 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

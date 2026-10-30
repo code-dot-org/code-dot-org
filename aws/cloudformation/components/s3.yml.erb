@@ -1,0 +1,27 @@
+  # S3 bucket for user-generated AI content (audio lesson summaries, etc.)
+  #
+  # Access: Explicit permissions granted in CDOPolicy (GetObject, PutObject, DeleteObject, ListBucket).
+
+  UserContentBucket:
+    Type: AWS::S3::Bucket
+    DeletionPolicy: <%= rack_env?(:adhoc) ? "Delete" : "Retain" %>
+    Properties:
+      BucketName: <%=s3_bucket_namespace%>.user-content
+      # To constrain costs, impose a hard limit here. We should consider more proactive cleanup in-platform.
+      LifecycleConfiguration:
+        Rules:
+          # Expire Just-In-Time Professional Learning content after 6 months.
+          - Id: expire-jitpl-after-6-months
+            Status: Enabled
+            ExpirationInDays: 180
+            Prefix: just-in-time-pl/podcasts/
+      VersioningConfiguration:
+        Status: Enabled
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+      LoggingConfiguration:
+        DestinationBucketName: cdo-logs
+        LogFilePrefix: s3/<%=s3_bucket_namespace%>.user-content/

@@ -1,0 +1,45 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-09-15T21:01:46.000Z",
+  "level_num": "custom",
+  "user_id": 19028,
+  "properties": {
+    "panels": [
+      {
+        "key": "amanda-reflection-coding-journey-50ec3b5b-1e45-4ecc-ba19-6dd3e809e047",
+        "text": "Remember how we started? Coding is about giving computers *precise, step-by-step instructions* – just like making a sandwich, but even more detailed!",
+        "imageUrl": "https://images.code.org/dbdef703388c381e999502c21e6cc019-amanda-reflection-coding-journey-panel-1-93d6e702-a79c-4676-a805-cf058a42057e.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "amanda-reflection-coding-journey-ce87e6a1-0988-42bb-aa7f-8f36272c5610",
+        "text": "We then learned to make our programs talk! The `print()` function lets your code communicate with you, displaying messages and results.",
+        "imageUrl": "https://images.code.org/07b218d1c078affd7572b7e3f46312e5-amanda-reflection-coding-journey-panel-2-eeb8b9ca-284e-45e7-b0b7-3fd2e7873ad1.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "amanda-reflection-coding-journey-42c00e2f-ae5f-4665-a6eb-928ca120de03",
+        "text": "And we discovered variables – powerful 'containers' for storing information. You can put numbers, text, or other data inside them and change them whenever you need to!",
+        "imageUrl": "https://images.code.org/980882dea8dd9cef630fb94c14b8d20a-amanda-reflection-coding-journey-panel-3-b9ec45d7-acd8-40fd-9004-1f9435584476.png",
+        "layout": "text-top-right"
+      },
+      {
+        "key": "amanda-reflection-coding-journey-dacccc25-a372-4f1e-83f8-f6043ee8d8c5",
+        "text": "From basic instructions to making your code communicate and manage information, you've taken your first big steps into the world of programming!",
+        "imageUrl": "https://images.code.org/f354c98fd4288d9d75525eb660da1b62-amanda-reflection-coding-journey-panel-4-fedd7727-0d1d-4d97-aed7-a374b54961ff.png",
+        "layout": "text-bottom-left"
+      },
+      {
+        "key": "amanda-reflection-coding-journey-31055bbb-9fcd-47b0-8a8a-944e9fcef0e9",
+        "text": "These foundational ideas – precise instructions, output, and storing data – are the building blocks for creating incredible things. What will you build next?",
+        "imageUrl": "https://images.code.org/031fd1992e720a035b32ade6743d9f33-amanda-reflection-coding-journey-panel-5-133ca4f4-4992-4b2c-8cb5-64ef74288dc5.png",
+        "layout": "text-top-center"
+      }
+    ],
+    "generate_outline": "This concluding level summarizes the core concepts learned about precise instructions, `print()`, and variables in Python. It encourages reflection on the journey into coding."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-15 21:02:56 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-09-15 21:02:56 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+}]]></config>
+</Panels>

@@ -1,0 +1,14 @@
+name 'computer-systems-lesson4-level2_2025-launch_v2-2025'
+title 'Careers In or Using Computer Science'
+
+question 'In this lesson, I learned something new about how computer science is used in careers.'
+
+right 'Strongly disagree'
+right 'Disagree'
+right 'Slightly disagree'
+right 'Neither'
+right 'Slightly agree'
+right 'Agree'
+right 'Strongly agree'
+
+allow_multiple_attempts true

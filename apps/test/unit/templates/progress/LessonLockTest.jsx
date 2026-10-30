@@ -1,9 +1,9 @@
+import {Button as MuiButton} from '@mui/material';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {expect} from '../../../util/deprecatedChai';
-import {shallow} from 'enzyme';
-import LessonLock from '@cdo/apps/templates/progress/LessonLock';
+
 import LessonLockDialog from '@cdo/apps/code-studio/components/progress/lessonLockDialog/LessonLockDialog';
-import Button from '@cdo/apps/templates/Button';
+import LessonLock from '@cdo/apps/templates/progress/LessonLock';
 import i18n from '@cdo/locale';
 
 const FAKE_LESSON_ID = 33;
@@ -21,19 +21,19 @@ const setUp = (overrideProps = {}) => {
 describe('LessonLock', () => {
   it('renders an open dialog button and no LessonLockDialog by default', () => {
     const wrapper = setUp();
-    const openDialogButton = wrapper.find(Button);
-    expect(openDialogButton).to.have.length(1);
-    expect(openDialogButton.props().text).to.equal(i18n.lockSettings());
-    expect(wrapper.find(LessonLockDialog)).to.have.length(0);
+    const openDialogButton = wrapper.find(MuiButton);
+    expect(openDialogButton).toHaveLength(1);
+    expect(openDialogButton.props().children).toBe(i18n.lockSettings());
+    expect(wrapper.find(LessonLockDialog)).toHaveLength(0);
   });
 
   it('renders the LessonLockDialog when button is clicked', () => {
     const wrapper = setUp();
-    wrapper.find(Button).simulate('click');
+    wrapper.find(MuiButton).simulate('click');
 
     const lockDialog = wrapper.find(LessonLockDialog);
-    expect(lockDialog).to.have.length(1);
-    expect(lockDialog.props().unitId).to.equal(FAKE_UNIT_ID);
-    expect(lockDialog.props().lessonId).to.equal(FAKE_LESSON_ID);
+    expect(lockDialog).toHaveLength(1);
+    expect(lockDialog.props().unitId).toBe(FAKE_UNIT_ID);
+    expect(lockDialog.props().lessonId).toBe(FAKE_LESSON_ID);
   });
 });

@@ -1,6 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 50,
   "created_at": "2023-11-28T21:11:10.000Z",
   "level_num": "custom",
@@ -54,12 +53,12 @@
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "reference_links": [
-      "/courses/csd-2022/guides/variables",
-      "/courses/csd-2022/guides/naming-variables",
-      "/courses/csd-2022/guides/drawing-shapes",
-      "/courses/csd-2022/guides/shapes-and-parameters"
+      "/courses/csd-2024/guides/variables",
+      "/courses/csd-2024/guides/naming-variables",
+      "/courses/csd-2024/guides/drawing-shapes",
+      "/courses/csd-2024/guides/shapes-and-parameters"
     ],
-    "map_reference": "/courses/csd-2022/guides/random-numbers",
+    "map_reference": "/courses/csd-2024/guides/random-numbers",
     "rubric_key_concept": "Generate and use random numbers in a program, use arguments to change the way a method or command runs.",
     "mini_rubric": "true",
     "parent_level_id": 20677,
@@ -72,6 +71,7 @@
     "libraries_enabled": "false",
     "preload_asset_list": null
   },
+  "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2023-11-28T21:11:10.855+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Random rainbow snake_2023\\\"\"],\"cloned_from\":\"CSD U3 Random rainbow snake_2023\"},{\"changed_at\":\"2024-01-10 17:59:05 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>

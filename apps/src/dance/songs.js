@@ -1,6 +1,7 @@
+import {DanceSongManifestFilename} from '@cdo/generated-scripts/sharedConstants';
+
 import Sounds from '../Sounds';
 import {ageDialogSelectedOver13, songFilterOn} from '../templates/AgeDialog';
-import {DanceSongManifestFilename} from '../util/sharedConstants';
 import {fetchSignedCookies} from '../utils';
 
 const DEPRECATED_SONGS = [
@@ -18,6 +19,22 @@ const DEPRECATED_SONGS = [
   'showdaspoderosas_anitta',
   'savagelove_jasonderulo',
   'astronautintheocean_maskedwolf',
+  'dernieredanse_indila',
+  'kidzbop_ificanthaveyou_shawnmendes',
+  'neverreallyover_katyperry',
+  'occidentalview_francescogabbani',
+  'oldtownroadremix_lilnasx',
+  'oldtownroadremix_lilnasx_long',
+  'highhopes_panicatthedisco',
+  'starships_nickiminaj',
+  'sucker_jonasbrothers',
+  'calma_pedrocapo',
+  'euphoria_loreen',
+  'ilkadimisenat_kenandogulu',
+  'odetocode_brendandominicpaolini',
+  'sayso_dojacat',
+  'despedidaycierre_vanesamartin',
+  'stay_thekidlaroi',
 ];
 
 /**

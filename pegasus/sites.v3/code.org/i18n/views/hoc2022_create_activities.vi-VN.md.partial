@@ -1,7 +1,0 @@
-{{ featured_tutorial, title: "Bữa tiệc khiêu vũ", body: "Hãy lập trình một bữa tiệc khiêu vũ nào! Với sự tham gia của Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, âm nhạc đến từ \"Encanto\" của Disney và nhiều điều thú vị khác!", image: "/images/hoc2022-dance-party.png", url: "https://code.org/dance" }}
-
-{{ featured_tutorial, title: "Tranh thơ ca", body: "Hãy thêm tranh ảnh và hình động vào một bài thơ cổ trong hoạt động Giờ lập trình này!", image: "/shared/images/courses/logo_tall_poem-art.jpg", url: "https://studio.code.org/s/poem-art-2021/reset" }}
-
-{{ featured_tutorial, title: "Họa sĩ", body: "Hãy vẽ những bức tranh và thiết kế với Họa sĩ!", image: "/shared/images/courses/logo_tall_artist.jpg", url: "https://studio.code.org/s/artist/reset" }}
-
-{{ featured_tutorial, title: "Infinity Play Lab", body: "Hãy sử dụng Play Lab để viết một câu chuyện hoặc làm game với sự tham gia của các nhân vật trong Disney Infinity.", image: "/shared/images/courses/logo_tall_infinity.jpg", url: "https://studio.code.org/s/infinity/reset" }}

@@ -1,4 +1,5 @@
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 
 // Stub the DOM-dependent behavior of the RailsAuthenticityToken component, so

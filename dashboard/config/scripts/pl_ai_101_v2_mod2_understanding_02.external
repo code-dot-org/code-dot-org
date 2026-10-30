@@ -1,0 +1,47 @@
+name 'pl-ai-101-V2-mod2-understanding-02'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<!-- Pitfall 2 -->
+<div style="max-width:1000px; margin:0 auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background:#FFFFFF; padding:32px; color:#292F36; line-height:1.6; font-size:16px;">
+<div style="border-radius:18px; overflow:hidden; box-shadow:0 6px 18px rgba(41,47,54,0.08); border:1px solid #e3e6ea;">
+<div style="background:#8C52BA; padding:26px;">
+<div style="color:#FFFFFF; font-size:26px; font-weight:800;">Pitfall 2: Assuming AI Works like a Google Search</div>
+</div>
+<div style="background:#F4F6F8; padding:36px;">
+<div style="display:grid; grid-template-columns: 1fr 1fr; gap:32px;">
+<div>
+<div style="border:1px solid #dfe3e8; border-radius:18px; padding:24px; background:#FFFFFF; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
+<div style="font-weight:800; font-size:20px; margin-bottom:14px; color:#0093A4;">Scenario</div>
+<div style="margin-bottom:18px;">Mr. Chen, a middle school science teacher, asks:</div>
+<div style="background:#F7F8FA; border-left:5px solid #8C52BA; border-radius:14px; padding:18px; margin-bottom:18px;">
+<div style="font-size:16px;">What are the most research-backed strategies for teaching climate change to 7th graders?</div>
+</div>
+<div>The AI returns a clean list with strategies like “teach both sides equally” and “avoid emotionally charged examples,” complete with author names and years. <br> Mr. Chen later tries to find the cited studies and realizes two of the authors don’t exist and one claim contradicts guidance from the National Science Teaching Association. He has to rewrite the lesson the night before teaching it.</div>
+</div>
+</div>
+<div>
+<div style="border:1px solid #dfe3e8; border-radius:18px; padding:24px; margin-bottom:24px; background:#FFFFFF; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
+<div style="font-weight:800; font-size:20px; margin-bottom:12px; color:#ED6060;">The Pitfall</div>
+<div>Believing the AI is pulling answers from verified sources, like a search engine or database.</div>
+</div>
+<div style="border:1px solid #dfe3e8; border-radius:18px; padding:24px; background:#FFFFFF; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
+<div style="font-weight:800; font-size:20px; margin-bottom:12px; color:#0093A4;">Quick Tip</div>
+<div style="margin-bottom:18px;">Use AI to brainstorm and organize ideas, but verify research claims and citations independently.</div>
+<div style="background:#F7F8FA; border-left:5px solid #8C52BA; border-radius:14px; padding:18px;">
+<div style="font-size:16px">Suggest lesson approaches for teaching climate change to 7th graders. For each suggestion, label it as ‘needs verification’ and list what I should verify (e.g., standards, NSTA guidance, peer-reviewed sources).</div>
+</div>
+</div>
+</div>
+</div>
+<div style="margin-top:32px;">
+<details style="border:1px solid #dfe3e8; border-radius:18px; background:#FFFFFF; overflow:hidden; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
+<summary style="cursor:pointer; padding:20px; font-weight:800; font-size:20px; color:#0093A4;">What’s Going on Under the Hood</summary>
+<div style="padding:0 20px 20px 20px; border-top:1px solid #F4F6F8;">Unless connected to a search tool, the AI does not look up studies or confirm citations. It generates answers by predicting what a plausible response should look like, including the appearance of references. This can result in fabricated or inaccurate sources that sound legitimate.</div>
+</details>
+</div>
+</div>
+</div>
+</div>
+MARKDOWN

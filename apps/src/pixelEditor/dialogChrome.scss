@@ -1,0 +1,168 @@
+// The dialog chrome shared by the pixel editor and SpriteLab2's image
+// dialog: rounded panel, header/footer bars, plain buttons, enter animation.
+// Include the pieces from a `.dialogHost .modal`-style parent selector so
+// they outrank CustomDialog's own classes by specificity, never load order.
+// Themed: include `theme` on the host element and every piece follows the
+// page's brand and light/dark mode through the semantic tokens below.
+
+// Kept as SCSS variables for the few places that need the raw values.
+$border-subtle: var(--dialog-border-subtle);
+$panel-background: var(--dialog-panel-bg);
+$panel-text: var(--dialog-panel-text);
+
+@mixin theme {
+  --dialog-panel-bg: var(--background-neutral-primary);
+  --dialog-panel-text: var(--text-neutral-primary);
+  --dialog-text-secondary: var(--text-neutral-secondary);
+  --dialog-border-subtle: var(--borders-neutral-light);
+  --dialog-control-border: var(--borders-neutral-primary);
+  --dialog-control-border-strong: var(--borders-neutral-strong);
+  --dialog-control-bg: var(--background-neutral-secondary);
+  --dialog-hover-bg: var(--background-neutral-tertiary);
+  --dialog-active-bg: var(--background-neutral-quaternary);
+  --dialog-inset-bg: var(--background-neutral-secondary);
+  --dialog-primary-bg: color-mix(
+    in srgb,
+    var(--background-neutral-primary-inverse) 92%,
+    transparent
+  );
+  --dialog-primary-bg-hover: var(--background-neutral-primary-inverse);
+  --dialog-primary-text: var(--text-neutral-inverse);
+  --dialog-danger-text: var(--text-error-primary);
+  --dialog-danger-border: var(--borders-error-primary);
+  --dialog-danger-hover-bg: color-mix(
+    in srgb,
+    var(--text-error-primary) 10%,
+    transparent
+  );
+  --dialog-focus-ring: var(--text-neutral-primary);
+  // Transparency checkerboard on the panel's own color: white on a light
+  // panel, panel-colored on a dark one.
+  --dialog-checker-bg: var(--background-neutral-primary);
+  --dialog-checker-tint: color-mix(
+    in srgb,
+    var(--text-neutral-primary) 16%,
+    transparent
+  );
+
+  // On the dark theme the panel sits two steps above the page, a readable
+  // gray rather than near-black, and its controls step up with it.
+  [data-theme='Dark'] & {
+    --dialog-panel-bg: var(--background-neutral-tertiary);
+    --dialog-control-bg: var(--background-neutral-quaternary);
+    --dialog-inset-bg: var(--background-neutral-quaternary);
+    --dialog-hover-bg: var(--background-neutral-quinary);
+    --dialog-active-bg: var(--background-neutral-senary);
+  }
+}
+
+// One high-contrast keyboard focus ring for everything in the panel; UA
+// defaults are hard to see against the panel background.
+@mixin focus-ring {
+  outline: 2px solid var(--dialog-focus-ring);
+  outline-offset: 2px;
+}
+
+@mixin panel {
+  display: flex;
+  flex-direction: column;
+  max-width: calc(100vw - 32px);
+  max-height: calc(100vh - 32px);
+  border: 1px solid $border-subtle;
+  border-radius: 10px;
+  background-color: $panel-background;
+  box-shadow: 0 12px 40px rgb(0 0 0 / 45%);
+  color: $panel-text;
+  animation: dialog-chrome-enter 0.14s ease-out;
+}
+
+// Consumers include this once at module root (css-modules localizes
+// keyframe names per module, so the panel's animation reference and these
+// frames must be emitted together).
+@mixin keyframes {
+  @keyframes dialog-chrome-enter {
+    from {
+      opacity: 0;
+      transform: scale(0.97);
+    }
+
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+
+@mixin header {
+  padding: 12px 16px;
+  border-bottom: 1px solid $border-subtle;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+// The bottom action bar: buttons right-aligned; give a child
+// margin-right: auto to sit flush left.
+@mixin footer {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 12px 16px;
+  border-top: 1px solid $border-subtle;
+}
+
+@mixin plain-button {
+  box-sizing: border-box;
+  height: 34px;
+  margin: 0;
+  padding: 0 18px;
+  border: 1px solid var(--dialog-control-border);
+  border-radius: 6px;
+  background: none;
+  box-shadow: none;
+  color: $panel-text;
+  font-size: 14px;
+  cursor: pointer;
+
+  &:hover:not(:disabled) {
+    background-color: var(--dialog-hover-bg);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+}
+
+@mixin primary-button {
+  // !important: the page's global button CSS (background/box-shadow) has
+  // higher effective specificity inside the modal and bleeds in without it.
+  border-color: transparent;
+  background-color: var(--dialog-primary-bg) !important;
+  color: var(--dialog-primary-text) !important;
+  font-weight: 600;
+
+  &:hover:not(:disabled) {
+    background-color: var(--dialog-primary-bg-hover) !important;
+  }
+}
+
+// For destructive actions: same plain shape, red-tinted.
+@mixin danger-button {
+  border-color: var(--dialog-danger-border);
+  color: var(--dialog-danger-text);
+
+  &:hover:not(:disabled) {
+    background-color: var(--dialog-danger-hover-bg);
+  }
+}
+
+// Screen-reader-only text (the dialog description CustomDialog expects).
+@mixin sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}

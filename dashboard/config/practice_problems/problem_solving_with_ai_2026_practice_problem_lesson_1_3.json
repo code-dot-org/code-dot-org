@@ -1,0 +1,15 @@
+{
+  "key": "problem_solving_with_ai_2026_practice_problem_lesson_1_3",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "Which of these prompts would most likely produce a funnier, more personalized birthday message?",
+  "solution": [
+    {"option": "\"Write a birthday message.\"", "correct": false},
+    {"option": "\"Write a funny birthday message for a friend who loves basketball.\"", "correct": true},
+    {"option": "\"Write a message for my friend.\"", "correct": false},
+    {"option": "All would produce the same message.", "correct": false}
+  ],
+  "objective_keys": [
+    "5777a325-2625-47bf-ac2a-3f64517c62b7"
+  ]
+}

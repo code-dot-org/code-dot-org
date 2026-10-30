@@ -1,0 +1,10 @@
+name 'Data Sci U2 Pre Q3_2024-pilot'
+
+question 'In data science, what is a key reason for the widespread use of CSV files, especially considering their structure and compatibility with various data processing tools?'
+
+wrong 'CSV files are primarily used for storing encrypted data due to their high security and complexity.'
+wrong 'CSV files are specifically designed for creating and executing complex machine learning models directly, because they are text based.'
+wrong 'CSV files are optimized for the storage and processing of multimedia content such as audio and video files, since they can compress data.'
+right 'The simplicity of CSV files make them ideal for storing and exchanging large datasets, as they can be easily read and written by both humans and machines.'
+
+allow_multiple_attempts false

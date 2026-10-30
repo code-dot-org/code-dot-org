@@ -1,0 +1,72 @@
+{
+  "ownerKind": "lesson",
+  "ownerId": 8897426,
+  "slides": [
+    {
+      "key": "24258917-808f-498c-a071-4300e52e2c19",
+      "description": "Introduce the concept of a web page as a structured document rendered by a web browser. Frame the browser's role in interpreting code to display visual content. Establish that the browser receives data, not just an image.",
+      "panel": {
+        "key": "853e09a8-4f3c-46d9-a5d4-2c889764923a",
+        "text": "A web page isn't just a picture you see online; it's a structured document! Your web browser reads special instructions, written in code, to figure out exactly what to display. It takes raw data and builds the page, piece by piece, right before your eyes.",
+        "imageUrl": "https://images.code.org/8720813814b70599a5f3365c0a90fd8a-Your First Pet Fish Web Page-slide-panel-1-e4a4f2b2-4f7f-45f3-b6db-003e27dc0aec.png",
+        "layout": "text-top-center",
+        "teacherNote": "Before showing this slide, ask students what they imagine a web page is made of. This helps set the stage for the idea that web pages are built from code. Emphasize that the browser is an active interpreter, translating instructions into what they see, rather than just passively displaying a static file."
+      }
+    },
+    {
+      "key": "1e8e7e36-0d6a-4a72-856d-7eef1eae297b",
+      "description": "Define HTML as HyperText Markup Language and explain its core function as a blueprint or schema for web content. Emphasize that HTML uses 'tags' to define elements and their structure, not their visual appearance.",
+      "panel": {
+        "key": "33d1c48a-e5c8-46aa-9e3e-827a90d7df88",
+        "text": "HTML, short for HyperText Markup Language, is the foundational \"language\" used to structure content on the web. Think of it as the blueprint or schema that defines all the elements on a web page using paired instructions called \"tags.\" These tags describe the *type* of content and its structure, not its visual style.",
+        "imageUrl": "https://images.code.org/adc6ce5eacf84ed86be80f48b5455aa9-Your First Pet Fish Web Page-slide-panel-2-ea4b9b36-421d-4d3d-ad16-b75c4318cdbe.png",
+        "layout": "text-top-center",
+        "teacherNote": "Before showing this slide, ask students what they imagine HTML is or does. Clarify that HTML provides the fundamental structure, like the skeleton of a building, using 'tags' to define different parts. Emphasize that HTML *describes* content and its hierarchy, but *does not* dictate its visual styling, which is a common misconception for beginners. You can use the analogy of a house's blueprint versus its interior design."
+      }
+    },
+    {
+      "key": "685177f3-c266-45d3-9d12-3b6287d58089",
+      "description": "Present the essential, minimal structure of an HTML5 document. Introduce the `<!DOCTYPE html>` declaration, the root `<html>` element, and its two primary child elements: `<head>` and `<body>`. Briefly describe the distinct high-level purpose of each of these three main structural components.",
+      "panel": {
+        "key": "caef6e27-082e-4220-afb6-befb71eb9869",
+        "text": "Every HTML document begins with `<!DOCTYPE html>` to declare its type and version. The entire web page's content is then enclosed within the root `<html>` element. Inside `<html>`, you'll always find two main sections: the `<head>` element, which holds metadata like the page's title (not visible on the page itself), and the `<body>` element, which contains all the visible content that users see and interact with.",
+        "imageUrl": "https://images.code.org/f3ca80c8a92852ca06f799f15293b7af-Your First Pet Fish Web Page-slide-panel-3-7cf871df-4468-4337-83be-87d86f8ca412.png",
+        "layout": "text-top-left",
+        "teacherNote": "Before showing, ask students if they think *everything* in a document is visible. Emphasize that `<!DOCTYPE html>` is like a version stamp for the browser, and the `<head>` is for 'behind-the-scenes' information crucial for the browser but not directly displayed on the page. Use the analogy of a book: the `<html>` is the entire book, the `<head>` is the title page and table of contents (metadata), and the `<body>` is all the actual story pages."
+      }
+    },
+    {
+      "key": "c3622de4-0e56-4ea1-a2ff-7f5f1d10ef2d",
+      "description": "Elaborate on the function of the `<head>` element, specifically introducing the `<title>` tag. Explain that the content within the `<title>` tag provides a human-readable title for the document, typically displayed in the browser tab or window title bar.",
+      "panel": {
+        "key": "547a135e-fca1-4e60-bb8e-b1310e16ca25",
+        "text": "While the `<body>` holds what you see on the page, the `<head>` element contains important metadata *about* the page that isn't directly displayed to the user. One crucial tag found inside `<head>` is the `<title>` tag. The text you place between `<title>` and `</title>` defines the human-readable title for the document, which typically appears in your browser's tab or window title bar.",
+        "imageUrl": "https://images.code.org/405a4a20998cc99fe2aef7e1a9312608-Your First Pet Fish Web Page-slide-panel-4-18eacdce-cf7e-4cce-8497-ad1869fc9260.png",
+        "layout": "text-top-center",
+        "teacherNote": "Before showing this slide, ask students where they usually see the name or description of a website when they visit one (e.g., in the browser tab). This helps them connect the `<title>` tag to their everyday experience with web browsers. Emphasize that the `<title>` is crucial for user navigation (bookmarks, tabs) and search engines, even though it's not part of the main page content."
+      }
+    },
+    {
+      "key": "5ac5e013-0bae-489e-a04d-48e919014a6f",
+      "description": "Shift focus to the `<body>` element, explaining that it contains all the visible content of a web page. Introduce fundamental text structuring tags: `<h1>` for the primary heading, `<h2>` for secondary headings, and `<p>` for paragraphs of general text.",
+      "panel": {
+        "key": "8e5d56cf-b903-4081-81c2-93dd257d0995",
+        "text": "The `<body>` element is the container for all the content users actually *see* on your web page. Inside the `<body>`, we use various HTML tags to structure our text content. For the primary, most important heading on a page, use the `<h1>` (heading 1) tag. For secondary headings, perhaps for sections within your main topic, use the `<h2>` (heading 2) tag. Regular blocks of text, like sentences and paragraphs, are enclosed within the `<p>` (paragraph) tag.",
+        "imageUrl": "https://images.code.org/95dfc9eecc64a53b41d612e844b6423f-Your First Pet Fish Web Page-slide-panel-5-f4656f9f-e968-48c6-bf82-d06c1433e3b9.png",
+        "layout": "text-top-left",
+        "teacherNote": "Before showing this slide, ask students how they would organize information about their pet fish using a main title, sub-sections, and descriptive text. Emphasize that `<h1>`, `<h2>`, and `<p>` tags are about the *semantic meaning* and hierarchy of content, not just their default visual appearance. This distinction is crucial for accessibility and search engine optimization, as well as maintaining logical document structure."
+      }
+    },
+    {
+      "key": "95137fda-14da-477f-8b19-50f4c1923643",
+      "description": "Reinforce the semantic importance of using heading tags (`<h1>`, `<h2>`) and paragraph tags (`<p>`) to structure content logically, beyond just visual presentation. Frame these tags as defining the meaning and hierarchy of text on the page.",
+      "panel": {
+        "key": "f4454dcf-6906-4b7f-8f74-27fbe582b078",
+        "text": "It's vital to understand that tags like `<h1>`, `<h2>`, and `<p>` do more than just change how your text looks. They are **semantic** tags, meaning they define the *meaning* and *hierarchy* of your content for the browser and other web technologies. An `<h1>` declares the primary heading of your page, an `<h2>` marks a significant subsection, and a `<p>` signifies a standalone paragraph of text. This structural meaning is crucial for accessibility, search engine optimization, and overall document understanding, far beyond simple visual presentation.",
+        "imageUrl": "https://images.code.org/dfe22ee6ec7299c297539da3fff44430-Your First Pet Fish Web Page-slide-panel-6-3aa09a40-e656-4c54-85c1-586090ebcbec.png",
+        "layout": "text-top-left",
+        "teacherNote": "Before this slide, ask students why using `<h1>` for the main title is important, beyond just making the text large. Emphasize that these HTML tags communicate a hierarchical meaning to the browser and assistive technologies, not just a visual style. Discuss how this semantic structure helps search engines understand the page content and how screen readers can assist visually impaired users by navigating the page's logical hierarchy."
+      }
+    }
+  ]
+}

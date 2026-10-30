@@ -1,0 +1,222 @@
+{
+  "title": "Music Lab Survey (5 min to complete)",
+  "description": "We value your input! Help us make Music Lab even better through this quick survey. It should only take you about 5 minutes to complete.",
+  "logoPosition": "right",
+  "pages": [
+    {
+      "name": "page1",
+      "title": "About yourself",
+      "elements": [
+        {
+          "type": "boolean",
+          "name": "usertype",
+          "title": "Are you a student?",
+          "isRequired": true
+        },
+        {
+          "type": "boolean",
+          "name": "jam_session_yes_no",
+          "title": "Did your class do the \"Music Lab: Jam Session\" tutorial?",
+          "isRequired": true
+        }
+      ]
+    },
+    {
+      "name": "for_teachers",
+      "visibleIf": "{usertype} = false and {jam_session_yes_no} = true",
+      "title": "Your classroom's experience",
+      "description": "Tell us about your and your students' experience with \"Music Lab: Jam Session\"",
+      "elements": [
+        {
+          "type": "text",
+          "name": "question3",
+          "title": "How many total students did the \"Music Lab: Jam Session\" tutorial with you?",
+          "isRequired": true,
+          "inputType": "number"
+        },
+        {
+          "type": "boolean",
+          "name": "question1",
+          "title": "Did you show the intro video at the front of the class?"
+        },
+        {
+          "type": "rating",
+          "name": "question2",
+          "title": "Overall, how satisfied are you with the \"Music Lab: Jam Session\" tutorial? (5 = Very satisfied, 1 = Very dissatisfied)"
+        },
+        {
+          "type": "radiogroup",
+          "name": "question4",
+          "title": "In general, how interested are your students in pursuing careers in technology?",
+          "choices": [
+            {
+              "value": 5,
+              "text": "Very interested"
+            },
+            {
+              "value": 4,
+              "text": "Interested"
+            },
+            {
+              "value": 3,
+              "text": "Neither interested nor uninterested"
+            },
+            {
+              "value": 2,
+              "text": "Uninterested"
+            },
+            {
+              "value": 1,
+              "text": "Very uninterested"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "question5",
+          "title": "How did the tutorial affect your students’ interests in pursuing careers in technology?",
+          "choices": [
+            {
+              "value": 3,
+              "text": "Increased"
+            },
+            {
+              "value": 2,
+              "text": "No change"
+            },
+            {
+              "value": 1,
+              "text": "Decreased"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "question6",
+          "title": "Do you agree or disagree with the following statement? \"The majority of my students feel like they belong in careers in technology.\"",
+          "choices": [
+            {
+              "value": 5,
+              "text": "Strongly agree"
+            },
+            {
+              "value": 4,
+              "text": "Agree"
+            },
+            {
+              "value": 3,
+              "text": "Neither agree nor disagree"
+            },
+            {
+              "value": 2,
+              "text": "Disagree"
+            },
+            {
+              "value": 1,
+              "text": "Strongly disagree"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "page2",
+      "title": "Your feedback on Music Lab",
+      "description": "Tell us what you think!",
+      "elements": [
+        {
+          "type": "comment",
+          "name": "question8",
+          "title": "What do you like the most about Music Lab?"
+        },
+        {
+          "type": "comment",
+          "name": "question7",
+          "title": "What is the most difficult part(s) about Music Lab? How could we make it easier to use?"
+        }
+      ]
+    },
+    {
+      "name": "page3",
+      "visibleIf": "{usertype} = true and {jam_session_yes_no} = true",
+      "title": "Bonus questions for students (optional)",
+      "description": "How do you feel about careers in technology? Your answers will help us understand how this tutorial helps students like you learn about future possibilities!",
+      "elements": [
+        {
+          "type": "radiogroup",
+          "name": "question9",
+          "title": "How interested are you in pursuing a career in technology?",
+          "choices": [
+            {
+              "value": 5,
+              "text": "Very interested"
+            },
+            {
+              "value": 4,
+              "text": "Interested"
+            },
+            {
+              "value": 3,
+              "text": "Neither interested nor uninterested"
+            },
+            {
+              "value": 2,
+              "text": "Uninterested"
+            },
+            {
+              "value": 1,
+              "text": "Very uninterested"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "question11",
+          "title": "How did this tutorial affect your interest in pursuing a career in technology?",
+          "choices": [
+            {
+              "value": 3,
+              "text": "Increased"
+            },
+            {
+              "value": 2,
+              "text": "No change"
+            },
+            {
+              "value": 1,
+              "text": "Decreased"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "question10",
+          "title": "Do you agree or disagree with the following statement? \"I feel like I belong in a career in technology.\"",
+          "choices": [
+            {
+              "value": 5,
+              "text": "Strongly agree"
+            },
+            {
+              "value": 4,
+              "text": "Agree"
+            },
+            {
+              "value": 3,
+              "text": "Neither agree nor disagree"
+            },
+            {
+              "value": 2,
+              "text": "Disagree"
+            },
+            {
+              "value": 1,
+              "text": "Strongly disagree"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "published": false
+}

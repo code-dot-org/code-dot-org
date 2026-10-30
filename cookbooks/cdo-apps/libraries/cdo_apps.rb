@@ -17,12 +17,21 @@ module CdoApps
     execute "setup-#{app_name}" do
       command "bundle exec rake #{app_name}:setup_db --trace"
       cwd app_root
-      environment env.merge(node['cdo-apps']['bundle_env'])
+      environment env.merge(node['cdo-apps']['bundle_env'], {HOME: "/home/#{user}"})
       live_stream true
       user user
       group user
       timeout 7200 # The default 3600 seconds is often not sufficient when the database is configured as an RDS cluster.
       action :nothing
+    end
+
+    # Create log directory immediately, for the sake of all the resources below
+    # that reference it.
+    log_dir = File.join app_root, 'log'
+    directory log_dir do
+      recursive true
+      user user
+      group user
     end
 
     # Bootstrap `setup_db` on a new system.
@@ -89,13 +98,6 @@ module CdoApps
       notifies :run, "execute[restart #{app_name} service]", :immediately
     end
 
-    log_dir = File.join app_root, 'log'
-    directory log_dir do
-      recursive true
-      user user
-      group user
-    end
-
     template "/etc/logrotate.d/#{app_name}" do
       source 'logrotate.erb'
       user 'root'
@@ -103,17 +105,6 @@ module CdoApps
       mode '0644'
       variables app_name: app_name,
         log_dir: log_dir
-    end
-
-    if node['cdo-newrelic']
-      template "#{app_root}/config/newrelic.yml" do
-        source 'newrelic.yml.erb'
-        user user
-        group user
-        variables app_name: app_name.capitalize,
-          log_dir: log_dir,
-          auto_instrument: false
-      end
     end
   end
 end

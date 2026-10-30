@@ -1,19 +1,48 @@
-@import 'phase1-design-system';
-@import 'color', 'font', 'typography', 'breakpoints',
-  'barlow-semi-condensed-font';
+@import '2022-rebrand-update';
+@import 'color', 'breakpoints';
+@import '@code-dot-org/component-library-styles/font';
+@import '@code-dot-org/component-library-styles/typography.module';
+
+:root {
+  --swiper-pagination-color: var(--background-brand-purple-primary);
+  --swiper-pagination-bullet-size: 1rem;
+  --swiper-pagination-bullet-inactive-color: var(--background-brand-purple-light);
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-pagination-bullet-horizontal-gap: 0.5rem;
+}
 
 .headerContainer {
   margin-top: 50px;
 }
 
-.header {
-  color: $neutral_dark;
+h1.header {
+  color: var(--text-neutral-primary);
+}
+
+.breadcrumbs {
+  margin-block: 10px;
+  width: 100%;
 }
 
 .inputContainer {
-  background-color: $neutral_light;
+  background-color: var(--background-neutral-secondary);
   padding: 15px;
   border-radius: 5px;
+}
+
+.userNameIsRequiredAlert {
+  margin-bottom: 2.5rem;
+
+  & > div > span {
+    width: 100%;
+    min-width: 0;
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      padding-inline-end: 0.625rem;
+    }
+  }
 }
 
 .certificateContainer {
@@ -21,22 +50,41 @@
   width: 100%;
 }
 
-.heading {
+.certificateImageContainer {
+  display: flex;
+  position: relative;
+  width: 55%;
+}
+
+.certificateImage {
+  width: 450px;
+  margin-inline: auto;
+  display: flex;
+}
+
+h1.heading {
   width: 100%;
 }
 
 .container {
-  margin-bottom: 50px;
   float: left;
+  width: 100%;
+
+  // dashboard/app/assets/stylesheets/application.scss paints every <hr> with
+  // the brand teal; these dividers are neutral.
+  hr {
+    border-color: var(--borders-neutral-strong);
+  }
 }
 
-.mobileHeading {
+h1.mobileHeading {
   font-size: 24px;
   line-height: 1.5;
 }
 
 .desktopHalf {
-  width: 50%;
+  width: 53%;
+  height: 100%;
   float: left;
 }
 
@@ -46,28 +94,58 @@
 }
 
 .nameInput {
-  height: 26px !important;
-  border: 1px solid $neutral_dark !important;
   flex: 2;
-}
+  min-width: 0;
 
-.submit {
-  background: $light_secondary_500;
-  color: $neutral_white;
-  font-size: 16px;
-  padding: 8px 20px;
-  margin: 0 5px;
-  height: 38px;
+  input {
+    width: 100%;
+  }
 }
 
 .confetti {
   top: 100px;
 }
-.enterName {
-  font-weight: bold !important;
-  margin: 0 !important;
-}
 
 .inputButtonContainer {
   display: flex;
+  gap: 0.5rem;
+  align-items: flex-end;
+}
+
+.swiperContainer {
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  min-height: 0;
+  min-width: 0;
+}
+
+.navButton {
+  position: absolute;
+  top: 40%;
+  border: 0;
+  height: 48px;
+  z-index: 1;
+
+  &:hover {
+    box-shadow: none;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
+}
+
+.prevElNav {
+  background: url('//studio.code.org/blockly/media/carousel/prev.svg') no-repeat;
+  left: 1rem;
+  border: 0;
+  background-size: contain;
+}
+
+.nextElNav {
+  background: url('//studio.code.org/blockly/media/carousel/next.svg') no-repeat;
+  right: 1rem;
+  background-size: contain;
 }

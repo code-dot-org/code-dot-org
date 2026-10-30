@@ -1,10 +1,19 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {
+  Button as MuiButton,
+  IconButton as MuiIconButton,
+  Typography as MuiTypography,
+} from '@mui/material';
+import classNames from 'classnames';
+import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
-import AssetThumbnail from './AssetThumbnail';
+
 import i18n from '@cdo/locale';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
-import color from '@cdo/apps/util/color';
-import $ from 'jquery';
+
+import AssetThumbnail from './AssetThumbnail';
+
+import rowStyles from './AssetRow.module.scss';
 
 /**
  * A single row in the AssetManager, describing one asset.
@@ -39,19 +48,6 @@ export default class AssetRow extends React.Component {
    */
   confirmDelete = () => {
     this.setState({action: 'confirming delete', actionText: ''});
-    firehoseClient.putRecord({
-      study: 'delete-asset',
-      study_group:
-        this.props.onChoose && typeof this.props.onChoose === 'function'
-          ? 'choose-assets'
-          : 'manage-assets',
-      event: 'initiate',
-      project_id: this.props.projectId,
-      data_json: JSON.stringify({
-        assetName: this.props.name,
-        elementId: this.props.elementId,
-      }),
-    });
   };
 
   /**
@@ -77,17 +73,6 @@ export default class AssetRow extends React.Component {
   };
 
   chooseAsset = () => {
-    if (!this.props.imagePicker) {
-      firehoseClient.putRecord(
-        {
-          study: 'sound-dialog-2',
-          study_group: 'library-tab',
-          event: 'choose-uploaded-sound',
-          data_json: this.props.name,
-        },
-        {includeUserId: true}
-      );
-    }
     this.props.onChoose();
   };
 
@@ -100,13 +85,23 @@ export default class AssetRow extends React.Component {
     // `flex` is the "Choose" button in file-choose mode, or the filesize.
     if (this.props.onChoose) {
       flex = (
-        <button type="button" onClick={this.chooseAsset}>
+        <MuiButton
+          variant="outlined"
+          color="tertiary"
+          size="small"
+          onClick={this.chooseAsset}
+          type="button"
+        >
           {i18n.choose()}
-        </button>
+        </MuiButton>
       );
     } else {
       const size = (this.props.size / 1000).toFixed(2);
-      flex = size + ' kb';
+      flex = (
+        <MuiTypography variant="body2" component="span">
+          {size} kb
+        </MuiTypography>
+      );
     }
 
     let usage = $('#visualization').find(
@@ -117,19 +112,27 @@ export default class AssetRow extends React.Component {
       case 'normal':
         actions = (
           <td width="250" style={{textAlign: 'right'}}>
-            {flex}
-            {!this.props.hideDelete && (
-              <button
-                type="button"
-                className={usage > 0 ? '' : 'btn-danger'}
-                onClick={usage > 0 ? this.attemptBadDelete : this.confirmDelete}
-              >
-                <i className="fa fa-trash-o" />
-              </button>
-            )}
+            <span style={styles.actionGroup}>
+              {flex}
+              {!this.props.hideDelete && (
+                <MuiIconButton
+                  className="uitest-delete-asset"
+                  variant="text"
+                  color={usage > 0 ? 'secondary' : 'error'}
+                  size="medium"
+                  aria-label="Delete file"
+                  onClick={
+                    usage > 0 ? this.attemptBadDelete : this.confirmDelete
+                  }
+                  sx={{marginRight: 1}}
+                >
+                  <FontAwesomeV6Icon iconName="trash-can" iconStyle="regular" />
+                </MuiIconButton>
+              )}
+            </span>
 
             {this.state.attemptedUsedDelete && (
-              <div style={styles.deleteWarning}>
+              <div style={styles.confirmDeleteWarning}>
                 {i18n.cannotDeleteUsedImage()}
               </div>
             )}
@@ -138,18 +141,29 @@ export default class AssetRow extends React.Component {
         break;
       case 'confirming delete':
         actions = (
-          <td width="250" style={{textAlign: 'right'}}>
-            <button
-              type="button"
-              className="btn-danger"
-              onClick={this.handleDelete}
-            >
-              Delete File
-            </button>
-            <button type="button" onClick={this.cancelDelete}>
-              Cancel
-            </button>
-            <div style={styles.deleteWarning}>
+          <td width="250" className={rowStyles.confirmDeleteCell}>
+            <span style={styles.actionGroup}>
+              <MuiButton
+                className="uitest-confirm-delete-asset"
+                variant="contained"
+                color="error"
+                size="small"
+                onClick={this.handleDelete}
+                type="button"
+              >
+                Delete File
+              </MuiButton>
+              <MuiButton
+                variant="outlined"
+                color="secondary"
+                size="small"
+                onClick={this.cancelDelete}
+                type="button"
+              >
+                Cancel
+              </MuiButton>
+            </span>
+            <div style={styles.confirmDeleteWarning}>
               {i18n.confirmDeleteExplanation()}
             </div>
             {this.state.actionText}
@@ -159,8 +173,9 @@ export default class AssetRow extends React.Component {
       case 'deleting':
         actions = (
           <td width="250" style={{textAlign: 'right'}}>
-            <i
-              className="fa fa-spinner fa-spin"
+            <FontAwesomeV6Icon
+              iconName="spinner"
+              animationType="spin"
               style={{
                 fontSize: '32px',
                 marginRight: '15px',
@@ -172,7 +187,10 @@ export default class AssetRow extends React.Component {
     }
 
     return (
-      <tr className="assetRow" onDoubleClick={this.props.onChoose}>
+      <tr
+        className={classNames('assetRow', rowStyles.row)}
+        onDoubleClick={this.props.onChoose}
+      >
         <td width="80">
           <AssetThumbnail
             type={this.props.type}
@@ -183,7 +201,11 @@ export default class AssetRow extends React.Component {
             levelName={this.props.levelName}
           />
         </td>
-        <td>{this.props.name}</td>
+        <td>
+          <MuiTypography variant="body2" component="span">
+            {this.props.name}
+          </MuiTypography>
+        </td>
         {actions}
       </tr>
     );
@@ -191,9 +213,14 @@ export default class AssetRow extends React.Component {
 }
 
 const styles = {
-  deleteWarning: {
-    paddingLeft: '34px',
-    textAlign: 'left',
-    color: color.red,
+  actionGroup: {
+    display: 'inline-flex',
+    alignItems: 'center',
+    gap: 8,
+  },
+  confirmDeleteWarning: {
+    marginTop: 8,
+    textAlign: 'right',
+    color: 'var(--text-error-primary)',
   },
 };

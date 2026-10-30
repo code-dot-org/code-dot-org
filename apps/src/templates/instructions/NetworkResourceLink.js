@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import ResourceLink from './ResourceLink';
+
 import {metaTagDescription} from '../../lib/util/urlHelpers';
+
+import ResourceLink from './ResourceLink';
 
 export default class NetworkResourceLink extends React.Component {
   static propTypes = {

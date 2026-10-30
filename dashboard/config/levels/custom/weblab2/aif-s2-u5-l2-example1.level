@@ -1,0 +1,57 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2025-12-16T15:18:53.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "**Snippet 1: Demonstrating Asynchronous Order (Non-Blocking)**\r\n\r\nThis code uses an arrow function for the event listener and the `setTimeout` callback. The visual output order proves the non-blocking nature.",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "script.js",
+          "language": "js",
+          "contents": "const outputElement = document.getElementById('status-output');\n\nconst logToDOM = (message) => {\n    outputElement.innerHTML += `<p>${message}</p>`;\n};\n\n\ndocument.getElementById('start-button').addEventListener('click', () => {\n    \n    outputElement.innerHTML = '';\n\n    logToDOM(\"1️⃣ Script Started (Synchronous code runs immediately)\");\n    outputElement.style.borderColor = 'orange';\n\n    // The function is DEFERRED and runs LATER (after 2 seconds).\n    setTimeout(() => {\n        logToDOM(\"4️⃣ The 'API Response' has finally arrived! (Asynchronous)\");\n    }, 2000); // 2000ms delay\n\n    // This code runs immediately, before the 2-second timer finishes.\n  \n    logToDOM(\"2️⃣ Code continues running immediately (Non-Blocking).\");\n  \n    logToDOM(\"3️⃣ The browser is free to update the UI and respond to user clicks.\");\n    \n});",
+          "folderId": "0",
+          "active": true
+        },
+        "2": {
+          "id": "2",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n  </head>\n  <body>\n    <div id=\"status-output\" style=\"min-height: 100px; border: 1px solid #ccc; padding: 10px;\">\n    </div>\n    <br/>\n    <button id=\"start-button\"> ▶ Run Code</button>\n    <script src=\"script.js\"></script>\n  </body>\n</html>",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "2",
+        "1"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-12-16T15:18:53.021+00:00\",\"changed\":[\"cloned from \\\"aif-s2-u5-l1-example2\\\"\"],\"cloned_from\":\"aif-s2-u5-l1-example2\"},{\"changed_at\":\"2025-12-16 15:19:37 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-12-16 15:26:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Weblab2>

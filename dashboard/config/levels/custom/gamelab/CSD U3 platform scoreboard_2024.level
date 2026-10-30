@@ -46,14 +46,14 @@
     "name_suffix": "_2024",
     "long_instructions": "# Make the Scoreboard\r\n\r\n<img src=\"https://images.code.org/ea490a1915a70676fd3a783adce93cdd-image-1476142534609.png\" style=\"float:right;\">\r\n\r\nYou'll also need a scoreboard so the player can keep track of the score.   There's already a `showScore` function written, but it only shows the text \"Score\" and not the actual score. ([Show me where](#triggercallout=code_triggered))  You can see an example of a working scoreboard in [Lesson 25 Level 9](../../25/levels/9).\r\n\r\n# Do This\r\n\r\n* Read the code in the `showScore` function.\r\n* Call the function inside the draw loop, right after you draw the backgrounds.\r\n* Use the `text` block to display the score at the top of the screen.",
     "reference_links": [
-      "/courses/csd-2022/guides/booleans-and-comparison-operators",
-      "/courses/csd-2022/guides/if-statements",
-      "/courses/csd-2022/guides/if-else-statements",
-      "/courses/csd-2022/guides/variables",
-      "/courses/csd-2022/guides/naming-variables",
-      "/courses/csd-2022/guides/drawing-shapes",
-      "/courses/csd-2022/guides/shapes-and-parameters",
-      "/courses/csd-2022/guides/functions"
+      "/courses/csd-2024/guides/booleans-and-comparison-operators",
+      "/courses/csd-2024/guides/if-statements",
+      "/courses/csd-2024/guides/if-else-statements",
+      "/courses/csd-2024/guides/variables",
+      "/courses/csd-2024/guides/naming-variables",
+      "/courses/csd-2024/guides/drawing-shapes",
+      "/courses/csd-2024/guides/shapes-and-parameters",
+      "/courses/csd-2024/guides/functions"
     ],
     "mini_rubric": "false",
     "encrypted": "false",

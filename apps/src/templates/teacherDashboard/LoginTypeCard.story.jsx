@@ -1,6 +1,7 @@
-import React from 'react';
-import LoginTypeCard from './LoginTypeCard';
 import {action} from '@storybook/addon-actions';
+import React from 'react';
+
+import LoginTypeCard from './LoginTypeCard';
 
 export default {
   name: 'LoginTypeCard',
@@ -19,7 +20,7 @@ export const WithSubtitle = () => (
 export const WithoutSubtitle = () => (
   <LoginTypeCard
     title="Google Classroom"
-    description="Sync your Code.org section with an existing Google Classroom."
+    description="Sync your CodeAI section with an existing Google Classroom."
     onClick={action('onClick')}
   />
 );

@@ -1,0 +1,10 @@
+name 'programming-fundamentals-lesson3-level3_v2-2025'
+submittable 'false'
+anonymous 'false'
+activity_guide_level 'true'
+
+page
+text 'programming-fundamentals-lesson3-level3-intro_v2-2025'
+level 'programming-fundamentals-lesson3-level3a_v2-2025'
+level 'programming-fundamentals-lesson3-level3b_v2-2025'
+level 'programming-fundamentals-lesson3-level3c_v2-2025'

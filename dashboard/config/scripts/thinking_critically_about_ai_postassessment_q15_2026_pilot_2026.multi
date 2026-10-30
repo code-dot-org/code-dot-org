@@ -1,0 +1,14 @@
+name 'thinking-critically-about-ai-postassessment-q15_2026-pilot_2026'
+
+question 'Looking back at everything you learned in this unit, which statement BEST captures what it means to think critically about AI?'
+
+wrong 'Critical thinking about AI means refusing to use AI tools and warning others about their dangers.'
+wrong 'Critical thinking about AI means using AI as efficiently as possible to complete tasks faster.'
+wrong 'Critical thinking about AI means understanding that AI is always biased and therefore never useful.'
+right 'Critical thinking about AI means understanding how AI systems work, evaluating their outputs carefully, recognizing their limitations and impacts, and making intentional choices about when and how to use them.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lessons 1, 2, 3, 4, 5, 6, 7, 8, 9
+MARKDOWN

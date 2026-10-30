@@ -1,0 +1,14 @@
+{
+  "category_key": "javascript",
+  "content": "# Nested If Statement\n\nA nested `if` statement is an `if` statement inside another conditional. Use a nested `if` statement when your app needs to check one condition first, then check another condition inside that path.",
+  "examples": "[{\"name\":\"Show a Spoiler Message\",\"description\":\"Choose a message based on whether the user finished the movie and whether spoiler tags are turned on.\",\"code\":\"```\\nif (finishedMovie === true) {\\n  if (hasSpoilerTags === true) {\\n    message.textContent = \\\"Spoilers are hidden.\\\";\\n  } else {\\n    message.textContent = \\\"Spoilers are showing.\\\";\\n  }\\n} else {\\n  if (hasSpoilerTags === true) {\\n    message.textContent = \\\"Keep watching. Spoilers are hidden.\\\";\\n  } else {\\n    message.textContent = \\\"Careful! Spoilers may be showing.\\\";\\n  }\\n}\\n```\"}]",
+  "external_documentation": "",
+  "fields": "[]",
+  "key": "nested-if-statement",
+  "name": "Nested If Statement",
+  "syntax": "```\nif (finishedMovie) { \n   if (hasSpoilerTags) { ... } \n   else { ... } \n} \nelse { \n   if (hasSpoilerTags) { ... } \n   else { ... } \n}\n```",
+  "tips": "- Use a nested `if` statement when one condition depends on another condition.\n- Keep each `if` and `else` pair inside curly braces `{ }`.\n- Make sure each opening `{` has a matching closing `}`.\n- Use indentation to make nested conditionals easier to read.\n- In Web Lab, nested `if` statements are often used when an app checks two related choices or states.",
+  "methods": [
+
+  ]
+}

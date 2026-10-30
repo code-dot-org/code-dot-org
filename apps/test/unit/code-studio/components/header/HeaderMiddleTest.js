@@ -1,5 +1,3 @@
-var assert = require('assert');
-
 import HeaderMiddle from '@cdo/apps/code-studio/components/header/HeaderMiddle';
 
 // Disable prettier so that we can indent the parameter name comments consistently.
@@ -19,13 +17,13 @@ describe('HeaderMiddle', () => {
       true    // showFinish
     );
 
-    assert.equal(widths.left, 0);
-    assert.equal(widths.projectInfo, 0);
-    assert.equal(widths.scriptName, 170);
-    assert.equal(widths.progress, 360);
-    assert.equal(widths.popup, 0);
-    assert.equal(widths.finish, 170);
-    assert.equal(widths.showPopupBecauseProgressCropped, false);
+    expect(widths.left).toEqual(0);
+    expect(widths.projectInfo).toEqual(0);
+    expect(widths.scriptName).toEqual(170);
+    expect(widths.progress).toEqual(360);
+    expect(widths.popup).toEqual(0);
+    expect(widths.finish).toEqual(170);
+    expect(widths.showPopupBecauseProgressCropped).toEqual(false);
   });
 
   it('widths for hourof code when narrow', () => {
@@ -41,13 +39,13 @@ describe('HeaderMiddle', () => {
       true    // showFinish
     );
 
-    assert.equal(widths.left, 0);
-    assert.equal(widths.projectInfo, 0);
-    assert.equal(widths.scriptName, 50);
-    assert.equal(widths.progress, 210);
-    assert.equal(widths.popup, 40);
-    assert.equal(widths.finish, 50);
-    assert.equal(widths.showPopupBecauseProgressCropped, true);
+    expect(widths.left).toEqual(0);
+    expect(widths.projectInfo).toEqual(0);
+    expect(widths.scriptName).toEqual(50);
+    expect(widths.progress).toEqual(210);
+    expect(widths.popup).toEqual(40);
+    expect(widths.finish).toEqual(50);
+    expect(widths.showPopupBecauseProgressCropped).toEqual(true);
   });
 
   it('widths for regular level with project info when wide', () => {
@@ -63,13 +61,13 @@ describe('HeaderMiddle', () => {
       false   // showFinish
     );
 
-    assert.equal(widths.left, 0);
-    assert.equal(widths.projectInfo, 200);
-    assert.equal(widths.scriptName, 160);
-    assert.equal(widths.progress, 300);
-    assert.equal(widths.popup, 40);
-    assert.equal(widths.finish, 0);
-    assert.equal(widths.showPopupBecauseProgressCropped, false);
+    expect(widths.left).toEqual(0);
+    expect(widths.projectInfo).toEqual(200);
+    expect(widths.scriptName).toEqual(160);
+    expect(widths.progress).toEqual(300);
+    expect(widths.popup).toEqual(40);
+    expect(widths.finish).toEqual(0);
+    expect(widths.showPopupBecauseProgressCropped).toEqual(false);
   });
 
   it('widths for regular level with project info when narrow', () => {
@@ -85,13 +83,13 @@ describe('HeaderMiddle', () => {
       false   // showFinish
     );
 
-    assert.equal(widths.left, 0);
-    assert.equal(widths.projectInfo, 105);
-    assert.equal(widths.scriptName, 58);
-    assert.equal(widths.progress, 147);
-    assert.equal(widths.popup, 40);
-    assert.equal(widths.finish, 0);
-    assert.equal(widths.showPopupBecauseProgressCropped, false);
+    expect(widths.left).toEqual(0);
+    expect(widths.projectInfo).toEqual(105);
+    expect(widths.scriptName).toEqual(58);
+    expect(widths.progress).toEqual(147);
+    expect(widths.popup).toEqual(40);
+    expect(widths.finish).toEqual(0);
+    expect(widths.showPopupBecauseProgressCropped).toEqual(false);
   });
 
   it('widths for project info only when wide', () => {
@@ -107,11 +105,11 @@ describe('HeaderMiddle', () => {
       false   // showFinish
     );
 
-    assert.equal(widths.projectInfo, 400);
-    assert.equal(widths.scriptName, 0);
-    assert.equal(widths.progress, 0);
-    assert.equal(widths.popup, 0);
-    assert.equal(widths.finish, 0);
+    expect(widths.projectInfo).toEqual(400);
+    expect(widths.scriptName).toEqual(0);
+    expect(widths.progress).toEqual(0);
+    expect(widths.popup).toEqual(0);
+    expect(widths.finish).toEqual(0);
   });
 
   it('widths for project info only when narrow', () => {
@@ -127,11 +125,11 @@ describe('HeaderMiddle', () => {
       false   // showFinish
     );
 
-    assert.equal(widths.projectInfo, 350);
-    assert.equal(widths.scriptName, 0);
-    assert.equal(widths.progress, 0);
-    assert.equal(widths.popup, 0);
-    assert.equal(widths.finish, 0);
+    expect(widths.projectInfo).toEqual(350);
+    expect(widths.scriptName).toEqual(0);
+    expect(widths.progress).toEqual(0);
+    expect(widths.popup).toEqual(0);
+    expect(widths.finish).toEqual(0);
   });
 
   it('widths for script name only when wide', () => {
@@ -147,11 +145,11 @@ describe('HeaderMiddle', () => {
       false   // showFinish
     );
 
-    assert.equal(widths.projectInfo, 0);
-    assert.equal(widths.scriptName, 410);
-    assert.equal(widths.progress, 0);
-    assert.equal(widths.popup, 0);
-    assert.equal(widths.finish, 0);
+    expect(widths.projectInfo).toEqual(0);
+    expect(widths.scriptName).toEqual(410);
+    expect(widths.progress).toEqual(0);
+    expect(widths.popup).toEqual(0);
+    expect(widths.finish).toEqual(0);
   });
 
   it('widths for script name only when narrow', () => {
@@ -167,10 +165,10 @@ describe('HeaderMiddle', () => {
       false   // showFinish
     );
 
-    assert.equal(widths.projectInfo, 0);
-    assert.equal(widths.scriptName, 350);
-    assert.equal(widths.progress, 0);
-    assert.equal(widths.popup, 0);
-    assert.equal(widths.finish, 0);
+    expect(widths.projectInfo).toEqual(0);
+    expect(widths.scriptName).toEqual(350);
+    expect(widths.progress).toEqual(0);
+    expect(widths.popup).toEqual(0);
+    expect(widths.finish).toEqual(0);
   });
 });

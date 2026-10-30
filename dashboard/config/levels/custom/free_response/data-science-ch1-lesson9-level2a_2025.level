@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-03-21T21:34:27.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Dataset 1: Frequency of Messiness Rating (0-10) Over 8 Weeks\r\n\r\nThis dataset recorded how messy Micah's room was each week over an 8-week period on a scale of 0-10 (0 being not messy at all and 10 being extremely messy).\r\n\r\n**Do This:**\r\n\r\n1. Click on the link below to open up the dataset.\r\n2. Follow the instructions in your activity guide.\r\n3. Discuss and answer the questions in your activity guide with your partner.\r\n\r\n[Dataset #1](https://docs.google.com/spreadsheets/d/16YrCGIOpZYr7vb77VoZLpwXvYG65tLRLkdnLPORy244/edit?usp=drive_link)\r\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "display_name": "Dataset #1",
+    "bubble_choice_description": "How messy was Micah's room over an 8-week period?",
+    "thumbnail_url": "https://images.code.org/65ee26dc76978ebe1fab3dcc0fcab1e1-number-1.png",
+    "name_suffix": "_2025",
+    "stay_on_level_after_submit": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-21T21:34:27.375+00:00\",\"changed\":[\"cloned from \\\"data-science-ch1-lesson9-level2a\\\"\"],\"cloned_from\":\"data-science-ch1-lesson9-level2a\"},{\"changed_at\":\"2025-04-16 21:35:47 +0000\",\"changed\":[\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 21:37:12 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 21:39:10 +0000\",\"changed\":[\"title\",\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 21:52:16 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

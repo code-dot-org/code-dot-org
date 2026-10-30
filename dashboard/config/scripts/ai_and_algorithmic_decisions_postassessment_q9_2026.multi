@@ -1,0 +1,14 @@
+name 'ai-and-algorithmic-decisions-postassessment-q9_2026'
+
+question 'A weather app needs to show the forecast for any city the user types in. The developer writes `getForecast(city)` so the same function works for "Austin," "Boise," or anywhere else. What is `city` in this function?'
+
+wrong 'A condition that must be true for the function to run.'
+wrong 'A separate event handler.'
+right 'A parameter — a named input that gets replaced with the actual city the user types when the function is called.'
+wrong 'A loop that runs until the forecast loads.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 6
+MARKDOWN

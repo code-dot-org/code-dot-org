@@ -1,0 +1,1443 @@
+{
+  "script": {
+    "name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "content_area": "self_paced_pl_9_12",
+      "curriculum_umbrella": "Self-paced PL - AIF",
+      "is_migrated": true,
+      "topic_tags": [
+        "ai"
+      ]
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2026-07-29 14:57:48 UTC",
+    "hide_within_course": false,
+    "published_state": "in_development",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Teaching Insights from Data and AI",
+      "name": "Teaching Insights from Data and AI",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "b0a87d27-0925-4aac-847d-10348040fe4b",
+      "position": 1,
+      "properties": {
+        "duration": 60
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b0a87d27-0925-4aac-847d-10348040fe4b",
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "81046b05-b763-407a-ab4b-27d5f8e9e8ed",
+      "position": 1,
+      "properties": {
+        "progression_name": "Introduction"
+      },
+      "seeding_key": {
+        "activity_section.key": "81046b05-b763-407a-ab4b-27d5f8e9e8ed",
+        "lesson_activity.key": "b0a87d27-0925-4aac-847d-10348040fe4b"
+      }
+    },
+    {
+      "key": "adf46394-3f41-44fd-960f-5d8fdcacf5ff",
+      "position": 2,
+      "properties": {
+        "progression_name": "Introduction to Data Science"
+      },
+      "seeding_key": {
+        "activity_section.key": "adf46394-3f41-44fd-960f-5d8fdcacf5ff",
+        "lesson_activity.key": "b0a87d27-0925-4aac-847d-10348040fe4b"
+      }
+    },
+    {
+      "key": "8955bed9-52e3-4895-be4f-0a898fe77fac",
+      "position": 3,
+      "properties": {
+        "progression_name": "Data Collection, Questions and Stories"
+      },
+      "seeding_key": {
+        "activity_section.key": "8955bed9-52e3-4895-be4f-0a898fe77fac",
+        "lesson_activity.key": "b0a87d27-0925-4aac-847d-10348040fe4b"
+      }
+    },
+    {
+      "key": "bc0c3d14-72c3-4057-8222-aeea1052d3d6",
+      "position": 4,
+      "properties": {
+        "progression_name": "Data Visualizations"
+      },
+      "seeding_key": {
+        "activity_section.key": "bc0c3d14-72c3-4057-8222-aeea1052d3d6",
+        "lesson_activity.key": "b0a87d27-0925-4aac-847d-10348040fe4b"
+      }
+    },
+    {
+      "key": "aae99739-e15a-4974-84b0-3cdcfdd4e3b3",
+      "position": 5,
+      "properties": {
+        "progression_name": "Cleaning and Interpreting Data"
+      },
+      "seeding_key": {
+        "activity_section.key": "aae99739-e15a-4974-84b0-3cdcfdd4e3b3",
+        "lesson_activity.key": "b0a87d27-0925-4aac-847d-10348040fe4b"
+      }
+    },
+    {
+      "key": "df435349-7ee8-4611-8a2a-f01968caf1a9",
+      "position": 6,
+      "properties": {
+        "progression_name": "Final Project and Wrap-Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "df435349-7ee8-4611-8a2a-f01968caf1a9",
+        "lesson_activity.key": "b0a87d27-0925-4aac-847d-10348040fe4b"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_06_00-new_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "81046b05-b763-407a-ab4b-27d5f8e9e8ed"
+      },
+      "level_keys": [
+        "csaif_pl_ai_06_00-new_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_06_02-new_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "81046b05-b763-407a-ab4b-27d5f8e9e8ed"
+      },
+      "level_keys": [
+        "csaif_pl_ai_06_02-new_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-DS_is_everywher_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "81046b05-b763-407a-ab4b-27d5f8e9e8ed"
+      },
+      "level_keys": [
+        "sp-pl-DS_is_everywher_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-DS-chk_DSisNot_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "81046b05-b763-407a-ab4b-27d5f8e9e8ed"
+      },
+      "level_keys": [
+        "sp-pl-DS-chk_DSisNot_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-DS_chk_answers_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "81046b05-b763-407a-ab4b-27d5f8e9e8ed"
+      },
+      "level_keys": [
+        "sp-pl-DS_chk_answers_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Data Science"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-DS_Undestanding_Data_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "adf46394-3f41-44fd-960f-5d8fdcacf5ff"
+      },
+      "level_keys": [
+        "sp-pl-DS_Undestanding_Data_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Data Science"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-DS_L1andL2_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "adf46394-3f41-44fd-960f-5d8fdcacf5ff"
+      },
+      "level_keys": [
+        "sp-pl-DS_L1andL2_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Data Science"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-DS-SpreadsheetVocab_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "adf46394-3f41-44fd-960f-5d8fdcacf5ff"
+      },
+      "level_keys": [
+        "sp-pl-DS-SpreadsheetVocab_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Data Science"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-data-science-ch1-lesson2-level1_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "adf46394-3f41-44fd-960f-5d8fdcacf5ff"
+      },
+      "level_keys": [
+        "sp-pl-data-science-ch1-lesson2-level1_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Data Science"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-DS_ThreeReadsexlemplar_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "adf46394-3f41-44fd-960f-5d8fdcacf5ff"
+      },
+      "level_keys": [
+        "sp-pl-DS_ThreeReadsexlemplar_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Data Science"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-DS_ThreeReadsexlemplar2_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "adf46394-3f41-44fd-960f-5d8fdcacf5ff"
+      },
+      "level_keys": [
+        "sp-pl-DS_ThreeReadsexlemplar2_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Data Science"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-DS-teacher-lesson2_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "adf46394-3f41-44fd-960f-5d8fdcacf5ff"
+      },
+      "level_keys": [
+        "sp-pl-DS-teacher-lesson2_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 13,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Data Science"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-PL-data_science_lesson2_ai_chat_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "adf46394-3f41-44fd-960f-5d8fdcacf5ff"
+      },
+      "level_keys": [
+        "aif-PL-data_science_lesson2_ai_chat_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 14,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Data Science"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif_pl_AI_chatbot_debrief_L12-2-data-science_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "adf46394-3f41-44fd-960f-5d8fdcacf5ff"
+      },
+      "level_keys": [
+        "aif_pl_AI_chatbot_debrief_L12-2-data-science_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 15,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Data Collection, Questions and Stories"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-DS_L3andL4_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "8955bed9-52e3-4895-be4f-0a898fe77fac"
+      },
+      "level_keys": [
+        "sp-pl-DS_L3andL4_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 16,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Data Collection, Questions and Stories"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-DS-Ethical-Data-Collection_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "8955bed9-52e3-4895-be4f-0a898fe77fac"
+      },
+      "level_keys": [
+        "sp-pl-DS-Ethical-Data-Collection_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 17,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Data Collection, Questions and Stories"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-DS_L5andL6_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "8955bed9-52e3-4895-be4f-0a898fe77fac"
+      },
+      "level_keys": [
+        "sp-pl-DS_L5andL6_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 18,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Data Collection, Questions and Stories"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-DS-datastory-L7_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "8955bed9-52e3-4895-be4f-0a898fe77fac"
+      },
+      "level_keys": [
+        "sp-pl-DS-datastory-L7_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 19,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Data Collection, Questions and Stories"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-DS-chk-dataStory-Vocab_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "8955bed9-52e3-4895-be4f-0a898fe77fac"
+      },
+      "level_keys": [
+        "sp-pl-DS-chk-dataStory-Vocab_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 20,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Data Visualizations"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-DS_L7_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "bc0c3d14-72c3-4057-8222-aeea1052d3d6"
+      },
+      "level_keys": [
+        "sp-pl-DS_L7_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 21,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Data Visualizations"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-pl-barchartPanel-L3-DS_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "bc0c3d14-72c3-4057-8222-aeea1052d3d6"
+      },
+      "level_keys": [
+        "aif-pl-barchartPanel-L3-DS_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 22,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Data Visualizations"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-pl-piechartPanel-L4-DS_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "bc0c3d14-72c3-4057-8222-aeea1052d3d6"
+      },
+      "level_keys": [
+        "aif-pl-piechartPanel-L4-DS_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 23,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Data Visualizations"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-pl-editchartPanel-L5-DS_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "bc0c3d14-72c3-4057-8222-aeea1052d3d6"
+      },
+      "level_keys": [
+        "aif-pl-editchartPanel-L5-DS_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 24,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Data Visualizations"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-pl-donutchartPanel-L6-DS_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "bc0c3d14-72c3-4057-8222-aeea1052d3d6"
+      },
+      "level_keys": [
+        "aif-pl-donutchartPanel-L6-DS_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 25,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Data Visualizations"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-DS-DotPlots_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "bc0c3d14-72c3-4057-8222-aeea1052d3d6"
+      },
+      "level_keys": [
+        "sp-pl-DS-DotPlots_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 26,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Data Visualizations"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-PL-sortData-panel-L30-DS_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "bc0c3d14-72c3-4057-8222-aeea1052d3d6"
+      },
+      "level_keys": [
+        "aif-PL-sortData-panel-L30-DS_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 27,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "progression": "Data Visualizations"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-PL-filtering-data-L31-DS_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "bc0c3d14-72c3-4057-8222-aeea1052d3d6"
+      },
+      "level_keys": [
+        "aif-PL-filtering-data-L31-DS_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 28,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+        "progression": "Data Visualizations"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-PL-applyingFilters-L32-DS_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "bc0c3d14-72c3-4057-8222-aeea1052d3d6"
+      },
+      "level_keys": [
+        "aif-PL-applyingFilters-L32-DS_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 29,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Cleaning and Interpreting Data"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-DS_L8andL9_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "aae99739-e15a-4974-84b0-3cdcfdd4e3b3"
+      },
+      "level_keys": [
+        "sp-pl-DS_L8andL9_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 30,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Cleaning and Interpreting Data"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-DS-cleaningData_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "aae99739-e15a-4974-84b0-3cdcfdd4e3b3"
+      },
+      "level_keys": [
+        "sp-pl-DS-cleaningData_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 31,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Cleaning and Interpreting Data"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-DS-PizzaChoice_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "aae99739-e15a-4974-84b0-3cdcfdd4e3b3"
+      },
+      "level_keys": [
+        "sp-pl-DS-PizzaChoice_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 32,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Cleaning and Interpreting Data"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-DS-teacher-discuss-ethcialFramework_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "aae99739-e15a-4974-84b0-3cdcfdd4e3b3"
+      },
+      "level_keys": [
+        "sp-pl-DS-teacher-discuss-ethcialFramework_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 33,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Cleaning and Interpreting Data"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-DS-chkCodap_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "aae99739-e15a-4974-84b0-3cdcfdd4e3b3"
+      },
+      "level_keys": [
+        "sp-pl-DS-chkCodap_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 34,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Final Project and Wrap-Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-DS_L11_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "df435349-7ee8-4611-8a2a-f01968caf1a9"
+      },
+      "level_keys": [
+        "sp-pl-DS_L11_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 35,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Final Project and Wrap-Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-DS_L11B_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "df435349-7ee8-4611-8a2a-f01968caf1a9"
+      },
+      "level_keys": [
+        "sp-pl-DS_L11B_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 36,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Final Project and Wrap-Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-DS-teacherEnd_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "df435349-7ee8-4611-8a2a-f01968caf1a9"
+      },
+      "level_keys": [
+        "sp-pl-DS-teacherEnd_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 37,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Final Project and Wrap-Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-sandbox-aif6-01-Closing_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "df435349-7ee8-4611-8a2a-f01968caf1a9"
+      },
+      "level_keys": [
+        "pl-sandbox-aif6-01-Closing_v2_2026-dev"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_06_00-new_v2_2026-dev",
+        "script_level.level_keys": [
+          "csaif_pl_ai_06_00-new_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "81046b05-b763-407a-ab4b-27d5f8e9e8ed"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_06_02-new_v2_2026-dev",
+        "script_level.level_keys": [
+          "csaif_pl_ai_06_02-new_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "81046b05-b763-407a-ab4b-27d5f8e9e8ed"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-DS_is_everywher_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "sp-pl-DS_is_everywher_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "81046b05-b763-407a-ab4b-27d5f8e9e8ed"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-DS-chk_DSisNot_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "sp-pl-DS-chk_DSisNot_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "81046b05-b763-407a-ab4b-27d5f8e9e8ed"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-DS_chk_answers_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "sp-pl-DS_chk_answers_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "81046b05-b763-407a-ab4b-27d5f8e9e8ed"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-DS_Undestanding_Data_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "sp-pl-DS_Undestanding_Data_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "adf46394-3f41-44fd-960f-5d8fdcacf5ff"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-DS_L1andL2_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "sp-pl-DS_L1andL2_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "adf46394-3f41-44fd-960f-5d8fdcacf5ff"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-DS-SpreadsheetVocab_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "sp-pl-DS-SpreadsheetVocab_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "adf46394-3f41-44fd-960f-5d8fdcacf5ff"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-data-science-ch1-lesson2-level1_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "sp-pl-data-science-ch1-lesson2-level1_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "adf46394-3f41-44fd-960f-5d8fdcacf5ff"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-DS_ThreeReadsexlemplar_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "sp-pl-DS_ThreeReadsexlemplar_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "adf46394-3f41-44fd-960f-5d8fdcacf5ff"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-DS_ThreeReadsexlemplar2_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "sp-pl-DS_ThreeReadsexlemplar2_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "adf46394-3f41-44fd-960f-5d8fdcacf5ff"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-DS-teacher-lesson2_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "sp-pl-DS-teacher-lesson2_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "adf46394-3f41-44fd-960f-5d8fdcacf5ff"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-PL-data_science_lesson2_ai_chat_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "aif-PL-data_science_lesson2_ai_chat_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "adf46394-3f41-44fd-960f-5d8fdcacf5ff"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif_pl_AI_chatbot_debrief_L12-2-data-science_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "aif_pl_AI_chatbot_debrief_L12-2-data-science_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "adf46394-3f41-44fd-960f-5d8fdcacf5ff"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-DS_L3andL4_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "sp-pl-DS_L3andL4_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "8955bed9-52e3-4895-be4f-0a898fe77fac"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-DS-Ethical-Data-Collection_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "sp-pl-DS-Ethical-Data-Collection_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "8955bed9-52e3-4895-be4f-0a898fe77fac"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-DS_L5andL6_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "sp-pl-DS_L5andL6_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "8955bed9-52e3-4895-be4f-0a898fe77fac"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-DS-datastory-L7_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "sp-pl-DS-datastory-L7_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "8955bed9-52e3-4895-be4f-0a898fe77fac"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-DS-chk-dataStory-Vocab_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "sp-pl-DS-chk-dataStory-Vocab_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "8955bed9-52e3-4895-be4f-0a898fe77fac"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-DS_L7_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "sp-pl-DS_L7_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "bc0c3d14-72c3-4057-8222-aeea1052d3d6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-pl-barchartPanel-L3-DS_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "aif-pl-barchartPanel-L3-DS_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "bc0c3d14-72c3-4057-8222-aeea1052d3d6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-pl-piechartPanel-L4-DS_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "aif-pl-piechartPanel-L4-DS_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "bc0c3d14-72c3-4057-8222-aeea1052d3d6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-pl-editchartPanel-L5-DS_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "aif-pl-editchartPanel-L5-DS_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "bc0c3d14-72c3-4057-8222-aeea1052d3d6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-pl-donutchartPanel-L6-DS_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "aif-pl-donutchartPanel-L6-DS_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "bc0c3d14-72c3-4057-8222-aeea1052d3d6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-DS-DotPlots_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "sp-pl-DS-DotPlots_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "bc0c3d14-72c3-4057-8222-aeea1052d3d6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-PL-sortData-panel-L30-DS_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "aif-PL-sortData-panel-L30-DS_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "bc0c3d14-72c3-4057-8222-aeea1052d3d6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-PL-filtering-data-L31-DS_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "aif-PL-filtering-data-L31-DS_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "bc0c3d14-72c3-4057-8222-aeea1052d3d6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-PL-applyingFilters-L32-DS_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "aif-PL-applyingFilters-L32-DS_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "bc0c3d14-72c3-4057-8222-aeea1052d3d6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-DS_L8andL9_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "sp-pl-DS_L8andL9_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "aae99739-e15a-4974-84b0-3cdcfdd4e3b3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-DS-cleaningData_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "sp-pl-DS-cleaningData_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "aae99739-e15a-4974-84b0-3cdcfdd4e3b3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-DS-PizzaChoice_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "sp-pl-DS-PizzaChoice_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "aae99739-e15a-4974-84b0-3cdcfdd4e3b3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-DS-teacher-discuss-ethcialFramework_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "sp-pl-DS-teacher-discuss-ethcialFramework_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "aae99739-e15a-4974-84b0-3cdcfdd4e3b3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-DS-chkCodap_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "sp-pl-DS-chkCodap_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "aae99739-e15a-4974-84b0-3cdcfdd4e3b3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-DS_L11_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "sp-pl-DS_L11_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "df435349-7ee8-4611-8a2a-f01968caf1a9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-DS_L11B_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "sp-pl-DS_L11B_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "df435349-7ee8-4611-8a2a-f01968caf1a9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-DS-teacherEnd_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "sp-pl-DS-teacherEnd_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "df435349-7ee8-4611-8a2a-f01968caf1a9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-sandbox-aif6-01-Closing_v2_2026-dev",
+        "script_level.level_keys": [
+          "pl-sandbox-aif6-01-Closing_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Insights from Data and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev",
+        "activity_section.key": "df435349-7ee8-4611-8a2a-f01968caf1a9"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

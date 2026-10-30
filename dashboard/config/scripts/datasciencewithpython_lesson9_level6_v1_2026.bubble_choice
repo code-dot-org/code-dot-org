@@ -1,0 +1,10 @@
+name 'datasciencewithpython-lesson9-level6-v1-2026'
+display_name 'Practice Creating Visualizations'
+description 'Choose one of the options below based on which type of chart you want more practice with!'
+
+sublevels
+level 'datasciencewithpython-lesson9-level6a-v1-2026'
+level 'datasciencewithpython-lesson9-level6b-v1-2026'
+level 'datasciencewithpython-lesson9-level6c-v1-2026'
+
+uses_lab2

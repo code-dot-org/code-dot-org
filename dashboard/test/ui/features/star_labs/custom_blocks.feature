@@ -1,5 +1,5 @@
 @chrome
-Feature: Google Blockly Custom Blocks
+Feature: Blockly Custom Blocks
 
 Background:
   Given I create a levelbuilder named "Simone"

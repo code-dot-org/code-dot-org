@@ -1,0 +1,31 @@
+name 'pl_sandbox_embed-flowchart-drag'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+This widget was created for Unit 3 to help teachers see where the code connects to the flowchart. It would be used after creating a flowchart in sketch lab but before working with code in web lab.  
+
+
+<div style="width:100%; max-width:700px; margin:0 auto; border-radius:16px; overflow:hidden; box-shadow:0 4px 24px rgba(108,99,255,0.15);">
+  <iframe 
+    src="https://amandadennard-dotcom.github.io/Flowchart-dragdrop-iframe/flowchart_dragdrop_iframe.html"
+    width="100%"
+    height="780"
+    frameborder="0"
+    allow="pointer-events">
+  </iframe>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+MARKDOWN

@@ -1,0 +1,40 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-09-25T20:08:22.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "true",
+    "panels": [
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/aec764deed670c5661f986275d6894d9-title_card_2.png",
+        "key": "data-science-lesson7-panel5-2025-launch-80ee1552-7589-4722-bcad-747eef7fc7c9"
+      },
+      {
+        "text": "### Filter by Values\n- Click the *filter icon* at the top of the column\n- Under the **Filter by values** dropdown, select **Clear**\n- Select the value(s) that you want to display. Press **OK**",
+        "imageUrl": "https://images.code.org/076a1f3ee7e374feda241a10310c7298-L7P6-2-ezgif.com-optimize.gif",
+        "key": "data-science-lesson7-panel5-2025-launch-109d0466-9ca3-4cc7-86b0-0af49c80e409",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "### Filter by Condition\n- Click the *filter icon* at the top of the column\n- Under the **Filter by condition** dropdown, select an option\n- Try filtering by using the **Text contains** property",
+        "imageUrl": "https://images.code.org/27021c7df2d03bb404af033763a90758-L7P6-3-ezgif.com-optimize.gif",
+        "key": "data-science-lesson7-panel5-2025-launch-0c6eb66a-db23-45b0-ad6c-e7dced4eae49",
+        "layout": "text-top-right"
+      },
+      {
+        "text": "There are many ways to filter your data!\n\nWhat can *you* discover?",
+        "imageUrl": "https://images.code.org/46cf3e2e4249b13918734d70e7aeb54d-image_3.png",
+        "key": "data-science-lesson7-panel6-2025-launch-7e911894-8345-4cdc-9d11-70042bd0e2d2",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T20:08:22.626+00:00\",\"changed\":[\"cloned from \\\"data-science-lesson7-panel6-2025-launch_2025\\\"\"],\"cloned_from\":\"data-science-lesson7-panel6-2025-launch_2025\"}]"
+}]]></config>
+</Panels>

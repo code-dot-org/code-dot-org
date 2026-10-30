@@ -1,23 +1,42 @@
-import React from 'react';
+import {Markdown} from '@code-dot-org/markdown';
+import {Typography} from '@mui/material';
+import path from 'path';
 import PropTypes from 'prop-types';
+import React from 'react';
 import {connect} from 'react-redux';
-import i18n from '@cdo/locale';
-import color from '@cdo/apps/util/color';
+
+import {LmsLoginTypeNames} from '@cdo/apps/accounts/constants';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import fontConstants from '@cdo/apps/fontConstants';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import DemoSectionTooltip from '@cdo/apps/templates/DemoSectionTooltip';
 import {PrintLoginCardsButtonMetricsCategory} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import PrintLoginCards from '@cdo/apps/templates/manageStudents/PrintLoginCards';
-import SignInInstructions from '@cdo/apps/templates/teacherDashboard/SignInInstructions';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import SignInInstructions from '@cdo/apps/templates/teacherDashboard/SignInInstructions';
+import {
+  isDemoSection as isDemoSectionSelector,
+  sectionCode as sectionCodeSelector,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
+import i18n from '@cdo/locale';
+
 import oauthSignInButtons from '../../../static/teacherDashboard/oauthSignInButtons.png';
-import syncGoogleClassroom from '../../../static/teacherDashboard/syncGoogleClassroom.png';
 import syncClever from '../../../static/teacherDashboard/syncClever.png';
-import {queryParams} from '@cdo/apps/code-studio/utils';
+import syncGoogleClassroom from '../../../static/teacherDashboard/syncGoogleClassroom.png';
+
+import moduleStyles from './sectionLoginInfo.module.scss';
 
 const getManageStudentsUrl = sectionId => {
   return `/teacher_dashboard/sections/${sectionId}/manage_students`;
 };
+
+const Heading = ({children}) => (
+  <Typography variant="h6" component="h2" className={moduleStyles.heading}>
+    {children}
+  </Typography>
+);
+
+Heading.propTypes = {children: PropTypes.node};
 
 /**
  * Rendered from the /login_info route in teacher dashboard.
@@ -27,18 +46,23 @@ const getManageStudentsUrl = sectionId => {
 class SectionLoginInfo extends React.Component {
   static propTypes = {
     studioUrlPrefix: PropTypes.string.isRequired,
+    sectionProviderName: PropTypes.string,
 
     // Provided by redux.
     section: PropTypes.shape({
       id: PropTypes.number.isRequired,
-      loginType: PropTypes.string.isRequired,
+      loginType: PropTypes.string,
       code: PropTypes.string,
     }).isRequired,
     students: PropTypes.array.isRequired,
+    isDemoSection: PropTypes.bool,
+    // From the sectionCode selector, which substitutes the demo placeholder
+    // for demo sections so null never reaches rendered strings.
+    sectionCode: PropTypes.string,
   };
 
   render() {
-    const {studioUrlPrefix, section} = this.props;
+    const {studioUrlPrefix, section, isDemoSection, sectionCode} = this.props;
     const singleStudentId = queryParams('studentId');
     const autoPrint = !!singleStudentId || !!queryParams('autoPrint');
     const students = singleStudentId
@@ -48,31 +72,44 @@ class SectionLoginInfo extends React.Component {
       : this.props.students;
 
     return (
-      <div>
+      <div id="ui-test-section-login-info">
         {[SectionLoginType.word, SectionLoginType.picture].includes(
           section.loginType
         ) && (
           <WordOrPictureLogins
             studioUrlPrefix={studioUrlPrefix}
             section={section}
+            sectionCode={sectionCode}
             students={students}
             autoPrint={autoPrint}
+            isDemoSection={isDemoSection}
             loginType={section.loginType}
           />
         )}
-        {section.loginType === SectionLoginType.email && (
+        {section.loginType === SectionLoginType.email && !isDemoSection && (
           <EmailLogins
             studioUrlPrefix={studioUrlPrefix}
-            sectionCode={section.code}
+            sectionCode={sectionCode}
             sectionId={section.id}
           />
         )}
-        {[SectionLoginType.google_classroom, SectionLoginType.clever].includes(
-          section.loginType
-        ) && (
+        {section.loginType === SectionLoginType.email && isDemoSection && (
+          <p>
+            {'This demo section comes with pre-enrolled demo students, so ' +
+              'there is no sign-in or join information to share. Students ' +
+              'cannot join a demo section.'}
+          </p>
+        )}
+        {[
+          SectionLoginType.google_classroom,
+          SectionLoginType.clever,
+          SectionLoginType.classlink,
+        ].includes(section.loginType) && (
           <OAuthLogins sectionId={section.id} loginType={section.loginType} />
         )}
-        {section.loginType === SectionLoginType.lti_v1 && <LtiLogins />}
+        {section.loginType === SectionLoginType.lti_v1 && (
+          <LtiLogins sectionProviderName={this.props.sectionProviderName} />
+        )}
       </div>
     );
   }
@@ -80,19 +117,40 @@ class SectionLoginInfo extends React.Component {
 
 export const UnconnectedSectionLoginInfo = SectionLoginInfo;
 
-export default connect(state => ({
-  section:
-    state.teacherSections.sections[state.teacherSections.selectedSectionId],
-  students: state.teacherSections.selectedStudents,
-}))(SectionLoginInfo);
+export default connect(state => {
+  const selectedSectionId = state.teacherSections.selectedSectionId;
+  return {
+    section: state.teacherSections.sections[selectedSectionId],
+    students: state.teacherSections.selectedStudents,
+    isDemoSection: isDemoSectionSelector(state, selectedSectionId),
+    sectionCode: sectionCodeSelector(state, selectedSectionId),
+  };
+})(SectionLoginInfo);
 
-class LtiLogins extends React.Component {
+export class LtiLogins extends React.Component {
+  static propTypes = {
+    sectionProviderName: PropTypes.string,
+  };
   render() {
     return (
       <div>
-        <h2 style={styles.heading}>{i18n.loginInfoLtiSetupHeader()}</h2>
-        <SafeMarkdown markdown={i18n.loginInfoLtiSetupBody()} />
-        <SignInInstructions loginType={SectionLoginType.lti_v1} />
+        <Heading>{i18n.loginInfoLtiSetupHeader()}</Heading>
+        <Markdown
+          content={i18n.loginInfoLtiSetupBody({
+            providerName: this.props.sectionProviderName,
+          })}
+        />
+        <Heading>{i18n.loginInfoLtiUpdateHeader()}</Heading>
+        <Markdown
+          content={i18n.loginInfoLtiUpdateBody({
+            providerName: this.props.sectionProviderName,
+          })}
+        />
+        <SignInInstructions
+          loginType={SectionLoginType.lti_v1}
+          sectionProviderName={this.props.sectionProviderName}
+          headingLevel="h3"
+        />
       </div>
     );
   }
@@ -104,12 +162,15 @@ class OAuthLogins extends React.Component {
     loginType: PropTypes.oneOf([
       SectionLoginType.google_classroom,
       SectionLoginType.clever,
+      SectionLoginType.classlink,
     ]).isRequired,
   };
 
   render() {
     const {sectionId, loginType} = this.props;
     let loginTypeLabel = '';
+    // ClassLink has no sync screenshot yet (capture one from a local
+    // ClassLink section's Manage Students tab); the image is optional.
     let syncSectionImgSrc = '';
     if (loginType === SectionLoginType.google_classroom) {
       loginTypeLabel = i18n.loginTypeGoogleClassroom();
@@ -117,13 +178,14 @@ class OAuthLogins extends React.Component {
     } else if (loginType === SectionLoginType.clever) {
       loginTypeLabel = i18n.loginTypeClever();
       syncSectionImgSrc = syncClever;
+    } else if (loginType === SectionLoginType.classlink) {
+      loginTypeLabel = LmsLoginTypeNames.classlink;
     }
 
     return (
       <div>
         <SignInInstructions loginType={loginType} />
-        <br />
-        <h2 style={styles.heading}>{i18n.syncingYourStudents()}</h2>
+        <Heading>{i18n.syncingYourStudents()}</Heading>
         <div>
           <SafeMarkdown
             markdown={i18n.syncingYourStudentsDescription({
@@ -132,11 +194,13 @@ class OAuthLogins extends React.Component {
             })}
           />
           <br />
-          <img
-            src={syncSectionImgSrc}
-            style={{maxWidth: '50%'}}
-            alt={i18n.syncingYourStudents()}
-          />
+          {syncSectionImgSrc && (
+            <img
+              src={syncSectionImgSrc}
+              style={{maxWidth: '50%'}}
+              alt={i18n.syncingYourStudents()}
+            />
+          )}
         </div>
       </div>
     );
@@ -155,12 +219,12 @@ class EmailLogins extends React.Component {
 
     return (
       <div>
-        <h2 style={styles.heading}>{i18n.loginInfo_joinTitle()}</h2>
+        <Heading>{i18n.loginInfo_joinTitle()}</Heading>
         <p>{i18n.loginInfo_joinBody()}</p>
         <ol>
           <li>
             {i18n.loginInfo_joinStep1({
-              url: `${studioUrlPrefix}/users/sign_up`,
+              url: `${studioUrlPrefix}/users/sign_up/account_type`,
             })}
             <br />
             <img
@@ -170,17 +234,21 @@ class EmailLogins extends React.Component {
           </li>
           <li>{i18n.loginInfo_joinStep2()}</li>
           <li>
-            {i18n.loginInfo_joinStep3({
-              url: `${studioUrlPrefix}/join`,
-              code: sectionCode,
-            })}
+            <SafeMarkdown
+              markdown={i18n.loginInfo_join_navigateToLink({
+                url: new URL(path.join('/join', sectionCode), studioUrlPrefix)
+                  .href,
+              })}
+            />
           </li>
           <li>{i18n.loginInfo_joinStep4()}</li>
         </ol>
         <br />
-        <SignInInstructions loginType={SectionLoginType.email} />
-        <br />
-        <h2 style={styles.heading}>{i18n.loginInfo_resetTitle()}</h2>
+        <SignInInstructions
+          loginType={SectionLoginType.email}
+          headingLevel="h3"
+        />
+        <Heading>{i18n.loginInfo_resetTitle()}</Heading>
         <SafeMarkdown
           markdown={i18n.loginInfo_resetPasswordBody({
             url: getManageStudentsUrl(sectionId),
@@ -195,19 +263,30 @@ class WordOrPictureLogins extends React.Component {
   static propTypes = {
     studioUrlPrefix: PropTypes.string.isRequired,
     section: PropTypes.object.isRequired,
+    // Safe section code to display — caller substitutes the placeholder for
+    // demo sections so null never reaches rendered strings.
+    sectionCode: PropTypes.string,
     students: PropTypes.array.isRequired,
     autoPrint: PropTypes.bool,
+    isDemoSection: PropTypes.bool,
   };
 
   componentDidMount() {
-    if (this.props.autoPrint) {
+    // Do not auto-open the print dialog for demo sections.
+    if (this.props.autoPrint && !this.props.isDemoSection) {
       this.printLoginCards();
     }
   }
 
   printLoginCards = () => {
     const {section} = this.props;
-    const printArea = document.getElementById('printArea').outerHTML;
+    // The print area does not exist when the section has no saved students,
+    // for example from an autoPrint or stale studentId link.
+    const printAreaElement = document.getElementById('printArea');
+    if (!printAreaElement) {
+      return;
+    }
+    const printArea = printAreaElement.outerHTML;
     // Popup blockers cause issues with creating a new window for printing.
     // Creating a hidden iframe temporarily on the page as a workaround.
     const printIframe = document.createElement('iframe');
@@ -238,7 +317,7 @@ class WordOrPictureLogins extends React.Component {
   };
 
   render() {
-    const {studioUrlPrefix, section, students} = this.props;
+    const {studioUrlPrefix, section, sectionCode, students} = this.props;
     // Filter out any users who are teachers, used below to generate picture
     // login cards.
     const studentsOnly = students.filter(
@@ -251,13 +330,12 @@ class WordOrPictureLogins extends React.Component {
         <SignInInstructions
           loginType={section.loginType}
           studioUrlPrefix={studioUrlPrefix}
-          sectionCode={section.code}
+          sectionCode={sectionCode}
         />
         <p>
           {i18n.loginInfoWordPicMoreBelow({wordOrPicture: section.loginType})}
         </p>
-        <br />
-        <h2 style={styles.heading}>{i18n.loginInfo_resetTitle()}</h2>
+        <Heading>{i18n.loginInfo_resetTitle()}</Heading>
         {section.loginType === SectionLoginType.picture && (
           <SafeMarkdown
             markdown={i18n.loginInfoResetSecretPicDesc({
@@ -272,8 +350,7 @@ class WordOrPictureLogins extends React.Component {
             })}
           />
         )}
-        <br />
-        <h2 style={styles.heading}>{i18n.printLoginCards_title()}</h2>
+        <Heading>{i18n.printLoginCards_title()}</Heading>
         {students.length < 1 && (
           <SafeMarkdown
             markdown={i18n.loginInfo_noStudents({url: manageStudentsUrl})}
@@ -281,19 +358,26 @@ class WordOrPictureLogins extends React.Component {
         )}
         {students.length >= 1 && (
           <span>
-            <PrintLoginCards
-              sectionId={section.id}
-              onPrintLoginCards={this.printLoginCards}
-              entryPointForMetrics={
-                PrintLoginCardsButtonMetricsCategory.LOGIN_INFO
-              }
-            />
+            <DemoSectionTooltip
+              isDemoSection={this.props.isDemoSection}
+              tooltipId="demo-print-login-cards-tooltip"
+            >
+              <PrintLoginCards
+                sectionId={section.id}
+                onPrintLoginCards={this.printLoginCards}
+                entryPointForMetrics={
+                  PrintLoginCardsButtonMetricsCategory.LOGIN_INFO
+                }
+                disabled={this.props.isDemoSection}
+              />
+            </DemoSectionTooltip>
             <br />
             <div id="printArea" style={styles.container}>
               {studentsOnly.map(student => (
                 <LoginCard
                   key={student.id}
                   section={section}
+                  sectionCode={sectionCode}
                   student={student}
                   studioUrlPrefix={studioUrlPrefix}
                 />
@@ -312,12 +396,14 @@ class WordOrPictureLogins extends React.Component {
 class LoginCard extends React.Component {
   static propTypes = {
     section: PropTypes.object.isRequired,
+    // Caller-provided display code — may be a placeholder for demo sections.
+    sectionCode: PropTypes.string,
     student: PropTypes.object.isRequired,
     studioUrlPrefix: PropTypes.string.isRequired,
   };
 
   render() {
-    const {studioUrlPrefix, section, student} = this.props;
+    const {studioUrlPrefix, section, sectionCode, student} = this.props;
 
     return (
       <div style={styles.card}>
@@ -330,9 +416,9 @@ class LoginCard extends React.Component {
         <SafeMarkdown
           style={styles.text}
           markdown={i18n.loginCardForPrint1({
-            directLink: `${studioUrlPrefix}/sections/${section.code}`,
+            directLink: `${studioUrlPrefix}/sections/${sectionCode}`,
             joinLink: `${studioUrlPrefix}/join`,
-            sectionCode: section.code,
+            sectionCode: sectionCode,
           })}
         />
         <SafeMarkdown
@@ -354,7 +440,7 @@ class LoginCard extends React.Component {
             {i18n.loginCardForPrint3Picture()}
             <br />
             <img
-              src={pegasus(`/images/${student.secretPicturePath}`)}
+              src={student.secretPictureUrl}
               alt={student.secretPictureName}
               style={styles.img}
             />
@@ -391,9 +477,5 @@ const styles = {
   img: {
     width: 150,
     marginTop: 10,
-  },
-  heading: {
-    color: color.purple,
-    marginTop: 0,
   },
 };

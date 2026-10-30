@@ -1,0 +1,63 @@
+.dropdownRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.dropdownRowLabel {
+  flex: 0 0 76px;
+  color: var(--text-neutral-tertiary);
+}
+
+.dropdownTrigger:global(.MuiButtonBase-root) {
+  width: 110px;
+  height: 24px;
+  justify-content: space-between;
+  border: 1px solid var(--borders-neutral-primary);
+  background-color: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  padding: 0 8px;
+
+  &:hover {
+    background-color: var(--background-neutral-secondary);
+    border-color: var(--borders-neutral-secondary);
+  }
+}
+
+.dropdownTriggerContent {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+}
+
+.dropdownTriggerLabel {
+  font-weight: 600;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.dropdownChevron {
+  font-size: 10px;
+  margin-left: 4px;
+  color: var(--text-neutral-secondary);
+}
+
+// MUI's Paper is outside the data-theme wrapper, so its CSS vars resolve
+// from :root instead of the active theme. Keep the Paper transparent and
+// let .popoverContent (inside the data-theme scope) paint the surface;
+// the Paper still provides the elevation shadow.
+.popoverPaper:global(.MuiPaper-root) {
+  background-color: transparent;
+  border: none;
+  margin-top: 4px;
+}
+
+.popoverContent {
+  background-color: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 4px;
+}

@@ -15,13 +15,28 @@
 #
 # Indexes
 #
-#  fk_rails_19886eb632                         (lti_deployment_id)
-#  index_lti_courses_on_deleted_at             (deleted_at)
-#  index_lti_courses_on_lti_integration_id     (lti_integration_id)
-#  index_on_context_id_and_lti_integration_id  (context_id,lti_integration_id)
-#  index_on_course_id_and_lti_integration_id   (course_id,lti_integration_id)
+#  fk_rails_19886eb632                              (lti_deployment_id)
+#  index_lti_courses_on_context_integration_active  (`context_id`, `lti_integration_id`, (if((`deleted_at` is null),true,NULL))) UNIQUE
+#  index_lti_courses_on_deleted_at                  (deleted_at)
+#  index_lti_courses_on_lti_integration_id          (lti_integration_id)
+#  index_on_course_id_and_lti_integration_id        (course_id,lti_integration_id)
 #
 class LtiCourse < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :confidential,
+    lti_integration_id: :confidential,
+    lti_deployment_id: :confidential,
+    context_id: :confidential,
+    course_id: :confidential,
+    nrps_url: :confidential,
+    resource_link_id: :confidential,
+    created_at: :confidential,
+    updated_at: :confidential,
+    deleted_at: :confidential,
+  )
+
   acts_as_paranoid
   belongs_to :lti_integration
   belongs_to :lti_deployment

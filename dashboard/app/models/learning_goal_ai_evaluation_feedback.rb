@@ -19,5 +19,21 @@
 #  index_feedback_on_learning_goal_ai_evaluation  (learning_goal_ai_evaluation_id)
 #
 class LearningGoalAiEvaluationFeedback < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :confidential,
+    learning_goal_ai_evaluation_id: :confidential,
+    teacher_id: :confidential,
+    ai_feedback_approval: :confidential,
+    false_positive: :confidential,
+    false_negative: :confidential,
+    vague: :confidential,
+    feedback_other: :confidential,
+    other_content: :restricted,
+    created_at: :confidential,
+    updated_at: :confidential,
+  )
+
   belongs_to :learning_goal_ai_evaluation
 end

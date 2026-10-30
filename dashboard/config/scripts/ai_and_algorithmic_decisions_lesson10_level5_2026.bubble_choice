@@ -1,0 +1,12 @@
+name 'ai-and-algorithmic-decisions-lesson10-level5_2026'
+display_name 'Analyze and Refactor Complex Rules'
+description 'Choose a scenario. Analyze the code, use AI to explain the logic, evaluate the explanation, and refactor it into a combined Boolean expression.'
+
+sublevels
+level 'ai-and-algorithmic-decisions-lesson10-level5a_2026'
+level 'ai-and-algorithmic-decisions-lesson10-level5b_2026'
+level 'ai-and-algorithmic-decisions-lesson10-level5c_2026'
+
+
+uses_lab2
+navigation_type 'next_level'

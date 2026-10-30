@@ -1,0 +1,8 @@
+name 'gen-ai-foundations-studentsurvey-postmodule-q14'
+question 'I could be myself in this class during this generative AI unit.'
+right 'Strongly disagree'
+right 'Disagree'
+right 'Neutral'
+right 'Agree'
+right 'Strongly agree'
+allow_multiple_attempts true

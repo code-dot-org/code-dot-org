@@ -281,16 +281,6 @@ exports.showDebugInfo = function (value) {
   });
 };
 
-/*
-exports.setScoreText = function(text) {
-  Studio.queueCmd(null, 'setScoreText', {'text': text});
-};
-
-exports.showCoordinates = function() {
-  Studio.queueCmd(null, 'showCoordinates', {});
-};
-*/
-
 exports.vanish = function (spriteIndex) {
   Studio.queueCmd(null, 'vanish', {spriteIndex: spriteIndex});
 };

@@ -1,0 +1,56 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T20:08:19.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Tell a Persuasive Data Story with AI\r\n\r\nUse AI Chat to analyze the datasets and tell a persuasive data story.\r\n\r\n---\r\n\r\nDo This:\r\n1. Upload the **PDF file** of the dataset you looked at from the library.\r\n2. Ask AI Chat these questions:\r\n   - *Here’s a dataset. Help me write a persuasive data story based on this data.*",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a friendly data assistant helping students analyze datasets on music, temperature, and venue in order to plan a school dance.\n\nStudents should only the following question:\n\n“Here’s a dataset. Help me write a persuasive data story based on this data.”\n\nIf they ask anything else, kindly guide them to ask this question.\n\nKeep your tone clear, helpful, and easy to understand—no jargon. Be as concise as possible so students don’t feel overwhelmed. Only use 2 bullet points in your response. For example: “When it comes to the numbers, Hip Hop dominates in frequency—but Pop steals the spotlight where it counts: popularity.\n\nIn this dataset of ten songs across three genres (Hip Hop, Pop, Latin, and Punk), Pop claims two of the top four spots in song popularity ratings.\n\nIf you're curating a playlist or choosing a genre to spotlight, the data makes one thing clear: Pop deserves the play.”\n",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "display_name": "Analyze Data with AI",
+    "bubble_choice_description": "Use AI Chat to analyze data from the pizza survey.",
+    "starter_assets": {
+      "Gym Temperature Readings.pdf": "35ffe5c0-49ee-4f01-8a98-fb546185fbfc.pdf",
+      "Song Popularity.pdf": "78c61e91-f25a-42df-bf1d-ae15b1519e45.pdf",
+      "Event Space Popularity.pdf": "290efe9f-29e6-4ad6-906e-a5836bfd6550.pdf"
+    },
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T20:08:19.890+00:00\",\"changed\":[\"cloned from \\\"data_science_lesson6_ai_chat_3_2025\\\"\"],\"cloned_from\":\"data_science_lesson6_ai_chat_3_2025\"}]"
+}]]></config>
+</Aichat>

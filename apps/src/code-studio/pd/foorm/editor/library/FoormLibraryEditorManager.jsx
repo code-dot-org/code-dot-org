@@ -1,6 +1,7 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import PropTypes from 'prop-types';
+
 import FoormEntityEditor from '../components/FoormEntityEditor';
 import FoormEntityLoadButtons from '../components/FoormEntityLoadButtons';
 import {
@@ -13,6 +14,7 @@ import {
   setLastSavedQuestions,
   setLibraryData,
 } from '../foormEditorRedux';
+
 import FoormLibrarySaveBar from './FoormLibrarySaveBar';
 
 const JSONErrorMessage =

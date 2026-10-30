@@ -13,7 +13,7 @@
     {
       "name": "Example: From an image",
       "description": "Print the alpha (opacity) value of single pixels from an image.",
-      "code": "```\ncreateCanvas('canvas1');\ndrawImageURL(\"https://code.org/images/logo.png\");\nvar imageData = getImageData(0, 0, 100, 100);\nconsole.log(getAlpha(imageData, 1, 1));\nconsole.log(getAlpha(imageData, 10, 10));\n```"
+      "code": "```\ncreateCanvas('canvas1');\ndrawImageURL(\"https://studio.code.org/blockly/media/logo.png\");\nvar imageData = getImageData(0, 0, 100, 100);\nconsole.log(getAlpha(imageData, 1, 1));\nconsole.log(getAlpha(imageData, 10, 10));\n```"
     },
     {
       "name": "Example: How Transparent?",

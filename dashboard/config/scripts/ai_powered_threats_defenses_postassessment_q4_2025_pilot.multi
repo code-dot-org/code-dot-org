@@ -1,0 +1,14 @@
+name 'ai-powered-threats-defenses-postassessment-q4_2025-pilot'
+
+question ‘Social engineering attacks are fundamentally effective because they are designed to target what?’
+
+wrong ‘Weaknesses in a computer\'s operating system’
+wrong ‘The high monetary value of personal data’
+wrong ‘A user\’s lack of technical programming knowledge’
+right ‘Human psychology and natural tendencies to trust’
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 4: Phishing with AI
+MARKDOWN

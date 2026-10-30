@@ -1,0 +1,40 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-09-15T21:24:26.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "404fca2c-0edd-4125-8e64-9fc3ee60fef3": {
+          "id": "404fca2c-0edd-4125-8e64-9fc3ee60fef3",
+          "name": "neighborhood.py",
+          "contents": "_x = 0\n_y = 0\n_direction = 0 # 0: East, 1: North, 2: West, 3: South\n_painted_cells = {}\n\ndef set_paint(level):\n    # This function is called but its specific effect on `paint()` isn't defined here.\n    # We'll just acknowledge it for now.\n    print(f\"DEBUG: Painter received set_paint({level}) command.\")\n\ndef move():\n    global _x, _y\n    if _direction == 0: # East\n        _x += 1\n    elif _direction == 1: # North\n        _y += 1\n    elif _direction == 2: # West\n        _x -= 1\n    elif _direction == 3: # South\n        _y -= 1\n    print(f\"DEBUG: Painter moved to ({_x}, {_y}).\")\n\ndef paint(color):\n    _painted_cells[(_x, _y)] = color\n    print(f\"DEBUG: Painter painted ({_x}, {_y}) {color}.\")\n\ndef turn_left():\n    global _direction\n    _direction = (_direction + 1) % 4\n    directions_map = {0: \"East\", 1: \"North\", 2: \"West\", 3: \"South\"}\n    print(f\"DEBUG: Painter turned left. Now facing {directions_map[_direction]}.\")\n\ndef print_final_state():\n    directions_map = {0: \"East\", 1: \"North\", 2: \"West\", 3: \"South\"}\n    print(\"\\n--- Final Painter State ---\")\n    print(f\"Position: ({_x}, {_y})\")\n    print(f\"Direction: {directions_map[_direction]}\")\n    print(f\"Painted cells: {_painted_cells}\")\n    print(\"---------------------------\\n\")\n",
+          "folderId": "0",
+          "active": false
+        },
+        "ac0c454c-73da-48da-a0b1-8abf63ae61a2": {
+          "id": "ac0c454c-73da-48da-a0b1-8abf63ae61a2",
+          "name": "main.py",
+          "contents": "from neighborhood import *\n\n# The Painter starts at (0, 0), facing east.\n# Paint a short path for the block party.\nset_paint(6)\n\nmove()\npaint(\"white\")\nmove()\nturn_left()\nmove()\npaint(\"white\")\nturn_left()\nturn_left()\nturn_left()\nmove()\npaint(\"white\")\n\n# Print the final state for verification\nprint_final_state()\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "404fca2c-0edd-4125-8e64-9fc3ee60fef3",
+        "ac0c454c-73da-48da-a0b1-8abf63ae61a2"
+      ]
+    },
+    "long_instructions": "TODOs:\r\n- Predict the Painter's final position, facing direction, and the squares it will paint.\r\n- Run the `main.py` program to see the Painter's actual path.\r\n- Compare the Painter's actual movements and painted squares to your predictions.\r\n- Note any differences you find between what you predicted and what actually happened in `main.py`'s output.",
+    "encrypted_exemplar_sources": "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\nOmpWw1fZtQ==\n",
+    "generate_outline": "Look at the code and predict what the Painter will do. Predict: What path will the Painter take? Where will the Painter end up? Which direction will the Painter face? Which grid spaces will be painted? Run the code to check your prediction. Circle or note every difference between your prediction and what actually happened.",
+    "generate_supplied_code": "from neighborhood import *\r\n\r\n# The Painter starts at (0, 0), facing east.\r\n# Paint a short path for the block party.\r\nset_paint(6)\r\n\r\nmove()\r\npaint(\"white\")\r\nmove()\r\nturn_left()\r\nmove()\r\npaint(\"white\")\r\nturn_left()\r\nturn_left()\r\nturn_left()\r\nmove()\r\npaint(\"white\")"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-15 21:24:43 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-15 21:24:43 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-15 21:24:54 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-15 21:24:54 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Pythonlab>

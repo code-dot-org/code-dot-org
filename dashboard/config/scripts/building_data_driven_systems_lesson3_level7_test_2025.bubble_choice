@@ -1,0 +1,10 @@
+name 'building-data-driven-systems-lesson3-level7-test-2025'
+display_name 'Social Media Scheduler, Part 4'
+description 'Choose the same profession from the previous level. The code you created previously will carry forward as you progress.'
+
+sublevels
+level 'building-data-driven-systems-lesson3-level7a-test-2025'
+level 'building-data-driven-systems-lesson3-level7b-test-2025'
+level 'building-data-driven-systems-lesson3-level7c-test-2025'
+
+uses_lab2

@@ -1,0 +1,14 @@
+name 'problem-solving-with-ai-preassessment-q5_2025-pilot_v2-2025'
+
+question 'Why do AI-generated responses sometimes seem wrong or off-topic?'
+
+wrong 'The AI is designed to lie when it\'s unsure.'
+right 'AI uses randomness and probability, which can lead to unexpected results.'
+wrong 'The AI is always biased against certain topics.'
+wrong 'AI refuses to answer questions it doesn\'t like.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 3: The AI's Brain
+MARKDOWN

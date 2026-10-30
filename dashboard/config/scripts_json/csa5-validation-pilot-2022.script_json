@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "content_area": "curriculum_9_12",
       "curriculum_umbrella": "CSA",
       "has_verified_resources": true,
       "hideable_lessons": true,
@@ -15,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-08-23 20:51:02 UTC",
+    "serialized_at": "2024-11-19 01:15:17 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3774,6 +3775,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L1-L1_pilot-2022"
+        ],
         "progression": "Investigate: Two-Dimensional (2D) Arrays"
       },
       "bonus": false,
@@ -3796,6 +3800,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L1-L2_pilot-2022"
+        ],
         "progression": "Using 2D Arrays"
       },
       "bonus": false,
@@ -3818,6 +3825,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L1-L3_pilot-2022"
+        ],
         "progression": "Using 2D Arrays"
       },
       "bonus": false,
@@ -3840,6 +3850,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L1-L4_pilot-2022"
+        ],
         "progression": "Using 2D Arrays"
       },
       "bonus": false,
@@ -3862,6 +3875,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L1-L5_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3884,6 +3900,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L2-L1_pilot-2022"
+        ],
         "progression": "Investigate: Nested Loops and 2D Arrays"
       },
       "bonus": false,
@@ -3906,6 +3925,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L2-L2_pilot-2022"
+        ],
         "progression": "Traversing 2D Arrays"
       },
       "bonus": false,
@@ -3928,6 +3950,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L2-L3_pilot-2022"
+        ],
         "progression": "Traversing 2D Arrays"
       },
       "bonus": false,
@@ -3950,6 +3975,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L2-L4_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3972,6 +4000,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L3-L1_pilot-2022"
+        ],
         "progression": "Predict: Column-Major Traversal"
       },
       "bonus": false,
@@ -3994,6 +4025,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L3-L2_pilot-2022"
+        ],
         "progression": "Traversing 2D Arrays"
       },
       "bonus": false,
@@ -4016,6 +4050,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L3-L3_pilot-2022"
+        ],
         "progression": "Traversing 2D Arrays"
       },
       "bonus": false,
@@ -4038,6 +4075,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L3-L4_pilot-2022"
+        ],
         "progression": "Traversing 2D Arrays"
       },
       "bonus": false,
@@ -4060,6 +4100,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L3-L5_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4082,6 +4125,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L4-L1_pilot-2022"
+        ],
         "progression": "Reversing 2D Arrays"
       },
       "bonus": false,
@@ -4104,6 +4150,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L4-L2_pilot-2022"
+        ],
         "progression": "Reversing 2D Arrays"
       },
       "bonus": false,
@@ -4126,6 +4175,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L4-L3 CR_pilot-2022"
+        ],
         "progression": "Code Review: Reversing 2D Arrays"
       },
       "bonus": false,
@@ -4148,6 +4200,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L4-L4_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4170,6 +4225,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L5-L1_pilot-2022"
+        ],
         "progression": "Predict: Enhanced For Loops and Objects"
       },
       "bonus": false,
@@ -4192,6 +4250,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L5-L2_pilot-2022"
+        ],
         "progression": "Investigate: Enhanced For Loops and 2D Arrays"
       },
       "bonus": false,
@@ -4214,6 +4275,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L5-L3_pilot-2022"
+        ],
         "progression": "Using Enhanced For Loops with 2D Arrays"
       },
       "bonus": false,
@@ -4236,6 +4300,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L5-L4 CR_pilot-2022"
+        ],
         "progression": "Code Review: Using Enhanced For Loops with 2D Arrays"
       },
       "bonus": false,
@@ -4258,6 +4325,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L5-L5_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4280,6 +4350,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L6-L1_pilot-2022"
+        ],
         "progression": "Investigate: Modifying Pixels"
       },
       "bonus": false,
@@ -4302,6 +4375,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L6-L2_pilot-2022"
+        ],
         "progression": "Creating Image Filters"
       },
       "bonus": false,
@@ -4324,6 +4400,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L6-L3_pilot-2022"
+        ],
         "progression": "Creating Image Filters"
       },
       "bonus": false,
@@ -4346,6 +4425,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L6-L4_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4368,6 +4450,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L7-L1_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4390,6 +4475,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L8-L1_pilot-2022"
+        ],
         "progression": "Investigate: Changing Colors in an Image"
       },
       "bonus": false,
@@ -4412,6 +4500,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L8-L2_pilot-2022"
+        ],
         "progression": "Creating Image Filters"
       },
       "bonus": false,
@@ -4434,6 +4525,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L8-L3_pilot-2022"
+        ],
         "progression": "Creating Image Filters"
       },
       "bonus": false,
@@ -4456,6 +4550,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L8-L4_pilot-2022"
+        ],
         "progression": "Creating Image Filters"
       },
       "bonus": false,
@@ -4478,6 +4575,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L8-L5 CR_pilot-2022"
+        ],
         "progression": "Code Review: Creating Image Filters"
       },
       "bonus": false,
@@ -4500,6 +4600,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L8-L6_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4522,6 +4625,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L9-L1_pilot-2022"
+        ],
         "progression": "Finding Duplicates in a 2D Array"
       },
       "bonus": false,
@@ -4544,6 +4650,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L9-L2_pilot-2022"
+        ],
         "progression": "Finding Duplicates in a 2D Array"
       },
       "bonus": false,
@@ -4566,6 +4675,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L9-L3 CR_pilot-2022"
+        ],
         "progression": "Code Review: Finding Duplicates in a 2D Array"
       },
       "bonus": false,
@@ -4588,6 +4700,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L9-L4_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4610,6 +4725,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L10-L1_pilot-2022"
+        ],
         "progression": "Investigate: Shifting Elements"
       },
       "bonus": false,
@@ -4632,6 +4750,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L10-L2_pilot-2022"
+        ],
         "progression": "Shifting a 2D Array"
       },
       "bonus": false,
@@ -4654,6 +4775,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L10-L3_pilot-2022"
+        ],
         "progression": "Shifting a 2D Array"
       },
       "bonus": false,
@@ -4676,6 +4800,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L10-L4_pilot-2022"
+        ],
         "progression": "Shifting a 2D Array"
       },
       "bonus": false,
@@ -4698,6 +4825,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L10-L5 CR_pilot-2022"
+        ],
         "progression": "Code Review: Shifting a 2D Array"
       },
       "bonus": false,
@@ -4720,6 +4850,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L10-L6_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4742,6 +4875,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L11-L1_pilot-2022"
+        ],
         "progression": "Personal Narrative Project"
       },
       "bonus": false,
@@ -4764,6 +4900,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L12-L1_pilot-2022"
+        ],
         "progression": "Personal Narrative Project"
       },
       "bonus": false,
@@ -4786,6 +4925,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L12-L2 CR_pilot-2022"
+        ],
         "progression": "Code Review: Personal Narrative Project"
       },
       "bonus": false,
@@ -4808,6 +4950,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L13-L1_pilot-2022"
+        ],
         "progression": "Personal Narrative Project"
       },
       "bonus": false,
@@ -4830,6 +4975,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csa5_pilot-2022"
+        ],
         "progression": "Unit 5 Survey"
       },
       "bonus": false,
@@ -4852,6 +5000,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Unit 5 Assessment 2022_pilot-2022"
+        ],
         "progression": "Unit 5 Assessment"
       },
       "bonus": false,
@@ -4874,6 +5025,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Console Sandbox_pilot-2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4895,6 +5049,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Neighborhood Sandbox_pilot-2022"
+        ],
         "progression": "With Paint Bucket"
       },
       "bonus": false,
@@ -4917,6 +5074,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Neighborhood - No Bucket Sandbox_pilot-2022"
+        ],
         "progression": "No Paint Bucket"
       },
       "bonus": false,
@@ -4939,6 +5099,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Theater Sandbox_pilot-2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -7457,6 +7620,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

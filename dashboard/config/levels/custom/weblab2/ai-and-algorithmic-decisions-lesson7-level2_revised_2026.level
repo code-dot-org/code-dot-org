@@ -1,0 +1,43 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-04-10T18:11:54.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "### Find the Trigger\r\n\r\n#### Do This:\r\n\r\n1. Find where the feature starts in your code.\r\n\r\n2. Identify the parts:\r\n\r\n   * What **element** is being interacted with? \r\n   * What **event** happens? \r\n\r\n3. Add comments in `script.js`:\r\n   * Label the **element selector**\r\n   * Label the **event listener** \r\n   * Label the **event handler** ",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML",
+        "buildCSS",
+        "explainCode",
+        "documentation",
+        "buildJavaScript"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "project_template_level_name": "ai-and-algorithmic-decisions-lesson7_revised_template_2026"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-10 19:01:36 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-10 19:11:53 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-11 03:05:40 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Weblab2>

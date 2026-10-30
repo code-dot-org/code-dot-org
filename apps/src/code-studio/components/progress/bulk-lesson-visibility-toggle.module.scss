@@ -1,14 +1,28 @@
 .container {
-  // Align the top of the buttons with the top of the SectionAssigner dropdown
-  // to its left.
-  padding-top: 38px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  align-self: end;
+  gap: 0.5rem;
+}
+
+.infoTipButton {
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  line-height: 1;
+  color: var(--text-neutral-secondary);
+
+  &:hover,
+  &:focus-visible {
+    color: var(--text-neutral-primary);
+  }
 }
 
 .infoTipIcon {
-  cursor: pointer;
   margin-left: 5px;
   margin-right: 5px;
   font-size: 18px;
   vertical-align: middle;
-  color: gray;
 }

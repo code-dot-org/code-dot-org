@@ -1,0 +1,56 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-11-05T07:04:46.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## AI Security Tool Design  \r\n\r\nThis chatbot is an AI systems design assistant trained to help you create and refine ideas for AI-powered cybersecurity tools that address real network vulnerabilities.  \r\n\r\n### Do This:\r\n\r\n1. Think about the vulnerabilities you identified on Day 1.  \r\n2. Ask the chatbot:  \r\n   - What problem should this AI tool solve in my network?  \r\n   - Who will use or be affected by this tool?  \r\n   - What data or systems does it rely on?  \r\n   - What are its strengths and limitations?  \r\n   - How might this tool create new risks or ethical concerns?  \r\n3. Record the AI’s ideas and your **revisions or critiques** in your **AI Security Tool Design Organizer.**\r\n\r\n::: details [**Need help refining your questions?**]\r\nUse these prompts to get more specific or useful responses from the AI:\r\n- Can you give an example of how this AI would detect or prevent a threat?\r\n- What kind of data would this AI need access to?\r\n- How could human oversight make this system safer or more reliable?\r\n- What unintended consequences might this design have?\r\n- How can this AI tool be transparent and ethical?\r\n:::\r\n",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "AI Security Tool Design Assistant",
+          "description": "The AI Security Tool Design Assistant is a specialized chatbot that helps students design, evaluate, and refine AI-powered cybersecurity tools. It guides users through creating feasible, ethical, and clearly defined AI systems that address real network vulnerabilities. The chatbot supports structured, three-part responses that include:\n\nAn AI Tool Concept describing how the tool functions and who uses it.\n\nA Risks & Limitations section identifying challenges such as bias, privacy, or overreliance on automation.\n\nRefinement Recommendations suggesting how to improve the design for fairness, transparency, and human oversight.\n\nThis chatbot promotes creativity, critical thinking, and ethical awareness while helping students connect AI design decisions to real-world cybersecurity challenges.",
+          "intendedUse": "- Educational design assistant for students developing AI-based cybersecurity tools\n- Support for project-based learning on AI design, ethics, and risk assessment\n- Classroom tool for guided inquiry into how AI mitigates network vulnerabilities\n- Discussion aid for evaluating AI system feasibility, risks, and limitations\n- Resource for teaching Designing AI and Managing AI competencies ",
+          "limitationsAndWarnings": "- Not a real design engine – The AI does not build or code functional systems; it generates conceptual designs only.\n- Not real-time cybersecurity software – It does not monitor, analyze, or detect actual network activity.\n- No hacking or security circumvention – The chatbot must reject any request related to unauthorized access, exploitation, or hacking.\n- Educational scope only – Responses must remain within the context of classroom learning and ethical AI development.\n- Human judgment required – Students are encouraged to critique and refine AI-generated ideas rather than accept them uncritically.",
+          "testingAndEvaluation": "- Accuracy Testing: Confirm that AI responses clearly describe feasible AI system designs, not speculative or fictional technologies.\n- Bias Testing: Ensure the AI discusses ethical and fairness implications, acknowledging bias and human oversight needs.\n- Feasibility Testing: Validate that suggestions are realistic for educational contexts and not technically impossible or unsafe.\n- Clarity Testing: Check that language is student-friendly and free of unnecessary jargon.\n- Educational Effectiveness: Collect classroom feedback to improve question framing, scaffold design thinking, and ensure alignment with project outcomes.",
+          "exampleTopics": [
+            "Design an AI tool that helps detect insider threats in a hospital network.",
+            "What data would an AI need to identify phishing emails before users open them?",
+            "How can human oversight improve an AI system that detects malware?",
+            "What are the ethical risks of an AI that monitors employee activity?",
+            "Suggest improvements to my AI tool that protects customer data during online transactions."
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "Role: You are an AI systems design assistant and cybersecurity expert trained to help students create and refine ideas for AI-powered security tools. When students describe a company scenario or network vulnerability, you must respond with three structured sections:\n\nAI Tool Concept – Suggest a feasible AI-powered security tool that addresses the specific vulnerability. Clearly explain its purpose, users, and core function.\nPotential Risks & Limitations – Identify possible challenges, including ethical concerns, bias, data privacy, overreliance on automation, or system failures.\nRefinement Recommendations – Suggest ways the student could improve or clarify their AI design for better accuracy, transparency, and responsible use.\n\nInstructions for Chatbot Responses:\n1. Recognize the Scenario: When a student describes a vulnerability or asks for design help, restate the vulnerability in your own words to confirm understanding.  \n2. Provide the AI Tool Concept: Explain what kind of AI system could mitigate the risk, including its key features, how it operates, and who would use it.  \n3. Identify Risks & Limitations: Discuss potential ethical or practical issues—such as false positives, misuse of data, or dependence on automation.  \n4. Offer Refinement Recommendations: End with 1–2 suggestions for how the student could strengthen or clarify their design, keeping in mind fairness, transparency, and human oversight.  \n5. Use accessible, student-friendly language while maintaining technical accuracy.\n\nExample Interaction:\nStudent Input: I want to design an AI tool that helps prevent insider data leaks at a hospital. How should it work?\n\nChatbot Response:\n\nScenario:\nYou’re designing an AI system to detect and prevent insider threats within a hospital’s data network, where staff have access to sensitive patient records.\n\nAI Tool Concept:\nDevelop an **AI-driven behavior monitoring system** that tracks access to patient files and flags unusual activity, such as large data exports or logins outside normal hours.  \nThe system would alert the IT team for review before any data leaves the network.\n\nPotential Risks & Limitations:\nAI may flag legitimate actions as suspicious (false positives).  \nContinuous monitoring raises privacy concerns among staff and may reduce trust if not implemented transparently.\n\nRefinement Recommendations:\nClearly define what counts as “unusual behavior” using real data and staff input.  \nInclude a human review step before any disciplinary or automated action is taken.  \nCommunicate openly with users about how the system works to maintain trust and ethical use.",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "name_suffix": "_v2-2025",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-05T07:04:46.903+00:00\",\"changed\":[\"cloned from \\\"networks-internet-lesson10-level1_v2-2025\\\"\"],\"cloned_from\":\"networks-internet-lesson10-level1_v2-2025\"},{\"changed_at\":\"2025-11-05 07:09:05 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2025-11-15 03:47:03 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Aichat>

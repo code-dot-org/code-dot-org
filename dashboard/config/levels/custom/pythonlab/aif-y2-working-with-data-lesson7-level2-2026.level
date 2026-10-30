@@ -1,0 +1,48 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-09-07T20:09:10.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "**☑️ Do This:**\r\n\r\n- Visualize three more artists’ listeners and followers.\r\n  - Selena Gomez, who has 58 million followers and 43 million listeners.\r\n  - Tate McRae, who has 14 million followers and 44 million listeners.\r\n  - The Weeknd, who has 4 million followers and 111 million listeners.\r\n- If you finish early, add data of your own. Experiment: how does adding outliers change the visualization?\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "import matplotlib.pyplot as plt\n\n# Values in millions\nfollowers = [48, 33, 56, 8, 52, 25, 16, 37]\nlisteners = [78, 75, 83, 46, 78, 64, 47, 72]\n\nplt.scatter(followers, listeners)\nplt.show()\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMo1LZw3DQ02eGcm\nJklresqsI5g0mnIY4xe6KlrVQJzu7IW0VPMq/V6IoCSj+aHakwldC2EBE6Px\nKzm7bnCuuyd9dM+JoM6xYgSrnyhkXGrQlrgKh6oTj1uR0wXJJQE9recTlXpn\n7BfNNQaVNI3celdXbHxrgvfR3K5WUDn0eW40W9jvDNNLtcipfe6rENGDdclo\n33RlnBbOwEy3aHg0dQ0d+B6wldp27VVWAClcR+//iNweaKKaTLFB0l0EGTlN\n5LN4LcZ6lA0h+J6AZ8nz8seW+5IHaha+o9TCc/Ty35jxcLbAZcgMe7MS8eg1\n8MQB84T23MOYVqkcS6NngMcQpW8dr7/nwIRltbiEf/AENtLLiMFsxCooaMBJ\nTzQA/5NtE1YCI3J+huaEGRx0gvgcHDRdnOTunfYcSCbgI8NHqHFbJQ==\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-07 20:09:52 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 20:10:00 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 20:10:08 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

@@ -1,11 +1,16 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography as MuiTypography} from '@mui/material';
 import classNames from 'classnames';
-import style from './phone-frame.module.scss';
-import ScreenSelector from './ScreenSelector';
-import {RunButton, ResetButton} from '../templates/GameButtons';
+import PropTypes from 'prop-types';
+import React from 'react';
+
 import {styles as CompletionButtonStyles} from '../templates/CompletionButton';
-import FontAwesome from '../templates/FontAwesome';
+import {RunButton, ResetButton} from '../templates/GameButtons';
+import ProtectedStatefulDiv from '../templates/ProtectedStatefulDiv';
+
+import ScreenSelector from './ScreenSelector';
+
+import style from './phone-frame.module.scss';
 
 export default class PhoneFrame extends React.Component {
   static propTypes = {
@@ -17,12 +22,78 @@ export default class PhoneFrame extends React.Component {
     children: PropTypes.node,
   };
 
+  wrapperRef = React.createRef();
+  scrollPinHandler = null;
+  scrollPinTimeout = null;
+
+  componentDidMount() {
+    this.pinScroll(0);
+    // Use capture phase to save scroll position BEFORE StudioApp's
+    // imperative click handlers modify the DOM and cause scroll shifts.
+    this.wrapperRef.current?.addEventListener(
+      'click',
+      this.onWrapperClick,
+      true
+    );
+  }
+
+  componentWillUnmount() {
+    this.clearPin();
+    this.wrapperRef.current?.removeEventListener(
+      'click',
+      this.onWrapperClick,
+      true
+    );
+  }
+
+  onWrapperClick = e => {
+    if (e.target.closest('button') && this.wrapperRef.current) {
+      this.pinScroll(this.wrapperRef.current.scrollTop);
+    }
+  };
+
+  // Temporarily pins the wrapper scroll position for 200ms to prevent
+  // jumps caused by DOM changes (e.g. resizeVisualization, button toggling).
+  pinScroll(target) {
+    this.clearPin();
+    const wrapper = this.wrapperRef.current;
+    if (!wrapper) return;
+    wrapper.scrollTop = target;
+    this.scrollPinHandler = () => {
+      wrapper.scrollTop = target;
+    };
+    wrapper.addEventListener('scroll', this.scrollPinHandler);
+    this.scrollPinTimeout = setTimeout(() => {
+      wrapper.removeEventListener('scroll', this.scrollPinHandler);
+      this.scrollPinHandler = null;
+      this.scrollPinTimeout = null;
+    }, 200);
+  }
+
+  clearPin() {
+    if (this.scrollPinTimeout) {
+      clearTimeout(this.scrollPinTimeout);
+      this.scrollPinTimeout = null;
+    }
+    if (this.scrollPinHandler && this.wrapperRef.current) {
+      this.wrapperRef.current.removeEventListener(
+        'scroll',
+        this.scrollPinHandler
+      );
+      this.scrollPinHandler = null;
+    }
+  }
+
   render() {
     const {isDark, screenIds, showSelector, isPaused, onScreenCreate} =
       this.props;
     return (
       <span id="phoneFrame">
-        <div id="phoneFrameWrapper">
+        <div
+          id="phoneFrameWrapper"
+          ref={this.wrapperRef}
+          className={style.phoneFrameWrapper}
+        >
           <div
             className={classNames(
               style.phoneFrame,
@@ -39,11 +110,26 @@ export default class PhoneFrame extends React.Component {
               </div>
             )}
             {isPaused && (
-              <div className={classNames(style.centeredInFrame, style.paused)}>
-                <FontAwesome icon="pause" className={style.pauseIcon} />
+              <MuiTypography
+                variant="body1"
+                component="div"
+                className={classNames(style.centeredInFrame, style.paused)}
+                sx={{
+                  display: 'flex',
+                  flexDirection: 'row',
+                  gap: 1,
+                }}
+              >
+                <FontAwesomeV6Icon iconName="pause" iconStyle="solid" />
                 PAUSED
-              </div>
+              </MuiTypography>
             )}
+            {/* Top run/reset button only renders when user is so zoomed in
+            that the bottom run button is hidden*/}
+            <ProtectedStatefulDiv className={style.topButtons} canUnmount>
+              <RunButton id="topRunButton" />
+              <ResetButton id="topResetButton" />
+            </ProtectedStatefulDiv>
           </div>
           {this.props.children}
           <div

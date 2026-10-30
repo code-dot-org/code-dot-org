@@ -1,0 +1,24 @@
+name 'csaif_pl-analyzedatea-L4-CSandDev_-rev_v2_2026-dev'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<h1>Validating and Analyzing Data</h1>
+
+<p>Before working with data, it's important to validate it. Data that hasn't been checked can contain errors that lead to wrong conclusions.</p>
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px;">
+<p>📖 <b>Validating Data</b> means checking for misleading or fabricated data (e.g. duplicate entries, mismatched authors, or impossible dates).</p>
+</div><br>
+
+<p>Validating data ensures you're working with accurate information. Once the data is trustworthy, the next step is to analyze it. Analyzing data helps us recognize patterns, answer questions, and draw meaningful insights. Computers use different techniques to organize and interpret data efficiently.</p>
+
+<div style="background-color: #F7F7FB; border: 1px solid #E4E2F8; padding: 20px; border-radius: 10px; max-width: 800px; margin: 20px auto;">
+<h2 style="margin-top: 0;">Ways to Analyze Data:</h2>
+<p style="margin: 0 0 10px 0;">• <b>Sorting:</b> organizing data in a specific order. For example, sorting names alphabetically, ranking scores.</p>
+<p style="margin: 0 0 10px 0;">• <b>Filtering:</b> selecting only relevant data based on conditions. For example, showing only sales over 0, finding students with A grades.</p>
+<p style="margin: 0 0 10px 0;">• <b>Grouping:</b> categorizing similar data points together. For example, grouping sales by region, organizing students by grade level.</p>
+<p style="margin: 0 0 10px 0;">• <b>Comparing:</b> examining relationships between data points. For example, comparing monthly sales, analyzing test scores across schools.</p>
+<p style="margin: 0;">• <b>Aggregating:</b> summarizing data into key metrics. For example, calculating averages, finding total revenue, counting customer transactions.</p>
+</div>
+MARKDOWN

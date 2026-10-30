@@ -1,6 +1,7 @@
-import {expect} from '../../../../util/reconfiguredChai';
+import {Button} from '@mui/material';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
+
 import PublishSuccessDisplay from '@cdo/apps/code-studio/components/libraries/PublishSuccessDisplay.jsx';
 
 describe('PublishSuccessDisplay', () => {
@@ -13,7 +14,7 @@ describe('PublishSuccessDisplay', () => {
       />
     );
 
-    expect(wrapper.find('Button')).to.have.lengthOf(1);
+    expect(wrapper.find(Button)).toHaveLength(1);
   });
 
   it('does not display a button when onShareTeacherLibrary is passed', () => {
@@ -21,6 +22,6 @@ describe('PublishSuccessDisplay', () => {
       <PublishSuccessDisplay libraryName="name" channelId="123" />
     );
 
-    expect(wrapper.find('Button')).to.have.lengthOf(0);
+    expect(wrapper.find(Button)).toHaveLength(0);
   });
 });

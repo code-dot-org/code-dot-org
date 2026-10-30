@@ -1,0 +1,52 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-01-07T23:37:15.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "<i class=\"fa-duotone fa-solid fa-list-music\"></i> **Music is made of patterns that play again and again.** Like a catchy chorus or a steady backbeat.\n",
+        "imageUrl": "https://images.code.org/18f0bd15050f2539d07c6a6f3178113a-2.2a.jpg",
+        "key": "music-coding-intro-functions-panel-dd6ade9d-4ac1-4787-89e4-4fa347cf3c12",
+        "layout": "text-top-center"
+      },
+      {
+        "text": "##Basic Song Structure\n\nDo you notice any patterns in this diagram of the basic structure of a pop song?",
+        "imageUrl": "https://images.code.org/c44b50f1f7274a3463377aaebff2fa43-Lesson 2 Level 2a (4).png",
+        "key": "music-coding-intro-functions-panel-95f83edd-e488-45d2-b21a-a8e33aa066f3",
+        "layout": "text-top-center"
+      },
+      {
+        "text": "The **Verses** build the story in the song. Each one is a little different.",
+        "imageUrl": "https://images.code.org/4f506c6b231b88f65f47200cfa6333a6-Lesson 2 Level 2a (5).png",
+        "key": "music-coding-intro-functions-panel-49030dba-ec10-4f22-8e94-295c2c104f6d",
+        "layout": "text-top-center"
+      },
+      {
+        "text": "The **chorus** is the catchy and memorable part of the song that is repeated.",
+        "imageUrl": "https://images.code.org/27bad14f4b2dcd614b40682df637a301-Lesson 2 Level 2a (7).png",
+        "key": "music-coding-intro-functions-panel-87999923-90be-4ba3-b5cd-5e9bd22da67c",
+        "layout": "text-top-center"
+      },
+      {
+        "text": "The **intro** or **outro** are the opening and closing parts that set the song's mood.",
+        "imageUrl": "https://images.code.org/a082bb801bea482cd956c6a941da89a2-Lesson 2 Level 2a (2).png",
+        "key": "music-coding-intro-functions-panel-2834fb01-f993-4e61-b141-8dd3b39bd25c",
+        "layout": "text-top-center"
+      },
+      {
+        "text": "You can use **functions** to reuse sections of code!\n\n- Functions are **defined separately** from when run. \n\n- **Call functions** from the main program under `when run`.",
+        "imageUrl": "https://images.code.org/ef1bb3bafd1a7bf50a78cfbfa6943f63-music-panels-function-drag.gif",
+        "key": "music-coding-intro-functions-panel-c494188a-95c3-4c6a-bee1-130500907756"
+      }
+    ],
+    "name_suffix": "_1"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-01-07T23:37:15.609+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-panel\\\"\"],\"cloned_from\":\"music-coding-intro-functions-panel\"}]"
+}]]></config>
+</Panels>

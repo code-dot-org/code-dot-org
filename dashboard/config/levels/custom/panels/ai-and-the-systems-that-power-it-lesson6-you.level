@@ -1,0 +1,26 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-09-11T16:28:23.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "You!",
+    "bubble_choice_description": "Design a system for the work or hobby you care about most",
+    "thumbnail_url": "https://images.code.org/d5f4abc4d31aa743d4afc133af30fa07-you.jpg",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "**You!**\n\nIn your activity guide, fill in the following information based on your needs:\n\n* Job/Hobby\n\n* Purpose of the Build\n\n* Budget\n\n* Important Info\n\n* Preferences\n",
+        "imageUrl": "https://images.code.org/656a66ae2e4c7a45afda5bbdbffe904a-you-2.jpg",
+        "key": "undefined-42e502a3-e175-46f1-b693-dc6455a6cdd6",
+        "layout": "text-bottom-center"
+      }
+    ],
+    "use_links": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-11T16:28:23.859+00:00\",\"changed\":[\"cloned from \\\"ai-and-the-systems-that-power-it-lesson6-marcus\\\"\"],\"cloned_from\":\"ai-and-the-systems-that-power-it-lesson6-marcus\"},{\"changed_at\":\"2026-09-11 16:31:10 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-11 16:36:14 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

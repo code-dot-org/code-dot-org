@@ -1,13 +1,11 @@
 import appMain from '@cdo/apps/appMain';
-import {singleton as studioApp} from '@cdo/apps/StudioApp';
-import Poetry from '@cdo/apps/p5lab/poetry/Poetry';
-import blocks from '@cdo/apps/p5lab/spritelab/blocks';
-import skins from '@cdo/apps/p5lab/skins';
-import levels from '@cdo/apps/p5lab/levels';
 import {getDefaultListMetadata} from '@cdo/apps/assetManagement/animationLibraryApi';
+import levels from '@cdo/apps/p5lab/levels';
+import Poetry from '@cdo/apps/p5lab/poetry/Poetry';
+import skins from '@cdo/apps/p5lab/skins';
+import blocks from '@cdo/apps/p5lab/spritelab/blocks';
 import defaultSprites from '@cdo/apps/p5lab/spritelab/defaultSprites.json';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
-import {getCurrentId} from '@cdo/apps/code-studio/initApp/project';
+import {singleton as studioApp} from '@cdo/apps/StudioApp';
 
 export default function loadPoetry(options) {
   options.skinsModule = skins;
@@ -21,14 +19,6 @@ export default function loadPoetry(options) {
     .catch(() => {
       // If the S3 request for defaultAnimationList fails, use a backup mini list of animations.
       let poetry = new Poetry(defaultSprites);
-
-      // Log data that we're using the backup default animations.
-      firehoseClient.putRecord({
-        study: 'sprite_default_load',
-        study_group: 'poetry',
-        event: 'backup_animations_used',
-        project_id: getCurrentId(),
-      });
       return initializeOptionsAndPoetry(poetry, options);
     });
 }

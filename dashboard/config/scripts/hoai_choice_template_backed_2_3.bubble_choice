@@ -1,0 +1,8 @@
+name 'HoAI_choice_template_backed_2_3'
+display_name 'Regenerate!'
+description 'From here you can go back to work on any part of your party.'
+
+sublevels
+level 'pilot_generate_dancer_choice_2_3'
+level 'length_prompt_choice_2_3'
+level 'dance_moves_choice_2_3'

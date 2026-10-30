@@ -22,8 +22,6 @@ function getMoocEnv(name) {
 
 // Export a set of environment variables used by our build process
 module.exports = {
-  // If set, page will reload itself when webpack bundle changes
-  AUTO_RELOAD: getBoolEnv('AUTORELOAD'),
   // Can be set to build a single app
   APP: getMoocEnv('APP'),
   // If set, will build uncompressed JS
@@ -32,15 +30,28 @@ module.exports = {
   // For details, see:
   // https://github.com/code-dot-org/code-dot-org/blob/staging/apps/docs/build.md
   DEBUG_MINIFIED: !!getMoocEnv('DEBUG_MINIFIED'),
+  // Overrides the `devtool` (source map) setting for `yarn start`.
+  // Under webpack (default 'eval-cheap-module-source-map'), =eval is the
+  // lowest-memory choice.  Under --rspack (default: maps for src/ only),
+  // =eval trades symbols for ~2s per shared-file rebuild — the
+  // src/ default already costs less memory.  Empty means unset.
+  APPS_DEVTOOL: process.env.APPS_DEVTOOL,
+  // If set, skips the parallel ForkTsCheckerWebpackPlugin type check, freeing
+  // ~2GB of memory during `yarn start`. Your editor and CI still type-check.
+  SKIP_TYPECHECK: getBoolEnv('SKIP_TYPECHECK'),
   // If set, will collect code coverage info
   COVERAGE: getBoolEnv('COVERAGE'),
   // 'unit', 'integration', 'storybook', or 'entry'
   NODE_ENV: process.env.NODE_ENV,
-  CIRCLECI: process.env.CIRCLECI,
-  DRONE: process.env.DRONE,
-  CIRCLE_TEST_REPORTS: process.env.CIRCLE_TEST_REPORTS,
-  // If set, will turn on react hot loader and run the webpack dev server
-  HOT: !!process.env.HOT,
+  CI: process.env.CI,
+  CI_TEST_REPORTS: process.env.CI_TEST_REPORTS,
+  // If set, run webpack dev server (with hot reloading)
+  HOT: process.env.HOT === '1',
   // Include static assets when serving storybook locally
   STORYBOOK_STATIC_ASSETS: process.env.STORYBOOK_STATIC_ASSETS,
+  // set Statsig local_mode to false to send events to statsig during local development
+  STATSIG_LOCAL_MODE_OFF: process.env.STATSIG_LOCAL_MODE_OFF,
+  // If set, enable build profiling for Grunt and Webpack
+  PROFILE_APPS_BUILD: getBoolEnv('PROFILE_APPS_BUILD'),
+  NODE_OPTIONS: process.env.NODE_OPTIONS,
 };

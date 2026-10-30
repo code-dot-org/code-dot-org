@@ -19,3 +19,7 @@ export type PlayStyle =
   | 'arpeggio-down'
   | 'arpeggio-random'
   | 'together';
+
+export function isChordEvent(event: PlaybackEvent): event is ChordEvent {
+  return event.type === 'chord';
+}

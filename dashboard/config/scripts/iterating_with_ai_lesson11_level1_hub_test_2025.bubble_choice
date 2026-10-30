@@ -1,0 +1,13 @@
+name 'iterating-with-ai-lesson11-level1-hub-test-2025'
+display_name 'Your Interactive Data Dashboard Support Hub'
+description 'Your goal: Use these levels in whatever way helps you move your project forward — whether that is exploring datasets, defining a clear schema, deciding which fields matter for filtering, or refining your data for fairness and visibility. You are in control of how and when to use these levels to meet the project goals.'
+uses_lab2
+
+sublevels
+level 'iterating-with-ai-lesson11-level1a-test-2025'
+level 'iterating-with-ai-lesson11-level1-test-2025'
+level 'iterating-with-ai-lesson11-level1c-test-2025'
+level 'iterating-with-ai-lesson11-level2-test-2025'
+level 'iterating-with-ai-lesson11-milestone1-test-2025'
+level 'iterating-with-ai-lesson11-milestone1-frq-test-2025'
+

@@ -1,0 +1,69 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2024-07-10T18:56:04.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "setProperty": {
+        "params": [
+          "\"screen1\"",
+          "\"background-color\"",
+          "\"red\""
+        ]
+      }
+    },
+    "edit_code": true,
+    "embed": "false",
+    "long_instructions": "<div style=\"float:right\">\r\n\t<img src=\"https://images.code.org/bf9b1fb57751fa90c9b786339914ad70-image-1508521068798.34.54 AM.png\" style=\"height:150px\"> \r\n</div>\r\n\r\n**Goal:** Make the screen green. \r\n\r\n**How:** Drag in a `setProperty()` block. Use the dropdowns to set the screen's `\"background-color\"` to `\"green\"`. Then hit \"Run\".\r\n\r\n**Stuck? Click here:** ![expandable](https://images.code.org/3b5e70522b02867a1df1d5b5e481785e-image-1511279858395.gif)",
+    "instructions_important": "true",
+    "submittable": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "true",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "disable_if_else_editing": "false",
+    "free_play": "true",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "true",
+    "execute_palette_apis_only": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "false",
+    "hide_view_data_button": "true",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "fail_on_lint_errors": "false",
+    "debugger_disabled": "true",
+    "makerlab_enabled": "false",
+    "display_name": "Change Screen Color",
+    "authored_hints": "[]",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"applab_hoc_finish\",\r\n  \"callout_text\": \"Did the screen turn green? If so, hit 'Finish'. If not, hit 'Reset', change your code, and hit 'Run' again.\",\r\n  \"element_id\": \"#finishButton\",\r\n  \"on\": \"run_button_pressed\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "top_level_procedure_autopopulate": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-07-10T18:56:04.636+00:00\",\"changed\":[\"cloned from \\\"AppLab Intro 7 - Change Screen Color_mb2022\\\"\"],\"cloned_from\":\"AppLab Intro 7 - Change Screen Color_mb2022\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Applab>

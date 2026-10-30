@@ -26,7 +26,7 @@ At runtime, DanceAI will use the three maps to lookup the scores for each output
 
 Note that `HoC2023AiGenerateWeights.py` does NOT execute at runtime; it is expected that `HoC2023AiGenerateWeights.py` is executed and associated map values generated PRIOR to runtime.
 
-If the generate script is given a value that does not exist in the existing maps/pickle files, it will output an HTTP request to the current LLM API (e.g. AWS Bedrock) requesting for an embedding. This step is the only one where Code.org can be charged according to the pricing structure of the LLM and appropriate care must therefore take place to ensure that we are not excessively billed for verbose queries.
+If the generate script is given a value that does not exist in the existing maps/pickle files, it will output an HTTP request to the current LLM API (e.g. AWS Bedrock) requesting for an embedding. This step is the only one where CodeAI can be charged according to the pricing structure of the LLM and appropriate care must therefore take place to ensure that we are not excessively billed for verbose queries.
 
 ## AWS Titan Setup
 

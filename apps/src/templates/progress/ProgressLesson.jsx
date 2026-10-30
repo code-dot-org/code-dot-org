@@ -1,29 +1,33 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton, Typography} from '@mui/material';
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import ProgressLessonContent from './ProgressLessonContent';
-import FontAwesome from '../FontAwesome';
-import color from '@cdo/apps/util/color';
-import {levelWithProgressType, lessonType} from './progressTypes';
+import ReactTooltip from 'react-tooltip';
+
+import {canUseLessonDeepDive} from '@cdo/apps/aichat/helpers/aiChatAccess';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
+
+import FocusAreaIndicator from './FocusAreaIndicator';
 import {
   lessonIsVisible,
   lessonIsLockedForUser,
   lessonIsLockedForAllStudents,
 } from './progressHelpers';
+import ProgressLessonContent from './ProgressLessonContent';
 import ProgressLessonTeacherInfo from './ProgressLessonTeacherInfo';
-import FocusAreaIndicator from './FocusAreaIndicator';
-import ReactTooltip from 'react-tooltip';
-import _ from 'lodash';
-import Button from '../Button';
-import fontConstants from '@cdo/apps/fontConstants';
+import {levelWithProgressType, lessonType} from './progressTypes';
 
 class ProgressLesson extends React.Component {
   static propTypes = {
     lesson: lessonType.isRequired,
     levels: PropTypes.arrayOf(levelWithProgressType).isRequired,
+    isOnLevelView: PropTypes.bool,
 
     // redux provided
     scriptId: PropTypes.number,
@@ -39,6 +43,11 @@ class ProgressLesson extends React.Component {
     isRtl: PropTypes.bool,
     isMiniView: PropTypes.bool,
     lockStatusLoaded: PropTypes.bool.isRequired,
+    unitHasUnnumberedLessons: PropTypes.bool.isRequired,
+    userId: PropTypes.number,
+    userType: PropTypes.string,
+    unitName: PropTypes.string,
+    aiChatAccessLevel: PropTypes.string,
   };
 
   constructor(props) {
@@ -68,19 +77,17 @@ class ProgressLesson extends React.Component {
       collapsed: !this.state.collapsed,
     });
 
-  onClickStudentLessonPlan = () => {
-    firehoseClient.putRecord(
-      {
-        study: 'script_overview_actions',
-        study_group: 'student_lesson_plan',
-        event: 'open_student_lesson_plan',
-        data_json: JSON.stringify({
-          lesson_id: this.props.lesson.id,
-          script_id: this.props.scriptId,
-        }),
-      },
-      {includeUserId: true}
-    );
+  handleLessonTutorClick = () => {
+    const {lesson, scriptId, unitName, userId, userType} = this.props;
+    analyticsReporter.sendEvent(EVENTS.LESSON_TUTOR_UNIT_OVERVIEW_CLICK, {
+      lessonId: lesson.id,
+      lessonName: lesson.name,
+      unitId: scriptId,
+      unitName,
+      userId,
+      userType,
+      view: 'progress-lesson',
+    });
   };
 
   render() {
@@ -94,6 +101,10 @@ class ProgressLesson extends React.Component {
       isLockedForAllStudents,
       selectedSectionId,
       isRtl,
+      unitHasUnnumberedLessons,
+      isOnLevelView,
+      userId,
+      aiChatAccessLevel,
     } = this.props;
 
     if (!isVisible) {
@@ -102,12 +113,22 @@ class ProgressLesson extends React.Component {
 
     const showAsLocked = isLockedForUser || isLockedForAllStudents;
 
-    const title = lesson.lessonNumber
-      ? i18n.lessonNumbered({
-          lessonNumber: lesson.lessonNumber,
-          lessonName: lesson.name,
-        })
-      : lesson.name;
+    const title =
+      lesson.lessonNumber && !unitHasUnnumberedLessons
+        ? i18n.lessonNumbered({
+            lessonNumber: lesson.lessonNumber,
+            lessonName: lesson.name,
+          })
+        : lesson.name;
+
+    // We want to exclude the Lesson Tutor button for assessment and survey lessons.
+    // These lessons don't have lesson plans, so we can use that as a proxy for
+    // whether or not to show the Lesson Tutor button.
+    const showLessonTutorButton =
+      lesson.lessonTutorPath &&
+      lesson.hasLessonPlan &&
+      userId &&
+      canUseLessonDeepDive(aiChatAccessLevel);
 
     // Adjust caret style if locale is RTL
     const caretStyle = isRtl ? styles.caretRTL : styles.caret;
@@ -119,12 +140,6 @@ class ProgressLesson extends React.Component {
       viewAs === ViewType.Instructor
         ? lesson.description_teacher
         : lesson.description_student;
-
-    // There's no url for a lesson so use the url of the first level of the lesson
-    // as the url for the lesson.
-    // TODO: Make the back-end return a lesson url as part of the lesson metadata so we
-    // don't need to pass it separately from lesson here and in ProgressLessonTeacherInfo.
-    const lessonUrl = levels[0] && levels[0].url;
 
     // If a instructor is not verified they will not be lockableAuthorized (meaning they can't
     // lock or unlock lessons). For a lockable lesson where instructor is not authorized, we will
@@ -171,14 +186,14 @@ class ProgressLesson extends React.Component {
               }}
               aria-expanded={!this.state.collapsed}
             >
-              <FontAwesome icon={caret} style={caretStyle} />
+              <FontAwesomeV6Icon iconName={caret} style={caretStyle} />
               {hiddenForStudents && (
-                <FontAwesome icon="eye-slash" style={styles.icon} />
+                <FontAwesomeV6Icon iconName="eye-slash" style={styles.icon} />
               )}
               {lesson.lockable && this.props.lockStatusLoaded && (
                 <span data-tip data-for={lockedTooltipId}>
-                  <FontAwesome
-                    icon={showAsLocked ? 'lock' : 'unlock'}
+                  <FontAwesomeV6Icon
+                    iconName={showAsLocked ? 'lock' : 'unlock'}
                     style={{
                       ...styles.icon,
                       ...(!showAsLocked && styles.unlockedIcon),
@@ -196,23 +211,51 @@ class ProgressLesson extends React.Component {
                   )}
                 </span>
               )}
-              <span>{title}</span>
+              <Typography variant="h5" component="span">
+                {title}
+              </Typography>
             </div>
-            {viewAs === ViewType.Participant &&
-              lesson.student_lesson_plan_html_url && (
-                <span style={styles.buttonStyle}>
-                  <Button
-                    __useDeprecatedTag
-                    className="ui-test-lesson-resources"
-                    href={lesson.student_lesson_plan_html_url}
-                    text={i18n.lessonResources()}
-                    icon="file-text"
-                    color="purple"
-                    target="_blank"
-                    onClick={this.onClickStudentLessonPlan}
-                  />
-                </span>
-              )}
+            {!isOnLevelView && (
+              <div style={styles.buttonColumn}>
+                {viewAs === ViewType.Participant &&
+                  lesson.student_lesson_plan_html_url && (
+                    <MuiButton
+                      size="small"
+                      className="ui-test-lesson-resources"
+                      href={lesson.student_lesson_plan_html_url}
+                      variant="outlined"
+                      color="secondary"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      startIcon={<FontAwesomeV6Icon iconName="file-lines" />}
+                    >
+                      {i18n.lessonResources()}
+                    </MuiButton>
+                  )}
+                {showLessonTutorButton &&
+                  experiments.isEnabledAllowingQueryString(
+                    experiments.LESSON_TUTOR
+                  ) && (
+                    <MuiButton
+                      href={lesson.lessonTutorPath}
+                      variant="outlined"
+                      color="secondary"
+                      size="small"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={this.handleLessonTutorClick}
+                      startIcon={
+                        <FontAwesomeV6Icon
+                          iconName="ai-bot-solid"
+                          iconFamily="kit"
+                        />
+                      }
+                    >
+                      {'Lesson Tutor'}
+                    </MuiButton>
+                  )}
+              </div>
+            )}
           </div>
           {showNotAuthorizedWarning && (
             <div style={styles.notAuthorizedWarning}>
@@ -236,11 +279,7 @@ class ProgressLesson extends React.Component {
           )}
         </div>
         {viewAs === ViewType.Instructor && !this.props.isMiniView && (
-          <ProgressLessonTeacherInfo
-            lesson={lesson}
-            lessonUrl={lessonUrl}
-            onClickStudentLessonPlan={this.onClickStudentLessonPlan}
-          />
+          <ProgressLessonTeacherInfo lesson={lesson} />
         )}
         {lesson.isFocusArea && <FocusAreaIndicator />}
       </div>
@@ -254,8 +293,8 @@ const styles = {
     display: 'table',
     width: '100%',
     height: '100%',
-    background: color.lightest_gray,
-    borderColor: color.border_gray,
+    background: 'var(--background-neutral-primary)',
+    borderColor: 'var(--borders-neutral-primary)',
     borderStyle: 'solid',
     borderRadius: 2,
     // When toggling between hidden and not, we change our border size from 1 to 4.
@@ -272,7 +311,7 @@ const styles = {
   },
   heading: {
     fontSize: 18,
-    ...fontConstants['main-font-semi-bold'],
+    fontWeight: 600,
     display: 'flex',
     alignItems: 'center',
   },
@@ -280,7 +319,11 @@ const styles = {
     cursor: 'pointer',
     flexGrow: 1,
   },
-  buttonStyle: {
+  buttonColumn: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'stretch',
+    gap: 8,
     marginLeft: 'auto',
   },
   hiddenOrLocked: {
@@ -303,14 +346,15 @@ const styles = {
   icon: {
     marginRight: 5,
     fontSize: 18,
-    color: color.cyan,
+    color: 'var(--text-info-primary)',
   },
   unlockedIcon: {
-    color: color.orange,
+    color: 'var(--text-warning-primary)',
   },
   notAuthorizedWarning: {
-    color: color.red,
-    ...fontConstants['main-font-semi-bold-italic'],
+    color: 'var(--text-error-primary)',
+    fontWeight: 600,
+    fontStyle: 'italic',
     marginTop: 10,
   },
   learnMoreLink: {
@@ -348,4 +392,9 @@ export default connect((state, ownProps) => ({
   lockStatusLoaded:
     state.progress.unitProgressHasLoaded &&
     state.lessonLock.lessonsBySectionIdLoaded,
+  unitHasUnnumberedLessons: state.progress.unitHasUnnumberedLessons,
+  userId: state.currentUser.userId,
+  userType: state.currentUser.userType,
+  unitName: state.progress.unitTitle,
+  aiChatAccessLevel: state.currentUser.aiChatAccessLevel,
 }))(ProgressLesson);

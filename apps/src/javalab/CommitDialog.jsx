@@ -1,17 +1,19 @@
-import React from 'react';
+import _ from 'lodash';
 import PropTypes from 'prop-types';
-import i18n from '@cdo/javalab/locale';
-import color from '@cdo/apps/util/color';
+import React from 'react';
+import {connect} from 'react-redux';
+
+import fontConstants from '@cdo/apps/fontConstants';
+import {setCommitSaveStatus} from '@cdo/apps/javalab/redux/javalabRedux';
+import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
 import StylizedBaseDialog, {
   FooterButton,
-} from '@cdo/apps/componentLibrary/StylizedBaseDialog';
-import {connect} from 'react-redux';
-import _ from 'lodash';
+} from '@cdo/apps/sharedComponents/StylizedBaseDialog';
+import color from '@cdo/apps/util/color';
+import i18n from '@cdo/javalab/locale';
+
 import CommitDialogBody from './CommitDialogBody';
-import {setCommitSaveStatus} from '@cdo/apps/javalab/redux/javalabRedux';
 import {CompileStatus} from './constants';
-import {BackpackAPIContext} from './BackpackAPIContext';
-import fontConstants from '@cdo/apps/fontConstants';
 
 const PADDING = 8;
 
@@ -91,12 +93,15 @@ export class UnconnectedCommitDialog extends React.Component {
     // TODO: Add compile status here
     if (saveInProgress) {
       footerIcon = (
-        <span className="fa fa-spin fa-spinner" style={styles.spinner} />
+        <span className="fa-solid fa-spin fa-spinner" style={styles.spinner} />
       );
       footerMessageTitle = i18n.saving();
     } else if (hasError) {
       footerIcon = (
-        <span className="fa fa-exclamation-circle" style={styles.iconError} />
+        <span
+          className="fa-solid fa-circle-exclamation"
+          style={styles.iconError}
+        />
       );
       footerMessageTitle = i18n.backpackErrorTitle();
       footerMessageText = hasBackpackLoadError

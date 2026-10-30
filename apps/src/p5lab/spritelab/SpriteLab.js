@@ -1,15 +1,17 @@
-import * as utils from '@cdo/apps/utils';
-import msg from '@cdo/spritelab/locale';
-import P5Lab from '../P5Lab';
-import {P5LabType} from '../constants';
-import Sounds from '@cdo/apps/Sounds';
-import {getStore} from '@cdo/apps/redux';
-import {clearConsole} from '../redux/textConsole';
-import {clearPrompts, popPrompt} from '../redux/spritelabInput';
-import CoreLibrary from './CoreLibrary';
 import React from 'react';
-import {singleton as studioApp} from '../../StudioApp';
+
+import {getStore} from '@cdo/apps/redux';
+import Sounds from '@cdo/apps/Sounds';
+import msg from '@cdo/spritelab/locale';
+
 import {closeWorkspaceAlert} from '../../code-studio/projectRedux';
+import {singleton as studioApp} from '../../StudioApp';
+import {P5LabType} from '../constants';
+import P5Lab from '../P5Lab';
+import {clearPrompts, popPrompt} from '../redux/spritelabInput';
+import {clearConsole} from '../redux/textConsole';
+
+import CoreLibrary from './CoreLibrary';
 
 export default class SpriteLab extends P5Lab {
   getAvatarUrl(levelInstructor) {
@@ -69,7 +71,8 @@ export default class SpriteLab extends P5Lab {
       this.initInterpreter(false /* attachDebugger */);
       this.onP5Setup();
       this.p5Wrapper.p5.redraw();
-    } else {
+    } else if (!studioApp().share) {
+      // In the share view, run is executed on load, so we can skip the preview execution.
       this.p5Wrapper.startExecution();
       this.p5Wrapper.setLoop(false);
     }
@@ -128,26 +131,6 @@ export default class SpriteLab extends P5Lab {
   onPromptAnswer(variableName, value) {
     getStore().dispatch(popPrompt());
     this.library.onPromptAnswer(variableName, value);
-  }
-
-  setupReduxSubscribers(store) {
-    super.setupReduxSubscribers(store);
-    let state = {};
-    store.subscribe(function () {
-      const lastState = state;
-      state = store.getState();
-
-      if (
-        lastState.animationList?.propsByKey !== state.animationList?.propsByKey
-      ) {
-        if (window.Blockly && Blockly.mainBlockSpace) {
-          const customEvent = utils.createEvent(
-            Blockly.BlockSpace.EVENTS.ANIMATIONS_CHANGED
-          );
-          Blockly.mainBlockSpace.events.dispatchEvent(customEvent);
-        }
-      }
-    });
   }
 
   /**

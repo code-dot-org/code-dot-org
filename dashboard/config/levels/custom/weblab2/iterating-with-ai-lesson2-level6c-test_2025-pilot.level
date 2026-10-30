@@ -1,0 +1,72 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2025-12-22T17:39:42.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Countdown Timer",
+    "thumbnail_url": "https://images.code.org/38fc9421cd7cfbf7955fa9abcc41a340-countdown.png",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "long_instructions": "## Countdown Timer\r\n\r\n**Goal**: Use a **for loop** to make the number count down from **10 to 0**. Each number should appear once per second.\r\n\r\n---\r\n\r\n### Do This\r\n\r\n1. **Find where to write your loop** inside the `countdown()` function.\r\n\r\n2. Use a **for loop** that starts at **10** and ends at **0**, counting down by **1** each time.\r\n\r\n3. Inside your loop, use the loop variable to change the on-screen number.\r\n\r\n   **Syntax:**\r\n\r\n   ```js\r\n   count.textContent = num;\r\n   ```\r\n\r\n4. Use `setTimeout()` to delay each update so the numbers appear one after another.\r\n\r\n   * Hint: multiply your delay by how far the loop has counted down, for example:\r\n     `(start - num) * 1000`\r\n\r\n5. Make sure the countdown ends cleanly at **0**.\r\n\r\n---\r\n\r\n<details>\r\n  <summary>Need help? Ask the AI Tutor.</summary>\r\n  \t<ol>\r\n      \t<li>\"How can I make my countdown change once per second?\"</li>\r\n      \t<li>\"Why do we multiply by (start - num) for the delay?\"</li>\r\n      \t<li>\"What does the loop variable control in this loop?\"</li>\r\n    </ol>\r\n</details>\r\n",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n  <title>Countdown Timer</title>\n  <link rel=\"stylesheet\" href=\"style.css\" />\n</head>\n<body>\n  <h1>Countdown Timer</h1>\n  <button id=\"runButton\">Start Countdown</button>\n\n  <div id=\"screen\">\n    <span id=\"count\">10</span>\n  </div>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "active": true,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "script.js",
+          "language": "js",
+          "contents": "const count = document.getElementById(\"count\");\nconst runButton = document.getElementById(\"runButton\");\n\nconst countdown = () => {\n\n\n\n};\n\nrunButton.addEventListener(\"click\", countdown);\n",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  font-family: system-ui, sans-serif;\n  background: #f6f9fc;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  height: 100vh;\n}\n\nh1 {\n  margin-bottom: 10px;\n}\n\n#screen {\n  width: 150px;\n  height: 150px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  border-radius: 50%;\n  background: #4caf50;\n  color: white;\n  font-size: 3rem;\n  margin-top: 20px;\n  transition: background 0.3s ease;\n}\n\nbutton {\n  background: #333;\n  color: white;\n  border: none;\n  padding: 10px 18px;\n  border-radius: 6px;\n  cursor: pointer;\n  font-size: 1rem;\n}\n\nbutton:hover {\n  background: #111;\n}\n",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nX2XiieLI+HsSt/XiwCWbiZI/nOi9pne1\n",
+    "bubble_choice_description": "Use a for loop to make the number count down from 10 to 0.",
+    "name_suffix": "_2025-pilot"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-12-22T17:39:42.589+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson2-level6c-test-2025\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson2-level6c-test-2025\"}]"
+}]]></config>
+</Weblab2>

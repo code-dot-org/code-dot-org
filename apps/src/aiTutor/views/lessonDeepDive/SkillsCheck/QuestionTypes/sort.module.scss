@@ -1,0 +1,26 @@
+.optionsRows {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 8px;
+  padding: 16px 0;
+}
+
+.dropZone {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 200px;
+  padding: 12px 4px;
+  align-items: center;
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 4px;
+}
+
+.cardLabel {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 8px;
+  color: var(--text-neutral-secondary);
+}

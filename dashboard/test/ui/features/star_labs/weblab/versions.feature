@@ -1,11 +1,11 @@
 # Brad investigating (2018-04-25)
 @skip
-@no_circle
+@no_ci
 @as_student
 Feature: Weblab Versions
 
 Background:
-  Given I am on "http://studio.code.org/s/allthethings/lessons/32/levels/1?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/ui-test-all-the-levels/units/1/lessons/32/levels/1?noautoplay=true"
   Then I debug channel id
   And I wait until element "#submitButton" is visible
 
@@ -29,7 +29,7 @@ Scenario: Weblab Versions
   And I wait for 3 seconds
   Then I press "versions-header"
   And I wait until element "button:contains(Restore):eq(0)" is visible
-  And element "button.btn-info" is visible
+  And element "a:contains(View)" is visible
   And I click selector "button:contains(Restore):eq(0)"
   And I wait until element "#showVersionsModal" is gone
   And I wait for 3 seconds

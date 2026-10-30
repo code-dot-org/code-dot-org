@@ -1,26 +1,28 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import {connect} from 'react-redux';
-import color from '@cdo/apps/util/color';
-import JavalabConsole from './JavalabConsole';
-import JavalabEditor from './JavalabEditor';
-import JavalabPanels from './JavalabPanels';
-import JavalabCaptchaDialog from './JavalabCaptchaDialog';
-import {setIsRunning, setIsTesting} from './redux/javalabRedux';
-import {appendOutputLog} from './redux/consoleRedux';
-import {setDisplayTheme} from './redux/viewRedux';
-import {DisplayTheme} from './DisplayTheme';
-import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
+
+import {queryParams} from '@cdo/apps/code-studio/utils';
+import {VIEWING_CODE_REVIEW_URL_PARAM} from '@cdo/apps/templates/instructions/CommitsAndReviewTab';
 import TopInstructions, {
   TabType,
 } from '@cdo/apps/templates/instructions/TopInstructions';
-import javalabMsg from '@cdo/javalab/locale';
 import {hasInstructions} from '@cdo/apps/templates/instructions/utils';
-import {VIEWING_CODE_REVIEW_URL_PARAM} from '@cdo/apps/templates/instructions/CommitsAndReviewTab';
-import ControlButtons from './ControlButtons';
-import {CsaViewMode} from './constants';
+import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
+import color from '@cdo/apps/util/color';
+import javalabMsg from '@cdo/javalab/locale';
+
 import styleConstants from '../styleConstants';
-import {queryParams} from '@cdo/apps/code-studio/utils';
+
+import {CsaViewMode} from './constants';
+import ControlButtons from './ControlButtons';
+import {DisplayTheme} from './DisplayTheme';
+import JavalabConsole from './JavalabConsole';
+import JavalabEditor from './JavalabEditor';
+import JavalabPanels from './JavalabPanels';
+import {appendOutputLog} from './redux/consoleRedux';
+import {setIsRunning, setIsTesting} from './redux/javalabRedux';
+import {setDisplayTheme} from './redux/viewRedux';
 
 class JavalabView extends React.Component {
   static propTypes = {
@@ -141,26 +143,6 @@ class JavalabView extends React.Component {
     );
   };
 
-  onCaptchaVerify = () => {
-    const {isRunning, isTesting, onRun, onTest} = this.props;
-    if (isRunning) {
-      onRun();
-    }
-    if (isTesting) {
-      onTest();
-    }
-  };
-
-  onCaptchaCancel = () => {
-    const {isRunning, isTesting, setIsRunning, setIsTesting} = this.props;
-    if (isRunning) {
-      setIsRunning(false);
-    }
-    if (isTesting) {
-      setIsTesting(false);
-    }
-  };
-
   render() {
     const {
       displayTheme,
@@ -215,10 +197,6 @@ class JavalabView extends React.Component {
             ...styles.javalab,
           }}
         >
-          <JavalabCaptchaDialog
-            onVerify={this.onCaptchaVerify}
-            onCancel={this.onCaptchaCancel}
-          />
           <JavalabPanels
             isLeftSideVisible={this.isLeftSideVisible()}
             viewMode={viewMode}

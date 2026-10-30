@@ -1,0 +1,72 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-03-19T13:02:13.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Katie wants to be a web designer, and really loves otters. She made this website with the help of AI. First she created a `vision.txt` file, and then AI Tutor made a website based on her request. Soon we'll try the same process.\r\n\r\n**Do This:** look at her website and **notice** patterns in the code that help create her site. Try using AI Tutor for help by highlighting text and clicking \"Add to AI Tutor Chat\" to ask how different snippets of code work. This is one way to collaborate with your AI assistant - asking it to explain new things!\r\n\r\n![](https://images.code.org/ec812ef088420ec3556220200feb53d9-image-1773896469655.png)\r\n\r\n**Challenge:** This website has a _bug_ in the last part of the website. Use AI Tutor to help you find the bug and see if you can fix it!",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "true",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "hint",
+        "explainCode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <title>All About Otters!</title>\n  </head>\n  <body>\n    <header>\n      <h1>Welcome to the Otter Zone!</h1>\n      <img src=\"otter.jpg\" alt=\"A cute brown otter floating in a river\">\n      <p>Image by Michael Baird photography</p>\n    </header>\n\n    <main>\n      <section>\n        <h2>Cool Otter Facts!</h2>\n        <ul>\n          <li>Did you know otters hold hands when they sleep so they don't drift apart? Awww!</li>\n          <li>They can also hold their breath for a loooong time underwater!</li>\n        </ul>\n      </section>\n\n      <section>\n        <h2>Otterly Amazing Swimmers!</h2>\n        <p>Otters are super speedy in the water! They use their powerful tails and webbed feet to zoom around.</p>\n        <p>They can dive deep to find yummy snacks like fish and crabs.</p>\n      </section>\n\n      <section>\n        <h2>Where in the World are Otters?\n        <p>You can find different kinds of otters all over the globe, from chilly Alaska to sunny Brazil.</p>\n        <p>Some live in rivers, some in coasts, and some even in the open ocean!</p>\n      </section>\n    </main>\n\n    <footer>\n      <p>Thanks for visiting the otter-tastic website!</p>\n    </footer>\n  </body>\n</html>",
+          "active": true,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "otter.jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/hoai-web-design-v2-2/uuid/de7dca6a-8250-448e-91ba-3507de49029a.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "vision.txt",
+          "contents": "Make me a website with the following details:\n\nI want a website about: Otters\nMake sure to include:\n- Interesting facts about otters\n- Information about how they swim\n- Places around the world to find otters\n\nI want the tone of my website to be: casual and fun\n\nI'm making this website because: I love otters and I want everyone to know",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3"
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-03-19T13:02:13.202+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-v2-2\\\"\"],\"cloned_from\":\"hoai-web-design-v2-2\"},{\"changed_at\":\"2026-03-19 13:02:16 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Weblab2>

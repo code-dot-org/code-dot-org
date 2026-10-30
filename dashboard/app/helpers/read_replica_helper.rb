@@ -10,15 +10,17 @@ module ReadReplicaHelper
   module GatekeeperReadReplica
     extend ActiveSupport::Concern
     module ClassMethods
+      # On by default on development and test environments to exercise read splitting earlier (even when there isn't
+      # a separate read replica database). Defaults to disabled on production.
       def read_replica?
-        Gatekeeper.allows('dashboard_read_replica')
+        Gatekeeper.allows('dashboard_read_replica', default: rack_env?(:development, :test))
       end
 
-      def connected_to(database: nil, role: nil, prevent_writes: false, &blk)
+      def connected_to(role: nil, prevent_writes: false, &blk)
         if read_replica?
           super
         else
-          super(database: database, role: :writing, prevent_writes: prevent_writes, &blk)
+          super(role: :writing, prevent_writes: prevent_writes, &blk)
         end
       end
     end

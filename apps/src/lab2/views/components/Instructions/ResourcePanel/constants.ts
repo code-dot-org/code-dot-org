@@ -1,0 +1,32 @@
+export const RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN =
+  'resourcePanelPinnedButtonOnboardingTourSeen';
+
+export const VALIDATION_TOUR_SEEN = 'validationTourSeen';
+
+export const AI_TUTOR_DOT_SEEN_KEY_PREFIX = 'aiTutorDotSeen';
+
+export const resourcePanelInstructionsElementId = 'resource-panel-instructions';
+
+export const resourcePanelTabsElementId = 'resource-panel-tabs';
+
+export const resourcePanelLinksElementId = 'resource-panel-links';
+
+export const resourcePanelNavigationButtonElementId =
+  'resource-panel-navigation-button';
+
+export const resourcePanelTabValidationElementId =
+  'resource-panel-tab-validation';
+
+export const resourcePanelValidateButtonElementId =
+  'resource-panel-validate-button';
+
+export const resourcePanelValidationTableElementId =
+  'resource-panel-validation-table';
+
+export const instructionsValidateButtonElementId =
+  'instructions-validate-button';
+
+export const resourcePanelValidationTabButtonElementId =
+  'resource-panel-tab-button-validation';
+
+export const VALIDATION_COMPLETE_EVENT = 'validation-complete';

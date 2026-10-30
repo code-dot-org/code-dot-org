@@ -1,0 +1,194 @@
+@use '@code-dot-org/component-library-styles/mixins' as mixins;
+
+.studentCFUWidgetQuestionsSectionContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+  align-self: stretch;
+
+  .heading {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .questionsList {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .cfuQuestionWrapper {
+    @include mixins.transition-all;
+
+    display: flex;
+    padding: 0.5rem 0.75rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    align-self: stretch;
+    border-radius: 0.25rem;
+    border: 1px solid var(--borders-neutral-primary, #D4DAE1);
+    background: var(--background-neutral-primary, #FFF);
+  }
+
+  .cfuQuestionWrapperOpen {
+    gap: 0.5rem;
+  }
+
+  .cfuQuestionContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+
+    .cfuQuestionLeftPart {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      flex: 1 0 0;
+      border-radius: 0.25rem;
+
+      .levelNumber {
+        display: flex;
+        width: 1.625rem;
+        height: 1.625rem;
+        //padding: 0.125rem 0.3125rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.625rem;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        border: 1px solid var(--borders-neutral-primary, #D4DAE1);
+        background: var(--background-neutral-primary, #FFF);
+      }
+
+      .cfuQuestionTypeContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        flex: 1 0 0;
+
+        p {
+          align-self: stretch;
+        }
+
+        .cfuQuestionAssessmentType {
+          color: var(--text-neutral-tertiary, #576575);
+        }
+      }
+    }
+
+    .cfuQuestionRightPart {
+      display: flex;
+      min-width: 10.3125rem;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 0.25rem;
+      color: var(--text-neutral-secondary, #69788A);
+
+      .cfuQuestionRightPartAiInsightIcon {
+        color: var(--background-brand-aqua-strong);
+      }
+
+      .cfuStatusBucketTags-correct {
+        > div {
+          // styles overridden because DSCO Tags component does not have colors prop yet.
+          background: var(--background-success-light, #C7ECC6);
+          border-color: var(--border-success-mid, #7CDB87);
+          span {
+            color: var(--text-success-secondary, #17541E);
+          }
+          i {
+            color: var(--text-success-secondary, #17541E);
+          }
+        }
+      }
+
+      .cfuStatusBucketTags-partially_correct {
+        > div {
+          // styles overridden because DSCO Tags component does not have colors prop yet.
+          background: var(--background-warning-light, #FFF5DA);
+          border-color: var(--border-warning-mid, #FFD35C);
+          span {
+            color: var(--text-warning-secondary, #885D02);
+          }
+          i {
+            color: var(--text-warning-secondary, #885D02);
+          }
+        }
+      }
+
+      .cfuStatusBucketTags-incorrect {
+        > div {
+          // styles overridden because DSCO Tags component does not have colors prop yet.
+          background: var(--background-error-light, #FFDADA);
+          border-color: var(--border-error-mid, #F69898);
+          span {
+            color: var(--text-error-secondary, #B30F0F);
+          }
+          i {
+            color: var(--text-error-secondary, #B30F0F);
+          }
+        }
+      }
+
+      .cfuStatusBucketTags-incomplete {
+        > div {
+          // styles overridden because DSCO Tags component does not have colors prop yet.
+          background: var(--background-neutral-tertiary, #E1E3E6);
+          border-color: var(--border-neutral-secondary, #9EA5AD);
+          span {
+            color: var(--text-neutral-secondary, #363B40);
+          }
+          i {
+            color: var(--text-neutral-secondary, #363B40);
+          }
+        }
+      }
+    }
+  }
+
+  .cfuQuestionStudentAnswer {
+    @include mixins.transition-all;
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    align-self: stretch;
+    border-radius: 0.25rem;
+    border: 0 solid var(--borders-neutral-primary, #D4DAE1);
+    background: var(--background-neutral-secondary, #F0F2F5);
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+
+    > div {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      align-self: stretch;
+      gap: 0.25rem;
+    }
+  }
+
+  .cfuQuestionWrapperOpen .cfuQuestionStudentAnswer {
+    max-height: 1000px;
+    opacity: 1;
+    border-width: 1px;
+    padding: 0.75rem;
+  }
+
+  .cfuQuestionExpandIcon {
+    @include mixins.transition-all;
+  }
+
+  .cfuQuestionWrapperOpen .cfuQuestionExpandIcon {
+    transform: rotate(180deg);
+  }
+}

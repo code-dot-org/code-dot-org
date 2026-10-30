@@ -1,0 +1,176 @@
+import {Meta, StoryFn} from '@storybook/react-vite';
+
+import Tags from '@/tags';
+
+import {
+  RadioButton,
+  RadioButtonProps,
+  RadioButtonsGroup,
+  RadioButtonsGroupProps,
+} from '../index';
+
+export default {
+  title: 'DesignSystem/Radio Button',
+  /**
+   * Storybook Docs Generation doesn't work properly (as of 07.19.2023).
+   * This workaround (component: Component.type instead of component: Component) is taken from
+   * https://github.com/storybookjs/storybook/issues/18136#issue-1225692751
+   * Feel free to remove this workaround when storybook fixes this issue.
+   */
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore-next-line
+  component: RadioButton.type,
+} as Meta;
+
+//
+// TEMPLATE
+//
+// This is needed to fix children type error (passing string instead of React.ReactNode type)
+const SingleTemplate: StoryFn<RadioButtonProps> = args => (
+  <RadioButton {...args} />
+);
+
+const MultipleTemplate: StoryFn<RadioButtonsGroupProps> = args => (
+  <>
+    <RadioButtonsGroup {...args} />
+  </>
+);
+
+export const DefaultRadioButton = SingleTemplate.bind({});
+DefaultRadioButton.args = {
+  name: 'radio1',
+  label: 'RadioButton 1',
+  value: 'radio1',
+};
+
+export const DefaultRadioButtonGroup = MultipleTemplate.bind({});
+DefaultRadioButtonGroup.args = {
+  radioButtons: [
+    {name: 'radio1', label: 'RadioButton 1', value: 'radio1'},
+    {name: 'radio2', label: 'RadioButton 2', value: 'radio2'},
+  ],
+};
+
+export const DisabledRadioButton = MultipleTemplate.bind({});
+DisabledRadioButton.args = {
+  defaultValue: 'test-disabled-checked',
+  radioButtons: [
+    {
+      name: 'test-disabled',
+      value: 'test-disabled',
+      label: 'Disabled radioButton',
+      disabled: true,
+    },
+    {
+      name: 'test-disabled-checked',
+      value: 'test-disabled-checked',
+      label: 'Disabled checked radioButton',
+      disabled: true,
+    },
+  ],
+};
+
+export const RadioButtonsWithCustomContent = MultipleTemplate.bind({});
+RadioButtonsWithCustomContent.args = {
+  radioButtons: [
+    {
+      name: 'test-custom-content-0',
+      value: 'test-custom-content-0',
+      label: '',
+      size: 'm',
+      children: (
+        <>
+          <span>With Custom Content</span>
+          <button type="button">Custom content</button>
+        </>
+      ),
+    },
+    {
+      name: 'test-custom-content-1',
+      value: 'test-custom-content-1',
+      label: 'With Custom Content and Label',
+      size: 'm',
+      children: (
+        <Tags
+          tagsList={[
+            {label: 'Tag1', tooltipContent: 'Tag tooltip', tooltipId: ''},
+          ]}
+        />
+      ),
+    },
+    {
+      name: 'test-custom-content-2',
+      value: 'test-custom-content-2',
+      label: 'Without Custom Content',
+      size: 'm',
+    },
+  ],
+};
+
+export const SizesOfRadioButton = MultipleTemplate.bind({});
+SizesOfRadioButton.args = {
+  radioButtons: [
+    {name: 'test-xs', value: 'test-xs', label: 'Label - XS', size: 'xs'},
+    {name: 'test-s', value: 'test-s', label: 'Label - S', size: 's'},
+    {name: 'test-m', value: 'test-m', label: 'Label - M', size: 'm'},
+    {name: 'test-l', value: 'test-l', label: 'Label - L', size: 'l'},
+  ],
+};
+
+export const LabelWeights = MultipleTemplate.bind({});
+LabelWeights.args = {
+  radioButtons: [
+    {
+      name: 'lw-thin',
+      value: 'lw-thin',
+      label: 'Thin label',
+      textThickness: 'thin',
+      size: 'm',
+    },
+    {
+      name: 'lw-thick',
+      value: 'lw-thick',
+      label: 'Thick label',
+      textThickness: 'thick',
+      size: 'm',
+    },
+  ],
+};
+
+export const MultiLineLabels: StoryFn<RadioButtonsGroupProps> = args => (
+  <div style={{maxWidth: 220}}>
+    <RadioButtonsGroup {...args} />
+  </div>
+);
+MultiLineLabels.args = {
+  radioButtons: [
+    {
+      name: 'wrap-xs',
+      value: 'wrap-xs',
+      size: 'xs',
+      label:
+        'This is a quite long label intended to wrap onto multiple lines to demonstrate alignment.',
+    },
+    {
+      name: 'wrap-s',
+      value: 'wrap-s',
+      size: 's',
+      label:
+        'This is a quite long label intended to wrap onto multiple lines to demonstrate alignment.',
+    },
+    {
+      name: 'wrap-m',
+      value: 'wrap-m',
+      size: 'm',
+      label:
+        'This is a quite long label intended to wrap onto multiple lines to demonstrate alignment.',
+    },
+    {
+      name: 'wrap-l',
+      value: 'wrap-l',
+      size: 'l',
+      label:
+        'This is a quite long label intended to wrap onto multiple lines to demonstrate alignment.',
+    },
+  ],
+};

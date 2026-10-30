@@ -1,0 +1,47 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-09-29T17:28:45.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "# PROTOTYPE 1 — \"Movie Night Matcher\" — CONSOLE PROGRAM \n\naction_score = 0\ncomedy_score = 0\nhorror_score = 0\ndocumentary_score = 0\n\n# ---------- THE INTERVIEW ----------\n# One for loop asks 4 same-shaped rating questions. the loop branches on which round it's on to know which\n# category it's rating and which score variable to update.\nfor question_number in range(4):\n    if question_number == 0:\n        answer = input(\"On a scale of 1-5, how much do you want fast-paced action tonight? \")\n        rating = int(answer)\n        action_score = action_score + rating\n    elif question_number == 1:\n        answer = input(\"On a scale of 1-5, how much do you want to laugh tonight? \")\n        rating = int(answer)\n        comedy_score = comedy_score + rating\n    elif question_number == 2:\n        answer = input(\"On a scale of 1-5, how much do you enjoy horror movies? \")\n        rating = int(answer)\n        horror_score = horror_score + rating\n    elif question_number == 3:\n        answer = input(\"On a scale of 1-5, how much do you want to learn something new? \")\n        rating = int(answer)\n        documentary_score = documentary_score + rating\n\n# A separate, independent question for the override — decoupled from the\n# horror rating above, since \"how much do you enjoy horror\" and \"would you\n# actually be okay watching something scary tonight\" aren't the same thing.\nokay_scared = input(\"Even if horror scores well, are you okay actually watching something scary tonight? (yes/no) \")\n\n# ---------- THE ALGORITHM: find the best of 4 named scores, with an override ----------\n# Same \"track the best so far\" idea as a running-max loop — just compared\n# directly since there are only 4 named values instead of a collection.\nbest_option = \"Action Flick\"\nbest_score = action_score\n\nif comedy_score > best_score:\n    best_score = comedy_score\n    best_option = \"Comedy Special\"\n\nif horror_score > best_score:\n    best_score = horror_score\n    best_option = \"Horror Movie\"\n\nif documentary_score > best_score:\n    best_score = documentary_score\n    best_option = \"Documentary\"\n\nif okay_scared == \"no\" and best_option == \"Horror Movie\":\n    best_option = \"Comedy Special\"\n\n# Students carry this value into the Theater program once console works.\nprint(\"Your recommendation is:\", best_option)",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "long_instructions": "Prototype 1\r\n\r\n1 result"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-29 17:28:48 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-29 19:52:33 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-29 19:53:17 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

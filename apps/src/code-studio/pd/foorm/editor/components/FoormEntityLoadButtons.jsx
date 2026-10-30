@@ -1,12 +1,15 @@
+import {Button as MuiButton} from '@mui/material';
+import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import PropTypes from 'prop-types';
-import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+
 import loadable from '@cdo/apps/util/loadable';
+
 const VirtualizedSelect = loadable(() =>
   import('@cdo/apps/templates/VirtualizedSelect')
 );
 import SingleCheckbox from '../../../form_components/SingleCheckbox';
+import {getLatestVersionMap} from '../../foormHelpers';
 import {
   setLastSaved,
   setSaveError,
@@ -14,7 +17,6 @@ import {
   setHasLintError,
   setLastSavedQuestions,
 } from '../foormEditorRedux';
-import {getLatestVersionMap} from '../../foormHelpers';
 
 class FoormEntityLoadButtons extends React.Component {
   static propTypes = {
@@ -103,13 +105,15 @@ class FoormEntityLoadButtons extends React.Component {
             }}
             placeholder={`Search for ${this.props.foormEntityName}`}
           />
-          <Button
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="small"
             onClick={() => this.initializeEmptyCodeMirror()}
-            className="load-buttons-new"
             disabled={this.props.isDisabled}
           >
             {`New ${this.props.foormEntityName}`}
-          </Button>
+          </MuiButton>
         </div>
         {this.props.showVersionFilterToggle && (
           <SingleCheckbox

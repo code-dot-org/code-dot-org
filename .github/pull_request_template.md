@@ -1,62 +1,39 @@
-<!--
-  A summary of the change, including any relevant background, motivation, and context.
-  If relevant, include a description, screenshots, and/or video of the existing and new behavior.
--->
+## Overview
 
-## Links
+Jira: 
 
 <!--
-  Links to relevant external resources; ie, specification documents, Jira tickets, related PRs, Honeybadger errors, etc.
+- Background and Intent: What is the background, motivation, and context for this update? Include links to any design documents, specs, tickets, or other external sources that give context for the change.
+- Design Overview: What conceptually is changing in the code? What design decisions were made and why? Don't explain how it works when that's already clear.
+- Visible Changes: What functionality is changing from an end user perspective? Include screenshots, videos, or before/after comparisons for UI changes.
 -->
 
+## Validation
+<!-- What steps were taken by human engineers or AI to validate the code changes prior to merge? What automated test coverage exists for these changes? Be clear about whether validation steps were performed by AI or human. -->
+
+<!-- Confirm that the code and description in this pull request were reviewed by a human engineer -->
+* [ ] Reviewed PR content for length, code quality, comment clarity and readability.
+* [ ] Reviewed PR description for length, accuracy, clarity, and readability.
+
+## Authorship
 <!--
-- spec: []()
-- jira ticket: []()
+- Writing: who wrote the code, and who wrote this description?
+- Direction: decisions you made or overrode (architecture, design, tradeoffs), and AI-made decisions you weren't sure about
+- Context: specs, MCP servers, skills, or other inputs you gave the AI
 -->
-
-## Testing story
-
-<!--
-  Does your change include appropriate tests?
-  If so, please describe how the tests included in this PR are sufficient.
-  If not, please explain why this change does not need to be tested.
--->
-
-<!-- Other aspects to consider. Delete any sections that are not relevant to your change. -->
-
-## Deployment strategy
 
 ## Follow-up work
+<!--  Delete this section if no new work was discovered while making this PR.
+      Otherwise: List any clean-up or other tasks that will be addressed in future work. -->
+- Jira:
 
-<!--
-  List (ideally with Jira links) any clean-up or technical debt that will be addressed in future work.
--->
+## Deployment notes
+<!-- Delete this section if it's a standard merge-and-deploy.
+     Otherwise: migrations, feature flags, coordination, caching impacts, etc. -->
 
-## Privacy
+## Privacy and security
+<!-- Delete this section if there is no privacy/security impact.
+     Otherwise: new PII, auth changes, API surface changes, etc. -->
 
-<!--
-  1.	Does this change involve the collection, use, or sharing of new Personal Data?
-  2.	Does this change involve a new or changed use or sharing of existing Personal Data?
--->
-
-## Security
-
-<!-- Link to Jira task(s) where sensitive security issues are discussed privately. -->
-
-## Caching
-
-## PR Checklist:
-
-<!--
-  The final step! Before you create your PR, double-check that everything is in order.
-  Change [ ] to [X] during creation to check boxes.
--->
-
-- [ ] Tests provide adequate coverage
-- [ ] Privacy and Security impacts have been assessed
-- [ ] Code is well-commented
-- [ ] New features are translatable or updates will not break translations
-- [ ] Relevant documentation has been added or updated
-- [ ] User impact is well-understood and desirable
-- [ ] Pull Request is labeled appropriately
-- [ ] Follow-up work items (including potential tech debt) are tracked and linked
+---
+For further PR guidelines, see [PULL_REQUEST_GUIDELINES.md](https://github.com/code-dot-org/code-dot-org/blob/staging/.github/PULL_REQUEST_GUIDELINES.md)

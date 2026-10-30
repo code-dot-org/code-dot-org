@@ -466,14 +466,6 @@ export function deleteRecordSync(table, record, callback) {
   });
 }
 
-export function onRecordEvent(table, onRecord, includeAll) {
-  return Applab.executeCmd(null, 'onRecordEvent', {
-    table: table,
-    onRecord: onRecord,
-    includeAll: includeAll,
-  });
-}
-
 export function getUserId() {
   return Applab.executeCmd(null, 'getUserId', {});
 }

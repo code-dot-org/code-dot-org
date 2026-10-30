@@ -1,3 +1,5 @@
+import {EFFECTS_PALETTES} from '../constants';
+
 export const PoetryStandaloneApp = {
   Poetry: 'poetry',
   PoetryHoc: 'poetry_hoc',
@@ -5,6 +7,7 @@ export const PoetryStandaloneApp = {
 };
 
 export const PALETTES = {
+  ...EFFECTS_PALETTES,
   grayscale: [
     '#000000',
     '#333333',
@@ -15,18 +18,15 @@ export const PALETTES = {
     '#FFFFFF',
   ],
   sky: ['#3878A4', '#82A9B1', '#ECCEC4', '#F8B8A8', '#E4929C', '#7D7095'],
-  ocean: ['#7FD0F5', '#3FABE3', '#2C7DBB', '#1D57A0', '#144188', '#061F4B'],
   sunrise: ['#F5DC72', '#F4B94F', '#F48363', '#F15C4C', '#372031'],
   sunset: ['#530075', '#921499', '#E559BB', '#F7B9DD', '#307087', '#123F50'],
   spring: ['#303F06', '#385202', '#547607', '#85AF4C', '#C1E876', '#D7FF6B'],
   summer: ['#FAD0AE', '#F69F88', '#EE6E51', '#BC4946', '#425D19', '#202E14'],
   autumn: ['#484F0C', '#AEA82E', '#EEBB10', '#D46324', '#731B31', '#4A173C'],
   winter: ['#EAECE8', '#E3DDDF', '#D3CEDC', '#A2B6BF', '#626C7D', '#A4C0D0'],
-  twinkling: ['#FFC702', '#FC9103', '#F17302', '#B83604', '#7E1301'],
   rainbow: ['#A800FF', '#0079FF', '#00F11D', '#FF7F00', '#FF0900'],
   roses: ['#4C0606', '#86003C', '#E41F7B', '#FF8BA0 ', '#FFB6B3'],
 };
-
 // Notes:
 // - author is not translated.
 // - Poems are shown in all languages, unless there is a locales attribute, in which case
@@ -63,6 +63,9 @@ export const POEMS = {
   lomeli1: {author: 'Caia Lomeli'},
   lomeli2: {author: 'Caia Lomeli'},
   frost: {author: 'Robert Frost'},
+  hope: {author: 'Ishmael Angaluuk Hope'},
+  priest: {author: 'Rena Priest'},
+  whitney: {author: 'Jael Whitney'},
   cb: {
     locales: ['en_us'],
     author: 'C. B.',

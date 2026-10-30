@@ -1,28 +1,32 @@
+import NotificationBanner from '@code-dot-org/component-library/notification-banner';
+import {Button as MuiButton, Typography} from '@mui/material';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import {connect} from 'react-redux';
-import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
+
+import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import PlcHeader from '@cdo/apps/code-studio/plc/header';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/VerifiedResourcesNotification';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
-import Announcements from './Announcements';
-import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
-import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
-import i18n from '@cdo/locale';
-import color from '@cdo/apps/util/color';
-import fontConstants from '@cdo/apps/fontConstants';
+import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/ParticipantFeedbackNotification';
+import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import {assignmentCourseVersionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
+import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {
   dismissedRedirectWarning,
   onDismissRedirectWarning,
 } from '@cdo/apps/util/dismissVersionRedirect';
-import AssignmentVersionSelector from '@cdo/apps/templates/teacherDashboard/AssignmentVersionSelector';
-import {assignmentCourseVersionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
-import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/ParticipantFeedbackNotification';
-import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/VerifiedResourcesNotification';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import i18n from '@cdo/locale';
 
-const SCRIPT_OVERVIEW_WIDTH = 1100;
+import Announcements from './Announcements';
+
+import styles from './unit-overview.module.scss';
+
+const WARNING_ICON = {iconName: 'triangle-exclamation'};
 
 /**
  * This component takes some of the HAML generated content on the script overview
@@ -39,8 +43,10 @@ class UnitOverviewHeader extends Component {
     showRedirectWarning: PropTypes.bool,
     showHiddenUnitWarning: PropTypes.bool,
     courseName: PropTypes.string,
+    courseId: PropTypes.number,
     versions: PropTypes.objectOf(assignmentCourseVersionShape).isRequired,
     userId: PropTypes.number,
+    isOnTeacherDashboard: PropTypes.bool,
 
     // provided by redux
     plcHeaderProps: PropTypes.shape({
@@ -58,31 +64,50 @@ class UnitOverviewHeader extends Component {
     isSignedIn: PropTypes.bool.isRequired,
     isVerifiedInstructor: PropTypes.bool.isRequired,
     hasVerifiedResources: PropTypes.bool.isRequired,
+    demoType: PropTypes.string.isRequired,
     localeCode: PropTypes.string,
+    children: PropTypes.node,
+  };
+
+  // Local dismissal state. The legacy `sharedComponents/Notification` component
+  // tracked this internally; the DSCO `NotificationBanner` we migrated to does
+  // not, so we have to hide the banner ourselves on close. Each flag gates one
+  // of the warning banners below.
+  state = {
+    redirectWarningDismissed: false,
+    versionWarningDismissed: false,
   };
 
   componentDidMount() {
     $('#lesson-heading-extras').appendTo(ReactDOM.findDOMNode(this.protected));
   }
 
-  onChangeVersion = versionId => {
-    const version = this.props.versions[versionId];
-    if (versionId !== this.props.courseVersionId && version) {
-      const queryParams = window.location.search || '';
-      window.location.href = `${version.path}${queryParams}`;
-    }
+  handleDismissRedirectWarning = () => {
+    const {courseName, scriptName} = this.props;
+    onDismissRedirectWarning(courseName || scriptName);
+    this.setState({redirectWarningDismissed: true});
   };
 
   onDismissVersionWarning = () => {
-    // Fire and forget. If this fails, we'll have another chance to
-    // succeed the next time the warning is dismissed.
-    $.ajax({
-      method: 'PATCH',
-      url: `/api/v1/user_scripts/${this.props.scriptId}`,
-      type: 'json',
-      contentType: 'application/json;charset=UTF-8',
-      data: JSON.stringify({version_warning_dismissed: true}),
-    });
+    const {scriptId, courseId} = this.props;
+    // Do nothing when courseId is missing, because UserScript objects now require courseId.
+    // This is safe because:
+    // 1. all user-facing units are now in courses, so this won't affect any end users
+    // 2. units without courses don't have versioning anyway, so we'll never show these warnings
+    //    even for internal users.
+    if (courseId) {
+      // Fire and forget. If this fails, we'll have another chance to
+      // succeed the next time the warning is dismissed.
+      const url = `/api/v1/user_scripts/course/${courseId}/unit/${scriptId}`;
+      $.ajax({
+        method: 'PATCH',
+        url,
+        type: 'json',
+        contentType: 'application/json;charset=UTF-8',
+        data: JSON.stringify({version_warning_dismissed: true}),
+      });
+    }
+    this.setState({versionWarningDismissed: true});
   };
 
   render() {
@@ -98,22 +123,26 @@ class UnitOverviewHeader extends Component {
       showCourseUnitVersionWarning,
       showScriptVersionWarning,
       showRedirectWarning,
-      versions,
       showHiddenUnitWarning,
       courseName,
       userId,
       isVerifiedInstructor,
       hasVerifiedResources,
+      demoType,
+      children,
+      isOnTeacherDashboard,
     } = this.props;
 
-    const displayVerifiedResources =
+    const displayVerifiedResourcesWarning =
       viewAs === ViewType.Instructor &&
       !isVerifiedInstructor &&
-      hasVerifiedResources;
+      hasVerifiedResources &&
+      !demoType;
 
     const displayVersionWarning =
       showRedirectWarning &&
-      !dismissedRedirectWarning(courseName || scriptName);
+      !dismissedRedirectWarning(courseName || scriptName) &&
+      !this.state.redirectWarningDismissed;
 
     let versionWarningDetails;
     if (showCourseUnitVersionWarning) {
@@ -123,7 +152,7 @@ class UnitOverviewHeader extends Component {
     }
 
     return (
-      <div>
+      <div className={styles.main}>
         {plcHeaderProps && (
           <PlcHeader
             unit_name={plcHeaderProps.unitName}
@@ -133,7 +162,6 @@ class UnitOverviewHeader extends Component {
         {isSignedIn && (
           <Announcements
             announcements={this.props.announcements}
-            width={SCRIPT_OVERVIEW_WIDTH}
             viewAs={viewAs}
             firehoseAnalyticsData={{
               script_id: scriptId,
@@ -142,105 +170,96 @@ class UnitOverviewHeader extends Component {
           />
         )}
         {userId && <ParticipantFeedbackNotification studentId={userId} />}
-        {displayVerifiedResources && (
-          <VerifiedResourcesNotification width={SCRIPT_OVERVIEW_WIDTH} />
-        )}
+        {displayVerifiedResourcesWarning && <VerifiedResourcesNotification />}
         {displayVersionWarning && (
-          <Notification
-            type={NotificationType.warning}
-            notice=""
-            details={i18n.redirectCourseVersionWarningDetails()}
-            dismissible={true}
-            width={SCRIPT_OVERVIEW_WIDTH}
-            onDismiss={() => onDismissRedirectWarning(courseName || scriptName)}
+          <NotificationBanner
+            className={classNames(
+              styles.notificationBanner,
+              'announcement-notification'
+            )}
+            variant="warning"
+            style="filled"
+            icon={WARNING_ICON}
+            title={i18n.redirectCourseVersionWarningDetails()}
+            onClose={this.handleDismissRedirectWarning}
           />
         )}
-        {versionWarningDetails && (
-          <Notification
-            type={NotificationType.warning}
-            notice={i18n.wrongCourseVersionWarningNotice()}
-            details={versionWarningDetails}
-            dismissible={true}
-            width={SCRIPT_OVERVIEW_WIDTH}
-            onDismiss={this.onDismissVersionWarning}
+        {versionWarningDetails && !this.state.versionWarningDismissed && (
+          <NotificationBanner
+            className={classNames(
+              styles.notificationBanner,
+              'announcement-notification'
+            )}
+            variant="warning"
+            style="filled"
+            icon={WARNING_ICON}
+            title={i18n.wrongCourseVersionWarningNotice()}
+            description={versionWarningDetails}
+            onClose={this.onDismissVersionWarning}
           />
         )}
         {showHiddenUnitWarning && (
-          <Notification
-            type={NotificationType.warning}
-            notice={i18n.hiddenUnitWarningNotice()}
-            details={i18n.hiddenUnitWarningDetails()}
-            dismissible={false}
-            width={SCRIPT_OVERVIEW_WIDTH}
-            buttonText={i18n.learnMore()}
-            buttonLink="https://support.code.org/hc/en-us/articles/115001479372-Hiding-units-and-lessons-in-Code-org-s-CS-Principles-and-CS-Discoveries-courses"
+          <NotificationBanner
+            className={classNames(
+              styles.notificationBanner,
+              'announcement-notification'
+            )}
+            variant="warning"
+            style="filled"
+            icon={WARNING_ICON}
+            title={i18n.hiddenUnitWarningNotice()}
+            description={i18n.hiddenUnitWarningDetails()}
+            actions={
+              <MuiButton
+                href="https://support.code.org/hc/en-us/articles/115001479372-Hiding-units-and-lessons-in-Code-org-s-CS-Principles-and-CS-Discoveries-courses"
+                target="_blank"
+                rel="noopener noreferrer"
+                variant="outlined"
+                color="secondary"
+                size="small"
+              >
+                {i18n.learnMore()}
+              </MuiButton>
+            }
           />
         )}
         <div id="lesson">
-          <div id="heading" style={styles.heading}>
-            <div style={styles.titleWrapper}>
-              <h1 style={styles.title} id="script-title">
+          <div className={styles.heading}>
+            <div className={styles.titleWrapper}>
+              <Typography
+                variant="h2"
+                component="h1"
+                className={styles.title}
+                id="script-title"
+              >
                 {unitTitle}
-              </h1>
-              {Object.values(versions).length > 1 && (
-                <AssignmentVersionSelector
-                  onChangeVersion={this.onChangeVersion}
-                  courseVersions={versions}
-                  rightJustifiedPopupMenu={true}
-                  selectedCourseVersionId={this.props.courseVersionId}
-                />
-              )}
+              </Typography>
             </div>
+            {children}
+            <div />
             {viewAs === ViewType.Instructor && (
               <SafeMarkdown
-                style={styles.description}
+                className={styles.description}
                 openExternalLinksInNewTab={true}
                 markdown={unitDescription}
               />
             )}
             {viewAs === ViewType.Participant && (
               <SafeMarkdown
-                style={styles.description}
+                className={styles.description}
                 openExternalLinksInNewTab={true}
                 markdown={unitStudentDescription}
               />
             )}
           </div>
-          <ProtectedStatefulDiv ref={element => (this.protected = element)} />
+          {!isOnTeacherDashboard && (
+            <ProtectedStatefulDiv ref={element => (this.protected = element)} />
+          )}
         </div>
       </div>
     );
   }
 }
-
-const styles = {
-  heading: {
-    width: '100%',
-  },
-  titleWrapper: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'flex-end',
-  },
-  title: {
-    display: 'inline-block',
-  },
-  versionWrapper: {
-    display: 'flex',
-    alignItems: 'baseline',
-  },
-  versionLabel: {
-    ...fontConstants['main-font-semi-bold'],
-    fontSize: 15,
-    color: color.charcoal,
-  },
-  versionDropdown: {
-    marginBottom: 13,
-  },
-  description: {
-    width: 700,
-  },
-};
 
 export const UnconnectedUnitOverviewHeader = UnitOverviewHeader;
 
@@ -257,5 +276,6 @@ export default connect(state => ({
   viewAs: state.viewAs,
   isVerifiedInstructor: state.verifiedInstructor.isVerified,
   hasVerifiedResources: state.verifiedInstructor.hasVerifiedResources,
+  demoType: selectedSectionSelector(state)?.demoType,
   localeCode: state.locales.localeCode,
 }))(UnitOverviewHeader);

@@ -1,15 +1,21 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
-import ProjectCardRow from './ProjectCardRow';
-import {MAX_PROJECTS_PER_CATEGORY, projectPropType} from './projectConstants';
-import color from '../../util/color';
-import styleConstants from '../../styleConstants';
-import Button from '../Button';
 import {connect} from 'react-redux';
-import {appendProjects, setHasOlderProjects} from './projectsRedux';
-import i18n from '@cdo/locale';
+
 import fontConstants from '@cdo/apps/fontConstants';
+import i18n from '@cdo/locale';
+
+import styleConstants from '../../styleConstants';
+
+import ProjectCardRow from './ProjectCardRow';
+import {
+  MAX_PROJECTS_PER_CATEGORY,
+  publishedFeaturedProjectPropType,
+} from './projectConstants';
+import {appendProjects, setHasOlderProjects} from './projectsRedux';
 
 const NUM_PROJECTS_TO_ADD = 12;
 
@@ -17,26 +23,27 @@ class ProjectAppTypeArea extends React.Component {
   static propTypes = {
     labKey: PropTypes.string.isRequired,
     labName: PropTypes.string.isRequired,
-    labViewMoreString: PropTypes.string.isRequired,
     // Ability to hide link for Applab and Gamelab
     hideViewMoreLink: PropTypes.bool,
-    projectList: PropTypes.arrayOf(projectPropType),
+    projectList: PropTypes.arrayOf(publishedFeaturedProjectPropType),
     numProjectsToShow: PropTypes.number.isRequired,
     galleryType: PropTypes.oneOf(['personal', 'class', 'public']).isRequired,
-    navigateFunction: PropTypes.func.isRequired,
-
-    // Only show one project type.
-    isDetailView: PropTypes.bool.isRequired,
-
     // Hide projects that don't have thumbnails
     hideWithoutThumbnails: PropTypes.bool,
 
+    // We are temporarily not using the following props since we are not using the 'View more' link
+    // in the updated featured projects public gallery.
+    // However, there are plans to update the featured projects public gallery with
+    // sections and use the view more links in the future. See https://docs.google.com/document/d/1vU68tzXG72Z80MvM6xYEDwF5hLDf7V097P-0dDfpouc/edit?disco=AAABGLQtJe0.
+    labViewMoreString: PropTypes.string,
+    navigateFunction: PropTypes.func,
+    // Only show one project type.
+    isDetailView: PropTypes.bool,
     // from redux state
-    hasOlderProjects: PropTypes.bool.isRequired,
-
+    hasOlderProjects: PropTypes.bool,
     // from redux dispatch
-    appendProjects: PropTypes.func.isRequired,
-    setHasOlderProjects: PropTypes.func.isRequired,
+    appendProjects: PropTypes.func,
+    setHasOlderProjects: PropTypes.func,
   };
 
   constructor(props) {
@@ -79,7 +86,6 @@ class ProjectAppTypeArea extends React.Component {
         projects={filteredList}
         galleryType={this.props.galleryType}
         isDetailView={this.props.isDetailView}
-        showReportAbuseHeader
       />
     );
   }
@@ -109,17 +115,26 @@ class ProjectAppTypeArea extends React.Component {
    *   completed and the done handler has been run (if successful).
    */
   fetchOlderProjects() {
-    const {projectList, labKey: projectType} = this.props;
-    const oldestProject = projectList[projectList.length - 1];
-    const oldestPublishedAt =
-      oldestProject && oldestProject.projectData.publishedAt;
+    const projectType =
+      this.props.labKey === 'featured' ? 'all' : this.props.labKey;
+    const {projectList} = this.props;
+    const projectListToSort = [...projectList];
+    // Sort from least recent (oldest) to most recent featured_at date.
+    projectListToSort.sort((a, b) => {
+      const projectAFeaturedAt = a.projectData.featuredAt;
+      const projectBFeaturedAt = b.projectData.featuredAt;
+      return projectAFeaturedAt.localeCompare(projectBFeaturedAt);
+    });
+    const oldestProject = projectListToSort[0];
+    const oldestFeaturedAt =
+      oldestProject && oldestProject.projectData.featuredAt;
 
     return $.ajax({
       method: 'GET',
-      url: `/api/v1/projects/gallery/public/${projectType}/${MAX_PROJECTS_PER_CATEGORY}/${oldestPublishedAt}`,
+      url: `/api/v1/projects/gallery/public/${projectType}/${oldestFeaturedAt}`,
       dataType: 'json',
     }).done(data => {
-      // olderProjects all have an older publishedAt date than oldestProject.
+      // olderProjects all have an older featuredAt date than oldestProject.
       const olderProjects = data[projectType];
 
       // Don't try to fetch projects of this projectType again in the future if we
@@ -145,22 +160,31 @@ class ProjectAppTypeArea extends React.Component {
     return (
       <div style={styles.viewMoreButtons}>
         {showViewMore && (
-          <Button
-            __useDeprecatedTag
+          <MuiButton
+            variant="outlined"
+            color="secondary"
+            size="small"
             onClick={this.loadMore}
-            color={Button.ButtonColor.neutralDark}
-            icon="plus-circle"
-            text={i18n.viewMore()}
             style={styles.buttonRightMargin}
-          />
+            type="button"
+            startIcon={
+              <FontAwesomeV6Icon iconStyle="solid" iconName="plus-circle" />
+            }
+          >
+            {i18n.viewMore()}
+          </MuiButton>
         )}
-        <Button
-          __useDeprecatedTag
+        <MuiButton
+          variant="outlined"
+          color="secondary"
+          size="small"
           href="#top"
-          color={Button.ButtonColor.neutralDark}
-          icon="chevron-circle-up"
-          text={i18n.backToTop()}
-        />
+          startIcon={
+            <FontAwesomeV6Icon iconStyle="solid" iconName="circle-chevron-up" />
+          }
+        >
+          {i18n.backToTop()}
+        </MuiButton>
       </div>
     );
   };
@@ -171,7 +195,9 @@ class ProjectAppTypeArea extends React.Component {
         style={styles.grid}
         className={`ui-project-app-type-area ui-${this.props.labKey}`}
       >
-        <h2 style={styles.labHeading}> {this.props.labName} </h2>
+        <MuiTypography variant="h4" component="h2" style={styles.labHeading}>
+          {this.props.labName}
+        </MuiTypography>
         {!this.props.hideViewMoreLink && (
           <span
             className="viewMoreLink"
@@ -179,11 +205,19 @@ class ProjectAppTypeArea extends React.Component {
             onClick={this.viewMore}
           >
             {this.props.isDetailView && (
-              <i className="fa fa-angle-left" style={styles.iconPaddingRight} />
+              <FontAwesomeV6Icon
+                iconStyle="solid"
+                iconName="angle-left"
+                style={styles.iconPaddingRight}
+              />
             )}
             {this.props.labViewMoreString}
             {!this.props.isDetailView && (
-              <i className="fa fa-angle-right" style={styles.iconPaddingLeft} />
+              <FontAwesomeV6Icon
+                iconStyle="solid"
+                iconName="angle-right"
+                style={styles.iconPaddingLeft}
+              />
             )}
           </span>
         )}
@@ -204,15 +238,13 @@ const styles = {
   },
   labHeading: {
     textAlign: 'left',
-    fontSize: 24,
-    color: color.neutral_dark,
     marginBottom: 0,
     paddingBottom: 0,
     paddingTop: 0,
     float: 'left',
   },
   viewMore: {
-    color: color.neutral_dark,
+    color: 'var(--text-neutral-primary)',
     float: 'right',
     marginTop: 35,
     marginBottom: 16,
@@ -221,10 +253,12 @@ const styles = {
   },
   viewMoreButtons: {
     float: 'right',
-    marginRight: 22,
+    marginInlineEnd: 22,
+    display: 'flex',
+    alignItems: 'center',
   },
   buttonRightMargin: {
-    marginRight: 20,
+    marginInlineEnd: 20,
   },
   iconPaddingLeft: {
     paddingLeft: 6,

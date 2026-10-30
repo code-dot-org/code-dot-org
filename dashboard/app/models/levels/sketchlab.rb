@@ -1,0 +1,59 @@
+# == Schema Information
+#
+# Table name: levels
+#
+#  id                    :integer          not null, primary key
+#  game_id               :integer
+#  name                  :string(255)      not null
+#  created_at            :datetime
+#  updated_at            :datetime
+#  level_num             :string(255)
+#  ideal_level_source_id :bigint           unsigned
+#  user_id               :integer
+#  properties            :text(4294967295)
+#  type                  :string(255)
+#  md5                   :string(255)
+#  published             :boolean          default(FALSE), not null
+#  notes                 :text(65535)
+#  audit_log             :text(65535)
+#
+# Indexes
+#
+#  index_levels_on_game_id    (game_id)
+#  index_levels_on_level_num  (level_num)
+#  index_levels_on_name       (name)
+#  index_levels_on_type       (type)
+#
+class Sketchlab < Level
+  serialized_attrs %w(
+    start_sources
+    exemplar_sources
+    is_project_level
+    require_edit_to_continue
+    hide_share_and_remix
+  )
+
+  after_initialize do
+    # New levels should have require_edit_to_continue default to true,
+    # but we don't want to enforce this behavior on existing levels.
+    self.require_edit_to_continue = true if new_record? && require_edit_to_continue.nil?
+  end
+
+  def self.create_from_level_builder(params, level_params)
+    create!(
+      level_params.merge(
+        user: params[:user],
+        game: Game.sketchlab,
+        level_num: 'custom',
+      )
+    )
+  end
+
+  def uses_lab2?
+    true
+  end
+
+  def add_starter_asset!(_, _)
+    true
+  end
+end

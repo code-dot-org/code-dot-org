@@ -15,6 +15,18 @@
 #  index_learning_goal_evidence_levels_on_lg_id_and_understanding  (learning_goal_id,understanding) UNIQUE
 #
 class LearningGoalEvidenceLevel < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :public,
+    learning_goal_id: :public,
+    understanding: :public,
+    teacher_description: :public,
+    ai_prompt: :public,
+    created_at: :public,
+    updated_at: :public,
+  )
+
   belongs_to :learning_goal
 
   validates :understanding, presence: true, inclusion: {in: SharedConstants::RUBRIC_UNDERSTANDING_LEVELS.to_h.values}

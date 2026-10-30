@@ -1,0 +1,39 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-10-23T18:14:55.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "**Bell-to-Bus Sprint**\n\nFinal bell rings. Alex has 4 minutes to grab gear, check if practice moved to the gym, and mark “I’m coming.” Phone shows 12% battery; one hand is full of cleats.",
+        "imageUrl": "https://images.code.org/d5bd3397d0cc93828262d79ba5f2028a-alexPanel1.png",
+        "key": "ai-generated-design-lesson7-level1a-test-2025-8d189006-477d-4482-9f8c-d3394d0dbcf4"
+      },
+      {
+        "text": "**Weight Room Wi-Fi Blackout**\n\nIn the weight room, the app won’t load. Alex screenshots the workout, does sets, and plans to log later on the bus.",
+        "imageUrl": "https://images.code.org/0f3f02720d69446225ac04f58aebe502-alexPanel2.png",
+        "key": "ai-generated-design-lesson7-level1a-test-2025-c3339823-e575-4ce3-82be-19069a378715",
+        "layout": "text-bottom-center"
+      },
+      {
+        "text": "**Post-Game, Post-Homework Eyes**\n\nIt’s 9:30pm. Alex is exhausted, icing a knee, and wants to skim tomorrow’s plan and jot a quick recovery note without bright screens or tiny text.",
+        "imageUrl": "https://images.code.org/ed7c3c31436c42b77ec68b3587fc87b3-alexPanel3.png",
+        "key": "ai-generated-design-lesson7-level1a-test-2025-2ce33a5f-e118-4d4b-bc41-178b6be2125a",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "**Coach & Parent Check-Ins**\n\nCoach asks “Status for Friday?” Parent needs pickup timing. Alex wants to share a simple “Available / Limited / Out” without exposing private journal notes.",
+        "imageUrl": "https://images.code.org/3958ff74db0afb8c0bd53802115aec40-alexPanel4.png",
+        "key": "ai-generated-design-lesson7-level1a-test-2025-9fd44b80-0c35-4f65-ba32-b6dad382cb16",
+        "layout": "text-bottom-center"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-23 18:29:31 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-23 18:30:21 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

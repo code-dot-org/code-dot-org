@@ -1,5 +1,8 @@
 require 'test_reporter'
-require 'rspec'
+require 'faker'
+require 'tmpdir'
+
+require_relative '../../lib/cdo/ci_utils'
 
 if defined? ActiveRecord
   ActiveRecord::Migration&.check_pending!
@@ -11,8 +14,8 @@ Minitest.extensions.delete('rails')
 Minitest.extensions.unshift('rails')
 
 reporters = [CowReporter.new]
-if ENV['CIRCLECI']
-  reporters << Minitest::Reporters::JUnitReporter.new("#{ENV['CIRCLE_TEST_REPORTS']}/dashboard")
+if CI::Utils.ci_job_ui_tests?
+  reporters << Minitest::Reporters::JUnitReporter.new("#{ENV.fetch('CI_TEST_REPORTS', nil)}/dashboard")
 end
 # Skip this if the tests are run in RubyMine
 Minitest::Reporters.use! reporters unless ENV['RM_INFO']
@@ -22,26 +25,47 @@ ENV["RAILS_ENV"] = "test"
 ENV["RACK_ENV"] = "test"
 ENV['TZ'] = 'UTC'
 
-# deal with some ordering issues -- sometimes environment is loaded
+# Deal with some ordering issues -- sometimes environment is loaded
 # before test_helper and sometimes after. The CDO stuff uses RACK_ENV,
 # but running unit tests in the test env for developers only sets
 # RAILS ENV. We fix it above but we need to reload some stuff...
 
-require 'mocha/mini_test'
+require 'mocha/minitest'
 
-CDO.stubs(:rack_env).returns(:test) if defined? CDO
-Rails.application.reload_routes! if defined?(Rails) && defined?(Rails.application)
+if defined? CDO
+  Mocha::Mockery.setup
+  CDO.stubs(:rack_env).returns(:test)
+end
+Rails.application&.reload_routes! if defined?(Rails) && defined?(Rails.application)
 
 require File.expand_path('../../config/environment', __FILE__)
+
+# ... then, we apply some unit-test-specific configuration. We cannot target
+# the config layer from this file because Spring may have already loaded the
+# Rails application, applying all config options to the relevant components.
+# Set the runtime attributes directly instead.
+
+# Disable CSRF protection.
+ActionController::Base.allow_forgery_protection = false
+# Avoid using an actual cache, to prevent state leakage.
+Rails.cache = ActiveSupport::Cache.lookup_store(:null_store)
+
+if CDO.test_system? && !ENV.fetch('TEST_ENV_NUMBER', nil)
+  # Raise rather than silently correcting the error, because it's possible that the data in
+  # dashboard_test has already been corrupted by the time we get here. If we find that we're
+  # hitting this error without any data corruption, we can consider silently setting
+  # TEST_ENV_NUMBER=1 here instead.
+  raise 'Do not run unit tests against dashboard_test DB on the chef-managed test system. ' \
+      'Instead, specify TEST_ENV_NUMBER=1 to run against the dashboard_test1 database.'
+end
+
 I18n.load_path += Dir[Rails.root.join('test', 'en.yml')]
 I18n.backend.reload!
 I18n.fallbacks[:'te-ST'] = [:'te-ST', :'en-US', :en]
-CDO.stubs(override_pegasus: nil)
-CDO.stubs(override_dashboard: nil)
 
-Rails.application.routes.default_url_options[:host] = CDO.dashboard_hostname
-Dashboard::Application.config.action_mailer.default_url_options = {host: CDO.canonical_hostname('studio.code.org'), protocol: 'https'}
-Devise.mailer.default_url_options = Dashboard::Application.config.action_mailer.default_url_options
+Dashboard::Application.routes.default_url_options = {protocol: 'https', host: 'test-studio.code.org', port: nil}
+Dashboard::Application.config.action_mailer.default_url_options = Dashboard::Application.routes.default_url_options
+Devise.mailer.default_url_options = Dashboard::Application.routes.default_url_options
 
 require 'rails/test_help'
 
@@ -53,12 +77,19 @@ require 'dynamic_config/dcdo'
 require 'testing/setup_all_and_teardown_all'
 require 'testing/lock_thread'
 require 'testing/transactional_test_case'
+require 'testing/spec_syntax'
 require 'testing/capture_queries'
+require 'testing/cdo_contentful'
+require 'testing/honeybadger'
+require 'testing/rspec_mocks'
+require 'testing/vcr_cassettes'
 
 require 'parallel_tests/test/runtime_logger'
 
 class ActiveSupport::TestCase
   ActiveRecord::Migration.check_pending!
+
+  class_attribute :vcr_cassette_library_dir, instance_writer: false, default: Rails.root.join('test/vcr_cassettes').to_s
 
   setup do
     AWS::S3.stubs(:upload_to_bucket).raises("Don't actually upload anything to S3 in tests... mock it if you want to test it")
@@ -69,12 +100,10 @@ class ActiveSupport::TestCase
     CDO.stubs(override_pegasus: nil)
     CDO.stubs(override_dashboard: nil)
 
-    set_env :test
+    url_protocol = Dashboard::Application.routes.default_url_options[:protocol]
+    CDO.stubs(default_scheme: "#{url_protocol}:") if url_protocol.present?
 
-    # how come this doesn't work:
-    Dashboard::Application.config.action_controller.perform_caching = false
-    # as in, I still need to clear the cache even though we are not 'performing' caching
-    Rails.cache.clear
+    set_env :test
 
     # clear log of 'delivered' mails
     ActionMailer::Base.deliveries.clear
@@ -92,12 +121,21 @@ class ActiveSupport::TestCase
     # Don't attempt to make actual AWS API calls, either, for the same reason
     AWS::S3.stubs(:cached_exists_in_bucket?).returns(true)
     AWS::S3.stubs(:exists_in_bucket).returns(true)
+
+    # Test class specific VCR configs
+    VCR.configuration.cassette_library_dir = vcr_cassette_library_dir
   end
 
   teardown do
-    Dashboard::Application.config.action_controller.perform_caching = false
     I18n.locale = I18n.default_locale
     set_env :test
+  end
+
+  def after_teardown
+    super
+  ensure
+    # Ensures the time for the next tests is unfrozen.
+    Timecop.return if Timecop.frozen?
   end
 
   def panda_panda
@@ -127,77 +165,55 @@ class ActiveSupport::TestCase
     AWS::S3.expects(:upload_to_bucket).never
   end
 
+  # helper method to stub out the source data for a project when we don't want to look in s3
+  def stub_project_source_data(channel_id, code: 'fake-code', version_id: 'fake-version-id')
+    fake_main_json = {source: code}.to_json
+    fake_source_data = {
+      status: 'FOUND',
+      body: StringIO.new(fake_main_json),
+      version_id: version_id,
+      last_modified: DateTime.now
+    }
+    SourceBucket.any_instance.stubs(:get).with(channel_id, "main.json").returns(fake_source_data)
+  end
+
   # Add more helper methods to be used by all tests here...
   include FactoryBot::Syntax::Methods
   include ActiveSupport::Testing::SetupAllAndTeardownAll
   include ActiveSupport::Testing::TransactionalTestCase
+  include ActiveSupport::Testing::SpecSyntax
   include CaptureQueries
+  include Curriculum::SharedCourseConstants
 
-  setup_all do
-    # Some of the functionality we're testing here relies on Scripts with
-    # certain hardcoded names. In the old fixture-based model, this data was
-    # all provided; in the new factory-based model, we need to do a little
-    # prep.
-    #
-    # NOTE for any future developers: please DO NOT add new scripts to this
-    # list. This exists to provide backwards compatibility to old tests which
-    # are dependent on factory-provided content. If you are writing new tests,
-    # please make sure that they are instead relying on factory-provided
-    # content.
-    tested_script_names = [
-      'ECSPD',
-      'allthethings',
-      Unit::COURSE1_NAME,
-      Unit::COURSE4_NAME,
-      Unit::FLAPPY_NAME,
-      Unit::FROZEN_NAME,
-      Unit::HOC_NAME,
-      Unit::PLAYLAB_NAME,
-      Unit::TWENTY_HOUR_NAME
-    ]
+  # Create the hourofcode unit and levels from factories.
+  #
+  # The hourofcode unit has some special properties, such as special routes for
+  # script lavels (e.g. /hoc/1), which make it helpful to test against a unit
+  # with this exact name.
+  def create_hourofcode_unit_and_levels
+    unit_name = Unit::HOC_NAME
 
-    tested_script_names.each do |script_name|
-      # create a placeholder factory-provided Unit if we don't already have a
-      # fixture-provided one.
-      # Specify skip_name_format_validation because 'ECSPD' will fail to be
-      # created otherwise, because upper case letters are not allowed.
-      script = Unit.find_by_name(script_name) ||
-        create(:script, :with_levels, levels_count: 5, name: script_name, skip_name_format_validation: true)
-
-      # make sure that all the Unit's ScriptLevels have associated Levels.
-      # This is expected during the interim period where we are no longer
-      # generating Levels from fixtures, but are still generating Scripts
-      script.script_levels.each do |script_level|
-        next unless script_level.levels.empty?
-        script_level.levels = [create(:level)]
-      end
-    end
+    # create placeholder hourofcode CourseOffering, UnitGroup, Unit and Levels.
+    unit = create(:script, :with_levels, levels_count: 10, name: unit_name)
+    create(:hoc_course, unit: unit, name: unit_name, family_name: unit_name, published_state: PUBLISHED_STATE.stable)
   end
 
-  def assert_creates(*args)
-    assert_difference(args.collect(&:to_s).collect {|class_name| "#{class_name}.count"}) do
-      yield
-    end
+  def assert_creates(*args, &block)
+    assert_difference(args.collect(&:to_s).collect {|class_name| "#{class_name}.count"}, &block)
   end
 
-  def assert_does_not_create(*args)
-    assert_no_difference(args.collect(&:to_s).collect {|class_name| "#{class_name}.count"}) do
-      yield
-    end
+  def assert_does_not_create(*args, &block)
+    assert_no_difference(args.collect(&:to_s).collect {|class_name| "#{class_name}.count"}, &block)
   end
   alias refute_creates assert_does_not_create
   alias refute_creates_or_destroys assert_does_not_create
 
-  def assert_destroys(*args)
-    assert_difference(args.collect(&:to_s).collect {|class_name| "#{class_name}.count"}, -1) do
-      yield
-    end
+  def assert_destroys(*args, &block)
+    assert_difference(args.collect(&:to_s).collect {|class_name| "#{class_name}.count"}, -1, &block)
   end
 
-  def assert_does_not_destroy(*args)
-    assert_no_difference(args.collect(&:to_s).collect {|class_name| "#{class_name}.count"}) do
-      yield
-    end
+  def assert_does_not_destroy(*args, &block)
+    assert_no_difference(args.collect(&:to_s).collect {|class_name| "#{class_name}.count"}, &block)
   end
 
   #
@@ -259,12 +275,27 @@ class ActiveSupport::TestCase
     end
   end
 
+  def set_request_locale(locale)
+    I18n.locale = locale
+  end
+
+  # Points Rails.root at an empty directory for the block, so a test can write
+  # curriculum files there instead of into the repo's trees.
+  def with_tmp_rails_root
+    Dir.mktmpdir do |dir|
+      Rails.stubs(:root).returns(Pathname.new(dir))
+      yield Rails.root
+    ensure
+      Rails.unstub(:root)
+    end
+  end
+
   def with_default_locale(locale)
     original_locale = I18n.default_locale
-    request.env['cdo.locale'] = I18n.default_locale = locale
+    I18n.locale = I18n.default_locale = locale
     yield
   ensure
-    request.env['cdo.locale'] = I18n.default_locale = original_locale
+    I18n.locale = I18n.default_locale = original_locale
   end
 
   # Based on assert_difference http://api.rubyonrails.org/classes/ActiveSupport/Testing/Assertions.html#method-i-assert_difference
@@ -274,7 +305,7 @@ class ActiveSupport::TestCase
 
     exps = expressions.map do |e|
       # rubocop:disable Security/Eval
-      e.respond_to?(:call) ? e : lambda {eval(e, block.binding)}
+      e.respond_to?(:call) ? e : -> {eval(e, block.binding)}
       # rubocop:enable Security/Eval
     end
     before = exps.map(&:call)
@@ -284,7 +315,12 @@ class ActiveSupport::TestCase
     expressions.zip(exps).each_with_index do |(code, e), i|
       error  = "#{code.inspect} didn't change"
       error  = "#{message}.\n#{error}" if message
-      refute_equal(before[i], e.call, error)
+      # Avoid a deprecation notice when using refute_equal with nil
+      if before[i].nil?
+        refute_nil(e.call, error)
+      else
+        refute_equal(before[i], e.call, error)
+      end
     end
   end
 
@@ -295,7 +331,7 @@ class ActiveSupport::TestCase
 
     exps = expressions.map do |e|
       # rubocop:disable Security/Eval
-      e.respond_to?(:call) ? e : lambda {eval(e, block.binding)}
+      e.respond_to?(:call) ? e : -> {eval(e, block.binding)}
       # rubocop:enable Security/Eval
     end
     before = exps.map(&:call)
@@ -305,7 +341,12 @@ class ActiveSupport::TestCase
     expressions.zip(exps).each_with_index do |(code, e), i|
       error  = "#{code.inspect} didn't change"
       error  = "#{message}.\n#{error}" if message
-      assert_equal(before[i], e.call, error)
+      # Avoid a deprecation notice when using assert_equal with nil
+      if before[i].nil?
+        assert_nil(e.call, error)
+      else
+        assert_equal(before[i], e.call, error)
+      end
     end
   end
 
@@ -373,14 +414,12 @@ class ActiveSupport::TestCase
     ActiveRecord::Base.stubs(:connection).raises 'Database disconnected'
   end
 
+  # Units use some bespoke in-memory caches instead of the Rails cache, so when
+  # we exercise them in tests we need to manually clear them to avoid
+  # inheriting any state from previous tests.
   def setup_script_cache
     Unit.stubs(:should_cache?).returns true
     Unit.clear_cache
-    # turn on the cache (off by default in test env so tests don't confuse each other)
-    Rails.application.config.action_controller.perform_caching = true
-    Rails.application.config.cache_store = :memory_store, {size: 64.megabytes}
-
-    Rails.cache.clear
   end
 end
 
@@ -391,7 +430,7 @@ class ActionController::TestCase
   setup do
     ActionDispatch::Cookies::CookieJar.always_write_cookie = true
     request.env["devise.mapping"] = Devise.mappings[:user]
-    request.env['cdo.locale'] = 'en-US'
+    I18n.locale = 'en-US'
   end
 
   # As `current_user` is not accessible from controller tests (only from within the controller),
@@ -534,17 +573,19 @@ class ActionController::TestCase
   end
 
   def assert_sharing_meta_tags(opts = {})
+    brand_name = Cdo::Brand.legal_name(@request)
+
     # example:
     # <meta content="500177453358606" property="fb:app_id" />
     # <meta content="article" property="og:type" />
-    # <meta content="Code.org" property="og:site_name" />
+    # <meta content="<brand name>" property="og:site_name" />
     # <meta content="Check out what I made" property="og:title" />
-    # <meta content="I wrote the code myself with Code.org" property="og:description" />
+    # <meta content="I wrote the code myself with <brand name>" property="og:description" />
     # <meta content="http://localhost:3000/assets/sharing_drawing.png" property="og:image" />
     # <meta content="https://www.facebook.com/Code.org" property="article:publisher" />
     # <meta content="http://localhost:3000/p/artist" property="og:url" />
     # <meta content="Check out what I made" name="twitter:title" />
-    # <meta content="I wrote the code myself with Code.org" name="twitter:description" />
+    # <meta content="I wrote the code myself with <brand name>" name="twitter:description" />
     # <meta content="@codeorg" name="twitter:site" />
     # <meta content="photo" name="twitter:card" />
     # <meta content="http://localhost:3000/assets/sharing_drawing.png" name="twitter:image" />
@@ -561,7 +602,7 @@ class ActionController::TestCase
 
     # constants
     assert_select 'meta[property="fb:app_id"][content="500177453358606"]'
-    assert_select 'meta[content="Code.org"][property="og:site_name"]'
+    assert_select "meta[content='#{brand_name}'][property='og:site_name']"
     assert_select 'meta[content="article"][property="og:type"]'
     assert_select 'meta[content="https://www.facebook.com/Code.org"][property="article:publisher"]'
 
@@ -570,6 +611,7 @@ class ActionController::TestCase
     {og: 'property', twitter: 'name'}.each do |namespace, attr|
       # descriptions
       assert_select "meta[content='Check out what I made'][#{attr}='#{namespace}:title']"
+      assert_select "meta[content='I wrote the code myself with #{brand_name}'][#{attr}='#{namespace}:description']"
 
       # url
       assert_select "meta[content='#{opts[:url]}'][#{attr}='#{namespace}:url']" if opts[:url]
@@ -595,11 +637,13 @@ class ActionController::TestCase
 end
 
 class ActionDispatch::IntegrationTest
+  include ActiveJob::TestHelper
   include Devise::Test::IntegrationHelpers
 
   setup do
-    https!
-    host! CDO.canonical_hostname('studio.code.org')
+    app_url_options = Dashboard::Application.routes.default_url_options
+    host! app_url_options[:host]
+    https! if app_url_options[:protocol].to_s.include?('https')
   end
 
   def signed_in_user_id
@@ -637,7 +681,7 @@ def json_response
 end
 
 # helper method for mailers to test whether urls in an email are partial paths
-# first parameter is an email, ex: Pd::WorkshopMailer.detail_change_notification(enrollment)
+# first parameter is an email, ex: Pd::WorkshopMailer.organizer_detail_change_notification(enrollment)
 # allowed_urls is an optional array of strings that are not complete urls to allow anyway
 def links_are_complete_urls?(email, allowed_urls: nil)
   html = Nokogiri::HTML(email.body.to_s)

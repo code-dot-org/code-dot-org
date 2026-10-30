@@ -1,0 +1,17 @@
+name 'student-end-of-unit-survey-q19_-problemsolving_v2-2025'
+
+question 'After this unit, I am more interested in learning more about computer science, AI, and related topics than I was before.'
+
+right 'Strongly disagree'
+right 'Disagree'
+right 'Slightly disagree'
+right 'Neither'
+right 'Slightly agree'
+right 'Agree'
+right 'Strongly agree'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+
+MARKDOWN

@@ -1,0 +1,6 @@
+%h1.control-legend{data: {toggle: "collapse", target: "#secondary_finish_button_area"}}
+  Secondary Finish button
+
+#secondary_finish_button_area.in.collapse
+  // Only available on lab2 labs currently.
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :use_secondary_finish_button, description: "Use secondary Finish button"} if @level.uses_lab2?

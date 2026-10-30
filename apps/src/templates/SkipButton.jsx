@@ -1,8 +1,8 @@
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
-import msg from '@cdo/locale';
 
-const LAUNCH_CLASS = 'launch';
+import msg from '@cdo/locale';
 
 export default class SkipButton extends React.Component {
   static propTypes = {
@@ -11,9 +11,14 @@ export default class SkipButton extends React.Component {
 
   render() {
     return (
-      <button type="button" id="skipButton" className={LAUNCH_CLASS}>
+      <MuiButton
+        id="skipButton"
+        variant="outlined"
+        color="secondary"
+        size="medium"
+      >
         {msg.skipPuzzle()}
-      </button>
+      </MuiButton>
     );
   }
 }

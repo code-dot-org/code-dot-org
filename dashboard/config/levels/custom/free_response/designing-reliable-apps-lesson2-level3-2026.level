@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-06-18T03:00:17.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "title": "Check Your Understanding",
+    "long_instructions": "####In the kitchen level, the burger started cooking in the background, but the server tried to serve the plate before the burger was ready.\r\n\r\n> 1. In your own words, explain why the server served an empty plate even though the burger was still cooking.\r\n>\r\n> 2. What would the code need to do differently to make sure the data is ready before using it?",
+    "stay_on_level_after_submit": "false",
+    "height": "100",
+    "placeholder": "enter response here...",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_2026"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-06-18T03:00:17.572+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson1-level7-2026\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson1-level7-2026\"},{\"changed_at\":\"2026-06-18 03:36:54 +0000\",\"changed\":[\"name\",\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

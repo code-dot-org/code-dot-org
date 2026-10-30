@@ -1,0 +1,43 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2024-10-02T15:45:38.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "panels": [
+      {
+        "text": "Now, let's take a look at lists in Python.\n\n",
+        "imageUrl": "https://images.code.org/7843ecada8807c01f944b0c7e0ba5095-2list-python.png",
+        "key": "game_design_spr_types-6451ed33-47e5-458c-9da1-d89e123d039c"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/5179932a0192819ea6a2a3217998abc1-2index.png",
+        "key": "game_design_spr_types-53c92e2f-0462-48a7-8070-e1224840f013"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/0e7ade7a68511bb6e09a143aa38cbcfc-2bracket.png",
+        "key": "game_design_spr_types-4936be88-574e-4dd8-a31f-e671e54e482b",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/2d5861ec039e57e967beb31c0e202e0f-2listaccess.png",
+        "key": "gen-ai-panels-test-L1-a74895ac-5363-4d66-9831-a3d899ea8ed7",
+        "layout": "text-top-left"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/06e7ee993d7d85b4a69feee54125d1a4-2listscore.png",
+        "key": "sp-pl-DS-SpreadsheetVocab-79e6faa9-6b7f-4aab-a8d7-c91fdc3ca442"
+      }
+    ],
+    "name_suffix": "_2024"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-10-02T15:45:38.770+00:00\",\"changed\":[\"cloned from \\\"sp-pl-DS-PanelsExpressions\\\"\"],\"cloned_from\":\"sp-pl-DS-PanelsExpressions\"}]"
+}]]></config>
+</Panels>

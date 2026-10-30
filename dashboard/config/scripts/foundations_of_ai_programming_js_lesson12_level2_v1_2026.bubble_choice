@@ -1,0 +1,9 @@
+name 'foundations-of-ai-programming-js-lesson12-level2-v1_2026'
+display_name 'Design Your App Layout'
+description 'Design your app layout with a wireframe or using a chatbot. Identify key elements, user inputs, and outputs before building your app.'
+
+sublevels
+level 'foundations-of-ai-programming-js-lesson12-level2a_2026'
+level 'foundations-of-ai-programming-js-lesson12-level2b_2026'
+
+uses_lab2

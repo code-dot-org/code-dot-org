@@ -2,6 +2,7 @@
   "category": "Poetry - Sprites",
   "config": {
     "func": "stopBehavior",
+    "docFunc": "gamelab_removeBehaviorSimple",
     "blockText": "sprite {ANIMATION_NAME} stops {BEHAVIOR} ",
     "style": "sprite_blocks",
     "args": [

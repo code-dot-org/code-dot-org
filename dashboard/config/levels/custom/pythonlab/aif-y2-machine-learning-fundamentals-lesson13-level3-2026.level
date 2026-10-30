@@ -1,0 +1,26 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-08-22T01:08:40.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "aif-y2-machine-learning-fundamentals-lesson13-project-template",
+    "long_instructions": "You’re building a nearest-neighbor image classifier, but it needs data to help it make predictions.\r\n\r\n**☑️ Do This:**\r\n\r\n1. Replace the `training_images` list with a list of dictionaries representing your training data. The list should have one dictionary for each training image in your dataset.\r\n\r\n    a. For each image, replace the `category` value (“Category A” or “Category B”) with the name for the image’s category.\r\n\r\n   \r\n    b. For each image, replace the `feature1`, `feature2`, and `feature3` keys with names for your three features. Replace each value with `True` or `False` based on your training data.\r\n\r\n2. Replace the `test_image` with a dictionary representing the three features from any one of your test images.\r\n\r\n**💻 Coding Tip**\r\n\r\nGive each of your feature keys names that represent what they mean. You can pick any names you want, but be consistent across all your data! For example, a training image for telling apart oceans and rivers might look like:\r\n\r\n```python\r\n{\"category\": \"Ocean\", \"white_waves\": True, \"trees\": False, \"touch_sky\": True}\r\n```\r\n\r\nYou can copy/paste an entry in the `training_images` list to save typing time when creating a new image!",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "encrypted_exemplar_sources": "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\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-08-22 01:09:47 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 20:21:45 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>

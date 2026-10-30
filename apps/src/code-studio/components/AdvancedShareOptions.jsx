@@ -1,78 +1,21 @@
-import React from 'react';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
+import Alert from '@code-dot-org/component-library/alert';
+import Checkbox from '@code-dot-org/component-library/checkbox';
+import Link from '@code-dot-org/component-library/link';
+import Tabs from '@code-dot-org/component-library/tabs';
+import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import PropTypes from 'prop-types';
-import * as color from '../../util/color';
-import {CIPHER, ALPHABET} from '../../constants';
+import React from 'react';
 import {connect} from 'react-redux';
-import i18n from '@cdo/locale';
-import {hideShareDialog, showLibraryCreationDialog} from './shareDialogRedux';
-import Button from '../../templates/Button';
-import fontConstants from '@cdo/apps/fontConstants';
 
-const style = {
-  nav: {
-    ul: {
-      borderBottom: '1px solid',
-      borderColor: color.purple,
-      marginTop: 0,
-      marginLeft: 0,
-      marginRight: 0,
-      marginBottom: 10,
-    },
-    li: {
-      display: 'inline-block',
-      color: color.neutral_dark90,
-      ...fontConstants['main-font-semi-bold'],
-      fontSize: 'larger',
-      marginRight: 10,
-      cursor: 'pointer',
-    },
-    selectedLi: {color: color.brand_secondary_default},
-  },
-  ol: {
-    marginLeft: 15,
-  },
-  p: {
-    fontSize: 'inherit',
-    lineHeight: 'inherit',
-    color: color.neutral_dark,
-    ...fontConstants['main-font-semi-bold'],
-  },
-  warningp: {
-    color: color.red,
-  },
-  bold: {
-    ...fontConstants['main-font-bold'],
-  },
-  root: {
-    marginTop: 20,
-  },
-  expand: {
-    color: color.brand_secondary_default,
-    ...fontConstants['main-font-semi-bold'],
-    cursor: 'pointer',
-  },
-  embedInput: {
-    cursor: 'copy',
-    width: 465,
-    height: 80,
-    margin: 0,
-  },
-  shareLibraryButton: {
-    margin: 0,
-    fontSize: 'large',
-    height: 40,
-  },
-  embedCodeCheckbox: {
-    accentColor: color.brand_primary_default,
-    margin: 0,
-  },
-  embedCodeCheckboxLabel: {
-    display: 'inline-block',
-    paddingLeft: 8,
-    paddingTop: 8,
-  },
-};
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import i18n from '@cdo/locale';
+
+import {CIPHER, ALPHABET} from '../../constants';
+
+import {hideShareDialog, showLibraryCreationDialog} from './shareDialogRedux';
+
+import moduleStyles from './advanced-share-options.module.scss';
 
 const ShareOptions = {
   EXPORT: 'export',
@@ -93,21 +36,19 @@ class AdvancedShareOptions extends React.Component {
       iframeHeight: PropTypes.number.isRequired,
       iframeWidth: PropTypes.number.isRequired,
     }).isRequired,
+    appType: PropTypes.string.isRequired,
   };
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      selectedOption: props.exportApp
-        ? ShareOptions.EXPORT
-        : ShareOptions.EMBED,
-      exporting: false,
-      exportError: null,
-      embedWithoutCode: false,
-    };
-  }
+  state = {
+    exporting: false,
+    exportError: null,
+    embedWithoutCode: false,
+  };
 
   downloadExport = () => {
+    analyticsReporter.sendEvent(EVENTS.EXPORT_APP, {
+      lab_type: this.props.appType,
+    });
     this.setState({exporting: true});
     this.props
       .exportApp()
@@ -138,164 +79,157 @@ class AdvancedShareOptions extends React.Component {
     const {iframeWidth, iframeHeight} = this.props.embedOptions;
     const iframeHtml = `<iframe width="${iframeWidth}" height="${iframeHeight}" style="border: 0px;" src="${url}"></iframe>`;
     return (
-      <div>
-        <p style={style.p}>{i18n.shareEmbedDescription()}</p>
-        <p style={{...style.p, ...style.warningp}}>
+      <div className={moduleStyles.tabContent}>
+        <MuiTypography variant="body3" className={moduleStyles.paragraph}>
+          {i18n.shareEmbedDescription()}
+        </MuiTypography>
+        <MuiTypography
+          variant="body3"
+          className={moduleStyles.paragraph}
+          style={{color: 'var(--text-error-primary)'}}
+        >
           {i18n.shareEmbedWarning()}
-        </p>
+        </MuiTypography>
         <textarea
           type="text"
           onClick={e => e.target.select()}
           readOnly={true}
           value={iframeHtml}
-          style={style.embedInput}
+          className={moduleStyles.embedInput}
           aria-label={i18n.codeToEmbed()}
         />
-        <div>
-          <input
-            id="embedCodeCheckbox"
-            type="checkbox"
-            style={style.embedCodeCheckbox}
-            checked={this.state.embedWithoutCode}
-            onChange={() =>
-              this.setState({embedWithoutCode: !this.state.embedWithoutCode})
-            }
-          />
-          <label
-            htmlFor="embedCodeCheckbox"
-            style={style.embedCodeCheckboxLabel}
-          >
-            {i18n.hideAbilityToViewCode()}
-          </label>
-        </div>
+        <Checkbox
+          name="embedWithoutCode"
+          label={i18n.hideAbilityToViewCode()}
+          size="s"
+          checked={this.state.embedWithoutCode}
+          onChange={() =>
+            this.setState({embedWithoutCode: !this.state.embedWithoutCode})
+          }
+        />
       </div>
     );
   }
 
   renderExportTab() {
-    const spinner = this.state.exporting ? (
-      <i className="fa fa-spinner fa-spin" />
-    ) : null;
-    // TODO: Make this use a nice UI component from somewhere.
     const alert = this.state.exportError ? (
-      <div className="alert fade in">{this.state.exportError}</div>
+      <Alert
+        type="danger"
+        text={this.state.exportError}
+        onClose={() => this.setState({exportError: null})}
+      />
     ) : null;
 
+    const exportSupportLink =
+      'https://support.code.org/hc/en-us/articles/13211665878157-Exporting-Projects-from-App-Lab';
+
     return (
-      <div>
-        <p style={style.p}>
+      <div className={moduleStyles.tabContent}>
+        <MuiTypography variant="body3" className={moduleStyles.paragraph}>
           Export your project as a zipped file, which will contain the
-          HTML/CSS/JS files, as well as any assets, for your project.
-        </p>
-        <Button
-          color={Button.ButtonColor.neutralDark}
+          HTML/CSS/JS files, as well as any assets, for your project. For
+          instructions to run your exported project locally, see{' '}
+          <Link
+            href={exportSupportLink}
+            text="our documentation"
+            external
+            openInNewTab
+            size="s"
+          />
+          .
+        </MuiTypography>
+        <MuiButton
+          variant="contained"
+          color="secondary"
+          size="medium"
+          loading={this.state.exporting}
           onClick={this.downloadExport}
-          style={{
-            margin: 0,
-            paddingRight: 11,
-            fontSize: 'large',
-            height: 40,
-          }}
+          type="button"
         >
-          {spinner}
-          Export
-        </Button>
+          {i18n.exportForWeb()}
+        </MuiButton>
         {alert}
       </div>
     );
   }
 
-  onInputSelect = ({target}) => {
-    target.select();
-  };
-
   renderLibraryTab = () => {
     return (
-      <div>
-        <p style={style.p}>{i18n.shareLibraryWithClassmate()}</p>
-        <Button
-          color={Button.ButtonColor.neutralDark}
+      <div className={moduleStyles.tabContent}>
+        <MuiTypography variant="body3" className={moduleStyles.paragraph}>
+          {i18n.shareLibraryWithClassmate()}
+        </MuiTypography>
+        <MuiButton
+          variant="contained"
+          color="secondary"
+          size="medium"
           onClick={this.props.openLibraryCreationDialog}
-          style={style.shareLibraryButton}
-          text={i18n.shareLibrary()}
-        />
+          type="button"
+        >
+          {i18n.shareLibrary()}
+        </MuiButton>
       </div>
     );
   };
 
-  renderAdvancedListItem = (option, name) => {
-    return (
-      <li
-        style={[
-          style.nav.li,
-          this.state.selectedOption === option && style.nav.selectedLi,
-        ]}
-        onClick={() => this.setState({selectedOption: option})}
-      >
-        {name}
-      </li>
-    );
-  };
+  buildTabs() {
+    const {exportApp, librariesEnabled} = this.props;
+    const tabs = [];
+    if (exportApp) {
+      tabs.push({
+        value: ShareOptions.EXPORT,
+        text: i18n.exportForWeb(),
+        tabContent: this.renderExportTab(),
+      });
+    }
+    tabs.push({
+      value: ShareOptions.EMBED,
+      text: i18n.embed(),
+      tabContent: this.renderEmbedTab(),
+    });
+    if (librariesEnabled) {
+      tabs.push({
+        value: ShareOptions.LIBRARY,
+        text: i18n.shareLibrary(),
+        tabContent: this.renderLibraryTab(),
+      });
+    }
+    return tabs;
+  }
 
   render() {
-    let {expanded, exportApp, onExpand, librariesEnabled} = this.props;
-    let {selectedOption} = this.state;
-    if (!selectedOption) {
-      // no options are available. Render nothing.
+    const {expanded, exportApp, onExpand} = this.props;
+    const tabs = this.buildTabs();
+    if (tabs.length === 0) {
       return null;
     }
-
-    let optionsNav, selectedTab, libraryTab;
-    if (expanded) {
-      let exportTab = null;
-      if (exportApp) {
-        exportTab = this.renderAdvancedListItem(
-          ShareOptions.EXPORT,
-          i18n.exportForWeb()
-        );
-      }
-      const embedTab = this.renderAdvancedListItem(
-        ShareOptions.EMBED,
-        i18n.embed()
-      );
-      if (librariesEnabled) {
-        libraryTab = this.renderAdvancedListItem(
-          ShareOptions.LIBRARY,
-          i18n.shareLibrary()
-        );
-      }
-      optionsNav = (
-        <div>
-          <ul style={style.nav.ul}>
-            {exportTab}
-            {embedTab}
-            {libraryTab}
-          </ul>
+    if (!expanded) {
+      const handleExpand = e => {
+        e.preventDefault();
+        onExpand();
+      };
+      return (
+        <div className={moduleStyles.root}>
+          <Link
+            text={i18n.advancedShare()}
+            onClick={handleExpand}
+            role="button"
+            size="s"
+          />
         </div>
       );
-      switch (selectedOption) {
-        case ShareOptions.EXPORT:
-          selectedTab = this.renderExportTab();
-          break;
-        case ShareOptions.EMBED:
-          selectedTab = this.renderEmbedTab();
-          break;
-        case ShareOptions.LIBRARY:
-          selectedTab = this.renderLibraryTab();
-          break;
-      }
     }
-    const expand =
-      expanded && selectedOption ? null : (
-        <a onClick={onExpand} style={style.expand}>
-          {i18n.advancedShare()}
-        </a>
-      );
+    const defaultTab = exportApp ? ShareOptions.EXPORT : ShareOptions.EMBED;
     return (
-      <div style={style.root}>
-        {expand}
-        {optionsNav}
-        {selectedTab}
+      <div className={moduleStyles.root}>
+        <Tabs
+          tabs={tabs}
+          name="advanced-share-options"
+          defaultSelectedTabValue={defaultTab}
+          onChange={() => {}}
+          size="s"
+          tabsContainerClassName={moduleStyles.tabsContainer}
+        />
       </div>
     );
   }
@@ -311,4 +245,4 @@ export default connect(
       dispatch(hideShareDialog());
     },
   })
-)(Radium(AdvancedShareOptions));
+)(AdvancedShareOptions);

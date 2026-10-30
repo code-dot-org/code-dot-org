@@ -1,0 +1,14 @@
+name 'designing-reliable-apps-preassessment-q2_2025'
+
+question 'A developer receives this response from a weather service: {"city": "Houston", "temp": 88, "unit": "F"}. What format is this data in?'
+
+wrong 'HTML'
+wrong 'XML'
+wrong 'CSS'
+right 'JSON (JavaScript Object Notation)'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 1
+MARKDOWN

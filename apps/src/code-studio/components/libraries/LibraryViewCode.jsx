@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+
+import {Body} from '@cdo/apps/legacySharedComponents/Dialog';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import {Body} from '@cdo/apps/templates/Dialog';
 import color from '@cdo/apps/util/color';
 
 const DEFAULT_MARGIN = 7;
@@ -38,16 +39,18 @@ export default class LibraryViewCode extends React.Component {
         style={styles.dialog}
         useUpdatedStyles
       >
-        <h1 style={styles.header}>{title}</h1>
-        <Body>
-          <div style={{textAlign: 'left'}}>
-            <p style={styles.message}>{description}</p>
-            <div className="libraryCodeViewerContainer" style={styles.code}>
-              <div ref={node => (this.libraryCodeViewer = node)} />
+        <div style={styles.content}>
+          <h1 style={styles.header}>{title}</h1>
+          <Body>
+            <div style={{textAlign: 'left'}}>
+              <p style={styles.message}>{description}</p>
+              <div className="libraryCodeViewerContainer" style={styles.code}>
+                <div ref={node => (this.libraryCodeViewer = node)} />
+              </div>
             </div>
-          </div>
-        </Body>
-        {buttons}
+          </Body>
+          {buttons}
+        </div>
       </BaseDialog>
     );
   }
@@ -56,6 +59,9 @@ export default class LibraryViewCode extends React.Component {
 const styles = {
   dialog: {
     padding: 15,
+  },
+  content: {
+    padding: '10px 20px',
   },
   header: {
     textAlign: 'left',

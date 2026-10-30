@@ -1,12 +1,14 @@
+import {TextLink} from '@dsco_/link';
+import PropTypes from 'prop-types';
 import React, {useState, useEffect, forwardRef} from 'react';
 import {connect} from 'react-redux';
-import PropTypes from 'prop-types';
-import i18n from '@cdo/locale';
-import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
+
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import {useFetch} from '@cdo/apps/util/useFetch';
+import i18n from '@cdo/locale';
+
 import ProgrammingClassOverview from '../codeDocs/ProgrammingClassOverview';
-import {TextLink} from '@dsco_/link';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 const DEFAULT_CLASS_KEY = 'MainMethod';
 
@@ -92,7 +94,7 @@ export const UnconnectedDocumentationTab = forwardRef(
                 <TextLink
                   href={`/docs/ide/${programmingEnvironment}/classes/${keyToShow}`}
                   openInNewTab={true}
-                  icon={<FontAwesome icon="external-link" />}
+                  icon={<FontAwesome icon="arrow-up-right-from-square" />}
                 />
               </div>
             </div>

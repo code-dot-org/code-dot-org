@@ -1,0 +1,1001 @@
+{
+  "script": {
+    "name": "miniexpress1",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2025-12-04 23:14:44 UTC",
+    "hide_within_course": false,
+    "published_state": "in_development",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "miniexpress1"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "miniexpress1"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Programming with Angry Birds",
+      "name": "Programming with Angry Birds",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "In this **skill-building** lesson, students will develop sequential algorithms to move a bird from one side of a maze to the pig at the other side. To do this they will stack code blocks together in a linear sequence, making them move straight, turn left, or turn right.",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - (Optional) Pick a couple of puzzles to do as a group with your class. \n",
+        "purpose": "In this lesson, students will develop programming and debugging skills on a computer platform. The block-based format of these puzzles help students learn about sequence and concepts, without having to worry about perfecting syntax.",
+        "student_overview": "Learn about sequences and algorithms with _Angry Birds_."
+      },
+      "seeding_key": {
+        "lesson.key": "Programming with Angry Birds",
+        "lesson_group.key": "",
+        "script.name": "miniexpress1"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "8721519c-a5ce-4f67-9bca-8d26ec3806dc",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8721519c-a5ce-4f67-9bca-8d26ec3806dc",
+        "lesson.key": "Programming with Angry Birds",
+        "lesson_group.key": "",
+        "script.name": "miniexpress1"
+      }
+    },
+    {
+      "key": "7684f284-70a6-4c67-8ca0-9220f05970f7",
+      "position": 2,
+      "properties": {
+        "duration": 5,
+        "name": "Previewing Online Puzzles as a Class"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7684f284-70a6-4c67-8ca0-9220f05970f7",
+        "lesson.key": "Programming with Angry Birds",
+        "lesson_group.key": "",
+        "script.name": "miniexpress1"
+      }
+    },
+    {
+      "key": "1ef67755-63da-445a-bbcd-8c0411c54719",
+      "position": 3,
+      "properties": {
+        "duration": 30,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1ef67755-63da-445a-bbcd-8c0411c54719",
+        "lesson.key": "Programming with Angry Birds",
+        "lesson_group.key": "",
+        "script.name": "miniexpress1"
+      }
+    },
+    {
+      "key": "f7fc24cb-200e-499c-8d2e-6b06044dc00c",
+      "position": 4,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f7fc24cb-200e-499c-8d2e-6b06044dc00c",
+        "lesson.key": "Programming with Angry Birds",
+        "lesson_group.key": "",
+        "script.name": "miniexpress1"
+      }
+    },
+    {
+      "key": "66c833a1-5440-47f2-995c-139aba06f395",
+      "position": 5,
+      "properties": {
+        "name": "Extended Learning"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "66c833a1-5440-47f2-995c-139aba06f395",
+        "lesson.key": "Programming with Angry Birds",
+        "lesson_group.key": "",
+        "script.name": "miniexpress1"
+      }
+    },
+    {
+      "key": "1624f575-8c20-4668-9521-879d8c8e2488",
+      "position": 6,
+      "properties": {
+        "name": "Cross-Curricular Opportunity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1624f575-8c20-4668-9521-879d8c8e2488",
+        "lesson.key": "Programming with Angry Birds",
+        "lesson_group.key": "",
+        "script.name": "miniexpress1"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "8ad8bfcd-6b48-4e35-b963-2a29f373c802",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _Why is it important to give a robot specific instructions when you “program” it?_\n",
+        "name": "Reflect"
+      },
+      "seeding_key": {
+        "activity_section.key": "8ad8bfcd-6b48-4e35-b963-2a29f373c802",
+        "lesson_activity.key": "8721519c-a5ce-4f67-9bca-8d26ec3806dc"
+      }
+    },
+    {
+      "key": "1eb89911-13bd-4756-b25b-cc0fe22727f7",
+      "position": 2,
+      "properties": {
+        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n- **Algorithm** - A list of steps to finish a task.\n- **Bug** - Part of a program that does not work correctly.\n- **Debugging** - Finding and fixing problems in an algorithm or program.\n- **Sequencing** - Putting commands in correct order so computers can read the commands.\n",
+        "name": "Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "1eb89911-13bd-4756-b25b-cc0fe22727f7",
+        "lesson_activity.key": "8721519c-a5ce-4f67-9bca-8d26ec3806dc"
+      }
+    },
+    {
+      "key": "2e611b26-e27e-439d-87d2-377153b28fd4",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Bridging Activity” slide\n\nThis short activity will help students relate the ideas of persistence and debugging to the puzzles that they are about to complete online.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Maze Bridging” slide\n\n**Display:** Project a copy of the ***Maze Bridging Page** for the class to see.  Make sure that you have pre-placed the movement blocks in the workspace using ***Maze Blocks** in a configuration like the one below (this is already configured for you on the slide):\n\n![](https://images.code.org/ac052e9d25e77dd800fbf18871bc5fcf-image-1611178828427.47.39.png)\n\n**Model:**  Tell students that you have this workspace on display that looks just like the area that they will see when they start to do the Code.org puzzles online.  As the teacher, let them know that you are SO SMART that you already put all of the code in that you are going to need to solve this puzzle, then ask them to watch you \"Run\" it by moving your finger (or a penny, or some other indicator) along the path.\n\nIt won't be long before you run into a block of TNT.  Feign frustration.\n\n**Discuss:**\n\n- _What am I feeling right now, do you think?_\n- _Should I quit?_\n- _Should I throw all of the code away and start over?_\n\n**Think:** _How can I fix this program so that I don't run into the TNT?_\n\nUse the blocks provided on the slide and drag them into the work area to demonstrate student solutions.\n\n**Pair:** Have students work on solutions to get the bird around the TNT. Depending on your classroom, you might want to either have them fix each mistake one at a time (with demos in between) or students might feel comfortable working together to fix the entire program.\n\n**Share:** Have volunteers come up to help move the blocks into the right location.  \"Run\" the program over and over as a class, fixing bugs, until the bird does what it is supposed to.  Continue to point out experiences that relate to persistence, frustration, and debugging.\n\nWhen your class reaches the pig, celebrate not only their achievements, but their persistence!",
+        "name": "Persistence and Debugging"
+      },
+      "seeding_key": {
+        "activity_section.key": "2e611b26-e27e-439d-87d2-377153b28fd4",
+        "lesson_activity.key": "8721519c-a5ce-4f67-9bca-8d26ec3806dc"
+      }
+    },
+    {
+      "key": "f80e7e45-5a3f-4c56-a7bc-097474552538",
+      "position": 1,
+      "properties": {
+        "description": "Students should now be ready to see a real puzzle in action!"
+      },
+      "seeding_key": {
+        "activity_section.key": "f80e7e45-5a3f-4c56-a7bc-097474552538",
+        "lesson_activity.key": "7684f284-70a6-4c67-8ca0-9220f05970f7"
+      }
+    },
+    {
+      "key": "9348cae3-4fe2-46af-bf64-d7f8afcf9a26",
+      "position": 2,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Some students may struggle with turning their bird in the correct direction, particularly when the bird isn't facing up. Remind students that when we say turn left or right, we're giving directions from the bird's point of view.\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9348cae3-4fe2-46af-bf64-d7f8afcf9a26",
+        "lesson_activity.key": "7684f284-70a6-4c67-8ca0-9220f05970f7"
+      }
+    },
+    {
+      "key": "56574b18-a515-4bcf-b7bd-d9c676b4b026",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Preview Online Puzzle” slide\n\n**Model:** Pull up Puzzle 5 to do in front of the class. This will be the same puzzle that they just saw in the bridging activity. While working through this puzzle with the class, remind students that making mistakes is okay and remind them that the only way to be successful is to be persistent.  \n\n**Discuss:** _Does anyone remember how to solve this puzzle?_\n\nAs the teacher, you should decide if you will have the students remind you how to solve it from their seats, or come to the computer to drag the actual blocks in one-by-one.\n\n**Transition:** Now that students have seen an online puzzle in practice, they should be ready to start solving puzzles of their own.  Continue to the lab or bring out their classroom computers."
+      },
+      "seeding_key": {
+        "activity_section.key": "56574b18-a515-4bcf-b7bd-d9c676b4b026",
+        "lesson_activity.key": "7684f284-70a6-4c67-8ca0-9220f05970f7"
+      }
+    },
+    {
+      "key": "4977431e-fa92-4fb3-a73f-ddefa167a9fd",
+      "position": 1,
+      "properties": {
+        "name": "Programming with Angry Birds",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Show the students the right way to help classmates:\r\n\r\n - Don’t sit in the classmate’s chair\r\n - Don’t use the classmate’s keyboard\r\n - Don’t touch the classmate’s mouse\r\n - Make sure the classmate can describe the solution to you out loud before you walk away\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4977431e-fa92-4fb3-a73f-ddefa167a9fd",
+        "lesson_activity.key": "1ef67755-63da-445a-bbcd-8c0411c54719"
+      }
+    },
+    {
+      "key": "0b46b08f-0553-447f-afb9-9bcf3006f8f1",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Maze Intro: Programming with Blocks” video",
+        "progression_name": "Video: Maze Intro - Programming with Blocks "
+      },
+      "seeding_key": {
+        "activity_section.key": "0b46b08f-0553-447f-afb9-9bcf3006f8f1",
+        "lesson_activity.key": "1ef67755-63da-445a-bbcd-8c0411c54719"
+      }
+    },
+    {
+      "key": "18ed9bc9-ad15-4317-bee9-7c9416724a34",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-7 - Skill Building” slide",
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "18ed9bc9-ad15-4317-bee9-7c9416724a34",
+        "lesson_activity.key": "1ef67755-63da-445a-bbcd-8c0411c54719"
+      }
+    },
+    {
+      "key": "a7d455c3-da1a-4e07-b32b-eed403517a5f",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 8 - Challenge” slide",
+        "progression_name": "Challenge"
+      },
+      "seeding_key": {
+        "activity_section.key": "a7d455c3-da1a-4e07-b32b-eed403517a5f",
+        "lesson_activity.key": "1ef67755-63da-445a-bbcd-8c0411c54719"
+      }
+    },
+    {
+      "key": "a3c514fa-5743-4618-a8d8-90c125b6b498",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 9 - Practice” slide",
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "a3c514fa-5743-4618-a8d8-90c125b6b498",
+        "lesson_activity.key": "1ef67755-63da-445a-bbcd-8c0411c54719"
+      }
+    },
+    {
+      "key": "cf5f4863-9c9c-4171-99a2-d32cfdab0600",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 10 - Prediction” slide",
+        "progression_name": "Prediction"
+      },
+      "seeding_key": {
+        "activity_section.key": "cf5f4863-9c9c-4171-99a2-d32cfdab0600",
+        "lesson_activity.key": "1ef67755-63da-445a-bbcd-8c0411c54719"
+      }
+    },
+    {
+      "key": "763239b8-5572-456e-9095-f58d6c9e55d2",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 11 - Practice” slide",
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "763239b8-5572-456e-9095-f58d6c9e55d2",
+        "lesson_activity.key": "1ef67755-63da-445a-bbcd-8c0411c54719"
+      }
+    },
+    {
+      "key": "650f121a-3a7b-4c83-8d01-852a97b0e187",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Extras” slide",
+        "progression_name": "Lesson Extras"
+      },
+      "seeding_key": {
+        "activity_section.key": "650f121a-3a7b-4c83-8d01-852a97b0e187",
+        "lesson_activity.key": "1ef67755-63da-445a-bbcd-8c0411c54719"
+      }
+    },
+    {
+      "key": "b608ae0c-0e53-486c-a793-3884e21791ea",
+      "position": 9,
+      "properties": {
+        "description": "\n**Circulate:** Teachers play a vital role in computer science education and supporting a collaborative and vibrant classroom environment. During online activities, the role of the teacher is primarily one of encouragement and support. Online lessons are meant to be student-centered, so teachers should avoid stepping in when students get stuck. Some ideas on how to do this are: \n\n - Utilize pair programming whenever possible during the activity.\n - Encourage students with questions/challenges to start by asking their partner.\n - Unanswered questions can be escalated to a nearby group, who might already know the solution.\n - Remind students to use the debugging process before you approach.\n - Have students describe the problem that they’re seeing. What is it supposed to do? What does it do? What does that tell you?\n - Remind frustrated students that frustration is a step on the path to learning, and that persistence will pay off.\n - If a student is still stuck after all of this, ask leading questions to get the student to spot an error on their own.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\n\n**Discuss:** After providing students with end-of-class warnings, grab everyone's attention and get them to reflect on the experiences that they just had.\n\n - _Did anyone feel frustrated during any of the puzzles?_\n - _Did anyone notice the need to be persistent?_\n\n**Transition:** Have students take a moment to reflect on the lesson for themselves."
+      },
+      "seeding_key": {
+        "activity_section.key": "b608ae0c-0e53-486c-a793-3884e21791ea",
+        "lesson_activity.key": "1ef67755-63da-445a-bbcd-8c0411c54719"
+      }
+    },
+    {
+      "key": "b3e9e528-64fb-4cd3-be64-3b2e8bafb938",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:**\n_Why is it important to program your blocks in a specific order?_\n",
+        "name": "Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "b3e9e528-64fb-4cd3-be64-3b2e8bafb938",
+        "lesson_activity.key": "f7fc24cb-200e-499c-8d2e-6b06044dc00c"
+      }
+    },
+    {
+      "key": "be9131ce-479b-4d65-be59-a23a11219ec2",
+      "position": 1,
+      "properties": {
+        "description": "Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.\r\n\r\n**Create Your Own**\r\n\r\nIn small groups, let students design their own mazes and challenge each other to write programs to solve them. For added fun, make life-size mazes with students as the pig and bird."
+      },
+      "seeding_key": {
+        "activity_section.key": "be9131ce-479b-4d65-be59-a23a11219ec2",
+        "lesson_activity.key": "66c833a1-5440-47f2-995c-139aba06f395"
+      }
+    },
+    {
+      "key": "386d3b49-5d4b-4ae4-8b6b-01ad9cbf2420",
+      "position": 1,
+      "properties": {
+        "description": "###Bugs, Bugs & More Bugs (45-60 minutes)\n\n![](https://curriculum.code.org/media/uploads/elaSmall.png) ![](https://curriculum.code.org/media/uploads/mathSmall.png) **Computer Science + English Language Arts + Math**\n\n[Bugs, Bugs & More Bugs](https://docs.google.com/document/d/1TdvVXM9Tf8lv9L3rgDqMJFTe-iG0PjTpMtBb2f4pXDo/edit#)  is an optional activity aligned to Common Core ELA and Math standards, written by our teacher community. Students will practice debugging as they fix code, correct a math problem and proofread writing samples.\n\n*Standards Addressed*:\n- **CCSS.ELA-LITERACY.L.2.1.B:** Form and use frequently occurring irregular plural nouns (e.g., feet, children, teeth, mice, fish).\n\n- **CCSS.ELA-LITERACY.L.2.2.A:** Capitalize holidays, product names, and geographic names.\n\n- **CCSS.ELA-LITERACY.L.2.2.C:** Use an apostrophe to form contractions and frequently occurring possessives.\n\n- **CCSS.MATH.CONTENT.2.OA.B.2:** Fluently add and subtract within 20 using mental strategies.\n\n- **CCSS.MATH.CONTENT.2.NBT.A.4:** Compare two three-digit numbers based on meanings of the hundreds, tens, and ones digits, using >, =, and < symbols to record the results of comparisons.\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "386d3b49-5d4b-4ae4-8b6b-01ad9cbf2420",
+        "lesson_activity.key": "1624f575-8c20-4668-9521-879d8c8e2488"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Video: Maze Intro - Programming with Blocks "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_video_maze_global"
+        ],
+        "lesson.key": "Programming with Angry Birds",
+        "lesson_group.key": "",
+        "script.name": "miniexpress1",
+        "activity_section.key": "0b46b08f-0553-447f-afb9-9bcf3006f8f1"
+      },
+      "level_keys": [
+        "courseC_video_maze_global"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_programming1_global"
+        ],
+        "lesson.key": "Programming with Angry Birds",
+        "lesson_group.key": "",
+        "script.name": "miniexpress1",
+        "activity_section.key": "18ed9bc9-ad15-4317-bee9-7c9416724a34"
+      },
+      "level_keys": [
+        "courseC_maze_programming1_global"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_programming2_global"
+        ],
+        "lesson.key": "Programming with Angry Birds",
+        "lesson_group.key": "",
+        "script.name": "miniexpress1",
+        "activity_section.key": "18ed9bc9-ad15-4317-bee9-7c9416724a34"
+      },
+      "level_keys": [
+        "courseC_maze_programming2_global"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_programming3_global"
+        ],
+        "lesson.key": "Programming with Angry Birds",
+        "lesson_group.key": "",
+        "script.name": "miniexpress1",
+        "activity_section.key": "18ed9bc9-ad15-4317-bee9-7c9416724a34"
+      },
+      "level_keys": [
+        "courseC_maze_programming3_global"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_programming4_global"
+        ],
+        "lesson.key": "Programming with Angry Birds",
+        "lesson_group.key": "",
+        "script.name": "miniexpress1",
+        "activity_section.key": "18ed9bc9-ad15-4317-bee9-7c9416724a34"
+      },
+      "level_keys": [
+        "courseC_maze_programming4_global"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_programming5_global"
+        ],
+        "lesson.key": "Programming with Angry Birds",
+        "lesson_group.key": "",
+        "script.name": "miniexpress1",
+        "activity_section.key": "18ed9bc9-ad15-4317-bee9-7c9416724a34"
+      },
+      "level_keys": [
+        "courseC_maze_programming5_global"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_programming6_global"
+        ],
+        "lesson.key": "Programming with Angry Birds",
+        "lesson_group.key": "",
+        "script.name": "miniexpress1",
+        "activity_section.key": "18ed9bc9-ad15-4317-bee9-7c9416724a34"
+      },
+      "level_keys": [
+        "courseC_maze_programming6_global"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "progression": "Challenge"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_programming7_global"
+        ],
+        "lesson.key": "Programming with Angry Birds",
+        "lesson_group.key": "",
+        "script.name": "miniexpress1",
+        "activity_section.key": "a7d455c3-da1a-4e07-b32b-eed403517a5f"
+      },
+      "level_keys": [
+        "courseC_maze_programming7_global"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_programming8_global"
+        ],
+        "lesson.key": "Programming with Angry Birds",
+        "lesson_group.key": "",
+        "script.name": "miniexpress1",
+        "activity_section.key": "a3c514fa-5743-4618-a8d8-90c125b6b498"
+      },
+      "level_keys": [
+        "courseC_maze_programming8_global"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Prediction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_programming8_predict1_global"
+        ],
+        "lesson.key": "Programming with Angry Birds",
+        "lesson_group.key": "",
+        "script.name": "miniexpress1",
+        "activity_section.key": "cf5f4863-9c9c-4171-99a2-d32cfdab0600"
+      },
+      "level_keys": [
+        "courseC_maze_programming8_predict1_global"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_programming9_global"
+        ],
+        "lesson.key": "Programming with Angry Birds",
+        "lesson_group.key": "",
+        "script.name": "miniexpress1",
+        "activity_section.key": "763239b8-5572-456e-9095-f58d6c9e55d2"
+      },
+      "level_keys": [
+        "courseC_maze_programming9_global"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson Extras"
+      },
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_programming_challenge1_global"
+        ],
+        "lesson.key": "Programming with Angry Birds",
+        "lesson_group.key": "",
+        "script.name": "miniexpress1",
+        "activity_section.key": "650f121a-3a7b-4c83-8d01-852a97b0e187"
+      },
+      "level_keys": [
+        "courseC_maze_programming_challenge1_global"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 13,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson Extras"
+      },
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_programming_challenge2_global"
+        ],
+        "lesson.key": "Programming with Angry Birds",
+        "lesson_group.key": "",
+        "script.name": "miniexpress1",
+        "activity_section.key": "650f121a-3a7b-4c83-8d01-852a97b0e187"
+      },
+      "level_keys": [
+        "courseC_maze_programming_challenge2_global"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "courseC_video_maze_global",
+        "script_level.level_keys": [
+          "courseC_video_maze_global"
+        ],
+        "lesson.key": "Programming with Angry Birds",
+        "lesson_group.key": "",
+        "script.name": "miniexpress1",
+        "activity_section.key": "0b46b08f-0553-447f-afb9-9bcf3006f8f1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_programming1_global",
+        "script_level.level_keys": [
+          "courseC_maze_programming1_global"
+        ],
+        "lesson.key": "Programming with Angry Birds",
+        "lesson_group.key": "",
+        "script.name": "miniexpress1",
+        "activity_section.key": "18ed9bc9-ad15-4317-bee9-7c9416724a34"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_programming2_global",
+        "script_level.level_keys": [
+          "courseC_maze_programming2_global"
+        ],
+        "lesson.key": "Programming with Angry Birds",
+        "lesson_group.key": "",
+        "script.name": "miniexpress1",
+        "activity_section.key": "18ed9bc9-ad15-4317-bee9-7c9416724a34"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_programming3_global",
+        "script_level.level_keys": [
+          "courseC_maze_programming3_global"
+        ],
+        "lesson.key": "Programming with Angry Birds",
+        "lesson_group.key": "",
+        "script.name": "miniexpress1",
+        "activity_section.key": "18ed9bc9-ad15-4317-bee9-7c9416724a34"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_programming4_global",
+        "script_level.level_keys": [
+          "courseC_maze_programming4_global"
+        ],
+        "lesson.key": "Programming with Angry Birds",
+        "lesson_group.key": "",
+        "script.name": "miniexpress1",
+        "activity_section.key": "18ed9bc9-ad15-4317-bee9-7c9416724a34"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_programming5_global",
+        "script_level.level_keys": [
+          "courseC_maze_programming5_global"
+        ],
+        "lesson.key": "Programming with Angry Birds",
+        "lesson_group.key": "",
+        "script.name": "miniexpress1",
+        "activity_section.key": "18ed9bc9-ad15-4317-bee9-7c9416724a34"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_programming6_global",
+        "script_level.level_keys": [
+          "courseC_maze_programming6_global"
+        ],
+        "lesson.key": "Programming with Angry Birds",
+        "lesson_group.key": "",
+        "script.name": "miniexpress1",
+        "activity_section.key": "18ed9bc9-ad15-4317-bee9-7c9416724a34"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_programming7_global",
+        "script_level.level_keys": [
+          "courseC_maze_programming7_global"
+        ],
+        "lesson.key": "Programming with Angry Birds",
+        "lesson_group.key": "",
+        "script.name": "miniexpress1",
+        "activity_section.key": "a7d455c3-da1a-4e07-b32b-eed403517a5f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_programming8_global",
+        "script_level.level_keys": [
+          "courseC_maze_programming8_global"
+        ],
+        "lesson.key": "Programming with Angry Birds",
+        "lesson_group.key": "",
+        "script.name": "miniexpress1",
+        "activity_section.key": "a3c514fa-5743-4618-a8d8-90c125b6b498"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_programming8_predict1_global",
+        "script_level.level_keys": [
+          "courseC_maze_programming8_predict1_global"
+        ],
+        "lesson.key": "Programming with Angry Birds",
+        "lesson_group.key": "",
+        "script.name": "miniexpress1",
+        "activity_section.key": "cf5f4863-9c9c-4171-99a2-d32cfdab0600"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_programming9_global",
+        "script_level.level_keys": [
+          "courseC_maze_programming9_global"
+        ],
+        "lesson.key": "Programming with Angry Birds",
+        "lesson_group.key": "",
+        "script.name": "miniexpress1",
+        "activity_section.key": "763239b8-5572-456e-9095-f58d6c9e55d2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_programming_challenge1_global",
+        "script_level.level_keys": [
+          "courseC_maze_programming_challenge1_global"
+        ],
+        "lesson.key": "Programming with Angry Birds",
+        "lesson_group.key": "",
+        "script.name": "miniexpress1",
+        "activity_section.key": "650f121a-3a7b-4c83-8d01-852a97b0e187"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_programming_challenge2_global",
+        "script_level.level_keys": [
+          "courseC_maze_programming_challenge2_global"
+        ],
+        "lesson.key": "Programming with Angry Birds",
+        "lesson_group.key": "",
+        "script.name": "miniexpress1",
+        "activity_section.key": "650f121a-3a7b-4c83-8d01-852a97b0e187"
+      }
+    }
+  ],
+  "resources": [
+    {
+      "name": "CSF - Express - Slides 2025-26",
+      "url": "https://docs.google.com/presentation/d/1aQMgvLRgD5hUvOj5K_UHcDEfXRb3cVT30J2jO30J3rg/template/preview",
+      "key": "csf_-_express_-_slides_2025-26",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1aQMgvLRgD5hUvOj5K_UHcDEfXRb3cVT30J2jO30J3rg/export/pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csf_-_express_-_slides_2025-26"
+      }
+    },
+    {
+      "name": "Maze Bridging Page",
+      "url": "https://drive.google.com/file/d/19Ul9ruPQ6bHr3sfqnacMMmCGOekTXPYS/view",
+      "key": "maze_bridging_page",
+      "properties": {
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "maze_bridging_page"
+      }
+    },
+    {
+      "name": "Unplugged Maze Blocks",
+      "url": "https://docs.google.com/presentation/d/1k_7SSLsm-E4aisa9-LmbsCVzH6J-8yGD9T2LwPb2v48/edit",
+      "key": "unplugged_maze_blocks",
+      "properties": {
+        "audience": "Student",
+        "type": "Manipulatives"
+      },
+      "seeding_key": {
+        "resource.key": "unplugged_maze_blocks"
+      }
+    }
+  ],
+  "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Angry Birds",
+        "resource.key": "csf_-_express_-_slides_2025-26"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Angry Birds",
+        "resource.key": "maze_bridging_page"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Angry Birds",
+        "resource.key": "unplugged_maze_blocks"
+      }
+    }
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+    {
+      "key": "algorithm",
+      "word": "Algorithm",
+      "definition": "A list of steps to finish a task. ",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "algorithm"
+      }
+    },
+    {
+      "key": "bug",
+      "word": "Bug",
+      "definition": "Part of a program that does not work correctly.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "bug"
+      }
+    },
+    {
+      "key": "debugging",
+      "word": "Debugging",
+      "definition": "Finding and fixing problems in an algorithm or program.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "debugging"
+      }
+    },
+    {
+      "key": "sequencing",
+      "word": "Sequencing",
+      "definition": "Putting commands in correct order so computers can read the commands.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "sequencing"
+      }
+    }
+  ],
+  "lessons_vocabularies": [
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Angry Birds",
+        "vocabulary.key": "algorithm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Angry Birds",
+        "vocabulary.key": "bug"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Angry Birds",
+        "vocabulary.key": "debugging"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Angry Birds",
+        "vocabulary.key": "sequencing"
+      }
+    }
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+    {
+      "key": "8b135b05-74d7-438b-9f65-ead30d8a2ca1",
+      "properties": {
+        "description": "Identify and locate bugs in a program."
+      },
+      "seeding_key": {
+        "lesson.key": "Programming with Angry Birds",
+        "objective.key": "8b135b05-74d7-438b-9f65-ead30d8a2ca1"
+      }
+    },
+    {
+      "key": "b6302013-9c8b-4966-87f1-8e2fbbc96f24",
+      "properties": {
+        "description": "Translate movements into a series of commands."
+      },
+      "seeding_key": {
+        "lesson.key": "Programming with Angry Birds",
+        "objective.key": "b6302013-9c8b-4966-87f1-8e2fbbc96f24"
+      }
+    }
+  ],
+  "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Angry Birds",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Angry Birds",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Angry Birds",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-15"
+      }
+    }
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

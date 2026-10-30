@@ -1,0 +1,54 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-09-09T20:37:37.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "example",
+        "explainCode",
+        "hint",
+        "debug"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "first_name = \"Jordan\"\nnickname = first_name[0:2]\nprint(\"Your nickname is: \" + nickname)",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "long_instructions": "### Modify: Debug\r\n\r\nThe code is supposed to print the nickname \"Jor\" but it doesn't!\r\n\r\nFind the bug and fix it.",
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMqMbdw9PMYZqxN0\nvSZqLZi9bbItWm409LP2iI86ustAb0hrTmBr0zrVycv1BS0q8SmU3kJ/Jn61\nezeM75v5d2xh1fIfrKvTSKgklmai0J8ulocWq+kaTedKU97bmkZL4rGMHNbq\nU9jc2MQGF7vj2VkhRvbxDOsaZJziEW+RUkLbfiW5FcvPT2oPejgnYY8muVej\n7LC2OaUrStnApmXemgjm23qOgte1aOiH+nSLbQDsaArg+jPZehHXrZ+SQM9N\ncDY+a54d+KShoYSQx4iiQsYxSncKn0rDoV36bUbPc689tCXFl4QdKq+/lSyF\n3OVk4Q5IGMrr0umriz/LkGk0TmS6\n",
+    "display_name": "The Wrong Nickname",
+    "bubble_choice_description": "Fix a nickname generator that's grabbing the wrong letters.",
+    "thumbnail_url": "https://images.code.org/d93fa64f1202b79223daa60c1cf47f78-id-card.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-09T20:37:37.308+00:00\",\"changed\":[\"cloned from \\\"csp-unit1-lesson25-modify-debug-a_27_28\\\"\"],\"cloned_from\":\"csp-unit1-lesson25-modify-debug-a_27_28\"},{\"changed_at\":\"2026-09-09 20:37:52 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-09 20:38:03 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-09 20:38:17 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-09 20:47:07 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-09 21:07:42 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-09 21:07:50 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-09 21:10:49 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-09 21:11:50 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-09 21:12:02 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

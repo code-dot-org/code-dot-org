@@ -1,11 +1,16 @@
+import $ from 'jquery';
 import _ from 'lodash';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+
+import {
+  demoSecretPictureUrlFor,
+  demoSecretWordsFor,
+} from '@cdo/apps/templates/teacherDashboard/demoStudentSecrets';
+import {asyncLoadSectionData} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {
   sectionCode,
   sectionName,
-  asyncLoadSectionData,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import $ from 'jquery';
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 
 export const ParentLetterButtonMetricsCategory = {
   ABOVE_TABLE: 'above-table',
@@ -97,6 +102,7 @@ const blankAddRow = {
   sharingDisabled: true,
   isEditing: true,
   rowType: RowType.ADD,
+  usState: null,
 };
 
 // New student row is created after a list of students have been
@@ -112,6 +118,7 @@ const blankNewStudentRow = {
   sharingDisabled: true,
   isEditing: true,
   rowType: RowType.NEW_STUDENT,
+  usState: null,
 };
 
 /** Initial state for the manageStudents redux store.
@@ -134,10 +141,12 @@ const initialState = {
   transferData: {...blankStudentTransfer},
   transferStatus: {...blankStudentTransferStatus},
   isLoadingStudents: true,
+  usState: null,
 };
 
 const SET_LOGIN_TYPE = 'manageStudents/SET_LOGIN_TYPE';
 const SET_STUDENTS = 'manageStudents/SET_STUDENTS';
+const SET_SECTION_INFO = 'manageStudents/SET_SECTION_INFO';
 const START_EDITING_STUDENT = 'manageStudents/START_EDITING_STUDENT';
 const CANCEL_EDITING_STUDENT = 'manageStudents/CANCEL_EDITING_STUDENT';
 const REMOVE_STUDENT = 'manageStudents/REMOVE_STUDENT';
@@ -152,6 +161,7 @@ const ADD_STUDENT_FULL = 'manageStudents/ADD_STUDENT_FULL';
 const ADD_MULTIPLE_ROWS = 'manageStudents/ADD_MULTIPLE_ROWS';
 const SET_SHOW_SHARING_COLUMN = 'manageStudents/SET_SHOW_SHARING_COLUMN';
 const EDIT_ALL = 'manageStudents/EDIT_ALL';
+const BULK_SET = 'manageStudents/BULK_SET';
 const UPDATE_ALL_SHARE_SETTING = 'manageStudents/UPDATE_ALL_SHARE_SETTING';
 const SET_SHARING_DEFAULT = 'manageStudents/SET_SHARING_DEFAULT';
 const UPDATE_STUDENT_TRANSFER = 'manageStudents/UPDATE_STUDENT_TRANSFER';
@@ -168,9 +178,12 @@ export const startLoadingStudents = () => ({type: START_LOADING_STUDENTS});
 export const finishLoadingStudents = () => ({type: FINISH_LOADING_STUDENTS});
 
 export const setLoginType = loginType => ({type: SET_LOGIN_TYPE, loginType});
-export const setStudents = (studentData, sectionId) => ({
+export const setStudents = studentData => ({
   type: SET_STUDENTS,
   studentData,
+});
+export const setSectionInfo = sectionId => ({
+  type: SET_SECTION_INFO,
   sectionId,
 });
 export const startEditingStudent = studentId => ({
@@ -202,6 +215,7 @@ export const setSharingDefault = studentId => ({
   studentId,
 });
 export const editAll = () => ({type: EDIT_ALL});
+export const bulkSet = studentData => ({type: BULK_SET, studentData});
 export const updateAllShareSetting = disable => ({
   type: UPDATE_ALL_SHARE_SETTING,
   disable,
@@ -475,6 +489,7 @@ export default function manageStudents(state = initialState, action) {
             ...blankAddRow,
             loginType: action.loginType,
           },
+          ...state.studentData,
         },
         editingData: {
           [addRowId]: {
@@ -483,12 +498,24 @@ export default function manageStudents(state = initialState, action) {
           },
         },
       };
+    } else if (state.studentData[addRowId]?.rowType === RowType.ADD) {
+      addRowInitialization = {
+        studentData: _.omit(state.studentData, addRowId),
+        editingData: _.omit(state.editingData, addRowId),
+      };
     }
-    return {
+    let reduxState = {
       ...state,
       loginType: action.loginType,
       ...addRowInitialization,
     };
+
+    if (reduxState.studentData) {
+      Object.keys(reduxState.studentData).forEach(studentId => {
+        reduxState.studentData[studentId].loginType = action.loginType;
+      });
+    }
+    return reduxState;
   }
   if (action.type === SET_STUDENTS) {
     let studentData = {
@@ -502,12 +529,19 @@ export default function manageStudents(state = initialState, action) {
         ...blankAddRow,
         loginType: state.loginType,
       };
+    } else if (state.studentData[addRowId]?.rowType === RowType.ADD) {
+      studentData = _.omit(state.studentData, addRowId);
     }
     return {
       ...state,
       studentData: studentData,
       addStatus: {status: null, numStudents: null},
       isLoadingStudents: false,
+    };
+  }
+  if (action.type === SET_SECTION_INFO) {
+    return {
+      ...state,
       sectionId: action.sectionId,
     };
   }
@@ -676,10 +710,26 @@ export default function manageStudents(state = initialState, action) {
     };
     for (const studentKey in state.studentData) {
       const student = state.studentData[studentKey];
+      if (student.isDemoStudent) {
+        continue;
+      }
       newState.studentData[student.id].isEditing = true;
       newState.editingData[student.id] = {
         ...newState.studentData[student.id],
         ...state.editingData[student.id],
+      };
+    }
+    return newState;
+  }
+  if (action.type === BULK_SET) {
+    let newState = {...state};
+    for (const studentKey in state.studentData) {
+      const student = state.studentData[studentKey];
+      newState.studentData[student.id].isEditing = true;
+      newState.editingData[student.id] = {
+        ...newState.studentData[student.id],
+        ...state.editingData[student.id],
+        ...action.studentData,
       };
     }
     return newState;
@@ -701,7 +751,7 @@ export default function manageStudents(state = initialState, action) {
         ...state.studentData,
         [action.studentId]: {
           ...state.studentData[action.studentId],
-          secretPicturePath: action.image,
+          secretPictureUrl: action.image,
         },
       },
     };
@@ -846,6 +896,7 @@ export const convertStudentServerData = (studentData, loginType, sectionId) => {
   let studentLookup = {};
   for (let i = 0; i < studentData.length; i++) {
     let student = studentData[i];
+    const isDemoStudent = !!student.is_demo_student;
     studentLookup[student.id] = {
       id: student.id,
       name: student.name,
@@ -855,10 +906,15 @@ export const convertStudentServerData = (studentData, loginType, sectionId) => {
       age: student.age || '',
       gender: student.gender || '',
       genderTeacherInput: student.gender_teacher_input || '',
-      secretWords: student.secret_words,
-      secretPicturePath: student.secret_picture_path,
+      secretWords:
+        student.secret_words ??
+        (isDemoStudent ? demoSecretWordsFor(student.id) : null),
+      secretPictureUrl:
+        student.secret_picture_url ??
+        (isDemoStudent ? demoSecretPictureUrlFor(student.id) : null),
       loginType: loginType,
       sectionId: sectionId,
+      isDemoStudent: isDemoStudent,
       sharingDisabled: student.sharing_disabled,
       hasEverSignedIn: student.has_ever_signed_in,
       dependsOnThisSectionForLogin: student.depends_on_this_section_for_login,
@@ -866,6 +922,14 @@ export const convertStudentServerData = (studentData, loginType, sectionId) => {
       isSaving: false,
       rowType: RowType.STUDENT,
       userType: student.user_type,
+      atRiskAgeGatedDate: student.at_risk_age_gated_date
+        ? new Date(student.at_risk_age_gated_date)
+        : null,
+      childAccountComplianceState: student.child_account_compliance_state,
+      latestPermissionRequestSentAt:
+        student.latest_permission_request_sent_at &&
+        new Date(student.latest_permission_request_sent_at),
+      usState: student.us_state,
     };
   }
   return studentLookup;
@@ -888,6 +952,7 @@ const updateStudentOnServer = (updatedStudentInfo, sectionId, onComplete) => {
       gender: updatedStudentInfo.gender,
       gender_teacher_input: updatedStudentInfo.genderTeacherInput,
       sharing_disabled: updatedStudentInfo.sharingDisabled,
+      us_state: updatedStudentInfo.usState,
     },
   };
   $.ajax({
@@ -917,6 +982,7 @@ const addStudentOnServer = (updatedStudentsInfo, sectionId, onComplete) => {
       gender: updatedStudentsInfo[i].gender,
       gender_teacher_input: updatedStudentsInfo[i].genderTeacherInput,
       sharing_disabled: updatedStudentsInfo[i].sharingDisabled,
+      us_state: updatedStudentsInfo[i].usState,
     };
   }
   const students = {
@@ -967,26 +1033,53 @@ const transferStudentsOnServer = (
 export const loadSectionStudentData = sectionId => {
   return (dispatch, getState) => {
     const state = getState().manageStudents;
+    let oldSectionId = state.sectionId;
 
-    // Don't load data if it's already stored in redux.
-    const alreadyHaveStudentData = state.sectionId === sectionId;
-
-    if (!alreadyHaveStudentData) {
+    // Load data only if section Id doesn't already match
+    if (state.sectionId !== sectionId) {
+      // Set section ID to indicate student data for current section.
+      dispatch(setSectionInfo(sectionId));
       dispatch(startLoadingStudents());
       $.ajax({
         method: 'GET',
         url: `/dashboardapi/sections/${sectionId}/students`,
         dataType: 'json',
-      }).done(studentData => {
-        const convertedStudentData = convertStudentServerData(
-          studentData,
-          state.loginType,
-          sectionId
-        );
-        dispatch(setStudents(convertedStudentData, sectionId));
-      });
+      })
+        .done(studentData => {
+          const convertedStudentData = convertStudentServerData(
+            studentData,
+            state.loginType,
+            sectionId
+          );
+          dispatch(setStudents(convertedStudentData));
+        })
+        .fail(() => {
+          // revert to old section ID in case of failure to backend call
+          dispatch(setSectionInfo(oldSectionId));
+          dispatch(finishLoadingStudents());
+        });
     } else {
       dispatch(finishLoadingStudents());
     }
   };
+};
+
+/**
+ * Filters an array of students by the presence of an 'atRiskAgeGatedDate' property.
+ *
+ * @param {Array} students - The array of students to filter.
+ * @returns {Array} - An array of students that have the 'atRiskAgeGatedDate' property.
+ */
+export const filterAgeGatedStudents = students => {
+  return students.filter(student => student.atRiskAgeGatedDate);
+};
+
+/**
+ * Returns the at-risk age gated date for the selected students.
+ *
+ * @param {Array} students - The array of student objects.
+ * @returns {Date} The at-risk age gated date for the selected students, or undefined if no students are found or no at-risk date is available.
+ */
+export const selectAtRiskAgeGatedDate = students => {
+  return filterAgeGatedStudents(students)[0]?.atRiskAgeGatedDate;
 };

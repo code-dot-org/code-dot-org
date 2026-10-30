@@ -1,0 +1,147 @@
+import * as BlocklyCore from 'blockly/core';
+import {omit} from 'lodash';
+
+import * as blockUtils from '@cdo/apps/block_utils';
+import {
+  BlockConfig,
+  BlockDefinition,
+  CustomInputTypes,
+} from '@cdo/apps/blockly/types';
+import * as blocksCommonModule from '@cdo/apps/blocksCommon';
+import spritelabBlocks from '@cdo/apps/p5lab/spritelab/blocks';
+
+import labBlockDefinitions from './blockDefinitions';
+import {
+  FIELD_SCENE_DROPDOWN_TYPE,
+  GO_TO_SCENE_BLOCK_TYPE,
+  SceneDropdown,
+} from './blockDefinitions/goToScene';
+import {
+  PLACEHOLDER_MUTATOR,
+  PLACEHOLDER_OUTLINE_EXTENSION,
+  placeholderMutator,
+} from './blockDefinitions/placeholder';
+import {
+  FIELD_SOUND_DROPDOWN_TYPE,
+  SoundDropdown,
+} from './blockDefinitions/playSound';
+import {
+  EffectOptionDropdown,
+  FIELD_EFFECT_OPTION_TYPE,
+} from './blockDefinitions/playSoundEffect';
+import {EVENT_HAT_EXTENSION, eventHat} from './blockDefinitions/whenPlayer';
+import {
+  ExternalSceneDropdown,
+  FIELD_EXTERNAL_SCENE_DROPDOWN_TYPE,
+} from './externalSceneDropdown';
+import {
+  FIELD_GRID_SINGLE_TYPE,
+  FIELD_GRID_TYPE,
+  GridField,
+  GridSingleField,
+} from './gridFields';
+import {
+  animationPicker,
+  BlockImageField,
+  CostumeField,
+  FIELD_BLOCK_IMAGE_TYPE,
+  FIELD_COSTUME_TYPE,
+} from './imagePickerFields';
+import {
+  FIELD_MUSIC_PROJECT_DROPDOWN_TYPE,
+  MusicProjectDropdown,
+} from './musicProjectDropdown';
+import {placeholderOutline} from './placeholderRendering';
+
+// blocksCommon is a plain CommonJS module (exports.install = ...); give it a
+// minimal typed view.
+const blocksCommon = blocksCommonModule as unknown as {
+  install: (blockly: unknown, options: object) => void;
+};
+
+// StudioApp-free equivalent of appMain.js's block install. Relies on Sprite
+// Lab's own install() because it also wires the behavior FunctionEditor and
+// custom procedure blocks.
+let isSetup = false;
+
+export function setupSpriteLab2BlocklyEnvironment(
+  skin: object = {},
+  level: object = {}
+): void {
+  if (isSetup) {
+    return;
+  }
+  const blockInstallOptions = {skin, isK1: false, level};
+  blocksCommon.install(Blockly, blockInstallOptions);
+  spritelabBlocks.install(Blockly, blockInstallOptions);
+  installLabBlocks();
+  isSetup = true;
+}
+
+function installLabBlocks(): void {
+  if (Blockly.Blocks[GO_TO_SCENE_BLOCK_TYPE]) {
+    return;
+  }
+  Blockly.fieldRegistry.register(FIELD_SCENE_DROPDOWN_TYPE, SceneDropdown);
+  Blockly.fieldRegistry.register(
+    FIELD_EXTERNAL_SCENE_DROPDOWN_TYPE,
+    ExternalSceneDropdown
+  );
+  Blockly.fieldRegistry.register(
+    FIELD_MUSIC_PROJECT_DROPDOWN_TYPE,
+    MusicProjectDropdown
+  );
+  Blockly.fieldRegistry.register(FIELD_SOUND_DROPDOWN_TYPE, SoundDropdown);
+  Blockly.fieldRegistry.register(
+    FIELD_EFFECT_OPTION_TYPE,
+    EffectOptionDropdown
+  );
+  Blockly.fieldRegistry.register(FIELD_COSTUME_TYPE, CostumeField);
+  Blockly.fieldRegistry.register(FIELD_BLOCK_IMAGE_TYPE, BlockImageField);
+  Blockly.fieldRegistry.register(FIELD_GRID_TYPE, GridField);
+  Blockly.fieldRegistry.register(FIELD_GRID_SINGLE_TYPE, GridSingleField);
+  BlocklyCore.Extensions.register(
+    PLACEHOLDER_OUTLINE_EXTENSION,
+    placeholderOutline
+  );
+  BlocklyCore.Extensions.register(EVENT_HAT_EXTENSION, eventHat);
+  BlocklyCore.Extensions.registerMutator(
+    PLACEHOLDER_MUTATOR,
+    placeholderMutator
+  );
+  for (const {definition, generator} of labBlockDefinitions) {
+    Blockly.Blocks[definition.type] = {
+      init: function (this: BlocklyCore.Block) {
+        this.jsonInit(definition);
+      },
+    };
+    Blockly.getGenerator().forBlock[definition.type] = generator;
+  }
+}
+
+/**
+ * Install the level's DB-backed block pool; returns category -> block type
+ * names. Lab-owned blocks install via installLabBlocks, not here.
+ */
+export function installSharedBlocks(sharedBlocks: BlockDefinition[]): {
+  [category: string]: string[];
+} {
+  return blockUtils.installCustomBlocks({
+    blockly: Blockly,
+    // The pool's event blocks carry a mini toolbox of pointer blocks, the
+    // "+" on "when clicked". This lab does not teach them.
+    blockDefinitions: (sharedBlocks || []).map(definition => ({
+      ...definition,
+      config: omit(definition.config, 'miniToolboxBlocks') as BlockConfig,
+    })),
+    customInputTypes: {
+      ...(spritelabBlocks.customInputTypes as unknown as CustomInputTypes),
+      // Lab2 pickers: trim-aware costume thumbnails (backgrounds stay
+      // untrimmed), an intentional empty state, and a button to the
+      // Images tab.
+      costumePicker: animationPicker('costume'),
+      backgroundPicker: animationPicker('background'),
+      blockPicker: animationPicker('block'),
+    } as unknown as CustomInputTypes,
+  });
+}

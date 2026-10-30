@@ -1,14 +1,16 @@
+import React, {useCallback, useEffect, useRef} from 'react';
+import {useSelector} from 'react-redux';
+
 import {sendSuccessReport} from '@cdo/apps/code-studio/progressRedux';
 import {
   getProgressLevelType,
   ProgressLevelType,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
 import ProgressManager from '@cdo/apps/lab2/progress/ProgressManager';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
-import React, {useCallback, useEffect, useRef} from 'react';
-import {useSelector} from 'react-redux';
-import {LabState, setValidationState} from '../lab2Redux';
-import {ProjectLevelData} from '../types';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import {setValidationState} from '../lab2Redux';
+import {useLevelProperties} from '../views/LevelPropertiesWrapper';
 
 interface ProgressContainerProps {
   children: React.ReactNode;
@@ -24,6 +26,7 @@ const ProgressContainer: React.FunctionComponent<ProgressContainerProps> = ({
   children,
   appType,
 }) => {
+  const {levelProperties} = useLevelProperties();
   const dispatch = useAppDispatch();
   const isScriptLevel = useSelector(
     state => getProgressLevelType(state) === ProgressLevelType.SCRIPT_LEVEL
@@ -43,15 +46,31 @@ const ProgressContainer: React.FunctionComponent<ProgressContainerProps> = ({
     new ProgressManager(onProgressChange)
   );
 
-  const levelData = useSelector(
-    (state: {lab: LabState}) => state.lab.levelProperties?.levelData
+  const {
+    validations: levelValidations,
+    exemplarSettings: levelExemplarSettings,
+    id: levelId,
+  } = levelProperties;
+  const overrideValidations = useAppSelector(
+    state => state.lab.overrideValidations
   );
 
   useEffect(() => {
-    progressManager.current.onLevelChange(
-      levelData as ProjectLevelData | undefined
-    );
-  }, [levelData]);
+    // The levelValidations may be the same between two different levels,
+    // but we still want the progressManager to reset itself when the levelId changes.
+    // Override validations are used in start mode only.
+    if (overrideValidations) {
+      progressManager.current.onLevelChange(
+        overrideValidations,
+        levelExemplarSettings
+      );
+    } else {
+      progressManager.current.onLevelChange(
+        levelValidations,
+        levelExemplarSettings
+      );
+    }
+  }, [levelExemplarSettings, levelValidations, levelId, overrideValidations]);
 
   return (
     <ProgressManagerContext.Provider value={progressManager.current}>

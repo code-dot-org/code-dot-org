@@ -1,0 +1,10 @@
+name 'building-data-driven-systems-lesson2-level4-v1-2026'
+display_name 'Choose a UI to Display One Item'
+description '### Choose the same UI you used in the previous level. You will use your arrays to display one item by selecting values at the same index.'
+
+sublevels
+level 'building-data-driven-systems-lesson2-level4a-v1-2026'
+level 'building-data-driven-systems-lesson2-level4b-v1-2026'
+level 'building-data-driven-systems-lesson2-level4c-v1-2026'
+
+uses_lab2

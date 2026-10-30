@@ -1,0 +1,8 @@
+name 'U6_L03_Lists Practice_Level 6_2024'
+display_name 'Lists Practice, Milestone 5'
+description 'Choose one of the apps below in order to practice the steps involved in its development. There is a sequence of ten levels associated with this Practice activity. Once you choose the app that you want to develop, please select the same app on all of the following levels. If you want to change apps, please start back at level 1 in order to follow the development sequence.'
+
+sublevels
+level 'CSP Lists Practice Birds L5'
+level 'CSP Lists Practice Playlist L5'
+level 'CSP Lists Practice Parks L5'

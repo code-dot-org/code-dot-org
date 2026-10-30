@@ -1,0 +1,6 @@
+@use '@fontsource-variable/noto-sans-kr/scss/mixins' as NotoSansKr;
+@include NotoSansKr.faces($family: 'Noto Sans KR');
+
+.className {
+  font-family: 'Noto Sans KR', sans-serif;
+}

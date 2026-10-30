@@ -1,0 +1,30 @@
+name 'CSA U6L8-L5_pilot-2025'
+title 'Check for Understanding'
+
+wrong '`[red, blue]`'
+right '`[red, green]`'
+wrong '`[blue, green]`'
+wrong '`[red]`'
+wrong '`[blue]`'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Consider the following code segment.
+
+```
+ArrayList<String> colors = new ArrayList<String>();
+colors.add("red");
+colors.add("blue");
+colors.add("green");
+colors.remove(1);
+
+System.out.println(colors);
+```
+
+What will be output when this code segment is executed?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+The line `colors.remove(1)` removes the element at index `1`, which is `"blue"`. So, the `colors` now contains only the elements `"red"` and `"green"`, in that order.
+MARKDOWN

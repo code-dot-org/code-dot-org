@@ -42,9 +42,9 @@ You can use the compound assignment operator whenever you want to apply a mathem
 **Explanation:** After running this code, `3` will print to the console.  The value of `cupsOfFlour` is updated on line 2 using the compound assignment operator `*=`.  This doubles the value stored in `cupsOfFour`.  On line 3, the new value stored in `cupsOfFlour` is printed to the screen. 
 
 ## Additional resources
-*  <a href="https://runestone.academy/ns/books/published/csawesome/Unit1-Getting-Started/topic-1-5-shortcutoperators.html" target="_blank">CS Awesome’s chapter on compound assignment operators</a>
+*  <a href="https://runestone.academy/ns/books/published/csawesome/Unit1-Getting-Started/topic-1-5-shortcutoperators.html" target="_blank" style= "font-size: 14pt">CS Awesome’s chapter on compound assignment operators</a>
 
-* <a href="https://codehs.com/textbook/apcsa_textbook/1.5" target="_blank">CodeHS's chapter on compound assignment operators</a>
+* <a href="https://codehs.com/textbook/apcsa_textbook/1.5" target="_blank" style= "font-size: 14pt">CodeHS's chapter on compound assignment operators</a>
 
 ---
 

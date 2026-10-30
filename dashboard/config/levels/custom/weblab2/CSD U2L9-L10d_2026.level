@@ -1,0 +1,119 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-01T20:50:10.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Background Image (url)",
+    "long_instructions": "# Background Image\r\n\r\nThe background of an element can be set to any  image that you would like! Just like when inserting a photo, you can use the image's url name.\r\n* Find the property in the style sheet that controls the background image.\r\n* Change the image to one of your choice.\r\n\r\n::: details [Help & Tips]\r\n- [<i class=\"fa-regular fa-map\"></i> Layout Properties](https://studio.code.org/courses/csd-2024/guides/layout-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Body Styling](https://studio.code.org/courses/csd-2024/guides/body-styling)\r\n- [<i class=\"fa-solid fa-book\"></i> Images in HTML](https://studio.code.org/courses/csd-2024/guides/images-in-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Creative Commons Search](https://studio.code.org/courses/csd-2024/guides/creative-commons-search)\r\n- [<i class=\"fa-solid fa-book\"></i> Style Sheets](https://studio.code.org/courses/csd-2024/guides/style-sheets)\r\n- [<i class=\"fa-solid fa-book\"></i> Text Properties](https://studio.code.org/courses/csd-2024/guides/text-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Lists](https://studio.code.org/courses/csd-2024/guides/lists)\r\n- [<i class=\"fa-solid fa-book\"></i> Headings and Paragraphs](https://studio.code.org/courses/csd-2024/guides/headings-and-paragraphs)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Tags](https://studio.code.org/courses/csd-2024/guides/html-tags)\r\n- [<i class=\"fa-solid fa-book\"></i> Debugging in HTML](https://studio.code.org/courses/csd-2022/guides/debugging-html)\r\n:::",
+    "bubble_choice_description": "Learn how to add background images using a url.",
+    "thumbnail_url": "https://images.code.org/1e70c0a354e813ffe9d080bd827f71b0-image-1566501551934.jpg",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    <h1>Types of Clouds</h1>\n    <p>Think about the clouds you have seen. They are not all the same! Sometimes they are white and fluffy, sometimes they are dark and scary, and sometimes they are just small wisps.</p> \n    <img src=\"cirrus.jpg\"\n         alt=\"Cirrus Cloud\"/>\n    <h2>Cirrus</h2>\n    <p>Cirrus clouds are thin and wispy. They hang out high in the sky and appear during good weather.</p>\n    <h6>[Picture by Nicholas A. Tonelli from Wikimedia Commons, CC BY-SA 3.0]</h6>\n    \n    <img src=\"stratus.jpg\"\n         alt=\"Stratus Cloud\"/>\n    <h2>Stratus</h2>\n    <p>Stratus clouds are flat, grey clouds that sit low in the sky. They often cover the whole sky and may produce light rain.</p>\n    <h6>[Picture from Wikimedia Commons, CC BY-SA 3.0]</h6>\n    <br>\n    <img src=\"cumulus.jpg\"\n         alt=\"Cumulus Cloud\"/>\n    <h2>Cumulus</h2>\n      <p>Cumulus clouds are big, puffy clouds. They usually mean good weather unless they grow really tall and turn into cumulonimbus clouds, which can cause thunderstorms or even tornadoes.</p>\n    <h6>[Picture by By PiccoloNamek from Wikimedia Commons, CC BY-SA 3.0]</h6>\n    <h6>[Background picture by haltschule from Wikimedia Commons, CC BY 2.0]</h6>\n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  background-image: url(\"backgroundCloud.jpg\");\n}\np {\n  color: white;\n  font-family: monospace;\n}\nh1 {\n  font-weight: bold;\n  font-family: cursive;\n  color: deepskyblue;\n}\n\nh2 { \n  font-family: cursive; \n  color: skyblue;\n}\n\nh6 {\n  font-family: sans-serif;\n  font-weight: lighter;\n  color: aliceblue;\n}\n\nimg {\n  width: 250px; \n  float: right;\n  border-style: groove;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "stratus.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L9-L10d-2025/uuid/2d0510ff-8ab8-4630-af50-84ebd84bb241.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "cirrus.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L9-L10d-2025/uuid/6c42c94a-973f-486a-8272-27d0a9eb608c.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "cumulus.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L9-L10d-2025/uuid/fb8c6a3e-9d92-4da3-9868-912db5bdc2fc.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "backgroundCloud.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L9-L10d-2025/uuid/78ad9a3e-8877-460a-aea3-f0ea7adf3643.jpg",
+          "type": "starter",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "name_suffix": "_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:50:10.706+00:00\",\"changed\":[\"cloned from \\\"CSD U2L9-L10d-2025\\\"\"],\"cloned_from\":\"CSD U2L9-L10d-2025\"}]"
+}]]></config>
+</Weblab2>

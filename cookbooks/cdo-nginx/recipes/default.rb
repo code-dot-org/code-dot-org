@@ -1,12 +1,16 @@
+# We had previously manually added a repository here to install nginx, but
+# nginx is distributed by default in Ubuntu 20+ so we no longer need to do so.
+# Instead, we remove that addition from any persistent managed servers which
+# currently have it.
+#
+# TODO infra: remove this once all existing servers have been cleaned up.
 apt_repository 'nginx' do
-  uri          'ppa:nginx/development'
-  distribution 'trusty'
-  retries 3
+  action :remove
 end
 
 apt_package 'nginx'
 
-%w(dashboard pegasus).each do |app|
+%w(dashboard).each do |app|
   socket_path = File.join node['cdo-nginx']['socket_path'], "#{app}.sock"
   # Ensure stale socket-files are cleaned up
   # (in case OS doesn't automatically remove them, e.g., due to an aborted process)
@@ -49,7 +53,7 @@ service 'nginx' do
   action [:enable, :start]
 
   # Ensure app services are updated to their current listener configuration before (re)starting nginx.
-  %w(pegasus dashboard).each do |app|
+  %w(dashboard).each do |app|
     notifies :create, "file[#{app}_listeners]", :before
   end
 

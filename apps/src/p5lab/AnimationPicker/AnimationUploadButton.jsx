@@ -1,26 +1,27 @@
-import React, {useState} from 'react';
 import PropTypes from 'prop-types';
-import msg from '@cdo/locale';
-import AnimationPickerListItem from './AnimationPickerListItem.jsx';
-import project from '@cdo/apps/code-studio/initApp/project';
+import React, {useState} from 'react';
 import {connect} from 'react-redux';
+
+import project from '@cdo/apps/code-studio/initApp/project';
 import {
   refreshInRestrictedShareMode,
   refreshTeacherHasConfirmedUploadWarning,
 } from '@cdo/apps/code-studio/projectRedux';
+import ImageUploadModal from '@cdo/apps/templates/imageUploadWarning/ImageUploadModal';
+import msg from '@cdo/locale';
+
 import {
   exitedUploadWarning,
   showingUploadWarning,
 } from '../redux/animationPicker.js';
-import ImageUploadModal from '@cdo/apps/templates/imageUploadWarning/ImageUploadModal';
-import PublishedWarningModal from '@cdo/apps/templates/imageUploadWarning/PublishedWarningModal';
+
+import AnimationPickerListItem from './AnimationPickerListItem.jsx';
 
 /**
  * Render the animation upload button. If the project should warn on upload
  * (which occurs for Sprite Lab projects), and the project has not already seen
  * the warning (see details on warnings by user type below), we show a warning modal
- * before allowing uploads. For students, if the project should restrict uploads and is already
- * published, we will not allow uploads until the project is un-published.
+ * before allowing uploads.
  */
 export function UnconnectedAnimationUploadButton({
   onUploadClick,
@@ -35,8 +36,6 @@ export function UnconnectedAnimationUploadButton({
   currentUserType,
 }) {
   const [isUploadModalOpen, setIsUploadModalOpen] = useState(false);
-  const [isPublishedWarningModalOpen, setIsPublishedWarningModalOpen] =
-    useState(false);
 
   // Some of the behavior (particularly in the confirmation dialog) is conditional
   // on whether a student or teacher is uploading.
@@ -64,18 +63,20 @@ export function UnconnectedAnimationUploadButton({
   const showRestrictedUploadWarning =
     shouldWarnOnAnimationUpload && !hasConfirmedWarning;
 
+  const onAnimationUploadClick = () => {
+    if (showRestrictedUploadWarning) {
+      showUploadModal();
+    } else {
+      onUploadClick();
+    }
+  };
+
   function renderUploadButton() {
     return (
       <AnimationPickerListItem
         label={msg.animationPicker_uploadImage()}
         icon="upload"
-        onClick={
-          showRestrictedUploadWarning
-            ? project.isPublished() && !isTeacher
-              ? showPublishedWarning
-              : showUploadModal
-            : onUploadClick
-        }
+        onClick={onAnimationUploadClick}
         isBackgroundsTab={isBackgroundsTab}
       />
     );
@@ -93,16 +94,6 @@ export function UnconnectedAnimationUploadButton({
     showingUploadWarning();
   }
 
-  function showPublishedWarning() {
-    setIsPublishedWarningModalOpen(true);
-    showingUploadWarning();
-  }
-
-  function closePublishedWarning() {
-    setIsPublishedWarningModalOpen(false);
-    exitedUploadWarning();
-  }
-
   function cancelUpload() {
     setIsUploadModalOpen(false);
     exitedUploadWarning();
@@ -115,10 +106,6 @@ export function UnconnectedAnimationUploadButton({
         cancelUpload={cancelUpload}
         isTeacher={isTeacher}
         confirmUploadWarning={confirmUploadWarning}
-      />
-      <PublishedWarningModal
-        isOpen={isPublishedWarningModalOpen}
-        onClose={closePublishedWarning}
       />
       {renderUploadButton()}
     </>

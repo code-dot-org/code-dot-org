@@ -1,0 +1,72 @@
+import React, {createContext, useContext} from 'react';
+
+import {ChatButtonData, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
+import {ChatAsset} from '@cdo/apps/aichat/types/assets';
+import type {JsonVideoFileMetadata} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
+import {ProjectSources} from '@cdo/apps/lab2/types';
+
+import {
+  ConfigType,
+  SetConfigFunction,
+  OnRunFunction,
+  OnStopFunction,
+  SendConsoleInputFunction,
+  SendTypedInputMessageFunction,
+  CodebridgeLevelProperties,
+  ProjectPickerSettings,
+} from '../types';
+
+export type CodebridgeContextType = {
+  config: ConfigType;
+  setConfig: SetConfigFunction;
+  onRun?: OnRunFunction;
+  onStop?: OnStopFunction;
+  startSources: ProjectSources;
+  sendConsoleInput?: SendConsoleInputFunction;
+  sendTypedInputMessage?: SendTypedInputMessageFunction;
+  levelProperties: CodebridgeLevelProperties;
+  projectPickerSettings?: ProjectPickerSettings;
+  hiddenContextCallback?: () => Promise<string>;
+  onImageFlagged?: (
+    file: File,
+    fileType: string,
+    uploadFunction: () => Promise<void>
+  ) => void;
+  aiTutorMultimodalEnabled?: boolean;
+  aiTutorChatButtonData?: ChatButtonData[];
+  aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
+  aiTutorSystemPrompt?: string;
+  tutorVideos?: JsonVideoFileMetadata[];
+  aiTutorDisabled?: boolean;
+  onAssetUploaded?: (asset: ChatAsset, assetUrl: string) => void;
+  onAssetRemoved?: (asset: ChatAsset) => void;
+  aiTutorInitialWelcomeMessage?: string;
+  allowMultipleValidationFiles?: boolean;
+  enableUserAddedSelectionContext?: boolean;
+};
+
+export const CodebridgeContext = createContext<CodebridgeContextType | null>(
+  null
+);
+
+export const useCodebridgeContext = () => {
+  const context = useContext(CodebridgeContext);
+  if (context === null) {
+    throw new Error('Codebridge Context has not been provided!');
+  }
+  return context;
+};
+
+type CodebridgeContextProviderType = {
+  children: React.ReactNode;
+  value: CodebridgeContextType;
+};
+
+export const CodebridgeContextProvider = ({
+  children,
+  value,
+}: CodebridgeContextProviderType) => (
+  <CodebridgeContext.Provider value={value}>
+    {children}
+  </CodebridgeContext.Provider>
+);

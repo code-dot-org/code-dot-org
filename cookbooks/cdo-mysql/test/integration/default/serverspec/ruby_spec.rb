@@ -17,6 +17,6 @@ describe 'mysql::default' do
     it {should be_running}
   end
 
-  version = '5.7'
+  version = '8.0'
   cmd 'echo "select version()" | mysql -u root -N', /^#{Regexp.escape(version)}/
 end

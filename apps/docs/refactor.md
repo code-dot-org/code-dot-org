@@ -1,4 +1,4 @@
-# Refactoring Code.org javascript #
+# Refactoring CodeAI javascript #
 
 The code base has been around for a while and a lot has changed. While there is
 still a lot of spaghetti, it's at least now in a place where we have the

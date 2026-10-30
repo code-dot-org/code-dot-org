@@ -1,8 +1,9 @@
+import {configureStore} from '@reduxjs/toolkit';
 import React from 'react';
 import {Provider} from 'react-redux';
+
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {configureStore} from '@reduxjs/toolkit';
 
 export default {
   component: CurriculumCatalogCard,
@@ -20,12 +21,16 @@ const defaultArgs = {
   duration: 'school_year',
   gradesArray: ['1', '2', '3', '4'],
   topics: ['programming', 'artificial_intelligence', 'art_and_design'],
+  description: 'A description of this curriculum',
   isTranslated: true,
   isEnglish: true,
   pathToCourse: '/s/course',
   isSignedOut: false,
   isTeacher: true,
   onQuickViewClick: () => {},
+  handleSetExpandedCardKey: () => {},
+  recommendedSimilarCurriculum: {},
+  recommendedStretchCurriculum: {},
 };
 
 export const AllOptionsCard = Template.bind({});
@@ -47,3 +52,14 @@ OneGradeCard.storyName = 'CurriculumCatalogCard – One Grade';
 export const NoLabelsCard = Template.bind({});
 NoLabelsCard.args = {...defaultArgs, topics: []};
 NoLabelsCard.storyName = 'CurriculumCatalogCard – No Labels';
+
+export const WideCard = Template.bind({});
+WideCard.args = {...defaultArgs, wide: true};
+WideCard.storyName = 'CurriculumCatalogCard – Wide Card';
+
+export const WideCardLongDescription = Template.bind({});
+WideCardLongDescription.args = {
+  ...defaultArgs,
+  wide: true,
+  description: 'A very long description of this curriculum'.repeat(10),
+};

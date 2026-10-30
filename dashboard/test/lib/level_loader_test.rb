@@ -1,6 +1,13 @@
 require 'test_helper'
+require 'tmpdir'
 
 class LevelLoaderTest < ActiveSupport::TestCase
+  STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
+
+  # Values that live only inside a level's encrypted blob, so that finding them
+  # in the database proves the seed path decrypted the file.
+  SECRET_INSTRUCTIONS = 'only readable once decrypted'.freeze
+  SECRET_NOTES = 'levelbuilder notes, also encrypted'.freeze
   test 'creates Bee Fixture' do
     # Ensure we're creating a new level
     assert_nil Level.find_by_name('Bee Fixture')
@@ -85,5 +92,158 @@ class LevelLoaderTest < ActiveSupport::TestCase
     # Ideal Level Source: Updates ideal_level_source to match level data.
     refute_nil level.ideal_level_source
     assert_equal level.solution_blocks, level.ideal_level_source.data
+  end
+
+  test 'import_levels refuses level files misfiled across the partitions' do
+    misfiled = [
+      'test/ui/config/levels/custom/LevelLoader misfiled probe.level',
+      'config/levels/custom/UI Test LevelLoader misfiled probe.level',
+      'config/levels/custom/New LevelLoader Misfiled Project.level',
+      'config/levels/custom/LevelLoader Misfiled Subproject.level',
+      'config/standalone_projects/levels/custom/LevelLoader misfiled probe.level',
+      'test/ui/config/levels/custom/New LevelLoader Misfiled Project.level',
+    ]
+
+    Dir.mktmpdir do |dir|
+      misfiled.each do |relative_path|
+        path = copy_level_fixture(dir, relative_path)
+
+        e = assert_raises do
+          LevelLoader.import_levels path
+        end
+        assert_includes e.message, 'misfiled'
+        assert_includes e.message, "git mv #{path.dump}"
+        assert_nil Level.find_by_name(Policies::LevelFiles.level_name_from_path(path))
+      end
+    end
+  end
+
+  test 'import_levels loads standalone partition levels on levelbuilder, whose web application refuses edits to them' do
+    CDO.stubs(:rack_env).returns(:levelbuilder)
+    CDO.stubs(:running_web_application?).returns(false)
+
+    Dir.mktmpdir do |dir|
+      LevelLoader.import_levels copy_level_fixture(dir, 'config/standalone_projects/levels/custom/LevelLoader Levelbuilder Probe Subproject.level')
+    end
+    level = Level.find_by_name!('LevelLoader Levelbuilder Probe Subproject')
+
+    CDO.stubs(:running_web_application?).returns(true)
+    level.notes = 'edited'
+    refute level.valid?
+  end
+
+  test 'import_levels refuses a level file whose name matches two partitions' do
+    Dir.mktmpdir do |dir|
+      path = copy_level_fixture(dir, 'test/ui/config/levels/custom/UI Test LevelLoader Probe Subproject.level')
+
+      e = assert_raises(ArgumentError) do
+        LevelLoader.import_levels path
+      end
+      assert_includes e.message, 'only one'
+    end
+  end
+
+  test 'import_levels with an empty glob no-ops, unless a level was requested by name' do
+    LevelLoader.import_levels 'test/fixtures/levels/no_such_directory/**/*.level'
+
+    assert_raises do
+      LevelLoader.import_levels 'test/fixtures/levels/No Such Level.level', level_name: 'No Such Level'
+    end
+  end
+
+  test 'import_levels decrypts an encrypted level file into the database' do
+    CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
+
+    name = 'LevelLoader encrypted probe'
+    Dir.mktmpdir do |dir|
+      path = write_encrypted_level_file(dir, name)
+
+      # Sanity-check the fixture: the secrets must not be readable on disk, or
+      # the assertions below would pass without any decryption happening.
+      contents = File.read(path)
+      assert_includes contents, 'encrypted_properties'
+      refute_includes contents, 'short_instructions'
+      refute_includes contents, SECRET_INSTRUCTIONS
+      refute_includes contents, SECRET_NOTES
+
+      assert_nil Level.find_by_name(name)
+      LevelLoader.import_levels path
+
+      level = Level.find_by_name(name)
+      refute_nil level
+      assert_kind_of Artist, level
+      assert level.encrypted
+      # Everything in `properties` moves into the encrypted blob for an
+      # encrypted level, so a seed that failed to decrypt would leave these nil.
+      assert_equal SECRET_INSTRUCTIONS, level.short_instructions
+      assert_equal SECRET_NOTES, level.notes
+    end
+  end
+
+  test 'import_levels re-decrypts an encrypted level file when its contents change' do
+    CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
+
+    name = 'LevelLoader encrypted probe'
+    Dir.mktmpdir do |dir|
+      LevelLoader.import_levels write_encrypted_level_file(dir, name)
+      assert_equal SECRET_INSTRUCTIONS, Level.find_by_name(name).short_instructions
+
+      LevelLoader.import_levels write_encrypted_level_file(dir, name, short_instructions: 'second revision')
+      assert_equal 'second revision', Level.find_by_name(name).short_instructions
+    end
+  end
+
+  # Characterizes today's behavior, which is wrong: seeding an encrypted level
+  # with no CDO.properties_encryption_key creates an empty stub *and* records
+  # the file's md5, so Services::LevelFiles.load_custom_level short-circuits on
+  # every later seed and the level stays empty even once a key is available.
+  # The fix belongs with the code, not here; update this test when it lands.
+  test 'import_levels without a key stubs out an encrypted level and records its md5' do
+    CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
+
+    name = 'LevelLoader encrypted probe'
+    Dir.mktmpdir do |dir|
+      path = write_encrypted_level_file(dir, name)
+
+      CDO.stubs(:properties_encryption_key).returns(nil)
+      LevelLoader.import_levels path
+
+      level = Level.find_by_name(name)
+      refute_nil level
+      assert_nil level.short_instructions
+      assert_equal Digest::MD5.hexdigest(File.read(path)), level.md5
+
+      # Supplying the key later does not repair the level, because the md5 the
+      # keyless seed stored still matches the file.
+      CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
+      LevelLoader.import_levels path
+      assert_nil Level.find_by_name(name).short_instructions
+    end
+  end
+
+  # Builds the .level file from Level#to_xml rather than a checked-in blob, so
+  # the fixture stays valid if the serialization format moves and so it is
+  # readable here. Returns the path written.
+  def write_encrypted_level_file(dir, name, short_instructions: SECRET_INSTRUCTIONS)
+    level = Artist.new(
+      name: name,
+      level_num: 'custom',
+      encrypted: true,
+      short_instructions: short_instructions,
+      notes: SECRET_NOTES
+    )
+    path = File.join(dir, "#{name}.level")
+    File.write(path, level.to_xml)
+    path
+  end
+
+  # Copies the Bee fixture to relative_path under dir, whose layout mirrors the
+  # repo's, since the partition a file is seeded into follows its path. Returns
+  # the path written.
+  def copy_level_fixture(dir, relative_path)
+    path = File.join(dir, relative_path)
+    FileUtils.mkdir_p(File.dirname(path))
+    FileUtils.cp(Rails.root.join('test/fixtures/levels/Bee Fixture.level'), path)
+    path
   end
 end

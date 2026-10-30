@@ -1,5 +1,6 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 50,
   "created_at": "2023-11-28T21:11:15.000Z",
   "level_num": "custom",
@@ -32,7 +33,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "# Robot Face\r\n\r\nUse at least 4 different shape blocks, variables, and random numbers to create a robot face with **unique** and **creative** features!\r\n\r\n# Do This\r\n\r\n1) Use your plan from your activity guide to create your robot face.\r\n2) Make sure you use at least 4 variables with random numbers to give your robot features that change each time the program is run.\r\n\r\n\r\n\r\n",
+    "long_instructions": "# Robot Face\r\n\r\nUse at least 4 different shape blocks, at least 4 variables with random numbers to create a robot face with **unique** and **creative** features!\r\n\r\n# Do This\r\n\r\n1) Use your plan from your activity guide to create your robot face.\r\n2) Make sure you use at least 4 variables with random numbers to give your robot features that change each time the program is run.\r\n\r\n\r\n\r\n",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "is_k1": "false",
@@ -74,19 +75,18 @@
     "libraries_enabled": "false",
     "validation_enabled": "false",
     "reference_links": [
-      "/courses/csd-2022/guides/random-numbers",
-      "/courses/csd-2022/guides/variables",
-      "/courses/csd-2022/guides/naming-variables",
-      "/courses/csd-2022/guides/drawing-shapes",
-      "/courses/csd-2022/guides/shapes-and-parameters",
-      "/courses/csd-2022/guides/problem-solving-process-programming"
+      "/courses/csd-2024/guides/random-numbers",
+      "/courses/csd-2024/guides/variables",
+      "/courses/csd-2024/guides/naming-variables",
+      "/courses/csd-2024/guides/drawing-shapes",
+      "/courses/csd-2024/guides/shapes-and-parameters",
+      "/courses/csd-2024/guides/problem-solving-process-programming"
     ],
     "encrypted_examples": "zTxOjvToWFgsMHyRRk5NFV1Nt9QswJLZFps+vCHbkkKX9t+FqptZpmlg/7zh\ni3mG73fXxisTLP3L7wohQ2RIrzIX8LXfIzU9AOvq7EE4AaRdOy4iwmRWFfB1\ntr0tClvldbplzRclsjUq9EkZlmLkqK6ADjZt7QqPOzpC7cPTQHFYUhHaXSc2\nD3+VSujlnkMzD+X4icw/jTl/eOi/EtBDkkhY6vykyBNeuUDhxS/eJm4El3Dj\ny7tbjffxbKZ3W/Y7iMb2FSdOzFm4+sz6YhKdKw==\n",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-11-28T21:11:15.755+00:00\",\"changed\":[\"cloned from \\\"CSD U3 L7 mini project_2023\\\"\"],\"cloned_from\":\"CSD U3 L7 mini project_2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-11-28T21:11:15.755+00:00\",\"changed\":[\"cloned from \\\"CSD U3 L7 mini project_2023\\\"\"],\"cloned_from\":\"CSD U3 L7 mini project_2023\"},{\"changed_at\":\"2024-11-14 17:54:16 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

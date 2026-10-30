@@ -1,24 +1,28 @@
+import {
+  ActionDropdown,
+  SimpleDropdown,
+} from '@code-dot-org/component-library/dropdown';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import Link from '@code-dot-org/component-library/link';
+import orderBy from 'lodash/orderBy';
 import PropTypes from 'prop-types';
 import React from 'react';
-import i18n from '@cdo/locale';
-import color from '../../util/color';
-import {ImageWithStatus} from '../ImageWithStatus';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
-import wrappedSortable from '../tables/wrapped_sortable';
-import orderBy from 'lodash/orderBy';
-import {featuredProjectDataPropType} from './projectConstants';
-import {FeaturedProjectStatus} from '@cdo/apps/util/sharedConstants';
-import {FEATURED_PROJECT_TYPE_MAP} from './projectTypeMap';
-import QuickActionsCell from '../tables/QuickActionsCell';
-import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
-import PopUpMenu, {MenuBreak} from '@cdo/apps/lib/ui/PopUpMenu';
-import HttpClient from '@cdo/apps/util/HttpClient';
-import experiments from '@cdo/apps/util/experiments';
-import SimpleDropdown from '@cdo/apps/componentLibrary/simpleDropdown/SimpleDropdown';
-import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 
-const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
+import experiments from '@cdo/apps/util/experiments';
+import HttpClient from '@cdo/apps/util/HttpClient';
+import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
+import {FeaturedProjectStatus} from '@cdo/generated-scripts/sharedConstants';
+import i18n from '@cdo/locale';
+
+import {ImageWithStatus} from '../ImageWithStatus';
+import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
+import wrappedSortable from '../tables/wrapped_sortable';
+
+import {featuredProjectDataPropType} from './projectConstants';
+import {FEATURED_PROJECT_TYPE_MAP} from './projectTypeMap';
+import {getThumbnailUrl} from './projectUtils';
 
 const THUMBNAIL_SIZE = 65;
 
@@ -29,18 +33,18 @@ export const COLUMNS = {
   APP_TYPE: 2,
   STATUS: 3,
   LAST_FEATURED: 4,
-  LAST_UNFEATURED: 5,
+  LAST_PUBLISHED: 5,
   ACTIONS: 6,
 };
 
 export const styles = {
   cellFirst: {
     borderWidth: '1px 0px 1px 1px',
-    borderColor: color.border_light_gray,
+    borderColor: 'var(--borders-neutral-primary)',
   },
   headerCellFirst: {
     borderWidth: '0px 0px 1px 0px',
-    borderColor: color.border_light_gray,
+    borderColor: 'var(--borders-neutral-primary)',
   },
   cellThumbnail: {
     width: THUMBNAIL_SIZE,
@@ -53,13 +57,13 @@ export const styles = {
   },
   cellName: {
     borderWidth: '1px 1px 1px 0px',
-    borderColor: color.border_light_gray,
+    borderColor: 'var(--borders-neutral-primary)',
     padding: 15,
     width: 250,
   },
   headerCellName: {
     borderWidth: '0px 1px 1px 0px',
-    borderColor: color.border_light_gray,
+    borderColor: 'var(--borders-neutral-primary)',
     padding: 15,
   },
   cellType: {
@@ -71,44 +75,44 @@ export const styles = {
     justifyContent: 'center',
     alignItems: 'center',
   },
+  tableMessage: {
+    marginInlineStart: 10,
+  },
 };
 
 // Cell formatters.
 const thumbnailFormatter = function (thumbnailUrl, {rowData}) {
   const projectUrl = `/projects/${rowData.type}/${rowData.channel}/`;
-  thumbnailUrl = thumbnailUrl || PROJECT_DEFAULT_IMAGE;
+  thumbnailUrl = getThumbnailUrl(thumbnailUrl, rowData.type);
   return (
-    <a
-      style={tableLayoutStyles.link}
-      href={projectUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-    >
+    <Link href={projectUrl} openInNewTab>
       <ImageWithStatus
         src={thumbnailUrl}
         width={THUMBNAIL_SIZE}
         wrapperStyle={styles.thumbnailWrapper}
       />
-    </a>
+    </Link>
   );
 };
 
 const nameFormatter = (projectName, {rowData}) => {
   const url = `/projects/${rowData.type}/${rowData.channel}/`;
   return (
-    <a
-      style={tableLayoutStyles.link}
-      href={url}
-      target="_blank"
-      rel="noopener noreferrer"
-    >
+    <Link href={url} openInNewTab size="s">
       {projectName}
-    </a>
+    </Link>
   );
 };
 
 const unfeature = channel => {
   const url = `/featured_projects/${channel}/unfeature`;
+  HttpClient.put(url, undefined, true)
+    .then(handleSuccess)
+    .catch(handleUnfeatureFailure);
+};
+
+const bookmark = channel => {
+  const url = `/featured_projects/${channel}/bookmark`;
   HttpClient.put(url, undefined, true)
     .then(handleSuccess)
     .catch(handleUnfeatureFailure);
@@ -143,28 +147,52 @@ const onDelete = channel => {
 
 const actionsFormatter = (actions, {rowData}) => {
   const status = rowData.status;
+  const options = [];
+  if (status !== FeaturedProjectStatus.active) {
+    options.push({
+      value: `feature-${rowData.channel}`,
+      label: 'Feature',
+      icon: {iconName: 'star', iconStyle: 'solid'},
+      onClick: () => feature(rowData.channel, rowData.publishedAt),
+    });
+  }
+  if (status === FeaturedProjectStatus.active) {
+    options.push({
+      value: `unfeature-${rowData.channel}`,
+      label: 'Unfeature',
+      icon: {iconName: 'ban', iconStyle: 'solid'},
+      onClick: () => unfeature(rowData.channel),
+    });
+  }
+  if (status === FeaturedProjectStatus.archived) {
+    options.push({
+      value: `bookmark-${rowData.channel}`,
+      label: 'Bookmark',
+      icon: {iconName: 'bookmark', iconStyle: 'solid'},
+      onClick: () => bookmark(rowData.channel),
+    });
+  }
+  options.push({
+    value: `remove-${rowData.channel}`,
+    label: 'Remove',
+    icon: {iconName: 'circle-xmark', iconStyle: 'solid'},
+    isOptionDestructive: true,
+    onClick: () => onDelete(rowData.channel),
+  });
+
   return (
-    <QuickActionsCell>
-      {status !== FeaturedProjectStatus.active && (
-        <PopUpMenu.Item
-          onClick={() => feature(rowData.channel, rowData.publishedAt)}
-        >
-          Feature
-        </PopUpMenu.Item>
-      )}
-      {status === FeaturedProjectStatus.active && (
-        <PopUpMenu.Item onClick={() => unfeature(rowData.channel)}>
-          Unfeature
-        </PopUpMenu.Item>
-      )}
-      <MenuBreak />
-      <PopUpMenu.Item
-        onClick={() => onDelete(rowData.channel)}
-        color={color.red}
-      >
-        Remove
-      </PopUpMenu.Item>
-    </QuickActionsCell>
+    <ActionDropdown
+      name={`featured-actions-${rowData.channel}`}
+      labelText={i18n.quickActions()}
+      size="s"
+      menuPlacement="right"
+      options={options}
+      triggerButtonProps={{
+        variant: 'outlined',
+        color: 'secondary',
+        children: <FontAwesomeV6Icon iconName="ellipsis-vertical" />,
+      }}
+    />
   );
 };
 
@@ -185,10 +213,13 @@ const statusFormatter = status => {
   return status;
 };
 
+const publishedFormatter = time => {
+  return time ? 'yes' : 'no';
+};
+
 const topicFormatter = topic => {
   return topic;
 };
-
 class FeaturedProjectsTable extends React.Component {
   static propTypes = {
     activeList: PropTypes.arrayOf(featuredProjectDataPropType).isRequired,
@@ -346,14 +377,14 @@ class FeaturedProjectsTable extends React.Component {
         },
       },
       {
-        property: 'unfeaturedAt',
+        property: 'publishedAt',
         header: {
-          label: i18n.unfeatured(),
+          label: i18n.submitted(),
           props: {style: tableLayoutStyles.headerCell},
           transforms: [sortable],
         },
         cell: {
-          formatters: [dateFormatter],
+          formatters: [publishedFormatter],
           props: {style: tableLayoutStyles.cell},
         },
       },
@@ -418,6 +449,7 @@ class FeaturedProjectsTable extends React.Component {
         onChange={e => {
           this.setFilterDropdownStatusValue(e.target.value);
         }}
+        style={{marginBottom: 10}}
         size="s"
       />
     );
@@ -439,9 +471,13 @@ class FeaturedProjectsTable extends React.Component {
       sort: orderBy,
     })(this.getProjectList());
 
+    const mustBeSubmittedMessage =
+      '* Featured projects must be submitted (published) in order to be displayed in the public featured projects gallery.';
+
     return (
       <div>
         {this.renderStatusFilterDropdown()}
+        <span style={styles.tableMessage}>{mustBeSubmittedMessage}</span>
         <Table.Provider columns={columns} style={tableLayoutStyles.table}>
           <Table.Header />
           <Table.Body rows={sortedRows} rowKey="channel" />

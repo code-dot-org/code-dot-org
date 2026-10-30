@@ -2,6 +2,6 @@
 
 require_relative '../../../dashboard/config/environment'
 
-CDO.log = Logger.new(STDOUT)
+CDO.log = Logger.new($stdout)
 
 School.seed_from_s3

@@ -1,0 +1,51 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-05-12T19:54:11.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## AI Judge\r\n\r\nUpload your submissions here!",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.8,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "editable",
+        "systemPrompt": "editable",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "bubble_choice_description": "Use AI Chat to do some market research for your product or app. ",
+    "display_name": "Marketing Research Chat",
+    "thumbnail_url": "https://images.code.org/0c2e3bb0e1a6a1b4ee36a79baa8f9df5-analytics.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-12T19:54:11.247+00:00\",\"changed\":[\"cloned from \\\"codechella-2025-product-launch-1-market-research\\\"\"],\"cloned_from\":\"codechella-2025-product-launch-1-market-research\"},{\"changed_at\":\"2025-05-12 19:55:11 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>

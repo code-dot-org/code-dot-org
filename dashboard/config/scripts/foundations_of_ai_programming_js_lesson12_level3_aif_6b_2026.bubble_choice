@@ -1,0 +1,9 @@
+name 'foundations-of-ai-programming-js-lesson12-level3_aif-6b-2026'
+display_name 'Plan Your App Logic'
+description 'Plan how your app works with a flowchart or the chatbot. Map how user inputs lead to outcomes using conditions and identify key values your app needs to track.'
+
+sublevels
+level 'foundations-of-ai-programming-js-lesson12-level3a_aif-6b-2026'
+level 'foundations-of-ai-programming-js-lesson12-level3b_aif-6b-2026'
+
+uses_lab2

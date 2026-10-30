@@ -1,0 +1,23 @@
+---
+driver:
+  name: dokken
+  chef_version: 17.6.18
+  platform: linux/amd64
+  pull_platform_image: false
+  pull_chef_image: false
+verifier:
+  name: inspec
+transport:
+  name: dokken
+provisioner:
+  name: dokken
+platforms:
+  - name: ubuntu-20.04
+    driver:
+      image: dokken/ubuntu-20.04
+    run_list:
+      - recipe[apt]
+suites:
+  - name: default
+    run_list:
+      - recipe[cdo-python]

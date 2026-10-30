@@ -1,0 +1,21 @@
+name 'test-computer-systems-lesson11-multi-L5_v2-2025'
+question 'Given this new information, what do you think we should do?'
+
+wrong '🟢Launch it anyway - no action needed!'
+wrong '🟡Launch the chatbot, but follow-up with a quick fix to address the issue'
+wrong '🟠Delay the launch until we until we do more testing and fix the issue'
+wrong '🔴Cancel the project altogether - this issue is too serious'
+
+allow_multiple_attempts false
+markdown <<MARKDOWN
+## Lydia's Home Security Device
+
+#### Lydia has designed a home security device. The device displays a green light if the house is properly secured (all windows closed and doors locked) and a red light if the home is not secured.
+
+#### After an initial round of testing, color blind users reported not being able to tell whether the home was secured or not because the red and green lights looked too similar.
+
+#### Now Lydia needs to make a decision about what to do with this new information
+
+<hr />
+
+MARKDOWN

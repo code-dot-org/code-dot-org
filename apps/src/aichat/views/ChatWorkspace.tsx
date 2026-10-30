@@ -1,81 +1,545 @@
-import React, {useCallback, useEffect} from 'react';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
-import {useSelector} from 'react-redux';
-import ChatWarningModal from '@cdo/apps/aichat/views/ChatWarningModal';
-import ChatMessage from './ChatMessage';
-import UserChatMessageEditor from './UserChatMessageEditor';
-import moduleStyles from './chatWorkspace.module.scss';
+import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
+import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import Tabs, {TabsProps} from '@code-dot-org/component-library/tabs';
+import markdownToTxt from 'markdown-to-txt';
+import React, {
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+  useMemo,
+  forwardRef,
+  useImperativeHandle,
+} from 'react';
+
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import usePrevious from '@cdo/apps/util/usePrevious';
+import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
+
+import AichatContextManager from '../aichatContextManager';
 import {
-  AichatState,
+  modelDescriptions,
+  RESET_CONVERSATION_CUSTOMIZATION_UPDATES,
+} from '../constants';
+import {applySchemaDisplayTransform} from '../helpers/applySchemaDisplayTransform';
+import {acceptedBuilds} from '../host/acceptedBuilds';
+import {AcceptedBuild, useChatHost} from '../host/ChatHostContext';
+import {
+  addChatEvent,
   clearChatMessages,
-  setShowWarningModal,
-} from '@cdo/apps/aichat/redux/aichatRedux';
-import {ProgressState} from '@cdo/apps/code-studio/progressRedux';
+  clearStagedFiles,
+  fetchUserChatHistory,
+  removeUpdateMessage,
+  selectAllVisibleMessages,
+  setClientType,
+  setNewChatSession,
+  setChatWorkspaceSelectedTab,
+  uploadFiles,
+} from '../redux';
+import {clearUserAddedSelectionContext} from '../redux/slice';
+import {findChangedProperties, getNewRemoveId} from '../redux/utils';
+import {
+  AiChatClientType,
+  AiChatDisabledState,
+  ChatAsset,
+  ChatButtonAndKey,
+  ModelParameters,
+  isModelUpdate,
+  UploadStatus,
+  WorkspaceTeacherViewTab,
+} from '../types';
+import {getAssetUrl, getShortName} from '../utils';
+
+import StagedFilesPreview from './assets/StagedFilesPreview';
+import UserAddedSelectionContextPreview from './assets/UserAddedSelectionContextPreview';
+import ChatEventsList from './ChatEventsList';
+import UserChatMessageEditor from './UserChatMessageEditor';
+
+import moduleStyles from './chatWorkspace.module.scss';
+
+/** Handle for interacting with the Chat Workspace */
+export interface ChatWorkspaceHandle {
+  /**
+   * Uploads files to the chat message.
+   * @param onUploadFinished Optional callback allowing callers to notify external components of the file status.
+   */
+  addFiles: (
+    files: File[],
+    onUploadFinished?: (status: UploadStatus) => void
+  ) => void;
+}
+
+interface ChatWorkspaceProps {
+  modelParameters: ModelParameters;
+  clientType: AiChatClientType;
+  chatButtons?: ChatButtonAndKey[];
+  hiddenContextCallback?: () => Promise<string>;
+  hideModelChangeMessage?: boolean;
+  sendDisabled?: boolean;
+  onMessageSent?: () => void;
+
+  // The level this chat belongs to, or null for a chat outside any level.
+  levelId: number | null;
+  // The level's own system prompt, sent to the model ahead of the lab's.
+  levelSystemPrompt?: string;
+
+  // Multimodal support
+  multimodalEnabled?: boolean;
+  channelId?: string;
+  levelName?: string;
+  hasStarterAssets?: boolean;
+  onAssetUploaded?: (asset: ChatAsset, assetUrl: string) => void;
+  onAssetRemoved?: (asset: ChatAsset) => void;
+
+  // Renders a schema lab's parsed response as display text. Pure -- it runs over
+  // the whole transcript on every render. Only ever set alongside
+  // modelParameters.responseJsonSchema.
+  formatSchemaResponseForDisplay?: (response: unknown) => string;
+
+  // Acts on a schema response that just arrived (e.g. loading the model's code
+  // into the project). Fires once per response, never for stored history.
+  onSchemaResponse?: (response: unknown) => void;
+
+  hasInstructionsDrawer?: boolean;
+  lessonId?: number;
+  disabledState?: AiChatDisabledState;
+  // If true, disables the ability to send messages. disabledState takes precendence over this, and
+  // will disable the entire workspace.
+  disableSendingMessages?: boolean;
+
+  // Optional content to render after the last chat message (e.g. lab-specific actions).
+  renderLastMessagePostText?: (
+    onRequestScrollToBottom: () => void
+  ) => React.ReactNode;
+
+  // If provided, displayed as an assistant chat bubble when the user has no prior chat history.
+  // Not sent to the model.
+  initialWelcomeMessage?: string;
+}
 
 /**
  * Renders the AI Chat Lab main chat workspace component.
  */
-const ChatWorkspace: React.FunctionComponent = () => {
-  const showWarningModal = useSelector(
-    (state: {aichat: AichatState}) => state.aichat.showWarningModal
-  );
+const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
+  (
+    {
+      modelParameters,
+      clientType,
+      chatButtons,
+      hiddenContextCallback,
+      multimodalEnabled = false,
+      levelId,
+      levelName,
+      levelSystemPrompt,
+      channelId,
+      hasStarterAssets = false,
+      onAssetUploaded,
+      onAssetRemoved,
+      hideModelChangeMessage = false,
+      formatSchemaResponseForDisplay,
+      onSchemaResponse,
+      hasInstructionsDrawer,
+      lessonId,
+      disabledState,
+      disableSendingMessages,
+      renderLastMessagePostText,
+      initialWelcomeMessage,
+      sendDisabled = false,
+      onMessageSent,
+    },
+    ref
+  ) => {
+    const disabled = disabledState?.disabled ?? false;
+    const disabledMessage = disabledState?.disabledMessage;
+    const disabledLink = disabledState?.disabledLink;
 
-  const storedMessages = useSelector(
-    (state: {aichat: AichatState}) => state.aichat.chatMessages
-  );
-
-  const isWaitingForChatResponse = useSelector(
-    (state: {aichat: AichatState}) => state.aichat.isWaitingForChatResponse
-  );
-
-  const dispatch = useAppDispatch();
-
-  const onCloseWarningModal = useCallback(
-    () => dispatch(setShowWarningModal(false)),
-    [dispatch]
-  );
-
-  const currentLevelId = useSelector(
-    (state: {progress: ProgressState}) => state.progress.currentLevelId
-  );
-
-  const showWaitingAnimation = () => {
-    if (isWaitingForChatResponse) {
-      return (
-        <img
-          src="/blockly/media/aichat/typing-animation.gif"
-          alt={'Waiting for response'}
-          className={moduleStyles.waitingForResponse}
-        />
+    const canDisplayAssets = !!levelName && !!channelId;
+    if (multimodalEnabled && !canDisplayAssets) {
+      console.warn(
+        'Multimodal support requires level name and channel ID. Asset uploads will not be available.'
       );
+      multimodalEnabled = false;
     }
-  };
 
-  // When the level changes, clear the chat message history.
-  useEffect(() => {
-    dispatch(clearChatMessages());
-  }, [currentLevelId, dispatch]);
+    const selectedTab = useAppSelector(
+      state => state.aichat.chatWorkspaceSelectedTab
+    );
 
-  return (
-    <div id="chat-workspace-area" className={moduleStyles.chatWorkspace}>
-      {showWarningModal && <ChatWarningModal onClose={onCloseWarningModal} />}
+    const studentChatHistory = useAppSelector(
+      state => state.aichat.studentChatHistory
+    );
+    const scriptId = useAppSelector(state => state.progress.scriptId);
+    const unfilteredVisibleItems = useAppSelector(selectAllVisibleMessages);
+    const visibleItems = useMemo(() => {
+      if (hideModelChangeMessage) {
+        return unfilteredVisibleItems.filter(
+          message => !isModelUpdate(message)
+        );
+      }
+      return unfilteredVisibleItems;
+    }, [hideModelChangeMessage, unfilteredVisibleItems]);
+    const currentUserId = useAppSelector(state => state.currentUser.userId);
+
+    const selectedStudent = useAppSelector(({teacherSections, progress}) => {
+      const students = teacherSections.selectedStudents;
+      if (progress.viewAsUserId && progress.currentLevelId) {
+        return Object.values(students).find(
+          student => student.id === progress.viewAsUserId
+        );
+      }
+    });
+
+    const supportsMultimodalInput = useMemo(() => {
+      return modelDescriptions.find(
+        model => model.id === modelParameters.selectedModelId
+      )?.multimodal;
+    }, [modelParameters.selectedModelId]);
+
+    const canUploadAssets =
+      supportsMultimodalInput && multimodalEnabled && canDisplayAssets;
+
+    const buildAssetUrl = useCallback(
+      (asset: ChatAsset) => {
+        return getAssetUrl(asset, channelId, levelName);
+      },
+      [channelId, levelName]
+    );
+
+    const dispatch = useAppDispatch();
+
+    // Tracks the level ID for which the current chat slice has been cleared.
+    // When switching levels, there is one render pass where the level ID and
+    // level name props have been updated, but chat events still belong to the
+    // previous level, before being cleared by clearChatMessages(). In that window,
+    // we don't want to render the previous level's chat events with the current
+    // level's context (e.g. level name for starter assets).
+    // TODO: This goes away if each ChatWorkspace instance manages its own state
+    // locally rather than with a global redux slice.
+    const [clearedForLevelId, setClearedForLevelId] = useState<
+      number | null | undefined
+    >(undefined);
+    const levelChanging = clearedForLevelId !== levelId;
+
+    // Initialize the ChatEventLogger with the current context, whenever it updates.
+    useEffect(() => {
+      AichatContextManager.setContext({
+        clientType,
+        currentLevelId: levelId,
+        scriptId,
+        channelId,
+        lessonId,
+      });
+    }, [clientType, levelId, scriptId, channelId, lessonId]);
+
+    // This effect resets chat history and any staged uploads or user selections when:
+    // a) a user switches levels, or
+    // b) a teacher switches between viewing students (or their own project) on a given level.
+    useEffect(() => {
+      dispatch(clearChatMessages());
+      dispatch(clearStagedFiles());
+      dispatch(clearUserAddedSelectionContext());
+      setClearedForLevelId(levelId);
+
+      if (selectedStudent) {
+        dispatch(
+          fetchUserChatHistory({
+            userId: selectedStudent.id,
+            isOwnHistory: false,
+            levelId,
+            channelId,
+            lessonId,
+          })
+        );
+      } else {
+        dispatch(
+          fetchUserChatHistory({
+            userId: currentUserId,
+            isOwnHistory: true,
+            levelId,
+            channelId,
+            lessonId,
+            initialWelcomeMessage: disabled ? undefined : initialWelcomeMessage,
+          })
+        );
+      }
+    }, [
+      dispatch,
+      currentUserId,
+      levelId,
+      selectedStudent,
+      channelId,
+      lessonId,
+      initialWelcomeMessage,
+      disabled,
+    ]);
+
+    useEffect(() => {
+      dispatch(setClientType(clientType));
+    }, [dispatch, clientType]);
+
+    const selectedStudentName =
+      selectedStudent && getShortName(selectedStudent.name);
+
+    // Teacher user is able to interact with chatbot.
+    const canChatWithModel = useMemo(
+      () => selectedTab !== WorkspaceTeacherViewTab.STUDENT_CHAT_HISTORY,
+      [selectedTab]
+    );
+
+    useEffect(() => {
+      // If we are viewing as a student, default to the student chat history tab if tab is not yet selected.
+      if (selectedStudent && !selectedTab) {
+        dispatch(
+          setChatWorkspaceSelectedTab(
+            WorkspaceTeacherViewTab.STUDENT_CHAT_HISTORY
+          )
+        );
+      } else if (!selectedStudent) {
+        dispatch(setChatWorkspaceSelectedTab(null));
+      }
+    }, [dispatch, selectedStudent, selectedTab]);
+
+    // Whenever model parameters change, 1) reset the chat session if necessary,
+    // and 2) log the changed properties to the chat history.
+    const previousParameters: ModelParameters = usePrevious(modelParameters);
+    useEffect(() => {
+      const changedProperties = findChangedProperties(
+        previousParameters,
+        modelParameters
+      );
+      if (
+        changedProperties.some(property =>
+          RESET_CONVERSATION_CUSTOMIZATION_UPDATES.includes(property)
+        )
+      ) {
+        dispatch(setNewChatSession());
+      }
+
+      changedProperties.forEach(property => {
+        dispatch(
+          addChatEvent({
+            removeId: getNewRemoveId(),
+            updatedField: property,
+            updatedValue: modelParameters[property],
+            timestamp: Date.now(),
+          })
+        );
+      });
+    }, [dispatch, previousParameters, modelParameters]);
+
+    // Sets up the chat host's handle, if there is one. Posts get added as
+    // notifications, each build the student accepts gets emitted through
+    // the listener, and the host can switch sending off and on.
+    const host = useChatHost();
+    const buildListeners = useRef(new Set<(build: AcceptedBuild) => void>());
+    const lastBuildAt = useRef(Date.now());
+    const [hostDisabledSend, setHostDisabledSend] = useState(false);
+    useEffect(() => {
+      host?.onChatReady({
+        post: notification => {
+          const removeId = getNewRemoveId();
+          dispatch(
+            addChatEvent({...notification, timestamp: Date.now(), removeId})
+          );
+          return () => dispatch(removeUpdateMessage(removeId));
+        },
+        onBuildAccepted: listener => {
+          buildListeners.current.add(listener);
+          return () => {
+            buildListeners.current.delete(listener);
+          };
+        },
+        disableSend: () => setHostDisabledSend(true),
+        enableSend: () => setHostDisabledSend(false),
+      });
+    }, [host, dispatch]);
+    useEffect(() => {
+      for (const build of acceptedBuilds(unfilteredVisibleItems)) {
+        if (build.at <= lastBuildAt.current) continue;
+        lastBuildAt.current = build.at;
+        buildListeners.current.forEach(listener => listener(build));
+      }
+    }, [unfilteredVisibleItems]);
+
+    const [liveAnnouncement, setLiveAnnouncement] = useState('');
+    const storedChatEvents = selectedStudent
+      ? studentChatHistory
+      : visibleItems;
+    // Covers a teacher viewing a student's history too: both paths feed this
+    // same list.
+    const chatEvents = useMemo(
+      () =>
+        levelChanging
+          ? []
+          : applySchemaDisplayTransform(
+              storedChatEvents,
+              formatSchemaResponseForDisplay
+            ),
+      [levelChanging, storedChatEvents, formatSchemaResponseForDisplay]
+    );
+    const hasChatHistory = chatEvents.length > 0;
+    useEffect(() => {
+      if (hasChatHistory) {
+        const last = chatEvents[chatEvents.length - 1];
+        if ('chatMessageText' in last && last.chatMessageText) {
+          setLiveAnnouncement(markdownToTxt(last.chatMessageText));
+        }
+      }
+    }, [hasChatHistory, chatEvents]);
+
+    const iconValue: FontAwesomeV6IconProps = {
+      iconName: 'lock',
+      iconStyle: 'solid',
+    };
+
+    const buildAssetUrlValue = canDisplayAssets ? buildAssetUrl : undefined;
+
+    const tabs = [
+      {
+        value: 'viewStudentChatHistory',
+        text:
+          selectedTab === WorkspaceTeacherViewTab.STUDENT_CHAT_HISTORY
+            ? `${selectedStudentName ?? ''}'s chat history (view only)`
+            : `${selectedStudentName ?? ''}'s chat history`,
+        tabContent: (
+          <ChatEventsList
+            events={levelChanging ? [] : studentChatHistory}
+            isTeacherView={true}
+            buildAssetUrl={buildAssetUrlValue}
+            disabledState={disabledState}
+          />
+        ),
+        iconLeft: iconValue,
+      },
+      {
+        value: 'testStudentModel',
+        text: 'Test student model',
+        tabContent: (
+          <ChatEventsList
+            events={visibleItems}
+            buildAssetUrl={buildAssetUrlValue}
+            disabledState={disabledState}
+          />
+        ),
+      },
+    ];
+
+    const handleOnChange = useCallback(
+      (value: string) => {
+        dispatch(setChatWorkspaceSelectedTab(value as WorkspaceTeacherViewTab));
+      },
+      [dispatch]
+    );
+
+    const tabArgs: TabsProps = {
+      name: 'teacherViewChatHistoryTabs',
+      tabs,
+      defaultSelectedTabValue: tabs[0].value,
+      onChange: handleOnChange,
+      type: 'secondary',
+      tabsContainerClassName: moduleStyles.tabsContainer,
+      tabPanelsContainerClassName: moduleStyles.tabPanelsContainer,
+    };
+
+    const uploadDisabled = !canChatWithModel || !!selectedStudent || disabled;
+
+    const isTeacherView = !!selectedStudent;
+
+    const showTabs =
+      selectedStudent && clientType === AiChatClientTypes.AI_CHAT_LAB;
+
+    useImperativeHandle(
+      ref,
+      () => ({
+        addFiles: (files, onUploadFinished) => {
+          if (canUploadAssets) {
+            dispatch(
+              uploadFiles({
+                files,
+                buildAssetUrl,
+                onUploadFinished,
+                onAssetUploaded,
+              })
+            );
+          }
+        },
+      }),
+      [canUploadAssets, dispatch, buildAssetUrl, onAssetUploaded]
+    );
+
+    return (
       <div
-        id="chat-workspace-conversation"
-        className={moduleStyles.conversationArea}
+        id="chat-workspace-area"
+        className={moduleStyles.chatWorkspace}
+        aria-live="polite"
       >
-        {storedMessages.map(message => (
-          <ChatMessage message={message} key={message.id} />
-        ))}
-        {showWaitingAnimation()}
+        <div className={moduleStyles.accessibilityHidden}>
+          {liveAnnouncement}
+        </div>
+        {showTabs ? (
+          <Tabs {...tabArgs} />
+        ) : (
+          <ChatEventsList
+            events={chatEvents}
+            isTeacherView={isTeacherView}
+            buildAssetUrl={buildAssetUrlValue}
+            clientType={clientType}
+            modelParameters={modelParameters}
+            hasInstructionsDrawer={hasInstructionsDrawer}
+            disabledState={disabledState}
+            renderLastMessagePostText={renderLastMessagePostText}
+          />
+        )}
+        <div className={moduleStyles.footer}>
+          <div className={moduleStyles.chipsRow}>
+            {canUploadAssets && !levelChanging && (
+              <StagedFilesPreview
+                buildAssetUrl={buildAssetUrl}
+                onAssetRemoved={onAssetRemoved}
+              />
+            )}
+            <UserAddedSelectionContextPreview />
+          </div>
+
+          {canChatWithModel && (
+            <UserChatMessageEditor
+              clientType={clientType}
+              modelParameters={modelParameters}
+              editorContainerClassName={moduleStyles.messageEditorContainer}
+              chatButtons={chatButtons}
+              hiddenContextCallback={hiddenContextCallback}
+              multimodalAvailable={canUploadAssets}
+              levelName={levelName}
+              levelSystemPrompt={levelSystemPrompt}
+              hasStarterAssets={hasStarterAssets}
+              buildAssetUrl={buildAssetUrlValue}
+              onAssetUploaded={onAssetUploaded}
+              uploadDisabled={uploadDisabled}
+              currentLevelId={levelId}
+              chatDisabled={disabled || disableSendingMessages}
+              sendDisabled={sendDisabled || hostDisabledSend}
+              onMessageSent={onMessageSent}
+              onSchemaResponse={onSchemaResponse}
+              formatSchemaResponseForDisplay={formatSchemaResponseForDisplay}
+            />
+          )}
+        </div>
+        {isTeacherView && hasChatHistory && disabled && (
+          <Alert
+            type={alertTypes.info}
+            text={disabledMessage || ''}
+            link={disabledLink}
+            icon={{
+              className: moduleStyles.chatDisabledAlertIcon,
+              iconName: 'ai-locked',
+              iconFamily: 'kit',
+            }}
+            className={moduleStyles.chatDisabledAlert}
+          />
+        )}
       </div>
-      <div
-        id="chat-workspace-editor"
-        className={moduleStyles.userChatMessageEditor}
-      >
-        <UserChatMessageEditor />
-      </div>
-    </div>
-  );
-};
+    );
+  }
+);
 
 export default ChatWorkspace;

@@ -14,13 +14,15 @@
           "key": "245b713b-e0ef-4345-bf8e-12dc4a112106"
         }
       ],
+      "content_area": "other",
+      "curriculum_umbrella": "Other",
       "is_migrated": true,
       "professional_learning_course": "CSP Support",
       "student_detail_progress_view": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-09-28 14:31:23 UTC",
+    "serialized_at": "2024-11-19 01:16:58 UTC",
     "published_state": "deprecated",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -2747,6 +2749,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

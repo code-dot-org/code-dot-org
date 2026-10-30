@@ -1,0 +1,10 @@
+name 'problem-solving-with-ai-project-prototype-choice'
+display_name 'Unit 1 Project Prototype Levels'
+description 'Unit 1 Project Prototype Levels'
+
+sublevels
+level 'problem-solving-with-ai-project-prototype-1'
+level 'problem-solving-with-ai-project-prototype-2'
+level 'problem-solving-with-ai-project-prototype-3'
+level 'problem-solving-with-ai-project-prototype-4'
+uses_lab2

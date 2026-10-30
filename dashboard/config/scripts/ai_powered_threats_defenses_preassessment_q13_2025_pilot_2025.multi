@@ -1,0 +1,14 @@
+name 'ai-powered-threats-defenses-preassessment-q13_2025-pilot_2025'
+
+question ‘What is one reason AI can weaken the security of an encrypted system, even if the encryption algorithm is strong?’
+
+wrong ‘AI can automatically generate new encryption algorithms faster than humans’
+wrong ‘AI can learn to reverse encryption without needing the key’
+right ‘AI can guess weak passwords by identifying common patterns in user behavior’
+wrong ‘AI can directly decrypt messages by analyzing metadata’
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 10: AI in Encryption
+MARKDOWN

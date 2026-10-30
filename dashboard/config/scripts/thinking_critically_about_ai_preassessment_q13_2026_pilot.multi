@@ -1,0 +1,14 @@
+name 'thinking-critically-about-ai-preassessment-q13_2026-pilot'
+
+question 'A student receives feedback on a project from a peer and also from an AI tool. The peer says the conclusion is confusing. The AI says the conclusion is well-written. What should the student do?'
+
+right 'Consider both sources of feedback critically, recognizing that human experience may catch things AI misses.'
+wrong 'Always trust the AI because it has read more examples of good writing than the peer.'
+wrong 'Ignore the peer\'s feedback since AI tools are always more accurate.'
+wrong 'Rewrite the entire project from scratch to be safe.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 9
+MARKDOWN

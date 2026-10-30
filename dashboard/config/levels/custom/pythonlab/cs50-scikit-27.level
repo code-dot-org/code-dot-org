@@ -1,0 +1,42 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-02-18T17:02:52.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "ai_tutor_available": "true",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# CIW AI Associate Standard: 5.15\n# Standard Description: Explain when logistic (rather than linear) regression should be used.\n#\n# Rationale: This is one of the most common points of confusion! Even though \n# they both have \"Regression\" in the name, they are used for completely \n# different goals. This tutorial provides a clear visual and logical \n# distinction: Linear for \"How Much?\" and Logistic for \"Yes or No?\".\n\n\"\"\"\nWelcome! One of the biggest tricks in AI is the name \"Logistic Regression\". \nEven though it says \"Regression,\" it is actually used for CLASSIFICATION.\n\n- Linear Regression: Predicts a straight line (e.g., How tall will you grow?).\n- Logistic Regression: Predicts an 'S' curve (e.g., Will you pass the test?).\n\nLet's see why we use the 'S' curve for Yes/No questions.\n\"\"\"\n\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom sklearn.linear_model import LinearRegression, LogisticRegression\n\n# --- OUR DATA ---\n# X = Hours Studied\n# y = 0 (Fail) or 1 (Pass)\nX = np.array([0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5]).reshape(-1, 1)\ny = np.array([0, 0, 0, 0, 0, 1, 1, 1, 1, 1])\n\n# --- PART 1: LINEAR REGRESSION (The wrong tool for this job) ---\nprint(\"--- Part 1: Linear Regression ---\")\nlin_model = LinearRegression()\nlin_model.fit(X, y)\n\n# --- PART 2: LOGISTIC REGRESSION (The right tool!) ---\nprint(\"--- Part 2: Logistic Regression ---\")\nlog_model = LogisticRegression()\nlog_model.fit(X, y)\n\n# --- VISUALIZATION ---\nplt.figure(figsize=(10, 5))\nX_test = np.linspace(0, 6, 100).reshape(-1, 1)\n\n# Plot Linear\nplt.subplot(1, 2, 1)\nplt.scatter(X, y, color='black')\nplt.plot(X_test, lin_model.predict(X_test), color='red', label='Linear')\nplt.axhline(y=0.5, color='gray', linestyle='--')\nplt.title(\"Linear: Can predict 1.5 or -0.5!\\n(Wait, you can't be 'Negative Pass')\")\nplt.ylim(-0.5, 1.5)\n\n# Plot Logistic\nplt.subplot(1, 2, 2)\nplt.scatter(X, y, color='black')\n# Use predict_proba to see the 'S' curve probability\nplt.plot(X_test, log_model.predict_proba(X_test)[:, 1], color='blue', label='Logistic')\nplt.axhline(y=0.5, color='gray', linestyle='--')\nplt.title(\"Logistic: Stays between 0 and 1\\n(The perfect 'S' curve)\")\nplt.ylim(-0.5, 1.5)\n\nplt.tight_layout()\nplt.show()\n\nprint(\"Notice: Linear Regression (Red) predicts values higher than 1 and lower than 0.\")\nprint(\"Logistic Regression (Blue) creates a probability between 0% and 100%.\")\n\n\"\"\"\n--- YOUR TURN ---\nWe have two new tasks. For each one, decide which tool to use!\n\nTask A: Predicting the exact PRICE of a fish in a market.\nTask B: Predicting if a fish is \"Kawaii\" (0 = No, 1 = Yes).\n\n1. Which model would you use for Task A?\n2. Which model would you use for Task B?\n\"\"\"\n\n# STARTING CODE FOR STUDENT:\n# TODO: Choose the model!\n# Task_A_Model = \"___\"\n# Task_B_Model = \"___\"\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFTDG6jyYgtI/CEUE/82dEkG4hlI8OLsdjJD0In8S\n03BB+jPkGgyYB0/9C3zqHMHEFpKeCsugYbpGMxzBNwrd7qASagJaFzMnVUyM\n2TXS7Hau9lj7JpZIHXn9fmxXRRANWazK4uQJm4bVHEoz7YBk0NBIucG6lBCv\nWbsiis03HD5HrJff6ZKAtMyuoJYYr9eVWneshD6U8DnkKnV1twnfPYP0+wkh\n3C7WuMuxBqeiM5YwldV/uSVXjKkvbmt4FsGg7oGiYRfXM0jlJ0fFeL7Ca7fr\nKDoj73p/7c+wSOtmzZvD7oa3JdtJRnuXYv7rGwGAWKoRE/5wyBx9U+XseGks\nvYZhrA5LhTvvN1QbhVkHd38W3THxCwfy3TEyKw1Hz1DOfAnIKBK9/sPFCV97\nVCFBeCwvAH6C0Iopej42AVzFj7k6YrvKyKKjPdg8/8c1e5kgtNKpRvkFfxZ0\nG1Rv28VAaKlprVhuNZcaxuSDZQwYo/axv6oLv/8r6DvxzxY/IwhCnSY97yha\nR9ZqHfIaTqMgZJ2JiIeci/XVwSl+LsIFEVXWXiiz10kt+tqZEWd5xi+IaK5m\nz/7fZFgotomsqLgWcLd/FVhVEvu9v4VYDjjMtpNJbzkkLxhfwsBUY1zd0gwj\nvH2QH8r76/ds2Z/Vx18ZZZUVhCA8nHTPzP5LJ4GJRBkpyrf8+BBaqV7/DFlG\nhYCBGeUwo6rFx9tiItkX4Bb+4EVcy3lBSBoeIx90RxV3NQ2+CROcRheB7KLw\ncJocU0nYg/rN5x8qcjugqqIsXcjdkkU+wryUp2l2T80zi+PcdJovQRqaA9y0\nQjofQuPbIpm6g0tXQJ11J5t6e+sxo+S6NMo9W5VTylckthW/QQb1h+FXcGEu\ns8JM7OzxMfZkKb1pCwyO1st9XQj3EfE/1KNilntYbmjitubhCVvPmyYVqEHK\ntxAnImlHBxm36ZGcCUkUjUsQdy0HoIRmb8T3zsXjhPqX9A8whNL9vq0eMshj\nzuiQ+HeLe9ZGlBv389nrRPRZTToFEk+6oqA/l65M1hv7mKXZEZLC9lAqTZMP\nJgrqLpnxS4PiOlJmwUDxphhechzfhrDSOGF2hfW2y2fGnWNHhdfjAa4z/t9z\nbbQPWT867GrGtTt2Q6Z9KmM/MBcdbDhSCpCyt4exx8R/syCJwyEnhwzlvKS6\nfJ5Nw627I4Hk46FW\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-18T17:02:52.138+00:00\",\"changed\":[\"cloned from \\\"cs50-scikit-26\\\"\"],\"cloned_from\":\"cs50-scikit-26\"},{\"changed_at\":\"2026-02-18 17:02:56 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:45:13 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:45:20 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Pythonlab>

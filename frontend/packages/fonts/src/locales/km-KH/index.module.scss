@@ -1,0 +1,6 @@
+@use '@fontsource-variable/noto-sans-khmer/scss/mixins' as NotoSansKhmer;
+@include NotoSansKhmer.faces($family: 'Noto Sans Khmer');
+
+.className {
+  font-family: 'Noto Sans Khmer', sans-serif;
+}

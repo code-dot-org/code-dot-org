@@ -1,7 +1,9 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+
 import color from '../../util/color';
-import classNames from 'classnames';
+
 import moduleStyles from './instructions-tab.module.scss';
 
 const craftStyles = {
@@ -115,7 +117,7 @@ const styles = {
     color: color.neutral_white,
   },
   legacyText: {
-    color: color.charcoal,
+    color: 'var(--text-neutral-white-fixed)',
   },
   text: {
     textOverflow: 'ellipsis',
@@ -128,13 +130,13 @@ const styles = {
     color: color.neutral_white,
   },
   legacyHighlightedText: {
-    color: color.default_text,
+    color: 'var(--text-neutral-white-fixed)',
   },
   highlightedWrapper: {
     borderBottom: '2px solid ' + color.neutral_white,
   },
   legacyHighlightedWrapper: {
-    borderBottom: '2px solid ' + color.default_text,
+    borderBottom: '2px solid var(--border-neutral-white-fixed)',
   },
   teacherHighlighted: {
     color: color.white,

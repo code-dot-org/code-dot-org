@@ -1,0 +1,59 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2024-10-09T18:48:05.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "panels": [
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/462707cd1d218cd0f032d0b752582105-cleaningData  (10).png",
+        "key": "game_design_spr_types-6451ed33-47e5-458c-9da1-d89e123d039c"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/57eed9629c9b307314413e40c5834e21-cleaningData  (7).png",
+        "key": "sp-pl-DS-Panels_missingData-044d590b-3c11-4a75-ac98-a323e07383c6"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/4614e3d53240237e6c6ba04fd38baedb-cleaningData  (1).png",
+        "key": "game_design_spr_types-53c92e2f-0462-48a7-8070-e1224840f013"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/b4a8caa5fb0531637c901aea591cb897-cleaningData  (2).png",
+        "key": "game_design_spr_types-4936be88-574e-4dd8-a31f-e671e54e482b",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/bf16497ff5a6e482fe442d9150835997-cleaningData  (3).png",
+        "key": "gen-ai-panels-test-L1-a74895ac-5363-4d66-9831-a3d899ea8ed7",
+        "layout": "text-top-left"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/b88238d00fab228186b471e4049236ef-cleaningData  (9).png",
+        "key": "sp-pl-DS-SpreadsheetVocab-79e6faa9-6b7f-4aab-a8d7-c91fdc3ca442"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/86ac808153e809f3af0160dc2473e4fc-cleaningData  (5).png",
+        "key": "sp-pl-DS-Panels_missingData-4b9fc726-3616-4023-bef6-1747d692a556"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/406c73027fa19e8455ff9324723a92b8-cleaningData  (6).png",
+        "key": "sp-pl-DS-Panels_missingData-4d8d7b5f-6a1e-45d9-9651-3ba2d373ecc3"
+      }
+    ],
+    "name_suffix": "_2024",
+    "offer_browser_tts": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-10-09T18:48:05.130+00:00\",\"changed\":[\"cloned from \\\"sp-pl-DS-Panels_indexing\\\"\"],\"cloned_from\":\"sp-pl-DS-Panels_indexing\"},{\"changed_at\":\"2024-10-09 21:06:45 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-11-26 16:33:46 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+}]]></config>
+</Panels>

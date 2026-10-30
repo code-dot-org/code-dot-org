@@ -1,0 +1,20 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 54,
+  "created_at": "2024-08-19T20:39:04.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "video_key": "hoc_dance_warmup",
+    "instructions_important": "false",
+    "long_instructions": "#Triggers\r\n\r\n##Script Example: \r\n\r\nHi! I’m Jerome, a front-end software engineer at Amazon. My job is to make sure that everything you see and interact with on a website is smooth, responsive, and fun to use.\r\n\r\nOne of the cool things I work with every day is something called events or 'triggers.' These are like signals that tell a webpage to do something when you interact with it—like when you click a button or move your mouse.\r\n\r\nThink of it like this: when you press a key on your keyboard, it can trigger something to happen in real-time—just like a DJ triggering sounds with their equipment.\r\n\r\nIn Music Lab, you’ll be using these same types of key pressed triggers to play sounds instantly, creating your own musical masterpiece. It’s just like being a DJ, but you’re coding the music yourself!\r\n\r\nSo get ready to code, experiment, and have fun! You’re about to turn your keyboard into a musical instrument with Code.org’s Music Lab.",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2024-08-19T20:39:04.594+00:00\",\"changed\":[\"cloned from \\\"music-ai-video-loops\\\"\"],\"cloned_from\":\"music-ai-video-loops\"},{\"changed_at\":\"2024-08-19 20:39:29 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

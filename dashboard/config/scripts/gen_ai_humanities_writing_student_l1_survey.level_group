@@ -1,0 +1,13 @@
+name 'Gen AI Humanities - Writing - Student L1 Survey'
+title 'The Writing Process - End of Lesson Survey'
+submittable 'true'
+anonymous 'true'
+
+page
+text 'Gen AI Humanities - Student Survey Intro'
+level 'Gen AI Humanities - Writing - Student L1 Survey - Q1'
+level 'Gen AI Humanities - Writing - Student L1 Survey - Q2'
+level 'Gen AI Humanities - Writing - Student L1 Survey - Q3'
+level 'Gen AI Humanities - Writing - Student L1 Survey - Q4'
+level 'Gen AI Humanities - Writing - Student L1 Survey - Q5'
+level 'Gen AI Humanities - Writing - Student L1 Survey - Q6'

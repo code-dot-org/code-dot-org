@@ -1,6 +1,6 @@
+import {render, screen} from '@testing-library/react';
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+
 import ProjectCard from '@cdo/apps/templates/projects/ProjectCard';
 import msg from '@cdo/locale';
 
@@ -15,26 +15,25 @@ describe('ProjectCard', () => {
     isFeatured: false,
     publishedAt: '2017-12-08T10:00:00.000+00:00',
   };
+
   it('displays featured project label', () => {
-    const wrapper = shallow(
+    render(
       <ProjectCard
         projectData={featuredProjectData}
         currentGallery="public"
         isDetailView={true}
       />
     );
-    const featuredLabel = wrapper.find('div').last();
-    expect(featuredLabel.text()).to.equal(msg.featuredProject());
+    screen.getByText(msg.featuredProject());
   });
   it('displays published label', () => {
-    const wrapper = shallow(
+    render(
       <ProjectCard
         projectData={unfeaturedProjectData}
         currentGallery="public"
         isDetailView={true}
       />
     );
-    const publishedLabel = wrapper.find('div').last();
-    expect(publishedLabel.text()).to.have.string(msg.published());
+    screen.getByText(`${msg.published()}:`);
   });
 });

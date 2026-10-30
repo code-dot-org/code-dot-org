@@ -1,0 +1,48 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2025-12-15T19:01:26.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "**Snippet 1: The Raw Data (JSON)**\r\n\r\nThis snippet shows what the server *sends back* — a string of JSON text.",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// This is what the browser receives from the API server.\n// The data structure is defined by the API.\n\nconst rawApiResponse =\n{\n  \"status\": \"success\",\n  \"data\": [\n    {\n      \"id\": 101,\n      \"name\": \"Widget Alpha\",\n      \"price\": 29.99\n    },\n    {\n      \"id\": 102,\n      \"name\": \"Gismo Beta\",\n      \"price\": 14.50\n    }\n  ],\n  \"count\": 2\n};",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-12-16 14:56:45 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-12-16 14:58:13 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Weblab2>

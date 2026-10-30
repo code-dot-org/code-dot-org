@@ -1,11 +1,10 @@
 {
   "key": "focus-on-creativity",
-  "display_name": "Focus on Creativity (CS Discoveries)",
-  "category": "other",
+  "display_name": "Focus on Creativity (AI Discoveries)",
   "is_featured": false,
   "assignable": true,
   "curriculum_type": "Course",
-  "marketing_initiative": "CSD",
+  "marketing_initiative": "AID",
   "grade_levels": "6,7,8,9,10,11,12",
   "header": "collections",
   "image": "https://images.code.org/cd5ff79244f8d172d659126259d2be03-Creativity.png",
@@ -15,7 +14,10 @@
   "description": "What will you create? This unit empowers students to be creative as they make websites, animations, games, and apps for devices. ",
   "professional_learning_program": "https://code.org/apply",
   "video": "https://www.youtube-nocookie.com/embed/aAS3K93_Nks/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=aAS3K93_Nks&wmode=transparent",
-  "published_date": "2023-07-10 04:00:00 UTC",
-  "self_paced_pl_course_offering_id": 443,
-  "self_paced_pl_course_offering_key": "self-paced-pl-csd"
+  "published_date": "2023-07-10 09:00:00 UTC",
+  "self_paced_pl_course_offering_key": "self-paced-pl-csd",
+  "ai_teaching_assistant_available": true,
+  "facilitator_course_permissions": [
+
+  ]
 }

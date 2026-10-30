@@ -22,6 +22,7 @@
 #  index_levels_on_game_id    (game_id)
 #  index_levels_on_level_num  (level_num)
 #  index_levels_on_name       (name)
+#  index_levels_on_type       (type)
 #
 
 class Match < DSLDefined
@@ -56,6 +57,10 @@ class Match < DSLDefined
     properties['content1'] || properties['content2'] || properties['content3'] || properties['markdown'] || ''
   end
 
+  def get_question_text
+    question
+  end
+
   def question_content_class
     question_content_blank = properties['content1'].blank? &&
       properties['content2'].blank? &&
@@ -80,7 +85,7 @@ class Match < DSLDefined
   end
 
   def icon
-    'fa fa-list-ul'
+    'fa-solid fa-list-ul'
   end
 
   def summarize_for_lesson_show(can_view_teacher_markdown)

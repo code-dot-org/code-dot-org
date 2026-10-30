@@ -1,11 +1,12 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {mount} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
 import {Provider} from 'react-redux';
 import {combineReducers, createStore} from 'redux';
+
 import SummaryEntryPoint from '@cdo/apps/templates/levelSummary/SummaryEntryPoint';
-import styles from '@cdo/apps/templates/levelSummary/summary-entry-point.module.scss';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+
+import styles from '@cdo/apps/templates/levelSummary/summary-entry-point.module.scss';
 
 const JS_DATA = {
   response_count: 1,
@@ -25,6 +26,7 @@ const setUpWrapper = (state = {}, jsData = {}) => {
   const store = createStore(
     combineReducers({
       teacherSections,
+      progress: (s = {}) => s,
     }),
     {...INITIAL_STATE, ...state}
   );
@@ -39,14 +41,40 @@ const setUpWrapper = (state = {}, jsData = {}) => {
 };
 
 describe('SummaryEntryPoint', () => {
+  it('strips sublevel suffix from summary url', () => {
+    window.history.pushState(
+      {},
+      '',
+      '/courses/my-course/units/1/lessons/1/levels/5/sublevel/2'
+    );
+    const wrapper = setUpWrapper();
+    expect(wrapper.find('a').prop('href')).toBe(
+      '/courses/my-course/units/1/lessons/1/levels/5/summary'
+    );
+    window.history.pushState({}, '', '/');
+  });
+
+  it('appends level_id to summary url on sublevel page when currentLevelId is known', () => {
+    window.history.pushState(
+      {},
+      '',
+      '/courses/my-course/units/1/lessons/1/levels/5/sublevel/2'
+    );
+    const wrapper = setUpWrapper({progress: {currentLevelId: 42}});
+    expect(wrapper.find('a').prop('href')).toBe(
+      '/courses/my-course/units/1/lessons/1/levels/5/summary?level_id=42'
+    );
+    window.history.pushState({}, '', '/');
+  });
+
   it('renders elements', () => {
     const wrapper = setUpWrapper();
 
     // Renders link correctly.
-    expect(wrapper.find('a').length).to.eq(1);
-    expect(wrapper.find('a').prop('href')).to.match(/^\/[^\/]*\/summary/);
+    expect(wrapper.find('a').length).toBe(1);
+    expect(wrapper.find('a').prop('href')).toMatch(/^\/[^\/]*\/summary/);
     // Student/response counter
-    expect(wrapper.find(`.${styles.responseCounter}`).text()).to.eq(
+    expect(wrapper.find(`[data-testid="response-counter"]`).text()).toBe(
       '1/1 students answered'
     );
   });
@@ -54,13 +82,13 @@ describe('SummaryEntryPoint', () => {
   it('adds standalone class on non-contained levels', () => {
     const wrapper = setUpWrapper();
 
-    expect(wrapper.find(`.${styles.isStandalone}`).length).to.eq(1);
+    expect(wrapper.find(`.${styles.isStandalone}`).length).toBe(1);
   });
 
   it('does not add standalone class on contained levels', () => {
     const wrapper = setUpWrapper({}, {is_contained_level: true});
 
-    expect(wrapper.find(`.${styles.isStandalone}`).length).to.eq(0);
+    expect(wrapper.find(`.${styles.isStandalone}`).length).toBe(0);
   });
 
   it('does not render response counter/text if no section selected', () => {
@@ -73,7 +101,7 @@ describe('SummaryEntryPoint', () => {
       },
     });
 
-    expect(wrapper.find(`.${styles.responseIcon}`).length).to.eq(0);
-    expect(wrapper.find(`.${styles.responseCounter}`).length).to.eq(0);
+    expect(wrapper.find(`.fa`).length).toBe(0);
+    expect(wrapper.find(`[data-testid="response-counter"]`).length).toBe(0);
   });
 });

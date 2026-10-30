@@ -1,0 +1,10 @@
+name 'building-data-driven-systems-lesson6-level3-v2-2026'
+display_name 'Choose a UI to Scale'
+description '### Use `.map()` to render an array of objects as multiple items in your chosen UI.'
+
+sublevels
+level 'building-data-driven-systems-lesson6-level3a-v2-2026'
+level 'building-data-driven-systems-lesson6-level3b-v2-2026'
+level 'building-data-driven-systems-lesson6-level3c-v2-2026'
+
+uses_lab2

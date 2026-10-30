@@ -50,11 +50,11 @@ class DataDoc < ApplicationRecord
   end
 
   # creates and deletes records to match all the seed files
-  def self.seed_all
+  def self.seed_all(dashboard_root = '.')
     # collect all existing docs, and for each json file,
     # seed the data doc and remove it from the removed_records
     records_to_be_removed = all.pluck(:id)
-    Dir.glob(Rails.root.join("config/data_docs/**/*.json")).each do |path|
+    Dir.glob(Rails.root.join("#{dashboard_root}/config/data_docs/**/*.json")).each do |path|
       records_to_be_removed -= [DataDoc.seed_record(path)]
     end
     # the remaining ids that were not seeded should be removed

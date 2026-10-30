@@ -1,0 +1,60 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-05-03T05:17:39.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/16ef83b07285e052bedee29823b2810d-showcase.png",
+        "key": "pl-aif-2-U6-guiding-showcase-panel-14-210d08c3-2c01-44bb-8e55-b49857b95c09",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Decide and Announce Early\n\nYou have three options for how students will share their final projects. \n\nMake sure you choose your format and tell your students early in the project so they can accurately plan the scope and audience for their app.",
+        "imageUrl": "https://images.code.org/d9156eb67aef2d44b5033bced941a1ba-showcase (1).png",
+        "key": "pl-aif-2-U6-guiding-showcase-panel-14-1f3d9955-20e0-4aa7-a270-21d5e74e99f5",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Level 1: In-Class Sharing (Default)\n\n A low-pressure gallery walk where students view projects on classmates' devices and leave sticky notes for feedback.\n\n",
+        "imageUrl": "https://images.code.org/aeb7f513c4aeb20eb4d61b1ac90c62d0-showcase (2).png",
+        "key": "pl-aif-2-U6-guiding-showcase-panel-14-8709d5cf-6930-43aa-b696-825975bffd18",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Level 2: School or Community Sharing\n\nProjects are shared with another class, families, or school staff (e.g., using a short demo or poster).",
+        "imageUrl": "https://images.code.org/6f84a51c49d1dcdeb81313538b631c02-showcase (3).png",
+        "key": "pl-aif-2-U6-guiding-showcase-panel-14-2a717c76-dd66-4da8-99d8-9d88cb6b984a",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Level 3: Public or Online Sharing\n\nYou collect project app links using a **Class Index Template** (provided) to share on a school website, portfolio, or newsletter.\n",
+        "imageUrl": "https://images.code.org/111ba0b42db6b75a08ef4569b10fc92e-showcase (4).png",
+        "key": "pl-aif-2-U6-guiding-showcase-panel-14-c06a0de8-3049-4025-8af0-b29a0a91fe70",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Misconception Alert for Grading\n\nIt is critical to remember that the level of public sharing is a logistical choice for your classroom, not a measure of student success.\n\n- A team doing a Level 1 in-class gallery walk can still fully demonstrate strong planning, iteration, and technical reasoning to earn an \"Extensive\" score.\n- Never pressure students to share beyond their comfort level just to earn a higher grade.",
+        "imageUrl": "https://images.code.org/a9527e5a6509d46dd5874e18166a1f62-showcase (5).png",
+        "key": "pl-aif-2-U6-guiding-showcase-panel-14-15519cb5-b887-4c98-aab5-abb02f4b751e",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Guiding the Showcase\n\nWhen Day 10 arrives, remind your students that they are not there to show off maximum features or add last-minute code.\n\nCoach them to use the showcase to explain their decisions, like what they focused on, what feedback changed their minds, and what they intentionally chose to leave out.\n",
+        "imageUrl": "https://images.code.org/e924eae5e1ab2d5f90350e3567f30922-showcase (6).png",
+        "key": "pl-aif-2-U6-guiding-showcase-panel-14-b4d582d0-cf55-4d95-b776-0b49de0a672b",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "name_suffix": "_2025-pilot",
+    "use_links": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-05-03T05:17:39.781+00:00\",\"changed\":[\"cloned from \\\"pl-aif-2-U6-guiding-showcase-panel-14\\\"\"],\"cloned_from\":\"pl-aif-2-U6-guiding-showcase-panel-14\"},{\"changed_at\":\"2026-05-03 05:24:42 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-03 05:24:53 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Panels>

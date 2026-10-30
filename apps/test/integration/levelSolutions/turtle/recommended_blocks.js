@@ -1,5 +1,6 @@
-var requiredBlockUtils = require('@cdo/apps//required_block_utils');
 import {TestResults} from '@cdo/apps/constants';
+
+var requiredBlockUtils = require('@cdo/apps//required_block_utils');
 
 var levelDef = {
   solutionBlocks:

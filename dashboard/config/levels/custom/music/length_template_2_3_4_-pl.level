@@ -1,0 +1,37 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-10-08T22:02:16.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "level_data": {
+      "library": "launch2024",
+      "aiCodeGenerate": "true",
+      "aiCodeGenerateAdlib": "length",
+      "toolbox": {
+        "blocks": {
+        }
+      }
+    },
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "name_suffix": "_-pl",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-08T22:02:16.404+00:00\",\"changed\":[\"cloned from \\\"length_template_2_3_4\\\"\"],\"cloned_from\":\"length_template_2_3_4\"}]"
+}]]></config>
+  <blocks/>
+</Music>

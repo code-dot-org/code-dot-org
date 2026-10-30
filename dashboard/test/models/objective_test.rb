@@ -43,7 +43,7 @@ class ObjectiveTest < ActiveSupport::TestCase
 
   test 'description is required' do
     assert_raises ActiveRecord::RecordInvalid do
-      create :objective, description: nil
+      create(:objective, description: nil)
     end
   end
 end

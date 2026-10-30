@@ -1,59 +1,90 @@
+import {render, screen, act as rtlAct, fireEvent} from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {expect} from '../../../util/reconfiguredChai';
-import {shallow} from 'enzyme';
-import sinon from 'sinon';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import EditorAnnotator from '@cdo/apps/EditorAnnotator';
-import LearningGoals, {
-  clearAnnotations,
-  annotateLines,
-} from '@cdo/apps/templates/rubrics/LearningGoals';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {
+  singleton as studioApp,
+  stubStudioApp,
+  restoreStudioApp,
+} from '@cdo/apps/StudioApp';
+import {
+  THUMBS_UP,
+  THUMBS_DOWN,
+} from '@cdo/apps/templates/rubrics/AiAssessmentFeedbackContext';
+import {annotateLines} from '@cdo/apps/templates/rubrics/annotateEditor';
+import LearningGoals from '@cdo/apps/templates/rubrics/LearningGoals';
+import HttpClient from '@cdo/apps/util/HttpClient';
+import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
+import i18n from '@cdo/locale';
 
-describe('LearningGoals', () => {
-  let annotatorStub,
-    annotateLineStub,
-    highlightLineStub,
-    clearAnnotationsStub,
-    clearHighlightedLinesStub;
-  const studentLevelInfo = {name: 'Grace Hopper', timeSpent: 706};
+import {expect as deprecatedExpect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
-  const learningGoals = [
-    {
-      id: 2,
-      key: 'abcd',
-      learningGoal: 'Testing 1',
-      aiEnabled: true,
-      evidenceLevels: [{id: 1, understanding: 1, teacherDescription: 'test'}],
-      tips: 'Tips',
-    },
-    {
-      key: 'efgh',
-      learningGoal: 'Testing 2',
-      aiEnabled: false,
-      evidenceLevels: [{id: 1, understanding: 1, teacherDescription: 'test'}],
-      tips: 'Tips',
-    },
-  ];
+// These are test observations that would be given by the AI.
+const observations = 'This is an observation. This is another observation.';
 
-  const submittedEvaluation = {
-    feedback: 'test feedback',
-    understanding: RubricUnderstandingLevels.LIMITED,
-  };
+const learningGoals = [
+  {
+    id: 2,
+    key: 'abcd',
+    learningGoal: 'Learning Goal 1',
+    aiEnabled: true,
+    evidenceLevels: [
+      {id: 10, understanding: 0, teacherDescription: 'lg one none'},
+      {id: 11, understanding: 1, teacherDescription: 'lg one limited'},
+      {id: 12, understanding: 2, teacherDescription: 'lg one convincing'},
+      {id: 13, understanding: 3, teacherDescription: 'lg one extensive'},
+    ],
+    tips: 'Tips',
+  },
+  {
+    id: 3,
+    key: 'efgh',
+    learningGoal: 'Learning Goal 2',
+    aiEnabled: false,
+    evidenceLevels: [
+      {id: 10, understanding: 0, teacherDescription: 'lg two none'},
+      {id: 11, understanding: 1, teacherDescription: 'lg two limited'},
+      {id: 12, understanding: 2, teacherDescription: 'lg two convincing'},
+      {id: 13, understanding: 3, teacherDescription: 'lg two extensive'},
+    ],
+    tips: 'Tips',
+  },
+];
 
-  const aiEvaluations = [
-    {
-      id: 2,
-      learning_goal_id: 2,
-      understanding: 2,
-      ai_confidence: 50,
-      observations:
-        'Line 3-5: The sprite is defined here. `var sprite = createSprite(100, 120)`',
-    },
-  ];
+const submittedEvaluation = {
+  feedback: 'test feedback',
+  understanding: RubricUnderstandingLevels.LIMITED,
+};
 
-  const code = `// code
+const aiEvaluations = [
+  {
+    id: 2,
+    learning_goal_id: 2,
+    understanding: 2,
+    aiConfidencePassFail: 2,
+    aiConfidenceExactMatch: 1,
+    observations: observations,
+    evidence:
+      'Line 3-5: The sprite is defined here. `var sprite = createSprite(100, 120)`',
+  },
+  {
+    id: 3,
+    learning_goal_id: 3,
+    understanding: 2,
+    aiConfidencePassFail: 2,
+    aiConfidenceExactMatch: 1,
+    observations: observations,
+    evidence:
+      'Line 7-9: Some other sprite is defined here. `var sprite = createSprite(200, 240)`',
+  },
+];
+
+const code = `// code
     var x = 5;
     var y = 6;
     // add them together
@@ -61,16 +92,56 @@ describe('LearningGoals', () => {
     var z = x + y;
     */
     draw();
+
+    if (something) {
+      doSomething();
+    }
+
+    exit();
   `;
+
+const studentLevelInfo = {
+  user_id: 1,
+  name: 'Stella',
+  attempts: 3,
+  timeSpent: 100,
+  lastAttempt: '2024-03-02',
+};
+
+const reportingData = {
+  unitName: 'test-2023',
+  courseName: 'course-2023',
+  levelName: 'Test Blah Blah Blah',
+};
+
+async function wait() {
+  for (let _ = 0; _ < 10; _++) {
+    await rtlAct(async () => Promise.resolve());
+  }
+}
+
+describe('LearningGoals - React Testing Library', () => {
+  let annotatorStub,
+    annotateLineStub,
+    scrollToLineStub,
+    highlightLineStub,
+    clearAnnotationsStub,
+    clearHighlightedLinesStub,
+    oldEditor;
 
   // Stub out our references to the singleton and editor
   beforeEach(() => {
+    stubStudioApp();
+    oldEditor = studioApp().editor;
+    studioApp().editor = undefined;
+
     let annotatorInstanceStub = sinon.stub();
     annotatorInstanceStub.getCode = sinon.stub().returns(code);
     annotatorStub = sinon
       .stub(EditorAnnotator, 'annotator')
       .returns(annotatorInstanceStub);
     annotateLineStub = sinon.stub(EditorAnnotator, 'annotateLine');
+    scrollToLineStub = sinon.stub(EditorAnnotator, 'scrollToLine');
     clearAnnotationsStub = sinon.stub(EditorAnnotator, 'clearAnnotations');
     highlightLineStub = sinon.stub(EditorAnnotator, 'highlightLine');
     clearHighlightedLinesStub = sinon.stub(
@@ -80,106 +151,616 @@ describe('LearningGoals', () => {
   });
   afterEach(() => {
     annotatorStub.restore();
+    scrollToLineStub.restore();
     annotateLineStub.restore();
     clearAnnotationsStub.restore();
     highlightLineStub.restore();
     clearHighlightedLinesStub.restore();
+    studioApp().editor = oldEditor;
+    studioApp().removeAllListeners('afterInit');
+    restoreStudioApp();
   });
 
-  describe('annotateLines', () => {
-    it('should do nothing if the AI observation does not reference any lines', () => {
-      // The AI tends to misreport the line number, so we shouldn't rely on it
-      annotateLines('This is just a basic observation.');
-      expect(annotateLineStub.notCalled).to.be.true;
+  let loadEditor = () => {
+    // Kinda emulate the set editor
+    studioApp().editor = true;
+
+    // Fire the init event from the application backend
+    studioApp().emit('afterInit');
+  };
+
+  it('renders EvidenceLevels without canProvideFeedback', () => {
+    render(<LearningGoals learningGoals={learningGoals} teacherHasEnabledAi />);
+
+    // This text only shows up within EvidenceLevels when canProvideFeedback is false
+    deprecatedExpect(screen.getByText('Rubric Scores')).to.exist;
+
+    // First learning goal is visible
+    deprecatedExpect(screen.getByText('Learning Goal 1')).to.exist;
+    deprecatedExpect(screen.getByText(/lg one none/)).to.exist;
+    deprecatedExpect(screen.getByText(/lg one limited/)).to.exist;
+    deprecatedExpect(screen.getByText(/lg one convincing/)).to.exist;
+    deprecatedExpect(screen.getByText(/lg one extensive/)).to.exist;
+  });
+
+  it('scrolls to the first line of evidence when the learning goal is selected', async () => {
+    loadEditor();
+
+    render(
+      <LearningGoals
+        learningGoals={learningGoals}
+        teacherHasEnabledAi={true}
+        aiUnderstanding={3}
+        studentLevelInfo={studentLevelInfo}
+        aiEvaluations={aiEvaluations}
+      />
+    );
+
+    const user = userEvent.setup();
+
+    sinon.assert.calledWith(scrollToLineStub, 3);
+
+    const button = screen.getByRole('button', {
+      name: i18n.rubricNextLearningGoal(),
+    });
+    await user.click(button);
+
+    sinon.assert.calledWith(scrollToLineStub, 7);
+  });
+
+  it('does not scroll anywhere when the evidence is blank', async () => {
+    loadEditor();
+
+    const myAiEvaluations = [
+      {
+        ...aiEvaluations[0],
+        evidence: '',
+      },
+      {
+        ...aiEvaluations[1],
+        evidence: '',
+      },
+    ];
+
+    render(
+      <LearningGoals
+        learningGoals={learningGoals}
+        teacherHasEnabledAi={true}
+        aiUnderstanding={3}
+        studentLevelInfo={studentLevelInfo}
+        aiEvaluations={myAiEvaluations}
+      />
+    );
+
+    const user = userEvent.setup();
+    const button = screen.getByRole('button', {
+      name: i18n.rubricNextLearningGoal(),
+    });
+    await user.click(button);
+
+    sinon.assert.notCalled(scrollToLineStub);
+  });
+
+  it('does not fail to render when the evidence is null', async () => {
+    loadEditor();
+
+    const myAiEvaluations = [
+      {
+        ...aiEvaluations[0],
+        evidence: null,
+      },
+      {
+        ...aiEvaluations[1],
+        evidence: null,
+      },
+    ];
+
+    render(
+      <LearningGoals
+        learningGoals={learningGoals}
+        teacherHasEnabledAi={true}
+        aiUnderstanding={3}
+        studentLevelInfo={studentLevelInfo}
+        aiEvaluations={myAiEvaluations}
+      />
+    );
+
+    const user = userEvent.setup();
+    const button = screen.getByRole('button', {
+      name: i18n.rubricNextLearningGoal(),
+    });
+    await user.click(button);
+  });
+
+  describe('when aiConfidenceExactMatch is high', () => {
+    const myAiEvaluations = [
+      {
+        ...aiEvaluations[0],
+        aiConfidenceExactMatch: 3,
+      },
+    ];
+
+    it('highlights one bubble', () => {
+      render(
+        <LearningGoals
+          learningGoals={learningGoals}
+          aiEvaluations={myAiEvaluations}
+          studentLevelInfo={studentLevelInfo}
+          teacherHasEnabledAi
+          canProvideFeedback
+        />
+      );
+      deprecatedExpect(getSuggestedButtonNames()).to.deep.equal(['Convincing']);
     });
 
-    it('should annotate a single line of code referenced by the AI', () => {
-      // The AI tends to misreport the line number, so we shouldn't rely on it
-      annotateLines('Line 1: This is a line of code `var x = 5;`');
-      sinon.assert.calledWith(annotateLineStub, 2, 'This is a line of code');
+    it('shows only one evaluation level in written summary', () => {
+      render(
+        <LearningGoals
+          learningGoals={learningGoals}
+          aiEvaluations={myAiEvaluations}
+          studentLevelInfo={studentLevelInfo}
+          teacherHasEnabledAi
+          canProvideFeedback
+        />
+      );
+      screen.getByText(
+        'Stella has achieved Convincing Evidence for this learning goal.'
+      );
     });
 
-    it('should annotate the first line of code referenced by the AI', () => {
-      annotateLines('Line 1: This is a line of code `var x = 5; var y = 6;`');
-      sinon.assert.calledWith(annotateLineStub, 2, 'This is a line of code');
-    });
-
-    it('should highlight a single line of code referenced by the AI', () => {
-      // The AI tends to misreport the line number, so we shouldn't rely on it
-      annotateLines('Line 1: This is a line of code `var x = 5; var y = 6;`');
-      sinon.assert.calledWith(highlightLineStub, 2);
-    });
-
-    it('should highlight all lines of code referenced by the AI', () => {
-      annotateLines('Line 1: This is a line of code `var x = 5; var y = 6;`');
-      sinon.assert.calledWith(highlightLineStub, 2);
-      sinon.assert.calledWith(highlightLineStub, 3);
-    });
-
-    it('should just highlight the lines the AI thinks if the referenced code does not exist', () => {
-      annotateLines('Line 45: This is a line of code `var z = 0`');
-      sinon.assert.calledWith(annotateLineStub, 45, 'This is a line of code');
-      sinon.assert.calledWith(highlightLineStub, 45);
-    });
-
-    it('should just highlight all of the lines the AI thinks if the referenced code does not exist', () => {
-      annotateLines('Line 42-44: This is a line of code `var z = 0`');
-      sinon.assert.calledWith(annotateLineStub, 42, 'This is a line of code');
-      sinon.assert.calledWith(highlightLineStub, 42);
-      sinon.assert.calledWith(highlightLineStub, 43);
-      sinon.assert.calledWith(highlightLineStub, 44);
-    });
-
-    it('should annotate the last line of code when referenced by the AI', () => {
-      annotateLines('Line 55: This is a line of code `draw();`');
-      sinon.assert.calledWith(annotateLineStub, 8, 'This is a line of code');
-    });
-
-    it('should highlight the last line of code when referenced by the AI', () => {
-      annotateLines('Line 55: This is a line of code `draw();`');
-      sinon.assert.calledWith(highlightLineStub, 8);
-    });
-
-    it('should ignore code snippets that are empty', () => {
-      annotateLines('Line 42: This is totally a thing ` `');
-      sinon.assert.notCalled(highlightLineStub);
+    it('shows exact-match confidence level', () => {
+      render(
+        <LearningGoals
+          learningGoals={learningGoals}
+          aiEvaluations={myAiEvaluations}
+          studentLevelInfo={studentLevelInfo}
+          teacherHasEnabledAi
+          canProvideFeedback
+        />
+      );
+      screen.getByText('AI Confidence: high');
     });
   });
 
-  describe('clearAnnotations', () => {
-    it('should clear annotations and clear highlighted lines', () => {
-      clearAnnotations();
-      sinon.assert.called(clearAnnotationsStub);
-      sinon.assert.called(clearHighlightedLinesStub);
+  describe('when aiConfidenceExactMatch is low', () => {
+    it('highlights two bubbles', () => {
+      render(
+        <LearningGoals
+          learningGoals={learningGoals}
+          aiEvaluations={aiEvaluations}
+          studentLevelInfo={studentLevelInfo}
+          teacherHasEnabledAi
+          canProvideFeedback
+        />
+      );
+      deprecatedExpect(getSuggestedButtonNames().sort()).to.deep.equal(
+        ['Convincing', 'Extensive'].sort()
+      );
+    });
+
+    it('shows two evaluation levels in written summary', () => {
+      render(
+        <LearningGoals
+          learningGoals={learningGoals}
+          aiEvaluations={aiEvaluations}
+          studentLevelInfo={studentLevelInfo}
+          teacherHasEnabledAi
+          canProvideFeedback
+        />
+      );
+      screen.getByText(
+        'Stella has achieved Extensive or Convincing Evidence for this learning goal.'
+      );
+    });
+
+    it('shows pass-fail confidence level', () => {
+      render(
+        <LearningGoals
+          learningGoals={learningGoals}
+          aiEvaluations={aiEvaluations}
+          studentLevelInfo={studentLevelInfo}
+          teacherHasEnabledAi
+          canProvideFeedback
+        />
+      );
+      screen.getByText('AI Confidence: medium');
     });
   });
 
-  it('renders EvidenceLevels', () => {
-    const wrapper = shallow(
-      <LearningGoals learningGoals={learningGoals} teacherHasEnabledAi />
+  it('should send an event if the annotation tooltip is hovered', () => {
+    const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
+
+    // We need to check that the callback we give to the annotator would create
+    // the event report.
+    let hoverCallback = undefined;
+    annotateLineStub.callsFake((a, b, c, d, e, f, callback) => {
+      hoverCallback = callback;
+    });
+
+    loadEditor();
+
+    render(
+      <LearningGoals
+        learningGoals={learningGoals}
+        aiEvaluations={aiEvaluations}
+        reportingData={reportingData}
+        studentLevelInfo={studentLevelInfo}
+        teacherHasEnabledAi
+        canProvideFeedback
+      />
     );
-    expect(wrapper.find('EvidenceLevels')).to.have.lengthOf(1);
-    expect(wrapper.find('EvidenceLevels').props().evidenceLevels).to.deep.equal(
-      [{id: 1, understanding: 1, teacherDescription: 'test'}]
-    );
-    expect(wrapper.find('SafeMarkdown')).to.have.lengthOf(1);
+
+    const evidence = /The sprite is defined here/;
+    screen.getByText(evidence);
+
+    // There should be /some/ kind of callback registered
+    deprecatedExpect(hoverCallback).to.not.be.undefined;
+
+    // Call the callback ourselves
+    hoverCallback({});
+
+    // We should have triggered the sending of the event with the given data.
+    const eventName = EVENTS.TA_RUBRIC_EVIDENCE_TOOLTIP_HOVERED;
+    deprecatedExpect(sendEventSpy).to.have.been.calledWith(eventName, {
+      ...reportingData,
+      learningGoalKey: learningGoals[0].key,
+      learningGoal: learningGoals[0].learningGoal,
+      studentId: studentLevelInfo.user_id,
+    });
+
+    // Restore stubs
+    sendEventSpy.restore();
   });
 
-  it('changes learning goal when left and right buttons are pressed', () => {
-    const wrapper = shallow(
-      <LearningGoals learningGoals={learningGoals} teacherHasEnabledAi />
+  describe('ai evaluation feedback', () => {
+    const feedbackProps = {
+      teacherHasEnabledAi: true,
+      learningGoals,
+      aiEvaluations,
+      studentLevelInfo,
+      canProvideFeedback: true,
+    };
+
+    it('displays no checkboxes when neither thumb is selected', () => {
+      render(<LearningGoals {...feedbackProps} />);
+
+      screen.getByLabelText(i18n.thumbsUpUnselected());
+      screen.getByLabelText(i18n.thumbsDownUnselected());
+
+      // checkboxes not visible
+      expect(screen.queryAllByRole('checkbox')).toHaveLength(0);
+    });
+
+    it('sends an event when thumbs up is clicked', async () => {
+      render(<LearningGoals {...feedbackProps} />);
+
+      const fetchStub = jest.spyOn(window, 'fetch');
+
+      fetchStub.mockImplementation((endpoint, options) => {
+        if (endpoint === '/get_token') {
+          return Promise.resolve(
+            new Response('', {
+              headers: {'csrf-token': 'token'},
+            })
+          );
+        } else if (
+          endpoint === '/learning_goal_ai_evaluation_feedbacks' &&
+          options['method'] === 'POST'
+        ) {
+          return Promise.resolve(new Response(JSON.stringify({id: 999})));
+        }
+      });
+
+      const thumbsUpButton = screen.getByLabelText(i18n.thumbsUpUnselected());
+      fireEvent.click(thumbsUpButton);
+      await wait();
+
+      screen.getByLabelText(i18n.thumbsUpSelected());
+      expect(screen.queryAllByRole('checkbox')).toHaveLength(0);
+
+      const expectedBody = JSON.stringify({
+        learningGoalAiEvaluationId: 2,
+        aiFeedbackApproval: THUMBS_UP,
+      });
+      expect(fetchStub).toHaveBeenCalledWith(
+        '/learning_goal_ai_evaluation_feedbacks',
+        {
+          body: expectedBody,
+          headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-TOKEN': 'token',
+          },
+          method: 'POST',
+        }
+      );
+
+      fetchStub.mockRestore();
+    });
+
+    it('sends an event when thumbs down is clicked', async () => {
+      render(<LearningGoals {...feedbackProps} />);
+
+      const fetchStub = jest.spyOn(window, 'fetch');
+
+      fetchStub.mockImplementation((endpoint, options) => {
+        if (endpoint === '/get_token') {
+          return Promise.resolve(
+            new Response('', {
+              headers: {'csrf-token': 'token'},
+            })
+          );
+        } else if (
+          endpoint === '/learning_goal_ai_evaluation_feedbacks' &&
+          options['method'] === 'POST'
+        ) {
+          return Promise.resolve(new Response(JSON.stringify({id: 999})));
+        }
+      });
+
+      const thumbsDownButton = screen.getByLabelText(
+        i18n.thumbsDownUnselected()
+      );
+      fireEvent.click(thumbsDownButton);
+      await wait();
+
+      screen.getByLabelText(i18n.thumbsDownSelected());
+
+      const expectedBody = JSON.stringify({
+        learningGoalAiEvaluationId: 2,
+        aiFeedbackApproval: THUMBS_DOWN,
+      });
+      expect(fetchStub).toHaveBeenCalledWith(
+        '/learning_goal_ai_evaluation_feedbacks',
+        {
+          body: expectedBody,
+          headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-TOKEN': 'token',
+          },
+          method: 'POST',
+        }
+      );
+
+      fetchStub.mockRestore();
+    });
+
+    it('displays textbox when checkbox labelled "other" is selected', async () => {
+      render(<LearningGoals {...feedbackProps} />);
+
+      const fetchStub = jest.spyOn(window, 'fetch');
+
+      fetchStub.mockImplementation((endpoint, options) => {
+        if (endpoint === '/get_token') {
+          return Promise.resolve(
+            new Response('', {
+              headers: {'csrf-token': 'token'},
+            })
+          );
+        } else if (
+          endpoint === '/learning_goal_ai_evaluation_feedbacks' &&
+          options['method'] === 'POST'
+        ) {
+          return Promise.resolve(new Response(JSON.stringify({id: 999})));
+        }
+      });
+
+      // survey not visible
+      expect(screen.queryAllByRole('checkbox')).toHaveLength(0);
+
+      const thumbsDownButton = screen.getByLabelText(
+        i18n.thumbsDownUnselected()
+      );
+      fireEvent.click(thumbsDownButton);
+      await wait();
+
+      // survey is visible
+      expect(screen.getAllByRole('checkbox')).toHaveLength(4);
+
+      // eslint-disable-next-line no-restricted-properties
+      expect(screen.queryByTestId('ai-assessment-feedback-textarea')).not
+        .toBeInTheDocument;
+
+      const checkbox = screen.getByRole('checkbox', {name: 'Other'});
+      fireEvent.click(checkbox);
+
+      // eslint-disable-next-line no-restricted-properties
+      screen.getByTestId('ai-assessment-feedback-textarea');
+      fetchStub.mockRestore();
+    });
+
+    it('updates the thumbs down event when survey is submitted', async () => {
+      render(<LearningGoals {...feedbackProps} />);
+
+      const fetchStub = jest.spyOn(window, 'fetch');
+
+      fetchStub.mockImplementation((endpoint, options) => {
+        if (endpoint === '/get_token') {
+          return Promise.resolve(
+            new Response('', {
+              headers: {'csrf-token': 'token'},
+            })
+          );
+        } else if (
+          endpoint === '/learning_goal_ai_evaluation_feedbacks' &&
+          options['method'] === 'POST'
+        ) {
+          return Promise.resolve(new Response(JSON.stringify({id: 999})));
+        } else if (
+          endpoint === '/learning_goal_ai_evaluation_feedbacks/999' &&
+          options['method'] === 'PUT'
+        ) {
+          return Promise.resolve(new Response(''));
+        }
+      });
+
+      // survey not visible
+      expect(screen.queryAllByRole('checkbox')).toHaveLength(0);
+
+      const thumbsDownButton = screen.getByLabelText(
+        i18n.thumbsDownUnselected()
+      );
+      fireEvent.click(thumbsDownButton);
+      await wait();
+
+      // survey is visible
+      expect(screen.getAllByRole('checkbox')).toHaveLength(4);
+
+      // click checkbox
+      const checkbox = screen.getByRole('checkbox', {
+        name: i18n.aiFeedbackFalsePos(),
+      });
+      fireEvent.click(checkbox);
+
+      // click submit button
+      const submitButton = screen.getByRole('button', {
+        name: i18n.aiFeedbackSubmit(),
+      });
+      fireEvent.click(submitButton);
+      await wait();
+
+      // eslint-disable-next-line no-restricted-properties
+      expect(screen.queryByTestId('ai-assessment-feedback-textarea')).not
+        .toBeInTheDocument;
+
+      const expectedBody = {
+        learningGoalAiEvaluationId: 2,
+        aiFeedbackApproval: 0,
+        falsePositive: true,
+        falseNegative: false,
+        Vague: false,
+        feedbackOther: false,
+        otherContent: '',
+      };
+      expect(fetchStub).toHaveBeenCalledWith(
+        `/learning_goal_ai_evaluation_feedbacks/999`,
+        {
+          body: JSON.stringify(expectedBody),
+          headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-TOKEN': 'token',
+          },
+          method: 'PUT',
+        }
+      );
+
+      fetchStub.mockRestore();
+    });
+  });
+
+  it('renders AiAssessment with the annotated list of evidence only once editor loads', () => {
+    const aiEvidence = annotateLines(
+      aiEvaluations[0].evidence,
+      aiEvaluations[0].observations
     );
-    expect(wrapper.find('Heading6').props().children).to.equal(
-      learningGoals[0].learningGoal
+
+    render(
+      <LearningGoals
+        learningGoals={learningGoals}
+        teacherHasEnabledAi={true}
+        aiUnderstanding={3}
+        studentLevelInfo={studentLevelInfo}
+        aiEvaluations={aiEvaluations}
+      />
     );
-    wrapper.find('button').first().simulate('click');
-    expect(wrapper.find('Heading6').props().children).to.equal(
-      learningGoals[1].learningGoal
+
+    const regex = new RegExp(aiEvidence[0].message, 'i');
+    expect(screen.queryByText(regex)).toEqual(null);
+
+    loadEditor();
+
+    screen.getByText(regex);
+  });
+});
+
+function getSuggestedButtonNames() {
+  const allButtons = screen.getAllByRole('button');
+  const suggestedButtons = allButtons.filter(button =>
+    button.classList.contains('unittest-evidence-level-suggested')
+  );
+  return suggestedButtons.map(button => button.textContent);
+}
+
+describe('LearningGoals - Enzyme', () => {
+  let annotatorStub,
+    annotateLineStub,
+    scrollToLineStub,
+    highlightLineStub,
+    clearAnnotationsStub,
+    clearHighlightedLinesStub,
+    oldEditor;
+  const studentLevelInfo = {name: 'Grace Hopper', timeSpent: 706, user_id: 1};
+
+  function stubAnnotator() {
+    stubStudioApp();
+    oldEditor = studioApp().editor;
+    studioApp().editor = undefined;
+
+    // Stub out our references to the singleton and editor
+    let annotatorInstanceStub = sinon.stub();
+    annotatorInstanceStub.getCode = sinon.stub().returns(code);
+    annotatorStub = sinon
+      .stub(EditorAnnotator, 'annotator')
+      .returns(annotatorInstanceStub);
+    annotateLineStub = sinon.stub(EditorAnnotator, 'annotateLine');
+    scrollToLineStub = sinon.stub(EditorAnnotator, 'scrollToLine');
+    clearAnnotationsStub = sinon.stub(EditorAnnotator, 'clearAnnotations');
+    highlightLineStub = sinon.stub(EditorAnnotator, 'highlightLine');
+    clearHighlightedLinesStub = sinon.stub(
+      EditorAnnotator,
+      'clearHighlightedLines'
     );
-    wrapper.find('button').at(1).simulate('click');
-    expect(wrapper.find('Heading6').props().children).to.equal(
-      learningGoals[0].learningGoal
+  }
+
+  function restoreAnnotator() {
+    annotatorStub.restore();
+    scrollToLineStub.restore();
+    annotateLineStub.restore();
+    clearAnnotationsStub.restore();
+    highlightLineStub.restore();
+    clearHighlightedLinesStub.restore();
+    studioApp().editor = oldEditor;
+    studioApp().removeAllListeners('afterInit');
+    restoreStudioApp();
+  }
+
+  beforeEach(() => {
+    stubAnnotator();
+  });
+  afterEach(() => {
+    restoreAnnotator();
+  });
+
+  it('changes learning goal when left and right buttons are pressed', async () => {
+    render(<LearningGoals learningGoals={learningGoals} teacherHasEnabledAi />);
+    const user = userEvent.setup();
+    screen.getByText(learningGoals[0].learningGoal);
+    await user.click(
+      screen.getByRole('button', {name: i18n.rubricPreviousLearningGoal()})
     );
+    screen.getByText(i18n.rubricLearningGoalSummary());
+    await user.click(
+      screen.getByRole('button', {name: i18n.rubricNextLearningGoal()})
+    );
+    screen.getByText(learningGoals[0].learningGoal);
+    await user.click(
+      screen.getByRole('button', {name: i18n.rubricNextLearningGoal()})
+    );
+    screen.getByText(learningGoals[1].learningGoal);
+  });
+
+  it('renders the summary page after AI evaluations are run', async () => {
+    render(
+      <LearningGoals
+        learningGoals={learningGoals}
+        aiEvaluations={aiEvaluations}
+        teacherHasEnabledAi
+      />
+    );
+    const user = userEvent.setup();
+    await user.click(
+      screen.getByRole('button', {name: i18n.rubricPreviousLearningGoal()})
+    );
+    screen.getByText(i18n.rubricLearningGoalSummary());
   });
 
   it('renders AiAssessment when teacher has AiEnabled and the learning goal can be tested by AI', () => {
@@ -187,21 +768,24 @@ describe('LearningGoals', () => {
       <LearningGoals
         learningGoals={learningGoals}
         teacherHasEnabledAi={true}
-        aiConfidence={50}
         aiUnderstanding={3}
         studentLevelInfo={studentLevelInfo}
         aiEvaluations={aiEvaluations}
       />
     );
-    expect(wrapper.find('AiAssessment')).to.have.lengthOf(1);
-    expect(wrapper.find('AiAssessment').props().studentName).to.equal(
+    deprecatedExpect(wrapper.find('AiAssessment')).to.have.lengthOf(1);
+    deprecatedExpect(wrapper.find('AiAssessment').props().studentName).to.equal(
       studentLevelInfo.name
     );
-    expect(wrapper.find('AiAssessment').props().aiConfidence).to.equal(50);
-    expect(wrapper.find('AiAssessment').props().aiUnderstandingLevel).to.equal(
-      2
-    );
-    expect(wrapper.find('AiAssessment').props().isAiAssessed).to.equal(true);
+    deprecatedExpect(
+      wrapper.find('AiAssessment').props().aiConfidence
+    ).to.equal(2);
+    deprecatedExpect(
+      wrapper.find('AiAssessment').props().aiUnderstandingLevel
+    ).to.equal(2);
+    deprecatedExpect(
+      wrapper.find('AiAssessment').props().isAiAssessed
+    ).to.equal(true);
   });
 
   it('does not renders AiAssessment when teacher has disabled ai', () => {
@@ -212,7 +796,7 @@ describe('LearningGoals', () => {
         studentLevelInfo={studentLevelInfo}
       />
     );
-    expect(wrapper.find('AiAssessment')).to.have.lengthOf(0);
+    deprecatedExpect(wrapper.find('AiAssessment')).to.have.lengthOf(0);
   });
 
   it('renders tips for teachers', () => {
@@ -223,37 +807,37 @@ describe('LearningGoals', () => {
         isStudent={false}
       />
     );
-    expect(wrapper.find('details')).to.have.lengthOf(1);
-    expect(wrapper.find('SafeMarkdown')).to.have.lengthOf(1);
-    expect(wrapper.find('SafeMarkdown').props().markdown).to.equal('Tips');
+    deprecatedExpect(wrapper.find('details')).to.have.lengthOf(1);
+    deprecatedExpect(wrapper.find('SafeMarkdown')).to.have.lengthOf(1);
+    deprecatedExpect(wrapper.find('SafeMarkdown').props().markdown).to.equal(
+      'Tips'
+    );
   });
 
   it('does not render tips for students', () => {
     const wrapper = shallow(
       <LearningGoals learningGoals={learningGoals} isStudent={true} />
     );
-    expect(wrapper.find('details')).to.have.lengthOf(0);
+    deprecatedExpect(wrapper.find('details')).to.have.lengthOf(0);
   });
 
   it('shows AI token when AI is enabled', () => {
     const wrapper = shallow(
       <LearningGoals learningGoals={learningGoals} teacherHasEnabledAi />
     );
-    expect(wrapper.find('Heading6').props().children).to.equal(
-      learningGoals[0].learningGoal
-    );
-    expect(wrapper.find('AiToken')).to.have.lengthOf(1);
+    deprecatedExpect(wrapper.text()).to.contain(learningGoals[0].learningGoal);
+    deprecatedExpect(wrapper.find('AiToken')).to.have.lengthOf(1);
   });
 
-  it('does not show AI token when AI is disabled', () => {
-    const wrapper = shallow(
-      <LearningGoals learningGoals={learningGoals} teacherHasEnabledAi />
+  it('does not show AI token when AI is disabled', async () => {
+    render(<LearningGoals learningGoals={learningGoals} teacherHasEnabledAi />);
+    const user = userEvent.setup();
+    await user.click(
+      screen.getByRole('button', {name: i18n.rubricNextLearningGoal()})
     );
-    wrapper.find('button').first().simulate('click');
-    expect(wrapper.find('Heading6').props().children).to.equal(
-      learningGoals[1].learningGoal
-    );
-    expect(wrapper.find('AiToken')).to.have.lengthOf(0);
+    screen.getByText(learningGoals[1].learningGoal);
+    // AiToken renders the i18n.usesAi() label; absent on AI-disabled goals
+    deprecatedExpect(screen.queryByText(i18n.usesAi())).to.be.null;
   });
 
   it('does not show AI token when teacher has disabled AI', () => {
@@ -263,10 +847,8 @@ describe('LearningGoals', () => {
         teacherHasEnabledAi={false}
       />
     );
-    expect(wrapper.find('Heading6').props().children).to.equal(
-      learningGoals[0].learningGoal
-    );
-    expect(wrapper.find('AiToken')).to.have.lengthOf(0);
+    deprecatedExpect(wrapper.text()).to.contain(learningGoals[0].learningGoal);
+    deprecatedExpect(wrapper.find('AiToken')).to.have.lengthOf(0);
   });
 
   it('does not show AI token after teacher has submitted evaluation', () => {
@@ -279,36 +861,44 @@ describe('LearningGoals', () => {
         }}
       />
     );
-    expect(wrapper.find('AiToken')).to.have.lengthOf(0);
+    deprecatedExpect(wrapper.find('AiToken')).to.have.lengthOf(0);
   });
 
-  it('sends event when new learning goal is selected', () => {
+  it('sends event when new learning goal is selected', async () => {
     const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
 
-    const wrapper = shallow(
+    render(
       <LearningGoals
         learningGoals={learningGoals}
         reportingData={{unitName: 'test-2023', levelName: 'test-level'}}
+        studentLevelInfo={studentLevelInfo}
       />
     );
-    wrapper.find('button').first().simulate('click');
-    expect(sendEventSpy).to.have.been.calledWith(
+    const user = userEvent.setup();
+    await user.click(
+      screen.getByRole('button', {name: i18n.rubricNextLearningGoal()})
+    );
+    deprecatedExpect(sendEventSpy).to.have.been.calledWith(
       EVENTS.TA_RUBRIC_LEARNING_GOAL_SELECTED,
       {
         unitName: 'test-2023',
         levelName: 'test-level',
         learningGoalKey: 'efgh',
-        learningGoal: 'Testing 2',
+        learningGoal: 'Learning Goal 2',
+        studentId: 1,
       }
     );
-    wrapper.find('button').first().simulate('click');
-    expect(sendEventSpy).to.have.been.calledWith(
+    await user.click(
+      screen.getByRole('button', {name: i18n.rubricPreviousLearningGoal()})
+    );
+    deprecatedExpect(sendEventSpy).to.have.been.calledWith(
       EVENTS.TA_RUBRIC_LEARNING_GOAL_SELECTED,
       {
         unitName: 'test-2023',
         levelName: 'test-level',
         learningGoalKey: 'abcd',
-        learningGoal: 'Testing 1',
+        learningGoal: 'Learning Goal 1',
+        studentId: 1,
       }
     );
     sendEventSpy.restore();
@@ -324,19 +914,74 @@ describe('LearningGoals', () => {
         }}
       />
     );
-    expect(wrapper.find('textarea').props().value).to.equal('test feedback');
-    expect(wrapper.find('textarea').props().disabled).to.equal(true);
+    deprecatedExpect(wrapper.find('textarea').props().value).to.equal(
+      'test feedback'
+    );
+    deprecatedExpect(wrapper.find('textarea').props().disabled).to.equal(true);
   });
 
-  it('shows editable textbox for feedback when the teacher can provide feedback', () => {
-    const wrapper = shallow(
+  it('shows editable textbox for feedback when the teacher can provide feedback', async () => {
+    const postStub = sinon.stub(HttpClient, 'post').returns(
+      Promise.resolve({
+        json: () => {
+          return {
+            id: 0,
+          };
+        },
+      })
+    );
+
+    render(
       <LearningGoals
         canProvideFeedback={true}
         studentLevelInfo={studentLevelInfo}
         learningGoals={learningGoals}
       />
     );
-    expect(wrapper.find('textarea').props().disabled).to.equal(false);
+
+    // Need to have it 'load' all the prior evaluations
+    await wait();
+
+    deprecatedExpect(screen.getByRole('textbox').disabled).to.equal(false);
+    postStub.restore();
+  });
+
+  it('summary shows submitted scores', async () => {
+    const postStub = sinon.stub(HttpClient, 'post').returns(
+      Promise.resolve({
+        json: () => {
+          return {
+            id: 2,
+            feedback: 'blah blah',
+            understanding: RubricUnderstandingLevels.LIMITED,
+          };
+        },
+      })
+    );
+
+    render(
+      <LearningGoals
+        canProvideFeedback={true}
+        studentLevelInfo={studentLevelInfo}
+        learningGoals={learningGoals}
+      />
+    );
+
+    // Need to have it 'load' all the prior evaluations
+    await wait();
+
+    const user = userEvent.setup();
+    await user.click(
+      screen.getByRole('button', {name: i18n.rubricPreviousLearningGoal()})
+    );
+
+    // The summary page shows its title, each goal name, and its submitted score
+    screen.getByText(i18n.rubricLearningGoalSummary());
+    screen.getByText('Learning Goal 1');
+    deprecatedExpect(
+      screen.getAllByText('Limited Evidence').length
+    ).to.be.at.least(1);
+    postStub.restore();
   });
 
   it('passes isStudent down to EvidenceLevels', () => {
@@ -347,13 +992,15 @@ describe('LearningGoals', () => {
         isStudent
       />
     );
-    expect(wrapper.find('EvidenceLevels').props().isStudent).to.equal(true);
-    expect(wrapper.find('EvidenceLevels').props().submittedEvaluation).to.equal(
-      submittedEvaluation
+    deprecatedExpect(wrapper.find('EvidenceLevels').props().isStudent).to.equal(
+      true
     );
-    expect(wrapper.find('EvidenceLevels').props().evidenceLevels).to.equal(
-      learningGoals[0]['evidenceLevels']
-    );
+    deprecatedExpect(
+      wrapper.find('EvidenceLevels').props().submittedEvaluation
+    ).to.equal(submittedEvaluation);
+    deprecatedExpect(
+      wrapper.find('EvidenceLevels').props().evidenceLevels
+    ).to.equal(learningGoals[0]['evidenceLevels']);
   });
 
   it('displays progress ring', () => {
@@ -363,6 +1010,6 @@ describe('LearningGoals', () => {
         submittedEvaluation={submittedEvaluation}
       />
     );
-    expect(wrapper.find('ProgressRing')).to.have.lengthOf(1);
+    deprecatedExpect(wrapper.find('ProgressRing')).to.have.lengthOf(1);
   });
 });

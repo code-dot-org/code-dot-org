@@ -1,0 +1,95 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 64,
+  "created_at": "2024-05-17T16:35:14.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "skin": "gamelab",
+    "show_debug_watch": "true",
+    "block_pools": [
+      "GamelabJr"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab"
+    ],
+    "use_default_sprites": "false",
+    "hide_animation_mode": "true",
+    "show_type_hints": true,
+    "hide_custom_blocks": true,
+    "all_animations_single_frame": "true",
+    "use_modal_function_editor": "true",
+    "standalone_app_name": "spritelab",
+    "encrypted": "false",
+    "embed": "false",
+    "instructions_important": "false",
+    "long_instructions": "**Add more sprites and set their location.**\r\n1. Make another new sprite and choose a costume for player two<img src=\"https://images.code.org/51ad72f6ba72c16b8094566622e310ab-image-1683905416875.gif\" style=\"width: 20%; float: right; padding-top: 20px\">\r\n\r\n\r\n- Click the <code style=\"color:black; background-color:#EBD546\">location pin</code> to move the new sprite \r\n- Press `Run`\r\n\r\n\r\n\r\n",
+    "submittable": "false",
+    "hide_share_and_remix": "true",
+    "never_autoplay_video": "true",
+    "disable_param_editing": "true",
+    "disable_if_else_editing": "false",
+    "include_shared_functions": "false",
+    "free_play": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "validation_enabled": "false",
+    "start_in_animation_tab": "false",
+    "mini_toolbox": "false",
+    "hide_pause_button": "true",
+    "start_animations": "{\"orderedKeys\":[\"fd75eff4-a05d-4d84-877d-5a73c782f28d\",\"b2aef17d-574a-471c-9de2-bb87abc09f7c\",\"882b1dd6-cc78-4971-8d22-76627faa5ce8\",\"997a72a8-5ee8-4c64-b1c8-14ef4d674fb6\"],\"propsByKey\":{\"fd75eff4-a05d-4d84-877d-5a73c782f28d\":{\"name\":\"game_penguin\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-03-06T16:38:39.000Z\",\"pngLastModified\":\"2024-03-06T16:38:39.000Z\",\"version\":\"v640q5YligHnBsi6aCt6KK5k1aVZpkmC\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/v640q5YligHnBsi6aCt6KK5k1aVZpkmC/game_penguin.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"b2aef17d-574a-471c-9de2-bb87abc09f7c\":{\"name\":\"game_panda\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-03-06T16:38:16.000Z\",\"pngLastModified\":\"2024-03-06T16:38:16.000Z\",\"version\":\"c_dzHSjoQrgyD1aoIITjZCZf4wFgv_yn\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/c_dzHSjoQrgyD1aoIITjZCZf4wFgv_yn/game_panda.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"882b1dd6-cc78-4971-8d22-76627faa5ce8\":{\"name\":\"gradient_08\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2020-12-01 23:21:14 UTC\",\"pngLastModified\":\"2020-12-01 23:21:14 UTC\",\"version\":\"Gzf6AOFH7NK4woo365IgUcY_HE6VQ3nK\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/Gzf6AOFH7NK4woo365IgUcY_HE6VQ3nK/category_backgrounds/gradient_08.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"997a72a8-5ee8-4c64-b1c8-14ef4d674fb6\":{\"name\":\"gradient_11\",\"categories\":[\"backgrounds\"],\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:53:09 UTC\",\"pngLastModified\":\"2021-01-19 23:53:10 UTC\",\"version\":\"xMOibFCqZzeZ1Ui4OIAAgMMY8mMKN75t\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/xMOibFCqZzeZ1Ui4OIAAgMMY8mMKN75t/category_backgrounds/gradient_11.png\",\"sourceSize\":{\"x\":400,\"y\":400}}}}\r\n\r\n",
+    "name_suffix": "_course-e",
+    "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"The <code style=\\\"color:black; background-color:#EBD546\\\">location</code> block is attached to the <code style=\\\"color:black; background-color:#F79EA5\\\">make new sprite</code> block.\\n\\nTo change a sprite's location, click the pin on the location block, then click where you want it to go.\\n\\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)\",\"hint_id\":\"hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/6a3d28d49993d626efaf4da56640ea75/game_design_location.mp3\"},{\"hint_class\":null,\"hint_markdown\":\"You can choose the costume from the dropdown menu.\\n\\n![](https://images.code.org/e1d6f7bef209fe1ff3060db7f7b6adab-image-1711136618013.jpg)\",\"hint_id\":\"Hint2\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e01796648c9a75cba9fe0c81e5b7ee0f/game_design_location.mp3\"}]",
+    "short_instructions": "Make a player two sprite with a <code style=\"color:black; background-color:#F79EA5\">make new sprite</code> block. Then set the location using the <code style=\"color:black; background-color:#EBD546\">location pin</code>.",
+    "validation_code": "if (World.frameCount == 1) {\r\n  addCriteria(function() {\r\n    return minimumSprites(2); // Check whether or not the student created a sprite.\r\n  }, \"noSprites\");  // Failure message: \"You need to make a sprite.\"\r\n\r\n//  addCriteria(function() {\r\n  //  return minimumSpritesNonDefaultLocation(1); // Check if the first sprite is in a new location\r\n//  }, \"cscLandmarkMoveAllSprites\");  // Failure message: \"Make sure to move all your sprites to a new location! Use //the pin on the location block to move your sprite. <xml><block type=\\\"gamelab_location_picker\\\"><title //name=\\\"LOCATION\\\">'{\\\"x\\\":200,\\\"y\\\":200}'</title></block></xml>\"\r\n  \r\n  addCriteria(function() {\r\n    return minimumSpritesNonDefaultLocation(2); // Check if the first sprite is in a new location\r\n  }, \"changeLocation\");  // Failure message: \"Use the pin on the location block to move your sprite. <xml><block type=\"gamelab_location_picker\"><title name=\"LOCATION\">'{\"x\":200,\"y\":200}'</title></block></xml>\"\r\n  \r\n}\r\ncheck();\r\n",
+    "encrypted_examples": "FSjGqOPz1FccGoLFkghSmgu/28ZsWzQZVQESREJk6LtUtTNaWigYwOmXtK6C\n2+YXd4yRsMwyEra0HlSe2sYKYw==\n",
+    "instructions_icon": "fox",
+    "video_key": "CSF_SpriteLab_Intro_v2",
+    "preload_asset_list": null,
+    "hint_prompt_attempts_threshold": "1"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-05-17T16:35:14.344+00:00\",\"changed\":[\"cloned from \\\"game_design_location_2024\\\"\"],\"cloned_from\":\"game_design_location_2024\"},{\"changed_at\":\"2024-07-15 20:53:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 1
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml xmlns="https://developers.google.com/blockly/xml">
+        <block type="when_run" id="p^*k`)UrkWLyI6e5Evxk" deletable="false" movable="false" editable="false" x="16" y="16">
+          <next>
+            <block type="gamelab_setBackgroundImageAs">
+              <field name="IMG">"gradient_11"</field>
+              <next>
+                <block type="gamelab_makeNewSpriteAnon" id="zj[nhFd;m({=X,l5yMQF">
+                  <field name="ANIMATION_NAME">"game_penguin"</field>
+                  <value name="LOCATION">
+                    <block type="gamelab_location_picker" id="JmLs8H8DLINm4l|.G7,v">
+                      <field name="LOCATION">{"x":100,"y":300}</field>
+                    </block>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="gamelab_setBackgroundImageAs" id="$)4_hd{uTsUZsDDzN-WO" x="55" y="258">
+          <field name="IMG">"gradient_08"</field>
+        </block>
+        <block type="gamelab_makeNewSpriteAnon" id="PKIu$+Ld/(p8rzCFaWD%" x="45" y="360">
+          <field name="ANIMATION_NAME">"game_panda"</field>
+          <value name="LOCATION">
+            <block type="gamelab_location_picker" id="gI5UPJ|(-g`J;hesR(f^">
+              <field name="LOCATION">{"x":200,"y":200}</field>
+            </block>
+          </value>
+        </block>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</GamelabJr>

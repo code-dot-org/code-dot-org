@@ -28,13 +28,3 @@
   %p
     Have feedback on the application process?
     = link_to 'Please let us know!', 'https://code.org/contact'
-
-- ga_link = "/pd/application/teacher/submitted"
-- ga_link += "?nominated=true" if params[:nominated]
-
-:javascript
-  $(document).ready(function() {
-    // Report a unique page view to GA.
-    ga('set', 'page', "#{ga_link}");
-    ga('send', 'pageview');
-  });

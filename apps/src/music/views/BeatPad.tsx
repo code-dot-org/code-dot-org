@@ -1,8 +1,11 @@
-import React from 'react';
 import classNames from 'classnames';
-import styles from './beatpad.module.scss';
+import React from 'react';
+
 import {Trigger} from '../constants';
+
 import {useMusicSelector} from './types';
+
+import styles from './beatpad.module.scss';
 
 interface BeatPadProps {
   triggers: Trigger[];

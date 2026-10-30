@@ -20,6 +20,19 @@
 #  index_section_instructors_on_section_id                    (section_id)
 #
 class SectionInstructor < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :confidential,
+    instructor_id: :confidential,
+    section_id: :confidential,
+    invited_by_id: :confidential,
+    deleted_at: :confidential,
+    status: :confidential,
+    created_at: :confidential,
+    updated_at: :confidential,
+  )
+
   acts_as_paranoid
 
   belongs_to :instructor, class_name: 'User'

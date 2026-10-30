@@ -3,22 +3,25 @@
  *           auto-DNS system.
  */
 
-var utils = require('../utils'); // Provides Function.prototype.inherits
+var _ = require('lodash');
+
 var i18n = require('@cdo/netsim/locale');
+
+var ObservableEventDEPRECATED = require('../ObservableEventDEPRECATED');
+var utils = require('../utils'); // Provides Function.prototype.inherits
+
+var DataConverters = require('./DataConverters');
 var NetSimConstants = require('./NetSimConstants');
-var NetSimUtils = require('./NetSimUtils');
-var NetSimNode = require('./NetSimNode');
 var NetSimEntity = require('./NetSimEntity');
+var NetSimGlobals = require('./NetSimGlobals');
 var NetSimLogEntry = require('./NetSimLogEntry');
 var NetSimLogger = require('./NetSimLogger');
-var NetSimWire = require('./NetSimWire');
 var NetSimMessage = require('./NetSimMessage');
-var ObservableEventDEPRECATED = require('../ObservableEventDEPRECATED');
-var Packet = require('./Packet');
-var DataConverters = require('./DataConverters');
+var NetSimNode = require('./NetSimNode');
 var NetSimNodeFactory = require('./NetSimNodeFactory');
-
-var _ = require('lodash');
+var NetSimUtils = require('./NetSimUtils');
+var NetSimWire = require('./NetSimWire');
+var Packet = require('./Packet');
 
 var serializeNumber = NetSimUtils.serializeNumber;
 var deserializeNumber = NetSimUtils.deserializeNumber;
@@ -30,7 +33,6 @@ var NodeType = NetSimConstants.NodeType;
 var BITS_PER_BYTE = NetSimConstants.BITS_PER_BYTE;
 
 var logger = NetSimLogger.getSingleton();
-var NetSimGlobals = require('./NetSimGlobals');
 
 /**
  * @type {number}

@@ -1,0 +1,42 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-02-18T16:57:23.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "ai_tutor_available": "true",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# CIW AI Associate Standard: 2.2\n# Standard Description: Describe data gathering to create new datasets.\n#\n# Rationale: AI starts with data. But where does it come from? Sometimes we \n# gather it from sensors, surveys, or logs. In this tutorial, we will \"gather\" \n# simulated data using numpy to create a brand new dataset from scratch. \n# This helps students understand the structure of a CSV or Excel file.\n\n\"\"\"\nWelcome! Before an AI can learn, an engineer has to gather the data. \nData \"gathering\" is the process of collecting information and putting it \ninto a structured format (like a table).\n\nToday, we will be \"Digital Scientists\". We are going to gather data about \na fictional forest: the height of trees and their age.\n\"\"\"\n\nimport pandas as pd\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n# --- PART 1: GATHERING RAW OBSERVATIONS ---\nprint(\"--- Part 1: Gathering Observations ---\")\n\n# Imagine we went into the forest and measured 100 trees.\n# We'll use numpy to simulate these measurements.\nnp.random.seed(42) # This makes sure our \"random\" numbers are the same every time\ntree_ages = np.random.randint(1, 50, size=100) # Ages between 1 and 50 years\n# Tree height is usually age * some factor + some noise\ntree_heights = (tree_ages * 2.5) + np.random.normal(0, 5, size=100) \n\nprint(f\"Gathered {len(tree_ages)} observations of Age and Height.\")\n\n# --- PART 2: STRUCTURING THE DATA ---\nprint(\"\\n--- Part 2: Putting Data into a Table (DataFrame) ---\")\n\n# We use pandas to turn these raw lists into a structured \"DataFrame\".\n# Think of a DataFrame as a single sheet in an Excel file.\ndata = {\n    'Tree_ID': range(1, 101),\n    'Age_Years': tree_ages,\n    'Height_Feet': tree_heights\n}\ndf = pd.DataFrame(data)\n\n# Let's look at the first 5 rows we \"gathered\"\nprint(df.head())\n\n# --- PART 3: VISUALIZING THE GATHERED DATA ---\nplt.scatter(df['Age_Years'], df['Height_Feet'], color='green', alpha=0.6)\nplt.title(\"Gathered Forest Data\")\nplt.xlabel(\"Age (Years)\")\nplt.ylabel(\"Height (Feet)\")\nplt.grid(True, linestyle='--', alpha=0.7)\nplt.show()\n\n\"\"\"\n--- YOUR TURN ---\nNow it's your turn to gather some data! \nImagine you are gathering data on a \"Coffee Shop\". \n\n1. Create a list called 'customers' with 10 random numbers (1 to 50).\n2. Create a list called 'revenue' which is the number of customers * 5.\n3. Put them into a pandas DataFrame called 'shop_df'.\n\"\"\"\n\n# STARTING CODE FOR STUDENT:\n# TODO: Create the raw data\n# customers = ...\n# revenue = ...\n\n# TODO: Create the DataFrame\n# shop_df = ...\n\n# TODO: Print the DataFrame!\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFTDG6jyYgtI/CEUE/82dEkG4hlI8OLsdjJD0In8S\n03BB+jPkGgyYB0/9C3zqHMHEFpKeCsugYbpGMxzBNwrd7qASagJaFzMnVUyM\n2TXS7Hau9lj7JpZIHXn9fmxXRRANWZ44l2ffJ13B3lMdCpOEVioRhBfyLGL0\nq8OqfrIrWchjIIOJ5N6YqA7KiBbo6JICD7HFE/wT7WS5BOTLGmPZrg1Hf64B\nuUE90BfV3PPzUEndqh/GfT8yq043w+Fwrq1xZr4WCtoFDG3piSq3/Z7UxIPQ\n/h9GUrDMP+O82RwmQAzmIjfuxTMqY1NzIrpAmfAm3W3nzn1SGOIEsLXCp/oV\nRlERgRFdQBxNI6dnSCOMWCL/o7nTMOAKaykbyWcA/FHfe2I3/6iIB/AaOcHZ\nazxCWUBk0BtXl6876o9iVfAwePhpXDABHsZfmZDG1TZuOQjC1SG07YdC2iIE\nfcLZbcYxG3Ua/lhV4vEWu67kxcBddni96etxuNRfLVlyAJbPt0Xx9oFncTi/\nB9Ren30ia/ZmdmNX9j047beTbpqaUpDLHmag2Vg8i5oKz96iyAtbL+nd+YeW\nqXAX+Sbs3qJFRPxVTB7srxFKE5hoKsJiTzISoQO5BnIP1ueoJ7tFdeoi6jtQ\ntZAb8DBB1r/kfmZ8UTYYnNJ2zLzccXg7YjshaAphnoig6RV6HLLIksK97Nc1\nA7oyVaM1GDRLPTehmn9Sv/1g7xlmahuAMuA90HqkXDZzqNF7gtpRxCZM/ewR\n6bsRbPmg2xURIY8eIHrCn+gi21hLGVG2zrNZczzVtvqE86CnRmq5vdwexp9V\nUhs9jYkkaGFeV40GmkHf2IpUFKrU88ReC4T09aVdzI790XwTENhSnQ/1BSlV\nX+4YeqiEHg83+86SeOCfR+LcmuAOGuIVRXKOUfKGsik/qY5Lfi4zc0rmSIPq\nnUiIR5szAC29Se1AtsnC2gDdg6DBSTL0CRAMU1MTQrKkoxE5GdSnf1wyw58h\nuBE+Q0kz551lnMzDp3EFyP5Iy70nCxwCB+U/UvW6OYPCMzsPu/IHy5w+6lw7\n1utawRy86fhRyTXKbRUHkrBJdyE5zYq5zr2+f+lzuVnvI6EH6Za+vZy6apAn\nDFUxGMy/NOgBiVprFKhD+1xrUXLT61/KH/6DSDMkV5VNnNHHXX6mQBVIEqu8\nYd26XHPdmC9SKX+WkX0O+x5ZzHegpIuZFK0oUuL0uNZq2UsfyzjkzScOQJZ6\naWeb5UcB87b/12+LuHSPxgo1PBGw8LCJrlR2OWlAeni2n8evA24bHq+FN7Gz\nob8vqqhxhMHocrZh9jY2JzYeI4ERhsR5xs7I4W48WvYirmrmWtzIhg5qIEmT\nI02Up6KBc2N/lGfHvqnPnDR+6OHq4cfFpkoPyIu5ET3DBS09mTq90gfulWk6\nurGCpmBkii2BNraMkVjsu0RWNLWhrUeuUhZ89SU3wGjYm10SWoTJiZVu03B3\nocGR/iy6n0cWROo=\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-18T16:57:23.159+00:00\",\"changed\":[\"cloned from \\\"cs50-scikit-11\\\"\"],\"cloned_from\":\"cs50-scikit-11\"},{\"changed_at\":\"2026-02-18 16:57:27 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:28:57 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:29:05 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Pythonlab>

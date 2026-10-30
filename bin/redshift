@@ -6,6 +6,6 @@ host = CDO.redshift_host
 password = CDO.redshift_password
 port = 5439
 dbname = 'dashboard'
-username = 'dev'
+username = CDO.redshift_username
 
 system("PGPASSWORD=#{password} psql --host='#{host}' --port=#{port} --username='#{username}' --dbname=#{dbname}")

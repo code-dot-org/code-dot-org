@@ -1,0 +1,94 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-03-20T23:46:39.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Closed Captions\r\n\r\nThe closed captions feature is not working as expected.\r\n\r\n### Do This:\r\n\r\n1. Test the captions switch. What's wrong?\r\n\r\n2. Check the `captionsOn` value and how the captions update.\r\n\r\n3. Fix the issue so the captions show and hide correctly.\r\n\r\nUse AI (if needed) to explain the code before making changes.",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "tutor",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "display_name": "Fix Captions Toggle",
+    "bubble_choice_description": "Investigate and fix a broken captions toggle. Figure out what's wrong and make sure captions show and hide correctly.",
+    "thumbnail_url": "https://images.code.org/d03031afc37a066ec5620eb49bc1ab8d-caption.png",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <title>StreamBox</title>\n    <link rel=\"stylesheet\" href=\"style.css\" />\n  </head>\n  <body>\n    <main class=\"page\">\n      <section class=\"video-card\">\n        <p class=\"app-label\">STREAMBOX</p>\n        <h1 class=\"video-title\">Street Food Tour</h1>\n        <p class=\"video-subtitle\">Clip • 0:18</p>\n\n        <div class=\"video-frame\">\n          <img\n            src=\"food_tour.jpg\"\n            alt=\"Street food vendor preparing food\"\n            class=\"video-image\"\n          />\n\n          <div class=\"video-top-bar\">\n            <span class=\"video-badge\">Food & Travel</span>\n          </div>\n\n          <p id=\"captionText\" class=\"caption-text\">“This one sold out in ten minutes.”</p>\n\n          <div class=\"video-controls\">\n            <div class=\"controls-row\">\n              <button class=\"control-btn\" aria-label=\"Play or pause video\">▶</button>\n              <button class=\"control-btn\" aria-label=\"Volume\">🔊</button>\n              <span class=\"time-label\">0:07 / 0:18</span>\n            </div>\n\n            <div class=\"progress-track\" aria-hidden=\"true\">\n              <div class=\"progress-fill\"></div>\n              <div class=\"progress-thumb\"></div>\n            </div>\n          </div>\n        </div>\n\n        <div class=\"caption-toggle-row\">\n          <span class=\"toggle-label\">Closed captions</span>\n\n          <label class=\"switch\">\n            <input id=\"chkToggle\" type=\"checkbox\" />\n            <span class=\"slider\"></span>\n          </label>\n        </div>\n      </section>\n    </main>\n\n    <script src=\"script.js\"></script>\n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// State\nlet captionsOn = false;\n\n// Selectors\nconst chkToggle = document.getElementById(\"chkToggle\");\nconst captionText = document.getElementById(\"captionText\");\n\n// Render UI from state\nconst render = () => {\n  if (!captionsOn) { \n    captionText.classList.remove(\"hidden\");\n  } else {\n    captionText.classList.add(\"hidden\");\n  }\n};\n\n// Event: checkbox change -> flip -> render\nchkToggle.addEventListener(\"change\", () => {\n  captionsOn = captionsOn; \n  render();\n});\n\n// Initial render\nrender();",
+          "folderId": "0",
+          "active": true
+        },
+        "3": {
+          "id": "3",
+          "name": "style.css",
+          "language": "css",
+          "contents": "* {\n  box-sizing: border-box;\n}\n\nbody {\n  margin: 0;\n  font-family: Arial, Helvetica, sans-serif;\n  background: linear-gradient(135deg, #081120, #0f172a);\n  color: #ffffff;\n}\n\n.page {\n  min-height: 100vh;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  padding: 24px;\n}\n\n.video-card {\n  width: 100%;\n  max-width: 420px;\n  background: #172235;\n  border-radius: 22px;\n  padding: 20px;\n  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);\n  border: 1px solid rgba(255, 255, 255, 0.06);\n}\n\n.app-label {\n  margin: 0 0 10px 0;\n  font-size: 12px;\n  font-weight: 700;\n  letter-spacing: 0.14em;\n  color: #93c5fd;\n  text-transform: uppercase;\n}\n\n.video-title {\n  margin: 0;\n  font-size: 30px;\n  line-height: 1.05;\n}\n\n.video-subtitle {\n  margin: 10px 0 18px 0;\n  color: #d1d5db;\n  font-size: 14px;\n}\n\n.video-frame {\n  position: relative;\n  overflow: hidden;\n  border-radius: 18px;\n  background: #000000;\n  aspect-ratio: 4 / 5;\n}\n\n.video-image {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  display: block;\n  filter: saturate(1.02);\n}\n\n.video-top-bar {\n  position: absolute;\n  top: 12px;\n  left: 12px;\n  right: 12px;\n  display: flex;\n  justify-content: flex-start;\n}\n\n.video-badge {\n  background: rgba(0, 0, 0, 0.65);\n  color: #ffffff;\n  font-size: 12px;\n  font-weight: 700;\n  padding: 6px 10px;\n  border-radius: 999px;\n}\n\n.caption-text {\n  position: absolute;\n  left: 16px;\n  right: 16px;\n  bottom: 74px;\n  margin: 0;\n  padding: 10px 14px;\n  background: rgba(0, 0, 0, 0.72);\n  border-radius: 12px;\n  font-size: 18px;\n  font-weight: 700;\n  line-height: 1.25;\n  text-align: center;\n}\n\n.video-controls {\n  position: absolute;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  padding: 14px 14px 12px 14px;\n  background: linear-gradient(to top, rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0));\n}\n\n.controls-row {\n  display: flex;\n  align-items: center;\n  gap: 10px;\n  margin-bottom: 10px;\n}\n\n.control-btn {\n  width: 34px;\n  height: 34px;\n  border: none;\n  border-radius: 999px;\n  background: rgba(255, 255, 255, 0.16);\n  color: #ffffff;\n  font-size: 16px;\n  cursor: default;\n}\n\n.time-label {\n  margin-left: auto;\n  font-size: 13px;\n  font-weight: 600;\n  color: #f3f4f6;\n}\n\n.progress-track {\n  position: relative;\n  height: 6px;\n  border-radius: 999px;\n  background: rgba(255, 255, 255, 0.26);\n  overflow: visible;\n}\n\n.progress-fill {\n  width: 39%;\n  height: 100%;\n  background: #ffffff;\n  border-radius: 999px;\n}\n\n.progress-thumb {\n  position: absolute;\n  left: calc(39% - 7px);\n  top: 50%;\n  width: 14px;\n  height: 14px;\n  background: #ffffff;\n  border-radius: 50%;\n  transform: translateY(-50%);\n}\n\n.caption-toggle-row {\n  margin-top: 18px;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n}\n\n.toggle-label {\n  font-size: 15px;\n  color: #e5e7eb;\n}\n\n/* Switch container */\n.switch {\n  position: relative;\n  display: inline-block;\n  width: 44px;\n  height: 24px;\n}\n\n/* Hide default checkbox */\n.switch input {\n  opacity: 0;\n  width: 0;\n  height: 0;\n}\n\n/* Track */\n.slider {\n  position: absolute;\n  cursor: pointer;\n  inset: 0;\n  background-color: #374151;\n  border-radius: 999px;\n  transition: 0.2s;\n}\n\n/* Knob */\n.slider::before {\n  content: \"\";\n  position: absolute;\n  height: 18px;\n  width: 18px;\n  left: 3px;\n  top: 3px;\n  background-color: white;\n  border-radius: 50%;\n  transition: 0.2s;\n}\n\n/* Checked state */\n.switch input:checked + .slider {\n  background-color: #2563eb;\n}\n\n.switch input:checked + .slider::before {\n  transform: translateX(20px);\n}\n\n.hidden {\n  display: none;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "food_tour.jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson10-level4c_2026/uuid/f585655c-7251-4c41-af5e-58609c037b26.jpg",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "2"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n",
+    "name_suffix": "_2026",
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML",
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-03-20T23:46:39.150+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson10-level4c_2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson10-level4c_2025\"},{\"changed_at\":\"2026-04-16 18:54:47 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 18:57:51 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 19:01:11 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 19:02:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 19:04:33 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-16 18:39:33 +0000\",\"changed\":[\"long_instructions\",\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Weblab2>

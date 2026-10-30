@@ -1,0 +1,22 @@
+name 'networks-internet-lesson1-level2_v2-2025'
+title 'Network Components'
+description 'Match each network component to its correct function.'
+height '250'
+question '![](https://images.code.org/5b945603bb271e94668991780def9e73-router.png)'
+answer 'Forwards data packets between networks and finds the best path.'
+question '![](https://images.code.org/7cee888faf0ee9432543083251029f0c-switch.png)'
+answer 'Directs data within a local network to the correct device.'
+question '![](https://images.code.org/a7f4f0fa0ebda9c710f4933679b68189-server.png)'
+answer 'Stores and delivers information like web pages or files to users.'
+question '![](https://images.code.org/05f22e480b8d30cc320195275ca84053-wifi.png)'
+answer 'Provides wireless access to the Internet.'
+question '![](https://images.code.org/77f7d748330e2ebce8ce10ea18d2baaa-ethernet.png)'
+answer 'Offers a physical, high-speed connection to the Internet.'
+question '![](https://images.code.org/ca1535dc0b6d915845ed506a495f9824-internet-tower.png)'
+answer 'Transmits data wirelessly over long distances, connecting local networks to the Internet.'
+
+markdown <<MARKDOWN
+
+MARKDOWN
+
+allow_multiple_attempts true

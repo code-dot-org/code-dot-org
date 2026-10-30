@@ -4,11 +4,13 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "other",
+      "curriculum_umbrella": "Other",
       "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-02-16 20:23:57 UTC",
+    "serialized_at": "2024-11-19 01:19:00 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -80,6 +82,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLGuide_L1_Opening1MB_MB1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -101,6 +106,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "How this curriculum works_MB1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -122,6 +130,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLGuide_L1_Opening2MB_MB1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -143,6 +154,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSC-SelfPaced-lessonactivities_2023MB_MB1"
+        ]
       },
       "bonus": false,
       "seeding_key": {

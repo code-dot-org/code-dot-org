@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "content_area": "curriculum_6_8",
       "curriculum_umbrella": "CSD",
       "has_verified_resources": true,
       "hideable_lessons": true,
@@ -12,13 +13,15 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "topic_tags": [
+        "maker"
+      ],
       "tts": true,
-      "version_year": "2023",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "csd6",
-    "serialized_at": "2023-11-06 16:34:50 UTC",
+    "serialized_at": "2025-01-22 18:59:47 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -11116,6 +11119,7 @@
       "key": "circuits_and_logic",
       "properties": {
         "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/csd-physical-computing-circuit-playground-mp4-mp4.mp4",
         "type": "Video"
       },
       "seeding_key": {
@@ -11446,6 +11450,7 @@
       "key": "if_statements_1",
       "properties": {
         "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/csd-u6-if-statements-mp4.mp4",
         "type": "Video"
       },
       "seeding_key": {
@@ -11458,6 +11463,7 @@
       "key": "input_output_devices",
       "properties": {
         "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/computer_iosp_video-mp4.mp4",
         "type": "Video"
       },
       "seeding_key": {
@@ -11951,6 +11957,7 @@
       "key": "the_counter_pattern",
       "properties": {
         "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/variables_shortened-mp4-mp4.mp4",
         "type": "Video"
       },
       "seeding_key": {
@@ -12034,6 +12041,7 @@
       "key": "variables_1",
       "properties": {
         "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/csd-u6-variables-mp4.mp4",
         "type": "Video"
       },
       "seeding_key": {

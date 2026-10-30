@@ -1,7 +1,4 @@
 class Services::RegistrationReminder
-  # Don't send reminders for applications created prior to this date
-  REMINDER_START_DATE = Date.new(2019, 10, 1)
-
   # This method sends enrollment reminder emails for any applications that are eligible for a
   # reminder.  It is designed to be called repeatedly (e.g. from a cronjob).
   #
@@ -67,8 +64,13 @@ class Services::RegistrationReminder
         on pd_applications.user_id = pd_enrollments.user_id
         and pd_enrollments.created_at >= accepted.sent_at
       SQL
-      where("pd_applications.created_at >= ?", REMINDER_START_DATE).
+      joins(<<~SQL.squish).
+        left outer join pd_workshops
+        on pd_workshops.id = CAST(JSON_EXTRACT(pd_applications.form_data, '$.pd_workshop_id') AS UNSIGNED)
+      SQL
+      where(pd_applications: {application_year: Pd::Application::ActiveApplicationModels::APPLICATION_CURRENT_YEAR}).
       where(pd_enrollments: {id: nil}).
+      where(pd_workshops: {deleted_at: nil}).
       distinct
   end
 end

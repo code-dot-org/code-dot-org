@@ -1,0 +1,12 @@
+name 'data-science-ch1-project-level1'
+title 'Data Cycle Review'
+description 'Put these steps in order.'
+question '**1st Step**'
+answer 'Juana found a data set on a topic she was interested in, and looked at the **cases** and **attributes** to understand it. She also looks for visible patterns. Juana **cleans** the data set – categorizing, looking for errors and doubles.'
+question '**2nd Step**'
+answer 'Juana comes up with initial questions that she thinks the data set can help her answer. She makes sure the questions are **R**elevant, **S**pecific, **A**ctionable, **I**nvestigatable and **R**espectful.'
+question '**3rd Step**'
+answer 'Juana builds **data visualizations** to better understand the data set, and help answer her questions.  This helps her see more things she needs to clean. It also makes her ask more questions. She iterates on data visualizations and questions.'
+question '**4th Step**'
+answer 'Juana tells a **data story** that answers her data question and provides insights to the data in a compelling manner with visualizations.'
+allow_multiple_attempts false

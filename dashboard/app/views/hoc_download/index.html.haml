@@ -1,17 +1,27 @@
 - @page_title = t('hoc_download.title')
+- brand_name = Cdo::Brand.legal_name(request)
 - content_for :og do
-  = tag 'meta', property: 'og:title', content: t('share.title')
+  = tag 'meta', property: 'og:site_name', content: brand_name
+  = tag 'meta', property: 'og:title', content: t('share.title', brand_name: brand_name)
   = tag 'meta', property: 'og:image', content: CDO.studio_url(CDO.shared_image_url('share/girl_cropped.jpg'), 'https:')
   = tag 'meta', property: 'og:description', content: t('share.description')
 - languages = ['Albanian', 'Arabic', 'Azerbaijani', 'Basque', 'Bosnian', 'Bulgarian', 'Catalan', 'Chinese-Taiwan', 'Chinese', 'Croatian', 'Czech', 'Danish', 'Dutch', 'English', 'Finnish', 'French', 'German', 'Greek', 'Hebrew', 'Hungarian', 'Icelandic', 'Indonesian', 'Italian', 'Japanese', 'Korean', 'Latvian', 'Lithuanian', 'Norwegian', 'Norwegian-Nynorsk', 'Polish', 'Portuguese-Brazil', 'Portuguese', 'Romanian', 'Russian', 'Serbian', 'Slovenian', 'Spanish', 'Swedish', 'Turkish', 'Ukrainian', 'Vietnamese']
 
 #hoc_download
   .row
-    .span12
+    .col-md-12
+      %div
+        #deprecation-warning-banner{class: 'alert alert-warning', role: 'alert'}
+          %span
+            %i.fa-solid.fa-triangle-exclamation.warning-sign.banner-icon#warning-icon
+          %span
+            = t('hoc_download.deprecation')
+  .row
+    .col-md-12
       %h1
         = t('hoc_download.title')
   .row
-    .span12
+    .col-md-12
       .capsule
         .indent
           %h3
@@ -20,16 +30,16 @@
             != t('hoc_download.capsule_desc', url: @hoc_url, app_name: @app_name, markdown: true)
   .indent
     .row
-      .span12
+      .col-md-12
         %h3
           = t('hoc_download.instructions_headline')
     .row
-      .span12
+      .col-md-12
         .smalltext
           != t('hoc_download.instructions', url: CDO.code_org_url('/certificates', 'https:'), markdown: true)
         %br/
     .row
-      .span12
+      .col-md-12
         %strong
           = t('hoc_download.download_message', app_name: @app_name)
         %ul
@@ -51,13 +61,3 @@
                 =link_to t('hoc_download.mac'), @download_urls[:"#{lang}_mac_url_js"], :class => 'hoc-download-link'
 %br/
 %br/
-
-:javascript
-  $(document).ready(function() {
-     // Track Google Analytics events for HOC download clicks
-     $('.hoc-download-link').on('click', function() {
-        var url = $(this).attr('href');
-        trackEvent('DownloadHOC','startdownload', url);
-        return true;
-    });
-  });

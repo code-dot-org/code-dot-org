@@ -1,0 +1,9 @@
+name 'CSA U4L1-L5_pilot-2025'
+display_name 'Creating Drawings'
+description 'Create a scene that draws shapes and play your scene in The Theater.'
+
+sublevels
+level 'CSA U4L1-L5a_pilot-2025'
+level 'CSA U4L1-L5b_pilot-2025'
+level 'CSA U4L1-L5c_pilot-2025'
+level 'CSA U4L1-L5d_pilot-2025'

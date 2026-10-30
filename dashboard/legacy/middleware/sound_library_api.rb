@@ -21,12 +21,18 @@ class SoundLibraryApi < Sinatra::Base
   end
 
   #
-  # GET /api/v1/sound-library/<filename>
+  # GET /api/v1/sound-library/<sound_name>
   #
   # Retrieve a file from the sound library
   #
   get %r{/api/v1/sound-library/(.+)} do |sound_name|
     not_found if sound_name.empty?
+
+    if rack_env?(:development)
+      # For development environments, we look to see if we should lazily populate the
+      # local bucket first.
+      Cdo::LocalDevelopment.populate_local_s3_bucket(SOUND_LIBRARY_BUCKET, sound_name)
+    end
 
     begin
       result = Aws::S3::Bucket.
@@ -51,7 +57,7 @@ class SoundLibraryApi < Sinatra::Base
   get %r{/restricted/(.+)} do |sound_name|
     not_found if sound_name.empty?
 
-    unless rack_env?(:development) || (rack_env?(:test) && ENV['CI'])
+    unless rack_env?(:development) || (rack_env?(:test) && ENV.fetch('CI', nil))
       raise "unexpected access to /restricted/ route in non-dev, non-CI environment"
     end
 
@@ -76,6 +82,9 @@ class SoundLibraryApi < Sinatra::Base
   # https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-setting-signed-cookie-custom-policy.html
   def has_signed_cookie?
     encoded_policy = request.cookies['CloudFront-Policy'].to_s
+    if encoded_policy.blank? && CDO.aws_s3_emulated
+      encoded_policy = request.cookies['CloudFront-Policy-Emulated'].to_s
+    end
     return false unless encoded_policy && !encoded_policy.empty?
     policy_json = Base64.decode64(encoded_policy.tr('-_~', '+=/'))
     return false unless policy_json

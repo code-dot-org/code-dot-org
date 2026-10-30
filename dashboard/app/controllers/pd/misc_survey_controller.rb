@@ -40,15 +40,10 @@ module Pd
 
       return if experimental_redirect! @form_id, @form_params
 
-      if CDO.newrelic_logging
-        NewRelic::Agent.record_custom_event(
-          "RenderJotFormView",
-          {
-            route: "GET /pd/misc_survey/#{@form_id}",
-            form_id: @form_id
-          }
-        )
-      end
+      span = OpenTelemetry::Trace.current_span
+      span.set_attribute('RenderJotFormView', true)
+      span.set_attribute('RenderJotFormView.route', "GET /pd/misc_survey/#{@form_id}")
+      span.set_attribute('RenderJotFormView.form_id', @form_id)
     end
 
     # POST /pd/misc_survey/submit
@@ -62,20 +57,18 @@ module Pd
       redirect(key_params)
     end
 
-    protected
-
-    def response_exists?(key_params)
+    protected def response_exists?(key_params)
       MiscSurvey.response_exists?(
         user_id: key_params[:userId],
         form_id: key_params[:formId]
       )
     end
 
-    def redirect(key_params)
+    protected def redirect(key_params)
       redirect_to action: :thanks
     end
 
-    def key_params
+    protected def key_params
       @key_params ||= params.require(:key).tap do |key_params|
         raise ActiveRecord::RecordNotFound unless key_params[:environment] == Rails.env
       end

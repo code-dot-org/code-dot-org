@@ -12,6 +12,7 @@
 #  user_id           :integer          not null
 #  created_at        :datetime         not null
 #  updated_at        :datetime         not null
+#  version           :string(64)
 #
 # Indexes
 #
@@ -22,6 +23,23 @@
 #
 
 class AuthenticationOption < ApplicationRecord
+  include Lti
+  export_to_analytics
+
+  data_classification(
+    id: :restricted,
+    email: :restricted,
+    hashed_email: :restricted,
+    credential_type: :restricted,
+    authentication_id: :restricted,
+    data: :highly_restricted,
+    deleted_at: :restricted,
+    user_id: :restricted,
+    created_at: :restricted,
+    updated_at: :restricted,
+    version: :restricted,
+  )
+
   acts_as_paranoid
   belongs_to :user, optional: true
 
@@ -35,21 +53,17 @@ class AuthenticationOption < ApplicationRecord
   validate :email_must_be_unique, :hashed_email_must_be_unique, unless: -> {UNTRUSTED_EMAIL_CREDENTIAL_TYPES.include? credential_type}
 
   validates :authentication_id, uniqueness: {scope: [:credential_type, :deleted_at], case_sensitive: true}
-  validates :authentication_id, if: :lti?, format: {with: /\A(\S+\|\S+\|\S+)\z/, message: "For LTI authentication_options, format must be 'issuer|audience|subject'"}
 
   after_create :set_primary_contact_info
 
-  # Powerschool note: the Powerschool plugin lives at https://github.com/code-dot-org/powerschool
   OAUTH_CREDENTIAL_TYPES = [
     CLEVER = 'clever',
     FACEBOOK = 'facebook',
     GOOGLE = 'google_oauth2',
-    POWERSCHOOL = 'powerschool',
     QWIKLABS = 'lti_lti_prod_kids.qwikcamps.com',
-    THE_SCHOOL_PROJECT = 'the_school_project',
     TWITTER = 'twitter',
-    WINDOWS_LIVE = 'windowslive',
     MICROSOFT = 'microsoft_v2_auth',
+    CLASSLINK = 'classlink'
   ].freeze
 
   CREDENTIAL_TYPES = [
@@ -72,7 +86,7 @@ class AuthenticationOption < ApplicationRecord
   # user, and instead to rely exclusively on authentication_id
   UNTRUSTED_EMAIL_CREDENTIAL_TYPES = [
     CLEVER,
-    POWERSCHOOL,
+    CLASSLINK,
     LTI_V1,
   ].freeze
 
@@ -83,15 +97,86 @@ class AuthenticationOption < ApplicationRecord
   SILENT_TAKEOVER_CREDENTIAL_TYPES = [
     FACEBOOK,
     GOOGLE,
-    # TODO: (madelynkasula) Remove once we are sure users are no longer logging in via windowslive.
-    WINDOWS_LIVE,
     MICROSOFT
   ].freeze
 
+  # Providers whose external ids are case-sensitive strings. Lookups for these
+  # types confirm matches byte-for-byte (see User.find_by_credential and
+  # find_by_exact_credential below) instead of trusting the authentication_id
+  # column's case-insensitive collation.
+  CASE_SENSITIVE_CREDENTIAL_TYPES = [
+    CLASSLINK,
+  ].freeze
+
+  module Clever
+    VERSION = {
+      v3: 'v3',
+    }.freeze
+  end
+
+  # Facts about the ClassLink authentication_id formats. A v1 id is
+  # ClassLink's internal UserId; a v2 id is "<TenantId>|<SourcedId>", built by
+  # Services::Classlink::AuthIdGenerator.
+  #
+  # Both formats are permanent, and neither population is a subset of a
+  # migration in progress. A v2 id needs ClassLink's SourcedId, which is empty
+  # for districts that have not enabled OneRoster, so those districts keep
+  # signing up and signing in on v1 indefinitely.
+  module Classlink
+    SEPARATOR = '|'.freeze
+
+    VERSION = {
+      v2: 'v2',
+    }.freeze
+
+    # Splits a v2 authentication_id back into [tenant_id, sourced_id].
+    # The limit of 2 is load-bearing: SourcedId may itself contain a pipe.
+    # That's safe only because AuthIdGenerator refuses to build an id whose
+    # TenantId contains one — change that validation and this split breaks.
+    def self.parse(authentication_id)
+      authentication_id.to_s.split(SEPARATOR, 2)
+    end
+
+    # The version marker matching a ClassLink authentication_id: 'v2' for the
+    # "<TenantId>|<SourcedId>" format, nil for a v1 UserId. Creation sites
+    # that copy an id they didn't build (signup, connect, silent takeover) use
+    # this so the version column always describes the id's actual format —
+    # including for a new signup that legitimately lands on v1 because its
+    # district sent no SourcedId.
+    def self.version_for(authentication_id)
+      authentication_id.to_s.include?(SEPARATOR) ? VERSION[:v2] : nil
+    end
+  end
+
   scope :trusted_email, -> {where(credential_type: TRUSTED_EMAIL_CREDENTIAL_TYPES)}
+
+  # The authentication_id column's collation (utf8mb3_unicode_ci) compares
+  # case-insensitively, but the external ids stored there are case-sensitive.
+  # This finder lets the index locate the candidates, then confirms the match
+  # byte-for-byte in Ruby: an id differing from the stored value only in case
+  # is no match, not a hit. Candidates are scanned rather than rechecking a
+  # single row so that ids differing only by case can coexist and still each
+  # resolve to their own record.
+  def self.find_by_exact_credential(credential_type:, authentication_id:)
+    return nil if authentication_id.blank?
+
+    candidates = where(credential_type: credential_type, authentication_id: authentication_id)
+    exact = candidates.detect {|option| option.authentication_id == authentication_id.to_s}
+    if exact.nil? && candidates.any?
+      Observability::Errors.report(
+        'Authentication id matched by collation but not byte-exactly',
+        context: {credential_type: credential_type}
+      )
+    end
+    exact
+  end
 
   def google?
     credential_type == GOOGLE
+  end
+
+  def email?
+    credential_type == EMAIL
   end
 
   def codeorg_email?
@@ -178,6 +263,7 @@ class AuthenticationOption < ApplicationRecord
 
     other = User.find_by_email_or_hashed_email(email)
     if other && other != user
+      return if Policies::Lti.only_lti_auth?(other)
       errors.add :email, I18n.t('errors.messages.taken')
     end
   end
@@ -188,6 +274,7 @@ class AuthenticationOption < ApplicationRecord
 
     other = User.find_by_hashed_email(hashed_email)
     if other && other != user
+      return if Policies::Lti.only_lti_auth?(other)
       errors.add :email, I18n.t('errors.messages.taken')
     end
   end

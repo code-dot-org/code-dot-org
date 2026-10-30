@@ -1,0 +1,1071 @@
+{
+  "script": {
+    "name": "self-paced-pl-csa2-2026",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "content_area": "self_paced_pl_9_12",
+      "curriculum_umbrella": "Self-paced PL - CSA",
+      "is_migrated": true,
+      "supported_locales": [
+        "zh-TW",
+        "zh-CN",
+        "tr-TR",
+        "th-TH",
+        "te-IN",
+        "ta-IN",
+        "sk-SK",
+        "pt-BR",
+        "pl-PL",
+        "mr-IN",
+        "ko-KR",
+        "kn-IN",
+        "it-IT",
+        "id-ID",
+        "hi-IN",
+        "fr-FR",
+        "fa-IR",
+        "es-MX",
+        "es-ES",
+        "de-DE",
+        "cs-CZ",
+        "ar-SA"
+      ]
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2026-05-15 15:08:04 UTC",
+    "hide_within_course": false,
+    "published_state": "in_development",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "self-paced-pl-csa2-2026"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2026"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Navigating the Codeorg learning platform",
+      "name": "Navigating the Code.org learning platform",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+        "overview": "**You will:**\n\n* Navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n\n**Estimated time:** 30 minutes",
+        "student_overview": "**You will:**\n\n* Navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n\n**Estimated time:** 30 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Navigating the Codeorg learning platform",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2026"
+      }
+    },
+    {
+      "key": "Navigating lesson plans and resources",
+      "name": "Navigating lesson plans and resources",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+        "overview": "**You will:**\n\n* Locate and use course lesson plans and teacher resources.\n\n**Estimated time:** 20 minutes",
+        "student_overview": "**You will:**\n\n* Locate and use course lesson plans and teacher resources.\n\n**Estimated time:** 20 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Navigating lesson plans and resources",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2026"
+      }
+    },
+    {
+      "key": "Navigating Support",
+      "name": "Navigating Support",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+        "overview": "**You will:**\n\n* Learn how to access support while teaching the course.\n\n**Estimated time:** 10 minutes",
+        "student_overview": "**You will:**\n\n* Learn how to access support while teaching the course.\n\n**Estimated time:** 10 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2026"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "38ab2f01-06d6-41d6-a2bd-fc8739e4fbf5",
+      "position": 1,
+      "properties": {
+        "duration": 30
+      },
+      "seeding_key": {
+        "lesson_activity.key": "38ab2f01-06d6-41d6-a2bd-fc8739e4fbf5",
+        "lesson.key": "Navigating the Codeorg learning platform",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2026"
+      }
+    },
+    {
+      "key": "a600b439-72f7-40f7-925a-ceeda378d335",
+      "position": 1,
+      "properties": {
+        "duration": 20
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a600b439-72f7-40f7-925a-ceeda378d335",
+        "lesson.key": "Navigating lesson plans and resources",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2026"
+      }
+    },
+    {
+      "key": "489b380c-0480-4bcd-98e2-c0f0d38bd993",
+      "position": 1,
+      "properties": {
+        "duration": 10
+      },
+      "seeding_key": {
+        "lesson_activity.key": "489b380c-0480-4bcd-98e2-c0f0d38bd993",
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2026"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "be1f820c-6508-46a7-8608-1385890957e0",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "be1f820c-6508-46a7-8608-1385890957e0",
+        "lesson_activity.key": "38ab2f01-06d6-41d6-a2bd-fc8739e4fbf5"
+      }
+    },
+    {
+      "key": "58170c43-cf9c-4956-9c9b-63be0a0ace53",
+      "position": 2,
+      "properties": {
+        "progression_name": "Tour the Code.org learning platform"
+      },
+      "seeding_key": {
+        "activity_section.key": "58170c43-cf9c-4956-9c9b-63be0a0ace53",
+        "lesson_activity.key": "38ab2f01-06d6-41d6-a2bd-fc8739e4fbf5"
+      }
+    },
+    {
+      "key": "b68e272d-2e93-451f-82cf-67eec215f49a",
+      "position": 3,
+      "properties": {
+        "progression_name": "Set up a class section"
+      },
+      "seeding_key": {
+        "activity_section.key": "b68e272d-2e93-451f-82cf-67eec215f49a",
+        "lesson_activity.key": "38ab2f01-06d6-41d6-a2bd-fc8739e4fbf5"
+      }
+    },
+    {
+      "key": "64eee639-e7db-4e58-8ca7-40cae8c17bb7",
+      "position": 4,
+      "properties": {
+        "progression_name": "Explore the student view"
+      },
+      "seeding_key": {
+        "activity_section.key": "64eee639-e7db-4e58-8ca7-40cae8c17bb7",
+        "lesson_activity.key": "38ab2f01-06d6-41d6-a2bd-fc8739e4fbf5"
+      }
+    },
+    {
+      "key": "fb9c096b-bc06-47de-a988-ae48e79de45c",
+      "position": 5,
+      "properties": {
+        "progression_name": "Track student progress and provide feedback"
+      },
+      "seeding_key": {
+        "activity_section.key": "fb9c096b-bc06-47de-a988-ae48e79de45c",
+        "lesson_activity.key": "38ab2f01-06d6-41d6-a2bd-fc8739e4fbf5"
+      }
+    },
+    {
+      "key": "e14b958d-4ea5-4aa3-8569-2422b23bd5db",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "e14b958d-4ea5-4aa3-8569-2422b23bd5db",
+        "lesson_activity.key": "a600b439-72f7-40f7-925a-ceeda378d335"
+      }
+    },
+    {
+      "key": "423136a4-6e4c-4857-803b-2ea2e93bf272",
+      "position": 2,
+      "properties": {
+        "progression_name": "Explore course lesson plans"
+      },
+      "seeding_key": {
+        "activity_section.key": "423136a4-6e4c-4857-803b-2ea2e93bf272",
+        "lesson_activity.key": "a600b439-72f7-40f7-925a-ceeda378d335"
+      }
+    },
+    {
+      "key": "30241a08-afd6-4d03-95fe-0976c449320f",
+      "position": 3,
+      "properties": {
+        "progression_name": "Explore additional teacher resources"
+      },
+      "seeding_key": {
+        "activity_section.key": "30241a08-afd6-4d03-95fe-0976c449320f",
+        "lesson_activity.key": "a600b439-72f7-40f7-925a-ceeda378d335"
+      }
+    },
+    {
+      "key": "5961b76e-a2d4-4252-ab09-746acdcced6b",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "5961b76e-a2d4-4252-ab09-746acdcced6b",
+        "lesson_activity.key": "489b380c-0480-4bcd-98e2-c0f0d38bd993"
+      }
+    },
+    {
+      "key": "20a890d7-15b1-4bac-ace8-16b9a4c48c44",
+      "position": 2,
+      "properties": {
+        "progression_name": "Additional support for teachers"
+      },
+      "seeding_key": {
+        "activity_section.key": "20a890d7-15b1-4bac-ace8-16b9a4c48c44",
+        "lesson_activity.key": "489b380c-0480-4bcd-98e2-c0f0d38bd993"
+      }
+    },
+    {
+      "key": "854575a1-a28f-4cdc-b6d0-3a94059ba4fa",
+      "position": 3,
+      "properties": {
+        "progression_name": "Wrap up"
+      },
+      "seeding_key": {
+        "activity_section.key": "854575a1-a28f-4cdc-b6d0-3a94059ba4fa",
+        "lesson_activity.key": "489b380c-0480-4bcd-98e2-c0f0d38bd993"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-22-mod2-Overview-WebsiteNavigation-CSA_2026"
+        ],
+        "lesson.key": "Navigating the Codeorg learning platform",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2026",
+        "activity_section.key": "be1f820c-6508-46a7-8608-1385890957e0"
+      },
+      "level_keys": [
+        "SP-VPL-22-mod2-Overview-WebsiteNavigation-CSA_2026"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Tour the Code.org learning platform"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-22-mod2-tour-vid-CSA_2026"
+        ],
+        "lesson.key": "Navigating the Codeorg learning platform",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2026",
+        "activity_section.key": "58170c43-cf9c-4956-9c9b-63be0a0ace53"
+      },
+      "level_keys": [
+        "SP-VPL-22-mod2-tour-vid-CSA_2026"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Set up a class section"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-ClassSection-vid-CSA_2026"
+        ],
+        "lesson.key": "Navigating the Codeorg learning platform",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2026",
+        "activity_section.key": "b68e272d-2e93-451f-82cf-67eec215f49a"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-ClassSection-vid-CSA_2026"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Set up a class section"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-Task-ClassSection-CSA_2026"
+        ],
+        "lesson.key": "Navigating the Codeorg learning platform",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2026",
+        "activity_section.key": "b68e272d-2e93-451f-82cf-67eec215f49a"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-Task-ClassSection-CSA_2026"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore the student view"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-StudentExperience-vid-CSA_2026"
+        ],
+        "lesson.key": "Navigating the Codeorg learning platform",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2026",
+        "activity_section.key": "64eee639-e7db-4e58-8ca7-40cae8c17bb7"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-StudentExperience-vid-CSA_2026"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore the student view"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-Task-StudentView-CSA_2026"
+        ],
+        "lesson.key": "Navigating the Codeorg learning platform",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2026",
+        "activity_section.key": "64eee639-e7db-4e58-8ca7-40cae8c17bb7"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-Task-StudentView-CSA_2026"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Track student progress and provide feedback"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-ProgessAndFeedback-vid-CSA_2026"
+        ],
+        "lesson.key": "Navigating the Codeorg learning platform",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2026",
+        "activity_section.key": "fb9c096b-bc06-47de-a988-ae48e79de45c"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-ProgessAndFeedback-vid-CSA_2026"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Track student progress and provide feedback"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-progress-c4u-csp_2026"
+        ],
+        "lesson.key": "Navigating the Codeorg learning platform",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2026",
+        "activity_section.key": "fb9c096b-bc06-47de-a988-ae48e79de45c"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-progress-c4u-csp_2026"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Track student progress and provide feedback"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-feedback-c4u-CSA_2026"
+        ],
+        "lesson.key": "Navigating the Codeorg learning platform",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2026",
+        "activity_section.key": "fb9c096b-bc06-47de-a988-ae48e79de45c"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-feedback-c4u-CSA_2026"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-22-mod2-TeachersInClassrooms-CSA_2026"
+        ],
+        "lesson.key": "Navigating lesson plans and resources",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2026",
+        "activity_section.key": "e14b958d-4ea5-4aa3-8569-2422b23bd5db"
+      },
+      "level_keys": [
+        "SP-VPL-22-mod2-TeachersInClassrooms-CSA_2026"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore course lesson plans"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-22-mod2-NavigatingLessonPlans-CSA_2026"
+        ],
+        "lesson.key": "Navigating lesson plans and resources",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2026",
+        "activity_section.key": "423136a4-6e4c-4857-803b-2ea2e93bf272"
+      },
+      "level_keys": [
+        "SP-VPL-22-mod2-NavigatingLessonPlans-CSA_2026"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore course lesson plans"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-22-mod2-ExploreLessonPlan-CSA_2026"
+        ],
+        "lesson.key": "Navigating lesson plans and resources",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2026",
+        "activity_section.key": "423136a4-6e4c-4857-803b-2ea2e93bf272"
+      },
+      "level_keys": [
+        "SP-VPL-22-mod2-ExploreLessonPlan-CSA_2026"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore course lesson plans"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-22-mod2-Lesson-slides-levels-CSA_2026"
+        ],
+        "lesson.key": "Navigating lesson plans and resources",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2026",
+        "activity_section.key": "423136a4-6e4c-4857-803b-2ea2e93bf272"
+      },
+      "level_keys": [
+        "SP-VPL-22-mod2-Lesson-slides-levels-CSA_2026"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore course lesson plans"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL_22-mod2-MakeAPlan-LessonPlanning-CSA_2026"
+        ],
+        "lesson.key": "Navigating lesson plans and resources",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2026",
+        "activity_section.key": "423136a4-6e4c-4857-803b-2ea2e93bf272"
+      },
+      "level_keys": [
+        "SP-VPL_22-mod2-MakeAPlan-LessonPlanning-CSA_2026"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore additional teacher resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-22-mod2-NavigatingTeacherResources-CSA_2026"
+        ],
+        "lesson.key": "Navigating lesson plans and resources",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2026",
+        "activity_section.key": "30241a08-afd6-4d03-95fe-0976c449320f"
+      },
+      "level_keys": [
+        "SP-VPL-22-mod2-NavigatingTeacherResources-CSA_2026"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore additional teacher resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-22-mod2-UnitCalendar-CSA_2026"
+        ],
+        "lesson.key": "Navigating lesson plans and resources",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2026",
+        "activity_section.key": "30241a08-afd6-4d03-95fe-0976c449320f"
+      },
+      "level_keys": [
+        "SP-VPL-22-mod2-UnitCalendar-CSA_2026"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-TaskResources-CSA_2026"
+        ],
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2026",
+        "activity_section.key": "5961b76e-a2d4-4252-ab09-746acdcced6b"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-TaskResources-CSA_2026"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Additional support for teachers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-navigating support-CSA_2026"
+        ],
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2026",
+        "activity_section.key": "20a890d7-15b1-4bac-ace8-16b9a4c48c44"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-navigating support-CSA_2026"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Additional support for teachers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-ReadSupportArticles_2026"
+        ],
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2026",
+        "activity_section.key": "20a890d7-15b1-4bac-ace8-16b9a4c48c44"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-ReadSupportArticles_2026"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Additional support for teachers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-ReportAProblem_2026"
+        ],
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2026",
+        "activity_section.key": "20a890d7-15b1-4bac-ace8-16b9a4c48c44"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-ReportAProblem_2026"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Additional support for teachers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-Support-c4u-CSA_2026"
+        ],
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2026",
+        "activity_section.key": "20a890d7-15b1-4bac-ace8-16b9a4c48c44"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-Support-c4u-CSA_2026"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrap up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-Navigation-Mod2_2026"
+        ],
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2026",
+        "activity_section.key": "854575a1-a28f-4cdc-b6d0-3a94059ba4fa"
+      },
+      "level_keys": [
+        "SP-VPL-CSA-22-Navigation-Mod2_2026"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-22-mod2-Overview-WebsiteNavigation-CSA_2026",
+        "script_level.level_keys": [
+          "SP-VPL-22-mod2-Overview-WebsiteNavigation-CSA_2026"
+        ],
+        "lesson.key": "Navigating the Codeorg learning platform",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2026",
+        "activity_section.key": "be1f820c-6508-46a7-8608-1385890957e0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-22-mod2-tour-vid-CSA_2026",
+        "script_level.level_keys": [
+          "SP-VPL-22-mod2-tour-vid-CSA_2026"
+        ],
+        "lesson.key": "Navigating the Codeorg learning platform",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2026",
+        "activity_section.key": "58170c43-cf9c-4956-9c9b-63be0a0ace53"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-ClassSection-vid-CSA_2026",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-ClassSection-vid-CSA_2026"
+        ],
+        "lesson.key": "Navigating the Codeorg learning platform",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2026",
+        "activity_section.key": "b68e272d-2e93-451f-82cf-67eec215f49a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-Task-ClassSection-CSA_2026",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-Task-ClassSection-CSA_2026"
+        ],
+        "lesson.key": "Navigating the Codeorg learning platform",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2026",
+        "activity_section.key": "b68e272d-2e93-451f-82cf-67eec215f49a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-StudentExperience-vid-CSA_2026",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-StudentExperience-vid-CSA_2026"
+        ],
+        "lesson.key": "Navigating the Codeorg learning platform",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2026",
+        "activity_section.key": "64eee639-e7db-4e58-8ca7-40cae8c17bb7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-Task-StudentView-CSA_2026",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-Task-StudentView-CSA_2026"
+        ],
+        "lesson.key": "Navigating the Codeorg learning platform",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2026",
+        "activity_section.key": "64eee639-e7db-4e58-8ca7-40cae8c17bb7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-ProgessAndFeedback-vid-CSA_2026",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-ProgessAndFeedback-vid-CSA_2026"
+        ],
+        "lesson.key": "Navigating the Codeorg learning platform",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2026",
+        "activity_section.key": "fb9c096b-bc06-47de-a988-ae48e79de45c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-progress-c4u-csp_2026",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-progress-c4u-csp_2026"
+        ],
+        "lesson.key": "Navigating the Codeorg learning platform",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2026",
+        "activity_section.key": "fb9c096b-bc06-47de-a988-ae48e79de45c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-feedback-c4u-CSA_2026",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-feedback-c4u-CSA_2026"
+        ],
+        "lesson.key": "Navigating the Codeorg learning platform",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2026",
+        "activity_section.key": "fb9c096b-bc06-47de-a988-ae48e79de45c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-22-mod2-TeachersInClassrooms-CSA_2026",
+        "script_level.level_keys": [
+          "SP-VPL-22-mod2-TeachersInClassrooms-CSA_2026"
+        ],
+        "lesson.key": "Navigating lesson plans and resources",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2026",
+        "activity_section.key": "e14b958d-4ea5-4aa3-8569-2422b23bd5db"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-22-mod2-NavigatingLessonPlans-CSA_2026",
+        "script_level.level_keys": [
+          "SP-VPL-22-mod2-NavigatingLessonPlans-CSA_2026"
+        ],
+        "lesson.key": "Navigating lesson plans and resources",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2026",
+        "activity_section.key": "423136a4-6e4c-4857-803b-2ea2e93bf272"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-22-mod2-ExploreLessonPlan-CSA_2026",
+        "script_level.level_keys": [
+          "SP-VPL-22-mod2-ExploreLessonPlan-CSA_2026"
+        ],
+        "lesson.key": "Navigating lesson plans and resources",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2026",
+        "activity_section.key": "423136a4-6e4c-4857-803b-2ea2e93bf272"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-22-mod2-Lesson-slides-levels-CSA_2026",
+        "script_level.level_keys": [
+          "SP-VPL-22-mod2-Lesson-slides-levels-CSA_2026"
+        ],
+        "lesson.key": "Navigating lesson plans and resources",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2026",
+        "activity_section.key": "423136a4-6e4c-4857-803b-2ea2e93bf272"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL_22-mod2-MakeAPlan-LessonPlanning-CSA_2026",
+        "script_level.level_keys": [
+          "SP-VPL_22-mod2-MakeAPlan-LessonPlanning-CSA_2026"
+        ],
+        "lesson.key": "Navigating lesson plans and resources",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2026",
+        "activity_section.key": "423136a4-6e4c-4857-803b-2ea2e93bf272"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-22-mod2-NavigatingTeacherResources-CSA_2026",
+        "script_level.level_keys": [
+          "SP-VPL-22-mod2-NavigatingTeacherResources-CSA_2026"
+        ],
+        "lesson.key": "Navigating lesson plans and resources",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2026",
+        "activity_section.key": "30241a08-afd6-4d03-95fe-0976c449320f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-22-mod2-UnitCalendar-CSA_2026",
+        "script_level.level_keys": [
+          "SP-VPL-22-mod2-UnitCalendar-CSA_2026"
+        ],
+        "lesson.key": "Navigating lesson plans and resources",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2026",
+        "activity_section.key": "30241a08-afd6-4d03-95fe-0976c449320f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-TaskResources-CSA_2026",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-TaskResources-CSA_2026"
+        ],
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2026",
+        "activity_section.key": "5961b76e-a2d4-4252-ab09-746acdcced6b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-navigating support-CSA_2026",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-navigating support-CSA_2026"
+        ],
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2026",
+        "activity_section.key": "20a890d7-15b1-4bac-ace8-16b9a4c48c44"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-ReadSupportArticles_2026",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-ReadSupportArticles_2026"
+        ],
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2026",
+        "activity_section.key": "20a890d7-15b1-4bac-ace8-16b9a4c48c44"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-ReportAProblem_2026",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-ReportAProblem_2026"
+        ],
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2026",
+        "activity_section.key": "20a890d7-15b1-4bac-ace8-16b9a4c48c44"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-Support-c4u-CSA_2026",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-Support-c4u-CSA_2026"
+        ],
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2026",
+        "activity_section.key": "20a890d7-15b1-4bac-ace8-16b9a4c48c44"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSA-22-Navigation-Mod2_2026",
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-Navigation-Mod2_2026"
+        ],
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2026",
+        "activity_section.key": "854575a1-a28f-4cdc-b6d0-3a94059ba4fa"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

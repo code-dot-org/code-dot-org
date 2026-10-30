@@ -1,24 +1,29 @@
-import {fetchSignedCookies} from '@cdo/apps/utils';
-import {baseAssetUrl} from '../constants';
-import MusicLibrary from './MusicLibrary';
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import HttpClient, {isNetworkError} from '@cdo/apps/util/HttpClient';
+import {fetchSignedCookies} from '@cdo/apps/utils';
+
+import {baseAssetUrlRestricted} from '../constants';
 import {LoadFinishedCallback} from '../types';
 
-const restrictedSoundUrlPath = '/restricted/musiclab/';
-
 class SoundCache {
-  private readonly audioContext: AudioContext;
-  private readonly metricsReporter: LabMetricsReporter;
+  private static instance: SoundCache;
+
+  public static getInstance() {
+    if (!SoundCache.instance) {
+      SoundCache.instance = new SoundCache();
+    }
+    return SoundCache.instance;
+  }
+
   private audioBuffers: {[id: string]: AudioBuffer};
   private hasLoadedSignedCookies: boolean;
 
   constructor(
-    audioContext: AudioContext = new AudioContext(),
-    metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter()
+    private readonly audioContext: AudioContext = new AudioContext(),
+    private readonly metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter(),
+    private readonly httpClient: typeof HttpClient = HttpClient
   ) {
-    this.audioContext = audioContext;
-    this.metricsReporter = metricsReporter;
     this.audioBuffers = {};
     this.hasLoadedSignedCookies = false;
   }
@@ -41,7 +46,7 @@ class SoundCache {
       updateLoadProgress?: (progress: number) => void;
     } = {}
   ): Promise<void> {
-    const failedSounds = [];
+    const failedSounds: {path: string; error: string}[] = [];
     const {onLoadFinished, updateLoadProgress} = callbacks;
     const startTime = Date.now();
 
@@ -53,20 +58,36 @@ class SoundCache {
       updateLoadProgress(0);
     }
 
-    for (let i = 0; i < paths.length; i++) {
-      try {
-        const sound = await this.loadSound(paths[i]);
-        if (!sound) {
-          failedSounds.push(paths[i]);
-        }
-      } catch (error) {
-        failedSounds.push(paths[i]);
-      }
+    let loadCounter = 0;
+    const loadPromises: Promise<void>[] = [];
 
-      if (updateLoadProgress) {
-        updateLoadProgress((i + 1) / paths.length);
-      }
+    if (paths.length > 0) {
+      this.metricsReporter.publishMetric(
+        'SoundCache.LoadSoundsCount',
+        paths.length,
+        'Count'
+      );
     }
+
+    for (const path of paths) {
+      const loadPromise = this.loadSound(path)
+        .then(sound => {
+          if (!sound) {
+            failedSounds.push({path, error: 'Error verifying URL'});
+          }
+        })
+        .catch(err => {
+          failedSounds.push({path, error: err.message});
+        })
+        .finally(() => {
+          if (updateLoadProgress) {
+            updateLoadProgress(++loadCounter / paths.length);
+          }
+        });
+      loadPromises.push(loadPromise);
+    }
+
+    await Promise.all(loadPromises);
 
     if (onLoadFinished) {
       onLoadFinished(
@@ -77,9 +98,15 @@ class SoundCache {
 
     if (failedSounds.length > 0) {
       this.metricsReporter.logError('Error loading sounds', undefined, {
+        attempted: paths.length,
         count: failedSounds.length,
-        failedSounds: failedSounds.join(','),
+        failedSounds,
       });
+      this.metricsReporter.publishMetric(
+        'SoundCache.FailedSoundsCount',
+        failedSounds.length,
+        'Count'
+      );
     }
   }
 
@@ -87,22 +114,24 @@ class SoundCache {
    * Load a single sound into the cache if not already loaded. Returns the loaded buffer.
    * Throws if there is an error loading a sound.
    */
-  async loadSound(path: string): Promise<AudioBuffer | undefined> {
-    if (this.audioBuffers[path]) {
-      return this.audioBuffers[path];
+  async loadSound(url: string): Promise<AudioBuffer | undefined> {
+    if (this.audioBuffers[url]) {
+      return this.audioBuffers[url];
     }
     const startTime = Date.now();
 
-    const url = await this.getUrl(path);
-    if (!url) {
-      // Error is logged below
-      return;
+    // Fetch signed cookies if necessary
+    if (
+      url.startsWith(baseAssetUrlRestricted) &&
+      !this.hasLoadedSignedCookies
+    ) {
+      await this.refreshSignedCookies();
     }
 
-    const response = await fetch(url);
+    const response = await this.fetchSoundFromUrl(url);
     const arrayBuffer = await response.arrayBuffer();
     const audioBuffer = await this.audioContext.decodeAudioData(arrayBuffer);
-    this.audioBuffers[path] = audioBuffer;
+    this.audioBuffers[url] = audioBuffer;
     // Report load time for a single sound
     this.metricsReporter.reportLoadTime(
       'SoundCache.SingleSoundLoadTime',
@@ -115,43 +144,29 @@ class SoundCache {
     this.audioBuffers = {};
   }
 
-  private async getUrl(path: string): Promise<string | null> {
-    const library = MusicLibrary.getInstance();
-    if (!library) {
-      this.metricsReporter.logWarning('Library not loaded. Cannot get URL.');
-      return null;
-    }
-
-    const soundData = library.getSoundForId(path);
-    if (!soundData) {
-      return null;
-    }
-
-    let canLoadRestrictedContent = this.hasLoadedSignedCookies;
-    if (soundData.restricted && !this.hasLoadedSignedCookies) {
-      try {
-        const response = await fetchSignedCookies();
-        if (response.ok) {
-          canLoadRestrictedContent = true;
-          this.hasLoadedSignedCookies = true;
-        }
-      } catch (error) {
-        this.metricsReporter.logError(
-          'Error loading signed cookies',
-          error as Error
-        );
+  private async fetchSoundFromUrl(url: string) {
+    try {
+      const response = await this.httpClient.get(url);
+      return response;
+    } catch (error) {
+      if (isNetworkError(error) && error.response.status === 403) {
+        // Cloudfront cookies may have expired. Try refreshing and fetch again.
+        // If this fails, the error will be caught and logged.
+        await this.refreshSignedCookies();
+        return this.httpClient.get(url);
+      } else {
+        throw error;
       }
     }
+  }
 
-    if (soundData.restricted && !canLoadRestrictedContent) {
-      return null;
+  private async refreshSignedCookies(): Promise<void> {
+    const response = await fetchSignedCookies(true);
+    if (response.ok) {
+      this.hasLoadedSignedCookies = true;
+    } else {
+      throw new Error(`Failed to refresh signed cookies: ${response.status}`);
     }
-
-    const baseUrl = soundData.restricted
-      ? restrictedSoundUrlPath
-      : baseAssetUrl;
-
-    return baseUrl + library.groups[0].path + '/' + path + '.mp3';
   }
 }
 

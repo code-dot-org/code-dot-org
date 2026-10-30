@@ -3,22 +3,24 @@
  * view for a given lesson.
  */
 
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import i18n from '@cdo/locale';
-import {lessonType} from './progressTypes';
-import HiddenForSectionToggle from './HiddenForSectionToggle';
-import LessonLock from './LessonLock';
+
 import {
   toggleHiddenLesson,
   isLessonHiddenForSection,
 } from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {sectionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
-import Button from '../Button';
-import TeacherInfoBox from './TeacherInfoBox';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import i18n from '@cdo/locale';
+
+import HiddenForSectionToggle from './HiddenForSectionToggle';
+import LessonLock from './LessonLock';
+import {lessonType} from './progressTypes';
 import SendLesson from './SendLesson';
+import TeacherInfoBox from './TeacherInfoBox';
 
 class ProgressLessonTeacherInfo extends React.Component {
   static propTypes = {
@@ -39,32 +41,22 @@ class ProgressLessonTeacherInfo extends React.Component {
   constructor(props) {
     super(props);
     this.onClickHiddenToggle = this.onClickHiddenToggle.bind(this);
-    this.firehoseData = this.firehoseData.bind(this);
   }
 
   onClickHiddenToggle(value) {
-    const {unitName, section, lesson, toggleHiddenLesson} = this.props;
+    const {unitName, section, lesson, hiddenLessonState, toggleHiddenLesson} =
+      this.props;
     const sectionId = (section && section.id.toString()) || '';
-    toggleHiddenLesson(unitName, sectionId, lesson.id, value === 'hidden');
-    firehoseClient.putRecord(
-      {
-        study: 'hidden-lessons',
-        study_group: 'v0',
-        event: value,
-        data_json: JSON.stringify(this.firehoseData()),
-      },
-      {includeUserId: true}
+    const nextHidden = value === 'hidden';
+    const currentHidden = isLessonHiddenForSection(
+      hiddenLessonState,
+      sectionId,
+      lesson.id
     );
-  }
-
-  firehoseData() {
-    const {unitName, section, lesson} = this.props;
-    return {
-      script_name: unitName,
-      section_id: section && section.id,
-      lesson_id: lesson.id,
-      lesson_name: lesson.name,
-    };
+    if (nextHidden === currentHidden) {
+      return;
+    }
+    toggleHiddenLesson(unitName, sectionId, lesson.id, nextHidden);
   }
 
   render() {
@@ -101,31 +93,39 @@ class ProgressLessonTeacherInfo extends React.Component {
       <TeacherInfoBox>
         {lesson.lesson_plan_html_url && (
           <div style={styles.buttonContainer}>
-            <Button
-              __useDeprecatedTag
+            <MuiButton
               id="uitest-lesson-plan"
               href={lesson.lesson_plan_html_url}
-              text={i18n.viewLessonPlan()}
-              icon="file-text"
-              color="blue"
+              variant="contained"
+              color="primary"
+              size="small"
+              startIcon={<FontAwesomeV6Icon iconName="file-lines" />}
               target="_blank"
+              rel="noopener noreferrer"
               style={styles.button}
-            />
+              fullWidth
+            >
+              {i18n.viewLessonPlan()}
+            </MuiButton>
           </div>
         )}
         {lesson.student_lesson_plan_html_url && (
           <div style={styles.buttonContainer}>
-            <Button
-              __useDeprecatedTag
+            <MuiButton
               id="uitest-student-resources"
               href={lesson.student_lesson_plan_html_url}
-              text={i18n.studentResources()}
-              icon="file-text"
-              color="purple"
+              variant="outlined"
+              color="secondary"
+              size="small"
+              startIcon={<FontAwesomeV6Icon iconName="file-lines" />}
               target="_blank"
+              rel="noopener noreferrer"
               style={styles.button}
               onClick={this.props.onClickStudentLessonPlan}
-            />
+              fullWidth
+            >
+              {i18n.studentResources()}
+            </MuiButton>
           </div>
         )}
         {lesson.lockable && lockableAuthorized && !hasNoSections && (
@@ -141,7 +141,6 @@ class ProgressLessonTeacherInfo extends React.Component {
               lessonUrl={loginRequiredLessonStartUrl}
               lessonTitle={lesson.name}
               courseid={courseId}
-              analyticsData={JSON.stringify(this.firehoseData())}
               buttonStyle={styles.button}
             />
           </div>
@@ -153,16 +152,20 @@ class ProgressLessonTeacherInfo extends React.Component {
               ...styles.buttonContainer,
             }}
           >
-            <Button
-              __useDeprecatedTag
+            <MuiButton
               href={lesson.lesson_feedback_url}
-              text={i18n.rateThisLesson()}
-              icon="bar-chart"
-              color={Button.ButtonColor.gray}
+              variant="outlined"
+              color="secondary"
+              size="small"
+              startIcon={<FontAwesomeV6Icon iconName="chart-column" />}
               target="_blank"
+              rel="noopener noreferrer"
               style={styles.button}
               className="rate-lesson-button"
-            />
+              fullWidth
+            >
+              {i18n.rateThisLesson()}
+            </MuiButton>
           </div>
         )}
         {showHiddenForSectionToggle && (

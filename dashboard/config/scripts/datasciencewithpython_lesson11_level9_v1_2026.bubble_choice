@@ -1,0 +1,11 @@
+name 'datasciencewithpython-lesson11-level9-v1-2026'
+display_name 'Practice Filtering to Gain Insights'
+description 'Choose one of the options below!'
+
+sublevels
+level 'datasciencewithpython-lesson11-level9a-v1-2026'
+level 'datasciencewithpython-lesson11-level9b-v1-2026'
+level 'datasciencewithpython-lesson11-level9c-v1-2026'
+level 'datasciencewithpython-lesson11-level9d-v1-2026'
+
+uses_lab2

@@ -1,10 +1,12 @@
 require 'os'
 require 'open-uri'
 require 'pathname'
+require 'shellwords'
 require 'cdo/aws/s3'
 require 'cdo/chat_client'
 require 'digest'
 require 'parallel'
+require 'cdo/python_venv'
 
 module RakeUtils
   def self.system__(command)
@@ -44,7 +46,7 @@ module RakeUtils
 
   def self.system_with_chat_logging(*args)
     command = command_(*args)
-    ChatClient.log "#{ENV['USER']}@#{CDO.rack_env}:#{Dir.pwd}$ #{command}"
+    ChatClient.log "#{ENV.fetch('USER', nil)}@#{CDO.rack_env}:#{Dir.pwd}$ #{command}"
     system_ command
   end
 
@@ -60,21 +62,29 @@ module RakeUtils
     status
   end
 
-  # Alternate version of RakeUtils.rake which always streams STDOUT to the shell
+  # Alternate version of RakeUtils.rake which always streams $stdout to the shell
   # during execution.
-  def self.rake_stream_output(*args, &block)
-    system_stream_output "RAILS_ENV=#{rack_env}", "RACK_ENV=#{rack_env}", 'bundle', 'exec', 'rake', *args, &block
+  def self.rake_stream_output(*args, env: {}, &block)
+    env = env.symbolize_keys
+    env[:RAILS_ENV] ||= rack_env
+    env[:RACK_ENV] ||= rack_env
+    system_stream_output(
+      *env.map {|k, v| "#{k}=#{Shellwords.escape(v.to_s)}"},
+      'bundle', 'exec', 'rake', *args,
+      &block
+    )
   end
 
-  # Alternate version of RakeUtils.system which always streams STDOUT to the
-  # shell during execution.
-  def self.system_stream_output(*args, &block)
+  # Alternate version of RakeUtils.system which always streams $stdout to the
+  # shell during execution. `env_secrets` reach the child through its
+  # environment; the log shows their names with the values redacted.
+  def self.system_stream_output(*args, env_secrets: {}, &block)
     command = command_(*args)
-    CDO.log.info command
+    CDO.log.info [*env_secrets.keys.map {|key| "#{key}=<redacted>"}, command].join(' ')
     if block
-      IO.popen(command, &block)
+      IO.popen(env_secrets, command, &block)
     else
-      Kernel.system(command)
+      Kernel.system(env_secrets, command)
     end
     unless $?.success?
       error = RuntimeError.new("'#{command}' returned #{$?.exitstatus}")
@@ -93,10 +103,8 @@ module RakeUtils
   # Changes the Bundler environment to the specified directory for the specified block.
   # Runs bundle_install ensuring dependencies are up to date.
   def self.with_bundle_dir(dir)
-    # Using `with_clean_env` is recommended when shelling out to a different bundle (ref:
-    # http://bundler.io/man/bundle-exec.1.html#Shelling-out), but `with_clean_env` is
-    # deprecated in favor of `with_unbundled_env` (ref:
-    # https://bundler.io/v2.1/whats_new.html#helper-deprecations) so use that instead.
+    # Using `with_unbundled_env` is recommended when shelling out to a different bundle.
+    # Ref: https://bundler.io/man/bundle-exec.1.html#Shelling-out
     Bundler.with_unbundled_env do
       ENV['AWS_DEFAULT_REGION'] ||= CDO.aws_region
       Dir.chdir(dir) do
@@ -120,15 +128,20 @@ module RakeUtils
   def self.bundle_install(*args)
     without = CDO.rack_envs - [CDO.rack_env]
     run_bundle_command('config set --local without', *without)
+    run_bundle_command('config set --local deployment \'true\'') if CDO.chef_managed || ENV['CI']
     run_bundle_command('install --quiet --jobs', nproc, *args)
   end
 
   def self.run_bundle_command(*args)
-    if CDO.bundler_use_sudo
-      sudo('bundle', *args)
-    else
+    # Using `with_unbundled_env` is recommended when shelling out to a different bundle.
+    # Ref: https://bundler.io/man/bundle-exec.1.html#Shelling-out
+    Bundler.with_unbundled_env do
       system('bundle', *args)
     end
+  end
+
+  def self.python_venv_install
+    PythonVenv.install
   end
 
   def self.git_add(*args)
@@ -213,11 +226,11 @@ module RakeUtils
   end
 
   def self.npm_install(*args)
-    run_packages_with('npm install', ENV['CI'] && '--frozen-lockfile', *args)
+    run_packages_with('npm install', ENV.fetch('CI', nil) && '--frozen-lockfile', *args)
   end
 
   def self.yarn_install(*args)
-    run_packages_with('yarn', ENV['CI'] && '--frozen-lockfile', *args)
+    run_packages_with('COREPACK_ENABLE_DOWNLOAD_PROMPT=0 yarn', ENV.fetch('CI', nil) && '--frozen-lockfile', *args)
   end
 
   def self.npm_rebuild(*args)
@@ -306,14 +319,14 @@ module RakeUtils
   end
 
   # Captures all stdout and stderr within a block, including subprocesses:
-  # - redirect STDOUT and STDERR streams to a pipe
+  # - redirect $stdout and $stderr streams to a pipe
   # - have a background thread read from the pipe
   # - store data in a StringIO
   # - execute the block
   # - revert streams to original pipes and return output
   def self.capture(&block)
-    old_stdout = STDOUT.clone
-    old_stderr = STDERR.clone
+    old_stdout = $stdout.clone
+    old_stderr = $stderr.clone
     pipe_r, pipe_w = IO.pipe
     pipe_r.sync = true
     output = StringIO.new('', 'w')
@@ -324,12 +337,12 @@ module RakeUtils
     rescue EOFError
       # Do nothing.
     end
-    STDOUT.reopen(pipe_w)
-    STDERR.reopen(pipe_w)
+    $stdout.reopen(pipe_w)
+    $stderr.reopen(pipe_w)
     yield
   ensure
-    STDOUT.reopen(old_stdout)
-    STDERR.reopen(old_stderr)
+    $stdout.reopen(old_stdout)
+    $stderr.reopen(old_stderr)
     pipe_w.close
     reader.join
     pipe_r.close
@@ -340,12 +353,10 @@ module RakeUtils
   # threaded_each provide a simple way to process an array of elements using multiple threads.
   # create_threads is a helper for threaded_each.
   #
-  def self.create_threads(count)
+  def self.create_threads(count, &block)
     [].tap do |threads|
       count.times do
-        threads << Thread.new do
-          yield
-        end
+        threads << Thread.new(&block)
       end
     end
   end
@@ -361,7 +372,11 @@ module RakeUtils
 
     threads = create_threads(thread_count) do
       until queue.empty?
-        next unless item = queue.pop(true) rescue nil
+        next unless item = begin
+          queue.pop(true)
+        rescue
+          nil
+        end
         yield item if block_given?
       end
     end

@@ -4,18 +4,17 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_course": true,
-      "is_migrated": true,
-      "pilot_experiment": "draft-hoc-dp-2-a",
-      "version_year": "unversioned"
+      "content_area": "other",
+      "curriculum_umbrella": "Other",
+      "is_migrated": true
     },
     "new_name": null,
-    "family_name": "draft-hoc-dp-2-a",
-    "serialized_at": "2023-10-25 21:51:03 UTC",
-    "published_state": "pilot",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "family_name": null,
+    "serialized_at": "2025-03-28 09:29:21 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "draft-hoc-dp-2-a"
     }

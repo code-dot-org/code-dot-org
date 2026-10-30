@@ -1,0 +1,178 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {RadioButton} from '@code-dot-org/component-library/radioButton';
+import {Typography, Button as MuiButton, Tooltip} from '@mui/material';
+import classNames from 'classnames';
+import React, {useMemo} from 'react';
+
+import {INITIAL_VERSION_ID} from '@cdo/apps/lab2/constants';
+import lab2I18n from '@cdo/apps/lab2/locale';
+import {commonI18n} from '@cdo/apps/types/locale';
+import {AI_SAVED_COMMENT} from '@cdo/apps/weblab2/constants';
+
+import moduleStyles from './version-history-row.module.scss';
+
+interface VersionHistoryRowProps {
+  versionId: string;
+  timestamp?: string;
+  isLatest: boolean;
+  isSelected: boolean;
+  comment?: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  disabled?: boolean;
+  children?: React.ReactNode;
+  showRestoreButton: boolean;
+  className?: string;
+  alwaysShowAutoSaves?: boolean;
+}
+
+interface RestoreVersionButtonProps {
+  restoreOnClick: () => void;
+  restoreLoading: boolean;
+  restoreDisabled: boolean;
+}
+
+const VersionHistoryRow: React.FunctionComponent<
+  VersionHistoryRowProps & RestoreVersionButtonProps
+> = ({
+  versionId,
+  timestamp,
+  isLatest,
+  isSelected,
+  comment,
+  onChange,
+  disabled = false,
+  children,
+  showRestoreButton = false,
+  restoreOnClick,
+  restoreDisabled = false,
+  restoreLoading = false,
+  className,
+  alwaysShowAutoSaves = false,
+}) => {
+  let label;
+  if (isLatest) {
+    label = commonI18n.currentVersion();
+  } else if (versionId === INITIAL_VERSION_ID) {
+    label = lab2I18n.initialVersion();
+  }
+
+  let ariaLabel;
+  let isBoldtype = true;
+  const aiSavedComment = useMemo(() => {
+    if (comment && comment === AI_SAVED_COMMENT) {
+      return comment; // Display AI saved versions without a comment if no user description was added.
+    } else if (comment && comment.startsWith(AI_SAVED_COMMENT)) {
+      return comment.slice(AI_SAVED_COMMENT.length);
+    }
+    return undefined;
+  }, [comment]);
+  const classes = [];
+  if (versionId === INITIAL_VERSION_ID) {
+    classes.push(moduleStyles.initialVersionRow);
+  } else if (isLatest) {
+    // Note that the latest or most current version can also include a comment.
+    // This styling adds the appropriate margin to a given row.
+    classes.push(moduleStyles.currentVersionRow);
+  } else if (comment && aiSavedComment) {
+    classes.push(moduleStyles.commentRow);
+    ariaLabel = lab2I18n.committedVersion();
+  } else {
+    classes.push(moduleStyles.row);
+    ariaLabel = lab2I18n.autosavedVersion();
+    isBoldtype = false;
+  }
+  if (aiSavedComment) {
+    classes.push(moduleStyles.aiSaveRow);
+    ariaLabel = aiSavedComment;
+  }
+
+  const showAutoSavedIcon =
+    !alwaysShowAutoSaves && ariaLabel === lab2I18n.autosavedVersion();
+
+  return (
+    <div
+      id={versionId}
+      className={classNames(classes, moduleStyles.rowContainer, className)}
+    >
+      <div className={moduleStyles.versionContent}>
+        <div className={moduleStyles.versionHeader}>
+          <RadioButton
+            className={moduleStyles.versionLabel}
+            name={versionId}
+            value={versionId}
+            label={label || timestamp}
+            onChange={onChange}
+            checked={isSelected}
+            ariaLabel={
+              ariaLabel && timestamp ? `${ariaLabel}, ${timestamp}` : ariaLabel
+            }
+            textThickness={isBoldtype ? 'thick' : 'thin'}
+            disabled={disabled}
+            size="s"
+          >
+            {label && timestamp && (
+              <Typography variant="body3" component="span">
+                <span className={moduleStyles.separator}>{'·'}</span>
+                {timestamp}
+              </Typography>
+            )}
+          </RadioButton>
+          {showRestoreButton && (
+            <MuiButton
+              variant="outlined"
+              color="tertiary"
+              size="extraSmall"
+              loading={restoreLoading}
+              loadingPosition="start"
+              disabled={restoreDisabled}
+              className={moduleStyles.restoreButton}
+              onClick={restoreOnClick}
+              type="button"
+              startIcon={
+                <FontAwesomeV6Icon
+                  iconName="arrow-rotate-left"
+                  iconStyle="solid"
+                />
+              }
+            >
+              {commonI18n.restore()}
+            </MuiButton>
+          )}
+          {aiSavedComment && !showRestoreButton && (
+            <Tooltip title="AI Version Save" placement="bottom">
+              <span role="img" aria-label="AI Version Save">
+                <FontAwesomeV6Icon
+                  iconFamily="kit"
+                  iconName="ai-head-solid"
+                  className={moduleStyles.aiSaveIcon}
+                />
+              </span>
+            </Tooltip>
+          )}
+          {showAutoSavedIcon && !showRestoreButton && (
+            <Tooltip title={lab2I18n.autosavedVersion()} placement="bottom">
+              <span role="img" aria-label={lab2I18n.autosavedVersion()}>
+                <FontAwesomeV6Icon
+                  iconName={'cloud-check'}
+                  className={moduleStyles.autoSavedIcon}
+                />
+              </span>
+            </Tooltip>
+          )}
+        </div>
+        {children}
+        {comment !== AI_SAVED_COMMENT && // Display comment only if user description is included.
+          (aiSavedComment || comment) && (
+            <Typography
+              className={moduleStyles.commitDescription}
+              variant="body4"
+            >
+              {aiSavedComment || comment}
+            </Typography>
+          )}
+      </div>
+    </div>
+  );
+};
+
+export default VersionHistoryRow;

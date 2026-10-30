@@ -1,0 +1,18 @@
+name 'programming-fundamentals-lesson6-vocab_pilot-2025'
+title 'Check Your Understanding'
+description 'Match each term with the correct definition.'
+height '100'
+
+question 'snake_case'
+answer 'a naming style where all letters are lowercase and words are separated by underscores'
+
+question 'method'
+answer 'an action that an object can do'
+
+question 'function'
+answer 'a named block of code that performs a task'
+
+question 'class'
+answer 'a blueprint or set of instructions for creating something that can do specific tasks'
+
+allow_multiple_attempts true

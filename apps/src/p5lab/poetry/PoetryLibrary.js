@@ -1,14 +1,16 @@
 import _ from 'lodash';
-import {getStore} from '@cdo/apps/redux';
-import CoreLibrary from '../spritelab/CoreLibrary';
-import {POEMS} from './constants';
-import {isBlank} from '../../utils';
+
 import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
-import {commands as backgroundEffects} from './commands/backgroundEffects';
-import {commands as foregroundEffects} from './commands/foregroundEffects';
-import {commands as behaviors} from './commands/behaviors';
-import spritelabCommands from '../spritelab/commands/index';
 import * as drawUtils from '@cdo/apps/p5lab/drawUtils';
+import {getStore} from '@cdo/apps/redux';
+
+import {isBlank} from '../../utils';
+import spritelabCommands from '../spritelab/commands/index';
+import CoreLibrary from '../spritelab/CoreLibrary';
+
+import {commands as backgroundEffects} from './commands/backgroundEffects';
+import {commands as behaviors} from './commands/behaviors';
+import {POEMS} from './constants';
 
 const OUTER_MARGIN = 50;
 const LINE_HEIGHT = 50;
@@ -45,7 +47,6 @@ export default class PoetryLibrary extends CoreLibrary {
       backgroundMusic: undefined,
     };
     this.backgroundEffect = () => this.p5.background('white');
-    this.foregroundEffects = [];
     this.lineEvents = {};
     this.p5.textAlign(this.p5.CENTER);
     this.p5.angleMode(this.p5.DEGREES);
@@ -258,7 +259,6 @@ export default class PoetryLibrary extends CoreLibrary {
       },
 
       ...backgroundEffects,
-      ...foregroundEffects,
     };
   }
 
@@ -533,20 +533,5 @@ export default class PoetryLibrary extends CoreLibrary {
       }
     });
     this.p5.pop();
-  }
-
-  // polyfill for https://github.com/processing/p5.js/blob/main/src/color/p5.Color.js#L355
-  getP5Color(hex, alpha) {
-    let color = this.p5.color(hex);
-    if (alpha !== undefined) {
-      color._array[3] = alpha / color.maxes[color.mode][3];
-    }
-    const array = color._array;
-    // (loop backwards for performance)
-    const levels = (color.levels = new Array(array.length));
-    for (let i = array.length - 1; i >= 0; --i) {
-      levels[i] = Math.round(array[i] * 255);
-    }
-    return color;
   }
 }

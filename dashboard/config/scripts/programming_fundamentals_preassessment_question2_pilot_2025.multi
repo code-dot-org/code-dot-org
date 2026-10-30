@@ -1,0 +1,17 @@
+name 'programming-fundamentals-preassessment-question2_pilot-2025'
+title 'Programming Fundamentals Pre-Assessment: Question 2'
+
+right 'Focusing on the most important details while ignoring irrelevant ones'
+wrong 'Breaking a task into smaller steps'
+wrong 'Testing a program for errors'
+wrong 'Repeating a block of code'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 2: Computational Thinking
+MARKDOWN
+
+markdown <<MARKDOWN
+What is the main purpose of **abstraction** in computational thinking?
+MARKDOWN

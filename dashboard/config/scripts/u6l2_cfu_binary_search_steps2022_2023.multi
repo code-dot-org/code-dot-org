@@ -1,5 +1,5 @@
 name 'U6L2 CFU Binary Search Steps2022_2023'
-title 'Multiple Choice: Converting from Analog to Digital'
+title 'Multiple Choice: Binary Search'
 description ''
 question 'What is the third step using Binary Search to look for the number 32 in this list: `1, 2, 3, 4, 10, 11, 16, 25, 32, 33, 45, 47, 51, 69, 75`'
 wrong 'Compare the number 25 to the given number.'

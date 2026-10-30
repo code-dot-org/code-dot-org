@@ -1,0 +1,31 @@
+name 'csaif_pl_3-day-project-L3-CSandDev_-rev_v2_2026-dev'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Sample Student Project
+
+Here is a simulated example of a finished project. It shows the scope and detail your students might reach, not a template to copy.
+
+
+<div style="width:100%; border-radius:10px; overflow:hidden; border:1px solid #ACA8EA; margin:20px 0;">
+<iframe src="https://amandadennard-dotcom.github.io/Unit5AIF2/clear-water-check-sample-project.html" width="100%" height="760" style="border:none; display:block;" title="Sample student project: Clear Water Check, a school water quality monitor"></iframe>
+</div>
+
+## Explore the Sample
+
+As you click through the sections, think about:
+
+<p>• Where do you find evidence for each area: hardware, software, communication, and ethical considerations?</p>
+<p>• Which area would you ask the group to say more about?</p>
+
+<details style="margin-top:12px; border-radius:8px; overflow:hidden;">
+<summary style="background-color:#E4E2F8; padding:10px; cursor:pointer; font-weight:bold; color:#1F1976;">💡 Check your thinking</summary>
+<div style="background-color:#FFFFFF; padding:12px; border:1px solid #ACA8EA; font-size:16px; color:#222222;">
+<p>• <strong>Hardware:</strong> every part has a clear job, from the sensors to the status light.</p>
+<p>• <strong>Software:</strong> the AI model and control program are tied to the readings and the actions they trigger.</p>
+<p>• <strong>Communication:</strong> Wi-Fi is named, but the sample does not explain what data is sent or how it arrives. This is the thinnest area.</p>
+<p>• <strong>Ethical considerations:</strong> the group names privacy, bias, and trust, and suggests next steps.</p>
+</div>
+</details>
+MARKDOWN

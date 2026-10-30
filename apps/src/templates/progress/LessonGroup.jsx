@@ -1,18 +1,16 @@
-import React from 'react';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
+import React from 'react';
 import {connect} from 'react-redux';
-import DetailProgressTable from '@cdo/apps/templates/progress/DetailProgressTable';
-import SummaryProgressTable from '@cdo/apps/templates/progress/SummaryProgressTable';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {groupedLessonsType} from '@cdo/apps/templates/progress/progressTypes';
-import color from '@cdo/apps/util/color';
-import LessonGroupInfoDialog from '@cdo/apps/templates/progress/LessonGroupInfoDialog';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
-import {lessonIsVisible} from './progressHelpers';
+
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import DetailProgressTable from '@cdo/apps/templates/progress/DetailProgressTable';
 import LessonGroupInfo from '@cdo/apps/templates/progress/LessonGroupInfo';
-import fontConstants from '@cdo/apps/fontConstants';
+import LessonGroupInfoDialog from '@cdo/apps/templates/progress/LessonGroupInfoDialog';
+import {groupedLessonsType} from '@cdo/apps/templates/progress/progressTypes';
+import SummaryProgressTable from '@cdo/apps/templates/progress/SummaryProgressTable';
+
+import {lessonIsVisible} from './progressHelpers';
 
 /**
  * A component that shows a group of lessons. That group has a name and is
@@ -23,6 +21,7 @@ class LessonGroup extends React.Component {
     groupedLesson: groupedLessonsType.isRequired,
     isPlc: PropTypes.bool.isRequired,
     isSummaryView: PropTypes.bool.isRequired,
+    isOnLevelView: PropTypes.bool,
 
     // redux provided
     scriptId: PropTypes.number,
@@ -50,18 +49,6 @@ class LessonGroup extends React.Component {
       collapsed: !this.state.collapsed,
       lessonGroupInfoDialogOpen: true,
     });
-    firehoseClient.putRecord(
-      {
-        study: 'unit_overview_page',
-        study_group: 'lesson_group',
-        event: 'view_lesson_group_info',
-        data_json: JSON.stringify({
-          script_id: this.props.scriptId,
-          lesson_group_id: this.props.groupedLesson.lessonGroup.id,
-        }),
-      },
-      {includeUserId: true}
-    );
   };
 
   closeLessonGroupInfoDialog = () => {
@@ -90,21 +77,21 @@ class LessonGroup extends React.Component {
     return (
       <div style={styles.main} className="lesson-group">
         <div
-          style={[
-            styles.header,
-            isPlc && styles.headerBlue,
-            this.state.collapsed && styles.bottom,
-          ]}
+          style={{
+            ...styles.header,
+            ...(isPlc && styles.headerBlue),
+            ...(this.state.collapsed && styles.bottom),
+          }}
           onClick={this.toggleCollapsed}
         >
-          <FontAwesome
-            icon={this.state.collapsed ? 'caret-right' : 'caret-down'}
+          <FontAwesomeV6Icon
+            iconName={this.state.collapsed ? 'caret-right' : 'caret-down'}
           />
           <span style={headingTextStyle}>{displayName}</span>
           {hasLessonGroupInfo && (
             <span>
-              <FontAwesome
-                icon="info-circle"
+              <FontAwesomeV6Icon
+                iconName="circle-info"
                 style={styles.lessonGroupInfo}
                 onClick={this.openLessonGroupInfoDialog}
               />
@@ -126,13 +113,16 @@ class LessonGroup extends React.Component {
         </div>
         {!this.state.collapsed && (
           <div
-            style={[
-              styles.contents,
-              isPlc && styles.contentsBlue,
-              styles.bottom,
-            ]}
+            style={{
+              ...styles.contents,
+              ...(isPlc && styles.contentsBlue),
+              ...styles.bottom,
+            }}
           >
-            <TableType groupedLesson={this.props.groupedLesson} />
+            <TableType
+              groupedLesson={this.props.groupedLesson}
+              isOnLevelView={this.props.isOnLevelView}
+            />
           </div>
         )}
       </div>
@@ -146,16 +136,16 @@ const styles = {
   },
   header: {
     padding: 20,
-    backgroundColor: color.purple,
+    backgroundColor: 'var(--background-neutral-primary-inverse)',
     fontSize: 18,
-    ...fontConstants['main-font-semi-bold'],
-    color: 'white',
+    fontWeight: 600,
+    color: 'var(--text-neutral-inverse)',
     borderTopLeftRadius: 4,
     borderTopRightRadius: 4,
     cursor: 'pointer',
   },
   headerBlue: {
-    backgroundColor: color.cyan,
+    backgroundColor: 'var(--background-info-primary)',
   },
   headingText: {
     marginLeft: 10,
@@ -164,11 +154,11 @@ const styles = {
     marginRight: 10,
   },
   contents: {
-    backgroundColor: color.lighter_purple,
+    backgroundColor: 'var(--background-neutral-secondary)',
     padding: 20,
   },
   contentsBlue: {
-    backgroundColor: color.lightest_cyan,
+    backgroundColor: 'var(--background-info-extra-light)',
   },
   bottom: {
     borderBottomLeftRadius: 4,
@@ -188,4 +178,4 @@ export default connect((state, ownProps) => ({
   hasVisibleLesson: ownProps.groupedLesson.lessons.some(lesson =>
     lessonIsVisible(lesson, state, state.viewAs)
   ),
-}))(Radium(LessonGroup));
+}))(LessonGroup);

@@ -1,42 +1,48 @@
-import ReactDOM from 'react-dom';
-import sinon from 'sinon';
-
-import {expect} from '../../../util/reconfiguredChai';
 import {renderExpandableImages} from '@cdo/apps/templates/utils/expandableImages';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
+
+jest.mock('@cdo/apps/util/createReactRoot', () => ({
+  __esModule: true,
+  createReactRoot: jest.fn(),
+}));
 
 describe('expandableImages', () => {
   describe('renderExpandableImages', () => {
-    let renderSpy;
-
     beforeEach(() => {
-      renderSpy = sinon.spy(ReactDOM, 'render');
+      createReactRoot.mockReset();
     });
 
     afterEach(() => {
-      renderSpy.restore();
+      jest.clearAllMocks();
     });
 
-    const createExpandableImage = url => {
+    const createExpandableImage = (url, alt) => {
       const result = document.createElement('span');
       result.classList.add('expandable-image');
       result.dataset['url'] = url;
+      result.textContent = alt;
       return result;
     };
 
     it('creates an ImagePreview when it finds an expandable image', () => {
       const containerNode = document.createElement('div');
-      const image = createExpandableImage('https://example.com/img.jpg');
+      const image = createExpandableImage(
+        'https://example.com/img.jpg',
+        'This is alt text'
+      );
       containerNode.appendChild(image);
 
       renderExpandableImages(containerNode);
 
-      expect(renderSpy).to.have.been.calledOnce;
+      expect(createReactRoot).toHaveBeenCalledTimes(1);
 
-      const renderElement = renderSpy.args[0][0];
-      expect(renderElement.props.url).to.equal('https://example.com/img.jpg');
+      const renderElement = createReactRoot.mock.calls[0][0];
 
-      const renderContainer = renderSpy.args[0][1];
-      expect(renderContainer).to.equal(image);
+      expect(renderElement.props.url).toBe('https://example.com/img.jpg');
+      expect(renderElement.props.alt).toBe('This is alt text');
+
+      const renderContainer = createReactRoot.mock.calls[0][1];
+      expect(renderContainer).toBe(image);
     });
 
     it('supports multiple images in a single node', () => {
@@ -50,7 +56,7 @@ describe('expandableImages', () => {
       }
 
       renderExpandableImages(containerNode);
-      expect(renderSpy.callCount).to.equal(N);
+      expect(createReactRoot).toHaveBeenCalledTimes(N);
     });
   });
 });

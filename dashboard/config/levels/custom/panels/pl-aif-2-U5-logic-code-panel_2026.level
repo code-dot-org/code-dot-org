@@ -1,0 +1,86 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-03-24T03:52:37.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "## Deep Dive\nThese panels walk you through the next activity where you upload the flowchart from the previous level and code the logic. \n\n\nThe level starts with a basic shell that you will update with the scenario you created with your flowchart. In the final result, you should be able to select the condition boxes and run the code. \n\nHere, the correct ads should appear based on the logic in the flow chart. \n",
+        "imageUrl": "https://images.code.org/fec7535658dd72ec0478505716f07537-nested conditionals .png",
+        "key": "pl-aif-2-U5-logic-code-panel_2026-102b8d0a-ef25-4d6e-ad9d-5059c65bc767",
+        "layout": "text-bottom-left"
+      },
+      {
+        "text": "## Add the Flowchart \nThis first step is to add the the flowchart you created. Click the backpack icon and add the flowchart for this activity. \n",
+        "imageUrl": "https://images.code.org/dbe1623df1b44e77d32626946e0a6dca-nested conditionals  (1).png",
+        "key": "pl-aif-2-U5-logic-code-panel_2026-f7003ea8-6402-4ff4-be89-722717893d9a"
+      },
+      {
+        "text": "## Condition A\nThis flowchart first checks if the user is interested in sports. This will replace condition A.",
+        "imageUrl": "https://images.code.org/a463f6a6e2e644a8287345d1306c3c42-nested conditionals  (2).png",
+        "key": "pl-aif-2-U5-logic-code-panel_2026-d4ee1a6d-3eb1-4d30-b6d6-7ba6cfc23efa",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Condition B\nNext it checks if the time of day is the morning, This will replace condition B.",
+        "imageUrl": "https://images.code.org/154e82884d8e54f1cd74f61205494c95-nested conditionals  (11).png",
+        "key": "pl-aif-2-U5-logic-code-panel_2026-ae06105a-d965-4ab3-b978-4d80c58582ea",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Output\nIf the user likes sports and  it is morning, the result is to show a morning sports ad. \n\nIf it is not morning, then an evening sports add will be shown.",
+        "imageUrl": "https://images.code.org/60637b34337abc18fcf00b50d3bc99a6-nested conditionals  (4).png",
+        "key": "pl-aif-2-U5-logic-code-panel_2026-d1ea9e30-f7ec-47f1-a213-c935701d424a"
+      },
+      {
+        "text": "## Output \nIf the user doesn’t like sports, when the time of day is checked, a morning or evening food ad will be shown. ",
+        "imageUrl": "https://images.code.org/1e3e51d021f32ad00c27c36d3b4acfe3-nested conditionals  (5).png",
+        "key": "pl-aif-2-U5-logic-code-panel_2026-e9475f26-c197-4417-9794-54d76990b8a0"
+      },
+      {
+        "text": "## Prompt the AI\nPrompt the AI tutor to generate the code for the nested conditionals using the logic from the flowchart. ",
+        "imageUrl": "https://images.code.org/e0068ccd7f6dccd45b1d243c774020bd-nested conditionals  (6).png",
+        "key": "pl-aif-2-U5-logic-code-panel_2026-4f305f7d-02e1-4821-a588-d589589616c1",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## AI Tutor results\nThe AI tutor added nested if else statements.  Test if they are as expected.",
+        "imageUrl": "https://images.code.org/0a53d1d7e0c4ab5cd41a81234399d7ba-nested conditionals  (7).png",
+        "key": "pl-aif-2-U5-logic-code-panel_2026-762db0a9-dd71-4517-8851-919216870439",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Condition A is True \nIf condition A is true (the user likes sports) then condition b is checked to see if it is morning. This looks good. ",
+        "imageUrl": "https://images.code.org/ce71793a36f2d1659e407b1165643bad-nested conditionals  (8).png",
+        "key": "pl-aif-2-U5-logic-code-panel_2026-38645bc5-e397-4e3e-8666-f1f369a4fc10",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Condition A is False\nIf condition A is false (the user doesn’t like sports) then condition b is checked to see if it is morning.\n\nThe flow cart asked for food ads, this looks off. ",
+        "imageUrl": "https://images.code.org/d3574de6379129235ad1b9e9441d6a42-nested conditionals  (12).png",
+        "key": "pl-aif-2-U5-logic-code-panel_2026-faaea54a-4020-45e6-99c2-5720fa0fab35"
+      },
+      {
+        "text": "## Iterate the Results\nIf the outcomes don't perfectly match your plan, debug it yourself or re-prompt the AI to fix the mistakes.",
+        "imageUrl": "https://images.code.org/0212487261e8933a95889bc830750e5e-nested conditionals  (9).png",
+        "key": "pl-aif-2-U5-logic-code-panel_2026-7fa33cce-6e38-4453-b031-1160598f2451",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Test and Iterate \nTest the output and refine as needed. \n\n\nNow it’s your turn.\n",
+        "imageUrl": "https://images.code.org/177a00e1f5154afa8d6809db17b7415a-nested conditionals  (10).png",
+        "key": "pl-aif-2-U5-logic-code-panel_2026-a05b6352-682a-429e-a917-90a880c4d3e4",
+        "layout": "text-top-left"
+      }
+    ],
+    "name_suffix": "_2026",
+    "use_links": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-03-24T03:52:37.977+00:00\",\"changed\":[\"cloned from \\\"pl-aif-2-U5-logic-code-panel\\\"\"],\"cloned_from\":\"pl-aif-2-U5-logic-code-panel\"},{\"changed_at\":\"2026-06-26 15:16:52 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+}]]></config>
+</Panels>

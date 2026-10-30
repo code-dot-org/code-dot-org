@@ -3,12 +3,6 @@
 # Recipe:: default
 #
 
-include_recipe 'apt'
-apt_repository 'rsyslog' do
-  uri 'ppa:adiscon/v8-stable'
-  distribution node['lsb']['codename']
-  retries 3
-end
 apt_package %w(rsyslog) do
   action :upgrade
 end

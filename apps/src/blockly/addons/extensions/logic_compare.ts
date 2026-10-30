@@ -1,0 +1,35 @@
+import * as BlocklyCore from 'blockly/core';
+
+/** Type of a block that has LOGIC_COMPARE_ONCHANGE_MIXIN */
+type CompareBlock = BlocklyCore.Block & {
+  onchange: (this: CompareBlock) => void;
+};
+
+/**
+ * This override intentionally removes dynamic type validation for the left
+ * and right sides of a logic_compare (? == ?) block.
+ * Artist binary levels and existing student work use this block to compare
+ * characters from strings (ex. '01010101') with the numbers 0 and 1.
+ */
+const LOGIC_COMPARE_ONCHANGE_MIXIN = {
+  /**
+   * Called whenever anything on the workspace changes.
+   * Allows mismatched types to be compared.
+   */
+  onchange(this: CompareBlock) {},
+};
+
+/**
+ * "logic_compare" extension function. Overrides type left and right side type
+ * checking for "logic_compare" blocks.
+ */
+const LOGIC_COMPARE_EXTENSION = function (this: CompareBlock) {
+  // Add onchange handler to ensure types are compatible.
+  this.mixin(LOGIC_COMPARE_ONCHANGE_MIXIN, true);
+};
+export default function registerMutator() {
+  if (BlocklyCore.Extensions.isRegistered('logic_compare')) {
+    BlocklyCore.Extensions.unregister('logic_compare');
+  }
+  BlocklyCore.Extensions.register('logic_compare', LOGIC_COMPARE_EXTENSION);
+}

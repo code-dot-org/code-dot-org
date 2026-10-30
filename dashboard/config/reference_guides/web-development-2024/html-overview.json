@@ -1,0 +1,9 @@
+{
+  "key": "html-overview",
+  "course_version_key": "2024",
+  "course_offering_key": "web-development",
+  "parent_reference_guide_key": "html",
+  "display_name": "Overview",
+  "content": "HTML (Hypertext Markup Language) is the language used to define the content of web pages. You can find more information about the tags and attributes of HTML at the [Web Lab documentation](/docs/weblab/) page. ",
+  "position": 0
+}

@@ -10,11 +10,21 @@ REQUIREMENTS = {
   "bower.json" => {cmd: "bower install"},
   "Gemfile" => {cmd: "bundle install"},
   "schema.rb" => {cmd: "bundle exec rake db:migrate", dir: ".."},
+  # Re-grant permissions for the non-root `writer` and `reader` SQL users when the privilege lists change. The users
+  # themselves survive a db:reset, so this is the only routine reason to re-run the task after the initial `rake install`.
+  "sql_user_provisioner.rb" => {cmd: "bundle exec rake db:provision_sql_users", dir: "../../dashboard"},
 }.freeze
+
+NULL_SHA = /\A0+\z/
 
 def get_modified_files
   prev_head = ARGV[1]
   new_head = ARGV[2]
+  # On a new worktree or the initial checkout of a fresh clone, git passes the
+  # null SHA (0000…) as the previous HEAD. There is no prior state to diff
+  # against, and `git diff <null> <new>` aborts with "fatal: bad object".
+  return [] if prev_head.nil? || prev_head.empty? || prev_head =~ NULL_SHA
+
   Dir.chdir REPO_DIR
   return `git diff --name-only #{prev_head} #{new_head}`.split("\n").map(&:chomp)
 end
@@ -24,7 +34,7 @@ end
 # particular file. We don't want to do anything in file checkout mode
 FILE_CHECKOUT = ARGV.fetch(3, "1") == "0"
 MERGE = ARGV[0] == "merge"
-PROMPT_ENABLED = ENV['MERGE_RUN_PROMPT']
+PROMPT_ENABLED = ENV.fetch('MERGE_RUN_PROMPT', nil)
 
 def optionally_run(cmd, file)
   dir = File.dirname(file)

@@ -1,7 +1,11 @@
 :ruby
   require 'cdo/language_dir'
 
-  script = local_assigns[:script] || Unit.twenty_hour_unit
+  # The hourofcode fallback is only consulted when a script_level is present
+  # (see should_show_progress below); don't raise on plain pages if the
+  # hourofcode unit does not exist (e.g. in tests, which no longer provide it
+  # as a fixture).
+  script = local_assigns[:script] || Unit.get_from_cache(Unit::HOC_NAME, raise_exceptions: false)
   script_level = local_assigns[:script_level]
   level = local_assigns[:level]
   lesson = local_assigns[:lesson]
@@ -22,9 +26,13 @@
 
   if !current_user
     cookie_key = environment_specific_cookie_name('_user_type')
-    user_type = request.cookies[cookie_key]
+    user_type = request.cookies[cookie_key].presence
     user_type = "student" if user_type == "student_y"
   end
+
+  rebrand_nav = Cdo::Brand.codeai_next?(request)
+  marketing_list = Cdo::GlobalEdition.region_config(request.ge_region, :header, :top, :signed_out_marketing).present?
+  marketing_nav = rebrand_nav && marketing_list && !user_type
 
   hamburger_options = {}
   hamburger_options[:level] = level
@@ -35,12 +43,17 @@
   hamburger_options[:show_gallery] = true
   hamburger_options[:loc_prefix] = "nav.header."
   hamburger_options[:page_mode] = request.cookies['pm']
+  hamburger_options[:dashboard] = true
+  hamburger_options[:ge_region] = request.ge_region
+  hamburger_options[:marketing_nav] = rebrand_nav
 
   header_contents_options = {}
   header_contents_options[:user_type] = user_type
   header_contents_options[:language] = request.language
   header_contents_options[:loc_prefix] = "nav.header."
   header_contents_options[:page_mode] = request.cookies['pm']
+  header_contents_options[:ge_region] = request.ge_region
+  header_contents_options[:marketing_nav] = rebrand_nav
 
   should_show_progress = (script_level || @lesson_extras) && !@is_code_reviewing
 
@@ -57,6 +70,8 @@
   user_header_options[:session_pairings] = session[:pairings]
   user_header_options[:loc_prefix] = 'nav.user.'
   user_header_options[:level] = level
+  user_header_options[:ge_region] = request.ge_region
+  user_header_options[:marketing_nav] = rebrand_nav
 
   require 'cdo/hamburger'
 
@@ -66,24 +81,26 @@
 
 %link{:href=>'/shared/css/hamburger.css', :rel=>'stylesheet'}
 
-%div{class: header_class}
-  .navbar-static-top.header{dir: "ltr"}
+%header{class: header_class}
+  .navbar-static-top.header
     .container{style: "width: 100%; display: flex; justify-content: space-between; height: 50px;"}
       .header_left
-        .header_logo
+        .header_logo#header_logo_container
           - if current_user
-            = link_to(image_tag('logo.svg', alt: I18n.t(:code_org_logo_alt)), '/home', {id: "logo_home_link"})
+            = link_to(image_tag(Cdo::Brand.header_logo_filename(request), class: 'img-responsive', alt: Cdo::Brand.logo_alt_text(request)), home_path, {id: "logo_home_link"})
           - else
-            = link_to(image_tag('logo.svg', alt: I18n.t(:code_org_logo_alt)), CDO.code_org_url, {id: "logo_home_link"})
+            = link_to(image_tag(Cdo::Brand.header_logo_filename(request), class: 'img-responsive', alt: Cdo::Brand.logo_alt_text(request)), Cdo::Brand.marketing_url, {id: "logo_home_link"})
+        - if current_user && (should_show_progress || level)
+          %div#scrapbook-button-mount-point
 
       .header_middle{dir: locale_dir}
         - if should_show_progress || level
           -# React will attach to this.
           .header_level
         - else
-          .headerlinks.hide_on_tablet
+          .headerlinks{class: marketing_nav ? 'marketing-nav' : 'hide_on_tablet'}
             - Hamburger.get_header_contents(header_contents_options).each do |entry|
-              %a.headerlink{id: entry[:id], href: entry[:url]}= entry[:title]
+              %a.headerlink{id: entry[:id], href: entry[:url], class: (marketing_nav ? nil : entry[:class])}= entry[:title]
 
       .header_right
         - if !@hide_sign_in_option && signin_button_enabled
@@ -103,9 +120,9 @@
 
     puzzle_page = params[:puzzle_page] ? params[:puzzle_page] : ApplicationHelper::PUZZLE_PAGE_NONE
 
-    script_data = script.summarize_header
+    script_data = script.summarize_header(unit_group_unit: @unit_group_unit)
     lesson_group_data = script.lesson_groups.map(&:summarize)
-    lesson_data = (@lesson || script_level.lesson).summarize(include_bonus_levels = true)
+    lesson_data = (@lesson || script_level.lesson).summarize(include_bonus_levels = true, unit_group_unit: @unit_group_unit)
     # If caching, we don't know the sign in state, and should be nil
     signed_in = @public_caching ? 'null' : !brakeman_no_warn(current_user).nil?
 
@@ -125,9 +142,13 @@
 
     small_text = false
 
+    script_name_data_href = script_path(@script, section_id: section_id, user_id: user_id)
+    if Policies::Courses.modularity_enabled? && @unit_group_unit
+      script_name_data_href = course_unit_path(@unit_group_unit.unit_group, @unit_group_unit.position, section_id: section_id, user_id: user_id)
+    end
     script_name_data = {
       name: text,
-      href: script_path(@script, section_id: section_id, user_id: user_id),
+      href: script_name_data_href,
       smallText: small_text
     }
   elsif @is_code_reviewing
@@ -146,7 +167,7 @@
       #{lesson_group_data.to_json},
       #{lesson_data.to_json},
       #{user_progress},
-      "#{script_level&.level_id || -1}",
+      "#{@level&.id || script_level&.level_id || -1}",
       #{puzzle_page},
       #{signed_in},
       #{lesson_extras_enabled || 'null'},

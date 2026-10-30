@@ -1,5 +1,6 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 50,
   "created_at": "2023-11-28T21:10:57.000Z",
   "level_num": "custom",
@@ -53,7 +54,7 @@
     "debugger_disabled": "true",
     "pause_animations_by_default": "false",
     "callout_json": "[ \r\n {\r\n  \"localization_key\": \"CSD_U3_rect_c1\",\r\n  \"callout_text\": \"Here is the code\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"fill\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"fill\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top center\",\r\n    \"at\": \"bottom right\",\r\n    \"adjust\": {\r\n     \"x\": 50,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"CSD_U3_rect_c2\",\r\n  \"callout_text\": \"Drag this block into the code area.\",\r\n  \"element_id\": \"#droplet_palette_block_rect\",\r\n  \"on\": \"rect_block\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
-    "long_instructions": "<img src=\"https://images.code.org/030e1530fb996ae1c0c1662ec4e3440a-image-1567014400477.PNG\" style=\"float:right;width:150px;\">\r\n\r\n# Shape\r\n\r\nSo far, you have just been drawing ellipses and rectangles. But now there is a new block to help draw other shapes!\r\n\r\n[`shape()`(#4dd0e1)](/docs/ide/gamelab/expressions/shape) lets your draw additional shapes! Click on the block to view the documentation and learn more about this new block!\r\n\r\n# Do This\r\n\r\n1) Read the code that makes the picture.\r\n2) Use the [`shape()`(#4dd0e1)](/docs/ide/gamelab/expressions/shape) block to finish the code so it matches the picture.\r\n\r\nOptional: Play around some more with the [`shape()`(#4dd0e1)](/docs/ide/gamelab/expressions/shape) block and see what you can make.\r\n",
+    "long_instructions": "<img src=\"https://images.code.org/030e1530fb996ae1c0c1662ec4e3440a-image-1567014400477.PNG\" style=\"float:right;width:150px;\">\r\n\r\n# Shape\r\n\r\nSo far, you have just been drawing ellipses and rectangles. But now there is a new block to help draw other shapes!\r\n\r\n[`shape()`(#4dd0e1)](/docs/ide/gamelab/expressions/shape) lets you draw additional shapes! Click on the block to view the documentation and learn more about this new block!\r\n\r\n# Do This\r\n\r\n1) Read the code that makes the picture.\r\n2) Use the [`shape()`(#4dd0e1)](/docs/ide/gamelab/expressions/shape) block to finish the code so it matches the picture.\r\n\r\nOptional: Play around some more with the [`shape()`(#4dd0e1)](/docs/ide/gamelab/expressions/shape) block and see what you can make.\r\n",
     "parent_level_id": 19161,
     "name_suffix": "_2024",
     "map_reference": "/courses/csd-2022/guides/shapes-and-parameters",
@@ -74,9 +75,8 @@
     "validation_enabled": "false",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-11-28T21:10:57.561+00:00\",\"changed\":[\"cloned from \\\"CSD U3 shapes_2023\\\"\"],\"cloned_from\":\"CSD U3 shapes_2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-11-28T21:10:57.561+00:00\",\"changed\":[\"cloned from \\\"CSD U3 shapes_2023\\\"\"],\"cloned_from\":\"CSD U3 shapes_2023\"},{\"changed_at\":\"2024-07-28 21:39:15 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":17326,\"changed_by_email\":\"larsensn@yahoo.com\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

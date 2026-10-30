@@ -1,21 +1,33 @@
-import React from 'react';
+import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import PropTypes from 'prop-types';
+import React from 'react';
 import {connect} from 'react-redux';
-import Button from '@cdo/apps/templates/Button';
+
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import i18n from '@cdo/locale';
+
 import styles from './summary-entry-point.module.scss';
 
 const SUMMARY_PATH = '/summary';
 
-const SummaryEntryPoint = ({scriptData, students, selectedSection}) => {
+const SummaryEntryPoint = ({
+  scriptData,
+  students,
+  selectedSection,
+  currentLevelId,
+}) => {
   // If viewing the page as Participant, be sure to rewrite the link URL
   // to view as Instructor, so we don't just get redirected back.
-  const params = document.location.search.replace(
+  let params = document.location.search.replace(
     `viewAs=${ViewType.Participant}`,
     `viewAs=${ViewType.Instructor}`
   );
-  const summaryUrl = document.location.pathname + SUMMARY_PATH + params;
+  const isOnSubLevel = /\/sublevel\/\d+/.test(document.location.pathname);
+  if (isOnSubLevel && currentLevelId) {
+    params += (params ? '&' : '?') + `level_id=${currentLevelId}`;
+  }
+  const pathname = document.location.pathname.replace(/\/sublevel\/\d+$/, '');
+  const summaryUrl = pathname + SUMMARY_PATH + params;
 
   let className = styles.summaryEntryPoint;
   if (!scriptData.is_contained_level) {
@@ -27,25 +39,40 @@ const SummaryEntryPoint = ({scriptData, students, selectedSection}) => {
 
   return (
     <div className={className}>
-      <Button
-        color={Button.ButtonColor.neutralDark}
-        text={i18n.viewStudentResponses()}
-        href={summaryUrl}
+      <MuiButton
+        variant="outlined"
+        color="secondary"
+        size="small"
         className={styles.button}
-        __useDeprecatedTag
-      />
-
+        href={summaryUrl}
+      >
+        {i18n.viewStudentResponses()}
+      </MuiButton>
       {selectedSection && (
         <>
           <div className={styles.responseIcon}>
-            <i className="fa fa-user" />
+            <i className="fa-solid fa-user" />
           </div>
-          <div className={styles.responseCounter}>
+          <div
+            className={styles.responseCounter}
+            // eslint-disable-next-line react/forbid-dom-props
+            data-testid={'response-counter'}
+          >
             <p>
-              <span className={styles.counter}>
+              <MuiTypography
+                variant="label1"
+                component="span"
+                className={styles.counter}
+              >
                 {scriptData.response_count}/{students.length}{' '}
-              </span>
-              <span className={styles.text}>{i18n.studentsAnswered()}</span>
+              </MuiTypography>
+              <MuiTypography
+                variant="body3"
+                component="span"
+                className={styles.text}
+              >
+                {i18n.studentsAnswered()}
+              </MuiTypography>
             </p>
           </div>
         </>
@@ -66,6 +93,7 @@ SummaryEntryPoint.propTypes = {
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
   }),
+  currentLevelId: PropTypes.number,
 };
 
 export default connect(
@@ -76,5 +104,6 @@ export default connect(
     students: state.teacherSections.selectedStudents,
     selectedSection:
       state.teacherSections.sections[state.teacherSections.selectedSectionId],
+    currentLevelId: state.progress?.currentLevelId,
   })
 )(SummaryEntryPoint);

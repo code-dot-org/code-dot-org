@@ -6,61 +6,87 @@
  * Experiment state is persisted across page loads using local storage.  Note
  * that it's only written when isEnabled is called for the key in question.
  */
-import {trySetLocalStorage} from '../utils';
 import Cookie from 'js-cookie';
-import trackEvent from './trackEvent';
+
 import DCDO from '@cdo/apps/dcdo';
+
+import {trySetLocalStorage} from '../utils';
 
 const queryString = require('query-string');
 
 const experiments = module.exports;
+// Needed to support TypeScript usage.
+export default experiments;
 const STORAGE_KEY = 'experimentsList';
-const GA_EVENT = 'experiments';
 const EXPERIMENT_LIFESPAN_HOURS = 12;
 
 // Specific experiment names
 experiments.REDUX_LOGGING = 'reduxLogging';
 experiments.SCHOOL_AUTOCOMPLETE_DROPDOWN_NEW_SEARCH =
   'schoolAutocompleteDropdownNewSearch';
-experiments.SHOW_UNPUBLISHED_FIREBASE_TABLES = 'showUnpublishedFirebaseTables';
-experiments.TEACHER_DASHBOARD_SECTION_BUTTONS =
-  'teacher-dashboard-section-buttons';
-experiments.TEACHER_DASHBOARD_SECTION_BUTTONS_ALTERNATE_TEXT =
-  'teacher-dashboard-section-buttons-alternate-text';
-experiments.FINISH_DIALOG_METRICS = 'finish-dialog-metrics';
+experiments.SHOW_UNPUBLISHED_DATASET_TABLES = 'showUnpublishedDatasetTables';
 experiments.I18N_TRACKING = 'frontend-i18n-tracking';
-experiments.TIME_SPENT = 'time-spent';
 experiments.BYPASS_DIALOG_POPUP = 'bypass-dialog-popup';
 experiments.SPECIAL_TOPIC = 'special-topic';
-experiments.CLEARER_SIGN_UP_USER_TYPE = 'clearerSignUpUserType';
-experiments.OPT_IN_EMAIL_REG_PARTNER = 'optInEmailRegPartner';
 // Experiment for showing a backgrounds tab and enabling student upload
 // for Sprite Lab animations
 experiments.BACKGROUNDS_AND_UPLOAD = 'backgroundsTab';
-experiments.SECTION_SETUP_REFRESH = 'sectionSetupRefresh';
-// Experiment for testing Blockly workspace serialization with the JSON system.
-experiments.BLOCKLY_JSON = 'blocklyJson';
 // Experiment for showing the gender field
 experiments.GENDER_FEATURE_ENABLED = 'gender';
-// Experiment for enabling the CPA lockout
-experiments.CPA_EXPERIENCE = 'cpa_experience';
-experiments.AI_RUBRICS = 'ai-rubrics';
-experiments.NON_AI_RUBRICS = 'non-ai-rubrics';
-//Experiment for AI Rubrics redesign
-experiments.AI_RUBRICS_REDESIGN = 'ai-rubrics-redesign';
-// Experiment for showing the toggle a teacher can use to turn on AI Tutor for their section
-experiments.AI_TUTOR_ACCESS = 'ai-tutor';
-// Uses Google Blockly for a given user across labs/levels until the experiment is disabled
-experiments.GOOGLE_BLOCKLY = 'google_blockly';
-// Adds documentation links to block context menus in Sprite Lab (supported with Google Blockly only)
-experiments.SPRITE_LAB_DOCS = 'sl_docs';
-
-/**
- * This was a gamified version of the finish dialog, built in 2018,
- * but never fully shipped.
- * See github.com/code-dot-org/code-dot-org/pull/19557
- */
-experiments.BUBBLE_DIALOG = 'bubbleDialog';
+// Experiment for enabling the AI-TA differentiation chat
+experiments.AI_DIFFERENTIATION = 'ai-differentiation';
+// Adds a "Get help with this block" option to block context menus if docs exist (e.g. Sprite Lab)
+experiments.BLOCKLY_DOCS = 'blockly_docs';
+// Allows the playspace to be dragged to take up a larger portion of the screen
+experiments.BIG_PLAYSPACE = 'bigPlayspace';
+// Use glow effect for Blockly block highlighting
+experiments.BLOCKLY_GLOW_HIGHLIGHT = 'blockly-glow-highlight';
+// Turn on Blockly Keyboard Navigation
+experiments.BLOCKLY_KEYBOARD_NAVIGATION = 'blockly-keyboard-navigation';
+// Use nested course URLs like /courses/csd-2024/units/1/...
+experiments.MODULARITY = 'modularity';
+// LocalizeJS
+experiments.LOCALIZEJS = 'localizejs';
+// Enable ActionCable load testing
+experiments.ACTIONCABLE_LOAD_TESTING = 'actioncable-load-testing';
+// Use AI Tutor system prompts from Langfuse
+experiments.USE_LANGFUSE_PROMPT = 'use-langfuse-prompt';
+// Enable AI lesson podcasts
+experiments.AI_LESSON_PODCASTS = 'ai-lesson-podcasts';
+// Use channel-id based preview urls on localhost for Web Lab 2
+experiments.WEBLAB2_FULL_URLS = 'weblab2-full-urls';
+// Show split diff view in Code Editor.
+experiments.ACCEPT_REJECT_SPLIT_DIFF = 'accept-reject-split-diff';
+// Show the lesson/<lesson_id>/tutor page as a home for a AI Tutor+
+// and shows the review path for AI Tutor+
+experiments.LESSON_TUTOR = 'lesson-tutor';
+// Show the challenge path for AI Tutor+
+experiments.LESSON_TUTOR_CHALLENGE = 'lesson-tutor-challenge';
+// Enable Onboarding experiments
+experiments.ONBOARDING = 'onboarding';
+// Enable AI Diff Chat Drawer
+experiments.AI_DIFF_DRAWER = 'ai-diff-drawer';
+// Route all Gemini model traffic through the AI gateway instead of the Rails backend
+experiments.USE_AI_GATEWAY = 'useAiGateway';
+// Enable speech-to-text input in AI chat lab and AI tutor for all models
+experiments.ENABLE_SPEECH_TO_TEXT = 'enable-speech-to-text';
+// Run the pyodide worker in a hidden iframe on a separate sandboxed-preview
+// subdomain (see apps/src/pythonlab/README.md), isolated from studio.code.org's
+// cookies/session, instead of directly on studio.code.org.
+experiments.PYTHONLAB_SEPARATE_DOMAIN = 'pythonlab-separate-domain';
+// Per-session opt-in to the codeaiprojects.org sandboxed-preview domain ahead
+// of the global 'sandboxed-preview-domain' DCDO flag, for production bug
+// bashes. See getPreviewDomain() in apps/src/util/sandboxedPreviewDomain.ts.
+experiments.NEW_PREVIEW_DOMAIN = 'new-preview-domain';
+// Student scrapbook entrypoint + "My scrapbook" dropdown link.
+// Enable with ?student-scrapbook=true or ?enableExperiments=student-scrapbook.
+experiments.STUDENT_SCRAPBOOK = 'student-scrapbook';
+// Render the Teacher Panel inside the TA drawer on level pages.
+experiments.TA_TEACHER_PANEL = 'ta-teacher-panel';
+// Offer teachers the Reset Progress option on the section progress page.
+experiments.RESET_PROGRESS = 'reset-progress';
+// Ask teachers to explain why they are resetting student progress.
+experiments.RESET_PROGRESS_REASON = 'reset-progress-reason';
 
 /**
  * Get our query string. Provided as a method so that tests can mock this.
@@ -69,8 +95,33 @@ experiments.getQueryString_ = function () {
   return window.location.search;
 };
 
+experiments.getLocalStorageExperiments_ = function () {
+  try {
+    const jsonList = localStorage.getItem(STORAGE_KEY);
+    const storedExperiments = jsonList ? JSON.parse(jsonList) : [];
+    const now = Date.now();
+    // Storage may contain duplicate keys; keep the first live entry for each.
+    const seenKeys = new Set();
+    const enabledExperiments = storedExperiments.filter(experiment => {
+      const enabled =
+        experiment.key &&
+        !seenKeys.has(experiment.key) &&
+        (experiment.expiration === undefined || experiment.expiration > now);
+      if (enabled) {
+        seenKeys.add(experiment.key);
+      }
+      return enabled;
+    });
+    if (enabledExperiments.length < storedExperiments.length) {
+      trySetLocalStorage(STORAGE_KEY, JSON.stringify(enabledExperiments));
+    }
+    return enabledExperiments;
+  } catch (e) {
+    return [];
+  }
+};
+
 experiments.getStoredExperiments_ = function () {
-  // Get experiments on current user from experiments cookie
   const experimentsCookie = Cookie.get('_experiments' + window.cookieEnvSuffix);
   const userExperiments = experimentsCookie
     ? JSON.parse(decodeURIComponent(experimentsCookie)).map(name => ({
@@ -78,45 +129,37 @@ experiments.getStoredExperiments_ = function () {
       }))
     : [];
 
-  // Get experiments stored in local storage.
-  try {
-    const jsonList = localStorage.getItem(STORAGE_KEY);
-    const storedExperiments = jsonList ? JSON.parse(jsonList) : [];
-    const now = Date.now();
-    const enabledExperiments = storedExperiments.filter(experiment => {
-      return (
-        experiment.key &&
-        (experiment.expiration === undefined || experiment.expiration > now)
-      );
-    });
-    if (enabledExperiments.length < storedExperiments.length) {
-      trySetLocalStorage(STORAGE_KEY, JSON.stringify(enabledExperiments));
-    }
-    return userExperiments.concat(enabledExperiments);
-  } catch (e) {
-    return userExperiments;
-  }
+  return userExperiments.concat(this.getLocalStorageExperiments_());
 };
 
 experiments.getEnabledExperiments = function () {
   return this.getStoredExperiments_().map(experiment => experiment.key);
 };
 
+/**
+ * Returns the experiments enabled in this browser via local storage (the kind
+ * setEnabled manages), along with the metadata we store for them. Does not
+ * include user experiments mirrored into the _experiments cookie at sign-in.
+ * @returns {Array<{key: string, expiration?: number}>} expiration is ms since
+ *   epoch, present only for temporarily-enabled experiments.
+ */
+experiments.getLocalStorageExperimentDetails = function () {
+  return this.getLocalStorageExperiments_();
+};
+
 experiments.setEnabled = function (key, shouldEnable, expiration = undefined) {
-  const allEnabled = this.getStoredExperiments_();
+  const allEnabled = this.getLocalStorageExperiments_();
   const experimentIndex = allEnabled.findIndex(
     experiment => experiment.key === key
   );
   if (shouldEnable) {
     if (experimentIndex < 0) {
       allEnabled.push({key, expiration});
-      trackEvent(GA_EVENT, 'enable', key);
     } else {
       allEnabled[experimentIndex].expiration = expiration;
     }
   } else if (experimentIndex >= 0) {
     allEnabled.splice(experimentIndex, 1);
-    trackEvent(GA_EVENT, 'disable', key);
   } else {
     return;
   }

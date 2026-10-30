@@ -2,6 +2,10 @@ require 'test_helper'
 
 class Services::I18n::CurriculumSyncUtils::Serializers::ScriptCrowdinSerializerTest < ActiveSupport::TestCase
   test '.as_json with only_numbered_lessons scope returns correct data' do
+    # The lesson below references a persisted script by id so that its crowdin
+    # URL (which resolves the lesson's script from the database) can be built.
+    lesson_script = create(:script, name: 'numbered-lesson-script')
+
     script = FactoryBot.build(
       :script,
       name: 'script_name',
@@ -11,28 +15,6 @@ class Services::I18n::CurriculumSyncUtils::Serializers::ScriptCrowdinSerializerT
         'details'    => 'announcement_details',
         'buttonText' => 'announcement_buttonText',
       ],
-      course_version: FactoryBot.build(
-        :course_version,
-        key: 'script_course_version_key',
-        course_offering: FactoryBot.build(
-          :course_offering,
-          key: 'script_course_offering_key'
-        ),
-        reference_guides: FactoryBot.build_list(
-          :reference_guide, 1,
-          key:          'reference_guide_key',
-          display_name: 'reference_guide_display_name',
-          content:      'reference_guide_content',
-          course_version: FactoryBot.build(
-            :course_version,
-            key: 'reference_guide_course_version_key',
-            course_offering: FactoryBot.build(
-              :course_offering,
-              key: 'reference_guide_course_offering_key'
-            )
-          )
-        ),
-      ),
       resources: FactoryBot.build_list(
         :resource, 1,
         key:  'resource_key',
@@ -61,7 +43,7 @@ class Services::I18n::CurriculumSyncUtils::Serializers::ScriptCrowdinSerializerT
 
     script.lessons.new(
       id:                       0,
-      script_id:                1,
+      script_id:                lesson_script.id,
       has_lesson_plan:          true,
       name:                     'numbered_lesson_name',
       overview:                 'numbered_lesson_overview',
@@ -130,14 +112,8 @@ class Services::I18n::CurriculumSyncUtils::Serializers::ScriptCrowdinSerializerT
             type: 'student_resource_type'
           }
         },
-        reference_guides: {
-          URI('https://studio.code.org/courses/script_course_offering_key-script_course_version_key/guides/reference_guide_key') => {
-            display_name: 'reference_guide_display_name',
-            content:      'reference_guide_content'
-          }
-        },
         lessons: {
-          URI('https://studio.code.org/s/20-hour/lessons/') => {
+          URI('https://studio.code.org/s/numbered-lesson-script/lessons/') => {
             name:                     'numbered_lesson_name',
             assessment_opportunities: 'numbered_lesson_assessment_opportunities',
             overview:                 'numbered_lesson_overview',

@@ -11,19 +11,26 @@ class CurriculumCatalogController < ApplicationController
     @is_signed_out = current_user.nil?
     @is_teacher = current_user&.teacher? || false
 
+    @page_title = I18n.t("curriculum_catalog.title")
+    @page_description = I18n.t("curriculum_catalog.description")
+    @canonical_url = CDO.studio_url("/catalog")
+
     if @is_teacher
       @sections_for_teacher = current_user.try {|u| u.sections.all.reject(&:hidden).map(&:summarize)}
     end
 
     @catalog_data = {
-      curriculaData: CourseOffering.assignable_published_for_students_course_offerings.sort_by(&:display_name).map {|co| co&.summarize_for_catalog(locale)},
+      # Featured offerings lead the grid, alphabetical by display name within each group.
+      # The catalog filters narrow this list without reordering it, so this is the order on screen.
+      curriculaData: CourseOffering.assignable_published_for_students_course_offerings.sort_by {|co| [co.is_featured? ? 0 : 1, co.display_name]}.map {|co| co&.summarize_for_catalog(locale, current_user)},
       isEnglish: language == "en",
       languageEnglishName: @language_english_name,
       languageNativeName: @language_native_name,
       isSignedOut: @is_signed_out,
       isTeacher: @is_teacher,
       sections: @sections_for_teacher,
-      isInUS: request.country.to_s.casecmp?('rd') || request.country.to_s.casecmp?('us')
+      isInUS: request.country.to_s.casecmp?('rd') || request.country.to_s.casecmp?('us'),
+      curriculaTaught: current_user&.sections&.map(&:course_offering_id)
     }
   end
 end

@@ -1,27 +1,17 @@
-import PropTypes from 'prop-types';
-import React, {createRef, useEffect} from 'react';
-import {parseElement} from '@cdo/apps/xml';
-import {shrinkBlockSpaceContainer} from '@cdo/apps/templates/instructions/utils';
 import {Link} from '@dsco_/link';
+import PropTypes from 'prop-types';
+import React, {useRef, useEffect} from 'react';
+
+import {embedBlocklyBlock} from '../utils/embeddedBlocklyRenderUtils';
 
 export default function EmbeddedBlock({blockName, link, ariaLabel}) {
-  const blockRef = createRef();
+  const blockRef = useRef();
 
   useEffect(() => {
     if (blockName && blockRef.current) {
-      const blocksDom = parseElement(`<block type='${blockName}' />`);
-      const blockSpace = Blockly.createEmbeddedWorkspace(
-        blockRef.current,
-        blocksDom,
-        {
-          noScrolling: true,
-          inline: true,
-        }
-      );
-      shrinkBlockSpaceContainer(blockSpace, true);
+      embedBlocklyBlock(blockRef.current, blockName);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [blockRef]);
+  }, [blockName, blockRef]);
 
   return (
     <div>
@@ -29,7 +19,7 @@ export default function EmbeddedBlock({blockName, link, ariaLabel}) {
         <div
           id={`embedded-block-${blockName}`}
           ref={blockRef}
-          style={{paddingBottom: 5}}
+          style={{paddingBottom: 5, verticalAlign: 'middle'}}
           aria-label={ariaLabel || blockName}
         />
       </Link>

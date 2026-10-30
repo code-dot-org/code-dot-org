@@ -1,16 +1,21 @@
+import orderBy from 'lodash/orderBy';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
-import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
+
 import i18n from '@cdo/locale';
+
+import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import wrappedSortable from '../tables/wrapped_sortable';
-import orderBy from 'lodash/orderBy';
-import PercentAnsweredCell from './PercentAnsweredCell';
+
 import {
   studentWithMCResponsesPropType,
   multipleChoiceQuestionPropType,
 } from './assessmentDataShapes';
+import PercentAnsweredCell from './PercentAnsweredCell';
+
+import moduleStyles from './multiple-choice-by-student-table.module.scss';
 
 export const COLUMNS = {
   QUESTION: 0,
@@ -90,10 +95,8 @@ class MultipleChoiceByStudentTable extends Component {
         cell: {
           formatters: [this.questionCellFormatter],
           props: {
-            style: {
-              ...tableLayoutStyles.cell,
-              ...styles.questionCell,
-            },
+            style: tableLayoutStyles.cell,
+            className: moduleStyles.questionCell,
           },
         },
       },
@@ -182,12 +185,6 @@ const styles = {
   },
   answerColumnCell: {
     width: ANSWER_COLUMN_WIDTH,
-  },
-  questionCell: {
-    overflow: 'hidden',
-    textOverflow: 'ellipsis',
-    whiteSpace: 'nowrap',
-    maxWidth: 470,
   },
 };
 

@@ -1,8 +1,9 @@
+import moment from 'moment';
+
 import {
   IMPORTANT_TOPICS,
   UTC_PUBLISHED_DATE_FORMAT,
 } from '@cdo/apps/util/curriculumRecommender/curriculumRecommenderConstants';
-import moment from 'moment';
 
 // "nullCourse" and "emptyCourse" have more recent publish dates than the test courses with a single trait so that
 // it'll be clear which courses received points and which didn't. After sorting by points, the recommended curricula
@@ -213,6 +214,129 @@ const PUBLISHED_DATE_TEST_COURSES = [
   ...ONLY_RECENT_PUBLISHED_DATE_COURSES,
 ];
 
+const FULL_TEST_COURSES = [
+  {
+    key: 'fullTestCourse1',
+    course_offering_id: 1,
+    display_name: 'Full Test Course 1',
+    display_name_with_latest_year: 'Full Test Course 1 (6 months ago)',
+    description: 'Full Test Course 1 description',
+    is_featured: true,
+    duration: 'week',
+    marketing_initiative: 'markInit1',
+    grade_levels: '1,2,3',
+    cs_topic: `art_and_design,${IMPORTANT_TOPICS[0]}`,
+    school_subject: 'math',
+    published_date: moment
+      .utc()
+      .subtract(7, 'months')
+      .format(UTC_PUBLISHED_DATE_FORMAT),
+    device_compatibility:
+      '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"ideal","no_device":"ideal"}',
+    course_version_path: '/fullTestCourse1-path',
+  },
+  {
+    key: 'fullTestCourse2',
+    course_offering_id: 2,
+    display_name: 'Full Test Course 2',
+    display_name_with_latest_year: 'Full Test Course 2 (1 year ago)',
+    description: 'Full Test Course 2 description',
+    is_featured: false,
+    duration: 'month',
+    marketing_initiative: 'markInit1',
+    grade_levels: '1,2,3',
+    cs_topic: 'art_and_design,app_design',
+    school_subject: 'math',
+    published_date: moment
+      .utc()
+      .subtract(13, 'months')
+      .format(UTC_PUBLISHED_DATE_FORMAT),
+    device_compatibility:
+      '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"ideal","no_device":"ideal"}',
+    course_version_path: '/fullTestCourse2-path',
+  },
+  {
+    key: 'fullTestCourse3',
+    course_offering_id: 3,
+    display_name: 'Full Test Course 3',
+    display_name_with_latest_year: 'Full Test Course 3 (1.5 years ago)',
+    description: 'Full Test Course 3 description',
+    is_featured: false,
+    duration: 'month',
+    marketing_initiative: 'markInit2',
+    grade_levels: '3,4,5',
+    cs_topic: `${IMPORTANT_TOPICS[0]}`,
+    school_subject: 'math',
+    published_date: moment
+      .utc()
+      .subtract(19, 'months')
+      .format(UTC_PUBLISHED_DATE_FORMAT),
+    device_compatibility:
+      '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"ideal","no_device":"ideal"}',
+    course_version_path: '/fullTestCourse3-path',
+  },
+  {
+    key: 'fullTestCourse4',
+    course_offering_id: 4,
+    display_name: 'Full Test Course 4',
+    display_name_with_latest_year: 'Full Test Course 4 (2 years ago)',
+    description: 'Full Test Course 4 description',
+    is_featured: false,
+    duration: 'month',
+    marketing_initiative: 'markInit2',
+    grade_levels: '3,4,5,6',
+    cs_topic: 'app_design',
+    school_subject: 'science',
+    published_date: moment
+      .utc()
+      .subtract(25, 'months')
+      .format(UTC_PUBLISHED_DATE_FORMAT),
+    device_compatibility:
+      '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"ideal","no_device":"ideal"}',
+    course_version_path: '/fullTestCourse4-path',
+  },
+  {
+    key: 'fullTestCourse5',
+    course_offering_id: 5,
+    display_name: 'Full Test Course 5',
+    display_name_with_latest_year: 'Full Test Course 5 (2.5 years ago)',
+    description: 'Full Test Course 5 description',
+    is_featured: true,
+    duration: 'month',
+    marketing_initiative: 'markInit2',
+    grade_levels: '4,5,6',
+    cs_topic: 'app_design',
+    school_subject: 'science',
+    published_date: moment
+      .utc()
+      .subtract(31, 'months')
+      .format(UTC_PUBLISHED_DATE_FORMAT),
+    device_compatibility:
+      '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"ideal","no_device":"ideal"}',
+    course_version_path: '/fullTestCourse5-path',
+  },
+  {
+    key: 'fullTestCourse6',
+    course_offering_id: 6,
+    display_name: 'Full Test Course 6',
+    display_name_with_latest_year: 'Full Test Course 6 (3 years ago)',
+    description: 'Full Test Course 6 description',
+    is_featured: true,
+    duration: 'quarter',
+    marketing_initiative: 'markInit2',
+    grade_levels: '3,4,5,6,7',
+    cs_topic: 'app_design',
+    school_subject: null,
+    published_date: moment
+      .utc()
+      .subtract(37, 'months')
+      .format(UTC_PUBLISHED_DATE_FORMAT),
+    device_compatibility:
+      '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"ideal","no_device":"ideal"}',
+    course_version_path: '/fullTestCourse6-path',
+  },
+];
+
 export default {
   IS_FEATURED_TEST_COURSES,
   DURATION_TEST_COURSES,
@@ -220,4 +344,5 @@ export default {
   SCHOOL_SUBJECT_TEST_COURSES,
   TOPICS_TEST_COURSES,
   PUBLISHED_DATE_TEST_COURSES,
+  FULL_TEST_COURSES,
 };

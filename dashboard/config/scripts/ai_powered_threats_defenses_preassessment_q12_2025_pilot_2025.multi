@@ -1,0 +1,14 @@
+name 'ai-powered-threats-defenses-preassessment-q12_2025-pilot_2025'
+
+question ‘Which situation illustrates data “in transit”?’
+
+wrong ‘Editing a spreadsheet saved on your laptop’
+right ‘Sending a message through a messaging app’
+wrong ‘Storing pictures securely on your phone’
+wrong ‘Opening an encrypted file to read its contents’
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 9: Encryption
+MARKDOWN

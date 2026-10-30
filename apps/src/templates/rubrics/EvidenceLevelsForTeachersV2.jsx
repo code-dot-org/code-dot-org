@@ -1,47 +1,69 @@
-import React, {useMemo, useState} from 'react';
+import {Typography} from '@mui/material';
+import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import React, {
+  useMemo,
+  useState,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+} from 'react';
+
+import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
-import style from './rubrics.module.scss';
-import {aiEvaluationShape, evidenceLevelShape} from './rubricShapes';
-import {
-  BodyThreeText,
-  BodyFourText,
-  StrongText,
-  Heading6,
-} from '@cdo/apps/componentLibrary/typography';
+
 import {
   UNDERSTANDING_LEVEL_STRINGS,
   UNDERSTANDING_LEVEL_STRINGS_V2,
 } from './rubricHelpers';
+import {aiEvaluationShape, evidenceLevelShape} from './rubricShapes';
+
+import style from './rubrics.module.scss';
 
 const INVALID_UNDERSTANDING = -1;
 
 export default function EvidenceLevelsForTeachersV2({
+  productTour,
   evidenceLevels,
   understanding,
   radioButtonCallback,
   canProvideFeedback,
   isAutosaving,
+  isAiAssessed,
   aiEvalInfo,
+  arrowPositionCallback,
 }) {
-  // Generates a list based on whether the AI understanding level falls in the pass
-  // (Extensive / Convincing) or fail (Limited / None) range. Used to display AI bubble
-  // around evidence level.
-  const passFail = useMemo(() => {
+  const ref = useRef(null);
+
+  // Generates a list of evidence levels to highlight, indicating the AI
+  // recommendation. Using the precomputed value showExactMatch, decides whether
+  // to highlight a single evidence level (exact match) or a range of two
+  // evidence levels (pass / fail).
+  const suggestedEvidenceLevels = useMemo(() => {
     if (!!aiEvalInfo) {
-      if (understanding !== INVALID_UNDERSTANDING) {
+      // If a teacher set an understanding, or no AI assessment, then bail
+      if (understanding !== INVALID_UNDERSTANDING || !isAiAssessed) {
         return [];
       }
-      if (aiEvalInfo.understanding > 1) {
-        return [2, 3];
-      } else if (aiEvalInfo.understanding >= 0) {
-        return [0, 1];
+      if (aiEvalInfo.showExactMatch) {
+        return [aiEvalInfo.understanding];
+      }
+      if (aiEvalInfo.understanding > RubricUnderstandingLevels.LIMITED) {
+        return [
+          RubricUnderstandingLevels.CONVINCING,
+          RubricUnderstandingLevels.EXTENSIVE,
+        ];
+      } else if (aiEvalInfo.understanding >= RubricUnderstandingLevels.NONE) {
+        return [
+          RubricUnderstandingLevels.LIMITED,
+          RubricUnderstandingLevels.NONE,
+        ];
       }
     } else return [];
-  }, [aiEvalInfo, understanding]);
+  }, [aiEvalInfo, isAiAssessed, understanding]);
 
   const [showDescription, setShowDescription] = useState(INVALID_UNDERSTANDING);
-  //const evidenceLevelsReverse = evidenceLevels.reverse();
+
   const handleMouseOver = understandingValue => {
     setShowDescription(understandingValue);
   };
@@ -50,54 +72,116 @@ export default function EvidenceLevelsForTeachersV2({
     setShowDescription(INVALID_UNDERSTANDING);
   };
 
+  useEffect(() => {
+    if (productTour) {
+      setShowDescription(3);
+    } else {
+      setShowDescription(INVALID_UNDERSTANDING);
+    }
+  }, [productTour]);
+
+  useLayoutEffect(() => {
+    if (!ref.current) {
+      return;
+    }
+
+    // Get the position of the suggested buttons and determine the position of the arrow
+    const edge = ref.current.getBoundingClientRect().left;
+    const nodes = ref.current.querySelectorAll('button[data-ai-suggested]');
+    const node = nodes[0];
+    const dim = node?.getBoundingClientRect();
+
+    let left = 0;
+    if (nodes.length === 1) {
+      // If there is just one node, we center it on that suggested level
+      left = (dim.right - dim.left) / 2 + dim.left - edge;
+    } else if (nodes.length === 2) {
+      // If there are two nodes, we place it between the two
+      const nextDim = nodes[1].getBoundingClientRect();
+      left = (nextDim.left - dim.right) / 2 + dim.right - edge;
+    }
+    arrowPositionCallback(left);
+  }, [ref, arrowPositionCallback, suggestedEvidenceLevels]);
+
   if (canProvideFeedback) {
     return (
-      <div>
-        <Heading6>{i18n.assignARubricScore()}</Heading6>
-        <div className={style.evidenceLevelSetHorizontal}>
+      <div id="tour-evidence-levels">
+        <Typography
+          className={style.evidenceLevelHeaderText}
+          variant="body3"
+          gutterBottom
+        >
+          <Typography variant="strong">{i18n.assignARubricScore()}</Typography>
+        </Typography>
+        <div className={style.evidenceLevelSetHorizontalV2} ref={ref}>
           {evidenceLevels.map(evidenceLevel => (
             <button
+              data-ai-suggested={
+                suggestedEvidenceLevels.includes(evidenceLevel.understanding)
+                  ? ''
+                  : null
+              }
               disabled={isAutosaving}
               type="button"
               key={evidenceLevel.id}
               onClick={() => radioButtonCallback(evidenceLevel.understanding)}
+              onFocus={() => handleMouseOver(evidenceLevel.understanding)}
+              onBlur={handleMouseOut}
               onMouseOver={() => handleMouseOver(evidenceLevel.understanding)}
-              onMouseOut={() => handleMouseOut()}
-              className={
-                understanding === evidenceLevel.understanding
-                  ? style.evidenceLevelSelected
-                  : passFail.includes(evidenceLevel.understanding)
-                  ? style.aiEvalSuggestion
-                  : style.evidenceLevelUnselected
-              }
+              onMouseOut={handleMouseOut}
+              className={classnames(
+                style.evidenceLevel,
+                [
+                  understanding === evidenceLevel.understanding
+                    ? style.evidenceLevelSelected
+                    : suggestedEvidenceLevels.includes(
+                        evidenceLevel.understanding
+                      )
+                    ? classnames(
+                        'unittest-evidence-level-suggested',
+                        style.evidenceLevelSuggested,
+                        style.evidenceLevelUnselected
+                      )
+                    : style.evidenceLevelUnselected,
+                ],
+                []
+              )}
             >
               {UNDERSTANDING_LEVEL_STRINGS_V2[evidenceLevel.understanding]}
             </button>
           ))}
-          <BodyFourText>
-            {understanding >= 0
-              ? evidenceLevels.find(e => e.understanding === understanding)
-                  .teacherDescription
-              : showDescription !== INVALID_UNDERSTANDING &&
-                evidenceLevels.find(e => e.understanding === showDescription)
-                  .teacherDescription}
-          </BodyFourText>
+          <Typography
+            className={style.evidenceLevelDescriptionV2}
+            variant="body4"
+            gutterBottom
+          >
+            {showDescription !== INVALID_UNDERSTANDING
+              ? evidenceLevels.find(e => e.understanding === showDescription)
+                  ?.teacherDescription
+              : understanding >= 0 &&
+                evidenceLevels.find(e => e.understanding === understanding)
+                  ?.teacherDescription}
+          </Typography>
         </div>
       </div>
     );
   } else {
     return (
       <div className={style.evidenceLevelSet}>
-        <Heading6>{i18n.rubricScores()}</Heading6>
+        <Typography variant="body3" gutterBottom>
+          <Typography variant="strong">{i18n.rubricScores()}</Typography>
+        </Typography>
         {evidenceLevels.map(evidenceLevel => (
           <div key={evidenceLevel.id} className={style.evidenceLevelOption}>
             {/*TODO: [DES-321] Label-two styles here*/}
-            <BodyThreeText>
-              <StrongText>
+            <Typography variant="body3" gutterBottom>
+              <Typography variant="strong">
                 {UNDERSTANDING_LEVEL_STRINGS[evidenceLevel.understanding]}
-              </StrongText>
-            </BodyThreeText>
-            <BodyThreeText>{evidenceLevel.teacherDescription}</BodyThreeText>
+              </Typography>
+            </Typography>
+            <Typography variant="body3" gutterBottom>
+              {evidenceLevel.teacherDescription}
+            </Typography>
           </div>
         ))}
       </div>
@@ -106,11 +190,14 @@ export default function EvidenceLevelsForTeachersV2({
 }
 
 EvidenceLevelsForTeachersV2.propTypes = {
+  productTour: PropTypes.bool,
   evidenceLevels: PropTypes.arrayOf(evidenceLevelShape).isRequired,
   learningGoalKey: PropTypes.string,
   understanding: PropTypes.number,
   radioButtonCallback: PropTypes.func,
   canProvideFeedback: PropTypes.bool,
   isAutosaving: PropTypes.bool,
+  isAiAssessed: PropTypes.bool.isRequired,
   aiEvalInfo: aiEvaluationShape,
+  arrowPositionCallback: PropTypes.func,
 };

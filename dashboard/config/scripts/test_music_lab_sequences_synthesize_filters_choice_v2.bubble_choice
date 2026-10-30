@@ -1,0 +1,11 @@
+name 'test-music-lab-sequences-synthesize-filters-choice_v2'
+display_name 'Practice Using Effects'
+description 'Choose one of the option below to practice using filters in your song.'
+
+sublevels
+level 'music-lab-sequencing-synthesis-practice-d_v2'
+level 'music-lab-sequencing-synthesis-practice-e_v2'
+level 'test-music-lab-sequences-synthesize-filters-choice-a_v2'
+level 'test-music-lab-sequences-synthesize-filters-choice-b_v2'
+level 'music-lab-sequencing-synthesis-evaluative_v2'
+uses_lab2

@@ -1,0 +1,8 @@
+name 'HoAI_pilot_5_choice_dantest'
+display_name 'Time to party!'
+description 'Your dancer is ready. Your music remix is ready. Now you\'re ready to generate code for the dance party!'
+
+sublevels
+level 'pilot_generate_dancer_choice_2_3_4_dantest'
+level 'length_prompt_choice_2_3_4_dantest'
+level 'dance_moves_choice_2_3_4_dantest'

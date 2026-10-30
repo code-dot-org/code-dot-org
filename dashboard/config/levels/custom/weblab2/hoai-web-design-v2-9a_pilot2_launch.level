@@ -1,0 +1,65 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-04-16T16:17:06.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Exploring Headings\r\n\r\n**Do This:**\r\n1. **Learn:** Ask the AI Tutor: \"How do headings work in HTML?\". _Tip: You can type your question or highlight lines of code and select **\"Add to AI Tutor\"**._\r\n2. **Create:** Tell the AI to add new content using precise words\r\n    - Example: *\"Add an `<h2>` heading so that...\"*\r\n\r\nOnce you’ve added your new content and accepted the changes, click **Continue**.",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "true",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "explainCode",
+        "buildHTML",
+        "documentation"
+      ],
+      "answerTypeCustomizations": {
+        "buildHTML": "Additionally, follow these instructions even if they contradict the above ones above:\n- Only generate <h1> and <p> elements. Follow the patterns in the current index.html file\n- Only generate HTML when the user asks for it\n- NEVER add a style.css link to the head\n- Keep all explanations short, concise, and simple. Do not over-explain the changes you've made to the code.\n- If a student has already asked you about an HTML element AND already made at least one accepted change (i.e., a status message shows 'You accepted AI Tutor's changes'), then also include the following in your response: 'Great job! You're ready to move on - feel free to press the Continue button'",
+        "documentation": "- Keep explanations simple and friendly\n- When offering possible next steps, always prioritize the steps in the instructions. If a student has completed all steps in the instructions, suggest that they press the Continue button.",
+        "explainCode": "- Keep explanations simple and friendly\n- When offering possible next steps, always prioritize the steps in the instructions. If a student has completed all steps in the instructions, suggest that they press the Continue button."
+      }
+    },
+    "display_name": "Headings",
+    "bubble_choice_description": "Learn about Heading elements, like &lt;h1&gt;, &lt;h3&gt;, etc",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <body>\n    <h1>Some of my favorite things</h1>\n    \n    <h2>Places</h2>\n    <p>I really like Tucson because it has the Biosphere</p>\n\n    <h3>Foods</h3>\n    <p>hot cheetos are delicious, but they make my fingers red</p>\n\n    <h4>Drinks</h4>\n    <p>jasmine boba tea is delicious</p>\n\n\n    \n  </body>\n</html>\n  ",
+          "active": true,
+          "folderId": "0"
+        }
+      },
+      "openFiles": [
+        "1"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/b1ebaf0d4b0a26a9cdfb654ea8293917-Frame 1 (9).png",
+    "name_suffix": "_launch",
+    "offer_browser_tts": "false",
+    "teacher_markdown": "**Intent:** Students are building a vocabulary of HTML elements so they can name what they want when prompting AI. The goal is not mastery of HTML or even writing any code yourself \\- it's fluency enough to direct AI precisely. \r\n\r\n**Circulation questions:**\r\n\r\n- \"What did you learn about this element? Can you explain it in your own words?\"  \r\n- \"How did you describe it in your prompt? What specific language did you use?\"\r\n\r\n**Expected mistakes and misconceptions:**\r\n\r\n- Students may use vague prompts like \"add a list\" without specifying content \\- ask them \"what should the list say?\"  \r\n- Students may not understand why the element matters for their own page \\- connect it explicitly: \"where could you use this on the page you built in Act 1?\"",
+    "require_edit_to_continue": "true"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-16T16:17:06.755+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-v2-9a_pilot2\\\"\"],\"cloned_from\":\"hoai-web-design-v2-9a_pilot2\"},{\"changed_at\":\"2026-04-16 21:40:12 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-04-16 21:48:37 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Weblab2>

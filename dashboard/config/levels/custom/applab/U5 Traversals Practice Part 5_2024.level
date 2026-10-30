@@ -78,8 +78,8 @@
     "start_blocks": "// Creating and assigning a list of prices\r\nvar prices = [0.70, 1.50, 0.50, 2.50, 0.50, 3.25, 0.75];\r\n\r\n// Setting up values for traversal\r\nvar minPrice = prices[0];\r\nvar price;\r\n\r\n// Traversing list to find minimum value\r\nfor (var i = 0; i < prices.length; i++) {\r\n  price = prices[i];\r\n  if(price < minPrice){\r\n    minPrice = price;\r\n  }\r\n}\r\n\r\nconsole.log(\"The minimum price is $\" + minPrice);\r\n\r\n// Setting up variables\r\nvar maxPrice = prices[0];\r\n\r\n// Traverse the list to find the maximum value\r\nfor (var i = 0; i < prices.length; i++) {\r\n  // Add code here\r\n  \r\n}\r\n\r\nconsole.log(\"The maximum price is $\" + maxPrice);\r\n\r\n\r\n\r\n\r\n",
     "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"></div></div>",
     "reference_links": [
-      "/docs/concepts/patterns/list-filter-pattern/",
-      "/docs/concepts/patterns/list-reduce-pattern/"
+      "/courses/csp-2024/guides/list-filter-pattern",
+      "/courses/csp-2024/guides/list-reduce-pattern"
     ],
     "encrypted_examples": "RBJCkIiNmvesn9Qt+hQkS16LMMI3bdBDJ/ZMeGjzaX1OjMZ1dVSMrYDPgoby\nxYdX7mgB9Mc59OXr8cxaR/XVJw==\n",
     "widget_mode": "false",

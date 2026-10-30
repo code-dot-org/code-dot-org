@@ -3,9 +3,9 @@ require 'test_helper'
 class AuthoredHintViewRequestsControllerTest < ActionController::TestCase
   setup do
     AuthoredHintViewRequest.stubs(:enabled?).returns true
-    @script = create :script
-    @level = create :level
-    @user = create :user
+    @script = create(:script, :in_single_unit_course)
+    @level = create(:level)
+    @user = create(:user)
     sign_in @user
 
     @default_params = {
@@ -59,8 +59,8 @@ class AuthoredHintViewRequestsControllerTest < ActionController::TestCase
 
   test 'creates authored hints for both users when pairing' do
     driver = @user
-    navigator = create :user
-    section = create :section
+    navigator = create(:user)
+    section = create(:section)
     section.add_student driver
     section.add_student navigator
 
@@ -98,7 +98,7 @@ class AuthoredHintViewRequestsControllerTest < ActionController::TestCase
 
     record = AuthoredHintViewRequest.last
 
-    data.keys.each do |key|
+    data.each_key do |key|
       assert_equal data[key], record[key.to_s.underscore.to_sym]
     end
   end

@@ -1,9 +1,10 @@
+import NotificationBanner from '@code-dot-org/component-library/notification-banner';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {assert} from '../../../../util/reconfiguredChai';
-import {shallow} from 'enzyme';
-import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+
 import Announcements from '@cdo/apps/code-studio/components/progress/Announcements';
-import Notification from '@cdo/apps/templates/Notification';
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+
 import {
   fakeStudentAnnouncement,
   fakeTeacherAndStudentAnnouncement,
@@ -24,9 +25,9 @@ const firehoseAnalyticsData = {
 };
 
 describe('Announcements', () => {
-  it('does not show Notifications if no announcements', () => {
+  it('does not show NotificationBanner if no announcements', () => {
     const wrapper = shallow(<Announcements {...defaultProps} />);
-    assert.equal(wrapper.find(Notification).length, 0);
+    expect(wrapper.find(NotificationBanner).length).toEqual(0);
   });
 
   it('displays old teacher announcement for instructor', () => {
@@ -36,7 +37,7 @@ describe('Announcements', () => {
         announcements={[fakeOldTeacherAnnouncement]}
       />
     );
-    assert.equal(wrapper.find(Notification).length, 1);
+    expect(wrapper.find(NotificationBanner).length).toEqual(1);
   });
 
   it('does not display old teacher announcement for participant', () => {
@@ -47,7 +48,7 @@ describe('Announcements', () => {
         viewAs={ViewType.Participant}
       />
     );
-    assert.equal(wrapper.find(Notification).length, 0);
+    expect(wrapper.find(NotificationBanner).length).toEqual(0);
   });
 
   it('displays new teacher announcement for instructor', () => {
@@ -57,34 +58,33 @@ describe('Announcements', () => {
         announcements={[fakeTeacherAnnouncement]}
       />
     );
-    assert.equal(wrapper.find(Notification).length, 1);
+    expect(wrapper.find(NotificationBanner).length).toEqual(1);
   });
 
-  it('defaults to dismissible and no button text for teacher announcement without dismissible and button text', () => {
+  it('defaults to dismissible and "Learn more" action for announcement without dismissible and button text', () => {
     const wrapper = shallow(
       <Announcements
         {...defaultProps}
         announcements={[fakeTeacherAnnouncement]}
       />
     );
-    assert.equal(wrapper.find(Notification).length, 1);
-    assert.equal(wrapper.find(Notification).props().dismissible, true);
-    assert.equal(wrapper.find(Notification).props().buttonText, 'Learn more');
+    const banner = wrapper.find(NotificationBanner);
+    expect(banner.length).toEqual(1);
+    expect(typeof banner.prop('onClose')).toEqual('function');
+    expect(banner.prop('actions').props.text).toEqual('Learn more');
   });
 
-  it('displays new teacher announcement with dismissible and button text for instructor', () => {
+  it('displays non-dismissible announcement with custom action text', () => {
     const wrapper = shallow(
       <Announcements
         {...defaultProps}
         announcements={[fakeTeacherAnnouncementWithDismissibleAndButtonText]}
       />
     );
-    assert.equal(wrapper.find(Notification).length, 1);
-    assert.equal(wrapper.find(Notification).props().dismissible, false);
-    assert.equal(
-      wrapper.find(Notification).props().buttonText,
-      'Push the button'
-    );
+    const banner = wrapper.find(NotificationBanner);
+    expect(banner.length).toEqual(1);
+    expect(banner.prop('onClose')).toBeUndefined();
+    expect(banner.prop('actions').props.text).toEqual('Push the button');
   });
 
   it('has only instructor announcements', () => {
@@ -98,7 +98,7 @@ describe('Announcements', () => {
         ]}
       />
     );
-    assert.equal(wrapper.find(Notification).length, 2);
+    expect(wrapper.find(NotificationBanner).length).toEqual(2);
   });
 
   it('has participant announcement if necessary', () => {
@@ -109,7 +109,7 @@ describe('Announcements', () => {
         announcements={[fakeStudentAnnouncement]}
       />
     );
-    assert.equal(wrapper.find(Notification).length, 1);
+    expect(wrapper.find(NotificationBanner).length).toEqual(1);
   });
 
   it('has all participant announcements but no instructor announcements if necessary', () => {
@@ -125,7 +125,7 @@ describe('Announcements', () => {
       />,
       {disableLifecycleMethods: true}
     );
-    assert.equal(wrapper.find(Notification).length, 2);
+    expect(wrapper.find(NotificationBanner).length).toEqual(2);
   });
 
   it('displays instructor announcement with analytics data', () => {
@@ -136,6 +136,6 @@ describe('Announcements', () => {
         announcements={[fakeTeacherAnnouncement]}
       />
     );
-    assert.equal(wrapper.find(Notification).length, 1);
+    expect(wrapper.find(NotificationBanner).length).toEqual(1);
   });
 });

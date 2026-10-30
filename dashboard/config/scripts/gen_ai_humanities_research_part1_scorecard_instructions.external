@@ -1,0 +1,12 @@
+name 'gen-ai-humanities-research-part1-scorecard-instructions'
+
+
+markdown <<MARKDOWN
+## Scorecard
+
+Rate the search engine's performance on a scale of 1 to 5.
+
+**1:** Very Poor / Very Slow / Not Diverse
+
+**5:** Excellent / Very Fast / Highly Diverse
+MARKDOWN

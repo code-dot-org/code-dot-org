@@ -1,7 +1,9 @@
-import React from 'react';
-import FontAwesome from '../templates/FontAwesome';
 import loadableComponents from 'loadable-components';
+import React from 'react';
+
 import i18n from '@cdo/locale';
+
+import FontAwesome from '../legacySharedComponents/FontAwesome';
 
 function Spinner() {
   return <FontAwesome icon="spinner" className="fa-pulse fa-3x" />;
@@ -10,7 +12,7 @@ function Spinner() {
 function ExclamationTriangle() {
   return (
     <FontAwesome
-      icon="exclamation-triangle"
+      icon="triangle-exclamation"
       className="fa-2x"
       title={i18n.loadingError()}
     />

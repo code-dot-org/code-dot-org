@@ -1,0 +1,54 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-09-02T16:03:59.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "mini_app": "theater",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildPython",
+        "documentation",
+        "explainCode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "long_instructions": "## Stage Director\r\n\r\nMake an object appear in a different place each time the program runs.\r\n\r\n1. Review the code and ask AI Tutor how `draw_ellipse()` works.\r\n2. Use `randint()` to store random values for the x-position and y-position. The values can be from 0 to 400.\r\n3. Update the `draw_ellipse()` command to use your variables.\r\n4. Run the program several times and observe where the object appears.",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "from theater import *\nfrom random import randint\n\n# Night sky\nset_fill_color(\"black\")\ndraw_rectangle(0, 0, 400, 400)\n\n# Moon\nset_fill_color(\"ivory\")\ndraw_ellipse(280, 60, 70, 70)\n\n# Stars\nset_fill_color(\"white\")\ndraw_ellipse(40, 50, 5, 5)\ndraw_ellipse(125, 120, 4, 4)\ndraw_ellipse(290, 70, 6, 6)\ndraw_ellipse(350, 150, 5, 5)\ndraw_ellipse(80, 210, 4, 4)\ndraw_ellipse(230, 180, 5, 5)\n\n# Music notes\nset_text_color(\"aqua\")\nset_text_height(30)\ndraw_text(\"♪\", 70, 300)\ndraw_text(\"♫\", 310, 255)\ndraw_text(\"♪\", 245, 320)\n\n# Title\nset_text_color(\"ivory\")\nset_text_height(28)\ndraw_text(\"Moonrise Melody\", 95, 360)\n\n\n# Twinkle Twinkle melody\nplay_note_and_pause(72, 0.5)\nplay_note_and_pause(72, 0.5)\nplay_note_and_pause(79, 0.5)\nplay_note_and_pause(79, 0.5)\nplay_note_and_pause(81, 0.5)\nplay_note_and_pause(81, 0.5)\nplay_note_and_pause(79, 0.8)\n\nplay()",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMrEECiP+qLA4VKn\nj8jCr2z9ROjHxTYxh2Ym4xkW/pEPIbA6sANbQJzhhiYciMRoDy/7A6UQsjHy\nhRFZV1utkVOLR3pcAEsIzYbXmqvTMVsINjJgXKyP18ANgNe/kqunbLOpr+GD\n2HTws/PiPakRcMernMspIJyT83JyqQZ6kLE1F3lJfU9iLwmV4VwhwTipOH0b\nntERJWOncB4Pk2rZkk8BztJpkK/4F4ykIcImEe3Rz2zHbu2Ei1C2F1SNPQYf\nR1647Jo741gs7InaT9DbMcje5HswhoTV03enaZXFlZbSLC9tCp3vU8JQAnlx\nqF/KwNyBFr1oKBEmYbS4gYO1P5DhMC0T4WRcgM1aBELj/g37snNvLHYo/ypL\nLjRwbv21GELgt+kqA8S6p+Yg/PD5nl37XZ5GgqamvjHTO+8eqKUO/glszJdk\nvHntCVXcnf1FSO67+VFKjgqPq6ExDUWfiFCBZvnAJxXlDN3Y+r+aJJie7dIg\nTZ0K4vWPuu32X8od9aXQvXVzHh6/qBxjs91d1R3ISxkkdUYkeK/n/zor1mYy\noEo54dufrnMDQHmVJcC7Pl3Qh4cQsYAEm3/GgzlyU4Mzgey4f1e2wdtswW8H\naPiR04Kq83JsAPvMYoStBkB/Fb4rhKCkrDOUYgTXbQuvqnTQ/QYTCIbLfHMU\nUQdN3eUMO32vZaOw5/UWOGmbTaeAxnyA/Q28M45vh+Y/wJ3riwGiKQEnGwqG\nJRsA3SI6RAqIlgB6EbHJ7llFK0BB3uQ4cnivKg6lNRaQQg5CXYZDSRRvjevW\nQOac0Wkf4M0gQnPSRQ66tjawseyRcVonIOGIel3FH0bbpTN68PhjXohcI5+x\nIwbtP2FhbthG39h+573dc3tXI73xIZ9CoOmP8IWnFPpMRkFWqG3Oe1tdS1VZ\nrvxvl4g/SwIg7vio15opt6TzjyIgawdazOw2HIyyybzUESUWGAzVybf5jAdD\n61NfKToPCcK4E8cPbZq89xPXw2pFKbpSezHBmDXRucGk/RPl47MGJzKC9rV2\nxHKnxuhd5It7QV17UM9zJ9Dli3N7Mwmbl/mOkLUg8CYT2OeL4k+mFBuxHSOU\nycvWR0fQ/mHGYuI/gOwJD/NE9M2wND4lOqL9S/21NjKttFtrfS8NURQ7SX00\n5XVnAKNeZYxEn3dUYdPHBZ5y/pxntepaOcr4aMw88TUAlTZKEEb8DBt+OO46\nI1LOT4L5nToyKu5K2byQMRwW4i1To8AVQBmksxoy2+0rYcyl6FfukbsAHoqs\nIF+7HAgB7iMHO9t5cDSx20ygUM+QsmRLLXZyIlnYk22slEUQkyjOPS/rB5Qx\nfcVSYJOGnpCBO42S1juENybmM/Fm8fLfCRgGIMpSXrfKrURVY4TD7FT4zc0f\nFwvVI7OjQRagLl/cBOcEclY8zZXH7X3Sc/EXVuCEPZ67BAfJCxM5in/JTmYD\nc8DLeePSIbRWNMIhLmiACbzIckchLCpxFfa3g2dv\n",
+    "display_name": "Stage Director",
+    "bubble_choice_description": "Make an object appear in a different place each time the program runs.",
+    "thumbnail_url": "https://images.code.org/c782e6c449ce75a846edfd01a62c7946-95843efd-cff5-4187-8bcd-6baea676730c.gif"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-02T16:03:59.496+00:00\",\"changed\":[\"cloned from \\\"csp_unit1_lesson29_level1_dev_27_28\\\"\"],\"cloned_from\":\"csp_unit1_lesson29_level1_dev_27_28\"},{\"changed_at\":\"2026-09-02 16:06:51 +0000\",\"changed\":[\"predict_settings\",\"ai_tutor_prompt_settings\",\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-02 16:21:50 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-02 16:23:52 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-02 16:24:35 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-02 22:43:19 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Pythonlab>

@@ -1,0 +1,23 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-08-25T23:04:46.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "## Choice Progression Complete!\n\nBoth paths of the choice progression should culminate here.",
+        "imageUrl": "",
+        "key": "undefined-e0d84e01-ec59-47c6-882e-2f8d6d36c117",
+        "layout": "text-top-right"
+      }
+    ],
+    "use_links": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-08-25 23:04:56 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"}]"
+}]]></config>
+</Panels>

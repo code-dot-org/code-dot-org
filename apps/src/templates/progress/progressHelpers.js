@@ -1,13 +1,15 @@
-import {fullyLockedLessonMapping} from '@cdo/apps/code-studio/lessonLockRedux';
-import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import {isLessonHiddenForSection} from '@cdo/apps/code-studio/hiddenLessonRedux';
-import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
-import {PUZZLE_PAGE_NONE} from './progressTypes';
+import _ from 'lodash';
+
 import {
   activityCssClass,
   resultFromStatus,
 } from '@cdo/apps/code-studio/activityUtils';
-import _ from 'lodash';
+import {isLessonHiddenForSection} from '@cdo/apps/code-studio/hiddenLessonRedux';
+import {fullyLockedLessonMapping} from '@cdo/apps/code-studio/lessonLockRedux';
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {LevelStatus, LevelKind} from '@cdo/generated-scripts/sharedConstants';
+
+import {PUZZLE_PAGE_NONE} from './progressTypes';
 
 /**
  * This is conceptually similar to being a selector, except that it operates on
@@ -100,7 +102,7 @@ export function lessonLocked(levels) {
  */
 export function getIconForLevel(level, inProgressView = false) {
   if (inProgressView && isLevelAssessment(level)) {
-    return 'check-circle';
+    return 'star';
   }
 
   if (level.isUnplugged) {
@@ -138,6 +140,22 @@ export function isLevelAssessment(level) {
   return level.kind === 'assessment';
 }
 
+// Statuses that count as completed work, as opposed to merely attempted.
+const completedStatuses = [
+  LevelStatus.perfect,
+  LevelStatus.passed,
+  LevelStatus.submitted,
+  LevelStatus.free_play_complete,
+  LevelStatus.completed_assessment,
+];
+
+/**
+ * @returns Whether a level status represents completed work.
+ */
+export function isLevelStatusCompleted(status) {
+  return completedStatuses.includes(status);
+}
+
 /**
  * Checks if a whole lesson is assessment levels
  * @param {[]} levels An array of levels
@@ -155,6 +173,16 @@ export function lessonIsAllAssessment(levels) {
 export function lessonHasLevels(lesson) {
   return !!lesson.levels?.length;
 }
+
+export const commentLeft = progress =>
+  progress?.teacherFeedbackCommented && progress?.teacherFeedbackNew;
+
+export const studentNeedsFeedback = (progress, level) =>
+  progress &&
+  progress.status !== LevelStatus.not_tried &&
+  !progress.teacherFeedbackNew &&
+  level.kind === 'assessment' &&
+  level.canHaveFeedback;
 
 /**
  * Determines if we should show "Keep working" and "Needs review" states for
@@ -180,15 +208,7 @@ function lessonProgressForStudent(studentLevelProgress, lessonLevels) {
     return null;
   }
 
-  const completedStatuses = [
-    LevelStatus.perfect,
-    LevelStatus.submitted,
-    LevelStatus.free_play_complete,
-    LevelStatus.completed_assessment,
-  ];
-
   let attempted = 0;
-  let imperfect = 0;
   let completed = 0;
   let timeSpent = 0;
   let lastTimestamp = 0;
@@ -197,15 +217,14 @@ function lessonProgressForStudent(studentLevelProgress, lessonLevels) {
     const levelProgress = studentLevelProgress[level.id];
     if (levelProgress) {
       attempted += levelProgress.status === LevelStatus.attempted;
-      imperfect += levelProgress.status === LevelStatus.passed;
       completed += completedStatuses.includes(levelProgress.status);
       timeSpent += levelProgress.timeSpent || 0;
       lastTimestamp = Math.max(lastTimestamp, levelProgress.lastTimestamp || 0);
     }
   });
 
-  const incomplete = filteredLevels.length - completed - imperfect;
-  const isLessonStarted = attempted + imperfect + completed > 0;
+  const incomplete = filteredLevels.length - completed;
+  const isLessonStarted = attempted + completed > 0;
 
   if (!isLessonStarted) {
     return null;
@@ -214,7 +233,6 @@ function lessonProgressForStudent(studentLevelProgress, lessonLevels) {
   const getPercent = count => (100 * count) / filteredLevels.length;
   return {
     incompletePercent: getPercent(incomplete),
-    imperfectPercent: getPercent(imperfect),
     completedPercent: getPercent(completed),
     timeSpent: timeSpent,
     lastTimestamp: lastTimestamp,
@@ -239,7 +257,7 @@ export function lessonProgressForSection(sectionLevelProgress, lessons) {
       // create empty "dictionary" to store per-lesson progress for student
       const studentLessonProgress = {};
       // for each lesson, summarize student's progress based on level progress
-      lessons.forEach(lesson => {
+      lessons?.forEach(lesson => {
         studentLessonProgress[lesson.id] = lessonProgressForStudent(
           studentLevelProgress,
           lesson.levels
@@ -257,9 +275,10 @@ export function lessonProgressForSection(sectionLevelProgress, lessons) {
  * script.lessons.levels) contains more data than we need. This parses the parts
  * we care about to conform to our `levelType` object.
  */
-export const processedLevel = level => {
+export const processedLevel = (level, parentLevelId) => {
+  const id = level.activeId || level.id;
   return {
-    id: level.activeId || level.id,
+    id,
     url: level.url,
     name: level.name,
     app: level.app,
@@ -269,20 +288,31 @@ export const processedLevel = level => {
     kind: level.kind,
     icon: level.icon,
     isUnplugged: level.display_as_unplugged,
-    levelNumber: level.kind === LevelKind.unplugged ? undefined : level.title,
+    levelNumber:
+      level.kind === LevelKind.unplugged
+        ? undefined
+        : level.title || level.position,
     bubbleText:
       level.kind === LevelKind.unplugged
         ? undefined
         : level.letter || level.title.toString(),
     isConceptLevel: level.is_concept_level,
     isValidated: level.is_validated,
+    canHaveFeedback: level.can_have_feedback,
     bonus: level.bonus,
+    headerLabel: level.header_label,
     pageNumber:
       typeof level.page_number !== 'undefined'
         ? level.page_number
         : PUZZLE_PAGE_NONE,
+    // Script level ID doesn't apply for sublevels. Set to undefined if we have a parent level.
+    scriptLevelId: parentLevelId ? undefined : level.id,
     sublevels:
-      level.sublevels && level.sublevels.map(level => processedLevel(level)),
+      level.sublevels &&
+      level.sublevels.map(sublevel => processedLevel(sublevel, id)),
+    path: level.path,
+    parentLevelId,
+    navigationType: parentLevelId ? level.navigation_type : undefined, // Only applicable for sublevels.
   };
 };
 
@@ -326,6 +356,9 @@ export const levelProgressFromServer = serverProgress => {
     paired: serverProgress.paired || false,
     timeSpent: serverProgress.time_spent,
     teacherFeedbackReviewState: serverProgress.teacher_feedback_review_state,
+    teacherFeedbackNew: serverProgress.teacher_feedback_new || false,
+    teacherFeedbackCommented:
+      serverProgress.teacher_feedback_commented || false,
     lastTimestamp: serverProgress.last_progress_at,
     pages: getPagesProgress(serverProgress),
   };

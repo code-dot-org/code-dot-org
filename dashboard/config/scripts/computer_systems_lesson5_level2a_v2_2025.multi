@@ -1,0 +1,9 @@
+name 'computer-systems-lesson5-level2a_v2-2025'
+title 'Realistic Scenario'
+description ''
+question 'Which of the problems in the simulation seemed most similar to something you have experienced with a computer or device in real life?'
+right 'Slow Performance (e.g., when your computer takes forever to load something)'
+right 'Program Crashes (e.g., when an app suddenly closes while you are using it)'
+right 'Error Messages (e.g., when a message pops up saying "File not found" or "Network error")'
+right 'Permission Errors (e.g., when your computer says, "You do not have permission to open this file")'
+allow_multiple_attempts false

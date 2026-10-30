@@ -4,17 +4,41 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_course": true,
+      "content_area": "curriculum_k_5",
+      "curriculum_umbrella": "CSF",
       "is_migrated": true,
-      "version_year": "2024"
+      "supported_locales": [
+        "ar-SA",
+        "es-ES",
+        "es-LA",
+        "es-MX",
+        "fa-IR",
+        "fil-PH",
+        "fr-FR",
+        "hi-IN",
+        "id-ID",
+        "it-IT",
+        "ja-JP",
+        "ko-KR",
+        "pt-BR",
+        "pl-PL",
+        "sk-SK",
+        "th-TH",
+        "tr-TR",
+        "vi-VN",
+        "zh-TW"
+      ],
+      "topic_tags": [
+        "music_lab"
+      ]
     },
     "new_name": null,
-    "family_name": "music-intro",
-    "serialized_at": "2024-02-15 22:58:00 UTC",
-    "published_state": "beta",
-    "instruction_type": "self_paced",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "family_name": null,
+    "serialized_at": "2025-04-03 01:05:51 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "music-intro-2024"
     }
@@ -41,6 +65,7 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
+        "background": "dark",
         "overview": "This is an introduction to Music Lab, teaching one feature per level, and ending in a free play level.",
         "student_overview": "This is an intro to Music Lab, showing some of the cool features that are available.  The final level lets you build and share a complete track. "
       },
@@ -173,14 +198,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "musiclab_intro_panels_start"
+          "musiclab_intro_panels_start_2"
         ],
         "progression": "Intro"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "musiclab_intro_panels_start"
+          "musiclab_intro_panels_start_2"
         ],
         "lesson.key": "Music Lab introduction",
         "lesson_group.key": "",
@@ -188,7 +213,7 @@
         "activity_section.key": "7cd580e8-2712-436c-b0ac-50a2b299722d"
       },
       "level_keys": [
-        "musiclab_intro_panels_start"
+        "musiclab_intro_panels_start_2"
       ]
     },
     {
@@ -298,14 +323,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "musiclab_intro_panels_function"
+          "musiclab_intro_panels_function_2"
         ],
         "progression": "Functions"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "musiclab_intro_panels_function"
+          "musiclab_intro_panels_function_2"
         ],
         "lesson.key": "Music Lab introduction",
         "lesson_group.key": "",
@@ -313,7 +338,7 @@
         "activity_section.key": "9895cbc4-dab4-467d-99cb-6670db634a63"
       },
       "level_keys": [
-        "musiclab_intro_panels_function"
+        "musiclab_intro_panels_function_2"
       ]
     },
     {
@@ -373,14 +398,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "musiclab_intro_panels_end"
+          "musiclab_intro_panels_end_2"
         ],
         "progression": "Outro"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "musiclab_intro_panels_end"
+          "musiclab_intro_panels_end_2"
         ],
         "lesson.key": "Music Lab introduction",
         "lesson_group.key": "",
@@ -388,16 +413,16 @@
         "activity_section.key": "5f0a9dec-52d3-466e-b76b-e4a921b23a10"
       },
       "level_keys": [
-        "musiclab_intro_panels_end"
+        "musiclab_intro_panels_end_2"
       ]
     }
   ],
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "musiclab_intro_panels_start",
+        "level.key": "musiclab_intro_panels_start_2",
         "script_level.level_keys": [
-          "musiclab_intro_panels_start"
+          "musiclab_intro_panels_start_2"
         ],
         "lesson.key": "Music Lab introduction",
         "lesson_group.key": "",
@@ -455,9 +480,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "musiclab_intro_panels_function",
+        "level.key": "musiclab_intro_panels_function_2",
         "script_level.level_keys": [
-          "musiclab_intro_panels_function"
+          "musiclab_intro_panels_function_2"
         ],
         "lesson.key": "Music Lab introduction",
         "lesson_group.key": "",
@@ -491,9 +516,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "musiclab_intro_panels_end",
+        "level.key": "musiclab_intro_panels_end_2",
         "script_level.level_keys": [
-          "musiclab_intro_panels_end"
+          "musiclab_intro_panels_end_2"
         ],
         "lesson.key": "Music Lab introduction",
         "lesson_group.key": "",

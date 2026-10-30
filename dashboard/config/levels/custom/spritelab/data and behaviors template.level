@@ -37,12 +37,8 @@
     "pause_animations_by_default": "false",
     "hide_custom_blocks": "false",
     "auto_run_setup": "DRAW_LOOP",
-    "contained_level_names": null,
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
-    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"1b79e483-7a23-47e8-b649-d4ff8f1e5572\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"1b79e483-7a23-47e8-b649-d4ff8f1e5572\": {\r\n      \"name\": \"mike\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/level_animations/9QVNHaKLxhOhfDq4L4WRSoXS81adP8ij/smiley_face.png\",\r\n      \"frameSize\": {\r\n        \"x\": 100,\r\n        \"y\": 100\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"GawH0GVZDNygSRgdC4OowpS8cVnRZAPP\"\r\n    }\r\n  }\r\n}"
+    "start_animations": "{\n  \"orderedKeys\": [\n    \"1b79e483-7a23-47e8-b649-d4ff8f1e5572\"\n  ],\n  \"propsByKey\": {\n    \"1b79e483-7a23-47e8-b649-d4ff8f1e5572\": {\n      \"name\": \"mike\",\n      \"sourceUrl\": \"/api/v1/animation-library/level_animations/9QVNHaKLxhOhfDq4L4WRSoXS81adP8ij/smiley_face.png\",\n      \"frameSize\": {\n        \"x\": 100,\n        \"y\": 100\n      },\n      \"frameCount\": 1,\n      \"looping\": true,\n      \"frameDelay\": 12,\n      \"version\": \"GawH0GVZDNygSRgdC4OowpS8cVnRZAPP\"\n    }\n  }\n}",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",

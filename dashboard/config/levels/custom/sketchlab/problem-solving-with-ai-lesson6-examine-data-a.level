@@ -1,0 +1,1161 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "game_id": 75,
+  "created_at": "2026-07-31T18:29:21.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##Hospital Triage Data\r\n\r\nExamine the hospital triage forms below for the six patients that arrived at the same time. \r\n\r\nUse your best judgement and rank the order in which these patients should be seen. Drag the numbers in the box to the left and place them at the top of the chart to indicate the order.\r\n\r\nFor the patient who should be seen first, write a justification as to why you chose them,\r\n\r\n\r\n",
+    "require_edit_to_continue": "true",
+    "start_sources": {
+      "source": {
+        "nodes": [
+          {
+            "id": "29b8feab-4477-4631-9e23-b7223eaff01e",
+            "type": "group",
+            "position": {
+              "x": 602.1060846945596,
+              "y": 107.17981441218353
+            },
+            "width": 3599.804901679467,
+            "height": 820.7596402277919,
+            "zIndex": -1,
+            "data": {
+            },
+            "measured": {
+              "width": 3600,
+              "height": 821
+            }
+          },
+          {
+            "id": "0dabe058-bd4e-4a55-9248-3bee57d8ccda",
+            "type": "text",
+            "data": {
+              "text": "Maria",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 12.787379267140523,
+              "y": 243.9667820969973
+            },
+            "width": 158.68049208922707,
+            "height": 40,
+            "measured": {
+              "width": 159,
+              "height": 40
+            },
+            "dragging": false,
+            "parentId": "29b8feab-4477-4631-9e23-b7223eaff01e",
+            "expandParent": true
+          },
+          {
+            "id": "62aa6bfd-1cc5-43e2-ad14-0be842f29549",
+            "type": "text",
+            "data": {
+              "text": "5",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 10,
+              "y": 276.17311105826457
+            },
+            "width": 80,
+            "height": 40,
+            "measured": {
+              "width": 80,
+              "height": 40
+            },
+            "dragging": false,
+            "parentId": "29b8feab-4477-4631-9e23-b7223eaff01e",
+            "expandParent": true
+          },
+          {
+            "id": "5a7c230d-0e3d-4d2f-9c76-8b9d1854e5ec",
+            "type": "text",
+            "data": {
+              "text": "Deep forehead cut from a fall at the playground",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 13.958523732318895,
+              "y": 321.4032449770475
+            },
+            "width": 329.5567665343168,
+            "height": 42.639015821545684,
+            "measured": {
+              "width": 330,
+              "height": 43
+            },
+            "dragging": false,
+            "parentId": "29b8feab-4477-4631-9e23-b7223eaff01e",
+            "expandParent": true
+          },
+          {
+            "id": "7a4c9893-2876-4838-8dc1-10f778cc73fb",
+            "type": "text",
+            "data": {
+              "text": "Stitches, cleaning and dressing the wound, tetanus shot",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 615.4048544714917,
+              "y": 585.2376358187007
+            },
+            "width": 331.5360284004762,
+            "height": 41.31950791077281,
+            "measured": {
+              "width": 332,
+              "height": 41
+            },
+            "dragging": false
+          },
+          {
+            "id": "d78a389c-7d66-4fe9-bd6d-7a0963d29cd6",
+            "type": "text",
+            "data": {
+              "text": "6",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 621.3426400699698,
+              "y": 537.0755970754902
+            },
+            "width": 80,
+            "height": 40,
+            "measured": {
+              "width": 80,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "3de872ce-e035-4965-ad87-f1fe5f722bc6",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson6-examine-data-a/uuid/900d53d5-a635-4073-9c64-a527e571c7c2.png",
+              "altText": "triageForm",
+              "locked": true
+            },
+            "position": {
+              "x": 372.1157505133462,
+              "y": 117.17981441218353
+            },
+            "width": 636.3423557890147,
+            "height": 727.6333929109175,
+            "measured": {
+              "width": 636,
+              "height": 728
+            },
+            "dragging": false,
+            "zIndex": -1
+          },
+          {
+            "id": "5fc7f490-c6ee-4a9a-b9aa-0f1dd9ddbe6a",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson6-examine-data-a/uuid/900d53d5-a635-4073-9c64-a527e571c7c2.png",
+              "altText": "triageForm"
+            },
+            "position": {
+              "x": 406.35202160780125,
+              "y": 83.12624731687447
+            },
+            "width": 636.3423557890147,
+            "height": 727.6333929109175,
+            "measured": {
+              "width": 636,
+              "height": 728
+            },
+            "dragging": false,
+            "zIndex": -1,
+            "parentId": "29b8feab-4477-4631-9e23-b7223eaff01e",
+            "expandParent": true
+          },
+          {
+            "id": "1d3fb6e0-c6cb-460a-8aa8-141bd7775871",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson6-examine-data-a/uuid/900d53d5-a635-4073-9c64-a527e571c7c2.png",
+              "altText": "triageForm"
+            },
+            "position": {
+              "x": 1042.694377396816,
+              "y": 10
+            },
+            "width": 636.3423557890147,
+            "height": 727.6333929109175,
+            "measured": {
+              "width": 636,
+              "height": 728
+            },
+            "dragging": false,
+            "zIndex": -1,
+            "parentId": "29b8feab-4477-4631-9e23-b7223eaff01e",
+            "expandParent": true
+          },
+          {
+            "id": "358c0d4c-6618-45d8-9f37-6a5d6a8d15d6",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson6-examine-data-a/uuid/900d53d5-a635-4073-9c64-a527e571c7c2.png",
+              "altText": "triageForm"
+            },
+            "position": {
+              "x": 1682.518935439015,
+              "y": 70.93853943072861
+            },
+            "width": 636.3423557890147,
+            "height": 727.6333929109175,
+            "measured": {
+              "width": 636,
+              "height": 728
+            },
+            "dragging": false,
+            "zIndex": -1,
+            "parentId": "29b8feab-4477-4631-9e23-b7223eaff01e",
+            "expandParent": true
+          },
+          {
+            "id": "da2f2b59-93f3-45ba-b1c1-e0b6a7974472",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson6-examine-data-a/uuid/900d53d5-a635-4073-9c64-a527e571c7c2.png",
+              "altText": "triageForm"
+            },
+            "position": {
+              "x": 2315.379088974845,
+              "y": 10
+            },
+            "width": 636.3423557890147,
+            "height": 727.6333929109175,
+            "measured": {
+              "width": 636,
+              "height": 728
+            },
+            "dragging": false,
+            "zIndex": -1,
+            "parentId": "29b8feab-4477-4631-9e23-b7223eaff01e",
+            "expandParent": true
+          },
+          {
+            "id": "7142660d-8774-46e1-842a-c10c816b5fa3",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson6-examine-data-a/uuid/900d53d5-a635-4073-9c64-a527e571c7c2.png",
+              "altText": "triageForm"
+            },
+            "position": {
+              "x": 2953.462545890452,
+              "y": 69.19743830413643
+            },
+            "width": 636.3423557890147,
+            "height": 727.6333929109175,
+            "measured": {
+              "width": 636,
+              "height": 728
+            },
+            "dragging": false,
+            "zIndex": -1,
+            "parentId": "29b8feab-4477-4631-9e23-b7223eaff01e",
+            "expandParent": true
+          },
+          {
+            "id": "94e37290-4301-4e10-90d7-3423fdf94fd2",
+            "type": "text",
+            "data": {
+              "text": "Hospital Triage Data",
+              "strokeColor": "transparent",
+              "fontFamily": "cursive",
+              "fontSize": 70,
+              "locked": true
+            },
+            "position": {
+              "x": 418.1846883613848,
+              "y": -351.0517969377243
+            },
+            "width": 960.9999999999995,
+            "height": 83.65053748988726,
+            "measured": {
+              "width": 961,
+              "height": 84
+            },
+            "dragging": false
+          },
+          {
+            "id": "c65de785-a3ea-4a81-9836-55206db7fe60",
+            "type": "text",
+            "data": {
+              "text": "James",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 646.4013350336348,
+              "y": 317.0620484317376
+            },
+            "width": 158.68049208922707,
+            "height": 40,
+            "measured": {
+              "width": 159,
+              "height": 40
+            },
+            "dragging": false,
+            "parentId": "29b8feab-4477-4631-9e23-b7223eaff01e",
+            "expandParent": true
+          },
+          {
+            "id": "8018b2f2-5ba5-4a32-8c3f-2a2f26ca4282",
+            "type": "text",
+            "data": {
+              "text": "Priya",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 1283.6443473663967,
+              "y": 247.41800336804783
+            },
+            "width": 158.68049208922707,
+            "height": 40,
+            "measured": {
+              "width": 159,
+              "height": 40
+            },
+            "dragging": false,
+            "parentId": "29b8feab-4477-4631-9e23-b7223eaff01e",
+            "expandParent": true
+          },
+          {
+            "id": "7c78d12c-a0b6-4630-98e4-aa96223419fa",
+            "type": "text",
+            "data": {
+              "text": "George",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 1926.110663078935,
+              "y": 303.1332394189997
+            },
+            "width": 158.68049208922707,
+            "height": 40,
+            "measured": {
+              "width": 159,
+              "height": 40
+            },
+            "dragging": false,
+            "parentId": "29b8feab-4477-4631-9e23-b7223eaff01e",
+            "expandParent": true
+          },
+          {
+            "id": "ddeca4ef-c6a1-4207-a509-498d17000da4",
+            "type": "text",
+            "data": {
+              "text": "Olivia",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 2558.13037203192,
+              "y": 243.93580111486335
+            },
+            "width": 158.68049208922707,
+            "height": 40,
+            "measured": {
+              "width": 159,
+              "height": 40
+            },
+            "dragging": false,
+            "parentId": "29b8feab-4477-4631-9e23-b7223eaff01e",
+            "expandParent": true
+          },
+          {
+            "id": "0748808a-97e0-4db3-be08-4310575043e7",
+            "type": "text",
+            "data": {
+              "text": "Dante",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 3198.8555866178663,
+              "y": 299.6510371658152
+            },
+            "width": 158.68049208922707,
+            "height": 40,
+            "measured": {
+              "width": 159,
+              "height": 40
+            },
+            "dragging": false,
+            "parentId": "29b8feab-4477-4631-9e23-b7223eaff01e",
+            "expandParent": true
+          },
+          {
+            "id": "b849075c-d9cc-48e3-8feb-e36b95070c1c",
+            "type": "text",
+            "data": {
+              "text": "23",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 649.8835372868192,
+              "y": 350.1429698369903
+            },
+            "width": 80,
+            "height": 40,
+            "measured": {
+              "width": 80,
+              "height": 40
+            },
+            "dragging": false,
+            "parentId": "29b8feab-4477-4631-9e23-b7223eaff01e",
+            "expandParent": true
+          },
+          {
+            "id": "f6fce4a4-d35f-474f-b228-390d51c01f32",
+            "type": "text",
+            "data": {
+              "text": "36",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 1283.6443473663967,
+              "y": 278.75782364670823
+            },
+            "width": 80,
+            "height": 40,
+            "measured": {
+              "width": 80,
+              "height": 40
+            },
+            "dragging": false,
+            "parentId": "29b8feab-4477-4631-9e23-b7223eaff01e",
+            "expandParent": true
+          },
+          {
+            "id": "9cb73c83-5327-4b84-b1e5-2fd99114540c",
+            "type": "text",
+            "data": {
+              "text": "58",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 1927.8517642055276,
+              "y": 334.4730596976601
+            },
+            "width": 80,
+            "height": 40,
+            "measured": {
+              "width": 80,
+              "height": 40
+            },
+            "dragging": false,
+            "parentId": "29b8feab-4477-4631-9e23-b7223eaff01e",
+            "expandParent": true
+          },
+          {
+            "id": "a9fe22ac-730b-41d8-87fc-c98e9de6c35e",
+            "type": "text",
+            "data": {
+              "text": "30",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 2558.1303720319206,
+              "y": 277.01672252011605
+            },
+            "width": 80,
+            "height": 40,
+            "measured": {
+              "width": 80,
+              "height": 40
+            },
+            "dragging": false,
+            "parentId": "29b8feab-4477-4631-9e23-b7223eaff01e",
+            "expandParent": true
+          },
+          {
+            "id": "abead354-8bd3-4188-9140-64952999c4f0",
+            "type": "text",
+            "data": {
+              "text": "11",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 3198.8555866178667,
+              "y": 334.4730596976602
+            },
+            "width": 80,
+            "height": 40,
+            "measured": {
+              "width": 80,
+              "height": 40
+            },
+            "dragging": false,
+            "parentId": "29b8feab-4477-4631-9e23-b7223eaff01e",
+            "expandParent": true
+          },
+          {
+            "id": "9a648e92-d746-4e0c-bcca-21316dd5ddbb",
+            "type": "text",
+            "data": {
+              "text": "Concussion from a car accident",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 648.142436160227,
+              "y": 395.4115991283888
+            },
+            "width": 329.5567665343168,
+            "height": 42.639015821545684,
+            "measured": {
+              "width": 330,
+              "height": 43
+            },
+            "dragging": false,
+            "parentId": "29b8feab-4477-4631-9e23-b7223eaff01e",
+            "expandParent": true
+          },
+          {
+            "id": "3c6902ac-eeaa-4fe1-8156-855ca4dfa63d",
+            "type": "text",
+            "data": {
+              "text": "Asthma attack triggered by environmental allergens",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 1285.3854484929889,
+              "y": 325.7675540646989
+            },
+            "width": 329.5567665343168,
+            "height": 42.639015821545684,
+            "measured": {
+              "width": 330,
+              "height": 43
+            },
+            "dragging": false,
+            "parentId": "29b8feab-4477-4631-9e23-b7223eaff01e",
+            "expandParent": true
+          },
+          {
+            "id": "50c8cfdb-880c-40b6-a8ac-df38f351b77f",
+            "type": "text",
+            "data": {
+              "text": "Sudden vision loss in left eye",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 1922.6284608257506,
+              "y": 383.2238912422429
+            },
+            "width": 329.5567665343168,
+            "height": 42.639015821545684,
+            "measured": {
+              "width": 330,
+              "height": 43
+            },
+            "dragging": false,
+            "parentId": "29b8feab-4477-4631-9e23-b7223eaff01e",
+            "expandParent": true
+          },
+          {
+            "id": "c9918230-7354-4308-bd0f-6a523901a1c7",
+            "type": "text",
+            "data": {
+              "text": "Third-degree burn on hand from kitchen accident",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 2561.612574285104,
+              "y": 329.24975631788345
+            },
+            "width": 329.5567665343168,
+            "height": 42.639015821545684,
+            "measured": {
+              "width": 330,
+              "height": 43
+            },
+            "dragging": false,
+            "parentId": "29b8feab-4477-4631-9e23-b7223eaff01e",
+            "expandParent": true
+          },
+          {
+            "id": "3975b3f8-cc3a-4bdb-9ce6-a05c7d2a5aba",
+            "type": "text",
+            "data": {
+              "text": "Possible broken leg from a skateboarding accident",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "textAlign": "left",
+              "rotation": 0
+            },
+            "position": {
+              "x": 3193.6322832380897,
+              "y": 384.9649923688352
+            },
+            "width": 329.5567665343168,
+            "height": 42.639015821545684,
+            "measured": {
+              "width": 330,
+              "height": 43
+            },
+            "dragging": false,
+            "parentId": "29b8feab-4477-4631-9e23-b7223eaff01e",
+            "expandParent": true
+          },
+          {
+            "id": "6f5d98ab-412a-4703-b538-be2b7b715db5",
+            "type": "text",
+            "data": {
+              "text": "5",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 658.5890429197806,
+              "y": 505.1009701037002
+            },
+            "width": 80,
+            "height": 40,
+            "measured": {
+              "width": 80,
+              "height": 40
+            },
+            "dragging": false,
+            "parentId": "29b8feab-4477-4631-9e23-b7223eaff01e",
+            "expandParent": true
+          },
+          {
+            "id": "58dcbf89-8ea0-476b-b3f6-cfc03dcdb93c",
+            "type": "text",
+            "data": {
+              "text": "7",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 1294.0909541259502,
+              "y": 426.7514194070492
+            },
+            "width": 80,
+            "height": 40,
+            "measured": {
+              "width": 80,
+              "height": 40
+            },
+            "dragging": false,
+            "parentId": "29b8feab-4477-4631-9e23-b7223eaff01e",
+            "expandParent": true
+          },
+          {
+            "id": "c8b1a16b-2b37-44f1-a032-59eaa38c5f2d",
+            "type": "text",
+            "data": {
+              "text": "4",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 1931.3339664587115,
+              "y": 489.43105996437
+            },
+            "width": 80,
+            "height": 40,
+            "measured": {
+              "width": 80,
+              "height": 40
+            },
+            "dragging": false,
+            "parentId": "29b8feab-4477-4631-9e23-b7223eaff01e",
+            "expandParent": true
+          },
+          {
+            "id": "4a230f00-4c2b-475a-9050-a94fb57fd950",
+            "type": "text",
+            "data": {
+              "text": "7",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 2566.835877664881,
+              "y": 428.4925205336415
+            },
+            "width": 80,
+            "height": 40,
+            "measured": {
+              "width": 80,
+              "height": 40
+            },
+            "dragging": false,
+            "parentId": "29b8feab-4477-4631-9e23-b7223eaff01e",
+            "expandParent": true
+          },
+          {
+            "id": "61538e8d-c3c1-458b-a57f-6db458488a37",
+            "type": "text",
+            "data": {
+              "text": "8",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 3202.3377888710515,
+              "y": 489.43105996436987
+            },
+            "width": 80,
+            "height": 40,
+            "measured": {
+              "width": 80,
+              "height": 40
+            },
+            "dragging": false,
+            "parentId": "29b8feab-4477-4631-9e23-b7223eaff01e",
+            "expandParent": true
+          },
+          {
+            "id": "4a0f7400-7a9d-4558-80a2-0198450325c9",
+            "type": "text",
+            "data": {
+              "text": "Neurological exam, CT scan, pain management, observation for 24 hours",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 648.142436160227,
+              "y": 555.5929027748754
+            },
+            "width": 331.5360284004762,
+            "height": 41.31950791077281,
+            "measured": {
+              "width": 332,
+              "height": 41
+            },
+            "dragging": false,
+            "parentId": "29b8feab-4477-4631-9e23-b7223eaff01e",
+            "expandParent": true
+          },
+          {
+            "id": "1954d6d9-711a-4dff-a3c6-fe5e88b1cd98",
+            "type": "text",
+            "data": {
+              "text": "Inhaler, anti-inflammation injection, oxygen therapy, respiratory monitoring",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 1287.126549619581,
+              "y": 484.2077565845932
+            },
+            "width": 331.5360284004762,
+            "height": 41.31950791077281,
+            "measured": {
+              "width": 332,
+              "height": 41
+            },
+            "dragging": false,
+            "parentId": "29b8feab-4477-4631-9e23-b7223eaff01e",
+            "expandParent": true
+          },
+          {
+            "id": "0fe169c5-c034-4dce-adab-6db7873b255c",
+            "type": "text",
+            "data": {
+              "text": "Immediate ophthalmologic (eye) evaluation, possible stroke assessment, brain imaging",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 1924.3695619523432,
+              "y": 560.8162061546521
+            },
+            "width": 331.5360284004762,
+            "height": 41.31950791077281,
+            "measured": {
+              "width": 332,
+              "height": 41
+            },
+            "dragging": false,
+            "parentId": "29b8feab-4477-4631-9e23-b7223eaff01e",
+            "expandParent": true
+          },
+          {
+            "id": "170a7077-8159-488f-8491-90f697bdfd31",
+            "type": "text",
+            "data": {
+              "text": "IV pain relief, burn dressing, possible skin graft consultation",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 2556.389270905328,
+              "y": 482.466655458001
+            },
+            "width": 331.5360284004762,
+            "height": 41.31950791077281,
+            "measured": {
+              "width": 332,
+              "height": 41
+            },
+            "dragging": false,
+            "parentId": "29b8feab-4477-4631-9e23-b7223eaff01e",
+            "expandParent": true
+          },
+          {
+            "id": "8824264f-2be3-4f90-a541-fa17738bbe27",
+            "type": "text",
+            "data": {
+              "text": "X-ray, cast, pain management, crutches",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 3193.6322832380893,
+              "y": 543.4051948887296
+            },
+            "width": 331.5360284004762,
+            "height": 41.31950791077281,
+            "measured": {
+              "width": 332,
+              "height": 41
+            },
+            "dragging": false,
+            "parentId": "29b8feab-4477-4631-9e23-b7223eaff01e",
+            "expandParent": true
+          },
+          {
+            "id": "fb69acac-c8a6-45de-8a32-4065ba720119",
+            "type": "text",
+            "data": {
+              "text": "Examine the hospital triage forms below for the six patients that arrived at the same time. \n\nUse your best judgement and rank the order in which these patients should be seen. Drag the numbers in the box to the right and place them at the top of the chart to indicate the order.\n\nFor the patient who should be seen first, write a justification as to why you chose them,",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 1454.5462957220975,
+              "y": -223.05251403065944
+            },
+            "width": 613.5944109084196,
+            "height": 72.65932818943324,
+            "measured": {
+              "width": 614,
+              "height": 73
+            },
+            "dragging": false
+          },
+          {
+            "id": "fb80cb7c-cc0b-4a91-869c-7764487ad441",
+            "type": "text",
+            "data": {
+              "text": "Directions:",
+              "strokeColor": "transparent",
+              "fontFamily": "cursive",
+              "fontSize": "large",
+              "locked": true
+            },
+            "position": {
+              "x": 1461.340514251828,
+              "y": -369.55058641557264
+            },
+            "width": 170.61476144703693,
+            "height": 83.65053748988726,
+            "measured": {
+              "width": 171,
+              "height": 84
+            },
+            "dragging": false
+          },
+          {
+            "id": "4daecd89-4992-4615-b6f1-29142aaf1606",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "locked": true
+            },
+            "position": {
+              "x": 348.93140969921797,
+              "y": 98.54292545742271
+            },
+            "width": 3890.972257030364,
+            "height": 829.8955833881666,
+            "measured": {
+              "width": 3891,
+              "height": 830
+            },
+            "dragging": false,
+            "zIndex": -2
+          },
+          {
+            "id": "bc9a883a-9326-401e-a02e-3820876a832b",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "locked": true
+            },
+            "position": {
+              "x": 2151.570057344976,
+              "y": -360.93641654139066
+            },
+            "width": 927.330501138018,
+            "height": 193.5166947198102,
+            "measured": {
+              "width": 927,
+              "height": 194
+            },
+            "dragging": false,
+            "zIndex": -2
+          },
+          {
+            "id": "0134ba2f-2e89-45e6-9d12-15d9ef6225e6",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson6-examine-data-a/uuid/fb0bd0cd-7c53-43bb-a9eb-dcfad07f9687.png",
+              "altText": "circle-1"
+            },
+            "position": {
+              "x": 2173.9044874397973,
+              "y": -320.92330862263674
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "14977f8e-b8b5-49c9-91d8-3d0c1f469f60",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson6-examine-data-a/uuid/a2036130-c465-40d5-ac65-4b1a70a987c5.png",
+              "altText": "circle-2"
+            },
+            "position": {
+              "x": 2320.937876879418,
+              "y": -318.62591191264266
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "da48c459-6b42-4613-91a3-dda0fa82fd2f",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson6-examine-data-a/uuid/ca9d3352-778b-4806-b983-0de87ddb114b.png",
+              "altText": "circle-3"
+            },
+            "position": {
+              "x": 2458.7816794790606,
+              "y": -318.6259119126428
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "a1e00cf2-1212-4e70-940e-de3500cb9310",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson6-examine-data-a/uuid/733bb432-e02a-4a76-a78e-c6de842b1a2a.png",
+              "altText": "circle-4"
+            },
+            "position": {
+              "x": 2605.815068918682,
+              "y": -320.92330862263674
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "81c363ea-3e98-4312-8bd0-d6e66cc40d69",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson6-examine-data-a/uuid/ab928f5b-9771-48ca-bc3a-431f95c3433f.png",
+              "altText": "circle-5"
+            },
+            "position": {
+              "x": 2748.2536649383137,
+              "y": -320.92330862263674
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "5e2f2b50-906d-412c-9f82-236d388b6551",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson6-examine-data-a/uuid/d0f79c64-7839-48a8-9430-2d526ee4e43f.png",
+              "altText": "circle-6"
+            },
+            "position": {
+              "x": 2890.692260957946,
+              "y": -320.92330862263674
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "30407164-7fab-4a0c-b788-ed10356424bd",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "locked": true
+            },
+            "position": {
+              "x": 3202.9599808226735,
+              "y": -358.6390198313966
+            },
+            "width": 927.330501138018,
+            "height": 381.90322493932365,
+            "measured": {
+              "width": 927,
+              "height": 382
+            },
+            "dragging": false,
+            "zIndex": -2
+          },
+          {
+            "id": "87e535ee-2abd-4069-aee4-772051aa3d8e",
+            "type": "text",
+            "data": {
+              "text": "For the patient who should be seen first, write a justification as to why you chose them,",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "fontSize": "large",
+              "locked": true
+            },
+            "position": {
+              "x": 3212.065564752033,
+              "y": -338.38789344905894
+            },
+            "width": 560.453259116216,
+            "height": 47.70550563296126,
+            "measured": {
+              "width": 560,
+              "height": 48
+            },
+            "dragging": false
+          },
+          {
+            "id": "154783b1-72ad-4848-a224-32f2b63bc508",
+            "type": "text",
+            "data": {
+              "text": "Write your response here...",
+              "strokeColor": "transparent",
+              "fontFamily": "sans",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 3221.3253823635923,
+              "y": -262.34897177709615
+            },
+            "width": 897.0000000000005,
+            "height": 263,
+            "measured": {
+              "width": 897,
+              "height": 263
+            },
+            "dragging": false
+          }
+        ],
+        "edges": [
+
+        ],
+        "viewport": {
+          "x": -170.87667591966886,
+          "y": 341.5267011323521,
+          "zoom": 0.7578582832551995
+        }
+      }
+    },
+    "display_name": "Hospital Triage Nurse",
+    "bubble_choice_description": "Examine the patient record data in order to make an informed decision about the order in which the patients should be seen.",
+    "thumbnail_url": "https://images.code.org/9e223263d237ad4e83bebbe7f51590bc-choice-level-pic.png"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-07-31 18:29:24 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-31 18:41:09 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-31 18:55:45 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-31 19:01:20 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-31 19:07:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-31 19:08:12 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-31 19:10:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-31 19:14:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-31 19:14:26 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-31 19:15:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-31 19:16:10 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-31 19:16:37 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-31 19:32:32 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-04 16:20:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-04 17:09:12 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Sketchlab>

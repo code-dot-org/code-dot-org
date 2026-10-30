@@ -1,13 +1,16 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
-import ProjectInfo from './ProjectInfo';
-import ScriptName from './ScriptName';
-import LessonProgress from '../progress/LessonProgress';
-import HeaderPopup from './HeaderPopup';
-import HeaderFinish from './HeaderFinish';
-import _ from 'lodash';
 import $ from 'jquery';
+import _ from 'lodash';
+import PropTypes from 'prop-types';
+import React from 'react';
+import {connect} from 'react-redux';
+
+import LessonProgress from '../progress/LessonProgress';
+
+import HeaderFinish from './HeaderFinish';
+import HeaderPopup from './HeaderPopup';
+import ProjectInfo from './ProjectInfo';
+import remeasureOnFontsReady from './remeasureOnFontsReady';
+import ScriptName from './ScriptName';
 
 // These components will be given additional width beyond what they desire.
 const scriptNameExtraWidth = 10;
@@ -44,11 +47,33 @@ class HeaderMiddle extends React.Component {
   }
 
   componentDidMount() {
+    // Mark that the React header mounted. Eyes UI tests key on this to tell pages
+    // that run this header — and so must wait for its post-font re-layout — from
+    // non-lab dashboard pages that merely contain a server-rendered .header_middle.
+    document.documentElement.dataset.headerPresent = 'true';
+
     this.updateLayout();
 
     this.updateLayoutListener = _.throttle(this.updateLayout, 200);
     window.addEventListener('resize', this.updateLayoutListener);
     window.addEventListener('scroll', this.updateLayoutListener);
+
+    // .header_middle is the flex remainder after the content-sized side columns, so
+    // its width changes when they reflow on the font swap. Re-measure when fonts load
+    // (children re-measure their own widths in parallel), then mark the header settled
+    // so eyes UI tests can wait for the final layout.
+    this.cancelFontRemeasure = remeasureOnFontsReady(() => {
+      this.updateLayout();
+      window.requestAnimationFrame(() => {
+        document.documentElement.dataset.headerFontsRelaidOut = 'true';
+      });
+    });
+  }
+
+  componentWillUnmount() {
+    this.cancelFontRemeasure?.();
+    window.removeEventListener('resize', this.updateLayoutListener);
+    window.removeEventListener('scroll', this.updateLayoutListener);
   }
 
   getWidth() {
@@ -340,7 +365,7 @@ const styles = {
     width: '100%',
     display: 'flex',
     alignItems: 'center',
-    animation: 'header_fadein 0.4s',
+    animation: 'header-fadein 0.4s',
   },
   finishedLink: {
     width: '100%',

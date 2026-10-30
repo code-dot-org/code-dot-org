@@ -1,0 +1,9 @@
+name 'programming-fundamentals-lesson4-level3_2025-launch_pilot-2025'
+display_name 'Create a Variable'
+description 'Choose **ONE** of the four scenarios to create your first variable! Store the information the app needs to remember as a variable and print it.'
+
+sublevels
+level 'programming-fundamentals-lesson4-level3a_2025-launch_pilot-2025'
+level 'programming-fundamentals-lesson4-level3b_2025-launch_pilot-2025'
+level 'programming-fundamentals-lesson4-level3c_2025-launch_pilot-2025'
+level 'programming-fundamentals-lesson4-level3d_2025-launch_pilot-2025'

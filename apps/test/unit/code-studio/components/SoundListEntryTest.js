@@ -1,10 +1,10 @@
-import {assert, expect} from '../../../util/reconfiguredChai';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
+
 import SoundListEntry from '@cdo/apps/code-studio/components/SoundListEntry';
 import Sounds from '@cdo/apps/Sounds';
-import color from '@cdo/apps/util/color';
-import sinon from 'sinon';
+
+import styles from '@cdo/apps/code-studio/components/SoundListEntry.module.scss';
 
 describe('SoundListEntry', () => {
   const sounds = new Sounds();
@@ -23,25 +23,21 @@ describe('SoundListEntry', () => {
 
   it('renders with purple background when selected', () => {
     const wrapper = shallow(<SoundListEntry {...defaultProps} />);
-    assert.equal(wrapper.props().style.backgroundColor, color.lighter_purple);
+    expect(wrapper.hasClass(styles.selected)).toBe(true);
   });
 
   it('renders with no background when not selected', () => {
     const wrapper = shallow(
       <SoundListEntry {...defaultProps} isSelected={false} />
     );
-    assert.equal(wrapper.props().style.backgroundColor, color.white);
+    expect(wrapper.hasClass(styles.notSelected)).toBe(true);
   });
 
   it('renders a play button when not playing', () => {
     const wrapper = shallow(
       <SoundListEntry {...defaultProps} isSelected={false} />
     );
-    // First child is a icon control for pause and play
-    assert.equal(
-      wrapper.props().children[0].props.children.props.className,
-      'fa fa-play-circle fa-2x'
-    );
+    expect(wrapper.find('[aria-label="Play sound"]')).toHaveLength(1);
   });
 
   it('renders a pause button when playing', () => {
@@ -49,21 +45,17 @@ describe('SoundListEntry', () => {
       <SoundListEntry {...defaultProps} isSelected={false} />
     );
     wrapper.setState({isPlaying: true});
-    // First child is a icon control for pause and play
-    assert.equal(
-      wrapper.props().children[0].props.children.props.className,
-      'fa fa-pause-circle fa-2x'
-    );
+    expect(wrapper.find('[aria-label="Pause sound"]')).toHaveLength(1);
   });
 
   it('stops playing the sound when deselected', () => {
     const wrapper = shallow(<SoundListEntry {...defaultProps} />);
-    sinon.stub(sounds, 'stopPlayingURL');
+    jest.spyOn(sounds, 'stopPlayingURL').mockClear().mockImplementation();
     wrapper.setProps({isSelected: false});
 
-    assert.equal(sounds.isPlaying(sourceURL), false);
-    expect(sounds.stopPlayingURL).to.have.been.calledOnce;
+    expect(sounds.isPlaying(sourceURL)).toEqual(false);
+    expect(sounds.stopPlayingURL).toHaveBeenCalledTimes(1);
 
-    sounds.stopPlayingURL.restore();
+    sounds.stopPlayingURL.mockRestore();
   });
 });

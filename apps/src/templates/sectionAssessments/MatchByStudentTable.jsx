@@ -1,15 +1,20 @@
+import orderBy from 'lodash/orderBy';
 import React, {Component} from 'react';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
-import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
+
 import i18n from '@cdo/locale';
+
+import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import wrappedSortable from '../tables/wrapped_sortable';
-import orderBy from 'lodash/orderBy';
-import PercentAnsweredCell from './PercentAnsweredCell';
+
 import {
   matchQuestionPropType,
   studentMatchResponsePropType,
 } from './assessmentDataShapes';
+import PercentAnsweredCell from './PercentAnsweredCell';
+
+import moduleStyles from './match-by-student-table.module.scss';
 
 export const COLUMNS = {
   OPTION: 0,
@@ -85,10 +90,8 @@ class MatchByStudentTable extends Component {
         cell: {
           formatters: [this.optionCellFormatter],
           props: {
-            style: {
-              ...tableLayoutStyles.cell,
-              ...styles.optionCell,
-            },
+            style: tableLayoutStyles.cell,
+            className: moduleStyles.optionCell,
           },
         },
       },
@@ -186,12 +189,6 @@ const styles = {
   },
   answerColumnCell: {
     width: ANSWER_COLUMN_WIDTH,
-  },
-  optionCell: {
-    overflow: 'hidden',
-    textOverflow: 'ellipsis',
-    whiteSpace: 'nowrap',
-    maxWidth: 470,
   },
 };
 

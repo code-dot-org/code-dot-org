@@ -1,8 +1,9 @@
 require 'cdo/google/drive'
+require 'observability/errors'
 
 # Squash an unhelpful warning that's causing a Honeybadger error when we use
 # this module in a cronjob, because the cronjob helper sends an HB error if
-# any unexpected output to STDERR occurs.
+# any unexpected output to $stderr occurs.
 # see https://github.com/nahi/httpclient/issues/252#issuecomment-302427338
 # If we end up using Google::Sheets very broadly, it might be better for this
 # monkeypatch to live in our bin/cronjob helper instead.
@@ -56,7 +57,7 @@ module Google
           Please check with PLC team that this is intentional!
         ERROR_MSG
 
-        Honeybadger.notify error_msg
+        Observability::Errors.report error_msg
         puts error_msg
       end
     end

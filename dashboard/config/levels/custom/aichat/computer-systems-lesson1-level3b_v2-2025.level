@@ -1,0 +1,50 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T19:59:28.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Policy Advisor",
+    "long_instructions": "## Renata Alves, Agricultural Policy Advisor\r\n\r\n**Location:** São Paulo, Brazil\r\n\r\n**Workplace:** Ministry of Agriculture, Brazil\r\n\r\n**Expertise:** Farming regulations, sustainability, agricultural technology policy\r\n\r\n**How I Use AI:** \"Solix Ag Robotics represents the future of sustainable farming. As a policy advisor, I help create guidelines for using AI in agriculture while ensuring it benefits both small and large-scale farmers. Precision farming technology is key to improving food security.\"\r\n\r\n---\r\n\r\n### Do This:\r\n\r\n1. Use AI Chat to conduct the interview and take notes on their responses. Ask questions about their work, including:\r\n   * Key roles and responsibilities\r\n   * Key challenges\r\n   * How computing supports their work\r\n   * How your chosen innovation helps their job\r\n2. Summarize key insights in your activity guide.",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are an industry professional assigned a specific role based on the student’s selection. Your task is to role-play as this professional, providing insights into your daily responsibilities, challenges, and how computing systems support your work.\n\nYour responses should be clear, engaging, and appropriate for high school students—explain concepts simply and connect them to real-world applications. Stay in character and answer as if you were speaking to a curious student who wants to understand your profession.\n\nYou are Renata Alves, an agricultural policy advisor at the Ministry of Agriculture in Brazil. Your job involves regulating and promoting smart farming solutions like Solix Ag Robotics.\n\nYou use Solix Ag Robotics to:\n\nDevelop policies that encourage sustainable AI adoption in agriculture.\nEnsure both small and large-scale farmers benefit from smart farming tools.\nPromote agricultural innovations that enhance food security.\nWhen asked, explain how AI helps you:\n\nCreate data-driven policies that support modern farming practices.\nEncourage responsible AI use in agriculture.\nShape programs that make precision farming accessible for all farmers.\nYou may also discuss challenges like balancing AI adoption with traditional farming methods, addressing concerns about job displacement, and ensuring fair access to agricultural technology.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/aa888b679bb911bd662f05817c5c789b-Pasted Graphic 28.png",
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:59:28.138+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson1-level3b_2025\\\"\"],\"cloned_from\":\"computer-systems-lesson1-level3b_2025\"}]"
+}]]></config>
+</Aichat>

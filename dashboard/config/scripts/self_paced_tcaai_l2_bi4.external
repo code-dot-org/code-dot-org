@@ -1,0 +1,81 @@
+name 'self-paced-TCaAI-L2-BI4'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Big Idea 4: Humans Are Responsible for How AI Is Used
+
+By the end of Thinking Critically About AI, students move beyond simply analyzing AI systems and toward making their own evidence-based judgments about how humans should use AI responsibly.
+
+## What Students Learn
+
+<div style="display:flex; justify-content:space-between; gap:14px; margin:25px 0px;">
+
+  <div style="background-color:#F5F7F8; padding:18px; border-radius:10px; width:32%; text-align:center;">
+    <p style="font-size:16px; font-weight:bold; margin-top:0;">
+      Humans Remain Accountable
+    </p>
+    <p style="font-size:16px; margin-bottom:0;">
+      Students explore why people, not AI systems, are ultimately responsible for decisions and consequences.
+    </p>
+  </div>
+
+  <div style="background-color:#F5F7F8; padding:18px; border-radius:10px; width:32%; text-align:center;">
+    <p style="font-size:16px; font-weight:bold; margin-top:0;">
+      Evidence Supports Conclusions
+    </p>
+    <p style="font-size:16px; margin-bottom:0;">
+      Students use examples, testing, and observations from across the unit to justify their positions about responsible AI use.
+    </p>
+  </div>
+
+  <div style="background-color:#F5F7F8; padding:18px; border-radius:10px; width:32%; text-align:center;">
+    <p style="font-size:16px; font-weight:bold; margin-top:0;">
+      Responsible Use is Nuanced
+    </p>
+    <p style="font-size:16px; margin-bottom:0;">
+      Students synthesize multiple perspectives and recognize that responsible AI use often depends on context and judgment.
+    </p>
+  </div>
+
+</div>
+
+A major instructional goal of this section of the unit is helping students develop evidence-based positions rather than relying on simple reactions or assumptions about AI.
+
+## Across the Unit
+
+As students approach the end of the unit, they begin synthesizing ideas from earlier investigations into broader conclusions about responsibility and AI use.
+
+* **Lesson 9** asks students to revise and strengthen their Generate and Judge Guide using evidence and feedback
+* **Lesson 10** challenges students to defend positions about how involved humans should be when using AI systems
+* Throughout the project, students repeatedly revisit and refine their own recommendations for responsible AI use
+
+Across these lessons, students begin recognizing that thoughtful AI use requires ongoing human judgment, reflection, and accountability.
+
+<div style="border-top: 1px solid #048899; margin: 30px 0px;"></div>
+
+<div style="background-color:#B7E0E5; padding:20px; border-radius:10px; margin:25px 0px; overflow:auto;">
+
+<img 
+src="https://images.code.org/35575cb1fd35046323f05cf43b0f5c12-HS19.png" 
+alt="" 
+style="width:30%; border-radius:10px; margin:0px 0px 10px 15px; float:right;">
+
+<p style="font-size:16px; font-weight:bold; margin-top:0;">
+REAL-WORLD CONNECTION: Schools Creating AI Policies
+</p>
+
+<p style="font-size:16px;">
+As generative AI tools have become more common, many schools and districts have had to create new policies about when students should - and should not - use AI for schoolwork.
+</p>
+
+<p style="font-size:16px;">
+Some schools allow AI for brainstorming or revision but not for completing assignments independently. Others require students to explain how AI was used during the creation process.
+</p>
+
+<p style="font-size:16px; margin-bottom:0;">
+Students explore similar questions throughout the unit as they build their own evidence-based guidance for responsible AI use.
+</p>
+
+</div>
+MARKDOWN

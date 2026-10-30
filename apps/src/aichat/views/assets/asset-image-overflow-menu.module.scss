@@ -1,0 +1,28 @@
+.container {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  z-index: 1;
+  // Wrapper sets this var to 1 on hover/focus-within. Falls back to 1 so the
+  // component remains visible when used outside a hover-aware container.
+  opacity: var(--overflow-menu-opacity, 1);
+  transition: opacity 0.15s ease;
+}
+
+.menuButton {
+  width: 24px;
+  height: 24px;
+  background-color: #{"rgb(from var(--background-neutral-primary) r g b / 0.75)"};
+  color: var(--text-neutral-primary);
+
+  &:hover,
+  &:focus-visible {
+    background-color: var(--background-neutral-primary);
+    color: var(--text-neutral-primary);
+    box-shadow: 0 1px 4px rgb(0 0 0 / 0.4);
+  }
+
+  i {
+    font-size: 0.875rem;
+  }
+}

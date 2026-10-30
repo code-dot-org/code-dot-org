@@ -25,38 +25,52 @@
  * @author fraser@google.com (Neil Fraser)
  */
 
-var React = require('react');
-var ReactDOM = require('react-dom');
-var color = require('../util/color');
-var commonMsg = require('@cdo/locale');
-var turtleMsg = require('./locale');
-import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
-var ArtistAPI = require('./api');
-var apiJavascript = require('./apiJavascript');
-var Provider = require('react-redux').Provider;
-import AppView from '../templates/AppView';
-var ArtistVisualizationColumn = require('./ArtistVisualizationColumn');
-var utils = require('../utils');
-var Slider = require('../slider');
-var _ = require('lodash');
-var dropletConfig = require('./dropletConfig');
-var JSInterpreter = require('../lib/tools/jsinterpreter/JSInterpreter');
-var JsInterpreterLogger = require('../JsInterpreterLogger');
+import Visualization from '@code-dot-org/artist';
+
+import CdoFieldColour from '@cdo/apps/blockly/addons/cdoFieldColour';
+import {
+  getAllGeneratedCode,
+  getCode,
+  getCodeFromBlockXmlSource,
+  loadBlocksToWorkspace,
+} from '@cdo/apps/blockly/utils';
+import {DEFAULT_EXECUTION_INFO} from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+
+import {blockAsXmlNode, cleanBlocks} from '../block_utils';
+import {TestResults} from '../constants';
 import {
   getContainedLevelResultInfo,
   postContainedLevelAttempt,
   runAfterPostContainedLevel,
 } from '../containedLevels';
-import {getStore} from '../redux';
-import {TestResults} from '../constants';
-import {captureThumbnailFromCanvas} from '../util/thumbnail';
-import {blockAsXmlNode, cleanBlocks} from '../block_utils';
-import ArtistSkins from './skins';
 import dom from '../dom';
-import {SignInState} from '@cdo/apps/templates/currentUserRedux';
-import Visualization from '@code-dot-org/artist';
+import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
+import {getStore} from '../redux';
+import AppView from '../templates/AppView';
+import {createReactRoot} from '../util/createReactRoot';
 import experiments from '../util/experiments';
-import {DEFAULT_EXECUTION_INFO} from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
+import {captureThumbnailFromCanvas} from '../util/thumbnail';
+
+import ArtistSkins from './skins';
+
+var _ = require('lodash');
+var React = require('react');
+var Provider = require('react-redux').Provider;
+
+var commonMsg = require('@cdo/locale');
+
+var JsInterpreterLogger = require('../JsInterpreterLogger');
+var JSInterpreter = require('../lib/tools/jsinterpreter/JSInterpreter');
+var Slider = require('../slider');
+var color = require('../util/color');
+var utils = require('../utils');
+
+var ArtistAPI = require('./api');
+var apiJavascript = require('./apiJavascript');
+var ArtistVisualizationColumn = require('./ArtistVisualizationColumn');
+var dropletConfig = require('./dropletConfig');
+var turtleMsg = require('./locale');
 
 const CANVAS_HEIGHT = 400;
 const CANVAS_WIDTH = 400;
@@ -407,14 +421,17 @@ Artist.prototype.init = function (config) {
     this.preloadAllShapeImages(),
     this.preloadAllPatternImages(),
   ]).then(() => {
-    ReactDOM.render(
+    createReactRoot(
       <Provider store={getStore()}>
         <AppView
           visualizationColumn={visualizationColumn}
           onMount={onMount.bind(this)}
         />
       </Provider>,
-      document.getElementById(config.containerId)
+      document.getElementById(config.containerId),
+      {
+        legacyReactDomRender: true,
+      }
     );
   });
 };
@@ -489,7 +506,7 @@ Artist.prototype.prepareForRemix = function () {
   cleanBlocks(blocksDom);
 
   Blockly.mainBlockSpace.clear();
-  Blockly.cdoUtils.loadBlocksToWorkspace(
+  loadBlocksToWorkspace(
     Blockly.mainBlockSpace,
     Blockly.Xml.domToText(blocksDom)
   );
@@ -548,26 +565,29 @@ Artist.prototype.afterInject_ = function (config) {
   visualization.appendChild(this.visualization.displayCanvas);
 
   if (this.studioApp_.isUsingBlockly() && this.isFrozenSkin()) {
+    const blockGeneratorFunctionDictionary = Blockly.JavaScript.forBlock;
     // Override colour_random to only generate random colors from within our frozen
     // palette
-    Blockly.JavaScript.colour_random = function () {
+    blockGeneratorFunctionDictionary.colour_random = function () {
       // Generate a random colour.
       if (!Blockly.JavaScript.definitions_.colour_random) {
         var functionName = Blockly.JavaScript.variableDB_.getDistinctName(
           'colour_random',
           Blockly.Generator.NAME_TYPE
         );
-        Blockly.JavaScript.colour_random.functionName = functionName;
+        blockGeneratorFunctionDictionary.colour_random.functionName =
+          functionName;
         var func = [];
         func.push('function ' + functionName + '() {');
         func.push(
-          '   var colors = ' + JSON.stringify(Blockly.FieldColour.COLOURS) + ';'
+          '   var colors = ' + JSON.stringify(CdoFieldColour.COLOURS) + ';'
         );
         func.push('  return colors[Math.floor(Math.random()*colors.length)];');
         func.push('}');
         Blockly.JavaScript.definitions_.colour_random = func.join('\n');
       }
-      var code = Blockly.JavaScript.colour_random.functionName + '()';
+      var code =
+        blockGeneratorFunctionDictionary.colour_random.functionName + '()';
       return [code, Blockly.JavaScript.ORDER_FUNCTION_CALL];
     };
   }
@@ -630,10 +650,9 @@ Artist.prototype.drawLogOnCanvas = function (log, canvas) {
  * Evaluates blocks or code, and draws onto given canvas.
  */
 Artist.prototype.drawBlocksOnCanvas = function (blocksOrCode, canvas) {
-  var code;
+  let code;
   if (this.studioApp_.isUsingBlockly()) {
-    var domBlocks = Blockly.Xml.textToDom(blocksOrCode);
-    code = Blockly.Generator.xmlToCode('JavaScript', domBlocks);
+    code = getCodeFromBlockXmlSource(blocksOrCode);
   } else {
     code = blocksOrCode;
   }
@@ -776,10 +795,7 @@ Artist.prototype.reset = function (ignore) {
 Artist.prototype.runButtonClick = function () {
   this.shouldAnimate_ = !this.instant_;
   this.studioApp_.toggleRunReset('reset');
-  document.getElementById('spinner').style.visibility = 'visible';
-  if (this.studioApp_.isUsingBlockly()) {
-    Blockly.mainBlockSpace.traceOn(true);
-  }
+  document.getElementById('spinner').style.display = 'inline-block';
   this.studioApp_.attempts++;
   this.execute(this.executionInfo);
 };
@@ -809,7 +825,7 @@ Artist.prototype.evalCode = function (code, executionInfo) {
     // and analyze success/failure based on what was drawn.
     // Otherwise, abnormal termination is a user error.
     if (e.message !== 'Infinity') {
-      // call window.onerror so that we get new relic collection.  prepend with
+      // call window.onerror so browser observability captures it. prepend with
       // UserCode so that it's clear this is in eval'ed code.
       if (window.onerror) {
         window.onerror('UserCode:' + e.message, document.URL, 0);
@@ -886,13 +902,8 @@ Artist.prototype.execute = function (executionInfo) {
   if (this.level.editCode) {
     this.initInterpreter();
   } else {
-    let codeBlocks = Blockly.mainBlockSpace.getTopBlocks(true);
-    if (this.studioApp_.initializationBlocks) {
-      codeBlocks = this.studioApp_.initializationBlocks.concat(codeBlocks);
-    }
-
-    this.code = Blockly.Generator.blocksToCode('JavaScript', codeBlocks);
-    this.evalCode(this.code, executionInfo);
+    const code = getAllGeneratedCode(this.studioApp_.initializationCode);
+    this.evalCode(code, executionInfo);
   }
 
   // api.log now contains a transcript of all the user's actions.
@@ -1012,7 +1023,7 @@ Artist.prototype.executeTuple_ = function () {
 Artist.prototype.finishExecution_ = function () {
   this.studioApp_.stopLoopingAudio('start');
 
-  document.getElementById('spinner').style.visibility = 'hidden';
+  document.getElementById('spinner').style.display = 'none';
   if (this.studioApp_.isUsingBlockly()) {
     Blockly.mainBlockSpace.highlightBlock(null);
   }
@@ -1578,7 +1589,7 @@ Artist.prototype.checkAnswer = function () {
 
 Artist.prototype.getUserCode = function () {
   if (this.studioApp_.isUsingBlockly()) {
-    return Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
+    return getCode(Blockly.mainBlockSpace);
   } else if (this.level.editCode) {
     // If we want to "normalize" the JavaScript to avoid proliferation of nearly
     // identical versions of the code on the service, we could do either of these:

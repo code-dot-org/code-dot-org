@@ -1,11 +1,13 @@
+// Entrypoints for old-style "lab1" labs
+//
+// New labs should instead use Lab2, see: lab2EntryPoints.ts
+
 const ALL_APPS = [
   'ailab',
   'applab',
   'bounce',
-  'calc',
   'craft',
   'dance',
-  'eval',
   'fish',
   'flappy',
   'javalab',
@@ -23,11 +25,15 @@ const ALL_APPS = [
 
 // prettier-ignore
 const CODE_STUDIO_ENTRIES = {
+  'admin_users/mass_delete_student_progress': './src/sites/studio/pages/admin_users/mass_delete_student_progress.js',
+  'aidiff_exit_tickets/show': './src/sites/studio/pages/aidiff_exit_tickets/show.js',
+  'aidiff_lesson_hooks/show': './src/sites/studio/pages/aidiff_lesson_hooks/show.js',
   'certificates/batch': './src/sites/studio/pages/certificates/batch.js',
   'certificates/show': './src/sites/studio/pages/certificates/show.js',
   'code-studio': './src/sites/studio/pages/code-studio.js',
+  'codeprojects_preview/page_not_found': './src/sites/studio/pages/codeprojects_preview/page_not_found.js',
+  'codeprojects_preview/show': './src/sites/studio/pages/codeprojects_preview/show.js',
   'congrats/index': './src/sites/studio/pages/congrats/index.js',
-  'courses/index': './src/sites/studio/pages/courses/index.js',
   'courses/show': './src/sites/studio/pages/courses/show.js',
   'courses/vocab': './src/sites/studio/pages/courses/vocab.js',
   'courses/resources': './src/sites/studio/pages/courses/resources.js',
@@ -36,12 +42,15 @@ const CODE_STUDIO_ENTRIES = {
   'curriculum_catalog/index': './src/sites/studio/pages/curriculum_catalog/index.js',
   'data_docs/index': './src/sites/studio/pages/data_docs/index.js',
   'data_docs/show': './src/sites/studio/pages/data_docs/show.js',
-  'incubator/index': './src/sites/studio/pages/incubator/index.js',
+  'experiments/index': './src/sites/studio/pages/experiments/index.js',
   'lessons/show': './src/sites/studio/pages/lessons/show.js',
   'lessons/student_lesson_plan': './src/sites/studio/pages/lessons/student_lesson_plan.js',
-  'musiclab/index': './src/sites/studio/pages/musiclab/index.js',
+  'lessons/tutor': './src/sites/studio/pages/lessons/tutor.js',
   'musiclab/menu': './src/sites/studio/pages/musiclab/menu.js',
   'musiclab/gallery': './src/sites/studio/pages/musiclab/gallery.js',
+  'musiclab/embed': './src/sites/studio/pages/musiclab/embed.js',
+  'policy_compliance/parental_permission/_banner': './src/sites/studio/pages/policy_compliance/parental_permission/_banner.js',
+  'policy_compliance/parental_permission/_modal': './src/sites/studio/pages/policy_compliance/parental_permission/_modal.js',
   'policy_compliance/child_account_consent': './src/sites/studio/pages/policy_compliance/child_account_consent.js',
   'print_certificates/batch': './src/sites/studio/pages/print_certificates/batch.js',
   'print_certificates/show': './src/sites/studio/pages/print_certificates/show.js',
@@ -51,12 +60,20 @@ const CODE_STUDIO_ENTRIES = {
   'programming_expressions/show': './src/sites/studio/pages/programming_expressions/show.js',
   'sessions/lockout': './src/sites/studio/pages/sessions/lockout.js',
   'devise/sessions/new': './src/sites/studio/pages/devise/sessions/new.js',
-  'devise/registrations/_sign_up': './src/sites/studio/pages/devise/registrations/_sign_up.js',
+  'devise/sessions/_login': './src/sites/studio/pages/devise/sessions/_login.js',
+  'devise/registrations/login_type': './src/sites/studio/pages/devise/registrations/login_type.js',
+  'devise/registrations/finish_student_account': './src/sites/studio/pages/devise/registrations/finish_student_account.js',
+  'devise/registrations/finish_teacher_account': './src/sites/studio/pages/devise/registrations/finish_teacher_account.js',
   'devise/shared/_oauth_links': './src/sites/studio/pages/devise/shared/_oauth_links.js',
-  'devise/registrations/_finish_sign_up': './src/sites/studio/pages/devise/registrations/_finish_sign_up.js',
   'devise/registrations/edit': './src/sites/studio/pages/devise/registrations/edit.js',
+  'devise/registrations/personalization_information': './src/sites/studio/pages/devise/registrations/personalization_information.js',
+  'devise/registrations/account_type': './src/sites/studio/pages/devise/registrations/account_type.js',
+  'gates/logged_out': './src/sites/studio/pages/gates/logged_out.js',
+  'gates/teacher_account_required': './src/sites/studio/pages/gates/teacher_account_required.js',
   'essential': './src/sites/studio/pages/essential.js',
+  'errors/deprecated_course': './src/sites/studio/pages/errors/deprecated_course.js',
   'home/_homepage': './src/sites/studio/pages/home/_homepage.js',
+  'layouts/_google_analytics': './src/sites/studio/pages/layouts/_google_analytics.js',
   'layouts/_parent_email_banner': './src/sites/studio/pages/layouts/_parent_email_banner.js',
   'layouts/_race_interstitial': './src/sites/studio/pages/layouts/_race_interstitial.js',
   'layouts/_section_creation_celebration_dialog': './src/sites/studio/pages/layouts/_section_creation_celebration_dialog.js',
@@ -64,6 +81,7 @@ const CODE_STUDIO_ENTRIES = {
   'layouts/_school_info_interstitial': './src/sites/studio/pages/layouts/_school_info_interstitial.js',
   'layouts/_small_footer': './src/sites/studio/pages/layouts/_small_footer.js',
   'layouts/_terms_interstitial': './src/sites/studio/pages/layouts/_terms_interstitial.js',
+  'layouts/_student_information_interstitial': './src/sites/studio/pages/layouts/_student_information_interstitial.js',
   'layouts/_initial_section_creation_interstitial': './src/sites/studio/pages/layouts/_initial_section_creation_interstitial.js',
   'levels/_bubble_choice': './src/sites/studio/pages/levels/_bubble_choice.js',
   'levels/_content': './src/sites/studio/pages/levels/_content.js',
@@ -86,14 +104,19 @@ const CODE_STUDIO_ENTRIES = {
   'levels/_text_match': './src/sites/studio/pages/levels/_text_match.js',
   'levels/_widget': './src/sites/studio/pages/levels/_widget.js',
   'levels/show': './src/sites/studio/pages/levels/show.js',
+  'lti/v1/iframe': './src/sites/studio/pages/lti/v1/iframe.js',
+  'lti/v1/account_linking/landing': './src/sites/studio/pages/lti/v1/account_linking/landing.js',
+  'lti/v1/dynamic_registration': './src/sites/studio/pages/lti/v1/dynamic_registration.js',
   'lti/v1/sync_course': './src/sites/studio/pages/lti/v1/sync_course.js',
-  'maker/home': './src/sites/studio/pages/maker/home.js',
+  'lti/v1/upgrade_account': './src/sites/studio/pages/lti/v1/upgrade_account.js',
   'maker/setup': './src/sites/studio/pages/maker/setup.js',
+  'scrapbook/show': './src/sites/studio/pages/scrapbook/show.js',
   'projects/featured': './src/sites/studio/pages/projects/featured.js',
   'projects/index': './src/sites/studio/pages/projects/index.js',
-  'regional_partners/regional_partner_search': './src/sites/studio/pages/regional_partners/regional_partner_search.js',
+  'pyodide_sandbox/show': './src/sites/studio/pages/pyodide_sandbox/show.js',
   'report_abuse/report_abuse_form': './src/sites/studio/pages/report_abuse/report_abuse_form.js',
   'reference_guides/show': './src/sites/studio/pages/reference_guides/show.js',
+  'routing': './src/sites/studio/pages/routing.js',
   'scripts/show': './src/sites/studio/pages/scripts/show.js',
   'scripts/vocab': './src/sites/studio/pages/scripts/vocab.js',
   'scripts/resources': './src/sites/studio/pages/scripts/resources.js',
@@ -111,6 +134,8 @@ const CODE_STUDIO_ENTRIES = {
 
 // prettier-ignore
 const INTERNAL_ENTRIES = {
+  'ai_iteration/image_safety_eval': './src/sites/studio/pages/ai_iteration/image_safety_eval.js',
+  'ai_iteration/tools': './src/sites/studio/pages/ai_iteration/tools.js',
   'blocks/edit': './src/sites/studio/pages/blocks/edit.js',
   'blocks/index': './src/sites/studio/pages/blocks/index.js',
   'course_offerings/edit': './src/sites/studio/pages/course_offerings/edit.js',
@@ -119,27 +144,50 @@ const INTERNAL_ENTRIES = {
   'data_docs/new': './src/sites/studio/pages/data_docs/new.js',
   'data_docs/edit': './src/sites/studio/pages/data_docs/edit.js',
   'data_docs/edit_all': './src/sites/studio/pages/data_docs/edit_all.js',
+  'jit_pl_concepts/new': './src/sites/studio/pages/jit_pl_concepts/new.js',
+  'jit_pl_concepts/edit': './src/sites/studio/pages/jit_pl_concepts/edit.js',
+  'jit_pl_concepts/edit_all': './src/sites/studio/pages/jit_pl_concepts/edit_all.js',
   'datasets/show': './src/sites/studio/pages/datasets/show.js',
   'datasets/index': './src/sites/studio/pages/datasets/index.js',
   'datasets/edit_manifest': './src/sites/studio/pages/datasets/edit_manifest.js',
   'lessons/edit': './src/sites/studio/pages/lessons/edit.js',
+  'lessons/generate': './src/sites/studio/pages/lessons/generate.js',
+  'lessons/slides/generate': './src/sites/studio/pages/lessons/slides/generate.js',
+  'lessons/slides/show': './src/sites/studio/pages/lessons/slides/show.js',
+  'lessons/slides/edit': './src/sites/studio/pages/lessons/slides/edit.js',
   'levelbuilder': './src/sites/studio/pages/levelbuilder.js',
+  'levels/editors/_adaptive': './src/sites/studio/pages/levels/editors/_adaptive.js',
   'levels/editors/_applab': './src/sites/studio/pages/levels/editors/_applab.js',
   'levels/editors/_craft': './src/sites/studio/pages/levels/editors/_craft.js',
   'levels/editors/_dsl': './src/sites/studio/pages/levels/editors/_dsl.js',
+  'levels/editors/fields/_ailab_dynamic_instructions': './src/sites/studio/pages/levels/editors/fields/_ailab_dynamic_instructions.js',
+  'levels/editors/fields/_ailab_mode': './src/sites/studio/pages/levels/editors/fields/_ailab_mode.js',
+  'levels/editors/fields/_aichat_settings':'./src/sites/studio/pages/levels/editors/fields/_aichat_settings.js',
+  'levels/editors/fields/_weblab2_ai_tutor_prompt_settings': './src/sites/studio/pages/levels/editors/fields/_weblab2_ai_tutor_prompt_settings.js',
+  'levels/editors/fields/_pythonlab_ai_tutor_prompt_settings': './src/sites/studio/pages/levels/editors/fields/_pythonlab_ai_tutor_prompt_settings.js',
   'levels/editors/fields/_animation': './src/sites/studio/pages/levels/editors/fields/_animation.js',
   'levels/editors/fields/_bubble_choice_sublevel': './src/sites/studio/pages/levels/editors/fields/_bubble_choice_sublevel.js',
   'levels/editors/fields/_blockly': './src/sites/studio/pages/levels/editors/fields/_blockly.js',
   'levels/editors/fields/_callouts': './src/sites/studio/pages/levels/editors/fields/_callouts.js',
+  'levels/editors/fields/_child_level_bubble_choice_fields': './src/sites/studio/pages/levels/editors/fields/_child_level_bubble_choice_fields.js',
   'levels/editors/fields/_droplet': './src/sites/studio/pages/levels/editors/fields/_droplet.js',
+  'levels/editors/fields/_exemplar': './src/sites/studio/pages/levels/editors/fields/_exemplar.js',
   'levels/editors/fields/_grid': './src/sites/studio/pages/levels/editors/fields/_grid.js',
+  'levels/editors/fields/_music_level_data': './src/sites/studio/pages/levels/editors/fields/_music_level_data.js',
+  'levels/editors/fields/_neighborhood_settings': './src/sites/studio/pages/levels/editors/fields/_neighborhood_settings.js',
+  'levels/editors/fields/_panels': './src/sites/studio/pages/levels/editors/fields/_panels.js',
   'levels/editors/fields/_poetry_fields': './src/sites/studio/pages/levels/editors/fields/_poetry_fields.js',
+  'levels/editors/fields/_predict_settings': './src/sites/studio/pages/levels/editors/fields/_predict_settings.js',
+  'levels/editors/fields/_product_tour_settings': './src/sites/studio/pages/levels/editors/fields/_product_tour_settings.js',
   'levels/editors/fields/_preload_assets': './src/sites/studio/pages/levels/editors/fields/_preload_assets.js',
+  'levels/editors/fields/_ai_evaluation': './src/sites/studio/pages/levels/editors/fields/_ai_evaluation.js',
   'levels/editors/fields/_special_level_types': './src/sites/studio/pages/levels/editors/fields/_special_level_types.js',
+  'levels/editors/fields/_starter_assets': './src/sites/studio/pages/levels/editors/fields/_starter_assets.js',
   'levels/editors/fields/_validation_code': './src/sites/studio/pages/levels/editors/fields/_validation_code.js',
   'levels/editors/fields/_validations': './src/sites/studio/pages/levels/editors/fields/_validations.js',
   'levels/editors/fields/_video': './src/sites/studio/pages/levels/editors/fields/_video.js',
-  'levels/editors/_gamelab': './src/sites/studio/pages/levels/editors/_gamelab.js',
+  'levels/editors/fields/_widget2': './src/sites/studio/pages/levels/editors/fields/_widget2.js',
+  'levels/editors/_navigation_sidebar': './src/sites/studio/pages/levels/editors/_navigation_sidebar.js',
   'levels/editors/_pixelation': './src/sites/studio/pages/levels/editors/_pixelation.js',
   'levels/editors/_studio': './src/sites/studio/pages/levels/editors/_studio.js',
   'libraries/edit': './src/sites/studio/pages/libraries/edit.js',
@@ -149,16 +197,17 @@ const INTERNAL_ENTRIES = {
   'programming_environments/edit': './src/sites/studio/pages/programming_environments/edit.js',
   'programming_expressions/new': './src/sites/studio/pages/programming_expressions/new.js',
   'programming_expressions/edit': './src/sites/studio/pages/programming_expressions/edit.js',
+  'programming_expressions/index': './src/sites/studio/pages/programming_expressions/index.js',
   'programming_methods/edit': './src/sites/studio/pages/programming_methods/edit.js',
   'reference_guides/new': './src/sites/studio/pages/reference_guides/new.js',
   'reference_guides/edit': './src/sites/studio/pages/reference_guides/edit.js',
   'reference_guides/edit_all': './src/sites/studio/pages/reference_guides/edit_all.js',
-  'programming_expressions/index': './src/sites/studio/pages/programming_expressions/index.js',
+  'images/new': './src/sites/studio/pages/images/new.js',
   'rubrics/new': './src/sites/studio/pages/rubrics/new.js',
   'rubrics/edit': './src/sites/studio/pages/rubrics/edit.js',
   'sections/new': './src/sites/studio/pages/sections/new.js',
-  'sections/edit': './src/sites/studio/pages/sections/edit.js',
   'scripts/edit': './src/sites/studio/pages/scripts/edit.js',
+  'scripts/generate': './src/sites/studio/pages/scripts/generate.js',
   'scripts/new': './src/sites/studio/pages/scripts/new.js',
   'shared/_check_admin': './src/sites/studio/pages/shared/_check_admin.js',
   'shared_blockly_functions/edit': './src/sites/studio/pages/shared_blockly_functions/edit.js',
@@ -170,38 +219,7 @@ const INTERNAL_ENTRIES = {
 };
 
 // prettier-ignore
-const PEGASUS_ENTRIES = {
-  // code.org
-  'code.org/public/dance': './src/sites/code.org/pages/public/dance.js',
-  'code.org/public/teacher-dashboard/index': './src/sites/code.org/pages/public/teacher-dashboard/index.js',
-  'code.org/public/yourschool': './src/sites/code.org/pages/public/yourschool.js',
-  'code.org/public/yourschool/thankyou': './src/sites/code.org/pages/public/yourschool/thankyou.js',
-  'code.org/public/districts': './src/sites/code.org/pages/public/districts.js',
-  'code.org/views/share_privacy': './src/sites/code.org/pages/views/share_privacy.js',
-  'code.org/views/theme_common_head_after': './src/sites/code.org/pages/views/theme_common_head_after.js',
-  'code.org/views/theme_google_analytics': './src/sites/code.org/pages/views/theme_google_analytics.js',
-  'code.org/views/workshop_search': './src/sites/code.org/pages/views/workshop_search.js',
-  'code.org/views/amazon_future_engineer': './src/sites/code.org/pages/views/amazon_future_engineer.js',
-  'code.org/views/amazon_future_engineer_eligibility': './src/sites/code.org/pages/views/amazon_future_engineer_eligibility.js',
-  'code.org/views/job_board': './src/sites/code.org/pages/views/job_board.js',
-  'code.org/views/analytics_event_log_helper': './src/sites/code.org/pages/views/analytics_event_log_helper.js',
-  'code.org/views/swiper': './src/sites/code.org/pages/views/swiper.js',
-  'code.org/views/swiper_page_csd': './src/sites/code.org/pages/views/swiper_page_csd.js',
-
-  // hourofcode.com
-  'hourofcode.com/public/events/index': './src/sites/hourofcode.com/pages/public/events/index.js',
-  'hourofcode.com/views/theme_common_head_after': './src/sites/hourofcode.com/pages/views/theme_common_head_after.js',
-  'hourofcode.com/views/hoc_events_map': './src/sites/hourofcode.com/pages/views/hoc_events_map.js',
-  'hourofcode.com/views/theme_google_analytics': './src/sites/hourofcode.com/pages/views/theme_google_analytics.js',
-
-  // shared between code.org and hourofcode.com
-  'tutorialExplorer': './src/tutorialExplorer/tutorialExplorer.js',
-};
-
-// prettier-ignore
 const PROFESSIONAL_DEVELOPMENT_ENTRIES = {
-  'code.org/public/learn/local': './src/sites/code.org/pages/public/learn/local.js',
-
   'pd/_jotform_loader': './src/sites/studio/pages/pd/_jotform_loader.js',
   'pd/_jotform_embed': './src/sites/studio/pages/pd/_jotform_embed.js',
 
@@ -212,10 +230,14 @@ const PROFESSIONAL_DEVELOPMENT_ENTRIES = {
   'pd/application/teacher_application/new': './src/sites/studio/pages/pd/application/teacher_application/new.js',
   'pd/application/principal_approval_application/new': './src/sites/studio/pages/pd/application/principal_approval_application/new.js',
   'pd/workshop_daily_survey/new_general_foorm': './src/sites/studio/pages/pd/workshop_daily_survey/new_general_foorm.js',
-  'pd/workshop_enrollment/new': './src/sites/studio/pages/pd/workshop_enrollment/new.js',
+  'pd/workshop_enrollment/join': './src/sites/studio/pages/pd/workshop_enrollment/join.js',
   'pd/workshop_enrollment/cancel': './src/sites/studio/pages/pd/workshop_enrollment/cancel.js',
+  'pd/session_attendance/attendance_recorded': './src/sites/studio/pages/pd/session_attendance/attendance_recorded.js',
 
-  'pd/professional_learning_landing/index': './src/sites/studio/pages/pd/professional_learning_landing/index.js',
+  'pd/professional_learning/index': './src/sites/studio/pages/pd/professional_learning/index.js',
+  'pd/professional_learning/self_paced_pl_catalog': './src/sites/studio/pages/pd/professional_learning/self_paced_pl_catalog.js',
+  'pd/professional_learning/regional_workshop_catalog': './src/sites/studio/pages/pd/professional_learning/regional_workshop_catalog.js',
+  'pd/professional_learning/workshops/index': './src/sites/studio/pages/pd/professional_learning/workshops/index.js',
   'pd/regional_partner_mini_contact/new': './src/sites/studio/pages/pd/regional_partner_mini_contact/new.js',
 
   'pd/international_opt_in/new': './src/sites/studio/pages/pd/international_opt_in/new.js',
@@ -237,6 +259,7 @@ const PROFESSIONAL_DEVELOPMENT_ENTRIES = {
 const SHARED_ENTRIES = {
   cookieBanner: './src/cookieBanner/cookieBanner.js',
   userHeaderEventLogger: './src/userHeaderEventLogger/userHeaderEventLogger.js',
+  statsigWebAnalytics: './src/metrics/statsigWebAnalytics.js',
 };
 
 // prettier-ignore
@@ -244,7 +267,6 @@ const OTHER_ENTRIES = {
   // The blockly dependency is huge, so we currently control when it is
   // loaded explicitly via script tags rather than via normal imports.
   blockly: './src/sites/studio/pages/blockly.js',
-  googleblockly: './src/sites/studio/pages/googleblockly.js',
 
   // embedBlocks.js is just React, the babel-polyfill, and a few other dependencies
   // in a bundle to minimize the amount of stuff we need when loading blocks
@@ -259,6 +281,10 @@ const OTHER_ENTRIES = {
   'gamelab-api': './src/p5lab/gamelab/api-entry.js',
 
   regionalPartnerMiniContact: './src/regionalPartnerMiniContact/regionalPartnerMiniContact',
+};
+
+const LOCALIZATION_ENTRIES = {
+  localization: './src/localization/entrypoint.js',
 };
 
 /**
@@ -291,8 +317,8 @@ module.exports = {
   appsEntriesFor,
   CODE_STUDIO_ENTRIES,
   INTERNAL_ENTRIES,
-  PEGASUS_ENTRIES,
   PROFESSIONAL_DEVELOPMENT_ENTRIES,
   SHARED_ENTRIES,
   OTHER_ENTRIES,
+  LOCALIZATION_ENTRIES,
 };

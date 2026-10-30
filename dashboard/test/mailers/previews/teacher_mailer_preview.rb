@@ -2,16 +2,6 @@
 class TeacherMailerPreview < ActionMailer::Preview
   include FactoryBot::Syntax::Methods
 
-  def new_teacher_email_es_mx_preview
-    teacher = build :teacher, email: 'teacher@gmail.com'
-    TeacherMailer.new_teacher_email(teacher, 'es-MX')
-  end
-
-  def new_teacher_email_preview
-    teacher = build :teacher, email: 'fake_email@fake.com'
-    TeacherMailer.new_teacher_email(teacher)
-  end
-
   def hour_of_code_tutorial_preview
     teacher_name = 'Severus Snape'
     teacher_email = 'newteacher@fake.com'

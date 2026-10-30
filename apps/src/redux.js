@@ -25,11 +25,12 @@
  * @file The global redux store - "There can be only one"
  */
 
+import {configureStore} from '@reduxjs/toolkit';
 import Immutable from 'immutable';
-import experiments from './util/experiments';
 import * as redux from 'redux';
 import reduxThunk from 'redux-thunk';
-import {configureStore} from '@reduxjs/toolkit';
+
+import experiments from './util/experiments';
 
 if (process.env.NODE_ENV !== 'production') {
   var createLogger = require('redux-logger');
@@ -38,28 +39,32 @@ if (process.env.NODE_ENV !== 'production') {
 let reduxStore;
 let globalReducers = {};
 
+let __oldReduxStore;
+let __oldGlobalReducers;
+
+// These are exported for use in Typescript unit tests.
+export const stubRedux = function () {
+  if (__oldReduxStore) {
+    throw new Error(
+      'Redux store has already been stubbed. Did you forget to call restore?'
+    );
+  }
+  __oldReduxStore = reduxStore;
+  __oldGlobalReducers = globalReducers;
+  reduxStore = null;
+  globalReducers = {};
+};
+
+export const restoreRedux = function () {
+  reduxStore = __oldReduxStore;
+  globalReducers = __oldGlobalReducers;
+  __oldReduxStore = null;
+  __oldGlobalReducers = null;
+};
+
 if (IN_UNIT_TEST) {
-  let __oldReduxStore;
-  let __oldGlobalReducers;
-
-  module.exports.stubRedux = function () {
-    if (__oldReduxStore) {
-      throw new Error(
-        'Redux store has already been stubbed. Did you forget to call restore?'
-      );
-    }
-    __oldReduxStore = reduxStore;
-    __oldGlobalReducers = globalReducers;
-    reduxStore = null;
-    globalReducers = {};
-  };
-
-  module.exports.restoreRedux = function () {
-    reduxStore = __oldReduxStore;
-    globalReducers = __oldGlobalReducers;
-    __oldReduxStore = null;
-    __oldGlobalReducers = null;
-  };
+  module.exports.stubRedux = stubRedux;
+  module.exports.restoreRedux = restoreRedux;
 }
 
 if (IN_STORYBOOK || IN_UNIT_TEST) {
@@ -121,7 +126,7 @@ export function hasReducer(key) {
 }
 
 /**
- * Creates a store configured for use the way we want for Code.org.
+ * Creates a store configured for use the way we want for CodeAI.
  * @see http://redux.js.org/docs/api/createStore.html
  * @param {!function} reducer
  * @return {Store} Configured Redux store, ready for use.

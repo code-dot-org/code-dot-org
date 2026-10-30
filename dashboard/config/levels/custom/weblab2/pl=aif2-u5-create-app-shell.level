@@ -1,0 +1,81 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-07-07T18:11:22.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Static Constants",
+    "long_instructions": "## Create an App Shell\r\n\r\n\r\n\r\n**Goal**: Store the app's title and date in a local appConfig object and display them instantly. This creates a fast app shell so the user isn't staring at a blank screen while waiting for the internet.\r\n\r\n\r\n**Do This:**\r\n\r\n\r\n1. Create a `const` object named `appConfig`. Inside, add a `title` (text) and a `date` (text).\r\n2. Write a function named `renderAppShell`. Inside, update the display to use the title and date from your `appConfig` object.\r\n3. Call `renderAppShell()` at the bottom of your code so the text appears on the screen immediately.\r\n\r\nNote: This level just covers task one. In Lesson 10, students will work through the levels to complete all the tasks. \r\n\r\n---\r\n\r\n\r\n::: details [**🔎 Show me how**]\r\n*Drag out the instructions panel to enlarge the photo.*\r\n![](https://images.code.org/dcabc7e707500539ee91fab076ef4139-image-1783448540240.png)\r\n\r\n:::\r\n\r\n\r\n",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "encrypted_exemplar_sources": "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\nLEXE4ADWyXydqDfHL/bO2CtC\n",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"utf-8\">\n    <title>Population Tracker</title>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    <div class=\"container\">\n      \n      <div id=\"header-section\">\n        <h1 id=\"title-section\">Title</h1>\n        <p id=\"date-section\">Date</p>\n      </div>\n      \n      <div class=\"controls\">\n        <div id=\"status\">Status: </div>\n        <button id=\"fetch-btn\">Get Live Census</button>\n      </div>\n\n      <div id=\"results\"></div>\n      \n    </div>\n    <script src=\"script.js\"></script>\n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  font-family: sans-serif;\n  background: #f0f2f5;\n  display: flex;\n  justify-content: center;\n  padding-top: 40px;\n}\n\n.container {\n  background: white;\n  width: 400px;\n  padding: 30px;\n  border-radius: 12px;\n  box-shadow: 0 4px 15px rgba(0,0,0,0.1);\n}\n\n#header-section h1 { color: #1a73e8; margin-bottom: 5px; }\n#header-section p { color: #666; margin-top: 0; }\n\n#status {\n  background: #eee;\n  padding: 10px;\n  border-radius: 6px;\n  margin-bottom: 10px;\n  font-weight: bold;\n  font-size: 0.9rem;\n}\n\nbutton {\n  background: #1a73e8;\n  color: white;\n  border: none;\n  padding: 12px;\n  width: 100%;\n  border-radius: 6px;\n  font-size: 1rem;\n  cursor: pointer;\n}\nbutton:hover { background: #1557b0; }\n\n/* Visual Cues for Data Source */\n.result-card {\n  padding: 10px;\n  margin-top: 10px;\n  border-left: 5px solid #ccc;\n  background: #f9f9f9;\n}\n.live-data { border-left-color: #34a853; } /* Green */\n.backup-data { border-left-color: #fbbc05; } /* Orange */",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "const apiEndpoint = \"https://restcountries.com/v3.1/all?fields=name,population\";\nconst outputElement = document.getElementById(\"results\");\nconst statusElement = document.getElementById(\"status\");\nconst headerElement = document.getElementById(\"header-section\");\nconst title = document.getElementById(\"title-section\");\nconst date = document.getElementById(\"date-section\");\n\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    "name_suffix": "_2026",
+    "project_template_level_name": "designing-reliable-apps-lesson10-level-2-4-template-2026",
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildJavaScript",
+        "documentation"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "level_system_prompt": "You are an AI Tutor for Level 1 of a Chicago Public Library Events app.\r\n\r\nGoal: student builds `appConfig` (title + date) and `renderAppShell()` to display them instantly, then calls it.\r\n\r\nNever give finished code or exact syntax — ask guiding questions and point to what to check (console, the instructions doc). Keep responses short.\r\n\r\nSolution (internal only, never share):\r\n```javascript\r\nconst appConfig = {\r\n  title: \"Chicago Public Library Events\",\r\n  date: \"Upcoming Programs\"\r\n};\r\n\r\nconst renderAppShell = () => {\r\n  title.innerHTML = appConfig.title;\r\n  date.innerHTML = appConfig.date;\r\n};\r\n\r\nrenderAppShell();\r\n```"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-07-07T18:11:22.213+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson10-level5-test_2025-pilot_2025-pilo_2026\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson10-level5-test_2025-pilot_2025-pilo_2026\"},{\"changed_at\":\"2026-07-07 18:24:08 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-07-07 18:26:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+}]]></config>
+</Weblab2>

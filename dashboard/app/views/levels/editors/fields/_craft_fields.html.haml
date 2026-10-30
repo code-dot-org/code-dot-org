@@ -61,7 +61,7 @@
     )
     = f.text_area :verification_function, rows: 10
     :javascript
-      var verificationEditor = levelbuilder.initializeCodeMirror('level_verification_function', 'javascript');
+      var verificationEditor = levelbuilder.initializeCodeMirror6('level_verification_function', 'javascript');
   .field
     = f.label :timeout_verification_function, 'Timeout Verification Function (check success/fail after a timeout hit)'
     Click to insert: (
@@ -72,7 +72,7 @@
     )
     = f.text_area :timeout_verification_function, rows: 10
     :javascript
-      var verificationEditorTimeout = levelbuilder.initializeCodeMirror('level_timeout_verification_function', 'javascript');
+      var verificationEditorTimeout = levelbuilder.initializeCodeMirror6('level_timeout_verification_function', 'javascript');
   .field
     = f.label :failure_check_function, 'Should fail early function'
     Click to insert: (
@@ -83,7 +83,7 @@
     )
     = f.text_area :failure_check_function, rows: 10
     :javascript
-      var earlyFailureEditor = levelbuilder.initializeCodeMirror('level_failure_check_function', 'javascript');
+      var earlyFailureEditor = levelbuilder.initializeCodeMirror6('level_failure_check_function', 'javascript');
   .field
     = f.label :level_verification_timeout, 'Level verification timeout in milliseconds (failure if player does not succeed in allotted time)'
     = f.text_field :level_verification_timeout, {value: @level.level_verification_timeout || 0}
@@ -118,7 +118,7 @@
     %a{style:"cursor: pointer", onclick: "songsEditor.getDoc().setValue('#{Craft.song_options}')"}= "Insert all"
     = f.text_area :songs, rows: 10
     :javascript
-      var songsEditor = levelbuilder.initializeCodeMirror('level_songs', 'javascript');
+      var songsEditor = levelbuilder.initializeCodeMirror6('level_songs', 'javascript');
 
   %div{style: "opacity: .5"}
     .field

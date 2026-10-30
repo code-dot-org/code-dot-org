@@ -1,0 +1,10 @@
+name 'HoAI_pilot_6_transition'
+title 'Review'
+description 'description here'
+
+markdown <<MARKDOWN
+  <h1 style="text-align: center;"> Time to remix the music!</h1>
+
+
+![](https://images.code.org/f32241169299f665ebf489783b215792-image-1759904649666.png)
+MARKDOWN

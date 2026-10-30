@@ -1,73 +1,182 @@
 require 'cdo/shared_constants'
-require 'cpa'
 require 'date'
 
 class Policies::ChildAccount
-  # Values for the `child_account_compliance_state` attribute
+  # Values for the `cap_status` attribute
   module ComplianceState
+    # The period for "existing" users before their accounts locked out.
+    GRACE_PERIOD = SharedConstants::CHILD_ACCOUNT_COMPLIANCE_STATES.GRACE_PERIOD
+
     # The student's account has been used to issue a request to a parent.
     LOCKED_OUT = SharedConstants::CHILD_ACCOUNT_COMPLIANCE_STATES.LOCKED_OUT
 
-    # The student's account has been used to issue a request to a parent.
-    REQUEST_SENT = SharedConstants::CHILD_ACCOUNT_COMPLIANCE_STATES.REQUEST_SENT
-
     # The student's account has been approved by their parent.
     PERMISSION_GRANTED = SharedConstants::CHILD_ACCOUNT_COMPLIANCE_STATES.PERMISSION_GRANTED
+
+    # def self.grace_period?(student)
+    # def self.locked_out?(student)
+    # def self.permission_granted?(student)
+    SharedConstants::CHILD_ACCOUNT_COMPLIANCE_STATES.to_h.each do |key, value|
+      define_singleton_method("#{key.downcase}?") do |student|
+        student.cap_status == value
+      end
+    end
   end
 
-  # The individual US State child account policy configuration
-  # max_age: the oldest age of the child at which this policy applies.
-  # start_date: the date on which this policy first went into effect.
-  STATE_POLICY = {
-    'CO' => {
-      max_age: 12,
-      start_date: DateTime.parse(DCDO.get('cpa_schedule', {Cpa::NEW_USER_LOCKOUT => '2023-07-01T00:00:00Z'})[Cpa::NEW_USER_LOCKOUT])
-    }
-  }.freeze
+  # The delay is intended to provide notice to a parent
+  # when a student may no longer be monitoring the "parent's email."
+  PERMISSION_GRANTED_MAIL_DELAY = 24.hours
+
+  # The maximum number of daily requests a student can send to their parent.
+  MAX_STUDENT_DAILY_PARENT_PERMISSION_REQUESTS = 3
+
+  # The maximum number of times a student can resend a request to a parent.
+  MAX_PARENT_PERMISSION_RESENDS = 3
+
+  # Cutoff date when `us_state` capture began during sign-up and is considered trusted.
+  # @note This date matches the initial CPA launch (for the state of Colorado).
+  US_STATE_TRUST_CUTOFF_AT = DateTime.parse('2023-07-05T23:15:00+00:00').freeze
 
   # Is this user compliant with our Child Account Policy(cap)?
   # For students under-13, in Colorado, with a personal email login: we require
   # parent permission before the student can start using their account.
-  def self.compliant?(user)
-    return true unless parent_permission_required?(user)
-    user.child_account_compliance_state == ComplianceState::PERMISSION_GRANTED
+  # @param [Boolean] future Set to true if you want to know if the user will be
+  # compliant in the future after CAP goes into affect in their US State.
+  # Defaults to `false`
+  def self.compliant?(user, future: false)
+    return true unless parent_permission_required?(user, future: future)
+    ComplianceState.permission_granted?(user)
   end
 
   # Checks if a user is affected by a state policy but was created prior to the
   # policy going into effect.
   def self.user_predates_policy?(user)
-    parent_permission_required?(user) && user.created_at < STATE_POLICY[user.us_state][:start_date]
+    return false unless parent_permission_required?(user)
+
+    user_state_policy = StatePolicies.state_policy(user)
+    return false unless user_state_policy
+
+    # Due to a leaky bucket issue, roster-synced Google accounts weren't being locked out as intended.
+    # Therefore, it was decided to move their locking out to the "all-user lockout" phase.
+    return true if user_state_policy[:name] == StatePolicies.state_policies['CO'][:name] &&
+      user.created_at < user_state_policy[:lockout_date] &&
+      user.authentication_options.any?(&:google?)
+
+    user.created_at < user_state_policy[:lockout_date]
+  end
+
+  # The date on which the student's grace period ends.
+  # @param user [User] the student account
+  # @param approximate [Boolean] if true, return an approximate date if the exact date is not known
+  def self.grace_period_end_date(user, approximate: false)
+    user_state_policy = StatePolicies.state_policy(user)
+    return unless user_state_policy
+
+    grace_period_duration = user_state_policy[:grace_period_duration]
+    return unless grace_period_duration
+
+    start_date = user.cap_status_date if ComplianceState.grace_period?(user)
+    start_date = user_state_policy[:lockout_date] if approximate && start_date.nil?
+
+    start_date&.since(grace_period_duration)
+  end
+
+  # The date on which the student's account will be locked if the account is not compliant.
+  # @param user [User] the student account
+  # @param approximate [Boolean] if true, return an approximate date if the exact date is not known
+  # @param future [Boolean] return the lockout date for the user even if the CAP
+  # policy for their state hasn't begun yet.
+  def self.lockout_date(user, approximate: false, future: false)
+    return if compliant?(user, future: future)
+    return if ComplianceState.locked_out?(user)
+
+    # CAP non-compliant "pre-policy" created students can be locked out only after their grace period ends.
+    return grace_period_end_date(user, approximate: approximate) if user_predates_policy?(user)
+
+    # CAP non-compliant "post-policy" created students should be locked out immediately after the policy goes into effect.
+    StatePolicies.state_policy(user)&.dig(:lockout_date)
+  end
+
+  # Checks if the user is partially locked out due to current non-compliance with CAP, even
+  # if we are granting them temporary 'compliance' in a grace period.
+  def self.partially_locked_out?(user)
+    # They are in the 'almost' locked out phase by predating the policy and
+    # not pre-emptively getting parent permission. (They may be temporarily compliant.)
+    user_predates_policy?(user) && !ComplianceState.permission_granted?(user)
+  end
+
+  # Checks if the user will not be old enough by the lockout date
+  def self.underage?(user)
+    return false unless user.student?
+    return false unless user.birthday
+
+    policy = StatePolicies.state_policy(user)
+    return false unless policy
+
+    lockout_date = policy.try(:[], :lockout_date)
+    return false unless lockout_date
+
+    # We have to add 1 to the max_age when calculating the birthday since birthdays are
+    # inaccurate values and we want to *ensure* the student age is legally valid.
+    min_required_age = (policy[:max_age] + 1).years
+
+    # Checks if the student meets the minimum age requirement by the start of the lockout
+    # (And thus they are not considered underage during pre-lockout periods)
+    # We will default to UTC if the timezone is not set.
+    student_birthday = user.birthday.in_time_zone('UTC').in_time_zone(lockout_date.utc_offset)
+    return false unless student_birthday.since(min_required_age) > lockout_date
+
+    # Check to see if they are old enough at the current date using precise_age
+    student_age = user.precise_age(timezone: lockout_date.utc_offset)
+    student_age <= policy[:max_age]
+  end
+
+  # Whether or not the user can create/link new personal logins
+  def self.can_link_new_personal_account?(user)
+    return true unless user.student?
+    return false unless has_required_information?(user)
+    return true unless Policies::User.in_usa?(user.country_code)
+    return true unless underage?(user)
+
+    ComplianceState.permission_granted?(user)
+  end
+
+  def self.personal_account_linking_enabled?(user, request_in_usa:)
+    return false if user.student? && request_in_usa && user.country_code.nil?
+
+    can_link_new_personal_account?(user) && !partially_locked_out?(user)
+  end
+
+  # Returns true if the user has provided the minimum information we need to decide if their account is affected by our Child Account Policy.
+  def self.has_required_information?(user)
+    if Policies::User.in_usa?(user.country_code)
+      [user.us_state, user.country_code, user.birthday].all?(&:present?)
+    else
+      user.birthday.present?
+    end
   end
 
   # Check if parent permission is required for this account according to our
   # Child Account Policy.
-  private_class_method def self.parent_permission_required?(user)
-    return false unless user.us_state
-    policy = STATE_POLICY[user.us_state]
+  # @param [Boolean] future Set to true if you want to know if the student will
+  # need parent permission in the future after CAP goes into affect in their
+  # US State. Defaults to `false`.
+  def self.parent_permission_required?(user, future: false)
+    return false unless user.student?
+
+    policy = StatePolicies.state_policy(user)
+    # Parent permission is not required for students who are not covered by a US State child account policy.
     return false unless policy
-    return false unless policy[:start_date] < DateTime.now
-    return false unless user.age.to_i <= policy[:max_age].to_i
-    personal_account?(user)
-  end
 
-  # Authentication option types which we consider to be "owned" by the school
-  # the student attends because the school has admin control of the account.
-  SCHOOL_OWNED_TYPES = [AuthenticationOption::CLEVER].freeze
+    # Parental permission is not required until the policy is in effect.
+    # Skip the date check if we want to know if the student will need parent
+    # permission in the future.
+    return false if !future && policy[:lockout_date] > DateTime.now
 
-  # Does the user login using credentials they personally control?
-  # For example, some accounts are created and owned by schools (Clever).
-  private_class_method def self.personal_account?(user)
-    return false if user.sponsored?
-    # List of credential types which we believe schools have ownership of.
-    # Does the user have an authentication method which is not controlled by
-    # their school? The presence of at least one authentication method which
-    # is owned by the student/parent means this is a "personal account".
-    if user.migrated?
-      user.authentication_options.any? do |option|
-        SCHOOL_OWNED_TYPES.exclude?(option.credential_type)
-      end
-    else
-      SCHOOL_OWNED_TYPES.exclude?(user.provider)
-    end
+    # Parental permission is not required for students
+    # whose age cannot be identified or who are older than the maximum age covered by the policy.
+    return false unless underage?(user)
+
+    Policies::User.personal_account?(user)
   end
 end

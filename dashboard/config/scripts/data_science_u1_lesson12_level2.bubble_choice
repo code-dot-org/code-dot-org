@@ -1,0 +1,11 @@
+name 'data-science-u1-lesson12-level2'
+display_name 'Data Decisions and Visualizations'
+
+sublevels
+level 'data-science-u1-lesson12-level2a'
+level 'data-science-u1-lesson12-level2b'
+level 'data-science-u1-lesson12-level2c'
+level 'data-science-u1-lesson12-level2d'
+level 'data-science-u1-lesson12-level2e'
+level 'data-science-u1-lesson12-level2f'
+level 'data-science-u1-lesson12-level2g'

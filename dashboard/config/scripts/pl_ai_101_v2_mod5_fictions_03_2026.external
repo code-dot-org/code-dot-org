@@ -1,0 +1,22 @@
+name 'pl-ai-101-V2-mod5-fictions-03_2026'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Check for Understanding
+
+## Answer: C
+
+**AI produces confident, well-structured answers that may include incomplete or incorrect information.**
+
+AI responses often sound confident, making them easy to trust. That's why it's important to evaluate AI outputs rather than accept them at face value.
+
+Better prompts can improve the quality of a response, but they cannot guarantee accuracy.
+
+You can:
+* Ask for sources
+* Request more detail
+* Provide more context
+
+Even with these strategies, AI does not verify facts before responding so it can still produce answers that are incomplete or inaccurate.
+MARKDOWN

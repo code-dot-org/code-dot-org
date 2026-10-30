@@ -1,0 +1,35 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-10-14T18:48:10.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "### What is input()? \n\ninput() lets your program ask the user for information. \nWhatever the user types is stored in a variable. \n\n- `input(\"What is your name? \")` asks the user for their name. \n\n- The user's answer is stored in the variable `name`. \n\n",
+        "imageUrl": "https://images.code.org/3ab49633af8b6ef8fedcb17fe6314652-Screen Shot 2025-01-27 at 2.50.47 PM.png",
+        "key": "python-intro-console-lesson8-intro-8aff5546-5677-4fda-8216-e9396dca5ff2",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "### What is a variable? \n\nA variable is a container for storing data. You can name a variable anything (letters, numbers, underscores). \n\nVariables help you reuse and reference data in your program. \n\n- `name = \"Ava\"` will store the word `Ava` in the variable called `name`. ",
+        "imageUrl": "https://images.code.org/da66a9330f2a3d927dea88c739eb5fa8-Screen Shot 2025-01-27 at 2.55.53 PM.png",
+        "key": "python-intro-console-lesson8-intro-2dc3b7c9-f67b-4ef0-aac7-e26f867c6a1e",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "### String Concatenation \n\nConcatenation combines strings (text) together using the `+` operator. \nUse `+` to add strings or variables containing strings together. \n\n- `print(\"Hello, \" + name + \"!\")` will print \"Hello, Ava!\" in the console. ",
+        "imageUrl": "https://images.code.org/2bb4787b31ebe013f397a483190f6a01-Screen Shot 2025-01-27 at 2.59.23 PM.png",
+        "key": "python-intro-console-lesson8-intro-b02aad9e-84db-42a0-9470-73809c801720",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "name_suffix": "_pilot-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-14T18:48:10.220+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson16-level2_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson16-level2_2025\"}]"
+}]]></config>
+</Panels>

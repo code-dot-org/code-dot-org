@@ -42,14 +42,25 @@ namespace :install do
     if RakeUtils.local_environment?
       Dir.chdir(dashboard_dir) do
         RakeUtils.bundle_install
-        puts CDO.dashboard_db_writer
+        RakeUtils.python_venv_install
+
         if ENV['CI']
-          # Prepare for dashboard unit tests to run. We can't seed UI test data
-          # yet because doing so would break unit tests.
-          RakeUtils.rake 'db:create db:test:prepare'
+          if ENV['CI_JOB'] == 'unit_tests'
+            # Prepare for dashboard unit tests to run.
+            RakeUtils.rake_stream_output 'db:create db:test:prepare'
+          else
+            # If we don't already have a database that's been restored from a
+            # cache, prepare one from scratch by creating the database and loading
+            # the schema. If we do, make sure it's up to date with the branch
+            # being tested. Either way, seeding will be performed in a later step.
+            RakeUtils.rake_stream_output 'db:setup_or_migrate'
+          end
         else
           RakeUtils.rake_stream_output 'dashboard:setup_db', ([:adhoc, :development].include?(rack_env) ? '--trace' : nil)
         end
+
+        # Provision writer and reader SQL users on systems not provisioned via CloudFormation.
+        RakeUtils.rake_stream_output 'db:provision_sql_users'
       end
     end
   end
@@ -64,22 +75,12 @@ namespace :install do
     end
   end
 
-  desc 'Install I18n libs'
-  timed_task_with_logging :i18n do
-    if RakeUtils.local_environment?
-      Dir.chdir(bin_dir('i18n')) do
-        RakeUtils.install_npm
-      end
-    end
-  end
-
   tasks = []
   tasks << :hooks if rack_env?(:development)
   tasks << :locals_yml if rack_env?(:development)
   tasks << :apps if CDO.build_apps
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
-  tasks << :i18n if CDO.build_i18n
   timed_task_with_logging all: tasks
 end
 desc 'Install all OS dependencies.'

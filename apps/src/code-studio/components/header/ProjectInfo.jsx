@@ -1,13 +1,15 @@
+import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import ProjectHeader from './ProjectHeader';
+
+import {possibleHeaders} from '../../headerRedux';
+
+import LevelBuilderSaveButton from './LevelBuilderSaveButton';
 import MinimalProjectHeader from './MinimalProjectHeader';
 import ProjectBackedHeader from './ProjectBackedHeader';
-import LevelBuilderSaveButton from './LevelBuilderSaveButton';
-import {possibleHeaders} from '../../headerRedux';
-import headerVignetteStyles from './HeaderVignette';
-import $ from 'jquery';
+import ProjectHeader from './ProjectHeader';
+import remeasureOnFontsReady from './remeasureOnFontsReady';
 
 const headerComponents = {
   [possibleHeaders.project]: ProjectHeader,
@@ -38,6 +40,13 @@ class ProjectInfo extends React.Component {
 
   componentDidMount() {
     this.setDesiredWidth();
+    this.cancelFontRemeasure = remeasureOnFontsReady(() =>
+      this.setDesiredWidth()
+    );
+  }
+
+  componentWillUnmount() {
+    this.cancelFontRemeasure?.();
   }
 
   componentDidUpdate() {
@@ -53,27 +62,22 @@ class ProjectInfo extends React.Component {
       return null;
     }
 
-    const fullWidth = this.getFullWidth();
-    const actualWidth = this.props.width;
-
-    const vignetteStyle =
-      actualWidth < fullWidth
-        ? this.props.isRtl
-          ? headerVignetteStyles.left
-          : headerVignetteStyles.right
-        : null;
-
     const HeaderComponent = headerComponents[this.props.currentHeader];
+    // With no width from the header, the info sits in the header's flex row
+    // and shrinks with it instead of being sized from outside.
+    const inFlow = this.props.width === undefined;
     return (
-      <div style={styles.headerContainer}>
+      <div
+        className="project_info_container"
+        style={inFlow ? styles.flowContainer : styles.headerContainer}
+      >
         <div
           className="project_info"
           ref="projectInfo"
-          style={styles.projectInfo}
+          style={inFlow ? styles.flowInfo : styles.projectInfo}
         >
           <HeaderComponent onChangedWidth={() => this.onChangedWidth()} />
         </div>
-        <div className="vignette" style={vignetteStyle} />
       </div>
     );
   }
@@ -82,11 +86,24 @@ class ProjectInfo extends React.Component {
 const styles = {
   headerContainer: {
     position: 'relative',
-    overflow: 'hidden',
     height: 38,
   },
   projectInfo: {
     position: 'absolute',
+    top: 0,
+    bottom: 0,
+    display: 'flex',
+    alignItems: 'center',
+  },
+  flowContainer: {
+    height: 38,
+    minWidth: 0,
+  },
+  flowInfo: {
+    height: '100%',
+    display: 'flex',
+    alignItems: 'center',
+    minWidth: 0,
   },
 };
 

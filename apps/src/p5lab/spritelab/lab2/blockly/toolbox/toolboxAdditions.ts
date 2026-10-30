@@ -1,0 +1,221 @@
+// Lab-owned additions layered onto a level's authored toolbox at load time.
+// A stopgap while every level wants the same lineup; this file should go
+// away once levelbuilders author fine-grained toolboxes themselves.
+
+import {cloneDeep} from 'lodash';
+
+import {
+  isBlockInfo,
+  isStaticCategoryInfo,
+  makeCategory,
+} from '@cdo/apps/blockly/utils/toolbox';
+import {DEFAULT_SCENE_GRID_SIZE} from '@cdo/apps/p5lab/spritelab/lab2/world';
+
+import {GO_TO_EXTERNAL_SCENE_BLOCK_TYPE} from '../blockDefinitions/goToExternalScene';
+import {GO_TO_SCENE_BLOCK_TYPE} from '../blockDefinitions/goToScene';
+import {PLAY_MUSIC_BLOCK_TYPE} from '../blockDefinitions/playMusic';
+import {
+  PLAY_SOUND_BLOCK_TYPE,
+  PLAY_SOUND_DEFAULT,
+} from '../blockDefinitions/playSound';
+import {
+  EFFECT_FIELD_DEFAULTS,
+  PLAY_SOUND_EFFECT_BLOCK_TYPE,
+} from '../blockDefinitions/playSoundEffect';
+import {RESTART_SCENE_BLOCK_TYPE} from '../blockDefinitions/restartScene';
+import {THE_PLAYER_BLOCK_TYPE} from '../blockDefinitions/thePlayer';
+import {WHEN_PLAYER_BLOCK_TYPE} from '../blockDefinitions/whenPlayer';
+
+import {
+  BlockInfo,
+  findCategory,
+  StaticCategoryInfo,
+  ToolboxInfo,
+} from './types';
+
+// Sensible toolbox defaults for the platformer composites: the player marked
+// mid-air above a full bottom-row floor. Same size as the grid fields, so a
+// dragged-out block shows the playfield's own lattice.
+const PLATFORMER_GRID_SIZE = DEFAULT_SCENE_GRID_SIZE;
+function platformerGrid(mark: (row: number, col: number) => 0 | 1): string {
+  return JSON.stringify(
+    Array.from({length: PLATFORMER_GRID_SIZE}, (_, row) =>
+      Array.from({length: PLATFORMER_GRID_SIZE}, (_, col) => mark(row, col))
+    )
+  );
+}
+
+// [block type, default GRID field] for the two composites, player first.
+// Marks are placed relative to the grid's size so they keep their meaning at
+// any playfield size: the player three rows above the floor, the floor along
+// the bottom.
+const PLATFORMER_COMPOSITES: [string, string][] = [
+  [
+    'spritelab2_makePlatformPlayer',
+    platformerGrid((row, col) =>
+      row === PLATFORMER_GRID_SIZE - 4 && col === 3 ? 1 : 0
+    ),
+  ],
+  [
+    'spritelab2_makePlatformBlocks',
+    platformerGrid(row => (row === PLATFORMER_GRID_SIZE - 1 ? 1 : 0)),
+  ],
+];
+
+// Field values a toolbox entry starts with: a marked cell for grid blocks,
+// a jump for the sound effect, a hop for play sound.
+const FIELD_DEFAULTS = new Map<string, Record<string, string>>([
+  ...PLATFORMER_COMPOSITES.map(
+    ([type, grid]) => [type, {GRID: grid}] as [string, Record<string, string>]
+  ),
+  [
+    'spritelab2_makeSpriteAtGrid',
+    {
+      GRID: platformerGrid((row, col) =>
+        row === PLATFORMER_GRID_SIZE - 4 && col === PLATFORMER_GRID_SIZE - 3
+          ? 1
+          : 0
+      ),
+    },
+  ],
+  [PLAY_SOUND_EFFECT_BLOCK_TYPE, EFFECT_FIELD_DEFAULTS],
+  [PLAY_SOUND_BLOCK_TYPE, {SOUND: PLAY_SOUND_DEFAULT}],
+]);
+
+// Lab-injected toolbox categories, inserted at the top of every level's
+// toolbox. The levelbuilder owns whatever they author: a category with this
+// name is used as written, an EMPTY one suppresses the category, and the
+// default lineup appears only when the level doesn't mention the name.
+const INJECTED_CATEGORIES: {name: string; types: string[]}[] = [
+  {
+    // Building and playing a platformer. Gravity and zoom lead; the rest
+    // group by color: sprite blocks, the background, the event, then the
+    // light blue ones.
+    name: 'Platform',
+    types: [
+      'spritelab2_setPlatformGravity',
+      'spritelab2_setCameraZoom',
+      'spritelab2_makePlatformBlocks',
+      'spritelab2_makePlatformPlayer',
+      'spritelab2_setAsPlatformPlayer',
+      THE_PLAYER_BLOCK_TYPE,
+      'spritelab2_makeSpriteAtGrid',
+      'gamelab_setBackgroundImageAs',
+      WHEN_PLAYER_BLOCK_TYPE,
+      'gamelab_checkTouching',
+      PLAY_SOUND_BLOCK_TYPE,
+      PLAY_SOUND_EFFECT_BLOCK_TYPE,
+      PLAY_MUSIC_BLOCK_TYPE,
+      RESTART_SCENE_BLOCK_TYPE,
+      'gamelab_spriteSay',
+      GO_TO_SCENE_BLOCK_TYPE,
+      GO_TO_EXTERNAL_SCENE_BLOCK_TYPE,
+    ],
+  },
+  {
+    // Scene-driven storytelling, grouped by color like Platform: the sprite
+    // block, the background, the events, then the light blue ones. No
+    // behaviors: those are for platform scenes for now.
+    name: 'Story',
+    types: [
+      'gamelab_makeNewSpriteAnon',
+      'gamelab_setBackgroundImageAs',
+      'gamelab_spriteClicked',
+      'gamelab_atTime',
+      PLAY_SOUND_BLOCK_TYPE,
+      PLAY_SOUND_EFFECT_BLOCK_TYPE,
+      PLAY_MUSIC_BLOCK_TYPE,
+      'gamelab_setProp',
+      'gamelab_spriteSay',
+      'gamelab_spriteSayTime',
+      GO_TO_SCENE_BLOCK_TYPE,
+      GO_TO_EXTERNAL_SCENE_BLOCK_TYPE,
+    ],
+  },
+];
+
+// Block types present in a category (labels, buttons, etc. don't count).
+function presentIn(category: StaticCategoryInfo): Set<string | undefined> {
+  return new Set(category.contents.filter(isBlockInfo).map(b => b.type));
+}
+
+// Append the scene blocks to the "Game Design" category.
+function ensureSceneBlocks(def: ToolboxInfo): void {
+  const category = findCategory(def.contents, 'Game Design');
+  if (!category) {
+    return;
+  }
+  const present = presentIn(category);
+  [GO_TO_SCENE_BLOCK_TYPE, GO_TO_EXTERNAL_SCENE_BLOCK_TYPE].forEach(type => {
+    if (!present.has(type)) {
+      category.contents.push({kind: 'block', type});
+    }
+  });
+}
+
+// Lead the "Sprites" category with the platformer composites and build the
+// injected categories at the top of the toolbox. See INJECTED_CATEGORIES for
+// how a level opts out.
+function ensureInjectedCategories(def: ToolboxInfo): void {
+  const contents = def.contents;
+  const categories = contents.filter(isStaticCategoryInfo);
+  const sprites = findCategory(contents, 'Sprites');
+  if (!sprites) {
+    return;
+  }
+  // A new block entry carries its FIELD_DEFAULTS; anything else starts
+  // bare (fields initialize to their own defaults).
+  const makeBlock = (type: string): BlockInfo => {
+    const fields = FIELD_DEFAULTS.get(type);
+    return {kind: 'block', type, ...(fields ? {fields} : {})};
+  };
+  // Prefer cloning a curated entry from elsewhere in the toolbox — it keeps
+  // the level's shadows and defaults.
+  const cloneOrMakeBlock = (type: string): BlockInfo => {
+    for (const category of categories) {
+      const existing = category.contents
+        .filter(isBlockInfo)
+        .find(b => b.type === type);
+      if (existing) {
+        return cloneDeep(existing);
+      }
+    }
+    return makeBlock(type);
+  };
+
+  // The composites lead the Sprites category (reversed so player is first).
+  const spritesPresent = presentIn(sprites);
+  [...PLATFORMER_COMPOSITES].reverse().forEach(([type]) => {
+    if (!spritesPresent.has(type)) {
+      sprites.contents.unshift(makeBlock(type));
+    }
+  });
+
+  // The injected categories, in list order, at the top of the toolbox. A
+  // category the level authors itself is used as written; an empty authored
+  // one suppresses the category (see INJECTED_CATEGORIES).
+  const injected: StaticCategoryInfo[] = [];
+  INJECTED_CATEGORIES.forEach(({name, types}) => {
+    const authored = findCategory(contents, name);
+    if (authored) {
+      if (presentIn(authored).size === 0) {
+        contents.splice(contents.indexOf(authored), 1);
+      }
+      return;
+    }
+    injected.push(makeCategory(name, types.map(cloneOrMakeBlock)));
+  });
+  const firstCategory = contents.findIndex(e => e.kind === 'category');
+  contents.splice(Math.max(firstCategory, 0), 0, ...injected);
+}
+
+/**
+ * Layer the lab additions onto the authored toolbox: the scene blocks and
+ * the injected categories. Pure. Call after blocks are installed.
+ */
+export function applyToolboxAdditions(def: ToolboxInfo): ToolboxInfo {
+  const out = cloneDeep(def);
+  ensureSceneBlocks(out);
+  ensureInjectedCategories(out);
+  return out;
+}

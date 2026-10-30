@@ -1,0 +1,26 @@
+name 'problem-solving-with-ai-lesson6-level3b_v2-2025'
+title 'College Admissions Officer'
+display_name 'College Admissions Officer'
+bubble_choice_description 'Six high school students applied to your university. Decide which two students to admit.'
+thumbnail_url 'https://images.code.org/4e78bbe2bee75906387075079bab9c9b-image-1742422973369.png'
+
+
+
+markdown <<MARKDOWN
+## Review College Applications
+
+The following 6 high school students have submitted applications for the college you work at. **Choose 2 students to accept:**
+
+>1. **Hi, my name is Jasmine.** I’ve been passionate about environmental science since middle school, and I love working on sustainability projects in my community. I’m a strong student with a 4.1 GPA, and I’ve taken AP Biology, AP Environmental Science, and AP Statistics. My SAT score is 1420. I’m applying to this college because of its strong environmental studies program and the research opportunities available for undergraduates. Outside of school, I run a community garden and volunteer for a local conservation group.
+
+
+>2. **Hey, I’m Ryan.** I’ve been playing the trumpet since I was eight, and music has always been a big part of my life. I’m in my school’s marching band and jazz ensemble, and I also compose my own music. My GPA is 3.3, and I’ve taken AP Music Theory and Honors English. I got a 1250 on the SAT. I want to attend this college because of its strong music program and the chance to collaborate with other passionate musicians. I also love working with younger students, and I hope to help teach music in some capacity while I’m in college.
+
+>3. **Hi, I’m Alex.** I’m a robotics enthusiast who loves coding and problem-solving. I’ve competed in FIRST Robotics for the past three years, and I spend a lot of my free time tinkering with Arduino projects. I have a 3.8 GPA, and I’ve taken AP Computer Science, AP Physics, and AP Calculus. My ACT score is 32. I’m excited about this college’s engineering program and its hands-on approach to learning. I’m also looking forward to joining the robotics club and working on innovative tech projects with other students.
+
+>4. **Hi, my name is Maria.** I’m a dedicated athlete and a team captain on my school’s soccer team. Sports have taught me leadership, discipline, and resilience, and I hope to continue playing in college. I have a 3.5 GPA and have taken Honors Chemistry, AP U.S. History, and AP Psychology. My SAT score is 1310. I’m applying to this college because it has a great balance of strong academics and competitive athletics. I also love that the campus fosters a close-knit community, which is something I value in a college experience.
+
+>5. **Hey, I’m Jordan.** I’ve always been drawn to storytelling, whether through writing, film, or photography. I run my school’s literary magazine and have had my short stories published in a few student-run journals. I have a 3.9 GPA, and I’ve taken AP Literature, AP U.S. Government, and AP Art. My ACT score is 29. This college’s creative writing program really excites me, and I’m eager to take workshops with experienced writers. I also want to explore documentary filmmaking and see how I can merge my love for writing and visual storytelling.
+
+>6. **Hi, I’m Kevin.** I love working with my hands and figuring out how things work, which is why I’m drawn to mechanics and automotive technology. I’ve spent the past two summers working at an auto shop, and I plan to get my certification as a mechanic. My GPA is 2.9, and I’ve taken a mix of standard and technical education courses. I didn’t take the SAT, but I’ve completed a welding certification program at my high school. I’m interested in this college because of its strong vocational programs and hands-on training opportunities. I’m excited to turn my passion into a career.
+MARKDOWN

@@ -1,8 +1,11 @@
+import {Typography as MuiTypography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
+
+import i18n from '@cdo/locale';
+
 import IconListEntry from './IconListEntry';
 import {aliases} from './icons';
-import i18n from '@cdo/locale';
 
 /**
  * A component for managing icons.
@@ -56,7 +59,13 @@ export default class IconList extends React.Component {
 
     return (
       <div style={styles.root}>
-        {iconEntries.length > 0 ? iconEntries : i18n.noIconsFound()}
+        {iconEntries.length > 0 ? (
+          iconEntries
+        ) : (
+          <MuiTypography variant="body2" component="div">
+            {i18n.noIconsFound()}
+          </MuiTypography>
+        )}
       </div>
     );
   }

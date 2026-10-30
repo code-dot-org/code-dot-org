@@ -1,0 +1,9 @@
+name 'CSA U5L7-L7_pilot-2025'
+display_name 'Practice: 2D Array Algorithms'
+description 'Implement algorithms to solve problems involving 2D arrays.'
+
+sublevels
+level 'CSA U5L7-L7a_pilot-2025'
+level 'CSA U5L7-L7b_pilot-2025'
+level 'CSA U5L7-L7c_pilot-2025'
+level 'CSA U5L7-L7d_pilot-2025'

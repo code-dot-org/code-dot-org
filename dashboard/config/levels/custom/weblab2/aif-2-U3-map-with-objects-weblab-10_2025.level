@@ -1,0 +1,69 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-01-20T05:14:26.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# .map() with Objects\r\n\r\n\r\n1.  **Extract Names**\r\n\r\n    Find the `supplyNames` variable. Use `.map()` to create a new array that extracts **only** the `name` from each object.\r\n\r\n::: details [**🔎 Feeling stuck? Show me how.**]\r\n![](https://images.code.org/e1e3e2f4a44418303745d8c6cb421388-image-1766172202165.png)\r\n*To make code larger, adjust the instructions panel.*\r\n:::\r\n---\r\n\r\n2.  **Extension: Combine Fields**\r\n\r\n    Find the `inventoryList` variable. Use `.map()` again to create a new array of strings.\r\n    Combine the name and category for each item using a format like: `\"Notebook - Stationery\"`.\r\n\r\n::: details [**🔎 Feeling stuck? Show me how.**]\r\n![](https://images.code.org/50b01abf4dac11e9012c4c5eee29c80c-image-1766172246615.png)\r\n*To make code larger, adjust the instructions panel.*\r\n:::\r\n\r\n",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Mapping Objects</title>\n    <link rel=\"stylesheet\" href=\"style.css\">\n    <link href=\"https://fonts.googleapis.com/css2?family=Fredoka:wght@300;500&family=Roboto&display=swap\" rel=\"stylesheet\">\n  </head>\n  <body>\n    <main>\n      <h1>Supply List Mapper</h1>\n\n      <section class=\"panel debug-panel\">\n        <h2>1. Inspect the Data</h2>\n        <p>This is the raw data from your JavaScript file:</p>\n        <pre id=\"originalData\"></pre>\n      </section>\n\n      <section class=\"panel\">\n        <h2>2. Just Names</h2>\n        <ul id=\"nameList\">\n          <li><em>Names will appear here...</em></li>\n        </ul>\n      </section>\n\n      <section class=\"panel\">\n        <h2>3. Full Inventory (Extension)</h2>\n        <div id=\"inventoryContainer\">\n          <em>Inventory will appear here...</em>\n        </div>\n      </section>\n    </main>\n\n    <script src=\"script.js\" defer></script>\n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// Sample Dataset\nconst supplies1 = [\n  { name: \"Notebook\", category: \"Stationery\", quantity: 5 },\n  { name: \"Pencil (HB)\", category: \"Writing\", quantity: 12 },\n  { name: \"Eraser\", category: \"Writing\", quantity: 3 },\n  { name: \"Highlighter\", category: \"Stationery\", quantity: 4 }\n];\n\nconst supplyNames = []; \n\n// Visualize the Data (Inspect the Data Panel)\ndocument.querySelector(\"#originalData\").textContent = JSON.stringify(supplies1, null, 2);\n\n// Render Data\nconst nameListElement = document.querySelector(\"#nameList\");\n\nif (supplyNames.length > 0) {\n  const listItems = supplyNames.map(name => `<li>${name}</li>`);\n  nameListElement.innerHTML = listItems.join(\"\");\n}\n\n// --- EXTENSION ---\n\nconst inventoryList = []; \n\n// Render Extension\nconst inventoryContainer = document.querySelector(\"#inventoryContainer\");\n\nif (inventoryList.length > 0) {\n  inventoryContainer.innerHTML = inventoryList.join(\"<br>\");\n}",
+          "folderId": "0",
+          "active": true
+        },
+        "3": {
+          "id": "3",
+          "name": "style.css",
+          "language": "css",
+          "contents": ":root {\n  --bg-color: #f4f7f6;\n  --card-bg: #ffffff;\n  --primary-color: #3d5af1;\n  --text-color: #333333;\n  --debug-bg: #2d2d2d;\n  --debug-text: #00ff9d;\n  --font-heading: 'Fredoka', sans-serif;\n  --font-body: 'Roboto', sans-serif;\n}\n\nbody {\n  font-family: var(--font-body);\n  background-color: var(--bg-color);\n  color: var(--text-color);\n  margin: 0;\n  padding: 20px;\n  line-height: 1.6;\n}\n\nmain {\n  max-width: 800px;\n  margin: 0 auto;\n}\n\nh1, h2 {\n  font-family: var(--font-heading);\n  color: var(--primary-color);\n}\n\nh1 {\n  text-align: center;\n  margin-bottom: 30px;\n}\n\n.panel {\n  background: var(--card-bg);\n  border-radius: 12px;\n  padding: 20px;\n  margin-bottom: 20px;\n  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);\n}\n\n.debug-panel {\n  border: 2px dashed #ccc;\n}\n\npre {\n  background-color: var(--debug-bg);\n  color: var(--debug-text);\n  padding: 15px;\n  border-radius: 8px;\n  overflow-x: auto;\n  font-family: 'Courier New', monospace;\n  font-size: 0.9em;\n}\n\n#nameList {\n  list-style-type: disc;\n  padding-left: 40px;\n}\n\n#nameList li {\n  margin-bottom: 5px;\n}\n\n#inventoryContainer {\n  background-color: #eef2f5;\n  padding: 15px;\n  border-radius: 8px;\n  font-family: monospace;\n  font-size: 1.1em;\n  color: #2c3e50;\n  border-left: 5px solid var(--primary-color);\n}",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "2",
+        "1",
+        "3"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nW1NHaWHcACRL2I0mPhy6\n",
+    "name_suffix": "_2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-01-20T05:14:26.344+00:00\",\"changed\":[\"cloned from \\\"aif-2-U3-map-with-objects-weblab-10\\\"\"],\"cloned_from\":\"aif-2-U3-map-with-objects-weblab-10\"}]"
+}]]></config>
+</Weblab2>

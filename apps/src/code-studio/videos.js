@@ -1,20 +1,22 @@
 import $ from 'jquery';
-import trackEvent from '../util/trackEvent';
-import React from 'react';
-import ReactDOM from 'react-dom';
-import FallbackPlayerCaptionDialogLink from '../templates/FallbackPlayerCaptionDialogLink';
-import videojs from 'video.js';
-var testImageAccess = require('./url_test');
-var clientState = require('./clientState');
-import i18n from '@cdo/locale';
 import _ from 'lodash';
+import React from 'react';
+import videojs from 'video.js';
 
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
+import i18n from '@cdo/locale';
+
+import FallbackPlayerCaptionDialogLink from '../templates/FallbackPlayerCaptionDialogLink';
+
+import youTubeAvailabilityEndpointURL from './youTubeAvailabilityEndpointURL';
+
+var clientState = require('./clientState');
+var testImageAccess = require('./url_test');
 
 const TAB_NAV_CLASS = '.ui-tabs-nav';
 const MODAL_CLASS_NAME = 'video-modal';
 const MODAL_CLASS = '.' + MODAL_CLASS_NAME;
+const MODAL_DIALOG_CLASS = '.modal-dialog';
 var videos = (module.exports = {});
 
 videos.createVideoWithFallback = function (
@@ -58,29 +60,9 @@ var currentVideoOptions;
 // This is a good candidate to circle back to and refactor.
 window.onYouTubeIframeAPIReady = function () {
   // requires there be an iframe#video present on the page
-  const player = new YT.Player('video', {
+  new YT.Player('video', {
     events: {
-      onReady: function (event) {
-        analyticsReporter.sendEvent(EVENTS.VIDEO_LOADED, {
-          url: location.href,
-          video: player.getVideoUrl(),
-        });
-      },
       onStateChange: function (state) {
-        const amplitudeEventMap = {
-          [YT.PlayerState.PLAYING]: EVENTS.VIDEO_STARTED,
-          [YT.PlayerState.PAUSED]: EVENTS.VIDEO_PAUSED,
-          [YT.PlayerState.ENDED]: EVENTS.VIDEO_ENDED,
-        };
-
-        const amplitudeEvent = amplitudeEventMap[state.data];
-        if (amplitudeEvent) {
-          analyticsReporter.sendEvent(amplitudeEvent, {
-            url: location.href,
-            video: player.getVideoUrl(),
-          });
-        }
-
         if (state.data === YT.PlayerState.ENDED) {
           onVideoEnded();
         }
@@ -99,7 +81,6 @@ function createVideo(options) {
   const videoDiv = $('<iframe id="video"/>').addClass('video-player').attr({
     src: options.src,
     allowfullscreen: 'true',
-    scrolling: 'no',
   });
 
   const videoTabContainerDiv = $("<div id='videoTabContainer'></div>").append(
@@ -162,6 +143,17 @@ videos.showVideoDialog = function (options, forceShowVideo) {
     options.key,
     function (data) {
       notesDiv.children('#notes').html(data);
+      // Ensure all <img> elements inside #notes default to empty alt text,
+      // but do not overwrite any existing descriptive alt text.
+      notesDiv
+        .children('#notes')
+        .find('img')
+        .each(function () {
+          var $img = $(this);
+          if (!$img.is('[alt]')) {
+            $img.attr('alt', '');
+          }
+        });
     },
     function () {
       openVideoTab();
@@ -218,15 +210,11 @@ videos.showVideoDialog = function (options, forceShowVideo) {
   });
 
   var download = $('<a/>')
-    .append($('<i class="fa fa-download" />'))
+    .append($('<i class="fa-solid fa-download" />'))
     .addClass('download-video btn')
+    .attr('aria-label', 'Download Video')
     .css('float', 'left')
-    .attr('href', options.download)
-    .click(function () {
-      // track download in Google Analytics
-      trackEvent('downloadvideo', 'startdownloadvideo', options.key);
-      return true;
-    });
+    .attr('href', options.download);
   if (document.dir === 'rtl') {
     download.css('float', 'right');
   }
@@ -302,7 +290,7 @@ videos.showVideoDialog = function (options, forceShowVideo) {
  * at a 9/16 ratio.
  */
 function resizeVideoPlayer() {
-  let $div = $(MODAL_CLASS);
+  let $div = $(MODAL_DIALOG_CLASS);
   const navBarHeight = $div.find(TAB_NAV_CLASS).outerHeight();
   const screenRatio = 0.8;
   const aspectRatio = 16 / 9;
@@ -320,21 +308,12 @@ function resizeVideoPlayer() {
     containerWidth = maxWidth;
   }
 
+  // Accommodate padding and border
+  containerWidth += getContainerExtraWidth();
+
   // Set the dimensions of the video modal
   $div.height(containerHeight);
   $div.width(containerWidth);
-
-  // The video modal should centered within the inner height of the window
-  // (i.e. window height minus browser chrome)
-  const top = (window.innerHeight - containerHeight) / 2;
-
-  // Standard css hack to center a div within the viewport.
-  $div.css({
-    position: 'fixed',
-    top: top,
-    left: '50%',
-    marginLeft: containerWidth / -2 + 'px',
-  });
 
   // The nav bar will have changed dimensions due to the resizing of the
   // container. We re-calculate the available height for the video to account
@@ -349,11 +328,21 @@ function resizeVideoPlayer() {
  * dimensions.
  */
 function getVideoHeight() {
-  const container = $(MODAL_CLASS);
+  const container = $(MODAL_DIALOG_CLASS);
 
   // Here we get the remaining height of the video's container that isn't taken
   // up by the video navigation options.
   return container.innerHeight() - container.find(TAB_NAV_CLASS).outerHeight();
+}
+
+/**
+ * Returns the total horizontal spaced added by the padding and border of the
+ * containing element, so we can adjust a couple of manually-defined widths to
+ * accommodate the box-sizing change in Bootstrap 3.
+ */
+function getContainerExtraWidth() {
+  const container = $(TAB_NAV_CLASS).parent();
+  return container.outerWidth() - container.width();
 }
 
 // Precondition: $('#video') must exist on the DOM before this function is called.
@@ -388,8 +377,6 @@ function setupVideoFallback(
 
 // This is exported (and placed on window) because it gets accessed externally for our video test page.
 videos.onYouTubeBlocked = function (youTubeBlockedCallback, videoInfo) {
-  var key = videoInfo ? videoInfo.key : undefined;
-
   // Handle URLs with either youtube.com or youtube-nocookie.com.
   var noCookie = videoInfo
     ? videoInfo.src.indexOf('youtube-nocookie.com') !== -1
@@ -398,34 +385,13 @@ videos.onYouTubeBlocked = function (youTubeBlockedCallback, videoInfo) {
   testImageAccess(
     youTubeAvailabilityEndpointURL(noCookie) + '?' + Math.random(),
     // Called when YouTube availability check succeeds.
-    function () {
-      // Track event in Google Analytics.
-      trackEvent('showvideo', 'startVideoYouTube', key);
-    },
-
+    function () {},
     // Called when YouTube availability check fails.
     function () {
-      // Track event in Google Analytics.
-      trackEvent('showvideo', 'startVideoFallback', key);
       youTubeBlockedCallback();
     }
   );
 };
-
-function youTubeAvailabilityEndpointURL(noCookie) {
-  const url = window.document.URL.toString();
-  if (url.indexOf('force_youtube_fallback') >= 0) {
-    return 'https://unreachable-test-subdomain.example.com/favicon.ico';
-  } else if (url.indexOf('force_youtube_player') >= 0) {
-    return 'https://code.org/images/favicon.ico';
-  }
-
-  if (noCookie) {
-    return 'https://www.youtube-nocookie.com/favicon.ico';
-  } else {
-    return 'https://www.youtube.com/favicon.ico';
-  }
-}
 
 // Precondition: $('#video') must exist on the DOM before this function is called.
 function addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight) {
@@ -488,7 +454,8 @@ function addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight) {
       });
 
       function resizeFallbackPlayer() {
-        const width = $(MODAL_CLASS).innerWidth();
+        const width =
+          $(MODAL_DIALOG_CLASS).innerWidth() - getContainerExtraWidth();
         const height = getVideoHeight();
 
         // Embedded videos don't need to be resized and don't have a container
@@ -516,24 +483,7 @@ function addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight) {
     }
   );
 
-  const analyticsData = {
-    url: location.href,
-    video: videoInfo.download,
-    fallback: 'code.org',
-  };
-
-  videoPlayer.on('ready', () =>
-    analyticsReporter.sendEvent(EVENTS.VIDEO_LOADED, analyticsData)
-  );
-  videoPlayer.on('play', () =>
-    analyticsReporter.sendEvent(EVENTS.VIDEO_STARTED, analyticsData)
-  );
-  videoPlayer.on('pause', () =>
-    analyticsReporter.sendEvent(EVENTS.VIDEO_PAUSED, analyticsData)
-  );
-
   videoPlayer.on('ended', () => {
-    analyticsReporter.sendEvent(EVENTS.VIDEO_ENDED, analyticsData);
     onVideoEnded();
   });
   showFallbackPlayerCaptionLink(videoInfo.inDialog);
@@ -586,9 +536,12 @@ function showFallbackPlayerCaptionLink(inDialog) {
     'fallback-player-caption-dialog-link'
   );
   if (mountPoint) {
-    ReactDOM.render(
+    createReactRoot(
       <FallbackPlayerCaptionDialogLink inDialog={inDialog} />,
-      mountPoint
+      mountPoint,
+      {
+        legacyReactDomRender: true,
+      }
     );
   }
 }

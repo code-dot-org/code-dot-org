@@ -1,0 +1,53 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-06-28T23:10:17.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Add Reveal Interaction\r\n\r\n**Goal:** Add a button to each card that reveals more information about that specific item without reloading the page.\r\n\r\nUpdate your card template so each card includes a reveal button, such as `See More`, `Reveal`, or another label that fits your app.\r\n\r\nChoose how your reveal will work:\r\n\r\n- **Toggle Method:** Show and hide a hidden section inside the card.\r\n- **Fetch Method:** Request extra detail data for that item and display it inside the card.\r\n\r\nWrite code that:\r\n\r\n- creates a detail area inside each card\r\n- attaches an event listener to each reveal button after the cards render\r\n- identifies which card was clicked using an id, index, or data attribute\r\n- updates only the selected card\r\n\r\nTest your interaction by clicking different cards. Confirm that each button reveals the correct details for the correct item.",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildJavaScript",
+        "documentation",
+        "buildHTML",
+        "buildCSS"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+      },
+      "openFiles": [
+
+      ]
+    },
+    "project_template_level_name": "designing-reliable-apps-lesson11-level1-template-2026",
+    "name_suffix": "_2026",
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-06-28T23:10:17.908+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson11-milestone2-level1-test_202_2025-_2026\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson11-milestone2-level1-test_202_2025-_2026\"},{\"changed_at\":\"2026-06-28 23:13:22 +0000\",\"changed\":[\"display_name\",\"long_instructions\",\"bubble_choice_description\",\"thumbnail_url\",\"ai_tutor_prompt_settings\",\"project_template_level_name\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

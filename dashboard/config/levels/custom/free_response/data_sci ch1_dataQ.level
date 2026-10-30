@@ -1,0 +1,24 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-05-06T23:02:48.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "\r\nWhat was your data question?",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "teacher_markdown": "Students should provide a clear and concise research question or statement of the problem.\r\n\r\nExample: ***How have bee colony loss percentages changed over the years in selected states, and what could be potential reasons for these changes?***"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-05-06T23:02:48.503+00:00\",\"changed\":[\"cloned from \\\"data_sci ch1-Exemplar 1\\\"\"],\"cloned_from\":\"data_sci ch1-Exemplar 1\"},{\"changed_at\":\"2024-05-06 23:06:38 +0000\",\"changed\":[\"long_instructions\",\"allow_user_uploads\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

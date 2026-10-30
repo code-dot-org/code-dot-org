@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "long_instructions": "## Teaching with micro:bits\r\n\r\n\r\n#### Take a few minutes to reflect on using micro:bits in your classroom. \r\n- #### What lessons are you planning to implement in your classroom?\r\n- #### What preparation do you need to do? \r\n- #### What challenges might you face? \r\n",
+    "long_instructions": "## Teaching with micro:bits\r\n\r\n\r\nTake a few minutes to reflect on using micro:bits in your classroom. \r\n- What lessons are you planning to implement in your classroom?\r\n- What preparation do you need to do? \r\n- What challenges might you face? \r\n",
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 19018,

@@ -6,25 +6,25 @@ FactoryBot.define do
 
     trait :with_teaches_yes_teacher_census_submission do
       after(:create) do |school_info, evaluator|
-        create :census_teacher_banner_v1, :with_teaches_yes, school_infos: [school_info], school_year: evaluator.school_year
+        create(:census_teacher_banner_v1, :with_teaches_yes, school_infos: [school_info], school_year: evaluator.school_year)
       end
     end
 
     trait :with_teaches_no_teacher_census_submission do
       after(:create) do |school_info, evaluator|
-        create :census_teacher_banner_v1, :with_teaches_no, school_infos: [school_info], school_year: evaluator.school_year
+        create(:census_teacher_banner_v1, :with_teaches_no, school_infos: [school_info], school_year: evaluator.school_year)
       end
     end
 
     trait :with_teaches_yes_parent_census_submission do
       after(:create) do |school_info, evaluator|
-        create :census_your_school2017v5, :with_teaches_yes, school_infos: [school_info], submitter_role: 'parent', school_year: evaluator.school_year
+        create(:census_your_school2017v5, :with_teaches_yes, school_infos: [school_info], submitter_role: 'parent', school_year: evaluator.school_year)
       end
     end
 
     trait :with_teaches_no_parent_census_submission do
       after(:create) do |school_info, evaluator|
-        create :census_your_school2017v5, :with_teaches_no, school_infos: [school_info], submitter_role: 'parent', school_year: evaluator.school_year
+        create(:census_your_school2017v5, :with_teaches_no, school_infos: [school_info], submitter_role: 'parent', school_year: evaluator.school_year)
       end
     end
   end
@@ -42,79 +42,79 @@ FactoryBot.define do
 
     trait :with_teaches_yes_teacher_census_submission do
       after(:create) do |school, evaluator|
-        create :census_submission_school_info, :with_teaches_yes_teacher_census_submission, school: school, school_year: evaluator.school_year
+        create(:census_submission_school_info, :with_teaches_yes_teacher_census_submission, school: school, school_year: evaluator.school_year)
       end
     end
 
     trait :with_teaches_no_teacher_census_submission do
       after(:create) do |school, evaluator|
-        create :census_submission_school_info, :with_teaches_no_teacher_census_submission, school: school, school_year: evaluator.school_year
+        create(:census_submission_school_info, :with_teaches_no_teacher_census_submission, school: school, school_year: evaluator.school_year)
       end
     end
 
     trait :with_teaches_yes_parent_census_submission do
       after(:create) do |school, evaluator|
-        create :census_submission_school_info, :with_teaches_yes_parent_census_submission, school: school, school_year: evaluator.school_year
+        create(:census_submission_school_info, :with_teaches_yes_parent_census_submission, school: school, school_year: evaluator.school_year)
       end
     end
 
     trait :with_teaches_no_parent_census_submission do
       after(:create) do |school, evaluator|
-        create :census_submission_school_info, :with_teaches_no_parent_census_submission, school: school, school_year: evaluator.school_year
+        create(:census_submission_school_info, :with_teaches_no_parent_census_submission, school: school, school_year: evaluator.school_year)
       end
     end
 
     trait :with_one_year_ago_teaches_yes do
       after(:create) do |school, evaluator|
-        create :census_submission_school_info, :with_teaches_yes_teacher_census_submission, school: school, school_year: evaluator.school_year - 1
+        create(:census_submission_school_info, :with_teaches_yes_teacher_census_submission, school: school, school_year: evaluator.school_year - 1)
       end
     end
 
     trait :with_one_year_ago_teaches_no do
       after(:create) do |school, evaluator|
-        create :census_submission_school_info, :with_teaches_no_teacher_census_submission, school: school, school_year: evaluator.school_year - 1
+        create(:census_submission_school_info, :with_teaches_no_teacher_census_submission, school: school, school_year: evaluator.school_year - 1)
       end
     end
 
     trait :with_one_year_ago_teaches_maybe do
       after(:create) do |school, evaluator|
-        create :census_submission_school_info, :with_teaches_no_teacher_census_submission, :with_teaches_yes_teacher_census_submission, school: school, school_year: evaluator.school_year - 1
+        create(:census_submission_school_info, :with_teaches_no_teacher_census_submission, :with_teaches_yes_teacher_census_submission, school: school, school_year: evaluator.school_year - 1)
       end
     end
 
     trait :with_two_years_ago_teaches_yes do
       after(:create) do |school, evaluator|
-        create :census_submission_school_info, :with_teaches_yes_teacher_census_submission, school: school, school_year: evaluator.school_year - 2
+        create(:census_submission_school_info, :with_teaches_yes_teacher_census_submission, school: school, school_year: evaluator.school_year - 2)
       end
     end
 
     trait :with_two_years_ago_teaches_no do
       after(:create) do |school, evaluator|
-        create :census_submission_school_info, :with_teaches_no_teacher_census_submission, school: school, school_year: evaluator.school_year - 2
+        create(:census_submission_school_info, :with_teaches_no_teacher_census_submission, school: school, school_year: evaluator.school_year - 2)
       end
     end
 
     trait :with_two_years_ago_teaches_maybe do
       after(:create) do |school, evaluator|
-        create :census_submission_school_info, :with_teaches_no_teacher_census_submission, :with_teaches_yes_teacher_census_submission, school: school, school_year: evaluator.school_year - 2
+        create(:census_submission_school_info, :with_teaches_no_teacher_census_submission, :with_teaches_yes_teacher_census_submission, school: school, school_year: evaluator.school_year - 2)
       end
     end
 
     trait :with_three_years_ago_teaches_yes do
       after(:create) do |school, evaluator|
-        create :census_submission_school_info, :with_teaches_yes_teacher_census_submission, school: school, school_year: evaluator.school_year - 3
+        create(:census_submission_school_info, :with_teaches_yes_teacher_census_submission, school: school, school_year: evaluator.school_year - 3)
       end
     end
 
     trait :with_three_years_ago_teaches_no do
       after(:create) do |school, evaluator|
-        create :census_submission_school_info, :with_teaches_no_teacher_census_submission, school: school, school_year: evaluator.school_year - 3
+        create(:census_submission_school_info, :with_teaches_no_teacher_census_submission, school: school, school_year: evaluator.school_year - 3)
       end
     end
 
     trait :with_three_years_ago_teaches_maybe do
       after(:create) do |school, evaluator|
-        create :census_submission_school_info, :with_teaches_no_teacher_census_submission, :with_teaches_yes_teacher_census_submission, school: school, school_year: evaluator.school_year - 3
+        create(:census_submission_school_info, :with_teaches_no_teacher_census_submission, :with_teaches_yes_teacher_census_submission, school: school, school_year: evaluator.school_year - 3)
       end
     end
   end
@@ -259,7 +259,7 @@ FactoryBot.define do
     form_id {nil}
 
     trait :with_submission do
-      census_submission {build :census_hoc2017v1}
+      census_submission {build(:census_hoc2017v1)}
     end
 
     trait :with_form do
@@ -272,7 +272,7 @@ FactoryBot.define do
   end
 
   factory :census_summary, class: 'Census::CensusSummary' do
-    school {build :school}
+    school {build(:school)}
     school_year {2017}
     teaches_cs {nil}
 

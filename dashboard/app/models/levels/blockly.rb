@@ -22,6 +22,7 @@
 #  index_levels_on_game_id    (game_id)
 #  index_levels_on_level_num  (level_num)
 #  index_levels_on_name       (name)
+#  index_levels_on_type       (type)
 #
 
 require 'nokogiri'
@@ -78,6 +79,7 @@ class Blockly < Level
     skip_autosave
     skip_run_save
     goal_override
+    hide_version_history
   )
 
   before_save :update_ideal_level_source
@@ -89,9 +91,10 @@ class Blockly < Level
   # DCDO key for turning this feature on or off.
   BLOCKLY_I18N_IN_TEXT_DCDO_KEY = 'blockly_i18n_in_text'.freeze
 
-  def summarize_for_lab2_properties(script)
+  def summarize_for_lab2_properties(script, script_level = nil, current_user = nil, unit_group_unit: nil)
     level_properties = super
     level_properties[:sharedBlocks] = localized_blockly_level_options(script)["sharedBlocks"]
+    level_properties[:levelData] = localized_blockly_level_options_for_lab2(script)["levelData"]
     level_properties
   end
 
@@ -109,7 +112,7 @@ class Blockly < Level
   end
 
   def to_xml(options = {})
-    xml_node = Nokogiri::XML(super(options))
+    xml_node = Nokogiri::XML(super)
     Nokogiri::XML::Builder.with(xml_node.at(type)) do |xml|
       xml.blocks do
         xml_blocks.each do |attr|
@@ -122,7 +125,7 @@ class Blockly < Level
 
   def load_level_xml(xml_node)
     block_nodes = xml_blocks.count > 0 ? xml_node.xpath(xml_blocks.map {|x| '//' + x}.join(' | ')).map(&:remove) : []
-    level_properties = super(xml_node)
+    level_properties = super
     block_nodes.each do |attr_node|
       level_properties[attr_node.name] = attr_node.child.serialize(save_with: XML_OPTIONS).strip
     end
@@ -359,6 +362,33 @@ class Blockly < Level
     options.freeze
   end
 
+  def localized_blockly_level_options_for_lab2(script)
+    options = Rails.cache.fetch("#{cache_key}/#{script.try(:cache_key)}/#{I18n.locale}/localized_blockly_level_options_for_lab2", force: !Unit.should_cache?) do
+      level_options = blockly_level_options.dup
+
+      functions = level_options.
+        dig("levelData", "startSources", "blocks", "blocks")&.
+        filter {|block| block["type"] == "procedures_defnoreturn"}
+
+      functions&.each do |function|
+        function_name = function.dig("fields", "NAME")
+        next unless function_name
+
+        localized_name = I18n.t(
+          "name",
+          scope: [:data, :function_definitions, name, function_name],
+          default: function_name,
+          smart: true
+        )
+
+        function["fields"]["NAME"] = localized_name
+      end
+
+      level_options
+    end
+    options.freeze
+  end
+
   # Return a Blockly-formatted 'appOptions' hash derived from the level contents
   def blockly_level_options
     options = Rails.cache.fetch("#{cache_key}/blockly_level_options/v2") do
@@ -378,7 +408,7 @@ class Blockly < Level
         success_condition: 'fn_successCondition',
         failure_condition: 'fn_failureCondition',
       }
-      properties.keys.each do |dashboard|
+      properties.each_key do |dashboard|
         blockly = overrides[dashboard.to_sym] || dashboard.camelize(:lower)
         # Select value from properties json
         # Don't override existing valid (non-nil/empty) values
@@ -453,27 +483,22 @@ class Blockly < Level
     options.freeze
   end
 
-  # FND-985 Create shared API to get localized level properties.
-  def get_localized_property(property_name)
-    if should_localize? && try(property_name)
-      I18n.t(
-        name,
-        scope: [:data, property_name],
-        default: nil,
-        smart: true
-      )
-    end
-  end
-
   def localized_failure_message_override
     get_localized_property('failure_message_override')
   end
 
+  # Retrieve the localized property for "long_instructions",
+  # @return [String] the localized long_instructions property
   def localized_long_instructions
     localized_long_instructions = get_localized_property("long_instructions")
-    localized_blockly_in_text(localized_long_instructions)
+    unescaped_codeblocks = unescape_codeblocks(localized_long_instructions)
+    localized_blockly_in_text(unescaped_codeblocks)
   end
 
+  # Processes and localizes the TRANSLATIONTEXT from i18n start libraries content.
+  # @param start_libraries [String] JSON-encoded string representing an array of library objects.
+  # Each library object should contain a name and source field.
+  # @return [String] JSON-encoded string representing the localized start libraries.
   def localized_start_libraries(start_libraries)
     return unless start_libraries
     level_libraries = JSON.parse(start_libraries)
@@ -854,7 +879,7 @@ class Blockly < Level
 
   def self.asset_host_prefix
     host = ActionController::Base.asset_host
-    (host.blank?) ? "" : "//#{host}"
+    host.blank? ? "" : "//#{host}"
   end
 
   # If true, don't autoplay videos before this level (but do keep them in the
@@ -883,7 +908,7 @@ class Blockly < Level
 
   # Clear 'is_project_level' from cloned levels
   def clone_with_name(name, editor_experiment: nil)
-    level = super(name, editor_experiment: editor_experiment)
+    level = super
     level.update!(is_project_level: false)
     level
   end
@@ -1007,5 +1032,13 @@ class Blockly < Level
         skin: skin
       }
     )
+  end
+
+  # Unescapes the backticks used to format codeblocks in the given text.
+  # @param text [String] the text to unescape.
+  # @return [String] the text with unescaped backticks. If the text is nil or empty, it will be returned as is.
+  private def unescape_codeblocks(text)
+    return text if text.blank?
+    text.gsub('\\`', '`')
   end
 end

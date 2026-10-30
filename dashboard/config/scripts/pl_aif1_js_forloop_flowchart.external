@@ -1,0 +1,185 @@
+name 'pl-aif1-js-forloop-flowchart'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<h1>Tracing a For Loop</h1>
+
+<p>A <b>for loop</b> repeats a set of steps a known number of times. Before looking at the code, study how that repetition appears in a flowchart.</p>
+
+<p>This flowchart models a player taking five basketball shots. Follow the connectors to see what starts the loop, what repeats, and what eventually makes it stop.</p>
+
+<hr style="display:block; width:100%; height:1px; border:0; background-color:#ACA8EA; margin:28px 0;">
+
+<div style="display:flex; flex-wrap:wrap; align-items:flex-start; gap:28px; width:100%; box-sizing:border-box; margin:24px 0;">
+
+  <!-- Accessible HTML flowchart -->
+  <div style="flex:1 1 400px; min-width:0; display:flex; justify-content:center;">
+
+  <div role="group" aria-label="Flowchart for taking five basketball shots. Start the game. Set shots to zero. Set the goal to five. Check whether shots has reached the goal. If yes, finish the game. If no, shoot a basket, increase shots by one, and check again." style="position:relative; width:400px; height:580px; background-color:#FFFFFF; border:1px solid #E4E2F8; border-radius:12px; box-shadow:0 2px 7px rgba(0,0,0,0.10); font-family:Arial, Helvetica, sans-serif;">
+
+  <!-- Start -->
+  <div style="position:absolute; left:95px; top:10px; width:150px; height:46px; box-sizing:border-box; display:flex; align-items:center; justify-content:center; text-align:center; background-color:#E4E2F8; color:#1F1976; border:4px solid #4C42CF; border-radius:28px; font-size:16px; font-weight:bold; z-index:2;">
+        Start game
+      </div>
+
+  <!-- Connector -->
+  <div aria-hidden="true" style="position:absolute; left:168px; top:56px; width:4px; height:28px; background-color:#34BD43;"></div>
+  <div aria-hidden="true" style="position:absolute; left:161px; top:70px; color:#34BD43; font-size:18px;">▼</div>
+
+  <!-- Set shots -->
+  <div style="position:absolute; left:95px; top:84px; width:150px; height:54px; box-sizing:border-box; display:flex; align-items:center; justify-content:center; text-align:center; background-color:#D5EFFF; color:#06338D; border:4px solid #0099F3; border-radius:5px; font-size:16px; font-weight:bold; z-index:2;">
+        Set shots = 0
+      </div>
+
+   <!-- Shots annotation -->
+   <div aria-hidden="true" style="position:absolute; left:245px; top:109px; width:25px; border-top:3px dashed #4C42CF;"></div>
+
+  <div style="position:absolute; left:270px; top:89px; width:105px; height:40px; display:flex; align-items:center; justify-content:center; background-color:#E4E2F8; color:#1F1976; border:3px solid #4C42CF; border-radius:22px; box-sizing:border-box; font-size:16px; font-weight:bold;">
+        shots
+      </div>
+
+  <div style="position:absolute; left:270px; top:132px; width:105px; text-align:center; color:#000000; font-size:14px;">
+        Start value
+      </div>
+
+   <!-- Connector -->
+  <div aria-hidden="true" style="position:absolute; left:168px; top:138px; width:4px; height:28px; background-color:#34BD43;"></div>
+      <div aria-hidden="true" style="position:absolute; left:161px; top:152px; color:#34BD43; font-size:18px;">▼</div>
+
+   <!-- Set goal -->
+   <div style="position:absolute; left:95px; top:166px; width:150px; height:54px; box-sizing:border-box; display:flex; align-items:center; justify-content:center; text-align:center; background-color:#D5EFFF; color:#06338D; border:4px solid #0099F3; border-radius:5px; font-size:16px; font-weight:bold; z-index:2;">
+        Set goal = 5
+      </div>
+
+   <!-- Goal annotation -->
+   <div aria-hidden="true" style="position:absolute; left:245px; top:191px; width:25px; border-top:3px dashed #F46B00;"></div>
+
+   <div style="position:absolute; left:270px; top:171px; width:105px; height:40px; display:flex; align-items:center; justify-content:center; background-color:#FFE3CE; color:#510000; border:3px solid #F46B00; border-radius:22px; box-sizing:border-box; font-size:16px; font-weight:bold;">
+        goal
+      </div>
+
+  <div style="position:absolute; left:270px; top:214px; width:105px; text-align:center; color:#000000; font-size:14px;">
+        Stop value
+      </div>
+
+   <!-- Connector to decision -->
+   <div aria-hidden="true" style="position:absolute; left:168px; top:220px; width:4px; height:42px; background-color:#34BD43;"></div>
+      <div aria-hidden="true" style="position:absolute; left:161px; top:240px; color:#34BD43; font-size:18px;">▼</div>
+
+   <!-- Decision -->
+  <div style="position:absolute; left:115px; top:258px; width:110px; height:110px; box-sizing:border-box; display:flex; align-items:center; justify-content:center; background-color:#FFE3CE; border:4px solid #F46B00; transform:rotate(45deg); z-index:2;">
+        <div style="width:95px; color:#510000; text-align:center; font-size:16px; font-weight:bold; line-height:1.2; transform:rotate(-45deg);">
+          Have shots<br>reached<br>the goal?
+        </div>
+      </div>
+
+  <!-- Yes branch -->
+  <div aria-hidden="true" style="position:absolute; left:246px; top:311px; width:28px; height:4px; background-color:#34BD43;"></div>
+      <div aria-hidden="true" style="position:absolute; left:260px; top:303px; color:#34BD43; font-size:18px;">▶</div>
+
+   <span style="position:absolute; left:240px; top:279px; background-color:#CCF1D0; color:#003F25; border-radius:12px; padding:2px 8px; font-size:14px; font-weight:bold;">
+        Yes
+      </span>
+
+   <!-- Finish -->
+   <div style="position:absolute; left:274px; top:287px; width:116px; height:52px; box-sizing:border-box; display:flex; align-items:center; justify-content:center; text-align:center; background-color:#E4E2F8; color:#1F1976; border:4px solid #4C42CF; border-radius:28px; font-size:16px; font-weight:bold; z-index:2;">
+        Finish game
+      </div>
+
+   <!-- No branch -->
+   <span style="position:absolute; left:183px; top:385px; background-color:#CCF1D0; color:#003F25; border-radius:12px; padding:2px 8px; font-size:14px; font-weight:bold;">
+        No
+      </span>
+
+  <div aria-hidden="true" style="position:absolute; left:168px; top:367px; width:4px; height:45px; background-color:#34BD43;"></div>
+      <div aria-hidden="true" style="position:absolute; left:161px; top:397px; color:#34BD43; font-size:18px;">▼</div>
+
+   <!-- Shoot -->
+   <div style="position:absolute; left:95px; top:412px; width:150px; height:54px; box-sizing:border-box; display:flex; align-items:center; justify-content:center; text-align:center; background-color:#D5EFFF; color:#06338D; border:4px solid #0099F3; border-radius:5px; font-size:16px; font-weight:bold; z-index:2;">
+        Shoot a basket
+      </div>
+
+   <!-- Connector -->
+  <div aria-hidden="true" style="position:absolute; left:168px; top:466px; width:4px; height:29px; background-color:#34BD43;"></div>
+      <div aria-hidden="true" style="position:absolute; left:161px; top:480px; color:#34BD43; font-size:18px;">▼</div>
+
+  <!-- Increase shots -->
+   <div style="position:absolute; left:95px; top:495px; width:150px; height:54px; box-sizing:border-box; display:flex; align-items:center; justify-content:center; text-align:center; background-color:#D5EFFF; color:#06338D; border:4px solid #0099F3; border-radius:5px; font-size:16px; font-weight:bold; z-index:2;">
+        Increase shots by 1
+      </div>
+
+  <!-- Step annotation -->
+  <div style="position:absolute; left:270px; top:508px; background-color:#CCF1D0; color:#003F25; border:2px solid #34BD43; border-radius:14px; padding:3px 9px; font-size:14px; font-weight:bold;">
+        Step
+      </div>
+
+  <!-- Loop-back connector -->
+   <div aria-hidden="true" style="position:absolute; left:30px; top:520px; width:65px; height:4px; background-color:#34BD43;"></div>
+    <div aria-hidden="true" style="position:absolute; left:30px; top:313px; width:4px; height:211px; background-color:#34BD43;"></div>
+
+   <div aria-hidden="true" style="position:absolute; left:30px; top:311px; width:68px; height:4px; background-color:#34BD43;"></div>
+     <div aria-hidden="true" style="position:absolute; left:84px; top:303px; color:#34BD43; font-size:18px;">▶</div>
+
+  </div>
+  </div>
+
+  <!-- Observation prompts -->
+  <div style="flex:1 1 320px; min-width:0;">
+
+ <h2 style="color:#4C42CF; margin-top:0;">Trace the Repetition</h2>
+
+  <p>Follow the flowchart and identify the three values that control the repetition:</p>
+
+  <!-- Start value -->
+  <div style="background-color:#E4E2F8; color:#1F1976; border-left:4px solid #4C42CF; border-radius:8px; padding:10px 14px; margin-bottom:12px;">
+      <p style="margin:0;"><b>Start value:</b> <code style="font-size:14px;">shots = 0</code></p>
+    </div>
+
+   <!-- Stop value -->
+  <div style="background-color:#FFE3CE; color:#510000; border-left:4px solid #F46B00; border-radius:8px; padding:10px 14px; margin-bottom:12px;">
+      <p style="margin:0;"><b>Stop value:</b> <code style="font-size:14px;">goal = 5</code></p>
+    </div>
+
+  <!-- Step -->
+  <div style="background-color:#CCF1D0; color:#003F25; border-left:4px solid #34BD43; border-radius:8px; padding:10px 14px; margin-bottom:20px;">
+      <p style="margin:0;"><b>Step:</b> Increase <code style="font-size:14px;">shots</code> by 1</p>
+    </div>
+
+   <p><b>Think about:</b></p>
+
+  <ul style="line-height:1.6; padding-left:24px;">
+      <li>Which action repeats?</li>
+      <li>How many times will it repeat?</li>
+      <li>What sends the process back to the decision?</li>
+      <li>What finally makes the loop stop?</li>
+    </ul>
+
+  <details style="display:block; width:100%; box-sizing:border-box; background-color:#FFFFFF; border:1px solid #ACA8EA; border-radius:8px; padding:10px 14px; margin-top:18px;">
+      <summary style="cursor:pointer; color:#1F1976; font-size:16px; font-weight:bold;">
+        🔎 Check Your Thinking
+      </summary>
+
+   <div style="background-color:#D5EFFF; color:#06338D; border-radius:8px; padding:14px 16px; margin-top:12px;">
+     <p style="margin:0;">The player takes <b>five shots</b>. The count begins at 0 and increases by 1 after every shot. When <code style="font-size:14px;">shots</code> reaches the goal of 5, the repetition stops and the game finishes.</p>
+      </div>
+    </details>
+
+  </div>
+
+</div>
+
+<hr style="display:block; clear:both; width:100%; height:1px; border:0; background-color:#ACA8EA; margin:32px 0;">
+
+<h2>Why This Is a For Loop</h2>
+
+<p>The number of repetitions is determined before the loop begins. The starting value, stopping point, and step work together to control exactly how many times the action repeats.</p>
+
+<div style="background-color:#E4E2F8; color:#000000; border-radius:10px; padding:16px 20px; margin:20px 0;">
+  <p style="margin:0;"><strong>💡 Teacher tip:</strong> Help students trace the value of <code style="font-size:14px;">shots</code> through the flowchart: 0, 1, 2, 3, 4, and finally 5. The action happens while the count is below the goal. When the count reaches 5, the loop stops.</p>
+</div>
+
+<h2>Next Up</h2>
+
+<p>Next, you’ll connect the flowchart’s <b>start value</b>, <b>stop condition</b>, and <b>step</b> to the parts of a JavaScript <code style="font-size:14px;">for</code> loop.</p>
+MARKDOWN

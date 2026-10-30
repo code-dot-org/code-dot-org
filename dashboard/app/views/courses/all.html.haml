@@ -1,0 +1,15 @@
+%h1= @page_title = 'All Courses'
+= link_to 'Create New Course', new_course_path
+- if @errors && @errors.any?
+  #error_explanation
+    %h2 Error updating courses:
+    %ul
+      - @errors.each do |msg|
+        %li= msg
+%table
+  %tbody
+    - if !@courses.nil?
+      - @courses.each do |course|
+        %tr
+          %td= link_to course.name, course_path(course)
+          %td= link_to(t('crud.edit'), edit_course_path(course))

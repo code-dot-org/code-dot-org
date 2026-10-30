@@ -1,43 +1,62 @@
-import React from 'react';
 import {fireEvent, render, screen} from '@testing-library/react';
-import {expect} from '../../../util/reconfiguredChai';
+import React from 'react';
+
 import IconKey from '@cdo/apps/templates/sectionProgressV2/IconKey';
+import * as utils from '@cdo/apps/utils';
+
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('IconKey Component', () => {
-  it('renders the collapsed state initially', () => {
-    render(<IconKey isViewingValidatedLevel={false} expandedLessonIds={[]} />);
-    expect(screen.getByLabelText('Icon key')).be.visible;
+  it('renders the open state initially', () => {
+    jest.spyOn(utils, 'tryGetLocalStorage').mockClear().mockReturnValue('true');
+    render(<IconKey />);
+    expect(screen.getByLabelText('Icon Key')).be.visible;
+    expect(screen.queryByText('More Details')).be.visible;
+    screen.getByText('Assignment Completion States');
+    screen.getByText('Teacher Actions');
+    screen.getByText('Level Types');
+    utils.tryGetLocalStorage.mockRestore();
+  });
+
+  it('renders the closed state when localStorage indicates the key is closed', () => {
+    jest
+      .spyOn(utils, 'tryGetLocalStorage')
+      .mockClear()
+      .mockReturnValue('false');
+    render(<IconKey />);
     expect(screen.queryByText('Assignment Completion States')).to.be.null;
     expect(screen.queryByText('Teacher Actions')).to.be.null;
     expect(screen.queryByText('Level Types')).to.be.null;
+    utils.tryGetLocalStorage.mockRestore();
   });
 
-  it('expands content on click', () => {
-    render(<IconKey isViewingValidatedLevel={false} expandedLessonIds={[]} />);
+  it('expands collapses on click', () => {
+    jest.spyOn(utils, 'tryGetLocalStorage').mockClear().mockReturnValue('true');
+    render(<IconKey />);
+    // eslint-disable-next-line no-restricted-properties
     const containerDiv = screen.getByTestId('expandable-container');
     fireEvent.click(containerDiv);
-    expect(screen.getByText('Assignment Completion States')).to.exist;
-    expect(screen.getByText('Teacher Actions')).to.exist;
+    expect(screen.queryByText('Assignment Completion States')).to.be.null;
+    expect(screen.queryByText('Teacher Actions')).to.be.null;
     expect(screen.queryByText('Level Types')).to.be.null;
+    utils.tryGetLocalStorage.mockRestore();
   });
 
-  it('displays LevelTypesBox when viewing level progress', () => {
-    render(
-      <IconKey isViewingValidatedLevel={false} expandedLessonIds={[123]} />
-    );
-    const containerDiv = screen.getByTestId('expandable-container');
-    fireEvent.click(containerDiv);
-    expect(screen.getByText('Assignment Completion States')).to.exist;
-    expect(screen.getByText('Teacher Actions')).to.exist;
-    expect(screen.getByText('Level Types')).to.exist;
+  it('displays all icon options when open', () => {
+    jest.spyOn(utils, 'tryGetLocalStorage').mockClear().mockReturnValue('true');
+    render(<IconKey />);
+    screen.getByText('Assignment Completion States');
+    screen.getByText('Teacher Actions');
+    screen.getByText('Level Types');
+    utils.tryGetLocalStorage.mockRestore();
   });
 
-  it('displays Validated level type when viewing level with validated property', () => {
-    render(
-      <IconKey isViewingValidatedLevel={true} expandedLessonIds={[123]} />
-    );
-    const containerDiv = screen.getByTestId('expandable-container');
-    fireEvent.click(containerDiv);
-    expect(screen.getByText('Validated')).to.exist;
+  it('shows pop-up when more details are clicked', () => {
+    render(<IconKey />);
+    const moreDetailsLink = screen.queryByText('More Details');
+    expect(moreDetailsLink).be.visible;
+    expect(screen.queryByText('Progress Tracking Icon Key')).to.be.null;
+    fireEvent.click(moreDetailsLink);
+    screen.getByText('Progress Tracking Icon Key');
   });
 });

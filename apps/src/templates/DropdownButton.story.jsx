@@ -1,6 +1,8 @@
 import React from 'react';
+
+import Button from '@cdo/apps/legacySharedComponents/Button';
+
 import DropdownButton from './DropdownButton';
-import Button from '@cdo/apps/templates/Button';
 
 export default {
   component: DropdownButton,
@@ -12,13 +14,17 @@ export const OrangeDropdownButton = () => (
     color={Button.ButtonColor.brandSecondaryDefault}
   >
     <a href="asdf">Child with href</a>
-    <a onClick={() => console.log('click')}>Child with onClick</a>
+    <button type="button" onClick={() => console.log('click')}>
+      Child with onClick
+    </button>
   </DropdownButton>
 );
 
 export const BlueDropdownButton = () => (
   <DropdownButton text="Assign unit" color={Button.ButtonColor.blue}>
     <a href="asdf">Child with href</a>
-    <a onClick={() => console.log('click')}>Child with onClick</a>
+    <button type="button" onClick={() => console.log('click')}>
+      Child with onClick
+    </button>
   </DropdownButton>
 );

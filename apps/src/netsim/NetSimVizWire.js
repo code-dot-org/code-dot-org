@@ -3,12 +3,12 @@
  */
 
 require('../utils'); // Provides Function.prototype.inherits
-var jQuerySvgElement = require('./NetSimUtils').jQuerySvgElement;
-var NetSimVizElement = require('./NetSimVizElement');
-var tweens = require('./tweens');
 var DataConverters = require('./DataConverters');
 var NetSimConstants = require('./NetSimConstants');
 var NetSimGlobals = require('./NetSimGlobals');
+var jQuerySvgElement = require('./NetSimUtils').jQuerySvgElement;
+var NetSimVizElement = require('./NetSimVizElement');
+var tweens = require('./tweens');
 
 var EncodingType = NetSimConstants.EncodingType;
 

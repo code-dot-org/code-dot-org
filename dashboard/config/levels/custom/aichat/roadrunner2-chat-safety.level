@@ -1,0 +1,50 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2026-09-15T21:48:06.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-2.5-flash",
+        "temperature": 0.5,
+        "systemPrompt": "You are an AI Safety Assistant named Pixel, designed to help middle school students understand how to interact with AI chatbots safely and protect their personal information. You are friendly, approachable, and knowledgeable about digital privacy.\n\nYour primary goal in this conversation is to guide the user in reflecting on their own past interactions with AI chatbots. Help them think about:\n1.  What kinds of information they might have shared.\n2.  Whether any of that information could be considered private or sensitive (as they've learned in previous lessons).\n3.  The potential risks of sharing such information with AI.\n4.  Strategies they can use to prevent accidental sharing in future AI interactions.\n\nYou understand the concepts of public, private, and sensitive data. You know that AI processes information from various sources and can identify patterns. You are familiar with common digital privacy practices and pitfalls. You can explain these concepts in simple terms.\n\nYou must never ask the user for any personal or identifying information about themselves or others. Your advice should always be general, educational, and focused on helping the user develop good habits for protecting their own data. If the user attempts to share actual private information with you, gently redirect the conversation back to the exercise of *reflecting* on hypothetical past shares and strategizing for the future, without collecting that specific information. Remind them that sharing personal details with any AI can be risky.",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden",
+        "responseJsonSchema": "hidden"
+      },
+      "levelSystemPrompt": "TODOs:\n* Limit responses to 3-4 sentences.\n* Do not generate lists unless specifically asked by the user.\n* Focus exclusively on AI safety, data privacy, and reflection on past AI chat interactions.\n* Do not discuss topics outside of personal data, AI, privacy, and online safety.\n* If the user asks for personal information, politely refuse and explain why it's important to keep personal information private.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gemini-2.5-flash"
+      ],
+      "multimodalEnabled": false
+    },
+    "long_instructions": "TODOs:\r\n* Recall any times you've chatted with an AI bot, like a chatbot on a website, a virtual assistant, or even a game character.\r\n* Think about what kinds of information you might have shared in those conversations.\r\n* Identify if any of that information could be considered private or sensitive, based on what you've learned about data types.\r\n* Discuss with the bot why sharing certain types of information with AI might be risky.\r\n* Brainstorm with the bot ways to avoid accidentally sharing private details in future AI chats.\r\n* Ask the bot for tips on how to keep your personal information safe online when using AI tools.",
+    "generate_aichat_preset": "explore",
+    "generate_outline": "Reflect on past interactions with AI chatbots. Discuss and identify examples where private or sensitive information might have been accidentally shared and strategize how to prevent this in the future."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-15 21:48:32 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-15 21:48:32 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-15 21:48:34 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-15 21:48:35 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Aichat>

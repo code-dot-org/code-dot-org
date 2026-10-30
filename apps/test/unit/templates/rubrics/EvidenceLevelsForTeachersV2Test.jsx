@@ -1,14 +1,17 @@
+import {render, screen, fireEvent} from '@testing-library/react';
 import React from 'react';
-import {expect} from '../../../util/reconfiguredChai';
-import {shallow, mount} from 'enzyme';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import EvidenceLevelsForTeachersV2 from '@cdo/apps/templates/rubrics/EvidenceLevelsForTeachersV2';
 import {
   UNDERSTANDING_LEVEL_STRINGS_V2,
   UNDERSTANDING_LEVEL_STRINGS,
 } from '@cdo/apps/templates/rubrics/rubricHelpers';
 
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+
 const DEFAULT_PROPS = {
+  isAiAssessed: false,
   evidenceLevels: [
     {id: 1, understanding: 0, teacherDescription: 'test1'},
     {id: 2, understanding: 1, teacherDescription: 'test2'},
@@ -16,61 +19,52 @@ const DEFAULT_PROPS = {
     {id: 4, understanding: 3, teacherDescription: 'test4'},
   ],
   learningGoalKey: 'key-1',
+  arrowPositionCallback: _ => {},
 };
 
 describe('EvidenceLevelsForTeachersV2', () => {
   it('renders evidence levels', () => {
-    const wrapper = shallow(
+    render(
       <EvidenceLevelsForTeachersV2
         {...DEFAULT_PROPS}
         canProvideFeedback={true}
       />
     );
-    expect(wrapper.find('Heading6').length).to.equal(1);
-    expect(wrapper.find('Heading6').props().children).to.equal(
-      'Assign a Rubric Score'
-    );
-    expect(wrapper.find('button').length).to.equal(
-      DEFAULT_PROPS.evidenceLevels.length
-    );
-    expect(wrapper.find('BodyFourText').length).to.equal(1);
+    screen.getByText('Assign a Rubric Score');
+    const buttons = screen.getAllByRole('button');
+    expect(buttons.length).to.equal(DEFAULT_PROPS.evidenceLevels.length);
     const firstEvidenceLevel = DEFAULT_PROPS.evidenceLevels[0];
-    expect(wrapper.find('button').first().text()).to.equal(
+    expect(buttons[0].textContent).to.equal(
       UNDERSTANDING_LEVEL_STRINGS_V2[firstEvidenceLevel.understanding]
     );
   });
 
   it('calls radioButtonCallback when understanding is selected', () => {
     const callback = sinon.spy();
-    const wrapper = mount(
+    render(
       <EvidenceLevelsForTeachersV2
         {...DEFAULT_PROPS}
         radioButtonCallback={callback}
         canProvideFeedback={true}
       />
     );
-    wrapper.find('button').first().simulate('click');
-    sinon.assert.calledOnce(callback);
     const firstEvidenceLevel = DEFAULT_PROPS.evidenceLevels[0];
+    fireEvent.click(
+      screen.getByRole('button', {
+        name: UNDERSTANDING_LEVEL_STRINGS_V2[firstEvidenceLevel.understanding],
+      })
+    );
+    sinon.assert.calledOnce(callback);
     expect(callback).to.have.been.calledWith(firstEvidenceLevel.understanding);
-    wrapper.unmount();
   });
 
   it('renders evidence levels without RadioButtons when the teacher cannot provide feedback', () => {
-    const wrapper = shallow(<EvidenceLevelsForTeachersV2 {...DEFAULT_PROPS} />);
-    expect(wrapper.find('Heading6').length).to.equal(1);
-    expect(wrapper.find('Heading6').props().children).to.equal('Rubric Scores');
-    expect(wrapper.find('Memo(RadioButton)').length).to.equal(0);
-    // Two BodyThreeText per evidence level
-    expect(wrapper.find('BodyThreeText').length).to.equal(
-      DEFAULT_PROPS.evidenceLevels.length * 2
-    );
+    render(<EvidenceLevelsForTeachersV2 {...DEFAULT_PROPS} />);
+    screen.getByText('Rubric Scores');
     const firstEvidenceLevel = DEFAULT_PROPS.evidenceLevels[0];
-    expect(wrapper.find('StrongText').at(0).props().children).to.equal(
+    screen.getByText(
       UNDERSTANDING_LEVEL_STRINGS[firstEvidenceLevel.understanding]
     );
-    expect(wrapper.find('BodyThreeText').at(1).props().children).to.equal(
-      firstEvidenceLevel.teacherDescription
-    );
+    screen.getByText(firstEvidenceLevel.teacherDescription);
   });
 });

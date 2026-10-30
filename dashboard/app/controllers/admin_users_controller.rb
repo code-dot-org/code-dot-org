@@ -1,4 +1,6 @@
 require 'cdo/activity_constants'
+require 'csv'
+require 'tempfile'
 
 class AdminUsersController < ApplicationController
   include Pd::PageHelper
@@ -12,6 +14,7 @@ class AdminUsersController < ApplicationController
     email
     primary_contact_info_id
     name
+    username
     user_type
     current_sign_in_at
     sign_in_count
@@ -49,9 +52,19 @@ class AdminUsersController < ApplicationController
     user = User.from_identifier(user_id)
 
     if user
-      bypass_sign_in user
+      log_admin_action("assume_identity", user.id)
+
+      admin = current_user
+
+      # Ensures a clean new session for the assumed identity
+      sign_out admin
+      reset_session
+
       # Set cookie to indicate assumed identity
       session[:assumed_identity] = true
+      session[:admin_id] = admin.id
+
+      bypass_sign_in user
       redirect_to '/'
     else
       flash[:alert] = 'User not found'
@@ -63,22 +76,24 @@ class AdminUsersController < ApplicationController
     user = User.find_by_id(params.require(:user_id))
     if user
       user.destroy
+      log_admin_action("delete_user", user.id)
       flash[:alert] = "User (ID: #{params[:user_id]}) Deleted!"
     else
       flash[:alert] = "User (ID: #{params[:user_id]}) not found or deleted"
     end
-    redirect_to :find_students
+    redirect_to :find_students_admin_search_index
   end
 
   def undelete_user
     user = User.only_deleted.find_by_id(params[:user_id])
     if user
       user.undestroy
+      log_admin_action("undelete_user", user.id)
       flash[:alert] = "User (ID: #{params[:user_id]}) Undeleted!"
     else
       flash[:alert] = "User (ID: #{params[:user_id]}) not found or undeleted"
     end
-    redirect_to :find_students
+    redirect_to :find_students_admin_search_index
   end
 
   def manual_pass_form
@@ -134,11 +149,18 @@ class AdminUsersController < ApplicationController
     set_target_user_from_identifier(params[:user_identifier])
 
     if @target_user
-      @user_scripts = UserScript.
-        where(user_id: @target_user.id).
-        order(updated_at: :desc).
-        limit(100).
-        offset(script_offset)
+      if @target_user.teacher?
+        @sections = @target_user.sections_instructed.includes(:students).order(:name)
+        all_student_ids = @sections.flat_map {|s| s.students.map(&:id)}.uniq
+        script_ids = UserScript.where(user_id: all_student_ids + [@target_user.id]).distinct.pluck(:script_id)
+        @all_scripts = Unit.where(id: script_ids).order(:name).sort.uniq
+      else
+        @user_scripts = UserScript.
+          where(user_id: @target_user.id).
+          order(updated_at: :desc).
+          limit(100).
+          offset(script_offset)
+      end
     end
   end
 
@@ -151,6 +173,108 @@ class AdminUsersController < ApplicationController
       @projects_list = ProjectsList.fetch_personal_projects_for_admin(@target_user.id, 'active')
       @deleted_projects_list = ProjectsList.fetch_personal_projects_for_admin(@target_user.id, 'deleted')
     end
+  end
+
+  # GET /admin/user_sections
+  # This page takes an optional user_identifier param and renders a page with
+  # the non-hidden sections where the user is a student.
+  def user_sections_form
+    set_target_user_from_identifier(params[:user_identifier])
+
+    if @target_user
+      @sections_list = Section.
+        joins(:followers).
+        includes(:user).
+        where(followers: {student_user_id: @target_user.id}).
+        visible.
+        distinct.
+        order('sections.created_at ASC')
+    end
+  end
+
+  def cap_actions_form
+    set_target_student_from_identifier(params[:user_identifier])
+    return unless @target_user
+
+    @permission_request = @target_user.latest_parental_permission_request
+    @us_state_options = User.us_state_dropdown_options
+    @cap_state_policy = Policies::ChildAccount::StatePolicies.state_policy(@target_user)
+    @force_cap_permission_available = @cap_state_policy.present? && @permission_request.nil?
+  end
+
+  def update_cap_state
+    student = cap_actions_student(params[:user_id])
+    unless student
+      redirect_to_cap_actions(params[:user_id], alert: 'Student not found')
+      return
+    end
+
+    new_us_state = params[:us_state]
+    unless User.us_state_dropdown_options.key?(new_us_state)
+      redirect_to_cap_actions(student.id, alert: 'Invalid US state')
+      return
+    end
+
+    previous_us_state = student.us_state
+    User.transaction do
+      student.us_state = new_us_state
+      student.save!(validate: false)
+      Services::ChildAccount.remove_compliance(student)
+    end
+    log_admin_action(
+      'update_cap_us_state',
+      student.id,
+      {previous_us_state: previous_us_state, new_us_state: new_us_state}
+    )
+    redirect_to_cap_actions(student.id, notice: 'US state updated and CAP compliance removed')
+  end
+
+  def grant_cap_permission
+    student = cap_actions_student(params[:user_id])
+    unless student
+      redirect_to_cap_actions(params[:user_id], alert: 'Student not found')
+      return
+    end
+
+    permission_request = student.latest_parental_permission_request
+    unless permission_request
+      redirect_to_cap_actions(student.id, alert: 'No parental permission request exists')
+      return
+    end
+
+    Services::ChildAccount.grant_permission_request!(permission_request)
+    log_admin_action(
+      'grant_cap_permission',
+      student.id,
+      {permission_request_id: permission_request.id}
+    )
+    redirect_to_cap_actions(student.id, notice: 'Parental permission request granted')
+  end
+
+  def force_cap_permission
+    student = cap_actions_student(params[:user_id])
+    unless student
+      redirect_to_cap_actions(params[:user_id], alert: 'Student not found')
+      return
+    end
+
+    if student.latest_parental_permission_request
+      redirect_to_cap_actions(student.id, alert: 'Grant the existing parental permission request instead')
+      return
+    end
+
+    unless Policies::ChildAccount::StatePolicies.state_policy(student)
+      redirect_to_cap_actions(student.id, alert: 'No CAP policy applies to this student')
+      return
+    end
+
+    Services::ChildAccount.update_compliance(
+      student,
+      Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED
+    )
+    student.save!
+    log_admin_action('force_cap_permission', student.id)
+    redirect_to_cap_actions(student.id, notice: 'CAP permission granted')
   end
 
   # PUT /admin/user_project
@@ -185,29 +309,28 @@ class AdminUsersController < ApplicationController
 
     user_id = params[:user_id]
     script_id = params[:script_id]
-    user_storage_id = storage_id_for_user_id(user_id)
 
-    FirehoseClient.instance.put_record(
-      :analysis,
-      {
-        study: 'reset-progress',
-        event: 'admin-delete-progress',
-        user_id: user_id,
-        script_id: script_id,
-        data_json: {
-          signed_in_user: current_user.username,
-          reason: params[:reason]
-        }.to_json
-      }
-    )
-
-    UserScript.where(user_id: user_id, script_id: script_id).destroy_all
-    UserLevel.where(user_id: user_id, script_id: script_id).destroy_all
-    ChannelToken.where(storage_id: user_storage_id, script_id: script_id).destroy_all unless user_storage_id.nil?
-    TeacherFeedback.where(student_id: user_id, script_id: script_id).destroy_all
-    CodeReview.where(user_id: user_id, script_id: script_id).destroy_all
+    User.delete_progress_for_unit(user_id: user_id, script_id: script_id)
+    log_admin_action("delete_progress", user_id, {script_id: script_id, reason: params[:reason]})
 
     redirect_to user_progress_form_path({user_identifier: user_id}), notice: "Progress deleted."
+  end
+
+  # POST /admin/mass_progress_reset
+  # Deletes progress for every (student, unit) pair in the given lists.
+  def mass_progress_reset
+    unit_ids = parse_id_list(params[:unit_ids])
+    student_ids = parse_id_list(params[:student_ids])
+
+    if unit_ids.blank? || student_ids.blank?
+      render json: {error: 'unit_ids and student_ids must be non-empty arrays of integer ids'}, status: :bad_request
+      return
+    end
+
+    User.delete_progress_for_units(user_ids: student_ids, unit_ids: unit_ids)
+    log_admin_action('mass_progress_reset', nil, {unit_ids: unit_ids, student_ids: student_ids})
+
+    render json: {success: true}
   end
 
   # get /admin/permissions
@@ -232,9 +355,48 @@ class AdminUsersController < ApplicationController
       @users_with_permission = restricted_users.
         joins(:permissions).
         where(user_permissions: {permission: permission}).
-        order(:email)
-      @users_with_permission = @users_with_permission.page(page).per(page_size)
+        order(:email).
+        page(page).
+        per(page_size)
     end
+  end
+
+  # get /admin/permissions/csv
+  def permissions_csv
+    permissions_form
+
+    return render :not_found unless @users_with_permission
+
+    # Create a friendly filename for it
+    start = (page - 1) * page_size
+    final = start + page_size - 1
+
+    start = start.to_s.rjust(8, '0')
+    final = final.to_s.rjust(8, '0')
+
+    date = Time.zone.today
+    date = "#{date.year}-#{date.month}-#{date.day}"
+
+    filename = "#{params[:permission]}-#{date}-#{start}-#{final}.csv"
+
+    headers = ['ID', 'Email', 'Name', 'User Type', 'Recent Sign In', 'Sign In Count', 'Created At']
+    send_data(
+      CSV.generate do |csv|
+        csv << headers
+        @users_with_permission.each do |user|
+          csv << [
+            user.id,
+            user.email,
+            user.name,
+            user.user_type,
+            user.current_sign_in_at.try(:strftime, '%F'),
+            user.sign_in_count,
+            user.created_at.strftime('%F')
+          ]
+        end
+      end,
+      filename: filename
+    )
   end
 
   def grant_permission
@@ -246,6 +408,7 @@ class AdminUsersController < ApplicationController
       return
     end
     @user.permission = params[:permission]
+    log_admin_action("grant_permission", user_id, {permission: params[:permission]})
     redirect_to permissions_form_path(search_term: user_id)
   end
 
@@ -253,7 +416,9 @@ class AdminUsersController < ApplicationController
     user_id = params[:user_id]
     @user = restricted_users.find_by(id: user_id)
     permission = params[:permission]
-    @user.try(:delete_permission, permission)
+    if @user.try(:delete_permission, permission)
+      log_admin_action("revoke_permission", user_id, {permission: permission})
+    end
     redirect_to permissions_form_path(search_term: user_id)
   end
 
@@ -270,6 +435,7 @@ class AdminUsersController < ApplicationController
           next
         end
         user.permission = permission
+        log_admin_action("bulk_grant_permission", user.id, {permission: permission})
         succeeded_emails.push(email)
       end
       unless succeeded_emails.empty?
@@ -326,17 +492,226 @@ class AdminUsersController < ApplicationController
     redirect_to studio_person_form_path
   end
 
+  # GET /admin/lookup_by_email
+  def lookup_by_email_form
+    input = params[:email].to_s.strip.downcase
+    if input.present?
+      hashed_email = input.match?(/\A[a-f0-9]{32}\z/) ? input : AuthenticationOption.hash_email(input)
+      matched_auth_options = AuthenticationOption.where(hashed_email: hashed_email)
+      user_ids = matched_auth_options.distinct.pluck(:user_id)
+      all_auth_options_for_users = AuthenticationOption.where(user_id: user_ids)
+      @users = restricted_users.where(id: user_ids)
+      @credential_types_by_user = all_auth_options_for_users.group_by(&:user_id).transform_values do |opts|
+        opts.map(&:credential_type)
+      end
+    end
+  end
+
+  # GET /admin/log_token
+  def log_token_form
+    @input = params[:user_id].to_s.strip
+    return if @input.blank?
+
+    unless @input.match?(/\A[1-9]\d{0,9}\z/)
+      @invalid_input = true
+      return
+    end
+
+    user_id = @input.to_i
+    @tokens = begin
+      User::LogToken.for_user(user_id).to_a
+    rescue ActiveModel::RangeError
+      []
+    end
+    log_admin_action('log_token_lookup', user_id)
+  end
+
+  # POST /admin/log_token/resolve
+  def resolve_log_token
+    token = params[:log_token].to_s.strip
+    reason = params[:reason].to_s.strip
+
+    if token.blank? || reason.blank?
+      flash.now[:alert] = 'A token and a reason are both required.'
+      return render :log_token_form
+    end
+
+    @resolved = User.resolve_log_token(
+      token,
+      actor_id: current_user.id,
+      reason: reason,
+      request_id: request.request_id,
+    )
+    @resolve_attempted = true
+    flash.now[:alert] = 'That token could not be read.' if @resolved.nil?
+    render :log_token_form
+  end
+
+  # GET /admin/mass_delete_student_progress
+  def mass_delete_student_progress
+  end
+
+  # POST /admin/convert_usernames_to_ids
+  def convert_usernames_to_ids
+    csv_data = params[:csv_data]
+    if csv_data.blank?
+      render json: {success: false, error: 'CSV data is required'}, status: :bad_request
+      return
+    end
+
+    # Create temporary input file
+    temp_input = Tempfile.new(['usernames', '.csv'])
+    # Create output filename that script expects
+    temp_output = temp_input.path.sub(/\.csv\z/, '-user-ids.csv')
+
+    # Write frontend data to temp file
+    CSV.open(temp_input.path, 'w', headers: true) do |csv|
+      csv << ['student_username', 'unit_name']  # Headers
+      csv_data.each {|row| csv << [row['student_username'], row['unit_name']]}
+    end
+
+    Rails.logger.info "Created temp input file: #{temp_input.path}"
+    Rails.logger.info "Expected output file: #{temp_output}"
+
+    converted_data = []
+    error_message = nil
+
+    CSV.foreach(temp_input.path, headers: true) do |row|
+      username = row['student_username']
+      unit_name = row['unit_name']
+
+      unless username
+        Rails.logger.error 'CSV must have a column named "student_username".'
+        error_message = 'CSV must have a column named "student_username"'
+        break
+      end
+
+      user = User.find_by_username(username)
+      unless user
+        Rails.logger.error "Student with username #{username} not found"
+        error_message = "Student with username #{username} not found"
+        break
+      end
+
+      converted_data << {
+        student_id: user.id.to_s,
+        unit_name: unit_name
+      }.compact
+    end
+
+    if error_message
+      temp_input.unlink
+      render json: {success: false, error: error_message}, status: :bad_request
+      return
+    end
+
+    Rails.logger.info "Successfully converted #{converted_data.length} records"
+
+    temp_input.unlink
+
+    render json: {success: true, converted_data: converted_data}
+  rescue => exception
+    Rails.logger.error "Error in convert_usernames_to_ids: #{exception.message}"
+    Rails.logger.error exception.backtrace.join("\n")
+    render json: {success: false, error: 'Internal server error', details: exception.message}, status: :internal_server_error
+  end
+
+  # POST /admin/delete_user_progress
+  def delete_user_progress
+    unless request.post?
+      render json: {error: 'Only POST requests are allowed'}, status: :method_not_allowed
+      return
+    end
+
+    csv_data = params[:csv_data]
+    teacher_id = params[:teacher_id]
+    dry_run = ActiveModel::Type::Boolean.new.cast(params[:dry_run])
+
+    if csv_data.blank? || teacher_id.blank?
+      render json: {error: 'CSV data and teacher ID are required'}, status: :bad_request
+      return
+    end
+
+    # Validate teacher_id is numeric to prevent injection
+    unless teacher_id.to_s.match?(/\A\d+\z/)
+      render json: {error: 'Invalid teacher ID'}, status: :bad_request
+      return
+    end
+
+    # Create temporary files
+    temp_file = Tempfile.new(['delete_progress', '.csv'])
+    output_file = Tempfile.new('script_output')
+
+    begin
+      CSV.open(temp_file.path, 'w', headers: true) do |csv|
+        csv << ['student_id', 'unit_name']
+        csv_data.each do |row|
+          csv << [row['student_id'], row['unit_name']]
+        end
+      end
+
+      # Determine which script based on data structure
+      script_name = csv_data.first&.key?('unit_name') ?
+        'delete_user_progress_by_unit.rb' :
+        'delete_user_progress_all_units.rb'
+
+      # Path to the delete script
+      repo_root = File.expand_path('..', Rails.root)
+      script_path = File.join(repo_root, 'bin', 'oneoff', 'reset_student_progress_in_bulk', script_name)
+
+      unless File.exist?(script_path) && script_path.start_with?(repo_root)
+        Rails.logger.error "Invalid script path: #{script_path}"
+        render json: {error: 'Script not found'}, status: :internal_server_error
+        return
+      end
+
+      commit_flag = dry_run ? '' : 'for-real'
+
+      success = execute_delete_script(script_path, teacher_id, temp_file.path, commit_flag, output_file.path, repo_root)
+
+      output = File.read(output_file.path)
+
+      unless success
+        Rails.logger.error "Delete progress script failed: #{output}"
+        render json: {error: 'Delete progress script failed', details: output}, status: :internal_server_error
+        return
+      end
+
+      render json: {
+        success: true,
+        output: output,
+        dry_run: dry_run,
+        message: dry_run ? "Dry run completed successfully" : "Progress deletion completed successfully"
+      }
+    rescue => exception
+      Rails.logger.error "Error in delete_user_progress: #{exception.message}"
+      Rails.logger.error exception.backtrace.join("\n")
+      render json: {error: 'Internal server error', details: exception.message}, status: :internal_server_error
+    ensure
+      output_file&.unlink
+      temp_file&.unlink
+    end
+  end
+
+  private def execute_delete_script(script_path, teacher_id, csv_file, commit_flag, output_file, repo_root)
+    system(
+      'ruby', script_path, teacher_id, csv_file, commit_flag,
+      out: output_file,
+      err: [:child, :out],
+      chdir: repo_root
+    )
+  end
+
   private def restricted_users
     User.select(RESTRICTED_USER_ATTRIBUTES_FOR_VIEW)
   end
 
   private def page
-    params[:page] || 1
+    params[:page].to_i || 1
   end
 
   private def page_size
-    return DEFAULT_MANAGE_PAGE_SIZE unless params.key? :page_size
-    params[:page_size] == 'All' ? @users_with_permission.count : params[:page_size]
+    params[:page_size].to_i || DEFAULT_MANAGE_PAGE_SIZE
   end
 
   private def set_target_user_from_identifier(user_identifier)
@@ -345,5 +720,36 @@ class AdminUsersController < ApplicationController
       @target_user = User.from_identifier(user_identifier)
       flash[:alert] = 'User not found' unless @target_user
     end
+  end
+
+  private def set_target_student_from_identifier(user_identifier)
+    return unless user_identifier
+
+    user = User.from_identifier(user_identifier.strip)
+    if user&.student?
+      @target_user = user
+    else
+      flash[:alert] = 'Student not found'
+    end
+  end
+
+  private def cap_actions_student(user_id)
+    user = User.find_by(id: user_id)
+    user if user&.student?
+  rescue ActiveModel::RangeError
+    nil
+  end
+
+  private def redirect_to_cap_actions(user_identifier, notice: nil, alert: nil)
+    redirect_to cap_actions_form_path(user_identifier: user_identifier), notice: notice, alert: alert
+  end
+
+  private def parse_id_list(param)
+    Array(param).map {|id| Integer(id, exception: false)}.compact
+  end
+
+  private def log_admin_action(event, affected_user_id = nil, attributes = {})
+    log_payload = {event: event, namespace: 'admin', request_id: request.request_id, authenticated_user_id: current_user.id, affected_user_id: affected_user_id.to_i}.merge(attributes)
+    CDO.log.warn log_payload.to_json
   end
 end

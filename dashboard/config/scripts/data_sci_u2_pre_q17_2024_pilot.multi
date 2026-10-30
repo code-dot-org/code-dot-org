@@ -1,0 +1,10 @@
+name 'Data Sci U2 Pre Q17_2024-pilot'
+
+question 'Which logical operator would you use in pandas to filter rows where two conditions must both be true?'
+
+wrong '`|`'
+right '`&`'
+wrong '`~`'
+wrong '`^`'
+
+allow_multiple_attempts false

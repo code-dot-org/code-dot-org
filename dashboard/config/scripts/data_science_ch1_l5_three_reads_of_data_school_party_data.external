@@ -1,0 +1,7 @@
+name 'Data Science Ch1 L5 Three Reads of Data - School Party Data'
+title 'Dataset'
+description 'description here'
+
+markdown <<MARKDOWN
+![](https://images.code.org/ee696721a36cb7b3bb9a30ffd711d571-image-1716238776640.png)
+MARKDOWN

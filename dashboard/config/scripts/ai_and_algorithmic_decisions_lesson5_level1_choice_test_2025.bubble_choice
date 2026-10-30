@@ -1,0 +1,8 @@
+name 'ai-and-algorithmic-decisions-lesson5-level1-choice-test-2025'
+display_name 'Creating Conditionals with Flowcharts'
+description 'Simulate conditional decision-making using Sketch Lab or AI Chat.'
+uses_lab2
+
+sublevels
+level 'ai-and-algorithmic-decisions-lesson5-level1-test-2025'
+level 'ai-and-algorithmic-decisions-lesson5-level1b-test-2025'

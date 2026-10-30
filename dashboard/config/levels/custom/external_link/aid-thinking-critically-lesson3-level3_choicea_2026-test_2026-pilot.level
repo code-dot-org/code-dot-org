@@ -1,0 +1,19 @@
+<ExternalLink>
+  <config><![CDATA[{
+  "game_id": 55,
+  "created_at": "2026-03-03T22:46:14.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Environmental Impact\r\n\r\nAI feels invisible on your phone, but it uses real electricity, water, and machines. \r\nWhat is the environmental cost?\r\n\r\nExplore this mini-lesson to learn more. Let curiosity be your guide. \r\n",
+    "link_title": "AI's Environmental Impact Mini-Lesson ",
+    "url": "https://docs.google.com/presentation/d/1JRp6CHdtLWTkBeYWGzIRlB0XQrbxFZ2-TRop7ZJamew/present",
+    "name_suffix": "_2026-pilot",
+    "thumbnail_url": "https://images.code.org/721a471b91fcafea49c3ef7363511a8d-choice1.png",
+    "display_name": "Impact on the Environment"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-03-03T22:46:14.161+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson3-level3_choicea_2026-test\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson3-level3_choicea_2026-test\"}]"
+}]]></config>
+</ExternalLink>

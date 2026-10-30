@@ -1,0 +1,52 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-09-09T05:28:46.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "This is your badge. Update it with your own information, then add something new.\r\n\r\nDo This:\r\n1. Update `name`, `grade`, and `lucky_number` to your own information.\r\n2. Add an `input()` so the program asks for your name instead of it being set directly in the code.\r\n3. Add a new variable called `favorite_color` and give it a value.\r\n4. Add a variable called `is_new_member` and set it to `True` or `False`.\r\n5. Add a new variable that uses math to create a value from one you already have (for example, your lucky number doubled).\r\n6. Use the AI Tutor to help you add your `favorite_color` to the badge visual.\r\n\r\n::: details [Need help?]\r\nAsk the AI Tutor to explain what it changed before you run the program. Check that the new line actually uses your `favorite_color` variable, not a color you didn't ask for.\r\n:::",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "mini_app": "theater",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "mini_app_variant": "functional",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildPython",
+        "documentation",
+        "explainCode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "# Variables hold the badge info\nname = \"Jordan\"\ngrade = 10\nlucky_number = 7\ncard_color = \"#4C42CF\"\n\n\n# --- Code to set up the Scene below --- #\nfrom theater import Scene, play_scenes\nscene = Scene()\nscene.clear(card_color)\n\nscene.set_fill_color(\"white\")\nscene.remove_stroke_color()\nscene.draw_rectangle(40, 100, 320, 200)\n\nscene.set_fill_color(\"#FFD36E\")\nscene.draw_rectangle(40, 100, 320, 18)\n\nscene.set_text_color(\"#1F1976\")\nscene.set_text_height(20)\nscene.draw_text(\"HELLO, MY NAME IS\", 70, 150)\n\nscene.set_text_height(46)\nscene.draw_text(name, 70, 200)\n\nscene.set_text_height(16)\nscene.draw_text(\"Grade:\", 70, 240)\nscene.draw_text(str(grade), 130, 240)\nscene.draw_text(\"Lucky number:\", 70, 264)\nscene.draw_text(str(lucky_number), 190, 264)\n\nscene.play_note(72, 0.25)\nscene.pause(0.25)\nscene.play_note(76, 0.4)\n\nplay_scenes(scene)",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMqOkVqRCCEqoX7R\nPwnz4tuXsd1cUuVSDTKc+JLXW4S3q2JRxbydPHRE9/9j4FV2ZFP2Zm/ooGDc\nnXdfBNpzWBmyeuvsm8bHlJmwjDl9LvbHlMcPQFUxfLTdMc1ZmHq83WoTsCiS\nrOL+chojflFH9dAYelwhMllD6S7DEwdaCxTh/nrBfuftmvz7orA+9us+E7gC\nIchvbJQ9yL2MFZ0Dha6xHxIaCYbGJb3jbrEVHRuQFZvcWfrE2rGiDq4gMrUl\nwHW45ZAgpeiR5uTcLiKeL1vyImqh02auT1JFZnne7oq3z7i1DmDVS0vzZ80A\nf+TVOlX6fsP98MPV6hw9keBGWiiG3Ki12l1f+b7PLgbqo/R2SoCGsyIKUVJM\n1nAKhJyoePRj5g0oYtH/xrkrPmEUK5qfO0teN9+JPIMJOR9tHlQ2tzVaDWZi\n9xv7WymYniJwTBxzk9Q0QfPpyBQ92A3f/37g4b8XQOgBm8uyX8AOnSHbeVDx\nR7nHlgsUOMXjz+FG6GJVFK90RFZeAPjVrfWkZLp57kDDtsZ8iCtoaJA2ajb+\nZSniyNxXW5Wm6xJVsez6+yFiDS2QTKZY3Oj6zLBAdWJ8ZiJwoHdtQu19be9M\nEd+ZRcBFbVhmTlGb88K+CIsbapJfFBNSmilu/B7W9eI4Gy6aXollOmBb2U9f\nm33Txg9KEDbDViHEOUPyEQBHRPMlk/Au7Q7Vns433n0wxsGjReEsyMGjpLMr\nQU7lcgzh1EZ3TkQTiuHK2R3QfcrG7r839rVwb/6J638wOaZD8ZVgsetwHui9\n7EqW+sFoYxFlQiIo337TK8MZhr4uKvLJfxM0KPGEMNsD8cy8f0V9X9BLorXY\nukz474vVnn73hVbZnrzlNoNwjVFpCuS7YnRPvY+CATldrepqEOcYpRamB8fv\nXFB9CZSJmjmSOrn87ya+Oakv3jP2f67BJaYNfpLf93AGu+8T7ky9pdJ/sBrG\n8hcgfFtsr8tEwaZmHOHqD1REBtdDGcydi1eti/xN3ny80wVJNd7DfZyO66Ne\nI3mIpcafthHn4iwTHT8bKgW0HwsUW0mpV2uNapPa0iuIClXIyRNmNLehZVVD\nTFiL6Drkqu0+E2jlcICIDhxmv/ikJ3XfJFv3/uC/Yd5sj4UWs3mx73fvmYsA\n1+VUex/xZY1j3chN0M09DLzl1DBYGkXqE7fsybKKOwJV0RJyXIia4J0gtWuR\n08C2bGHT4k+MylXYBUPlLWwikYiHKCIo1sX2PNjZyxrfMKvmo1lqVzzlGLw2\nZoes0ziMBjFjmQh6cr5SyDsDFmjMrrkinazimwrWwkSW1ilyXDUa2k8s1297\nLNcR45InFRobA81WmorrhhTHXyxOSR4581qh0VTCsf6EN8MlXkhb+M2NjeNN\nqNIkDlDIPjnmp4/YYy6m+SVfT9OZuA8k7sbc8TSHZuxBP2L8Xr3CiAh++Fnv\njuZi0d74Wn6AfuXXLb38y9Aj7QUaUn/nxFhseP1xiELOAuDpWBZuX79sQWDN\n3XU3tRNNLdvDlSOfuXy2JNQ8jfBjnbNBAP/V60p5945k133nM4GAgKKqWuCa\n7kcNlboakFef3P7vMDpPfMD9FY5V+4vPWuHI+KG1E8gBqIY6FUDpjuNeGDB/\n7a/VNGVu+F4XC/EQkoli/6CQApZc4l/XAmFUBhIg8Fn13QRWq8DD\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-09 05:30:03 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-09 05:32:02 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-09 05:47:59 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-09 05:50:46 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-09 05:50:52 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-09 05:51:27 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Pythonlab>

@@ -4,7 +4,7 @@ Feature: Feedback Tab Visibility
 
   Background:
     Given I create a teacher-associated student named "Lillian"
-    And I am on "http://studio.code.org/s/allthethings/lessons/38/levels/1?noautoplay=true"
+    And I am on "http://studio.code.org/courses/ui-test-all-the-levels/units/1/lessons/38/levels/1?noautoplay=true"
     Then I wait to see "#runButton"
     And I press "runButton"
     And I wait to see "#finishButton"
@@ -12,8 +12,8 @@ Feature: Feedback Tab Visibility
 
   Scenario: As student 'Feedback' tab is the 'Key Concept' tab if no feedback
     When I open my eyes to test "student with no feedback"
-    And I am on "http://studio.code.org/s/allthethings/lessons/38/levels/1"
-    And I wait for the page to fully load
+    And I am on "http://studio.code.org/courses/ui-test-all-the-levels/units/1/lessons/38/levels/1"
+    And I wait for the lab page to fully load
     Then I see no difference for "student with no feedback tab"
     Then I sign out
     And I close my eyes
@@ -25,19 +25,19 @@ Feature: Feedback Tab Visibility
   If a teacher on a level with mini rubric can see the rubric without viewing student work.
   Otherwise don't show feedback tab
     When I open my eyes to test "teacher giving student feedback"
-    And I sign in as "Teacher_Lillian"
+    And I sign in as "Teacher_Lillian" and go home
     And I give user "Teacher_Lillian" authorized teacher permission
 
-    And I am on "http://studio.code.org/s/allthethings/lessons/38/levels/1"
-    And I wait for the page to fully load
+    And I am on "http://studio.code.org/courses/ui-test-all-the-levels/units/1/lessons/38/levels/1"
+    And I wait for the lab page to fully load
     Then I see no difference for "teacher rubric feedback tab"
 
   #As teacher, reviewing work, submit feedback
     And I wait to see ".show-handle"
     Then I click selector ".show-handle .fa-chevron-left"
     And I wait until element ".student-table" is visible
-    And I click selector "#teacher-panel-container tr:nth(1)" to load a new page
-    And I wait for the page to fully load
+    And I click selector "#teacher-panel-container tr:eq(1)" to load a new page
+    And I wait for the lab page to fully load
     Then I see no difference for "teacher giving feedback tab load"
 
     And I wait to see "#rubric-input-performanceLevel1"
@@ -53,13 +53,13 @@ Feature: Feedback Tab Visibility
 
   #As teacher, refresh page and latest feedback is visible
     And I reload the page
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     Then I see no difference for "teacher gave feedback"
 
   #As student, latest feedback from teacher is displayed
     Then I sign out
     And I sign in as "Lillian"
-    And I am on "http://studio.code.org/s/allthethings/lessons/38/levels/1"
+    And I am on "http://studio.code.org/courses/ui-test-all-the-levels/units/1/lessons/38/levels/1"
     And I wait to see ".uitest-feedback"
     Then I press the first ".uitest-feedback" element
     And I wait to see "#ui-test-feedback-time"

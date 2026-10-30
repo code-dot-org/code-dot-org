@@ -6,20 +6,25 @@
  *      lobby table.
  */
 import $ from 'jquery';
-var utils = require('../utils');
-var _ = require('lodash');
-var i18n = require('@cdo/netsim/locale');
-var NetSimNodeFactory = require('./NetSimNodeFactory');
-var NetSimClientNode = require('./NetSimClientNode');
-var NetSimAlert = require('./NetSimAlert');
-var NetSimApiError = require('./NetSimApiError');
-var NetSimRouterNode = require('./NetSimRouterNode');
-var NetSimShardSelectionPanel = require('./NetSimShardSelectionPanel');
-var NetSimRemoteNodeSelectionPanel = require('./NetSimRemoteNodeSelectionPanel');
+
 import {getUserSections} from '@cdo/apps/util/userSectionClient';
 
-var logger = require('./NetSimLogger').getSingleton();
+var _ = require('lodash');
+var md5 = require('md5');
+
+var i18n = require('@cdo/netsim/locale');
+
+var utils = require('../utils');
+
+var NetSimAlert = require('./NetSimAlert');
+var NetSimApiError = require('./NetSimApiError');
+var NetSimClientNode = require('./NetSimClientNode');
 var NetSimGlobals = require('./NetSimGlobals');
+var logger = require('./NetSimLogger').getSingleton();
+var NetSimNodeFactory = require('./NetSimNodeFactory');
+var NetSimRemoteNodeSelectionPanel = require('./NetSimRemoteNodeSelectionPanel');
+var NetSimRouterNode = require('./NetSimRouterNode');
+var NetSimShardSelectionPanel = require('./NetSimShardSelectionPanel');
 
 /**
  * @typedef {Object} ShardChoice
@@ -587,11 +592,24 @@ NetSimLobby.prototype.buildShardChoiceList_ = function (
 
 /**
  * Generate a unique shard key from the given seed
- * @param {string} seed
+ * @param {string} seed - either the section ID, random UUID, or shared shard seed.
  * @private
  */
 NetSimLobby.prototype.makeShardIDFromSeed_ = function (seed) {
-  return ('ns_' + this.levelKey_ + '_' + seed).substr(0, 48);
+  const MAX_LENGTH = 48;
+  const NET_SIM_PREFIX = 'ns-';
+  const UNDERSCORE = '_';
+  // md5 returns a 32-character hex string.
+  const levelHash = md5(this.levelKey_);
+  // Calculate the max possible length for the md5 hash so that seed is intact.
+  const maxHashLength =
+    MAX_LENGTH -
+    NET_SIM_PREFIX.length -
+    UNDERSCORE.length -
+    seed.toString().length;
+  // If necessary, truncate hash.
+  const truncatedLevelHash = levelHash.substring(0, maxHashLength);
+  return NET_SIM_PREFIX + truncatedLevelHash + UNDERSCORE + seed;
 };
 
 /**

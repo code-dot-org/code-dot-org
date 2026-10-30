@@ -1,0 +1,198 @@
+# This workflow uses Turborepo's affected feature which limits CI runs to only packages the PR has affected.
+# The workflow triggers a limited set of Turborepo standardized CI-related scripts. Ensure the package has the appropriate CI script for Github Actions to run them during the CI process.
+name: Frontend-CI
+
+on:
+  pull_request:
+    branches:
+      - staging
+      - staging-next
+    paths:
+      - "frontend/**"
+      - "shared/fonts/**"
+      - ".github/**"
+  push:
+    branches:
+      - staging
+      - staging-next
+    paths:
+      - "frontend/**"
+      - "shared/fonts/**"
+      - ".github/**"
+  workflow_dispatch:
+
+# Limit Github Actions concurrency to a single ref; a new push cancels a pull request's running workflow.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+permissions:
+  contents: read
+
+env:
+  # actions/checkout only fetches 2 levels deep, so `HEAD^1` is the pull request's base for Turborepo's `--affected` feature to detect what changed in this PR.
+  TURBO_SCM_BASE: HEAD^1
+  # Limit to one Turborepo task per core
+  TURBO_CONCURRENCY: 100%
+  APPLITOOLS_BATCH_ID: ${{ github.event.pull_request.head.sha || github.sha }}
+
+jobs:
+  # Determines whether this workflow itself changed, and which packages have UI tests. Turborepo's affected feature
+  # limits a PR's CI to the packages it changed and their dependents, but Turborepo cannot see `.github`, so a PR that
+  # changes the workflow runs everything.
+  changes:
+    runs-on: ubuntu-24.04
+    outputs:
+      workflow: ${{ steps.filter.outputs.workflow }}
+      ui-packages: ${{ steps.ui.outputs.packages }}
+    steps:
+      - uses: dorny/paths-filter@de90cc6fb38fc0963ad72b210f1f284cd68cea36 # v3.0.2
+        id: filter
+        # Pull requests are diffed through the API; a push needs a checkout, and runs everything regardless.
+        if: github.event_name == 'pull_request'
+        with:
+          filters: |
+            workflow:
+              - '.github/**'
+
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            frontend
+            .github
+
+      - name: Setup Frontend
+        uses: ./.github/actions/frontend/setup
+
+      - name: List Packages With UI Tests
+        id: ui
+        # Asks Turborepo which packages define `test:ui:ci`; each gets its own Github Actions worker. Names are unscoped because artifact names cannot contain `/`.
+        run: |
+          packages=$(yarn turbo query '{ packages(filter: {has: {field: TASK_NAME, value: "test:ui:ci"}}) { items { name } } }' | jq -c '[.data.packages.items[].name | ltrimstr("@code-dot-org/")]')
+          echo "packages=$packages" >> "$GITHUB_OUTPUT"
+        working-directory: ./frontend
+
+  release-dryrun:
+    name: release:dryrun
+    needs: changes
+    runs-on: ubuntu-24.04
+    env:
+      # Limits the run to the packages this PR changed and their dependents, unless the workflow itself changed.
+      AFFECTED: ${{ github.event_name == 'pull_request' && needs.changes.outputs.workflow != 'true' && '--affected' || '' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            frontend
+            shared/fonts
+            .github
+          lfs: true
+          fetch-depth: 2
+
+      - name: Setup Frontend
+        uses: ./.github/actions/frontend/setup
+
+      - name: Build, Lint, Typecheck, Test
+        run: yarn turbo run release:dryrun $AFFECTED
+        working-directory: ./frontend
+
+  test-ui:
+    name: test:ui:ci ${{ matrix.package }}
+    needs: changes
+    strategy:
+      fail-fast: false
+      matrix:
+        package: ${{ fromJson(needs.changes.outputs.ui-packages) }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    container:
+      # Must stay in sync with the playwright catalog pin in frontend/.yarnrc.yml; noble is the runner's Ubuntu release.
+      image: mcr.microsoft.com/playwright:v1.59.1-noble
+    env:
+      # Runs this package's suite only if it or a dependency changed in this PR, unless the workflow itself changed.
+      SCOPE: ${{ github.event_name == 'pull_request' && needs.changes.outputs.workflow != 'true' && '...[HEAD^1]' || '' }}
+      # Playwright's Firefox-in-container fix. Job-wide so the install and the tests share one home, where Puppeteer caches its Chrome.
+      HOME: /root
+      PLAYWRIGHT_BROWSERS_PATH: /ms-playwright
+    steps:
+      - name: Install LFS
+        run: apt-get update && apt-get install -y git-lfs
+
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            frontend
+            shared/fonts
+            .github
+          lfs: true
+          fetch-depth: 2
+
+      - name: Trust the Checkout
+        # System level: later steps run with a different HOME, and the container's root does not own the checkout.
+        run: git config --system --add safe.directory "$GITHUB_WORKSPACE"
+
+      - name: Setup Frontend
+        uses: ./.github/actions/frontend/setup
+
+      - name: UI Tests
+        run: yarn turbo run test:ui:ci --filter="@code-dot-org/${{ matrix.package }}$SCOPE"
+        working-directory: ./frontend
+        env:
+          VISUAL_PROVIDER: applitools
+          APPLITOOLS_API_KEY: ${{ secrets.APPLITOOLS_API_KEY }}
+          # Pull requests only report Eyes diffs; the post-merge push fails on them.
+          APPLITOOLS_SHOULD_REPORT_FAILURE: ${{ github.event_name != 'pull_request' }}
+          APPLITOOLS_BRANCH: ${{ github.head_ref }}
+
+      - name: Upload Playwright Report
+        # Upload on flakes too (passing-on-retry leaves the job green).
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report-${{ matrix.package }}
+          path: |
+            frontend/**/playwright-report/
+            frontend/**/test-results/
+          retention-days: 7
+          if-no-files-found: ignore
+
+  # Deploys the package using its deployment script (e.g. Component Library storybook)
+  deploy:
+    name: deploy
+    if: ${{ github.event_name == 'push' || github.event_name == 'workflow_dispatch' }}
+    needs: [release-dryrun, test-ui]
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            frontend
+            shared/fonts
+            .github
+          lfs: true
+
+      - name: Setup Frontend
+        uses: ./.github/actions/frontend/setup
+
+      - name: Authenticate Git for Deploys
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --global url."https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/".insteadOf "https://github.com/"
+
+      - name: Deploy
+        run: yarn turbo run deploy
+        working-directory: ./frontend
+
+  # Common teardown actions that must occur after _all_ jobs have completed.
+  teardown:
+    needs: [release-dryrun, test-ui]
+    if: always()
+    runs-on: ubuntu-24.04
+    steps:
+      # Close the eyes batch after all distributed eyes tests have completed
+      - name: Update Applitools batch status
+        run: |
+          curl -X POST "https://eyesapi.applitools.com/api/externals/github/servers/github.com/commit/${{ env.APPLITOOLS_BATCH_ID }}/${{ github.run_id }}/complete?apiKey=${{ secrets.APPLITOOLS_API_KEY }}"

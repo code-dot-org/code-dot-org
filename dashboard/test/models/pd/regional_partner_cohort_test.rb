@@ -29,7 +29,7 @@ class Pd::RegionalPartnerCohortTest < ActiveSupport::TestCase
       '2016-2017'
     ]
 
-    cohort = build :pd_regional_partner_cohort, year: '123-456'
+    cohort = build(:pd_regional_partner_cohort, year: '123-456')
     invalid.each do |invalid_year|
       cohort.year = invalid_year
       refute cohort.valid?
@@ -43,7 +43,7 @@ class Pd::RegionalPartnerCohortTest < ActiveSupport::TestCase
   end
 
   test 'size validation' do
-    cohort = build :pd_regional_partner_cohort, size: nil
+    cohort = build(:pd_regional_partner_cohort, size: nil)
     assert cohort.valid?
 
     cohort.size = 0
@@ -63,7 +63,7 @@ class Pd::RegionalPartnerCohortTest < ActiveSupport::TestCase
   end
 
   test 'role validation' do
-    cohort = build :pd_regional_partner_cohort, role: nil
+    cohort = build(:pd_regional_partner_cohort, role: nil)
     assert cohort.valid?
     refute cohort.teacher?
     refute cohort.facilitator?
@@ -84,13 +84,13 @@ class Pd::RegionalPartnerCohortTest < ActiveSupport::TestCase
   end
 
   test 'partner association' do
-    regional_partner = create :regional_partner
-    cohort = create :pd_regional_partner_cohort, regional_partner: regional_partner
+    regional_partner = create(:regional_partner)
+    cohort = create(:pd_regional_partner_cohort, regional_partner: regional_partner)
     assert_equal regional_partner, cohort.reload.regional_partner
   end
 
   test 'members' do
-    cohort = create :pd_regional_partner_cohort
+    cohort = create(:pd_regional_partner_cohort)
     5.times do
       cohort.members << create(:teacher)
     end

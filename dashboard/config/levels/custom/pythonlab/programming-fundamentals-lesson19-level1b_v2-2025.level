@@ -1,0 +1,42 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-09-25T19:58:24.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "### Example 2: \"Space Escape Mission\"\r\n\r\n**Narrative:** The player is an astronaut trying to escape from a malfunctioning space station. They must solve problems related to oxygen levels, repair systems, and decide whom to trust among crewmates.\r\n\r\n**Key Features:**\r\n- Three decision points\r\n- Uses if-else conditions for branching paths\r\n- Interactive elements like countdowns or simple puzzles",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "def space_mission():\n    print(\"Welcome to the Space Escape Mission!\")\n    name = input(\"Astronaut, what's your name? \")\n    print(f\"{name}, your mission is to escape the malfunctioning space station.\")\n\n    decision1 = input(\"Do you fix the oxygen generator or head to the escape pod? (fix/pod) \").lower()\n    if decision1 == \"fix\":\n        print(\"You successfully fix the oxygen generator, buying more time.\")\n    elif decision1 == \"pod\":\n        print(\"The escape pod is damaged! You need to find another way.\")\n    else:\n        print(\"Hmm... that's not an option. Try again.\")\n\n    decision2 = input(\"Do you trust the AI system or override it manually? (trust/override) \").lower()\n    if decision2 == \"trust\":\n        print(\"The AI safely guides you to the escape route.\")\n    elif decision2 == \"override\":\n        print(\"You manually override the controls and narrowly avoid disaster.\")\n    else:\n        print(\"Hmm... that's not an option. Try again.\")\n\n    print(\"🎉 Congratulations! You've won the game! 🎉\")\n\nspace_mission()\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "display_name": "Sci-Fi Theme",
+    "thumbnail_url": "https://images.code.org/1ac3bfbc34f8317e163cf280289f3807-spaceship.jpg",
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:58:24.745+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson19-level1b_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson19-level1b_2025\"}]"
+}]]></config>
+</Pythonlab>

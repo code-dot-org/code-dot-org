@@ -1,0 +1,216 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-05-23T11:31:09.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "level_data": {
+      "validationTimeout": 2,
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "play_sounds_together",
+                  "movable": false,
+                  "extraState": {
+                    "disableNextConnection": true
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "repeat_simple2",
+                        "id": "repeat_simple2",
+                        "deletable": false,
+                        "movable": false,
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "fields": {
+                          "times": 1
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sounds_sequential",
+                            "id": "9$Q(,nxS)LEJk4:7`_2|",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "extraState": {
+                              "disableNextConnection": true
+                            },
+                            "inputs": {
+                              "code": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "0f$iEE@29+lV}F,9InaR",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "fields": {
+                                    "sound": "shakira_whenever_wherever/vocals_verse_1"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "r~(4uz*m`}c|GvDC3~kV",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "sound": "shakira_whenever_wherever/vocals_verse_2"
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "7W,^:+!0KVy^KB^r2MEV",
+                                          "deletable": false,
+                                          "movable": false,
+                                          "editable": false,
+                                          "extraState": {
+                                            "disableNextConnection": true
+                                          },
+                                          "fields": {
+                                            "sound": "shakira_whenever_wherever/vocals_verse_3"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "library": "launch2024",
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ]
+        },
+        "type": "flyout"
+      },
+      "packId": "shakira_whenever_wherever",
+      "sounds": {
+        "shakira_whenever_wherever": [
+          "percussion_beat",
+          "vocals_verse_1",
+          "vocals_verse_2",
+          "vocals_verse_3"
+        ]
+      }
+    },
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "long_instructions": "#### <i class=\"fa-solid fa-person-chalkboard\"></i> **Teacher Tip:**\r\n##### The timeline at the bottom shows that each [sound](#clickable=play-sound-block) is two measures long. The [repeat](#clickable=repeat-block-field-workspace) loop determines how many times the [sound](#clickable=play-sound-block) will play in a row. The timeline can be a helpful visual description of the code. \r\n\r\n##### **Teacher Note**: This is Lesson 1, Level 8 from the curriculum.\r\n___\r\n####<i class=\"fa-solid fa-repeat\"></i> Loop the beat\r\n1. Drag a drum [sound](#clickable=play-sound-block) into the [repeat loop](#clickable=id-up-left:repeat_simple2).\r\n2. Change the number of [times](#clickable=repeat-block-field-workspace) it repeats to keep the beat going for all of the chorus lyrics.\r\n\r\n[<i class=\"fa-solid fa-lightbulb-on\"></i> Hint](#clickable=repeat-block-field-workspace)\r\n\r\n---\r\n\r\n*Timeline example:*\r\n![](https://images.code.org/eedf6f94285f99fe4faac2a7c6af9a49-image-1744323825882.jpg)",
+    "validations": [
+      {
+        "key": "music-coding-intro-loop-beat_bf0ed4a4-3139-4a89-b2c9-860c44654230",
+        "message": "Great work! You used a loop to repeat the drum beat for the length of the song. ",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_anything_in_same_loop",
+            "value": 3
+          },
+          {
+            "name": "played_sound_id",
+            "value": "shakira_whenever_wherever/percussion_beat"
+          }
+        ]
+      },
+      {
+        "key": "music-coding-intro-loop-beat_ebe3dea6-16d1-429f-93e5-2bf8bc327af2",
+        "message": "The drum loop played twice. Change the number in the loop so the sounds repeat for the length of the song. ",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_anything_in_same_loop",
+            "value": 2
+          },
+          {
+            "name": "played_sound_id",
+            "value": "shakira_whenever_wherever/percussion_beat"
+          }
+        ],
+        "callout": "repeat-block-field-workspace"
+      },
+      {
+        "key": "music-coding-intro-loop-beat_d1ebcf9f-4b24-4961-88c8-0cd30201676a",
+        "message": "The drum loop played once. Change the number in the loop so the sounds repeat for the length of the song. ",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_anything_in_same_loop",
+            "value": 1
+          },
+          {
+            "name": "played_sound_id",
+            "value": "shakira_whenever_wherever/percussion_beat"
+          }
+        ],
+        "callout": "repeat-block-field-workspace"
+      },
+      {
+        "key": "music-coding-intro-loop-beat_7e9392ad-c3b4-4ebc-aade-bb450bf98f8a",
+        "message": "Add a drum beat to **repeat** for the length of the song. ",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sound_type",
+            "value": "vocal"
+          }
+        ],
+        "callout": "repeat-block-field-workspace"
+      }
+    ],
+    "name_suffix": "_2025",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false,
+      "validationSuccessMessage": "That's it!",
+      "validationFailureMessage": "Not quite!",
+      "validationMode": "default",
+      "playerTitle": "Example"
+    },
+    "encrypted_exemplar_sources": "UGYNk6iye9eaFwUY05FzzO/7y8j7ObxryFbKvBPuF528qP4MtsSFqDeG//aJ\nl0T6UI7wWB0H/J+Euq0wtMrnfZIv4KqNWq5gtmuW8ushzt6HJzSVh89nAJ/g\nqoY+ihv6+zHmlLE8msmvDlVnBRmpwSSug3q+SpkXFur9+w3vOPL1o8LhfdJB\n0ep9sKAPNFreeEGpfNaTHyeEek22ZDpwo5g1/91laRFZXLJ3ObFQkI2Mi/SF\neThQ1zPNuOEggHorpleEeoerSvfZ2JHZpm1GhsSDwCOxBL+fVO3bL+jSF8lL\nW/SyrxeYBOE22MW62zzXHuT+PQMDKVPj3prslrbHlF1O3H5+dCVG/HPE+vJn\nlbulhslzcVJrEAhnygkDOAJBSFFSrISMbQSZbj/J/rvTv0M2vefuIG4h8z64\nnjFE8r6c4lHdR6BxQyZW8n9WjBznmfQI1kETLb7QtGEPr5B4xy52p+18jk3K\nZuot+OzSDt2kl2gbt0kYBEBS+UWVU7ZnFwAAzOe1F2ygQeE5Kf0zq4RQMLhK\nXcUpOrP2zroIdDEmlocWjC7dyI+gE8cO5EE8i7FFDIE6XmiAbxBHHX7pRawH\n0x7MNOGfAKd+zbmC0wG7/Utms73iOMu6oygwHtYjvCpoCOrFMBZUwnnNWqN2\ntssIzDOTVEiIYzMjg/f5VfSJ+RdFNKeq1h6QxkHxvDTSM2V7Tfrdc4uHPLE7\nQGdtzWmoN+sg9KGkYJiyTsy9QopRHePVomDtmA7G0EOdJ156frXiKSVWwwrL\nHOT7NwGBBazNtkmIR/h8ZQ7/Zr4NGQp88JYYN1sK6+VwGbvN8+Iya8VFKr1h\npORcXvXe8zQ02lDeTVDaF5xbMitEoAJS4577N6EQDs5Mug54lTPOXOp2DPhU\nngUT36rTi6QLTgIu+JuQTFydmANby1e+phXNB+x+emilIznywFpXoyex/mKU\nDOGTBWfYxNXkWddknefrk0uszDh3aq+OTQ/CkJFqsP94ZaiW43D3ZOKsSM0j\niaPSB/GvE0GsVjkXC5mbAc3CDwnlYU7AyjuwQEZyYc80H0NINt7y+zmeUvim\nI/2FszrEwtxzdPxajU3cRKm+P/qwzQKpPPn46btOGRJIsBv5JyYD7HnQmwJv\nLUe9DjJ/p7RbY7WC4lafLuFLGcBgQuAumoCb8/huayrEQwpzYMGqz92d9Vaa\n/p/w1/1yTRNkCXDH+Hhj6PE4j3m5njGIhfnqf/V5+NVRJwv8iHJg/AjIN/8Z\nsMGOJTdqkJpw91ohAUAio7+89FM9vL0lEAPxOojmfjn8bbEzq0UTwmQrhss9\n76kpgaLAmqkRCgSI+E8G5KB6+xmE3IhCDvQ+XtqiBfR5yVyYoJmc9mDlsOUm\nji+KCqxeW8Dqm6lZBD4vbTFw/KGQvoP6dkQiVkvOrpGZZXK2guspCasAE7Tw\nCZ9aptIKe1pUqtEHpVsahpYSmKzLJFDu0X4eddosgN9CyViB2y2u6Li995pI\nkyvzFibO0/HJmDDYg96C1I/feEUDCX+CVLumRJE8onD5m0cNtBPlx4SN2A==\n",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-23T11:31:09.842+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-loop-beat_launch_1\\\"\"],\"cloned_from\":\"music-coding-intro-loop-beat_launch_1\"},{\"changed_at\":\"2025-05-27 20:25:29 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

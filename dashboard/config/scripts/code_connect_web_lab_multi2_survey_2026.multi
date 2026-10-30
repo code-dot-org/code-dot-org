@@ -1,0 +1,14 @@
+name 'code-connect-web-lab-multi2-survey-2026'
+title 'Check Your Understanding'
+
+question 'On scale of 1-7, how helpful was AI in building your web app?'
+
+right '7 - Extremely helpful'
+right '6 - Very helpful'
+right '5 - Somewhat helpful'
+right '4 - Neutral'
+right '3 - Somewhat unhelpful'
+right '2 - Very unhelpful'
+right '1 - Not helpful at all'
+
+allow_multiple_attempts true

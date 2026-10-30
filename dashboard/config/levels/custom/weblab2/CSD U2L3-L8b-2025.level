@@ -1,0 +1,52 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-01-04T07:40:40.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "*This level follows a video that you may have watched with your class. If you missed the video, you can watch it [here](https://youtu.be/auv10y-dN4s).*\r\n\r\n# Debug: Pink Tags\r\n\r\n\r\nSomeone has submitted a bug report on this web page.  Can you fix the bug?\r\n\r\n![Bug report](https://images.code.org/366cea4f850465f2fe6270ee17356016-image-1767512692434.png)\r\n \r\n# Do this\r\n1) Find and fix the problem that is causing the bug\r\n\r\n",
+    "submittable": "false",
+    "hide_share_and_remix": "true",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html> \n<html>\n  <head>\n  </head>\n  <body>\n    <!-- Title -->\n    <h1>Types of Chocolate</h1>\n    \n    <p>This page will explain differences between milk, dark, and Ruby chocolate.</>\n    <! Bulleted list on types of milk -->\n    <ul>\n      <li><h2>Milk</h2></li>\n    <p>Milk chocolate is solid chocolate made with either liquid milk, powdered milk, or condensed milk. </p>\n      <li><h2>Dark</h2></li>\n    <p>Unlike milk chocolate, dark chocolate contains no milk in it, instead using more cocoa, giving it a darker color and making it more bitter.</p>\n      </li><h2>Ruby</h2></>\n    <p>Ruby chocolate is made from a different cocoa bean altogether. It is made from the ruby cocoa bean, which has a red color and different flavor.</p.\n    </ul>    \n  </body>\n</html>",
+          "active": true,
+          "folderId": "0"
+        }
+      },
+      "openFiles": [
+        "1"
+      ]
+    },
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMrWt2HFvH/UaEd1Aw6m\nH7NPCh2Lr52063tDqEoStRSedn5LQYmzKopHnMdxEddzMa1ry9pfnBII8zb7\nMD3Gw+QxEX86iJuKhBFDqXvjC26WIR0dnDES221G1n9EocbLnjZStuPlRXfG\njiwD8779G6wTRZfmqhMLXsdJRQntKmPBXGEWsD/mYr1CwLSLtSPPgHd4bgc+\nCE/CX0dxtyny7CRbOwhgQ/m1yKB9GE+BuMMHWD4bQRmOAWv42IyqTNSkZYJ/\nQCWOWHicH2+SbLIzBu8GtdyhpoyPuHCzEg/rOG4tbb9nkgS1qyRKgFOA231n\n1b5hr5uEiAr4DZBed0qeCFab63TH4/XJW612PqSJ+oqiLyBmIxJXPGanyjax\nqvr8vP5kNMFeFLX6eGDW/lg6gcBdlq+1Tm6SGubEprBG71AK5t+pcBM9hEEv\nRiCcMpXT7qk0x0fQ/lUVf3vjHLB/XJ2Lga0a/uAWnAn7ZYX6N8+w5VGf+sew\nLonQo2xTsd5QumJv5dYGvkMyYowNwoL3NEZIoRHNa9PMhnW106JQ/m22/Q82\nTFn935aSp7bmaQZ9m9Rt4Mh6xECZ00QnoKgHrytV/towq9FDk3FW6yjZtEsW\nrFqY9n7rDr3HtHx/WmgOMWJ0EPOW/E5Tm7s5Mpo3cOUHzxItH2ce+ct2gy3x\nNtYR5nozmdFxlPou0S7t/257xefJ7V4GNuN/M7BwX5I90LO+Mh8f5hiK0CDw\ng55vlT2Hty/rgU6kqotgTQIgG3CQXsTRfOdMG/o2sFforCwirNe+aIswB6NT\nlWISnRV0V+++Gc6FCZaMgXIdpdD1SbxuR0XVRjL/37nNfeBsg+cBpbvxzag8\nYTlvzEezNHT2TM6qfifjkTIOjYvdMu6c904bahJSEX5yPNASwRvYBoYqG2vQ\nT/C4YoXyPbwm3JDAoOVE8hS/WqwqTDCqNwPcUjJub1mYKtA7CWkiocEHDvVb\nLjxX1gPYy11YwxXOl6Ir3Gg3N20MY2/NhruC0oiPf5Qw0UWL5ZNNIkOaTlfq\nzbXXG0r3yMG5X1XHYxkHDJYt+AZOabaDSW1jeqg8qQVbtIIukLF0oHhMMNw0\n3gfw2t9e37DhSt+q3GRhXGgwnYlSY124FEjQwWPFw+95/KHGVDOVTtTGINzB\nbIL5mJZyxeuI3X3mUbnln5J63j3FMbsQjr5bzJEJFCoVzzuXCnPVqDlP0w2s\nTZjn1NKOID099X+JxbxtVwhfuISS3I3BRp/Nhmgp0uUWA+n1ZgW0hnHoFRHp\nB9HVsmHbD0TDOso0GiSAknM9CHY25K5fPPB3uE3U+kp2VCEHFfYS5NC9TAl8\nkq5J6faXuUPHTIRNoU6mJwvRXdbVnWHWhNp0k/1JcbQRf9E8HLKIfHPlGnPG\nc0FIV9KUdvPRxx1IdaEz+Qabs/7fBMME9u2V7hBNfgXCS2yr7Wz0OYiyrnKG\ntYNesiaqpEjOZvVNVkTzhP6YWKfAtvZJkuQzCUYkdZZVDEmkySuiE1HnFLMO\nDHuKhLaTu1SCHc3oEs74+kU9YL+/xM7QMm7F9iH3v6C+AX/b6z8AQLIodGwC\n3fONQPH+BEPPzT+YUNzC4xtjexqoCj5yFe+cIJU8cQzM/AVKOS84FVPsU1MO\n4CR5On1F+bUZuMJrI3Oj7CKilv4oaKBN764YANJGw4WxaLqq8Fsj4EDOO7M0\nqtbCN/wImBBntr+GUy6mt6Z8OkkOz2d9enEcFjaciQCFcGD4TXR5TepUyx3e\nu9VvxnBpy8P88A==\n",
+    "display_name": " Debug the pink tags",
+    "bubble_choice_description": "Use your debugging skills to figure out why the tags are pink.",
+    "thumbnail_url": "https://images.code.org/526ab26f5cbe7feda566ff5841e6fdaf-8b.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-01-04 07:41:13 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-04 07:43:42 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-04 07:45:49 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-04 08:23:24 +0000\",\"changed\":[\"hide_share_and_remix\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-04 08:24:31 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-10 02:26:08 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

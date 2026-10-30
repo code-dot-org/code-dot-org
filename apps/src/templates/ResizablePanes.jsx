@@ -4,11 +4,11 @@
  *  and works with React 0.14.7.
  *  @see https://github.com/tomkp/react-split-pane
  */
-import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
+import React, {Component} from 'react';
+import ReactDOM from 'react-dom';
 
 /**
  * Wraps its children to display them in a flexbox layout.

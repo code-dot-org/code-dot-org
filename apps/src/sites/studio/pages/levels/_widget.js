@@ -4,17 +4,19 @@
 
 import $ from 'jquery';
 import React from 'react';
+
+import {setupApp} from '@cdo/apps/code-studio/initApp/loadApp';
+import initializeCodeMirror6 from '@cdo/apps/code-studio/initializeCodeMirror6';
+import {registerGetResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {
   showDialog,
   processResults,
 } from '@cdo/apps/code-studio/levels/dialogHelper';
-import {registerGetResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
-import {setupApp} from '@cdo/apps/code-studio/initApp/loadApp';
 import {
   LegacyStartOverDialog,
   LegacyInstructionsDialog,
-} from '@cdo/apps/lib/ui/LegacyDialogContents';
-import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/lib/util/analyticsUtils';
+} from '@cdo/apps/legacySharedComponents/LegacyDialogContents';
+import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/metrics/analyticsUtils';
 import i18n from '@cdo/locale';
 
 export function showInstructionsDialog() {
@@ -27,7 +29,6 @@ export function showInstructionsDialog() {
       markdown={appOptions.level.longInstructions}
     />
   );
-  $('details').details();
 }
 
 function setupWidgetLevel() {
@@ -40,7 +41,7 @@ function setupWidgetLevel() {
 }
 
 // Add globals
-window.CodeMirror = require('codemirror');
+window.initializeCodeMirror6 = initializeCodeMirror6;
 window.dashboard = window.dashboard || {};
 window.dashboard.widget = {
   setupWidgetLevel: setupWidgetLevel,

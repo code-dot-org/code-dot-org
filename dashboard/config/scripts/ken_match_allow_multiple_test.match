@@ -1,0 +1,10 @@
+name 'ken-match-allow-multiple-test'
+title 'title'
+description 'Match the people to where they live'
+question 'Erik'
+answer 'Texas'
+question 'Angelina'
+answer 'Nevada'
+question 'Ken'
+answer 'Washington'
+allow_multiple_attempts true

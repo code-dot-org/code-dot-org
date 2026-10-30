@@ -1,0 +1,11 @@
+name 'Data Sci U2 Post Q1_2024-pilot'
+
+question 'Which data collection method is most effective for understanding the daily habits of most smartphone users, even though it may have some disadvantages?'
+
+wrong 'Conducting laboratory experiments which allows for controlled observations but may not reflect real-world usage patterns.'
+right 'Analyzing web traffic data from a random website, but it lacks detailed information about individual user habits.'
+wrong 'Using surveys to collect self-reported, detailed data from a large sample of users, though this method may be subject to biases and inaccuracies due to self-reporting.'
+wrong 'Conducting focus group interviews with a small sample of people for in-depth insights, but the results may not be representative of the broader population.'
+
+
+allow_multiple_attempts false

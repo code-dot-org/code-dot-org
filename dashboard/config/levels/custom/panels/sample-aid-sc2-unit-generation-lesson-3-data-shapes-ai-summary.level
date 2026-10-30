@@ -1,0 +1,45 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-06-29T17:09:33.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "panels": [
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-3-data-shapes-ai-summary-1ec219dd-0ec4-45dc-a370-71677f4f25c7",
+        "text": "Generative AI can do amazing things, like create images, music, or write stories!",
+        "imageUrl": "https://images.code.org/5cb45d3444fe9b7cf29ab26c13c8e987-sample-aid-sc2-unit-generation-lesson-3-data-shapes-ai-summary-panel-1-334fa65a-8419-494d-b390-e876415c68a9.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-3-data-shapes-ai-summary-46f6dab7-4f2e-4bde-815f-654c507aa641",
+        "text": "But this 'magic' isn't really magic. It's all based on the *training data* it learns from.",
+        "imageUrl": "https://images.code.org/fc3bebf48377dd264f1bb15e9cf0e875-sample-aid-sc2-unit-generation-lesson-3-data-shapes-ai-summary-panel-2-ecabc02d-d984-4b17-a1dd-db8fd8ff553c.png",
+        "layout": "text-bottom-right"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-3-data-shapes-ai-summary-355e25c6-213c-4662-ad4e-326a084abd02",
+        "text": "If the training data is complete, accurate, and fair, the AI can make helpful and reliable predictions.",
+        "imageUrl": "https://images.code.org/4faf208d9579add709f910580a40a24e-sample-aid-sc2-unit-generation-lesson-3-data-shapes-ai-summary-panel-3-85f5b178-c4fd-4293-b2fc-184212f6cd20.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-3-data-shapes-ai-summary-e03d8670-d9f9-4288-b67a-29523a037235",
+        "text": "But if the data has gaps, biases, or errors, the AI will create outputs that are incomplete, unfair, or just plain wrong!",
+        "imageUrl": "https://images.code.org/6dd91b78990d073d9c389e9d456789df-sample-aid-sc2-unit-generation-lesson-3-data-shapes-ai-summary-panel-4-ea2a0651-2565-4456-9290-24472d47a911.png",
+        "layout": "text-bottom-left"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-3-data-shapes-ai-summary-c114268b-399e-40e9-bb28-8cec5ac40e74",
+        "text": "So, remember: the quality and characteristics of the training data are key to making AI that is accurate, fair, and truly beneficial for everyone.",
+        "imageUrl": "https://images.code.org/0bb1c31deb040ce8246a56aa7c9d6ed5-sample-aid-sc2-unit-generation-lesson-3-data-shapes-ai-summary-panel-5-e4f7467b-2027-4b40-9eb1-b0a96be995d8.png",
+        "layout": "text-top-center"
+      }
+    ],
+    "generate_outline": "Summarize the key lesson: generative AI is powerful, but its capabilities and limitations are fundamentally shaped by the quality and characteristics of its training data. Emphasize the importance of good data for fair and accurate AI."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-06-29 17:10:18 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-29 17:10:18 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

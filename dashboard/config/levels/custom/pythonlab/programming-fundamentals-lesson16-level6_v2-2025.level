@@ -1,0 +1,51 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-09-25T19:58:11.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "### Do This: \r\nThere is a bug in this code. \r\n- Identify the syntax errors.\r\n- Fix the code so it runs properly.",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "def greet_user():\n    name = input(\"What is your name? \")\n    print(\"Hello, \" + name + \"!\")\n\n# There is missing code here. Call the function greet_user() below. Otherwise, the program won't ask for your name. \n\n",
+          "folderId": "0",
+          "active": false,
+          "open": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzmDRuSeQWqeYox0zs50F4xSz4KlObhYb\nOuBfdQF74IKIfaYyQPV2ulKyQ8/t3IfHuweAnSoCOqjjf4tkWzveUtFjTaXA\n4W+vbwo2pRkdMISndh9emVpkcUdqrFCdbb2HNHuejMp8DJfwV5Bii32n91wr\nYStuEdI4aKq07PiVn4EKwEocuDbrQQHm9IZw5H9gH+2vrvdt4Hk/+tK7xOmb\n/yE7fQ2drMuDrjzHp04pfOn31XKkoTLZj0K+7ey29sZQsSybmns7pw6rN/QP\nMYamY9s=\n",
+    "validation_file": {
+      "id": "1",
+      "name": "test_main.py",
+      "language": "py",
+      "contents": "import unittest\nimport ast\n\nclass TestGreetUserCall(unittest.TestCase):\n\n    def test_function_called(self):\n        \"\"\"Call the function greet_user() at the end of your program.\"\"\"\n        try:\n            with open('main.py', 'r') as f:\n                content = f.read()\n\n            # Parse the file into an AST (Abstract Syntax Tree)\n            tree = ast.parse(content)\n\n            # Look for function call `greet_user()`\n            function_called = any(\n                isinstance(node, ast.Expr) and\n                isinstance(node.value, ast.Call) and\n                isinstance(node.value.func, ast.Name) and\n                node.value.func.id == \"greet_user\"\n                for node in ast.walk(tree)\n            )\n\n            if not function_called:\n                self.fail(\"The function `greet_user()` was not called in `main.py`. \"\n                          \"Please ensure you call it at the end of your script.\")\n\n        except FileNotFoundError:\n            self.fail(\"The file 'main.py' was not found. Please make sure it exists in the same directory.\")\n        except Exception as e:\n            self.fail(f\"Error running the test: {e}\")\n\nif __name__ == \"__main__\":\n    unittest.main()\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    },
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:58:11.018+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson16-level6_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson16-level6_2025\"}]"
+}]]></config>
+</Pythonlab>

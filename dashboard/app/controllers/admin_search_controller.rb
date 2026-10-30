@@ -1,5 +1,3 @@
-require 'digest/md5'
-
 # The controller for seaching for and surfacing of internal admin data.
 class AdminSearchController < ApplicationController
   before_action :authenticate_user!
@@ -15,8 +13,11 @@ class AdminSearchController < ApplicationController
     users = User.with_deleted
 
     # If requested, filter...
+    if params[:usernameFilter].present?
+      users = users.where(username: params[:usernameFilter])
+    end
     if params[:studentNameFilter].present?
-      users = users.where("name LIKE ?", "%#{params[:studentNameFilter]}%")
+      users = users.where(User.arel_table[:name].matches("%#{params[:studentNameFilter]}%"))
     end
     if params[:studentEmailFilter].present?
       hashed_email = User.hash_email params[:studentEmailFilter]
@@ -24,8 +25,8 @@ class AdminSearchController < ApplicationController
     end
     if params[:teacherNameFilter].present? || params[:teacherEmailFilter].present?
       teachers = User.
-        where("name LIKE ?", "%#{params[:teacherNameFilter]}%").
-        where("email LIKE ?", "%#{params[:teacherEmailFilter]}%").
+        where(User.arel_table[:name].matches("%#{params[:teacherNameFilter]}%")).
+        where(User.arel_table[:email].matches("%#{params[:teacherEmailFilter]}%")).
         all
       if teachers.count > 1
         flash[:alert] = 'Multiple teachers matched the name and email search criteria.'
@@ -52,13 +53,45 @@ class AdminSearchController < ApplicationController
   end
 
   def lookup_section
-    @section = Section.with_deleted.find_by_code params[:section_code]
-    if params[:section_code] && @section.nil?
-      flash[:alert] = 'Section code not found'
+    load_section if params[:section_code].present?
+  end
+
+  def set_section_picture_passwords
+    load_section
+    if @section.nil? || @section.deleted?
+      render :lookup_section, status: :unprocessable_entity
+      return
     end
-    if params[:section_code] && @section.try(:deleted?)
-      flash[:alert] = 'Section is deleted'
+
+    unless @section.login_type == Section::LOGIN_TYPE_PICTURE
+      flash.now[:alert] = 'Picture passwords can only be set for picture-password sections.'
+      render :lookup_section, status: :unprocessable_entity
+      return
     end
+
+    picture_id = params[:secret_picture_id].to_s
+    picture = SecretPicture.find_by(id: picture_id) if picture_id.match?(/\A\d+\z/)
+    unless picture
+      flash.now[:alert] = 'Choose a valid picture.'
+      render :lookup_section, status: :unprocessable_entity
+      return
+    end
+
+    student_ids = @section.students.where(user_type: User::TYPE_STUDENT).reorder(nil).distinct.pluck(:id)
+    count = User.where(id: student_ids).update_all(secret_picture_id: picture.id, updated_at: Time.current)
+    log_payload = {
+      event: 'set_section_picture_passwords',
+      namespace: 'admin',
+      request_id: request.request_id,
+      authenticated_user_id: current_user.id,
+      section_id: @section.id,
+      affected_user_ids: student_ids,
+      updated_user_count: count
+    }
+    CDO.log.warn(log_payload.to_json)
+
+    redirect_to lookup_section_admin_search_index_path(section_code: @section.code),
+      notice: "Picture passwords set to #{picture.name} for #{count} students in #{@section.name}."
   end
 
   def undelete_section
@@ -69,70 +102,19 @@ class AdminSearchController < ApplicationController
     else
       flash[:alert] = "Section (CODE: #{params[:section_code]}) not found or undeleted."
     end
-    redirect_to :lookup_section
+    redirect_to :lookup_section_admin_search_index
   end
 
-  def pilots
-    @pilots = Pilot.all
-  end
-
-  def create_pilot
-    pilot_params = params[:pilot]
-    return head :bad_request unless pilot_params
-
-    begin
-      Pilot.create!(
-        name: pilot_params[:name],
-        display_name: pilot_params[:display_name],
-        allow_joining_via_url: pilot_params[:allow_joining_via_url]
-      )
-    rescue StandardError => exception
-      return render status: :bad_request, json: {error: exception.message}
+  private def load_section
+    @section = if params[:section_code].present?
+                 Section.with_deleted.find_by_code params[:section_code]
+               end
+    if @section.nil?
+      flash.now[:alert] = 'Section code not found'
+    elsif @section.deleted?
+      flash.now[:alert] = 'Section is deleted'
+    elsif @section.login_type == Section::LOGIN_TYPE_PICTURE
+      @secret_pictures = SecretPicture.order(:name)
     end
-
-    redirect_to :pilots
-  end
-
-  def show_pilot
-    @pilot_name = params[:pilot_name]
-    return head :bad_request unless Pilot.exists?(name: @pilot_name)
-    user_ids = SingleUserExperiment.where(name: @pilot_name).map(&:min_user_id)
-    @emails = User.where(id: user_ids).pluck(:email)
-    @join_url = Pilot.find_by(name: @pilot_name).allow_joining_via_url ? "http://studio.code.org/experiments/set_single_user_experiment/#{@pilot_name}" : nil
-  end
-
-  # Parses newline separated emails, ignores commas and whitespace
-  def add_to_pilot
-    emails = params[:email]
-    pilot_name = params[:pilot_name]
-    return head :bad_request unless Pilot.exists?(name: pilot_name)
-    email_array = emails.split("\n")
-    email_array.each do |email|
-      email = email.strip.gsub(/[\s,]/, "")
-      user = User.find_by_email_or_hashed_email(email)
-      if !user
-        flash[:alert] = "An account with the email address #{email} does not exist"
-      elsif user.student?
-        flash[:alert] = "Cannot add a student to the pilot"
-      else
-        SingleUserExperiment.find_or_create_by!(min_user_id: user.id, name: pilot_name)
-        flash[:notice] = "Successfully added #{email} to #{pilot_name}!"
-      end
-    end
-    redirect_to action: 'show_pilot', pilot_name: pilot_name
-  end
-
-  def remove_from_pilot
-    email = params[:email]
-    pilot_name = params[:pilot_name]
-    return head :bad_request unless Pilot.exists?(name: pilot_name)
-
-    user = User.find_by_email_or_hashed_email(email)
-    e = Experiment.where(name: pilot_name, min_user_id: user.id).first
-    Experiment.delete(e.id)
-
-    flash[:notice] = "Successfully removed #{email} from #{pilot_name}"
-
-    redirect_to action: 'show_pilot', pilot_name: pilot_name
   end
 end

@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2024-05-31T21:51:59.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "csf_lots_of_sprites",
+    "instructions_important": "false",
+    "display_name": "How to Make a Sprite",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 27335,
+    "name_suffix": "_independent",
+    "encrypted": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-05-31T21:51:59.307+00:00\",\"changed\":[\"cloned from \\\"game_design_video_lots_course-e\\\"\"],\"cloned_from\":\"game_design_video_lots_course-e\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

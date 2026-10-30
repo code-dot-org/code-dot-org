@@ -1,0 +1,15 @@
+{
+  "key": "problem_solving_with_ai_2026_practice_problem_lesson_2_6",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "Some newer AI models can guess the location where a photo was taken just from context clues in the image. What privacy concern does this raise?",
+  "solution": [
+    {"option": "None, since AI is always correct in its guesses.", "correct": false},
+    {"option": "It could reveal someone's location without their consent.", "correct": true},
+    {"option": "It means AI cannot process photos at all.", "correct": false},
+    {"option": "It only applies to professional photographers.", "correct": false}
+  ],
+  "objective_keys": [
+    "882555b1-9534-4550-882c-5ac97ae02012"
+  ]
+}

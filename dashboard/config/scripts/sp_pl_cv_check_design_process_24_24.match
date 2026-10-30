@@ -1,0 +1,27 @@
+name 'sp_PL_CV_check_design_process_24_24'
+title 'The Design Thinking Process'
+
+markdown <<MARKDOWN
+
+ #### **Instructions:** Match each design thinking process step to the appropriate classroom activity.
+
+MARKDOWN
+
+height '100'
+
+
+question 'You ask students to conduct interviews with their peers to understand the challenges they face with remote learning.'
+answer 'Empathize'
+question 'After analyzing interview data, students write a clear problem statement about the difficulties of maintaining concentration during online classes.'
+answer 'Define'
+question 'Students brainstorm various solutions to help improve focus during remote learning sessions, listing as many ideas as possible.'
+answer 'Ideate'
+question 'Students create a simple app that blocks distracting websites during study hours and test it among a small group of peers.'
+answer 'Prototype'
+question 'Students collect feedback from their peers on the effectiveness of their app, noting suggestions for improvement and adjusting the app accordingly.'
+answer 'Test'
+
+
+
+
+allow_multiple_attempts true

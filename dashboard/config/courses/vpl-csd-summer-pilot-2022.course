@@ -7,6 +7,13 @@
     "vpl-csd4-summer-pilot-2022",
     "vpl-csd5-summer-pilot-2022"
   ],
+  "original_script_names": [
+    "vpl-csd1-summer-pilot-2022",
+    "vpl-csd2-summer-pilot-2022",
+    "vpl-csd3-summer-pilot-2022",
+    "vpl-csd4-summer-pilot-2022",
+    "vpl-csd5-summer-pilot-2022"
+  ],
   "published_state": "pilot",
   "instruction_type": "teacher_led",
   "participant_audience": "teacher",

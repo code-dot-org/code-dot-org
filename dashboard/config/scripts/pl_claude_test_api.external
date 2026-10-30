@@ -1,0 +1,106 @@
+name 'pl-claude-test-api'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+## Where Data Comes From
+
+<div style="display:flex; align-items:flex-start; gap:24px; margin-bottom:20px;">
+  <div style="flex:1;">
+    <p style="font-size:14px; line-height:1.6; margin:0 0 12px 0;">
+      Your students are about to open an app and ask: where does this data come from? Not from the app itself — from somewhere else, somewhere live. This lesson introduces <strong>APIs</strong> and <strong>JSON</strong>: the two concepts that explain how apps reach beyond their own code to get real-time information.
+    </p>
+    <p style="font-size:14px; line-height:1.6; margin:0;">
+      Before your students interact with live code, they need a mental model for the request-and-response cycle. This level builds that model.
+    </p>
+  </div>
+</div>
+
+---
+
+## What an API actually is
+
+An <strong>API (Application Programming Interface)</strong> is a set of rules that lets one piece of software talk to another. When your students open a weather app, the app doesn't store today's forecast — it sends a request to a weather server and gets fresh data back.
+
+Think of it like a waiter: your app (the client) places an order, the server processes it, and the response comes back with exactly what was requested.
+
+<div style="background:#D5EFFF; border-radius:10px; padding:14px 18px; margin:18px 0; color:#06338D;">
+  <p style="margin:0; font-size:14px; line-height:1.6;">
+    <strong>Key idea:</strong> An API is not a URL. The URL is one address you use to reach the API — but the API is the whole system of rules that governs how requests are made and how responses are structured. Your students will likely conflate these. The distinction matters when they start modifying their fetch calls.
+  </p>
+</div>
+
+---
+
+## What JSON looks like
+
+When a server responds to an API request, it typically sends data back as <strong>JSON (JavaScript Object Notation)</strong> — a structured, readable format built from key:value pairs.
+
+Here's what a weather API response might look like:
+
+<div style="background:#1F1976; border-radius:10px; padding:16px 18px; font-family:'Consolas','Courier New',monospace; font-size:13px; line-height:1.8; color:#E4E2F8; margin:16px 0; overflow-x:auto; white-space:pre;">
+<span style="color:#ACA8EA; font-style:italic;">// Response from the weather API</span>
+{
+  <span style="background:#4C42CF; color:#fff; border-radius:3px; padding:1px 4px; font-weight:700;">"city"</span>: <span style="color:#7CDB87;">"Seattle"</span>,
+  <span style="background:#4C42CF; color:#fff; border-radius:3px; padding:1px 4px; font-weight:700;">"temperature"</span>: <span style="color:#FFA868;">75</span>,
+  <span style="background:#4C42CF; color:#fff; border-radius:3px; padding:1px 4px; font-weight:700;">"description"</span>: <span style="color:#7CDB87;">"Sunny"</span>,
+  <span style="background:#4C42CF; color:#fff; border-radius:3px; padding:1px 4px; font-weight:700;">"coordinates"</span>: [<span style="color:#FFA868;">47.60</span>, <span style="color:#FFA868;">-122.33</span>]
+}</div>
+
+Each <strong>key</strong> (like <code style="background:#E4E2F8; color:#1F1976; border-radius:3px; padding:1px 5px; font-family:'Consolas','Courier New',monospace;">"temperature"</code>) is a label. Each <strong>value</strong> (like <code style="background:#E4E2F8; color:#1F1976; border-radius:3px; padding:1px 5px; font-family:'Consolas','Courier New',monospace;">75</code>) is the data attached to it. When your students do the scavenger hunt in Level 5, they're navigating exactly this structure — finding a specific key and reading its value.
+
+<div style="background:#D5EFFF; border-radius:10px; padding:14px 18px; margin:18px 0; color:#06338D;">
+  <p style="margin:0; font-size:14px; line-height:1.6;">
+    <strong>Student misconception to watch for:</strong> Students often treat a JSON response as a blob of unreadable text. They haven't learned to see it as navigable data with a structure they can search. During the scavenger hunt, help them read top-to-bottom and match the key name to what they're looking for — same way they'd look up a word in a dictionary.
+  </p>
+</div>
+
+---
+
+## The request-and-response cycle
+
+Every API interaction follows the same pattern:
+
+<div style="display:flex; gap:12px; margin:18px 0; flex-wrap:wrap;">
+  <div style="flex:1; min-width:160px; background:#fff; border:1px solid #E4E2F8; border-radius:10px; padding:14px 16px;">
+    <div style="font-size:11px; font-weight:700; color:#4C42CF; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:6px;">1. Request</div>
+    <p style="font-size:13px; line-height:1.5; color:#1a1a1a; margin:0;">The client app calls <code style="background:#E4E2F8; color:#1F1976; border-radius:3px; padding:1px 4px; font-family:'Consolas','Courier New',monospace;">fetch()</code> with a URL and any parameters — like which city, which Pokémon, which movie.</p>
+  </div>
+  <div style="flex:1; min-width:160px; background:#fff; border:1px solid #E4E2F8; border-radius:10px; padding:14px 16px;">
+    <div style="font-size:11px; font-weight:700; color:#4C42CF; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:6px;">2. Processing</div>
+    <p style="font-size:13px; line-height:1.5; color:#1a1a1a; margin:0;">The server receives the request, looks up the data, and prepares a structured response.</p>
+  </div>
+  <div style="flex:1; min-width:160px; background:#fff; border:1px solid #E4E2F8; border-radius:10px; padding:14px 16px;">
+    <div style="font-size:11px; font-weight:700; color:#4C42CF; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:6px;">3. Response</div>
+    <p style="font-size:13px; line-height:1.5; color:#1a1a1a; margin:0;">The server sends back JSON. The app reads it and updates what's on screen — the temperature, the Pokémon's name, the movie rating.</p>
+  </div>
+</div>
+
+This is the cycle your students will trace in the Network tab during the scavenger hunt, and the same cycle the <code style="background:#E4E2F8; color:#1F1976; border-radius:3px; padding:1px 5px; font-family:'Consolas','Courier New',monospace;">fetch()</code> chain in their code executes automatically every time.
+
+---
+
+## What teachers often wonder
+
+<details style="margin-top:12px; border-radius:8px; overflow:hidden;">
+  <summary style="background-color:#E4E2F8; padding:10px 14px; cursor:pointer; font-weight:700; color:#1F1976; font-size:14px;">
+    Why are there two .then() calls in the fetch chain?
+  </summary>
+  <div style="background:#fff; padding:14px 16px; border:1px solid #ACA8EA; font-size:13.5px; color:#1a1a1a; line-height:1.6;">
+    The first <code style="background:#E4E2F8; color:#1F1976; border-radius:3px; padding:1px 4px; font-family:'Consolas','Courier New',monospace;">.then(response => response.json())</code> converts the raw server response into JavaScript-readable JSON. The second <code style="background:#E4E2F8; color:#1F1976; border-radius:3px; padding:1px 4px; font-family:'Consolas','Courier New',monospace;">.then(data => updateUI(data))</code> takes that parsed data and uses it to update what's on screen. Two steps because receiving the response and reading it as JSON are separate operations. Students don't need to fully understand promises yet — but you should be able to say: "the first step receives the package, the second step opens it."
+  </div>
+</details>
+
+<details style="margin-top:8px; border-radius:8px; overflow:hidden;">
+  <summary style="background-color:#E4E2F8; padding:10px 14px; cursor:pointer; font-weight:700; color:#1F1976; font-size:14px;">
+    What happens when an API stops working or returns unexpected data?
+  </summary>
+  <div style="background:#fff; padding:14px 16px; border:1px solid #ACA8EA; font-size:13.5px; color:#1a1a1a; line-height:1.6;">
+    The app breaks — or more precisely, it shows nothing, or shows stale data, or crashes depending on how it's written. This is one of the tradeoffs of using external APIs: your app is now part of a larger system you don't control. When students ask "why isn't my data showing up?", the first thing to check is whether the API call succeeded. The Network tab (Level 5) shows exactly this — a failed request looks different from a successful one.
+  </div>
+</details>
+
+---
+
+*In the next level, you'll step through the fetch() call interactively — running each part of the chain and seeing exactly what it returns at each step.*
+MARKDOWN

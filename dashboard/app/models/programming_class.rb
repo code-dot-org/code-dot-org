@@ -49,9 +49,9 @@ class ProgrammingClass < ApplicationRecord
     )
   end
 
-  def self.seed_all
+  def self.seed_all(root_dir: Rails.root)
     removed_records = all.pluck(:id)
-    Dir.glob(Rails.root.join("config/programming_classes/**/*.json")).each do |path|
+    Dir.glob(root_dir.join("config/programming_classes/**/*.json")).each do |path|
       removed_records -= [ProgrammingClass.seed_record(path)]
     end
     where(id: removed_records).destroy_all
@@ -169,7 +169,7 @@ class ProgrammingClass < ApplicationRecord
     cache_key = "programming_class/#{programming_environment_name}/#{key}"
     Rails.cache.fetch(cache_key, force: !Unit.should_cache?) do
       env = ProgrammingEnvironment.find_by_name(programming_environment_name)
-      ProgrammingClass.includes([:programming_environment, :programming_environment_category, :programming_methods]).find_by(programming_environment_id: env.id, key: key)
+      ProgrammingClass.includes(:programming_environment, :programming_environment_category, :programming_methods).find_by(programming_environment_id: env.id, key: key)
     end
   end
 

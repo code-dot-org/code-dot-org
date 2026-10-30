@@ -1,0 +1,52 @@
+name 'pl-aif-2-U5-try-catch-define'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Risky Code Needs a Safety Net
+
+<img src="https://images.code.org/37a50ba2cb068ed043fc2bf2ff431b32-image-1772646286899.png" alt="icon of a trapizeartist" width="300px" style="border-radius:10px; float:right; margin: 0 40px 10px 20px;">
+
+Fetching data from an API is like a **trapeze act**.
+
+Most of the time, the artist catches the bar (that’s our data) and the show goes on. But sometimes, things go wrong.
+
+Without a safety net, the show ends immediately in a crash.
+
+Now, let's see how to build that **safety net** using `try` and `catch`.
+
+
+## The Trapeze Metaphor
+
+- Most of the time, the artist catches the bar and the show goes on.  
+- Sometimes the bar is slippery (**bad or unexpected data**).  
+- Sometimes the rope snaps (**no WiFi or network failure**).  
+- Without a net, one mistake ends the show (**the app crashes**).  
+
+`try` and `catch` act like the **safety net** that prevents one mistake from ending the entire performance.
+
+
+
+<div style="background-color: #e4e2f8; border-radius: 10px; color: #000000; width: 95%; padding: 1px 20px 1px 20px; margin-top: 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 12pt;">
+<b> 💡Teacher Tip: </b>Use this metaphor to emphasize that errors aren’t always the programmer’s fault. Sometimes the “rope” (network) just breaks. This helps students move away from seeing errors as personal failure and toward seeing them as normal, expected events that responsible programmers plan for.
+</p>
+
+</div>
+
+
+## Vocabulary
+
+Click the cards to reveal the definitions. 
+
+<iframe 
+  src="https://amandadennard-dotcom.github.io/Unit5AIF2/try-catch-fallback-flipcards.html" 
+  width="100%" 
+  height="320" 
+  style="border: none;" 
+  title="Vocabulary flip cards: try, catch, fallback">
+</iframe>
+
+
+MARKDOWN

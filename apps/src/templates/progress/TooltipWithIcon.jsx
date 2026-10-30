@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ReactTooltip from 'react-tooltip';
-import FontAwesome from '../FontAwesome';
+
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
+
 import {DOT_SIZE} from './progressStyles';
 
 /**
@@ -22,10 +24,7 @@ export default class TooltipWithIcon extends Component {
       <ReactTooltip id={tooltipId} role="tooltip" wrapper="span" effect="solid">
         <div style={styles.tooltip}>
           {includeAssessmentIcon && (
-            <FontAwesome
-              icon="check-circle"
-              style={styles.tooltipAssessmentIcon}
-            />
+            <FontAwesome icon="star" style={styles.tooltipAssessmentIcon} />
           )}
           <FontAwesome icon={icon} style={styles.tooltipIcon} />
           {text}

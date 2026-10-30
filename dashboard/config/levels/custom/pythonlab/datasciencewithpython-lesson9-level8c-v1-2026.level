@@ -1,0 +1,68 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-08-22T03:48:46.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Airline Satisfaction\r\n\r\nContinue investigating passenger satisfaction with a second visualization.\r\n\r\n**Data Question:** How do passenger satisfaction counts compare across airline classes?\r\n\r\n1. Run the starter code and review the stacked bar chart.\r\n2. Group the data by `Satisfaction` and use `sum()` to total the values in `Count`.\r\n3. Create a pie chart with satisfaction labels, percentages, and a meaningful title.\r\n4. Use one comparison from each chart to answer the data question. Explain what the pie chart adds to the stacked bar chart.\r\n\r\n:::: details [Need Help?]\r\n\r\nAsk AI Tutor to explain your code, output, or errors. Use its guidance to complete the chart yourself.\r\n\r\n::::",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "import pandas as pd\nimport matplotlib.pyplot as plt\n\n# Read the dataset\ndata = pd.read_csv('Airline_Ratings.csv')\n\n# Group passenger counts by class and satisfaction\nstacked_data = data.groupby(\n    ['Class', 'Satisfaction']\n)['Count'].sum().unstack()\n\n# Create the stacked bar chart\nstacked_data.plot(kind='bar', stacked=True)\n\nplt.legend(title='Satisfaction')\nplt.xticks(rotation=0)\nplt.xlabel('Passenger Class')\nplt.ylabel('Number of Passengers')\nplt.title('Passenger Satisfaction by Class')\n\nplt.show()\n\n# Total passenger counts by satisfaction\n\n\n# Create the pie chart",
+          "folderId": "0",
+          "active": false,
+          "open": true,
+          "type": "locked_starter"
+        },
+        "1": {
+          "id": "1",
+          "name": "Airline_Ratings.csv",
+          "language": "csv",
+          "contents": "Class,Satisfaction,Count\nBusiness,Neutral or Dissatisfied,18994\nBusiness,Satisfied,43166\nEconomy,Neutral or Dissatisfied,47366\nEconomy,Satisfied,10943\nEconomy Plus,Neutral or Dissatisfied,7092\nEconomy Plus,Satisfied,2319\n",
+          "folderId": "0",
+          "active": false,
+          "open": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    },
+    "teacher_markdown": "**What Students Should Take Away:**\r\n- Visualizing Class Distribution: Students should understand how to use groupby() and size() to create a pie chart that visualizes the distribution of passengers across different airline classes.\r\n- Interpreting Pie Charts: Students should be able to interpret the pie chart to understand how passenger distribution by class complements the satisfaction data in the stacked bar chart from the previous airline ratings practice level.\r\n\r\n**Misconceptions Students Might Have or Points They Might Struggle With and Tips to Assist:**\r\n- Students might think that more passengers in a class indicate higher satisfaction without considering the satisfaction levels shown in the stacked bar chart.\r\n  - Tip: Encourage students to compare the pie chart with the stacked bar chart. Discuss how class distribution might influence satisfaction levels.\r\n- Students may have difficulty connecting the insights from the pie chart to those from the stacked bar chart.\r\n  - Tip: Guide students through the process of analyzing both charts together. Discuss how class distribution might influence satisfaction levels and overall passenger experience.\r\n\r\n\r\n",
+    "display_name": "Airline Quality Ratings",
+    "bubble_choice_description": "Practice creating a **pie chart** to continue to answer a question about airline quality!",
+    "thumbnail_url": "https://images.code.org/3a1eb30553b7e33e5e4bf26c8b929dd6-dashboard.png",
+    "name_suffix": "_2026",
+    "offer_browser_tts": "false",
+    "disable_edit_run_for_submission": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "documentation",
+        "explainCode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFYwcyymO6uHelW0dYgXxDW4yzUYEXBKik0pdY9UK\nTiy8zV7G/sIMKH+8TawQnQ1VYwquNu6WFnqbX/ypGyd1zlW7sPDuwPTJCmCo\nsCECNOIc0Pg0GVyBWRcPcsmQ+swpo4KwEA07PHZcocZMfH9KCJK0tQJ03z6u\nBbkXgr0LcCHWqLxzUlyRLO8CDjFU/XBu9zjmrxZg38jam5LIKAGEhN2smQ7m\nKrOgzbBjt3HC8+pVIiTVQwFitQBkwdNglU9qRya02j4RgqpabsRp4AoYE4Bl\nYlffWfutQ50wjsyjBycl0TPTfF0cjrPFGaSgLupUvxRl0u/3dwEJ2wbxCBQV\nNpK0/wKR92/Q/szPNkygsOCoqrQHghAws/ZO7/R7/UJr+Les8p01Yzz6LcDB\n3PpnFqbm2ks4EYqJ2oLBYWlbFAM6CKyyI84cCq/iPDcS7jan4KveNIwqnyQR\nE+aRRKHtu6aEUc+NL5PNdyQncCzdoFcKx19xCpC3pckikiaqj9wlcMeZ/I47\nN54bPBFWVj0ybHS6+wT5uzDIt9h5/tvcQbLXI2YEFAN/7UuVbjZeP5TU4Swz\nJSbDZbPmEZMp1qGntKBuQEKQ4DAnhkpN6/brNdnbme4CbyNecloakbyVBzF3\nwAW40zORRScMu/p/nwcnr5RFuO+UReX/t+itiEn3Rh2cHZo1Ab3ThNj7V3Rb\nlcgRjzxL0LLLleeL6eoCsSjYNQRHcSck+JBphepnSCdC6d1brN6ZkDeESsye\nv2JIv86lWQfFp6ZXC43m++KtNis1BdUUkDrC0hpj5mWRsO05NvnF98x+AISR\nOPXnRFUbn4kbjFkqp4hr1+CXEY+XTfN87s7QYY8gPHMdfNOTa8a/BtPZEcl2\nQ/BfrKNy5bGnNPXuQRvdmm8r0bwFKd2jUpalpVM1l69qmY12EAsbDyqZLMfN\nruRZA2sEMmbdYs8Q5KJdeHpvs5wcnrgSTc392QAUcAnCEc91XdEu0E75QaBe\nOzEmb/9e3UJmhUXcmEIOrlOOs2hV5JmnqS602/MkfCBXBRLjykKzOt4U8E9G\n9BOwkWZnIOZC+kfgcWpybrB30DYJJ9j+N+QxltXXpgKOMBCVFvp2H5wqWzGW\nkOMyqxNEh2JInqCn0t0aZUyeFpklD2h2YIzDStkvSwQveY7IQtbhoAFXdL8z\nTGOiaBIkqge4jrb5UruRUrVyq5tJm91a2mzzf7cL0EhF/LsagPhgsMy7vVK6\nNmWWhPD6gjZmANuiwhBTQ24+itzRItcjrpuvetVNe8L3N+ZkbE6qxTSXusxS\nOOJ2l0XNUFgvjtsO/KcxzYXdzOyM95gar+Ld0+XD/44jsei0lOi2AmMKegTw\nyPwoQz9kYIZa1HOo2BPXSwuF+ZWLAIuV5ckAjf+uBWwbJvlfUArdhoYk5wI4\n/W8iVgHX1MyT0SMPjie8xoaT7gSk44jU7uvrCj69e21SPqRE+Qsm4FRT8ZWV\nvtSNJIGZJqj+l6q1Vnto4sMjMxqvk11hkzXvsILB2q9Q2Lp1LjIjD8Ki+hbC\naJjaEevQCsHut1Hqy2HB0CxtNXN5MAkfsBcrro1hUiWQN92Il7eG4RHzIbBK\na3ptTLFUxBAeT0dFzzd8yOchAoXXLw0Ai/4GZrnf1UqaD8YjnlQIqOcy6VX1\n/iLH0sCYjO9dp4ogYk6BVW+zEs7akoe8yuFGflNhPTAs+EDMb96zOMf3uXW4\n8zkoyTihkrJwsWbaMY0uSsyP7pO9LvoTtE+yckqU4fLbyVG+B/4i1GFvtktm\nQjayqkiqd4X9g/PqWYt+5UEbcB1RsJ62XZxXVEFDZpmvA1CgMvHHyqo9YA09\nlB069g6iksJjTylpdw==\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-08-22T03:48:46.448+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L8-L10c_2024-pilot_pilot_2026\\\"\"],\"cloned_from\":\"datascience-U2L8-L10c_2024-pilot_pilot_2026\"},{\"changed_at\":\"2026-08-22 03:49:05 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-08-22 03:49:18 +0000\",\"changed\":[\"start_sources\",\"validation_file\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-08-22 03:49:26 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Pythonlab>

@@ -1,13 +1,16 @@
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
-import PopUpMenu from '../../lib/ui/PopUpMenu';
-import {assignmentCourseVersionShape} from './shapes';
-import i18n from '@cdo/locale';
-import FontAwesome from './../FontAwesome';
-import color from '../../util/color';
 import ReactTooltip from 'react-tooltip';
-import _ from 'lodash';
+
 import fontConstants from '@cdo/apps/fontConstants';
+import i18n from '@cdo/locale';
+
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
+import PopUpMenu from '../../sharedComponents/PopUpMenu';
+import color from '../../util/color';
+
+import {assignmentCourseVersionShape} from './shapes';
 
 export default function AssignmentVersionMenuItem(props) {
   // Returns whether we should display this version as english-only.
@@ -39,7 +42,7 @@ export default function AssignmentVersionMenuItem(props) {
           {!courseVersion.is_stable && (
             <span>
               <FontAwesome
-                icon="exclamation-triangle"
+                icon="triangle-exclamation"
                 style={{color: color.light_orange}}
               />
               &nbsp;
@@ -56,7 +59,7 @@ export default function AssignmentVersionMenuItem(props) {
                   numLanguages: courseVersion.locales.length,
                 })}
                 &nbsp;
-                <FontAwesome icon="info-circle" style={style.infoCircle} />
+                <FontAwesome icon="circle-info" style={style.infoCircle} />
               </span>
               <ReactTooltip id={tooltipId} place="right">
                 {courseVersion.locales.join(', ')}

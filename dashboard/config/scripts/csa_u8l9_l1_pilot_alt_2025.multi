@@ -1,0 +1,13 @@
+name 'CSA U8L9-L1_pilot_alt-2025'
+title 'Check for Understanding'
+
+wrong 'Complete Mediation - Every access to every object must be checked for authorization'
+right 'Least Privilege - Every program and every user of the system should operate using the least set of privileges necessary to complete the job'
+wrong 'Economy of Mechanism - Keep the design of the system as simple as possible'
+wrong 'Design for Updates - Developers should plan for the safe and reliable installation of security updates'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+In 2017, Equifax was breached by hackers who retrieved hundreds of millions of customer records. This was able to occur because a vulnerability had been identified, but was not patched quickly.  Additionally, once the attackers hacked the initial firewall, there was no additional protection, allowing them to freely navigate inside the system. Finally, database content was given to all 'trusted' users rather than only those who needed the information. Which of the following secure design principles was not compromised prior to the attack?
+MARKDOWN

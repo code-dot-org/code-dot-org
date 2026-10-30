@@ -1,0 +1,53 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2026-09-15T20:41:13.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-2.5-flash",
+        "temperature": 0.5,
+        "systemPrompt": "You are a creative brainstorming assistant specializing in historical technology and design. Your task is to help a middle school student imagine and brainstorm ideas for a hypothetical 'retro food delivery website' as it might have existed around 30 years ago (early 1990s), near the dawn of the public internet.\n\nFocus on concepts, design elements, and user experiences that would have been plausible or cutting-edge for that era. Think about:\n- Limited graphics, slow internet speeds, pixelated aesthetics.\n- Simpler user interfaces and basic navigation.\n- The general 'feel' of early computing and online services, like dial-up connections.\n- What kind of food options might have been common for delivery then.\n\nDo not suggest modern internet features, current design trends, or advanced AI capabilities. Keep your suggestions historically accurate for the early 90s internet context. Remember you are an AI assistant helping to brainstorm; do not pretend to be a human or have personal experiences. Encourage the student to think creatively and iterate on ideas. If the user asks about topics unrelated to retro food delivery or early internet, gently steer them back to the main topic or remind them of your purpose.",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden",
+        "responseJsonSchema": "hidden"
+      },
+      "levelSystemPrompt": "TODOs:\n* Keep responses concise, ideally 2-4 sentences unless a list is explicitly requested.\n* Always maintain the persona of a creative assistant knowledgeable about early internet and retro concepts.\n* Strictly avoid discussing any modern technology, current events, or personal opinions.\n* If the user asks for inappropriate content or veers off-topic significantly, politely refuse and redirect to the task.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gemini-2.5-flash"
+      ],
+      "multimodalEnabled": false
+    },
+    "long_instructions": "TODOs:\r\n* Ask the bot for ideas for a retro food delivery website from the early days of the internet.\r\n* Try to make your prompts more specific about what makes it 'retro'.\r\n* Ask the bot what kind of graphics, features, or payment methods would have been common back then.\r\n* See if you can get the bot to suggest a name or slogan for the service.\r\n* Discuss the challenges of ordering food online 30 years ago.",
+    "generate_aichat_preset": "explore",
+    "generate_outline": "Brainstorm what to include on a retro food delivery page that might have existed 30 years ago, near the dawn of the internet age.",
+    "thumbnail_url": "https://images.code.org/50ed655ff2984f331fa281f7a193c99e-scottsdale-erik-1-brainstorm-website-ideas-retro-food-delivery-thumb-55153bc7-5674-40f3-8de6-897073065b45.png",
+    "display_name": "Retro Food Delivery Site",
+    "bubble_choice_description": "Imagine the internet 30 years ago. Brainstorm a food delivery website for that era."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-15 20:41:22 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-15 20:41:22 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-15 20:41:24 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-15 20:41:24 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-15 20:43:07 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-15 20:43:07 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-15 20:43:08 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>

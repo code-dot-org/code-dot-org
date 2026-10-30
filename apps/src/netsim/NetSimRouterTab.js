@@ -3,11 +3,12 @@
  */
 
 import $ from 'jquery';
-var markup = require('./NetSimRouterTab.html.ejs');
+
 var NetSimBandwidthControl = require('./NetSimBandwidthControl');
+var NetSimGlobals = require('./NetSimGlobals');
 var NetSimMemoryControl = require('./NetSimMemoryControl');
 var NetSimRouterStatsTable = require('./NetSimRouterStatsTable');
-var NetSimGlobals = require('./NetSimGlobals');
+var markup = require('./NetSimRouterTab.html.ejs');
 
 /**
  * Generator and controller for router information view.

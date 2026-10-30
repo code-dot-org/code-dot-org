@@ -1,7 +1,8 @@
+import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import ProjectWidget from '@cdo/apps/templates/projects/ProjectWidget';
-import $ from 'jquery';
 
 class ProjectWidgetWithData extends React.Component {
   static propTypes = {

@@ -1,11 +1,13 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import color from '../util/color';
-import msg from './locale';
 
 import assetUrl from '@cdo/apps/code-studio/assetUrl';
 import fontConstants from '@cdo/apps/fontConstants';
+
+import color from '../util/color';
+
+import msg from './locale';
 
 export class CollectorGemCounter extends React.Component {
   static propTypes = {
@@ -29,7 +31,7 @@ export class CollectorGemCounter extends React.Component {
               ...styles.checkmark,
               visibility: showCheckmark ? 'visible' : 'hidden',
             }}
-            className="fa fa-check"
+            className="fa-solid fa-check"
             aria-hidden="true"
           />
         </div>

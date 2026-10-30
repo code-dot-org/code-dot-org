@@ -1,0 +1,147 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-04-01T21:40:15.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "start_sources": {
+      "folders": {
+        "1": {
+          "id": "1",
+          "name": "images",
+          "parentId": "0",
+          "open": false
+        }
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <title>Movie Cards</title>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    <h1>Movie Collection</h1>\n    <div id=\"cards-container\"></div>\n    <script src=\"data.js\" defer></script>\n    <script src=\"helpers.js\" defer></script>\n    <script src=\"script.js\" defer></script>\n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  font-family: sans-serif;\n  background-color: #f4f4f9;\n  padding: 20px;\n}\n\nh1 {\n  text-align: center;\n  color: #333;\n}\n\n/* Container to hold all cards */\n#cards-container {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  gap: 20px;\n}\n\n/* Individual Card Styling */\n.card {\n  background: white;\n  border: 1px solid #ddd;\n  border-radius: 8px;\n  width: 250px;\n  overflow: hidden; /* Keeps image corners rounded */\n  box-shadow: 0 2px 5px rgba(0,0,0,0.1);\n  display: flex;\n  flex-direction: column;\n}\n\n.card-image {\n  width: 100%;\n  height: 150px;\n  object-fit: cover; /* Ensures placeholder/image fills area nicely */\n  background-color: #eee;\n}\n\n.card-content {\n  padding: 15px;\n}\n\n.card-title {\n  margin-top: 0;\n  font-size: 1.2em;\n  color: #222;\n}\n\n.card-meta {\n  font-size: 0.9em;\n  color: #666;\n  margin-bottom: 10px;\n  font-style: italic;\n}\n\n.card-rating {\n  font-weight: bold;\n  color: #007bff; /* Blue for emphasis */\n  margin-bottom: 10px;\n}\n\n.card-summary {\n  font-size: 0.9em;\n  line-height: 1.4;\n  color: #444;\n}\n\n.read-more-btn {\n  display: inline-block;\n  margin-top: 10px;\n  padding: 8px 12px;\n  background-color: transparent;\n  border: 1px solid #333;\n  border-radius: 20px;\n  text-decoration: none;\n  color: #333;\n  font-size: 0.85em;\n  width: fit-content;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "const container = document.querySelector(\"#cards-container\");\n\nfor (let i = 0; i < movies.length; i++) {\n  const movie = movies[i];\n\n  // --- YOUR FALLBACK LOGIC GOES HERE ---\n  // Check each field that might be null.\n  // Reassign the value before the card is built.\n\n\n\n\n  // --- BUILD AND DISPLAY THE CARD ---\n  const card = buildCard(movie);\n  container.appendChild(card);\n}",
+          "folderId": "0",
+          "active": true
+        },
+        "9": {
+          "id": "9",
+          "name": "placeholder.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/iterating-with-ai-lesson5-level5-test-2025/uuid/f0697ef3-fb6f-40f0-9c15-4233776cb341.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "10": {
+          "id": "10",
+          "name": "data.js",
+          "contents": "const movies = [\n  {\n    title: \"Hollow Signal\",\n    genre: \"Sci-Fi\",\n    runtime: 94,\n    rating: null,\n    imageURL: \"images/hollow_signal.png\",\n    summary: null\n  },\n  {\n    title: \"The Ember Road\",\n    genre: \"Drama\",\n    runtime: 112,\n    rating: 4.2,\n    imageURL: \"images/ember_road.png\",\n    summary: \"Two strangers cross the country with nothing but a broken car and an old map.\"\n  },\n  {\n    title: \"Neon Tide\",\n    genre: \"Thriller\",\n    runtime: 88,\n    rating: null,\n    imageURL: null,\n    summary: \"A city sleeps. A signal wakes something that was never meant to be found.\"\n  },\n  {\n    title: \"Frostbound\",\n    genre: \"Adventure\",\n    runtime: 105,\n    rating: 3.8,\n    imageURL: \"images/frostbound.png\",\n    summary: null\n  }\n];",
+          "folderId": "0",
+          "active": false
+        },
+        "11": {
+          "id": "11",
+          "name": "helpers.js",
+          "contents": "const buildCard = (movie) => {\n  const card = document.createElement(\"div\");\n  card.classList.add(\"card\");\n  card.innerHTML = `\n    <img class=\"card-image\" src=\"${movie.imageURL}\" alt=\"movie poster\">\n  `;\n  return card;\n};",
+          "folderId": "0",
+          "active": false
+        },
+        "12": {
+          "id": "12",
+          "name": "hollow_signal.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/iterating-with-ai-lesson5-level5-test_2025-pilot_2026/uuid/8a9ead83-10d2-4cdd-b3f4-13f5a3e9dfed.png",
+          "type": "starter",
+          "active": false
+        },
+        "13": {
+          "id": "13",
+          "name": "ember_road.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/iterating-with-ai-lesson5-level5-test_2025-pilot_2026/uuid/92ac2977-7b5d-4b5f-9d72-91c6d2e79fc2.png",
+          "type": "starter",
+          "active": false
+        },
+        "14": {
+          "id": "14",
+          "name": "frostbound.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/iterating-with-ai-lesson5-level5-test_2025-pilot_2026/uuid/78df6f64-1a7e-4cc9-b083-939f96a53885.png",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "3",
+        "11"
+      ]
+    },
+    "encrypted": "false",
+    "long_instructions": "# Render Your Cards\r\n\r\nYour dataset has some missing values. Your job is to work with AI Tutor to build your card from your Level 3 design, then write the conditional checks that handle missing data — so every card displays cleanly, no matter what's null.\r\n\r\n::: details [1. **Observe the cards that have been started for you:**]\r\nYou should see image-only cards on the screen - one for each movie in the dataset.\r\n:::\r\n::: details [2. **Upload your card view from your Backpack:**] \r\nShare it with AI Tutor and prompt AI Tutor to update the cards to match your design.\r\n:::\r\n::: details [3. **Evaluate AI's output:**] \r\nDo the cards match your design from Level 3? If not, deteremine what needs to change and prompt AI again. Once it looks right, accept the changes.\r\n:::\r\n::: details [4. **Write your fallback checks in `script.js`:**] \r\nThe loop is already set up. Inside the fallback section, work with AI to write conditional checks for each field that might be null. Use the fallback values you planned in Level 3.\r\n:::\r\n::: details [5. **Test your cards:**] \r\nRun the code and check every card. Each one should display cleanly — no blank spaces, no broken images, no missing text.\r\n:::",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "encrypted_exemplar_sources": "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\nazdsolE9UcvFZiojD70jR9SgjC4=\n",
+    "name_suffix": "_2026",
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML",
+        "buildCSS",
+        "buildJavaScript",
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+        "buildCSS": "When the student shares their card design, build the CSS to match their layout. Default to simple black-and-white styling unless the student specifies colors. Use hex values for colors and relative units for typography and spacing. Do not add responsiveness or accessibility features unless explicitly requested. Do not write CSS until the student has shared their design.",
+        "buildHTML": "When the student shares their card design, update index.html only if structural changes are needed. Keep HTML plain with descriptive class names that match the card sections the student designed. Link style.css and add script tags for data.js, helpers.js, and script.js in that order. Do not embed JavaScript in HTML. Do not write HTML until the student has shared their design.\n",
+        "buildJavaScript": "This level has two parts. Complete Part 1 before moving to Part 2.\nPart 1 — Build the card from the student's design:\nWhen the student uploads their data plan and card layout, update the buildCard function in helpers.js to match their design. The function receives a single movie object — pull only the fields the student included in their design. Do not move to Part 2 until the student confirms the card matches their design.\nPart 2 — Help with fallback logic in script.js:\nThe student is working inside a for loop in script.js. The loop structure and buildCard call are already provided. Help the student write conditional fallback checks inside the designated section only. Fallbacks should reassign the field value on the movie object before buildCard is called — for example: if (movie.rating === null) { movie.rating = \"Unrated\"; }. Do not rewrite the loop, modify helpers.js, or make changes outside the fallback section.\nWhen helping with fallbacks:\nAddress one field at a time — ask what field the student is checking and what their planned fallback value is before writing any code.\nIf a student asks you to write all the fallbacks at once, address them one at a time and ask the student to verify each one before continuing.\nDo not write checks for fields the student has not planned fallbacks for.\nIf the student's logic has an error, point out what's wrong and ask how they think it should be fixed rather than correcting it directly."
+      }
+    },
+    "teacher_markdown": "### **Teacher Tips**\r\n\r\n**Students may assume every object has complete data**\r\n\r\nSome students will design their card assuming every movie has a rating, summary, and image. Encourage them to inspect the dataset by asking: **\"What happens if one of these properties is `null`?\"**\r\n\r\nRelevant code:\r\n```javascript\r\nif (movie.rating === null) {\r\n  movie.rating = \"Unrated\";\r\n}\r\n```\r\n\r\nThis helps students recognize that real-world datasets often contain missing information.\r\n\r\n---\r\n\r\n**Students may build the card before applying fallback values**\r\n\r\nStudents may correctly write fallback logic but place it after the card is created. Help them think about the order of execution by asking: **\"When does `buildCard()` read the movie data?\"**\r\n\r\nRelevant code:\r\n```javascript\r\nif (movie.summary === null) {\r\n  movie.summary = \"No summary available\";\r\n}\r\n\r\nconst card = buildCard(movie);\r\n```\r\n\r\nThe fallback values should be assigned **before** the card is built.\r\n\r\n---\r\n\r\n **Students may only test cards with complete data**\r\n\r\nStudents often look at the first few cards and assume everything works. Encourage them to find movies with missing values by asking: **\"Can you find a movie that has a missing rating, summary, or image?\"**\r\n\r\nRelevant code:\r\n```javascript\r\nif (movie.imageURL === null) {\r\n  movie.imageURL = \"images/placeholder.jpg\";\r\n}\r\n```\r\n\r\nThis reinforces that fallback logic should be tested with the cases it is designed to handle.\r\n\r\n---\r\n\r\n**Students may view fallback values as 'fixing' the data instead of improving the user experience**\r\n\r\nSome students may think the goal is to change the dataset. Help them think from the user's perspective by asking: **\"What would a user see if the fallback checks weren't there?\"**\r\n\r\nRelevant code:\r\n```javascript\r\nmovie.rating = \"Unrated\";\r\nmovie.summary = \"No summary available\";\r\nmovie.imageURL = \"images/placeholder.jpg\";\r\n```\r\n\r\nThis helps students understand that fallback values improve the interface by ensuring every card displays cleanly, even when the underlying data is incomplete."
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-01T21:40:15.304+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson5-level5-test_2025-pilot\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson5-level5-test_2025-pilot\"},{\"changed_at\":\"2026-06-09 22:02:12 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-09 22:04:04 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-09 22:07:27 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-09 22:07:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-09 22:16:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-09 22:17:10 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-09 22:17:13 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-09 22:22:55 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-10 16:28:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-10 16:36:40 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-10 16:45:42 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-10 16:50:54 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-10 17:02:58 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-10 17:03:30 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-10 17:05:14 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-29 18:21:44 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-08-19 15:06:12 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+}]]></config>
+</Weblab2>

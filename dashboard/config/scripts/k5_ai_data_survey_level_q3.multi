@@ -1,0 +1,8 @@
+name 'k5_ai_data_survey_level_q3'
+question 'My favorite type of game is...'
+right 'Card games'
+right 'Board games'
+right 'Playground games'
+right 'Sports'
+right 'Something else'
+allow_multiple_attempts true

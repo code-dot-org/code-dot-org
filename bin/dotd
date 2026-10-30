@@ -10,6 +10,7 @@ require 'highline'
 require 'io/console'
 require 'logger'
 require 'tmpdir'
+require 'cdo/aws/session_manager'
 require_relative '../lib/cdo/cdo_cli'
 require_relative '../lib/cdo/developers_topic'
 require_relative '../lib/cdo/infra_test_topic'
@@ -26,59 +27,75 @@ LOG_FILE = "#{Dir.tmpdir}/dotd.log".freeze
   "[#{time.strftime('%I:%M %p')}]: #{msg}\n"
 end
 
-# Checks that CDO.github_access_token, CDO.slack_bot_token, CDO.honeybadger_api_token, and CDO.devinternal_db_writer
+# Checks that CDO.github_access_token, CDO.slack_bot_token, CDO.honeybadger_api_token
 # are defined. If not, exits the program.
 def check_for_cdo_keys
-  return if CDO.github_access_token && CDO.slack_bot_token && CDO.honeybadger_api_token && CDO.devinternal_db_writer
+  missing_cdo_keys = [
+    CDO.github_access_token ? nil :   "#{bold 'CDO.github_access_token'}: set `github_access_token: <your token>` in locals.yml. Get <your token> from https://github.com/settings/tokens, by creating a classic token with the \"public_repo\" permission.",
+    CDO.honeybadger_api_token ? nil : "#{bold 'CDO.honeybadger_api_token'}: this should be pulled in automatically from AWS Secrets Manager, does `bin/aws_access` succeed?",
+    CDO.slack_bot_token ? nil :       "#{bold 'CDO.slack_bot_token'}: this should be pulled in automatically from AWS Secrets Manager, does `bin/aws_access` succeed?"
+  ].compact
 
-  puts <<-EOS.unindent
+  return if missing_cdo_keys.empty?
 
-    This script requires CDO.github_access_token, CDO.slack_bot_token, and CDO.honeybadger_api_token and CDO.devinternal_db_writer.
+  puts <<~ERROR.unindent
 
-    Create your API tokens from these pages:
+    Error, missing required CDO keys: #{missing_cdo_keys.map {|msg| "\n  - #{msg}"}.join}
 
-      https://github.com/settings/tokens (classic token with 'public_repo' permission)
-      https://app.honeybadger.io/users/edit#authentication
-
-    Please add them to your locals.yml and rerun the script.
-    CDO.devinternal_db_writer and CDO.slack_bot_token should be pulled automatically from AWS Secrets Manager.
-
-  EOS
+    Please fix the required CDO keys and rerun the script.
+  ERROR
   exit
 end
 
 def check_github_token
   GitHub.sha('test', true)
 rescue Octokit::Unauthorized
-  puts <<~EOS
+  puts <<~ERROR
 
     Your CDO.github_access_token is out of date. Please update your
-    personal access token at github.com, put the new value in locals.yml,
+    personal access token at https://github.com/settings/tokens, put the new value in locals.yml,
     and rerun this script.
 
-  EOS
+  ERROR
   exit
 end
 
 # Prints the script intro to the console.
 def puts_script_intro(dotd_name)
-  puts <<~EOS
+  puts <<~OUTPUT
 
     #{bold "Hi #{dotd_name}! Welcome to Robo-Dev-of-the-Day!"}
-  EOS
+  OUTPUT
 
   if dotd_name == ENV['USER']
     puts dim '(Customize your name with the CDODEV_DOTD_NAME environment variable.)'
   end
 
-  puts <<~EOS
+  puts <<~OUTPUT
 
     #{bold 'Documentation'}
 
       Dev-of-the-Day Checklist
       #{dim 'https://docs.google.com/document/d/166j9G-Kn_PeHoV4RRX9l-x-42NlahPn0sT6tTFTX5LY/edit?usp=sharing'}
 
-  EOS
+  OUTPUT
+
+  puts_remote_access_mode
+end
+
+def puts_remote_access_mode
+  if Cdo::Aws::SessionManager.available?
+    puts dim 'Remote server commands will use AWS Systems Manager Session Manager.'
+    puts
+    return
+  end
+
+  puts <<~NOTICE.unindent
+    #{red 'Remote server commands will use gateway SSH.'}
+    Install AWS CLI v2 and the Session Manager plugin to use audited SSM sessions:
+    #{dim Cdo::Aws::SessionManager::INSTALL_PLUGIN_URL}
+
+  NOTICE
 end
 
 # Marks the most recent DTT red, updating Slack#deploy-status topic to allow a new
@@ -86,11 +103,11 @@ end
 # green run. Inserts a 'dtt_red' row into the metrics table.
 def mark_dtt_red
   TestServerStatus.mark_red GitHub.sha('test', true)
-  puts <<-EOS.unindent
+  puts <<-OUTPUT.unindent
 
     Reset DTT: yes
 
-  EOS
+  OUTPUT
   @logger.info 'marks DTT red'
 end
 
@@ -98,11 +115,11 @@ end
 # appropriately. Inserts a 'dtt_green' row into the metrics table.
 def mark_dtt_green
   TestServerStatus.mark_green GitHub.sha('test', true)
-  puts <<-EOS.unindent
+  puts <<-OUTPUT.unindent
 
     Reset DTT: yes and updated green commit in Slack#infra-test.
 
-  EOS
+  OUTPUT
   @logger.info 'marks DTT green'
 end
 
@@ -114,16 +131,16 @@ def do_dtp(dotd_name)
   test_green_commit = InfraTestTopic.green_commit
   warn_if_old_commit test_green_commit
 
-  DevelopersTopic.set_dtp "pending confirmation (@#{dotd_name})"
-
   # As GitHub's API (all of ours, Octokit's and github.com's) does not allow creating a pull
   # request from a commit hash (only a branch name), we create and push a branch.
   branch_name = "dtp_candidate_#{test_green_commit}"
   if GitHub.branch_exists?(branch_name, at_commit: test_green_commit)
     puts "Up-to-date DTP Candidate Branch #{branch_name.inspect} already exists; reusing."
-  else
-    create_branch_from_commit(branch_name, test_green_commit)
+  elsif !create_branch_from_commit(branch_name, test_green_commit)
+    puts red "Skipping DTP PR creation because #{branch_name.inspect} was not pushed."
+    return
   end
+  DevelopersTopic.set_dtp "pending confirmation (@#{dotd_name})"
   production_pr_number = GitHub.find_or_create_pull_request(
     base: 'production',
     head: branch_name,
@@ -146,12 +163,15 @@ end
 # @param [String] dotd_name The name of the DOTD running this script.
 def do_dtl(dotd_name)
   test_green_commit = InfraTestTopic.green_commit
-  DevelopersTopic.set_dtl "in progress (@#{dotd_name})"
 
   # As GitHub's API (all of ours, Octokit's and github.com's) does not allow creating a pull
   # request from a commit hash (only a branch name), we create and push a branch.
   branch_name = "dtl_candidate_#{test_green_commit}"
-  create_branch_from_commit branch_name, test_green_commit
+  unless create_branch_from_commit(branch_name, test_green_commit)
+    puts red "Skipping DTL PR creation because #{branch_name.inspect} was not pushed."
+    return
+  end
+  DevelopersTopic.set_dtl "in progress (@#{dotd_name})"
   levelbuilder_pr_number = GitHub.create_and_merge_pull_request(
     base: 'levelbuilder',
     head: branch_name,
@@ -163,7 +183,7 @@ end
 
 # @return [String] The text for the DOTD menu prompt.
 def dotd_menu_prompt
-  <<-EOS.unindent
+  <<-OUTPUT.unindent
 
     #{bold 'DOTD Menu Options'}
 
@@ -189,12 +209,12 @@ def dotd_menu_prompt
         #{bold 'Q'}: #{underline 'Q'}uit.
 
     Your Choice:#{' '}
-  EOS
+  OUTPUT
 end
 
 # @return [String] The text for the DOTD menu prompt, including cronned options.
 def dotd_menu_prompt_all
-  <<-EOS.unindent
+  <<-OUTPUT.unindent
 
     #{bold 'DOTD Menu Options'}
 
@@ -209,7 +229,6 @@ def dotd_menu_prompt_all
 
       DTS:
 
-        #{bold 'S'}: Commit content on #{underline 's'}taging.
         #{bold 'DTS'}: #{underline 'D'}eploy #{underline 't'}o #{underline 's'}taging from levelbuilder.
 
       DTT:
@@ -226,6 +245,7 @@ def dotd_menu_prompt_all
       DTL:
 
         #{bold 'L'}: Commit content on #{underline 'l'}evebuilder.
+        #{bold 'STP'}: #{underline 'S'}eed curriculum content from staging #{underline 't'}o #{underline 'p'}roduction.
         #{bold 'DTL'}: #{underline 'D'}eploy #{underline 't'}o #{underline 'l'}evelbuilder the most recent green DTT.
 
       Quit:
@@ -233,7 +253,7 @@ def dotd_menu_prompt_all
         #{bold 'Q'}: #{underline 'Q'}uit.
 
     Your Choice:#{' '}
-  EOS
+  OUTPUT
 end
 
 # Repeatedly prints a menu of DOTD tasks, accepts a choice from the user, and executes the choice.
@@ -249,12 +269,15 @@ def dotd_menu(dotd_name)
       menu.choice(:D) {show_full_menu = false}
       menu.choice(:H) {get_honeybadger_issues}
       menu.choice(:C) {perform_self_check}
-      menu.choice(:S) do
-        if run_on 'staging', "staging/bin/content-push --name=\"#{@dotd_name}\""
-          @logger.info 'commits content on staging'
-        else
-          @logger.info 'error attempting to commit content on staging'
-        end
+      # HighLine resolves a unique prefix, so without this choice,
+      # "S" selects STP and seeds production without confirming.
+      menu.hidden(:S) do
+        puts <<-OUTPUT.unindent
+
+          The staging content push is gone. Content is committed on levelbuilder
+          only, with #{bold 'L'}.
+
+        OUTPUT
       end
       menu.choice(:DTS) do
         if GitHub.compare(base: 'staging', head: 'levelbuilder').empty?
@@ -267,11 +290,11 @@ def dotd_menu(dotd_name)
           head: 'levelbuilder',
           title: "DTS (Levelbuilder > Staging) [#{dotd_name}]"
         )
-        puts <<-EOS.unindent
+        puts <<-OUTPUT.unindent
 
           DTS (Levelbuilder > Staging): #{GitHub.url(dts_pr_number)}
 
-        EOS
+        OUTPUT
         @logger.info 'merges levelbuilder into staging'
       end
       menu.choice(:DTT) do
@@ -280,11 +303,11 @@ def dotd_menu(dotd_name)
           head: 'staging',
           title: "DTT (Staging > Test) [#{dotd_name}]"
         )
-        puts <<-EOS.unindent
+        puts <<-OUTPUT.unindent
 
           DTT (Staging > Test): #{GitHub.url(dtt_pr_number)}
 
-        EOS
+        OUTPUT
         @logger.info 'manually DTTs from staging'
         TestServerStatus.mark_started GitHub.sha('test', true)
       end
@@ -293,23 +316,30 @@ def dotd_menu(dotd_name)
       menu.choice(:K) do
         run_on 'test', 'test/bin/terminate_build'
 
-        puts <<-EOS.unindent
+        puts <<-INFO.unindent
 
           Attempted to kill tests. See Slack#infra-test for more information.
 
           If the test build does not restart, run the /restart-test-build
           slack command to restart it.
 
-        EOS
+        INFO
         @logger.info 'kills tests'
       end
       menu.choice(:DTP) {do_dtp(dotd_name)}
+      menu.choice(:STP) do
+        run_interactively_on 'production-daemon', 'production/bin/seed-curriculum-content-from-staging-branch'
+        puts <<-OUTPUT.unindent
+
+          STP completed. Check Slack#infra-production to confirm whether it
+          succeeded. On failure, the output above ends with a Ruby error and
+          stack trace.
+        OUTPUT
+        @logger.info 'seeds curriculum content from staging to production'
+      end
       menu.choice(:L) do
-        if run_on 'levelbuilder', "levelbuilder/bin/content-push --name=\"#{dotd_name}\""
-          @logger.info 'commits content on levelbuilder'
-        else
-          @logger.info 'error attempting to commit content on levelbuilder'
-        end
+        run_interactively_on 'levelbuilder', "levelbuilder/bin/content-push --name=\"#{dotd_name}\""
+        @logger.info 'runs content-push on levelbuilder'
       end
       menu.choice(:DTL) {do_dtl(dotd_name)}
       menu.choice(:Q) do
@@ -325,7 +355,7 @@ end
 
 # Prints task list after the DTP to the console.
 def puts_after_dtp_tasks
-  puts <<-EOS.unindent
+  puts <<-OUTPUT.unindent
 
     * Verify that the release at https://github.com/code-dot-org/code-dot-org/releases/latest looks correct
     * Check https://code.org and http://studio.code.org after the deploy reaches all the frontends.
@@ -333,32 +363,32 @@ def puts_after_dtp_tasks
     * Watch Honeybadger and New Relic for new errors popping up after the deploy.
     * Check Zendesk in the next couple of hours to see if there are new reports.
 
-  EOS
+  OUTPUT
 end
 
 # Prints the script conclusion to the console.
 def puts_script_conclusion
-  puts <<-EOS.unindent
+  puts <<-OUTPUT.unindent
 
    #{bold "Post a summary of your DOTD shift in the #developers Slack channel. You can find a log of your day at #{LOG_FILE}"}
 
   #{bold "You're done!"}
-  EOS
+  OUTPUT
 end
 
 # Prints a message appropriate for abnormal program exits to the console.
 def puts_quit_message
-  puts <<-EOS.unindent
+  puts <<-WARNING.unindent
 
     #{bold 'Something weird going on? Take a look at: '\
       'https://docs.google.com/document/d/166j9G-Kn_PeHoV4RRX9l-x-42NlahPn0sT6tTFTX5LY/edit?usp=sharing'}
 
     You can find a log of your day at #{LOG_FILE}
 
-  EOS
+  WARNING
 end
 
-# Flushes STDIN, returning the results of gets.
+# Flushes $stdin, returning the results of gets.
 # @return [String] The result of gets.
 def flush_and_gets
   $stdin.iflush
@@ -403,12 +433,41 @@ end
 #
 # @returns true if the command succeeds, false if it fails. See Kernel#system
 def run_on(server_name, command)
-  # Double-escape the command string, once for each remote shell we're passing
-  # through.
-  return true if system "ssh -t gateway.code.org ssh -t #{server_name} #{command.inspect.inspect}"
+  command_succeeded = if Cdo::Aws::SessionManager.available?
+                        Cdo::Aws::SessionManager.run_command(server_name, command)
+                      else
+                        ssh_run_on(server_name, command)
+                      end
+  return true if command_succeeded
+
   # Non-zero exit code from the command
   warn_and_confirm "There was an error running `#{command}` on #{server_name}"
   return false
+end
+
+# Runs command on server_name with a terminal attached, so the command can
+# prompt for input and stream its output as it goes.
+#
+# Under SSM the return value says nothing about the command: the Session Manager
+# plugin discards the remote exit status
+# (https://github.com/aws/session-manager-plugin/issues/59), so failures have to
+# be read out of the streamed output. Use #run_on when the result has to be
+# acted on.
+#
+# @param server_name [String] The server to run the command on.
+# @param command [String] The command to be run.
+def run_interactively_on(server_name, command)
+  if Cdo::Aws::SessionManager.available?
+    Cdo::Aws::SessionManager.start_interactive_command(server_name, command)
+  else
+    ssh_run_on(server_name, command)
+  end
+end
+
+def ssh_run_on(server_name, command)
+  # Double-escape the command string, once for each remote shell we're passing
+  # through.
+  system "ssh -t gateway.code.org ssh -t #{server_name} #{command.inspect.inspect}"
 end
 
 # Prints the DTP message, formatted based on its contents.
@@ -426,13 +485,13 @@ def print_database_changes(pull_request_number)
   database_changes = GitHub.database_changes(pull_request_number)
   return if database_changes.empty?
   database_changes_output = database_changes.join("\n       ")
-  puts <<-EOS.unindent
+  puts <<-WARNING.unindent
 
      #{red 'WARNING: THIS PR CONTAINS DATABASE CHANGES:'}
 
        #{red database_changes_output}
 
-  EOS
+  WARNING
 end
 
 # if the commit is more than 24 hours old, warn
@@ -461,10 +520,10 @@ def get_honeybadger_issues
       end
     project = bold issue[:project]
     message = issue[:assignee] ? (dim issue[:message]).to_s : issue[:message]
-    output = <<-EOS.unindent
+    output = <<-OUTPUT.unindent
       [#{project}, #{environment}]: #{message}
           #{dim issue[:url]}
-    EOS
+    OUTPUT
     # TODO(asher): Eliminate this hackiness, for some reason, some extra newlines are showing up at
     # the end of the output. This seems correlated with environment and project.
     puts output.strip
@@ -477,7 +536,8 @@ end
 # Performs a diagnostic self-check to make sure the local environment is
 # properly set up for all standard Dev of the Day operations.
 def perform_self_check
-  puts "Checking access to internal servers"
+  access_method = Cdo::Aws::SessionManager.available? ? 'SSM' : 'gateway SSH'
+  puts "Checking access to internal servers via #{access_method}"
   %w(staging test levelbuilder production-console).each do |environment|
     run_on(environment, "echo 'successfully connected to #{environment}'")
   end
@@ -486,7 +546,7 @@ def perform_self_check
   puts "latest staging commit is: #{GitHub.sha('staging', true)}"
 
   puts "Checking access to Slack"
-  puts "current Developer of the Day is: #{DevelopersTopic.dotd}"
+  puts "current Developer of the Day is: #{DevelopersTopic.dotd_username}"
 
   # We forego checking access to Honeybadger here; in part because Honeybadger
   # access is not required for standard Dev of the Day operations but mostly
@@ -517,10 +577,15 @@ end
 
 # The main method of the script, responsible for dispatching control flow to other methods.
 def main
+  puts
+  puts "👋, if you run into trouble or have questions, consult the DotD guide:"
+  puts "https://docs.google.com/document/d/166j9G-Kn_PeHoV4RRX9l-x-42NlahPn0sT6tTFTX5LY/edit#heading=h.mf5058xaezl2"
+  puts
+
   check_for_cdo_keys
   check_github_token
 
-  dotd_name = ENV['CDODEV_DOTD_NAME'] || ENV['USER']
+  dotd_name = ENV['CDODEV_DOTD_NAME'] || ENV.fetch('USER', nil)
   @logger.info("#{Time.new.strftime('%A, %B %d %Y')}: #{dotd_name} is DOTD")
 
   puts_script_intro(dotd_name)

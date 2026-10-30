@@ -1,0 +1,73 @@
+require 'test_helper'
+require 'webmock/minitest'
+
+class AiIterationControllerTest < ActionController::TestCase
+  include Devise::Test::ControllerHelpers
+
+  setup do
+    @controller = AiIterationController.new
+  end
+
+  # Anonymous, signed-out user cannot access the tools page
+  test_user_gets_response_for :tools,
+  name: "no_user_no_access_test",
+  user: nil,
+  method: :get,
+  response: :redirect
+
+  # Student cannot access the tools page
+  test_user_gets_response_for :tools,
+  name: "student_no_access_test",
+  user: :student,
+  method: :get,
+  response: :forbidden
+
+  # Teacher cannot access the tools page
+  test_user_gets_response_for :tools,
+  name: "teacher_no_access_test",
+  user: :teacher,
+  method: :get,
+  response: :forbidden
+
+  # Levelbuilder can access the tools page
+  test_user_gets_response_for :tools,
+  name: "levelbuilder_access_test",
+  user: :levelbuilder,
+  method: :get,
+  response: :success
+
+  # Anonymous, signed-out user cannot access the image safety eval page
+  test_user_gets_response_for :image_safety_eval,
+  name: "no_user_no_image_safety_eval_access_test",
+  user: nil,
+  method: :get,
+  response: :redirect
+
+  # Student cannot access the image safety eval page
+  test_user_gets_response_for :image_safety_eval,
+  name: "student_no_image_safety_eval_access_test",
+  user: :student,
+  method: :get,
+  response: :forbidden
+
+  # Teacher cannot access the image safety eval page
+  test_user_gets_response_for :image_safety_eval,
+  name: "teacher_no_image_safety_eval_access_test",
+  user: :teacher,
+  method: :get,
+  response: :forbidden
+
+  # Levelbuilder cannot access the image safety eval page (admin-only)
+  test_user_gets_response_for :image_safety_eval,
+  name: "levelbuilder_no_image_safety_eval_access_test",
+  user: :levelbuilder,
+  method: :get,
+  response: :forbidden
+
+  # Admin can access the image safety eval page
+  test_user_gets_response_for :image_safety_eval,
+  name: "admin_image_safety_eval_access_test",
+  user: :admin,
+  method: :get,
+  response: :success
+end

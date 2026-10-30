@@ -1,11 +1,17 @@
-import React, {useState} from 'react';
+import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
+import _ from 'lodash';
 import PropTypes from 'prop-types';
-import style from './rubrics.module.scss';
+import React, {useState} from 'react';
+import ReactTooltip from 'react-tooltip';
+
+import {RubricAiEvaluationLimits} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
-import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons/SegmentedButtons';
+
+import {TAB_NAMES} from './rubricHelpers';
+import {reportingDataShape, rubricShape} from './rubricShapes';
 import RunAIAssessmentButton, {STATUS} from './RunAIAssessmentButton';
-import {rubricShape} from './rubricShapes';
-import {InfoAlert} from './RubricContent';
+
+import style from './rubrics.module.scss';
 
 export default function RubricTabButtons({
   tabSelectCallback,
@@ -17,12 +23,8 @@ export default function RubricTabButtons({
   refreshAiEvaluations,
   rubric,
   studentName,
+  reportingData,
 }) {
-  const TAB_NAMES = {
-    RUBRIC: 'rubric',
-    SETTINGS: 'settings',
-  };
-
   const [status, setStatus] = useState(STATUS.INITIAL_LOAD);
 
   const statusText = () => {
@@ -47,19 +49,31 @@ export default function RubricTabButtons({
         return i18n.aiEvaluationStatus_pii_error();
       case STATUS.PROFANITY_ERROR:
         return i18n.aiEvaluationStatus_profanity_error();
+      case STATUS.REQUEST_TOO_LARGE:
+        return i18n.aiEvaluationStatus_request_too_large();
+      case STATUS.TEACHER_LIMIT_EXCEEDED:
+        return i18n.aiEvaluationStatus_teacher_limit_exceeded({
+          limit: RubricAiEvaluationLimits.TEACHER_LIMIT,
+        });
     }
   };
 
+  const runButtonTooltipId = _.uniqueId();
+
   return (
-    <div>
-      <div className={style.rubricTabGroup}>
+    <div className="uitest-rubric-tab-buttons">
+      <div id="tour-tab-buttons" className={style.rubricTabGroup}>
         <SegmentedButtons
-          className="uitest-rubric-tab-buttons"
           selectedButtonValue={selectedTab}
           size="s"
           buttons={[
-            {label: i18n.rubricTabStudent(), value: TAB_NAMES.RUBRIC},
             {
+              id: 'assess-a-student-button',
+              label: i18n.rubricTabStudent(),
+              value: TAB_NAMES.RUBRIC,
+            },
+            {
+              id: 'class-data-button',
               label: i18n.rubricTabClassManagement(),
               value: TAB_NAMES.SETTINGS,
               disabled: !showSettings,
@@ -67,8 +81,8 @@ export default function RubricTabButtons({
           ]}
           onChange={value => tabSelectCallback(value)}
         />
-        {selectedTab === TAB_NAMES.RUBRIC && (
-          <div>
+        {selectedTab === TAB_NAMES.RUBRIC && teacherHasEnabledAi && (
+          <div data-tip data-for={runButtonTooltipId}>
             <RunAIAssessmentButton
               canProvideFeedback={canProvideFeedback}
               teacherHasEnabledAi={teacherHasEnabledAi}
@@ -78,19 +92,21 @@ export default function RubricTabButtons({
               studentName={studentName}
               status={status}
               setStatus={setStatus}
+              reportingData={reportingData}
             />
+            {!!statusText() && (
+              <ReactTooltip
+                id={runButtonTooltipId}
+                role="tooltip"
+                effect="solid"
+                place="bottom"
+              >
+                {statusText()}
+              </ReactTooltip>
+            )}
           </div>
         )}
       </div>
-      {selectedTab === TAB_NAMES.RUBRIC &&
-        canProvideFeedback &&
-        !!statusText() && (
-          <InfoAlert
-            className={'uitest-eval-status-text'}
-            text={statusText() || ''}
-            dismissable={true}
-          />
-        )}
     </div>
   );
 }
@@ -106,4 +122,5 @@ RubricTabButtons.propTypes = {
   refreshAiEvaluations: PropTypes.func,
   rubric: rubricShape.isRequired,
   studentName: PropTypes.string,
+  reportingData: reportingDataShape,
 };

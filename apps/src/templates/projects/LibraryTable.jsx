@@ -1,18 +1,20 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
-import i18n from '@cdo/locale';
-import color from '@cdo/apps/util/color';
+import Modal from '@code-dot-org/component-library/modal';
+import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import _ from 'lodash';
+import PropTypes from 'prop-types';
+import React from 'react';
+import {connect} from 'react-redux';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
-import wrappedSortable from '../tables/wrapped_sortable';
-import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
-import {unpublishProjectLibrary} from './projectsRedux';
-import PersonalProjectsNameCell from './PersonalProjectsNameCell';
-import Button from '@cdo/apps/templates/Button';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
+
 import {reload} from '@cdo/apps/utils';
+import i18n from '@cdo/locale';
+
+import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
+import wrappedSortable from '../tables/wrapped_sortable';
+
+import PersonalProjectsNameCell from './PersonalProjectsNameCell';
+import {unpublishProjectLibrary} from './projectsRedux';
 
 export const COLUMNS = {
   LIBRARY_NAME: 0,
@@ -201,9 +203,11 @@ class LibraryTable extends React.Component {
 
   actionsFormatter = (_, {rowData}) => {
     return (
-      <Button
-        text={i18n.unpublish()}
-        color={Button.ButtonColor.brandSecondaryDefault}
+      <MuiButton
+        variant="contained"
+        color="primary"
+        size="small"
+        type="button"
         onClick={() => {
           this.setState({unpublishFailedChannel: null});
           this.props.unpublishProjectLibrary(rowData.channel, error => {
@@ -214,7 +218,9 @@ class LibraryTable extends React.Component {
             }
           });
         }}
-      />
+      >
+        {i18n.unpublish()}
+      </MuiButton>
     );
   };
 
@@ -256,22 +262,24 @@ class LibraryTable extends React.Component {
           </Table.Provider>
         )}
         {!hasLibraries && (
-          <div style={styles.noLibraries}>{i18n.noLibraries()}</div>
+          <MuiTypography variant="body2" gutterBottom>
+            {i18n.noLibraries()}
+          </MuiTypography>
         )}
         {unpublishFailedLibrary && (
-          <BaseDialog
-            isOpen
-            handleClose={() => this.setState({unpublishFailedChannel: null})}
-            style={styles.dialog}
-            useUpdatedStyles
-          >
-            <h1>{i18n.unpublishFailureTitle()}</h1>
-            <p style={styles.dialogBody}>
-              {i18n.unpublishFailureBody({
-                libraryName: unpublishFailedLibrary.name,
-              })}
-            </p>
-          </BaseDialog>
+          <Modal
+            onClose={() => this.setState({unpublishFailedChannel: null})}
+            title={i18n.unpublishFailureTitle()}
+            description={i18n.unpublishFailureBody({
+              libraryName: unpublishFailedLibrary.name,
+            })}
+            primaryButtonProps={{
+              onClick: () => this.setState({unpublishFailedChannel: null}),
+              children: i18n.ok(),
+              size: 'small',
+              type: 'button',
+            }}
+          />
         )}
       </div>
     );
@@ -281,12 +289,12 @@ class LibraryTable extends React.Component {
 const styles = {
   headerCellName: {
     borderWidth: '0px 1px 1px 0px',
-    borderColor: color.border_light_gray,
+    borderColor: 'var(--borders-neutral-primary)',
     padding: 15,
   },
   cellName: {
     borderWidth: '1px 1px 1px 0px',
-    borderColor: color.border_light_gray,
+    borderColor: 'var(--borders-neutral-primary)',
     padding: 15,
     width: CELL_WIDTH,
   },
@@ -298,17 +306,6 @@ const styles = {
   },
   centeredCell: {
     textAlign: 'center',
-  },
-  dialog: {
-    padding: '0 15px 8px 15px',
-  },
-  dialogBody: {
-    fontSize: 18,
-    color: color.charcoal,
-  },
-  noLibraries: {
-    fontSize: 14,
-    marginBottom: 20,
   },
 };
 

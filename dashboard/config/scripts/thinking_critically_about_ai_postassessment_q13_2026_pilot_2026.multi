@@ -1,0 +1,14 @@
+name 'thinking-critically-about-ai-postassessment-q13_2026-pilot_2026'
+
+question 'A student overshares details about their daily routine on a public app. They say, "It\'s fine — none of this is sensitive information." Which response most accurately challenges their assumption?'
+
+wrong 'They are right. Public information about daily routines cannot be used to identify anyone.'
+wrong 'They are wrong only if they also share their phone number or home address.'
+right 'Even information that seems harmless individually — like a daily schedule or neighborhood — can be combined by AI systems to infer sensitive patterns about a person\'s life, location, and habits.'
+wrong 'They are right as long as their social media privacy settings are turned on.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 7
+MARKDOWN

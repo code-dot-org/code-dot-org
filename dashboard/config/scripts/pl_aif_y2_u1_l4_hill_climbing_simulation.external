@@ -1,0 +1,20 @@
+name 'pl-aif-y2-u1-l4-hill-climbing-simulation'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+## Hill Climbing: A Mini Simulation
+
+Before students run the real algorithm by hand, try a simplified version yourself. Nudge the temperature up or down and watch how the comfort score changes as you search for the best setting.
+
+<div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
+  <iframe
+    src="https://amandadennard-dotcom.github.io/AIFY2/unit-1/hill-climbing-sim.html"
+    width="100%"
+    height="980"
+    frameborder="0"
+    scrolling="no"
+    title="Hill climbing simulation: adjust temperature and watch comfort score converge">
+  </iframe>
+</div>
+MARKDOWN

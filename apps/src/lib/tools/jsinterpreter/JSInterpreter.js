@@ -1,14 +1,16 @@
-import * as codegen from './codegen';
-import ObservableEventDEPRECATED from '../../../ObservableEventDEPRECATED';
-import * as utils from '../../../utils';
-import acorn from '@code-dot-org/js-interpreter/acorn';
-import {getStore} from '../../../redux';
-import CustomMarshalingInterpreter from './CustomMarshalingInterpreter';
-import CustomMarshaler from './CustomMarshaler';
 import {generateAST} from '@code-dot-org/js-interpreter';
+import acorn from '@code-dot-org/js-interpreter/acorn';
+
 import i18n from '@cdo/locale';
 
+import ObservableEventDEPRECATED from '../../../ObservableEventDEPRECATED';
+import {getStore} from '../../../redux';
 import {setIsDebuggerPaused} from '../../../redux/runState';
+import * as utils from '../../../utils';
+
+import * as codegen from './codegen';
+import CustomMarshaler from './CustomMarshaler';
+import CustomMarshalingInterpreter from './CustomMarshalingInterpreter';
 
 const MAX_CALL_STACK_SIZE = 10000;
 
@@ -1027,6 +1029,10 @@ export default class JSInterpreter {
         const varName = execResult[1];
         if (varName === '__') {
           msg = 'It looks like you left one of the parameters empty.';
+        } else if (varName === 'onRecordEvent') {
+          msg =
+            `It looks like you're trying to use the ${varName} function. ` +
+            'This function is no longer available. Try using the available data blocks.';
         } else {
           msg =
             `Oops, we can’t figure out what ${varName} is - perhaps you ` +

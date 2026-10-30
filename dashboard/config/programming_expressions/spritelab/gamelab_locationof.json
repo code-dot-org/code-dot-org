@@ -1,19 +1,11 @@
 {
   "key": "gamelab_locationOf",
   "name": "location of",
-  "category": "Sprites",
+  "category": "Locations",
   "category_key": "location",
   "block_name": "gamelab_locationOf",
   "content": "Gets the location of a given sprite.\r\n\r\nThis block can be used to get the exact location of the center of a sprite, even when it moves around the screen. ",
   "examples": [
-    {
-      "name": "Example 2",
-      "description": "This block allows one sprite to move towards another, no matter where it is on the screen. Here is a simple tag game where you can press the spacebar to make the chaser follow the runner.\r\n",
-      "app": "https://studio.code.org/projects/spritelab/2rF3nhfgM0kQJLvbHd0Uw-O3QZ5KizoDo6QKsj-s7oY",
-      "image": null,
-      "app_display_type": "embedAppWithCode",
-      "embed_app_with_code_height": 500
-    },
     {
       "name": "Example 1",
       "description": "The first sprite is drawn at a random location, but the second sprite is always drawn at the same place.",
@@ -21,6 +13,14 @@
       "image": null,
       "app_display_type": "embedAppWithCode",
       "embed_app_with_code_height": 310
+    },
+    {
+      "name": "Example 2",
+      "description": "This block allows one sprite to move towards another, no matter where it is on the screen. Here is a simple tag game where you can press the spacebar to make the chaser follow the runner.\r\n",
+      "app": "https://studio.code.org/projects/spritelab/2rF3nhfgM0kQJLvbHd0Uw-O3QZ5KizoDo6QKsj-s7oY",
+      "image": null,
+      "app_display_type": "embedAppWithCode",
+      "embed_app_with_code_height": 500
     }
   ],
   "image_url": "https://curriculum.code.org/media/blocks/locationOf.PNG",

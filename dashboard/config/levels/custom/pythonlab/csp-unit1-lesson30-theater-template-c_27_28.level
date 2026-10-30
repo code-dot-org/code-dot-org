@@ -1,0 +1,49 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-09-10T19:13:48.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Icon/shape accent",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "mini_app": "theater",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "mini_app_variant": "functional",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "# ---------- SAMPLE DATA (for testing only — replace with your variables and calculations) ----------\n# value_1 and value_2 must be numbers — this template sizes bars from\n# the actual value, same as before.\nname = \"NAME\"\nsubject = \"SUBJECT\"\nlabel_1 = \"LABEL 1\"\nvalue_1 = 65\nlabel_2 = \"LABEL 2\"\nvalue_2 = 40\nclosing_line = \"CLOSING LINE\"\n\n# ---------- THE REVEAL ----------\nfrom theater import Scene, play_scenes, Font, FontStyle\n\nscene = Scene()\nscene.remove_stroke_color()\n\nINK = \"#0D0221\"\nTRACK = \"#241435\"\nMAGENTA = \"#FF2E9F\"\nTEAL = \"#00FFC6\"\n\n# bar fill widths, driven by data — clamped so the pill shape always reads\nbar_1_width = max(min(value_1 * 3, 300), 30)\nbar_2_width = max(min(value_2 * 3, 300), 30)\n\n# ----- CARD 1: COVER -----\nscene.clear(INK)\n\n# HUD corner ticks\nscene.set_stroke_color(TEAL)\nscene.set_stroke_width(2)\nscene.draw_line(20, 20, 45, 20)\nscene.draw_line(20, 20, 20, 45)\nscene.draw_line(380, 20, 355, 20)\nscene.draw_line(380, 20, 380, 45)\nscene.draw_line(20, 380, 45, 380)\nscene.draw_line(20, 380, 20, 355)\nscene.draw_line(380, 380, 355, 380)\nscene.draw_line(380, 380, 380, 355)\nscene.remove_stroke_color()\n\nscene.set_text_style(Font.SANS, FontStyle.BOLD)\nscene.set_text_color(TEAL)\nscene.set_text_height(14)\nscene.draw_text(\"LEVEL UP —\", 60, 130)\nscene.set_text_color(\"white\")\nscene.set_text_height(36)\nscene.draw_text(subject, 60, 175)\nscene.set_text_color(MAGENTA)\nscene.set_text_height(16)\nscene.draw_text(\"PLAYER: \" + name, 60, 210)\n\nscene.play_note(60, 0.1)\nscene.pause(0.1)\nscene.play_note(64, 0.1)\nscene.pause(0.1)\nscene.play_note(67, 0.1)\nscene.pause(0.1)\nscene.play_note(72, 0.1)\nscene.pause(0.1)\nscene.play_note(76, 0.3)\nscene.pause(1.0)\n\n# ----- CARD 2: STAT 1 (XP bar) -----\nscene.clear(INK)\nscene.set_text_style(Font.SANS, FontStyle.BOLD)\nscene.set_text_color(TEAL)\nscene.set_text_height(16)\nscene.draw_text(label_1, 40, 90)\n\n# track (full-width background pill)\nscene.set_fill_color(TRACK)\nscene.draw_ellipse(40, 110, 28, 28)\nscene.draw_rectangle(54, 110, 272, 28)\nscene.draw_ellipse(298, 110, 28, 28)\n\n# fill (data-sized pill on top of the track)\nscene.set_fill_color(TEAL)\nscene.draw_ellipse(40, 110, 28, 28)\nscene.draw_rectangle(54, 110, max(bar_1_width - 28, 0), 28)\nscene.draw_ellipse(40 + bar_1_width - 28, 110, 28, 28)\n\nscene.set_text_color(\"white\")\nscene.set_text_height(30)\nscene.draw_text(str(value_1), 40, 185)\n\nscene.play_note_and_pause(64, 0.1)\nscene.play_note_and_pause(71, 0.1)\nscene.play_note_and_pause(76, 0.35)\nscene.pause(1.1)\n\n# ----- CARD 3: STAT 2 (XP bar) -----\nscene.clear(INK)\nscene.set_text_style(Font.SANS, FontStyle.BOLD)\nscene.set_text_color(MAGENTA)\nscene.set_text_height(16)\nscene.draw_text(label_2, 40, 90)\n\nscene.set_fill_color(TRACK)\nscene.draw_ellipse(40, 110, 28, 28)\nscene.draw_rectangle(54, 110, 272, 28)\nscene.draw_ellipse(298, 110, 28, 28)\n\nscene.set_fill_color(MAGENTA)\nscene.draw_ellipse(40, 110, 28, 28)\nscene.draw_rectangle(54, 110, max(bar_2_width - 28, 0), 28)\nscene.draw_ellipse(40 + bar_2_width - 28, 110, 28, 28)\n\nscene.set_text_color(\"white\")\nscene.set_text_height(30)\nscene.draw_text(str(value_2), 40, 185)\n\nscene.play_note_and_pause(67, 0.1)\nscene.play_note_and_pause(74, 0.1)\nscene.play_note_and_pause(79, 0.35)\nscene.pause(1.1)\n\n# ----- CARD 4: SHARE CARD (stat readout) -----\nscene.clear(INK)\nscene.set_stroke_color(TEAL)\nscene.set_stroke_width(2)\nscene.draw_line(20, 20, 45, 20)\nscene.draw_line(20, 20, 20, 45)\nscene.draw_line(380, 380, 355, 380)\nscene.draw_line(380, 380, 380, 355)\nscene.remove_stroke_color()\n\nscene.set_text_style(Font.SANS, FontStyle.BOLD)\nscene.set_text_color(\"white\")\nscene.set_text_height(22)\nscene.draw_text(name + \"'s \" + subject, 50, 70)\nscene.set_text_color(TEAL)\nscene.set_text_height(15)\nscene.draw_text(\"— LEVEL COMPLETE —\", 50, 95)\n\nscene.set_text_color(TEAL)\nscene.set_text_height(14)\nscene.draw_text(label_1, 50, 135)\nscene.set_fill_color(TRACK)\nscene.draw_rectangle(50, 145, 200, 16)\nscene.set_fill_color(TEAL)\nscene.draw_rectangle(50, 145, bar_1_width * 0.6, 16)\n\nscene.set_text_color(MAGENTA)\nscene.draw_text(label_2, 50, 185)\nscene.set_fill_color(TRACK)\nscene.draw_rectangle(50, 195, 200, 16)\nscene.set_fill_color(MAGENTA)\nscene.draw_rectangle(50, 195, bar_2_width * 0.6, 16)\n\nscene.set_text_style(Font.SANS, FontStyle.ITALIC)\nscene.set_text_color(\"white\")\nscene.set_text_height(15)\nscene.draw_text(closing_line, 50, 240)\n\nscene.play_note(72, 0.1)\nscene.pause(0.1)\nscene.play_note(76, 0.1)\nscene.pause(0.1)\nscene.play_note(79, 0.1)\nscene.pause(0.1)\nscene.play_note(84, 0.5)\n\nplay_scenes(scene)",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-10T19:13:48.875+00:00\",\"changed\":[\"cloned from \\\"csp-unit1-lesson30-theater-template-b_27_28\\\"\"],\"cloned_from\":\"csp-unit1-lesson30-theater-template-b_27_28\"},{\"changed_at\":\"2026-09-10 19:14:14 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-10 19:14:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-10 19:15:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-10 19:20:00 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-10 19:39:04 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-10 19:53:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

@@ -1,0 +1,21 @@
+---
+driver:
+  name: dokken
+  chef_version: 17.6.18
+  privileged: true
+verifier:
+  name: inspec
+transport:
+  name: dokken
+provisioner:
+  name: dokken
+platforms:
+  - name: ubuntu-18.04
+    driver:
+      image: dokken/ubuntu-18.04
+    run_list:
+      - recipe[apt]
+suites:
+  - name: default
+    run_list:
+      - recipe[cdo-otel-collector]

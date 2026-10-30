@@ -1,32 +1,122 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button, Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Heading1, Heading6} from '@cdo/apps/componentLibrary/typography';
-import ProgressTableV2 from './ProgressTableV2';
-import IconKey from './IconKey';
-import {loadUnitProgress} from '../sectionProgress/sectionProgressLoader';
-import {getCurrentUnitData} from '../sectionProgress/sectionProgressRedux';
 import {connect} from 'react-redux';
-import {unitDataPropType} from '../sectionProgress/sectionProgressConstants';
+import {useParams} from 'react-router-dom';
+
+import {canUseLessonDeepDive} from '@cdo/apps/aichat/helpers/aiChatAccess';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {
+  getSelectedCourseId,
+  getSelectedUnitPosition,
+} from '@cdo/apps/redux/unitSelectionRedux';
+import experiments from '@cdo/apps/util/experiments';
+import i18n from '@cdo/locale';
+
+import {resumeLearnHowToEvaluateTour} from '../studioHomepages/teacherHomepageV2/useLearnHowToEvaluateTour';
+import UnitSelectorV2 from '../teacherDashboardShared/UnitSelectorV2';
+
+import DownloadProgressCsv from './DownloadProgressCsv';
+import IconKey from './IconKey';
+import MoreOptionsDropdown from './MoreOptionsDropdown';
+import ProgressTableV2 from './ProgressTableV2';
+import {unitDataPropType} from './sectionProgressConstants';
+import {loadUnitProgress} from './sectionProgressLoader';
+import {
+  getCurrentUnitData,
+  loadExpandedLessonsFromLocalStorage,
+} from './sectionProgressRedux';
+
 import styles from './progress-table-v2.module.scss';
 
 function SectionProgressV2({
   scriptId,
   sectionId,
+  courseId,
+  unitPosition,
   unitData,
   isLoadingProgress,
   isRefreshingProgress,
+  isLevelProgressLoaded,
+  isLoadingSectionData,
+  expandedLessonIds,
+  loadExpandedLessonsFromLocalStorage,
+  aiChatAccessLevel,
 }) {
-  const [expandedLessonIds, setExpandedLessons] = React.useState([]);
+  const params = useParams();
+  React.useEffect(() => {
+    loadExpandedLessonsFromLocalStorage(scriptId, sectionId);
+    analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_VIEW, {
+      sectionId: sectionId,
+      unitId: scriptId,
+      windowWidth: window.innerWidth,
+      windowHeight: window.innerHeight,
+    });
+  }, [scriptId, sectionId, loadExpandedLessonsFromLocalStorage]);
 
   const levelDataInitialized = React.useMemo(() => {
-    return unitData && !isLoadingProgress && !isRefreshingProgress;
-  }, [unitData, isLoadingProgress, isRefreshingProgress]);
+    return unitData && isLevelProgressLoaded;
+  }, [unitData, isLevelProgressLoaded]);
 
   React.useEffect(() => {
-    if (!unitData && !isLoadingProgress && !isRefreshingProgress) {
-      loadUnitProgress(scriptId, sectionId);
+    if (levelDataInitialized) {
+      resumeLearnHowToEvaluateTour();
     }
-  }, [unitData, isLoadingProgress, isRefreshingProgress, scriptId, sectionId]);
+  }, [levelDataInitialized]);
+
+  // We don't want to load data more than necessary, so we only load data when
+  // the scriptId or sectionId changes, and only if we haven't already loaded
+  // data for that scriptId and sectionId recently.
+  const [loadedData, setLoadedData] = React.useState({
+    scriptId: null,
+    sectionId: null,
+  });
+
+  React.useEffect(() => {
+    let isMounted = true;
+    if (
+      (!unitData || unitData.id !== scriptId) &&
+      (scriptId !== loadedData.scriptId ||
+        sectionId !== loadedData.sectionId) &&
+      !isLoadingProgress &&
+      !isRefreshingProgress &&
+      sectionId &&
+      scriptId &&
+      courseId &&
+      unitPosition &&
+      isMounted // only update loaded data if component is still mounted.
+    ) {
+      loadUnitProgress(scriptId, sectionId, courseId, unitPosition).then(() =>
+        setLoadedData({scriptId, sectionId})
+      );
+    }
+    return () => {
+      isMounted = false;
+    };
+  }, [
+    scriptId,
+    sectionId,
+    courseId,
+    unitPosition,
+    unitData,
+    isLoadingProgress,
+    isRefreshingProgress,
+    loadedData,
+    setLoadedData,
+  ]);
+
+  const galleryUrl = React.useMemo(() => {
+    const lessonPosition = unitData?.lessons?.[0]?.relative_position;
+    if (
+      !unitData?.path ||
+      lessonPosition === null ||
+      lessonPosition === undefined
+    )
+      return null;
+    return `${unitData.path}/lessons/${lessonPosition}/tutor/gallery`;
+  }, [unitData]);
 
   const isViewingValidatedLevel = React.useMemo(() => {
     return unitData?.lessons
@@ -34,24 +124,78 @@ function SectionProgressV2({
       .some(lesson => lesson.levels.some(level => level.isValidated));
   }, [expandedLessonIds, unitData]);
 
+  const isLoading = React.useMemo(() => {
+    if (parseInt(params.sectionId) !== sectionId) {
+      // Show a loading state if the redux section does not yet match the URL section.
+      return true;
+    }
+    return (
+      !levelDataInitialized ||
+      isLoadingSectionData ||
+      isLoadingProgress ||
+      isRefreshingProgress
+    );
+  }, [
+    levelDataInitialized,
+    isLoadingSectionData,
+    isLoadingProgress,
+    isRefreshingProgress,
+    params.sectionId,
+    sectionId,
+  ]);
+
   return (
-    <div className={styles.progressV2Page}>
-      <Heading1>Progress</Heading1>
+    // eslint-disable-next-line react/forbid-dom-props
+    <div className={styles.progressV2Page} data-testid="section-progress-v2">
       <IconKey
         isViewingValidatedLevel={isViewingValidatedLevel}
         expandedLessonIds={expandedLessonIds}
+        sectionId={sectionId}
       />
       <div className={styles.title}>
-        <Heading6 className={styles.titleStudents}>Students</Heading6>
-        <Heading6 className={styles.titleUnitSelector}>
-          UNIT SELECTOR GOES HERE
-        </Heading6>
+        <Typography
+          className={styles.titleStudents}
+          variant="label1"
+          component="h6"
+          gutterBottom
+        >
+          {i18n.students()}
+        </Typography>
+        <Typography
+          className={styles.titleUnitSelector}
+          variant="label1"
+          component="h6"
+          gutterBottom
+        >
+          {i18n.lessonsIn()}
+
+          <UnitSelectorV2 className={styles.titleUnitSelectorDropdown} />
+          {experiments.isEnabledAllowingQueryString(
+            experiments.LESSON_TUTOR_CHALLENGE
+          ) &&
+            canUseLessonDeepDive(aiChatAccessLevel) &&
+            galleryUrl && (
+              <Button
+                href={galleryUrl}
+                variant="outlined"
+                color="tertiary"
+                size="small"
+                startIcon={
+                  <FontAwesomeV6Icon
+                    iconName="gallery-thumbnails"
+                    iconStyle="solid"
+                  />
+                }
+                className={styles.reviewExtensionActivitiesButton}
+              >
+                {i18n.reviewExtensionActivities()}
+              </Button>
+            )}
+          <DownloadProgressCsv isLoading={isLoading} />
+          <MoreOptionsDropdown />
+        </Typography>
       </div>
-      <ProgressTableV2
-        expandedLessonIds={expandedLessonIds}
-        setExpandedLessons={setExpandedLessons}
-        isSkeleton={!levelDataInitialized}
-      />
+      <ProgressTableV2 isSkeleton={isLoading} />
     </div>
   );
 }
@@ -59,17 +203,42 @@ function SectionProgressV2({
 SectionProgressV2.propTypes = {
   scriptId: PropTypes.number,
   sectionId: PropTypes.number,
+  courseId: PropTypes.number,
+  unitPosition: PropTypes.number,
   unitData: unitDataPropType,
   isLoadingProgress: PropTypes.bool.isRequired,
   isRefreshingProgress: PropTypes.bool.isRequired,
+  isLevelProgressLoaded: PropTypes.bool.isRequired,
+  isLoadingSectionData: PropTypes.bool.isRequired,
+  expandedLessonIds: PropTypes.array,
+  loadExpandedLessonsFromLocalStorage: PropTypes.func.isRequired,
+  hideTopHeading: PropTypes.bool,
+  aiChatAccessLevel: PropTypes.string,
 };
 
-export const UnconnectedSectionProgressV2 = SectionProgressV2;
-
-export default connect(state => ({
-  scriptId: state.unitSelection.scriptId,
-  sectionId: state.teacherSections.selectedSectionId,
-  unitData: getCurrentUnitData(state),
-  isLoadingProgress: state.sectionProgress.isLoadingProgress,
-  isRefreshingProgress: state.sectionProgress.isRefreshingProgress,
-}))(SectionProgressV2);
+export default connect(
+  state => ({
+    scriptId: state.unitSelection.scriptId,
+    sectionId: state.teacherSections.selectedSectionId,
+    courseId: getSelectedCourseId(state),
+    unitPosition: getSelectedUnitPosition(state),
+    unitData: getCurrentUnitData(state),
+    isLoadingProgress: state.sectionProgress.isLoadingProgress,
+    isRefreshingProgress: state.sectionProgress.isRefreshingProgress,
+    isLevelProgressLoaded:
+      !!state.sectionProgress.studentLevelProgressByUnit[
+        state.unitSelection.scriptId
+      ],
+    isLoadingSectionData: state.teacherSections.isLoadingSectionData,
+    expandedLessonIds:
+      state.sectionProgress.expandedLessonIds[
+        state.teacherSections.selectedSectionId
+      ] || [],
+    aiChatAccessLevel: state.currentUser.aiChatAccessLevel,
+  }),
+  dispatch => ({
+    loadExpandedLessonsFromLocalStorage(scriptId, sectionId) {
+      dispatch(loadExpandedLessonsFromLocalStorage(scriptId, sectionId));
+    },
+  })
+)(SectionProgressV2);

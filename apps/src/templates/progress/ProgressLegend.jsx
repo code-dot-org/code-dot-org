@@ -1,18 +1,21 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
+
+import BubbleBadge, {BadgeType} from './BubbleBadge';
 import {
   BasicBubble,
   BubbleShape,
   BasicTooltip,
   BubbleSize,
 } from './BubbleFactory';
-import BubbleBadge, {BadgeType} from './BubbleBadge';
 import {defaultBubbleIcon} from './progressHelpers';
 import {levelProgressStyle} from './progressStyles';
-import FontAwesome from '../FontAwesome';
-import {LevelStatus} from '@cdo/apps/util/sharedConstants';
-import _ from 'lodash';
+
 import './styles.scss';
 
 const MAX_UNSPLIT_STATUS_COLUMNS = 5;
@@ -94,7 +97,7 @@ export default class ProgressLegend extends Component {
     const column1 = [
       <td key={_.uniqueId()} />,
       <td key={_.uniqueId()}>
-        {this.getLevelDetails('file-text', i18n.text())}
+        {this.getLevelDetails('file-lines', i18n.text())}
       </td>,
       <td key={_.uniqueId()}>
         {this.getLevelDetails('scissors', i18n.unplugged())}
@@ -103,12 +106,10 @@ export default class ProgressLegend extends Component {
     ];
     const column2 = [
       <td key={_.uniqueId()} />,
-      <td key={_.uniqueId()}>
-        {this.getLevelDetails('video-camera', i18n.video())}
-      </td>,
+      <td key={_.uniqueId()}>{this.getLevelDetails('video', i18n.video())}</td>,
       <td key={_.uniqueId()}>
         {this.getLevelDetails('desktop', i18n.online())}
-        {this.getLevelDetails('check-circle', i18n.progressLegendAssessment())}
+        {this.getLevelDetails('star', i18n.progressLegendAssessment())}
       </td>,
     ];
     const column3 = [
@@ -299,7 +300,7 @@ export default class ProgressLegend extends Component {
   getLevelDetails(icon, text) {
     return (
       <div className="level-details">
-        <FontAwesome icon={icon} />
+        <FontAwesomeV6Icon iconName={icon} />
         {text}
       </div>
     );

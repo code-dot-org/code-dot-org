@@ -1,0 +1,29 @@
+name 'self-paced-TCaAI-L1-ComputationalThinkingCFU_2026'
+title 'Check for Understanding'
+description 'Match each example with their computational thinking practice.'
+height'150'
+width'600'
+
+
+question 'Jordan is testing an AI image generator and says, "Instead of changing everything at once, I\’m only going to adjust the style of the prompt first so I can see exactly what effect that has on the image."'
+answer 'Algorithmic Thinking'
+
+question 'Samira notices that every time she asks AI to generate a “healthy meal,” it produces similar foods and presentation styles. She begins identifying repeated assumptions across multiple outputs.'
+answer 'Pattern Recognition'
+
+question 'Luis is reviewing an AI-generated response and says, "I\’m going to ignore the wording for now and just focus on whether the information itself seems accurate and trustworthy."'
+answer 'Abstraction'
+
+question 'Taylor is trying to figure out why an AI chatbot gave an incorrect answer. She says, "Let\’s break this down into smaller parts: what was the prompt, what information did the AI use, and where did the response go wrong?"'
+answer 'Decomposition'
+
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
+
+markdown <<MARKDOWN
+
+MARKDOWN
+
+allow_multiple_attempts true

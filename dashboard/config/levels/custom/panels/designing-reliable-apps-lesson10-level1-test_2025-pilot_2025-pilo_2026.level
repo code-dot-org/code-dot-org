@@ -1,0 +1,24 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-04-01T21:44:34.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Local Data",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "#Local Data\n\n**Local data** is data that is stored directly on the device that is running the application. \nIt is available immediately and does not require internet connection.\n\n---\n**Example**: A variable in your code, a saved game file on your hard drive, or photos stored on your phone.",
+        "imageUrl": "https://images.code.org/d7a8e62d34fa303ad342c0756b3813a0-local data (1).png",
+        "key": "designing-reliable-apps-lesson10-level1-test_2025-pilot-49152ddd-4c59-478e-9d72-4706b8cb90c4",
+        "layout": "text-bottom-center"
+      }
+    ],
+    "name_suffix": "_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T21:44:34.090+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson10-level1-test_2025-pilot_2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson10-level1-test_2025-pilot_2025-pilot\"}]"
+}]]></config>
+</Panels>

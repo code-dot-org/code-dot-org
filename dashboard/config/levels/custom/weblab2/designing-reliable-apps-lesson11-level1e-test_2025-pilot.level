@@ -1,0 +1,61 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-03-04T22:19:57.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+      },
+      "openFiles": [
+
+      ]
+    },
+    "encrypted": "false",
+    "long_instructions": "# Debug & Validate Live Data\r\n\r\n**Goal:** Confirm your app is rendering real API data correctly and reliably.\r\n\r\n1. **Refresh and Retest:** Reload your app to confirm data still loads correctly.\r\n2. **Check for Undefined Values:** Scan your cards for missing text or broken images.\r\n3. **Log Individual Fields:** If something looks wrong, console.log specific properties to verify field names.\r\n4. **Verify It Is Live:** Change the endpoint parameter (if possible) or refresh to confirm the data updates.\r\n5. **Check Status Codes:** Use the Network tab to confirm successful responses.\r\n\r\n**Optional:** Temporarily break the endpoint URL and observe what happens. This will prepare you for adding proper error handling in the next milestone.",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "code",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "display_name": "Debug & Validate Live API",
+    "bubble_choice_description": "Test and verify your dynamic list. Refresh, inspect data, and fix undefined values to confirm your app is pulling and displaying live API data correctly. ***(supports completing Milestone 1 tasks)***.",
+    "thumbnail_url": "https://images.code.org/48c445297191a646498e0d3e7ba79363-debug.png",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML",
+        "buildCSS",
+        "buildJavaScript",
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "project_template_level_name": "designing-reliable-apps-lesson11-template-test-2025"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-03-04T22:19:57.487+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson11-level1d-test_2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson11-level1d-test_2025-pilot\"},{\"changed_at\":\"2026-03-04 22:23:57 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-04 22:24:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-05 15:58:13 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-05 15:58:36 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Weblab2>

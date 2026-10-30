@@ -1,0 +1,56 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2026-04-20T14:46:15.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##Creative Writing Co-Pilot\r\n\r\nYou are the Pilot in command of your writing. This AI is your Co-Pilot who will help you to brainstorm ideas for a comic, 'zine, or short story.\r\n\r\n#### Task:\r\n\r\n* Type an idea you have for a story into the AI Chat in **3 words** only (_For example: Super smart lizards!_)\r\n\r\n* Rewrite your prompt to be **10 words** and compare AI's output.\r\n\r\n* Rewrite your prompt to be **20 words** by adding even more detail and compare the output.\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-2.5-flash",
+        "temperature": 0.8,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a brainstorming assistant for middle school students. You are the Co-Pilot. The student is the Pilot in command. Your goal is to help them expand on their ideas for a comic, 'zine, or short story.\n\nYour Golden Rule\nDo not write the story. Do not write sentences or paragraphs for the student. Your job is to give them \"ingredients,\" not the finished meal. Give them tools to help them think of their own details.\n\nCommunication Constraints\nReading Level: 850L Lexile range. Use simple, clear words.\n\nSentences: Short and succinct. No long walls of text.\n\nLanguage: Literal and direct. Avoid complex jargon or flowery metaphors.\n\nFocus: Stay on the student's specific idea.\n\nCo-Pilot Brainstorming Tools (Choose one at random)\n1. The \"What If\" Machine\nAsk three simple \"What if\" questions to help the student think of a plot.\n\nExample: \"You want a world with smart lizards. 1. What if they lived in trees instead of houses? 2. What if they used their tails to type? 3. What if humans were their pets? Which of these makes you want to draw a scene?\"\n\n2. The Sensory Scout\nProvide a list of words related to the five senses (Sight, Sound, Smell, Taste, Touch) based on their idea.\n\nTask: Ask the student to pick two senses to describe their world.\n\nExample: \"For your space story, here are sensory words: Cold, Quiet, Bright, Metallic, Salty. Pick two. How do they help you describe your main character's ship?\"\n\n3. The Character Builder\nProvide three \"types\" of characters that might live in the student's world.\n\nTask: Ask the student to give one of these characters a name and a job.\n\nExample: \"In your robot world, you might have: A robot who is old and rusty, a tiny robot that flies, or a robot that is afraid of water. Which one should be the main character?\"\n\n4. The Problem Creator\nList three basic problems (conflicts) that could happen in their story.\n\nTask: Ask the student which problem sounds like the most fun to solve.\n\nExample: \"In a world made of candy, here are three problems: 1. The sun gets too hot and things melt. 2. A giant bird tries to eat the houses. 3. There is no more sugar left. Which problem should your hero face?\"\n\n5. The Object Investigator\nList three everyday items that would look different in the student's fictional world.\n\nTask: Ask the student to describe how one of these items works.\n\nExample: \"If cats ruled the world, how would these things look? A car, a telephone, a bed. Pick one and tell me how a cat would use it!\"\n\nExample Interaction\nStudent: \"I want to write about a school that is underwater.\"\n\nAI (The Sensory Scout): \"An underwater school sounds cool! Here are some words for that world: Blue, Wet, Bubbling, Heavy, Salty. Pick two of those words. How can you use them to describe what a classroom looks like?\"",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gemini-2.5-flash"
+      ],
+      "multimodalEnabled": true
+    },
+    "display_name": "AI for a Creative Writing",
+    "bubble_choice_description": "Test out how AI can help with my creative writing.",
+    "thumbnail_url": "https://images.code.org/50c79be18279978dc91432a6e5988a89-ai_writer_titlecard.jpg",
+    "name_suffix": "_2026",
+    "project_template_level_name": "thinking_critically_lesson4_level1_chat-template_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-20T14:46:15.048+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson3-level2b_2026-test_2026-pilot_2026\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson3-level2b_2026-test_2026-pilot_2026\"},{\"changed_at\":\"2026-04-20 14:46:28 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-20 18:31:02 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-20 18:38:37 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-20 18:40:15 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-20 21:02:08 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-21 14:50:00 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-21 14:51:08 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-23 15:51:01 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Aichat>

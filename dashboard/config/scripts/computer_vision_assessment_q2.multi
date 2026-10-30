@@ -1,0 +1,15 @@
+name 'Computer-Vision-Assessment-Q2'
+title 'Computer Vision Assessment'
+question 'Evaluate the possible ethical implications in the following scenario– 
+
+A fan of a sports team gets scanned by a facial recognition device before being able to enter the stadium to see their team play.'
+wrong 'The system ensures that only fans who purchased tickets online can enter the stadium, which has no ethical implications'
+right 'Privacy concerns arise as the biometric data is collected and stored, potentially leading to misuse or unauthorized sharing of personal information'
+wrong 'Enhanced security measures help prevent ticket fraud and improve the overall safety of attendees, though it may inconvenience some fans'
+wrong 'Facial recognition technology is primarily used to display personalized advertisements, which involves ethical considerations about sharing personal choices'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+
+MARKDOWN

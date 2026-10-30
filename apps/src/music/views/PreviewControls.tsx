@@ -1,8 +1,8 @@
-import React, {useCallback} from 'react';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
+import React, {useCallback} from 'react';
 
-const FontAwesome = require('../../templates/FontAwesome');
-const moduleStyles = require('./preview-controls.module.scss').default;
+import moduleStyles from './preview-controls.module.scss';
 
 /**
  * Set of controls for previewing sounds in various custom Music Lab block fields
@@ -35,7 +35,10 @@ const ClearButton: React.FunctionComponent<ClearButtonProps> = ({
       onClick={onClick}
       type="button"
     >
-      <FontAwesome icon={'trash-o'} className={moduleStyles.previewButton} />
+      <FontAwesomeV6Icon
+        iconName={'trash-can'}
+        className={moduleStyles.previewButton}
+      />
     </button>
   );
 };
@@ -43,20 +46,32 @@ const ClearButton: React.FunctionComponent<ClearButtonProps> = ({
 interface PreviewButtonProps {
   enabled: boolean;
   playPreview: () => void;
+  cancelPreviews: () => void;
+  isPlayingPreview: boolean;
 }
 
 const PreviewButton: React.FunctionComponent<PreviewButtonProps> = ({
   enabled,
   playPreview,
+  cancelPreviews,
+  isPlayingPreview,
 }) => {
+  const onClick = useCallback(() => {
+    if (isPlayingPreview) {
+      cancelPreviews();
+    } else {
+      playPreview();
+    }
+  }, [cancelPreviews, isPlayingPreview, playPreview]);
+
   return (
     <button
       className={moduleStyles.buttonContainer}
-      onClick={enabled ? playPreview : undefined}
+      onClick={enabled ? onClick : undefined}
       type="button"
     >
-      <FontAwesome
-        icon={'play-circle'}
+      <FontAwesomeV6Icon
+        iconName={isPlayingPreview ? 'stop-circle' : 'play-circle'}
         className={classNames(
           moduleStyles.previewButton,
           !enabled && moduleStyles.previewButtonDisabled

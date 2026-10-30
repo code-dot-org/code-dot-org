@@ -1,0 +1,19 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 75,
+  "created_at": "2026-04-01T21:40:48.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "iterating-with-ai-lesson11-level2-test_2025-pilot_v2_2026",
+    "long_instructions": "# **Schema Design & Card Sketch**\r\n\r\n **Goal:** Visually define the project's data structure and initial UI concept\r\n\r\n   1. Given the dataset that you selected, decide which fields you want to keep and write these in under the `Data Schema` section.\r\n   3. Design the UI for a single card view, showing how chosen fields will be displayed in the `Card View` section.\r\n",
+    "display_name": "Schema Design & Card Sketch",
+    "bubble_choice_description": "Decide which fields to keep and outline your schema. Then sketch a simple card layout to show how these fields will appear in your dashboard ***(supports completing Milestone 1 tasks)***.",
+    "thumbnail_url": "https://images.code.org/d2f6256449032ef4cee95fe915800e7c-mood-board.png",
+    "name_suffix": "_2026"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-01T21:40:48.670+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson11-level2-test_2025-pilot\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson11-level2-test_2025-pilot\"},{\"changed_at\":\"2026-05-07 14:26:15 +0000\",\"changed\":[\"project_template_level_name\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
+}]]></config>
+</Sketchlab>

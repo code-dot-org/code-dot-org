@@ -1,0 +1,14 @@
+name 'ai-powered-threats-defenses-postassessment-q10_2025-pilot'
+
+question ‘What is one benefit of using AI in anomaly detection?’
+
+wrong ‘AI always makes better decisions than humans’
+wrong ‘AI provides perfect protection without error’
+right ‘AI can process large datasets faster than humans’
+wrong ‘AI asks users to confirm every activity in real time’
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 8: AAA and AI
+MARKDOWN

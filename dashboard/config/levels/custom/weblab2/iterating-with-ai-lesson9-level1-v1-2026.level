@@ -1,0 +1,89 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-06-09T01:14:10.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "style.css",
+          "contents": "@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap');\n\n:root {\n  --bg: #0d0d0f;\n  --card: #1a1a1f;\n  --card-hi: #222228;\n  --text: #ffffff;\n  --muted: #8a8a93;\n  --cyan: #25f4ee;\n  --magenta: #fe2c55;\n}\n\n* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  font-family: 'Inter', system-ui, sans-serif;\n  background: var(--bg);\n  color: var(--text);\n  padding: 16px;\n  display: flex;\n  justify-content: center;\n  min-height: 100vh;\n}\n\nmain {\n  width: 100%;\n  max-width: 420px;\n}\n\n.app-header {\n  text-align: center;\n  padding: 12px 0 20px;\n}\n\nh1 {\n  font-size: 1.9rem;\n  font-weight: 900;\n  letter-spacing: -0.5px;\n  background: linear-gradient(92deg, var(--cyan), var(--magenta));\n  -webkit-background-clip: text;\n  background-clip: text;\n  -webkit-text-fill-color: transparent;\n}\n\n.tagline {\n  color: var(--muted);\n  font-size: 0.85rem;\n  font-weight: 500;\n  margin-top: 4px;\n}\n\n.controls {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 8px;\n  align-items: center;\n  background: var(--card);\n  padding: 14px;\n  border-radius: 16px;\n  margin-bottom: 18px;\n}\n\n.controls label {\n  font-size: 0.75rem;\n  font-weight: 700;\n  text-transform: uppercase;\n  letter-spacing: 0.5px;\n  color: var(--muted);\n  width: 100%;\n}\n\ninput {\n  flex: 1;\n  min-width: 0;\n  padding: 12px 14px;\n  font-size: 1rem;\n  font-family: inherit;\n  color: var(--text);\n  background: var(--card-hi);\n  border: none;\n  border-radius: 12px;\n  outline: none;\n}\n\ninput:focus {\n  box-shadow: 0 0 0 2px var(--cyan);\n}\n\nbutton {\n  padding: 12px 18px;\n  font-size: 0.95rem;\n  font-weight: 800;\n  font-family: inherit;\n  color: #fff;\n  background: var(--magenta);\n  border: none;\n  border-radius: 12px;\n  cursor: pointer;\n  transition: transform 0.08s ease, filter 0.15s ease;\n  white-space: nowrap;\n}\n\nbutton:hover {\n  filter: brightness(1.12);\n}\n\nbutton:active {\n  transform: scale(0.96);\n}\n\nul {\n  list-style: none;\n}\n\nli {\n  display: flex;\n  justify-content: space-between;\n  align-items: flex-start;\n  gap: 14px;\n  background: var(--card);\n  border-radius: 18px;\n  padding: 18px;\n  margin-bottom: 14px;\n  transition: transform 0.12s ease, background 0.15s ease;\n}\n\nli:hover {\n  transform: translateY(-2px);\n  background: var(--card-hi);\n}\n\nh3 {\n  font-size: 1.15rem;\n  font-weight: 800;\n  margin-bottom: 6px;\n}\n\n.details {\n  font-size: 0.85rem;\n  color: var(--muted);\n  font-weight: 500;\n}\n\n.meta {\n  font-size: 0.72rem;\n  text-transform: uppercase;\n  font-weight: 800;\n  letter-spacing: 0.5px;\n  margin-top: 8px;\n}\n\n.major-label {\n  color: var(--cyan);\n}\n\n.indie-label {\n  color: var(--magenta);\n}\n\n.stats {\n  text-align: right;\n  flex-shrink: 0;\n}\n\n.likes-tag {\n  display: inline-block;\n  background: linear-gradient(92deg, var(--cyan), var(--magenta));\n  color: #0d0d0f;\n  padding: 6px 12px;\n  border-radius: 999px;\n  font-size: 0.8rem;\n  font-weight: 800;\n  white-space: nowrap;\n}\n",
+          "folderId": "0",
+          "active": false
+        },
+        "2": {
+          "id": "2",
+          "name": "data.js",
+          "contents": "const artists = [\n  {\n    name: \"The Icons\",\n    likes: 2500000,\n    genre: \"Pop\",\n    age: 45,\n    albums: 12,\n    label: \"Global Corp\",\n    location: \"Los Angeles\"\n  },\n  {\n    name: \"Golden Era\",\n    likes: 1800000,\n    genre: \"Rock\",\n    age: 52,\n    albums: 15,\n    label: \"Global Corp\",\n    location: \"London\"\n  },\n  {\n    name: \"Star Power\",\n    likes: 3100000,\n    genre: \"Pop\",\n    age: 38,\n    albums: 9,\n    label: \"Global Corp\",\n    location: \"New York\"\n  },\n  {\n    name: \"Neon Soul\",\n    likes: 850,\n    genre: \"R&B\",\n    age: 22,\n    albums: 1,\n    label: \"Indie\",\n    location: \"Atlanta\"\n  },\n  {\n    name: \"Folk Tales\",\n    likes: 420,\n    genre: \"Acoustic\",\n    age: 26,\n    albums: 2,\n    label: \"Self-Released\",\n    location: \"Austin\"\n  },\n  {\n    name: \"Glitch Mode\",\n    likes: 150,\n    genre: \"Electronic\",\n    age: 19,\n    albums: 0,\n    label: \"SoundCloud\",\n    location: \"Berlin\"\n  },\n  {\n    name: \"Velvet Voice\",\n    likes: 1200000,\n    genre: \"Soul/Pop\",\n    age: 41,\n    albums: 8,\n    label: \"Global Corp\",\n    location: \"Chicago\"\n  },\n  {\n    name: \"Underground King\",\n    likes: 900,\n    genre: \"Hip Hop\",\n    age: 21,\n    albums: 1,\n    label: \"Indie\",\n    location: \"Detroit\"\n  }\n];",
+          "folderId": "0",
+          "active": true
+        },
+        "3": {
+          "id": "3",
+          "name": "helpers.js",
+          "contents": "\n// DOM element used for displaying the feed\nconst artistList = document.getElementById(\"artistList\");\n\n// Build one feed card for a single artist and add it to the list\nconst addArtistCard = (artist) => {\n  const li = document.createElement(\"li\");\n\n  // Left side: artist info\n  const info = document.createElement(\"div\");\n  info.className = \"artist-info\";\n\n  const name = document.createElement(\"h3\");\n  name.textContent = artist.name;\n\n  const details = document.createElement(\"p\");\n  details.className = \"details\";\n  details.textContent = artist.age + \"yo · \" + artist.genre + \" · \" + artist.albums + \" albums\";\n\n  const meta = document.createElement(\"p\");\n  const labelClass = artist.label === \"Global Corp\" ? \"major-label\" : \"indie-label\";\n  meta.className = \"meta \" + labelClass;\n  meta.textContent = artist.label;\n\n  info.appendChild(name);\n  info.appendChild(details);\n  info.appendChild(meta);\n\n  // Right side: like count\n  const stats = document.createElement(\"div\");\n  stats.className = \"stats\";\n\n  const likes = document.createElement(\"span\");\n  likes.className = \"likes-tag\";\n  likes.textContent = \"♥ \" + artist.likes.toLocaleString();\n\n  stats.appendChild(likes);\n\n  li.appendChild(info);\n  li.appendChild(stats);\n  artistList.appendChild(li);\n};\n",
+          "folderId": "0",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "script.js",
+          "contents": "const trendingBtn = document.getElementById(\"trendingBtn\");\n\n// Display a list of artists in the feed\nconst renderArtists = (list) => {\n  artistList.innerHTML = \"\";\n\n  for (let i = 0; i < list.length; i++) {\n    addArtistCard(list[i]);\n  }\n};\n\n// Returns a new array of the \"trending\" artists.\nconst filterTrendingArtists = () => {\n  let trending = [];\n\n  for (let i = 0; i < artists.length; i++) {\n    if (artists[i].likes >= 1000000) {\n      trending.push(artists[i]);\n    }\n  }\n\n  return trending;\n};\n\n// Event listener\ntrendingBtn.addEventListener(\"click\", () => {\n  const trendingArtists = filterTrendingArtists();\n  renderArtists(trendingArtists);\n});\n\n// Initial render\nrenderArtists(artists);\n",
+          "folderId": "0",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Art Share: For You</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"data.js\" defer></script>\n  <script src=\"helpers.js\" defer></script>\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n\n  <main>\n    <header class=\"app-header\">\n      <h1>For You</h1>\n      <p class=\"tagline\">trending artists right now</p>\n    </header>\n\n    <div class=\"controls\">\n      <button id=\"trendingBtn\">Show Trending Artists</button>\n    </div>\n\n    <ul id=\"artistList\"></ul>\n  </main>\n\n</body>\n</html>\n",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "2",
+        "4"
+      ]
+    },
+    "encrypted": "false",
+    "long_instructions": "## Trending Artists Filter\r\n\r\nImagine you're curating the homepage of a music streaming platform. The algorithm only shows \"trending artists,\" but it seems to be the same few people every week. \r\n\r\nExplore the filter to figure out why.\r\n\r\nFollow the instructions and record your observations in your activity guide. \r\n",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "name_suffix": "_2026",
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "explainCode",
+        "documentation"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMrUZWTpPmEztAc9I5Sh\ny6YxdfqEuUD64BpCyEmKqArWaA==\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-06-09T01:14:10.605+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson9-level1-test_2025-pilot_2026\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson9-level1-test_2025-pilot_2026\"},{\"changed_at\":\"2026-06-09 01:35:08 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-06-09 01:46:05 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-06-09 04:38:59 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-06-09 04:40:26 +0000\",\"changed\":[\"initial_view_mode\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-06-10 15:44:21 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-10 15:44:25 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-10 15:46:13 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-10 15:53:00 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-10 15:57:25 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_prompt_settings\",\"level_system_prompt\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-10 15:59:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-10 15:59:33 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-10 18:49:23 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_prompt_settings\",\"level_system_prompt\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-10 19:13:50 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_prompt_settings\",\"level_system_prompt\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-10 19:37:04 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-10 19:37:11 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-10 19:37:15 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-10 19:38:08 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-10 19:38:35 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-10 19:38:49 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-11 02:10:46 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

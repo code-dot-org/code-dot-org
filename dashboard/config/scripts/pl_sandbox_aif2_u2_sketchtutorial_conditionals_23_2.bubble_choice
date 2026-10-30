@@ -1,0 +1,8 @@
+name 'pl-sandbox-aif2-u2-sketchtutorial-conditionals-23-2'
+display_name 'Creating Conditionals with Flowcharts'
+description '#### In this level you will create a flowchart using Sketch Lab. If you need support, use the AI to help plan your flowchart, or feel free to jump right in to Sketch Lab.'
+uses_lab2
+
+sublevels
+level 'pl-sandbox-aif2-u2-sketchlab-a'
+level 'pl-sandbox-aif2-u2-sketchlab-b'

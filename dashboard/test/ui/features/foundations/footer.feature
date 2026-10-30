@@ -3,57 +3,38 @@ Feature: Checking the footer appearance
   @eyes
   Scenario: Desktop puzzle using light small footer
     When I open my eyes to test "Desktop puzzle using light small footer"
-    Given I am on "http://studio.code.org/s/allthethings/lessons/2/levels/1?noautoplay=true"
-    And I wait for the page to fully load
+    Given I am on "http://studio.code.org/courses/ui-test-all-the-levels/units/1/lessons/2/levels/1?noautoplay=true"
+    And I wait for the lab page to fully load
 
     Then I see no difference for "small footer"
 
-    When I press the first ".copyright-link" element
+    When I press the first ".copyright-button" element
     And I wait for 0.25 seconds
-    Then I see no difference for "copyright flyout"
-    And I press the first ".copyright-link" element
+    Then I see no difference for "copyright modal"
+    And I press the first "#ui-close-dialog" element
     And I wait for 0.25 seconds
-
-    When I drag the visualization grippy by -400 pixels
-    Then I see no difference for "smaller small footer"
-    And I wait for 0.25 seconds
-
-    When I press the first ".copyright-link" element
-    And I wait for 0.25 seconds
-    Then I see no difference for "smaller copyright flyout"
-    And I press the first ".copyright-link" element
-    And I wait for 0.25 seconds
-
-    # Now, variations where we resize while the flyouts are open, to make
-    # sure they update their size/position properly during the resize
-
-    When I press the first ".copyright-link" element
-    And I wait for 0.25 seconds
-    Then I see no difference for "copyright resize before"
-    When I drag the visualization grippy by -400 pixels
-    Then I see no difference for "copyright resize after"
 
     Then I close my eyes
 
   @eyes
   Scenario: Desktop Minecraft puzzle using dark small footer
     When I open my eyes to test "Desktop Minecraft puzzle using dark small footer"
-    Given I am on "http://studio.code.org/s/mc/lessons/1/levels/14?noautoplay=true"
-    And I wait for the page to fully load
+    Given I am on "http://studio.code.org/courses/ui-test-all-the-levels/units/1/lessons/25/levels/1?noautoplay=true"
+    And I wait for the lab page to fully load
 
     Then I see no difference for "small footer"
 
-    When I press the first ".copyright-link" element
+    When I press the first ".copyright-button" element
     And I wait for 0.25 seconds
-    Then I see no difference for "copyright flyout"
+    Then I see no difference for "copyright modal"
 
     Then I close my eyes
 
   @eyes
   Scenario: Desktop Star Wars share small footer
     When I open my eyes to test "Desktop Star Wars share small footer"
-    Given I am on "http://studio.code.org/s/starwars/lessons/1/levels/15?noautoplay=true"
-    And I wait for the page to fully load
+    Given I am on "http://studio.code.org/courses/ui-test-all-the-levels/units/1/lessons/24/levels/9?noautoplay=true"
+    And I wait for the lab page to fully load
     And I press "runButton"
     And I wait until element "#finishButton" is visible
     And I press "finishButton"
@@ -67,7 +48,7 @@ Feature: Checking the footer appearance
     Then I see no difference for "footer menu"
 
     When I press menu item "Copyright"
-    Then I see no difference for "copyright flyout"
+    Then I see no difference for "copyright modal"
     And I wait for 0.25 seconds
     And I close the small footer menu
 
@@ -77,9 +58,9 @@ Feature: Checking the footer appearance
     And I wait until element "#runButton" is visible
     Then I see no difference for "how it works small footer"
 
-    When I press the first ".copyright-link" element
+    When I press the first ".copyright-button" element
     And I wait for 0.25 seconds
-    Then I see no difference for "how it works copyright flyout"
+    Then I see no difference for "how it works copyright modal"
 
     Then I close my eyes
 
@@ -87,8 +68,8 @@ Feature: Checking the footer appearance
   @eyes @skip
   Scenario: Desktop Minecraft share small footer
     When I open my eyes to test "Desktop Minecraft share small footer"
-    Given I am on "http://studio.code.org/s/mc/lessons/1/levels/14?noautoplay=true"
-    And I wait for the page to fully load
+    Given I am on "http://studio.code.org/courses/mc/units/1/lessons/1/levels/14?noautoplay=true"
+    And I wait for the lab page to fully load
     And I press "runButton"
     And I wait until element "#sharing-dialog-copy-button" is visible
     And I navigate to the share URL
@@ -100,7 +81,7 @@ Feature: Checking the footer appearance
     Then I see no difference for "footer menu"
 
     When I press menu item "Copyright"
-    Then I see no difference for "copyright flyout"
+    Then I see no difference for "copyright modal"
     And I wait for 0.25 seconds
     And I close the small footer menu
 
@@ -116,9 +97,9 @@ Feature: Checking the footer appearance
     And I close the small footer menu
     And I wait for 0.25 seconds
 
-    When I press the first ".copyright-link" element
+    When I press the first ".copyright-button" element
     And I wait for 0.25 seconds
-    Then I see no difference for "how it works copyright flyout"
+    Then I see no difference for "how it works copyright modal"
 
     Then I close my eyes
 
@@ -136,15 +117,15 @@ Feature: Checking the footer appearance
     Then I see no difference for "footer menu"
 
     When I press menu item "Copyright"
-    Then I see no difference for "copyright flyout"
+    Then I see no difference for "copyright modal"
 
     Then I close my eyes
 
   @eyes_mobile @skip
   Scenario: Mobile Star Wars share small footer
     When I open my eyes to test "Mobile Star Wars share small footer"
-    Given I am on "http://studio.code.org/s/starwars/lessons/1/levels/15?noautoplay=true"
-    And I wait for the page to fully load
+    Given I am on "http://studio.code.org/courses/starwars/units/1/lessons/1/levels/15?noautoplay=true"
+    And I wait for the lab page to fully load
     And I press "runButton"
     And I wait until element "#finishButton" is visible
     And I press "finishButton"
@@ -164,7 +145,7 @@ Feature: Checking the footer appearance
     Then I see no difference for "footer menu"
 
     When I press menu item "Copyright"
-    Then I see no difference for "copyright flyout"
+    Then I see no difference for "copyright modal"
 
     Then I close my eyes
 
@@ -172,8 +153,8 @@ Feature: Checking the footer appearance
   @eyes_mobile @skip
   Scenario: Mobile Minecraft share small footer
     When I open my eyes to test "Mobile Minecraft share small footer"
-    Given I am on "http://studio.code.org/s/mc/lessons/1/levels/14?noautoplay=true"
-    And I wait for the page to fully load
+    Given I am on "http://studio.code.org/courses/mc/units/1/lessons/1/levels/14?noautoplay=true"
+    And I wait for the lab page to fully load
     And I press "runButton"
     And I wait until element "#sharing-dialog-copy-button" is visible
     And I rotate to portrait
@@ -191,7 +172,7 @@ Feature: Checking the footer appearance
     Then I see no difference for "footer menu"
 
     When I press menu item "Copyright"
-    Then I see no difference for "copyright flyout"
+    Then I see no difference for "copyright modal"
 
     Then I close my eyes
 
@@ -214,6 +195,6 @@ Feature: Checking the footer appearance
     Then I see no difference for "footer menu"
 
     When I press menu item "Copyright"
-    Then I see no difference for "copyright flyout"
+    Then I see no difference for "copyright modal"
 
     Then I close my eyes

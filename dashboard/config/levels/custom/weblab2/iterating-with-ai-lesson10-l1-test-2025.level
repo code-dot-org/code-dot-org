@@ -1,0 +1,51 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2025-11-25T21:17:05.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "code",
+    "ai_tutor_mode": "produce",
+    "level_system_prompt": "You are a data schema specialist guiding students to discover ambiguous field names that confuse AI systems. When students share their data, ask probing questions to help them identify confusing fields themselves rather than pointing out specific issues. Encourage them to consider: \"What scale might the AI assume for ratings?\" and \"How could mixed data types cause misinterpretation?\" Guide them toward clear naming conventions through discovery, emphasizing that good schema design prevents AI misunderstandings.",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "script.js",
+          "language": "js",
+          "contents": "let reviews = [\n  {\n    \"price\": \"$$\",          \n    \"stars\": \"5\",\n    \"wait\": \"30\",\n    \"recommend\": \"yes\",\n    \"name\": \"Joe's Diner\",\n    \"type\": \"casual\"\n  },\n  {\n    \"price\": \"cheap\",\n    \"stars\": \"4/5\",\n    \"wait\": \"15-20\",\n    \"recommend\": \"no\",\n    \"name\": \"Maria's Cafe\", \n    \"type\": \"cafe\"\n  },\n  {\n    \"price\": \"$$$\", \n    \"stars\": \"8\",\n    \"wait\": \"reservation\",\n    \"recommend\": \"yes\",\n    \"name\": \"Fine Bistro\",\n    \"type\": \"formal\"\n  }\n];",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1"
+      ]
+    },
+    "long_instructions": "## Investigate Misleading Schema\r\n\r\nYour AI teammate is analyzing product review data but keeps drawing wrong conclusions because the field names are confusing! Your job is to diagnose and fix the schema so the AI understands the data correctly.\r\n\r\n---\r\n\r\n**Do This:**\r\n\r\n1. Highlight the `reviews` data object in script.js and add it to AI Tutor as context.\r\n2. Ask the AI:\r\n    - \"What's confusing about the field names?\"\r\n    - \"Why is AI interpreting stars incorrectly?\"\r\n    - \"Which field names are unclear?\"\r\n\r\n3. Ask the AI for improvement strategies:\r\n    - \"What would be more explicit field names?\"\r\n    - \"What's the best data type for the recommend field?\"\r\n    - \"How can we standardize inconsistent rating values?\"\r\n\r\n4. Update `reviews` by renaming any unclear fields and standardize data types.\r\n\r\n5. Ask the AI to review your changes:\r\n    - \"Are the new field names clear enough?\"\r\n    - \"Test the schema with extreme values.\"\r\n",
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMrWt2HFvH/UaEd1Aw6m\nH7NPCh2Lr52063tDqEoStRSedh64Z1HOZk95zDLnqZPoji3tRX2sLI/hlIem\nHDHMZBM3Kv14W9k7/MNAUOIofbAgQoH3jn1cLKK0hHtPvD1bDqnlTXe5R+kZ\neuAiQyhiLVJeONZKHxIXpcPVj+sUwgr8cRdEBby+EC3QhNI5RYfcjmrmBmeC\nS8BSD47Ws3bUqmQIPZuP+JwbAAfzkSTPci4ShZCBL0WukEx7/GDGrEeYIQiF\nupRmE8stAHQR+CPIZUWRmJlprKqYbOlzvFtUpw/s1Em4gUeOYZiILpTrNH2b\nSnJW3f85SLIGzanrTnDVV1R/Epm28IGhZ671d8SUNzNJBs0l2t0Twksjelvp\nw32vYfJpMELOg7PzSKSlAb2vVKO9liP9MJAXpw8W6lEOd4h2uoZogvNE7/WU\nnVHXhvjDu2jl8kDzeZqMuUjHQOkYbvjDL3cSbig1Bmfb9UXzO2es3rkKsxCt\nD9ebt7LhAYZSXgy3c/pxOTb70AKVTHEhCuQYCbrpARpJdAXpbVT4LwThvsoy\ntvKn3Y9xe7zBGu+pk4qf7uwkfhnIe4wSH2+LMRvj6+XzcghdbsQbeM+IHIs1\nYrfApSC7SZFPYPoMH8Qc1U8kv+Pm0JRrpWsrsotqP8mMd0rner2Ci3nSco03\n0Kk8pGifXRVpN6rTUtd0rZ4/DKYSMYb3zo6Ow33ru9A2KwkO3KPlU+IaBDy1\nFxtFaAflCJFFgEjVmMWFx9mZ+hnk/jZxDLZXqB1URW3LOgSTQxUIeJYVkLBM\ndLVlSie2L7A+zqDQUy1sZbckKLjrEbnLFc395Y+qVAAtypfCKAJi6XLwkb2j\njb3/WkHw48H8Oqf/aXNXBfoZtubjSjwFlIGEvyGRllX5rplFqTSNcOIGGKL6\nnT26XwfwI5Z++Sf6CBbU1NglabNfAGsSQE8upxfUD5f/+L5nkfTXJ+W3KPWq\nOHv6qATmszC7gc9fZw/sBO3yJQ==\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-11-25 22:59:17 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-11-25 22:59:37 +0000\",\"changed\":[\"initial_view_mode\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-11-25 23:01:31 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-11-25 23:44:13 +0000\",\"changed\":[\"level_system_prompt\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-11-25 23:44:51 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-11-25 23:46:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-11-25 23:47:00 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-11-25 23:48:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-11-25 23:48:55 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-11-25 23:51:13 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-11-25 23:52:10 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-11-25 23:52:59 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-11-25 23:53:27 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-11-25 23:53:50 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-11-25 23:56:25 +0000\",\"changed\":[\"ai_tutor_mode\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-11-25 23:57:39 +0000\",\"changed\":[\"ai_tutor_mode\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-11-25 23:59:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-11-26 00:00:01 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Weblab2>

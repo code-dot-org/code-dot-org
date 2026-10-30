@@ -1,11 +1,13 @@
-import Sounds from '../../Sounds';
 import React from 'react';
-import ReactDOM from 'react-dom';
+
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
+
+import Sounds from '../../Sounds';
 import loadable from '../../util/loadable';
 const ImagePicker = loadable(() => import('../components/ImagePicker'));
 const SoundPicker = loadable(() => import('../components/SoundPicker'));
-import Dialog from '../LegacyDialog';
 import {RecordingFileType} from '../components/recorders';
+import Dialog from '../LegacyDialog';
 
 module.exports = {
   showAssetManager,
@@ -57,7 +59,7 @@ function showAssetManager(assetChosen, typeFilter, onClose, options) {
 
   let pickerType = typeFilter === 'audio' ? SoundPicker : ImagePicker;
 
-  ReactDOM.render(
+  createReactRoot(
     React.createElement(pickerType, {
       typeFilter: typeFilter,
       customAllowedExtensions: options.customAllowedExtensions,
@@ -79,7 +81,10 @@ function showAssetManager(assetChosen, typeFilter, onClose, options) {
       currentValue: options.currentValue,
       currentImageType: options.currentImageType,
     }),
-    codeDiv
+    codeDiv,
+    {
+      legacyReactDomRender: true,
+    }
   );
 
   dialog.show();

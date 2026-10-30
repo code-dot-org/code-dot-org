@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-12-14T09:38:10.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Choose one category: user input, data storage, or data transfer. Describe one vulnerability that could occur in that category and explain which CIA or AAA pillar it impacts. \r\n\r\n:::details [Need help starting your response? Consider using the frames below:]\r\n- One vulnerability in the _____ category is _______ because ___\r\n- This impacts the [CIA/AAA] pillar since _________\r\n:::",
+    "stay_on_level_after_submit": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "teacher_markdown": "**Assessment Opportunity**\r\n\r\nUse this level to confirm students understand vulnerabilities well enough to choose defenses that address them.\r\n- If students mix up pillars (e.g., calling a data-leak problem “availability”), briefly revisit the CIA and AAA definitions.\r\n- If students describe problems without naming a specific system weakness, point them back to their shaded diagrams and ask: What part of the system could fail?\r\n- If students demonstrate strong understanding, move on to selecting layered defenses within the cost and friction budget.",
+    "title": "Check for Understanding"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-12-14T09:38:10.829+00:00\",\"changed\":[\"cloned from \\\"ai-powered-threats-defenses-lesson11-level1_2025-v2\\\"\"],\"cloned_from\":\"ai-powered-threats-defenses-lesson11-level1_2025-v2\"},{\"changed_at\":\"2025-12-14 09:40:22 +0000\",\"changed\":[\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

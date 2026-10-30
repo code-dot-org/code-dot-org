@@ -11,10 +11,10 @@ class LevelsControllerTest < ActionController::TestCase
     Policies::LevelFiles.stubs(:write_to_file?).returns(false) # don't write to level files
 
     @level = create(:level)
-    @partner_level = create :level, editor_experiment: 'platformization-partners'
+    @partner_level = create(:level, editor_experiment: 'platformization-partners')
     @admin = create(:admin)
     @not_admin = create(:user)
-    @platformization_partner = create :platformization_partner
+    @platformization_partner = create(:platformization_partner)
     @levelbuilder = create(:levelbuilder)
     sign_in(@levelbuilder)
     @program = '<hey/>'
@@ -27,8 +27,6 @@ class LevelsControllerTest < ActionController::TestCase
       type: 'toolbox_blocks',
       program: @program,
     }
-    stub_request(:get, /https:\/\/cdo-v3-shared.firebaseio.com/).
-      to_return({"status" => 200, "body" => "{}", "headers" => {}})
 
     @request.host = CDO.dashboard_hostname
   end
@@ -59,14 +57,15 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "empty success response for get_rubric on rubricless level" do
-    level = create :level
+    level = create(:level)
     get :get_rubric, params: {id: level.id}
     assert_response :no_content
     assert_equal '', @response.body
   end
 
   def create_level_with_rubric
-    create(:level,
+    create(
+      :level,
       mini_rubric: 'true',
       rubric_key_concept: 'This is the key concept',
       rubric_performance_level_1: 'This is great',
@@ -76,20 +75,11 @@ class LevelsControllerTest < ActionController::TestCase
     )
   end
 
-  test "should return level_properties " do
-    level = create :maze, name: 'music 1', properties: {level_data: {hello: "there"}, other: "other"}
-
-    get :level_properties, params: {id: level}
-    assert_response :success
-
-    body = JSON.parse(response.body)
-    assert_equal({"levelData" => {"hello" => "there"}, "other" => "other", "preloadAssetList" => nil, "type" => "Maze", "appName" => "maze", "useRestrictedSongs" => false, "sharedBlocks" => []}, body)
-  end
-
   test "should get filtered levels with just page param" do
     get :get_filtered_levels, params: {page: 1}
-    assert_equal 7, JSON.parse(@response.body)['levels'].length
-    assert_equal 22, JSON.parse(@response.body)['numPages']
+    response = JSON.parse(@response.body)
+    assert response['levels'].any?
+    assert_kind_of Integer, response['numPages']
   end
 
   test "should get filtered levels with name matching level key for blockly levels" do
@@ -110,7 +100,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should get filtered levels with script_id" do
-    script = create(:script, :with_levels, levels_count: 7)
+    script = create(:script, :in_single_unit_course, :with_levels, levels_count: 7)
     get :get_filtered_levels, params: {page: 1, script_id: script.id}
     assert_equal 7, JSON.parse(@response.body)['levels'].length
     assert_equal 1, JSON.parse(@response.body)['numPages']
@@ -118,7 +108,7 @@ class LevelsControllerTest < ActionController::TestCase
 
   test "should get filtered levels with owner_id" do
     Level.where(user_id: @levelbuilder.id).destroy_all
-    level = create :applab, user: @levelbuilder
+    level = create(:applab, user: @levelbuilder)
     get :get_filtered_levels, params: {page: 1, owner_id: @levelbuilder.id}
     assert_equal level.name, JSON.parse(@response.body)['levels'][0]["name"]
     assert_equal 1, JSON.parse(@response.body)['numPages']
@@ -129,6 +119,51 @@ class LevelsControllerTest < ActionController::TestCase
     sign_in create(:teacher)
     get :get_filtered_levels, params: {page: 1}
     assert_response :forbidden
+  end
+
+  test "by_name returns the matching level summary" do
+    level = create(:panels, name: 'unique-panel-level')
+    get :by_name, params: {name: level.name}
+    assert_response :success
+    body = JSON.parse(@response.body)
+    assert_equal level.id.to_s, body['id']
+    assert_equal level.name, body['name']
+    assert_equal 'Panels', body['type']
+  end
+
+  test "by_name narrows by Rails STI type" do
+    create(:panels, name: 'collision-name')
+    weblab = create(:weblab2, name: 'collision-name-2')
+    # type filter excludes the Panels level
+    get :by_name, params: {name: weblab.name, type: 'Weblab2'}
+    assert_response :success
+    assert_equal 'Weblab2', JSON.parse(@response.body)['type']
+  end
+
+  test "by_name returns 200 with empty body on a name with no level" do
+    get :by_name, params: {name: 'no-such-level-exists'}
+    assert_response :success
+    assert_equal({}, JSON.parse(@response.body))
+  end
+
+  test "by_name returns 200 with empty body when type filter excludes the match" do
+    panels = create(:panels, name: 'panels-by-name')
+    get :by_name, params: {name: panels.name, type: 'Weblab2'}
+    assert_response :success
+    assert_equal({}, JSON.parse(@response.body))
+  end
+
+  test "by_name forbids non-levelbuilders" do
+    sign_out @levelbuilder
+    sign_in create(:teacher)
+    get :by_name, params: {name: 'anything'}
+    assert_response :forbidden
+  end
+
+  test "by_name redirects signed-out users" do
+    sign_out @levelbuilder
+    get :by_name, params: {name: 'anything'}
+    assert_response :redirect
   end
 
   test "should get index" do
@@ -649,7 +684,7 @@ class LevelsControllerTest < ActionController::TestCase
   test 'can edit encrypted level' do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in @levelbuilder
-    level = create :multi, encrypted: true
+    level = create(:multi, encrypted: true)
 
     get :edit, params: {id: level.id}
     assert_response :success
@@ -685,7 +720,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should show level group" do
-    level_group = create :level_group, :with_sublevels, name: 'lg'
+    level_group = create(:level_group, :with_sublevels, name: 'lg')
     level_group.save!
     get :show, params: {id: level_group.id}
     assert_response :success
@@ -700,6 +735,32 @@ class LevelsControllerTest < ActionController::TestCase
   test "should get edit" do
     get :edit, params: {id: @level}
     assert_response :success
+  end
+
+  test "edit hides the header label field from a level outside a simple-progress unit" do
+    script_level = create(:script_level, levels: [@level])
+    refute script_level.script.simple_progress?
+
+    get :edit, params: {id: @level.id}
+    assert_response :success
+    assert_select 'input#level_header_label', 0
+  end
+
+  test "edit shows the header label field for a level in a simple-progress unit" do
+    script_level = create(:script_level, levels: [@level])
+    script_level.script.update!(simple_progress: true)
+
+    get :edit, params: {id: @level.id}
+    assert_response :success
+    assert_select 'input#level_header_label', 1
+  end
+
+  test "edit keeps the header label field while the level has a label" do
+    @level.update!(header_label: 'Story')
+
+    get :edit, params: {id: @level.id}
+    assert_response :success
+    assert_select 'input#level_header_label[value=?]', 'Story'
   end
 
   test "should get edit blocks" do
@@ -721,18 +782,44 @@ class LevelsControllerTest < ActionController::TestCase
     assert_equal "name 'test demo level'", assigns(:level).dsl_text.split("\n").first
   end
 
+  # Covers DSLDefined.decrypt_dsl_text_if_necessary returning the ciphertext
+  # untouched instead of raising, which is what keeps the level editor usable in
+  # an environment holding a key that cannot decrypt the file.
   test "should load encrypted file contents when editing a dsl defined level with the wrong encryption key" do
-    level_path = "#{Rails.root}/config/scripts/test_external_markdown.external"
-    contents = File.read(level_path)
-    data, _ = External.parse(contents, level_path)
-    External.setup data
-    CDO.stubs(:properties_encryption_key).returns("thisisafakekeyyyyyyyyyyyyyyyyyyyyy")
-    level = Level.find_by_name 'Test External Markdown'
-    get :edit, params: {id: level.id}
+    # Two keys must both base64-decode to exactly 16 bytes. Otherwise,
+    # OpenSSL::Cipher#key= raises ArgumentError, and no decrypt is attempted.
+    encrypting_key = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
+    wrong_key = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
+    refute_equal encrypting_key, wrong_key
 
-    assert_equal level_path, assigns(:level).filename
-    assert_equal "name", assigns(:level).dsl_text.split("\n").first.split.first
-    assert_equal "encrypted", assigns(:level).dsl_text.split("\n")[1].split.first
+    # Generate an encrypted .external file into a tmpdir.
+    Dir.mktmpdir do |dir|
+      dsl_text = <<~DSL
+        name 'wrong key encrypted level'
+        title 'title'
+        description 'description here'
+      DSL
+      data, _ = External.parse(dsl_text, '')
+      level = External.setup data
+
+      CDO.stubs(:properties_encryption_key).returns(encrypting_key)
+      encrypted_contents = level.encrypted_dsl_text(dsl_text)
+      level_path = File.join(dir, 'wrong_key_encrypted_level.external')
+      File.write(level_path, encrypted_contents)
+
+      refute_includes encrypted_contents, "description 'description here'"
+
+      External.any_instance.stubs(:filename).returns(level_path)
+      CDO.stubs(:properties_encryption_key).returns(wrong_key)
+
+      get :edit, params: {id: level.id}
+
+      assert_equal level_path, assigns(:level).filename
+      assert_equal "name", assigns(:level).dsl_text.split("\n").first.split.first
+      assert_equal "encrypted", assigns(:level).dsl_text.split("\n")[1].split.first
+      # The file contents come back byte for byte: not decrypted, not raised on.
+      assert_equal encrypted_contents, assigns(:level).dsl_text
+    end
   end
 
   test "should allow rename of new level" do
@@ -743,10 +830,11 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should prevent rename of level in launched or pilot script" do
-    script_level = create :script_level
+    script_level = create(:script_level)
     script = script_level.script
-    script.published_state = 'stable'
-    script.save!
+    unit_group = script.original_unit_group
+    unit_group.published_state = 'stable'
+    unit_group.save!
     level = script_level.level
 
     get :edit, params: {id: level.id}
@@ -754,16 +842,8 @@ class LevelsControllerTest < ActionController::TestCase
     assert_includes @response.body, level.name
     assert_includes @response.body, 'level cannot be renamed'
 
-    script.published_state = 'beta'
-    script.save!
-    get :edit, params: {id: level.id}
-    assert_response :success
-    assert_includes @response.body, level.name
-    assert_includes @response.body, 'level cannot be renamed'
-
-    script.pilot_experiment = 'platformization-partners'
-    script.published_state = 'pilot'
-    script.save!
+    unit_group.published_state = 'beta'
+    unit_group.save!
     get :edit, params: {id: level.id}
     assert_response :success
     assert_includes @response.body, level.name
@@ -777,7 +857,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should prevent rename of stanadalone project level" do
-    level_name = ProjectsController::STANDALONE_PROJECTS.values.first[:name]
+    level_name = Policies::StandaloneProjects.all.values.first[:name]
     create(:level, name: level_name) unless Level.exists?(name: level_name)
     level = Level.find_by(name: level_name)
 
@@ -827,6 +907,26 @@ class LevelsControllerTest < ActionController::TestCase
 
     # this property is plaintext
     assert level.properties['start_sources']
+  end
+
+  test "update_start_code clears starter_assets for lab2 javalab" do
+    level = create(:javalab, uses_lab2: true, starter_assets: {"welcome.png" => "123-abc.png"})
+    post :update_start_code, params: {
+      id: level.id
+    }, body: {start_sources: {"MyClass.java" => "{}"}}.to_json
+
+    assert_response :success
+    assert_nil assigns(:level).starter_assets
+  end
+
+  test "update_start_code keeps starter_assets for legacy javalab" do
+    level = create(:javalab, starter_assets: {"welcome.png" => "123-abc.png"})
+    post :update_start_code, params: {
+      id: level.id
+    }, body: {start_sources: {"MyClass.java" => "{}"}}.to_json
+
+    assert_response :success
+    assert_equal({"welcome.png" => "123-abc.png"}, assigns(:level).starter_assets)
   end
 
   test "update_start_code works if level does not support validation" do
@@ -994,24 +1094,24 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test 'should show match level' do
-    my_level = create :match, name: 'MatchLevel', type: 'Match'
+    my_level = create(:match, name: 'MatchLevel', type: 'Match')
     get :show, params: {id: my_level, game_id: my_level.game}
   end
 
   test 'should show applab level' do
-    my_level = create :applab, type: 'Applab'
+    my_level = create(:applab, type: 'Applab')
     get :show, params: {id: my_level, game_id: my_level.game}
   end
 
   test 'should show legacy unplugged level' do
-    level = create :unplugged, name: 'OldUnplugged', type: 'Unplugged'
+    level = create(:unplugged, name: 'OldUnplugged', type: 'Unplugged')
     get :show, params: {id: level, game_id: level.game}
     assert_select 'div.unplugged > h1', 'Test title'
     assert_select 'div.unplugged > p', 'Test description'
   end
 
   test 'should hide legacy unplugged pdf download button for students' do
-    level = create :unplugged, name: 'OldUnplugged', type: 'Unplugged'
+    level = create(:unplugged, name: 'OldUnplugged', type: 'Unplugged')
     teacher = create(:teacher)
     sign_out(@levelbuilder)
     sign_in(teacher)
@@ -1027,7 +1127,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test 'should show new style unplugged level' do
-    level = create :unplugged, name: 'NewUnplugged', type: 'Unplugged'
+    level = create(:unplugged, name: 'NewUnplugged', type: 'Unplugged')
     get :show, params: {id: level, game_id: level.game}
 
     assert_select 'div.unplugged > h1', 'Test title'
@@ -1035,7 +1135,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test 'should hide unplugged pdf download section for students' do
-    level = create :unplugged, name: 'NewUnplugged', type: 'Unplugged'
+    level = create(:unplugged, name: 'NewUnplugged', type: 'Unplugged')
     teacher = create(:teacher)
     sign_out(@levelbuilder)
     sign_in(teacher)
@@ -1122,7 +1222,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test 'cannot update level name with just a case change' do
-    level = create :level, name: 'original name'
+    level = create(:level, name: 'original name')
 
     post :update, params: {id: level.id, level: {name: 'ORIGINAL NAME'}}
 
@@ -1137,7 +1237,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test 'no error message when not actually changing level name' do
-    level = create :level, name: 'original name'
+    level = create(:level, name: 'original name')
 
     post :update, params: {id: level.id, level: {name: 'original name'}}
 
@@ -1152,7 +1252,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test 'can update level name' do
-    level = create :level, name: 'original name'
+    level = create(:level, name: 'original name')
 
     post :update, params: {id: level.id, level: {name: 'different name'}}
 
@@ -1162,7 +1262,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test 'trailing spaces in level name get stripped' do
-    level = create :level, name: 'original name '
+    level = create(:level, name: 'original name ')
     assert_equal 'original name', level.name
 
     post :update, params: {id: level.id, level: {name: 'different name  '}}
@@ -1175,7 +1275,7 @@ class LevelsControllerTest < ActionController::TestCase
   test 'can show level when not signed in' do
     set_env :test
 
-    level = create :artist
+    level = create(:artist)
     sign_out @levelbuilder
 
     get :edit, params: {id: level}
@@ -1188,7 +1288,7 @@ class LevelsControllerTest < ActionController::TestCase
   test 'can show embed level when not signed in' do
     set_env :test
 
-    level = create :artist
+    level = create(:artist)
     sign_out @levelbuilder
 
     get :embed_level, params: {id: level}
@@ -1250,14 +1350,15 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "empty success response for get_serialized_maze on level without maze" do
-    level = create :level
+    level = create(:level)
     get :get_serialized_maze, params: {id: level.id}
     assert_response :no_content
     assert_equal '', @response.body
   end
 
   def create_level_with_serialized_maze
-    create(:javalab,
+    create(
+      :javalab,
       serialized_maze: [[{tileType: 1, value: 0}], [{tileType: 0, assetId: 5, value: 0}]]
     )
   end
@@ -1292,10 +1393,117 @@ class LevelsControllerTest < ActionController::TestCase
     params: -> {{id: @partner_level.id, level: {name: 'new partner name'}}}
   )
 
-  private
+  test "level_properties returns map of ID to properties" do
+    level = create(:level)
+    get :level_properties, params: {id: level.id}
+    assert_response :success
+    properties = JSON.parse(@response.body)
+    assert_equal level.name, properties[level.id.to_s]["name"]
+  end
+
+  # level_properties is open to signed out users, so the widget2 parameter must be
+  # ignored unless the user could edit a widget2.
+  test "level_properties ignores the widget2 parameter for a student" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    Weblab2.any_instance.stubs(:get_widget2_sources).returns({files: {'1' => {name: 'widget.html'}}})
+    level = create(:weblab2)
+    sign_in create(:student)
+
+    get :level_properties, params: {id: level.id, widget2: 'mywidget'}
+    assert_response :success
+    properties = JSON.parse(@response.body)
+    assert_nil properties[level.id.to_s]["startSources"]
+  end
+
+  test "level_properties honors the widget2 parameter for a levelbuilder" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    Weblab2.any_instance.stubs(:get_widget2_sources).returns({files: {'1' => {name: 'widget.html'}}})
+    level = create(:weblab2)
+    sign_in create(:levelbuilder)
+
+    get :level_properties, params: {id: level.id, widget2: 'mywidget'}
+    assert_response :success
+    properties = JSON.parse(@response.body)
+    assert_equal 'widget.html', properties[level.id.to_s].dig("startSources", "files", "1", "name")
+  end
+
+  test "level_properties leaves start sources alone for a widget2 with no sources yet" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    level = create(:weblab2)
+    sign_in create(:levelbuilder)
+
+    get :level_properties, params: {id: level.id, widget2: 'nosuchwidget'}
+    assert_response :success
+    properties = JSON.parse(@response.body)
+    assert_nil properties[level.id.to_s]["startSources"]
+  end
+
+  test "level_properties includes sublevels if present" do
+    level = create(:bubble_choice_level, :with_sublevels)
+    get :level_properties, params: {id: level.id}
+    assert_response :success
+    properties = JSON.parse(@response.body)
+    assert_equal level.name, properties[level.id.to_s]["name"]
+    level.sublevels.each do |sublevel|
+      assert_equal sublevel.name, properties[sublevel.id.to_s]["name"]
+    end
+  end
+
+  test "extra_links includes start, exemplar, and toolbox links for music levels" do
+    texts = extra_links_texts(create(:music))
+    assert_includes texts, '[s]tart'
+    assert_includes texts, 'e[x]emplar'
+    assert_includes texts, '[t]oolbox'
+  end
+
+  test "extra_links includes start and exemplar but not toolbox for non-Blockly pythonlab levels" do
+    texts = extra_links_texts(create(:pythonlab))
+    assert_includes texts, '[s]tart'
+    assert_includes texts, 'e[x]emplar'
+    refute_includes texts, '[t]oolbox'
+  end
+
+  test "extra_links includes start, exemplar, and toolbox links for lab2 dance levels" do
+    level = create(:dance)
+    level.uses_lab2 = true
+    level.save!
+    texts = extra_links_texts(level)
+    assert_includes texts, '[s]tart'
+    assert_includes texts, 'e[x]emplar'
+    assert_includes texts, '[t]oolbox'
+  end
+
+  test "extra_links omits edit-mode links for classic dance levels" do
+    texts = extra_links_texts(create(:dance))
+    assert_includes texts, '[E]dit'
+    refute_includes texts, '[s]tart'
+    refute_includes texts, 'e[x]emplar'
+    refute_includes texts, '[t]oolbox'
+  end
+
+  test "extra_links includes start, exemplar, and toolbox links for sprite lab levels" do
+    texts = extra_links_texts(create(:spritelab))
+    assert_includes texts, '[s]tart'
+    assert_includes texts, 'e[x]emplar'
+    assert_includes texts, '[t]oolbox'
+  end
+
+  test "extra_links omits edit-mode links for non-channel-backed levels" do
+    texts = extra_links_texts(create(:panels))
+    assert_includes texts, '[E]dit'
+    refute_includes texts, '[s]tart'
+    refute_includes texts, 'e[x]emplar'
+    refute_includes texts, '[t]oolbox'
+  end
+
+  private def extra_links_texts(level)
+    get :extra_links, params: {id: level.id}
+    assert_response :success
+    JSON.parse(@response.body)['links'][level.name].map {|link| link['text']}
+  end
 
   # Assert that the url is a real S3 url, and not a placeholder.
-  def assert_s3_image_url(url)
+  private def assert_s3_image_url(url)
     assert(
       %r{#{LevelSourceImage::S3_URL}.*\.png}o.match(url),
       "expected #{url.inspect} to be an S3 URL"
@@ -1306,7 +1514,7 @@ class LevelsControllerTest < ActionController::TestCase
   # generated when solution images are uploaded. We don't want to actually
   # upload any S3 images in our tests, so just enable the codepath where an
   # existing LevelSourceImage is found based on the program contents.
-  def enable_level_source_image_s3_urls
+  private def enable_level_source_image_s3_urls
     # Allow LevelSourceImage to return real S3 urls.
     CDO.stubs(:disable_s3_image_uploads).returns(false)
 

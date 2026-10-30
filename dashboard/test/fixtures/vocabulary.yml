@@ -1,20 +1,3 @@
-vocab_1_2018:
-  key: "Algorithm"
-  word: "Algorithm"
-  definition: "A list of steps to finish a task."
-  course_version: course_version_2018
-vocab_2_2018:
-  key: "Debugging"
-  word: "Debugging"
-  definition: "Finding and fixing problems in an algorithm or program."
-  course_version: course_version_2018
-vocab_3_2018:
-  key: "Programming"
-  word: "Programming"
-  definition: "The art of creating a program."
-  course_version: course_version_2018
-vocab_1_2019:
-  key: "Algorithm"
-  word: "Algorithm"
-  definition: "A list of steps to finish a task."
-  course_version: course_version_2019
+version https://git-lfs.github.com/spec/v1
+oid sha256:df4406d781e534539aab35294e0242381f8a645373699620c5a93a58dba11436
+size 587

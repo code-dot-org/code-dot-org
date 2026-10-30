@@ -1,0 +1,102 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-04-01T21:40:32.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "### Fix the Reset Button\r\n\r\nTry filtering by a category, then clicking Reset. What happens? What should happen?\r\n\r\n`originalProducts` holds the full list and is never changed. Figure out why the reset button isn't restoring it, and fix it. All your changes go inside the `resetBtn` event listener.\r\n\r\n<details>\r\n<summary>Need help? Ask AI for help.</summary>\r\n\r\n**Example Prompts:**\r\n- \"How do I change the value of a dropdown menu using JavaScript?\"\r\n- \"How do I write a loop to copy items from one array to another?\"\r\n- \"What is the syntax for adding an item to an array?\"\r\n- \"Why do I need to clear the current list before copying the data back?\"\r\n\r\n</details>",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Space Supply Co.</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <link href=\"https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap\" rel=\"stylesheet\">\n</head>\n<body>\n\n  <header>\n    <h1>SPACE SUPPLY CO.</h1>\n    <p>Mission Provisions</p>\n  </header>\n\n  <main>\n    <div class=\"controls\">\n      <div class=\"filter-group\">\n        <label for=\"categorySelect\">Filter by Category:</label>\n        <select id=\"categorySelect\">\n          <option value=\"\" disabled selected>Select Category...</option>\n          <option value=\"Gear\">Gear</option>\n          <option value=\"Food\">Food</option>\n          <option value=\"Tech\">Tech</option>\n        </select>\n      </div>\n      \n      <button id=\"resetBtn\">↺ Reset Mission</button>\n    </div>\n\n    <div id=\"productContainer\" class=\"product-grid\">\n      </div>\n  </main>\n\n    <script src=\"data.js\" defer></script>\n  <script src=\"helpers.js\" defer></script>\n  <script src=\"script.js\" defer></script>\n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "/* style.css */\n:root {\n  --bg-color: #0b0d17;\n  --card-bg: #1c1f33;\n  --accent: #00f0ff;\n  --text: #d0d6e0;\n  --font-main: 'Space Mono', monospace;\n}\n\nbody {\n  background-color: var(--bg-color);\n  color: var(--text);\n  font-family: var(--font-main);\n  margin: 0;\n  padding: 20px;\n}\n\nheader {\n  text-align: center;\n  margin-bottom: 40px;\n  border-bottom: 2px solid var(--accent);\n  padding-bottom: 20px;\n}\n\nh1 {\n  color: var(--accent);\n  margin: 0;\n  font-size: 2.5rem;\n  text-transform: uppercase;\n  letter-spacing: -2px;\n}\n\n.controls {\n  display: flex;\n  justify-content: center;\n  gap: 20px;\n  margin-bottom: 30px;\n  align-items: center;\n}\n\nselect, button {\n  font-family: var(--font-main);\n  padding: 10px 15px;\n  border: 2px solid var(--accent);\n  background: transparent;\n  color: var(--accent);\n  font-size: 1rem;\n  cursor: pointer;\n  border-radius: 4px;\n}\n\nbutton:hover {\n  background: var(--accent);\n  color: var(--bg-color);\n}\n\n.product-grid {\n  display: grid;\n  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));\n  gap: 20px;\n  max-width: 1000px;\n  margin: 0 auto;\n}\n\n.card {\n  background-color: var(--card-bg);\n  padding: 20px;\n  border: 1px solid #333;\n  border-radius: 8px;\n  text-align: center;\n}\n\n.card h3 {\n  color: #fff;\n  margin-top: 0;\n}\n\n.tag {\n  display: inline-block;\n  background-color: rgba(0, 240, 255, 0.1);\n  color: var(--accent);\n  padding: 4px 8px;\n  font-size: 0.8rem;\n  border-radius: 4px;\n  margin-top: 10px;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// DOM Elements\nconst container = document.querySelector(\"#productContainer\");\nconst categorySelect = document.querySelector(\"#categorySelect\");\nconst resetBtn = document.querySelector(\"#resetBtn\");\n\nlet currentProducts = [];\n\nfor (let i = 0; i < originalProducts.length; i++) {\n  currentProducts.push(originalProducts[i]);\n}\n\n// Loops through currentProducts and renders elements to the screen\nconst renderProducts = () => {\n  container.innerHTML = \"\";\n  for (let i = 0; i < currentProducts.length; i++) {\n    container.appendChild(createCard(currentProducts[i]));\n  }\n};\n\n// Event listener for category dropdown\ncategorySelect.addEventListener(\"change\", () => {\n  const selectedCategory = categorySelect.value;\n\n  currentProducts = originalProducts.filter((item) => {\n    return item.category === selectedCategory;\n  });\n\n  renderProducts();\n});\n\n// Event listener for the reset button\nresetBtn.addEventListener(\"click\", () => {\n\n  renderProducts();\n});\n\nrenderProducts();\n",
+          "folderId": "0",
+          "active": true
+        },
+        "4": {
+          "id": "4",
+          "name": "data.js",
+          "contents": "const originalProducts = [\n  { name: \"Gravity Boots\", category: \"Gear\", price: 150 },\n  { name: \"Dehydrated Ice Cream\", category: \"Food\", price: 5 },\n  { name: \"Quantum Radio\", category: \"Tech\", price: 300 },\n  { name: \"Oxygen Tank\", category: \"Gear\", price: 80 },\n  { name: \"Mars Rations\", category: \"Food\", price: 12 },\n  { name: \"Holo-Map\", category: \"Tech\", price: 500 }\n];\n",
+          "folderId": "0",
+          "active": false,
+          "type": "support"
+        },
+        "5": {
+          "id": "5",
+          "name": "helpers.js",
+          "contents": "const createCard = (item) => {\n  const card = document.createElement(\"div\");\n  card.classList.add(\"card\");\n  card.innerHTML = `\n    <h3>${item.name}</h3>\n    <p>Price: ${item.price} Credits</p>\n    <span class=\"tag\">${item.category}</span>\n  `;\n  return card;\n};\n",
+          "folderId": "0",
+          "active": false,
+          "type": "support"
+        }
+      },
+      "openFiles": [
+        "3"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n",
+    "name_suffix": "_2026",
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML",
+        "buildCSS",
+        "buildJavaScript",
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "teacher_markdown": "## **Teacher Tips**\r\n\r\n### **Students may think `renderProducts()` resets the data**\r\n\r\nSome students may assume that calling the render function is enough to restore the full product list. Encourage them to trace what the render function actually uses by asking: **\"Which array does `renderProducts()` display?\"**\r\n\r\nRelevant code:\r\n```javascript\r\nconst renderProducts = () => {\r\n  container.innerHTML = \"\";\r\n\r\n  for (let i = 0; i < currentProducts.length; i++) {\r\n    container.appendChild(createCard(currentProducts[i]));\r\n  }\r\n};\r\n```\r\n\r\nThis helps students see that rendering only displays whatever is currently stored in `currentProducts`.\r\n\r\n---\r\n\r\n### **Students may forget to restore `currentProducts` from `originalProducts`**\r\n\r\nAfter filtering, `currentProducts` contains only a subset of the data. Ask: **\"Which array still has the complete list?\"**\r\n\r\nRelevant code:\r\n```javascript\r\ncurrentProducts = [];\r\nfor (let i = 0; i < originalProducts.length; i++) {\r\n  currentProducts.push(originalProducts[i]);\r\n}\r\n```\r\n\r\nThis reinforces the difference between the unchanged source data and the working copy used by the UI.\r\n\r\n---\r\n\r\n### **Students may reset the data but leave the dropdown showing the old filter**\r\n\r\nSome students may restore all products but forget that the UI still shows the selected category. Encourage them to think about both data state and interface state by asking: **\"If all products are showing, what should the dropdown display?\"**\r\n\r\nRelevant code:\r\n```javascript\r\ncategorySelect.value = \"\";\r\n```\r\n\r\nThis helps students see that a true reset should restore both the data and the visible controls.\r\n\r\n---\r\n\r\n### **Students may fix the reset logic in the wrong place**\r\n\r\nBecause the instructions require all changes inside the Reset button listener, some students may modify the filter logic instead. Encourage them to isolate the behavior by asking: **\"What should happen only when the Reset button is clicked?\"**\r\n\r\nRelevant structure:\r\n```javascript\r\nresetBtn.addEventListener(\"click\", () => {\r\n  categorySelect.value = \"\";\r\n\r\n  currentProducts = [];\r\n  for (let i = 0; i < originalProducts.length; i++) {\r\n    currentProducts.push(originalProducts[i]);\r\n  }\r\n\r\n  renderProducts();\r\n});\r\n```\r\n\r\nThis reinforces the event pattern:\r\n**Reset UI state → Restore data → Re-render**"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-01T21:40:32.501+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson8-level2-test_2025-pilot\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson8-level2-test_2025-pilot\"},{\"changed_at\":\"2026-06-11 04:31:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-06-11 04:31:02 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-06-11 04:31:07 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-06-12 04:10:47 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-06-12 04:10:47 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-06-12 04:11:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-06-12 04:12:00 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-06-12 04:17:46 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-06-12 04:19:57 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-08-19 15:14:32 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-08-19 15:16:25 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+}]]></config>
+</Weblab2>

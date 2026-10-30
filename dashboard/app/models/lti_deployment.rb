@@ -7,6 +7,7 @@
 #  lti_integration_id :bigint           not null
 #  created_at         :datetime         not null
 #  updated_at         :datetime         not null
+#  name               :string(255)
 #
 # Indexes
 #
@@ -14,5 +15,21 @@
 #  index_lti_deployments_on_lti_integration_id  (lti_integration_id)
 #
 class LtiDeployment < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :confidential,
+    deployment_id: :confidential,
+    lti_integration_id: :confidential,
+    created_at: :confidential,
+    updated_at: :confidential,
+    name: :confidential,
+  )
+
   belongs_to :lti_integration
+  has_and_belongs_to_many :lti_user_identities
+
+  def restricted?
+    Policies::Lti::DeploymentConfiguration::RESTRICTED_DEPLOYMENTS.include?(id)
+  end
 end

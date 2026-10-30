@@ -5,14 +5,14 @@ abort 'Script already running' unless only_one_running?(__FILE__)
 # This script performs aggregation queries on the pegasus.forms table, specifically HOC signup
 # forms, saving the results to the pegasus.properties table.
 
-require File.expand_path('../../../pegasus/src/env', __FILE__)
+require File.expand_path('../../../lib/cdo/pegasus/src/env', __FILE__)
+require 'cdo/sequel'
 require 'cdo/db'
-require_relative '../../pegasus/helpers/properties'
+require 'cdo/pegasus/properties'
 require 'dynamic_config/dcdo'
 
 DEFAULT_YEAR = 2017
-PEGASUS_REPORTING_DB_READONLY = sequel_connect(
-  CDO.pegasus_reporting_db_reader,
+PEGASUS_REPORTING_DB_READONLY = Cdo::Sequel.database_connection_pool(
   CDO.pegasus_reporting_db_reader
 )
 

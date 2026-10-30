@@ -1,0 +1,14 @@
+{
+  "category_key": "javascript",
+  "content": "# Display Style\n\nThe `style.display` property changes whether a selected element is shown on the page. Use it to hide an element with `\"none\"` or show it again with a display value like `\"block\"`.",
+  "examples": "[{\"name\":\"Hide and Show an Answer\",\"description\":\"This hides an answer, then shows it again later.\",\"code\":\"```\\nconst answer = document.getElementById(\\\"answer\\\");\\n\\nanswer.style.display = \\\"none\\\";\\nanswer.style.display = \\\"block\\\";\\n```\"}]",
+  "external_documentation": "",
+  "fields": "[]",
+  "key": "display-style",
+  "name": "Display Style",
+  "syntax": "`answer.style.display = \"none\";`",
+  "tips": "- Use `style.display` on an element that has already been selected.\n- Use `\"none\"` to hide an element.\n- Use `\"block\"` to show an element as a block on the page.\n- Put display values in quotation marks.\n- In Web Lab, `style.display` often appears inside event handlers for buttons that reveal answers, menus, messages, or sections.",
+  "methods": [
+
+  ]
+}

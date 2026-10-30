@@ -1,0 +1,16 @@
+<ExternalLink>
+  <config><![CDATA[{
+  "game_id": 55,
+  "created_at": "2026-08-13T19:10:44.000Z",
+  "level_num": "custom",
+  "user_id": 37,
+  "properties": {
+    "long_instructions": "The following link to Cornell University Center for Teaching Excellence provides a brief description of group learning along with a handful of specific techniques for designing and implementing group work activities:  ",
+    "link_title": "Cornell University Center for Teaching Excellence - Group Work Strategies and Design Ideas ",
+    "url": "http://www.cte.cornell.edu/teaching-ideas/engaging-students/collaborative-learning.html"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2026-08-13T19:10:44.514+00:00\",\"changed\":[\"cloned from \\\"Collaborative Learning and Group Work\\\"\"],\"cloned_from\":\"Collaborative Learning and Group Work\"}]"
+}]]></config>
+</ExternalLink>

@@ -6,9 +6,11 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {Breadcrumb} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
+const routerPropType = PropTypes.shape({push: PropTypes.func.isRequired});
+
 export default class Header extends React.Component {
   static contextTypes = {
-    router: PropTypes.object.isRequired,
+    router: routerPropType,
   };
 
   static propTypes = {
@@ -26,12 +28,20 @@ export default class Header extends React.Component {
       })
     ).isRequired,
     params: PropTypes.object.isRequired,
-    children: PropTypes.object.isRequired,
+    children: PropTypes.object,
     baseName: PropTypes.string,
+    router: routerPropType,
   };
 
+  get router() {
+    // WorkshopDashboard passes router through props since it uses react-router-dom
+    // while ApplicationDashboard still uses the older react-router and gets the router
+    // from context
+    return this.context?.router ?? this.props.router;
+  }
+
   handleClick = path => {
-    this.context.router.push(path.toLowerCase());
+    this.router?.push(path.toLowerCase());
   };
 
   renderBreadcrumbItems() {

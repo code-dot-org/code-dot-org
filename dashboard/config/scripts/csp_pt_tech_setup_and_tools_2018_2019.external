@@ -32,7 +32,7 @@ You need to setup your AP Digital Portfolio to officially submit your performanc
 
 *If your students have not done this yet, they will need to register themselves with AP digital portfolio in order to upload their projects.*
 
-#### Follow College Board Instructions to Setup Portfolio
+Follow College Board Instructions to Setup Portfolio
 
 * Here is the [Student Guide for the digital portfolio](https://secure-media.collegeboard.org/digitalServices/pdf/ap/computer-science-principles-digital-portfolio-student-guide.pdf). Follow these instructions to get setup.
 
@@ -52,7 +52,7 @@ You are required to make a PDF of your written responses to prompts. It's recomm
 
 *What follows is copied from the [AP Student Guide for the digital portfolio](https://secure-media.collegeboard.org/digitalServices/pdf/ap/computer-science-principles-digital-portfolio-student-guide.pdf)*
 
-#### How to make a PDF 
+How to make a PDF 
 
 * Recent versions of applications like: Word, PowerPoint, Pages, and Google Docs, have built-in features that allow you to save or export your file as a PDF. Instructions are provided below.
 * If your software does not have a PDF option, visit the Adobe site and learn more about whether Acrobat from Adobe Systems can convert your document to PDF.
@@ -96,7 +96,7 @@ You need to make a PDF of your code and you *also* draw an oval and rectangle on
 * Option 2: Make a PDF of the Code, then Edit the PDF using a PDF editor to draw shapes
 * Option 3: Copy/Paste Code into a Word (or Google) document and add shapes there to produce PDF.
 
-#### Details: how to make a pdf of your code
+Details: how to make a pdf of your code
 
 **Step 1** - copy your code in App Lab
 
@@ -131,7 +131,7 @@ You need to make a PDF of your code and you *also* draw an oval and rectangle on
     * If you choose this option you should add your annotations (rectangle and circle) here in the word processor.
 
 
-#### How to add Ovals and Rectangles to a PDF
+How to add Ovals and Rectangles to a PDF
 If not using [CodePrint](https://bakerfranke.github.io/codePrint/) you'll need to add ovals and rectangles to the PDF of your code.
 
 **Windows**
@@ -152,7 +152,7 @@ If not using [CodePrint](https://bakerfranke.github.io/codePrint/) you'll need t
 
 Students are required to make at least one video that is a "Screen capture" of themselves using the program they wrote for the Create PT.
 
-#### How To Make a Screencast
+How To Make a Screencast
 
 If you have not made any screencapture videos in class to this point students may ask how to do it.
 You will need to use 3rd party screen capture software. We recommend investigating options that will work for your school's software requirements. Here are two options:

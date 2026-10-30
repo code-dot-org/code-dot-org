@@ -1,0 +1,133 @@
+name 'pl-ai-101-V2-mod3-llm-02_2026'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Transforming Teaching with AI
+
+Review the story below about a teacher planning, preparing, and reflecting on instruction.
+
+👉 Click on the highlighted quotes to explore how AI could support her work at different points in the process.
+
+---
+
+<div style="float:right; width:260px; margin:0 0 12px 20px;">
+  <img 
+    src="https://images.code.org/fe7e8f06adafd4a2681cd08a5e718cc2-b9e3f4df-dd95-461e-95dc-dac0d18d9c43.png"
+    alt="Cartoon ecosystem illustration"
+    style="width:100%; border-radius:10px; border:1px solid #D9DDE3;"
+  >
+</div>
+
+Ms. Garcia sits down after school to plan tomorrow’s 7th-grade science lesson on ecosystem relationships. She has a clear learning goal and knows the key concepts students need to understand, but she wants the lesson to feel engaging and relevant rather than another textbook-based discussion.
+
+As she begins planning, she reviews last year’s materials and searches online for activity ideas. She finds several possibilities, but none quite fit the lesson she has in mind. After spending several minutes searching, she catches herself thinking:
+
+<details style="display:inline;"> <summary style="
+cursor:pointer;
+display:inline;
+font-size:15px;
+font-weight:400;
+line-height:1.5;
+color:#555;
+"> <div style="
+margin:8px 0 8px 24px;
+padding-left:12px;
+border-left:3px solid #DDD6F3;
+color:#666;
+"> <span style="font-size:0.7em;">▶ </span><i>"I have a solid explanation of food webs, but I can't think of a hands-on activity that would help students actively explore the concept."</i>
+</div> </summary>
+  
+<div style="
+margin-top:10px;
+margin-left:20px;
+margin-bottom:20px;
+background:#F7F8FA;
+border:1px solid #D9DDE3;
+border-radius:10px;
+padding:12px 14px;
+font-size:15px;
+line-height:1.5;
+color:#555;
+">🤖 AI can help brainstorm lesson activities, lesson hooks, and real-world examples.</div> </details>
+
+With time running short and no better idea emerging, she decides to reuse the worksheet from last year and moves on to the next part of the lesson.
+
+Ms. Garcia reviews the state-assigned reading passage students will use during class. As she reads through it, she realizes that several students in this year's class read well below grade level and will likely struggle with the text. She spends time rewriting sentences, simplifying vocabulary, and shortening sections to make the passage more accessible.
+
+When she finally finishes, she's still unsure whether she struck the right balance between accessibility and rigor.
+
+<details style="display:inline;"> <summary style="
+cursor:pointer;
+display:inline;
+font-size:15px;
+font-weight:400;
+line-height:1.5;
+color:#555;
+"> <div style="
+margin:8px 0 8px 24px;
+padding-left:12px;
+border-left:3px solid #DDD6F3;
+color:#666;
+"> <span style="font-size:0.7em;">▶ </span><i>"I've already spent nearly an hour revising this passage, and I'm still not sure the reading level is right."</i> </summary>
+
+<div style="
+margin-top:10px;
+margin-left:20px;
+margin-bottom:20px;
+background:#F7F8FA;
+border:1px solid #D9DDE3;
+border-radius:10px;
+padding:12px 14px;
+font-size:15px;
+line-height:1.5;
+color:#555;
+">🤖 AI can help adapt reading materials for different reading levels while keeping key ideas intact. </div> </details>
+
+<div style="float:right; width:260px; margin:0 0 12px 20px;">
+  <img 
+    src="https://images.code.org/af7b2bee0c86b226155429d71a79b6ff-cc0fad62-a625-4b97-b54f-a101867d33a1.png"
+    alt="Cartoon ecosystem illustration"
+    style="width:100%; border-radius:10px; border:1px solid #D9DDE3;"
+  >
+</div>
+
+Knowing she's needed at home soon, she makes one final edit, prints the passages, and calls it a night.
+
+The next day, students complete an exit ticket before leaving class. As Ms. Garcia reviews their responses after school, she notices a pattern. Most students can identify organisms in a food web, but many struggle to explain what happens when one population changes. The misunderstanding is clear, but the cause is not.
+
+Did students misunderstand the concept itself? Were the examples she used ineffective? Was the reading passage still too difficult? She isn't sure.
+
+<details style="display:inline;"> <summary style="
+cursor:pointer;
+display:inline;
+font-size:15px;
+font-weight:400;
+line-height:1.5;
+color:#555;
+"> <div style="
+margin:8px 0 8px 24px;
+padding-left:12px;
+border-left:3px solid #DDD6F3;
+color:#666;
+"> <span style="font-size:0.7em;">▶ </span><i>"I know students have a misconception, but I'm not sure why they're getting stuck or what I should do differently tomorrow."</i> </summary>
+  
+<div style="
+margin-top:10px;
+margin-left:20px;
+margin-bottom:20px;
+background:#F7F8FA;
+border:1px solid #D9DDE3;
+border-radius:10px;
+padding:12px 14px;
+font-size:15px;
+line-height:1.5;
+color:#555;
+">🤖 AI can help identify possible misconceptions and suggest ways to reteach a concept. </div> </details>
+
+Needing to address the issue quickly, Ms. Garcia decides to begin the next class by reteaching the key concept. She knows there may be more targeted ways to respond, but she doesn't have enough information to confidently choose the best next step.
+
+---
+
+> **💬 Quick Reflection:** What resonates with you in this story? Are there any parts of your teaching practice which you'd like to improve using AI integration?
+MARKDOWN

@@ -1,0 +1,20 @@
+name 'aif-y2-machine-learning-fundamentals-lesson13-level2-choice2-2026'
+title 'Use an Existing Dataset'
+display_name 'Use an Existing Dataset'
+bubble_choice_description 'Pick an existing dataset and use it to build a classifier'
+
+markdown <<MARKDOWN
+## Use an Existing Dataset
+
+1. Open one of the datasets below that matches what you want to classify.
+2. Look at the images in the dataset and look for patterns that could help tell the two categories apart.
+3. Look at your questions from Step 2 of the Project Planning Guide. Think about how well they work for the images in your dataset. Add or edit questions on the list based on your observations.
+
+[Dataset 1: Basketball vs. Soccer](https://docs.google.com/document/d/1fyODcdV6Tao2w50sgwJGVVqKvfVNgdrX-t6-wQdPAak/edit?usp=sharing)
+
+[Dataset 2: Coffee vs. Tea](https://docs.google.com/document/d/1mjBAEAoJnw-SgjR5lCMUjSRGkc-3m36d24fhP3WK3b4/edit?usp=sharing)
+
+[Dataset 3: Dolphin vs. Shark](https://docs.google.com/document/d/1WitTJgmFZliyntsx6aQxNhyMX9cNFYzCqtajOkvdhDs/edit?usp=sharing)
+
+[Dataset 4: Rose vs. Peony](https://docs.google.com/document/d/17Ro3UOuqJVOm128TrrRuw0qbcQDguXVK3KW_trqBuoY/edit?usp=sharing)
+MARKDOWN

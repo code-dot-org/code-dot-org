@@ -1,5 +1,4 @@
 # Utility methods for generating certificate images.
-# Note: requires pegasus_dir to be in scope.
 require 'honeybadger/ruby'
 require 'rmagick'
 # needed for force_8859_to_utf8
@@ -22,8 +21,8 @@ class CertificateImage
   def self.create_certificate_image2(image_path, name, params = {})
     # Load the certificate template
     background = Magick::Image.read(image_path).first
-    font = "Times bold"
-    color = "#575757"
+    font = params[:font] || "Times bold"
+    color = params[:color] || "#575757"
     pointsize = 68
     x_offset = params[:x] || 0
     y_offset = params[:y] || 0
@@ -93,7 +92,7 @@ class CertificateImage
       text_overlay.destroy!
     rescue Magick::ImageMagickError => exception
       # We want to know what kinds of text we are failing to render.
-      Honeybadger.notify(
+      Observability::Errors.report(
         exception,
         context: {
           text: text,
@@ -136,70 +135,165 @@ class CertificateImage
     # string behavior: '\\\\' results in a string with two backslashes. See the
     # String.gsub docs for more details.  This is for the sake of readable code.
     # literal \ replaced with literal \\
-    string = string.gsub(/\\/) {'\\\\'}
+    string = string.gsub("\\") {'\\\\'}
     # @ at the front of the string replaced with literal \@
     string = string.gsub(/^@/) {'\\@'}
     # % replaced with literal \%
-    string = string.gsub(/%/) {'\\%'}
+    string = string.gsub("%") {'\\%'}
     # new-line character replaced with literal \\n
-    string = string.gsub(/\n/) {'\\\\n'}
+    string = string.gsub("\n") {'\\\\n'}
     string.strip
   end
 
   # This method returns a newly-allocated Magick::Image object.
   # NOTE: the caller MUST ensure image#destroy! is called on the returned image object to avoid memory leaks.
-  def self.create_course_certificate_image(name, course = nil, donor_name = nil, course_title = nil, default_random_donor: false)
+  def self.create_course_certificate_image(name, course = nil, course_title = nil)
     name = ' ' if name.blank?
 
     course ||= ScriptConstants::HOC_NAME
 
     template_file = certificate_template_for(course)
 
-    path = pegasus_dir('sites.v3', 'code.org', 'public', 'images', template_file)
+    path = dashboard_dir('public', 'blockly', 'media', 'certificates', template_file)
     if prefilled_title_course?(course)
       # only need to fill in student name
-      vertical_offset = course == '20-hour' ? -125 : -120
-      image = create_certificate_image2(path, name, y: vertical_offset)
-      donor_text_y_offset = 447
-    elsif template_file == 'self_paced_pl_certificate.png'
+      style =
+        if template_file == 'hour_of_ai_certificate.png'
+          {y: -109, font: 'Helvetica bold', color: 'rgb(31, 25, 118)'}
+        else
+          {y: course == '20-hour' ? -125 : -120}
+        end
+      image = create_certificate_image2(path, name, **style)
+    else
+      unit_or_unit_group = CurriculumHelper.find_matching_unit_or_unit_group(course)
       image = Magick::Image.read(path).first
-      apply_text(image, name, 62, 'Helvetica bold', 'rgb(118,101,160)', 0, -248, CERT_NAME_AREA_WIDTH, 70)
-      course_title_width = 1400
-      course_title_height = 171
-      apply_text(image, course_title, 62, 'Helvetica bold', 'rgb(29,173,186)', 0, 0, course_title_width, course_title_height)
 
-      course_version = CurriculumHelper.find_matching_course_version(course)
-      total_hours = (course_version.content_root.duration_in_minutes / 60).floor
-      apply_text(image, total_hours.to_s, 30, 'Times bold', 'rgb(87,87,87)', -248, 124, 80, 30)
-      donor_text_y_offset = 611
-    else # all other courses use a certificate image where the course name is also blank
-      image = Magick::Image.read(path).first
-      apply_text(image, name, 75, 'Helvetica bold', 'rgb(118,101,160)', 0, -135, CERT_NAME_AREA_WIDTH, CERT_NAME_AREA_HEIGHT)
-      # The area in pixels which will display the course title.
-      course_title_width = 1000
-      course_title_height = 60
-      apply_text(image, course_title, 47, 'Helvetica bold', 'rgb(29,173,186)', 0, 15, course_title_width, course_title_height)
-      donor_text_y_offset = 447
+      text_constants = {
+        'self_paced_pl_certificate.png': {
+          name: {
+            font_size: 62,
+            x_offset: 0,
+            y_offset: -198,
+            height: 70,
+            width: CERT_NAME_AREA_WIDTH,
+            color: 'rgb(31, 25, 118)',
+          },
+          two_titles: {
+            unit_group_height: 85,
+            unit_group_font_size: 52,
+            unit_group_x_offset: 0,
+            unit_group_y_offset: -17,
+            unit_height: 71,
+            unit_font_size: 47,
+            unit_x_offset: 0,
+            unit_y_offset: 53,
+            color: 'rgb(31, 25, 118)',
+          },
+          one_title: {
+            font_size: 62,
+            x_offset: 0,
+            y_offset: 0,
+            height: 171,
+            color: 'rgb(31, 25, 118)',
+          },
+          course_title_width: 1400,
+          donor_text_y_offset: 611,
+        },
+        'blank_certificate.png': {
+          name: {
+            font_size: 75,
+            x_offset: 0,
+            y_offset: -135,
+            height: CERT_NAME_AREA_HEIGHT,
+            width: CERT_NAME_AREA_WIDTH,
+          },
+          two_titles: {
+            unit_group_width: 1000,
+            unit_group_height: 50,
+            unit_group_font_size: 40,
+            unit_group_x_offset: 0,
+            unit_group_y_offset: 0,
+            unit_width: 800,
+            unit_height: 40,
+            unit_font_size: 32,
+            unit_x_offset: 0,
+            unit_y_offset: 47,
+          },
+          one_title: {
+            font_size: 47,
+            x_offset: 0,
+            y_offset: 15,
+            height: 60,
+            width: 1000,
+          },
+          donor_text_y_offset: 447,
+        },
+      }
+      cert_text_constants = text_constants[template_file.to_sym]
+
+      name_constants = cert_text_constants[:name]
+      name_color = name_constants[:color] || 'rgb(118,101,160)'
+      apply_text(image, name, name_constants[:font_size], 'Helvetica bold', name_color, name_constants[:x_offset], name_constants[:y_offset], name_constants[:width], name_constants[:height])
+
+      # When we have a unit within a unit_group, we want to display both the unit and unit_group titles.
+      # When we have a unit group, we only display the localized title of unit_or_unit_group.
+      if unit_or_unit_group.is_a?(Unit) && unit_or_unit_group.get_original_unit_group.present?
+        unit = unit_or_unit_group
+        unit_group = unit.get_original_unit_group
+
+        course_titles_constants = cert_text_constants[:two_titles]
+        course_title_color = course_titles_constants[:color] || 'rgb(29,173,186)'
+
+        apply_text(
+          image,
+          unit_group.localized_title,
+          course_titles_constants[:unit_group_font_size],
+          'Helvetica bold',
+          course_title_color,
+          course_titles_constants[:unit_group_x_offset],
+          course_titles_constants[:unit_group_y_offset],
+          cert_text_constants[:course_title_width],
+          course_titles_constants[:unit_group_height]
+        )
+
+        apply_text(
+          image,
+          unit.localized_title,
+          course_titles_constants[:unit_font_size],
+          'Helvetica bold',
+          course_title_color,
+          course_titles_constants[:unit_x_offset],
+          course_titles_constants[:unit_y_offset],
+          cert_text_constants[:course_title_width],
+          course_titles_constants[:unit_height]
+        )
+      else
+        course_titles_constants = cert_text_constants[:one_title]
+        course_title_color = course_titles_constants[:color] || 'rgb(29,173,186)'
+        apply_text(
+          image,
+          course_title,
+          course_titles_constants[:font_size],
+          'Helvetica bold',
+          course_title_color,
+          course_titles_constants[:x_offset],
+          course_titles_constants[:y_offset],
+          cert_text_constants[:course_title_width],
+          course_titles_constants[:height]
+        )
+      end
+
+      if template_file == 'self_paced_pl_certificate.png'
+        total_minutes = unit_or_unit_group&.duration_in_minutes || 0
+        total_hours_to_half_hour = (total_minutes / 30).round / 2.0
+        # Round up to half an hour if less than 30 minutes.
+        total_hours_to_half_hour = 0.5 if total_hours_to_half_hour == 0
+        hours_string = format('%<duration>g', duration: total_hours_to_half_hour)
+        apply_text(image, hours_string, 30, 'Times bold', 'rgb(31, 25, 118)', -228, 125, 80, 30)
+      end
     end
 
-    if default_random_donor && !donor_name
-      donor = DashboardCdoDonor.get_random_donor_by_weight
-      donor_name = donor[:name_s]
-    end
-
-    if donor_name
-      # Note certificate_sponsor_message is in both the Dashboard and Pegasus string files.
-      sponsor_message = I18n.t('certificate_sponsor_message', sponsor_name: donor_name)
-      # The area in pixels which will display the sponsor message.
-      sponsor_area_width = 1400
-      sponsor_area_height = 35
-      apply_text(image, sponsor_message, 18, 'Times bold', 'rgb(87,87,87)', 0, donor_text_y_offset, sponsor_area_width, sponsor_area_height)
-    end
     image
-  end
-
-  def self.accelerated_course?(course)
-    [ScriptConstants::ACCELERATED_NAME, ScriptConstants::TWENTY_HOUR_NAME].include?(course)
   end
 
   # assume any unrecognized course name is a hoc course
@@ -208,11 +302,10 @@ class CertificateImage
   end
 
   def self.course_type(course_name)
-    return CERTIFICATE_COURSE_TYPES[:ACCELERATED] if accelerated_course?(course_name)
-
-    course_version = CurriculumHelper.find_matching_course_version(course_name)
-    return CERTIFICATE_COURSE_TYPES[:HOC] if course_version&.hoc?
+    unit_or_unit_group = CurriculumHelper.find_matching_unit_or_unit_group(course_name)
+    course_version = unit_or_unit_group&.get_course_version
     return CERTIFICATE_COURSE_TYPES[:PL] if course_version&.pl_course?
+    return CERTIFICATE_COURSE_TYPES[:HOC] if course_version&.hoc_or_hoai?
     return CERTIFICATE_COURSE_TYPES[:OTHER] if course_version
     CERTIFICATE_COURSE_TYPES[:HOC]
   end
@@ -232,6 +325,10 @@ class CertificateImage
         'MC_Hour_Of_Code_Certificate_Aquatic.png'
       when ScriptConstants::MINECRAFT_AI_NAME
         'MC_Hour_Of_Code_Certificate_Generation_Ai.png'
+      when ScriptConstants::MINECRAFT_SHOW_NAME
+        'MC_Hour_Of_Code_Certificate_Show.png'
+      when ScriptConstants::MINECRAFT_NIGHT_NAME
+        'MC_Hour_Of_AI_Certificate_First_Night.png'
       else
         'MC_Hour_Of_Code_Certificate.png'
       end
@@ -243,14 +340,14 @@ class CertificateImage
       'MC_Hour_Of_Code_Certificate_mee_timecraft.png'
     elsif course == 'mee_estate'
       'MC_Hour_Of_Code_Certificate_mee_estate.png'
-    elsif course == ScriptConstants::OCEANS_NAME
+    elsif course == ScriptConstants::MIX_MOVE_AI_2025
+      'mix_move_hour_of_ai_certificate.png'
+    elsif course == ScriptConstants::MUSIC_JAM_2024
+      'music_hoc_certificate.png'
+    elsif [ScriptConstants::OCEANS_NAME, 'ui-test-oceans'].include?(course)
       'oceans_hoc_certificate.png'
-    elsif accelerated_course?(course)
-      # The 20-hour course is referred to as "accelerated" throughout the
-      # congrats and certificate pages (see csf_finish_url).
-      '20hours_certificate.jpg'
     elsif course_type == 'hoc'
-      'hour_of_code_certificate.jpg'
+      'hour_of_ai_certificate.png'
     elsif course_type == 'pl'
       'self_paced_pl_certificate.png'
     else

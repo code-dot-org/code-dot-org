@@ -1,0 +1,27 @@
+name 'computer-systems-lesson2-level4b_2025-launch_v2-2025'
+title 'Product Designer'
+description 'Discover how designers create technology that is user-friendly and visually appealing.'
+display_name 'Music Producer'
+thumbnail_url 'https://images.code.org/4a09ab805c2409ff94f76c7b3fabc816-Icon%20Template%20(6).png'
+bubble_choice_description 'Learn how this music producer decreased the load on his CPU.'
+
+markdown <<MARKDOWN
+## Music Producer
+
+Learn how this music producer decreased the load on his CPU.
+
+As you watch, be prepared to reflect on the following in the next level:
+
+* How does the hardware used in this career impact the professional's ability to work efficiently, and what would happen if they had weaker or outdated components?
+
+
+**Note:** This video opens in a new tab.
+
+<div style="text-align: center; margin-top: 20px;">
+  <a href="https://docs.google.com/presentation/d/1sMRC23R1GQJFwtyIP11jf32l8hCxvEe7Ah2pZ7xuX7k/edit?slide=id.g34c29487735_0_1#slide=id.g34c29487735_0_1" target="_blank" rel="noopener noreferrer">
+    <img src="https://images.code.org/e63c20a49b5ea0993ef9a0a5f7bbec56-music.jpg" 
+         alt="YouTube Video Thumbnail" 
+         style="width: 80%; max-width: 600px; border-radius: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);">
+  </a>
+</div>
+MARKDOWN

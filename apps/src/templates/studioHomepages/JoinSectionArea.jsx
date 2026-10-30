@@ -1,24 +1,34 @@
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
-import JoinSectionNotifications from './JoinSectionNotifications';
+
+import i18n from '@cdo/locale';
+
+import ContentContainer from '../ContentContainer';
+
 import JoinSection from './JoinSection';
+import JoinSectionNotifications from './JoinSectionNotifications';
 import ParticipantSections from './ParticipantSections';
 import shapes from './shapes';
-import ContentContainer from '../ContentContainer';
-import i18n from '@cdo/locale';
+
+const INITIAL_SECTION_RESULTS = {
+  action: null,
+  result: null,
+  resultName: null,
+  resultId: null,
+  sectionCapacity: null,
+  joiningPlSection: false,
+};
 
 export default function JoinSectionArea({
   initialJoinedPlSections,
   initialJoinedStudentSections,
   isTeacher = false,
+  isPlSections = false,
 }) {
-  const [sectionResults, setSectionResults] = useState({
-    action: null,
-    result: null,
-    resultName: null,
-    resultId: null,
-    sectionCapacity: null,
-  });
+  const [sectionResults, setSectionResults] = useState(INITIAL_SECTION_RESULTS);
+
+  const clearSectionResults = () => setSectionResults(INITIAL_SECTION_RESULTS);
   const [joinedPlSections, setJoinedPlSections] = useState(
     initialJoinedPlSections
   );
@@ -30,7 +40,8 @@ export default function JoinSectionArea({
     result,
     name,
     id,
-    sectionCapacity = null
+    sectionCapacity = null,
+    joiningPlSection = false
   ) => {
     setSectionResults({
       action: action,
@@ -38,6 +49,7 @@ export default function JoinSectionArea({
       resultName: name,
       resultId: id,
       sectionCapacity: sectionCapacity,
+      joiningPlSection: joiningPlSection,
     });
   };
 
@@ -46,46 +58,65 @@ export default function JoinSectionArea({
     setJoinedPlSections(plSections);
   };
 
-  const heading = i18n.joinASection();
+  const renderSectionContent = () => {
+    return (
+      <>
+        <JoinSectionNotifications
+          action={sectionResults.action}
+          result={sectionResults.result}
+          name={sectionResults.resultName}
+          id={sectionResults.resultId}
+          sectionCapacity={sectionResults.sectionCapacity}
+          showingPlSections={isPlSections}
+          joiningPlSection={sectionResults.joiningPlSection}
+          onDismiss={clearSectionResults}
+        />
+        <JoinSection
+          enrolledInASection={true}
+          updateSections={updateSections}
+          updateSectionsResult={updateSectionsResult}
+          isTeacher={isTeacher}
+        />
+        {!isPlSections && joinedStudentSections?.length > 0 && (
+          <ParticipantSections
+            sections={joinedStudentSections}
+            isTeacher={isTeacher}
+            updateSectionsResult={updateSectionsResult}
+            updateSections={setJoinedStudentSections}
+          />
+        )}
+        {isPlSections &&
+          (joinedPlSections?.length > 0 || joinedStudentSections?.length > 0) &&
+          isTeacher && (
+            <ParticipantSections
+              sections={joinedPlSections.concat(joinedStudentSections)}
+              isTeacher={isTeacher}
+              isPlSections={true}
+              updateSectionsResult={updateSectionsResult}
+              updateSections={setJoinedPlSections}
+            />
+          )}
+      </>
+    );
+  };
 
-  return (
-    <ContentContainer heading={heading}>
-      <JoinSectionNotifications
-        action={sectionResults.action}
-        result={sectionResults.result}
-        name={sectionResults.resultName}
-        id={sectionResults.resultId}
-        sectionCapacity={sectionResults.sectionCapacity}
-      />
-      <JoinSection
-        enrolledInASection={true}
-        updateSections={updateSections}
-        updateSectionsResult={updateSectionsResult}
-        isTeacher={isTeacher}
-      />
-      {joinedStudentSections?.length > 0 && (
-        <ParticipantSections
-          sections={joinedStudentSections}
-          isTeacher={isTeacher}
-          updateSectionsResult={updateSectionsResult}
-          updateSections={setJoinedStudentSections}
-        />
-      )}
-      {joinedPlSections?.length > 0 && isTeacher && (
-        <ParticipantSections
-          sections={joinedPlSections}
-          isTeacher={isTeacher}
-          isPlSections={true}
-          updateSectionsResult={updateSectionsResult}
-          updateSections={setJoinedPlSections}
-        />
-      )}
+  return isPlSections ? (
+    <>
+      <Typography variant="h2" gutterBottom>
+        {i18n.joinedProfessionalLearningSectionsHomepageTitle()}
+      </Typography>
+      {renderSectionContent()}
+    </>
+  ) : (
+    <ContentContainer heading={i18n.joinASection()}>
+      {renderSectionContent()}
     </ContentContainer>
   );
 }
 
 JoinSectionArea.propTypes = {
-  initialJoinedStudentSections: shapes.sections,
-  initialJoinedPlSections: shapes.sections,
+  initialJoinedStudentSections: shapes.participantSections,
+  initialJoinedPlSections: shapes.participantSections,
   isTeacher: PropTypes.bool,
+  isPlSections: PropTypes.bool,
 };

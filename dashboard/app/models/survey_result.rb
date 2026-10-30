@@ -16,6 +16,17 @@
 #
 
 class SurveyResult < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :confidential,
+    user_id: :confidential,
+    kind: :confidential,
+    properties: :confidential,
+    created_at: :confidential,
+    updated_at: :confidential,
+  )
+
   include SerializedProperties
 
   SYSTEM_DELETED = 'system_deleted'.freeze
@@ -63,6 +74,7 @@ class SurveyResult < ApplicationRecord
     DIVERSITY_2021 = 'Diversity2021'.freeze,
     DIVERSITY_2022 = 'Diversity2022'.freeze,
     DIVERSITY_2023 = 'Diversity2023'.freeze,
+    DIVERSITY_2024 = 'Diversity2024'.freeze,
     NET_PROMOTER_SCORE_2015 = 'NetPromoterScore2015'.freeze,
     NET_PROMOTER_SCORE_2017 = 'NetPromoterScore2017'.freeze,
     NET_PROMOTER_SCORE_2019 = 'NetPromoterScore2019'.freeze,

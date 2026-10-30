@@ -1,0 +1,11 @@
+name 'csp_unit1_lesson15_cfu2_dev_27_28'
+title 'Deciding Who Gets Support'
+
+question 'A school district wants software to help decide which students get extra support from a counselor. A mistake could mean a student who needs help is missed. Which of the following is the best way to use the software?'
+
+wrong 'Let the software decide, because it is faster and more consistent than people.'
+wrong 'Let the software decide whenever it is very confident.'
+wrong 'Do not use software for decisions about students.'
+right 'Let the software suggest students, and have counselors make the final decision.'
+
+allow_multiple_attempts true

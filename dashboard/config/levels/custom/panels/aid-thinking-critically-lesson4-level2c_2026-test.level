@@ -1,0 +1,36 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-03-03T18:03:55.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "##Choose Your Base Material\n\nTo get started on a physical project, you will need a solid foundation. Pick a material that best fits your vision:\n\n* _Cardboard_: Great for building a sturdy visual dashboard that can stand up on its own.\n\n* _Construction Paper_: Perfect for layering, making a folded case file, or creating distinct, colorful sections.\n\n* _Regular Paper_: Ideal for drawing, drafting, or assembling a multi-page document.",
+        "imageUrl": "https://images.code.org/a5b13581a4f85713aba78ab1eb5ca4bf-panel1.jpg",
+        "key": "undefined-593fd194-67d3-49c0-8c20-33aadb6adf9f",
+        "layout": "text-top-right"
+      },
+      {
+        "text": "##Supporting Materials\n\n* _Markers and Crayons_: Use these to color-code sections of your guide\n\n* _Pencils and Pens_: Essential for writing out your clear, actionable guidance and explaining the tests you ran.\n\n* _Glue and Stickers_: Perfect for assembling a mixed media project or attaching visual evidence of red flags and recommended tips",
+        "imageUrl": "https://images.code.org/d853527461e6cec82721b7db308ba76a-panel2.jpg",
+        "key": "undefined-3a930145-a9a5-4dbf-891a-6c0c9de5f53e",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "Recall the guides you examined in the gallery walk, and what made them clear and effective for their specific audience groups and scenarios.\n\nRemember, you are synthesizing your findings to create helpful guidance for others, rather than just summarizing steps for the teacher.",
+        "imageUrl": "https://images.code.org/db3a5256efb673003a68dd8f10ff5042-panel3.jpg",
+        "key": "undefined-dce6838e-13fc-49ca-8a66-9002c740a016"
+      }
+    ],
+    "display_name": "Handmade",
+    "bubble_choice_description": "Create your project by hand!",
+    "thumbnail_url": "https://images.code.org/80c0a0a86c57d3f726c7c869a59f986d-graphic-tool.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-03-03 18:04:42 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-03 18:10:08 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

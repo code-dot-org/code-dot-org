@@ -1,0 +1,49 @@
+name 'self-paced-TCaAI-L2-BI1-Reflection_26'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Key Lesson Moments: Humans Shape AI Outputs
+
+## Lesson 3: AI-Assisted Creation
+
+<img 
+src="https://images.code.org/f5efd92180effd7b837d3026945b4974-image-1779229414288.jpeg" 
+alt="" 
+style="width:30%; border-radius:10px; margin:0px 0px 10px 15px; float:right;">
+
+<a href="https://studio.code.org/courses/ai-discoveries-2026/units/1/lessons/3" target="blank" rel="noopener noreferrer">Lesson Plan Link</a>
+
+📎 **Student Resource**: <a href="https://docs.google.com/document/d/1Yed_Nk6lsemPAdG5VYfLE90vDs6FTLF7yALovoX9twE/edit?tab=t.0#heading=h.5sxyuwwa9jv5" target="blank" rel="noopener noreferrer">AI Audit Field Notes</a>
+
+**Lesson Objectives**: 
+
+* Analyze the balance of human versus AI contribution in a creative product.
+* Articulate clear boundaries and guidance for ethical co-creation.
+* Evaluate the environmental, social, and personal trade-offs of generative AI.
+
+### Student Activity: AI-Assisted Creation
+
+In this lesson, students begin testing AI tools for real purposes connected to their Generate and Judge Guide. As students test different prompts, they begin noticing that AI systems generate responses by predicting likely patterns rather than “understanding” information in a human way.
+
+Students also start recognizing that strong prompts often include:
+* context
+* a clear goal
+* enough detail to guide the AI toward a useful output
+
+<div style="clear:both;"></div>
+
+### Try It Out!
+
+Open the Lesson 3 lesson plan and read through the Warm-Up and Activity sections to get a sense of how students refine prompts and evaluate AI outputs. **In the next level of this progression**, you’ll experience a lesson activity where students use AI Chat Lab to practice writing and revising prompts.
+
+As you try the level out, consider the following question:
+
+<div style="background-color:#F5F7F8; padding:18px; border-radius:10px; margin:20px 0px;">
+
+<p style="font-size:16px; margin:0;">
+<strong>Reflection:</strong> How can I help students move from judging AI outputs emotionally (“this is good” or “this is bad”) toward analyzing <b>why</b> an output was or was not useful?
+</p>
+
+</div>
+MARKDOWN

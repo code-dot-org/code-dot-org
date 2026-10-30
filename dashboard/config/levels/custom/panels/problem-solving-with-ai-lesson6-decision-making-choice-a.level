@@ -1,0 +1,212 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-07-31T15:00:31.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "use_links": "true",
+    "panels": [
+      {
+        "text": "6 people showed up at once in the emergency room! Nurse Sarah is trying to quickly figure out which two patients to assist first. \n\nClick through the waiting room to learn more about the patients that she is assessing.",
+        "imageUrl": "https://images.code.org/6bf6c27682f9535007fc14f7cce0daca-hospital-slide-one.jpg",
+        "key": "problem-solving-with-ai-lesson6-decision-making-choice-a-cd39554c-8619-4fd9-9a6c-a7642df082d5",
+        "links": [
+          {
+            "text": "Examine Patient List",
+            "x": 50,
+            "y": 89,
+            "targetKey": "problem-solving-with-ai-lesson6-decision-making-choice-a-3e687ac1-b62b-48cc-9c18-7fafb7698c89",
+            "width": 14
+          }
+        ],
+        "layout": "text-top-left"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/31a7a1a3665f796bdccffaa6fd99b9ee-hospital-slide-two.jpg",
+        "key": "problem-solving-with-ai-lesson6-decision-making-choice-a-3e687ac1-b62b-48cc-9c18-7fafb7698c89",
+        "links": [
+          {
+            "text": "More Patients",
+            "x": 87,
+            "y": 88,
+            "targetKey": "problem-solving-with-ai-lesson6-decision-making-choice-a-9351f7e6-c650-434a-a865-8bb68ccb3fdb",
+            "width": 16
+          },
+          {
+            "text": "Maria",
+            "x": 43,
+            "y": 63,
+            "targetKey": "problem-solving-with-ai-lesson6-decision-making-choice-a-d2b14967-7fec-4b5f-a197-8e4b1687799d",
+            "width": 10
+          },
+          {
+            "text": "James",
+            "x": 68,
+            "y": 25,
+            "targetKey": "problem-solving-with-ai-lesson6-decision-making-choice-a-364640f3-09c7-42ff-890b-0b343aa04abf",
+            "width": 10
+          },
+          {
+            "text": "Priya",
+            "x": 88,
+            "y": 25,
+            "targetKey": "problem-solving-with-ai-lesson6-decision-making-choice-a-7f788472-0101-472e-873f-de81765f3a49",
+            "width": 9
+          }
+        ]
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/90d70303719df3488cb157b0f0ac4be3-hospital-slide-three.jpg",
+        "key": "problem-solving-with-ai-lesson6-decision-making-choice-a-9351f7e6-c650-434a-a865-8bb68ccb3fdb",
+        "links": [
+          {
+            "text": "Previous Patients",
+            "x": 9,
+            "y": 83,
+            "targetKey": "problem-solving-with-ai-lesson6-decision-making-choice-a-3e687ac1-b62b-48cc-9c18-7fafb7698c89",
+            "width": 11
+          },
+          {
+            "text": "George",
+            "x": 50,
+            "y": 60,
+            "targetKey": "problem-solving-with-ai-lesson6-decision-making-choice-a-665767c8-bc80-41a8-bdd7-b94aabacbe60",
+            "width": 11
+          },
+          {
+            "text": "Olivia",
+            "x": 72,
+            "y": 66,
+            "targetKey": "problem-solving-with-ai-lesson6-decision-making-choice-a-94d0bf18-730a-47aa-9229-da15f66fc9ba",
+            "width": 11
+          },
+          {
+            "text": "Dante",
+            "x": 93,
+            "y": 67,
+            "targetKey": "problem-solving-with-ai-lesson6-decision-making-choice-a-8168e11d-da23-4c62-834d-cfa06fc488c6",
+            "width": 10
+          }
+        ]
+      },
+      {
+        "text": "Maria - Deep forehead cut from a fall at the playground. \n\nTreatment: Stitches, cleaning and dressing the wound, tetanus shot",
+        "imageUrl": "https://images.code.org/82c0b731057468f5f637c2e6bcf64405-hospital-slide-maria.jpg",
+        "key": "problem-solving-with-ai-lesson6-decision-making-choice-a-d2b14967-7fec-4b5f-a197-8e4b1687799d",
+        "showContinueButton": true,
+        "links": [
+          {
+            "text": "BACK",
+            "x": 11,
+            "y": 86,
+            "targetKey": "problem-solving-with-ai-lesson6-decision-making-choice-a-3e687ac1-b62b-48cc-9c18-7fafb7698c89",
+            "width": 10
+          }
+        ],
+        "typing": true,
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "James - Concussion from a car accident. Treatment: Neurological exam, CT scan, pain management, observation for 24 hours",
+        "imageUrl": "https://images.code.org/9348311ad8eeb9ad20c552d93670d5e5-hospital-slide-james.jpg",
+        "key": "problem-solving-with-ai-lesson6-decision-making-choice-a-364640f3-09c7-42ff-890b-0b343aa04abf",
+        "links": [
+          {
+            "text": "BACK",
+            "x": 11,
+            "y": 87,
+            "targetKey": "problem-solving-with-ai-lesson6-decision-making-choice-a-3e687ac1-b62b-48cc-9c18-7fafb7698c89",
+            "width": 11
+          }
+        ],
+        "layout": "text-bottom-right",
+        "typing": true,
+        "fadeInOverPrevious": true,
+        "showContinueButton": true
+      },
+      {
+        "text": "Priya - Asthma attack triggered by environmental allergens. Treatment: Inhaler, anti-inflammation injection, oxygen therapy, respiratory monitoring",
+        "imageUrl": "https://images.code.org/d1d1e68c40b084c56e2389d04dfaed3a-hospital-slide-priya.jpg",
+        "key": "problem-solving-with-ai-lesson6-decision-making-choice-a-7f788472-0101-472e-873f-de81765f3a49",
+        "links": [
+          {
+            "text": "BACK",
+            "x": 11,
+            "y": 12,
+            "targetKey": "problem-solving-with-ai-lesson6-decision-making-choice-a-3e687ac1-b62b-48cc-9c18-7fafb7698c89",
+            "width": 10
+          }
+        ],
+        "typing": true,
+        "fadeInOverPrevious": true,
+        "showContinueButton": true,
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "George - Sudden vision loss in left eye. Treatment: Immediate ophthalmologic (eye) evaluation, possible stroke assessment, brain imaging.",
+        "imageUrl": "https://images.code.org/4c3e9771f68ba6a50a3ce0e71cc0b369-hospital-slide-george.jpg",
+        "key": "problem-solving-with-ai-lesson6-decision-making-choice-a-665767c8-bc80-41a8-bdd7-b94aabacbe60",
+        "links": [
+          {
+            "text": "BACK",
+            "x": 11,
+            "y": 87,
+            "targetKey": "problem-solving-with-ai-lesson6-decision-making-choice-a-9351f7e6-c650-434a-a865-8bb68ccb3fdb",
+            "width": 10
+          }
+        ],
+        "showContinueButton": true,
+        "fadeInOverPrevious": true,
+        "typing": true,
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "Olivia - Third-degree burn on hand from kitchen accident. Treatment: IV pain relief, burn dressing, possible skin graft consultation.",
+        "imageUrl": "https://images.code.org/bd4014a36a49d00a5b29946a9a4ce060-hospital-slide-olivia.jpg",
+        "key": "problem-solving-with-ai-lesson6-decision-making-choice-a-94d0bf18-730a-47aa-9229-da15f66fc9ba",
+        "links": [
+          {
+            "text": "BACK",
+            "x": 11,
+            "y": 86,
+            "targetKey": "problem-solving-with-ai-lesson6-decision-making-choice-a-9351f7e6-c650-434a-a865-8bb68ccb3fdb",
+            "width": 10
+          }
+        ],
+        "showContinueButton": true,
+        "typing": true,
+        "fadeInOverPrevious": true,
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "Dante - Possible broken leg from a skateboarding accident. Treatment: X-ray, cast, pain management, crutches",
+        "imageUrl": "https://images.code.org/a20bbf607350f93b3fa05e975daa2219-hospital-slide-dante.jpg",
+        "key": "problem-solving-with-ai-lesson6-decision-making-choice-a-8168e11d-da23-4c62-834d-cfa06fc488c6",
+        "links": [
+          {
+            "text": "BACK",
+            "x": 11,
+            "y": 87,
+            "targetKey": "problem-solving-with-ai-lesson6-decision-making-choice-a-9351f7e6-c650-434a-a865-8bb68ccb3fdb",
+            "width": 10
+          }
+        ],
+        "showContinueButton": true,
+        "fadeInOverPrevious": true,
+        "typing": true,
+        "layout": "text-bottom-right"
+      }
+    ],
+    "display_name": "Hospital Triage Nurse",
+    "bubble_choice_description": "Six people arrived at the emergency room at the same time. Decide who gets seen first.",
+    "thumbnail_url": "https://images.code.org/42eadf1ea4a03a367c79e6814f92ea1d-choice-level-pic.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-07-31 15:00:33 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-31 16:24:51 +0000\",\"changed\":[\"use_links\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-31 16:24:58 +0000\",\"changed\":[\"use_links\",\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-31 16:25:49 +0000\",\"changed\":[\"use_links\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-31 16:41:40 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-31 17:08:47 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-31 17:10:57 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-31 17:13:04 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-31 17:17:20 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-31 17:23:09 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-31 17:25:45 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-31 17:30:34 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-31 19:30:46 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-03 14:30:52 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

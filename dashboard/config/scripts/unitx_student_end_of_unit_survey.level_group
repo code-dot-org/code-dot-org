@@ -1,0 +1,8 @@
+name 'unitX-student-end-of-unit survey'
+title 'title of the assessment here'
+submittable 'true'
+anonymous 'true'
+activity_guide_level 'false'
+
+page
+level 'student-end-of-unit-survey-q1'

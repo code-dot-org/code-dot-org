@@ -1,0 +1,36 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-09-07T18:33:56.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "aif-y2-working-with-data-lesson5-choice1-2026 + template",
+    "long_instructions": "`csv.DictReader` reads data from a CSV as strings—not numbers. To analyze this data, you need to convert those strings to numbers.\r\n\r\n**☑️ Do This:**\r\n\r\n- Convert the strings from `csv.DictReader` into numbers.\r\n\r\n**💻 Coding Tip**\r\n\r\n- Remember the `float` function casts values to floats.\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFQVtb/79n8xK5T0YDPwmG8LP5exwDow2ez7XFdLb\nOQTwpV+o0EA+1INedQHmDgitj6PfB8jVz41dxkAvnySQDi5fYgqk3+QjlnCY\nnxenTk1h4ClclRf568DLJ5MBez/KRX3OmdZHZ4769O2Fgkigk9XporwkdtFw\nEaXx7JjTPAjgqXa1Yv6I3WF1+u5aoyQeCHVafOWBE5LFvYXjyHyT2QUx7SmT\ncpoSWe+fNYlhMkqVbn8c5osvGOLI7vMncL2B0Zd7XImDNhRN7p1YjV5dDHwM\nDEEKZ8CjjQ32zDiufY2yNXLkOE0dSySVTqR9P1eV355Xbq1jqWS5JHHx4u+C\nEaVbq3l0Z63gt7uvdZ3iI10JBAtlxjw7ZnXOjmIXbd9skrOJU0K8truy75kB\nyAE8o/84fOODvAIqd12jbDTZ5SGeb+Bta/nZaMyLNqKxq3/jXtyNtlud6VT/\n3tIB2T8g5rCWGmz6wq4dHZv3V7tdT1J0TA1dk4EsGwRLBS0fFcQQlzRymNs7\nlLIUHDamajawDZem+a8suA9v0a4S+PXafNBJQERQURUovZJlfKxB01IN7Fyl\ntepHFRTjrGTet/Ok6Pj2+acyoSritZo4dRvBnaXBHbTanv6LP61l8k1JOYV9\naxt9jVUsevFrWEKI2VNdIVjfmYzGkj6HcOBiD2DTllSgDvMthFhNLKL8jd+J\nIxT4DVdxY34BaOox/E7xVIPKXS1mz5EM56EIPws0FhEXUTIWLeXdo5dJmXdH\naTER5FkL9mPlmiyCQAR1k+F7E2CsFrZnHBEE5623RUvJuRXsFEeRhmqCejZs\n5FcvRWbdUsKHINP7hSVDYJLXSrwjXqub284Dzp3zq4lTTzY4u5fP3L3T8tXA\n8V7tbyHamrTMjeP89Jj7eNqgJBEYBaJyFY4xsCgKHzYrIOWaSYuPONraGw2B\nN9iA8Q3hh/Bcp0MS/C6g0IBmlAu4qRtPkdIDWclYYAKbJdPVC6LxYKbPjyDc\naiDnFo0wxp6Rjj7ZlAYAaiWGtNzcF9p60onYyKo5WWw2Plh3OwguMGdeDDsc\n/d8QKfwaj/bWXY7NJYI+FDGVvKKqx2auXiKH0aI+jI9JgaIaRHiZPPY+u3YG\n9/4BQTyr8cUgw5hNeUwxn3ZeMZz/vMTL6Atr2yH0jC5VJDj8t90RwmOrVJMq\nz2QC5oI693UcOMs5ErrjVOnSzRnWyBogqVxZRQMwIT/2CtlfTZvZOfv09h38\nBZDVoRvhKPMd/9pbK4H23hy+loaROaGL6VSjZBkU/DqLdw50W2n9YEGFuiBN\nz5HQjcwP/pEtiNMkBqjkbqyHDUxbXhx/bjCVYlULJmywHw==\n",
+    "display_name": "Sprinting",
+    "bubble_choice_description": "Compare two sprinters running a 100-meter race.",
+    "thumbnail_url": "https://images.code.org/59c2513811d7622bb7a7623110ada6f9-sprinter.jpg"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-07 18:35:08 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 18:36:33 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 18:38:56 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

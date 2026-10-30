@@ -1,5 +1,5 @@
-const webpack = require('webpack');
 const path = require('path');
+const webpack = require('webpack');
 
 const envConstants = require('./envConstants');
 const {localeDoNotImport, WEBPACK_BASE_CONFIG} = require('./webpack.config');
@@ -31,11 +31,10 @@ const karmaConfig = {
             localeDoNotImportTest('@cdo/locale'),
             localeDoNotImportTest('@cdo/music/locale'),
             localeDoNotImportTest('@cdo/netsim/locale'),
-            localeDoNotImportTest('@cdo/tutorialExplorer/locale'),
             localeDoNotImportTest('@cdo/weblab/locale'),
+            localeDoNotImportTest('@cdo/signup/locale'),
           ]),
           ...{
-            firebase: path.resolve(__dirname, 'test/util/MockFirebase.js'),
             // Use mock-firmata to unit test playground-io maker components
             firmata: 'mock-firmata/mock-firmata',
           },
@@ -43,8 +42,6 @@ const karmaConfig = {
       },
     },
     externals: {
-      blockly: 'this Blockly',
-
       // The below are necessary for enzyme to work.
       // See https://github.com/airbnb/enzyme/blob/master/docs/guides/webpack.md
       cheerio: 'window',

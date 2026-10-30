@@ -1,0 +1,96 @@
+name 'pl-ai-101-V2-mod5-opening-02_2026'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Ethical Considerations When Using AI
+
+As AI tools become more widely used, it’s important to recognize that their use raises important ethical questions. While AI can support decision-making, creativity, and efficiency, it also introduces risks that users should consider when deciding how and when to use these tools.
+
+Understanding these considerations helps ensure that AI is used thoughtfully, responsibly, and in ways that support, rather than undermine, human judgment.
+
+## Key Ethical Considerations
+
+👉 Click on the cards below to learn more about each key ethical consideration for using AI.
+
+<div style="max-width:1200px; margin:0 auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color:#2f2f2f;">
+
+<div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:14px;">
+
+<details style="background:#ffffff; border:2px solid #5a2ca0; border-radius:14px; overflow:hidden; box-shadow:0 3px 8px rgba(0,0,0,0.06);">
+<summary style="list-style:none; cursor:pointer; padding:0; display:block;">
+<div style="padding:12px; text-align:center;">
+<div style="font-size:16px; font-weight:700; margin-bottom:10px;">Bias, Fairness, and Representation</div>
+<img src="https://images.code.org/5e53b543140be05ca532793a22ff1b31-Screenshot 2026-04-17 at 11.14.44 AM.png" style="width:150px; height:150px; object-fit:contain;">
+</div>
+</summary>
+<div style="padding:0 12px 12px 12px; font-size:14px; line-height:1.4;">
+AI systems are trained on large datasets that may contain bias. As a result, they can reinforce or amplify inequities in language, representation, or perspective, making it important to critically evaluate outputs.
+</div>
+</details>
+
+<details style="background:#ffffff; border:2px solid #5a2ca0; border-radius:14px; overflow:hidden; box-shadow:0 3px 8px rgba(0,0,0,0.06);">
+<summary style="list-style:none; cursor:pointer; padding:0; display:block;">
+<div style="padding:12px; text-align:center;">
+<div style="font-size:16px; font-weight:700; margin-bottom:10px;">Transparency, Accuracy, and Accountability</div>
+<img src="https://images.code.org/0bc36c51cecb73b7509ee59a264aa7f9-Screenshot 2026-04-17 at 11.14.47 AM.png" style="width:150px; height:150px; object-fit:contain;">
+</div>
+</summary>
+<div style="padding:0 12px 12px 12px; font-size:14px; line-height:1.4;">
+AI systems do not always show how they generate responses, and their outputs may be incomplete or incorrect. Users remain responsible for evaluating accuracy and ensuring that AI-generated content is appropriate for use.
+</div>
+</details>
+
+<details style="background:#ffffff; border:2px solid #5a2ca0; border-radius:14px; overflow:hidden; box-shadow:0 3px 8px rgba(0,0,0,0.06);">
+<summary style="list-style:none; cursor:pointer; padding:0; display:block;">
+<div style="padding:12px; text-align:center;">
+<div style="font-size:16px; font-weight:700; margin-bottom:10px;">Privacy and Data Protection</div>
+<img src="https://images.code.org/5acfb2c7a35e91013837b8d3f961aa58-Screenshot 2026-04-17 at 11.14.51 AM.png" style="width:150px; height:150px; object-fit:contain;">
+</div>
+</summary>
+<div style="padding:0 12px 12px 12px; font-size:14px; line-height:1.4;">
+AI tools may collect or process user data. It is important to understand how data is used and to take steps to protect personal and sensitive information.</div>
+</details>
+
+<details style="background:#ffffff; border:2px solid #5a2ca0; border-radius:14px; overflow:hidden; box-shadow:0 3px 8px rgba(0,0,0,0.06);">
+<summary style="list-style:none; cursor:pointer; padding:0; display:block;">
+<div style="padding:12px; text-align:center;">
+<div style="font-size:16px; font-weight:700; margin-bottom:10px;">Safety, Security, and Appropriate Use</div>
+<img src="https://images.code.org/9e9edf8a919a7426b4bf2a94c7618294-Screenshot 2026-04-17 at 11.15.16 AM.png" style="width:150px; height:150px; object-fit:contain;">
+</div>
+</summary>
+<div style="padding:0 12px 12px 12px; font-size:14px; line-height:1.4;">
+AI can be misused—for example, to generate misleading content or manipulate information. Ensuring safe and appropriate use is an important part of responsible AI integration.</div>
+</details>
+
+<details style="background:#ffffff; border:2px solid #5a2ca0; border-radius:14px; overflow:hidden; box-shadow:0 3px 8px rgba(0,0,0,0.06);">
+<summary style="list-style:none; cursor:pointer; padding:0; display:block;">
+<div style="padding:12px; text-align:center;">
+<div style="font-size:16px; font-weight:700; margin-bottom:10px;">Human Oversight and Professional Judgment</div>
+<img src="https://images.code.org/42ceac55d6187307f57cb14b8e2361af-Screenshot 2026-04-17 at 11.15.20 AM.png" style="width:150px; height:150px; object-fit:contain;">
+</div>
+</summary>
+<div style="padding:0 12px 12px 12px; font-size:14px; line-height:1.4;">
+AI should support, not replace, human decision-making. Maintaining oversight and applying judgment is critical when using AI tools.</div>
+</details>
+
+<details style="background:#ffffff; border:2px solid #5a2ca0; border-radius:14px; overflow:hidden; box-shadow:0 3px 8px rgba(0,0,0,0.06);">
+<summary style="list-style:none; cursor:pointer; padding:0; display:block;">
+<div style="padding:12px; text-align:center;">
+<div style="font-size:16px; font-weight:700; margin-bottom:10px;">Broader Impacts</div>
+<img src="https://images.code.org/3de4c06b9b13022b36c4acff70dacad4-Screenshot 2026-04-17 at 11.15.24 AM.png" style="width:150px; height:150px; object-fit:contain;">
+</div>
+</summary>
+<div style="padding:0 12px 12px 12px; font-size:14px; line-height:1.4;">
+AI also raises broader considerations, including environmental impact, questions about ownership and copyright, and changes to the job market. While these may be less immediate in day-to-day use, they are important in understanding the full impact of AI.</div>
+</details>
+
+</div>
+</div>
+
+## Focus Areas in This Module
+While all of these considerations are important, this module focuses on the areas most directly connected to **teaching and learning** in the classroom:
+* **Misinformation and AI Fiction**: How AI can generate incorrect, misleading, or incomplete information, and how educators and students can identify and respond to it.
+* **Algorithmic Bias**: How bias can appear in AI-generated content and what it means for representation, fairness, and student experience.
+* **Data Privacy**: How to protect student information and make responsible choices when using AI tools in educational settings.
+MARKDOWN

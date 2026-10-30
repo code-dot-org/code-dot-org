@@ -1,9 +1,11 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/deprecatedChai';
+
+import PrintCertificates from '@cdo/apps/templates/teacherDashboard/PrintCertificates';
 import {UnconnectedSectionActionDropdown as SectionActionDropdown} from '@cdo/apps/templates/teacherDashboard/SectionActionDropdown';
 import {setRosterProvider} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import PrintCertificates from '@cdo/apps/templates/teacherDashboard/PrintCertificates';
+
+import {expect} from '../../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
 const sections = [
   {
@@ -13,7 +15,7 @@ const sections = [
     loginType: 'word',
     studentCount: 0,
     code: 'ABCD',
-    grade: '10',
+    grades: ['10'],
     providerManaged: false,
     hidden: false,
   },
@@ -24,7 +26,7 @@ const sections = [
     loginType: 'google_classroom',
     studentCount: 0,
     code: 'EFGH',
-    grade: '11',
+    grades: ['11'],
     providerManaged: true,
     hidden: false,
   },
@@ -35,7 +37,7 @@ const sections = [
     loginType: 'picture',
     studentCount: 4,
     code: 'IJKL',
-    grade: '9',
+    grades: ['9'],
     providerManaged: false,
     hidden: false,
   },
@@ -46,9 +48,21 @@ const sections = [
     loginType: 'email',
     studentCount: 2,
     code: 'MNOP',
-    grade: '6',
+    grades: ['6'],
     providerManaged: false,
     hidden: true,
+  },
+  {
+    id: 5,
+    name: 'PL',
+    courseVersionName: 'cv',
+    loginType: 'email',
+    participantType: 'teacher',
+    studentCount: 2,
+    code: 'QRST',
+    grades: ['pl'],
+    providerManaged: false,
+    hidden: false,
   },
 ];
 
@@ -88,6 +102,23 @@ describe('SectionActionDropdown', () => {
       <SectionActionDropdown {...DEFAULT_PROPS} sectionData={sections[1]} />
     );
     expect(wrapper).to.contain('Sync students from Google Classroom');
+  });
+
+  it('renders the sync option but no login cards for ClassLink sections', () => {
+    const classlinkSection = {
+      ...sections[1],
+      loginType: 'classlink',
+      code: 'CL-2222|33333',
+    };
+    const wrapper = shallow(
+      <SectionActionDropdown
+        {...DEFAULT_PROPS}
+        sectionData={classlinkSection}
+      />
+    );
+    expect(wrapper).to.contain('Sync students from ClassLink');
+    // Logins are managed by ClassLink SSO; there are no cards to print.
+    expect(wrapper.text()).to.not.include('Print login cards');
   });
 
   it('renders the four standard options for a third party section (Google Classroom)', () => {
@@ -139,10 +170,97 @@ describe('SectionActionDropdown', () => {
       <SectionActionDropdown {...DEFAULT_PROPS} sectionData={sections[3]} />
     );
     const sectionId = wrapper.instance().props.sectionData.id;
-    const expectedUrl = '/sections/' + sectionId + '/edit';
+    const expectedUrl =
+      '/teacher_dashboard/sections/' + sectionId + '/settings';
     expect(wrapper).to.contain('Edit Section Details');
     expect(wrapper.find('.edit-section-details-link').props().href).to.equal(
       expectedUrl
     );
+  });
+
+  it('sends selected user to the new edit page with redirect for pl section', () => {
+    const wrapper = shallow(
+      <SectionActionDropdown {...DEFAULT_PROPS} sectionData={sections[4]} />
+    );
+    const sectionId = wrapper.instance().props.sectionData.id;
+    const expectedUrl =
+      '/teacher_dashboard/sections/' +
+      sectionId +
+      '/settings?redirectToPage=my-professional-learning';
+    expect(wrapper).to.contain('Edit Section Details');
+    expect(wrapper.find('.edit-section-details-link').props().href).to.equal(
+      expectedUrl
+    );
+  });
+
+  it('sends selected user to the new teacher dashboard settings page', () => {
+    const wrapper = shallow(
+      <SectionActionDropdown {...DEFAULT_PROPS} sectionData={sections[3]} />
+    );
+    const sectionId = wrapper.instance().props.sectionData.id;
+    const expectedUrl =
+      '/teacher_dashboard/sections/' + sectionId + '/settings';
+    expect(wrapper).to.contain('Edit Section Details');
+    expect(wrapper.find('.edit-section-details-link').props().href).to.equal(
+      expectedUrl
+    );
+  });
+
+  it('sends selected user to the new teacher dashboard roster page', () => {
+    const wrapper = shallow(
+      <SectionActionDropdown {...DEFAULT_PROPS} sectionData={sections[3]} />
+    );
+    const sectionId = wrapper.instance().props.sectionData.id;
+    const expectedUrl = '/teacher_dashboard/sections/' + sectionId + '/roster';
+    expect(wrapper).to.contain('Manage Students');
+    expect(wrapper.find('.manage-students-link').props().href).to.equal(
+      expectedUrl
+    );
+  });
+
+  it('handles a rejected sync instead of leaving an unhandled rejection', async () => {
+    const consoleError = jest
+      .spyOn(console, 'error')
+      .mockImplementation(() => {});
+    const wrapper = shallow(
+      <SectionActionDropdown
+        {...DEFAULT_PROPS}
+        sectionData={sections[1]}
+        sectionCode="G-123"
+        sectionName="Sync me"
+        updateRoster={() => Promise.reject(new Error('sync failed'))}
+      />
+    );
+
+    wrapper.instance().onClickSync();
+    // A rejection that escaped would surface here rather than in the catch.
+    await new Promise(resolve => setTimeout(resolve, 0));
+
+    expect(consoleError.mock.calls.length).to.equal(1);
+    consoleError.mockRestore();
+  });
+
+  it('sends only the class sourcedId when syncing a ClassLink section', () => {
+    // The section code is CL-<TenantId>|<classSourcedId>; the tenant is never
+    // sent — the server derives it from the signed-in user.
+    let rosterArgs;
+    const classlinkSection = {
+      ...sections[1],
+      loginType: 'classlink',
+      code: 'CL-2222|33333',
+    };
+    const wrapper = shallow(
+      <SectionActionDropdown
+        {...DEFAULT_PROPS}
+        sectionData={classlinkSection}
+        sectionCode="CL-2222|33333"
+        sectionName="Sci5"
+        updateRoster={(...args) => {
+          rosterArgs = args;
+        }}
+      />
+    );
+    wrapper.instance().onClickSync();
+    expect(rosterArgs[0]).to.equal('33333');
   });
 });

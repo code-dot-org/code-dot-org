@@ -1,7 +1,8 @@
 require 'geocoder'
 require 'geocoder/results/mapbox'
-require 'redis'
 require 'geocoder/lookups/freegeoip'
+require "active_support/cache/redis_cache_store"
+require 'retryable'
 
 module Geocoder
   module Result
@@ -11,7 +12,7 @@ module Geocoder
           results['location_p'] = "#{latitude},#{longitude}" if latitude && longitude
           %w(street_number route street_address city state state_code country country_code postal_code).each do |component_name|
             component = try component_name
-            results["#{prefix}#{component_name}_s"] = component unless component.nil_or_empty?
+            results["#{prefix}#{component_name}_s"] = component unless component.nil? || component.empty?
           end
         end
       end
@@ -80,29 +81,12 @@ module Geocoder
     Mapbox.prepend CdoResultAdapter
   end
 
-  MIN_ADDRESS_LENGTH = 10
+  RETRIES = 2
 
-  def self.find_potential_street_address(text)
-    return nil unless text
-
-    # Starting from the first number in the string, try parsing with Geocoder
-    number_to_end_search = text.scan /([0-9]+.*)/
-    return nil if number_to_end_search.empty?
-
-    first_number_to_end = number_to_end_search.first.first
-
-    return nil if Float(first_number_to_end) rescue false # is a number
-    return nil if first_number_to_end.length < MIN_ADDRESS_LENGTH # too short to be an address
-    return nil if first_number_to_end.count(' ') < 2 # too few words to be an address
-
-    results = Geocoder.search(first_number_to_end)
-    return nil if results.empty?
-
-    # Return nil if none of the results returned from Geocoder matched on a
-    # street address with relevance >= 0.8
-    return nil if results.none? {|r| r.relevance >= 0.8 && r.street_address}
-
-    first_number_to_end
+  def self.find(query, options = {})
+    Retryable.retryable(on: [Redis::CannotConnectError, Timeout::Error], tries: RETRIES) do
+      search(query, options).first
+    end
   end
 
   # Temporarily, for a given block, configure Geocoder to raise all errors.
@@ -129,7 +113,11 @@ module Geocoder
     ]
 
     def search(query, options = {})
-      ip = IPAddr.new(query) rescue nil
+      ip = begin
+        IPAddr.new(query)
+      rescue
+        nil
+      end
       if SAUCELABS_CIDR.any? {|cidr| cidr.include?(ip)}
         [OpenStruct.new(country_code: 'US', country: 'United States')]
       else
@@ -140,12 +128,16 @@ module Geocoder
   singleton_class.prepend SauceLabsOverride
 
   # Override Geocoder#search to default to the same behavior as the FreeGeoIP service used on our staging and production
-  # servers. Localhost lookups are usually because UI tests are making requests and we want our developer and drone
+  # servers. Localhost lookups are usually because UI tests are making requests and we want our developer and CI
   # environments to behave similar to production and staging.
   # https://github.com/alexreisner/geocoder/blob/350cf0cc6a158d510aec3d91594d9b5718f877a9/lib/geocoder/lookups/freegeoip.rb#L41-L54
-  module LocahostOverride
+  module LocalhostOverride
     def search(query, options = {})
-      ip = IPAddr.new(query) rescue nil
+      ip = begin
+        IPAddr.new(query)
+      rescue
+        nil
+      end
       if ip&.loopback?
         [OpenStruct.new(
           ip: ip.to_s,
@@ -159,7 +151,7 @@ module Geocoder
       end
     end
   end
-  singleton_class.prepend LocahostOverride
+  singleton_class.prepend LocalhostOverride
 end
 
 # We need to override some of the behavior of Geocoder::Lookup::Freegeoip in order for is to work with our self-hosted
@@ -178,7 +170,10 @@ def geocoder_config
     timeout: 10,
     units: :km,
   }.tap do |config|
-    config[:cache] = Redis.connect(url: CDO.geocoder_redis_url) if CDO.geocoder_redis_url
+    config[:cache] = ActiveSupport::Cache::RedisCacheStore.new(
+      url: CDO.redis_url,
+      expires_in: 1.week,
+    )
     if CDO.mapbox_access_token
       config[:lookup] = :mapbox
       config[:use_https] = true

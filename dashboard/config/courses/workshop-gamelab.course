@@ -1,0 +1,23 @@
+{
+  "name": "workshop-gamelab",
+  "script_names": [
+    "workshop-gamelab"
+  ],
+  "original_script_names": [
+    "workshop-gamelab"
+  ],
+  "published_state": "beta",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "workshop-gamelab",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

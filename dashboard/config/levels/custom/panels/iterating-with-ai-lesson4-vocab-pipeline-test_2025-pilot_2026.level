@@ -1,0 +1,23 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-04-01T21:40:09.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# Pipeline\n\nA **pipeline** is a *read → transform → render* sequence your code uses to process data. It starts with raw data, reshapes it for a purpose, and then displays the result to the user.",
+        "imageUrl": "https://images.code.org/17c59a633eb9ff9114e79bef7cd9ca04-Pasted Graphic 2.png",
+        "key": "undefined-ea03636a-a1b5-4568-be2b-86c3c6462665",
+        "layout": "text-bottom-center"
+      }
+    ],
+    "name_suffix": "_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T21:40:09.840+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson4-vocab-pipeline-test_2025-pilot\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson4-vocab-pipeline-test_2025-pilot\"}]"
+}]]></config>
+</Panels>

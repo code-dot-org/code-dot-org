@@ -13,4 +13,7 @@ Dashboard::Application.configure do
 
   # Disable Rails.cache on levelbuilder (until code-dot-org/code-dot-org#8844 is merged)
   config.cache_store = :null_store
+
+  # Disabled in the web service so that en.yml edits show up immediately in the levelbuilder UI.  Enabled in Active Job to prevent performance problems there.
+  config.cache_classes = CDO.running_active_job_worker?
 end

@@ -1,0 +1,18 @@
+name 'cv-studentsurvey-postmodule'
+title 'Computer Vision: Post-Module Survey'
+submittable 'true'
+anonymous 'true'
+
+page
+text 'cv-studentsurvey-postmodule-preamble'
+level 'cv-studentsurvey-postmodule-q1'
+level 'cv-studentsurvey-postmodule-q2'
+level 'cv-studentsurvey-postmodule-q3'
+level 'cv-studentsurvey-postmodule-q4'
+level 'cv-studentsurvey-postmodule-q11'
+level 'cv-studentsurvey-postmodule-q10'
+level 'cv-studentsurvey-postmodule-q5'
+level 'cv-studentsurvey-postmodule-q9'
+level 'cv-studentsurvey-postmodule-q6'
+level 'cv-studentsurvey-postmodule-q7'
+level 'cv-studentsurvey-postmodule-q8'

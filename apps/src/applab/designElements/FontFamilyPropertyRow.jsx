@@ -1,6 +1,8 @@
 import applabMsg from '@cdo/applab/locale';
-import EnumPropertyRow from './EnumPropertyRow';
+
 import {fontFamilyOptions} from '../constants';
+
+import EnumPropertyRow from './EnumPropertyRow';
 
 export default class FontFamilyPropertyRow extends EnumPropertyRow {
   static defaultProps = {

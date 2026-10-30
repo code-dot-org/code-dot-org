@@ -1,0 +1,14 @@
+{
+  "category_key": "javascript",
+  "content": "# Arrow Function\n\nAn arrow function uses `=>` to create a function. Use arrow functions when you want to name a function or write a small function inside another piece of code, like an event listener.",
+  "examples": "[{\"name\":\"Create a Named Function\",\"description\":\"This creates an arrow function named `addNotification`.\",\"code\":\"```\\nconst addNotification = () =\\u003e {\\n  message.textContent = \\\"You have a new notification!\\\";\\n};\\n```\"},{\"name\":\"Use an Arrow Function in an Event Listener\",\"description\":\"This runs the arrow function when the button is clicked.\",\"code\":\"```\\nbuttonOne.addEventListener(\\\"click\\\", () =\\u003e {\\n  message.textContent = \\\"Button One was clicked!\\\";\\n});\\n```\"}]",
+  "external_documentation": "",
+  "fields": "[]",
+  "key": "arrow-function",
+  "name": "Arrow Function",
+  "syntax": "`const addNotification = () => { ... };`",
+  "tips": "- Use `()` before the arrow for the function’s inputs.\n- Use `{ }` after the arrow for the code that should run.\n- The code inside the arrow function does not run until the function is called.\n- Arrow functions are often used as event handlers inside `addEventListener()`.\n- In Web Lab, arrow functions often appear near button click code and helper functions.",
+  "methods": [
+
+  ]
+}

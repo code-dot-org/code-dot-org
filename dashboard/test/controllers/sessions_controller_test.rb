@@ -6,44 +6,25 @@ class SessionsControllerTest < ActionController::TestCase
 
   setup do
     @request.env["devise.mapping"] = Devise.mappings[:user]
-    Cpa.stubs(:cpa_experience).
-      with(any_parameters).
-      returns(Cpa::NEW_USER_LOCKOUT)
   end
 
-  test 'login error derives locale from cdo.locale' do
+  test 'login error derives locale from I18n.locale' do
     locale = 'es-ES'
-    @request.env['cdo.locale'] = locale
+    I18n.locale = locale
     post :create
     assert_select '.alert', I18n.t('devise.failure.not_found_in_database', locale: locale)
   end
 
   test "teachers go to homepage after signing in" do
     teacher = create(:teacher)
-
-    post :create, params: {
-      user: {
-        login: '',
-        hashed_email: teacher.hashed_email,
-        password: teacher.password
-      }
-    }
-
+    create_session_for_user(teacher)
     assert_signed_in_as teacher
     assert_redirected_to '/home'
   end
 
   test "students go to learn homepage after signing in" do
     student = create(:student)
-
-    post :create, params: {
-      user: {
-        login: '',
-        hashed_email: student.hashed_email,
-        password: student.password
-      }
-    }
-
+    create_session_for_user(student)
     assert_signed_in_as student
     assert_redirected_to '/'
   end
@@ -70,19 +51,25 @@ class SessionsControllerTest < ActionController::TestCase
     end
   end
 
-  test "teachers go to specified return to url after signing in" do
+  test 'teachers go to specified return to path after signing in' do
     teacher = create(:teacher)
+    session[:user_return_to] = user_return_to = '/the-return-to-url'
+    create_session_for_user(teacher)
+    assert_signed_in_as teacher
+    assert_redirected_to user_return_to
+  end
 
-    session[:user_return_to] = user_return_to = '//test.code.org/the-return-to-url'
+  test 'teachers will not return to a url on a different host after signing in' do
+    teacher = create(:teacher)
+    session[:user_return_to] = 'https://some-other-site.com/the-return-to-url'
+    create_session_for_user(teacher)
+    assert_response :not_found
+  end
 
-    post :create, params: {
-      user: {
-        login: '',
-        hashed_email: teacher.hashed_email,
-        password: teacher.password
-      }
-    }
-
+  test 'teachers return to a code.org url after signing in' do
+    teacher = create(:teacher)
+    session[:user_return_to] = user_return_to = CDO.code_org_url('/the-return-to-url', 'https:')
+    create_session_for_user(teacher)
     assert_signed_in_as teacher
     assert_redirected_to user_return_to
   end
@@ -100,32 +87,15 @@ class SessionsControllerTest < ActionController::TestCase
 
   test 'signing in as student via hashed_email' do
     student = create(:student, birthday: Date.new(2010, 1, 3), email: 'my@email.xx')
-
-    post :create, params: {
-      user: {
-        login: '',
-        hashed_email: student.hashed_email,
-        password: student.password
-      }
-    }
-
+    create_session_for_user(student)
     assert_signed_in_as student
     assert_redirected_to '/'
   end
 
   test 'signing in new user creates blank UserGeo' do
     user = create(:user)
-
     assert UserGeo.find_by_user_id(user.id).nil?
-
-    post :create, params: {
-      user: {
-        login: '',
-        hashed_email: user.hashed_email,
-        password: user.password
-      }
-    }
-
+    create_session_for_user(user)
     assert UserGeo.find_by_user_id(user.id)
   end
 
@@ -134,13 +104,7 @@ class SessionsControllerTest < ActionController::TestCase
     UserGeo.create(user_id: user.id, ip_address: '127.0.0.1')
 
     assert_no_change('UserGeo.find_by_user_id(user.id)') do
-      post :create, params: {
-        user: {
-          login: '',
-          hashed_email: user.hashed_email,
-          password: user.password
-        }
-      }
+      create_session_for_user(user)
     end
 
     assert_equal 1, UserGeo.count
@@ -162,25 +126,33 @@ class SessionsControllerTest < ActionController::TestCase
 
   test 'signing in user creates SignIn' do
     frozen_time = Date.parse('1985-10-26 01:20:00')
+    anon_user_id = Cdo::AnonUserId.generate
     DateTime.stubs(:now).returns(frozen_time)
-    user = create :user, sign_in_count: 2
+    session[:statsig_stable_id] = anon_user_id
+    user = create(:user, sign_in_count: 2)
     assert_creates(SignIn) do
-      post :create, params: {
-        user: {
-          login: '',
-          hashed_email: user.hashed_email,
-          password: user.password
-        }
-      }
+      create_session_for_user(user)
     end
     sign_in = SignIn.find_by_user_id(user.id)
     assert sign_in
     assert_equal 2 + 1, sign_in.sign_in_count
     assert_equal frozen_time, sign_in.sign_in_at
+    assert_equal anon_user_id, sign_in.anon_user_id
+  end
+
+  test 'signing in user replaces and stores a blank stable ID' do
+    session[:statsig_stable_id] = ''
+    user = create(:user)
+
+    create_session_for_user(user)
+
+    anon_user_id = SignIn.find_by!(user_id: user.id).anon_user_id
+    assert Cdo::AnonUserId.valid?(anon_user_id)
+    assert_equal session[:statsig_stable_id], anon_user_id
   end
 
   test 'failed signin does not create SignIn' do
-    user = create :user
+    user = create(:user)
     assert_does_not_create(SignIn) do
       post :create, params: {
         user: {
@@ -192,19 +164,113 @@ class SessionsControllerTest < ActionController::TestCase
     end
   end
 
+  test 'failed signin for a Google-only account shows the generic error when the SSO nudge is off' do
+    DCDO.set('sso_nudge_enabled', false)
+    user = create(:user, :with_google_authentication_option, :without_email_auth_option)
+    google_option = user.authentication_options.find_by(credential_type: AuthenticationOption::GOOGLE)
+    post :create, params: {user: {login: '', hashed_email: google_option.hashed_email, password: 'wrong'}}
+    assert_select '.alert', I18n.t('devise.failure.not_found_in_database')
+  end
+
+  test 'failed signin for a password-only account shows the generic error' do
+    enable_sso_nudge
+    user = create(:user)
+    post :create, params: {user: {login: '', hashed_email: user.hashed_email, password: 'wrong'}}
+    assert_select '.alert', I18n.t('devise.failure.invalid')
+  end
+
+  test 'failed signin for an unknown email shows the generic error' do
+    enable_sso_nudge
+    post :create, params: {user: {login: '', hashed_email: User.hash_email('nobody@example.com'), password: 'wrong'}}
+    assert_select '.alert', I18n.t('devise.failure.not_found_in_database')
+  end
+
+  # The :without_email_auth_option trait blanks the user's own email and
+  # hashed_email, so these tests read them off the SSO option instead.
+  test 'failed signin for a Google-only account nudges toward Google' do
+    enable_sso_nudge
+    user = create(:user, :with_google_authentication_option, :without_email_auth_option)
+    google_option = user.authentication_options.find_by(credential_type: AuthenticationOption::GOOGLE)
+    post :create, params: {user: {login: '', hashed_email: google_option.hashed_email, password: 'wrong'}}
+    assert_select '.alert', I18n.t('auth.sso_login_nudge', provider: 'Google')
+  end
+
+  test 'failed signin by cleartext email nudges toward the SSO provider' do
+    enable_sso_nudge
+    user = create(:teacher, :with_google_authentication_option)
+    post :create, params: {user: {login: user.email, hashed_email: '', password: 'wrong'}}
+    assert_select '.alert', I18n.t('auth.sso_login_nudge', provider: 'Google')
+  end
+
+  test 'failed signin for a password account that also has Google nudges toward Google' do
+    enable_sso_nudge
+    user = create(:user, :with_google_authentication_option)
+    post :create, params: {user: {login: '', hashed_email: user.hashed_email, password: 'wrong'}}
+    assert_select '.alert', I18n.t('auth.sso_login_nudge', provider: 'Google')
+  end
+
+  test 'failed signin with several SSO options names the most recently updated one' do
+    enable_sso_nudge
+    user = create(:teacher, :with_google_authentication_option)
+    create(:authentication_option, user: user, email: user.email, credential_type: AuthenticationOption::MICROSOFT)
+    user.authentication_options.find_by(credential_type: AuthenticationOption::GOOGLE).update!(updated_at: 1.day.ago)
+    post :create, params: {user: {login: '', hashed_email: user.hashed_email, password: 'wrong'}}
+    assert_select '.alert', I18n.t('auth.sso_login_nudge', provider: 'Microsoft')
+  end
+
+  test 'failed signin shows the generic error when matching SSO options belong to different users' do
+    enable_sso_nudge
+    email = 'shared@example.com'
+    create(:lti_authentication_option, user: create(:student), email: email)
+    create(:authentication_option, user: create(:student), email: email, credential_type: AuthenticationOption::CLEVER)
+
+    post :create, params: {user: {login: '', hashed_email: AuthenticationOption.hash_email(email), password: 'wrong'}}
+    assert_select '.alert', I18n.t('devise.failure.not_found_in_database')
+  end
+
+  test 'failed signin for an LTI account nudges toward launching from the LMS' do
+    enable_sso_nudge
+    user = create(:user, :with_lti_auth)
+    lti_option = user.authentication_options.find_by(credential_type: AuthenticationOption::LTI_V1)
+    lti_option.update!(email: 'lti-teacher@example.com')
+    canvas_issuer = Policies::Lti::LMS_PLATFORMS[:canvas_cloud][:issuer]
+    lti_option.update!(authentication_id: "#{canvas_issuer}|client|subject")
+
+    post :create, params: {user: {login: '', hashed_email: lti_option.hashed_email, password: 'wrong'}}
+    assert_select '.alert', I18n.t('auth.lti_login_nudge', platform: 'Canvas')
+  end
+
+  test 'failed signin for an LTI account from an unknown issuer falls back to a generic LMS name' do
+    enable_sso_nudge
+    user = create(:user, :with_lti_auth)
+    lti_option = user.authentication_options.find_by(credential_type: AuthenticationOption::LTI_V1)
+    lti_option.update!(email: 'lti-student@example.com')
+
+    post :create, params: {user: {login: '', hashed_email: lti_option.hashed_email, password: 'wrong'}}
+    expected_platform = I18n.t('auth.lti_login_nudge_default_platform')
+    assert_select '.alert', I18n.t('auth.lti_login_nudge', platform: expected_platform)
+  end
+
+  test 'sign in page with no failed login shows no nudge' do
+    enable_sso_nudge
+    create(:user, :with_google_authentication_option, :without_email_auth_option)
+    get :new
+    assert_select '.alert', 0
+  end
+
   test "users go to code.org after logging out" do
     student = create(:student)
     sign_in student
 
     delete :destroy
 
-    assert_redirected_to '//test.code.org'
+    assert_redirected_to root_path
   end
 
   test "if you're not signed in you can still sign out" do
     delete :destroy
 
-    assert_redirected_to '//test.code.org'
+    assert_redirected_to root_path
   end
 
   test "facebook users go to generic oauth sign out page after logging out" do
@@ -225,15 +291,6 @@ class SessionsControllerTest < ActionController::TestCase
     assert_redirected_to '/oauth_sign_out/migrated'
   end
 
-  test "microsoft account users go to generic oauth sign out page after logging out" do
-    student = create(:student, provider: :windowslive)
-    sign_in student
-
-    delete :destroy
-
-    assert_redirected_to '/oauth_sign_out/migrated'
-  end
-
   test "oauth sign out page for facebook" do
     get :oauth_sign_out, params: {provider: 'facebook'}
     assert_select 'a[href="https://www.facebook.com/logout.php"]'
@@ -246,37 +303,15 @@ class SessionsControllerTest < ActionController::TestCase
     assert_select 'h4', 'You used Google to sign in. Click here to sign out of Google.'
   end
 
-  test "oauth sign out page for microsoft account" do
-    get :oauth_sign_out, params: {provider: 'windowslive'}
-    assert_select 'a[href="http://login.live.com/logout.srf"]'
-    assert_select 'h4', 'You used Microsoft to sign in. Click here to sign out of Microsoft.'
-  end
-
   test "deleted user cannot sign in" do
     teacher = create(:teacher, :deleted)
-
-    post :create, params: {
-      user: {
-        login: '',
-        hashed_email: teacher.hashed_email,
-        password: teacher.password
-      }
-    }
-
+    create_session_for_user(teacher)
     assert_signed_in_as nil
   end
 
   test "session cookie set if remember me not checked" do
     teacher = create(:teacher)
-
-    post :create, params: {
-      user: {
-        login: '',
-        hashed_email: teacher.hashed_email,
-        password: teacher.password
-      }
-    }
-
+    create_session_for_user(teacher)
     assert_nil @response.cookies["remember_user_token"]
   end
 
@@ -295,34 +330,144 @@ class SessionsControllerTest < ActionController::TestCase
     assert @response.cookies["remember_user_token"]
   end
 
-  class Lockout < ActionDispatch::IntegrationTest
-    test 'a compliant user should not be able to visit /lockout' do
-      [
-        [:student],
-        [:teacher],
-        [:locked_out_child, :with_parent_permission],
-      ].each do |traits|
-        user = create(*traits)
-        sign_in user
+  test "session can be expired" do
+    teacher = create(:teacher)
+    create_session_for_user(teacher)
+    original_id = session.id.dup
 
-        get '/lockout'
+    post :expire_other
+    refute_equal session.id, original_id
+  end
 
-        assert_redirected_to '/home', "user#{traits} should be redirected to /home"
+  test "misc session data will be preserved through expiration" do
+    teacher = create(:teacher)
+    create_session_for_user(teacher)
+    # User-identifying data will NOT be preserved.
+    session[:_csrf_token] = "baz"
+    session[:foo] = "bar"
+
+    post :expire_other
+    refute_equal session[:_csrf_token], "baz"
+    assert_equal session[:foo], "bar"
+  end
+
+  class LtiAccountLinkingSignInPageTest < ActionDispatch::IntegrationTest
+    test 'renders alternative account linking login page during LTI registration' do
+      DCDO.stubs(:get)
+      Policies::Lti.stubs(:lti_registration_in_progress?).returns(true)
+
+      get user_session_path
+      assert_template partial: 'devise/sessions/_login_lti_account_linking'
+    end
+
+    test 'renders normal login page for non-LTI/non-partial registrations' do
+      DCDO.stubs(:get)
+      Policies::Lti.stubs(:lti_registration_in_progress?).returns(false)
+
+      get user_session_path
+      assert_template partial: 'devise/sessions/_login'
+    end
+  end
+
+  describe 'GET lockout' do
+    let(:user) {create(:parent_managed_student)}
+
+    let(:user_is_locked_out) {true}
+
+    around do |test|
+      Timecop.freeze {test.call}
+    end
+
+    before do
+      Policies::ChildAccount::ComplianceState.stubs(:locked_out?).with(user).returns(user_is_locked_out)
+      user.update(cap_status_date: DateTime.now)
+
+      sign_in user
+    end
+
+    it 'assigns @pending_email with empty string' do
+      get :lockout
+      _(assigns[:pending_email]).must_equal ''
+    end
+
+    it 'assigns @disallowed_email with empty string' do
+      get :lockout
+      _(assigns[:disallowed_email]).must_equal ''
+    end
+
+    it 'assigns @delete_date with 7 day after user lockout date' do
+      get :lockout
+      _(assigns[:delete_date]).must_equal user.cap_status_date.since(7.days)
+    end
+
+    it 'renders lockout page' do
+      get :lockout
+      assert_template :lockout
+    end
+
+    context 'when user is not signed in' do
+      before do
+        sign_out user
+      end
+
+      it 'redirects to login page' do
+        get :lockout
+        assert_redirected_to new_user_session_path
       end
     end
 
-    test 'a non-compliant user should be able to visit /lockout' do
-      [
-        [:locked_out_child],
-        [:locked_out_child, :with_pending_parent_permission],
-      ].each do |traits|
-        user = create(*traits)
-        sign_in user
+    context 'when user is not locked out' do
+      let(:user_is_locked_out) {false}
 
-        get '/lockout'
-
-        assert_response :ok, "user#{traits} can visit /lockout"
+      it 'redirects to home page' do
+        get :lockout
+        assert_redirected_to home_path
       end
     end
+
+    context 'when permission request is already sent' do
+      before do
+        create(:parental_permission_request, user: user, parent_email: parent_email, updated_at: request_date)
+      end
+
+      let(:parent_email) {'latest_permission_request@parent.email'}
+      let(:request_date) {99.years.ago}
+
+      it 'assigns @pending_email with data from latest parental permission request' do
+        get :lockout
+        _(assigns[:pending_email]).must_equal parent_email
+      end
+
+      it 'assigns @request_date with data from latest parental permission request' do
+        get :lockout
+        _(assigns[:request_date].iso8601).must_equal request_date.iso8601
+      end
+    end
+
+    context 'when user is not parent managed' do
+      let(:user) {create(:student, email: user_email)}
+
+      let(:user_email) {'cap@test.org'}
+
+      it 'assigns @disallowed_email with its hashed email' do
+        get :lockout
+        _(assigns[:disallowed_email]).must_equal User.hash_email(user_email)
+      end
+    end
+  end
+
+  # Simple helper method to sign the specified user in using email plus password
+  private def create_session_for_user(user)
+    post :create, params: {
+      user: {
+        login: '',
+        hashed_email: user.hashed_email,
+        password: user.password
+      }
+    }
+  end
+
+  private def enable_sso_nudge
+    DCDO.set('sso_nudge_enabled', true)
   end
 end

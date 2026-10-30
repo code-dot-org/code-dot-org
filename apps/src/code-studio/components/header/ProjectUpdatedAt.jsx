@@ -1,13 +1,14 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
+
+import project from '@cdo/apps/code-studio/initApp/project';
+import TimeAgo from '@cdo/apps/templates/TimeAgo';
 import msg from '@cdo/locale';
 
-import TimeAgo from '@cdo/apps/templates/TimeAgo';
-
 import {projectUpdatedStatuses as statuses} from '../../projectRedux';
+
 import RetryProjectSaveDialog from './RetryProjectSaveDialog';
-import project from '@cdo/apps/code-studio/initApp/project';
 
 class ProjectUpdatedAt extends React.Component {
   static propTypes = {
@@ -35,7 +36,7 @@ class ProjectUpdatedAt extends React.Component {
           className="project-save-error"
           title={msg.projectSaveErrorTooltip()}
         >
-          <i className="fa fa-exclamation-triangle" />
+          <i className="fa-solid fa-triangle-exclamation" />
           &nbsp;
           {msg.projectSaveError()}
         </span>
@@ -70,10 +71,17 @@ class ProjectUpdatedAt extends React.Component {
   }
 }
 
+/** The saved-at's size; a header that reserves its room reads it from here. */
+export const PROJECT_UPDATED_AT_MIN_WIDTH = 160;
+export const PROJECT_UPDATED_AT_HEIGHT = 14;
+
 const styles = {
   container: {
     display: 'block',
-    textAlign: 'left',
+    // A floor, not a cap: in some locales the text is wider.
+    minWidth: PROJECT_UPDATED_AT_MIN_WIDTH,
+    height: PROJECT_UPDATED_AT_HEIGHT,
+    overflow: 'visible',
   },
 };
 

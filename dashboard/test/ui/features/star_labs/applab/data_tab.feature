@@ -5,7 +5,7 @@ Feature: App Lab Data Tab
   Background:
     # Navigate to data tab from a new Applab project
     Given I start a new Applab project
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     Then I click selector "#dataModeButton"
     And I wait until element "#dataTablesBody" is visible
 
@@ -21,7 +21,7 @@ Feature: App Lab Data Tab
 
   Scenario: Data Tables Tab
     # Create a new table
-    And I press keys "My new table" for element ".uitest-add-table-input:first-of-type"
+    And I press keys "My new table" for element ".uitest-add-table-input input"
     And I click selector ".uitest-add-table-btn:first-of-type"
     Then I wait until element "#dataTable span:first-of-type" contains text "My new table"
 
@@ -45,9 +45,6 @@ Feature: App Lab Data Tab
     And I click selector ".uitest-data-table-row:eq(0) td:nth-child(4) button:first-of-type"
     Then I wait until element ".uitest-data-table-content:first-of-type td:nth-child(2)" contains text "21"
 
-  # TODO: Re-enable this test and root cause the failure. Skipping to unblock the deploy pipeline. 
-  # See https://codedotorg.atlassian.net/browse/LABS-267 for additional context.
-  @skip
   Scenario: Key/Value Pairs Tab
     Then I click selector "#keyValuePairsTab" once I see it
     And I wait until element "#keyValuePairsBody" is visible

@@ -1,15 +1,16 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
+
 import {getStore, registerReducers} from '@cdo/apps/redux';
+import {DataView} from '@cdo/apps/storage/constants';
+import Dataset from '@cdo/apps/storage/levelbuilder/Dataset';
 import data, {
   changeView,
   updateTableColumns,
   updateTableRecords,
 } from '@cdo/apps/storage/redux/data';
-import {DataView} from '@cdo/apps/storage/constants';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
-import Dataset from '@cdo/apps/storage/levelbuilder/Dataset';
 
 $(document).ready(function () {
   const dataset = getScriptData('dataset');
@@ -27,7 +28,7 @@ $(document).ready(function () {
   store.dispatch(updateTableRecords(tableName, dataset.records));
   store.dispatch(updateTableColumns(tableName, dataset.columns));
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={store}>
       <Dataset isLive={isLive} />
     </Provider>,

@@ -1,0 +1,18 @@
+.floatHeader {
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  height: 82px;
+}
+
+.floatHeaderInterior {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  background-color: var(--background-neutral-primary);
+  box-shadow: 0 0 6px 0 var(--neutral-black-alpha-10);
+}
+
+.childContainer {
+  overflow: hidden;
+}

@@ -1,8 +1,9 @@
-import React from 'react';
 import classNames from 'classnames';
+import React from 'react';
 import {useSelector} from 'react-redux';
-import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
+
 import {projectUpdatedStatuses} from '@cdo/apps/code-studio/projectRedux';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import {commonI18n} from '@cdo/apps/types/locale';
 
 const moduleStyles = require('./save-status.module.scss').default;

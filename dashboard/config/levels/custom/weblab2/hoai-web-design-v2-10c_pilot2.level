@@ -1,0 +1,92 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-04-06T18:24:20.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Exploring Borders\r\n\r\nNotice that there is a new section of our webpage called `<style>`. This defines the rules for how the webpage should look.\r\n\r\n**Do This:**\r\n1. Ask AI Tutor to explain how the `border`property works in CSS.\r\n2. Ask AI Tutor to update each `<section>` on this page with a different style.\r\n   - Use the property name in your prompt (e.g., *\"Set the `border` to...\"*).\r\n\r\nOnce you've styled the page, click **Continue**.",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "true",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "explainCode",
+        "buildCSS",
+        "documentation"
+      ],
+      "answerTypeCustomizations": {
+        "buildCSS": "Additionally, follow these instructions even if they contradict the above ones above:\n- ONLY add styles to the `<style>` tag in the head of the document. Follow the pattern already in the index.html file.\n- Focus on the CSS tags emphasized in this level; do not add additional tags unless explicitly asked to.\n- Keep all explanations short, concise, and simple. Do not over-explain the changes you've made to the code.\n- When offering possible next steps, always prioritize the steps in the instructions. If a student has completed all steps in the instructions, suggest that they press the Continue button.",
+        "documentation": "- Keep explanations simple and friendly\n- When offering possible next steps, always prioritize the steps in the instructions. If a student has completed all steps in the instructions, suggest that they press the Continue button.",
+        "explainCode": "- Keep explanations simple and friendly\n- When offering possible next steps, always prioritize the steps in the instructions. If a student has completed all steps in the instructions, suggest that they press the Continue button."
+      }
+    },
+    "display_name": "Exploring Borders",
+    "bubble_choice_description": "Learn the rules for how to change the _border_ property of elements",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <style>\n      img {\n        border: 10px solid #8888ff;\n        border-radius: 6px;\n      }\n    </style>\n  </head>\n  <body>\n    <h1>Famous Works of Art</h1>\n\n    <section>\n      <h2>The Starry Night</h2>\n      <img src=\"starry-night.jpg\" alt=\"The Starry Night by Vincent van Gogh\">\n      <p><em>Vincent van Gogh, 1889</em></p>\n      <p>A swirling night sky over a quiet village, painted while Van Gogh was staying at a psychiatric hospital in France.</p>\n    </section>\n\n    <section>\n      <h2>Girl with a Pearl Earring</h2>\n      <img src=\"girl-with-pearl-earring.jpg\" alt=\"Girl with a Pearl Earring by Johannes Vermeer\">\n      <p><em>Johannes Vermeer, 1665</em></p>\n      <p>Often called the \"Mona Lisa of the North,\" this painting is known for its subject's direct and mysterious gaze.</p>\n    </section>\n\n    <section>\n      <h2>The Great Wave</h2>\n      <img src=\"great-wave.jpg\" alt=\"The Great Wave off Kanagawa by Katsushika Hokusai\">\n      <p><em>Katsushika Hokusai, 1831</em></p>\n      <p>One of the most recognizable works in Japanese art, depicting a towering wave with Mount Fuji in the background.</p>\n    </section>\n\t\n\t<footer>\n\t\t<p>Image credit: All images from Wikimedia Creative Commons</p>\n\t</footer>\n\n  </body>\n</html>",
+          "active": true,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "great-wave.jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/hoai-web-design-v2-10c/uuid/10dc2615-a127-4692-a29b-db2ae77fef12.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "girl-with-pearl-earring.jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/hoai-web-design-v2-10c/uuid/d887b0e9-3220-4a2f-8f1f-6d5ec8933bf1.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "starry-night.jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/hoai-web-design-v2-10c/uuid/4f3c8f08-49f3-491f-b83b-ca929122e207.jpg",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/795c4ae0ee55d7e8dd1e85e8d789a92a-Screenshot 2025-04-02 at 7.42.08 AM.png",
+    "name_suffix": "_pilot2",
+    "offer_browser_tts": "false",
+    "teacher_markdown": "**Intent:** Students are building a vocabulary of CSS properties so they can translate visual intuitions (\"I want it to feel warm\") into specific instructions (\"use a dark orange color for the headings\"). \r\n\r\n**Circulation questions:**\r\n\r\n- \"How would you describe what this property does in your own words?\"  \r\n- \"How does knowing this property change how you'd write a prompt for AI?\"\r\n\r\n**Expected mistakes and misconceptions:**\r\n\r\n- Students may apply styles randomly rather than intentionally \\- ask them \"why did you choose that color? What feeling were you going for?\"  \r\n- Students may struggle with hex codes \\- remind them that color names (like `darkred` or `steelblue`) are valid and can be a useful starting point  ",
+    "require_edit_to_continue": "true"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-06T18:24:20.467+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-v2-10c\\\"\"],\"cloned_from\":\"hoai-web-design-v2-10c\"},{\"changed_at\":\"2026-04-06 23:29:05 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-04-07 03:30:40 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-04-14 03:24:13 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-04-14 09:41:19 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-04-15 02:16:09 +0000\",\"changed\":[\"require_edit_to_continue\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Weblab2>

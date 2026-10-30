@@ -6,7 +6,7 @@ markdown <<MARKDOWN
 
 ## Installing Visual Studio Code
 
-Navigate to [**code.visualstudio.com/docs/languages/java**](https://code.visualstudio.com/docs/languages/java).
+Navigate to <a href="https://code.visualstudio.com/docs/languages/java" target="_blank">**code.visualstudio.com/docs/languages/java**</a>.
 
 * If you're on Windows, click the **Install the Coding Pack for Java - Windows** button under the **Install Visual Studio Code for Java** heading.
    

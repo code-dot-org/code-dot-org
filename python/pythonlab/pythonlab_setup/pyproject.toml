@@ -1,0 +1,25 @@
+[project]
+name = 'pythonlab_setup'
+version = '0.4.0'
+requires-python = '>=3.12'
+dependencies = [
+  'matplotlib >=3',
+  'requests >=2',
+  'neighborhood'
+]
+
+[dependency-groups]
+dev = [
+  'pytest >=8',
+  # theater is not a runtime dependency: its wheel is fetched only for a program
+  # that imports it, and reset_theater() looks it up in sys.modules rather than
+  # importing it. The tests need it installed to check the reset actually works.
+  'theater',
+]
+
+[tool.pytest.ini_options]
+testpaths = ['tests']
+
+[build-system]
+requires = ['hatchling']
+build-backend = 'hatchling.build'

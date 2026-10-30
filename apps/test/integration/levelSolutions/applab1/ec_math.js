@@ -1,9 +1,11 @@
 import $ from 'jquery';
-var testUtils = require('../../../util/testUtils');
-var tickWrapper = require('../../util/tickWrapper');
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import {TestResults} from '@cdo/apps/constants';
 import {globalFunctions} from '@cdo/apps/dropletUtilsGlobalFunctions';
-import sinon from 'sinon';
+
+var testUtils = require('../../../util/testUtils');
+var tickWrapper = require('../../util/tickWrapper');
 
 module.exports = {
   app: 'applab',

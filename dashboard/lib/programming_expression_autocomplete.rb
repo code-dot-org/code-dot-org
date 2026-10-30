@@ -1,13 +1,16 @@
 class ProgrammingExpressionAutocomplete < AutocompleteHelper
   def self.get_search_matches(page, query, programming_environment)
-    query = format_query(query)
-    return [] if query.length < MIN_WORD_LENGTH
+    query ||= ''
+    return [] if query.strip.length < MIN_WORD_LENGTH
+    terms = get_query_terms(query)
 
     rows = ProgrammingExpression.all
     rows = rows.where(programming_environment: programming_environment) if programming_environment
 
-    rows = rows.
-      where("MATCH(name,category) AGAINST(? in BOOLEAN MODE)", query)
+    terms.each do |term|
+      rows = rows.
+        where("name LIKE ? OR category LIKE ?", "%#{term}%", "%#{term}%")
+    end
 
     rows = rows.limit(100)
     total_rows = rows.length

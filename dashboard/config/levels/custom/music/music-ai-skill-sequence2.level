@@ -1,0 +1,91 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2024-09-12T15:29:32.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "####Play More than One Sound\r\n\r\n- Drag two or more [play](#clickable=play-sound-block) blocks under [when run](#clickable=when-run-block). \r\n- Press [Run](#clickable=run-button).",
+    "hide_share_and_remix": "false",
+    "validations": [
+      {
+        "key": "music-ai-skill-sequence_d6a47c71-67df-4b83-950a-71b503c6cdb6",
+        "message": "That sounds great! ",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 2
+          }
+        ]
+      },
+      {
+        "key": "music-ai-skill-sequence2_e3a14922-603d-4ea2-8eaf-4e9ce817f651",
+        "message": "You played one sound, now add another [sound](#clickable=play-sound-block). ",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "key": "music-ai-skill-sequence_100f6390-0a0c-4ff7-bc67-2979e4beed57",
+        "message": "Drag at least two [play](#clickable=play-sound-block) blocks under [when run](#clickable=when-run-block). ",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "level_data": {
+      "library": "launch2024",
+      "packId": "default",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when_run_simple2",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
+      "sounds": {
+        "electro": [
+          "drum_beat_cowbell",
+          "drum_beat_edm",
+          "drum_beat_club",
+          "drum_beat_noise",
+          "bass_synth_candy",
+          "bass_synth_blocks",
+          "synth_cave",
+          "synth_sleek",
+          "guitar_melody",
+          "guitar_shimmy"
+        ]
+      },
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ]
+        },
+        "type": "flyout"
+      }
+    },
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2024-09-12T15:29:32.774+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-sequence\\\"\"],\"cloned_from\":\"music-ai-skill-sequence\"},{\"changed_at\":\"2024-09-12 15:30:25 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-12 18:02:29 +0000\",\"changed\":[\"long_instructions\",\"validations\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-12 18:04:25 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

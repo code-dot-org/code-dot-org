@@ -1,28 +1,28 @@
-import GoogleBlockly, {
-  FieldDropdownConfig,
-  FieldDropdownValidator,
-  MenuGeneratorFunction,
-} from 'blockly/core';
-import {EMPTY_OPTION} from '../constants';
+import * as BlocklyCore from 'blockly/core';
+
 import {
   printerStyleNumberRangeToList,
   numberListToString,
 } from '@cdo/apps/blockly/utils';
 
-type CustomMenuGenerator = CustomMenuOption[] | MenuGeneratorFunction;
+import {EMPTY_OPTION} from '../constants';
+
+export type CustomMenuGenerator =
+  | CustomMenuOption[]
+  | BlocklyCore.MenuGeneratorFunction;
 // Blockly's MenuOption can either be [string, string] or [ImageProperties, string]. We
 // will always use [string, string].
 type CustomMenuOption = [string, string];
 
-export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
+export default class CdoFieldDropdown extends BlocklyCore.FieldDropdown {
   private config: string | null | undefined;
 
   // Blockly expects a menu generator, but some of our older blocks skip this and use
   // the field element's config attribute to specify a range of menu options.
   constructor(
     menuGenerator?: CustomMenuGenerator,
-    validator?: FieldDropdownValidator,
-    config?: FieldDropdownConfig
+    validator?: BlocklyCore.FieldDropdownValidator,
+    config?: BlocklyCore.FieldDropdownConfig
   ) {
     if (!menuGenerator) {
       menuGenerator = [['', '']];
@@ -37,13 +37,11 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
    * by quotes in xml.
    */
   doClassValidation_(newValue?: string) {
+    const sourceBlock = this.getSourceBlock();
     if (newValue === EMPTY_OPTION) {
       return newValue;
     } else {
-      // For behavior picker blocks, we need to regenerate menu options each time,
-      // in case a behavior has been renamed.
-      const useCache = this.name !== 'BEHAVIOR';
-      for (const option of this.getOptions(useCache, newValue)) {
+      for (const option of this.getOptions(true)) {
         if (option[1] === newValue) {
           return newValue;
         } else if (option[1] === `"${newValue}"`) {
@@ -51,11 +49,11 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
         }
       }
 
-      if (this.sourceBlock_) {
+      if (sourceBlock) {
         console.warn(
           "Cannot set the dropdown's value to an unavailable option." +
             ' Block type: ' +
-            this.sourceBlock_.type +
+            sourceBlock.type +
             ', Field name: ' +
             this.name +
             ', Value: ' +
@@ -64,34 +62,6 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
       }
       return null;
     }
-  }
-
-  /**
-   * Return a list of the options for this dropdown.
-   *
-   * @param useCache For dynamic options, whether or not to use the cached
-   *     options or to re-generate them.
-   * @param {string} newValue The new value to be checked and potentially added
-   *     to the options list (behaviorPicker blocks only).
-   * @returns A non-empty array of option tuples:
-   *     (human-readable text or image, language-neutral name).
-   * @throws {TypeError} If generated options are incorrectly structured.
-   */
-  getOptions(useCache?: boolean, newValue?: string) {
-    const options = super.getOptions(useCache);
-
-    // Behavior pickers do not populate correctly until the workspace has been loaded.
-    if (this.name === 'BEHAVIOR' && newValue) {
-      // Check whether the initial newValue option already exists
-      const optionExists = options.some(option => option[0] === newValue);
-      // The hidden workspace is created after the main workspace flyout is populated.
-      const loadingFinished = Blockly.getHiddenDefinitionWorkspace();
-      if (!optionExists && !loadingFinished) {
-        // Assume initial value is valid and add it to the menu if not yet present.
-        options.push([newValue, newValue]);
-      }
-    }
-    return options;
   }
 
   /**
@@ -130,7 +100,7 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
       this.setValue(state);
       return;
     }
-    const field = GoogleBlockly.utils.xml.textToDom(state);
+    const field = BlocklyCore.utils.xml.textToDom(state);
     // Currently, we support the `config` attribute if `config` is stored in xml, but not in json.
     // The config is handled by `fromXml`.
     this.fromXml(field);
@@ -181,42 +151,28 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
   }
 
   /**
-   * Override of createTextArrow_ to fix the arrow position on Safari.
-   * We need to add dominant-baseline="central" to the arrow element in order to
-   * center it on Safari.
-   * We can remove this if this Blockly issue is fixed:
-   * https://github.com/google/blockly/issues/7890
-   *  @override */
-  createTextArrow_() {
-    const arrow = Blockly.utils.dom.createSvgElement(
-      Blockly.utils.Svg.TSPAN,
-      {},
-      this.textElement_
-    );
-    arrow.appendChild(
-      document.createTextNode(
-        this.getSourceBlock()?.RTL
-          ? Blockly.FieldDropdown.ARROW_CHAR + ' '
-          : ' ' + Blockly.FieldDropdown.ARROW_CHAR
-      )
-    );
-
-    /**
-     * Begin CDO customization
-     */
-    arrow.setAttribute('dominant-baseline', 'central');
-    /**
-     * End CDO customization
-     */
-
-    if (this.getSourceBlock()?.RTL) {
-      this.getTextElement().insertBefore(arrow, this.textContent_);
-    } else {
-      this.getTextElement().appendChild(arrow);
+   * Get the text from this field to display on the block. May differ from
+   * `getText` due to ellipsis, and other formatting.
+   * @override Handling of text for RTL blocks is customized.
+   * See: https://github.com/google/blockly/issues/8645
+   * @returns Text to display.
+   */
+  protected getDisplayText_(): string {
+    let text = this.getText();
+    if (text.length > this.maxDisplayLength) {
+      // Truncate displayed string and add an ellipsis ('...').
+      text = text.substring(0, this.maxDisplayLength - 2) + '…';
     }
-    // this.arrow is private in the parent.
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    (this as any).arrow = arrow;
+    if (this.sourceBlock_ && this.sourceBlock_.RTL) {
+      // Begin CDO Customization:
+      // Add RTL override '\u202E' and then a pop directional formatting '\u202C'.
+      // This approach enforces the RTL direction for the entire text consistently.
+      // The PDF mark ensures the override is localized to this field's text.
+      // Core Blockly instead adds a RTL Mark (text += '\u200F').
+      text = '\u202E' + text + '\u202C';
+      // End CDO Customization
+    }
+    return text;
   }
 }
 

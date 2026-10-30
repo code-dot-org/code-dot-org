@@ -1,12 +1,13 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import commonI18n from '@cdo/locale';
-import weblabI18n from '@cdo/weblab/locale';
+import React from 'react';
+
 import StylizedBaseDialog, {
   FooterButton,
-} from '@cdo/apps/componentLibrary/StylizedBaseDialog';
+} from '@cdo/apps/sharedComponents/StylizedBaseDialog';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import SupportArticleMarkdown from '@cdo/apps/weblab/SupportArticleMarkdown';
+import commonI18n from '@cdo/locale';
+import weblabI18n from '@cdo/weblab/locale';
 
 export default function DisallowedHtmlWarningDialog({
   isOpen,

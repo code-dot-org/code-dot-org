@@ -1,32 +1,35 @@
-import React, {useState} from 'react';
 import PropTypes from 'prop-types';
+import React, {useState} from 'react';
+import {FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+
 import {
   PageLabels,
   SectionHeaders,
   TextFields,
 } from '@cdo/apps/generated/pd/teacherApplicationConstants';
-import {FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import color from '@cdo/apps/util/color';
+
+import Spinner from '../../../../sharedComponents/Spinner';
+import {useRegionalPartner} from '../../components/useRegionalPartner';
+import {PrivacyDialogMode} from '../../constants';
+import {FormContext} from '../../form_components_func/FormComponent';
+import {LabeledDynamicCheckBoxesWithAdditionalTextFields} from '../../form_components_func/labeled/LabeledCheckBoxes';
+import {LabeledLargeInput} from '../../form_components_func/labeled/LabeledInput';
+import {
+  LabeledRadioButtons,
+  LabeledRadioButtonsWithAdditionalTextFields,
+} from '../../form_components_func/labeled/LabeledRadioButtons';
+import {LabeledSingleCheckbox} from '../../form_components_func/labeled/LabeledSingleCheckbox';
+import {LabelsContext} from '../../form_components_func/LabeledFormComponent';
+import PrivacyDialog from '../PrivacyDialog';
+
 import {
   PROGRAM_CSD,
   PROGRAM_CSP,
   PROGRAM_CSA,
   styles as defaultStyles,
 } from './TeacherApplicationConstants';
-import PrivacyDialog from '../PrivacyDialog';
-import {PrivacyDialogMode} from '../../constants';
-import Spinner from '../../components/spinner';
-import color from '@cdo/apps/util/color';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
-import {LabelsContext} from '../../form_components_func/LabeledFormComponent';
-import {LabeledLargeInput} from '../../form_components_func/labeled/LabeledInput';
-import {LabeledSingleCheckbox} from '../../form_components_func/labeled/LabeledSingleCheckbox';
-import {
-  LabeledRadioButtons,
-  LabeledRadioButtonsWithAdditionalTextFields,
-} from '../../form_components_func/labeled/LabeledRadioButtons';
-import {LabeledDynamicCheckBoxesWithAdditionalTextFields} from '../../form_components_func/labeled/LabeledCheckBoxes';
-import {useRegionalPartner} from '../../components/useRegionalPartner';
-import {FormContext} from '../../form_components_func/FormComponent';
 
 const getProgramName = program => {
   switch (program) {
@@ -144,7 +147,7 @@ const ProfessionalLearningProgramRequirements = props => {
     return (
       <div>
         <p>
-          Code.org’s Professional Learning Program for{' '}
+          CodeAI’s Professional Learning Program for{' '}
           {getProgramName(data.program)} is a yearlong program, meant to support
           you throughout your first year teaching the course. Starting in the
           summer, the program begins with a multi-day workshop to prepare you to
@@ -197,16 +200,18 @@ const ProfessionalLearningProgramRequirements = props => {
           )}
         </div>
 
-        <label className="control-label">Submit your application</label>
+        <p className="control-label" style={styles.smallMarginBottom}>
+          Submit your application
+        </p>
         <LabeledSingleCheckbox
           name="agree"
           label={
             <span>
               {PageLabels.professionalLearningProgramRequirements.agree.replace(
-                'my local Code.org Regional Partner',
+                'my local CodeAI Regional Partner',
                 regionalPartner
                   ? regionalPartner.name
-                  : 'my local Code.org Regional Partner'
+                  : 'my local CodeAI Regional Partner'
               )}{' '}
               <a onClick={openPrivacyDialog}>Learn more.</a>
             </span>

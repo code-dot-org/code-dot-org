@@ -5,8 +5,6 @@ require 'uri'
 require 'redcarpet'
 require 'redcarpet/render_strip'
 
-TTS_BUCKET = 'cdo-tts'.freeze
-
 class TTSSafe < Redcarpet::Render::StripDown
   def block_code(code, language)
     ''
@@ -29,52 +27,44 @@ class TTSSafe < Redcarpet::Render::StripDown
   end
 end
 
-TTSSafeRenderer = Redcarpet::Markdown.new(TTSSafe)
-
-TTSSafeScrubber = Rails::Html::TargetScrubber.new
-TTSSafeScrubber.tags = ['xml']
-
 module TextToSpeech
   extend ActiveSupport::Concern
 
-  VOICES = {
-    'en-US': {
-      VOICE: 'sharon22k',
-      SPEED: 180,
-      SHAPE: 100
-    },
-    'es-ES': {
-      VOICE: 'ines22k',
-      SPEED: 180,
-      SHAPE: 100,
-    },
-    'es-MX': {
-      VOICE: 'rosa22k',
-      SPEED: 180,
-      SHAPE: 100,
-    },
-    'it-IT': {
-      VOICE: 'vittorio22k',
-      SPEED: 180,
-      SHAPE: 100,
-    },
-    'pt-BR': {
-      VOICE: 'marcia22k',
-      SPEED: 180,
-      SHAPE: 100,
-    }
-  }.freeze
+  TTS_BUCKET = 'cdo-tts'.freeze
+  UPDATED_TTS_PATH_DCDO_KEY = 'updated_tts_path'.freeze
+  ACAPELA_GENERATION_DCDO_KEY = 'acapela_tts_generation'.freeze
 
-  # TODO: this concern actually depends on the SerializedProperties
-  # concern ... I'm not sure how best to deal with that.
+  # Pull the VOICES out of the SharedConstants (updating the locale keys to
+  # match the expectation of the I18n gem since these locale keys are using
+  # the JavaScript i18n expectations)
+  VOICES = SharedConstants::VOICES.transform_keys do |locale|
+    return locale unless locale.to_s.include?('_')
+    lang, country = locale.to_s.split('_')
+    :"#{lang}-#{country.upcase}"
+  end.freeze
 
   included do
+    # We require the SerializedProperties to be included first
+    unless respond_to? :serialized_attrs
+      raise "Module must include SerializedProperties before TextToSpeech"
+    end
+
     before_save :tts_update
 
     serialized_attrs %w(
       tts_short_instructions_override
       tts_long_instructions_override
     )
+  end
+
+  def self.tts_safe_renderer
+    @@tts_safe_renderer ||= Redcarpet::Markdown.new(TTSSafe)
+  end
+
+  def self.tts_safe_scrubber
+    @@tts_safe_scrubber ||= Rails::Html::TargetScrubber.new.tap do |scrubber|
+      scrubber.tags = ['xml']
+    end
   end
 
   def self.locale_supported?(locale)
@@ -89,12 +79,28 @@ module TextToSpeech
   end
 
   def self.tts_path(text, name, locale: I18n.locale)
-    content_hash = Digest::MD5.hexdigest(text)
+    content_md5 = Digest::MD5.hexdigest(text)
+    content_sha = Digest::SHA256.hexdigest(text)
     loc_voice = TextToSpeech.localized_voice(locale: locale)
-    "#{loc_voice[:VOICE]}/#{loc_voice[:SPEED]}/#{loc_voice[:SHAPE]}/#{content_hash}/#{name}.mp3"
+
+    # Determine the location based on the experiment enabled
+    use_new_path = DCDO.get(UPDATED_TTS_PATH_DCDO_KEY, false)
+    if use_new_path
+      # New path
+      "#{locale}/#{content_md5}/#{content_sha}/#{loc_voice[:VOICE]}-#{loc_voice[:SPEED]}-#{loc_voice[:SHAPE]}.mp3"
+    else
+      # Old path
+      "#{loc_voice[:VOICE]}/#{loc_voice[:SPEED]}/#{loc_voice[:SHAPE]}/#{content_md5}/#{name}.mp3"
+    end
   end
 
-  def self.tts_upload_to_s3(text, filename, context = nil, locale: I18n.locale)
+  # Each Acapela request is billed, so generation stays off unless DCDO enables it.
+  def self.acapela_enabled?
+    DCDO.get(ACAPELA_GENERATION_DCDO_KEY, false)
+  end
+
+  def self.tts_upload_to_s3(text, key, name, filename, context = nil, locale: I18n.locale)
+    return unless TextToSpeech.acapela_enabled?
     return if text.blank?
     return if CDO.acapela_login.blank? || CDO.acapela_storage_app.blank? || CDO.acapela_storage_password.blank?
     return if AWS::S3.cached_exists_in_bucket?(TTS_BUCKET, filename)
@@ -106,6 +112,20 @@ module TextToSpeech
     Net::HTTP.start(uri.host) do |http|
       resp = http.get(uri.path)
       AWS::S3.upload_to_bucket(TTS_BUCKET, filename, resp.body, no_random: true)
+
+      # Also upload metadata so we know what the text is supposed to be
+      metadata_path = "#{filename.rpartition('.').first}.json"
+      metadata = {}
+      if AWS::S3.exists_in_bucket(TTS_BUCKET, metadata_path)
+        # Pull down the existing metadata
+        metadata = JSON.parse(AWS::S3.download_from_bucket(TTS_BUCKET, metadata_path))
+      end
+      metadata[name] = {
+        key: key,
+        locale: locale,
+        text: text
+      }
+      AWS::S3.upload_to_bucket(TTS_BUCKET, metadata_path, metadata.to_json, no_random: true)
     end
   end
 
@@ -120,13 +140,13 @@ module TextToSpeech
     #
     # To avoid this, we use a targeted Loofah scrubber to prune any XML blocks
     # and only XML blocks before passing the result through Redcarpet
-    text = Loofah.fragment(text).scrub!(TTSSafeScrubber).scrub!(:prune).to_s
-    TTSSafeRenderer.render(text)
+    text = Loofah.fragment(text).scrub!(tts_safe_scrubber).scrub!(:prune).to_s
+    tts_safe_renderer.render(text)
   end
 
-  def tts_upload_to_s3(text, metric_context = nil, locale: I18n.locale)
+  def tts_upload_to_s3(text, key, metric_context = nil, locale: I18n.locale)
     filename = tts_path(text, locale: locale)
-    TextToSpeech.tts_upload_to_s3(text, filename, metric_context, locale: locale)
+    TextToSpeech.tts_upload_to_s3(text, key, name, filename, metric_context, locale: locale)
   end
 
   # Returns the URL where the TTS audio file can be downloaded for the given text and locale
@@ -228,15 +248,15 @@ module TextToSpeech
 
   def tts_update(update_all: false)
     context = 'update_level'
-    tts_upload_to_s3(tts_short_instructions_text, context) if tts_should_update_short_instructions?(update_all: update_all)
+    tts_upload_to_s3(tts_short_instructions_text, 'short_instructions', context) if tts_should_update_short_instructions?(update_all: update_all)
 
-    tts_upload_to_s3(tts_long_instructions_text, context) if tts_should_update_long_instructions?(update_all: update_all)
+    tts_upload_to_s3(tts_long_instructions_text, 'long_instructions', context) if tts_should_update_long_instructions?(update_all: update_all)
 
-    if authored_hints && (tts_should_update('authored_hints', update_all))
+    if authored_hints && tts_should_update('authored_hints', update_all)
       hints = JSON.parse(authored_hints)
       hints.each do |hint|
         text = TextToSpeech.sanitize(hint["hint_markdown"])
-        tts_upload_to_s3(text, context)
+        tts_upload_to_s3(text, 'hint_markdown', context)
         hint["tts_url"] = tts_url(text)
       end
       self.authored_hints = JSON.dump(hints)
@@ -246,7 +266,7 @@ module TextToSpeech
     # trigger updates in its parents, since their content is likely at least
     # partially based on this
     parent_levels.contained.each do |containing_level|
-      containing_level.tts_upload_to_s3(containing_level.tts_long_instructions_text, context)
+      containing_level.tts_upload_to_s3(containing_level.tts_long_instructions_text, 'long_instructions', context)
     end
   end
 end

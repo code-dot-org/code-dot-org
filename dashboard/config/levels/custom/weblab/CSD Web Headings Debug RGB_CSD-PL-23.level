@@ -1,0 +1,37 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2024-05-04T01:35:10.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "# Debug: RGB Color Style\r\n\r\n|What I expected to happen          |   What happened instead |\r\n| :-------------------------        | ---------------------: |\r\n|Title background is a light purple |Title background is white|\r\n|Subheadings are a shade of purple  |Subheadings are black    |\r\n \r\n# Do this\r\n1) Find and fix the problem that is causing the bug.\r\n",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "submittable": "false",
+    "start_sources": "              {\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html>\\n<html>\\n  <head>\\n    <link rel=\\\"stylesheet\\\" href=\\\"style.css\\\">\\n  </head>\\n  <body>\\n    <h1>Five Women Programmers Who Changed The World!</h1>\\n    <p>Did you know that the First Computer Programmer was a Woman? I didn’t either! So let me enlighten you today with five women who were leading the way in Computer Science!</p>\\n    \\n    <h3>Ada Lovelace (1815-1852) </h3> \\n    <p>Ada was a mathematician in Victorian Times (Yes that long ago!) and she is credited as being the First Computer Programmer Ever.</p>\\n    \\n    <h3>Kathleen Booth (Born 1922)</h3>\\n    <p>Kathleen wrote the first Assembly language in the world. And that is not enough, she also designed the assembler and autocode for the first computer system at Birkbeck College, the University of London.</p>\\n    \\n    <h3>Margaret Hamilton (Born 1936)</h3>\\n    <p>Margaret was the director of the Software Engineering Division at MIT. She was responsible for creating the software(literally from scratch!!!) for the Apollo Guide Computer in the Apollo Space Program.</p>\\n    \\n    <h3>Grace Hopper (1906 – 1992)</h3>\\n    <p>Grace was a Computer Scientist as well as a Rear Admiral in the United States Navy (She was multitalented!). She believed in machine-independent programming languages and so created the first compiler that converted English terms into machine code understood by computers.</p>\\n    \\n    <h3>Joan Clarke (1917 – 1996)</h3>\\n    <p>Joan was an English cryptanalyst that was well known for her role as a code-breaker during the Second World War. She worked along with Alan Turing at Hut 8 in Bletchley Park (Their top-secret lair!!!) and was the only woman there that worked on decrypting the German Enigma messages.</p>\\n  </body>\\n</html>\"\r\n    },\r\n    {\r\n      \"name\": \"style.css\",\r\n      \"data\": \"body {\\n  background: white;\\n}\\nh1 {\\n  font-weight: bold;\\n  background-color: rbg(240, 200, 250);\\n}\\nh3 {\\n  font-weight: bold;\\n  color: rgb 200, 50, 225;\\n}\"\r\n    }\r\n  ]\r\n}\r\n            ",
+    "display_name": "Debug the RGB color style",
+    "bubble_choice_description": "Use your debugging skills to figure out why the RGB style is not being applied.",
+    "encrypted_examples": "txhiSneckuuPafuMN2pzwNcuvlG1AuKCA/VUn/IxUJYX3RcHDCjwN8eUMi/T\n3GsHdhncQsu1CQjQ6xaJ+XaOuw==\n",
+    "reference_links": [
+      "/courses/csd-2022/guides/text-properties",
+      "/courses/csd-2022/guides/web-lab",
+      "/courses/csd-2022/guides/formatting-html",
+      "/courses/csd-2022/guides/lists",
+      "/courses/csd-2022/guides/headings-and-paragraphs",
+      "/courses/csd-2022/guides/html-tags",
+      "/courses/csd-2022/guides/debugging-html"
+    ],
+    "map_reference": "/courses/csd-2022/guides/style-sheets",
+    "parent_level_id": 18858,
+    "thumbnail_url": "https://images.code.org/a08f5b40962868ded5887b11f95823b0-rgb.png",
+    "name_suffix": "_CSD-PL-23",
+    "validation_enabled": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-05-04T01:35:10.808+00:00\",\"changed\":[\"cloned from \\\"CSD Web Headings Debug RGB_2024\\\"\"],\"cloned_from\":\"CSD Web Headings Debug RGB_2024\"}]"
+}]]></config>
+</Weblab>

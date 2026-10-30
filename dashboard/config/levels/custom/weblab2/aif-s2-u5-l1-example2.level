@@ -1,0 +1,57 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2025-12-16T14:59:58.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "**Snippet 2: Using the Data (The Ideal State)**\r\n\r\nThis shows the desired state *after* the API response has been processed, which is the final goal of integration.",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// --- Helper function to display text in the browser ---\nconst logToDOM = (message, containerId = 'output-container') => {\n    const outputElement = document.getElementById(containerId);\n    if (outputElement) {\n        // Append a new paragraph element for each message\n        outputElement.innerHTML += `<p style=\"margin: 2px 0;\">${message}</p>`;\n    }\n};\n// --------------------------------------------------------\n\n\n// 1. The data, simulating the JavaScript object received from the API (JSON converted):\nconst inventoryData = [\n    { id: 101, name: \"Widget Alpha\", price: 29.99 },\n    { id: 102, name: \"Gismo Beta\", price: 14.50 }\n];\n\n\n// 2. Now, the code can easily iterate and use this data:\ninventoryData.forEach(item => {\n    // We use the DOM helper instead of console.log\n    logToDOM(`📦 Inventory Item: ${item.name} costs $${item.price.toFixed(2)}`);\n});\n",
+          "folderId": "0",
+          "active": true
+        },
+        "2": {
+          "id": "2",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n  </head>\n  <body>\n    <div id=\"output-container\">\n    </div>\n    <script src=\"script.js\"></script>\n  </body>\n</html>",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "2",
+        "1"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-12-16T14:59:58.732+00:00\",\"changed\":[\"cloned from \\\"aif-s2-u5-l1-example1\\\"\"],\"cloned_from\":\"aif-s2-u5-l1-example1\"},{\"changed_at\":\"2025-12-16 15:10:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-12-16 15:15:38 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Weblab2>

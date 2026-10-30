@@ -1,6 +1,5 @@
-import {expect} from '../../../util/reconfiguredChai';
-import {parseElement} from '@cdo/apps/xml';
 import {convertBlocksXml} from '@cdo/apps/craft/code-connection/utils';
+import {parseElement} from '@cdo/apps/xml';
 
 const normalizeWhitespace = function (xmlString) {
   return xmlString.replace(/\n\s*/g, '\n');
@@ -42,7 +41,7 @@ describe('convertBlocksXml', () => {
     ];
 
     sources.forEach((source, i) => {
-      expect(normalizeWhitespace(convertBlocksXml(source))).to.equal(
+      expect(normalizeWhitespace(convertBlocksXml(source))).toBe(
         normalizeWhitespace(expected[i])
       );
     });
@@ -77,7 +76,7 @@ describe('convertBlocksXml', () => {
         }
       }
 
-      expect(resultingBlock.textContent).to.equal(expected[i]);
+      expect(resultingBlock.textContent).toBe(expected[i]);
     });
   });
 
@@ -109,7 +108,7 @@ describe('convertBlocksXml', () => {
         }
       }
 
-      expect(resultingBlock.textContent).to.equal(expected);
+      expect(resultingBlock.textContent).toBe(expected);
     });
   });
 
@@ -135,7 +134,7 @@ describe('convertBlocksXml', () => {
         }
       }
 
-      expect(resultingBlock.textContent).to.equal(dirString);
+      expect(resultingBlock.textContent).toBe(dirString);
     });
   });
 });

@@ -1,0 +1,126 @@
+import path from 'node:path';
+import type {OutputOptions, PreRenderedAsset} from 'rollup';
+import {defineConfig} from 'vite';
+import dts from 'vite-plugin-dts';
+import {externalizeDeps} from 'vite-plugin-externalize-deps';
+import {libInjectCss} from 'vite-plugin-lib-inject-css';
+
+/**
+ * Emits a `.module.css` asset as plain `{base}.css`, keeping it beside the
+ * chunk that imports it.
+ *
+ * The `.module` suffix has to go: a host bundler re-modularizes anything
+ * matching it (css-loader enables CSS modules by filename, `auto` on by
+ * default), rewriting the already-hashed class names in this file to fresh
+ * ones. The JS still carries the originals, so the stylesheet loads and matches
+ * nothing -- styles silently vanish in the host. component-library strips the
+ * suffix for the same reason.
+ * @param assetInfo Vite config asset info
+ * @returns Asset file name
+ */
+function getAssetFileNames(assetInfo: PreRenderedAsset) {
+  const name = assetInfo.names[0];
+
+  if (/\.module\.(scss|css)$/.test(name)) {
+    const dir = path.dirname(name);
+    const base = path.basename(name).replace(/\.module\.(scss|css)$/, '');
+    return dir === '.' ? `${base}.css` : `${dir}/${base}.css`;
+  }
+
+  return '[name].[ext]';
+}
+
+/**
+ * Get Rollup output configuration.
+ * @param format es or cjs
+ * @returns Rollup output configuration
+ */
+function getRollupOutputConfig(format: 'es' | 'cjs'): OutputOptions {
+  return {
+    format,
+    exports: 'named',
+    // Set on both outputs but only meaningful for CJS. Rollup's default
+    // (interop: 'default') assumes every external is a plain CJS module whose
+    // `module.exports` is the default export. That holds for a
+    // component-library subpath with a single runtime export (link's index.js
+    // is `module.exports = Link`) but not for one with several (divider's is a
+    // `__esModule` namespace with `Divider` and `default`), where a default
+    // import would resolve to the namespace object rather than the component
+    // -- React then throws "Element type is invalid ... but got: object".
+    // 'auto' emits the `__esModule` check that handles both. Remove once the
+    // CJS output goes away -- i.e. once `apps` resolves the ESM condition.
+    interop: 'auto',
+    entryFileNames: format === 'es' ? '[name].mjs' : '[name].cjs',
+    preserveModules: true,
+    preserveModulesRoot: 'src',
+    assetFileNames: getAssetFileNames,
+  };
+}
+
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [
+    // Automatically inject CSS imports for each chunk that uses styles, so
+    // consumers get the markdown styles by importing the component — without
+    // this, the built JS only references the (hashed) class names and the
+    // emitted `.css` files are never loaded, so nothing is styled in the host
+    // app. Matches the component-library setup; the consumer's bundler owns
+    // when/how the CSS loads (package `sideEffects` keeps the imports from
+    // being tree-shaken).
+    libInjectCss(),
+    // Generate Typescript declaration files using the Vite default tsconfig
+    dts({
+      tsconfigPath: './tsconfig.json',
+      rollupTypes: false, // Disable rolling up types to a single file
+      entryRoot: 'src',
+      insertTypesEntry: false, // Prevent inserting a single types entry
+      exclude: ['**/__tests__/**', '**/*.test.tsx', 'demo/**'],
+    }),
+    // Externalize only what the host application is expected to provide;
+    // bundle the markdown-processing ecosystem (unified/rehype/remark/hast/...)
+    // into dist so this package is self-contained. The legacy apps/ bundle
+    // still depends on much older, incompatible majors of that ecosystem
+    // (unified 9 vs 11, rehype-raw 5 vs 7, ...); bundling ours keeps the two
+    // dependency graphs from colliding when this package is portal-linked into
+    // apps/ (see apps/package.json `resolutions`).
+    externalizeDeps({
+      // Don't externalize `dependencies` — only component-library/core live
+      // there now, re-added to `external` via `include` below. The bundled
+      // markdown-processing ecosystem lives in `devDependencies` (not
+      // externalized by default), so it gets pulled into dist. Keeping it out
+      // of `dependencies` is what stops it leaking onto the host.
+      deps: false,
+      // react / react-dom / @mui / @emotion / classnames stay external and are
+      // provided by the host as peers.
+      peerDeps: true,
+      include: [
+        // component-library and core are shared singletons: they must resolve
+        // to the host's single instance (a bundled duplicate would mean two
+        // React contexts / two MUI registries), so keep them external. apps/
+        // provides them via its own portal deps.
+        /^@code-dot-org\/component-library(?:\/.*)?$/,
+        /^@code-dot-org\/core(?:\/.*)?$/,
+      ],
+    }),
+  ],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+      '@code-dot-org/markdown': path.resolve(__dirname, './src'),
+    },
+  },
+  build: {
+    // Emptying dist mid-build breaks consumers watching it; on macOS webpack
+    // never recovers (INF-2257). `turbo clean` empties it once per session.
+    emptyOutDir: false,
+    sourcemap: true,
+    cssCodeSplit: true,
+    lib: {
+      entry: ['src/index.ts'],
+      name: 'markdown',
+    },
+    rollupOptions: {
+      output: [getRollupOutputConfig('es'), getRollupOutputConfig('cjs')],
+    },
+  },
+});

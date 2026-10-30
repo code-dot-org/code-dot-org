@@ -1,7 +1,11 @@
-import {stub} from 'sinon';
-import {expect} from '../../../util/reconfiguredChai';
-import {validateFirehoseDataSize} from '@cdo/apps/lib/util/firehose';
+import {stub} from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import logToCloud from '@cdo/apps/logToCloud';
+import {validateFirehoseDataSize} from '@cdo/apps/metrics/firehose';
+
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+
+jest.unmock('@cdo/apps/metrics/firehose');
 
 describe('firehoseDataSize', () => {
   const maxDataJSONBytes = 65500;
@@ -15,7 +19,7 @@ describe('firehoseDataSize', () => {
     logToCloud.logError.restore();
   });
 
-  it('checks json size to send newrelic error', () => {
+  it('reports an error when the data_json column would exceed the limit', () => {
     const valid_record = {data_json: 'x'.repeat(maxDataJSONBytes - 1)};
     expect(validateFirehoseDataSize(valid_record)).not.to.be.true;
     expect(logToCloud.logError).not.to.be.called;
@@ -28,7 +32,7 @@ describe('firehoseDataSize', () => {
     expect(validateFirehoseDataSize(invalid_record)).to.be.true;
   });
 
-  it('checks string size to send newrelic error', () => {
+  it('reports an error when the data_string column would exceed the limit', () => {
     const valid_record = {data_string: 'x'.repeat(maxDataStringBytes - 1)};
     expect(validateFirehoseDataSize(valid_record)).not.to.be.true;
     expect(logToCloud.logError).not.to.be.called;

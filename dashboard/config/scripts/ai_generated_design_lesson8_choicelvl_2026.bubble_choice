@@ -1,0 +1,10 @@
+name 'ai-generated-design-lesson8-choicelvl-2026'
+display_name 'Build a Movie Filter'
+description 'Choose the filter you planned in Sketch Lab and build it in code. Use your plan to complete the function.'
+
+sublevels
+level 'ai-generated-design-lesson8-level4_choiceA_movie_2026'
+level 'ai-generated-design-lesson8-level4_choiceB_movie_2026'
+level 'ai-generated-design-lesson8-level4_choiceC_movie_2026'
+
+uses_lab2

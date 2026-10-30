@@ -1,0 +1,14 @@
+name 'csp-unit1-lesson19-modify-debug_27_28'
+display_name 'Modify: Extend!'
+description '####A crew started painting a path to the traffic cone, but did not finish. Choose **ONE** scenario, then add code so the painter finishes painting the street to the traffic cone.'
+
+sublevels
+level 'csp-unit1-lesson19-modify-debug-a_27_28'
+level 'csp-unit1-lesson19-modify-debug-b_27_28'
+level 'csp-unit1-lesson19-modify-debug-c_27_28'
+level 'csp-unit1-lesson19-modify-debug-d_27_28'
+
+uses_lab2
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

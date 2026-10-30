@@ -1,0 +1,14 @@
+{
+  "category_key": "javascript",
+  "content": "# Get Element By Id\n\nThe `document.getElementById()` method finds one element on the page by matching its `id`. Use it when your JavaScript needs to select a specific button, paragraph, image, or other page element.",
+  "examples": "[{\"name\":\"Select a Button\",\"description\":\"This selects the button with the `id` `\\\"buttonOne\\\"`.\",\"code\":\"`const buttonOne = document.getElementById(\\\"buttonOne\\\");`\",\"app\":\"\"},{\"name\":\"Change Text on the Page\",\"description\":\"This selects a paragraph and changes the text shown on the page.\",\"code\":\"`const message = document.getElementById(\\\"message\\\");`\\n\\n`message.textContent = \\\"Hello!\\\";`\"}]",
+  "external_documentation": "",
+  "fields": "[]",
+  "key": "get-element-by-id",
+  "name": "Get Element By Id",
+  "syntax": "`document.getElementById(\"buttonOne\")`",
+  "tips": "- `document.getElementById()` is used to select one element from the HTML page.\n- The `id` inside the parentheses must match an `id` in your HTML.\n- Put quotation marks around the `id` name.\n- Do not include the `#` symbol. Use `\"buttonOne\"`, not `\"#buttonOne\"`.\n- In Web Lab, this method often appears near the top of `script.js` to store page elements in variables.",
+  "methods": [
+
+  ]
+}

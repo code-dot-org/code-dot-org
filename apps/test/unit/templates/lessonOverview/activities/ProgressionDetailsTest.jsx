@@ -1,8 +1,9 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../../util/reconfiguredChai';
+
 import ProgressionDetails from '@cdo/apps/templates/lessonOverview/activities/ProgressionDetails';
-import {sampleActivities} from '../../../lib/levelbuilder/lesson-editor/activitiesTestData';
+
+import {sampleActivities} from '../../../levelbuilder/lesson-editor/activitiesTestData';
 
 describe('ProgressionDetails', () => {
   let defaultProps;
@@ -14,13 +15,13 @@ describe('ProgressionDetails', () => {
 
   it('renders default props and ProgressLevelSet', () => {
     const wrapper = shallow(<ProgressionDetails {...defaultProps} />);
-    expect(wrapper.find('Connect(ProgressLevelSet)').length).to.equal(1);
+    expect(wrapper.find('Connect(ProgressLevelSet)').length).toBe(1);
   });
 
   it('can show level details dialog after bubble click', () => {
     const wrapper = shallow(<ProgressionDetails {...defaultProps} />);
-    expect(wrapper.find('Connect(ProgressLevelSet)').length).to.equal(1);
+    expect(wrapper.find('Connect(ProgressLevelSet)').length).toBe(1);
     wrapper.instance().handleBubbleClick({id: 1});
-    expect(wrapper.find('Connect(LevelDetailsDialog)').length).to.equal(1);
+    expect(wrapper.find('Connect(LevelDetailsDialog)').length).toBe(1);
   });
 });

@@ -1,27 +1,29 @@
 import React from 'react';
 import {Provider} from 'react-redux';
-import {createStoreWithReducers, registerReducers} from '@cdo/apps/redux';
-import ProgressLessonTeacherInfo from './ProgressLessonTeacherInfo';
-import {LevelKind} from '@cdo/apps/util/sharedConstants';
-import {initProgress} from '@cdo/apps/code-studio/progressRedux';
-import {lessons} from '@cdo/apps/code-studio/progressReduxSelectors';
+
+import {setHiddenLessons} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {
   authorizeLockable,
   setSectionLockStatus,
 } from '@cdo/apps/code-studio/lessonLockRedux';
+import {initProgress} from '@cdo/apps/code-studio/progressRedux';
+import {lessons} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import {setHiddenLessons} from '@cdo/apps/code-studio/hiddenLessonRedux';
+import {createStoreWithReducers, registerReducers} from '@cdo/apps/redux';
 import teacherSections, {
   setSections,
   selectSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {LevelKind} from '@cdo/generated-scripts/sharedConstants';
+
+import ProgressLessonTeacherInfo from './ProgressLessonTeacherInfo';
 
 // 0
 const lockableNoPlanYesUrl = {
   id: 123,
   levels: [1, 2, 3, 4].map(id => ({
     ids: [id],
-    icon: 'fa-check-square-o',
+    icon: 'fa-square-check',
     kind: LevelKind.assessment,
     url: '/foo/bar',
   })),

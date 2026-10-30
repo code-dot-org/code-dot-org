@@ -1,6 +1,6 @@
-import React from 'react';
 import {render, screen} from '@testing-library/react';
-import {expect} from '../../../util/reconfiguredChai';
+import React from 'react';
+
 import SocialShare from '@cdo/apps/templates/certificates/SocialShare';
 
 describe('SocialShare', () => {
@@ -24,19 +24,19 @@ describe('SocialShare', () => {
 
     resolveImageAccess();
 
-    expect(screen.queryByTitle('Share to LinkedIn')).to.not.exist;
+    expect(screen.queryByTitle('Share to LinkedIn')).toBeFalsy();
 
-    expect(screen.queryByTitle('Share to Facebook')).to.exist;
-    expect(screen.getByTitle('Share to Facebook').closest('a').href).to.equal(
+    expect(screen.queryByTitle('Share to Facebook')).toBeDefined();
+    expect(screen.getByTitle('Share to Facebook').closest('a').href).toBe(
       'https://www.facebook.com/sharer/sharer.php?facebook'
     );
 
-    expect(screen.queryByTitle('Share to Twitter')).to.exist;
-    expect(screen.getByTitle('Share to Twitter').closest('a').href).to.equal(
+    expect(screen.queryByTitle('Share to Twitter')).toBeDefined();
+    expect(screen.getByTitle('Share to Twitter').closest('a').href).toBe(
       'https://twitter.com/share?twitter'
     );
 
-    expect(screen.getByText('Print').closest('a').href).to.include('/print');
+    expect(screen.getByText('Print').closest('a').href).toContain('/print');
   });
 
   it('renders linkedin share button when isPlCourse is true', () => {
@@ -53,22 +53,22 @@ describe('SocialShare', () => {
 
     resolveImageAccess();
 
-    expect(screen.queryByTitle('Share to LinkedIn')).to.exist;
-    expect(screen.getByTitle('Share to LinkedIn').closest('a').href).to.equal(
+    expect(screen.queryByTitle('Share to LinkedIn')).toBeDefined();
+    expect(screen.getByTitle('Share to LinkedIn').closest('a').href).toBe(
       'https://www.linkedin.com/sharing/share-offsite/?linkedin'
     );
 
-    expect(screen.queryByTitle('Share to Facebook')).to.exist;
-    expect(screen.getByTitle('Share to Facebook').closest('a').href).to.equal(
+    expect(screen.queryByTitle('Share to Facebook')).toBeDefined();
+    expect(screen.getByTitle('Share to Facebook').closest('a').href).toBe(
       'https://www.facebook.com/sharer/sharer.php?facebook'
     );
 
-    expect(screen.queryByTitle('Share to Twitter')).to.exist;
-    expect(screen.getByTitle('Share to Twitter').closest('a').href).to.equal(
+    expect(screen.queryByTitle('Share to Twitter')).toBeDefined();
+    expect(screen.getByTitle('Share to Twitter').closest('a').href).toBe(
       'https://twitter.com/share?twitter'
     );
 
-    expect(screen.getByText('Print').closest('a').href).to.include('/print');
+    expect(screen.getByText('Print').closest('a').href).toContain('/print');
   });
 
   it('does not render social share buttons when under13 is true', () => {
@@ -85,10 +85,10 @@ describe('SocialShare', () => {
 
     resolveImageAccess();
 
-    expect(screen.queryByTitle('Share to LinkedIn')).to.not.exist;
-    expect(screen.queryByTitle('Share to Facebook')).to.not.exist;
-    expect(screen.queryByTitle('Share to Twitter')).to.not.exist;
+    expect(screen.queryByTitle('Share to LinkedIn')).toBeFalsy();
+    expect(screen.queryByTitle('Share to Facebook')).toBeFalsy();
+    expect(screen.queryByTitle('Share to Twitter')).toBeFalsy();
 
-    expect(screen.getByText('Print').closest('a').href).to.include('/print');
+    expect(screen.getByText('Print').closest('a').href).toContain('/print');
   });
 });

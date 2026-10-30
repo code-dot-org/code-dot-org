@@ -1,0 +1,8 @@
+%h1.control-legend{data: {toggle: "collapse", target: "#dance_ai_settings"}}
+  AI Settings
+
+#dance_ai_settings.in.collapse
+  = f.label :ai_dancer_generate_adlib, 'Guide Mode'
+  = f.text_field :guide_mode
+  = f.label :ai_dancer_generate_adlib, 'Generate Dancer Adlib Name'
+  = f.text_field :ai_dancer_generate_adlib, placeholder: 'adjective-animal-attire-02'

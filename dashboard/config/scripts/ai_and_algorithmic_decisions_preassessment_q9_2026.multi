@@ -1,0 +1,14 @@
+name 'ai-and-algorithmic-decisions-preassessment-q9_2026'
+
+question 'A music app shows a "Turn up the volume?" message only when the current volume is below 30. Which structure best describes this logic?'
+
+wrong 'A loop that plays the song until volume changes.'
+wrong 'A variable that stores the volume.'
+right 'An if/else statement that checks whether the volume is below 30 and shows the message only when that is true.'
+wrong 'A function with no body.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 5
+MARKDOWN

@@ -1,5 +1,5 @@
+import $ from 'jquery';
 import React from 'react';
-import color from '@cdo/apps/util/color';
 /* eslint-disable no-restricted-imports */
 import {
   Form,
@@ -8,10 +8,11 @@ import {
   FormControl,
   Button,
 } from 'react-bootstrap';
-/* eslint-enable no-restricted-imports */
-import $ from 'jquery';
 import {Link} from 'react-router';
+/* eslint-enable no-restricted-imports */
+
 import {getPathToApplication} from '@cdo/apps/code-studio/pd/application_dashboard/pathToApplicationHelper';
+import color from '@cdo/apps/util/color';
 
 export default class ApplicantSearch extends React.Component {
   constructor(props) {

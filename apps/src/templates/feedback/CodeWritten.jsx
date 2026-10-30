@@ -1,8 +1,7 @@
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+
 import msg from '@cdo/locale';
-import trackEvent from '../../util/trackEvent';
 
 class CodeWritten extends React.Component {
   static propTypes = {
@@ -35,7 +34,6 @@ class CodeWritten extends React.Component {
             ...styles.summary,
             ...(useChallengeStyles ? styles.challengeSummary : {}),
           }}
-          onClick={() => trackEvent('showCode', 'click', 'dialog')}
         >
           <b>{msg.showGeneratedCode()}</b>
         </summary>
@@ -57,7 +55,6 @@ const styles = {
     fontSize: 18,
     lineHeight: '20px',
     fontWeight: 'normal',
-    outline: 'none',
     padding: 5,
     display: 'list-item',
   },
@@ -65,7 +62,7 @@ const styles = {
     fontSize: 16,
   },
   challengeSummary: {
-    fontColor: 'black',
+    color: 'black',
     fontSize: 14,
     marginLeft: 40,
   },
@@ -74,4 +71,4 @@ const styles = {
   },
 };
 
-export default Radium(CodeWritten);
+export default CodeWritten;

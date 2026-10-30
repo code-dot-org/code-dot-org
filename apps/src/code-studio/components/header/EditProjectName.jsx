@@ -1,15 +1,18 @@
 /**
  * Component for editing the name of a project.
  */
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import i18n from '@cdo/locale';
 import {connect} from 'react-redux';
-import NameFailureDialog from '../NameFailureDialog';
+
+import ProjectNameFailureDialog from '@cdo/apps/templates/projects/ProjectNameFailureDialog';
+import i18n from '@cdo/locale';
+
 import NameFailureError from '../../NameFailureError';
 import {setNameFailure, unsetNameFailure} from '../../projectRedux';
+
 import styles from './project-header.module.scss';
-import classNames from 'classnames';
 
 class UnconnectedEditProjectName extends React.Component {
   static propTypes = {
@@ -91,9 +94,10 @@ class UnconnectedEditProjectName extends React.Component {
           <div className="project_name_wrapper header_text">
             <input
               type="text"
-              className="project_name header_input"
+              className="project_name header_input form-control"
               maxLength="100"
               defaultValue={this.props.projectName}
+              aria-label={i18n.projectName()}
               ref={input => {
                 this.nameChangeInput = input;
               }}
@@ -113,7 +117,7 @@ class UnconnectedEditProjectName extends React.Component {
             {i18n.save()}
           </button>
         </form>
-        <NameFailureDialog
+        <ProjectNameFailureDialog
           flaggedText={this.props.projectNameFailure}
           isOpen={!!this.props.projectNameFailure}
           handleClose={this.props.unsetNameFailure}

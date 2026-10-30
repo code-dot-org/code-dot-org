@@ -1,0 +1,22 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-11-13T03:07:36.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# Flowchart\n\nA **flowchart** is a diagram that shows the steps in a process using shapes and arrows. Flowcharts make it easier to plan out and visualize how a program or process works.\n\n",
+        "imageUrl": "https://images.code.org/a7162c230a261bc668e9eb7cb2d7f824-wchart.png",
+        "key": "undefined-ea03636a-a1b5-4568-be2b-86c3c6462665",
+        "layout": "text-top-right"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-13T03:07:36.014+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson5-panel-flowchart-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson5-panel-flowchart-test-2025\"},{\"changed_at\":\"2025-11-13 03:10:09 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Panels>

@@ -1,0 +1,14 @@
+name 'ai-powered-threats-defenses-postassessment-q11_2025-pilot'
+
+question ‘Which best explains why asymmetric encryption is slower but still widely used?’
+
+right ‘It allows secure key exchanges over public networks’
+wrong ‘It ensures fast real-time editing of encrypted files’
+wrong ‘It is simpler to implement compared to symmetric encryption’
+wrong ‘It eliminates the need for encryption keys entirely’
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 9: Encryption
+MARKDOWN

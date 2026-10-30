@@ -25,12 +25,35 @@
 #  index_pd_enrollments_on_code            (code) UNIQUE
 #  index_pd_enrollments_on_email           (email)
 #  index_pd_enrollments_on_pd_workshop_id  (pd_workshop_id)
+#  index_pd_enrollments_on_user_id         (user_id)
 #
 
 require 'cdo/code_generation'
 require 'cdo/safe_names'
 
 class Pd::Enrollment < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :restricted,
+    pd_workshop_id: :restricted,
+    name: :restricted,
+    first_name: :restricted,
+    last_name: :restricted,
+    email: :restricted,
+    created_at: :restricted,
+    updated_at: :restricted,
+    school: :restricted,
+    code: :restricted,
+    user_id: :restricted,
+    survey_sent_at: :restricted,
+    completed_survey_id: :restricted,
+    school_info_id: :restricted,
+    deleted_at: :restricted,
+    properties: :restricted,
+    application_id: :restricted,
+  )
+
   include SchoolInfoDeduplicator
   include Rails.application.routes.url_helpers
   include Pd::WorkshopConstants
@@ -54,24 +77,15 @@ class Pd::Enrollment < ApplicationRecord
 
   validates_presence_of :first_name, unless: :deleted?
 
-  # Some old enrollments, from before the first/last name split, don't have last names.
-  # Require on all new enrollments.
-  validates_presence_of :last_name, unless: -> {deleted? || created_before_name_split?}
-
   validates_presence_of :email, unless: :deleted?
   validates_confirmation_of :email, unless: :deleted?
   validates_email_format_of :email, allow_blank: true
   validates :email, uniqueness: {scope: :pd_workshop_id, message: 'already enrolled in workshop', case_sensitive: false}, unless: :deleted?
 
-  validate :school_forbidden, if: -> {new_record? || school_changed?}
-  validates_presence_of :school_info, unless: -> {deleted? || created_before_school_info?}
-  validate :school_info_country_required, if: -> {!deleted? && (new_record? || school_info_id_changed?)}
-
   before_validation :autoupdate_user_field
   before_save :set_application_id
   after_create :set_default_scholarship_info
-  after_save :enroll_in_corresponding_online_learning, if: -> {!deleted? && (saved_change_to_user_id? || saved_change_to_email?)}
-  after_save :authorize_teacher_account
+  after_save :authorize_teacher_account, unless: :deleted?
 
   serialized_attrs %w(
     role
@@ -96,7 +110,10 @@ class Pd::Enrollment < ApplicationRecord
   end
 
   def self.for_user(user)
-    where('email = ? OR user_id = ?', user.email_for_enrollments, user.id)
+    alternate_email = user.alternate_email
+    alternate_email.present? ?
+      where('email = ? OR email = ? OR user_id = ?', user.email, alternate_email, user.id) :
+      where('email = ? OR user_id = ?', user.email, user.id)
   end
 
   # Name split (https://github.com/code-dot-org/code-dot-org/pull/11679) was deployed on 2016-11-09
@@ -109,25 +126,13 @@ class Pd::Enrollment < ApplicationRecord
     persisted? && created_at < '2016-08-30'
   end
 
-  def school_forbidden
-    errors.add(:school, 'is forbidden') if read_attribute(:school)
-  end
-
-  def school_info_country_required
-    errors.add(:school_info, 'must have a country') unless school_info.try(:country)
-  end
-
-  def self.for_school_district(school_district)
-    joins(:school_info).where(school_infos: {school_district_id: school_district.id})
-  end
-
   scope :attended, -> {joins(:attendances).group('pd_enrollments.id')}
   scope :not_attended, -> {includes(:attendances).where(pd_attendances: {pd_enrollment_id: nil})}
   scope :for_ended_workshops, -> {joins(:workshop).where.not(pd_workshops: {ended_at: nil})}
 
   # Any enrollment with attendance, for an ended workshop, has a survey.
   # Except for FiT workshops - no exit surveys for them!
-  # This scope is used in ProfessionalLearningLandingController to direct the teacher
+  # This scope is used in ProfessionalLearningController to direct the teacher
   #   to their latest pending survey.
   scope :with_surveys, (lambda do
     for_ended_workshops.
@@ -179,44 +184,17 @@ class Pd::Enrollment < ApplicationRecord
 
   # Pre-workshop survey URL (if any)
   def pre_workshop_survey_url
-    if workshop.local_summer? || workshop.ayw?
-      url_for(action: 'new_pre_foorm', controller: 'pd/workshop_daily_survey', enrollmentCode: code)
-    elsif workshop.subject == Pd::Workshop::SUBJECT_CSF_201
-      CDO.studio_url "pd/workshop_survey/csf/pre201", CDO.default_scheme
-    end
+    url_for(action: 'new_pre_foorm', controller: 'pd/workshop_daily_survey', enrollmentCode: code)
   end
 
   def exit_survey_url
     if workshop.course == Pd::Workshop::COURSE_CSF && (workshop.subject == Pd::Workshop::SUBJECT_CSF_101 || workshop.subject == Pd::Workshop::SUBJECT_CSF_DISTRICT)
-      CDO.studio_url "pd/workshop_survey/csf/post101/#{code}", CDO.default_scheme
+      CDO.studio_url("pd/workshop_survey/csf/post101/#{code}")
     elsif workshop.csf? && workshop.subject == Pd::Workshop::SUBJECT_CSF_201
-      CDO.studio_url "/pd/workshop_survey/csf/post201/#{code}", CDO.default_scheme
-    # any other non-academic year workshop uses foorm
+      CDO.studio_url("/pd/workshop_survey/csf/post201/#{code}")
     else
-      CDO.studio_url "/pd/workshop_post_survey?enrollmentCode=#{code}", CDO.default_scheme
+      CDO.studio_url("/pd/workshop_survey/post/#{code}")
     end
-  end
-
-  def should_send_exit_survey?
-    !(workshop.fit_weekend? || workshop.course == Pd::Workshop::COURSE_ADMIN_COUNSELOR)
-  end
-
-  def send_exit_survey
-    # In case the workshop is reprocessed, do not send duplicate exit surveys.
-    if survey_sent_at
-      CDO.log.warn "Skipping attempt to send a duplicate workshop survey email. Enrollment: #{id}"
-      return
-    end
-
-    return unless should_send_exit_survey?
-
-    # Don't send if there's no associated survey
-    return unless exit_survey_url
-
-    return unless (mailer = Pd::WorkshopMailer.exit_survey(self))
-
-    mailer.deliver_now
-    update!(survey_sent_at: Time.zone.now)
   end
 
   # TODO: Once we're satisfied with the first/last name split data,
@@ -234,7 +212,11 @@ class Pd::Enrollment < ApplicationRecord
   # Convenience method for combining first and last name into a full name
   # @return [String] Combined first_name last_name
   def full_name
-    "#{first_name} #{last_name}".strip
+    if user&.given_name && user&.family_name
+      "#{user.given_name} #{user.family_name}"
+    else
+      "#{first_name} #{last_name}".strip
+    end
   end
 
   # Convenience method for setting first and last names from a full name
@@ -245,14 +227,6 @@ class Pd::Enrollment < ApplicationRecord
     first_name, last_name = value.split(' ', 2)
     write_attribute :first_name, first_name
     write_attribute :last_name, last_name || ''
-  end
-
-  # Maps enrollments to safe names
-  # @return [Array<Array<String, Pd::Enrollment>>] Array of tuples
-  #   representing the safe name and associated enrollment
-  def self.get_safe_names
-    # Use full name
-    all.map {|enrollment| [enrollment.full_name, enrollment]}
   end
 
   # TODO: Migrate existing school entries into schoolInfo and delete school column
@@ -328,25 +302,23 @@ class Pd::Enrollment < ApplicationRecord
     save!
   end
 
-  protected
+  def summarize_for_workshop
+    {
+      code: code,
+    }
+  end
 
-  def autoupdate_user_field
+  protected def autoupdate_user_field
     resolved_user = resolve_user
     self.user = resolve_user if resolved_user
   end
 
-  def enroll_in_corresponding_online_learning
-    if user && workshop.associated_online_course
-      Plc::UserCourseEnrollment.find_or_create_by(user: user, plc_course: workshop.associated_online_course)
-    end
-  end
-
-  def check_school_info(school_info_attr)
+  protected def check_school_info(school_info_attr)
     deduplicate_school_info(school_info_attr, self)
   end
 
-  def authorize_teacher_account
-    user.permission = UserPermission::AUTHORIZED_TEACHER if user&.teacher? && [COURSE_CSD, COURSE_CSP, COURSE_CSA].include?(workshop.course)
+  protected def authorize_teacher_account
+    user.permission = UserPermission::AUTHORIZED_TEACHER if user&.teacher? && [COURSE_CSD, COURSE_CSP, COURSE_CSA, COURSE_BUILD_YOUR_OWN].include?(workshop&.course)
   end
 
   # Returns true if the given workshop is an Admin or Admin/Counselor workshop
@@ -364,13 +336,13 @@ class Pd::Enrollment < ApplicationRecord
   private_class_method def self.currently_receives_foorm_survey(workshop)
     !(workshop.workshop_ending_date < Date.new(2020, 9, 1) && workshop.csf_201?) &&
       !(workshop.workshop_ending_date < Date.new(2020, 5, 8) &&
-      (workshop.csf_intro? || workshop.local_summer? || workshop.csp_wfrt?))
+      (workshop.csf_intro? || workshop.local_summer? || workshop.csp_wfrt? || workshop.byo?))
   end
 
   private_class_method def self.filter_for_foorm_survey_completion(enrollments, select_completed)
     completed_surveys, uncompleted_surveys = enrollments.partition do |enrollment|
       workshop = enrollment.workshop
-      form_name = POST_SURVEY_CONFIG_PATHS[workshop.subject]
+      form_name = POST_SURVEY_CONFIG_PATHS[workshop.subject || workshop.course]
       Pd::WorkshopSurveyFoormSubmission.where(pd_workshop: workshop, user: enrollment.user).
         joins(:foorm_submission).
         exists?(foorm_submissions: {form_name: form_name})

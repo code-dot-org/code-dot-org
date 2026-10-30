@@ -1,0 +1,25 @@
+{
+  "name": "hoai-web-design-pilot-v2",
+  "script_names": [
+    "hoai-web-design-pilot-v2"
+  ],
+  "original_script_names": [
+    "hoai-web-design-pilot-v2"
+  ],
+  "published_state": "pilot",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "hoai-web-design-pilot-v2",
+    "numbered_units": "auto",
+    "pilot_experiment": "hoai-web-design-pilot-v2",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

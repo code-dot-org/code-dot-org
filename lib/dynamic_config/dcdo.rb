@@ -1,19 +1,12 @@
-# A dynamic configuration module that allows us to update
-# config settings without pushing new code.
-
-require 'dynamic_config/datastore_cache'
 require 'dynamic_config/dynamic_config_base'
-require 'dynamic_config/environment_aware_dynamic_config_helper'
-require 'dynamic_config/adapters/dynamodb_adapter'
-require 'dynamic_config/adapters/json_file_adapter'
-require 'dynamic_config/adapters/memory_adapter'
 
-class DCDOBase < DynamicConfigBase
-  # Factory method for creating DCDOBase objects
-  # @returns [DCDOBase]
-  def self.create
-    datastore_cache = EnvironmentAwareDynamicConfigHelper.create_datastore_cache(CDO.dcdo_table_name)
-    DCDOBase.new datastore_cache
+# A high-availability, low-complexity implementation of dynamic configuration.
+# Used by a wide variety of features across our entire application, both
+# server- and client-side.
+class DCDO < DynamicConfigBase
+  # @override
+  def self.cache_identifier
+    CDO.dcdo_table_name
   end
 
   # Generate the a mapping of DCDO configurations we want to forward to frontend code so it can have
@@ -23,28 +16,75 @@ class DCDOBase < DynamicConfigBase
   # behavior of the page. Analyze the HTTP headers of the pages you are interested in to understand
   # what kind of caching they use and if that will be a concern.
   # @return [Hash] A mapping of DCDO keys to values which we want frontend code to have access to.
-  def frontend_config
+  def self.frontend_config
     # Add DCDO configurations you would like to be available on the frontend/javascript.
     # For example:
     # 'my-new-feature': DCDO.get('my-new-feature', false)
     {
       'frontend-i18n-tracking': DCDO.get('frontend-i18n-tracking', false),
-      clearerSignUpUserType: DCDO.get('clearerSignUpUserType', false),
       'pl-teacher-application-off-season': DCDO.get('pl_teacher_application', false),
       'pl-launch-hero-banner': DCDO.get('pl-launch-hero-banner', false),
+      'curriculum-launch-2024': DCDO.get('curriculum-launch-2024', false),
       'csta-form-extension': DCDO.get('csta-form-extension', false),
-      cpa_experience: DCDO.get('cpa_experience', false),
       gender: DCDO.get('gender', false),
-      'amplitude-event-sample-rates': DCDO.get('amplitude-event-sample-rates', {}),
-      # Whether to allow the user to toggle between the v1 and v2 progress tables.
-      'progress-table-v2-enabled': DCDO.get('progress-table-v2-enabled', false),
-      # Whether to show the v1 or v2 progress table by default.
-      'progress-table-v2-default-v2': DCDO.get('progress-table-v2-default-v2', false),
       # Whether the scholarship dropdown is locked on the application dashboard.
       'scholarship-dropdown-locked': DCDO.get('scholarship-dropdown-locked', true),
       hoc_mode: DCDO.get('hoc_mode', false),
+      # Whether to show the marketing banners for the AI Teacher Assistant launch. Can be removed later.
+      'ai-teaching-assistant-launch': DCDO.get('ai-teaching-assistant-launch', false),
+      'music-lab-samples-report': DCDO.get('music-lab-samples-report', true),
+      'music-lab-existing-projects-default-sounds': DCDO.get('music-lab-existing-projects-default-sounds', true),
+      'cfu-pin-hide-enabled': DCDO.get('cfu-pin-hide-enabled', false),
+      'teacher-homepage-v2-announcement': DCDO.get('teacher-homepage-v2-announcement', false),
+      'best-of-stem-2024': DCDO.get('best-of-stem-2024', false),
+      # Enabled locales for browser text to speech. Set to an empty array to disable all languages, or true to enable all.
+      'browser-tts-button-enabled-locales': DCDO.get('browser-tts-button-enabled-locales', ['en-US', 'en']),
+      'lab2-submit-project-enabled': DCDO.get('lab2-submit-project-enabled', true),
+      'cdo-blockly-usage': DCDO.get('cdo-blockly-usage', false),
+      'ai-dancer-head-crop': DCDO.get('ai-dancer-head-crop', false),
+      # TODO ACQ-3074 - Remove this after the Exploring Gen AI launch
+      'exploring-gen-ai-launch': DCDO.get('exploring-gen-ai-launch', false),
+      'music-lab-banner': DCDO.get('music-lab-banner', false),
+      modularity: DCDO.get('modularity', true),
+      # Remove this as part of Pegasus cleanup after the move to the CMS
+      'aif-launch': DCDO.get('aif-launch', false),
+      'skills-dashboard': DCDO.get('skills-dashboard', false),
+      'teacher-homepage-welcome': DCDO.get('teacher-homepage-welcome', false),
+      'blockly-keyboard-navigation': DCDO.get('blockly-keyboard-navigation', false),
+      'detect-remote-network-config': DCDO.get('detect-remote-network-config', {}),
+      'show-aita-lesson-summaries': DCDO.get('show-aita-lesson-summaries', false),
+      'ai-lesson-summary-podcasts': DCDO.get('ai-lesson-summary-podcasts', false),
+      'hoai2025-share-enabled': DCDO.get('hoai2025-share-enabled', true),
+      'ai-lesson-summaries-notifications-enabled': DCDO.get('ai-lesson-summaries-notifications-enabled', false),
+      'lab2-fetch-level-properties-by-lesson-id': DCDO.get('lab2-fetch-level-properties-by-lesson-id', true),
+      'student-snapshot-feedback-link': DCDO.get('student-snapshot-feedback-link', false),
+      'sketchlab-s3-image-storage': DCDO.get('sketchlab-s3-image-storage', true),
+      # Apex domain for the Web Lab 2 / Python Lab sandboxed preview origin.
+      # Set to 'codeaiprojects.org' to move previews to the new domain; unset
+      # (or 'codeprojects.org') stays on the pre-migration domain. See
+      # docs/weblab-preview-domain-migration.md.
+      'sandboxed-preview-domain': DCDO.get('sandboxed-preview-domain', 'codeprojects.org'),
+      # Whether Python Lab runs pyodide in a hidden iframe on the sandboxed
+      # preview domain instead of directly on studio.code.org. See
+      # apps/src/pythonlab/README.md.
+      'use-pythonlab-separate-domain': DCDO.get('use-pythonlab-separate-domain', false),
+      'ai-gateway-enabled': DCDO.get('ai-gateway-enabled', true),
+      # Controls whether the output image goes through the additional LLM-as-judge safety layer.
+      # Azure image moderation still runs when this is false.
+      'aichat-output-image-llm-safety-judge-enabled': DCDO.get('aichat-output-image-llm-safety-judge-enabled', true),
+      # Controls whether Sprite Lab in Lab2's image generation runs the prompt and
+      # picture LLM safety judges. Azure image moderation still runs when this is false.
+      'spritelab-lab2-image-safety-enabled': DCDO.get('spritelab-lab2-image-safety-enabled', true),
+      'frontend-observability-enabled': DCDO.get('frontend-observability-enabled', false),
+      'browser-events-enabled': DCDO.get('browser-events-enabled', true),
+      'onboarding-enabled': DCDO.get('onboarding-enabled', false),
+      'ai-diff-drawer': DCDO.get('ai-diff-drawer', false),
+      'codeai-rebrand-banner': DCDO.get('codeai-rebrand-banner', false),
+      'adaptive-ai-enabled': DCDO.get('adaptive-ai-enabled', false),
+      # AI descriptions of Python Lab theater output; also gates the access token server-side.
+      'theater-ai-descriptions-enabled': DCDO.get('theater-ai-descriptions-enabled', false),
+      # Kill switch for Tutor+ (lesson deep dive); also gates its endpoints and chat server-side.
+      'lesson-deep-dive-enabled': DCDO.get('lesson-deep-dive-enabled', true)
     }
   end
 end
-
-DCDO = DCDOBase.create

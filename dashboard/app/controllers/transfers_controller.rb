@@ -84,35 +84,7 @@ class TransfersController < ApplicationController
       return
     end
 
-    new_section = Section.find_by_code(params[:new_section_code])
-
-    if new_section.will_be_over_capacity?(params[:student_ids].size)
-
-      FirehoseClient.instance.put_record(
-        :analysis,
-        {
-          study: 'section capacity restriction',
-          event: "Section owner attempted to #{params[:stay_enrolled_in_current_section] ? 'copy' : 'move'} #{params[:student_ids].size > 1 ? 'multiple students' : 'a student'} to a full section",
-          data_json: {
-            section_id: new_section.id,
-            section_code: new_section.code,
-            date: "#{Time.now.month}/#{Time.now.day}/#{Time.now.year} at #{Time.now.hour}:#{Time.now.min}",
-            joiner_id: params[:student_ids],
-            section_teacher_id: new_section.user_id
-          }.to_json
-        }
-      )
-
-      render json: {
-        result: 'full',
-        verb: params[:stay_enrolled_in_current_section] ? 'copy' : 'move',
-        sectionCapacity: new_section.capacity
-      }, status: :forbidden
-      return
-    end
-
-    # TODO(asher): Determine if this should be :manage (currently not granted) instead of :read.
-    authorize! :read, current_section
+    authorize! :manage, current_section
 
     students = User.where(id: student_ids).all
     if students.count != student_ids.count
@@ -146,10 +118,21 @@ class TransfersController < ApplicationController
 
     stay_enrolled_in_current_section = params[:stay_enrolled_in_current_section] &&
       params[:stay_enrolled_in_current_section] != 'false'
+    skipped_students = []
     students.each do |student|
+      # Skip students the teacher cannot manage (e.g. demo students).
+      unless can?(:manage, student)
+        skipped_students << student.name
+        next
+      end
+
       if new_section.user == current_user
-        follower_same_user_teacher = student.followeds.find_by_section_id(current_section.id)
-        follower_same_user_teacher.update!(section_id: new_section.id)
+        if stay_enrolled_in_current_section
+          student.followeds.create!(user: new_section.user, section: new_section)
+        else
+          follower = student.followeds.find_by_section_id(current_section.id)
+          follower.update!(section_id: new_section.id)
+        end
       else
         unless student.followeds.exists?(section_id: new_section.id)
           student.followeds.create!(user: new_section.user, section: new_section)
@@ -160,9 +143,13 @@ class TransfersController < ApplicationController
         end
       end
 
-      student.assign_script(new_section.script) if new_section.script
+      student.assign_script(new_section.script, new_section.unit_group) if new_section.script
     end
 
-    render json: {}, status: :no_content
+    if skipped_students.any?
+      render json: {warning: "The following demo students could not be transferred: #{skipped_students.join(', ')}."}, status: :ok
+    else
+      render json: {}, status: :no_content
+    end
   end
 end

@@ -7,6 +7,18 @@
  * Thank you!
  */
 
+// These are warnings that React surfaces in React 18 as console.error messages.
+// Please do not add to this list!
+const ERROR_ALLOW_LIST = [
+  'Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead.',
+  'uses the legacy childContextTypes API which is no longer supported and will be removed in the next major release.',
+  'uses the legacy contextTypes API which is no longer supported and will be removed in the next major release.',
+  'Support for defaultProps will be removed from function components in a future major release.',
+  'Support for string refs will be removed in a future major release.',
+  'findDOMNode is deprecated and will be removed in the next major release.',
+  '`ReactDOMTestUtils.act` is deprecated in favor of `React.act`.',
+];
+
 /**
  * We want to be able to have test throw by default on console error/warning, but
  * also be able to allow these calls in specific tests. This method creates two
@@ -16,7 +28,7 @@
  * method - allow - overrides that behavior, allowing calls to the console method.
  * Note: Intentionally not using sinon for this, to keep test bundle sizes down.
  */
-function throwOnConsoleEverywhere(methodName) {
+function throwOnConsoleEverywhere(methodName, ignoreList = []) {
   let throwing = true;
   let wrappedMethod = null;
 
@@ -37,7 +49,10 @@ function throwOnConsoleEverywhere(methodName) {
           wrappedMethod.call(console, prefix, msg);
 
           // Throw error with stack trace of call
-          if (throwing) {
+          if (
+            throwing &&
+            !ignoreList.some(allowedMsg => msg.includes(allowedMsg))
+          ) {
             console[methodName] = wrappedMethod;
             wrappedMethod = null;
             throw new Error(
@@ -83,7 +98,10 @@ function getStack() {
 }
 
 // Create/export methods for both console.error and console.warn
-const consoleErrorFunctions = throwOnConsoleEverywhere('error');
+const consoleErrorFunctions = throwOnConsoleEverywhere(
+  'error',
+  ERROR_ALLOW_LIST
+);
 export const throwOnConsoleErrorsEverywhere =
   consoleErrorFunctions.throwEverywhere;
 export const allowConsoleErrors = consoleErrorFunctions.allow;

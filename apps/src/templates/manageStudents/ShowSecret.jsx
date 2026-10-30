@@ -1,24 +1,29 @@
+import {Button as MuiButton} from '@mui/material';
+import $ from 'jquery';
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import ReactTooltip from 'react-tooltip';
-import _ from 'lodash';
-import Button from '../Button';
+
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+
 import {setSecretImage, setSecretWords} from './manageStudentsRedux';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+
+import moduleStyles from './showSecret.module.scss';
 
 class ShowSecret extends Component {
   static propTypes = {
     initialIsShowing: PropTypes.bool,
     secretWord: PropTypes.string,
-    secretPicture: PropTypes.string,
+    secretPictureUrl: PropTypes.string,
     loginType: PropTypes.string.isRequired,
     id: PropTypes.number.isRequired,
     sectionId: PropTypes.number.isRequired,
     secretLoginDisabled: PropTypes.bool,
+    resetDisabled: PropTypes.bool,
+    isDemoStudent: PropTypes.bool,
 
     // Provided in redux
     setSecretImage: PropTypes.func.isRequired,
@@ -30,47 +35,23 @@ class ShowSecret extends Component {
   };
 
   show = () => {
-    const {sectionId, id, loginType} = this.props;
     this.setState({
       isShowing: true,
     });
-    firehoseClient.putRecord(
-      {
-        study: 'teacher-dashboard',
-        study_group: 'manage-students',
-        event: 'show-secret',
-        data_json: JSON.stringify({
-          sectionId: sectionId,
-          studentId: id,
-          loginType: loginType,
-        }),
-      },
-      {includeUserId: true}
-    );
   };
 
   hide = () => {
-    const {sectionId, id, loginType} = this.props;
     this.setState({
       isShowing: false,
     });
-    firehoseClient.putRecord(
-      {
-        study: 'teacher-dashboard',
-        study_group: 'manage-students',
-        event: 'hide-secret',
-        data_json: JSON.stringify({
-          sectionId: sectionId,
-          studentId: id,
-          loginType: loginType,
-        }),
-      },
-      {includeUserId: true}
-    );
   };
 
   reset = () => {
-    const {sectionId, id, loginType} = this.props;
+    // Demo students intentionally cannot be mutated; the reset button is
+    // disabled in render but guard the network call as a safety belt.
+    if (this.props.isDemoStudent) {
+      return;
+    }
     const dataToUpdate = {
       secrets: 'reset_secrets',
       student: {id: this.props.id},
@@ -84,23 +65,10 @@ class ShowSecret extends Component {
     })
       .done(data => {
         if (this.props.loginType === SectionLoginType.picture) {
-          this.props.setSecretImage(this.props.id, data.secret_picture_path);
+          this.props.setSecretImage(this.props.id, data.secret_picture_url);
         } else if (this.props.loginType === SectionLoginType.word) {
           this.props.setSecretWords(this.props.id, data.secret_words);
         }
-        firehoseClient.putRecord(
-          {
-            study: 'teacher-dashboard',
-            study_group: 'manage-students',
-            event: 'reset-secret',
-            data_json: JSON.stringify({
-              sectionId: sectionId,
-              studentId: id,
-              loginType: loginType,
-            }),
-          },
-          {includeUserId: true}
-        );
       })
       .fail((jqXhr, status) => {
         // We may want to handle this more cleanly in the future, but for now this
@@ -111,8 +79,12 @@ class ShowSecret extends Component {
   };
 
   render() {
-    const {secretLoginDisabled} = this.props;
+    const {secretLoginDisabled, resetDisabled, isDemoStudent} = this.props;
     const tooltipId = secretLoginDisabled ? _.uniqueId() : '';
+    const resetTooltipId = resetDisabled ? _.uniqueId() : '';
+    const tooltipText = isDemoStudent
+      ? 'Password actions are not available for demo section students.'
+      : i18n.disabledForTeacherAccountsTooltip();
     const showButtonText =
       this.props.loginType === SectionLoginType.word
         ? i18n.showWords()
@@ -123,24 +95,27 @@ class ShowSecret extends Component {
         : i18n.hidePicture();
 
     return (
-      <div>
+      <div className={moduleStyles.showSecretContainer}>
         {!this.state.isShowing && (
           <span data-for={tooltipId} data-tip>
-            <Button
+            <MuiButton
+              variant="outlined"
+              color="tertiary"
+              size="small"
               onClick={this.show}
-              color={Button.ButtonColor.white}
-              text={showButtonText}
               disabled={secretLoginDisabled}
               className="uitest-show-picture-or-word"
-              style={styles.button}
-            />
+              type="button"
+            >
+              {showButtonText}
+            </MuiButton>
             <ReactTooltip id={tooltipId} role="tooltip" effect="solid">
-              <div>{i18n.disabledForTeacherAccountsTooltip()}</div>
+              <div>{tooltipText}</div>
             </ReactTooltip>
           </span>
         )}
         {this.state.isShowing && (
-          <div>
+          <div className={moduleStyles.showRow}>
             {this.props.loginType === SectionLoginType.word && (
               <p>{this.props.secretWord}</p>
             )}
@@ -148,43 +123,44 @@ class ShowSecret extends Component {
               // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
               // Verify or update this alt-text as necessary
               <img
-                src={pegasus('/images/' + this.props.secretPicture)}
-                style={styles.image}
+                src={this.props.secretPictureUrl}
+                className={moduleStyles.image}
                 alt=""
               />
             )}
-            <Button
-              onClick={this.reset}
-              color={Button.ButtonColor.blue}
-              text={i18n.reset()}
-              style={{...styles.button, ...styles.reset}}
-              className="uitest-reset-password"
-            />
-            <Button
+            <span data-for={resetTooltipId} data-tip>
+              <MuiButton
+                variant="contained"
+                color="primary"
+                size="small"
+                onClick={this.reset}
+                disabled={resetDisabled}
+                className="uitest-reset-password"
+                type="button"
+              >
+                {i18n.reset()}
+              </MuiButton>
+              {resetDisabled && (
+                <ReactTooltip id={resetTooltipId} role="tooltip" effect="solid">
+                  <div>{tooltipText}</div>
+                </ReactTooltip>
+              )}
+            </span>
+            <MuiButton
+              variant="outlined"
+              color="tertiary"
+              size="small"
               onClick={this.hide}
-              color={Button.ButtonColor.white}
-              text={hideButtonText}
-              style={styles.button}
-            />
+              type="button"
+            >
+              {hideButtonText}
+            </MuiButton>
           </div>
         )}
       </div>
     );
   }
 }
-
-const styles = {
-  reset: {
-    marginRight: 10,
-  },
-  image: {
-    width: 45,
-  },
-  button: {
-    margin: 0,
-    boxShadow: 'inset 0 2px 0 0 rgb(255 255 255 / 40%)',
-  },
-};
 
 export const UnconnectedShowSecret = ShowSecret;
 

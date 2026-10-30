@@ -1,0 +1,54 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2026-03-03T20:03:27.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "display_name": "What's missing? ",
+    "bubble_choice_description": "Plan a weekend event with AI! How does missing context lead AI to make flawed decisions?",
+    "thumbnail_url": "https://images.code.org/94865517ce1722b8ce012abd04d6b296-star.png",
+    "encrypted": "false",
+    "long_instructions": "#Step 1: Ask It.\r\n\r\n1. “Plan a fun weekend event for middle school students.”\r\n\r\n2. Then say: “Add details.”\r\n\r\n#Step 2: Stree Test It.\r\n\r\n3. Add specific context.\r\n\r\n\t- “We have a small budget.”\r\n\r\n\t- “We live in a big city.”\r\n\r\n\t- “We can’t travel.”\r\n\r\n\t- “We need adult supervision.”\r\n\r\n**What did the AI assume at first?**\r\n\r\n**What changed when you gave more information?**",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a helpful AI assistant planning events for middle school students.\n\nWhen given a request:\n\nProvide a complete and detailed plan immediately.\n\nDo not ask clarifying questions unless directly required.\n\nMake reasonable assumptions about location, budget, supervision, and resources.\n\nUse common, popular middle school interests as defaults.\n\nPresent the plan confidently and positively.\n\nAvoid highlighting uncertainty in your assumptions.\n\nIf more context is later provided, adjust the plan accordingly.\n\nYour goal is to quickly generate a polished plan that feels practical and well thought out.",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gen-ai-mistral-7b-inst-v01"
+      ],
+      "multimodalEnabled": false
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-03-04 02:09:19 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-03-04 02:10:13 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-03-04 02:11:37 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-03-04 16:22:54 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Aichat>

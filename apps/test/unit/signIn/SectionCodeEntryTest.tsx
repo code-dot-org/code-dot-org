@@ -1,0 +1,48 @@
+import {render, screen} from '@testing-library/react';
+import '@testing-library/jest-dom';
+import React from 'react';
+
+import SectionCodeEntry, {
+  SectionCodeEntryProps,
+} from '@cdo/apps/signIn/SectionCodeEntry';
+
+const DEFAULT_PROPS: SectionCodeEntryProps = {
+  sectionCodeLabel: 'Enter your 6 letter section code',
+  sectionCodePlaceholder: 'Section Code (ABCDEF)',
+  defaultSectionCode: '',
+  goLabel: 'Go',
+  formActionUrl: '/users/new',
+};
+
+describe('SectionCodeEntry', () => {
+  function renderEntry(overrides: Partial<SectionCodeEntryProps> = {}) {
+    return render(<SectionCodeEntry {...DEFAULT_PROPS} {...overrides} />);
+  }
+
+  it('renders the labeled section-code input and Go button', () => {
+    renderEntry();
+
+    const input = screen.getByRole('textbox', {
+      name: DEFAULT_PROPS.sectionCodeLabel,
+    });
+    expect(input).toHaveAttribute('name', 'section_code');
+    expect(input).toBeRequired();
+    screen.getByRole('button', {name: DEFAULT_PROPS.goLabel});
+  });
+
+  it('pre-populates the input with defaultSectionCode when provided', () => {
+    renderEntry({defaultSectionCode: 'ABCDEF'});
+    expect(
+      screen.getByRole('textbox', {name: DEFAULT_PROPS.sectionCodeLabel})
+    ).toHaveValue('ABCDEF');
+  });
+
+  it('submits via GET to the provided form action', () => {
+    renderEntry({formActionUrl: '/users/new'});
+    const form = screen
+      .getByRole('button', {name: DEFAULT_PROPS.goLabel})
+      .closest('form');
+    expect(form).toHaveAttribute('action', '/users/new');
+    expect(form).toHaveAttribute('method', 'get');
+  });
+});

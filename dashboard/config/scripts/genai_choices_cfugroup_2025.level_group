@@ -1,0 +1,10 @@
+name 'genai-choices-cfugroup_2025'
+submittable 'false'
+anonymous 'false'
+activity_guide_level 'true'
+
+page
+level 'genai-choices-cfu'
+level 'genai-choices-ethical'
+
+

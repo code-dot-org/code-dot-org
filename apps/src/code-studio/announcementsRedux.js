@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types';
-import {NotificationType} from '@cdo/apps/templates/Notification';
+
+import {NotificationType} from '@cdo/apps/sharedComponents/Notification';
 
 const ADD_ANNOUNCEMENT = 'announcements/ADD_ANNOUNCEMENT';
+const CLEAR_ANNOUNCEMENTS = 'announcements/CLEAR_ANNOUNCEMENTS';
 
 export const addAnnouncement = ({
   key,
@@ -22,6 +24,10 @@ export const addAnnouncement = ({
   visibilityType: visibility,
   dismissible,
   buttonText,
+});
+
+export const clearAnnouncements = () => ({
+  type: CLEAR_ANNOUNCEMENTS,
 });
 
 export const VisibilityType = {
@@ -53,6 +59,9 @@ export default function announcements(state = [], action) {
       dismissible: action.dismissible,
       buttonText: action.buttonText,
     });
+  }
+  if (action.type === CLEAR_ANNOUNCEMENTS) {
+    return [];
   }
 
   return state;

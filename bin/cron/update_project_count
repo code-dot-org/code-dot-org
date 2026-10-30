@@ -9,9 +9,10 @@ abort 'Script already running' unless only_one_running?(__FILE__)
 # count decreases by more than 10 thousand projects.
 
 require 'sequel'
-require File.expand_path('../../../pegasus/src/env', __FILE__)
-require_relative '../../pegasus/helpers/properties'
-require src_dir 'database'
+require File.expand_path('../../../lib/cdo/pegasus/src/env', __FILE__)
+require 'cdo/pegasus/properties'
+require 'cdo/sequel'
+require 'cdo/pegasus/src/database'
 require_relative '../../deployment'
 require 'cdo/honeybadger'
 
@@ -21,8 +22,7 @@ MAX_EXECUTION_TIME = 1_200_000
 MAX_EXECUTION_TIME_SEC = MAX_EXECUTION_TIME / 1000
 
 # Connection to read from Dashboard reader database.
-DASHBOARD_DB_READER = sequel_connect(
-  CDO.dashboard_db_reader,
+DASHBOARD_DB_READER = Cdo::Sequel.database_connection_pool(
   CDO.dashboard_db_reader,
   query_timeout: MAX_EXECUTION_TIME_SEC
 )

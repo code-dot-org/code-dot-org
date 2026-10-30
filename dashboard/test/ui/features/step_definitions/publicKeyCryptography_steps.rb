@@ -1,12 +1,12 @@
 # Public Key Cryptography Widget-specific cucumber step definitions
 
-# Which lesson of allthethings.script contains the PKC levels; this way we
+# Which lesson of ui-test-all-the-levels contains the PKC levels; this way we
 # only have to update in one place if this changes.
-PUBLIC_KEY_CRYPTOGRAPHY_ALLTHETHINGS_LESSON = 31
+PUBLIC_KEY_CRYPTOGRAPHY_STUDENT_LABS_LESSON = 31
 
 Given /^I am on the (\d+)(?:st|nd|rd|th)? Public Key Cryptography test level$/ do |level_index|
   steps <<-STEPS
-    And I am on "http://studio.code.org/s/allthethings/lessons/#{PUBLIC_KEY_CRYPTOGRAPHY_ALLTHETHINGS_LESSON}/levels/#{level_index}"
+    And I am on "http://studio.code.org/courses/ui-test-all-the-levels/units/1/lessons/#{PUBLIC_KEY_CRYPTOGRAPHY_STUDENT_LABS_LESSON}/levels/#{level_index}"
   STEPS
 end
 
@@ -33,7 +33,7 @@ When /^I run the modulo clock$/ do
 end
 
 When /^I open view "(Alice|Eve|Bob|All)"$/ do |view|
-  @browser.find_element(:xpath, "//button[text()[contains(.,'#{view}')]]").click
+  @browser.find_element(:xpath, "//button[contains(.,'#{view}')]").click
 end
 
 When /^I click the start over button$/ do

@@ -1,0 +1,9 @@
+name 'testB-elem-career-journeys-explore-videos_b_csf-e_csf-f_express'
+display_name 'Learn more about careers in CS and AI'
+description '###Choose one video to watch. Then, tap Finish to move on.'
+
+sublevels
+level 'test-elem-career-journeys-video-choice4_b_csf-e_csf-f_express'
+level 'test-elem-career-journeys-video-choice1_b_csf-e_csf-f_express'
+level 'test-elem-career-journeys-video-choice2_b_csf-e_csf-f_express'
+level 'test-elem-career-journeys-video-choice3_b_csf-e_csf-f_express'

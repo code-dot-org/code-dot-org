@@ -1,15 +1,16 @@
+import {fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
-import {shallow, mount} from 'enzyme';
-import sinon from 'sinon';
-import {expect} from '../../../util/reconfiguredChai';
-import QuickAssignTable from '@cdo/apps/templates/sectionsRefresh/QuickAssignTable';
+
 import {MARKETING_AUDIENCE} from '@cdo/apps/templates/sectionsRefresh/CurriculumQuickAssign';
+import QuickAssignTable from '@cdo/apps/templates/sectionsRefresh/QuickAssignTable';
+import i18n from '@cdo/locale';
+
 import {
   elementarySchoolCourseOffering,
   highSchoolCourseOfferings,
+  highSchoolCourseOfferingsWithRecommended,
   noRecommendedVersionsOfferings,
 } from './CourseOfferingsTestData';
-import i18n from '@cdo/locale';
 
 const DEFAULT_PROPS = {
   marketingAudience: MARKETING_AUDIENCE.HIGH,
@@ -19,59 +20,53 @@ const DEFAULT_PROPS = {
   sectionCourse: {},
 };
 
-const setUpShallow = (overrideProps = {}) => {
+const setUpRtl = (overrideProps = {}) => {
   const props = {...DEFAULT_PROPS, ...overrideProps};
-  return shallow(<QuickAssignTable {...props} />);
-};
-
-const setUpMount = (overrideProps = {}) => {
-  const props = {...DEFAULT_PROPS, ...overrideProps};
-  return mount(<QuickAssignTable {...props} />);
+  return render(<QuickAssignTable {...props} />);
 };
 
 describe('QuickAssignTable', () => {
   it('renders Course as the first and only table/column header', () => {
-    const wrapper = setUpShallow({
+    setUpRtl({
       marketingAudience: MARKETING_AUDIENCE.ELEMENTARY,
       courseOfferings: elementarySchoolCourseOffering,
     });
-
-    expect(wrapper.find('table').length).to.equal(1);
-    expect(wrapper.contains(i18n.courses())).to.be.true;
+    const tables = screen.getAllByRole('table');
+    expect(tables.length).toBe(1);
+    expect(screen.getByText(i18n.courses())).toBeInTheDocument();
   });
 
   it('renders two tables with correct headers', () => {
-    const wrapper = setUpShallow();
-    expect(wrapper.find('table').length).to.equal(2);
-    expect(wrapper.contains(i18n.courses())).to.be.true;
-    expect(wrapper.contains(i18n.standaloneUnits())).to.be.true;
+    setUpRtl();
+    const tables = screen.getAllByRole('table');
+    expect(tables.length).toBe(2);
+    expect(screen.getByText(i18n.courses())).toBeInTheDocument();
+    expect(screen.getByText(i18n.standaloneUnits())).toBeInTheDocument();
   });
 
   it('calls updateSection when a radio button is pressed', () => {
-    const updateSpy = sinon.spy();
-    const wrapper = setUpMount({updateCourse: updateSpy});
+    const updateSpy = jest.fn();
+    setUpRtl({updateCourse: updateSpy});
 
-    const radio = wrapper.find("input[value='Computer Science A']");
-    expect(updateSpy).not.to.have.been.called;
-    radio.simulate('change', {
-      target: {value: 'Computer Science A', checked: true},
-    });
-    expect(updateSpy).to.have.been.called;
+    const radio = screen.getByLabelText('Computer Science A');
+    expect(updateSpy).not.toHaveBeenCalled();
+    fireEvent.click(radio);
+    expect(updateSpy).toHaveBeenCalled();
   });
 
   it('correctly falls back when a course has no recommended version', () => {
-    const updateSpy = sinon.spy();
-    const wrapper = setUpMount({
+    const updateSpy = jest.fn();
+    setUpRtl({
       updateCourse: updateSpy,
       courseOfferings: noRecommendedVersionsOfferings,
     });
 
-    const radio = wrapper.find('input');
-    expect(updateSpy).not.to.have.been.called;
-    radio.simulate('change', {
-      target: {value: 'Computer Science A', checked: true},
-    });
-    expect(updateSpy).to.have.been.calledWith(sinon.match({versionId: 373}));
+    const radio = screen.getByLabelText('Computer Science A');
+    expect(updateSpy).not.toHaveBeenCalled();
+    fireEvent.click(radio);
+    expect(updateSpy).toHaveBeenCalledWith(
+      expect.objectContaining({versionId: 373})
+    );
   });
 
   it('automatically checks correct radio button if course is already assigned', () => {
@@ -82,8 +77,52 @@ describe('QuickAssignTable', () => {
       updateCourse: () => {},
       sectionCourse: {displayName: 'Computer Science A', courseOfferingId: 73},
     };
-    const wrapper = mount(<QuickAssignTable {...props} />);
-    const radio = wrapper.find("input[value='Computer Science A']");
-    expect(radio.props().checked).to.be.true;
+    render(<QuickAssignTable {...props} />);
+    const radio = screen.getByLabelText('Computer Science A');
+    expect(radio).toBeChecked();
+  });
+
+  it('flags the assigned course when unavailable in the current language', () => {
+    setUpRtl({
+      sectionCourse: {displayName: 'Computer Science A', courseOfferingId: 73},
+      selectedCourseUnavailable: true,
+    });
+    expect(
+      screen.getByText('Unavailable for the current language')
+    ).toBeInTheDocument();
+  });
+
+  it('does not flag the assigned course when available in the current language', () => {
+    setUpRtl({
+      sectionCourse: {displayName: 'Computer Science A', courseOfferingId: 73},
+    });
+    expect(
+      screen.queryByText('Unavailable for the current language')
+    ).not.toBeInTheDocument();
+  });
+
+  it('renders a Recommended header above the other headers in its column', () => {
+    setUpRtl({courseOfferings: highSchoolCourseOfferingsWithRecommended});
+
+    const courseColumnHeaders = screen
+      .getAllByRole('heading', {level: 5})
+      .map(heading => heading.textContent);
+
+    expect(courseColumnHeaders[0]).toBe('Recommended');
+    expect(courseColumnHeaders).toContain('Year Long');
+  });
+
+  it('lists a featured course offering only under Recommended', () => {
+    setUpRtl({courseOfferings: highSchoolCourseOfferingsWithRecommended});
+
+    expect(screen.getAllByLabelText('Computer Science A')).toHaveLength(1);
+  });
+
+  it('shows TA icon when course offering has TA enabled', () => {
+    setUpRtl();
+    const taIcon = screen.getByAltText('AI Teaching Assistant available');
+    expect(taIcon.previousSibling).toHaveTextContent(
+      'Computer Science Discoveries'
+    );
   });
 });

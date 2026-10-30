@@ -3,7 +3,7 @@ Feature: Commit Code
 
 Background:
   Given I create a teacher-associated student named "Lillian"
-  And I am on "http://studio.code.org/s/allthethings/lessons/44/levels/1?noautoplay=true"
+  And I am on "http://studio.code.org/courses/ui-test-all-the-levels/units/1/lessons/44/levels/1?noautoplay=true"
   And I wait to see "#javalab-editor-save"
 
 Scenario: Open the commit code dialog, enter commit notes, commit, and see commit in version history.
@@ -21,8 +21,7 @@ Scenario: Open the commit code dialog, enter commit notes, commit, and see commi
   And I wait until jQuery Ajax requests are finished
 
   # View version history and wait for versions to load
-  Then I press "data-mode-versions-header"
-  And I wait to see ".modal"
+  Then I press "data-mode-versions-header" until I see ".modal"
   And I wait until ".modal tr:last-child p" contains text "Initial version"
 
   # Verify the latest version contains commit notes

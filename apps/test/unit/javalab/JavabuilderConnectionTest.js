@@ -1,6 +1,7 @@
-import sinon from 'sinon';
-import {expect} from '../../util/reconfiguredChai';
-import JavabuilderConnection from '@cdo/apps/javalab/JavabuilderConnection';
+import $ from 'jquery';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
+import project from '@cdo/apps/code-studio/initApp/project';
 import {
   WebSocketMessageType,
   StatusMessageType,
@@ -8,13 +9,15 @@ import {
   ExecutionType,
   CsaViewMode,
 } from '@cdo/apps/javalab/constants';
+import JavabuilderConnection from '@cdo/apps/javalab/JavabuilderConnection';
 import * as ExceptionHandler from '@cdo/apps/javalab/javabuilderExceptionHandler';
 import * as TestResultHandler from '@cdo/apps/javalab/testResultHandler';
-import project from '@cdo/apps/code-studio/initApp/project';
+
 import {
   UserTestResultSignalType,
   TestStatus,
 } from '../../../src/javalab/constants';
+import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('JavabuilderConnection', () => {
   let onOutputMessage,
@@ -44,7 +47,7 @@ describe('JavabuilderConnection', () => {
       setIsRunning,
       setIsTesting,
       ExecutionType.RUN,
-      CsaViewMode.NEIGHBORHOOD,
+      CsaViewMode.CONSOLE,
       null,
       null,
       null,
@@ -142,6 +145,94 @@ describe('JavabuilderConnection', () => {
         `${STATUS_MESSAGE_PREFIX} Program stopped.`
       );
       window.WebSocket.restore();
+    });
+
+    it('flags an interrupt and logs program stopped when no socket exists yet', () => {
+      // Simulate being mid-token-fetch: a program is running but the socket
+      // has not been created.
+      connection.programIsRunning = true;
+
+      connection.closeConnection();
+
+      expect(connection.interruptSignal).to.be.true;
+      expect(onOutputMessage).to.have.been.calledWith(
+        `${STATUS_MESSAGE_PREFIX} Program stopped.`
+      );
+      // Run state must settle so the caller's run promise resolves.
+      expect(setIsRunning).to.have.been.calledWith(false);
+    });
+
+    it('does nothing when no socket exists and no program is running', () => {
+      connection.closeConnection();
+
+      expect(connection.interruptSignal).to.be.false;
+      expect(onOutputMessage).not.to.have.been.called;
+    });
+  });
+
+  describe('onError', () => {
+    it('suppresses websocket error and close events after the user stops', () => {
+      sinon.stub(window, 'WebSocket').returns({close: sinon.stub()});
+      connection.establishWebsocketConnection('url', 'token');
+      connection.closeConnection();
+      onOutputMessage.resetHistory();
+
+      // Closing a socket that is still connecting fails it: the browser
+      // fires an error event followed by an unclean close.
+      connection.onError(new Event('error'));
+      connection.onClose({code: 1006, wasClean: false});
+
+      expect(onOutputMessage).not.to.have.been.called;
+      window.WebSocket.restore();
+    });
+
+    it('reports websocket errors when the user did not stop', () => {
+      const consoleError = sinon.stub(console, 'error');
+
+      connection.onError(new Event('error'));
+
+      expect(onOutputMessage).to.have.been.calledWith(
+        `${STATUS_MESSAGE_PREFIX} We hit an error connecting to our server. Try again.`
+      );
+      consoleError.restore();
+    });
+  });
+
+  describe('initiateConnection', () => {
+    it('does not open a socket when interrupted while fetching the token', async () => {
+      const establishStub = sinon.stub(
+        connection,
+        'establishWebsocketConnection'
+      );
+      // Resolve the access-token request, then interrupt before the socket
+      // would be established.
+      sinon.stub($, 'ajax').callsFake(() => {
+        connection.closeConnection();
+        return Promise.resolve({javabuilder_url: 'url', token: 'token'});
+      });
+
+      await connection.initiateConnection('/url', {}, false);
+
+      expect(connection.interruptSignal).to.be.true;
+      expect(establishStub).not.to.have.been.called;
+      $.ajax.restore();
+    });
+
+    it('does not report a connection error when interrupted during the token fetch', async () => {
+      const consoleError = sinon.stub(console, 'error');
+      // Reject the access-token request, but interrupt first to simulate a
+      // stop click while the request was in flight.
+      sinon.stub($, 'ajax').callsFake(() => {
+        connection.closeConnection();
+        return Promise.reject({status: 500, responseText: 'boom'});
+      });
+
+      await connection.initiateConnection('/url', {}, false);
+
+      expect(connection.interruptSignal).to.be.true;
+      expect(consoleError).not.to.have.been.called;
+      $.ajax.restore();
+      consoleError.restore();
     });
   });
 
@@ -250,7 +341,7 @@ describe('JavabuilderConnection', () => {
         setIsRunning,
         setIsTesting,
         executionType,
-        CsaViewMode.NEIGHBORHOOD
+        CsaViewMode.CONSOLE
       );
     }
   });

@@ -20,7 +20,10 @@ Dashboard::Application.configure do
   config.hosts << "localhost.code.org"
   config.hosts << "localhost.hourofcode.com"
   config.hosts << "localhost.codeprojects.org"
-  config.hosts << "localhost-advocacy.code.org"
+  config.hosts << /[^.]+\.preview\.localhost\.codeprojects\.org/
+  # Web Lab 2 / pyodide preview origin (migrated off codeprojects.org).
+  config.hosts << "localhost.codeaiprojects.org"
+  config.hosts << /[^.]+\.preview\.localhost\.codeaiprojects\.org/
 
   # Do not eager load code on boot.
   config.eager_load = false
@@ -78,9 +81,19 @@ Dashboard::Application.configure do
 
   config.experiment_cache_time_seconds = 0
 
-  # Override the default delayed_job queue adapter so that jobs will run even if
-  # the developer is not running a delayed_job worker. To use the delayed_job
-  # queue adapter in development, comment out this line and make sure you have
-  # run `bin/delayed_job start` or rake build.
-  config.active_job.queue_adapter = :async
+  config.after_initialize do
+    next unless Gem.loaded_specs.key?('prosopite')
+
+    # Writes to dashboard/log/development.log
+    # Prosopite.rails_logger = true
+
+    # Writes to dashboard/log/prosopite.log
+    Prosopite.prosopite_logger = true
+
+    # Enable this to write all queries to the console as well, which is helpful for debugging but can be very noisy.
+    # Prosopite.stderr_logger = true
+
+    # Ignore N+1 queries related to experiments
+    Prosopite.ignore_queries = [/FROM `experiments`/]
+  end
 end

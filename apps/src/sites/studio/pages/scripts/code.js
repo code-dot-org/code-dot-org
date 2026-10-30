@@ -1,24 +1,16 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
-import UnitRollup from '@cdo/apps/templates/courseRollupPages/UnitRollup';
 import {Provider} from 'react-redux';
+
 import {getStore} from '@cdo/apps/code-studio/redux';
-import getScriptData from '@cdo/apps/util/getScriptData';
-import {prepareBlocklyForEmbedding} from '@cdo/apps/templates/utils/embeddedBlocklyUtils';
+import UnitRollup from '@cdo/apps/templates/courseRollupPages/UnitRollup';
+import {prepareBlocklyForEmbeddingAllEnvironments} from '@cdo/apps/templates/utils/embeddedBlocklyUtils';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 $(document).ready(() => {
-  prepareBlockly();
+  prepareBlocklyForEmbeddingAllEnvironments();
   initPage();
 });
-
-function prepareBlockly() {
-  const customBlocksConfig = getScriptData('customBlocksConfig');
-  if (!customBlocksConfig) {
-    return;
-  }
-  prepareBlocklyForEmbedding(customBlocksConfig);
-}
 
 function initPage() {
   const script = document.querySelector('script[data-unit-rollup]');
@@ -27,7 +19,7 @@ function initPage() {
 
   const store = getStore();
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={store}>
       <UnitRollup objectToRollUp={'Code'} unit={unitSummary} />
     </Provider>,

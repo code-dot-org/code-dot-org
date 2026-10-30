@@ -1,0 +1,53 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2024-05-04T02:30:20.000Z",
+  "level_num": "custom",
+  "user_id": 4,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Virtual Museum Guide\r\n\r\nJen is the curator of a museum and they have a brand new exhibit on Egyptian artifacts and culture, which is also available online. Jen wants to create a chatbot to act as a \"virtual museum docent\" that can guide visitors through this new exhibit. Visitors should feel like they're interacting with someone who works at the museum and can provide detailed and accurate historical information about the artifacts.\r\n\r\n### Do This\r\n\r\nSearch for a museum that is hosting an exhibit on Egyptian artifacts and culture, which can be used as information for your chatbot. For example: you may find a natural history museum has recently curated an Egyptian show.\r\n\r\nDesign a chatbot that offers information about the exhibit.\r\n\r\n**Alternative Assignment:** Instead of Egyptian artifacts and culture, you can substitute this for a different type of cultural exhibit. For example, if a local museum has an exhibit on Navajo artifacts and culture or Haitian artifacts and culture, feel free to design your chatbot around this exhibit instead.",
+    "system_prompt": "deprecated",
+    "bot_title": "deprecated",
+    "bot_description": "deprecated",
+    "disable_projects": true,
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "temperature": "0.5",
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "editable",
+        "systemPrompt": "editable",
+        "retrievalContexts": "editable",
+        "modelCardInfo": "hidden"
+      },
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+
+      ]
+    },
+    "display_name": "Virtual Museum Guide",
+    "bubble_choice_description": "Jen is the curator of a museum and they have a brand new exhibit on Egyptian artifacts and culture, which is also available online. Jen wants to create a chatbot to act as a \"virtual museum docent\" that can guide visitors through this new exhibit.",
+    "thumbnail_url": "https://images.code.org/26587a2dd4729c275b51a76cb2f618c3-Lesson 7 - Level 11B- Virtual Museum Guide.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-05-04T02:30:20.539+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-practice-L10\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-practice-L10\"},{\"changed_at\":\"2024-05-11 23:23:57 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-06-04 02:33:55 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Aichat>

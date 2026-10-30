@@ -1,12 +1,11 @@
 {
   "key": "hourofcode",
   "display_name": "Classic Maze",
-  "category": "hoc",
   "is_featured": false,
   "assignable": true,
   "curriculum_type": null,
   "marketing_initiative": "HOC",
-  "grade_levels": "2,3,4,5,6,7,8,9,10,11,12",
+  "grade_levels": "K,1,2,3,4",
   "header": "favorites",
   "image": "https://images.code.org/cfb05c65499db4c5faafca537f6a6044-classic maze.png",
   "cs_topic": "programming",
@@ -15,7 +14,10 @@
   "description": "Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!",
   "professional_learning_program": null,
   "video": "https://www.youtube-nocookie.com/embed/bQilo5ecSX4/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=bQilo5ecSX4&wmode=transparent",
-  "published_date": "2013-12-01 05:00:00 UTC",
-  "self_paced_pl_course_offering_id": 497,
-  "self_paced_pl_course_offering_key": "self-paced-pl-k5"
+  "published_date": "2013-12-01 11:00:00 UTC",
+  "self_paced_pl_course_offering_key": "self-paced-pl-k5",
+  "ai_teaching_assistant_available": false,
+  "facilitator_course_permissions": [
+
+  ]
 }

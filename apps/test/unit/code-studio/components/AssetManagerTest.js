@@ -1,8 +1,11 @@
-import {expect} from '../../../util/reconfiguredChai';
-import sinon from 'sinon';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import AssetManager from '@cdo/apps/code-studio/components/AssetManager';
+
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const DEFAULT_PROPS = {
   uploadsEnabled: true,
@@ -17,10 +20,19 @@ describe('AssetManager', () => {
     xhr.onCreate = function (xhr) {
       requests.push(xhr);
     };
+    global.appOptions = {
+      app: 'applab',
+      level: {
+        projectType: 'applab',
+        name: 'test-level',
+        isProjectLevel: true,
+      },
+    };
   });
 
   afterEach(() => {
     xhr.restore();
+    delete global.appOptions;
   });
 
   describe('componentDidMount', () => {
@@ -68,7 +80,9 @@ describe('AssetManager', () => {
 
       // There should be a spinner
       expect(
-        wrapper.find('i').filterWhere(p => p.hasClass('fa-spinner'))
+        wrapper
+          .find(FontAwesomeV6Icon)
+          .filterWhere(p => p.prop('iconName') === 'spinner')
       ).to.have.lengthOf(1);
     });
 
@@ -96,7 +110,9 @@ describe('AssetManager', () => {
 
       // There should be no spinner
       expect(
-        wrapper.find('i').filterWhere(p => p.hasClass('fa-spinner'))
+        wrapper
+          .find(FontAwesomeV6Icon)
+          .filterWhere(p => p.prop('iconName') === 'spinner')
       ).to.have.lengthOf(0);
     });
 
@@ -110,7 +126,9 @@ describe('AssetManager', () => {
 
       // There should be no spinner
       expect(
-        wrapper.find('i').filterWhere(p => p.hasClass('fa-spinner'))
+        wrapper
+          .find(FontAwesomeV6Icon)
+          .filterWhere(p => p.prop('iconName') === 'spinner')
       ).to.have.lengthOf(0);
     });
   });

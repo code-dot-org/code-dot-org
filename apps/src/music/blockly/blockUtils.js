@@ -1,4 +1,19 @@
+import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
+import {
+  registerCustomAdvancedProcedureBlocks,
+  registerCustomProcedureBlocks,
+} from '@cdo/apps/blockly/utils';
+
+import {BlockMode, MAX_FUNCTION_CALLS_COUNT} from '../constants';
+
 import {BlockTypes} from './blockTypes';
+import {DOCS_BASE_URL} from './constants';
+
+// Cache for storing Music Lab specific block definitions and generators.
+const BlockCache = {
+  blockDefinitions: {},
+  blockGenerators: {},
+};
 
 /**
  * Generate code for the specified block but not following blocks.
@@ -17,7 +32,7 @@ export function getCodeForSingleBlock(block) {
     return getCodeForSingleBlock(block.getNextBlock());
   }
 
-  var func = Blockly.JavaScript[block.type];
+  const func = Blockly.JavaScript.forBlock[block.type];
   if (typeof func !== 'function') {
     throw Error(
       'Language "JavaScript" does not know how to generate ' +
@@ -29,7 +44,7 @@ export function getCodeForSingleBlock(block) {
   // Prior to 24 September 2013 'this' was the only way to access the block.
   // The current preferred method of accessing the block is through the second
   // argument to func.call, which becomes the first parameter to the generator.
-  var code = func.call(block, block);
+  const code = func.call(block, block, Blockly.JavaScript);
   if (Array.isArray(code)) {
     // Value blocks return tuples of code and operator order.
     if (!block.outputConnection) {
@@ -50,16 +65,163 @@ export function getCodeForSingleBlock(block) {
   }
 }
 
-// Examine chain of parents to see if one is 'when_run'.
-export const isBlockInsideWhenRun = ctx => {
-  let block = ctx;
-  while ((block = block.getParent())) {
-    if (
-      [BlockTypes.WHEN_RUN, BlockTypes.WHEN_RUN_SIMPLE2].includes(block.type)
-    ) {
-      return true;
+// Check if root block is 'when_run'.
+export const isBlockInsideWhenRun = block => {
+  return [BlockTypes.WHEN_RUN, BlockTypes.WHEN_RUN_SIMPLE2].includes(
+    block.getRootBlock().type
+  );
+};
+
+// Override default function block implementation for the current block mode.
+export function installFunctionBlocks(blockMode) {
+  if (blockMode === BlockMode.ADVANCED) {
+    registerCustomAdvancedProcedureBlocks();
+    // Re-define blocks from core, in case they were deleted for Simple2 mode.
+    restoreBlockDefinitions();
+    // Copies the generator function for variables to our function argument reporters.
+    Blockly.JavaScript.forBlock.argument_reporter =
+      Blockly.JavaScript.forBlock.variables_get;
+  } else {
+    registerCustomProcedureBlocks();
+    // Remove two advanced blocks in the toolbox's Functions category that
+    // we don't want.
+    delete Blockly.Blocks.procedures_defreturn;
+    delete Blockly.Blocks.procedures_ifreturn;
+    // Override the function call generator in Simple2.
+    Blockly.JavaScript.forBlock['procedures_callnoreturn'] = (
+      block,
+      generator
+    ) =>
+      simple2FunctionCallGenerator(
+        generator.getProcedureName(block.getFieldValue('NAME')),
+        block.getProcedureModel().id
+      );
+  }
+  // Sets the help URL for each function definiton block to the appropriate
+  // entry in the Music Lab docs.
+  Blockly.Msg['PROCEDURES_DEFRETURN_HELPURL'] =
+    DOCS_BASE_URL + 'create_function';
+  Blockly.Msg['PROCEDURES_DEFNORETURN_HELPURL'] =
+    DOCS_BASE_URL + 'create_function';
+}
+
+// Creates shallow copies of block definitions and generators from core Blockly.
+// These definitions and overwritten by Simple2 but needed for advanced mode.
+// This makes it possible for us to switch block modes without a page reload.
+// See also: installFunctionBlocks
+export function backupFunctionDefinitons() {
+  const backupBlockDefinitionTypes = [
+    // Can potentially be overwritten by Simple2
+    BLOCK_TYPES.procedureCall,
+    // Can potentially be deleted by Simple2
+    BLOCK_TYPES.procedureIfReturn,
+  ];
+  backupBlockDefinitionTypes.forEach(type => {
+    BlockCache.blockDefinitions[type] = Object.assign({}, Blockly.Blocks[type]);
+    BlockCache.blockGenerators[type] = Blockly.getGenerator().forBlock[type];
+  });
+}
+
+// Re-defines blocks using previously stored definitions and generators.
+// These definitions and overwritten by Simple2 but needed for advanced mode.
+// This makes it possible for us to switch block modes without a page reload.
+// See also: installFunctionBlocks
+function restoreBlockDefinitions() {
+  const blockDefinitions = {};
+  Object.keys(BlockCache.blockDefinitions).forEach(type => {
+    blockDefinitions[type] = BlockCache.blockDefinitions[type];
+  });
+  Blockly.common.defineBlocks(blockDefinitions);
+
+  Object.keys(BlockCache.blockGenerators).forEach(type => {
+    Blockly.getGenerator().forBlock[type] = BlockCache.blockGenerators[type];
+  });
+}
+
+// A helper function to generate the code for a function call to play sounds sequentially.
+function simple2FunctionCallGenerator(functionName, functionCallBllockId) {
+  return `
+    if (__functionCallsCount++ < ${MAX_FUNCTION_CALLS_COUNT}) {
+      Sequencer.startFunctionContext('${functionName}', '${functionCallBllockId}');
+      Sequencer.playSequential();
+      ${functionName}();
+      Sequencer.endSequential();
+      Sequencer.endFunctionContext();
+    }
+  `;
+}
+
+// For a given block id, return a list of block types. These block types
+// represent any C-shaped block between itself and the root (top) block
+// which contains it. The returned list could include types for loop blocks,
+// function definitions, conditionals, or other control structures.
+// These blocks all have a "statement" input that contains other blocks.
+export function findParentStatementInputTypes(id) {
+  if (id === 'preview') {
+    return [];
+  }
+
+  // Ensure Blockly is defined for the sake of unit tests.
+  const block = Blockly.getMainWorkspace()?.getBlockById(id);
+
+  const parentTypes = [];
+  function addParentBlockTypes(currentBlock) {
+    if (currentBlock) {
+      const parentBlock = currentBlock.getParent();
+      const parentInput =
+        currentBlock.previousConnection?.targetConnection?.getParentInput();
+      if (parentInput?.type === Blockly.inputTypes.STATEMENT) {
+        parentTypes.push(parentBlock.type);
+      }
+      addParentBlockTypes(parentBlock);
     }
   }
 
-  return false;
-};
+  addParentBlockTypes(block);
+
+  return parentTypes;
+}
+
+/**
+ * Recursively collects block IDs starting from the given block, following
+ * both child connections and function calls/definitions. The result preserves traversal
+ * order and avoids revisiting blocks (e.g., in case of shared or recursive procedures).
+ *
+ * @param block - The starting block to traverse from.
+ * @param visited - Internal set to track visited block IDs and avoid cycles.
+ * @param ordered - Internal array accumulating block IDs in traversal order.
+ * @returns An array of block IDs representing execution order from the starting block.
+ */
+export function collectBlockIdsRecursively(
+  block,
+  visited = new Set(),
+  ordered = []
+) {
+  if (!block || visited.has(block.id)) {
+    return ordered;
+  }
+
+  visited.add(block.id);
+  ordered.push(block.id);
+
+  // Handle procedure calls by traversing blocks inside its definition
+  if (block.type === BlockTypes.PROCEDURE_CALL) {
+    const procModel = block.getProcedureModel?.();
+    if (procModel) {
+      const defBlock = Blockly.Procedures.getDefinition(
+        procModel.name,
+        block.workspace
+      );
+      if (defBlock) {
+        collectBlockIdsRecursively(defBlock, visited, ordered);
+      }
+    }
+  }
+
+  // Recurse through child blocks
+  for (const child of block.getChildren()) {
+    collectBlockIdsRecursively(child, visited, ordered);
+  }
+
+  return ordered;
+}

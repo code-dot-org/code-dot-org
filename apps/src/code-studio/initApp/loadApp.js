@@ -1,30 +1,38 @@
 import $ from 'jquery';
+import queryString from 'query-string';
 import React from 'react';
-import ReactDOM from 'react-dom';
-import {getStore} from '../redux';
-import {setAppLoadStarted, setAppLoaded} from '@cdo/apps/code-studio/appRedux';
+
+import {getCode} from '@cdo/apps/blockly/utils';
 import {files} from '@cdo/apps/clientApi';
-var renderAbusive = require('./renderAbusive');
+import {setAppLoadStarted, setAppLoaded} from '@cdo/apps/code-studio/appRedux';
+import PlayZone from '@cdo/apps/code-studio/components/playzone';
+import {lockContainedLevelAnswers} from '@cdo/apps/code-studio/levels/codeStudioLevels';
+import {queryParams} from '@cdo/apps/code-studio/utils';
+import * as imageUtils from '@cdo/apps/imageUtils';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {repackageError} from '@cdo/apps/metrics/analyticsUtils';
+import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
+import msg from '@cdo/locale';
+
+import getScriptData from '../../util/getScriptData';
+import trackEvent from '../../util/trackEvent';
+import {getStore} from '../redux';
+
 import renderProjectNotFound from './renderProjectNotFound';
 import renderVersionNotFound from './renderVersionNotFound';
-var userAgentParser = require('./userAgentParser');
-var clientState = require('../clientState');
-import getScriptData from '../../util/getScriptData';
-import PlayZone from '@cdo/apps/code-studio/components/playzone';
-var timing = require('@cdo/apps/code-studio/initApp/timing');
-var project = require('@cdo/apps/code-studio/initApp/project');
+
 var createCallouts = require('@cdo/apps/code-studio/callouts').default;
-var reporting = require('@cdo/apps/code-studio/reporting');
+var project = require('@cdo/apps/code-studio/initApp/project');
 var LegacyDialog = require('@cdo/apps/code-studio/LegacyDialog');
+var reporting = require('@cdo/apps/code-studio/reporting');
 var showVideoDialog = require('@cdo/apps/code-studio/videos').showVideoDialog;
-import {lockContainedLevelAnswers} from '@cdo/apps/code-studio/levels/codeStudioLevels';
-import queryString from 'query-string';
-import * as imageUtils from '@cdo/apps/imageUtils';
-import trackEvent from '../../util/trackEvent';
-import msg from '@cdo/locale';
-import {queryParams} from '@cdo/apps/code-studio/utils';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+
+var clientState = require('../clientState');
+
+var renderAbusive = require('./renderAbusive');
+var userAgentParser = require('./userAgentParser');
 
 const SHARE_IMAGE_NAME = '_share_image.png';
 
@@ -38,8 +46,6 @@ export function setupApp(appOptions) {
   if (!window.dashboard) {
     throw new Error('Assume existence of window.dashboard');
   }
-  timing.startTiming('Puzzle', window.script_path, '');
-
   if (appOptions.hasContainedLevels) {
     if (appOptions.readonlyWorkspace) {
       // Lock the contained levels if this is a teacher viewing student work:
@@ -70,6 +76,16 @@ export function setupApp(appOptions) {
         });
       }
 
+      const settingsHeader = document.querySelector('#settings-header');
+      if (appSupportsSettings(appOptions.app, appOptions.droplet)) {
+        if (settingsHeader) {
+          settingsHeader.style.display = '';
+        }
+      } else if (settingsHeader) {
+        settingsHeader.style.display = 'none';
+      }
+
+      const versionsHeader = document.querySelector('#versions-header');
       if (
         appOptions.level.projectTemplateLevelName ||
         appOptions.app === 'applab' ||
@@ -78,13 +94,28 @@ export function setupApp(appOptions) {
         appOptions.app === 'poetry' ||
         appOptions.app === 'weblab'
       ) {
-        $('#clear-puzzle-header').hide();
+        const clearPuzzleHeader = document.querySelector(
+          '#clear-puzzle-header'
+        );
+        if (clearPuzzleHeader) {
+          clearPuzzleHeader.style.display = 'none';
+        }
         // Only show version history if user is project owner, or teacher viewing student work
         if (
           project.isOwner() ||
           (teacherViewingStudentWork && appOptions.level.isStarted)
         ) {
-          $('#versions-header').show();
+          if (versionsHeader) {
+            versionsHeader.style.display = '';
+          }
+        } else {
+          if (versionsHeader) {
+            versionsHeader.style.display = 'none';
+          }
+        }
+      } else {
+        if (versionsHeader) {
+          versionsHeader.style.display = 'none';
         }
       }
       $(document).trigger('appInitialized');
@@ -114,18 +145,26 @@ export function setupApp(appOptions) {
       // in the contained level case, unless we're editing blocks.
       if (appOptions.level.edit_blocks || !appOptions.hasContainedLevels) {
         if (appOptions.hasContainedLevels) {
-          report.program = Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
+          report.program = getCode(Blockly.mainBlockSpace);
         }
         report.callback = appOptions.report.callback;
       }
-      trackEvent('Activity', 'Lines of Code', window.script_path, report.lines);
+      trackEvent('activity', 'activity_lines_of_code', {
+        path: window.script_path,
+        value: report.lines,
+      });
 
       report.fallbackResponse = appOptions.report.fallback_response;
       // Track puzzle attempt event
-      trackEvent('Puzzle', 'Attempt', window.script_path, report.pass ? 1 : 0);
+      trackEvent('puzzle', 'puzzle_attempt', {
+        path: window.script_path,
+        value: report.pass ? 1 : 0,
+      });
       if (report.pass) {
-        trackEvent('Puzzle', 'Success', window.script_path, report.attempt);
-        timing.stopTiming('Puzzle', window.script_path, '');
+        trackEvent('puzzle', 'puzzle_success', {
+          path: window.script_path,
+          value: report.attempt,
+        });
       }
       reporting.sendReport(report);
     },
@@ -142,14 +181,17 @@ export function setupApp(appOptions) {
         const lessonName = `${msg.lesson()} ${lessonInfo.position}: ${
           lessonInfo.name
         }`;
-        ReactDOM.render(
+        createReactRoot(
           <PlayZone
             lessonName={lessonName}
             onContinue={() => {
               dialog.hide();
             }}
           />,
-          body
+          body,
+          {
+            legacyReactDomRender: true,
+          }
         );
         const dialog = new LegacyDialog({
           body: body,
@@ -222,6 +264,28 @@ export function setupApp(appOptions) {
 }
 
 /**
+ * Checks if the given app name supports settings.
+ * Currently this is just Blockly labs that support changing the Blockly theme.
+ * @param {string} appName
+ * @param {boolean} droplet
+ * @returns {boolean}
+ */
+function appSupportsSettings(appName, droplet) {
+  const supportedApps = [
+    'bounce',
+    'craft',
+    'dance',
+    'flappy',
+    'poetry',
+    'spritelab',
+    'studio',
+    'turtle',
+  ];
+  // Star Wars Edit Code is considered 'studio' but does not use Blockly.
+  return supportedApps.includes(appName) && !droplet;
+}
+
+/**
  * Store a share image preview to S3.
  * Used for artist projects, since they don't post to a milestone like other
  * artist levels do.
@@ -243,10 +307,11 @@ function tryToUploadShareImageToS3({image, level}) {
 }
 
 /**
- * Loads project and checks to see if it is abusive or if sharing is disabled
- * for the owner.
+ * Loads project and checks to see if sharing is disabled for the owner.
+ * If the project is flagged for abuse or privacy/profanity, 'not found' is returned and caught
+ * for users who are not the owner nor the owner's teacher. See can_view_flagged_assets in files_api.rb.
  * @returns {Promise.<AppOptionsConfig>} Resolves when project has loaded and is
- * not abusive. Never resolves if abusive.
+ * not flagged. Never resolves if flagged.
  */
 function loadProjectAndCheckAbuse(appOptions) {
   return new Promise((resolve, reject) => {
@@ -292,16 +357,6 @@ async function loadAppAsync(appOptions) {
   setupApp(appOptions);
 
   var isViewingSolution = clientState.queryParams('solution') === 'true';
-
-  if (
-    appOptions.share &&
-    !window.navigator.standalone &&
-    userAgentParser.isSafari()
-  ) {
-    // show a little instruction panel for how to add this app to your home screen
-    // on an iPhone
-    window.addEventListener('load', () => addToHome.show(true), false);
-  }
 
   if (isViewingSolution) {
     return appOptions;
@@ -479,20 +534,48 @@ const sourceHandler = {
       let source;
       let appOptions = getAppOptions();
       if (window.Blockly && Blockly.mainBlockSpace) {
-        const getSourceAsJson = true;
-        // If we're readOnly, source hasn't changed at all
-        source = Blockly.cdoUtils.isWorkspaceReadOnly(Blockly.mainBlockSpace)
-          ? currentLevelSource
-          : Blockly.cdoUtils.getCode(Blockly.mainBlockSpace, getSourceAsJson);
-        resolve(source);
+        try {
+          const getSourceAsJson = true;
+          // If we're readOnly, source hasn't changed at all
+          source = Blockly.mainBlockSpace.isReadOnly()
+            ? currentLevelSource
+            : getCode(Blockly.mainBlockSpace, getSourceAsJson);
+          resolve(source);
+        } catch (err) {
+          MetricsReporter.logError({
+            event: 'Error from Blockly in getLevelSource',
+            error: repackageError(err),
+            appType: appOptions.app,
+            levelId: appOptions.level?.id,
+          });
+          reject(err);
+        }
       } else if (appOptions.getCode) {
-        source = appOptions.getCode();
-        resolve(source);
+        try {
+          source = appOptions.getCode();
+          resolve(source);
+        } catch (err) {
+          MetricsReporter.logError({
+            event: 'Error from getCode in getLevelSource',
+            error: repackageError(err),
+            appType: appOptions.app,
+            levelId: appOptions.level?.id,
+          });
+          reject(err);
+        }
       } else if (appOptions.getCodeAsync) {
         appOptions
           .getCodeAsync()
           .then(source => resolve(source))
-          .catch(err => reject(err));
+          .catch(err => {
+            MetricsReporter.logError({
+              event: 'Error from getCodeAsync in getLevelSource',
+              error: repackageError(err),
+              appType: appOptions.app,
+              levelId: appOptions.level?.id,
+            });
+            reject(err);
+          });
       }
     });
   },

@@ -1,0 +1,10 @@
+name 'PatternBlock-Unplugged2022_unplugged'
+display_as_unplugged 'true'
+hide_reference_area 'true'
+markdown <<MARKDOWN
+<h1 style="text-align: center;"> Pattern Block Data</h1>
+
+<h5 style="text-align: center;"> Organize the blocks according to a pattern. Then graph your results on a bar graph.</h5>
+
+<img src="https://images.code.org/b9a8717d67f187a59bef789db1f27495-image-1715198153203.png" style="display: block; margin: auto">
+MARKDOWN

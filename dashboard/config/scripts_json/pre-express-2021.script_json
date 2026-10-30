@@ -4,10 +4,10 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "curriculum_k_5",
       "curriculum_umbrella": "CSF",
       "has_lesson_plan": true,
       "hideable_lessons": true,
-      "is_course": true,
       "is_migrated": true,
       "lesson_extras_available": true,
       "project_widget_types": [
@@ -15,11 +15,13 @@
         "artist_k1"
       ],
       "project_widget_visible": true,
+      "show_calendar": true,
       "supported_locales": [
         "ar-SA",
         "ca-ES",
         "de-DE",
         "es-ES",
+        "es-LA",
         "es-MX",
         "fa-IR",
         "fil-PH",
@@ -50,15 +52,16 @@
         "zh-TW"
       ],
       "tts": true,
-      "version_year": "2021"
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
-    "family_name": "pre-express",
-    "serialized_at": "2023-11-11 00:09:05 UTC",
-    "published_state": "stable",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "family_name": null,
+    "serialized_at": "2026-08-19 17:42:37 UTC",
+    "hide_within_course": false,
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "pre-express-2021"
     }
@@ -7223,6 +7226,21 @@
       }
     },
     {
+      "name": "Reflection Journal",
+      "url": "https://docs.google.com/document/d/1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY/template/preview",
+      "key": "reflection_journal",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "download_url": "https://docs.google.com/document/d/1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY/template/preview",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "reflection_journal"
+      }
+    },
+    {
       "name": "Teacher Forum",
       "url": "https://forum.code.org/c/csf/",
       "key": "teacher_forum_1",
@@ -7348,6 +7366,12 @@
       "seeding_key": {
         "lesson.key": "Programming in with Angry Birds",
         "resource.key": "pair-programming-vid"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in with Angry Birds",
+        "resource.key": "reflection_journal"
       }
     },
     {
@@ -8226,6 +8250,9 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [

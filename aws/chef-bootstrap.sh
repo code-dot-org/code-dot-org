@@ -12,6 +12,7 @@ set -o errexit
 # -n [node_name]
 # -r [run_list]
 # -v [chef_version]
+# -l [chef_license_key]
 # -e [environment]
 # -z: Use local-mode Chef client.
 #
@@ -30,7 +31,7 @@ NODE_NAME=$(hostname)
 S3_BUCKET=cdo-dist
 
 # Parse options
-while getopts ":b:n:r:v:e:z" opt; do
+while getopts ":b:n:r:v:e:l:z" opt; do
   case "${opt}" in
     e)
       ENVIRONMENT=${OPTARG}
@@ -46,6 +47,9 @@ while getopts ":b:n:r:v:e:z" opt; do
       ;;
     v)
       CHEF_VERSION=${OPTARG}
+      ;;
+    l)
+      CHEF_LICENSE_KEY=${OPTARG}
       ;;
     z)
       LOCAL_MODE=1
@@ -66,7 +70,7 @@ CHEF_REPO_PATH=/var/chef
 CHEF_DEBUG_LOG=/var/log/chef-bootstrap-debug.log
 # Ensure correct version of Chef is installed.
 if [ "$(${CHEF_CLIENT} -v)" != "Chef: ${CHEF_VERSION}" ]; then
-  curl -L https://omnitruck.chef.io/install.sh | bash -s -- -v ${CHEF_VERSION}
+  curl -fL "https://chefdownload-commercial.chef.io/install.sh?license_id=${CHEF_LICENSE_KEY}" | bash -s -- -v ${CHEF_VERSION}
 else
   echo "Chef ${CHEF_VERSION} is installed."
 fi
@@ -74,7 +78,8 @@ ${CHEF_CLIENT} -v
 
 # Replace root certificates in the installation of OpenSSL embedded in Chef client with a newer list from our repository
 # that we periodically obtain and commit to our repository from https://curl.se/docs/caextract.html
-curl -o /opt/chef/embedded/ssl/certs/cacert.pem https://raw.githubusercontent.com/code-dot-org/code-dot-org/${BRANCH}/cookbooks/cacert.pem
+# TODO: change this to not pull from GitHub. Commenting out for now. Expected to become outdated in the near future.
+# curl -o /opt/chef/embedded/ssl/certs/cacert.pem https://raw.githubusercontent.com/code-dot-org/code-dot-org/${BRANCH}/cookbooks/cacert.pem
 
 mkdir -p /etc/chef
 CLIENT_RB=/etc/chef/client.rb
@@ -88,7 +93,9 @@ if '${LOCAL_MODE}' == '1'
   local_mode true
 else
   validation_client_name   'code-dot-org-validator'
-  chef_server_url          'https://api.chef.io/organizations/code-dot-org'
+  chef_server_url          'https://code-org.saas.chef.io/organizations/code-dot-org'
+  chef_license             'accept'
+  validation_key           '/etc/chef/validation.pem'
 end
 RUBY
 

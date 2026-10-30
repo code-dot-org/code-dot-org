@@ -1,0 +1,16 @@
+name 'building-data-driven-systems-postassessment-q2_2025'
+
+question 'A developer has an array called `users` that contains exactly 5 names. If they try to display the user at `users[5]`, what will the app likely show?'
+
+wrong 'The name of the 5th user in the list.'
+right ' An "undefined" value or an empty space, because that index does not exist.'
+wrong ' The name of the 1st user in the list.'
+wrong 'A list of all 5 users at once.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 1
+
+Because arrays are zero-indexed, a list with 5 items uses indexes 0, 1, 2, 3, and 4. Attempting to access index 5 points to a sixth position that hasn't been defined.
+MARKDOWN

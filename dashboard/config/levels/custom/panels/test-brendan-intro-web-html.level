@@ -1,0 +1,39 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-09-15T06:59:10.000Z",
+  "level_num": "custom",
+  "user_id": 574,
+  "properties": {
+    "panels": [
+      {
+        "key": "test-brendan-intro-web-html-8f52e759-0a30-4dfc-9b3d-5b531a0c1736",
+        "text": "Ever wonder how your favorite websites are put together? A web page is like a digital poster, displaying information for everyone to see!",
+        "imageUrl": "https://images.code.org/df1b05c2ff03223369cbb73a094e917e-test-brendan-intro-web-html-panel-1-a313b775-53dc-45a4-bbaf-0f441ac8e6cb.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "test-brendan-intro-web-html-76c47f5a-8aff-40e6-b316-19752edce8d3",
+        "text": "Behind every web page you see, there's a special language of code telling your browser what to show and how to arrange it.",
+        "imageUrl": "https://images.code.org/845cd8b6b40b208a85f335b5d422d271-test-brendan-intro-web-html-panel-2-0185be4b-f2d2-409b-8b47-647c4f504ed3.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "test-brendan-intro-web-html-d429e659-b7b4-4207-9b4c-e023a5598608",
+        "text": "This language is called HTML, or HyperText Markup Language. Think of HTML as the skeleton or blueprint that gives the page its basic structure.",
+        "imageUrl": "https://images.code.org/bd8f9006f2fed0363a13737e44f30228-test-brendan-intro-web-html-panel-3-1cb9c57c-288e-4b6a-abe7-188be4e05fb2.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "test-brendan-intro-web-html-a5c44e01-f074-44f8-9253-31f3eb2588ce",
+        "text": "You'll use HTML to build your very own web page all about your amazing pet fish! You'll give it a title and add cool facts about it.",
+        "imageUrl": "https://images.code.org/8c234a025ed32b0d41dfc76f7fdaec43-test-brendan-intro-web-html-panel-4-f8c838b2-9f71-46a9-b174-f371606dbeec.png",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "generate_outline": "Learn what a web page is and how HTML provides its basic structure. Discover how you'll use HTML to create a web page about your pet fish."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-15 06:59:51 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-15 06:59:51 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

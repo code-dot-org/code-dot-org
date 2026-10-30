@@ -4,6 +4,10 @@
     "self-paced-pl-k5-2024-1",
     "self-paced-pl-k5-2024-2"
   ],
+  "original_script_names": [
+    "self-paced-pl-k5-2024-2",
+    "self-paced-pl-k5-2024-1"
+  ],
   "published_state": "stable",
   "instruction_type": "self_paced",
   "participant_audience": "teacher",

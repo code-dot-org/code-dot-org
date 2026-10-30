@@ -1,4 +1,5 @@
 @eyes
+@playwright
 Feature: Cookie banner on various sites
 
 Scenario Outline: Show cookie banner, dismiss it and confirm it's dismissed
@@ -19,5 +20,4 @@ Scenario Outline: Show cookie banner, dismiss it and confirm it's dismissed
 
 Examples:
   | url                                                               | test_name                  |
-  | http://code.org/about                                             | code.org about             |
-  | http://studio.code.org/s/frozen/lessons/1/levels/1                  | studio.code.org puzzle     |
+  | http://studio.code.org/courses/ui-test-all-the-levels/units/1/lessons/3/levels/1    | studio.code.org puzzle     |

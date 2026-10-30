@@ -1,23 +1,27 @@
+import {Typography} from '@mui/material';
+import classNames from 'classnames';
+import $ from 'jquery';
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
-import {UnconnectedTopInstructions} from '@cdo/apps/templates/instructions/TopInstructions';
-import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import {createVideoWithFallback} from '@cdo/apps/code-studio/videos';
-import $ from 'jquery';
-import Button from '@cdo/apps/templates/Button';
-import i18n from '@cdo/locale';
-import ProgressBubbleSet from '@cdo/apps/templates/progress/ProgressBubbleSet';
-import SublevelCard from '@cdo/apps/code-studio/components/SublevelCard';
-import TeacherOnlyMarkdown from '@cdo/apps/templates/instructions/TeacherOnlyMarkdown';
-import _ from 'lodash';
-import styleConstants from '@cdo/apps/styleConstants';
 import {connect} from 'react-redux';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+
+import SublevelCard from '@cdo/apps/code-studio/components/SublevelCard';
+import {createVideoWithFallback} from '@cdo/apps/code-studio/videos';
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import styleConstants from '@cdo/apps/styleConstants';
+import BaseDialog from '@cdo/apps/templates/BaseDialog';
+import TeacherOnlyMarkdown from '@cdo/apps/templates/instructions/TeacherOnlyMarkdown';
+import {UnconnectedTopInstructions} from '@cdo/apps/templates/instructions/TopInstructions';
+import ProgressBubbleSet from '@cdo/apps/templates/progress/ProgressBubbleSet';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import {windowOpen} from '@cdo/apps/utils';
+import i18n from '@cdo/locale';
+
+import styles from '../lesson-plan.module.scss';
 
 const VIDEO_WIDTH = 670;
 const VIDEO_HEIGHT = 375;
@@ -57,7 +61,7 @@ class LevelDetailsDialog extends Component {
   getComponentContent = level => {
     if (level.type === 'External') {
       return (
-        <div style={styles.scrollContainer}>
+        <div className={styles.scrollContainer}>
           <SafeMarkdown markdown={level.markdown} />
           {level.videoOptions && (
             <div
@@ -70,7 +74,7 @@ class LevelDetailsDialog extends Component {
       );
     } else if (level.type === 'StandaloneVideo') {
       return (
-        <div style={styles.scrollContainer}>
+        <div className={styles.scrollContainer}>
           {level.longInstructions && (
             <SafeMarkdown markdown={level.longInstructions} />
           )}
@@ -99,7 +103,7 @@ class LevelDetailsDialog extends Component {
       );
     } else if (level.type === 'Match' || level.type === 'Multi') {
       return (
-        <div style={styles.scrollContainer}>
+        <div className={styles.scrollContainer}>
           {level.content.map((content, i) => (
             <SafeMarkdown key={i} markdown={content} />
           ))}
@@ -109,7 +113,9 @@ class LevelDetailsDialog extends Component {
       );
     } else if (level.type === 'BubbleChoice') {
       return (
-        <div style={{...styles.scrollContainer, ...styles.sublevelCards}}>
+        <div
+          className={classNames(styles.scrollContainer, styles.sublevelCards)}
+        >
           {this.props.scriptLevel.sublevels.map(sublevel => (
             <SublevelCard
               isLessonExtra={false}
@@ -211,22 +217,7 @@ class LevelDetailsDialog extends Component {
 
   recordSeeFullLevelClick = (e, url, scriptLevel) => {
     e.preventDefault();
-    firehoseClient.putRecord(
-      {
-        study: 'lesson-plan',
-        study_group: 'teacher-lesson-plan',
-        event: 'click-see-full-level',
-        data_json: JSON.stringify({
-          scriptLevelId: scriptLevel.id,
-        }),
-      },
-      {
-        includeUserId: true,
-        callback: () => {
-          windowOpen(url, 'noopener', 'noreferrer');
-        },
-      }
-    );
+    windowOpen(url, 'noopener', 'noreferrer');
   };
 
   handleBubbleChoiceBubbleClick = clickedObject => {
@@ -287,9 +278,7 @@ class LevelDetailsDialog extends Component {
     const hasVideo =
       level.type === 'StandaloneVideo' ||
       (level.type === 'External' && !!level.videoOptions);
-    const levelSpecificStyling = hasVideo
-      ? {width: VIDEO_MODAL_WIDTH, marginLeft: -VIDEO_MODAL_WIDTH / 2}
-      : {};
+    const levelSpecificStyling = hasVideo ? {width: VIDEO_MODAL_WIDTH} : {};
     const baseUrl = level.url || scriptLevel.url;
     const url = `${baseUrl}?no_redirect=1`;
     return (
@@ -299,7 +288,9 @@ class LevelDetailsDialog extends Component {
         fullWidth={!hasVideo}
         style={{...levelSpecificStyling}}
       >
-        <h1>{level.display_name || scriptLevel.name || level.name}</h1>
+        <Typography variant="h1" component="h2">
+          {level.display_name || scriptLevel.name || level.name}
+        </Typography>
         {this.renderBubbleChoiceBubbles()}
         <div className="level-details">{preview}</div>
         <DialogFooter rightAlign>
@@ -307,7 +298,7 @@ class LevelDetailsDialog extends Component {
             onClick={this.props.handleClose}
             text={i18n.dismiss()}
             color={'gray'}
-            style={{margin: 5}}
+            className={styles.dialogButton}
           />
           <Button
             onClick={e => {
@@ -317,24 +308,13 @@ class LevelDetailsDialog extends Component {
             color={'orange'}
             href={url}
             __useDeprecatedTag
-            style={{margin: 5}}
+            className={styles.dialogButton}
           />
         </DialogFooter>
       </BaseDialog>
     );
   }
 }
-
-const styles = {
-  sublevelCards: {
-    display: 'flex',
-    flexWrap: 'wrap',
-  },
-  scrollContainer: {
-    maxHeight: '60vh',
-    overflow: 'auto',
-  },
-};
 
 export const UnconnectedLevelDetailsDialog = LevelDetailsDialog;
 

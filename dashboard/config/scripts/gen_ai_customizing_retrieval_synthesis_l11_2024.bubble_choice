@@ -1,0 +1,10 @@
+name 'gen-ai-customizing-retrieval-synthesis-L11_2024'
+display_name 'Make Levels'
+description 'Choose 1-2 levels to try and make something of your own!'
+
+sublevels
+level 'gen-ai-customizing-retrieval-synthesis-L11A_2024'
+level 'gen-ai-customizing-retrieval-synthesis-L11B_2024'
+level 'gen-ai-customizing-retrieval-synthesis-L11C_2024'
+level 'gen-ai-customizing-retrieval-synthesis-L11D_2024'
+level 'gen-ai-customizing-retrieval-synthesis-L11E_2024'

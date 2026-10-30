@@ -1,0 +1,11 @@
+name 'pl-game-python-daily-news-update-10'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<img src="https://images.code.org/d4559298e9a6de3d4b836f6dbb977f35-image-1749135878251.png" alt="A daily news paper that reads This morning, the local Neighborhood Café announced a special challenge—only those who prove their Python skills can earn the legendary Cup of Logic!
+To accept this quest you tackle a series of tasks: dodging construction detours, organizing order board, calculating at the cash register, solving the  donut dilemma, and mastering the perfect coffee stir. 
+Success means earning the ultimate prize—will you rise to the challenge? Stay tuned for updates as the adventure unfolds! " width="850px" style="display: block; margin-left: auto; margin-right: auto;">
+
+
+MARKDOWN

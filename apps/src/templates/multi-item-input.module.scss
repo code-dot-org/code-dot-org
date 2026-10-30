@@ -1,0 +1,40 @@
+@import 'color.scss';
+@import '@cdo/apps/mixins.scss';
+
+.multiItemContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.multiItemInput {
+  display: flex;
+  flex-wrap: wrap;
+
+  &Multiline {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+}
+
+.textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.inlineLabel {
+  margin-right: 10px;
+}
+
+.plusMinusButton {
+  @include remove-button-styles;
+  border: 1px solid $neutral_dark;
+  border-radius: 5px;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.buttonsRow {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}

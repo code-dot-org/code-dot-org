@@ -8,16 +8,34 @@
  * save is requested. If save is called within 30 seconds of the previous save,
  * the save is queued and will be executed after the 30 second interval has passed.
  *
+ * Saves never overlap. A force save (including flushSave) waits for the save in
+ * flight to finish, then saves whatever changed while it ran.
+ *
  * If a project manager is destroyed, the enqueued save will be cancelled, if it exists.
  */
-import {SourcesStore} from './SourcesStore';
-import {ChannelsStore} from './ChannelsStore';
-import {Channel, Project, ProjectSources} from '../types';
-import {currentLocation} from '@cdo/apps/utils';
+import {convertProjectTypeToDisplayName} from '@cdo/apps/lab2/utils';
+import HttpClient, {NetworkError} from '@cdo/apps/util/HttpClient';
+import {
+  currentLocation,
+  getEnvironment,
+  isProductionEnvironment,
+} from '@cdo/apps/utils';
+
+import {PROJECT_TYPES_WITH_SHARE_FILTERING} from '../constants';
 import LabMetricsReporter from '../Lab2MetricsReporter';
-import {ValidationError} from '../responseValidators';
-import {NetworkError} from '@cdo/apps/util/HttpClient';
 import Lab2Registry from '../Lab2Registry';
+import {ValidationError} from '../responseValidators';
+import {
+  Channel,
+  ProjectAndSources,
+  ProjectSources,
+  ShareFailure,
+} from '../types';
+
+import {ChannelsStore} from './ChannelsStore';
+import {getProjectThumbnailUrl, updateProjectThumbnail} from './filesApi';
+import {SourcesStore} from './SourcesStore';
+
 const {reload} = require('@cdo/apps/utils');
 
 export default class ProjectManager {
@@ -27,7 +45,12 @@ export default class ProjectManager {
   private readonly metricsReporter: LabMetricsReporter;
   private nextSaveTime: number | null = null;
   private readonly saveInterval: number = 30 * 1000; // 30 seconds
+  // How many in-flight saves a force save will wait out before giving up. More
+  // than a couple means another caller keeps winning the race for the next save.
+  private static readonly MAX_SAVE_WAITS = 3;
   private saveInProgress = false;
+  // Resolves when the save currently in flight finishes.
+  private saveInFlight: Promise<void> | undefined;
   private saveQueued = false;
   private saveSuccessListeners: ((channel: Channel) => void)[] = [];
   private saveNoopListeners: ((channel?: Channel) => void)[] = [];
@@ -39,8 +62,11 @@ export default class ProjectManager {
   private sourcesToSave: ProjectSources | undefined;
   // The last channel we saved or loaded, or undefined if we have not saved a channel yet.
   private lastChannel: Channel | undefined;
-  // The next channel to save, or undefined if we have no channel to save.
-  private channelToSave: Channel | undefined;
+  // Set when a channel write fails, so the next save writes the channel again even
+  // if nothing has changed since.
+  private channelSaveNeeded = false;
+  // Channel fields edited since the last save, or undefined if there are none.
+  private pendingChannelUpdates: Partial<Channel> | undefined;
   // Id of the last timeout we set on a save, or undefined if there is no current timeout.
   // When we enqueue a save, we set a timeout to execute the save after the save interval.
   // If we force a save or destroy the ProjectManager, we clear the remaining timeout,
@@ -50,14 +76,29 @@ export default class ProjectManager {
   private reduceChannelUpdates: boolean;
   private initialSaveComplete: boolean;
   private forceReloading: boolean;
+  private isShareView: boolean | undefined;
+  private thumbnailUrl: string | undefined;
+  private thumbnailPngBlob: Blob | undefined;
+  private forceNewVersion: boolean = false;
+  private isStandaloneProjectLevel: boolean = false;
 
-  constructor(
-    sourcesStore: SourcesStore,
-    channelsStore: ChannelsStore,
-    channelId: string,
-    reduceChannelUpdates: boolean,
-    metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter()
-  ) {
+  constructor({
+    sourcesStore,
+    channelsStore,
+    channelId,
+    reduceChannelUpdates,
+    isStandaloneProjectLevel,
+    isShareView = false,
+    metricsReporter = Lab2Registry.getInstance().getMetricsReporter(),
+  }: {
+    sourcesStore: SourcesStore;
+    channelsStore: ChannelsStore;
+    channelId: string;
+    reduceChannelUpdates: boolean;
+    isStandaloneProjectLevel: boolean;
+    isShareView?: boolean;
+    metricsReporter?: LabMetricsReporter;
+  }) {
     this.channelId = channelId;
     this.sourcesStore = sourcesStore;
     this.channelsStore = channelsStore;
@@ -65,6 +106,8 @@ export default class ProjectManager {
     this.initialSaveComplete = false;
     this.forceReloading = false;
     this.metricsReporter = metricsReporter;
+    this.isShareView = isShareView;
+    this.isStandaloneProjectLevel = isStandaloneProjectLevel;
   }
 
   getChannelId(): string {
@@ -72,14 +115,91 @@ export default class ProjectManager {
   }
 
   // Load the project from the sources and channels store.
-  async load(): Promise<Project> {
+  // If resetSource is true we return undefined for sources, otherwise we load the sources.
+  // The lab itself handles undefined sources, generally by using the start sources instead.
+  async load(resetSource?: boolean): Promise<ProjectAndSources> {
     if (this.destroyed) {
       this.throwErrorIfDestroyed('load');
     }
+    const sources = resetSource ? undefined : await this.loadAndStoreSources();
+
+    let channel: Channel;
+    try {
+      channel = await this.channelsStore.load(this.channelId);
+    } catch (error) {
+      throw new Error('Error loading channel', {cause: error});
+    }
+
+    this.lastChannel = channel;
+    await this.initializeForceNewVersionState();
+    // These are independent lookups; fetch them concurrently so
+    // project load waits for the slowest one instead of the sum of all four.
+    const [abuseScore, sharingDisabled, shareFailure, isTeacherOfProjectOwner] =
+      await Promise.all([
+        this.channelsStore.getAbuseScore(channel),
+        this.channelsStore.getSharingDisabled(channel),
+        this.getShareFailureIfFiltered(channel),
+        this.channelsStore.getIsTeacherOfProjectOwner(channel),
+      ]);
+    this.setTitleFromChannel(channel);
+    return {
+      sources,
+      channel,
+      abuseScore,
+      sharingDisabled,
+      shareFailure,
+      isTeacherOfProjectOwner,
+    };
+  }
+
+  // Fetch the share-filter result for project types the server filters;
+  // resolves to null for everything else.
+  private async getShareFailureIfFiltered(
+    channel: Channel
+  ): Promise<ShareFailure | null> {
+    if (!PROJECT_TYPES_WITH_SHARE_FILTERING.includes(channel.projectType)) {
+      return null;
+    }
+    try {
+      return await this.channelsStore.getShareFailure(channel);
+    } catch (error) {
+      // Fail silently, matching server behavior.
+      this.metricsReporter.logWarning(
+        'Unable to fetch share failure status. Defaulting to no failure.'
+      );
+      return null;
+    }
+  }
+
+  // Restore the given version of the project. This will call restore on the sources store
+  // and then load and return the updated sources.
+  async restoreSources(versionId: string): Promise<ProjectSources | undefined> {
+    if (this.destroyed) {
+      this.throwErrorIfDestroyed('restore');
+    }
+    // Flush the enqueued save, if it exists, before restoring.
+    await this.flushSave();
+    try {
+      await this.sourcesStore.restore(this.channelId, versionId);
+    } catch (e) {
+      throw new Error('Error restoring sources', {cause: e});
+    }
+    // Now that we've restored to the previous version, loading sources
+    // will load the newly-restored version.
+    const sources = await this.loadAndStoreSources();
+    return sources;
+  }
+
+  /**
+   * Load the sources for this project. If a versionId is provided, load that version, otherwise
+   * load the latest version. The sources are not stored by the Project Manager.
+   * @param versionId Optional version id to load. If not provided, the latest version is loaded.
+   * @returns sources for the project.
+   */
+  async loadSources(versionId?: string) {
     let sources: ProjectSources | undefined;
     try {
-      sources = await this.sourcesStore.load(this.channelId);
-      this.lastSource = JSON.stringify(sources);
+      sources = await this.sourcesStore.load(this.channelId, versionId);
     } catch (error) {
       // If there was a validation error or sourceResponse is a 404 (not found),
       // we still want to load the channel. In the case of a validation error,
@@ -98,16 +218,7 @@ export default class ProjectManager {
         throw new Error('Error loading sources', {cause: error});
       }
     }
-
-    let channel: Channel;
-    try {
-      channel = await this.channelsStore.load(this.channelId);
-    } catch (error) {
-      throw new Error('Error loading channel', {cause: error});
-    }
-
-    this.lastChannel = channel;
-    return {sources, channel};
+    return sources;
   }
 
   hasUnsavedChanges(): boolean {
@@ -123,9 +234,7 @@ export default class ProjectManager {
 
   // Save any enqueued unsaved changes, then destroy the project manager.
   async cleanUp() {
-    if (this.sourcesToSave) {
-      await this.save(this.sourcesToSave, true);
-    }
+    await this.flushSave();
     this.destroy();
   }
 
@@ -134,32 +243,43 @@ export default class ProjectManager {
    * If a save is already enqueued, update this.sourceToSave with the given source.
    * @param sources ProjectSources: the source to save.
    * @param forceSave boolean: if the save should happen immediately
+   * @param forceNewVersion boolean: if the save should create a new version
    * @returns a promise that resolves to a Response. If the save is successful, the response
    * will be empty, otherwise it will contain failure information.
    */
-  async save(sources: ProjectSources, forceSave = false) {
+  async save(
+    sources: ProjectSources,
+    forceSave = false,
+    forceNewVersion = false,
+    skipSourcesChangedCheck = false
+  ) {
     if (this.destroyed) {
       // If we have already been destroyed, don't attempt to save.
       this.resetSaveState();
       return this.getNoopResponseAndSendSaveNoopEvent();
     }
     this.sourcesToSave = sources;
-    return await this.enqueueSaveOrSave(forceSave);
+    return await this.enqueueSaveOrSave(
+      forceSave,
+      forceNewVersion,
+      skipSourcesChangedCheck
+    );
   }
 
   /**
-   * Try to force save with the last sourcesToSave, if it exists.
-   * This is used to flush out any remaining enqueued saves.
-   * @returns  a promise that resolves to a Response. If the save is successful, the response
+   * Force save the last sourcesToSave, if it exists. If a save is already in flight,
+   * we wait for it to finish and then save anything that changed while it ran,
+   * so the returned promise resolves only once the pending changes have been written.
+   * @returns a promise that resolves to a Response. If the save is successful, the response
    * will be empty, otherwise it will contain failure information.
    */
-  async flushSave() {
+  async flushSave(forceNewVersion = false) {
     if (this.destroyed) {
       // If we have already been destroyed, don't attempt to save.
       this.resetSaveState();
       return this.getNoopResponseAndSendSaveNoopEvent();
     }
-    return await this.enqueueSaveOrSave(true);
+    return await this.enqueueSaveOrSave(/* forceSave */ true, forceNewVersion);
   }
 
   /**
@@ -176,13 +296,27 @@ export default class ProjectManager {
       // don't attempt to rename.
       return this.getNoopResponseAndSendSaveNoopEvent();
     }
-    if (!this.channelToSave) {
-      this.channelToSave = JSON.parse(
-        JSON.stringify(this.lastChannel)
-      ) as Channel;
+    // Build a new object rather than mutating the pending updates: saveHelper tells
+    // "still pending" from "already saved" by identity.
+    this.pendingChannelUpdates = {...this.pendingChannelUpdates, name};
+    this.setTitleFromChannel({
+      ...this.lastChannel,
+      ...this.pendingChannelUpdates,
+    });
+    return await this.enqueueSaveOrSave(forceSave, /* forceNewVersion */ false);
+  }
+
+  async updateChannel(channelUpdates: Partial<Channel>, forceSave = false) {
+    if (this.destroyed || !this.lastChannel) {
+      // If we have already been destroyed or the channel does not exist,
+      // don't attempt to update.
+      return this.getNoopResponseAndSendSaveNoopEvent();
     }
-    this.channelToSave.name = name;
-    return await this.enqueueSaveOrSave(forceSave);
+    this.pendingChannelUpdates = {
+      ...this.pendingChannelUpdates,
+      ...channelUpdates,
+    };
+    return await this.enqueueSaveOrSave(forceSave, /* forceNewVersion */ false);
   }
 
   /**
@@ -213,6 +347,10 @@ export default class ProjectManager {
     );
   }
 
+  getProjectType() {
+    return this.lastChannel?.projectType;
+  }
+
   redirectToRemix() {
     this.throwErrorIfDestroyed('redirectToRemix');
     if (!this.lastChannel || !this.lastChannel.projectType) {
@@ -220,6 +358,15 @@ export default class ProjectManager {
       return;
     }
     this.channelsStore.redirectToRemix(this.lastChannel);
+  }
+
+  redirectToView() {
+    this.throwErrorIfDestroyed('redirectToView');
+    if (!this.lastChannel || !this.lastChannel.projectType) {
+      this.logAndThrowError('Cannot view without channel');
+      return;
+    }
+    this.channelsStore.redirectToView(this.lastChannel);
   }
 
   /**
@@ -234,6 +381,13 @@ export default class ProjectManager {
    */
   unpublish() {
     this.publishHelper(false);
+  }
+
+  async getVersionList(includeComments: boolean = false) {
+    return await this.sourcesStore.getVersionList(
+      this.channelId,
+      includeComments
+    );
   }
 
   addSaveSuccessListener(listener: (channel: Channel) => void) {
@@ -252,8 +406,113 @@ export default class ProjectManager {
     this.saveStartListeners.push(listener);
   }
 
+  getCurrentVersionId(): string | null {
+    return this.sourcesStore.getCurrentVersionId();
+  }
+
+  /**
+   * Create a named commit: force-flush any pending sources as a new version,
+   * then record the comment against that version. Subsequent saves start a
+   * fresh version so the committed one stays intact.
+   */
+  async createCommit(description: string): Promise<void> {
+    this.throwErrorIfDestroyed('createCommit');
+    await this.flushSave(/* forceNewVersion */ true);
+    const versionId = this.getCurrentVersionId();
+    if (!versionId) {
+      throw new Error(
+        'Cannot create a commit: the project has no saved version'
+      );
+    }
+    const payload = {
+      storage_id: this.channelId,
+      version_id: versionId,
+      comment: description,
+    };
+    await HttpClient.post('/project_commits', JSON.stringify(payload), true, {
+      'Content-Type': 'application/json; charset=UTF-8',
+    });
+    this.setForceNewVersion(true);
+  }
+
+  getForceNewVersion(): boolean {
+    return this.forceNewVersion;
+  }
+
+  setForceNewVersion(value: boolean): void {
+    this.forceNewVersion = value;
+  }
+
+  /**
+   * Initialize the forceNewVersion value by checking if the current version has a comment.
+   * If the current version has a comment, we set forceNewVersion to true.
+   * This is used to prevent overwriting a version that has a comment.
+   * @returns void
+   */
+  private async initializeForceNewVersionState(): Promise<void> {
+    const currentVersionId = this.getCurrentVersionId();
+    if (!currentVersionId) {
+      this.setForceNewVersion(false);
+      return;
+    }
+
+    try {
+      const versionList = await this.getVersionList(true); // include comments
+      const currentVersion = versionList.find(
+        v => v.versionId === currentVersionId
+      );
+      const hasComment = !!currentVersion?.comment?.trim();
+      this.setForceNewVersion(hasComment);
+    } catch (error) {
+      // If we can't fetch version list, assume no comment.
+      this.metricsReporter.logWarning(
+        `Failed to initialize comment state because we couldn't fetch the version list: ${error}`
+      );
+      this.setForceNewVersion(false);
+    }
+  }
+
   isForceReloading(): boolean {
     return this.forceReloading;
+  }
+
+  setLastSource(lastSource: ProjectSources) {
+    this.lastSource = JSON.stringify(lastSource);
+  }
+
+  getLastSource() {
+    return this.lastSource
+      ? (JSON.parse(this.lastSource) as ProjectSources)
+      : undefined;
+  }
+
+  getLastChannel() {
+    return this.lastChannel;
+  }
+
+  getShouldCaptureThumbnail() {
+    return this.channelId && this.lastChannel?.isOwner && !this.isShareView;
+  }
+
+  setThumbnail(pngBlob: Blob) {
+    this.thumbnailPngBlob = pngBlob;
+    this.thumbnailUrl = getProjectThumbnailUrl(this.channelId);
+  }
+
+  /**
+   * Uploads a thumbnail image to the thumbnail path via the files API.
+   */
+  async saveThumbnail() {
+    if (this.thumbnailUrl && this.thumbnailPngBlob) {
+      try {
+        updateProjectThumbnail(this.channelId, this.thumbnailPngBlob);
+      } catch (e) {
+        this.metricsReporter.logWarning('Failed to save thumbnail.');
+        return;
+      }
+    } else {
+      return Promise.resolve();
+    }
   }
 
   /**
@@ -264,18 +523,27 @@ export default class ProjectManager {
    * Only if the source save succeeds do we update the channel, as the
    * channel is metadata about the project and we don't want to save it unless the source
    * save succeeded.
+   * @param forceNewVersion boolean: If the save should create a new version.
+   * @param skipSourcesChangedCheck boolean: If true, we will save the source even if it has not changed.
    * @returns a Promise<void> that resolves when the save is complete or when the save fails.
    * Listeners are notified of save status throughout the process.
    */
-  private async saveHelper(): Promise<void> {
+  private async saveHelper(
+    forceNewVersion: boolean,
+    skipSourcesChangedCheck: boolean
+  ): Promise<void> {
     // We can't save without a last channel or last source.
-    // We also know we don't need to save if we don't have sources to save
-    // or a channel to save.
+    // We also know we don't need to save if we have no sources to save, no pending
+    // channel edits, and no channel write owed from an earlier failure.
     // We also cannot save if the user is not the owner of this project.
     if (
       !this.lastChannel ||
       !this.lastChannel.isOwner ||
-      !(this.sourcesToSave || this.channelToSave)
+      !(
+        this.sourcesToSave ||
+        this.pendingChannelUpdates ||
+        this.channelSaveNeeded
+      )
     ) {
       this.executeSaveNoopListeners(this.lastChannel);
       return;
@@ -286,21 +554,51 @@ export default class ProjectManager {
     this.executeSaveStartListeners();
     const sourceChanged = this.sourceChanged();
     const channelChanged = this.channelChanged();
-    // If neither source nor channel has actually changed, no need to save again.
-    if (!sourceChanged && !channelChanged) {
+    const sourcesBeingSaved = this.sourcesToSave;
+    const channelUpdatesBeingSaved = this.pendingChannelUpdates;
+    // If neither source nor channel has actually changed, no need to save again
+    // unless skipSourcesChangedCheck is true or a failed channel write is owed a retry.
+    if (
+      !sourceChanged &&
+      !channelChanged &&
+      !this.channelSaveNeeded &&
+      !skipSourcesChangedCheck
+    ) {
       this.saveInProgress = false;
+      // We can clear sourcesToSave since they have not changed.
+      this.sourcesToSave = undefined;
       this.executeSaveNoopListeners(this.lastChannel);
       return;
     }
-    // Only save the source if it has changed.
-    if (this.sourcesToSave && sourceChanged) {
+    // Only save the source if it has changed or we are skipping the changed check.
+    if (sourcesBeingSaved && (sourceChanged || skipSourcesChangedCheck)) {
       try {
-        await this.sourcesStore.save(this.channelId, this.sourcesToSave);
+        await this.sourcesStore.save(
+          this.channelId,
+          sourcesBeingSaved,
+          this.lastChannel.projectType,
+          forceNewVersion || this.getForceNewVersion()
+        );
+        if (this.thumbnailPngBlob) {
+          await this.saveThumbnail();
+          this.thumbnailPngBlob = undefined;
+        }
       } catch (error) {
-        this.onSaveFail('Error saving sources', error as Error);
+        let errorToReport: Error;
+        if (error instanceof Error) {
+          errorToReport = error as Error;
+        } else {
+          errorToReport = new Error('Unknown error occurred');
+        }
+        this.onSaveFail('Error saving sources', errorToReport, 'sources');
         return;
       }
-      this.lastSource = JSON.stringify(this.sourcesToSave);
+      this.lastSource = JSON.stringify(sourcesBeingSaved);
+
+      // If we created a new version (not replacing existing), then we reset the forceNewVersion to false.
+      if (forceNewVersion || this.getForceNewVersion()) {
+        this.setForceNewVersion(false);
+      }
     }
 
     // Normally, reduceChannelUpdates is false and we update the channel
@@ -316,37 +614,97 @@ export default class ProjectManager {
       // as either the channel has changed and/or the source changed.
       // Even if only the source changed, we still update the channel to modify the last
       // updated time.
-      this.channelToSave ||= this.lastChannel;
+      // Merge onto the channel as it stands now, not the one the edits were made
+      // against: a save that finished in the meantime may have added fields to it.
+      let channelUpdate = channelUpdatesBeingSaved
+        ? {...this.lastChannel, ...channelUpdatesBeingSaved}
+        : this.lastChannel;
+
+      // If the sources contain a labConfig entry, then also save this to the
+      // channel, which means that the labConfig entry will also be saved in the
+      // Project model in the database, specifically inside the value field JSON.
+      if (sourcesBeingSaved?.labConfig) {
+        channelUpdate = {
+          ...channelUpdate,
+          labConfig: sourcesBeingSaved.labConfig,
+        };
+      }
+
+      if (this.thumbnailUrl && !this.lastChannel?.thumbnailUrl) {
+        channelUpdate = {
+          ...channelUpdate,
+          thumbnailUrl: this.thumbnailUrl,
+        };
+      }
+
       let channelResponse;
       try {
-        channelResponse = await this.channelsStore.save(this.channelToSave);
+        channelResponse = await this.channelsStore.save(channelUpdate);
       } catch (error) {
-        this.onSaveFail('Error saving channel', error as Error);
+        // Leave the edits pending so a later save retries them, unless newer edits
+        // have already taken their place. Newer edits are built on top of these, so
+        // they carry them along.
+        this.pendingChannelUpdates ??= channelUpdatesBeingSaved;
+        this.channelSaveNeeded = true;
+        this.onSaveFail('Error saving channel', error as Error, 'channel');
         return;
       }
       const channelSaveResponse = await channelResponse.json();
       this.lastChannel = channelSaveResponse as Channel;
+      this.channelSaveNeeded = false;
     }
 
     this.saveInProgress = false;
-    this.channelToSave = undefined;
+    // Anything that changed while we were saving stays pending for the next save.
+    if (this.sourcesToSave === sourcesBeingSaved) {
+      this.sourcesToSave = undefined;
+    }
+    if (this.pendingChannelUpdates === channelUpdatesBeingSaved) {
+      this.pendingChannelUpdates = undefined;
+    }
     this.executeSaveSuccessListeners(this.lastChannel);
     this.initialSaveComplete = true;
+    this.metricsReporter.publishMetric('Lab2.ProjectSaveSuccess', 1, 'Count');
   }
 
-  private onSaveFail(errorMessage: string, error: Error) {
+  private onSaveFail(errorMessage: string, error: Error, type: string) {
     this.saveInProgress = false;
     this.executeSaveFailListeners(error);
-    if (error.message.includes('409')) {
-      // If this is a conflict, we need to reload the page.
+    if (error.message.includes('409') || error.message.includes('401')) {
+      // If this is a conflict or the user has somehow become unauthorized,
+      // we need to reload the page.
       // We set forceReloading to true so the client can skip
       // showing the user a dialog before reload.
       this.forceReloading = true;
-      this.metricsReporter.logWarning('Conflict on save, reloading page');
+      this.metricsReporter.logWarning(`${error.message}. Reloading page.`);
+      const errorType = error.message.includes('409')
+        ? 'conflict'
+        : 'unauthorized';
+      this.metricsReporter.publishMetric(
+        'Lab2.ProjectSaveFailureClient',
+        1,
+        'Count',
+        [
+          {name: 'SaveType', value: type},
+          {name: 'ErrorType', value: errorType},
+        ]
+      );
       reload();
+    } else if (error.message.includes('413')) {
+      // Log 413s as warnings. The save fail listener should handle these errors and labs should
+      // show a reasonable error message to the user.
+      this.metricsReporter.logWarning('Project too large to save');
     } else {
-      // Otherwise, we log the error.
-      this.metricsReporter.logError(errorMessage, error);
+      // Otherwise, we log the error, including the message as details.
+      this.metricsReporter.logError(errorMessage, error, {
+        message: error.message,
+      });
+      this.metricsReporter.publishMetric(
+        'Lab2.ProjectSaveFailure',
+        1,
+        'Count',
+        [{name: 'SaveType', value: type}]
+      );
     }
   }
 
@@ -363,28 +721,86 @@ export default class ProjectManager {
     return true;
   }
 
+  /**
+   * Start a save, tracking it so a later force save can wait for it to finish.
+   * @returns the save promise, which rejects only on an unexpected failure;
+   * saveHelper reports the failures it expects to its listeners itself.
+   */
+  private runSave(
+    forceNewVersion: boolean,
+    skipSourcesChangedCheck: boolean
+  ): Promise<void> {
+    const save = this.saveHelper(
+      forceNewVersion,
+      skipSourcesChangedCheck
+    ).catch(error => {
+      // An unexpected throw would otherwise leave saveInProgress set and wedge
+      // every later save.
+      this.saveInProgress = false;
+      throw error;
+    });
+    this.saveInFlight = save.catch(() => undefined);
+    return save;
+  }
+
+  /**
+   * Wait for the save in flight to finish. That save may be writing sources we
+   * have since edited, and we cannot start another until it completes.
+   * Bounded by MAX_SAVE_WAITS so losing the race for the next save repeatedly
+   * cannot spin here.
+   */
+  private async waitForSaveInFlight(): Promise<void> {
+    for (let attempt = 0; attempt < ProjectManager.MAX_SAVE_WAITS; attempt++) {
+      if (!this.saveInProgress || !this.saveInFlight) {
+        return;
+      }
+      await this.saveInFlight;
+    }
+  }
+
   // Check if we can save immediately. If a save is in progress, we must wait. Otherwise,
   // if forceSave is true or it has been at least 30 seconds since our last save,
   // initiate a save.
+  // If forceNewVersion is true, we will create a new version on save.
+  // If skipSourcesChangedCheck is true, we will save the source even if it has not changed.
   // If we cannot save now, enqueue a save if one has not already been enqueued and
   // return a noop response.
-  private async enqueueSaveOrSave(forceSave: boolean) {
+  private async enqueueSaveOrSave(
+    forceSave: boolean,
+    forceNewVersion: boolean,
+    skipSourcesChangedCheck: boolean = false
+  ) {
+    if (forceSave) {
+      // A force save must land before we return, so wait out any save already in
+      // flight instead of deferring to the next save interval.
+      await this.waitForSaveInFlight();
+      if (this.destroyed) {
+        this.resetSaveState();
+        return this.getNoopResponseAndSendSaveNoopEvent();
+      }
+    }
     if (!this.canSave(forceSave)) {
       if (!this.saveQueued) {
         // enqueue a save
         this.saveQueued = true;
         this.currentTimeoutId = window.setTimeout(
           () => {
-            this.saveHelper();
+            this.runSave(forceNewVersion, skipSourcesChangedCheck);
           },
           this.nextSaveTime ? this.nextSaveTime - Date.now() : this.saveInterval
         );
+      }
+      if (this.saveInProgress) {
+        // We deferred this save because one is still running, so we are not
+        // done saving. Reporting a noop here would tell listeners the project
+        // is up to date while a save is in flight and newer changes are queued.
+        return this.getNoopResponse();
       }
       return this.getNoopResponseAndSendSaveNoopEvent();
     } else {
       // if we can save immediately, initiate a save now. This is an async
       // request.
-      return await this.saveHelper();
+      return await this.runSave(forceNewVersion, skipSourcesChangedCheck);
     }
   }
 
@@ -405,15 +821,15 @@ export default class ProjectManager {
     return this.lastSource !== JSON.stringify(this.sourcesToSave);
   }
 
+  // Whether the pending edits would actually change the channel. An edit that
+  // sets a field to the value it already has does not count as a change.
   private channelChanged(): boolean {
-    // If we don't have a channel to save or a last channel, we can't compare.
-    // It isn't possible to have a channelToSave without a lastChannel,
-    // as we create channelToSave from lastChannel.
-    if (!this.channelToSave || !this.lastChannel) {
+    if (!this.pendingChannelUpdates || !this.lastChannel) {
       return false;
     }
     return (
-      JSON.stringify(this.lastChannel) !== JSON.stringify(this.channelToSave)
+      JSON.stringify(this.lastChannel) !==
+      JSON.stringify({...this.lastChannel, ...this.pendingChannelUpdates})
     );
   }
 
@@ -459,6 +875,40 @@ export default class ProjectManager {
     } else {
       return this.channelsStore.unpublish(this.lastChannel);
     }
+  }
+
+  /**
+   * Load the sources for the given version id, or the latest version if no version id is provided.
+   * These sources are stored as lastSource, so any future changes to the sources will be compared
+   * to these sources.
+   * @param versionId Optional version id to load. If not provided, the latest version is loaded.
+   * @returns sources for the project.
+   */
+  private async loadAndStoreSources(versionId?: string) {
+    const sources = await this.loadSources(versionId);
+    this.lastSource = JSON.stringify(sources);
+    return sources;
+  }
+
+  /**
+   * Set the title of the page based on the channel name. We only do this for standalone project levels.
+   * The title format is:
+   * {channel.name} - {project type display name} - CodeAI [{environment}]. If we are on production,
+   * we omit the environment suffix, and if we don't have a project type display name, we omit that as well.
+   * @param channel
+   */
+  private setTitleFromChannel(channel: Channel) {
+    if (channel.name && this.isStandaloneProjectLevel) {
+      const currentEnvironment = getEnvironment();
+      const environmentSuffix =
+        isProductionEnvironment() || !currentEnvironment
+          ? ''
+          : ` [${currentEnvironment}]`;
+      const projectName = convertProjectTypeToDisplayName(channel.projectType);
+      const projectString = projectName ? `${projectName} - ` : '';
+      document.title = `${channel.name} - ${projectString}CodeAI${environmentSuffix}`;
+    }
+    // Otherwise, we will use the default document title from the server.
   }
 
   // LISTENERS

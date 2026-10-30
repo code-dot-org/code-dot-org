@@ -1,0 +1,10 @@
+name 'test-computer-systems-lesson-4-level1LG'
+title 'Post-Scavenger Hunt Debrief'
+submittable 'false'
+anonymous 'false'
+activity_guide_level 'true'
+
+page
+level 'test-computer-systems-lesson-4-level1a'
+level 'test-computer-systems-lesson-4-level1b'
+level 'test-computer-systems-lesson-4-level1c'

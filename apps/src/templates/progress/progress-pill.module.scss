@@ -1,0 +1,48 @@
+@import 'font.scss';
+
+.levelPill {
+  @include main-font-semi-bold;
+  text-align: center;
+  justify-content: center;
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--borders-neutral-primary);
+  color: var(--text-neutral-primary);
+  display: flex;
+  font-size: 16px;
+  border-radius: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  min-width: 94px;
+  line-height: 18px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  position: relative;
+}
+
+.text {
+  @include main-font-semi-bold;
+  display: inline-block;
+  letter-spacing: -0.12px;
+}
+
+.textProgressStyle {
+  @include main-font-semi-bold;
+  display: inline-block;
+  font-size: 12px;
+  letter-spacing: -0.12px;
+  width: 120px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.iconMargin {
+  margin-left: 10px;
+}
+
+.iconMarginRTL {
+  margin-right: 10px;
+}

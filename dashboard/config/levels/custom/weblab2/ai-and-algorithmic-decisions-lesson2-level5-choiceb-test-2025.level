@@ -1,0 +1,91 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-10-16T17:43:39.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <title>StarSage: Zodiac Fortune Teller</title>\n    <link rel=\"stylesheet\" href=\"style.css\" />\n    <script defer src=\"script.js\"></script>\n  </head>\n  <body>\n    <h1 class=\"title\">StarSage: Zodiac Fortune Teller</h1>\n    <main class=\"container\">\n      <section class=\"left\">\n        <img id=\"main-img\" src=\"main-image.png\" alt=\"Crystal ball illustration\" />\n      </section>\n      <section class=\"right\">\n        <div id=\"output\" class=\"output\" aria-live=\"polite\">Choose your sign to reveal today's fortune.</div>\n        <div class=\"buttons\">\n          <button id=\"aries-btn\" type=\"button\">Aries</button>\n          <button id=\"taurus-btn\" type=\"button\">Taurus</button>\n          <button id=\"gemini-btn\" type=\"button\">Gemini</button>\n          <button id=\"cancer-btn\" type=\"button\">Cancer</button>\n          <button id=\"leo-btn\" type=\"button\">Leo</button>\n        </div>\n      </section>\n    </main>\n  </body>\n</html>\n\n",
+          "folderId": "0",
+          "active": false
+        },
+        "2": {
+          "id": "2",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// SELECTORS and LISTENERS: connect user actions (clicks) to handlers for the Aries button\ndocument.querySelector('#aries-btn').addEventListener('click', () => {\n  // UI CHANGE: update text for Aries\n  document.querySelector('#output').textContent = 'Aries fortune: A bold choice brings a pleasant surprise. Start small, but start today.';\n});\n\n// TODO: Attach an event listener to the Taurus button\n\n  // TODO: update text for Taurus\n\n// TODO: Attach an event listener to the Gemini button\n\n  // TODO: update text for Gemini\n\n// TODO: Attach an event listener to the Cancer button\n\n  // TODO: update text for Cancer\n\n// TODO: Attach an event listener to the Leo button\n\n  // TODO: update text for Leo\n\n",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "style.css",
+          "language": "css",
+          "contents": "* { box-sizing: border-box; }\nhtml, body { height: 100%; }\nbody { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; background: #f3e8ff; color: #222; }\n\n.title { text-align: center; margin: 16px 0 0; font-size: 1.75rem; letter-spacing: 0.5px; }\n\n.container { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; padding: 24px; max-width: 1000px; margin: 0 auto; }\n.left { background: #fff; border: 2px solid #ddd; border-radius: 12px; padding: 16px; display: flex; align-items: center; justify-content: center; overflow: hidden; }\n#main-img { display: block; max-width: 100%; height: auto; border-radius: 8px; object-fit: contain; }\n\n.right { display: flex; flex-direction: column; gap: 24px; }\n.output { min-height: 120px; border: 2px dashed #9aa4b2; border-radius: 12px; padding: 16px; background: #fff; font-size: 1.1rem; line-height: 1.4; }\n\n.buttons { display: flex; flex-direction: column; gap: 12px; width: 240px; margin-inline: auto; }\n.buttons button { padding: 12px 16px; font-size: 1rem; border-radius: 12px; border: 2px solid #333; background: #fff; cursor: pointer; }\n.buttons button:hover { background: #f0f4ff; }\n.buttons button:active { transform: translateY(1px); }\n\n@media (max-width: 800px) {\n  .container { grid-template-columns: 1fr; }\n  .buttons { width: 100%; }\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "main-image.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson2-level5-choiceb-test-2025/uuid/77a6944a-4430-4099-8ec8-f46f4b956351.png",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "requirements.md",
+          "language": "md",
+          "contents": "# UI Elements (StarSage: Zodiac Fortune Teller)\n\n- **Image**: `main-image`\n- **Output text box**: `output`\n- **Buttons**:\n  - `aries-btn` (Aries)\n  - `taurus-btn` (Taurus)\n  - `gemini-btn` (Gemini)\n  - `cancer-btn` (Cancer)\n  - `leo-btn` (Leo)\n\n## Behavior\n- **Click a button** updates `#output` with a hardcoded fortune for that zodiac sign.\n- **App load** shows a starter message in `#output` prompting the user to choose a sign.\n- **No console errors** and repeated clicks are safe.",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "5",
+        "2",
+        "1",
+        "3",
+        "4"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nTGQQDzUwm790mw04Kw==\n",
+    "encrypted": "false",
+    "display_name": "Fortune Teller App",
+    "bubble_choice_description": "Create a web app to deliver fortunes for various zodiac signs",
+    "thumbnail_url": "https://images.code.org/18d7feb060faeda25c3850334fc205cc-main-image.png",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "outline",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "long_instructions": "##Fortune Teller App\r\n\r\n**Dcoument the UI** (buttons and output) in the Activity Guide\r\n\r\n**Explore**: Create additional buttons in HTML; `querySelector` each; add `click` listeners; in handlers, update `output` text.\r\n\r\n**Test every button** with the debug checklist; fix issues.\r\n\r\n**Use AI** to clarify terms, generate short display text (fortunes/zodiac signs), and translate errors."
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-16 20:22:07 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-16 20:22:37 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-16 20:24:18 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-16 20:24:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-16 20:26:50 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-16 20:29:50 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-16 20:42:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-16 20:42:52 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-17 13:32:48 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-17 13:33:51 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-17 13:35:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-28 19:48:17 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-28 19:49:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-31 17:52:36 +0000\",\"changed\":[\"ai_tutor_mode\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

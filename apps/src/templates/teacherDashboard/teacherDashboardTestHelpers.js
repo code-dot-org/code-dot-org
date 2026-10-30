@@ -37,8 +37,6 @@ export const courseOfferings = {
   1: {
     id: 1,
     display_name: 'Course A',
-    category: 'csf',
-    is_featured: false,
     participant_audience: 'student',
     course_versions: {
       1: {
@@ -47,16 +45,17 @@ export const courseOfferings = {
         version_year: '2017',
         content_root_id: 1,
         name: 'Course A',
-        path: '/s/coursea-2017',
-        type: 'Unit',
+        path: '/courses/coursea-2017',
+        type: 'UnitGroup',
         is_stable: true,
         is_recommended: false,
+        locale_codes: ['fa-AF', 'cs-CZ', 'de-DE', 'en-US'],
         locales: ['العربية', 'Čeština', 'Deutsch', 'English'],
         units: {
           1: {
             id: 1,
             name: 'Course A',
-            path: '/s/coursea-2017',
+            path: '/courses/coursea-2017/units/1',
             lesson_extras_available: true,
             position: null,
           },
@@ -68,16 +67,17 @@ export const courseOfferings = {
         version_year: '2018',
         content_root_id: 2,
         name: 'Course A',
-        path: '/s/coursea-2018',
-        type: 'Unit',
+        path: '/courses/coursea-2018',
+        type: 'UnitGroup',
         is_stable: true,
         is_recommended: true,
+        locale_codes: ['en-US', 'it-IT', 'sk-SK'],
         locales: ['English', 'Italiano', 'Slovenčina'],
         units: {
           2: {
             id: 2,
             name: 'Course A (2018)',
-            path: '/s/coursea-2018',
+            path: '/courses/coursea-2018/units/1',
             lesson_extras_available: true,
             position: null,
           },
@@ -88,8 +88,6 @@ export const courseOfferings = {
   2: {
     id: 2,
     display_name: 'Computer Science Discoveries',
-    category: 'full_course',
-    is_featured: false,
     participant_audience: 'student',
     course_versions: {
       3: {
@@ -102,12 +100,13 @@ export const courseOfferings = {
         type: 'UnitGroup',
         is_stable: true,
         is_recommended: false,
+        locale_codes: [],
         locales: [],
         units: {
           3: {
             id: 3,
             name: 'Unit 1',
-            path: '/s/csd1-2017',
+            path: '/courses/csd-2017/units/1',
             lesson_extras_available: false,
             text_to_speech_enabled: false,
             position: 1,
@@ -115,7 +114,7 @@ export const courseOfferings = {
           4: {
             id: 4,
             name: 'Unit 2',
-            path: '/s/csd2-2017',
+            path: '/courses/csd-2017/units/2',
             lesson_extras_available: false,
             text_to_speech_enabled: false,
             position: 2,
@@ -132,12 +131,13 @@ export const courseOfferings = {
         type: 'UnitGroup',
         is_stable: true,
         is_recommended: true,
+        locale_codes: [],
         locales: [],
         units: {
           5: {
             id: 5,
             name: 'Unit 1',
-            path: '/s/csd1-2018',
+            path: '/courses/csd-2018/units/1',
             lesson_extras_available: false,
             text_to_speech_enabled: false,
             position: 1,
@@ -145,7 +145,7 @@ export const courseOfferings = {
           6: {
             id: 6,
             name: 'Unit 2',
-            path: '/s/csd2-2018',
+            path: '/courses/csd-2018/units/2',
             lesson_extras_available: false,
             text_to_speech_enabled: false,
             position: 2,
@@ -157,8 +157,6 @@ export const courseOfferings = {
   3: {
     id: 3,
     display_name: 'Computer Science A',
-    category: 'full_course',
-    is_featured: false,
     participant_audience: 'student',
     course_versions: {
       5: {
@@ -171,12 +169,13 @@ export const courseOfferings = {
         type: 'UnitGroup',
         is_stable: true,
         is_recommended: true,
+        locale_codes: [],
         locales: [],
         units: {
           7: {
             id: 7,
             name: 'Unit 1',
-            path: '/s/csa1-2022',
+            path: '/courses/csa-2022/units/1',
             lesson_extras_available: false,
             text_to_speech_enabled: false,
             position: 1,
@@ -184,7 +183,7 @@ export const courseOfferings = {
           8: {
             id: 8,
             name: 'Unit 2',
-            path: '/s/csa2-2022',
+            path: '/courses/csa-2022/units/2',
             lesson_extras_available: false,
             text_to_speech_enabled: false,
             position: 2,
@@ -196,8 +195,6 @@ export const courseOfferings = {
   4: {
     id: 4,
     display_name: 'Flappy',
-    category: 'hoc',
-    is_featured: false,
     participant_audience: 'student',
     course_versions: {
       6: {
@@ -206,16 +203,17 @@ export const courseOfferings = {
         version_year: 'unversioned',
         content_root_id: 9,
         name: 'Flappy',
-        path: '/s/flappy',
-        type: 'Unit',
+        path: '/courses/flappy',
+        type: 'UnitGroup',
         is_stable: true,
         is_recommended: false,
+        locale_codes: [],
         locales: [],
         units: {
           9: {
             id: 9,
             name: 'Flappy',
-            path: '/s/flappy',
+            path: '/courses/flappy/units/1',
             lesson_extras_available: false,
             text_to_speech_enabled: false,
             position: null,
@@ -227,8 +225,6 @@ export const courseOfferings = {
   5: {
     id: 5,
     display_name: 'Hello World',
-    category: 'hoc',
-    is_featured: true,
     participant_audience: 'student',
     course_versions: {
       7: {
@@ -237,16 +233,17 @@ export const courseOfferings = {
         version_year: 'unversioned',
         content_root_id: 10,
         name: 'Hello World',
-        path: '/s/hello-world',
-        type: 'Unit',
+        path: '/courses/hello-world',
+        type: 'UnitGroup',
         is_stable: true,
         is_recommended: true,
+        locale_codes: [],
         locales: [],
         units: {
           10: {
             id: 10,
             name: 'Hello World',
-            path: '/s/hello-world',
+            path: '/courses/hello-world/units/1',
             lesson_extras_available: false,
             text_to_speech_enabled: false,
             position: null,
@@ -258,8 +255,6 @@ export const courseOfferings = {
   6: {
     id: 6,
     display_name: 'Poem Art',
-    category: 'hoc',
-    is_featured: true,
     participant_audience: 'student',
     course_versions: {
       8: {
@@ -268,16 +263,17 @@ export const courseOfferings = {
         version_year: 'unversioned',
         content_root_id: 11,
         name: 'Poem Art',
-        path: '/s/poem-art',
-        type: 'Unit',
+        path: '/courses/poem-art',
+        type: 'UnitGroup',
         is_stable: true,
         is_recommended: true,
+        locale_codes: [],
         locales: [],
         units: {
           11: {
             id: 11,
             name: 'Poem Art',
-            path: '/s/poem-art',
+            path: '/courses/poem-art/units/1',
             lesson_extras_available: false,
             text_to_speech_enabled: false,
             position: null,
@@ -289,8 +285,6 @@ export const courseOfferings = {
   7: {
     id: 7,
     display_name: 'Artist',
-    category: 'hoc',
-    is_featured: false,
     participant_audience: 'student',
     course_versions: {
       9: {
@@ -299,16 +293,17 @@ export const courseOfferings = {
         version_year: 'unversioned',
         content_root_id: 12,
         name: 'Artist',
-        path: '/s/artist',
-        type: 'Unit',
+        path: '/courses/artist',
+        type: 'UnitGroup',
         is_stable: true,
         is_recommended: true,
+        locale_codes: [],
         locales: [],
         units: {
           12: {
             id: 12,
             name: 'Artist',
-            path: '/s/artist',
+            path: '/courses/artist/units/1',
             lesson_extras_available: false,
             text_to_speech_enabled: false,
             position: null,
@@ -320,8 +315,6 @@ export const courseOfferings = {
   8: {
     id: 8,
     display_name: 'Self Paced PL CSP',
-    category: 'self_paced_pl',
-    is_featured: false,
     participant_audience: 'teacher',
     course_versions: {
       10: {
@@ -334,12 +327,13 @@ export const courseOfferings = {
         type: 'UnitGroup',
         is_stable: true,
         is_recommended: true,
+        locale_codes: [],
         locales: [],
         units: {
           13: {
             id: 13,
             name: 'Unit 1',
-            path: '/s/self-paced-pl-csp1-2021',
+            path: '/courses/self-paced-pl-csp-2021/units/1',
             lesson_extras_available: false,
             text_to_speech_enabled: false,
             position: 1,
@@ -347,7 +341,7 @@ export const courseOfferings = {
           14: {
             id: 14,
             name: 'Unit 2',
-            path: '/s/self-paced-pl-csp2-2021',
+            path: '/courses/self-paced-pl-csp-2021/units/2',
             lesson_extras_available: false,
             text_to_speech_enabled: false,
             position: 2,
@@ -359,8 +353,6 @@ export const courseOfferings = {
   9: {
     id: 9,
     display_name: 'Virtual PL CSP',
-    category: 'virtual_pl',
-    is_featured: false,
     participant_audience: 'teacher',
     course_versions: {
       11: {
@@ -369,16 +361,17 @@ export const courseOfferings = {
         version_year: '2020',
         content_root_id: 15,
         name: 'Virtual PL CSP 2020',
-        path: '/s/vpl-csp-2020',
-        type: 'Unit',
+        path: '/courses/vpl-csp-2020',
+        type: 'UnitGroup',
         is_stable: true,
         is_recommended: true,
+        locale_codes: [],
         locales: [],
         units: {
           15: {
             id: 15,
             name: 'Virtual PL CSP 2020',
-            path: '/s/vpl-csp-2020',
+            path: '/courses/vpl-csp-2020/units/1',
             lesson_extras_available: false,
             text_to_speech_enabled: false,
             position: null,
@@ -391,16 +384,70 @@ export const courseOfferings = {
         version_year: '2021',
         content_root_id: 16,
         name: 'Virtual PL CSP 2021',
-        path: '/s/vpl-csp-2021',
-        type: 'Unit',
+        path: '/courses/vpl-csp-2021',
+        type: 'UnitGroup',
         is_stable: true,
         is_recommended: true,
+        locale_codes: [],
         locales: [],
         units: {
           16: {
             id: 16,
             name: 'Virtual PL CSP 2021',
-            path: '/s/vpl-csp-2021',
+            path: '/courses/vpl-csp-2021/units/1',
+            lesson_extras_available: false,
+            text_to_speech_enabled: false,
+            position: null,
+          },
+        },
+      },
+    },
+  },
+  10: {
+    id: 10,
+    display_name: 'Single Unit Course',
+    participant_audience: 'student',
+    course_versions: {
+      13: {
+        id: 13,
+        key: '2025',
+        version_year: '2025',
+        content_root_id: 17,
+        name: 'Single Unit Course 2025',
+        path: '/courses/single-unit-course-2025',
+        type: 'UnitGroup',
+        is_stable: true,
+        is_recommended: false,
+        locale_codes: [],
+        locales: [],
+        units: {
+          17: {
+            id: 17,
+            name: 'Single Unit 2025',
+            path: '/courses/single-unit-course-2025/units/1',
+            lesson_extras_available: false,
+            text_to_speech_enabled: false,
+            position: null,
+          },
+        },
+      },
+      14: {
+        id: 14,
+        key: '2026',
+        version_year: '2026',
+        content_root_id: 18,
+        name: 'Single Unit Course 2026',
+        path: '/courses/single-unit-course-2026',
+        type: 'UnitGroup',
+        is_stable: true,
+        is_recommended: false,
+        locale_codes: [],
+        locales: [],
+        units: {
+          17: {
+            id: 17,
+            name: 'Single Unit 2026',
+            path: '/courses/single-unit-course-2025/units/1',
             lesson_extras_available: false,
             text_to_speech_enabled: false,
             position: null,
@@ -415,29 +462,34 @@ export const fakeCoursesWithProgress = [
   {
     id: 1,
     display_name: 'Course A',
+    course_name: 'coursea',
     units: [
       {
         id: 2,
+        course_id: 4,
         version_year: '2018',
         key: 'coursea-2018',
         name: 'Course A (2018)',
-        position: null,
+        position: 1,
       },
       {
         id: 1,
+        course_id: 1,
         version_year: '2017',
         key: 'coursea-2017',
         name: 'Course A (2017)',
-        position: null,
+        position: 1,
       },
     ],
   },
   {
     id: 2,
     display_name: 'CS Discoveries 2018',
+    course_name: 'csd-2018',
     units: [
       {
         id: 5,
+        course_id: 2,
         version_year: null,
         key: 'csd1-2018',
         name: 'Unit 1',
@@ -445,6 +497,7 @@ export const fakeCoursesWithProgress = [
       },
       {
         id: 6,
+        course_id: 2,
         version_year: null,
         key: 'csd2-2018',
         name: 'Unit 2',
@@ -455,9 +508,11 @@ export const fakeCoursesWithProgress = [
   {
     id: 3,
     display_name: 'Flappy',
+    course_name: 'flappy',
     units: [
       {
         id: 9,
+        course_id: 3,
         version_year: 'unversioned',
         key: 'flappy',
         name: 'Flappy',

@@ -1,5 +1,6 @@
 require_relative '../../shared/middleware/helpers/storage_id'
 require 'cdo/aws/s3'
+require 'cdo/mailjet'
 require 'cdo/db'
 
 # rubocop:disable CustomCops/PegasusDbUsage
@@ -28,7 +29,7 @@ class DeleteAccountsHelper
   #   usual checks on account type, row limits, etc.  For use only when an
   #   engineer needs to purge an account manually after investigating whatever
   #   prevented it from being automatically purged.
-  def initialize(log: STDERR, bypass_safety_constraints: false)
+  def initialize(log: $stderr, bypass_safety_constraints: false)
     @pegasus_db = PEGASUS_DB
 
     @log = log
@@ -40,16 +41,13 @@ class DeleteAccountsHelper
 
   # Deletes all project-backed progress associated with a user.
   # @param [User] user The user to delete the project-backed progress of.
-  def delete_project_backed_progress(user)
+  def remove_pii_from_projects(user)
     return unless user.user_storage_id
 
     @log.puts "Deleting project backed progress"
 
-    project_ids = DASHBOARD_DB[:projects].where(storage_id: user.user_storage_id).map(:id)
+    project_ids = get_project_ids(user)
     channel_count = project_ids.count
-    encrypted_channel_ids = project_ids.map do |project_id|
-      storage_encrypt_channel_id user.user_storage_id, project_id
-    end
 
     # Clear potential PII from user's channels
     DASHBOARD_DB[:projects].
@@ -63,18 +61,34 @@ class DeleteAccountsHelper
     project_commits.each {|version| version.update!(comment: nil)}
     @log.puts "Cleared #{project_commits.count} ProjectCommit comments" if project_commits.count > 0
 
-    # Clear S3 contents for user's channels
+    @log.puts "Deleted #{channel_count} channels" if channel_count > 0
+  end
+
+  # Deletes all S3-stored contents associated with the user's project channels.
+  # @param [User] user The user whose S3 content will be deleted.
+  def delete_s3_contents(user)
+    project_ids = get_project_ids(user)
+    channel_count = project_ids.count
+    encrypted_channel_ids = project_ids.map do |project_id|
+      get_project_channel_id user.user_storage_id, project_id
+    end
     @log.puts "Deleting S3 contents for #{channel_count} channels"
     buckets = [SourceBucket, AssetBucket, AnimationBucket, FileBucket].map(&:new)
     buckets.product(encrypted_channel_ids).each do |bucket, encrypted_channel_id|
       bucket.hard_delete_channel_content encrypted_channel_id
     end
+  end
 
-    # Clear Firebase contents for user's channels
-    @log.puts "Deleting Firebase contents for #{channel_count} channels"
-    FirebaseHelper.delete_channels encrypted_channel_ids
-
-    @log.puts "Deleted #{channel_count} channels" if channel_count > 0
+  # Deletes all Datablock Storage contents associated with the user's projects.
+  # @param [User] user The user whose Datablock Storage content will be deleted.
+  def delete_datablock_storage(user)
+    project_ids = get_project_ids(user)
+    @log.puts "Deleting Datablock Storage contents for #{project_ids.count} projects"
+    project_ids.each do |project_id|
+      DatablockStorageTable.where(project_id: project_id).delete_all
+      DatablockStorageKvp.where(project_id: project_id).delete_all
+      DatablockStorageRecord.where(project_id: project_id).delete_all
+    end
   end
 
   # Removes the link between the user's level-backed progress and the progress itself.
@@ -108,6 +122,14 @@ class DeleteAccountsHelper
     @log.puts "Cleaned #{updated_rows} AuthoredHintViewRequest" if updated_rows > 0
   end
 
+  # The rows hold answers and generated text, so they are deleted, not cleaned.
+  def delete_user_adaptive_steps(user_id)
+    @log.puts "Deleting UserAdaptiveStep"
+    user_level_ids = UserLevel.with_deleted.where(user_id: user_id).select(:id)
+    deleted_rows = UserAdaptiveStep.where(user_level_id: user_level_ids).delete_all
+    @log.puts "Deleted #{deleted_rows} UserAdaptiveStep" if deleted_rows > 0
+  end
+
   # Remove all user generated content associated with any PD the user has been through, as well as
   # all PII associated with any PD records.
   # @param [Integer] The ID of the user to clean the PD content.
@@ -116,13 +138,31 @@ class DeleteAccountsHelper
     application_ids = Pd::Application::ApplicationBase.with_deleted.where(user_id: user_id).pluck(:id)
     pd_enrollment_ids = Pd::Enrollment.with_deleted.where(user_id: user_id).pluck(:id)
 
-    # Two different paths to anonymizing attendance records
+    anonymize_pd_attendance(user_id)
+    anonymize_regional_partner_contacts(user_id)
+    anonymize_legacy_pd_tables(user_id, application_ids)
+    anonymize_peer_reviews(user_id)
+    delete_survey_submissions(user_id)
+    anonymize_pd_applications(user_id, user_email)
+    anonymize_workshop_surveys(pd_enrollment_ids)
+    anonymize_pd_enrollments(pd_enrollment_ids)
+  end
+
+  # Anonymizes the user's PD attendance records. Includes attendance where either teacher_id or
+  # marked_by_user_id matches the user_id.
+  def anonymize_pd_attendance(user_id)
     Pd::Attendance.with_deleted.where(teacher_id: user_id).update_all(teacher_id: nil, deleted_at: Time.now)
     Pd::Attendance.with_deleted.where(marked_by_user_id: user_id).update_all(marked_by_user_id: nil)
+  end
 
+  # Anonymizes regional partner contact information. This includes legacy (non-mini) and current (mini) contacts.
+  def anonymize_regional_partner_contacts(user_id)
     Pd::RegionalPartnerContact.where(user_id: user_id).update_all(form_data: '{}')
     Pd::RegionalPartnerMiniContact.where(user_id: user_id).update_all(form_data: '{}')
+  end
 
+  # Anonymizes data in deprecated PD tables that no longer have a corresponding ActiveRecord model.
+  def anonymize_legacy_pd_tables(user_id, application_ids)
     # SQL query to anonymize Pd::Teachercon1819Registration because the model no longer exists
     ActiveRecord::Base.connection.exec_query(
       sql_query_to_anonymize_field(
@@ -159,49 +199,54 @@ class DeleteAccountsHelper
       )
     )
 
-    # Peer reviews might be associated with a purged submitter or viewer
-    PeerReview.where(submitter_id: user_id).update_all(submitter_id: nil, audit_trail: nil)
-    PeerReview.where(reviewer_id: user_id).update_all(reviewer_id: nil, data: nil, audit_trail: nil)
+    application_ids.each do |app_id|
+      # SQL query to anonymize Pd::FitWeekend1819Registration because the model no longer exists
+      ActiveRecord::Base.connection.exec_query(
+        sql_query_to_anonymize_field(
+          "pd_fit_weekend1819_registrations",
+          {'form_data' => '""'},
+          {'pd_application_id' => app_id}
+        )
+      )
 
-    # Delete survey submissions
+      # SQL query to anonymize Pd::FitWeekendRegistrationBase because the model no longer exists
+      ActiveRecord::Base.connection.exec_query(
+        sql_query_to_anonymize_field(
+          "pd_fit_weekend_registrations",
+          {'form_data' => '""'},
+          {'pd_application_id' => app_id}
+        )
+      )
+    end
+  end
+
+  def delete_survey_submissions(user_id)
     SurveyResult.where(user_id: user_id).destroy_all
     Pd::MiscSurvey.where(user_id: user_id).destroy_all
     Foorm::SimpleSurveySubmission.where(user_id: user_id).each do |simple_submission|
       simple_submission.foorm_submission.destroy
       simple_submission.destroy
     end
+  end
 
-    # Delete email history
-    Pd::Application::Email.where(to: user_email).destroy_all if user_email.present?
+  # Anonymizes peer reviews that might be associated with a purged submitter or viewer
+  def anonymize_peer_reviews(user_id)
+    PeerReview.where(submitter_id: user_id).update_all(submitter_id: nil, audit_trail: nil)
+    PeerReview.where(reviewer_id: user_id).update_all(reviewer_id: nil, data: nil, audit_trail: nil)
+  end
 
-    unless application_ids.empty?
-      application_ids.each do |app_id|
-        # SQL query to anonymize Pd::FitWeekend1819Registration because the model no longer exists
-        ActiveRecord::Base.connection.exec_query(
-          sql_query_to_anonymize_field(
-            "pd_fit_weekend1819_registrations",
-            {'form_data' => '""'},
-            {'pd_application_id' => app_id}
-          )
-        )
+  def anonymize_pd_applications(user_id, email)
+    Pd::Application::Email.where(to: email).destroy_all if email.present?
+    Pd::Application::ApplicationBase.with_deleted.where(user_id: user_id).update_all(form_data: '{}', notes: nil)
+  end
 
-        # SQL query to anonymize Pd::FitWeekendRegistrationBase because the model no longer exists
-        ActiveRecord::Base.connection.exec_query(
-          sql_query_to_anonymize_field(
-            "pd_fit_weekend_registrations",
-            {'form_data' => '""'},
-            {'pd_application_id' => app_id}
-          )
-        )
-      end
-      Pd::Application::ApplicationBase.with_deleted.where(id: application_ids).update_all(form_data: '{}', notes: nil)
-    end
+  def anonymize_workshop_surveys(pd_enrollment_ids)
+    Pd::PreWorkshopSurvey.where(pd_enrollment_id: pd_enrollment_ids).update_all(form_data: '{}')
+    Pd::TeacherconSurvey.where(pd_enrollment_id: pd_enrollment_ids).update_all(form_data: '{}')
+  end
 
-    unless pd_enrollment_ids.empty?
-      Pd::PreWorkshopSurvey.where(pd_enrollment_id: pd_enrollment_ids).update_all(form_data: '{}')
-      Pd::TeacherconSurvey.where(pd_enrollment_id: pd_enrollment_ids).update_all(form_data: '{}')
-      Pd::Enrollment.with_deleted.where(id: pd_enrollment_ids).each(&:clear_data)
-    end
+  def anonymize_pd_enrollments(pd_enrollment_ids)
+    Pd::Enrollment.with_deleted.where(id: pd_enrollment_ids).each(&:clear_data) unless pd_enrollment_ids.empty?
   end
 
   # Anonymizes the user by deleting various pieces of PII and PPII
@@ -246,6 +291,10 @@ class DeleteAccountsHelper
       return
     end
     ContactRollupsPardotMemory.find_or_create_by(email: email).update(marked_for_deletion_at: Time.now.utc)
+  end
+
+  def remove_mailjet_contact(email)
+    MailJet.delete_contact(email)
   end
 
   # Removes the StudioPerson record associated with the user IF it is not
@@ -306,6 +355,36 @@ class DeleteAccountsHelper
       feedback.save!
     end
     @log.puts "Cleared #{as_student_count} TeacherFeedback" if as_student_count > 0
+  end
+
+  def delete_rubric_ai_evaluations(user_id)
+    # This finds all RubricAiEvaluation records which evalute this user's work,
+    # whether they were implicitly requested by the student when they submitted
+    # the project, or explicitly requested by their teacher.
+    as_student = RubricAiEvaluation.where(user_id: user_id)
+    as_student_count = as_student.count
+    as_student.each(&:destroy)
+    @log.puts "Deleted #{as_student_count} RubricAiEvaluation as student" if as_student_count > 0
+
+    # We've already deleted all evaluations of this user's work as a student.
+    # Any remaining evaluations requested by this user are requests made
+    # by a teacher to evaluate a student's work.
+    as_teacher = RubricAiEvaluation.where(requester_id: user_id)
+    as_teacher_count = as_teacher.count
+    as_teacher.each(&:destroy)
+    @log.puts "Deleted #{as_teacher_count} RubricAiEvaluation as teacher" if as_teacher_count > 0
+  end
+
+  def delete_learning_goal_teacher_evaluations(user_id)
+    as_student = LearningGoalTeacherEvaluation.where(user_id: user_id)
+    as_student_count = as_student.count
+    as_student.each(&:destroy)
+    @log.puts "Deleted #{as_student_count} LearningGoalTeacherEvaluation as student" if as_student_count > 0
+
+    as_teacher = LearningGoalTeacherEvaluation.where(teacher_id: user_id)
+    as_teacher_count = as_teacher.count
+    as_teacher.each(&:destroy)
+    @log.puts "Deleted #{as_teacher_count} LearningGoalTeacherEvaluation as teacher" if as_teacher_count > 0
   end
 
   def clean_and_destroy_code_reviews(user_id)
@@ -375,13 +454,8 @@ class DeleteAccountsHelper
     @log.puts "Deleting ContactRollups records for email #{email}"
     return unless email
 
-    # Contact rollups data are in 4 tables: ContactRollupsRaw, ContactRollupsProcessed,
-    # ContactRollupsPardotMemory, and ContactRollupsFinal.
-    # During daily contact rollups runs, ContactRollupsRaw and ContactRollupsProcessed
-    # are dropped, records marked for deletion in ContactRollupsPardotMemory are
-    # also purged. In addition, records in Pardot server are also deleted.
-    # Thus, only need to delete ContactRollupsFinal record here.
-    ContactRollupsFinal.find_by_email(email)&.destroy
+    # ContactRollupsRaw and ContactRollupsProcessed are replaced by the daily
+    # contact rollups run. Mark the persistent Pardot record for deletion.
     set_pardot_deletion_via_contact_rollups(email)
   end
 
@@ -408,7 +482,7 @@ class DeleteAccountsHelper
     # Cache user email here before destroying user; migrated users have their
     # emails stored in primary_contact_info, which will be destroyed.
     # If the user account was already soft-deleted, then fallback to the :email attribute.
-    user_email = (user.email&.blank?) ? user.read_attribute(:email) : user.email
+    user_email = user.email&.blank? ? user.read_attribute(:email) : user.email
 
     # There is a bug in our system that causes a user to have duplicate
     # authentication options, one active and one soft-deleted.
@@ -425,12 +499,16 @@ class DeleteAccountsHelper
     remove_census_submissions(user_email) if user_email&.present?
     remove_email_preferences(user_email) if user_email&.present?
     clean_level_source_backed_progress(user.id)
+    delete_user_adaptive_steps(user.id)
     clean_pegasus_forms_for_user(user)
-    delete_project_backed_progress(user)
+    remove_pii_from_projects(user)
+    delete_rubric_ai_evaluations(user.id)
+    delete_learning_goal_teacher_evaluations(user.id)
     clean_and_destroy_pd_content(user.id, user_email)
     clean_user_sections(user.id)
     remove_user_from_sections_as_student(user)
     remove_poste_data(user_email) if user_email&.present?
+    remove_mailjet_contact(user_email) if user_email&.present?
     purge_contact_rollups(user_email)
     purge_unshared_studio_person(user)
     anonymize_user(user)
@@ -460,18 +538,16 @@ class DeleteAccountsHelper
     clean_pegasus_forms_for_email(email)
   end
 
-  private
-
   def clean_pegasus_forms_for_user(user)
     @log.puts "Cleaning pegasus forms for user"
     clean_pegasus_forms(@pegasus_db[:forms].where(user_id: user.id))
   end
 
-  def clean_pegasus_forms_for_email(email)
+  private def clean_pegasus_forms_for_email(email)
     clean_pegasus_forms(@pegasus_db[:forms].where(email: email))
   end
 
-  def clean_pegasus_forms(forms_recordset)
+  private def clean_pegasus_forms(forms_recordset)
     form_ids = forms_recordset.map {|f| f[:id]}
     @pegasus_db[:form_geos].
       where(form_id: form_ids).
@@ -493,6 +569,10 @@ class DeleteAccountsHelper
         processed_data: nil,
         hashed_email: nil,
       )
+  end
+
+  private def get_project_ids(user)
+    DASHBOARD_DB[:projects].where(storage_id: user.user_storage_id).map(:id)
   end
 end
 # rubocop:enable CustomCops/PegasusDbUsage

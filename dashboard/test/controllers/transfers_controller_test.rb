@@ -25,8 +25,8 @@ class TransfersControllerTest < ActionController::TestCase
       stay_enrolled_in_current_section: true
     }
 
-    @other_teacher = create :teacher
-    @other_teacher_section = create :section, user: @other_teacher, login_type: 'word'
+    @other_teacher = create(:teacher)
+    @other_teacher_section = create(:section, user: @other_teacher, login_type: 'word')
 
     @pl_email_section = create(:section, :teacher_participants, user: @facilitator)
   end
@@ -247,9 +247,7 @@ class TransfersControllerTest < ActionController::TestCase
   end
 
   test "returns an error when the new_section will be over it's section capacity" do
-    500.times do
-      create(:follower, section: @picture_section)
-    end
+    create_list(:follower, 500, section: @picture_section) # rubocop:disable FactoryBot/ExcessiveCreateList
 
     post :create, params: @params
     assert_response :forbidden
@@ -257,5 +255,42 @@ class TransfersControllerTest < ActionController::TestCase
       "full",
       json_response["result"]
     )
+  end
+
+  test 'creates new UserScript for transferred student' do
+    unit_group = create(:single_unit_course, :stable)
+    unit = unit_group.first_unit
+    @picture_section.update!(script: unit, unit_group: unit_group)
+
+    @word_student.user_scripts.destroy_all
+    assert_equal 0, @word_student.user_scripts.count
+
+    post :create, params: @params
+    assert_response :no_content
+
+    @word_student.reload
+    assert_equal 1, @word_student.user_scripts.count
+    user_script = @word_student.user_scripts.first
+    assert_equal unit, user_script.script
+    assert_equal unit_group, user_script.unit_group
+  end
+
+  test 'creates new UserScript with modular course for transferred student' do
+    unit_group = create(:single_unit_course, :stable)
+    unit = unit_group.first_unit
+    other_unit_group = create(:single_unit_course, :stable, unit: unit)
+    @picture_section.update!(script: unit, unit_group: other_unit_group)
+
+    @word_student.user_scripts.destroy_all
+    assert_equal 0, @word_student.user_scripts.count
+
+    post :create, params: @params
+    assert_response :no_content
+
+    @word_student.reload
+    assert_equal 1, @word_student.user_scripts.count
+    user_script = @word_student.user_scripts.first
+    assert_equal unit, user_script.script
+    assert_equal other_unit_group, user_script.unit_group
   end
 end

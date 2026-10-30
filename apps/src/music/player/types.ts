@@ -1,71 +1,16 @@
-import {SoundLoadCallbacks} from '../types';
 import {Effects} from './interfaces/Effects';
-
-/** Common interface for the internal audio player */
-export interface AudioPlayer {
-  // TODO: Fill in as we align ToneJSPlayer and SamplePlayer
-
-  /** If this player supports samplers */
-  supportsSamplers(): boolean;
-
-  /** Set the current BPM */
-  setBpm(bpm: number): void;
-
-  /** Get the current playback position in 1-based measures */
-  getCurrentPlaybackPosition(): number;
-
-  /** Load sounds into the cache */
-  loadSounds(
-    sampleIds: string[],
-    callbacks?: SoundLoadCallbacks
-  ): Promise<void>;
-
-  /** Load instrument into the cache */
-  loadInstrument(
-    instrumentName: string,
-    sampleMap: {[note: number]: string},
-    callbacks?: SoundLoadCallbacks
-  ): Promise<void>;
-
-  /** Play a sample immediately (used for previews) */
-  playSampleImmediately(
-    sample: SampleEvent,
-    onStop?: () => void
-  ): Promise<void>;
-
-  playSamplesImmediately(
-    samples: SampleEvent[],
-    onStop?: () => void
-  ): Promise<void>;
-
-  /** Play a sequence of notes immediately (used for previews) */
-  playSequenceImmediately(sequence: SamplerSequence): Promise<void>;
-
-  /** Cancel active previews */
-  cancelPreviews(): void;
-
-  /** Schedule a sample to played */
-  scheduleSample(sample: SampleEvent): void;
-
-  /** Schedule a sampler sequence to be played */
-  scheduleSamplerSequence(sequence: SamplerSequence): void;
-
-  /** Start playback from the beginning, or the given position if specified */
-  start(startPosition?: number): Promise<void>;
-
-  /** Stop playback */
-  stop(): void;
-
-  /** Cancel pending audio events */
-  cancelPendingEvents(): void;
-}
 
 /** A single sound played on the timeline */
 export interface SampleEvent {
   // 1-based playback position in measures
   playbackPosition: number;
-  // ID of the sample
-  sampleId: string;
+  // The length of an optional "pickup" part of the sample, which is effectively how early to start
+  // playing it.  Specified as a fraction of one measure.
+  pickupLength?: number;
+  // ID of the sound
+  id: string;
+  // URL of the sample
+  sampleUrl: string;
   // Whether the sound was triggered
   triggered: boolean;
   // Original BPM of the sample
@@ -76,6 +21,8 @@ export interface SampleEvent {
   effects?: Effects;
   // Length in measures to play the sample for
   length?: number;
+  // Whether tempo should not be adjusted.
+  disableTempoAdjustment?: boolean;
 }
 
 /** A sequence of notes played on a sampler instrument */
@@ -84,4 +31,14 @@ export interface SamplerSequence {
   instrument: string;
   // Notes to play
   events: {notes: string[]; playbackPosition: number}[];
+  effects?: Effects;
 }
+
+export type SampleMap = {[note: number]: string};
+
+export interface InstrumentData {
+  instrumentName: string;
+  sampleMap: SampleMap;
+}
+
+export type PlayerEvent = 'InstrumentLoaded'; // Add more as needed

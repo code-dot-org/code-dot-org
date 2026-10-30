@@ -1,0 +1,16 @@
+name 'building-data-driven-systems-postassessment-q8_2025'
+
+question 'You are critiquing an AI-generated dataset of "Standard Family Members." The AI only generates `Mother`, `Father`, `Son`, and `Daughter`. What is a potential risk of using this dataset?'
+
+wrong 'The dataset is too small to be used in a real app.'
+wrong 'The dataset is structured as an object instead of an array.'
+right 'The dataset reinforces a "narrow" or biased perspective of family, potentially alienating users with different family structures.'
+wrong 'The AI used strings instead of booleans for the names.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 4
+
+AI output often reflects common stereotypes or simplified datasets. Developers must critique these outputs to ensure their apps are inclusive of diverse real-world experiences.
+MARKDOWN

@@ -1,7 +1,0 @@
-{{ featured_tutorial, title: "舞会", body: "编程舞会！ 包括碧昂斯、哈里·斯泰尔斯、利佐、利尔.纳斯、赛琳娜·戈麦斯、迪士尼魔法满屋的音乐等等！", image: "/images/hoc2022-dance-party.png", url: "https://code.org/dance" }}
-
-{{ featured_tutorial, title: "诗歌艺术", body: "在编程一小时活动中为经典诗歌添加艺术和动画！", image: "/shared/images/courses/logo_tall_poem-art.jpg", url: "https://studio.code.org/s/poem-art-2021/reset" }}
-
-{{ featured_tutorial, title: "艺术家", body: "使用艺术家绘制炫酷的图片和设计！", image: "/shared/images/courses/logo_tall_artist.jpg", url: "https://studio.code.org/s/artist/reset" }}
-
-{{ featured_tutorial, title: "无限游戏实验室", body: "使用游戏实验室创建一个故事或游戏，主角是迪士尼无限的角色。", image: "/shared/images/courses/logo_tall_infinity.jpg", url: "https://studio.code.org/s/infinity/reset" }}

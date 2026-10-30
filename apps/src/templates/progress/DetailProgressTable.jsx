@@ -1,4 +1,6 @@
+import PropTypes from 'prop-types';
 import React from 'react';
+
 import ProgressLesson from './ProgressLesson';
 import {groupedLessonsType} from './progressTypes';
 
@@ -9,6 +11,7 @@ import {groupedLessonsType} from './progressTypes';
 export default class DetailProgressTable extends React.Component {
   static propTypes = {
     groupedLesson: groupedLessonsType.isRequired,
+    isOnLevelView: PropTypes.bool,
   };
 
   render() {
@@ -24,6 +27,7 @@ export default class DetailProgressTable extends React.Component {
             key={index}
             lesson={lesson}
             levels={levelsByLesson[index]}
+            isOnLevelView={this.props.isOnLevelView}
           />
         ))}
       </div>

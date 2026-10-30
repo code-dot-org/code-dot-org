@@ -23,7 +23,7 @@ markdown <<MARKDOWN
 * ##### The y-coordinate indicates how far the shape is from the top of the grid. 
 * ##### Order matters when plotting shapes on the grid. The first shape plotted on the grid will appear behind a shape plotted on the same coordinates of the grid.
 
-#### **Note**: In Game Lab, students can choose to hide or show the grid using the "show grid" checkbox.
+**Note**: In Game Lab, students can choose to hide or show the grid using the "show grid" checkbox.
 
 
 ## Why is the Game Lab grid "flipped"?

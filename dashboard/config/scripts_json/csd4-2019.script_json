@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "content_area": "curriculum_6_8",
       "curriculum_path": "https://curriculum.code.org/csd-19/unit4/{LESSON}",
       "curriculum_umbrella": "CSD",
       "has_verified_resources": true,
@@ -12,12 +13,11 @@
       "project_sharing": true,
       "student_detail_progress_view": true,
       "tts": true,
-      "use_legacy_lesson_plans": true,
-      "version_year": "2019"
+      "use_legacy_lesson_plans": true
     },
     "new_name": null,
     "family_name": "csd4",
-    "serialized_at": "2022-03-22 21:16:20 UTC",
+    "serialized_at": "2025-01-22 18:59:17 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3043,6 +3043,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

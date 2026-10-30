@@ -2,11 +2,11 @@ require 'test_helper'
 
 class ProjectsListTest < ActionController::TestCase
   setup do
-    @student = create :student
+    @student = create(:student)
     @storage_id = fake_storage_id_for_user_id(@student.id)
     stub_storage_id_for_user_id(@student.id)
 
-    @teacher = create :teacher
+    @teacher = create(:teacher)
     stub_storage_id_for_user_id(@teacher.id)
 
     student_project_value = {
@@ -28,6 +28,17 @@ class ProjectsListTest < ActionController::TestCase
       hidden: true
     }.to_json
     @hidden_project = {id: 33, value: hidden_project_value}
+
+    # lab2 projects rely on the projectType field to determine type.
+    lab2_project_value = {
+      name: 'Lab2 Project',
+      createdAt: '2024-01-24T16:41:08.000-08:00',
+      updatedAt: '2024-01-25T17:48:12.358-08:00',
+      projectType: 'pythonlab',
+      hidden: false,
+      labConfig: {standaloneSettings: {projectType: 'console'}},
+    }.to_json
+    @lab2_project = {id: 44, value: lab2_project_value}
   end
 
   test 'get_project_row_data correctly parses student and project data' do
@@ -38,6 +49,22 @@ class ProjectsListTest < ActionController::TestCase
     assert_equal @student.name, project_row['studentName']
     assert_equal 'applab', project_row['type']
     assert_equal '2017-01-25T17:48:12.358-08:00', project_row['updatedAt']
+  end
+
+  test 'get_project_row_data correctly parses lab2 project data' do
+    project_row = ProjectsList.send(:get_project_row_data, @lab2_project, @channel_id, @student)
+    assert_nil @channel_id
+    assert_nil project_row['channel']
+    assert_equal 'Lab2 Project', project_row['name']
+    assert_equal @student.name, project_row['studentName']
+    assert_equal 'pythonlab', project_row['type']
+    assert_equal '2024-01-25T17:48:12.358-08:00', project_row['updatedAt']
+    assert_equal({'standaloneSettings' => {'projectType' => 'console'}}, project_row['labConfig'])
+  end
+
+  test 'get_project_row_data leaves labConfig out when the project has none' do
+    project_row = ProjectsList.send(:get_project_row_data, @student_project, @channel_id, @student)
+    assert_nil project_row['labConfig']
   end
 
   test 'get_project_row_data ignores hidden projects' do
@@ -63,153 +90,6 @@ class ProjectsListTest < ActionController::TestCase
     assert_equal 'bobsLibrary', project_row['libraryName']
     assert_equal 'A library by Bob.', project_row['libraryDescription']
     assert_equal '2020-01-25T17:48:12.358-08:00', project_row['libraryPublishedAt']
-  end
-
-  test 'get_published_project_and_user_data returns nil for App Lab project with sharing_disabled' do
-    project_and_user = {
-      properties: {sharing_disabled: true}.to_json,
-      project_type: 'applab'
-    }
-    assert_nil ProjectsList.send(:get_published_project_and_user_data, project_and_user)
-  end
-
-  test 'get_published_project_and_user_data returns nil for Game Lab project with sharing_disabled' do
-    project_and_user = {
-      properties: {sharing_disabled: true}.to_json,
-      project_type: 'gamelab'
-    }
-    assert_nil ProjectsList.send(:get_published_project_and_user_data, project_and_user)
-  end
-
-  test 'get_published_project_and_user_data does not return nil for Dance project even with sharing_disabled' do
-    project_and_user = {
-      properties: {sharing_disabled: true}.to_json,
-      project_type: 'dance',
-      storage_id: @storage_id,
-      id: 1,
-      birthday: 13.years.ago.to_datetime,
-      abuse_score: 0
-    }
-    Projects.stubs(:get_published_project_data).returns({})
-    refute_nil ProjectsList.send(:get_published_project_and_user_data, project_and_user)
-  end
-
-  test 'get_published_project_and_user_data does not return nil for PlayLab project even with sharing_disabled' do
-    project_and_user = {
-      properties: {sharing_disabled: true}.to_json,
-      project_type: 'playlab',
-      storage_id: @storage_id,
-      id: 1,
-      birthday: 13.years.ago.to_datetime,
-      abuse_score: 0
-    }
-    Projects.stubs(:get_published_project_data).returns({})
-    refute_nil ProjectsList.send(:get_published_project_and_user_data, project_and_user)
-  end
-
-  test 'fetch_published_project_types filters by sharing_disabled and project_type - App Lab' do
-    stub_projects = [
-      {
-        name: 'project1',
-        properties: {sharing_disabled: true}.to_json,
-        birthday: 13.years.ago.to_datetime,
-        storage_id: @storage_id,
-        id: 1,
-        project_type: 'applab',
-        abuse_score: 0
-      },
-      {
-        name: 'project2',
-        properties: {}.to_json,
-        birthday: 13.years.ago.to_datetime,
-        storage_id: @storage_id,
-        id: 2,
-        project_type: 'applab',
-        abuse_score: 0
-      },
-      {
-        name: 'project3',
-        properties: {}.to_json,
-        birthday: 13.years.ago.to_datetime,
-        storage_id: @storage_id,
-        id: 3,
-        project_type: 'applab',
-        abuse_score: 0
-      }
-    ]
-    Projects.stubs(:table).returns(db_result(stub_projects))
-    Projects.stubs(:get_published_project_data).returns({})
-    assert_equal 2, ProjectsList.send(:fetch_published_project_types, ['applab'], limit: 4)['applab'].length
-  end
-
-  test 'fetch_published_project_types filters by sharing_disabled and project_type - Dance' do
-    stub_projects = [
-      {
-        name: 'project1',
-        properties: {sharing_disabled: true}.to_json,
-        birthday: 13.years.ago.to_datetime,
-        storage_id: @storage_id,
-        id: 1,
-        project_type: 'dance',
-        abuse_score: 0
-      },
-      {
-        name: 'project2',
-        properties: {}.to_json,
-        birthday: 13.years.ago.to_datetime,
-        storage_id: @storage_id,
-        id: 2,
-        project_type: 'dance',
-        abuse_score: 0
-      },
-      {
-        name: 'project3',
-        properties: {}.to_json,
-        birthday: 13.years.ago.to_datetime,
-        storage_id: @storage_id,
-        id: 3,
-        project_type: 'dance',
-        abuse_score: 0
-      }
-    ]
-    Projects.stubs(:table).returns(db_result(stub_projects))
-    Projects.stubs(:get_published_project_data).returns({})
-    assert_equal 3, ProjectsList.send(:fetch_published_project_types, ['dance'], limit: 4)['dance'].length
-  end
-
-  test 'fetch_published_project_types filters by abuse_score' do
-    stub_projects = [
-      {
-        name: 'abusive',
-        properties: {}.to_json,
-        birthday: 13.years.ago.to_datetime,
-        storage_id: @storage_id,
-        id: 1,
-        project_type: 'applab',
-        abuse_score: 20
-      },
-      {
-        name: 'normal',
-        properties: {}.to_json,
-        birthday: 13.years.ago.to_datetime,
-        storage_id: @storage_id,
-        id: 2,
-        project_type: 'applab',
-        abuse_score: 0
-      },
-      {
-        name: 'featured',
-        properties: {}.to_json,
-        birthday: 13.years.ago.to_datetime,
-        storage_id: @storage_id,
-        id: 3,
-        project_type: 'applab',
-        abuse_score: -50
-      }
-    ]
-    Projects.stubs(:table).returns(db_result(stub_projects))
-    Projects.stubs(:get_published_project_data).returns({})
-    assert_equal 2, ProjectsList.send(:fetch_published_project_types, ['applab'], limit: 4)['applab'].length
   end
 
   test 'extract_data_for_featured_project_cards correctly parses project data' do
@@ -243,49 +123,28 @@ class ProjectsListTest < ActionController::TestCase
     assert_nil returned_project["studentAgeRange"]
   end
 
-  test "include_featured combines featured project data and published projects data correctly" do
-    fake_featured_projects = {
-      applab: [
-        {name: "featuredApplab1"},
-        {name: "featuredApplab2"},
-        {name: "featuredApplab3"}
-      ],
-      gamelab: [],
-      playlab: [],
-      artist: [],
-      minecraft: [],
-      events: [],
-      k1: [],
-      spritelab: [],
-      dance: [],
-      poetry: [],
-      library: []
-    }
-    fake_recent_projects = {
-      applab: [
-        {name: "recentApplab1"},
-        {name: "recentApplab2"},
-        {name: "recentApplab3"}
-      ],
-      gamelab: [],
-      playlab: [],
-      artist: [],
-      minecraft: [],
-      events: [],
-      k1: [],
-      spritelab: [],
-      dance: [],
-      poetry: [],
-      library: []
-    }
-    ProjectsList.stubs(:fetch_featured_published_projects).returns(fake_featured_projects)
-    ProjectsList.stubs(:fetch_published_project_types).returns(fake_recent_projects)
-    combined_projects = ProjectsList.send(
-      :include_featured, limit: 10
-    )
-    # Featured projects should be ordered before recent projects
-    assert_equal combined_projects[:applab].first, {name: "featuredApplab1"}
-    assert_equal combined_projects[:applab].last, {name: "recentApplab3"}
+  test 'extract_data_for_featured_project_cards correctly parses project data without thumbnail url' do
+    fake_project_value = "{\"name\":\"Desert Dinosaur\"}"
+    fake_project_featured_project_user_combo_data = [
+      {
+        id: 184,
+        storage_id: 160,
+        value: fake_project_value,
+        project_type: "playlab",
+        published_at: "2018-02-26 11:23:11 -0800",
+        featured_at: "2018-02-26 19:23:36 -0800",
+        unfeatured_at: nil,
+        name: "harry_potter",
+        birthday: DateTime.now,
+        properties: {}
+      }
+    ]
+    returned_project = ProjectsList.send(
+      :extract_data_for_featured_project_cards, fake_project_featured_project_user_combo_data
+    ).first
+
+    assert_equal JSON.parse(fake_project_value)["name"], returned_project["name"]
+    assert_nil returned_project["thumbnailUrl"]
   end
 
   test 'fetch_section_libraries filters by library_name' do
@@ -422,11 +281,11 @@ class ProjectsListTest < ActionController::TestCase
   end
 
   test 'fetch_updated_library_channels returns channel_ids of libraries that have been updated' do
-    updated_channel_id = storage_encrypt_channel_id(1, 1)
+    updated_channel_id = get_project_channel_id(1, 1)
     libraries = [
       {'channel_id' => updated_channel_id, 'version' => '1'},
-      {'channel_id' => storage_encrypt_channel_id(1, 2), 'version' => '1'},
-      {'channel_id' => storage_encrypt_channel_id(1, 3), 'version' => '1'}
+      {'channel_id' => get_project_channel_id(1, 2), 'version' => '1'},
+      {'channel_id' => get_project_channel_id(1, 3), 'version' => '1'}
     ]
     stub_projects = [
       {
@@ -453,17 +312,15 @@ class ProjectsListTest < ActionController::TestCase
     assert_equal [], ProjectsList.fetch_updated_library_channels([])
   end
 
-  private
-
-  def user_db_result(result)
+  private def user_db_result(result)
     stub(where: stub(select_hash: result))
   end
 
-  def library_db_result(result)
-    stub(where: stub(where: stub(where: result)))
+  private def library_db_result(result)
+    stub(where: stub(where: stub(where: result, first: result.first), first: result.first))
   end
 
-  def db_result(result)
+  private def db_result(result)
     stub(select: stub(join: stub(join: stub(where: stub(where: stub(exclude: stub(order: stub(limit: result))))))))
   end
 end

@@ -3,7 +3,7 @@ require 'dynamic_config/dcdo'
 require 'dynamic_config/gatekeeper'
 require 'dynamic_config/page_mode'
 require 'cdo/shared_constants'
-require 'cpa'
+require 'cdo/brand'
 require 'policies/child_account'
 
 class ApplicationController < ActionController::Base
@@ -16,18 +16,18 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-  before_action :assert_child_account_policy
+  before_action :handle_cap_lockout, :assert_lms_landing_policy, if: :current_user
 
   # this is needed to avoid devise breaking on email param
   before_action :configure_permitted_parameters, if: :devise_controller?
 
-  before_action :setup_i18n_tracking
-
-  around_action :with_locale
-
   before_action :fix_crawlers_with_bad_accept_headers
 
   before_action :clear_sign_up_session_vars
+
+  before_action :persist_brand_params
+
+  around_action :with_global_current_user
 
   def fix_crawlers_with_bad_accept_headers
     # append text/html as an acceptable response type for Edmodo and weebly-agent's malformed HTTP_ACCEPT header.
@@ -62,12 +62,40 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  rescue_from CanCan::AccessDenied do
+  # Persist brand selection as a cookie so the brand sticks across page navigations.
+  # Set brand:   ?brand=codeai-audit
+  # Clear brand: ?brand-reset=1
+  def persist_brand_params
+    return unless DCDO.get('brand-router-enabled', false)
+
+    brand_cookie = environment_specific_cookie_name(Cdo::Brand::BRAND_COOKIE_NAME)
+
+    if params['brand-reset']
+      cookies.delete(brand_cookie, domain: :all)
+      return
+    end
+
+    return if params['brand'].blank?
+
+    brand = params['brand']
+    if Cdo::Brand::BRANDS.key?(brand)
+      cookies[brand_cookie] = {value: brand, domain: :all}
+    else
+      cookies.delete(brand_cookie, domain: :all)
+    end
+  end
+
+  rescue_from CanCan::AccessDenied do |exception|
     if !current_user && request.format == :html
       # we don't know who you are, you can try to sign in
       authenticate_user!
     elsif rack_env?(:development, :adhoc)
-      raise
+      # log the error and its full stack trace
+      message = "CanCan::AccessDenied: #{exception.message}"
+      stack = exception.backtrace.join("\n")
+      error_with_stack = "#{message}\n#{stack}"
+      Rails.logger.error(error_with_stack)
+      render plain: error_with_stack, status: :forbidden
     else
       # we know who you are, you shouldn't be here
       head :forbidden
@@ -78,6 +106,15 @@ class ApplicationController < ActionController::Base
   # requesting a file in the wrong format, send a 404 instead of a 500
   rescue_from ActionView::MissingTemplate do |exception|
     Rails.logger.warn("Missing template: #{exception}")
+    render_404
+  end
+
+  # Unsafe redirects can happen for a variety of reasons; including unexpected
+  # attempts to redirect to an external domain, typos in the path for internal
+  # redirects, and simple malformed URIs. In the interest of simplicity,
+  # respond to all with a simple 404.
+  rescue_from ActionController::Redirecting::UnsafeRedirectError do |exception|
+    Rails.logger.warn("Unsafe redirection: #{exception}")
     render_404
   end
 
@@ -107,7 +144,18 @@ class ApplicationController < ActionController::Base
     response.headers["Expires"] = "Fri, 01 Jan 1990 00:00:00 GMT"
   end
 
-  protected
+  # Allow cross-origin requests from code.org
+  def allow_cdo_cors
+    allowed_origin = CDO.code_org_url('', request.protocol.chomp('//'))
+
+    request_origin = request.headers['Origin']
+    allowed_origin = request_origin if CDO.marketing_sites_hosts.include?(request_origin)
+
+    response.headers['Access-Control-Allow-Origin']      = allowed_origin
+    response.headers['Access-Control-Allow-Methods']     = request.request_method
+    response.headers['Access-Control-Allow-Headers']     = '*'
+    response.headers['Access-Control-Allow-Credentials'] = 'true'
+  end
 
   # These are sometimes updated from the registration form
   SCHOOL_INFO_ATTRIBUTES = [
@@ -129,7 +177,9 @@ class ApplicationController < ActionController::Base
   # set in accounts created/updated in tests, but do not
   # want to be set via account creates/updates otherwise.
   UI_TEST_ATTRIBUTES = [
-    :sign_in_count
+    :sign_in_count,
+    :provider,
+    :created_at,
   ].freeze
 
   PERMITTED_USER_FIELDS = [
@@ -170,24 +220,13 @@ class ApplicationController < ActionController::Base
   PERMITTED_USER_FIELDS.concat(UI_TEST_ATTRIBUTES) if rack_env?(:test, :development)
   PERMITTED_USER_FIELDS.freeze
 
-  def configure_permitted_parameters
+  protected def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:account_update) {|u| u.permit PERMITTED_USER_FIELDS}
     devise_parameter_sanitizer.permit(:sign_up) {|u| u.permit PERMITTED_USER_FIELDS}
     devise_parameter_sanitizer.permit(:sign_in) {|u| u.permit PERMITTED_USER_FIELDS}
   end
 
-  # Capture the current request URL for i18n string tracking
-  def setup_i18n_tracking
-    Thread.current[:current_request_url] = request.url
-  end
-
-  def with_locale
-    I18n.with_locale(locale) do
-      yield
-    end
-  end
-
-  def milestone_response(options)
+  protected def milestone_response(options)
     response = {
       timestamp: DateTime.now.to_milliseconds
     }
@@ -201,8 +240,9 @@ class ApplicationController < ActionController::Base
       # if they solved it, figure out next level
       if options[:solved?]
         response[:new_level_completed] = options[:new_level_completed]
-        response[:level_path] = build_script_level_path(script_level)
-        script_level_solved_response(response, script_level)
+        unit_group_unit = Queries::Courses.unit_group_unit(script_level.script, options[:unit_group])
+        response[:level_path] = build_script_level_path(script_level, unit_group_unit: unit_group_unit)
+        script_level_solved_response(response, script_level, unit_group_unit: unit_group_unit)
       else # not solved
         response[:message] = 'try again'
       end
@@ -230,20 +270,18 @@ class ApplicationController < ActionController::Base
       response[:puzzle_ratings_enabled] = script_level && PuzzleRating.can_rate?(script_level.script, level, current_user)
     end
 
-    response[:activity_id] = options[:activity] && options[:activity].id
-
     response
   end
 
-  def set_locale_cookie(locale)
+  protected def set_locale_cookie(locale)
     cookies[:language_] = {value: locale, domain: :all, expires: 10.years.from_now}
   end
 
-  def require_english_in_levelbuilder_mode
+  protected def require_english_in_levelbuilder_mode
     redirect_to '/', flash: {alert: 'Editing on levelbuilder is only supported in English (en-US locale).'} unless locale == :'en-US'
   end
 
-  def require_levelbuilder_mode
+  protected def require_levelbuilder_mode
     require_english_in_levelbuilder_mode
 
     unless Rails.application.config.levelbuilder_mode
@@ -259,7 +297,7 @@ class ApplicationController < ActionController::Base
   # not modify curriculum content in a way could introduce intermittent failures
   # in other tests. Developers wishing to run these tests locally should run
   # their local server in levelbuilder_mode.
-  def require_levelbuilder_mode_or_test_env
+  protected def require_levelbuilder_mode_or_test_env
     require_english_in_levelbuilder_mode
 
     unless Rails.application.config.levelbuilder_mode || rack_env?(:test)
@@ -267,11 +305,15 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  def require_admin
+  protected def authorize_teacher!
+    authorize! :access, :teacher_only
+  end
+
+  protected def require_admin
     authorize! :read, :reports
   end
 
-  def redirect_admin_from_labs
+  protected def redirect_admin_from_labs
     redirect_to root_path, flash: {alert: 'Labs not allowed for admins.'} if current_user&.admin?
   end
 
@@ -279,7 +321,7 @@ class ApplicationController < ActionController::Base
   # (storing full objects is not a good idea because the session is
   # saved as a cookie)
 
-  def pairings=(pairings_from_params)
+  protected def pairings=(pairings_from_params)
     # remove pairings
     if pairings_from_params[:pairings].blank?
       session[:pairings] = []
@@ -301,7 +343,7 @@ class ApplicationController < ActionController::Base
     session[:pairing_section_id] = pairings_from_params[:section_id].to_i
   end
 
-  def pairings
+  protected def pairings
     return [] if session[:pairings].blank?
     if pairing_still_enabled
       User.find(session[:pairings])
@@ -314,7 +356,7 @@ class ApplicationController < ActionController::Base
 
   # @return [Array of Integers] an array of user IDs of users paired with the
   #   current user.
-  def pairing_user_ids
+  protected def pairing_user_ids
     unless pairing_still_enabled
       # clear the pairing data from the session cookie
       self.pairings = {pairings: []}
@@ -324,22 +366,65 @@ class ApplicationController < ActionController::Base
     session[:pairings].nil? ? [] : session[:pairings]
   end
 
-  def clear_sign_up_session_vars
-    if session[:sign_up_uid] || session[:sign_up_type] || session[:sign_up_tracking_expiration]
+  protected def clear_sign_up_session_vars
+    if session[:sign_up_uid] || session[:sign_up_type]
       session.delete(:sign_up_uid)
       session.delete(:sign_up_type)
-      session.delete(:sign_up_tracking_expiration)
     end
   end
 
   # Check that the user is compliant with the Child Account Policy. If they
   # are not compliant, then we need to send them to the lockout page.
-  def assert_child_account_policy
-    # Check that the child account policy is currently enabled.
-    return unless ::Cpa.cpa_experience(request)
+  protected def handle_cap_lockout
+    # Transits the user to the CAP grace period if they are eligible.
+    Services::ChildAccount::GracePeriodHandler.call(user: current_user)
 
-    # Anonymous users are NOT affected by our Child Account Policy
-    return unless current_user
+    # Locks out the user if they are not compliant with CAP, otherwise, do nothing.
+    return unless Services::ChildAccount::LockoutHandler.call(user: current_user)
+
+    # URLs we should not redirect. Global Edition prefixes generated paths with
+    # the active region, even when the incoming API request is unprefixed.
+    # Compare the underlying paths so both forms match.
+    request_path = Cdo::GlobalEdition.unprefixed_path(request.path)
+    return if Set[
+      # Allow retrieval of current user data for event reporting
+      api_v1_users_current_path,
+      # Don't block any user from signing out
+      destroy_user_session_path,
+      # Allow retrieval of CSRF token
+      get_token_path,
+      # Don't block any user from changing the language
+      locale_path,
+      # Avoid an infinite redirect loop to the lockout page
+      lockout_path,
+      # The locked out student needs access to the policy consent API's
+      policy_compliance_child_account_consent_path,
+      # The age interstitial when the age isn't known will block the lockout page
+      users_set_student_information_path,
+      # Allow students to join sections while locked out
+      student_user_new_path,
+      student_register_path,
+      reset_session_path,
+    ].any? do |path|
+      path = Cdo::GlobalEdition.unprefixed_path(path)
+      request_path.start_with?(path)
+    end
+
+    redirect_to lockout_path
+  rescue StandardError => exception
+    Observability::Errors.report(
+      exception,
+      error_message: 'Failed to apply the Child Account Policy to the user',
+      context: {
+        user_id: current_user.id,
+        request_path: request.path,
+      }
+    )
+  end
+
+  # Check that the user has completed the LMS onboarding flow
+  protected def assert_lms_landing_policy
+    return unless Policies::Lti.account_linking?(session, current_user)
 
     # URLs we should not redirect.
     return if Set[
@@ -348,17 +433,41 @@ class ApplicationController < ActionController::Base
       # Don't block any user from changing the language
       locale_path,
       # Avoid an infinite redirect loop to the lockout page
-      lockout_path,
-      # The locked out student needs access to the policy consent API's
-      policy_compliance_child_account_consent_path,
-      # The age interstitial when the age isn't known will block the lockout page
-      users_set_age_path,
+      lti_v1_account_linking_landing_path,
+      # Allow the 'finish link' path
+      lti_v1_account_linking_finish_link_path,
+      # Allow API call to set lockout state
+      lti_v1_account_linking_new_account_path,
+      # Allow cancelling the link
+      users_cancel_path
     ].include?(request.path)
 
-    redirect_to lockout_path unless Policies::ChildAccount.compliant?(current_user) || Policies::ChildAccount.user_predates_policy?(current_user)
+    redirect_to lti_v1_account_linking_landing_path
   end
 
   private def pairing_still_enabled
     session[:pairing_section_id] && Section.find(session[:pairing_section_id]).pairing_allowed
+  end
+
+  # Makes `current_user` accessible everywhere within an HTTP request.
+  private def with_global_current_user
+    RequestStore.store[:current_user] = current_user
+    yield
+  ensure
+    RequestStore.store[:current_user] = nil
+  end
+
+  private def append_info_to_payload(payload)
+    super
+    payload[:user_id] = current_user&.id
+    payload[:admin_id] = session[:admin_id] if session[:assumed_identity]
+  end
+
+  # Rails' open-redirect protection only trusts the request's own host. This override
+  # allows URLs from the root code.org domain instead of just the studio subdomain.
+  private def _url_host_allowed?(url)
+    super || URI(url.to_s).host == URI(CDO.code_org_url).host
+  rescue ArgumentError, URI::Error
+    false
   end
 end

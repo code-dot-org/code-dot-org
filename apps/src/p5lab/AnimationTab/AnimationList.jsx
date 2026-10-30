@@ -2,14 +2,17 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import color from '@cdo/apps/util/color';
-import * as shapes from '../shapes';
+
+import i18n from '@cdo/locale';
+
+import {P5LabInterfaceMode} from '../constants';
 import {show, showBackground, Goal} from '../redux/animationPicker';
+import * as shapes from '../shapes';
+
 import AnimationListItem from './AnimationListItem';
 import NewListItem from './NewListItem';
 import ScrollableList from './ScrollableList';
-import i18n from '@cdo/locale';
-import {P5LabInterfaceMode} from '../constants';
+
 /**
  * Vertical scrolling list of animations associated with the project.
  */
@@ -90,11 +93,11 @@ class AnimationList extends React.Component {
 const styles = {
   root: {
     flex: '1 0 0',
-    borderTop: 'solid thin ' + color.light_gray,
-    borderBottom: 'solid thin ' + color.light_gray,
-    borderLeft: 'solid thin ' + color.light_gray,
+    borderTop: 'solid thin var(--borders-neutral-primary)',
+    borderBottom: 'solid thin var(--borders-neutral-primary)',
+    borderLeft: 'solid thin var(--borders-neutral-primary)',
     borderRight: 'none',
-    backgroundColor: color.lightest_gray,
+    backgroundColor: 'var(--background-neutral-secondary)',
     paddingRight: 10,
     paddingLeft: 10,
   },

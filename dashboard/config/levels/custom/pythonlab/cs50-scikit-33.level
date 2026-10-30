@@ -1,0 +1,42 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-02-18T17:04:06.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "ai_tutor_available": "true",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# CIW AI Associate Standard: 6.3\n# Standard Description: Estimate the mean and standard error of the mean given the data.\n#\n# Rationale: This tutorial covers the absolute basics of statistical \n# estimation. It's one thing to calculate a \"Mean\" (the average), but it's \n# another to calculate the \"Standard Error\" (how much we expect that \n# average to jump around if we measured a different group).\n\n\"\"\"\nWelcome! Today we are looking at two important numbers:\n1. The Mean: The \"Middle\" or \"Average\" of our group.\n2. The Standard Error: A measure of how \"solid\" our average is.\n\nIf you measure 10,000 people, your average is very \"solid\" (Low Standard Error).\nIf you measure only 3 people, your average is \"shaky\" (High Standard Error).\n\"\"\"\n\nimport numpy as np\n\n# --- OUR DATA ---\n# Imagine we measured the battery life of 10 phones (in hours).\nbattery_life = [12, 14, 11, 15, 13, 10, 16, 12, 14, 13]\n\n# --- PART 1: THE MEAN ---\nprint(\"--- Part 1: Calculating the Mean ---\")\nmean_val = np.mean(battery_life)\nprint(f\"Average Battery Life: {mean_val:.2f} hours\")\n\n# --- PART 2: THE STANDARD ERROR ---\nprint(\"\\n--- Part 2: Calculating the Standard Error (SEM) ---\")\n# Standard Error = Standard Deviation / Square Root of (Number of items)\nstd_dev = np.std(battery_life, ddof=1) # ddof=1 is for samples\nn = len(battery_life)\nsem = std_dev / np.sqrt(n)\n\nprint(f\"Standard Deviation: {std_dev:.2f}\")\nprint(f\"Number of Phones (n): {n}\")\nprint(f\"Standard Error of the Mean (SEM): {sem:.2f}\")\n\nprint(\"\\nInterpretation:\")\nprint(f\"Our best guess for battery life is {mean_val:.2f} hours,\")\nprint(f\"but we expect this guess to be off by about {sem:.2f} hours on average.\")\n\n\"\"\"\n--- YOUR TURN ---\nWe've doubled the number of phones to 20!\n1. Recalculate the Mean and the Standard Error.\n2. Did the Standard Error get BIGGER or SMALLER when we added more data?\n\"\"\"\n\n# STARTING CODE FOR STUDENT:\nmore_battery = [12, 14, 11, 15, 13, 10, 16, 12, 14, 13, \n                11, 15, 12, 13, 14, 12, 11, 15, 14, 13]\n\n# TODO: Calculate mean\n# TODO: Calculate sem (std / sqrt(n))\n# TODO: Print results!\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFTDG6jyYgtI/CEUE/82dEkG4hlI8OLsdjJD0In8S\n03BB+jPkGgyYB0/9C3zqHMHEFpKeCsugYbpGMxzBNwrd7qASagJaFzMnVUyM\n2TXS7Hau9lj7JpZIHXn9fmxXRRANWXsiSWqucSLZ7NwxpzbfDzsD1dtUayAz\n86QuM/GYYpXjOKBuOOwhpp7k7V3oZnlYiaJLbQeMVdP9Dh5jN77ncP39TvnZ\n943iRsyufKTF8we0yrUznNV84KG8wKKuXR0gW5N2lPQ7vEPApAOIqlLjM9kg\nyqeKeqZUKLGj7hNHpcKuH7Qmdc4wwzXSxEFxmoQyIcsHIZjyTT+YwwzRRdzR\n2O+Jfe810si3zUqaDQqUYKQ54EheKlTjePXZZK5hSwEHy9cMmnLt1SMTUF9I\nfD9HzAqjGSokkOk22kKFx1RzD2qwpqKJ8W8OKVN9jWlh3gffOc931lnidPyn\n4olvVqzOTzFnoUz2My12eNFUEBXXmdqJTvvGLhC8y55dC1ipm2CGV32xr3Ya\nI7S9orIuplGUNWrjw/bi+02kUqmClTHtx6xm3EmPlHRF/pS/ktQlJipKFeRY\nK/HeAY7W+UFhY7bymsudTQDwV5+5AyGwajJXt/mRw5zyt0h8ByeDpHd590Sm\naXop1kjaFdt6OGstSjybghVcl4j0IIm5Rn72/UHV3hYphgyKwkBWSzGqIcfp\nbQGXj7hh9G0INv1YUInMprNi/NkRvZDe1dtACnmo1ChwIqXOM8OxhQkotneo\nXJMTmeQR5JUXAudOj+Z6VEtLVcnV09BEc7XHvM3HBK5+kPTK/VxT2cIPA2mU\nL2N75u2sWEPOSyb0LMoL4U3eVXBp8S1GFhtvZrGFo2cEnHA42y51wwOLz90y\n2uWDqg/gJyyRsGbl+nzHgKsITJmUTR/UUNdZ8oCmkc9IZIP7cvsODBPKZYyV\nUHU9x6V08TYcD6hSw7xxqDql4eScyu+t+aDP0iLJzGmrZyZURSpApTd6tgGN\nPhBEpyeFBNxKVJvg0iPr9L+RtbgW8hqw36nvgavOOwMJpuQ11STftctMptz9\nz5nGAwpSKGroCApBwzQ6FplMogGtQFukyeeHwe5259RVcpciJAB1Ho+92DEf\n96P23sODILbyH5EmoXRIyhv9MgzSnBCcypN1TnZyPUTNnaLvQMmkKPCvPvVC\njjWkDMXoFkHyimPqA81XA+8oEGZrotgVMp615fLpSKtji6yP32uHctv6EZdK\npZ+AFMc9Au/NcTWsUE3o/BBu+wPwizwhWsa2a7ZQUWR0ivnW+k4ulzhJpDq9\nKo1pRUFoKHN9+mZhG0zmKCtqGIyOkvfqLsogAfUA3FsDAx+d3Ll092Ink9TK\nDzWuY24NJbfzW6KXLBKKfPX4XTvYIfuOMsII3ZCFEEx9c12nMg==\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-18T17:04:06.388+00:00\",\"changed\":[\"cloned from \\\"cs50-scikit-32\\\"\"],\"cloned_from\":\"cs50-scikit-32\"},{\"changed_at\":\"2026-02-18 17:04:10 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:49:19 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:49:27 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Pythonlab>

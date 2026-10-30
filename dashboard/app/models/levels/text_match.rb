@@ -22,6 +22,7 @@
 #  index_levels_on_game_id    (game_id)
 #  index_levels_on_level_num  (level_num)
 #  index_levels_on_name       (name)
+#  index_levels_on_type       (type)
 #
 
 # Text Match type.
@@ -40,7 +41,7 @@ class TextMatch < DSLDefined
   end
 
   def icon
-    'fa fa-list-ul'
+    'fa-solid fa-list-ul'
   end
 
   def validated?

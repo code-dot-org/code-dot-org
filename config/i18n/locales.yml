@@ -1,0 +1,190 @@
+# Root keys are locale codes as strings.
+# Values can either be the string name of another locale or a map.
+#
+# String values are used to expand languages to include a default region.
+#
+# Map values can have the following keys
+#   english: Name of language in English.
+#   native: Name of language in the language itself.
+#   fallback: Specifies a Rails-level I18n fallback.
+#   debug: Causes a language to not show up in the production environment.
+#
+# Note that pegasus/helpers.rb contains a list of RTL languages (in the
+# is_rtl function) that should match this list.
+
+"ar": "ar-SA"
+"ar-SA":
+  english: "Arabic"
+  native: "العربية"
+  dir: 'rtl'
+  webfonts: false
+
+"cs": "cs-CZ"
+"cs-CZ":
+  english: "Czech"
+  native: "Čeština"
+
+"de": "de-DE"
+"de-DE":
+  english: "German"
+  native: "Deutsch"
+
+"en": "en-US"
+"en-US":
+  english: "English"
+  native: "English"
+
+"en-IN":
+  english: "English (India)"
+  native: "English (India)"
+  fallback: "en-US"
+
+"es": "es-ES"
+"es-ES":
+  english: "Spanish (Spain)"
+  native: "Español (España)"
+  fallback: "es-MX"
+
+"es-MX":
+  english: "Spanish (US)"
+  native: "Español (EEUU)"
+
+"es-LA":
+  english: "Spanish (LATAM)"
+  native: "Español (LATAM)"
+  fallback: "es-MX"
+
+"fa": "fa-IR"
+"fa-IR":
+  english: "Persian"
+  native: "فارسی"
+  dir: 'rtl'
+  webfonts: false
+
+"fr": "fr-FR"
+"fr-FR":
+  english: "French"
+  native: "Français"
+
+"gu": "gu-IN"
+"gu-IN":
+  english: "Gujarati"
+  native: "ગુજરાતી"
+  webfonts: false
+
+"hi": "hi-IN"
+"hi-IN":
+  english: "Hindi"
+  native: "हिन्दी"
+  webfonts: false
+
+"id": "id-ID"
+"id-ID":
+  english: "Indonesian"
+  native: "Bahasa Indonesia"
+
+"it": "it-IT"
+"it-IT":
+  english: "Italian"
+  native: "Italiano"
+
+"ja": "ja-JP"
+"ja-JP":
+  english: "Japanese"
+  native: "日本語"
+  webfonts: false
+
+"ko": "ko-KR"
+"ko-KR":
+  english: "Korean"
+  native: "한국어"
+  webfonts: false
+  
+"kn": "kn-IN"
+"kn-IN":
+  english: "Kannada"
+  native: "ಕನ್ನಡ"
+  webfonts: false
+
+"mr": "mr-IN"
+"mr-IN":
+  english: "Marathi"
+  native: "मराठी"
+  webfonts: false
+
+"or": "or-IN"
+"or-IN":
+  english: "Odia"
+  native: "ଓଡ଼ିଆ"
+  webfonts: false
+
+"pl": "pl-PL"
+"pl-PL":
+  english: "Polish"
+  native: "Polski"
+
+"pt": "pt-BR"
+"pt-BR":
+  english: "Portuguese (Brazil)"
+  native: "Português (Brasil)"
+
+"pt-PT":
+  english: "Portuguese (Portugal)"
+  native: "Português (Portugal)"
+  fallback: "pt-BR"
+
+"ro": "ro-RO"
+"ro-RO":
+  english: "Romanian"
+  native: "Română"
+
+"ru": "ru-RU"
+"ru-RU":
+  english: "Russian"
+  native: "Русский"
+  webfonts: false
+
+"sk": "sk-SK"
+"sk-SK":
+  english: "Slovak"
+  native: "Slovenčina"
+
+"ta": "ta-IN"
+"ta-IN":
+  english: "Tamil"
+  native: "தமிழ்"
+  webfonts: false
+
+"te": "te-IN"
+"te-IN":
+  english: "Telugu"
+  native: "తెలుగు"
+  webfonts: false
+
+"th": "th-TH"
+"th-TH":
+  english: "Thai"
+  native: "ภาษาไทย"
+  webfonts: false
+
+"tr": "tr-TR"
+"tr-TR":
+  english: "Turkish"
+  native: "Türkçe"
+
+"uk": "uk-UA"
+"uk-UA":
+  english: "Ukrainian"
+  native: "Українська"
+  webfonts: false
+
+"zh": "zh-CN"
+"zh-CN":
+  english: "Chinese (Simplified)"
+  native: "简体字"
+  webfonts: false
+
+"zh-TW":
+  english: "Chinese (Traditional)"
+  native: "繁體字"
+  webfonts: false

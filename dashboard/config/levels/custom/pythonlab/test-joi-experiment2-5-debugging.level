@@ -1,0 +1,40 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-09-15T21:27:28.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "16f4adb2-492f-483c-acb6-0b4ffa855eff": {
+          "id": "16f4adb2-492f-483c-acb6-0b4ffa855eff",
+          "name": "neighborhood.py",
+          "contents": "_x = 0\n_y = 0\n_direction = 0 # 0: East, 1: North, 2: West, 3: South\n_painted_cells = {}\n\ndef set_paint(level):\n    # This function is called but its specific effect on `paint()` isn't defined here.\n    # We'll just acknowledge it for now.\n    print(f\"DEBUG: Painter received set_paint({level}) command.\")\n\ndef move():\n    global _x, _y\n    if _direction == 0: # East\n        _x += 1\n    elif _direction == 1: # North\n        _y += 1\n    elif _direction == 2: # West\n        _x -= 1\n    elif _direction == 3: # South\n        _y -= 1\n    print(f\"DEBUG: Painter moved to ({_x}, {_y}).\")\n\ndef paint(color):\n    _painted_cells[(_x, _y)] = color\n    print(f\"DEBUG: Painter painted ({_x}, {_y}) {color}.\")\n\ndef turn_left():\n    global _direction\n    _direction = (_direction + 1) % 4\n    directions_map = {0: \"East\", 1: \"North\", 2: \"West\", 3: \"South\"}\n    print(f\"DEBUG: Painter turned left. Now facing {directions_map[_direction]}.\")\n\ndef print_final_state():\n    directions_map = {0: \"East\", 1: \"North\", 2: \"West\", 3: \"South\"}\n    print(\"\\n--- Final Painter State ---\")\n    print(f\"Position: ({_x}, {_y})\")\n    print(f\"Direction: {directions_map[_direction]}\")\n    print(f\"Painted cells: {_painted_cells}\")\n    print(\"---------------------------\\n\")\n",
+          "folderId": "0",
+          "active": false
+        },
+        "dbf6fcef-57e3-4347-a545-c094690faac2": {
+          "id": "dbf6fcef-57e3-4347-a545-c094690faac2",
+          "name": "main.py",
+          "contents": "from neighborhood import *\n\n# The Painter starts at (0, 0), facing east.\n# Paint a short path for the block party.\nset_paint(6)\n\nmove()\npaint(\"white\")\nmove()\nturn_left()\nmove()\npaint(\"white\")\nturn_left()\nturn_left()\n# BUG: One turn_left() is missing here, making the painter face South instead of East\nmove()\npaint(\"white\")\n\n# Print the final state for verification\nprint_final_state()\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "16f4adb2-492f-483c-acb6-0b4ffa855eff",
+        "dbf6fcef-57e3-4347-a545-c094690faac2"
+      ]
+    },
+    "long_instructions": "TODOs:\r\n- Observe the Painter's current path in `main.py` to identify the unexpected movement.\r\n- Run `main.py` and describe what the Painter does incorrectly.\r\n- Trace the code in `main.py` statement by statement to pinpoint the command that is out of order or missing.\r\n- Add or adjust the `turn_left()` commands in `main.py` to correct the Painter's path.\r\n- Run `main.py` again to confirm the Painter now follows the intended path.\r\n- Explain what the bug was, how the output showed it, and what you changed to fix it.",
+    "encrypted_exemplar_sources": "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\n",
+    "generate_outline": "Find and fix a program where commands are out of order, a turn is missing, or the Painter runs out of paint. Check: Student names the bug, the evidence, and the fix.",
+    "generate_supplied_code": "from neighborhood import *\r\n\r\n# The Painter starts at (0, 0), facing east.\r\n# Paint a short path for the block party.\r\nset_paint(6)\r\n\r\nmove()\r\npaint(\"white\")\r\nmove()\r\nturn_left()\r\nmove()\r\npaint(\"white\")\r\nturn_left()\r\nturn_left()\r\nturn_left()\r\nmove()\r\npaint(\"white\")"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-15 21:27:36 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-15 21:27:36 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-15 21:27:59 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-15 21:28:00 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Pythonlab>

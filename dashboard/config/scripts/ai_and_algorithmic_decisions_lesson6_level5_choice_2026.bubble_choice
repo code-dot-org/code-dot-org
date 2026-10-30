@@ -1,0 +1,10 @@
+name 'ai-and-algorithmic-decisions-lesson6-level5_choice_2026'
+display_name 'Build Your Function'
+description '### Choose a scenario and use your plan to build a function that uses inputs to create different results.'
+
+sublevels
+level 'ai-and-algorithmic-decisions-lesson6-level5a_weblab_2026'
+level 'ai-and-algorithmic-decisions-lesson6-level5b_weblab_2026'
+level 'ai-and-algorithmic-decisions-lesson6-level5c_weblab_2026'
+
+uses_lab2

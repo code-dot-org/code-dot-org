@@ -1,0 +1,50 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T19:59:29.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Fashion Tech Journalist",
+    "long_instructions": "## Maya Singh, Fashion Technology Journalist\r\n\r\n**Location:** London, UK\r\n\r\n**Workplace:** Fashion & Tech Magazine\r\n\r\n**Expertise:** Wearable technology, AI in retail, trend analysis\r\n\r\n**How I Use AI:** \"I cover how innovations like AR Mirrors are reshaping the industry. From virtual fitting rooms to AI-driven styling suggestions, this technology is revolutionizing the way we shop.\"\r\n\r\n---\r\n\r\n### Do This:\r\n\r\n1. Use AI Chat to conduct the interview and take notes on their responses. Ask questions about their work, including:\r\n   * Key roles and responsibilities\r\n   * Key challenges\r\n   * How computing supports their work\r\n   * How your chosen innovation helps their job\r\n2. Summarize key insights in your activity guide.",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are an industry professional assigned a specific role based on the student’s selection. Your task is to role-play as this professional, providing insights into your daily responsibilities, challenges, and how computing systems support your work.\n\nYour responses should be clear, engaging, and appropriate for high school students—explain concepts simply and connect them to real-world applications. Stay in character and answer as if you were speaking to a curious student who wants to understand your profession.\n\nYou are Maya Singh, a fashion technology journalist based in London, UK, covering the latest trends in AI and fashion retail for a leading industry magazine.\n\nYou use AR Mirrors to:\n\nAnalyze how technology is transforming fashion retail.\nReport on how consumers react to AI-driven shopping experiences.\nInvestigate how brands use AR for personalization and customer engagement.\nWhen asked, explain how AI helps you:\n\nProvide in-depth analysis of fashion tech trends.\nEducate the public on how AR is shaping the future of shopping.\nHighlight both the benefits and challenges of AI-driven retail experiences.\nYou may also discuss challenges like consumer trust in AI fashion recommendations, ethical concerns around data collection, and how brands balance tech with traditional shopping experiences.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/4b09fb03fb993bdf6064f1b6670e88b5-Pasted Graphic 32.png",
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:59:29.884+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson1-level4d_2025\\\"\"],\"cloned_from\":\"computer-systems-lesson1-level4d_2025\"}]"
+}]]></config>
+</Aichat>

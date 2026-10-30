@@ -1,0 +1,18 @@
+name 'csaif_pl_ai_04_03_2025'
+title 'Check for Understanding'
+description 'Match the vocabulary term with the definition'
+height'75'
+question 'abstraction'
+question 'artificial intelligence'
+question 'neural network'
+question 'hallucination'
+question 'contradiction'
+question 'AI bias'
+answer 'the process of focusing on only the essential details of a problem and ignoring everything else'
+answer ' a technology that mimics human intelligence'
+answer 'an interconnected network that makes decisions using weights and hidden layers'
+answer 'when the model makes up false or misleading information that sounds real but is not true'
+answer 'when an AI generates conflicting or opposing responses based on a similar input'
+answer 'when a model favors certain information over others'
+
+allow_multiple_attempts true

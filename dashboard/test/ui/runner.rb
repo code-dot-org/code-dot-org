@@ -1,4 +1,15 @@
 #!/usr/bin/env ruby
+
+# On macOS, runner.rb's Parallel.map (in_processes) workers segfault inside
+# libsystem_trace _os_log_preferences_refresh during their first AWS S3
+# upload's net/http connect. Disable os_activity and ObjC initialize-fork
+# safety in the env before any require touches those macOS subsystems.
+# Read lazily by the OS on first use; harmless on Linux (vars ignored).
+if RUBY_PLATFORM.include?('darwin')
+  ENV['OS_ACTIVITY_MODE'] ||= 'disable'
+  ENV['OBJC_DISABLE_INITIALIZE_FORK_SAFETY'] ||= 'YES'
+end
+
 require_relative '../../../deployment'
 
 UI_TEST_DIR = File.expand_path(__dir__)
@@ -15,6 +26,8 @@ require 'cdo/data/logging/infrastructure_logger'
 require 'cdo/git_utils'
 require 'cdo/rake_utils'
 require 'cdo/test_flakiness'
+require 'cdo/ci_utils'
+require 'cdo/playwright_report'
 
 require 'haml'
 require 'json'
@@ -33,13 +46,13 @@ require_relative './utils/selenium_constants'
 
 require 'active_support/core_ext/object/blank'
 
-ENV['BUILD'] ||= `git rev-parse --short HEAD`
+ENV['GIT_COMMIT'] ||= `git rev-parse --short HEAD`
 
 GIT_BRANCH = GitUtils.current_branch
 COMMIT_HASH = RakeUtils.git_revision
 LOCAL_LOG_DIRECTORY = File.join(UI_TEST_DIR, 'log')
 S3_LOGS_BUCKET = 'cucumber-logs'
-S3_LOGS_PREFIX = ENV['CI'] ? "circle/#{ENV['CIRCLE_BUILD_NUM']}" : "#{Socket.gethostname}/#{GIT_BRANCH}"
+S3_LOGS_PREFIX = CI::Utils.running_on_ci? ? "circle/#{ENV.fetch('CI_BUILD_NUMBER', nil)}" : "#{Socket.gethostname}/#{GIT_BRANCH}"
 LOG_UPLOADER = AWS::S3::LogUploader.new(S3_LOGS_BUCKET, S3_LOGS_PREFIX, make_public: true)
 
 #
@@ -62,7 +75,7 @@ def main(options)
   open_log_files
   configure_for_eyes if eyes?
   report_tests_starting
-  generate_status_page(start_time) if options.with_status_page
+  s3_status_page_url = generate_status_page(start_time) if options.with_status_page
 
   run_results = Parallel.map(browser_feature_generator, parallel_config(options.parallel_limit)) do |browser, feature|
     run_feature browser, feature, options
@@ -86,7 +99,7 @@ def main(options)
     return 1001
   end
 
-  report_tests_finished start_time, run_results
+  report_tests_finished start_time, run_results, s3_status_page_url
   run_results.count {|feature_succeeded, _, _| !feature_succeeded}
 ensure
   close_log_files
@@ -99,20 +112,20 @@ def parse_options
     options.os_version = nil
     options.browser_version = nil
     options.features = nil
-    options.pegasus_domain = 'test.code.org'
+    options.pegasus_domain = 'code.org'
     options.dashboard_domain = 'test-studio.code.org'
-    options.hourofcode_domain = 'test.hourofcode.com'
     options.csedweek_domain = 'test.csedweek.org'
-    options.advocacy_domain = 'test-advocacy.code.org'
     options.local = nil
     options.local_headless = true
+    options.first_run_local = nil
+    options.device_farm = nil
     options.html = nil
     options.maximize = nil
     options.auto_retry = false
     options.magic_retry = false
     options.parallel_limit = 1
     options.abort_when_failures_exceed = Float::INFINITY
-    options.priority = '99'
+    options.saucelabs_priority = '99'
 
     # start supporting some basic command line filtering of which browsers we run against
     opt_parser = OptionParser.new do |opts|
@@ -142,12 +155,21 @@ def parse_options
         options.local = 'true'
         options.pegasus_domain = 'localhost.code.org:3000'
         options.dashboard_domain = 'localhost-studio.code.org:3000'
-        options.hourofcode_domain = 'localhost.hourofcode.com:3000'
         options.csedweek_domain = 'localhost.csedweek.org:3000'
-        options.advocacy_domain = 'localhost-advocacy.code.org:3000'
       end
       opts.on("--headed", "Open visible chrome browser windows. Runs in headless mode without this flag. Only relevant when -l is specified.") do
         options.local_headless = false
+      end
+      opts.on("--first-run-local", "Use the local webdriver only for the first run of a test; reruns will use the configured remote provider.") do
+        options.first_run_local = 'true'
+      end
+      opts.on("--device-farm", "Use AWS Device Farm instead of SauceLabs for remote browser testing. " \
+                               "Requires CDO.device_farm_desktop_project_id (desktop configs) " \
+                               "and/or CDO.device_farm_mobile_project_arn (mobile configs) to be set. " \
+                               "Note: Device Farm cannot reach localhost on development machines -- " \
+                               "use a public domain (e.g. via ngrok)."
+              ) do
+        options.device_farm = true
       end
       opts.on("-p", "--pegasus Domain", String, "Specify an override domain for code.org, e.g. localhost.code.org:3000") do |p|
         if p == 'localhost:3000'
@@ -163,9 +185,6 @@ def parse_options
         end
         options.dashboard_domain = d
       end
-      opts.on("--hourofcode Domain", String, "Specify an override domain for hourofcode.com, e.g. localhost.hourofcode.com:3000") do |d|
-        options.hourofcode = d
-      end
       opts.on("--csedweek Domain", String, "Specify an override domain for csedweek.org, e.g. localhost.csedweek.org:3000") do |d|
         options.csedweek = d
       end
@@ -175,8 +194,8 @@ def parse_options
       opts.on("-m", "--maximize", "Maximize local webdriver window on startup") do
         options.maximize = true
       end
-      opts.on("--circle", "Whether is CircleCI (skip failing Circle tests)") do
-        options.is_circle = true
+      opts.on("--ci", "Whether is CI (skip failing CI tests)") do
+        options.is_ci = true
       end
       opts.on("--html", "Use html reporter") do
         options.html = true
@@ -225,8 +244,8 @@ def parse_options
       opts.on("--dry-run", "Process features without running any actual steps.") do
         options.dry_run = true
       end
-      opts.on("--priority priority", "Set priority level for Sauce Labs jobs.") do |priority|
-        options.priority = priority
+      opts.on("--saucelabs-priority priority", "Set priority level for Sauce Labs jobs.") do |priority|
+        options.saucelabs_priority = priority
       end
       opts.on_tail("-h", "--help", "Show this message") do
         puts opts
@@ -240,17 +259,9 @@ def parse_options
       map! {|feature| feature.gsub(/^\.\//, '')}
 
     if options.force_db_access
-      options.pegasus_db_access = true
-      options.dashboard_db_access = true
-    elsif ENV['CI']
-      options.pegasus_db_access = true
       options.dashboard_db_access = true
     elsif rack_env?(:development)
-      options.pegasus_db_access = true if /(localhost|ngrok)/.match?(options.pegasus_domain)
       options.dashboard_db_access = true if /(localhost|ngrok)/.match?(options.dashboard_domain)
-    elsif rack_env?(:test)
-      options.pegasus_db_access = true if /test/.match?(options.pegasus_domain)
-      options.dashboard_db_access = true if /test/.match?(options.dashboard_domain)
     end
 
     if options.config
@@ -269,7 +280,8 @@ def select_browser_configs(options)
     }]
   end
 
-  browsers = JSON.parse(File.read(File.join(UI_TEST_DIR, 'browsers.json')))
+  browsers_file = options.device_farm ? 'browsers_device_farm.json' : 'browsers_saucelabs.json'
+  browsers = JSON.parse(File.read(File.join(UI_TEST_DIR, browsers_file)))
   if options.config
     options.config.map do |name|
       browsers.detect {|b| b['name'] == name}.tap do |browser|
@@ -330,7 +342,7 @@ def log_browser_error(msg)
   puts msg if $options.verbose
 end
 
-def run_tests(env, feature, arguments, log_prefix)
+def run_tests(env, feature, target_platform, arguments, log_prefix)
   start_time = Time.now
   cmd = "cucumber #{feature} #{arguments}"
   puts "#{log_prefix}#{cmd}"
@@ -342,10 +354,12 @@ def run_tests(env, feature, arguments, log_prefix)
     eyes_succeeded = count_eyes_errors(stdout) == 0
     duration = Time.now - start_time
     extra_dimensions = {test_type: test_type,
-                        feature_name: feature}
+                        feature_name: feature.include?(".feature") ? feature.split(".feature")[0] : feature,
+                        target_browser: target_platform}
     # Metrics for individual feature runs. They will be flushed once all of them run
-    Infrastructure::Logger.put("runner_feature_success", cucumber_succeeded ? 1 : 0, extra_dimensions)
-    Infrastructure::Logger.put("runner_feature_failure", cucumber_succeeded ? 0 : 1, extra_dimensions)
+    Infrastructure::Logger.put("runner_feature_eyes_diff", 1, extra_dimensions) unless eyes_succeeded
+    Infrastructure::Logger.put("runner_feature_success", 1, extra_dimensions) if cucumber_succeeded
+    Infrastructure::Logger.put("runner_feature_failure", 1, extra_dimensions) unless cucumber_succeeded
     Infrastructure::Logger.put("runner_feature_execution_time", duration, extra_dimensions)
     return cucumber_succeeded, eyes_succeeded, stdout, stderr, duration
   end
@@ -388,6 +402,18 @@ def test_type
   eyes? ? 'Eyes' : 'UI'
 end
 
+# Human-readable suite label used in Slack/log report headers and as the status
+# page <title> and <h1>. Eyes runs are always "Eyes". UI runs derive the label
+# from their browser config names and append "UI":
+#   -c Chrome             => "Chrome UI"
+#   -c iPhone             => "iPhone UI"
+#   -c Chrome,Firefox     => "Chrome + Firefox UI"
+#   -c Safari,iPad,iPhone => "Safari + iPad + iPhone UI"
+def test_type_label
+  return test_type if eyes?
+  "#{$browsers.map {|b| b['name']}.join(' + ')} #{test_type}"
+end
+
 def eyes?
   $options.run_eyes_tests
 end
@@ -403,17 +429,17 @@ end
 
 def applitools_batch_url
   return nil unless eyes?
-  "https://eyes.applitools.com/app/batches/?startInfoBatchId=#{ENV['BATCH_ID']}&hideBatchList=true"
+  "https://eyes.applitools.com/app/batches/?startInfoBatchId=#{ENV.fetch('BATCH_ID', nil)}&hideBatchList=true"
 end
 
 def report_tests_starting
-  ChatClient.log "Starting #{browser_features.count} <b>dashboard</b> #{test_type} tests in #{$options.parallel_limit} threads..."
+  ChatClient.log "Starting #{browser_features.count} <b>dashboard</b> #{test_type_label} tests in #{$options.parallel_limit} threads..."
   if eyes?
-    ChatClient.log "Batching eyes tests as <a href=\"#{applitools_batch_url}\">#{ENV['BATCH_NAME']}</a>."
+    ChatClient.log "Batching eyes tests as <a href=\"#{applitools_batch_url}\">#{ENV.fetch('BATCH_NAME', nil)}</a>."
   end
 end
 
-def report_tests_finished(start_time, run_results)
+def report_tests_finished(start_time, run_results, s3_status_page_url = nil)
   suite_duration = Time.now - start_time
 
   # How many flaky test reruns occurred across all tests (ignoring the initial attempt).
@@ -440,26 +466,112 @@ def report_tests_finished(start_time, run_results)
   Infrastructure::Logger.put('runner_feature_tests_successful_flaky_reruns', total_flaky_successful_reruns, extra_dimensions)
   Infrastructure::Logger.put('runner_feature_tests_count', run_results.count, extra_dimensions)
   Infrastructure::Logger.flush
-  ChatClient.log "#{suite_success_count} succeeded.  #{failures.count} failed. " \
-  "Test count: #{run_results.count}. " \
-  "Total duration: #{RakeUtils.format_duration(suite_duration)}. " \
-  "Total reruns of flaky tests: #{total_flaky_reruns}. " \
-  "Total successful reruns of flaky tests: #{total_flaky_successful_reruns}." \
-  + (status_page_url ? " <a href=\"#{status_page_url}\">#{test_type} test status page</a>." : '') \
-  + (applitools_batch_url ? " <a href=\"#{applitools_batch_url}\">Applitools results</a>." : '')
 
-  unless failures.empty?
-    ChatClient.log "Failed tests: \n #{failures.join("\n")}"
+  ChatClient.log "Skipped tests tagged with: #{skipped_tags.to_a.join(', ')}"
+
+  report_kind = $options.with_status_page ? 'TEST SUITE' : 'TEST MANUAL RUN'
+  test_report =  "\n#{test_type_label.upcase} #{report_kind}: #{failures.any? ? '*❌ FAILED*' : '*✅ PASSED*'}\n\n"
+  test_report += "Applitools Eyes Results:\n#{applitools_batch_url}\n\n" if applitools_batch_url
+  test_report += status_page_links(s3_status_page_url)
+  test_report += "#{pass_fail_summary(suite_success_count, failures.count, run_results.count, suite_duration, total_flaky_successful_reruns)}\n"
+  # Slack truncates long messages. Show failures list last, so that status page
+  # links are not truncated when there are many failures.
+  test_report += "\n#{failures.count}x failed features:\n" + failures.map {|failure| "• #{failure}\n"}.join if failures.any?
+
+  ChatClient.log test_report, color: 'purple'
+end
+
+def server_status_page_url
+  return nil unless $options.with_status_page
+  CDO.studio_url('/ui_test/' + status_page_filename, scheme_for_environment, ge_region: nil)
+end
+
+# Returns text describing where to find the test status page:
+#   - non-CI: server URL first because it loads results faster, S3 URL second
+#     as a fallback in case the server is unreachable.
+#   - CI (drone): only the S3 URL, because the server is not typically
+#     available after the drone run ends.
+#
+# Both status pages show the most recent results for each
+# server name + branch name (+ CI run identifier) tuple. This means that CI
+# status page links remain tied to the specific CI run indefinitely,
+# while status page links on the test machine constantly update to show
+# the most recent results in that environment.
+def status_page_links(s3_status_page_url)
+  if server_status_page_url && !CI::Utils.running_on_ci?
+    out = "#{test_type_label} Test Status Page:\n#{server_status_page_url}\n\n"
+    out += "Fallback status page (if server is unavailable):\n#{s3_status_page_url}\n\n" if s3_status_page_url
+    out
+  elsif s3_status_page_url
+    "#{test_type_label} Test Status Page:\n#{s3_status_page_url}\n\n"
+  else
+    ''
   end
 end
 
-def status_page_url
-  return nil unless $options.with_status_page
-  CDO.studio_url('/ui_test/' + status_page_filename, scheme_for_environment)
+def pass_fail_summary(success_count, failure_count, total_count, duration, total_flaky_successful_reruns)
+  summary = "#{success_count} passed. #{failure_count} failed. Test count: #{total_count}. Duration: #{RakeUtils.format_duration(duration)}."
+  did_retry_flaky_tests = $options.retry_count || $options.magic_retry || $options.auto_retry
+  summary += " Total successful reruns of flaky tests: #{total_flaky_successful_reruns}." if did_retry_flaky_tests
+  summary
 end
 
+# Ordered list of UI/Eyes test status pages used to render the
+# cross-page navigation row at the top of each status page. Each entry's
+# :filename must equal the value status_page_filename returns when that
+# page is being generated, so the active entry can be rendered unlinked.
+# These three are the Selenium suites rake test:ui_all dispatches; the two
+# Playwright suites are appended in status_pages_navigation.
+STATUS_PAGES_NAVIGATION = [
+  {filename: 'test_status_Chrome_Firefox_UI.html',     display_name: 'Chrome + Firefox UI'},
+  {filename: 'test_status_Safari_iPad_iPhone_UI.html', display_name: 'Safari + iPad + iPhone UI'},
+  {filename: 'test_status_Eyes.html',                  display_name: 'Eyes'},
+].freeze
+
+def status_pages_navigation
+  # Include the navigation row on any status pages generated during the DTT,
+  # so that the oncall engineer can quickly find all the pages they need to
+  # check for UI test failures.
+  return nil unless GIT_BRANCH == 'test'
+  pages = STATUS_PAGES_NAVIGATION.map do |page|
+    page.merge(
+      url: CDO.studio_url("/ui_test/#{page[:filename]}", scheme_for_environment, ge_region: nil)
+    )
+  end
+  # Appended here, not baked into the frozen constant, so that loading this file
+  # runs no S3 code. Playwright publishes its own reports, so these entries carry
+  # a url and no :filename; the keys are stable and always serve the latest run.
+  # The report names match run_playwright_suite in lib/rake/test.rake.
+  {'Playwright (latest run)' => 'playwright', 'Playwright Eyes (latest run)' => 'playwright-eyes'}.each do |display_name, name|
+    url = Cdo::PlaywrightReport.index_url(name: name)
+    pages << {display_name: display_name, url: url} if url
+  end
+  pages
+end
+
+# Status page filename per suite. Eyes keeps a stable name across providers.
+# Other suites name their page after the suite label so each ui_all suite
+# (Chrome + Firefox UI, Safari + iPad + iPhone UI, Eyes) gets unique pages
+# and don't overwrite each other in the shared S3 prefix or in
+# dashboard/public/ui_test/.
 def status_page_filename
-  "test_status_#{test_type}.html"
+  return 'test_status_Eyes.html' if eyes?
+  "test_status_#{test_type_label.tr(' +', '_').squeeze('_')}.html"
+end
+
+# Returns a URL for the Test Status Page, assuming we can upload it to S3
+def upload_status_page_to_s3(status_page_path = File.join(UI_TEST_DIR, status_page_filename))
+  LOG_UPLOADER.upload_file(File.join(UI_TEST_DIR, 'test_status.css'), {content_type: 'text/css'})
+  LOG_UPLOADER.upload_file(File.join(UI_TEST_DIR, 'test_status.js'), {content_type: 'text/javascript'})
+
+  versioned_url = LOG_UPLOADER.upload_file(status_page_path, {content_type: 'text/html'})
+  versioned_url&.split('?', 2)&.first
+rescue Aws::Sigv4::Errors::MissingCredentialsError
+  ChatClient.log "No AWS credentials set, skipping upload of the '#{test_type_label} Test Status Page' to S3"
+  nil
+rescue Exception => exception
+  ChatClient.log "WARNING: exception raised while attempting to upload the '#{test_type_label} Test Status Page' to S3:\n#{exception.class}: #{exception}\n#{exception.backtrace&.first(5)&.join("\n")}"
+  nil
 end
 
 def scheme_for_environment
@@ -469,23 +581,32 @@ end
 def generate_status_page(suite_start_time)
   test_status_template = File.read(File.join(UI_TEST_DIR, 'test_status.haml'))
   haml_engine = Haml::Engine.new(test_status_template)
+  status_page_path = File.join(UI_TEST_DIR, status_page_filename)
   File.write(
-    File.join(UI_TEST_DIR, status_page_filename),
+    status_page_path,
     haml_engine.render(
       Object.new,
       {
-        api_origin: CDO.studio_url('', scheme_for_environment),
+        api_origin: CDO.studio_url('', scheme_for_environment, ge_region: nil),
         s3_bucket: S3_LOGS_BUCKET,
         s3_prefix: S3_LOGS_PREFIX,
         type: test_type,
+        type_label: test_type_label,
         git_branch: GIT_BRANCH,
         commit_hash: COMMIT_HASH,
         start_time: suite_start_time,
-        browser_features: browser_features
+        browser_features: browser_features,
+        device_farm: $options.device_farm,
+        force_db_access: $options.force_db_access,
+        status_pages: status_pages_navigation,
+        current_status_page_filename: status_page_filename
       }
     )
   )
-  ChatClient.log "A <a href=\"#{status_page_url}\">status page</a> has been generated for this #{test_type} test run."
+  s3_status_page_url = upload_status_page_to_s3(status_page_path)
+  links = status_page_links(s3_status_page_url)
+  ChatClient.log links unless links.empty?
+  return s3_status_page_url
 end
 
 def test_run_identifier(browser, feature)
@@ -543,9 +664,9 @@ end
 
 def parallel_config(parallel_limit)
   {
-    # Run in parallel threads on CircleCI (less memory), processes on main test machine (better CPU utilization)
-    in_threads: ENV['CI'] ? parallel_limit : nil,
-    in_processes: ENV['CI'] ? nil : parallel_limit,
+    # Run in parallel threads on CI (less memory), processes on main test machine (better CPU utilization)
+    in_threads: CI::Utils.running_on_ci? ? parallel_limit : nil,
+    in_processes: CI::Utils.running_on_ci? ? nil : parallel_limit,
 
     # This 'finish' lambda runs on the main thread after each Parallel.map work
     # item is completed.
@@ -559,6 +680,7 @@ end
 
 # returns the first line of the first selenium error in the html output file.
 def first_selenium_error(filename)
+  return 'no html output file' unless filename && File.exist?(filename)
   html = File.read(filename)
   error_regex = %r{<div class="message"><pre>(.*?)</pre>}m
   match = error_regex.match(html)
@@ -642,20 +764,31 @@ def tag(tag, run = true)
   " -t #{tag}"
 end
 
+def skipped_tags = $skipped_tags ||= Set.new
+
 def skip_tag(tag)
+  skipped_tags << tag
   " -t 'not #{tag}'"
+end
+
+# Whether this browser config represents a mobile device.
+# Device Farm configs use "mobile", SauceLabs configs use "appium:mobile".
+def mobile_browser?(browser)
+  browser['mobile'] || browser['appium:mobile']
 end
 
 def cucumber_arguments_for_browser(browser, options)
   arguments = ' -S' # strict mode, so that we fail on undefined steps
   arguments += skip_tag('@skip')
+  # Skip tests that are covered by Playwright. The Port Cucumber to Playwright Claude dynamic workflow adds this tag once the feature has been migrated.
+  arguments += skip_tag('@playwright')
 
   # If --eyes is specified, only run scenarios with the corresponding eyes tag.
   # Otherwise, do not call tag(), allowing any scenarios to run which are not
   # skipped via skip_tag(). See `cucumber --help` for more info.
   if eyes?
     arguments +=
-      if browser['mobile']
+      if mobile_browser?(browser)
         # iOS browsers will only run eyes tests tagged with @eyes_mobile.
         tag('@eyes_mobile')
       else
@@ -669,24 +802,21 @@ def cucumber_arguments_for_browser(browser, options)
     arguments += skip_tag('@eyes')
   end
 
-  arguments += skip_tag('@no_mobile') if browser['mobile']
-  arguments += skip_tag('@only_mobile') unless browser['mobile']
+  arguments += skip_tag('@no_mobile') if mobile_browser?(browser)
+  arguments += skip_tag('@only_mobile') unless mobile_browser?(browser)
   arguments += skip_tag('@no_phone') if browser['name'] == 'iPhone'
   arguments += skip_tag('@only_phone') unless browser['name'] == 'iPhone'
-  arguments += skip_tag('@no_circle') if options.is_circle
-
-  # always run locally or during circle runs.
-  # Note that you may end up running in more than one browser if you use flags
-  # like [test safari] or [test firefox] during a circle run.
-  arguments += skip_tag('@only_one_browser') if !options.local && !options.is_circle
-
+  arguments += skip_tag('@no_ci') if options.is_ci
   arguments += skip_tag('@chrome') if browser['browserName'] != 'chrome' && !options.local
   arguments += skip_tag('@no_chrome') if browser['browserName'] == 'chrome'
   arguments += skip_tag('@no_safari') if browser['name'] == 'Safari'
   arguments += skip_tag('@no_firefox') if browser['browserName'] == 'firefox'
+  arguments += skip_tag('@no_device_farm') if options.device_farm
   arguments += skip_tag('@webpurify') unless CDO.webpurify_key
-  arguments += skip_tag('@pegasus_db_access') unless options.pegasus_db_access
   arguments += skip_tag('@dashboard_db_access') unless options.dashboard_db_access
+  arguments += skip_tag('@properties_encryption_key') if CDO.properties_encryption_key.blank?
+  arguments += skip_tag('@cloudfront_key') if CDO.cloudfront_key_pair_id.blank?
+  arguments += skip_tag('@contentful_key') if CDO.contentful_hour_of_ai_access_token.blank?
   arguments
 end
 
@@ -702,14 +832,20 @@ def cucumber_arguments_for_feature(options, test_run_string, max_reruns)
     arguments += " --format rerun --out #{rerun_filename test_run_string}"
   end
 
-  # In CircleCI we export additional logs in junit xml format so CircleCI can
+  # In CI we export additional logs in junit xml format so CI could in theory
   # provide pretty test reports with success/fail/timing data upon completion.
-  # See: https://circleci.com/docs/test-metadata/#cucumber
-  if ENV['CI']
-    arguments += " --format junit --out $CIRCLE_TEST_REPORTS/cucumber/#{test_run_string}.xml"
+  if CI::Utils.running_on_ci?
+    arguments += " --format junit --out $CI_TEST_REPORTS/cucumber/#{test_run_string}.xml"
   end
 
   arguments
+end
+
+def to_percent(number, n_sig_digits)
+  return nil if number.nil?
+  percent = number * 100.0
+  return 0 if percent.zero?
+  "#{percent.round(-(Math.log10(percent).ceil - n_sig_digits))}%"
 end
 
 def run_feature(browser, feature, options)
@@ -739,14 +875,13 @@ def run_feature(browser, feature, options)
   run_environment['DASHBOARD_TEST_DOMAIN'] = options.dashboard_domain if options.dashboard_domain
   run_environment['HOUROFCODE_TEST_DOMAIN'] = options.hourofcode_domain if options.hourofcode_domain
   run_environment['CSEDWEEK_TEST_DOMAIN'] = options.csedweek_domain if options.csedweek_domain
-  run_environment['ADVOCACY_TEST_DOMAIN'] = options.advocacy_domain if options.advocacy_domain
-  run_environment['TEST_LOCAL'] = options.local ? "true" : "false"
+  run_environment['TEST_LOCAL'] = (options.local || options.first_run_local) ? "true" : "false"
+  run_environment['TEST_DEVICE_FARM'] = options.device_farm ? "true" : "false"
   run_environment['TEST_LOCAL_HEADLESS'] = options.local_headless ? "true" : "false"
   run_environment['MAXIMIZE_LOCAL'] = options.maximize ? "true" : "false"
-  run_environment['MOBILE'] = browser['mobile'] ? "true" : "false"
+  run_environment['MOBILE'] = mobile_browser?(browser) ? "true" : "false"
   run_environment['TEST_RUN_NAME'] = test_run_string
-  run_environment['IS_CIRCLE'] = options.is_circle ? "true" : "false"
-  run_environment['PRIORITY'] = options.priority
+  run_environment['SAUCELABS_PRIORITY'] = options.saucelabs_priority
 
   # disable some stuff to make require_rails_env run faster within cucumber.
   # These things won't be disabled in the dashboard instance we're testing against.
@@ -762,7 +897,7 @@ def run_feature(browser, feature, options)
   reruns = 0
   arguments = cucumber_arguments_for_browser(browser, options)
   arguments += cucumber_arguments_for_feature(options, test_run_string, max_reruns)
-  cucumber_succeeded, eyes_succeeded, output_stdout, output_stderr, test_duration = run_tests(run_environment, feature, arguments, log_prefix)
+  cucumber_succeeded, eyes_succeeded, output_stdout, output_stderr, test_duration = run_tests(run_environment, feature, browser_name_or_unknown(browser), arguments, log_prefix)
   feature_succeeded = cucumber_succeeded && eyes_succeeded
   log_link = upload_log_and_get_public_link(
     html_log,
@@ -774,14 +909,21 @@ def run_feature(browser, feature, options)
     }
   )
 
+  # After the first run, we no longer want to consider the `first_run_local`
+  # option when deciding whether a test should be run locally.
+  run_environment['TEST_LOCAL'] = options.local ? "true" : "false"
+  run_environment['TEST_DEVICE_FARM'] = options.device_farm ? "true" : "false"
+
   # only retry cucumber/selenium errors, not eyes mismatches.
   while !cucumber_succeeded && (reruns < max_reruns)
     reruns += 1
+    retry_again_msg = reruns < max_reruns ? " once, will retry" : ", not going to retry"
 
-    ChatClient.log "#{test_run_string} first selenium error: #{first_selenium_error(html_log)}" if options.html
     ChatClient.log output_synopsis(output_stdout, log_prefix), {wrap_with_tag: 'pre'} if options.output_synopsis
     # Since output_stderr is empty, we do not log it to ChatClient.
-    ChatClient.log "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)})#{log_link}, retrying (#{reruns}/#{max_reruns}, flakiness: #{flakiness_for_test(test_run_string) || '?'})..."
+    message = "#{test_run_string} failed#{retry_again_msg} (retry #{reruns} of #{max_reruns}, flakiness: #{to_percent(flakiness_for_test(test_run_string) || 0.0, 3) || '?'})"
+    message += "#{log_link}, first selenium error: <i>#{first_selenium_error(html_log)}</i>" if options.html
+    ChatClient.log message
     $lock.synchronize do
       log_error prefix_string(Time.now, log_prefix)
       log_error prefix_string(browser.to_yaml, log_prefix)
@@ -793,7 +935,7 @@ def run_feature(browser, feature, options)
 
     rerun_feature = File.exist?(rerun_file) ? File.read(rerun_file).split.join(' ') : feature
 
-    cucumber_succeeded, eyes_succeeded, output_stdout, output_stderr, test_duration = run_tests(run_environment, rerun_feature, arguments, log_prefix)
+    cucumber_succeeded, eyes_succeeded, output_stdout, output_stderr, test_duration = run_tests(run_environment, rerun_feature, browser_name_or_unknown(browser), arguments, log_prefix)
     feature_succeeded = cucumber_succeeded && eyes_succeeded
     log_link = upload_log_and_get_public_link(
       html_log,
@@ -842,11 +984,10 @@ def run_feature(browser, feature, options)
     # Don't log individual successes because we hit ChatClient rate limits
     # ChatClient.log "<b>dashboard</b> UI tests passed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}#{scenario_info})"
   else
-    ChatClient.log "#{test_run_string} first selenium error: #{first_selenium_error(html_log)}" if options.html
     ChatClient.log output_synopsis(output_stdout, log_prefix), {wrap_with_tag: 'pre'} if options.output_synopsis
     ChatClient.log prefix_string(output_stderr, log_prefix), {wrap_with_tag: 'pre'}
-    message = "#{log_prefix}<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}#{scenario_info}#{rerun_info}#{eyes_info})#{log_link}"
-    message += "<br/>rerun:<br/>bundle exec ./runner.rb --html#{' --eyes' if eyes?} -c #{browser_name} -f #{feature}"
+    message = "*FAILED: #{test_run_string}* #{log_link}"
+    message += "\n(#{RakeUtils.format_duration(test_duration)}#{scenario_info}#{rerun_info}#{eyes_info})"
     ChatClient.log message, color: 'red'
   end
   result_string =
@@ -859,12 +1000,12 @@ def run_feature(browser, feature, options)
     end
   puts prefix_string("UI tests for #{test_run_string} #{result_string} (#{RakeUtils.format_duration(test_duration)}#{scenario_info}#{rerun_info}#{eyes_info})", log_prefix)
 
-  if scenario_count == 0 && !ENV['CI']
+  if scenario_count == 0 && !CI::Utils.running_on_ci?
     skip_warning = "We didn't actually run any tests, did you mean to do this?\n".yellow
-    skip_warning += <<~EOS
+    skip_warning += <<~WARN
       Check the excluded @tags in the cucumber command line above and in the #{feature} file:
         - Do the feature or scenario tags exclude #{browser_name}?
-    EOS
+    WARN
     unless eyes?
       skip_warning += "  - Are you trying to run --eyes tests?\n"
     end

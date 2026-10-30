@@ -1,4 +1,5 @@
 import React from 'react';
+
 import msg from '@cdo/locale';
 
 export default class CreateSomething extends React.Component {

@@ -1,0 +1,98 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-03-11T01:24:07.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "designer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "start_sources": {
+      "folders": {
+        "1": {
+          "id": "1",
+          "name": "sample_mood_boards",
+          "parentId": "0",
+          "open": true
+        }
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n<head>\n  <title>Homepage</title>\n</head>\n<body>\n  <header>\n    <h1>Welcome to My Website</h1>\n    <nav>\n      <a href=\"index.html\">Home</a> |\n      <a href=\"contact.html\">Contact</a>\n    </nav>\n  </header>\n\n  <main>\n    <section>\n      <h2>About Us</h2>\n      <p>We are a small team dedicated to building simple, elegant web experiences using modern web technologies.</p>\n    </section>\n\n    <section>\n      <h2>Our Services</h2>\n      <ul>\n        <li>Web Design</li>\n        <li>Web Development</li>\n        <li>Consulting</li>\n      </ul>\n    </section>\n\n    <section>\n      <h2>Latest News</h2>\n      <p>Check out our latest updates and projects on our blog. We regularly post about technology and design trends.</p>\n    </section>\n  </main>\n\n  <footer>\n    <p>&copy; 2025 My Website. All rights reserved.</p>\n  </footer>\n</body>\n</html>\n  ",
+          "active": true,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "contact.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n<head>\n  <title>Contact Us</title>\n</head>\n<body>\n  <header>\n    <h1>Contact Us</h1>\n    <nav>\n      <a href=\"index.html\">Home</a> |\n      <a href=\"contact.html\">Contact</a>\n    </nav>\n  </header>\n\n  <main>\n    <section>\n      <h2>Get in Touch</h2>\n      <p>We’d love to hear from you! Please use the form below to send us a message.</p>\n      <form action=\"#\" method=\"post\">\n        <label for=\"name\">Name:</label><br>\n        <input type=\"text\" id=\"name\" name=\"name\"><br><br>\n\n        <label for=\"email\">Email:</label><br>\n        <input type=\"email\" id=\"email\" name=\"email\"><br><br>\n\n        <label for=\"message\">Message:</label><br>\n        <textarea id=\"message\" name=\"message\" rows=\"5\" cols=\"30\"></textarea><br><br>\n\n        <input type=\"submit\" value=\"Send Message\">\n      </form>\n    </section>\n\n    <section>\n      <h2>Our Location</h2>\n      <p>123 Main Street<br>\n      Hometown, USA 12345</p>\n    </section>\n  </main>\n\n  <footer>\n    <p>&copy; 2025 My Website. All rights reserved.</p>\n  </footer>\n</body>\n</html>",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "mood_board_1.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson6-level1-test-2025/uuid/6796e678-0ead-42f5-a084-ce71b7141e2c.png",
+          "type": "starter",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "mood_board_2.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson6-level1-test-2025/uuid/9b5809b0-a5a9-4b32-95cc-1bf7a83b76a7.png",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1",
+        "2"
+      ]
+    },
+    "long_instructions": "## Do This:\r\n\r\nFront-End Developers write detailed prompts that explain how their web app should be styled.\r\n\r\nComplete the `prompt.md` file to plan your prompt.",
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMpO5i6w6Xr7PNjGUn97\nv3HGVYZAxsXwYTumGKpdwmtvLD3pnuF+vRWFQiPflkKr9Drk6KB//d9Mr8vG\nfLkmDLEp6hl9i2umZxwIZe0g1QhFjKh7l2GtXshzc4a6dOOH+/9guTI2k1e/\nKPK2sZ6rFU6FqeLCjR0ffHneQY0KQTHeQU2LRM1v1q4yg5W3tA8kNzJMaqcq\n0vHiRNAIX76RztztbEBavXvkdiIRQ8G30EY+/82bqlkGAHof0cY1OQSCQ0m6\npY3Ok/IGIluMHsfYMyIVh0hfcWglhbWFrBE161q2UcIShrBrTL3k6zyjAHBp\nCQujCk3b4QHYkIKGTuQCmGJQj0LWHKfulVkV6WAT5W3Suk3fmCZYU5ycozW1\nE0Je2wmO7OwmVGQbR9xZgceSxpQjOnsmcyjLZfWVrcRrVG6CyRWuSu/ZlxeC\nwqH0INUufVYnd9px5NFfAMZw40PRQzj0/OF/RGDv5ztCdTEswqw5HnXglDpT\n7wcH1NgGVX47kOPLcZjDGRgIauWO3EMEVASj3TA81NmSl7OfTPFkqv60fqPc\nIAHAuUi+vT2+iakxDUhE1ihGk9WxJ/JWYD12IYilTVpfu45kFIyFm01b3adr\nWimg1X5VoLuHeYHWRKZIFiv8bPZUf/tYDU0U3L4gs47kjB3A8GrqWYYp57Mg\nlKJO73a8Z1BMq2gbBRurNIsP8HX4kbRMblBL0JbTo0rejNbJv8qePX+/gY7C\nWEVLMls+StHX9ZNPnMtH8iC5LR1HiQN7TfVZNS5i9KGPsEfIeWVNhrF82aF7\nBFvl4kEVkchEPtSUTIr7ioAGSczAd4uW+lMvBiIuM52VSMDp7V1wozSnaJGG\n6uEWUIiaS9nTL+tcz5P4Gh0yTjS6aGqd0y2iYOqI0bPpS9wYhxfOnPcFTS98\njetXrByrb7FEWtWuzqFIG57SI4C2ycrhuX61QGTpIpLHH1EMAyUHOH47iA82\njaf3T+QwWa2FzktPrq3LufUTwueEeb9wr2A5n42LGaOw6gYxNlIBUJI57oYI\ntxDzH492T7s7vgATQ/p0aw6NZRTlKbZpuIsYYg7yjd14iCnQRTFGTkkoNjIe\nwpDudTifYLZVIpbOYrfvRQK+7WLh4T5+5rwprZaJZNbgJCm8qjRaSqic3SDF\nwhIuRAF4yWijqItvyvQuSFT0atemdO8k4k2F0ECP30zGStaTA18UoFfYkOFF\nEGiEYfrB8vHlc5HZohyZh/Z7K0qkLtpsOcDrXJge2fNao8MTJcULFWka8qwx\nb7mhMTteD/v7q3OhlsMZ6AeapX92FWC7q24GvW0LMmp1HYCJ+XTujTh7fbiz\niQ62q6BDqhrOkOQafi5ZJk3DehHG3L89uaNcScVjpBKa7qFyGfugiBia56/x\nHX5AULQDqb0xg6sH1jjbND+o1ZLnQYe9FXH36vgLTBvgH1Rt5di0zj1Cl6xf\n0JutJSS2IiGH/RnOFxRQ/flrHjuzWvwlKnQ9mcSt9AI6rIP5/ry7UVeamDKt\nq+3qEowxEzWQ45QKt03iBlDiz4J4OS6zKWu4zaPGLyZpHWHGcfV/zQ0NXgtL\n61rwF6CscZGBpKyysTRTyButeLtVk5GT0bmm+lpKgrafNVRdxU2gfh+bt7ju\nLaXwaAVCmx2NfWgdOjMsU2t+uxfU6N+C5DvpZS0wChlKU2rnyUeXBEPU5Tji\nRcl9GcVbxYZqUyqjj4aDAr+NsgbP2eU+VSSzcbeD7xN70Ku3Hk8oGlT19DTO\ng4Mx6xvs0qrZvKTl96PPOGdnAcaKyBQJLRIHkPWsXP3dT1U3ZdzMgeHFpslu\nELxEquvLf9211mp4mm31oz6AAqT65ySyK388PdOEWREGf4RkGTMZhTUT60Se\nKca47Dt8YmIy/l+p0h//zIumkIJvHOrwGbyDZadBM80HqAIeHKN3k8VtoCU1\nIz4dW/temxU40OIby51BxsFvE5HAYVUxPOMFSmhBABvf+GmLS7JVKm7KnKBE\nekyxEmDTGmUzHzB7SymvvwXLdj1pe5ShToLKPqDKExDvnZc9WDbiXVh8oTTc\nb1ribeyjDoE2urDiMbQqTBmuaGqY4A1VqZC2C4eyEJB3Hf6s4Z9NBgO4X2lZ\neRQDzN/8HmvS1ezQnSaNB53Qh2seT4O8nyHMWo6nTyNjKAR1X6epuGXSbJiI\njLC9Hz1pkMq10eU4O45Qq+fhyddt0ftThrHy4FG+aYosSSIS48fVdsqnw07P\n1NrjVMaBSz9x6sZXaP71CpfjmBurYIDgpBrDlyzXxV9SeDkvKW3aiIKlx1Vp\nIHmkVHfOpGu/UQbRZGfHpEnMIdQJ/HZwnDhs0Kpt15XB0koDM6oGXVpt5HhC\noTaoURKLKqpUDzhxCrEYvXglmuuorBK2l9DlMm0hmbIAnGkUKcrXFmi27sPU\nT0HyeKdEMG+s3piWePw6kxcCW3FP3R3QlEgKr5MZFC+owKwvjn1oyD1Kx3df\nH3k4r1CotbY+NYoJIY8JIvDVON58LT4xQZkT2ScokE+qBpE9lR7GjQUIV/7t\nWlhtoCklQcu6f33g/APjlqQNW0QnEAgGfLUw7tGNg2/DSkJx8UmDRa35t++h\niZtPJzCpQ8s7BxlcSAYNguhbuYhNMpziMSr5b4EGB9wfT7+TGIAgMLvUY2TY\nQpabi71M1vLmEluW6cWZ9E+kJ/XQPRJJ0JWZrkl4ihV+y4qVX6ksSwduVdkl\nucGJ/D7NPjCtzhJaJPGdfcCsZWZuvJGPBOzQGStoEPNik5Ekx0WUF5d1NHck\n9GAIoAj/5bCLfYe3rhNskVl1iohYJ5bK9yQ5IPdzKAkyVJz/Gl8JzxyczD8Z\nWJN2vFyQcPMfvlB5R53GcB22X21ldNFg7GOE5YNcTmoN5k+wqWXC3hcg6850\nJwyxOGLcgPAyEtV7fzQJd6d335yXqLetUL+RRnLu5hQu1j2LK2eKvuAhKfV3\n0i0qmt3tmc23Bsg6XxXIx6fecukWe2bD27vBx2kpBrjRTQXU9xbvjFtLTfU1\nPDyQmCz5AfNQhr1IcxWoKGSmC3X5Vp6om/1uGyZw2n2iHeX+P9yAz4aKhmUA\n2pqVf75luHk/lRFDFUD/XImQB79KRm9cT2v3mhLw6+9sUn0PNw0liriKyJnO\ni1UdargIEVtEK4H641ncEB/lG8e0bVhARWzCOmN5Bae9WGxVRU9tRPlPFDkx\nIUTWgLUU/kNfbEvxWPnChfHlX/WLYSvV/6YHQI1g/RfV6BSGgpS4s+8FIWRq\nbkkkMNZ5VXgIakuxBI3kVBckcAkU+vDlOvhA2Dg4okz1/jmJoHihN5rq1DcK\nX8FBssmFuu85ePFYPvAXr8tOoYVxJ/Ij3pTn+iJ1vHQxHqCrYCPndaV6CUz0\nsxiR2ZpHEi7Tvg5a0wLNfU5vWOJQa1YbXfkFFt97SG9ynF2hWLc5j6KacC+K\nnCA7Abiz9SkswQ/70+cINTn3vU8tWSmnQVA358AVMNzXLCGHzG8MHa1RJEx2\nudeQMqqDYQD+22w6Q1ZAjLc5sjakvgHN7vwzF+U5Y+ZxpajkHbtxJZmSdVt0\nHioldDNegvlu3iBNhb3kvYbxQNzHnB0pF24b329r/maj6WIBFEsaqDmQSIKn\nnnt3tdaChX5u9YqnKkoUIi11YadTSWNjggguC5BAz1Il/efOb8X2UTRYZ9ST\nI1UlYRNI//t30+4pxhZb2Juxa8NxtoO2lXCRR6L5NQxv4w4f1z9UH9pIq/5b\nI4VVbk0d7xSNZJnojIKy9L14Q3JBeSpAhRxyan3pEklKm3cwtLUaco3UxSh+\nspGxSQ4Xj1WKcY3BL0wKTU5Wk6GfRK7PDr6sbJtT+8N0Kj2IGowlfLbYijji\nw2LHTq5Qxf1B/1Vt0bAd36uqf7yaYWTcO08Mv2ePBzVIPepAUmR7OqPL/pqv\nwVZnBaSkD8Ez5G+2ZRjdmgtEdKqCDrlLCzdXCzwEYoeZOUrasUmj63ymT+Qg\n/PfiGwcNjdzJq1q94ZqTgSBSj1uvryoCFStfxklMOiDUveuaPTMvl5apIL1N\nUf5f7d5wPPKehFgZ9AEtb1jmhn0nsQrJ8/ITdfiKAM7XnaAuKLwFEtFzmJYz\nefCAAjgiPMASfDsQ1ccs5DVvqhYXigU/dve7S10LZFurG2J4YdKIqSrdk96f\nNU6FolfcnBQIwLGUvXxFP0kYndJ4t8XKZ6UCWE+3djp5oxW01xFEyCEsWN/D\nuSlg2MKQa0y8JQzcDv2rddp5Wru2YxyTRIuxJ+3xVS+Y0BlesSf6HCTnVxoc\nd3D7Zu0pQXD7+B6Etng4pA5MwN/Zh/hQO6WDxUXE5lY0rhTkyDkiYlKItWhp\n7uuy511WLYQDTBesm5GovAy3QxFVOYA7WkZrrEOCBOecPby1XdeyVsOk+ge5\nZsh0mdFKQWdB5zRx3+USiAgEscINajE7bgOmfA065KYJeULICudEXXHlu9hd\naAJE99Ew5s1l0noxJq3VdOqRi7zmBCYPa7F+ZjWEpo/kmfnrnzsYX953UL/S\nVW+10IX5dKng73qPFuosdUbtf6peiY/2eucWIpVUnIP99Bx6Gl8Rls8GqFiF\nU62cIFXwW8cvioB0mGCTqaoNK6Ewd1mVi0+vOyT4YwZNEZjc1fXTiLcIwGFu\njaZeKOx3vwjzZn51h6/mLRQrROb95KVbVGHOLMQfq5gKEkneFvFSFzEJLZga\ng0RJeYrjcSm0pEpcu+y78fRxmwtu9olySBiY66TV2sTr+Xj2ZqolYFtFCQys\nqhX2ll5K3OkGVp00BehMAqiPZ0zUSuz6g/my78RfOW+bd8/z7f9R4INazAtz\ndsvYoz1Zg/59+GWqVaxTiyH3EifQWEZ4fHTUQP5CwMZxtieZDsooubHtoOSU\ncvxGauaCIuXuSoOsgJCJ3Jtupp67hPhA+/7j5lXbwYtS9r3hrjKsYKcSOxDg\nfWpK4N43TiQC9KMjcMhp1yaoETAsuds2S+4/fwIXWf037ZykVZDm4GdpR9PB\nyrJ4owp1BXB6F3FLMWLZVPaJiZVBd8YOcqNG0PBboKwRMA0ZzRr1PwA0cY8o\nGPAAp/c58HKcjMajtW6G1AqwywHSKYIOOJgS6m1HSdWLtOvNwI/aDY5eyHvu\nJiGEUHJ0k3xD7B8keMfD0CLqM8W8SFQiMTWnVGnGAddDAoQksjK8X9LQlYjN\n+mmDF3TMCYzjnn5QXAJIPmDZuoU+wCG2crsCPXxa6xNDPfKwc/H7GXYN04wI\n/bkIk48Nj+Cwm4PDD9/gWiBFPwjm2nfIvkZcLBqS03BXXTkDts53AMkKRwCy\nc677XVoVVzSd1SBY+V+mZXRGgICKETfXa6MQUBRT08f4idnMEsyeT2ww0vGf\nIhVISa8TJth0QAAu20szNjklsT7caRZ2wVVGtLvK6Mm/veLIqz0e8Pc0qmpE\nJ2yPijvnfroQ7qtnBphMTjRMZgqiyLn7i234Pn4A0ADI+Ae1ec+AneXl+8xF\nKDHBGC2Lh5zpoBLKMx2t4ec9lIotdwks0dlFIl2YGOs4F2Ui/y/fXpPEGsCY\n1IbB3ddaDj9Hcpd+/5lHv+SCtqWNcDpGbstjoYmn7ffYlsL28lhWKxXYHqAo\ntpt03mwJkCCyKM3hdbA6hHIjpPMMPjhTUf+Oe/VHNKBfd/vEGC7zmK7A7tI7\nCwBxgCsEBPOJv+4GrSfShhvRWISNQiTzhda3cvl/XYFNkgkxSxSiuVzVD7qH\nZgAUk/foJ+EWZaM8MxoMozd1OKiPhcQ8zHHAbDvooToWrbQ0LXdlDV1sQ5+P\nV07SSf4WJJkZESDd1H2bdiFr1eQNUPTiIwJlAHpxq7yDV5M9qzIyTRRTd3TX\na9tp0IRuJQFYw321wunDN/pVSw0zYAgroPv+NKQmqJHXcPOnBVQdNfGCAcDG\n3mEvnsOw8eP8GIsCV5zyy+siTSfeWLtkioeenjhHEOw5BgFxpWTV3jfF3N7q\nZ1R2KkEkr1p3OHVwGn0I251FIGBFvP7Vk9iZgjDwgfHOEr6EAE5NSJj5M55J\n/iM5MIzCv755bYLLBmajazB17rfx7x4smHt1TCuKuXC/xNISzcd79EmEWMTd\nhj1DoQFJgltHtA0yWPnWX/rpQ8dSBmMM8HZ4wWx7+PjIIp4twATU82gquW26\nDDxNc3ZrFVjilbnA0CJmJREzM1ng7WtcxoHstm/vlU5CRopz64n+9/lDZuGk\nYwOdkl7q7199RYL9GRPFq6baiHthoU90+SoWpkgCNEpgBA8FEO1CpdKifp5C\nBidyeBdRqag5Pk0UlXc0PTyvi5qntHS6RimW9Y1YcetmTRv0iLSrP0xnHWi1\nMdLK2ZQzhSvbO+yqlellpS0D1uOX38Fk4HgAcTEJE79vV5zXHt1dtZqmvZ+Z\nAIV5xWVvFlqMjwn0xznHEeCvjEm9k02eXi97hW4iBaBKZJUyWTUKYhCwQH40\nGic+3XN2ChrUVQbDysZpmvFJrUzfbkcmQeZfIsMjv6q5GLiLZqNZkjR7i0Xk\nbVoQShwd+y8QV9aEp5psHFLcOuRJzS/juucO69OUptr/CDknil6BV3nHC8V5\nBhI6dEYGaRaQ2nPAHcvay9uUrn3+DYrLmQmeMxMELv6qpbwrk2R5Urgd9blw\nDoaFSiH+huF6mK8KUzwdMjHRzHJAwydvJVkEkkkpPUeLwKbva8+P3uFyCfII\noVJ4XHXW3EjpHIXGKeb/Ly3aU4x00xcmOw4cKS1wzO+Bn/MVPOV12lERj4s8\n1VojgHYHuAHqASFZ3yUiUkF0/sKSYDR8sreV3H5BBubHTGGNsSgGddsEnL01\nA3fOKQ6U911bkA/SIgwPOgp8pbRaj0OEfD6klp26MlmQ/eNOD1Ddokl6heBC\nBNxjVfSYrWXR7qe/aMr3oaU4ouHLlYGqYY0yFuw8Uu4bcu1Ovhx1I/ygJTea\n7eBpxr62FDpScvRw2G3M+IjMjCnA9X5TfiE7NJscUF/13ot57JrVd6Nw7M5L\nIQX19qsBKWXTzlraODmC7H0RFVF+GnycR2sqsG4pfSBr2ZuqFzUDffR8n7uc\nhqBXm0dQJs3MS+QxxCklOmy9bc5+Xcu348sftOJRHzQbO+k7ZoKTmJ7epBlk\njxurtzy0vvgHgyLeTbgL5BWxm4KGCEiF/KenjJuBHDbjUDROdZeJ+X92HK6I\nb1A8GJxh0Jvp5EGb2mIhUGkmnqJ2TYghJw+J+srHMF7LbUNFKpymhY+w6fjl\nrMEnwYPFpGE5h72m+IfpdDHhiPqwWJiDisRK4tTPI3HdJ56Ytl+FGLLotnLI\neCyyFV3NGOJeyv5ep4zGLBfrQlSoq4YI9MbM4kKch8str3NNj6DzleshJMJh\nvTaXmZkJ55K/pYoqL8+6RCAykq3gYr1JRTY20M4LorjS/vabFpS13YpDhW9T\nmZtBhFoE2opB7H38bpfdZjlGDRSFQQGITXkFyWybTjqDQEIlK7cheISOnejW\nW725eLYRLCZ7KzT4nY3h8/83a3CjpMzR6fp2Wa7mAkedIIVTfLVTNCW9MV07\n7LFyLvOxT5PvIZDbzFZYOYJIcpnO3FClyNT4kBQGf28I/Ndj26YDE9JhRBwV\nHvV/SgyQpAc89e/A26e26+V9wLwcgXTgSgz/aAUR6T4k+QcWu+/Xiv5Vy1uv\nPYowdO/zy+VvmSJ8BGn3MHifzQ9OTTbU8tPmwQbDp5SOWHaM+u3q3o0bLqkG\nz7RxqsNP8VEaMZH3IpN9JyqOsYQS2OGEpDFzbhhzlOFlTCMHgINGAMLIzfHW\nVnQ6BLVb8kbkJ8Xly96BRkWTuHiobbqc8VHg6gHm71wFWFAuN4Jjc0DDCGt9\njgNGTujCernmmKAS3Ex5KlOcN7DPJaPWAIwHrBBKoK+L/VZJE+LW+vM9y6n+\n5ZppU3lU5EFnP2G586MQD+Nk50mglfOjOfRBPwxFBVL8C84vCBIvYnjiu9ME\nPzZWRbGVCJTc/RV+OnGnPr5LbK6solW6meqE5zoszpgdJr2B0qhr1W0J269p\nvT/AHrmqq9i5xzfTB05HIoXR2udYBsppT1Lxgl707pd7/UDwU9hozKnblfoE\nlSWq2XDIptsozYHEHOH57D3vjLvG7fCEpkAlwclCWUKLsfl11h5nU6ZwRHUQ\n3KFIReCTxMaS3+E8dEPArmtGD7Yjedaj+zj9B9FSBVFnwxrWTFhx+5wQBi+K\nLl5mhclsoScIMDtROQ/auQJ/XYQ2wZj91JZzc/Hu+GsK6ON57IwyBeLxKbbL\n2bME+ATHTiGYuh7i05do3zrEc17Fc75b0EAPVs+71zqxHIH9IHnX/LhWepFd\nErOnYRvmGCMXn91bec6UPG96JRGy+UK8Obf7doBGWfXfJKEEBqB7fC3knfwJ\nezpNVozp0moswzonkByfnyJvPMBkvZ9fRSlW/k69E/d6Rsn0wr9W6ATCq7C1\n3HYoGjsdynnST348VGvV+CtXXlRsy/zccAruYk4Dj4/qmx7c0dhZIed03Wu8\nKEnZ4NO+U7WUk2m9RJV8/NEeEaFInGu3MFXZ/9b09tE3HrzVxBi0SvEp6NFU\nWlqHnOl4pZ/JKOD2QXiftaCMC1rrv9+YDo7G8yrbNVi6BbHD6X/Ja+HxW4Fl\nb6NuIO3uX6DJBkdDYCsh8A==\n",
+    "name_suffix": "_2026",
+    "teacher_markdown": "Have students read over their planning draft and try to clearly picture the fully styled website in their mind.\r\n\r\nIf their requirements are too vague for them to visualize the colors, fonts, and overall tone, encourage them to add at least one more specific detail to each section.\r\n\r\nThe clearer their styling requirements are, the more likely the generated stylesheet will match what they are intending to build.",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "project_template_level_name": "ai-generated-design-lesson6-level1-template",
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-03-11T01:24:07.362+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson6-level5_2026-v2\\\"\"],\"cloned_from\":\"ai-generated-design-lesson6-level5_2026-v2\"},{\"changed_at\":\"2026-03-11 01:29:24 +0000\",\"changed\":[\"initial_view_mode\",\"long_instructions\",\"teacher_markdown\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-03-17 05:28:49 +0000\",\"changed\":[\"project_template_level_name\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-06 01:52:39 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-09 17:04:29 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-10 04:06:25 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-10 04:07:09 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-10 04:09:45 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-10 04:50:26 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-16 01:19:31 +0000\",\"changed\":[\"initial_view_mode\",\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Weblab2>

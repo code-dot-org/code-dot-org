@@ -1,0 +1,54 @@
+name 'pl-ai-101-V2-mod5-fictions-10'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Addressing Concerns About AI-Generated Media
+
+As AI-generated media becomes more common, it’s natural for educators to have questions about how it may impact students and classroom learning. While these concerns are valid, they can also be opportunities to build students’ critical thinking and digital literacy skills.
+
+Below are some common concerns and ways to approach them in the classroom:
+
+<div style="display:grid; gap:16px; max-width:90%; margin:0 auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color:#292F36;">
+
+<div style="border:2px solid #8C52BA; border-radius:16px; padding:16px; background:#FFFFFF; box-shadow:0 4px 12px rgba(41,47,54,0.06);">
+<div style="font-size:20px; font-weight:800; margin-bottom:6px; color:#141414;">How do students know what to trust?</div>
+<div style="font-size:15px; line-height:1.4; margin-bottom:8px;">
+AI-generated images, audio, and video can look highly realistic, making it difficult to distinguish between real and manipulated content.
+</div>
+<div style="font-size:15px; font-weight:700; margin-bottom:4px;">What you can do:</div>
+<ul style="margin:0 0 6px 18px; padding:0; font-size:14px; line-height:1.4;">
+<li>Encourage students to ask: “Where did this come from?” and “How do we know this is accurate?”</li>
+<li>Model how to verify information using multiple sources</li>
+<li>Reinforce that realism does not equal reliability</li>
+</ul>
+</div>
+
+<div style="border:2px solid #8C52BA; border-radius:16px; padding:16px; background:#FFFFFF; box-shadow:0 4px 12px rgba(41,47,54,0.06);">
+<div style="font-size:20px; font-weight:800; margin-bottom:6px; color:#141414;">What if AI is used inappropriately?</div>
+<div style="font-size:15px; line-height:1.4; margin-bottom:8px;">
+Students may use AI to create misleading, harmful, or inappropriate content.
+</div>
+<div style="font-size:15px; font-weight:700; margin-bottom:4px;">What you can do:</div>
+<ul style="margin:0 0 6px 18px; padding:0; font-size:14px; line-height:1.4;">
+<li>Set clear expectations for responsible and ethical use</li>
+<li>Discuss real-world examples of misuse and impact</li>
+<li>Frame AI as a tool that requires accountability, not anonymity</li>
+</ul>
+</div>
+
+<div style="border:2px solid #8C52BA; border-radius:16px; padding:16px; background:#FFFFFF; box-shadow:0 4px 12px rgba(41,47,54,0.06);">
+<div style="font-size:20px; font-weight:800; margin-bottom:6px; color:#141414;">How do I talk about this with students?</div>
+<div style="font-size:15px; line-height:1.4; margin-bottom:8px;">
+Deepfakes and AI-generated media can feel complex or sensitive to introduce.
+</div>
+<div style="font-size:15px; font-weight:700; margin-bottom:4px;">What you can do:</div>
+<ul style="margin:0 0 6px 18px; padding:0; font-size:14px; line-height:1.4;">
+<li>Focus on questioning and exploration, not having all the answers</li>
+<li>Use examples to guide discussion and build understanding</li>
+<li>Create a classroom environment where students can share ideas respectfully</li>
+</ul>
+</div>
+
+</div>
+MARKDOWN

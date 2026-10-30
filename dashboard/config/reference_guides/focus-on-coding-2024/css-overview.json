@@ -1,0 +1,9 @@
+{
+  "key": "css-overview",
+  "course_version_key": "2024",
+  "course_offering_key": "focus-on-coding",
+  "parent_reference_guide_key": "css",
+  "display_name": "Overview",
+  "content": "CSS (Cascading Style Sheets) is the language used to define the style and layout of web pages. You can find more information about CSS rules at the [Web Lab documentation](/weblab/) page.",
+  "position": 0
+}

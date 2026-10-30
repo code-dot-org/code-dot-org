@@ -1,0 +1,10 @@
+name 'game_design_practice_lots_choice_course-e'
+display_name 'Lots of Sprites Practice'
+description 'Great work so far! Choose your next activity. Complete as many as you can. Keep practicing with events and groups of sprites!'
+
+sublevels
+level 'game_design_practice_lots_choice_a_course-e'
+level 'game_design_practice_lots_choice_b_course-e'
+level 'game_design_practice_lots_choice_c_course-e'
+level 'game_design_practice_lots_choice_d_course-e'
+level 'game_design_practice_lots_choice_e_course-e'

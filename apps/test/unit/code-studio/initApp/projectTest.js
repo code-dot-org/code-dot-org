@@ -1,16 +1,20 @@
 import _ from 'lodash';
-import {expect, assert} from '../../../util/reconfiguredChai';
-import sinon from 'sinon';
-import {replaceOnWindow, restoreOnWindow} from '../../../util/testUtils';
-import * as utils from '@cdo/apps/utils';
-import project from '@cdo/apps/code-studio/initApp/project';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import {files as filesApi} from '@cdo/apps/clientApi';
 import header from '@cdo/apps/code-studio/header';
+import project from '@cdo/apps/code-studio/initApp/project';
+import {CP_API} from '@cdo/apps/maker/boards/circuitPlayground/PlaygroundConstants';
+import * as utils from '@cdo/apps/utils';
 import msg from '@cdo/locale';
-import {CP_API} from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
+
+import {expect, assert} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+import {replaceOnWindow, restoreOnWindow} from '../../../util/testUtils';
 
 describe('project.js', () => {
   let sourceHandler;
+
+  window.dashboard = {...window.dashboard, project};
 
   const setData = project.__TestInterface.setCurrentData;
   const setSources = project.__TestInterface.setCurrentSources;
@@ -196,19 +200,9 @@ describe('project.js', () => {
       expect(project.getStandaloneApp()).to.equal('applab');
     });
 
-    it('for calc', () => {
-      window.appOptions.app = 'calc';
-      expect(project.getStandaloneApp()).to.equal('calc');
-    });
-
     it('for dance', () => {
       window.appOptions.app = 'dance';
       expect(project.getStandaloneApp()).to.equal('dance');
-    });
-
-    it('for eval', () => {
-      window.appOptions.app = 'eval';
-      expect(project.getStandaloneApp()).to.equal('eval');
     });
 
     it('for flappy', () => {
@@ -440,7 +434,9 @@ describe('project.js', () => {
             });
 
             it(`from a script level`, () => {
-              setFakeLocation(`${origin}/s/csp3-2019/lessons/10/levels/4`);
+              setFakeLocation(
+                `${origin}/courses/csp-2019/units/3/lessons/10/levels/4`
+              );
               expect(project.getShareUrl()).to.equal(expected);
             });
           });
@@ -466,7 +462,9 @@ describe('project.js', () => {
             });
 
             it(`from a script level`, () => {
-              setFakeLocation(`${origin}/s/csp3-2019/lessons/10/levels/4`);
+              setFakeLocation(
+                `${origin}/courses/csp-2019/units/1/lessons/10/levels/4`
+              );
               expect(project.getShareUrl()).to.equal(expected);
             });
           });
@@ -1063,6 +1061,7 @@ describe('project.js', () => {
 
       // change getLevelSource stub to simulate changing source code
       const getLevelSourceStub = sinon.stub();
+      getLevelSourceStub.resolves();
       getLevelSourceStub.onCall(0).resolves('source code v0');
       getLevelSourceStub.onCall(1).resolves('source code v1');
       sourceHandler.getLevelSource = getLevelSourceStub;
@@ -1084,6 +1083,7 @@ describe('project.js', () => {
 
       // change getLevelSource stub to simulate changing source code
       const getLevelSourceStub = sinon.stub();
+      getLevelSourceStub.resolves();
       getLevelSourceStub.onCall(0).resolves('source code v0');
       getLevelSourceStub.onCall(1).resolves('source code v1');
       sourceHandler.getLevelSource = getLevelSourceStub;

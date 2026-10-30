@@ -1,0 +1,13 @@
+name 'code-connect-web-lab-multi-survey-2026'
+title 'Check Your Understanding'
+
+question 'Which part of building a web app felt hardest?'
+
+right 'Getting started'
+right 'Structuring my pages' 
+right 'Styling'
+right 'Adding images' 
+right 'Something else'
+right 'Nothing, I didn\'t get stuck'
+
+allow_multiple_attempts true

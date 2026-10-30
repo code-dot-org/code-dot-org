@@ -1,0 +1,57 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2025-12-16T15:46:42.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "**Snippet 1: The Core async/await Structure (Success Path Only)**\r\n\r\nThis example shows the conversion of the L3 Promise chain into the L4 `async`/`await` structure, focusing solely on the success path. We intentionally leave potential errors unhandled to demonstrate the need for L8.",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "script.js",
+          "language": "js",
+          "contents": "const apiEndpoint = 'https://restcountries.com/v3.1/all?fields=name,population';\nconst statusElement = document.getElementById('app-status');\nconst outputElement = document.getElementById('data-output');\n\n// Declare async function\nconst fetchCountries = async () => {\n\n  // 1. Send the request\n  const response = await fetch(apiEndpoint);\n\n  statusElement.textContent =\n    `Status: Response received (${response.status}).`;\n\n  // 2. Convert response to JSON (array of countries)\n  const countries = await response.json();\n\n  statusElement.textContent =\n    `Status: Success! Displaying ${countries.length} countries.`;\n\n  // 3. Build the HTML output\n  let htmlList = `\n    <h3>🌍 Populations for ${countries.length} Countries</h3>\n    <ul>\n  `;\n\n  // Loop through the array of country objects\n  countries.forEach(country => {\n    const name = country.name.common;\n    const population = country.population;\n    htmlList += `<li>${name}: ${population}</li>`;\n  });\n\n  htmlList += '</ul>';\n\n  // 4. Update the DOM\n  outputElement.innerHTML = htmlList;\n};\n\n// Run async function on button click\ndocument\n  .getElementById('fetch-button')\n  .addEventListener('click', fetchCountries);\n",
+          "folderId": "0",
+          "active": true
+        },
+        "2": {
+          "id": "2",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n  </head>\n  <body>\n    \n    <div id=\"app-status\" style=\"font-weight: bold; margin-top: 10px;\">Status: Ready</div>\n    \n    <div id=\"data-output\" style=\"border: 1px dashed #444; padding: 10px; margin-top: 10px;\">\n    </div>\n\n    <button id=\"fetch-button\">▶ Get Population Data</button> \n\n    <script src=\"script.js\"></script>\n  </body>\n</html>",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "2",
+        "1"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-12-16T15:46:42.617+00:00\",\"changed\":[\"cloned from \\\"aif-s2-u5-l2-example2\\\"\"],\"cloned_from\":\"aif-s2-u5-l2-example2\"},{\"changed_at\":\"2025-12-16 17:50:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-12-16 17:54:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-12-16 17:54:34 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Weblab2>

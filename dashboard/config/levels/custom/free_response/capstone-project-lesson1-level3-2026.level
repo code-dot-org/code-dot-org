@@ -1,0 +1,27 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-06-30T20:25:31.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "title": "Benchmark A Reflection",
+    "long_instructions": ">**Reflect on your app's intent, scope, and system.**\r\n> 1. Who is this app for, and what problem does it solve? What will the first working version include, and what did you intentionally leave out?\r\n> 2. Describe one complete user interaction in your app: what does the user do, what does your app check or decide, and what does the user see as a result?\r\n> 3. What tradeoffs did you make when defining your scope? What was the hardest decision, and why did you make it?\r\n",
+    "stay_on_level_after_submit": "false",
+    "height": "150",
+    "placeholder": "Enter answer here",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2026-06-30 20:25:42 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-30 21:29:08 +0000\",\"changed\":[\"height\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-30 21:51:19 +0000\",\"changed\":[\"title\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

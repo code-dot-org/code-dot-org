@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 54,
+  "created_at": "2026-05-20T21:57:47.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "pl-aif2-displaying-data-UI",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 28811,
+    "name_suffix": "_2026",
+    "encrypted": "false",
+    "long_instructions": "Students will explore how apps display repeated information by examining a user interface (UI), identifying the data behind each element, and organizing that information into parallel arrays. \r\n\r\n<div style=\"background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 95%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;\"> <p style=\"font-size: 12pt; margin-top: 12px; line-height: 120%;\">💡 <b>Teacher Tip:</b> Encourage students to focus on the information each part of the interface displays rather than how it looks. Every image, title, and piece of text comes from data that must be organized before it can be displayed.</p> </div>\r\n\r\n## Exploring a User Interface\r\n\r\nStudents can choose to work with a contact card, profile card, event card, or another repeating UI component. In this professional learning session, we'll focus on a contact card to demonstrate how the information displayed on a card can be organized into parallel arrays.\r\n\r\n### **Example User Interface**\r\n\r\nStudents will use Sketch Lab to design their own card, list, or profile that displays repeated information. To save time during this professional learning session, we've provided a completed contact card as an example. We'll use this card to identify the information each element displays and explore how that information can be organized into parallel arrays.\r\n\r\n<img src=\"https://images.code.org/722ca825937b99b35f89ce71da593788-image-1782923087633.png\" alt=\"Squishy display card\" width=\"550px\" style=\"display: block; margin-left: auto; margin-right: auto; border-radius: 10px;\">\r\n\r\n### ***From UI to Arrays***\r\n\r\nAfter identifying the elements on the card, students organize each type of information into its own array. For example, all names belong in one array, all profile images in another, and all phone numbers in a third. Because the arrays share the same index, the values stay connected and represent one complete contact.\r\n\r\n## Activity Tutorial\r\n\r\nThe video below demonstrates how to identify the data behind a UI, organize that information into parallel arrays, and display one card. Watch the video for an overview of the process, then complete the activity on your own. Feel free to revisit the video as needed while working through the levels.\r\n\r\n"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2026-05-20T21:57:47.655+00:00\",\"changed\":[\"cloned from \\\"pl-aif-2-U3-schema-video\\\"\"],\"cloned_from\":\"pl-aif-2-U3-schema-video\"},{\"changed_at\":\"2026-07-01 16:26:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-07-01 16:31:51 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

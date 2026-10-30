@@ -1,35 +1,50 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
+
+import styles from '../lesson-plan.module.scss';
 
 export const tipTypes = {
   teachingTip: {
     displayName: i18n.teachingTip(),
-    icon: 'lightbulb-o',
-    color: color.orange,
-    backgroundColor: color.lightest_orange,
+    icon: 'lightbulb',
+    iconStyle: 'regular',
+    primaryColor: 'var(--background-accent-orange-strong)',
+    secondaryColor: 'var(--background-accent-orange-light)',
+    // Orange has no analogous border token, so reuse the accent strong color.
+    borderColor: 'var(--background-accent-orange-strong)',
   },
   contentCorner: {
     displayName: i18n.contentCorner(),
     icon: 'graduation-cap',
-    color: color.teal,
-    backgroundColor: color.lightest_teal,
+    primaryColor: 'var(--background-brand-teal-strong)',
+    secondaryColor: 'var(--background-brand-teal-extra-light)',
+    borderColor: 'var(--borders-brand-teal-strong)',
   },
   discussionGoal: {
     displayName: i18n.discussionGoal(),
     icon: 'comments',
-    color: color.purple,
-    backgroundColor: color.lightest_purple,
+    primaryColor: 'var(--background-brand-purple-strong)',
+    secondaryColor: 'var(--background-brand-purple-extra-light)',
+    borderColor: 'var(--borders-brand-purple-strong)',
   },
   assessmentOpportunity: {
     displayName: i18n.assessmentOpportunity(),
     icon: 'check-circle',
-    color: color.purple,
-    backgroundColor: color.lightest_purple,
+    primaryColor: 'var(--background-brand-purple-strong)',
+    secondaryColor: 'var(--background-brand-purple-extra-light)',
+    borderColor: 'var(--borders-brand-purple-strong)',
+  },
+  ethicsOpportunity: {
+    displayName: i18n.ethicsOpportunity(),
+    icon: 'head-side-heart',
+    primaryColor: 'var(--background-info-strong)',
+    secondaryColor: 'var(--background-info-extra-light)',
+    borderColor: 'var(--borders-info-strong)',
   },
 };
 
@@ -42,48 +57,44 @@ class LessonTip extends Component {
     expanded: true,
   };
 
-  getTabStyle = () => {
-    const {expanded} = this.state;
-    const tipColor = tipTypes[this.props.tip.type].color;
-    const expandedColors = {color: color.white, backgroundColor: tipColor};
-    const collapsedColors = {color: tipColor, backgroundColor: color.white};
-    const defaultStyle = expanded ? expandedColors : collapsedColors;
-    const hoverStyle = expanded ? collapsedColors : expandedColors;
-    return {
-      ...styles.tab,
-      ...defaultStyle,
-      borderColor: tipColor,
-      ':hover': hoverStyle,
-    };
-  };
-
   render() {
     const {expanded} = this.state;
     const caretIcon = expanded ? 'caret-up' : 'caret-down';
+    const {
+      primaryColor,
+      secondaryColor,
+      borderColor,
+      icon,
+      iconStyle,
+      displayName,
+    } = tipTypes[this.props.tip.type];
     return (
-      <div style={styles.tip}>
+      <div
+        className={styles.tip}
+        style={{
+          '--tip-primary': primaryColor,
+          '--tip-secondary': secondaryColor,
+          '--tip-border': borderColor,
+        }}
+      >
         <div
-          style={this.getTabStyle()}
+          className={classNames(
+            styles.tab,
+            expanded ? styles.expanded : styles.collapsed,
+            'unit-test-tip-tab'
+          )}
           onClick={() => this.setState({expanded: !expanded})}
-          className={'unit-test-tip-tab'}
         >
           <FontAwesome
-            icon={tipTypes[this.props.tip.type].icon}
-            style={styles.icon}
+            icon={icon}
+            iconStyle={iconStyle}
+            className={styles.icon}
           />
-          <span>{tipTypes[this.props.tip.type].displayName}</span>
-          <FontAwesome icon={caretIcon} style={styles.caret} />
+          <span>{displayName}</span>
+          <FontAwesome icon={caretIcon} className={styles.caret} />
         </div>
         {expanded && (
-          <div
-            style={{
-              ...styles.box,
-              ...{borderColor: tipTypes[this.props.tip.type].color},
-              ...{
-                backgroundColor: tipTypes[this.props.tip.type].backgroundColor,
-              },
-            }}
-          >
+          <div className={styles.box}>
             <SafeMarkdown markdown={this.props.tip.markdown} />
           </div>
         )}
@@ -92,31 +103,4 @@ class LessonTip extends Component {
   }
 }
 
-const styles = {
-  tab: {
-    // borders everywhere except the bottom
-    borderStyle: 'solid solid none solid',
-    borderTopLeftRadius: 10,
-    borderTopRightRadius: 10,
-    borderWidth: 1,
-    padding: '5px 10px',
-    width: 200,
-  },
-  box: {
-    borderStyle: 'solid',
-    borderWidth: 1,
-    padding: 10,
-  },
-  icon: {
-    marginLeft: 7,
-    marginRight: 5,
-  },
-  caret: {
-    float: 'right',
-  },
-  tip: {
-    marginBottom: 5,
-  },
-};
-
-export default Radium(LessonTip);
+export default LessonTip;

@@ -1,14 +1,19 @@
-import React from 'react';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {
+  IconButton as MuiIconButton,
+  Typography as MuiTypography,
+} from '@mui/material';
 import PropTypes from 'prop-types';
-import i18n from '@cdo/locale';
-import * as assets from '../code-studio/assets';
+import React from 'react';
+
 import PaneHeader, {
   PaneSection,
   PaneButton,
 } from '@cdo/apps/templates/PaneHeader';
-import CollapserIcon from '@cdo/apps/templates/CollapserIcon';
+import i18n from '@cdo/locale';
+
+import * as assets from '../code-studio/assets';
 import {RecordingFileType} from '../code-studio/components/recorders';
-import color from '@cdo/apps/util/color';
 
 export default function PreviewPaneHeader({
   isCollapsed,
@@ -19,27 +24,50 @@ export default function PreviewPaneHeader({
   showPreviewTitle = true,
 }) {
   return (
-    <PaneHeader hasFocus style={{display: 'flex'}} isOldPurpleColor>
+    <PaneHeader
+      style={{
+        backgroundColor: '#7665a0',
+        paddingLeft: '0.125rem',
+      }}
+    >
       <PaneSection className={'pane-header-section pane-header-section-left'}>
-        <PaneButton
-          headerHasFocus
-          icon={
-            <CollapserIcon
-              isCollapsed={isCollapsed}
-              style={styles.collapserIcon}
-            />
-          }
+        <MuiIconButton
+          type="button"
+          variant="outlined"
+          color="secondary"
+          size="extraSmall"
           onClick={toggleVisualizationCollapsed}
-          label=""
-          isRtl={false}
-          style={styles.transparent}
-          leftJustified
-          ariaLabel={isCollapsed ? i18n.showPreview() : i18n.hidePreview()}
-        />
+          aria-label={isCollapsed ? i18n.showPreview() : i18n.hidePreview()}
+          aria-expanded={!isCollapsed}
+          aria-controls="visualization"
+          sx={{
+            borderRadius: '50%',
+            height: '1rem',
+            width: '1rem',
+          }}
+        >
+          <FontAwesomeV6Icon
+            iconName={isCollapsed ? 'chevron-down' : 'chevron-up'}
+            iconStyle="solid"
+          />
+        </MuiIconButton>
       </PaneSection>
       <PaneSection className={'pane-header-section pane-header-section-center'}>
         {showPreviewTitle && (
-          <PaneSection style={styles.headerTitle}>{i18n.preview()}</PaneSection>
+          <MuiTypography
+            variant="body4"
+            id="workspace-header-span"
+            sx={{
+              color: 'var(--text-neutral-white-fixed)',
+              flex: '1 1 0',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '0.5rem',
+              display: 'flex',
+            }}
+          >
+            {i18n.preview()}
+          </MuiTypography>
         )}
       </PaneSection>
       {/* This overflowX styling should ideally be in style.scss.
@@ -49,16 +77,6 @@ export default function PreviewPaneHeader({
         className={'pane-header-section pane-header-section-right'}
         style={{overflowX: 'visible'}}
       >
-        {/* TODO: Uncomment fullscreen button when we are ready to implement fullscreen.
-        <PaneButton
-          headerHasFocus
-          iconClass={isFullscreen ? 'fa fa-compress' : 'fa fa-arrows-alt'}
-          onClick={() => {}}
-          label=""
-          isRtl={false}
-          style={styles.transparent}
-        />
-       */}
         {showAssetManagerButton && (
           <PaneButton
             headerHasFocus
@@ -68,7 +86,7 @@ export default function PreviewPaneHeader({
                 recordingFileType: RecordingFileType.WAV,
               })
             }
-            iconClass="fa fa-upload"
+            iconProps={{iconName: 'upload', iconStyle: 'solid'}}
             label={i18n.manageAssets()}
             isRtl={false}
             isDisabled={disableAssetManagerButton}
@@ -86,17 +104,4 @@ PreviewPaneHeader.propTypes = {
   disableAssetManagerButton: PropTypes.bool,
   showPreviewTitle: PropTypes.bool,
   toggleVisualizationCollapsed: PropTypes.func,
-};
-
-const styles = {
-  transparent: {
-    marginLeft: -4, // Adjust icon position to align with instructions collapser icon.
-    backgroundColor: 'transparent',
-    ':hover': {
-      backgroundColor: 'transparent',
-    },
-  },
-  collapserIcon: {
-    color: color.white,
-  },
 };

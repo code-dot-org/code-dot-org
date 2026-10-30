@@ -2,6 +2,7 @@
 # dynamodb as a persistent store with the datastore_cache.
 require 'aws-sdk-dynamodb'
 require 'oj'
+require 'observability/errors'
 
 class DynamoDBAdapter
   # @param table_name [String] the name of the dynamodb table to use
@@ -23,7 +24,7 @@ class DynamoDBAdapter
     begin
       value = Oj.load(resp.item['data-value'])
     rescue => exception
-      Honeybadger.notify(exception)
+      Observability::Errors.report(exception)
       value = nil
     end
     value
@@ -62,7 +63,7 @@ class DynamoDBAdapter
         begin
           value = Oj.load(item['data-value'])
         rescue => exception
-          Honeybadger.notify(exception)
+          Observability::Errors.report(exception)
           value = nil
         end
         result[key] = value

@@ -1,0 +1,11 @@
+name 'music-lab-cats-examples-choice_2025-v2'
+display_name 'Cat GIF Examples'
+description 'Cat GIF Examples'
+
+sublevels
+level 'music-lab-cats-example-1_2025-v2'
+level 'music-lab-cats-example-3_2025-v2'
+level 'music-lab-cats-example-4_2025-v2'
+level 'music-lab-cats-example-5_2025-v2'
+level 'music-lab-cats-example-6_2025-v2'
+level 'music-lab-cats-example-7_2025-v2'

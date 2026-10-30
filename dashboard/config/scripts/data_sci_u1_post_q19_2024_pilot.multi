@@ -1,0 +1,15 @@
+name 'Data Sci U1 Post Q19_2024-pilot'
+
+question 'When applying multiple filters to a large dataset, what steps should you take to ensure the accuracy and relevance of the filtered results?'
+
+wrong 'Apply all filters simultaneously without testing individual impacts to save time.'
+wrong 'Use only one filter to avoid complications, ensuring a straightforward analysis.'
+wrong 'Apply filters based on arbitrary criteria, focusing on speed rather than accuracy.'
+right 'Test each filter individually to understand its effect, then combine them and verify the final results for consistency.'
+
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+
+MARKDOWN

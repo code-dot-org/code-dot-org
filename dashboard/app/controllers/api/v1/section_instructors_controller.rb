@@ -4,7 +4,7 @@ class Api::V1::SectionInstructorsController < Api::V1::JSONApiController
   # Returns list of current user's SectionInstructor records
   # GET /section_instructors
   def index
-    section_instructors = SectionInstructor.where(instructor_id: current_user&.id)
+    section_instructors = SectionInstructor.where(instructor_id: current_user&.id).includes(:invited_by, :section, :instructor)
 
     render json: section_instructors, each_serializer: Api::V1::SectionInstructorSerializer
   end
@@ -14,7 +14,7 @@ class Api::V1::SectionInstructorsController < Api::V1::JSONApiController
   def show
     section = Section.find(params.require(:section_id))
     authorize! :manage, section
-    section_instructors = SectionInstructor.where(section: section)
+    section_instructors = SectionInstructor.where(section: section).includes(:invited_by, :section, :instructor)
 
     render json: section_instructors, each_serializer: Api::V1::SectionInstructorSerializer
   end
@@ -26,7 +26,7 @@ class Api::V1::SectionInstructorsController < Api::V1::JSONApiController
     authorize! :manage, section
 
     begin
-      si = section.add_instructor(params.require(:email), current_user)
+      si = section.invite_instructor(params.require(:email), current_user)
       render json: si, serializer: Api::V1::SectionInstructorSerializer
     rescue ArgumentError => exception
       render json: {error: exception.message}, status: :bad_request
@@ -57,15 +57,6 @@ class Api::V1::SectionInstructorsController < Api::V1::JSONApiController
     resolve_invitation :declined
   end
 
-  private def resolve_invitation(new_status)
-    return head :bad_request unless @section_instructor.status == 'invited'
-
-    @section_instructor.status = new_status
-    @section_instructor.save!
-
-    render json: @section_instructor, serializer: Api::V1::SectionInstructorSerializer
-  end
-
   # GET /section_instructors/check
   # Checks if the given email address corresponds to a user that could be added
   # as an instructor. Optional section id parameter can be given to verify that
@@ -91,5 +82,14 @@ class Api::V1::SectionInstructorsController < Api::V1::JSONApiController
     end
 
     head :no_content
+  end
+
+  private def resolve_invitation(new_status)
+    return head :bad_request unless @section_instructor.status == 'invited'
+
+    @section_instructor.status = new_status
+    @section_instructor.save!
+
+    render json: @section_instructor, serializer: Api::V1::SectionInstructorSerializer
   end
 end

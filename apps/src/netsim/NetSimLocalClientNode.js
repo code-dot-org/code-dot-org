@@ -6,18 +6,21 @@
  */
 require('../utils'); // Provides Function.prototype.inherits
 var _ = require('lodash');
+
 var i18n = require('@cdo/netsim/locale');
-var NetSimClientNode = require('./NetSimClientNode');
-var NetSimEntity = require('./NetSimEntity');
-var NetSimAlert = require('./NetSimAlert');
-var NetSimMessage = require('./NetSimMessage');
-var NetSimLogger = require('./NetSimLogger');
-var NetSimRouterNode = require('./NetSimRouterNode');
+
 var ObservableEventDEPRECATED = require('../ObservableEventDEPRECATED');
 
-var logger = NetSimLogger.getSingleton();
+var NetSimAlert = require('./NetSimAlert');
+var NetSimClientNode = require('./NetSimClientNode');
 var NetSimConstants = require('./NetSimConstants');
+var NetSimEntity = require('./NetSimEntity');
 var NetSimGlobals = require('./NetSimGlobals');
+var NetSimLogger = require('./NetSimLogger');
+var NetSimMessage = require('./NetSimMessage');
+var NetSimRouterNode = require('./NetSimRouterNode');
+
+var logger = NetSimLogger.getSingleton();
 require('../utils'); // Provides Function.prototype.inherits
 
 var MessageGranularity = NetSimConstants.MessageGranularity;

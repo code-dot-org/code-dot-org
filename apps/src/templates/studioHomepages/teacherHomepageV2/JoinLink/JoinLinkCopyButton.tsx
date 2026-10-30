@@ -1,0 +1,156 @@
+import {MuiDialog as Dialog} from '@code-dot-org/component-library/dialog';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography, Tooltip} from '@mui/material';
+import classNames from 'classnames';
+import React from 'react';
+
+import {LmsLoginTypeNames} from '@cdo/apps/accounts/constants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {LOGIN_TYPES_WITH_PASSWORD_COLUMN} from '@cdo/apps/templates/teacherDashboard/LoginTypeConstants';
+import copyToClipboard from '@cdo/apps/util/copyToClipboard';
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
+import i18n from '@cdo/locale';
+
+import styles from './joinLinkCopyButton.module.scss';
+
+interface JoinLinkCopyButtonProps {
+  loginType?: keyof typeof SectionLoginType;
+  sectionCode: string;
+  sectionId: number;
+  studioUrlPrefix: string;
+  sourceName?: string;
+  hidden?: boolean;
+  isDemoSection?: boolean;
+}
+
+const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
+  loginType,
+  sectionCode,
+  sectionId,
+  studioUrlPrefix,
+  sourceName = 'teacherHomepage',
+  hidden = false,
+  isDemoSection = false,
+}) => {
+  const [shouldShowDialog, setShouldShowDialog] = React.useState(false);
+  const [showCopiedMsg, setShowCopiedMsg] = React.useState(false);
+
+  const showSectionCodeDialog = () => {
+    setShouldShowDialog(true);
+  };
+
+  let classroomType = i18n.loginTypeClever();
+  if (loginType === SectionLoginType.google_classroom) {
+    classroomType = i18n.loginTypeGoogleClassroom();
+  } else if (loginType === SectionLoginType.classlink) {
+    classroomType = LmsLoginTypeNames.classlink;
+  }
+
+  const handleCopySectionCode = () => {
+    const joinLink = `${studioUrlPrefix}/join/${sectionCode}`;
+    copyToClipboard(joinLink);
+    analyticsReporter.sendEvent(EVENTS.SECTION_CARD_CLASS_CODE_CLICKED, {
+      source: sourceName,
+    });
+    setShowCopiedMsg(true);
+    setTimeout(() => {
+      setShowCopiedMsg(false);
+    }, 5000);
+  };
+
+  // Demo sections have no real join code; show the placeholder the caller
+  // passes as sectionCode (matching the demo card preview). Not copyable —
+  // there is nothing to join.
+  if (isDemoSection) {
+    return (
+      <div
+        className={classNames(styles.sectionCodeBox, styles.sectionCodeText)}
+        id="uitest-demo-section-code"
+      >
+        <Typography variant="overline1" gutterBottom>
+          <span>{i18n.sectionCodeWithColon()}</span>{' '}
+          <span className={styles.sectionCodeTextHidden}>{sectionCode}</span>
+        </Typography>
+      </div>
+    );
+  }
+
+  return loginType &&
+    (LOGIN_TYPES_WITH_PASSWORD_COLUMN as string[]).includes(loginType) ? (
+    hidden ? (
+      <Typography variant="overline1" gutterBottom>
+        <span>{i18n.sectionCodeWithColon()}</span>{' '}
+        <span className={styles.sectionCodeTextHidden}>{sectionCode}</span>
+      </Typography>
+    ) : (
+      <div className={styles.sectionCodeBox} data-for="section-code" data-tip>
+        {!showCopiedMsg && (
+          <span className={styles.sectionCodeText}>
+            <Typography variant="overline1" gutterBottom>
+              <span>{i18n.sectionCodeWithColon()}</span>
+            </Typography>
+            <Tooltip
+              title={
+                <>
+                  <FontAwesomeV6Icon iconName="copy" />
+                  {i18n.copySectionCodeTooltip()}
+                </>
+              }
+              placement="left"
+            >
+              <Typography variant="overline1" gutterBottom>
+                <button
+                  id={'ui-test-section-code-button'}
+                  className={styles.sectionCode}
+                  onClick={handleCopySectionCode}
+                  type="button"
+                >
+                  {sectionCode}
+                </button>
+              </Typography>
+            </Tooltip>
+          </span>
+        )}
+        {showCopiedMsg && (
+          <Typography variant="body3" component="span">
+            {i18n.copySectionCodeSuccess()}
+          </Typography>
+        )}
+      </div>
+    )
+  ) : (
+    <>
+      <div
+        className={classNames(styles.sectionCodeBox, styles.sectionCodeText)}
+        id="uitest-no-section-code"
+      >
+        <Typography variant="overline1" gutterBottom>
+          {`${i18n.sectionCodeWithColon()} ${i18n.notApplicable()}`}
+          <button
+            onClick={() => showSectionCodeDialog()}
+            id="uitest-why-link"
+            className={styles.noSectionCode}
+            aria-label={i18n.whyWithQuestionMark()}
+            type="button"
+          >
+            <FontAwesomeV6Icon iconName="circle-question" iconStyle="regular" />
+          </button>
+        </Typography>
+      </div>
+      {shouldShowDialog && (
+        <Dialog
+          title={i18n.noSectionDialogHeader({classroom: classroomType})}
+          description={i18n.noSectionDialogBody({classroom: classroomType})}
+          primaryButtonProps={{
+            onClick: () => setShouldShowDialog(false),
+            children: i18n.ok(),
+          }}
+          onClose={() => setShouldShowDialog(false)}
+        />
+      )}
+    </>
+  );
+};
+
+export default JoinLinkCopyButton;

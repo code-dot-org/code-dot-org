@@ -1,0 +1,16 @@
+name 'building-data-driven-systems-preassessment-q15_2025'
+
+question 'Why should developers "validate" AI-generated code with their own test cases?'
+
+wrong 'Because AI-generated code is legally owned by the AI company until it is changed.'
+right 'Because AI often produces "hallucinations" or logical errors that could cause the app to crash or behave unfairly.'
+wrong ' Because using AI code without making changes is a violation of most browser security policies.'
+wrong 'Because AI code is written in a special language that humans cannot understand without testing it.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 11
+
+Developers must take responsibility for AI output. Testing ensures that the logic is sound, handles edge cases, and doesn't introduce unintended bias or security flaws.
+MARKDOWN

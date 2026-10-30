@@ -5,20 +5,29 @@
  *
  */
 var React = require('react');
-var ReactDOM = require('react-dom');
+var Provider = require('react-redux').Provider;
+
+var dom = require('../dom');
 var studioApp = require('../StudioApp').singleton;
+var Hammer = require('../third-party/hammer');
+var createReactRoot = require('../util/createReactRoot').createReactRoot;
+
+var api = require('./api');
+var BounceVisualizationColumn = require('./BounceVisualizationColumn');
 var bounceMsg = require('./locale');
 var tiles = require('./tiles');
+
+// Disabling import order in order to add require statements first
+// Require statements can change behavior based on the order they are called.
+// This might be safe to remove but needs investigation whether any behavior is changed by order.
+/* eslint-disable import/order */
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
-var api = require('./api');
-var Provider = require('react-redux').Provider;
 import AppView from '../templates/AppView';
-var BounceVisualizationColumn = require('./BounceVisualizationColumn');
-var dom = require('../dom');
-var Hammer = require('../third-party/hammer');
 import {getStore} from '../redux';
 import {getRandomDonorTwitter} from '../util/twitterHelper';
 import {KeyCodes, TestResults, ResultType} from '../constants';
+
+import {getCode} from '@cdo/apps/blockly/utils';
 import {
   showArrowButtons,
   dismissSwipeOverlay,
@@ -28,6 +37,7 @@ var SquareType = tiles.SquareType;
 
 import '../util/svgelement-polyfill';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+/* eslint-enable import/order */
 
 /**
  * Create a namespace for the application.
@@ -127,7 +137,7 @@ var initWallMap = function () {
 /**
  * PIDs of async tasks currently executing.
  */
-import * as timeoutList from '../lib/util/timeoutList';
+import * as timeoutList from '../lib/util/timeoutList'; // eslint-disable-line import/order
 
 // Map each possible shape to a sprite.
 // Input: Binary string representing Centre/North/East/South/West squares.
@@ -178,9 +188,9 @@ var goalNormalize = function (x, y) {
 Bounce.createBallElements = function (i) {
   var svg = document.getElementById('svgBounce');
   // Ball's clipPath element, whose (x, y) is reset by Bounce.displayBall
-  var ballClip = document.createElementNS(Blockly.SVG_NS, 'clipPath');
+  var ballClip = document.createElementNS(Blockly.utils.dom.SVG_NS, 'clipPath');
   ballClip.setAttribute('id', 'ballClipPath' + i);
-  var ballClipRect = document.createElementNS(Blockly.SVG_NS, 'rect');
+  var ballClipRect = document.createElementNS(Blockly.utils.dom.SVG_NS, 'rect');
   ballClipRect.setAttribute('id', 'ballClipRect' + i);
   ballClipRect.setAttribute('width', Bounce.PEGMAN_WIDTH);
   ballClipRect.setAttribute('height', Bounce.PEGMAN_HEIGHT);
@@ -188,7 +198,7 @@ Bounce.createBallElements = function (i) {
   svg.appendChild(ballClip);
 
   // Add ball.
-  var ballIcon = document.createElementNS(Blockly.SVG_NS, 'image');
+  var ballIcon = document.createElementNS(Blockly.utils.dom.SVG_NS, 'image');
   ballIcon.setAttribute('id', 'ball' + i);
   ballIcon.setAttributeNS(
     'http://www.w3.org/1999/xlink',
@@ -227,7 +237,7 @@ var drawMap = function () {
   visualizationColumn.style.width = Bounce.MAZE_WIDTH + 'px';
 
   if (skin.background) {
-    tile = document.createElementNS(Blockly.SVG_NS, 'image');
+    tile = document.createElementNS(Blockly.utils.dom.SVG_NS, 'image');
     tile.setAttributeNS(
       'http://www.w3.org/1999/xlink',
       'xlink:href',
@@ -282,9 +292,15 @@ var drawMap = function () {
       }
       if (tile !== 'null0' && Bounce.drawTiles) {
         // Tile's clipPath element.
-        var tileClip = document.createElementNS(Blockly.SVG_NS, 'clipPath');
+        var tileClip = document.createElementNS(
+          Blockly.utils.dom.SVG_NS,
+          'clipPath'
+        );
         tileClip.setAttribute('id', 'tileClipPath' + tileId);
-        var tileClipRect = document.createElementNS(Blockly.SVG_NS, 'rect');
+        var tileClipRect = document.createElementNS(
+          Blockly.utils.dom.SVG_NS,
+          'rect'
+        );
         tileClipRect.setAttribute('width', Bounce.SQUARE_SIZE);
         tileClipRect.setAttribute('height', Bounce.SQUARE_SIZE);
 
@@ -294,7 +310,10 @@ var drawMap = function () {
         tileClip.appendChild(tileClipRect);
         svg.appendChild(tileClip);
         // Tile sprite.
-        var tileElement = document.createElementNS(Blockly.SVG_NS, 'image');
+        var tileElement = document.createElementNS(
+          Blockly.utils.dom.SVG_NS,
+          'image'
+        );
         tileElement.setAttribute('id', 'tileElement' + tileId);
         tileElement.setAttributeNS(
           'http://www.w3.org/1999/xlink',
@@ -311,7 +330,10 @@ var drawMap = function () {
         tileElement.setAttribute('y', (y - top) * Bounce.SQUARE_SIZE);
         svg.appendChild(tileElement);
         // Tile animation
-        var tileAnimation = document.createElementNS(Blockly.SVG_NS, 'animate');
+        var tileAnimation = document.createElementNS(
+          Blockly.utils.dom.SVG_NS,
+          'animate'
+        );
         tileAnimation.setAttribute('id', 'tileAnimation' + tileId);
         tileAnimation.setAttribute('attributeType', 'CSS');
         tileAnimation.setAttribute('attributeName', 'opacity');
@@ -333,9 +355,15 @@ var drawMap = function () {
 
   if (Bounce.paddleStart_) {
     // Paddle's clipPath element, whose (x, y) is reset by Bounce.displayPaddle
-    var paddleClip = document.createElementNS(Blockly.SVG_NS, 'clipPath');
+    var paddleClip = document.createElementNS(
+      Blockly.utils.dom.SVG_NS,
+      'clipPath'
+    );
     paddleClip.setAttribute('id', 'paddleClipPath');
-    var paddleClipRect = document.createElementNS(Blockly.SVG_NS, 'rect');
+    var paddleClipRect = document.createElementNS(
+      Blockly.utils.dom.SVG_NS,
+      'rect'
+    );
     paddleClipRect.setAttribute('id', 'paddleClipRect');
     paddleClipRect.setAttribute('width', Bounce.PEGMAN_WIDTH);
     paddleClipRect.setAttribute('height', Bounce.PEGMAN_HEIGHT);
@@ -343,7 +371,10 @@ var drawMap = function () {
     svg.appendChild(paddleClip);
 
     // Add paddle.
-    var paddleIcon = document.createElementNS(Blockly.SVG_NS, 'image');
+    var paddleIcon = document.createElementNS(
+      Blockly.utils.dom.SVG_NS,
+      'image'
+    );
     paddleIcon.setAttribute('id', 'paddle');
     paddleIcon.setAttributeNS(
       'http://www.w3.org/1999/xlink',
@@ -360,7 +391,7 @@ var drawMap = function () {
     for (i = 0; i < Bounce.paddleFinishCount; i++) {
       // Add finish markers.
       var paddleFinishMarker = document.createElementNS(
-        Blockly.SVG_NS,
+        Blockly.utils.dom.SVG_NS,
         'image'
       );
       paddleFinishMarker.setAttribute('id', 'paddlefinish' + i);
@@ -377,7 +408,10 @@ var drawMap = function () {
 
   if (Bounce.ballFinish_) {
     // Add ball finish marker.
-    var ballFinishMarker = document.createElementNS(Blockly.SVG_NS, 'image');
+    var ballFinishMarker = document.createElementNS(
+      Blockly.utils.dom.SVG_NS,
+      'image'
+    );
     ballFinishMarker.setAttribute('id', 'ballfinish');
     ballFinishMarker.setAttributeNS(
       'http://www.w3.org/1999/xlink',
@@ -389,7 +423,7 @@ var drawMap = function () {
     svg.appendChild(ballFinishMarker);
   }
 
-  var score = document.createElementNS(Blockly.SVG_NS, 'text');
+  var score = document.createElementNS(Blockly.utils.dom.SVG_NS, 'text');
   score.setAttribute('id', 'score');
   score.setAttribute('class', 'bounce-score');
   score.setAttribute('x', Bounce.MAZE_WIDTH / 2);
@@ -400,7 +434,10 @@ var drawMap = function () {
 
   // Add wall hitting animation
   if (skin.hittingWallAnimation) {
-    var wallAnimationIcon = document.createElementNS(Blockly.SVG_NS, 'image');
+    var wallAnimationIcon = document.createElementNS(
+      Blockly.utils.dom.SVG_NS,
+      'image'
+    );
     wallAnimationIcon.setAttribute('id', 'wallAnimation');
     wallAnimationIcon.setAttribute('height', Bounce.SQUARE_SIZE);
     wallAnimationIcon.setAttribute('width', Bounce.SQUARE_SIZE);
@@ -413,7 +450,10 @@ var drawMap = function () {
   for (y = 0; y < Bounce.ROWS; y++) {
     for (x = 0; x < Bounce.COLS; x++) {
       if (Bounce.map[y][x] === SquareType.OBSTACLE) {
-        var obsIcon = document.createElementNS(Blockly.SVG_NS, 'image');
+        var obsIcon = document.createElementNS(
+          Blockly.utils.dom.SVG_NS,
+          'image'
+        );
         obsIcon.setAttribute('id', 'obstacle' + obsId);
         obsIcon.setAttribute(
           'height',
@@ -822,14 +862,17 @@ Bounce.init = function (config) {
 
   studioApp().setPageConstants(config);
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={getStore()}>
       <AppView
         visualizationColumn={<BounceVisualizationColumn />}
         onMount={onMount}
       />
     </Provider>,
-    document.getElementById(config.containerId)
+    document.getElementById(config.containerId),
+    {
+      legacyReactDomRender: true,
+    }
   );
 };
 
@@ -1062,7 +1105,6 @@ Bounce.runButtonClick = function () {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
   studioApp().toggleRunReset('reset');
-  Blockly.mainBlockSpace.traceOn(true);
   studioApp().reset(false);
   studioApp().attempts++;
   Bounce.execute();
@@ -1185,7 +1227,7 @@ Bounce.onPuzzleComplete = function () {
       : TestResults.TOO_FEW_BLOCKS_FAIL;
   }
 
-  var textBlocks = Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
+  var textBlocks = getCode(Blockly.mainBlockSpace);
 
   Bounce.waitingForReport = true;
 

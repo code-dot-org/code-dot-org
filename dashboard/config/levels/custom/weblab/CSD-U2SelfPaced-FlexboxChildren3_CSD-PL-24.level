@@ -1,0 +1,40 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2024-05-06T17:18:08.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "validation_enabled": "true",
+    "encrypted": "false",
+    "long_instructions": "# Flex-shrink\r\n\r\nThe `flex-shrink` property sets the shrink factor for a flex item. This is used when items do not fit inside a container. Just like `flex-grow`, the `flex-shrink` property sets the shrinkage relative to other items.\r\n\r\nThe last item has a `flex-shrink` of 4. This means it will shrink up to 4 times or until the container is filled.\r\n\r\n<img src=\"https://images.code.org/1d3762f9bd00910147eab3cf089b1a53-image-1707150013873.png\" style=\"width:600px;\">\r\n\r\n# Do This\r\n\r\n**In the HTML file:**\r\n1. Give the 3rd child item a class attribute of \"shrink\"\r\n\r\n**In the CSS file:**\r\n1. Add a rule in the CSS file for the third child item using its class attribute as the selector.\r\n2. Give the third child item a `flex-shrink` property with a value of 4.\r\n3. Resize the Preview Window to see the size change accordingly.\r\n\r\n<br>\r\n\r\n::: details [🔎 **Show Me How To Get Started** 🔍]\r\n\r\n<img src=\"https://images.code.org/2dd301c0f539d40b9f2a34c1e0caf8f7-image-1708194795663.gif\" style=\"width:500px\">\r\n\r\n**More resources are in the \"Help and Tips\" tab**\r\n:::\r\n\r\n<br>\r\n\r\n::: details [**Show Me How To Resize The Preview Window**]\r\n\r\n<img src=\"https://images.code.org/3af3419482a8b0d3c7d8929e61547c21-image-1705694267212.gif\" style=\"width: 250px\">\r\n\r\n\r\n:::\r\n\r\n<br>\r\n\r\n**Don't forget to refer back to your <a href=\"https://docs.google.com/document/d/1lrkMGcPwjKo4g5uyvVfaXpFb7kRUfdtqcsqLRtaDWYM/edit?usp=sharing\">Flexbox Children Cheat Sheet</a> when needed!**\r\n\r\n![]()",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "start_sources": "              {\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html>\\n<html>\\n  <head>\\n    <link rel=\\\"stylesheet\\\" href=\\\"style.css\\\">\\n  </head>\\n  <body>\\n    \\n    <!-- parent container with 3 child div tags -->\\n    <div class=\\\"flex-shrink\\\">\\n      <div>1</div>\\n      <div>2</div>\\n      <div>3</div>\\n    </div>\\n    \\n  </body>\\n</html>\"\r\n    },\r\n    {\r\n      \"name\": \"style.css\",\r\n      \"data\": \"/* 1) Add a rule in the CSS file for the third child item using its class attribute as the selector. */\\n\\n/* 2) Give the third child item a flex-shrink property with a value of 4. */\\n\\n.flex-shrink {\\n  /* We gave the parent div container a background color so you can see how the items are positioned within it */\\n  background: #b691d6;\\n  display: flex;\\n  padding: 5px;\\n}\\n\\n/* styled child divs in parent continer */\\n.flex-shrink > div {\\n  background-color: aliceblue;\\n  margin: 5px;\\n  width: 45%;\\n  text-align: center;\\n  line-height: 55px;\\n  font-size: 20px;\\n  border-style: solid;\\n  font-family: sans-serif;\\n}\\n\\n/* ADD CODE BELOW to give the 3rd child item a flex-shrink of 4 */\"\r\n    }\r\n  ]\r\n}\r\n            ",
+    "hide_share_and_remix": "true",
+    "reference_links": [
+      "/courses/csd-2022/guides/flexbox",
+      "/courses/csd-2022/guides/html-selectors",
+      "/courses/csd-2022/guides/div",
+      "/courses/csd-2022/guides/classes",
+      "/courses/csd-2022/guides/layout-properties",
+      "/courses/csd-2022/guides/body-styling",
+      "/courses/csd-2022/guides/images-in-html",
+      "/courses/csd-2022/guides/creative-commons-search",
+      "/courses/csd-2022/guides/style-sheets",
+      "/courses/csd-2022/guides/text-properties",
+      "/courses/csd-2022/guides/formatting-html",
+      "/courses/csd-2022/guides/lists",
+      "/courses/csd-2022/guides/headings-and-paragraphs",
+      "/courses/csd-2022/guides/html-tags",
+      "/courses/csd-2022/guides/web-lab",
+      "/courses/csd-2022/guides/debugging-html"
+    ],
+    "map_reference": "/courses/csd-2022/guides/flex-children",
+    "video_key": "csd_weblab_flexboxforteachers2",
+    "name_suffix": "_CSD-PL-24"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-05-06T17:18:08.610+00:00\",\"changed\":[\"cloned from \\\"CSD-U2SelfPaced-FlexboxChildren3\\\"\"],\"cloned_from\":\"CSD-U2SelfPaced-FlexboxChildren3\"}]"
+}]]></config>
+</Weblab>

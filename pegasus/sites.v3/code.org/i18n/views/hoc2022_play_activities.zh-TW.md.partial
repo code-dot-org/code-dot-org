@@ -1,7 +1,0 @@
-{{ featured_tutorial, title: "你好世界：足球", body: "當你在足球場上編程交互場景時，你就是隊長。 進球！", image: "/images/hoc2022-hello-world-soccer.png", url: "https://studio.code.org/s/hello-world-soccer-2022/reset" }}
-
-{{ featured_tutorial, title: "體育", body: "製作一款籃球遊戲或多種運動的混合搭配。", image: "/shared/images/courses/logo_tall_sports.jpg", url: "https://code.org/athletes" }}
-
-{{ featured_tutorial, title: "像素鳥編程", body: "想在10分鐘內編寫自己的遊戲？ 試試我們的像素鳥編程教程！", image: "/shared/images/courses/logo_tall_flappy.jpg", url: "https://studio.code.org/s/flappy/reset" }}
-
-{{ featured_tutorial, title: "我的世界一小時玩程式", body: "我的世界回到一小時玩程式，帶來一個全新的活動！ 使用代碼暢遊我的世界。", image: "/images/hoc2022-mc-escape.png", url: "https://aka.ms/HourofCode2022" }}

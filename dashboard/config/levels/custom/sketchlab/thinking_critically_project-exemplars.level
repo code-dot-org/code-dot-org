@@ -1,0 +1,1308 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "game_id": 75,
+  "created_at": "2026-08-31T19:46:01.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Thinking Critically about AI\r\n##Project Exemplars\r\n\r\n",
+    "start_sources": {
+      "source": {
+        "nodes": [
+          {
+            "id": "gWHxmVqBNVoUbgiJH7M2i",
+            "type": "shape",
+            "position": {
+              "x": -731.7765304904627,
+              "y": -2255.281896704683
+            },
+            "style": {
+              "width": 717.0919092770104,
+              "height": 152.03913869839533
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "var(--sketchlab-stroke-red)",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 717,
+              "height": 152
+            },
+            "zIndex": -2,
+            "dragging": false
+          },
+          {
+            "id": "_SzttQlzYyZ3kLTSVTf98",
+            "type": "text",
+            "position": {
+              "x": -717.7032321516139,
+              "y": -2192.3811248167117
+            },
+            "data": {
+              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. \nSed facilisis odio ac dui feugiat, ut molestie ipsum sodales.",
+              "fontColor": "var(--sketchlab-stroke-red)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 605,
+              "height": 75
+            },
+            "dragging": false
+          },
+          {
+            "id": "OMamfhMP9ehCid-7n5rfl",
+            "type": "text",
+            "position": {
+              "x": -640.9204699560515,
+              "y": -2244.0322099403315
+            },
+            "data": {
+              "text": "Try to avoid ",
+              "fontColor": "var(--sketchlab-stroke-red)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 139,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "MKTurBCVQ5SU6x8AZe-bX",
+            "type": "shape",
+            "position": {
+              "x": -702.617479460839,
+              "y": -2239.582050249074
+            },
+            "style": {
+              "width": 35.00558644707339,
+              "height": 35.00558644707339
+            },
+            "data": {
+              "shapeType": "circle",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-red)",
+              "strokeColor": "var(--sketchlab-stroke-red)",
+              "showHandles": false,
+              "fontColor": "var(--sketchlab-stroke-red)"
+            },
+            "measured": {
+              "width": 35,
+              "height": 35
+            },
+            "dragging": false,
+            "zIndex": 1
+          },
+          {
+            "id": "w3esGee-jI2yEncv0w-v6",
+            "type": "shape",
+            "position": {
+              "x": -736.5551464106311,
+              "y": -2451.7553563076103
+            },
+            "style": {
+              "width": 717.0919092770104,
+              "height": 152.03913869839533
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "var(--sketchlab-stroke-green)",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 717,
+              "height": 152
+            },
+            "zIndex": -3,
+            "dragging": false
+          },
+          {
+            "id": "ncDIfpFthyTZ4r-iWZP9T",
+            "type": "text",
+            "position": {
+              "x": -718.7944215953007,
+              "y": -2393.497673055911
+            },
+            "data": {
+              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. \nSed facilisis odio ac dui feugiat, ut molestie ipsum sodales.",
+              "fontColor": "var(--sketchlab-stroke-green)",
+              "fontSize": "large",
+              "showHandles": false,
+              "textAlign": "left"
+            },
+            "measured": {
+              "width": 605,
+              "height": 75
+            },
+            "dragging": false
+          },
+          {
+            "id": "KLbkBLcN31Pa6fFEtUsAz",
+            "type": "text",
+            "position": {
+              "x": -661.7749785649797,
+              "y": -2446.5135466541924
+            },
+            "data": {
+              "text": "Great use of AI",
+              "fontColor": "var(--sketchlab-stroke-green)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 166,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "80hwM7ih44MCfD5z0PXdP",
+            "type": "shape",
+            "position": {
+              "x": -710.5917964176908,
+              "y": -2438.733821604023
+            },
+            "style": {
+              "width": 35.00558644707339,
+              "height": 35.00558644707339
+            },
+            "data": {
+              "shapeType": "circle",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "strokeColor": "var(--sketchlab-stroke-green)",
+              "showHandles": false,
+              "fontColor": "var(--sketchlab-stroke-green)"
+            },
+            "measured": {
+              "width": 35,
+              "height": 35
+            },
+            "dragging": false
+          },
+          {
+            "id": "Hjl5ZqZCW6tW6a1ZdHxm3",
+            "type": "shape",
+            "position": {
+              "x": 37.42982908153067,
+              "y": -2453.527176652242
+            },
+            "style": {
+              "width": 717.0919092770104,
+              "height": 152.03913869839533
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "var(--sketchlab-stroke-blue)",
+              "showHandles": false,
+              "fontColor": "var(--sketchlab-stroke-blue)"
+            },
+            "measured": {
+              "width": 717,
+              "height": 152
+            },
+            "dragging": false
+          },
+          {
+            "id": "BDquQ8xUmu0vupqB3VbTz",
+            "type": "shape",
+            "position": {
+              "x": 62.31608348583927,
+              "y": -2438.205511827213
+            },
+            "style": {
+              "width": 36.83420837414011,
+              "height": 42.32016384349678
+            },
+            "data": {
+              "shapeType": "diamond",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "var(--sketchlab-stroke-blue)",
+              "showHandles": false,
+              "fontColor": "var(--sketchlab-stroke-blue)"
+            },
+            "measured": {
+              "width": 37,
+              "height": 42
+            },
+            "dragging": false
+          },
+          {
+            "id": "lwAV9qLOKft_nnEDvGah1",
+            "type": "text",
+            "position": {
+              "x": 115.42176019820795,
+              "y": -2442.8267916948903
+            },
+            "data": {
+              "text": "Important to know!",
+              "fontColor": "var(--sketchlab-stroke-blue)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 208,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "iUtI2gBuvhio0xb-gTCb4",
+            "type": "text",
+            "position": {
+              "x": 54.57284917166726,
+              "y": -2391.9749143015747
+            },
+            "data": {
+              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. \nSed facilisis odio ac dui feugiat, ut molestie ipsum sodales.",
+              "fontColor": "var(--sketchlab-stroke-blue)",
+              "fontSize": "large",
+              "showHandles": false,
+              "textAlign": "left"
+            },
+            "measured": {
+              "width": 605,
+              "height": 75
+            },
+            "dragging": false
+          },
+          {
+            "id": "T5DtQBP2AYfkAgTIG7HOl",
+            "type": "shape",
+            "position": {
+              "x": 39.85568883070982,
+              "y": -2254.117540177957
+            },
+            "style": {
+              "width": 717.0919092770104,
+              "height": 152.03913869839533
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "var(--sketchlab-stroke-yellow)",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 717,
+              "height": 152
+            },
+            "dragging": false
+          },
+          {
+            "id": "AH4XGjr4bB3cq--OFePWi",
+            "type": "shape",
+            "position": {
+              "x": 67.18751825595609,
+              "y": -2247.0123377328673
+            },
+            "style": {
+              "width": 36.83420837414011,
+              "height": 42.32016384349678
+            },
+            "data": {
+              "shapeType": "diamond",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "var(--sketchlab-stroke-yellow)",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 37,
+              "height": 42
+            },
+            "dragging": false
+          },
+          {
+            "id": "gywzz1SMQzgpbMFHSGU-L",
+            "type": "text",
+            "position": {
+              "x": 4073.7074861153333,
+              "y": -39.64211315372154
+            },
+            "data": {
+              "text": "!",
+              "fontColor": "#fff",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 58,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "XJukrx7mn1kmMg289Wf3O",
+            "type": "text",
+            "position": {
+              "x": 106.44330406687959,
+              "y": -2243.002297428011
+            },
+            "data": {
+              "text": "Attention needed",
+              "fontColor": "var(--sketchlab-stroke-yellow)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 189,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "hsCf7vNiZYkHom7t8TdlZ",
+            "type": "text",
+            "position": {
+              "x": 55.02700113156152,
+              "y": -2191.711038440429
+            },
+            "data": {
+              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. \nSed facilisis odio ac dui feugiat, ut molestie ipsum sodales.",
+              "fontColor": "var(--sketchlab-stroke-yellow)",
+              "fontSize": "large",
+              "showHandles": false,
+              "textAlign": "left"
+            },
+            "measured": {
+              "width": 605,
+              "height": 75
+            },
+            "dragging": false
+          },
+          {
+            "id": "QPDtJM4vUN9TwIFhHt2cI",
+            "type": "text",
+            "position": {
+              "x": -703.0366361788795,
+              "y": -2666.221945014777
+            },
+            "data": {
+              "text": "Templates & Shapes Library",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": 45,
+              "showHandles": false,
+              "locked": false
+            },
+            "measured": {
+              "width": 585,
+              "height": 77
+            },
+            "dragging": false
+          },
+          {
+            "id": "mXyRPZt-4quQS5v_0X5Dp",
+            "type": "text",
+            "position": {
+              "x": -699.230647755729,
+              "y": -2589.042693364549
+            },
+            "data": {
+              "text": "- Use any of these samples in your own project! \n- Just select the object completely, and move it over. \n- Copy and paste if you want more than one.",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false,
+              "textAlign": "left",
+              "locked": false
+            },
+            "measured": {
+              "width": 551,
+              "height": 104
+            },
+            "dragging": false
+          },
+          {
+            "id": "P8q9DfRAM3z6v7NjbG5XS",
+            "type": "shape",
+            "position": {
+              "x": -1964.4552631732797,
+              "y": -531.6703215449211
+            },
+            "style": {
+              "width": 496.5466385097319,
+              "height": 220.43287950348332
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "A topic I'm \ninterested in is...\n\n--->     ",
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "var(--sketchlab-stroke-blue)",
+              "fontColor": "var(--sketchlab-stroke-blue)",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 497,
+              "height": 220
+            },
+            "dragging": false
+          },
+          {
+            "id": "WA5A3E43HadJjvWOhMznK",
+            "type": "shape",
+            "position": {
+              "x": -1435.5444939147085,
+              "y": -530.1360601788851
+            },
+            "style": {
+              "width": 496.5466385097319,
+              "height": 220.43287950348332
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "This guide is \ndesigned for...\n\n--->     ",
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "var(--sketchlab-stroke-blue)",
+              "fontColor": "var(--sketchlab-stroke-blue)",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 497,
+              "height": 220
+            },
+            "dragging": false
+          },
+          {
+            "id": "r9dBlW8GVYkOYoKbLgPlX",
+            "type": "shape",
+            "position": {
+              "x": -892.3222818078414,
+              "y": -533.5047470919108
+            },
+            "style": {
+              "width": 496.5466385097319,
+              "height": 220.43287950348332
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "My audience would want \nAI to help them…\n\n--->    ",
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "var(--sketchlab-stroke-blue)",
+              "fontColor": "var(--sketchlab-stroke-blue)",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 497,
+              "height": 220
+            },
+            "dragging": false
+          },
+          {
+            "id": "T1M8kuJGKpYqXsePvYuBH",
+            "type": "text",
+            "position": {
+              "x": -1972.3462990889268,
+              "y": -585.5307785728862
+            },
+            "data": {
+              "text": "Your Theme:",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "extra-large",
+              "showHandles": false,
+              "locked": false
+            },
+            "measured": {
+              "width": 187,
+              "height": 57
+            },
+            "dragging": false
+          },
+          {
+            "id": "FlOI5b3VFkNV3hFtWLHyq",
+            "type": "text",
+            "position": {
+              "x": -1442.0830683632282,
+              "y": -586.9934221304554
+            },
+            "data": {
+              "text": "Your Audience:",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "extra-large",
+              "showHandles": false,
+              "locked": false
+            },
+            "measured": {
+              "width": 222,
+              "height": 57
+            },
+            "dragging": false
+          },
+          {
+            "id": "gq-5khshImXGJOKQwhBg8",
+            "type": "text",
+            "position": {
+              "x": -892.7878062133966,
+              "y": -589.382441473281
+            },
+            "data": {
+              "text": "AI Uses:",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "extra-large",
+              "showHandles": false,
+              "locked": false
+            },
+            "measured": {
+              "width": 130,
+              "height": 57
+            },
+            "dragging": false
+          },
+          {
+            "id": "4G7sfxvy5LcjRFYHtZKbZ",
+            "type": "text",
+            "position": {
+              "x": -1844.1465990537324,
+              "y": -220.9833108649781
+            },
+            "data": {
+              "text": "Add examples of AI Generated content below",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 471,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "cvtvTCM-vKGF0reTLiXad",
+            "type": "text",
+            "position": {
+              "x": -992.2861011416798,
+              "y": -228.57718658985297
+            },
+            "data": {
+              "text": "Add AI Usage Tips and Guidance below",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 409,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "09f910a2-ad43-4d32-96ad-9a043807d1b3",
+            "type": "lineAnchor",
+            "position": {
+              "x": -272.7668699717701,
+              "y": -926.2544656252746
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            },
+            "dragging": false
+          },
+          {
+            "id": "15921376-4efd-42bc-9e56-775ea134728b",
+            "type": "lineAnchor",
+            "position": {
+              "x": -271.8611693708325,
+              "y": 1970.3969921394457
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            },
+            "dragging": false
+          },
+          {
+            "id": "ffac6d9c-28a9-44b8-8cf8-313fcba7f6ea",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/thinking_critically_project-template_2026/uuid/57c65bda-5f8b-49c9-85f1-718d6780ca76.png",
+              "altText": "banner-1",
+              "showHandles": false
+            },
+            "position": {
+              "x": -711.0153946601137,
+              "y": -1960.6033562020768
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "d8ae3706-9b71-4eb6-804c-9e9b9b03c09e",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/thinking_critically_project-template_2026/uuid/899ffe31-1ffe-4b13-9799-713a4c6c7cca.png",
+              "altText": "banner-2",
+              "showHandles": false
+            },
+            "position": {
+              "x": -495.01539466011366,
+              "y": -1976.6033562020768
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "ea77e151-6b6a-4a73-afd3-89895bb88c68",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/thinking_critically_project-template_2026/uuid/f3ebb376-bf74-45d1-930f-466d2d85c36e.png",
+              "altText": "banner-3",
+              "showHandles": false
+            },
+            "position": {
+              "x": -241.0153946601137,
+              "y": -1980.6033562020768
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "ee615a1f-6052-4db0-914b-ebd839f1e992",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/thinking_critically_project-template_2026/uuid/0fc1c371-26d6-408b-a8de-1b24945e19aa.png",
+              "altText": "banner-4",
+              "showHandles": false
+            },
+            "position": {
+              "x": 18.984605339886343,
+              "y": -1984.6033562020768
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "39b7e966-300d-4697-aec9-9c7b535edc6c",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/thinking_critically_project-template_2026/uuid/a21b561a-c7ea-495a-bbf8-38dc7030db31.png",
+              "altText": "dark-orange-post-it",
+              "showHandles": false
+            },
+            "position": {
+              "x": -715.0153946601137,
+              "y": -1792.6033562020766
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "5f433b1a-037d-448e-8b2b-b3a392fdc0c4",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/thinking_critically_project-template_2026/uuid/0a74b959-5246-4005-98c1-0208712a664e.png",
+              "altText": "light-orange-post-it",
+              "showHandles": false
+            },
+            "position": {
+              "x": -543.0153946601137,
+              "y": -1792.6033562020766
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "6d58807b-9fac-4317-84a9-9d5ac1584502",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/thinking_critically_project-template_2026/uuid/ca52a9b8-1949-44d3-858b-ca1cd5810a19.png",
+              "altText": "blue-post-it",
+              "showHandles": false
+            },
+            "position": {
+              "x": -343.0153946601137,
+              "y": -1794.6033562020766
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "c36c1f7d-f36b-416a-bc52-83f633da255c",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/thinking_critically_project-template_2026/uuid/7a43eb69-8070-49be-b8e6-d8334714a858.png",
+              "altText": "green-post-it",
+              "showHandles": false
+            },
+            "position": {
+              "x": -163.0153946601137,
+              "y": -1796.6033562020766
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "d5b89044-ace3-40c6-b9b5-6048ce93fe20",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/thinking_critically_project-template_2026/uuid/b09ea196-a79a-4f32-a653-5c3fe2075718.png",
+              "altText": "dark-purple-post-it",
+              "showHandles": false
+            },
+            "position": {
+              "x": 18.984605339886343,
+              "y": -1794.6033562020766
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "799358c7-f083-4bd4-a454-eb6a0308f725",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/thinking_critically_project-template_2026/uuid/49344c80-4e9e-4803-88fb-4d1cae40118e.png",
+              "altText": "purple-post-it",
+              "showHandles": false
+            },
+            "position": {
+              "x": 196.98460533988634,
+              "y": -1792.6033562020766
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "e47fd2fb-b75a-4786-a690-e33ca3092d8c",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/thinking_critically_project-template_2026/uuid/024f8766-3f7f-43ff-a59b-8dc9d271bc01.png",
+              "altText": "pink-post-it",
+              "showHandles": false
+            },
+            "position": {
+              "x": 388.98460533988634,
+              "y": -1792.6033562020766
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "2c8dc998-f69c-45fd-bb01-6974554d9ca5",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/thinking_critically_project-template_2026/uuid/6b28f0af-c883-4c82-bb0a-ab453544f840.png",
+              "altText": "speach-box",
+              "showHandles": false
+            },
+            "position": {
+              "x": -722.8040299140199,
+              "y": -1646.547570069264
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "3d3ba816-799c-4bb8-aa3c-30bc047e55dd",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/thinking_critically_project-template_2026/uuid/48f92a1f-378b-4f6a-98a8-0deff972012d.png",
+              "altText": "key-check",
+              "showHandles": false
+            },
+            "position": {
+              "x": -530.8040299140199,
+              "y": -1648.547570069264
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "aacc4174-60fa-4fc4-83b3-5db380ab45ce",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/thinking_critically_project-template_2026/uuid/b1501bb2-1cd1-4943-922e-28977100c08f.png",
+              "altText": "shield-key",
+              "showHandles": false
+            },
+            "position": {
+              "x": -344.80402991401996,
+              "y": -1656.547570069264
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "31ecafa2-ac45-47f6-b63f-6dbc2c68920d",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/thinking_critically_project-template_2026/uuid/65255d0e-26b2-4ae5-8c76-4bb0497e0a96.png",
+              "altText": "forward-arrow",
+              "showHandles": false
+            },
+            "position": {
+              "x": -144.80402991401996,
+              "y": -1650.547570069264
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "f7d1dd58-f9e9-4574-877e-7d9042da8f15",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/thinking_critically_project-template_2026/uuid/187ed717-0bdb-4167-9230-ef596501c7a2.png",
+              "altText": "square-green-dot",
+              "showHandles": false
+            },
+            "position": {
+              "x": -720.8040299140199,
+              "y": -1510.547570069264
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "7116a0cc-35aa-45b3-aece-782730f17f8a",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/thinking_critically_project-template_2026/uuid/4e251f5d-745b-4b45-a4b7-2e344a2ab956.png",
+              "altText": "square-red-dot",
+              "showHandles": false
+            },
+            "position": {
+              "x": -528.8040299140199,
+              "y": -1510.547570069264
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "64037826-9ee0-4067-8daf-40812473e62a",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/thinking_critically_project-template_2026/uuid/767cec4f-2fd1-42fe-be47-c98e7e60e86f.png",
+              "altText": "square-purple-dot",
+              "showHandles": false
+            },
+            "position": {
+              "x": -334.80402991401996,
+              "y": -1510.547570069264
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "7572f587-fe3a-4e70-981c-99471794c03f",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/thinking_critically_project-template_2026/uuid/488a3186-7b44-477c-9206-8f827400724d.png",
+              "altText": "circle-green-dot",
+              "showHandles": false
+            },
+            "position": {
+              "x": -138.80402991401996,
+              "y": -1514.547570069264
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "93842cca-8cd8-492e-b44f-85007be03028",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/thinking_critically_project-template_2026/uuid/b5db6d92-0d14-4f09-a010-26bd8e15c968.png",
+              "altText": "circle-red-dot",
+              "showHandles": false
+            },
+            "position": {
+              "x": 55.19597008598009,
+              "y": -1514.547570069264
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "cbba2705-de81-49b6-bb92-6dde4345e102",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/thinking_critically_project-template_2026/uuid/3c7e10d8-30ba-4578-af0b-ac82c6fd9007.png",
+              "altText": "circle-purple-dot",
+              "showHandles": false
+            },
+            "position": {
+              "x": 249.1959700859801,
+              "y": -1516.547570069264
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "1f5d60b2-bf9c-4beb-94e3-ca465837cc16",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "AI Tips\n- Tip 1\n- Tip 2\n- Tip 3",
+              "fontSize": "large",
+              "textAlign": "left",
+              "backgroundColor": "var(--sketchlab-bg-gray)"
+            },
+            "position": {
+              "x": 272.0331668183196,
+              "y": -2022.0759635312452
+            },
+            "width": 166,
+            "height": 182,
+            "measured": {
+              "width": 166,
+              "height": 182
+            },
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "3a0bcc78-7ced-47aa-be06-26630f0f79a8",
+            "type": "shape",
+            "position": {
+              "x": -56.38643343915662,
+              "y": -530.9307185430562
+            },
+            "style": {
+              "width": 496.5466385097319,
+              "height": 220.43287950348332
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "A topic I'm \ninterested in is...\n\n--->     ",
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "var(--sketchlab-stroke-blue)",
+              "fontColor": "var(--sketchlab-stroke-blue)",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 497,
+              "height": 220
+            },
+            "dragging": false
+          },
+          {
+            "id": "1b22445e-a340-43ab-8856-2014535770ee",
+            "type": "shape",
+            "position": {
+              "x": 517.9627440593607,
+              "y": -530.9307185430561
+            },
+            "style": {
+              "width": 496.5466385097319,
+              "height": 220.43287950348332
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "This guide is \ndesigned for...\n\n--->     ",
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "var(--sketchlab-stroke-blue)",
+              "fontColor": "var(--sketchlab-stroke-blue)",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 497,
+              "height": 220
+            },
+            "dragging": false
+          },
+          {
+            "id": "5e1fb5d5-d1b7-4156-9783-7088ba2eb7f8",
+            "type": "shape",
+            "position": {
+              "x": 1106.3345611997518,
+              "y": -530.2247219948647
+            },
+            "style": {
+              "width": 496.5466385097319,
+              "height": 220.43287950348332
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "My audience would want \nAI to help them…\n\n--->    ",
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "var(--sketchlab-stroke-blue)",
+              "fontColor": "var(--sketchlab-stroke-blue)",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 497,
+              "height": 220
+            },
+            "dragging": false
+          },
+          {
+            "id": "18b2e61d-72d4-41e0-898e-fab578e85672",
+            "type": "text",
+            "position": {
+              "x": 214.33456119975176,
+              "y": -190.22472199486484
+            },
+            "data": {
+              "text": "Add examples of AI Generated content below",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 471,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "0da58311-1006-4025-ab4b-eac0fe13ce0f",
+            "type": "text",
+            "position": {
+              "x": 1010.3345611997516,
+              "y": -190.22472199486492
+            },
+            "data": {
+              "text": "Add AI Usage Tips and Guidance below",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 409,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "235fd433-970d-46db-86c7-47631b4941be",
+            "type": "text",
+            "position": {
+              "x": -43.18920504802395,
+              "y": -583.2654679740464
+            },
+            "data": {
+              "text": "Your Theme:",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "extra-large",
+              "showHandles": false,
+              "locked": false
+            },
+            "measured": {
+              "width": 187,
+              "height": 57
+            },
+            "dragging": false
+          },
+          {
+            "id": "af12cc3b-819c-42f2-818b-22a4de2b5f69",
+            "type": "text",
+            "position": {
+              "x": 531.1599724504933,
+              "y": -583.2654679740465
+            },
+            "data": {
+              "text": "Your Audience:",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "extra-large",
+              "showHandles": false,
+              "locked": false
+            },
+            "measured": {
+              "width": 222,
+              "height": 57
+            },
+            "dragging": false
+          },
+          {
+            "id": "771c16ce-8476-4be3-ac8e-1dd1875f126e",
+            "type": "text",
+            "position": {
+              "x": 1123.888323628963,
+              "y": -578.6706745540585
+            },
+            "data": {
+              "text": "AI Uses:",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "extra-large",
+              "showHandles": false,
+              "locked": false
+            },
+            "measured": {
+              "width": 130,
+              "height": 57
+            },
+            "dragging": false
+          }
+        ],
+        "edges": [
+          {
+            "id": "a4d3f70c-ad5f-45a6-b850-b22cbbb12362",
+            "source": "GCx9PSHKytlqgHQPW_XWI",
+            "target": "UU6PsWgUXJ7AtzYXq6x64",
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-purple)",
+              "strokeWidth": 5
+            },
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-purple)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 5
+            },
+            "targetHandle": "left-target",
+            "sourceHandle": "right-source",
+            "data": {
+              "locked": true
+            }
+          },
+          {
+            "id": "7d7fa701-a7ef-415f-8ebe-624528700e49",
+            "source": "09f910a2-ad43-4d32-96ad-9a043807d1b3",
+            "target": "15921376-4efd-42bc-9e56-775ea134728b",
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 5
+            }
+          }
+        ],
+        "viewport": {
+          "x": 739.3459856520594,
+          "y": 644.5757339447762,
+          "zoom": 0.21763764082403111
+        }
+      }
+    },
+    "display_name": "Sketch Lab",
+    "bubble_choice_description": "Create your project in Sketch Lab!",
+    "thumbnail_url": "https://images.code.org/036edeb5693631c7f5819c9f4ce3187e-wireframe.png",
+    "name_suffix": "_2026",
+    "hide_share_and_remix": "false",
+    "require_edit_to_continue": "false"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-08-31T19:46:01.620+00:00\",\"changed\":[\"cloned from \\\"thinking_critically_project-template_2026\\\"\"],\"cloned_from\":\"thinking_critically_project-template_2026\"},{\"changed_at\":\"2026-08-31 19:46:26 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-31 19:48:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-31 19:49:58 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Sketchlab>

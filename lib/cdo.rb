@@ -11,15 +11,37 @@ module Cdo
     prepend SecretsConfig
     include Singleton
 
+    attr_accessor :execution_context
+    attr_writer :preforking_parent
+
     # Match CDO_*, plus RACK_ENV and RAILS_ENV.
     ENV_PREFIX = /^(CDO|(RACK|RAILS)(?=_ENV))_/
 
+    MARKETING_SITES_HOSTS = [
+      # Contentful localhost
+      'http://localhost:3001',
+      'http://localhost.code.org:3001',
+      'http://code.marketing-sites.localhost:3001',
+      'http://preview-code.marketing-sites.localhost:3001',
+      # Contentful development
+      'https://code.marketing-sites.dev-code.org',
+      'https://preview-code.marketing-sites.dev-code.org',
+      # Contentful test
+      'https://code.marketing-sites.test-code.org',
+      'https://preview-code.marketing-sites.test-code.org',
+      # Contentful production
+      'https://code.marketing-sites.code.org',
+      'https://preview-code.marketing-sites.code.org',
+    ].freeze
+
     def initialize
+      @execution_context = nil # Default context; may be overridden in puma.rb, active_job_backend.rb, bin/cronjob, etc.
+      @preforking_parent = false # Set by a process that preloads the app and then forks workers.
       super
       root = File.expand_path('..', __dir__)
       load_configuration(
-        # 1. ENV - environment variables (CDO_*)
-        ENV.to_h.select {|k, _| k.match?(ENV_PREFIX)}.transform_keys {|k| k.sub(ENV_PREFIX, '').downcase},
+        # 1. ENV - environment variables (CDO_*, e.g. CDO_BUILD_APPS => build_apps)
+        env_vars_to_configuration,
         # 2. locals.yml - local configuration
         "#{root}/locals.yml",
         # 3. globals.yml - [Chef-]provisioned configuration
@@ -34,10 +56,18 @@ module Cdo
         "#{root}/config.yml.erb"
       )
 
-      defaults = render("#{root}/config.yml.erb").first
-      to_h.keys.each do |key|
-        raise "Unknown property not in defaults: #{key}" unless defaults.key?(key.to_sym)
+      unless ENV['PERMIT_UNKNOWN_PROPERTIES_IN_CDO']
+        configured_properties = to_h.keys.map(&:to_sym)
+        default_properties = render("#{root}/config.yml.erb").first.keys
+        unknown_properties = configured_properties - default_properties
+        unless unknown_properties.empty?
+          raise <<~ERROR
+            Property or properties "#{unknown_properties.join(', ')}" defined in the environment without a default specified in `config.yml.erb`.
+            Likely this is a former configuration value which has been removed from `config.yml.erb` but still exists in your `locals.yml`.
+          ERROR
+        end
       end
+
       raise "'#{rack_env}' is not known environment." unless rack_envs.include?(rack_env)
       freeze_config
     end
@@ -46,12 +76,11 @@ module Cdo
       CDO_SHARED_CACHE
     end
 
-    def cache
-      CDO_CACHE
-    end
-
     def i18n_backend
-      CDO_I18N_BACKEND
+      @i18n_backend ||=
+        # Because loading i18n files is super-slow, lazy load them in development.
+        # To load all locales for testing, add "lazy_load_i18n: false" to +locals.yml+ config
+        CDO.lazy_load_i18n ? Cdo::I18n::LazyLoadableBackend.new(lazy_load: true) : Cdo::I18n::SimpleBackend.new
     end
 
     def canonical_hostname(domain)
@@ -64,8 +93,9 @@ module Cdo
 
       # our HTTPS wildcard certificate only supports *.code.org
       # 'env', 'studio.code.org' over https must resolve to 'env-studio.code.org' for non-prod environments
-      sep = (domain.include?('.code.org')) ? '-' : '.'
-      return "localhost#{sep}#{domain}" if rack_env?(:development)
+      sep = domain.include?('.code.org') ? '-' : '.'
+      # developers and CI servers use localhost
+      return "localhost#{sep}#{domain}" if rack_env?(:development) || ci_webserver?
       return "translate#{sep}#{domain}" if name == 'crowdin'
       "#{rack_env}#{sep}#{domain}"
     end
@@ -74,20 +104,41 @@ module Cdo
       canonical_hostname('studio.code.org')
     end
 
-    def pegasus_hostname
-      canonical_hostname('code.org')
-    end
-
     def hourofcode_hostname
       canonical_hostname('hourofcode.com')
     end
 
-    def advocacy_hostname
-      canonical_hostname('advocacy.code.org')
+    # Legacy Web Lab (project_type: weblab) shares raw student HTML as a
+    # top-level document on the bare codeprojects.org apex. Kept on this domain.
+    def codeprojects_hostname
+      return 'codeprojects.org' if rack_env?(:production)
+      return "localhost.codeprojects.org" if rack_env?(:development) || ci_webserver?
+      return "#{stack_name}.codeprojects.org"
     end
 
-    def codeprojects_hostname
-      canonical_hostname('codeprojects.org')
+    # Web Lab 2 (project_type: weblab2) and Python Lab's pyodide sandbox render
+    # student code inside sandboxed iframes on a dedicated domain, so the
+    # sandboxed-preview architecture does not share reputation with legacy
+    # codeprojects.org content. See docs/weblab-preview-domain-migration.md.
+    def codeaiprojects_hostname
+      return 'codeaiprojects.org' if rack_env?(:production)
+      return "localhost.codeaiprojects.org" if rack_env?(:development) || ci_webserver?
+      return "#{stack_name}.codeaiprojects.org"
+    end
+
+    # Wildcard preview origin: <project>.preview.<codeaiprojects_hostname>.
+    def preview_codeaiprojects_hostname
+      "preview.#{codeaiprojects_hostname}"
+    end
+
+    # The pre-migration sandboxed-preview origin, and the default until the
+    # 'sandboxed-preview-domain' DCDO flag moves clients to codeaiprojects.org
+    # (no deploy needed, either direction). Remove once the migration is
+    # complete, together with the preview DNS record, certificate SAN and
+    # CloudFront alias in
+    # aws/cloudformation/components/codeprojects_resources.yml.erb.
+    def preview_codeprojects_hostname
+      "preview.#{codeprojects_hostname}"
     end
 
     def hostedzone_id(domain)
@@ -96,14 +147,10 @@ module Cdo
       return hosted_zone.id.delete_prefix("/hostedzone/")
     end
 
-    def codeprojects_hostedzone_id
-      hostedzone_id('codeprojects.org')
-    end
-
     def site_host(domain)
       host = canonical_hostname(domain)
       if (rack_env?(:development) && !https_development) ||
-          (ENV['CI'] && host.include?('localhost'))
+          (ENV.fetch('CI', nil) && host.include?('localhost'))
         port = ['studio.code.org'].include?(domain) ? dashboard_port : pegasus_port
         host += ":#{port}"
       end
@@ -118,12 +165,20 @@ module Cdo
       site_host('code.org')
     end
 
-    def site_url(domain, path = '', scheme = '')
-      path = '/' + path unless path.empty? || path[0] == '/'
-      "#{scheme}//#{site_host(domain)}#{path}"
+    def marketing_sites_hosts
+      MARKETING_SITES_HOSTS
     end
 
-    def studio_url(path = '', scheme = '')
+    def normalize_path(path)
+      path.empty? || path[0] == '/' ? path : "/#{path}"
+    end
+
+    def site_url(domain, path = '', scheme = '')
+      "#{scheme}//#{site_host(domain)}#{normalize_path(path)}"
+    end
+
+    def studio_url(path = '', scheme = default_scheme, ge_region: Cdo::GlobalEdition.current_region)
+      path = Cdo::GlobalEdition.path(ge_region, normalize_path(path)) if ge_region
       site_url('studio.code.org', path, scheme)
     end
 
@@ -131,12 +186,18 @@ module Cdo
       site_url('code.org', path, scheme)
     end
 
-    def advocacy_url(path = '', scheme = '')
-      site_url('advocacy.code.org', path, scheme)
+    def hourofcode_url(path = '', scheme = '', locale: nil)
+      if locale
+        language = Cdo::I18n.available_languages_by_locale[locale.to_s]
+        hoc_locale = language[:unique_language_s] if language && language[:supported_hoc_b] == 'TRUE'
+        path = File.join('/', hoc_locale, path) if hoc_locale
+      end
+
+      site_url('hourofcode.com', path, scheme)
     end
 
-    def hourofcode_url(path = '', scheme = '')
-      site_url('hourofcode.com', path, scheme)
+    def video_url(path)
+      File.join('//videos.code.org', path)
     end
 
     def javabuilder_url(path = '', scheme = '')
@@ -151,8 +212,8 @@ module Cdo
         # deployed development instance of Javabuilder, set
         # 'local_javabuilder_stack_name: "your stack name"' in your locals.yml.
         return 'ws://localhost:8080/javabuilder' if CDO.use_localhost_javabuilder
-        stack_name = CDO.local_javabuilder_stack_name || 'javabuilder-test'
-        "wss://#{stack_name}.code.org"
+        javabuilder_stack_name = CDO.local_javabuilder_stack_name || 'javabuilder-test'
+        "wss://#{javabuilder_stack_name}.code.org"
       else
         DCDO.get("javabuilder_websocket_url", 'wss://javabuilder.code.org')
       end
@@ -166,21 +227,12 @@ module Cdo
         # deployed development instance of Javabuilder, set
         # 'local_javabuilder_stack_name: "your stack name"' in your locals.yml.
         return 'http://localhost:8080/javabuilderfiles/seedsources' if CDO.use_localhost_javabuilder
-        stack_name = CDO.local_javabuilder_stack_name || 'javabuilder-test'
-        "https://#{stack_name}-http.code.org/seedsources/sources.json"
+        javabuilder_stack_name = CDO.local_javabuilder_stack_name || 'javabuilder-test'
+        "https://#{javabuilder_stack_name}-http.code.org/seedsources/sources.json"
       else
         http_url = DCDO.get("javabuilder_http_url", 'https://javabuilder-http.code.org')
         http_url + "/seedsources/sources.json"
       end
-    end
-
-    def javabuilder_demo_url(path = '', scheme = '')
-      DCDO.get("javabuilder_demo_websocket_url", 'wss://javabuilder-demo.code.org')
-    end
-
-    def javabuilder_demo_upload_url(path = '', scheme = '')
-      http_url = DCDO.get("javabuilder_demo_http_url", 'https://javabuilder-demo-http.code.org')
-      http_url + "/seedsources/sources.json"
     end
 
     # Get a list of all languages for which we want to link to a localized
@@ -242,11 +294,20 @@ module Cdo
     end
 
     # Temporary method to allow safe (exception-free) accessing of the
-    # Amplitude API key.
-    def safe_amplitude_api_key
-      CDO.cdo_amplitude_api_key
+    # Statsig API key.
+    def safe_statsig_api_client_key
+      CDO.statsig_api_client_key
     rescue ArgumentError
-      # Return an empty string, instead of raising.
+      # Return an empty string instead of raising
+      ''
+    end
+
+    # Temporary method to allow safe (exception-free) accessing of the
+    # Statsig API key.
+    def safe_statsig_api_client_key_session_replay
+      CDO.statsig_api_client_key_session_replay
+    rescue ArgumentError
+      # Return an empty string instead of raising
       ''
     end
 
@@ -258,20 +319,41 @@ module Cdo
       rack_env&.to_sym == env.to_sym
     end
 
-    # Identify whether we are executing on the managed test system (test.code.org / test-studio.code.org)
-    # to ensure that other systems (such as staging-next or Continuous Integration builds) that are operating
+    # Identify whether we are executing on the managed test system (test-studio.code.org)
+    # to ensure that other systems (such as Continuous Integration builds) that are operating
     # with RACK_ENV=test do not carry out actions on behalf of the managed test system.
     def test_system?
-      rack_env?(:test) && pegasus_hostname == 'test.code.org'
+      rack_env?(:test) && dashboard_hostname == 'test-studio.code.org' && chef_managed
     end
 
-    # Identify whether we are executing within a web application server as most of our Ruby classes and modules
-    # can also be executed in Ruby shell scripts (cron jobs), ActiveJob consumers, or in interactive Ruby tools (irb).
-    # Some components may operate differently within a web application server, such as using a database proxy to
-    # connect to the database. We use the `puma` web application server in most environments, except development, where
-    # we use `thin`.
+    # Identify whether we are executing within a puma web application server as most of our Ruby classes and modules
+    # can also be executed in Ruby shell scripts (cron jobs), ActiveJob consumers, or in interactive Ruby tools (irb,
+    # rails console). Some components may operate differently within a web application server. For example, database
+    # timeouts are shorter when executing within a web application server.
     def running_web_application?
-      %w(puma thin).include?(File.basename($0))
+      execution_context == :web_application
+    end
+
+    # Whether this process is an ActiveJob worker, or the parent that preloads the application for them.
+    def running_active_job_worker?
+      execution_context == :active_job_worker
+    end
+
+    # Whether this process preloads the application and will then fork worker processes, as puma does under preload_app!.
+    def preforking_parent?
+      !!@preforking_parent
+    end
+
+    # Whether we are executing within a web application server on the
+    # chef-managed test system (test.code.org / test-studio.code.org).
+    def managed_test_server?
+      test_system? && running_web_application?
+    end
+
+    # Is this code running in a webserver as part of our Continuous Integration
+    # builds?
+    def ci_webserver?
+      running_web_application? && ENV.fetch('CI', nil)
     end
 
     def shared_image_url(path)
@@ -283,9 +365,10 @@ module Cdo
       @@log = log
     end
 
+    # See docs/log-formats.md - Rails Application Logs - Useful Queries/Patterns for log query patterns.
     def log
       require 'logger'
-      @@log ||= Logger.new(STDOUT).tap do |l|
+      @@log ||= Logger.new($stdout).tap do |l|
         l.level = Logger::INFO
         l.formatter = proc do |severity, _, _, msg|
           "#{severity == 'INFO' ? '' : "#{severity}: "}#{msg}\n"
@@ -328,6 +411,26 @@ module Cdo
         ]
       ).reservations.map(&:instances).flatten.map {|i| ["fe-#{i.instance_id}", i.private_dns_name]}.to_h
       servers.merge(self[:app_servers])
+    end
+
+    # Parse CDO_* env vars to set the same params as locals.yml
+    private def env_vars_to_configuration
+      ENV.to_h.
+        select {|k, _| k.match?(ENV_PREFIX)}.
+        transform_keys {|k| k.sub(ENV_PREFIX, '')}.
+        # Ignore keys like `CDO__*`, e.g. ignore CDO__skip_it
+        reject {|k, _| k.start_with?('_')}.
+        # CDO_BUILD_APPS or CDO_build_apps both => build_apps
+        transform_keys(&:downcase).
+        # Try to parse CDO_* env vars as YAML, fall back to strings
+        transform_values do |env_var_value|
+          YAML.load(env_var_value)
+        rescue Psych::Exception
+          # Pass thru yaml parse fails as strings: this allows random ascii password strings
+          # that happen to start with { or [, but don't have a matching close bracket:
+          # {fj@95randompassword or [#092pass
+          env_var_value
+        end
     end
   end
 end

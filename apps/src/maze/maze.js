@@ -1,34 +1,44 @@
+import {getCode, getAllGeneratedCode} from '@cdo/apps/blockly/utils';
+
+import {TestResults, ResultType} from '../constants';
+import AppView from '../templates/AppView';
+import {createReactRoot} from '../util/createReactRoot';
+
+import {
+  announceResult,
+  announceStep,
+  focusAnnouncer,
+  setupResultAnnouncer,
+} from './resultAnnouncer';
+
+const maze = require('@code-dot-org/maze');
 const React = require('react');
-const ReactDOM = require('react-dom');
 const Provider = require('react-redux').Provider;
 
-const timeoutList = require('../lib/util/timeoutList');
-import AppView from '../templates/AppView';
+const containedLevels = require('../containedLevels');
+const dom = require('../dom');
+const generateCodeAliases = require('../dropletUtils').generateCodeAliases;
 const CustomMarshalingInterpreter =
   require('../lib/tools/jsinterpreter/CustomMarshalingInterpreter').default;
-const dom = require('../dom');
-const utils = require('../utils');
-import {TestResults, ResultType} from '../constants';
-const generateCodeAliases = require('../dropletUtils').generateCodeAliases;
+const timeoutList = require('../lib/util/timeoutList');
 const getStore = require('../redux').getStore;
 const studioApp = require('../StudioApp').singleton;
-const containedLevels = require('../containedLevels');
+const utils = require('../utils');
+
+const api = require('./api');
+const dropletConfig = require('./dropletConfig');
+const ExecutionInfo = require('./executionInfo');
+const MazeVisualizationColumn = require('./MazeVisualizationColumn');
+const mazeReducer = require('./redux');
+const createResultsHandlerForSubtype =
+  require('./results/utils').createResultsHandlerForSubtype;
+
 const getContainedLevelResultInfo = containedLevels.getContainedLevelResultInfo;
 const postContainedLevelAttempt = containedLevels.postContainedLevelAttempt;
 const runAfterPostContainedLevel = containedLevels.runAfterPostContainedLevel;
 
-const ExecutionInfo = require('./executionInfo');
-const MazeVisualizationColumn = require('./MazeVisualizationColumn');
-const api = require('./api');
-const dropletConfig = require('./dropletConfig');
-const mazeReducer = require('./redux');
-
-const maze = require('@code-dot-org/maze');
 const MazeController = maze.MazeController;
 const tiles = maze.tiles;
-
-const createResultsHandlerForSubtype =
-  require('./results/utils').createResultsHandlerForSubtype;
 
 module.exports = class Maze {
   constructor() {
@@ -65,6 +75,8 @@ module.exports = class Maze {
     // replace studioApp() methods with our own
     studioApp().runButtonClick = this.runButtonClick_;
     studioApp().reset = this.reset_;
+
+    setupResultAnnouncer();
 
     const skin = config.skin;
     const level = config.level;
@@ -145,7 +157,11 @@ module.exports = class Maze {
         Blockly.HSV_SATURATION = 0.6;
 
         Blockly.SNAP_RADIUS *= this.scale.snapRadius;
-        Blockly.setInfiniteLoopTrap();
+
+        // Add API name and local variable to generator reserved words list.
+        // This prevents students from overriding these with their own
+        // functions/variables.
+        Blockly.JavaScript.addReservedWords('Maze,code');
       }
 
       const svg = document.getElementById('svgMaze');
@@ -170,7 +186,8 @@ module.exports = class Maze {
 
       var finishButton = document.getElementById('finishButton');
       if (finishButton) {
-        finishButton.setAttribute('disabled', 'disabled');
+        finishButton.setAttribute('disabled', '');
+        finishButton.classList.add('Mui-disabled');
         dom.addClickTouchEvent(finishButton, this.finishButtonClick_);
       }
 
@@ -207,14 +224,17 @@ module.exports = class Maze {
       />
     );
 
-    ReactDOM.render(
+    createReactRoot(
       <Provider store={getStore()}>
         <AppView
           visualizationColumn={visualizationColumn}
           onMount={studioApp().init.bind(studioApp(), config)}
         />
       </Provider>,
-      document.getElementById(config.containerId)
+      document.getElementById(config.containerId),
+      {
+        legacyReactDomRender: true,
+      }
     );
   }
 
@@ -227,6 +247,7 @@ module.exports = class Maze {
     var stepButton = document.getElementById('stepButton');
     if (stepButton) {
       stepButton.setAttribute('disabled', '');
+      stepButton.classList.add('Mui-disabled');
     }
     this.execute_(false);
   };
@@ -239,6 +260,7 @@ module.exports = class Maze {
   stepButtonClick_ = () => {
     var stepButton = document.getElementById('stepButton');
     stepButton.setAttribute('disabled', '');
+    stepButton.classList.add('Mui-disabled');
 
     if (this.animating_) {
       this.scheduleAnimations_(true);
@@ -254,6 +276,16 @@ module.exports = class Maze {
   resetButtonClick_ = () => {
     var stepButton = document.getElementById('stepButton');
     stepButton.removeAttribute('disabled');
+    stepButton.classList.remove('Mui-disabled');
+
+    var runButton = document.getElementById('runButton');
+    if (
+      runButton &&
+      runButton.style.display !== 'none' &&
+      document.activeElement === document.body
+    ) {
+      runButton.focus();
+    }
   };
 
   /**
@@ -282,10 +314,15 @@ module.exports = class Maze {
     if (!resetButton.style.minWidth) {
       resetButton.style.minWidth = runButton.offsetWidth + 'px';
     }
+
+    // Run button is about to be hidden; move focus to the live region first so
+    // VoiceOver doesn't re-announce the page title and flush run announcements.
+    var runButtonHadFocus = document.activeElement === runButton;
     studioApp().toggleRunReset('reset');
-    if (studioApp().isUsingBlockly()) {
-      Blockly.mainBlockSpace.traceOn(true);
+    if (runButtonHadFocus) {
+      focusAnnouncer();
     }
+
     studioApp().reset(false);
     studioApp().attempts++;
   }
@@ -308,14 +345,9 @@ module.exports = class Maze {
     this.beginAttempt();
     this.prepareForExecution_();
 
-    var code = '';
+    let code = '';
     if (studioApp().isUsingBlockly()) {
-      let codeBlocks = Blockly.mainBlockSpace.getTopBlocks(true);
-      if (studioApp().initializationBlocks) {
-        codeBlocks = studioApp().initializationBlocks.concat(codeBlocks);
-      }
-
-      code = Blockly.Generator.blocksToCode('JavaScript', codeBlocks);
+      code = getAllGeneratedCode(studioApp().initializationCode);
     } else {
       code = generateCodeAliases(dropletConfig, 'Maze');
       code += studioApp().editor.getValue();
@@ -446,7 +478,7 @@ module.exports = class Maze {
       // Syntax error, can't happen.
       this.result = ResultType.ERROR;
       console.error('Unexpected exception: ' + e + '\n' + e.stack);
-      // call window.onerror so that we get new relic collection.  prepend with
+      // call window.onerror so browser observability captures it. prepend with
       // UserCode so that it's clear this is in eval'ed code.
       if (window.onerror) {
         window.onerror('UserCode:' + e.message, document.URL, 0);
@@ -474,7 +506,7 @@ module.exports = class Maze {
 
       program = studioApp().editor.getValue();
     } else {
-      program = Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
+      program = getCode(Blockly.mainBlockSpace);
     }
 
     this.waitingForReport = true;
@@ -578,6 +610,12 @@ module.exports = class Maze {
       options.message = message;
     }
 
+    announceResult({
+      result: this.result,
+      testResults: this.testResults,
+      message,
+    });
+
     // We will usually want to allow subtypes to situationally prevent a dialog
     // from being shown if they want to allow the user to pass but keep them on
     // the page for iteration; we only refrain from doing so if we know this is
@@ -629,72 +667,96 @@ module.exports = class Maze {
       studioApp().highlight(String(action.blockId));
     }
 
+    const DIRECTION_NAME = ['north', 'east', 'south', 'west'];
+    const facing = () => DIRECTION_NAME[this.controller.getPegmanD()];
+
     switch (action.command) {
       case 'north':
         this.controller.animatedMove(tiles.Direction.NORTH, timePerStep);
+        announceStep('North, moved.');
         break;
       case 'east':
         this.controller.animatedMove(tiles.Direction.EAST, timePerStep);
+        announceStep('East, moved.');
         break;
       case 'south':
         this.controller.animatedMove(tiles.Direction.SOUTH, timePerStep);
+        announceStep('South, moved.');
         break;
       case 'west':
         this.controller.animatedMove(tiles.Direction.WEST, timePerStep);
+        announceStep('West, moved.');
         break;
       case 'look_north':
         this.controller.animatedLook(tiles.Direction.NORTH);
+        announceStep('North, looked.');
         break;
       case 'look_east':
         this.controller.animatedLook(tiles.Direction.EAST);
+        announceStep('East, looked.');
         break;
       case 'look_south':
         this.controller.animatedLook(tiles.Direction.SOUTH);
+        announceStep('South, looked.');
         break;
       case 'look_west':
         this.controller.animatedLook(tiles.Direction.WEST);
+        announceStep('West, looked.');
         break;
       case 'fail_forward':
         this.controller.animatedFail(true);
+        announceStep('Bonked into wall.');
         break;
       case 'fail_backward':
         this.controller.animatedFail(false);
+        announceStep('Bonked into wall.');
         break;
       case 'left':
         this.controller.animatedTurn(tiles.TurnDirection.LEFT);
+        announceStep(`Turned left, facing ${facing()}.`);
         break;
       case 'right':
         this.controller.animatedTurn(tiles.TurnDirection.RIGHT);
+        announceStep(`Turned right, facing ${facing()}.`);
         break;
       case 'finish':
         this.finish_(timePerStep);
         break;
       case 'putdown':
         this.controller.scheduleFill();
+        announceStep('Put down.');
         break;
       case 'pickup':
         this.controller.scheduleDig();
+        announceStep('Picked up.');
         break;
       case 'fail_pickup':
         this.controller.animatedFail(false);
+        announceStep('Fail pick up.');
         break;
       case 'nectar':
         this.controller.subtype.animateGetNectar();
+        announceStep('Picked up nectar.');
         break;
       case 'honey':
         this.controller.subtype.animateMakeHoney();
+        announceStep('Made honey.');
         break;
       case 'get_corn':
         this.controller.subtype.animateGetCorn();
+        announceStep('Picked up corn.');
         break;
       case 'get_pumpkin':
         this.controller.subtype.animateGetPumpkin();
+        announceStep('Picked up pumpkin.');
         break;
       case 'get_lettuce':
         this.controller.subtype.animateGetLettuce();
+        announceStep('Picked up lettuce.');
         break;
       case 'plant':
         this.controller.subtype.animatePlant();
+        announceStep('Planted.');
         break;
       default:
         // action[0] is null if generated by studioApp().checkTimeout().
@@ -708,6 +770,7 @@ module.exports = class Maze {
       var finishButton = document.getElementById('finishButton');
       if (finishButton) {
         finishButton.removeAttribute('disabled');
+        finishButton.classList.remove('Mui-disabled');
       }
       var finishIcon = document.getElementById('finish');
       if (finishIcon) {
@@ -768,6 +831,7 @@ module.exports = class Maze {
     timeoutList.setTimeout(() => {
       if (stepsRemaining) {
         stepButton.removeAttribute('disabled');
+        stepButton.classList.remove('Mui-disabled');
       } else {
         this.animating_ = false;
         // If stepping and we failed, we want to retain highlighting until

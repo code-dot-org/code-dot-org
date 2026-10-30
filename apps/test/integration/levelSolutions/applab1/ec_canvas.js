@@ -1,5 +1,6 @@
-var tickWrapper = require('../../util/tickWrapper');
 import {TestResults} from '@cdo/apps/constants';
+
+var tickWrapper = require('../../util/tickWrapper');
 
 // take advantage of the fact that we expose the filesystem via
 var imageUrl = '/base/static/flappy_promo.png';

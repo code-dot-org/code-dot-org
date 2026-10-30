@@ -1,0 +1,81 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2025-12-15T17:10:24.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Creating a Filter with CHAT\r\n\r\n**Context**: You are developing a Music App to curate playlists and need to incorporate a filter algorithm.\r\n\r\n### 1. Clarify\r\nIn `CHAT-Prompt.md`, decompose the type of filters that you might need to build for this music app.\r\n\r\n### 2. Hone\r\nUse AI Tutor to assist with writing the helper functions necessary to implement the filters.\r\n\r\n### 3. Apply\r\nImplement your solution into the code and test its functionality. Have AI Tutor assist with creating test cases to make sure that all of your data is being filtered properly.\r\n\r\n### 4. Transfer\r\nCreate a generalized prompt to implement a simple filter into future work. Save it into the backpack.\r\n",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Fair Music Filter</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n\n  <div class=\"app-container\">\n    <header>\n      <h1>🎵 Fair Music Filter</h1>\n      <p>Curating playlists without bias.</p>\n    </header>\n\n    <main>\n      <div class=\"controls\">\n        <div class=\"input-group\">\n          <label for=\"popularityInput\">Min Popularity (0-100)</label>\n          <input type=\"number\" id=\"popularityInput\" placeholder=\"e.g. 80\" min=\"0\" max=\"100\">\n        </div>\n\n        <div class=\"input-group\">\n          <label for=\"genreDropdown\">Genre</label>\n          <select id=\"genreDropdown\">\n            <option value=\"Pop\">Pop</option>\n            <option value=\"Rock\">Rock</option>\n            <option value=\"Hip-Hop\">Hip-Hop</option>\n            <option value=\"Jazz\">Jazz</option>\n          </select>\n        </div>\n\n        <button id=\"applyButton\">Apply Filter</button>\n      </div>\n\n      <div class=\"output-section\">\n        <h3 id=\"countLabel\">Results: 0</h3>\n        <pre id=\"resultsArea\">No results yet...</pre>\n      </div>\n    </main>\n  </div>\n\n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// Data Setup (Simulating a database)\nconst songs = [\n  { title: \"Levitating\", artist: \"Dua Lipa\", genre: \"Pop\", popularity: 100 },\n  { title: \"Blinding Lights\", artist: \"The Weeknd\", genre: \"Pop\", popularity: 95 },\n  { title: \"Smells Like Teen Spirit\", artist: \"Nirvana\", genre: \"Rock\", popularity: 92 },\n  { title: \"Take Five\", artist: \"Dave Brubeck\", genre: \"Jazz\", popularity: 85 },\n  { title: \"Juicy\", artist: \"Notorious B.I.G.\", genre: \"Hip-Hop\", popularity: 90 },\n  { title: \"Missing You\", artist: \"Mystery Artist\", genre: \"Pop\" }, // Note: Missing popularity!\n  { title: \"Unknown Track\", artist: \"Unknown\", popularity: 88 }     // Note: Missing genre!\n];\n\n// Element Selection\nconst popularityInput = document.querySelector(\"#popularityInput\");\nconst genreDropdown = document.querySelector(\"#genreDropdown\");\nconst applyButton = document.querySelector(\"#applyButton\");\nconst resultsArea = document.querySelector(\"#resultsArea\");\nconst countLabel = document.querySelector(\"#countLabel\");\n\n// Helper Functions\n\nconst filterByPopularity = (song, minPop) => {\n\n};\n\nconst filterByGenre = (song, selectedGenre) => {\n\n};\n\n// Event Listener\n\napplyButton.addEventListener(\"click\", () => {\n  // Get current values from inputs\n  const minPop = Number(popularityInput.value);\n  const selectedGenre = genreDropdown.value;\n  \n  // Create a list of results using .map()\n  const results = songs.map((song) => {\n\n    return \"\"; // temporary placeholder\n  });\n\n  // Display results\n  resultsArea.textContent = results.join(\"\\n\");\n});",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "style.css",
+          "language": "css",
+          "contents": "/* style.css */\n:root {\n  --primary: #6c5ce7;\n  --secondary: #a29bfe;\n  --bg: #2d3436;\n  --card-bg: #dfe6e9;\n  --text: #2d3436;\n}\n\nbody {\n  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n  background-color: var(--bg);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  min-height: 100vh;\n  margin: 0;\n  color: var(--text);\n}\n\n.app-container {\n  background-color: white;\n  width: 400px;\n  padding: 2rem;\n  border-radius: 12px;\n  box-shadow: 0 10px 25px rgba(0,0,0,0.5);\n}\n\nheader {\n  text-align: center;\n  margin-bottom: 2rem;\n}\n\nh1 {\n  margin: 0;\n  color: var(--primary);\n}\n\n.input-group {\n  margin-bottom: 1rem;\n}\n\nlabel {\n  display: block;\n  font-weight: bold;\n  margin-bottom: 0.5rem;\n}\n\ninput, select {\n  width: 100%;\n  padding: 0.8rem;\n  border: 2px solid var(--secondary);\n  border-radius: 8px;\n  font-size: 1rem;\n  box-sizing: border-box; /* Ensures padding doesn't break width */\n}\n\nbutton {\n  width: 100%;\n  padding: 1rem;\n  background-color: var(--primary);\n  color: white;\n  border: none;\n  border-radius: 8px;\n  font-size: 1.1rem;\n  cursor: pointer;\n  transition: background 0.2s;\n}\n\nbutton:hover {\n  background-color: #5649c0;\n}\n\n.output-section {\n  margin-top: 2rem;\n  background-color: var(--card-bg);\n  padding: 1rem;\n  border-radius: 8px;\n  min-height: 150px;\n}\n\n#resultsArea {\n  white-space: pre-wrap; /* Preserves newlines but wraps text */\n  font-family: 'Courier New', Courier, monospace;\n  color: #333;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "CHAT-Prompt.md",
+          "language": "md",
+          "contents": "## Document your process working through the CHAT framework\n\n1. Clarify\n\n\n2. Hone\n\n\n3. Apply\n\n\n4. Transfer",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "4",
+        "2",
+        "1",
+        "3"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\ncoZFrw==\n",
+    "display_name": "Music Playlist App",
+    "bubble_choice_description": "You are developing a Music App to curate playlists and need to incorporate a filter algorithm.",
+    "thumbnail_url": "https://images.code.org/95c2f5f8a33743b9e8f1d271edf0e271-music.jpg",
+    "name_suffix": "_2025-pilot"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-12-15T17:10:24.388+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson8-level2a-test-2025\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson8-level2a-test-2025\"}]"
+}]]></config>
+</Weblab2>

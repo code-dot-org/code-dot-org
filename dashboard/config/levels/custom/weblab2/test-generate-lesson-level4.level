@@ -1,0 +1,41 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-08-17T14:36:19.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "require_edit_to_continue": true,
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "013b3bd5-b5c8-49ff-9067-b30c195268fe": {
+          "id": "013b3bd5-b5c8-49ff-9067-b30c195268fe",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>RPG Game - XP Update</title>\n    <style>\n        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 20px; text-align: center; background-color: #2c3e50; color: #ecf0f1; }\n        h1 { color: #e74c3c; margin-bottom: 20px; }\n        p { margin-bottom: 25px; font-size: 1.1em; }\n        .console-hint { background-color: #34495e; padding: 10px; border-radius: 5px; display: inline-block; margin-top: 20px; font-size: 0.9em; }\n    </style>\n</head>\n<body>\n    <h1>RPG Game: Experience Gained!</h1>\n    <p>Watch your character's experience points grow as they complete quests. Open the console to follow their progress!</p>\n    <div class=\"console-hint\">Remember to open your browser's console (F12) to see output from `script.js`.</div>\n\n    <script src=\"script.js\"></script>\n</body>\n</html>",
+          "folderId": "0",
+          "type": "starter",
+          "active": true
+        },
+        "597a4ec8-0ed0-415f-8381-0d31c01b6544": {
+          "id": "597a4ec8-0ed0-415f-8381-0d31c01b6544",
+          "name": "script.js",
+          "contents": "// Welcome back to the RPG Game!\n// Your character is gaining experience points (XP).\n// In programming, we can change the value of a variable after it's been created.\n\nlet xp_points = 100; // Your character starts with 100 XP.\nconsole.log(\"Initial XP: \" + xp_points + \" points\");\n\n// Great job! Your character completed a small quest and earned more XP.\nxp_points = 250; // The variable 'xp_points' is updated to 250.\nconsole.log(\"XP after first quest: \" + xp_points + \" points\");\n\n// Your task:\n// The player just completed a major quest! Update 'xp_points' to 500\n// and then print the new XP total to the console.\n\n// --- Your code starts here ---\n\n\n// --- Your code ends here ---",
+          "folderId": "0",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "013b3bd5-b5c8-49ff-9067-b30c195268fe",
+        "597a4ec8-0ed0-415f-8381-0d31c01b6544"
+      ]
+    },
+    "long_instructions": "Welcome back to the RPG Game! Your character is on an epic adventure, gaining experience points (XP) as they complete quests. In programming, we often need to change the value stored in a variable, and this level will show you how.\r\n\r\n1.  **Open `script.js`.** You'll see that your character starts with `100` XP, and then gains more, reaching `250` XP after a small quest. Both of these changes are printed to the console.\r\n2.  **Your task:** Imagine your character just finished a major quest! You need to update their `xp_points` variable to `500`. Below the existing code and comments, add a new line that assigns the value `500` to `xp_points`.\r\n3.  After updating `xp_points`, add another line to `console.log()` the new total so you can see it in your browser's console.\r\n4.  **Save `script.js`** and refresh `index.html` in your browser. Open your browser's console (usually by pressing `F12` or right-clicking and selecting \"Inspect\" then \"Console\") to see your character's XP progression!",
+    "generate_outline": "Scenario: Variables can be updated! Imagine your player just gained experience points. We can change the value of a variable by simply assigning it a new number.\r\n\r\nCode:\r\nxp_points = 100\r\nprint(xp_points)\r\n\r\n# The player finished a quest!\r\nxp_points = 250\r\n\r\nprint(xp_points)\r\n\r\nTask: Add a final line of code that changes xp_points to $500$ and print it one last time to the console."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-08-17 14:36:31 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-08-17 14:36:31 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-08-17 14:36:34 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Weblab2>

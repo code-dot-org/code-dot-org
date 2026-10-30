@@ -1,30 +1,36 @@
+import {Typography} from '@mui/material';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import _ from 'lodash';
 import React from 'react';
-import {shallow} from 'enzyme';
-import {assert, expect} from '../../../util/reconfiguredChai';
-import {UnconnectedLessonOverview as LessonOverview} from '@cdo/apps/templates/lessonOverview/LessonOverview';
-import {sampleActivities} from '../../lib/levelbuilder/lesson-editor/activitiesTestData';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import Button from '@cdo/apps/templates/Button';
+import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
+import {UnconnectedLessonOverview as LessonOverview} from '@cdo/apps/templates/lessonOverview/LessonOverview';
+import * as currentLocaleModule from '@cdo/apps/util/currentLocale';
+
+import {assert, expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 import {
   fakeStudentAnnouncement,
   fakeTeacherAndStudentAnnouncement,
   fakeTeacherAnnouncement,
 } from '../../code-studio/components/progress/FakeAnnouncementsTestData';
-import _ from 'lodash';
-import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
-import sinon from 'sinon';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {sampleActivities} from '../../levelbuilder/lesson-editor/activitiesTestData';
 
 describe('LessonOverview', () => {
+  let currentLocaleStub;
   let defaultProps;
   beforeEach(() => {
+    currentLocaleStub = sinon.stub(currentLocaleModule, 'default');
     defaultProps = {
       lesson: {
         unit: {
           displayName: 'Unit 1',
-          link: '/s/unit-1',
+          link: '/courses/course/units/1',
           publishedState: 'beta',
           lessonGroups: [
             {
@@ -35,14 +41,14 @@ describe('LessonOverview', () => {
                 {
                   key: 'lesson-1',
                   position: 1,
-                  displayName: 'Lesson 1',
+                  displayName: 'Lesson One',
                   link: '/lessons/1',
                   lockable: false,
                 },
                 {
                   key: 'lesson-2',
                   position: 2,
-                  displayName: 'Lesson 2',
+                  displayName: 'Lesson Two',
                   link: '/lessons/2',
                   lockable: false,
                 },
@@ -55,7 +61,8 @@ describe('LessonOverview', () => {
         duration: 45,
         position: 1,
         lockable: false,
-        displayName: 'Lesson 1',
+        displayName: 'Lesson One',
+        title: 'Lesson One Title',
         overview: 'Lesson Overview',
         purpose: 'The purpose of the lesson is for people to learn',
         preparation: '- One',
@@ -107,15 +114,19 @@ describe('LessonOverview', () => {
     };
   });
 
+  afterEach(() => {
+    currentLocaleStub.restore();
+  });
+
   it('renders default props', () => {
     const wrapper = shallow(<LessonOverview {...defaultProps} />);
     const navLink = wrapper.find('a').at(0);
-    expect(navLink.props().href).to.contain('/s/unit-1');
+    expect(navLink.props().href).to.contain('/courses/course/units/1');
     expect(navLink.contains('< Unit 1')).to.be.true;
 
     expect(wrapper.find('LessonNavigationDropdown').length).to.equal(1);
 
-    expect(wrapper.contains('Lesson 1: Lesson 1'), 'Lesson Name').to.be.true;
+    expect(wrapper.contains('Lesson One Title'), 'Lesson Title').to.be.true;
     expect(wrapper.contains('45 minutes'), 'Lesson Duration').to.be.true;
 
     const enhancedSafeMarkdowns = wrapper.find('EnhancedSafeMarkdown');
@@ -143,7 +154,13 @@ describe('LessonOverview', () => {
 
     expect(wrapper.find('LessonAgenda').length).to.equal(1);
 
-    expect(wrapper.containsMatchingElement(<h2>Standards</h2>)).to.be.false;
+    expect(
+      wrapper.containsMatchingElement(
+        <Typography variant="h4" component="h2">
+          Standards
+        </Typography>
+      )
+    ).to.be.false;
   });
 
   it('renders correct number of activities', () => {
@@ -256,7 +273,13 @@ describe('LessonOverview', () => {
       <LessonOverview {...defaultProps} lesson={lesson} />
     );
 
-    expect(wrapper.containsMatchingElement(<h2>Standards</h2>)).to.be.true;
+    expect(
+      wrapper.containsMatchingElement(
+        <Typography variant="h4" component="h2">
+          Standards
+        </Typography>
+      )
+    ).to.be.true;
     expect(
       wrapper.containsMatchingElement(
         <Button
@@ -266,7 +289,11 @@ describe('LessonOverview', () => {
       )
     ).to.be.true;
     expect(
-      wrapper.containsMatchingElement(<h2>Cross-Curricular Opportunities</h2>)
+      wrapper.containsMatchingElement(
+        <Typography variant="h4" component="h2">
+          Cross-Curricular Opportunities
+        </Typography>
+      )
     ).to.be.false;
   });
 
@@ -291,13 +318,24 @@ describe('LessonOverview', () => {
       <LessonOverview {...defaultProps} lesson={lesson} />
     );
 
-    expect(wrapper.containsMatchingElement(<h2>Standards</h2>)).to.be.false;
     expect(
-      wrapper.containsMatchingElement(<h2>Cross-Curricular Opportunities</h2>)
+      wrapper.containsMatchingElement(
+        <Typography variant="h4" component="h2">
+          Standards
+        </Typography>
+      )
+    ).to.be.false;
+    expect(
+      wrapper.containsMatchingElement(
+        <Typography variant="h4" component="h2">
+          Cross-Curricular Opportunities
+        </Typography>
+      )
     ).to.be.true;
   });
 
   it('renders dropdown button with links to printing options if not pilot or in development', () => {
+    currentLocaleStub.returns('en-US');
     const lesson = {
       ...defaultProps.lesson,
       lessonPlanPdfUrl: '/link/to/lesson_plan.pdf',
@@ -319,6 +357,7 @@ describe('LessonOverview', () => {
   });
 
   it('renders dropdown button with lessonPlanPdf if no scriptResourcesPdfUrl provided and not pilot or in development', () => {
+    currentLocaleStub.returns('en-US');
     const lesson = {
       ...defaultProps.lesson,
       lessonPlanPdfUrl: '/link/to/lesson_plan.pdf',
@@ -337,7 +376,26 @@ describe('LessonOverview', () => {
     ]);
   });
 
+  it('does not render dropdown with links if locale is not en-US', () => {
+    currentLocaleStub.returns('te-ST');
+    const lesson = {
+      ...defaultProps.lesson,
+      lessonPlanPdfUrl: '/link/to/lesson_plan.pdf',
+      scriptResourcesPdfUrl: '/link/to/script_resources.pdf',
+    };
+    const wrapper = shallow(
+      <LessonOverview {...defaultProps} lesson={lesson} />
+    );
+    expect(wrapper.find(DropdownButton).length).to.equal(1);
+    const dropdownLinks = wrapper.find(DropdownButton).first().props().children;
+    expect(dropdownLinks.map(link => link.props.href)).to.eql(['#']);
+    expect(dropdownLinks.map(link => link.props.children)).to.eql([
+      'Print Lesson Plan',
+    ]);
+  });
+
   it('does not render overview printing option in dropdown for pilot course', () => {
+    currentLocaleStub.returns('en-US');
     const unit = {
       ...defaultProps.lesson.unit,
       publishedState: PublishedState.pilot,
@@ -362,6 +420,7 @@ describe('LessonOverview', () => {
   });
 
   it('does not render overview printing option in dropdown for in development course', () => {
+    currentLocaleStub.returns('en-US');
     const unit = {
       ...defaultProps.lesson.unit,
       publishedState: PublishedState.in_development,

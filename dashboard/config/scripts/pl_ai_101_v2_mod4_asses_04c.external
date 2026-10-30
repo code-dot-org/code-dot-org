@@ -1,0 +1,29 @@
+name 'pl-ai-101-V2-mod4-asses-04c'
+title '11th Grade History'
+description 'description here'
+display_name 'High School'
+bubble_choice_description '11th Grade History'
+thumbnail_url 'https://images.code.org/c8d5c049bf30a12688cf16cf08dc2f6c-Screenshot 2026-02-13 at 1.22.42 PM.png'
+
+markdown <<MARKDOWN
+# 11th Grade History
+
+Mr. Robinson is designing a research project where students investigate a historical question and develop an argument based on multiple sources. His goal is for students to learn how to find, evaluate, and synthesize information—not just collect it. He knows AI tools can help students generate ideas and summarize texts, but he also knows those summaries can be incomplete, misleading, or overly simplified.
+
+Rather than banning AI or allowing unrestricted use, he decides to take a balanced approach. He designs this as a mixed AI task (AI-assisted and AI-integrated), where AI can support parts of the process, but evaluating AI output is also part of the learning.
+
+To set expectations, Mr. Robinson is very explicit with students. They are allowed to use AI to brainstorm research questions, generate possible angles on a topic, or summarize sources—but they are responsible for verifying any information AI provides. He emphasizes that AI is not a source. Students must find and cite original sources, and they are required to explain how they used AI in their process. They are not allowed to include unverified AI-generated information in their final work.
+
+As he designs the project, Mr. Robinson builds in several checkpoints to make student thinking visible. Early in the process, students develop their own research question, with the option to refine it using AI. They then begin gathering sources and may use AI to generate a summary of a source—but they must directly compare that summary to the original text.
+
+To guide this, Mr. Robinson asks students to note:
+* What the AI summary gets right
+* What it leaves out or oversimplifies
+* What they need to go back and confirm in the original source
+
+Students keep these notes as part of their research process, creating a record of how their understanding develops.
+
+As students move into synthesis, they are asked to show how they combine information from multiple sources, rather than relying on a single explanation. Mr. Robinson also includes a short reflection at the end of the project, where students explain how AI supported their work and where it may have been misleading or unhelpful.
+
+When grading, Mr. Robinson prioritizes source evaluation, synthesis, and transparency of thinking. He looks at how well students question information, how effectively they combine ideas across sources, and whether they can clearly explain their reasoning and decisions. The final product matters, but it is the process—documented through notes, comparisons, and reflection—that gives him the clearest picture of student understanding.
+MARKDOWN

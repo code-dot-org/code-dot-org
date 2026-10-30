@@ -1,10 +1,32 @@
 #!/usr/bin/env ruby
 
-require_relative '../../lib/cdo/redshift'
+# This script is responsible for reshaping and uploading Foorm data to Redshift.
+# It works via a series of steps:
+#
+# 1. Fetch a batch of data from the database.
+# 2. Reshape the data to flatten submissions, suitable for Redshift analysis
+# 3. Append the reshaped rows to a CSV string.
+# 4. Upload the CSV to S3.
+# 5. Import the reshaped data into Redshift table, deleting the old data first
+# 7. Delete the CSV from S3.
+#
+# There are a couple of things to keep in mind with this script:
+#
+# It is possible that the import into Redshift from the S3 CSV file will fail with
+# a "stl_load_errors" error. This can be investigated with the following query in
+# the Redshift query editor.
+#
+# ```
+# SELECT * FROM stl_load_errors
+# WHERE filename LIKE 's3://cdo-data-sharing-internal/tmp-foorm/%'
+# ORDER BY starttime DESC LIMIT 10;
+# ````
+
 require_relative 'only_one'
 abort 'Script already running' unless only_one_running?(__FILE__)
 
 require_relative '../../dashboard/config/environment'
+require_relative '../../lib/cdo/aws/redshift/client'
 
 S3_BUCKET_NAME = 'cdo-data-sharing-internal'
 aws_account_id = Aws::STS::Client.new.get_caller_identity.account
@@ -15,24 +37,30 @@ SUBMISSIONS_REDSHIFT_TABLE_NAME = 'analysis_pii.foorm_submissions_reshaped'
 FORMS_S3_CSV_NAME = 'forms.csv'
 FORMS_REDSHIFT_TABLE_NAME = 'analysis.foorm_forms_reshaped'
 
-# Main method responsible for reshaping Foorm data
-# and importing to our analytics database (Redshift).
-# For each of our Foorm models (Forms and Submissions), we:
-# 1) delete any existing files (if any) from previous iterations of this job,
-# 2) reshape each record from our database into a CSV format,
-# 3) write that CSV to an S3 bucket,
-# 4) copy the contents of that CSV into a Redshift table,
-# 5) delete the CSV from S3.
+REDSHIFT_DATABASE = 'dashboard'
+COPY_TIMEOUT = 30.minutes
+
+SLACK_COLOR_BY_SEVERITY = {warn: 'yellow', error: 'red'}.freeze
+
 def main
-  redshift_client = RedshiftClient.instance
+  log '*Processing Foorm Data*'
+
+  unless CDO.rack_env?(:production)
+    log 'Foorm processing should only be run in production'
+    return
+  end
+
+  redshift_client = Cdo::Aws::Redshift::Client.new(database: REDSHIFT_DATABASE)
 
   # Processes and uploads Foorm submissions to Redshift for analytics use via S3.
+  log 'Processing foorm submissions...'
   AWS::S3.delete_from_bucket(S3_BUCKET_NAME, SUBMISSIONS_S3_CSV_NAME)
   reshaped_submissions = Pd::Foorm::SubmissionAnalyticsParser.reshape_all_submissions_into_csv
   AWS::S3.upload_to_bucket(S3_BUCKET_NAME, SUBMISSIONS_S3_CSV_NAME, reshaped_submissions, no_random: true)
   write_submissions_to_redshift(redshift_client, REDSHIFT_S3_ACCESS_ROLE_ARN)
 
   # Processes and uploads Foorm forms to Redshift for analytics use via S3.
+  log 'Processing foorm forms...'
   AWS::S3.delete_from_bucket(S3_BUCKET_NAME, FORMS_S3_CSV_NAME)
   reshaped_forms = Pd::Foorm::FormAnalyticsParser.reshape_all_forms_into_csv
   AWS::S3.upload_to_bucket(S3_BUCKET_NAME, FORMS_S3_CSV_NAME, reshaped_forms, no_random: true)
@@ -40,8 +68,7 @@ def main
 end
 
 def write_forms_to_redshift(client, arn)
-  query = <<~SQL
-    DROP TABLE IF EXISTS #{FORMS_REDSHIFT_TABLE_NAME};
+  create_table = <<~SQL
     CREATE TABLE #{FORMS_REDSHIFT_TABLE_NAME}
     (
       form_id                 int,
@@ -49,50 +76,74 @@ def write_forms_to_redshift(client, arn)
       form_version            int,
       item_type               varchar,
       item_name               varchar,
+      item_category           varchar,
       item_text               varchar(max),
       matrix_item_name        varchar,
       matrix_item_header      varchar(max),
       is_facilitator_specific int,
       response_options        varchar(max),
       num_response_options    int
-    );
+    )
+  SQL
 
+  copy_from_s3 = <<~SQL
     COPY #{FORMS_REDSHIFT_TABLE_NAME}
     FROM 's3://#{S3_BUCKET_NAME}/#{FORMS_S3_CSV_NAME}'
     IAM_ROLE '#{arn}'
     CSV
-    IGNOREHEADER 1;
+    IGNOREHEADER 1
   SQL
 
-  client.exec(query)
+  execute_redshift_statements(
+    client, ["DROP TABLE IF EXISTS #{FORMS_REDSHIFT_TABLE_NAME}", create_table, copy_from_s3]
+  )
 end
 
 def write_submissions_to_redshift(client, arn)
-  query = <<~SQL
-    DROP TABLE IF EXISTS #{SUBMISSIONS_REDSHIFT_TABLE_NAME};
+  create_table = <<~SQL
     CREATE TABLE IF NOT EXISTS #{SUBMISSIONS_REDSHIFT_TABLE_NAME}
     (
       submission_id    int,
       item_name        varchar,
       matrix_item_name varchar,
-      response_value   varchar,
+      response_value   varchar(max),
       response_text    varchar(max)
-    );
+    )
+  SQL
 
+  copy_from_s3 = <<~SQL
     COPY #{SUBMISSIONS_REDSHIFT_TABLE_NAME}
     FROM 's3://#{S3_BUCKET_NAME}/#{SUBMISSIONS_S3_CSV_NAME}'
     IAM_ROLE  '#{arn}'
     CSV
-    IGNOREHEADER 1;
+    IGNOREHEADER 1
   SQL
 
-  client.exec(query)
+  execute_redshift_statements(
+    client, ["DROP TABLE IF EXISTS #{SUBMISSIONS_REDSHIFT_TABLE_NAME}", create_table, copy_from_s3]
+  )
+end
+
+# Submit the DROP, CREATE, and COPY in a single batch so that they execute as a single transaction.
+def execute_redshift_statements(client, statements)
+  result = client.batch_execute(statements, timeout: COPY_TIMEOUT.to_i)
+  # `batch_execute` reports per-statement outcomes, so check for one or more failed statements and `raise` if needed.
+  raise "Redshift statement(s) failed: #{result[:failed].map(&:last).join('; ')}" if result[:failed].any?
+rescue => exception
+  log "Error executing Redshift statements: #{exception.message}\n#{exception.backtrace.join("\n")}", :error
+  raise
+end
+
+def log(message, severity = :info)
+  CDO.log.public_send(severity, message)
+  ChatClient.message 'cron-daily', message, color: SLACK_COLOR_BY_SEVERITY[severity]
 end
 
 begin
   main
 ensure
-  # If processing fails at any point, delete CSVs from S3.
+  # If processing fails at any point, still delete CSVs from S3.
   AWS::S3.delete_from_bucket(S3_BUCKET_NAME, SUBMISSIONS_S3_CSV_NAME)
   AWS::S3.delete_from_bucket(S3_BUCKET_NAME, FORMS_S3_CSV_NAME)
+  log 'Foorm processing complete.'
 end

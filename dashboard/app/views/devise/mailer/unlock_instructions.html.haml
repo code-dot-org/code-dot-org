@@ -1,0 +1,7 @@
+%p= I18n.t('devise.mailer.unlock_instructions.hello', user_email: @resource.email)
+%p= I18n.t('devise.mailer.unlock_instructions.why_account_locked')
+%p= I18n.t('devise.mailer.unlock_instructions.call_to_action', unlock_time: distance_of_time_in_words(Devise.unlock_in))
+%p
+  = I18n.t('devise.mailer.unlock_instructions.unlock_link_text')
+  - unlock_url = user_unlock_url(unlock_token: @token)
+  = link_to(unlock_url, unlock_url)

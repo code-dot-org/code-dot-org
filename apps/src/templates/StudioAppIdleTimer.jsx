@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {connect} from 'react-redux';
 import IdleTimer from 'react-idle-timer';
+import {connect} from 'react-redux';
+
 import {setStartIdle, setEndIdle} from '@cdo/apps/redux/studioAppActivity';
 
 // Idle time doesn't start tracking until after IDLE_AFTER milliseconds of idling

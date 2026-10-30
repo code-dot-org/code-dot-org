@@ -1,0 +1,59 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2026-04-01T21:44:21.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "display_name": "Brainstorm With AI",
+    "thumbnail_url": "https://images.code.org/f30051faf959850ef21e98c77e8f3aee-how-ai-works-cover.jpg",
+    "encrypted": "false",
+    "long_instructions": "## Brainstorm With AI\r\n\r\nReliability Engineers use AI to parse tickets, analyze failure \r\npatterns, and ideate on recovery solutions. Now it's your turn.\r\n\r\nChoose a ticket from Level 1 and use the AI chat to brainstorm \r\nyour recovery state design. Add your ticket as context using \r\nfiles in the Library.\r\n\r\n**Try asking things like:**\r\n- \"Help me write a friendly error message for this ticket.\"\r\n- \"Is this error message too technical? How can I simplify it?\"\r\n- \"What should a Retry button say for a concert ticketing app?\"\r\n- \"What tone should I use when telling a user their data didn't load?\"\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "name_suffix": "_2026",
+    "starter_assets": {
+      "ticket_1001.pdf": "b102de84-e906-4953-b985-71d6b81311c0.pdf",
+      "ticket_1002.pdf": "b7822c77-a841-406a-bb25-8964e6ebb230.pdf",
+      "ticket_1003.pdf": "d5b42259-c751-40ad-872b-d9cf73ec635c.pdf"
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-01T21:44:21.602+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson7-aichat-test-2025-pilot_2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson7-aichat-test-2025-pilot_2025-pilot\"},{\"changed_at\":\"2026-06-16 15:57:46 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-16 16:02:31 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-16 16:03:38 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-16 16:04:20 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-16 18:29:21 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Aichat>

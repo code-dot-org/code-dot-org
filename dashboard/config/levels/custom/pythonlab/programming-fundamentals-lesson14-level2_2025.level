@@ -1,0 +1,62 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-03-22T01:57:37.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Make a pet\r\n\r\n1. Create a pet object by adding `pet = Pet()` to you code. \r\n\r\n2. What kind of animal is your pet? Change the animal `\"sloth\"` to a something else.\r\n\r\n3. Give your pet a new name. Change the name `\"Buddy\"` to a different name.\r\n",
+    "ai_tutor_available": "true",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# Import the support file\nfrom support import Pet\n\n# Create the Pet object\n# Add your code here\n\n# Change the pet type\npet.set_pet_type(\"sloth\")\n\n# Name the pet\npet.set_name(\"Buddy\")\n\n# Describe the pet\npet.describe()",
+          "folderId": "0",
+          "active": false,
+          "open": true
+        },
+        "1": {
+          "id": "1",
+          "name": "support.py",
+          "language": "py",
+          "contents": "class Pet:\n    def __init__(self, pet_type=\"dog\", name=\"Buddy\"):\n        self.pet_type = pet_type\n        self.name = name\n\n    def set_pet_type(self, pet_type):\n        self.pet_type = pet_type\n        print(f\"You now have a {self.pet_type}.\")\n\n    def set_name(self, name):\n        self.name = name\n        print(f\"Your {self.pet_type}'s name is now {self.name}.\")\n\n    def describe(self):\n        print(f\"This is {self.name}, your {self.pet_type}.\")",
+          "folderId": "0",
+          "active": true,
+          "open": true,
+          "type": "starter"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    },
+    "validation_file": {
+      "id": "2",
+      "name": "test_main.py",
+      "language": "py",
+      "contents": "import unittest\nimport io\nfrom contextlib import redirect_stdout\nfrom support import Pet\n\n\nclass TestMain(unittest.TestCase):\n\n    def test_pet_object_created(self):\n        \"\"\"Check if the pet object was created.\"\"\"\n        exec_globals = {}\n        exec(open(\"main.py\").read(), exec_globals)\n\n        # Ensure the 'pet' object exists\n        self.assertIn(\"pet\", exec_globals, \"The 'pet' object was not created in main.py.\")\n        pet = exec_globals[\"pet\"]\n        self.assertIsInstance(pet, Pet, \"The 'pet' object is not an instance of the Pet class.\")\n\n    def test_pet_type_changed(self):\n        \"\"\"Check if the pet type was changed to something other than 'sloth'.\"\"\"\n        exec_globals = {}\n        exec(open(\"main.py\").read(), exec_globals)\n\n        pet = exec_globals[\"pet\"]\n        self.assertNotEqual(pet.pet_type, \"sloth\", \"The pet type should be changed to something other than 'sloth'.\")\n        self.assertNotEqual(pet.pet_type, \"\", \"The pet type should not be an empty string.\")\n\n    def test_pet_name_changed(self):\n        \"\"\"Check if the pet name was changed to something other than 'Buddy'.\"\"\"\n        exec_globals = {}\n        exec(open(\"main.py\").read(), exec_globals)\n\n        pet = exec_globals[\"pet\"]\n        self.assertNotEqual(pet.name, \"Buddy\", \"The pet's name should be changed to something other than 'Buddy'.\")\n        self.assertNotEqual(pet.name, \"\", \"The pet's name should not be an empty string.\")\n\n\nif __name__ == \"__main__\":\n    unittest.main()\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFSi4aaBiEaakp8IBSnq60mXm1w1Rj4e2pq0O0PCF\ng8UNBLB/C7qioiEoHQhKPj2l1P8axn0aNoejw5N6Wb00FQ7yZjWUkPRNE5Ef\neM3uKz7jkSLRv/WKPMZmCfy9K1ut8GdQcXf2ggzRYIXaC3Hccag5XVZEIuCa\nWdvdGfxM5ksmbktNK6n3AGBzImYk20o3RZ2CjNFZQwdjIlUFk6ZkiBSYEquX\nX1WIaM6suf8dyt0uYkiW9JJhWXpxXB73QPbyiGfjRNLGduGu86I9VC72oYDX\nPTfSByXhJv++OvRwS/1ejvY3dxDdNmWcUWyCNtBi/XPda2ap08euhfZItun9\nYIolzq+N2P64uM2b2XerSq+2pADsNZ/9htv5C3Oqws9gMdrZTYB4gTuCS81L\nBbCYc25w4x9UDGWCw2u1onkT37QFcYxI5ZwQSt0e5ksrsPCzBnJrTUJDdZ5C\n3WsMq5NwPZiGkL9ScM+iI9l/Fh4+fppYQLtxyLX1r8G7qxrULOgpJ5iqwmPz\nG8uxr80Ns2dNVtyxwNWFAdr1oJ6qRF+Oyhd3Gw3+r2VOCaI/rMHnmvH/0D4c\npqIkYGPmXOCIjJAzsf/ONNSqIn/hmN/zBlEoxIS4VZAWpoAtpyA5wzl8p63+\neRHeMjb0fTzVslTJMZvQ8xZedGmT0RSBGH9E8aAodoEp1lqPU3ALBc/y0YHX\nojSS6LK5GcFzer9GgoJJldqIUsS5ujK/MyJxQSH3hebfYg8dPc6cEWOF6LOL\nM1sz2vIihf8leFrFk75axEdOC7OXnGtFgrxgYs1MTpJENfYZ2K38tUukMLQk\nAOWDsG3eUwv9aayJmIFgu1CDeSIeQ1naM0q0WBxIfdD2IDgzGMdC7yakrftK\ntSLu0/ijVfSiVU/fdCNb1TyMeXbUWRTcHqwLZvZj0WVn9Lvpv5wJXMV8mvky\nNmp5f1G4Kppj1tQybSLTpo16ibPtB/xX0Rt18ra0jeO1TcvvaSedwdk58Cdv\nbXnl+wj42e4yvr2I0gKYjUqG5JIF4PtyY1sFehYCbu3urIcd+oUKs1nmvC1o\nS4uOK46XcAAxfAH9ZOJ1GqKq6bZHIA==\n",
+    "name_suffix": "_2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-03-22T01:57:37.622+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson14-level2-2024\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson14-level2-2024\"},{\"changed_at\":\"2025-10-17 11:58:32 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Pythonlab>

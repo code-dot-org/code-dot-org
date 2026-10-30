@@ -1,0 +1,10 @@
+name 'pl-ai-101-V2-mod4-asses-04a'
+display_name 'Examples of Assessment'
+description '####Take a look at some examples of how a teacher might develop an activity and assessment with AI.'
+
+sublevels
+level 'pl-ai-101-V2-mod4-asses-04b'
+level 'pl-ai-101-V2-mod4-asses-04'
+level 'pl-ai-101-V2-mod4-asses-04c'
+
+uses_lab2

@@ -1,12 +1,18 @@
-import FirebaseStorage from '../firebaseStorage';
-import PendingButton from '../../templates/PendingButton';
-import PropTypes from 'prop-types';
-import React from 'react';
-import {castValue} from './dataUtils';
-import dataStyles from './data-styles.module.scss';
+import TextField from '@code-dot-org/component-library/textField';
+import {Button as MuiButton, Typography} from '@mui/material';
 import classNames from 'classnames';
 import _ from 'lodash';
+import PropTypes from 'prop-types';
+import React from 'react';
+
 import msg from '@cdo/locale';
+
+import {storageBackend} from '../storage';
+
+import {castValue} from './dataUtils';
+import {refreshCurrentDataView} from './loadDataForView';
+
+import dataStyles from './data-styles.module.scss';
 
 const INITIAL_STATE = {
   isAdding: false,
@@ -38,10 +44,13 @@ class AddTableRow extends React.Component {
         castValue(inputString, /* allowUnquotedStrings */ false)
       );
       this.setState({isAdding: true});
-      FirebaseStorage.createRecord(
+      storageBackend().createRecord(
         this.props.tableName,
         record,
-        () => this.setState(INITIAL_STATE),
+        () => {
+          refreshCurrentDataView();
+          this.setState(INITIAL_STATE);
+        },
         msg => console.warn(msg)
       );
     } catch (e) {
@@ -64,10 +73,19 @@ class AddTableRow extends React.Component {
         {this.props.columnNames.map(columnName => (
           <td key={columnName} className={dataStyles.cell}>
             {columnName === 'id' ? (
-              <span style={{color: 'darkgray'}}>#</span>
+              <Typography
+                variant="body2"
+                component="span"
+                style={{color: 'var(--text-neutral-secondary)'}}
+              >
+                #
+              </Typography>
             ) : (
-              <input
-                className={dataStyles.input}
+              <TextField
+                name={columnName}
+                className={dataStyles.dataField}
+                color="gray"
+                size="s"
                 value={this.state.newInput[columnName] || ''}
                 placeholder={msg.enterText()}
                 onChange={event => this.handleChange(columnName, event)}
@@ -80,13 +98,20 @@ class AddTableRow extends React.Component {
         <td className={dataStyles.cell} />
 
         <td className={classNames(dataStyles.cell, dataStyles.addButton)}>
-          <PendingButton
-            isPending={this.state.isAdding}
+          <MuiButton
+            variant="outlined"
+            color="tertiary"
+            size="small"
+            loading={this.state.isAdding}
+            disabled={this.state.isAdding}
+            className={classNames(dataStyles.buttonText)}
+            id="addTableRowButton"
             onClick={this.handleAdd}
-            pendingText={msg.addingToTable()}
-            className={classNames(dataStyles.button, dataStyles.buttonBlue)}
-            text={msg.addRowToTable()}
-          />
+            aria-label={msg.addRowToTable()}
+            type="button"
+          >
+            {msg.addRowToTable()}
+          </MuiButton>
         </td>
       </tr>
     );

@@ -1,0 +1,13 @@
+{
+  "key": "neural-networks-reteach",
+  "description": "Illustrates neural networks as patterns of nodes and weights, not a database of facts.",
+  "s3_uri": "s3://cdo-supplemental-curricular-content/json-videos/neural-networks-reteach.json",
+  "labs": [
+
+  ],
+  "json_schema_version": 1,
+  "audience": "Student",
+  "objective_keys": [
+    "5a853321-3417-4cf3-8aed-a93140f77b6b"
+  ]
+}

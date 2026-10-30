@@ -1,7 +1,7 @@
-import React from 'react';
-import {FormControl, FormGroup, HelpBlock} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
+import React from 'react';
+import {FormControl, FormGroup, HelpBlock} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
 const stylingForComponent = componentClass =>
   componentClass === 'select' ? 'dropdown' : 'grey_input';

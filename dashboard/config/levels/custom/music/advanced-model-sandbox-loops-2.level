@@ -1,0 +1,188 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2024-10-24T21:59:31.000Z",
+  "level_num": "custom",
+  "user_id": 16899,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "level_data": {
+      "blockMode": "Advanced",
+      "toolbox": {
+      },
+      "library": "launch2024",
+      "packId": "shakira_maluma_chantaje",
+      "startSources": {
+        "variables": [
+          {
+            "name": "i",
+            "id": "Jzt-l.ao[tU*jVezANa#"
+          }
+        ],
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "for_loop",
+                  "id": "*0T*yU@uAeW5ngu;NM-R",
+                  "fields": {
+                    "VAR": {
+                      "id": "Jzt-l.ao[tU*jVezANa#"
+                    }
+                  },
+                  "inputs": {
+                    "FROM": {
+                      "shadow": {
+                        "type": "math_number",
+                        "id": "i3ZDRtTMBl#,OZ]%aO:C",
+                        "fields": {
+                          "NUM": 1
+                        }
+                      }
+                    },
+                    "TO": {
+                      "shadow": {
+                        "type": "math_number",
+                        "id": "VmEFE5(4CrU:O66sv+$Y",
+                        "fields": {
+                          "NUM": 9
+                        }
+                      }
+                    },
+                    "BY": {
+                      "shadow": {
+                        "type": "math_number",
+                        "id": "3L~=(C)z2[1R7vGYzayi",
+                        "fields": {
+                          "NUM": 1
+                        }
+                      }
+                    },
+                    "DO": {
+                      "block": {
+                        "type": "play_sound",
+                        "id": "$+9n4dA!R7A9(^hO6b;g",
+                        "fields": {
+                          "sound": "shakira_maluma_chantaje/kick_build_2"
+                        },
+                        "inputs": {
+                          "measure": {
+                            "shadow": {
+                              "type": "math_number",
+                              "id": "a2RVYk_X^~.+UTl8eQE/",
+                              "fields": {
+                                "NUM": 1
+                              }
+                            },
+                            "block": {
+                              "type": "variables_get",
+                              "id": "/0`]KOxY.`tHm%]ovfl4",
+                              "extraState": {
+                              },
+                              "fields": {
+                                "VAR": {
+                                  "id": "Jzt-l.ao[tU*jVezANa#"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "for_loop",
+                      "id": "#,._9CVbsc1a?|BR},=9",
+                      "fields": {
+                        "VAR": {
+                          "id": "Jzt-l.ao[tU*jVezANa#"
+                        }
+                      },
+                      "inputs": {
+                        "FROM": {
+                          "shadow": {
+                            "type": "math_number",
+                            "id": "fi3iR,z]ViT/|2!hlE}f",
+                            "fields": {
+                              "NUM": 1
+                            }
+                          }
+                        },
+                        "TO": {
+                          "shadow": {
+                            "type": "math_number",
+                            "id": "juVMOY9y,Fg7CXSa_wJ8",
+                            "fields": {
+                              "NUM": 9
+                            }
+                          }
+                        },
+                        "BY": {
+                          "shadow": {
+                            "type": "math_number",
+                            "id": "_,Jhc4l,t|r.sPN_cq=B",
+                            "fields": {
+                              "NUM": 3
+                            }
+                          }
+                        },
+                        "DO": {
+                          "block": {
+                            "type": "play_sound",
+                            "id": "!RV7-xbS7#L~`FjY)[|6",
+                            "fields": {
+                              "sound": "shakira_maluma_chantaje/impact_1"
+                            },
+                            "inputs": {
+                              "measure": {
+                                "shadow": {
+                                  "type": "math_number",
+                                  "id": "a2RVYk_X^~.+UTl8eQE/",
+                                  "fields": {
+                                    "NUM": 1
+                                  }
+                                },
+                                "block": {
+                                  "type": "variables_get",
+                                  "id": "-N43F097$YJk?,jrO|][",
+                                  "extraState": {
+                                  },
+                                  "fields": {
+                                    "VAR": {
+                                      "id": "Jzt-l.ao[tU*jVezANa#"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "offer_browser_tts": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-10-24T21:59:31.068+00:00\",\"changed\":[\"cloned from \\\"advanced-model-sandbox-loops-1\\\"\"],\"cloned_from\":\"advanced-model-sandbox-loops-1\"},{\"changed_at\":\"2024-10-24 21:59:34 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-24 22:00:14 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

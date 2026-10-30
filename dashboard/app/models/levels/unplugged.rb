@@ -22,6 +22,7 @@
 #  index_levels_on_game_id    (game_id)
 #  index_levels_on_level_num  (level_num)
 #  index_levels_on_name       (name)
+#  index_levels_on_type       (type)
 #
 
 class Unplugged < Level
@@ -38,7 +39,7 @@ class Unplugged < Level
     }
     update_i18n(new_attributes[:name], i18n_strings)
 
-    super(new_attributes)
+    super
   end
 
   def title
@@ -51,7 +52,7 @@ class Unplugged < Level
 
   def update_i18n(name, new_strings)
     return unless name
-    unplugged_yml = File.expand_path('config/locales/unplugged.en.yml')
+    unplugged_yml = File.expand_path('config/locales/unplugged/en.yml')
     i18n = File.exist?(unplugged_yml) ? YAML.load_file(unplugged_yml) : {}
     i18n.deep_merge!({'en' => {'data' => {'unplugged' => {name => new_strings}}}})
     File.write(unplugged_yml, i18n.to_yaml(line_width: -1))

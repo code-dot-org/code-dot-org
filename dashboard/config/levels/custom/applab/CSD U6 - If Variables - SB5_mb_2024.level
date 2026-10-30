@@ -1,0 +1,91 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2024-07-10T18:57:05.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "addOperator": null,
+      "subtractOperator": null,
+      "multiplyOperator": null,
+      "divideOperator": null,
+      "assign_x": null,
+      "onBoardEvent": {
+        "dropdown": {
+          "0": [
+            "buttonA",
+            "buttonB"
+          ],
+          "1": [
+            "\"down\"",
+            "\"up\""
+          ]
+        }
+      }
+    },
+    "edit_code": true,
+    "embed": "false",
+    "instructions_important": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "true",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "disable_if_else_editing": "false",
+    "free_play": "false",
+    "validation_enabled": "true",
+    "submittable": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "execute_palette_apis_only": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "false",
+    "hide_view_data_button": "true",
+    "show_debug_watch": "true",
+    "expand_debugger": "false",
+    "fail_on_lint_errors": "false",
+    "debugger_disabled": "false",
+    "makerlab_enabled": "microbit",
+    "long_instructions": "# Changing Positions\r\n\r\nThe **[Counter Pattern](https://studio.code.org/docs/concepts/patterns/counter-patterns-with-event/)** can also be used to change the position of elements on the screen. Let's make a program where pressing the A button moves the bird up, and pressing the B button moves the bird down\r\n\r\n*Note: Remember that y positions are reversed on the screen. Moving up means subtracting, and moving down means adding*\r\n\r\n## Do This\r\n1) Inside the `buttonA` event, subtract one from the `yPosition` variable\r\n\t- Run your code and test that the bird is able to move up!\r\n2) Inside the `buttonB` event, add one to the `yPosition` variable\r\n\t- Run your program and test that the bird is able to move up and down!\r\n\r\nOptional: try changing the amount that the bird changes on each button press. This can simulate moving at different speeds!\r\n\r\n",
+    "parent_level_id": 20595,
+    "mini_rubric": "false",
+    "text_mode_at_start": "false",
+    "encrypted": "false",
+    "libraries_enabled": "false",
+    "widget_mode": "false",
+    "ai_enabled": "false",
+    "reference_links": [
+      "/courses/csd-2022/guides/variables",
+      "/courses/csd-2022/guides/counter-patterns-with-event",
+      "/maker/setup"
+    ],
+    "start_blocks": "var yPosition = 170;\r\n\r\nonBoardEvent(buttonA, \"down\", function() {\r\n  //1) Subtract one from the `yPosition` variable\r\n  \r\n  setProperty(\"birdIcon\", \"y\", yPosition);\r\n});\r\n\r\nonBoardEvent(buttonB, \"down\", function() {\r\n  //2) Add one to the `yPosition` variable\r\n  \r\n  setProperty(\"birdIcon\", \"y\", yPosition);\r\n});\r\n",
+    "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"><img data-canonical-image-url=\"icon://fa-twitter\" data-image-type=\"icon\" data-object-fit=\"contain\" id=\"birdIcon\" style=\"height: 125px; width: 125px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; position: absolute; left: 100px; top: 170px; margin: 0px;\" data-icon-color=\"#01cbff\"></div></div>",
+    "encrypted_examples": "xuH+kWfxNxyVxfmMgxVWj62Pf3NtblgR5SwvdBImJ9jefQf50iWeWAPE558J\n31Wduhx1NGnl6aRcO0xWV2dVhA==\n",
+    "video_key": "csd_u6_variables_part2",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-07-10T18:57:05.302+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - If Variables - SB5_mb2022\\\"\"],\"cloned_from\":\"CSD U6 - If Variables - SB5_mb2022\"}]"
+}]]></config>
+  <blocks/>
+</Applab>

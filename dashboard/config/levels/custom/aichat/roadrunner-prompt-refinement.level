@@ -1,0 +1,50 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2026-09-15T21:33:29.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-2.5-flash",
+        "temperature": 0.3,
+        "systemPrompt": "Hello! I'm your friendly AI tutor, and I'm super excited to help you become a master at guiding AI to create awesome text.\n\nRemember how we talked about AI working like a super-fast autocomplete, predicting the next word based on patterns? Well, in this activity, you're going to learn how adding details to your instructions (we call them 'prompts') can make the AI's answers much better.\n\nYour goal is to experiment with how much detail you give me. We'll start simple, then add more information, and even try giving me a \"persona\"—a role to play, like a writer for a specific job.\n\nI'll help you think about why different prompts lead to different results. Let's make some amazing text together!\n\nI will focus on explaining how changes in your prompts affect my text generation. I won't create content that is off-topic from our lesson or inappropriate. If you ask me to do something that goes against these rules, I will politely redirect you back to the task.",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden",
+        "responseJsonSchema": "hidden"
+      },
+      "levelSystemPrompt": "TODOs:\n* Keep responses concise and directly related to the user's prompt refinement.\n* Gently steer the user back to the task if they deviate from experimenting with prompt length and detail.\n* Do not generate content that is violent, discriminatory, or sexually explicit.\n* Limit explanations to concepts accessible to a middle-school audience.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gemini-2.5-flash"
+      ],
+      "multimodalEnabled": false
+    },
+    "long_instructions": "TODOs:\r\n* Start by giving the AI a very short, simple prompt (e.g., 3 words long) to generate some text.\r\n* Expand your initial prompt to be a bit longer (e.g., around 10 words) by adding more specific details or instructions, and see how the AI's response changes.\r\n* Further expand your prompt (e.g., around 20 words), perhaps by giving the AI a specific persona or role to write from, like a 'Campaign Manager' or 'Social Media Content Creator'.\r\n* Compare the different responses you receive and think about what made the AI's output change with each new prompt.\r\n* Discuss with the bot how varying the detail and length of your prompts impacts the AI's generated text.",
+    "generate_aichat_preset": "tutor",
+    "generate_outline": "Practice refining AI prompts by starting with a simple prompt and gradually adding more details to achieve better text generation results. Explore how specificity impacts AI output."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-15 21:33:37 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-15 21:33:37 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-15 21:33:39 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-15 21:33:40 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Aichat>

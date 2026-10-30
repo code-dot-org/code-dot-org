@@ -1,0 +1,16 @@
+.animationArea {
+  position: absolute;
+  overflow: hidden;
+  padding-top: 20px;
+  width: calc(50% + 52px);
+  height: calc(50% + 66px);
+  top: 0;
+}
+
+.botContainer {
+  transform: translateX(-25%) translateY(-50%);
+}
+
+.headOpen {
+  transform: rotate(90deg);
+}

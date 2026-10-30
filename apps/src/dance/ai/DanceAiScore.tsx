@@ -1,7 +1,9 @@
-import React from 'react';
-import moduleStyles from './dance-ai-score.module.scss';
 import classNames from 'classnames';
+import React from 'react';
+
 import {GeneratedEffectScores, MinMax} from './types';
+
+import moduleStyles from './dance-ai-score.module.scss';
 
 export enum ScoreColors {
   // A grey bar with no symbol in the symbol container yet.
@@ -107,7 +109,7 @@ const DanceAiScore: React.FunctionComponent<DanceAiScoreProps> = ({
                   moduleStyles.resultContentYes
                 )}
               >
-                <i className="fa fa-check-circle" />
+                <i className="fa-solid fa-circle-check" />
               </div>
             )}
             {colors === ScoreColors.NO && (
@@ -117,7 +119,7 @@ const DanceAiScore: React.FunctionComponent<DanceAiScoreProps> = ({
                   moduleStyles.resultContentNo
                 )}
               >
-                <i className="fa fa-times-circle" />
+                <i className="fa-solid fa-circle-xmark" />
               </div>
             )}
           </div>

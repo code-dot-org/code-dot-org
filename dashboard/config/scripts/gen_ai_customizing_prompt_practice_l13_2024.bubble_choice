@@ -1,0 +1,9 @@
+name 'gen-ai-customizing-prompt-practice-L13_2024'
+display_name 'Bubble Choice: All the Choices'
+description 'Try These Levels!'
+
+sublevels
+level 'gen-ai-customizing-prompt-practice-L13A_2024'
+level 'gen-ai-customizing-prompt-practice-L13B_2024'
+level 'gen-ai-customizing-prompt-practice-L13C_2024'
+level 'gen-ai-customizing-prompt-practice-L13D_2024'

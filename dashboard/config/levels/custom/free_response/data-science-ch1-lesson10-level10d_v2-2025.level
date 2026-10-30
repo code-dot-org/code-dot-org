@@ -1,0 +1,31 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2025-09-25T20:08:37.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "title": "Mammal Lifespan",
+    "display_name": "Mammal Lifespans & Scatterplots",
+    "long_instructions": "This data contains information about 27 mammals. Explore the data and answer the data questions:\r\n\r\n- Do heavier mammals live longer?\r\n- Does more sleep mean a longer life in mammals?\r\n\r\n**Bonus: Do plant eaters, meat eaters, or ominvores (mammals that eat both plants and meat) live longer?** (Hint: This will require you make a different type of graph and that you make multiple graphs.)\r\n\r\n\r\n[Google Sheets - Mammals Lifespan Link](https://docs.google.com/spreadsheets/d/1MyohTLHlAWzo-xEX9VkFuGlc1KaPa6wwxJBTDx88YUM/edit?gid=0#gid=0)\r\n\r\n**Do This**\r\n1. Add a graph and the appropriate attributes that you think might be helpful to answer the question: \"Do heavier mammals live longer?\"\r\n\r\n    :::details [**Show Me How**]\r\n    - Select the \"Mass\" and \"LifeSpan\" columns\r\n    - Insert --> Chart --> Scatter Plot\r\n    - What do you notice?\r\n    - Do heavier mammals live longer? How can you tell?\r\n    :::\r\n\r\n2. Add a graph and the appropriate attributes that you think might be helpful to answer the question: \"Does more sleep mean a longer life in mammals?\"\r\n\r\n    :::details [**Show Me How**]\r\n    - Select the \"Sleep\" and \"LifeSpan\" columns\r\n    - Insert --> Chart --> Scatter Plot\r\n    - What do you notice?\r\n    - Does more sleep mean a longer life in mammals? How can you tell?\r\n    :::\r\n    \r\n\r\n",
+    "teacher_markdown": "\r\n![](https://images.code.org/581f97967cef4bde04613973e3f08e54-image-1721844964467.png)\r\n\r\nExample student responses:\r\n\r\nHow does the amount of sleep a mammal gets relate to its lifespan?\r\n- Looking at the graph, it seems like mammals that sleep more don't necessarily have longer lifespans. Some mammals that sleep a lot, like those sleeping around 20 hours, don’t live as long as some that sleep less, around 10 hours.\r\n\r\nWhich mammals have the longest lifespans, and what are their sleep and habitat patterns?\r\n- The mammals with the longest lifespans in the graph are those that live in both habitats and they sleep less, around 10 to less than 20 hours. It seems like having a versatile habitat might help some mammals live longer.\r\n\r\nIs there a pattern in lifespan based on the combination of sleep hours and habitat?\r\n- It's kind of mixed. Mammals that live both on land and water tend to have longer lifespans across different sleep hours. However, those that live only in water or only on land usually have shorter lifespans, regardless of how much they sleep.\r\n",
+    "bubble_choice_description": "Can you create scatter plots to answer questions about mammal lifespan?",
+    "thumbnail_url": "https://images.code.org/55cd9b79626e1f5bf42b15e04f6b6687-lion.png",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_v2-2025",
+    "stay_on_level_after_submit": "false",
+    "encrypted_solution": "TjQ0hJ8J8weOtQ1WnNH9aRvfuJDPU5zjPx7a3W2dPfdbAPKI7cmUyyvVuPKD\nrlhwUC2C0Y2aGl7M1PRmYycmoZXZEBuwVaf2RQztH9uP5NzT5CxqoyEghj2C\njZYeL8bUSVf0MG2wYe8G79O8NOkBViWuBtzrEmphIv2oZQSdwHGPHa7Dx2g0\nwAms2GSAVtzzeYYhGrgk+Tc1/o2No05Q4/rHAaCrD2Z3AU7SHpHtj3vZGPnD\nD2K68iONoovpLokYRKQ8NsVMf5g5IrxWlUsaKVbzAFx1f4BYsuivBXYWLNGz\nuZUT7QGIle2aZ1h0S5zwaU7zxPdKW3YuuAyyK86p526hO52Zn+T0VbvZ2+DU\n9JCEYRGJTyAkdO1ApnsQ0RHw65dgXe+8ac7iMc6UaMa2VtXoph0wl7wJwep2\nvBTldznZY36o2BtwDuTKkzCnst1DdPmUvi3VDWU/GTKt3JaEGxme0iapa1ZZ\nC6fohzkm9qilVNAcy+0wdU5/b1I8xfarcBDVhEz1vIqL4NsKh2nr08uABAz9\nsvAIa8tj/jCbTWwiQ5jS7CytnTrFoDpavhQq2K1ZrcFgR1XoKqLCMCqFth+7\nUUIP+OAliYemDFJ8cmXgn/MjF5oSfxK27spt7h4kvQDHs2cFaSwLVurgYHdE\nKX7qaW3/DPdNvjBD4qJ8wngo4FhzzzWPOywx2TrH+M6RW6vTdB/cr3DWqcs2\nxkMyMnRqZrEYgzwf76/jpMmMCMFbRcOoAI3ZALgYEJ2MyMKo3XwMD2mdlay0\nL85XJGQNnfvYhfLkrVqzgXMNlWh5l+XNQ2J2hPVZyDUvC2o8e3VPyHnpCKdA\n2dy9EEYnUUwSF0sW3GVlH8SC8amaDEVZIHsDPSOmkxBdF1JAC5siq6AlwY/Y\ne6Wdz9KfOYu1rGRj7/HQRFGNdleLjQqUvhlkTd2jaS8HuChBTKNC8f/BDbGO\ny6JdB55Sy4kmCinZy7hlx9oupNq+HF7DG+FemxF3byoQX1BNznXdzYUbYiiq\n/NE55WGUGRC3V09zZJeGOHub/gUyYk1S7UlJgNNKx37uRz11NSTdGaezd6qh\nyp3MW5/NAXzwTKEnG3QT6r8bn6pc9DjVurt026nboK2AMNjiTeLc6UZn9N3Y\nN/W5A+46X4RmhT4yGA9GTHPajW+QOOiKd9Nmz+V/k2lamzWO+RcIPjHWckAX\nMkNE2eB5pSpXTRSntb3RHLNuPPCdnFr3JzZBkPatHdzKSoqb5jxhtqCMRk0u\n+88nVRYRyGPAHK1w4jTQBxqOaJXTCr8LvODeNLd/8A==\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T20:08:37.136+00:00\",\"changed\":[\"cloned from \\\"data-science-ch1-lesson10-level10d_2025\\\"\"],\"cloned_from\":\"data-science-ch1-lesson10-level10d_2025\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

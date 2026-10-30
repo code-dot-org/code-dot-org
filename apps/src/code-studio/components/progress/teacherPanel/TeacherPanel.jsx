@@ -1,39 +1,52 @@
-import React from 'react';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
+import React from 'react';
 import {connect} from 'react-redux';
+
+import {sendTaEvent} from '@cdo/apps/aiTeacherDrawer/analytics';
+import {noteDrawerReopenNav} from '@cdo/apps/aiTeacherDrawer/drawerReopen';
+import SelectedStudentInfo from '@cdo/apps/code-studio/components/progress/teacherPanel/SelectedStudentInfo';
+import StudentTable from '@cdo/apps/code-studio/components/progress/teacherPanel/StudentTable';
 import TeacherPanelContainer from '@cdo/apps/code-studio/components/progress/teacherPanel/TeacherPanelContainer';
-import SectionSelector from '../SectionSelector';
+import {
+  getStudentsForSection,
+  queryLockStatus,
+} from '@cdo/apps/code-studio/components/progress/teacherPanel/teacherPanelData';
 import ViewAsToggle from '@cdo/apps/code-studio/components/progress/ViewAsToggle';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {
   fullyLockedLessonMapping,
   setSectionLockStatus,
 } from '@cdo/apps/code-studio/lessonLockRedux';
-import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {
+  queryUserProgress,
+  setViewAsUserId,
+} from '@cdo/apps/code-studio/progressRedux';
+import {
+  getCurrentLevel,
+  hasLockableLessons,
+} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {loadLevelsWithProgress} from '@cdo/apps/code-studio/teacherPanelRedux';
+import {updateQueryParam, queryParams} from '@cdo/apps/code-studio/utils';
+import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {getExampleSolutionLink} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import SortByNameDropdown from '@cdo/apps/templates/SortByNameDropdown';
 import {
   pageTypes,
   setStudentsForCurrentSection,
   setSections,
   selectSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import StudentTable from '@cdo/apps/code-studio/components/progress/teacherPanel/StudentTable';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
-import SelectedStudentInfo from '@cdo/apps/code-studio/components/progress/teacherPanel/SelectedStudentInfo';
-import Button from '@cdo/apps/templates/Button';
-import i18n from '@cdo/locale';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
-import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
-import {hasLockableLessons} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {reload} from '@cdo/apps/utils';
-import {updateQueryParam, queryParams} from '@cdo/apps/code-studio/utils';
+import i18n from '@cdo/locale';
+
+import SectionSelector from '../SectionSelector';
+
 import {studentShape, levelWithProgress} from './types';
-import {
-  getStudentsForSection,
-  queryLockStatus,
-} from '@cdo/apps/code-studio/components/progress/teacherPanel/teacherPanelData';
-import SortByNameDropdown from '@cdo/apps/templates/SortByNameDropdown';
-import fontConstants from '@cdo/apps/fontConstants';
+
 import moduleStyles from './teacher-panel.module.scss';
 
 const TEACHER_PANEL = 'TeacherPanel';
@@ -42,6 +55,9 @@ class TeacherPanel extends React.Component {
   static propTypes = {
     scriptId: PropTypes.number,
     unitName: PropTypes.string,
+    // Set when this panel is the TA drawer's Roster tab. The same panel also
+    // renders standalone beside a level, where these events do not apply.
+    inTaDrawer: PropTypes.bool,
     pageType: PropTypes.oneOf([
       pageTypes.level,
       pageTypes.scriptOverview,
@@ -62,20 +78,29 @@ class TeacherPanel extends React.Component {
     levelsWithProgress: PropTypes.arrayOf(levelWithProgress),
     loadLevelsWithProgress: PropTypes.func.isRequired,
     teacherId: PropTypes.number,
+    isSortedByFamilyName: PropTypes.bool,
     exampleSolutions: PropTypes.array,
+    currentLevelId: PropTypes.string,
     selectUser: PropTypes.func.isRequired,
+    setViewAsUserId: PropTypes.func.isRequired,
     setStudentsForCurrentSection: PropTypes.func.isRequired,
     setSections: PropTypes.func.isRequired,
     setSectionLockStatus: PropTypes.func.isRequired,
     selectSection: PropTypes.func.isRequired,
     setViewType: PropTypes.func.isRequired,
+    isCurrentLevelLab2: PropTypes.bool,
+    lab2ExampleSolutions: PropTypes.array,
   };
 
   componentDidMount() {
     const initialViewAs = queryParams('viewAs') || ViewType.Instructor;
-
     if (this.props.viewAs !== initialViewAs) {
       this.props.setViewType(initialViewAs);
+    }
+
+    const initialUserId = this.getSelectedUserId();
+    if (initialUserId) {
+      this.props.setViewAsUserId(initialUserId);
     }
 
     this.loadInitialData();
@@ -84,7 +109,8 @@ class TeacherPanel extends React.Component {
   UNSAFE_componentWillReceiveProps(nextProps) {
     if (
       this.props.pageType !== pageTypes.scriptOverview && // no progress is shown on script overview page in teacher panel
-      nextProps.selectedSection?.id !== this.props.selectedSection?.id
+      (nextProps.selectedSection?.id !== this.props.selectedSection?.id ||
+        nextProps.currentLevelId !== this.props.currentLevelId)
     ) {
       this.props.loadLevelsWithProgress();
     }
@@ -102,7 +128,12 @@ class TeacherPanel extends React.Component {
       // has already been dispatched on those pages with data specific to which
       // sections are assigned to the script for the TeacherSectionSeletor.
       if (this.props.pageType !== 'script_overview') {
-        this.props.setSections(teacherSections);
+        // Skip setSections if sections are already loaded (e.g. by
+        // asyncLoadSectionData in the TA drawer). The data from queryLockStatus
+        // is a sparser subset and would trip the SET_SECTIONS guard.
+        if (!this.props.sectionsAreLoaded) {
+          this.props.setSections(teacherSections);
+        }
 
         const sectionId = queryParams('section_id');
         sectionId && this.props.selectSection(sectionId);
@@ -112,25 +143,27 @@ class TeacherPanel extends React.Component {
     });
   };
 
-  logToFirehose = (eventName, overrideData = {}) => {
-    const sectionId =
-      this.props.selectedSection && this.props.selectedSection.id;
-    const data = {
-      section_id: sectionId,
-      page_type: this.props.pageType,
-      ...overrideData,
-    };
-
-    firehoseClient.putRecord({
-      study: 'teacher_panel',
-      event: eventName,
-      data_json: JSON.stringify(data),
-    });
-  };
-
-  onSelectUser = (id, selectType) => {
-    this.logToFirehose('select_student', {select_type: selectType});
-    const isAsync = this.props.pageType === pageTypes.scriptOverview;
+  onSelectUser = (id, source) => {
+    const isAsync =
+      this.props.isCurrentLevelLab2 ||
+      this.props.pageType === pageTypes.scriptOverview;
+    if (this.props.inTaDrawer) {
+      // An async selection updates in place; the others reload the page, which
+      // would otherwise drop the teacher back to a closed drawer.
+      if (!isAsync) {
+        noteDrawerReopenNav('Roster');
+      }
+      sendTaEvent(
+        source === 'iterator'
+          ? EVENTS.AI_TA_ROSTER_STUDENT_NAVIGATED
+          : EVENTS.AI_TA_ROSTER_STUDENT_CLICKED,
+        {
+          // A null id is the whole class rather than one student.
+          student_selected: id !== null,
+          student_count: this.props.students?.length ?? 0,
+        }
+      );
+    }
     this.props.selectUser(id, isAsync);
   };
 
@@ -152,7 +185,11 @@ class TeacherPanel extends React.Component {
       levelsWithProgress,
       pageType,
       teacherId,
+      isSortedByFamilyName,
       exampleSolutions,
+      isCurrentLevelLab2,
+      lab2ExampleSolutions,
+      inTaDrawer,
     } = this.props;
 
     const selectedUserId = this.getSelectedUserId();
@@ -164,17 +201,25 @@ class TeacherPanel extends React.Component {
       !!students?.length &&
       pageType !== pageTypes.scriptOverview;
 
+    const exampleSolutionsToParse = isCurrentLevelLab2
+      ? lab2ExampleSolutions
+      : exampleSolutions;
+
     const displayLevelExamples =
-      viewAs === ViewType.Instructor && exampleSolutions?.length > 0;
+      viewAs === ViewType.Instructor && exampleSolutionsToParse?.length > 0;
 
     const displayLockInfo =
       hasSections && unitHasLockableLessons && viewAs === ViewType.Instructor;
 
     return (
-      <TeacherPanelContainer logToFirehose={this.logToFirehose}>
-        <h3>{i18n.teacherPanel()}</h3>
+      <TeacherPanelContainer className={moduleStyles.teacherPanelContainer}>
+        <Typography variant="h6" component="h3" gutterBottom>
+          {i18n.teacherPanel()}
+        </Typography>
         <div style={styles.scrollable}>
-          <ViewAsToggle logToFirehose={this.logToFirehose} />
+          <div style={styles.viewAsToggleContainer}>
+            <ViewAsToggle isAsync={this.props.isCurrentLevelLab2} />
+          </div>
           {displaySelectedStudentInfo && (
             <SelectedStudentInfo
               students={students}
@@ -182,11 +227,12 @@ class TeacherPanel extends React.Component {
               selectedUserId={selectedUserId}
               teacherId={teacherId}
               levelsWithProgress={levelsWithProgress}
+              isSortedByFamilyName={isSortedByFamilyName}
             />
           )}
           {displayLevelExamples && (
             <div style={styles.exampleSolutions}>
-              {exampleSolutions.map((example, index) => (
+              {exampleSolutionsToParse.map((example, index) => (
                 <Button
                   __useDeprecatedTag
                   key={index}
@@ -195,6 +241,15 @@ class TeacherPanel extends React.Component {
                   href={example}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={
+                    inTaDrawer
+                      ? () =>
+                          sendTaEvent(EVENTS.AI_TA_EXAMPLE_SOLUTION_CLICKED, {
+                            example_position: index,
+                            example_count: exampleSolutionsToParse.length,
+                          })
+                      : undefined
+                  }
                 />
               ))}
             </div>
@@ -206,9 +261,16 @@ class TeacherPanel extends React.Component {
             <div style={styles.sectionInfo}>
               <div>{i18n.viewingSection()}</div>
               <SectionSelector
-                style={{margin: '0px 10px'}}
+                className={moduleStyles.sectionSelector}
                 reloadOnChange={true}
-                logToFirehose={() => this.logToFirehose('select_section')}
+                onSectionChange={
+                  inTaDrawer
+                    ? () =>
+                        sendTaEvent(EVENTS.AI_TA_ROSTER_SECTION_CHANGED, {
+                          previous_section_id: sectionId,
+                        })
+                    : undefined
+                }
               />
               {selectedSection && (
                 <a
@@ -216,7 +278,6 @@ class TeacherPanel extends React.Component {
                   target="_blank"
                   rel="noopener noreferrer"
                   style={styles.teacherDashboardLink}
-                  onClick={() => this.logToFirehose('select_teacher_dashboard')}
                 >
                   {i18n.teacherDashboard()}
                 </a>
@@ -229,11 +290,17 @@ class TeacherPanel extends React.Component {
               {unlockedLessonNames.length > 0 && (
                 <div>
                   <div style={styles.text}>
-                    <FontAwesome
-                      icon="exclamation-triangle"
+                    <FontAwesomeV6Icon
+                      iconName="triangle-exclamation"
                       style={styles.exclamation}
                     />
-                    <div style={styles.dontForget}>{i18n.dontForget()}</div>
+                    <Typography
+                      variant="h6"
+                      component="span"
+                      sx={{marginInlineStart: '10px'}}
+                    >
+                      {i18n.dontForget()}
+                    </Typography>
                   </div>
                   <div style={styles.text}>
                     {i18n.lockFollowing()}
@@ -281,13 +348,7 @@ const styles = {
     margin: 10,
   },
   exclamation: {
-    color: 'red',
-  },
-  dontForget: {
-    display: 'inline',
-    marginLeft: 10,
-    fontSize: 16,
-    ...fontConstants['main-font-bold'],
+    color: 'var(--text-error-primary)',
   },
   sectionHeader: {
     margin: 10,
@@ -305,6 +366,10 @@ const styles = {
   },
   teacherDashboardLink: {
     fontSize: 11,
+  },
+  viewAsToggleContainer: {
+    display: 'flex',
+    justifyContent: 'center',
   },
 };
 
@@ -347,7 +412,11 @@ export default connect(
       isLoadingLevelsWithProgress:
         state.teacherPanel.isLoadingLevelsWithProgress,
       teacherId: state.currentUser.userId,
+      isSortedByFamilyName: state.currentUser.isSortedByFamilyName,
       exampleSolutions: state.pageConstants?.exampleSolutions,
+      currentLevelId: state.progress.currentLevelId,
+      lab2ExampleSolutions: getExampleSolutionLink(state),
+      isCurrentLevelLab2: getCurrentLevel(state)?.usesLab2,
     };
   },
   dispatch => ({
@@ -355,7 +424,15 @@ export default connect(
     selectUser: (userId, isAsync = false) => {
       updateQueryParam('user_id', userId);
       updateQueryParam('version');
-      isAsync ? dispatch(queryUserProgress(userId)) : reload();
+      if (isAsync) {
+        dispatch(queryUserProgress(userId, false));
+        dispatch(setViewAsUserId(userId));
+      } else {
+        reload();
+      }
+    },
+    setViewAsUserId: viewAsUserId => {
+      dispatch(setViewAsUserId(viewAsUserId));
     },
     setStudentsForCurrentSection: (sectionId, students) => {
       dispatch(setStudentsForCurrentSection(sectionId, students));

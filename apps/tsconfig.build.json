@@ -3,10 +3,12 @@
 // Most settings should be set in this config file.
 {
   "include": [
+    "./.storybook/**/*.js",
+    "./.storybook/**/*.ts",
     "./src/**/*.ts",
     "./src/**/*.tsx",
     "./test/**/*.ts",
-    "./test/**/*.tsx",
+    "./test/**/*.tsx"
   ],
   "compilerOptions": {
     "jsx": "react",
@@ -23,13 +25,23 @@
     "skipDefaultLibCheck": true,
     "skipLibCheck": true,
     "allowJs": true,
+    // tell the type-checker to enforce extra rules to ensure the codebase is
+    // safe to compile one file at a time. this also tells ts-jest to skip an
+    // expensive type-checking step (see apps/jest.config.js).
+    "isolatedModules": true,
     "baseUrl": "./",
+    "preserveSymlinks": true,
     "paths": {
       "@cdo/apps/*": ["./src/*"],
+      "@cdo/storybook/*": ["./.storybook/*"],
       "@cdo/static/*": ["./static/*"],
       "@cdo/i18n/*": ["./i18n/*"],
+      "@codebridge/*": ["./src/codebridge/*"],
+      "@cdo/generated-scripts/*": ["./generated-scripts/*"]
     },
     "resolveJsonModule": true,
     "incremental": true,
+    "sourceMap": true,
+    "downlevelIteration": true
   }
 }

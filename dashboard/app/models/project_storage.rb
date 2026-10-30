@@ -2,8 +2,9 @@
 #
 # Table name: user_project_storage_ids
 #
-#  id      :integer          not null, primary key
-#  user_id :integer
+#  id           :integer          not null, primary key
+#  user_id      :integer
+#  anon_user_id :string(36)
 #
 # Indexes
 #
@@ -11,6 +12,14 @@
 #  user_storage_ids_user_id_index  (user_id)
 #
 class ProjectStorage < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :confidential,
+    user_id: :confidential,
+    anon_user_id: :confidential,
+  )
+
   # Conceptually, an instance of this class represents blob storage for all of
   # the projects belonging to a single user. The user may have an account (user_id
   # points to the user) or may be unsigned-in (user_id is nil). Under the covers,
@@ -20,5 +29,14 @@ class ProjectStorage < ApplicationRecord
   self.table_name = 'user_project_storage_ids'
 
   belongs_to :user, optional: true
-  has_many :projects, inverse_of: :project_storage
+  has_many :projects, foreign_key: :storage_id, inverse_of: :project_storage
+  has_one :geo,
+          class_name: 'ProjectStorage::Geo',
+          foreign_key: :storage_id,
+          inverse_of: :project_storage,
+          dependent: :destroy
+
+  scope :anonymous, -> {where(user_id: nil)}
+  scope :without_geo, -> {where.missing(:geo)}
+  scope :with_projects, -> {where(Project.where(Project.arel_table[:storage_id].eq(arel_table[:id])).arel.exists)}
 end

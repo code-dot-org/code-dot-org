@@ -1,7 +1,0 @@
-{{ featured_tutorial, title: "हॅलो वर्ल्ड: स्पेस", body: "करैक्टर आणि आवाजासह अंतराळ दृश्ये तयार करा जे, \"हॅलो वर्ल्ड!\" असे म्हणतील ", image: "/images/hoc2022-hello-world- space.png", url: "https://studio.code.org/s/hello-world-space-2022/reset" }}
-
-{{ featured_tutorial, title: "NASA's Space Jam", body: "प्रक्रियेमध्ये संगीत, खगोलशास्त्र आणि कोडिंग शिकत असताना अशी सौर यंत्रणा तयार करा जी सगळ्यांना हलवुन टाकेल!", image: "/images/hoc2022-nasa-space-jam .png", url: "https://chandra.si.edu/sound/code/" }}
-
-{{ featured_tutorial, title: "Star Wars", body: "Droids प्रोग्राम करायला शिका, आणि खूप दूर असलेल्या आकाशगंगेत तुमचा स्वतःचा Star Wars गेम तयार करा.", image: "/shared/images/courses/logo_tall_starwars.jpg" , url: "https://code.org/starwars" }}
-
-{{ featured_tutorial, title: "SciGirls Code Quest", body: "या ऑनलाइन कोडींग एडवेंचर मध्ये, तुम्ही सबबी पाणबुडीला पाण्याखालील आव्हानांमधून घेऊन जाल.", image: "/images/hoc2022-scigirls-code-quest.png" , url: "https://pbskids.org/scigirls/games/code-quest" }}

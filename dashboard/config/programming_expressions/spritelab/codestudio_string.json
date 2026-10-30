@@ -8,7 +8,7 @@
   "examples": [
     {
       "name": "Example 1",
-      "description": "Printing text can make it look like the sprite is talking.\r\n",
+      "description": "Printing text can make it look like the sprite is talking. Click the sprite to see it talk!\n",
       "app": "https://studio.code.org/projects/spritelab/9l51UN7wYsT3Gqqwn6xocQzzHyyHjk97Mn6K-oP_z3o",
       "image": null,
       "app_display_type": "embedAppWithCode",

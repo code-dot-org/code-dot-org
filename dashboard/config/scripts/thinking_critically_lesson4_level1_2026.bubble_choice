@@ -1,0 +1,10 @@
+name 'thinking_critically_lesson4_level1_2026'
+display_name 'AI Chat: Co-Creation with AI'
+description 'Choose one of the explorations below:'
+
+sublevels
+level 'thinking_critically_lesson4_level1a_2026'
+level 'thinking_critically_lesson4_level1b_2026'
+level 'thinking_critically_lesson4_level1c_2026'
+
+uses_lab2

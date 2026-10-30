@@ -1,0 +1,42 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-02-18T17:00:11.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "ai_tutor_available": "true",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# CIW AI Associate Standard: 3.8\n# Standard Description: Explain the algorithm for fitting bivariate linear regression models.\n#\n# Rationale: \"Bivariate\" just means \"Two Variables\" (like Height and Weight). \n# How does a computer draw the \"Perfect\" line through a cloud of dots? \n# It uses an algorithm called \"Ordinary Least Squares\" (OLS). This tutorial \n# shows how the algorithm minimizes the distance between the dots and the line.\n\n\"\"\"\nWelcome! How do you draw the \"best\" line through a bunch of scattered points?\nYou can't hit every point exactly, so you try to be as \"close\" as possible \nto all of them.\n\nThe AI uses an algorithm that measures the \"Error\" (the distance from the \npoint to the line) and tries to make the total error as small as possible.\n\"\"\"\n\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom sklearn.linear_model import LinearRegression\n\n# --- PART 1: OUR BIVARIATE DATA ---\n# X = Study Hours, y = Test Score\nX = np.array([1, 2, 3, 4, 5]).reshape(-1, 1)\ny = np.array([60, 72, 65, 85, 90])\n\n# --- PART 2: THE \"LEAST SQUARES\" ALGORITHM ---\nprint(\"--- Part 2: Fitting the Line ---\")\nmodel = LinearRegression()\nmodel.fit(X, y)\n\n# The algorithm finds two numbers:\n# 1. The Intercept (where the line starts)\n# 2. The Slope (how steep the line goes up)\nprint(f\"Algorithm Result: Intercept = {model.intercept_:.2f}, Slope = {model.coef_[0]:.2f}\")\n\n# --- VISUALIZATION ---\nplt.scatter(X, y, color='blue', label='Actual Scores')\nplt.plot(X, model.predict(X), color='red', label='Best Fit Line (OLS)')\n\n# Let's draw the \"Errors\" (Residuals)\nfor i in range(len(X)):\n    plt.plot([X[i], X[i]], [y[i], model.predict(X)[i]], color='gray', linestyle='--', alpha=0.5)\n\nplt.title(\"Bivariate Regression: Minimizing the Error (Dashed Lines)\")\nplt.xlabel(\"Study Hours\")\nplt.ylabel(\"Test Score\")\nplt.legend()\nplt.show()\n\nprint(\"The algorithm minimizes the SQUARE of the length of those dashed lines.\")\nprint(\"If the line moves up or down, the total length of the dashed lines increases.\")\n\n\"\"\"\n--- YOUR TURN ---\nWe've provided a new set of points. \n1. Predict what the \"Slope\" will be (Positive, Negative, or Zero).\n2. Train a LinearRegression model on this data.\n3. Print the Slope (coef_) and see if you were right!\n\"\"\"\n\n# STARTING CODE FOR STUDENT:\n# Data: [Hours spent Gaming, Test Score]\nX_game = np.array([1, 2, 3, 4, 5]).reshape(-1, 1)\ny_score = np.array([95, 85, 70, 60, 50])\n\n# TODO: Create the model\n# TODO: Fit the model\n# TODO: Print the slope (model.coef_)\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFTDG6jyYgtI/CEUE/82dEkG4hlI8OLsdjJD0In8S\n03BB+jPkGgyYB0/9C3zqHMHEFpKeCsugYbpGMxzBNwrd7qASagJaFzMnVUyM\n2TXS7Hau9lj7JpZIHXn9fmxXRRANWb+KOPr9lTmp3A8AiJ3I+BlYQfZhGwA7\nDEmL/R9h/xnHI6n9atnyfck3oxH+HBWndAkdZcC9M/JI7CZ89e0WxgbfccmE\noMy7iHqUnLSp+HdO5nqg/z5bCpgG9CPo7+F1jv2VfB8kEPKcKno/PRt3uSPF\nZx4V6jzMtxRYeV8+282LSCsFrRs6AEzzCRU99CE7Q9i9Kse1u0fQMHCQPYd9\nYOLdb6Q8VzlRjIGMiv6ZmtiAVuwgxJUleijM3HAqYGZ7r9S246ctkGbZQJgi\nbuzWEYofjfN2vGEOA2up+NQylFha+LdSf2f6RMYjX7UszDGaw9HgfN2hEEU7\nmukOY1fCeYdT5qnoXY7TYoK9QofM4hLEgkMpkVT6Fr7tgAB7OkRQyz8LmZU2\ny5B90sVnmdMn37mL5d/Usk4Y3OFHb1dbFlrQSZf7aC5xAiytoIwUThCQ4QGE\nxY6d2Ww507VeZlurWpzzP2AOFQBvr55K84MLZKtBPC801ZiEQc9YIEGqksw9\nZImQ09NI06NeguuxZL1PmBhcu30+BtRSkTJK+wWxfAtPktlgOVJFor1Xs6Kb\nkKUcfoGejMKZ/fTTT9bsclukCRdhJqew6gTDBHh0SBGMyXewWpYfPlVdkTBU\nFJteLPKP5IQcG3OZSvm7jshJVhYX/pErQYvhDfhiuyxPnIj8ygJbsiaePn0Q\nLlQUSjF4VgZa39DnFyHJlCfPfFqfGlnwFD36mhs/1h55kgotPETjahgmQn/q\nXAnqCcCqqs9WBVqtTqGGDm9eu3K0OAahxmRR3g9sEIpttnyZecI/k88nXtRO\n62pLyf4I3xAFvNIeMXwcuC94F387Qlz3qDg0Bh8wXmWNdKtrYzgKegS72D/i\nZgoha/e+btItwZV78WYE53V7689dt/KvORY4EXAL8/Mn1dLNYUaOJ5hf3W2q\nUJaVmz4I56z4ZObjyhVqXIj+7EoQtOD8o3lMHOJ3POQL/R9aHRMM5uXm7t9H\nOvE6eqy7kZEnHGK+iqlahbsWuahFSD5xixtSImmEBufvkSQHdrgojYhXcxw9\nWn3ERIj3XXBaGg4e\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-18T17:00:11.503+00:00\",\"changed\":[\"cloned from \\\"cs50-scikit-22\\\"\"],\"cloned_from\":\"cs50-scikit-22\"},{\"changed_at\":\"2026-02-18 17:00:13 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:42:25 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:42:35 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Pythonlab>

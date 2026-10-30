@@ -1,0 +1,368 @@
+import {createAsyncThunk} from '@reduxjs/toolkit';
+
+import {buildMessagesForModelHistory} from '@cdo/apps/aichat/helpers/buildMessagesForModelHistory';
+import {
+  addEventToChatEventsCurrent,
+  clearStagedFiles,
+  clearUserAddedSelectionContext,
+  updateChatMessageStatus,
+  updateRequestId,
+} from '@cdo/apps/aichat/redux/slice';
+import {getAssetUrl} from '@cdo/apps/aichat/utils';
+import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
+import {
+  isTurnstileDevToolsError,
+  turnstileUserMessage,
+} from '@cdo/apps/aiGateway/turnstile';
+import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
+import {TestResults} from '@cdo/apps/constants';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {MetricDimension} from '@cdo/apps/metrics/types';
+import {commonI18n} from '@cdo/apps/types/locale';
+import {RootState} from '@cdo/apps/types/redux';
+import {NetworkError} from '@cdo/apps/util/HttpClient';
+import {AppDispatch} from '@cdo/apps/util/reduxHooks';
+import {createUuid} from '@cdo/apps/utils';
+import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
+
+import {postAichatCompletionMessage} from '../../aichatApi';
+import AichatContextManager from '../../aichatContextManager';
+import {performClientApiChatCompletion} from '../../api/performClientApiChatCompletion';
+import shouldUseAiGateway from '../../api/shouldUseAiGateway';
+import {
+  applySchemaDisplayTransform,
+  parseJsonObject,
+} from '../../helpers/applySchemaDisplayTransform';
+import {logChatEvent} from '../../helpers/logChatEvent';
+import {formatUserAddedSelectionContextForPrompt} from '../../helpers/userAddedSelectionContextFormatter';
+import {
+  PendingChatMessage,
+  CompletedChatMessage,
+  ChatAsset,
+  ModelParameters,
+  AiChatClientType,
+  AnalyticsProperties,
+  UserAddedSelectionContextItem,
+} from '../../types';
+import {getNewRemoveId} from '../utils';
+
+import {addChatEvent} from './addChatEvent';
+import {notifyErrorUnauthorized} from './helpers/notifyErrorUnauthorized';
+import {sendAnalytics} from './sendAnalytics';
+
+// This thunk's callback function submits a user's chat content and AI customizations to
+// the chat completion endpoint, then waits for a chat completion response, and updates
+// the user messages.
+export const submitChatContents = createAsyncThunk(
+  'aichat/submitChatContents',
+  async (
+    newUserMessageInput: {
+      text: string;
+      modelParameters: ModelParameters;
+      clientType: AiChatClientType;
+      hiddenContext?: string;
+      assets?: ChatAsset[];
+      analyticsProperties?: AnalyticsProperties;
+      userAddedSelectionContext?: UserAddedSelectionContextItem[];
+      levelName?: string;
+      levelSystemPrompt?: string;
+      onSchemaResponse?: (response: unknown) => void;
+      formatSchemaResponseForDisplay?: (response: unknown) => string;
+    },
+    thunkAPI
+  ) => {
+    const dispatch = thunkAPI.dispatch as AppDispatch;
+    const state = thunkAPI.getState() as RootState;
+    const chatEventsCurrent = state.aichat.chatEventsCurrent;
+    const {
+      text,
+      hiddenContext,
+      assets,
+      modelParameters,
+      clientType,
+      analyticsProperties,
+      userAddedSelectionContext,
+      levelName,
+      levelSystemPrompt,
+      onSchemaResponse,
+      formatSchemaResponseForDisplay,
+    } = newUserMessageInput;
+
+    // The history we send is prose the reader is shown which avoids poisoning
+    // the history with code in the actual JSON object message that was rejected
+    // or later changed.
+    const modelHistory = () =>
+      buildMessagesForModelHistory(
+        applySchemaDisplayTransform(
+          chatEventsCurrent,
+          formatSchemaResponseForDisplay
+        )
+      );
+
+    // Clear any staged files if present (used with multimodal models)
+    dispatch(clearStagedFiles());
+    // Clear any user added context if present.
+    dispatch(clearUserAddedSelectionContext());
+
+    const aichatContext = AichatContextManager.getContext();
+
+    // Default to just sending `chatMessageText`, in case display text is the same as text to send to the model.
+    let chatMessageText = text;
+    let chatMessageDisplayText;
+
+    // If we have userAddedSelectionContext, display text and text to send to the model will be different.
+    if (userAddedSelectionContext?.length) {
+      // Add the user added selections to the text to send to the model.
+      chatMessageText +=
+        '\n\n' +
+        formatUserAddedSelectionContextForPrompt(userAddedSelectionContext);
+      // And use the original message for the display.
+      chatMessageDisplayText = text;
+    }
+
+    // Create the new user ChatMessage and add to chatEventsCurrent.
+    const newUserMessage: PendingChatMessage & {updateId: string} = {
+      role: Role.USER,
+      status: Status.UNKNOWN,
+      chatMessageText,
+      chatMessageDisplayText,
+      hiddenContext,
+      assets,
+      userAddedSelectionContext,
+      timestamp: Date.now(),
+      updateId: createUuid(),
+    };
+    dispatch(addEventToChatEventsCurrent(newUserMessage));
+
+    // Post user content and messages to backend and retrieve assistant response.
+    const startTime = Date.now();
+
+    let messages: CompletedChatMessage[] = [];
+    const projectFileCount =
+      newUserMessage.userAddedSelectionContext?.length || 0;
+    const projectFileCountHtml =
+      newUserMessage.userAddedSelectionContext?.filter(file =>
+        file.filename.endsWith('.html')
+      ).length || 0;
+    const projectFileCountJs =
+      newUserMessage.userAddedSelectionContext?.filter(file =>
+        file.filename.endsWith('.js')
+      ).length || 0;
+    const projectFileCountCss =
+      newUserMessage.userAddedSelectionContext?.filter(file =>
+        file.filename.endsWith('.css')
+      ).length || 0;
+    const fileCount = newUserMessage.assets?.length || 0;
+    const fileCountPdf =
+      newUserMessage.assets?.filter(asset => asset.filename.endsWith('.pdf'))
+        .length || 0;
+    const fileCountImage = fileCount - fileCountPdf;
+
+    const eventData = {
+      fileCount,
+      fileCountImage,
+      fileCountPdf,
+      projectFileCount,
+      projectFileCountHtml,
+      projectFileCountJs,
+      projectFileCountCss,
+      clientType,
+      ...analyticsProperties,
+    };
+
+    const metricDimensions = [
+      {name: 'ModelId', value: modelParameters.selectedModelId},
+    ];
+
+    try {
+      incrementCounter(
+        'Aichat.ChatCompletionRequestInitiated',
+        metricDimensions
+      );
+
+      dispatch(
+        sendAnalytics(EVENTS.SUBMIT_AICHAT_REQUEST_INITIATED, eventData)
+      );
+
+      if (shouldUseAiGateway(modelParameters.selectedModelId)) {
+        messages = await performClientApiChatCompletion(
+          newUserMessage,
+          modelHistory().filter(event => event.status === Status.OK),
+          modelParameters,
+          aichatContext,
+          (asset: ChatAsset) =>
+            getAssetUrl(asset, aichatContext.channelId, levelName),
+          levelSystemPrompt
+        );
+      } else {
+        messages = await postAichatCompletionMessage(
+          newUserMessage,
+          modelHistory(),
+          {...modelParameters},
+          aichatContext
+        );
+      }
+      // In milliseconds
+      const responseTime = Date.now() - startTime;
+      dispatch(
+        sendAnalytics(EVENTS.SUBMIT_AICHAT_REQUEST_SUCCESS, {
+          ...eventData,
+          responseTime,
+        })
+      );
+      Lab2Registry.getInstance()
+        .getMetricsReporter()
+        .reportLoadTime(
+          'AichatModelResponseTime',
+          responseTime,
+          metricDimensions
+        );
+    } catch (error) {
+      await handleChatCompletionError(
+        error as Error,
+        newUserMessage,
+        dispatch,
+        state.progress.viewAsUserId,
+        metricDimensions
+      );
+      return;
+    }
+
+    // Send a report that the user has started the aichat level after successfully sending
+    // a chat message and then receiving a response from the chatbot.
+    // A teacher will view that the level is now in progress.
+    dispatch(sendProgressReport('aichat', TestResults.LEVEL_STARTED));
+    messages.forEach(message => {
+      if (message.role === Role.ASSISTANT) {
+        dispatch(addChatEvent(message));
+        notifySchemaResponse(message, onSchemaResponse);
+      }
+      if (message.role === Role.USER) {
+        dispatch(
+          updateChatMessageStatus({
+            updateId: newUserMessage.updateId,
+            status: message.status,
+          })
+        );
+        dispatch(
+          updateRequestId({
+            updateId: newUserMessage.updateId,
+            requestId: message.requestId,
+          })
+        );
+        logChatEvent(message, state.progress.viewAsUserId);
+      }
+    });
+  }
+);
+
+/**
+ * Hands a freshly arrived structured response to the lab after the event is already
+ * logged and cannot be changed: the lab acts on the response, it does not get to
+ * decide what history records.
+ */
+function notifySchemaResponse(
+  message: CompletedChatMessage,
+  onSchemaResponse?: (response: unknown) => void
+) {
+  if (!onSchemaResponse || message.status !== Status.OK) {
+    return;
+  }
+  const parsed = parseJsonObject(message.chatMessageText || '');
+  if (parsed === undefined) {
+    return;
+  }
+  try {
+    onSchemaResponse(parsed);
+  } catch (error) {
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .logError('Error handling structured aichat response', error as Error);
+  }
+}
+
+async function handleChatCompletionError(
+  error: Error,
+  newUserMessage: PendingChatMessage & {updateId: string},
+  dispatch: AppDispatch,
+  viewAsUserId: number | null,
+  dimensions: MetricDimension[] = []
+) {
+  // A Turnstile failure that got this far already produced a metric and a log
+  // in recordTurnstileOutcome, and an error tag on reportGatewayError. Logging
+  // it a third time here adds nothing.
+  const turnstileMessage = turnstileUserMessage(error);
+
+  // Skip log report for expected client-side conditions (403, DevTools block).
+  if (
+    !(error instanceof NetworkError && error.response.status === 403) &&
+    !isTurnstileDevToolsError(error) &&
+    !turnstileMessage
+  ) {
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .logError('Error in aichat completion request', error as Error);
+  }
+
+  dispatch(
+    updateChatMessageStatus({
+      updateId: newUserMessage.updateId,
+      status: Status.ERROR,
+    })
+  );
+  logChatEvent({...newUserMessage, status: Status.ERROR}, viewAsUserId);
+
+  // Display specific error notifications if the user was rate limited (HTTP 429) or not authorized (HTTP 403).
+  // Otherwise, display a generic error assistant response.
+  if (error instanceof NetworkError && error.response.status === 429) {
+    incrementCounter('Aichat.ChatCompletionErrorRateLimited', dimensions);
+    dispatch(
+      addChatEvent({
+        removeId: getNewRemoveId(),
+        text: commonI18n.aiChatRateLimitError(),
+        notificationType: 'error',
+        timestamp: Date.now(),
+      })
+    );
+  } else if (error instanceof NetworkError && error.response.status === 403) {
+    await notifyErrorUnauthorized(error, 'Chat Completion', dispatch);
+  } else if (turnstileMessage) {
+    dispatch(
+      addChatEvent({
+        removeId: getNewRemoveId(),
+        text: turnstileMessage,
+        notificationType: 'error',
+        timestamp: Date.now(),
+      })
+    );
+  } else if (isTurnstileDevToolsError(error)) {
+    dispatch(
+      addChatEvent({
+        removeId: getNewRemoveId(),
+        text:
+          "Chat messages cannot be sent due to your browser's dev tools being open. Please close " +
+          'dev tools and reload the page to try again or see message in dev tools for other options.',
+        notificationType: 'error',
+        timestamp: Date.now(),
+      })
+    );
+  } else {
+    incrementCounter('Aichat.ChatCompletionErrorUnhandled', dimensions);
+    dispatch(
+      addChatEvent({
+        role: Role.ASSISTANT,
+        status: Status.ERROR,
+        chatMessageText: 'error',
+        timestamp: Date.now(),
+      })
+    );
+  }
+}
+
+function incrementCounter(metricName: string, dimensions: MetricDimension[]) {
+  const reporter = Lab2Registry.getInstance().getMetricsReporter();
+  reporter.incrementCounter(metricName, dimensions);
+  // Report without dimensions for an aggregate count.
+  reporter.incrementCounter(metricName);
+}

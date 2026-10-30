@@ -1,0 +1,35 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2026-08-06T19:04:23.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "#Music Lab \r\n\r\n###Sound Designer\r\nYou own the sound. You will write the hook that gets stuck in people's heads, then produce it as a jingle in Music Lab.\r\n\r\n**To Do**:\r\n- Produce a jingle in Music Lab to support your product.\r\n- Screenshot the QR code to share in your social media post.",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "hide_version_history": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "level_data": {
+      "library": "launch2024"
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "display_name": "Music Lab",
+    "bubble_choice_description": "Write the hook that gets stuck in people's heads and produce it as a jingle for your product in Music Lab.",
+    "thumbnail_url": "https://images.code.org/ac21223161a416888c56c8c9cefc2f1b-mix-and-move-icon.png",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2026-08-06T19:04:23.802+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-project-prototype-3\\\"\"],\"cloned_from\":\"problem-solving-with-ai-project-prototype-3\"},{\"changed_at\":\"2026-08-06 19:06:07 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-06 19:16:16 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

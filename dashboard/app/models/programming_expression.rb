@@ -35,6 +35,7 @@ class ProgrammingExpression < ApplicationRecord
   validate :validate_key_format
 
   after_destroy :remove_serialization
+  before_destroy :check_unused
 
   serialized_attrs %w(
     color
@@ -129,9 +130,9 @@ class ProgrammingExpression < ApplicationRecord
     end
   end
 
-  def self.seed_all
+  def self.seed_all(root_dir: Rails.root)
     removed_records = all.pluck(:id)
-    Dir.glob(Rails.root.join("config/programming_expressions/**/*.json")).each do |path|
+    Dir.glob(root_dir.join("config/programming_expressions/**/*.json")).each do |path|
       removed_records -= [ProgrammingExpression.seed_record(path)]
     end
     where(id: removed_records).destroy_all
@@ -160,6 +161,7 @@ class ProgrammingExpression < ApplicationRecord
   def summarize_for_lesson_edit
     {
       id: id,
+      blockName: block_name,
       category: category,
       color: get_color,
       key: key,
@@ -179,7 +181,7 @@ class ProgrammingExpression < ApplicationRecord
       blockName: block_name,
       categoryKey: programming_environment_category&.key,
       programmingEnvironmentName: programming_environment.name,
-      environmentEditorLanguage: programming_environment.editor_language,
+      environmentLanguageType: programming_environment.editor_language,
       imageUrl: image_url,
       videoKey: video_key,
       shortDescription: short_description || '',
@@ -251,6 +253,7 @@ class ProgrammingExpression < ApplicationRecord
       environmentId: programming_environment.id,
       environmentTitle: programming_environment.title,
       categoryName: programming_environment_category&.name,
+      deletable: lessons.empty?,
       editPath: edit_programming_expression_path(self)
     }
   end
@@ -292,7 +295,7 @@ class ProgrammingExpression < ApplicationRecord
   end
 
   def report_error_get_localized_examples_no_name(example)
-    Honeybadger.notify(
+    Observability::Errors.report(
       "example needs a unique 'name', otherwise a translation cannot be shown",
       context: {
         example: example
@@ -305,10 +308,10 @@ class ProgrammingExpression < ApplicationRecord
     i18n_params = I18n.t(
       :palette_params,
       scope: expression_scope,
-      default: palette_params,
+      default: nil,
       smart: true
     )
-    if i18n_params != localized_params
+    unless i18n_params.nil?
       localized_params&.each do |param|
         param_key = param['name'].to_sym
         unless i18n_params[param_key].nil?
@@ -332,7 +335,6 @@ class ProgrammingExpression < ApplicationRecord
   end
 
   def get_blocks
-    return unless block_name
     return unless programming_environment.block_pool_name
     Block.for(programming_environment.block_pool_name)
   end
@@ -373,6 +375,12 @@ class ProgrammingExpression < ApplicationRecord
     FileUtils.rm_f(file_path)
   end
 
+  def check_unused
+    return if lessons.empty?
+    errors.add(:base, 'Cannot delete programming expressions that are introduced in existing lessons')
+    throw(:abort)
+  end
+
   def clone_to_programming_environment(environment_name, new_category_key = nil)
     new_env = ProgrammingEnvironment.find_by_name(environment_name)
     raise "Cannot find programming environment with name #{environment_name}" unless new_env
@@ -404,7 +412,7 @@ class ProgrammingExpression < ApplicationRecord
   def self.get_from_cache(programming_environment_name, key)
     Rails.cache.fetch("programming_expression/#{programming_environment_name}/#{key}", force: !Unit.should_cache?) do
       env = ProgrammingEnvironment.find_by_name(programming_environment_name)
-      ProgrammingExpression.includes([:programming_environment, :programming_environment_category]).find_by(programming_environment_id: env.id, key: key)
+      ProgrammingExpression.includes(:programming_environment, :programming_environment_category).find_by(programming_environment_id: env.id, key: key)
     end
   end
 end

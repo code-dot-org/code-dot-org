@@ -1,11 +1,13 @@
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
-import i18n from '@cdo/locale';
-import VerticalImageResourceCard from '@cdo/apps/templates/VerticalImageResourceCard';
+
 import {
   nextLevelCourseCards,
   defaultNextLevelCourseCard,
 } from '@cdo/apps/templates/certificates/congratsNextLevelActivityCards';
+import VerticalImageResourceCard from '@cdo/apps/templates/VerticalImageResourceCard';
+import i18n from '@cdo/locale';
 
 const GraduateToNextLevel = ({scriptName, courseTitle, courseDesc}) => {
   // The scriptName prop takes the form `course1` or `courseb-2022` or `applab-intro`
@@ -19,7 +21,9 @@ const GraduateToNextLevel = ({scriptName, courseTitle, courseDesc}) => {
   return (
     <>
       <div id="next-level-block">
-        <h1 id="next-level-title">{i18n.congratsNextLevelHeading()}</h1>
+        <Typography id="next-level-title" variant="h1" gutterBottom>
+          {i18n.congratsNextLevelHeading()}
+        </Typography>
         <VerticalImageResourceCard
           id={`course-card-${courseInfo.scriptName}`}
           title={courseTitle || i18n.introToAppLabTitle()}

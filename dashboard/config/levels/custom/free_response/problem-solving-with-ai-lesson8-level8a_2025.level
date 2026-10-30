@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2025-05-08T14:35:35.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Copy and paste your best revised prompt from Level 8 into the free response box below:\r\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "stay_on_level_after_submit": "false",
+    "name_suffix": "_2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-05-08T14:35:35.653+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson8-level8a_2024\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson8-level8a_2024\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

@@ -1,0 +1,52 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-10-24T03:10:42.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "#### BEHIND THE SCENES\n\nHow does AI generate code from your words?",
+        "imageUrl": "https://images.code.org/8b6420bcb71cdfde2997b6575a7034c8-behind the scene.gif",
+        "key": "Generate_dancer_info-e349bed8-89d6-4efc-8a0e-29b8a1e5afb1"
+      },
+      {
+        "text": "**AI went through a training process**\n\nIn training, it read huge amounts of text, like books, computer programs, and articles from the internet.",
+        "imageUrl": "https://images.code.org/85951b59bbc4cc06c971712bf91da1d9-llms panel 2.gif",
+        "key": "Generate_dancer_more_details-0bf87b05-fdcb-4acc-b8d2-5455e69d6e87"
+      },
+      {
+        "text": "**AI learned from examples**\n\nAI noticed patterns in how words usually go together and learned to predict the next word.",
+        "imageUrl": "https://images.code.org/f07aac64ce1d0fcf2e1a3798b39a72bb-llm panel3.gif",
+        "key": "Generate_dancer_more_details-48f5d03d-6aff-4230-bbc0-75fbac278d9c"
+      },
+      {
+        "text": "**AI makes predictions**\n\nWhen you give AI some starting words, it predicts how to respond, one word after another.",
+        "imageUrl": "https://images.code.org/2df2eadd2ab8d72a58245b7c4454645f-llm panel 4.jpg",
+        "key": "Generate_dancer_more_details-f7defbff-6781-4fcd-ba98-bb4e03422fd5"
+      },
+      {
+        "text": "**AI generates something new**\n\nIn this way, it generates full sentences, whole conversations, and even Music Lab code!",
+        "imageUrl": "https://images.code.org/5f07dcd1ddde8a1aefe85b2dc448151d-llm panel 5b.jpg",
+        "key": "Generate_dancer_more_details-1af42de1-d2bc-4653-9e86-16d56ff2ceb3"
+      },
+      {
+        "text": "**AI isn’t magic…it’s math**\n\nRemember, AI doesn’t think or feel. It uses math to make predictions based on its training data.\n",
+        "imageUrl": "",
+        "key": "Generate_dancer_more_details-90264270-422b-4ad6-86cd-c9c12253b4a6"
+      },
+      {
+        "text": "**You’re in charge**\n\nAlways check what AI wrote. You decide what to keep or change!",
+        "imageUrl": "",
+        "key": "HoAI_pilot_7_music_panel-d70cb1e9-cfe8-4d04-ad6d-9b060931cbe5"
+      }
+    ],
+    "name_suffix": "_4"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-24T03:10:42.180+00:00\",\"changed\":[\"cloned from \\\"HoAI_pilot_6_music_panel\\\"\"],\"cloned_from\":\"HoAI_pilot_6_music_panel\"},{\"changed_at\":\"2025-10-24 17:28:39 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-27 16:12:16 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-27 16:24:11 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-27 16:24:36 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

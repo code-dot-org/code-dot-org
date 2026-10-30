@@ -1,0 +1,33 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-09-07T23:59:30.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "aif-y2-working-with-data-lesson11-2026 + template",
+    "long_instructions": "The explorers called the same sites by a few different names. These names need to be standardized before the artifacts can be counted accurately.\r\n\r\n**☑️ Do This:**\r\n- Finish repairing the site names.\r\n- Check the artifact counts. Where did the expedition make the most discoveries?\r\n- As an optional challenge, convert Logbook 1's temperatures from Fahrenheit to Celsius as you read its data.\r\n  - To convert to Celsius, use this formula: `celsius = (fahrenheit - 32) / 1.8`\r\n\r\n**💻 Coding Tip**\r\n\r\nYou can follow the pattern established for the Temple of the Sun.\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "true",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "encrypted_exemplar_sources": "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\nxrpYJIMmct/1U0qz\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-08 00:00:17 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-08 00:00:39 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-08 00:03:32 +0000\",\"changed\":[\"submittable\",\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

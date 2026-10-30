@@ -1,7 +1,0 @@
-{{ featured_tutorial, title: "డ్యాన్స్ పార్టీ", body: "ఒక డ్యాన్స్ పార్టీని కోడ్ చేయండి! బెయాన్స్, హ్యారీ స్టైల్స్, లీజో, లిల్ నాస్ ఎక్స్, సెలెనా గోమెజ్ నటిస్తున్నారు, Disney యొక్క \"ఎన్‌కాంటో,\" నుండి సంగీతం మరియు మరెన్నో!", image: "/images/hoc2022-dance-party.png", url: "https://code.org/dance" }}
-
-{{ featured_tutorial, title: "పద్య కళ", body: "ఈ అవర్ ఆఫ్ కోడ్ కార్యక్రమంలో ఒక శాస్త్రీయ పద్యానికి కళ మరియు యానిమేషన్ జోడించండి!", image: "/shared/images/courses/logo_tall_poem-art.jpg", url: "https://studio.code.org/s/poem-art-2021/reset" }}
-
-{{ featured_tutorial, title: "కళాకారుడు", body: "కళాకారుడితో చక్కని బొమ్మలు మరియు డిజైన్లను గీయించండి!", image: "/shared/images/courses/logo_tall_artist.jpg", url: "https://studio.code.org/s/artist/reset" }}
-
-{{ featured_tutorial, title: "అనంతమైన ప్లే ల్యాబ్", body: "అనంతమైన Disney పాత్రధారులు నటిస్తుండగా ఒక కథను లేదా గేమ్‌‌ను సృష్టించడానికి ప్లే ల్యాబ్ ఉపయోగించుకోండి.", image: "/shared/images/courses/logo_tall_infinity.jpg", url: "https://studio.code.org/s/infinity/reset" }}

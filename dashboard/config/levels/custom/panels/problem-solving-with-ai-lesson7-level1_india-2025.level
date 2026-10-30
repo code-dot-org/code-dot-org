@@ -1,0 +1,36 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-06-26T19:33:11.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "true",
+    "panels": [
+      {
+        "text": "# Careful Prompting\nAI responses improve with specific and well-structured prompts. The more details included, the less likely AI is to make assumptions or hallucinate.\n\n### Okay Prompt:\n_\"What's the driving age here?\"_\n\n### Better Prompt:\n_\"What is the minimum age to get a learner's license in India?\"_",
+        "imageUrl": "https://images.code.org/f18812091960832ca2414c9c99eb3d98-Screenshot 2025-03-19 112031.png",
+        "key": "test-intro-to-programming-lesson6-level1a-e5d1dd23-d8d1-43e7-bc7b-56f197587f67",
+        "layout": "text-top-center"
+      },
+      {
+        "text": "# Be Skeptical of AI Responses\nAI can confidently provide incorrect information. Be cautious, especially with proper nouns, numbers, links, and quotes.\n\n### Scenario:\n**A student asks AI:** _\"What is the tallest mountain in the world?\"_\n\n**AI responds:** _\"Mount Kilimanjaro, at 8,848 meters, is the tallest mountain.\"_\n\n### Reality Check:\nMount Everest is the tallest mountain, not Kilimanjaro!",
+        "imageUrl": "https://images.code.org/d10835fe1681fc17b480751b5b52035d-Screenshot 2025-03-19 120944.png",
+        "key": "test-intro-to-programming-lesson6-level1a-91cac369-0d9d-46ec-a0a9-e5f5c4ac7380",
+        "layout": "text-bottom-center"
+      },
+      {
+        "text": "# Fact-Check with Search Engines\nAI doesn’t verify facts before responding. Always search for key claims using trusted sources.\n\n### Scenario:\n**A user asks AI:** _“What is the fine for riding a bike without a helmet in Mumbai?”_\n\n**AI responds:** _\"In Mumbai, the fine for riding a two-wheeler without a helmet is a ₹5,000 fine and immediate cancellation of your driving license.",
+        "imageUrl": "https://images.code.org/a662ee5dc6d502fe4e877a52276d6681-Screenshot 2025-03-19 121526.png",
+        "key": "test-problem-solving-with-ai-lesson7-level3-2057d534-9113-4b3d-b50c-b5e87cf001ca",
+        "layout": "text-top-center"
+      }
+    ],
+    "name_suffix": "_india-2025",
+    "use_links": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-06-26T19:33:11.379+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson7-level1_2025\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson7-level1_2025\"},{\"changed_at\":\"2026-08-07 00:08:13 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22599,\"changed_by_email\":\"doyeon.kim@code.org\"},{\"changed_at\":\"2026-08-07 02:43:08 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22599,\"changed_by_email\":\"doyeon.kim@code.org\"}]"
+}]]></config>
+</Panels>

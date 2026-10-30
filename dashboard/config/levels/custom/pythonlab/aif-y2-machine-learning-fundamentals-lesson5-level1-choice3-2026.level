@@ -1,0 +1,51 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-08-21T20:38:34.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Baking Cookies",
+    "long_instructions": "You are a machine learning engineer designing a program that predicts how much flour is needed for a cookie recipe. From the data, you’ve learned that the recipe always needs **8** tablespoons of flour no matter what, plus an additional **2** tablespoons of flour for each cookie in the batch.\r\n\r\n**☑️ Do This:**\r\n\r\n1. Complete the `predict_flour` function. It should use the y-intercept and slope you’ve learned to predict the amount of flour needed.\r\n2. Print a message to let the user know how many cookies they’re making and how much flour they will likely need.",
+    "bubble_choice_description": "Design a program that predicts how much flour is needed for a cookie recipe.",
+    "thumbnail_url": "https://images.code.org/8108bfd0cd4fc723da41383156143841-cookies.png",
+    "offer_browser_tts": "false",
+    "submittable": "true",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "def predict_flour(cookies):\n  # TODO 1: Return the predicted amount of flour for the number of cookies\n  return\n\ncookies = 12\nflour = predict_flour(cookies)\n\n# TODO 2: Print a message letting the user know how many cookies and how much flour",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMo2FovOJAwFYJpT\nMk8AAOAhuBzpXhpUSNJjRfuW1Fc+bi1LoWKLz64XG76ht8KJmW40CGxIR7ko\nPpvHd8wMdC/O7gkY88vuaLgdrpCY1LuQJAy5eZC1iMMVQM4yDV7QCk87ptMr\nnOifnI8PsA2+zEVGN2PNeCZiwTyBDZLj6DEURXgurUVXWKG1Up8qGn7iBMSe\nBAQmYXu6GtrIyQkOUA+5kn6myk285BfFQk+LCNTO2k5h082P+i13LS/nsjaK\naSS7Atr/P1ATmwegcZQVUTjqxOaGkd8/begOGhSh3pGZ3SOR7Qt5mGJHfpxs\nv7vdcCyRJFP3ks8Du+WZODhsOd+yS0o9wAi/LeerZmlLeWZr7w==\n",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-08-21 20:38:44 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-21 20:38:52 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-21 21:10:27 +0000\",\"changed\":[\"submittable\",\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 20:14:57 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 20:15:05 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>

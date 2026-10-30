@@ -9,13 +9,13 @@ First, let's explore the lesson in the curriculum. To begin, find your ECS Versi
 
 ![](https://images.code.org/1c9599846068fdc2b1b085e8f52c12a2-image-1441934518806.54.22 PM.png)
 
-#### Key Concepts
+Key Concepts
 
 1. Students will learn how to demonstrate a problem as a graph.
 
 1. Students will be able to find the minimal spanning tree of a graph. 
 
-#### Common Difficulties
+Common Difficulties
 
 1. The problem is not about finding a path starting at a certain node but about finding a tree that connects all the nodes with lowest cost.
 
@@ -23,7 +23,7 @@ First, let's explore the lesson in the curriculum. To begin, find your ECS Versi
 
 ### All Resources for This Lesson
 
-#### Teacher Supports
+Teacher Supports
 
 * <a href="http://www.code.org/ecs#page=96" target="_blank">U2 Day 17 Lesson Plan</a>
 * <a href="http://csunplugged.org/minimal-spanning-trees/https://drive.google.com/open?id=0B2UNlnU_5Vg4fmJqWmNQVjd1cVEtb2VaekxiUzZGalpHWXRYa09rTGUxWk42RlJEWHZMbGM" target="_blank"> U2 Day 17 Resource Folder</a>
@@ -32,7 +32,7 @@ First, let's explore the lesson in the curriculum. To begin, find your ECS Versi
 * <a href="http://forum.code.org/t/u2-day-17-lesson-resources/1797/1" target="_blank"> U2 Day 17 Lesson Resources Forum</a>
 * <a href="http://forum.code.org/t/u2-day-17-assessment/1789/1" target="_blank"> U2 Day 17 Assessment Forum</a>
 
-#### Supplies
+Supplies
 * <a href="http://csunplugged.org/minimal-spanning-trees/" target="_blank"> CS Unplugged: The Muddy City</a>
 
 

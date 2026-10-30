@@ -1,21 +1,26 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton, Typography} from '@mui/material';
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
-import color from '@cdo/apps/util/color';
-import ReactTooltip from 'react-tooltip';
-import ProgressBubbleSet from './ProgressBubbleSet';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {levelWithProgressType, lessonType} from './progressTypes';
-import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import FocusAreaIndicator from './FocusAreaIndicator';
-import _ from 'lodash';
-import i18n from '@cdo/locale';
 import {connect} from 'react-redux';
+import ReactTooltip from 'react-tooltip';
+
+import {canUseLessonDeepDive} from '@cdo/apps/aichat/helpers/aiChatAccess';
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import experiments from '@cdo/apps/util/experiments';
+import i18n from '@cdo/locale';
+
+import FocusAreaIndicator from './FocusAreaIndicator';
+import ProgressBubbleSet from './ProgressBubbleSet';
 import {
   lessonIsLockedForAllStudents,
   lessonIsLockedForUser,
   lessonIsVisible,
 } from './progressHelpers';
-import fontConstants from '@cdo/apps/fontConstants';
+import {levelWithProgressType, lessonType} from './progressTypes';
 
 function SummaryProgressRow({
   dark,
@@ -24,7 +29,14 @@ function SummaryProgressRow({
   lessonIsHiddenForStudents,
   lessonIsLockedForUser,
   lessonIsLockedForAllStudents,
+  unitHasUnnumberedLessons,
   viewAs,
+  isOnLevelView,
+  unitId,
+  unitName,
+  userId,
+  userType,
+  aiChatAccessLevel,
 }) {
   // The parent component filters out hidden SummaryProgressRows from the student view,
   // this check is just to ensure it won't be rendered if it should be hidden for students
@@ -37,9 +49,30 @@ function SummaryProgressRow({
   const showAsLocked = isLockedForUser || isLockedForSection;
 
   let lessonTitle = lesson.name;
-  if (lesson.lessonNumber) {
+  if (lesson.lessonNumber && !unitHasUnnumberedLessons) {
     lessonTitle = lesson.lessonNumber + '. ' + lessonTitle;
   }
+
+  // We want to exclude the Lesson Tutor button for assessment and survey lessons.
+  // These lessons don't have lesson plans, so we can use that as a proxy for
+  // whether or not to show the Lesson Tutor button.
+  const showLessonTutorButton =
+    lesson.lessonTutorPath &&
+    lesson.hasLessonPlan &&
+    userId &&
+    canUseLessonDeepDive(aiChatAccessLevel);
+
+  const handleLessonTutorClick = () => {
+    analyticsReporter.sendEvent(EVENTS.LESSON_TUTOR_UNIT_OVERVIEW_CLICK, {
+      lessonId: lesson.id,
+      lessonName: lesson.name,
+      unitId,
+      unitName,
+      userId,
+      userType,
+      view: 'summary-row',
+    });
+  };
 
   const displayDashedBorder = lessonIsHiddenForStudents || showAsLocked;
 
@@ -63,12 +96,12 @@ function SummaryProgressRow({
       >
         <div style={styles.colText}>
           {lessonIsHiddenForStudents && (
-            <FontAwesome icon="eye-slash" style={styles.icon} />
+            <FontAwesomeV6Icon iconName="eye-slash" style={styles.icon} />
           )}
           {lesson.lockable && (
             <span data-tip data-for={lockedTooltipId}>
-              <FontAwesome
-                icon={showAsLocked ? 'lock' : 'unlock'}
+              <FontAwesomeV6Icon
+                iconName={showAsLocked ? 'lock' : 'unlock'}
                 style={{
                   ...styles.icon,
                   ...(!showAsLocked && styles.unlockedIcon),
@@ -91,7 +124,9 @@ function SummaryProgressRow({
             data-for={titleTooltipId}
             aria-describedby={titleTooltipId}
           >
-            {lessonTitle}
+            <Typography variant="body4" component="span" sx={{fontWeight: 600}}>
+              {lessonTitle}
+            </Typography>
             <ReactTooltip
               id={titleTooltipId}
               role="tooltip"
@@ -109,17 +144,61 @@ function SummaryProgressRow({
           ...(isLockedForUser && styles.fadedCol),
         }}
       >
-        {levels.length === 0 ? (
-          i18n.lessonContainsNoLevels()
-        ) : (
-          <ProgressBubbleSet
-            levels={levels}
-            disabled={isLockedForUser}
-            style={lesson.isFocusArea ? styles.focusAreaMargin : undefined}
-            lessonName={lesson.name}
-          />
-        )}
-        {lesson.isFocusArea && <FocusAreaIndicator />}
+        <div style={styles.col2Content}>
+          <div style={styles.col2Left}>
+            {levels.length === 0 ? (
+              i18n.lessonContainsNoLevels()
+            ) : (
+              <ProgressBubbleSet
+                levels={levels}
+                disabled={isLockedForUser}
+                style={lesson.isFocusArea ? styles.focusAreaMargin : undefined}
+                lessonName={lesson.name}
+              />
+            )}
+            {lesson.isFocusArea && <FocusAreaIndicator />}
+          </div>
+          {!isOnLevelView && (
+            <div style={styles.buttonColumn}>
+              {viewAs === ViewType.Participant &&
+                lesson.student_lesson_plan_html_url && (
+                  <MuiButton
+                    size="small"
+                    className="ui-test-lesson-resources"
+                    href={lesson.student_lesson_plan_html_url}
+                    variant="outlined"
+                    color="secondary"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    startIcon={<FontAwesomeV6Icon iconName="file-lines" />}
+                  >
+                    {i18n.lessonResources()}
+                  </MuiButton>
+                )}
+              {showLessonTutorButton &&
+                experiments.isEnabledAllowingQueryString(
+                  experiments.LESSON_TUTOR
+                ) && (
+                  <MuiButton
+                    href={lesson.lessonTutorPath}
+                    variant="contained"
+                    color="white"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={handleLessonTutorClick}
+                    startIcon={
+                      <FontAwesomeV6Icon
+                        iconName="ai-bot-solid"
+                        iconFamily="kit"
+                      />
+                    }
+                  >
+                    {'Lesson Tutor'}
+                  </MuiButton>
+                )}
+            </div>
+          )}
+        </div>
       </td>
     </tr>
   );
@@ -129,37 +208,44 @@ SummaryProgressRow.propTypes = {
   dark: PropTypes.bool.isRequired,
   lesson: lessonType.isRequired,
   levels: PropTypes.arrayOf(levelWithProgressType).isRequired,
+  isOnLevelView: PropTypes.bool,
 
   // from redux
   viewAs: PropTypes.oneOf(Object.keys(ViewType)),
   lessonIsHiddenForStudents: PropTypes.bool.isRequired,
   lessonIsLockedForUser: PropTypes.func.isRequired,
   lessonIsLockedForAllStudents: PropTypes.func.isRequired,
+  unitHasUnnumberedLessons: PropTypes.bool.isRequired,
+  unitId: PropTypes.number,
+  unitName: PropTypes.string,
+  userId: PropTypes.number,
+  userType: PropTypes.string,
+  aiChatAccessLevel: PropTypes.string,
 };
 
 export const styles = {
   lightRow: {
-    backgroundColor: color.table_light_row,
+    backgroundColor: 'var(--background-neutral-primary)',
   },
   darkRow: {
-    backgroundColor: color.table_dark_row,
+    backgroundColor: 'var(--background-neutral-secondary)',
   },
   dashedBorder: {
     borderStyle: 'dashed',
     borderWidth: 2,
   },
   col1: {
-    width: 200,
-    minWidth: 200,
-    maxWidth: 200,
+    width: 241,
+    minWidth: 241,
+    maxWidth: 241,
     lineHeight: '52px',
-    color: color.charcoal,
+    color: 'var(--text-neutral-primary)',
     letterSpacing: -0.11,
     whiteSpace: 'nowrap',
     paddingLeft: 20,
     paddingRight: 20,
     borderRightWidth: 1,
-    borderRightColor: color.border_light_gray,
+    borderRightColor: 'var(--borders-neutral-secondary)',
     borderRightStyle: 'solid',
   },
   col2: {
@@ -168,6 +254,20 @@ export const styles = {
     paddingLeft: 20,
     paddingRight: 20,
   },
+  col2Content: {
+    display: 'flex',
+    alignItems: 'center',
+    width: '100%',
+  },
+  col2Left: {
+    flex: 1,
+  },
+  buttonColumn: {
+    display: 'flex',
+    flexDirection: 'row',
+    gap: 8,
+    marginLeft: 10,
+  },
   // When we set our opacity on the row element instead of on individual tds,
   // there are weird interactions with our tooltips in Chrome, and borders end
   // up disappearing.
@@ -175,19 +275,16 @@ export const styles = {
     opacity: 0.6,
   },
   colText: {
-    color: color.charcoal,
-    ...fontConstants['main-font-semi-bold'],
-    fontSize: 12,
     overflow: 'hidden',
     textOverflow: 'ellipsis',
   },
   icon: {
     marginRight: 5,
     fontSize: 12,
-    color: color.cyan,
+    color: 'var(--text-info-primary)',
   },
   unlockedIcon: {
-    color: color.orange,
+    color: 'var(--text-warning-primary)',
   },
   focusAreaMargin: {
     // Our focus area indicator is absolutely positioned. Add a margin when it's
@@ -207,8 +304,14 @@ export default connect((state, ownProps) => ({
     state,
     ViewType.Participant
   ),
+  unitHasUnnumberedLessons: state.progress.unitHasUnnumberedLessons,
   lessonIsLockedForUser: (lesson, levels, viewAs) =>
     lessonIsLockedForUser(lesson, levels, state, viewAs),
   lessonIsLockedForAllStudents: lessonId =>
     lessonIsLockedForAllStudents(lessonId, state),
+  unitId: state.progress.scriptId,
+  unitName: state.progress.unitTitle,
+  userId: state.currentUser.userId,
+  userType: state.currentUser.userType,
+  aiChatAccessLevel: state.currentUser.aiChatAccessLevel,
 }))(SummaryProgressRow);

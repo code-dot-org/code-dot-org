@@ -1,8 +1,10 @@
-import {assert} from '../util/reconfiguredChai';
-import sinon from 'sinon';
-import FeedbackUtils from '@cdo/apps/feedback';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import {TestResults} from '@cdo/apps/constants';
+import FeedbackUtils from '@cdo/apps/feedback';
 import msg from '@cdo/locale';
+
+import {assert} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('FeedbackUtils', () => {
   describe('getFeedbackMessage', () => {

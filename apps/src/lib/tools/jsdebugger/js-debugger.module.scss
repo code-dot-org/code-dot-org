@@ -46,6 +46,18 @@
   }
 }
 
+.slider {
+  display: flex;
+  justify-content: flex-start;
+  flex: 0 0 auto;
+}
+
+.sliderDebug {
+  display: flex;
+  justify-content: flex-start;
+  flex: 1 1 auto;
+}
+
 .hidden {
   display: none;
 }
@@ -54,25 +66,12 @@ $debug-watch-max-column-width: 200px;
 $debug-header-border-width: 1px;
 
 .debugWatchHeader {
-  width: $debug-watch-max-column-width + $debug-header-border-width;
-  float: right;
-  border-left: $debug-header-border-width solid gray;
+  width: $debug-watch-max-column-width - 3px;
 }
 
 .watchersHidden {
   border-left: none;
   text-align: right;
-  margin-right: 30px;
-}
-
-.sliderDebug {
-  margin-left: 5px;
-  margin-right: 5px;
-}
-
-.slider {
-  margin-left: 45px;
-  margin-right: 5px;
 }
 
 .displayInitial {

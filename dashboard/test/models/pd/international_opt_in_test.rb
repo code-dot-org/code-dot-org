@@ -17,7 +17,7 @@ class Pd::InternationalOptInTest < ActiveSupport::TestCase
   }
 
   test 'Test international opt-in validation' do
-    teacher = create :teacher
+    teacher = create(:teacher)
 
     refute build(:pd_international_opt_in, form_data: {}.to_json, user_id: teacher.id).valid?
 
@@ -31,21 +31,32 @@ class Pd::InternationalOptInTest < ActiveSupport::TestCase
   end
 
   test 'Requires workshop date' do
-    teacher = create :teacher
+    teacher = create(:teacher)
 
-    missing_date = build :pd_international_opt_in,
+    missing_date = build(:pd_international_opt_in,
       user_id: teacher.id,
       form_data: FORM_DATA.merge({date: nil}).to_json
+)
     refute missing_date.valid?
 
-    malformed_date = build :pd_international_opt_in,
+    malformed_date = build(:pd_international_opt_in,
       user_id: teacher.id,
       form_data: FORM_DATA.merge({date: 'malformed-date'}).to_json
+)
     refute malformed_date.valid?
 
-    valid_date = build :pd_international_opt_in,
+    valid_date = build(:pd_international_opt_in,
       user_id: teacher.id, form_data:
         FORM_DATA.merge({date: '2019-02-18'}).to_json
+)
     assert valid_date.valid?
+  end
+
+  test 'country options include all supported countries' do
+    country_options = Pd::InternationalOptIn.options[:schoolCountry]
+
+    assert_equal 248, country_options.size
+    assert_includes country_options, {answerText: 'Afghanistan', answerValue: 'Afghanistan'}
+    assert_includes country_options, {answerText: 'Türkiye', answerValue: 'Türkiye'}
   end
 end

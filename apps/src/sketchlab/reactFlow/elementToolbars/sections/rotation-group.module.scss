@@ -1,0 +1,12 @@
+.rotationRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.rotationSlider {
+  flex: 1 1 auto;
+  min-width: 80px;
+  color: var(--text-neutral-primary);
+  margin: 0 4px;
+}

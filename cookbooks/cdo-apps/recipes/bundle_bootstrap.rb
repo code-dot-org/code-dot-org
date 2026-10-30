@@ -20,7 +20,9 @@ env = {
   # http://bundler.io/man/bundle-config.1.html
   'BUNDLE_IGNORE_CONFIG' => '1',
   # Avoid writing 'remembered options' to the default local config (./bundle/config).
-  'BUNDLE_APP_CONFIG' => "#{Chef::Config[:file_cache_path]}/.bundle"
+  'BUNDLE_APP_CONFIG' => "#{Chef::Config[:file_cache_path]}/.bundle",
+  # Install gems to vendor/bundle as per https://bundler.io/guides/deploying.html
+  'BUNDLE_DEPLOYMENT' => 'true',
 }
 node.default['cdo-apps']['bundle_env'] = env
 directory(env['BUNDLE_APP_CONFIG']) {owner user; group user}
@@ -28,16 +30,17 @@ directory(env['BUNDLE_APP_CONFIG']) {owner user; group user}
 # Export bundler environment to project root config ($HOME/$REPO/.bundle/config).
 # Used in case we run 'bundle' manually without the provided environment.
 directory("#{root}/.bundle") {owner user; group user}
-
 file "#{root}/.bundle/config" do
   owner user
   group user
   content env.to_yaml
 end
 
-execute 'bundle-install' do
-  command 'bundle install'
+# Run initial bundle install
+execute 'bundle install' do
   cwd root
   environment node['cdo-apps']['bundle_env']
+  group user
+  user user
   not_if 'bundle check', cwd: root
 end

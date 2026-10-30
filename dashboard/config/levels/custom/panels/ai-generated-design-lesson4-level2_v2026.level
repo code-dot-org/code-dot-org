@@ -1,0 +1,35 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-03-03T22:28:42.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "How To: Add Image Context",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# How To: Save To Your Backpack\n\nSaving your work to the Backpack lets you reuse it in the future.",
+        "imageUrl": "https://images.code.org/0bef9fcda0f05c2d71d787ff1c16e2ca-Screenshot 2026-03-03 151845.png",
+        "key": "ai-generated-design-onboarding-image-context-test-2025-90f598cf-70ae-4ddf-8788-cdd69b931239",
+        "layout": "text-top-left"
+      },
+      {
+        "text": "## Step 1: \n\nClick **the Backpack icon** in the left-side menu. ",
+        "imageUrl": "https://images.code.org/1c61e53656f55ec446bce2b9fb8c315d-backpack step 1v2.gif",
+        "key": "ai-generated-design-onboarding-image-context-test-2025-fe585fd5-6be2-4d90-84a9-e04d332f1182"
+      },
+      {
+        "text": "## Step 2: \n\nClick **“Save Sketch to Backpack”** in the bottom-left hand menu.\n\nName your sketch and click **\"Save to Backpack\"**.\n\nYou will see a confirmation that your sketch was saved.",
+        "imageUrl": "https://images.code.org/09266552600c5173abeecbcdf765d05e-backpack step 2v2.gif",
+        "key": "ai-generated-design-onboarding-image-context-test-2025-dcaeae89-d30c-404b-b479-06bfe7f8cc6c",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "name_suffix": "_2026"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-03-03T22:28:42.443+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson6-level1_2026\\\"\"],\"cloned_from\":\"ai-generated-design-lesson6-level1_2026\"},{\"changed_at\":\"2026-03-03 22:28:57 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-03 22:51:52 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-03 22:58:04 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-03 23:06:19 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-03 23:19:14 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-03 23:19:52 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

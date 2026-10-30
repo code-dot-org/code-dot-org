@@ -35,7 +35,7 @@ export function queryParams(name) {
  * Updates a query parameter in the URL via pushState (i.e. doesn't force a
  * reload).
  * @param {string} param - Name of the query parameter to modify
- * @param {string} value - New value (or undefined to remove)
+ * @param {string | undefined} value - New value (or undefined to remove)
  * @param {boolean} useReplaceState - optional param if you wish to use replaceState
  *   instead of pushState
  */

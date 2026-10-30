@@ -1,0 +1,16 @@
+name 'Data Sci U1 Pre Q20_2024-pilot'
+
+question 'You are preparing a report to explain the impact of a new social media campaign on user engagement metrics over the last quarter. Which of the following approaches would best ensure clarity and engagement in your storytelling?'
+
+wrong 'Presenting raw data tables showing user engagement metrics before and after the campaign.'
+right 'Using a combination of line graphs to show trends over time, paired with annotated screenshots from the campaign.'
+wrong 'Writing a detailed textual report explaining the changes in user engagement without visual aids.'
+wrong 'Creating a pie chart to show the distribution of user engagement metrics across different platforms.'
+
+
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+
+MARKDOWN

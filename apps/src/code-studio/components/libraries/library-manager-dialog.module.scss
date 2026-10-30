@@ -1,0 +1,65 @@
+.dialog {
+  padding: 20px 24px;
+  max-height: 85vh;
+  overflow-y: auto;
+  cursor: default;
+  color-scheme: light;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.header {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.subHeader {
+  text-align: left;
+  margin: 7px 0;
+}
+
+.libraryList {
+  max-height: 200px;
+  overflow-y: auto;
+  border-bottom: 2px solid var(--text-brand-purple-primary);
+}
+
+.message {
+  text-align: left;
+  margin: 7px 0;
+  white-space: pre-wrap;
+}
+
+.messageInline {
+  display: inline;
+}
+
+.inputParent {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  gap: 7px;
+}
+
+.linkBox {
+  width: 400px;
+
+  input {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+.error {
+  text-align: left;
+  margin: 7px 0;
+  min-height: 18px;
+  white-space: pre-wrap;
+}
+
+.updateButtons {
+  display: flex;
+  justify-content: space-between;
+}

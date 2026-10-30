@@ -1,11 +1,12 @@
+import PropTypes from 'prop-types';
 import React from 'react';
+
 import EditableTeacherFeedback from '@cdo/apps/templates/instructions/teacherFeedback/EditableTeacherFeedback';
 import ReadonlyTeacherFeedback from '@cdo/apps/templates/instructions/teacherFeedback/ReadonlyTeacherFeedback';
 import {
   teacherFeedbackShape,
   rubricShape,
 } from '@cdo/apps/templates/instructions/teacherFeedback/types';
-import PropTypes from 'prop-types';
 
 const TeacherFeedbackTab = ({
   teacherViewingStudentWork,

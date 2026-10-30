@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2024-05-15T21:04:17.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "# Adding New Pages Reflection\r\n\r\n🤔 Take a minute to reflect on the last level where you were tasked with adding new HTML files and creating hyperlinks and answer the following questions:\r\n\r\n1. ✔️ How do you think you did according to the Rubric below and why?\r\n2. 🏁 How did you know how to complete this assessment?\r\n3. 👍🏼 What was easy about the task? / ❗ What was the most challenging? \r\n   - What did you do to overcome the challenging part?\r\n4. ❓ What questions do you still have?\r\n\r\n<hr>\r\n\r\n![](https://images.code.org/9622a214a8bfcc5fe95e1113f6bd14b7-image-1708476390332.png)",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 20662,
+    "name_suffix": "_2024",
+    "allow_multiple_attempts": "false",
+    "teacher_markdown": "Use this reflection as an opportunity to gain insight into how the students completed the assessment level and the choices they made with adding HTML files and hyperlinks as well as identify any misconceptions that should be cleared up."
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-05-15T21:04:17.417+00:00\",\"changed\":[\"cloned from \\\"CSD L17 Assess FR\\\"\"],\"cloned_from\":\"CSD L17 Assess FR\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

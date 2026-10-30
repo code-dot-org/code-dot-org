@@ -119,12 +119,10 @@ class Services::CSTAEnrollmentTest < ActiveSupport::TestCase
     )
   end
 
-  private
-
   # @param [Hash] input params, merged over an existing set of valid parameters.
   # @param [Hash] expected_output POST parameters as key-value pairs that we expect to see
   #   in the request to CSTA given the provided input params.
-  def assert_transform(input, expected_output)
+  private def assert_transform(input, expected_output)
     captured_args = nil
     expected_request = Net::HTTP.expects(:post_form).with {|_, args| captured_args = args}
     expected_request.returns(success_response)
@@ -136,7 +134,7 @@ class Services::CSTAEnrollmentTest < ActiveSupport::TestCase
     end
   end
 
-  def valid_params
+  private def valid_params
     {
       first_name: 'test-first-name',
       last_name: 'test-last-name',
@@ -154,7 +152,7 @@ class Services::CSTAEnrollmentTest < ActiveSupport::TestCase
     }
   end
 
-  def success_response
+  private def success_response
     mock.tap do |response|
       # This is what a real success response from this API looks like
       response.stubs(:code).returns('200')
@@ -173,7 +171,7 @@ class Services::CSTAEnrollmentTest < ActiveSupport::TestCase
     end
   end
 
-  def failure_response
+  private def failure_response
     mock.tap do |response|
       # This is the only real failure I was able to generate when
       # testing this API - it's a response to sending no fields

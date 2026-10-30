@@ -19,6 +19,19 @@
 #
 
 class ChannelToken < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :confidential,
+    storage_app_id: :confidential,
+    level_id: :confidential,
+    created_at: :confidential,
+    updated_at: :confidential,
+    storage_id: :confidential,
+    script_id: :confidential,
+    deleted_at: :confidential,
+  )
+
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
   belongs_to :user, optional: true
@@ -30,7 +43,7 @@ class ChannelToken < ApplicationRecord
   alias_attribute :project_id, :storage_app_id
 
   def channel
-    storage_encrypt_channel_id(storage_id, project_id)
+    get_project_channel_id(storage_id, project_id)
   end
 
   # @param [Level] level The level associated with the channel token request.
@@ -57,7 +70,7 @@ class ChannelToken < ApplicationRecord
         create!(level: level.host_level, storage_id: user_storage_id, script_id: script_id) do |ct|
           # Get a new channel_id.
           channel = create_channel ip, project, data: data, standalone: false, level: level
-          _, ct.project_id = storage_decrypt_channel_id(channel)
+          _, ct.project_id = get_storage_id_and_project_id(channel)
         end
       end
     end
@@ -84,17 +97,15 @@ class ChannelToken < ApplicationRecord
   # @param [Hash] data Data to store in the channel.
   # @param [String] src Optional source channel to copy data from, instead of
   #   using the value from the `data` param.
-  def self.create_channel(ip, project, data: {}, src: nil, type: nil, remix_parent_id: nil, standalone: true, level: nil)
+  def self.create_channel(ip, project, data: {}, src: nil, type: nil, remix_parent_id: nil, standalone: true, level: nil, hidden: false)
     if src
       data = project.get(src)
-      data['name'] = "Remix: #{data['name']}"
-      data['hidden'] = false
-      data['frozen'] = false
+      data.merge!(name: "Remix: #{data['name']}", hidden: hidden, frozen: false)
     end
 
     timestamp = Time.now
     project.create(
-      data.merge('createdAt' => timestamp, 'updatedAt' => timestamp),
+      data.merge(createdAt: timestamp, updatedAt: timestamp),
       ip: ip,
       type: type,
       remix_parent_id: remix_parent_id,

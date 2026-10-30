@@ -1,37 +1,61 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
-import Lab2Registry from '../Lab2Registry';
-import {getStore} from '@cdo/apps/redux';
-import Lab2ShareDialog from '../views/Lab2ShareDialog';
+
 import {showShareDialog} from '@cdo/apps/code-studio/components/shareDialogRedux';
+import {getStore} from '@cdo/apps/redux';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
+import trackEvent from '@cdo/apps/util/trackEvent';
+
+import {waitForShareFailureRefresh} from '../lab2Redux';
+import Lab2Registry from '../Lab2Registry';
+import Lab2ShareDialogWrapper from '../views/Lab2ShareDialogWrapper';
 
 const PROJECT_SHARE_DIALOG_ID = 'project-share-dialog';
 
 /**
  * Save, then show the share dialog for a Lab2 project.
- * @param {string} shareUrl - The URL of the project to share.
  */
-export function shareLab2Project(shareUrl) {
+export function shareLab2Project(dialogId, finishUrl) {
   const projectManager = Lab2Registry.getInstance().getProjectManager();
   if (!projectManager) {
     return null;
   }
 
-  projectManager.flushSave().then(() => {
-    var dialogDom = document.getElementById(PROJECT_SHARE_DIALOG_ID);
-    if (!dialogDom) {
-      dialogDom = document.createElement('div');
-      dialogDom.setAttribute('id', PROJECT_SHARE_DIALOG_ID);
-      document.body.appendChild(dialogDom);
-    }
-    ReactDOM.render(
-      <Provider store={getStore()}>
-        <Lab2ShareDialog shareUrl={shareUrl} />
-      </Provider>,
-      dialogDom
-    );
+  const shareUrl = projectManager.getShareUrl();
 
-    getStore().dispatch(showShareDialog());
-  });
+  // Wait for the save, then for the share filter check that the save
+  // triggers, so the dialog opens already knowing whether sharing is blocked.
+  projectManager
+    .flushSave()
+    .then(waitForShareFailureRefresh)
+    .then(() => {
+      var dialogDom = document.getElementById(PROJECT_SHARE_DIALOG_ID);
+      if (!dialogDom) {
+        dialogDom = document.createElement('div');
+        dialogDom.setAttribute('id', PROJECT_SHARE_DIALOG_ID);
+        document.body.appendChild(dialogDom);
+      }
+      createReactRoot(
+        <Provider store={getStore()}>
+          <Lab2ShareDialogWrapper
+            shareDialogId={dialogId}
+            shareUrl={shareUrl}
+            finishUrl={finishUrl}
+          />
+        </Provider>,
+        dialogDom,
+        {
+          legacyReactDomRender: true,
+        }
+      );
+
+      getStore().dispatch(showShareDialog());
+      const projectType = projectManager.getProjectType();
+      trackEvent('share', 'share_open_dialog', {
+        value:
+          dialogId === 'hoc2024'
+            ? 'share_open_dialog_congrats_hoc2024'
+            : projectType,
+      });
+    });
 }

@@ -17,75 +17,49 @@
 #  time_spent       :integer
 #  deleted_at       :datetime
 #  properties       :text(65535)
+#  unit_group_id    :integer
 #
 # Indexes
 #
 #  index_user_levels_unique  (user_id,script_id,level_id,deleted_at) UNIQUE
 #
 
-require 'cdo/activity_constants'
-
 # Summary information about a User's Activity on a Level in a Unit.
 # Includes number of attempts (attempts), best score and whether it was submitted
 class UserLevel < ApplicationRecord
+  include LevelProgressable
+
+  export_to_analytics
+
+  data_classification(
+    id: :confidential,
+    user_id: :confidential,
+    level_id: :confidential,
+    attempts: :confidential,
+    created_at: :confidential,
+    updated_at: :confidential,
+    best_result: :confidential,
+    script_id: :confidential,
+    level_source_id: :confidential,
+    submitted: :confidential,
+    readonly_answers: :confidential,
+    unlocked_at: :confidential,
+    time_spent: :confidential,
+    deleted_at: :confidential,
+    properties: :confidential,
+    unit_group_id: :confidential,
+  )
+
   AUTOLOCK_PERIOD = 1.day
 
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
   belongs_to :user, optional: true
-  belongs_to :level, optional: true
-  belongs_to :script, class_name: 'Unit', optional: true
-  belongs_to :level_source, optional: true
+
+  has_many :user_adaptive_steps, dependent: :delete_all
 
   after_save :after_submit, if: :submitted_or_resubmitted?
   before_save :before_unsubmit, if: ->(ul) {ul.submitted_changed? from: true, to: false}
-
-  # TODO(asher): Consider making these scopes and the methods below more consistent, in tense and in
-  # word choice.
-  scope :attempted, -> {where.not(best_result: nil)}
-  scope :passing, -> {where('best_result >= ?', ActivityConstants::MINIMUM_PASS_RESULT)}
-  scope :perfect, -> {where('best_result > ?', ActivityConstants::MAXIMUM_NONOPTIMAL_RESULT)}
-
-  def self.by_lesson(lesson)
-    levels = lesson.script_levels.map(&:level_ids).flatten
-    where(script: lesson.script, level: levels)
-  end
-
-  def attempted?
-    !best_result.nil?
-  end
-
-  def perfect?
-    ActivityConstants.perfect?(best_result)
-  end
-
-  def finished?
-    ActivityConstants.finished?(best_result)
-  end
-
-  def passing?
-    ActivityConstants.passing?(best_result)
-  end
-
-  # Retrieves and memoizes the latest PairedUserLevel that's associated with
-  # this UserLevel for internal callers. External callers should call one of
-  # the higher-level pairing-related methods below.
-  #
-  # Conceptually, each UserLevel should only be associated with one
-  # PairedUserLevel. However, since we don't clean up previous entries in the
-  # paired_user_levels table when posting progress, there can be multiple
-  # entries in the paired_user_levels table associated with a user_level. We
-  # heuristically consider the latest entry in the paired_user_levels table as
-  # the "active" one. This is correct for most cases but can be incorrect in
-  # some edge cases such as when a student leaves a pairing group and makes
-  # further progress on a level as an individual.
-  private def latest_paired_user_level
-    return @latest_paired_user_level if defined? @latest_paired_user_level
-    @latest_paired_user_level =
-      PairedUserLevel.where(driver_user_level_id: id).
-        or(PairedUserLevel.where(navigator_user_level_id: id)).
-        last
-  end
 
   # Returns whether this UserLevel represents progress completed by a pairing
   # group where the user was the driver.
@@ -150,11 +124,6 @@ class UserLevel < ApplicationRecord
     latest_paired_user_level&.navigator_count
   end
 
-  def calculate_total_time_spent(additional_time)
-    existing_time_spent = time_spent ? time_spent : 0
-    additional_time && additional_time > 0 ? existing_time_spent + additional_time : existing_time_spent
-  end
-
   def submitted_or_resubmitted?
     saved_change_to_submitted?(to: true) || (submitted? && saved_change_to_level_source_id?)
   end
@@ -171,8 +140,6 @@ class UserLevel < ApplicationRecord
   end
 
   def before_unsubmit
-    self.best_result = ActivityConstants::UNSUBMITTED_RESULT
-
     # Destroy any existing, unassigned peer reviews
     if Unit.cache_find_level(level_id).try(:peer_reviewable?)
       PeerReview.where(submitter: user.id, reviewer: nil, level: level).destroy_all
@@ -204,16 +171,10 @@ class UserLevel < ApplicationRecord
     readonly_answers? && !show_as_locked?(lesson)
   end
 
-  # First ScriptLevel in this Unit containing this Level.
-  # Cached equivalent to `level.script_levels.where(script_id: script.id).first`.
-  def script_level
-    s = Unit.get_from_cache(script_id)
-    s.script_levels.detect {|sl| sl.level_ids.include? level_id}
-  end
-
   # This is called when a teacher updates the lock or readonly status for each student.
   # As such, one of locked or readonly will be populated, and the other nil.
   def self.update_lockable_state(user_id, level_id, script_id, locked, readonly_answers)
+    # TODO: TEACH-2145 set UserLevel#unit_group_id
     user_level = UserLevel.find_or_initialize_by(
       user_id: user_id,
       level_id: level_id,
@@ -255,6 +216,26 @@ class UserLevel < ApplicationRecord
   # @return [Hash<Integer, Integer>] user_id => passed_level_count
   def self.count_passed_levels_for_users(users)
     joins(:user).merge(users).passing.group(:user_id).count
+  end
+
+  # Retrieves and memoizes the latest PairedUserLevel that's associated with
+  # this UserLevel for internal callers. External callers should call one of
+  # the higher-level pairing-related methods below.
+  #
+  # Conceptually, each UserLevel should only be associated with one
+  # PairedUserLevel. However, since we don't clean up previous entries in the
+  # paired_user_levels table when posting progress, there can be multiple
+  # entries in the paired_user_levels table associated with a user_level. We
+  # heuristically consider the latest entry in the paired_user_levels table as
+  # the "active" one. This is correct for most cases but can be incorrect in
+  # some edge cases such as when a student leaves a pairing group and makes
+  # further progress on a level as an individual.
+  private def latest_paired_user_level
+    return @latest_paired_user_level if defined? @latest_paired_user_level
+    @latest_paired_user_level =
+      PairedUserLevel.where(driver_user_level_id: id).
+        or(PairedUserLevel.where(navigator_user_level_id: id)).
+        last
   end
 
   # Making unlocked_at private ensures future updates will use the locked

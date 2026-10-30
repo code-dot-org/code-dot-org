@@ -6,18 +6,18 @@ class SecretsTest < Minitest::Test
     @values = {}
     @client = Aws::SecretsManager::Client.new(
       stub_responses: {
-        get_secret_value: ->(ctx) do
+        get_secret_value: lambda do |ctx|
           id = ctx.params[:secret_id]
           return 'ResourceNotFoundException' unless (value = @values[id])
           {secret_string: value}
         end,
-        create_secret: ->(ctx) do
+        create_secret: lambda do |ctx|
           id = ctx.params[:name]
           return 'ResourceExistsException' if @values[id]
           @values[id] = ctx.params[:secret_string]
           {}
         end,
-        update_secret: ->(ctx) do
+        update_secret: lambda do |ctx|
           id = ctx.params[:secret_id]
           @values[id] = ctx.params[:secret_string]
           {}

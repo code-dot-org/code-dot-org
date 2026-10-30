@@ -1,0 +1,176 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-05-04T14:42:51.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "require_edit_to_continue": "true",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildJavaScript"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>City Transit Development</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n\n  <header>\n    <h1>Metro Transit Hub</h1>\n    <p>Analyze city transit stops, expansions, and data.</p>\n  </header>\n\n  <div class=\"container\">\n    <div id=\"stop-grid\">\n      </div>\n  </div>\n\n  <script src=\"data.js\"></script>\n  \n  <script src=\"script.js\"></script>\n</body>\n</html>\n  ",
+          "active": false,
+          "folderId": "0",
+          "type": "support"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "contents": "@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');\n\n:root {\n  --primary: #0ea5e9; /* Sky Blue */\n  --primary-gradient: linear-gradient(135deg, #14b8a6 0%, #2563eb 100%); /* Teal to Royal Blue */\n  --bg: #f8fafc;\n  --card-bg: #ffffff;\n  --text-main: #0f172a;\n  --text-light: #475569;\n  --radius-lg: 20px;\n  --radius-md: 12px;\n  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);\n  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);\n  --shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);\n}\n\nbody {\n  font-family: 'Outfit', sans-serif;\n  background-color: var(--bg);\n  color: var(--text-main);\n  margin: 0;\n  padding: 0;\n  line-height: 1.5;\n}\n\nheader {\n  background: var(--primary-gradient);\n  color: white;\n  padding: 2rem 1rem 5rem; \n  text-align: center;\n}\n\nheader h1 {\n  margin: 0;\n  font-size: 3.5rem;\n  font-weight: 700;\n  letter-spacing: -0.05em;\n}\n\nheader p {\n  font-size: 1.25rem;\n  opacity: 0.9;\n  font-weight: 300;\n  margin-top: 0.5rem;\n}\n\n.container {\n  max-width: 1200px;\n  margin: -4rem auto 3rem; \n  padding: 0 1.5rem;\n  position: relative;\n  z-index: 10;\n}\n\n#stop-grid {\n  display: grid;\n  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));\n  gap: 2.5rem;\n}\n\n.stop-card {\n  background-color: var(--card-bg);\n  border-radius: var(--radius-lg);\n  overflow: hidden;\n  box-shadow: var(--shadow-md);\n  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);\n  display: flex;\n  flex-direction: column;\n}\n\n.stop-card:hover {\n  transform: translateY(-8px);\n  box-shadow: var(--shadow-hover);\n}\n\n.image-container {\n  position: relative;\n  width: 100%;\n  height: 200px; \n}\n\n.stop-image {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  background-color: #e2e8f0;\n}\n\n.stop-status {\n  position: absolute;\n  top: 1.25rem;\n  right: 1.25rem;\n  font-size: 0.75rem;\n  padding: 0.5rem 1rem;\n  border-radius: 999px;\n  font-weight: 700;\n  text-transform: uppercase;\n  letter-spacing: 0.05em;\n  box-shadow: var(--shadow-sm);\n  backdrop-filter: blur(8px); \n}\n\n/* Transit Status Badges */\n.status-operational { background-color: rgba(220, 252, 231, 0.9); color: #166534; } /* Green */\n.status-proposed { background-color: rgba(237, 233, 254, 0.9); color: #5b21b6; } /* Purple */\n.status-construction { background-color: rgba(254, 240, 138, 0.9); color: #854d0e; } /* Yellow/Orange */\n.status-default { background-color: rgba(241, 245, 249, 0.9); color: #475569; } /* Gray */\n\n.stop-content {\n  padding: 2rem;\n  flex-grow: 1;\n  display: flex;\n  flex-direction: column;\n}\n\n.stop-name {\n  margin: 0 0 1.5rem 0;\n  font-size: 1.75rem;\n  font-weight: 700;\n  color: var(--text-main);\n  letter-spacing: -0.02em;\n  line-height: 1.2;\n}\n\n.stop-stats {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  gap: 0.75rem;\n  margin-bottom: 1.5rem;\n}\n\n.stat-item {\n  background-color: var(--bg);\n  padding: 0.75rem;\n  border-radius: var(--radius-md);\n  font-size: 0.9rem;\n  color: var(--text-light);\n  display: flex;\n  flex-direction: column;\n}\n\n.stat-item strong {\n  color: var(--text-main);\n  font-size: 0.7rem;\n  text-transform: uppercase;\n  letter-spacing: 0.05em;\n  margin-bottom: 0.25rem;\n}\n\n.stop-notes {\n  font-size: 1rem;\n  color: var(--text-light);\n  line-height: 1.6;\n  margin-top: auto;\n  padding-top: 1.5rem;\n  border-top: 1px solid #e2e8f0;\n}",
+          "folderId": "0",
+          "active": false,
+          "type": "support"
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "contents": "document.addEventListener(\"DOMContentLoaded\", () => {\n  const grid = document.getElementById(\"stop-grid\");\n\n  // Fallback placeholder image URL (Transit themed)\n  const placeholderImg = \"https://placehold.co/600x400/e2e8f0/475569?text=Transit+Stop+Image\";\n\n  // Check if 'stops' array exists (in case they broke data.js)\n  if (typeof stops === 'undefined' || !Array.isArray(stops)) {\n    grid.innerHTML = `\n      <div style=\"grid-column: 1/-1; margin-top: 6rem; background-color: #fee2e2; border: 1px solid #fca5a5; color: #b91c1c; padding: 2rem; border-radius: 12px; text-align: center; box-shadow: var(--shadow-sm);\">\n        <h3 style=\"margin: 0 0 0.5rem 0; font-size: 1.5rem;\">⚠️ Data Error</h3>\n        <p style=\"margin: 0; font-size: 1.1rem;\">Could not find the <strong>'stops'</strong> array. Please check your <em>data.js</em> file!</p>\n      </div>\n    `;\n    return;\n  }\n\n  // Map over the array to create an array of HTML strings\n  const cardsHTML = stops.map(stop => {\n    // Handle Fallbacks for missing data\n    const img = stop.image || placeholderImg;\n    const name = stop.name || \"Unknown Stop\";\n    const line = stop.line || \"Unassigned Line\";\n    const neighborhood = stop.neighborhood || \"Location TBD\";\n    \n    // Check if ridership is a number, if so, format it with commas!\n    let ridership = \"Data Unavailable\";\n    if (typeof stop.ridership === 'number') {\n      ridership = stop.ridership.toLocaleString(); // Turns 12000 into \"12,000\"\n    } else if (stop.ridership) {\n      ridership = stop.ridership; \n    }\n\n    const accessibility = stop.accessibility || \"Unknown\";\n    const status = stop.status || \"Status Unknown\";\n    const notes = stop.notes || \"No notes available for this location.\";\n\n    // Determine the badge color class based on the transit status\n    let badgeClass = \"status-default\";\n    const statusLower = status.toLowerCase();\n    \n    if (statusLower.includes(\"operational\") || statusLower.includes(\"active\")) {\n      badgeClass = \"status-operational\";\n    } else if (statusLower.includes(\"proposed\") || statusLower.includes(\"planned\")) {\n      badgeClass = \"status-proposed\";\n    } else if (statusLower.includes(\"construction\") || statusLower.includes(\"closed\")) {\n      badgeClass = \"status-construction\";\n    }\n\n    // Return the HTML string for this specific card\n    return `\n      <div class=\"stop-card\">\n        <div class=\"image-container\">\n          <img src=\"${img}\" alt=\"${name}\" class=\"stop-image\">\n          <span class=\"stop-status ${badgeClass}\">${status}</span>\n        </div>\n        <div class=\"stop-content\">\n          <h2 class=\"stop-name\">${name}</h2>\n          \n          <div class=\"stop-stats\">\n            <div class=\"stat-item\">\n              <strong>Line</strong>\n              <span>${line}</span>\n            </div>\n            <div class=\"stat-item\">\n              <strong>Neighborhood</strong>\n              <span>${neighborhood}</span>\n            </div>\n            <div class=\"stat-item\">\n              <strong>Daily Ridership</strong>\n              <span>${ridership}</span>\n            </div>\n            <div class=\"stat-item\">\n              <strong>Accessibility</strong>\n              <span>${accessibility}</span>\n            </div>\n          </div>\n          \n          <div class=\"stop-notes\">\n            ${notes}\n          </div>\n        </div>\n      </div>\n    `;\n  }).join('');\n\n  // Inject the final string into the grid all at once\n  grid.innerHTML = cardsHTML;\n});",
+          "folderId": "0",
+          "active": false,
+          "type": "support"
+        },
+        "4": {
+          "id": "4",
+          "name": "data.js",
+          "contents": "const stop = {\n  name: \"Main St Station\",\n  line: \"Blue Line\",\n  neighborhood: \"Downtown\",\n  status: \"Proposed\",\n  ridership: 1200,\n  accessibility: \"Accessible\",\n  notes: \"High foot traffic area near businesses and offices.\"\n};",
+          "folderId": "0",
+          "active": true
+        },
+        "5": {
+          "id": "5",
+          "name": "prompt.md",
+          "contents": "Add your changes to prompt.md",
+          "folderId": "0",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "non_accessible_stop.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/template_building-data-driven-systems-lesson5-level1_choicec_2026/uuid/89759818-6163-404c-b495-8f3dc21434fe.png",
+          "type": "support",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "accessible_station.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/template_building-data-driven-systems-lesson5-level1_choicec_2026/uuid/11b9785a-625d-4fc0-b9ed-af95c958b3ae.png",
+          "type": "support",
+          "active": false
+        },
+        "8": {
+          "id": "8",
+          "name": "bus_stop_shelter.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/template_building-data-driven-systems-lesson5-level1_choicec_2026/uuid/c5c6396e-1ac8-488a-9a22-c4a8fe52161e.png",
+          "type": "support",
+          "active": false
+        },
+        "9": {
+          "id": "9",
+          "name": "construction_station.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/template_building-data-driven-systems-lesson5-level1_choicec_2026/uuid/218e340f-f797-416f-91aa-7913d44e3f36.png",
+          "type": "support",
+          "active": false
+        },
+        "10": {
+          "id": "10",
+          "name": "neighborhood_train_stop.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/template_building-data-driven-systems-lesson5-level1_choicec_2026/uuid/03a8affa-361a-4b0b-bc13-1d717e8f0e20.png",
+          "type": "support",
+          "active": false
+        },
+        "11": {
+          "id": "11",
+          "name": "downtown_transit_hub.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/template_building-data-driven-systems-lesson5-level1_choicec_2026/uuid/8b1029a9-66fa-444f-837e-9c9b8bdd5196.png",
+          "type": "support",
+          "active": false
+        },
+        "12": {
+          "id": "12",
+          "name": "subway_station_old.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/template_building-data-driven-systems-lesson5-level1_choicec_2026/uuid/3e18a0fd-de37-4506-9b37-cccb8ec08648.png",
+          "type": "support",
+          "active": false
+        },
+        "13": {
+          "id": "13",
+          "name": "elevated_train_stop.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/template_building-data-driven-systems-lesson5-level1_choicec_2026/uuid/f84f32fd-0765-48d0-b090-4ad2750b4728.png",
+          "type": "support",
+          "active": false
+        },
+        "14": {
+          "id": "14",
+          "name": "bus_stop_basic.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/template_building-data-driven-systems-lesson5-level1_choicec_2026/uuid/680ddf60-d560-4f7d-a6bd-d6088bf9268c.png",
+          "type": "support",
+          "active": false
+        },
+        "15": {
+          "id": "15",
+          "name": "subway_station_modern.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/template_building-data-driven-systems-lesson5-level1_choicec_2026/uuid/2d25068b-8413-4e54-bc4f-7f822330ee88.png",
+          "type": "support",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "4",
+        "5"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-04 14:42:53 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-04 15:56:44 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-04 15:56:45 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-04 23:48:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-04 23:49:07 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-04 23:49:08 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-04 23:49:11 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Weblab2>

@@ -1,0 +1,14 @@
+name 'ai-powered-threats-defenses-preassessment-q10_2025-pilot_2025'
+
+question ‘In cybersecurity, what does the “A” in “AAA” stand for when referring to Accounting?’
+
+wrong ‘Assigning permissions to users manually’
+wrong ‘Alerting users when their password is incorrect’
+right ‘Keeping records of user actions to detect suspicious behavior’
+wrong ‘Asking users to log in using their real names’
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 8: AAA and AI
+MARKDOWN

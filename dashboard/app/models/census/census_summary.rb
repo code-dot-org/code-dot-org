@@ -16,6 +16,18 @@
 #
 
 class Census::CensusSummary < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :confidential,
+    school_id: :confidential,
+    school_year: :confidential,
+    teaches_cs: :confidential,
+    audit_data: :confidential,
+    created_at: :confidential,
+    updated_at: :confidential,
+  )
+
   belongs_to :school
   validates :school_year, presence: true, numericality: {greater_than_or_equal_to: 2015, less_than_or_equal_to: 2030}
 
@@ -40,7 +52,7 @@ class Census::CensusSummary < ApplicationRecord
     unless CDO.stub_school_data
       Census::CensusSummary.transaction do
         CDO.log.info "Seeding census summary data."
-        AWS::S3.seed_from_file('cdo-census', "access-report-data-files-2023/final_csv/final_csv_2023_09_19.csv") do |filename|
+        AWS::S3.seed_from_file('cdo-census', "access-report-data-files-2024/final-csv/final_csv_2024_09_30.csv") do |filename|
           merge_from_csv(filename) do |row|
             {
               school_id:          row['school_id'],

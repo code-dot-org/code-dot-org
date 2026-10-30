@@ -1,0 +1,16 @@
+name 'building-data-driven-systems-preassessment-q10_2025'
+
+question 'When rendering a list of products, a developer uses the code `<h3>{product.cost}</h3>`. Why is this considered a poor user experience (UX) choice?'
+
+wrong 'The `.cost` property is private and should never be displayed.'
+wrong 'Using `<h3>` makes the text too small for most users to read.'
+right 'Without a label or currency symbol (e.g., "Price: $"), the user might not understand what the number represents.'
+wrong 'The `.map()` method cannot render numbers inside of header tags.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 6
+
+Data-driven displays must be clear. Displaying raw data values without labels (schema-UI alignment) makes the interface confusing for the user.
+MARKDOWN

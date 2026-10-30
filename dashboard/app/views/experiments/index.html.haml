@@ -1,0 +1,6 @@
+- @page_title = 'My Experiments'
+
+#experiments-page
+
+- content_for(:head) do
+  %script{src: webpack_asset_path('js/experiments/index.js'), data: {experiments: @user_experiments.to_json}}

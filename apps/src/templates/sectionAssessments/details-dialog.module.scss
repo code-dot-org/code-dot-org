@@ -1,0 +1,42 @@
+.answerBlock {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.multipleChoiceDetailsQuestion {
+  margin-bottom: 1rem;
+}
+
+.iconColumn {
+  width: 20px;
+  flex-shrink: 0;
+}
+
+.correctIcon {
+  color: var(--text-success-primary);
+}
+
+.answerLetter {
+  width: 30px;
+  flex-shrink: 0;
+  font-weight: bold;
+}
+
+.answerBody {
+  flex: 1;
+}
+
+.matchTable {
+  width: 100%;
+  border-collapse: collapse;
+
+  th,
+  td {
+    text-align: left;
+    padding: 8px;
+    vertical-align: top;
+  }
+}

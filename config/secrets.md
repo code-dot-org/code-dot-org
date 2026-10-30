@@ -17,5 +17,6 @@ We provision AWS Secrets for specific environment types (`adhoc`, `staging`, `te
 
 ### Creating/updating a secret
 * Create a `config/secrets.yml` file (see [`secrets.yml.template`](secrets.yml.template) as a reference) containing the configuration for the secrets you wish to create/update, then run the [`bin/update_secrets`](../bin/update_secrets) helper script to apply the changes.
+  * To confirm secrets were created, `aws secretsmanager list-secrets --query "SecretList[?contains(Name, 'my-secret')].[Name, LastChangedDate]"`
 * Update the application configuration files (`config.yml.erb` / `config/[env].yml.erb`) with `!Secret` tags for each environment where the secret now exists.
 * Remember that all secrets (except those in `development`) are write-only by developers for security reasons- you shouldn't ever need to read a secret's actual value once written (leave that to the environment-specific application).

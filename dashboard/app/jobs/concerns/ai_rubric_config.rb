@@ -1,0 +1,135 @@
+class AiRubricConfig
+  S3_AI_BUCKET = 'cdo-ai'.freeze
+
+  # The path to the release directory in S3 which contains the AI rubric evaluation config.
+  # When launching AI config changes, this path should be updated to point to the new release.
+  #
+  # Basic validation of the new AI config is done by UI tests, or can be done locally
+  # by running `AiRubricConfig.validate_ai_config` from the rails console.
+  S3_AI_RELEASE_PATH = 'teaching_assistant/releases/2026-04-06-claude-4-update/'.freeze
+
+  # For testing purposes, we can raise this error to simulate a missing key
+  class StubNoSuchKey < StandardError
+  end
+
+  # A rubric with a blank s3_config_dir has no AI config to evaluate against.
+  # Note the empty string is as good as nil here, and is truthy in Ruby.
+  def self.ai_enabled?(script_level)
+    get_lesson_s3_name(script_level).present?
+  end
+
+  # Returns the path suffix of the location in S3 which contains the config
+  # needed to evaluate the rubric for the given script level.
+  #
+  # The rubric's `s3_config_dir` field contains the name of the lesson directory
+  # within the S3 release dir used for AI evaluation.
+  # For example: "csd3-2023-L11"
+  def self.get_lesson_s3_name(script_level)
+    return nil unless script_level
+    level_ids = script_level.levels.map(&:id)
+    rubrics = script_level&.lesson&.rubrics
+    rubric = rubrics.find {|r| level_ids.include?(r.level_id)}
+    rubric&.s3_config_dir
+  end
+
+  def self.s3_client
+    @@s3_client ||= AWS::S3.create_client
+  end
+
+  def self.read_file_from_s3(lesson_s3_name, key_suffix, allow_missing: false)
+    key = "#{S3_AI_RELEASE_PATH}#{lesson_s3_name}/#{key_suffix}"
+    if [:development, :test].include?(rack_env) && File.exist?(File.join("local-aws", S3_AI_BUCKET, key))
+      puts "Note: Reading AI prompt from local file: #{key}"
+      File.read(File.join("local-aws", S3_AI_BUCKET, key))
+    else
+      s3_client.get_object(bucket: S3_AI_BUCKET, key: key)[:body].read
+    end
+  rescue Aws::S3::Errors::NoSuchKey, StubNoSuchKey => exception
+    raise exception unless allow_missing
+    nil
+  end
+
+  def self.read_examples(lesson_s3_name, response_type)
+    raise "invalid response type #{response_type.inspect}" unless ['tsv', 'json'].include?(response_type)
+    prefix = "#{S3_AI_RELEASE_PATH}#{lesson_s3_name}/examples/"
+    response = s3_client.list_objects_v2(bucket: S3_AI_BUCKET, prefix: prefix)
+    file_names = response.contents.map(&:key)
+    file_names = file_names.map {|name| name.gsub(prefix, '')}
+    js_files = file_names.select {|name| name.end_with?('.js')}
+    js_files.map do |file_name|
+      base_name = file_name.gsub('.js', '')
+      code = s3_client.get_object(bucket: S3_AI_BUCKET, key: "#{prefix}#{file_name}")[:body].read
+      response = s3_client.get_object(bucket: S3_AI_BUCKET, key: "#{prefix}#{base_name}.#{response_type}")[:body].read
+      [code, response]
+    end
+  end
+
+  def self.get_openai_params(lesson_s3_name, code)
+    params = JSON.parse(read_file_from_s3(lesson_s3_name, 'params.json'))
+    prompt = read_file_from_s3(lesson_s3_name, 'system_prompt.txt')
+    rubric = read_file_from_s3(lesson_s3_name, 'standard_rubric.csv')
+    response_type = params['response-type'] || 'tsv'
+    examples = read_examples(lesson_s3_name, response_type)
+    params.merge(
+      'code' => code,
+      'prompt' => prompt,
+      'rubric' => rubric,
+      'examples' => examples.to_json,
+      'api-key' => CDO.openai_evaluate_rubric_api_key,
+      )
+  end
+
+  # Validates AI rubric config in S3 for every rubric. For each rubric:
+  #
+  # 1) If s3_config_dir is set, confirms that essential config files exist in
+  #    S3 (params.json, system_prompt.txt, standard_rubric.csv).
+  #
+  # 2) If any learning goals are ai-enabled, confirms the rubric has an
+  #    s3_config_dir and that each ai-enabled learning goal has a matching
+  #    entry in standard_rubric.csv.
+  def self.validate_ai_config
+    # Use 4 threads to parallelize S3 reads. Limited to 4 because the
+    # ActiveRecord connection pool is 5 (see database.yml) and the main
+    # thread holds one connection.
+    Parallel.each(Rubric.all.to_a, in_threads: 4) do |rubric|
+      validate_ai_config_for_rubric(rubric)
+    end
+
+    S3_AI_RELEASE_PATH
+  end
+
+  def self.validate_ai_config_for_rubric(rubric)
+    return if CDO.aws_s3_emulated
+    s3_config_dir = rubric.s3_config_dir
+    validate_s3_config_dir(s3_config_dir) if s3_config_dir.present?
+    validate_learning_goals_for_rubric(rubric)
+  end
+
+  private_class_method def self.validate_s3_config_dir(lesson_s3_name)
+    # this step should raise an error if any essential config files are missing
+    # from the S3 release directory
+    get_openai_params(lesson_s3_name, 'hello world')
+  rescue Aws::S3::Errors::NoSuchKey => exception
+    raise "Error validating AI config for lesson #{lesson_s3_name}: #{exception.message}\n request params: #{exception.context.params.to_h}"
+  end
+
+  private_class_method def self.validate_learning_goals_for_rubric(rubric)
+    db_learning_goals = rubric.learning_goals.select(&:ai_enabled).map(&:learning_goal)
+    return if db_learning_goals.empty?
+
+    lesson_s3_name = rubric.s3_config_dir
+    raise "Rubric #{rubric.id} has ai-enabled learning goals but no s3_config_dir set" if lesson_s3_name.blank?
+
+    s3_learning_goals = get_s3_learning_goals(lesson_s3_name)
+    missing_learning_goals = db_learning_goals - s3_learning_goals
+    if missing_learning_goals.any?
+      raise "Missing AI config in S3 for lesson #{lesson_s3_name} learning goals: #{missing_learning_goals.inspect}"
+    end
+  end
+
+  private_class_method def self.get_s3_learning_goals(lesson_s3_name)
+    rubric_csv = read_file_from_s3(lesson_s3_name, 'standard_rubric.csv')
+    rubric_rows = CSV.parse(rubric_csv, headers: true).map(&:to_h)
+    rubric_rows.map {|row| row['Key Concept']}
+  end
+end

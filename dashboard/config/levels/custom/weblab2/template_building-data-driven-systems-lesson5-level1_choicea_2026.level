@@ -1,0 +1,185 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-05-04T14:36:27.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "require_edit_to_continue": "true",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildJavaScript"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Paws & Hearts Rescue</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n\n  <header>\n    <h1>Paws & Hearts Rescue</h1>\n    <p>Find your new best friend today.</p>\n  </header>\n\n  <div class=\"container\">\n    <div id=\"pet-grid\">\n      </div>\n  </div>\n\n  <script src=\"data.js\"></script>\n  \n  <script src=\"script.js\"></script>\n</body>\n</html>",
+          "active": false,
+          "folderId": "0",
+          "type": "support"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "contents": "@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');\n\n:root {\n  --primary: #8b5cf6; /* Modern Violet */\n  --primary-gradient: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);\n  --bg: #f1f5f9;\n  --card-bg: #ffffff;\n  --text-main: #0f172a;\n  --text-light: #64748b;\n  --radius-lg: 20px;\n  --radius-md: 12px;\n  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);\n  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);\n  --shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);\n}\n\nbody {\n  font-family: 'Outfit', sans-serif;\n  background-color: var(--bg);\n  color: var(--text-main);\n  margin: 0;\n  padding: 0;\n  line-height: 1.5;\n}\n\n/* Hero Header */\nheader {\n  background: var(--primary-gradient);\n  color: white;\n  padding: 4rem 1rem 6rem; /* Extra padding at bottom for overlap */\n  text-align: center;\n}\n\nheader h1 {\n  margin: 0;\n  font-size: 3.5rem;\n  font-weight: 700;\n  letter-spacing: -0.05em;\n}\n\nheader p {\n  font-size: 1.25rem;\n  opacity: 0.9;\n  font-weight: 300;\n  margin-top: 0.5rem;\n}\n\n/* Main Container overlapping the header */\n.container {\n  max-width: 1200px;\n  margin: -4rem auto 3rem; /* Negative top margin pulls cards over the header */\n  padding: 0 1.5rem;\n  position: relative;\n  z-index: 10;\n}\n\n/* Grid Layout */\n#pet-grid {\n  display: grid;\n  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));\n  gap: 2.5rem;\n}\n\n/* Card Styling */\n.pet-card {\n  background-color: var(--card-bg);\n  border-radius: var(--radius-lg);\n  overflow: hidden;\n  box-shadow: var(--shadow-md);\n  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);\n  display: flex;\n  flex-direction: column;\n}\n\n.pet-card:hover {\n  transform: translateY(-8px);\n  box-shadow: var(--shadow-hover);\n}\n\n.image-container {\n  position: relative;\n  width: 100%;\n  height: 260px;\n}\n\n.pet-image {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  background-color: #e2e8f0;\n}\n\n/* Floating Status Badge */\n.pet-status {\n  position: absolute;\n  top: 1.25rem;\n  right: 1.25rem;\n  font-size: 0.75rem;\n  padding: 0.5rem 1rem;\n  border-radius: 999px;\n  font-weight: 700;\n  text-transform: uppercase;\n  letter-spacing: 0.05em;\n  box-shadow: var(--shadow-sm);\n  backdrop-filter: blur(8px); /* Modern frosted glass effect */\n}\n\n/* Dynamic Badge Colors */\n.status-available { background-color: rgba(220, 252, 231, 0.9); color: #166534; }\n.status-pending { background-color: rgba(254, 240, 138, 0.9); color: #854d0e; }\n.status-adopted { background-color: rgba(241, 245, 249, 0.9); color: #475569; }\n.status-default { background-color: rgba(224, 231, 255, 0.9); color: #4338ca; }\n\n.pet-content {\n  padding: 2rem;\n  flex-grow: 1;\n  display: flex;\n  flex-direction: column;\n}\n\n.pet-name {\n  margin: 0 0 1.5rem 0;\n  font-size: 2rem;\n  font-weight: 700;\n  color: var(--text-main);\n  letter-spacing: -0.02em;\n}\n\n/* Modern Stats Grid */\n.pet-stats {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  gap: 0.75rem;\n  margin-bottom: 1.5rem;\n}\n\n.stat-item {\n  background-color: var(--bg);\n  padding: 0.75rem;\n  border-radius: var(--radius-md);\n  font-size: 0.9rem;\n  color: var(--text-light);\n  display: flex;\n  flex-direction: column;\n}\n\n.stat-item strong {\n  color: var(--text-main);\n  font-size: 0.7rem;\n  text-transform: uppercase;\n  letter-spacing: 0.05em;\n  margin-bottom: 0.25rem;\n}\n\n.pet-bio {\n  font-size: 1rem;\n  color: var(--text-light);\n  line-height: 1.6;\n  margin-top: auto;\n  padding-top: 1.5rem;\n  border-top: 1px solid #e2e8f0;\n}",
+          "folderId": "0",
+          "active": false,
+          "type": "support"
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "contents": "document.addEventListener(\"DOMContentLoaded\", () => {\n  const grid = document.getElementById(\"pet-grid\");\n\n  // Fallback placeholder image URL\n  const placeholderImg = \"https://placehold.co/400x300/e2e8f0/475569?text=No+Image+Available\";\n\n  // Check if 'animals' array exists (in case they broke data.js)\n  if (typeof animals === 'undefined' || !Array.isArray(animals)) {\n    // Inject a styled error message that gets pushed down to the grey background\n    grid.innerHTML = `\n      <div style=\"grid-column: 1/-1; margin-top: 6rem; background-color: #fee2e2; border: 1px solid #fca5a5; color: #b91c1c; padding: 2rem; border-radius: 12px; text-align: center; box-shadow: var(--shadow-sm);\">\n        <h3 style=\"margin: 0 0 0.5rem 0; font-size: 1.5rem;\">⚠️ Data Error</h3>\n        <p style=\"margin: 0; font-size: 1.1rem;\">Could not find the <strong>'animals'</strong> array. Please check your <em>data.js</em> file!</p>\n      </div>\n    `;\n    return;\n  }\n\n  // Map over the array to create an array of HTML strings\n  const cardsHTML = animals.map(animal => {\n    // Handle Fallbacks for missing data\n    const img = animal.image || placeholderImg;\n    const name = animal.name || \"Unknown Name\";\n    const species = animal.species || \"Unavailable\";\n    const breed = animal.breed || \"Unavailable\";\n    const age = animal.age !== undefined ? animal.age : \"Unavailable\";\n    const gender = animal.gender || \"Unavailable\";\n    const color = animal.color || \"Unavailable\"; \n    const status = animal.status || \"Status Unknown\";\n    const bio = animal.bio || \"No biography available at this time.\";\n\n    // Determine the badge color class based on the status text\n    let badgeClass = \"status-default\";\n    const statusLower = status.toLowerCase();\n    \n    if (statusLower.includes(\"available\")) {\n      badgeClass = \"status-available\";\n    } else if (statusLower.includes(\"pending\")) {\n      badgeClass = \"status-pending\";\n    } else if (statusLower.includes(\"adopted\")) {\n      badgeClass = \"status-adopted\";\n    }\n\n    // Return the HTML string for this specific card using the modern layout\n    return `\n      <div class=\"pet-card\">\n        <div class=\"image-container\">\n          <img src=\"${img}\" alt=\"${name}\" class=\"pet-image\">\n          <span class=\"pet-status ${badgeClass}\">${status}</span>\n        </div>\n        <div class=\"pet-content\">\n          <h2 class=\"pet-name\">${name}</h2>\n          \n          <div class=\"pet-stats\">\n            <div class=\"stat-item\">\n              <strong>Species</strong>\n              <span>${species}</span>\n            </div>\n            <div class=\"stat-item\">\n              <strong>Breed</strong>\n              <span>${breed}</span>\n            </div>\n            <div class=\"stat-item\">\n              <strong>Age</strong>\n              <span>${age}</span>\n            </div>\n            <div class=\"stat-item\">\n              <strong>Gender</strong>\n              <span>${gender}</span>\n            </div>\n          </div>\n          \n          <div class=\"pet-bio\">\n            ${bio}\n          </div>\n        </div>\n      </div>\n    `;\n  }).join(''); // Join the array of HTML strings into one single string\n\n  // Inject the final string into the grid all at once\n  grid.innerHTML = cardsHTML;\n});",
+          "folderId": "0",
+          "active": false,
+          "type": "support"
+        },
+        "4": {
+          "id": "4",
+          "name": "data.js",
+          "contents": "const animal = {\n    name: \"Buddy\",\n    species: \"Dog\",\n    breed: \"Golden Retriever\",\n    image: \"https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&q=80&w=400\",\n    age: 3,\n    gender: \"Male\",\n    color: \"Golden\",\n    status: \"Available\",\n    bio: \"Friendly and loves to play fetch. Great with kids and other dogs!\"\n}",
+          "folderId": "0",
+          "active": true
+        },
+        "5": {
+          "id": "5",
+          "name": "prompt.md",
+          "contents": "Add your changes to prompt.md",
+          "folderId": "0",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "siamese_cat.jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/template_building-data-driven-systems-lesson5-level1_choicea_2026/uuid/0d11d187-3587-4b74-a639-287a4963e806.jpg",
+          "type": "support",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "doodle_dog.jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/template_building-data-driven-systems-lesson5-level1_choicea_2026/uuid/19742635-eb89-4cba-8634-f4e6acfa6867.jpg",
+          "type": "support",
+          "active": false
+        },
+        "8": {
+          "id": "8",
+          "name": "tuxedo_cat.jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/template_building-data-driven-systems-lesson5-level1_choicea_2026/uuid/ba5fc965-0533-4d6c-b7c9-6d0e3913af24.jpg",
+          "type": "support",
+          "active": false
+        },
+        "9": {
+          "id": "9",
+          "name": "golden_retriever_dog.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/template_building-data-driven-systems-lesson5-level1_choicea_2026/uuid/1f4b974d-b9ba-4a49-8f34-d62d7ac2e671.png",
+          "type": "support",
+          "active": false
+        },
+        "10": {
+          "id": "10",
+          "name": "chiuaua_dog.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/template_building-data-driven-systems-lesson5-level1_choicea_2026/uuid/129be4ec-11ac-4806-a751-4549c50b8c69.png",
+          "type": "support",
+          "active": false
+        },
+        "11": {
+          "id": "11",
+          "name": "pomeranian_dog.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/template_building-data-driven-systems-lesson5-level1_choicea_2026/uuid/ccbc5d70-4d80-4df7-ac76-7b6389ea82ff.png",
+          "type": "support",
+          "active": false
+        },
+        "12": {
+          "id": "12",
+          "name": "white_cat.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/template_building-data-driven-systems-lesson5-level1_choicea_2026/uuid/233d79f9-e215-4497-835d-d67a432e5680.png",
+          "type": "support",
+          "active": false
+        },
+        "13": {
+          "id": "13",
+          "name": "boxer_dog.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/template_building-data-driven-systems-lesson5-level1_choicea_2026/uuid/77a4fa86-b709-40ac-be5c-e2d788c18c04.png",
+          "type": "support",
+          "active": false
+        },
+        "14": {
+          "id": "14",
+          "name": "pitt_bull_dog.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/template_building-data-driven-systems-lesson5-level1_choicea_2026/uuid/14b85134-71b3-4fca-95f8-e3411c903619.png",
+          "type": "support",
+          "active": false
+        },
+        "15": {
+          "id": "15",
+          "name": "rottweiler_dog.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/template_building-data-driven-systems-lesson5-level1_choicea_2026/uuid/556b5b00-1cf3-40e7-9af6-55b8df2640cf.png",
+          "type": "support",
+          "active": false
+        },
+        "16": {
+          "id": "16",
+          "name": "bordercollie_dog.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/template_building-data-driven-systems-lesson5-level1_choicea_2026/uuid/7b5dab62-5837-4189-8335-ead6c0090552.png",
+          "type": "support",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "4",
+        "5"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-04 14:36:29 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-04 15:45:58 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-04 15:46:42 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-04 15:46:43 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-04 15:46:49 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-04 15:47:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-04 22:58:14 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-04 22:58:16 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-04 22:58:36 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Weblab2>

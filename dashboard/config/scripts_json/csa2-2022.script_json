@@ -16,6 +16,7 @@
           "key": "96261a6a-6742-48e0-ab85-c8fcc3b83a95"
         }
       ],
+      "content_area": "curriculum_9_12",
       "curriculum_umbrella": "CSA",
       "has_verified_resources": true,
       "hideable_lessons": true,
@@ -28,7 +29,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-12-08 17:27:41 UTC",
+    "serialized_at": "2024-11-19 01:14:50 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6162,6 +6163,18 @@
       }
     },
     {
+      "name": "[KEY] User Input Extra Practice",
+      "url": "https://docs.google.com/document/d/1kqeurBWZWpih_amwCGTcWf_TO7MBu2a_iV0cy90zzJ8/edit?usp=sharing",
+      "key": "_key_user_input_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_user_input_extra_practice"
+      }
+    },
+    {
       "name": "Accessor Methods",
       "url": "https://youtu.be/F5plZ3f5B3c",
       "key": "accessor_methods",
@@ -6643,6 +6656,19 @@
       "seeding_key": {
         "resource.key": "unlocking_assessments"
       }
+    },
+    {
+      "name": "User Input Extra Practice",
+      "url": "https://docs.google.com/document/d/17ogRzAgaSnZaZL_1TieE2Fv-1zjKwQHde6MViIR41Y4/edit?usp=sharing",
+      "key": "user_input_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "user_input_extra_practice"
+      }
     }
   ],
   "lessons_resources": [
@@ -6673,6 +6699,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-10",
+        "resource.key": "_key_user_input_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
         "resource.key": "creating_a_scanner_object"
       }
     },
@@ -6692,6 +6724,12 @@
       "seeding_key": {
         "lesson.key": "lesson-10",
         "resource.key": "unit_2_presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "user_input_extra_practice"
       }
     },
     {
@@ -8668,6 +8706,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

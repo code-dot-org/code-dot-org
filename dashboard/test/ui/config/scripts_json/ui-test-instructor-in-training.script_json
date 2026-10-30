@@ -1,0 +1,424 @@
+{
+  "script": {
+    "name": "ui-test-instructor-in-training",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "content_area": "other",
+      "curriculum_umbrella": "Other",
+      "has_verified_resources": true,
+      "is_migrated": true,
+      "student_detail_progress_view": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2026-09-03 22:59:33 UTC",
+    "hide_within_course": false,
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "ui-test-instructor-in-training"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "ui-test-instructor-in-training"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Instructor In Training Levels",
+      "name": "Instructor In Training Levels",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Instructor In Training Levels",
+        "lesson_group.key": "",
+        "script.name": "ui-test-instructor-in-training"
+      }
+    },
+    {
+      "key": "Dani Test Lesson 2",
+      "name": "Instructor in Training LevelGroup",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+        "assessment": true
+      },
+      "seeding_key": {
+        "lesson.key": "Dani Test Lesson 2",
+        "lesson_group.key": "",
+        "script.name": "ui-test-instructor-in-training"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "24a6ed5f-bcf9-4736-a4de-9f9b497775c7",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "24a6ed5f-bcf9-4736-a4de-9f9b497775c7",
+        "lesson.key": "Instructor In Training Levels",
+        "lesson_group.key": "",
+        "script.name": "ui-test-instructor-in-training"
+      }
+    },
+    {
+      "key": "3d3ee17d-16f3-4061-9115-00b2db913071",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3d3ee17d-16f3-4061-9115-00b2db913071",
+        "lesson.key": "Dani Test Lesson 2",
+        "lesson_group.key": "",
+        "script.name": "ui-test-instructor-in-training"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "dd009660-4dac-4151-ac3e-79284a07dce2",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "dd009660-4dac-4151-ac3e-79284a07dce2",
+        "lesson_activity.key": "24a6ed5f-bcf9-4736-a4de-9f9b497775c7"
+      }
+    },
+    {
+      "key": "0bd80bd1-71d1-41e9-aaf3-d51e3dbb0fd1",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "0bd80bd1-71d1-41e9-aaf3-d51e3dbb0fd1",
+        "lesson_activity.key": "3d3ee17d-16f3-4061-9115-00b2db913071"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "instructor_in_training": true,
+        "level_keys": [
+          "UI Test self-paced-example-level-applab"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "UI Test self-paced-example-level-applab"
+        ],
+        "lesson.key": "Instructor In Training Levels",
+        "lesson_group.key": "",
+        "script.name": "ui-test-instructor-in-training",
+        "activity_section.key": "dd009660-4dac-4151-ac3e-79284a07dce2"
+      },
+      "level_keys": [
+        "UI Test self-paced-example-level-applab"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "instructor_in_training": true,
+        "level_keys": [
+          "UI Test self-paced-example-level-dance"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "UI Test self-paced-example-level-dance"
+        ],
+        "lesson.key": "Instructor In Training Levels",
+        "lesson_group.key": "",
+        "script.name": "ui-test-instructor-in-training",
+        "activity_section.key": "dd009660-4dac-4151-ac3e-79284a07dce2"
+      },
+      "level_keys": [
+        "UI Test self-paced-example-level-dance"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "instructor_in_training": true,
+        "level_keys": [
+          "UI Test self-paced-example-level-free-response"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "UI Test self-paced-example-level-free-response"
+        ],
+        "lesson.key": "Instructor In Training Levels",
+        "lesson_group.key": "",
+        "script.name": "ui-test-instructor-in-training",
+        "activity_section.key": "dd009660-4dac-4151-ac3e-79284a07dce2"
+      },
+      "level_keys": [
+        "UI Test self-paced-example-level-free-response"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "instructor_in_training": true,
+        "level_keys": [
+          "UI Test self-paced-example-level-match"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "UI Test self-paced-example-level-match"
+        ],
+        "lesson.key": "Instructor In Training Levels",
+        "lesson_group.key": "",
+        "script.name": "ui-test-instructor-in-training",
+        "activity_section.key": "dd009660-4dac-4151-ac3e-79284a07dce2"
+      },
+      "level_keys": [
+        "UI Test self-paced-example-level-match"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "instructor_in_training": true,
+        "level_keys": [
+          "UI Test self-paced-example-level-external"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "UI Test self-paced-example-level-external"
+        ],
+        "lesson.key": "Instructor In Training Levels",
+        "lesson_group.key": "",
+        "script.name": "ui-test-instructor-in-training",
+        "activity_section.key": "dd009660-4dac-4151-ac3e-79284a07dce2"
+      },
+      "level_keys": [
+        "UI Test self-paced-example-level-external"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "instructor_in_training": true,
+        "level_keys": [
+          "UI Test self-paced-example-level-bubble-choice"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "UI Test self-paced-example-level-bubble-choice"
+        ],
+        "lesson.key": "Instructor In Training Levels",
+        "lesson_group.key": "",
+        "script.name": "ui-test-instructor-in-training",
+        "activity_section.key": "dd009660-4dac-4151-ac3e-79284a07dce2"
+      },
+      "level_keys": [
+        "UI Test self-paced-example-level-bubble-choice"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "instructor_in_training": true,
+        "level_keys": [
+          "UI Test self-paced-pl-example-levelgroup-1"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "UI Test self-paced-pl-example-levelgroup-1"
+        ],
+        "lesson.key": "Dani Test Lesson 2",
+        "lesson_group.key": "",
+        "script.name": "ui-test-instructor-in-training",
+        "activity_section.key": "0bd80bd1-71d1-41e9-aaf3-d51e3dbb0fd1"
+      },
+      "level_keys": [
+        "UI Test self-paced-pl-example-levelgroup-1"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "UI Test self-paced-example-level-applab",
+        "script_level.level_keys": [
+          "UI Test self-paced-example-level-applab"
+        ],
+        "lesson.key": "Instructor In Training Levels",
+        "lesson_group.key": "",
+        "script.name": "ui-test-instructor-in-training",
+        "activity_section.key": "dd009660-4dac-4151-ac3e-79284a07dce2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "UI Test self-paced-example-level-dance",
+        "script_level.level_keys": [
+          "UI Test self-paced-example-level-dance"
+        ],
+        "lesson.key": "Instructor In Training Levels",
+        "lesson_group.key": "",
+        "script.name": "ui-test-instructor-in-training",
+        "activity_section.key": "dd009660-4dac-4151-ac3e-79284a07dce2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "UI Test self-paced-example-level-free-response",
+        "script_level.level_keys": [
+          "UI Test self-paced-example-level-free-response"
+        ],
+        "lesson.key": "Instructor In Training Levels",
+        "lesson_group.key": "",
+        "script.name": "ui-test-instructor-in-training",
+        "activity_section.key": "dd009660-4dac-4151-ac3e-79284a07dce2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "UI Test self-paced-example-level-match",
+        "script_level.level_keys": [
+          "UI Test self-paced-example-level-match"
+        ],
+        "lesson.key": "Instructor In Training Levels",
+        "lesson_group.key": "",
+        "script.name": "ui-test-instructor-in-training",
+        "activity_section.key": "dd009660-4dac-4151-ac3e-79284a07dce2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "UI Test self-paced-example-level-external",
+        "script_level.level_keys": [
+          "UI Test self-paced-example-level-external"
+        ],
+        "lesson.key": "Instructor In Training Levels",
+        "lesson_group.key": "",
+        "script.name": "ui-test-instructor-in-training",
+        "activity_section.key": "dd009660-4dac-4151-ac3e-79284a07dce2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "UI Test self-paced-example-level-bubble-choice",
+        "script_level.level_keys": [
+          "UI Test self-paced-example-level-bubble-choice"
+        ],
+        "lesson.key": "Instructor In Training Levels",
+        "lesson_group.key": "",
+        "script.name": "ui-test-instructor-in-training",
+        "activity_section.key": "dd009660-4dac-4151-ac3e-79284a07dce2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "UI Test self-paced-pl-example-levelgroup-1",
+        "script_level.level_keys": [
+          "UI Test self-paced-pl-example-levelgroup-1"
+        ],
+        "lesson.key": "Dani Test Lesson 2",
+        "lesson_group.key": "",
+        "script.name": "ui-test-instructor-in-training",
+        "activity_section.key": "0bd80bd1-71d1-41e9-aaf3-d51e3dbb0fd1"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

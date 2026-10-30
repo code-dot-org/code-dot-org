@@ -40,7 +40,7 @@ class CdoAwsS3Test < Minitest::Test
 
   def test_delete_updates_cache
     AWS::S3.instance_variable_set(:@cached_bucket_contents, {BUCKET => Set['test-object']})
-    mock = MiniTest::Mock.new
+    mock = Minitest::Mock.new
     def mock.delete_marker
     end
     AWS::S3.s3.stubs(:delete_object).returns(mock)

@@ -18,6 +18,18 @@
 require 'state_abbr'
 
 class Pd::RegionalPartnerMapping < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :restricted,
+    regional_partner_id: :restricted,
+    state: :restricted,
+    zip_code: :restricted,
+    created_at: :restricted,
+    updated_at: :restricted,
+    deleted_at: :restricted,
+  )
+
   acts_as_paranoid # use deleted_at column instead of deleting rows
   belongs_to :regional_partner, optional: true
 

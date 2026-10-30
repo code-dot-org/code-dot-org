@@ -1,0 +1,22 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-11-19T18:10:50.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# While Loop\n\nA **while loop** repeats a set of steps as long as a condition is true.\n\nFor example, this **while loop** checks if the username is not `Jamila` (`username !== Jamila`), and keeps prompting the user to re-enter their username until they enter the name `Jamila`.",
+        "imageUrl": "https://images.code.org/f0ee9f04287dfd0c1802a831b747e1c5-whileloop.gif",
+        "key": "undefined-ea03636a-a1b5-4568-be2b-86c3c6462665",
+        "layout": "text-bottom-right"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-19T18:10:50.727+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson1-vocab-panel-for-loop-test-2025\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson1-vocab-panel-for-loop-test-2025\"},{\"changed_at\":\"2025-11-19 18:17:06 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-19 19:38:58 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

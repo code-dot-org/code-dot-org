@@ -1,0 +1,10 @@
+name 'ai-generated-design-lesson1-level2_v2_2026'
+title 'Check For Understanding'
+submittable 'true'
+anonymous 'false'
+
+page
+text 'ai-generated-design-lesson1-level2_text_2026'
+level 'ai-generated-design-lesson1-level1a_v2_2026'
+level 'ai-generated-design-lesson1-level1b_v2_2026'
+level 'ai-generated-design-lesson1-level1c_v2_2026'

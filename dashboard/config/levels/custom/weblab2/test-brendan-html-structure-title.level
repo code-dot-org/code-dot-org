@@ -1,0 +1,32 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-06-01T18:41:10.000Z",
+  "level_num": "custom",
+  "user_id": 574,
+  "properties": {
+    "require_edit_to_continue": true,
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "4998dcbf-a8a3-4139-aba6-497bdec7f036": {
+          "id": "4998dcbf-a8a3-4139-aba6-497bdec7f036",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html>\n<head>\n  <!-- Add your page title here, inside <title> tags! -->\n</head>\n<body>\n  <!-- This is where your fish's story will go! -->\n</body>\n</html>",
+          "folderId": "0",
+          "type": "starter",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "4998dcbf-a8a3-4139-aba6-497bdec7f036"
+      ]
+    },
+    "long_instructions": "Welcome to your first web page project! You're going to build a web page all about your pet fish.\r\n\r\nOpen up the `index.html` file. You'll see some basic HTML tags already there: `<!DOCTYPE html>`, `<html>`, `<head>`, and `<body>`. These tags are like the main sections of a book, telling the browser how to structure your page.\r\n\r\nYour first task is to give your web page a title. Find the `<head>` section in `index.html`. Inside the `<head>` tags, add a new tag called `<title>`. Between the opening `<title>` and closing `</title>` tags, type `My Pet Fish Page`.\r\n\r\nWhen you're done, your page will have a proper title that shows up in the browser tab!",
+    "generate_outline": "Students will create a basic HTML file with `<!DOCTYPE html>`, `<html>`, `<head>`, and `<body>` tags. They will add a `<title>` tag inside the `<head>` to set the web page's title to 'My Pet Fish Page'."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-06-01 18:41:16 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-01 18:41:16 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-01 18:41:57 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

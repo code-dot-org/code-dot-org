@@ -1,0 +1,31 @@
+{
+  "name": "self-paced-pl-ai-101-2026",
+  "script_names": [
+    "self-paced-pl-ai-101-mod1-2026",
+    "self-paced-pl-ai-101-mod2-2026",
+    "self-paced-pl-ai-101-mod3-2026",
+    "self-paced-pl-ai-101-mod4-2026",
+    "self-paced-pl-ai-101-mod5-2026"
+  ],
+  "original_script_names": [
+    "self-paced-pl-ai-101-mod1-2026",
+    "self-paced-pl-ai-101-mod2-2026",
+    "self-paced-pl-ai-101-mod3-2026",
+    "self-paced-pl-ai-101-mod5-2026",
+    "self-paced-pl-ai-101-mod4-2026"
+  ],
+  "published_state": "stable",
+  "instruction_type": "self_paced",
+  "participant_audience": "teacher",
+  "instructor_audience": "facilitator",
+  "properties": {
+    "family_name": "self-paced-pl-ai-101",
+    "version_year": "2026"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

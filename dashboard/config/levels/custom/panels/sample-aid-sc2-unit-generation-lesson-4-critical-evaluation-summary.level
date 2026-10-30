@@ -1,0 +1,45 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-06-29T17:09:53.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "panels": [
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-4-critical-evaluation-summary-0a1bab27-4756-4958-aee4-1c492920e743",
+        "text": "Remember how generative AI can sometimes make up facts out of thin air? It creates stories or details that sound believable, but aren't actually true.",
+        "imageUrl": "https://images.code.org/3642286ebc44d4d6eaec3b1f103d0929-sample-aid-sc2-unit-generation-lesson-4-critical-evaluation-summary-panel-1-40c850a0-dfd1-49d6-b84c-3d7d779ceef0.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-4-critical-evaluation-summary-ad87789a-29f0-4e9e-912e-6f368fefe559",
+        "text": "And the tricky part is, AI can present these made-up facts with *super high confidence*! It doesn't know it's wrong, so it sounds really convincing.",
+        "imageUrl": "https://images.code.org/04c8606d595340dbb3ea178283b2542e-sample-aid-sc2-unit-generation-lesson-4-critical-evaluation-summary-panel-2-1a744a72-0691-4e25-bb06-9aca94859ad5.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-4-critical-evaluation-summary-61be5c3d-23a9-461d-b822-5892f36ee43e",
+        "text": "AI learns from patterns in the massive amount of data it's trained on. If that data is incomplete, biased, or missing certain perspectives, the AI's answers will reflect those same limitations.",
+        "imageUrl": "https://images.code.org/7b0cc738edb53e81c10cb9a63612422e-sample-aid-sc2-unit-generation-lesson-4-critical-evaluation-summary-panel-3-b7d1dd38-7cb3-4dce-a3c4-238a41f22238.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-4-critical-evaluation-summary-2927efab-2cd1-4c65-8423-22ac492e8dc8",
+        "text": "It's important to remember: AI doesn't *understand* things in the way humans do. It predicts the most likely next word or pixel based on patterns, not real knowledge or intent.",
+        "imageUrl": "https://images.code.org/97a236832803740eea883f162fa23a71-sample-aid-sc2-unit-generation-lesson-4-critical-evaluation-summary-panel-4-fad0964f-f273-4a0b-a219-6d968fee3425.png",
+        "layout": "text-bottom-left"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-4-critical-evaluation-summary-6b79b7fc-8622-42e1-a57b-d16c421f0516",
+        "text": "That's why *you* are the most important part of working with AI! Always use your critical thinking, verify information, and guide the AI to make sure it's helpful and accurate.",
+        "imageUrl": "https://images.code.org/334686477b2d81fa8e65f9abe73560ee-sample-aid-sc2-unit-generation-lesson-4-critical-evaluation-summary-panel-5-ea3ecfd9-7f5b-4fb3-96dc-fc239867584f.png",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "generate_outline": "Summarize the key limitations of generative AI: hallucination, overconfidence, and data dependency. Reinforce the message that AI lacks true understanding or intent and emphasize the importance of critical thinking and human oversight when interacting with AI tools."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-06-29 17:10:41 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-29 17:10:41 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

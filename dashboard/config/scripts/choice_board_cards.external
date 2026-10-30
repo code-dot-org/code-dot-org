@@ -1,0 +1,302 @@
+name 'Choice Board Cards'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<!-- Choice Board Container -->
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; width: 95%; margin: 20px auto;">
+
+  <!-- Choice 1 -->
+  <a href="#" target="_blank" style="text-decoration: none;">
+    <div style="background-color: #0093A4; color: #FFFFFF; padding: 20px; border-radius: 20px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1); text-align: center; transition: 0.3s;">
+      <p style="font-size: 16pt; font-weight: bold; margin: 0;">Understand the Problem</p>
+      <p style="font-size: 12pt; margin-top: 10px;">Break down what you're being asked to solve.</p>
+    </div>
+  </a>
+
+  <!-- Choice 2 -->
+  <a href="#" target="_blank" style="text-decoration: none;">
+    <div style="background-color: #8C52BA; color: #FFFFFF; padding: 20px; border-radius: 20px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1); text-align: center; transition: 0.3s;">
+      <p style="font-size: 16pt; font-weight: bold; margin: 0;">Make a Plan</p>
+      <p style="font-size: 12pt; margin-top: 10px;">Decide what steps you’ll take to solve it.</p>
+    </div>
+  </a>
+
+  <!-- Choice 3 -->
+  <a href="#" target="_blank" style="text-decoration: none;">
+    <div style="background-color: #292F36; color: #FFFFFF; padding: 20px; border-radius: 20px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1); text-align: center; transition: 0.3s;">
+      <p style="font-size: 16pt; font-weight: bold; margin: 0;">Try It</p>
+      <p style="font-size: 12pt; margin-top: 10px;">Follow your plan and build your solution.</p>
+    </div>
+  </a>
+
+  <!-- Choice 4 -->
+  <a href="#" target="_blank" style="text-decoration: none;">
+    <div style="background-color: #F7F8FA; color: #000000; padding: 20px; border-radius: 20px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1); text-align: center; transition: 0.3s;">
+      <p style="font-size: 16pt; font-weight: bold; margin: 0;">Reflect</p>
+      <p style="font-size: 12pt; margin-top: 10px;">Look back and decide how well your plan worked.</p>
+    </div>
+  </a>
+
+  <!-- Choice 5 -->
+  <a href="#" target="_blank" style="text-decoration: none;">
+    <div style="background-color: #DECEEA; color: #000000; padding: 20px; border-radius: 20px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1); text-align: center; transition: 0.3s;">
+      <p style="font-size: 16pt; font-weight: bold; margin: 0;">Debug</p>
+      <p style="font-size: 12pt; margin-top: 10px;">Find and fix problems in your code.</p>
+    </div>
+  </a>
+
+  <!-- Choice 6 -->
+  <a href="#" target="_blank" style="text-decoration: none;">
+    <div style="background-color: #B7E0E5; color: #000000; padding: 20px; border-radius: 20px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1); text-align: center; transition: 0.3s;">
+      <p style="font-size: 16pt; font-weight: bold; margin: 0;">Share Your Work</p>
+      <p style="font-size: 12pt; margin-top: 10px;">Tell others what you made and how it works.</p>
+    </div>
+  </a>
+
+</div>
+
+<details style="background-color: #F5F7F8; padding: 20px; border-radius: 10px; margin: 10px 0;">
+  <summary style="font-size: 16pt; font-weight: bold; cursor: pointer;">Try It</summary>
+  <p style="margin-top: 10px; font-size: 12pt;">Start by translating your plan into code. Don't worry about perfection—just take the first step!</p>
+</details>
+
+<div style="background-color: #F5F7F8; padding: 15px; border-radius: 10px; margin: 10px 0;">
+  <label style="font-size: 14pt;">
+    <input type="radio" name="choice" style="margin-right: 10px;">
+    I want to break the problem into smaller parts.
+  </label>
+</div>
+
+<form onsubmit="alert('Response saved!'); return false;">
+  <label style="font-size: 14pt;">
+    <input type="checkbox" style="margin-right: 8px;">
+    I completed this task
+  </label>
+  <br><br>
+  <button type="submit" style="background-color: #0093A4; color: #FFFFFF; padding: 10px 20px; border-radius: 10px; font-size: 14pt; border: none;">
+    Submit
+  </button>
+</form>
+
+---
+
+<!-- Choice Board Container -->
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; width: 95%; margin: 20px auto;">
+
+  <!-- Card 1 -->
+  <details style="background-color: #0093A4; color: #FFFFFF; padding: 20px; border-radius: 20px; box-shadow: 4px 4px 10px rgba(0,0,0,0.1);">
+    <summary style="font-size: 16pt; font-weight: bold; cursor: pointer;">
+      Understand the Problem
+    </summary>
+    <p style="font-size: 12pt; margin-top: 12px;">
+      Read the problem carefully. Identify what is being asked and what information is given.
+    </p>
+    <p style="font-size: 12pt;">
+      Ask yourself: What do I already know? What is unclear?
+    </p>
+  </details>
+
+  <!-- Card 2 -->
+  <details style="background-color: #8C52BA; color: #FFFFFF; padding: 20px; border-radius: 20px; box-shadow: 4px 4px 10px rgba(0,0,0,0.1);">
+    <summary style="font-size: 16pt; font-weight: bold; cursor: pointer;">
+      Make a Plan
+    </summary>
+    <p style="font-size: 12pt; margin-top: 12px;">
+      Decide on steps you can follow to solve the problem.
+    </p>
+    <p style="font-size: 12pt;">
+      You might draw a diagram, write pseudocode, or list steps in order.
+    </p>
+  </details>
+
+  <!-- Card 3 -->
+  <details style="background-color: #292F36; color: #FFFFFF; padding: 20px; border-radius: 20px; box-shadow: 4px 4px 10px rgba(0,0,0,0.1);">
+    <summary style="font-size: 16pt; font-weight: bold; cursor: pointer;">
+      Try It
+    </summary>
+    <p style="font-size: 12pt; margin-top: 12px;">
+      Follow your plan and start building your solution.
+    </p>
+    <p style="font-size: 12pt;">
+      It’s okay if it doesn’t work the first time.
+    </p>
+  </details>
+
+  <!-- Card 4 -->
+  <details style="background-color: #F7F8FA; color: #000000; padding: 20px; border-radius: 20px; box-shadow: 4px 4px 10px rgba(0,0,0,0.1);">
+    <summary style="font-size: 16pt; font-weight: bold; cursor: pointer;">
+      Debug
+    </summary>
+    <p style="font-size: 12pt; margin-top: 12px;">
+      Look for errors or unexpected behavior.
+    </p>
+    <p style="font-size: 12pt;">
+      Change one thing at a time and test again.
+    </p>
+  </details>
+
+  <!-- Card 5 -->
+  <details style="background-color: #DECEEA; color: #000000; padding: 20px; border-radius: 20px; box-shadow: 4px 4px 10px rgba(0,0,0,0.1);">
+    <summary style="font-size: 16pt; font-weight: bold; cursor: pointer;">
+      Reflect
+    </summary>
+    <p style="font-size: 12pt; margin-top: 12px;">
+      Think about what worked well and what was challenging.
+    </p>
+    <p style="font-size: 12pt;">
+      How might you solve a similar problem next time?
+    </p>
+  </details>
+
+  <!-- Card 6 -->
+  <details style="background-color: #B7E0E5; color: #000000; padding: 20px; border-radius: 20px; box-shadow: 4px 4px 10px rgba(0,0,0,0.1);">
+    <summary style="font-size: 16pt; font-weight: bold; cursor: pointer;">
+      Share Your Thinking
+    </summary>
+    <p style="font-size: 12pt; margin-top: 12px;">
+      Explain your solution to a partner or group.
+    </p>
+    <p style="font-size: 12pt;">
+      Focus on your process, not just the final answer.
+    </p>
+  </details>
+
+</div>
+
+<!-- Game Container -->
+<div style="background-color: #F7F8FA; padding: 20px; border-radius: 20px; width: 95%; margin: 20px auto; box-shadow: 4px 4px 12px rgba(0,0,0,0.1);">
+
+  <p style="font-size: 14pt; font-weight: bold; margin-bottom: 10px;">🕵️‍♀️ Choose the statement you think is the lie:</p>
+
+  <ol style="font-size: 12pt; line-height: 1.6;">
+    <li><strong>Planning</strong> is an important step that helps you organize your thoughts before starting.</li>
+    <li><strong>Debugging</strong> only happens after the project is completely finished.</li>
+    <li><strong>Reflection</strong> helps you think about what worked and what didn’t.</li>
+  </ol>
+
+  <details style="margin-top: 20px; background-color: #0093A4; color: #FFFFFF; padding: 15px; border-radius: 15px; cursor: pointer;">
+    <summary style="font-size: 14pt; font-weight: bold;">🎉 Reveal the Answer</summary>
+    <p style="font-size: 12pt; margin-top: 12px;">
+      ❌ <strong>Statement #2 is the lie!</strong><br>
+      Debugging can (and should!) happen throughout the process—not just at the end. It's how you spot mistakes and improve your solution as you go. ✅
+    </p>
+  </details>
+
+</div>
+
+<!-- 3-Column Game Layout -->
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; width: 95%; margin: 20px auto;">
+
+  <!-- Column 1: Problem Solving Process -->
+  <div style="background-color: #F7F8FA; padding: 20px; border-radius: 20px; box-shadow: 4px 4px 10px rgba(0,0,0,0.1);">
+    <p style="font-size: 14pt; font-weight: bold; margin-bottom: 10px;">🧠 Problem Solving</p>
+    <ol style="font-size: 12pt; line-height: 1.6; padding-left: 20px;">
+      <li>Planning helps organize your thoughts before coding.</li>
+      <li>Debugging only happens after everything is built.</li>
+      <li>Reflection helps you learn from what you built.</li>
+    </ol>
+    <details style="margin-top: 15px; background-color: #0093A4; color: #FFFFFF; padding: 10px; border-radius: 12px;">
+      <summary style="font-size: 13pt; font-weight: bold;">🎉 Reveal Answer</summary>
+      <p style="font-size: 12pt; margin-top: 10px;">
+        ❌ <strong>Statement #2 is the lie!</strong><br>
+        Debugging happens throughout the process, not just at the end. ✅
+      </p>
+    </details>
+  </div>
+
+  <!-- Column 2: Computational Thinking -->
+  <div style="background-color: #DECEEA; padding: 20px; border-radius: 20px; box-shadow: 4px 4px 10px rgba(0,0,0,0.1);">
+    <p style="font-size: 14pt; font-weight: bold; margin-bottom: 10px;">🤖 Computational Thinking</p>
+    <ol style="font-size: 12pt; line-height: 1.6; padding-left: 20px;">
+      <li>Decomposition means combining all the small steps at once.</li>
+      <li>Algorithms are step-by-step instructions for solving problems.</li>
+      <li>Pattern recognition helps find similarities in problems.</li>
+    </ol>
+    <details style="margin-top: 15px; background-color: #8C52BA; color: #FFFFFF; padding: 10px; border-radius: 12px;">
+      <summary style="font-size: 13pt; font-weight: bold;">🎉 Reveal Answer</summary>
+      <p style="font-size: 12pt; margin-top: 10px;">
+        ❌ <strong>Statement #1 is the lie!</strong><br>
+        Decomposition means breaking a big problem into smaller parts, not combining them. 🧩
+      </p>
+    </details>
+  </div>
+
+  <!-- Column 3: Debugging & Teamwork -->
+  <div style="background-color: #B7E0E5; padding: 20px; border-radius: 20px; box-shadow: 4px 4px 10px rgba(0,0,0,0.1);">
+    <p style="font-size: 14pt; font-weight: bold; margin-bottom: 10px;">🛠️ Debugging & Teamwork</p>
+    <ol style="font-size: 12pt; line-height: 1.6; padding-left: 20px;">
+      <li>It’s okay to ask a partner for help while debugging.</li>
+      <li>Teamwork slows down the problem solving process.</li>
+      <li>Explaining your thinking can help you find bugs.</li>
+    </ol>
+    <details style="margin-top: 15px; background-color: #292F36; color: #FFFFFF; padding: 10px; border-radius: 12px;">
+      <summary style="font-size: 13pt; font-weight: bold;">🎉 Reveal Answer</summary>
+      <p style="font-size: 12pt; margin-top: 10px;">
+        ❌ <strong>Statement #2 is the lie!</strong><br>
+        Teamwork actually helps you solve problems more effectively—not slower. 🤝
+      </p>
+    </details>
+  </div>
+
+</div>
+
+<!-- 3-Column Game Layout with Improved Readability -->
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; width: 95%; margin: 20px auto;">
+
+  <!-- Column 1: Problem Solving -->
+  <div style="background-color: #F7F8FA; padding: 20px; border-radius: 20px; box-shadow: 4px 4px 10px rgba(0,0,0,0.1);">
+    <p style="font-size: 14pt; font-weight: bold; margin-bottom: 10px;">🧠 Problem Solving</p>
+    <ol style="font-size: 12pt; line-height: 1.8; padding-left: 20px; margin-bottom: 20px;">
+      <li><strong>Planning</strong> helps organize your thoughts before coding.</li>
+      <li><strong>Debugging</strong> only happens after everything is built.</li>
+      <li><strong>Reflection</strong> helps you learn from what you built.</li>
+    </ol>
+    <details style="background-color: #0093A4; color: #FFFFFF; padding: 10px; border-radius: 12px;">
+      <summary style="font-size: 13pt; font-weight: bold;">🎉 Reveal Answer</summary>
+      <p style="font-size: 12pt; margin-top: 10px;">
+        ❌ <strong>Statement #2 is the lie!</strong><br>
+        Debugging happens throughout the process, not just at the end. ✅
+      </p>
+    </details>
+  </div>
+
+  <!-- Column 2: Computational Thinking -->
+  <div style="background-color: #DECEEA; padding: 20px; border-radius: 20px; box-shadow: 4px 4px 10px rgba(0,0,0,0.1);">
+    <p style="font-size: 14pt; font-weight: bold; margin-bottom: 10px;">🤖 Computational Thinking</p>
+    <ol style="font-size: 12pt; line-height: 1.8; padding-left: 20px; margin-bottom: 20px;">
+      <li><strong>Decomposition</strong> means combining all the small steps at once.</li>
+      <li><strong>Algorithms</strong> are step-by-step instructions for solving problems.</li>
+      <li><strong>Pattern recognition</strong> helps find similarities in problems.</li>
+    </ol>
+    <details style="background-color: #8C52BA; color: #FFFFFF; padding: 10px; border-radius: 12px;">
+      <summary style="font-size: 13pt; font-weight: bold;">🎉 Reveal Answer</summary>
+      <p style="font-size: 12pt; margin-top: 10px;">
+        ❌ <strong>Statement #1 is the lie!</strong><br>
+        Decomposition means breaking a big problem into smaller parts, not combining them. 🧩
+      </p>
+    </details>
+  </div>
+
+
+
+
+  <!-- Column 3: Debugging & Teamwork -->
+  <div style="background-color: #B7E0E5; padding: 20px; border-radius: 20px; box-shadow: 4px 4px 10px rgba(0,0,0,0.1);">
+    <p style="font-size: 14pt; font-weight: bold; margin-bottom: 10px;">🛠️ Debugging & Teamwork</p>
+    <ol style="font-size: 12pt; line-height: 1.8; padding-left: 20px; margin-bottom: 20px;">
+      <li>It’s okay to <strong>ask a partner</strong> for help while debugging.</li>
+      <li><strong>Teamwork</strong> slows down the problem solving process.</li>
+      <li><strong>Explaining your thinking</strong> can help you find bugs.</li>
+    </ol>
+    <details style="background-color: #292F36; color: #FFFFFF; padding: 10px; border-radius: 12px;">
+      <summary style="font-size: 13pt; font-weight: bold;">🎉 Reveal Answer</summary>
+      <p style="font-size: 12pt; margin-top: 10px;">
+        ❌ <strong>Statement #2 is the lie!</strong><br>
+        Teamwork actually helps you solve problems more effectively—not slower. 
+      </p>
+    </details>
+  </div>
+
+</div>
+MARKDOWN

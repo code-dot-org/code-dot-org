@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+args=("$@")
+if [ $# -eq 0 ]; then
+  args=(/bin/sh)
+fi
+kubectl exec -it deployment/cdo-active-job-worker -- "${args[@]}"

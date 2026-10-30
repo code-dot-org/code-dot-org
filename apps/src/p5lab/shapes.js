@@ -1,6 +1,7 @@
 /** @file Type definitions (React and otherwise) specific to Gamelab */
 import _ from 'lodash';
 import PropTypes from 'prop-types';
+
 import {P5LabInterfaceMode} from './constants';
 
 /**
@@ -67,6 +68,10 @@ export const CurrentAnimations = PropTypes.shape({
  * @property {bool} looping
  * @property {number} frameDelay
  * @property {string} [version] - S3 version key
+ * @property {number} [pixelGridSize] - Physical pixels per art pixel;
+ *           absent on classic animations and non-pixel-art images.
+ * @property {number[][]} [recentColors] - Pixel-editor recently-used colors
+ *           ([r,g,b,a] rows, in first-seen order); absent until edited there.
  */
 const serializedAnimationPropsShape = {
   name: PropTypes.string.isRequired,
@@ -76,6 +81,9 @@ const serializedAnimationPropsShape = {
   looping: PropTypes.bool.isRequired,
   frameDelay: PropTypes.number.isRequired,
   version: PropTypes.string,
+  role: PropTypes.string,
+  pixelGridSize: PropTypes.number,
+  recentColors: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.number)),
 };
 
 /**
@@ -127,6 +135,12 @@ function getSerializedAnimationProps(animation) {
     'frameDelay',
     'version',
     'categories',
+    'role',
+    'pixelGridSize',
+    'recentColors',
+    'trimmed',
+    'generation',
+    'poses',
   ]);
 }
 
@@ -251,5 +265,21 @@ export function throwIfSerializedAnimationListIsInvalid(
       throw new Error(`Name "${name}" appears more than once in propsByKey`);
     }
     knownNames[name] = true;
+  }
+}
+
+/**
+ * @param {!SerializedAnimationList} serializedAnimationList
+ * @throws {Error} if the includes an unsupported sourceUrl.
+ */
+export function throwIfDisallowedAnimationSourceUrl(serializedAnimationList) {
+  const {propsByKey} = serializedAnimationList;
+  for (const animationKey in propsByKey) {
+    const sourceUrl = propsByKey[animationKey]['sourceUrl'];
+    if (sourceUrl?.startsWith('https://levelbuilder-studio.code.org/')) {
+      throw new Error(
+        `levelbuilder sourceUrl for "${propsByKey[animationKey]['name']}" is not allowed.`
+      );
+    }
   }
 }

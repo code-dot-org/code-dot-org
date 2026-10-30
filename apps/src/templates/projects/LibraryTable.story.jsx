@@ -1,8 +1,10 @@
-import React from 'react';
 import {action} from '@storybook/addon-actions';
-import {UnconnectedLibraryTable as LibraryTable} from './LibraryTable';
-import {reduxStore} from '../../../.storybook/decorators';
+import React from 'react';
 import {Provider} from 'react-redux';
+
+import {reduxStore} from '../../../.storybook/decorators';
+
+import {UnconnectedLibraryTable as LibraryTable} from './LibraryTable';
 
 export default {
   component: LibraryTable,

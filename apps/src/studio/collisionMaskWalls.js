@@ -1,5 +1,6 @@
-import Walls from './walls';
 import {toImageData, URIFromImageData} from '../imageUtils';
+
+import Walls from './walls';
 
 const BYTES_PER_PIXEL = 4;
 const BITS_PER_BYTE = 8;

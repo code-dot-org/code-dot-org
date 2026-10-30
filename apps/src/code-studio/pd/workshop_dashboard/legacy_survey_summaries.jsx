@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import Spinner from '../components/spinner';
+
+import Spinner from '../../../sharedComponents/Spinner';
 
 class LegacySurveySummaryTable extends React.Component {
   static propTypes = {

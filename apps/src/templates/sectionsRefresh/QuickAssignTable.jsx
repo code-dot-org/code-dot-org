@@ -1,10 +1,14 @@
-import React from 'react';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
-import moduleStyles from './sections-refresh.module.scss';
-import i18n from '@cdo/locale';
+import React from 'react';
+
 import {CourseOfferingCurriculumTypes as curriculumTypes} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import {assignmentCourseOfferingShape} from '@cdo/apps/templates/teacherDashboard/shapes';
+import i18n from '@cdo/locale';
+
 import {renderRows} from './QuickAssignTableHelpers';
-import {Heading4} from '@cdo/apps/componentLibrary/typography';
+
+import moduleStyles from './sections-refresh.module.scss';
 
 /*
 Represents the (collection of) tables in Curriculum Quick Assign.
@@ -17,6 +21,7 @@ export default function QuickAssignTable({
   setSelectedCourseOffering,
   updateCourse,
   sectionCourse,
+  selectedCourseUnavailable,
 }) {
   // Key is type of curriculum e.g. 'Course' or 'Module', which is the singular
   // version of the title we want for the column
@@ -26,7 +31,9 @@ export default function QuickAssignTable({
         <thead>
           <tr className={moduleStyles.headerRow}>
             <td className={moduleStyles.headerCell}>
-              <Heading4>{title}</Heading4>
+              <Typography variant="h4" gutterBottom>
+                {title}
+              </Typography>
             </td>
           </tr>
         </thead>
@@ -35,7 +42,8 @@ export default function QuickAssignTable({
             courseOfferings[marketingAudience][key],
             sectionCourse,
             updateCourse,
-            setSelectedCourseOffering
+            setSelectedCourseOffering,
+            selectedCourseUnavailable
           )}
         </tbody>
       </table>
@@ -56,8 +64,9 @@ export default function QuickAssignTable({
 
 QuickAssignTable.propTypes = {
   marketingAudience: PropTypes.string.isRequired,
-  courseOfferings: PropTypes.object.isRequired,
+  courseOfferings: assignmentCourseOfferingShape.isRequired,
   setSelectedCourseOffering: PropTypes.func.isRequired,
   updateCourse: PropTypes.func.isRequired,
   sectionCourse: PropTypes.object,
+  selectedCourseUnavailable: PropTypes.bool,
 };

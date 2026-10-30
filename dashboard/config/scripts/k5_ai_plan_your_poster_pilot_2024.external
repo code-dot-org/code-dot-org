@@ -1,0 +1,27 @@
+name 'k5_ai_plan_your_poster_pilot_2024'
+title 'Making Counters'
+
+
+markdown <<MARKDOWN
+#Using AI Tools in School
+
+<div>
+<img style=" float: left; width:25%; padding-top:10px" src="https://images.code.org/dfa6afa75c3ed875d9f83a42e6452bbc-image-1709763830890.png" />
+
+<div style="float: left; width: 70%; padding-left:20px">
+<h2>
+<strong>It's time to explore the data!</strong>
+</h2>
+
+**Step 1. Check out the student dataset:**  <a href="https://docs.google.com/spreadsheets/d/1t44C0ScGvgajfOEE6VE8sl7OQEJbgT1kvGDCnDgOPys/preview
+" target="_blank"> Student Dataset</a>.
+
+**Step 2. Answer the questions in the handout:**  <a href="https://docs.google.com/document/d/1rRpXQi3T4sl_lI4r5uw1h_btVQu_7M02NVoSjDXdMBk/template/preview" target="_blank"> Using AI Tools in School</a>.
+
+>Make sure to answer:
+> - Which columns in the dataset should you give to AI as your training data? Explain why.
+> - Which columns in the dataset would you want to take out of the training data? Explain why.
+> - What other data would you want to train the AI tool on? How would you collect that data?
+
+</div>
+MARKDOWN

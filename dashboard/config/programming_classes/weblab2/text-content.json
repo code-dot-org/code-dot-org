@@ -1,0 +1,14 @@
+{
+  "category_key": "javascript",
+  "content": "# Text Content\n\nThe `textContent` property represents the text inside an element. Use it to change what a heading, paragraph, button, or other page element says.",
+  "examples": "[{\"name\":\"Change a Message\",\"description\":\"This changes the text inside a selected element.\",\"code\":\"```\\nconst textArea = document.getElementById(\\\"textArea\\\");\\n\\ntextArea.textContent = \\\"Button One was clicked!\\\";\\n```\"},{\"name\":\"Read Text From an Element\",\"description\":\"This stores the current text inside an element.\",\"code\":\"```\\nconst statusMessage = document.getElementById(\\\"statusMessage\\\");\\n\\nlet currentText = statusMessage.textContent;\\n```\"}]",
+  "external_documentation": "",
+  "fields": "[]",
+  "key": "text-content",
+  "name": "Text Content",
+  "syntax": "`textArea.textContent = \"Button One was clicked!\";`",
+  "tips": "- Use `textContent` to update the words shown inside an element.\n- Put the new text in quotation marks.\n- Make sure the element has been selected before changing its `textContent`.\n- `textContent` changes text only, not HTML tags.\n- In Web Lab, `textContent` often appears inside event handlers after a button is clicked.",
+  "methods": [
+
+  ]
+}

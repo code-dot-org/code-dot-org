@@ -1,0 +1,14 @@
+name 'CSD U2L1-L1-2025'
+display_name 'Sample Personal Web Pages'
+description 'Click a web page to view template'
+
+sublevels
+level 'CSD U2L1-L1a-2025'
+level 'CSD U2L1-L1b-2025'
+level 'CSD U2L1-L1c-2025'
+level 'CSD U2L1-L1d-2025'
+level 'CSD U2L1-L1e-2025'
+
+hide_letters_lab2
+
+uses_lab2

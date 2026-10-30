@@ -1,0 +1,19 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 75,
+  "created_at": "2026-06-13T05:37:48.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Define Your Schema & Card Fields\r\n\r\n**Goal:** Decide which fields your dashboard will use and how one item’s data could appear.\r\n\r\nUse your selected dataset and project plan to complete the `Data Schema`, `Card View`, and `Filter Clarity Notes` sections. Leave the `App View` section blank for now.\r\n\r\n1. In the `Data Schema` section, list the fields you want to keep. Include each field’s data type and how it might be used, such as display, filter, sort, or transparency.\r\n2. In the `Card View` section, sketch how one item from your dataset could appear as a card. Show where the fields from your schema could appear.\r\n3. In the `Filter Clarity Notes` section, identify any fields you plan to use as filters and explain how they will help users find or understand the data.\r\n4. Add your completed SketchLab work to your Backpack.",
+    "name_suffix": "_2026",
+    "project_template_level_name": "iterating-with-ai-lesson11-level2a-template-v1-2026",
+    "display_name": "Schema & Card Design",
+    "bubble_choice_description": "Decide which fields to keep and outline your schema. Then sketch a simple card layout to show how these fields will appear in your dashboard",
+    "thumbnail_url": "https://images.code.org/d2f6256449032ef4cee95fe915800e7c-mood-board.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-06-13T05:37:48.183+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson11-level2-test_2025-pilot_2026\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson11-level2-test_2025-pilot_2026\"},{\"changed_at\":\"2026-06-13 05:40:14 +0000\",\"changed\":[\"project_template_level_name\",\"long_instructions\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-06-13 05:44:28 +0000\",\"changed\":[\"name\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-06-13 05:46:56 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-06-13 21:48:54 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-06-13 21:51:06 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-06-13 21:53:16 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-06-14 15:34:16 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-06-14 15:40:51 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-06-14 15:59:24 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-06-14 23:44:21 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-06-14 23:47:05 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Sketchlab>

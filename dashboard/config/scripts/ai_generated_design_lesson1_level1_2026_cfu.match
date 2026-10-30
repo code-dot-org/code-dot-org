@@ -1,0 +1,18 @@
+name 'ai-generated-design-lesson1-level1_2026-cfu'
+title 'Check Your Understanding'
+description 'Match the web app component to its description.'
+
+question 'gallery cards'
+answer 'the boxes that group related information, each with a picture, title, and short description'
+
+question 'navigation bar'
+answer 'the menu across the top of a webpage that helps users move between pages or sections'
+
+question 'footer'
+answer 'the strip at the bottom that often includes contact info or copyright details'
+
+question 'hero section'
+answer 'the large banner near the top that introduces the main idea, with a heading, short text, and usually a "call to action" button'
+
+height '100'
+allow_multiple_attempts true

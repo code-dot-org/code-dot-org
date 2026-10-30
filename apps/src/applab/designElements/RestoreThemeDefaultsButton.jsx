@@ -1,8 +1,8 @@
-import React from 'react';
-import applabMsg from '@cdo/applab/locale';
-import commonStyles from '../../commonStyles';
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
-import style from './restore-theme-defaults-button.module.scss';
+import React from 'react';
+
+import applabMsg from '@cdo/applab/locale';
 
 /**
  * A restore theme defaults button
@@ -15,14 +15,14 @@ class RestoreThemeDefaultsButton extends React.Component {
   render() {
     const {handleRestore} = this.props;
     return (
-      <button
-        type="button"
-        style={{...commonStyles.button}}
-        className={style.restoreButton}
+      <MuiButton
+        variant="outlined"
+        color="secondary"
+        size="small"
         onClick={handleRestore}
       >
         {applabMsg.designWorkspace_restoreThemeButton()}
-      </button>
+      </MuiButton>
     );
   }
 }

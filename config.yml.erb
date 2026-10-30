@@ -5,7 +5,6 @@ _env:       <%=env == 'production' ? '' : "_#{env}"%>
 _test_env_num: <%=env == 'test' ? ENV['TEST_ENV_NUMBER'] : '' %>
 unit_test:  <%=!!ENV['UNIT_TEST']%>
 ci:         <%=!!ENV['CI']%>
-ci_test:    <%=unit_test || ci%>
 root_dir:   <%=__dir__%>
 name:       <%=`hostname`.strip%>
 rack_env:   :<%=env%>
@@ -25,14 +24,13 @@ dashboard_facebook_key:         !Secret
 dashboard_facebook_secret:      !Secret
 dashboard_google_key:           !Secret
 dashboard_google_secret:        !Secret
-dashboard_windowslive_key:      !Secret
-dashboard_windowslive_secret:   !Secret
 dashboard_microsoft_key:        !Secret
 dashboard_microsoft_secret:     !Secret
 dashboard_clever_key:           !Secret
 dashboard_clever_secret:        !Secret
-dashboard_schoolproject_key:    !Secret
-dashboard_schoolproject_secret: !Secret
+dashboard_classlink_key:        !Secret
+dashboard_classlink_secret:     !Secret
+classlink_roster_api_key:       ''
 
 # Recaptcha
 recaptcha_site_key: !Secret
@@ -132,6 +130,10 @@ jotform_forms:
     post201:     90065524560150
     facilitator: 91405279991164
 
+# HubSpot
+hubspot_portal_id:              !Secret
+hubspot_admin_interest_form_id: !Secret
+
 # PagerDuty
 pagerduty_token: !Secret
 
@@ -140,17 +142,19 @@ pardot_password:
 pardot_user_key:
 pardot_username:
 pardot_private_key:
+pardot_client_id:
+pardot_client_secret:
 
 # Honeybadger
 honeybadger_api_token:
 cronjobs_honeybadger_api_key:  !Secret
 dashboard_honeybadger_api_key: !Secret
-pegasus_honeybadger_api_key:   !Secret
 
 # Zendesk
 zendesk_dev_token: !Secret
 
 # Webpurify
+webpurify_api_endpoint: https://api1.webpurify.com/services/rest
 webpurify_key: !Secret
 
 # Github
@@ -168,53 +172,29 @@ gdrive_export_secret:     !Secret
 
 # Mapbox
 mapbox_upload_token:
-mapbox_upload_tileset:
 mapbox_access_token:      !Secret
-mapbox_access_tileset:    'censustiles'
 
-# Crowdin
-crowdin_codeorg_api_key:
-
-crowdin_projects:
-  codeorg:
-    id: 26074
-    source_language: 'enus'
-  hour-of-code:
-    id: 55536
-    source_language: 'en'
-  codeorg-markdown:
-    id: 314545
-    source_language: 'en'
-  codeorg-restricted:
-    id: 464582
-    source_language: 'en'
-  codeorg-testing:
-    id: 346087
-    source_language: 'en'
-  codeorg-markdown-testing:
-    id: 547997
-    source_language: 'en'
-  hour-of-code-test:
-    id: 634038
-    source_language: 'en'
-  codeorg-restricted-test:
-    id: 634320
-    source_language: 'en'
-
-crowdin_project_test_mapping:
-  codeorg: codeorg-testing
-  codeorg-markdown: codeorg-markdown-testing
-  codeorg-restricted: codeorg-restricted-test
-  hour-of-code: hour-of-code-test
-
-# Azure Content Moderator
-azure_content_moderation_endpoint: https://eastus.api.cognitive.microsoft.com/contentmoderator
-azure_content_moderation_key:
+# Azure AI Content Safety
+azure_ai_content_safety_endpoint: https://cdo-ai-content-safety.cognitiveservices.azure.com
+azure_ai_content_safety_key: !Secret
 
 # Credentials for SauceLabs.com, used for running selenium tests against
 # multiple browsers
 saucelabs_username:
 saucelabs_authkey:
+saucelabs_tunnel_name:
+
+# Credentials for AWS Device Farm, used as an alternative to SauceLabs for
+# running selenium tests against multiple browsers.
+
+# UUID of a Device Farm Desktop Browser Testing project. It is combined with the
+# region and runtime AWS account id to form the full project ARN in
+# lib/cdo/aws/device_farm.rb. It is not secret.
+device_farm_desktop_project_id:
+
+# ARN of a Mobile Device Testing project, used for running mobile browser tests
+# (iPhone, iPad, etc.). Treated as secret because it contains AWS account id.
+device_farm_mobile_project_arn:
 
 # Credentials for applitools.com, used for running automated visual tests
 applitools_eyes_api_key:      !Secret
@@ -228,21 +208,6 @@ slack_token:                    !Secret
 slack_bot_token:                !Secret
 slack_log_room:                 <%=env%>
 hip_chat_logging:               false
-# Logging endpoint used by broken link checker.
-slack_endpoint_broken_links:
-
-# Credentials/configuration for connecting to Firebase to use data blocks or data browser
-# in Applab.
-firebase_name: cdo-v3-<%=env%>
-firebase_secret: !Secret
-firebase_shared_secret: !Secret
-firebase_channel_id_suffix: ''
-firebase_max_channel_writes_per_15_sec: 300
-firebase_max_channel_writes_per_60_sec: 600
-firebase_max_table_count: 10
-firebase_max_table_rows: 20000
-firebase_max_record_size: 4096
-firebase_max_property_size: 4096
 
 # Azure keys for speech service
 azure_speech_service_key: !Secret
@@ -263,9 +228,19 @@ acapela_storage_password:
 acapela_ephemeral_app:
 acapela_ephemeral_password:
 
-# Credentials for new relic logging. Used to log apps build times.
-new_relic_license_key:
-newrelic_logging: false
+# Enables OpenTelemetry instrumentation and exporting to the OpenTelemetry Collector. See `dashboard/engines/observability/` for more details.
+enable_opentelemetry: false
+
+# Sentry trace and error reporting.
+enable_sentry: false
+# DSN for the Dashboard Rails backend Sentry project.
+dashboard_sentry_dsn: !Secret
+# DSN for the apps/ webpack bundle Sentry project.
+frontend_apps_sentry_dsn: !Secret
+# DSN for the frontend/apps/studio Vite app Sentry project.
+frontend_studio_sentry_dsn: !Secret
+# Organization auth token with the project:releases scope; aws/ci_build records each deploy with it.
+sentry_releases_token: !Secret
 
 # Credentials for Google-federated AWS access.
 # (Deprecated: move these configuration values to AWS config file)
@@ -276,6 +251,15 @@ google_client_secret:
 # Default AWS region for the application.
 aws_region: us-east-1
 
+# Override the endpoint used for S3, typically to point to an emulated local
+# instance of the service; LocalStack, MinIO, etc. Particularly useful for
+# developers without AWS credentials; see `/docker/developers` for more,
+# particularly `docker-compose.minio.yml`
+aws_s3_endpoint:
+aws_s3_access_key_id:
+aws_s3_secret_access_key:
+aws_s3_emulated: false
+
 # Amazon Future Engineer integration
 afe_pardot_form_handler_url:
 csta_jotform_api_key: !Secret
@@ -284,7 +268,6 @@ csta_jotform_form_id: !Secret
 ### Service configurations (urls, endpoints, etc)
 
 freegeoip_host:
-geocoder_redis_url:
 solr_server: localhost
 
 # S3 bucket and (environment-specific) path-prefix configuration
@@ -303,14 +286,44 @@ libraries_s3_directory:    libraries<%=_env%>
 videos_s3_bucket:          videos.code.org
 videos_url:                //videos.code.org
 
+# S3 bucket for runtime-generated user content (podcasts, etc). The bucket is
+# created by the stack's s3.yml.erb CloudFormation template, named from the
+# stack's studio_subdomain rather than the user-facing dashboard hostname, so
+# we enumerate per env here instead of deriving at runtime. Adhocs and other
+# environments override this in locals.yml as needed.
+#
+# Planned: rename the prod bucket to org.code.studio.user-content (matching the
+# user-facing FQDN) so this map collapses to a single value derivable from env.
+user_content_s3_bucket: <%=
+  {
+    'production'   => 'org.code.autoscale-prod-studio.user-content',
+    'staging'      => 'org.code.staging-studio.user-content',
+    'test'         => 'org.code.test-studio.user-content',
+    'levelbuilder' => 'org.code.levelbuilder-studio.user-content',
+    # Development has no bucket of its own; borrow the test bucket. Requires
+    # AWS credentials with access to it (see aws_credentials in locals.yml).
+    'development'  => 'org.code.test-studio.user-content',
+  }[env]
+%>
+
+# Dashboard Redis instance (uses ElastiCache on prod)
+#
+# Please use the CDO.redis_url instance for all your dashboard Redis needs, just use
+# a redis key prefix for new namespacing. Do not introduce new Redis instances unless
+# you have a specific technical need for why this can't simply be on the main instance.
+redis_url: redis://localhost:6379/0
+
+# SESSION_STORE_MIGRATION_DELETE_ME
+# We are migrating from session_store to redis. Its the same definitions, but with a new
+# name to reflect that multiple dashboard features will be using the same instance.
+#
+# We expect the migration to be complete after November 2025, at which point we can remove
+# this component (and delete session_store.yml.erb)
+old_session_store_server:
+
 # Memcached (ElastiCache)
 memcached_endpoint:
 memcached_hosts:
-
-# Redis (ElastiCache)
-redis_primary:
-redis_read_addresses:
-redis_read_ports:
 
 # Netsim
 netsim_redis_groups:
@@ -322,8 +335,16 @@ netsim_shard_expiry_seconds: 7200
 dcdo_table_name:       dcdo_<%=env%>
 gatekeeper_table_name: gatekeeper_<%=env%>
 
+# Allows DCDO settings via cookies. See: `Rack::CookieDCDO`
+use_cookie_dcdo: false
+
+# Allows Geolocation to be altered via cookies.
+# See: 'lib/cdo/rack/geolocation_override.rb'
+# and: 'dashboard/test/ui/features/xteam/gdpr_dialog.feature'
+use_geolocation_override: false
+
 # Poste (internal transactional email processing framework)
-poste_host: <%= code_org_url.sub('//', '') %>
+poste_host: '<%= code_org_url.sub('//', '') %>'
 poste_attachment_dir:
 poste_smtp_password: !Secret
 poste_smtp_server:   email-smtp.us-east-1.amazonaws.com
@@ -338,7 +359,7 @@ chef_org_name: code-dot-org
 chef_client_key: <%="#{ENV['HOME']}/.chef/#{chef_node_name}.pem"%>
 chef_validation_client_name: <%="#{chef_org_name}-validator"%>
 chef_validation_key: <%="#{ENV['HOME']}/.chef/#{chef_validation_client_name}.pem"%>
-chef_server_url: '<%="https://api.opscode.com/organizations/#{chef_org_name}"%>'
+chef_server_url: '<%="https://code-org.saas.chef.io/organizations/#{chef_org_name}"%>'
 
 # Cloudfront keys for private content
 cloudfront_key_pair_id: !Secret
@@ -349,21 +370,17 @@ discourse_sso_secret:
 
 ### Application configuration defaults
 
-# Installs bin/i18n dependencies
-build_i18n: false
-
 i18n_backend:
 cache:
 app_servers: {}
 rack_mini_profiler_enabled:
 https_development:
 default_scheme: '<%=(env == 'development') || ci ? 'http:' : 'https:'%>'
-allowed_iframe_ancestors: http://*.disney.com http://*.diznee.net cuantrix.mx <%=pegasus_site_host%> <%=dashboard_site_host%> curriculum.code.org https://*.lausd.iap.allhere.co
+allowed_iframe_ancestors: 'https://*.schoology.com http://*.disney.com http://*.diznee.net cuantrix.mx <%=pegasus_site_host%> <%=dashboard_site_host%> curriculum.code.org https://*.iap.lausd.net'
 
 skip_locales:
 secret_pictures_csv:
 no_https_store:
-firebase_debug:
 pd_teacher_application_list_secret_key:
 
 # Configure CloudFront to serve static, custom, student-friendly page when web application returns error HTTP response.
@@ -372,19 +389,24 @@ custom_error_response: true
 # Whether rake:build should rebuild the apps package
 build_apps: false
 
+# Whether rake:build should rebuild the studio package
+build_studio: false
+
 # Whether dashboard should use your local build of the apps package.
 # If false, dashboard will try to use a prepackaged version from S3.
 use_my_apps:
+
+# Whether dashboard should use your local build of the studio package.
+# If false, dashboard will try to use a prepackaged version from S3.
+use_my_studio:
 
 optimize_webpack_assets: true
 
 optimize_rails_assets: true
 
-# Allows your local server to render non-English locales, defaults to false in development.
-# If false, choosing a locale other than English will have no effect.
-# Note: You may need to be in an incognito window to see changes
-# due to a difference in the language cookie between production and localhost.
-load_locales:
+# Improves local environment load time by loading only the i18n data for the current locale.
+# Note: Not intended for production use.
+lazy_load_i18n: false
 
 # Whether to skip the slow `rake seed:all` command during `rake build`.
 # Until you manually run `rake seed:all` or disable this flag, you won't
@@ -399,12 +421,6 @@ cache_assets_in_memory:
 # Encryption key required for decoding certain protected level sources.
 # Contributors should ask a Code.org engineer for this if needed.
 properties_encryption_key: !Secret
-
-start_circle_builds_branch:
-start_circle_builds_token:
-circle_build_num: <%=ENV['CIRCLE_BUILD_NUM']%>
-circle_node_index: <%=ENV['CIRCLE_NODE_INDEX']%>
-circle_run_identifier: <%=circle_build_num ? "CIRCLE-BUILD-#{circle_build_num}-#{circle_node_index}" : nil%>
 
 ignore_eyes_mismatches:
 
@@ -421,21 +437,22 @@ dashboard_devise_pepper:   !Secret
 dashboard_secret_key_base: !Secret
 dashboard_host: 0.0.0.0
 dashboard_port: 3000
-dashboard_workers: 8
+dashboard_workers:
 dashboard_web_server_name: dashboard
 dashboard_sock:
+puma_control_server_relative_socket_path: tmp/pumactl.sock
+puma_control_server_token: !Secret
 
-# Causes dashboard-server to run pegasus as middleware, starting both in a
-# single command.  This is preferred (and default) in development mode.
-dashboard_enable_pegasus: false
+# Session timeout in days. Controls both the Devise timeout and the Rails
+# session store (Redis) TTL. Targeting a little over two weeks, so students
+# should remain authenticated through winter break.
+dashboard_session_ttl_days: 18
 
 # Pegasus
-override_pegasus:
+override_pegasus: 'code.org' # All deployments link to the production corporate site, now that Pegasus is deprecated.
+pegasus_hostname: 'code.org'
 pegasus_host:
-pegasus_sock:
-pegasus_port: 3000
-pegasus_web_server_name: pegasus
-pegasus_workers: 8
+pegasus_port:
 sinatra_session_secret:
 
 # Configures Pegasus `settings.read_only`, which affects some (legacy) routes. Not actively used(?)
@@ -451,14 +468,11 @@ levelbuilder_mode:
 use_local_header_color:
 
 default_hoc_mode: false  # overridden by 'hoc_mode' DCDO param, except in :test
-default_hoc_launch: ''      # overridden by 'hoc_launch' DCDO param, except in :test
 
 # teacher_application_mode values: 'open', 'closing-soon', 'closed'
 default_teacher_application_mode: 'closed' # overridden by 'teacher_application_mode' DCDO param, except in :test
 
 default_courses_show_ai: false # overridden by 'courses_show_ai' DCDO param, except in :test
-
-localize_apps: false
 
 partners: []
 
@@ -483,12 +497,8 @@ disable_s3_image_uploads: false
 
 channels_api_secret: !Secret
 
-# Whether to prefix bundler commands with 'sudo'.
-# It may be useful to set this false when doing local development on Linux.
-bundler_use_sudo: <%=chef_managed%>
-
 daemon: <%=name == 'production-daemon'%>
-image_optim: <%=chef_managed && !ci_test%>
+image_optim: <%=chef_managed && running_web_application?%>
 
 # Used to export data on professional learning to gsheets
 enrollments_summer_2020_gsheet_key:
@@ -499,12 +509,8 @@ eir_teacher_enrollments_gsheet_key: !Secret
 # Referenced in Chef config, but not sure if they are still used anywhere?
 # TODO: verify these are intentionally no longer used and remove references from Chef config.
 build_blockly: false
-geocoder_read_replica_1:
-geocoder_read_replica_2:
 browserstack_username:
 browserstack_authkey:
-dashboard_powerschool_key:
-dashboard_powerschool_secret:
 x-dashboard_twitter_key:
 x-dashboard_twitter_secret:
 ga_service_account_email:
@@ -518,10 +524,22 @@ sendy_db_reader:
 sendy_db_writer:
 developers_channel_id:
 twilio_phone:
-level_sources_redis_url:
 discourse_sso_url:
 discourse_url:
 pledge_map_table_id:
+
+# SESSION_STORE_MIGRATION_DELETE_ME
+#
+# TODO: we no longer use these, but they are still being injected into globals.yml by chef.
+# To remove them, we need to figure out where chef is getting the values from.
+geocoder_read_replica_1:
+geocoder_read_replica_2:
+geocoder_redis_url:
+level_sources_redis_url:
+redis_primary:
+redis_read_addresses:
+redis_read_ports:
+session_store_server:
 
 #### Parameters related to CloudFormation-stack deployment
 stack_name: <%=env%>
@@ -532,29 +550,29 @@ instance_type:
 branch:
 database_username:
 
-# Data-stack parameters.
-rds_host:
-rds_identifier:
-rds_username:
-rds_password:
-redshift_database:
+## Redshift
+redshift_cluster_id:
+# Legacy Redshift configuration (for connecting with a SQL client via the `pg` gem).
+redshift_host:
 redshift_username:
-rds_backup_account:
-logs_bucket:
+redshift_password:
 
 ### Database configuration
-
-redshift_host:
-redshift_password:
 
 devinternal_db_writer: !Secret
 
 # Until we have a better configuration setting service, use AWS Secrets Manager to store these non-secret values.
 db_cluster_id: !StackSecret
+# 'proxysql', 'rdsproxy', or 'none'. Unset keeps whatever this deployment connects through today.
+db_proxy: !StackSecret
 db_endpoint_writer: !StackSecret
+db_endpoint_writer_port: !StackSecret
 db_endpoint_proxy_writer: !StackSecret
+db_endpoint_proxy_writer_port: !StackSecret
 db_endpoint_proxy_reader: !StackSecret
+db_endpoint_proxy_reader_port: !StackSecret
 db_endpoint_proxy_reporting: !StackSecret
+db_endpoint_proxy_reporting_port: !StackSecret
 
 # Database credentials (username & password) are stored in an AWS Secret in a JSON format required by RDS Proxy:
 # https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-proxy-setup.html#rds-proxy-secrets-arns
@@ -566,24 +584,18 @@ db_credential_reader: !StackSecret
 db_proxy_admin:
 
 db_writer: !Secret
-reporting_db_writer: <%=db_writer%>
 
 dashboard_db_name: <%= "dashboard_#{env}#{_test_env_num}" %>
 pegasus_db_name: <%= ENV['USE_PEGASUS_UNITTEST_DB'] ? 'pegasus_unittest' : "pegasus#{_env}" %>
 
 # Default reader endpoints to writer endpoint.
 db_reader: <%=db_writer%>
-reporting_db_reader: <%=reporting_db_writer%>
 
 # Default DB-specific endpoints to base endpoint plus db name.
 dashboard_db_reader:           '<%="#{db_reader}#{dashboard_db_name}"%>'
 dashboard_db_writer:           '<%="#{db_writer}#{dashboard_db_name}"%>'
 pegasus_db_reader:             '<%="#{db_reader}#{pegasus_db_name}"%>'
 pegasus_db_writer:             '<%="#{db_writer}#{pegasus_db_name}"%>'
-dashboard_reporting_db_reader: '<%="#{reporting_db_reader}#{dashboard_db_name}"%>'
-dashboard_reporting_db_writer: '<%="#{reporting_db_writer}#{dashboard_db_name}"%>'
-pegasus_reporting_db_reader:   '<%="#{reporting_db_reader}#{pegasus_db_name}"%>'
-pegasus_reporting_db_writer:   '<%="#{reporting_db_writer}#{pegasus_db_name}"%>'
 
 # Configurations for making calls to the Immersive Reader API on Azure
 imm_reader_tenant_id:     '01521c57-6696-4ac9-b8ba-d2f2955893bd'
@@ -608,25 +620,124 @@ open_weather_api_key: !Secret
 use_localhost_javabuilder:
 local_javabuilder_stack_name:
 
-# Amplitude keys
-
-# Music lab key
-amplitude_api_key: !Secret
-# General CDO key
-cdo_amplitude_api_key:
-
 # API Key for doublethedonation.com
 ddconf_api_key: !Secret
 
 # JSON Web Key Set and private key data
-jwks_data: <%=File.read("#{File.expand_path(File.dirname(__FILE__))}/dashboard/public/oauth/jwks.json")%>
+jwks_data:
+  keys:
+    - kty: "RSA"
+      n: "o-pwMF3Hf7iy_Rev-XEf4aPxCYxYiOevIXZVrQuQPVU8JE80XcNlrq8az8c3afp4G79nAVRWDxWTsYQXTNnr-HEBBklO_w5M-h6wIgMCnA9VDJtATgIlqNJ5hIQ37U_1Mmw3oLYJVXaKhkjD-GNFTF0r6rKjeAOp4sWoKTn83r2Tyi8ZGM2l3IQ9NYsurFrAT7DALu01V5EsM_sdBezc6r-LkGyTkIQqS4qDV7qesJE9cUe2FVXfnedWLeYBCsq-tIh50XVMB1FMFa97kN3UfS3rigQYAq-LkDc3e7rHB0DqduHJNZKiHBoYOra484N4nmDYj-cSoBkDzhyu84ni4w"
+      e: "AQAB"
+      use: "sig"
+      alg: "RS256"
+      kid: "yNt3MOdUenNV_bn6IKboK2d8iJBL2hDJ_RoMhUtO33Q"
 jwk_private_key_data: !Secret
 
 # Credentials for OpenAI API
-openai_chat_completion_api_key: !Secret
-openai_chat_completion_org_id: !Secret
 openai_evaluate_rubric_api_key: !Secret
-openai_evaluate_rubric_org_id:
+openai_student_learning_api_key: !Secret
+openai_measures_of_learning_api_key: !Secret
+openai_lesson_summaries_api_key: !Secret
+openai_lesson_deep_dive_api_key: !Secret
+elevenlabs_api_key: !Secret
+
+# Credentials for Langfuse API
+tutor_langfuse_secret_key: !Secret
+tutor_langfuse_public_key: !Secret
+ta_langfuse_secret_key: !Secret
+ta_langfuse_public_key: !Secret
+adaptive_langfuse_secret_key: !Secret
+adaptive_langfuse_public_key: !Secret
+
+# Credentials for Google Gemini API
+google_gemini_ai_chat_lab_api_key: !Secret
+google_gemini_ai_tutor_api_key: !Secret
+
+# AI Gateway
+ai_gateway_auth_key: !Secret
+ai_gateway_auth_public_key: !Secret
+ai_gateway_auth_key_passphrase: !Secret
+# One key pair per environment; the gateway verifies a token with the public key of the environment its kid (key ID) names.
+ai_gateway_jwt_auth_key: !Secret
+ai_gateway_jwt_auth_public_key: !Secret
+ai_gateway_jwt_auth_key_passphrase: !Secret
+
+# Credentials for Google Vertex API
+google_vertex_ai_tutor_service_account_key: !Secret
+google_vertex_ai_chat_service_account_key: !Secret
 
 # AI Proxy for OpenAI API
 ai_proxy_origin: https://aiproxy-test.code.org
+
+# Statsig API keys
+# These are dummy values for all environments except Production and our managed
+# Test web application server, which are overridden in production.yml.erb
+# and test.yml.erb. The Statsig SDK expects the prefixed key type (secret-) in
+# the string, otherwise it will throw an error on initialization, even in
+# local_mode.
+statsig_server_secret_key: 'secret-fake-key'
+statsig_api_client_key: 'client-fake-key'
+statsig_api_client_key_session_replay: 'client-fake-key'
+
+# MailGun/MailJet API keys
+mailjet_api_key:
+mailjet_secret_key:
+mailgun_api_key:
+
+### ActiveJob configuration
+
+# ActiveJob queues
+active_job_queues:
+  :default: :default
+  :mailers: :mailers
+  :mailjet: :mailjet
+  :low_priority: :low_priority
+
+# Delayed Job priority per ActiveJob queue. Lower numbers run first.
+# See dashboard/config/initializers/delayed_job_config.rb.
+active_job_queue_priorities:
+  :mailers: 0
+  :mailjet: 0
+  :default: 0
+  :low_priority: 10
+
+# Active Job priority range for the workers started by `rake build:start_active_job_workers`.
+# Blank leaves the range open. Ensure that another worker pool consumes the remaining jobs
+# if you restrict the priority range here.
+# Command-line --min-priority/--max-priority flags take precedence.
+active_job_worker_min_priority:
+active_job_worker_max_priority:
+
+# ActiveJob Queue Adapter
+active_job_queue_adapter: :delayed_job
+
+# Number of workers to start when running `rake build:start_active_job_workers`:
+active_job_backend_n_workers_to_start: 10
+active_job_backend_rolling_restart_in_n_batches: 2
+
+# aiproxy credentials
+aiproxy_api_key: !Secret
+
+# CDO Contentful engine configs for Marketing space
+contentful_space_id: "90t6bu6vlf76"
+contentful_api_key: !Secret
+contentful_hostname: cdn.contentful.com
+
+# CDO Contentful engine configs for Hour of AI space
+contentful_hour_of_ai_access_token: !Secret
+contentful_hour_of_ai_space: hwu8vzk5v0g2
+contentful_hour_of_ai_environment: master
+contentful_hour_of_ai_api_url: preview.contentful.com
+
+# HoC/HoAI tracking configuration. See `dashboard/engines/hoc_legacy`
+hoc_tracking_enabled: true
+
+# Curriculum overrides for demo sections.
+# Curriculum override hashes are keyed by demo type.
+# See Policies::DemoSections for usage.
+demo_section_units:
+demo_section_unit_groups:
+
+# Dummy course for attaching resources to just-in-time PL content
+jit_pl_course_name: 'just-in-time-pl'

@@ -1,0 +1,19 @@
+name 'networks-internet-lesson4-level2_v2-2025'
+editor_experiment ''
+title 'Check for Understanding'
+type 'multi1'
+question 'In the Internet Simulator activity, you noticed that your messages did not always take the same path to reach their destination. What is the most likely reason for this behavior?'
+
+wrong 'The routers were broken and could not send the messages directly.'
+right 'The Internet is designed with multiple paths (redundancy) to ensure data can still travel if one path is unavailable.'
+wrong 'The messages needed to take longer paths to avoid network traffic.'
+wrong 'The IP addresses of the routers kept changing during the activity.'
+
+
+
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
+
+allow_multiple_attempts true

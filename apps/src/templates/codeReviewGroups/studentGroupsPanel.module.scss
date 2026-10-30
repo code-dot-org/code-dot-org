@@ -1,0 +1,32 @@
+.unassignedStudentsPanel {
+  width: 400px;
+}
+
+.groupsPanel {
+  width: 500px;
+}
+
+.header {
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 10px;
+  border: 1px solid var(--borders-neutral-strong);
+  background: var(--background-neutral-tertiary);
+  font-weight: var(--font-weight-semi-bold);
+  font-size: 14px;
+}
+
+.headerTitle {
+  margin: 5px;
+}
+
+.groupsContainer {
+  display: flex;
+  flex-direction: column;
+  height: 355px;
+  overflow: auto;
+  border: 1px solid var(--borders-neutral-primary);
+  padding: 10px 4px 0 0;
+}

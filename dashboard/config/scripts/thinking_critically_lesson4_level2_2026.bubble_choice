@@ -1,0 +1,10 @@
+name 'thinking_critically_lesson4_level2_2026'
+display_name 'AI Chat: Co-Creation with AI'
+description 'Continue with the same topic to learn about saving your chats into the Backpack Tool.'
+
+sublevels
+level 'thinking_critically_lesson4_level2a_2026'
+level 'thinking_critically_lesson4_level2b_2026'
+level 'thinking_critically_lesson4_level2c_2026'
+
+uses_lab2

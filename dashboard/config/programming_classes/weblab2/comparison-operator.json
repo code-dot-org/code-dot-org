@@ -1,0 +1,14 @@
+{
+  "category_key": "javascript",
+  "content": "# Comparison Operator\n\nA comparison operator checks how two values relate to each other. Use comparison operators in conditions when your app needs to check values like a score, temperature, choice, or app state.",
+  "examples": "[{\"name\":\"Check the Temperature\",\"description\":\"Show a message when the temperature is above 70.\",\"code\":\"```\\nif (temperature \\u003e 70) {\\n  message.textContent = \\\"It is warm outside.\\\";\\n} else {\\n  message.textContent = \\\"It is not warm yet.\\\";\\n}\\n```\"}]",
+  "external_documentation": "",
+  "fields": "[]",
+  "key": "comparison-operator",
+  "name": "Comparison Operator",
+  "syntax": "`temperature > 70`",
+  "tips": "- Use comparison operators inside conditions like `if` statements.\n- `>` means greater than, and `<` means less than.\n- `>=` means greater than or equal to, and `<=` means less than or equal to.\n- Use `===` to check whether two values are equal.\n- In Web Lab, comparison operators are often used to check numbers, strings, or booleans before updating the page.",
+  "methods": [
+
+  ]
+}

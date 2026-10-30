@@ -1,0 +1,27 @@
+name 'ai-and-algorithmic-decisions-preassessment_2026'
+title 'AI and Algorithmic Decisions Pre-Assessment'
+submittable 'true'
+anonymous 'false'
+activity_guide_level 'false'
+
+page
+text 'ai-and-algorithmic-decisions-preassessment-intro_2026'
+level 'ai-and-algorithmic-decisions-preassessment-q1_2026'
+level 'ai-and-algorithmic-decisions-preassessment-q2_2026'
+level 'ai-and-algorithmic-decisions-preassessment-q3_2026'
+level 'ai-and-algorithmic-decisions-preassessment-q4_2026'
+level 'ai-and-algorithmic-decisions-preassessment-q5_2026'
+
+page
+level 'ai-and-algorithmic-decisions-preassessment-q6_2026'
+level 'ai-and-algorithmic-decisions-preassessment-q7_2026'
+level 'ai-and-algorithmic-decisions-preassessment-q8_2026'
+level 'ai-and-algorithmic-decisions-preassessment-q9_2026'
+level 'ai-and-algorithmic-decisions-preassessment-q10_2026'
+
+page
+level 'ai-and-algorithmic-decisions-preassessment-q11_2026'
+level 'ai-and-algorithmic-decisions-preassessment-q12_2026'
+level 'ai-and-algorithmic-decisions-preassessment-q13_2026'
+level 'ai-and-algorithmic-decisions-preassessment-q14_2026'
+level 'ai-and-algorithmic-decisions-preassessment-q15_2026'

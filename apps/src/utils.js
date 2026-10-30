@@ -1,10 +1,12 @@
-import $ from 'jquery';
 import Immutable from 'immutable';
+import $ from 'jquery';
+import md5 from 'md5';
 import RGBColor from 'rgbcolor';
+
 import {Position} from './constants';
 import {dataURIFromURI} from './imageUtils';
+
 import './polyfills';
-import md5 from 'md5';
 
 /**
  * Checks whether the given subsequence is truly a subsequence of the given sequence,
@@ -174,29 +176,6 @@ Function.prototype.inherits = function (parent) {
   this.prototype.constructor = this;
   this.superPrototype = parent.prototype;
 };
-
-/**
- * Wrap a couple of our Blockly number validators to allow for ???.  This is
- * done so that level builders can specify required blocks with wildcard fields.
- */
-export function wrapNumberValidatorsForLevelBuilder() {
-  var nonNeg = Blockly.FieldTextInput.nonnegativeIntegerValidator;
-  var numVal = Blockly.FieldTextInput.numberValidator;
-
-  Blockly.FieldTextInput.nonnegativeIntegerValidator = function (text) {
-    if (text === '???') {
-      return text;
-    }
-    return nonNeg(text);
-  };
-
-  Blockly.FieldTextInput.numberValidator = function (text) {
-    if (text === '???') {
-      return text;
-    }
-    return numVal(text);
-  };
-}
 
 /**
  * Return a random value from an array
@@ -372,7 +351,7 @@ export function showGenericQtip(targetElement, title, message, position) {
         <p>${message}</p>
       `,
         title: {
-          button: $('<button class="tooltip-x-close"/>'),
+          button: $('<div class="tooltip-x-close"/>'),
         },
       },
       position,
@@ -391,22 +370,10 @@ export function showGenericQtip(targetElement, title, message, position) {
     .qtip('show');
 }
 
-export function showUnusedBlockQtip(targetElement) {
-  const msg = require('@cdo/locale');
-  const title = msg.unattachedBlockTipTitle();
-  const message = msg.unattachedBlockTipBody();
-  const position = {
-    my: 'bottom left',
-    at: 'top right',
-  };
-
-  showGenericQtip(targetElement, title, message, position);
-}
-
 /**
  * @param {string} key
  * @param {string} defaultValue
- * @return {string}
+ * @return {string} returns the value of the key in localStorage, null if not set or the defaultValue if there is an error
  */
 export function tryGetLocalStorage(key, defaultValue) {
   if (defaultValue === undefined) {
@@ -812,9 +779,9 @@ export function resetAniGif(element) {
 export function interpolateColors(from, to, value) {
   const fromRGB = new RGBColor(from);
   const toRGB = new RGBColor(to);
-  const r = fromRGB.r * (1 - value) + toRGB.r * value;
-  const g = fromRGB.g * (1 - value) + toRGB.g * value;
-  const b = fromRGB.b * (1 - value) + toRGB.b * value;
+  const r = Math.round(fromRGB.r * (1 - value) + toRGB.r * value);
+  const g = Math.round(fromRGB.g * (1 - value) + toRGB.g * value);
+  const b = Math.round(fromRGB.b * (1 - value) + toRGB.b * value);
   return `rgb(${r}, ${g}, ${b})`;
 }
 
@@ -860,14 +827,20 @@ export function calculateOffsetCoordinates(element, clientX, clientY) {
  * @param {string} text
  * @param {string} locale Optional.
  * @param {string} authenticityToken Rails authenticity token. Optional.
+ * @param {boolean} extractTextFromJs Whether to extract user-written text from JavaScript before checking.
  * @returns {Array<string>|null} Array of profane words.
  */
-export const findProfanity = (text, locale, authenticityToken = null) => {
+export const findProfanity = (
+  text,
+  locale,
+  authenticityToken = null,
+  extractTextFromJs = false
+) => {
   let request = {
     url: '/profanity/find',
     method: 'POST',
     contentType: 'application/json;charset=UTF-8',
-    data: JSON.stringify({text, locale}),
+    data: JSON.stringify({text, locale, extractTextFromJs}),
   };
 
   if (authenticityToken) {
@@ -929,7 +902,11 @@ export function getEnvironment() {
   if (hostname.includes('localhost') || hostname.includes('127.0.0.1')) {
     return Environments.development;
   }
-  if (hostname === 'code.org' || hostname === 'studio.code.org') {
+  if (
+    hostname === 'code.org' ||
+    hostname === 'studio.code.org' ||
+    hostname === 'hourofcode.com'
+  ) {
     return Environments.production;
   }
   return Environments.unknown;
@@ -945,6 +922,10 @@ export function isStagingEnvironment() {
 
 export function isTestEnvironment() {
   return getEnvironment() === Environments.test;
+}
+
+export function isLevelbuilderEnvironment() {
+  return getEnvironment() === Environments.levelbuilder;
 }
 
 export function isProductionEnvironment() {
@@ -980,13 +961,14 @@ export function getAlphanumericId() {
 /**
  * Parses a level's XML properties for block ids that were explicitly set.
  * @param {Object} appOptions
- * @returns {string[]} - An array of explicitly set 'id' attributes found in the XML.
+ * @returns {Set<string>} - A set of explicitly set 'id' attributes found in the XML.
  */
 export function findExplicitlySetBlockIds(appOptions = null) {
+  const explicitlySetIds = new Set();
+
   if (!appOptions || !appOptions.level) {
-    return [];
+    return explicitlySetIds;
   }
-  const explicitlySetIds = [];
 
   const blockSources = ['startBlocks', 'toolbox'];
   for (const levelProperty of blockSources) {
@@ -1005,7 +987,7 @@ export function findExplicitlySetBlockIds(appOptions = null) {
       blockElements.forEach(blockElement => {
         const idAttribute = blockElement.getAttribute('id');
         if (idAttribute) {
-          explicitlySetIds.push(idAttribute);
+          explicitlySetIds.add(idAttribute);
         }
       });
     } catch (error) {

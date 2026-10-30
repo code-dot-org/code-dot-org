@@ -1,0 +1,19 @@
+name 'computer-systems-preassessment-question10_v2-2025'
+title 'Computer Systems and Devices Pre-Assessment: Question 10'
+
+wrong 'It replaces all human thinking'
+wrong 'It stores but does not analyze information'
+wrong 'It operates without data input'
+right 'It identifies patterns and makes decisions'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+How does AI use data?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 9: How AI Uses Data
+
+Lesson 12: Just Because We Can, Should We?
+MARKDOWN

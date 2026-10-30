@@ -1,35 +1,47 @@
-import sinon from 'sinon';
-import ReactDOM from 'react-dom';
-import {expect} from '../../util/reconfiguredChai';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
+import project from '@cdo/apps/code-studio/initApp/project';
+import {TestResults} from '@cdo/apps/constants';
+import dom from '@cdo/apps/dom';
 import {
   getStore,
   registerReducers,
   stubRedux,
   restoreRedux,
 } from '@cdo/apps/redux';
-import reducers from '@cdo/apps/weblab/reducers';
-import {
-  changeMaxProjectCapacity,
-  changeFullScreenPreviewOn,
-} from '@cdo/apps/weblab/actions';
+import commonReducers from '@cdo/apps/redux/commonReducers';
 import {
   singleton as studioApp,
   stubStudioApp,
   restoreStudioApp,
 } from '@cdo/apps/StudioApp';
-import commonReducers from '@cdo/apps/redux/commonReducers';
-import WebLab from '@cdo/apps/weblab/WebLab';
-import {TestResults} from '@cdo/apps/constants';
-import project from '@cdo/apps/code-studio/initApp/project';
 import {onSubmitComplete} from '@cdo/apps/submitHelper';
+import currentUser from '@cdo/apps/templates/currentUserRedux';
+import * as createReactRootModule from '@cdo/apps/util/createReactRoot';
 import * as utils from '@cdo/apps/utils';
+import {
+  changeMaxProjectCapacity,
+  changeFullScreenPreviewOn,
+} from '@cdo/apps/weblab/actions';
+import reducers from '@cdo/apps/weblab/reducers';
+import WebLab from '@cdo/apps/weblab/WebLab';
+
+import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+
 var filesApi = require('@cdo/apps/clientApi').files;
 var assetListStore = require('@cdo/apps/code-studio/assets/assetListStore');
-import dom from '@cdo/apps/dom';
+
+const CONTAINER_ID = 'container-id';
 
 describe('WebLab', () => {
   let weblab;
   let config;
+
+  beforeAll(() => {
+    const rootContainer = document.createElement('div');
+    rootContainer.setAttribute('id', CONTAINER_ID);
+    document.getElementsByTagName('body')[0].appendChild(rootContainer);
+  });
 
   beforeEach(() => {
     weblab = new WebLab();
@@ -38,18 +50,20 @@ describe('WebLab', () => {
     weblab.studioApp_ = studioApp();
     registerReducers(commonReducers);
     registerReducers(reducers);
+    registerReducers({currentUser});
     config = {
+      containerId: CONTAINER_ID,
       skin: {},
       level: {},
     };
-    sinon.stub(ReactDOM, 'render');
+    sinon.stub(createReactRootModule, 'createReactRoot');
     sinon.stub(getStore(), 'dispatch');
   });
 
   afterEach(() => {
     restoreRedux();
     restoreStudioApp();
-    ReactDOM.render.restore();
+    createReactRootModule.createReactRoot.restore();
   });
 
   describe('init', () => {
@@ -73,7 +87,7 @@ describe('WebLab', () => {
 
     it('does not set startSources if it is given invalid JSON', () => {
       config.level.startSources = '{:';
-      expect(() => weblab.init(config)).to.throw(Error);
+      weblab.init(config);
       expect(weblab.startSources).to.be.undefined;
     });
 
@@ -150,6 +164,7 @@ describe('WebLab', () => {
 
   describe('onMount', () => {
     let config;
+
     beforeEach(() => {
       config = {
         containerId: 'container-id',
@@ -160,6 +175,7 @@ describe('WebLab', () => {
       sinon.stub(studioApp(), 'alertIfCompletedWhilePairing');
       sinon.stub(studioApp(), 'initVersionHistoryUI');
       sinon.stub(studioApp(), 'initTimeSpent');
+      sinon.stub(studioApp(), 'alertIfAbusiveProject');
       weblab.level = {unsubmitUrl: 'url'};
       sinon.stub(dom, 'addClickTouchEvent');
     });
@@ -332,26 +348,26 @@ describe('WebLab', () => {
   describe('getCodeAsync', () => {
     it('resolves with empty string if brambleHost is null', () => {
       weblab.brambleHost = null;
-      weblab.getCodeAsync().then(value => {
+      return weblab.getCodeAsync().then(value => {
         expect(value).to.equal('');
       });
     });
 
     it('rejects with error if brambleHost syncFiles has an error', () => {
       weblab.brambleHost = {
-        syncFiles: callback => callback('error'),
+        syncFiles: (files, projectVersion, callback) => callback('error'),
       };
-      weblab.getCodeAsync().catch(error => {
+      return weblab.getCodeAsync().catch(error => {
         expect(error).to.equal('error');
       });
     });
 
     it('resolves with files version id when brambleHost syncFiles has no error', () => {
       weblab.brambleHost = {
-        syncFiles: callback => callback('error'),
+        syncFiles: (files, projectVersion, callback) => callback(),
       };
       weblab.initialFilesVersionId = 'version-id';
-      weblab.getCodeAsync().then(val => {
+      return weblab.getCodeAsync().then(val => {
         expect(val).to.equal('version-id');
       });
     });

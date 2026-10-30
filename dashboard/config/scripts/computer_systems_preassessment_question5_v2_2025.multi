@@ -1,0 +1,17 @@
+name 'computer-systems-preassessment-question5_v2-2025'
+title 'Computer Systems and Devices Pre-Assessment: Question 5'
+
+wrong 'Delete the application'
+wrong 'Replace the computer\’s CPU'
+wrong 'Turn off the monitor'
+right 'Restart the program'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+If a program is not responding, what is the **first step** to fix it?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 3: Troubleshooting and Optimizing Hardware
+MARKDOWN

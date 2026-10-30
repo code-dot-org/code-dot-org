@@ -41,7 +41,7 @@ or
 a = b;
 </pre>
 
-#### Key understanding:
+Key understanding:
 **...JavaScript always takes the *value* on the right, and *assigns* it into a variable on the left.**
 
 ### Tip: read the = sign as "gets"

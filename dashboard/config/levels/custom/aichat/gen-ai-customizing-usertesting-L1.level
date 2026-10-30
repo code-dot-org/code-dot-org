@@ -1,0 +1,53 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2024-06-19T03:22:45.000Z",
+  "level_num": "custom",
+  "user_id": 4,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## User Testing\r\n\r\nComplete the steps in your [User Testing Activity Guide](https://docs.google.com/document/d/1n60D0JCk3KDSbJduD8AEXUPp2zhDJM9e6rHVj-Mc56Y/edit) using the chatbot on this level.\r\n\r\nYou can switch into User View to interact with the published version of the chatbot while user testing.",
+    "system_prompt": "deprecated",
+    "bot_title": "deprecated",
+    "bot_description": "deprecated",
+    "disable_projects": true,
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "temperature": "0.8",
+        "systemPrompt": "You are a chatbot that encourages responsible recycling habits. The user will can ask questions about recycling uses and you provide friendly informative answers. The user may also describe different activities they participate in, and you can describe ways recycling can be incorporated. After each response, ask a question that prompts the user to reflect on their own recycling habits and how they can be improved. Respond with a friendly and upbeat tone. ",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "Recycling Helper",
+          "description": "This chatbot helps you learn more about recycling and improve your habits. It’s meant for anyone who wants to be better at recycling because of the environment.",
+          "intendedUse": "People can ask it questions about what things are recyclable or not. You can also describe some of your habits and it will give advice on way to incorporate recycling into what you do.",
+          "limitationsAndWarnings": "Some of the responses might not be accurate depending on your local laws and regulations. Really serious questions should be double checked with a search engine",
+          "testingAndEvaluation": "none yet!",
+          "exampleTopics": [
+            "How can I be better at recycling?",
+            "Are batteries recyclable?",
+            "What can I recycle from a fast food restaurant?"
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "readonly",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "readonly"
+      },
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gen-ai-biomistral-7b",
+        "gen-ai-mistral-7b-inst-v01"
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2024-06-19T03:22:45.474+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-project-L3\\\"\"],\"cloned_from\":\"gen-ai-customizing-project-L3\"},{\"changed_at\":\"2024-06-19 03:28:08 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\",\"project_template_level_name\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Aichat>

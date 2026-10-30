@@ -4,11 +4,10 @@
 
 require('../utils'); // Provides Function.prototype.inherits
 var NetSimConstants = require('./NetSimConstants');
+var NetSimGlobals = require('./NetSimGlobals');
 var NetSimVizNode = require('./NetSimVizNode');
 
 var NodeType = NetSimConstants.NodeType;
-
-var NetSimGlobals = require('./NetSimGlobals');
 
 /**
  * @param {NetSimNode} sourceNode

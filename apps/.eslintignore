@@ -1,9 +1,12 @@
+/generated-scripts/studioRoutes.js
+
 /src/**/*.min.js*
 /src/code-studio/vendor/**/*.js
 /src/third-party/**/*.js
 
 /lib
 /build
+/storybook-deploy
 node_modules
 
 !.storybook

@@ -1,13 +1,44 @@
+import '@testing-library/jest-dom';
+import Chips from '@code-dot-org/component-library/chips';
+import TextField from '@code-dot-org/component-library/textField';
+import {fireEvent, render, screen} from '@testing-library/react';
+import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow, mount} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
-import SingleSectionSetUp from '@cdo/apps/templates/sectionsRefresh/SingleSectionSetUp';
-import sinon from 'sinon';
+
 import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import SingleSectionSetUp from '@cdo/apps/templates/sectionsRefresh/SingleSectionSetUp';
 
 describe('SingleSectionSetUp', () => {
+  const renderComponent = (
+    updateSection = () => {},
+    batchUpdateSection = () => {}
+  ) => {
+    return render(
+      <SingleSectionSetUp
+        sectionNum={1}
+        section={{}}
+        updateSection={updateSection}
+        batchUpdateSection={batchUpdateSection}
+        isNewSection={false}
+        isLoading={false}
+      />
+    );
+  };
+
+  let updateSectionSpy;
+  let batchUpdateSectionSpy;
+
+  beforeEach(() => {
+    updateSectionSpy = jest.fn();
+    batchUpdateSectionSpy = jest.fn();
+  });
+
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
   it('calls updateSection when name is updated', () => {
-    const updateSectionSpy = sinon.spy();
+    const updateSectionSpy = jest.fn();
     const wrapper = shallow(
       <SingleSectionSetUp
         sectionNum={1}
@@ -18,10 +49,10 @@ describe('SingleSectionSetUp', () => {
     );
 
     wrapper
-      .find('input')
+      .find(TextField)
       .at(0)
       .simulate('change', {target: {value: 'Section 1'}});
-    expect(updateSectionSpy).to.have.been.calledOnce;
+    expect(updateSectionSpy).toHaveBeenCalledTimes(1);
   });
 
   it('renders Chips with expected props', () => {
@@ -34,12 +65,12 @@ describe('SingleSectionSetUp', () => {
       />
     );
 
-    const chips = wrapper.find('Chips');
-    expect(chips.length).to.equal(1);
-    expect(chips.prop('name')).to.eq('grades');
-    expect(chips.prop('required')).to.eq(true);
-    expect(chips.prop('options').length).to.eq(14); // K + 12 + Other
-    expect(chips.prop('values')).to.eql([]);
+    const chips = wrapper.find(Chips);
+    expect(chips.length).toBe(1);
+    expect(chips.prop('name')).toBe('grades');
+    expect(chips.prop('required')).toBe(true);
+    expect(chips.prop('options').length).toBe(14); // K + 12 + Other
+    expect(chips.prop('values')).toEqual([]);
   });
 
   it('does not render grade selector when participantType is teacher', () => {
@@ -52,11 +83,11 @@ describe('SingleSectionSetUp', () => {
       />
     );
 
-    expect(wrapper.find('Chips').length).to.equal(0);
+    expect(wrapper.find('Chips').length).toBe(0);
   });
 
   it('calls updateSection when grade selection is updated', () => {
-    const updateSectionSpy = sinon.spy();
+    const updateSectionSpy = jest.fn();
     const wrapper = mount(
       <SingleSectionSetUp
         sectionNum={1}
@@ -70,6 +101,29 @@ describe('SingleSectionSetUp', () => {
     checkbox.simulate('change', {
       target: {setCustomValidity: () => {}, checked: true},
     });
-    expect(updateSectionSpy).to.have.been.calledOnce;
+    expect(updateSectionSpy).toHaveBeenCalledTimes(1);
+  });
+
+  it('renders section avatar and button', () => {
+    renderComponent();
+    screen.getByText('Avatar');
+    screen.getByText('Edit avatar');
+  });
+
+  it('displays avatar edit dialog when Edit Avatar is clicked', () => {
+    renderComponent();
+    const dialogButton = screen.getByText('Edit avatar');
+    fireEvent.click(dialogButton);
+    screen.getByText('Choose an emoji');
+    screen.getByText('Choose a background color');
+  });
+
+  it('calls batchUpdateSection when avatar is updated', () => {
+    renderComponent(updateSectionSpy, batchUpdateSectionSpy);
+    const dialogButton = screen.getByText('Edit avatar');
+    fireEvent.click(dialogButton);
+    const avatarSelectButton = screen.getByText('Select avatar');
+    fireEvent.click(avatarSelectButton);
+    expect(batchUpdateSectionSpy).toHaveBeenCalled();
   });
 });

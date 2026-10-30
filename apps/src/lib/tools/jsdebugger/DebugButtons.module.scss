@@ -1,0 +1,11 @@
+.debugButtonsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3px;
+}
+
+.debuggerButton {
+  min-width: 120px;
+  margin: 4px;
+}

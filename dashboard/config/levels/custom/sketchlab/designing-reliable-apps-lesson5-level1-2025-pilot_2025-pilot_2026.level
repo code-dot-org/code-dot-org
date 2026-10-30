@@ -1,0 +1,120 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "game_id": 75,
+  "created_at": "2026-04-01T21:44:12.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Seeing the Shape of the JSON\r\n\r\n\r\n### **Do This:**\r\n\r\nUse different colors to highlight and label:\r\n\r\n* Array (Container): The symbols that enclose the full dataset.\r\n\r\n* Objects (Entities): The symbols that define a single pet entry.\r\n\r\n* Nested Structures: An object or array contained within another object.\r\n\r\n* Strings: Text values.\r\n\r\n* Numbers: Numeric values.\r\n\r\n* Booleans: Logical values (true / false).\r\n\r\nFocus on identifying patterns that organize the data.",
+    "start_sources": {
+      "source": {
+        "nodes": [
+          {
+            "id": "89vIrKgmAmu9IRC4yE8zC",
+            "type": "text",
+            "position": {
+              "x": -2082.7236641285463,
+              "y": -3826.448076156129
+            },
+            "data": {
+              "text": "\n",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 58,
+              "height": 47
+            }
+          },
+          {
+            "id": "6421a706-5082-4425-bfd7-61436c229624",
+            "type": "text",
+            "data": {
+              "text": "[\n  {\n    \":id\": \"row-b2fm.9enc-b67i\",\n    \":version\": \"rv-x485.w6ev_mkk2\",\n    \":created_at\": \"2026-06-29T23:00:14.733Z\",\n    \":updated_at\": \"2026-06-29T23:00:14.733Z\",\n    \"id\": \"31110\",\n    \"source_date\": \"2026-06-29T17:38:00.000\",\n    \"animal_id\": \"29136\",\n    \"type\": \"Puppy\",\n    \"source_name\": \"Stray\",\n    \"ispreviouslyspayedneutered\": false,\n    \"sex\": \"Unknown\",\n    \"primary_breed\": \"Labrador Retriever\",\n    \"primary_color\": \"Tan\",\n    \"secondary_color\": \"White\",\n    \"date_of_birth\": \"2026-03-01T00:00:00.000\",\n    \"found_address\": \"6200 E Stassney Lane, AUSTIN, TX, 78744, United States\",\n    \"timestamp\": \"2026-06-29T18:00:11.000\"\n  },\n]",
+              "textAlign": "left",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": -4117.011030369813,
+              "y": -2608.255156177477
+            },
+            "width": 553,
+            "height": 593,
+            "measured": {
+              "width": 553,
+              "height": 593
+            },
+            "resizing": false,
+            "dragging": false
+          }
+        ],
+        "edges": [
+
+        ],
+        "viewport": {
+          "x": 3779.8699088897824,
+          "y": 2351.150959246943,
+          "zoom": 0.8484682011453355
+        }
+      }
+    },
+    "exemplar_sources": {
+      "source": {
+        "nodes": [
+          {
+            "id": "89vIrKgmAmu9IRC4yE8zC",
+            "type": "text",
+            "position": {
+              "x": -2082.7236641285463,
+              "y": -3826.448076156129
+            },
+            "data": {
+              "text": "\n",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 58,
+              "height": 47
+            }
+          },
+          {
+            "id": "59a8ee22-5f3c-4821-baa5-62e3e873783a",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/designing-reliable-apps-lesson5-level1-2025-pilot_2025-pilot_2026/uuid/7cf4d6b2-c005-4fd1-a3d2-d216285b0536.png",
+              "altText": "Pasted Graphic 1"
+            },
+            "position": {
+              "x": -5384.132457203855,
+              "y": -2957.2911914375686
+            },
+            "width": 1029,
+            "height": 808,
+            "measured": {
+              "width": 1029,
+              "height": 808
+            },
+            "resizing": false,
+            "dragging": false
+          }
+        ],
+        "edges": [
+
+        ],
+        "viewport": {
+          "x": 4729.162910227514,
+          "y": 2560.24197106328,
+          "zoom": 0.8590861969460342
+        }
+      }
+    },
+    "name_suffix": "_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T21:44:12.329+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson5-level1-2025-pilot_2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson5-level1-2025-pilot_2025-pilot\"},{\"changed_at\":\"2026-05-07 13:45:36 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-06-30 00:13:42 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-30 00:14:49 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-30 00:18:31 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Sketchlab>

@@ -1,0 +1,49 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-09-13T01:51:22.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "# Boba Run Splitter\n# Totals a boba order, adds a tip, and splits it among friends.\n\nprint(\"Boba Run Splitter\")\n\nnum_drinks = int(input(\"How many drinks? \"))\ndrink_price = float(input(\"Price per drink: \"))\ncoupon = float(input(\"Coupon amount: \"))\nnum_friends = int(input(\"How many friends are splitting? \"))\n\nsubtotal = num_drinks * drink_price - coupon\ntotal_cents = round(subtotal * 1.18 * 100)\n\nper_person = round(total_cents / num_friends)\nleftover_cents = total_cents % num_friends\n\nprint(\"Each person pays: $\" + str(per_person / 100))\nprint(\"Leftover cents: \" + str(leftover_cents))\nprint(\"Whoever picked the shop covers the leftover!\")",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMpMAawoYOy7718d\nDb6wwN4QYuO8Dq+MZ/uprcgwpG5EOlhiF8/IKwWM48bl0SeXHL4GXRDY0V92\nR1VrFoW4QURhPALgiJP37j9jrWG3SwsN1h/7sIqKUPzr4iD+gC8m9IxUU5a3\nbqKG6S7uIjjdqmX8T1EUpRT0+tQJc3QZthHzKCQ+eFjTMN6zTx4EthGlg02w\n6dRoelIQdBAzDPw1WNk0K8ckAQ9oAMM/YvZ6USrzAe5DLr/yscZEtPzCHCbZ\nhoEhOUXgRRrE1MC+a3Xgmz7QzCbFSeB31m8fTyr4aiw2c+cXJzBU6ybgCd8M\nO+awxCoFwoAaVj54ZkU0zbZYb2rw+P1W9VfyugXn0i3g54k1YKAN9gEQe61X\nMtbpajGgDtahYcFQnuDwiLu8osH7DOywr43LL0Z8+3lxLw/bdUj/RU03tJZn\nO7GqTpPcVacWW3Jt9MFeptp1mS+dLa6/XAikaxT12nPCmyIi/ZKHveMwYS4W\n2OdXx+J1p81Z5GSHgW8W9CeI22rn/G8jpF7ZZf2OOkF2ucQzx45rLm0K8Isr\nb8cJC0WpX3YsAvk6xs5Mp9t0cuHOpfS6+AwzEd4JBE2Vp4ELD58aXUBcyHid\nOeHjYqg7fuA1FRKzS9c4XW7p/QC9SI/gJt+gWQahbgCDbGPPcZW6PHhpss3P\nZmxzv7LgNVj5BZ4ZmShO/jYVcplso5Iw9sqnNbWZW2ocBKsi2TF9CLVgWvJ2\no/VykfkboCnYXTJZ6a1O9x+z49bTTEh0nBnRy9RTuU2cG0x0zpvzcrtN+/sH\nG+YYfj3qYSqgU1QGGpcDV1KmvJMv3iB0SABvjESPvlruKMTnAxZNBQRVLTeK\nhWQOWhMnn5Y9XNa+viDQ5OHteVLdf+5ZGYiVNBlqxc49JV8226oaxcu4spQH\n50ZvfGOgtTnkecf9je+2cdu9vo9tprj/OZAvZWCIxQjSAt84Y0IACVuGbjF/\nYZDc1T1Mur7hYPB6/QWhEMbWb9FTXCqiE0eV/QbkdMxbzACptodVqYYPXhHU\nO7vbC/Yk1aT0Vw1VAi4I1dZr80rw/LXxa2cqHvRXHvFtXfn/vp40fucMx6kq\n1OvB/8EFkyRMoMotMsGcPTncMZLB0ZnAvolrhKxhlR4Y3fnr+VVX1H6NlFbl\niM1c679Aw2FNNBdRasj8aI9XdPr0/xbzM2AOOpKCQ8txbB5CbpSPFG/Cm9XT\nngPTBL7W0h60Emf1LH0xVNn9\n",
+    "encrypted": "false",
+    "long_instructions": "## Modify\r\n\r\nModify the Boba Run Splitter so it:\r\n\r\n* asks for the total cost of toppings\r\n* includes toppings in the subtotal\r\n* uses `round()` to convert the total into cents\r\n* uses `%` to find the cents part of the group total\r\n* prints the group total before the split amount\r\n\r\nTest your program to make sure the new input changes the total.\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildPython",
+        "documentation"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-13 02:24:57 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-13 02:25:20 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-13 02:27:43 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Pythonlab>

@@ -1,0 +1,41 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-06-29T17:09:01.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "require_edit_to_continue": true,
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "840dba87-87df-456c-b7c6-b2a6cb23a111": {
+          "id": "840dba87-87df-456c-b7c6-b2a6cb23a111",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>AI Data Detective</title>\n    <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n    <header>\n        <h1>Uncovering AI Data Bias!</h1>\n        <p>Generative AI models learn from massive amounts of data. If that data is biased, incomplete, or stereotypical, the AI's answers will be too!</p>\n        <p>For each AI response below, identify the data issue (bias, stereotype, omission), explain why it's happening, and suggest how the training data could be improved.</p>\n    </header>\n\n    <main>\n        <section class=\"ai-response-card\">\n            <h2>AI Response 1: Famous Inventors</h2>\n            <p class=\"prompt\">Prompt: \"Tell me about famous inventors.\"\n            </p>\n            <p class=\"response\">\n                Some of the most famous inventors include Thomas Edison (light bulb, phonograph), Alexander Graham Bell (telephone), Nikola Tesla (AC electricity), and Henry Ford (assembly line). These innovators revolutionized the modern world with their groundbreaking creations.\n            </p>\n            <div class=\"your-analysis\">\n                <h3>Your Research & Explanation:</h3>\n                <!-- Write your findings and explanation here! What's the data issue? How can it be improved? -->\n            </div>\n        </section>\n\n        <section class=\"ai-response-card\">\n            <h2>AI Response 2: Healthy Snacks for Kids</h2>\n            <p class=\"prompt\">Prompt: \"Suggest some healthy snack ideas for kids.\"\n            </p>\n            <p class=\"response\">\n                Great healthy snack ideas for kids include apple slices with peanut butter, yogurt, whole-grain crackers with cheese, and carrot sticks with hummus. These are easy to prepare and packed with nutrients for growing children.\n            </p>\n            <div class=\"your-analysis\">\n                <h3>Your Research & Explanation:</h3>\n                <!-- Write your findings and explanation here! What's the data issue? How can it be improved? -->\n            }\n        </section>\n\n        <section class=\"ai-response-card\">\n            <h2>AI Response 3: Cultural Wedding Traditions</h2>\n            <p class=\"prompt\">Prompt: \"Describe some cultural traditions for a wedding.\"\n            </p>\n            <p class=\"response\">\n                Many cultures celebrate weddings with a white dress for the bride, a multi-tiered cake, and exchanging rings. Receptions often feature dancing, toasts, and a grand entrance for the newly married couple. These traditions symbolize love and commitment.\n            </p>\n            <div class=\"your-analysis\">\n                <h3>Your Research & Explanation:</h3>\n                <!-- Write your findings and explanation here! What's the data issue? How can it be improved? -->\n            </div>\n        </section>\n    </main>\n</body>\n</html>",
+          "folderId": "0",
+          "type": "starter",
+          "active": true
+        },
+        "9560c9a3-032f-41a0-aa01-5bd1be6ddb33": {
+          "id": "9560c9a3-032f-41a0-aa01-5bd1be6ddb33",
+          "name": "style.css",
+          "contents": "body {\n    font-family: sans-serif;\n    margin: 20px;\n    background-color: #f4f4f4;\n    color: #333;\n    line-height: 1.6;\n}\n\nheader {\n    text-align: center;\n    margin-bottom: 40px;\n}\n\nh1 {\n    color: #2c3e50;\n    margin-bottom: 10px;\n}\n\nheader p {\n    max-width: 800px;\n    margin: 0 auto 15px auto;\n}\n\n.ai-response-card {\n    background-color: #ffffff;\n    border-radius: 8px;\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n    margin-bottom: 20px;\n    padding: 20px;\n}\n\n.prompt {\n    font-style: italic;\n    color: #7f8c8d;\n    margin-bottom: 10px;\n}\n\n.response {\n    background-color: #e8f5e9; /* Light green for AI response */\n    border-left: 5px solid #4caf50;\n    padding: 10px;\n    margin-bottom: 15px;\n}\n\n.your-analysis {\n    background-color: #ffebee; /* Light red for student analysis */\n    border: 1px dashed #ef9a9a;\n    padding: 15px;\n    margin-top: 20px;\n    border-radius: 5px;\n}\n\n.your-analysis h3 {\n    color: #c62828;\n    margin-top: 0;\n    margin-bottom: 10px;\n}\n\n/* Example for highlighting errors (students can add this) */\n.error {\n    background-color: yellow;\n    color: red;\n    font-weight: bold;\n}\n",
+          "folderId": "0",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "840dba87-87df-456c-b7c6-b2a6cb23a111",
+        "9560c9a3-032f-41a0-aa01-5bd1be6ddb33"
+      ]
+    },
+    "long_instructions": "In the previous levels, you've learned about AI hallucinations and confidently incorrect information. Now, let's explore another important limitation: how the data an AI is trained on can lead to biased, stereotypical, or incomplete responses.\r\n\r\nYour task in this level is to examine AI-generated responses in `index.html` that demonstrate these data-related issues. For each example, you'll put on your data detective hat!\r\n\r\nHere's what to do for each AI response within `index.html`:\r\n1.  **Identify the Problem:** Read the AI's response carefully. Does it seem to be missing important information? Does it promote a stereotype? Is it unfairly biased towards one group or culture?\r\n2.  **Explain the Data Issue:** In the 'Your Research & Explanation' section, explain *why* you think the AI's response is flawed. Think about its training data: What kind of information might be missing or overrepresented in the data it learned from?\r\n3.  **Suggest Improvements:** Describe how the training data could be improved to prevent this kind of problem in the future. What new types of information or diverse perspectives would need to be added to its 'knowledge base'?",
+    "generate_outline": "Show students AI outputs that clearly suffer from biased or insufficient training data, leading to stereotypes, omissions, or unhelpful answers for specific demographics. Students should identify the likely data issue and suggest how the training data might be improved."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-06-29 17:09:20 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-29 17:09:20 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-29 17:09:53 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

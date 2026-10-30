@@ -1,0 +1,251 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-05-31T03:00:20.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "### Predict\r\n\r\nThis level has a new block called `play random`. Read the code, then make a prediction on what you think will happen!",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "packId": "default",
+      "allowChangeStartingPlayheadPosition": true,
+      "showSoundFilters": true,
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "play_sounds_together",
+                  "deletable": false,
+                  "movable": false,
+                  "editable": false,
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "repeat_simple2",
+                        "id": "repeat_simple2",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "fields": {
+                          "times": 10
+                        },
+                        "inputs": {
+                          "code": {
+                            "block": {
+                              "type": "play_sounds_random",
+                              "id": "play_sounds_random",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
+                              "extraState": {
+                                "disableNextConnection": true
+                              },
+                              "inputs": {
+                                "code": {
+                                  "block": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": "play_sound_at_current_location_simple2",
+                                    "deletable": false,
+                                    "movable": false,
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "fields": {
+                                      "sound": "acoustic_arcade/drum_beat_cabana"
+                                    },
+                                    "next": {
+                                      "block": {
+                                        "type": "play_sound_at_current_location_simple2",
+                                        "id": "O0j#JH{C7l%6uP@2nw~P",
+                                        "deletable": false,
+                                        "movable": false,
+                                        "extraState": {
+                                          "disableNextConnection": false
+                                        },
+                                        "fields": {
+                                          "sound": "acoustic_arcade/drum_beat_conga"
+                                        },
+                                        "next": {
+                                          "block": {
+                                            "type": "play_sound_at_current_location_simple2",
+                                            "id": "~IF~:x$Mrtn_#0fcYy=N",
+                                            "deletable": false,
+                                            "movable": false,
+                                            "extraState": {
+                                              "disableNextConnection": true
+                                            },
+                                            "fields": {
+                                              "sound": "acoustic_arcade/drum_beat_hands"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "next": {
+                          "block": {
+                            "type": "repeat_simple2",
+                            "id": "ZFX_tE2*5!U@+1aWX($[",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "fields": {
+                              "times": 10
+                            },
+                            "inputs": {
+                              "code": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "g!1$Q!L;7--F9j@gx02:",
+                                  "deletable": false,
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "fields": {
+                                    "sound": "acoustic_arcade/bass_elevator"
+                                  }
+                                }
+                              }
+                            },
+                            "next": {
+                              "block": {
+                                "type": "repeat_simple2",
+                                "id": "5:U0Hhb*7*j5P0aOa_9O",
+                                "deletable": false,
+                                "movable": false,
+                                "editable": false,
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "fields": {
+                                  "times": 10
+                                },
+                                "inputs": {
+                                  "code": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "k`pZ`)c^;U7-((waHAed",
+                                      "deletable": false,
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "sound": "acoustic_arcade/synth_cloud"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "toolbox": {
+        "blocks": {
+        }
+      },
+      "validationTimeout": 1
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "validations": [
+      {
+        "key": "test-music-lab-mini-project-gif-random-1_40637b1a-8fb7-4ba2-bb9c-540014b40ac1",
+        "message": "Let's learn more about the random block in the next levels",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 46
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-mini-project-gif-random-1_b8fabe09-214c-4b8e-986e-b4bc5fe67702",
+        "message": "If this is your first time listening: stop the song here and press \"Run\" again. A new pattern should light up!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 31
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-mini-project-gif-random-1_6756b11d-2702-4001-a5fe-877ae936357d",
+        "message": "The \"play random\" block is randomly picking one of the sounds inside it to play!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 16
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-mini-project-gif-random-1_099a40fd-6ada-452a-adb2-d7db816e0b00",
+        "message": "Look at the timeline! See how some parts are gray and some are lit up?",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "predict_settings": {
+      "isPredictLevel": true,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "What do you think the code will do?",
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "name_suffix": "_v2",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:20.680+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-mini-project-gif-random-1\\\"\"],\"cloned_from\":\"test-music-lab-mini-project-gif-random-1\"}]"
+}]]></config>
+  <blocks/>
+</Music>

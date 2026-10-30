@@ -1,0 +1,40 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-04-21T20:49:54.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "You're building a school schedule app that tracks which class period the user is in. When the bell rings, the app needs to update the period number.\r\n\r\n## Do This:\r\n\r\n1. Look at the original value stored in `current_period`\r\n\r\n2. Change the value to the next class period.\r\n\r\n3. Run the program to make sure it shows the update.\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nEvery time you assign a new value to a variable, the old one is replaced -- it's like swapping out what's in a labeled box.",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "display_name": "Class Period",
+    "bubble_choice_description": "You're building a school schedule app that tracks which class period the user is in. When the bell rings, the app needs to update the period number.",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# This program updates the current class period\n\ncurrent_period = 2\nprint(\"Current class period:\", current_period)\n\n# Update the class period below\n\n\nprint(\"Updated class period:\", current_period)\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      }
+    },
+    "thumbnail_url": "https://images.code.org/827ae856262cbe0154d35dd020ec5ef4-school-bag.png",
+    "name_suffix": "_2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-04-21T20:49:54.275+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson4-level4d_2025-launch_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson4-level4d_2025-launch_2025\"}]"
+}]]></config>
+</Pythonlab>

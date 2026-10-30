@@ -1,0 +1,16 @@
+name 'building-data-driven-systems-postassessment-q3_2025'
+
+question 'A team is designing a schema for a "Task Manager" app. They decide each task must have a `title` (string), `priority` (number), and `isCompleted` (boolean). Why is defining these data types important before writing the code?'
+
+wrong 'It ensures that the AI will write the CSS styling correctly.'
+wrong 'It prevents the app from needing a database.'
+right 'It allows the team to predict how data will be rendered and ensures the AI scaffold generates valid logic for those types.'
+wrong 'It makes the website load faster on older browsers.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 2
+
+Establishing a schema before coding ensures that the interface (rendering) and the logic (functions) are aligned. If the code expects a number but receives a string, the app will likely fail. 
+MARKDOWN

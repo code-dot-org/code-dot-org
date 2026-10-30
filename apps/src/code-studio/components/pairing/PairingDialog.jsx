@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import Pairing from './Pairing.jsx';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
 
 /**
  * Pair programming dialog.
@@ -18,10 +18,9 @@ export default class PairingDialog extends React.Component {
   open = () => this.setState({isOpen: true});
 
   render() {
-    return (
-      <BaseDialog isOpen={this.state.isOpen} handleClose={this.close}>
-        <Pairing source={this.props.source} handleClose={this.close} />
-      </BaseDialog>
-    );
+    if (!this.state.isOpen) {
+      return null;
+    }
+    return <Pairing source={this.props.source} handleClose={this.close} />;
   }
 }

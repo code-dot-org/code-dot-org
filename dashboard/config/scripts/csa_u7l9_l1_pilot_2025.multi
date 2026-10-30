@@ -1,0 +1,35 @@
+name 'CSA U7L9-L1_pilot-2025'
+title 'Check for Understanding'
+
+wrong 'The largest value in `arr` is in `arr[0]`.'
+wrong '`arr` contains both positive and negative values.'
+wrong '`arr` contains only positive values.'
+right '`arr` contains only negative values.'
+wrong '`largestNum` always works as intended.'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Consider the following code segment.
+
+```
+public int largestNum(int[] arr) {
+   int largest = 0;
+
+   for (int i=0; i < arr.length; i++) {
+      if (arr[i] > largest) {
+         largest = arr[i];
+      }
+   }
+
+
+   return largest;
+}
+```
+
+The method `largestNum` is intended to return the value in the array `arr`. Which of the following best describes the conditions under which the method `largestNum` will not work as intended?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+If `arr` contains only negative values, the initialization of `largest` to `0` will cause `largest` to always be `0` and not the largest negative value in the array. Therefore, in this case, the method `largestNum` will not work as intended.
+MARKDOWN

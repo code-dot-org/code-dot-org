@@ -1,0 +1,39 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-05-28T18:13:05.000Z",
+  "level_num": "custom",
+  "user_id": 574,
+  "properties": {
+    "panels": [
+      {
+        "key": "test-brendan-2d-intro-2d-graphics-8031355d-222a-44e8-8665-47f5d0f9909e",
+        "text": "Look at your computer screen! From games to websites, everything you see is made of tiny dots of light.",
+        "imageUrl": "https://images.code.org/b00ea947c31cac58fe9175ecc698a76b-test-brendan-2d-intro-2d-graphics-panel-1-18100e7b-4a7e-4f46-824e-ab785a75d38c.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "test-brendan-2d-intro-2d-graphics-2787a14a-7a29-4924-885a-4371e7d0b44e",
+        "text": "But how does the computer know what to show? It's like having a super-fast artist drawing pictures for you, pixel by pixel.",
+        "imageUrl": "https://images.code.org/f4e5dc3e873586d03649957dd1c337d3-test-brendan-2d-intro-2d-graphics-panel-2-d7a097ef-faf3-4b0b-99d5-55d46ea6a25d.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "test-brendan-2d-intro-2d-graphics-52e3937a-b23a-4a91-831c-85d7484dd03f",
+        "text": "In Web Lab, you'll have your very own digital 'canvas' – a blank space ready for your creations!",
+        "imageUrl": "https://images.code.org/7923080244c3d3d42d989e69253a1a99-test-brendan-2d-intro-2d-graphics-panel-3-51ad2da4-932e-4615-aed6-c1e19102895f.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "test-brendan-2d-intro-2d-graphics-c9485540-466d-41ac-a33d-d3240723aedd",
+        "text": "Instead of brushes and paint, you'll use code to tell the computer exactly what shapes to draw and where to put them on your canvas.",
+        "imageUrl": "https://images.code.org/364b7ec2ef89b1e6fa13d19f9ef5f10d-test-brendan-2d-intro-2d-graphics-panel-4-84f4f87b-5632-49e0-9aaa-597775327b33.png",
+        "layout": "text-bottom-center"
+      }
+    ],
+    "generate_outline": "Introduce students to the concept of 2D graphics on a computer screen. Explain that they will be drawing shapes on a digital 'canvas' using code."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-28 18:13:46 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-28 18:13:46 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

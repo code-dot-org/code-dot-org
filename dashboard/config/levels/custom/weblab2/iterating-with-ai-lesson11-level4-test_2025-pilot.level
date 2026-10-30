@@ -1,0 +1,37 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2025-12-22T17:42:24.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "iterating-with-ai-lesson11-template-test_2025-pilot",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "long_instructions": "# Interactive Data App\r\n\r\n1.  **Create Interactive Filters:** Write functions to filter and sort your data. \r\n\r\n    - **Note:** Create a new list inside your function (\"copy, don't mutate\") rather than changing the original dataset.\r\n2.  **Add User Controls:** Add a \"Reset\" button to reload the original data and a label that updates dynamically (e.g., \"Showing 5 results\") whenever the list changes. Add an \"Undo\" button that removes the last filter applied.\r\n3.  **Consult AI:** Use AI to debug your logic. You might ask:\r\n      * *Why does my filtered list return zero results?*\r\n      * *How do I sort an array of objects alphabetically by a specific property?*\r\n4. **Test Your Code:** Try out the different filters and the Reset and Undo buttons. Make any revisions to your code as needed.",
+    "bubble_choice_description": "Write the code for your filters, sorting, and Reset/Undo. Add active filter labels and a results count, then debug with AI to refine your logic ***(supports completing Milestone 3 tasks)***.",
+    "display_name": "Build Interactive Features",
+    "thumbnail_url": "https://images.code.org/5494ca590188877825b06cfa6593af39-dashboard.png",
+    "name_suffix": "_2025-pilot"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-12-22T17:42:24.102+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson11-level4-test-2025\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson11-level4-test-2025\"}]"
+}]]></config>
+</Weblab2>

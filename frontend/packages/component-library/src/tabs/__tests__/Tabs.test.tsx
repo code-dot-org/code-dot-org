@@ -1,0 +1,246 @@
+import {render, screen} from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import {useState} from 'react';
+import {vi} from 'vitest';
+
+import Tabs, {TabsProps} from '../index';
+
+import moduleStyles from '../tabs.module.scss';
+
+describe('Design System - Tabs', () => {
+  const valuesMap: Record<string, string> = {};
+  const onSelectedTabChange = (name: string, value: string): void => {
+    valuesMap[name] = value;
+  };
+
+  const renderTabs = (props: TabsProps) => {
+    const Wrapper: React.FC = () => {
+      const [selectedTab, setSelectedTab] = useState<string>(
+        props.defaultSelectedTabValue || '',
+      );
+
+      const handleChange = (value: string) => {
+        setSelectedTab(value);
+        // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+        props && props.onChange && props.onChange(value);
+      };
+
+      return (
+        <Tabs
+          {...props}
+          defaultSelectedTabValue={selectedTab}
+          onChange={handleChange}
+        />
+      );
+    };
+
+    return render(<Wrapper />);
+  };
+
+  it('renders with correct tabs labels', () => {
+    onSelectedTabChange('test1', 'tab1');
+
+    renderTabs({
+      defaultSelectedTabValue: valuesMap.test1,
+      tabs: [
+        {text: 'tab1', value: 'tab1', tabContent: <div>tab1 content</div>},
+        {text: 'tab2', value: 'tab2', tabContent: <div>tab2 content</div>},
+      ],
+      onChange: value => onSelectedTabChange('test1', value),
+      name: 'test1',
+    });
+
+    const tab1 = screen.getByText('tab1');
+    const tab2 = screen.getByText('tab2');
+
+    expect(tab1).toBeInTheDocument();
+    expect(tab2).toBeInTheDocument();
+    expect(valuesMap.test1).toBe('tab1');
+    expect(screen.getByText('tab1 content')).toBeInTheDocument();
+  });
+
+  it('changes selected tab on click', async () => {
+    const user = userEvent.setup();
+    const spyOnChange = vi.fn();
+
+    onSelectedTabChange('test2', 'tab1');
+
+    const onChange = (value: string) => {
+      onSelectedTabChange('test2', value);
+      spyOnChange(value);
+    };
+
+    renderTabs({
+      defaultSelectedTabValue: valuesMap.test2,
+      tabs: [
+        {text: 'tab1', value: 'tab1', tabContent: <div>tab1 content</div>},
+        {text: 'tab2', value: 'tab2', tabContent: <div>tab2 content</div>},
+      ],
+      onChange,
+      name: 'test2',
+    });
+
+    const tab1 = screen.getByText('tab1');
+    const tab2 = screen.getByText('tab2');
+
+    expect(tab1).toBeInTheDocument();
+    expect(tab2).toBeInTheDocument();
+    expect(valuesMap.test2).toBe('tab1');
+
+    await user.click(tab2);
+
+    expect(spyOnChange).toHaveBeenCalledTimes(1);
+    expect(spyOnChange).toHaveBeenCalledWith('tab2');
+    expect(valuesMap.test2).toBe('tab2');
+
+    await user.click(tab1);
+
+    expect(spyOnChange).toHaveBeenCalledTimes(2);
+    expect(spyOnChange).toHaveBeenCalledWith('tab1');
+    expect(valuesMap.test2).toBe('tab1');
+  });
+
+  it('renders a disabled tab that is focusable but does not respond', async () => {
+    const user = userEvent.setup();
+    const spyOnChange = vi.fn();
+
+    renderTabs({
+      defaultSelectedTabValue: 'tab1',
+      tabs: [
+        {text: 'tab1', value: 'tab1', tabContent: <div>tab1 content</div>},
+        {
+          text: 'tab2',
+          value: 'tab2',
+          tabContent: <div>tab2 content</div>,
+          disabled: true,
+        },
+      ],
+      onChange: spyOnChange,
+      name: 'test3',
+    });
+
+    const tab2 = screen.getByRole('tab', {name: 'tab2'});
+
+    expect(tab2).toHaveAttribute('aria-disabled', 'true');
+    expect(tab2).not.toHaveAttribute('disabled');
+
+    await user.tab();
+    await user.tab();
+    expect(tab2).toHaveFocus();
+
+    await user.keyboard('{Enter}');
+    await user.click(tab2);
+
+    expect(spyOnChange).not.toHaveBeenCalled();
+  });
+
+  it('renders with tooltip and displays it on hover', async () => {
+    const user = userEvent.setup();
+
+    onSelectedTabChange('test4', 'tab1');
+
+    renderTabs({
+      defaultSelectedTabValue: valuesMap.test4,
+      tabs: [
+        {
+          text: 'tab1',
+          value: 'tab1',
+          tabContent: <div>tab1 content</div>,
+          tooltip: {title: 'Tooltip for tab1', id: 'tooltip1'},
+        },
+        {text: 'tab2', value: 'tab2', tabContent: <div>tab2 content</div>},
+      ],
+      onChange: value => onSelectedTabChange('test4', value),
+      name: 'test4',
+    });
+
+    const tab1 = screen.getByText('tab1');
+    let tooltip = screen.queryByText('Tooltip for tab1');
+
+    expect(tab1).toBeInTheDocument();
+    expect(tooltip).not.toBeInTheDocument();
+
+    await user.hover(tab1);
+
+    // MUI opens the tooltip after an enter delay, so this has to wait.
+    tooltip = await screen.findByText('Tooltip for tab1');
+
+    expect(tooltip).toBeInTheDocument();
+  });
+
+  it('hides tab panels when hidePanels is true', async () => {
+    renderTabs({
+      defaultSelectedTabValue: 'tab1',
+      tabs: [
+        {text: 'tab1', value: 'tab1', tabContent: <div>tab1 content</div>},
+        {text: 'tab2', value: 'tab2', tabContent: <div>tab2 content</div>},
+      ],
+      onChange: () => {},
+      name: 'test1',
+      hidePanels: true,
+    });
+
+    const tab1 = screen.getByText('tab1');
+    const tab2 = screen.getByText('tab2');
+
+    expect(tab1).toBeInTheDocument();
+    expect(tab2).toBeInTheDocument();
+    expect(screen.queryByText('tab1 content')).not.toBeInTheDocument();
+    expect(screen.queryByText('tab2 content')).not.toBeInTheDocument();
+  });
+
+  describe('scrollable', () => {
+    const scrollableTabs = (count: number) =>
+      Array.from({length: count}, (_, index) => ({
+        text: `tab${index + 1}`,
+        value: `tab${index + 1}`,
+        tabContent: <div>{`tab${index + 1} content`}</div>,
+      }));
+
+    // The affordance itself is pure CSS (a scroll-driven mask), invisible to
+    // jsdom; only the class contract is assertable here.
+    it('leaves the tab strip untouched when scrollable is unset', () => {
+      renderTabs({
+        defaultSelectedTabValue: 'tab1',
+        tabs: scrollableTabs(6),
+        onChange: () => {},
+        name: 'not-scrollable',
+      });
+
+      const container = screen.getByRole('tablist')
+        .parentElement as HTMLElement;
+
+      expect(container).not.toHaveClass(moduleStyles.scroller);
+    });
+
+    it('marks the tabs container as the scroller when scrollable is true', () => {
+      renderTabs({
+        defaultSelectedTabValue: 'tab1',
+        tabs: scrollableTabs(6),
+        onChange: () => {},
+        name: 'scrollable',
+        scrollable: true,
+      });
+
+      const container = screen.getByRole('tablist')
+        .parentElement as HTMLElement;
+
+      expect(container).toHaveClass(moduleStyles.scroller);
+      expect(container).toHaveClass(moduleStyles.tabs);
+    });
+  });
+
+  it('names the tab list when asked', () => {
+    renderTabs({
+      defaultSelectedTabValue: 'tab1',
+      tabs: [
+        {text: 'tab1', value: 'tab1', tabContent: null},
+        {text: 'tab2', value: 'tab2', tabContent: null},
+      ],
+      onChange: () => {},
+      name: 'named',
+      tabListAriaLabel: 'Which words',
+    });
+    expect(screen.getByRole('tablist', {name: 'Which words'})).toBeTruthy();
+  });
+});

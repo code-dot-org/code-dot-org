@@ -1,0 +1,30 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-02-02T17:50:29.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "You Did It!",
+    "placeholder": "Enter your reflection here.",
+    "long_instructions": "\r\nYou’ve now explored the tools, concepts, and workflows students will use to complete the Interactive Data Dashboard project.\r\n\r\nThis module is designed to help you:\r\n- See how the unit builds intentionally toward a complex final product\r\n- Anticipate where students may struggle or need support\r\n- Feel confident guiding students as they iterate on both **code** and **design decisions**\r\n\r\n---\r\n\r\n## Reflection\r\n\r\n>Name one concept from earlier in the unit that students will draw on during the final project, and explain how you expect them to use it in their dashboard.\r\n\r\n\r\n\r\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "submittable": "false",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "instructions_important": "false",
+    "parent_level_id": 18982,
+    "name_suffix": "_2023",
+    "encrypted": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "stay_on_level_after_submit": "false"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2026-02-02T17:50:29.533+00:00\",\"changed\":[\"cloned from \\\"pl-aif-2-U3-reflect-wrap-3\\\"\"],\"cloned_from\":\"pl-aif-2-U3-reflect-wrap-3\"},{\"changed_at\":\"2026-02-03 15:31:41 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-02-03 15:43:14 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-02-04 16:17:32 +0000\",\"changed\":[\"title\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-02-04 16:18:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-02-05 15:58:26 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-06-01 15:31:36 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-06-10 15:46:37 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-06-10 16:03:37 +0000\",\"changed\":[\"title\",\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

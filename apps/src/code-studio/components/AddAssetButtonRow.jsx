@@ -1,9 +1,12 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
-import AssetUploader from './AssetUploader';
-import Button from '../../templates/Button';
-import i18n from '@cdo/locale';
+
 import {isIE11} from '@cdo/apps/util/browser-detector';
+import i18n from '@cdo/locale';
+
+import AssetUploader from './AssetUploader';
 
 export const assetButtonStyles = {
   button: {
@@ -18,22 +21,28 @@ export const assetButtonStyles = {
     display: 'flex',
     flexFlow: 'row',
     alignItems: 'center',
+    gap: 10,
+  },
+  buttons: {
+    display: 'flex',
+    flexShrink: 0,
+    alignItems: 'center',
+    gap: 10,
   },
 };
 
 const RecordButton = ({onSelectRecord, disabled}) => (
-  <span>
-    <Button
-      onClick={onSelectRecord}
-      id="record-asset"
-      className="share"
-      text={i18n.recordAudio()}
-      icon="microphone"
-      style={assetButtonStyles.button}
-      size="large"
-      disabled={disabled}
-    />
-  </span>
+  <MuiButton
+    variant="contained"
+    color="primary"
+    size="medium"
+    onClick={onSelectRecord}
+    id="record-asset"
+    disabled={disabled}
+    startIcon={<FontAwesomeV6Icon iconName="microphone" iconStyle="solid" />}
+  >
+    {i18n.recordAudio()}
+  </MuiButton>
 );
 
 RecordButton.propTypes = {
@@ -56,6 +65,7 @@ export default class AddAssetButtonRow extends React.Component {
     statusMessage: PropTypes.string,
     recordDisabled: PropTypes.bool,
     hideAudioRecording: PropTypes.bool,
+    projectType: PropTypes.string.isRequired,
   };
 
   render() {
@@ -65,21 +75,31 @@ export default class AddAssetButtonRow extends React.Component {
     }
     return (
       <div style={assetButtonStyles.buttonRow}>
-        <AssetUploader
-          uploadsEnabled={this.props.uploadsEnabled}
-          allowedExtensions={this.props.allowedExtensions}
-          api={this.props.api}
-          onUploadStart={this.props.onUploadStart}
-          onUploadDone={this.props.onUploadDone}
-          onUploadError={this.props.onUploadError}
-        />
-        {shouldShowRecordButton && (
-          <RecordButton
-            onSelectRecord={this.props.onSelectRecord}
-            disabled={!this.props.uploadsEnabled || this.props.recordDisabled}
+        <span style={assetButtonStyles.buttons}>
+          <AssetUploader
+            uploadsEnabled={this.props.uploadsEnabled}
+            allowedExtensions={this.props.allowedExtensions}
+            api={this.props.api}
+            onUploadStart={this.props.onUploadStart}
+            onUploadDone={this.props.onUploadDone}
+            onUploadError={this.props.onUploadError}
+            projectType={this.props.projectType}
           />
-        )}
-        <span id="manage-asset-status">{this.props.statusMessage}</span>
+          {shouldShowRecordButton && (
+            <RecordButton
+              onSelectRecord={this.props.onSelectRecord}
+              disabled={!this.props.uploadsEnabled || this.props.recordDisabled}
+            />
+          )}
+        </span>
+        <MuiTypography
+          id="manage-asset-status"
+          variant="body2"
+          component="span"
+          sx={{flex: '1 1 auto', minWidth: 0}}
+        >
+          {this.props.statusMessage}
+        </MuiTypography>
       </div>
     );
   }

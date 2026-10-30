@@ -1,0 +1,11 @@
+name 'UI Test self-paced-example-levelgroup-text'
+title 'Check for understanding'
+description 'description here'
+
+markdown <<MARKDOWN
+Answer the question on this page.
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Teacher only markdown for level group yay!
+MARKDOWN

@@ -1,8 +1,10 @@
-import {expect} from '../../../../util/reconfiguredChai';
+import {Button as MuiButton} from '@mui/material';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
+
 import UnitCalendarButton from '@cdo/apps/code-studio/components/progress/UnitCalendarButton';
 import UnitCalendarDialog from '@cdo/apps/code-studio/components/progress/UnitCalendarDialog';
+
 import {testLessons} from './unitCalendarTestData';
 
 describe('UnitCalendarButton', () => {
@@ -15,8 +17,8 @@ describe('UnitCalendarButton', () => {
       />
     );
 
-    wrapper.find('Button').simulate('click');
-    expect(wrapper.state('isDialogOpen')).to.be.true;
+    wrapper.find(MuiButton).simulate('click');
+    expect(wrapper.state('isDialogOpen')).toBe(true);
     expect(
       wrapper.containsMatchingElement(
         <UnitCalendarDialog
@@ -27,6 +29,6 @@ describe('UnitCalendarButton', () => {
           scriptId={1}
         />
       )
-    ).to.be.true;
+    ).toBe(true);
   });
 });

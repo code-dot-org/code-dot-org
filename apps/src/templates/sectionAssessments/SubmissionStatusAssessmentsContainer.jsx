@@ -1,17 +1,20 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography, Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import SubmissionStatusAssessmentsTable from './SubmissionStatusAssessmentsTable';
+import {CSVLink} from 'react-csv';
+import {connect} from 'react-redux';
+
+import i18n from '@cdo/locale';
+
 import {studentOverviewDataPropType} from './assessmentDataShapes';
 import {
   getStudentsMCandMatchSummaryForCurrentAssessment,
   getExportableSubmissionStatusData,
 } from './sectionAssessmentsRedux';
-import {connect} from 'react-redux';
-import i18n from '@cdo/locale';
-import {CSVLink} from 'react-csv';
-import moduleStyles from '@cdo/apps/templates/button.module.scss';
-import classNames from 'classnames';
-import Button from '../Button';
+import SubmissionStatusAssessmentsTable from './SubmissionStatusAssessmentsTable';
+
+import moduleStyles from './submission-status.module.scss';
 
 export const studentExportableDataPropType = PropTypes.shape({
   studentName: PropTypes.string.isRequired,
@@ -33,7 +36,6 @@ const CSV_SUBMISSION_STATUS_HEADERS = [
 
 class SubmissionStatusAssessmentsContainer extends Component {
   static propTypes = {
-    onClickDownload: PropTypes.func.isRequired,
     // from redux
     localeCode: PropTypes.string,
     studentExportableData: PropTypes.arrayOf(studentExportableDataPropType),
@@ -41,28 +43,24 @@ class SubmissionStatusAssessmentsContainer extends Component {
   };
 
   render() {
-    // These allow the CSVLink to be styled as a button
-    let className = classNames(
-      moduleStyles.main,
-      moduleStyles[Button.ButtonColor.gray],
-      moduleStyles['default']
-    );
-
     return (
-      <div>
-        <div style={styles.buttonContainer}>
-          <h2>{i18n.studentOverviewTableHeader()}</h2>
-          <CSVLink
-            role="button"
+      <div className={moduleStyles.container}>
+        <div className={moduleStyles.header}>
+          <Typography variant="h6" component="h2">
+            {i18n.studentOverviewTableHeader()}
+          </Typography>
+          <MuiButton
+            component={CSVLink}
+            size="small"
+            variant="outlined"
+            color="secondary"
+            startIcon={<FontAwesomeV6Icon iconName="download" />}
             filename="assessments-submission-status.csv"
             data={this.props.studentExportableData}
             headers={CSV_SUBMISSION_STATUS_HEADERS}
-            onClick={this.props.onClickDownload}
-            style={styles.button}
-            className={className}
           >
             {i18n.downloadCSV()}
-          </CSVLink>
+          </MuiButton>
         </div>
         <SubmissionStatusAssessmentsTable
           localeCode={this.props.localeCode}
@@ -72,20 +70,6 @@ class SubmissionStatusAssessmentsContainer extends Component {
     );
   }
 }
-
-const styles = {
-  buttonContainer: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'flex-end',
-  },
-  button: {
-    padding: '12px 24px',
-    lineHeight: '10px',
-    marginBottom: '5px',
-  },
-};
 
 export const UnconnectedSubmissionStatusAssessmentsContainer =
   SubmissionStatusAssessmentsContainer;

@@ -1,0 +1,52 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-07-29T14:55:29.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "## Meet Amaya\n\nAmaya's app is glitching. Students will help her troubleshoot it using the SNOT protocol, following their activity guide step by step.",
+        "imageUrl": "https://images.code.org/8f065d2b914bedc89a241689feefb3ea-SNOT.png",
+        "key": "csaif-pl-hardware-troubleshoot-panels-L6-CSandDev_-rev_v2_2026-dev-11b88b4b-7c57-46c3-81fb-38321451f154",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Self\nIn Sketch Lab, students start with the Self step: restating Amaya's problem in their own words and writing down a few guesses before moving on.",
+        "imageUrl": "https://images.code.org/d146d9611cfac89ba88214404656f972-SNOT (1).png",
+        "key": "csaif-pl-hardware-troubleshoot-panels-L6-CSandDev_-rev_v2_2026-dev-332c7c89-0cf8-4333-b34d-4aa6c6afe38d",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Neighbor\nNext, students pair up and talk through the problem with a classmate, using the Neighbor prompts in the activity guide to compare what each of them noticed.",
+        "imageUrl": "https://images.code.org/2d9fc606ac2ab6f2b647439bc97a2646-SNOT (2).png",
+        "key": "csaif-pl-hardware-troubleshoot-panels-L6-CSandDev_-rev_v2_2026-dev-61ad19cf-0042-48cf-b186-9180f1ad0cb1",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Online Resources\nStill stuck, students search a simulated message board for others who've hit the same issue, using the Online Resources step to guide what to search for and what to look at.",
+        "imageUrl": "https://images.code.org/3e93d015fef7687eec7592c42ca455f1-SNOT (3).png",
+        "key": "csaif-pl-hardware-troubleshoot-panels-L6-CSandDev_-rev_v2_2026-dev-cf6d0dfa-46e8-452d-b95a-205415855596",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Technical Expert\nFinally, students turn to the platform's chatbot for the Technical Expert step, asking questions to troubleshoot with specific causes already narrowed down.",
+        "imageUrl": "https://images.code.org/4da737948342ed59591759e004de36a1-SNOT (4).png",
+        "key": "csaif-pl-hardware-troubleshoot-panels-L6-CSandDev_-rev_v2_2026-dev-0c466706-0239-47d8-ad90-95f88814f371"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/164cf0ae0d7db0a56fc1957aaab1a512-SNOT (5).png",
+        "key": "csaif-pl-hardware-troubleshoot-panels-L6-CSandDev_-rev_v2_2026-dev-1bf0d6de-b003-4460-b91e-04a88b79f2d8"
+      }
+    ],
+    "name_suffix": "_2026-dev",
+    "use_links": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-07-29T14:55:29.638+00:00\",\"changed\":[\"cloned from \\\"csaif-pl-hardware-troubleshoot-panels-L6-CSandDev_-rev_v2_2026\\\"\"],\"cloned_from\":\"csaif-pl-hardware-troubleshoot-panels-L6-CSandDev_-rev_v2_2026\"},{\"changed_at\":\"2026-10-12 19:29:28 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-10-12 19:39:00 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+}]]></config>
+</Panels>

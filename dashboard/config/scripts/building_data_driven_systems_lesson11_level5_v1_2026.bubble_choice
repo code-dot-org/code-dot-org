@@ -1,0 +1,9 @@
+name 'building-data-driven-systems-lesson11-level5-v1-2026'
+display_name 'Plan Your Interface'
+description 'Use these levels to sketch your page layout, design a clear data card, and plan how users will read and interact with your app.'
+
+sublevels
+level 'building-data-driven-systems-lesson11-level5a-v1-2026'
+level 'building-data-driven-systems-lesson11-level5b-v1-2026'
+
+uses_lab2

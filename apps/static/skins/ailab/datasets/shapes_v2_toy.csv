@@ -1,0 +1,101 @@
+sides,symmetry,equal sides,equal angles,has corners,border color,fill color,background color,size,shape
+3,no,no,no,yes,red,white,white,small,triangle
+4,no,no,no,yes,red,purple,teal,small,parallelogram
+3,no,no,no,yes,orange,purple,white,small,triangle
+4,yes,yes,yes,yes,blue,pink,gray,small,square
+4,no,no,no,yes,red,yellow,teal,big,parallelogram
+0,yes,no,no,no,green,white,white,small,circle
+0,yes,no,no,no,orange,purple,magenta,small,circle
+0,yes,no,no,no,blue,pink,white,small,circle
+4,no,no,no,yes,red,purple,teal,big,parallelogram
+4,no,no,no,yes,red,white,teal,small,parallelogram
+3,no,no,no,yes,orange,brown,gray,big,triangle
+3,yes,yes,yes,yes,black,pink,white,small,equilateral triangle
+3,no,no,no,yes,orange,yellow,teal,small,triangle
+0,yes,no,no,no,blue,brown,magenta,small,circle
+4,no,no,no,yes,red,purple,teal,small,parallelogram
+0,yes,no,no,no,red,pink,white,small,circle
+0,yes,no,no,no,green,yellow,magenta,small,circle
+3,yes,yes,yes,yes,black,yellow,white,big,equilateral triangle
+3,yes,yes,yes,yes,blue,white,white,small,equilateral triangle
+4,no,no,no,yes,red,purple,teal,big,parallelogram
+4,yes,yes,yes,yes,green,pink,white,big,square
+4,yes,yes,yes,yes,black,pink,white,small,square
+3,no,no,no,yes,orange,yellow,gray,big,triangle
+0,yes,no,no,no,green,white,white,big,circle
+4,no,no,no,yes,red,brown,teal,big,parallelogram
+3,no,no,no,yes,black,yellow,white,big,triangle
+4,no,no,no,yes,red,purple,teal,big,parallelogram
+0,yes,no,no,no,red,yellow,magenta,big,circle
+4,yes,yes,yes,yes,red,pink,white,small,square
+4,no,no,no,yes,red,purple,teal,small,parallelogram
+4,yes,yes,yes,yes,green,pink,white,small,square
+3,yes,yes,yes,yes,black,yellow,white,big,equilateral triangle
+0,yes,no,no,no,red,brown,magenta,big,circle
+3,yes,yes,yes,yes,blue,brown,white,small,equilateral triangle
+3,yes,yes,yes,yes,black,pink,white,big,equilateral triangle
+4,yes,yes,yes,yes,blue,pink,white,small,square
+0,yes,no,no,no,green,yellow,white,small,circle
+4,yes,yes,yes,yes,green,pink,white,small,square
+4,no,no,no,yes,red,purple,teal,big,parallelogram
+3,no,no,no,yes,blue,brown,gray,small,triangle
+4,yes,yes,yes,yes,green,brown,teal,small,square
+4,no,no,no,yes,green,purple,teal,small,parallelogram
+4,no,no,no,yes,red,purple,teal,big,parallelogram
+4,no,no,no,yes,red,purple,teal,small,parallelogram
+0,yes,no,no,no,green,pink,magenta,small,circle
+4,yes,yes,yes,yes,blue,brown,gray,small,square
+4,yes,yes,yes,yes,black,yellow,white,small,square
+4,yes,yes,yes,yes,blue,pink,gray,big,square
+3,yes,yes,yes,yes,black,pink,white,big,equilateral triangle
+3,no,no,no,yes,black,yellow,gray,big,triangle
+3,yes,yes,yes,yes,black,white,white,big,equilateral triangle
+0,yes,no,no,no,red,purple,white,big,circle
+4,yes,yes,yes,yes,red,pink,white,big,square
+3,no,no,no,yes,blue,purple,gray,small,triangle
+3,yes,yes,yes,yes,black,white,white,big,equilateral triangle
+3,yes,yes,yes,yes,black,pink,white,big,equilateral triangle
+3,yes,yes,yes,yes,black,pink,white,big,equilateral triangle
+3,no,no,no,yes,orange,pink,teal,small,triangle
+0,yes,no,no,no,green,white,magenta,small,circle
+0,yes,no,no,no,green,pink,teal,big,circle
+3,yes,yes,yes,yes,blue,yellow,white,big,equilateral triangle
+3,yes,yes,yes,yes,black,white,gray,small,equilateral triangle
+4,no,no,no,yes,red,purple,teal,small,parallelogram
+0,yes,no,no,no,black,yellow,white,small,circle
+0,yes,no,no,no,green,white,white,small,circle
+3,yes,yes,yes,yes,black,white,white,small,equilateral triangle
+3,no,no,no,yes,orange,purple,teal,big,triangle
+3,yes,yes,yes,yes,blue,white,white,big,equilateral triangle
+3,yes,yes,yes,yes,blue,purple,white,big,equilateral triangle
+3,no,no,no,yes,orange,purple,gray,small,triangle
+4,no,no,no,yes,black,purple,teal,big,parallelogram
+4,yes,yes,yes,yes,green,pink,white,small,square
+3,no,no,no,yes,blue,purple,gray,big,triangle
+4,yes,yes,yes,yes,blue,pink,white,big,square
+0,yes,no,no,no,green,yellow,magenta,big,circle
+4,no,no,no,yes,red,purple,teal,small,parallelogram
+4,no,no,no,yes,red,purple,teal,big,parallelogram
+4,yes,yes,yes,yes,red,pink,white,big,square
+3,no,no,no,yes,green,purple,magenta,big,triangle
+4,yes,yes,yes,yes,black,pink,white,small,square
+3,no,no,no,yes,black,purple,teal,big,triangle
+4,yes,yes,yes,yes,black,pink,magenta,small,square
+4,yes,yes,yes,yes,red,brown,teal,small,square
+4,yes,yes,yes,yes,black,yellow,white,small,square
+4,no,no,no,yes,green,purple,teal,big,parallelogram
+0,yes,no,no,no,red,yellow,white,small,circle
+3,yes,yes,yes,yes,black,pink,white,big,equilateral triangle
+3,yes,yes,yes,yes,blue,purple,white,small,equilateral triangle
+4,yes,yes,yes,yes,blue,brown,white,small,square
+3,yes,yes,yes,yes,black,yellow,white,big,equilateral triangle
+0,yes,no,no,no,red,purple,magenta,small,circle
+3,yes,yes,yes,yes,black,pink,white,big,equilateral triangle
+3,no,no,no,yes,blue,yellow,teal,big,triangle
+4,yes,yes,yes,yes,blue,pink,gray,small,square
+4,no,no,no,yes,red,purple,teal,big,parallelogram
+4,no,no,no,yes,red,white,teal,big,parallelogram
+3,no,no,no,yes,orange,pink,teal,big,triangle
+0,yes,no,no,no,green,white,white,small,circle
+4,no,no,no,yes,orange,yellow,teal,big,parallelogram
+0,yes,no,no,no,green,brown,white,small,circle

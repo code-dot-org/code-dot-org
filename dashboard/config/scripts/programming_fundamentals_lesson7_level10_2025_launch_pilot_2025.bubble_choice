@@ -1,0 +1,9 @@
+name 'programming-fundamentals-lesson7-level10_2025-launch_pilot-2025'
+display_name 'Use Your Tools'
+description 'Choose **ONE** scenario and use the `turn_right()` function from `custom.py` to help your `Painter` navigate the Neighborhood. Practice importing a custom module, calling a function with dot notation, and saving your file to the Backpack for future use.'
+
+sublevels
+level 'programming-fundamentals-lesson7-level10a_2025-launch_pilot-2025'
+level 'programming-fundamentals-lesson7-level10b_2025-launch_pilot-2025'
+level 'programming-fundamentals-lesson7-level10c_2025-launch_pilot-2025'
+level 'programming-fundamentals-lesson7-level10d_2025-launch_pilot-2025'

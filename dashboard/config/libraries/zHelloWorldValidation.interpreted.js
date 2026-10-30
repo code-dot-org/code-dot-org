@@ -141,7 +141,7 @@ function level3(){
 }
 
 
-function level4(){
+function level4(isTransformers){
   //This level requires zValidationHelperFunctions
   var spriteIds = getSpriteIdsInUse();
   var eventLog = getEventLog();
@@ -166,7 +166,7 @@ function level4(){
 
   //check for unclicked sprites, and show hand with rings
   if(World.seconds > 1){
-    checkForUnclickedSprites(spriteIds, eventLog);
+    checkForUnclickedSprites(spriteIds, eventLog, isTransformers);
   }
 
   var newClickedSprite = getClickedSpriteIdCausedSpeech(eventLog, validationProps.vars.eventLogLength);

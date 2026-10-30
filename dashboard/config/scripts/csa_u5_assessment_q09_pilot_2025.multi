@@ -1,0 +1,32 @@
+name 'CSA U5 Assessment q09_pilot-2025'
+
+wrong '`letters[1]`'
+wrong '`letters[2]`'
+wrong '`letters[1:2]`'
+right '`letters[1][2]`'
+wrong '`letters[1, 2]`'
+
+markdown <<MARKDOWN
+Consider the following code segment:
+
+```
+String[][] letters = {{"A", "B", "C"},
+                      {"D", "E", "F”},
+                      {"G", "H", "I"}};
+```
+
+Which statement is the correct syntax to access element `"F"` from the `letters` array?
+MARKDOWN
+
+allow_multiple_attempts true
+teacher_markdown <<MARKDOWN
+Let's break down the syntax:
+
+* `letters[1]` accesses the second element in the `letters` array, which is the second row.
+
+* `letters[1][2]` then accesses the third element in the second row, which is the element `"F"`.
+
+Remember that array indexing starts from `0`, so `letters[1]` refers to the second row (index `1`), and `letters[1][2]` accesses the third element in that row (index `2`).
+
+Therefore, `letters[1][2]` is the correct syntax to access the element `"F"` from the `letters` array.
+MARKDOWN

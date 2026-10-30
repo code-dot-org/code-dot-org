@@ -1,0 +1,41 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-05-28T16:56:13.000Z",
+  "level_num": "custom",
+  "user_id": 574,
+  "properties": {
+    "require_edit_to_continue": true,
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "54936953-3764-45ae-8628-aa6781b78cc5": {
+          "id": "54936953-3764-45ae-8628-aa6781b78cc5",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html>\n<head>\n  <title>My First 3D Canvas</title>\n  <style>\n    body {\n      margin: 0;\n      overflow: hidden;\n      background-color: #222;\n      font-family: sans-serif;\n      color: white;\n      text-align: center;\n    }\n    h1 {\n        margin-top: 20px;\n        position: absolute;\n        width: 100%;\n        top: 0;\n        left: 0;\n        z-index: 10;\n    }\n    canvas {\n      display: block; /* Ensures canvas doesn't have extra space around it */\n    }\n  </style>\n</head>\n<body>\n  <h1>Your First 3D Canvas!</h1>\n  <script src=\"script.js\"></script>\n</body>\n</html>",
+          "folderId": "0",
+          "type": "starter",
+          "active": true
+        },
+        "f64c220c-073e-4a55-8675-31737b788e50": {
+          "id": "f64c220c-073e-4a55-8675-31737b788e50",
+          "name": "script.js",
+          "contents": "// Get the body element to append the canvas to\nconst body = document.body;\n\n// Create a canvas element dynamically\nconst canvas = document.createElement('canvas');\ncanvas.width = window.innerWidth;\ncanvas.height = window.innerHeight;\n// Give it a border and background to make it visible once appended\ncanvas.style.border = '2px solid white';\ncanvas.style.backgroundColor = '#333'; // Slightly darker than body for contrast\n\n// Get the WebGL rendering context for 3D graphics\nconst gl = canvas.getContext('webgl');\n\nif (!gl) {\n  console.error('WebGL not supported. Please use a modern browser.');\n  alert('Unable to initialize WebGL. Your browser may not support it.');\n} else {\n  // WebGL context obtained, but the canvas is not yet part of the document!\n\n  // --- STUDENT TASK: Add a line here to make the canvas visible ---  \n  // Hint: You need to add the 'canvas' element to the 'body' of the HTML document.\n  // Example: someElement.appendChild(anotherElement);\n\n  \n\n  // For now, let's just clear the canvas to a color to show it's working\n  gl.clearColor(0.0, 0.0, 0.0, 1.0); // Clear to black (R, G, B, Alpha)\n  gl.clear(gl.COLOR_BUFFER_BIT); // Apply the clear color\n}\n\n// Optional: Resize canvas if window resizes, maintaining full screen\nwindow.addEventListener('resize', () => {\n  canvas.width = window.innerWidth;\n  canvas.height = window.innerHeight;\n  if (gl) {\n    gl.viewport(0, 0, canvas.width, canvas.height); // Adjust WebGL viewport\n  }\n});",
+          "folderId": "0",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "54936953-3764-45ae-8628-aa6781b78cc5",
+        "f64c220c-073e-4a55-8675-31737b788e50"
+      ]
+    },
+    "long_instructions": "In the previous levels, you learned about 3D space and how objects are built from vertices. Now, let's get our hands dirty and set up a place to actually *see* these 3D objects!\r\n\r\nYour goal in this level is to make a special drawing surface, called a `canvas`, appear on your webpage. This `canvas` will be where all our 3D graphics are drawn. We've set up most of the code for you, but one crucial step is missing.\r\n\r\n1.  Open `script.js`. You'll see that a `canvas` element has been created and configured in memory, and we've even grabbed its `WebGL` rendering context. However, it's not yet part of your HTML page, so you can't see it.\r\n2.  Find the comment that says `// --- STUDENT TASK: Add a line here to make the canvas visible ---` in `script.js`.\r\n3.  On the line directly after this comment, add the code that appends the `canvas` element to the `body` of your `index.html` page. Remember, you can use the `appendChild()` method for this. We've already provided a `body` variable for you to use!\r\n\r\nOnce you add the correct line, you should see a large black box with a white border appear on your webpage. This is your canvas, ready for 3D action!",
+    "generate_outline": "Students will learn to set up a basic 3D rendering environment within Web Lab 2. Provide starter code that initializes a WebGL canvas and a basic scene, prompting students to add a few lines of code to make the canvas visible."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-28 16:56:29 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-28 16:56:29 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-28 16:57:01 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

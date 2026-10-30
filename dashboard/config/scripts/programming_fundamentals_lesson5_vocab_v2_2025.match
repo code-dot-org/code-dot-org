@@ -1,0 +1,18 @@
+name 'programming-fundamentals-lesson5-vocab_v2-2025'
+title 'Check Your Understanding'
+description 'Match each term with the correct definition.'
+height '100'
+
+question 'method'
+answer 'a named set of instructions to perform a task'
+
+question 'class'
+answer 'a blueprint or set of instructions for creating something that can do specific tasks'
+
+question 'pseudocode'
+answer 'a way to plan out your code using plain language'
+
+question 'object'
+answer 'something that has attributes (what it knows) and methods (what it can do)'
+
+allow_multiple_attempts true

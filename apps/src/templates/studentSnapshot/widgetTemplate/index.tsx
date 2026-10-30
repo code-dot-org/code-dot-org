@@ -1,0 +1,84 @@
+import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
+import {ActionDropdownOption} from '@code-dot-org/component-library/dropdown/actionDropdown';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography} from '@mui/material';
+import React from 'react';
+
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
+import i18n from '@cdo/locale';
+
+import styles from './widgetTemplate.module.scss';
+
+interface DropdownOption extends ActionDropdownOption {}
+
+interface WidgetTemplateProps {
+  widgetName: string;
+  gridWidth: number;
+  gridHeight: number;
+  children: React.ReactNode;
+  scrollable?: boolean;
+  loading?: boolean;
+  settingsOptions?: DropdownOption[];
+  id?: string;
+  headerContent?: React.ReactNode;
+}
+
+const WidgetTemplate: React.FC<WidgetTemplateProps> = ({
+  widgetName,
+  gridWidth,
+  gridHeight,
+  children,
+  scrollable = false,
+  loading = false,
+  settingsOptions = [],
+  id,
+  headerContent,
+}) => {
+  return (
+    <div
+      id={id}
+      className={styles.widget}
+      style={{gridColumn: `span ${gridWidth}`, gridRow: `span ${gridHeight}`}}
+    >
+      <div className={styles.header}>
+        <Typography variant="label1">{widgetName}</Typography>
+        {headerContent && (
+          <div className={styles.headerContent}>{headerContent}</div>
+        )}
+        {settingsOptions.length > 0 && (
+          <div>
+            <ActionDropdown
+              useIconButton
+              triggerButtonProps={{
+                color: 'tertiary',
+                variant: 'outlined',
+                children: <FontAwesomeV6Icon iconName="gear" />,
+              }}
+              name={`${widgetName}-settings-dropdown`}
+              labelText={i18n.settings()}
+              size="xs"
+              disabled={loading}
+              options={settingsOptions}
+              menuPlacement="right"
+            />
+          </div>
+        )}
+      </div>
+      <div
+        className={`${styles.content} ${
+          scrollable ? styles.scrollable : styles.hidden
+        }`}
+      >
+        {loading ? (
+          <div className={styles.loadingContainer}>
+            <Spinner size="large" />
+          </div>
+        ) : (
+          children
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default WidgetTemplate;

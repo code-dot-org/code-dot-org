@@ -1,0 +1,12 @@
+#lti-unsupported-message-type.error-page
+  .error-parent
+    .error-child
+      = image_tag '/shared/images/sad-bee-avatar.png'
+      %br
+      .error-message
+        %h1= t('lti.error.unsupported_message_type')
+        != t('lti.error.unsupported_message_type_desc', message_type: message_type, supported_methods_url: SharedConstants::LMS_LINKS.SUPPORTED_METHODS_URL, markdown: true)
+        %br
+        %br
+        %a{href: root_url}
+          %button= I18n.t(:page_not_found_button)

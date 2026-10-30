@@ -1,0 +1,38 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 75,
+  "created_at": "2026-02-04T19:32:12.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# System Flow Sketch\r\n\r\n**Goal:** Use this space to visually support your explanation of how your app works as a system.\r\n\r\nThis sketch is **not** about designing a final UI or planning features. It is a thinking tool to help you explain user interactions, logic, and how information moves through your app.\r\n\r\nYou may use this sketch to:\r\n- show how a user moves through your app\r\n- illustrate what happens when a user takes an action\r\n- visualize how information flows from input to processing to display\r\n\r\nYou can also choose to explain your system in words and use the System Explanation Chat instead of sketching.\r\n\r\n### Optional Focus Areas\r\n\r\n:::details [<i class=\"fa fa-briefcase\" aria-hidden=\"true\"></i> **If your capstone is completed *after Unit 3*, your sketch may help explain:**]\r\n- how local data structures (arrays or objects) are used\r\n- how user input affects system behavior\r\n- how data moves through the app from input → processing → display\r\n:::\r\n\r\n<br>\r\n\r\n:::details [<i class=\"fa fa-briefcase\" aria-hidden=\"true\"></i> **If your capstone is completed *after Unit 5*, your sketch may help explain:**]\r\n- where external data enters the system\r\n- where the system waits for information\r\n- where errors, empty states, or recovery paths may occur\r\n:::\r\n",
+    "start_sources": {
+      "source": {
+        "type": "excalidraw",
+        "version": 2,
+        "source": "https://levelbuilder-studio.code.org",
+        "elements": [
+
+        ],
+        "appState": {
+          "gridSize": null,
+          "viewBackgroundColor": "#ffffff",
+          "scrollX": 0,
+          "scrollY": 0,
+          "zoom": {
+            "value": 1
+          }
+        },
+        "files": {
+        },
+        "externalFiles": {
+        }
+      }
+    },
+    "project_template_level_name": "capstone-project-lesson1-sketchlab-template-test-2025"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-02-04 19:32:18 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-04 19:32:42 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-04 19:32:47 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-04 19:33:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-04 19:33:20 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-04 20:06:25 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Sketchlab>

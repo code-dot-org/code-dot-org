@@ -1,0 +1,53 @@
+name 'self-paced-TCaAI-L2-BI2-Reflection_26'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Key Lesson Moments: AI Requires Human Judgment
+
+## Lesson 7: Verifying AI Output
+
+<img 
+src="https://images.code.org/345de1e81d82ebe1c6320c5b20a01582-image-1779237092357.jpeg" 
+alt="" 
+style="width:35%; border-radius:10px; margin:0px 0px 10px 15px; float:right;">
+
+<a href="https://studio.code.org/courses/ai-discoveries-2026/units/1/lessons/7" target="blank" rel="noopener noreferrer">Lesson Plan Link</a>
+
+📎 **Student Resource**: <a href="https://docs.google.com/document/d/1Yed_Nk6lsemPAdG5VYfLE90vDs6FTLF7yALovoX9twE/edit?tab=t.0#heading=h.5sxyuwwa9jv5" target="blank" rel="noopener noreferrer">AI Audit Field Notes</a>
+
+**Lesson Objectives**: 
+
+* Explain why AI generates output that is incomplete or incorrect.
+* Identify at least one strategy for verifying AI output.
+
+### Student Activity: Verifying AI Output
+
+In this lesson, students investigate how AI systems can generate information that sounds confident and believable even when it is false. Students examine examples of AI-generated misinformation and learn strategies for verifying whether AI outputs are trustworthy.
+
+Students practice breaking verification into smaller judgment moves, including:
+
+* checking trusted sources
+* looking for agreement across sources
+* checking dates and recency
+* asking where information came from
+* deciding when human oversight is necessary
+
+As students work, they begin recognizing that responsible AI use is not about blindly trusting or distrusting AI. Instead, it requires active human judgment and verification.
+
+<div style="clear:both;"></div>
+
+### Try It Out!
+
+In the next level, you’ll explore a set of mini-lessons from Lesson 7 that help students build a more accurate understanding of why AI systems can sound convincing even when they are incomplete or incorrect. **Choose at least one to go through**.
+
+As you explore the mini lesson(s), consider:
+
+<div style="background-color:#F5F7F8; padding:18px; border-radius:10px; margin:20px 0px;">
+
+<p style="font-size:16px; margin:0;">
+<strong>Reflection:</strong> How can these mini lessons help students build stronger habits of questioning and verification when using AI tools?
+</p>
+
+</div>
+MARKDOWN

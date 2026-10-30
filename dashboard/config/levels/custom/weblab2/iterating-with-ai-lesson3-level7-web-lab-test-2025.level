@@ -1,0 +1,68 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-11-21T17:44:11.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Lucky 6 Dice Roller</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n\n  <main>\n    <h1>Lucky 6 Roller</h1>\n    <p>Roll the die until you get a 6!</p>\n    \n    <button id=\"rollBtn\">Roll Dice</button>\n    \n    <div class=\"results-container\">\n      <h3>Roll History:</h3>\n      <ul id=\"results\">\n        </ul>\n    </div>\n  </main>\n\n</body>\n</html>\n  ",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// DOM elements\nconst rollBtn = document.querySelector(\"#rollBtn\");\nconst resultsList = document.querySelector(\"#results\");\n\n// Helper function\nconst rollDie = () => Math.floor(Math.random() * 6) + 1;\n\n// Event Listener\nrollBtn.addEventListener(\"click\", () => {\n  resultsList.innerHTML = \"\";  // Reset the list\n  \n  // Initialize variables\n  let roll = 0; // Start with an impossible value so the loop runs at least once\n  const target = 6;\n\n // Write your while loop here\n\n\n\n\n  \n});\n",
+          "folderId": "0",
+          "active": true
+        },
+        "3": {
+          "id": "3",
+          "name": "style.css",
+          "language": "css",
+          "contents": "/* Base Styles */\nbody {\n  font-family: 'Verdana', sans-serif;\n  background-color: #f0f4f8;\n  color: #333;\n  text-align: center;\n  padding: 2rem;\n}\n\nh1 {\n  color: #2c3e50;\n}\n\n/* Button Styling */\nbutton {\n  background-color: #3498db;\n  color: white;\n  border: none;\n  padding: 1rem 2rem;\n  font-size: 1.2rem;\n  border-radius: 8px;\n  cursor: pointer;\n  margin-bottom: 2rem;\n  transition: background-color 0.2s;\n}\n\nbutton:hover {\n  background-color: #2980b9;\n}\n\n/* Results List */\n.results-container {\n  background: white;\n  max-width: 400px;\n  margin: 0 auto;\n  padding: 1rem;\n  border-radius: 8px;\n  box-shadow: 0 4px 6px rgba(0,0,0,0.1);\n}\n\nul {\n  list-style-type: none;\n  padding: 0;\n}\n\nli {\n  background-color: #ecf0f1;\n  margin: 5px 0;\n  padding: 10px;\n  border-radius: 4px;\n  font-family: 'Courier New', monospace;\n  font-weight: bold;\n}\n\n/* Highlight the winning roll */\nli:last-child {\n  background-color: #2ecc71;\n  color: white;\n}",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nenCgQ9ORDqDwYFtzVGJE9TLsnqiUzkmA\n",
+    "encrypted": "false",
+    "long_instructions": "#Creating a While Loop\r\n\r\n1. **Create the Loop:** Inside the event listener, write a `while` loop that continues running as long as `roll` is strictly not equal (`!==`) to `target`.\r\n2. **Roll the Die:** Set the value of `roll` to the result of the `rollDie()` function.\r\n3. **Show the Result:** Work with AI to create a new list item, set its text to the `roll` number, and add it to `resultsList`.\r\n4. **Test:** Click the button. The list should generate random numbers and stop immediately once it prints a 6.\r\n",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-21 17:48:24 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-21 17:48:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-21 17:49:23 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-21 17:50:05 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-21 17:50:30 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

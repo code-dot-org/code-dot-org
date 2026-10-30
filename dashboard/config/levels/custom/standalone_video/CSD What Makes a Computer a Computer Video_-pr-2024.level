@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2024-08-26T19:24:46.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "video_key": "csd_what_computers_are",
+    "instructions_important": "false",
+    "display_name": "Video: What Makes a Computer, a Computer?",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 20188,
+    "name_suffix": "_-pr-2024",
+    "long_instructions": "## Questions to think about:\r\n\r\n* What made computers different from machines that came before them?\r\n",
+    "encrypted": "false",
+    "teacher_markdown": "## Discussion Goals\r\n\r\nAfter watching the video, students should understand that computers are machines designed to help people with thinking work, as opposed to physical work.  Within a problem solving context, computers are designed to solve information problems.  Subtleties may come up in the discussion around computers that have output mechanisms that allow them to do physical work (e.g. robots).  It's okay if students do not come to a particular conclusion about every device they can think of.\r\n"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-08-26T19:24:46.740+00:00\",\"changed\":[\"cloned from \\\"CSD What Makes a Computer a Computer Video_2022\\\"\"],\"cloned_from\":\"CSD What Makes a Computer a Computer Video_2022\"}]"
+}]]></config>
+</StandaloneVideo>

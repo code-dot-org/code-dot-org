@@ -1,24 +1,35 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styles from './progress-table-v2.module.scss';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
-import FontAwesome from '../FontAwesome';
+import PropTypes from 'prop-types';
+import React from 'react';
+import {connect} from 'react-redux';
+
+import i18n from '@cdo/locale';
+
 import {lessonHasLevels} from '../progress/progressHelpers';
-import skeletonizeContent from '@cdo/apps/componentLibrary/skeletonize-content.module.scss';
+
 import LessonTitleTooltip, {getTooltipId} from './LessonTitleTooltip';
+import {addExpandedLesson} from './sectionProgressRedux';
+
+import styles from './progress-table-v2.module.scss';
+import skeletonizeContent from '@cdo/apps/sharedComponents/skeletonize-content.module.scss';
 
 const getUninteractiveLessonColumnHeader = (lesson, allLocked) => {
   return (
     <div
-      className={classNames(styles.gridBox, styles.lessonHeaderCell)}
+      className={styles.lessonHeaderCell}
       key={lesson.id}
       data-tip
       data-for={getTooltipId(lesson)}
     >
       <LessonTitleTooltip lesson={lesson} />
-      {lesson.numberedLesson && lesson.relative_position}
-      {!lesson.numberedLesson && (
-        <FontAwesome icon={allLocked ? 'lock' : 'lock-open'} />
+      {!lesson.lockable && lesson.relative_position}
+      {lesson.lockable && (
+        <FontAwesomeV6Icon
+          iconName={allLocked ? 'lock' : 'lock-open'}
+          iconStyle="solid"
+          title={i18n.locked()}
+        />
       )}
     </div>
   );
@@ -26,14 +37,16 @@ const getUninteractiveLessonColumnHeader = (lesson, allLocked) => {
 
 const getSkeletonLessonHeader = lessonId => (
   <div
+    aria-label={i18n.loadingLesson()}
     className={classNames(
-      styles.gridBox,
       styles.lessonHeaderCell,
       styles.lessonHeaderCellContainer
     )}
     key={lessonId}
   >
     <div
+      // eslint-disable-next-line react/forbid-dom-props
+      data-testid={'skeletonize-content'}
       className={classNames(
         styles.lessonSkeletonHeaderCell,
         skeletonizeContent.skeletonizeContent
@@ -42,7 +55,9 @@ const getSkeletonLessonHeader = lessonId => (
   </div>
 );
 
-export default function LessonProgressColumnHeader({
+function LessonProgressColumnHeader({
+  scriptId,
+  sectionId,
   addExpandedLesson,
   lesson,
   allLocked,
@@ -50,30 +65,50 @@ export default function LessonProgressColumnHeader({
   if (lesson.isFake) {
     return getSkeletonLessonHeader(lesson.id);
   }
-  if (!lessonHasLevels(lesson) || !lesson.numberedLesson) {
+  if (!lessonHasLevels(lesson) || lesson.lockable) {
     return getUninteractiveLessonColumnHeader(lesson, allLocked);
   }
   return (
-    <div className={styles.lessonHeaderCellContainer}>
-      <div
-        className={classNames(
-          styles.gridBox,
-          styles.lessonHeaderCell,
-          styles.pointerMouse
-        )}
-        data-tip
-        data-for={getTooltipId(lesson)}
-        onClick={() => addExpandedLesson(lesson.id)}
-      >
-        <LessonTitleTooltip lesson={lesson} />
-        <FontAwesome icon="caret-right" className={styles.lessonHeaderCaret} />
-        {lesson.relative_position}
-      </div>
-    </div>
+    <button
+      id={'ui-test-lesson-header-' + lesson.relative_position}
+      className={styles.lessonHeaderCellInteractive}
+      data-tip
+      data-for={getTooltipId(lesson)}
+      onClick={() => addExpandedLesson(scriptId, sectionId, lesson)}
+      aria-label={lesson.title}
+      aria-expanded={false}
+      type="button"
+      tabIndex={0}
+    >
+      <LessonTitleTooltip lesson={lesson} />
+      <FontAwesomeV6Icon
+        iconName="caret-right"
+        iconStyle="solid"
+        className={styles.lessonHeaderCaret}
+        title={i18n.expand()}
+      />
+      {lesson.relative_position}
+    </button>
   );
 }
 
+export default connect(
+  state => ({
+    sectionId: state.teacherSections.selectedSectionId,
+    scriptId: state.unitSelection.scriptId,
+  }),
+  dispatch => ({
+    addExpandedLesson(scriptId, sectionId, lessonId) {
+      dispatch(addExpandedLesson(scriptId, sectionId, lessonId));
+    },
+  })
+)(LessonProgressColumnHeader);
+
+export const UnconnectedLessonProgressColumnHeader = LessonProgressColumnHeader;
+
 LessonProgressColumnHeader.propTypes = {
+  sectionId: PropTypes.number,
+  scriptId: PropTypes.number,
   lesson: PropTypes.object.isRequired,
   addExpandedLesson: PropTypes.func.isRequired,
   allLocked: PropTypes.bool,

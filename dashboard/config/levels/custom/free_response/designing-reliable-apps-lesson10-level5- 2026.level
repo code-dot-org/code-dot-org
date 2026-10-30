@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-06-16T21:16:39.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "skip_dialog": true,
+    "skip_sound": true,
+    "encrypted": "false",
+    "title": "Check For Understanding",
+    "long_instructions": "> ##You just built a hybrid app as a Data Engineer. Answer the following:\r\n>\r\n> 1. What tradeoffs did you make between speed, reliability, freshness, and control?\r\n> 2. What risks come with depending on a live API — and what did you build to address them?",
+    "stay_on_level_after_submit": "false",
+    "height": "100",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-06-16T21:16:39.476+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson7-frq-2025-pilo_2025-_2026\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson7-frq-2025-pilo_2025-_2026\"},{\"changed_at\":\"2026-06-16 21:17:25 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-16 21:58:18 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

@@ -1,0 +1,22 @@
+name 'pl-aif-y2-u1-l6-mini-decision-tree'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Tracing a Decision Tree
+
+You just saw the fever/cough decision tree translate into nested if/else code. Now trace it yourself: answer each question and watch exactly which lines of code run for your path. Try to explore all four possible paths before moving on.
+
+---
+
+<div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
+  <iframe
+    src="https://amandadennard-dotcom.github.io/AIFY2/unit-1/decision-tree-trace.html"
+    width="100%"
+    height="1020"
+    frameborder="0"
+    scrolling="no"
+    title="Trace a decision tree: answer yes/no questions and watch the matching code highlight">
+  </iframe>
+</div>
+MARKDOWN

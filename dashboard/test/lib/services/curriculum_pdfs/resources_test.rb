@@ -41,7 +41,7 @@ class Services::CurriculumPdfs::ResourcesTest < ActiveSupport::TestCase
   end
 
   test 'script resources PDF includes resources from all lessons' do
-    script = create(:script, seeded_from: Time.now)
+    script = create(:script, :in_single_unit_course, seeded_from: Time.now)
     lesson_group = create(:lesson_group, script: script)
     FileUtils.stubs(:cp)
 
@@ -66,14 +66,16 @@ class Services::CurriculumPdfs::ResourcesTest < ActiveSupport::TestCase
   end
 
   test 'script resources PDF skips resources where should_include_in_pdf is falsy' do
-    script = create(:script, seeded_from: Time.now)
+    script = create(:script, :in_single_unit_course, seeded_from: Time.now)
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script)
     resource = create(:resource, url: "test.pdf", include_in_pdf: false)
     verified_teacher_resource = create(:resource, url: "verified-teacher-test.pdf", include_in_pdf: true, audience: 'Verified Teacher')
+    embed_only_resource = create(:resource, url: "embed-only-test.pdf", include_in_pdf: true, embeddability_type: SharedConstants::RESOURCE_EMBEDDABILITY_OPTIONS[:EMBED_ONLY][:value])
 
     lesson.resources << resource
     lesson.resources << verified_teacher_resource
+    lesson.resources << embed_only_resource
     lesson_group.lessons << lesson
     script.reload
     FileUtils.stubs(:cp)
@@ -128,19 +130,19 @@ class Services::CurriculumPdfs::ResourcesTest < ActiveSupport::TestCase
 
   test 'fetch_url_to_path works for google drive resources that can be exported as pdfs' do
     fake_file = OpenStruct.new
-    fake_file.export_links = {"application/pdf" => "fake_export_link_to_pdf"}
+    fake_file.mime_type = "application/pdf"
     Services::CurriculumPdfs.expects(:url_to_id).with(@google_drive_resource.url).returns(@drive_file_id)
-    @fake_service.stubs(:getFile).returns(fake_file)
-    @fake_service.expects(:export_file).with(@drive_file_id, 'application/pdf', download_dest: @drive_path)
+    @fake_service.stubs(:get_file).returns(fake_file)
+    @fake_service.expects(:get_file).with(@drive_file_id, download_dest: @drive_path)
     assert_equal @drive_path, Services::CurriculumPdfs.fetch_url_to_path(@drive_url, @drive_path)
   end
 
   test 'fetch_url_to_path returns nil if google doc cannot be exported as PDF' do
     fake_file = OpenStruct.new
-    fake_file.export_links = {}
+    fake_file.mime_type = {}
     Services::CurriculumPdfs.expects(:url_to_id).with(@google_drive_resource.url).returns(@drive_file_id)
-    @fake_service.stubs(:getFile).returns(fake_file)
-    @fake_service.expects(:export_file).never
+    @fake_service.stubs(:get_file).returns(fake_file)
+    @fake_service.expects(:get_file).with(@drive_file_id, download_dest: @drive_path).never
     assert_nil Services::CurriculumPdfs.fetch_url_to_path(@drive_url, @drive_path)
   end
 end

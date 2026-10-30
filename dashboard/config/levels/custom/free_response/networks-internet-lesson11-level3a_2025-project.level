@@ -1,0 +1,24 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2025-03-22T02:14:08.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Scenario and Key Risk\r\n\r\n### What network scenario did you choose, and what is its primary security risk?\r\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_2025-project"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-03-22T02:14:08.603+00:00\",\"changed\":[\"cloned from \\\"networks-internet-lesson11-level3a_2025\\\"\"],\"cloned_from\":\"networks-internet-lesson11-level3a_2025\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

@@ -1,0 +1,20 @@
+name 'problem-solving-with-ai-lesson12-level1e_v2_2026_dev'
+title 'AI Environmental Impact'
+display_name 'AI Environmental Impact'
+thumbnail_url 'https://images.code.org/4f2865a12c46565fa18c064d4922d78a-save-the-planet.png'
+
+markdown <<MARKDOWN
+##AI's Environmental Impact
+Examine the following news articles, crafted by CodeAI, but modeled after real world events.
+
+[Article 1](https://drive.google.com/file/d/15ClXr5FWyzYKV8TXd4PbEbcC-_xI-nQU/view?usp=sharing)
+
+[Article 2](https://drive.google.com/file/d/1aYvqge8nQFjIYQfUIIfNw3rGrsHEEGs8/view?usp=sharing)
+
+[Article 3](https://drive.google.com/file/d/1bEzIXtS8bcoy23EflopZT1w496BQ5pOP/view?usp=sharing)
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Note**: If Google Drive access is restricted, you can access these articles in the AI Chat level. Click "Add file" -> "From Library" -> then open each article individually.
+MARKDOWN

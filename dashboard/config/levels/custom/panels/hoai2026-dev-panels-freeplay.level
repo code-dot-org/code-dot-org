@@ -1,0 +1,22 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-08-10T00:00:00.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "##You get everything now!\nAll your images, scenes, and blocks are unlocked. Add scenes, make images, and turn your project into a whole game. Make it yours.",
+        "imageUrl": "",
+        "key": "hoai2026-dev-panels-freeplay-aa500533-21a5-4a7f-893c-443019a2e95e"
+      }
+    ],
+    "use_links": "false",
+    "header_label": "Free play"
+  }
+}]]></config>
+</Panels>

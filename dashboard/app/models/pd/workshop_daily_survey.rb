@@ -29,6 +29,21 @@
 
 module Pd
   class WorkshopDailySurvey < ApplicationRecord
+    export_to_analytics
+
+    data_classification(
+      id: :restricted,
+      form_id: :restricted,
+      submission_id: :restricted,
+      user_id: :restricted,
+      pd_session_id: :restricted,
+      pd_workshop_id: :restricted,
+      answers: :restricted,
+      day: :restricted,
+      created_at: :restricted,
+      updated_at: :restricted,
+    )
+
     include JotFormBackedForm
     include SharedWorkshopConstants
     include Pd::WorkshopSurveyConstants

@@ -1,0 +1,14 @@
+name 'ai-powered-threats-defenses-preassessment-q3_2025-pilot_2025'
+
+question ‘What is the primary goal of a phishing attack?’
+
+wrong ‘To permanently damage a user\'s device’
+wrong ‘To slow down internet traffic on a network’
+right ‘To trick a user into sharing sensitive information’
+wrong ‘To improve website performance’
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 3: Phishing and Password Attacks
+MARKDOWN

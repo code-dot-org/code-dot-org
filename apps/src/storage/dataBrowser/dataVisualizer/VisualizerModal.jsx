@@ -1,23 +1,26 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
-import memoize from 'memoize-one';
-import {DebounceInput} from 'react-debounce-input';
-import _ from 'lodash';
-import msg from '@cdo/locale';
-import color from '../../../util/color';
-import dataStyles from '../data-styles.module.scss';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
+import _ from 'lodash';
+import memoize from 'memoize-one';
+import PropTypes from 'prop-types';
+import React from 'react';
+import {DebounceInput} from 'react-debounce-input';
+import {connect} from 'react-redux';
+
 import * as rowStyle from '@cdo/apps/applab/designElements/rowStyle';
-import {ChartType, isBlank, isNumber, isBoolean, toBoolean} from '../dataUtils';
-import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
-import DropdownField from './DropdownField';
-import DataVisualizer from './DataVisualizer';
-import Snapshot from './Snapshot';
-import placeholderImage from './placeholder.png';
 import fontConstants from '@cdo/apps/fontConstants';
+import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
+import msg from '@cdo/locale';
+
+import {ChartType, isBlank, isNumber, isBoolean, toBoolean} from '../dataUtils';
 
 import {MAX_CROSSTAB_CELLS, MAX_CROSSTAB_COLUMNS} from './CrossTabChart';
+import DataVisualizer from './DataVisualizer';
+import DropdownField from './DropdownField';
+import placeholderImage from './placeholder.png';
+import Snapshot from './Snapshot';
+
+import dataStyles from '../data-styles.module.scss';
 
 export const OperatorType = {
   EQUAL: 0,
@@ -290,20 +293,19 @@ class VisualizerModal extends React.Component {
         >
           <div style={styles.modalBody}>
             <div>
-              <h2 style={styles.h2}>
-                {' '}
+              <Typography variant="h5" component="h2" sx={{m: '0 0 10px 0'}}>
                 {msg.exploreDataset({
                   datasetName: this.props.tableName,
-                })}{' '}
-              </h2>
+                })}
+              </Typography>
 
               <div>
                 <div style={styles.input}>
-                  <label style={rowStyle.description}>
+                  <label style={styles.label}>
                     {msg.dataVisualizerChartTitle()}
                   </label>
                   <DebounceInput
-                    style={rowStyle.input}
+                    style={styles.textInput}
                     minLength={1}
                     debounceTimeout={500}
                     value={this.state.chartTitle}
@@ -335,11 +337,11 @@ class VisualizerModal extends React.Component {
 
               {this.state.chartType === ChartType.HISTOGRAM && (
                 <div style={styles.input}>
-                  <label style={rowStyle.description}>
+                  <label style={styles.label}>
                     {msg.dataVisualizerBucketSize()}
                   </label>
                   <input
-                    style={rowStyle.input}
+                    style={styles.textInput}
                     value={this.state.bucketSize}
                     onChange={event =>
                       this.setState({bucketSize: event.target.value})
@@ -491,8 +493,14 @@ const styles = {
     flexDirection: 'column',
     height: '100%',
   },
-  h2: {
-    margin: '0 0 10px 0',
+  label: {
+    ...rowStyle.description,
+    color: 'var(--text-neutral-primary)',
+  },
+  textInput: {
+    ...rowStyle.input,
+    color: 'var(--text-neutral-primary)',
+    borderColor: 'var(--borders-neutral-strong)',
   },
   input: {
     ...rowStyle.container,
@@ -515,7 +523,7 @@ const styles = {
     bottom: '50%',
     ...fontConstants['main-font-semi-bold'],
     fontSize: 20,
-    color: color.dark_charcoal,
+    color: 'var(--text-neutral-primary)',
   },
 };
 

@@ -1,0 +1,27 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-06-27T15:18:47.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "title": "Design an Interactive Exhibit",
+    "long_instructions": "##The Exhibit of the Future!\r\n\r\nWith a partner, brainstorm a way to use computer vision within an installation that a creative/design technologist might create for a local museum or an interactive exhibit space like Meow Wolf.\r\n\r\nUse the space below to describe your ideas. You may also, optionally, upload a sketch or other supporting digital artifact that helps explain your idea.",
+    "thumbnail_url": "https://images.code.org/e9a0f9fd6070972f566839bd1fe9eacc-Skills.png",
+    "height": "150",
+    "placeholder": "Write a description of your interactive exhibit here.",
+    "allow_user_uploads": "true",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "true",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2024-06-27T15:18:47.430+00:00\",\"changed\":[\"cloned from \\\"CV_CareerExploration1_2a_2024\\\"\"],\"cloned_from\":\"CV_CareerExploration1_2a_2024\"},{\"changed_at\":\"2024-06-27 15:21:08 +0000\",\"changed\":[\"title\",\"display_name\",\"long_instructions\",\"bubble_choice_description\",\"placeholder\",\"allow_user_uploads\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-06-27 15:21:24 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-06-27 15:21:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-06-27 15:22:07 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

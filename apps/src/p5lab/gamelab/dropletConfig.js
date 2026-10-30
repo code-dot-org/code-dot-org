@@ -1,12 +1,15 @@
-var api = require('./apiJavascript.js');
-import color from '@cdo/apps/util/color';
-var consoleApi = require('@cdo/apps/consoleApi');
-import {dropletStringBlocks, dropletArrayBlocks} from '../../dropletUtils';
 import * as audioApi from '@cdo/apps/lib/util/audioApi';
 import audioApiDropletConfig from '@cdo/apps/lib/util/audioApiDropletConfig';
 import * as timeoutApi from '@cdo/apps/lib/util/timeoutApi';
-var getAssetDropdown = require('@cdo/apps/assetManagement/getAssetDropdown');
 import {getStore} from '@cdo/apps/redux';
+import color from '@cdo/apps/util/color';
+
+import {dropletStringBlocks, dropletArrayBlocks} from '../../dropletUtils';
+
+var getAssetDropdown = require('@cdo/apps/assetManagement/getAssetDropdown');
+var consoleApi = require('@cdo/apps/consoleApi');
+
+var api = require('./apiJavascript.js');
 
 var spriteMethodPrefix = '[Sprite].';
 var groupMethodPrefix = '[Group].';
@@ -692,14 +695,6 @@ module.exports.blocks = [
     category: 'Sprites',
     tipPrefix: spriteMethodPrefix,
     modeOptionName: '*.getDirection',
-    type: 'value',
-  },
-  {
-    func: 'getFrame',
-    blockPrefix: spriteBlockPrefix,
-    category: 'Sprites',
-    tipPrefix: spriteMethodPrefix,
-    modeOptionName: '*.getFrame',
     type: 'value',
   },
   {
@@ -1490,7 +1485,7 @@ draw() - USEFUL?
     func: 'loadImage',
     category: 'Drawing',
     paletteParams: ['url'],
-    params: ['"https://code.org/images/logo.png"'],
+    params: ['"https://studio.code.org/blockly/media/logo.png"'],
     type: 'either',
     dropdown: {
       0: function () {
@@ -1503,7 +1498,7 @@ draw() - USEFUL?
     func: 'var img = loadImage',
     category: 'Drawing',
     paletteParams: ['url'],
-    params: ['"https://code.org/images/logo.png"'],
+    params: ['"https://studio.code.org/blockly/media/logo.png"'],
     noAutocomplete: true,
   },
   {

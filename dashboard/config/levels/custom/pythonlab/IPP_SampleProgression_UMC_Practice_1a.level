@@ -1,0 +1,39 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2024-10-30T15:06:24.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "long_instructions": "# Identify and Declare Variables\r\n\r\n::: details [Step 1]\r\nReview the example code below and identify the different data types used by placing a comment next to each (`# integer` , `# float` , `# string`).\r\n:::\r\n\r\n::: details [Step 2]\r\nAdd two more variables in the `Variables` section , one with your name as a string and another with your favorite number as an integer.\r\n:::\r\n\r\n::: details [Step 3]\r\nAdd print statements to display each variable you added in the `# Print Statements` section.\r\n:::",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# Variables\nage = 15  \nheight = 5.8  \nis_student = True  \n\n\n# Print Statements\nprint(\"Age:\", age)\nprint(\"Height:\", height)\nprint(\"Student:\", is_student)",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      }
+    },
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzsEeIhJWOFv4Zc1mBM0f9N2QPCxBd4tu\nzK+1mOBKTVaQnPLuvInPNUt286ruZETV31Rumj7xaiTE/eyfhlUnF4XGG1ch\nBPaAdu4IZwn6xKK5uI/pBnOg8JzanldHP7Kk3mTGkp8rF9NpwXyljNmy7Cye\nIphhbVYtOEWxy2B6hTJs8yejpU3nsi/fJ1WXbd9jKbaBM0CIBRnAfeddn8B2\ns3QZT1w9trBfod7mWvGTt0P5Yyg0QgHNnU+Kus/gVtGE22v2NCO1kPj/XdS8\n7W2NLc5xPC+SauY/Dkp0X9DRH1eEh1k8xGEW0nDWEmFShFoPaRbSSL+fAhXn\nmyoDVPo5940KF9Ch45nH3r9mF3Lv33w7kKYD96HXkHdumzdQY651l9QSpRHG\n+geAimKdfD8DYBJ5zmYNdbygiMCE2oHeCeKD1xZk7XITeGG5pS9T081wYuQj\nfiQk4TSqOfVWOirCFk/qxpapDxg2dl175/V7g4/pbCjWe5mTmCkn3iN2eJn6\nTeA1g+MM4ay8YmkeJFGh9jA=\n",
+    "display_name": "Identify & Declare ",
+    "bubble_choice_description": "Practice identifying and declaring variables of various data types. ",
+    "thumbnail_url": "https://images.code.org/63672fca246edbff6a652a0ee2cfedfb-hashtag.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-10-30 15:10:51 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-30 15:11:34 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-30 15:18:22 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-30 15:25:09 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-30 15:30:25 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-31 00:35:16 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-31 00:57:34 +0000\",\"changed\":[\"predict_settings\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

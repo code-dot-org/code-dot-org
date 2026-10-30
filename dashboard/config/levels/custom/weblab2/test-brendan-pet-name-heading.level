@@ -1,0 +1,32 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-06-01T18:41:58.000Z",
+  "level_num": "custom",
+  "user_id": 574,
+  "properties": {
+    "require_edit_to_continue": true,
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "28dfe671-83bc-4746-bb05-66bc2ac46db3": {
+          "id": "28dfe671-83bc-4746-bb05-66bc2ac46db3",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html>\n<head>\n  <title>My Pet Fish Page</title>\n</head>\n<body>\n  <!-- This is where your fish's story will go! -->\n</body>\n</html>",
+          "folderId": "0",
+          "type": "starter",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "28dfe671-83bc-4746-bb05-66bc2ac46db3"
+      ]
+    },
+    "long_instructions": "Welcome back! Your web page now has a title. Let's give your pet fish a starring role!\r\n\r\n1. Open the `index.html` file.\r\n2. Find the `<body>` tags. Remember, the `<body>` is where all the visible content of your web page goes.\r\n3. Inside the `<body>` tags, add an `<h1>` tag.\r\n4. Between the opening `<h1>` and closing `</h1>` tags, type the name of your pet fish. For example, if your fish's name is \"Finley\", you would type `<h1>Finley</h1>`.\r\n\r\nThis will make your fish's name appear as the biggest heading on your web page!",
+    "generate_outline": "Students will add an `<h1>` tag inside the `<body>` of their HTML document. The content of the `<h1>` tag should be the name of their pet fish, e.g., 'Goldie' or 'Finley'."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-06-01 18:42:04 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-01 18:42:04 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-01 18:42:39 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

@@ -1,0 +1,12 @@
+name 'HoAI_step3_3_4'
+title 'Review'
+description 'description here'
+
+markdown <<MARKDOWN
+  <h1 style="text-align: center;"> Now get the dancers moving!</h1>
+
+
+![](https://images.code.org/944a5caca85943285264f51436faaaa2-image-1759185379627.jpg)
+MARKDOWN
+
+"First, team up with AI to create your own star dancer. Next, remix a track to set the vibe. Finally, code an original dance routine to bring your dancer and music to life!"

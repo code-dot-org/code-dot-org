@@ -11,19 +11,19 @@ REGION=${AWS::Region}
 BRANCH=${Branch}
 BASE_DOMAIN_NAME=${BaseDomainName}
 DASHBOARD_SUBDOMAIN_NAME=${DashboardSubdomainName}
-PEGASUS_SUBDOMAIN_NAME=${PegasusSubdomainName}
 # Bash and CloudFormation use the same string interpolation syntax. Escape with "!" to ensure CloudFormation
 # does not modify the bash syntax.
 DASHBOARD_DOMAIN_NAME="${!DASHBOARD_SUBDOMAIN_NAME}.${!BASE_DOMAIN_NAME}"
-# In production the fully qualified Pegasus domain name is just "code.org"; detect if the Pegasus sub domain is empty.
-[ -z "$PEGASUS_SUBDOMAIN_NAME" ] && PEGASUS_DOMAIN_NAME=$BASE_DOMAIN_NAME || PEGASUS_DOMAIN_NAME="${!PEGASUS_SUBDOMAIN_NAME}.${!BASE_DOMAIN_NAME}"
+# All deployments link to the production corporate site, now that Pegasus is deprecated.
+PEGASUS_DOMAIN_NAME=code.org
 
 # These environment variables are NOT set with CloudFormation string substitution.
 CHEF_VERSION=<%=CHEF_VERSION%>
 S3_BUCKET=<%=S3_BUCKET%>
 ENVIRONMENT=<%=environment%>
 RUN_LIST='<%=run_list.join(',')%>'
-INSTANCE_ID=$(curl -s http://169.254.169.254/latest/meta-data/instance-id)
+IMDS_TOKEN=$(curl -s -X PUT -H "X-aws-ec2-metadata-token-ttl-seconds: 21600" http://169.254.169.254/latest/api/token)
+INSTANCE_ID=$(curl -s -H "X-aws-ec2-metadata-token: $IMDS_TOKEN" http://169.254.169.254/latest/meta-data/instance-id)
 NODE_NAME=<%=node_name%>
 RESOURCE_ID=<%=resource_id%>
 
@@ -76,13 +76,20 @@ CHAIN=$(aws s3 cp $CURRENT/chain.pem - | replace_newline)
 KEY=$(aws s3 cp $CURRENT/key.pem - | replace_newline)
 <% end -%>
 
-<% if database && !rack_env?(:production) -%>
 apt-get install -y  jq
+
+<% if database && !rack_env?(:production) -%>
 DB_SECRET_NAME=${DatabaseSecretAdmin}
 DB_SECRET=$(aws --region $REGION secretsmanager get-secret-value --secret-id $DB_SECRET_NAME --version-stage AWSCURRENT | jq -r ".SecretString")
 DB_USERNAME=$(echo $DB_SECRET | jq -r ".username")
 DB_PASSWORD=$(echo $DB_SECRET | jq -r ".password")
 <% end -%>
+
+# This AWS Secret is only provisioned for adhocs, which use it to authenticate read operations (clone/fetch/pull) from GitHub.
+GITHUB_TOKEN=$(aws --region $REGION secretsmanager get-secret-value --secret-id "$ENVIRONMENT/cdo/github_token" --version-stage AWSCURRENT | jq -r ".SecretString")
+
+# Chef requires a license key to download Chef Infra Client.
+CHEF_LICENSE_KEY=$(aws --region $REGION secretsmanager get-secret-value --secret-id "$ENVIRONMENT/cdo/chef_license_key" --version-stage AWSCURRENT | jq -r ".SecretString")
 
 # Customize Chef configuration.
 FIRST_BOOT=/etc/chef/first-boot.json
@@ -104,6 +111,9 @@ cat <<JSON > $FIRST_BOOT
     "dashboard_hostname": "$DASHBOARD_DOMAIN_NAME",
     "pegasus_hostname": "$PEGASUS_DOMAIN_NAME"
   },
+  "cdo-github-access": {
+    "github_token": "$GITHUB_TOKEN"
+  },
   "cdo-repository": {
     <% if commit %>
       "revision": "<%=commit%>",
@@ -113,10 +123,8 @@ cat <<JSON > $FIRST_BOOT
   },
   "cdo-secrets": {
 <% if frontends -%>
+    "redis_url": "rediss://${RedisGroup.PrimaryEndPoint.Address}:${RedisGroup.PrimaryEndPoint.Port}",
     "memcached_endpoint": "${Memcached.ConfigurationEndpoint.Address}:${Memcached.ConfigurationEndpoint.Port}",
-    "redis_primary": "${GeocoderGroup.PrimaryEndPoint.Address}:${GeocoderGroup.PrimaryEndPoint.Port}",
-    "redis_read_addresses": "${GeocoderGroup.ReadEndPoint.Addresses}",
-    "redis_read_ports": "${GeocoderGroup.ReadEndPoint.Ports}",
 <% end -%>
 <% if database && !rack_env?(:production) -%>
     "db_writer": "mysql://$DB_USERNAME:$DB_PASSWORD@${AuroraCluster.Endpoint.Address}:${AuroraCluster.Endpoint.Port}/",
@@ -129,7 +137,7 @@ cat <<JSON > $FIRST_BOOT
 <% if rack_env?(:adhoc) -%>
     "image_optim": false,
     "override_dashboard": "<%=studio_subdomain%>",
-    "override_pegasus": "<%=subdomain%>",
+    "override_pegasus": "$PEGASUS_DOMAIN_NAME",
 <% end -%>
     "stack_name": "$STACK"
   },
@@ -148,12 +156,13 @@ cat <<JSON > $FIRST_BOOT
 JSON
 
 # Bootstrap Chef configuration: Install Chef, run chef-client with empty run-list to create node with first-boot config.
-OPTIONS="<%=cookbooks_path ? '-z ' : ''%> -b $BRANCH -n $NODE_NAME -r '' -e $ENVIRONMENT -v $CHEF_VERSION"
+OPTIONS="<%=cookbooks_path ? '-z ' : ''%> -b $BRANCH -n $NODE_NAME -r '' -e $ENVIRONMENT -v $CHEF_VERSION -l $CHEF_LICENSE_KEY"
 sudo -u ubuntu bash -c "aws s3 cp <%=bootstrap_script_path%> - | sudo bash -s -- $OPTIONS"
 
 # Ensure Chef Client is using an up to date TLS/SSL root certificate store (that we periodically fetch from a trusted
 # source (Mozilla via curl.se) and commit to our repository).
-sudo curl -o /opt/chef/embedded/ssl/certs/cacert.pem https://raw.githubusercontent.com/code-dot-org/code-dot-org/${!BRANCH}/cookbooks/cacert.pem
+# TODO: change this to not pull from GitHub. Commenting out for now. Expected to become outdated in the near future.
+# sudo curl -o /opt/chef/embedded/ssl/certs/cacert.pem https://raw.githubusercontent.com/code-dot-org/code-dot-org/${!BRANCH}/cookbooks/cacert.pem
 
 CHEF_CDO_APP=<%=CdoApp::CHEF_BIN%>
 cat <<SH > $CHEF_CDO_APP

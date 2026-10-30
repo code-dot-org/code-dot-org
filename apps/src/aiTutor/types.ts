@@ -1,63 +1,23 @@
-import {
-  AiTutorInteractionSaveStatus,
-  AiTutorTypes,
-} from '@cdo/apps/util/sharedConstants';
+export interface AiTutorContext {
+  sourceCode?: string;
+  hiddenSourceCode?: string;
+  readOnlySourceCode?: string;
+  validationContents?: string;
+  validationResults?: string;
+  longInstructions?: string;
+  documentation?: string;
+  documentationLocation?: string;
+  consoleOutput?: string;
+  hasRun?: boolean;
+  hasEdited?: boolean;
+}
 
-export type ChatCompletionMessage = {
-  id: number;
-  role: Role;
-  chatMessageText: string;
-  status: Status;
-  timestamp?: string;
-};
-
-export type AITutorInteraction = {
-  userId?: number;
+export interface AnalyticsData {
+  labType?: string;
+  channelId?: string;
+  location: string;
   levelId?: number;
-  scriptId?: number;
-  type: TutorType;
-  isProjectBacked?: boolean;
-  prompt: string;
-  status: string;
-  aiResponse?: string;
-};
-
-export type StudentChatRow = {
-  id: number;
-  studentName: string;
-  type: TutorType;
-  prompt: string;
-  status: string;
-  aiResponse?: string;
-  createdAt: string;
-};
-
-export type Level = {
-  id: number;
-  type: string;
-  hasValidation: boolean;
-  isAssessment: boolean;
-  isProjectBacked: boolean;
-};
-
-export interface GeneralChatContext {
-  message: string;
+  unitId?: number;
 }
 
-export interface ValidationCompilationContext {
-  studentCode: string;
-  tutorType: TutorType;
-}
-
-export enum Role {
-  ASSISTANT = 'assistant',
-  USER = 'user',
-  SYSTEM = 'system',
-}
-export type Status =
-  (typeof AiTutorInteractionSaveStatus)[keyof typeof AiTutorInteractionSaveStatus];
-export const Status = AiTutorInteractionSaveStatus;
-export const PII = [Status.EMAIL, Status.ADDRESS, Status.PHONE];
-
-export type TutorType = (typeof AiTutorTypes)[keyof typeof AiTutorTypes];
-export const TutorType = AiTutorTypes;
+export type MaybePromise<T> = T | Promise<T>;

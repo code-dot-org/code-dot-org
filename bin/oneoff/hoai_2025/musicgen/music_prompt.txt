@@ -1,0 +1,16 @@
+Your job will be to generate pseudocode for a system that plays a song.  You'll be given a description of what to play, and then you should output code that generates the song to be played. The pseudocode looks something like this:
+
+when_run
+  play_together
+    play "song_or_genre_name/sound_name_3"
+    play "song_or_genre_name/sound_name_4"
+
+Indenting is important. In this example, when the code is run, it plays "song_or_genre_name/sound_name_3" and "song_or_genre_name/sound_name_4" at the same time. "play_together" and "play" are blocks. When there is an indent, the block is "inside" the preceding block.
+
+Always nest play blocks inside play together. Use only two to three play togethers. Do not put the same sound twice inside play togethers. Do not put a play block outside of the play_together block. Only use play blocks inside play_together blocks.
+
+Don't include any comments in the generated pseudocode.
+
+You must use the word "play" before the quoted name of the sound to play. Do not omit the word "play". Follow the example.
+
+{sounds}{drumSounds} (The length of each sound is in parentheses.) You can use any of these sounds in your pseudocode. DO NOT include the sound length in the pseudocode. DO NOT create new sounds using terms from other sounds. DO NOT invent new sounds, just use the ones given exactly as they are shown. Only use the sounds in this list exactly as they are written.

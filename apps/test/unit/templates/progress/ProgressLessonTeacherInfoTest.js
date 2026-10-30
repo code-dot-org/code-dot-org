@@ -1,7 +1,8 @@
-import {assert} from '../../../util/reconfiguredChai';
-import React from 'react';
+import {Button as MuiButton} from '@mui/material';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import Immutable from 'immutable';
-import {shallow} from 'enzyme';
+import React from 'react';
+
 import {UnconnectedProgressLessonTeacherInfo as ProgressLessonTeacherInfo} from '@cdo/apps/templates/progress/ProgressLessonTeacherInfo';
 import {fakeLesson} from '@cdo/apps/templates/progress/progressTestHelpers';
 
@@ -45,9 +46,15 @@ describe('ProgressLessonTeacherInfo', () => {
       )
     );
 
-    assert.equal(wrapperWithoutPlan.find('Button').length, 0);
-    assert.equal(wrapperWithPlan.find('Button').props().color, 'blue');
-    assert.equal(wrapperWithPlan.find('Button').props().href, 'foo/bar');
+    expect(wrapperWithoutPlan.find('#uitest-lesson-plan').length).toEqual(0);
+    const planButton = wrapperWithPlan
+      .find(MuiButton)
+      .filter('#uitest-lesson-plan');
+    expect(planButton.length).toEqual(1);
+    // contained variant = the primary CTA visual (was legacy `color="blue"`)
+    expect(planButton.prop('variant')).toEqual('contained');
+    expect(planButton.prop('color')).toEqual('primary');
+    expect(planButton.prop('href')).toEqual('foo/bar');
   });
 
   it('updates the lesson url to require login', () => {
@@ -69,8 +76,7 @@ describe('ProgressLessonTeacherInfo', () => {
         lockableAuthorized={false}
       />
     );
-    assert.equal(
-      wrapper.find('SendLesson').props().lessonUrl,
+    expect(wrapper.find('SendLesson').props().lessonUrl).toEqual(
       'code.org?login_required=true'
     );
   });
@@ -105,12 +111,18 @@ describe('ProgressLessonTeacherInfo', () => {
       )
     );
 
-    assert.equal(wrapperWithoutPlan.find('Button').length, 0);
-    assert.equal(wrapperWithPlan.find('Button').props().color, 'purple');
-    assert.equal(
-      wrapperWithPlan.find('Button').props().href,
-      'foo/bar/student'
+    expect(wrapperWithoutPlan.find('#uitest-student-resources').length).toEqual(
+      0
     );
+    const studentButton = wrapperWithPlan
+      .find(MuiButton)
+      .filter('#uitest-student-resources');
+    expect(studentButton.length).toEqual(1);
+    // outlined+secondary distinguishes Student Resources from the
+    // contained+primary "View Lesson Plan" button above it.
+    expect(studentButton.prop('variant')).toEqual('outlined');
+    expect(studentButton.prop('color')).toEqual('secondary');
+    expect(studentButton.prop('href')).toEqual('foo/bar/student');
   });
 
   it('renders our LessonLock button when lesson is lockable and teacher is lockable authorized', () => {
@@ -138,8 +150,8 @@ describe('ProgressLessonTeacherInfo', () => {
       )
     );
 
-    assert.equal(wrapperLockable.find('LessonLock').length, 1);
-    assert.equal(wrapperUnlockable.find('LessonLock').length, 0);
+    expect(wrapperLockable.find('LessonLock').length).toEqual(1);
+    expect(wrapperUnlockable.find('LessonLock').length).toEqual(0);
   });
 
   it('does not render LessonLock button when lesson is lockable and teacher is not lockable authorized', () => {
@@ -167,8 +179,8 @@ describe('ProgressLessonTeacherInfo', () => {
       )
     );
 
-    assert.equal(wrapperLockable.find('LessonLock').length, 0);
-    assert.equal(wrapperUnlockable.find('LessonLock').length, 0);
+    expect(wrapperLockable.find('LessonLock').length).toEqual(0);
+    expect(wrapperUnlockable.find('LessonLock').length).toEqual(0);
   });
 
   it('does not render our LessonLock button when we have no sections', () => {
@@ -190,7 +202,7 @@ describe('ProgressLessonTeacherInfo', () => {
       />
     );
 
-    assert.equal(wrapper.find('LessonLock').length, 0);
+    expect(wrapper.find('LessonLock').length).toEqual(0);
   });
 
   it('renders SendLessonDialog with only start url', () => {
@@ -214,7 +226,7 @@ describe('ProgressLessonTeacherInfo', () => {
       />
     );
 
-    assert.equal(wrapper.find('SendLesson').length, 1);
+    expect(wrapper.find('SendLesson').length).toEqual(1);
   });
 
   it('does not render SendLessonDialog when lockable lesson and teacher is not authorized', () => {
@@ -236,7 +248,7 @@ describe('ProgressLessonTeacherInfo', () => {
       />
     );
 
-    assert.equal(wrapper.find('SendLesson').length, 0);
+    expect(wrapper.find('SendLesson').length).toEqual(0);
   });
 
   it('renders Rate This Lesson only if lesson feedback url', () => {
@@ -261,7 +273,7 @@ describe('ProgressLessonTeacherInfo', () => {
       />
     );
 
-    assert.equal(wrapper.find('.rate-lesson-button').length, 1);
+    expect(wrapper.find('.rate-lesson-button').length).toEqual(1);
   });
 
   it('renders our HiddenForSectionToggle when we have a section', () => {
@@ -284,10 +296,7 @@ describe('ProgressLessonTeacherInfo', () => {
         )
     );
 
-    assert.equal(withSection.find('Connect(HiddenForSectionToggle)').length, 1);
-    assert.equal(
-      withoutSection.find('Connect(HiddenForSectionToggle)').length,
-      0
-    );
+    expect(withSection.find('HiddenForSectionToggle').length).toEqual(1);
+    expect(withoutSection.find('HiddenForSectionToggle').length).toEqual(0);
   });
 });

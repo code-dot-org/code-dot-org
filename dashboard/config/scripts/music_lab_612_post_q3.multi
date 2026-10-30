@@ -1,0 +1,27 @@
+name 'music-lab-612-post-q3'
+
+question '**Why is a nested loop a good choice in this situation?**'
+
+wrong 'Because both sounds are the same length, and we want them to play at the same time'
+right 'Because we want both sounds to start and end together, even though they are different lengths.'
+wrong 'Because we want to hear both sounds once, and nested loops make that possible.'
+wrong 'Because it is the only way to play music with more than one sound.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Topic: Loops
+
+Skill: Use nested loops to repeat phrases of a song
+
+Appears in Lesson: Loops - Practice
+MARKDOWN
+
+markdown <<MARKDOWN
+Avery is making some music for a video game level.
+She wants the `Bass Float` and `Main Loop` to play together in the background but the sounds are different lengths. Here is the code she used to line up the two sounds and repeat over and over. Avery needed to use a nested loop to make this happen.
+
+<img src="https://images.code.org/903d9f15dc1b49733e07c39b4ca413dd-image-1751307769273.png" height="200">
+
+
+MARKDOWN

@@ -1,17 +1,17 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
+import {act} from 'react-dom/test-utils';
 import {Provider} from 'react-redux';
-import {mount} from 'enzyme';
-import {expect} from '../../../../util/reconfiguredChai';
+
 import DebugButtons from '@cdo/apps/lib/tools/jsdebugger/DebugButtons';
 import {reducers, actions} from '@cdo/apps/lib/tools/jsdebugger/redux';
+import JSInterpreter from '@cdo/apps/lib/tools/jsinterpreter/JSInterpreter';
 import {
   getStore,
   registerReducers,
   stubRedux,
   restoreRedux,
 } from '@cdo/apps/redux';
-import JSInterpreter from '@cdo/apps/lib/tools/jsinterpreter/JSInterpreter';
 
 const EXAMPLE_CODE = `
 for (var i = 0; i < 10; i++) {
@@ -32,10 +32,10 @@ describe('The DebugConsole component', () => {
         hideSource: true,
       },
     });
-    sinon.spy(interpreter, 'handleStepOver');
-    sinon.spy(interpreter, 'handlePauseContinue');
-    sinon.spy(interpreter, 'handleStepIn');
-    sinon.spy(interpreter, 'handleStepOut');
+    jest.spyOn(interpreter, 'handleStepOver').mockClear();
+    jest.spyOn(interpreter, 'handlePauseContinue').mockClear();
+    jest.spyOn(interpreter, 'handleStepIn').mockClear();
+    jest.spyOn(interpreter, 'handleStepOut').mockClear();
     getStore().dispatch(actions.attach(interpreter));
     interpreter.parse({code: EXAMPLE_CODE});
     interpreter.executeInterpreter(true);
@@ -56,12 +56,19 @@ describe('The DebugConsole component', () => {
     restoreRedux();
   });
 
+  function findButtonById(id) {
+    return root
+      .find('button')
+      .filterWhere(button => button.prop('id') === id)
+      .at(0);
+  }
+
   const buttons = {
-    pauseButton: () => root.find('#pauseButton'),
-    continueButton: () => root.find('#continueButton'),
-    stepOverButton: () => root.find('#stepOverButton'),
-    stepOutButton: () => root.find('#stepOutButton'),
-    stepInButton: () => root.find('#stepInButton'),
+    pauseButton: () => findButtonById('pauseButton'),
+    continueButton: () => findButtonById('continueButton'),
+    stepOverButton: () => findButtonById('stepOverButton'),
+    stepOutButton: () => findButtonById('stepOutButton'),
+    stepInButton: () => findButtonById('stepInButton'),
   };
 
   function isVisible(selector) {
@@ -86,7 +93,7 @@ describe('The DebugConsole component', () => {
 
   describe('before anything has happend', () => {
     it('the pause, step over, step out, and step in buttons are visible', () => {
-      expect(getVisibleButtons()).to.deep.equal([
+      expect(getVisibleButtons()).toEqual([
         'pauseButton',
         'stepOverButton',
         'stepOutButton',
@@ -95,37 +102,39 @@ describe('The DebugConsole component', () => {
     });
 
     it('only the step in button is enabled', () => {
-      expect(getEnabledButtons()).to.deep.equal(['stepInButton']);
+      expect(getEnabledButtons()).toEqual(['stepInButton']);
     });
   });
 
   describe('After clicking the step in button', () => {
     beforeEach(() => {
-      buttons.stepInButton().simulate('click');
-      // kick the interpreter so that it updates it's state.
-      // this normally gets triggered by whatever code is
-      // responsible for dealing with the interpreter (applab/gamelab)
-      // TODO: consider a different architecture?
-      interpreter.executeInterpreter(false);
+      act(() => {
+        buttons.stepInButton().simulate('click');
+        // kick the interpreter so that it updates it's state.
+        // this normally gets triggered by whatever code is
+        // responsible for dealing with the interpreter (applab/gamelab)
+        // TODO: consider a different architecture?
+        interpreter.executeInterpreter(false);
+      });
       root.update();
     });
 
     it('the handlePauseContinue method of the interpreter gets called', () => {
-      expect(interpreter.handlePauseContinue).to.have.been.called;
+      expect(interpreter.handlePauseContinue).toHaveBeenCalled();
     });
 
     it('the handleStepIn method of the interpreter gets called', () => {
-      expect(interpreter.handleStepIn).to.have.been.called;
+      expect(interpreter.handleStepIn).toHaveBeenCalled();
     });
 
     it('the continue, step over, step out, and step in buttons are visible and enabled', () => {
-      expect(getVisibleButtons()).to.deep.equal([
+      expect(getVisibleButtons()).toEqual([
         'continueButton',
         'stepOverButton',
         'stepOutButton',
         'stepInButton',
       ]);
-      expect(getEnabledButtons()).to.deep.equal([
+      expect(getEnabledButtons()).toEqual([
         'continueButton',
         'stepOverButton',
         'stepOutButton',
@@ -136,33 +145,35 @@ describe('The DebugConsole component', () => {
     describe('when the step over button is clicked', () => {
       beforeEach(() => buttons.stepOverButton().simulate('click'));
       it("the interpreter's handleStepOver method is called", () => {
-        expect(interpreter.handleStepOver).to.have.been.called;
+        expect(interpreter.handleStepOver).toHaveBeenCalled();
       });
     });
 
     describe('when the step out button is clicked', () => {
       beforeEach(() => buttons.stepOutButton().simulate('click'));
       it("the interpreter's handleStepOut method is called", () => {
-        expect(interpreter.handleStepOut).to.have.been.called;
+        expect(interpreter.handleStepOut).toHaveBeenCalled();
       });
     });
 
     describe('when the step in button is clicked', () => {
       beforeEach(() => buttons.stepInButton().simulate('click'));
       it("the interpreter's handleStepIn method is called", () => {
-        expect(interpreter.handleStepIn).to.have.been.called;
+        expect(interpreter.handleStepIn).toHaveBeenCalled();
       });
     });
   });
 
   describe('When the interpreter is started from somewhere else', () => {
     beforeEach(() => {
-      runApp();
+      act(() => {
+        runApp();
+      });
       root.update();
     });
 
     it('the pause, step over, step in, and step out buttons are visible', () => {
-      expect(getVisibleButtons()).to.deep.equal([
+      expect(getVisibleButtons()).toEqual([
         'pauseButton',
         'stepOverButton',
         'stepOutButton',
@@ -171,24 +182,24 @@ describe('The DebugConsole component', () => {
     });
 
     it('only the pause button is enabled', () => {
-      expect(getEnabledButtons()).to.deep.equal(['pauseButton']);
+      expect(getEnabledButtons()).toEqual(['pauseButton']);
     });
 
     describe('and the pause button is clicked', () => {
       beforeEach(() => buttons.pauseButton().simulate('click'));
 
       it("the interpreter's handlePauseContinue method is called", () => {
-        expect(interpreter.handlePauseContinue).to.have.been.called;
+        expect(interpreter.handlePauseContinue).toHaveBeenCalled();
       });
 
       it('the continue, step over, step out, and step in buttons are visible and enabled', () => {
-        expect(getVisibleButtons()).to.deep.equal([
+        expect(getVisibleButtons()).toEqual([
           'continueButton',
           'stepOverButton',
           'stepOutButton',
           'stepInButton',
         ]);
-        expect(getEnabledButtons()).to.deep.equal([
+        expect(getEnabledButtons()).toEqual([
           'continueButton',
           'stepOverButton',
           'stepOutButton',

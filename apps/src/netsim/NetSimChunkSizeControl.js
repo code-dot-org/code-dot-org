@@ -3,6 +3,7 @@
  *           is used when interpreting binary to other formats.
  */
 var i18n = require('@cdo/netsim/locale');
+
 var NetSimSlider = require('./NetSimSlider');
 require('../utils'); // Provides Function.prototype.inherits
 

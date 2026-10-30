@@ -4,7 +4,7 @@ require 'retryable'
 require 'json'
 require 'cdo/honeybadger'
 
-class Slack
+module Slack
   COLOR_MAP = {
     green: 'good',
     yellow: 'warning',
@@ -33,55 +33,45 @@ class Slack
     'server-operations' => 'C0CCSS3PX'
   }.freeze
 
+  USER_GROUP_ID_MAP = {
+    'teacher-tools-on-call': 'S07FB3XSAR5'
+  }.freeze
+
   SLACK_TOKEN = CDO.methods.include?(:slack_token) ? CDO.slack_token.freeze : nil
   SLACK_BOT_TOKEN = CDO.methods.include?(:slack_bot_token) ? CDO.slack_bot_token.freeze : nil
 
-  # Returns the user (mention) name of the user.
-  # WARNING: Does not include the mention character '@'.
+  # Returns a mention tag '<@id>' for a user based on their email.
   # @param email [String] The email of the Slack user.
-  # @raise [ArgumentError] If the email does not correspond to a Slack user.
-  # @return [nil | String] The user (mention) name for the Slack user.
-  def self.user_name(email)
-    members = post_to_slack("https://slack.com/api/users.list")['members']
-    raise "Failed to query users.list" unless members
-    user = members.find {|member| email == member['profile']['email']}
+  # @raise [RuntimeError] If the Slack API call fails or the email does not
+  #   correspond to a Slack user.
+  # @return [String] The user (mention) tag for the Slack user.
+  def self.user_mention_tag(email)
+    response = post_to_slack("https://slack.com/api/users.list")
+    raise "Failed to query users.list" unless response
+    user = response['members'].find {|member| email == member['profile']['email']}
     raise "Slack email #{email} not found" unless user
-    user['name']
-  end
-
-  def self.user_id(name)
-    members = post_to_slack("https://slack.com/api/users.list")['members']
-    raise "Failed to query users.list" unless members
-    user = members.find {|member| name == member['name']}
-    raise "Slack user #{name} not found" unless user
-    user['id']
+    "<@#{user['id']}>"
   end
 
   # @param channel_name [String] The channel to fetch the topic.
+  # @param raw [Boolean] Whether to skip rewriting Slack user-ID mentions
+  #   (`<@U12345>`) into display-name text (`@displayname`). Pass `raw: true`
+  #   when the caller needs to preserve user IDs (e.g. to extract them).
   # @return [String | nil] The existing topic, nil if not found.
-  def self.get_topic(channel_name, use_channel_map: false)
-    if use_channel_map && (CHANNEL_MAP.include? channel_name.to_sym)
-      channel_name = CHANNEL_MAP[channel_name]
-    end
-
+  def self.get_topic(channel_name, raw: false)
     channel_id = get_channel_id(channel_name)
     return nil unless channel_id
 
     response = post_to_slack("https://slack.com/api/conversations.info?channel=#{channel_id}")
     return nil unless response
-    replace_user_links(response['channel']['topic']['value'])
+    topic = response['channel']['topic']['value']
+    raw ? topic : replace_user_links(topic)
   end
 
   # @param channel_name [String] The channel to update the topic.
   # @param new_topic [String] The topic to post.
-  # @param use_channel_map [Boolean] Whether to look up channel_name in
-  #   CHANNEL_MAP.
   # @return [Boolean] Whether the topic was successfully updated.
-  def self.update_topic(channel_name, new_topic, use_channel_map: false)
-    if use_channel_map && (CHANNEL_MAP.include? channel_name.to_sym)
-      channel_name = CHANNEL_MAP[channel_name]
-    end
-
+  def self.update_topic(channel_name, new_topic)
     channel_id = get_channel_id(channel_name)
     return false unless channel_id
 
@@ -163,21 +153,18 @@ class Slack
     return !!result
   end
 
-  # @param room [String] Channel name or id to post the snippet.
-  # @param text [String] Snippet text.
-  def self.snippet(room, text)
-    # omit leading '#' when passing channel names to this API
-    channel = CHANNEL_MAP[room] || room
-    result = post_to_slack("https://slack.com/api/files.upload?channels=#{channel}&content=#{URI.encode_www_form_component(text)}")
-    return !!result
-  end
-
   # @param name [String] Name of the Slack channel to join.
   def self.join_room(name)
     channel = get_channel_id(name)
     return false unless channel
     result = post_to_slack("https://slack.com/api/conversations.join", {"channel" => channel})
     return !!result
+  end
+
+  # @param message [String] the message to update to tag the user_group
+  # @param user_group [String] slack user group to be tagged for notification
+  def self.tag_user_group(message, user_group)
+    "<!subteam^#{USER_GROUP_ID_MAP[user_group&.to_sym]}> #{message}"
   end
 
   # Returns the channel ID for the channel with the requested channel_name.
@@ -188,7 +175,7 @@ class Slack
     return CHANNEL_IDS[channel_name] if CHANNEL_IDS[channel_name]
 
     raise "CDO.slack_token undefined" if SLACK_TOKEN.nil?
-    # Documentation at https://api.slack.com/methods/channels.list.
+    # Documentation at https://api.slack.com/methods/conversations.list.
     url = "https://slack.com/api/conversations.list?limit=1000&types=public_channel&exclude_archived=true"
     parsed_channels = post_to_slack(url)
     return nil unless parsed_channels && parsed_channels['channels']
@@ -210,7 +197,7 @@ class Slack
       gsub(/<\/?b>/, '*').
       gsub(/<\/?pre>/, '```').
       gsub(/<a href=['"]([^'"]+)['"]>/, '<\1|').
-      gsub(/<\/a>/, '>').
+      gsub("</a>", '>').
       gsub(/<br\/?>/, "\n")
   end
 

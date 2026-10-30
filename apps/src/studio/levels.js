@@ -1,7 +1,8 @@
+import blockUtils from '../block_utils';
+import {extend} from '../utils';
+
 import {Emotions} from './constants';
 import msg from './locale';
-import {extend} from '../utils';
-import blockUtils from '../block_utils';
 
 const tb = blockUtils.createToolbox;
 const blockOfType = blockUtils.blockOfType;
@@ -141,7 +142,7 @@ var whenRunMoveSouth =
   </block>';
 
 var whenUpDown =
-  '<block type="studio_whenUp" deletable="false" x="20" y="20"></block> \
+  '<block type="studio_whenUp" deletable="false" x="20" y="20" id="3"></block> \
   <block type="studio_whenDown" deletable="false" x="20" y="150"></block>';
 
 var whenUpDownLeftRight =
@@ -223,7 +224,7 @@ levels.dog_hello = {
   timeoutFailureTick: 100,
   toolbox: tb(blockOfType('studio_saySprite')),
   startBlocks:
-    '<block type="when_run" deletable="false" x="20" y="20"></block>',
+    '<block type="when_run" deletable="false" x="20" y="20" id="whenRun"></block>',
 };
 levels.k1_1 = extend(levels.dog_hello, {
   isK1: true,
@@ -291,13 +292,15 @@ levels.dog_and_cat_hello = {
     },
   },
   timeoutFailureTick: 200,
-  toolbox: tb(blockOfType('studio_saySprite')),
+  toolbox: tb('<block type="studio_saySprite" id="actorSay"></block>'),
   startBlocks:
-    '<block type="when_run" deletable="false" x="20" y="20"></block>',
+    '<block type="when_run" deletable="false" movable="false" x="20" y="20" id="whenRun"></block>',
 };
 levels.k1_2 = extend(levels.dog_and_cat_hello, {
   isK1: true,
-  toolbox: tb(blockOfType('studio_saySprite')),
+  toolbox: tb(
+    blockOfType('studio_saySprite', undefined, undefined, 'actorSay')
+  ),
 });
 levels.c2_2 = extend(levels.dog_and_cat_hello, {});
 levels.c3_story_2 = extend(levels.dog_and_cat_hello, {});
@@ -414,7 +417,7 @@ levels.playlab_3 = {
   firstSpriteIndex: 26, // tennis girl
   toolbox: tb(
     '<block type="studio_moveDistance"><title name="DIR">1</title><title name="DISTANCE">200</title></block>' +
-      '<block type="studio_moveDistance"><title name="DIR">2</title><title name="DISTANCE">200</title></block>' +
+      '<block type="studio_moveDistance" id="moveRight"><title name="DIR">2</title><title name="DISTANCE">200</title></block>' +
       '<block type="studio_moveDistance"><title name="DIR">4</title><title name="DISTANCE">200</title></block>' +
       '<block type="studio_moveDistance"><title name="DIR">8</title><title name="DISTANCE">200</title></block>'
   ),
@@ -560,7 +563,7 @@ levels.playlab_4 = {
   ),
   startBlocks:
     '<block type="when_run" deletable="false" x="20" y="20"></block>' +
-    '<block type="studio_whenSpriteCollided" deletable="false" x="20" y="120"></block>',
+    '<block type="studio_whenSpriteCollided" deletable="false" x="20" y="120" id="whenActorTouches"></block>',
   map: [
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 16, 0, 0, 0, 0],
@@ -915,7 +918,7 @@ levels.playlab_7 = {
       '<block type="studio_moveDistance"><title name="DIR">8</title><title name="DISTANCE">400</title></block>'
   ),
   startBlocks:
-    '<block type="studio_repeatForever" deletable="false" x="20" y="20"></block>',
+    '<block type="studio_repeatForever" deletable="false" x="20" y="20" id="repeatForever"></block>',
   requiredBlocks: [
     [
       {
@@ -1160,7 +1163,7 @@ levels.playlab_8 = {
       '<block type="studio_playSound"><title name="SOUND">winpoint</title></block>'
   ),
   startBlocks:
-    '<block type="studio_whenSpriteCollided" deletable="false" x="20" y="20"></block>' +
+    '<block type="studio_whenSpriteCollided" deletable="false" x="20" y="20" id="whenActorTouches"></block>' +
     '<block type="studio_repeatForever" deletable="false" x="20" y="150">' +
     '<statement name="DO">' +
     blockUtils.blockWithNext(
@@ -1345,7 +1348,7 @@ levels.playlab_9 = {
   ),
   minWorkspaceHeight: 1250,
   startBlocks:
-    '<block type="when_run" deletable="false" x="20" y="20"></block>' +
+    '<block type="when_run" deletable="false" x="20" y="20" id="whenRun"></block>' +
     '<block type="studio_repeatForever" deletable="false" x="20" y="150">' +
     '<statement name="DO">' +
     blockUtils.blockWithNext(
@@ -1843,32 +1846,7 @@ levels.full_sandbox = {
                         </block>'
       ) +
       createCategory(msg.catVariables(), '', 'VARIABLE') +
-      createCategory(msg.catProcedures(), '', 'PROCEDURE') +
-      createCategory(
-        'Functional',
-        blockOfType('functional_string') +
-          blockOfType('functional_background_string_picker') +
-          blockOfType('functional_math_number') +
-          '<block type="functional_math_number_dropdown">' +
-          '<title name="NUM" config="2,3,4,5,6,7,8,9,10,11,12">???</title>' +
-          '</block>'
-      ) +
-      createCategory(
-        'Functional Start',
-        blockOfType('functional_start_setSpeeds') +
-          blockOfType('functional_start_setBackgroundAndSpeeds')
-      ) +
-      createCategory(
-        'Functional Logic',
-        blockOfType('functional_greater_than') +
-          blockOfType('functional_less_than') +
-          blockOfType('functional_number_equals') +
-          blockOfType('functional_string_equals') +
-          blockOfType('functional_logical_and') +
-          blockOfType('functional_logical_or') +
-          blockOfType('functional_logical_not') +
-          blockOfType('functional_boolean')
-      )
+      createCategory(msg.catProcedures(), '', 'PROCEDURE')
   ),
   startBlocks:
     '<block type="when_run" deletable="false" x="20" y="20"></block>',
@@ -3615,6 +3593,24 @@ levels.hoc2015_blockly_7 = extend(levels.js_hoc2015_event_two_items, {
       },
     },
     {
+      id: 'playlab:hoc2015_blockly_7:placeCommandsHere',
+      element_id: '[data-id="3"]',
+      hide_target_selector: '.blocklyDraggable',
+      qtip_config: {
+        content: {
+          text: msg.calloutBlocklyPlaceMoveUpHere(),
+        },
+        position: {
+          my: 'top left',
+          at: 'bottom left',
+          adjust: {
+            x: 22,
+            y: 0,
+          },
+        },
+      },
+    },
+    {
       id: 'playlab:hoc2015_blockly_7:arrowsCallout',
       element_id: '#upButton',
       hide_target_selector: '#soft-buttons',
@@ -3655,7 +3651,7 @@ levels.hoc2015_blockly_9 = extend(levels.js_hoc2015_score, {
   },
   startBlocks:
     '<block type="studio_whenTouchGoal" deletable="false"> \
-      <next><block type="studio_playSound"><title name="SOUND">R2-D2random</title></block> \
+      <next><block type="studio_playSound" id="4"><title name="SOUND">R2-D2random</title></block> \
       </next></block>',
   toolbox: tb(
     '<block type="studio_playSound"></block> \
@@ -3693,6 +3689,20 @@ levels.hoc2015_blockly_9 = extend(levels.js_hoc2015_score, {
         },
       },
     },
+    {
+      id: 'playlab:hoc2015_blockly_9:placeCommandsAtTop',
+      element_id: '[data-id="4"]',
+      hide_target_selector: '.blocklyDraggable',
+      qtip_config: {
+        content: {
+          text: msg.calloutShowPlaySound(),
+        },
+        position: {
+          my: 'top left',
+          at: 'bottom center',
+        },
+      },
+    },
   ],
 });
 
@@ -3719,7 +3729,7 @@ levels.hoc2015_blockly_11 = extend(levels.js_hoc2015_add_characters, {
       <next> \
        <block type="studio_playSound"><title name="SOUND">R2-D2sound1</title> \
         <next> \
-         <block type="studio_addCharacter"><title name="VALUE">"pufferpig"</title></block> \
+         <block type="studio_addCharacter" id="8"><title name="VALUE">"pufferpig"</title></block> \
         </next> \
        </block> \
       </next> \
@@ -3745,6 +3755,24 @@ levels.hoc2015_blockly_11 = extend(levels.js_hoc2015_add_characters, {
     {
       id: 'playlab:hoc2015_blockly_11:calloutPutCommandsHereRunStart',
       element_id: '[block-id="8"]',
+      hide_target_selector: '.blocklyDraggable',
+      qtip_config: {
+        content: {
+          text: msg.calloutPutCommandsHereRunStart(),
+        },
+        position: {
+          my: 'top left',
+          at: 'bottom left',
+          adjust: {
+            x: 22,
+            y: 0,
+          },
+        },
+      },
+    },
+    {
+      id: 'playlab:hoc2015_blockly_11:calloutPutCommandsHereRunStart',
+      element_id: '[data-id="8"]',
       hide_target_selector: '.blocklyDraggable',
       qtip_config: {
         content: {
@@ -3791,7 +3819,7 @@ levels.hoc2015_blockly_12 = extend(levels.js_hoc2015_chain_characters, {
       <next> \
        <block type="studio_playSound"><title name="SOUND">TauntaunRandom</title> \
         <next> \
-         <block type="studio_addPoints"><title name="VALUE">50</title></block> \
+         <block type="studio_addPoints" id="12"><title name="VALUE">50</title></block> \
         </next> \
        </block> \
       </next> \
@@ -3811,6 +3839,24 @@ levels.hoc2015_blockly_12 = extend(levels.js_hoc2015_chain_characters, {
     {
       id: 'playlab:hoc2015_blockly_12:calloutPlaceTwoWhenTauntaun',
       element_id: '[block-id="12"]',
+      hide_target_selector: '.blocklyDraggable',
+      qtip_config: {
+        content: {
+          text: msg.calloutPlaceTwoWhenTauntaun(),
+        },
+        position: {
+          my: 'top left',
+          at: 'bottom center',
+          adjust: {
+            x: 0,
+            y: 0,
+          },
+        },
+      },
+    },
+    {
+      id: 'playlab:hoc2015_blockly_12:calloutPlaceTwoWhenTauntaun',
+      element_id: '[data-id="12"]',
       hide_target_selector: '.blocklyDraggable',
       qtip_config: {
         content: {
@@ -3846,7 +3892,7 @@ levels.hoc2015_blockly_13 = extend(levels.js_hoc2015_multiply_characters, {
         <block type="studio_addPoints"><title name="VALUE">100</title></block> \
         <block type="studio_removePoints"><title name="VALUE">100</title></block> \
         <block type="studio_playSound"></block> \
-        <block type="studio_whenGetCharacter"><title name="VALUE">mousedroid</title></block>'
+        <block type="studio_whenGetCharacter" id="5"><title name="VALUE">mousedroid</title></block>'
   ),
   requiredBlocks: [
     // TODO: addCharacter, addPoints
@@ -3855,6 +3901,20 @@ levels.hoc2015_blockly_13 = extend(levels.js_hoc2015_multiply_characters, {
     {
       id: 'playlab:hoc2015_blockly_13:calloutPlaceTwo',
       element_id: '[block-id="5"]',
+      hide_target_selector: '.blocklyDraggable',
+      qtip_config: {
+        content: {
+          text: msg.calloutPlaceTwo(),
+        },
+        position: {
+          my: 'top left',
+          at: 'bottom center',
+        },
+      },
+    },
+    {
+      id: 'playlab:hoc2015_blockly_13:calloutPlaceTwo',
+      element_id: '[data-id="5"]',
       hide_target_selector: '.blocklyDraggable',
       qtip_config: {
         content: {
@@ -3894,7 +3954,7 @@ levels.hoc2015_blockly_14 = extend(levels.js_hoc2015_change_setting, {
       </next> \
      </block>',
   toolbox: tb(
-    '<block type="studio_setSprite"><title name="VALUE">"c-3po"</title></block> \
+    '<block type="studio_setSprite" id="1"><title name="VALUE">"c-3po"</title></block> \
         <block type="studio_setDroidSpeed"><title name="VALUE">fast</title></block> \
         <block type="studio_setBackground"></block> \
         <block type="studio_setMap"></block> \
@@ -3911,6 +3971,19 @@ levels.hoc2015_blockly_14 = extend(levels.js_hoc2015_change_setting, {
     {
       id: 'playlab:hoc2015_blockly_14:setMap',
       element_id: '[block-id="1"]',
+      qtip_config: {
+        content: {
+          text: msg.calloutSetDroidAndSpeed(),
+        },
+        position: {
+          my: 'center left',
+          at: 'center right',
+        },
+      },
+    },
+    {
+      id: 'playlab:hoc2015_blockly_14:setMap',
+      element_id: '[data-id="1"]',
       qtip_config: {
         content: {
           text: msg.calloutSetDroidAndSpeed(),
@@ -3998,7 +4071,7 @@ levels.hoc2015_blockly_15 = extend(levels.js_hoc2015_event_free, {
     },
     {
       id: 'playlab:hoc2015_blockly_15:categories',
-      element_id: '.blocklyTreeRoot:visible',
+      element_id: '.blocklyToolboxCategoryGroup:visible',
       qtip_config: {
         content: {
           text: msg.calloutBlocklyCategories(),

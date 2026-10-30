@@ -1,31 +1,38 @@
-import $ from 'jquery';
-import React from 'react';
-import ReactDOM from 'react-dom';
-import trackEvent from '../../util/trackEvent';
-import {singleton as studioApp} from '@cdo/apps/StudioApp';
-import craftMsg from '../locale';
-import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {
   GameController,
   EventType,
   utils as CraftUtils,
 } from '@code-dot-org/craft';
-import {handlePlayerSelection} from '@cdo/apps/craft/utils';
-import dom from '@cdo/apps/dom';
-import {trySetLocalStorage} from '@cdo/apps/utils';
-import MusicController from '@cdo/apps/MusicController';
-var Provider = require('react-redux').Provider;
-import AppView from '../../templates/AppView';
-var CraftVisualizationColumn = require('../simple/CraftVisualizationColumn');
-import {getStore} from '@cdo/apps/redux';
-import Sounds from '@cdo/apps/Sounds';
+import {ThemeProvider} from '@mui/material/styles';
+import $ from 'jquery';
+import React from 'react';
 
+import {getCodeBlocks, getCode} from '@cdo/apps/blockly/utils';
 import {TestResults} from '@cdo/apps/constants';
-import {captureThumbnailFromCanvas} from '@cdo/apps/util/thumbnail';
-import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import PlayerSelectionDialog from '@cdo/apps/craft/PlayerSelectionDialog';
 import reducers from '@cdo/apps/craft/redux';
+import {handlePlayerSelection} from '@cdo/apps/craft/utils';
+import dom from '@cdo/apps/dom';
+import MusicController from '@cdo/apps/MusicController';
+import {getStore} from '@cdo/apps/redux';
+import Sounds from '@cdo/apps/Sounds';
+import {singleton as studioApp} from '@cdo/apps/StudioApp';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
+import {captureThumbnailFromCanvas} from '@cdo/apps/util/thumbnail';
+import {trySetLocalStorage} from '@cdo/apps/utils';
+
+import downButtonImg from '../../../static/craft/CDO_MC_ScrollDown.png';
+import upButtonImg from '../../../static/craft/CDO_MC_ScrollUp.png';
+import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
+import AppView from '../../templates/AppView';
 import {muteCookieWithLevel} from '../../util/muteCookieHelpers';
+import craftMsg from '../locale';
+import minecraftMuiTheme from '../minecraftMuiTheme';
+
+var Provider = require('react-redux').Provider;
+
+var CraftVisualizationColumn = require('../simple/CraftVisualizationColumn');
 
 var MEDIA_URL = '/blockly/media/craft/';
 
@@ -310,21 +317,30 @@ Craft.init = function (config) {
     isMinecraft: true,
   });
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={getStore()}>
       <div>
-        <AppView
-          visualizationColumn={
-            <CraftVisualizationColumn
-              showFinishButton={!config.level.isProjectLevel}
-            />
-          }
-          onMount={onMount}
-        />
-        <PlayerSelectionDialog players={[CHARACTER_STEVE, CHARACTER_ALEX]} />
+        <ThemeProvider theme={minecraftMuiTheme}>
+          <AppView
+            upIcon={<img style={{width: '15px'}} src={upButtonImg} alt="" />}
+            downIcon={
+              <img style={{width: '15px'}} src={downButtonImg} alt="" />
+            }
+            visualizationColumn={
+              <CraftVisualizationColumn
+                showFinishButton={!config.level.isProjectLevel}
+              />
+            }
+            onMount={onMount}
+          />
+          <PlayerSelectionDialog players={[CHARACTER_STEVE, CHARACTER_ALEX]} />
+        </ThemeProvider>
       </div>
     </Provider>,
-    document.getElementById(config.containerId)
+    document.getElementById(config.containerId),
+    {
+      legacyReactDomRender: true,
+    }
   );
 };
 
@@ -348,7 +364,6 @@ Craft.getCurrentCharacter = function () {
 };
 
 Craft.setCurrentCharacter = function (name = DEFAULT_CHARACTER) {
-  trackEvent('Minecraft', 'ChoseCharacter', name);
   Craft.clearPlayerState();
   trySetLocalStorage('craftSelectedPlayer', name);
   Craft.updateUIForCharacter(name);
@@ -469,11 +484,7 @@ Craft.reset = function (first) {
 };
 
 Craft.phaserLoaded = function () {
-  return (
-    Craft.gameController &&
-    Craft.gameController.game &&
-    !Craft.gameController.game.load.isLoading
-  );
+  return !!Craft.gameController?.game?.load;
 };
 
 /**
@@ -493,7 +504,6 @@ Craft.runButtonClick = function () {
   }
 
   studioApp().toggleRunReset('reset');
-  Blockly.mainBlockSpace.traceOn(true);
   studioApp().attempts++;
 
   Craft.executeUserCode();
@@ -521,7 +531,9 @@ Craft.executeUserCode = function () {
     return;
   }
 
-  if (studioApp().hasUnwantedExtraTopBlocks()) {
+  if (Craft.initialConfig.level.freePlay) {
+    this.reportResult(true, true);
+  } else if (studioApp().hasUnwantedExtraTopBlocks()) {
     // immediately check answer instead of executing, which will fail and
     // report top level blocks (rather than executing them)
     this.reportResult(false);
@@ -530,9 +542,6 @@ Craft.executeUserCode = function () {
 
   studioApp().playAudio('start');
   let interpreter;
-
-  // Start tracing calls.
-  Blockly.mainBlockSpace.traceOn(true);
 
   var appCodeOrgAPI = Craft.gameController.codeOrgAPI;
   appCodeOrgAPI.startCommandCollection();
@@ -579,7 +588,8 @@ Craft.executeUserCode = function () {
   };
 
   // Run user code.
-  code += Blockly.getWorkspaceCode();
+  let codeBlocks = getCodeBlocks();
+  code += Blockly.Generator.blocksToCode('JavaScript', codeBlocks);
   interpreter = CustomMarshalingInterpreter.evalWith(
     code,
     {
@@ -628,25 +638,34 @@ Craft.executeUserCode = function () {
   );
 };
 
-Craft.getTestResultFrom = function (success, studioTestResults) {
+Craft.getTestResultFrom = function (
+  success,
+  studioTestResults,
+  suppressDialog
+) {
   if (studioTestResults === TestResults.LEVEL_INCOMPLETE_FAIL) {
     return TestResults.APP_SPECIFIC_FAIL;
   }
 
   if (Craft.initialConfig.level.freePlay) {
-    return TestResults.FREE_PLAY;
+    return suppressDialog ? TestResults.LEVEL_STARTED : TestResults.FREE_PLAY;
   }
 
   return studioTestResults;
 };
 
-Craft.reportResult = function (success) {
+Craft.reportResult = function (success, suppressDialog) {
   var studioTestResults = studioApp().getTestResults(success);
-  var testResultType = Craft.getTestResultFrom(success, studioTestResults);
+  var testResultType = Craft.getTestResultFrom(
+    success,
+    studioTestResults,
+    suppressDialog
+  );
 
-  const image = Craft.initialConfig.level.freePlay
-    ? Craft.gameController.getScreenshot()
-    : null;
+  const image =
+    Craft.initialConfig.level.freePlay && !suppressDialog
+      ? Craft.gameController.getScreenshot()
+      : null;
   // Grab the encoded image, stripping out the metadata, e.g. `data:image/png;base64,`
   const encodedImage = image ? encodeURIComponent(image.split(',')[1]) : null;
 
@@ -656,12 +675,14 @@ Craft.reportResult = function (success) {
     result: Craft.initialConfig.level.freePlay ? true : success,
     testResult: testResultType,
     image: encodedImage,
-    program: encodeURIComponent(
-      Blockly.cdoUtils.getCode(Blockly.mainBlockSpace)
-    ),
+    program: encodeURIComponent(getCode(Blockly.mainBlockSpace)),
     // typically delay feedback until response back
     // for things like e.g. crowdsourced hints & hint blocks
     onComplete: function (response) {
+      if (suppressDialog) {
+        return;
+      }
+
       const isSignedIn =
         getStore().getState().currentUser.signInState === SignInState.SignedIn;
       studioApp().displayFeedback({

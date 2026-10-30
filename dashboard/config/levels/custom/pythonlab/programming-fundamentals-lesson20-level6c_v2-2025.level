@@ -1,0 +1,40 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-09-25T19:58:30.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Do this:\r\nIn Python, indentation matters. There's a bug in this code.   \r\n- Read the code carefully and press Run. \r\n- Use the console's error message to hunt for the bug. \r\n- Fix the bug. \r\n",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "door_code = input(\"Enter the four-digit escape code: \")\n\nif door_code == \"1234\":\n    print(\"🚪 The door unlocks.\")\n    if input(\"Do you wish to open it? (yes/no) \").lower() == \"yes\":\nprint(\"🌟 You escape!\")  # Incorrect indentation\nelse:\n    print(\"❌ Wrong code! The door remains locked.\")\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      }
+    },
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzvT6nv+2YdfAPS0kAFL5TuT9QqmC9n4z\nIMajTVpLFDQzYjTSwtXGnUNHyklWm8Ala5mEEKyqhbJN5D0nm9911eeUOZA2\nFdSomMBO0IMiTDsN6EaoR/j4IyOtbcy6T0lQJzcaYsfl7pfDSBP0opr8jSF3\ncBnJ9BmpRbTqaw0LS0NIqXkcnRbQT48+jU7kLcf2cpDoCyKqqAAt5ZQaLTmL\nmI9IH2kHfRWF7JvLprX/t6bqkjNbRQMTAQ77ke0R5sRuwVp/onhASKVuKfYK\nPrVkxTfZUOl1QMhuLAGUkfnvFePwVMto5LcMommTcDfjfYxeiSUQeyZ5p94x\n+rZepqQRqF2iiNT7MH4yGt2Y8vhGXi3a7nVFRZN/QnuHEF9fK8cQup2vVS77\nFYMmSC6g7c0Oqh+fJBhKgsRgDbgng3hUrqdvi0SJ1HHVY/BMbnJyLy/bIAc5\ngc1DAO1W1wq7vMQ9739QjOuxfFRYIFGZNPViwXOYWlMnMUEQPuaEIyLTGjgg\nhA==\n",
+    "display_name": "Syntax bug",
+    "thumbnail_url": "https://images.code.org/39401041aae6fdf90d2fbf3be272c543-python - lock.avif",
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:58:30.223+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson20-level6c_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson20-level6c_2025\"}]"
+}]]></config>
+</Pythonlab>

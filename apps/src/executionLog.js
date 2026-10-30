@@ -1,4 +1,5 @@
 import {TestResults} from './constants';
+
 var utils = require('./utils');
 
 /**

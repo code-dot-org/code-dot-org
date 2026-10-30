@@ -7,7 +7,7 @@
         {
           "type": "rating",
           "name": "nps_value",
-          "title": "How likely are you to recommend Code.org to a friend or colleague?",
+          "title": "How likely are you to recommend CodeAI to a friend or colleague?",
           "isRequired": true,
           "requiredErrorText": "Please select a value",
           "rateMin": 0,
@@ -59,7 +59,7 @@
             },
             {
               "value": "lms_integration",
-              "text": "Assign Code.org materials and track students' progress in Learning Management Systems (LMS)"
+              "text": "Assign CodeAI materials and track students' progress in Learning Management Systems (LMS)"
             },
             {
               "value": "more_subjects",

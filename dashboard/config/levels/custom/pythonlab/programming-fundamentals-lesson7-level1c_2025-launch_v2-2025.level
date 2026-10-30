@@ -1,0 +1,55 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-09-25T19:56:38.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Do This:\r\n\r\nYou're programming a smart speaker to remind people to do their daily tasks. Right now, it reminds someone named \"Chris\", but it needs to be able to remind *any* household member.\r\n\r\n1. Add **two parameters** to the function: one for the person's name, and one for the task.\r\n\r\n2. Update the print statement so the reminder includes both the name and the task.\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nA **parameter** is a placeholder in the function definition. When you call the function, you pass in an argument that fills that placeholder.\r\n\r\nTo include a variable like a name in your message, you can combine strings using the `+` operator. Here's an example:\r\n\r\n```\r\nprint(\"Hi, \" + name + \"!\")\r\n```\r\n\r\nMake sure to include spaces **inside the quotes**, like `\"Hi, \"` and `\"!\"`, or the message will get squished together.",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "name_suffix": "_v2-2025",
+    "display_name": "Smart Speaker Reminders",
+    "bubble_choice_description": "You're programming a smart speaker to remind people to do their daily tasks. Right now, it reminds someone named \"Chris\", but it needs to be able to remind *any* household member.",
+    "thumbnail_url": "https://images.code.org/c8bcc4df5f80a1be08a56705de06cb7b-speaker.png",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# TODO - Add parameters for the name and the task\ndef send_reminder():\n  # Prints a reminder to a user\n\n  # TODO - Update the print statement to use the parameters\n  print(\"Chris, don't forget to walk the dog!\")\n\n# TODO - Call the function with a name and a task\nsend_reminder()\n",
+          "folderId": "0",
+          "active": false,
+          "open": true,
+          "type": "locked_starter"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nziyF9eoiYY4Gvf0EIX2V+zks05KGtL30\n52292Yei2wS0WbauLYui/TuKIEM9D1FWkqTjWAia5yFHWlFvqsLEZeflyp8Y\nCOHS6AN5QCbnlyad2SDZrLBvHkMw6aRoZqfIZVKNyDA+cIjPHmP02LsTcMRY\n0vXQRxDxUKG+w7DKc+FLsNH1zZ39QJzDtjQcPKPjnGY/F0QZSBBbIEywfUTU\nQlAn9eFCixCSoKL/xBeK2uAvFjmTnU/hHE1KfnMw1mpS6d1Sm7Osm3BUfOvV\nJzmmBOhn0kILMC8QDhWZnzO2kqe6z01HjuS0ytVlTrxK5mkXrQ7hRgl2sFlH\ncfBftAyIvG1ft6TgRnED0cdkwX27Kwut72kIqkqy05ihtHO0A1s3oUtMJ8PU\nPr7dR8dyXLMia22ZWFmzwfAzIcW2g+ayxN1RL6EnUKTfqlAEFTfG3R/oXTDZ\nJNOGjf5sKa9sjPgiEo3FAMrVjznnN23ghm00GneX2T/Cht+DwhJndM5idZ8H\nFyLlq5KesF+EuI+G5evFfo8=\n",
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "language": "py",
+      "contents": "import inspect\nfrom unittest import TestCase\nfrom unittest_runner import ValidationProtocol\nfrom main import send_reminder\n\nclass TestSendReminder(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Set up validation and get stdout logs\"\"\"\n        cls.validation = ValidationProtocol()\n        cls.stdout_logs = cls.validation.get_stdout_logs()\n\n    def test_function_has_two_parameters(self):\n        \"\"\"send_reminder should accept exactly two parameters\"\"\"\n        params = inspect.signature(send_reminder).parameters\n        self.assertEqual(\n            len(params),\n            2,\n            \"The function send_reminder should have exactly two parameters: one for the name and one for the task.\"\n        )\n\n    def test_output_uses_name_and_task(self):\n        \"\"\"Printed output should dynamically use the name and the task\"\"\"\n        self.assertGreaterEqual(\n            len(self.stdout_logs),\n            1,\n            \"No output was found. Make sure send_reminder() is called and prints a message.\"\n        )\n\n        last_output = self.stdout_logs[-1]\n\n        # Check that the old hardcoded name is not used\n        self.assertNotIn(\n            \"Chris\",\n            last_output,\n            \"The output still uses the hardcoded name 'Chris'. Make sure you use the dynamic parameters instead.\"\n        )\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:56:38.021+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson7-level1c_2025-launch_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson7-level1c_2025-launch_2025\"}]"
+}]]></config>
+</Pythonlab>

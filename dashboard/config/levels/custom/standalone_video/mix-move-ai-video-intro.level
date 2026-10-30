@@ -1,0 +1,18 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2025-11-02T22:26:16.000Z",
+  "level_num": "custom",
+  "user_id": 887,
+  "properties": {
+    "uses_lab2": true,
+    "encrypted": "false",
+    "video_key": "mix_move_ai_intro",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "video_full_width": true
+  },
+  "published": true
+}]]></config>
+</StandaloneVideo>

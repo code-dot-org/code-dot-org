@@ -1,0 +1,51 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-09-07T20:14:40.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "☑️ Do This:\r\n- Visualize how a student’s reading speed relates to the number of books they read in a year. \r\n- Be prepared to summarize, in one sentence, what your visualization shows.\r\n\r\n| Words Per Minute | Books Read |\r\n|---|---|\r\n| 135 | 3 |\r\n| 205 | 4 |\r\n| 180 | 5 |\r\n| 250 | 11 |\r\n| 310 | 18 |\r\n| 275 | 13 |\r\n| 290 | 1 |",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "import matplotlib.pyplot as plt\n\n# TODO: Visualize your data\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMqrzTMGNy7O07cK\n0V8EBTOqMBdyLthBycjYa9mtuCGuTQFUKG63hOWOjY5Qebwyz33/a7FHAh7l\n3uL6z7bGJOgO8fczPtr6vkxbRJN40sKltD0x17DyxZ9nBKGo+nhpX1hkAvLa\n1jJP4QXelsdTrtuNbeuDlf+163wggbFAcIe9XhZysQuSBsDsZG9Y5wNhopwh\nU2XC/N8pSq2Y1JY1TZorXrxv4q/G8tuGbSTA9dirrjmHk8T9WogVsvlFlwTs\n6dsD5zL3EA4GY28JLSrUNblJtAouEvBejjMaysvnpti0hjYL1xrS0yF0CvQ0\nLsa6vL8=\n",
+    "display_name": "Speed Reading",
+    "bubble_choice_description": "Visualize how a student’s reading speed relates to the number of books they read in a year.",
+    "thumbnail_url": "https://images.code.org/700c3f57d7c318abad9fb36596329c09-reading.jpg"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-07 20:15:48 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 20:16:04 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 20:16:28 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 20:23:27 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

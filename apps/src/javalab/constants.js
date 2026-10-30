@@ -45,31 +45,6 @@ export const JavabuilderExceptionType = {
   UNKNOWN_ERROR: 'UNKNOWN_ERROR',
 };
 
-export const NeighborhoodSignalType = {
-  // Move the painter
-  MOVE: 'MOVE',
-  // Initialize the painter
-  INITIALIZE_PAINTER: 'INITIALIZE_PAINTER',
-  // Add paint to the current location
-  PAINT: 'PAINT',
-  // Remove all paint from current location
-  REMOVE_PAINT: 'REMOVE_PAINT',
-  // Take paint from the bucket
-  TAKE_PAINT: 'TAKE_PAINT',
-  // Hide the painter on the screen
-  HIDE_PAINTER: 'HIDE_PAINTER',
-  // Show the painter on the screen
-  SHOW_PAINTER: 'SHOW_PAINTER',
-  // Turn the painter left
-  TURN_LEFT: 'TURN_LEFT',
-  // Hide all paint buckets
-  HIDE_BUCKETS: 'HIDE_BUCKETS',
-  // Show all paint buckets
-  SHOW_BUCKETS: 'SHOW_BUCKETS',
-  // We will not receive any more commands
-  DONE: 'DONE',
-};
-
 export const NeighborhoodExceptionType = makeEnum(
   'INVALID_GRID',
   'INVALID_DIRECTION',
@@ -79,17 +54,6 @@ export const NeighborhoodExceptionType = makeEnum(
   'INVALID_MOVE',
   'INVALID_PAINT_LOCATION'
 );
-
-export const TheaterSignalType = {
-  // This message contains the url to an audio element
-  AUDIO_URL: 'AUDIO_URL',
-  // This message contains the url to a visual element
-  VISUAL_URL: 'VISUAL_URL',
-  // Get an image from the user via Prompter
-  GET_IMAGE: 'GET_IMAGE',
-  // There is no audio
-  NO_AUDIO: 'NO_AUDIO',
-};
 
 export const StatusMessageType = {
   COMPILING: 'COMPILING',
@@ -109,12 +73,6 @@ export const StatusMessageType = {
 export const InputMessageType = {
   SYSTEM_IN: 'SYSTEM_IN',
   THEATER: 'THEATER',
-};
-
-export const InputMessage = {
-  // Theater-specific messages
-  UPLOAD_SUCCESS: 'UPLOAD_SUCCESS',
-  UPLOAD_ERROR: 'UPLOAD_ERROR',
 };
 
 export const SoundExceptionType = makeEnum(

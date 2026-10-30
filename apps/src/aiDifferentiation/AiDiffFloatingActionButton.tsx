@@ -1,0 +1,506 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Badge} from '@mui/material';
+import classNames from 'classnames';
+import React, {useEffect, useRef, useState} from 'react';
+
+import {
+  noteTaPanelEntryPoint,
+  sendTaEvent,
+  takeTaPanelEntryPoint,
+} from '@cdo/apps/aiTeacherDrawer/analytics';
+import {takeDrawerReopenNav} from '@cdo/apps/aiTeacherDrawer/drawerReopen';
+import {
+  setChatIsOpen,
+  fetchThreadMessages,
+  openDrawerToNav,
+} from '@cdo/apps/aiTeacherDrawer/redux';
+import DCDO from '@cdo/apps/dcdo';
+import experiments from '@cdo/apps/util/experiments';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {
+  tryGetSessionStorage,
+  trySetSessionStorage,
+  tryGetLocalStorage,
+  trySetLocalStorage,
+} from '@cdo/apps/utils';
+import i18n from '@cdo/locale';
+import aiFabWithoutText from '@cdo/static/ai-bot-ta-no-text.png';
+
+import {EVENTS} from '../metrics/AnalyticsConstants';
+import analyticsReporter from '../metrics/AnalyticsReporter';
+import {createTeacherNotificationSubscription} from '../templates/teacherDashboardShared/WebSocketUtils';
+import HttpClient from '../util/HttpClient';
+
+import {DRAWER_FAB_MARGIN} from './constants';
+import {AiDiffNotification} from './notifications/types';
+import {Context} from './types';
+
+import style from './ai-differentiation.module.scss';
+
+const LazyAiDiffDrawer = React.lazy(
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  () => import('../aiTeacherDrawer/AiDiffDrawer' as any)
+);
+
+/**
+ * Renders an AI Bot icon button in the bottom left corner over other UI elements that controls
+ * toggling an AI element open and closed.
+ */
+
+interface AiDiffFloatingActionButtonProps {
+  context: Context;
+  scriptName?: string;
+  canShowPulse?: boolean;
+  canStartOpen?: boolean;
+  canDefaultOpen?: boolean;
+  /**
+   * When set, clicking always opens the drawer straight to this nav label
+   * (see BottomNav's labels/AiDiffDrawer's activeNav switch) instead of the
+   * default toggle-open-to-whatever-was-last-active behavior. Used to
+   * repurpose this FAB as the entry point for a specific drawer screen, e.g.
+   * the rubrics-drawer experiment's Rubrics screen.
+   */
+  openToNav?: string;
+  /**
+   * Mounts the drawer (and all of its supporting data-fetching/websocket
+   * effects) without rendering the round AI-bot FAB icon itself. Used when
+   * some other UI element (e.g. TeacherPanelHandle's arrow tab) is meant to
+   * be the only visible entry point to the drawer.
+   */
+  hideButton?: boolean;
+  /**
+   * Lays the drawer out in the surrounding flow rather than over the page.
+   * Set by Lab2Wrapper, which hosts this component inside the lab's own
+   * component tree so the lab's layout accounts for the drawer directly.
+   */
+  inline?: boolean;
+}
+
+const SESSION_STORAGE_KEY = 'AiDiffFabOpenStateKey';
+const LOCAL_STORAGE_OPENED_KEY = 'AiDiffHasOpenedKey';
+const LOCAL_STORAGE_CLOSED_KEY = 'AiDiffHasClosedKey';
+
+const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
+  context,
+  scriptName,
+  canShowPulse = true,
+  /**
+   * Prevents the FAB opening without direct user click.
+   */
+  canStartOpen = true,
+  /**
+   * Whether the FAB can start open if a user has never interacted with it.
+   * Does not prevent auto-opening if the user has interacted with the FAB before.
+   */
+  canDefaultOpen = true,
+  openToNav,
+  hideButton = false,
+  inline = false,
+}) => {
+  // Show the pulse until the user clicks the FAB to open the chat window
+  const hasOpened =
+    JSON.parse(
+      tryGetLocalStorage(LOCAL_STORAGE_OPENED_KEY, false.toString())
+    ) || false;
+
+  const hasClosed =
+    JSON.parse(
+      tryGetLocalStorage(LOCAL_STORAGE_CLOSED_KEY, false.toString())
+    ) || false;
+
+  const [unreadNotificationCount, setUnreadNotificationCount] = useState<
+    number | 'loading'
+  >('loading');
+
+  const chatIsOpen = useAppSelector(state => state.aiDiffChat.chatIsOpen);
+  const threadMessages = useAppSelector(
+    state => state.aiDiffChat.threadMessages
+  );
+
+  const dispatch = useAppDispatch();
+
+  React.useEffect(() => {
+    // If the user has manually opened or closed the FAB, we should not open it automatically.
+    if (!hasOpened && !hasClosed) {
+      // Open the chat window if this is the first time the user has seen the FAB in this
+      // session and they haven't interacted with the FAB yet.
+      // Depends on other logic which sets the open state in session storage.
+      const isFirstSession =
+        JSON.parse(tryGetSessionStorage(SESSION_STORAGE_KEY, null)) === null;
+
+      // Keeps FAB open/closed on new pages in the same tab or window
+      // New tab or window is default closed if they have previously opened/closed the FAB
+      // Default open if they have never opened/closed the fab before (i.e. first time on the site)
+      dispatch(
+        setChatIsOpen(
+          canStartOpen &&
+            ((isFirstSession && canDefaultOpen) ||
+              JSON.parse(tryGetSessionStorage(SESSION_STORAGE_KEY, false)))
+        )
+      );
+    }
+  }, [canStartOpen, hasOpened, hasClosed, canDefaultOpen, dispatch]);
+
+  // Deliberately not gated on canStartOpen: level pages pass that as false to
+  // stop the drawer opening on its own, but this is the tail end of a click
+  // the teacher already made (see drawerReopen). Declared after the auto-open
+  // effect above so it is not immediately undone by it on mount.
+  React.useEffect(() => {
+    const reopenNav = takeDrawerReopenNav();
+    if (reopenNav) {
+      noteTaPanelEntryPoint('student_navigation');
+      dispatch(openDrawerToNav(reopenNav));
+    }
+  }, [dispatch]);
+
+  const updateUnreadNotificationCount = React.useCallback(() => {
+    HttpClient.fetchJson<AiDiffNotification[]>('/notifications')
+      .then(response => {
+        const unreadNotificationCount =
+          response?.value?.filter(n => n.readAt === null).length || 0;
+        setUnreadNotificationCount(unreadNotificationCount);
+      })
+      .catch(error => {
+        console.error('Error fetching notifications for count:', error);
+        setUnreadNotificationCount(0);
+      });
+  }, []);
+
+  React.useEffect(() => {
+    updateUnreadNotificationCount();
+  }, [updateUnreadNotificationCount]);
+
+  // WebSocket subscription for real-time notification count updates
+  React.useEffect(() => {
+    if (
+      DCDO.get('ai-lesson-summaries-notifications-enabled', false) ||
+      experiments.isEnabled('teacher-notifications-ws')
+    ) {
+      const unsubscribe = createTeacherNotificationSubscription({
+        onNewNotification: () =>
+          setUnreadNotificationCount(prevCount =>
+            prevCount === 'loading' ? prevCount : prevCount + 1
+          ),
+      });
+
+      return unsubscribe || undefined;
+    }
+  }, [updateUnreadNotificationCount]);
+
+  const [curriculumCourses, setCurriculumCourses] = useState<string[]>();
+
+  React.useEffect(() => {
+    if (!threadMessages || threadMessages.length === 0) {
+      dispatch(
+        fetchThreadMessages({
+          contextType: context.type,
+          thread: 0,
+          curriculumCourses: curriculumCourses,
+        })
+      );
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
+    const body = JSON.stringify({
+      context: context,
+    });
+    HttpClient.post(`/aidiff_threads/curriculum_courses`, body, true, {
+      'Content-Type': 'application/json',
+    })
+      .then(response => response.json())
+      .then(json => {
+        setCurriculumCourses(json.courses);
+      })
+      .catch(error => {
+        console.log(error);
+        setCurriculumCourses([]);
+      });
+  }, [context, dispatch]);
+
+  // Only the pre-rebrand PNG reports a load; see showPulse below.
+  const [isFabImageLoaded, setIsFabImageLoaded] = useState(false);
+
+  const [fabPosition, setFabPosition] = useState<{top: number} | null>(null);
+  const [dragging, setDragging] = useState(false);
+  const buttonRef = useRef<HTMLButtonElement>(null);
+  const dragStateRef = useRef<{
+    mouseY: number;
+    elemTop: number;
+    isDragging: boolean;
+    currentTop: number;
+  } | null>(null);
+  const wasDraggingRef = useRef(false);
+
+  const FAB_SIZE = 48;
+  const HEADER_HEIGHT = 50;
+
+  useEffect(() => {
+    const onResize = () => {
+      setFabPosition(prev => {
+        if (!prev) return null;
+        return prev.top > window.innerHeight - FAB_SIZE ? null : prev;
+      });
+    };
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
+  }, []);
+
+  const onDragMove = (clientY: number) => {
+    const drag = dragStateRef.current;
+    if (!drag) return;
+    const dy = clientY - drag.mouseY;
+    if (!drag.isDragging && Math.abs(dy) < 4) return;
+    if (!drag.isDragging) {
+      drag.isDragging = true;
+      wasDraggingRef.current = true;
+      setDragging(true);
+    }
+    drag.currentTop = Math.max(
+      HEADER_HEIGHT,
+      Math.min(window.innerHeight - FAB_SIZE, drag.elemTop + dy)
+    );
+    // Direct DOM write bypasses React scheduling so the position tracks
+    // the pointer on every mousemove frame without waiting for a render.
+    if (buttonRef.current) {
+      buttonRef.current.style.top = `${drag.currentTop}px`;
+      buttonRef.current.style.bottom = 'auto';
+    }
+  };
+
+  const onDragEnd = () => {
+    const drag = dragStateRef.current;
+    dragStateRef.current = null;
+    setDragging(false);
+    if (drag?.isDragging) {
+      setFabPosition({top: drag.currentTop});
+    }
+    // Some browsers don't fire 'click' after a large drag, leaving
+    // wasDraggingRef stuck true and eating the next tap. Self-clear after
+    // the click event window (a few ms) has passed.
+    setTimeout(() => {
+      wasDraggingRef.current = false;
+    }, 300);
+  };
+
+  const handlePointerDown = (e: React.PointerEvent<HTMLButtonElement>) => {
+    e.currentTarget.setPointerCapture(e.pointerId);
+    const rect = e.currentTarget.getBoundingClientRect();
+    dragStateRef.current = {
+      mouseY: e.clientY,
+      elemTop: rect.top,
+      isDragging: false,
+      currentTop: rect.top,
+    };
+  };
+
+  const handlePointerMove = (e: React.PointerEvent<HTMLButtonElement>) => {
+    if (!dragStateRef.current) return;
+    e.preventDefault();
+    onDragMove(e.clientY);
+  };
+
+  const handlePointerUp = (e: React.PointerEvent<HTMLButtonElement>) => {
+    if (!dragStateRef.current) return;
+    e.currentTarget.releasePointerCapture(e.pointerId);
+    onDragEnd();
+  };
+
+  // The TA rebrand -- new mark, pink disc, count-only badge -- ships with the
+  // rest of the new teacher panel. Without the experiment this is the old FAB,
+  // down to the pulse waiting on the PNG to load.
+  const showRebrandedIcon = experiments.isEnabled('ta-teacher-panel');
+  const showPulse =
+    canShowPulse && !hasOpened && (showRebrandedIcon || isFabImageLoaded);
+  const classes = showPulse
+    ? classNames(style.floatingActionButton, style.pulse, 'unittest-fab-pulse')
+    : style.floatingActionButtonRight;
+
+  // Every path that opens the drawer ends in chatIsOpen going true, including
+  // the automatic open above and the teacher panel handle, which never touch
+  // handleClick. Report the open from the transition and let whoever caused it
+  // leave their name behind (see noteTaPanelEntryPoint).
+  const wasChatOpenRef = useRef<boolean | null>(null);
+  useEffect(() => {
+    const wasOpen = wasChatOpenRef.current;
+    wasChatOpenRef.current = chatIsOpen;
+    if (wasOpen === null || wasOpen === chatIsOpen || !chatIsOpen) {
+      return;
+    }
+    const entryPoint = takeTaPanelEntryPoint();
+    sendTaEvent(
+      EVENTS.AI_TA_PANEL_OPENED,
+      {
+        entry_point: entryPoint,
+        context_type: context.type,
+        script_name: scriptName,
+      },
+      entryPoint
+    );
+  }, [chatIsOpen, context.type, scriptName]);
+
+  const handleClick = () => {
+    if (wasDraggingRef.current) {
+      wasDraggingRef.current = false;
+      return;
+    }
+    const eventData = {
+      aiDiffChatContext: context,
+      scriptName,
+    };
+    const eventName = chatIsOpen
+      ? EVENTS.AI_DIFF_CHAT_CLOSED
+      : EVENTS.AI_DIFF_CHAT_OPENED;
+    analyticsReporter.sendEvent(eventName, eventData);
+    if (eventName === EVENTS.AI_DIFF_CHAT_OPENED) {
+      trySetLocalStorage(LOCAL_STORAGE_OPENED_KEY, true.toString());
+    } else {
+      trySetLocalStorage(LOCAL_STORAGE_CLOSED_KEY, true.toString());
+    }
+    if (!chatIsOpen) {
+      noteTaPanelEntryPoint(openToNav ? 'nav_shortcut' : 'fab');
+    }
+    if (openToNav) {
+      dispatch(openDrawerToNav(openToNav));
+    } else {
+      dispatch(setChatIsOpen(!chatIsOpen));
+      dispatch(
+        fetchThreadMessages({
+          contextType: context.type,
+          thread: 0,
+          curriculumCourses: curriculumCourses,
+        })
+      );
+    }
+    trySetSessionStorage(SESSION_STORAGE_KEY, (!chatIsOpen).toString());
+    updateUnreadNotificationCount();
+  };
+
+  // Unlike handleClick, always closes rather than toggling/re-opening to
+  // openToNav — used by the drawer's own close (X) button, which must be
+  // able to close the drawer even when this FAB is configured with
+  // openToNav (where handleClick would otherwise just re-open it).
+  const closeDrawer = () => {
+    analyticsReporter.sendEvent(EVENTS.AI_DIFF_CHAT_CLOSED, {
+      aiDiffChatContext: context,
+      scriptName,
+    });
+    trySetLocalStorage(LOCAL_STORAGE_CLOSED_KEY, true.toString());
+    dispatch(setChatIsOpen(false));
+    trySetSessionStorage(SESSION_STORAGE_KEY, false.toString());
+    updateUnreadNotificationCount();
+  };
+
+  return (
+    <div
+      id="fab-contained"
+      // Hosted inside a dark Lab2 lab, the button would otherwise pick up that
+      // lab's theme; the drawer resets this for itself too. Light is the
+      // default theme, so this changes nothing on pages without one.
+      data-theme={inline ? 'Light' : undefined}
+      className={inline ? style.fabContainedInline : undefined}
+    >
+      {!hideButton && !chatIsOpen && (
+        <button
+          ref={buttonRef}
+          id="ui-floatingActionButton"
+          aria-label={i18n.openOrCloseTeachingAssistant()}
+          className={classes}
+          onClick={handleClick}
+          onPointerDown={handlePointerDown}
+          onPointerMove={handlePointerMove}
+          onPointerUp={handlePointerUp}
+          onDragStart={e => e.preventDefault()}
+          type="button"
+          style={{
+            touchAction: 'none',
+            right: `${DRAWER_FAB_MARGIN}px`,
+            transition: 'right 195ms cubic-bezier(0.4, 0, 0.6, 1) 0ms',
+            ...(fabPosition
+              ? {
+                  top: `${fabPosition.top}px`,
+                  bottom: 'auto',
+                  cursor: dragging ? 'grabbing' : 'grab',
+                }
+              : {cursor: 'grab'}),
+          }}
+        >
+          <Badge
+            // Rebranded, the badge is the unread count and nothing else: MUI
+            // hides it at zero, which covers both "no notifications" and
+            // "still loading". Before the rebrand it doubled as a 'TA' label.
+            badgeContent={
+              unreadNotificationCount === 'loading'
+                ? 0
+                : unreadNotificationCount > 0 || showRebrandedIcon
+                ? unreadNotificationCount
+                : 'TA'
+            }
+            color={showRebrandedIcon ? undefined : 'error'}
+            overlap="circular"
+            aria-label={
+              unreadNotificationCount &&
+              i18n.unreadNotificationsCount({
+                unreadCount: unreadNotificationCount,
+              })
+            }
+            sx={{
+              height: '48px',
+              width: '48px',
+              '& .MuiBadge-badge': showRebrandedIcon
+                ? {
+                    backgroundColor:
+                      'var(--background-neutral-primary-inverse)',
+                    color: 'var(--text-neutral-primary-inverse)',
+                    border: '2px solid var(--background-neutral-primary)',
+                    top: '5%',
+                    right: '18%',
+                  }
+                : {
+                    backgroundColor:
+                      unreadNotificationCount === 'loading' ||
+                      unreadNotificationCount > 0
+                        ? 'var(--background-error-primary)'
+                        : 'var(--background-brand-aqua-primary)',
+                    color: 'var(--text-neutral-white-fixed)',
+                    top: '5%',
+                    right: '5%',
+                  },
+            }}
+          >
+            {showRebrandedIcon ? (
+              <FontAwesomeV6Icon
+                iconFamily="kit"
+                iconName="ta"
+                title={i18n.openOrCloseTeachingAssistant()}
+                className={style.fabIcon}
+              />
+            ) : (
+              <img
+                alt="AI bot - unread notifications"
+                src={aiFabWithoutText}
+                onLoad={() => !isFabImageLoaded && setIsFabImageLoaded(true)}
+                draggable={false}
+              />
+            )}
+          </Badge>
+        </button>
+      )}
+      <React.Suspense fallback={<div />}>
+        <LazyAiDiffDrawer
+          context={context}
+          closeTutor={closeDrawer}
+          curriculumCourses={curriculumCourses || ([] as string[])}
+          scriptName={scriptName}
+          unreadNotificationCount={
+            unreadNotificationCount === 'loading' ? 0 : unreadNotificationCount
+          }
+          inline={inline}
+        />
+      </React.Suspense>
+    </div>
+  );
+};
+
+export default AiDiffFloatingActionButton;

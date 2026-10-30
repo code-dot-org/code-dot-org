@@ -2,8 +2,10 @@
  * A set of tests for blocks in the UI controls section of the toolbox
  */
 import $ from 'jquery';
-var tickWrapper = require('../../util/tickWrapper');
+
 import {TestResults} from '@cdo/apps/constants';
+
+var tickWrapper = require('../../util/tickWrapper');
 
 // take advantage of the fact that we expose the filesystem via
 // localhost
@@ -34,9 +36,9 @@ module.exports = {
         'radioButton("id6", false, "group");\n' +
         'getChecked("id5")\n' +
         'setChecked("id5", true);\n' +
-        'image("id7", "https://code.org/images/logo.png");\n' +
+        'image("id7", "https://studio.code.org/blockly/media/logo.png");\n' +
         'getImageURL("id7");\n' +
-        'setImageURL("id7", "https://code.org/images/logo.png");\n' +
+        'setImageURL("id7", "https://studio.code.org/blockly/media/logo.png");\n' +
         'playSound("https://studio.code.org/blockly/media/skins/studio/1_goal.mp3");\n' +
         'setPosition("id7", 0, 0, 100, 100);\n' +
         'setSize("id7", 100, 100);\n' +
@@ -341,7 +343,7 @@ module.exports = {
         '    <option>Option 1</option>' +
         '    <option>Option 2</option>' +
         '  </select>' +
-        '  <a href="https://code.org/images/logo.png">logo</a>' +
+        '  <a href="https://studio.code.org/blockly/media/logo.png">logo</a>' +
         '</div>' +
         "')\n;",
 
@@ -362,7 +364,7 @@ module.exports = {
             '    <option>Option 1</option>' +
             '    <option>Option 2</option>' +
             '  </select>' +
-            '  <a href="https://code.org/images/logo.png">logo</a>' +
+            '  <a href="https://studio.code.org/blockly/media/logo.png">logo</a>' +
             '</div>';
           assert.equal(
             $('#divApplab #container')[0].outerHTML,

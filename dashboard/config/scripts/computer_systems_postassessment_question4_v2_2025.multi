@@ -1,0 +1,19 @@
+name 'computer-systems-postassessment-question4_v2-2025'
+title 'Computer Systems and Devices Post-Assessment: Question 4'
+
+right 'Increase the amount of RAM'
+wrong 'Change the desktop background'
+wrong 'Close the browser before gaming'
+wrong 'Lower the screen brightness'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+A student needs to optimize their laptop for gaming. Which of the following changes will have the greatest impact?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 5: Troubleshooting and Optimizing Software
+
+Lesson 6: Build a Computer System
+MARKDOWN

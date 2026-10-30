@@ -3,9 +3,9 @@
  * can be extended to allow for editing of various specialized kinds of cells.
  * @see @code-dot-org/maze/src/cell
  */
+import {tiles} from '@code-dot-org/maze';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {tiles} from '@code-dot-org/maze';
 
 const SquareType = tiles.SquareType;
 

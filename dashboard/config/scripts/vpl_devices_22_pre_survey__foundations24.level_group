@@ -1,0 +1,15 @@
+name 'VPL-Devices-22-pre-survey_-foundations24'
+title 'Pre-survey'
+submittable 'true'
+anonymous 'false'
+
+page
+text 'SP-VPL-preSurvey-Devices-preamble-22_-foundations24'
+level 'SP-VPL-PreSuvey-22-Q1_-foundations24'
+level 'SP-VPL-PreSuvey-Devices-22-Q2_-foundations24'
+level 'SP-VPL-PreSuvey-Devices-22-Q4_-foundations24'
+level 'SP-VPL-PreSuvey-Devices-22-Q5_-foundations24'
+level 'SP-VPL-PreSuvey-Devices-22-Q6_-foundations24'
+level 'SP-VPL-PreSuvey-Devices-22-Q7_-foundations24'
+level 'SP-VPL-PreSuvey-Devices-22-Q8_-foundations24'
+level 'SP-VPL-PreSuvey-Devices-22-Q9_-foundations24'

@@ -1,0 +1,148 @@
+@import '@code-dot-org/component-library-styles/font';
+
+.main:has(:global(.announcement-notification)) .titleWrapper {
+  // Wider than the gap between two banners, so the header reads as a new block.
+  margin-top: var(--spacing-p-m);
+}
+
+.heading {
+  width: 100%;
+}
+
+// Matches the banner spacing the course overview and Announcements already use.
+.notificationBanner {
+  margin-bottom: var(--spacing-p-xs);
+}
+
+.titleWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.title {
+  display: inline-block;
+}
+
+.versionWrapper {
+  display: flex;
+  align-items: baseline;
+}
+
+.versionLabel {
+  @include main-font-semi-bold;
+  font-size: 15;
+  color: var(--text-neutral-primary);
+}
+
+.versionDropdown {
+  margin-bottom: 13;
+}
+
+.description {
+  width: 700px;
+  color: var(--text-neutral-primary);
+  font-weight: 400;
+
+  // SafeMarkdown renders link markdown to raw <a> elements. Without this rule
+  // they pick up the browser default (blue) which doesn't match the rest of
+  // the page. Route them through the same brand-purple semantic token used
+  // elsewhere on .main anchors.
+  // TODO: remove these styles once SafeMarkdown uses DSCO typography and components
+  a,
+  a:link,
+  a:visited {
+    color: var(--text-brand-purple-primary);
+    text-decoration: underline;
+  }
+
+  a:hover,
+  a:active {
+    color: var(--text-brand-purple-secondary);
+  }
+}
+
+.actionRow {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.leftActions {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  width: 100%;
+  flex-wrap: wrap;
+  row-gap: 12px;
+}
+
+.assignButton {
+  margin-right: 10px;
+  button {
+    margin: 0;
+  }
+}
+
+.teacherResources {
+  margin-right: 5px;
+}
+
+.printingOptions {
+  margin-right: 10px;
+}
+
+.versionSelector {
+  margin-right: 10px;
+  select {
+    margin-bottom: 0;
+  }
+}
+
+.viewAsLabel {
+  @include main-font-semi-bold;
+  font-size: 16px;
+  margin-bottom: 0;
+  line-height: 20px;
+  color: var(--text-neutral-primary);
+}
+
+.viewAs {
+  display: flex;
+  flex-direction: column;
+}
+
+.unitConfirmText {
+  @include main-font-regular;
+  font-size: 12;
+}
+
+.customText {
+  margin: '0px 2px';
+}
+
+.icon {
+  margin: '0px 2px';
+  font-size: 16;
+  // we want our icon text to be a different size than our button text, which
+  // requires we manually offset to get it centered properly
+  position: 'relative';
+  top: 1;
+}
+
+.studentSelector {
+  select {
+    width: 320px;
+  }
+}
+
+.navLink {
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--text-brand-purple-primary);
+}
+.navArea {
+  padding: var(--spacing-p-xxs) 0;
+}

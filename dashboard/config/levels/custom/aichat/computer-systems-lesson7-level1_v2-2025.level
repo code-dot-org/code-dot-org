@@ -1,0 +1,51 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T20:00:05.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Sensors AI Assistant\r\n\r\nUse AI Chat to help you explore different sensors, their usage, and the data type(s) they collect.\r\n\r\n### Do This:\r\n\r\n*Provide a Data Type*: Ask the assistant to describe sensors that might collect a specific type of data.\r\n\r\n::: details [**Not sure what to ask?**]\r\nTry a prompt like this:\r\n> What kinds of sensors could I use to collect **biometric** data?\r\n\r\n:::\r\n&nbsp;\r\n\r\n*Provide a Computer System or Device*: Ask about what sensors might be present in certain systems or devices and about the type of data that they produce.\r\n\r\n::: details [**Not sure what to ask?**]\r\nTry a prompt like this:\r\n> I have an iPhone 16 and I want to know what kinds of sensors it has and how what kinds of data they produce.\r\n\r\n:::\r\n&nbsp;\r\n\r\n*Suggest a situation*: Share an idea, problem, or challenge that you have encountered and ask about how sensors and data might be used to help.\r\n\r\n::: details [**Not sure what to ask?**]\r\nTry a prompt like this:\r\n> I'm trying to automate the restocking the school vending machines-- what sensors might help with that?\r\n:::\r\n&nbsp;\r\n\r\n*Keep Learning*: Feel free to ask \"why\" or \"how\" questions to deepen your understanding of sensors and data.\r\n\r\n::: details [**Not sure what to ask?**]\r\nTry a prompt like this:\r\n> Can you give me more information on how radar works?\r\n:::\r\n&nbsp;\r\n",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "temperature": 0.8,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "Computer Build AI Assistant",
+          "description": "This AI tool is here to guide you through choosing parts for a fictional computer build. It asks about things like budget, purpose (gaming, content creation, etc.), and personal preferences, then recommends specific components. Along the way, it also explains important details—like why certain hardware specs matter—so you can learn the basics of PC building.",
+          "intendedUse": "Who It’s For: Students or newcomers who want to learn about computer hardware.\n\nWhat It Does: \n* Asks about your needs and preferences. \n* Suggests specific CPUs, GPUs, motherboards, RAM, storage, power supplies, and peripherals. \n* Explains complex hardware terms in a clear, beginner-friendly way.",
+          "limitationsAndWarnings": "* Prices Can Change: The AI’s knowledge of hardware prices might not be up to date. Always double-check current pricing.\n\n* Verify Compatibility: Although the tool aims for accurate suggestions, real-world product lines and availability can change. Confirm any recommended parts with a trusted retailer or resource.\n\n* Budget Updates: The AI may not track shifting market prices, so keep an eye on how much your build might cost overall.",
+          "testingAndEvaluation": "Accuracy: Correct specs and part compatibility.\n\nClarity: Simple, understandable language for beginners.\n\nRelevance: Does the AI’s suggestion match your specific needs?",
+          "exampleTopics": [
+            "I want a PC for gaming on a $700 budget. What do I need?",
+            "How can I build a workstation for 3D rendering?",
+            "Explain in simple terms why NVMe SSDs are faster than SATA SSDs"
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "\nAbsolutely — here is a revised system prompt that clearly aligns with the structure of the chart the students will be using:\n\nSystem Prompt:\n\nYou are helping students complete a chart about different types of sensors. Each row in the chart includes:\n\nSensor Name (e.g., Temperature, Sound, Gas)\n\nType (e.g., Environmental, Audio, Visual — one or two words only)\n\nType of Data Produced (a short, clear summary in the student’s own words)\n\nStudents will only research 1–2 sensors at a time. They may ask about:\n\nA specific type of data (e.g., “Which sensors collect sound?”)\n\nA system or device (e.g., “What sensors are in a smartphone?”)\n\nA real-world situation (e.g., “What sensors would help detect air pollution?”)\n\nWhy or how a sensor works or collects its data\n\nYour responses must:\n\nBe concise, factual, and written at a middle/high school level\n\nInclude the sensor type (category label) and a brief summary of the data it collects\n\nUse language that helps students fill in the “Type” and “Type of Data Produced” columns of the chart\n\nKeep explanations short — 1–2 sentences is best\n\nDo not provide extra commentary. Your job is to support students in accurately and quickly completing their chart.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gen-ai-mistral-7b-inst-v01"
+      ],
+      "multimodalEnabled": false
+    },
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T20:00:05.901+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson7-level1_2025\\\"\"],\"cloned_from\":\"computer-systems-lesson7-level1_2025\"}]"
+}]]></config>
+</Aichat>

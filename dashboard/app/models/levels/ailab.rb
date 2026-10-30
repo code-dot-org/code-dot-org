@@ -22,17 +22,37 @@
 #  index_levels_on_game_id    (game_id)
 #  index_levels_on_level_num  (level_num)
 #  index_levels_on_name       (name)
+#  index_levels_on_type       (type)
 #
 
 class Ailab < Level
   serialized_attrs %w(
     start_sources
-    hide_share_and_remix
     is_project_level
-    submittable
     mode
     dynamic_instructions
+    uses_lab2
   )
+
+  DATASETS_MANIFEST_PATH = apps_dir('src', 'ailab', 'engine', 'datasets-manifest.json')
+  LAB2_INSTRUCTIONS_PATH = apps_dir('src', 'ailab', 'engine', 'lab2-instructions.json')
+
+  REQUIRE_ACCURACY_RANGE = (0..100)
+
+  DATASET_COLUMN_MODE_KEYS = %w(label features hideSelectLabel lockFeatures pretrained idColumn).freeze
+
+  validate :validate_lab2_mode
+
+  # Lab 2 levels generate their long instructions, so a stored value would only go stale.
+  before_save {properties.delete('long_instructions') if uses_lab2?}
+
+  def self.dataset_ids
+    @dataset_ids ||= JSON.parse(File.read(DATASETS_MANIFEST_PATH))['datasets'].pluck('id')
+  end
+
+  def self.lab2_instructions
+    @lab2_instructions ||= JSON.parse(File.read(LAB2_INSTRUCTIONS_PATH))
+  end
 
   def self.create_from_level_builder(params, level_params)
     create!(
@@ -50,7 +70,7 @@ class Ailab < Level
     return default_value if default_value.nil?
 
     parsed_default_value = JSON.parse(default_value)
-    parsed_default_value.keys.each do |prop|
+    parsed_default_value.each_key do |prop|
       parsed_default_value[prop] = I18n.t(
         prop,
         scope: [:data, 'dynamic_instructions', name],
@@ -60,6 +80,33 @@ class Ailab < Level
     end
 
     JSON.dump(parsed_default_value)
+  end
+
+  # Markdown of every screen's instructions, for readers who never see the screens.
+  # Always use this method for lab2 AI Lab levels rather than calling properties['long_instructions'] directly.
+  def generated_long_instructions
+    return nil unless uses_lab2?
+
+    authored = authored_dynamic_instructions
+    items = self.class.lab2_instructions.map do |screen|
+      text = authored[screen['key']]
+      text = screen['defaultText'] unless text.is_a?(String) && text.present?
+      # Indenting continuation lines keeps multi-line text inside its list item.
+      "- _The instructions for the **#{screen['name']}** screen say:_ #{text.gsub("\n", "\n  ")}"
+    end
+    "This level has dynamic instructions that change as you interact with AI Lab.\n\n#{items.join("\n\n")}"
+  end
+
+  def summarize_for_lesson_show(can_view_teacher_markdown)
+    summary = super
+    summary[:longInstructions] = generated_long_instructions if uses_lab2?
+    summary
+  end
+
+  def summary_for_lesson_plans(unit_group_unit: nil)
+    summary = super
+    summary['long_instructions'] = generated_long_instructions if uses_lab2?
+    summary
   end
 
   def get_localized_property(property_name)
@@ -78,7 +125,7 @@ class Ailab < Level
     options = Rails.cache.fetch("#{cache_key}/#{I18n.locale}/non_blockly_puzzle_level_options/v2") do
       level_prop = {}
 
-      properties.keys.each do |dashboard|
+      properties.each_key do |dashboard|
         apps_prop_name = dashboard.camelize(:lower)
         # Select value from properties json
         # Don't override existing valid (non-nil/empty) values
@@ -98,6 +145,36 @@ class Ailab < Level
     options.freeze
   end
 
+  def uses_lab2?
+    JSONValue.value(uses_lab2) == true
+  end
+
+  def channel_backed?
+    super || uses_lab2?
+  end
+
+  def get_validations
+    return nil unless uses_lab2?
+
+    minimum = lab2_mode['requireAccuracy']
+    return nil unless minimum.is_a?(Numeric) && minimum.positive?
+
+    [
+      {
+        'key' => 'accuracy_met',
+        'conditions' => [{'name' => 'ACCURACY_AT_LEAST', 'value' => minimum}],
+        'message' => '',
+        'next' => true,
+      },
+      {
+        'key' => 'accuracy_unmet',
+        'conditions' => [],
+        'message' => "Train a model with at least #{minimum}% accuracy to continue.",
+        'next' => false,
+      },
+    ]
+  end
+
   # Attributes that are stored as JSON strings but should be passed through to the app as
   # actual JSON objects.  You can list attributes in snake_case here for consistency, but this method
   # returns camelCase properties because of where it's used in the pipeline.
@@ -106,5 +183,84 @@ class Ailab < Level
       mode
       dynamic_instructions
     ).map {|x| x.camelize(:lower)}
+  end
+
+  # Checks the raw value first, since localized_dynamic_instructions raises on anything but a JSON object.
+  private def authored_dynamic_instructions
+    parsed = begin
+      JSON.parse(dynamic_instructions.presence || '{}')
+    rescue JSON::ParserError
+      nil
+    end
+    return {} unless parsed.is_a?(Hash)
+
+    JSON.parse(localized_dynamic_instructions || '{}')
+  end
+
+  private def lab2_mode
+    parsed_lab2_mode || {}
+  end
+
+  private def parsed_lab2_mode
+    parsed_mode = begin
+      JSON.parse(mode.presence || '{}')
+    rescue JSON::ParserError
+      nil
+    end
+    parsed_mode if parsed_mode.is_a?(Hash)
+  end
+
+  private def validate_lab2_mode
+    return unless JSONValue.value(uses_lab2) == true
+
+    parsed_mode = parsed_lab2_mode
+    unless parsed_mode
+      errors.add(:mode, 'must be a JSON object.')
+      return
+    end
+
+    datasets = parsed_mode['datasets'] || []
+    if !datasets.is_a?(Array) || datasets.length > 1 || (datasets - self.class.dataset_ids).any?
+      errors.add(:mode, 'must select no more than one known dataset.')
+    elsif datasets.empty? && DATASET_COLUMN_MODE_KEYS.any? {|key| parsed_mode[key].present?}
+      errors.add(:mode, 'must select a dataset to choose, lock, or pretrain on its columns.')
+    end
+
+    id_column = parsed_mode['idColumn']
+    if id_column.present? && (id_column == parsed_mode['label'] || Array(parsed_mode['features']).include?(id_column))
+      errors.add(:mode, 'cannot use the id column as the label or a feature.')
+    end
+
+    if parsed_mode.key?('requireAccuracy')
+      accuracy = parsed_mode['requireAccuracy']
+      unless accuracy.is_a?(Numeric) && REQUIRE_ACCURACY_RANGE.cover?(accuracy)
+        errors.add(:mode, 'must have a required accuracy from 0 to 100.')
+      end
+    end
+
+    if parsed_mode['pretrained'] == true
+      label = parsed_mode['label']
+      features = parsed_mode['features']
+      unless label.is_a?(String) && label.present? && features.is_a?(Array) && (features - [label]).present?
+        errors.add(:mode, 'must choose a label and features when pretrained.')
+      end
+      unless parsed_mode['hideSelectLabel'] == true && parsed_mode['lockFeatures'] == true
+        errors.add(:mode, 'must lock the label and features when pretrained.')
+      end
+      errors.add(:mode, 'must test on the last rows when pretrained.') unless parsed_mode['reserveLastRows'] == true
+      errors.add(:mode, 'cannot require an accuracy when pretrained.') if parsed_mode.key?('requireAccuracy')
+    end
+
+    if parsed_mode['hideDatasetView'] == true && parsed_mode['pretrained'] != true
+      errors.add(:mode, 'cannot hide the dataset view unless pretrained.')
+    end
+
+    if parsed_mode['hideTestingView'] == true
+      if parsed_mode['pretrained'] == true
+        errors.add(:mode, 'cannot hide the testing view when pretrained.')
+      elsif parsed_mode.key?('requireAccuracy')
+        errors.add(:mode, 'cannot require an accuracy when the testing view is hidden.')
+      end
+    end
   end
 end

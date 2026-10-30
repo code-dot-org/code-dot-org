@@ -1,0 +1,38 @@
+name 'data-science-ch1-lesson1-level2_v2-2025'
+title 'Data Scientists Exploration'
+
+markdown <<MARKDOWN
+## Data Scientists Exploration
+
+| Image | Person            | Field Of Study          | Link(s)                                                                                                                           |
+|:-----:|:-----------------:|:-----------------------:|:---------------------------------------------------------------------------------------------------------------------------------:|
+|<img src="https://images.code.org/f707d1a29cf88ba1785c8086f8b8bd2d-image-1718036928941.jpg" width="125"/>| **Nathalie<br>Miebach** | **Art** | [Ted Talk](https://www.ted.com/talks/nathalie_miebach_art_made_of_storms) // [Personal Website](https://www.nathaliemiebach.com/) |
+|<img src="https://images.code.org/bfb542ec19246c054bd05d86658728ba-image-1718037047405.png" width="125"/>| **Michelle<br>Tat** | **City Government** | [Article](https://towardsdatascience.com/on-being-a-civic-data-scientist-774c15232695) // [Portfolio](https://mjtat.github.io/) |
+|<img src="https://images.code.org/f3291d7a86adf91e6e79771f91277070-image-1718042520836.png" width="125"/>| **Jacob<br>Campbell** | **Dance** | [Article](https://magazine.calpoly.edu/winter-2023/making-data-dance/) |
+|<img src="https://images.code.org/842c4cf5abd0ecb27df6327b3cb635c2-image-1718042530855.png" width="125"/>| **Peaks<br>Krafft** | **Diversity, Social Media** | [Profile](https://www.oii.ox.ac.uk/people/profiles/krafft/) // [Portfolio](https://people.csail.mit.edu/pkrafft/) |
+|<img src="https://images.code.org/deaff19842680f5a0a2a3c8a1a09a156-image-1718042546968.jpeg" width="125"/>| **Lydia<br>Jennings** | **Environment** | [Personal Website](https://nativesoilnerd.com/) |
+|<img src="https://images.code.org/92e3b8e689843127a493c4cc1233e628-image-1718042563736.png" width="125"/>| **Briana<br>Vecchione** | **Ethics** | [Personal Website](https://brianavecchione.org/) |
+|<img src="https://images.code.org/6bd0ce1e3da34eb7735f63445adb779b-image-1718042570986.png" width="125"/>| **Kelsey<br>Campbell** | **General** | [Profile + Video](https://roadtripnation.com/leader/kelsey-campbell) |
+|<img src="https://images.code.org/12a7c5ac1b44b885999c7d27a6f64936-image-1718042578542.png" width="125"/>| **Chris<br>Chenet** | **Homelessness** | [Article](https://www.datakind.org/2023/11/07/welcome-chris-chenet-datakinds-product-owner/) |
+|<img src="https://images.code.org/f4cb0af440d82bbb595dc8183da7f189-image-1718042582268.png" width="125"/>| **Kira<br>Radinsky** | **Medicine** | [Personal Website](http://www.kiraradinsky.com/) |
+|<img src="https://images.code.org/5936ef245824a2dcd80727e507ec07ab-image-1718042592152.png" width="125"/>| **Christine<br>Osazuwa** | **Music** | [Personal Website](https://christineosazuwa.com) |
+|<img src="https://images.code.org/2379c356d72a9e678e45c4e9039bb4e2-image-1718042597835.png" width="125"/>| **WEB<br>DuBois** | **Race** | [Article](https://sparkmap.org/data/w-e-b-du-bois-data-visualization-history/) |
+|<img src="https://images.code.org/f74186da88a44d8988a6e14c0fe04e38-image-1718042605652.png" width="125"/>| **Kimberly<br>Arcand** | **Space** | [Profile + Video](https://roadtripnation.com/interviews/kimberly-arcand) // [Personal Website](https://www.kimarcand.com/) |
+|<img src="https://images.code.org/1732a7006e77a5447c900cc18bfa7d70-image-1718042610686.png" width="125"/>| **Ivana<br>Seric** | **Sports** | [Article](https://www.smorescience.com/data-scientist-ivana-seric/) // [Video](https://www.youtube.com/watch?v=N7WpMixTD-g) |
+|<img src="https://images.code.org/d685ff1645085891955ec741c9f36371-image-1744053952352.25.41 PM.png" width="125"/>| **Nina<br>Nduwayo** | **Fraud Detection** | [Article](https://www.franklinfitch.com/uk/resources/blog/black-history-month-spotlight-on-nina-nduwayo/) |
+|<img src="https://images.code.org/cdcb15a4bdcc80aed9acb6153c34c2e9-image-1744053968200.25.06 PM.png" width="125"/>| **Namita<br>Nandakumar** | **Sports** | [Article](https://www.nhl.com/kraken/news/namita-nandakumar-senior-quantitative-analyst-seattle-hockey-316662686) |
+|<img src="https://images.code.org/52657d9aa7428ccd4a76099c977e0b83-image-1744053854421.24.04 PM.png" width="125"/>| **Carly<br>Fennell** | **Sports** | [Article](https://chatelaine.com/living/carly-fennell-nfl-safety/) |
+|<img src="https://images.code.org/830f14f3bb9d190b178e53c9aef8c76c-image-1744054478908.png" width="125"/>| **Evalyne<br>Muiruri** | **Medicine** | [Article](https://theblackwomenintech.com/projects/evalyne-muiruri/) |
+|<img src="https://images.code.org/146d187bbf98dfba0939889a82d821e7-image-1744054423350.png" width="125"/>| **Krystal<br>Tsosie** | **Medicine** | [Article](https://www.sciencenews.org/article/genetics-krystal-tsosie-indigenous-data-sovereignty) |
+|<img src="https://images.code.org/5f64065b6cb8c0e12ffb5811a88d8c46-image-1744054408481.png" width="125"/>| **Yeshimabeit<br>Milner** | **Ethics** | [Article](https://d4bl.org/people/9-yeshimabeit-milner) |
+|<img src="https://images.code.org/71cdde02f5ddc3a0b11f7052d9544ec2-image-1744054308971.png" width="125"/>| **Fernanda<br>Viegas** | **Art** | [Article](http://www.fernandaviegas.com/) |
+|<img src="https://images.code.org/1322e0046d83359822fb869a49ccf4f4-image-1744054134601.png" width="125"/>| **Ben<br>Ackerman** | **Medicine** | [Article](https://www.benjaminackerman.com/) |
+|<img src="https://images.code.org/de03877d3abc76fa9f62e28070132211-image-1744054096263.png" width="125"/>| **Jeff<br>Leek** | **Medicine** | [Article](https://jtleek.com/) |
+|<img src="https://images.code.org/468726a16f9f03b9c9ff374b237223d1-image-1744054085219.png" width="125"/>| **Callie<br>McNicholas** | **Meteorology** | [Article](https://www.calliemcnicholas.com/) |
+|<img src="https://images.code.org/ee98006c32b3f3e47699cc46a9b5f674-image-1744054063395.png" width="125"/>| **Florence<br>Nightingale** | **Medicine** | [Article](https://www.historyofdatascience.com/florence-nightingale-the-lady-behind-the-lamp/) |
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+This level exists to give students access to the links that they can follow to learn more about each person. You should have assigned each of the students one of these data scientists to find on this page and research.
+
+MARKDOWN

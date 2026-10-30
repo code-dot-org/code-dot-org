@@ -1,5 +1,6 @@
-import Sound from './Sound';
 import _ from 'lodash';
+
+import Sound from './Sound';
 
 /**
  * Interface for a sound registry and playback mechanism

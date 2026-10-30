@@ -1,17 +1,23 @@
 import $ from 'jquery';
-import React from 'react';
 import throttle from 'lodash/throttle';
-import getScriptData from '@cdo/apps/util/getScriptData';
+import React from 'react';
+import {Provider} from 'react-redux';
+
+import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
 import * as codeStudioLevels from '@cdo/apps/code-studio/levels/codeStudioLevels';
-import {LegacySingleLevelGroupDialog} from '@cdo/apps/lib/ui/LegacyDialogContents';
-import i18n from '@cdo/locale';
 import Match from '@cdo/apps/code-studio/levels/match';
+import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/metrics/analyticsUtils';
+import {getStore} from '@cdo/apps/redux';
+import SummaryEntryPoint from '@cdo/apps/templates/levelSummary/SummaryEntryPoint';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
+import getScriptData from '@cdo/apps/util/getScriptData';
+import i18n from '@cdo/locale';
+
 window.Match = Match;
 window.Multi = require('@cdo/apps/code-studio/levels/multi.js');
 window.TextMatch = require('@cdo/apps/code-studio/levels/textMatch.js');
 var saveAnswers =
   require('@cdo/apps/code-studio/levels/saveAnswers.js').saveAnswers;
-import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/lib/util/analyticsUtils';
 
 $(document).ready(() => {
   const levelData = getScriptData('levelData');
@@ -24,6 +30,21 @@ $(document).ready(() => {
       initData.page,
       initData.last_attempt
     );
+    //This is the entry point for the summary page. It looks for a div with the id 'summaryEntryPoint' and renders the SummaryEntryPoint component inside it.
+    //The div is created by the _level_group.html.haml file only for levelgroups marked as activity guide levels.
+    $('#summaryEntryPoint').each(function () {
+      const container = this;
+      const store = getStore();
+
+      createReactRoot(
+        <Provider store={store}>
+          <InstructorsOnly>
+            <SummaryEntryPoint scriptData={getScriptData('summaryinfo')} />
+          </InstructorsOnly>
+        </Provider>,
+        container
+      );
+    });
   }
 
   reportTeacherReviewingStudentNonLabLevel({page: initData?.page});
@@ -80,7 +101,9 @@ function initLevelGroup(levelCount, currentPage, lastAttempt) {
       window.dashboard.reporting.sendReport({
         program: response,
         fallbackResponse: appOptions.dialog.fallbackResponse,
-        callback: appOptions.dialog.sublevelCallback + subLevelId,
+        callback: appOptions.dialog.sublevelCallback.includes('?')
+          ? appOptions.dialog.sublevelCallback.replace('?', subLevelId + '?')
+          : appOptions.dialog.sublevelCallback + subLevelId,
         app: subLevel.getAppName(),
         allowMultipleSends: true,
         level: subLevelId,
@@ -150,9 +173,13 @@ function initLevelGroup(levelCount, currentPage, lastAttempt) {
     const isSurvey =
       appOptions.level.anonymous === true ||
       appOptions.level.anonymous === 'true';
+    const isActivityGuideLevel =
+      appOptions.level.activityGuideLevel === true ||
+      appOptions.level.activityGuideLevel === 'true';
+    const isAssessment = !isSurvey && !isActivityGuideLevel;
     title = isSurvey ? i18n.submitSurvey() : i18n.submitAssessment();
 
-    if (!isSurvey && validCount !== requiredCount) {
+    if (isAssessment && validCount !== requiredCount) {
       // For assessments, warn if some questions were not completed
       id = 'levelgroup-submit-incomplete-dialogcontent';
       body = i18n.submittableIncomplete();
@@ -163,9 +190,11 @@ function initLevelGroup(levelCount, currentPage, lastAttempt) {
         : i18n.submittableComplete();
     }
 
-    const confirmationDialog = (
-      <LegacySingleLevelGroupDialog id={id} title={title} body={body} />
-    );
+    // Shown by _dialog.js when the Submit button is pressed.
+    let confirmationDialog = null;
+    if (!isActivityGuideLevel) {
+      confirmationDialog = {id, title, body};
+    }
 
     return {
       response: encodeURIComponent(JSON.stringify(lastAttempt)),

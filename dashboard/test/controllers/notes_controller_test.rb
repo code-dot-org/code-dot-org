@@ -12,7 +12,7 @@ class NotesControllerTest < ActionController::TestCase
       get :index, params: {key: 'flappy_intro'}
       refute_nil assigns(:slides)
       assets = Rails.application.assets || ::Sprockets::Railtie.build_environment(Rails.application)
-      assigns(:slides).values.each do |slide|
+      assigns(:slides).each_value do |slide|
         refute_nil assets.find_asset(slide[:image])
       end
     end

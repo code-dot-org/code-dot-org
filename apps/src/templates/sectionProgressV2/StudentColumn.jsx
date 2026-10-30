@@ -1,47 +1,150 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import classNames from 'classnames';
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
-import styles from './progress-table-v2.module.scss';
-import classNames from 'classnames';
+import {connect} from 'react-redux';
+
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import DemoChip from '@cdo/apps/templates/DemoChip';
+import {getFullName} from '@cdo/apps/templates/manageStudents/utils.ts';
+import i18n from '@cdo/locale';
+
 import SortByNameDropdown from '../SortByNameDropdown';
-import _ from 'lodash';
-import skeletonizeContent from '@cdo/apps/componentLibrary/skeletonize-content.module.scss';
+
+import {
+  collapseMetadataForStudents,
+  expandMetadataForStudents,
+} from './sectionProgressRedux';
+
+import styles from './progress-table-v2.module.scss';
+import skeletonizeContent from '@cdo/apps/sharedComponents/skeletonize-content.module.scss';
 
 const SECTION_PROGRESS_V2 = 'SectionProgressV2';
 
-const skeletonCell = key => (
-  <div className={classNames(styles.gridBox, styles.gridBoxStudent)} key={key}>
+const skeletonCell = index => (
+  <div
+    className={classNames(
+      styles.gridBox,
+      styles.gridBoxStudent,
+      index % 2 === 0 ? styles.lighterBackground : styles.darkerBackground
+    )}
+    key={index}
+  >
     <span
       className={classNames(
         skeletonizeContent.skeletonizeContent,
         styles.gridBoxSkeleton
       )}
       style={{width: _.random(30, 90) + '%'}}
+      // eslint-disable-next-line react/forbid-dom-props
+      data-testid="skeleton-cell"
     />
   </div>
 );
 
-export default function StudentColumn({
+function StudentColumn({
   sortedStudents,
   unitName,
   sectionId,
   isSkeleton,
+  expandedMetadataStudentIds,
+  expandMetadataForStudents,
+  collapseMetadataForStudents,
 }) {
-  const getFullName = student =>
-    student.familyName ? `${student.name} ${student.familyName}` : student.name;
+  const collapseRow = studentId => {
+    analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_ONE_ROW_COLLAPSED, {
+      sectionId: sectionId,
+    });
+    collapseMetadataForStudents([studentId]);
+  };
+
+  const expandRow = studentId => {
+    analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_ONE_ROW_EXPANDED, {
+      sectionId: sectionId,
+    });
+    expandMetadataForStudents([studentId]);
+  };
+
+  const getUnexpandedRow = (student, ind) => (
+    <button
+      className={classNames(
+        styles.studentColumnName,
+        ind % 2 === 0 ? styles.lighterBackground : styles.darkerBackground
+      )}
+      key={ind}
+      onClick={() => expandRow(student.id)}
+      type="button"
+      aria-expanded={false}
+      id={'ui-test-student-row-unexpanded-' + getFullName(student)}
+    >
+      <FontAwesomeV6Icon
+        iconName="caret-right"
+        iconStyle="solid"
+        title="caret"
+        className={styles.studentColumnNameCaret}
+      />
+      <span className={styles.studentColumnNameText}>
+        {getFullName(student)}
+      </span>
+      {student.isDemoStudent && <DemoChip />}
+    </button>
+  );
+
+  const getExpandedRow = (student, ind) => (
+    <div className={styles.studentColumnExpandedHeader} key={ind}>
+      <button
+        className={classNames(
+          styles.studentColumnName,
+          ind % 2 === 0 ? styles.lighterBackground : styles.darkerBackground
+        )}
+        onClick={() => collapseRow(student.id)}
+        type="button"
+        aria-expanded={true}
+        id={'ui-test-student-row-expanded-' + getFullName(student)}
+      >
+        <FontAwesomeV6Icon
+          iconName="caret-down"
+          iconStyle="solid"
+          className={styles.studentColumnNameCaret}
+        />
+        <span className={styles.studentColumnNameText}>
+          {getFullName(student)}
+        </span>
+        {student.isDemoStudent && <DemoChip />}
+      </button>
+      <div
+        className={classNames(
+          styles.gridBox,
+          styles.studentColumnExpandedHeaderText,
+          ind % 2 === 0 ? styles.lighterBackground : styles.darkerBackground
+        )}
+      >
+        {i18n.timeSpentMins()}
+      </div>
+      <div
+        className={classNames(
+          styles.gridBox,
+          styles.studentColumnExpandedHeaderText,
+          ind % 2 === 0 ? styles.lighterBackground : styles.darkerBackground
+        )}
+      >
+        {i18n.lastUpdatedTitle()}
+      </div>
+    </div>
+  );
 
   const studentColumnBox = (student, ind) => {
     if (isSkeleton) {
       return skeletonCell(ind);
     }
 
-    return (
-      <div
-        className={classNames(styles.gridBox, styles.gridBoxStudent)}
-        key={ind}
-      >
-        {getFullName(student)}
-      </div>
-    );
+    if (expandedMetadataStudentIds.includes(student.id)) {
+      return getExpandedRow(student, ind);
+    }
+
+    return getUnexpandedRow(student, ind);
   };
 
   return (
@@ -64,4 +167,20 @@ StudentColumn.propTypes = {
   unitName: PropTypes.string,
   sortedStudents: PropTypes.array,
   isSkeleton: PropTypes.bool,
+  expandedMetadataStudentIds: PropTypes.array,
+  expandMetadataForStudents: PropTypes.func,
+  collapseMetadataForStudents: PropTypes.func,
 };
+
+export default connect(
+  state => ({
+    expandedMetadataStudentIds:
+      state.sectionProgress.expandedMetadataStudentIds,
+  }),
+  dispatch => ({
+    expandMetadataForStudents: studentIds =>
+      dispatch(expandMetadataForStudents(studentIds)),
+    collapseMetadataForStudents: studentIds =>
+      dispatch(collapseMetadataForStudents(studentIds)),
+  })
+)(StudentColumn);

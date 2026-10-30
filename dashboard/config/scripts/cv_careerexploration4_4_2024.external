@@ -1,0 +1,12 @@
+name 'CV_CareerExploration4_4_2024'
+
+markdown <<MARKDOWN
+## Personal Career Exploration
+
+### Do This:
+1.  Explore the Occupational Outlook Handbook from the BLS in order to find a career that is interesting to you.
+2. Provide relevant statistics about the profession in the spaces provided below
+3. Explain one way that computer vision is already being used in the profession OR speculate about one way how computer vision might be incorporated into the profession in the future.
+
+<a href="https://www.bls.gov/ooh/" target="_blank">Occupational Outlook Handbook</a>
+MARKDOWN

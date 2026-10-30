@@ -1,16 +1,17 @@
-import $ from 'jquery';
-import _ from 'lodash';
-import JSZip from 'jszip';
 import {saveAs} from 'filesaver.js';
+import $ from 'jquery';
+import JSZip from 'jszip';
+import _ from 'lodash';
+
+import {getAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
+import project from '@cdo/apps/code-studio/initApp/project';
 
 import * as assetPrefix from '../assetManagement/assetPrefix';
 import download from '../assetManagement/download';
+import logToCloud from '../logToCloud';
+import exportFontAwesomeCssEjs from '../templates/export/fontAwesome.css.ejs';
 import exportProjectEjs from '../templates/export/project.html.ejs';
 import exportProjectReadmeEjs from '../templates/export/projectReadme.md.ejs';
-import exportFontAwesomeCssEjs from '../templates/export/fontAwesome.css.ejs';
-import logToCloud from '../logToCloud';
-import {getAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
-import project from '@cdo/apps/code-studio/initApp/project';
 import {
   extractSoundAssets,
   rewriteAssetUrls,
@@ -89,9 +90,6 @@ const APP_OPTIONS_ALLOWLIST = {
   hideSource: true,
   share: true,
   labUserId: false,
-  firebaseName: false,
-  firebaseAuthToken: false,
-  firebaseChannelIdSuffix: false,
   isSignedIn: true,
   pinWorkspaceToBottom: true,
   hasVerticalScrollbars: true,
@@ -103,14 +101,6 @@ const APP_OPTIONS_ALLOWLIST = {
   },
   isUS: true,
   send_to_phone_url: true,
-  copyrightStrings: {
-    thanks: true,
-    help_from_html: true,
-    art_from_html: true,
-    code_from_html: true,
-    powered_by_aws: true,
-    trademark: true,
-  },
   teacherMarkdown: false,
   dialog: {
     skipSound: true,
@@ -168,7 +158,7 @@ export function getAppOptionsFile() {
 // This list of fonts is derived from the set of fonts needed for V4 compatibility here:
 // https://dsco.code.org/assets/font-awesome-pro/1684178876/css/v4-font-face.css
 // Icons in use in student projects created in Applab are derived from an older version of FontAwesome (V3?), while
-// the rest of Code.org (ie, the pegasus/dashboard sites themselves)
+// the rest of CodeAI (ie, the pegasus/dashboard sites themselves)
 // are all on v6. See the following for more details:
 // https://github.com/code-dot-org/code-dot-org/blob/960e2e5766ebf4ceb526064a71a91a520dcd61bc/apps/src/code-studio/components/icons.js
 const fontAwesomeBrandsWOFFRelativeSourcePath =

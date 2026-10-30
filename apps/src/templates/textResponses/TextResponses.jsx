@@ -1,20 +1,20 @@
+import {Button as MuiButton} from '@mui/material';
+import {uniq, map, filter} from 'lodash';
 import PropTypes from 'prop-types';
 import React, {useState, useEffect, useRef, useCallback} from 'react';
-import {connect} from 'react-redux';
-import {uniq, map, filter} from 'lodash';
 import {CSVLink} from 'react-csv';
-import i18n from '@cdo/locale';
-import UnitSelector from '@cdo/apps/templates/sectionProgress/UnitSelector';
-import {h3Style} from '../../lib/ui/Headings';
-import color from '../../util/color';
-import TextResponsesTable from './TextResponsesTable';
-import Button from '../Button';
-import TextResponsesLessonSelector from '@cdo/apps/templates/textResponses/TextResponsesLessonSelector';
+import {connect} from 'react-redux';
+
 import {
-  setScriptId,
-  getSelectedScriptName,
+  getSelectedCourseName,
+  getSelectedUnitPosition,
 } from '@cdo/apps/redux/unitSelectionRedux';
+import UnitSelectorV2 from '@cdo/apps/templates/teacherDashboardShared/UnitSelectorV2';
 import {loadTextResponsesFromServer} from '@cdo/apps/templates/textResponses/textReponsesDataApi';
+import TextResponsesLessonSelector from '@cdo/apps/templates/textResponses/TextResponsesLessonSelector';
+import i18n from '@cdo/locale';
+
+import TextResponsesTable from './TextResponsesTable';
 
 const CSV_HEADERS = [
   {label: i18n.name(), key: 'studentName'},
@@ -25,13 +25,7 @@ const CSV_HEADERS = [
 ];
 const PADDING = 8;
 
-function TextResponses({
-  sectionId,
-  coursesWithProgress,
-  scriptId,
-  scriptName,
-  setScriptId,
-}) {
+function TextResponses({sectionId, scriptId, courseVersionName, unitPosition}) {
   const [textResponsesByScript, setTextResponsesByScript] = useState({});
   const [isLoadingResponses, setIsLoadingResponses] = useState(false);
   const [filterByLessonName, setFilterByLessonName] = useState(null);
@@ -43,6 +37,7 @@ function TextResponses({
       setTextResponsesByScript({});
       prevSectionId.current = sectionId;
     }
+    setFilterByLessonName(null);
     asyncLoadTextResponses(sectionId, scriptId);
   }, [scriptId, sectionId, asyncLoadTextResponses]);
 
@@ -79,11 +74,6 @@ function TextResponses({
     [textResponsesByScript]
   );
 
-  const onChangeScript = scriptId => {
-    setScriptId(scriptId);
-    setFilterByLessonName(null);
-  };
-
   const responsesForCurrentScript = textResponsesByScript[scriptId] || [];
 
   let filteredResponses = [...responsesForCurrentScript];
@@ -98,14 +88,11 @@ function TextResponses({
 
   return (
     <div>
-      <div style={styles.unitSelection}>
-        <div style={{...h3Style, ...styles.header}}>{i18n.selectACourse()}</div>
-        <UnitSelector
-          coursesWithProgress={coursesWithProgress}
-          scriptId={scriptId}
-          onChange={onChangeScript}
-        />
-      </div>
+      <UnitSelectorV2
+        v1Styles
+        isLabelVisible
+        labelText={i18n.selectACourse()}
+      />
       {filteredResponses.length > 0 && (
         <div id="uitest-response-actions" style={styles.actionRow}>
           <TextResponsesLessonSelector
@@ -119,11 +106,14 @@ function TextResponses({
             headers={CSV_HEADERS}
           >
             {/* onClick functionality for Button handled by CSVLink */}
-            <Button
-              text={i18n.downloadCSV()}
+            <MuiButton
+              variant="outlined"
               onClick={() => {}}
-              color={Button.ButtonColor.white}
-            />
+              color="secondary"
+              size="small"
+            >
+              {i18n.downloadCSV()}
+            </MuiButton>
           </CSVLink>
         </div>
       )}
@@ -132,7 +122,8 @@ function TextResponses({
           responses={filteredResponses}
           sectionId={sectionId}
           isLoading={isLoadingResponses}
-          scriptName={scriptName}
+          courseVersionName={courseVersionName}
+          unitPosition={unitPosition}
         />
       </div>
     </div>
@@ -142,24 +133,17 @@ function TextResponses({
 TextResponses.propTypes = {
   // Provided by redux.
   sectionId: PropTypes.number.isRequired,
-  coursesWithProgress: PropTypes.array.isRequired,
   scriptId: PropTypes.number,
-  scriptName: PropTypes.string,
-  setScriptId: PropTypes.func.isRequired,
+  courseVersionName: PropTypes.string,
+  unitPosition: PropTypes.number,
 };
 
 const styles = {
-  header: {
-    marginBottom: 0,
-  },
-  unitSelection: {
-    marginTop: 30,
-  },
   actionRow: {
     height: 47,
     padding: PADDING,
-    marginTop: 20,
-    backgroundColor: color.table_header,
+    marginTop: 10,
+    backgroundColor: 'var(--background-neutral-tertiary)',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
@@ -175,16 +159,9 @@ const styles = {
 
 export const UnconnectedTextResponses = TextResponses;
 
-export default connect(
-  state => ({
-    sectionId: state.teacherSections.selectedSectionId,
-    coursesWithProgress: state.unitSelection.coursesWithProgress,
-    scriptId: state.unitSelection.scriptId,
-    scriptName: getSelectedScriptName(state),
-  }),
-  dispatch => ({
-    setScriptId(scriptId) {
-      dispatch(setScriptId(scriptId));
-    },
-  })
-)(TextResponses);
+export default connect(state => ({
+  sectionId: state.teacherSections.selectedSectionId,
+  scriptId: state.unitSelection.scriptId,
+  courseVersionName: getSelectedCourseName(state),
+  unitPosition: getSelectedUnitPosition(state),
+}))(TextResponses);

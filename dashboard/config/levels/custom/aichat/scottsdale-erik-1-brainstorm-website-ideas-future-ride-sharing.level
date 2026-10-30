@@ -1,0 +1,53 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2026-09-15T20:42:11.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-2.5-flash",
+        "temperature": 0.5,
+        "systemPrompt": "You are \"FutureWheels,\" an AI assistant specialized in brainstorming innovative concepts for future transportation and digital interfaces. Your primary role is to help users imagine and list elements for a ride-sharing service webpage set 50 years from now (around 2074). You are knowledgeable about speculative future technologies, user experience design principles (without actually designing or coding), and the potential evolution of ride-sharing. \n\nWhen a user asks for ideas, suggest features, functionalities, and content that might appear on such a webpage, considering advancements in AI, sustainable energy, automation, personalization, and user interaction. Be creative but grounded in plausible future technological advancements. Focus on brainstorming *what* could be included, not *how* it would be designed or coded.\n\nRefuse to:\n- Generate images or visual designs.\n- Write any code (HTML, CSS, JavaScript, etc.).\n- Express personal opinions or beliefs.\n- Discuss topics unrelated to future ride-sharing, technology, or webpage elements.\n- Make decisions for the user; your role is to assist in brainstorming ideas.",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden",
+        "responseJsonSchema": "hidden"
+      },
+      "levelSystemPrompt": "TODOs:\n- Limit response length to no more than 150 words.\n- Ensure all responses are appropriate for middle school students.\n- Strictly adhere to the persona of a future tech brainstorming assistant.\n- Do not provide any direct answers about current events or real-world individuals.\n- Refuse to generate any content that is political, violent, or sexually explicit.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gemini-2.5-flash"
+      ],
+      "multimodalEnabled": false
+    },
+    "long_instructions": "TODOs:\r\n- Ask the bot to describe transportation 50 years in the future.\r\n- Brainstorm a list of features for a ride-sharing app's homepage in the year 2074.\r\n- Inquire about new technologies that might impact ride-sharing services.\r\n- Discuss potential ethical considerations or user experience challenges for future ride-sharing.\r\n- Refine your ideas with the bot to create a comprehensive list of page elements.",
+    "generate_aichat_preset": "explore",
+    "generate_outline": "Brainstorm what to include on a ride sharing page that might exist 50 years in the future.",
+    "thumbnail_url": "https://images.code.org/cecff55bd9b19d925628b6684a550823-scottsdale-erik-1-brainstorm-website-ideas-future-ride-sharing-thumb-015bce65-05c8-4aa6-81d2-d9ed2644ad75.png",
+    "display_name": "Future Ride-Sharing Platform",
+    "bubble_choice_description": "Leap 50 years into the future. What innovative features would a ride-sharing app have?"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-15 20:42:19 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-15 20:42:19 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-15 20:42:51 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-15 20:42:52 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-15 20:43:24 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-15 20:43:24 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-15 20:43:24 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>

@@ -20,6 +20,19 @@
 #
 
 class Pd::Attendance < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :restricted,
+    pd_session_id: :restricted,
+    teacher_id: :restricted,
+    created_at: :restricted,
+    updated_at: :restricted,
+    deleted_at: :restricted,
+    pd_enrollment_id: :restricted,
+    marked_by_user_id: :restricted,
+  )
+
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
   belongs_to :session, class_name: 'Pd::Session', foreign_key: :pd_session_id, optional: true
@@ -53,7 +66,8 @@ class Pd::Attendance < ApplicationRecord
   def resolve_enrollment
     Pd::Enrollment.with_deleted.find_by(id: pd_enrollment_id) ||
       workshop.enrollments.find_by(user_id: teacher_id) ||
-      workshop.enrollments.find_by(email: User.with_deleted.find_by(id: teacher_id).try(&:email_for_enrollments))
+      workshop.enrollments.find_by(email: User.with_deleted.find_by(id: teacher_id).try(&:email)) ||
+      workshop.enrollments.find_by(email: User.with_deleted.find_by(id: teacher_id).try(&:alternate_email))
   end
 
   def self.for_teacher(teacher)

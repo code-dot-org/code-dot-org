@@ -1,15 +1,16 @@
-import React from 'react';
+import {Typography} from '@mui/material';
+import _ from 'lodash';
 import PropTypes from 'prop-types';
-import color from '@cdo/apps/util/color';
+import queryString from 'query-string';
+import React from 'react';
+
+import MazeThumbnail from '@cdo/apps/code-studio/components/lessonExtras/MazeThumbnail';
 import fontConstants from '@cdo/apps/fontConstants';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+import LessonExtrasFlagIcon from '@cdo/apps/templates/progress/LessonExtrasFlagIcon';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import {getIconForLevel} from '@cdo/apps/templates/progress/progressHelpers';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import LessonExtrasFlagIcon from '@cdo/apps/templates/progress/LessonExtrasFlagIcon';
-import MazeThumbnail from '@cdo/apps/code-studio/components/lessonExtras/MazeThumbnail';
-import queryString from 'query-string';
 import {levelType} from '@cdo/apps/templates/progress/progressTypes';
-import _ from 'lodash';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 export default class SublevelCard extends React.Component {
@@ -91,11 +92,7 @@ export default class SublevelCard extends React.Component {
     const {isLessonExtra, sublevel} = this.props;
 
     if (isLessonExtra) {
-      return (
-        <a href={this.getSublevelUrl()}>
-          <LessonExtrasFlagIcon isPerfect={sublevel.perfect} size={30} />
-        </a>
-      );
+      return <LessonExtrasFlagIcon isPerfect={sublevel.perfect} size={30} />;
     }
 
     let mappedSublevel = sublevel;
@@ -108,7 +105,7 @@ export default class SublevelCard extends React.Component {
     return (
       <ProgressBubble
         level={mappedSublevel}
-        disabled={false}
+        disabled={true}
         hideToolTips={true}
       />
     );
@@ -118,77 +115,83 @@ export default class SublevelCard extends React.Component {
     const {sublevel} = this.props;
 
     return (
-      <div
-        key={sublevel.id}
-        style={styles.row}
-        className="uitest-bubble-choice"
-      >
-        <a href={this.getSublevelUrl()}>{this.renderThumbnail()}</a>
+      <a href={this.getSublevelUrl()}>
         <div
-          style={{
-            ...styles.column,
-            ...{width: WIDTH - (MARGIN * 2 + THUMBNAIL_IMAGE_SIZE)},
-          }}
+          key={sublevel.id}
+          style={styles.row}
+          className="uitest-bubble-choice"
         >
-          <div style={styles.bubbleAndTitle}>
-            {this.renderBubble()}
-            <a
-              href={this.getSublevelUrl()}
-              style={styles.title}
-              className="sublevel-card-title-uitest"
-            >
-              {sublevel.display_name}
-            </a>
-          </div>
-          {sublevel.description && (
-            <div
-              style={styles.description}
-              className="sublevel-card-description-uitest"
-            >
-              <SafeMarkdown markdown={sublevel.description} />
+          {this.renderThumbnail()}
+          <div
+            style={{
+              ...styles.column,
+              ...{
+                width: WIDTH - (MARGIN * 2 + THUMBNAIL_IMAGE_SIZE) + BORDER * 2,
+              },
+            }}
+          >
+            <div style={styles.bubbleAndTitle}>
+              {this.renderBubble()}
+              <Typography
+                className="sublevel-card-title-uitest"
+                component="h3"
+                variant="h6"
+              >
+                {sublevel.display_name}
+              </Typography>
             </div>
-          )}
+            {sublevel.description && (
+              <div
+                style={styles.description}
+                className="sublevel-card-description-uitest"
+              >
+                <SafeMarkdown markdown={sublevel.description} />
+              </div>
+            )}
+          </div>
         </div>
-      </div>
+      </a>
     );
   }
 }
 
-const THUMBNAIL_IMAGE_SIZE = 200;
+const THUMBNAIL_IMAGE_SIZE = 150;
 const MARGIN = 10;
 const WIDTH = 435;
+const BORDER = 1;
 
 const styles = {
   row: {
     display: 'flex',
-    width: WIDTH,
+    width: WIDTH + BORDER * 2,
     marginBottom: MARGIN,
-    marginRight: MARGIN,
-    backgroundColor: color.white,
-    border: '1px solid rgb(187, 187, 187)',
+    marginInlineEnd: MARGIN,
+    backgroundColor: 'var(--background-neutral-primary)',
+    border: `${BORDER}px solid var(--borders-neutral-primary)`,
     borderRadius: 2,
+    cursor: 'pointer',
   },
   thumbnail: {
-    minWidth: THUMBNAIL_IMAGE_SIZE,
-    width: THUMBNAIL_IMAGE_SIZE,
-    height: THUMBNAIL_IMAGE_SIZE,
-    border: '1px solid rgb(187, 187, 187)',
-    borderRadius: 2,
+    minWidth: THUMBNAIL_IMAGE_SIZE + MARGIN * 2 + BORDER,
+    width: THUMBNAIL_IMAGE_SIZE + MARGIN * 2 + BORDER,
+    height: THUMBNAIL_IMAGE_SIZE + MARGIN * 2,
+    padding: MARGIN,
+    borderInlineEnd: `${BORDER}px solid var(--borders-neutral-primary)`,
   },
   placeholderThumbnail: {
     minWidth: THUMBNAIL_IMAGE_SIZE,
     width: THUMBNAIL_IMAGE_SIZE,
     height: THUMBNAIL_IMAGE_SIZE,
-    backgroundColor: color.lighter_gray,
+    backgroundColor: 'var(--background-neutral-quinary)',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    border: '1px solid rgb(187, 187, 187)',
+    border: `${BORDER}px solid var(--borders-neutral-primary)`,
     borderRadius: 2,
   },
   icon: {
     fontSize: THUMBNAIL_IMAGE_SIZE - 50,
-    color: color.white,
+    color: 'var(--text-neutral-white-fixed)',
     opacity: 0.8,
   },
   column: {
@@ -201,16 +204,17 @@ const styles = {
   bubbleAndTitle: {
     display: 'flex',
     flexDirection: 'row',
-    alignItems: 'flex-start',
+    alignItems: 'center',
+    gap: 10,
   },
   title: {
     minHeight: 30,
     fontSize: 16,
     lineHeight: '25px',
     ...fontConstants['main-font-semi-bold'],
-    color: color.teal,
+    color: 'var(--text-brand-teal-primary)',
     marginBottom: 10,
-    marginLeft: MARGIN,
+    marginInlineStart: MARGIN,
     overflowWrap: 'break-word',
     wordWrap: 'break-word',
     hyphens: 'auto',
@@ -218,6 +222,8 @@ const styles = {
     alignItems: 'center',
   },
   description: {
-    marginTop: 5,
+    marginTop: 6,
+    marginInlineStart: 4,
+    color: 'var(--text-neutral-primary)',
   },
 };

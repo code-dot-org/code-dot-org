@@ -1,0 +1,42 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2024-11-23T17:20:06.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "encrypted": "false",
+    "background": "music-black",
+    "name_suffix": "_v2",
+    "panels": [
+      {
+        "text": "<i class=\"fa-duotone fa-solid fa-list-music\"></i> Music is made of patterns that repeat.\n\nLike a catchy hook or a consistent backbeat.\n",
+        "imageUrl": "https://images.code.org/1541ad72a3f441247988691c81408ac6-pattern.jpg",
+        "key": "music-coding-intro-loops-panel-2a9800cc-d112-49c5-a613-e30b3dd04ffc",
+        "layout": "text-top-left"
+      },
+      {
+        "text": "<p style=\"text-align:center; font-weight:bold;\"> Repeating patterns is easier with loops!\n\n<p style=\"text-align:center;\">\n✓ Shorter and faster\n<br>\n ✓ More organized code\n<br>\n✓ Easier to change \n</p>",
+        "imageUrl": "https://images.code.org/c8350ac38c0e797593ed48faf233758d-loop.gif",
+        "key": "music-intro-coding-loops-panel-3e8b702b-5483-4f22-acb1-86d0a22e0e32",
+        "layout": "text-top-center"
+      },
+      {
+        "text": "<h3 style=\"text-align:center;\"><i class=\"fa-solid fa-arrows-rotate\"></i>  What is a loop? </h3>\n<p style=\"text-align:center;\"> Loops repeat some code a set number of times. </p>\n",
+        "imageUrl": "https://images.code.org/24a657b7684254919680f2dedcd950a2-line-animation-reload-icon-including-alpha-2024-05-14-00-59-56-utc (1).gif",
+        "key": "music-intro-coding-loops-panel-94d140b0-fa35-4df8-ac88-d72d4d6fbab5",
+        "layout": "text-top-center"
+      },
+      {
+        "imageUrl": "https://images.code.org/9cb35db14855fe510442721fca1c822a-repeat123 (4).gif",
+        "text": "###<h3 style=\"text-align:center;\"> <i class=\"fa-duotone fa-solid fa-pen-to-square\"></i> How to use a loop!\n<p style=\"text-align:center;\">\n<br>\n1. Move a sound into the loop.\n<br>\n2. Set the number of times to repeat!",
+        "key": "musiclab_intro_panels_playtogether_pdx-a0d88b4a-e9a8-4641-8ec9-3ce98e7a1cc4",
+        "layout": "text-top-center"
+      }
+    ],
+    "offer_browser_tts": "true"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-11-23T17:20:06.711+00:00\",\"changed\":[\"cloned from \\\"music-intro-coding-loops-panel2\\\"\"],\"cloned_from\":\"music-intro-coding-loops-panel2\"},{\"changed_at\":\"2024-11-23 17:23:27 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-23 17:24:57 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-23 17:26:44 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-24 16:51:30 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-24 16:52:15 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

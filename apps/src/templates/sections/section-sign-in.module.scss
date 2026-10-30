@@ -1,0 +1,58 @@
+.container {
+  max-width: 960px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.tiles {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+// Picture-login tiles: image thumbnails.
+.tile {
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 5px;
+  background-color: var(--background-neutral-secondary);
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background-color: var(--background-neutral-tertiary);
+  }
+
+  img {
+    display: block;
+  }
+}
+
+.tileSelected,
+.tileSelected:hover {
+  background-color: var(--background-brand-teal-primary);
+
+  img {
+    opacity: 1;
+  }
+}
+
+.secret {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.wordInput {
+  max-width: 320px;
+}

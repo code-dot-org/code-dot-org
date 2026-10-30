@@ -1,5 +1,6 @@
 import React from 'react';
 import {FormGroup, Row, Col} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+
 import FormComponent from '../form_components/FormComponent';
 import QuestionsTable from '../form_components/QuestionsTable';
 
@@ -50,7 +51,7 @@ const LABELS = {
   otherFeedbackWholeWeek:
     'Is there anything else you’d like to tell us about your experience this week?',
   givePermissionToQuote:
-    'I give Code.org permission to quote my written feedback from today for use on social media, promotional materials, and other communications. (We love sharing what our teachers think about us!)',
+    'I give CodeAI permission to quote my written feedback from today for use on social media, promotional materials, and other communications. (We love sharing what our teachers think about us!)',
 };
 
 export default class WholeWeek extends FormComponent {

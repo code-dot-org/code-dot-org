@@ -1,0 +1,14 @@
+name 'problem-solving-with-ai-preassessment-q6_2025-pilot_v2-2025'
+
+question 'In what scenario would AI need the MOST human oversight?'
+
+wrong 'Creating a grocery shopping list based on a recipe.'
+wrong 'Recommending books based on a reader\'s past preferences.'
+right 'Determining a prison sentence for a convicted person.'
+wrong 'Auto-correcting grammar in a text message.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 4: Smart or Just Predictable?
+MARKDOWN

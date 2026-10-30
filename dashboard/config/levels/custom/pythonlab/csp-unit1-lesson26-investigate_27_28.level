@@ -1,0 +1,56 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-09-11T05:06:26.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "### Investigate\r\n\r\nRun the code again and look at the output.\r\n \r\n**Trace it:** Using order of operations, what value does total_cents store after line 9 runs? Finish the comment on line 10 with your answer.\r\n \r\n**Tinker:** On line 14, remove str() from around per_person so the line reads print(\"Each person pays: $\" + per_person / 100). Run the code. What error do you get, and why? Put str() back before moving on.\r\n \r\n**Comment it:** Finish the comment on line 13, explaining what % is telling you about leftover_cents.\r\n \r\nOpen `Investigate.txt` and respond to the prompts there.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "# Boba Run Splitter\n# Totals a boba order, adds a tip, and splits it among friends.\n\nprint(\"Boba Run Splitter\")\n\nnum_drinks = int(input(\"How many drinks? \"))\ndrink_price = float(input(\"Price per drink: \"))\ncoupon = float(input(\"Coupon amount: \"))\nnum_friends = int(input(\"How many friends are splitting? \"))\n\nsubtotal = num_drinks * drink_price - coupon\ntotal_cents = round(subtotal * 1.18 * 100)\n# total_cents will be:\n\nper_person = round(total_cents / num_friends)\nleftover_cents = total_cents % num_friends\n# leftover_cents tells us:\n\nprint(\"Each person pays: $\" + str(per_person / 100))\nprint(\"Leftover cents: \" + str(leftover_cents))\n",
+          "folderId": "0",
+          "active": true
+        },
+        "1": {
+          "id": "1",
+          "name": "investigate.txt",
+          "contents": "Investigate Notes — Boba Run Splitter\n\nOperator inventory\nFind one line using each of * - % / and explain the job each operator does for the user, not just for the math.\n*:\n-:\n%:\n/:\n\n1. Why is the total converted to cents before splitting? What would total / num_friends show instead?\n\n2. Why round() and not something else on total_cents?\n\n3. Rewrite the * 1.18 tip line (line 9) as two separate lines that do the same thing.\n\n4. For which per-person amounts does the output print something misleading? (Example: cents ending in 0 — 750 would print as \"$7.5\" instead of \"$7.50.\")\n\n5. What would you change about the input prompts (lines 4-7) if the user had never used a program like this before?",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\ndtpURaaG\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-11 05:24:20 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-11 05:37:06 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-11 05:50:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-11 05:51:21 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-11 05:51:30 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-11 05:56:46 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-11 05:56:58 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-11 05:56:59 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-11 05:57:01 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-11 05:57:22 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-11 05:57:34 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Pythonlab>

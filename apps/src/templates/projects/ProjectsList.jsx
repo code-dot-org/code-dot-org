@@ -1,15 +1,17 @@
-import * as Table from 'reactabular-table';
-import * as sort from 'sortabular';
+import Link from '@code-dot-org/component-library/link';
+import orderBy from 'lodash/orderBy';
 import PropTypes from 'prop-types';
 import React from 'react';
-import orderBy from 'lodash/orderBy';
+import * as Table from 'reactabular-table';
+import * as sort from 'sortabular';
 
 import commonMsg from '@cdo/locale';
 
-import wrappedSortable from '../tables/wrapped_sortable';
 import {ImageWithStatus} from '../ImageWithStatus';
-import {PROJECT_TYPE_MAP} from './projectTypeMap';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
+import wrappedSortable from '../tables/wrapped_sortable';
+
+import {PROJECT_TYPE_MAP} from './projectTypeMap';
 
 const THUMBNAIL_SIZE = 50;
 
@@ -107,14 +109,9 @@ class ProjectsList extends React.Component {
 
     const url = `${this.props.studioUrlPrefix}/projects/${type}/${channel}/view`;
     return (
-      <a
-        href={url}
-        style={tableLayoutStyles.link}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <Link href={url} style={tableLayoutStyles.link} openInNewTab>
         {name}
-      </a>
+      </Link>
     );
   };
 

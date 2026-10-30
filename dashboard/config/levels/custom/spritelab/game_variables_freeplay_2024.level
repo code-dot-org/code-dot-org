@@ -1,0 +1,1407 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 64,
+  "created_at": "2024-05-07T21:27:55.000Z",
+  "level_num": "custom",
+  "user_id": 833,
+  "properties": {
+    "skin": "gamelab",
+    "show_debug_watch": "true",
+    "block_pools": [
+      "GamelabJr"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab",
+      "zSpeechBubblePrototype2"
+    ],
+    "use_default_sprites": "false",
+    "hide_animation_mode": "false",
+    "show_type_hints": "true",
+    "include_shared_functions": "true",
+    "hide_custom_blocks": true,
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "never_autoplay_video": "true",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "use_modal_function_editor": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "free_play": "true",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "true",
+    "hide_view_data_button": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "pause_animations_by_default": "false",
+    "parent_level_id": 28361,
+    "short_instructions": "It's time to create whatever you want!",
+    "mini_rubric": "false",
+    "long_instructions": "**Practice designing and developing your own game!** Now you can start creating whatever you want.\r\n\r\n1. Setup your game with player sprites and a background\r\n- Program the sprites to move with behaviors\r\n- Design or upload your own characters by clicking the *costumes* tab\r\n- Make the variable change using events\r\n- Check if the player has a winning score, then code a celebration\r\n\r\n",
+    "encrypted": "false",
+    "soft_buttons": [
+      "leftButton",
+      "rightButton",
+      "upButton",
+      "downButton"
+    ],
+    "auto_run_setup": "DRAW_LOOP",
+    "name_suffix": "_2024",
+    "hint_prompt_attempts_threshold": "1",
+    "validation_enabled": "false",
+    "mini_toolbox": "true",
+    "hide_pause_button": "false",
+    "instructions_icon": "fox",
+    "start_animations": "{\"orderedKeys\":[\"abe9888d-f705-4ecf-ad1c-71aaeb17f9a5\",\"159325a8-e0b9-4d3b-8963-6bcf28a89f80\",\"169b4833-ff15-44ab-9d21-7bda2b99667b\",\"34aab87b-d7c3-4a07-9e56-e0c24d7707d6\",\"f82d4c01-3cc9-4cef-ba28-fd65a29d07bb\",\"51a0142b-08a8-4a61-8c81-193837add94a\",\"6e2f7a28-0fa9-48ca-8a04-54bc937edaed\",\"06cbdb6f-c48a-4a78-a24b-6852ed2bb57c\",\"8fbfa8a1-cdaf-40ec-bd68-89f222d60f9c\",\"431bafdc-80ca-491b-bf65-2eb5f9371991\",\"6d538f65-95a2-45dd-9426-f34410b6c274\",\"62d5e226-cd04-4953-b5ff-cd8b65918dc9\",\"9170b034-b838-4c5e-8eb5-852dbabd9d5f\",\"df09c069-1ea5-4a2d-84dd-a7da0c4c4e29\",\"b47df086-a9f7-4435-a03a-dc37e9631f3f\",\"004247ed-29ac-48b9-8bb5-923d39a6a0f5\",\"aa7209e4-12ba-41e8-952a-bdd3b7e2b4ad\",\"2f5a9441-c907-4ab5-8964-3060470d73d7\",\"2a0ae310-57b7-4370-a1b7-2feac06d649e\",\"0ab3e8d5-47ad-44cb-ae61-b8140ab0dd40\",\"6ef83e81-757e-4da1-95a6-442a2502df7a\",\"fe275ad3-b59e-4537-a751-1aea3faa1635\",\"15c5fda1-ce7b-4d55-b34c-271d6a7fa580\",\"dbf88701-8e56-474b-a70a-39262f50ee17\",\"b8afc374-c1fc-4675-8aed-f517d07d9eed\",\"ec45116b-eec0-4311-91e7-083029ace67a\",\"db16f070-65a7-447f-89d7-aebfd0a0e083\",\"98243a09-778b-482e-82f5-a100747d7e04\",\"23a43bf1-3dcb-4f84-8c29-e1d0ddead86e\",\"438f62de-3cf4-49ba-9afe-b13bf9e957e1\",\"28fdf992-1572-44ad-acd1-a7714ae1c57a\",\"5f0adaf2-0764-4671-946c-d685ff9f9fc2\",\"8e89583b-970b-403b-a47f-cd8791f8e850\",\"44e62fb6-549d-4259-8621-62f9d5bcb64e\",\"555e95f5-4468-4487-9ae8-df53ae28a5fa\",\"3bde3818-baad-4a6a-b557-cb7ee4c507e6\"],\"propsByKey\":{\"abe9888d-f705-4ecf-ad1c-71aaeb17f9a5\":{\"name\":\"background_landscape_26\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2020-12-01 23:21:15 UTC\",\"pngLastModified\":\"2020-12-01 23:21:15 UTC\",\"version\":\"xgc0hCjiUHTp_dalN1ebCzlVQMEbBD6E\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/xgc0hCjiUHTp_dalN1ebCzlVQMEbBD6E/category_backgrounds/background_landscape_26.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"159325a8-e0b9-4d3b-8963-6bcf28a89f80\":{\"name\":\"background_landscape_09\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2020-12-01 23:21:14 UTC\",\"pngLastModified\":\"2020-12-01 23:21:14 UTC\",\"version\":\"xOfK2JE0z5kIICDeUsKo8mDU5Ju2UFwd\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/xOfK2JE0z5kIICDeUsKo8mDU5Ju2UFwd/category_backgrounds/background_landscape_09.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"169b4833-ff15-44ab-9d21-7bda2b99667b\":{\"name\":\"background_landscape_08\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2020-12-01 23:21:14 UTC\",\"pngLastModified\":\"2020-12-01 23:21:14 UTC\",\"version\":\"A74zCJTq1FdJXZTNoljrKkIdJ0jat3RJ\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/A74zCJTq1FdJXZTNoljrKkIdJ0jat3RJ/category_backgrounds/background_landscape_08.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"34aab87b-d7c3-4a07-9e56-e0c24d7707d6\":{\"name\":\"background_landscape_11\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2020-12-01 23:21:14 UTC\",\"pngLastModified\":\"2020-12-01 23:21:14 UTC\",\"version\":\"errkPCisxA61A8V_Z5YMSDFc0WtPUZ5f\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/errkPCisxA61A8V_Z5YMSDFc0WtPUZ5f/category_backgrounds/background_landscape_11.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"f82d4c01-3cc9-4cef-ba28-fd65a29d07bb\":{\"name\":\"background_landscape_04\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2020-12-01 23:21:17 UTC\",\"pngLastModified\":\"2020-12-01 23:21:17 UTC\",\"version\":\"44GF0huNVNd6OPrMQk9CFKeiWNejiRVi\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/44GF0huNVNd6OPrMQk9CFKeiWNejiRVi/category_backgrounds/background_landscape_04.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"51a0142b-08a8-4a61-8c81-193837add94a\":{\"name\":\"background_landscape_03\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2020-12-01 23:21:17 UTC\",\"pngLastModified\":\"2020-12-01 23:21:17 UTC\",\"version\":\"IAgRg5tTGKWOIVSJqkA7V4vOGguwvik7\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/IAgRg5tTGKWOIVSJqkA7V4vOGguwvik7/category_backgrounds/background_landscape_03.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"6e2f7a28-0fa9-48ca-8a04-54bc937edaed\":{\"name\":\"background_landscape_02\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2020-12-01 23:21:17 UTC\",\"pngLastModified\":\"2020-12-01 23:21:17 UTC\",\"version\":\"OvaR40iXn_wzpjDZLl3JQgd1caz30X0a\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/OvaR40iXn_wzpjDZLl3JQgd1caz30X0a/category_backgrounds/background_landscape_02.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"06cbdb6f-c48a-4a78-a24b-6852ed2bb57c\":{\"name\":\"background_landscape_01\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2020-12-01 23:21:16 UTC\",\"pngLastModified\":\"2020-12-01 23:21:16 UTC\",\"version\":\"QBWltnwlZJob1MH3WsbHiQjKrsvQyrDq\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/QBWltnwlZJob1MH3WsbHiQjKrsvQyrDq/category_backgrounds/background_landscape_01.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"8fbfa8a1-cdaf-40ec-bd68-89f222d60f9c\":{\"name\":\"hw_retro_background\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2021-10-29 19:53:35 UTC\",\"pngLastModified\":\"2021-10-29 19:53:35 UTC\",\"version\":\"sWiPMWPzRlwvF2T5isk27lDnXzCXBt7X\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/sWiPMWPzRlwvF2T5isk27lDnXzCXBt7X/category_backgrounds/hw_retro_background.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"431bafdc-80ca-491b-bf65-2eb5f9371991\":{\"name\":\"hw_sky_background\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2021-10-29 19:52:15 UTC\",\"pngLastModified\":\"2021-10-29 19:52:13 UTC\",\"version\":\"GGYPrkPBR79yulLEncx_K3IjTPvxksP5\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/GGYPrkPBR79yulLEncx_K3IjTPvxksP5/category_backgrounds/hw_sky_background.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"6d538f65-95a2-45dd-9426-f34410b6c274\":{\"name\":\"gradient_01\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2020-12-01 23:21:13 UTC\",\"pngLastModified\":\"2020-12-01 23:21:13 UTC\",\"version\":\"Lmv3XeqJRaGXvedSQkGc7OIGEZ.qfU3A\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/Lmv3XeqJRaGXvedSQkGc7OIGEZ.qfU3A/category_backgrounds/gradient_01.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"62d5e226-cd04-4953-b5ff-cd8b65918dc9\":{\"name\":\"gradient_08\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2020-12-01 23:21:14 UTC\",\"pngLastModified\":\"2020-12-01 23:21:14 UTC\",\"version\":\"Gzf6AOFH7NK4woo365IgUcY_HE6VQ3nK\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/Gzf6AOFH7NK4woo365IgUcY_HE6VQ3nK/category_backgrounds/gradient_08.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"9170b034-b838-4c5e-8eb5-852dbabd9d5f\":{\"name\":\"tech_bg_2\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2023-03-07T22:21:21.000Z\",\"pngLastModified\":\"2023-03-07T22:21:20.000Z\",\"version\":\"Jp7ofqrzvb9s8PHaRupGbX61Gw_zeYCa\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/Jp7ofqrzvb9s8PHaRupGbX61Gw_zeYCa/tech_bg_2.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"df09c069-1ea5-4a2d-84dd-a7da0c4c4e29\":{\"name\":\"tech_bg_3\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2023-03-07T22:21:37.000Z\",\"pngLastModified\":\"2023-03-07T22:21:37.000Z\",\"version\":\"RsjrRnlchPjjIQRaZZDrylcgpAV48Y8m\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/RsjrRnlchPjjIQRaZZDrylcgpAV48Y8m/tech_bg_3.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"b47df086-a9f7-4435-a03a-dc37e9631f3f\":{\"name\":\"tech_bg\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2023-03-07T22:21:52.000Z\",\"pngLastModified\":\"2023-03-07T22:21:52.000Z\",\"version\":\"v7bxSWNQGa5bhO2wtNTi5ePiUgy1W.rL\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/v7bxSWNQGa5bhO2wtNTi5ePiUgy1W.rL/tech_bg.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"004247ed-29ac-48b9-8bb5-923d39a6a0f5\":{\"name\":\"video_game_bg\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2023-03-07T22:22:15.000Z\",\"pngLastModified\":\"2023-03-07T22:22:14.000Z\",\"version\":\"jFj9lXHa6ce7Vuc0EVosLcyBQS0HEpdU\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/jFj9lXHa6ce7Vuc0EVosLcyBQS0HEpdU/video_game_bg.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"aa7209e4-12ba-41e8-952a-bdd3b7e2b4ad\":{\"name\":\"game_cow\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-03-06T16:37:42.000Z\",\"pngLastModified\":\"2024-03-06T16:37:42.000Z\",\"version\":\"RONmTAjlHV59XnQf8ZaA3NknYqlTZNr7\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/RONmTAjlHV59XnQf8ZaA3NknYqlTZNr7/game_cow.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"2f5a9441-c907-4ab5-8964-3060470d73d7\":{\"name\":\"game_monkey\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-03-06T16:37:53.000Z\",\"pngLastModified\":\"2024-03-06T16:37:52.000Z\",\"version\":\"wo2cg5SVOjyl84UjONFJE9HB13Q7eEfl\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/wo2cg5SVOjyl84UjONFJE9HB13Q7eEfl/game_monkey.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"2a0ae310-57b7-4370-a1b7-2feac06d649e\":{\"name\":\"game_panda\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-03-06T16:38:16.000Z\",\"pngLastModified\":\"2024-03-06T16:38:16.000Z\",\"version\":\"c_dzHSjoQrgyD1aoIITjZCZf4wFgv_yn\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/c_dzHSjoQrgyD1aoIITjZCZf4wFgv_yn/game_panda.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"0ab3e8d5-47ad-44cb-ae61-b8140ab0dd40\":{\"name\":\"game_penguin\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-03-06T16:38:39.000Z\",\"pngLastModified\":\"2024-03-06T16:38:39.000Z\",\"version\":\"v640q5YligHnBsi6aCt6KK5k1aVZpkmC\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/v640q5YligHnBsi6aCt6KK5k1aVZpkmC/game_penguin.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"6ef83e81-757e-4da1-95a6-442a2502df7a\":{\"name\":\"game_power\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-03-06T16:36:17.000Z\",\"pngLastModified\":\"2024-03-06T16:36:16.000Z\",\"version\":\"7E4Tz.T22o6iRE_SsPXr.zY2F25cNco8\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/7E4Tz.T22o6iRE_SsPXr.zY2F25cNco8/game_power.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"fe275ad3-b59e-4537-a751-1aea3faa1635\":{\"name\":\"game_fire\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-03-06T16:37:18.000Z\",\"pngLastModified\":\"2024-03-06T16:37:17.000Z\",\"version\":\"38Qoc0fpkXEdMcEj0.YJKq2LImgETnmi\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/38Qoc0fpkXEdMcEj0.YJKq2LImgETnmi/game_fire.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"15c5fda1-ce7b-4d55-b34c-271d6a7fa580\":{\"name\":\"game_heart\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-03-06T16:36:39.000Z\",\"pngLastModified\":\"2024-03-06T16:36:39.000Z\",\"version\":\"hIZtlLp86gUH9PJliZy2wTnFHVsOJqF2\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/hIZtlLp86gUH9PJliZy2wTnFHVsOJqF2/game_heart.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"dbf88701-8e56-474b-a70a-39262f50ee17\":{\"name\":\"game_leaf\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-03-07T21:53:30.000Z\",\"pngLastModified\":\"2024-03-07T21:53:29.000Z\",\"version\":\"bL335E4gSpRornn3fni2OFTsUFyFLLmc\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/bL335E4gSpRornn3fni2OFTsUFyFLLmc/game_leaf.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"b8afc374-c1fc-4675-8aed-f517d07d9eed\":{\"name\":\"gameplay_greendiamond2\",\"categories\":[\"video_games\"],\"frameCount\":1,\"frameSize\":{\"x\":281,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-03-29 19:26:20 UTC\",\"pngLastModified\":\"2021-03-29 19:25:55 UTC\",\"version\":\"tJWdCCnsDAEcSzdDcvIizS0sSgjpbRkx\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/tJWdCCnsDAEcSzdDcvIizS0sSgjpbRkx/category_video_games/gameplay_greendiamond2.png\",\"sourceSize\":{\"x\":281,\"y\":400}},\"ec45116b-eec0-4311-91e7-083029ace67a\":{\"name\":\"gameplay_purplediamond\",\"categories\":[\"video_games\"],\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":383},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-03-29 19:25:56 UTC\",\"pngLastModified\":\"2021-03-29 19:25:57 UTC\",\"version\":\"qdHTNhAxESpD.fpx1BHCqMBDLb_IyXtC\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/qdHTNhAxESpD.fpx1BHCqMBDLb_IyXtC/category_video_games/gameplay_purplediamond.png\",\"sourceSize\":{\"x\":400,\"y\":383}},\"db16f070-65a7-447f-89d7-aebfd0a0e083\":{\"name\":\"gameplayadventure_13\",\"categories\":[\"video_games\"],\"frameCount\":1,\"frameSize\":{\"x\":328,\"y\":399},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-03-29 19:26:04 UTC\",\"pngLastModified\":\"2021-03-29 19:26:05 UTC\",\"version\":\"lZ1uxKnOKqKnrt5HpiFMLstOni6IYwne\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/lZ1uxKnOKqKnrt5HpiFMLstOni6IYwne/category_video_games/gameplayadventure_13.png\",\"sourceSize\":{\"x\":328,\"y\":399}},\"98243a09-778b-482e-82f5-a100747d7e04\":{\"name\":\"gameplayobject_heart_02\",\"categories\":[\"video_games\"],\"frameCount\":1,\"frameSize\":{\"x\":396,\"y\":376},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-03-29 19:25:42 UTC\",\"pngLastModified\":\"2021-03-29 19:25:43 UTC\",\"version\":\"T9cVKefx7rb7tG8zAzKj1TwS6U2SruY3\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/T9cVKefx7rb7tG8zAzKj1TwS6U2SruY3/category_video_games/gameplayobject_heart_02.png\",\"sourceSize\":{\"x\":396,\"y\":376}},\"23a43bf1-3dcb-4f84-8c29-e1d0ddead86e\":{\"name\":\"gameplayfaces_02\",\"categories\":[\"faces\"],\"frameCount\":1,\"frameSize\":{\"x\":391,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:55:53 UTC\",\"pngLastModified\":\"2021-01-19 23:56:13 UTC\",\"version\":\"zRVhpCv7VRHYcVYkPKzMKx0ZyQfW3XLJ\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/zRVhpCv7VRHYcVYkPKzMKx0ZyQfW3XLJ/category_faces/gameplayfaces_02.png\",\"sourceSize\":{\"x\":391,\"y\":400}},\"438f62de-3cf4-49ba-9afe-b13bf9e957e1\":{\"name\":\"gameplayfaces_04\",\"categories\":[\"faces\"],\"frameCount\":1,\"frameSize\":{\"x\":391,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:55:56 UTC\",\"pngLastModified\":\"2021-01-19 23:55:49 UTC\",\"version\":\"nsL6WkY4qtGkq9DD3kN2r9Rp3D5j.BCb\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/nsL6WkY4qtGkq9DD3kN2r9Rp3D5j.BCb/category_faces/gameplayfaces_04.png\",\"sourceSize\":{\"x\":391,\"y\":400}},\"28fdf992-1572-44ad-acd1-a7714ae1c57a\":{\"name\":\"gameplayfaces_07\",\"categories\":[\"faces\"],\"frameCount\":1,\"frameSize\":{\"x\":391,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:56:01 UTC\",\"pngLastModified\":\"2021-01-19 23:56:17 UTC\",\"version\":\"szPZ1zjfS2sC5yBc7JGD.YCYLMNhlJp4\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/szPZ1zjfS2sC5yBc7JGD.YCYLMNhlJp4/category_faces/gameplayfaces_07.png\",\"sourceSize\":{\"x\":391,\"y\":400}},\"5f0adaf2-0764-4671-946c-d685ff9f9fc2\":{\"name\":\"gameplayfaces_08\",\"categories\":[\"faces\"],\"frameCount\":1,\"frameSize\":{\"x\":391,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:55:58 UTC\",\"pngLastModified\":\"2021-01-19 23:55:52 UTC\",\"version\":\"FP9OVTkT8hrWR9ZOfb5kmLk_AHIFqaJh\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/FP9OVTkT8hrWR9ZOfb5kmLk_AHIFqaJh/category_faces/gameplayfaces_08.png\",\"sourceSize\":{\"x\":391,\"y\":400}},\"8e89583b-970b-403b-a47f-cd8791f8e850\":{\"name\":\"adultbutterfly_csc\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"animals\"],\"jsonLastModified\":\"2021-10-06 17:59:10 UTC\",\"pngLastModified\":\"2021-10-06 17:59:08 UTC\",\"version\":\"e7FIQ4cVbXtdg77XNxNwMB4kPKixcXHS\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/e7FIQ4cVbXtdg77XNxNwMB4kPKixcXHS/category_animals/adultbutterfly_csc.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"44e62fb6-549d-4259-8621-62f9d5bcb64e\":{\"name\":\"cuteanimals_fox_hello\",\"categories\":[\"animals\"],\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-09-02 18:05:39 UTC\",\"pngLastModified\":\"2021-09-02 21:51:45 UTC\",\"version\":\"_SEPNjJwgHDGE546fyENsLKXuB38K5xm\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/_SEPNjJwgHDGE546fyENsLKXuB38K5xm/category_animals/cuteanimals_fox_hello.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"555e95f5-4468-4487-9ae8-df53ae28a5fa\":{\"name\":\"cuteanimals_rooster_hello\",\"categories\":[\"animals\"],\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-09-02 18:05:30 UTC\",\"pngLastModified\":\"2021-09-02 22:00:08 UTC\",\"version\":\"jUR8Z2jwVY5wG4Xd6qsutnkYlog0W.na\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/jUR8Z2jwVY5wG4Xd6qsutnkYlog0W.na/category_animals/cuteanimals_rooster_hello.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"3bde3818-baad-4a6a-b557-cb7ee4c507e6\":{\"name\":\"sticker_12\",\"categories\":[\"stickers\"],\"frameCount\":1,\"frameSize\":{\"x\":398,\"y\":326},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-20 00:32:00 UTC\",\"pngLastModified\":\"2021-01-20 00:32:26 UTC\",\"version\":\"86pEAVDp8hr44rfMKgzT6QFNNlD1SIf2\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/86pEAVDp8hr44rfMKgzT6QFNNlD1SIf2/category_stickers/sticker_12.png\",\"sourceSize\":{\"x\":398,\"y\":326}}}}\r\n\r\n\r\n",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"costumes_tab\",\r\n  \"callout_text\": \"Click here to add costumes to your project.\",\r\n  \"element_id\": \"[id=\\\"animationMode\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "skip_autosave": true,
+    "encrypted_examples": "Rj+lNfkHX0/wsWhH0UEukc/n6EJNKgrxfIed7ZxJEZ9PTG7Fzdsx5QwAoPU5\nZRH1IKc6ttZJBChzol1VSeWuNg==\n",
+    "standalone_app_name": "spritelab",
+    "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"**It's time to get creative.** Use the checklist in the instructions to get started. \",\"hint_id\":\"hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/01fda9cdff41f10ba441254c01429a82/game_variables_freeplay.mp3\"}]",
+    "preload_asset_list": null
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-05-07T21:27:55.241+00:00\",\"changed\":[\"cloned from \\\"game_variables_freeplay\\\"\"],\"cloned_from\":\"game_variables_freeplay\"},{\"changed_at\":\"2024-05-08 21:41:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-08 21:42:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"instructions_icon\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-10 22:04:40 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-10 22:11:34 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-10 22:14:23 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-10 22:17:28 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-14 22:20:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"mini_toolbox\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml xmlns="https://developers.google.com/blockly/xml">
+        <block type="when_run" deletable="false" x="28" y="30"/>
+        <block type="behavior_definition" deletable="false" x="0" y="0">
+          <mutation behaviorId="wandering"/>
+          <field name="button_behavior_definition"/>
+          <field name="NAME">wandering</field>
+          <statement name="STACK">
+            <block type="gamelab_withPercentChance">
+              <value name="NUM">
+                <block type="math_number">
+                  <field name="NUM">20</field>
+                </block>
+              </value>
+              <statement name="STATEMENT">
+                <block type="gamelab_changePropBy">
+                  <field name="PROPERTY">"direction"</field>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get"/>
+                  </value>
+                  <value name="VAL">
+                    <block type="math_random_int">
+                      <value name="FROM">
+                        <block type="math_number">
+                          <field name="NUM">-25</field>
+                        </block>
+                      </value>
+                      <value name="TO">
+                        <block type="math_number">
+                          <field name="NUM">25</field>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                </block>
+              </statement>
+              <next>
+                <block type="gamelab_moveForward">
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get"/>
+                  </value>
+                  <value name="DISTANCE">
+                    <block type="gamelab_getProp">
+                      <field name="PROPERTY">"speed"</field>
+                      <value name="SPRITE">
+                        <block type="sprite_parameter_get"/>
+                      </value>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="controls_if">
+                      <value name="IF0">
+                        <block type="gamelab_isTouchingEdges">
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get"/>
+                          </value>
+                        </block>
+                      </value>
+                      <statement name="DO0">
+                        <block type="gamelab_edgesDisplace">
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get"/>
+                          </value>
+                          <next>
+                            <block type="gamelab_changePropBy">
+                              <field name="PROPERTY">"direction"</field>
+                              <value name="SPRITE">
+                                <block type="sprite_parameter_get"/>
+                              </value>
+                              <value name="VAL">
+                                <block type="math_random_int">
+                                  <value name="FROM">
+                                    <block type="math_number">
+                                      <field name="NUM">135</field>
+                                    </block>
+                                  </value>
+                                  <value name="TO">
+                                    <block type="math_number">
+                                      <field name="NUM">225</field>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="controls_if">
+                          <mutation elseif="0" else="1"/>
+                          <value name="IF0">
+                            <block type="logic_operation">
+                              <field name="OP">OR</field>
+                              <value name="A">
+                                <block type="logic_compare">
+                                  <field name="OP">GT</field>
+                                  <value name="A">
+                                    <block type="gamelab_getProp">
+                                      <field name="PROPERTY">"direction"</field>
+                                      <value name="SPRITE">
+                                        <block type="sprite_parameter_get"/>
+                                      </value>
+                                    </block>
+                                  </value>
+                                  <value name="B">
+                                    <block type="math_number">
+                                      <field name="NUM">270</field>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                              <value name="B">
+                                <block type="logic_compare">
+                                  <field name="OP">LT</field>
+                                  <value name="A">
+                                    <block type="gamelab_getProp">
+                                      <field name="PROPERTY">"direction"</field>
+                                      <value name="SPRITE">
+                                        <block type="sprite_parameter_get"/>
+                                      </value>
+                                    </block>
+                                  </value>
+                                  <value name="B">
+                                    <block type="math_number">
+                                      <field name="NUM">90</field>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                          <statement name="DO0">
+                            <block type="gamelab_mirrorSprite">
+                              <field name="DIRECTION">"right"</field>
+                              <value name="SPRITE">
+                                <block type="sprite_parameter_get"/>
+                              </value>
+                            </block>
+                          </statement>
+                          <statement name="ELSE">
+                            <block type="gamelab_mirrorSprite">
+                              <field name="DIRECTION">"left"</field>
+                              <value name="SPRITE">
+                                <block type="sprite_parameter_get"/>
+                              </value>
+                            </block>
+                          </statement>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="false" x="0" y="0">
+          <mutation behaviorId="moving east"/>
+          <field name="button_behavior_definition"/>
+          <field name="NAME">moving east</field>
+          <statement name="STACK">
+            <block type="gamelab_moveInDirection">
+              <field name="DIRECTION">"East"</field>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get"/>
+              </value>
+              <value name="DISTANCE">
+                <block type="gamelab_getProp">
+                  <field name="PROPERTY">"speed"</field>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get"/>
+                  </value>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="false" x="0" y="0">
+          <mutation behaviorId="spinning left"/>
+          <field name="button_behavior_definition"/>
+          <field name="NAME">spinning left</field>
+          <statement name="STACK">
+            <block type="gamelab_turn">
+              <field name="DIRECTION">"left"</field>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get"/>
+              </value>
+              <value name="N">
+                <block type="math_number">
+                  <field name="NUM">6</field>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="false" x="0" y="0">
+          <mutation behaviorId="spinning right"/>
+          <field name="button_behavior_definition"/>
+          <field name="NAME">spinning right</field>
+          <statement name="STACK">
+            <block type="gamelab_turn">
+              <field name="DIRECTION">"right"</field>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get"/>
+              </value>
+              <value name="N">
+                <block type="math_number">
+                  <field name="NUM">6</field>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="false" x="0" y="0">
+          <mutation behaviorId="shrinking"/>
+          <field name="button_behavior_definition"/>
+          <field name="NAME">shrinking</field>
+          <statement name="STACK">
+            <block type="gamelab_changePropBy">
+              <field name="PROPERTY">"scale"</field>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get"/>
+              </value>
+              <value name="VAL">
+                <block type="math_number">
+                  <field name="NUM">-1</field>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="false" x="0" y="0">
+          <mutation behaviorId="growing"/>
+          <field name="button_behavior_definition"/>
+          <field name="NAME">growing</field>
+          <statement name="STACK">
+            <block type="gamelab_changePropBy">
+              <field name="PROPERTY">"scale"</field>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get"/>
+              </value>
+              <value name="VAL">
+                <block type="math_number">
+                  <field name="NUM">1</field>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="false" x="0" y="0">
+          <mutation behaviorId="moving south"/>
+          <field name="button_behavior_definition"/>
+          <field name="NAME">moving south</field>
+          <statement name="STACK">
+            <block type="gamelab_moveInDirection">
+              <field name="DIRECTION">"South"</field>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get"/>
+              </value>
+              <value name="DISTANCE">
+                <block type="gamelab_getProp">
+                  <field name="PROPERTY">"speed"</field>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get"/>
+                  </value>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="false" x="0" y="0">
+          <mutation behaviorId="swimming left and right"/>
+          <field name="button_behavior_definition"/>
+          <field name="NAME">swimming left and right</field>
+          <statement name="STACK">
+            <block type="controls_if">
+              <mutation elseif="1"/>
+              <value name="IF0">
+                <block type="logic_compare">
+                  <field name="OP">EQ</field>
+                  <value name="A">
+                    <block type="gamelab_getProp">
+                      <field name="PROPERTY">"direction"</field>
+                      <value name="SPRITE">
+                        <block type="sprite_parameter_get"/>
+                      </value>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="math_number">
+                      <field name="NUM">0</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <statement name="DO0">
+                <block type="gamelab_mirrorSprite">
+                  <field name="DIRECTION">"right"</field>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get"/>
+                  </value>
+                </block>
+              </statement>
+              <value name="IF1">
+                <block type="logic_compare">
+                  <field name="OP">EQ</field>
+                  <value name="A">
+                    <block type="gamelab_getProp">
+                      <field name="PROPERTY">"direction"</field>
+                      <value name="SPRITE">
+                        <block type="sprite_parameter_get"/>
+                      </value>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="math_number">
+                      <field name="NUM">180</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <statement name="DO1">
+                <block type="gamelab_mirrorSprite">
+                  <field name="DIRECTION">"left"</field>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get"/>
+                  </value>
+                </block>
+              </statement>
+              <next>
+                <block type="gamelab_moveForward">
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get"/>
+                  </value>
+                  <value name="DISTANCE">
+                    <block type="gamelab_getProp">
+                      <field name="PROPERTY">"speed"</field>
+                      <value name="SPRITE">
+                        <block type="sprite_parameter_get"/>
+                      </value>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="controls_if">
+                      <value name="IF0">
+                        <block type="gamelab_isTouchingEdges">
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get"/>
+                          </value>
+                        </block>
+                      </value>
+                      <statement name="DO0">
+                        <block type="gamelab_edgesDisplace">
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get"/>
+                          </value>
+                          <next>
+                            <block type="gamelab_changePropBy">
+                              <field name="PROPERTY">"direction"</field>
+                              <value name="SPRITE">
+                                <block type="sprite_parameter_get"/>
+                              </value>
+                              <value name="VAL">
+                                <block type="math_number">
+                                  <field name="NUM">180</field>
+                                </block>
+                              </value>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="false" x="0" y="0">
+          <mutation behaviorId="moving north"/>
+          <field name="button_behavior_definition"/>
+          <field name="NAME">moving north</field>
+          <statement name="STACK">
+            <block type="gamelab_moveInDirection">
+              <field name="DIRECTION">"North"</field>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get"/>
+              </value>
+              <value name="DISTANCE">
+                <block type="gamelab_getProp">
+                  <field name="PROPERTY">"speed"</field>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get"/>
+                  </value>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="false" x="0" y="0">
+          <mutation behaviorId="jittering"/>
+          <field name="button_behavior_definition"/>
+          <field name="NAME">jittering</field>
+          <statement name="STACK">
+            <block type="gamelab_changePropBy">
+              <field name="PROPERTY">"scale"</field>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get"/>
+              </value>
+              <value name="VAL">
+                <block type="math_random_int">
+                  <value name="FROM">
+                    <block type="math_number">
+                      <field name="NUM">-1</field>
+                    </block>
+                  </value>
+                  <value name="TO">
+                    <block type="math_number">
+                      <field name="NUM">1</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="false" x="0" y="0">
+          <mutation behaviorId="moving west"/>
+          <field name="button_behavior_definition"/>
+          <field name="NAME">moving west</field>
+          <statement name="STACK">
+            <block type="gamelab_moveInDirection">
+              <field name="DIRECTION">"West"</field>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get"/>
+              </value>
+              <value name="DISTANCE">
+                <block type="gamelab_getProp">
+                  <field name="PROPERTY">"speed"</field>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get"/>
+                  </value>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="false" x="0" y="0">
+          <mutation behaviorId="patrolling"/>
+          <field name="button_behavior_definition"/>
+          <field name="NAME">patrolling</field>
+          <statement name="STACK">
+            <block type="gamelab_moveForward">
+              <value name="SPRITE">
+                <block type="sprite_parameter_get"/>
+              </value>
+              <value name="DISTANCE">
+                <block type="gamelab_getProp">
+                  <field name="PROPERTY">"speed"</field>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get"/>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="controls_if">
+                  <value name="IF0">
+                    <block type="gamelab_isTouchingEdges">
+                      <value name="SPRITE">
+                        <block type="sprite_parameter_get"/>
+                      </value>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="gamelab_edgesDisplace">
+                      <value name="SPRITE">
+                        <block type="sprite_parameter_get"/>
+                      </value>
+                      <next>
+                        <block type="gamelab_changePropBy">
+                          <field name="PROPERTY">"direction"</field>
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get"/>
+                          </value>
+                          <value name="VAL">
+                            <block type="math_number">
+                              <field name="NUM">180</field>
+                            </block>
+                          </value>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="controls_if">
+                      <mutation elseif="0" else="1"/>
+                      <value name="IF0">
+                        <block type="logic_operation">
+                          <field name="OP">OR</field>
+                          <value name="A">
+                            <block type="logic_compare">
+                              <field name="OP">GT</field>
+                              <value name="A">
+                                <block type="gamelab_getProp">
+                                  <field name="PROPERTY">"direction"</field>
+                                  <value name="SPRITE">
+                                    <block type="sprite_parameter_get"/>
+                                  </value>
+                                </block>
+                              </value>
+                              <value name="B">
+                                <block type="math_number">
+                                  <field name="NUM">270</field>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <block type="logic_compare">
+                              <field name="OP">LT</field>
+                              <value name="A">
+                                <block type="gamelab_getProp">
+                                  <field name="PROPERTY">"direction"</field>
+                                  <value name="SPRITE">
+                                    <block type="sprite_parameter_get"/>
+                                  </value>
+                                </block>
+                              </value>
+                              <value name="B">
+                                <block type="math_number">
+                                  <field name="NUM">90</field>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <statement name="DO0">
+                        <block type="gamelab_mirrorSprite">
+                          <field name="DIRECTION">"right"</field>
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get"/>
+                          </value>
+                        </block>
+                      </statement>
+                      <statement name="ELSE">
+                        <block type="gamelab_mirrorSprite">
+                          <field name="DIRECTION">"left"</field>
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get"/>
+                          </value>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="false" x="0" y="0">
+          <mutation behaviorId="moving with arrow keys"/>
+          <field name="button_behavior_definition"/>
+          <field name="NAME">moving with arrow keys</field>
+          <statement name="STACK">
+            <block type="controls_if">
+              <value name="IF0">
+                <block type="gamelab_isKeyPressed">
+                  <field name="KEY">"up"</field>
+                </block>
+              </value>
+              <statement name="DO0">
+                <block type="gamelab_moveInDirection">
+                  <field name="DIRECTION">"North"</field>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get"/>
+                  </value>
+                  <value name="DISTANCE">
+                    <block type="gamelab_getProp">
+                      <field name="PROPERTY">"speed"</field>
+                      <value name="SPRITE">
+                        <block type="sprite_parameter_get"/>
+                      </value>
+                    </block>
+                  </value>
+                </block>
+              </statement>
+              <next>
+                <block type="controls_if">
+                  <value name="IF0">
+                    <block type="gamelab_isKeyPressed">
+                      <field name="KEY">"down"</field>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="gamelab_moveInDirection">
+                      <field name="DIRECTION">"South"</field>
+                      <value name="SPRITE">
+                        <block type="sprite_parameter_get"/>
+                      </value>
+                      <value name="DISTANCE">
+                        <block type="gamelab_getProp">
+                          <field name="PROPERTY">"speed"</field>
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get"/>
+                          </value>
+                        </block>
+                      </value>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="controls_if">
+                      <value name="IF0">
+                        <block type="gamelab_isKeyPressed">
+                          <field name="KEY">"left"</field>
+                        </block>
+                      </value>
+                      <statement name="DO0">
+                        <block type="gamelab_moveInDirection">
+                          <field name="DIRECTION">"West"</field>
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get"/>
+                          </value>
+                          <value name="DISTANCE">
+                            <block type="gamelab_getProp">
+                              <field name="PROPERTY">"speed"</field>
+                              <value name="SPRITE">
+                                <block type="sprite_parameter_get"/>
+                              </value>
+                            </block>
+                          </value>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="controls_if">
+                          <value name="IF0">
+                            <block type="gamelab_isKeyPressed">
+                              <field name="KEY">"right"</field>
+                            </block>
+                          </value>
+                          <statement name="DO0">
+                            <block type="gamelab_moveInDirection">
+                              <field name="DIRECTION">"East"</field>
+                              <value name="SPRITE">
+                                <block type="sprite_parameter_get"/>
+                              </value>
+                              <value name="DISTANCE">
+                                <block type="gamelab_getProp">
+                                  <field name="PROPERTY">"speed"</field>
+                                  <value name="SPRITE">
+                                    <block type="sprite_parameter_get"/>
+                                  </value>
+                                </block>
+                              </value>
+                            </block>
+                          </statement>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="false" x="0" y="0">
+          <mutation behaviorId="driving with arrow keys"/>
+          <field name="button_behavior_definition"/>
+          <field name="NAME">driving with arrow keys</field>
+          <statement name="STACK">
+            <block type="controls_if">
+              <value name="IF0">
+                <block type="gamelab_isKeyPressed">
+                  <field name="KEY">"up"</field>
+                </block>
+              </value>
+              <statement name="DO0">
+                <block type="gamelab_moveForward">
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get"/>
+                  </value>
+                  <value name="DISTANCE">
+                    <block type="gamelab_getProp">
+                      <field name="PROPERTY">"speed"</field>
+                      <value name="SPRITE">
+                        <block type="sprite_parameter_get"/>
+                      </value>
+                    </block>
+                  </value>
+                </block>
+              </statement>
+              <next>
+                <block type="controls_if">
+                  <value name="IF0">
+                    <block type="gamelab_isKeyPressed">
+                      <field name="KEY">"down"</field>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="gamelab_moveBackward">
+                      <value name="SPRITE">
+                        <block type="sprite_parameter_get"/>
+                      </value>
+                      <value name="DISTANCE">
+                        <block type="gamelab_getProp">
+                          <field name="PROPERTY">"speed"</field>
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get"/>
+                          </value>
+                        </block>
+                      </value>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="controls_if">
+                      <value name="IF0">
+                        <block type="gamelab_isKeyPressed">
+                          <field name="KEY">"left"</field>
+                        </block>
+                      </value>
+                      <statement name="DO0">
+                        <block type="gamelab_changePropBy">
+                          <field name="PROPERTY">"direction"</field>
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get"/>
+                          </value>
+                          <value name="VAL">
+                            <block type="math_single">
+                              <field name="OP">NEG</field>
+                              <value name="NUM">
+                                <block type="math_number">
+                                  <field name="NUM">5</field>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="gamelab_changePropBy">
+                              <field name="PROPERTY">"rotation"</field>
+                              <value name="SPRITE">
+                                <block type="sprite_parameter_get"/>
+                              </value>
+                              <value name="VAL">
+                                <block type="math_single">
+                                  <field name="OP">NEG</field>
+                                  <value name="NUM">
+                                    <block type="math_number">
+                                      <field name="NUM">5</field>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="controls_if">
+                          <value name="IF0">
+                            <block type="gamelab_isKeyPressed">
+                              <field name="KEY">"right"</field>
+                            </block>
+                          </value>
+                          <statement name="DO0">
+                            <block type="gamelab_changePropBy">
+                              <field name="PROPERTY">"direction"</field>
+                              <value name="SPRITE">
+                                <block type="sprite_parameter_get"/>
+                              </value>
+                              <value name="VAL">
+                                <block type="math_number">
+                                  <field name="NUM">5</field>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="gamelab_changePropBy">
+                                  <field name="PROPERTY">"rotation"</field>
+                                  <value name="SPRITE">
+                                    <block type="sprite_parameter_get"/>
+                                  </value>
+                                  <value name="VAL">
+                                    <block type="math_number">
+                                      <field name="NUM">5</field>
+                                    </block>
+                                  </value>
+                                </block>
+                              </next>
+                            </block>
+                          </statement>
+                          <next>
+                            <block type="controls_if">
+                              <value name="IF0">
+                                <block type="gamelab_isTouchingEdges">
+                                  <value name="SPRITE">
+                                    <block type="sprite_parameter_get"/>
+                                  </value>
+                                </block>
+                              </value>
+                              <statement name="DO0">
+                                <block type="gamelab_edgesDisplace">
+                                  <value name="SPRITE">
+                                    <block type="sprite_parameter_get"/>
+                                  </value>
+                                </block>
+                              </statement>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="false" x="0" y="0">
+          <mutation behaviorId="fluttering"/>
+          <field name="button_behavior_definition"/>
+          <field name="NAME">fluttering</field>
+          <statement name="STACK">
+            <block type="gamelab_changePropBy">
+              <field name="PROPERTY">"y"</field>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get"/>
+              </value>
+              <value name="VAL">
+                <block type="math_random_int">
+                  <value name="FROM">
+                    <block type="math_number">
+                      <field name="NUM">-1</field>
+                    </block>
+                  </value>
+                  <value name="TO">
+                    <block type="math_number">
+                      <field name="NUM">1</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="false" x="0" y="0">
+          <mutation behaviorId="wobbling"/>
+          <field name="button_behavior_definition"/>
+          <field name="NAME">wobbling</field>
+          <statement name="STACK">
+            <block type="gamelab_withPercentChance">
+              <value name="NUM">
+                <block type="math_number">
+                  <field name="NUM">50</field>
+                </block>
+              </value>
+              <statement name="STATEMENT">
+                <block type="gamelab_setProp">
+                  <field name="PROPERTY">"rotation"</field>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get"/>
+                  </value>
+                  <value name="VAL">
+                    <block type="math_random_int">
+                      <value name="FROM">
+                        <block type="math_number">
+                          <field name="NUM">-1</field>
+                        </block>
+                      </value>
+                      <value name="TO">
+                        <block type="math_number">
+                          <field name="NUM">1</field>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="false" x="0" y="0">
+          <mutation behaviorId="moving west and looping"/>
+          <field name="button_behavior_definition"/>
+          <field name="NAME">moving west and looping</field>
+          <statement name="STACK">
+            <block type="gamelab_mirrorSprite">
+              <field name="DIRECTION">"left"</field>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get"/>
+              </value>
+              <next>
+                <block type="gamelab_moveInDirection">
+                  <field name="DIRECTION">"West"</field>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get"/>
+                  </value>
+                  <value name="DISTANCE">
+                    <block type="gamelab_getProp">
+                      <field name="PROPERTY">"speed"</field>
+                      <value name="SPRITE">
+                        <block type="sprite_parameter_get"/>
+                      </value>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="controls_if">
+                      <value name="IF0">
+                        <block type="logic_compare">
+                          <field name="OP">LT</field>
+                          <value name="A">
+                            <block type="gamelab_getProp">
+                              <field name="PROPERTY">"x"</field>
+                              <value name="SPRITE">
+                                <block type="sprite_parameter_get"/>
+                              </value>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <block type="math_number">
+                              <field name="NUM">-50</field>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <statement name="DO0">
+                        <block type="gamelab_setProp">
+                          <field name="PROPERTY">"x"</field>
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get"/>
+                          </value>
+                          <value name="VAL">
+                            <block type="math_number">
+                              <field name="NUM">450</field>
+                            </block>
+                          </value>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="false" x="0" y="0">
+          <mutation behaviorId="moving east and looping"/>
+          <field name="button_behavior_definition"/>
+          <field name="NAME">moving east and looping</field>
+          <statement name="STACK">
+            <block type="gamelab_mirrorSprite">
+              <field name="DIRECTION">"right"</field>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get"/>
+              </value>
+              <next>
+                <block type="gamelab_moveInDirection">
+                  <field name="DIRECTION">"East"</field>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get"/>
+                  </value>
+                  <value name="DISTANCE">
+                    <block type="gamelab_getProp">
+                      <field name="PROPERTY">"speed"</field>
+                      <value name="SPRITE">
+                        <block type="sprite_parameter_get"/>
+                      </value>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="controls_if">
+                      <value name="IF0">
+                        <block type="logic_compare">
+                          <field name="OP">GT</field>
+                          <value name="A">
+                            <block type="gamelab_getProp">
+                              <field name="PROPERTY">"x"</field>
+                              <value name="SPRITE">
+                                <block type="sprite_parameter_get"/>
+                              </value>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <block type="math_number">
+                              <field name="NUM">450</field>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <statement name="DO0">
+                        <block type="gamelab_setProp">
+                          <field name="PROPERTY">"x"</field>
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get"/>
+                          </value>
+                          <value name="VAL">
+                            <block type="math_number">
+                              <field name="NUM">-50</field>
+                            </block>
+                          </value>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="false" x="0" y="0">
+          <mutation behaviorId="moving north and looping"/>
+          <field name="button_behavior_definition"/>
+          <field name="NAME">moving north and looping</field>
+          <statement name="STACK">
+            <block type="gamelab_moveInDirection">
+              <field name="DIRECTION">"North"</field>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get"/>
+              </value>
+              <value name="DISTANCE">
+                <block type="gamelab_getProp">
+                  <field name="PROPERTY">"speed"</field>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get"/>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="controls_if">
+                  <value name="IF0">
+                    <block type="logic_compare">
+                      <field name="OP">GT</field>
+                      <value name="A">
+                        <block type="gamelab_getProp">
+                          <field name="PROPERTY">"y"</field>
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get"/>
+                          </value>
+                        </block>
+                      </value>
+                      <value name="B">
+                        <block type="math_number">
+                          <field name="NUM">450</field>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="gamelab_setProp">
+                      <field name="PROPERTY">"y"</field>
+                      <value name="SPRITE">
+                        <block type="sprite_parameter_get"/>
+                      </value>
+                      <value name="VAL">
+                        <block type="math_number">
+                          <field name="NUM">-50</field>
+                        </block>
+                      </value>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="false" x="0" y="0">
+          <mutation behaviorId="moving south and looping"/>
+          <field name="button_behavior_definition"/>
+          <field name="NAME">moving south and looping</field>
+          <statement name="STACK">
+            <block type="gamelab_moveInDirection">
+              <field name="DIRECTION">"South"</field>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get"/>
+              </value>
+              <value name="DISTANCE">
+                <block type="gamelab_getProp">
+                  <field name="PROPERTY">"speed"</field>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get"/>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="controls_if">
+                  <value name="IF0">
+                    <block type="logic_compare">
+                      <field name="OP">LT</field>
+                      <value name="A">
+                        <block type="gamelab_getProp">
+                          <field name="PROPERTY">"y"</field>
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get"/>
+                          </value>
+                        </block>
+                      </value>
+                      <value name="B">
+                        <block type="math_number">
+                          <field name="NUM">-50</field>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="gamelab_setProp">
+                      <field name="PROPERTY">"y"</field>
+                      <value name="SPRITE">
+                        <block type="sprite_parameter_get"/>
+                      </value>
+                      <value name="VAL">
+                        <block type="math_number">
+                          <field name="NUM">450</field>
+                        </block>
+                      </value>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <variables>
+          <variable id="n`_IY?HES|9qQ/cu*1co">score</variable>
+        </variables>
+        <block type="gamelab_showVariable" id="/)UBq5TH4YJjZD-`%IZQ" x="45" y="11">
+          <field name="VAR" id="n`_IY?HES|9qQ/cu*1co">score</field>
+          <value name="LOCATION">
+            <block type="gamelab_location_picker" id="p$Ph8wEe0XoP#ks5#9Nt">
+              <field name="LOCATION">{"x":200,"y":200}</field>
+            </block>
+          </value>
+        </block>
+        <block type="variables_set" id="fXn,U[?LRWWvSKOhe=bn" x="32" y="63">
+          <field name="VAR" id="n`_IY?HES|9qQ/cu*1co">score</field>
+          <value name="VALUE">
+            <block type="math_number" id="Sg~0tgXZ+$|x:hXADq~L">
+              <field name="NUM">0</field>
+            </block>
+          </value>
+        </block>
+        <block type="math_change" id="Xtk0Wuz]qYA2a}VYyuSn" x="97" y="97">
+          <field name="VAR" id="n`_IY?HES|9qQ/cu*1co">score</field>
+          <value name="DELTA">
+            <shadow type="math_number" id="MIV.zaN{.y8?~;([e*,B">
+              <field name="NUM">1</field>
+            </shadow>
+            <block type="math_number" id="ub/*eh.yhORdS$;==J4]">
+              <field name="NUM">1</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_ifVarEquals" id="^[_u*x!~G%Ss}tvJYO6M" x="326" y="125">
+          <field name="NUM" id="n`_IY?HES|9qQ/cu*1co">score</field>
+        </block>
+        <block type="gamelab_setBackgroundImageAs" id="l8$mN@=wg,pKFYRD:+aw" x="47" y="168">
+          <field name="IMG">"background_landscape_26"</field>
+        </block>
+        <block type="gamelab_playSound" id="2=6uV8c=c%-F8R:pdSeT" x="16" y="246">
+          <field name="SOUND">sound://category_digital/ping.mp3</field>
+        </block>
+        <block type="gamelab_setForegroundEffect" id="XLj9i=aa-0[AHq.k}}iB" x="256" y="241">
+          <field name="EFFECT">"bubbles"</field>
+        </block>
+        <block type="gamelab_showTitleScreen" id="pBeC]IslTL]K@7A6a/i2" x="16" y="286">
+          <value name="TITLE">
+            <block type="text" id="yDcdU9y(g``ImFUC};_L">
+              <field name="TEXT"/>
+            </block>
+          </value>
+          <value name="SUBTITLE">
+            <block type="text" id="kvF$WZJO}[N=(~~NcFs6">
+              <field name="TEXT"/>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_hideTitleScreen" id="[AP{H:%ECp/iWv%d.xAH" x="16" y="377"/>
+        <block type="gamelab_makeNewSpriteAnon" id="k=B7s95|3ddw`jPI5,an" x="16" y="416">
+          <field name="ANIMATION_NAME">"game_cow"</field>
+          <value name="LOCATION">
+            <block type="gamelab_location_picker" id="x2B7dxZmd6(RzU.h1[Yy">
+              <field name="LOCATION">{"x":200,"y":200}</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_makeSpritesWithSize" id="c1yvnPJV!xRwQF_Z2=A9" x="16" y="482">
+          <field name="SIZE">100</field>
+          <field name="COSTUME">"game_cow"</field>
+          <value name="NUM">
+            <block type="math_number" id="3vvnf~2b,,z=s/6Z?9^=">
+              <field name="NUM">3</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_makeBurst" id="pZTtwD3.1SGGT)R=Oy^0" x="16" y="548">
+          <field name="EFFECT">"burst"</field>
+          <field name="ANIMATION_NAME">"game_cow"</field>
+          <value name="NUM">
+            <block type="math_number" id="Pj0ty(Z(Gqv=5~:RN;`E">
+              <field name="NUM">10</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_makeSpritesGridInput" id="2A:g!Cy)bjHxC1)IHyqa" x="413" y="573">
+          <field name="ANIMATION_NAME">"game_cow"</field>
+          <value name="GRID">
+            <block type="gamelab_bitmap" id="s3mow6Fx.@iH;;9cA)_Z">
+              <field name="GRID">[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_spriteSay" id="53{-89xx,W1:d6)oyQ#l" x="16" y="614">
+          <field name="SPEECH">Hello, world!</field>
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation" id="wEQ6#*HMP%@ccDpNBJWt" movable="false">
+              <field name="ANIMATION">"game_cow"</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_spriteSayTime" id="_3KD%96S/ierp4Db}vR3" x="16" y="690">
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation" id="/]~|Sa!|Uqk(brdV+M=." movable="false">
+              <field name="ANIMATION">"game_cow"</field>
+            </block>
+          </value>
+          <value name="TEXT1">
+            <block type="text" id="ou]F`~tE#[vk0U9gL^ed">
+              <field name="TEXT">Hello, world!</field>
+            </block>
+          </value>
+          <value name="NUM">
+            <block type="math_number" id="V#X9_tl61U!udL}[pB:G">
+              <field name="NUM">4</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_setProp" id="~mNL8Iq{dH=[jV{-o]X+" x="16" y="766">
+          <field name="PROPERTY">"scale"</field>
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation" id="nC@,pCS$m+ibwr*YhsGc" movable="false">
+              <field name="ANIMATION">"game_cow"</field>
+            </block>
+          </value>
+          <value name="VAL">
+            <block type="math_number" id="$}Auqv}r?T4^T)d);VD2">
+              <field name="NUM">50</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_changePropBy" id="$w$-R:pP/u8u09hU2dV*" x="16" y="842">
+          <field name="PROPERTY">"scale"</field>
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation" id="H0SOirc.|7z$ic/+B|jj" movable="false">
+              <field name="ANIMATION">"game_cow"</field>
+            </block>
+          </value>
+          <value name="VAL">
+            <block type="math_number" id="W6UI_3Tftqy.kWW)EhlM">
+              <field name="NUM">10</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_setAnimation" id="%2}:?i[s|Kml+DtNu_pO" x="16" y="918">
+          <field name="ANIMATION">"game_cow"</field>
+          <value name="THIS">
+            <block type="gamelab_allSpritesWithAnimation" id="PV5^F0*Z!5`2c;Od::(6" movable="false">
+              <field name="ANIMATION">"game_cow"</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_destroy" id=")0x%NA*s%/R2-v$;~gub" x="16" y="994">
+          <value name="THIS">
+            <block type="gamelab_allSpritesWithAnimation" id="8tN/UW{F/X#16g$z$H5e" movable="false">
+              <field name="ANIMATION">"game_cow"</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_toggleBehaviorSimple" id="U4`%8WO|j#$PV555ICd*" x="216" y="1047">
+          <field name="TOGGLE">"begins"</field>
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation" id="]_3QSkU,J|Tr#bf4zSAz">
+              <field name="ANIMATION">"game_cow"</field>
+            </block>
+          </value>
+          <value name="BEHAVIOR">
+            <block type="gamelab_behaviorPicker" id="h]]+8LOkLIuH(Zy=zbgU">
+              <field name="BEHAVIOR">driving with arrow keys</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_removeAllBehaviors" id="v}u%3K_q3-|1TOr-^T|X" x="351" y="1115">
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation" id="ZDsd)e-yWp`%oDd#ya+)" movable="false">
+              <field name="ANIMATION">"game_cow"</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_spriteClicked" id="]pOXTOb?)ZVt8B7!2m}3" x="16" y="1178">
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation" id="%.S(6PL2)@6BLf.!4}Vq" movable="false">
+              <field name="ANIMATION">"game_cow"</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_checkTouching" id="8mg}.yCF;A//1f-vlsA," x="12" y="1262">
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE1">
+            <block type="gamelab_allSpritesWithAnimation" id="2(^^d$ID+{!TC,#E%wgM" movable="false">
+              <field name="ANIMATION">"game_cow"</field>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="gamelab_allSpritesWithAnimation" id="7([6Q0N_u[;Iz2AtEDWf" movable="false">
+              <field name="ANIMATION">"game_cow"</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_atTime" id="Hz%@s=b-N~W)IU`vTJwF" x="14" y="1353">
+          <field name="UNIT">"seconds"</field>
+          <value name="N">
+            <block type="math_number" id="rER,|hS#*i]*6nVD!}y/" movable="false">
+              <field name="NUM">3</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_keyPressed" id="6f,ldF#SByfQB=jt{XL(" x="18" y="1414">
+          <field name="CONDITION">"when"</field>
+          <field name="KEY">"up"</field>
+        </block>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</GamelabJr>

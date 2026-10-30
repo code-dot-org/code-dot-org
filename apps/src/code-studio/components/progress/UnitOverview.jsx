@@ -1,30 +1,37 @@
-import React from 'react';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
+import React from 'react';
 import {connect} from 'react-redux';
-import i18n from '@cdo/locale';
-import UnitOverviewTopRow from './UnitOverviewTopRow';
+
+import RequiresAiChatToolsAlert from '@cdo/apps/aiComponentLibrary/aiChatToolsDependencyAlerts/RequiresAiChatToolsAlert';
+import RequiresInaccessibleAiModelsAlert from '@cdo/apps/aiComponentLibrary/aiChatToolsDependencyAlerts/RequiresInaccessibleAiModelsAlert';
 import RedirectDialog from '@cdo/apps/code-studio/components/RedirectDialog';
-import UnversionedScriptRedirectDialog from '@cdo/apps/code-studio/components/UnversionedScriptRedirectDialog';
-import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import ProgressTable from '@cdo/apps/templates/progress/ProgressTable';
-import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
-import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
-import UnitOverviewHeader from './UnitOverviewHeader';
 import {isScriptHiddenForSection} from '@cdo/apps/code-studio/hiddenLessonRedux';
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import {resourceShape} from '@cdo/apps/levelbuilder/shapes';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import EndOfLessonDialog from '@cdo/apps/templates/EndOfLessonDialog';
+import GoogleClassroomAttributionLabel from '@cdo/apps/templates/progress/GoogleClassroomAttributionLabel';
+import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
+import ProgressTable from '@cdo/apps/templates/progress/ProgressTable';
+import {unitCalendarLesson} from '@cdo/apps/templates/progress/unitCalendarLessonShapes';
+import AssessmentsAnnouncementDialog from '@cdo/apps/templates/rubrics/AssessmentsAnnouncementDialog';
+import {assignmentCourseVersionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import {
   onDismissRedirectDialog,
   dismissedRedirectDialog,
 } from '@cdo/apps/util/dismissVersionRedirect';
-import {assignmentCourseVersionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
-import {unitCalendarLesson} from '@cdo/apps/templates/progress/unitCalendarLessonShapes';
-import GoogleClassroomAttributionLabel from '@cdo/apps/templates/progress/GoogleClassroomAttributionLabel';
-import UnitCalendar from './UnitCalendar';
-import color from '@cdo/apps/util/color';
-import EndOfLessonDialog from '@cdo/apps/templates/EndOfLessonDialog';
-import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {AiChatToolsDependency} from '@cdo/generated-scripts/sharedConstants';
+import i18n from '@cdo/locale';
+
+import UnitCalendarGrid from './UnitCalendarGrid';
+import UnitOverviewActionRow from './UnitOverviewActionRow';
+import UnitOverviewHeader from './UnitOverviewHeader';
+import UnitOverviewTopRow from './UnitOverviewTopRow';
+
+import styles from './unit-overview.module.scss';
 
 /**
  * Lesson progress component used in level header and script overview.
@@ -37,6 +44,7 @@ class UnitOverview extends React.Component {
     courseId: PropTypes.number,
     courseTitle: PropTypes.string,
     courseLink: PropTypes.string,
+    isSingleUnitCourse: PropTypes.bool,
     excludeCsfColumnInLegend: PropTypes.bool.isRequired,
     teacherResources: PropTypes.arrayOf(resourceShape),
     studentResources: PropTypes.arrayOf(resourceShape),
@@ -55,16 +63,22 @@ class UnitOverview extends React.Component {
     isMigrated: PropTypes.bool,
     scriptOverviewPdfUrl: PropTypes.string,
     scriptResourcesPdfUrl: PropTypes.string,
-    showUnversionedRedirectWarning: PropTypes.bool,
     isCsdOrCsp: PropTypes.bool,
     completedLessonNumber: PropTypes.string,
     isProfessionalLearningCourse: PropTypes.bool,
     publishedState: PropTypes.oneOf(Object.values(PublishedState)),
     participantAudience: PropTypes.string,
+    showAiAssessmentsAnnouncement: PropTypes.bool,
+    isOnTeacherDashboard: PropTypes.bool,
+    aiChatToolsDependency: PropTypes.oneOf(
+      Object.values(AiChatToolsDependency)
+    ),
+    unitRequiresInaccessibleAiModels: PropTypes.bool,
 
     // redux provided
     scriptId: PropTypes.number.isRequired,
     scriptName: PropTypes.string.isRequired,
+    scriptPath: PropTypes.string.isRequired,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     hiddenLessonState: PropTypes.object,
     selectedSectionId: PropTypes.number,
@@ -81,6 +95,20 @@ class UnitOverview extends React.Component {
     if (props.userType === 'teacher') {
       analyticsReporter.sendEvent(
         EVENTS.UNIT_OVERVIEW_PAGE_VISITED_BY_TEACHER_EVENT,
+        {
+          'unit name': props.scriptName,
+        }
+      );
+    } else if (props.userType === 'student') {
+      analyticsReporter.sendEvent(
+        EVENTS.UNIT_OVERVIEW_PAGE_VISITED_BY_STUDENT_EVENT,
+        {
+          'unit name': props.scriptName,
+        }
+      );
+    } else {
+      analyticsReporter.sendEvent(
+        EVENTS.UNIT_OVERVIEW_PAGE_VISITED_BY_SIGNED_OUT_USER_EVENT,
         {
           'unit name': props.scriptName,
         }
@@ -104,6 +132,7 @@ class UnitOverview extends React.Component {
       studentResources,
       scriptId,
       scriptName,
+      scriptPath,
       viewAs,
       showCourseUnitVersionWarning,
       showScriptVersionWarning,
@@ -123,14 +152,19 @@ class UnitOverview extends React.Component {
       isMigrated,
       scriptOverviewPdfUrl,
       scriptResourcesPdfUrl,
-      showUnversionedRedirectWarning,
       isCsdOrCsp,
       completedLessonNumber,
       courseOfferingId,
       courseVersionId,
+      courseId,
       isProfessionalLearningCourse,
+      isSingleUnitCourse,
       publishedState,
       participantAudience,
+      showAiAssessmentsAnnouncement,
+      isOnTeacherDashboard = false,
+      aiChatToolsDependency,
+      unitRequiresInaccessibleAiModels,
     } = this.props;
 
     const displayRedirectDialog =
@@ -141,24 +175,17 @@ class UnitOverview extends React.Component {
       !!scriptId &&
       isScriptHiddenForSection(hiddenLessonState, selectedSectionId, scriptId);
 
-    const showUnversionedRedirectWarningDialog =
-      showUnversionedRedirectWarning && !this.state.showRedirectDialog;
-
     return (
       <div>
         {completedLessonNumber && (
           <EndOfLessonDialog lessonNumber={completedLessonNumber} />
         )}
         <div>
-          {showUnversionedRedirectWarningDialog && (
-            <UnversionedScriptRedirectDialog />
-          )}
-          {this.props.courseLink && (
-            <div className="unit-breadcrumb" style={styles.navArea}>
-              <a
-                href={this.props.courseLink}
-                style={styles.navLink}
-              >{`< ${this.props.courseTitle}`}</a>
+          {!this.props.isSingleUnitCourse && this.props.courseLink && (
+            <div className={classNames('unit-breadcrumb', styles.navArea)}>
+              <a href={this.props.courseLink} className={styles.navLink}>
+                {`< ${this.props.courseTitle}`}
+              </a>
             </div>
           )}
           {displayRedirectDialog && (
@@ -177,11 +204,39 @@ class UnitOverview extends React.Component {
             showHiddenUnitWarning={isHiddenUnit}
             versions={versions}
             courseName={courseName}
+            courseId={courseId}
             userId={userId}
-          />
+            isOnTeacherDashboard={isOnTeacherDashboard}
+          >
+            <UnitOverviewActionRow
+              courseVersionId={courseVersionId}
+              versions={versions}
+              viewAs={viewAs}
+              showAssignButton={showAssignButton}
+              courseOfferingId={courseOfferingId}
+              isSingleUnitCourse={isSingleUnitCourse}
+              currentCourseId={courseId}
+              scriptId={scriptId}
+              participantAudience={participantAudience}
+              scriptOverviewPdfUrl={scriptOverviewPdfUrl}
+              scriptResourcesPdfUrl={scriptResourcesPdfUrl}
+              teacherResources={teacherResources}
+              isMigrated={isMigrated}
+              aiChatToolsDependency={aiChatToolsDependency}
+            />
+            {viewAs === ViewType.Instructor &&
+              unitRequiresInaccessibleAiModels && (
+                <RequiresInaccessibleAiModelsAlert subject="unit" />
+              )}
+            {viewAs === ViewType.Instructor &&
+              aiChatToolsDependency === AiChatToolsDependency.ESSENTIAL && (
+                <RequiresAiChatToolsAlert />
+              )}
+          </UnitOverviewHeader>
+          {/* unit-calendar-for-printing has style `display: none` from `style/curriculum/scripts.scss` which is added from the BE */}
           {showCalendar && viewAs === ViewType.Instructor && (
             <div className="unit-calendar-for-printing print-only">
-              <UnitCalendar
+              <UnitCalendarGrid
                 lessons={unitCalendarLessons}
                 weeklyInstructionalMinutes={weeklyInstructionalMinutes || 225}
                 weekWidth={550}
@@ -191,7 +246,6 @@ class UnitOverview extends React.Component {
           <UnitOverviewTopRow
             teacherResources={teacherResources}
             studentResources={studentResources}
-            showAssignButton={showAssignButton}
             assignedSectionId={assignedSectionId}
             showCalendar={showCalendar}
             weeklyInstructionalMinutes={weeklyInstructionalMinutes}
@@ -199,13 +253,12 @@ class UnitOverview extends React.Component {
             isMigrated={isMigrated}
             scriptOverviewPdfUrl={scriptOverviewPdfUrl}
             scriptResourcesPdfUrl={scriptResourcesPdfUrl}
-            courseOfferingId={courseOfferingId}
-            courseVersionId={courseVersionId}
             isProfessionalLearningCourse={isProfessionalLearningCourse}
             courseLink={this.props.courseLink}
             publishedState={publishedState}
             participantAudience={participantAudience}
             isUnitWithLevels={unitHasLevels}
+            scriptPath={scriptPath}
           />
         </div>
         <ProgressTable minimal={false} />
@@ -214,23 +267,17 @@ class UnitOverview extends React.Component {
           includeReviewStates={isCsdOrCsp}
         />
         <GoogleClassroomAttributionLabel />
+        {showAiAssessmentsAnnouncement ? (
+          <AssessmentsAnnouncementDialog />
+        ) : (
+          <div id="uitest-no-ai-assessments-announcement" />
+        )}
       </div>
     );
   }
 }
 
-const styles = {
-  navLink: {
-    fontSize: 14,
-    lineHeight: '22px',
-    color: color.purple,
-  },
-  navArea: {
-    padding: '10px 0px',
-  },
-};
-
-export const UnconnectedUnitOverview = Radium(UnitOverview);
+export const UnconnectedUnitOverview = UnitOverview;
 export default connect((state, ownProps) => ({
   scriptId: state.progress.scriptId,
   scriptName: state.progress.scriptName,

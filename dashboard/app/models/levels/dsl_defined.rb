@@ -22,6 +22,7 @@
 #  index_levels_on_game_id    (game_id)
 #  index_levels_on_level_num  (level_num)
 #  index_levels_on_name       (name)
+#  index_levels_on_type       (type)
 #
 
 # Levels defined using a text-based ruby DSL syntax.
@@ -147,14 +148,25 @@ class DSLDefined < Level
     existing_filename.presence || canonical_filename
   end
 
+  # See dashboard/config/PARTITIONS.md.
+  SCRIPTS_DIRS = {
+    production_curriculum: 'config/scripts',
+    ui_test_curriculum: 'test/ui/config/scripts',
+    standalone_projects: 'config/standalone_projects/scripts',
+  }.freeze
+
+  def scripts_dir
+    SCRIPTS_DIRS.fetch(Policies::LevelFiles.partition_for_name(name))
+  end
+
   def existing_filename
-    # Find a file in config/scripts/**/*.[class]* containing the string "name '[name]'"
-    grep_string = "grep -lir \"name '#{name}'\" --include=*.#{self.class.to_s.underscore}* #{Rails.root}/config/scripts --color=never"
+    # Find a file in [scripts_dir]/**/*.[class]* containing the string "name '[name]'"
+    grep_string = "grep -lir \"name '#{name}'\" --include=*.#{self.class.to_s.underscore}* #{Rails.root}/#{scripts_dir} --color=never"
     `#{grep_string}`.chomp
   end
 
   def canonical_filename
-    "config/scripts/#{name.parameterize.underscore}.#{self.class.to_s.underscore}"
+    "#{scripts_dir}/#{name.parameterize.underscore}.#{self.class.to_s.underscore}"
   end
 
   def file_path
@@ -205,7 +217,7 @@ class DSLDefined < Level
     if params[:dsl_text].present?
       self.class.create_from_level_builder({dsl_text: params.delete(:dsl_text)}, params, name)
     else
-      super(params)
+      super
     end
   end
 
@@ -241,7 +253,3 @@ class DSLDefined < Level
     FileUtils.rm_f(file_path)
   end
 end
-
-# The following capitalization variant is needed so that annotate_models
-# is able to find the model class.
-DslDefined = DSLDefined

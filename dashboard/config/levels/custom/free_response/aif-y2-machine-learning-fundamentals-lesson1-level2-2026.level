@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-08-18T17:57:33.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "skip_dialog": true,
+    "skip_sound": true,
+    "encrypted": "false",
+    "long_instructions": "**☑️ Do This:**\r\n- Answer these two questions:\r\n  - How successful was your Doodle Identifier at making predictions? How do you know?\r\n  - What is the difference between machine learning and logic-based AI?",
+    "stay_on_level_after_submit": "false",
+    "height": "250",
+    "allow_user_uploads": "false",
+    "submittable": "true",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-08-18 18:06:34 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-08-18 18:07:24 +0000\",\"changed\":[\"height\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

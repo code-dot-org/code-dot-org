@@ -1,0 +1,14 @@
+{
+  "category_key": "javascript",
+  "content": "# Let\n\nThe `let` keyword creates a variable. A variable made with `let` can be given a new value later, so it is useful for values that change, like a score, health amount, username, or current choice.",
+  "examples": "[{\"name\":\"Store a Number\",\"description\":\"This creates a variable named `health` and stores the number `20`.\",\"code\":\"`let health = 20;`\"},{\"name\":\"Update a Value\",\"description\":\"This creates a variable and then changes its value later.\",\"code\":\"```\\nlet username = \\\"GamerGirl\\\";\\nusername = \\\"CodeHero\\\";\\n```\"}]",
+  "external_documentation": "",
+  "fields": "[]",
+  "key": "let",
+  "name": "Let",
+  "syntax": "`let health = 20;`",
+  "tips": "- Use `let` when the value may change later in your code.\n- Give variables clear names that describe what they store.\n- Remember to use one `=` when assigning a value.\n- Strings need quotation marks, like `\"GamerGirl\"`.\n- In Web Lab, `let` is often used for values like scores, counters, selected options, or lists that update.\n- Use `const` instead of `let` when the variable should not be assigned a new value later.",
+  "methods": [
+
+  ]
+}

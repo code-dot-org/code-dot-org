@@ -1,0 +1,15 @@
+{
+  "key": "prompting-and-refining",
+  "description": "Demonstrates the iterative loop of experimenting, analyzing, and refining a prompt using a futuristic sneaker design example.",
+  "s3_uri": "s3://cdo-supplemental-curricular-content/json-videos/prompting-and-refining.json",
+  "labs": [
+
+  ],
+  "json_schema_version": 1,
+  "audience": "Student",
+  "objective_keys": [
+    "5777a325-2625-47bf-ac2a-3f64517c62b7",
+    "adb9a526-708e-4e0a-bab3-bbeb39cb7fda",
+    "1f6e6c20-6ff8-43d1-934b-e9d2987e274c"
+  ]
+}

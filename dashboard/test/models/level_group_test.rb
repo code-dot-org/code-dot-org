@@ -15,8 +15,8 @@ class LevelGroupTest < ActiveSupport::TestCase
   end
 
   def get_evaluation_multi_dsl(id)
-    lesson1 = create :lesson
-    lesson2 = create :lesson
+    lesson1 = create(:lesson)
+    lesson2 = create(:lesson)
 
     "
     name 'evaluation_multi_#{id}'
@@ -85,6 +85,23 @@ MARKDOWN
     assert_equal pages[2].levels_and_texts_offset, 6
     assert_equal pages[2].levels_offset, 5
     assert_equal pages[2].page_number, 3
+  end
+
+  # A level_group with no pages (or that failed to seed due to missing
+  # properties_encryption_key) has no levels_and_texts_per_page property at all.
+  # Lesson#summarize -> ScriptLevel.summarize_extra_puzzle_pages ->
+  # LevelGroup#pages must read it as a group with no pages rather than raising.
+  test 'an unseeded level group reports no pages instead of raising' do
+    level_group = create(:level_group)
+    assert_nil level_group.properties['levels_and_texts_per_page']
+
+    assert_empty level_group.pages
+    assert_empty level_group.levels
+    assert_empty level_group.levels_and_texts
+
+    # summarize_extra_puzzle_pages only needs the level id from the summary; it
+    # reads the rest of the hash once there is a second page to describe.
+    assert_empty ScriptLevel.summarize_extra_puzzle_pages({ids: [level_group.id]})
   end
 
   # Test that a level_group can't be created if it has duplicate levels.
@@ -197,9 +214,9 @@ MARKDOWN
   end
 
   test "get_sublevel_last_attempt" do
-    script = create :script
-    level1 = create :multi
-    level2 = create :multi
+    script = create(:script, :in_single_unit_course)
+    level1 = create(:multi)
+    level2 = create(:multi)
     level_group_dsl = <<~DSL
       name 'level_group'
 
@@ -211,21 +228,21 @@ MARKDOWN
     DSL
     LevelGroup.create_from_level_builder({}, {name: 'level_group', dsl_text: level_group_dsl})
 
-    teacher = create :teacher
-    student = create :student
+    teacher = create(:teacher)
+    student = create(:student)
 
-    student_level_source = create :level_source, data: '1'
-    teacher_level_source = create :level_source, data: '2'
+    student_level_source = create(:level_source, data: '1')
+    teacher_level_source = create(:level_source, data: '2')
 
-    create :user_level, user: student, level: level1, script: script, level_source: student_level_source
-    create :user_level, user: teacher, level: level1, script: script, level_source: teacher_level_source
+    create(:user_level, user: student, level: level1, script: script, level_source: student_level_source)
+    create(:user_level, user: teacher, level: level1, script: script, level_source: teacher_level_source)
 
     # loads student's attempt when current_user and user are provided
     assert_equal '1', LevelGroup.get_sublevel_last_attempt(teacher, student, level1, script)
     # loads user's attempt if user provided
     assert_equal '2', LevelGroup.get_sublevel_last_attempt(teacher, nil, level1, script)
     # does not load attempt for a different script
-    assert_nil LevelGroup.get_sublevel_last_attempt(teacher, nil, level1, create(:script))
+    assert_nil LevelGroup.get_sublevel_last_attempt(teacher, nil, level1, create(:script, :in_single_unit_course))
     # returns undefined when signed out
     assert_nil LevelGroup.get_sublevel_last_attempt(nil, nil, level1, script)
   end
@@ -288,8 +305,8 @@ MARKDOWN
     DSL
 
     # Create the sublevels.
-    create :free_response, name: 'conflicting-level-2018'
-    create :free_response, name: 'conflicting-level-2019'
+    create(:free_response, name: 'conflicting-level-2018')
+    create(:free_response, name: 'conflicting-level-2019')
 
     # Create the level_group.
     level_group = LevelGroup.create_from_level_builder({}, {name: 'my_level_group', dsl_text: level_group_input_dsl})
@@ -317,7 +334,7 @@ MARKDOWN
     # DSL for the level_group.
     level_group_input_dsl = "
   name 'level_group_test long assessment'
-  title 'Long Assessment'
+  title 'Long\\'s Assessment'
   submittable 'true'
 
   page
@@ -334,7 +351,7 @@ MARKDOWN
   "
 
     expected_copy_dsl = "name 'level_group_test long assessment_copy'
-title 'Long Assessment'
+title 'Long\\'s Assessment'
 submittable 'true'
 
 page
@@ -455,14 +472,14 @@ level 'level1_copy2'"
     srand 1
 
     # Create script with an anonymous assessment.
-    script = create :script
-    lesson_group = create :lesson_group, script: script
-    lesson = create :lesson, script: script, lesson_group: lesson_group
-    sub_level1 = create :text_match, name: 'level_free_response', type: 'TextMatch'
-    sub_level2 = create :multi, name: 'level_multi_unsubmitted', type: 'Multi'
-    sub_level3 = create :multi, name: 'level_multi_correct', type: 'Multi'
-    sub_level4 = create :multi, name: 'level_multi_incorrect', type: 'Multi'
-    create :multi, name: 'level_multi_unattempted', type: 'Multi'
+    script = create(:script, :in_single_unit_course)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+    sub_level1 = create(:text_match, name: 'level_free_response', type: 'TextMatch')
+    sub_level2 = create(:multi, name: 'level_multi_unsubmitted', type: 'Multi')
+    sub_level3 = create(:multi, name: 'level_multi_correct', type: 'Multi')
+    sub_level4 = create(:multi, name: 'level_multi_incorrect', type: 'Multi')
+    create(:multi, name: 'level_multi_unattempted', type: 'Multi')
 
     level_group_dsl = <<~DSL
       name 'LevelGroupLevel1'
@@ -478,7 +495,7 @@ level 'level1_copy2'"
     DSL
     level1 = LevelGroup.create_from_level_builder({}, {name: 'LevelGroupLevel1', dsl_text: level_group_dsl})
 
-    script_level = create :script_level, script: script, levels: [level1], assessment: true, lesson: lesson
+    script_level = create(:script_level, script: script, levels: [level1], assessment: true, lesson: lesson)
 
     updated_at = Time.now
 
@@ -496,18 +513,23 @@ level 'level1_copy2'"
 
     # All students did the LevelGroup, and the free response part of the survey.
     students.each_with_index do |student, student_index|
-      create :user_level, user: student, script: script, level: level1,
+      create(:user_level, user: student, script: script, level: level1,
         level_source: create(:level_source, level: level1), best_result: 100,
         submitted: true, updated_at: updated_at
+)
 
-      create :user_level, user: student, script: script, level: sub_level1,
+      create(:user_level, user: student, script: script, level: sub_level1,
         level_source: create(:level_source, level: sub_level1, data: "Free response from student #{student_index + 3}")
-      create :user_level, user: student, script: script, level: sub_level2,
+)
+      create(:user_level, user: student, script: script, level: sub_level2,
         level_source: create(:level_source, level: sub_level2, data: "-1")
-      create :user_level, user: student, script: script, level: sub_level3,
+)
+      create(:user_level, user: student, script: script, level: sub_level3,
         level_source: create(:level_source, level: sub_level3, data: "-1")
-      create :user_level, user: student, script: script, level: sub_level4,
+)
+      create(:user_level, user: student, script: script, level: sub_level4,
         level_source: create(:level_source, level: sub_level4, data: "-1")
+)
     end
 
     actual_survey_results = LevelGroup.get_summarized_survey_results(script, section)
@@ -570,12 +592,12 @@ level 'level1_copy2'"
 
   test 'get_summarized_survey_results returns no results when less than 5 responses' do
     # Create script with an anonymous assessment.
-    script = create :script
-    lesson_group = create :lesson_group, script: script
-    lesson = create :lesson, script: script, lesson_group: lesson_group
-    create :text_match, name: 'level_free_response', type: 'TextMatch'
-    create :multi, name: 'level_multi_unsubmitted', type: 'Multi'
-    create :multi, name: 'level_multi_unattempted', type: 'Multi'
+    script = create(:script, :in_single_unit_course)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+    create(:text_match, name: 'level_free_response', type: 'TextMatch')
+    create(:multi, name: 'level_multi_unsubmitted', type: 'Multi')
+    create(:multi, name: 'level_multi_unattempted', type: 'Multi')
 
     level_group_dsl = <<~DSL
       name 'LevelGroupLevel1'
@@ -589,7 +611,7 @@ level 'level1_copy2'"
     DSL
     level1 = LevelGroup.create_from_level_builder({}, {name: 'LevelGroupLevel1', dsl_text: level_group_dsl})
 
-    script_level = create :script_level, script: script, levels: [level1], assessment: true, lesson: lesson
+    script_level = create(:script_level, script: script, levels: [level1], assessment: true, lesson: lesson)
 
     # Create a section
     teacher = create(:teacher)
@@ -611,7 +633,7 @@ level 'level1_copy2'"
   end
 
   test 'level group cannot contain level group' do
-    create :level_group, name: 'level group'
+    create(:level_group, name: 'level group')
 
     dsl_text = <<~DSL
       name 'other level group'
@@ -626,7 +648,7 @@ level 'level1_copy2'"
   end
 
   test 'level group cannot contain bubble choice' do
-    create :bubble_choice_level, name: 'bubble choice'
+    create(:bubble_choice_level, name: 'bubble choice')
 
     dsl_text = <<~DSL
       name 'level group'
@@ -638,5 +660,34 @@ level 'level1_copy2'"
       LevelGroup.create_from_level_builder({}, {name: 'level group', dsl_text: dsl_text})
     end
     assert_includes e.message, 'LevelGroup cannot contain level type bubble_choice'
+  end
+
+  test 'a level group and its sublevels must be on the same side of the UI Test partition' do
+    ui_test_sublevel = create(:sublevel, name: 'UI Test LevelGroupTest sublevel')
+    prod_sublevel = create(:sublevel, name: 'LevelGroupTest prod sublevel')
+
+    prod_level_group = create(:level_group, name: 'LevelGroupTest prod parent')
+    e = assert_raises do
+      prod_level_group.update_levels_and_texts_by_page([[ui_test_sublevel]])
+    end
+    assert_includes e.message, ui_test_sublevel.name
+
+    ui_test_level_group = create(:level_group, name: 'UI Test LevelGroupTest parent')
+    e = assert_raises do
+      ui_test_level_group.update_levels_and_texts_by_page([[prod_sublevel]])
+    end
+    assert_includes e.message, prod_sublevel.name
+
+    # same-side sublevels are fine in both partitions
+    ui_test_level_group.update_levels_and_texts_by_page([[ui_test_sublevel]])
+    assert_equal [ui_test_sublevel], ui_test_level_group.reload.all_child_levels
+    prod_level_group.update_levels_and_texts_by_page([[prod_sublevel]])
+    assert_equal [prod_sublevel], prod_level_group.reload.all_child_levels
+
+    # a refused update leaves the existing sublevels in place
+    assert_raises ActiveRecord::RecordInvalid do
+      ui_test_level_group.update_levels_and_texts_by_page([[prod_sublevel]])
+    end
+    assert_equal [ui_test_sublevel], ui_test_level_group.reload.all_child_levels
   end
 end

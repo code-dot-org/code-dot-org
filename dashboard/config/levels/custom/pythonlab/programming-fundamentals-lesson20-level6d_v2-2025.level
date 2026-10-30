@@ -1,0 +1,53 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-09-25T19:58:30.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Do this:\r\nThis code is missing a condition to check for.    \r\n- Read the code carefully and press Run. \r\n- Use the console's error message to hunt for the bug. \r\n- Fix the bug. \r\n",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "puzzle = input(\"What has hands but cannot clap? \").lower()\n\nif puzzle:\n    print(\"🕰️ Correct! A clock has hands but cannot clap.\")\nelse:\n    print(\"❌ Incorrect! Try again.\")\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzqvscA8WAmJWuwf6y46t1dVz39FK6yPC\nFiFsQDwLMpQ66+N5WWFp9pkD+p9GuopZLpPniXmvTidtjSuwm1p9gaY0Y/B8\nD/zKgL2g9jmP9CR8iB+YL49FYy+4VTDf72+nodB7oZfaezyB0UAmhXjmuw7r\nAMeI1xhgJlt6+/cFV+tvtu+LsZC2xx8hjHiUG0njg5eZRQ2BAapAE2sp3J2r\nmEc8B3dTCLYBIOXFnJpfpd4pymD9JgpkjiYIo3aBl2arkv3oiVesX5whdoLU\nvrHYcNkG+dMklqXgmapH5bxipPLRwrEENO7W2scGgNCG1NQyJuzwLe1MUbYn\nsi5+gzzbU8ttwveG4g3fSdZPKutOQw2X\n",
+    "display_name": "Conditional logic bug",
+    "thumbnail_url": "https://images.code.org/7c890fd6dfcd2af035d545081913f5d7-python - clock.jpg",
+    "validation_file": {
+      "id": "1",
+      "name": "test_main.py",
+      "language": "py",
+      "contents": "import unittest\n\nclass TestClockCondition(unittest.TestCase):\n\n    def test_correct_condition(self):\n        try:\n            with open('main.py', 'r') as f:\n                content = f.read()\n\n            # Ensure that the if statement has been updated correctly\n            if 'if puzzle == \"clock\":' not in content:\n                self.fail(\n                    \"The condition has not been correctly modified. \"\n                    \"Please change `if puzzle:` to `if puzzle == \\\"clock\\\":` \"\n                    \"so that it correctly checks for the answer.\"\n                )\n\n        except FileNotFoundError:\n            self.fail(\"The file 'main.py' was not found. Please make sure it exists in the same directory.\")\n        except Exception as e:\n            self.fail(f\"Error running the test: {e}\")\n\n\nif __name__ == \"__main__\":\n    unittest.main()\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    },
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:58:30.407+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson20-level6d_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson20-level6d_2025\"}]"
+}]]></config>
+</Pythonlab>

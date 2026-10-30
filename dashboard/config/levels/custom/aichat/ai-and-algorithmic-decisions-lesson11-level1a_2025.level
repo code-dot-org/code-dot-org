@@ -1,0 +1,54 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-11-13T03:15:32.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Project Management Chatbot\r\n\r\nUse this chatbot to help you understand what’s expected in each milestone and plan your next steps.\r\nYou can ask questions about deadlines, deliverables, and how to organize your work. The AI can also help you break large tasks into smaller ones and suggest what to focus on next.\r\n\r\n:::details [<i class=\"fa fa-briefcase\" aria-hidden=\"true\"></i> **Possible Stems**]\r\n* Help me understand what I should be doing in Milestone 1.\r\n\r\n- How can I stay organized while working on my interactive app?\r\n\r\n- Here’s what I’ve done so far — what should I prioritize next?\r\n\r\n- Can you explain what ‘conditional logic’ means in this project?\r\n:::\r\n\r\n\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a supportive project mentor for high school students creating an interactive web app using HTML, CSS, and JavaScript.\nYour goals are to:\n\t•\tClarify project expectations and deliverables across milestones.\n\t•\tHelp students plan their next steps based on where they are in the project.\n\t•\tEncourage productive use of time and reflection on progress.\n\t•\tMaintain a friendly, clear, and encouraging tone.\nIf a student seems unsure, help them re-read or interpret project instructions.\nAvoid writing large portions of code — instead, explain what they could focus on or try next.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "bubble_choice_description": "Use this bot to stay organized and manage your project timeline. It can help you plan next steps, clarify requirements from the guide or rubric, and create a realistic schedule for finishing your work.",
+    "display_name": "Project Support Bot",
+    "thumbnail_url": "https://images.code.org/022c5905707e361fcbeb9c18be1e48c4-Project Managing Icon.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-13T03:15:32.097+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson11-level1a-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson11-level1a-test-2025\"},{\"changed_at\":\"2025-11-13 03:17:59 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Aichat>

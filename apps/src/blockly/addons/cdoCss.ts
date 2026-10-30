@@ -1,36 +1,154 @@
+import fontConstants from '@cdo/apps/fontConstants';
 import color from '@cdo/apps/util/color';
+
 import {BlocklyWrapperType} from '../types';
 
+let cssRegistered = false;
 export default function initializeCss(blocklyWrapper: BlocklyWrapperType) {
+  if (cssRegistered) {
+    return;
+  }
+  cssRegistered = true;
   blocklyWrapper.Css.register(
-    `.fieldGridDropDownContainer.blocklyMenu .blocklyMenuItem {
-      width: 32px;
-      height: 32px;
-      padding: 0px;
-      border: none;
+    `.blocklyFieldGrid {
+      margin: 5px;
     }
-    .fieldGridDropDownContainer .blocklyMenuItem.blocklyMenuItemSelected {
-      background-color: white;
+    .blocklyPlaceholder > .blocklyPath {
+      stroke: var(--text-neutral-primary, #fff);
+      stroke-width: 6px;
+      stroke-dasharray: 6 4;
+      fill-opacity: 0.2;
     }
-    /* Change look of focus/highlighted cell */
-    .fieldGridDropDownContainer .blocklyMenuItem.blocklyMenuItemHighlight {
-      box-shadow: 0 0 0 4px hsla(0.57, 10%, 34%, .2);
+    .blocklyPlaceholderBlank > .blocklyPath {
+      stroke: none;
+      fill-opacity: 0;
     }
-    .blocklyMenuItemContent > img {
-      width: 32px;
-      height: 32px;
+    .blocklyPlaceholderActive > .blocklyPath {
+      /* A blank placeholder gets its outline back under a hovering block. */
+      stroke: var(--text-neutral-primary, #fff);
+      stroke-dasharray: none;
+      fill-opacity: 0.4;
+    }
+    .blocklyFieldGrid .blocklyFieldGridItem {
+      border: none !important;
+      padding: 0px !important;
+      margin: 0px;
+    }
+    .blocklyFieldGrid .blocklyFieldGridItem img {
+      opacity: 1;
       object-fit: contain;
     }
-
+    .blocklyFieldGridContainer {
+      padding: 0px;
+      overflow: auto;
+    }
     .blocklyFlyoutButton {
-      fill: ${color.brand_secondary_default};
+      fill: var(--background-brand-purple-primary);
       cursor: pointer;
     }
     .blocklyFlyoutButtonShadow {
       fill: none;
     }
     .blocklyFlyoutButton:hover {
-      fill: ${color.brand_secondary_dark};
+      fill: var(--background-brand-purple-strong);
+    }
+    /* Change look of the editor in angle fields */
+    .blocklyAngleCircle {
+      fill: ${color.white};
+    }
+    .blocklyAngleGauge {
+      fill: ${color.brand_secondary_default};
+    }
+    .blocklyAngleLine {
+      stroke: ${color.brand_secondary_dark};
+      stroke-width: 3;
+    }
+    .blocklyLimit rect {
+      fill: ${color.brand_accent_default};
+    }
+    .blocklyLimit.overLimit rect {
+      fill: ${color.product_caution_default};
+    }
+    .blocklyLimit.overLimit text {
+      fill: ${color.neutral_dark} !important;
+    }
+    .fieldAngleDropDownContainer .blocklyAngleHelperContainer {
+      border-width: 1px;
+      float: right;
+    }
+    .fieldAngleDropDownContainer .blocklyMenu{
+      float: left;
+    }
+    .fieldAngleDropDownContainer .blocklyMenu::after {
+      content: '';
+      position: absolute;
+      height: 80%;
+      right: 0;
+      top: 10%;
+    }
+    .fieldAngleDropDownContainer .blocklyMenuItem{
+      min-width: 0em;
+    }
+    .k1ColourDropdown .blocklyColourSwatch {
+      height: 35px;
+      width: 45px;
+    }
+    .blocklyDropDownDiv .blocklyMenu {
+      font-family: ${fontConstants['main-font']};
+      font-weight: 400 !important; // Noto Sans Math only supports the normal font-weight
+    }
+    .blocklyShadowFieldText {
+      fill: ${color.neutral_dark40} !important; // Prevents override by .blocklyText
+    }
+    .blocklyShadowMusicFieldRect {
+      fill: ${color.neutral_dark};
+    }
+    .blocklyDisabled .blocklyPath {
+      fill-opacity: 0.5;
+      stroke-opacity: 0.5;
+    }
+    .blocklyPath:focus {
+      outline: none;
+    }
+    /* Excluded on Minecraft (Craft) labs which keep their own dark chrome. */
+    body:not(.minecraft) .blocklySvg {
+      background-color: var(--background-neutral-primary) !important;
+    }
+    .blocklyToolbox {
+      background-color: var(--background-neutral-tertiary) !important;
+    }
+    .blocklyToolboxCategoryLabel {
+      color: var(--text-neutral-primary) !important;
+    }
+    .blocklyFlyoutBackground {
+      fill: var(--background-neutral-tertiary) !important;
+    }
+    .blocklyScrollbarHandle {
+      fill: var(--background-neutral-quinary) !important;
+    }
+    /* Dropdowns render inside the injection div; don't clip them on small screens. */
+    .injectionDiv:not(.readOnlyBlockSpace) {
+      overflow: visible;
+    }
+    /* Not !important: fields override this inline to stay legible. */
+    .blocklyDropDownDiv {
+      background-color: var(--background-neutral-primary);
+      border-color: var(--borders-neutral-primary);
+    }
+    /* Text token must follow the background token above, or dark-themed
+       labs get Blockly's default black text on a black background. */
+    .blocklyDropDownDiv .blocklyMenuItemContent {
+      color: var(--text-neutral-primary) !important;
+    }
+    /* Checkmark is a baked-in black glyph from sprites.svg; invert it in dark. */
+    [data-theme='Dark'] .blocklyDropDownDiv .blocklyMenuItemCheckbox {
+      filter: invert(1);
+    }
+    /* Restore text color lost when Bootstrap v3 dropped v2's bare-input rule.
+       Pair with background so both flip together under data-theme='Dark'. */
+    .blocklyHtmlInput {
+      background-color: var(--background-neutral-primary);
+      color: var(--text-neutral-primary);
     }
     `
   );

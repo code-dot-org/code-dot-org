@@ -1,9 +1,11 @@
-import {Workspace} from 'blockly';
+import * as BlocklyCore from 'blockly/core';
 import React, {useEffect, useRef} from 'react';
-import moduleStyles from './ai-block-preview.module.scss';
-import {GeneratedEffect} from './types';
 import {useSelector} from 'react-redux';
+
+import {GeneratedEffect} from './types';
 import {generateAiEffectBlocksXmlFromResult} from './utils';
+
+import moduleStyles from './ai-block-preview.module.scss';
 
 interface AiBlockPreviewProps {
   results: GeneratedEffect;
@@ -16,7 +18,7 @@ const AiBlockPreview: React.FunctionComponent<AiBlockPreviewProps> = ({
   results,
 }) => {
   const blockPreviewContainerRef = useRef<HTMLSpanElement>(null);
-  const workspaceRef = useRef<Workspace | null>(null);
+  const workspaceRef = useRef<BlocklyCore.Workspace | null>(null);
   const isRtl = useSelector((state: {isRtl: boolean}) => state.isRtl);
 
   // Create the workspace once the container has been rendered.
@@ -30,7 +32,7 @@ const AiBlockPreview: React.FunctionComponent<AiBlockPreviewProps> = ({
     workspaceRef.current = Blockly.createEmbeddedWorkspace(
       blockPreviewContainerRef.current,
       blocks,
-      {rtl: isRtl}
+      {rtl: isRtl, theme: Blockly.getMainWorkspace().getTheme()}
     );
 
     return () => {

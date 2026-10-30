@@ -1,0 +1,39 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-06-29T17:10:22.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "panels": [
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-13-consequences-of-design-1075b846-420e-4012-89a0-b7c943d45d7e",
+        "text": "Remember the mood classifier? Every time we choose to include AI in a program, it's a deliberate design decision, not just a technical one.",
+        "imageUrl": "https://images.code.org/b8748202664f1ce59f2b4e351c517d91-sample-aid-sc2-unit-generation-lesson-13-consequences-of-design-panel-1-779b6705-4619-400b-a58d-0ccdbc7aa67e.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-13-consequences-of-design-6c6b5cca-be96-401c-bdf7-0856f072cb15",
+        "text": "These design choices have real consequences. For example, a song suggestion based on a simplified 'sad' label could feel dismissive or unhelpful to someone truly struggling.",
+        "imageUrl": "https://images.code.org/5c96d084dd1848c71c1695b17788cde7-sample-aid-sc2-unit-generation-lesson-13-consequences-of-design-panel-2-b006454b-ff57-40d7-93b7-b80c9bf6d318.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-13-consequences-of-design-c35741cd-5a10-4c93-900f-462225b03928",
+        "text": "But with careful design, considering user needs and potential impacts, AI can truly serve and empower people, like offering genuinely supportive song choices.",
+        "imageUrl": "https://images.code.org/1992cb35b6539045ad812a365f0344ee-sample-aid-sc2-unit-generation-lesson-13-consequences-of-design-panel-3-45db96a6-c54b-4936-9632-42f198799c83.png",
+        "layout": "text-top-right"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-13-consequences-of-design-abacc52a-fc7a-4a4e-bffc-8d101a8be709",
+        "text": "Anticipating both the positive and negative impacts of our AI programs is a key part of becoming a responsible and ethical developer.",
+        "imageUrl": "https://images.code.org/eb88a57b02acbb32c9cb152b19a39bbb-sample-aid-sc2-unit-generation-lesson-13-consequences-of-design-panel-4-93a66172-7c93-4434-a303-eb38698bba7f.png",
+        "layout": "text-bottom-left"
+      }
+    ],
+    "generate_outline": "Reflect on how design choices in AI programs have real consequences for users. Emphasize that incorporating AI is a design decision with ethical and practical implications, and that anticipating these impacts is part of responsible development."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-06-29 17:11:05 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-29 17:11:05 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

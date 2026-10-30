@@ -5,9 +5,7 @@ module Pd::SurveyPipeline
   class DailySurveyJoinerTest < ActiveSupport::TestCase
     include Pd::JotForm::Constants
 
-    self.use_transactional_test_case = true
-
-    setup_all do
+    setup do
       @form_id = 11_000_000_000_000
       @submission_id = 1
 

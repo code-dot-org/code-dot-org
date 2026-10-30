@@ -23,7 +23,7 @@
     "contained_level_names": [
       "CSA U7L3-L1 Contained_2022"
     ],
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-04-18T12:35:54.916+00:00\",\"changed\":[\"cloned from \\\"CSA U7L2-L3d_2022\\\"\"],\"cloned_from\":\"CSA U7L2-L3d_2022\"},{\"changed_at\":\"2022-04-18 12:35:57 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-10 19:52:07 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-10 19:52:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"

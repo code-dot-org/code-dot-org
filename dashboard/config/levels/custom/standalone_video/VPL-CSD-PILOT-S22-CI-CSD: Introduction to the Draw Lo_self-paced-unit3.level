@@ -12,7 +12,7 @@
     "display_name": "Video: Introduction to the Draw Loop",
     "parent_level_id": 20709,
     "name_suffix": "_self-paced-unit3",
-    "long_instructions": "##### This video is included in the CS Discoveries curriculum to introduce students to the draw loop in Game Lab. \r\n\r\n## As you watch the video, consider the following:\r\n#### How will my students use the draw loop to add movement to their sprites?",
+    "long_instructions": "##### This video is included in the CS Discoveries curriculum to introduce students to the draw loop in Game Lab. \r\n\r\n## As you watch the video, consider the following:\r\nHow will my students use the draw loop to add movement to their sprites?",
     "encrypted": "false"
   },
   "published": true,

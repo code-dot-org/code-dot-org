@@ -2,8 +2,8 @@ require 'test_helper'
 
 class LessonsStandardTest < ActiveSupport::TestCase
   test 'lesson and standard associations' do
-    lesson = create :lesson
-    standard = create :standard
+    lesson = create(:lesson)
+    standard = create(:standard)
     lesson.standards.push(standard)
 
     lesson_standard = lesson.lessons_standards.first
@@ -12,10 +12,10 @@ class LessonsStandardTest < ActiveSupport::TestCase
   end
 
   test 'seeding_key' do
-    lesson_group = create :lesson_group
+    lesson_group = create(:lesson_group)
     script = lesson_group.script
-    lesson = create :lesson, lesson_group: lesson_group, script: script
-    standard = create :standard
+    lesson = create(:lesson, lesson_group: lesson_group, script: script)
+    standard = create(:standard)
     lesson.standards.push(standard)
     seed_context = Services::ScriptSeed::SeedContext.new(
       script: script,

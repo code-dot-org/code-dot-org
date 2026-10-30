@@ -35,6 +35,9 @@
 #  created_at         :datetime         not null
 #  updated_at         :datetime         not null
 #  community_type     :string(16)
+#  student_female     :integer
+#  student_male       :integer
+#  status             :string(255)
 #
 # Indexes
 #
@@ -42,9 +45,63 @@
 #
 
 class SchoolStatsByYear < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    school_id: :confidential,
+    school_year: :confidential,
+    grades_offered_lo: :confidential,
+    grades_offered_hi: :confidential,
+    grade_pk_offered: :confidential,
+    grade_kg_offered: :confidential,
+    grade_01_offered: :confidential,
+    grade_02_offered: :confidential,
+    grade_03_offered: :confidential,
+    grade_04_offered: :confidential,
+    grade_05_offered: :confidential,
+    grade_06_offered: :confidential,
+    grade_07_offered: :confidential,
+    grade_08_offered: :confidential,
+    grade_09_offered: :confidential,
+    grade_10_offered: :confidential,
+    grade_11_offered: :confidential,
+    grade_12_offered: :confidential,
+    grade_13_offered: :confidential,
+    virtual_status: :confidential,
+    students_total: :confidential,
+    student_am_count: :confidential,
+    student_as_count: :confidential,
+    student_hi_count: :confidential,
+    student_bl_count: :confidential,
+    student_wh_count: :confidential,
+    student_hp_count: :confidential,
+    student_tr_count: :confidential,
+    title_i_status: :confidential,
+    frl_eligible_total: :confidential,
+    created_at: :confidential,
+    updated_at: :confidential,
+    community_type: :confidential,
+    student_female: :confidential,
+    student_male: :confidential,
+    status: :confidential,
+  )
+
+  SCHOOL_STATUSES = [
+    STATUS_OPEN = '1-Open'.freeze,
+    STATUS_CLOSED = '2-Closed'.freeze,
+    STATUS_NEW = '3-New'.freeze,
+    STATUS_ADDED = '4-Added'.freeze,
+    STATUS_CHANGED_BOUNDARY = '5-Changed Boundary/Agency'.freeze,
+    STATUS_INACTIVE = '6-Inactive'.freeze,
+    STATUS_FUTURE = '7-Future'.freeze,
+    STATUS_REOPENED = '8-Reopened'.freeze
+  ].freeze
+
   self.primary_keys = :school_id, :school_year
 
   belongs_to :school, optional: true
+
+  validates :status, inclusion: {in: SCHOOL_STATUSES}, allow_nil: true
 
   # Loads/merges the data from a CSV into the table.
   # Requires a block to parse the row.
@@ -58,7 +115,7 @@ class SchoolStatsByYear < ApplicationRecord
     errored_schools = []
 
     ActiveRecord::Base.transaction do
-      CSV.read(filename, options).each do |row|
+      CSV.read(filename, **options).each do |row|
         parsed = yield row
         loaded = find_by(primary_keys.map(&:to_sym).index_with {|k| parsed[k]})
         if loaded.nil?
@@ -117,7 +174,7 @@ class SchoolStatsByYear < ApplicationRecord
   # Is this a rural school?
   # Returns nil if there is no data. Otherwise returns true or false.
   def rural_school?
-    return nil unless community_type
+    return false unless community_type
 
     # The Rural Education Achievement Program (REAP) accepts the following NCES locale codes
     # as "rural": town (distant and remote subcategories)
@@ -132,8 +189,8 @@ class SchoolStatsByYear < ApplicationRecord
   # See description under TITLEISTAT here:
   # https://nces.ed.gov/ccd/Data/txt/sc131alay.txt
   def title_i_eligible?
-    return nil unless title_i_status
-    return nil if title_i_status == 'M'
+    return false unless title_i_status
+    return false if title_i_status == 'M'
 
     %w(1 2 3 4 5).include? title_i_status
   end

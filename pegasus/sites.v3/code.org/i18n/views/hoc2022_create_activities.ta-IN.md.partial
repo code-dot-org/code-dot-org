@@ -1,7 +1,0 @@
-{{ featured_tutorial, title: "நடன விருந்து", body: "Code a Dance Party! Featuring Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, music from Disney's \"Encanto,\" மற்றும் பல!", image: "/images/hoc2022-dance-party.png", url: "https://code.org/dance" }}
-
-{{ featured_tutorial, title: "கவிதை கலை", body: "இந்த ஹவர் ஆஃப் கோட் செயல்பாட்டில் கிளாசிக் கவிதையில் கலை மற்றும் அனிமேஷனைச் சேர்க்கவும்!", image: "/shared/images/courses/logo_tall_poem-art.jpg", url: "https://studio.code.org/s/poem-art-2021/reset" }}
-
-{{ featured_tutorial, title: "கலைஞர்", body:"கலைஞரைக் கொண்டு அருமையான படங்கள் மற்றும் வடிவமைப்புகளை வரையவும்!", image: "/shared/images/courses/logo_tall_artist.jpg", url: "https://studio.code.org/s/artist/reset" }}
-
-{{ featured_tutorial, title: "இன்ஃபினிட்டி ப்ளே லேப்", body: "டிஸ்னி இன்ஃபினிட்டி கேரக்டர்கள் நடித்த கதை அல்லது கேமை உருவாக்க பிலே லேபைப் பயன்படுத்தவும்.", image: "/shared/images/courses/logo_tall_infinity.jpg", url: "https://studio.code.org/s/infinity/reset" }}

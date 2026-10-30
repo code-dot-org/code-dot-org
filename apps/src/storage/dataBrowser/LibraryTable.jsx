@@ -1,15 +1,16 @@
 import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
 import React from 'react';
-import FontAwesome from '../../templates/FontAwesome';
-import msg from '@cdo/locale';
-import color from '../../util/color';
-import {showPreview} from '../redux/data';
-import {getDatasetInfo} from './dataUtils';
-import experiments from '../../util/experiments';
-import moment from 'moment/moment';
-import TableDescription from './TableDescription';
+import {connect} from 'react-redux';
+
 import fontConstants from '@cdo/apps/fontConstants';
+import msg from '@cdo/locale';
+
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
+import experiments from '../../util/experiments';
+import {showPreview} from '../redux/data';
+
+import {getDatasetInfo} from './dataUtils';
+import TableDescription from './TableDescription';
 
 class LibraryTable extends React.Component {
   static propTypes = {
@@ -18,7 +19,6 @@ class LibraryTable extends React.Component {
 
     // Provided via redux
     libraryManifest: PropTypes.object.isRequired,
-    locale: PropTypes.string,
     onShowPreview: PropTypes.func.isRequired,
   };
 
@@ -32,20 +32,15 @@ class LibraryTable extends React.Component {
     });
 
   render() {
-    const {name, libraryManifest, locale, onShowPreview, importTable} =
-      this.props;
+    const {name, libraryManifest, onShowPreview, importTable} = this.props;
     const icon = this.state.collapsed ? 'caret-right' : 'caret-down';
     const datasetInfo = getDatasetInfo(name, libraryManifest.tables);
     const shouldShowTable =
       datasetInfo &&
       (datasetInfo.published ||
-        experiments.isEnabled(experiments.SHOW_UNPUBLISHED_FIREBASE_TABLES));
+        experiments.isEnabled(experiments.SHOW_UNPUBLISHED_DATASET_TABLES));
     if (!shouldShowTable) {
       return null;
-    }
-
-    if (locale) {
-      moment.locale(locale);
     }
 
     return (
@@ -61,13 +56,6 @@ class LibraryTable extends React.Component {
         {!this.state.collapsed && (
           <div style={styles.collapsibleContainer}>
             <div style={styles.tableDescription}>
-              {datasetInfo.lastUpdated && (
-                <span style={styles.lastUpdated}>
-                  {msg.lastUpdatedWithTime({
-                    time: moment(datasetInfo.lastUpdated).fromNow(),
-                  })}
-                </span>
-              )}
               <TableDescription
                 tableName={name}
                 libraryTables={libraryManifest.tables}
@@ -109,16 +97,16 @@ const styles = {
   tableName: {
     ...fontConstants['main-font-bold'],
     cursor: 'pointer',
-    color: color.dark_charcoal,
+    color: 'var(--text-neutral-primary)',
   },
   tableDescription: {
     ...fontConstants['main-font-regular'],
-    color: color.dark_charcoal,
+    color: 'var(--text-neutral-primary)',
     wordBreak: 'break-word',
   },
   preview: {
-    backgroundColor: color.background_gray,
-    borderColor: color.lighter_gray,
+    backgroundColor: 'var(--background-neutral-secondary)',
+    borderColor: 'var(--borders-neutral-primary)',
     ...fontConstants['main-font-regular'],
     fontSize: '14px',
     padding: '1px 7px 2px',
@@ -128,11 +116,11 @@ const styles = {
     marginLeft: 0,
   },
   import: {
-    backgroundColor: color.orange,
+    backgroundColor: 'var(--background-accent-orange-primary)',
     border: 'none',
     ...fontConstants['main-font-semi-bold'],
     fontSize: '14px',
-    color: color.white,
+    color: 'var(--text-neutral-white-fixed)',
     padding: '1px 7px 2px',
     height: '30px',
     width: '90px',
@@ -142,18 +130,11 @@ const styles = {
   collapsibleContainer: {
     paddingLeft: '16px',
   },
-  lastUpdated: {
-    ...fontConstants['main-font-regular'],
-    fontSize: '12px',
-    color: color.light_gray,
-    display: 'inline-block',
-  },
 };
 
 export default connect(
   state => ({
     libraryManifest: state.data.libraryManifest || {},
-    locale: state.pageConstants && state.pageConstants.locale,
   }),
   dispatch => ({
     onShowPreview(tableName) {

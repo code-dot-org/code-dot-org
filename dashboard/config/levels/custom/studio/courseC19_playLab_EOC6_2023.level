@@ -56,7 +56,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-14T20:48:59.259+00:00\",\"changed\":[\"cloned from \\\"courseC19_playLab_EOC62022\\\"\"],\"cloned_from\":\"courseC19_playLab_EOC62022\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-03-14T20:48:59.259+00:00\",\"changed\":[\"cloned from \\\"courseC19_playLab_EOC62022\\\"\"],\"cloned_from\":\"courseC19_playLab_EOC62022\"},{\"changed_at\":\"2024-03-18 22:05:38 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 1,
     "repeat_loops": 1,
@@ -77,61 +77,64 @@
     <toolbox_blocks>
       <xml>
         <block type="studio_showTitleScreen">
-          <title name="TITLE">Text here</title>
-          <title name="TEXT">You can write something.</title>
+          <field name="TITLE">Text here</field>
+          <field name="TEXT">You can write something.</field>
         </block>
         <block type="studio_endGame">
-          <title name="VALUE">win</title>
+          <field name="VALUE">win</field>
         </block>
         <block type="studio_endGame">
-          <title name="VALUE">lose</title>
+          <field name="VALUE">lose</field>
         </block>
         <block type="studio_saySpriteChoices">
-          <title name="SPRITE">0</title>
-          <title name="VALUE">Ouch!</title>
+          <field name="SPRITE">0</field>
+          <field name="VALUE">Ouch!</field>
         </block>
         <block type="studio_saySprite">
-          <title name="SPRITE">0</title>
-          <title name="TEXT">type here</title>
+          <field name="SPRITE">0</field>
+          <field name="TEXT">type here</field>
         </block>
         <block type="studio_playSound">
-          <title name="SOUND">random</title>
+          <field name="SOUND">random</field>
         </block>
         <block type="studio_addGoal">
-          <title name="VALUE">7</title>
+          <field name="VALUE">7</field>
         </block>
         <block type="studio_move">
-          <title name="SPRITE">0</title>
-          <title name="DIR">1</title>
+          <field name="SPRITE">0</field>
+          <field name="DIR">1</field>
         </block>
         <block type="studio_setSpriteSpeed">
-          <title name="SPRITE">0</title>
-          <title name="VALUE">Studio.SpriteSpeed.NORMAL</title>
+          <field name="SPRITE">0</field>
+          <field name="VALUE">Studio.SpriteSpeed.NORMAL</field>
         </block>
         <block type="studio_stop">
-          <title name="SPRITE">0</title>
+          <field name="SPRITE">0</field>
         </block>
         <block type="studio_setSpriteEmotion">
-          <title name="SPRITE">0</title>
-          <title name="VALUE">0</title>
+          <field name="SPRITE">0</field>
+          <field name="VALUE">0</field>
+        </block>
+        <block type="comment">
+          <field name="TEXT"/>
         </block>
         <block type="studio_setSprite">
-          <title name="SPRITE">0</title>
-          <title name="VALUE">???</title>
+          <field name="SPRITE">0</field>
+          <field name="VALUE">???</field>
         </block>
         <block type="studio_setBackground">
-          <title name="VALUE">???</title>
+          <field name="VALUE">???</field>
         </block>
         <block type="studio_setSpritePosition">
-          <title name="SPRITE">0</title>
-          <title name="VALUE">???</title>
+          <field name="SPRITE">0</field>
+          <field name="VALUE">???</field>
         </block>
         <block type="studio_setSpriteSize">
-          <title name="SPRITE">0</title>
-          <title name="VALUE">Studio.SpriteSize.NORMAL</title>
+          <field name="SPRITE">0</field>
+          <field name="VALUE">Studio.SpriteSize.NORMAL</field>
         </block>
         <block type="studio_saySpriteParams">
-          <title name="SPRITE">0</title>
+          <field name="SPRITE">0</field>
           <value name="TEXT">
             <block type="studio_getScore"/>
           </value>
@@ -139,76 +142,76 @@
         <block type="studio_setScore">
           <value name="VALUE">
             <block type="math_number" movable="false">
-              <title name="NUM">0</title>
+              <field name="NUM">0</field>
             </block>
           </value>
         </block>
         <block type="studio_changeScore">
-          <title name="VALUE">1</title>
+          <field name="VALUE">1</field>
         </block>
         <block type="studio_addPoints">
-          <title name="VALUE">10</title>
+          <field name="VALUE">10</field>
         </block>
         <block type="studio_removePoints">
-          <title name="VALUE">10</title>
+          <field name="VALUE">10</field>
         </block>
         <block type="studio_vanish">
-          <title name="SPRITE">0</title>
+          <field name="SPRITE">0</field>
         </block>
         <block type="studio_makeProjectile">
-          <title name="VALUE">???</title>
-          <title name="ACTION">"bounce"</title>
+          <field name="VALUE">???</field>
+          <field name="ACTION">"bounce"</field>
         </block>
         <block type="studio_setSprite">
-          <title name="SPRITE">1</title>
-          <title name="VALUE">???</title>
+          <field name="SPRITE">1</field>
+          <field name="VALUE">???</field>
         </block>
         <block type="studio_wait">
-          <title name="VALUE">500</title>
+          <field name="VALUE">500</field>
         </block>
         <block type="studio_throw">
-          <title name="SPRITE">1</title>
-          <title name="VALUE">???</title>
-          <title name="DIR">1</title>
+          <field name="SPRITE">1</field>
+          <field name="VALUE">???</field>
+          <field name="DIR">1</field>
         </block>
         <block type="studio_moveDistance">
-          <title name="SPRITE">1</title>
-          <title name="DIR">1</title>
-          <title name="DISTANCE">25</title>
+          <field name="SPRITE">1</field>
+          <field name="DIR">1</field>
+          <field name="DISTANCE">25</field>
         </block>
         <block type="studio_whenArrow">
-          <title name="VALUE">up</title>
+          <field name="VALUE">up</field>
         </block>
         <block type="studio_whenSpriteClicked">
-          <title name="SPRITE">???</title>
+          <field name="SPRITE">???</field>
         </block>
         <block type="studio_whenSpriteCollided">
-          <title name="SPRITE1">???</title>
-          <title name="SPRITE2">???</title>
+          <field name="SPRITE1">???</field>
+          <field name="SPRITE2">???</field>
         </block>
         <block type="studio_throw">
-          <title name="SPRITE">0</title>
-          <title name="VALUE">"airplane"</title>
-          <title name="DIR">1</title>
+          <field name="SPRITE">0</field>
+          <field name="VALUE">"airplane"</field>
+          <field name="DIR">1</field>
         </block>
         <block type="studio_makeProjectile">
-          <title name="VALUE">"airplane"</title>
-          <title name="ACTION">"bounce"</title>
+          <field name="VALUE">"airplane"</field>
+          <field name="ACTION">"bounce"</field>
         </block>
         <block type="studio_repeatForever"/>
         <block type="controls_repeat">
-          <title name="TIMES">???</title>
+          <field name="TIMES">???</field>
         </block>
         <block type="controls_if">
           <value name="IF0">
             <block type="logic_compare" next_connection_disabled="true">
-              <title name="OP">GT</title>
+              <field name="OP">GT</field>
               <value name="A">
                 <block type="studio_getScore" movable="false"/>
               </value>
               <value name="B">
                 <block type="math_number" movable="false">
-                  <title name="NUM">10</title>
+                  <field name="NUM">10</field>
                 </block>
               </value>
             </block>

@@ -1,9 +1,9 @@
+require 'test_helper'
 require 'webmock/minitest'
 WebMock.disable_net_connect!(allow_localhost: true)
-require 'test_helper'
 
 class RedirectProxyControllerTest < ActionController::TestCase
-  LONG_URI = 'https://studio.code.org/s/course1/lessons/3/levels/2'
+  LONG_URI = 'https://studio.code.org/courses/course1/units/1/lessons/3/levels/2'
 
   test "should successfully get a redirect for url in whitelist" do
     short_uri = 'http://bit.ly/2gPJmTQ'

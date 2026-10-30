@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-07-24T17:07:43.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "title": "Cats & Histograms",
+    "long_instructions": "This data is about 24 domesticated cats. Explore the data and answer the data questions:\r\n- Are older cats predominantly male or female?\r\n- Who might be Peebles twin (or litter mate)?\r\n\r\n#####[CODAP Link](https://codap.concord.org/releases/latest/static/dg/en/cert/index.html?url=https://concord-consortium.github.io/codap-data/SampleDocs/Science/Biology/24cats/24cats.codap#)\r\n\r\nDo This\r\n#####1. Add a graph to the workspace and the appropriate attributes you think might be helpful to answer the data question, “Are older cats predominantly male or female?”\r\n\r\n\r\n<details><summary><strong>🔎 Expand me for help 🔎</strong></summary>\r\n\r\n- Add the “Age” attribute to the x-axis. \r\n- Add the “Sex” attribute to the y-axis\r\n- Click on the “Configuration” tab in the graph toolbar and select “Group into Bins” to get a better view of the data in a histogram\r\n- What do you notice?\r\n- Are older cats predominantly male or female? How can you tell?\r\n</details>\r\n\r\n#####2. Add a new graph to the workspace and the appropriate attributes that you think might be helpful to answer the data question, “Who might be Peebles twin (or litter mate)?”\r\n\r\n<details><summary><strong>🔎 Expand me for help 🔎</strong></summary>\r\n\r\n- Add the “Age” attribute to the x-axis. \r\n- Add the “Fur Color” attribute to the y-axis\r\n- Add the “Eye Color” attribute as the legend\r\n- Click on the “Configuration” tab in the graph toolbar and select “Group into Bins” to get a better view of the data in a histogram\r\n- Find Peebles in the data table and click on her. What do you notice?\r\n- Who might be Peebles twin (or litter mate)? How can you tell?\r\n</details>\r\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "display_name": "Cats & Histograms",
+    "teacher_markdown": "\r\n![](https://images.code.org/11538113b108f0cd8f6e47924a710cc0-image-1721841014296.png)\r\n\r\n![](https://images.code.org/2ff2f092f7d819f507010e6121b5b8a5-image-1721841018821.png)\r\n\r\n![](https://images.code.org/905423bdc8a9ffc540d1db9cd20f0754-image-1721841020971.png)\r\n\r\nExample student responses:\r\n\r\n- Based on the histogram, it looks like older cats are predominately female.\r\n- I was able to tell that Wally might be Peebles twin or litter mate. Using the second histogram I made I can see that they are both 5 years old, both have green eyes, and while their fur isn’t exactly the same color, they are similar with Peebles having grey fur and Wally having black and white fur. The other cats that are 5 years old are orange or brown with stripes and have yellow eyes.\r\n",
+    "bubble_choice_description": "Can you create histograms to find out who Peebles's twin is?",
+    "thumbnail_url": "https://images.code.org/35ce6e7820fa5758b57292d29d4def14-cat.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-07-24 17:07:47 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"},{\"changed_at\":\"2024-07-24 17:17:02 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

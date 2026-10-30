@@ -1,0 +1,9 @@
+name 'CSA Post-Survey q31_pilot-2025'
+question 'How did you like the lessons and topics covered in this course?'
+
+right 'I loved everthing!'
+right 'A lot'
+right 'Somewhat'
+right 'A little bit'
+right 'Not at all'
+allow_multiple_attempts true

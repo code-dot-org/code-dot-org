@@ -1,0 +1,40 @@
+name 'pl-aif-2-U5-matching-errorstates'
+title 'Terminology Matching'
+
+height '75'
+
+question 'A spinner or simple loading message'
+answer 'Loading State'
+question 'A helpful message like a "Try Again" button'
+answer 'Empty State '
+question 'A brief explanation of the issue'
+answer 'Error State'
+
+
+
+markdown <<MARKDOWN
+#### Match the state with a typical screen response. 
+
+
+::: details [**🔎 Check your Answer**]
+- **Loading State:** The app is fetching data. 
+(Show a spinner, empty layout, or simple loading message.)
+
+- **Empty State:** No results were found
+(Show a helpful message or "Try Again" button.)
+
+
+- **Error State:** Something went wrong. 
+(Briefly explain the issue and what the user should do.)
+
+
+:::
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+
+
+MARKDOWN
+
+allow_multiple_attempts true

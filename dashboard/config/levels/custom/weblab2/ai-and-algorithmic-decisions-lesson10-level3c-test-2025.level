@@ -1,0 +1,71 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2025-10-29T23:03:55.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "E-Commerce Discount",
+    "long_instructions": "\r\n## E-Commerce Discount\r\n\r\n**Eligibility Criteria:**\r\nA shopper **receives a discount** if they are a **student**, **65 or older**, or have a **referral**, and their **discount code is not expired**.\r\n\r\n---\r\n\r\n**Do This:**\r\n\r\n1. Review the input fields in the starter code: `isStudent`, `age`, `hasReferral`, and `codeExpired`.\r\n\r\n2. Complete the `eligible()` function so it updates the discount **message (`message`)** based on whether the current input values meet the criteria.\r\n\r\n3. In the event handler for the **Run** button (`runBtn`), call `eligible()` to test the current inputs.\r\n\r\n",
+    "thumbnail_url": "https://images.code.org/8bef33b95053d42d8887590c4f7579f5-coupon.png",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "outline",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "bubble_choice_description": "Apply if student or 65+ or referral, and not an expired code.",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"utf-8\">\n    <title>E-Commerce Discount</title>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    <h1>E-Commerce Discount</h1>\n\n    <label>\n      <input id=\"isStudent\" type=\"checkbox\">\n      Student\n    </label>\n\n    <label>\n      Age:\n      <input id=\"age\" type=\"number\" min=\"0\" value=\"30\">\n    </label>\n\n    <label>\n      <input id=\"hasReferral\" type=\"checkbox\">\n      Has referral\n    </label>\n\n    <label>\n      <input id=\"codeExpired\" type=\"checkbox\">\n      Code expired\n    </label>\n\n    <button id=\"runBtn\">Run</button>\n\n    <p id=\"message\">—</p>\n\n    <script src=\"script.js\"></script>\n  </body>\n</html>\n",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  font-family: sans-serif;\n  text-align: center;\n  padding: 2rem;\n  background-color: #f9f9f9;\n}\n\nh1 {\n  margin-bottom: 1rem;\n}\n\nlabel {\n  display: block;\n  margin: 0.5rem 0;\n}\n\ninput[type=\"number\"] {\n  padding: 0.4rem;\n  margin-left: 0.5rem;\n}\n\nbutton {\n  margin-top: 1rem;\n  padding: 0.5rem 1rem;\n  border: 1px solid #ccc;\n  border-radius: 6px;\n  background-color: #f2f2f2;\n  cursor: pointer;\n}\n\nbutton:hover {\n  background-color: #e2e2e2;\n}\n\n#message {\n  margin-top: 1rem;\n  font-weight: bold;\n}\n",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "const isStudent = document.getElementById(\"isStudent\");\nconst age = document.getElementById(\"age\");\nconst hasReferral = document.getElementById(\"hasReferral\");\nconst codeExpired = document.getElementById(\"codeExpired\");\nconst message = document.getElementById(\"message\");\nconst runBtn = document.getElementById(\"runBtn\");\n\nconst eligible = () => {\n  // Use these variables in your logic\n  const student = isStudent.checked;\n  const ageValue = Number(age.value);\n  const referral = hasReferral.checked;\n  const expired = codeExpired.checked;\n\n\n\n\n  \n}\n\nrunBtn.addEventListener(\"click\", eligible);\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "3",
+        "1",
+        "2"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-29 23:09:11 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-29 23:31:07 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-29 23:57:07 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-30 00:01:13 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-30 00:21:15 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-30 00:21:22 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-30 00:27:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-31 18:45:36 +0000\",\"changed\":[\"ai_tutor_mode\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-31 18:46:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

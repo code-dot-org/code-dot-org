@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import i18n from '@cdo/locale';
 import {CSVLink} from 'react-csv';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
+import i18n from '@cdo/locale';
 
 const CSV_LOGIN_INFO_HEADERS = [
   {label: i18n.loginExportHeader_sectionCode(), key: 'sectionCode'},
@@ -39,7 +39,7 @@ export default class LoginExport extends Component {
             studentLoginSecret:
               this.props.sectionLoginType === SectionLoginType.word
                 ? student.secretWords
-                : pegasus(`/images/${student.secretPicturePath}`),
+                : student.secretPictureUrl,
           });
         }
       });

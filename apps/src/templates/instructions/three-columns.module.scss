@@ -1,0 +1,11 @@
+.hiddenScrollbar {
+  scrollbar-width: none;
+}
+
+// This pseudo-element is required for some older browsers; specifically,
+// versions of Chrome <= 120 and versions of Safari <= 18.1. If in the future
+// we no longer support those versions, we can replace this entire class with
+// an inline style.
+.hiddenScrollbar::-webkit-scrollbar {
+  display: none;
+}

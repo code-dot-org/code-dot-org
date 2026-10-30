@@ -1,6 +1,7 @@
-import React from 'react';
-import ConfirmDeleteButton from './ConfirmDeleteButton';
 import {action} from '@storybook/addon-actions';
+import React from 'react';
+
+import ConfirmDeleteButton from './ConfirmDeleteButton';
 
 export default {
   component: ConfirmDeleteButton,

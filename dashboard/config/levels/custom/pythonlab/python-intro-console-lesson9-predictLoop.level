@@ -1,0 +1,45 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-01-28T19:22:56.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Do This: \r\n- Run the code and observe the output.\r\n- In your own words, describe what you think this code is doing. ",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": true,
+      "solution": "The != operator checks if count is not equal to 5.\nAs long as count != 5 is True, the loop continues.\nThe loop stops when count becomes 5 because the condition count != 5 is False.",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "count = 0\nwhile count != 5:  # Loop runs until count is equal to 5\n    print(\"Count is:\", count)\n    count += 1  # Increment count by 1\n",
+          "folderId": "0",
+          "active": false,
+          "open": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-01-28T19:22:56.640+00:00\",\"changed\":[\"cloned from \\\"python-intro-console-lesson9-practiceOperands\\\"\"],\"cloned_from\":\"python-intro-console-lesson9-practiceOperands\"},{\"changed_at\":\"2025-01-28 19:23:59 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-28 19:24:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+</Pythonlab>

@@ -1,14 +1,21 @@
-import React, {useCallback, useEffect, useState} from 'react';
+import Tags from '@code-dot-org/component-library/tags';
+import Toggle from '@code-dot-org/component-library/toggle';
+import {Typography as MuiTypography} from '@mui/material';
 import PropTypes from 'prop-types';
+import React, {useCallback, useEffect, useState, useMemo} from 'react';
 import {connect} from 'react-redux';
-import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+
 import SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSelector';
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {PredictQuestionType} from '@cdo/apps/lab2/levelEditors/types';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import i18n from '@cdo/locale';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import ToggleSwitch from '@cdo/apps/code-studio/components/ToggleSwitch';
+
+import FreeResponseAIEvaluation from './FreeResponseAIEvaluation';
 import FreeResponseResponses from './FreeResponseResponses';
 import MultiResponses from './MultiResponses';
+
 import styles from './summary.module.scss';
 
 const FREE_RESPONSE = 'FreeResponse';
@@ -16,6 +23,7 @@ const MULTI = 'Multi';
 
 const SummaryResponses = ({
   scriptData,
+  levelNumber,
   // redux
   isRtl,
   viewAs,
@@ -26,8 +34,17 @@ const SummaryResponses = ({
   levels,
 }) => {
   const currentLevel = levels.find(l => l.activeId === currentLevelId);
-
+  const predictSettings =
+    scriptData.levels[levelNumber].properties?.predict_settings;
+  const isFreeResponse =
+    scriptData.levels[levelNumber].type === FREE_RESPONSE ||
+    predictSettings?.questionType === PredictQuestionType.FreeResponse;
+  const isMulti =
+    scriptData.levels[levelNumber].type === MULTI ||
+    predictSettings?.questionType === PredictQuestionType.MultipleChoice;
   const [showCorrectAnswer, setShowCorrectAnswer] = useState(false);
+  const [showStudentNames, setShowStudentNames] = useState(false);
+  const [showAIAnalysis, setShowAIAnalysis] = useState(false);
 
   // To avoid confusion, if a teacher tries to view the summary as a student,
   // send them back to the level in Participant mode instead.
@@ -37,17 +54,25 @@ const SummaryResponses = ({
 
   const logEvent = useCallback(
     eventName => {
-      const {level} = scriptData;
       analyticsReporter.sendEvent(eventName, {
-        levelId: level.id,
-        levelName: level.name,
-        levelType: level.type,
+        levelId: scriptData.levels[levelNumber].id,
+        levelName: scriptData.levels[levelNumber].name,
+        levelType: scriptData.levels[levelNumber].type,
         sectionSelected: !!selectedSection,
         ...scriptData.reportingData,
       });
     },
-    [scriptData, selectedSection]
+    [scriptData, levelNumber, selectedSection]
   );
+
+  const eventData = useMemo(() => {
+    return {
+      levelId: scriptData.levels[levelNumber].id,
+      levelName: scriptData.levels[levelNumber].name,
+      curriculumUmbrella: scriptData.reportingData.curriculumUmbrella,
+      unitId: scriptData.reportingData.unitId,
+    };
+  }, [scriptData, levelNumber]);
 
   useEffect(() => {
     logEvent(EVENTS.SUMMARY_PAGE_LOADED);
@@ -57,21 +82,63 @@ const SummaryResponses = ({
     const correctAnswerElement = document.getElementById(
       'summary-correct-answer'
     );
-    if (correctAnswerElement) {
-      if (showCorrectAnswer) {
-        correctAnswerElement.classList.add(styles.correctAnswersContainer);
-        correctAnswerElement.classList.remove('hide');
-      } else {
-        correctAnswerElement.classList.add('hide');
-        correctAnswerElement.classList.remove(styles.correctAnswersContainer);
+    const predictAnswerElement = document.getElementById(
+      'summary-predict-correct-answer'
+    );
+    const showOrHideAnswer = answerElement => {
+      if (answerElement) {
+        if (showCorrectAnswer) {
+          answerElement.classList.add(styles.correctAnswersContainer);
+          answerElement.classList.remove('hide');
+        } else {
+          answerElement.classList.add('hide');
+          answerElement.classList.remove(styles.correctAnswersContainer);
+        }
       }
-    }
+    };
+
+    showOrHideAnswer(correctAnswerElement);
+    showOrHideAnswer(predictAnswerElement);
   }, [showCorrectAnswer]);
 
   // "Show correct answer" toggle is only shown for some level types, and
   // only when the policy allows it for that user.
-  const showAnswerToggle =
-    scriptData.answer_is_visible && scriptData.level.type === MULTI;
+  const showAnswerToggle = scriptData.answer_is_visible && isMulti;
+
+  const toggleNames = () => {
+    if (showStudentNames) {
+      logEvent(EVENTS.CFU_NAMES_TOGGLED_OFF);
+    } else {
+      logEvent(EVENTS.CFU_NAMES_TOGGLED_ON);
+    }
+    setShowStudentNames(prevShowStudentNames => !prevShowStudentNames);
+  };
+
+  const levelData = {
+    levelId: scriptData.levels[levelNumber].id,
+    unitId: scriptData.reportingData.unitId,
+  };
+  const toggleAIAnalysis = () => {
+    if (showAIAnalysis) {
+      logEvent(EVENTS.CFU_SHOW_AI_INSIGHTS_TOGGLED_OFF);
+    } else {
+      logEvent(EVENTS.CFU_SHOW_AI_INSIGHTS_TOGGLED_ON);
+    }
+    setShowAIAnalysis(prevShowAIAnalysis => !prevShowAIAnalysis);
+  };
+
+  const freeResponseResponses = isFreeResponse
+    ? scriptData.responses[levelNumber]
+    : null;
+
+  const responsesForAi = freeResponseResponses?.map(response => ({
+    studentId: response.user_id,
+    studentDisplayName: response.student_display_name,
+    studentWork: response.text,
+    updatedAt: response.updated_at,
+  }));
+
+  const hasAiAnalysis = scriptData.show_ai_analysis;
 
   return (
     <div className={styles.summaryContainer} id="summary-container">
@@ -88,46 +155,94 @@ const SummaryResponses = ({
             }
           >
             <p>
-              <i className="fa fa-user" />
               <span>
-                {scriptData.responses.length}/{students.length}{' '}
+                {scriptData.responses[levelNumber].length}/{students.length}{' '}
                 {i18n.studentsAnswered()}
               </span>
             </p>
           </div>
         )}
 
-        {/* Section dropdown */}
-        {hasSections && (
-          <label className={styles.sectionSelector}>
-            {i18n.responsesForClassSection()}
-            <SectionSelector reloadOnChange={true} />
-          </label>
-        )}
+        <div className={styles.headerContainer}>
+          {/* Section dropdown */}
+          {hasSections && (
+            <label className={styles.sectionSelector}>
+              <MuiTypography variant="body2" component="p">
+                {i18n.responsesForClassSection()}
+              </MuiTypography>
+              <SectionSelector reloadOnChange={true} />
+            </label>
+          )}
 
-        {/* Correct answer toggle */}
-        {showAnswerToggle && (
-          <div className={styles.toggleContainer}>
-            <ToggleSwitch
-              isToggledOn={showCorrectAnswer}
-              onToggle={() => {
-                setShowCorrectAnswer(!showCorrectAnswer);
-              }}
-              label={i18n.showAnswer()}
-              expands="summary-correct-answer"
-            />
-          </div>
+          {/* Correct answer toggle */}
+          {showAnswerToggle && (
+            <div className={styles.toggleContainer}>
+              <Toggle
+                onChange={() => {
+                  setShowCorrectAnswer(!showCorrectAnswer);
+                }}
+                checked={showCorrectAnswer}
+                label={i18n.showAnswer()}
+                position={'right'}
+                size={'s'}
+                name={'summary-correct-answer'}
+              />
+            </div>
+          )}
+          {isFreeResponse && (
+            <div className={styles.toggleGroup}>
+              <Toggle
+                onChange={toggleNames}
+                checked={showStudentNames}
+                label={i18n.showStudentNames()}
+                position={'right'}
+                size={'s'}
+                name={'showStudentNames'}
+              />
+              {hasAiAnalysis && (
+                <div className={styles.aiToggleContainer}>
+                  <Toggle
+                    onChange={toggleAIAnalysis}
+                    checked={showAIAnalysis}
+                    label={i18n.showAiInsights()}
+                    position={'right'}
+                    size={'s'}
+                    name={'showAIAnalysis'}
+                  />
+                  <Tags
+                    className={styles.headerTag}
+                    tagsList={[{label: i18n.experiment()}]}
+                    size="s"
+                  />
+                </div>
+              )}
+            </div>
+          )}
+        </div>
+
+        {/* AI Analysis */}
+        {isFreeResponse && showAIAnalysis && (
+          <FreeResponseAIEvaluation
+            responses={responsesForAi}
+            levelData={levelData}
+            totalNumberOfStudents={students.length}
+          />
         )}
 
         {/* Free response visualization */}
-        {scriptData.level.type === FREE_RESPONSE && (
-          <FreeResponseResponses responses={scriptData.responses} />
+        {isFreeResponse && (
+          <FreeResponseResponses
+            responses={freeResponseResponses}
+            showStudentNames={showStudentNames}
+            eventData={eventData}
+          />
         )}
 
         {/* Multi visualization */}
-        {scriptData.level.type === MULTI && (
+        {isMulti && (
           <MultiResponses
             scriptData={scriptData}
+            levelNumber={levelNumber}
             showCorrectAnswer={showCorrectAnswer}
           />
         )}
@@ -138,6 +253,7 @@ const SummaryResponses = ({
 
 SummaryResponses.propTypes = {
   scriptData: PropTypes.object,
+  levelNumber: PropTypes.number,
   isRtl: PropTypes.bool,
   viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
   hasSections: PropTypes.bool,

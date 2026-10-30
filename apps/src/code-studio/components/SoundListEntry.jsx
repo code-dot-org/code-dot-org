@@ -1,8 +1,13 @@
-import React from 'react';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {
+  IconButton as MuiIconButton,
+  Typography as MuiTypography,
+} from '@mui/material';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
-import * as color from '../../util/color';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import React from 'react';
+
+import styles from './SoundListEntry.module.scss';
 
 /**
  * Component for a single sound tile in the Sound Library.
@@ -43,15 +48,6 @@ class SoundListEntry extends React.Component {
       this.setState({isPlaying: false});
     } else {
       this.setState({isPlaying: true});
-      firehoseClient.putRecord(
-        {
-          study: 'sound-dialog-2',
-          study_group: 'library-tab',
-          event: 'play-library-sound',
-          data_json: this.props.soundMetadata.sourceUrl,
-        },
-        {includeUserId: true}
-      );
       this.props.soundsRegistry.unmuteURLs();
       this.props.soundsRegistry.playURL(this.props.soundMetadata.sourceUrl, {
         onEnded: () => {
@@ -65,76 +61,51 @@ class SoundListEntry extends React.Component {
   };
 
   render() {
-    const selectedColor = this.props.isSelected
+    const selectedClass = this.props.isSelected
       ? styles.selected
       : styles.notSelected;
-    const playIcon = this.state.isPlaying
-      ? 'fa-pause-circle'
-      : 'fa-play-circle';
+    const playIcon = this.state.isPlaying ? 'circle-pause' : 'circle-play';
 
     return (
       <div
-        style={[styles.root, selectedColor]}
+        className={classNames(styles.root, selectedClass)}
         title={this.props.soundMetadata.name}
         onClick={this.props.assetChosen.bind(null, this.props.soundMetadata)}
       >
-        <div style={styles.icon}>
-          <i
+        <div className={styles.icon}>
+          <MuiIconButton
+            size="small"
             onClick={this.clickSoundControl}
-            className={'fa ' + playIcon + ' fa-2x'}
-          />
+            aria-label={this.state.isPlaying ? 'Pause sound' : 'Play sound'}
+            sx={{'& i': {fontSize: '1.5rem', width: 'auto'}}}
+          >
+            <FontAwesomeV6Icon iconName={playIcon} iconStyle="solid" />
+          </MuiIconButton>
         </div>
-        <div style={styles.metadata}>
-          <span style={styles.soundName}>
+        <div className={styles.metadata}>
+          <MuiTypography
+            variant="body3"
+            component="span"
+            sx={{lineHeight: 1.2}}
+          >
             {this.props.soundMetadata.name + '.mp3'}
-          </span>
+          </MuiTypography>
           <br />
-          <span style={styles.time}>
+          <MuiTypography
+            variant="body4"
+            component="span"
+            className={styles.time}
+            sx={{lineHeight: 1.2}}
+          >
             {getTimeString(this.props.soundMetadata.time)}
-          </span>
+          </MuiTypography>
         </div>
       </div>
     );
   }
 }
 
-const styles = {
-  root: {
-    float: 'left',
-    width: 215,
-    height: 35,
-    cursor: 'pointer',
-    margin: 5,
-    padding: 6,
-    border: 'solid 0px',
-    borderRadius: 5,
-  },
-  selected: {
-    backgroundColor: color.lighter_purple,
-  },
-  notSelected: {
-    backgroundColor: color.white,
-  },
-  icon: {
-    float: 'left',
-    padding: '6px 10px 6px 2px',
-  },
-  metadata: {
-    float: 'left',
-    width: 175,
-    overflow: 'hidden',
-    textOverflow: 'ellipsis',
-  },
-  soundName: {
-    fontSize: 14,
-  },
-  time: {
-    color: color.charcoal,
-    fontSize: 11,
-  },
-};
-
-export default Radium(SoundListEntry);
+export default SoundListEntry;
 
 // Adapted from: http://stackoverflow.com/questions/6312993/javascript-seconds-to-time-string-with-format-hhmmss
 // Convert a number, numSeconds, into a string formatted as MM:SS or "Less than 1 second"

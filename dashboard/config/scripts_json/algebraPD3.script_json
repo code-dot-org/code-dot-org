@@ -5,7 +5,8 @@
     "login_required": false,
     "properties": {
       "is_migrated": true,
-      "professional_learning_course": "CS in Algebra Legacy"
+      "professional_learning_course": "CS in Algebra Legacy",
+      "is_deprecated": true
     },
     "new_name": null,
     "family_name": null,

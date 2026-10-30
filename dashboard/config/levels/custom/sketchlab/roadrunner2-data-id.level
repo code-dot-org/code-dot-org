@@ -1,0 +1,15 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "game_id": 75,
+  "created_at": "2026-09-15T21:46:43.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "require_edit_to_continue": true,
+    "long_instructions": "TODOs:\r\n* A piece of public data that anyone can access.\r\n* A piece of private data that should be kept secret.\r\n* A piece of sensitive data that requires special protection.\r\n* A visual representation of how sensitive data can be redacted.\r\n* A symbol for anonymizing data so it can't be linked to an individual.\r\n* An example of how combining two public data points might reveal private information.",
+    "generate_outline": "Learn to distinguish between public, private, and sensitive data. Practice identifying and redacting sensitive information to anonymize data effectively."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-15 21:46:47 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-15 21:46:49 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Sketchlab>

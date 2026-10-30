@@ -1,0 +1,11 @@
+name 'problem-solving-with-ai-project-choice-3'
+display_name 'Product Launch, Day Three'
+description 'Use the the levels below to accomplish project milestones'
+
+sublevels
+level 'problem-solving-with-ai-project-sketchlab-day-three'
+level 'problem-solving-with-ai-project-aichat-2'
+level 'problem-solving-with-ai-project-musiclab-day-three'
+level 'problem-solving-with-ai-project-imagegen-day-three'
+
+uses_lab2

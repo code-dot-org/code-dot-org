@@ -2,16 +2,16 @@ require 'test_helper'
 
 class LearningGoalAiEvaluationTest < ActiveSupport::TestCase
   setup do
-    @student = create :student
+    @student = create(:student)
     @student.update!(username: 'evalstudent')
 
-    @script = create :script, name: 'rubric-unit'
-    @lesson = create :lesson, :with_lesson_group, absolute_position: 33, relative_position: 22, script: @script
-    @level = create :level, name: 'rubric level'
-    @script_level = create :script_level, script: @script, lesson: @lesson, levels: [@level]
+    @script = create(:script, :in_single_unit_course, name: 'rubric-unit')
+    @lesson = create(:lesson, :with_lesson_group, absolute_position: 33, relative_position: 22, script: @script)
+    @level = create(:level, name: 'rubric level')
+    @script_level = create(:script_level, script: @script, lesson: @lesson, levels: [@level])
 
-    @rubric = create :rubric, lesson: @lesson, level: @level
-    @learning_goal = create :learning_goal, rubric: @rubric, learning_goal: 'evaluated learning goal'
+    @rubric = create(:rubric, lesson: @lesson, level: @level)
+    @learning_goal = create(:learning_goal, rubric: @rubric, learning_goal: 'evaluated learning goal')
   end
 
   test 'summarize_debug' do
@@ -28,6 +28,7 @@ class LearningGoalAiEvaluationTest < ActiveSupport::TestCase
       learning_goal: @learning_goal,
       understanding: SharedConstants::RUBRIC_UNDERSTANDING_LEVELS.CONVINCING,
       ai_confidence: LearningGoalAiEvaluation::AI_CONFIDENCE_LEVELS[:MEDIUM],
+      ai_confidence_exact_match: LearningGoalAiEvaluation::AI_CONFIDENCE_LEVELS[:LOW],
     )
     summary = eval.summarize_debug
 
@@ -42,5 +43,6 @@ class LearningGoalAiEvaluationTest < ActiveSupport::TestCase
     assert_equal 'evaluated learning goal', summary[:learning_goal]
     assert_equal 'CONVINCING', summary[:understanding]
     assert_equal 'MEDIUM', summary[:ai_confidence]
+    assert_equal 'LOW', summary[:ai_confidence_exact_match]
   end
 end

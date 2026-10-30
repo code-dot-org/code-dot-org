@@ -1,0 +1,58 @@
+name 'music-lab-612-pre-q3'
+
+question '**The music only plays during one of the verse vocal tracks. What should Tyler change so the music plays during both verse vocal tracks?**'
+wrong 'Remove the loops.'
+wrong 'Repeat the Verse blocks.'
+wrong 'Play sequential instead of play together.'
+right 'Make a nested loop so the music repeats two times.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Topic: Loops
+
+Skill: Use nested loops to repeat phrases of a song
+
+Appears in Lesson: Loops - Practice
+MARKDOWN
+
+markdown <<MARKDOWN
+Tyler is adding some music to the Verse vocals. This is the code they have so far:
+
+<img src="https://images.code.org/226d6c3f60be0d280cde932c7b4f7080-image-1750879027828.png" width="350">
+
+The music only plays during one of the verse vocal tracks. What should Tyler change so the music plays during both verse vocal tracks?
+
+<table style="border-collapse: collapse;">
+  <tr>
+    <td style="padding: 10px; border-right: 1px solid #ccc;">Remove the loops.</td>
+    <td style="padding: 10px;">Repeat the Verse blocks</td>
+  </tr>
+  <tr>
+    <td style="padding: 10px; border-bottom: 1px solid #ccc; border-right: 1px solid #ccc;">
+      <img src="https://images.code.org/b13ee369280f3c5ec38556c1b2107524-image-1750880911258.png" style="width: 200px;">
+    </td>
+    <td style="padding: 10px; border-bottom: 1px solid #ccc;">
+      <img src="https://images.code.org/16e77d22132d9e70a5b1aa655820c792-image-1750880860657.png" style="width: 200px;">
+    </td>
+  </tr>
+  <tr>
+    <td style="padding: 10px; border-right: 1px solid #ccc;">Play sequential instead of play together</td>
+    <td style="padding: 10px;">Make a nested loop so the music repeats two times.</td>
+  </tr>
+  <tr>
+    <td style="padding: 10px; border-right: 1px solid #ccc;">
+      <img src="https://images.code.org/e767ba01deb2d754ca2cc863bce47e63-image-1750880888057.png" style="width: 200px;">
+    </td>
+    <td style="padding: 10px;">
+      <img src="https://images.code.org/14262000d7aeac581f8423b0f03b44e9-image-1750880821930.png" style="width: 200px;">
+    </td>
+  </tr>
+</table>
+
+
+
+
+
+
+MARKDOWN

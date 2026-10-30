@@ -1,0 +1,40 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-04-24T02:25:12.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "Brand Design isn't just a logo; it’s the \"personality\" of a company, told through colors, fonts, and a specific voice.",
+        "imageUrl": "https://images.code.org/fc03598403cb9d85e1ea6c1e38c83222-lesson5-panel1.png",
+        "key": "undefined-f97b510a-e1c0-4e9c-88a0-6911a42ef05a",
+        "layout": "text-bottom-left"
+      },
+      {
+        "text": "Every color and typeface is chosen to trigger an emotion—like red for excitement and energy, or blue for trust and calm.",
+        "imageUrl": "https://images.code.org/df3d421680dfb4c93d7cb566d6282de4-lesson5-panel2.png",
+        "key": "undefined-e9c5e44d-7dc1-4c0b-b8f9-d4991047b009",
+        "layout": "text-bottom-left"
+      },
+      {
+        "text": "Designers create a \"Style Guide\"—a set of rules that ensures a brand looks exactly the same whether it’s on a tiny smartphone screen or a massive stadium screen.",
+        "imageUrl": "https://images.code.org/122d49ae9dc9cf3ec5c83c63676ae034-lesson5-panel3.png",
+        "key": "undefined-27e7d451-ed33-4ec9-a662-b9f8fd73455f",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "A Brand Designer's goal is to make people feel like they belong to a community, turning a simple product into something people are proud to wear or use.",
+        "imageUrl": "https://images.code.org/ab61f467e1e596eb46a7e3e4978249e7-lesson5-panel4.png",
+        "key": "undefined-2c9ccff0-1dcc-43e3-bc17-dde6078e4cc9",
+        "layout": "text-top-left"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-24T02:25:12.154+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson2-careerpanel_2026\\\"\"],\"cloned_from\":\"ai-generated-design-lesson2-careerpanel_2026\"},{\"changed_at\":\"2026-04-24 02:25:24 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-24 11:23:06 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-24 12:38:04 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Panels>

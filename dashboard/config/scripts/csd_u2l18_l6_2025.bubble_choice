@@ -1,0 +1,11 @@
+name 'CSD U2L18-L6-2025'
+display_name 'Practice Using Pseudo-classes'
+description 'Practice your new skills!'
+
+sublevels
+level 'CSD U2L18-L6a-2025'
+level 'CSD U2L18-L6b-2025'
+level 'CSD U2L18-L6c-2025'
+level 'CSD U2L18-L6d-2025'
+
+uses_lab2

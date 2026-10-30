@@ -1,0 +1,56 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2024-06-28T20:03:45.000Z",
+  "level_num": "custom",
+  "user_id": 4,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Step 5: Make your Model Card\r\n\r\nFollow the instructions on your activity guide to make your model card, then \"publish\" the chatbot.\r\n\r\nUse this level for Step 6: User Testing as well!",
+    "system_prompt": "deprecated",
+    "bot_title": "deprecated",
+    "bot_description": "deprecated",
+    "disable_projects": true,
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "temperature": "0.5",
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "editable",
+        "temperature": "editable",
+        "systemPrompt": "editable",
+        "retrievalContexts": "editable",
+        "modelCardInfo": "editable"
+      },
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gen-ai-biomistral-7b",
+        "gen-ai-mistral-pirate-7b",
+        "gen-ai-karen-creative-mistral-7b",
+        "gen-ai-arithmo2-mistral-7b",
+        "gen-ai-mistral-7b-inst-v01"
+      ]
+    },
+    "project_template_level_name": "gen-ai-customizing-project2-template_2024",
+    "name_suffix": "_2024"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-06-28T20:03:45.152+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-project2-L2\\\"\"],\"cloned_from\":\"gen-ai-customizing-project2-L2\"}]"
+}]]></config>
+</Aichat>

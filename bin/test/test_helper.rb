@@ -1,4 +1,6 @@
 require 'simplecov'
+require_relative '../../lib/cdo/ci_utils'
+
 SimpleCov.start do
   coverage_dir File.expand_path('../coverage', __FILE__)
 
@@ -8,7 +10,6 @@ SimpleCov.start do
     is_not_bin_file || is_bin_test_file
   end
 
-  add_group 'I18n', 'i18n/'
   add_group 'Animations', 'animation_assets/'
 end
 
@@ -21,18 +22,18 @@ require 'fileutils'
 require 'json'
 require 'yaml'
 
-# Set up JUnit output for Circle
+# Set up JUnit output for CI
 reporters = []
-if ENV['CIRCLECI']
+if CI::Utils.ci_job_ui_tests?
   reporters << Minitest::Reporters::ProgressReporter.new
-  reporters << Minitest::Reporters::JUnitReporter.new("#{ENV['CIRCLE_TEST_REPORTS']}/bin")
+  reporters << Minitest::Reporters::JUnitReporter.new("#{ENV.fetch('CI_TEST_REPORTS', nil)}/bin")
 else
   reporters << Minitest::Reporters::SpecReporter.new
 end
 # Skip this if the tests are run in RubyMine
 Minitest::Reporters.use! reporters unless ENV['RM_INFO']
 
-module MiniTest
+module Minitest
   module Assertions
     alias :actual_diff :diff
 
@@ -45,10 +46,10 @@ module MiniTest
 
   class Spec
     before do
-      if ENV['CIRCLECI']
-        STDOUT.stubs(:print)
-        STDOUT.stubs(:puts)
-        STDOUT.stubs(:warn)
+      if ENV['CI_JOB'] == 'ui_tests'
+        $stdout.stubs(:print)
+        $stdout.stubs(:puts)
+        $stdout.stubs(:warn)
       end
     end
   end

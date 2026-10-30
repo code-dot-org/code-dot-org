@@ -1,0 +1,11 @@
+name 'designing-reliable-apps-lesson11-milestone4-test_2025-pilot'
+display_name 'Milestone 4 Hub'
+description 'Your Goal: Prepare your app for handoff by documenting your work and showing ownership of your code. In this milestone, you will create a clear README, explain your async and error handling logic, and finalize your project for submission. Use the levels below to complete your documentation, add meaningful comments, and confirm your app is ready to ship.'
+
+sublevels
+level 'designing-reliable-apps-lesson11-milestone4-4a-test_2025-pilot'
+level 'designing-reliable-apps-lesson11-milestone4-4b-test_2025-pilot'
+level 'designing-reliable-apps-lesson11-milestone4-4c-test_2025-pilot'
+
+
+uses_lab2

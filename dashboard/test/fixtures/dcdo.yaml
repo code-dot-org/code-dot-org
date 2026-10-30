@@ -1,16 +1,3 @@
-# This yaml file describes the configuration for DCDO
-# Here's how a typical DCDO setting would be defined:
-#
-# <name>: <value>
-#
-# where name is a string and value can be anything
-# that is jsonable
-
-milestone_task_rate: 1000
-some_numbers: [1, 8, 222332]
-a_hash:
-  name: trevor
-  email: trevor@code.org
-
-
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:b24e0833dac3a673e6f2a0bb5f342f8b0af47892e607cebc9852c877e1b47d61
+size 307

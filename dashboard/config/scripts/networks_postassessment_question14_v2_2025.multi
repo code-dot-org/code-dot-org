@@ -1,0 +1,19 @@
+name 'networks-postassessment-question14_v2-2025'
+title 'Networks and the Internet Post-Assessment: Question 14'
+
+right 'Having too many devices connected to the same Wi-Fi network'
+wrong 'Using Ethernet instead of Wi-Fi'
+wrong 'Closing background applications'
+wrong 'Upgrading to a faster router'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Which scenario could cause a slow Internet connection at home?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 5: Packets
+
+Lesson 6: HTTP and DNS
+MARKDOWN

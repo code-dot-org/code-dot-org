@@ -1,11 +1,13 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
+
 import {groupedLessons} from '@cdo/apps/code-studio/progressReduxSelectors';
-import SummaryProgressTable from './SummaryProgressTable';
+
 import DetailProgressTable from './DetailProgressTable';
 import LessonGroup from './LessonGroup';
 import {groupedLessonsType} from './progressTypes';
+import SummaryProgressTable from './SummaryProgressTable';
 
 export const styles = {
   hidden: {
@@ -19,6 +21,7 @@ class ProgressTable extends React.Component {
     isSummaryView: PropTypes.bool.isRequired,
     groupedLessons: PropTypes.arrayOf(groupedLessonsType).isRequired,
     minimal: PropTypes.bool,
+    isOnLevelView: PropTypes.bool,
   };
 
   componentDidMount() {
@@ -30,14 +33,15 @@ class ProgressTable extends React.Component {
     const padding = 80;
     $('.container.main').css({
       width: 'initial',
-      maxWidth: 940 + 2 * padding,
+      maxWidth: 940 + 4 * padding,
       paddingLeft: padding,
       paddingRight: padding,
     });
   }
 
   render() {
-    const {isSummaryView, isPlc, groupedLessons, minimal} = this.props;
+    const {isSummaryView, isPlc, groupedLessons, minimal, isOnLevelView} =
+      this.props;
 
     if (
       groupedLessons.length === 1 &&
@@ -51,6 +55,7 @@ class ProgressTable extends React.Component {
             <SummaryProgressTable
               groupedLesson={groupedLessons[0]}
               minimal={minimal}
+              isOnLevelView={isOnLevelView}
             />
           </div>
           <div style={isSummaryView ? styles.hidden : {}}>
@@ -67,6 +72,7 @@ class ProgressTable extends React.Component {
               isPlc={isPlc}
               groupedLesson={group}
               isSummaryView={isSummaryView}
+              isOnLevelView={isOnLevelView}
             />
           ))}
         </div>

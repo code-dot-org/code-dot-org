@@ -1,0 +1,10 @@
+name 'aid-thinking-critically-lesson5-level2_2026-test'
+display_name 'How AI Works Mini-Lessons'
+description 'Choose a topic you would like to learn more about.'
+
+sublevels
+level 'aid-thinking-critically-lesson5-level3a_2026-test'
+level 'aid-thinking-critically-lesson5-level3b_2026-test'
+level 'aid-thinking-critically-lesson5-level3c_2026-test'
+
+uses_lab2

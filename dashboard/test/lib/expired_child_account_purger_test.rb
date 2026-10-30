@@ -68,10 +68,14 @@ class ExpiredChildAccountPurgerTest < ActiveSupport::TestCase
   end
 
   test 'only expired child accounts are purged' do
-    expired_accounts = Array.new(3) {|_| create :locked_out_child, :expired}
-    locked_account = create :locked_out_child
-    u13_colorado_account = create :student, :U13, :in_colorado
-    student_account = create :student
+    expired_accounts = create_list(:locked_out_child, 3, :expired)
+    locked_account = create(:locked_out_child)
+    u13_colorado_account = create(:student, :U13, :in_colorado)
+    student_account = create(:student)
+
+    expired_accounts.each do |user|
+      Services::ChildAccount::EventLogger.expects(:log_account_purging).with(user).once
+    end
 
     purger = ExpiredChildAccountPurger.new
     purger.purge_expired_child_accounts!(skip_report: true)
@@ -83,7 +87,7 @@ class ExpiredChildAccountPurgerTest < ActiveSupport::TestCase
   end
 
   test 'expired child accounts are reported in metrics' do
-    expired_accounts = Array.new(3) {|_| create :locked_out_child, :expired}
+    expired_accounts = create_list(:locked_out_child, 3, :expired)
     Cdo::Metrics.expects(:push).with(
       'ExpiredChildAccountPurger',
       includes_metrics(
@@ -99,9 +103,7 @@ class ExpiredChildAccountPurgerTest < ActiveSupport::TestCase
     purger.purge_expired_child_accounts!
   end
 
-  private
-
-  def purged?(user)
+  private def purged?(user)
     user.purged_at.present?
   end
 end

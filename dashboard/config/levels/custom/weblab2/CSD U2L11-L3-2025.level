@@ -1,0 +1,102 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-02-20T04:59:31.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# The Four Ghosts\r\n\r\nThis page describes the four ghosts from Pac Man and Mrs. Pac man, but only one of them is styled with a special class.\r\n\r\n# Do This\r\n\r\n1) Look through the code to see how the \"blinky\" class works.\r\n2) Add a new class attribute in the `index.html` file for each of the other three ghosts.\r\n3) Add a class rule-set in the `style.css` file for each of the three ghosts.\r\n4) Add properties to each rule set to style the ghost's image and paragraph differently.\r\n  \r\n::: details [🔎 **Show Me How** 🔍]\r\n![](https://images.code.org/10f9b8401ff785b13148fcfa0e358072-image-1771564184719.gif)\r\n:::\r\n\r\n::: details [Help & Tips]\r\n- [<i class=\"fa-regular fa-map\"></i> Classes](https://studio.code.org/courses/csd-2024/guides/classes)\r\n- [<i class=\"fa-solid fa-book\"></i> Layout Properties](https://studio.code.org/courses/csd-2024/guides/layout-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Body Styling](https://studio.code.org/courses/csd-2024/guides/body-styling)\r\n- [<i class=\"fa-solid fa-book\"></i> Images in HTML](https://studio.code.org/courses/csd-2024/guides/images-in-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Text Properties](https://studio.code.org/courses/csd-2024/guides/text-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Creative Commons Search](https://studio.code.org/courses/csd-2024/guides/creative-commons-search)\r\n- [<i class=\"fa-solid fa-book\"></i> Style Sheets](https://studio.code.org/courses/csd-2024/guides/style-sheets)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Lists](https://studio.code.org/courses/csd-2024/guides/lists)\r\n- [<i class=\"fa-solid fa-book\"></i> Headings and Paragraphs](https://studio.code.org/courses/csd-2024/guides/headings-and-paragraphs)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Tags](https://studio.code.org/courses/csd-2024/guides/html-tags)\r\n- [<i class=\"fa-solid fa-book\"></i> Debugging in HTML](https://studio.code.org/courses/csd-2022/guides/debugging-html)\r\n:::",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n <head>\n <link rel=\"stylesheet\" href=\"style.css\">\n </head>\n <body>\n   <!-- Pac Man ghosts -->\n   <h1>The Ghost Gang</h1>\n \n   <p>The Ghost Gang refers to the original antagonists of the first Pac-Man game, who return in most of the other games in the Pac-Man series. The group is comprised of four ghosts named Blinky, Pinky, Inky, and Clyde.</p>\n \n   <!-- blinky -->\n   <img class=\"blinky\" src=\"blinky.png\">\n   <h2 class=\"blinky\">Blinky</h2>\n   <p class=\"blinky\">The red ghost is bad-tempered, crude, bossy, bully, fast, bratty, grouchy, dangerous, mean, sarcastic, greedy, and mostly aggressive. He's the responsible leader of the four and the arch-nemesis of Pac-Man.</p>\n \n   <br>\n   <br>\n  <hr>\n   <br>\n   <br>\n \n   <!-- 2) Add a new class attribute for each of the other three ghosts -->\n   <!-- inky -->\n   <img src=\"inky.png\">\n    <h2>Inky</h2>\n    <p>The cyan or blue ghost who is goofy, shy, unpredictable, wacky, shattered-brained, a little reckless, dizzy, and can also sometimes chase Pac-Man aggressively like Blinky.</p>\n   <br>\n   <br>\n   <hr>\n  <br>\n   <br>\n  \n   <!-- pinky -->\n   <img src=\"pinky.png\">\n  <h2>Pinky</h2>\n   <p>The pink ghost who is mischievous, persistent, tricky, cute, adorable, beautiful, happy, lovely, and has a big crush on Pac-Man from time to time. In the original arcade game, she's the only female ghost.</p>\n  <br>\n  <br>\n  <hr>\n  <br>\n  <br>\n \n   <!-- clyde -->\n   <img src=\"clyde.png\">\n   <h2>Clyde</h2>\n   <p>The orange ghost who is cowardly, lazy, stupid, brainless, hopeless, and seemingly dumb, but may just be smarter than he lets on and doesn't really care about chasing Pac-Man. He always distracts himself.</p>\n  \n   <br>\n   <br>\n \n   <h3>All pictures in public domain</h3>\n \n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "/* 3) Add the class and rule set for each ghost */\n/* 4) Add properties to each rule set to style each ghost's image, heading and paragraph differently */\n\nbody {\n  background: lightgrey;\n}\n\nh2 {\n  width: 50%;\n margin-left: 150px;\n padding: 5px;}\n\n\np {\n margin-left: 150px;\n padding: 5px;\n}\n\nimg {\n  width: 100px;\n  float: left;\n  margin: 10px;\n  border-radius: 30px;\n}\n\n.blinky{\n  border: solid 3px;\n  border-color: red;\n  border-radius: 10px;\n color: white;\n  font-family: cursive;\n background-color: black;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "inky.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L11-L3-2025/uuid/17c0bb6f-0230-4639-8336-7f72420e53ac.png",
+          "type": "starter",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "pinky.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L11-L3-2025/uuid/526ae32f-9db0-47b7-8728-3ee49efd99af.png",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "clyde.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L11-L3-2025/uuid/a64d62f3-3828-4100-b341-4dde3fb44db4.png",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "blinky.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L11-L3-2025/uuid/1bdfbca3-156d-4263-8459-efe488333a7b.png",
+          "type": "starter",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nuwyOrStU9QXLrvqD4LeYZg==\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-20 05:00:50 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-02-20 05:01:06 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-02-20 05:10:08 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-02-20 05:13:07 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

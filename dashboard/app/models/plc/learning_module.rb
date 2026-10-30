@@ -22,6 +22,18 @@
 # part of modules, and modules are not part of courses.
 # Learning Modules correspond to Lessons in our regular curriculum hierarchy.
 class Plc::LearningModule < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :public,
+    name: :public,
+    created_at: :public,
+    updated_at: :public,
+    plc_course_unit_id: :public,
+    module_type: :public,
+    stage_id: :public,
+  )
+
   MODULE_TYPES = [
     REQUIRED_MODULE = 'required'.freeze,
     CONTENT_MODULE = 'content'.freeze,
@@ -37,8 +49,6 @@ class Plc::LearningModule < ApplicationRecord
   ].freeze
 
   NONREQUIRED_MODULE_TYPES = (MODULE_TYPES - [REQUIRED_MODULE]).freeze
-
-  attr_readonly :plc_course_unit_id
 
   belongs_to :lesson, foreign_key: 'stage_id', optional: true
   belongs_to :plc_course_unit, class_name: '::Plc::CourseUnit'

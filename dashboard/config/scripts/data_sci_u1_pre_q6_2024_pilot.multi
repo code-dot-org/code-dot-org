@@ -1,0 +1,15 @@
+name 'Data Sci U1 Pre Q6_2024-pilot'
+
+question 'A company collects user data for targeted advertising. What ethical issue might arise, and what\'s an ethical method to mitigate it ?'
+
+wrong 'Users might find ads more relevant; mitigate by increasing ad frequency.'
+right 'Users\' privacy might be compromised; mitigate by obtaining explicit consent and anonymizing data.'
+wrong 'Data might become outdated; mitigate by changing the collection dates on the data.'
+wrong 'Ads might become less effective; mitigate by broadening data collection.'
+
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+
+MARKDOWN

@@ -1,0 +1,13 @@
+- @page_title = 'Contact your local Regional Partner'
+
+%h1
+  Contact your local Regional Partner
+%br
+#regional-partner-mini-contact-container{"data-source-page-id" => "contact-regional-partner"}
+%br
+
+%script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
+%script{src: webpack_asset_path('js/regionalPartnerMiniContact.js')}
+
+:javascript
+  $(document).ready(window.showRegionalPartnerMiniContact);

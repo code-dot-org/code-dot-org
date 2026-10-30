@@ -1,10 +1,8 @@
+import {render, screen, fireEvent} from '@testing-library/react';
+import '@testing-library/jest-dom';
 import React from 'react';
-import {expect} from '../../../util/reconfiguredChai';
-import {isolateComponent} from 'isolate-react';
+
 import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
-import sinon from 'sinon';
-import * as utils from '@cdo/apps/utils';
-import Button from '@cdo/apps/templates/Button';
 
 describe('BorderedCallToAction', () => {
   const headingText = 'Do Something';
@@ -19,89 +17,45 @@ describe('BorderedCallToAction', () => {
   };
 
   describe('default behavior', () => {
-    const borderedCtA = isolateComponent(
-      <BorderedCallToAction {...defaultProps} />
-    );
-
     it('renders a heading', () => {
-      expect(borderedCtA.content()).contains(descriptionText);
+      render(<BorderedCallToAction {...defaultProps} />);
+      expect(
+        screen.getByRole('heading', {name: headingText})
+      ).toBeInTheDocument();
     });
 
     it('renders a description', () => {
-      expect(borderedCtA.content()).contains(descriptionText);
+      render(<BorderedCallToAction {...defaultProps} />);
+      expect(screen.getByText(descriptionText)).toBeInTheDocument();
     });
 
-    it('renders a gray button with text', () => {
-      const button = borderedCtA.findOne('Button');
-      expect(button.props.text).to.equal(buttonText);
-      expect(button.props.color).to.equal('brandSecondaryDefault');
-    });
-
-    it('has a dashed border', () => {
-      expect(borderedCtA.findAll('div')[0].props.style).to.contain({
-        borderStyle: 'dashed',
-        borderWidth: 5,
-      });
+    it('renders a button with text', () => {
+      render(<BorderedCallToAction {...defaultProps} />);
+      expect(screen.getByRole('link', {name: buttonText})).toBeInTheDocument();
     });
 
     it('button goes to url when clicked', () => {
-      const path = '/my/path';
-      sinon.stub(utils, 'navigateToHref');
-
-      const button = borderedCtA.findOne('Button');
-      button.props.onClick();
-
-      expect(utils.navigateToHref).to.have.been.calledWith(path);
-
-      utils.navigateToHref.restore();
+      render(<BorderedCallToAction {...defaultProps} />);
+      const link = screen.getByRole('link', {name: buttonText});
+      expect(link).toHaveAttribute('href', buttonUrl);
     });
   });
 
   describe('custom behavior', () => {
     it('must have either a buttonUrl or onClick', () => {
       expect(() => {
-        isolateComponent(
+        render(
           <BorderedCallToAction {...defaultProps} buttonUrl={undefined} />
         );
-      }).to.throw(Error);
+      }).toThrow(Error);
     });
 
-    it('can have a solid border', () => {
-      const borderedCtA = isolateComponent(
-        <BorderedCallToAction {...defaultProps} solidBorder />
-      );
-      expect(borderedCtA.findAll('div')[0].props.style).to.contain({
-        borderStyle: 'solid',
-        borderWidth: 1,
-      });
-    });
-
-    it('can have a custom button color', () => {
-      const borderedCtA = isolateComponent(
-        <BorderedCallToAction
-          {...defaultProps}
-          buttonColor={Button.ButtonColor.brandSecondaryDefault}
-        />
-      );
-      const button = borderedCtA.findOne('Button');
-      expect(button.props.text).to.equal(buttonText);
-      expect(button.props.color).to.equal('brandSecondaryDefault');
-    });
-
-    it('can use a custom onClick, which ignores buttonUrl', () => {
-      const onClickSpy = sinon.spy();
-      sinon.stub(utils, 'navigateToHref');
-      const borderedCtA = isolateComponent(
-        <BorderedCallToAction {...defaultProps} onClick={onClickSpy} />
-      );
-
-      const button = borderedCtA.findOne('Button');
-      button.props.onClick();
-
-      expect(utils.navigateToHref).not.to.have.been.called;
-      expect(onClickSpy).to.have.been.calledOnce;
-
-      utils.navigateToHref.restore();
+    it('can use a custom onClick', () => {
+      const onClickSpy = jest.fn();
+      render(<BorderedCallToAction {...defaultProps} onClick={onClickSpy} />);
+      const button = screen.getByRole('link', {name: buttonText});
+      fireEvent.click(button);
+      expect(onClickSpy).toHaveBeenCalledTimes(1);
     });
   });
 });

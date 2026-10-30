@@ -1,5 +1,5 @@
 class UserLevelsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:get_level_source, :get_section_response_summary]
   check_authorization
   load_and_authorize_resource
   protect_from_forgery except: [:update] # referer is the script level page which is publically cacheable
@@ -29,8 +29,11 @@ class UserLevelsController < ApplicationController
     return head :forbidden, text: 'User must be instructor of course' unless script.can_be_instructor?(current_user)
     level = Level.find(params[:level_id])
     return head :not_found, text: 'Level not found' unless level
-    return head :bad_request, text: "Clearing progress on level type #{level.type} is not supported" unless ['Multi', 'FreeResponse'].include?(level.type)
-    UserLevel.where(user_id: current_user.id, script_id: script.id, level: level.id).destroy_all
+    unless clearable_level_type?(level)
+      return head :bad_request, text: "Clearing progress on level type #{level.type} is not supported"
+    end
+
+    UserLevel.where(user_id: current_user.id, script_id: script.id, level_id: response_level_ids(level)).destroy_all
     return head :ok
   end
 
@@ -38,6 +41,45 @@ class UserLevelsController < ApplicationController
   def get_token
     headers['csrf-token'] = form_authenticity_token
     return head :ok
+  end
+
+  # GET /user_levels/level_source/:script_id/:level_id
+  # Get the level source data for the current user's most recent attempt at the given level in the given script.
+  # If there is no attempt, return null.
+  def get_level_source
+    level = Level.find_by(id: params[:level_id])
+    level_ids = level ? response_level_ids(level) : [params[:level_id]]
+    # A teacher viewing a student's work passes the student's user_id; only
+    # that student's teacher may read it. Without a user_id, read the current
+    # user's own most recent attempt.
+    if params[:user_id].present?
+      user = User.find_by(id: params[:user_id])
+      return head :forbidden unless user&.student_of?(current_user)
+    else
+      user = current_user
+    end
+    user_levels = UserLevel.where(user_id: user.id, level_id: level_ids, script_id: params[:script_id])
+    most_recent_user_level = user_levels.order(updated_at: :desc).first
+    return render json: {data: most_recent_user_level&.level_source&.data}, status: :ok
+  end
+
+  # GET /user_levels/section_summary/:section_id/:level_id
+  # Get the number of responses and number of students in the section for the given level.
+  # Only instructors of the section can access this information.
+  def get_section_response_summary
+    section = Section.find(params[:section_id])
+    return head :bad_request, text: "Section not found" unless section
+    level = Level.find(params[:level_id])
+    return head :bad_request, text: "Level not found" unless level
+    return head :forbidden, text: 'User must be instructor of section' unless section.instructors.include?(@current_user)
+    level_ids = response_level_ids(level)
+    responses = UserLevel.where(level_id: level_ids, user: section.students)
+    # When a level resolves to more than one id (ex. a migrated predict level plus its
+    # legacy contained level), a student may have a response under each; count
+    # distinct students so they aren't double-counted. Otherwise preserve the
+    # original row count.
+    response_count = level_ids.length > 1 ? responses.distinct.count(:user_id) : responses.count
+    return render json: {response_count: response_count, num_students: section.students.count}, status: :ok
   end
 
   private def set_user_level
@@ -48,5 +90,21 @@ class UserLevelsController < ApplicationController
   # Never trust parameters from the scary internet, only allow the white list through.
   private def user_level_params
     params.require(:user_level).permit(:best_result, :submitted)
+  end
+
+  # Some lab2 levels have a predict_settings field that indicates they are predict levels.
+  # We allow clearing progress on these levels as well as multi or free-response levels.
+  private def clearable_level_type?(level)
+    ['Multi', 'FreeResponse'].include?(level.type) || level.predict_level?
+  end
+
+  # The level ids that may hold a student's response for the given level.
+  # A migrated predict level's response may live on the level itself
+  # (post-migration) or its legacy contained level (pre-migration), so
+  # levels_for_progress returns both. Non-predict levels stay parent-only,
+  # which these generic endpoints rely on.
+  private def response_level_ids(level)
+    return [level.id] unless level.predict_level?
+    level.levels_for_progress.map(&:id)
   end
 end

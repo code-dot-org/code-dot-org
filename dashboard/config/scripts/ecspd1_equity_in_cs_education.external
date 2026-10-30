@@ -6,7 +6,7 @@ css 'unplugged'
 markdown <<MARKDOWN
 # Equity in Computer Science Education
 
-<img src="https://code.org/images/cs-stats/Slide1_Schools_Teach.png">
+<img src="/blockly/media/cs-stats/Slide1_Schools_Teach.png">
 
 ## Computer Science impacts every field, yet very few students have access in our K-12 education system
 

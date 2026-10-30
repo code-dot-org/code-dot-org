@@ -1,7 +1,8 @@
-import {useMemo} from 'react';
 import _ from 'lodash';
-import {makeEnum} from '@cdo/apps/utils';
+import {useMemo} from 'react';
+
 import {useFetch} from '@cdo/apps/util/useFetch';
+import {makeEnum} from '@cdo/apps/utils';
 
 export const LockStatus = makeEnum('Locked', 'Editable', 'ReadonlyAnswers');
 
@@ -30,7 +31,6 @@ export function useGetLockState(unitId, lessonId, sectionId) {
 
   const serverLockState = useMemo(
     () => extractLockData(data, sectionId, lessonId),
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     [data, sectionId, lessonId]
   );
 
@@ -61,6 +61,7 @@ function extractLockData(serverLockState, sectionId, lessonId) {
     name: studentData.name,
     lockStatus: toLockStatus(studentData),
     userLevelData: studentData.user_level_data,
+    isDemoStudent: !!studentData.is_demo_student,
   }));
 }
 

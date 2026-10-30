@@ -1,16 +1,16 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import i18n from '@cdo/locale';
-import Button from '@cdo/apps/templates/Button';
-import {LevelStatus} from '@cdo/apps/util/sharedConstants';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
-import SelectedStudentPairing from '@cdo/apps/code-studio/components/progress/teacherPanel/SelectedStudentPairing';
-import {studentShape, levelWithProgress} from './types';
-import fontConstants from '@cdo/apps/fontConstants';
 
-const RadiumFontAwesome = Radium(FontAwesome);
+import SelectedStudentPairing from '@cdo/apps/code-studio/components/progress/teacherPanel/SelectedStudentPairing';
+import fontConstants from '@cdo/apps/fontConstants';
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
+import stringKeyComparator from '@cdo/apps/util/stringKeyComparator';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
+import i18n from '@cdo/locale';
+
+import {studentShape, levelWithProgress} from './types';
 
 export default class SelectedStudentInfo extends React.Component {
   static propTypes = {
@@ -19,6 +19,7 @@ export default class SelectedStudentInfo extends React.Component {
     selectedUserId: PropTypes.number,
     teacherId: PropTypes.number,
     levelsWithProgress: PropTypes.arrayOf(levelWithProgress),
+    isSortedByFamilyName: PropTypes.bool,
   };
 
   onUnsubmit = userLevelId => {
@@ -39,8 +40,16 @@ export default class SelectedStudentInfo extends React.Component {
       .fail(err => console.error(err));
   };
 
+  sortStudents = () => {
+    const {students, isSortedByFamilyName} = this.props;
+    return isSortedByFamilyName
+      ? [...students].sort(stringKeyComparator(['familyName', 'name']))
+      : [...students].sort(stringKeyComparator(['name', 'familyName']));
+  };
+
   nextStudent = () => {
-    const {students, selectedUserId, onSelectUser} = this.props;
+    const {selectedUserId, onSelectUser} = this.props;
+    const students = this.sortStudents();
 
     const currentStudentIndex = students.findIndex(
       student => student.id === selectedUserId
@@ -53,7 +62,8 @@ export default class SelectedStudentInfo extends React.Component {
   };
 
   previousStudent = () => {
-    const {students, selectedUserId, onSelectUser} = this.props;
+    const {selectedUserId, onSelectUser} = this.props;
+    const students = this.sortStudents();
 
     const currentStudentIndex = students.findIndex(
       student => student.id === selectedUserId
@@ -96,27 +106,32 @@ export default class SelectedStudentInfo extends React.Component {
   };
 
   render() {
+    const {students} = this.props;
     const selectedStudent = this.getSelectedUser();
     const levelWithProgress = this.getLevelWithProgressForUser(
       selectedStudent.id
     );
+    const arrowsDisabled = students.length <= 1;
+    const arrowStyle = arrowsDisabled ? styles.arrowDisabled : styles.arrow;
 
     // While levelWithProgress is loading display arrows and student name only
     if (!levelWithProgress) {
       return (
         <div style={styles.main}>
-          <RadiumFontAwesome
+          <FontAwesome
             icon="caret-left"
-            onClick={this.previousStudent}
-            style={styles.arrow}
+            onClick={arrowsDisabled ? undefined : this.previousStudent}
+            style={arrowStyle}
+            aria-disabled={arrowsDisabled}
           />
           <div style={styles.studentInfo}>
             <div style={styles.name}>{selectedStudent.name}</div>
           </div>
-          <RadiumFontAwesome
+          <FontAwesome
             icon="caret-right"
-            onClick={this.nextStudent}
-            style={styles.arrow}
+            onClick={arrowsDisabled ? undefined : this.nextStudent}
+            style={arrowStyle}
+            aria-disabled={arrowsDisabled}
           />
         </div>
       );
@@ -127,10 +142,11 @@ export default class SelectedStudentInfo extends React.Component {
 
     return (
       <div style={styles.main}>
-        <RadiumFontAwesome
+        <FontAwesome
           icon="caret-left"
-          onClick={this.previousStudent}
-          style={styles.arrow}
+          onClick={arrowsDisabled ? undefined : this.previousStudent}
+          style={arrowStyle}
+          aria-disabled={arrowsDisabled}
         />
         <div style={styles.studentInfo}>
           <div style={styles.name}>{selectedStudent.name}</div>
@@ -176,10 +192,11 @@ export default class SelectedStudentInfo extends React.Component {
             </div>
           )}
         </div>
-        <RadiumFontAwesome
+        <FontAwesome
           icon="caret-right"
-          onClick={this.nextStudent}
-          style={styles.arrow}
+          onClick={arrowsDisabled ? undefined : this.nextStudent}
+          style={arrowStyle}
+          aria-disabled={arrowsDisabled}
         />
       </div>
     );
@@ -215,6 +232,13 @@ const styles = {
     cursor: 'pointer',
     position: 'relative',
     top: 30,
+  },
+  arrowDisabled: {
+    fontSize: 40,
+    cursor: 'default',
+    position: 'relative',
+    top: 30,
+    opacity: 0.3,
   },
   button: {
     margin: 0,

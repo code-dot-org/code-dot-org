@@ -1,0 +1,59 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-09-07T16:25:56.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "**Is someone trying to steal your money?**\r\n\r\nPayment methods are rarely declined: only about 5–10% of card transactions get declined.\r\n\r\nOne sign of fraud—such as a stolen credit card—is a lot of declined transactions. Use Python to analyze someone’s payment history for fraud.\r\n\r\n☑️ Do This:\r\n- Count the number of \"Approved\" and \"Declined\" purchases in the \"status\" column of `data.csv`.\r\n- Interpret the data: Is this payment method being used fraudulently? Be ready to share your thoughts on the next level.\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "import csv\n\nfile = open(\"data.csv\")\nreader = csv.DictReader(file)\n\napproved = 0\ndeclined = 0\n\n# TODO: Count the number of approved and declined purchases\n\nprint(f\"Approved: {approved}\")\nprint(f\"Declined: {declined}\")\n\nfile.close()\n",
+          "folderId": "0",
+          "active": true
+        },
+        "1": {
+          "id": "1",
+          "name": "data.csv",
+          "contents": "date,status\nAugust 7,Declined\nAugust 7,Declined\nAugust 7,Declined\nAugust 7,Declined\nAugust 7,Declined\nAugust 7,Declined\nAugust 7,Approved\nAugust 7,Declined\nAugust 7,Approved\nAugust 7,Declined\nAugust 7,Approved\nAugust 7,Approved\nAugust 7,Approved\nAugust 7,Approved\nAugust 7,Approved\nAugust 7,Approved\nAugust 7,Approved\nAugust 7,Approved\nAugust 7,Approved\nAugust 7,Approved\nAugust 7,Declined\nAugust 7,Declined\nAugust 7,Declined\nAugust 7,Declined\nAugust 7,Declined\nAugust 7,Declined\nAugust 7,Declined\nAugust 7,Declined\nAugust 7,Declined\nAugust 7,Declined\nAugust 7,Declined\nAugust 7,Declined\nAugust 7,Declined\nAugust 7,Declined\nAugust 7,Declined\nAugust 7,Declined\nAugust 7,Declined\nAugust 7,Declined\nAugust 7,Approved\nAugust 7,Declined\nAugust 7,Declined\nAugust 7,Declined\nAugust 7,Declined\nAugust 7,Declined\nAugust 7,Declined\nAugust 7,Declined\nAugust 7,Approved\nAugust 7,Approved\nAugust 7,Approved\nAugust 7,Approved\n",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n",
+    "display_name": "Detecting Fraud",
+    "thumbnail_url": "https://images.code.org/b55f2df366cfd78edacc490967ab7fb3-credit-cards.png",
+    "bubble_choice_description": "Analyze transaction data for fraud."
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-07 16:27:23 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 16:28:27 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 16:34:38 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 16:34:54 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 16:38:58 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 16:46:24 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 16:46:25 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 16:47:32 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-10 18:35:59 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

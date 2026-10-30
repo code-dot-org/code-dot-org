@@ -1,0 +1,35 @@
+<Javalab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 68,
+  "created_at": "2024-05-24T19:10:08.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "long_instructions": "The <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Customer</code> class declares an instance variable for a 1D array of <code style=\"background-color: #ececec; color: black; font-weight: bold;\">double</code> values to store the amounts a customer spent on their previous purchases.\r\n\r\n✅ **TO DO:** In <code style=\"background-color: #ececec; color: black; font-weight: bold;\">CustomerRunner.java</code>, instantiate a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Customer</code> object with a 1D array that stores **5** <code style=\"background-color: #ececec; color: black; font-weight: bold;\">double</code> values.\r\n\r\n1. Declare and initialize a 1D array to store **5** <code style=\"background-color: #ececec; color: black; font-weight: bold;\">double</code> values.\r\n\r\n2. Instantiate a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Customer</code> object by passing the 1D array as the argument to the constructor.\r\n\r\n3. Print the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Customer</code> object.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the <strong>Help & Tips</strong> tab ⬆️ for help with declaring and initializing a 1D array.\r\n</div>\r\n\r\n## ***Don't forget to . . .***\r\n\r\n![](https://images.code.org/eb2c8910ae2e150019b8e2177405d4af-image-1668191576873.png)",
+    "start_sources": {
+      "PersonRunner.java": {
+        "text": "public class PersonRunner{\n    public static void main(String[] args){\n     \n      //Create an array of 3 objects of your class.\n\n\n      //Initialize array elements 0-2 to new objects of your class.\n  \n      \n      //Print the name of each person object using the \n      //getName() method of each object in the array using the array index.   \n\n\n      \n    }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      },
+      "Person.java": {
+        "text": "public class Person{\n  \n  private String name;\n  private int age;\n\n  Person(String name){\n      this.name = name;\n  }\n  \n  Person(String name, int age){\n      this.name = name;\n      this.age  = age;\n  }\n  \n  public String getName(){\n      return name;\n  }\n  \n  public int getAge(){\n      return age;\n  }\n  \n  public void setName(String newName){\n      name = newName;\n  }\n  \n  public void setAge(int newAge){\n      age = newAge;\n  }\n  \n  public String toString(){\n      String info = \"\";\n      info += name + \" is \";\n      info += age + \" years old.\";\n      return info;\n  }\n    \n  \n}",
+        "isVisible": true,
+        "tabOrder": 1
+      }
+    },
+    "encrypted_exemplar_sources": "7r1yCdgqNHQ/8H2LPPYZkmANfYS9pmIYJI2Fy0zUFI8NI3NXKjOuGx/tiopW\nT1E2eopG4K621/uz7VGTjbRZBq+eJULHENzmwlAwDd1Cco8jc0SbbFyGp+Hl\n/IuXTNbhRGD1VYyyTQMhKKDVMVvPQdiTjCoA6f03AVo3sGfArZsq4dVy5Twa\np2YJYkq9XlcQReXpPC6clb3/DTgCduGFjNRG/fgPOUk6UXdPe4VWYPw7nbxy\nIjvAzttezh8C4RgPirQBS2yh4C9VEhJ/T5h/VBBvn2/XCHNYpNrLvoeDisRT\nR4M4nyc7qxKDpgkOeIYKkXP6XKTCOrcT9KKu2H0rAwSDVNm09XhBl6Cw91yB\n8XFmn1j5P1LSVlw8yNT7JxwmbybO7hmOXKwnw5VbBKyBKRpbPTYvlLNKeU4x\nl47mm/TzSuwFC9Nokd5WYNG1Jdh4yMm6jOZoHiNrTeAKTUFIifDqeQL5kDvE\nNU+uJDtKqBLC2P7/5kF5M6q9gSDBJVuZW6toV6NOzu6vwrCIJSxSeHSq7Xyh\n6+fDaegwLgLl/cHOeel3Og2f624o+DV4v51/67rlX/dvQHemHiLmEDUe8vZ9\nVFpDr5+Exf/+Ruz5Dip5vbMSzpAibGYENS36Q/LBfJOTcgjNb4dQ+yTVNvjh\nm30XfjjDJ1XQD+iPx4Zg5n9+dAr8ICme169RkoFBFAFM39LvYdDk/d6w07a/\nwFPGP0dTLpubqw4s+Eh946CwBTi2CPCI9VKiQeLTLpj9V6G5D1R0c8hXXzz+\nk5IX1JqHNh1q7M2ArUz99aiK594Jm/SkqXB7uFxRAzkNHz1N+iGq+L8dHCIx\nzx2rFcWOFQ8GU99lRsNYIu7uC01htYtkfdf6gCeWJvt2aQ087dnLkcPDsVBz\n2P4ASq6emPhuVvgIXQAm+ifo/SfumIOuyVTbdloZCuMKiGwV6eDJVpzsAgl9\nOYDjixJrktESUFnUCF1Ma4IYzzYwGxeubB+QYVrY2a02CYj+22J3krZSw61p\nwn0/HMdKTrNyjXjIon6b7AgtH4/4K7jGYcb2MXHfl/inf/AKTrgjoeZQpKvc\nlpEIYzYyobjika/mLxmNTzP1Dgtd5ohrx8ZghY8sDbnjWv9aDRVYm61ActLD\nSXmGlskWmyPqMYt/pj0Ci3Sg6Vv+FT2UyybbxTGOFHmdXsRh1djYuM8mudNJ\no8QFKR9/0YacPrTcBnK2qA8JoNFP4xOxPG7gEgIXUaLo232mChb2zqv0Ksmk\nyDGdJ4IJCICevqAvqVAPp+qN2cwnV2qGqP1qg+Lt7YXnQwJL78JYqhphgre8\nb4oNF0qpXijSv/9ApOYqIxgS7HCbxDC8l0DO7ROU9kEToTU04CgxOy4dBWzh\n4LpSSqXdMdncn2vPcRfM+2kAw3hCXtLn9Oq4l8wis436ItUsH4wQVpdSjI02\nNv9svNraZ3HMtuqCrpZKBwhcbMRiXwGtEnaeVpFelrQJb763sWba+Srb/rno\nFvITR0WJDoSw5EEBX+5kdGm+V+E6UjNx8N/66xetZbGlocsFJCk014JTkAPW\nt7UaVpizeJoyj1vrofmc5W9vczmu8PO5iGbESG5ljdEC9X+C155wbz4f5E2y\n4swlXGcNA4RCj219QFPZNJCe/Yy6Cu4MxxB2FRxe+CaQMX3I6zmJgqWeL9Ra\npXFyhGJr8jcMB26cUXfmIRsBUgdyoR2JbiNEpsUSHfnBC7wUdK+PVOPPfItu\n4mqCcFZcvl/sTRyYnE0tITuE9aACWfljb14Mb492mev1NJ5O6hi9AXkedWmw\ndR7TDTXK0CvT4w5JVlOZxOBM6fasiJeCXKmluaMcs++kIqszbQio5A1bvSr3\nkmRJhyI55c3/53irPA==\n",
+    "encrypted_examples": [
+
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2024-05-24 19:10:17 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2024-05-24 19:14:50 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2024-05-24 19:18:22 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2024-05-24 19:30:11 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2024-05-24 19:30:25 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2024-05-24 19:44:04 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2024-05-24 19:45:42 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2024-05-24 21:36:33 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2024-05-24 21:36:38 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2024-05-24 22:19:21 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Javalab>

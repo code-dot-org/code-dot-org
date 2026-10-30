@@ -1,10 +1,6 @@
 require 'cdo/regexp'
-require 'cdo/geocoder'
 require 'cdo/profanity_filter'
 require 'dynamic_config/gatekeeper'
-
-USER_ENTERED_TEXT_INDICATORS = ['TITLE', 'TEXT', 'title name\=\"VAL\"'].freeze
-PLAYLAB_APP_INDICATOR = 'studio_'.freeze
 
 # This is raised if there is any violation and you query with exceptions
 # enabled.
@@ -42,27 +38,162 @@ module ShareFiltering
     PROFANITY = 'profanity'.freeze
   end
 
+  BLOCKLY_TEXT_FIELDS = ['SPEECH', 'TEXT', 'TEXT1', 'TITLE'].freeze
+  FILTERED_PROJECT_TYPES = %w[spritelab playlab poetry starwarsblocks game_design sketchlab].freeze
+  SKETCHLAB_TEXT_FIELDS = %w[label text altText].freeze
+  # Supported project types for filtering whose `source` is structured JSON
+  # rather than a blockly XML/JSON string.
+  STRUCTURED_SOURCE_EXTRACTORS = {'sketchlab' => :extract_text_sketchlab}.freeze
+  JSON_MAX_DEPTH = 999
+
   # Searches for a sharing failure given a program and locale.
   # Returns both the error type and the offending text snippet.
+  # Returns nil if the program text or project type can't be filtered.
   #
   # May throw OpenURI::HTTPError, IO::EAGAINWaitReadable depending on
   # service availability.
   #
-  # @param [String] program the student's program text
+  # @param [String, Hash] program the student's program text.
   # @param [String] locale a two-character ISO 639-1 language code
-  def self.find_share_failure(program, locale, exceptions: false)
-    return nil unless should_filter_program(program)
+  # @param [String] project_type
+  def self.find_share_failure(program, locale, project_type, exceptions: false)
+    # Filter projects geared for young students that accept user-generated text.
+    return nil unless should_filter_program(program, project_type)
 
-    xml_tag_regexp = /<[^>]*>/
-    program_tags_removed = program.gsub(xml_tag_regexp, "\n")
+    extractor = STRUCTURED_SOURCE_EXTRACTORS.fetch(project_type, :extract_text_blockly)
+    texts = send(extractor, program)
+    program_text = texts.join(" ")
+    return nil if program_text.strip.empty?
 
-    find_failure(program_tags_removed, locale, exceptions: exceptions)
+    # Email and phone: check concatenated text.
+    failure = find_email_or_phone_failure(program_text, exceptions: exceptions)
+    return failure if failure
+
+    # Temporarily disable address filtering to prevent false positives.
+    # TODO: re-enable this when we improve the user experience of the address filter. https://github.com/code-dot-org/code-dot-org/pull/73395
+    find_profanity_failure(program_text, locale, {}, exceptions: exceptions)
   end
 
-  def self.should_filter_program(program)
-    Gatekeeper.allows('webpurify', default: true) &&
-      program =~ /#{PLAYLAB_APP_INDICATOR}/o &&
-      program =~ /(#{USER_ENTERED_TEXT_INDICATORS.join('|')})/
+  # Parses a Blockly program (XML or JSON) and returns an array of text entries.
+  # @param program [String] Blockly program (XML or JSON).
+  # @return [Array<String>] Text values found in the program. If JSON depth overflow error occurs, returns an empty array.
+  def self.extract_text_blockly(program)
+    stripped = program.lstrip # Removes all leading whitespace.
+    unless stripped.start_with?("{", "[")
+      # XML, not JSON. These programs are from Play Lab activity levels.
+      # Replace <...> tags with newlines,
+      # convert to array of lines split at newline,
+      # strip leading/trailing whitespace from each line,
+      # drop any blank lines.
+      return stripped.gsub(/<[^>]*>/, "\n").split("\n").map(&:strip).reject(&:empty?)
+    end
+
+    # Texts will include user-generated block text field values.
+    texts = []
+    begin
+      json = JSON.parse(stripped, max_nesting: DCDO.get('share_filtering_blockly_json_max_depth', JSON_MAX_DEPTH))
+    rescue JSON::NestingError
+      CDO.log.warn "ShareFiltering.extract_text_blockly: JSON too deep after #{JSON_MAX_DEPTH} levels"
+      return texts
+    end
+
+    # Traverse each block recursively extracting user-generated field string values via traverse_block.
+    json.dig("blocks", "blocks")&.each do |block|
+      traverse_block(block, texts)
+    end
+
+    # Return a list of all extracted text (no duplicates).
+    texts.compact.uniq
+  end
+
+  # Extracts user-entered text from a Sketch Lab (React Flow) source.
+  # The only user entered data appears in the node data fields 'text', 'label' and 'altText'.
+  # @param source [Hash, String] the parsed 'source' value from main.json,
+  #   or its JSON-serialized string form.
+  # @return [Array<String>] unique, non-blank user-entered strings. Returns
+  #   an empty array for malformed input or non-React-Flow shapes.
+  def self.extract_text_sketchlab(source)
+    if source.is_a?(String)
+      begin
+        source = JSON.parse(source, max_nesting: DCDO.get('share_filtering_blockly_json_max_depth', JSON_MAX_DEPTH))
+      rescue JSON::NestingError
+        CDO.log.warn "ShareFiltering.extract_text_sketchlab: JSON too deep after #{JSON_MAX_DEPTH} levels"
+        return []
+      rescue JSON::ParserError
+        CDO.log.warn "ShareFiltering.extract_text_sketchlab: malformed JSON"
+        return []
+      end
+    end
+    return [] unless source.is_a?(Hash)
+
+    nodes = source['nodes']
+    return [] unless nodes.is_a?(Array)
+
+    nodes.flat_map do |node|
+      next [] unless node.is_a?(Hash) && node['data'].is_a?(Hash)
+      SKETCHLAB_TEXT_FIELDS.filter_map do |field|
+        value = node['data'][field]
+        value if value.is_a?(String) && !value.strip.empty?
+      end
+    end.uniq
+  end
+
+  # Clean string values from XML-wrapped field values.
+  def self.clean_text_value(value)
+    return nil unless value.is_a?(String)
+
+    # Extracts text inside a <field> tag if present and removes all double quotes.
+    # Removes double quotes if no field tag is found
+    if value =~ /<field name=.*?>(.*?)<\/field>/m
+      $1.delete('"')
+    else
+      value.delete('"')
+    end
+  end
+
+  # This function recursively traverses a Blockly block, extracting any user-entered text,
+  # 'cleans' the text value (strips XML tags & quotes), and then adds the text value
+  # to the texts array.
+  # For each block it:
+  #   1. Iterates through block fields, cleaning and collecting user-generated strings.
+  #   2. Recurses into both normal and shadow inputs.
+  #   3. Handles sequenced blocks by following the 'next' chain of connections.
+  def self.traverse_block(block, texts)
+    return unless block.is_a?(Hash)
+
+    fields = block["fields"] || {}
+    inputs = block["inputs"] || {}
+
+    fields.each do |key, value|
+      if BLOCKLY_TEXT_FIELDS.include?(key)
+        cleaned = clean_text_value(value)
+        texts << cleaned if cleaned && !cleaned.strip.empty?
+      end
+    end
+
+    inputs.each_value do |input|
+      traverse_block(input["block"], texts) if input["block"]
+      traverse_block(input["shadow"], texts) if input["shadow"]
+    end
+
+    # Recurse into the 'next' chain.
+    traverse_block(block.dig("next", "block"), texts)
+  end
+
+  def self.should_filter_program(program, project_type)
+    # Return false early if filtering is disabled or project type not in filter list.
+    return false unless Gatekeeper.allows('webpurify', default: true)
+    return false unless FILTERED_PROJECT_TYPES.include?(project_type)
+
+    # Structured sources have no field-name pre-check; extraction plus the
+    # empty-text bail in find_share_failure decide instead.
+    return true if STRUCTURED_SOURCE_EXTRACTORS.key?(project_type)
+
+    # Blockly sources are strings; anything else is unfilterable, not an error.
+    return false unless program.is_a?(String)
+
+    # Only filter if program contains fields that accept user-entered strings.
+    return program.match?(/(?:#{BLOCKLY_TEXT_FIELDS.join('|')})/)
   end
 
   # Searches for a sharing failure given a program name and locale.
@@ -89,27 +220,127 @@ module ShareFiltering
   #
   # * Emails
   # * Phone Numbers
-  # * Street Addresses
+  #
+  # Street addresses are temporarily not checked, to prevent false positives.
+  # TODO: re-enable this when we improve the user experience of the address filter.
+  # Jira: https://codedotorg.atlassian.net/browse/SL-2303
   #
   # @param [String] text The text to search through.
   # @return [ShareFailure, nil]
   def self.find_pii_failure(text, exceptions: false)
-    email = RegexpUtils.find_potential_email(text)
-    share_failure = ShareFailure.new(FailureType::EMAIL, email) if email
-    raise PIIFilterException.new("Email PII Filter Violation", share_failure) if share_failure && exceptions
-    return share_failure if share_failure
+    find_email_or_phone_failure(text, exceptions: exceptions)
+  end
 
-    phone_number = RegexpUtils.find_potential_phone_number(text)
-    share_failure = ShareFailure.new(FailureType::PHONE, phone_number) if phone_number
-    raise PIIFilterException.new("Phone Number PII Filter Violation", share_failure) if share_failure && exceptions
-    return share_failure if share_failure
-
-    street_address = Geocoder.find_potential_street_address(text)
-    share_failure = ShareFailure.new(FailureType::ADDRESS, street_address) if street_address
-    raise PIIFilterException.new("Address PII Filter Violation", share_failure) if share_failure && exceptions
+  # Searches for profanity in text.
+  # Returns both the error type and the offending text snippet.
+  #
+  # If the check is successful and there were no offenses, the function
+  # will return `nil`.
+  #
+  # @param [String] text The text to search through.
+  # @param [String] locale a two-character ISO 639-1 language code
+  # @param [Hash] A set of text to replace before performing a profanity check.
+  # @return [ShareFailure, nil]
+  def self.find_profanity_failure(text, locale, profanity_filter_replace_text_list = {}, exceptions: false)
+    expletive = ProfanityFilter.find_potential_profanity(text, locale, profanity_filter_replace_text_list)
+    share_failure = ShareFailure.new(FailureType::PROFANITY, expletive) if expletive
+    raise ProfanityFilterException.new("Profanity Filter Violation", share_failure) if share_failure && exceptions
     return share_failure if share_failure
 
     nil
+  end
+
+  # Extracts user-written text from JavaScript source code for profanity/PII filtering.
+  #
+  # Each token is space-separated in the output so that profanity filters which strip
+  # syntax characters cannot concatenate adjacent identifiers into a false positive
+  # (e.g. `totals(hits)` would become "totalshits" if parentheses were simply removed;
+  # this function returns "totals hits" instead).
+  #
+  # @param [String] code JavaScript source code
+  # @return [String] Extracted text content separated by spaces
+  def self.extract_text_from_js(code)
+    return '' unless code.is_a?(String) && !code.empty?
+
+    text_parts = []
+    remaining = code
+
+    # Extract single-line comments, then erase them from remaining code.
+    remaining.scan(/\/\/.*$/) do |comment|
+      cleaned = comment.
+        sub(/^\/\/\s*/, '').
+        gsub(/[(){}\[\];,.<>:]/, ' ')
+      text_parts << cleaned unless cleaned.strip.empty?
+    end
+    remaining = remaining.gsub(/\/\/.*$/, ' ')
+
+    # Extract multi-line comments, then erase them from remaining code.
+    remaining.scan(/\/\*.*?\*\//m) do |comment|
+      cleaned = comment.
+        gsub(/\A\/\*\s*|\s*\*\/\z/, '').
+        delete('*').
+        gsub(/[(){}\[\];,.<>:]/, ' ')
+      text_parts << cleaned unless cleaned.strip.empty?
+    end
+    remaining = remaining.gsub(/\/\*.*?\*\//m, ' ')
+
+    # Extract string literal contents, then replace each literal with a space.
+    string_pattern = /"(?:[^"\\]|\\.)*"|'(?:[^'\\]|\\.)*'|`(?:[^`\\]|\\.)*`/
+    remaining.scan(string_pattern) do |str|
+      content = str[1..-2]
+      unescaped = content.
+        gsub("\\n", ' ').
+        gsub("\\t", ' ').
+        gsub("\\'", "'").
+        gsub('\\"', '"').
+        gsub("\\\\", '')
+      cleaned = unescaped.gsub(/[(){}\[\];,.<>:]/, ' ')
+      text_parts << cleaned unless cleaned.strip.empty?
+    end
+    remaining = remaining.gsub(string_pattern, ' ')
+
+    # Extract identifiers (at least 2 characters) from what remains.
+    remaining.scan(/\b[a-zA-Z_][a-zA-Z0-9_]{1,}\b/) do |identifier|
+      text_parts << identifier
+    end
+
+    text_parts.join(' ').strip
+  end
+
+  # Builds the string passed to find_failure for App Lab library.json PUT bodies.
+  # Parses JSON (including double-encoded bodies), then uses only source/name/description
+  # so raw dropletConfig metadata cannot cause profanity false positives. Non-JSON or
+  # non-library bodies are returned unchanged for filtering as opaque text.
+  #
+  # @param [String] body Raw HTTP body
+  # @return [String] Text to scan for PII/profanity
+  def self.share_filter_text_from_library_request_body(body)
+    return body unless body.is_a?(String) && !body.empty?
+
+    begin
+      parsed = JSON.parse(body)
+      # Some requests send the library JSON double-encoded: the body is a JSON string
+      # whose value is another JSON document (first JSON.parse returns String).
+      if parsed.is_a?(String)
+        begin
+          inner = JSON.parse(parsed)
+          parsed = inner if inner.is_a?(Hash)
+        rescue JSON::ParserError
+          # Leave parsed as String; fall through to return raw body below.
+        end
+      end
+      if parsed.is_a?(Hash) && parsed.key?('source')
+        [
+          extract_text_from_js(parsed['source']),
+          parsed['name'],
+          parsed['description'],
+        ].compact.map(&:to_s).reject(&:empty?).join(' ')
+      else
+        body
+      end
+    rescue JSON::ParserError
+      body
+    end
   end
 
   # Searches for all sources of offenses in text that might be worth flagging.
@@ -122,8 +353,9 @@ module ShareFiltering
   #
   # * Emails
   # * Phone Numbers
-  # * Street Addresses
   # * Profanity
+  #
+  # Street addresses are temporarily not checked; see find_pii_failure.
   #
   # @param [String] text The text to search through.
   # @param [String] locale a two-character ISO 639-1 language code
@@ -138,10 +370,28 @@ module ShareFiltering
     return pii_failure if pii_failure
 
     # Search for profanity
-    expletive = ProfanityFilter.find_potential_profanity(text, locale, profanity_filter_replace_text_list)
-    share_failure = ShareFailure.new(FailureType::PROFANITY, expletive) if expletive
-    raise ProfanityFilterException.new("Profanity Filter Violation", share_failure) if share_failure && exceptions
-    return share_failure if share_failure
+    profanity_failure = find_profanity_failure(text, locale, profanity_filter_replace_text_list, exceptions: exceptions)
+    return profanity_failure if profanity_failure
+
+    nil
+  end
+
+  # Checks text for email or phone number PII.
+  # @return [ShareFailure, nil]
+  private_class_method def self.find_email_or_phone_failure(text, exceptions: false)
+    email = RegexpUtils.find_potential_email(text)
+    if email
+      failure = ShareFailure.new(FailureType::EMAIL, email)
+      raise PIIFilterException.new("Email PII Filter Violation", failure) if exceptions
+      return failure
+    end
+
+    phone = RegexpUtils.find_potential_phone_number(text)
+    if phone
+      failure = ShareFailure.new(FailureType::PHONE, phone)
+      raise PIIFilterException.new("Phone Number PII Filter Violation", failure) if exceptions
+      return failure
+    end
 
     nil
   end

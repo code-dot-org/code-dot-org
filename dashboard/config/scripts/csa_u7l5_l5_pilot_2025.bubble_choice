@@ -1,0 +1,9 @@
+name 'CSA U7L5-L5_pilot-2025'
+display_name 'Practice: Overriding Methods'
+description 'Practice writing and using overridden methods using the console.'
+
+sublevels
+level 'CSA U7L5-L5a_pilot-2025'
+level 'CSA U7L5-L5b_pilot-2025'
+level 'CSA U7L5-L5c_pilot-2025'
+level 'CSA U7L5-L5d_pilot-2025'

@@ -1,32 +1,60 @@
-import React, {useState} from 'react';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import Link from '@code-dot-org/component-library/link';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
+import React, {useState} from 'react';
+
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
-import LevelTypesBox from './LevelTypesBox';
-import TeacherActionsBox from './TeacherActionsBox';
+
 import AssignmentCompletionStatesBox from './AssignmentCompletionStatesBox';
+import LevelTypesBox from './LevelTypesBox';
+import MoreDetailsDialog from './MoreDetailsDialog.jsx';
+import TeacherActionsBox from './TeacherActionsBox';
+
 import styles from './progress-table-legend.module.scss';
-import {Heading6} from '@cdo/apps/componentLibrary/typography';
-import FontAwesome from '../FontAwesome';
 
-export default function IconKey({isViewingValidatedLevel, expandedLessonIds}) {
-  const [isOpen, setIsOpen] = useState(false);
+export default function IconKey({sectionId}) {
+  const [isOpen, setIsOpen] = useState(
+    tryGetLocalStorage('iconKeyIsOpen', 'true') !== 'false'
+  );
+  const [isIconDetailsOpen, setIconDetailsOpen] = useState(false);
 
-  const isViewingLevelProgress = expandedLessonIds.length > 0;
+  const openMoreDetailsDialog = event => {
+    event.preventDefault();
+    setIconDetailsOpen(true);
+
+    analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_VIEW_MORE_DETAILS, {
+      sectionId: sectionId,
+    });
+  };
 
   const caret = isOpenA => (isOpenA ? 'caret-down' : 'caret-right');
 
-  // TO-DO (TEACH-801): Fix spacing between boxes once width of the page is expanded
   const sectionContent = () => (
-    <div>
-      <AssignmentCompletionStatesBox
-        hasValidatedLevels={isViewingValidatedLevel}
-      />
-      <TeacherActionsBox isViewingLevelProgress={isViewingLevelProgress} />
-      {isViewingLevelProgress && <LevelTypesBox />}
-    </div>
+    <>
+      <AssignmentCompletionStatesBox />
+      <TeacherActionsBox />
+      <LevelTypesBox />
+    </>
   );
 
-  const clickListener = () => setIsOpen(!isOpen);
+  const clickListener = () => {
+    trySetLocalStorage('iconKeyIsOpen', !isOpen);
+    setIsOpen(!isOpen);
+
+    if (!isOpen) {
+      analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_EXPAND_ICON_KEY, {
+        sectionId: sectionId,
+      });
+    } else {
+      analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_COLLAPSE_ICON_KEY, {
+        sectionId: sectionId,
+      });
+    }
+  };
 
   return (
     <div
@@ -34,22 +62,41 @@ export default function IconKey({isViewingValidatedLevel, expandedLessonIds}) {
       aria-expanded={isOpen}
       aria-label={i18n.iconKey()}
     >
-      <div
-        onClick={clickListener}
-        className={styles.iconKeyTitle}
-        data-testid="expandable-container"
-      >
-        <Heading6>
-          <FontAwesome className={styles.iconKeyCaret} icon={caret(isOpen)} />
-          {i18n.iconKey()}
-        </Heading6>
+      <div className={styles.iconKeyHeader}>
+        <div
+          onClick={clickListener}
+          className={styles.iconKeyTitle}
+          // eslint-disable-next-line react/forbid-dom-props
+          data-testid="expandable-container"
+          role="button"
+          aria-expanded={isOpen}
+          tabIndex="0"
+        >
+          <Typography variant="label1" component="h6" gutterBottom>
+            <FontAwesomeV6Icon
+              className={styles.iconKeyCaret}
+              iconName={caret(isOpen)}
+            />
+            {i18n.iconKey()}
+          </Typography>
+        </div>
+        <Link
+          type="primary"
+          size="s"
+          onClick={openMoreDetailsDialog}
+          className={styles.iconKeyMoreDetailsLink}
+        >
+          {i18n.moreDetails()}
+        </Link>
       </div>
       {isOpen && sectionContent()}
+      {isIconDetailsOpen && (
+        <MoreDetailsDialog onClose={() => setIconDetailsOpen(false)} />
+      )}
     </div>
   );
 }
 
 IconKey.propTypes = {
-  isViewingValidatedLevel: PropTypes.bool,
-  expandedLessonIds: PropTypes.array,
+  sectionId: PropTypes.number,
 };

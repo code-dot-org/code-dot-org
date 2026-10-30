@@ -1,0 +1,17 @@
+name 'computer-systems-preassessment-question7_v2-2025'
+title 'Computer Systems and Devices Pre-Assessment: Question 7'
+
+wrong 'Microphone'
+wrong 'Temperature sensor'
+right 'Motion sensor'
+wrong 'GPS tracker'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Which type of sensor measures movement?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 7: Data in Computer Systems
+MARKDOWN

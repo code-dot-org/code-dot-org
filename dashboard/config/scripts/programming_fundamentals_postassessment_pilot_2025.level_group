@@ -1,0 +1,27 @@
+name 'programming-fundamentals-postassessment_pilot-2025'
+title 'Foundations of AI Programming End-of-Unit Assessment'
+submittable 'true'
+anonymous 'false'
+activity_guide_level 'false'
+
+page
+text 'programming-fundamentals-postassessment-intro_pilot-2025'
+level 'programming-fundamentals-postassessment-question1_pilot-2025'
+level 'programming-fundamentals-postassessment-question2_pilot-2025'
+level 'programming-fundamentals-postassessment-question3_pilot-2025'
+level 'programming-fundamentals-postassessment-question4_pilot-2025'
+level 'programming-fundamentals-postassessment-question5_pilot-2025'
+
+page
+level 'programming-fundamentals-postassessment-question6_pilot-2025'
+level 'programming-fundamentals-postassessment-question7_pilot-2025'
+level 'programming-fundamentals-postassessment-question8_pilot-2025'
+level 'programming-fundamentals-postassessment-question9_pilot-2025'
+level 'programming-fundamentals-postassessment-question10_pilot-2025'
+
+page
+level 'programming-fundamentals-postassessment-question11_pilot-2025'
+level 'programming-fundamentals-postassessment-question12_pilot-2025'
+level 'programming-fundamentals-postassessment-question13_pilot-2025'
+level 'programming-fundamentals-postassessment-question14_pilot-2025'
+level 'programming-fundamentals-postassessment-question15_pilot-2025'

@@ -1,0 +1,14 @@
+name 'HoAI-Mix-Move-Educators-dance-freeplay'
+display_name 'Time to party!'
+description 'Your dancer is ready. Your music remix is ready. Now you\'re ready to generate code for the dance party!'
+
+sublevels
+level 'HoAI-Mix-Move-Educators-dance-prompt-3-input-choice'
+level 'HoAI-Mix-Move-Educators-dancer-prompt-4-input-choice'
+level 'HoAI-Mix-Move-Educators-music-prompt-3-input-choice'
+
+
+custom_mode 'music_dance_ai'
+uses_lab2
+navigation_type 'next_level'
+finish_dialog 'hoai2025'

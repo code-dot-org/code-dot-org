@@ -1,7 +1,9 @@
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+
+import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import color from '@cdo/apps/util/color';
+
 import {DisplayTheme} from './DisplayTheme';
 
 export default class JavalabDialog extends Component {
@@ -50,7 +52,10 @@ export default class JavalabDialog extends Component {
           <div style={styles.message}>{message}</div>
           <div style={styles.buttons}>
             {showSpinner && (
-              <i className="fa fa-spin fa-spinner" style={styles.spinner} />
+              <i
+                className="fa-solid fa-spin fa-spinner"
+                style={styles.spinner}
+              />
             )}
             {closeButtonText && (
               <button

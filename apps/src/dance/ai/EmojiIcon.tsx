@@ -1,8 +1,8 @@
-import React, {useMemo} from 'react';
 import classNames from 'classnames';
+import React, {useMemo} from 'react';
 
-import {getEmojiImageUrl} from './utils';
 import {EmojiItem} from './types';
+import {getEmojiImageUrl} from './utils';
 
 import moduleStyles from './dance-ai-modal.module.scss';
 

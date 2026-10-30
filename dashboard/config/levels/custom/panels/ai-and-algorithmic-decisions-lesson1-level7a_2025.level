@@ -1,0 +1,37 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-11-12T19:30:37.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "true",
+    "panels": [
+      {
+        "text": "#Infinite Scroll\n\nInfinite scroll is when a website keeps loading new content automatically as you get to the bottom of the page—so you never have to click “next.”",
+        "imageUrl": "https://images.code.org/cce1a3717ab14e12545262611932860b-scroll.gif",
+        "key": "computer-systems-lesson3-onlineresources-1-5c25ddab-c99a-4b94-8628-1e8d9bc30c38",
+        "layout": "text-bottom-left"
+      },
+      {
+        "text": "#Brianna\n_Social Media Content Creator_\n\n> I love infinite scroll! It makes it easier and more fun to see content from other creators. It's like scrolling through an endless photo gallery.",
+        "imageUrl": "https://images.code.org/a4fee38428a3980c59ad21000dd88e93-Screenshot 2025-10-16 at 11.55.51 AM.png",
+        "key": "undefined-91f68b3a-8101-4f9c-861a-555ac85b7c47"
+      },
+      {
+        "text": "#Miles\n_First Year College Student_\n\n>Infinite scroll is the worst! I already have trouble focusing on my classwork. When I open up my phone to look at something quickly, the next thing I know I've lost an hour of time.",
+        "imageUrl": "https://images.code.org/45e964b49245a17d8c0867cdabd604df-Screenshot 2025-10-16 at 12.42.46 PM.png",
+        "key": "ai-and-algorithmic-decisions-lesson1-level3a-test-2025-2b648524-7a56-43a2-915d-65c0ca661c52",
+        "layout": "text-top-left"
+      }
+    ],
+    "display_name": "Infinite Scroll",
+    "thumbnail_url": "https://images.code.org/93169db8e643d209dae2543f0a62e1a5-Screenshot 2025-10-16 at 12.13.34 PM.png",
+    "name_suffix": "_2025",
+    "bubble_choice_description": "Hear from different users on their opinion of **infinite scroll**."
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-12T19:30:37.505+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson1-level3a-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson1-level3a-test-2025\"},{\"changed_at\":\"2025-11-12 19:31:45 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Panels>

@@ -4,17 +4,18 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_course": true,
-      "is_migrated": true,
-      "version_year": "unversioned"
+      "content_area": "other",
+      "curriculum_umbrella": "Other",
+      "is_migrated": true
     },
     "new_name": null,
-    "family_name": "katie-practice",
-    "serialized_at": "2022-08-12 18:38:42 UTC",
-    "published_state": "in_development",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "family_name": null,
+    "serialized_at": "2026-09-01 23:24:28 UTC",
+    "hide_within_course": false,
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "katie-practice"
     }
@@ -48,6 +49,21 @@
       },
       "seeding_key": {
         "lesson.key": "Hello World: Food",
+        "lesson_group.key": "new-lesson-group",
+        "script.name": "katie-practice"
+      }
+    },
+    {
+      "key": "HoAI26 Playtest 1",
+      "name": "HoAI26 Playtest 1",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "HoAI26 Playtest 1",
         "lesson_group.key": "new-lesson-group",
         "script.name": "katie-practice"
       }
@@ -89,6 +105,18 @@
       "seeding_key": {
         "lesson_activity.key": "90f05a6c-094f-43d0-b747-14c905cc4a51",
         "lesson.key": "Hello World: Food",
+        "lesson_group.key": "new-lesson-group",
+        "script.name": "katie-practice"
+      }
+    },
+    {
+      "key": "54eb3142-a69e-490f-8b84-394d307862ae",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "54eb3142-a69e-490f-8b84-394d307862ae",
+        "lesson.key": "HoAI26 Playtest 1",
         "lesson_group.key": "new-lesson-group",
         "script.name": "katie-practice"
       }
@@ -171,6 +199,16 @@
         "activity_section.key": "21c4b42b-ac1a-4ad2-a901-fed49cd50382",
         "lesson_activity.key": "90f05a6c-094f-43d0-b747-14c905cc4a51"
       }
+    },
+    {
+      "key": "94b52827-e00a-4f7a-b998-3a51147d96de",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "94b52827-e00a-4f7a-b998-3a51147d96de",
+        "lesson_activity.key": "54eb3142-a69e-490f-8b84-394d307862ae"
+      }
     }
   ],
   "script_levels": [
@@ -180,6 +218,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_say_katie-practice"
+        ],
         "progression": "Hello World"
       },
       "bonus": false,
@@ -202,6 +243,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_location_katie-practice"
+        ],
         "progression": "Hello World"
       },
       "bonus": false,
@@ -224,6 +268,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_multi_katie-practice"
+        ],
         "progression": "Hello World"
       },
       "bonus": false,
@@ -246,6 +293,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_click_katie-practice"
+        ],
         "progression": "Hello World"
       },
       "bonus": false,
@@ -268,6 +318,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_events_katie-practice"
+        ],
         "progression": "Hello World"
       },
       "bonus": false,
@@ -290,6 +343,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_backgrounds_katie-practice"
+        ],
         "progression": "Hello World"
       },
       "bonus": false,
@@ -312,6 +368,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_costumes_katie-practice"
+        ],
         "progression": "Hello World"
       },
       "bonus": false,
@@ -334,6 +393,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_sizes_katie-practice"
+        ],
         "progression": "Hello World"
       },
       "bonus": false,
@@ -356,6 +418,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_behaviors_katie-practice"
+        ],
         "progression": "Hello World"
       },
       "bonus": false,
@@ -378,6 +443,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_sounds_katie-practice"
+        ],
         "progression": "Hello World"
       },
       "bonus": false,
@@ -400,6 +468,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_freeplay_katie-practice"
+        ],
         "progression": "Hello World"
       },
       "bonus": false,
@@ -414,6 +485,90 @@
       },
       "level_keys": [
         "helloworld_food_freeplay_katie-practice"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "HoAI26-Choice-Project-Type"
+        ],
+        "lesson.key": "HoAI26 Playtest 1",
+        "lesson_group.key": "new-lesson-group",
+        "script.name": "katie-practice",
+        "activity_section.key": "94b52827-e00a-4f7a-b998-3a51147d96de"
+      },
+      "level_keys": [
+        "HoAI26-Choice-Project-Type"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "HoAI26-Choice-Character"
+        ],
+        "lesson.key": "HoAI26 Playtest 1",
+        "lesson_group.key": "new-lesson-group",
+        "script.name": "katie-practice",
+        "activity_section.key": "94b52827-e00a-4f7a-b998-3a51147d96de"
+      },
+      "level_keys": [
+        "HoAI26-Choice-Character"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "HoAI26-Choice-Background"
+        ],
+        "lesson.key": "HoAI26 Playtest 1",
+        "lesson_group.key": "new-lesson-group",
+        "script.name": "katie-practice",
+        "activity_section.key": "94b52827-e00a-4f7a-b998-3a51147d96de"
+      },
+      "level_keys": [
+        "HoAI26-Choice-Background"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "HoAI26-How-AI"
+        ],
+        "lesson.key": "HoAI26 Playtest 1",
+        "lesson_group.key": "new-lesson-group",
+        "script.name": "katie-practice",
+        "activity_section.key": "94b52827-e00a-4f7a-b998-3a51147d96de"
+      },
+      "level_keys": [
+        "HoAI26-How-AI"
       ]
     }
   ],
@@ -549,6 +704,54 @@
         "script.name": "katie-practice",
         "activity_section.key": "ab978d06-d156-4e28-b97f-ae3309044569"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "HoAI26-Choice-Project-Type",
+        "script_level.level_keys": [
+          "HoAI26-Choice-Project-Type"
+        ],
+        "lesson.key": "HoAI26 Playtest 1",
+        "lesson_group.key": "new-lesson-group",
+        "script.name": "katie-practice",
+        "activity_section.key": "94b52827-e00a-4f7a-b998-3a51147d96de"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "HoAI26-Choice-Character",
+        "script_level.level_keys": [
+          "HoAI26-Choice-Character"
+        ],
+        "lesson.key": "HoAI26 Playtest 1",
+        "lesson_group.key": "new-lesson-group",
+        "script.name": "katie-practice",
+        "activity_section.key": "94b52827-e00a-4f7a-b998-3a51147d96de"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "HoAI26-Choice-Background",
+        "script_level.level_keys": [
+          "HoAI26-Choice-Background"
+        ],
+        "lesson.key": "HoAI26 Playtest 1",
+        "lesson_group.key": "new-lesson-group",
+        "script.name": "katie-practice",
+        "activity_section.key": "94b52827-e00a-4f7a-b998-3a51147d96de"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "HoAI26-How-AI",
+        "script_level.level_keys": [
+          "HoAI26-How-AI"
+        ],
+        "lesson.key": "HoAI26 Playtest 1",
+        "lesson_group.key": "new-lesson-group",
+        "script.name": "katie-practice",
+        "activity_section.key": "94b52827-e00a-4f7a-b998-3a51147d96de"
+      }
     }
   ],
   "resources": [
@@ -625,6 +828,18 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

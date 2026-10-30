@@ -20,14 +20,14 @@ require 'csv'
 require 'fileutils'
 
 class NewSoundAliasesMetadataBuilder
-  CORRUPTED_FILENAME_REGEX = /(^\_+|\_+$|_{2,}|\s|[A-Z])/
+  CORRUPTED_FILENAME_REGEX = /(^_+|_+$|_{2,}|\s|[A-Z])/
   def initialize(csv)
     @csv = CSV.parse(File.read(csv), headers: true)
   end
 
   def fix_corrupted_filename(name)
     # some names have uppercases
-    return name.downcase.tr(" ", "_").gsub(/_{2,}/, "_").gsub(/^\_+/, '').gsub(/\_+$/, '')
+    return name.downcase.tr(" ", "_").gsub(/_{2,}/, "_").gsub(/^_+/, '').gsub(/_+$/, '')
   end
 
   def convert_wav_to_mp3(folder_path)
@@ -69,7 +69,7 @@ class NewSoundAliasesMetadataBuilder
     # because csv file had aliases that had
     # more than one space or none
     return csv.by_col[3].map do |aliase|
-      aliase.gsub(/,\s+/, ',').tr(" ", ',').gsub(/'',/, '').delete(".").downcase.gsub(/,{2,}/, ',').split(",").uniq.join(",")
+      aliase.gsub(/,\s+/, ',').tr(" ", ',').gsub("'',", '').delete(".").downcase.gsub(/,{2,}/, ',').split(",").uniq.join(",")
     end
   end
 

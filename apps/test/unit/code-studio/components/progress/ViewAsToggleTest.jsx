@@ -1,10 +1,13 @@
-import React from 'react';
+import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import $ from 'jquery';
-import {shallow} from 'enzyme';
-import sinon from 'sinon';
-import {expect} from '../../../../util/reconfiguredChai';
+import React from 'react';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import {UnconnectedViewAsToggle as ViewAsToggle} from '@cdo/apps/code-studio/components/progress/ViewAsToggle';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+
+import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const DEFAULT_PROPS = {
   viewAs: ViewType.Participant,
@@ -18,12 +21,12 @@ const setUp = (overrideProps = {}) => {
 };
 
 describe('ViewAsToggle', () => {
-  it('calls changeViewType when ToggleGroup changes', () => {
+  it('calls changeViewType when SegmentedButtons changes', () => {
     const spy = sinon.spy();
     const wrapper = setUp({changeViewType: spy});
     expect(spy).not.to.have.been.called;
 
-    wrapper.find('Connect(ToggleGroup)').prop('onChange')(ViewType.Instructor);
+    wrapper.find(SegmentedButtons).prop('onChange')(ViewType.Instructor);
     expect(spy).to.have.been.calledOnce.and.calledWith(ViewType.Instructor);
   });
 

@@ -22,6 +22,7 @@
 #  index_levels_on_game_id    (game_id)
 #  index_levels_on_level_num  (level_num)
 #  index_levels_on_name       (name)
+#  index_levels_on_type       (type)
 #
 
 class LevelGroup < DSLDefined
@@ -35,6 +36,7 @@ class LevelGroup < DSLDefined
       title 'title of the assessment here'
       submittable 'true'
       anonymous 'false'
+      activity_guide_level 'false'
 
       page
       level 'level1'
@@ -47,7 +49,7 @@ class LevelGroup < DSLDefined
   end
 
   def icon
-    'fa fa-list-ul'
+    'fa-solid fa-list-ul'
   end
 
   # Returns an array of all the levels and texts in this LevelGroup,
@@ -108,7 +110,10 @@ class LevelGroup < DSLDefined
     levels_offset = 0
     return @pages if @pages
     all_levels_and_texts = child_levels.all
-    @pages = properties['levels_and_texts_per_page'].map.with_index do |page_size, page_index|
+    # levels_and_texts_per_page can be empty if the LevelGroup was created with
+    # no pages, or when an encrypted LevelGroup is seeded without the
+    # properties_encryption_key.
+    @pages = (properties['levels_and_texts_per_page'] || []).map.with_index do |page_size, page_index|
       page_number = page_index + 1
       levels_and_texts = all_levels_and_texts[levels_and_texts_offset..(levels_and_texts_offset + page_size - 1)]
       page_object = LevelGroupPage.new(page_number, levels_and_texts_offset, levels_and_texts, levels_offset)
@@ -119,7 +124,7 @@ class LevelGroup < DSLDefined
   end
 
   def self.setup(data, md5)
-    level = super(data, md5)
+    level = super
 
     levels_and_texts_by_page = data[:pages].map do |page|
       page[:levels].map do |level_name|
@@ -135,22 +140,26 @@ class LevelGroup < DSLDefined
   # e.g. [[Multi<id:1>, Match<id:2>],[External<id:4>,FreeResponse<id:4>]]
   def update_levels_and_texts_by_page(new_levels_and_texts_by_page)
     reload
-    self.child_levels = []
-    new_levels = new_levels_and_texts_by_page.flatten
-    new_levels.each_with_index do |level, level_index|
-      ParentLevelsChildLevel.find_or_create_by!(
-        parent_level: self,
-        child_level: level,
-        position: level_index + 1
-      )
-    end
+    # Use a transaction so that the database is not modified if any child level
+    # validations fail. requires_new is necessary to ensure that the database is
+    # restored to its original state when running inside of another transaction.
+    transaction(requires_new: true) do
+      self.child_levels = []
+      new_levels_and_texts_by_page.flatten.each_with_index do |level, level_index|
+        ParentLevelsChildLevel.find_or_create_by!(
+          parent_level: self,
+          child_level: level,
+          position: level_index + 1
+        )
+      end
 
-    self.levels_and_texts_per_page = []
-    @pages = nil
-    new_levels_and_texts_by_page.each do |levels_and_texts_by_page|
-      levels_and_texts_per_page.push(levels_and_texts_by_page.count)
+      self.levels_and_texts_per_page = []
+      @pages = nil
+      new_levels_and_texts_by_page.each do |levels_and_texts_by_page|
+        levels_and_texts_per_page.push(levels_and_texts_by_page.count)
+      end
+      save!
     end
-    save!
   end
 
   def get_levels_and_texts_by_page
@@ -159,7 +168,7 @@ class LevelGroup < DSLDefined
 
   def assign_attributes(params)
     @pages = nil
-    super(params)
+    super
   end
 
   def plc_evaluation?

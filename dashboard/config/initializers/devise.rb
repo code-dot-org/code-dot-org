@@ -1,3 +1,6 @@
+require 'cdo/shared_constants'
+require 'omni_auth/strategies/google_oauth2_without_tokeninfo'
+
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
@@ -190,7 +193,7 @@ Devise.setup do |config|
   # ==> Configuration for :timeoutable
   # The time you want to timeout the user session without activity. After this
   # time the user will be asked for credentials again. Default is 30 minutes.
-  # config.timeout_in = 30.minutes
+  config.timeout_in = CDO.dashboard_session_ttl_days.days
 
   # If true, expires auth token on session timeout.
   # config.expire_auth_token_on_timeout = false
@@ -199,24 +202,26 @@ Devise.setup do |config|
   # Defines which strategy will be used to lock an account.
   # :failed_attempts = Locks an account after a number of failed attempts to sign in.
   # :none            = No lock strategy. You should handle locking by yourself.
-  # config.lock_strategy = :failed_attempts
+  config.lock_strategy = :failed_attempts
 
   # Defines which key will be used when locking and unlocking an account
-  # config.unlock_keys = [ :email ]
+  config.unlock_keys = [:email]
 
   # Defines which strategy will be used to unlock an account.
   # :email = Sends an unlock link to the user email
   # :time  = Re-enables login after a certain amount of time (see :unlock_in below)
   # :both  = Enables both strategies
   # :none  = No unlock strategy. You should handle unlocking by yourself.
-  # config.unlock_strategy = :both
+  config.unlock_strategy = :both
 
   # Number of authentication tries before locking an account if lock_strategy
   # is failed attempts.
-  # config.maximum_attempts = 20
+  #
+  # Set to just two attempts in the test environment to speed up tests.
+  config.maximum_attempts = Rails.env.test? ? 2 : 10
 
   # Time interval to unlock the account if :time is enabled as unlock_strategy.
-  # config.unlock_in = 1.hour
+  config.unlock_in = 30.minutes
 
   # ==> Configuration for :recoverable
   #
@@ -282,6 +287,7 @@ Devise.setup do |config|
     }
 
   config.omniauth :google_oauth2, CDO.dashboard_google_key, CDO.dashboard_google_secret, {
+    strategy_class: OmniAuth::Strategies::GoogleOauth2WithoutTokeninfo,
     include_granted_scopes: true,
     prompt: 'consent',
     setup: lambda do |env|
@@ -291,7 +297,6 @@ Devise.setup do |config|
       end
     end,
   }
-  config.omniauth :windowslive, CDO.dashboard_windowslive_key, CDO.dashboard_windowslive_secret, scope: 'wl.basic wl.emails'
 
   config.omniauth :microsoft_v2_auth, CDO.dashboard_microsoft_key, CDO.dashboard_microsoft_secret
 
@@ -300,34 +305,13 @@ Devise.setup do |config|
   # with a log in with facebook button)
   config.omniauth :clever, CDO.dashboard_clever_key, CDO.dashboard_clever_secret, provider_ignores_state: true
 
-  config.omniauth :openid_connect, {
-    name: :the_school_project,
-    scope: [:profile, :email, :school],
-    response_type: :code,
-    issuer: 'https://www.cleio.fr/openid',
-    discovery: true,
-    client_options: {
-      port: 443,
-      scheme: 'https',
-      host: CDO.dashboard_hostname,
-      identifier: CDO.dashboard_schoolproject_key,
-      secret: CDO.dashboard_schoolproject_secret,
-      redirect_uri: CDO.studio_url('/users/auth/the_school_project/callback', 'https:')
-    }
-  }
-
-  # Powerschool OpenID config
-  config.omniauth :openid, {
-    provider_ignores_state: true,
-    name: :powerschool,
-    identifier_param: 'openid_identifier',
-    required: %w(
-      http://powerschool.com/entity/type
-      http://powerschool.com/entity/email
-      http://powerschool.com/entity/firstName
-      http://powerschool.com/entity/lastName
-    ).freeze
-  }
+  # ClassLink initiates the OAuth flow (IDP-initiated) so it won't return our
+  # state param; ignore state to avoid CSRF errors in the callback.
+  config.omniauth :classlink,
+    CDO.dashboard_classlink_key,
+    CDO.dashboard_classlink_secret,
+    strategy_class: OmniAuth::Strategies::ClassLink,
+    provider_ignores_state: true
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
@@ -337,10 +321,6 @@ Devise.setup do |config|
   #   manager.intercept_401 = false
   #   manager.default_strategies(:scope => :user).unshift :some_external_strategy
   # end
-  require 'custom_devise_failure'
-  config.warden do |manager|
-    manager.failure_app = CustomDeviseFailure
-  end
 
   require 'cdo/cookie_helpers'
   Warden::Manager.after_set_user do |user, auth|
@@ -354,11 +334,11 @@ Devise.setup do |config|
       end
     # Students younger than 13 shouldn't see App Lab and Game Lab unless they
     # are in a teacher's section for privacy reasons.
-    limit_project_types = user.under_13? && !user.sections_as_student.any?
+    limit_project_types = user.under_13? && user.sections_as_student.none?
     auth.cookies[environment_specific_cookie_name("_limit_project_types")] = {value: limit_project_types, domain: :all, httponly: true}
     auth.cookies[environment_specific_cookie_name("_user_type")] = {value: user_type, domain: :all, httponly: true}
     auth.cookies[environment_specific_cookie_name("_shortName")] = {value: user.short_name, domain: :all}
-    auth.cookies[environment_specific_cookie_name("_experiments")] = {value: user.get_active_experiment_names.to_json, domain: :all}
+    auth.cookies[environment_specific_cookie_name("_experiments")] = {value: Queries::User::EnabledExperiments.call(user).to_json, domain: :all}
   end
 
   Warden::Manager.before_logout do |_, auth|
@@ -367,6 +347,11 @@ Devise.setup do |config|
     auth.cookies[environment_specific_cookie_name("_shortName")] = {value: "", expires: Time.at(0), domain: :all}
     auth.cookies[environment_specific_cookie_name("_experiments")] = {value: "", expires: Time.at(0), domain: :all}
     auth.cookies[environment_specific_cookie_name("_assumed_identity")] = {value: "", expires: Time.at(0), domain: :all, httponly: true}
+    # The Statsig stable ID cookie is user-specific; the next user in this browser gets a new one.
+    auth.cookies[SharedConstants::STATSIG_STABLE_ID_KEY] = {value: "", expires: Time.at(0), domain: :all}
+    # The same request may sign in another user, who must not read the old ID from the incoming cookie/session.
+    auth.request.cookies.delete(SharedConstants::STATSIG_STABLE_ID_KEY)
+    auth.raw_session.delete(SharedConstants::STATSIG_STABLE_ID_KEY)
 
     # These marketing cookies are set in the home_controller in init_homepage. When the user logs out, we
     # remove these cookies because they are user-specific. The cookies are set in init_homepage instead of after_set_user
@@ -389,4 +374,13 @@ Devise.setup do |config|
   # When using omniauth, Devise cannot automatically set Omniauth path,
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = "/my_engine/users/auth"
+end
+
+require 'devise/models/custom_lockable'
+
+Rails.application.config.to_prepare do
+  # See lib/devise/models/custom_lockable.rb
+  unless Devise::Models::Lockable <= Devise::Models::CustomLockable
+    Devise::Models::Lockable.prepend(Devise::Models::CustomLockable)
+  end
 end

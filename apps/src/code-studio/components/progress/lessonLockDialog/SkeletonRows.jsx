@@ -1,8 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import _ from 'lodash';
+import PropTypes from 'prop-types';
+import React from 'react';
+
 import Skeleton from '@cdo/apps/util/loadingSkeleton';
-import color from '@cdo/apps/util/color';
 
 // Returns an array of rows, each with the given number of cells containing
 // a Skeleton element.
@@ -27,7 +27,7 @@ const styles = {
   tableCell: {
     borderWidth: 1,
     borderStyle: 'solid',
-    borderColor: color.light_gray,
+    borderColor: 'var(--borders-neutral-primary)',
     padding: 10,
   },
 };

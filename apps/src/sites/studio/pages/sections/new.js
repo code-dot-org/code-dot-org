@@ -1,17 +1,38 @@
+import {Typography} from '@mui/material';
 import React from 'react';
-import ReactDOM from 'react-dom';
-import getScriptData from '@cdo/apps/util/getScriptData';
+import {Provider} from 'react-redux';
+
+import {displayDifferentiationChat} from '@cdo/apps/aiDifferentiation/aiDiffUtils';
+import {getStore} from '@cdo/apps/redux';
 import SectionsSetUpContainer from '@cdo/apps/templates/sectionsRefresh/SectionsSetUpContainer';
+import {resumeCreateSectionOnboardingTour} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/useCreateSectionTour';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
+import getScriptData from '@cdo/apps/util/getScriptData';
+import i18n from '@cdo/locale';
+
+import moduleStyles from './sections.module.scss';
 
 $(document).ready(() => {
   const isUsersFirstSection = getScriptData('isUsersFirstSection');
-  const canEnableAITutor = getScriptData('canEnableAITutor');
+  const userCountry = getScriptData('userCountry');
 
-  ReactDOM.render(
-    <SectionsSetUpContainer
-      isUsersFirstSection={isUsersFirstSection}
-      canEnableAITutor={canEnableAITutor}
-    />,
+  const defaultRedirectUrl = '/teacher_dashboard/home';
+
+  createReactRoot(
+    <div className={moduleStyles.containerWithMarginTop}>
+      <Typography variant="h1" gutterBottom>
+        {i18n.setUpClassSectionsHeader()}
+      </Typography>
+      <Provider store={getStore()}>
+        <SectionsSetUpContainer
+          isUsersFirstSection={isUsersFirstSection}
+          userCountry={userCountry}
+          defaultRedirectUrl={defaultRedirectUrl}
+        />
+      </Provider>
+    </div>,
     document.getElementById('form')
   );
+  resumeCreateSectionOnboardingTour();
+  displayDifferentiationChat();
 });

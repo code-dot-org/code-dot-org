@@ -1,0 +1,51 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-01T21:00:07.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <title>Loyalty Discount</title>\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <link rel=\"stylesheet\" href=\"./style.css\">\n</head>\n<body>\n  <main class=\"container\">\n    <h1>Shipping and Discount Checker</h1>\n\n    <div class=\"info\">\n      <p><strong>Cart:</strong> Hawaiian Shirt</p>\n      <p><strong>Price:</strong> $<span id=\"totalDisplay\">35.00</span></p>\n      <p><strong>Loyalty Points:</strong> <span id=\"loyaltyPoints\">100</span></p>\n    </div>\n\n    <div id=\"discountResult\" class=\"result\">\n      Discount result will appear here.\n    </div>\n\n    <div id=\"shippingResult\" class=\"result\">\n      Shipping result will appear here.\n    </div>\n\n    <button id=\"checkBtn\">Check My Order</button>\n  </main>\n  <script src=\"./script.js\"></script>\n</body>\n</html>\n    ",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "contents": "body {\n  font-family: sans-serif;\n  background: #f0f4f8;\n  display: flex;\n  justify-content: center;\n  padding: 40px 20px;\n}\n\n.container {\n  background: white;\n  border-radius: 8px;\n  padding: 32px;\n  max-width: 420px;\n  width: 100%;\n  box-shadow: 0 2px 8px rgba(0,0,0,0.1);\n}\n\nh1 {\n  font-size: 22px;\n  margin-bottom: 20px;\n}\n\n.info {\n  background: #f7fafc;\n  border: 1px solid #e2e8f0;\n  border-radius: 6px;\n  padding: 12px 16px;\n  margin-bottom: 20px;\n  line-height: 1.8;\n}\n\n.result {\n  border: 1px solid #e2e8f0;\n  border-radius: 6px;\n  padding: 12px 16px;\n  margin-bottom: 12px;\n  color: #718096;\n  font-size: 15px;\n}\n\nbutton {\n  margin-top: 8px;\n  width: 100%;\n  padding: 12px;\n  background: #2b4c7e;\n  color: white;\n  border: none;\n  border-radius: 6px;\n  font-size: 15px;\n  cursor: pointer;\n}\n\nbutton:hover {\n  background: #1e3a5f;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "flowchart.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson5-level2-template_2026/uuid/d64d287b-6013-43c6-8804-69c1f5fd01e3.png",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "prompt.md",
+          "contents": "",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "5"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01 22:53:35 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 22:53:45 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 23:00:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 23:01:16 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 23:01:27 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 23:20:08 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 23:20:39 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 23:20:52 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 23:30:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 23:37:01 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 23:39:45 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

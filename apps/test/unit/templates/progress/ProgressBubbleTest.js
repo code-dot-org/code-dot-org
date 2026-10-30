@@ -1,19 +1,19 @@
-import {assert, expect} from '../../../util/reconfiguredChai';
+import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow, mount} from 'enzyme';
-import sinon from 'sinon';
-import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
-import color from '@cdo/apps/util/color';
-import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
+
+import {ReviewStates} from '@cdo/apps/templates/feedback/types';
+import BubbleBadge, {BadgeType} from '@cdo/apps/templates/progress/BubbleBadge';
 import {
   BasicBubble,
   BubbleLink,
   BubbleSize,
   BubbleShape,
 } from '@cdo/apps/templates/progress/BubbleFactory';
-import BubbleBadge, {BadgeType} from '@cdo/apps/templates/progress/BubbleBadge';
+import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import * as utils from '@cdo/apps/utils';
-import {ReviewStates} from '@cdo/apps/templates/feedback/types';
+import {LevelStatus, LevelKind} from '@cdo/generated-scripts/sharedConstants';
+
+import {assert, expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const defaultProps = {
   level: {
@@ -101,39 +101,39 @@ describe('ProgressBubble', () => {
 
   it('has a green background when we have perfect status and not assessment', () => {
     const style = styleForStatus(LevelStatus.perfect);
-    expect(style.backgroundColor).to.equal(color.level_perfect);
+    expect(style.backgroundColor).to.equal('var(--background-success-primary)');
   });
 
-  it('has a purple background when level status is LevelStatus.completed_assessment, is an assessment level ', () => {
+  it('has a green background when level status is LevelStatus.completed_assessment, is an assessment level ', () => {
     const style = styleForStatus(
       LevelStatus.completed_assessment,
       {},
       {kind: LevelKind.assessment}
     );
-    expect(style.backgroundColor).to.equal(color.level_submitted);
+    expect(style.backgroundColor).to.equal('var(--background-success-primary)');
   });
 
   it('has green border and white background for in progress level', () => {
     const style = styleForStatus(LevelStatus.attempted);
-    expect(style.backgroundColor).to.equal(color.level_not_tried);
-    expect(style.borderColor).to.equal(color.level_perfect);
+    expect(style.backgroundColor).to.equal('var(--background-neutral-primary)');
+    expect(style.borderColor).to.equal('var(--background-success-primary)');
   });
 
-  it('has a green border and light green background for too many blocks level', () => {
+  it('has a mid-green border and background for too many blocks level', () => {
     const style = styleForStatus(LevelStatus.passed);
-    expect(style.backgroundColor).to.equal(color.level_passed);
-    expect(style.borderColor).to.equal(color.level_perfect);
+    expect(style.backgroundColor).to.equal('var(--background-success-mid)');
+    expect(style.borderColor).to.equal('var(--background-success-mid)');
   });
 
-  it('has a purple background for submitted level', () => {
+  it('has a green background for submitted level', () => {
     const style = styleForStatus(
       LevelStatus.submitted,
       {},
       {kind: LevelKind.assessment}
     );
-    expect(style.backgroundColor).to.equal(color.level_submitted);
-    expect(style.borderColor).to.equal(color.level_submitted);
-    expect(style.color).to.equal(color.white);
+    expect(style.backgroundColor).to.equal('var(--background-success-primary)');
+    expect(style.borderColor).to.equal('var(--background-success-primary)');
+    expect(style.color).to.equal('var(--text-neutral-inverse)');
   });
 
   it('has a red background for review_rejected', () => {
@@ -142,9 +142,9 @@ describe('ProgressBubble', () => {
       {},
       {kind: LevelKind.peer_review}
     );
-    expect(style.backgroundColor).to.equal(color.level_review_rejected);
-    expect(style.borderColor).to.equal(color.level_review_rejected);
-    expect(style.color).to.equal(color.white);
+    expect(style.backgroundColor).to.equal('var(--background-error-primary)');
+    expect(style.borderColor).to.equal('var(--borders-error-primary)');
+    expect(style.color).to.equal('var(--text-neutral-inverse)');
   });
 
   it('has a green background for review_accepted', () => {
@@ -153,9 +153,9 @@ describe('ProgressBubble', () => {
       {},
       {kind: LevelKind.peer_review}
     );
-    expect(style.backgroundColor).to.equal(color.level_perfect);
-    expect(style.borderColor).to.equal(color.level_perfect);
-    expect(style.color).to.equal(color.white);
+    expect(style.backgroundColor).to.equal('var(--background-success-primary)');
+    expect(style.borderColor).to.equal('var(--background-success-primary)');
+    expect(style.color).to.equal('var(--text-neutral-inverse)');
   });
 
   it('renders a diamond for concept levels', () => {
@@ -301,6 +301,60 @@ describe('ProgressBubble', () => {
     expect(badge).to.have.lengthOf(0);
   });
 
+  it('renders small unstarted assessment bubble as a black star in a white circle with gray outline', () => {
+    const bubble = getBasicBubble(
+      LevelStatus.not_tried,
+      {smallBubble: true},
+      {kind: LevelKind.assessment}
+    );
+
+    const star = bubble.find('FontAwesome').filter({icon: 'star'});
+    expect(star).to.have.lengthOf(1);
+
+    const style = bubble.childAt(0).props().style;
+    expect(style.backgroundColor).to.equal('var(--background-neutral-primary)');
+    expect(style.borderColor).to.equal('var(--borders-neutral-primary)');
+    expect(style.color).to.equal('var(--text-neutral-primary)');
+  });
+
+  it('renders small completed assessment bubble as a white star in a green circle', () => {
+    const bubble = getBasicBubble(
+      LevelStatus.completed_assessment,
+      {smallBubble: true},
+      {kind: LevelKind.assessment}
+    );
+
+    const star = bubble.find('FontAwesome').filter({icon: 'star'});
+    expect(star).to.have.lengthOf(1);
+
+    const style = bubble.childAt(0).props().style;
+    expect(style.backgroundColor).to.equal('var(--background-success-primary)');
+    expect(style.borderColor).to.equal('var(--background-success-primary)');
+    expect(style.color).to.equal('var(--text-neutral-inverse)');
+  });
+
+  it('does not render a star in small non-assessment bubble', () => {
+    const bubble = getBasicBubble(LevelStatus.perfect, {smallBubble: true});
+    expect(bubble.find('FontAwesome').filter({icon: 'star'})).to.have.lengthOf(
+      0
+    );
+  });
+
+  it('keeps status styling on small assessment bubble when hideAssessmentBadge is true', () => {
+    const bubble = getBasicBubble(
+      LevelStatus.perfect,
+      {smallBubble: true, hideAssessmentBadge: true},
+      {kind: LevelKind.assessment}
+    );
+
+    expect(bubble.find('FontAwesome').filter({icon: 'star'})).to.have.lengthOf(
+      0
+    );
+    expect(bubble.childAt(0).props().style.backgroundColor).to.equal(
+      'var(--background-success-primary)'
+    );
+  });
+
   it('renders a pill shape for unplugged lessons', () => {
     const wrapper = getBasicBubble(
       LevelStatus.perfect,
@@ -322,7 +376,10 @@ describe('ProgressBubble', () => {
 
   describe('href', () => {
     it('links to the level url', () => {
-      sinon.stub(utils, 'currentLocation').returns({search: ''});
+      jest
+        .spyOn(utils, 'currentLocation')
+        .mockClear()
+        .mockReturnValue({search: ''});
       const wrapper = mount(
         <ProgressBubble
           {...defaultProps}
@@ -333,7 +390,7 @@ describe('ProgressBubble', () => {
         />
       );
       assert.equal(wrapper.find('a').prop('href'), '/my/test/url');
-      utils.currentLocation.restore();
+      utils.currentLocation.mockRestore();
     });
 
     it('includes the section_id in the queryparams if selectedSectionId is present', () => {
@@ -362,20 +419,22 @@ describe('ProgressBubble', () => {
     });
 
     it('preserves the queryparams of the current location', () => {
-      sinon
-        .stub(utils, 'currentLocation')
-        .returns({search: `section_id=${fakeSectionId}&user_id=559`});
+      jest
+        .spyOn(utils, 'currentLocation')
+        .mockClear()
+        .mockReturnValue({search: `section_id=${fakeSectionId}&user_id=559`});
       const wrapper = mount(<ProgressBubble {...defaultProps} />);
       const href = wrapper.find('a').prop('href');
       assert.include(href, `section_id=${fakeSectionId}`);
       assert.include(href, 'user_id=559');
-      utils.currentLocation.restore();
+      utils.currentLocation.mockRestore();
     });
 
     it('if queryParam section_id and selectedSectionId are present, selectedSectionId wins', () => {
-      sinon
-        .stub(utils, 'currentLocation')
-        .returns({search: 'section_id=212&user_id=559'});
+      jest
+        .spyOn(utils, 'currentLocation')
+        .mockClear()
+        .mockReturnValue({search: 'section_id=212&user_id=559'});
       const wrapper = mount(
         <ProgressBubble {...defaultProps} selectedSectionId={fakeSectionId} />
       );
@@ -383,7 +442,7 @@ describe('ProgressBubble', () => {
       assert.notInclude(href, 'section_id=212');
       assert.include(href, `section_id=${fakeSectionId}`);
       assert.include(href, 'user_id=559');
-      utils.currentLocation.restore();
+      utils.currentLocation.mockRestore();
     });
   });
 

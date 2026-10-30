@@ -1,0 +1,14 @@
+name 'ai-and-algorithmic-decisions-preassessment-q1_2026'
+
+question 'You open a recipe app and tap the bookmark icon. The icon fills in and a small "Saved!" message slides up. What is the app actually doing in that moment?'
+
+right 'JavaScript detected the tap, updated a variable, and changed what the page displays.'
+wrong 'The bookmark icon was already saved — tapping just shows it.'
+wrong 'The app reloads the entire page so the new state can appear.'
+wrong 'The app sends the bookmark to the server and waits for a reply before showing anything.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 1
+MARKDOWN

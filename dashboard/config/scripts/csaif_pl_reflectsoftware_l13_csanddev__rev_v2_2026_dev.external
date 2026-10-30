@@ -1,0 +1,92 @@
+name 'csaif_pl-reflectsoftware-L13-CSandDev_-rev_v2_2026-dev'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<h1>Teaching about Software</h1>
+
+<h2>Real-World Scenarios</h2>
+
+<p>Using real-world scenarios to analyze the software needs of different careers helps students develop <b>critical thinking</b> and <b>problem-solving</b> skills by connecting classroom learning to practical applications.</p>
+
+<p>This approach <b>enhances engagement</b>, fosters <b>career awareness</b>, and encourages students to <b>think like professionals</b>, preparing them to make informed decisions about technology in various fields.</p>
+
+<div style="width: 90%; margin: 20px auto; display: flex; flex-direction: column; align-items: center; gap: 20px;">
+
+  <!-- First Row -->
+  <div style="display: flex; justify-content: center; gap: 20px; width: 100%; flex-wrap: wrap;">
+
+<div style="background-color: #F7F7FB; border: 1px solid #E4E2F8; padding: 20px; border-radius: 10px; text-align: center; flex: 1; min-width: 220px;">
+      <h3>Social Media Influencer</h3>
+      <img src="https://images.code.org/4d8f7eaf35c246b09762e60d73f183f9-image-1742396640357.png" alt="Social Media Influencer" style="width: 100px; height: auto; margin: 15px auto; display: block; border-radius: 5px;">
+      <p style="margin: 0 0 6px 0;">• Video editing apps (CapCut, Adobe Premiere Rush)</p>
+      <p style="margin: 0 0 6px 0;">• Social media platforms (Instagram, TikTok)</p>
+      <p style="margin: 0;">• Analytics tools (Google Analytics)</p>
+    </div>
+
+   <div style="background-color: #F7F7FB; border: 1px solid #E4E2F8; padding: 20px; border-radius: 10px; text-align: center; flex: 1; min-width: 220px;">
+      <h3>College Student</h3>
+      <img src="https://images.code.org/40771b728a6adbe25587e2a8c48c82ff-image-1742396716246.png" alt="College Student" style="width: 100px; height: auto; margin: 15px auto; display: block; border-radius: 5px;">
+      <p style="margin: 0 0 6px 0;">• Office suite (Microsoft Office, Google Workspace)</p>
+      <p style="margin: 0 0 6px 0;">• Video conferencing software (Zoom, Teams)</p>
+      <p style="margin: 0;">• Project management tools (Trello, Notion)</p>
+    </div>
+
+  </div>
+
+  <!-- Second Row -->
+  <div style="display: flex; justify-content: center; gap: 20px; width: 100%; flex-wrap: wrap;">
+
+ <div style="background-color: #F7F7FB; border: 1px solid #E4E2F8; padding: 20px; border-radius: 10px; text-align: center; flex: 1; min-width: 220px;">
+      <h3>Geologist</h3>
+      <img src="https://images.code.org/785cd94eed8f6282da0a144dc345ee32-image-1742396825378.png" alt="Geologist" style="width: 100px; height: auto; margin: 15px auto; display: block; border-radius: 5px;">
+      <p style="margin: 0 0 6px 0;">• GPS mapping software</p>
+      <p style="margin: 0 0 6px 0;">• Data collection tools (ArcGIS Field Maps)</p>
+      <p style="margin: 0;">• Note-taking apps optimized for offline use</p>
+    </div>
+    <div style="background-color: #F7F7FB; border: 1px solid #E4E2F8; padding: 20px; border-radius: 10px; text-align: center; flex: 1; min-width: 220px;">
+      <h3>VR Designer</h3>
+      <img src="https://images.code.org/4f9bb0b308fc1def313f9755c7e73acd-image-1742396949547.png" alt="VR Designer" style="width: 100px; height: auto; margin: 15px auto; display: block; border-radius: 5px;">
+      <p style="margin: 0 0 6px 0;">• 3D modeling software (Blender, Unity)</p>
+      <p style="margin: 0 0 6px 0;">• VR presentation platforms</p>
+      <p style="margin: 0;">• Project collaboration tools</p>
+    </div>
+
+  </div>
+
+</div>
+---
+
+## Analogies 
+Using analogies helps students **visualize** different types of software by relating complex concepts to familiar ideas, making it easier to understand their functions and real-world applications. This approach **builds connections**, enhances **retention**, and makes abstract topics more **accessible and engaging**.
+
+<img src="https://images.code.org/8f9c880432ab28f66bf2c86bf5ee1481-image-1742398827093.png" alt="concert stage with crowd" width="250px" style="border-radius:10px; float:right; margin: 0 0 10px 30px;">
+
+### **The Concert Analogy**
+- **Operating System**: The concert organizer
+They book the venue, manage the schedule, and make sure the show runs on time.
+- **Application Software**: The performers
+They sing, play instruments, or DJ, giving the audience the main experience.
+- **Utility Software**: The sound technicians and stage crew
+They set up the lights, adjust the microphones, and troubleshoot issues so the performers can shine.
+
+<div style="clear:both;"></div>
+
+---
+
+<img src="https://images.code.org/f0f6a6861436040dcbd7162109d0311e-image-1742399059273.png" alt="concert stage with crowd" width="250px" style="border-radius:10px; float:right; margin: 0 0 10px 30px;">
+
+### **The House Analogy**  
+- **Operating System**: The foundation and structure of the house  
+   It holds everything together, provides support, and makes sure all rooms and systems function properly.  
+
+- **Application Software**: The furniture and appliances  
+  They provide the functionality you need for daily life, like a couch for relaxing, a stove for cooking, or a TV for entertainment.  
+
+- **Utility Software**: The maintenance tools and security systems  
+They help keep the house in good condition, like a vacuum cleaner for cleaning, a thermostat for regulating temperature, or a security system for protection.  
+
+
+
+
+MARKDOWN

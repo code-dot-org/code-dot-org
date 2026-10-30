@@ -10,6 +10,7 @@ chef_client_updater 'install' do
 end
 
 include_recipe 'apt'
+include_recipe 'cdo-cloudwatch-agent'
 
 include_recipe 'cdo-apps::hostname'
 
@@ -46,25 +47,7 @@ end
 # Used by lesson plan generator.
 apt_package 'enscript'
 
-# Install dependencies required to sync content between our Code.org shared
-# Dropbox folder and our git repository. Also check whether the tool that
-# performs the sync is installed, and display instructions for how to do so if
-# it isn't. Ideally, we would be able to install the tool with this code, but
-# the process is sufficiently interactive and we have to do it sufficiently
-# rarely that we think documentation will suffice for now.
-if node.chef_environment == 'staging'
-  apt_package 'unison'
-  dropbox_daemon_file = File.join(node[:home], '.dropbox-dist/dropboxd')
-  unless File.exist?(dropbox_daemon_file)
-    environment_name = node.chef_environment.inspect
-    Chef.event_handler do
-      on :run_completed do
-        Chef::Log.warn("Chef environment #{environment_name} expects the Dropbox Daemon to be configured.")
-        Chef::Log.warn('Follow the instructions at https://www.dropbox.com/install-linux to do so')
-      end
-    end
-  end
-end
+include_recipe 'cdo-python'
 
 # Debian-family packages for building Ruby C extensions
 apt_package %w(
@@ -94,18 +77,13 @@ end
 
 include_recipe 'cdo-repository'
 
-include_recipe 'cdo-apps::workers'
-
-%w(dashboard pegasus).each do |app|
-  node.override['cdo-secrets']["#{app}_port"] = node['cdo-apps'][app]['port']
-end
+node.override['cdo-secrets']['dashboard_port'] = node['cdo-apps']['dashboard']['port']
 node.default['cdo-secrets']['daemon'] = node['cdo-apps']['daemon'] if node['cdo-apps']['daemon']
 
 include_recipe 'cdo-secrets'
 include_recipe 'cdo-mysql'
 include_recipe 'cdo-postfix'
-
-include_recipe 'cdo-cloudwatch-agent'
+include_recipe 'cdo-otel-collector'
 include_recipe 'cdo-syslog'
 
 # Production analytics utilities.
@@ -130,6 +108,8 @@ end
 # which causes this error: https://github.com/tzinfo/tzinfo/wiki/Resolving-TZInfo::DataSourceNotFound-Errors
 apt_package 'tzdata'
 
+include_recipe 'cdo-apps::logrotate'
+
 include_recipe 'cdo-apps::dashboard'
 include_recipe 'cdo-apps::pegasus'
 include_recipe node['cdo-apps']['nginx_enabled'] ?
@@ -138,11 +118,8 @@ include_recipe node['cdo-apps']['nginx_enabled'] ?
 include_recipe 'cdo-apps::chef_credentials'
 include_recipe 'cdo-apps::crontab'
 
-node.default['cdo-apps']['local_redis'] = !node['cdo-secrets']['redis_primary']
-include_recipe 'cdo-redis' if node['cdo-apps']['local_redis']
-
-# only the i18n server needs the i18n recipe
-include_recipe 'cdo-i18n' if node.name == 'i18n'
+# Only include a local redis server if no external redis_url was provided.
+include_recipe 'cdo-redis' unless node['cdo-secrets']['redis_url']
 
 # Daemon-specific configuration for SSH access to frontend instances.
 include_recipe 'cdo-apps::daemon_ssh' if node['cdo-apps']['daemon'] && node['cdo-apps']['frontends']

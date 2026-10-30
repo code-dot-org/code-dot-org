@@ -1,0 +1,18 @@
+name 'ai-and-algorithmic-decisions-postassessment-q15_2026'
+
+question 'A student asks AI: "Make my page accessible." AI confidently returns code that adds an `alt` attribute to every image on the page, with the value "image" each time. The code runs with no errors. The page is no easier for a screen-reader user to understand. Which AI failure mode best describes what happened?'
+
+right 'Over-literal interpretation — AI did exactly what the student asked (add alt attributes) instead of what they meant (write alt text that actually describes each image).'
+wrong 'Hallucination — AI invented an HTML attribute that does not exist.'
+wrong 'Context blindness — AI refused to generate the code because it could not see the page.'
+wrong 'A syntax error in the AI''s code that prevented it from running.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 2
+MARKDOWN
+
+markdown <<MARKDOWN
+
+MARKDOWN

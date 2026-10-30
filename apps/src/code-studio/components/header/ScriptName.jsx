@@ -1,9 +1,13 @@
+import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import ProjectUpdatedAt from './ProjectUpdatedAt';
-import headerVignetteStyles from './HeaderVignette';
-import $ from 'jquery';
+
+import ProjectUpdatedAt, {
+  PROJECT_UPDATED_AT_HEIGHT,
+  PROJECT_UPDATED_AT_MIN_WIDTH,
+} from './ProjectUpdatedAt';
+import remeasureOnFontsReady from './remeasureOnFontsReady';
 
 class ScriptName extends React.Component {
   static propTypes = {
@@ -22,14 +26,22 @@ class ScriptName extends React.Component {
   }
 
   setDesiredWidth() {
-    // Report back to our parent how wide we would like to be.
-    if (this.props.setDesiredWidth) {
-      this.props.setDesiredWidth(this.getFullWidth());
-    }
+    // Skip when truncated: the <a> has width: actualWidth applied, so
+    // getFullWidth() would return actualWidth instead of the natural text
+    // width, permanently locking the parent's desired-width to the capped value.
+    if (!this.props.setDesiredWidth || this._isTruncated) return;
+    this.props.setDesiredWidth(this.getFullWidth());
   }
 
   componentDidMount() {
     this.setDesiredWidth();
+    this.cancelFontRemeasure = remeasureOnFontsReady(() =>
+      this.setDesiredWidth()
+    );
+  }
+
+  componentWillUnmount() {
+    this.cancelFontRemeasure?.();
   }
 
   componentDidUpdate() {
@@ -48,7 +60,7 @@ class ScriptName extends React.Component {
     this.setDesiredWidth();
   };
 
-  renderScriptLink() {
+  renderScriptLink(linkStyle) {
     let className = 'header_text';
     if (this.props.smallText) {
       className += ' small_font_on_tablet';
@@ -57,11 +69,7 @@ class ScriptName extends React.Component {
       <a
         href={this.props.href}
         className={className}
-        style={
-          this.props.showProjectUpdatedAt
-            ? {...styles.scriptLinkWithUpdatedAt}
-            : {}
-        }
+        style={linkStyle}
         title={this.props.name}
       >
         {this.props.name}
@@ -70,17 +78,31 @@ class ScriptName extends React.Component {
   }
 
   render() {
-    const fullWidth = this.getFullWidth();
+    // With no width from the header, the name sits in the header's flex row
+    // and ellipsizes whenever the row squeezes it.
+    const inFlow = this.props.width === undefined;
     const actualWidth = this.props.width;
+    const isTruncated =
+      !inFlow && actualWidth > 0 && this.getFullWidth() > actualWidth;
+    this._isTruncated = isTruncated;
+    const {isRtl} = this.props;
 
-    const vignetteStyle =
-      actualWidth < fullWidth
-        ? this.props.isRtl
-          ? headerVignetteStyles.left
-          : headerVignetteStyles.right
-        : null;
+    const ellipsisStyle = inFlow
+      ? styles.flowLink
+      : isTruncated
+      ? {
+          display: 'block',
+          width: actualWidth,
+          overflow: 'hidden',
+          textOverflow: 'ellipsis',
+          whiteSpace: 'nowrap',
+          ...(isRtl ? {direction: 'rtl'} : {}),
+        }
+      : {};
 
-    if (!this.props.showProjectUpdatedAt) {
+    // In flow the two-line layout, its width and its height are kept even
+    // before the saved-at state arrives, so nothing moves when it fills in.
+    if (!this.props.showProjectUpdatedAt && !inFlow) {
       return (
         <div style={{...styles.headerContainer, height: 18}}>
           <div
@@ -88,30 +110,46 @@ class ScriptName extends React.Component {
             ref="scriptName"
             style={styles.headerInner}
           >
-            {this.renderScriptLink()}
+            {this.renderScriptLink(ellipsisStyle)}
           </div>
-          <div className="vignette" style={vignetteStyle} />
         </div>
       );
     }
 
     return (
-      <div style={styles.headerContainer}>
+      <div style={inFlow ? styles.flowContainer : styles.headerContainer}>
         <div
           className="script_name"
           ref="scriptName"
-          style={{...styles.headerInner, height: 40}}
+          style={
+            inFlow ? styles.flowInner : {...styles.headerInner, height: 40}
+          }
         >
-          <div style={styles.outerContainer}>
-            <div style={styles.containerWithUpdatedAt}>
-              {this.renderScriptLink()}
-              <ProjectUpdatedAt
-                onContentUpdated={this.onProjectUpdatedAtContentUpdated}
-              />
+          <div style={inFlow ? styles.flowOuter : styles.outerContainer}>
+            <div
+              style={
+                inFlow
+                  ? styles.flowColumnWithUpdatedAt
+                  : styles.containerWithUpdatedAt
+              }
+            >
+              {this.renderScriptLink({
+                ...styles.scriptLinkWithUpdatedAt,
+                ...ellipsisStyle,
+                ...(isTruncated
+                  ? {alignSelf: isRtl ? 'flex-end' : 'flex-start'}
+                  : {}),
+              })}
+              {this.props.showProjectUpdatedAt ? (
+                <ProjectUpdatedAt
+                  onContentUpdated={this.onProjectUpdatedAtContentUpdated}
+                />
+              ) : (
+                <div style={styles.updatedAtPlaceholder} />
+              )}
             </div>
           </div>
         </div>
-        <div className="vignette" style={vignetteStyle} />
       </div>
     );
   }
@@ -125,19 +163,59 @@ const styles = {
   },
   headerInner: {
     position: 'absolute',
+    display: 'flex',
+    alignItems: 'center',
+  },
+  flowContainer: {
+    height: 40,
+    minWidth: 0,
+  },
+  flowInner: {
+    height: '100%',
+    display: 'flex',
+    alignItems: 'center',
+    minWidth: 0,
+  },
+  flowOuter: {
+    textAlign: 'end',
+    minWidth: 0,
+  },
+  flowLink: {
+    display: 'block',
+    maxWidth: '100%',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap',
   },
   scriptLinkWithUpdatedAt: {
     display: 'block',
   },
   outerContainer: {
-    textAlign: 'right',
+    textAlign: 'end',
   },
   containerWithUpdatedAt: {
     verticalAlign: 'bottom',
-    display: 'inline-block',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'end',
+  },
+  // The saved-at's width, held before it shows so the row
+  // does not re-center when it does. Shrinks with the row like the rest.
+  flowColumnWithUpdatedAt: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'end',
+    width: PROJECT_UPDATED_AT_MIN_WIDTH,
+    maxWidth: '100%',
+  },
+  // The saved-at's line, held empty until it shows, so the name sits where
+  // it will end up.
+  updatedAtPlaceholder: {
+    height: PROJECT_UPDATED_AT_HEIGHT,
   },
 };
 
+export const UnconnectedScriptName = ScriptName;
 export default connect(state => ({
   showProjectUpdatedAt: state.project.showProjectUpdatedAt,
 }))(ScriptName);

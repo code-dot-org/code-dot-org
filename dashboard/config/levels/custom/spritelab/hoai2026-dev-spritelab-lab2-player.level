@@ -1,0 +1,94 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 64,
+  "created_at": "2026-09-12T00:00:00.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "uses_lab2": "true",
+    "block_pools": [
+      "GamelabJr",
+      "GameDev"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab",
+      "zGameDev"
+    ],
+    "standalone_app_name": "spritelab",
+    "skin": "gamelab",
+    "hide_custom_blocks": true,
+    "hide_share_and_remix": "true",
+    "encrypted": "false",
+    "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
+    "level_mode": {
+      "kind": "code"
+    },
+    "image_role_defaults": {
+      "sprite": "hero"
+    },
+    "pinned_scene": {
+      "id": "platform-scene",
+      "name": "Platformer",
+      "type": "platform"
+    },
+    "world_start_pattern": [
+      "..........",
+      "..........",
+      "..........",
+      "..........",
+      "..........",
+      "..........",
+      "..........",
+      "....S.....",
+      "..........",
+      ".........."
+    ],
+    "objectives": {
+      "title": "**Make your character the player**",
+      "items": [
+        {
+          "text": "Put **set as player** under **when run** and pick your character.",
+          "check": {
+            "kind": "block",
+            "type": "spritelab2_setAsPlatformPlayer",
+            "under": "spritelab2_whenRun"
+          }
+        },
+        {
+          "text": "Click **Play** and move with the arrow keys: **left** and **right** to run, **up** to jump.",
+          "check": {
+            "kind": "reach",
+            "moved": true
+          }
+        }
+      ]
+    },
+    "long_instructions": "# Make your character the player\nPut **set as player** under **when run** and pick your character. Arrow keys: left and right to run, up to jump.",
+    "toolbox_definition": {
+      "kind": "flyoutToolbox",
+      "contents": [
+        {
+          "kind": "block",
+          "type": "spritelab2_setAsPlatformPlayer"
+        }
+      ]
+    },
+    "add_blocks": [
+      {
+        "attachTo": "spritelab2_whenRun",
+        "shadow": {
+          "type": "spritelab2_placeholder",
+          "extraState": {
+            "like": {
+              "type": "spritelab2_setAsPlatformPlayer"
+            },
+            "blank": true
+          }
+        }
+      }
+    ],
+    "header_label": "Make a platformer"
+  }
+}]]></config>
+</GamelabJr>

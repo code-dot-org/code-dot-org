@@ -15,7 +15,7 @@ class String
   # Converts a string to a boolean
   unless method_defined?(:to_bool) # May be provided by Rails
     def to_bool
-      return true if self&.match?((/^(true|t|yes|y|1)$/i))
+      return true if self&.match?(/^(true|t|yes|y|1)$/i)
       return false if empty? || self =~ (/^(false|f|no|n|0)$/i)
       raise ArgumentError.new("'#{self}' is not convertable to true/false.")
     end

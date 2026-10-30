@@ -1,12 +1,13 @@
 /** @file Redux actions and reducer for the Projects Gallery */
-import {combineReducers} from 'redux';
+
 import $ from 'jquery';
 import _ from 'lodash';
-import {Galleries, MAX_PROJECTS_PER_CATEGORY} from './projectConstants';
-import {PUBLISH_SUCCESS} from './publishDialog/publishDialogRedux';
-import {DELETE_SUCCESS} from './deleteDialog/deleteProjectDialogRedux';
-import {channels as channelsApi} from '../../clientApi';
+import {combineReducers} from 'redux';
+
 import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
+
+import {DELETE_SUCCESS} from './deleteDialog/deleteProjectDialogRedux';
+import {Galleries} from './projectConstants';
 
 // Action types
 
@@ -19,10 +20,6 @@ const SET_PERSONAL_PROJECTS_LIST = 'projects/SET_PERSONAL_PROJECTS_LIST';
 const SET_LOADING_PERSONAL_PROJECTS_LIST =
   'projects/SET_LOADING_PERSONAL_PROJECTS_LIST';
 const UPDATE_PERSONAL_PROJECT_DATA = 'projects/UPDATE_PERSONAL_PROJECT_DATA';
-
-const UNPUBLISH_REQUEST = 'projects/UNPUBLISH_REQUEST';
-const UNPUBLISH_SUCCESS = 'projects/UNPUBLISH_SUCCESS';
-const UNPUBLISH_FAILURE = 'projects/UNPUBLISH_FAILURE';
 
 const START_RENAMING_PROJECT = 'projects/START_RENAMING_PROJECT';
 const UPDATE_PROJECT_NAME = 'projects/UPDATE_PROJECT_NAME';
@@ -37,10 +34,10 @@ const SET_CAPTCHA_KEY = 'projects/SET_CAPTCHA_KEY';
 /**
  * Select a gallery to display on the projects page.
  * @param {string} projectType Default: 'PUBLIC'
- * @returns {{type: string, projectType: string}}
+ * @returns {{type: string, galleryType: string}}
  */
-export function selectGallery(projectType = Galleries.PUBLIC) {
-  return {type: TOGGLE_GALLERY, projectType};
+export function selectGallery(galleryType = Galleries.PUBLIC) {
+  return {type: TOGGLE_GALLERY, galleryType};
 }
 
 /**
@@ -87,14 +84,6 @@ export function updatePersonalProjectData(projectId, data) {
   return {type: UPDATE_PERSONAL_PROJECT_DATA, projectId, data};
 }
 
-export function publishSuccess(lastPublishedAt, lastPublishedProjectData) {
-  return {type: PUBLISH_SUCCESS, lastPublishedAt, lastPublishedProjectData};
-}
-
-export function unpublishSuccess(projectId) {
-  return {type: UNPUBLISH_SUCCESS, projectId};
-}
-
 export function deleteSuccess(projectId) {
   return {type: DELETE_SUCCESS, projectId};
 }
@@ -134,7 +123,7 @@ const initialSelectedGalleryState = Galleries.PUBLIC;
 function selectedGallery(state = initialSelectedGalleryState, action) {
   switch (action.type) {
     case TOGGLE_GALLERY:
-      return action.projectType;
+      return action.galleryType;
     default:
       return state;
   }
@@ -248,54 +237,6 @@ function personalProjectsList(state = initialPersonalProjectsList, action) {
       return {
         ...state,
         projects: projectsList,
-      };
-    case PUBLISH_SUCCESS:
-      if (!state.projects?.length) {
-        // We haven't loaded the projects and therefore have nothing to update.
-        return state;
-      }
-      var publishedChannel = action.lastPublishedProjectData.channel;
-
-      var publishedProjectIndex = state.projects.findIndex(
-        project => project.channel === publishedChannel
-      );
-
-      var updatedProjects = [...state.projects];
-      updatedProjects[publishedProjectIndex] = {
-        ...updatedProjects[publishedProjectIndex],
-        publishedAt: action.lastPublishedAt,
-      };
-
-      return {
-        ...state,
-        projects: updatedProjects,
-      };
-    case UNPUBLISH_REQUEST:
-      return {
-        ...state,
-        isUnpublishPending: true,
-      };
-    case UNPUBLISH_SUCCESS:
-      var unpublishedChannel = action.projectId;
-
-      var unpublishedProjectIndex = state.projects.findIndex(
-        project => project.channel === unpublishedChannel
-      );
-
-      var newProjects = [...state.projects];
-      newProjects[unpublishedProjectIndex] = {
-        ...newProjects[unpublishedProjectIndex],
-        publishedAt: null,
-      };
-
-      return {
-        ...state,
-        projects: newProjects,
-      };
-    case UNPUBLISH_FAILURE:
-      return {
-        ...state,
-        isUnpublishPending: false,
       };
     case DELETE_SUCCESS:
       var deletedChannel = action.projectId;
@@ -453,7 +394,7 @@ export const setPublicProjects = () => {
   return dispatch => {
     $.ajax({
       method: 'GET',
-      url: `/api/v1/projects/gallery/public/all/${MAX_PROJECTS_PER_CATEGORY}`,
+      url: `/api/v1/projects/gallery/public/all`,
       dataType: 'json',
     }).done(projectLists => {
       dispatch(setProjectLists(projectLists));
@@ -493,30 +434,6 @@ const fetchProjectToUpdate = (projectId, onComplete) => {
       onComplete(status, jqXhr.responseJSON);
     });
 };
-
-export function unpublishProject(projectId) {
-  return dispatch => {
-    dispatch({type: UNPUBLISH_REQUEST});
-    return new Promise((resolve, reject) => {
-      channelsApi.withProjectId(projectId).ajax(
-        'POST',
-        'unpublish',
-        () => {
-          dispatch({
-            type: UNPUBLISH_SUCCESS,
-            projectId: projectId,
-          });
-          resolve();
-        },
-        err => {
-          dispatch({type: UNPUBLISH_FAILURE});
-          reject(err);
-        },
-        null
-      );
-    });
-  };
-}
 
 export const updateProjectLibrary = (projectId, newData) => {
   return dispatch => {
@@ -587,8 +504,4 @@ export const saveProjectName = (projectId, updatedName) => {
       }
     });
   };
-};
-
-export const remix = (projectId, projectType) => {
-  window.location = `/projects/${projectType}/${projectId}/remix`;
 };

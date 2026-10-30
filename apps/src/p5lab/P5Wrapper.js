@@ -1,12 +1,19 @@
-import {getStore} from '@cdo/apps/redux';
-import {allAnimationsSingleFrameSelector} from './redux/animationList';
 import p5 from '@code-dot-org/p5';
+
+import {getStore} from '@cdo/apps/redux';
+
+import {allAnimationsSingleFrameSelector} from './redux/animationList';
+// Disabling import order in order to maintain p5 import first.
+// This might be safe to remove but needs investigation whether any behavior is changed by order.
+/* eslint-disable import/order */
 window.p5 = p5;
 import '@code-dot-org/p5.play/lib/p5.play';
 import p5SpriteWrapper from './P5SpriteWrapper';
 import p5GroupWrapper from './P5GroupWrapper';
 import {backgrounds} from './spritelab/backgrounds.json';
+
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
+/* eslint-enable import/order */
 
 const defaultFrameRate = 30;
 
@@ -606,7 +613,20 @@ P5Wrapper.prototype.preloadBackgrounds = function () {
   );
 };
 
-P5Wrapper.prototype.preloadSpriteImages = function (animationList) {
+/**
+ * Preload each project image as a still (its first frame) for setAnimation.
+ * With `multiFrame`, an image whose frameCount exceeds one is loaded as a
+ * playing animation instead — its frames cut from the image on the stored
+ * frameSize grid, row by row — which is what Lab2 wants for its generated
+ * character sets. Classic Sprite Lab leaves it off: its library art has
+ * frames it deliberately shows as stills.
+ * @param {AnimationList} animationList
+ * @param {{multiFrame?: boolean}} options
+ */
+P5Wrapper.prototype.preloadSpriteImages = function (
+  animationList,
+  {multiFrame = false} = {}
+) {
   if (!this.preloadedSprites) {
     this.preloadedSprites = {};
   }
@@ -623,8 +643,13 @@ P5Wrapper.prototype.preloadSpriteImages = function (animationList) {
         this.p5.loadImage(
           props.dataURI,
           image => {
-            this.preloadedSprites[props.name] = image;
-            this.preloadedSprites[props.name].dataURI = props.dataURI;
+            const asSheet =
+              multiFrame && props.frameCount > 1 && props.frameSize;
+            const loaded = asSheet
+              ? this.animationFromSheet_(image, props)
+              : image;
+            loaded.dataURI = props.dataURI;
+            this.preloadedSprites[props.name] = loaded;
             resolve();
           },
           err => {
@@ -639,6 +664,19 @@ P5Wrapper.prototype.preloadSpriteImages = function (animationList) {
   return this.preloadSpriteImages_.then(
     () => (this.p5._predefinedSpriteAnimations = this.preloadedSprites)
   );
+};
+
+P5Wrapper.prototype.animationFromSheet_ = function (image, props) {
+  const spriteSheet = this.p5.loadSpriteSheet(
+    image,
+    props.frameSize.x,
+    props.frameSize.y,
+    props.frameCount
+  );
+  const animation = this.p5.loadAnimation(spriteSheet);
+  animation.looping = props.looping;
+  animation.frameDelay = props.frameDelay;
+  return animation;
 };
 
 /**

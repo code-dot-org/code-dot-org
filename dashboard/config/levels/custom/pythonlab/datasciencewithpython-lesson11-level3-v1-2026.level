@@ -1,0 +1,63 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-08-24T03:47:28.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Review `notnull()`\r\n\r\nIn Lesson 8, you used `notnull()` to check whether values are present. It returns `True` when a value is present and `False` when a value is missing.\r\n\r\n::: details [✅ Step 1]\r\nRun the program. The first condition filters for superheroes whose `Alias` ends with `\"r\"`.\r\n:::\r\n\r\n::: details [✅ Step 2]\r\nCompare the `Affiliation` column with the Boolean values returned by `notnull()`. Notice which values return `True` and which return `False`.\r\n:::\r\n\r\n::: details [✅ Step 3]\r\nModify the `notnull()` condition to check the `YearsActive` column instead of the `Affiliation` column. Run the program again.\r\n:::\r\n\r\n::: details [✅ Step 4]\r\nCompare the results. How did changing the column affect which superheroes appeared in the final DataFrame?\r\n:::",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "import pandas as pd\nimport matplotlib.pyplot as plt\n\ndf = pd.read_csv('new_superhero_roster.csv')\n\n# Filter for superheroes whose Alias ends with \"r\"\nalias_condition = df['Alias'].str.endswith('r')\nfiltered_heroes = df[alias_condition]\n\nprint(\"Superheroes with aliases ending in r:\")\nprint(filtered_heroes)\n\n# Check which filtered superheroes have an Affiliation\nnotnull_condition = filtered_heroes['Affiliation'].notnull()\n\nprint(\"\\nBoolean Condition:\")\nprint(notnull_condition)\n\n# Keep the rows where the condition is True\nfinal_heroes = filtered_heroes[notnull_condition]\n\nprint(\"\\nFinal Filtered Superheroes:\")\nprint(final_heroes)",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        },
+        "1": {
+          "id": "1",
+          "name": "new_superhero_roster.csv",
+          "language": "csv",
+          "contents": "HeroName,Alias,City,PowerLevel,Affiliation,ArchNemesis,YearsActive\nShadowBlade,The Shadow,New York,96,,Dark Specter,33\nThunderFist,Thunder,Los Angeles,77,Justice League,Red Skull,33\nSilverWing,Silver,Gotham,55,X-Men,Green Goblin,23\nNightWatcher,Watcher,Metropolis,60,Fantastic Four,Thanos,\nFlameBurst,Flame,Central City,93,,Doctor Doom,18\nAquaStrike,Aqua,Star City,83,Teen Titans,Loki,25\nVoltGuardian,Volt,Coast City,87,Defenders,Mystique,\nTerraRider,Terra,Bloodhaven,82,Inhumans,Ultron,\nSpectraFlash,Spectra,Atlantis,72,S.H.I.E.L.D.,Magneto,\nSolarFlare,Solar,Asgard,92,Saber Squad,Darkseid,54\nLunaShade,Luna,Midgard,64,Legion of Super-Heroes,Brainiac,\nIronClad,Iron,Krypton,68,Sentinels of Magic,Dark Specter,44\nFrostBite,Frost,Smallville,99,,Reverse-Flash,17\nWindWalker,Wind,New Genesis,65,Watchmen,Black Adam,\nMysticMage,Mystic,Apokolips,77,,Deathstroke,19\nStarSlinger,Star,Themyscira,65,Alpha Flight,Taskmaster,61\nCosmicKnight,Cosmic,Atlantis,86,Young Avengers,Kingpin,48\nBlazeRunner,Blaze,Wakanda,86,Runaways,Venom,\nCrystalCrest,Crystal,Latveria,77,,Red Skull,67\nNovaSpark,Nova,Genosha,100,Eternals,Killmonger,8\nEclipseHunter,Eclipse,Attilan,56,,Mystique,69\nPhantomEcho,Phantom,Avalon,72,Champions,Apocalypse,61\nShadowMender,Mender,Nanda Parbat,100,A-Force,Sabretooth,\nStormBringer,Storm,Kun Lun,51,Excalibur,Juggernaut,7\nVenomSting,Venom,Xandar,87,,Sandman,\nFirebrand,Fire,Titan,75,X-Factor,Mystique,67\nGlacierGuard,Glacier,Knowhere,71,Thunderbolts,Mysterio,8\nThunderClap,Clap,Sakaar,76,Heroes for Hire,Dark Specter,28\nStarlight,Starlight,Hala,75,New Warriors,Mysterio,\nMoonDancer,Moon,Oa,98,Secret Warriors,Mr. Freeze,72\nTempest,Tempest,Mars,63,,Harley Quinn,51\nAurora,Aurora,Latveria,95,Sentinels of Magic,Poison Ivy,41\nCyclone,Cyclone,Themyscira,51,,Bane,4\nNebula,Nebula,Krypton,64,Watchmen,Dark Specter,43\nInferno,Inferno,Smallville,60,Dark Avengers,Catwoman,43\nBlizzard,Blizzard,Midgard,95,Alpha Flight,Deadshot,10\nTorrent,Torrent,New Genesis,74,Young Avengers,Clayface,\nComet,Comet,Apokolips,80,Runaways,Solomon Grundy,34\nHurricane,Hurricane,Star City,95,Great Lakes Avengers,Man-Bat,16\nSolaris,Solaris,Coast City,85,Eternals,Black Mask,3\nIceBlade,Ice,Bloodhaven,69,Squadron Supreme,Firefly,\nSpecter,Specter,Atlantis,72,Champions,Hush,20\nVortex,Vortex,Wakanda,76,A-Force,Killer Croc,2\nBlaze,Blaze,Latveria,69,Excalibur,Mad Hatter,53\nSeraph,Seraph,Genosha,52,X-Force,Talia al Ghul,27\nShadow,Shadow,Attilan,74,X-Factor,KGBeast,\nTempest,Tempest,Avalon,83,,Anarky,10\nPhantom,Phantom,Nanda Parbat,57,Heroes for Hire,Ventriloquist,13\nShadowBlade,The Shadow,New York,94,New Warriors,Red Skull,\nThunderFist,Thunder,Los Angeles,88,,Mysterio,20\n",
+          "folderId": "0",
+          "active": false,
+          "open": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    },
+    "teacher_markdown": "**Student Takeaways:**\r\n- Use the notnull() method to filter out rows with missing data in a DataFrame, ensuring that the dataset used for analysis contains only non-null values.\r\n- Students should learn how str.endswith() and notnull() act as filters in order to create a subset of data.\r\n\r\n\r\n**Possible Misconceptions and/or Difficulties:**\r\n- Students might think that both of these functions are always needed in order to analyze data. That will not be the case; these are simply common options that are available.\r\n- Some students may confuse notnull() with dropna() and might not understand when to use each method appropriately.\r\n\r\n",
+    "name_suffix": "_2026",
+    "offer_browser_tts": "false",
+    "disable_edit_run_for_submission": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "encrypted_exemplar_sources": "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\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-08-24T03:47:28.966+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L10-L3_2024-pilot_pilot_2026\\\"\"],\"cloned_from\":\"datascience-U2L10-L3_2024-pilot_pilot_2026\"},{\"changed_at\":\"2026-08-24 03:48:17 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-08-24 03:50:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-08-24 03:51:12 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-08-24 03:53:40 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Pythonlab>

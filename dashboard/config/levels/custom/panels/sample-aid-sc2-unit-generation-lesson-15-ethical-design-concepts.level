@@ -1,0 +1,45 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-06-29T17:09:50.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "panels": [
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-15-ethical-design-concepts-d795b537-28f3-4155-8b2f-d693ce0c9ab3",
+        "text": "AI systems impact real people. To ensure they do good and not harm, we need to think about ethics. One key idea is *fairness*: Is the AI treating everyone equitably, or is it biased?",
+        "imageUrl": "https://images.code.org/dc2a1f8bc0d10a36ab9e9690a5c2d28c-sample-aid-sc2-unit-generation-lesson-15-ethical-design-concepts-panel-1-c35a68f6-ebbf-4497-91c8-130aa332e313.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-15-ethical-design-concepts-a4f0104e-8bac-461d-a2b5-a2bba3d1ec56",
+        "text": "Another crucial concept is *transparency*. Can we understand *why* an AI made a certain decision? If we can't see how it works, it's hard to trust or fix it.",
+        "imageUrl": "https://images.code.org/d824cd1d9e45254afdb4b0d87886e047-sample-aid-sc2-unit-generation-lesson-15-ethical-design-concepts-panel-2-6d4d6ac7-e021-4a71-8d1c-09557dd1eea8.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-15-ethical-design-concepts-b5cdbe53-dcd5-47b5-bb15-9729830eb474",
+        "text": "Who is *accountable* when an AI makes a mistake or causes harm? The programmers? The company? Defining responsibility is vital for fixing problems and building trust.",
+        "imageUrl": "https://images.code.org/50da6b44242b0de4e47a72c2de94daa2-sample-aid-sc2-unit-generation-lesson-15-ethical-design-concepts-panel-3-034e0650-7acd-455c-bb68-3ca037698d5e.png",
+        "layout": "text-bottom-left"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-15-ethical-design-concepts-77ef8f2b-b500-42e0-93ea-a4c4ec312b45",
+        "text": "Finally, *privacy* is paramount. AI systems often use vast amounts of data, much of it personal. How is this data collected, used, and protected?",
+        "imageUrl": "https://images.code.org/d6cdaea732f59d373c87ea3280882c4f-sample-aid-sc2-unit-generation-lesson-15-ethical-design-concepts-panel-4-4564b4d8-ba43-4076-af28-9edde9d97e9d.png",
+        "layout": "text-bottom-right"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-15-ethical-design-concepts-e37dc286-4317-440d-a981-6c1601b589c9",
+        "text": "Fairness, transparency, accountability, and privacy are not just abstract ideas. They are practical considerations that shape whether AI helps or harms society. As designers, we must keep them in mind.",
+        "imageUrl": "https://images.code.org/aab85a13ddc9e4ce59e5ba066eb50357-sample-aid-sc2-unit-generation-lesson-15-ethical-design-concepts-panel-5-f67a2bfe-fcb6-43d4-91f8-735c094931a8.png",
+        "layout": "text-top-center"
+      }
+    ],
+    "generate_outline": "Introduce fundamental ethical considerations in AI design, such as fairness, transparency, accountability, and privacy. Discuss how these concepts relate to the beneficial and harmful impacts of AI algorithms, using examples from the real world."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-06-29 17:10:45 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-29 17:10:45 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

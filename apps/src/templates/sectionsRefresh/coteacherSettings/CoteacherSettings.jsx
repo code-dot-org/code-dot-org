@@ -1,13 +1,15 @@
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useCallback, useMemo, useState} from 'react';
-import i18n from '@cdo/locale';
-import {StrongText} from '@cdo/apps/componentLibrary/typography';
 
-import styles from './coteacher-settings.module.scss';
+import i18n from '@cdo/locale';
+
 import AddCoteacher from './AddCoteacher';
 import CoteacherTable from './CoteacherTable';
-import RemoveCoteacherDialog from './RemoveCoteacherDialog';
 import PrimaryTeacher from './PrimaryTeacher';
+import RemoveCoteacherDialog from './RemoveCoteacherDialog';
+
+import styles from './coteacher-settings.module.scss';
 
 const statusSortValue = coteacher => {
   switch (coteacher.status) {
@@ -29,7 +31,7 @@ const getInitialCoteachers = (sectionInstructors, primaryTeacher) => {
   if (!primaryTeacher) {
     return sectionInstructors;
   }
-  return sectionInstructors.filter(
+  return [...sectionInstructors].filter(
     instructor => instructor.instructorEmail !== primaryTeacher.email
   );
 };
@@ -41,6 +43,7 @@ export default function CoteacherSettings({
   setCoteachersToAdd,
   coteachersToAdd,
   sectionMetricInformation,
+  disabled,
 }) {
   const [addError, setAddError] = useState('');
   const [coteacherToRemove, setCoteacherToRemove] = useState(null);
@@ -51,7 +54,7 @@ export default function CoteacherSettings({
   const coteachers = useMemo(() => {
     const unsaved = coteachersToAdd.map(email => ({instructorEmail: email}));
 
-    const sortedSaved = savedCoteachers.sort(
+    const sortedSaved = [...savedCoteachers].sort(
       (a, b) => statusSortValue(a) - statusSortValue(b)
     );
     return [...unsaved, ...sortedSaved];
@@ -75,13 +78,15 @@ export default function CoteacherSettings({
 
   return (
     <div className={styles.expandedSection}>
-      {i18n.coteacherAddInfo()}
+      <Typography variant="body2">
+        {disabled ? i18n.coteacherLtiAddInfo() : i18n.coteacherAddInfo()}
+      </Typography>
       <PrimaryTeacher
         primaryTeacher={primaryTeacher}
         numCoteachers={coteachers.length}
       />
       <label className={styles.label}>
-        <StrongText>{i18n.coteacherLabel()}</StrongText>
+        <Typography variant="strong">{i18n.coteacherLabel()}</Typography>
       </label>
       <div className={styles.settings}>
         <AddCoteacher
@@ -93,10 +98,12 @@ export default function CoteacherSettings({
           addError={addError}
           setAddError={setAddError}
           sectionMetricInformation={sectionMetricInformation}
+          disabled={disabled}
         />
         <CoteacherTable
           coteachers={coteachers}
           setCoteacherToRemove={setCoteacherToRemove}
+          disabled={disabled}
         />
         <RemoveCoteacherDialog
           coteacherToRemove={coteacherToRemove}
@@ -117,4 +124,5 @@ CoteacherSettings.propTypes = {
   setCoteachersToAdd: PropTypes.func.isRequired,
   coteachersToAdd: PropTypes.arrayOf(PropTypes.string),
   sectionMetricInformation: PropTypes.object,
+  disabled: PropTypes.bool,
 };

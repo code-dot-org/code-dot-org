@@ -1,0 +1,15 @@
+name 'Data Sci U1 Post Q9_2024-pilot'
+
+question 'Describe a scenario in which the interdisciplinary nature of data science enhances decision-making in the financial sector.'
+
+wrong 'Using only traditional statistical methods to report quarterly earnings, providing basic insights into company performance.'
+right 'Combining machine learning algorithms, statistical analysis, and financial expertise to predict market trends and assess investment risks.'
+wrong 'Focusing on computer science to automate financial transactions, reducing the need for manual data entry.'
+wrong 'Applying social science theories to understand investor behavior, helping to craft targeted marketing campaigns.'
+
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+
+MARKDOWN

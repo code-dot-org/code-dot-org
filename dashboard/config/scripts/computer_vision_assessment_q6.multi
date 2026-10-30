@@ -1,0 +1,10 @@
+name 'Computer-Vision-Assessment-Q6'
+title 'Computer Vision Assessment'
+
+question 'Determine which of the following is not a common usage of QR codes in computer vision applications:'
+right 'Enhancing image quality and resolution'
+wrong 'Encoding URLs for quick access to websites'
+wrong 'Storing information for contactless payments'
+wrong 'Providing details about products and services'
+
+allow_multiple_attempts false

@@ -1,0 +1,27 @@
+@as_student
+Feature: App Lab Scenarios 3
+
+  Background:
+    Given I start a new Applab project
+    And I wait for the lab page to fully load
+
+  Scenario: App Lab absolute image URL
+    # Create an app with an absolute image URL.
+    # Force safe moderation so this scenario checks URL behavior, not service availability.
+    When I ensure droplet is in text mode
+    And execute JavaScript expression "window.__applabImageModerationStatusOverride='safe'"
+    And I append text to droplet "image('test123', 'https://example.com/image.png')"
+    And I press "runButton"
+    And I wait until element "#divApplab > .screen > img#test123" is visible
+    And I wait until element "#divApplab > .screen > img#test123" is an img with src "https://example.com/image.png"
+
+  Scenario: App Lab Clear Puzzle and Design Mode
+    # Create an app with a design mode button, then clear the puzzle.
+    Given I switch to design mode
+    And I drag a BUTTON into the app
+    And I switch to code mode
+    And Applab HTML has a button
+    And I reset the puzzle to the starting version
+    And I wait to see "#divApplab"
+    And I wait until element "#divApplab" is visible
+    And Applab HTML has no button

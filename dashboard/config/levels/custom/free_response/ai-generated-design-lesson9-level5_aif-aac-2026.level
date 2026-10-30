@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2026-05-06T19:13:55.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "title": "Check Your Understanding",
+    "long_instructions": "Inclusive Designers have to advocate for users who aren't in the room. What's one thing you found today that you'd fight to keep in a design, even if a client pushed back? Why?",
+    "stay_on_level_after_submit": "false",
+    "height": "100",
+    "placeholder": "enter response here...",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_aif-aac-2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-06T19:13:55.467+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson9-level5_2026\\\"\"],\"cloned_from\":\"ai-generated-design-lesson9-level5_2026\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

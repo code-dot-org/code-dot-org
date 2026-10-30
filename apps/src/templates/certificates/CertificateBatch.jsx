@@ -1,14 +1,17 @@
-import React, {useState} from 'react';
+import Link from '@code-dot-org/component-library/link';
+import {Button as MuiButton, Typography} from '@mui/material';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
+import React, {useState} from 'react';
+
+import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
+import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
-import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
+import aiCurriculumHowItWorksImg from '@cdo/static/ai/ai-curriculum-how-ai-works.png';
+import teachPageTopImg from '@cdo/static/teach-page-top.png';
+
 import style from './certificate_batch.module.scss';
-import {
-  Heading1,
-  Heading3,
-  Heading4,
-} from '@cdo/apps/componentLibrary/typography';
 
 const curriculaData = [
   {
@@ -43,7 +46,7 @@ const curriculaData = [
       oldestGrade: '12',
     }),
     title: i18n.howAiWorks(),
-    image: 'https://code.org/images/ai/ai-curriculum-how-ai-works.png',
+    image: aiCurriculumHowItWorksImg,
     buttonText: i18n.exploreLessons(),
     description: i18n.howAiWorksDescription(),
     link: 'http://code.org/ai/how-ai-works',
@@ -51,7 +54,7 @@ const curriculaData = [
 ];
 
 const curriculumCatalogImages = [
-  'https://code.org/images/ai/ai-curriclum-machine-learning.png',
+  '/blockly/media/ai/ai-curriclum-machine-learning.png',
   'https://images.code.org/11d83ab1d397cafda327782812e8988c-Book%20Covers.png',
   '/../../../../shared/images/courses/logo_csa.jpg',
   '/../../../../shared/images/courses/logo_mobile.jpg',
@@ -63,14 +66,14 @@ const professionalLearning = [
     title: i18n.teachWithCodeOrg(),
     description: i18n.teachWithCodeOrgDescription(),
     buttonText: i18n.teachWithCodeOrg(),
-    image: 'https://code.org/images/teach-page-top.png',
+    image: teachPageTopImg,
     link: 'https://code.org/teach',
   },
   {
     title: i18n.courseOfferingSelfPacedPl(),
     description: i18n.selfPacedPlDescription(),
     buttonText: i18n.exploreProfessionalLearning(),
-    image: 'https://code.org/shared/images/banners/self-paced-pl-hero.png',
+    image: studio('/shared/images/banners/self-paced-pl-hero.png'),
     link: 'https://code.org/educate/professional-development-online',
   },
 ];
@@ -92,9 +95,9 @@ export default function CertificateBatch({
   return (
     <div className={style.wrapper}>
       <div className={style.headerContainer}>
-        <Heading1 className={style.header}>
+        <Typography className={style.header} variant="h1" gutterBottom>
           {i18n.printBatchCertificates()}
-        </Heading1>
+        </Typography>
       </div>
       <div className={style.certificateContainer}>
         <div className={style.imageWrapper}>
@@ -103,46 +106,54 @@ export default function CertificateBatch({
         </div>
         <div className={style.entryContainer}>
           <span className={style.instructions}>
-            <Heading3>{i18n.createYourCertificate()}</Heading3>
+            <Typography variant="h3" gutterBottom>
+              {i18n.createYourCertificate()}
+            </Typography>
             <SafeMarkdown
               markdown={i18n.enterCertificateNames({courseTitle})}
             />
           </span>
 
-          <br />
           <form
             action="/print_certificates/batch"
             method="post"
             className={'batch-certificate-form'}
           >
             <RailsAuthenticityToken />
-            <input name="courseName" value={courseName} type="hidden" />
+            <input name="courseName" value={courseName || ''} type="hidden" />
             <textarea
               cols="40"
               name="studentNames"
               rows="8"
               placeholder="John Smith"
-              className={style.textarea}
+              className={classNames(style.textarea, 'form-control')}
               value={studentNames}
               onChange={onChange}
               aria-label={i18n.studentNames()}
             />
-            <br />
-            <button type="submit" className={style.submit} id="submit-button">
+            <MuiButton
+              type="submit"
+              id="submit-button"
+              className={style.submit}
+              variant="contained"
+              color="primary"
+            >
               {i18n.generateCertificates()}
-            </button>
-            <br />
+            </MuiButton>
             <hr />
-            {i18n.wantBlankCertificateTemplate()}{' '}
-            <a href={imageUrl}>{i18n.printOneCertificateHere()}</a>
+            <Typography variant="body3">
+              {i18n.wantBlankCertificateTemplate()}{' '}
+              <Link href={imageUrl} size="s">
+                {i18n.printOneCertificateHere()}
+              </Link>
+            </Typography>
           </form>
         </div>
       </div>
-
       <div className={style.continueBeyond}>
-        <Heading3 className={style.textCenter}>
-          {i18n.continueBeyondHourOfCode()}
-        </Heading3>
+        <Typography className={style.textCenter} variant="h3" gutterBottom>
+          Continue Beyond an Hour of AI
+        </Typography>
         <div
           className={`${style.actionBlockWrapper} ${style.actionBlockWrapperThreeCol}`}
         >
@@ -152,15 +163,30 @@ export default function CertificateBatch({
               key={index}
             >
               <div className={style.contentWrapper}>
-                <p className={style.overline}>{item.grade}</p>
-                <Heading3>{item.title}</Heading3>
+                <Typography
+                  className={style.overline}
+                  variant="overline2"
+                  gutterBottom
+                >
+                  {item.grade}
+                </Typography>
+                <Typography variant="h3" gutterBottom>
+                  {item.title}
+                </Typography>
                 <img src={item.image} alt="" />
-                <p>{item.description}</p>
+                <Typography variant="body3" gutterBottom>
+                  {item.description}
+                </Typography>
               </div>
               <div className={style.contentFooter}>
-                <a className={style.linkButton} href={item.link}>
+                <MuiButton
+                  className={style.linkButton}
+                  variant="contained"
+                  color="primary"
+                  href={item.link}
+                >
                   {item.buttonText}
-                </a>
+                </MuiButton>
               </div>
             </div>
           ))}
@@ -168,22 +194,27 @@ export default function CertificateBatch({
         <hr />
 
         <div className={style.textCenter}>
-          <Heading4>{i18n.discoverMore()}</Heading4>
-          <p>{i18n.discoverMoreCatalogText()}</p>
+          <Typography variant="h4" gutterBottom>
+            {i18n.discoverMore()}
+          </Typography>
+          <Typography variant="body3" gutterBottom>
+            {i18n.discoverMoreCatalogText()}
+          </Typography>
           <div className={style.imageContainer}>
             {curriculumCatalogImages.map((item, index) => (
               <img key={index} src={item} alt="" />
             ))}
           </div>
-          <a
+          <MuiButton
             className={`${style.linkButton} ${style.catalogButton}`}
+            variant="contained"
+            color="primary"
             href={'/catalog'}
           >
             {i18n.viewCurriculumCatalog()}
-          </a>
+          </MuiButton>
         </div>
       </div>
-
       <div className={style.professionalLearning}>
         <div
           className={`${style.actionBlockWrapper} ${style.actionBlockTwoCol}`}
@@ -199,13 +230,22 @@ export default function CertificateBatch({
                   alt=""
                   className={style.professionalLearningImage}
                 />
-                <Heading3>{item.title}</Heading3>
-                <p>{item.description}</p>
+                <Typography variant="h3" gutterBottom>
+                  {item.title}
+                </Typography>
+                <Typography variant="body3" gutterBottom>
+                  {item.description}
+                </Typography>
               </div>
               <div className={style.contentFooter}>
-                <a className={style.linkButton} href={item.link}>
+                <MuiButton
+                  className={style.linkButton}
+                  variant="contained"
+                  color="primary"
+                  href={item.link}
+                >
                   {item.buttonText}
-                </a>
+                </MuiButton>
               </div>
             </div>
           ))}

@@ -1,19 +1,22 @@
-import React, {Component} from 'react';
-import PropTypes from 'prop-types';
-import color from '@cdo/apps/util/color';
-import onClickOutside from 'react-onclickoutside';
 import classNames from 'classnames';
-import JavalabButton from './JavalabButton';
-import msg from '@cdo/locale';
-import javalabMsg from '@cdo/javalab/locale';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+import onClickOutside from 'react-onclickoutside';
 import {connect} from 'react-redux';
-import moduleStyles from './backpack.module.scss';
-import {DisplayTheme} from './DisplayTheme';
-import {makeEnum} from '@cdo/apps/utils';
-import JavalabDialog from './JavalabDialog';
-import {PaneButton} from '@cdo/apps/templates/PaneHeader';
+
+import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
 import CloseOnEscape from '@cdo/apps/templates/CloseOnEscape';
-import {BackpackAPIContext} from './BackpackAPIContext';
+import {PaneButton} from '@cdo/apps/templates/PaneHeader';
+import color from '@cdo/apps/util/color';
+import {makeEnum} from '@cdo/apps/utils';
+import javalabMsg from '@cdo/javalab/locale';
+import msg from '@cdo/locale';
+
+import {DisplayTheme} from './DisplayTheme';
+import JavalabButton from './JavalabButton';
+import JavalabDialog from './JavalabDialog';
+
+import moduleStyles from './backpack.module.scss';
 
 const Dialog = makeEnum(
   'IMPORT_WARNING',
@@ -308,19 +311,6 @@ class Backpack extends Component {
       !backpackLoadError &&
       backpackFilenames.length === 0;
 
-    const backpackIcon = (
-      <i style={{marginRight: 8, fontSize: 13}}>
-        {/* TODO: [Phase 2] This is legacy style of backpack image.
-         Once we move to new styles, make sure to use backpack_neutraldark.png instead to match colors
-         More info here: https://github.com/code-dot-org/code-dot-org/pull/50895 */}
-        <img
-          src="/blockly/media/javalab/backpack.png"
-          alt="backpack icon"
-          className={moduleStyles.backpackIcon}
-        />
-      </i>
-    );
-
     // Use PaneButton as primary Backpack button
     // to align with other buttons in the JavalabEditor header,
     // which all use PaneButton.
@@ -328,12 +318,13 @@ class Backpack extends Component {
       <CloseOnEscape handleClose={this.handleClickOutside}>
         <PaneButton
           id="javalab-editor-backpack"
-          icon={backpackIcon}
+          iconProps={{iconName: 'backpack', iconStyle: 'solid'}}
           onClick={this.toggleDropdown}
           headerHasFocus
           isLegacyStyles
           isRtl={false}
           label={javalabMsg.backpackLabel()}
+          ariaLabel={javalabMsg.backpackLabel()}
           leftJustified
           isDisabled={isButtonDisabled}
           style={{

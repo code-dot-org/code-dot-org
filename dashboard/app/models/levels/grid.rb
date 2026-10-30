@@ -22,6 +22,7 @@
 #  index_levels_on_game_id    (game_id)
 #  index_levels_on_level_num  (level_num)
 #  index_levels_on_name       (name)
+#  index_levels_on_type       (type)
 #
 
 require "csv"
@@ -86,6 +87,6 @@ class Grid < Blockly
       prop = level_hash['properties']
       prop[maze_type] = prop[maze_type].to_json if prop[maze_type].is_a?(Array)
     end
-    super(level_hash)
+    super
   end
 end

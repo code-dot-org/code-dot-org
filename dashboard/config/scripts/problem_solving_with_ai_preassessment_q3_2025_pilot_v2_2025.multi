@@ -1,0 +1,14 @@
+name 'problem-solving-with-ai-preassessment-q3_2025-pilot_v2-2025'
+
+question 'A student uploads a photo of their neighborhood to an AI tool. Which of the following privacy risks should they consider?'
+
+wrong 'The AI will only analyze what the student describes in the photo.'
+wrong 'The AI can erase the image immediately after processing.'
+right 'The AI may store the image and use it for future training.'
+wrong 'AI cannot infer any additional information beyond what is visible in the image.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 2: Beyond Words
+MARKDOWN

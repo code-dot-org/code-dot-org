@@ -1,18 +1,39 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
-import {showWarning} from '../redux/data';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import LibraryCategory from './LibraryCategory';
-import SearchBar from '@cdo/apps/templates/SearchBar';
-import {getDatasetInfo} from './dataUtils';
-import msg from '@cdo/locale';
-import PreviewModal from './PreviewModal';
-import FirebaseStorage from '../firebaseStorage';
-import {WarningType} from '../constants';
-import experiments from '../../util/experiments';
+import Link from '@code-dot-org/component-library/link';
 import _ from 'lodash';
+import PropTypes from 'prop-types';
+import React from 'react';
+import {connect} from 'react-redux';
+
+import SearchBar from '@cdo/apps/sharedComponents/SearchBar';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import msg from '@cdo/locale';
+
+import experiments from '../../util/experiments';
+import {WarningType} from '../constants';
+import {showWarning} from '../redux/data';
+import {storageBackend} from '../storage';
+
+import {getDatasetInfo} from './dataUtils';
+import LibraryCategory from './LibraryCategory';
+import {refreshCurrentDataView} from './loadDataForView';
+import PreviewModal from './PreviewModal';
+
 import style from './data-library-pane.module.scss';
+
+// Defined at module scope so SafeMarkdown can cache its processor (see the
+// rehypeMap docs in SafeMarkdown.jsx). Overriding `a` replaces SafeMarkdown's
+// localization wrapper, so carry its data attributes over; target/rel from
+// openExternalLinksInNewTab pass through Link to the anchor.
+const rehypeMap = {
+  a: props => (
+    <Link
+      {...props}
+      size="xs"
+      data-lz-url="true"
+      data-localize="markdown-url"
+    />
+  ),
+};
 
 class DataLibraryPane extends React.Component {
   static propTypes = {
@@ -34,17 +55,10 @@ class DataLibraryPane extends React.Component {
     }
   };
 
-  importTable = datasetInfo => {
-    if (datasetInfo.current) {
-      FirebaseStorage.addCurrentTableToProject(
-        datasetInfo.name,
-        () => {},
-        this.onError
-      );
-    } else {
-      FirebaseStorage.copyStaticTable(datasetInfo.name, () => {}, this.onError);
-    }
-  };
+  importTable = datasetInfo =>
+    storageBackend()
+      .addSharedTable(datasetInfo.name)
+      .then(() => refreshCurrentDataView());
 
   search = e => {
     let searchValue = '';
@@ -82,7 +96,7 @@ class DataLibraryPane extends React.Component {
 
   render() {
     const showUnpublishedTables = experiments.isEnabled(
-      experiments.SHOW_UNPUBLISHED_FIREBASE_TABLES
+      experiments.SHOW_UNPUBLISHED_DATASET_TABLES
     );
     let categories = (this.props.libraryManifest.categories || []).filter(
       category => showUnpublishedTables || category.published
@@ -93,6 +107,7 @@ class DataLibraryPane extends React.Component {
         <SafeMarkdown
           markdown={msg.dataLibraryDescription()}
           openExternalLinksInNewTab
+          rehypeMap={rehypeMap}
         />
         <SearchBar
           placeholderText={msg.dataLibrarySearchPlacholder()}

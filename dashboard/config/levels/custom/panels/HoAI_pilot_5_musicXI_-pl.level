@@ -1,0 +1,42 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-10-08T22:33:00.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "<div style=\"\n  position:relative;\n  background:#fff;\n  border:1px solid rgba(0,0,0,0.08);\n  border-radius:12px;\n  padding:12px 14px;\n  box-shadow:0 4px 10px rgba(0,0,0,0.15);\n  font-family:system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;\n  color:#222;\n  line-height:1.5;\n  max-width:600px;\n\">\n  <!-- Tail -->\n  <div style=\"\n    position:absolute;\n    left:14px;\n    bottom:-7px;\n    width:14px; height:14px;\n    background:#fff;\n    transform:rotate(45deg);\n    border-left:1px solid rgba(0,0,0,0.08);\n    border-bottom:1px solid rgba(0,0,0,0.08);\n  \"></div>\n\n  <p style=\"margin:0; font-size:20px;\">Clicking “regenerate” in an AI tool taps into a core principle of how AI works: iteration.\n  </p>\n</div>",
+        "imageUrl": "https://images.code.org/24fc33ef24056dda006312ca00acfd82-Screenshot 2025-10-22 at 11.53.42 AM.png",
+        "key": "Generate_dancer_info-e349bed8-89d6-4efc-8a0e-29b8a1e5afb1"
+      },
+      {
+        "text": "<div style=\"\n  position:relative;\n  background:#fff;\n  border:1px solid rgba(0,0,0,0.08);\n  border-radius:12px;\n  padding:12px 14px;\n  box-shadow:0 4px 10px rgba(0,0,0,0.15);\n  font-family:system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;\n  color:#222;\n  line-height:1.5;\n  max-width:600px;\n\">\n  <!-- Tail -->\n  <div style=\"\n    position:absolute;\n    left:14px;\n    bottom:-7px;\n    width:14px; height:14px;\n    background:#fff;\n    transform:rotate(45deg);\n    border-left:1px solid rgba(0,0,0,0.08);\n    border-bottom:1px solid rgba(0,0,0,0.08);\n  \"></div>\n\n  <p style=\"margin:0; font-size:20px;\">AI models don’t give the same answer every time because they’re <strong>probabilistic</strong>: each time you run a prompt, the system makes slightly different choices, sampling from a range of possible outputs. <br><br>This built-in variability, or <strong>non-determinism</strong>, is what makes AI seem creative and sometimes unpredictable.\n  </p>\n</div>",
+        "imageUrl": "https://images.code.org/7735a7fb9534b5d989907c40dc735d1f-Screenshot 2025-10-22 at 11.53.47 AM.png",
+        "key": "HoAI_pilot_5_musicXI_-pl-8a94a9c7-b987-4fc6-9789-d9132de2fa9d"
+      },
+      {
+        "text": "<div style=\"\n  position:relative;\n  background:#fff;\n  border:1px solid rgba(0,0,0,0.08);\n  border-radius:12px;\n  padding:12px 14px;\n  box-shadow:0 4px 10px rgba(0,0,0,0.15);\n  font-family:system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;\n  color:#222;\n  line-height:1.5;\n  max-width:600px;\n\">\n  <!-- Tail -->\n  <div style=\"\n    position:absolute;\n    left:14px;\n    bottom:-7px;\n    width:14px; height:14px;\n    background:#fff;\n    transform:rotate(45deg);\n    border-left:1px solid rgba(0,0,0,0.08);\n    border-bottom:1px solid rgba(0,0,0,0.08);\n  \"></div>\n\n  <p style=\"margin:0; font-size:20px;\">Settings like <strong>temperature</strong> control the randomness: low values create more consistent results, while higher ones encourage variety — ideal for brainstorming or creative exploration.\n  </p>\n</div>",
+        "imageUrl": "https://images.code.org/e3f4683a02ec4b89a24ec42f255f7c8e-Screenshot 2025-10-22 at 11.53.51 AM.png",
+        "key": "HoAI_pilot_5_musicXI_-pl-7b8af0c7-0223-4c0f-9719-81f37d0affaa"
+      },
+      {
+        "text": "<div style=\"\n  position:relative;\n  background:#fff;\n  border:1px solid rgba(0,0,0,0.08);\n  border-radius:12px;\n  padding:12px 14px;\n  box-shadow:0 4px 10px rgba(0,0,0,0.15);\n  font-family:system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;\n  color:#222;\n  line-height:1.5;\n  max-width:600px;\n\">\n  <!-- Tail -->\n  <div style=\"\n    position:absolute;\n    left:14px;\n    bottom:-7px;\n    width:14px; height:14px;\n    background:#fff;\n    transform:rotate(45deg);\n    border-left:1px solid rgba(0,0,0,0.08);\n    border-bottom:1px solid rgba(0,0,0,0.08);\n  \"></div>\n\n  <p style=\"margin:0; font-size:20px;\">Because AI outputs can be unpredictable, human judgment is essential.<br><br> Users decide when to accept, refine, or reject a response, ensuring the results are accurate, meaningful, and ethical.\n  </p>\n</div>",
+        "imageUrl": "https://images.code.org/f97f43730685fc9a85345bbefc01602e-Screenshot 2025-10-22 at 11.53.56 AM.png",
+        "key": "HoAI_pilot_5_musicXI_-pl-64f9ac9e-f602-409d-be29-7abdfb3b7bfc"
+      },
+      {
+        "text": "<div style=\"\n  position:relative;\n  background:#fff;\n  border:1px solid rgba(0,0,0,0.08);\n  border-radius:12px;\n  padding:12px 14px;\n  box-shadow:0 4px 10px rgba(0,0,0,0.15);\n  font-family:system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;\n  color:#222;\n  line-height:1.5;\n  max-width:600px;\n\">\n  <!-- Tail -->\n  <div style=\"\n    position:absolute;\n    left:14px;\n    bottom:-7px;\n    width:14px; height:14px;\n    background:#fff;\n    transform:rotate(45deg);\n    border-left:1px solid rgba(0,0,0,0.08);\n    border-bottom:1px solid rgba(0,0,0,0.08);\n  \"></div>\n\n  <p style=\"margin:0; font-size:20px;\">Ultimately, iteration isn’t a flaw — it’s where real creativity happens. <br><br>Each regeneration is an opportunity to improve, explore, and shape better ideas.\n  </p>\n</div>",
+        "imageUrl": "https://images.code.org/4bcde0811087403d422381660c241290-Screenshot 2025-10-22 at 11.54.00 AM.png",
+        "key": "HoAI_pilot_5_musicXI_-pl-bfa8299f-37d4-427a-9ab0-0e9b893777d4"
+      }
+    ],
+    "name_suffix": "_-pl"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-08T22:33:00.216+00:00\",\"changed\":[\"cloned from \\\"HoAI_pilot_5_musicX_-pl\\\"\"],\"cloned_from\":\"HoAI_pilot_5_musicX_-pl\"},{\"changed_at\":\"2025-10-08 22:34:01 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2025-10-20 18:27:09 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2025-10-22 15:54:43 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]"
+}]]></config>
+</Panels>

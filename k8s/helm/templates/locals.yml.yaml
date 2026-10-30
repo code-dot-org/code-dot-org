@@ -1,0 +1,66 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "cdo.fullname" (merge (dict "component" "locals.yml") .) }}
+  labels:
+    {{ include "cdo.labels" (merge (dict "component" "locals.yml") .) | nindent 4 }}
+data:
+  # Local service non-secret configuration shared as a base by all instances:
+  dashboard_workers: {{ .Values.dashboard_workers | quote }}
+
+  # ActiveJob queue adapter, shared by enqueuers (dashboard) and the
+  # active-job-worker deployment so jobs land where the worker looks.
+  # Deliberately unquoted so it renders as a Ruby symbol.
+  active_job_queue_adapter: :delayed_job
+
+  build_apps: "true"
+  use_my_apps: "true"
+
+  {{- if .Values.localDev.stubSecrets }}
+  # Local boot must not resolve these credentials through Secrets Manager.
+  cloudfront_key_pair_id: ""
+  cloudfront_private_key: ""
+  slack_bot_token: ""
+  properties_encryption_key: ""
+
+  # Same idea for the adhoc environment used by the ActiveJob worker and the
+  # setup-db-minimal job.
+  contentful_api_key: ""
+  contentful_hour_of_ai_access_token: ""
+  javabuilder_key_password: ""
+  javabuilder_private_key: ""
+  openai_student_learning_api_key: ""
+  puma_control_server_token: ""
+  recaptcha_secret_key: ""
+  recaptcha_site_key: ""
+
+  # Read at eager-load time by rake db:migrate in development (the
+  # analytics_exportable enhance eager-loads the app); Secret-marked in
+  # config/development.yml.erb.
+  ai_gateway_auth_key: ""
+  ai_gateway_auth_key_passphrase: ""
+  {{- end }}
+
+  # Configuration for cluster local services in "development mode":
+  {{- if .Values.services.mysql.enabled }}
+  db_cluster_id: {{ include "cdo.mysqlServiceName" . | quote }}
+  db_endpoint_writer: {{ include "cdo.mysqlServiceName" . | quote }}
+  db_endpoint_writer_port: "3306"
+  db_endpoint_proxy_writer: {{ include "cdo.mysqlServiceName" . | quote }}
+  db_endpoint_proxy_writer_port: "3306"
+  db_endpoint_proxy_reader: {{ include "cdo.mysqlServiceName" . | quote }}
+  db_endpoint_proxy_reader_port: "3306"
+  db_endpoint_proxy_reporting: {{ include "cdo.mysqlServiceName" . | quote }}
+  db_endpoint_proxy_reporting_port: "3306"
+  {{- end }}
+
+  {{- if .Values.services.minio.enabled }}
+  aws_s3_endpoint: {{ printf "http://%s:9000" (include "cdo.minioServiceName" .) | quote }}
+  aws_s3_emulated: "true"
+  {{- end }}
+
+  # Now insert `locals.yml:` values defined in *.values.yaml files
+  {{- $locals := index .Values "locals.yml" | default (dict) }}
+  {{- range $key, $value := $locals }}
+  {{ $key }}: {{ printf "%v" $value | quote }}
+  {{- end }}

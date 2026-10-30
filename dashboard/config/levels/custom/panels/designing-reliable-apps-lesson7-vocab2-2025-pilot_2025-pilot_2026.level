@@ -1,0 +1,23 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-04-01T21:44:19.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# Invalid Data\n\n**Invalid data** is any information sent to or from a server that doesn't follow the specific rules, format, or type expected. For example, putting a phone number in a field meant for the name of a city.",
+        "imageUrl": "https://images.code.org/aa8a0fdf611519f49900e5090c804cca-Screenshot 2026-02-10 at 1.42.41 PM.png",
+        "key": "designing-reliable-apps-lesson2-level1-test_2025-pilot-e834eace-42c5-4df8-990e-d9987f293a0f",
+        "layout": "text-top-left"
+      }
+    ],
+    "name_suffix": "_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T21:44:19.681+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson7-vocab2-2025-pilot_2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson7-vocab2-2025-pilot_2025-pilot\"}]"
+}]]></config>
+</Panels>

@@ -1,13 +1,13 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {mount} from 'enzyme';
-import sinon from 'sinon';
-import {assert, expect} from '../../util/reconfiguredChai';
+import {act} from 'react-dom/test-utils';
+
+import {sources as sourcesApi, files as filesApi} from '@cdo/apps/clientApi';
+import project from '@cdo/apps/code-studio/initApp/project';
 import VersionHistory from '@cdo/apps/templates/VersionHistory';
 import VersionRow from '@cdo/apps/templates/VersionRow';
-import {sources as sourcesApi, files as filesApi} from '@cdo/apps/clientApi';
 import * as utils from '@cdo/apps/utils';
-import project from '@cdo/apps/code-studio/initApp/project';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import i18n from '@cdo/locale';
 
 const FAKE_CURRENT_VERSION = 'current-version-id';
 const FAKE_PREVIOUS_VERSION = 'previous-version-id';
@@ -26,15 +26,23 @@ const FAKE_VERSION_LIST_RESPONSE = {
   ]),
 };
 
+jest.mock('@cdo/apps/code-studio/initApp/project', () => ({
+  getCurrentId: jest.fn().mockReturnValue('fake-project-id'),
+  getCurrentSourceVersionId: jest.fn().mockReturnValue('current-version-id'),
+  getShareUrl: jest.fn().mockReturnValue('fake-share-url'),
+  isOwner: jest.fn().mockReturnValue(true),
+  save: jest.fn(),
+}));
+
 describe('VersionHistory', () => {
   let wrapper;
 
   beforeEach(() => {
-    sinon.stub(utils, 'reload');
+    jest.spyOn(utils, 'reload').mockClear().mockImplementation();
   });
 
   afterEach(() => {
-    utils.reload.restore();
+    utils.reload.mockRestore();
 
     if (wrapper) {
       wrapper.unmount();
@@ -44,13 +52,16 @@ describe('VersionHistory', () => {
 
   describe('using the sources api', () => {
     beforeEach(() => {
-      sinon.stub(sourcesApi, 'ajax');
-      sinon.stub(sourcesApi, 'restorePreviousFileVersion');
+      jest.spyOn(sourcesApi, 'ajax').mockClear().mockImplementation();
+      jest
+        .spyOn(sourcesApi, 'restorePreviousFileVersion')
+        .mockClear()
+        .mockImplementation();
     });
 
     afterEach(() => {
-      sourcesApi.restorePreviousFileVersion.restore();
-      sourcesApi.ajax.restore();
+      sourcesApi.restorePreviousFileVersion.mockRestore();
+      sourcesApi.ajax.mockRestore();
     });
 
     testVersionHistory({
@@ -59,29 +70,51 @@ describe('VersionHistory', () => {
         isProjectTemplateLevel: false,
         useFilesApi: false,
         isReadOnly: false,
+        onClose: () => {},
       },
       finishVersionHistoryLoad: () => {
-        sourcesApi.ajax.firstCall.args[2](FAKE_VERSION_LIST_RESPONSE);
+        act(() => {
+          sourcesApi.ajax.mock.calls[0][2](FAKE_VERSION_LIST_RESPONSE);
+        });
         wrapper.update();
       },
-      failVersionHistoryLoad: () => sourcesApi.ajax.firstCall.args[3](),
+      failVersionHistoryLoad: () => {
+        act(() => {
+          sourcesApi.ajax.mock.calls[0][3]();
+        });
+        wrapper.update();
+      },
       restoreSpy: () => sourcesApi.restorePreviousFileVersion,
-      finishRestoreVersion: () =>
-        sourcesApi.restorePreviousFileVersion.firstCall.args[2](),
-      failRestoreVersion: () =>
-        sourcesApi.restorePreviousFileVersion.firstCall.args[3](),
+      finishRestoreVersion: () => {
+        act(() => {
+          sourcesApi.restorePreviousFileVersion.mock.calls[0][2]();
+        });
+        wrapper.update();
+      },
+      failRestoreVersion: () => {
+        act(() => {
+          sourcesApi.restorePreviousFileVersion.mock.calls[0][3]();
+        });
+        wrapper.update();
+      },
     });
   });
 
   describe('using the files api', () => {
     beforeEach(() => {
-      sinon.stub(filesApi, 'getVersionHistory');
-      sinon.stub(filesApi, 'restorePreviousVersion');
+      jest
+        .spyOn(filesApi, 'getVersionHistory')
+        .mockClear()
+        .mockImplementation();
+      jest
+        .spyOn(filesApi, 'restorePreviousVersion')
+        .mockClear()
+        .mockImplementation();
     });
 
     afterEach(() => {
-      filesApi.restorePreviousVersion.restore();
-      filesApi.getVersionHistory.restore();
+      filesApi.restorePreviousVersion.mockRestore();
+      filesApi.getVersionHistory.mockRestore();
     });
 
     testVersionHistory({
@@ -90,20 +123,35 @@ describe('VersionHistory', () => {
         isProjectTemplateLevel: false,
         useFilesApi: true,
         isReadOnly: false,
+        onClose: () => {},
       },
       finishVersionHistoryLoad: () => {
-        filesApi.getVersionHistory.firstCall.args[0](
-          FAKE_VERSION_LIST_RESPONSE
-        );
+        act(() => {
+          filesApi.getVersionHistory.mock.calls[0][0](
+            FAKE_VERSION_LIST_RESPONSE
+          );
+        });
         wrapper.update();
       },
-      failVersionHistoryLoad: () =>
-        filesApi.getVersionHistory.firstCall.args[1](),
+      failVersionHistoryLoad: () => {
+        act(() => {
+          filesApi.getVersionHistory.mock.calls[0][1]();
+        });
+        wrapper.update();
+      },
       restoreSpy: () => filesApi.restorePreviousVersion,
-      finishRestoreVersion: () =>
-        filesApi.restorePreviousVersion.firstCall.args[1](),
-      failRestoreVersion: () =>
-        filesApi.restorePreviousVersion.firstCall.args[2](),
+      finishRestoreVersion: () => {
+        act(() => {
+          filesApi.restorePreviousVersion.mock.calls[0][1]();
+        });
+        wrapper.update();
+      },
+      failRestoreVersion: () => {
+        act(() => {
+          filesApi.restorePreviousVersion.mock.calls[0][2]();
+        });
+        wrapper.update();
+      },
     });
   });
 
@@ -115,19 +163,41 @@ describe('VersionHistory', () => {
     finishRestoreVersion,
     failRestoreVersion,
   }) {
+    const clickAndUpdate = node => {
+      act(() => {
+        node.simulate('click');
+      });
+      wrapper.update();
+    };
+
+    const findButtonByText = text =>
+      wrapper
+        .find('button')
+        .hostNodes()
+        .filterWhere(button => button.text() === text);
+
+    const findButtonById = id => wrapper.find(`button#${id}`).hostNodes();
+
+    const clickButtonByText = text => {
+      clickAndUpdate(findButtonByText(text).first());
+    };
+
     it('renders loading spinner at first', () => {
       wrapper = mount(<VersionHistory {...props} />);
-      assert(
+      expect(
         wrapper.containsMatchingElement(
-          <i className="fa fa-spinner fa-spin" style={{fontSize: '32px'}} />
+          <i
+            className="fa-solid fa-spinner fa-spin"
+            style={{fontSize: '32px'}}
+          />
         )
-      );
+      ).toBeTruthy();
     });
 
     it('renders an error on failed version history load', () => {
       wrapper = mount(<VersionHistory {...props} />);
       failVersionHistoryLoad();
-      expect(wrapper.text()).to.include('An error occurred.');
+      expect(wrapper.text()).toContain('An error occurred.');
     });
 
     it('renders a version list on successful version history load', () => {
@@ -136,42 +206,45 @@ describe('VersionHistory', () => {
       finishVersionHistoryLoad();
 
       // Spinner goes away
-      assert(
+      expect(
         !wrapper.containsMatchingElement(
-          <i className="fa fa-spinner fa-spin" style={{fontSize: '32px'}} />
+          <i
+            className="fa-solid fa-spinner fa-spin"
+            style={{fontSize: '32px'}}
+          />
         )
-      );
+      ).toBeTruthy();
 
       // Rendered two version rows
-      expect(wrapper.find(VersionRow)).to.have.length(2);
+      expect(wrapper.find(VersionRow)).toHaveLength(2);
     });
 
     it('attempts to restore a chosen version when clicking restore button', () => {
       wrapper = mount(<VersionHistory {...props} />);
       finishVersionHistoryLoad();
-      expect(restoreSpy()).not.to.have.been.called;
+      expect(restoreSpy()).not.toHaveBeenCalled();
 
-      wrapper.find('.img-upload').first().simulate('click');
-      expect(restoreSpy()).to.have.been.calledOnce;
+      clickButtonByText(i18n.restore());
+      expect(restoreSpy()).toHaveBeenCalledTimes(1);
     });
 
     it('renders an error on failed restore', () => {
       wrapper = mount(<VersionHistory {...props} />);
       finishVersionHistoryLoad();
-      wrapper.find('.img-upload').first().simulate('click');
+      clickButtonByText(i18n.restore());
 
       failRestoreVersion();
-      expect(wrapper.text()).to.include('An error occurred.');
+      expect(wrapper.text()).toContain('An error occurred.');
     });
 
     it('reloads the page on successful restore', () => {
       wrapper = mount(<VersionHistory {...props} />);
       finishVersionHistoryLoad();
-      wrapper.find('.img-upload').first().simulate('click');
-      expect(utils.reload).not.to.have.been.called;
+      clickButtonByText(i18n.restore());
+      expect(utils.reload).not.toHaveBeenCalled();
 
       finishRestoreVersion();
-      expect(utils.reload).to.have.been.calledOnce;
+      expect(utils.reload).toHaveBeenCalledTimes(1);
     });
 
     it('shows a confirmation after clicking Start Over', () => {
@@ -179,25 +252,14 @@ describe('VersionHistory', () => {
       finishVersionHistoryLoad();
 
       // Click "Start Over"
-      wrapper.find('.btn-danger').simulate('click');
+      clickButtonByText(i18n.versionHistory_clearProgress_confirm());
 
       // Expect confirmation to show
-      assert(
-        wrapper.containsMatchingElement(
-          <div>
-            <p>
-              Are you sure you want to restart this level? This will clear all
-              of your code.
-            </p>
-            <button type="button" id="start-over-button">
-              Start over
-            </button>
-            <button type="button" id="again-button">
-              Cancel
-            </button>
-          </div>
-        )
+      expect(wrapper.text()).toContain(
+        i18n.versionHistory_clearProgress_prompt()
       );
+      expect(findButtonById('start-over-button')).toHaveLength(1);
+      expect(findButtonById('again-button')).toHaveLength(1);
     });
 
     it('goes back to version list after cancelling Start Over', () => {
@@ -205,31 +267,20 @@ describe('VersionHistory', () => {
       finishVersionHistoryLoad();
 
       // Click "Start Over"
-      wrapper.find('.btn-danger').simulate('click');
+      clickButtonByText(i18n.versionHistory_clearProgress_confirm());
 
       // Expect confirmation to show
-      assert(
-        wrapper.containsMatchingElement(
-          <div>
-            <p>
-              Are you sure you want to restart this level? This will clear all
-              of your code.
-            </p>
-            <button type="button" id="start-over-button">
-              Start over
-            </button>
-            <button type="button" id="again-button">
-              Cancel
-            </button>
-          </div>
-        )
+      expect(wrapper.text()).toContain(
+        i18n.versionHistory_clearProgress_prompt()
       );
+      expect(findButtonById('start-over-button')).toHaveLength(1);
+      expect(findButtonById('again-button')).toHaveLength(1);
 
       // Click "Cancel"
-      wrapper.find('#again-button').simulate('click');
+      clickAndUpdate(findButtonById('again-button'));
 
       // Rendered two version rows
-      expect(wrapper.find(VersionRow)).to.have.length(2);
+      expect(wrapper.find(VersionRow)).toHaveLength(2);
     });
 
     it('shows a confirmation with template project warning', () => {
@@ -237,82 +288,52 @@ describe('VersionHistory', () => {
       finishVersionHistoryLoad();
 
       // Click "Start Over"
-      wrapper.find('.btn-danger').simulate('click');
+      clickButtonByText(i18n.versionHistory_clearProgress_confirm());
 
-      expect(wrapper.find('.template-level-warning')).to.exist;
+      expect(wrapper.find('.template-level-warning')).toBeDefined();
     });
 
     describe('confirming Start Over', () => {
       let handleClearPuzzle;
 
       beforeEach(() => {
-        sinon.stub(firehoseClient, 'putRecord');
-        sinon.stub(project, 'getCurrentId').returns('fake-project-id');
-        sinon
-          .stub(project, 'getCurrentSourceVersionId')
-          .returns(FAKE_CURRENT_VERSION);
-        sinon.stub(project, 'getShareUrl').returns('fake-share-url');
-        sinon.stub(project, 'isOwner').returns(true);
-        sinon.stub(project, 'save');
-
-        handleClearPuzzle = sinon.stub().returns(Promise.resolve());
+        handleClearPuzzle = jest.fn().mockReturnValue(Promise.resolve());
         wrapper = mount(
           <VersionHistory {...props} handleClearPuzzle={handleClearPuzzle} />
         );
         finishVersionHistoryLoad();
-        wrapper.find('.btn-danger').simulate('click');
-        wrapper.find('#start-over-button').simulate('click');
+        clickButtonByText(i18n.versionHistory_clearProgress_confirm());
+        clickAndUpdate(findButtonById('start-over-button'));
       });
 
       afterEach(async () => {
         await wasCalled(utils.reload);
-        firehoseClient.putRecord.restore();
-        project.getCurrentId.restore();
-        project.getCurrentSourceVersionId.restore();
-        project.getShareUrl.restore();
-        project.isOwner.restore();
-        project.save.restore();
       });
 
       it('immediately renders spinner', () => {
         expect(
           wrapper.containsMatchingElement(
-            <i className="fa fa-spinner fa-spin" style={{fontSize: '32px'}} />
+            <i
+              className="fa-solid fa-spinner fa-spin"
+              style={{fontSize: '32px'}}
+            />
           )
         );
       });
 
-      it('logs to firehose', () => {
-        expect(firehoseClient.putRecord).to.have.been.calledOnce.and.calledWith(
-          {
-            study: 'project-data-integrity',
-            study_group: 'v4',
-            event: 'clear-puzzle',
-            project_id: 'fake-project-id',
-            data_json: JSON.stringify({
-              isOwner: true,
-              currentUrl: window.location.href,
-              shareUrl: 'fake-share-url',
-              isProjectTemplateLevel: false,
-              currentSourceVersionId: FAKE_CURRENT_VERSION,
-            }),
-          },
-          {includeUserId: true}
-        );
-      });
-
       it('calls handleClearPuzzle prop', () => {
-        expect(handleClearPuzzle).to.have.been.calledOnce;
+        expect(handleClearPuzzle).toHaveBeenCalledTimes(1);
       });
 
       it('calls project.save(true)', async () => {
         await wasCalled(project.save);
-        expect(project.save).to.have.been.calledOnce.and.calledWith(true);
+        expect(project.save.mock.calls.length).toBe(1);
+        expect(project.save.mock.calls[0][0]).toBe(true);
       });
 
       it('reloads the page', async () => {
         await wasCalled(utils.reload);
-        expect(utils.reload).to.have.been.calledOnce;
+        expect(utils.reload).toHaveBeenCalledTimes(1);
       });
     });
   }
@@ -321,7 +342,11 @@ describe('VersionHistory', () => {
 async function wasCalled(spy) {
   await new Promise(resolve => {
     const interval = setInterval(() => {
-      if (spy.callCount > 0) {
+      // swap between sinon and jest mocks
+      const callCount = Object.prototype.hasOwnProperty.call(spy, 'callCount')
+        ? spy.callCount
+        : spy.mock.calls.length;
+      if (callCount > 0) {
         clearInterval(interval);
         resolve();
       }

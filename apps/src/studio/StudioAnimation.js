@@ -1,8 +1,8 @@
 /** @file An animated image, which handles frame counts, rates and offsets
  * internally and exposes simple methods for rendering at the desired position. */
 
-import {valueOr} from '../utils';
 import {SVG_NS} from '../constants';
+import {valueOr} from '../utils';
 
 // Unique element ID that increments by 1 each time an element is created
 var uniqueId = 0;

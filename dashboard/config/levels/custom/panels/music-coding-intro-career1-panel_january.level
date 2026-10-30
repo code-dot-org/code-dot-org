@@ -1,0 +1,22 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-01-23T23:11:00.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "true",
+    "panels": [
+      {
+        "text": "##Computer science is the new language of music.\n\nWhen I'm in the studio my producers and I use it to experiment with new sounds and algorithms that expose us to new genres.\n\nReady to spark your creativity join?  \n\n**I'm excited to hear how you experiment!**",
+        "imageUrl": "https://images.code.org/47d8743206663e4c56b7377f2e671285-shakira creativity.jpg",
+        "key": "music-coding-intro-career1-panel-6cc616ef-9579-45db-9546-552ccf158a67"
+      }
+    ],
+    "name_suffix": "_january"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-01-23T23:11:00.901+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-career1-panel\\\"\"],\"cloned_from\":\"music-coding-intro-career1-panel\"}]"
+}]]></config>
+</Panels>

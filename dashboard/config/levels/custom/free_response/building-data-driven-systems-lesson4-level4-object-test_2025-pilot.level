@@ -1,0 +1,29 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2025-12-15T17:07:12.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Define the term in your own words. Use examples from the lesson to explain your thinking and take notes on anything that helps you remember how it works.",
+    "stay_on_level_after_submit": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "title": "Object",
+    "bubble_choice_description": "Students accurately describe an object as a set of related properties that model a real-world thing in code, and they provide a valid, concrete example object with at least two relevant properties.",
+    "height": "200",
+    "placeholder": "enter response here...",
+    "name_suffix": "_2025-pilot"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-12-15T17:07:12.872+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson4-level4-object-test-2025\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson4-level4-object-test-2025\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

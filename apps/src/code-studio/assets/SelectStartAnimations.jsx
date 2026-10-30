@@ -1,13 +1,16 @@
+import PropTypes from 'prop-types';
 import React from 'react';
+
 import {
   getManifest,
   generateLevelAnimationsManifest,
 } from '@cdo/apps/assetManagement/animationLibraryApi';
-import AnimationPickerBody from '@cdo/apps/p5lab/AnimationPicker/AnimationPickerBody.jsx';
-import {createUuid} from '@cdo/apps/utils';
-import color from '@cdo/apps/util/color';
-import PropTypes from 'prop-types';
 import {PICKER_TYPE} from '@cdo/apps/p5lab/AnimationPicker/AnimationPicker';
+import AnimationPickerBody from '@cdo/apps/p5lab/AnimationPicker/AnimationPickerBody.jsx';
+import {getSerializedAnimationList} from '@cdo/apps/p5lab/shapes';
+import color from '@cdo/apps/util/color';
+import {createUuid} from '@cdo/apps/utils';
+
 import moduleStyles from './select-start-animations.module.scss';
 
 const THUMBNAIL_SIZE = 50;
@@ -119,6 +122,7 @@ export default class SelectStartAnimations extends React.Component {
         selectedAnimations={[]}
         hideCostumes={false}
         shouldWarnOnAnimationUpload={false}
+        uploadsEnabled={true}
       />
     );
   };
@@ -162,7 +166,13 @@ export default class SelectStartAnimations extends React.Component {
           {this.displayAnimationPickerBody(this.state.libraryManifest)}
         </div>
         <h2>Generated Animation JSON:</h2>
-        <p>{JSON.stringify({orderedKeys, propsByKey})}</p>
+        <pre className={moduleStyles.jsonPre}>
+          {JSON.stringify(
+            getSerializedAnimationList({orderedKeys, propsByKey}),
+            null,
+            2
+          )}
+        </pre>
       </React.Fragment>
     );
   }

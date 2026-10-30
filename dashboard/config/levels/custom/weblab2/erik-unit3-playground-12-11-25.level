@@ -1,0 +1,67 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2025-12-11T15:40:21.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "### 🎮building-data-driven-systems-lesson6-template-test-2025\r\n",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <title>Course Planner</title>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    <div id=\"app\">\n      <header>\n        <h1>SmartPlanner v1.0</h1>\n      </header>\n\n      <main>\n        <section>\n          <h3>Recommended For You</h3>\n          <div id=\"recommended-feed\"></div>\n        </section>\n\n        <hr>\n\n        <section>\n          <h3>Full Catalog</h3>\n          <div id=\"catalog-feed\"></div>\n        </section>\n      </main>\n    </div>\n    \n    <script src=\"script.js\" defer></script>\n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  font-family: sans-serif;\n  background-color: white;\n  margin: 20px;\n  color: #333;\n}\n\nheader {\n  border-bottom: 2px solid #333;\n  margin-bottom: 20px;\n}\n\nh3 {\n  margin-bottom: 5px;\n  color: #555;\n}\n\n/* --- BAD DESIGN (Starter Code) --- */\n.bad-card {\n  /* VISIBILITY ISSUE: Yellow text on White is impossible to read */\n  color: #e6e600; \n  background-color: white; \n  border: 1px solid #eee;\n  padding: 5px;\n  margin-bottom: 5px;\n  font-size: 11px;\n}\n\n/* --- GOOD DESIGN (Exemplar) --- */\n.good-card {\n  color: #222; /* High contrast */\n  background-color: #f4f4f9;\n  border-left: 5px solid #007bff;\n  padding: 10px;\n  margin-bottom: 10px;\n  border-radius: 4px;\n}\n\n.good-card strong {\n  display: block;\n  font-size: 16px;\n  color: #0056b3;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// script.js (Starter Code)\n// INSTRUCTIONS: \n// 1. Run the code. Notice the \"Recommended\" section is hard to read and biased.\n// 2. Fix the Visibility, Language, and Bias.\n\n// 1. DATASET\nconst courses = [\n  { name: \"AP Calculus\", type: \"STEM\" },\n  { name: \"Pottery I\", type: \"Arts\" },\n  { name: \"AP Physics\", type: \"STEM\" },\n  { name: \"World History\", type: \"Humanities\" },\n  { name: \"Choir\", type: \"Arts\" }\n];\n\n// 2. DOM ELEMENTS\nconst recFeed = document.querySelector(\"#recommended-feed\");\nconst fullFeed = document.querySelector(\"#catalog-feed\");\n\n// 3. GENERATE LISTS\n// BIAS: The \"Recommended\" list ONLY allows STEM.\nconst recList = courses.filter(c => c.type === \"STEM\");\nconst fullList = courses; // Shows everything\n\n// 4. RENDER FUNCTIONS\n// Look at the text inside the map() functions below.\n\n// Render Recommended\nrecFeed.innerHTML = recList.map(course => {\n  // LANGUAGE ISSUE: Labels STEM students as \"Elite\"\n  // VISIBILITY ISSUE: Uses 'bad-card'\n  return `\n    <div class=\"bad-card\">\n      ${course.name} (Elite Track)\n    </div>\n  `;\n}).join(\"\");\n\n// Render Full Catalog\nfullFeed.innerHTML = fullList.map(course => {\n  // LANGUAGE ISSUE: Labels everyone else as \"Basic\"\n  // VISIBILITY ISSUE: Uses 'bad-card'\n  return `\n    <div class=\"bad-card\">\n      ${course.name} (Basic Track)\n    </div>\n  `;\n}).join(\"\");",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-12-11 15:54:23 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

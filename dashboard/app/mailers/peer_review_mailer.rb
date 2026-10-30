@@ -1,10 +1,10 @@
 class PeerReviewMailer < ApplicationMailer
-  default from: 'Code.org <teacher@code.org>'
+  default from: 'CodeAI <teacher@code.org>'
   default bcc: MailerConstants::PLC_EMAIL_LOG
 
   def review_completed_receipt(peer_review)
     @peer_review = peer_review
-    @submission_url = CDO.studio_url @peer_review.submission_path, CDO.default_scheme
+    @submission_url = CDO.studio_url(@peer_review.submission_path)
 
     mail(
       to: @peer_review.submitter.email,

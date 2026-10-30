@@ -1,0 +1,212 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-08-20T21:04:06.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "require_edit_to_continue": "false",
+    "encrypted": "false",
+    "long_instructions": "You’re tuning a classifier to identify a rare bird—the purple finch. A ranger doesn’t want people to *think* they’ve seen the rare bird when they in fact haven’t.\r\n\r\n**☑️ Do This:**\r\n- Find the threshold that maximizes the model’s accuracy.\r\n- Find the threshold that maximizes the model’s recall.\r\n- Find the threshold that maximizes the model’s precision.\r\n- Find the best threshold for the model. Be ready to justify your choice.\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "true",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "folders": {
+        "1": {
+          "id": "1",
+          "name": "components",
+          "parentId": "0",
+          "open": true
+        },
+        "2": {
+          "id": "2",
+          "name": "assets",
+          "parentId": "0",
+          "open": true
+        },
+        "3": {
+          "id": "3",
+          "name": "birds",
+          "parentId": "2",
+          "open": true
+        }
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!doctype html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"UTF-8\" />\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n        <title>Tuning Thresholds</title>\n        <link rel=\"stylesheet\" href=\"styles.css\" />\n\n        <!-- Google Fonts -->\n        <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\" />\n        <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin />\n        <link\n            href=\"https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap\"\n            rel=\"stylesheet\"\n        />\n    </head>\n    <body>\n        <header>\n            <h1>Tuning Classifiers</h1>\n        </header>\n        <main>\n            <div class=\"row\">\n                <section\n                    class=\"data-selector-container\"\n                    aria-label=\"Test photos — choose one to inspect\"\n                ></section>\n            </div>\n            <div class=\"row prediction-row\">\n                <section\n                    class=\"prediction-container\"\n                    aria-label=\"Selected photo and prediction\"\n                >\n                    <img\n                        id=\"prediction-img\"\n                        src=\"assets/birds/house-1.jpg\"\n                        alt=\"\"\n                    />\n                    <p class=\"confidence-readout\">\n                        <span class=\"confidence-value\" id=\"confidence-value\"\n                            >19%</span\n                        >\n                        confident this is a Purple Finch.\n                    </p>\n                    <div class=\"label-text-container\">\n                        <div class=\"actual-text-container\">\n                            <p class=\"heading\">Actual</p>\n                            <p class=\"label-value\" id=\"actual-label\">\n                                House Finch\n                            </p>\n                        </div>\n                        <div class=\"predicted-text-container\">\n                            <p class=\"heading\">Predicted</p>\n                            <p\n                                class=\"label-value\"\n                                id=\"predicted-label\"\n                                aria-live=\"polite\"\n                            >\n                                House Finch\n                            </p>\n                        </div>\n                    </div>\n                    <p class=\"match-status\" id=\"match-status\"></p>\n                </section>\n\n                <section\n                    class=\"threshold-container\"\n                    aria-label=\"Confidence threshold\"\n                >\n                    <!-- Vertical ARIA slider is built by threshold-slider.js -->\n                </section>\n\n                <section\n                    class=\"metric-container\"\n                    aria-live=\"polite\"\n                    aria-label=\"Model performance across all test photos\"\n                >\n                    <div class=\"metric-group\">\n                        <p class=\"heading\">Accuracy</p>\n                        <p class=\"metric\" id=\"metric-accuracy\">88%</p>\n                        <p class=\"metric-sub\">overall</p>\n                    </div>\n                    <div class=\"metric-group\">\n                        <p class=\"heading\">Recall</p>\n                        <p class=\"metric\" id=\"metric-recall\">75%</p>\n                        <p class=\"metric-sub\">Purple Finch</p>\n                    </div>\n                    <div class=\"metric-group\">\n                        <p class=\"heading\">Precision</p>\n                        <p class=\"metric\" id=\"metric-precision\">100%</p>\n                        <p class=\"metric-sub\">Purple Finch</p>\n                    </div>\n                </section>\n            </div>\n        </main>\n\n        <template id=\"data-template\">\n            <button class=\"data\" type=\"button\" aria-pressed=\"false\">\n                <img src=\"\" alt=\"\" />\n                <span class=\"data__tag\"></span>\n                <span class=\"data__status\"></span>\n            </button>\n        </template>\n\n        <script type=\"module\" src=\"app.js\"></script>\n    </body>\n</html>\n",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "app.js",
+          "contents": "/**\n * app.js — the Tuning Thresholds controller.\n *\n * Wires three pieces together:\n *   - the data selector (row of finch thumbnails)\n *   - the threshold slider (vertical confidence threshold)\n *   - the prediction + metric readouts (plain DOM in index.html)\n *\n * Moving the slider re-predicts every photo, recolors the thumbnails, updates\n * the viewed photo's prediction, and recomputes accuracy / recall / precision.\n */\n\nimport {\n  DEFAULT_THRESHOLD,\n  getTestImages,\n  predictPurple,\n  computeMetrics,\n  labelFor,\n} from \"./model.js\";\nimport { createThresholdSlider } from \"./components/threshold-slider.js\";\nimport { createDataSelector } from \"./components/data-selector.js\";\n\nconst images = getTestImages();\n\n// Prediction readout elements\nconst predictionImg = document.getElementById(\"prediction-img\");\nconst confidenceValue = document.getElementById(\"confidence-value\");\nconst actualLabel = document.getElementById(\"actual-label\");\nconst predictedLabel = document.getElementById(\"predicted-label\");\nconst matchStatus = document.getElementById(\"match-status\");\n\n// Metric elements\nconst metricAccuracy = document.getElementById(\"metric-accuracy\");\nconst metricRecall = document.getElementById(\"metric-recall\");\nconst metricPrecision = document.getElementById(\"metric-precision\");\n\nlet currentImage = images[0];\n\n// A metric is null when its denominator is zero (e.g. precision when nothing is\n// predicted Purple Finch). Show an em dash rather than \"NaN%\".\nfunction formatPercent(fraction) {\n  return fraction == null ? \"—\" : `${Math.round(fraction * 100)}%`;\n}\n\nfunction speciesClass(isPurple) {\n  return isPurple ? \"purple-finch\" : \"house-finch\";\n}\n\nfunction renderPrediction() {\n  const threshold = slider.getThreshold();\n  const predictedPurple = predictPurple(currentImage.confidence, threshold);\n\n  predictionImg.src = currentImage.image;\n  predictionImg.alt = currentImage.alt;\n  confidenceValue.textContent = `${currentImage.confidence}%`;\n\n  actualLabel.textContent = labelFor(currentImage.purple);\n  actualLabel.className = `label-value ${speciesClass(currentImage.purple)}`;\n  predictedLabel.textContent = labelFor(predictedPurple);\n  predictedLabel.className = `label-value ${speciesClass(predictedPurple)}`;\n\n  // Just correct vs. incorrect — students interpret which kind of error\n  // (a missed Purple Finch vs. a false claim of one) it is.\n  const correct = predictedPurple === currentImage.purple;\n  matchStatus.textContent = correct ? \"Correct\" : \"Incorrect\";\n  matchStatus.className = `match-status ${correct ? \"correct\" : \"incorrect\"}`;\n}\n\nfunction renderMetrics() {\n  const metrics = computeMetrics(slider.getThreshold());\n  metricAccuracy.textContent = formatPercent(metrics.accuracy);\n  metricRecall.textContent = formatPercent(metrics.recall);\n  metricPrecision.textContent = formatPercent(metrics.precision);\n}\n\n// Threshold slider — the source of truth for the threshold value.\nconst slider = createThresholdSlider(\n  document.querySelector(\".threshold-container\"),\n  {\n    initialThreshold: DEFAULT_THRESHOLD,\n    onChange: (threshold) => {\n      selector.updatePredictions(threshold);\n      renderMetrics();\n      renderPrediction();\n    },\n  },\n);\n\n// Thumbnails — clicking one shows it in the prediction view.\nconst selector = createDataSelector(\n  document.querySelector(\".data-selector-container\"),\n  images,\n  {\n    onSelect: (image) => {\n      currentImage = image;\n      slider.setConfidence(image.confidence);\n      renderPrediction();\n    },\n  },\n);\n\n// Initial paint.\nselector.updatePredictions(slider.getThreshold());\nrenderMetrics();\nselector.selectFirst();\n",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "model.js",
+          "contents": "/**\n * model.js — the finch classification data and metrics. Pure logic, no DOM.\n *\n * The scenario: a birder is surveying a feeder for Purple Finches, which are\n * far rarer than the near-identical House Finches that swarm the same feeders.\n * An image classifier reports, for each photo, how confident it is that the\n * bird is a PURPLE FINCH (the positive class — the rare one). The learner sets\n * a confidence threshold; the model predicts \"Purple Finch\" when its\n * confidence meets or exceeds that threshold.\n *\n * Raising the threshold makes the model more cautious about claiming a rare\n * bird: precision for Purple Finch rises, recall falls (it starts missing real\n * Purple Finches). Lowering it does the reverse. The data below is tuned so\n * that story comes through clearly as the slider moves.\n */\n\nexport const DEFAULT_THRESHOLD = 80; // percent\n\n// Confidence is the model's probability (as a whole percent) that the bird is a\n// PURPLE FINCH. `purple` is the ground-truth label from the test set. The\n// scores track how purple-finch-like each photo actually looks — a raspberry\n// wash spilling over the head, back, AND breast, clean unstreaked flanks, and a\n// stubby bill push confidence up; red confined to the head with heavy brown\n// streaking below (the House Finch pattern), or a small, blurry, or distant\n// bird, pull it down. The result is a decent-but-imperfect model whose\n// confidence for the two species OVERLAPS, so no threshold separates them\n// cleanly:\n//   - purple-4 (51): a real Purple Finch, but a tiny, distant photo — the field\n//     marks the model relies on are barely a few pixels wide\n//   - house-3 (66): a blurry House Finch whose pink wash seems to reach its\n//     back, mimicking the one cue that matters most\nconst TEST_IMAGES = [\n  {\n    id: \"h1\",\n    name: \"House Finch\",\n    purple: false,\n    confidence: 19,\n    image: \"assets/birds/house-1.jpg\",\n    alt: \"A finch with a red head and breast and heavy brown streaks down its sides, perched on a branch — actually a House Finch\",\n  },\n  {\n    id: \"p2\",\n    name: \"Purple Finch\",\n    purple: true,\n    confidence: 93,\n    image: \"assets/birds/purple-2.jpg\",\n    alt: \"A finch washed raspberry-red across its whole head and breast with clean, unstreaked sides — actually a Purple Finch\",\n  },\n  {\n    id: \"h2\",\n    name: \"House Finch\",\n    purple: false,\n    confidence: 30,\n    image: \"assets/birds/house-2.jpg\",\n    alt: \"A finch with a red face and boldly streaked white underparts, perched in a bare shrub — actually a House Finch\",\n  },\n  {\n    id: \"p1\",\n    name: \"Purple Finch\",\n    purple: true,\n    confidence: 88,\n    image: \"assets/birds/purple-1.jpg\",\n    alt: \"A finch with a bright crimson cap and a pink wash over its breast and back, perched on a mossy twig — actually a Purple Finch\",\n  },\n  {\n    id: \"h4\",\n    name: \"House Finch\",\n    purple: false,\n    confidence: 45,\n    image: \"assets/birds/house-4.jpg\",\n    alt: \"A finch with orange-red covering its head and breast, perched among green leaves — actually a House Finch\",\n  },\n  {\n    id: \"p4\",\n    name: \"Purple Finch\",\n    purple: true,\n    confidence: 51,\n    image: \"assets/birds/purple-4.jpg\",\n    alt: \"A small, distant photo of a pink-red finch standing on a rock — actually a Purple Finch\",\n  },\n  {\n    id: \"h3\",\n    name: \"House Finch\",\n    purple: false,\n    confidence: 66,\n    image: \"assets/birds/house-3.jpg\",\n    alt: \"A blurry photo of a finch whose pink wash appears to spread onto its back, leaning forward on a branch — actually a House Finch\",\n  },\n  {\n    id: \"p3\",\n    name: \"Purple Finch\",\n    purple: true,\n    confidence: 82,\n    image: \"assets/birds/purple-3.jpg\",\n    alt: \"A finch with deep raspberry-red over its head, back, and breast and pale unstreaked flanks — actually a Purple Finch\",\n  },\n];\n\n/** Text label for a class value. */\nexport function labelFor(purple) {\n  return purple ? \"Purple Finch\" : \"House Finch\";\n}\n\n/** The test images, each with a descriptive alt text baked in. */\nexport function getTestImages() {\n  return TEST_IMAGES.map((img) => ({ ...img }));\n}\n\n/** The model predicts \"Purple Finch\" when its confidence meets the threshold. */\nexport function predictPurple(confidence, threshold) {\n  return confidence >= threshold;\n}\n\n/**\n * Accuracy, plus precision and recall for the PURPLE FINCH (positive) class, at\n * the given threshold. Precision is null when nothing is predicted Purple\n * Finch (its denominator would be zero); recall is null when there are no\n * Purple Finches.\n */\nexport function computeMetrics(threshold) {\n  let tp = 0; // predicted Purple Finch, actually Purple Finch\n  let fp = 0; // predicted Purple Finch, actually House Finch\n  let fn = 0; // predicted House Finch, actually Purple Finch\n  let tn = 0; // predicted House Finch, actually House Finch\n\n  for (const img of TEST_IMAGES) {\n    const predictedPurple = predictPurple(img.confidence, threshold);\n    if (img.purple && predictedPurple) tp++;\n    else if (!img.purple && predictedPurple) fp++;\n    else if (img.purple && !predictedPurple) fn++;\n    else tn++;\n  }\n\n  const total = tp + fp + fn + tn;\n  return {\n    accuracy: total === 0 ? null : (tp + tn) / total,\n    precision: tp + fp === 0 ? null : tp / (tp + fp),\n    recall: tp + fn === 0 ? null : tp / (tp + fn),\n    counts: { tp, fp, fn, tn },\n  };\n}\n",
+          "folderId": "0",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "styles.css",
+          "contents": "@import url(\"components/data-selector.css\");\n@import url(\"components/threshold-slider.css\");\n\n:root {\n    --gray-0: #fdfdfd;\n    --gray-50: #f9f9f9;\n    --gray-100: #f4f4f4;\n    --gray-150: #eeeeee;\n    --gray-200: #e5e5e5;\n    --gray-300: #d4d4d4;\n    --gray-400: #a3a3a3;\n    --gray-500: #737373;\n    --gray-600: #525252;\n    --gray-700: #404040;\n    --gray-800: #262626;\n    --gray-900: #171717;\n    --gray-950: #0a0a0a;\n    --purple-0: rgb(245, 244, 253);\n    --purple-100: rgb(234, 232, 251);\n    --purple-200: rgb(214, 210, 246);\n    --purple-300: rgb(192, 188, 240);\n    --purple-400: rgb(169, 163, 232);\n    --purple-500: rgb(105, 98, 210);\n    --purple-600: rgb(82, 75, 184);\n    --purple-700: rgb(59, 53, 153);\n    --purple-800: rgb(41, 35, 126);\n    --purple-900: rgb(30, 25, 113);\n    --mint-0: rgb(244, 252, 247);\n    --mint-100: rgb(230, 247, 237);\n    --mint-200: rgb(211, 240, 211);\n    --mint-300: rgb(184, 228, 196);\n    --mint-400: rgb(141, 207, 170);\n    --mint-500: rgb(91, 175, 138);\n    --mint-600: rgb(56, 140, 110);\n    --mint-700: rgb(34, 107, 86);\n    --mint-800: rgb(21, 74, 60);\n    --mint-900: rgb(12, 46, 38);\n}\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\np {\n    margin: 0;\n}\n\nbody {\n    align-items: center;\n    background-color: var(--gray-50);\n    box-sizing: border-box;\n    display: flex;\n    flex-direction: column;\n    font-family: \"Geist\", sans-serif;\n    justify-content: center;\n    margin: 0;\n    gap: 2em;\n    min-height: 100vh;\n    padding: 1.5em 1em;\n    color: var(--purple-900);\n}\n\nheader {\n    text-align: center;\n    max-width: 34em;\n}\n\nheader h1 {\n    font-family: \"Space Grotesk\", monospace;\n    font-weight: 700;\n}\n\nmain {\n    align-items: center;\n    justify-content: center;\n    display: flex;\n    flex-direction: column;\n    gap: 1em;\n}\n\n.row {\n    display: flex;\n    gap: 1em;\n}\n\n.prediction-row {\n    align-items: stretch;\n    justify-content: center;\n}\n\nsection {\n    background-color: var(--gray-0);\n    border-radius: 0.5em;\n    box-sizing: border-box;\n    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);\n    padding: 1em;\n}\n\n.heading {\n    font-family: \"Space Grotesk\", monospace;\n    font-weight: bold;\n}\n\n/* ---------- Prediction ---------- */\n\n.prediction-container {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    gap: 0.5em;\n}\n\n.prediction-container img {\n    max-width: 200px;\n    width: 100%;\n    border-radius: 0.5em;\n    border: 0.1em solid var(--gray-200);\n}\n\n.confidence-readout {\n    text-align: center;\n    color: var(--purple-700);\n    font-size: 0.95rem;\n}\n\n.confidence-value {\n    font-weight: 700;\n    font-family: \"Space Grotesk\", monospace;\n    /* Equal-width digits so the one-line readout never changes width. */\n    font-variant-numeric: tabular-nums;\n}\n\n.prediction-container .label-text-container {\n    display: flex;\n    justify-content: space-evenly;\n    text-align: center;\n    gap: 1em;\n    width: 100%;\n}\n\n.prediction-container .label-text-container .heading {\n    margin: 0.25em 0 0.25em 0;\n    color: var(--purple-700);\n}\n\n.label-value {\n    font-size: 1.25em;\n    font-weight: 700;\n}\n\n.label-value.purple-finch {\n    color: var(--purple-800);\n}\n\n.label-value.house-finch {\n    color: var(--mint-700);\n}\n\n/* Per-photo correctness — ties a single mistake to recall (misses) and\n   precision (false claims). */\n.match-status {\n    margin-top: 0.25em;\n    font-size: 0.85rem;\n    font-weight: 700;\n    padding: 0.25em 0.7em;\n    border-radius: 999px;\n    text-align: center;\n}\n\n.match-status.correct {\n    background-color: var(--mint-100);\n    color: var(--mint-700);\n}\n\n.match-status.incorrect {\n    background-color: var(--purple-800);\n    color: var(--gray-0);\n}\n\n/* ---------- Threshold ---------- */\n\n.threshold-container {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    padding: 1em 2.6em;\n}\n\n/* ---------- Metrics ---------- */\n\n.metric-container {\n    justify-content: center;\n    display: flex;\n    flex-direction: column;\n    gap: 1em;\n}\n\n.metric-container .metric-group {\n    text-align: center;\n}\n\n.metric-container .metric-group .heading {\n    margin-bottom: 0.15em;\n    color: var(--purple-700);\n}\n\n.metric-container .metric-group .metric {\n    font-size: 1.75em;\n    font-family: \"Space Grotesk\", monospace;\n    line-height: 1.1;\n    font-variant-numeric: tabular-nums;\n}\n\n.metric-sub {\n    font-size: 0.72rem;\n    text-transform: uppercase;\n    letter-spacing: 0.05em;\n    color: var(--gray-500);\n}\n\n/* ---------- Responsive ---------- */\n\n@media (max-width: 640px) {\n    .prediction-row {\n        flex-direction: column;\n        align-items: center;\n    }\n}\n\n@media (prefers-reduced-motion: reduce) {\n    *,\n    *::before,\n    *::after {\n        transition: none !important;\n    }\n}\n",
+          "folderId": "0",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "data-selector.css",
+          "contents": ".data-selector-container {\n    display: flex;\n    flex-wrap: wrap;\n    justify-content: center;\n    align-items: flex-start;\n    gap: 0.6em;\n}\n\n.data {\n    appearance: none;\n    font-family: inherit;\n    background-color: var(--gray-0);\n    border: 3px solid transparent;\n    border-radius: 0.6em;\n    padding: 0.35em 0.35em 0.3em;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    gap: 0.3em;\n    cursor: pointer;\n    transition:\n        transform 0.15s ease,\n        box-shadow 0.15s ease,\n        border-color 0.15s ease;\n}\n\n.data img {\n    width: 64px;\n    height: 64px;\n    object-fit: cover;\n    border-radius: 0.4em;\n    display: block;\n    pointer-events: none;\n}\n\n/* Text tag doubles as a non-color cue for the prediction (WCAG 1.4.1). */\n.data__tag {\n    font-size: 0.68rem;\n    font-weight: 700;\n    color: var(--purple-900);\n    white-space: nowrap;\n}\n\n/* Small correctness pill — a scaled-down mirror of the prediction view's. */\n.data__status {\n    font-size: 0.6rem;\n    font-weight: 700;\n    line-height: 1;\n    padding: 0.2em 0.5em;\n    border-radius: 999px;\n    white-space: nowrap;\n}\n\n.data__status.correct {\n    background-color: var(--mint-100);\n    color: var(--mint-700);\n}\n\n.data__status.incorrect {\n    background-color: var(--purple-800);\n    color: var(--gray-0);\n}\n\n/* Live prediction outline: dark = Purple Finch, light = House Finch. */\n.data.pred-purple {\n    border-color: var(--purple-700);\n}\n\n.data.pred-house {\n    border-color: var(--purple-300);\n}\n\n.data:hover:not(.selected) {\n    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);\n}\n\n/* Currently viewed thumbnail: lifted, with an accent ring outside the border. */\n.data.selected {\n    transform: translateY(-3px);\n    box-shadow:\n        0 0 0 3px var(--purple-500),\n        0 4px 8px rgba(0, 0, 0, 0.18);\n}\n\n.data:focus-visible {\n    outline: 3px solid var(--purple-900);\n    outline-offset: 3px;\n}\n",
+          "folderId": "1",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "data-selector.js",
+          "contents": "/**\n * data-selector.js — the row of finch thumbnails.\n *\n * Each thumbnail is a button cloned from #data-template. Clicking one shows it\n * in the prediction view. Every thumbnail also carries a live prediction cue:\n * a dark-purple outline (and \"Purple Finch\" tag) when the model predicts Purple\n * Finch at the current threshold, a light-purple outline (and \"House Finch\"\n * tag) when not — so a learner can watch the whole test set flip as they move\n * the slider. A small Correct/Incorrect label (mirroring the prediction view)\n * lets them judge the whole set at a glance.\n */\n\nimport { predictPurple, labelFor } from \"../model.js\";\n\nexport function createDataSelector(container, images, { onSelect } = {}) {\n  const template = document.getElementById(\"data-template\");\n  let threshold = 0;\n  let selected = -1;\n\n  const items = images.map((image, index) => {\n    const node = template.content.firstElementChild.cloneNode(true);\n    const img = node.querySelector(\"img\");\n    const tag = node.querySelector(\".data__tag\");\n    const status = node.querySelector(\".data__status\");\n\n    // The button carries the accessible name; the thumbnail image is decorative.\n    img.src = image.image;\n    img.alt = \"\";\n    node.addEventListener(\"click\", () => select(index));\n    container.appendChild(node);\n\n    return { image, node, tag, status, index };\n  });\n\n  function renderItem(item) {\n    const purple = predictPurple(item.image.confidence, threshold);\n    const label = labelFor(purple);\n    const correct = purple === item.image.purple;\n\n    item.node.classList.toggle(\"pred-purple\", purple);\n    item.node.classList.toggle(\"pred-house\", !purple);\n    item.tag.textContent = label;\n\n    item.status.textContent = correct ? \"Correct\" : \"Incorrect\";\n    item.status.classList.toggle(\"correct\", correct);\n    item.status.classList.toggle(\"incorrect\", !correct);\n\n    item.node.setAttribute(\n      \"aria-label\",\n      `Finch ${item.index + 1}, model prediction: ${label}, ${\n        correct ? \"correct\" : \"incorrect\"\n      }`,\n    );\n  }\n\n  function select(index) {\n    if (index === selected) return;\n    selected = index;\n    items.forEach((item, i) => {\n      const isSelected = i === index;\n      item.node.classList.toggle(\"selected\", isSelected);\n      item.node.setAttribute(\"aria-pressed\", String(isSelected));\n    });\n    if (onSelect) onSelect(items[index].image, index);\n  }\n\n  return {\n    element: container,\n    selectFirst: () => select(0),\n    // Recolor / relabel every thumbnail for a new threshold.\n    updatePredictions(nextThreshold) {\n      threshold = nextThreshold;\n      items.forEach(renderItem);\n    },\n  };\n}\n",
+          "folderId": "1",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "threshold-slider.css",
+          "contents": ".threshold-track {\n    position: relative;\n    width: 46px;\n    height: 220px;\n    margin: 0 auto;\n    background-color: var(--gray-150);\n    border: 1px solid var(--gray-200);\n    border-radius: 10px;\n    cursor: pointer;\n    /* Allow vertical pointer-dragging on touch without the page scrolling. */\n    touch-action: none;\n}\n\n/* The model's confidence that the viewed bird is a Purple Finch, from bottom. */\n.confidence-fill {\n    position: absolute;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    height: 0%;\n    background-color: var(--purple-300); /* predicted House Finch */\n    border-radius: 0 0 9px 9px;\n    transition:\n        height 0.15s ease,\n        background-color 0.15s ease;\n}\n\n.confidence-fill.purple-finch {\n    background-color: var(--purple-600); /* predicted Purple Finch */\n}\n\n.confidence-label {\n    position: absolute;\n    left: calc(100% + 0.5em);\n    bottom: 0%;\n    transform: translateY(50%);\n    white-space: nowrap;\n    font-size: 0.8rem;\n    font-weight: 600;\n    color: var(--purple-700);\n    pointer-events: none;\n    transition: bottom 0.15s ease;\n}\n\n/* The draggable threshold. Pokes a little past the track on both sides. */\n.threshold-handle {\n    position: absolute;\n    left: -7px;\n    right: -7px;\n    bottom: 50%;\n    height: 22px;\n    transform: translateY(50%);\n    display: flex;\n    align-items: center;\n    cursor: grab;\n    transition: bottom 0.15s ease;\n}\n\n.threshold-handle:active {\n    cursor: grabbing;\n}\n\n.threshold-handle__bar {\n    position: absolute;\n    left: 0;\n    right: 0;\n    top: 50%;\n    height: 4px;\n    transform: translateY(-50%);\n    background-color: var(--purple-900);\n    border-radius: 999px;\n}\n\n/* Center knob — the grab affordance and the focus target. */\n.threshold-handle__bar::after {\n    content: \"\";\n    position: absolute;\n    left: 50%;\n    top: 50%;\n    transform: translate(-50%, -50%);\n    width: 16px;\n    height: 16px;\n    border-radius: 50%;\n    background-color: var(--purple-900);\n    border: 2px solid var(--gray-0);\n    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);\n}\n\n.threshold-handle__pill {\n    position: absolute;\n    right: calc(100% + 0.4em);\n    top: 50%;\n    transform: translateY(-50%);\n    background-color: var(--purple-900);\n    color: var(--gray-0);\n    font-size: 0.8rem;\n    font-weight: 700;\n    padding: 0.15em 0.45em;\n    border-radius: 0.4em;\n    white-space: nowrap;\n    pointer-events: none;\n}\n\n.threshold-handle:focus-visible {\n    outline: none;\n}\n\n.threshold-handle:focus-visible .threshold-handle__bar::after {\n    outline: 3px solid var(--purple-900);\n    outline-offset: 3px;\n}\n\n/* Key for the two things stacked in the track. */\n.threshold-legend {\n    list-style: none;\n    margin: 1.25em auto 0;\n    padding: 0;\n    display: flex;\n    flex-direction: column;\n    gap: 0.4em;\n    font-size: 0.78rem;\n    color: var(--purple-700);\n}\n\n.threshold-legend__item {\n    display: flex;\n    align-items: center;\n    gap: 0.5em;\n}\n\n.threshold-legend__mark {\n    flex: none;\n    width: 20px;\n    display: inline-block;\n}\n\n.threshold-legend__mark--line {\n    height: 4px;\n    border-radius: 999px;\n    background-color: var(--purple-900);\n}\n\n.threshold-legend__mark--fill {\n    height: 14px;\n    border-radius: 3px;\n    background-color: var(--purple-400);\n}\n",
+          "folderId": "1",
+          "active": false
+        },
+        "8": {
+          "id": "8",
+          "name": "threshold-slider.js",
+          "contents": "/**\n * threshold-slider.js — a vertical confidence-threshold slider.\n *\n * The track runs 0% (bottom) to 100% (top). Behind the handle, a fill shows the\n * currently-viewed photo's model confidence that the bird is a PURPLE FINCH.\n * The handle is the threshold: when the confidence fill reaches above the\n * handle, the model calls the bird a \"Purple Finch\", and the fill turns the\n * Purple Finch (dark purple) color.\n *\n * Follows the ARIA slider pattern:\n * https://www.w3.org/WAI/ARIA/apg/patterns/slider/\n */\n\nconst clamp = (v, lo, hi) => Math.min(hi, Math.max(lo, v));\n\nexport function createThresholdSlider(container, { initialThreshold = 50, onChange } = {}) {\n  let threshold = clamp(Math.round(initialThreshold), 0, 100);\n  let confidence = 0; // percent — the viewed photo's Purple Finch confidence\n  let dragging = false;\n\n  container.innerHTML = `\n    <div class=\"threshold-track\">\n      <div class=\"confidence-fill\"></div>\n      <span class=\"confidence-label\"><span class=\"confidence-label__text\">0%</span></span>\n      <div class=\"threshold-handle\"\n           role=\"slider\"\n           tabindex=\"0\"\n           aria-orientation=\"vertical\"\n           aria-valuemin=\"0\"\n           aria-valuemax=\"100\"\n           aria-valuenow=\"${threshold}\"\n           aria-valuetext=\"${threshold} percent\"\n           aria-label=\"Confidence needed to predict Purple Finch\">\n        <span class=\"threshold-handle__pill\">${threshold}%</span>\n        <span class=\"threshold-handle__bar\"></span>\n      </div>\n    </div>\n    <ul class=\"threshold-legend\">\n      <li class=\"threshold-legend__item\">\n        <span class=\"threshold-legend__mark threshold-legend__mark--line\"></span>\n        Threshold\n      </li>\n      <li class=\"threshold-legend__item\">\n        <span class=\"threshold-legend__mark threshold-legend__mark--fill\"></span>\n        Model's confidence\n      </li>\n    </ul>\n  `;\n\n  const track = container.querySelector(\".threshold-track\");\n  const fill = container.querySelector(\".confidence-fill\");\n  const confLabel = container.querySelector(\".confidence-label\");\n  const confText = container.querySelector(\".confidence-label__text\");\n  const handle = container.querySelector(\".threshold-handle\");\n  const pill = container.querySelector(\".threshold-handle__pill\");\n\n  function render() {\n    const predictedPurple = confidence >= threshold;\n\n    handle.style.bottom = `${threshold}%`;\n    handle.setAttribute(\"aria-valuenow\", String(threshold));\n    handle.setAttribute(\"aria-valuetext\", `${threshold} percent`);\n    pill.textContent = `${threshold}%`;\n\n    fill.style.height = `${confidence}%`;\n    fill.classList.toggle(\"purple-finch\", predictedPurple);\n    confLabel.style.bottom = `${confidence}%`;\n    confText.textContent = `${confidence}%`;\n  }\n\n  // Set the threshold from a user action, firing onChange only on a real move.\n  function setThreshold(next) {\n    const v = clamp(Math.round(next), 0, 100);\n    if (v === threshold) return;\n    threshold = v;\n    render();\n    if (onChange) onChange(threshold);\n  }\n\n  // Map a pointer's vertical position to a 0–100 value (top of track = 100).\n  function valueFromClientY(clientY) {\n    const rect = track.getBoundingClientRect();\n    const frac = (rect.bottom - clientY) / rect.height;\n    return frac * 100;\n  }\n\n  track.addEventListener(\"pointerdown\", (e) => {\n    if (e.button > 0) return;\n    e.preventDefault();\n    handle.focus();\n    dragging = true;\n    try {\n      track.setPointerCapture(e.pointerId);\n    } catch {}\n    setThreshold(valueFromClientY(e.clientY));\n  });\n\n  track.addEventListener(\"pointermove\", (e) => {\n    if (dragging) setThreshold(valueFromClientY(e.clientY));\n  });\n\n  function endDrag(e) {\n    dragging = false;\n    try {\n      track.releasePointerCapture(e.pointerId);\n    } catch {}\n  }\n  track.addEventListener(\"pointerup\", endDrag);\n  track.addEventListener(\"pointercancel\", endDrag);\n\n  handle.addEventListener(\"keydown\", (e) => {\n    let handled = true;\n    switch (e.key) {\n      case \"ArrowUp\":\n      case \"ArrowRight\":\n        setThreshold(threshold + 1);\n        break;\n      case \"ArrowDown\":\n      case \"ArrowLeft\":\n        setThreshold(threshold - 1);\n        break;\n      case \"PageUp\":\n        setThreshold(threshold + 10);\n        break;\n      case \"PageDown\":\n        setThreshold(threshold - 10);\n        break;\n      case \"Home\":\n        setThreshold(0);\n        break;\n      case \"End\":\n        setThreshold(100);\n        break;\n      default:\n        handled = false;\n    }\n    if (handled) e.preventDefault();\n  });\n\n  render();\n\n  return {\n    element: container,\n    getThreshold: () => threshold,\n    // Show a different photo's confidence without firing onChange.\n    setConfidence(pct) {\n      confidence = clamp(Math.round(pct), 0, 100);\n      render();\n    },\n  };\n}\n",
+          "folderId": "1",
+          "active": false
+        },
+        "9": {
+          "id": "9",
+          "name": "purple-4.jpg",
+          "contents": "",
+          "folderId": "3",
+          "url": "/level_starter_assets/aif-y2-machine-learning-fundamentals-lesson9-level1-choice2-2026/uuid/e321b9fe-cf72-4973-b7f9-47f5b96d05be.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "10": {
+          "id": "10",
+          "name": "house-3.jpg",
+          "contents": "",
+          "folderId": "3",
+          "url": "/level_starter_assets/aif-y2-machine-learning-fundamentals-lesson9-level1-choice2-2026/uuid/7e2c0f58-8897-40a0-8bd2-ced342eacba2.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "11": {
+          "id": "11",
+          "name": "purple-2.jpg",
+          "contents": "",
+          "folderId": "3",
+          "url": "/level_starter_assets/aif-y2-machine-learning-fundamentals-lesson9-level1-choice2-2026/uuid/8a8118da-bb07-4903-a309-6ed394746090.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "12": {
+          "id": "12",
+          "name": "house-4.jpg",
+          "contents": "",
+          "folderId": "3",
+          "url": "/level_starter_assets/aif-y2-machine-learning-fundamentals-lesson9-level1-choice2-2026/uuid/0253a402-0ddf-431e-b009-3f864354c083.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "13": {
+          "id": "13",
+          "name": "house-1.jpg",
+          "contents": "",
+          "folderId": "3",
+          "url": "/level_starter_assets/aif-y2-machine-learning-fundamentals-lesson9-level1-choice2-2026/uuid/782bb24b-1dbc-4f9a-b701-63a8a3339195.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "14": {
+          "id": "14",
+          "name": "purple-3.jpg",
+          "contents": "",
+          "folderId": "3",
+          "url": "/level_starter_assets/aif-y2-machine-learning-fundamentals-lesson9-level1-choice2-2026/uuid/52117887-73be-4195-a2dd-91da626c57b3.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "15": {
+          "id": "15",
+          "name": "house-2.jpg",
+          "contents": "",
+          "folderId": "3",
+          "url": "/level_starter_assets/aif-y2-machine-learning-fundamentals-lesson9-level1-choice2-2026/uuid/5d36d282-56dd-4ca2-9c16-c7da2ef79849.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "16": {
+          "id": "16",
+          "name": "purple-1.jpg",
+          "contents": "",
+          "folderId": "3",
+          "url": "/level_starter_assets/aif-y2-machine-learning-fundamentals-lesson9-level1-choice2-2026/uuid/799cbba7-0e9a-40d0-b3a2-adfc91b5def8.jpg",
+          "type": "starter",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16"
+      ]
+    },
+    "display_name": "Rare Birds",
+    "bubble_choice_description": "Which birds are seldom spotted?",
+    "thumbnail_url": "https://images.code.org/2b55e57aa256f64500ffe959d236eb31-purple-1.jpg"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-08-20 21:41:34 +0000\",\"changed\":[\"require_edit_to_continue\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-08-20 21:45:03 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-08-20 21:49:02 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Weblab2>

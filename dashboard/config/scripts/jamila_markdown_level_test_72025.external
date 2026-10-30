@@ -1,0 +1,50 @@
+name 'jamila-markdown-level-test-72025'
+
+markdown <<MARKDOWN
+#Sana R. - User Profile
+Go through the audit logs for Sana to find any evidence of fraud.
+**[Click here](https://docs.google.com/document/d/1PWv-Ml0uWkXhHpiXJpRBscK_lFK4iOvAYeDboSVcG-M/edit?usp=sharing) if you would prefer to view the audit logs in a document.**
+
+## LOGIN ACTIVITY LOG
+<img src="https://images.code.org/d368161e48f6d9e9d917bd8e94f20e01-image-1753920998715.png" style="float:right; width:35%">
+
+| Date       |    Time    |         Device          |     IP Location     | Outcome   |   OS     |  Browser  |
+|------------|------------|--------------------------|----------------------|-----------|----------|-----------|
+| Sept 6     |  6:50 PM   |  Samsung Galaxy S22      |  Dearborn, MI        | Success   | Android  | Chrome    |
+| Sept 7     |  7:30 AM   |  Windows Laptop          |  Dearborn, MI        | Success   | Windows  | Edge      |
+| Sept 8     |  9:12 PM   |  Samsung Galaxy S22      |  Windsor, ON         | Success   | Android  | Chrome    |
+| Sept 9     |  3:22 AM   |  iPhone (Unrecognized)   |  Toledo, OH          | Failed    | iOS      | Unknown   |
+| Sept 9     |  3:26 AM   |  iPhone (Unrecognized)   |  Toledo, OH          | Success   | iOS      | Unknown   |
+| Sept 9     |  3:28 AM   |  iPhone (Unrecognized)   |  Toledo, OH          | Success   | iOS      | Unknown   |
+| Sept 9     |  3:33 AM   |  iPhone (Unrecognized)   |  Toledo, OH          | Success   | iOS      | Unknown   |
+| Sept 9     |  3:34 AM   |  iPhone (Unrecognized)   |  Toledo, OH          | Success   | iOS      | Unknown   |
+| Sept 9     |  8:15 AM   |  Samsung Galaxy S22      |  Dearborn, MI        | Success   | Android  | Chrome    |
+| Sept 10    | 10:12 AM   |  Windows Laptop          |  Dearborn, MI        | Success   | Windows  | Edge      |
+
+---
+
+## LOCATION HISTORY LOG
+| Date     |    Time    |   Ping Type   |             Location              |
+|----------|------------|---------------|-----------------------------------|
+| Sept 6   |  6:45 PM   | Wi-Fi         | Home – Dearborn, MI               |
+| Sept 7   |  7:25 AM   | Wi-Fi         | School – Dearborn, MI             |
+| Sept 8   |  8:45 PM   | Cell Tower    | Windsor, ON (Canada)              |
+| Sept 9   |  3:20 AM   | None          | —                                 |
+| Sept 9   |  3:30 AM   | Wi-Fi         | Toledo, OH                        |
+| Sept 9   |  8:10 AM   | Wi-Fi         | Home – Dearborn, MI               |
+| Sept 10  | 10:00 AM   | Wi-Fi         | School – Dearborn, MI             |
+
+---
+
+## TRANSACTION HISTORY LOG
+| Date     |    Time    |            Merchant             | Amount   |      Location      | Method |
+|----------|------------|---------------------------------|----------|---------------------|--------|
+| Sept 6   |  6:55 PM   | Al Medina Market                | 17.32   | Dearborn, MI        | Debit  |
+| Sept 7   | 12:20 PM   | School Cafeteria                | 3.50    | Dearborn, MI        | Debit  |
+| Sept 8   |  9:15 PM   | HalalCart Canada                | 22.10   | Windsor, ON         | Debit  |
+| Sept 9   |  3:33 AM   | Crypto Wallet Setup Fee         | 49.99   | Toledo, OH          | Debit  |
+| Sept 9   |  3:38 AM   | BetZone Sports App              | 24.99   | Toledo, OH          | Debit  |
+| Sept 9   |  3:40 AM   | Grocery Express                 | 83.45   | Toledo, OH          | Debit  |
+| Sept 9   |  8:16 AM   | Zaytuna Cafe                    | 6.70    | Dearborn, MI        | Debit  |
+| Sept 10  | 10:15 AM   | Online Quran Reader             | 11.99   | Online              | Debit  |
+MARKDOWN

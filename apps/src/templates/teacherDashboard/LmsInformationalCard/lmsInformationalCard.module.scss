@@ -1,0 +1,34 @@
+@import 'color';
+
+.card {
+  box-sizing: content-box;
+  display: flex;
+  width: auto;
+  height: 56px;
+  overflow: hidden;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #D4D5D7;
+}
+
+.cardText {
+  display: flex;
+  flex-flow: column;
+}
+
+.logo, .card .logo {
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  background: transparent;
+}
+
+.lmsInstructionsLink {
+  margin-right: auto;
+}
+
+.title {
+  margin-bottom: 4px;
+}

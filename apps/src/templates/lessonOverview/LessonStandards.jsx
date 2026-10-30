@@ -1,34 +1,10 @@
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {PureComponent} from 'react';
-import _ from 'lodash';
-import {standardShape} from './lessonPlanShapes';
-import color from '@cdo/apps/util/color';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
-import fontConstants from '@cdo/apps/fontConstants';
 
-export const styles = {
-  frameworkName: {
-    ...fontConstants['main-font-semi-bold'],
-    color: color.dark_charcoal,
-  },
-  categoryShortcode: {
-    ...fontConstants['main-font-bold'],
-    color: color.link_color,
-    ':hover': {
-      textDecoration: 'underline',
-    },
-  },
-  standardShortcode: {
-    ...fontConstants['main-font-semi-bold'],
-    color: color.dark_charcoal,
-  },
-  summary: {
-    padding: 3,
-  },
-  standard: {
-    padding: 3,
-  },
-};
+import {standardShape} from './lessonPlanShapes';
+
+import styles from './lesson-plan.module.scss';
 
 export const ExpandMode = {
   NONE: 'none',
@@ -112,8 +88,8 @@ class Framework extends PureComponent {
       .value();
     return (
       <div>
-        <span style={styles.frameworkName}>{name}</span>
-        <ul style={{listStyleType: 'none'}}>
+        <span className={styles.frameworkName}>{name}</span>
+        <ul className={styles.noBullets}>
           {Object.keys(standardsByCategory).map((categoryShortcode, index) => {
             const standards = standardsByCategory[categoryShortcode];
             const expandMode = getChildExpandMode(this.props.expandMode, index);
@@ -138,7 +114,7 @@ Framework.propTypes = {
   expandMode: expandModeShape,
 };
 
-class UnconnectedParentCategory extends PureComponent {
+class ParentCategory extends PureComponent {
   render() {
     const {shortcode, standards} = this.props;
     const description = standards[0].parentCategoryDescription;
@@ -150,12 +126,12 @@ class UnconnectedParentCategory extends PureComponent {
     return (
       <li key={shortcode}>
         <details open={isOpen}>
-          <summary style={styles.summary}>
-            <span style={styles.categoryShortcode}>{shortcode}</span>
+          <summary className={styles.summary}>
+            <span className={styles.categoryShortcode}>{shortcode}</span>
             {' - '}
             {description}
           </summary>
-          <ul style={{listStyleType: 'none'}}>
+          <ul className={styles.noBullets}>
             {Object.keys(standardsByCategory).map(
               (categoryShortcode, index) => {
                 const standards = standardsByCategory[categoryShortcode];
@@ -180,14 +156,13 @@ class UnconnectedParentCategory extends PureComponent {
   }
 }
 
-UnconnectedParentCategory.propTypes = {
+ParentCategory.propTypes = {
   shortcode: PropTypes.string.isRequired,
   standards: PropTypes.arrayOf(standardShape).isRequired,
   expandMode: expandModeShape,
 };
-const ParentCategory = Radium(UnconnectedParentCategory);
 
-class UnconnectedCategory extends PureComponent {
+class Category extends PureComponent {
   render() {
     const {shortcode, standards} = this.props;
     const description = standards[0].categoryDescription;
@@ -195,8 +170,8 @@ class UnconnectedCategory extends PureComponent {
     return (
       <li key={shortcode}>
         <details open={isOpen}>
-          <summary style={styles.summary}>
-            <span style={styles.categoryShortcode}>{shortcode}</span>
+          <summary className={styles.summary}>
+            <span className={styles.categoryShortcode}>{shortcode}</span>
             {' - '}
             {description}
           </summary>
@@ -211,19 +186,18 @@ class UnconnectedCategory extends PureComponent {
   }
 }
 
-UnconnectedCategory.propTypes = {
+Category.propTypes = {
   shortcode: PropTypes.string.isRequired,
   standards: PropTypes.arrayOf(standardShape).isRequired,
   expandMode: expandModeShape,
 };
-const Category = Radium(UnconnectedCategory);
 
 class Standard extends PureComponent {
   render() {
     const {standard} = this.props;
     return (
-      <li key={standard.shortcode} style={styles.standard}>
-        <span style={styles.standardShortcode}>{standard.shortcode}</span>
+      <li key={standard.shortcode} className={styles.standard}>
+        <span className={styles.standardShortcode}>{standard.shortcode}</span>
         {' - '}
         {standard.description}
       </li>

@@ -1,0 +1,17 @@
+name 'networks-postassessment-question13_v2-2025'
+title 'Networks and the Internet Post-Assessment: Question 13'
+
+wrong 'To make logging in more difficult'
+wrong 'To ensure all employees use the same password'
+wrong 'To prevent network congestion'
+right 'To improve network security and prevent unauthorized access'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+A company requires employees to update their passwords every three months and use multi-factor authentication. What is the primary goal of this policy?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 9: Network Security
+MARKDOWN

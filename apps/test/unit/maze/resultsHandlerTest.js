@@ -1,17 +1,14 @@
-import {expect} from '../../util/reconfiguredChai';
+import {MazeController} from '@code-dot-org/maze';
 
-const FarmerHandler = require('@cdo/apps/maze/results/farmer');
 const BeeHandler = require('@cdo/apps/maze/results/bee');
 const CollectorHandler = require('@cdo/apps/maze/results/collector');
-const WordsearchHandler = require('@cdo/apps/maze/results/wordsearch');
+const FarmerHandler = require('@cdo/apps/maze/results/farmer');
 const HarvesterHandler = require('@cdo/apps/maze/results/harvester');
 const PlanterHandler = require('@cdo/apps/maze/results/planter');
 const ResultsHandler = require('@cdo/apps/maze/results/resultsHandler');
-
-import {MazeController} from '@code-dot-org/maze';
-
 const createResultsHandlerForSubtype =
   require('@cdo/apps/maze/results/utils').createResultsHandlerForSubtype;
+const WordsearchHandler = require('@cdo/apps/maze/results/wordsearch');
 
 describe('ResultsHandlers', function () {
   describe('createResultsHandlerForSubtype util', function () {
@@ -46,7 +43,7 @@ describe('ResultsHandlers', function () {
         const handler = createResultsHandlerForSubtype(mazeController, {
           level: {},
         });
-        expect(handler).to.be.an.instanceof(value);
+        expect(handler).toBeInstanceOf(value);
       });
     });
   });

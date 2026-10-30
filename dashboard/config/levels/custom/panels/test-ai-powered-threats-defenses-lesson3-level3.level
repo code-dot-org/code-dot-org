@@ -1,0 +1,40 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-07-15T16:53:01.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "When you create a new account, you type in a username and password. \n\nBut the website doesn’t store your password as-is! Instead, it uses a process called **hashing** to scramble it.",
+        "imageUrl": "https://images.code.org/c31daab3bc574601f7ff27ccf3f7d5a5-L3L3_password.gif",
+        "key": "test-ai-powered-threats-defenses-lesson3-level3-6ea9678a-ce7e-41b9-abb2-d878eb87ac30",
+        "typing": false,
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "Your password is converted into a hash and stored in the website’s password database. \n\nEven if someone breaks in, they can’t see your real password, just the hashed version.",
+        "imageUrl": "https://images.code.org/c96a3f3f3ce8044b56d90a7d655c2a8b-L3L3_hashing.gif",
+        "key": "test-ai-powered-threats-defenses-lesson3-level3-91f6e938-059e-4b97-b572-350b4fa8bbb8",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "**1.** When you log in, the system hashes the password you typed \n\n**2.** It checks if it matches with the one in the database\n\n**3.**  ✔ If it matches, you’re in!\n\n**4.**  ❌ If not, access denied.\n\nThis keeps your actual password secret—even the website doesn't know what it is.",
+        "imageUrl": "https://images.code.org/2b09aa118ce26735e86e6842110bc9c2-L3L3_howtohash.png",
+        "key": "test-ai-powered-threats-defenses-lesson3-level3-79557c5a-46fd-42a9-8bcd-652ea77a7ed0",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "Even hashed passwords can be protected further. The password database itself can be encrypted, meaning even if it’s stolen, the data inside is unreadable without a special key.",
+        "imageUrl": "https://images.code.org/19df2d22533ea96219a1ca63cee96d7f-L3L3_encrypt3.gif",
+        "key": "test-ai-powered-threats-defenses-lesson3-level3-10f16dff-0ead-45fb-8aaf-e7607fe82cca"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2025-07-15 16:53:05 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-15 17:14:17 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-15 18:24:30 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

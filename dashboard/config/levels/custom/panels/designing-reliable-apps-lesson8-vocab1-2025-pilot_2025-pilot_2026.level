@@ -1,0 +1,23 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-04-01T21:44:23.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# try…catch\n\n`try...catch` is used to test a block of code for errors while it runs. If something goes wrong, it allows the program to jump to a backup plan instead of crashing the webpage completely.\n\nThink of your code like a trapeze artist performing a high-wire act. Most of the time, the performance goes perfectly. But in the event that something goes wrong, you want a safety net to catch you.\n\n",
+        "imageUrl": "https://images.code.org/ead9329213ca6cd343d9c92ed5b74fe5-Screenshot 2026-02-11 at 5.30.52 PM.png",
+        "key": "designing-reliable-apps-lesson2-level1-test_2025-pilot-e834eace-42c5-4df8-990e-d9987f293a0f",
+        "layout": "text-top-left"
+      }
+    ],
+    "name_suffix": "_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T21:44:23.212+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson8-vocab1-2025-pilot_2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson8-vocab1-2025-pilot_2025-pilot\"}]"
+}]]></config>
+</Panels>

@@ -20,6 +20,18 @@ class ProfanityControllerTest < ActionController::TestCase
     assert_equal @expected_profanities.to_json, @response.body
   end
 
+  test 'find: extracts text from js when extractTextFromJs is true' do
+    expected_text = 'function hello world'
+    ShareFiltering.expects(:extract_text_from_js).with(@profane_text).returns(expected_text)
+    ProfanityHelper.expects(:throttled_find_profanities).once.
+      with(expected_text, @locale, @user.id, ProfanityController::REQUEST_LIMIT_PER_MIN_DEFAULT, 60).
+      yields(@expected_profanities)
+
+    post :find, params: {text: @profane_text, locale: @locale, extractTextFromJs: true}
+    assert_response :success
+    assert_equal @expected_profanities.to_json, @response.body
+  end
+
   test 'find: returns profanities using session id if no user id' do
     sign_out(@user)
     ProfanityHelper.expects(:throttled_find_profanities).once.

@@ -4,6 +4,7 @@ require 'testing/transactional_test_case'
 
 class SetupAllAndTeardownAllTest < ActiveSupport::TestCase
   include ActiveSupport::Testing::SetupAllAndTeardownAll
+
   self.test_order = :sorted
 
   setup_all :reset_callback_record, :foo
@@ -37,16 +38,24 @@ class SetupAllAndTeardownAllTest < ActiveSupport::TestCase
 end
 
 class TransactionTest < ActiveSupport::TestCase
+  include ActiveSupport::Testing::TransactionalTestCase
+
   cattr_accessor :count
+
+  setup_all do
+    # Checks that setup_all starts a database transaction.
+    assert_equal 1, db_connection.open_transactions
+  end
+
   # Run three internal TestCases in a fixed secuence.
   class TransactionalTestCasePreTest < ActiveSupport::TestCase
     # Remove this TestCase from the global test runner.
     runnables.delete self
 
     include ActiveSupport::Testing::SetupAllAndTeardownAll
-    fixtures :callout
+    include ActiveSupport::Testing::TransactionalTestCase
 
-    def test_create_fixture
+    def test_record_count
       TransactionTest.count = Callout.count
     end
   end
@@ -57,20 +66,17 @@ class TransactionTest < ActiveSupport::TestCase
     include ActiveSupport::Testing::SetupAllAndTeardownAll
     include ActiveSupport::Testing::TransactionalTestCase
 
-    self.use_transactional_test_case = true
-
-    fixtures :callout
-
-    def test_fixture_created
+    def test_record_created
       assert_equal TransactionTest.count, Callout.count
-      Callout.last.destroy
+      FactoryBot.create(:callout)
+      assert_equal TransactionTest.count + 1, Callout.count
     end
   end
 
   class TransactionalTestCasePostTest < ActiveSupport::TestCase
     runnables.delete self
 
-    def test_fixture_rolled_back
+    def test_record_rolled_back
       assert_equal TransactionTest.count, Callout.count
     end
   end

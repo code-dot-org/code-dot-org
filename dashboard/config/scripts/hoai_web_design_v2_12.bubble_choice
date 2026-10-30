@@ -1,0 +1,12 @@
+name 'hoai-web-design-v2-12'
+display_name 'AI Frustrations'
+description 'This group of students tried using AI to generate webpages, but the AI-generated webpage doesn\'t match their vision. Pick a student to help them debug their AI interaction!'
+
+sublevels
+level 'hoai-web-design-v2-12a'
+level 'hoai-web-design-v2-12b'
+level 'hoai-web-design-v2-12c'
+level 'hoai-web-design-v2-12d'
+
+uses_lab2
+navigation_type 'next_level'

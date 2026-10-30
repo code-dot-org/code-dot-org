@@ -1,4 +1,4 @@
-import 'selectize';
+import '@selectize/selectize';
 import $ from 'jquery';
 
 $(document).ready(() => {

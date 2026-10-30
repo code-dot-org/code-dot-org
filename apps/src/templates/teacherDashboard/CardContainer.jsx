@@ -1,21 +1,15 @@
 import PropTypes from 'prop-types';
-import React, {Component} from 'react';
-import styleConstants from '../../styleConstants';
+import React from 'react';
 
-const style = {
-  width: styleConstants['content-width'],
-  display: 'flex',
-  flexWrap: 'wrap',
-  justifyContent: 'space-between',
-};
+import styles from './sectionSetup.module.scss';
 
 /** Uses flexbox to arrange content cards into nice rows with wrapping. */
-export default class CardContainer extends Component {
-  static propTypes = {
-    children: PropTypes.any,
-  };
+const CardContainer = ({children}) => (
+  <div className={styles.cards}>{children}</div>
+);
 
-  render() {
-    return <div style={style}>{this.props.children}</div>;
-  }
-}
+CardContainer.propTypes = {
+  children: PropTypes.any,
+};
+
+export default CardContainer;

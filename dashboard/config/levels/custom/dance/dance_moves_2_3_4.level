@@ -1,0 +1,52 @@
+<Dancelab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 63,
+  "created_at": "2025-10-01T22:45:30.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "dance",
+    "block_pools": [
+      "Dancelab",
+      "GeneratedDancers"
+    ],
+    "helper_libraries": [
+      "DanceLab"
+    ],
+    "hide_animation_mode": true,
+    "show_type_hints": true,
+    "encrypted": "false",
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "use_modal_function_editor": "false",
+    "hide_share_and_remix": "true",
+    "disable_if_else_editing": "false",
+    "free_play": "false",
+    "validation_enabled": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "hide_pause_button": "false",
+    "default_song": "introtoshamstep_47SOUL",
+    "uses_lab2": "true",
+    "ai_code_generate": "true",
+    "display_name": "Regenerate the dance",
+    "thumbnail_url": "https://images.code.org/2cc954ff41cbcdad4404fb70778c4032-Untitled 9.jpg",
+    "project_template_level_name": "dance_moves_template_2_3_4",
+    "name_suffix": "_4",
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "generate_dancer_mode": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-01T22:45:30.857+00:00\",\"changed\":[\"cloned from \\\"dance_moves_2_3\\\"\"],\"cloned_from\":\"dance_moves_2_3\"},{\"changed_at\":\"2025-10-07 00:36:30 +0000\",\"changed\":[\"block_pools\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2025-10-07 05:19:26 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-07 05:21:21 +0000\",\"changed\":[\"hide_share_and_remix\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Dancelab>

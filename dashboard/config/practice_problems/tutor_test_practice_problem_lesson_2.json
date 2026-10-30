@@ -1,0 +1,14 @@
+{
+  "key": "tutor_test_practice_problem_lesson_2",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "Predict the word that you think will probably come next in the following sentence: The dog barked at the...",
+  "solution": [
+    {"option": "happiness", "correct":false},
+    {"option":"cat", "correct":true},
+    {"option":"write", "correct":false},
+    {"option":"his", "correct":false}],
+  "objective_keys": [
+    "7aa95c9a-567e-4082-8ccc-28022066f3ec"
+  ]
+}

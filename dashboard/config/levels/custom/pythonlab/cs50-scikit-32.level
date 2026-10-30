@@ -1,0 +1,42 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-02-18T17:03:56.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "ai_tutor_available": "true",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# CIW AI Associate Standards: 6.4 (Bootstrapping) & 6.7 (Uncertainty)\n# Standard Descriptions:\n#   6.4: Explain definition, purpose and application of bootstrapping.\n#   6.7: Explain the sources of uncertainty in a prediction model.\n#\n# Rationale: AI isn't 100% certain. If you train a model on 10 people, \n# how do you know it will work on the next 1,000? Bootstrapping is a \n# technique where we \"re-sample\" our data to see how much our results \n# wiggle. This wiggling is our \"Uncertainty\".\n\n\"\"\"\nWelcome! How \"sure\" are you about your grade?\nIf you take 10 practice tests and get a 90 on every single one, you are \nvery certain. If you get a 60, then a 100, then a 70, you are uncertain.\n\nIn AI, we use \"Bootstrapping\" (sampling with replacement) to measure this \nuncertainty. It's like taking multiple \"mini-tests\" from the same data.\n\"\"\"\n\nimport numpy as np\nimport pandas as pd\nimport matplotlib.pyplot as plt\n\n# --- OUR SMALL DATASET ---\n# Let's say we measured the height of 10 people.\nheights = np.array([62, 65, 68, 70, 72, 64, 66, 69, 71, 63])\nprint(f\"Original Average Height: {heights.mean():.2f}\")\n\n# --- THE BOOTSTRAP PROCESS ---\nprint(\"\\n--- Running 1,000 Bootstrap Samples ---\")\n# Bootstrapping means picking 10 people from our list, but \n# we can pick the SAME person twice (Sampling with Replacement).\nbootstrap_means = []\n\nfor i in range(1000):\n    # 'replace=True' is the key to bootstrapping!\n    sample = np.random.choice(heights, size=len(heights), replace=True)\n    bootstrap_means.append(sample.mean())\n\n# --- VISUALIZATION ---\nplt.hist(bootstrap_means, bins=30, color='skyblue', edgecolor='black')\nplt.axvline(heights.mean(), color='red', linestyle='--', label='Original Mean')\nplt.title(\"Bootstrap Distribution: How much does the average 'wiggle'?\")\nplt.xlabel(\"Average Height (Inches)\")\nplt.ylabel(\"Frequency\")\nplt.legend()\nplt.show()\n\n# --- CALCULATING UNCERTAINTY ---\n# We can find the \"Confidence Interval\" (The range where 95% of results fall)\nlower = np.percentile(bootstrap_means, 2.5)\nupper = np.percentile(bootstrap_means, 97.5)\n\nprint(f\"We are 95% certain the TRUE average height is between {lower:.2f} and {upper:.2f}\")\nprint(\"This range represents our UNCERTAINTY. A wider range means more uncertainty!\")\n\n\"\"\"\n--- YOUR TURN ---\nWe have data from a runner's last 5 miles: [8, 9, 7, 8, 10] minutes.\n1. Run a bootstrap by choosing 5 numbers from that list (with replacement).\n2. Do this 3 times and write down the averages. \n3. Did the average change each time?\n\"\"\"\n\n# STARTING CODE FOR STUDENT:\nmiles = [8, 9, 7, 8, 10]\n\n# TODO: Take a bootstrap sample (pick 5 with replacement)\n# sample1 = np.random.choice(miles, 5, replace=True)\n# print(f\"Sample 1 Average: {np.mean(sample1)}\")\n\n# TODO: Do it again!\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFTDG6jyYgtI/CEUE/82dEkG4hlI8OLsdjJD0In8S\n03BB+jPkGgyYB0/9C3zqHMHEFpKeCsugYbpGMxzBNwrd7qASagJaFzMnVUyM\n2TXS7Hau9lj7JpZIHXn9fmxXRRANWRfAKAM2zmMWxCvR1rgL3r4U9X868Ipm\npaZg7rcAX0Ot6tBCCGbl9r+kNU3EfFhNZ2QqZ3RLIcqki4wvehVn0riXqDMO\nsFdpKK2SQi3lTzYtGa9syDb59OpUVmMxLg2Ctu9v0t+vuWsA1ZeG9wt7QiAx\nzEw2cHeoucDhpuhKAAEPitG0cA/4oPEYX0cm0Dk5j/3xVcsWVkWjEt/NM6U/\nHVbDPEs+E4DVII3UCtPk8uB4QXA/GCCCkKMyrLsQh4OZiBjvQRijd0etvRWb\nUS0DAwR0mBZzJw8ljOwChkNEtZ0zhIa0adLIj52V4HL0VvZICnb5HtWBQnXy\nzvhnIaHh5fKXzHIMp2GYwIvfIozjNKlRG8ewlXIv7MMNcVGoqCTZWmv8bHb1\nFPTtAfWQL1ovwIbdYoe6jsj5US41qwQQ0cCJmu8TvSXWIDczSG2CmU/d27GT\nq5lTGr1oH9ihRb2d98JXOG5yooUxMhi1VK6jEa4o7phRV4ebRE08zjArAMgt\naJ7t4yFqpnQGg3qOuyIJgRttz4cJl3mxqZI1zotlr7Qcd22dSDbiEv1hkqcI\nWK2kd9hbN5Vsmzc9xghw44860myehCoUWt+9KZrtCDHt0zDSBBhrDQQ9dv31\n2TRm84wp+4C8egX55/Ft9xFrqTFywZwC0/uUaKcwLIlwuTXgDhbrcif6XqsS\njJ0zLlfUrllj9vQZ768/V6gPCcs7kqjgz3ZHDiB3ei6Eu/P6PQ2wZWfKlQ1r\nalhsl8/iMu3rs5mrdgrUhaykXQQoH783tpodY2Xkp1l9J/kbvUcEWhQ3JHCi\ndDG1612O2boULltXA80yB01mMIWZ/nJmJK3Z59yOFzG+O6BDQBe26x3OTQQq\nIlEOdkL34SpSlUg+QtRUY+bIDm0G6FnX7DqT9FlCiX7w5it3Qi/MQH1Ru9of\nEhH2iV1R3UD4TbwHUAtO1+5KQbwq/hZ9mnLHReJ+ZdeS6N4EbaUizBOyfRhp\nv5xMAnen/Fa0eYnbAm05kqmzLbsfFvBibldt4Q9Te57IbN86jY+aHB379qFW\n3d4cEK+hmflI0S0oBGL28phZUOF5JXv/JrWGV/3sSpA7jIdXyDy/iiSlx0Hs\nzNO8ZEZCGTL4o/iSsRQVnvD3bvuEIdzcSMWJt4PCpg==\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-18T17:03:56.383+00:00\",\"changed\":[\"cloned from \\\"cs50-scikit-31\\\"\"],\"cloned_from\":\"cs50-scikit-31\"},{\"changed_at\":\"2026-02-18 17:03:59 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:48:31 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:48:40 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Pythonlab>

@@ -1,5 +1,10 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 41,
+  "created_at": "2022-03-30T23:30:13.000Z",
+  "level_num": "custom",
+  "user_id": 324,
   "properties": {
     "encrypted": "false",
     "skin": "applab",
@@ -190,7 +195,7 @@
     "instructions_important": "false",
     "mini_rubric": "false",
     "submittable": "false",
-    "start_blocks": "onEvent(\"dropdown1\", \"change\", function(event) {\r\n  if (getText(\"dropdown1\") == \"are bigger than Alaska?\" ){\r\n    setText(\"label2\", \"32\");\r\n  }\r\n  if (getText(\"dropdown1\") == \"have no land borders?\" ){\r\n    setText(\"label2\", \"39\");\r\n  }\r\n  if (getText(\"dropdown1\") == \"are decreasing population?\" ){\r\n    setText(\"label2\", \"21\");\r\n  }\r\n  if (getText(\"dropdown1\") == \"are land locked?\" ){\r\n    setText(\"label2\", \"49\");\r\n  }\r\n  if (getText(\"dropdown1\") == \"have won the World Cup?\" ){\r\n    setText(\"label2\", \"11\");\r\n  }\r\n  if (getText(\"dropdown1\") == \"have more than a billion people?\" ){\r\n    setText(\"label2\", \"2\");\r\n  }\r\n  if (getText(\"dropdown1\") == \"have sent people to space?\" ){\r\n    setText(\"label2\", \"37\");\r\n  }\r\n});\r\n",
+    "start_blocks": "onEvent(\"dropdown1\", \"change\", function(event) {\r\n  if (getText(\"dropdown1\") == \"are bigger than Alaska?\" ){\r\n    setText(\"label2\", \"32\");\r\n  }\r\n  if (getText(\"dropdown1\") == \"have no land borders?\" ){\r\n    setText(\"label2\", \"39\");\r\n  }\r\n  if (getText(\"dropdown1\") == \"are decreasing population?\" ){\r\n    setText(\"label2\", \"21\");\r\n  }\r\n  if (getText(\"dropdown1\") == \"are land locked?\" ){\r\n    setText(\"label2\", \"49\");\r\n  }\r\n  if (getText(\"dropdown1\") == \"have won the World Cup?\" ){\r\n    setText(\"label2\", \"8\");\r\n  }\r\n  if (getText(\"dropdown1\") == \"have more than a billion people?\" ){\r\n    setText(\"label2\", \"2\");\r\n  }\r\n  if (getText(\"dropdown1\") == \"have sent people to space?\" ){\r\n    setText(\"label2\", \"37\");\r\n  }\r\n});\r\n",
     "never_autoplay_video": "false",
     "hide_share_and_remix": "false",
     "droplet_tooltips_disabled": "false",
@@ -209,7 +214,6 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "false",
     "widget_mode": "false",
     "libraries_enabled": "false",
     "long_instructions": "# How Many Countries?\r\n\r\nThis app tells you some fun facts about different countries.  Ask it a question and it will tell you how many countries meet that requirement.\r\n\r\n**Input:**\r\n\r\n1. The question that the user chose (user mouse click)\r\n2. List of countries and facts about them (Internet or stored in app)\r\n\r\n**Output:**\r\n\r\n1. The number of countries that meet the requirement.\r\n\r\n**Processing:**\r\n\r\n* What types of processing are needed for this app to work?\r\n",
@@ -217,15 +221,16 @@
     "parent_level_id": 23134,
     "teacher_markdown": "[key]\r\n\r\nThis app uses searching/find a match and counting.\r\n\r\n* The app searches the list of countries for ones that meet the requirement.\r\n* The app counts the number of matches that it has found.\r\n\r\nAlthough this explanation leaves out much of the detail of how this sort of processing works, the main point of the execise is that searching/finding a match and counting are two of the main types of processing that students will need to be familiar with in this course.\r\n\r\n[/key]",
     "name_suffix": "_2022",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "ai_tutor_available": "false",
+    "validation_enabled": "false",
+    "ai_enabled": "false"
   },
-  "level_num": "custom",
-  "game_id": 41,
-  "created_at": "2022-03-30T23:30:13.000Z",
-  "user_id": 324,
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-03-30T23:30:13.314+00:00\",\"changed\":[\"cloned from \\\"CSD U1 processing countries_2021\\\"\"],\"cloned_from\":\"CSD U1 processing countries_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-03-30T23:30:13.314+00:00\",\"changed\":[\"cloned from \\\"CSD U1 processing countries_2021\\\"\"],\"cloned_from\":\"CSD U1 processing countries_2021\"},{\"changed_at\":\"2026-03-10 19:32:24 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"makerlab_enabled\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

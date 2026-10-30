@@ -1,0 +1,24 @@
+name 'iterating-with-ai-lesson7-level6-CFU-test-2025'
+title 'Pure Functions vs Side Effects'
+
+wrong '`forEach` that applies the discount directly to each element'
+wrong '`filter` that returns only items that match a condition'
+right 'A `for` loop that builds a new array by copying each price and applying the discount'
+wrong 'Editing the array directly without a function'
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+**Scenario**: Your school library is running a 25% off sale for students. You want to create a new list of discounted prices based on the original book prices, while keeping the original list unchanged.
+
+**Which method is the best fit?**
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+A. `forEach` is typically used for side effects and doesn’t return a new array, so it would modify the original list.
+
+B. `filter` changes the number of items by selecting only those that meet a test, not by transforming all values.
+
+C. This creates a transformed copy without altering the original array.
+
+D. Direct edits mutate the original list, which breaks the requirement to keep the original prices unchanged.
+MARKDOWN

@@ -1,0 +1,56 @@
+/**
+ * This file contains constants that are used for fontAwesomeV6Icon
+ */
+
+/**
+ * List of the available kit icons based on
+ * https://fontawesome.com/kits/ea2d9d4413/customicons
+ */
+export const kitIcons = new Set([
+  'ai-bot-regular',
+  'ai-bot-solid',
+  'ai-head-regular',
+  'ai-head-solid',
+  'ai-locked',
+  'ai-off',
+  'ai-sleeping',
+  'ai-ta-head-solid',
+  'ai-ta-tag',
+  'classlink',
+  'clever',
+  'click-to-continue-down',
+  'click-to-continue-up',
+  'codeai',
+  'connected-level',
+  'css-new',
+  'file-lines-speaker',
+  'floppy-disk-circle-check',
+  'handles-hidden',
+  'handles-visible',
+  'line-curve',
+  'line-dashed',
+  'line-dotted',
+  'line-medium',
+  'line-regular',
+  'line-shape',
+  'line-step-round',
+  'line-step-sharp',
+  'line-style',
+  'line-thick',
+  'line-weight',
+  'move',
+  'overview-collapse',
+  'overview-detail',
+  'solid-bars-magnifying-glass',
+  'solid-flask-sparkle',
+  'solid-gear-pen',
+  'solid-globe-ban',
+  'solid-pen-sparkle',
+  'solid-star-circle-check-full',
+  'solid-thumbtack-slash',
+  'ta',
+  'text-speech',
+  'text-speech-pause',
+  'text-to-speech-alt',
+  'tutor',
+]);

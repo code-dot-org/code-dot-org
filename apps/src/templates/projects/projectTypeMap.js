@@ -2,11 +2,11 @@ import i18n from '@cdo/locale';
 
 /**
  * Map from project type to friendly name.
- * @type {Object}
  */
 
 export const PROJECT_TYPE_MAP = {
   adaptations: i18n.projectTypeAdaptations(),
+  aichat: 'AI Chat',
   algebra_game: i18n.projectTypeAlgebra(),
   applab: i18n.projectTypeApplab(),
   artist: i18n.projectTypeArtist(),
@@ -19,9 +19,10 @@ export const PROJECT_TYPE_MAP = {
   minecraft_designer: i18n.projectTypeMinecraft(),
   minecraft_hero: i18n.projectTypeMinecraft(),
   minecraft_aquatic: i18n.projectTypeMinecraft(),
+  game_design: i18n.projectTypeGameDesign(),
   gamelab: i18n.projectTypeGamelab(),
   playlab: i18n.projectTypePlaylab(),
-  weblab: i18n.projectTypeWeblab(),
+  weblab: 'Web Lab (legacy)',
   bounce: i18n.projectTypeBounce(),
   flappy: i18n.projectTypeFlappy(),
   starwars: i18n.projectTypeStarwars(),
@@ -38,10 +39,15 @@ export const PROJECT_TYPE_MAP = {
   music: i18n.projectTypeMusic(),
   poetry: i18n.projectTypePoetry(),
   poetry_hoc: i18n.projectTypePoetry(),
+  pythonlab: i18n.projectTypePythonlab(),
   thebadguys: i18n.projectTypeThebadguys(),
   science: i18n.projectTypeScience(),
+  sketchlab: 'Sketch Lab',
   story: i18n.projectTypeStory(),
   time_capsule: i18n.projectTypeTimeCapsule(),
+  transformers: i18n.projectTypeTransformers(),
+  music_dance_ai: 'Mix & Move with AI',
+  weblab2: i18n.projectTypeWeblab(),
 };
 
 export const FEATURED_PROJECT_TYPE_MAP = {
@@ -69,4 +75,6 @@ export const FEATURED_PROJECT_TYPE_MAP = {
   poetry: i18n.projectTypePoetry(),
   thebadguys: i18n.projectTypeThebadguys(),
   spritelab: i18n.projectTypeSpriteLab(),
+  music: i18n.projectTypeMusic(),
+  pythonlab: i18n.projectTypePythonlab(),
 };

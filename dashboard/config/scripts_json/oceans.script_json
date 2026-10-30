@@ -4,9 +4,10 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "curriculum_umbrella": "HOC",
-      "is_course": true,
+      "content_area": "hoc",
+      "curriculum_umbrella": "HOAI",
       "is_migrated": true,
+      "show_calendar": true,
       "supported_locales": [
         "ar-SA",
         "az-AZ",
@@ -15,6 +16,7 @@
         "de-DE",
         "dv-MV",
         "es-ES",
+        "es-LA",
         "es-MX",
         "fa-IR",
         "fr-FR",
@@ -52,15 +54,20 @@
         "zh-CN",
         "zh-TW"
       ],
-      "version_year": "unversioned"
+      "topic_tags": [
+        "ai"
+      ],
+      "tts": true,
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
-    "family_name": "oceans",
-    "serialized_at": "2023-11-17 22:53:24 UTC",
-    "published_state": "stable",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "family_name": null,
+    "serialized_at": "2026-10-21 13:36:02 UTC",
+    "hide_within_course": false,
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "oceans"
     }
@@ -838,6 +845,9 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [

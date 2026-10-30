@@ -1,9 +1,11 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import PropTypes from 'prop-types';
+
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import color from '@cdo/apps/util/color';
 import experiments from '@cdo/apps/util/experiments';
-import Button from '@cdo/apps/templates/Button';
+
 import LibraryCategory from '../dataBrowser/LibraryCategory';
 
 class ManifestEditor extends React.Component {
@@ -39,7 +41,7 @@ class ManifestEditor extends React.Component {
   componentDidMount() {
     this.setState({
       showUnpublishedTables: experiments.isEnabled(
-        experiments.SHOW_UNPUBLISHED_FIREBASE_TABLES
+        experiments.SHOW_UNPUBLISHED_DATASET_TABLES
       ),
     });
   }
@@ -64,12 +66,12 @@ class ManifestEditor extends React.Component {
         {this.state.showUnpublishedTables && (
           <p style={styles.warning}>
             Note: Showing unpublished categories and tables because you have the
-            showUnpublishedFirebaseTables experiment enabled.
+            showUnpublishedDatasetTables experiment enabled.
             <br />
             <a
               href={
                 location.href +
-                '?disableExperiments=showUnpublishedFirebaseTables'
+                '?disableExperiments=showUnpublishedDatasetTables'
               }
             >
               Click here to turn off the experiment.

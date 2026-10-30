@@ -13,7 +13,7 @@
     "hide_share_and_remix": "false",
     "csa_view_mode": "console",
     "name_suffix": "_2022",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-02-26T00:34:21.100+00:00\",\"changed\":[\"cloned from \\\"CSA U8L12-L1\\\"\"],\"cloned_from\":\"CSA U8L12-L1\"},{\"changed_at\":\"2022-05-15 00:23:24 +0000\",\"changed\":[\"project_template_level_name\",\"long_instructions\",\"csa_view_mode\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"

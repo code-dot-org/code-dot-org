@@ -1,18 +1,20 @@
-import {expect} from '../../../util/reconfiguredChai';
-import {stub} from 'sinon';
-import createP5Wrapper from '../../../util/gamelab/TestableP5Wrapper';
-import CoreLibrary from '@cdo/apps/p5lab/spritelab/CoreLibrary';
+import {stub} from 'sinon'; // eslint-disable-line no-restricted-imports
+
+import {
+  workspaceAlertTypes,
+  displayWorkspaceAlert,
+} from '@cdo/apps/code-studio/projectRedux';
 import {commands as spriteCommands} from '@cdo/apps/p5lab/spritelab/commands/spriteCommands';
 import {
   MAX_NUM_SPRITES,
   SPRITE_WARNING_BUFFER,
 } from '@cdo/apps/p5lab/spritelab/constants';
-import msg from '@cdo/locale';
-import {
-  workspaceAlertTypes,
-  displayWorkspaceAlert,
-} from '@cdo/apps/code-studio/projectRedux';
+import CoreLibrary from '@cdo/apps/p5lab/spritelab/CoreLibrary';
 import * as redux from '@cdo/apps/redux';
+import msg from '@cdo/locale';
+
+import createP5Wrapper from '../../../util/gamelab/TestableP5Wrapper';
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('SpriteLab Core Library', () => {
   let coreLibrary;

@@ -1,15 +1,18 @@
+import Link from '@code-dot-org/component-library/link';
+import orderBy from 'lodash/orderBy';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
-import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
+
 import i18n from '@cdo/locale';
+
+import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import wrappedSortable from '../tables/wrapped_sortable';
-import orderBy from 'lodash/orderBy';
-import PercentAnsweredCell from './PercentAnsweredCell';
-import color from '@cdo/apps/util/color';
-import MultipleChoiceSurveyQuestionDialog from './MultipleChoiceSurveyQuestionDialog';
+
 import {multipleChoiceDataPropType} from './assessmentDataShapes';
+import MultipleChoiceSurveyQuestionDialog from './MultipleChoiceSurveyQuestionDialog';
+import PercentAnsweredCell from './PercentAnsweredCell';
 
 export const COLUMNS = {
   QUESTION: 0,
@@ -93,12 +96,17 @@ class MultipleChoiceSurveyOverviewTable extends Component {
   ) => {
     return (
       <div>
-        <a
-          style={styles.link}
-          onClick={() => this.selectQuestion(rowData.questionNumber - 1)}
+        <Link
+          size="s"
+          onClick={e => {
+            // Link defaults href to "#"; suppress the page-top jump since this
+            // really opens a modal rather than navigating.
+            e.preventDefault();
+            this.selectQuestion(rowData.questionNumber - 1);
+          }}
         >
           {`${rowData.questionNumber}. ${question}`}
-        </a>
+        </Link>
       </div>
     );
   };
@@ -248,9 +256,6 @@ const styles = {
   },
   questionCell: {
     height: MIN_ROW_HEIGHT,
-  },
-  link: {
-    color: color.teal,
   },
 };
 

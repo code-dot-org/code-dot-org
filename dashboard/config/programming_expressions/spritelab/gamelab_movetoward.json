@@ -1,30 +1,30 @@
 {
   "key": "gamelab_moveToward",
   "name": "move toward",
-  "category": "Sprites",
+  "category": "Actions",
   "category_key": "actions",
   "block_name": "gamelab_moveToward",
   "content": "Sprites moves a specified number of pixels towards a location.\r\n\r\nRather than specify an exact direction to move in, this block lets the sprite move towards a location. This can be useful when you want a sprite to target something or chase another sprite.",
   "examples": [
     {
-      "name": "Example 3",
-      "description": "No matter where the target is, the pick will always get a bullseye. Press the ‘t’ key to throw the pick.\r\n",
+      "name": "Example 1",
+      "description": "No matter where the target is, the pick will always get a bullseye. Hold down the ‘t’ key to throw the pick to the target.\n",
       "app": "https://studio.code.org/projects/spritelab/irjSXwc-K5iF-8qJWgJt3gk1m8Oy2hsJso_hVUnhCvQ",
       "image": null,
       "app_display_type": "embedAppWithCode",
-      "embed_app_with_code_height": 310
+      "embed_app_with_code_height": "500"
     },
     {
-      "name": "Example 1",
-      "description": "The dog loves chasing the bone! Click and hold on the bone to drag it around the display, and press the spacebar to have the dog chase it. \r\n",
+      "name": "Example 2",
+      "description": "The dog loves chasing the bone! Click and hold on the bone to drag it around the display, and hold down the spacebar to have the dog chase it. \n",
       "app": "https://studio.code.org/projects/spritelab/2V6kx4dXNqnFSuUDovzaf0H2Qh6zlDypPco26OI4h94",
       "image": null,
       "app_display_type": "embedAppWithCode",
       "embed_app_with_code_height": 310
     },
     {
-      "name": "Example 2",
-      "description": "This project has the same function as the one above but uses the “chasing” behavior to allow the dog to chase the bone. \r\n",
+      "name": "Example 3",
+      "description": "This project has the same function as the one above but uses the “chasing” behavior to automate the dog to chase the bone (and therefore doesn't use the move pixels toward block).\n",
       "app": "https://studio.code.org/projects/spritelab/vEYWNKztbq0ZhHtA-6ivdo1IcDiNzmVPSEr6uDV4uv0",
       "image": null,
       "app_display_type": "embedAppWithCode",

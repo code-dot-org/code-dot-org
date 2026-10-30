@@ -1,0 +1,14 @@
+name 'ai-and-algorithmic-decisions-postassessment-q7_2026'
+
+question 'A music app needs a feature: when the current volume is above 80, show a "Turn it down?" message; otherwise, do nothing. Which structure is the right fit?'
+
+wrong 'A function with no parameters.'
+wrong 'A variable that stores the volume.'
+right 'An if/else statement that checks whether the volume is above 80 and shows the message only when that is true.'
+wrong 'A loop that repeats until the volume changes.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 5
+MARKDOWN

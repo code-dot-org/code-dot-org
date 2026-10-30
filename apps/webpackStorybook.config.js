@@ -1,8 +1,9 @@
-const webpack = require('webpack');
-const path = require('path');
+import path from 'path';
+import webpack from 'webpack';
 
-const {WEBPACK_BASE_CONFIG} = require('./webpack.config');
-const envConstants = require('./envConstants');
+import {webpack as DynamicStoryPlugin} from './.storybook/unplugin';
+import envConstants from './envConstants';
+import {WEBPACK_BASE_CONFIG} from './webpack.config';
 
 // Customize webpack config for storybook.
 // @param {Object} sbConfig - Webpack configuration from storybook library.
@@ -10,12 +11,14 @@ function storybookConfig(sbConfig) {
   return {
     ...sbConfig,
     // Overwrite aliases
+    devtool: 'inline-source-map',
     resolve: {
       ...sbConfig.resolve,
       ...WEBPACK_BASE_CONFIG.resolve,
       alias: {
         ...WEBPACK_BASE_CONFIG.resolve.alias,
-        '@cdo/apps/lib/util/firehose': path.resolve(__dirname, 'test', 'util'),
+        ...sbConfig.resolve.alias,
+        '@cdo/apps/metrics/firehose': path.resolve(__dirname, 'test', 'util'),
       },
     },
     // Overwrite rules
@@ -40,6 +43,7 @@ function storybookConfig(sbConfig) {
         ),
         PISKEL_DEVELOPMENT_MODE: JSON.stringify(false),
       }),
+      DynamicStoryPlugin(),
     ],
   };
 }

@@ -1,7 +1,8 @@
 import $ from 'jquery';
-import i18n from '@cdo/locale';
-import {hashString, findProfanity} from '@cdo/apps/utils';
+
 import Sounds from '@cdo/apps/Sounds';
+import {hashString, findProfanity} from '@cdo/apps/utils';
+import i18n from '@cdo/locale';
 
 /**
  * A packaged response for a requested sound. Used for caching and for playing sound bytes.

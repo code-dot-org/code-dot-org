@@ -1,8 +1,9 @@
-import React from 'react';
-import i18n from '@cdo/locale';
-import color from '../util/color';
-import trackEvent from '../util/trackEvent';
 import _ from 'lodash';
+import React from 'react';
+
+import i18n from '@cdo/locale';
+
+import color from '../util/color';
 
 /**
  * If the browser supports window.visualViewport, and we detect that the user
@@ -32,17 +33,11 @@ export default class FixZoomHelper extends React.Component {
     const isZoomed = this.isZoomed();
 
     if (this.state.mode !== 'none' && !isZoomed) {
-      const lastMode = this.state.mode;
-
       // If transitioning from zoomed to non-zoomed, then mode goes to "none".
       this.setState({mode: 'none'});
-
-      trackEvent('Research', 'FixZoomHelper', `${lastMode}-to-none`);
     } else if (this.state.mode === 'none' && isZoomed) {
       // If transitioning from non-zoomed to zoomed, then mode goes to "button".
       this.setState({mode: 'button'});
-
-      trackEvent('Research', 'FixZoomHelper', 'none-to-button');
     }
 
     // Also update the viewport information.
@@ -76,14 +71,10 @@ export default class FixZoomHelper extends React.Component {
 
   onButtonClick = () => {
     this.setState({mode: 'helper'});
-
-    trackEvent('Research', 'FixZoomHelper', 'button-to-helper');
   };
 
   onHelperClick = () => {
     this.setState({mode: 'button'});
-
-    trackEvent('Research', 'FixZoomHelper', 'helper-to-button');
   };
 
   render() {
@@ -96,7 +87,10 @@ export default class FixZoomHelper extends React.Component {
       return (
         <div onClick={this.onButtonClick} style={{...styles.button, top, left}}>
           <div style={styles.buttonIcon}>
-            <span style={styles.icon} className="fa fa-search-minus" />
+            <span
+              style={styles.icon}
+              className="fa-solid fa-magnifying-glass-minus"
+            />
             &nbsp;
           </div>
           <div style={styles.buttonText}>{i18n.fixZoomHelperZoomOut()}</div>
@@ -111,9 +105,9 @@ export default class FixZoomHelper extends React.Component {
           <div onClick={this.onHelperClick} style={styles.helper} />
           <div style={{...styles.helperInner, top, left}}>
             <div style={styles.helperInnerIcons}>
-              <span className="fa fa-arrow-circle-o-right" />
+              <span className="fa-regular fa-circle-arrow-right" />
               &nbsp;
-              <span className="fa fa-arrow-circle-o-left" />
+              <span className="fa-regular fa-circle-arrow-left" />
             </div>
             {i18n.fixZoomHelperPinch()}
             <br />

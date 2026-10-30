@@ -1,7 +1,8 @@
 /** @file Tests for P5GroupWrapper, our extension of p5.play Group */
-import {spy} from 'sinon';
-import {expect} from '../../util/reconfiguredChai';
+import {spy} from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import {createStatefulP5Wrapper} from '../../util/gamelab/TestableP5Wrapper';
+import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 import {sandboxDocumentBody} from '../../util/testUtils';
 
 describe('P5GroupWrapper', function () {

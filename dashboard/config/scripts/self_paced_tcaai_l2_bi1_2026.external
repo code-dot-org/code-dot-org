@@ -1,0 +1,83 @@
+name 'self-paced-TCaAI-L2-BI1_2026'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Big Idea 1: Humans Shape AI Outputs
+
+One of the first major ideas students encounter in **Thinking Critically About AI** is that AI systems do not generate outputs randomly. Instead, outputs are shaped by prompts and the examples and training data AI learns from.
+
+## What Students Learn
+
+<div style="display:flex; justify-content:space-between; gap:14px; margin:25px 0px;">
+
+  <div style="background-color:#F5F7F8; padding:18px; border-radius:10px; width:32%; text-align:center;">
+    <p style="font-size:16px; font-weight:bold; margin-top:0;">
+      Prompts Shape Outputs
+    </p>
+    <p style="font-size:16px; margin-bottom:0;">
+      Students learn that the details, context, and goals included in prompts directly influence what AI generates.
+    </p>
+  </div>
+
+  <div style="background-color:#F5F7F8; padding:18px; border-radius:10px; width:32%; text-align:center;">
+    <p style="font-size:16px; font-weight:bold; margin-top:0;">
+      AI Predicts Patterns
+    </p>
+    <p style="font-size:16px; margin-bottom:0;">
+      Students investigate how AI systems generate outputs by predicting patterns from training data.
+    </p>
+  </div>
+
+  <div style="background-color:#F5F7F8; padding:18px; border-radius:10px; width:32%; text-align:center;">
+    <p style="font-size:16px; font-weight:bold; margin-top:0;">
+      Assumptions Become Defaults
+    </p>
+    <p style="font-size:16px; margin-bottom:0;">
+      Students explore how repeated patterns in training data can create biased or incomplete outputs.
+    </p>
+  </div>
+
+</div>
+
+A major instructional goal of this section of the unit is helping students recognize that AI outputs are not neutral or objective.
+
+## Across the Unit
+
+
+Throughout the first half of the unit, students begin moving away from thinking about AI as “magic” or “thinking like a human” and toward understanding that AI systems predict patterns based on what they have seen before.
+
+* **Lesson 1** introduces prompting and systematic testing through AI image generation
+* **Lesson 3** explores how large language models predict patterns in text
+* **Lesson 4** investigates how AI-generated images reflect assumptions embedded in training data
+* **Lesson 5** helps students understand how prompts containing context and goals shape chatbot behavior
+
+Across these lessons, students gradually build a more accurate mental model of how AI systems generate outputs and why those systems can sometimes produce biased, incomplete, or unexpected results.
+
+<div style="border-top: 1px solid #048899; margin: 30px 0px;"></div>
+
+<div style="background-color:#B7E0E5; padding:20px; border-radius:10px; margin:20px 0px; overflow:auto;">
+
+<img 
+src="https://images.code.org/46f3d4a4d8d295815388124665e97d48-image-1779227146075.jpg" 
+alt="" 
+style="width:30%; border-radius:10px; margin:0px 0px 10px 15px; float:right;">
+
+<p style="font-size:16px; font-weight:bold; margin-top:0;">
+REAL WORLD CONNECTION: Why Does TikTok “Know” What You Like?
+</p>
+
+<p style="font-size:16px;">
+Apps like TikTok, YouTube, Spotify, and Netflix use AI recommendation systems to predict what users are most likely to watch, listen to, or click next.
+</p>
+
+<p style="font-size:16px;">
+These systems learn from patterns in user behavior — including what people pause on, replay, skip, search for, or share.
+</p>
+
+<p style="font-size:16px; margin-bottom:0;">
+Over time, the AI begins making assumptions about what users like and continuously reshapes their feeds based on those predictions.
+</p>
+
+</div>
+MARKDOWN

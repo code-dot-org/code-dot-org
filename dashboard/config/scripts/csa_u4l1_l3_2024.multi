@@ -28,7 +28,7 @@ public int getMin(int[] numbers) {
 
 What modifications need to be made for this code to work as intended?
 
-**Option I:** Change the line `int i = 1;` to `int i = 0;`.
+**Option I:** Change the line `int index = 1;` to `int index = 0;`.
 
 **Option II:** Change the body of the `while` loop to
 ```

@@ -1,0 +1,48 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-10-14T18:45:54.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Your Skills and Interests\r\n\r\n###Do This:\r\n\r\n1. Share with the chatbot about your skills and interests.\r\n\r\n:::details [Use these sentence starters from your Unit Guide]\r\n- I like to spend time...\r\n- I'm happiest when...\r\n- I'm most confident when...\r\n- I like learning about...\r\n- Some other skills I have are...\r\n:::\r\n&nbsp\r\n2. When you feel like you've shared enough about yourself, prompt the chatbot with the following:\r\n\r\n> Based on what I've shared, would you recommend I explore careers related to People, Things, or Ideas? Explain why.",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a sounding board and career counselor. Here are your tasks:\n1. When provided with skills and interests, prompt users with clarifying questions and questions that help them expand and reflect on what they've shared.\n2. When a user has expanded and provided detail about a specific interest or skill, prompt them to share about additional skills and interests.\n3. When prompted by the user or when they have shared more than 4 skills and/or interests, help provide them with a recommendation of which category of careers they should explore: People, Things, or Ideas. Here are the definitions to use for these categories of careers:\nPeople: Careers focused on collaboration, communication, and helping others \nThings: Careers that involve tools, machines, or systems\nIdeas: Careers centered on big-picture thinking, problem-solving, and creativity\n\n\nMake sure to explain why you have suggested this characteristic based on what they have shared in the chat already. Here is a list of characteristics/skills to draw from, but you can include additional ones:\nCreative\nOrganized\nDesigning\nWorking with tools/machines\nProblem-solver \nCurious \nTroubleshooter\nCollaborative\nCommunication\nLearning new things\nAnalytical\nTeamwork\nDetail-oriented\n\n\n\nAlways keep responses to short 1-2 sentences.\nDo not answer any questions that are not related to careers in computing or emerging technologies. ",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "name_suffix": "_pilot-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-14T18:45:54.016+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson1-level1-launch_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson1-level1-launch_2025\"}]"
+}]]></config>
+</Aichat>

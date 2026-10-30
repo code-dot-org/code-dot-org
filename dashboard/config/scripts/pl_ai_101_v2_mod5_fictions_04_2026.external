@@ -1,0 +1,95 @@
+name 'pl-ai-101-V2-mod5-fictions-04_2026'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Tips and Tricks for Spotting AI Fictions
+
+Developing habits of skepticism and verification is the best way to prevent the spread of misinformation through AI fictions.
+
+>**💬 Quick Reflection:** When have you encountered an AI response that didn’t seem quite right? What made you question it?
+
+Use the guide below to identify common signs of AI fiction and strategies you can use to respond.
+
+<div style="max-width:90%; margin:0 auto; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; color:#2F2F2F;">
+
+<div style="border:2px solid #000; border-radius:14px; overflow:hidden;">
+
+<!-- Header -->
+<div style="display:grid; grid-template-columns:1fr 1fr;">
+<div style="background:#FDF4F2; padding:8px 12px; font-weight:700; font-size:20px; border-right:1px solid #DDD;">
+🚩 Red Flags to Watch For
+</div>
+<div style="background:#F2FBF8; padding:8px 12px; font-weight:700; font-size:20px;">
+🛠 What to Do Next
+</div>
+</div>
+
+<!-- Content -->
+<div style="display:grid; grid-template-columns:1fr 1fr; gap:6px; padding:8px;">
+
+<!-- Row 1 -->
+<div style="background:#F8F6F6; border-radius:10px; padding:6px;">
+<strong style="font-size:17px;">Confident answers without evidence</strong><br>
+<span style="font-size:14px; line-height:1.3; color:#555;">
+The response sounds certain but provides no sources or explanation.
+</span>
+</div>
+
+<div style="background:#FAFBFC; border-radius:10px; padding:6px;">
+<strong style="font-size:17px;">Ask follow-up questions</strong><br>
+<span style="font-size:14px; line-height:1.3; color:#555;">
+Request evidence, examples, or ask the AI to explain its reasoning.
+</span>
+</div>
+
+<!-- Row 2 -->
+<div style="background:#F8F6F6; border-radius:10px; padding:6px;">
+<strong style="font-size:17px;">Vague, incomplete, or inconsistent information</strong><br>
+<span style="font-size:14px; line-height:1.3; color:#555;">
+Details are missing, overly general, or don't logically fit together.
+</span>
+</div>
+
+<div style="background:#FAFBFC; border-radius:10px; padding:6px;">
+<strong style="font-size:17px;">Ask for more specifics</strong><br>
+<span style="font-size:14px; line-height:1.3; color:#555;">
+Prompt for clearer explanations, examples, or additional detail.
+</span>
+</div>
+
+<!-- Row 3 -->
+<div style="background:#F8F6F6; border-radius:10px; padding:6px;">
+<strong style="font-size:17px;">Facts or citations that seem questionable</strong><br>
+<span style="font-size:14px; line-height:1.3; color:#555;">
+Claims, quotes, or references cannot be easily verified.
+</span>
+</div>
+
+<div style="background:#FAFBFC; border-radius:10px; padding:6px;">
+<strong style="font-size:17px;">Cross-check with reliable sources</strong><br>
+<span style="font-size:14px; line-height:1.3; color:#555;">
+Verify important information using trusted sources or another tool.
+</span>
+</div>
+
+<!-- Row 4 -->
+<div style="background:#F8F6F6; border-radius:10px; padding:6px;">
+<strong style="font-size:17px;">The response seems "too good to be true"</strong><br>
+<span style="font-size:14px; line-height:1.3; color:#555;">
+The answer is polished but may oversimplify or overlook important nuance.
+</span>
+</div>
+
+<div style="background:#FAFBFC; border-radius:10px; padding:6px;">
+<strong style="font-size:17px;">Use professional judgment</strong><br>
+<span style="font-size:14px; line-height:1.3; color:#555;">
+Treat AI as a starting point and decide what to trust, revise, or verify.
+</span>
+</div>
+
+</div>
+</div>
+
+</div>
+MARKDOWN

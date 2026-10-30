@@ -1,0 +1,8 @@
+name 'csaif_pl_ai_03_06_-rev_v2'
+display_name 'Prompting AI Chat'
+description 'Pick the same option below as you picked in the previous level. Prompt the AI Chat to select two of the six people.'
+
+sublevels
+level 'problem-solving-with-ai-lesson6-level4a_-rev_v2'
+level 'problem-solving-with-ai-lesson6-level4b_-rev_v2'
+level 'problem-solving-with-ai-lesson6-level4c_-rev_v2'

@@ -1,0 +1,14 @@
+name 'problem-solving-with-ai-preassessment-q4_2025-pilot_v2-2025'
+
+question 'What helps large language models (LLMs) make accurate predictions?'
+
+right 'They analyze patterns in training data using neural networks.'
+wrong 'They access the Internet in real time to find correct information.'
+wrong 'They memorize exact answers for every possible question.'
+wrong 'They rely on human reasoning and logic.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 3: The AI's Brain
+MARKDOWN

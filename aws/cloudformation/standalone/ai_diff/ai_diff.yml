@@ -1,0 +1,382 @@
+AWSTemplateFormatVersion: 2010-09-09
+
+Description: Knowledge Base and data sources for the AI Differentiation chat feature.
+
+Parameters:  
+  Environment:
+    Type: String
+    Description: "Environment being deployed to (ex: production, test)"
+  VectorIndexCreated:
+    Type: String
+    Description: "Whether the vector index has been created"
+    Default: "false"
+    AllowedValues:
+      - "true"
+      - "false"
+
+Conditions:
+  CreateKnowledgeBase: !Equals [!Ref VectorIndexCreated, "true"]
+  AllowPublicAccessToCollection: !Equals [!Ref VectorIndexCreated, "false"]
+
+Resources:
+  # Knowledge Base - Requres a vector index to be created manually in the OpenSearch Collection
+  AiDiffKnowledgeBaseWithAoss:
+    Type: AWS::Bedrock::KnowledgeBase
+    Condition: CreateKnowledgeBase
+    Properties:
+      Name: !Sub ai-diff-${Environment}
+      Description: "Embedded lesson plans and supporting documents for contextual differentiation chat with AI Teaching assistant"
+      RoleArn: !GetAtt AiDiffKnowledgeBaseRole.Arn
+      KnowledgeBaseConfiguration:
+        Type: "VECTOR"
+        VectorKnowledgeBaseConfiguration:
+          EmbeddingModelArn: "arn:aws:bedrock:us-east-1::foundation-model/amazon.titan-embed-text-v2:0"
+          EmbeddingModelConfiguration:
+            BedrockEmbeddingModelConfiguration:
+              Dimensions: 1024
+      StorageConfiguration:
+        Type: "OPENSEARCH_SERVERLESS"
+        OpensearchServerlessConfiguration:
+          CollectionArn: !GetAtt AiDiffCollection.Arn
+          VectorIndexName: "ai-diff-index"
+          FieldMapping:
+            VectorField: "ai-diff-vector-field"
+            TextField: "text"
+            MetadataField: "metadata"
+
+  AiDiffDataSource:
+    Type: AWS::Bedrock::DataSource
+    DependsOn: AiDiffKnowledgeBaseWithAoss
+    Condition: CreateKnowledgeBase
+    Properties:
+      KnowledgeBaseId: !Ref AiDiffKnowledgeBaseWithAoss
+      Name: "AI_Differentiation_data"
+      Description: "Lesson Plans and Supporting documents for code.org lessons"
+      DataDeletionPolicy: "RETAIN"
+      DataSourceConfiguration:
+        Type: "S3"
+        S3Configuration:
+          BucketArn: !GetAtt AiDiffS3Bucket.Arn
+          InclusionPrefixes: ["live/"]
+
+  # S3 bucket for AI Differentiation data
+  AiDiffS3Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub cdo-ai-diff-${Environment}
+      VersioningConfiguration:
+        Status: Enabled
+      LifecycleConfiguration:
+        Rules:
+          - Id: "ExpireOldVersions"
+            Status: Enabled
+            NoncurrentVersionExpirationInDays: 365
+
+  # OpenSearch resources
+  AiDiffCollection:
+    Type: 'AWS::OpenSearchServerless::Collection'
+    Properties:
+      Name: !Sub ai-diff-${Environment}
+      Type: VECTORSEARCH
+      Description: AI Differentiation search collection
+    DependsOn:
+      - EncryptionPolicy
+  EncryptionPolicy:
+    Type: 'AWS::OpenSearchServerless::SecurityPolicy'
+    Properties:
+      # Note: The policy name has a max length of 32 characters
+      Name: !Sub ai-diff-${Environment}-encrypt
+      Type: encryption
+      Policy: !Sub |
+        {
+          "AWSOwnedKey": true,
+          "Rules": [
+            {
+              "ResourceType": "collection",
+              "Resource": ["collection/ai-diff-${Environment}"]
+            }
+          ]
+        }
+  NetworkPolicy:
+    Type: 'AWS::OpenSearchServerless::SecurityPolicy'
+    Properties:
+      Name: !Sub ai-diff-${Environment}-network
+      Type: network
+      # On the first deployment, the collection must be public to allow for index creation
+      Policy: !If 
+        - AllowPublicAccessToCollection
+        - !Sub |
+          [
+            {
+              "Rules": [
+                {
+                  "ResourceType": "collection",
+                  "Resource": ["collection/ai-diff-${Environment}"]
+                }
+              ],
+              "AllowFromPublic": true
+            }
+          ]
+        - !Sub |
+          [
+            {
+              "Rules": [
+                {
+                  "ResourceType": "collection",
+                  "Resource": ["collection/ai-diff-${Environment}"]
+                }
+              ],
+              "AllowFromPublic": false,
+              "SourceServices": [ "bedrock.amazonaws.com" ]
+            }
+          ]
+  DataPolicy:
+    Type: 'AWS::OpenSearchServerless::AccessPolicy'
+    Properties:
+      Name: !Sub ai-diff-${Environment}-data
+      Type: data
+      Policy: !Sub |
+        [
+          {
+            "Rules": [
+              {
+                "ResourceType": "index",
+                "Resource": [
+                  "index/ai-diff-${Environment}/*"
+                ],
+                "Permission": [
+                  "aoss:*",
+                  "aoss:UpdateIndex",
+                  "aoss:DescribeIndex",
+                  "aoss:ReadDocument",
+                  "aoss:WriteDocument",
+                  "aoss:CreateIndex"
+                ]
+              },
+              {
+                "ResourceType": "collection",
+                "Resource": [
+                  "collection/ai-diff-${Environment}"
+                ],
+                "Permission": [
+                  "aoss:*",
+                  "aoss:DescribeCollectionItems",
+                  "aoss:CreateCollectionItems",
+                  "aoss:UpdateCollectionItems"
+                ]
+              }
+            ],
+            "Principal": [
+              "${AiDiffKnowledgeBaseRole.Arn}",
+              "arn:aws:sts::${AWS::AccountId}:assumed-role/GoogleAdmin/*",
+              "arn:aws:sts::${AWS::AccountId}:assumed-role/Engineering_FullAccess/*"
+            ]
+          }
+        ]
+  AiDiffKnowledgeBaseRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Sub "AiDiffKnowledgeBaseRole_${Environment}"
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: "bedrock.amazonaws.com"
+            Action: "sts:AssumeRole"
+      Policies:
+        - PolicyName: "AiDiffKnowledgeBasePolicy"
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action:
+                  - "s3:ListBucket"
+                Resource:
+                  - !GetAtt AiDiffS3Bucket.Arn
+              - Effect: Allow
+                Action:
+                  - "s3:GetObject"
+                Resource:
+                  - !Sub "${AiDiffS3Bucket.Arn}/*"
+              - Effect: Allow
+                Action:
+                  - "aoss:APIAccessAll"
+                  - "bedrock:InvokeModel"
+                Resource:
+                  - !GetAtt AiDiffCollection.Arn
+                  - "arn:aws:bedrock:us-east-1::foundation-model/amazon.titan-embed-text-v2:0"
+
+  # Role for Bedrock Agent to access the knowledge base and OpenSearch collection
+  # TODO This is too permissive, should be scoped down to only the actions needed
+  # for the AI Differentiation chat feature
+  AiDiffBedrockAgentRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Sub "AiDiffBedrockAgentRole_${Environment}"
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: "bedrock.amazonaws.com"
+            Action: "sts:AssumeRole"
+      Policies:
+        - PolicyName: "AiDiffBedrockAgentPolicy"
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action:
+                  - "bedrock:*"
+                Resource: "*"
+
+  # -----------
+  # Custom Resource to create the vector index in the OpenSearch collection
+  # Work In Progress :(
+  # As an alternative, deploy this with VectorIndexCreated set to false, then
+  # manually create the index in the OpenSearch console, then redeploy with
+  # VectorIndexCreated set to true
+  # -----------
+
+  # CreateVectorIndex:
+  #   Type: Custom::CreateVectorIndex
+  #   Properties:
+  #     ServiceTimeout: 20 
+  #     ServiceToken: !GetAtt CreateVectorIndexCustomResourceLambda.Arn
+  #     OpenSearchEndpoint: !GetAtt AiDiffCollection.CollectionEndpoint
+  #     VectorIndexName: ai-diff-index
+  #     VectorFieldName: ai-diff-vector-field
+
+  # CreateVectorIndexCustomResourceLambda:
+  #   Type: AWS::Lambda::Function
+  #   Properties:
+  #     Handler: index.handler
+  #     Role: !GetAtt CreateVectorIndexCustomResourceLambdaRole.Arn
+  #     Runtime: nodejs18.x
+  #     Timeout: 10
+  #     Code:
+  #       ZipFile: |
+  #         const https = require('https');
+  #         const response = require('cfn-response');
+
+  #         exports.handler = async function (event, context) {
+  #           try {
+  #             console.log('Received event:', JSON.stringify(event, null, 2));
+            
+  #             if (event.RequestType === 'Delete') {
+  #               console.log("DELETE is a no-op, exiting")
+  #               response.send(event, context, response.SUCCESS);
+  #             }
+              
+  #             const openSearchEndpoint = event.ResourceProperties.OpenSearchEndpoint;
+  #             const vectorIndexName = event.ResourceProperties.VectorIndexName;
+  #             const vectorFieldName = event.ResourceProperties.VectorFieldName;
+            
+  #             const requestBody = JSON.stringify({
+  #               settings: {
+  #                 index: { knn: true, "knn.algo_param.ef_search": 512 }
+  #               },
+  #               mappings: {
+  #                 properties: {
+  #                   [vectorFieldName]: {
+  #                     type: "knn_vector",
+  #                     dimension: 1024,
+  #                     method: {
+  #                       name: "hnsw",
+  #                       engine: "faiss",
+  #                       parameters: {},
+  #                       space_type: "l2"
+  #                     }
+  #                   },
+  #                   text: { type: "text", index: "true" },
+  #                   metadata: { type: "text", index: "false" }
+  #                 }
+  #               }
+  #             });
+            
+  #             const options = {
+  #               hostname: openSearchEndpoint,
+  #               path: `/${vectorIndexName}`,
+  #               method: 'PUT',
+  #               headers: {
+  #                 'Content-Type': 'application/json',
+  #                 'Content-Length': Buffer.byteLength(requestBody)
+  #               }
+  #             };
+            
+  #             try {
+  #               const response = await sendRequest(options, requestBody);
+  #               console.log('Response:', response);
+  #               response.send(event, context, response.SUCCESS);
+  #             } catch (error) {
+  #               console.error('OpenSearch Error:', error);
+  #               response.send(event, context, response.FAILED, {Status: 'FAILED', Reason: `Error updating OpenSearch: ${error.message}`});
+  #             }
+  #           } catch (error) {
+  #             console.error('Lambda Error:', error);
+  #             response.send(event, context, response.FAILED, {Status: 'FAILED', Reason: `Error executing Custom Resource Lambda: ${error.message}`});
+  #           }
+  #         };
+
+  #         // Helper function to send HTTPS requests
+  #         const sendRequest = (options, body) => {
+  #           return new Promise((resolve, reject) => {
+  #             const req = https.request(options, (res) => {
+  #               let data = '';
+
+  #               res.on('data', (chunk) => {
+  #                 data += chunk;
+  #               });
+
+  #               res.on('end', () => {
+  #                 if (res.statusCode >= 200 && res.statusCode < 300) {
+  #                   resolve(data);
+  #                 } else {
+  #                   reject(new Error(`Request failed with status code ${res.statusCode}: ${data}`));
+  #                 }
+  #               });
+  #             });
+
+  #             req.on('error', (error) => reject(error));
+  #             req.write(body);
+  #             req.end();
+  #           });
+  #         };
+
+  # CreateVectorIndexCustomResourceLambdaRole:
+  #   Type: AWS::IAM::Role
+  #   Properties:
+  #     AssumeRolePolicyDocument:
+  #       Version: "2012-10-17"
+  #       Statement:
+  #         - Effect: "Allow"
+  #           Principal:
+  #             Service: "lambda.amazonaws.com"
+  #           Action: "sts:AssumeRole"
+  #     Policies:
+  #       - PolicyName: "CreateVectorIndexCustomResourceLambdaPolicy"
+  #         PolicyDocument:
+  #           Version: "2012-10-17"
+  #           Statement:
+  #             - Effect: "Allow"
+  #               Action:
+  #                 - "logs:CreateLogGroup"
+  #                 - "logs:CreateLogStream"
+  #                 - "logs:PutLogEvents"
+  #               Resource: "*"
+  #             # - Effect: "Allow"
+  #             #   Action:
+  #             #     - "opensearch:ESHttpPut"
+  #             #   Resource: "*"
+
+
+Outputs:
+  # TODO: maybe create a "stack secret" instead and load it into dashboard config.yml?
+  # What's the right way to get this id into dashboard and minimize downtime if the KB is recreated?
+  KnowledgeBaseId:
+    Description: "The ID of the AI Differentiation knowledge base"
+    Condition: CreateKnowledgeBase
+    Value: !Ref AiDiffKnowledgeBaseWithAoss
+    Export:
+      Name: !Sub "ai-diff-${Environment}-knowledge-base-id"

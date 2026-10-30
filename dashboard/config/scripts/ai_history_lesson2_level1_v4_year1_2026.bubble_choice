@@ -1,0 +1,16 @@
+name 'ai-history-lesson2-level1-v4_year1-2026'
+display_name 'AI History Contributors'
+description 'Choose a contributor to explore how their work, ideas, or advocacy shaped the development and impact of artificial intelligence.'
+
+sublevels
+level 'ai-history-lesson2-level1a-v3_year1-2026'
+level 'ai-history-lesson2-level1b-v3_year1-2026'
+level 'ai-history-lesson2-level1c-v3_year1-2026'
+level 'ai-history-lesson2-level1d-v4_year1-2026'
+level 'ai-history-lesson2-level1e-v4_year1-2026'
+level 'ai-history-lesson2-level1f-v4_year1-2026'
+level 'ai-history-lesson2-level1g-v4_year1-2026'
+level 'ai-history-lesson2-level1h-v4_year1-2026'
+
+uses_lab2
+navigation_type 'next_level'

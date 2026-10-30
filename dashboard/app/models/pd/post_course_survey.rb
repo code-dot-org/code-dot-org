@@ -26,6 +26,20 @@
 
 module Pd
   class PostCourseSurvey < ApplicationRecord
+    export_to_analytics
+
+    data_classification(
+      id: :restricted,
+      form_id: :restricted,
+      submission_id: :restricted,
+      answers: :restricted,
+      year: :restricted,
+      user_id: :restricted,
+      course: :restricted,
+      created_at: :restricted,
+      updated_at: :restricted,
+    )
+
     include JotFormBackedForm
 
     VALID_YEARS = [

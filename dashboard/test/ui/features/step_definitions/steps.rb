@@ -1,4 +1,5 @@
 require 'cdo/url_converter'
+require 'cdo/brand'
 
 DEFAULT_WAIT_TIMEOUT = 2.minutes
 SHORT_WAIT_TIMEOUT = 30.seconds
@@ -14,6 +15,14 @@ def wait_until(timeout = DEFAULT_WAIT_TIMEOUT)
     raise unless exception.message.include?('no such element')
     false
   rescue Selenium::WebDriver::Error::StaleElementReferenceError
+    false
+  end
+end
+
+def wait_until_interactable(timeout = DEFAULT_WAIT_TIMEOUT)
+  wait_until(timeout) do
+    yield
+  rescue Selenium::WebDriver::Error::ElementNotInteractableError
     false
   end
 end
@@ -63,11 +72,10 @@ end
 
 def replace_hostname(url)
   UrlConverter.new(
-    dashboard_host: ENV['DASHBOARD_TEST_DOMAIN'],
-    pegasus_host: ENV['PEGASUS_TEST_DOMAIN'],
-    hourofcode_host: ENV['HOUROFCODE_TEST_DOMAIN'],
-    csedweek_host: ENV['CSEDWEEK_TEST_DOMAIN'],
-    advocacy_host: ENV['ADVOCACY_TEST_DOMAIN']
+    dashboard_host: ENV.fetch('DASHBOARD_TEST_DOMAIN', nil),
+    pegasus_host: ENV.fetch('PEGASUS_TEST_DOMAIN', nil),
+    hourofcode_host: ENV.fetch('HOUROFCODE_TEST_DOMAIN', nil),
+    csedweek_host: ENV.fetch('CSEDWEEK_TEST_DOMAIN', nil),
   ).replace_origin(url)
 end
 
@@ -83,7 +91,15 @@ end
 def navigate_to(url)
   Retryable.retryable(on: RSpec::Expectations::ExpectationNotMetError, sleep: 10, tries: 3) do
     with_read_timeout(DEFAULT_WAIT_TIMEOUT + 5.seconds) do
+      root = @browser.find_element(css: ':root')
       @browser.navigate.to url
+      # Wait until the document has actually changed
+      if root
+        wait_until do
+          root != @browser.find_element(css: ':root')
+        end
+      end
+      # Then, wait until the document is done loading
       wait_until do
         @browser.execute_script('return document.readyState;') == 'complete'
       end
@@ -93,21 +109,51 @@ def navigate_to(url)
   install_js_error_recorder
 end
 
+def shadow_element(shadow_host, element_selector)
+  shadow_root = nil
+
+  wait_until do
+    shadow_root = @browser.find_element(:css, shadow_host).shadow_root
+  end
+
+  @browser.execute_script(<<~JS, shadow_root, element_selector)
+    const shadowDOM = arguments[0].querySelector('*');
+    const selector = arguments[1];
+    return $(shadowDOM).find(selector)[0];
+  JS
+end
+
 Given /^I am on "([^"]*)"$/ do |url|
   check_window_for_js_errors('before navigation')
-  navigate_to replace_hostname(url)
+  updated_url = replace_hostname(url)
+  begin
+    navigate_to updated_url
+  rescue Selenium::WebDriver::Error::TimeoutError => exception
+    if updated_url != @browser.current_url
+      puts "Timeout: I am not on #{updated_url} like I want."
+      puts "         I am on #{@browser.current_url} instead."
+    end
+    raise exception
+  end
 end
 
 And /^I take note of the current loaded page$/ do
   # Remember this page
   @current_page_body = @browser.find_element(:css, 'body')
+  @current_page_body_url = @browser.current_url
 end
 
 Then /^I wait until I am on a different page than I noted before$/ do
   # When we've seen a page before, look for a different page
   if @current_page_body
-    wait_until do
-      @current_page_body != @browser.find_element(:css, 'body')
+    begin
+      wait_until do
+        @current_page_body != @browser.find_element(:css, 'body')
+      end
+    rescue Selenium::WebDriver::Error::TimeoutError => exception
+      puts "Timeout: I am not still on #{@current_page_body_url} like I want."
+      puts "         I am on #{@browser.current_url} instead."
+      raise exception
     end
   end
 end
@@ -121,6 +167,10 @@ When /^I go to a new tab$/ do
   page_load('tab', blank_tab: true) do
     @browser.execute_script('window.open();')
   end
+end
+
+When /^I go back$/ do
+  @browser.execute_script('window.history.back();')
 end
 
 When /^I close the current tab$/ do
@@ -158,18 +208,30 @@ When /^I close the instructions overlay if it exists$/ do
   steps 'When I click selector "#overlay" if it exists'
 end
 
-When /^I wait for the page to fully load$/ do
+When /^I wait for the lab page to fully load$/ do
   steps <<-GHERKIN
     When I wait to see "#runButton"
     And I wait to see ".header_user"
     And I close the instructions overlay if it exists
+    And The header is finished animating
   GHERKIN
 end
 
 When /^I close the dialog$/ do
   # Add a wait to closing dialog because it's sometimes animated, now.
+  # Legacy BaseDialog renders `#x-close`; DSCO CustomDialog renders a button
+  # with `aria-label="Close"`. Both may coexist in the DOM (legacy dialogs
+  # stay mounted after being hidden), so match only the visible one.
+  script = <<~JS
+    var candidates = Array.from(document.querySelectorAll(
+      '#x-close, [role="dialog"] button[aria-label="Close"]'
+    ));
+    var el = candidates.find(function (n) { return n.offsetParent !== null; });
+    if (el) { el.click(); }
+    return !!el;
+  JS
+  wait_short_until {@browser.execute_script(script)}
   steps <<-GHERKIN
-    When I press "x-close"
     And I wait for 0.75 seconds
   GHERKIN
 end
@@ -216,9 +278,10 @@ Then /^I see "([.#])([^"]*)"$/ do |selector_symbol, name|
   @browser.find_element(selection_criteria)
 end
 
-When /^I wait until (?:element )?"([^"]*)" (?:has|contains) text "([^"]*)"$/ do |selector, text|
+When /^I wait until (?:element )?"([^"]*)" (?:has|contains) (placeholder )?text "([^"]*)"$/ do |selector, is_placeholder, text|
   wait_for_jquery
-  wait_until {@browser.execute_script("return $(#{selector.dump}).text();").include? text}
+  getter = is_placeholder ? "attr('placeholder')" : "text()"
+  wait_until {@browser.execute_script("return $(#{selector.dump}).#{getter};")&.include?(text)}
 end
 
 When /^I wait until (?:element )?"([^"]*)" does not (?:have|contain) text "([^"]*)"$/ do |selector, text|
@@ -232,8 +295,20 @@ When /^I wait until the first (?:element )?"([^"]*)" (?:has|contains) text "([^"
   wait_until {@browser.execute_script("return $(#{selector.dump}).first().text();").include? text}
 end
 
+When /^I wait until (?:element )?"([^"]*)" (?:has|contains) one or more integers$/ do |selector|
+  wait_for_jquery
+  wait_until do
+    element_text = @browser.execute_script("return $(#{selector.dump}).text();")
+    element_text.match?(/\d+/)
+  end
+end
+
 When /^I wait until (?:element )?"([^"]*)" is (not )?checked$/ do |selector, negation|
   wait_until {@browser.execute_script("return $(\"#{selector}\").is(':checked');") == negation.nil?}
+end
+
+def jquery_is_element_enabled(selector)
+  "return $(#{selector.dump}).is(':enabled') && $(#{selector.dump}).css('visibility') !== 'hidden';"
 end
 
 def jquery_is_element_visible(selector)
@@ -255,9 +330,23 @@ end
 
 When /^I wait until (?:element )?"([.#])([^"]*)" is (not )?enabled$/ do |selector_symbol, name, negation|
   selection_criteria = selector_symbol == '#' ? {id: name} : {class: name}
+  wait_for_element(selection_criteria, negation.nil?)
+end
+
+When /^I wait until element "([^"]*)" is (not )?enabled using jQuery$/ do |selector, negation|
+  wait_for_jquery
+  wait_until {@browser.execute_script(jquery_is_element_enabled(selector)) == negation.nil?}
+end
+
+When /^I wait until element with css selector "([^"]*)" is (not )?enabled$/ do |css_selector, negation|
+  selection_criteria = {css: css_selector}
+  wait_for_element(selection_criteria, negation.nil?)
+end
+
+def wait_for_element(selection_criteria, enabled)
   wait_until do
     element = @browser.find_element(selection_criteria)
-    element.enabled? == negation.nil?
+    element.enabled? == enabled
   end
 end
 
@@ -310,8 +399,17 @@ And /^check that the URL matches "([^"]*)"$/ do |regex_text|
 end
 
 Then /^I wait until I am on "([^"]*)"$/ do |url|
+  if @browser.capabilities.browser_name == 'Safari'
+    puts "WARNING: 'I wait until I am on' is not reliable in Safari. Consider 'to load a new page' steps instead."
+  end
   url = replace_hostname(url)
-  wait_until {@browser.current_url == url}
+  begin
+    wait_until {@browser.current_url == url}
+  rescue Selenium::WebDriver::Error::TimeoutError => exception
+    puts "Timeout: I am not on #{url} like I want."
+    puts "         I am on #{@browser.current_url} instead."
+    raise exception
+  end
 end
 
 Then /^check that the URL contains "([^"]*)"$/i do |url|
@@ -325,19 +423,49 @@ end
 
 When /^I rotate to (landscape|portrait)$/ do |orientation|
   if ENV['BS_ROTATABLE'] == "true"
-    $http_client.call(
-      :post,
-      "/wd/hub/session/#{@browser.session_id}/orientation",
-      {orientation: orientation.upcase}
-    )
+    change_orientation(orientation)
   end
+end
+
+When /^I click on the link reading "([^"]*)"(?: within element "([^"]*)")?(?: to load a new (page|tab))?$/ do |text, parent, load|
+  link = nil
+  wait_until_interactable(5) do
+    context = @browser.find_element(:css, parent) if parent
+    context ||= @browser
+    xpath = ".//a[starts-with(text(), '#{text}')]"
+    link = context.find_element(:xpath, xpath)
+    page_load(load) {link.click}
+  end
+end
+
+Then /^the link reading "([^"]*)"(?: within element "([^"]*)")? goes to "([^"]*)"$/ do |text, parent, url|
+  context = @browser.find_element(:css, parent) if parent
+  context ||= @browser
+  xpath = ".//a[starts-with(normalize-space(text()), '#{text}')]"
+  link = context.find_element(:xpath, xpath)
+  expect(link.attribute("href")).to eq(replace_hostname(url)).or eq(url)
 end
 
 When /^I press "([^"]*)"(?: to load a new (page|tab))?$/ do |button, load|
   wait_short_until do
-    @button = @browser.find_element(id: button)
+    button = @browser.find_element(id: button)
   end
-  page_load(load) {@button.click}
+  page_load(load) {button.click}
+end
+
+# Re-clicks the button each poll cycle until the target element is in the DOM.
+# Tolerates a native click that lands before React's delegated onClick handler
+# is wired, or while the node is mid-re-render: a dropped click is simply
+# retried on the next cycle. Use only for buttons whose click is idempotent
+# (e.g. dispatching an "open" action), so redundant presses are harmless.
+When /^I press "([^"]*)" until I see "([.#])([^"]*)"$/ do |button, selector_symbol, name|
+  selection_criteria = selector_symbol == '#' ? {id: name} : {class: name}
+  wait_until do
+    @browser.find_element(id: button).click
+    !@browser.find_elements(selection_criteria).empty?
+  rescue Selenium::WebDriver::Error::WebDriverError
+    false
+  end
 end
 
 When /^I press the child number (.*) of class "([^"]*)"( to load a new page)?$/ do |number, selector, load|
@@ -392,6 +520,12 @@ When /^I press the last button with text "([^"]*)"( to load a new page)?$/ do |n
   end
 end
 
+When /^I press the last link with text "([^"]*)"( to load a new page)?$/ do |name, load|
+  page_load(load) do
+    @browser.execute_script("$('a:contains(#{name})').simulate('drag', function(){});")
+  end
+end
+
 When /^I press the SVG text "([^"]*)"$/ do |name|
   name_selector = "text:contains(#{name})"
   @browser.execute_script("$('" + name_selector + "').simulate('drag', function(){});")
@@ -413,30 +547,28 @@ When /^I select the "([^"]*)" option in dropdown named "([^"]*)"( to load a new 
   select_dropdown(@browser.find_element(:css, "select[name=#{element_name}]"), option_text, load)
 end
 
-def select_dropdown(element, option_text, load)
+When /^I select the "([^"]*)" option in the last dropdown named "([^"]*)"( to load a new page)?$/ do |option_text, element_name, load|
+  dropdowns = @browser.find_elements(:css, "select[name=#{element_name}]")
+  select_dropdown(dropdowns.last, option_text, load)
+end
+
+When /^I select the "([^"]*)" option withing the "([^"]*)" group in dropdown "([^"]*)"( to load a new page)?$/ do |option_text, option_group, selector, load|
+  select_element = @browser.find_element(:css, selector)
+  expect(select_element).not_to be_nil
+
+  options = select_element.find_elements(:css, "optgroup[label='#{option_group}'] option")
+  option = options.find {|o| o.text == option_text}
+  expect(option).not_to be_nil
+
+  select_dropdown(select_element, option.property(:value), load, by: :value)
+end
+
+def select_dropdown(element, option_text, load, by: :text)
   element.location_once_scrolled_into_view
   page_load(load) do
     select = Selenium::WebDriver::Support::Select.new(element)
-    select.select_by(:text, option_text)
+    select.select_by(by, option_text)
   end
-end
-
-When /^I open the topmost blockly category "([^"]*)"$/ do |name|
-  name_selector = ".blocklyTreeLabel:contains(#{name})"
-  # seems we usually have two of these item, and want the second if the function
-  # editor is open, the first if it isn't
-  @browser.execute_script(
-    "var val = Blockly.functionEditor && Blockly.functionEditor.isOpen() ? 1 : 0; " \
-    "$('#{name_selector}').get(val).dispatchEvent(new MouseEvent('mousedown', {" \
-      "bubbles: true," \
-      "cancelable: true," \
-      "view: window" \
-    "}))"
-  )
-rescue
-  script = "var val = Blockly.functionEditor && Blockly.functionEditor.isOpen() ? 1 : 0; " \
-    "$('" + name_selector + "').eq(val).simulate('drag', function(){});"
-  @browser.execute_script(script)
 end
 
 And(/^I open the blockly category with ID "([^"]*)"$/) do |id|
@@ -454,20 +586,14 @@ rescue
   @browser.execute_script("$('" + category_selector + "').last().simulate('drag', function(){});")
 end
 
-When /^I press dropdown button with text "([^"]*)"$/ do |text|
-  @browser.execute_script("$('.goog-flat-menu-button-caption:contains(#{text})').simulate('drag', function(){});")
-end
-
-When /^I press dropdown item with text "([^"]*)"$/ do |text|
-  @browser.execute_script("$('.goog-menuitem:contains(#{text})').last().simulate('drag', function(){});")
-end
-
 When /^I press the edit button on a function call named "([^"]*)"$/ do |text|
-  @browser.execute_script("$('.blocklyDraggable:contains(#{text})').find('.blocklyIconGroup:contains(edit)').first().simulate('drag', function(){})")
-end
-
-When /^I press dropdown item "([^"]*)"$/ do |index|
-  @browser.execute_script("$('.goog-menuitem').eq(#{index}).simulate('drag', function(){});")
+  @browser.execute_script(<<~JS)
+    var el = $('.blocklyDraggable:contains(#{text})').find('.blocklyIconGroup:contains(edit)').first()[0];
+    if (!el) return;
+    var opts = {bubbles: true, cancelable: true, pointerId: 1, pointerType: 'mouse', isPrimary: true};
+    el.dispatchEvent(new PointerEvent('pointerdown', opts));
+    document.dispatchEvent(new PointerEvent('pointerup', opts));
+  JS
 end
 
 When /^I press a button with xpath "([^"]*)"$/ do |xpath|
@@ -497,10 +623,11 @@ When /^I select the end of "([^"]*)"$/ do |selector|
   @browser.execute_script("document.querySelector(\"#{selector}\").setSelectionRange(9999, 9999);")
 end
 
-When /^I click selector "([^"]*)"(?: to load a new (page|tab))?$/ do |jquery_selector, load|
+When /^I click selector "([^"]*)"(?: within shadow-host "([^"]*)")?(?: to load a new (page|tab))?$/ do |jquery_selector, shadow_host, load|
   # normal a href links can only be clicked this way
   page_load(load) do
-    @browser.execute_script("$(\"#{jquery_selector}\")[0].click();")
+    jquery_selector = shadow_element(shadow_host, jquery_selector) if shadow_host
+    @browser.execute_script('$(arguments[0])[0].click();', jquery_selector)
   end
 end
 
@@ -600,17 +727,23 @@ Then /^I should see title includes "([^"]*)"$/ do |title|
   expect(@browser.title).to include(title)
 end
 
+Then /^I should see branded title includes "([^"]*)"$/ do |title|
+  expect(@browser.title).to include("#{title} - #{Cdo::Brand.legal_name}")
+end
+
 Then /^evaluate JavaScript expression "([^"]*)"$/ do |expression|
   expect(@browser.execute_script("return #{expression}")).to eq(true)
 end
 
-Then /^execute JavaScript expression "([^"]*)"$/ do |expression|
-  @browser.execute_script("return #{expression}")
+Then /^execute JavaScript expression "([^"]*)"( to load a new page)?$/ do |expression, load|
+  page_load(load) do
+    @browser.execute_script("return #{expression}")
+  end
 end
 
-Then /^I navigate to the course page for "([^"]*)"$/ do |course|
+Then /^I navigate to the unit page for unit number "([^"]*)" in course "([^"]*)"$/ do |unit_position, course|
   steps %{
-    Then I am on "http://studio.code.org/s/#{course}"
+    Then I am on "http://studio.code.org/courses/#{course}/units/#{unit_position}"
     And I wait to see ".user-stats-block"
   }
 end
@@ -647,7 +780,7 @@ end
 
 Then /^element "([^"]*)" has escaped text "((?:[^"\\]|\\.)*)"$/ do |selector, expected_text|
   # Add more unescaping rules here as needed.
-  expected_text.gsub!(/\\n/, "\n")
+  expected_text.gsub!("\\n", "\n")
   element_has_text(selector, expected_text)
 end
 
@@ -656,10 +789,11 @@ Then /^element "([^"]*)" has html "([^"]*)"$/ do |selector, expected_html|
 end
 
 Then /^I wait to see a dialog titled "((?:[^"\\]|\\.)*)"$/ do |expected_text|
-  steps %{
-    Then I wait to see a ".dialog-title"
-    And element ".dialog-title" has text "#{expected_text}"
-  }
+  # Legacy BaseDialog uses `.dialog-title`; DSCO dialogs put the title in a
+  # heading (h2 for Dialog, h3 for Modal) inside a `[role="dialog"]` or, for
+  # Dialog, `[role="alertdialog"]`. Accept any of them.
+  selector = %q($('.dialog-title:visible').first().text() || $('[role="dialog"]:visible :header, [role="alertdialog"]:visible :header').first().text())
+  wait_short_until {@browser.execute_script("return #{selector};")&.include?(expected_text)}
 end
 
 Then /^I wait to see a dialog containing text "((?:[^"\\]|\\.)*)"$/ do |expected_text|
@@ -685,7 +819,6 @@ end
 
 Then /^I reopen the congrats dialog unless I see the sharing input/ do
   next if @browser.execute_script("return $('#sharing-dialog-copy-button').length > 0;")
-  puts "reopening congrats dialog"
   individual_steps %{
     And I press "again-button"
     And I wait until element ".congrats" is not visible
@@ -710,6 +843,10 @@ end
 
 Then /^element "([^"]*)" has "([^"]*)" text from key "((?:[^"\\]|\\.)*)"$/ do |selector, language, loc_key|
   element_has_i18n_text(selector, language, loc_key)
+end
+
+Then /^element "([^"]*)" has "([^"]*)" RTL text from key "((?:[^"\\]|\\.)*)"$/ do |selector, language, loc_key|
+  element_has_i18n_text(selector, language, loc_key, rtl: true)
 end
 
 Then /^element "([^"]*)" has "([^"]*)" markdown from key "((?:[^"\\]|\\.)*)"$/ do |selector, language, loc_key|
@@ -753,6 +890,25 @@ Then /^element "([^"]*)" has attribute "((?:[^"\\]|\\.)*)" equal to "((?:[^"\\]|
   element_has_attribute(selector, attribute, replace_hostname(expected_text))
 end
 
+Then /^element "([^"]*)" is (not )?categorized by OneTrust$/ do |selector, negation|
+  wait_for_jquery
+  elements = @browser.execute_script("return $(\"#{selector}\").map((index, elem) => { return {src:elem.src, class:elem.className}}).get()")
+  # The element needs to exist if we want to verify it is categorized.
+  if negation.nil?
+    expect(elements).to satisfy('have at least one element should be found', &:any?)
+  end
+  # Check each element which matches the selector to see if it has the
+  # expected OneTrust categorization.
+  elements.each do |element|
+    # When OneTrust categorizes an element, it adds the class
+    # "optanon-category-..." to it, for example "optanon-category-C0002"
+    element_class = element['class'] || ''
+    has_category = element_class.include?('optanon-category-')
+    desc = "#{negation ? 'not ' : ''}have a category"
+    expect(element).to satisfy(desc) {|_| has_category == !negation}
+  end
+end
+
 Then /^element "([^"]*)" is (not )?read-?only$/ do |selector, negation|
   readonly = @browser.execute_script("return $(\"#{selector}\").attr(\"readonly\");")
   if negation.nil?
@@ -769,11 +925,16 @@ Then /^element "([^"]*)" has id "([^ "']+)"$/ do |selector, id|
 end
 
 def jquery_element_exists(selector)
+  wait_for_jquery
   "return $(#{selector.dump}).length > 0"
 end
 
 def element_exists?(selector)
   @browser.execute_script(jquery_element_exists(selector))
+end
+
+def element_focused?(selector)
+  @browser.execute_script("return document.querySelector(#{selector.dump}) === document.activeElement;")
 end
 
 def element_visible?(selector)
@@ -792,8 +953,30 @@ Then /^element "([^"]*)" is (not )?visible$/ do |selector, negation|
   expect(element_visible?(selector)).to eq(negation.nil?)
 end
 
+Then /^element "([^"]*)" is visible if present$/ do |selector|
+  next unless element_exists?(selector)
+
+  wait_short_until do
+    expect(element_visible?(selector)).to eq(true)
+  end
+end
+
+Then /^element "([^"]*)" does exist/ do |selector|
+  expect(element_exists?(selector)).to eq(true)
+end
+
 Then /^element "([^"]*)" does not exist/ do |selector|
   expect(element_exists?(selector)).to eq(false)
+end
+
+Then /^I wait until element "([^"]*)" has focus/ do |selector|
+  wait_short_until do
+    expect(element_focused?(selector)).to eq(true)
+  end
+end
+
+Then /^element "([^"]*)" does not have focus/ do |selector|
+  expect(element_focused?(selector)).to eq(false)
 end
 
 Then /^element "([^"]*)" is hidden$/ do |selector|
@@ -806,6 +989,10 @@ end
 
 Then /^element "([^"]*)" is (not )?displayed$/ do |selector, negation|
   expect(element_displayed?(selector)).to eq(negation.nil?)
+end
+
+Then /^I move focus to "([^"]*)"$/ do |selector|
+  @browser.execute_script("$(#{selector.dump}).focus()")
 end
 
 And(/^I select age (\d+) in the age dialog/) do |age|
@@ -828,6 +1015,14 @@ end
 And(/^I see option "([^"]*)" or "([^"]*)" in the dropdown "([^"]*)"/) do |option_alpha, option_beta, selector|
   select_options_text = @browser.execute_script("return $('#{selector} option').text()")
   expect((select_options_text.include? option_alpha) || (select_options_text.include? option_beta)).to eq(true)
+end
+
+And(/^I wait until the dropdown named "([^"]*)" has option "([^"]*)"$/) do |element_name, option|
+  dropdown_selector = "select[name='#{element_name}']"
+  wait_short_until do
+    select_options_text = @browser.execute_script("return $(arguments[0]).find('option').text();", dropdown_selector)
+    select_options_text.include? option
+  end
 end
 
 def has_class?(selector, class_name)
@@ -911,14 +1106,26 @@ Then /^I see (\d*) of jquery selector (.*)$/ do |num, selector|
   expect(@browser.execute_script("return $(\"#{selector}\").length;")).to eq(num.to_i)
 end
 
+Then /^I wait until I see (\d*) of jquery selector (.*)$/ do |num, selector|
+  wait_until do
+    @browser.execute_script("return $(\"#{selector}\").length;") == num.to_i
+  end
+end
+
 Then /^I wait until I (don't )?see selector "(.*)"$/ do |negation, selector|
   wait_until do
     @browser.execute_script("return $(\"#{selector}:visible\").length != 0;") == negation.nil?
   end
 end
 
-Then /^there's a div with a background image "([^"]*)"$/ do |path|
-  exists = @browser.execute_script("return $('div').filter(function(){return $(this).css('background-image').indexOf('#{path}') != -1 }).length > 0")
+Then /^there's an element with an image "([^"]*)"$/ do |path|
+  exists = @browser.execute_script(<<-JS)
+    return $('div').filter(function() {
+      return $(this).css('background-image').indexOf('#{path}') != -1;
+    }).length > 0 || $('img').filter(function() {
+      return $(this).attr('src').indexOf('#{path}') != -1;
+    }).length > 0;
+  JS
   expect(exists).to eq(true)
 end
 
@@ -982,51 +1189,63 @@ Then /^element "([^"]*)" is a child of element "([^"]*)"$/ do |child_id, parent_
   expect(actual_parent_id).to eq(parent_id)
 end
 
-And(/^I set the language cookie$/) do
+def set_cookie(key, value)
   params = {
-    name: "_language",
-    value: 'en'
+    name: key,
+    value: value,
   }
 
-  if ENV['DASHBOARD_TEST_DOMAIN'] && ENV['DASHBOARD_TEST_DOMAIN'] =~ /\.code.org/ &&
-      ENV['PEGASUS_TEST_DOMAIN'] && ENV['PEGASUS_TEST_DOMAIN'] =~ /\.code.org/
+  if ENV.fetch('DASHBOARD_TEST_DOMAIN', nil) && ENV.fetch('DASHBOARD_TEST_DOMAIN', nil) =~ /\.code.org/ &&
+      ENV.fetch('PEGASUS_TEST_DOMAIN', nil) && ENV.fetch('PEGASUS_TEST_DOMAIN', nil) =~ /\.code.org/
     params[:domain] = '.code.org' # top level domain cookie
   end
 
   @browser.manage.add_cookie params
 end
 
+Given(/^I use a cookie to mock the DCDO key "([^"]*)" as "(.*)"$/) do |key, json|
+  mock_dcdo(key, JSON.parse(json))
+rescue JSON::ParserError
+  mock_dcdo(key, json)
+end
+
+And(/^I set the language cookie$/) do
+  set_cookie '_language', 'en'
+end
+
 And(/^I set the pagemode cookie to "([^"]*)"$/) do |cookie_value|
-  params = {
-    name: "pm",
-    value: cookie_value
-  }
+  set_cookie 'pm', cookie_value
+end
 
-  if ENV['DASHBOARD_TEST_DOMAIN'] && ENV['DASHBOARD_TEST_DOMAIN'] =~ /\.code.org/ &&
-      ENV['PEGASUS_TEST_DOMAIN'] && ENV['PEGASUS_TEST_DOMAIN'] =~ /\.code.org/
-    params[:domain] = '.code.org' # top level domain cookie
-  end
-
-  @browser.manage.add_cookie params
+And(/^I set the cookie named "([^"]*)" to "([^"]*)"$/) do |key, value|
+  set_cookie key, value
 end
 
 Given(/^I am enrolled in a plc course$/) do
   browser_request(url: '/api/test/enroll_in_plc_course', method: 'POST')
 end
 
-Given(/^I am assigned to unit "([^"]*)"$/) do |script_name|
-  browser_request(
-    url: '/api/test/assign_script_as_student',
-    method: 'POST',
-    body: {script_name: script_name}
-  )
-end
-
-Given(/^I am assigned to course "([^"]*)" and unit "([^"]*)"$/) do |course_name, script_name|
+Given(/^I am assigned to course "([^"]*)" unit (\d+)(?: with teacher "([^"]*)")?$/) do |course_name, unit_position, teacher_name|
   browser_request(
     url: '/api/test/assign_course_and_unit_as_student',
     method: 'POST',
-    body: {script_name: script_name, course_name: course_name}
+    body: {course_name: course_name, unit_position: unit_position, teacher_email: teacher_name ? (@users[teacher_name][:email]).to_s : nil}
+  )
+end
+
+Given(/^I am assigned to course "([^"]*)"(?: with teacher "([^"]*)")?(?: in a section named "([^"]*)")?$/) do |course_name, teacher_name, section_name|
+  browser_request(
+    url: '/api/test/assign_course_as_student',
+    method: 'POST',
+    body: {course_name: course_name, section_name: section_name, teacher_email: teacher_name ? (@users[teacher_name][:email]).to_s : nil}
+  )
+end
+
+Given(/^I assign my section in row (\d+) to course "([^"]*)" unit (\d+)$/) do |section_position, course_name, unit_position|
+  browser_request(
+    url: '/api/test/assign_section_to_course_and_unit',
+    method: 'POST',
+    body: {section_position: section_position - 1, course_name: course_name, unit_position: unit_position}
   )
 end
 
@@ -1039,9 +1258,10 @@ And /^I check the pegasus URL$/ do
   puts "Pegasus URL is #{pegasus_url}"
 end
 
-Then /^the overview page contains ([\d]+) assign (?:button|buttons)$/ do |expected_num|
-  actual_num = @browser.execute_script("return $('.uitest-assign-button').length;")
-  expect(actual_num).to eq(expected_num.to_i)
+When /^I click the button in the unit card for unit "([^"]*)"$/ do |unit_name|
+  unit_card = @browser.find_elements(css: '.uitest-CourseScript').find {|el| el.text.include?(unit_name)}
+  button = unit_card.find_element(xpath: ".//a[contains(., 'Go to Unit')]")
+  button.click
 end
 
 And /^I dismiss the language selector$/ do
@@ -1053,8 +1273,8 @@ end
 
 And /^I dismiss the login reminder$/ do
   steps <<~GHERKIN
-    And I click selector ".modal-backdrop" if I see it
-    And I wait until I don't see selector ".uitest-login-callout"
+    And I click selector "[aria-label='Close']" if I see it
+    And I wait until I don't see selector ".uitest-signincallout"
   GHERKIN
 end
 
@@ -1069,6 +1289,13 @@ And /^I dismiss the hoc guide dialog$/ do
   steps <<~GHERKIN
     And I click selector "#uitest-no-email-guide" if I see it
     And I wait until I don't see selector "#uitest-no-email-guide"
+  GHERKIN
+end
+
+And /^I dismiss the match instructions dialog$/ do
+  steps <<~GHERKIN
+    And I click selector ".x-close" if I see it
+    And I wait until I don't see selector ".dash_modal"
   GHERKIN
 end
 
@@ -1094,8 +1321,8 @@ end
 # Send an asynchronous XmlHttpRequest from the browser.
 def browser_request(url:, method: 'GET', headers: {}, body: nil, code: 200, tries: 3)
   if body
-    headers['Content-Type'] = 'application/x-www-form-urlencoded'
-    body = "'#{body.to_param}'" if body
+    headers['Content-Type'] = 'application/json'
+    body = "'#{body.to_json}'"
   end
 
   js = <<~JS
@@ -1134,6 +1361,14 @@ And(/^I submit this level$/) do
   GHERKIN
 end
 
+And(/^I submit this gamelab level$/) do
+  steps <<~GHERKIN
+    And I press "runButton"
+    And I wait to see "#submitButton"
+    And I press "submitButton" to load a new page
+  GHERKIN
+end
+
 And(/^I wait until I am on the join page$/) do
   wait_short_until {/^\/join/.match(@browser.execute_script("return location.pathname"))}
 end
@@ -1146,6 +1381,10 @@ end
 
 And(/^I clear session storage/) do
   @browser.execute_script("sessionStorage.clear(); localStorage.clear();")
+end
+
+And 'I clear local storage' do
+  @browser.execute_script('localStorage.clear();')
 end
 
 When(/^I debug cookies$/) do
@@ -1166,11 +1405,6 @@ When /^I debug channel id$/ do
   puts "appOptions.channel: #{@browser.execute_script('return (appOptions && appOptions.channel)')}"
 end
 
-And(/^I ctrl-([^"]*)$/) do |key|
-  # Note: Safari webdriver does not support actions API
-  @browser.action.key_down(:control).send_keys(key).key_up(:control).perform
-end
-
 def press_keys(element, key)
   element.send_keys(*convert_keys(key))
 end
@@ -1178,7 +1412,7 @@ end
 def convert_keys(keys)
   return keys[1..].to_sym if keys.start_with?(':')
   keys.gsub!(/([^\\])\\n/, "\\1\n") # Cucumber does not convert captured \n to newline.
-  keys.gsub!(/\\\\n/, "\\n") # Fix up escaped newline
+  keys.gsub!("\\\\n", "\\n") # Fix up escaped newline
   # Convert newlines to :enter keys.
   keys.chars.map {|k| k == "\n" ? :enter : k}
 end
@@ -1244,6 +1478,11 @@ Then /^I wait to see element with ID "(.*)"$/ do |element_id_to_seek|
   wait_short_until {@browser.find_element(id: element_id_to_seek)}
 end
 
+Then /^element with ID "(.*)" contains text "(.*)"$/ do |element_id, expected_text|
+  element = @browser.find_element(id: element_id)
+  expect(element.text).to include(expected_text)
+end
+
 Then /^I get redirected to "(.*)" via "(.*)"$/ do |new_path, redirect_source|
   wait_short_until {/#{new_path}/.match(@browser.execute_script("return location.pathname"))}
 
@@ -1273,6 +1512,12 @@ Then /^I append "([^"]*)" to the URL$/ do |append|
   @browser.navigate.to url
 end
 
+Then /^I switch to the embedded view of current project(?: with query "(.*)")?$/ do |query|
+  embed_url = @browser.current_url.sub('/edit', '/embed')
+  embed_url = "#{embed_url}?#{query}" if query
+  navigate_to embed_url
+end
+
 Then /^selector "([^"]*)" has class "(.*?)"$/ do |selector, class_name|
   item = @browser.find_element(:css, selector)
   classes = item.attribute("class")
@@ -1292,7 +1537,7 @@ end
 # Place files in dashboard/test/fixtures
 # Note: Safari webdriver does not support file uploads (https://code.google.com/p/selenium/issues/detail?id=4220)
 Then /^I upload the file named "(.*?)"$/ do |filename|
-  unless ENV['TEST_LOCAL'] == 'true'
+  unless test_local?
     # Needed for remote (Sauce Labs) uploads
     @browser.file_detector = lambda do |args|
       str = args.first.to_s
@@ -1306,7 +1551,7 @@ Then /^I upload the file named "(.*?)"$/ do |filename|
   element.send_keys filename
   @browser.execute_script('$("input[type=file]").hide()')
 
-  unless ENV['TEST_LOCAL'] == 'true'
+  unless test_local?
     @browser.file_detector = nil
   end
 end
@@ -1399,6 +1644,14 @@ Then /^page text does (not )?contain "([^"]*)"$/ do |negation, text|
   expect(body_text.include?(text)).to eq(negation.nil?)
 end
 
+Then /^response json key "([^"]*)" has value "(.*)"$/ do |key, value|
+  # Click the raw data tab to see the JSON response in Firefox
+  @browser.find_elements(:css, '#rawdata-tab').first&.click
+
+  response_json = @browser.find_element(:css, 'pre').text
+  expect(response_json).to include(%Q["#{key}":#{value}])
+end
+
 Then /^I click selector "([^"]*)" (\d+(?:\.\d*)?) times?$/ do |selector, times|
   step_list = []
   times.to_i.times do
@@ -1423,9 +1676,8 @@ When /^I set up code review for teacher "([^"]*)" with (\d+(?:\.\d*)?) students 
   steps <<~GHERKIN
     Given I create a teacher named "#{teacher_name}"
     And I give user "#{teacher_name}" authorized teacher permission
-    And I create a new student section assigned to "ui-test-csa-family-script"
+    And I create a new student section assigned to course "ui-test-csa-family-script" unit 1 and save the section
     And I sign in as "#{teacher_name}" and go home
-    And I save the student section url
     And I save the section id from row 0 of the section table
     #{add_student_step_list.join("\n")}
     And I wait to see ".alert-success"
@@ -1434,7 +1686,9 @@ When /^I set up code review for teacher "([^"]*)" with (\d+(?:\.\d*)?) students 
     And I create a new code review group for the section I saved
     #{add_students_to_group_step_list.join("\n")}
     And I click selector ".uitest-base-dialog-confirm"
-    And I click selector ".toggle-input"
+    And I click selector "#uitest-code-review-groups-toggle"
+    And I wait until element "#uitest-code-review-groups-status-message" is visible
+    And I wait until element "#uitest-code-review-groups-save-confirm" is visible
   GHERKIN
 end
 
@@ -1442,7 +1696,7 @@ When /^I create a student named "([^"]*)" in a CSA section$/ do |student_name|
   steps <<~GHERKIN
     Given I create a teacher named "Dumbledore"
     And I give user "Dumbledore" authorized teacher permission
-    And I create a new student section assigned to "ui-test-csa-family-script"
+    And I create a new student section assigned to course "ui-test-csa-family-script" unit 1
     And I sign in as "Dumbledore" and go home
     And I save the student section url
     And I save the section id from row 0 of the section table
@@ -1451,10 +1705,10 @@ When /^I create a student named "([^"]*)" in a CSA section$/ do |student_name|
   GHERKIN
 end
 
-And(/^I navigate to the pegasus certificate share page$/) do
+And(/^I navigate to the certificate share page$/) do
   query_params = @browser.execute_script("return window.location.search;")
   session_id = query_params.match(/\?i=([^&]+)/)[1]
-  url = "http://code.org/certificates/#{session_id}"
+  url = "http://studio.code.org/api/hour/certificates/#{session_id}"
   navigate_to replace_hostname(url)
 end
 
@@ -1473,4 +1727,32 @@ And(/^I validate rubric ai config for all lessons$/) do
     response_code = response.code
     expect(response_code).to eq(200), "Error code #{response_code}:\n#{response.body}"
   end
+end
+
+And(/^I wait until ai assessments announcement is marked as seen$/) do
+  wait_short_until do
+    response = browser_request(url: '/api/v1/users/current')
+    response['has_seen_ai_assessments_announcement']
+  end
+end
+
+And(/^I hover over selector "([^"]*)"$/) do |selector|
+  element = @browser.find_element(:css, selector)
+  @browser.action.move_to(element).perform
+end
+
+And(/^I clean up my records$/) do
+  clean_up_records
+end
+
+And(/^I debug milestone callback$/) do
+  mode = @browser.execute_script("return appOptions.postMilestoneMode;")
+  puts "postMilestoneMode: #{mode.inspect}"
+  callback = @browser.execute_script("return appOptions.dialog.callback;")
+  puts "callback: #{callback.inspect}"
+  fallback = @browser.execute_script("return appOptions.dialog.fallbackResponse;")
+  success = JSON.parse(fallback || '{}')['success']
+  return unless success
+  puts "fallback success level_path: #{success['level_path'].inspect}"
+  puts "fallback success redirect: #{success['redirect'].inspect}"
 end

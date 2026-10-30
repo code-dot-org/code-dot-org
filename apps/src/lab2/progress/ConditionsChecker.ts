@@ -2,26 +2,46 @@
 // whether a set of conditions have all been satisfied.  Unknown conditions are
 // skipped.  The accumulated satisfied conditions can be cleared at any time.
 
-import {Condition} from '../types';
 import _ from 'lodash';
+
+import {queryParams} from '@cdo/apps/code-studio/utils';
+
+import {Condition} from '../types';
 
 export default class ConditionsChecker {
   private currentSatisfiedConditions: Condition[];
   private conditionNames: string[];
 
-  constructor(conditionNames: string[]) {
+  constructor(
+    conditionNames: string[],
+    private readonly logChanges = queryParams(
+      'log-validator-condition-changes'
+    ) === 'true'
+  ) {
     this.currentSatisfiedConditions = [];
     this.conditionNames = conditionNames;
   }
 
   // Reset the accumulated conditions.
   clear() {
+    if (this.logChanges) {
+      console.log('ConditionsChecker conditions cleared');
+    }
+
     this.currentSatisfiedConditions = [];
   }
 
   // Accumulate a satisfied condition.
   addSatisfiedCondition(condition: Condition) {
     if (!this.hasCondition(condition)) {
+      if (this.logChanges) {
+        console.log(
+          'ConditionsChecker condition added:',
+          condition.name,
+          condition.value
+        );
+      }
+
       this.currentSatisfiedConditions.push(condition);
     }
   }

@@ -1,20 +1,38 @@
+import DanceAPI from '@code-dot-org/dance-party/src/api';
+import DanceParty from '@code-dot-org/dance-party/src/p5.dance';
+import danceCode from '@code-dot-org/dance-party/src/p5.dance.interpreted.js';
+import ResourceLoader from '@code-dot-org/dance-party/src/ResourceLoader';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
-import AppView from '../templates/AppView';
-import {getStore} from '../redux';
+
+import {getCode} from '@cdo/apps/blockly/utils';
+import ErrorBoundary from '@cdo/apps/lab2/ErrorBoundary';
+import {ErrorFallbackPage} from '@cdo/apps/lab2/views/ErrorFallbackPage';
+import localization from '@cdo/apps/localization';
+import {showArrowButtons} from '@cdo/apps/templates/arrowDisplayRedux';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
+
+import {SongTitlesToArtistTwitterHandle} from '../code-studio/dancePartySongArtistTags';
+import project from '../code-studio/initApp/project';
+import {TestResults} from '../constants';
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {commands as audioCommands} from '../lib/util/audioApi';
-
-var dom = require('../dom');
-import DanceVisualizationColumn from './DanceVisualizationColumn';
+import logToCloud from '../logToCloud';
+import {EVENTS} from '../metrics/AnalyticsConstants';
+import analyticsReporter from '../metrics/AnalyticsReporter';
+import {getStore} from '../redux';
 import Sounds from '../Sounds';
-import {TestResults} from '../constants';
+import AppView from '../templates/AppView';
+import {
+  captureThumbnailFromCanvas,
+  setThumbnailBlobFromCanvas,
+} from '../util/thumbnail';
+import trackEvent from '../util/trackEvent';
+
+import {DANCE_AI_SOUNDS} from './ai/constants';
 import {ASSET_BASE, DancelabReservedWords} from './constants';
-import DanceParty from '@code-dot-org/dance-party/src/p5.dance';
-import DanceAPI from '@code-dot-org/dance-party/src/api';
-import ResourceLoader from '@code-dot-org/dance-party/src/ResourceLoader';
-import danceMsg from './locale';
+import danceMetricsReporter from './danceMetricsReporter';
 import {
   reducers,
   setRunIsStarting,
@@ -22,27 +40,12 @@ import {
   setSong,
   setAiOutput,
 } from './danceRedux';
-import trackEvent from '../util/trackEvent';
-import analyticsReporter from '../lib/util/AnalyticsReporter';
-import {EVENTS} from '../lib/util/AnalyticsConstants';
-import {SignInState} from '@cdo/apps/templates/currentUserRedux';
-import logToCloud from '../logToCloud';
-import {saveReplayLog} from '../code-studio/components/shareDialogRedux';
-import {
-  captureThumbnailFromCanvas,
-  setThumbnailBlobFromCanvas,
-} from '../util/thumbnail';
-import project from '../code-studio/initApp/project';
+import DanceVisualizationColumn from './DanceVisualizationColumn';
+import danceMsg from './locale';
 import {loadSongMetadata} from './songs';
-import {SongTitlesToArtistTwitterHandle} from '../code-studio/dancePartySongArtistTags';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
-import {showArrowButtons} from '@cdo/apps/templates/arrowDisplayRedux';
-import danceCode from '@code-dot-org/dance-party/src/p5.dance.interpreted.js';
 import utils from './utils';
-import ErrorBoundary from '@cdo/apps/lab2/ErrorBoundary';
-import danceMetricsReporter from './danceMetricsReporter';
-import {ErrorFallbackPage} from '@cdo/apps/lab2/views/ErrorFallbackPage';
-import {DANCE_AI_SOUNDS} from './ai/constants';
+
+var dom = require('../dom');
 
 const ButtonState = {
   UP: 0,
@@ -188,7 +191,7 @@ Dance.prototype.init = function (config) {
     userId: state.currentUser.userId,
   });
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={getStore()}>
       <ErrorBoundary
         // this is actually the Lab2 Error Fallback page. We may want to refactor this after Hour of Code.
@@ -212,7 +215,10 @@ Dance.prototype.init = function (config) {
         />
       </ErrorBoundary>
     </Provider>,
-    document.getElementById(config.containerId)
+    document.getElementById(config.containerId),
+    {
+      legacyReactDomRender: true,
+    }
   );
 };
 
@@ -238,16 +244,12 @@ Dance.prototype.initSongs = async function (config) {
       useRestrictedSongs: config.useRestrictedSongs,
       selectSongOptions: config.level,
       onAuthError: () => {
-        firehoseClient.putRecord(
+        analyticsReporter.sendEvent(
+          EVENTS.DANCE_PARTY_RESTRICTED_SONG_AUTH_ERROR,
           {
-            study: 'restricted-song-auth',
-            event: 'initial-auth-error',
-            data_json: JSON.stringify({
-              currentUrl: window.location.href,
-              channelId: config.channel,
-            }),
-          },
-          {includeUserId: true}
+            currentUrl: window.location.href,
+            channelId: config.channel,
+          }
         );
       },
       onSongSelected: songId => {
@@ -283,19 +285,6 @@ Dance.prototype.setSongCallback = function (songId) {
   getStore().dispatch(
     setSong({
       songId,
-      onAuthError: () => {
-        firehoseClient.putRecord(
-          {
-            study: 'restricted-song-auth',
-            event: 'repeated-auth-error',
-            data_json: JSON.stringify({
-              currentUrl: window.location.href,
-              channelId: getStore().getState().pageConstants.channelId,
-            }),
-          },
-          {includeUserId: true}
-        );
-      },
       onSongSelected: songId => {
         this.updateSongMetadata(songId);
         if (this.songUnavailableAlert) {
@@ -416,13 +405,15 @@ Dance.prototype.afterInject_ = function () {
     Blockly.JavaScript.addReservedWords(DancelabReservedWords.join(','));
   }
 
-  // record a replay log (and generate a video) for both project levels and any
-  // course levels that have sharing enabled
-  const recordReplayLog = this.shouldShowSharing() || this.level.isProjectLevel;
+  // Localize
+  const msg = Object.entries(danceMsg).reduce((acc, [key, msgFunction]) => {
+    acc[key] = (...args) => localization.translate(msgFunction(...args));
+    return acc;
+  }, {});
+
   this.nativeAPI = new DanceParty({
     onPuzzleComplete: this.onPuzzleComplete.bind(this),
     playSound: this.playSong.bind(this),
-    recordReplayLog,
     showMeasureLabel: !this.share,
     onHandleEvents: this.onHandleEvents.bind(this),
     onInit: async nativeAPI => {
@@ -451,10 +442,19 @@ Dance.prototype.afterInject_ = function () {
     },
     spriteConfig: new Function('World', this.level.customHelperLibrary),
     container: 'divDance',
-    i18n: danceMsg,
+    i18n: msg,
     resourceLoader: new ResourceLoader(ASSET_BASE),
     logger: danceMetricsReporter,
+    externalRendererFactory: undefined,
   });
+
+  // Add command names from the Dance Party API to the Blockly generator's
+  // reservered words. This prevents students from overriding commands
+  // with functions.
+  const reservedWords = Object.getOwnPropertyNames(
+    Object.getPrototypeOf(this.nativeAPI)
+  );
+  Blockly.JavaScript.addReservedWords(reservedWords.join());
 
   // Expose an interface for testing
   // Composes the nativeAPI getPerformanceData with our own performance data.
@@ -466,10 +466,6 @@ Dance.prototype.afterInject_ = function () {
       ...this.performanceData_,
     }),
   };
-
-  if (recordReplayLog) {
-    getStore().dispatch(saveReplayLog(this.nativeAPI.getReplayLog()));
-  }
 };
 
 Dance.prototype.playSong = function (url, callback, onEnded) {
@@ -588,24 +584,13 @@ Dance.prototype.onPuzzleComplete = function (result, message) {
   // If we know they succeeded, mark `levelComplete` true.
   const levelComplete = result;
 
-  let program = encodeURIComponent(
-    Blockly.cdoUtils.getCode(Blockly.mainBlockSpace)
-  );
+  let program = encodeURIComponent(getCode(Blockly.mainBlockSpace));
 
   if (this.testResults >= TestResults.FREE_PLAY) {
     this.studioApp_.playAudio('win');
   } else {
     this.studioApp_.playAudio('failure');
   }
-  const state = getStore().getState();
-  const validationResult = result ? 'PASSED' : 'FAILED';
-  analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_VALIDATION, {
-    levelPath: state.pageConstants.currentScriptLevelUrl,
-    result: validationResult,
-    message, // feedback message key
-    userId: state.currentUser.userId,
-  });
-
   const sendReport = () => {
     this.studioApp_.report({
       app: 'dance',
@@ -669,9 +654,10 @@ Dance.prototype.runButtonClick = async function () {
   await this.danceReadyPromise;
 
   //Log song count in Dance Lab
-  trackEvent('HoC_Song', 'Play-2019', getStore().getState().dance.selectedSong);
+  trackEvent('dance', 'dance_play_song', {
+    value: getStore().getState().dance.selectedSong,
+  });
 
-  Blockly.mainBlockSpace.traceOn(true);
   this.studioApp_.attempts++;
 
   try {

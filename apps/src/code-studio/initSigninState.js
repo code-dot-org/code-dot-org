@@ -1,15 +1,17 @@
 import $ from 'jquery';
-import React from 'react';
-import ReactDOM from 'react-dom';
-import {Provider} from 'react-redux';
 import cookies from 'js-cookie';
-import SignInOrAgeDialog from '@cdo/apps/templates/SignInOrAgeDialog';
-import {getStore} from './redux';
+import React from 'react';
+import {Provider} from 'react-redux';
+
+import {environmentSpecificCookieName} from '@cdo/apps/code-studio/utils';
 import {
   setUserSignedIn,
   setUserType,
 } from '@cdo/apps/templates/currentUserRedux';
-import {environmentSpecificCookieName} from '@cdo/apps/code-studio/utils';
+import SignInOrAgeDialog from '@cdo/apps/templates/SignInOrAgeDialog';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
+
+import {getStore} from './redux';
 
 /**
  * Attempt to replicate logic used that user_header.haml uses to populate the
@@ -45,11 +47,14 @@ export default function initSigninState(userType, under13) {
     }
 
     const div = document.createElement('div');
-    ReactDOM.render(
+    createReactRoot(
       <Provider store={store}>
         <SignInOrAgeDialog />
       </Provider>,
-      div
+      div,
+      {
+        legacyReactDomRender: true,
+      }
     );
     document.body.appendChild(div);
   });

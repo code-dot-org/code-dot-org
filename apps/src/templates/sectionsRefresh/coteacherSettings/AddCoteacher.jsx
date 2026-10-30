@@ -1,18 +1,17 @@
-import React, {useCallback, useState} from 'react';
+import TextField from '@code-dot-org/component-library/textField';
+import {Typography, Button as MuiButton} from '@mui/material';
+import $ from 'jquery';
 import PropTypes from 'prop-types';
+import React, {useCallback, useState} from 'react';
 
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {isEmail} from '@cdo/apps/util/formatValidation';
 import i18n from '@cdo/locale';
-import classNames from 'classnames';
-import {Figcaption} from '@cdo/apps/componentLibrary/typography';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import Button from '@cdo/apps/templates/Button';
-import $ from 'jquery';
+
+import {convertAddCoteacherResponse} from './CoteacherUtils';
 
 import styles from './coteacher-settings.module.scss';
-import {convertAddCoteacherResponse} from './CoteacherUtils';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const getErrorMessageFromResponse = (response, email) => {
   if (response.ok) {
@@ -92,6 +91,7 @@ export default function AddCoteacher({
   addError,
   setAddError,
   sectionMetricInformation,
+  disabled,
 }) {
   const [inputValue, setInputValue] = useState('');
 
@@ -193,48 +193,49 @@ export default function AddCoteacher({
 
   const isMaxCoteachers = numCoteachers >= 5;
 
-  const getErrorOrCount = () => {
-    if (addError) {
-      return (
-        <Figcaption
-          className={classNames(styles.error, styles.inputDescription)}
-        >
-          <FontAwesome icon="info-circle" className={styles.infoCircle} />
-          {addError}
-        </Figcaption>
-      );
-    } else {
-      return (
-        <Figcaption className={styles.inputDescription}>
-          {i18n.coteacherCount({count: numCoteachers})}
-        </Figcaption>
-      );
-    }
-  };
-
   return (
     <div className={styles.add}>
-      <label className={styles.addLabel}>{i18n.coteacherEmailAddress()}</label>
+      <Typography
+        component="label"
+        htmlFor="coteacher-email"
+        variant="label2"
+        className={styles.addLabel}
+      >
+        {i18n.coteacherEmailAddress()}
+      </Typography>
       <div className={styles.form} onSubmit={handleAddEmail}>
-        <input
-          className={classNames(styles.input, !!addError && styles.inputError)}
-          type="text"
-          disabled={isMaxCoteachers}
+        <TextField
+          id="coteacher-email"
+          name="coteacher-email"
+          inputType="email"
+          className={styles.emailField}
           value={inputValue}
           onChange={handleInputChange}
           onKeyDown={handleSubmitAddEmail}
+          disabled={isMaxCoteachers || !!disabled}
+          errorMessage={addError || undefined}
         />
-        <Button
+        <MuiButton
           className={styles.button}
-          color={Button.ButtonColor.brandSecondaryDefault}
+          variant="contained"
+          color="primary"
           id="add-coteacher"
           type="submit"
-          text={i18n.coteacherAddButton()}
           onClick={handleAddEmail}
-          disabled={isMaxCoteachers}
-        />
+          disabled={isMaxCoteachers || !!disabled}
+        >
+          {i18n.coteacherAddButton()}
+        </MuiButton>
       </div>
-      {getErrorOrCount()}
+      {!disabled && !addError && (
+        <Typography
+          className={styles.inputDescription}
+          variant="figcaption"
+          gutterBottom
+        >
+          {i18n.coteacherCount({count: numCoteachers})}
+        </Typography>
+      )}
     </div>
   );
 }
@@ -248,4 +249,5 @@ AddCoteacher.propTypes = {
   addSavedCoteacher: PropTypes.func.isRequired,
   setAddError: PropTypes.func.isRequired,
   sectionMetricInformation: PropTypes.object,
+  disabled: PropTypes.bool,
 };

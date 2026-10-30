@@ -1,17 +1,37 @@
-import React, {useState, useEffect} from 'react';
-import PropTypes from 'prop-types';
-import {curriculumDataShape} from './curriculumCatalogShapes';
-import i18n from '@cdo/locale';
-import style from '../../../style/code-studio/curriculum_catalog_container.module.scss';
-import HeaderBanner from '../HeaderBanner';
-import CourseCatalogBannerBackground from '../../../static/curriculum_catalog/course-catalog-banner-bg.png';
-import CourseCatalogIllustration01 from '../../../static/curriculum_catalog/course-catalog-illustration-01.png';
-import CourseCatalogNoSearchResultPenguin from '../../../static/curriculum_catalog/course-catalog-no-search-result-penguin.png';
-import {Heading5, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
-import CurriculumCatalogFilters from './CurriculumCatalogFilters';
+// The following styles are imported in a very specific order to preserve UI consistency.
+// `CurriculumCatalogCard` imports `2022-rebrand-update.scss`
+// `typography.scss` has conflicting styles with `2022-rebrand-update.scss` (specifically for `h4` and `p` elements)
+// We are importing them in the specific order they were imported before adding import/order in order to preserve the UI.
+// These are very small changes so this can likely be removed with no issues.
+/* eslint-disable import/order */
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+/* eslint-enable import/order */
+
+import CloseButton from '@code-dot-org/component-library/closeButton';
+import HeroBanner from '@code-dot-org/component-library/heroBanner';
+import {Typography} from '@mui/material';
+import PropTypes from 'prop-types';
+import React, {useState, useEffect} from 'react';
+
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import NoMatchingSearchResultsFound from '@cdo/apps/templates/courseOfferings/noMatchingSearchResultsFound/NoMatchingSearchResultsFound';
+import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
+import {
+  getSimilarRecommendations,
+  getStretchRecommendations,
+} from '@cdo/apps/util/curriculumRecommender/curriculumRecommender';
+import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
+import i18n from '@cdo/locale';
+
+import CourseCatalogBannerBackground from '../../../static/curriculum_catalog/course-catalog-banner-bg.png';
+import CourseCatalogIllustration01 from '../../../static/curriculum_catalog/course-catalog-illustration-01.svg';
+import CourseCatalogNoSearchResultPenguin from '../../../static/curriculum_catalog/course-catalog-no-search-result-penguin.png';
+
+import {curriculumDataShape} from './curriculumCatalogConstants';
+import CurriculumCatalogFilters from './CurriculumCatalogFilters';
+
+import style from '../../../style/code-studio/curriculum_catalog_container.module.scss';
 
 const CurriculumCatalog = ({
   curriculaData,
@@ -20,6 +40,8 @@ const CurriculumCatalog = ({
   isInUS,
   isSignedOut,
   isTeacher,
+  curriculaTaught,
+  forceTranslated,
   ...props
 }) => {
   const [filteredCurricula, setFilteredCurricula] = useState(curriculaData);
@@ -27,6 +49,10 @@ const CurriculumCatalog = ({
   const [showAssignSuccessMessage, setShowAssignSuccessMessage] =
     useState(false);
   const [expandedCardKey, setExpandedCardKey] = useState(null);
+  const [recommendedSimilarCurriculum, setRecommendedSimilarCurriculum] =
+    useState(null);
+  const [recommendedStretchCurriculum, setRecommendedStretchCurriculum] =
+    useState(null);
 
   useEffect(() => {
     const expandedCardFound = filteredCurricula.some(
@@ -35,6 +61,8 @@ const CurriculumCatalog = ({
 
     if (!expandedCardFound) {
       setExpandedCardKey(null);
+      setRecommendedSimilarCurriculum(null);
+      setRecommendedStretchCurriculum(null);
     }
   }, [expandedCardKey, filteredCurricula]);
 
@@ -59,16 +87,109 @@ const CurriculumCatalog = ({
     setAssignSuccessMessage('');
   };
 
-  const handleExpandedCardChange = key => {
-    if (expandedCardKey !== key) {
+  const handleQuickViewClicked = key => {
+    if (expandedCardKey === key) {
+      // If Quick View is clicked again to close the card (or the 'X' on the expanded card is clicked)
+      setExpandedCardKey(null);
+      setRecommendedSimilarCurriculum(null);
+      setRecommendedStretchCurriculum(null);
+    } else {
       analyticsReporter.sendEvent(
         EVENTS.CURRICULUM_CATALOG_QUICK_VIEW_CLICKED_EVENT,
         {
           curriculum_offering: key,
         }
       );
+      handleSetExpandedCardKey(key);
     }
-    setExpandedCardKey(expandedCardKey === key ? null : key);
+  };
+
+  const handleSetExpandedCardKey = key => {
+    const newRecommendedSimilarCurriculum =
+      getRecommendedSimilarCurriculum(key);
+    const newRecommendedStretchCurriculum = getRecommendedStretchCurriculum(
+      key,
+      newRecommendedSimilarCurriculum?.key
+    );
+
+    analyticsReporter.sendEvent(EVENTS.RECOMMENDED_CATALOG_CURRICULUM_SHOWN, {
+      current_curriculum_offering: key,
+      recommended_similar_curriculum_offering:
+        newRecommendedSimilarCurriculum?.key,
+      recommended_stretch_curriculum_offering:
+        newRecommendedStretchCurriculum?.key,
+    });
+
+    setRecommendedSimilarCurriculum(newRecommendedSimilarCurriculum);
+    setRecommendedStretchCurriculum(newRecommendedStretchCurriculum);
+    setExpandedCardKey(key);
+  };
+
+  // Get the top recommended similar curriculum based on the curriculum with the given
+  // curriculumKey
+  const getRecommendedSimilarCurriculum = curriculumKey => {
+    // Check if Similar Curriculum Recommender has already been run with this curriculumKey and cached in sessionStorage
+    const similarRecommenderResults =
+      JSON.parse(tryGetSessionStorage('similarRecommenderResults', '{}')) || {};
+    const similarRecommenderCurrKeyResult =
+      similarRecommenderResults[curriculumKey];
+    if (similarRecommenderCurrKeyResult) {
+      return similarRecommenderCurrKeyResult;
+    }
+
+    // Get top recommended similar curriculum
+    const recommendations = getSimilarRecommendations(
+      curriculaData,
+      curriculumKey,
+      curriculaTaught
+    );
+    const recommendedCurriculum = recommendations[0];
+
+    // Update sessionStorage with new recommendation result
+    similarRecommenderResults[curriculumKey] = recommendedCurriculum;
+    trySetSessionStorage(
+      'similarRecommenderResults',
+      JSON.stringify(similarRecommenderResults)
+    );
+
+    return recommendedCurriculum;
+  };
+
+  // Get the top recommended stretch curriculum based on the curriculum with the given
+  // curriculumKey. If the top result is the same as the similar curriculum, show the
+  // second result.
+  const getRecommendedStretchCurriculum = (
+    curriculumKey,
+    similarCurriculumKey
+  ) => {
+    // Check if Stretch Curriculum Recommender has already been run with this curriculumKey and cached in sessionStorage
+    const stretchRecommenderResults =
+      JSON.parse(tryGetSessionStorage('stretchRecommenderResults', '{}')) || {};
+    const stretchRecommenderCurrKeyResult =
+      stretchRecommenderResults[curriculumKey];
+    if (stretchRecommenderCurrKeyResult) {
+      return stretchRecommenderCurrKeyResult;
+    }
+
+    // Get top recommended stretch curriculum
+    const recommendations = getStretchRecommendations(
+      curriculaData,
+      curriculumKey,
+      curriculaTaught
+    );
+    const recommendedCurriculum =
+      similarCurriculumKey === recommendations[0]?.key
+        ? recommendations[1]
+        : recommendations[0];
+
+    // Update sessionStorage with new recommendation result
+    stretchRecommenderResults[curriculumKey] = recommendedCurriculum;
+    trySetSessionStorage(
+      'stretchRecommenderResults',
+      JSON.stringify(stretchRecommenderResults)
+    );
+
+    return recommendedCurriculum;
   };
 
   // Renders search results based on the applied filters (or shows the No matching curriculums
@@ -92,12 +213,12 @@ const CurriculumCatalog = ({
                 duration,
                 school_subject,
                 cs_topic,
+                ai_chat_tools_dependency,
                 course_version_path,
                 course_version_id,
                 course_id,
                 course_offering_id,
                 script_id,
-                is_standalone_unit,
                 is_translated,
                 //Expanded Card Props
                 device_compatibility,
@@ -120,6 +241,7 @@ const CurriculumCatalog = ({
                   gradesArray={grade_levels.split(',')}
                   subjects={school_subject?.split(',')}
                   topics={cs_topic?.split(',')}
+                  aiChatToolsDependency={ai_chat_tools_dependency}
                   isTranslated={is_translated}
                   isEnglish={isEnglish}
                   pathToCourse={course_version_path}
@@ -127,7 +249,6 @@ const CurriculumCatalog = ({
                   courseId={course_id}
                   courseOfferingId={course_offering_id}
                   scriptId={script_id}
-                  isStandAloneUnit={is_standalone_unit}
                   onAssignSuccess={response => handleAssignSuccess(response)}
                   deviceCompatibility={device_compatibility}
                   description={description}
@@ -138,11 +259,14 @@ const CurriculumCatalog = ({
                     self_paced_pl_course_offering_path
                   }
                   isExpanded={expandedCardKey === key}
-                  onQuickViewClick={() => handleExpandedCardChange(key)}
+                  handleSetExpandedCardKey={handleSetExpandedCardKey}
+                  onQuickViewClick={() => handleQuickViewClicked(key)}
                   isInUS={isInUS}
                   availableResources={available_resources}
                   isSignedOut={isSignedOut}
                   isTeacher={isTeacher}
+                  recommendedSimilarCurriculum={recommendedSimilarCurriculum}
+                  recommendedStretchCurriculum={recommendedStretchCurriculum}
                   {...props}
                 />
               )
@@ -151,44 +275,40 @@ const CurriculumCatalog = ({
       );
     } else {
       return (
-        <div className={style.catalogContentNoResults}>
-          <img
-            className={style.noResultsImage}
-            src={CourseCatalogNoSearchResultPenguin}
-            alt=""
-          />
-          <Heading5 className={style.noResultsHeading}>
-            {i18n.noCurriculumSearchResultsHeader()}
-          </Heading5>
-          <BodyTwoText className={style.noResultsBody}>
-            {i18n.noCurriculumSearchResultsBody()}
-          </BodyTwoText>
-        </div>
+        <NoMatchingSearchResultsFound
+          illustrationImageProps={{
+            src: CourseCatalogNoSearchResultPenguin,
+            style: {width: '5em'},
+          }}
+          noResultsHeadingText={i18n.noCurriculumSearchResultsHeader()}
+          noResultsSubHeadingText={i18n.noCurriculumSearchResultsBody()}
+        />
       );
     }
   };
 
   return (
     <>
-      <HeaderBanner
-        headingText={i18n.curriculumCatalogHeaderTitle()}
-        subHeadingText={i18n.curriculumCatalogHeaderSubtitle()}
-        backgroundUrl={CourseCatalogBannerBackground}
-        imageUrl={CourseCatalogIllustration01}
+      <HeroBanner
+        className={style.curriculumCatalogHeroBanner}
+        data-theme="Dark"
+        heading={i18n.curriculumCatalogHeaderTitle()}
+        subHeading={i18n.curriculumCatalogHeaderSubtitle()}
+        imageProps={{src: CourseCatalogIllustration01}}
+        backgroundImageUrl={CourseCatalogBannerBackground}
+        withWideText
+        hideImageOnSmallScreen
       />
       {showAssignSuccessMessage && (
         <div className={style.assignSuccessMessageCenter}>
           <div className={style.assignSuccessMessageContainer}>
-            <BodyTwoText className={style.assignSuccessMessage}>
+            <Typography variant="body2" gutterBottom>
               {assignSuccessMessage}
-            </BodyTwoText>
-            <button
+            </Typography>
+            <CloseButton
               aria-label="close success message"
               onClick={handleCloseAssignSuccessMessage}
-              type="button"
-            >
-              <strong>X</strong>
-            </button>
+            />
           </div>
         </div>
       )}
@@ -197,6 +317,7 @@ const CurriculumCatalog = ({
         filteredCurricula={filteredCurricula}
         setFilteredCurricula={setFilteredCurricula}
         isEnglish={isEnglish}
+        forceTranslated={forceTranslated}
         languageNativeName={languageNativeName}
       />
       <div className={style.catalogContentContainer}>
@@ -213,6 +334,32 @@ CurriculumCatalog.propTypes = {
   isInUS: PropTypes.bool.isRequired,
   isSignedOut: PropTypes.bool.isRequired,
   isTeacher: PropTypes.bool.isRequired,
+  curriculaTaught: PropTypes.arrayOf(PropTypes.number),
+  forceTranslated: PropTypes.bool,
 };
 
-export default CurriculumCatalog;
+/**
+ * This is a version of the curriculum catalog that is overridable by a regional
+ * configuration.
+ *
+ * This is done via a configuration in, for instance, /config/global_editions/fa.yml
+ * via a paths rule such as:
+ *
+ * ```
+ * pages:
+ *   # Home dashboards
+ *   - path: /
+ *     components:
+ *       CurriculumCatalog:
+ *         forceTranslated: true
+ * ```
+ */
+const RegionalCurriculumCatalog = props => (
+  <GlobalEditionWrapper
+    component={CurriculumCatalog}
+    componentId="CurriculumCatalog"
+    props={props}
+  />
+);
+
+export default RegionalCurriculumCatalog;

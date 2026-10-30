@@ -1,0 +1,229 @@
+import {sendAnalytics} from '@cdo/apps/aichat/redux/thunks/sendAnalytics';
+import {uploadFiles} from '@cdo/apps/aichat/redux/thunks/uploadFiles';
+import {AssetSource, ChatAsset} from '@cdo/apps/aichat/types';
+import {RootState} from '@cdo/apps/types/redux';
+import HttpClient from '@cdo/apps/util/HttpClient';
+import {moderateImage} from '@cdo/apps/util/moderateImage';
+
+jest.mock('@cdo/apps/util/HttpClient');
+jest.mock('@cdo/apps/util/moderateImage', () => ({
+  moderateImage: jest.fn(),
+}));
+jest.mock('@cdo/apps/aichat/redux/thunks/sendAnalytics', () => ({
+  sendAnalytics: jest.fn(),
+}));
+jest.mock('@cdo/apps/lab2/Lab2Registry', () => ({
+  default: {
+    getInstance: () => ({
+      getMetricsReporter: () => ({logError: jest.fn()}),
+    }),
+  },
+}));
+
+const mockHttpClient = HttpClient as jest.Mocked<typeof HttpClient>;
+const mockModerateImage = moderateImage as jest.Mock;
+const mockSendAnalytics = sendAnalytics as jest.Mock;
+
+const makeFile = (name: string, type = 'image/png', size = 100): File =>
+  Object.defineProperty(new File(['x'.repeat(size)], name, {type}), 'size', {
+    value: size,
+  });
+
+const buildAssetUrl = (asset: ChatAsset) => `/files/${asset.filename}`;
+
+const makeGetState = (numStagedFiles = 0) =>
+  (() => ({
+    aichat: {stagedFiles: Array(numStagedFiles).fill(null)},
+  })) as unknown as () => RootState;
+
+describe('uploadFiles', () => {
+  let dispatch: jest.Mock;
+
+  beforeEach(() => {
+    dispatch = jest.fn();
+    mockHttpClient.put.mockResolvedValue({} as Response);
+    mockModerateImage.mockResolvedValue('safe');
+    mockSendAnalytics.mockReturnValue(jest.fn());
+  });
+
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
+  describe('image moderation', () => {
+    it('does not call HttpClient.put for a flagged image', async () => {
+      mockModerateImage.mockResolvedValue('flagged');
+      const file = makeFile('photo.png');
+
+      await uploadFiles({files: [file], buildAssetUrl})(
+        dispatch,
+        makeGetState(),
+        undefined
+      );
+
+      expect(mockHttpClient.put).not.toHaveBeenCalled();
+    });
+
+    it('dispatches stagedFileUploadFinished with imageFileFlagged for a flagged image', async () => {
+      mockModerateImage.mockResolvedValue('flagged');
+      const file = makeFile('photo.png');
+
+      await uploadFiles({files: [file], buildAssetUrl})(
+        dispatch,
+        makeGetState(),
+        undefined
+      );
+
+      const calls = dispatch.mock.calls.map(([action]) => action);
+      expect(calls).toEqual(
+        expect.arrayContaining([
+          expect.objectContaining({
+            payload: expect.objectContaining({status: 'imageFileFlagged'}),
+          }),
+        ])
+      );
+    });
+
+    it('still uploads non-flagged files when one file is flagged', async () => {
+      mockModerateImage
+        .mockResolvedValueOnce('flagged')
+        .mockResolvedValueOnce('safe');
+      const flaggedFile = makeFile('bad.png');
+      const cleanFile = makeFile('good.png');
+
+      await uploadFiles({files: [flaggedFile, cleanFile], buildAssetUrl})(
+        dispatch,
+        makeGetState(),
+        undefined
+      );
+
+      expect(mockHttpClient.put).toHaveBeenCalledTimes(1);
+      expect(mockHttpClient.put).toHaveBeenCalledWith(
+        buildAssetUrl({filename: 'good.png', source: AssetSource.PROJECT}),
+        cleanFile
+      );
+    });
+
+    it('skips moderation for PDF files', async () => {
+      const pdfFile = makeFile('doc.pdf', 'application/pdf');
+
+      await uploadFiles({files: [pdfFile], buildAssetUrl})(
+        dispatch,
+        makeGetState(),
+        undefined
+      );
+
+      expect(mockModerateImage).not.toHaveBeenCalled();
+      expect(mockHttpClient.put).toHaveBeenCalledTimes(1);
+    });
+
+    it('uploads the image when moderation returns safe', async () => {
+      mockModerateImage.mockResolvedValue('safe');
+      const file = makeFile('photo.png');
+
+      await uploadFiles({files: [file], buildAssetUrl})(
+        dispatch,
+        makeGetState(),
+        undefined
+      );
+
+      expect(mockHttpClient.put).toHaveBeenCalledTimes(1);
+    });
+
+    it('uploads the image when moderation returns error', async () => {
+      mockModerateImage.mockResolvedValue('error');
+      const file = makeFile('photo.png');
+
+      await uploadFiles({files: [file], buildAssetUrl})(
+        dispatch,
+        makeGetState(),
+        undefined
+      );
+
+      expect(mockHttpClient.put).toHaveBeenCalledTimes(1);
+    });
+  });
+
+  describe('onAssetUploaded callback', () => {
+    it('invokes onAssetUploaded with the sanitized filename and resolved URL on success', async () => {
+      const onAssetUploaded = jest.fn();
+      const file = makeFile('my photo.png');
+
+      await uploadFiles({files: [file], buildAssetUrl, onAssetUploaded})(
+        dispatch,
+        makeGetState(),
+        undefined
+      );
+
+      expect(onAssetUploaded).toHaveBeenCalledWith(
+        expect.objectContaining({
+          filename: 'my_photo.png',
+          source: AssetSource.PROJECT,
+        }),
+        expect.stringMatching(/^\/files\/.*\.png$/)
+      );
+    });
+
+    it('does not invoke onAssetUploaded when upload fails', async () => {
+      mockHttpClient.put.mockRejectedValue(new Error('network error'));
+      const onAssetUploaded = jest.fn();
+      const file = makeFile('photo.png');
+
+      await uploadFiles({files: [file], buildAssetUrl, onAssetUploaded})(
+        dispatch,
+        makeGetState(),
+        undefined
+      );
+
+      expect(onAssetUploaded).not.toHaveBeenCalled();
+    });
+  });
+
+  describe('bucketKey', () => {
+    it('builds the upload URL from bucketKey rather than filename', async () => {
+      const onAssetUploaded = jest.fn();
+      // Mimic production getAssetUrl: prefer bucketKey over filename
+      const buildAssetUrlWithBucketKey = (asset: ChatAsset) =>
+        `/files/${asset.bucketKey ?? asset.filename}`;
+      const file = makeFile('photo.png');
+
+      await uploadFiles({
+        files: [file],
+        buildAssetUrl: buildAssetUrlWithBucketKey,
+        onAssetUploaded,
+      })(dispatch, makeGetState(), undefined);
+
+      const [[putUrl]] = mockHttpClient.put.mock.calls;
+      // URL must use the UUID bucket key, not the display filename
+      expect(putUrl).not.toBe('/files/photo.png');
+      expect(putUrl).toMatch(/^\/files\/[0-9a-f-]+\.png$/i);
+      // onAssetUploaded receives the same bucket-key URL and the display filename
+      expect(onAssetUploaded).toHaveBeenCalledWith(
+        expect.objectContaining({filename: 'photo.png'}),
+        putUrl
+      );
+    });
+  });
+
+  describe('filename sanitization', () => {
+    it.each([
+      ['.png', '_png'],
+      ['my file (1).png', 'my_file__1_.png'],
+      ['hello world.jpg', 'hello_world.jpg'],
+    ])('normalizes "%s" to "%s"', async (inputName, expectedFilename) => {
+      const onAssetUploaded = jest.fn();
+      const file = makeFile(inputName);
+
+      await uploadFiles({files: [file], buildAssetUrl, onAssetUploaded})(
+        dispatch,
+        makeGetState(),
+        undefined
+      );
+
+      expect(onAssetUploaded).toHaveBeenCalledWith(
+        expect.objectContaining({filename: expectedFilename}),
+        expect.any(String)
+      );
+    });
+  });
+});

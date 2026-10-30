@@ -1,4 +1,5 @@
 import React from 'react';
+
 import ConfirmRemoveStudentDialog, {
   MINIMUM_TEST_PROPS,
 } from './ConfirmRemoveStudentDialog';
@@ -19,6 +20,12 @@ const Template = args => (
 export const NeverSignedInStudent = Template.bind({});
 NeverSignedInStudent.args = {
   hasEverSignedIn: false,
+};
+
+export const DisabledButtons = Template.bind({});
+DisabledButtons.args = {
+  hasEverSignedIn: false,
+  disabled: true,
 };
 
 export const EverSignedInStudent = Template.bind({});

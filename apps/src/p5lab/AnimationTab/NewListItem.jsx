@@ -1,7 +1,9 @@
 /** List item placeholder for adding a new item */
-import React from 'react';
-import PropTypes from 'prop-types';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
+
 import style from './new-list-item.module.scss';
 
 /**
@@ -24,8 +26,12 @@ class NewListItem extends React.Component {
       >
         <div className={style.wrapper}>
           <div className={style.border}>
-            <i className={classNames(style.addButton, 'fa fa-plus-circle')} />
-            <div className={style.animationName}>{this.props.label}</div>
+            <i
+              className={classNames(style.addButton, 'fa-solid fa-circle-plus')}
+            />
+            <Typography variant="body3" className={style.animationName}>
+              {this.props.label}
+            </Typography>
           </div>
         </div>
       </button>

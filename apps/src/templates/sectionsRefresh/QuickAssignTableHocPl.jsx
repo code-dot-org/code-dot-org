@@ -1,10 +1,14 @@
-import React from 'react';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
-import moduleStyles from './sections-refresh.module.scss';
+import React from 'react';
+
+import {assignmentCourseOfferingShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import i18n from '@cdo/locale';
+
 import {MARKETING_AUDIENCE} from './CurriculumQuickAssign';
 import {renderRows} from './QuickAssignTableHelpers';
-import {Heading4} from '@cdo/apps/componentLibrary/typography';
+
+import moduleStyles from './sections-refresh.module.scss';
 
 const TABLE_COUNT = 3;
 /*
@@ -18,6 +22,7 @@ export default function QuickAssignTableHocPl({
   setSelectedCourseOffering,
   updateCourse,
   sectionCourse,
+  selectedCourseUnavailable,
 }) {
   // Begins the table construction given the first table title
   const allTables = title => {
@@ -40,7 +45,9 @@ export default function QuickAssignTableHocPl({
         <thead>
           <tr className={moduleStyles.headerRow}>
             <td className={moduleStyles.headerCell}>
-              <Heading4>{title}</Heading4>
+              <Typography variant="h4" gutterBottom>
+                {title}
+              </Typography>
             </td>
           </tr>
         </thead>
@@ -49,7 +56,8 @@ export default function QuickAssignTableHocPl({
             rows,
             sectionCourse,
             updateCourse,
-            setSelectedCourseOffering
+            setSelectedCourseOffering,
+            selectedCourseUnavailable
           )}
         </tbody>
       </table>
@@ -86,6 +94,9 @@ export default function QuickAssignTableHocPl({
       {marketingAudience === MARKETING_AUDIENCE.HOC && (
         <div>{allTables(i18n.teacherCourseHoc())}</div>
       )}
+      {marketingAudience === MARKETING_AUDIENCE.HOAI && (
+        <div>{allTables(i18n.marketingInitiativeHOAI())}</div>
+      )}
       {marketingAudience === MARKETING_AUDIENCE.PL && (
         <div>{allTables(i18n.professionalLearning())}</div>
       )}
@@ -95,8 +106,9 @@ export default function QuickAssignTableHocPl({
 
 QuickAssignTableHocPl.propTypes = {
   marketingAudience: PropTypes.string.isRequired,
-  courseOfferings: PropTypes.object.isRequired,
+  courseOfferings: assignmentCourseOfferingShape.isRequired,
   setSelectedCourseOffering: PropTypes.func.isRequired,
   updateCourse: PropTypes.func.isRequired,
   sectionCourse: PropTypes.object,
+  selectedCourseUnavailable: PropTypes.bool,
 };

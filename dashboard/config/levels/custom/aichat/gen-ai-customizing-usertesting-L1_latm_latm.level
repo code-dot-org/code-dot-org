@@ -1,0 +1,57 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-12-11T21:11:21.000Z",
+  "level_num": "custom",
+  "user_id": 4,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## User Testing\r\n\r\nComplete the steps in your [User Testing Activity Guide](https://docs.google.com/document/d/1n60D0JCk3KDSbJduD8AEXUPp2zhDJM9e6rHVj-Mc56Y/edit) using the chatbot on this level.\r\n\r\nYou can switch into User View to interact with the published version of the chatbot while user testing.",
+    "system_prompt": "deprecated",
+    "bot_title": "deprecated",
+    "bot_description": "deprecated",
+    "disable_projects": true,
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": "0.8",
+        "systemPrompt": "Eres un chatbot que fomenta hábitos responsables de reciclaje. El usuario puede hacer preguntas sobre prácticas de reciclaje y tú brindarás respuestas amigables e informativas. El usuario también puede describir diferentes actividades en las que participa, y tú puedes explicar maneras de incorporar el reciclaje en ellas. Después de cada respuesta, haz una pregunta que invite al usuario a reflexionar sobre sus propios hábitos de reciclaje y cómo pueden mejorarse. Responde siempre con un tono amigable y optimista.",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "Recycling Helper",
+          "description": "This chatbot helps you learn more about recycling and improve your habits. It’s meant for anyone who wants to be better at recycling because of the environment.",
+          "intendedUse": "People can ask it questions about what things are recyclable or not. You can also describe some of your habits and it will give advice on way to incorporate recycling into what you do.",
+          "limitationsAndWarnings": "Some of the responses might not be accurate depending on your local laws and regulations. Really serious questions should be double checked with a search engine",
+          "testingAndEvaluation": "none yet!",
+          "exampleTopics": [
+            "How can I be better at recycling?",
+            "Are batteries recyclable?",
+            "What can I recycle from a fast food restaurant?"
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "readonly",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "readonly"
+      },
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "levelSystemPrompt": "Por favor responde a mis preguntas en espanol."
+    },
+    "name_suffix": "_latm",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-12-11T21:11:21.367+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-usertesting-L1_latm\\\"\"],\"cloned_from\":\"gen-ai-customizing-usertesting-L1_latm\"},{\"changed_at\":\"2026-01-22 21:19:31 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"}]"
+}]]></config>
+</Aichat>

@@ -1,15 +1,16 @@
-import React, {useState, useEffect, useRef} from 'react';
 import PropTypes from 'prop-types';
+import React, {useState, useEffect, useRef} from 'react';
 import ReactDOM from 'react-dom';
-import i18n from '@cdo/locale';
-import color from '@cdo/apps/util/color';
-import {feedbackShape} from './types';
-import {UnlocalizedTimeAgo as TimeAgo} from '@cdo/apps/templates/TimeAgo';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+
+import fontConstants from '@cdo/apps/fontConstants';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import {KeepWorkingBadge} from '@cdo/apps/templates/progress/BubbleBadge';
-import fontConstants from '@cdo/apps/fontConstants';
+import {UnlocalizedTimeAgo as TimeAgo} from '@cdo/apps/templates/TimeAgo';
+import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
+
+import {feedbackShape} from './types';
 
 const getElementHeight = element => {
   return ReactDOM.findDOMNode(element).offsetHeight;
@@ -118,14 +119,6 @@ function Comment({commentText, feedbackSeenByStudent, feedbackId}) {
 
   const expandComment = () => {
     setExpanded(true);
-    firehoseClient.putRecord(
-      {
-        study: 'all-feedback',
-        event: 'expand-feedback',
-        data_json: {feedback_id: feedbackId},
-      },
-      {includeUserId: true}
-    );
   };
 
   const collapseComment = () => {

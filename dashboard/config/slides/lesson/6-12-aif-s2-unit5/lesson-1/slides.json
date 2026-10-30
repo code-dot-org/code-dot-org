@@ -1,0 +1,72 @@
+{
+  "ownerKind": "lesson",
+  "ownerId": 8504308,
+  "slides": [
+    {
+      "key": "f5728ed5-1a3c-465c-a374-7b9add549542",
+      "description": "Introduce common apps that use live, changing data. Pose the question of how these apps access information that is constantly updated and not stored directly within the app itself.",
+      "panel": {
+        "key": "86a94f42-5e5d-4d46-a4db-6fef70b17ce4",
+        "text": "Think about apps like social media feeds, weather updates, or live maps. How do these apps show you information that is always changing and not stored directly on your phone or computer?",
+        "imageUrl": "https://images.code.org/a7b7ed4b4fc9d6abb61b3e20823e86b4-Where Data Comes From-slide-panel-1-6a0db613-bb86-4193-8667-566f380f825e.png",
+        "layout": "text-top-left",
+        "teacherNote": "Before showing this slide, ask students to name an app they use daily and consider where the information they see in it might come from. Encourage them to think beyond data they've personally entered."
+      }
+    },
+    {
+      "key": "412a0dd3-a024-477a-84e6-fd988705e9fe",
+      "description": "Explain that apps often need to get data from other places, like external servers. Set up the challenge of how an app can 'talk' to these other data sources to pull in live information.",
+      "panel": {
+        "key": "db8ed474-da29-427b-963b-46002f6f57a8",
+        "text": "Many apps rely on data that lives somewhere else entirely, on powerful computers called servers. But how does an app 'talk' to these external servers and pull in all that live information?",
+        "imageUrl": "https://images.code.org/a2ad86369d9963ec67118306049bc911-Where Data Comes From-slide-panel-2-769ee6f0-d705-42c7-bef3-c00017ba454a.png",
+        "layout": "text-top-center",
+        "teacherNote": "Before showing this slide, reiterate the question from the previous slide, asking students to consider how an app on their device could access information stored on a computer far away. This slide concretizes the 'external server' concept and frames the challenge that APIs address."
+      }
+    },
+    {
+      "key": "e026e877-4b2a-4d0f-b399-e8a8172a7f8c",
+      "description": "Define what an API is (Application Programming Interface). Explain its role as a messenger or translator, allowing different software applications to communicate and share data.",
+      "panel": {
+        "key": "0b8a1dc6-181a-4b05-8eed-b6c5868f7f9f",
+        "text": "An **API**, or **Application Programming Interface**, is like a special messenger that helps different apps and services 'talk' to each other. It defines the rules for how they can request and share information, allowing your app to access data from external servers.",
+        "imageUrl": "https://images.code.org/9b428093aaffaf5ba6974cda71a3f862-Where Data Comes From-slide-panel-3-4f2e2ae1-fc5b-4bac-8f82-65e30872b2cc.png",
+        "layout": "text-bottom-center",
+        "teacherNote": "Before revealing this slide, ask students what they think 'API' might stand for or what it sounds like. Emphasize that an API isn't the data itself, but the *method* or *rules* for accessing data. You can liken it to a waiter in a restaurant (your app) taking your order (data request) to the kitchen (external server) and bringing back your meal (the data)."
+      }
+    },
+    {
+      "key": "18b497b8-248e-42e8-a88d-fb81560692ad",
+      "description": "Introduce the request-response model. Describe how an app sends a 'request' for specific information to an API, and the API sends back a 'response' containing the requested data.",
+      "panel": {
+        "key": "096ca69c-94de-4284-883d-b91b7a05b057",
+        "text": "This communication follows a **request-response model**: your app sends a 'request' for specific information to the API, and the API then sends back a 'response' containing the data your app asked for.",
+        "imageUrl": "https://images.code.org/3f7224b8505a858a268f01fe512b2b73-Where Data Comes From-slide-panel-4-5c3769a6-c89a-4c78-959d-1afb67ea7bdf.png",
+        "layout": "text-bottom-center",
+        "teacherNote": "Before showing this slide, reiterate the concept that an API acts as a middleman. Ask students to predict what happens after the app (like a customer) asks the API (like a waiter) for something. Emphasize the two-way nature of this communication: asking for data (request) and receiving it (response). Clarify that these aren't just informal asks, but structured messages."
+      }
+    },
+    {
+      "key": "0bdaf0dc-3116-4b95-9de0-ba73a5d616c1",
+      "description": "Introduce JSON (JavaScript Object Notation) as a standard, human-readable format for data exchanged via APIs. Explain that JSON structures the data in an organized way, making it easy for apps to understand and use.",
+      "panel": {
+        "key": "673e7775-464f-4988-84cf-0a31defba8f8",
+        "text": "When APIs send back information, they often use a common, easy-to-read format called **JSON** (short for **JavaScript Object Notation**). JSON structures data in an organized way, making it simple for your app to understand and use the information it receives.",
+        "imageUrl": "https://images.code.org/a5b3d502f9f14dc6bbd9e8e44d4be1e6-Where Data Comes From-slide-panel-5-d3c4b654-6f50-4ca6-bac0-e1e9e84daac7.png",
+        "layout": "text-bottom-center",
+        "teacherNote": "Before showing this slide, remind students that in the request-response model, the 'response' contains data. Ask them to consider how that data might be organized so that an app can easily understand it. Emphasize that JSON is a widely adopted standard precisely because of its human-readable and structured nature, allowing for clear communication between different software systems."
+      }
+    },
+    {
+      "key": "a4edf7b2-843d-44be-b677-b5c7cf902851",
+      "description": "Discuss that relying on external APIs means an app is part of a larger system. Highlight the benefits (access to vast amounts of data, real-time updates) and potential tradeoffs (dependency, reliability, data format understanding).",
+      "panel": {
+        "key": "96873787-441a-451e-8013-1ac54ec1bab1",
+        "text": "Using APIs means your app becomes part of a larger interconnected system. This offers great **benefits** like access to vast, real-time data! However, it also introduces **tradeoffs**: your app now depends on external services, which means considering their reliability and how well you understand the data formats they provide.",
+        "imageUrl": "https://images.code.org/7c4d60db7c027cd46ad68a818dee847f-Where Data Comes From-slide-panel-6-a26ea9d0-61a2-4a76-bad5-8447fe179900.png",
+        "layout": "text-bottom-center",
+        "teacherNote": "Before showing this slide, ask students to consider what might happen if one of the external services their app relies on (from the previous API discussion) suddenly stopped working or changed its data format. This slide emphasizes the real-world implications of external data integration beyond just technical implementation. Prompt them to think about how developers mitigate these risks."
+      }
+    }
+  ]
+}

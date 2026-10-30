@@ -1,24 +1,32 @@
-import React, {useState, useRef} from 'react';
-import i18n from '@cdo/locale';
-import style from './rubrics.module.scss';
-import {aiEvaluationShape} from './rubricShapes';
+import Checkbox from '@code-dot-org/component-library/checkbox';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton, Typography} from '@mui/material';
+import PropTypes from 'prop-types';
+import React, {useContext, useState} from 'react';
+
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {
-  BodyThreeText,
-  EmText,
-  Heading6,
-  StrongText,
-} from '@cdo/apps/componentLibrary/typography';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
-import Button from '@cdo/apps/templates/Button';
+import i18n from '@cdo/locale';
 
-export default function AiAssessmentFeedback({aiEvalInfo}) {
-  const radioGroupName = `ai-assessment-feedback-${aiEvalInfo.id}`;
-  const thumbsupval = true;
-  const thumbsdownval = false;
+import AiAssessmentFeedbackContext, {
+  NO_FEEDBACK,
+  THUMBS_DOWN,
+} from './AiAssessmentFeedbackContext';
+import {aiEvaluationShape} from './rubricShapes';
 
-  const [aiFeedback, setAIFeedback] = useState(null);
+import style from './rubrics.module.scss';
+
+async function updateAiFeedback(values, aiFeedbackId) {
+  const baseUrl = '/learning_goal_ai_evaluation_feedbacks';
+  await HttpClient.put(
+    `${baseUrl}/${aiFeedbackId}`,
+    JSON.stringify(values),
+    true,
+    {'Content-Type': 'application/json'}
+  );
+}
+
+export default function AiAssessmentFeedback({aiEvalInfo, aiFeedbackId}) {
+  const {aiFeedback, setAiFeedback} = useContext(AiAssessmentFeedbackContext);
   const [aiSubmitted, setAISubmitted] = useState(false);
   const [aiFalsePos, setAIFalsePos] = useState(false);
   const [aiFalseNeg, setAIFalseNeg] = useState(false);
@@ -27,27 +35,8 @@ export default function AiAssessmentFeedback({aiEvalInfo}) {
   const [aiOtherContent, setAIOtherContent] = useState('');
   const [aiFeedbackReceived, setAIFeedbackReceived] = useState(false);
 
-  // Timer vars for feedback received flag
-  const receivedTimer = useRef();
-  const disappearAfter = 20000;
-
-  const baseUrl = '/learning_goal_ai_evaluation_feedbacks';
-
-  const radioAiFeedbackCallback = radioButtonData => {
-    setAIFeedback(radioButtonData);
-    if (radioButtonData === thumbsupval) {
-      const bodyData = JSON.stringify({
-        learningGoalAiEvaluationId: aiEvalInfo.id,
-        aiFeedbackApproval: thumbsupval,
-      });
-      HttpClient.post(`${baseUrl}`, bodyData, true, {
-        'Content-Type': 'application/json',
-      });
-    }
-  };
-
-  const submitAiFeedbackCallback = () => {
-    const bodyData = JSON.stringify({
+  const submitAiFeedbackCallback = async () => {
+    const bodyData = {
       learningGoalAiEvaluationId: aiEvalInfo.id,
       aiFeedbackApproval: aiFeedback,
       falsePositive: aiFalsePos,
@@ -57,100 +46,45 @@ export default function AiAssessmentFeedback({aiEvalInfo}) {
       Vague: aiVague,
       feedbackOther: aiFeedbackOther,
       otherContent: aiOtherContent,
-    });
-    HttpClient.post(`${baseUrl}`, bodyData, true, {
-      'Content-Type': 'application/json',
-    });
+    };
+
+    await updateAiFeedback(bodyData, aiFeedbackId);
 
     setAISubmitted(true);
     setAIFeedbackReceived(true);
-
-    receivedTimer.current = setTimeout(() => {
-      setAIFeedbackReceived(false);
-    }, disappearAfter);
   };
 
   const cancelAiFeedbackCallback = () => {
     //reset all vars
-    setAIFeedback('');
     setAISubmitted(false);
     setAIFalsePos(false);
     setAIFalseNeg(false);
     setAIVague(false);
     setAIFeedbackOther(false);
     setAIOtherContent('');
+
+    // Clear feedback
+    setAiFeedback(NO_FEEDBACK);
   };
 
   return (
     <div>
-      <div className={style.aiFeedbackRow}>
-        <BodyThreeText>{i18n.aiAssessmentFeedbackAsk()}</BodyThreeText>
-        <label>
-          <span
-            className={
-              aiFeedback === thumbsupval
-                ? style.aiFeedbackThumbsUpChecked
-                : style.aiFeedbackThumbsUp
-            }
-            aria-hidden="true"
-          >
-            {aiFeedback === thumbsupval ? (
-              <FontAwesome icon="thumbs-up" />
-            ) : (
-              <FontAwesome icon="thumbs-o-up" />
-            )}
-          </span>
-          <input
-            type="radio"
-            className={style.aiFeedbackRadio}
-            name={radioGroupName}
-            value={thumbsupval}
-            onChange={() => {
-              radioAiFeedbackCallback(thumbsupval);
-            }}
-            checked={aiFeedback === thumbsupval}
-          />
-        </label>
-
-        <label>
-          <span
-            className={
-              aiFeedback === thumbsdownval
-                ? style.aiFeedbackThumbsDownChecked
-                : style.aiFeedbackThumbsDown
-            }
-            aria-hidden="true"
-          >
-            {aiFeedback === thumbsdownval ? (
-              <FontAwesome icon="thumbs-down" />
-            ) : (
-              <FontAwesome icon="thumbs-o-down" />
-            )}
-          </span>
-          <input
-            type="radio"
-            className={style.aiFeedbackRadio}
-            name={radioGroupName}
-            value={thumbsdownval}
-            onChange={() => {
-              radioAiFeedbackCallback(thumbsdownval);
-            }}
-            checked={aiFeedback === thumbsdownval}
-          />
-        </label>
-        {aiFeedbackReceived && (
-          <EmText className={style.aiFeedbackReceived}>
-            {i18n.aiFeedbackReceived()}
-          </EmText>
-        )}
-      </div>
-
-      {!aiSubmitted && aiFeedback === thumbsdownval && (
-        <div>
-          <Heading6>{i18n.aiFeedbackNegativeWhy()}</Heading6>
+      {aiFeedbackReceived && (
+        <Typography className={style.aiFeedbackReceived} variant="em">
+          <FontAwesomeV6Icon iconName="circle-check" />
+          {i18n.aiFeedbackReceived()}
+        </Typography>
+      )}
+      {!aiSubmitted && aiFeedback === THUMBS_DOWN && aiFeedbackId && (
+        <div className={style.aiAssessmentFeedback}>
+          <Typography variant="body4" gutterBottom>
+            <Typography variant="strong">
+              {i18n.aiFeedbackNegativeWhy()}
+            </Typography>
+          </Typography>
           <Checkbox
             label={i18n.aiFeedbackFalsePos()}
-            size="s"
+            size="xs"
             name="aiNegativeFeedbackGroup"
             onChange={() => {
               setAIFalsePos(!aiFalsePos);
@@ -159,7 +93,7 @@ export default function AiAssessmentFeedback({aiEvalInfo}) {
           />
           <Checkbox
             label={i18n.aiFeedbackFalseNeg()}
-            size="s"
+            size="xs"
             name="aiNegativeFeedbackGroup"
             onChange={() => {
               setAIFalseNeg(!aiFalseNeg);
@@ -168,7 +102,7 @@ export default function AiAssessmentFeedback({aiEvalInfo}) {
           />
           <Checkbox
             label={i18n.aiFeedbackVague()}
-            size="s"
+            size="xs"
             name="aiNegativeFeedbackGroup"
             onChange={() => {
               setAIVague(!aiVague);
@@ -177,7 +111,7 @@ export default function AiAssessmentFeedback({aiEvalInfo}) {
           />
           <Checkbox
             label={i18n.other()}
-            size="s"
+            size="xs"
             name="aiNegativeFeedbackGroup"
             onChange={() => {
               setAIFeedbackOther(!aiFeedbackOther);
@@ -186,30 +120,42 @@ export default function AiAssessmentFeedback({aiEvalInfo}) {
           />
           {aiFeedbackOther && (
             <div className={style.aiFeedbackOther}>
-              <StrongText>{i18n.aiFeedbackOtherDetails()} </StrongText>
+              <Typography variant="strong">
+                {i18n.aiFeedbackOtherDetails()}{' '}
+              </Typography>
               <textarea
                 className={style.aiFeedbackTextbox}
                 onChange={e => {
                   setAIOtherContent(e.target.value);
                 }}
                 type="text"
+                // eslint-disable-next-line react/forbid-dom-props
+                data-testid="ai-assessment-feedback-textarea"
               />
             </div>
           )}
           <div className={style.submitFeedbackRow}>
             <div className={style.submitFeedbackButtons}>
-              <Button
-                text={i18n.cancel()}
-                color={Button.ButtonColor.neutralDark}
-                onClick={cancelAiFeedbackCallback}
-                className={style.submitToStudentButton}
-              />
-              <Button
-                text={i18n.submit()}
-                color={Button.ButtonColor.brandSecondaryDefault}
+              <MuiButton
+                variant="contained"
+                color="primary"
+                size="small"
+                type="button"
                 onClick={submitAiFeedbackCallback}
                 className={style.submitToStudentButton}
-              />
+              >
+                {i18n.aiFeedbackSubmit()}
+              </MuiButton>
+              <MuiButton
+                variant="outlined"
+                color="secondary"
+                size="small"
+                type="button"
+                onClick={cancelAiFeedbackCallback}
+                className={style.submitToStudentButton}
+              >
+                {i18n.cancel()}
+              </MuiButton>
             </div>
           </div>
         </div>
@@ -220,4 +166,5 @@ export default function AiAssessmentFeedback({aiEvalInfo}) {
 
 AiAssessmentFeedback.propTypes = {
   aiEvalInfo: aiEvaluationShape,
+  aiFeedbackId: PropTypes.number,
 };

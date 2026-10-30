@@ -1,0 +1,59 @@
+import {LevelProperties} from '@cdo/apps/lab2/types';
+
+export interface AiTutorPromptSettings {
+  answerTypes: AiTutorAnswerType[];
+  answerTypeCustomizations?: Partial<Record<AiTutorAnswerType, string>>;
+  /** True when accepting AI Tutor changes saves at once, without asking for a description. */
+  disableCommitMessages?: boolean;
+}
+
+export type Widget2 = {
+  id: string;
+  parameters?: object;
+};
+
+export interface Weblab2LevelProperties extends LevelProperties {
+  widgetView?: boolean;
+  initialViewMode?: ViewMode;
+  aiTutorMode?: string;
+  levelSystemPrompt?: string;
+  aiTutorPromptSettings?: AiTutorPromptSettings;
+  widget2?: Widget2;
+}
+
+export enum ViewMode {
+  SPLIT = 'split',
+  CODE = 'code',
+  PREVIEW = 'preview',
+}
+
+export const AI_TUTOR_ANSWER_TYPES = [
+  'ask',
+  'buildCSS',
+  'buildHTML',
+  'buildJavaScript',
+  'buildJSON',
+  'buildPage',
+  'debug',
+  'documentation',
+  'example',
+  'explainCode',
+  'hint',
+  'pseudocode',
+  'refusal',
+  'refusalJavaScriptSnippets',
+  'testCase',
+] as const;
+
+export type AiTutorAnswerType = (typeof AI_TUTOR_ANSWER_TYPES)[number];
+
+// These are no longer used and replaced by answerTypes, but are kept for backwards compatibility.
+export type AiTutorMode =
+  | 'suggest'
+  | 'outline'
+  | 'guide'
+  | 'produce'
+  | 'designer'
+  | 'tutor'
+  | 'engineer'
+  | 'qa';

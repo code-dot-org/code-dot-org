@@ -1,0 +1,23 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2026-04-01T21:33:20.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Based on how your keys worked with your encryption method, what type of encryption did you create: symmetric encryption or asymmetric encryption. Briefly explain how your encryption method is either symmetric or asymmetric. ",
+    "stay_on_level_after_submit": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T21:33:20.976+00:00\",\"changed\":[\"cloned from \\\"ai-powered-threats-defenses-lesson9-level1b_2025-pilot\\\"\"],\"cloned_from\":\"ai-powered-threats-defenses-lesson9-level1b_2025-pilot\"}]"
+}]]></config>
+</FreeResponse>

@@ -8,10 +8,10 @@
 import {trySetLocalStorage, tryGetLocalStorage} from '../utils';
 
 const SET_CONSTANTS = 'instructions/SET_CONSTANTS';
-const TOGGLE_INSTRUCTIONS_COLLAPSED =
-  'instructions/TOGGLE_INSTRUCTIONS_COLLAPSED';
 const SET_INSTRUCTIONS_RENDERED_HEIGHT =
   'instructions/SET_INSTRUCTIONS_RENDERED_HEIGHT';
+const SET_INSTRUCTIONS_RENDERED_HEIGHT_AND_COLLAPSED =
+  'instructions/SET_INSTRUCTIONS_RENDERED_HEIGHT_AND_COLLAPSED';
 const SET_INSTRUCTIONS_MAX_HEIGHT_NEEDED =
   'instructions/SET_INSTRUCTIONS_MAX_HEIGHT_NEEDED';
 const SET_INSTRUCTIONS_MAX_HEIGHT_AVAILABLE =
@@ -126,9 +126,17 @@ export default function reducer(state = {...instructionsInitialState}, action) {
     });
   }
 
-  if (action.type === TOGGLE_INSTRUCTIONS_COLLAPSED) {
+  if (action.type === SET_INSTRUCTIONS_RENDERED_HEIGHT_AND_COLLAPSED) {
+    const isCollapsed = action.isCollapsed;
+    if (!state.allowResize) {
+      return Object.assign({}, state, {
+        isCollapsed,
+      });
+    }
     return Object.assign({}, state, {
-      isCollapsed: !state.isCollapsed,
+      isCollapsed,
+      renderedHeight: action.height,
+      expandedHeight: !isCollapsed ? action.height : state.expandedHeight,
     });
   }
 
@@ -265,11 +273,13 @@ export const setInstructionsRenderedHeight = height => ({
   height,
 });
 
-/**
- * Toggles whether instructions are currently collapsed.
- */
-export const toggleInstructionsCollapsed = () => ({
-  type: TOGGLE_INSTRUCTIONS_COLLAPSED,
+export const setInstructionsRenderedHeightAndCollapsed = (
+  height,
+  isCollapsed
+) => ({
+  type: SET_INSTRUCTIONS_RENDERED_HEIGHT_AND_COLLAPSED,
+  height,
+  isCollapsed,
 });
 
 /**

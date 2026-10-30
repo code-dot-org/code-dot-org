@@ -1,0 +1,102 @@
+#!/usr/bin/env ruby
+
+if __FILE__ == $PROGRAM_NAME
+  require_relative '../only_one'
+  abort 'Script already running' unless only_one_running?(__FILE__)
+end
+
+# This script fetches US top song data from the iTunes RSS feed and uploads it to the
+# shared datablock storage table for the "Viral 50 USA" dataset.
+require_relative '../../../dashboard/config/environment'
+require_relative '../../../deployment'
+require 'cdo/profanity_filter'
+require 'json'
+require 'net/http'
+
+ITUNES_TOP_SONGS_US_URL = 'https://itunes.apple.com/us/rss/topsongs/limit=100/json'
+TABLE_NAME = 'Viral 50 USA'
+MAX_RECORDS = 50
+PROFANITY_LOCALE = 'en-US'
+
+def fetch_feed
+  response = Net::HTTP.get_response(URI(ITUNES_TOP_SONGS_US_URL))
+  if response.code != '200'
+    Honeybadger.notify_cronjob_error(
+      error: response.message,
+      error_message: "Failed to retrieve iTunes chart data for App Lab dataset #{TABLE_NAME}.",
+    )
+    return
+  end
+
+  JSON.parse(response.body)
+rescue StandardError => exception
+  Honeybadger.notify_cronjob_error(
+    exception,
+    error_message: "Failed to parse iTunes chart data for App Lab dataset #{TABLE_NAME}.",
+  )
+  nil
+end
+
+def get_entry_info_string(entry)
+  return '' if entry.nil?
+
+  "#{entry.dig('im:name', 'label')} - #{entry.dig('im:artist', 'label')} "
+end
+
+def generate_profanity_regex(entries)
+  str = entries.reduce('') {|acc, entry| acc + get_entry_info_string(entry)}
+  profanities = ProfanityFilter.find_potential_profanities(str, PROFANITY_LOCALE) || []
+  profanities.empty? ? nil : /(#{profanities.join('|')})/i
+end
+
+def build_records(entries)
+  regex = generate_profanity_regex(entries)
+  chart_position = 1
+
+  entries.each_with_object([]) do |entry, records|
+    break records if chart_position > MAX_RECORDS
+
+    track_name = entry.dig('im:name', 'label')
+    artist_name = entry.dig('im:artist', 'label')
+    next if track_name.nil? || artist_name.nil?
+    next if regex&.match?(get_entry_info_string(entry))
+
+    records << {
+      'Position' => chart_position,
+      'Track Name' => track_name,
+      'Artist' => artist_name,
+    }
+    chart_position += 1
+  end
+end
+
+def fetch_records
+  payload = fetch_feed
+  return [] if payload.nil?
+
+  entries = payload.dig('feed', 'entry')
+  unless entries.is_a?(Array) && entries.any?
+    Honeybadger.notify_cronjob_error(
+      error_message: "No chart entries returned from the iTunes feed for App Lab dataset #{TABLE_NAME}.",
+    )
+    return []
+  end
+
+  build_records(entries)
+end
+
+def main
+  records = fetch_records
+  if records.empty?
+    Honeybadger.notify_cronjob_error(
+      error_message: "No records were built from the iTunes feed for App Lab dataset #{TABLE_NAME}.",
+    )
+    return
+  end
+
+  ActiveRecord::Base.transaction do
+    DatablockStorageTable.update_shared_table(TABLE_NAME, records)
+  end
+end
+
+main if __FILE__ == $PROGRAM_NAME

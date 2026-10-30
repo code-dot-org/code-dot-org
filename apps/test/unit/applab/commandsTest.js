@@ -1,28 +1,321 @@
-import {expect} from '../../util/reconfiguredChai';
-import sinon from 'sinon';
-import {rgb, setSelectionRange, openUrl} from '@cdo/apps/applab/commands';
-import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
 import $ from 'jquery';
+
+jest.mock('@cdo/apps/util/moderateImage', () => ({
+  moderateImageUrl: jest.fn(),
+}));
+
+import applabCommands, {
+  rgb,
+  setSelectionRange,
+  openUrl,
+} from '@cdo/apps/applab/commands';
+import {clearImageUrlModerationCache} from '@cdo/apps/applab/imageUrlModeration';
+import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
+import {moderateImageUrl} from '@cdo/apps/util/moderateImage';
+
+async function flushModerationAsync() {
+  // Moderation goes: Azure mock -> cache handlers -> command callback (e.g.
+  // outputWarning). Awaiting the mock alone stops too early; setTimeout(0)
+  // lets the remaining handlers finish before assertions.
+  await Promise.all(
+    moderateImageUrl.mock.results.map(result => result.value).filter(Boolean)
+  );
+  await new Promise(resolve => setTimeout(resolve, 0));
+}
+
+describe('setProperty image URL moderation', () => {
+  const mockModerateImageUrl = moderateImageUrl;
+  let errorHandler;
+  let originalApplab;
+  let testDivApplab;
+  let testImage;
+
+  beforeEach(() => {
+    jest.clearAllMocks();
+    clearImageUrlModerationCache();
+    mockModerateImageUrl.mockResolvedValue('flagged');
+    errorHandler = {
+      outputWarning: jest.fn(),
+      getAsyncOutputWarning: jest.fn(),
+    };
+    errorHandler.getAsyncOutputWarning.mockReturnValue(
+      errorHandler.outputWarning
+    );
+    injectErrorHandler(errorHandler);
+
+    originalApplab = global.Applab;
+    global.Applab = {
+      updateProperty: jest.fn(),
+    };
+
+    testDivApplab = document.createElement('div');
+    testDivApplab.setAttribute('id', 'divApplab');
+    document.body.appendChild(testDivApplab);
+
+    testImage = document.createElement('img');
+    testImage.setAttribute('id', 'test-image');
+    testDivApplab.appendChild(testImage);
+  });
+
+  afterEach(() => {
+    document.body.removeChild(testDivApplab);
+    global.Applab = originalApplab;
+    injectErrorHandler(null);
+  });
+
+  it('does not update property when absolute image URL is flagged', async () => {
+    applabCommands.setProperty({
+      elementId: 'test-image',
+      property: 'image',
+      value: 'http://example.com/image.png',
+    });
+    await flushModerationAsync();
+
+    expect(mockModerateImageUrl).toHaveBeenCalledWith(
+      'https://example.com/image.png',
+      'applab',
+      {
+        uploaderType: 'ImageURLInput',
+        assetUrl: 'https://example.com/image.png',
+      }
+    );
+    expect(global.Applab.updateProperty).not.toHaveBeenCalled();
+    expect(errorHandler.outputWarning).toHaveBeenCalled();
+  });
+
+  it('does not update property when moderation is unavailable', async () => {
+    mockModerateImageUrl.mockResolvedValue('error');
+    applabCommands.setProperty({
+      elementId: 'test-image',
+      property: 'image',
+      value: 'http://example.com/image.png',
+    });
+    await flushModerationAsync();
+
+    expect(global.Applab.updateProperty).not.toHaveBeenCalled();
+    expect(errorHandler.outputWarning).toHaveBeenCalled();
+  });
+
+  it('does not update property for data URLs', () => {
+    applabCommands.setProperty({
+      elementId: 'test-image',
+      property: 'image',
+      value: 'data:image/png;base64,AAA=',
+    });
+
+    expect(mockModerateImageUrl).not.toHaveBeenCalled();
+    expect(global.Applab.updateProperty).not.toHaveBeenCalled();
+    expect(errorHandler.outputWarning).toHaveBeenCalled();
+  });
+
+  it('does not update property for uppercase DATA URLs', () => {
+    applabCommands.setProperty({
+      elementId: 'test-image',
+      property: 'image',
+      value: 'DATA:image/png;base64,AAA=',
+    });
+
+    expect(mockModerateImageUrl).not.toHaveBeenCalled();
+    expect(global.Applab.updateProperty).not.toHaveBeenCalled();
+    expect(errorHandler.outputWarning).toHaveBeenCalled();
+  });
+
+  it('does not update property for data URLs with leading whitespace', () => {
+    applabCommands.setProperty({
+      elementId: 'test-image',
+      property: 'image',
+      value: '  data:image/png;base64,AAA=',
+    });
+
+    expect(mockModerateImageUrl).not.toHaveBeenCalled();
+    expect(global.Applab.updateProperty).not.toHaveBeenCalled();
+    expect(errorHandler.outputWarning).toHaveBeenCalled();
+  });
+});
+
+describe('other image command URL moderation', () => {
+  const mockModerateImageUrl = moderateImageUrl;
+  let errorHandler;
+  let originalApplab;
+  let testDivApplab;
+  let testScreen;
+  let testImage;
+  let testCanvas;
+
+  function expectModerationCalledWithHttpUrl() {
+    expect(mockModerateImageUrl).toHaveBeenCalledWith(
+      'https://example.com/image.png',
+      'applab',
+      {
+        uploaderType: 'ImageURLInput',
+        assetUrl: 'https://example.com/image.png',
+      }
+    );
+  }
+
+  beforeEach(() => {
+    jest.clearAllMocks();
+    clearImageUrlModerationCache();
+    mockModerateImageUrl.mockResolvedValue('flagged');
+    errorHandler = {
+      outputWarning: jest.fn(),
+      getAsyncOutputWarning: jest.fn(),
+    };
+    errorHandler.getAsyncOutputWarning.mockReturnValue(
+      errorHandler.outputWarning
+    );
+    injectErrorHandler(errorHandler);
+
+    originalApplab = global.Applab;
+    testCanvas = document.createElement('canvas');
+    testCanvas.width = 320;
+    testCanvas.height = 480;
+    testCanvas.getContext = jest.fn().mockReturnValue({
+      save: jest.fn(),
+      setTransform: jest.fn(),
+      drawImage: jest.fn(),
+      restore: jest.fn(),
+    });
+    global.Applab = {
+      updateProperty: jest.fn(),
+      activeCanvas: testCanvas,
+      activeScreen: jest.fn(),
+    };
+
+    testDivApplab = document.createElement('div');
+    testDivApplab.setAttribute('id', 'divApplab');
+    document.body.appendChild(testDivApplab);
+
+    testScreen = document.createElement('div');
+    testScreen.setAttribute('id', 'screen1');
+    testDivApplab.appendChild(testScreen);
+    global.Applab.activeScreen.mockReturnValue(testScreen);
+
+    testImage = document.createElement('img');
+    testImage.setAttribute('id', 'test-image');
+    testDivApplab.appendChild(testImage);
+  });
+
+  afterEach(() => {
+    document.body.removeChild(testDivApplab);
+    global.Applab = originalApplab;
+    injectErrorHandler(null);
+  });
+
+  it('image warns and leaves src empty when absolute URL is flagged', async () => {
+    applabCommands.image({
+      elementId: 'new-image',
+      src: 'http://example.com/image.png',
+    });
+    await flushModerationAsync();
+
+    expectModerationCalledWithHttpUrl();
+    expect(errorHandler.outputWarning).toHaveBeenCalled();
+    const createdImage = document.getElementById('new-image');
+    expect(createdImage).toBeTruthy();
+    expect(createdImage.getAttribute('data-canonical-image-url')).toBeNull();
+  });
+
+  it('setImageURL warns and leaves src unchanged when moderation is unavailable', async () => {
+    mockModerateImageUrl.mockResolvedValue('error');
+    const originalSrc = testImage.src;
+    applabCommands.setImageURL({
+      elementId: 'test-image',
+      src: 'http://example.com/image.png',
+    });
+    await flushModerationAsync();
+
+    expectModerationCalledWithHttpUrl();
+    expect(errorHandler.outputWarning).toHaveBeenCalled();
+    expect(testImage.src).toBe(originalSrc);
+    expect(testImage.getAttribute('data-canonical-image-url')).toBeNull();
+  });
+
+  it('setImageURL warns and leaves src unchanged for data URLs', () => {
+    const originalSrc = testImage.src;
+    applabCommands.setImageURL({
+      elementId: 'test-image',
+      src: 'data:image/png;base64,AAA=',
+    });
+
+    expect(mockModerateImageUrl).not.toHaveBeenCalled();
+    expect(errorHandler.outputWarning).toHaveBeenCalled();
+    expect(testImage.src).toBe(originalSrc);
+    expect(testImage.getAttribute('data-canonical-image-url')).toBeNull();
+  });
+
+  it('drawImageURL warns and invokes callback(false) when absolute URL is flagged', async () => {
+    const callback = jest.fn();
+    applabCommands.drawImageURL({
+      url: 'http://example.com/image.png',
+      callback,
+    });
+    await flushModerationAsync();
+
+    expectModerationCalledWithHttpUrl();
+    expect(errorHandler.outputWarning).toHaveBeenCalled();
+    expect(callback).toHaveBeenCalledWith(false);
+  });
+
+  it('drawImageURL warns and invokes callback(false) for data URLs', () => {
+    const callback = jest.fn();
+    applabCommands.drawImageURL({
+      url: 'data:image/png;base64,AAA=',
+      callback,
+    });
+
+    expect(mockModerateImageUrl).not.toHaveBeenCalled();
+    expect(errorHandler.outputWarning).toHaveBeenCalled();
+    expect(callback).toHaveBeenCalledWith(false);
+  });
+
+  it('drawImageURL warns and invokes callback(false) when moderation is unavailable', async () => {
+    mockModerateImageUrl.mockResolvedValue('error');
+    const callback = jest.fn();
+    applabCommands.drawImageURL({
+      url: 'http://example.com/image.png',
+      callback,
+    });
+    await flushModerationAsync();
+
+    expectModerationCalledWithHttpUrl();
+    expect(errorHandler.outputWarning).toHaveBeenCalled();
+    expect(callback).toHaveBeenCalledWith(false);
+  });
+
+  it('image warns and leaves src empty for data URLs', () => {
+    applabCommands.image({
+      elementId: 'new-image',
+      src: 'data:image/png;base64,AAA=',
+    });
+
+    expect(mockModerateImageUrl).not.toHaveBeenCalled();
+    expect(errorHandler.outputWarning).toHaveBeenCalled();
+    const createdImage = document.getElementById('new-image');
+    expect(createdImage).toBeTruthy();
+    expect(createdImage.getAttribute('data-canonical-image-url')).toBeNull();
+  });
+});
 
 describe('rgb command', () => {
   it('returns an rgba string with no alpha', function () {
     const opts = {r: 255, g: 0, b: 75};
-    expect(rgb(opts)).to.equal('rgba(255, 0, 75, 1)');
+    expect(rgb(opts)).toBe('rgba(255, 0, 75, 1)');
   });
 
   it('returns an rgba string with alpha', function () {
     const alphaOpts = {r: 255, g: 0, b: 75, a: 0.5};
-    expect(rgb(alphaOpts)).to.equal('rgba(255, 0, 75, 0.5)');
+    expect(rgb(alphaOpts)).toBe('rgba(255, 0, 75, 0.5)');
   });
 
   it('handles values outside of 0 - 255', function () {
     const alphaOpts = {r: -10, g: 300, b: 75, a: 0.5};
-    expect(rgb(alphaOpts)).to.equal('rgba(0, 255, 75, 0.5)');
+    expect(rgb(alphaOpts)).toBe('rgba(0, 255, 75, 0.5)');
   });
 
   it('handles decimal values', function () {
     const alphaOpts = {r: 0, g: 200.5, b: 75, a: 0.5};
-    expect(rgb(alphaOpts)).to.equal('rgba(0, 201, 75, 0.5)');
+    expect(rgb(alphaOpts)).toBe('rgba(0, 201, 75, 0.5)');
   });
 });
 
@@ -31,7 +324,7 @@ describe('setSelectionRange', () => {
 
   beforeEach(() => {
     errorHandler = {
-      outputWarning: sinon.spy(),
+      outputWarning: jest.fn(),
     };
     injectErrorHandler(errorHandler);
 
@@ -53,27 +346,27 @@ describe('setSelectionRange', () => {
   });
 
   it('sets the selection range on the found element', () => {
-    expect(testInput.selectionStart).to.equal(0);
-    expect(testInput.selectionEnd).to.equal(0);
+    expect(testInput.selectionStart).toBe(0);
+    expect(testInput.selectionEnd).toBe(0);
     setSelectionRange({
       elementId: testInputId,
       selectionStart: 3,
       selectionEnd: 6,
     });
-    expect(testInput.selectionStart).to.equal(3);
-    expect(testInput.selectionEnd).to.equal(6);
+    expect(testInput.selectionStart).toBe(3);
+    expect(testInput.selectionEnd).toBe(6);
   });
 
   it('sets the selection direction on the found element', () => {
     testInput.selectionDirection = 'forward';
-    expect(testInput.selectionDirection).to.equal('forward');
+    expect(testInput.selectionDirection).toBe('forward');
     setSelectionRange({
       elementId: testInputId,
       selectionStart: 3,
       selectionEnd: 6,
       selectionDirection: 'backward',
     });
-    expect(testInput.selectionDirection).to.equal('backward');
+    expect(testInput.selectionDirection).toBe('backward');
   });
 
   it('warns if element is not found', () => {
@@ -82,7 +375,7 @@ describe('setSelectionRange', () => {
       selectionStart: 0,
       selectionEnd: 0,
     });
-    expect(errorHandler.outputWarning).to.have.been.calledOnce.and.calledWith(
+    expect(errorHandler.outputWarning).toHaveBeenCalledWith(
       'The setSelectionRange() elementId parameter refers to ' +
         'an id ("fakeElementId") which does not exist.'
     );
@@ -94,7 +387,7 @@ describe('setSelectionRange', () => {
       selectionStart: 'string',
       selectionEnd: 0,
     });
-    expect(errorHandler.outputWarning).to.have.been.calledOnce.and.calledWith(
+    expect(errorHandler.outputWarning).toHaveBeenCalledWith(
       'setSelectionRange() start parameter value (string) is not a number.'
     );
   });
@@ -105,7 +398,7 @@ describe('setSelectionRange', () => {
       selectionStart: 0,
       selectionEnd: 'string',
     });
-    expect(errorHandler.outputWarning).to.have.been.calledOnce.and.calledWith(
+    expect(errorHandler.outputWarning).toHaveBeenCalledWith(
       'setSelectionRange() end parameter value (string) is not a number.'
     );
   });
@@ -117,7 +410,7 @@ describe('setSelectionRange', () => {
       selectionEnd: 0,
       selectionDirection: () => {},
     });
-    expect(errorHandler.outputWarning).to.have.been.calledOnce.and.calledWith(
+    expect(errorHandler.outputWarning).toHaveBeenCalledWith(
       'setSelectionRange() direction parameter value (function) is not a string.'
     );
   });
@@ -128,49 +421,52 @@ describe('openUrl', () => {
 
   beforeEach(() => {
     errorHandler = {
-      outputWarning: sinon.spy(),
+      outputWarning: jest.fn(),
     };
     injectErrorHandler(errorHandler);
-    sinon.spy(window, 'open');
-    sinon.stub($, 'ajax').callsFake(() => {
-      return {
-        success() {
-          return {
-            fail() {},
-          };
-        },
-      };
-    });
+    jest.spyOn(window, 'open').mockClear();
+    jest
+      .spyOn($, 'ajax')
+      .mockClear()
+      .mockImplementation(() => {
+        return {
+          success() {
+            return {
+              fail() {},
+            };
+          },
+        };
+      });
   });
 
   afterEach(() => {
     injectErrorHandler(null);
-    $.ajax.restore();
-    window.open.restore();
+    $.ajax.mockRestore();
+    window.open.mockRestore();
   });
 
   it('fails if given a non-string url', () => {
     openUrl({url: 42});
 
-    expect(errorHandler.outputWarning).to.have.been.calledOnce.and.calledWith(
+    expect(errorHandler.outputWarning).toHaveBeenCalledWith(
       'openUrl() url parameter value (42) is not a string.'
     );
   });
 
   it('opens new tab for "studio.code.org" and "code.org" links', () => {
     openUrl({url: 'https://studio.code.org/'});
-    expect(window.open).to.have.been.calledOnce;
+    expect(window.open).toHaveBeenCalledTimes(1);
     openUrl({url: 'http://code.org/'});
-    expect(window.open).to.have.been.calledTwice;
+    expect(window.open).toHaveBeenCalledTimes(2);
     openUrl({url: 'www.studio.code.org/'});
-    expect(window.open).to.have.been.calledThrice;
-    expect($.ajax).to.not.have.been.called;
+    expect(window.open).toHaveBeenCalledTimes(3);
+    expect($.ajax).not.toHaveBeenCalled();
   });
 
   it('triggers a call to filterURL for an external link', () => {
     openUrl({url: 'www.google.com'});
-    expect($.ajax).to.have.been.calledOnce;
+    expect($.ajax).toHaveBeenCalledTimes(1);
     openUrl({url: 'code.org.otherdomain.com'});
-    expect($.ajax).to.have.been.calledTwice;
+    expect($.ajax).toHaveBeenCalledTimes(2);
   });
 });

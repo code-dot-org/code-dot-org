@@ -1,6 +1,22 @@
 .root {
   overflow-x: hidden;
   overflow-y: scroll;
+  scrollbar-color: var(--background-neutral-quinary)
+    var(--background-neutral-primary);
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: var(--background-neutral-primary);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--background-neutral-quinary);
+    border-radius: 5px;
+    border: 2px solid var(--background-neutral-primary);
+  }
 }
 
 .margins {

@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 
 /**
@@ -79,7 +80,7 @@ export const levelWithProgressType = PropTypes.shape({
  *
  * @property {string} status
  * A string enum representing student progress status on a level.
- * See src/util/sharedConstants.LevelStatus.
+ * See generated-scripts/sharedConstants.LevelStatus.
  * @property {number} result
  * A numerical enum of the TestResult a student received for a level.
  * See src/constants.TestResult.
@@ -106,6 +107,7 @@ const studentLevelProgressShape = {
   timeSpent: PropTypes.number,
   lastTimestamp: PropTypes.number,
   teacherFeedbackReviewState: PropTypes.oneOf(Object.keys(ReviewStates)),
+  teacherFeedbackNew: PropTypes.bool.isRequired,
   /** pages: PropTypes.array */ // See below
 };
 // Avoid recursive definition
@@ -137,8 +139,11 @@ export const lessonType = PropTypes.shape({
   id: PropTypes.number.isRequired,
   lockable: PropTypes.bool.isRequired,
   lessonNumber: PropTypes.number,
+  title: PropTypes.string,
   lesson_plan_html_url: PropTypes.string,
   lesson_feedback_url: PropTypes.string,
+  lessonPath: PropTypes.string,
+  lessonStartUrl: PropTypes.string,
   isFocusArea: PropTypes.bool.isRequired,
   description_student: PropTypes.string,
   description_teacher: PropTypes.string,
@@ -148,14 +153,12 @@ export const lessonType = PropTypes.shape({
  * @typedef {Object} StudentLessonProgress
  *
  * @property {number} incompletePercent
- * @property {number} imperfectPercent
  * @property {number} completedPercent
  * @property {number} timeSpent
  * @property {number} lastTimestamp
  */
 export const studentLessonProgressType = PropTypes.shape({
   incompletePercent: PropTypes.number.isRequired,
-  imperfectPercent: PropTypes.number.isRequired,
   completedPercent: PropTypes.number.isRequired,
   timeSpent: PropTypes.number.isRequired,
   lastTimestamp: PropTypes.number.isRequired,

@@ -1,9 +1,11 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {BASE_DIALOG_WIDTH} from '../constants';
-import Button from './Button';
-import color from '../util/color';
+
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import i18n from '@cdo/locale';
+
+import {BASE_DIALOG_WIDTH} from '../constants';
+import color from '../util/color';
 
 /**
  * BaseDialog
@@ -87,16 +89,22 @@ export default class BaseDialog extends React.Component {
     }
 
     let bodyStyle, modalBodyStyle, xCloseStyle;
+
+    const {width, top, ...contentStyle} = this.props.style || {};
+    let dialogStyle = {
+      ...(width !== undefined && {width}),
+      ...(top !== undefined && {top}),
+    };
+
     if (this.props.fullWidth) {
-      bodyStyle = {
-        ...bodyStyle,
+      dialogStyle = {
+        ...dialogStyle,
         width: '90%',
-        marginLeft: '-45%',
       };
     }
     if (this.props.fullHeight) {
-      bodyStyle = {
-        ...bodyStyle,
+      dialogStyle = {
+        ...dialogStyle,
         height: '80%',
       };
       modalBodyStyle = {
@@ -106,9 +114,11 @@ export default class BaseDialog extends React.Component {
     }
 
     let wrapperClassNames = '';
-    let modalClassNames = 'modal';
+    let modalClassNames = 'modal dash_modal';
     let modalBodyClassNames = 'modal-body';
-    let modalBackdropClassNames = 'modal-backdrop';
+    let modalDialogClassNames = 'modal-dialog';
+    let modalContentClassNames = 'modal-content';
+    let modalBackdropClassNames = 'modal-backdrop in';
     const overflowX = this.props.overflow || 'hidden';
     const overflowY =
       this.props.overflow ||
@@ -120,7 +130,7 @@ export default class BaseDialog extends React.Component {
       modalBodyStyle = {
         background: '#fff',
         height: this.props.fixedHeight,
-        maxHeight: !this.props.fixedHeight && '80vh',
+        maxHeight: !this.props.fixedHeight && '85vh',
         overflowX: overflowX,
         overflowY: overflowY,
         borderRadius: 4,
@@ -132,10 +142,9 @@ export default class BaseDialog extends React.Component {
           flexDirection: 'column',
         };
       }
-      bodyStyle = {
-        ...bodyStyle,
+      dialogStyle = {
         width: this.props.fixedWidth || BASE_DIALOG_WIDTH,
-        marginLeft: -this.props.fixedWidth / 2 || -350,
+        ...dialogStyle,
       };
     } else if (this.props.noModalStyles) {
       modalClassNames = '';
@@ -144,16 +153,17 @@ export default class BaseDialog extends React.Component {
 
     bodyStyle = {
       ...bodyStyle,
+      display: 'block',
       ...(this.props.hideBackdrop && {
         position: 'initial',
         marginLeft: 0,
       }),
-      ...this.props.style,
     };
     xCloseStyle = {
       position: 'absolute',
       top: 0,
-      right: 0,
+      zIndex: 100,
+      insetInlineEnd: 0,
       padding: 0,
       color: color.neutral_dark30,
       cursor: 'pointer',
@@ -173,22 +183,26 @@ export default class BaseDialog extends React.Component {
         ref="dialog"
         onKeyDown={this.handleKeyDown}
       >
-        <div
-          style={modalBodyStyle}
-          id={this.props.bodyId}
-          className={modalBodyClassNames}
-        >
-          {!this.props.uncloseable && !this.props.hideCloseButton && (
-            <Button
-              id="x-close"
-              onClick={this.closeDialog}
-              icon="fa-solid fa-xmark"
-              style={xCloseStyle}
-              color="white"
-              aria-label={i18n.closeDialog()}
-            />
-          )}
-          {this.props.children}
+        <div className={modalDialogClassNames} style={dialogStyle || {}}>
+          <div className={modalContentClassNames} style={contentStyle}>
+            <div
+              style={modalBodyStyle}
+              id={this.props.bodyId}
+              className={modalBodyClassNames}
+            >
+              {!this.props.uncloseable && !this.props.hideCloseButton && (
+                <Button
+                  id="x-close"
+                  onClick={this.closeDialog}
+                  icon="fa-solid fa-xmark"
+                  style={xCloseStyle}
+                  color="white"
+                  aria-label={i18n.closeDialog()}
+                />
+              )}
+              {this.props.children}
+            </div>
+          </div>
         </div>
       </div>
     );

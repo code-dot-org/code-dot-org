@@ -1,9 +1,12 @@
 require 'set'
 
 class LevelLoader
-  # Top-level entry point, called by rake seed:custom_levels
-  def self.load_custom_levels(level_name)
-    import_levels(Policies::LevelFiles.level_file_glob(level_name))
+  # Top-level entry point. With a level_name, the partition is chosen by the
+  # name; without one, `partition` picks which partition's levels to load (a
+  # Policies::LevelFiles::LEVELS_SUBDIR key). See
+  # dashboard/config/PARTITIONS.md.
+  def self.load_custom_levels(level_name, root_dir, partition: nil)
+    import_levels(Policies::LevelFiles.level_file_glob(level_name, root_dir, partition: partition), level_name: level_name)
   end
 
   #
@@ -18,16 +21,35 @@ class LevelLoader
   #   Examples:
   #     'config/scripts/levels/K-1 Bee 2.level'
   #     'config/scripts/**/*.level'
+  # @param [String] level_name - set when the glob targets a single level by
+  #   name (rake seed:custom_levels LEVEL_NAME=...). A named level with no
+  #   file is a typo and an error; an empty tree is legal and a no-op.
   #
-  def self.import_levels(level_file_glob)
+  def self.import_levels(level_file_glob, level_name: nil)
     level_file_paths = file_paths_from_glob(level_file_glob)
 
-    # This is only expected to happen when LEVEL_NAME is set and the
-    # filename is not found
-    unless level_file_paths.count > 0
-      raise 'no matching level names found. ' \
-        'please check level name for exact case and spelling. ' \
-        'the level name is the level filename without the .level suffix.'
+    if level_file_paths.empty?
+      if level_name
+        raise 'no matching level names found. ' \
+          'please check level name for exact case and spelling. ' \
+          'the level name is the level filename without the .level suffix.'
+      end
+      return
+    end
+
+    # A file must sit in the tree its level name selects, or seeding another
+    # tree would quietly pick it up; see dashboard/config/PARTITIONS.md.
+    subdirs = Policies::LevelFiles::LEVELS_SUBDIR
+    misfiled = level_file_paths.filter_map do |path|
+      from = Policies::LevelFiles.partition_for_path(path)
+      to = Policies::LevelFiles.partition_for_name(Policies::LevelFiles.level_name_from_path(path))
+      "git mv #{path.dump} #{path.sub(subdirs[from], subdirs[to]).dump}" unless from == to
+    end
+    if misfiled.any?
+      raise "level files misfiled: \"UI Test \" levels belong under #{subdirs[:ui_test_curriculum]}, " \
+        "standalone project levels (\"New ... Project\", \"... Subproject\") under " \
+        "#{subdirs[:standalone_projects]}, all others under #{subdirs[:production_curriculum]}. " \
+        "To fix:\n#{misfiled.join("\n")}"
     end
 
     # Use a transaction because loading levels requires two separate imports.
@@ -48,10 +70,14 @@ class LevelLoader
       # level_concept_difficulty) when we bulk-load the level properties.
       new_level_names = level_file_names.
         reject {|name| existing_level_names.include? name}
-      Level.import!(new_level_names.map {|name| {name: name}})
+      Level.import! new_level_names.map {|name| {name: name}}, batch_size: 1000
 
       # Load level properties from disk and build a collection of levels that
       # have changed.
+      # TODO(5-20-25): load_custom_level calls the database for each level.
+      #   Instead, we should load all levels in a single query and then pass the appropriate level
+      #   into load_custom_level for additional logic and creation of new levels.
+      #   Something like: Level.eager_load(levels_child_levels: :child_level).where(name: level_file_names)
       changed_levels = level_file_paths.
         filter_map {|path| Services::LevelFiles.load_custom_level(path, level_md5s_by_name)}.
         select(&:changed?)
@@ -72,7 +98,7 @@ class LevelLoader
       changed_lcds = changed_levels.filter_map(&:level_concept_difficulty)
       lcd_update_columns = LevelConceptDifficulty.columns.map(&:name).map(&:to_sym).
         reject {|column| immutable_lcd_columns.include? column}
-      LevelConceptDifficulty.import! changed_lcds, on_duplicate_key_update: lcd_update_columns
+      LevelConceptDifficulty.import! changed_lcds, on_duplicate_key_update: lcd_update_columns, batch_size: 1000
 
       # activerecord-import doesn't trigger before_save and before_create hooks
       # for imported models, so we trigger these manually to make sure they're
@@ -87,7 +113,10 @@ class LevelLoader
       immutable_level_columns = %i(id name created_at)
       update_columns = Level.columns.map(&:name).map(&:to_sym).
         reject {|column| immutable_level_columns.include? column}
-      Level.import! changed_levels, on_duplicate_key_update: update_columns
+      # Changed levels are too large to import them in batches larger than 100 due to serialized properties.
+      # When performing bulk inserts, it is faster to insert keys in primary key order. Documentation:
+      # https://dev.mysql.com/doc/refman/8.0/en/optimizing-innodb-bulk-data-loading.html
+      Level.import! changed_levels.sort_by(&:id), on_duplicate_key_update: update_columns, batch_size: 100
 
       # now we want to run some after_save callbacks, which didn't get run when
       # by run_callbacks earlier. it seems too risky to run all after_save
@@ -95,10 +124,10 @@ class LevelLoader
       # experience of any individual level could add an after_save callback
       # which modifies the DB and which they expect to get run only on
       # levelbuilder. so, just run the callbacks we're sure we need instead.
-      changed_levels.each do |level|
-        level.setup_contained_levels
-        level.setup_project_template_level
-      end
+      Level.setup_child_levels_for(changed_levels, [ParentLevelsChildLevel::CONTAINED, ParentLevelsChildLevel::PROJECT_TEMPLATE])
+
+      # Load question placements for quizzes, which are serialized as part of the level's content.
+      changed_levels.select {|level| level.is_a?(Quiz)}.each(&:import_serialized_placements!)
     end
   end
 

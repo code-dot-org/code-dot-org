@@ -1,0 +1,62 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-09-07T18:15:27.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "import csv\n \nfile_1 = open(\"athlete_1.csv\")\nreader_1 = csv.DictReader(file_1)\nathlete_1_times = []\nfor row in reader_1:\n    time = row[\"sprint_time\"]\n    athlete_1_times.append(time)\nfile_1.close()\n\nfile_2 = open(\"athlete_2.csv\")\nreader_2 = csv.DictReader(file_2)\nathlete_2_times = []\nfor row in reader_2:\n    time = row[\"sprint_time\"]\n    athlete_2_times.append(time)\nfile_2.close()\n\nprint(athlete_1_times)\nprint(athlete_2_times)",
+          "folderId": "0",
+          "active": true
+        },
+        "1": {
+          "id": "1",
+          "name": "athlete_1.csv",
+          "contents": "race,sprint_time\n1,10.6\n2,13.8\n3,11.2\n4,14.1\n5,10.9\n6,13.5\n7,12.7\n8,10.4\n9,14.3\n10,11.6\n11,13.9\n12,10.8\n13,13.2\n14,12.4\n15,14.0\n",
+          "folderId": "0",
+          "active": false
+        },
+        "2": {
+          "id": "2",
+          "name": "athlete_2.csv",
+          "contents": "race,sprint_time\n1,11.2\n2,11.4\n3,11.1\n4,11.3\n5,11.5\n6,11.2\n7,11.4\n8,11.3\n9,11.2\n10,11.5\n11,11.3\n12,11.4\n13,11.2\n14,11.3\n15,11.3",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1",
+        "2"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-07 18:15:55 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 18:16:54 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

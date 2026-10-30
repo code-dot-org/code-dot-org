@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-04-01T21:40:15.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##Look at this card:\r\n\r\n<img src=\"https://images.code.org/d33db023723f6dcc12098ff471edc15d-movie_card.png\" style=\"width: 20%; float: left; margin-right: 30px;\">\r\n\r\n1. What two problems do you see with this card?\r\n2. Write the fallback check you would add to fix each one.\r\n3. Why does it matter to a user whether missing data is handled with a fallback rather than left blank or broken?\r\n4. In Levels 1 and 2, AI Tutor filled in missing values in both datasets. How is what you did in Levels 3 and 4 similar to what AI did — and how is it different?\r\n   \r\n",
+    "stay_on_level_after_submit": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "title": "Reflection: Fallback Values",
+    "height": "100",
+    "placeholder": "enter response here...",
+    "name_suffix": "_2026"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-01T21:40:15.738+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson5-level8-test_2025-pilot\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson5-level8-test_2025-pilot\"},{\"changed_at\":\"2026-06-10 17:24:01 +0000\",\"changed\":[\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-10 17:25:11 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-10 17:25:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-10 17:29:24 +0000\",\"changed\":[\"long_instructions\",\"title\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

@@ -2,32 +2,34 @@
  * A React component for our JavaScript debugger UI. Returns a connected component
  * so this can only be used in cases where we have a redux store.
  */
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {
+  IconButton as MuiIconButton,
+  Typography as MuiTypography,
+} from '@mui/material';
+import classNames from 'classnames';
+import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import $ from 'jquery';
+
 import i18n from '@cdo/locale';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
-import classNames from 'classnames';
+
 import dom from '../../../dom';
-import commonStyles from '../../../common-styles.module.scss';
-import styles from './js-debugger.module.scss';
-import Watchers from './Watchers';
+import {setStepSpeed, setIsDebuggingSprites} from '../../../redux/runState';
+import {
+  add as addWatchExpression,
+  remove as removeWatchExpression,
+} from '../../../redux/watchedExpressions';
 import PaneHeader, {
   PaneSection,
   PaneButton,
 } from '../../../templates/PaneHeader';
 import SpeedSlider from '../../../templates/SpeedSlider';
-import FontAwesome from '../../../templates/FontAwesome';
-import {setStepSpeed, setIsDebuggingSprites} from '../../../redux/runState';
 import * as utils from '../../../utils';
-import {
-  add as addWatchExpression,
-  remove as removeWatchExpression,
-} from '../../../redux/watchedExpressions';
-import DebugConsole from './DebugConsole';
-import DebugButtons from './DebugButtons';
 
+import DebugButtons from './DebugButtons';
+import DebugConsole from './DebugConsole';
 import {
   // actions
   clearLog,
@@ -40,6 +42,10 @@ import {
   canRunNext,
   getCommandHistory,
 } from './redux';
+import Watchers from './Watchers';
+
+import styles from './js-debugger.module.scss';
+import commonStyles from '../../../common-styles.module.scss';
 
 const debugAreaTransitionValue = 'height 0.4s';
 
@@ -265,24 +271,17 @@ class JsDebugger extends React.Component {
   onTransitionEnd = () => this.setState({transitionType: null});
 
   onMouseDownDebugResizeBar = event => {
-    // When we see a mouse down in the resize bar, start tracking mouse moves:
-    const eventSourceElm = event.srcElement || event.target;
-    if (eventSourceElm.id === 'debugResizeBar') {
-      this._draggingDebugResizeBar = true;
+    this._draggingDebugResizeBar = true;
+    document.body.addEventListener('mousemove', this.onMouseMoveDebugResizeBar);
+    const mouseMoveTouchEventName = dom.getTouchEventName('mousemove');
+    if (mouseMoveTouchEventName) {
       document.body.addEventListener(
-        'mousemove',
+        mouseMoveTouchEventName,
         this.onMouseMoveDebugResizeBar
       );
-      const mouseMoveTouchEventName = dom.getTouchEventName('mousemove');
-      if (mouseMoveTouchEventName) {
-        document.body.addEventListener(
-          mouseMoveTouchEventName,
-          this.onMouseMoveDebugResizeBar
-        );
-      }
-
-      event.preventDefault();
     }
+
+    event.preventDefault();
   };
 
   setDebugHeight = height => {
@@ -341,24 +340,20 @@ class JsDebugger extends React.Component {
   };
 
   onMouseDownWatchersResizeBar = event => {
-    // When we see a mouse down in the resize bar, start tracking mouse moves:
-    const eventSourceElm = event.srcElement || event.target;
-    if (eventSourceElm.id === 'watchersResizeBar') {
-      this._draggingWatchersResizeBar = true;
+    this._draggingWatchersResizeBar = true;
+    document.body.addEventListener(
+      'mousemove',
+      this.onMouseMoveWatchersResizeBar
+    );
+    const mouseMoveTouchEventName = dom.getTouchEventName('mousemove');
+    if (mouseMoveTouchEventName) {
       document.body.addEventListener(
-        'mousemove',
+        mouseMoveTouchEventName,
         this.onMouseMoveWatchersResizeBar
       );
-      const mouseMoveTouchEventName = dom.getTouchEventName('mousemove');
-      if (mouseMoveTouchEventName) {
-        document.body.addEventListener(
-          mouseMoveTouchEventName,
-          this.onMouseMoveWatchersResizeBar
-        );
-      }
-
-      event.preventDefault();
     }
+
+    event.preventDefault();
   };
 
   onMouseUpWatchersResizeBar = () => {
@@ -398,11 +393,7 @@ class JsDebugger extends React.Component {
     this._debugConsole.root.style.right = newWatchersWidth + 'px';
     this._watchersResizeBar.style.right = watchersResizeRight + 'px';
 
-    const headerLBorderWidth = 1;
-    const watchersLRBorderWidth = 2;
-    const extraWidthForHeader = watchersLRBorderWidth - headerLBorderWidth;
-    this._debugWatchHeader.root.style.width =
-      newWatchersWidth + extraWidthForHeader + 'px';
+    this._debugWatchHeader.style.width = newWatchersWidth - 3 + 'px';
 
     this.handleResizeConsole();
   };
@@ -414,8 +405,7 @@ class JsDebugger extends React.Component {
   };
 
   render() {
-    const {appType, isAttached, canRunNext, isRunning, debugButtons} =
-      this.props;
+    const {appType, isAttached, canRunNext, isRunning} = this.props;
     const hasFocus = this.props.isDebuggerPaused && !this.props.isEditWhileRun;
 
     const canShowDebugSprites = appType === 'gamelab';
@@ -435,94 +425,204 @@ class JsDebugger extends React.Component {
     return (
       <div
         id="debug-area"
-        style={[
-          {transition: debugAreaTransitionValue},
-          this.props.style,
-          {height},
-        ]}
+        style={{
+          transition: debugAreaTransitionValue,
+          ...this.props.style,
+          height,
+        }}
         onTransitionEnd={this.onTransitionEnd}
         ref={root => (this.root = root)}
       >
         <div
           id="debugResizeBar"
-          className="fa fa-ellipsis-h"
           onMouseDown={this.onMouseDownDebugResizeBar}
           ref={debugResizeBar => (this._debugResizeBar = debugResizeBar)}
-        />
-        <PaneHeader
-          id="debug-area-header"
-          hasFocus={hasFocus}
-          className={styles.debugAreaHeader}
         >
-          <span
-            className={classNames(
-              this.state.consoleWidth <= MIN_CONSOLE_WIDTH && styles.hidden,
-              styles.noUserSelect,
-              'header-text'
-            )}
+          <i className="fa-solid fa-ellipsis" />
+        </div>
+        <PaneHeader id="debug-area-header" className={styles.debugAreaHeader}>
+          <PaneSection
+            id="debug-commands-header"
+            style={{
+              alignItems: 'center',
+              flex: this.props.debugButtons ? '0 0 271px' : '0 0 auto',
+              gap: '0.5rem',
+              display: 'flex',
+              flexDirection: 'row',
+              justifyContent: 'center',
+              paddingLeft: '0.5rem',
+              paddingRight: '0.5rem',
+              width: this.props.debugButtons ? 271 : 'auto',
+              height: 30,
+              borderRight: '1px solid var(--borders-neutral-strong)',
+            }}
           >
-            {i18n.debugConsoleHeader()}
-          </span>
-          <button
-            type="button"
-            className={classNames(
-              styles.showHideIcon,
-              styles.chevronButton,
-              !hasFocus && styles.chevronButtonUnfocused
-            )}
-            onClick={this.slideToggle}
-            aria-label={i18n.debugArea()}
-            aria-expanded={this.state.open}
-            aria-controls="debug-area"
-          >
-            <FontAwesome
-              icon={
-                this.state.open ? 'chevron-circle-down' : 'chevron-circle-up'
-              }
-            />
-          </button>
-          {this.props.debugButtons && (
-            <PaneSection id="debug-commands-header">
-              <FontAwesome
-                id="running-spinner"
-                className={classNames(
-                  'fa-spin',
-                  (!isAttached || canRunNext) && commonStyles.hidden
-                )}
-                icon="spinner"
+            <MuiIconButton
+              type="button"
+              variant="outlined"
+              color="secondary"
+              size="extraSmall"
+              id="show-debug-icon"
+              className="show-debug-icon"
+              onClick={this.slideToggle}
+              aria-label={i18n.debugArea()}
+              aria-expanded={this.state.open}
+              aria-controls="debug-area"
+              sx={{
+                borderRadius: '50%',
+                height: '1rem',
+                width: '1rem',
+              }}
+            >
+              <FontAwesomeV6Icon
+                iconName={this.state.open ? 'chevron-down' : 'chevron-up'}
+                iconStyle="solid"
               />
-              <FontAwesome
-                id="paused-icon"
-                className={classNames(
-                  (!isAttached || !canRunNext) && commonStyles.hidden
-                )}
-                icon="pause"
-              />
-              <span className={classNames('header-text', styles.noUserSelect)}>
+            </MuiIconButton>
+            {this.props.debugButtons && (
+              <MuiTypography
+                className={styles.noUserSelect}
+                variant="body4"
+                sx={{
+                  color: 'var(--text-neutral-white-fixed)',
+                  flex: '1 1 0',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '0.5rem',
+                  display: 'flex',
+                }}
+              >
+                <FontAwesomeV6Icon
+                  iconName="spinner"
+                  iconStyle="solid"
+                  animationType="spin"
+                  className={classNames(
+                    (!isAttached || canRunNext) && commonStyles.hidden
+                  )}
+                />
+                <FontAwesomeV6Icon
+                  iconName="pause"
+                  iconStyle="solid"
+                  className={classNames(
+                    (!isAttached || !canRunNext) && commonStyles.hidden
+                  )}
+                />
                 {this.state.open
                   ? i18n.debugCommandsHeaderWhenOpen()
                   : i18n.debugCommandsHeaderWhenClosed()}
-              </span>
-            </PaneSection>
-          )}
+              </MuiTypography>
+            )}
+          </PaneSection>
+          <PaneSection
+            id="debug-console-header"
+            style={{
+              alignItems: 'center',
+              flex: '1 1 0',
+              gap: '0.5rem',
+              display: 'flex',
+              flexDirection: 'row',
+              justifyContent: 'center',
+              height: 30,
+              paddingLeft: '0.5rem',
+              paddingRight: '0.5rem',
+              borderRight: '1px solid var(--borders-neutral-strong)',
+              overflow: 'hidden',
+            }}
+          >
+            {isRunning && canShowDebugSprites && (
+              <PaneButton
+                iconProps={{iconName: 'bug', iconStyle: 'solid'}}
+                label={i18n.debugSpritesOff()}
+                headerHasFocus={hasFocus}
+                isRtl={false}
+                isPressed={this.props.isDebuggingSprites}
+                pressedLabel={i18n.debugSpritesOn()}
+                onClick={this.onToggleDebugSprites}
+              />
+            )}
+            {this.props.debugSlider && (
+              <SpeedSlider
+                className={
+                  this.state.consoleWidth <= MIN_CONSOLE_WIDTH
+                    ? styles.sliderDebug
+                    : styles.slider
+                }
+                hasFocus={hasFocus}
+                value={this.props.stepSpeed}
+                lineWidth={130}
+                onChange={this.props.setStepSpeed}
+              />
+            )}
+            <MuiTypography
+              className={classNames(
+                this.state.consoleWidth <= MIN_CONSOLE_WIDTH && styles.hidden,
+                styles.noUserSelect
+              )}
+              variant="body4"
+              id="debug-console-header-span"
+              sx={{
+                color: 'var(--text-neutral-white-fixed)',
+                flex: '1 1 0',
+                gap: '0.5rem',
+                display: 'flex',
+                justifyContent: 'center',
+              }}
+            >
+              {i18n.debugConsoleHeader()}
+            </MuiTypography>
+            <PaneButton
+              id="clear-console-header"
+              iconProps={{iconName: 'eraser', iconStyle: 'solid'}}
+              label={i18n.debugClearButton()}
+              headerHasFocus={hasFocus}
+              isRtl={false}
+              onClick={this.onClearDebugOutput}
+            />
+          </PaneSection>
           {this.props.debugWatch && (
             <PaneSection
               id="debug-watch-header"
               ref={debugWatchHeader =>
                 (this._debugWatchHeader = debugWatchHeader)
               }
+              style={{
+                alignItems: 'center',
+                gap: '0.5rem',
+                display: 'flex',
+                flexDirection: 'row',
+                justifyContent: 'center',
+                paddingLeft: '0.5rem',
+                paddingRight: '0.5rem',
+                height: 30,
+              }}
               className={classNames(
                 styles.debugWatchHeader,
                 this.state.watchersHidden && styles.watchersHidden
               )}
             >
-              <button
+              <MuiTypography
+                className={styles.noUserSelect}
+                variant="body4"
+                id="watcher-header-span"
+                sx={{
+                  color: 'var(--text-neutral-white-fixed)',
+                  flex: '1 1 100%',
+                  justifyContent: this.state.watchersHidden
+                    ? 'flex-end'
+                    : 'center',
+                  gap: '0.5rem',
+                  display: 'flex',
+                }}
+              >
+                {this.state.watchersHidden
+                  ? i18n.debugShowWatchHeader()
+                  : i18n.debugWatchHeader()}
+              </MuiTypography>
+              <MuiIconButton
                 type="button"
-                className={classNames(
-                  styles.showDebugWatchIcon,
-                  styles.chevronButton,
-                  !hasFocus && styles.chevronButtonUnfocused
-                )}
+                variant="outlined"
+                color="secondary"
+                size="extraSmall"
                 onClick={() => {
                   // reset resizer-overridden styles
                   // (remove once resize logic migrated to React)
@@ -540,50 +640,20 @@ class JsDebugger extends React.Component {
                 aria-label={i18n.debugWatchHeader()}
                 aria-expanded={!this.state.watchersHidden}
                 aria-controls="debug-watch"
+                sx={{
+                  borderRadius: '50%',
+                  height: '1rem',
+                  width: '1rem',
+                }}
               >
-                <FontAwesome
-                  id="hide-watcher"
-                  icon={
-                    this.state.watchersHidden
-                      ? 'chevron-circle-left'
-                      : 'chevron-circle-right'
+                <FontAwesomeV6Icon
+                  iconName={
+                    this.state.watchersHidden ? 'chevron-left' : 'chevron-right'
                   }
+                  iconStyle="solid"
                 />
-              </button>
-              <span className={classNames('header-text', styles.noUserSelect)}>
-                {this.state.watchersHidden
-                  ? i18n.debugShowWatchHeader()
-                  : i18n.debugWatchHeader()}
-              </span>
+              </MuiIconButton>
             </PaneSection>
-          )}
-          <PaneButton
-            id="clear-console-header"
-            iconClass="fa fa-eraser"
-            label={i18n.debugClearButton()}
-            headerHasFocus={hasFocus}
-            isRtl={false}
-            onClick={this.onClearDebugOutput}
-          />
-          {isRunning && canShowDebugSprites && (
-            <PaneButton
-              iconClass="fa fa-bug"
-              label={i18n.debugSpritesOff()}
-              headerHasFocus={hasFocus}
-              isRtl={false}
-              isPressed={this.props.isDebuggingSprites}
-              pressedLabel={i18n.debugSpritesOn()}
-              onClick={this.onToggleDebugSprites}
-            />
-          )}
-          {this.props.debugSlider && (
-            <SpeedSlider
-              className={debugButtons ? styles.sliderDebug : styles.slider}
-              hasFocus={hasFocus}
-              value={this.props.stepSpeed}
-              lineWidth={130}
-              onChange={this.props.setStepSpeed}
-            />
           )}
         </PaneHeader>
         {this.props.debugButtons && (
@@ -649,4 +719,4 @@ export default connect(
     open,
     close,
   }
-)(Radium(JsDebugger));
+)(JsDebugger);

@@ -1,0 +1,36 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-02-14T04:15:40.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "#Welcome to the Neighborhood!\n\n- There is a **Painter object** that can move and paint.\n\n- This **grid** is 8 spaces wide and 8 spaces tall.\n\n- There are **obstacles** like the traffic cone, the wall, and the sidewalk that the Painter can't move on or through.",
+        "imageUrl": "https://images.code.org/3287670f37e9fbb6922f10590c9b6c92-Neighborhood.jpg",
+        "key": "test-intro-to-programming-lesson6-level1a-e5d1dd23-d8d1-43e7-bc7b-56f197587f67"
+      },
+      {
+        "text": "#Add the Painter\n- painter  = Painter()\n\n**You can name the painter anything you choose.**\n- bob = Painter()\n- juanita = Painter()\n\nAll of the examples do the same thing. They add a painter object to your neighborhood! ",
+        "imageUrl": "",
+        "key": "test-intro-to-programming-lesson6-level1a-91cac369-0d9d-46ec-a0a9-e5f5c4ac7380"
+      },
+      {
+        "text": "#Methods the Painter can do include:\n\n- move()\n- turn_left()\n- paint()",
+        "imageUrl": "",
+        "key": "test-intro-to-programming-lesson6-level1a-21e28908-745a-4f0a-a496-0467aef4bb96"
+      },
+      {
+        "text": "#Attributes the Painter can have include:\n\n- xposition\n- yposition\n- direction",
+        "imageUrl": "",
+        "key": "test-intro-to-programming-lesson6-level1a-ad3c826c-5ace-4c82-b5b8-f60855fec0ea"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2025-02-14T04:15:40.486+00:00\",\"changed\":[\"cloned from \\\"test-intro-to-programming-lesson6-level1a\\\"\"],\"cloned_from\":\"test-intro-to-programming-lesson6-level1a\"},{\"changed_at\":\"2025-02-14 04:15:43 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

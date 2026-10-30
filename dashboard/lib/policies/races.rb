@@ -39,10 +39,14 @@ class Policies::Races
   def self.any_urm?(races)
     races = normalize(races)
 
+    # We specifically treat nil as a special case in this predicate method;
+    # admittedly in violation of Ruby standards, but intentionally so.
+    # rubocop:disable Style/ReturnNilInPredicateMethodDefinition
     return nil unless races
     return nil if races.empty?
-    return nil if (races & ['opt_out', 'nonsense', 'closed_dialog']).any?
-    return true if (races & ['black', 'hispanic', 'hawaiian', 'american_indian']).any?
+    return nil if races.intersect?(['opt_out', 'nonsense', 'closed_dialog'])
+    # rubocop:enable Style/ReturnNilInPredicateMethodDefinition
+    return true if races.intersect?(['black', 'hispanic', 'hawaiian', 'american_indian'])
 
     false
   end

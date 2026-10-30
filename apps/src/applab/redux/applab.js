@@ -1,9 +1,10 @@
 /** @file App Lab redux module */
-import {ApplabInterfaceMode} from '../constants';
-import data from '../../storage/redux/data';
-import screens from './screens';
 import {reducers as jsDebuggerReducers} from '../../lib/tools/jsdebugger/redux';
-import {reducer as maker} from '../../lib/kits/maker/redux';
+import {reducer as maker} from '../../maker/redux';
+import data from '../../storage/redux/data';
+import {ApplabInterfaceMode} from '../constants';
+
+import screens from './screens';
 
 export const REDIRECT_RESPONSE = {
   APPROVED: 'approved',

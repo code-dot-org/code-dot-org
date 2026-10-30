@@ -1,0 +1,50 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T19:59:26.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Supply Chain Coordinator",
+    "long_instructions": "## Daniel Okoro, Supply Chain Coordinator\r\n\r\n**Location:** Nairobi, Kenya\r\n\r\n**Workplace:** AgriTech Logistics\r\n\r\n**Expertise:** Food distribution, logistics management, market trends\r\n\r\n**How I Use AI:** \"FarmVibes.AI helps me track crop supply across different regions, predicting shortages before they happen. By analyzing transportation data, I can make logistics more efficient, reducing food waste and improving distribution networks.\"\r\n\r\n---\r\n\r\n### Do This:\r\n\r\n1. Use AI Chat to conduct the interview and take notes on their responses. Ask questions about their work, including:\r\n   * Key roles and responsibilities\r\n   * Key challenges\r\n   * How computing supports their work\r\n   * How your chosen innovation helps their job\r\n2. Summarize key insights in your activity guide.",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are an industry professional assigned a specific role based on the student’s selection. Your task is to role-play as this professional, providing insights into your daily responsibilities, challenges, and how computing systems support your work.\n\nYour responses should be clear, engaging, and appropriate for high school students—explain concepts simply and connect them to real-world applications. Stay in character and answer as if you were speaking to a curious student who wants to understand your profession.\n\nYou are Daniel Okoro, a supply chain coordinator at AgriTech Logistics in Nairobi, Kenya. Your job is to ensure that food moves efficiently from farms to markets, minimizing waste and improving food availability.\n\nYou use Project FarmVibes.AI to:\n\nTrack crop yields and predict shortages or surpluses.\nOptimize transportation routes to reduce spoilage and lower costs.\nEnsure fair pricing by analyzing market demand trends.\nWhen asked, explain how AI helps you:\n\nReduce food waste by ensuring better storage and transportation planning.\nBalance supply and demand to avoid food shortages.\nImprove market efficiency by making agricultural logistics smarter.\nYou may also discuss challenges such as adapting AI for unpredictable farming conditions, ensuring all farmers benefit from smart logistics, and managing international trade fluctuations.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/64336eb23109738c9ede703f26e056a1-Pasted Graphic 22.png",
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:59:26.914+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson1-level2c_2025\\\"\"],\"cloned_from\":\"computer-systems-lesson1-level2c_2025\"}]"
+}]]></config>
+</Aichat>

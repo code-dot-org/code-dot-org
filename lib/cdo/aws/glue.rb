@@ -21,7 +21,7 @@ module Cdo
     def self.s3_subfolders(bucket, folders, depth, delimiter: '/')
       $stdout.sync = true
       return folders if depth.zero?
-      self.s3_client ||= Aws::S3::Client.new
+      self.s3_client ||= ::Aws::S3::Client.new
       subfolders = folders.map do |folder|
         Concurrent::Future.execute(executor: EXECUTOR) do
           puts "Call #{@@calls += 1}"
@@ -45,7 +45,7 @@ module Cdo
     # @param [String] table
     # @return [Array<Aws::Glue::Types::Partition>]
     def self.get_partitions(database, table)
-      self.glue_client ||= Aws::Glue::Client.new
+      self.glue_client ||= ::Aws::Glue::Client.new
       Array.new(GET_PARTITION_SEGMENTS) do |i|
         Concurrent::Future.execute do
           glue_client.get_partitions(
@@ -64,7 +64,7 @@ module Cdo
     # @param [String] database
     # @param [String] table
     def self.update_partitions(database, table)
-      self.glue_client ||= Aws::Glue::Client.new
+      self.glue_client ||= ::Aws::Glue::Client.new
       glue_table = glue_client.get_table(
         database_name: database,
         name: table
@@ -83,7 +83,7 @@ module Cdo
       existing_partitions = get_partitions(database, table).map(&:values)
       puts "Found #{existing_partitions.count} existing partitions."
 
-      new_partitions = (partition_value_map.slice(*(partition_value_map.keys - existing_partitions))).map do |values, paths|
+      new_partitions = partition_value_map.slice(*(partition_value_map.keys - existing_partitions)).map do |values, paths|
         {
           values: values,
           storage_descriptor: {

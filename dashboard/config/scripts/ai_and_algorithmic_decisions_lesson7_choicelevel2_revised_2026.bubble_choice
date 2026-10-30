@@ -1,0 +1,10 @@
+name 'ai-and-algorithmic-decisions-lesson7-choicelevel2_revised_2026'
+display_name 'Plan Your Dynamic Feature'
+description '####Plan your dynamic feature using AI brainstorming, sketching, and/or pseudocode. You can use any or all of these steps.'
+
+sublevels
+level 'ai-and-algorithmic-decisions-lesson7-choicelevel2_aichat_revised_2026'
+level 'ai-and-algorithmic-decisions-lesson7-choicelevel2_sketch_revised_2026'
+level 'ai-and-algorithmic-decisions-lesson7-choicelevel2_pseudo_revised_2026'
+
+uses_lab2

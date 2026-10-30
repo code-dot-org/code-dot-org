@@ -1,109 +1,93 @@
-// Panels
-//
-// This is a React client for a panels level.  Note that this is
-// only used for levels that use Lab2.
-
+import {Button as MuiButton} from '@mui/material';
+import classNames from 'classnames';
+import markdownToTxt from 'markdown-to-txt';
 import React, {
   useCallback,
   useEffect,
   useMemo,
-  useLayoutEffect,
+  useRef,
   useState,
+  MutableRefObject,
 } from 'react';
-import {useSelector} from 'react-redux';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
-import {
-  sendSuccessReport,
-  navigateToNextLevel,
-} from '@cdo/apps/code-studio/progressRedux';
-import {LabState} from '@cdo/apps/lab2/lab2Redux';
-import {PanelsLevelData} from './types';
-import styles from './panels.module.scss';
-import classNames from 'classnames';
-import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {currentLevelIndex} from '@cdo/apps/code-studio/progressReduxSelectors';
-const commonI18n = require('@cdo/locale');
+import Typist from 'react-typist';
 
-function useWindowSize() {
-  const [size, setSize] = useState([
-    document.documentElement.clientWidth,
-    document.documentElement.clientHeight,
-  ]);
-  useLayoutEffect(() => {
-    function updateSize() {
-      const width = document.documentElement.clientWidth;
-      const height = document.documentElement.clientHeight;
-      setSize([width, height]);
-    }
-    window.addEventListener('resize', updateSize);
-    updateSize();
-    return () => window.removeEventListener('resize', updateSize);
-  }, []);
-  return size;
+import TextToSpeech from '@cdo/apps/lab2/views/components/TextToSpeech';
+import localization from '@cdo/apps/localization';
+
+import {queryParams} from '../code-studio/utils';
+import FontAwesome from '../legacySharedComponents/FontAwesome';
+import {useBrowserTextToSpeech} from '../sharedComponents/BrowserTextToSpeechWrapper';
+import EnhancedSafeMarkdown from '../templates/EnhancedSafeMarkdown';
+import {commonI18n} from '../types/locale';
+
+import {DEFAULT_PANEL_LINK_WIDTH, Panel, PanelLink} from './types';
+
+import styles from './panelsView.module.scss';
+
+// Leave a margin to the left and the right of the panels, to the edges
+// of the screen.
+const horizontalMargin = 40;
+
+// Leave a vertical margin above and below the panels, to the edges of the
+// screen.
+const verticalMargin = 50;
+
+// We need room below the panels content for the children passed in.  This area
+// can contain things like a Continue button.
+const childrenAreaHeight = 70;
+
+interface PanelsProps {
+  panels: Panel[];
+  onContinue: (nextUrl?: string) => void;
+  onSkip?: () => void;
+  targetWidth: number;
+  targetHeight: number;
+  offerBrowserTts: boolean;
+  levelId: string | null;
+  resetOnChange?: boolean;
+  // Enables link-based navigation: bubbles are hidden, and the Continue
+  // button appears only on panels whose `showContinueButton` is set.
+  useLinks?: boolean;
+  onChangePanel?: (
+    source: 'button' | 'bubble',
+    currentPanel: number,
+    nextPanel: number,
+    timeSpentOnPanelSeconds: number
+  ) => void;
+  onClickContinue?: (
+    currentPanel: number,
+    timeSpentOnPanelSeconds: number
+  ) => void;
 }
 
-const PanelsView: React.FunctionComponent = () => {
-  const dispatch = useAppDispatch();
+/**
+ * View that renders a set of panels with an image and text. Used in the Lab2 panels level type.
+ */
+const PanelsView: React.FunctionComponent<PanelsProps> = ({
+  panels,
+  onContinue,
+  onSkip,
+  targetWidth,
+  targetHeight,
+  offerBrowserTts,
+  levelId,
+  resetOnChange = true,
+  useLinks = false,
+  onChangePanel,
+  onClickContinue,
+}) => {
+  const [currentPanelIndex, setCurrentPanelIndex] = useState(0);
+  const [previousPanelIndex, setPreviousPanelIndex] = useState<
+    number | undefined
+  >(undefined);
+  const [typingDone, setTypingDone] = useState(false);
+  const {cancel} = useBrowserTextToSpeech();
 
-  const appName = 'panels';
+  const contentRef: MutableRefObject<HTMLDivElement | null> = useRef(null);
 
-  const levelData = useSelector(
-    ({lab}: {lab: LabState}) => lab.levelProperties?.levelData
-  );
-  const currentAppName = useSelector(
-    ({lab}: {lab: LabState}) => lab.levelProperties?.appName
-  );
-  const levelIndex = useSelector(currentLevelIndex);
+  const lastPanelStartTime = useRef<number>(Date.now());
+  const nextButtonRef = useRef<HTMLButtonElement>(null);
 
-  const [levelPanels, setLevelPanels] = useState<PanelsLevelData | null>(null);
-  const [currentPanel, setCurrentPanel] = useState(0);
-
-  // Go back to the first panel whenever a level switch occurs.
-  useEffect(() => {
-    setCurrentPanel(0);
-  }, [levelIndex]);
-
-  useEffect(() => {
-    if (currentAppName === appName && levelData) {
-      setLevelPanels(levelData as PanelsLevelData);
-    }
-  }, [currentAppName, levelData]);
-
-  const handleButtonClick = useCallback(() => {
-    if (levelPanels?.panels) {
-      const nextUrl = levelPanels.panels[currentPanel].nextUrl;
-
-      if (currentPanel < levelPanels.panels.length - 1) {
-        setCurrentPanel(currentPanel + 1);
-      } else if (nextUrl) {
-        // This is a short-term solution for the Music Lab progression in incubation.  We will not attempt
-        // to send a success report for a level that uses this feature.
-        window.location.href = nextUrl;
-      } else {
-        dispatch(sendSuccessReport(appName));
-        dispatch(navigateToNextLevel());
-      }
-    }
-  }, [levelPanels, currentPanel, dispatch]);
-
-  const handleBubbleClick = (index: number) => {
-    setCurrentPanel(index);
-  };
-
-  // Leave a margin to the left and the right of the panels, to the edges
-  // of the screen.
-  const horizontalMargin = 40;
-
-  // Leave a vertical margin above and below the panels, to the edges of the
-  // screen.
-  const verticalMargin = 50;
-
-  // We need room below the panels content for the children passed in.  This area
-  // can contain things like a Continue button.
-  const childrenAreaHeight = 70;
-
-  let [targetWidth, targetHeight] = useWindowSize();
   targetWidth -= horizontalMargin * 2;
   targetHeight -= verticalMargin * 2 + childrenAreaHeight;
 
@@ -123,67 +107,277 @@ const PanelsView: React.FunctionComponent = () => {
     return [width, height];
   }, [targetWidth, targetHeight]);
 
-  if (!levelPanels?.panels) {
-    return <div />;
+  const changePanel = useCallback(
+    (index: number, source: 'button' | 'bubble') => {
+      if (onChangePanel) {
+        onChangePanel(
+          source,
+          currentPanelIndex,
+          index,
+          (Date.now() - lastPanelStartTime.current) / 1000
+        );
+      }
+      setPreviousPanelIndex(currentPanelIndex);
+      setCurrentPanelIndex(index);
+    },
+    [currentPanelIndex, onChangePanel]
+  );
+
+  const handleButtonClick = useCallback(() => {
+    // In link mode the button leaves the level; between-panel navigation
+    // goes through links only.
+    if (!useLinks && currentPanelIndex < panels.length - 1) {
+      changePanel(currentPanelIndex + 1, 'button');
+    } else {
+      if (onClickContinue) {
+        onClickContinue(
+          currentPanelIndex,
+          (Date.now() - lastPanelStartTime.current) / 1000
+        );
+      }
+      onContinue(panels[currentPanelIndex].nextUrl);
+    }
+  }, [
+    useLinks,
+    changePanel,
+    panels,
+    currentPanelIndex,
+    onContinue,
+    onClickContinue,
+  ]);
+
+  const handleBubbleClick = useCallback(
+    (index: number) => {
+      changePanel(index, 'bubble');
+    },
+    [changePanel]
+  );
+
+  const handleLinkClick = useCallback(
+    (link: PanelLink) => {
+      const targetIndex = panels.findIndex(p => p.key === link.targetKey);
+      if (targetIndex !== -1) {
+        changePanel(targetIndex, 'bubble');
+      }
+    },
+    [panels, changePanel]
+  );
+
+  // Reset to first panel whenever panels content changes if specified.
+  useEffect(() => {
+    if (resetOnChange) {
+      setPreviousPanelIndex(undefined);
+      setCurrentPanelIndex(0);
+    }
+  }, [panels, resetOnChange]);
+
+  // Reset to last panel if number of panels has reduced.
+  useEffect(() => {
+    if (!resetOnChange && currentPanelIndex >= panels.length) {
+      setCurrentPanelIndex(Math.max(panels.length - 1, 0));
+    }
+  }, [currentPanelIndex, panels, resetOnChange]);
+
+  // Cancel any in-progress text-to-speech when the panel changes
+  // and reset the last panel start time.
+  useEffect(() => {
+    if (offerBrowserTts) {
+      cancel();
+    }
+    lastPanelStartTime.current = Date.now();
+  }, [currentPanelIndex, offerBrowserTts, cancel]);
+
+  // Reset typing if the panel changes.
+  useEffect(() => {
+    setTypingDone(false);
+  }, [currentPanelIndex, setTypingDone]);
+
+  const panel = panels[currentPanelIndex];
+  const showTyping =
+    panel?.typing || queryParams('panels-show-typing') === 'true';
+
+  // Legacy mode always shows the button; link mode requires opt-in per panel.
+  const buttonEligible = useLinks ? !!panel?.showContinueButton : true;
+
+  // When typing, only show the button when the typing is done.
+  const showButton = (!showTyping || typingDone) && buttonEligible;
+
+  useEffect(() => {
+    if (showButton) {
+      nextButtonRef.current?.focus();
+    }
+  }, [showButton, currentPanelIndex]);
+
+  if (!panel) {
+    return null;
   }
 
-  const showSmallText = height < 300;
-  const textLayoutClass =
-    levelPanels.panels[currentPanel].layout === 'text-bottom-left'
-      ? styles.markdownTextBottomLeft
-      : styles.markdownTextTopRight;
+  const previousPanel =
+    panel.fadeInOverPrevious &&
+    previousPanelIndex !== undefined &&
+    panels[previousPanelIndex];
+
+  const nextPanel =
+    currentPanelIndex + 1 < panels.length && panels[currentPanelIndex + 1];
+
+  const layoutClassMap = {
+    'text-top-left': styles.textTopLeft,
+    'text-top-center': styles.textTopCenter,
+    'text-bottom-left': styles.textBottomLeft,
+    'text-bottom-center': styles.textBottomCenter,
+    'text-bottom-right': styles.textBottomRight,
+    'text-top-right': styles.textTopRight,
+  };
+
+  const textLayoutClass = panel.layout
+    ? layoutClassMap[panel.layout]
+    : styles.textTopRight;
+
+  const buttonText =
+    !useLinks && currentPanelIndex < panels.length - 1
+      ? commonI18n.next()
+      : commonI18n.continue();
+
+  const plainText = markdownToTxt(panel.text);
 
   return (
     <div
       id="panels-container"
       className={styles.panelsContainer}
-      key={currentPanel}
+      key={`${levelId || 'default'}-${currentPanelIndex}`}
     >
       <div className={styles.panel} style={{width, height}}>
+        {previousPanel && (
+          <div
+            className={styles.image}
+            style={{
+              backgroundImage: `url("${localization.translate(
+                previousPanel.imageUrl,
+                ['lz-image']
+              )}")`,
+            }}
+          />
+        )}
         <div
-          className={styles.image}
+          className={classNames(styles.image, styles.imageCurrent)}
           style={{
-            backgroundImage: `url("${levelPanels.panels[currentPanel].imageUrl}")`,
+            backgroundImage: `url("${localization.translate(panel.imageUrl, [
+              'lz-image',
+            ])}")`,
           }}
         />
-        <EnhancedSafeMarkdown
-          markdown={levelPanels.panels[currentPanel]?.text}
-          className={classNames(
-            styles.markdownText,
-            showSmallText && styles.markdownTextSmall,
-            textLayoutClass
-          )}
-        />
+        {nextPanel && (
+          <div
+            className={classNames(styles.image, styles.imageInvisible)}
+            style={{
+              backgroundImage: `url("${localization.translate(
+                nextPanel.imageUrl,
+                ['lz-image']
+              )}")`,
+            }}
+          />
+        )}
+        {useLinks &&
+          panel.links?.map((link, index) => (
+            <button
+              type="button"
+              key={`link-${index}`}
+              className={styles.link}
+              style={{
+                left: `${link.x}%`,
+                top: `${link.y}%`,
+                width: `${link.width ?? DEFAULT_PANEL_LINK_WIDTH}%`,
+              }}
+              onClick={() => handleLinkClick(link)}
+            >
+              <EnhancedSafeMarkdown markdown={link.text} />
+            </button>
+          ))}
+        {panel.text && (
+          // Always use light theme for text bubbles regardless of user preference.
+          <div
+            ref={contentRef}
+            className={classNames(styles.text, textLayoutClass)}
+            data-theme="Light"
+          >
+            {offerBrowserTts && (
+              <div className={styles.ttsContainer}>
+                <TextToSpeech contentRef={contentRef} />
+              </div>
+            )}
+            {showTyping ? (
+              <div>
+                <div className={styles.invisiblePlaceholder}>{plainText}</div>
+                <Typist
+                  startDelay={750}
+                  avgTypingDelay={35}
+                  stdTypingDelay={15}
+                  cursor={{show: false}}
+                  onTypingDone={() => {
+                    setTypingDone(true);
+                  }}
+                  className={styles.typist}
+                >
+                  {plainText}
+                </Typist>
+              </div>
+            ) : (
+              <EnhancedSafeMarkdown markdown={panel.text} />
+            )}
+          </div>
+        )}
       </div>
       <div
         className={styles.childrenArea}
         style={{width: width, height: childrenAreaHeight}}
       >
-        <button
-          id="panels-button"
-          type="button"
-          onClick={handleButtonClick}
-          className={styles.button}
-        >
-          {currentPanel < levelPanels.panels.length - 1
-            ? commonI18n.next()
-            : commonI18n.continue()}
-        </button>
-        {levelPanels.panels.length > 1 && (
+        {showButton && (
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="medium"
+            className={classNames(
+              styles.button,
+              showTyping ? styles.buttonReady : styles.buttonDelay
+            )}
+            id="panels-button"
+            onClick={handleButtonClick}
+            type="button"
+            ref={nextButtonRef}
+            key={`button-${currentPanelIndex}`}
+          >
+            {buttonText}
+          </MuiButton>
+        )}
+
+        {panels.length > 1 && !useLinks && (
           <div id="panels-bubbles">
-            {Array.from(Array(levelPanels.panels.length).keys()).map(index => {
+            {Array.from(Array(panels.length).keys()).map(index => {
               return (
                 <FontAwesome
                   key={index}
                   className={classNames(
                     'icon',
                     styles.bubble,
-                    index === currentPanel
+                    index === currentPanelIndex
                       ? styles.bubbleCurrent
                       : styles.bubbleNotCurrent
                   )}
                   title={undefined}
                   icon="circle"
+                  tabIndex={0}
+                  aria-label={
+                    commonI18n.panel() +
+                    (index + 1) +
+                    (index === currentPanelIndex ? commonI18n.selected() : '')
+                  }
+                  onKeyDown={(event: React.KeyboardEvent) => {
+                    if (event.key === 'Enter' || event.key === ' ') {
+                      handleBubbleClick(index);
+                      event.preventDefault();
+                    }
+                  }}
+                  role="button"
                   onClick={() => handleBubbleClick(index)}
                 />
               );
@@ -191,6 +385,32 @@ const PanelsView: React.FunctionComponent = () => {
           </div>
         )}
       </div>
+      {panel.teacherNote && (
+        // Slides feature: a teacher-only note shown below the bubble row.
+        // The server strips teacherNote from the panels payload for any
+        // user who isn't a teacher/levelbuilder, so a student's browser
+        // never receives it. The block renders only when the active
+        // panel has one — for regular panels levels (no notes anywhere)
+        // nothing here changes.
+        <div className={styles.teacherNote} style={{width}}>
+          <div className={styles.teacherNoteLabel}>Teacher note</div>
+          <EnhancedSafeMarkdown markdown={panel.teacherNote} />
+        </div>
+      )}
+      {onSkip && (
+        <div className={styles.skipContainer}>
+          <button onClick={onSkip} type="button" className={styles.buttonSkip}>
+            <span className={styles.buttonSkipContent}>
+              {commonI18n.skipToProject()}
+            </span>
+            <FontAwesome
+              title={commonI18n.skipToProject()}
+              icon="arrow-right"
+              className={'icon'}
+            />
+          </button>
+        </div>
+      )}
     </div>
   );
 };

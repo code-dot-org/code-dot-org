@@ -34,6 +34,25 @@ require 'cdo/shared_constants'
 # are only associated with one Level. There are some special cases where they can have multiple Levels, such as
 # with the now-deprecated variants feature.
 class ScriptLevel < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :public,
+    script_id: :public,
+    chapter: :public,
+    created_at: :public,
+    updated_at: :public,
+    stage_id: :public,
+    position: :public,
+    assessment: :public,
+    properties: :public,
+    named_level: :public,
+    bonus: :public,
+    activity_section_id: :public,
+    seed_key: :public,
+    activity_section_position: :public,
+  )
+
   include SerializedProperties
   include LevelsHelper
   include SharedConstants
@@ -47,12 +66,14 @@ class ScriptLevel < ApplicationRecord
   belongs_to :activity_section, optional: true
 
   has_and_belongs_to_many :levels
+  has_and_belongs_to_many :objectives
   has_many :callouts, inverse_of: :script_level
   has_many :levels_script_levels # join table. we need this association for seeding logic
 
   validate :anonymous_must_be_assessment
   validate :validate_activity_section_lesson
   validate :validate_activity_section_position
+  validate :levels_stay_within_ui_test_partition
 
   # Make sure we never create a level that is not an assessment, but is anonymous,
   # as in that case it wouldn't actually be treated as anonymous
@@ -74,12 +95,45 @@ class ScriptLevel < ApplicationRecord
     end
   end
 
+  # A unit and the levels it references must be on the same side of the
+  # "UI Test " partition. See dashboard/config/PARTITIONS.md.
+  #
+  # For now, the rule is not enforced between the standalone projects partition
+  # and the production partition, because there are still some production units
+  # containing standalone project levels. Once the data is cleaned up, this rule
+  # can be enforced across all partitions.
+  def levels_stay_within_ui_test_partition
+    offending = cross_partition_level_keys(level_keys || [])
+    return if offending.empty?
+    errors.add(:script_level, cross_partition_levels_message(offending))
+  end
+
+  # Returns those level keys on the wrong side of the "UI Test " partition for
+  # this script_level's unit.
+  def cross_partition_level_keys(keys)
+    # Ignore deprecated blockly levels, which are allowed in any unit.
+    keys = keys.compact.reject {|key| key.start_with?('blockly:')}
+    return [] if keys.empty?
+    ui_test_script = ui_test_script?
+    keys.reject {|key| Level.ui_test_partition_name?(key) == ui_test_script}
+  end
+
+  def cross_partition_levels_message(offending_level_keys)
+    "a unit and its levels must be on the same side of the \"UI Test \" " \
+      "partition, but \"#{script&.name}\" references: #{offending_level_keys.join(', ')}"
+  end
+
+  def ui_test_script?
+    script&.name&.start_with?('ui-test-')
+  end
+
   serialized_attrs %w(
     variants
     progression
     challenge
     level_keys
     instructor_in_training
+    show_ai_analysis
   )
 
   def script
@@ -146,7 +200,8 @@ class ScriptLevel < ApplicationRecord
   def next_level_or_redirect_path_for_user(
     user,
     extras_lesson = nil,
-    bubble_choice_parent: false
+    bubble_choice_parent: false,
+    unit_group_unit: nil
   )
 
     if valid_progression_level?(user)
@@ -164,40 +219,83 @@ class ScriptLevel < ApplicationRecord
     if script.old_professional_learning_course?
       if level.try(:plc_evaluation?)
         if Plc::EnrollmentUnitAssignment.exists?(user: user, plc_course_unit: script.plc_course_unit)
-          script_preview_assignments_path(script)
+          if Policies::Courses.modularity_enabled? && unit_group_unit
+            course_unit_preview_assignments_path(unit_group_unit.unit_group, unit_group_unit.position)
+          else
+            script_preview_assignments_path(script)
+          end
         else
-          build_script_level_path(level_to_follow)
+          build_script_level_path(level_to_follow, unit_group_unit: unit_group_unit)
         end
       else
         if has_another_level_to_go_to?
-          build_script_level_path(level_to_follow)
+          build_script_level_path(level_to_follow, unit_group_unit: unit_group_unit)
         else
-          script_path(script)
+          if Policies::Courses.modularity_enabled? && unit_group_unit
+            course_unit_path(unit_group_unit.unit_group, unit_group_unit.position)
+          else
+            script_path(script)
+          end
         end
       end
     elsif script.pl_course?
-      return build_script_level_path(level_to_follow) if level_to_follow
+      return build_script_level_path(level_to_follow, unit_group_unit: unit_group_unit) if level_to_follow
       next_unit = script.next_unit(user)
-      next_unit ? script_path(next_unit) : script_completion_redirect(script)
-    elsif bubble_choice? && !bubble_choice_parent
+      if next_unit
+        next_ugu = next_unit.unit_group_units.find {|ugu| ugu.unit_group == unit_group_unit&.unit_group}
+        if Policies::Courses.modularity_enabled? && next_ugu
+          course_unit_path(next_ugu.unit_group, next_ugu.position)
+        else
+          script_path(next_unit)
+        end
+      else
+        script_completion_redirect(user, script, unit_group_unit: unit_group_unit)
+      end
+    elsif bubble_choice? && !bubble_choice_parent && (!level.try(:navigation_type) || level.try(:navigation_type) == SharedConstants::BUBBLE_CHOICE_NAVIGATION_TYPES[:PARENT])
       # Redirect user back to the BubbleChoice activity page from sublevels.
-      build_script_level_path(self)
+      build_script_level_path(self, unit_group_unit: unit_group_unit)
     elsif bonus
       # If we got to this bonus level from another lesson's lesson extras, go back
       # to that lesson
-      script_lesson_extras_path(script.name, (extras_lesson || lesson).relative_position)
+      lesson_position = (extras_lesson || lesson).relative_position
+      if Policies::Courses.modularity_enabled? && unit_group_unit
+        course_unit_lesson_extras_path(unit_group_unit.unit_group, unit_group_unit.position, lesson_position)
+      else
+        script_lesson_extras_path(script.name, lesson_position)
+      end
+    elsif end_of_lesson? && lesson&.lesson_tutor_available? && Experiment.enabled?(user: user, experiment_name: 'lesson-tutor') && user&.can_use_lesson_deep_dive?
+      # For lessons with Tutor+ available (AIF/AID courses), send students at
+      # the end of the lesson to the lesson deep dive ("tutor") space instead of
+      # the next-level / unit-overview redirect. This is the single choke point
+      # for both lab2 (finishUrl) and legacy (next_level_url) navigation, so it
+      # takes precedence over lesson extras and the unit overview dialog.
+      lesson.lesson_tutor_path
     else
       # To help teachers have more control over the pacing of certain
       # scripts, we send students on the last level of a lesson to the unit
       # overview page.
       if end_of_lesson? && script.show_unit_overview_between_lessons?
         if script.lesson_extras_available
-          script_lesson_extras_path(script.name, (extras_lesson || lesson).relative_position)
+          lesson_position = (extras_lesson || lesson).relative_position
+          if Policies::Courses.modularity_enabled? && unit_group_unit
+            course_unit_lesson_extras_path(unit_group_unit.unit_group, unit_group_unit.position, lesson_position)
+          else
+            script_lesson_extras_path(script.name, lesson_position)
+          end
         else
-          script_path(script) + "?completedLessonNumber=#{lesson.relative_position}"
+          query_params = "?completedLessonNumber=#{lesson.relative_position}"
+          if Policies::Courses.modularity_enabled? && unit_group_unit
+            course_unit_path(unit_group_unit.unit_group, unit_group_unit.position) + query_params
+          else
+            script_path(script) + query_params
+          end
         end
       else
-        level_to_follow ? build_script_level_path(level_to_follow) : script_completion_redirect(script)
+        if level_to_follow
+          build_script_level_path(level_to_follow, unit_group_unit: unit_group_unit)
+        else
+          script_completion_redirect(user, script, unit_group_unit: unit_group_unit)
+        end
       end
     end
   end
@@ -268,13 +366,19 @@ class ScriptLevel < ApplicationRecord
   end
 
   def long_assessment?
-    assessment && level.is_a?(LevelGroup)
+    assessment && level.is_a?(LevelGroup) && !activity_guide_level?
   end
 
   def anonymous?
     return false if level.nil? || level.properties.nil?
 
     return level.properties["anonymous"] == "true"
+  end
+
+  def activity_guide_level?
+    return false if level.nil? || level.properties.nil?
+
+    return level.properties["activity_guide_level"] == "true"
   end
 
   def bubble_choice?
@@ -287,7 +391,7 @@ class ScriptLevel < ApplicationRecord
 
   def report_bug_url(request)
     message = "Bug in Course #{script.name} lesson #{lesson.absolute_position} Puzzle #{position}\n#{request.url}\n#{request.user_agent}\n"
-    "https://support.code.org/hc/en-us/requests/new?&description=#{CGI.escape(message)}"
+    "https://support.code.org/hc/en-us/requests/new?&tf_description=#{CGI.escape(message)}"
   end
 
   def level_display_text
@@ -304,11 +408,11 @@ class ScriptLevel < ApplicationRecord
     lesson.script_levels.to_a.size
   end
 
-  def path
-    build_script_level_path(self)
+  def path(unit_group_unit: nil)
+    build_script_level_path(self, unit_group_unit: unit_group_unit)
   end
 
-  def summarize(include_prev_next = true, for_edit: false, user_id: nil)
+  def summarize(include_prev_next = true, for_edit: false, user_id: nil, unit_group_unit: nil)
     ActiveRecord::Base.connected_to(role: :reading) do
       ids = level_ids
       active_id = oldest_active_level.id
@@ -319,7 +423,7 @@ class ScriptLevel < ApplicationRecord
       end
 
       summary = {
-        id: id,
+        id: id.to_s,
         ids: ids.map(&:to_s),
         activeId: active_id.to_s,
         inactiveIds: inactive_ids.map(&:to_s),
@@ -328,13 +432,15 @@ class ScriptLevel < ApplicationRecord
         icon: level.icon,
         is_concept_level: level.concept_level?,
         title: level_display_text,
-        url: build_script_level_url(self),
+        url: build_script_level_url(self, unit_group_unit: unit_group_unit),
+        path: build_script_level_path(self, unit_group_unit: unit_group_unit),
         freePlay: level.try(:free_play) == "true",
         bonus: bonus,
         display_as_unplugged: level.display_as_unplugged?,
         app: level.game&.app,
         uses_lab2: level.uses_lab2?,
-        is_validated: level.validated?
+        is_validated: level.validated?,
+        can_have_feedback: level.can_have_feedback?
       }
 
       if progression
@@ -352,8 +458,15 @@ class ScriptLevel < ApplicationRecord
         summary[:name] = level.display_name || level.name
       end
 
+      # Shown in the level header when the unit uses simple progress.
+      if level.header_label.present?
+        summary[:header_label] =
+          level.get_localized_property(:header_label).presence ||
+          level.header_label
+      end
+
       if bubble_choice?
-        summary[:sublevels] = level.summarize_sublevels(script_level: self, user_id: user_id)
+        summary[:sublevels] = level.summarize_sublevels(script_level: self, user_id: user_id, unit_group_unit: unit_group_unit)
       end
 
       if for_edit
@@ -365,6 +478,7 @@ class ScriptLevel < ApplicationRecord
         summary[:assessment] = !!assessment
         summary[:challenge] = !!challenge
         summary[:instructor_in_training] = !!instructor_in_training
+        summary[:show_ai_analysis] = !!show_ai_analysis
       end
 
       if include_prev_next
@@ -396,25 +510,41 @@ class ScriptLevel < ApplicationRecord
     end
   end
 
-  def summarize_for_lesson_show(can_view_teacher_markdown, current_user)
-    summary = summarize(user_id: current_user&.id)
+  def summarize_for_lesson_show(can_view_teacher_markdown, current_user, unit_group_unit: nil)
+    summary = summarize(user_id: current_user&.id, unit_group_unit: unit_group_unit)
     summary[:id] = id.to_s
     summary[:scriptId] = script_id
-    summary[:exampleSolutions] = get_example_solutions(oldest_active_level, current_user)
+    summary[:exampleSolutions] = get_example_solutions(oldest_active_level, current_user, unit_group_unit: unit_group_unit)
     summary[:levels] = levels.map {|l| l.summarize_for_lesson_show(can_view_teacher_markdown)}
     summary
   end
 
   def summarize_for_lesson_edit
-    summary = summarize(for_edit: true)
+    summary = summarize(false, for_edit: true)
     summary[:id] = id.to_s
     summary[:activitySectionPosition] = activity_section_position
     summary[:levels] = levels.map do |level|
-      {
+      entry = {
         id: level.id.to_s,
         name: level.name,
-        url: edit_level_path(id: level.id)
+        url: edit_level_path(id: level.id),
+        type: level.type,
+        # Level#generate_fields: state the AI lesson generator persisted,
+        # surfaced so the /generate page can re-populate its form.
+        **level.generate_fields,
       }
+      if level.is_a?(BubbleChoice)
+        entry[:sublevels] = level.sublevels.map do |sub|
+          {
+            id: sub.id.to_s,
+            name: sub.name,
+            url: edit_level_path(id: sub.id),
+            type: sub.type,
+            **sub.generate_fields,
+          }
+        end
+      end
+      entry
     end
 
     # For now, the lesson edit page does not allow modification of level
@@ -447,7 +577,7 @@ class ScriptLevel < ApplicationRecord
     extra_levels
   end
 
-  def summarize_as_bonus
+  def summarize_as_bonus(unit_group_unit: nil)
     localized_level_description = I18n.t(level.name, scope: [:data, :bubble_choice_description], default: level.bubble_choice_description)
     localized_level_display_name = I18n.t(level.name, scope: [:data, :display_name], default: level.display_name)
     {
@@ -457,12 +587,12 @@ class ScriptLevel < ApplicationRecord
       description: localized_level_description,
       display_name: localized_level_display_name || I18n.t('lesson_extras.bonus_level'),
       thumbnail_url: level.try(:thumbnail_url) || level.try(:solution_image_url),
-      url: build_script_level_url(self),
+      url: build_script_level_url(self, unit_group_unit: unit_group_unit),
       maze_summary: {
         map: JSON.parse(level.try(:maze) || '[]'),
         serialized_maze: level.try(:serialized_maze) && JSON.parse(level.try(:serialized_maze)),
         skin: level.try(:skin),
-        level: level.summarize_as_bonus.camelize_keys
+        level: level.summarize_as_bonus(unit_group_unit: unit_group_unit).camelize_keys
       }.camelize_keys
     }
   end
@@ -509,7 +639,11 @@ class ScriptLevel < ApplicationRecord
   # Bring together all the information needed to show the teacher panel on a level
   def summarize_for_teacher_panel(student, teacher = nil)
     level_for_progress = oldest_active_level.get_level_for_progress(student, script)
-    user_level = student.last_attempt_for_any([level_for_progress], script_id: script_id)
+    # A migrated predict level's attempt may live on the level itself (new) or
+    # its contained level (pre-migration), so consider both. Every other level
+    # (including bubble choice) resolves to a single progress level for the student.
+    progress_levels = oldest_active_level.predict_level? ? oldest_active_level.levels_for_progress : [level_for_progress]
+    user_level = student.last_attempt_for_any(progress_levels, script_id: script_id)
 
     status = activity_css_class(user_level)
     passed = [SharedConstants::LEVEL_STATUS.passed, SharedConstants::LEVEL_STATUS.perfect].include?(status)
@@ -542,6 +676,8 @@ class ScriptLevel < ApplicationRecord
     if user_level
       teacher_panel_summary[:userLevelId] = user_level.id
       teacher_panel_summary[:updatedAt] = user_level.updated_at
+      teacher_panel_summary[:attempts] = user_level.attempts
+      teacher_panel_summary[:timeSpent] = user_level.time_spent
     end
 
     teacher_panel_summary
@@ -649,6 +785,11 @@ class ScriptLevel < ApplicationRecord
       Level.find(level_data['id'])
     end
 
+    # Explicitly enforce UI Test partition rules, because the levels HABTM
+    # rows are written directly without triggering model validations.
+    offending = cross_partition_level_keys(levels.map(&:key))
+    raise cross_partition_levels_message(offending) if offending.any?
+
     # Unit levels containing anonymous levels must be assessments.
     if levels.any? {|l| l.properties["anonymous"] == "true"}
       self.assessment = true
@@ -664,13 +805,19 @@ class ScriptLevel < ApplicationRecord
     raise "cannot add variant to non-custom level" unless levels.first.level_num == 'custom'
     existing_level = levels.first
 
-    levels << new_level
-    update!(
-      level_keys: levels.map(&:key),
-      variants: {
-        existing_level.name => {"active" => false}
-      }
-    )
+    # Use a transaction so that the database is not modified if any validations
+    # fail: the append writes the join row immediately, before update! runs
+    # them. requires_new is necessary to ensure that the database is restored to
+    # its original state when running inside of another transaction.
+    transaction(requires_new: true) do
+      levels << new_level
+      update!(
+        level_keys: levels.map(&:key),
+        variants: {
+          existing_level.name => {"active" => false}
+        }
+      )
+    end
     if Rails.application.config.levelbuilder_mode
       script.write_script_json
     end
@@ -684,12 +831,14 @@ class ScriptLevel < ApplicationRecord
     instructor_in_training && script.pl_course? && script.can_be_participant?(current_user)
   end
 
-  def get_example_solutions(level, current_user, section_id = nil)
+  def get_example_solutions(level, current_user, section_id = nil, unit_group_unit: nil)
     level_example_links = []
 
     return [] if !Policies::InlineAnswer.visible_for_script_level?(current_user, self) || CDO.properties_encryption_key.blank?
 
-    # exemplar_sources is used by Javalab levels to store level solutions
+    # exemplar_sources is used by Javalab and Code Bridge levels to store level solutions.
+    # This should not be used for modular script levels, as it will always return the exemplar link for the
+    # "home course". This can lead to confusing permissions issues.
     if level.try(:exemplar_sources).present? && current_user&.verified_instructor?
       if oldest_active_level.is_a? BubbleChoice
         # If the script level has sublevels, get a link for the sublevel that looks like
@@ -697,12 +846,12 @@ class ScriptLevel < ApplicationRecord
         sublevel_position = oldest_active_level.sublevel_position(level)
         return [] unless sublevel_position
 
-        path = build_script_level_path(self, {sublevel_position: sublevel_position})
+        path = build_script_level_path(self, sublevel_position: sublevel_position, unit_group_unit: unit_group_unit)
         level_example_links = [build_exemplar_url(path)]
       else
         # Otherwise, exemplar link should look like
         # csa1/lessons/2/levels/1?exemplar=true
-        path = build_script_level_path(self)
+        path = build_script_level_path(self, unit_group_unit: unit_group_unit)
         level_example_links = [build_exemplar_url(path)]
       end
     elsif level.try(:examples).present? && (current_user&.verified_instructor? || script&.csf?) # 'solutions' for applab-type levels
@@ -717,25 +866,32 @@ class ScriptLevel < ApplicationRecord
         # final state - a string representation of the URL of the exemplar level: studio.code.org/s/<course>/...
         case level
         when Dancelab
-          send("#{'dance'}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
+          send(:"#{'dance'}_project_view_projects_url", channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
         when Poetry
-          send("#{level.standalone_app_name}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
+          send(:"#{level.standalone_app_name}_project_view_projects_url", channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
         when GamelabJr
-          send("#{level.standalone_app_name_or_default}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
+          send(:"#{level.standalone_app_name_or_default}_project_view_projects_url", channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
         when Artist
           artist_type = (level.skin == 'elsa' || level.skin == 'anna') ? 'frozen' : 'artist'
-          send("#{artist_type}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
+          send(:"#{artist_type}_project_view_projects_url", channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
         when Studio # playlab
-          send("#{'playlab'}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
+          send(:"#{'playlab'}_project_view_projects_url", channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
         else
-          send("#{level.game.app}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
+          send(:"#{level.game.app}_project_view_projects_url", channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
         end
       end
     elsif level.ideal_level_source_id && script # old style 'solutions' for blockly-type levels
-      level_example_links.push(build_script_level_url(self, {solution: true}.merge(section_id ? {section_id: section_id} : {})))
+      unless ScriptConfig.allows_public_caching_for_script(script.name)
+        sublevel_position = (oldest_active_level.is_a? BubbleChoice) ? oldest_active_level.sublevel_position(level) : nil
+        level_example_links.push(build_script_level_url(self, **{sublevel_position: sublevel_position, solution: true}.merge(section_id ? {section_id: section_id} : {}), unit_group_unit: unit_group_unit))
+      end
     end
 
     level_example_links
+  end
+
+  def level_deprecated?
+    level&.deprecated?
   end
 
   private def kind
@@ -749,6 +905,6 @@ class ScriptLevel < ApplicationRecord
   end
 
   private def build_exemplar_url(path)
-    CDO.studio_url(path, CDO.default_scheme) + '?exemplar=true'
+    CDO.studio_url(path) + '?exemplar=true'
   end
 end

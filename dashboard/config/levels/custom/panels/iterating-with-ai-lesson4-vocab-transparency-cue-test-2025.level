@@ -1,0 +1,22 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-11-20T18:06:09.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# Transparency Cue\n\nA **transparency cue** is information your app shows that helps users understand what’s happening with the data and trust the results. \n\n**Example:** Transparency cues explain counts, filters, and empty states, such as \"Showing 5 of 18 results\" and \"Filter: open now, price $$ or less.\"",
+        "imageUrl": "https://images.code.org/b32db476b290c20f6de3bd5ed8b655d2-Pasted Graphic 3 2.png",
+        "key": "undefined-ea03636a-a1b5-4568-be2b-86c3c6462665",
+        "layout": "text-top-right"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-20T18:06:09.172+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson4-vocab-pipeline-test-2025\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson4-vocab-pipeline-test-2025\"},{\"changed_at\":\"2025-11-20 18:21:58 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-11-20 18:24:04 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Panels>

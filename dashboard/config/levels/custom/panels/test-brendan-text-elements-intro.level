@@ -1,0 +1,45 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-06-29T19:41:15.000Z",
+  "level_num": "custom",
+  "user_id": 574,
+  "properties": {
+    "panels": [
+      {
+        "key": "test-brendan-text-elements-intro-a1c248f7-d070-4d83-89dd-74ff6bf6a287",
+        "text": "Now that we have our basic page structure and title, it's time to add the actual content people will see! This all goes inside the `<body>` tags.",
+        "imageUrl": "https://images.code.org/8d7b8229145dd8a7384442b2d5178861-test-brendan-text-elements-intro-panel-1-d43f75e4-5b6f-40d3-aea5-c59a54d2e6c7.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "test-brendan-text-elements-intro-bf9611aa-dfb1-48c0-b53e-c5c3ee1337af",
+        "text": "When you write an essay, you usually have a main title, right? On a webpage, we use the `<h1>` tag for the most important heading, like the main topic of your page.",
+        "imageUrl": "https://images.code.org/b6794866e820620fc8a59cbb8311b0f8-test-brendan-text-elements-intro-panel-2-0d4e8f3e-40ab-402d-ba4c-51efc8f267ac.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "test-brendan-text-elements-intro-6f17167a-4def-4a31-9f36-4b534e2f0a63",
+        "text": "Just like essays have subheadings, web pages can use `<h2>` tags for secondary headings. These are still important, but they help break up your main topic into smaller sections.",
+        "imageUrl": "https://images.code.org/8c789e52b988cc4debdc97c1111ccc29-test-brendan-text-elements-intro-panel-3-e5a871b2-d13d-4606-bba6-3797f6086ddb.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "test-brendan-text-elements-intro-ef9e3007-64a6-4156-8743-509977c2f746",
+        "text": "And for all the regular information about your pet fish – its favorite food, funny habits, or where it lives – we use the `<p>` tag for paragraphs of text. Think of `<p>` for 'paragraph'!",
+        "imageUrl": "https://images.code.org/d9925222a9bdd11b635e431fa92e5f24-test-brendan-text-elements-intro-panel-4-ad43c148-4572-4bae-b640-9d92ca0ce75c.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "test-brendan-text-elements-intro-d0aeac49-186b-4410-bc74-1832fa3d72bf",
+        "text": "These tags (`<h1>`, `<h2>`, `<p>`) aren't just about how things look. They tell the browser, and even search engines, what kind of information each piece of text is. It's all about giving your content structure!",
+        "imageUrl": "https://images.code.org/98f25cbf3c70ef605225413917040b1d-test-brendan-text-elements-intro-panel-5-fc6f6fab-2aa2-4f02-8e9a-278a1b3998cd.png",
+        "layout": "text-bottom-center"
+      }
+    ],
+    "generate_outline": "Introduce the <h1>, <h2>, and <p> tags as fundamental HTML elements for structuring text content. Explain their semantic meaning: <h1> for main headings, <h2> for subheadings, and <p> for paragraphs of text."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-06-29 19:42:02 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-29 19:42:02 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

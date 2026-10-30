@@ -1,14 +1,16 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
+
+import EvidenceLevelsForStudents from './EvidenceLevelsForStudents';
+import EvidenceLevelsForTeachersV2 from './EvidenceLevelsForTeachersV2';
 import {
   aiEvaluationShape,
   evidenceLevelShape,
   submittedEvaluationShape,
 } from './rubricShapes';
-import EvidenceLevelsForStudents from './EvidenceLevelsForStudents';
-import EvidenceLevelsForTeachersV2 from './EvidenceLevelsForTeachersV2';
 
 export default function EvidenceLevels({
+  productTour,
   evidenceLevels,
   canProvideFeedback,
   learningGoalKey,
@@ -17,7 +19,9 @@ export default function EvidenceLevels({
   submittedEvaluation,
   isStudent,
   isAutosaving,
+  isAiAssessed,
   aiEvalInfo,
+  arrowPositionCallback,
 }) {
   const sortedEvidenceLevels = () => {
     const newArray = [...evidenceLevels];
@@ -33,19 +37,23 @@ export default function EvidenceLevels({
   } else {
     return (
       <EvidenceLevelsForTeachersV2
+        productTour={productTour}
         aiEvalInfo={aiEvalInfo}
+        isAiAssessed={isAiAssessed}
         learningGoalKey={learningGoalKey}
         evidenceLevels={sortedEvidenceLevels().reverse()}
         understanding={understanding}
         radioButtonCallback={radioButtonCallback}
         canProvideFeedback={canProvideFeedback}
         isAutosaving={isAutosaving}
+        arrowPositionCallback={arrowPositionCallback}
       />
     );
   }
 }
 
 EvidenceLevels.propTypes = {
+  productTour: PropTypes.bool,
   evidenceLevels: PropTypes.arrayOf(evidenceLevelShape).isRequired,
   canProvideFeedback: PropTypes.bool,
   learningGoalKey: PropTypes.string,
@@ -54,5 +62,7 @@ EvidenceLevels.propTypes = {
   submittedEvaluation: submittedEvaluationShape,
   isStudent: PropTypes.bool,
   isAutosaving: PropTypes.bool,
+  isAiAssessed: PropTypes.bool.isRequired,
   aiEvalInfo: aiEvaluationShape,
+  arrowPositionCallback: PropTypes.func,
 };

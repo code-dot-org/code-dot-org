@@ -1,0 +1,103 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 380px;
+  flex: 1;
+  min-height: 0;
+  margin: 0 auto;
+  border-radius: 16px;
+  overflow: hidden;
+  padding: 20px 20px 16px;
+  box-sizing: border-box;
+  color: #000;
+}
+
+.progressTracker {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 14px;
+  flex-shrink: 0;
+}
+
+@keyframes story-fill {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.segment {
+  flex: 1;
+  height: 3px;
+  background: rgb(0 0 0 / 0.18);
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+}
+
+.segmentFilled {
+  background: rgb(0 0 0 / 0.6);
+}
+
+.segmentFill {
+  position: absolute;
+  inset: 0;
+  background: rgb(0 0 0 / 0.6);
+  transform-origin: left center;
+  animation-name: story-fill;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+
+  /* duration set via inline style from RecapStoryCard */
+}
+
+.lessonLabel {
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgb(0 0 0 / 0.5);
+  margin: 0 0 12px;
+  flex-shrink: 0;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 8px;
+  flex-shrink: 0;
+}
+
+.skipButton {
+  background: transparent;
+  border: none;
+  font-family: var(--font-family-main);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: rgb(0 0 0 / 0.55);
+  cursor: pointer;
+  padding: 4px 2px;
+  line-height: 1;
+
+  &:hover {
+    color: #000;
+  }
+
+  &:focus-visible {
+    outline: 2px solid rgb(0 0 0 / 0.4);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+}

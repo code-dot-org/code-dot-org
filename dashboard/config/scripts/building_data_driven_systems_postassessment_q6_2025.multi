@@ -1,0 +1,16 @@
+name 'building-data-driven-systems-postassessment-q6_2025'
+
+question 'You are testing a helper function `addItem(newItem)`. The AI generates a test case where `newItem` is an empty string "". Why is this a valuable test?'
+
+wrong 'It tests if the AI can handle strings.'
+right 'It is an edge case that ensures the function doesn\'t add "blank" items to the user\'s list.'
+wrong 'Empty strings are the most common type of data in professional apps.'
+wrong 'It proves that the `.map()` function is working correctly.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 3
+
+ Validation within helper functions should prevent "bad" data (like empty strings) from entering the dataset. Testing this edge case ensures the function is robust.
+MARKDOWN

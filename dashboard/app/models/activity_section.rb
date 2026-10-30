@@ -72,9 +72,9 @@ class ActivitySection < ApplicationRecord
     tips_clone
   end
 
-  def summarize_for_lesson_show(can_view_teacher_markdown, current_user)
+  def summarize_for_lesson_show(can_view_teacher_markdown, current_user, unit_group_unit: nil)
     summary = summarize
-    summary[:scriptLevels] = script_levels.map {|sl| sl.summarize_for_lesson_show(can_view_teacher_markdown, current_user)}
+    summary[:scriptLevels] = script_levels.map {|sl| sl.summarize_for_lesson_show(can_view_teacher_markdown, current_user, unit_group_unit: unit_group_unit)}
     Services::MarkdownPreprocessor.process!(summary[:description])
     summary[:tips]&.each do |tip|
       Services::MarkdownPreprocessor.process!(tip["markdown"])
@@ -103,6 +103,7 @@ class ActivitySection < ApplicationRecord
         challenge: !!sl_data['challenge'],
         variants: sl_data['variants'],
         instructor_in_training: !!sl_data['instructor_in_training'],
+        show_ai_analysis: !!sl_data['show_ai_analysis'],
         progression: progression_name.present? && progression_name
       )
       sl.update_levels(sl_data['levels'] || [])

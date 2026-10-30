@@ -1,0 +1,41 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "game_id": 75,
+  "created_at": "2026-03-05T22:14:20.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Sketch Lab Project Template\r\n\r\nYou will complete your project using Sketch Lab. Use this blank sketch and add to it as you progress through the unit.\r\n\r\n",
+    "start_sources": {
+      "source": {
+        "type": "excalidraw",
+        "version": 2,
+        "source": "https://levelbuilder-studio.code.org",
+        "elements": [
+
+        ],
+        "appState": {
+          "gridSize": null,
+          "viewBackgroundColor": "#ffffff",
+          "scrollX": 1905.1218081342977,
+          "scrollY": 2130.0674403996845,
+          "zoom": {
+            "value": 0.161156018383785
+          }
+        },
+        "files": {
+        },
+        "externalFiles": {
+        }
+      }
+    },
+    "display_name": "Sketch Lab",
+    "bubble_choice_description": "Create your project in Sketch Lab!",
+    "thumbnail_url": "https://images.code.org/036edeb5693631c7f5819c9f4ce3187e-wireframe.png",
+    "project_template_level_name": "aid-thinking-critically-lesson4-project-template_2026-test"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-03-05T22:14:20.313+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson9-project_2026-test\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson9-project_2026-test\"}]"
+}]]></config>
+</Sketchlab>

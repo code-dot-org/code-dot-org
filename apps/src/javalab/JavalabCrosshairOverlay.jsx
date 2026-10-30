@@ -1,13 +1,15 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import VisualizationOverlay, {
-  dispatchResizeEvent,
-} from '@cdo/apps/templates/VisualizationOverlay';
+import PropTypes from 'prop-types';
+import React from 'react';
+
 import CrosshairOverlay from '@cdo/apps/templates/CrosshairOverlay';
 import TooltipOverlay, {
   coordinatesProvider,
 } from '@cdo/apps/templates/TooltipOverlay';
+import VisualizationOverlay, {
+  dispatchResizeEvent,
+} from '@cdo/apps/templates/VisualizationOverlay';
+
 import style from './javalab-crosshair-overlay.module.scss';
 
 /**

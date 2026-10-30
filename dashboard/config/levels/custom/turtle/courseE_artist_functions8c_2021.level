@@ -43,12 +43,11 @@
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/88a155d317db2319ce60ee8f96868433=levelbuilder/37111.png",
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
-    "preload_asset_list": null,
-    "contained_level_names": null
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-26 00:48:14 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-02 16:55:07 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-02 16:58:45 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"x\",\"y\",\"instructions\",\"markdown_instructions\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-02 16:59:20 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"y\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-02 17:00:15 +0000\",\"changed\":[\"solution_blocks\",\"solution_image_url\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-02 17:00:30 +0000\",\"changed\":[\"solution_blocks\",\"solution_image_url\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-02 17:01:05 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-02 17:01:28 +0000\",\"changed\":[\"solution_blocks\",\"solution_image_url\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-02 17:01:49 +0000\",\"changed\":[\"solution_blocks\",\"solution_image_url\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-02 17:02:06 +0000\",\"changed\":[\"solution_blocks\",\"solution_image_url\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-02 17:02:56 +0000\",\"changed\":[\"solution_blocks\",\"solution_image_url\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-02 17:07:56 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-02 17:11:17 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"callout_json\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-02 17:18:58 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-02 17:20:39 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-02 17:30:30 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"impressive\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-04 21:25:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-07-26 00:48:14 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-02 16:55:07 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-02 16:58:45 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"x\",\"y\",\"instructions\",\"markdown_instructions\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-02 16:59:20 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"y\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-02 17:00:15 +0000\",\"changed\":[\"solution_blocks\",\"solution_image_url\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-02 17:00:30 +0000\",\"changed\":[\"solution_blocks\",\"solution_image_url\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-02 17:01:05 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-02 17:01:28 +0000\",\"changed\":[\"solution_blocks\",\"solution_image_url\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-02 17:01:49 +0000\",\"changed\":[\"solution_blocks\",\"solution_image_url\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-02 17:02:06 +0000\",\"changed\":[\"solution_blocks\",\"solution_image_url\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-02 17:02:56 +0000\",\"changed\":[\"solution_blocks\",\"solution_image_url\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-02 17:07:56 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-02 17:11:17 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"callout_json\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-02 17:18:58 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-02 17:20:39 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-02 17:30:30 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"impressive\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-04 21:25:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2024-03-25 18:02:31 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 4,
     "debugging": 4,
@@ -106,28 +105,32 @@
     <toolbox_blocks>
       <xml>
         <category name="Actions">
+          <block type="draw_move_by_constant">
+            <field name="DIR">moveForward</field>
+            <field name="VALUE">100</field>
+          </block>
           <block type="jump_by_constant">
-            <title name="DIR">jumpForward</title>
-            <title name="VALUE">100</title>
+            <field name="DIR">jumpForward</field>
+            <field name="VALUE">100</field>
           </block>
           <block type="draw_turn_by_constant">
-            <title name="DIR">turnRight</title>
-            <title name="VALUE">90</title>
+            <field name="DIR">turnRight</field>
+            <field name="VALUE">90</field>
           </block>
           <block type="draw_turn_by_constant">
-            <title name="DIR">turnLeft</title>
-            <title name="VALUE">90</title>
+            <field name="DIR">turnLeft</field>
+            <field name="VALUE">90</field>
           </block>
         </category>
         <category name="Brushes">
-          <block type="draw_colour" inline="true">
+          <block type="draw_colour">
             <value name="COLOUR">
               <block type="colour_picker">
-                <title name="COLOUR">#ff0000</title>
+                <field name="COLOUR">#ff0000</field>
               </block>
             </value>
           </block>
-          <block type="draw_colour" inline="true">
+          <block type="draw_colour">
             <value name="COLOUR">
               <block type="colour_random"/>
             </value>
@@ -135,18 +138,18 @@
         </category>
         <category name="Loops">
           <block type="controls_repeat">
-            <title name="TIMES">4</title>
+            <field name="TIMES">4</field>
           </block>
         </category>
         <category name="Functions" custom="PROCEDURE">
           <block type="procedures_defnoreturn">
             <mutation/>
-            <title name="NAME">do something</title>
+            <field name="NAME">do something</field>
           </block>
         </category>
         <category name="Comments">
           <block type="comment">
-            <title name="TEXT"/>
+            <field name="TEXT"/>
           </block>
         </category>
       </xml>

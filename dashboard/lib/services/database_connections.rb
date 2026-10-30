@@ -16,7 +16,7 @@ module Services
         end
       end
 
-      def connect_to_reader
+      def connect_to_reader(&block)
         filter_params = {
           action: action_name,
           controller: controller_name
@@ -24,9 +24,7 @@ module Services
         if Gatekeeper.allows('reader_connection_override', where: filter_params, default: false)
           yield
         else
-          ActiveRecord::Base.connected_to(role: :reading) do
-            yield
-          end
+          ActiveRecord::Base.connected_to(role: :reading, &block)
         end
       end
     end

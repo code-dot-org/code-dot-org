@@ -1,0 +1,89 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 64,
+  "created_at": "2026-08-24T00:00:00.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "uses_lab2": "true",
+    "block_pools": [
+      "GamelabJr",
+      "GameDev"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab",
+      "zGameDev"
+    ],
+    "standalone_app_name": "spritelab",
+    "skin": "gamelab",
+    "hide_custom_blocks": true,
+    "hide_share_and_remix": "true",
+    "encrypted": "false",
+    "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
+    "level_mode": {
+      "kind": "code"
+    },
+    "image_role_defaults": {
+      "sprite": "friend"
+    },
+    "pinned_scene": {
+      "id": "platform-scene",
+      "name": "Platformer",
+      "type": "platform"
+    },
+    "objectives": {
+      "title": "**Set them walking**",
+      "items": [
+        {
+          "text": "Drag **begins patrolling** onto the dotted outline.",
+          "check": {
+            "kind": "block",
+            "type": "spritelab2_beginsBehavior",
+            "under": "spritelab2_whenRun",
+            "fields": {
+              "BEHAVIOR": "patrollingOnBlocks"
+            }
+          }
+        },
+        {
+          "text": "Click **Play** and watch them walk.",
+          "check": {
+            "kind": "play"
+          }
+        }
+      ]
+    },
+    "long_instructions": "# Set them walking\nDrag **begins patrolling** onto the dotted outline. Click **Play**.",
+    "toolbox_definition": {
+      "kind": "flyoutToolbox",
+      "contents": [
+        {
+          "kind": "block",
+          "type": "spritelab2_beginsBehavior",
+          "fields": {
+            "BEHAVIOR": "patrollingOnBlocks"
+          }
+        }
+      ]
+    },
+    "add_blocks": [
+      {
+        "attachTo": "spritelab2_whenRun",
+        "shadow": {
+          "type": "spritelab2_placeholder",
+          "extraState": {
+            "like": {
+              "type": "spritelab2_beginsBehavior",
+              "fields": {
+                "BEHAVIOR": "patrollingOnBlocks"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "header_label": "Make a platformer"
+  }
+}]]></config>
+</GamelabJr>

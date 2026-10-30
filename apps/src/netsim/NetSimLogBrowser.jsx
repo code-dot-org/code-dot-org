@@ -1,7 +1,9 @@
 /** @file Modal dialog for browsing any logs in the simulation. */
 import PropTypes from 'prop-types';
 import React from 'react';
-import Dialog, {Title, Body} from '../templates/Dialog';
+
+import Dialog, {Title, Body} from '../legacySharedComponents/Dialog';
+
 import NetSimLogBrowserFilters from './NetSimLogBrowserFilters';
 import NetSimLogBrowserTable from './NetSimLogBrowserTable';
 

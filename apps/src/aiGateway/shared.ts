@@ -1,0 +1,73 @@
+import AichatContextManager from '../aichat/aichatContextManager';
+import {AichatContext} from '../aichat/types';
+import HttpClient from '../util/HttpClient';
+
+import {parseSigningKey, type SigningKey} from './requestMetric';
+import {
+  parseTurnstileEnforcementMode,
+  type TurnstileEnforcementMode,
+} from './turnstile/enforcementMode';
+
+export const AI_GATEWAY_URL = `https://ai-gateway.code.org`;
+
+export interface GatewayAccessToken {
+  /** Signed RS256 JWT, valid for one minute, sent with the gateway request. */
+  token: string;
+  /**
+   * Whether this request must carry a Turnstile token. Resolved server-side and
+   * also embedded as a claim in `token`, so the browser's decision and the
+   * worker's enforcement always come from the same value.
+   */
+  turnstileEnforcementMode: TurnstileEnforcementMode;
+  /** The key Rails signed `token` with, chosen by a DCDO flag during the initial rollout. */
+  signingKey: SigningKey | undefined;
+}
+
+// Use the provided AichatContext or fall back to the default context.
+export async function fetchAccessToken(
+  aichatContext: AichatContext = AichatContextManager.getContext()
+): Promise<GatewayAccessToken> {
+  const response = await HttpClient.post(
+    '/ai_gateway/access_token',
+    JSON.stringify({aichatContext}),
+    true,
+    {
+      'Content-Type': 'application/json; charset=UTF-8',
+    }
+  );
+  const value = (await response.json()) as {
+    token?: unknown;
+    turnstileEnforcementMode?: unknown;
+    signingKey?: unknown;
+  };
+  if (typeof value.token !== 'string') {
+    throw new Error('AI Gateway token response has no token');
+  }
+  return {
+    token: value.token,
+    turnstileEnforcementMode: parseTurnstileEnforcementMode(
+      value.turnstileEnforcementMode
+    ),
+    signingKey: parseSigningKey(value.signingKey),
+  };
+}
+
+export function getModelString(model: unknown) {
+  let modelString: string;
+
+  if (typeof model === 'string') {
+    modelString = model;
+  } else {
+    const safeModel = model as unknown as Record<string, unknown>;
+    if (
+      safeModel !== null &&
+      typeof safeModel === 'object' &&
+      typeof safeModel.modelId === 'string'
+    ) {
+      modelString = safeModel.modelId;
+    } else {
+      throw new Error('Invalid model provided to Gateway.');
+    }
+  }
+  return modelString;
+}

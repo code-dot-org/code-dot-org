@@ -1,17 +1,17 @@
 /** Animation or Frame thumbnail */
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
-import _ from 'lodash';
-import color from '@cdo/apps/util/color';
+
+import AnimationPreview from '../AnimationPicker/AnimationPreview';
 import {PlayBehavior} from '../constants';
 import * as shapes from '../shapes';
-import AnimationPreview from '../AnimationPicker/AnimationPreview';
 
 const staticStyles = {
   root: {
     position: 'relative',
     imageRendering: 'pixelated',
-    backgroundColor: 'white',
+    backgroundColor: 'var(--background-neutral-white-fixed)',
     borderRadius: 10,
     marginLeft: 4,
     marginRight: 4,
@@ -29,14 +29,14 @@ const staticStyles = {
     overflow: 'hidden',
     borderRadius: 12,
     textAlign: 'center',
-    border: 'solid ' + color.light_purple + ' 2px',
-    backgroundColor: color.white,
+    border: 'solid var(--borders-brand-purple-primary) 2px',
+    backgroundColor: 'var(--background-neutral-white-fixed)',
   },
   indexBubbleText: {
     margin: 2,
     fontWeight: 'bold',
     fontSize: 16,
-    color: color.light_purple,
+    color: 'var(--text-brand-purple-primary)',
   },
 };
 
@@ -49,6 +49,7 @@ export default class ListItemThumbnail extends React.Component {
     singleFrameAnimation: PropTypes.bool.isRequired,
     index: PropTypes.number,
     isSelected: PropTypes.bool,
+    isFocused: PropTypes.bool,
   };
 
   state = {previewSize: 0};
@@ -83,9 +84,12 @@ export default class ListItemThumbnail extends React.Component {
       root: {
         border:
           'solid 2px ' +
-          (this.props.isSelected ? color.purple : color.light_gray),
+          (this.props.isSelected
+            ? 'var(--borders-brand-purple-primary)'
+            : 'var(--borders-neutral-primary)'),
       },
     });
+
     let playBehavior;
     if (this.props.singleFrameAnimation) {
       playBehavior = PlayBehavior.NEVER_PLAY;
@@ -102,6 +106,7 @@ export default class ListItemThumbnail extends React.Component {
             width={this.state.previewSize}
             height={this.state.previewSize}
             playBehavior={playBehavior}
+            isFocused={this.props.isFocused}
           />
           {this.getIndexBubble()}
         </div>

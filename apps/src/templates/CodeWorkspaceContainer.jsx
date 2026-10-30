@@ -3,13 +3,13 @@
  * us to position it vertically. Causes resize events to fire when receiving new props
  */
 import $ from 'jquery';
+import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
-import * as utils from '../utils';
+
 import commonStyles from '../commonStyles';
+import * as utils from '../utils';
 
 class CodeWorkspaceContainer extends React.Component {
   static propTypes = {
@@ -38,6 +38,7 @@ class CodeWorkspaceContainer extends React.Component {
 
   render() {
     const {hidden, isRtl, noVisualization, children, style} = this.props;
+
     const mainStyle = {
       ...styles.main,
       ...(noVisualization && styles.noVisualization),
@@ -57,7 +58,7 @@ class CodeWorkspaceContainer extends React.Component {
   }
 }
 
-export const TestableCodeWorkspaceContainer = Radium(CodeWorkspaceContainer);
+export const TestableCodeWorkspaceContainer = CodeWorkspaceContainer;
 export default connect(
   state => ({
     hidden:

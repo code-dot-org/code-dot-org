@@ -1,0 +1,8 @@
+name 'gen-ai-foundations-studentsurvey-postmodule-q10a'
+question 'After this unit, I am interested in learning more about AI and related topics than I was before.'
+right 'Strongly disagree'
+right 'Disagree'
+right 'Neutral'
+right 'Agree'
+right 'Strongly agree'
+allow_multiple_attempts true

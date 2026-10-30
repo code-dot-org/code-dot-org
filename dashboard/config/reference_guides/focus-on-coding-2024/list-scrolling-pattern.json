@@ -1,0 +1,9 @@
+{
+  "key": "list-scrolling-pattern",
+  "course_version_key": "2024",
+  "course_offering_key": "focus-on-coding",
+  "parent_reference_guide_key": "patterns",
+  "display_name": "List Scrolling Pattern",
+  "content": "| Name  | Code (Block) | Code (Text) |\r\n| ------------- | ------------- | ------------- |\r\n| List Scrolling Pattern  | ![](https://curriculum.code.org/media/uploads/Screen-Shot-2021-02-10-at-9.10.42-PM.png) |  ![](https://curriculum.code.org/media/uploads/Screen-Shot-2021-02-10-at-9.10.59-PM.png)|\r\n\r\n## How does it work?\r\n\r\nMany App Lab projects run in the following way. \r\n\r\n1. The user is interested in seeing items in a list, like a list of favorite foods, or a list of reminders.\r\n2. The app shows the user one item in the list at a time.\r\n3. By clicking buttons (or otherwise interacting with the app) the user can move back and forth through the list, one item at a time, to see every item.\r\n\r\nThis pattern allows a user to \"scroll\" through all the items in the list. In order to make it work, create an index variable and a list. Then use the \"Counter Pattern with Boundary\" pattern to create event handlers to change the value of the index.\r\n\r\nThis pattern makes sense to use with the `updateScreen` pattern since you will need at least two buttons for scrolling left and right through the list but afterwards will use the same code to update the screen.\r\n\r\n",
+  "position": 6
+}

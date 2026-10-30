@@ -1,0 +1,16 @@
+name 'Data Sci U2 Post Q9_2024-pilot'
+
+question 'Why might a data scientist choose Python over other programming languages for a data analysis project?'
+
+wrong 'Python is faster in processing complex mathematical operations compared to other languages.'
+right 'Python\’s extensive libraries like pandas and NumPy make it highly efficient for data manipulation and analysis.'
+wrong 'Python is specifically designed for web development, making it a versatile tool for data scientists.'
+wrong 'Python\’s syntax is more flexible, allowing for easier debugging and code maintenance.'
+
+
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+
+MARKDOWN

@@ -16,4 +16,28 @@ FactoryBot.define do
     sequence(:name) {|n| "data doc #{n}"}
     sequence(:content) {|n| "Content for data doc #{n}"}
   end
+
+  factory :jit_pl_concept do
+    sequence(:name) {|n| "jit-pl-concept-#{n}"}
+    sequence(:display_name) {|n| "JIT PL Concept #{n}"}
+    text_content {"Some concept text content"}
+  end
+
+  factory :jit_pl_misconception do
+    association :jit_pl_concept
+    sequence(:name) {|n| "jit-pl-misconception-#{n}"}
+    text_content {"Some misconception text content"}
+  end
+
+  factory :jit_pl_exemplar do
+    sequence(:name) {|n| "jit-pl-exemplar-#{n}"}
+    text_content {"Some exemplar text content"}
+    exemplar_type {"good"}
+  end
+
+  factory :jit_pl_teaching_tip do
+    association :jit_pl_concept
+    sequence(:name) {|n| "jit-pl-teaching-tip-#{n}"}
+    text_content {"Some teaching tip text content"}
+  end
 end

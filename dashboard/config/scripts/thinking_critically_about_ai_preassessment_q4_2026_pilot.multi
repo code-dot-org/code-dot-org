@@ -1,0 +1,14 @@
+name 'thinking-critically-about-ai-preassessment-q4_2026-pilot'
+
+question 'Which of the following is the BEST reason to test an AI tool multiple times before relying on its output?'
+
+wrong 'Testing multiple times will teach the AI to give better answers in the future.'
+wrong 'AI tools give different answers every time, so no answer can ever be trusted.'
+wrong 'Testing once is enough as long as you get an answer that sounds reasonable.'
+right 'Repeated testing helps you identify patterns in the AI\'s outputs, including errors and limitations.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lessons 2, 5
+MARKDOWN

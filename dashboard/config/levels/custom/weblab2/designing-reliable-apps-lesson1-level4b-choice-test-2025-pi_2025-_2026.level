@@ -1,0 +1,78 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-04-01T21:44:02.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "bubble_choice_description": "Predict what will be displayed on screen.",
+    "display_name": "Disney Characters API",
+    "thumbnail_url": "https://images.code.org/c53ba53ae038a4f69c2da03475948eaa-Screenshot 2026-01-28 at 1.08.22 PM.png",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Disney Explorer</title>\n    <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n    <div class=\"dashboard\">\n        <header>\n            <h1>Disney Explorer</h1>\n            <button id=\"generate-btn\">Generate Random Character</button>\n        </header>\n        <div class=\"card\">\n            <div class=\"image-container\">\n                <img id=\"char-img\" src=\"https://studio.code.org/lab_resources/html-placeholder-image.avif\" alt=\"Character\">\n            </div>\n            <div class=\"card-content\">\n                <h2 id=\"char-name\">Character Name</h2>\n                <div class=\"info-section\">\n                    <strong>Featured In Films</strong>\n                    <p id=\"char-films\">Film list goes here...</p>\n                </div>\n                <div class=\"info-section\">\n                    <strong>TV Appearances</strong>\n                    <p id=\"char-tv\">TV show list goes here...</p>\n                </div>\n            </div>\n        </div>\n    </div>\n    <script src=\"script.js\"></script>\n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "script.js",
+          "language": "js",
+          "contents": "const btn = document.getElementById('generate-btn');\nconst charName = document.getElementById('char-name');\nconst charImg = document.getElementById('char-img');\nconst charFilms = document.getElementById('char-films');\nconst charTv = document.getElementById('char-tv');\n\nconst PLACEHOLDER_URL = 'https://studio.code.org/lab_resources/html-placeholder-image.avif';\nconst API_URL = 'https://api.disneyapi.dev/character';\n\nconst updateUI = (character) => {\n    charName.innerText = character.name;\n    charImg.src = character.imageUrl || PLACEHOLDER_URL;\n  console.log(character.imageUrl)\n\n    if (character.films.length > 0) {\n        charFilms.innerText = character.films.join(', ');\n    } else {\n        charFilms.innerText = 'No movies found';\n    }\n\n    if (character.tvShows.length > 0) {\n        charTv.innerText = character.tvShows.join(', ');\n    } else {\n        charTv.innerText = 'No TV shows found';\n    }\n};\n\nconst handleGenerate = () => {\n    btn.disabled = true;\n    btn.innerText = 'Finding Magic...';\n\n    const randomPage = Math.floor(Math.random() * 149) + 1;\n\n    fetch(API_URL + '?page=' + randomPage + '&pageSize=50')\n        .then(response => response.json())\n        .then(result => {\n            const character = result.data[Math.floor(Math.random() * result.data.length)];\n            updateUI(character);\n        })\n        .catch(error => {\n            console.error(error);\n            charName.innerText = 'Search Failed';\n        })\n        .finally(() => {\n            btn.disabled = false;\n            btn.innerText = 'Generate Random Character';\n        });\n};\n\nbtn.addEventListener('click', handleGenerate);",
+          "folderId": "0",
+          "active": true
+        },
+        "3": {
+          "id": "3",
+          "name": "style.css",
+          "language": "css",
+          "contents": "* {\n    box-sizing: border-box;\n}\n\nbody {\n    font-family: Georgia, 'Times New Roman', serif;\n    background-color: #0a0a2e;\n    display: flex;\n    justify-content: center;\n    padding: 40px 20px;\n    margin: 0;\n    min-height: 100vh;\n}\n\n.dashboard {\n    width: 100%;\n    max-width: 420px;\n}\n\nheader {\n    text-align: center;\n    margin-bottom: 28px;\n}\n\nheader h1 {\n    font-size: 2.2rem;\n    color: #f4c842;\n    font-style: italic;\n    font-weight: normal;\n    letter-spacing: 1px;\n}\n\n#generate-btn {\n    display: block;\n    width: 100%;\n    background-color: #f4c842;\n    color: #0a0a2e;\n    border: none;\n    padding: 14px 28px;\n    font-size: 1rem;\n    font-weight: 700;\n    border-radius: 50px;\n    cursor: pointer;\n    margin-bottom: 24px;\n    font-family: 'Segoe UI', sans-serif;\n    letter-spacing: 1px;\n}\n\n#generate-btn:hover {\n    background-color: #ffd966;\n}\n\n#generate-btn:disabled {\n    background-color: #444466;\n    color: #888899;\n    cursor: not-allowed;\n}\n\n.card {\n    background: #12123a;\n    border-radius: 16px;\n    overflow: hidden;\n    border: 1px solid #2a2a5a;\n}\n\n.image-container {\n    width: 100%;\n    height: 300px;\n    background-color: #1a1a40;\n}\n\n#char-img {\n    width: 100%;\n    height: 100%;\n    object-fit: cover;\n    display: block;\n}\n\n.card-content {\n    padding: 24px;\n}\n\n.card-content h2 {\n    font-size: 1.6rem;\n    color: #f4c842;\n    font-style: italic;\n    font-weight: normal;\n    margin-bottom: 16px;\n}\n\n.info-section {\n    margin-top: 16px;\n    padding-top: 16px;\n    border-top: 1px solid #2a2a5a;\n}\n\n.info-section strong {\n    display: block;\n    font-family: 'Segoe UI', sans-serif;\n    font-size: 0.7rem;\n    text-transform: uppercase;\n    letter-spacing: 2px;\n    color: #8888bb;\n    margin-bottom: 6px;\n    font-weight: normal;\n}\n\n.info-section p {\n    color: #ccccee;\n    font-family: 'Segoe UI', sans-serif;\n    font-size: 0.9rem;\n    line-height: 1.6;\n    margin: 0;\n}",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "2"
+      ]
+    },
+    "encrypted": "false",
+    "long_instructions": "## Make a Prediction\r\n\r\nRead through `script.js` and look at the display preview. What do you think will appear on screen when you click \"Generate Random Character\"?",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": true,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "name_suffix": "_2026",
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "explainCode",
+        "documentation"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-01T21:44:02.783+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson1-level4b-choice-test-2025-pi_2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson1-level4b-choice-test-2025-pi_2025-pilot\"},{\"changed_at\":\"2026-06-11 14:35:11 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-11 14:35:58 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-11 14:36:22 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Weblab2>

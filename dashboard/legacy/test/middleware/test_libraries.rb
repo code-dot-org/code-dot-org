@@ -3,7 +3,7 @@ require_relative 'files_api_test_helper'
 
 class LibrariesTest < FilesApiTestBase
   def setup
-    NewRelic::Agent.reset_stub
+    ObservabilityTestRecorder.install
     @channel_id = create_channel
     @api = FilesApiTestHelper.new(current_session, 'libraries', @channel_id)
     @api.ensure_aws_credentials
@@ -55,7 +55,7 @@ class LibrariesTest < FilesApiTestBase
     @api.get_object(filename)
     assert not_found?
 
-    assert_newrelic_metrics %w(
+    assert_recorded_metric_names %w(
       Custom/ListRequests/LibraryBucket/BucketHelper.list
     )
   end
@@ -87,12 +87,60 @@ class LibrariesTest < FilesApiTestBase
     # Check cache headers
     assert_match 'public, max-age=3600, s-maxage=1800', last_response['Cache-Control']
 
-    assert_newrelic_metrics %w(
+    assert_recorded_metric_names %w(
       Custom/ListRequests/LibraryBucket/BucketHelper.list
       Custom/ListRequests/LibraryBucket/BucketHelper.app_size
       Custom/ListRequests/LibraryBucket/BucketHelper.app_size
       Custom/ListRequests/LibraryBucket/BucketHelper.list_versions
     )
+  end
+
+  def test_list_multiple_channels
+    filename = 'library.json'
+    other_channel_id = create_channel
+    other_api = FilesApiTestHelper.new(current_session, 'libraries', other_channel_id)
+    delete_all_library_versions(filename)
+    delete_all_library_versions(filename, other_channel_id)
+
+    upload(filename, '{"library":"library"}')
+    other_body = '{"library":"other"}'
+    other_api.put_object(filename, other_body, {'CONTENT_TYPE' => 'application/json'})
+    assert successful?
+
+    files_by_channel = @api.list_library_objects_for_channels([@channel_id, other_channel_id])
+    assert successful?
+    assert_equal [@channel_id, other_channel_id].sort, files_by_channel.keys.sort
+    assert_fileinfo_equal(
+      {'filename' => filename, 'category' => 'application', 'size' => other_body.length},
+      files_by_channel[other_channel_id][0]
+    )
+    assert_equal([filename], files_by_channel[@channel_id].map {|file| file['filename']})
+
+    soft_delete(filename)
+    other_api.delete_object(filename)
+    assert successful?
+    delete_channel(other_channel_id)
+  end
+
+  def test_list_multiple_channels_with_unreadable_channel
+    files_by_channel = @api.list_library_objects_for_channels([@channel_id, 'not-a-channel-id'])
+    assert successful?
+    assert_equal [], files_by_channel[@channel_id]
+    assert_nil files_by_channel['not-a-channel-id']
+  end
+
+  def test_list_multiple_channels_is_libraries_only
+    get "/v3/sources?channels=#{@channel_id}"
+    assert_equal 404, last_response.status
+  end
+
+  def test_list_multiple_channels_rejects_empty_and_oversized_requests
+    @api.list_library_objects_for_channels([])
+    assert_equal 400, last_response.status
+
+    too_many = Array.new(FilesApi::MAX_LIST_CHANNELS + 1) {|index| "channel-#{index}"}
+    @api.list_library_objects_for_channels(too_many)
+    assert_equal 400, last_response.status
   end
 
   def test_404_on_malformed_version_id
@@ -126,15 +174,13 @@ class LibrariesTest < FilesApiTestBase
     assert_equal 400, last_response.status
   end
 
-  private
-
   #
   # Upload a new version of an library.
   # @param [String] filename of the library
   # @param [String] body of the library
   # @return [String] S3 version id of the newly uploaded library
   #
-  def upload(filename, body)
+  private def upload(filename, body)
     @api.put_object(filename, body, {'CONTENT_TYPE' => 'application/json'})
     assert successful?
     JSON.parse(last_response.body)['versionId']
@@ -145,12 +191,13 @@ class LibrariesTest < FilesApiTestBase
   # on the end of its history.
   # @param [String] filename of the library
   #
-  def soft_delete(filename)
+  private def soft_delete(filename)
     @api.delete_object(filename)
     assert successful?
   end
 
-  def delete_all_library_versions(filename)
-    delete_all_versions(CDO.libraries_s3_bucket, "libraries_test/1/1/#{filename}")
+  private def delete_all_library_versions(filename, channel_id = @channel_id)
+    storage_id, project_id = get_storage_id_and_project_id(channel_id)
+    delete_all_versions(CDO.libraries_s3_bucket, "libraries_test/#{storage_id}/#{project_id}/#{filename}")
   end
 end

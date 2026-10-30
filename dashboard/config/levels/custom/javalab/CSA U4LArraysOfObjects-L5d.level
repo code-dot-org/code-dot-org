@@ -1,0 +1,374 @@
+<Javalab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 68,
+  "created_at": "2024-05-24T17:08:26.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "neighborhood",
+    "serialized_maze": [
+      [
+        {
+          "tileType": 1,
+          "value": 8,
+          "assetId": 303
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 8,
+          "assetId": 303
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 8,
+          "assetId": 303
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 8,
+          "assetId": 303
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 97
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 53
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 54
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 97
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 98
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 98
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 55
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 91
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 92
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 59
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 56
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 93
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 94
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 60
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 97
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 97
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 98
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 57
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 58
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 98
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ]
+    ],
+    "start_sources": {
+      "NeighborhoodRunner.java": {
+        "text": "public class NeighborhoodRunner{\n  public static void main(String[] args){\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ Create a PainterPlus array of size 4. Initialize array elements 0-4 to new PainterPlus objects.\n     * -----------------------------------------------------------------------------\n     */\n\n    \n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ Navigate each PainterPlus object to a paint bucket, \n     *     and then paint lines going down the grid.\n     * -----------------------------------------------------------------------------\n     */\n  \n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      },
+      "PainterPlus.java": {
+        "text": "import org.code.neighborhood.*;\npublic class PainterPlus extends Painter {\n\n  public void turnRight(){\n    turnLeft();\n    turnLeft();\n    turnLeft();\n  }\n\n  public void paintLine(String color){\n    while(canMove()){\n      paint(color);\n      move();\n    }\n  }\n\n  public void takeAllPaint(){\n    while(isOnBucket()){\n      takePaint();\n    }\n  }\n\n  public void moveFast(int units){\n    for(int i = 0; i < units; i++){\n      move();\n    }\n  }\n\n  \n}",
+        "isVisible": true,
+        "tabOrder": 1
+      }
+    },
+    "encrypted_exemplar_sources": "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\n",
+    "long_instructions": "Create and fill a 1D array of <code style=\"background-color: #ececec; color: black; font-weight: bold;\">PainterPlus</code> objects. Use the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">PainterPlus</code> objects to paint four lines down the grid.\r\n\r\n✅ **TO DO:** In <code style=\"background-color: #ececec; color: black; font-weight: bold;\">NeighborhoodRunner.java</code>, instantiate a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">PainterPlus</code> 1D array that stores **4** <code style=\"background-color: #ececec; color: black; font-weight: bold;\">PainterPlus</code> objects.\r\n\r\n1. Declare and initialize a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">PainterPlus</code> 1D array with **4** <code style=\"background-color: #ececec; color: black; font-weight: bold;\">PainterPlus</code> objects.\r\n\r\n2. Move each <code style=\"background-color: #ececec; color: black; font-weight: bold;\">PainterPlus</code> object to a paint bucket and use the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">takeAllPaint()</code> method.\r\n\r\n3. Paint a line down the grid with each <code style=\"background-color: #ececec; color: black; font-weight: bold;\">PainterPlus</code> object using the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">paintLine(String color)</code> method.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the <strong>Help & Tips</strong> tab ⬆️ for help with declaring and initializing a 1D array.\r\n</div>\r\n\r\n## ***Don't forget to . . .***\r\n\r\n![](https://images.code.org/eb2c8910ae2e150019b8e2177405d4af-image-1668191576873.png)\r\n\r\n\r\n## 🎯 Goal\r\n![](https://images.code.org/c3637b716360b55aadbcf51a690f4742-ezgif-5-58af1e5d83.gif)",
+    "encrypted_examples": [
+
+    ],
+    "thumbnail_url": "https://images.code.org/c3637b716360b55aadbcf51a690f4742-ezgif-5-58af1e5d83.gif"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-05-24 17:08:34 +0000\",\"changed\":[\"encrypted_examples\",\"serialized_maze\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2024-05-24 17:44:08 +0000\",\"changed\":[\"encrypted_examples\",\"serialized_maze\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2024-05-24 17:45:03 +0000\",\"changed\":[\"encrypted_examples\",\"serialized_maze\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2024-05-24 17:53:23 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2024-05-24 17:55:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2024-05-24 17:56:45 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2024-05-25 06:33:45 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2024-05-25 06:34:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2024-05-25 06:34:44 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2024-05-25 06:47:21 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2024-05-26 04:37:54 +0000\",\"changed\":[\"name\",\"serialized_maze\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2024-05-27 05:08:49 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2024-05-27 05:14:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2024-05-27 05:15:37 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2024-05-27 05:16:35 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2024-05-27 05:24:17 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Javalab>

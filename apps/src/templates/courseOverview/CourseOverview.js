@@ -1,39 +1,42 @@
+import NotificationBanner from '@code-dot-org/component-library/notification-banner';
+import {Typography} from '@mui/material';
+import classNames from 'classnames';
+import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import $ from 'jquery';
 import {connect} from 'react-redux';
+
+import RequiresAiChatToolsAlert from '@cdo/apps/aiComponentLibrary/aiChatToolsDependencyAlerts/RequiresAiChatToolsAlert';
+import RequiresInaccessibleAiModelsAlert from '@cdo/apps/aiComponentLibrary/aiChatToolsDependencyAlerts/RequiresInaccessibleAiModelsAlert';
+import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
+import Announcements from '@cdo/apps/code-studio/components/progress/Announcements';
+import RedirectDialog from '@cdo/apps/code-studio/components/RedirectDialog';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import CourseScript from './CourseScript';
-import CourseOverviewTopRow from './CourseOverviewTopRow';
-import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
-import styleConstants from '@cdo/apps/styleConstants';
-import VerifiedResourcesNotification from './VerifiedResourcesNotification';
-import * as utils from '../../utils';
-import {queryParams} from '../../code-studio/utils';
-import i18n from '@cdo/locale';
+import {resourceShape} from '@cdo/apps/levelbuilder/shapes';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/ParticipantFeedbackNotification';
+import {assignmentCourseVersionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
+import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {
   onDismissRedirectDialog,
   dismissedRedirectDialog,
   onDismissRedirectWarning,
   dismissedRedirectWarning,
 } from '@cdo/apps/util/dismissVersionRedirect';
-import RedirectDialog from '@cdo/apps/code-studio/components/RedirectDialog';
-import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
-import color from '@cdo/apps/util/color';
-import fontConstants from '@cdo/apps/fontConstants';
-import {
-  assignmentCourseVersionShape,
-  sectionForDropdownShape,
-} from '@cdo/apps/templates/teacherDashboard/shapes';
-import AssignmentVersionSelector from '@cdo/apps/templates/teacherDashboard/AssignmentVersionSelector';
-import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/ParticipantFeedbackNotification';
-import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {AiChatToolsDependency} from '@cdo/generated-scripts/sharedConstants';
+import i18n from '@cdo/locale';
+
 import SafeMarkdown from '../SafeMarkdown';
-import Announcements from '@cdo/apps/code-studio/components/progress/Announcements';
-import {SignInState} from '@cdo/apps/templates/currentUserRedux';
-import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+
+import CourseOverviewActionRow from './CourseOverviewActionRow';
+import CourseScript from './CourseScript';
+import VerifiedResourcesNotification from './VerifiedResourcesNotification';
+
+import styles from './course-overview.module.scss';
+
+const WARNING_ICON = {iconName: 'triangle-exclamation', iconStyle: 'solid'};
 
 class CourseOverview extends Component {
   static propTypes = {
@@ -45,12 +48,6 @@ class CourseOverview extends Component {
     courseVersionId: PropTypes.number,
     descriptionStudent: PropTypes.string,
     descriptionTeacher: PropTypes.string,
-    sectionsInfo: PropTypes.arrayOf(
-      PropTypes.shape({
-        id: PropTypes.number.isRequired,
-        name: PropTypes.string.isRequired,
-      })
-    ).isRequired,
     teacherResources: PropTypes.arrayOf(resourceShape),
     studentResources: PropTypes.arrayOf(resourceShape),
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
@@ -65,10 +62,13 @@ class CourseOverview extends Component {
     userId: PropTypes.number,
     userType: PropTypes.string,
     participantAudience: PropTypes.string,
+    aiChatToolsDependency: PropTypes.oneOf(Object.values(AiChatToolsDependency))
+      .isRequired,
+    requiresInaccessibleAiModels: PropTypes.bool,
     // Redux
     announcements: PropTypes.arrayOf(announcementShape),
-    sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
     isSignedIn: PropTypes.bool.isRequired,
+    demoType: PropTypes.string.isRequired,
   };
 
   constructor(props) {
@@ -84,17 +84,15 @@ class CourseOverview extends Component {
           'unit group name': props.name,
         }
       );
+    } else {
+      analyticsReporter.sendEvent(
+        EVENTS.COURSE_OVERVIEW_PAGE_VISITED_BY_SIGNED_OUT_USER_EVENT,
+        {
+          'unit group name': props.name,
+        }
+      );
     }
   }
-
-  onChangeVersion = versionId => {
-    const version = this.props.versions[versionId];
-    if (versionId !== this.props.id && version) {
-      const sectionId = queryParams('section_id');
-      const queryString = sectionId ? `?section_id=${sectionId}` : '';
-      utils.navigateToHref(`${version.path}${queryString}`);
-    }
-  };
 
   onDismissVersionWarning = () => {
     if (!this.props.scripts[0]) {
@@ -104,12 +102,13 @@ class CourseOverview extends Component {
     // Because there is no user_course table, store the fact that the version
     // dialog has been dismissed on the first user_script in the course.
     const firstScriptId = this.props.scripts[0].id;
+    const courseId = this.props.id;
 
     // Fire and forget. If this fails, we'll have another chance to
     // succeed the next time the warning is dismissed.
     $.ajax({
       method: 'PATCH',
-      url: `/api/v1/user_scripts/${firstScriptId}`,
+      url: `/api/v1/user_scripts/course/${courseId}/unit/${firstScriptId}`,
       type: 'json',
       contentType: 'application/json;charset=UTF-8',
       data: JSON.stringify({version_warning_dismissed: true}),
@@ -133,8 +132,6 @@ class CourseOverview extends Component {
       courseVersionId,
       descriptionStudent,
       descriptionTeacher,
-      sectionsInfo,
-      sectionsForDropdown,
       teacherResources,
       studentResources,
       viewAs,
@@ -149,15 +146,27 @@ class CourseOverview extends Component {
       userId,
       isSignedIn,
       participantAudience,
+      aiChatToolsDependency,
+      requiresInaccessibleAiModels,
+      demoType,
     } = this.props;
 
+    const viewAsTeacher = viewAs === ViewType.Instructor;
+
     const showNotification =
-      viewAs === ViewType.Instructor &&
+      viewAsTeacher &&
       !isVerifiedInstructor &&
-      hasVerifiedResources;
+      hasVerifiedResources &&
+      !demoType;
+
+    const determineUnitDescription = script => {
+      return viewAs === ViewType.Participant
+        ? script.studentDescription
+        : script.description;
+    };
 
     return (
-      <div style={styles.main}>
+      <div className={styles.main}>
         {redirectToCourseUrl && !dismissedRedirectDialog(name) && (
           <RedirectDialog
             isOpen={this.state.showRedirectDialog}
@@ -169,27 +178,36 @@ class CourseOverview extends Component {
         )}
         {userId && <ParticipantFeedbackNotification studentId={userId} />}
         {showRedirectWarning && !dismissedRedirectWarning(name) && (
-          <Notification
-            type={NotificationType.warning}
-            notice=""
-            details={i18n.redirectCourseVersionWarningDetails()}
-            dismissible={true}
-            onDismiss={() => onDismissRedirectWarning(name)}
+          <NotificationBanner
+            variant="warning"
+            style="filled"
+            title=""
+            description={i18n.redirectCourseVersionWarningDetails()}
+            icon={WARNING_ICON}
+            onClose={() => onDismissRedirectWarning(name)}
+            className={classNames(
+              styles.notificationBanner,
+              'announcement-notification'
+            )}
           />
         )}
         {showVersionWarning && (
-          <Notification
-            type={NotificationType.warning}
-            notice={i18n.wrongCourseVersionWarningNotice()}
-            details={i18n.wrongCourseVersionWarningDetails()}
-            dismissible={true}
-            onDismiss={this.onDismissVersionWarning}
+          <NotificationBanner
+            variant="warning"
+            style="filled"
+            title={i18n.wrongCourseVersionWarningNotice()}
+            description={i18n.wrongCourseVersionWarningDetails()}
+            icon={WARNING_ICON}
+            onClose={this.onDismissVersionWarning}
+            className={classNames(
+              styles.notificationBanner,
+              'announcement-notification'
+            )}
           />
         )}
         {isSignedIn && (
           <Announcements
             announcements={this.props.announcements}
-            width={styleConstants['content-width']}
             viewAs={viewAs}
             firehoseAnalyticsId={{
               user_id: userId,
@@ -198,19 +216,38 @@ class CourseOverview extends Component {
           />
         )}
         {showNotification && <VerifiedResourcesNotification />}
-        <div style={styles.titleWrapper}>
-          <h1 style={styles.title}>{assignmentFamilyTitle}</h1>
-          {Object.values(versions).length > 1 && (
-            <AssignmentVersionSelector
-              onChangeVersion={this.onChangeVersion}
-              courseVersions={versions}
-              rightJustifiedPopupMenu={true}
-              selectedCourseVersionId={this.props.courseVersionId}
-            />
-          )}
+        <div className={styles.titleWrapper}>
+          <Typography
+            variant="h2"
+            component="h2"
+            gutterBottom
+            className={styles.title}
+          >
+            {assignmentFamilyTitle}
+          </Typography>
         </div>
+        <CourseOverviewActionRow
+          courseVersionId={courseVersionId}
+          courseId={id}
+          versions={versions}
+          teacherResources={teacherResources}
+          studentResources={studentResources}
+          isInstructor={viewAs === ViewType.Instructor}
+          viewAs={viewAs}
+          showAssignButton={showAssignButton}
+          title={title}
+          participantAudience={participantAudience}
+          aiChatToolsDependency={aiChatToolsDependency}
+        />
+        {viewAsTeacher && requiresInaccessibleAiModels && (
+          <RequiresInaccessibleAiModelsAlert subject="course" />
+        )}
+        {viewAsTeacher &&
+          aiChatToolsDependency === AiChatToolsDependency.ESSENTIAL && (
+            <RequiresAiChatToolsAlert />
+          )}
         <SafeMarkdown
-          style={styles.description}
+          className={styles.description}
           openExternalLinksInNewTab={true}
           markdown={
             viewAs === ViewType.Participant
@@ -218,33 +255,21 @@ class CourseOverview extends Component {
               : descriptionTeacher
           }
         />
-        <div>
-          <CourseOverviewTopRow
-            sectionsInfo={sectionsInfo}
-            sectionsForDropdown={sectionsForDropdown}
-            courseOfferingId={courseOfferingId}
-            courseVersionId={courseVersionId}
-            id={id}
-            courseName={title}
-            teacherResources={teacherResources}
-            studentResources={studentResources}
-            showAssignButton={showAssignButton}
-            isInstructor={viewAs === ViewType.Instructor}
-            participantAudience={participantAudience}
-          />
-        </div>
         {scripts.map((script, index) => (
           <CourseScript
             key={index}
             title={script.title}
             name={script.name}
             id={script.id}
-            description={script.description}
+            path={script.scriptPath}
+            description={determineUnitDescription(script)}
             assignedSectionId={script.assigned_section_id}
             courseId={id}
             courseOfferingId={courseOfferingId}
             courseVersionId={courseVersionId}
             showAssignButton={showAssignButton}
+            participantAudience={participantAudience}
+            aiChatToolsDependency={aiChatToolsDependency}
           />
         ))}
       </div>
@@ -252,46 +277,12 @@ class CourseOverview extends Component {
   }
 }
 
-const styles = {
-  main: {
-    width: '100%',
-  },
-  description: {
-    marginBottom: 20,
-  },
-  titleWrapper: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'flex-end',
-  },
-  title: {
-    display: 'inline-block',
-  },
-  versionWrapper: {
-    display: 'flex',
-    alignItems: 'baseline',
-  },
-  versionLabel: {
-    ...fontConstants['main-font-semi-bold'],
-    fontSize: 15,
-    color: color.charcoal,
-  },
-  versionDropdown: {
-    marginBottom: 13,
-  },
-};
-
 export const UnconnectedCourseOverview = CourseOverview;
 export default connect((state, ownProps) => ({
-  sectionsForDropdown: sectionsForDropdown(
-    state.teacherSections,
-    ownProps.courseOfferingId,
-    ownProps.courseVersionId,
-    null
-  ),
   isSignedIn: state.currentUser.signInState === SignInState.SignedIn,
   viewAs: state.viewAs,
   isVerifiedInstructor: state.verifiedInstructor.isVerified,
   hasVerifiedResources: state.verifiedInstructor.hasVerifiedResources,
+  demoType: selectedSectionSelector(state)?.demoType,
   announcements: state.announcements || [],
 }))(CourseOverview);

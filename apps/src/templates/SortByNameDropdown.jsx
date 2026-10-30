@@ -1,10 +1,11 @@
-import {connect} from 'react-redux';
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import PropTypes from 'prop-types';
 import React, {useCallback} from 'react';
-import i18n from '@cdo/locale';
-import {setSortByFamilyName} from '@cdo/apps/templates/currentUserRedux';
+import {connect} from 'react-redux';
+
 import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
-import SimpleDropdown from '../componentLibrary/simpleDropdown/SimpleDropdown';
+import {setSortByFamilyName} from '@cdo/apps/templates/currentUserRedux';
+import i18n from '@cdo/locale';
 
 const FAMILY_NAME = 'familyName';
 const DISPLAY_NAME = 'displayName';
@@ -16,6 +17,7 @@ function SortByNameDropdown({
   isSortedByFamilyName,
   setSortByFamilyName,
   className,
+  isLabelVisible = true,
 }) {
   const onSortByFamilyNameChange = useCallback(
     e => {
@@ -39,6 +41,9 @@ function SortByNameDropdown({
       labelText={i18n.sortBy()}
       className={className}
       size="s"
+      dropdownTextThickness="thin"
+      color="gray"
+      isLabelVisible={isLabelVisible}
     />
   );
 }
@@ -50,6 +55,7 @@ SortByNameDropdown.propTypes = {
   isSortedByFamilyName: PropTypes.bool,
   setSortByFamilyName: PropTypes.func,
   className: PropTypes.string,
+  isLabelVisible: PropTypes.bool,
 };
 
 export const UnconnectedSortByNameDropdown = SortByNameDropdown;

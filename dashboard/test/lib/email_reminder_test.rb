@@ -1,10 +1,10 @@
 require 'test_helper'
 require 'email_reminder'
-require 'mocha/mini_test'
+require 'mocha/minitest'
 
 class EmailReminderTest < ActiveSupport::TestCase
   setup do
-    @student = create(:student, child_account_compliance_state: 'not_g')
+    @student = create(:student, cap_status: 'p')
     @request = create(:parental_permission_request, user_id: @student.id, parent_email: 'foo-parent@code.org')
 
     Cdo::Metrics.expects(:push).never

@@ -1,0 +1,20 @@
+name 'csaif_pl_check_for_understanding_aug2025'
+editor_experiment ''
+title 'Check for Understanding: Cybersecurity or NOT Cybersecurity'
+type 'multi2'
+question 'Select the scenarios that NOT are examples of Cybersecurity.'
+
+
+
+right ' A company trains employees on customer service etiquette to improve communication.'
+wrong 'A website requires users to verify their identity using two-factor authentication before logging in.'
+right 'A chef stores recipes in a physical cookbook to keep track of ingredients.'
+wrong 'A bank encrypts online transactions to protect customers from fraud and cyberattacks.'
+wrong 'A school district installs content filtering software to prevent students from accessing harmful websites.'
+
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
+
+allow_multiple_attempts true

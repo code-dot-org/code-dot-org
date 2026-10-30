@@ -1,5 +1,4 @@
 require_relative 'middleware_test_helper'
-require 'mocha/mini_test'
 require_relative '../../middleware/channels_api'
 
 CAUSES_ARGUMENTERROR = "bT0zAyBvk".freeze
@@ -19,11 +18,10 @@ class ChannelsBase64ErrorTest < Minitest::Test
     run_test_cases CAUSES_CIPHERERROR
   end
 
-  private
-
-  def run_test_cases(channel_id)
+  private def run_test_cases(channel_id)
+    # We explicitly 404 on GET requests, because those are where users can input invalid channel IDs.
     @channels.get "/v3/channels/#{channel_id}"
-    assert_equal 400, @channels.last_response.status
+    assert_equal 404, @channels.last_response.status
 
     @channels.post "/v3/channels/#{channel_id}", {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     assert_equal 400, @channels.last_response.status

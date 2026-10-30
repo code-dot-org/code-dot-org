@@ -1,8 +1,21 @@
-import React, {useEffect, useState, useRef} from 'react';
-import PropTypes from 'prop-types';
-import i18n from '@cdo/locale';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography} from '@mui/material';
 import classnames from 'classnames';
-import style from './rubrics.module.scss';
+import PropTypes from 'prop-types';
+import React, {useEffect, useState, useRef} from 'react';
+
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import HttpClient from '@cdo/apps/util/HttpClient';
+import i18n from '@cdo/locale';
+
+import AiAssessment from './AiAssessment';
+import AiAssessmentFeedbackContext, {
+  NO_FEEDBACK,
+} from './AiAssessmentFeedbackContext';
+import EvidenceLevels from './EvidenceLevels';
+import {UNDERSTANDING_LEVEL_STRINGS} from './rubricHelpers';
 import {
   learningGoalShape,
   reportingDataShape,
@@ -10,20 +23,8 @@ import {
   submittedEvaluationShape,
   aiEvaluationShape,
 } from './rubricShapes';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {
-  BodyThreeText,
-  BodyFourText,
-  ExtraStrongText,
-  Heading6,
-} from '@cdo/apps/componentLibrary/typography';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import EvidenceLevels from './EvidenceLevels';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import AiAssessment from './AiAssessment';
-import HttpClient from '@cdo/apps/util/HttpClient';
-import {UNDERSTANDING_LEVEL_STRINGS} from './rubricHelpers';
+
+import style from './rubrics.module.scss';
 
 const invalidUnderstanding = -1;
 
@@ -48,6 +49,8 @@ export default function LearningGoal({
     ERROR: 3,
   });
   const [isOpen, setIsOpen] = useState(false);
+  const [aiFeedback, setAiFeedback] = useState(NO_FEEDBACK);
+  const [aiFeedbackId, setAiFeedbackId] = useState(null);
   const [autosaveStatus, setAutosaveStatus] = useState(STATUS.NOT_STARTED);
   const [learningGoalEval, setLearningGoalEval] = useState(null);
   const [displayFeedback, setDisplayFeedback] = useState('');
@@ -56,7 +59,7 @@ export default function LearningGoal({
   const teacherFeedback = useRef('');
   const understandingLevel = useRef(invalidUnderstanding);
 
-  const aiEnabled = learningGoal.aiEnabled && teacherHasEnabledAi;
+  const aiEnabled = !!(learningGoal.aiEnabled && teacherHasEnabledAi);
   const base_teacher_evaluation_endpoint = '/learning_goal_teacher_evaluations';
 
   // Timer variables for autosaving
@@ -167,7 +170,9 @@ export default function LearningGoal({
     return (
       <div className={style.feedbackArea}>
         <label className={style.evidenceLevelLabel}>
-          <span>{i18n.feedback()}</span>
+          <Typography variant="label2" component="span">
+            {i18n.feedback()}
+          </Typography>
           <textarea
             id="ui-teacherFeedback"
             className={style.inputTextbox}
@@ -178,18 +183,34 @@ export default function LearningGoal({
           />
         </label>
         {autosaveStatus === STATUS.IN_PROGRESS ? (
-          <span className={style.autosaveMessage}>{i18n.saving()}</span>
+          <Typography
+            variant="inherit"
+            component="span"
+            className={style.autosaveMessage}
+          >
+            {i18n.saving()}
+          </Typography>
         ) : (
           autosaveStatus === STATUS.FINISHED && (
-            <span id="ui-autosaveConfirm" className={style.autosaveMessage}>
-              <FontAwesome icon="circle-check" /> {i18n.savedToGallery()}
-            </span>
+            <Typography
+              variant="inherit"
+              component="span"
+              id="ui-autosaveConfirm"
+              className={style.autosaveMessage}
+            >
+              <FontAwesomeV6Icon iconName="circle-check" />{' '}
+              {i18n.savedToGallery()}
+            </Typography>
           )
         )}
         {autosaveStatus === STATUS.ERROR && (
-          <span className={style.autosaveMessage}>
+          <Typography
+            variant="inherit"
+            component="span"
+            className={style.autosaveMessage}
+          >
             {i18n.feedbackSaveError()}
-          </span>
+          </Typography>
         )}
       </div>
     );
@@ -199,7 +220,9 @@ export default function LearningGoal({
     return (
       <div className={style.feedbackArea}>
         <label className={style.evidenceLevelLabel}>
-          <span>{i18n.feedback()}</span>
+          <Typography variant="label2" component="span">
+            {i18n.feedback()}
+          </Typography>
           <textarea
             className={style.inputTextbox}
             name="teacherFeedback"
@@ -216,7 +239,9 @@ export default function LearningGoal({
       <summary className={style.learningGoalHeader} onClick={handleClick}>
         <div className={style.learningGoalHeaderLeftSide}>
           {/*TODO: [DES-321] Label-two styles here*/}
-          <Heading6>{learningGoal.learningGoal}</Heading6>
+          <Typography variant="h6" gutterBottom>
+            {learningGoal.learningGoal}
+          </Typography>
         </div>
         <div className={style.learningGoalHeaderRightSide}>
           {aiEnabled && displayUnderstanding === invalidUnderstanding && (
@@ -226,33 +251,37 @@ export default function LearningGoal({
           {canProvideFeedback &&
             aiEnabled &&
             displayUnderstanding === invalidUnderstanding && (
-              <BodyThreeText>{i18n.approve()}</BodyThreeText>
+              <Typography variant="body3" gutterBottom>
+                {i18n.approve()}
+              </Typography>
             )}
           {canProvideFeedback &&
             !aiEnabled &&
             displayUnderstanding === invalidUnderstanding && (
-              <BodyThreeText>{i18n.evaluate()}</BodyThreeText>
+              <Typography variant="body3" gutterBottom>
+                {i18n.evaluate()}
+              </Typography>
             )}
           {displayUnderstanding >= 0 && (
-            <BodyThreeText>
+            <Typography variant="body3" gutterBottom>
               {UNDERSTANDING_LEVEL_STRINGS[displayUnderstanding]}
-            </BodyThreeText>
+            </Typography>
           )}
           {submittedEvaluation && (
             <div className={style.submittedEvaluation}>
               {submittedEvaluation.understanding !== null && (
-                <BodyThreeText>
+                <Typography variant="body3" gutterBottom>
                   {
                     UNDERSTANDING_LEVEL_STRINGS[
                       submittedEvaluation.understanding
                     ]
                   }
-                </BodyThreeText>
+                </Typography>
               )}
               {submittedEvaluation.feedback && (
-                <FontAwesome
-                  icon="message"
-                  className="fa-regular"
+                <FontAwesomeV6Icon
+                  iconName="message"
+                  iconStyle="regular"
                   title={i18n.feedback()}
                 />
               )}
@@ -260,27 +289,31 @@ export default function LearningGoal({
           )}
         </div>
       </summary>
-
       {/*TODO: Pass through data to child component*/}
       <div>
-        {teacherHasEnabledAi &&
-          !!studentLevelInfo &&
-          !!aiEvalInfo &&
-          aiUnderstanding !== undefined && (
-            <div className={style.openedAiAssessment}>
-              <AiAssessment
-                isAiAssessed={learningGoal.aiEnabled}
-                studentName={studentLevelInfo.name}
-                aiConfidence={aiConfidence}
-                aiUnderstandingLevel={aiUnderstanding}
-                aiEvalInfo={aiEvalInfo}
-              />
-            </div>
-          )}
+        <AiAssessmentFeedbackContext.Provider
+          value={{aiFeedback, setAiFeedback, aiFeedbackId, setAiFeedbackId}}
+        >
+          {teacherHasEnabledAi &&
+            !!studentLevelInfo &&
+            !!aiEvalInfo &&
+            aiUnderstanding !== undefined && (
+              <div className={style.openedAiAssessment}>
+                <AiAssessment
+                  isAiAssessed={learningGoal.aiEnabled}
+                  studentName={studentLevelInfo.name}
+                  aiConfidence={aiConfidence}
+                  aiUnderstandingLevel={aiUnderstanding}
+                  aiEvalInfo={aiEvalInfo}
+                />
+              </div>
+            )}
+        </AiAssessmentFeedbackContext.Provider>
         <div className={style.learningGoalExpanded}>
           {!!submittedEvaluation && renderSubmittedFeedbackTextbox()}
           <EvidenceLevels
             learningGoalKey={learningGoal.key}
+            isAiAssessed={aiEnabled}
             evidenceLevels={learningGoal.evidenceLevels}
             canProvideFeedback={canProvideFeedback}
             understanding={displayUnderstanding}
@@ -288,10 +321,13 @@ export default function LearningGoal({
             submittedEvaluation={submittedEvaluation}
             isStudent={isStudent}
             isAutosaving={autosaveStatus === STATUS.IN_PROGRESS}
+            arrowPositionCallback={_ => {}}
           />
           {learningGoal.tips && !isStudent && (
             <div>
-              <Heading6>{i18n.tipsForEvaluation()}</Heading6>
+              <Typography variant="h6" gutterBottom>
+                {i18n.tipsForEvaluation()}
+              </Typography>
               <div className={style.learningGoalTips}>
                 <SafeMarkdown markdown={learningGoal.tips} />
               </div>
@@ -323,9 +359,13 @@ const AiToken = () => {
   return (
     <div className="uitest-uses-ai">
       {' '}
-      <BodyFourText className={classnames(style.aiToken, style.aiTokenText)}>
-        <ExtraStrongText>{i18n.usesAi()}</ExtraStrongText>
-      </BodyFourText>
+      <Typography
+        className={classnames(style.aiToken, style.aiTokenText)}
+        variant="body4"
+        gutterBottom
+      >
+        <Typography variant="strong">{i18n.usesAi()}</Typography>
+      </Typography>
     </div>
   );
 };

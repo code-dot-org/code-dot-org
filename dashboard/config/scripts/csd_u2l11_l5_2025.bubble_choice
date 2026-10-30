@@ -1,0 +1,10 @@
+name 'CSD U2L11-L5-2025'
+display_name 'Using Classes'
+description 'Practice your new skills here.'
+
+sublevels
+level 'CSD U2L11-L5a-2025'
+level 'CSD U2L11-L5b-2025'
+level 'CSD U2L11-L5c-2025'
+
+uses_lab2

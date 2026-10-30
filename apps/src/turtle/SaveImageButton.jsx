@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import i18n from '@cdo/locale';
+
 import * as imageUtils from '@cdo/apps/imageUtils';
 import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
 
 export default class SaveImageButton extends React.Component {
   static propTypes = {
@@ -17,7 +18,7 @@ export default class SaveImageButton extends React.Component {
   render() {
     return (
       <button type="button" style={styles.button} onClick={this.save}>
-        <i style={styles.icon} className="fa fa-fw fa-camera" />
+        <i style={styles.icon} className="fa-solid fa-fw fa-camera" />
         {i18n.save()}
       </button>
     );

@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2021-12-03T00:17:29.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
   "properties": {
     "encrypted": "false",
     "long_instructions": "Look at this project example. What are some of its characteristics and features?\r\n\r\n**Note:** The `LitSupport` class is a hidden class containing code that you will be writing later in this unit!\r\n\r\n*While this is an example of a project for this unit, it is not representative of the only way you can approach or develop the project.*",
@@ -48,15 +52,9 @@
     "display_name": "Poetry Generation",
     "bubble_choice_description": "An example project that generates a poem using the same format as another poem.",
     "thumbnail_url": "https://images.code.org/7e58922762c5dee967c69feb6f680e0a-image-1638479208282.png",
-    "encrypted_examples": [
-
-    ]
+    "ai_tutor_available": "false"
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2021-12-03T00:17:29.000Z",
-  "level_num": "custom",
-  "user_id": 9271,
   "audit_log": "[{\"changed_at\":\"2021-12-03T00:17:29.335+00:00\",\"changed\":[\"cloned from \\\"CSA U6L1-L1c\\\"\"],\"cloned_from\":\"CSA U6L1-L1c\"},{\"changed_at\":\"2021-12-03 00:17:51 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

@@ -1,0 +1,9 @@
+name 'CSD Games variables practice_CSD-PL-24'
+display_name 'Variables Practice'
+description 'Choose from the following activities to practice using variables.'
+
+sublevels
+level 'CSD U3 Variables change circle size_CSD-PL-24'
+level 'CSD U3 Variables names_CSD-PL-24'
+level 'CSD U3 Variables unused_CSD-PL-24'
+level 'CSD U3 Variables forbidden names_CSD-PL-24'

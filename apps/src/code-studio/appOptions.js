@@ -46,10 +46,6 @@
  * @property {boolean} hideSource
  * @property {string} share
  * @property {string} labUserId
- * @property {string} firebaseName
- * @property {string} firebaseSharedAuthToken
- * @property {string} firebaseAuthToken
- * @property {string} firebaseChannelIdSuffix
  * @property {boolean} isSignedIn
  * @property {boolean} pinWorkspaceToBottom
  * @property {boolean} hasVerticalScrollbars
@@ -57,7 +53,6 @@
  * @property {ReportOptions} report
  * @property {boolean} isUS
  * @property {string} send_to_phone_url
- * @property {CopyrightStrings} copyrightStrings
  * @property {string} teacherMarkdown
  * @property {DialogOptions} dialog
  * @property {string} locale
@@ -68,7 +63,6 @@
  * @property {boolean} hasOpenCodeReview
  * @property {boolean} isViewingOwnProject
  * @property {?string} codeOwnersName
- * @property {?string} recaptchaSiteKey
  */
 
 /**
@@ -128,6 +122,8 @@
  * @property {boolean} isLastLevelInLesson
  * @property {boolean} isLastLevelInScript
  * @property {boolean} showEndOfLessonMsgs
+ * @property {boolean} anonymous
+ * @property {boolean} activity_guide_level
  */
 
 /**
@@ -191,16 +187,6 @@
  * @property containedLevelNames
  * @property encryptedExamples
  * @property disableIfElseEditing
- */
-
-/**
- * @typedef {Object} CopyrightStrings
- * @property {string} thanks
- * @property {string} help_from_html
- * @property {string} art_from_html
- * @property {string} code_from_html
- * @property {string} powered_by_aws
- * @property {string} trademark
  */
 
 /**

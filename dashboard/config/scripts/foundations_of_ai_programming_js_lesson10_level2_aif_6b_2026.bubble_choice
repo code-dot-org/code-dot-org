@@ -1,0 +1,12 @@
+name 'foundations-of-ai-programming-js-lesson10-level2_aif-6b-2026'
+display_name 'Create a Flowchart'
+description 'Choose one of the following scenarios and create a flowchart to model the conditions.'
+
+sublevels
+level 'foundations-of-ai-programming-js-lesson10-level2a_aif-6b-2026'
+level 'foundations-of-ai-programming-js-lesson10-level2b_aif-6b-2026'
+level 'foundations-of-ai-programming-js-lesson10-level2c_aif-6b-2026'
+level 'foundations-of-ai-programming-js-lesson10-level2d_aif-6b-2026'
+
+uses_lab2
+navigation_type 'next_level'

@@ -1,10 +1,12 @@
+require 'metrics/events'
+
 class Api::V1::SectionsController < Api::V1::JSONApiController
   load_resource :section, find_by: :code, only: [:join, :leave]
   before_action :find_follower, only: :leave
-  load_and_authorize_resource except: [:join, :leave, :membership, :valid_course_offerings, :create, :update, :require_captcha]
+  load_and_authorize_resource except: [:join, :leave, :membership, :valid_course_offerings, :create, :create_demo, :presets, :update, :check_demo_section_staleness, :reset_demo_section, :require_captcha, :assigned_essential_ai_dependency, :suggested_lessons]
   before_action :get_course_and_unit, only: [:create, :update]
 
-  skip_before_action :verify_authenticity_token, only: [:update_sharing_disabled, :update]
+  skip_before_action :verify_authenticity_token, only: [:update]
 
   rescue_from ActiveRecord::RecordNotFound do |e|
     if e.model == "Section" && %w(join leave).include?(request.filtered_parameters['action'])
@@ -64,25 +66,166 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
         lesson_extras: params['lesson_extras'] || false,
         pairing_allowed: params[:pairing_allowed].nil? ? true : params[:pairing_allowed],
         tts_autoplay_enabled: params[:tts_autoplay_enabled].nil? ? false : params[:tts_autoplay_enabled],
-        ai_tutor_enabled: params[:ai_tutor_enabled].nil? ? false : params[:ai_tutor_enabled],
-        restrict_section: params[:restrict_section].nil? ? false : params[:restrict_section]
+        restrict_section: params[:restrict_section].nil? ? false : params[:restrict_section],
+        avatar_color: params[:avatar_color].nil? ? 0 : params[:avatar_color],
+        avatar_emoji: params[:avatar_emoji].nil? ? 0 : params[:avatar_emoji],
+        ai_chat_access_level: AichatAccessHelper.compute_ai_chat_access_level(@course),
       }
     )
     return head :bad_request unless section.persisted?
 
+    if Policies::Lti.lti? current_user
+      metadata = {'section_type' => section[:login_type]}
+      Metrics::Events.log_event(
+        user: current_user,
+        event_name: 'lti_section_created_non_lti',
+        metadata: metadata,
+      )
+    end
     # Add all coteachers specified in params
-    params[:instructor_emails]&.each {|instructor_email| section.add_instructor(instructor_email, current_user)}
+    params[:instructor_emails]&.each {|instructor_email| section.invite_instructor(instructor_email, current_user)}
 
     # TODO: Move to an after_create step on Section model when old API is fully deprecated
-    current_user.assign_script @unit if @unit
+    current_user.assign_script(@unit, @course) if @unit
+
+    if @unit
+      AiLessonSummariesHelper.perform_ai_lesson_summaries_by_unit(@unit, current_user.id)
+    end
 
     render json: section.summarize
   end
 
+  # POST /api/v1/sections/demo/create/:demo_type
+  # Creates a demo section with preset properties and adds demo students.
+  def create_demo
+    authorize! :create, Section
+
+    demo_type = params[:demo_type]
+    config = Policies::DemoSections.get_preset(demo_type)
+    return render json: {error: "unknown demo section type: #{demo_type}"}, status: :bad_request unless config
+
+    unit = Unit.get_from_cache(config[:unit_name], raise_exceptions: false) if config[:unit_name].present?
+    unit_group = UnitGroup.get_from_cache(config[:unit_group_name]) if config[:unit_group_name].present?
+
+    if unit.nil? || unit_group.nil?
+      Observability::Errors.report("Demo section creation failed due to misconfigured unit or course", context: {unit_name: config[:unit_name], resolved_unit_id: unit&.name, unit_group_name: config[:unit_group_name], resolved_unit_group_id: unit_group&.name})
+    end
+
+    section = ActiveRecord::Base.transaction do
+      section = Section.create!(
+        {
+          user_id: current_user.id,
+          name: config[:section_name],
+          login_type: config[:login_type],
+          participant_type: config[:participant_type],
+          grades: config[:grades],
+          script_id: unit&.id,
+          course_id: unit_group&.id,
+          avatar_color: config[:avatar_color],
+          avatar_emoji: config[:avatar_emoji],
+          ai_chat_access_level: config[:ai_chat_access_level],
+          demo_type: demo_type,
+        }.compact
+      )
+
+      add_demo_students(section, Policies::DemoSections.demo_student_ids(demo_type))
+
+      section
+    end
+
+    # The demo students were just written to the primary; read summarize's counts back from the
+    # primary too, since the read replica may not have caught up with this request's write yet.
+    render json: section.summarize(role: :writing)
+  rescue ActiveRecord::RecordNotUnique, ActiveRecord::RecordInvalid => exception
+    if exception.is_a?(ActiveRecord::RecordNotUnique) || (exception.respond_to?(:record) && exception.record.errors.of_kind?(:demo_type, :taken))
+      render json: {error: "demo section of type #{params[:demo_type]} already exists"}, status: :conflict
+    else
+      head :bad_request
+    end
+  end
+
+  # GET /api/v1/sections/demo/presets
+  def presets
+    authorize! :create, Section
+
+    preset_views = Policies::DemoSections.preset_views_for_all_types
+    render json: preset_views
+  end
+
+  # GET /api/v1/sections/demo/check_staleness?id=<id>
+  # Confirms that a demo section tracks fields necessary for onboarding
+  # 403: forbidden = section does not exist or is not a demo section.
+  # 200: ok = with a message when the section has drifted from its preset
+  # 204: No Content = section is up to date with its preset
+  def check_demo_section_staleness
+    section = Section.find(params[:id])
+    authorize! :manage, section
+    raise ActiveRecord::RecordNotFound unless section.demo_section?
+
+    unless Policies::DemoSections.section_matches_preset?(section)
+      return render json: {message: 'Demo section curriculum is out of date.'}, status: :ok
+    end
+
+    head :no_content
+  end
+
+  # POST /api/v1/sections/demo/reset  (body: {id: <id>})
+  # Reset a demo section to its preset configuration.
+  # Only resets fields that are required for onboarding.
+  def reset_demo_section
+    section = Section.find(params[:id])
+    return head :forbidden unless section.user_id == current_user&.id
+    raise ActiveRecord::RecordNotFound unless section.demo_section?
+
+    config = Policies::DemoSections.get_preset(section.demo_type)
+    raise ActiveRecord::RecordNotFound unless config
+
+    unit = Unit.get_from_cache(config[:unit_name], raise_exceptions: false) if config[:unit_name].present?
+    unit_group = UnitGroup.get_from_cache(config[:unit_group_name]) if config[:unit_group_name].present?
+
+    if unit.nil? || unit_group.nil?
+      Observability::Errors.report(
+        "Demo section staleness reset failed due to misconfigured unit or course",
+        context: {section_id: section.id, demo_type: section.demo_type, unit_name: config[:unit_name], unit_group_name: config[:unit_group_name]}
+      )
+      return head :unprocessable_entity
+    end
+
+    roster_failures = []
+    ActiveRecord::Base.transaction do
+      unless section.script_id == unit.id && section.course_id == unit_group.id
+        section.update!(script_id: unit.id, course_id: unit_group.id)
+      end
+
+      roster_failures = reset_demo_section_roster(section)
+      # Roll everything back if anything failed.
+      raise ActiveRecord::Rollback if roster_failures.any?
+    end
+
+    if roster_failures.any?
+      Observability::Errors.report(
+        "Demo section reset rolled back: roster could not be reconciled",
+        context: {section_id: section.id, demo_type: section.demo_type, failed_student_ids: roster_failures}
+      )
+      return render json: {error: 'Failed to reset demo section roster'}, status: :unprocessable_entity
+    end
+
+    head :no_content
+  end
+
+  # PATCH /api/v1/sections/<id>
   # Allows you to update a section. Clears any assigned script_id in the process
   def update
     section = Section.find(params[:id])
     authorize! :manage, section
+
+    # Demo sections are pinned to their preset login_type: codes are assigned
+    # only at creation (assign_code skips demo sections), so switching a demo
+    # section to a code-based login type would leave it permanently without a
+    # join code.
+    if section.demo_section? && Section.valid_login_type?(params[:login_type]) && params[:login_type] != section.login_type
+      return render json: {errors: 'Cannot change the login type of a demo section'}, status: :forbidden
+    end
 
     # Unhide unit for this section before assigning
     section.toggle_hidden_script @unit, false if @unit
@@ -91,6 +234,10 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
       participant_audience = @course ? @course.participant_audience : @unit.participant_audience
       return head :forbidden unless Section.can_be_assigned_course?(participant_audience, section.participant_type)
     end
+
+    # If assigning a new course, derive the new ai_chat_access_level, otherwise leave it as-is.
+    is_updating_course = @course && @course.id != section.course_id
+    ai_chat_access_level = is_updating_course ? AichatAccessHelper.compute_ai_chat_access_level(@course, section.ai_chat_access_level) : params[:ai_chat_access_level]
 
     # TODO: (madelynkasula) refactor to use strong params
     fields = {}
@@ -106,17 +253,20 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     fields[:tts_autoplay_enabled] = params[:tts_autoplay_enabled] unless params[:tts_autoplay_enabled].nil?
     fields[:hidden] = params[:hidden] unless params[:hidden].nil?
     fields[:restrict_section] = params[:restrict_section] unless params[:restrict_section].nil?
-    fields[:ai_tutor_enabled] = params[:ai_tutor_enabled] unless params[:ai_tutor_enabled].nil?
+    fields[:avatar_color] = params[:avatar_color].nil? ? 0 : params[:avatar_color]
+    fields[:avatar_emoji] = params[:avatar_emoji].nil? ? 0 : params[:avatar_emoji]
+    fields[:ai_chat_access_level] = ai_chat_access_level unless ai_chat_access_level.nil?
 
     section.update!(fields)
     if @unit
       section.students.each do |student|
-        student.assign_script(@unit)
+        next unless can?(:manage, student) # Don't modify students the teacher can't manage (like demo students)
+        student.assign_script(@unit, @course)
       end
     end
 
     # Add all coteachers specified in params
-    params[:instructor_emails]&.each {|instructor_email| section.add_instructor(instructor_email, current_user)}
+    params[:instructor_emails]&.each {|instructor_email| section.invite_instructor(instructor_email, current_user)}
 
     render json: section.summarize
   end
@@ -133,6 +283,12 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     unless current_user
       render_404
       return
+    end
+    # Demo sections have a fixed pre-enrolled roster; joining is not permitted.
+    # This is defense-in-depth: load_resource finds sections by code and demo
+    # sections have no code, so they cannot normally be reached here.
+    if @section.demo_section?
+      return render json: {errors: 'Cannot join a demo section'}, status: :forbidden
     end
     result = @section.add_student current_user
     # add_student returns 'failure' when id of current user is owner of @section
@@ -165,31 +321,27 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
       return
     end
     render json: {
-      sections: current_user.sections_as_student.map(&:summarize_without_students),
-      studentSections: current_user.sections_as_student_participant.map(&:summarize_without_students),
-      plSections: current_user.sections_as_pl_participant.map(&:summarize_without_students),
+      sections: current_user.sections_as_student.reload.map(&:summarize_for_participant),
+      studentSections: current_user.sections_as_student_participant.map(&:summarize_for_participant),
+      plSections: current_user.sections_as_pl_participant.map(&:summarize_for_participant),
       result: result
     }
   end
 
   # POST /api/v1/sections/<id>/leave
   def leave
+    # Mirror of the join guard: the demo roster is fixed, so pre-enrolled
+    # demo students may not remove themselves.
+    if @section.demo_section?
+      return render json: {errors: 'Cannot leave a demo section'}, status: :forbidden
+    end
     authorize! :destroy, @follower
     @section.remove_student(current_user, @follower, {notify: true})
     render json: {
-      sections: current_user.sections_as_student.map(&:summarize_without_students),
-      studentSections: current_user.sections_as_student_participant.map(&:summarize_without_students),
-      plSections: current_user.sections_as_pl_participant.map(&:summarize_without_students),
+      sections: current_user.sections_as_student.map(&:summarize_for_participant),
+      studentSections: current_user.sections_as_student_participant.map(&:summarize_for_participant),
+      plSections: current_user.sections_as_pl_participant.map(&:summarize_for_participant),
       result: "success"
-    }
-  end
-
-  def update_sharing_disabled
-    @section.update!(sharing_disabled: params[:sharing_disabled])
-    @section.update_student_sharing(params[:sharing_disabled])
-    render json: {
-      sharing_disabled: @section.sharing_disabled,
-      students: @section.students.map(&:summarize)
     }
   end
 
@@ -204,7 +356,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
   def valid_course_offerings
     return head :forbidden unless current_user
 
-    course_offerings = CourseOffering.assignable_course_offerings_info(current_user, request.locale)
+    course_offerings = CourseOffering.assignable_course_offerings_info(current_user, I18n.locale.to_s)
     render json: course_offerings
   end
 
@@ -232,6 +384,17 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     render json: {key: site_key}
   end
 
+  # GET /api/v1/sections/assigned_essential_ai_dependency
+  # Returns whether the current user has any non-hidden section assigned a
+  # course with essential AI chat tools dependency.
+  def assigned_essential_ai_dependency
+    return head :forbidden unless current_user
+    result = current_user.sections_instructed.
+      where(hidden: false).
+      any? {|section| section.assigned_ai_chat_tools_dependency == SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:ESSENTIAL]}
+    render json: {has_assigned_essential_ai_dependency: result}
+  end
+
   # GET /api/v1/sections/<id>/code_review_groups
   # Get all code review groups and their members for this section. Also include
   # all unassigned followers.
@@ -242,7 +405,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
   #   ...
   # ]}
   def code_review_groups
-    groups = @section.code_review_groups
+    groups = @section.code_review_groups.includes(:members)
     groups_details = []
     assigned_follower_ids = []
     groups.each do |group|
@@ -254,7 +417,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
       groups_details << {id: group.id, name: group.name, members: members}
     end
 
-    unassigned_students = @section.followers.where.not(id: assigned_follower_ids)
+    unassigned_students = @section.followers.where.not(id: assigned_follower_ids).includes(:student_user)
     unassigned_students = unassigned_students.map {|student| {follower_id: student.id, name: student.student_user.name}}
     groups_details << {unassigned: true, members: unassigned_students}
     render json: {groups: groups_details}
@@ -262,8 +425,11 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
 
   # POST /api/v1/sections/<id>/code_review_groups
   def set_code_review_groups
-    @section.reset_code_review_groups(params[:groups])
-    render json: {result: 'success'}
+    students_with_sharing_enabled = @section.reset_code_review_groups(params[:groups])
+    render json: {
+      result: 'success',
+      students_with_sharing_enabled: students_with_sharing_enabled
+    }
   # if the group data is invalid we will get a record invalid exception
   rescue ActiveRecord::RecordInvalid
     render json: {result: 'invalid groups'}, status: :bad_request
@@ -276,6 +442,93 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     @section.update_code_review_expiration(enable_code_review)
     @section.save
     render json: {result: 'success', expiration: @section.code_review_expires_at}
+  end
+
+  # POST /api/v1/sections/<id>/ai_chat_access_level
+  def set_ai_chat_access_level
+    @section.update!(ai_chat_access_level: params[:ai_chat_access_level])
+    render json: {result: 'success'}
+  rescue ActiveRecord::RecordInvalid
+    render json: {result: 'invalid ai_chat_access_level'}, status: :bad_request
+  end
+
+  # GET /api/v1/sections/<id>/suggested_lesson
+  def suggested_lesson
+    if @section.suggested_lesson_stale? && @section.script.present?
+      @section.compute_suggested_lesson
+      @section.reload
+    end
+
+    data = @section.suggested_lesson
+    if data && (lesson = Lesson.find_by(id: data['lesson_id']))
+      data = data.merge(
+        'name' => lesson.localized_title,
+        'url' => script_lesson_path(lesson.script, lesson),
+        'podcast_url' => "/ai_lesson_summary_podcasts/show?lesson_id=#{lesson.id}"
+      )
+    end
+    render json: data
+  end
+
+  # GET /api/v1/sections/suggested_lessons
+  # Returns suggested lesson data for every active student section belonging to
+  # the current user, keyed by section id.
+  def suggested_lessons
+    return head :forbidden unless current_user
+
+    active_sections = current_user.sections_instructed.where(hidden: false, participant_type: 'student')
+
+    # Collect section object, current lesson, and history for every section.
+    section_data = active_sections.map do |section|
+      if section.suggested_lesson_stale? && section.script.present?
+        section.compute_suggested_lesson
+        section.reload
+      end
+      [section, section.suggested_lesson, section.suggested_lesson_history || []]
+    end
+
+    # Batch load all lessons referenced by current, history, and coming_up entries.
+    all_lesson_ids = section_data.flat_map do |_, current, history|
+      [
+        current&.dig('lesson_id'),
+        current&.dig('coming_up', 'lesson_id'),
+        *history.map {|e| e['lesson_id']}
+      ]
+    end.uniq.compact
+
+    lessons_by_id = Lesson.where(id: all_lesson_ids).index_by(&:id)
+
+    bucket = AWS::S3.user_content_bucket
+    podcast_exists = all_lesson_ids.each_with_object({}) do |lesson_id, memo|
+      key = "podcasts/lesson_#{lesson_id}_podcast.mp3"
+      memo[lesson_id] = AWS::S3.exists_in_bucket(bucket, key)
+    end
+
+    enrich = lambda do |entry|
+      return entry unless (lesson = lessons_by_id[entry['lesson_id']])
+      podcast_url = podcast_exists[lesson.id] ? "/ai_lesson_summary_podcasts/show?lesson_id=#{lesson.id}" : nil
+      entry.merge(
+        'name' => lesson.localized_title,
+        'url' => script_lesson_path(lesson.script, lesson),
+        'podcast_url' => podcast_url
+      )
+    end
+
+    today = Time.zone.today.iso8601
+    result = section_data.each_with_object({}) do |(section, data, history), hash|
+      next hash[section.id] = nil unless data
+      enriched = enrich.call(data)
+      enriched_history = history.map {|e| enrich.call(e)}
+      raw_coming_up = data['coming_up']
+      coming_up = raw_coming_up ? enrich.call(raw_coming_up) : nil
+      hash[section.id] = enriched.merge('history' => enriched_history, 'coming_up' => coming_up)
+    end
+
+    # history dates are stamped in server time (config.time_zone, UTC), which
+    # can be a different calendar date than the browser's local "today" -
+    # returning our own idea of today lets the frontend match history entries
+    # against the same clock that wrote them, instead of guessing locally.
+    render json: {today: today, sections: result}
   end
 
   private def find_follower
@@ -293,23 +546,74 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
       course_version = CourseVersion.find_by_id(params[:course_version_id])
       return head :bad_request unless course_version
 
-      case course_version.content_root_type
-      when 'UnitGroup'
-        course_id = course_version.content_root_id
-        @course = UnitGroup.get_from_cache(course_id)
-        return head :bad_request unless @course
-        return head :forbidden unless @course.course_assignable?(current_user)
-        @unit = params[:unit_id] ? Unit.get_from_cache(params[:unit_id]) : nil
-        return head :bad_request if @unit && @course.id != @unit.unit_group.try(:id)
-      when 'Unit'
-        unit_id = course_version.content_root_id
-        @unit = Unit.get_from_cache(unit_id)
-        return head :bad_request unless @unit
-        return head :forbidden unless @unit.course_assignable?(current_user)
-      end
+      course_id = course_version.content_root_id
+      @course = UnitGroup.get_from_cache(course_id)
+      return head :bad_request unless @course
+      return head :forbidden unless @course.course_assignable?(current_user) || (action_name == 'update' && @course.id == Section.find_by_id(params[:id])&.course_id)
+      @unit = if @course.single_unit_course?
+                @course.units_for_user(current_user).first
+              else
+                params[:unit_id] ? Unit.get_from_cache(params[:unit_id]) : nil
+              end
+      return head :bad_request if @unit && @course && @unit.unit_groups.exclude?(@course)
     else
       # Should not get a unit_id unless also get a course version which is course
       return head :bad_request if params[:unit_id]
     end
+  end
+
+  private def reset_demo_section_roster(section)
+    preset_student_ids = Policies::DemoSections.demo_student_ids(section.demo_type)
+    current_followers = section.followers.index_by(&:student_user_id)
+
+    failures = add_demo_students(section, preset_student_ids - current_followers.keys)
+
+    students_to_remove = current_followers.keys - preset_student_ids
+    students_to_remove.each do |student_id|
+      follower = current_followers[student_id]
+      student = follower.student_user
+      next follower.destroy if student.nil?
+
+      begin
+        section.remove_student(student, follower, notify: false)
+      rescue ActiveRecord::ActiveRecordError => exception
+        failures << student_id
+        Observability::Errors.report(exception, context: {section_id: section.id, student_id: student_id})
+      end
+    end
+
+    failures
+  end
+
+  private def add_demo_students(section, student_ids)
+    failures = []
+    student_ids.each do |student_id|
+      student = User.find_by(id: student_id)
+      next unless student
+
+      unless Policies::DemoSections.demo_student?(student_id)
+        failures << student_id
+        Observability::Errors.report(
+          "Refused to add non-demo student to demo section",
+          context: {section_id: section.id, student_id: student_id}
+        )
+        next
+      end
+
+      begin
+        result = section.add_student(student)
+        next if [Section::ADD_STUDENT_SUCCESS, Section::ADD_STUDENT_EXISTS].include?(result)
+
+        failures << student_id
+        Observability::Errors.report(
+          "Failed to add demo student to section",
+          context: {section_id: section.id, student_id: student_id, result: result}
+        )
+      rescue ActiveRecord::ActiveRecordError => exception
+        failures << student_id
+        Observability::Errors.report(exception, context: {section_id: section.id, student_id: student_id})
+      end
+    end
+    failures
   end
 end

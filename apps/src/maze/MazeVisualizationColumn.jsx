@@ -1,18 +1,31 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
-import Visualization from './Visualization';
-import StepButton from './StepButton';
-import SpellingControls from './SpellingControls';
-import CollectorGemCounter from './CollectorGemCounter';
-import GameButtons from '../templates/GameButtons';
+
 import BelowVisualization from '../templates/BelowVisualization';
+import GameButtons from '../templates/GameButtons';
+
+import CollectorGemCounter from './CollectorGemCounter';
+import mazeMsg from './locale';
+import SpellingControls from './SpellingControls';
+import Visualization from './Visualization';
 
 const MazeVisualizationColumn = function (props) {
   return (
     <span>
       <Visualization />
       <GameButtons showFinishButton={props.showFinishButton}>
-        <StepButton showStepButton={props.showStepButton} />
+        <MuiButton
+          id="stepButton"
+          variant="outlined"
+          color="secondary"
+          size="medium"
+          className={props.showStepButton ? undefined : 'hide'}
+          startIcon={<FontAwesomeV6Icon iconName="forward-step" />}
+        >
+          {mazeMsg.step()}
+        </MuiButton>
         {props.showCollectorGemCounter && <CollectorGemCounter />}
       </GameButtons>
       {props.searchWord && <SpellingControls searchWord={props.searchWord} />}

@@ -1,0 +1,26 @@
+name 'music-lab-612-pre-q6'
+
+question '**Which of the following is NOT an example of continuing to use abstraction to simplify and organize her code**'
+
+wrong 'combine the two verse functions into a single function called "fullVerse"'
+wrong 'make a function called "intro" for the intro beat and lead tracks'
+wrong 'put everything she has so far in a function called "firstHalf"'
+right 'Add a loop to make the intro repeat at least 2 times before the song truly starts'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Topic: Functions
+
+Skill: Design songs with sections that can be abstracted to functions to make the code reusable, easier to understand, or more organized.
+
+Appears in Lesson: Functions - Practice
+MARKDOWN
+
+markdown <<MARKDOWN
+Katie started to create a remix of Chataje by Shakira and Maluma - two vocalists who sing on the song. She coded her intro and verse, but paused before continuing to the chorus and outro so she could reorganize her code using functions to make things clearer. Here's what her code looks like partway through her reorganization with functions:
+
+![](https://images.code.org/1e8b0e3e584fb26eaaa75b9bf5466074-image-1751045292782.png)
+
+She's not done though - she would like to take one more step to continue simplifying her code with functions to make it clearer and more organized.
+MARKDOWN

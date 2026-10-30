@@ -1,0 +1,97 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-08-15T18:44:36.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "#### Gravity\r\n\r\nPutting together songs can involve **pattern recognition** - looking for similarities to help solve a problem. For example, you can use patterns to fill in the backing tracks to the song Gravity. Pay attention to how long certain tracks are!\r\n\r\nTo complete this level, your code will need:\r\n- Four <code style=\"background-color: rgb(0, 148, 202); color: white; border: none; box-shadow: inset -1px -1px 1px rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">play together</code> blocks\r\n- Each block should contain 4 tracks: <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-microphone-stand\" style=\"color: #F99258; margin-right: 2px\"></i> Vocal </span>, <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-boombox\" style=\"color: #58BEF9; margin-right: 2px\"></i> Bass </span>, <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-drum\" style=\"color: #E565F5; margin-right: 2px\"></i> Beat </span>, and <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-guitars\" style=\"color: #64D25A; margin-right: 2px\"></i> Lead </span>.\r\n- Your song should match the example below!\r\n\r\n![](https://images.code.org/a1a59a6ee064972bb94d08eba144927d-image-1749507346817.png)",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "sounds": {
+        "tinashe_gravity": [
+          "vocals_verse_1",
+          "vocals_verse_2",
+          "kick_snare",
+          "bass_synth_1",
+          "main_pad",
+          "vocals_chorus_1",
+          "vocals_chorus_2"
+        ],
+        "hiphop": [
+          "drum_beat_cuts",
+          "bass_trip"
+        ],
+        "electro": [
+          "synth_sleek"
+        ]
+      },
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together"
+          ]
+        },
+        "type": "flyout"
+      },
+      "packId": "tinashe_gravity",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "showSoundsPanelInSoundsMode": true,
+      "showSoundFilters": true,
+      "sortUnrestrictedPacksByType": true
+    },
+    "display_name": "Gravity Remix",
+    "encrypted_exemplar_sources": "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\nJQ==\n",
+    "validations": [
+      {
+        "key": "test-music-lab-sequences-explore-choice-level-c_ddafd1af-a716-4d59-81d2-a00080c0232d",
+        "message": "auto-pass for exemplar validation",
+        "next": true,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": true,
+      "validationSuccessMessage": "You did it! The song matches the example!",
+      "validationFailureMessage": "Something's not quite right! Try listening to the example again!",
+      "playerTitle": "Gravity Remix"
+    },
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "bubble_choice_description": "Use **pattern recognition** to complete a remix of Gravity",
+    "name_suffix": "_bash",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/tinashe_tightrope/tinashe_tightrope.jpg",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-08-15T18:44:36.700+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-challenge-f_v2\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-challenge-f_v2\"}]"
+}]]></config>
+  <blocks/>
+</Music>

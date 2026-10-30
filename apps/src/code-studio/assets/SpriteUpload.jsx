@@ -1,7 +1,5 @@
 import React from 'react';
-import color from '@cdo/apps/util/color';
-import {makeEnum} from '@cdo/apps/utils';
-import ValidationStep, {Status} from '../../lib/ui/ValidationStep';
+
 import {
   getManifest,
   getLevelAnimationsFiles,
@@ -10,6 +8,10 @@ import {
   uploadMetadataToAnimationLibrary,
 } from '@cdo/apps/assetManagement/animationLibraryApi';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import color from '@cdo/apps/util/color';
+import {makeEnum} from '@cdo/apps/utils';
+
+import ValidationStep, {Status} from '../../sharedComponents/ValidationStep';
 
 const EXTENSION_CHECK = 'extensionError';
 const FILENAME_CHECK = 'filenameError';
@@ -525,24 +527,28 @@ export default class AnimationUpload extends React.Component {
               </label>
               {availability === AnimationLocations.level && (
                 <div>
-                  <label>Type:</label>
-                  <select onChange={this.handleCategoryChange}>
-                    <option value="">Sprite Costume</option>
-                    <option value="backgrounds">Background</option>
-                  </select>
+                  <label>
+                    Type:
+                    <select onChange={this.handleCategoryChange}>
+                      <option value="">Sprite Costume</option>
+                      <option value="backgrounds">Background</option>
+                    </select>
+                  </label>
                 </div>
               )}
               {availability === AnimationLocations.library && (
                 <div>
-                  <label>Category:</label>
-                  <select onChange={this.handleCategoryChange}>
-                    <option value="">Select an Option</option>
-                    {(spriteLabLibraryCategories || []).map(category => (
-                      <option key={category} value={category}>
-                        {category}
-                      </option>
-                    ))}
-                  </select>
+                  <label>
+                    Category:
+                    <select onChange={this.handleCategoryChange}>
+                      <option value="">Select an Option</option>
+                      {(spriteLabLibraryCategories || []).map(category => (
+                        <option key={category} value={category}>
+                          {category}
+                        </option>
+                      ))}
+                    </select>
+                  </label>
                 </div>
               )}
               Animation Upload Destination:{' '}

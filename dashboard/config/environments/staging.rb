@@ -2,7 +2,7 @@ Dashboard::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
-  config.cache_classes = false # false to allow reloading custom locale files when updated by seed tasks
+  config.cache_classes = true
 
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both thread web servers
@@ -22,14 +22,6 @@ Dashboard::Application.configure do
   # Serve static resources - these will be cached by Varnish (or a CDN)
   config.public_file_server.enabled = true
   config.public_file_server.headers = {'Cache-Control' => "public, max-age=3600, s-maxage=1800"}
-
-  # Compress JavaScripts and CSS.
-  # webpack handles js compression for us
-  # config.assets.js_compressor = :uglifier
-  # config.assets.css_compressor = :sass
-
-  # Version of your assets, change this if you want to expire all your assets.
-  config.assets.version = '1.0'
 
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = "X-Sendfile" # for apache
@@ -65,11 +57,12 @@ Dashboard::Application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = Logger::Formatter.new
 
-  # Log condensed lines to syslog for centralized logging.
   config.lograge.enabled = true
   config.lograge.formatter = Lograge::Formatters::Cee.new
   require 'syslog/logger'
   config.logger = Syslog::Logger.new 'dashboard', Syslog::LOG_LOCAL0
+
+  config.action_view.logger = nil
 
   # don't act like a levelbuilder by default
   config.levelbuilder_mode = CDO.with_default(false).levelbuilder_mode

@@ -1,0 +1,29 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2024-09-30T17:16:42.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "encrypted": "false",
+    "background": "music-black",
+    "name_suffix": "_3",
+    "panels": [
+      {
+        "text": "In the next level, you'll find a function in your workspace.\nNotice how it does not connect to the `when run` block. ",
+        "imageUrl": "https://images.code.org/d834eb8e2ad99b1107fce23d9ce02dad-Screen Shot 2024-09-30 at 1.54.00 PM.png",
+        "key": "music_ai_panels_function_2-c8877cb4-6e4a-4df6-8f35-d07d428a37ed",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "The function won't work until you \"call\" it:\n- Find the block with the function's name in your Toolbox.\n- Add it under 'when run.'\n- You can use it multiple times!\n\n",
+        "imageUrl": "https://images.code.org/73c335ff2947ca7f53a0a4dbb69fcb05-functions_gif.gif",
+        "key": "music_ai_panels_function_2-4c0067c6-4389-4f22-9bb1-9e80df2d3cf6",
+        "layout": "text-bottom-right"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2024-09-30T17:16:42.235+00:00\",\"changed\":[\"cloned from \\\"music_ai_panels_function_2\\\"\"],\"cloned_from\":\"music_ai_panels_function_2\"},{\"changed_at\":\"2024-09-30 21:01:22 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-30 23:06:10 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-01 17:56:10 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-02 05:19:22 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2024-10-03 17:06:56 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+</Panels>

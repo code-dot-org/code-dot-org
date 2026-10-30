@@ -1,0 +1,32 @@
+@import 'color';
+
+table.selfPacedProgressTable {
+  th {
+    &:nth-child(3) {
+      width: 20%;
+    }
+
+    &:nth-child(4) {
+      width: 24%;
+    }
+  }
+}
+
+.progressBar {
+  background-color: $light_gray_100;
+  height: 0.5rem;
+  border-radius: 1rem;
+  margin-block-start: 0.25rem;
+  overflow: hidden;
+
+  .progressBarFill {
+    display: block;
+    background-color: var(--background-brand-primary);
+    height: 0.5rem;
+    border-start-start-radius: 1rem;
+    border-end-end-radius: 0;
+    border-start-end-radius: 0;
+    border-end-start-radius: 1rem;
+  }
+}
+

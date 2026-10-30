@@ -1,9 +1,9 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import $ from 'jquery';
 import React from 'react';
-import sinon from 'sinon';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+
 import {UnwrappedInstructionsWithWorkspace as InstructionsWithWorkspace} from '@cdo/apps/templates/instructions/InstructionsWithWorkspace';
+import {AiChatAccessLevels} from '@cdo/generated-scripts/sharedConstants';
 
 describe('InstructionsWithWorkspace', () => {
   it('renders instructions and code workspace', () => {
@@ -14,8 +14,8 @@ describe('InstructionsWithWorkspace', () => {
       />
     );
 
-    expect(wrapper.find('Connect(TopInstructions)')).to.have.lengthOf(1);
-    expect(wrapper.find('Connect(CodeWorkspaceContainer)')).to.have.lengthOf(1);
+    expect(wrapper.find('Connect(TopInstructions)')).toHaveLength(1);
+    expect(wrapper.find('Connect(CodeWorkspaceContainer)')).toHaveLength(1);
   });
 
   it('initially does not know window width or height', () => {
@@ -25,9 +25,72 @@ describe('InstructionsWithWorkspace', () => {
         setInstructionsMaxHeightAvailable={() => {}}
       />
     );
-    expect(wrapper.state()).to.deep.equal({
+    expect(wrapper.state()).toEqual({
       windowWidth: undefined,
       windowHeight: undefined,
+      tutorLayout: {isVisible: false, isOpen: false},
+    });
+  });
+
+  describe('AI tutor visibility', () => {
+    beforeEach(() => {
+      window.appOptions = {level: {aiTutorAvailable: true}};
+    });
+
+    afterEach(() => {
+      delete window.appOptions;
+    });
+
+    it('does not render AI tutor in share view', () => {
+      const wrapper = shallow(
+        <InstructionsWithWorkspace
+          instructionsHeight={400}
+          setInstructionsMaxHeightAvailable={() => {}}
+          labType="applab"
+          isShareView={true}
+          aiChatAccessLevel={AiChatAccessLevels.ENABLED}
+        />
+      );
+      expect(wrapper.find('AiTutorContainer')).toHaveLength(0);
+    });
+
+    it('renders AI tutor when not in share view', () => {
+      const wrapper = shallow(
+        <InstructionsWithWorkspace
+          instructionsHeight={400}
+          setInstructionsMaxHeightAvailable={() => {}}
+          labType="applab"
+          isShareView={false}
+          aiChatAccessLevel={AiChatAccessLevels.ENABLED}
+        />
+      );
+      expect(wrapper.find('AiTutorContainer')).toHaveLength(1);
+    });
+
+    it('renders AI tutor when AI enabled', () => {
+      const wrapper = shallow(
+        <InstructionsWithWorkspace
+          instructionsHeight={400}
+          setInstructionsMaxHeightAvailable={() => {}}
+          labType="applab"
+          isShareView={false}
+          aiChatAccessLevel={AiChatAccessLevels.ENABLED}
+        />
+      );
+      expect(wrapper.find('AiTutorContainer')).toHaveLength(1);
+    });
+
+    it('does not render AI tutor when AI disabled', () => {
+      const wrapper = shallow(
+        <InstructionsWithWorkspace
+          instructionsHeight={400}
+          setInstructionsMaxHeightAvailable={() => {}}
+          labType="applab"
+          isShareView={false}
+          aiChatAccessLevel={AiChatAccessLevels.DISABLED}
+        />
+      );
+      expect(wrapper.find('AiTutorContainer')).toHaveLength(0);
     });
   });
 
@@ -35,15 +98,15 @@ describe('InstructionsWithWorkspace', () => {
     let setInstructionsMaxHeightAvailable;
 
     beforeEach(() => {
-      setInstructionsMaxHeightAvailable = sinon.spy();
+      setInstructionsMaxHeightAvailable = jest.fn();
 
-      sinon.stub($.fn, 'width').returns(1024);
-      sinon.stub($.fn, 'height').returns(768);
+      jest.spyOn($.fn, 'width').mockClear().mockReturnValue(1024);
+      jest.spyOn($.fn, 'height').mockClear().mockReturnValue(768);
     });
 
     afterEach(() => {
-      $.fn.width.restore();
-      $.fn.height.restore();
+      $.fn.width.mockRestore();
+      $.fn.height.mockRestore();
     });
 
     function setupComponent({
@@ -72,21 +135,19 @@ describe('InstructionsWithWorkspace', () => {
         windowWidth: 640,
         windowHeight: 480,
       });
-      $.fn.width.returns(640);
-      $.fn.height.returns(480);
-      sinon.spy(wrapper.instance(), 'setState');
+      $.fn.width.mockReturnValue(640);
+      $.fn.height.mockReturnValue(480);
+      jest.spyOn(wrapper.instance(), 'setState').mockClear();
 
       wrapper.instance().onResize();
-      expect(setInstructionsMaxHeightAvailable).not.to.have.been.called;
-      expect(wrapper.instance().setState).not.to.have.been.called;
+      expect(setInstructionsMaxHeightAvailable).not.toHaveBeenCalled();
+      expect(wrapper.instance().setState).not.toHaveBeenCalled();
     });
 
     it('handles resize', () => {
       const wrapper = setupComponent();
       wrapper.instance().onResize();
-      expect(
-        setInstructionsMaxHeightAvailable
-      ).to.have.been.calledOnce.and.calledWith(230);
+      expect(setInstructionsMaxHeightAvailable).toHaveBeenCalledWith(230);
     });
 
     it('breakpoint in behavior at total height of 420 (meets all reserves)', () => {
@@ -97,34 +158,34 @@ describe('InstructionsWithWorkspace', () => {
         codeWorkspaceHeight: 400,
       });
       wrapper.instance().onResize();
-      expect(setInstructionsMaxHeightAvailable).to.have.been.calledWith(139);
+      expect(setInstructionsMaxHeightAvailable).toHaveBeenCalledWith(139);
 
-      setInstructionsMaxHeightAvailable.resetHistory();
+      setInstructionsMaxHeightAvailable.mockReset();
 
       wrapper = setupComponent({
         instructionsHeight: 19,
         codeWorkspaceHeight: 400,
       });
       wrapper.instance().onResize();
-      expect(setInstructionsMaxHeightAvailable).to.have.been.calledWith(140);
+      expect(setInstructionsMaxHeightAvailable).toHaveBeenCalledWith(140);
 
-      setInstructionsMaxHeightAvailable.resetHistory();
+      setInstructionsMaxHeightAvailable.mockReset();
 
       wrapper = setupComponent({
         instructionsHeight: 20,
         codeWorkspaceHeight: 400,
       });
       wrapper.instance().onResize();
-      expect(setInstructionsMaxHeightAvailable).to.have.been.calledWith(150);
+      expect(setInstructionsMaxHeightAvailable).toHaveBeenCalledWith(150);
 
-      setInstructionsMaxHeightAvailable.resetHistory();
+      setInstructionsMaxHeightAvailable.mockReset();
 
       wrapper = setupComponent({
         instructionsHeight: 21,
         codeWorkspaceHeight: 400,
       });
       wrapper.instance().onResize();
-      expect(setInstructionsMaxHeightAvailable).to.have.been.calledWith(151);
+      expect(setInstructionsMaxHeightAvailable).toHaveBeenCalledWith(151);
     });
   });
 });

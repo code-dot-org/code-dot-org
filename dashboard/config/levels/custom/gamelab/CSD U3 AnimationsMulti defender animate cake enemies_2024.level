@@ -45,10 +45,10 @@
     "name_suffix": "_2024",
     "long_instructions": "# Getting Started: Set Animations\r\n\r\nBefore you get started, you'll want some better animations for each of your sprites.\r\n\r\n# Do This\r\n\r\n* In the Animation Tab are animations for each of your sprites. Go look at what they are.\r\n* In your code give each sprite its appropriate animation. **Use the ones provided for now** but later you'll be able to go change them.",
     "reference_links": [
-      "/courses/csd-2022/guides/sprites",
-      "/courses/csd-2022/guides/animation-tab",
-      "/courses/csd-2022/guides/editing-images",
-      "/courses/csd-2022/guides/multi-frame-animations"
+      "/courses/csd-2024/guides/sprites",
+      "/courses/csd-2024/guides/animation-tab",
+      "/courses/csd-2024/guides/editing-images",
+      "/courses/csd-2024/guides/multi-frame-animations"
     ],
     "mini_rubric": "false",
     "encrypted": "false",

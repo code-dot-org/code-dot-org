@@ -1,0 +1,42 @@
+name 'pl-aif1-js-introducing-css'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Introducing CSS
+
+<p>Now that we have the structure of a website, let's add some style.</p>
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px;">
+<p>📖 <b>CSS</b> (Cascading Style Sheets) is the language that controls the look and feel of a webpage.</p>
+</div>
+<br>
+
+If HTML is the structure, **CSS is the design**, it handles colors, fonts, spacing, and layout.
+
+<p>With CSS you can:</p>
+<ul>
+<li>Change colors, fonts, and text sizes</li>
+<li>Control spacing: margins, padding, alignment</li>
+<li>Add borders and backgrounds</li>
+<li>Define layout, how sections of a page are arranged</li>
+</ul>
+
+---
+
+<h2>How It Works</h2>
+
+<p>To apply CSS to a webpage, you link a CSS file inside the <code>&lt;head&gt;</code> section of your HTML:</p>
+
+<div style="text-align: center; margin: 20px 0;">
+<img src="https://images.code.org/25a94e1abb5764272bb756bd05e472bf-image-1763399640046.png" alt="Code showing a link tag connecting an HTML file to a styles.css file" style="max-width: 450px; width: 100%; border-radius: 10px;">
+</div>
+
+That line tells the browser: use the style rules in this file to decorate and arrange this HTML content. Once it's linked, the browser reads every CSS rule and applies it to the matching HTML elements.
+
+<div style="background-color: #E4E2F8; color: #222222; border-radius: 10px; padding: 16px 20px; margin: 20px 0;"><p>
+<strong>💡 Teacher tip:</strong> your students won't type this line themselves, AI generates it automatically when it creates a stylesheet. It's still worth recognizing on sight, so you know at a glance that the HTML and CSS files are properly connected.</p>
+</div>
+
+<p>Every one of those rules follows the same three-part pattern: a selector, a property, and a value. Next, you'll learn to read one.</p>
+MARKDOWN

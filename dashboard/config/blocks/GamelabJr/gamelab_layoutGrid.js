@@ -1,8 +1,7 @@
-var SPRITE_SIZE = 25;
-var MIN_XY = SPRITE_SIZE / 2 + 5;
-var MAX_XY = 400 - MIN_XY;
-
 function layoutGrid() {
+  var SPRITE_SIZE = 25;
+  var MIN_XY = SPRITE_SIZE / 2 + 5;
+  var MAX_XY = 400 - MIN_XY;
   var spriteIds = getSpriteIdsInUse();
   var count = spriteIds.length;
   var numRows = Math.ceil(Math.sqrt(count));

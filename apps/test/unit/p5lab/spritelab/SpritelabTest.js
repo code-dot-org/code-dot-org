@@ -1,13 +1,7 @@
 import ReactDOM from 'react-dom';
-import sinon from 'sinon';
-import {expect} from '../../../util/reconfiguredChai';
+
+import reducers from '@cdo/apps/p5lab/reducers';
 import SpriteLab from '@cdo/apps/p5lab/spritelab/SpriteLab';
-import {
-  addAnimation,
-  editAnimation,
-  setInitialAnimationList,
-} from '@cdo/apps/p5lab/redux/animationList';
-import Sounds from '@cdo/apps/Sounds';
 import {
   getStore,
   registerReducers,
@@ -16,11 +10,13 @@ import {
 } from '@cdo/apps/redux';
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import {setIsRunning} from '@cdo/apps/redux/runState';
-import reducers from '@cdo/apps/p5lab/reducers';
-import {setExternalGlobals} from '../../../util/testUtils';
+import Sounds from '@cdo/apps/Sounds';
 import 'script-loader!@code-dot-org/p5.play/examples/lib/p5';
 import 'script-loader!@code-dot-org/p5.play/lib/p5.play';
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
+
+import setBlocklyGlobal from '../../../util/setupBlocklyGlobal';
+import {setExternalGlobals} from '../../../util/testUtils';
 
 const backgroundSprite = {
   orderedKeys: ['44c5937d-c5c0-4676-bd0c-f7a86e99dd98'],
@@ -36,9 +32,12 @@ const backgroundSprite = {
 
 describe('SpriteLab', () => {
   setExternalGlobals();
+  setBlocklyGlobal();
 
-  before(() => sinon.stub(ReactDOM, 'render'));
-  after(() => ReactDOM.render.restore());
+  beforeAll(() =>
+    jest.spyOn(ReactDOM, 'render').mockClear().mockImplementation()
+  );
+  afterAll(() => ReactDOM.render.mockRestore());
 
   beforeEach(stubRedux);
   afterEach(restoreRedux);
@@ -58,17 +57,16 @@ describe('SpriteLab', () => {
       registerReducers({...commonReducers, ...reducers});
       instance = new SpriteLab();
       mockStudioApp = {
-        setCheckForEmptyBlocks: sinon.spy(),
-        showRateLimitAlert: sinon.spy(),
-        setPageConstants: sinon.spy(),
-        init: sinon.spy(),
+        setCheckForEmptyBlocks: jest.fn(),
+        setPageConstants: jest.fn(),
+        init: jest.fn(),
         isUsingBlockly: () => false,
         loadLibraries: () => Promise.resolve(),
       };
     });
 
     it('Must have studioApp injected first', () => {
-      expect(() => instance.init({})).to.throw('P5Lab requires a StudioApp');
+      expect(() => instance.init({})).toThrow('P5Lab requires a StudioApp');
     });
 
     describe('After being injected with a studioApp instance', () => {
@@ -76,36 +74,39 @@ describe('SpriteLab', () => {
       beforeEach(() => {
         instance.injectStudioApp(mockStudioApp);
         registerReducers({...commonReducers, ...reducers});
-        instance.areAnimationsReady_ = sinon.stub().returns(true);
-        instance.p5Wrapper = sinon.spy();
-        instance.p5Wrapper.p5 = sinon.spy();
-        instance.p5Wrapper.p5.allSprites = sinon.spy();
-        instance.p5Wrapper.p5.allSprites.removeSprites = sinon.spy();
-        instance.p5Wrapper.p5.redraw = sinon.spy();
-        instance.JSInterpreter = sinon.spy();
-        instance.JSInterpreter.deinitialize = sinon.spy();
-        instance.initInterpreter = sinon.spy();
-        instance.onP5Setup = sinon.spy();
-        instance.onIsDebuggingSpritesChange = sinon.spy();
-        instance.onStepSpeedChange = sinon.spy();
+        instance.areAnimationsReady_ = jest.fn().mockReturnValue(true);
+        instance.p5Wrapper = jest.fn();
+        instance.p5Wrapper.p5 = jest.fn();
+        instance.p5Wrapper.p5.allSprites = jest.fn();
+        instance.p5Wrapper.p5.allSprites.removeSprites = jest.fn();
+        instance.p5Wrapper.p5.redraw = jest.fn();
+        instance.JSInterpreter = jest.fn();
+        instance.JSInterpreter.deinitialize = jest.fn();
+        instance.initInterpreter = jest.fn();
+        instance.onP5Setup = jest.fn();
+        instance.onIsDebuggingSpritesChange = jest.fn();
+        instance.onStepSpeedChange = jest.fn();
         instance.level = {};
 
-        muteSpy = sinon.stub(Sounds.getSingleton(), 'muteURLs');
+        muteSpy = jest
+          .spyOn(Sounds.getSingleton(), 'muteURLs')
+          .mockClear()
+          .mockImplementation();
       });
 
       afterEach(() => {
-        muteSpy.restore();
+        muteSpy.mockRestore();
       });
 
       it('preview mutes sounds', () => {
         instance.preview();
-        expect(muteSpy).to.have.been.calledOnce;
+        expect(muteSpy).toHaveBeenCalledTimes(1);
       });
 
       it('preview does not run if code is running', () => {
         getStore().dispatch(setIsRunning(true));
         instance.preview();
-        expect(muteSpy).to.not.have.been.called;
+        expect(muteSpy).not.toHaveBeenCalled();
       });
 
       it('includes backgrounds if there are none', () => {
@@ -123,7 +124,7 @@ describe('SpriteLab', () => {
           initialAnimationList,
           backgroundSprite
         );
-        expect(resultingAnimations.orderedKeys.length).to.be.above(1);
+        expect(resultingAnimations.orderedKeys.length).toBeGreaterThan(1);
       });
 
       it('does not modify the list if there is an animation in the backgrounds category', () => {
@@ -141,7 +142,7 @@ describe('SpriteLab', () => {
           initialAnimationList,
           backgroundSprite
         );
-        expect(resultingAnimations.orderedKeys.length).to.be.equal(1);
+        expect(resultingAnimations.orderedKeys.length).toBe(1);
       });
 
       it('does not modify the list if there is an animation that matches a background', () => {
@@ -158,116 +159,37 @@ describe('SpriteLab', () => {
           initialAnimationList,
           backgroundSprite
         );
-        expect(resultingAnimations.orderedKeys.length).to.be.equal(1);
+        expect(resultingAnimations.orderedKeys.length).toBe(1);
       });
 
       describe('reactToExecutionError', () => {
         let alertSpy;
         beforeEach(() => {
-          alertSpy = sinon.stub(studioApp(), 'displayWorkspaceAlert');
-          sinon.stub(instance, 'getMsg').returns({
-            workspaceAlertError: () => 'translated string',
-          });
+          alertSpy = jest
+            .spyOn(studioApp(), 'displayWorkspaceAlert')
+            .mockClear()
+            .mockImplementation();
+          jest
+            .spyOn(instance, 'getMsg')
+            .mockClear()
+            .mockReturnValue({
+              workspaceAlertError: () => 'translated string',
+            });
         });
 
         afterEach(() => {
-          alertSpy.restore();
-          instance.getMsg.restore();
+          alertSpy.mockRestore();
+          instance.getMsg.mockRestore();
         });
 
         it('displays a workspace alert if there is an executionError message', () => {
           instance.reactToExecutionError('test string');
-          expect(alertSpy).to.have.been.calledOnce;
+          expect(alertSpy).toHaveBeenCalledTimes(1);
         });
 
         it('does nothing if there is no executionError message', () => {
           instance.reactToExecutionError(undefined);
-          expect(alertSpy).to.not.have.been.called;
-        });
-      });
-
-      describe('dispatching Blockly events', () => {
-        let store, eventSpy, originalMainBlockSpace;
-        beforeEach(() => {
-          store = getStore();
-          instance.setupReduxSubscribers(store);
-          originalMainBlockSpace = Blockly.blockly_.mainBlockSpace;
-          Blockly.blockly_.mainBlockSpace = {events: {dispatchEvent: () => {}}};
-          eventSpy = sinon.stub(Blockly.mainBlockSpace.events, 'dispatchEvent');
-
-          const initialAnimationList = {
-            orderedKeys: ['key1'],
-            propsByKey: {
-              key1: {
-                name: 'bear',
-                sourceUrl:
-                  'https://studio.code.org/api/v1/animation-library/spritelab/wAQoTe9lNAp19q.JxOmT6hRtv1GceGwp/category_animals/bear.png',
-                frameSize: {
-                  x: 254,
-                  y: 333,
-                },
-                frameCount: 1,
-                looping: true,
-                frameDelay: 2,
-                version: 'wAQoTe9lNAp19q.JxOmT6hRtv1GceGwp',
-                categories: ['animals'],
-              },
-            },
-          };
-          store.dispatch(
-            setInitialAnimationList(initialAnimationList, false, true)
-          );
-          eventSpy.reset();
-        });
-
-        afterEach(() => {
-          eventSpy.restore();
-          Blockly.blockly_.mainBlockSpace = originalMainBlockSpace;
-        });
-
-        it('dispatches event when animations are added', () => {
-          const newAnimation = {
-            name: 'purple bunny',
-            sourceUrl:
-              'https://studio.code.org/api/v1/animation-library/spritelab/kBiszeGACcLTGTrqmS4laPVQKPGQnDln/category_animals/bunny2.png',
-            frameSize: {
-              x: 152,
-              y: 193,
-            },
-            frameCount: 1,
-            looping: true,
-            frameDelay: 2,
-            version: 'kBiszeGACcLTGTrqmS4laPVQKPGQnDln',
-            categories: ['animals', 'characters'],
-          };
-
-          store.dispatch(addAnimation('key2', newAnimation));
-          expect(eventSpy).to.have.been.called;
-        });
-
-        it('dispatches event when animations change', () => {
-          const newProps = {
-            name: 'bear',
-            sourceUrl:
-              'https://studio.code.org/api/v1/animation-library/spritelab/kBiszeGACcLTGTrqmS4laPVQKPGQnDln/category_animals/bunny2.png',
-            frameSize: {
-              x: 254,
-              y: 333,
-            },
-            frameCount: 1,
-            looping: true,
-            frameDelay: 2,
-            version: 'wAQoTe9lNAp19q.JxOmT6hRtv1GceGwp',
-            categories: ['animals'],
-          };
-          store.dispatch(editAnimation('key1', newProps));
-          expect(eventSpy).to.have.been.called;
-        });
-
-        it('does not dispatch event when animations do not change', () => {
-          // Dispatch an action so the subscriber gets called
-          store.dispatch(setIsRunning(true));
-          expect(eventSpy).not.to.have.been.called;
+          expect(alertSpy).not.toHaveBeenCalled();
         });
       });
     });

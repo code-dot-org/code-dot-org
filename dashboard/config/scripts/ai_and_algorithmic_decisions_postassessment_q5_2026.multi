@@ -1,0 +1,14 @@
+name 'ai-and-algorithmic-decisions-postassessment-q5_2026'
+
+question 'A QA Engineer is testing a fitness app. They tap "Log Run" and the run count goes up by 2 instead of 1. They ask AI to suggest a fix. AI returns a confident answer that looks reasonable. What should the QA Engineer do before trusting the fix?'
+
+right 'Predict what the fix should do, read the AI''s code line by line, test it, and only then decide whether to accept, adapt, or reject it.'
+wrong 'Apply the fix immediately because AI is usually right.'
+wrong 'Reject the fix without reading it because AI can hallucinate.'
+wrong 'Restart the app and hope the bug goes away.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 3
+MARKDOWN

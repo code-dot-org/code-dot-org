@@ -1,0 +1,17 @@
+name 'computer-systems-postassessment-question3_v2-2025'
+title 'Computer Systems and Devices Post-Assessment: Question 3'
+
+wrong 'A desktop computer that runs offline applications'
+wrong 'A USB drive used for storing files'
+right 'A smartwatch that tracks heart rate and sends data to a mobile app'
+wrong 'A wired keyboard used for input'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Which of the following is an example of an IoT device?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 10: IoT and Emerging Technologies
+MARKDOWN

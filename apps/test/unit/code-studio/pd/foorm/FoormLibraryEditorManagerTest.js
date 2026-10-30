@@ -1,11 +1,11 @@
+import {assert} from 'chai'; // eslint-disable-line no-restricted-imports
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {assert} from 'chai';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import FoormEntityEditor from '@cdo/apps/code-studio/pd/foorm/editor/components/FoormEntityEditor';
 import FoormEntityLoadButtons from '@cdo/apps/code-studio/pd/foorm/editor/components/FoormEntityLoadButtons';
 import {UnconnectedFoormLibraryEditorManager as FoormLibraryEditorManager} from '@cdo/apps/code-studio/pd/foorm/editor/library/FoormLibraryEditorManager';
-import sinon from 'sinon';
 
 global.$ = require('jquery');
 

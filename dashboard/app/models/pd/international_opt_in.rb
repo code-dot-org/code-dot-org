@@ -13,45 +13,32 @@
 #  index_pd_international_opt_ins_on_user_id  (user_id)
 #
 require 'json'
+require 'cdo/honeybadger'
+require 'services/international_opt_in/partner_data_loader'
+require 'services/international_opt_in/school_data/colombia'
+require 'services/international_opt_in/school_data/chile'
+require 'services/international_opt_in/school_data/uzbekistan'
 
 class Pd::InternationalOptIn < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :restricted,
+    user_id: :restricted,
+    form_data: :restricted,
+    created_at: :restricted,
+    updated_at: :restricted,
+  )
+
   include Pd::Form
-  include InternationalOptInPeople
-
-  COLOMBIAN_SCHOOL_DATA = JSON.parse(
-    File.read(
-      File.join(Rails.root, 'config', 'colombianSchoolData.json')
-    )
-  ).freeze
-
-  CHILEAN_SCHOOL_DATA = JSON.parse(
-    File.read(
-      File.join(Rails.root, 'config', 'chileanSchoolData.json')
-    )
-  ).freeze
-
-  UZBEKISTAN_SCHOOL_DATA = JSON.parse(
-    File.read(
-      File.join(Rails.root, 'config', 'uzbekistanSchoolData.json')
-    )
-  ).freeze
 
   belongs_to :user
 
-  validates_presence_of :form_data
+  validates :form_data, presence: true
 
-  def self.required_fields
-    [
-      :first_name,
-      :last_name,
-      :school_name,
-      :school_country,
-      :date,
-      :workshop_organizer,
-      :workshop_course,
-      :email_opt_in,
-      :legal_opt_in
-    ]
+  ## Instance Methods
+  def email
+    sanitized_form_data_hash[:email]
   end
 
   def validate_with(options)
@@ -60,8 +47,7 @@ class Pd::InternationalOptIn < ApplicationRecord
     # validation.
     normalized_options = options.map do |key, values|
       normalized_values = values.map do |value|
-        return value.fetch(:answerValue, nil) if value.is_a? Hash
-        value
+        value.is_a?(Hash) ? value.fetch(:answerValue, nil) : value
       end
       [key, normalized_values]
     end.to_h
@@ -79,9 +65,23 @@ class Pd::InternationalOptIn < ApplicationRecord
     end
   end
 
+  # @override
+  def dynamic_required_fields(hash)
+    case hash[:school_country]
+    when 'Colombia' then Services::InternationalOptIn::SchoolData::Colombia.required_fields
+    when 'Chile' then Services::InternationalOptIn::SchoolData::Chile.required_fields
+    when 'Uzbekistan'then Services::InternationalOptIn::SchoolData::Uzbekistan.required_fields
+    else %i[school_city]
+    end
+  end
+
+  def email_opt_in?
+    sanitized_form_data_hash[:email_opt_in].casecmp?("yes")
+  end
+
+  ## Class Methods
   def self.options
     entry_keys = {
-      schoolCountry: %w(australia barbados belize brazil canada chile colombia dominican_republic india indonesia israel italy jamaica kenya kosovo malaysia maldives mexico mongolia new_zealand paraguay philippines portugal puerto_rico slovakia south_korea spain thailand trinidad_and_tobago uzbekistan vietnam),
       workshopCourse: %w(csf_af csf_express csd csp csa other not_applicable),
       emailOptIn: %w(opt_in_yes opt_in_no),
       legalOptIn: %w(opt_in_yes opt_in_no)
@@ -94,43 +94,26 @@ class Pd::InternationalOptIn < ApplicationRecord
     # apps/src/code-studio/pd/form_components/utils.js
     entries = entry_keys.map do |key, values|
       [key, values.map do |value|
-        # Capitalize country values to be consistent with other country strings in our database
-        answer = key.to_s == 'schoolCountry' ? value.titleize : value
         {
           answerText: I18n.t("pd.form_entries.#{key.to_s.underscore}.#{value.underscore}"),
-          answerValue: answer
+          answerValue: value
         }
       end]
     end.to_h
 
-    entries[:workshopOrganizer] = INTERNATIONAL_OPT_IN_PARTNERS
+    entries[:schoolCountry] = supported_countries.map do |country_key, country_name|
+      {
+        answerText: I18n.t("pd.form_entries.school_country.#{country_key}", default: country_name),
+        answerValue: country_name
+      }
+    end
+    entries[:workshopOrganizer] = partner_entries
 
-    entries[:colombianSchoolData] = COLOMBIAN_SCHOOL_DATA
-    entries[:chileanSchoolData] = CHILEAN_SCHOOL_DATA
-    entries[:uzbekistanSchoolData] = UZBEKISTAN_SCHOOL_DATA
+    entries[:colombianSchoolData] = colombia_school_data
+    entries[:chileanSchoolData] = chile_school_data
+    entries[:uzbekistanSchoolData] = uzbekistan_school_data
 
     super.merge(entries)
-  end
-
-  # @override
-  def dynamic_required_fields(hash)
-    [].tap do |required|
-      case hash[:school_country]
-      when 'Colombia'
-        required << :school_department
-        required << :school_municipality
-        required << :school_city
-      when 'Chile'
-        required << :school_department
-        required << :school_commune
-        required << :school_id
-      when 'Uzbekistan'
-        required << :school_department
-        required << :school_municipality
-      else
-        required << :school_city
-      end
-    end
   end
 
   def self.labels
@@ -165,11 +148,37 @@ class Pd::InternationalOptIn < ApplicationRecord
     keys.index_with {|v| I18n.t("pd.form_labels.#{v.underscore}")}
   end
 
-  def email_opt_in?
-    sanitized_form_data_hash[:email_opt_in].casecmp?("yes")
+  def self.required_fields
+    [
+      :first_name,
+      :last_name,
+      :school_name,
+      :school_country,
+      :date,
+      :workshop_organizer,
+      :workshop_course,
+      :email_opt_in,
+      :legal_opt_in
+    ]
   end
 
-  def email
-    sanitized_form_data_hash[:email]
+  def self.partner_entries
+    Services::InternationalOptIn::PartnerDataLoader.partner_entries
+  end
+
+  def self.supported_countries
+    Services::InternationalOptIn::PartnerDataLoader.supported_countries
+  end
+
+  def self.colombia_school_data
+    Services::InternationalOptIn::SchoolData::Colombia.data
+  end
+
+  def self.chile_school_data
+    Services::InternationalOptIn::SchoolData::Chile.data
+  end
+
+  def self.uzbekistan_school_data
+    Services::InternationalOptIn::SchoolData::Uzbekistan.data
   end
 end

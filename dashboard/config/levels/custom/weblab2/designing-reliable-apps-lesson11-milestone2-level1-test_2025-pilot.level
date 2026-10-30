@@ -1,0 +1,60 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-03-03T20:27:10.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Add the Trigger Button",
+    "long_instructions": "# Add the Trigger Button\r\n\r\n**Goal:** Add a button to each card that will control the reveal interaction.\r\n\r\n1. **Update Your Card Template:** Modify your card rendering code to include a button element inside each card.\r\n\r\n2. **Choose Button Text:** Decide what your button will say, such as \"See More\", \"Reveal\", or something specific to your app.\r\n\r\n3. **Place the Button Intentionally:** Position the button so it clearly relates to the card content.\r\n\r\n4. **Confirm Each Card Has Its Own Button:** Make sure the button is generated inside your .map() loop so every card has one.",
+    "bubble_choice_description": "Add a \"See More\" or \"Reveal\" button to each card so users can trigger additional information without reloading the page. ***(supports completing Milestone 2 tasks)***",
+    "thumbnail_url": "https://images.code.org/79f95d1b10ea295c19d104e7c4ec9631-click-button.png",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML",
+        "buildCSS",
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode",
+        "testCase",
+        "buildJavaScript"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+      },
+      "openFiles": [
+
+      ]
+    },
+    "project_template_level_name": "designing-reliable-apps-lesson11-template-test-2025"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-03-05 00:05:17 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-05 00:05:29 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-05 15:33:08 +0000\",\"changed\":[\"bubble_choice_description\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-05 15:59:08 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Weblab2>

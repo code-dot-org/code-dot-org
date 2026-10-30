@@ -1,10 +1,12 @@
+import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
-import {assert} from '../util/reconfiguredChai';
-import sinon from 'sinon';
-import * as codeStudioLevels from '@cdo/apps/code-studio/levels/codeStudioLevels';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import * as callouts from '@cdo/apps/code-studio/callouts';
+import * as codeStudioLevels from '@cdo/apps/code-studio/levels/codeStudioLevels';
+import {TestResults} from '@cdo/apps/constants';
 import {
   getContainedLevelResultInfo,
   getValidatedResult,
@@ -17,10 +19,10 @@ import {
   restoreRedux,
 } from '@cdo/apps/redux';
 import commonReducers from '@cdo/apps/redux/commonReducers';
-import GameButtons from '@cdo/apps/templates/GameButtons';
-import {TestResults} from '@cdo/apps/constants';
-import $ from 'jquery';
 import {setInstructionsConstants} from '@cdo/apps/redux/instructions';
+import GameButtons from '@cdo/apps/templates/GameButtons';
+
+import {assert} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('getContainedLevelResultInfo', () => {
   const containedLevelResult = {

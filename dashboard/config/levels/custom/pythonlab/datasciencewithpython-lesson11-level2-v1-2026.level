@@ -1,0 +1,63 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-08-24T03:38:25.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Filter Data\r\n\r\nA condition checks each value in a column and returns a **Boolean value**: `True` or `False`. A filter keeps only the rows where the condition is `True`.\r\n\r\n::: details [✅ Step 1]\r\nRun the program. Compare the Boolean values in the first output with the rows in the filtered DataFrame. What connection do you notice?\r\n:::\r\n\r\n::: details [✅ Step 2]\r\nModify the condition to find superheroes whose `Alias` ends with `\"n\"` instead of `\"r\"`. Run the program and observe how both outputs change.\r\n:::\r\n\r\n::: details [✅ Step 3]\r\nModify the code to check which superheroes have a `City` that ends with `\"City\"`. Print the Boolean condition and the filtered DataFrame.\r\n:::\r\n\r\n::: details [✅ Step 4]\r\nHow do the `True` and `False` values determine which rows appear in the filtered DataFrame?\r\n:::",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "import pandas as pd\nimport matplotlib.pyplot as plt\n\ndf = pd.read_csv('new_superhero_roster.csv')\n\n# Check whether each Alias ends with \"r\"\ncondition = df['Alias'].str.endswith('r')\n\n# Display the Boolean values\nprint(\"Boolean Condition:\")\nprint(condition)\n\n# Keep the rows where the condition is True\nfiltered_heroes = df[condition]\n\n# Display the filtered DataFrame\nprint(\"\\nFiltered Superheroes:\")\nprint(filtered_heroes)",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        },
+        "1": {
+          "id": "1",
+          "name": "new_superhero_roster.csv",
+          "language": "csv",
+          "contents": "HeroName,Alias,City,PowerLevel,Affiliation,ArchNemesis,YearsActive\nShadowBlade,The Shadow,New York,96,,Dark Specter,33\nThunderFist,Thunder,Los Angeles,77,Justice League,Red Skull,33\nSilverWing,Silver,Gotham,55,X-Men,Green Goblin,23\nNightWatcher,Watcher,Metropolis,60,Fantastic Four,Thanos,\nFlameBurst,Flame,Central City,93,,Doctor Doom,18\nAquaStrike,Aqua,Star City,83,Teen Titans,Loki,25\nVoltGuardian,Volt,Coast City,87,Defenders,Mystique,\nTerraRider,Terra,Bloodhaven,82,Inhumans,Ultron,\nSpectraFlash,Spectra,Atlantis,72,S.H.I.E.L.D.,Magneto,\nSolarFlare,Solar,Asgard,92,Saber Squad,Darkseid,54\nLunaShade,Luna,Midgard,64,Legion of Super-Heroes,Brainiac,\nIronClad,Iron,Krypton,68,Sentinels of Magic,Dark Specter,44\nFrostBite,Frost,Smallville,99,,Reverse-Flash,17\nWindWalker,Wind,New Genesis,65,Watchmen,Black Adam,\nMysticMage,Mystic,Apokolips,77,,Deathstroke,19\nStarSlinger,Star,Themyscira,65,Alpha Flight,Taskmaster,61\nCosmicKnight,Cosmic,Atlantis,86,Young Avengers,Kingpin,48\nBlazeRunner,Blaze,Wakanda,86,Runaways,Venom,\nCrystalCrest,Crystal,Latveria,77,,Red Skull,67\nNovaSpark,Nova,Genosha,100,Eternals,Killmonger,8\nEclipseHunter,Eclipse,Attilan,56,,Mystique,69\nPhantomEcho,Phantom,Avalon,72,Champions,Apocalypse,61\nShadowMender,Mender,Nanda Parbat,100,A-Force,Sabretooth,\nStormBringer,Storm,Kun Lun,51,Excalibur,Juggernaut,7\nVenomSting,Venom,Xandar,87,,Sandman,\nFirebrand,Fire,Titan,75,X-Factor,Mystique,67\nGlacierGuard,Glacier,Knowhere,71,Thunderbolts,Mysterio,8\nThunderClap,Clap,Sakaar,76,Heroes for Hire,Dark Specter,28\nStarlight,Starlight,Hala,75,New Warriors,Mysterio,\nMoonDancer,Moon,Oa,98,Secret Warriors,Mr. Freeze,72\nTempest,Tempest,Mars,63,,Harley Quinn,51\nAurora,Aurora,Latveria,95,Sentinels of Magic,Poison Ivy,41\nCyclone,Cyclone,Themyscira,51,,Bane,4\nNebula,Nebula,Krypton,64,Watchmen,Dark Specter,43\nInferno,Inferno,Smallville,60,Dark Avengers,Catwoman,43\nBlizzard,Blizzard,Midgard,95,Alpha Flight,Deadshot,10\nTorrent,Torrent,New Genesis,74,Young Avengers,Clayface,\nComet,Comet,Apokolips,80,Runaways,Solomon Grundy,34\nHurricane,Hurricane,Star City,95,Great Lakes Avengers,Man-Bat,16\nSolaris,Solaris,Coast City,85,Eternals,Black Mask,3\nIceBlade,Ice,Bloodhaven,69,Squadron Supreme,Firefly,\nSpecter,Specter,Atlantis,72,Champions,Hush,20\nVortex,Vortex,Wakanda,76,A-Force,Killer Croc,2\nBlaze,Blaze,Latveria,69,Excalibur,Mad Hatter,53\nSeraph,Seraph,Genosha,52,X-Force,Talia al Ghul,27\nShadow,Shadow,Attilan,74,X-Factor,KGBeast,\nTempest,Tempest,Avalon,83,,Anarky,10\nPhantom,Phantom,Nanda Parbat,57,Heroes for Hire,Ventriloquist,13\nShadowBlade,The Shadow,New York,94,New Warriors,Red Skull,\nThunderFist,Thunder,Los Angeles,88,,Mysterio,20\n",
+          "folderId": "0",
+          "active": false,
+          "open": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    },
+    "teacher_markdown": "**Student Takeaways:**\r\n- Students recognize how string operations can be efficiently used for data filtering in real-world scenarios, such as searching for specific patterns in textual data.\r\n\r\n**Possible Misconceptions and/or Difficulties:**\r\n- There may be confusion about how to apply the str.endswith() method to columns containing non-string data types or missing values.\r\n",
+    "name_suffix": "_2026",
+    "offer_browser_tts": "false",
+    "disable_edit_run_for_submission": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "encrypted_exemplar_sources": "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\noOOSX4hQ4wePoNIcwHBhjRU=\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-08-24T03:38:25.795+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L10-L2_2024-pilot_pilot_2026\\\"\"],\"cloned_from\":\"datascience-U2L10-L2_2024-pilot_pilot_2026\"},{\"changed_at\":\"2026-08-24 03:41:33 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-08-24 03:44:31 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-08-24 03:44:45 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Pythonlab>

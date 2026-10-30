@@ -1,0 +1,35 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2024-10-25T18:27:08.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Lesson Assessment\r\n\r\nCreate a simple program to calculate GPA, following the steps below:\r\n\r\n::: details [Step 1]\r\n**Add:** Create a variable `student_name` and set it to `Rosa`\r\n:::\r\n\r\n::: details [Step 2]\r\n**Add:** Create the variables `science_score`, `math_score`, and `history_score`. Set the values to `90.4`, `88.8`, and `73.5` respectively.\r\n:::\r\n\r\n::: details [Step 3]\r\n**Add:** Create a variable `total_classes` and set the value to `3`\r\n:::\r\n\r\n::: details [Step 4]\r\n**Add:** Create an expression to calculate `average_score` by adding `science_score`, `math_score`, and `history_score` together, and then dividing by `total_classes`\r\n:::\r\n\r\n::: details [Step 5]\r\n**Add:** Print the `student_name` and `average_score` to the console. The output should take the following form: \"`student_name` has averaged `average_score` this semester\". \r\n:::\r\n",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# Variables\n\n\n# Expression\n\n\n# Print Statement\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      }
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-10-25T18:27:08.515+00:00\",\"changed\":[\"cloned from \\\"IPP_SampleProgression_UMC_11\\\"\"],\"cloned_from\":\"IPP_SampleProgression_UMC_11\"},{\"changed_at\":\"2024-10-25 18:36:26 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"project_template_level_name\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-25 18:37:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-25 18:37:47 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-25 18:41:46 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

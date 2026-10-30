@@ -1,6 +1,7 @@
 import React from 'react';
-import FreeResponsesSurveyTable from './FreeResponsesSurveyTable';
+
 import {surveyOne} from './assessmentsTestHelpers';
+import FreeResponsesSurveyTable from './FreeResponsesSurveyTable';
 
 export default {
   component: FreeResponsesSurveyTable,

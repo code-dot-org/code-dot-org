@@ -1,0 +1,10 @@
+.button {
+  padding-left: 10px;
+  padding-right: 10px;
+  justify-content: center;
+  // Match the vertical offset of the user header button (.header_user, plus
+  // .user_menu/.create_menu/.help_button), which sit 7px lower than the rest of
+  // the header. header_left and header_right share the same base margin-top, so
+  // this lines the scrapbook button's top edge up with the user menu.
+  margin-top: 7px;
+}

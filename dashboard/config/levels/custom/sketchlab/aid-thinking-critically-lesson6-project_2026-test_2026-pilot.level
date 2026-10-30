@@ -1,0 +1,131 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "game_id": 75,
+  "created_at": "2026-03-10T14:56:05.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "aid-thinking-critically-lesson4-project-template_2026-test_2026-pilot",
+    "long_instructions": "#Project Work: Truth & Crediblity Meter\r\n\r\n**Create a scale that shows levels of trust** For example: High Trust → Check Carefully → Low Trust.\r\n1.  Design it in a way that fits your project style.\r\n2.  Describe each level of your tool\r\n\r\n\t**Consider:** \r\n\t- What makes an AI response more trustworthy?\r\n\t- Add tips and warning signs that mean “slow down and check”?\r\n\r\n<br>\r\n\r\n3. Add at least two actions someone should take before trusting AI.\r\n\r\n\t**For examples:**\r\n\t- Ask for sources\r\n\t- Add missing details\r\n\t- Cross-check with another source\r\n\t- Look for assumptions",
+    "start_sources": {
+      "source": {
+        "type": "excalidraw",
+        "version": 2,
+        "source": "https://levelbuilder-studio.code.org",
+        "elements": [
+          {
+            "id": "OSnZ8Ltdch8IdHQSTyfYc",
+            "type": "arrow",
+            "x": 274.599609375,
+            "y": 267.9443359375,
+            "width": 155.91796875,
+            "height": 12.890625,
+            "angle": 0,
+            "strokeColor": "#e03131",
+            "backgroundColor": "transparent",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": {
+              "type": 2
+            },
+            "seed": 1924504671,
+            "version": 45,
+            "versionNonce": 742801631,
+            "isDeleted": false,
+            "boundElements": null,
+            "updated": 1772569788895,
+            "link": null,
+            "locked": false,
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                155.91796875,
+                12.890625
+              ]
+            ],
+            "lastCommittedPoint": null,
+            "startBinding": null,
+            "endBinding": {
+              "elementId": "b6firXJVHQXYlqTJiYVNr",
+              "focus": -0.5845911840966328,
+              "gap": 14.5263671875
+            },
+            "startArrowhead": null,
+            "endArrowhead": "arrow"
+          },
+          {
+            "id": "b6firXJVHQXYlqTJiYVNr",
+            "type": "text",
+            "x": 445.0439453125,
+            "y": 268.7158203125,
+            "width": 377.7796630859375,
+            "height": 25,
+            "angle": 0,
+            "strokeColor": "#e03131",
+            "backgroundColor": "transparent",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "seed": 1816430001,
+            "version": 55,
+            "versionNonce": 1151913215,
+            "isDeleted": false,
+            "boundElements": [
+              {
+                "id": "OSnZ8Ltdch8IdHQSTyfYc",
+                "type": "arrow"
+              }
+            ],
+            "updated": 1772569788895,
+            "link": null,
+            "locked": false,
+            "text": "Milestone 3 Project Stuff goes here. ",
+            "fontSize": 20,
+            "fontFamily": 1,
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "baseline": 18,
+            "containerId": null,
+            "originalText": "Milestone 3 Project Stuff goes here. ",
+            "lineHeight": 1.25
+          }
+        ],
+        "appState": {
+          "gridSize": null,
+          "viewBackgroundColor": "#ffffff",
+          "scrollX": -125.99934895833337,
+          "scrollY": -70.90151486840986,
+          "zoom": {
+            "value": 1.2000000000000002
+          }
+        },
+        "files": {
+        },
+        "externalFiles": {
+        }
+      }
+    },
+    "name_suffix": "_2026-pilot"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-03-10T14:56:05.975+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson6-project_2026-test\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson6-project_2026-test\"}]"
+}]]></config>
+</Sketchlab>

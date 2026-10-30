@@ -1,0 +1,27 @@
+name 'thinking-critically-about-ai-postassessment_2026-pilot'
+title 'AID Thinking Critically About AI Pre-Assessment'
+submittable 'true'
+anonymous 'false'
+activity_guide_level 'false'
+
+page
+text 'thinking-critically-about-ai-postassessment-intro_2026-pilot'
+level 'thinking-critically-about-ai-postassessment-q1_2026-pilot'
+level 'thinking-critically-about-ai-postassessment-q2_2026-pilot'
+level 'thinking-critically-about-ai-postassessment-q3_2026-pilot'
+level 'thinking-critically-about-ai-postassessment-q4_2026-pilot'
+level 'thinking-critically-about-ai-postassessment-q5_2026-pilot'
+
+page
+level 'thinking-critically-about-ai-postassessment-q6_2026-pilot'
+level 'thinking-critically-about-ai-postassessment-q7_2026-pilot'
+level 'thinking-critically-about-ai-postassessment-q8_2026-pilot'
+level 'thinking-critically-about-ai-postassessment-q9_2026-pilot'
+level 'thinking-critically-about-ai-postassessment-q10_2026-pilot'
+
+page
+level 'thinking-critically-about-ai-postassessment-q11_2026-pilot'
+level 'thinking-critically-about-ai-postassessment-q12_2026-pilot'
+level 'thinking-critically-about-ai-postassessment-q13_2026-pilot'
+level 'thinking-critically-about-ai-postassessment-q14_2026-pilot'
+level 'thinking-critically-about-ai-postassessment-q15_2026-pilot'

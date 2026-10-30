@@ -5,19 +5,19 @@ description 'description here'
 markdown <<MARKDOWN
 # Preparing for an individual lesson
 
-## Three resource to review for one lesson
+## Three resources to review for one lesson
 While preparing to teach a lesson, it is helpful to review three different sources of information for that lesson:
 
-1. The lesson plan, which you just accessed in the prior level.
-2. The slide deck, which is listed in the “Links” section of the lesson plan, and 
-3. The levels from Code Studio
+1. **The lesson plan**, which you just accessed in the prior level.
+2. **The slide deck**, which is listed in the “Links” section of the lesson plan, and 
+3. **The levels** from Code Studio
 
-While the lesson plan is the anchor for all of the resources, the slides and Code Studio provide additional information needed to teach the lesson.  These three resources provide different, but connected and essential pieces of of information for the lesson.
+While the lesson plan is the anchor for all of the resources, the slides and Code Studio provide additional information needed to teach the lesson. These three resources provide different, but connected and essential pieces of of information for the lesson.
 
-*Some lessons have additional resources included in the links.  This might include handouts, activity guides, or extra practice resources.  The lesson plan or slides will also point to these resources when applicable.*
+*Some lessons have additional resources included in the links. This might include handouts, activity guides, or extra practice resources. The lesson plan or slides will also point to these resources when applicable.*
 
 ## An example lesson
-Let’s look at how these resources are connected in a specific lesson.  Below is an example from <a href="https://studio.code.org/s/csa1-2022/lessons/4" target="_blank">Unit 1, Lesson 4</a>.  During this portion of the lesson:
+Let’s look at how these resources are connected in a specific lesson.  Below is an example from <a href="https://studio.code.org/s/csa1-2024/lessons/4" target="_blank">Unit 1, Lesson 4</a>.  During this portion of the lesson:
 
 1. The lesson plan describes the prompt in the slides and the slides give additional details. 
 2. Then, the lesson plan and the slides direct students to a level in Code Studio and the level has more details about the programming task. 

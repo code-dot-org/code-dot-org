@@ -1,15 +1,18 @@
-import {ApplabInterfaceMode} from '../../applab/constants';
-import {DataView} from '../constants';
-import DataOverview from './DataOverview';
-import DataTableView from './DataTableView';
-import Dialog from '../../templates/Dialog';
+import {Typography as MuiTypography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
-import PaneHeader, {PaneSection, PaneButton} from '../../templates/PaneHeader';
 import {connect} from 'react-redux';
-import {clearWarning} from '../redux/data';
+
 import msg from '@cdo/locale';
-import color from '../../util/color';
+
+import {ApplabInterfaceMode} from '../../applab/constants';
+import Dialog from '../../legacySharedComponents/Dialog';
+import PaneHeader, {PaneSection, PaneButton} from '../../templates/PaneHeader';
+import {DataView} from '../constants';
+import {clearWarning} from '../redux/data';
+
+import DataOverview from './DataOverview';
+import DataTableView from './DataTableView';
 
 class DataWorkspace extends React.Component {
   static propTypes = {
@@ -36,29 +39,56 @@ class DataWorkspace extends React.Component {
         <PaneHeader
           id="headers"
           dir={this.props.isRtl ? 'rtl' : 'ltr'}
-          hasFocus={!this.props.isRunning}
           className={this.props.isRunning ? 'is-running' : ''}
         >
           {(this.props.view === DataView.OVERVIEW ||
             this.props.view === DataView.PROPERTIES) && (
             <PaneSection id="library-header" style={styles.libraryHeader}>
-              <span id="library-header-span">{msg.dataLibraryHeader()}</span>
+              <MuiTypography
+                variant="body4"
+                id="library-header-span"
+                sx={{
+                  color: 'var(--text-neutral-white-fixed)',
+                }}
+              >
+                {msg.dataLibraryHeader()}
+              </MuiTypography>
             </PaneSection>
           )}
-          <div id="dataModeHeaders">
+          <div
+            id="dataModeHeaders"
+            style={{
+              flex: '1 1 0',
+              display: 'flex',
+              flexDirection: 'row',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+            }}
+          >
+            <PaneSection
+              id="workspace-header"
+              style={{
+                flex: '1 1 0',
+              }}
+            >
+              <MuiTypography
+                variant="body4"
+                id="workspace-header-span"
+                sx={{
+                  color: 'var(--text-neutral-white-fixed)',
+                }}
+              >
+                {msg.dataWorkspaceHeader()}
+              </MuiTypography>
+            </PaneSection>
             <PaneButton
               id="data-mode-versions-header"
-              iconClass="fa fa-clock-o"
+              iconProps={{iconName: 'clock', iconStyle: 'regular'}}
               label={msg.showVersionsHeader()}
               headerHasFocus={!this.props.isRunning}
               isRtl={this.props.isRtl}
               onClick={this.props.handleVersionHistory}
             />
-            <PaneSection id="workspace-header">
-              <span id="workspace-header-span">
-                {msg.dataWorkspaceHeader()}
-              </span>
-            </PaneSection>
           </div>
         </PaneHeader>
 
@@ -87,17 +117,20 @@ const styles = {
     left: 0,
     right: 0,
     padding: 0,
-    backgroundColor: color.white,
+    backgroundColor: 'var(--background-neutral-primary)',
     boxSizing: 'border-box',
-    borderLeft: '1px solid gray',
-    borderRight: '1px solid gray',
-    borderBottom: '1px solid gray',
+    borderLeft: '1px solid var(--borders-neutral-strong)',
+    borderRight: '1px solid var(--borders-neutral-strong)',
+    borderBottom: '1px solid var(--borders-neutral-strong)',
     overflowY: 'auto',
   },
   libraryHeader: {
-    display: 'block',
-    width: 270,
-    borderRight: '1px solid gray',
+    alignItems: 'center',
+    justifyContent: 'center',
+    display: 'flex',
+    width: 271,
+    height: 30,
+    borderRight: '1px solid var(--borders-neutral-strong)',
     float: 'left',
   },
 };

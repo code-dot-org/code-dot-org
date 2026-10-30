@@ -9,6 +9,8 @@ export interface ProjectState {
   showTryAgainDialog: boolean;
   workspaceAlert: WorkspaceAlert | null;
   inRestrictedShareMode: boolean;
+  exceedsAbuseThreshold: boolean;
+  hasPrivacyProfanityViolation: boolean;
   teacherHasConfirmedUploadWarning: boolean;
 }
 
@@ -42,6 +44,8 @@ const initialState: ProjectState = {
   showTryAgainDialog: false,
   workspaceAlert: null,
   inRestrictedShareMode: false,
+  exceedsAbuseThreshold: false,
+  hasPrivacyProfanityViolation: false,
   teacherHasConfirmedUploadWarning: false,
 };
 
@@ -95,6 +99,13 @@ const projectReduxSlice = createSlice({
     refreshInRestrictedShareMode: state => {
       state.inRestrictedShareMode = dashboard.project.inRestrictedShareMode();
     },
+    refreshExceedsAbuseThreshold: state => {
+      state.exceedsAbuseThreshold = dashboard.project.exceedsAbuseThreshold();
+    },
+    refreshHasPrivacyProfanityViolation: state => {
+      state.hasPrivacyProfanityViolation =
+        dashboard.project.hasPrivacyProfanityViolation();
+    },
     refreshTeacherHasConfirmedUploadWarning: state => {
       state.teacherHasConfirmedUploadWarning =
         dashboard.project.teacherHasConfirmedUploadWarning();
@@ -115,6 +126,8 @@ export const {
   setNameFailure,
   unsetNameFailure,
   refreshInRestrictedShareMode,
+  refreshExceedsAbuseThreshold,
+  refreshHasPrivacyProfanityViolation,
   refreshTeacherHasConfirmedUploadWarning,
 } = projectReduxSlice.actions;
 

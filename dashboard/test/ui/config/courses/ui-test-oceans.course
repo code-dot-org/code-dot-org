@@ -1,0 +1,24 @@
+{
+  "name": "ui-test-oceans",
+  "script_names": [
+    "ui-test-oceans"
+  ],
+  "original_script_names": [
+    "ui-test-oceans"
+  ],
+  "published_state": "stable",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "ui-test-oceans",
+    "numbered_units": "auto",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

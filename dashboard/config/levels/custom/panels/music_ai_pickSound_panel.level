@@ -1,0 +1,22 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2024-09-30T18:36:13.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "encrypted": "false",
+    "background": "music-black",
+    "name_suffix": "_3",
+    "panels": [
+      {
+        "imageUrl": "https://images.code.org/1e2594de35f17668394b32b160e88db3-choose sound.gif",
+        "text": "###Change the sound\n\nClick on the sound block to access the sound library. \n\nChoose any sound you like!",
+        "key": "musiclab_intro_panels_start_v2-623c36d1-b475-414b-8e2f-da7d27012391"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2024-09-30T18:36:13.184+00:00\",\"changed\":[\"cloned from \\\"music_lab_intro_panels_start2_3\\\"\"],\"cloned_from\":\"music_lab_intro_panels_start2_3\"},{\"changed_at\":\"2024-09-30 18:36:37 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-01 21:14:38 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+</Panels>

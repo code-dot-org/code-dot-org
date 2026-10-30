@@ -14,8 +14,8 @@
  *  -average for each facilitator across all of their workshops (facilitatorAverage-{facilitatorId})
  *  -average for all workshops for this course (overall)
  **/
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import * as Table from 'reactabular-table';
 
 const INCLUDE_OVERALL = false;

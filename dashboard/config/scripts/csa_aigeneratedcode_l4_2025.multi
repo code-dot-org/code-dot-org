@@ -1,0 +1,19 @@
+name 'CSA-AIGeneratedCode-L4_2025'
+title 'Check for Understanding'
+
+wrong 'Relying on AI-generated code without a clear program plan to minimize development time.'
+right 'Developing a well-thought-out program plan, refining prompts for AI, and performing thorough testing.'
+wrong 'Allowing AI to handle both planning and coding, which eliminates human intervention and potential bias.'
+wrong 'Using AI to generate code quickly, but skipping testing since AI ensures the program will work as expected.'
+
+markdown <<MARKDOWN
+Which of the following strategies will best help a programmer effectively use AI to develop a program?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+A well-thought-out program plan helps guide the AI in producing more accurate code. Refining prompts ensures that the AI generates the desired output, while thorough testing addresses any potential errors or biases. 
+
+Other options are incorrect because they either rely too heavily on AI without planning or human oversight, leading to inaccurate or biased results.
+MARKDOWN
+
+allow_multiple_attempts true

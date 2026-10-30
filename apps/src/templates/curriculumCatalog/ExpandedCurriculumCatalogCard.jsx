@@ -1,27 +1,37 @@
-import React, {useEffect, useRef} from 'react';
-import style from './expanded_curriculum_catalog_card.module.scss';
-import centererStyle from './curriculum_catalog_card.module.scss';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import PropTypes from 'prop-types';
-import {
-  BodyTwoText,
-  Heading3,
-  Heading4,
-} from '@cdo/apps/componentLibrary/typography';
+import CloseButton from '@code-dot-org/component-library/closeButton';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import Link from '@code-dot-org/component-library/link';
 import {TextLink} from '@dsco_/link';
-import Button from '@cdo/apps/templates/Button';
+import {Button as MuiButton, Typography} from '@mui/material';
+import PropTypes from 'prop-types';
+import React, {useEffect, useRef} from 'react';
+
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {AiChatToolsDependency} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
+
 import {
   translatedCourseOfferingDeviceTypes,
   translatedAvailableResources,
 } from '../teacherDashboard/CourseOfferingHelpers';
 
+import {
+  curriculumCatalogCardIdPrefix,
+  defaultImageSrc,
+} from './curriculumCatalogConstants';
+
+import centererStyle from './curriculum_catalog_card.module.scss';
+import style from './expanded_curriculum_catalog_card.module.scss';
+
 const ExpandedCurriculumCatalogCard = ({
+  courseKey,
   courseDisplayName,
   duration,
   gradeRange,
   subjectsAndTopics,
   deviceCompatibility,
+  aiChatToolsDependency,
   description,
   professionalLearningProgram,
   video,
@@ -31,12 +41,15 @@ const ExpandedCurriculumCatalogCard = ({
   assignButtonOnClick,
   assignButtonDescription,
   onClose,
+  handleSetExpandedCardKey,
   isInUS,
   imageSrc,
   imageAltText,
   availableResources,
   isSignedOut,
   isTeacher,
+  recommendedSimilarCurriculum,
+  recommendedStretchCurriculum,
 }) => {
   const isTeacherOrSignedOut = isSignedOut || isTeacher;
   const expandedCardRef = useRef(null);
@@ -55,7 +68,7 @@ const ExpandedCurriculumCatalogCard = ({
     },
   };
 
-  const devices = JSON.parse(deviceCompatibility);
+  const devices = deviceCompatibility ? JSON.parse(deviceCompatibility) : {};
 
   const resoucesOrder = [
     'Lesson Plan',
@@ -75,6 +88,22 @@ const ExpandedCurriculumCatalogCard = ({
     return ++availableResourceCounter < availableResourcesCount;
   };
 
+  const handleClickRecommendedSimilarCurriculum = () => {
+    analyticsReporter.sendEvent(EVENTS.RECOMMENDED_SIMILAR_CURRICULUM_CLICKED, {
+      current_curriculum_offering: courseKey,
+      recommended_similar_curriculum_offering: recommendedSimilarCurriculum.key,
+    });
+    handleSetExpandedCardKey(recommendedSimilarCurriculum.key);
+  };
+
+  const handleClickRecommendedStretchCurriculum = () => {
+    analyticsReporter.sendEvent(EVENTS.RECOMMENDED_STRETCH_CURRICULUM_CLICKED, {
+      current_curriculum_offering: courseKey,
+      recommended_stretch_curriculum_offering: recommendedStretchCurriculum.key,
+    });
+    handleSetExpandedCardKey(recommendedStretchCurriculum.key);
+  };
+
   useEffect(() => {
     const yOffset =
       expandedCardRef.current.getBoundingClientRect().top +
@@ -82,10 +111,6 @@ const ExpandedCurriculumCatalogCard = ({
       150;
     window.scrollTo({top: yOffset, behavior: 'smooth'});
   }, [expandedCardRef]);
-
-  const quickViewButtonColor = !isTeacherOrSignedOut
-    ? Button.ButtonColor.brandSecondaryDefault
-    : Button.ButtonColor.neutralDark;
 
   return (
     <div ref={expandedCardRef}>
@@ -96,32 +121,40 @@ const ExpandedCurriculumCatalogCard = ({
         <div className={style.expandedCardContainer}>
           <div className={style.flexDivider}>
             <div className={style.courseOfferingContainer}>
-              <Heading3 style={{marginBottom: '8px'}}>
+              <Typography variant="h3" gutterBottom>
                 {courseDisplayName}
-              </Heading3>
+              </Typography>
               <div className={style.infoContainer}>
                 <div className={style.iconWithDescription}>
-                  <FontAwesome icon="user" className="fa-solid" />
-                  <BodyTwoText>{gradeRange}</BodyTwoText>
+                  <FontAwesomeV6Icon iconName="user" iconStyle="solid" />
+                  <Typography variant="body2" gutterBottom>
+                    {gradeRange}
+                  </Typography>
                 </div>
                 <div className={style.iconWithDescription}>
-                  <FontAwesome icon="clock" className="fa-solid" />
-                  <BodyTwoText>{duration}</BodyTwoText>
+                  <FontAwesomeV6Icon iconName="clock" iconStyle="solid" />
+                  <Typography variant="body2" gutterBottom>
+                    {duration}
+                  </Typography>
                 </div>
                 <div className={style.iconWithDescription}>
-                  <FontAwesome icon="book" className="fa-solid" />
-                  <BodyTwoText className={style.subjectsText}>
+                  <FontAwesomeV6Icon iconName="book" iconStyle="solid" />
+                  <Typography
+                    className={style.subjectsText}
+                    variant="body2"
+                    gutterBottom
+                  >
                     {i18n.topic() + ': ' + subjectsAndTopics.join(', ')}
-                  </BodyTwoText>
+                  </Typography>
                 </div>
               </div>
               <hr className={style.horizontalDivider} />
               <div className={style.centerContentContainer}>
                 <div className={style.descriptionVideoContainer}>
                   <div className={style.descriptionContainer}>
-                    <BodyTwoText className={style.descriptionText}>
+                    <Typography variant="body2" gutterBottom>
                       {description}
-                    </BodyTwoText>
+                    </Typography>
                   </div>
                   <div className={style.mediaContainer}>
                     {video ? (
@@ -151,17 +184,17 @@ const ExpandedCurriculumCatalogCard = ({
                   <div className={style.resourcesContainer}>
                     {availableResourcesCount > 0 && (
                       <div>
-                        <Heading4 visualAppearance="heading-xs">
+                        <Typography component="h4" variant="h6" gutterBottom>
                           {i18n.availableResources()}
-                        </Heading4>
+                        </Typography>
                         <hr className={style.thickDivider} />
                         {resoucesOrder.map(
                           resource =>
                             availableResources[resource] && (
                               <div key={resource}>
-                                <BodyTwoText>
+                                <Typography variant="body2" gutterBottom>
                                   {translatedAvailableResources[resource]}{' '}
-                                </BodyTwoText>
+                                </Typography>
                                 {displayDivider() && (
                                   <hr className={style.horizontalDivider} />
                                 )}
@@ -176,18 +209,18 @@ const ExpandedCurriculumCatalogCard = ({
                     (professionalLearningProgram ||
                       selfPacedPlCourseOfferingPath) && (
                       <div className={style.professionalLearningContainer}>
-                        <Heading4 visualAppearance="heading-xs">
+                        <Typography component="h4" variant="h6" gutterBottom>
                           {i18n.professionalLearning()}
-                        </Heading4>
+                        </Typography>
                         <hr className={style.thickDivider} />
                         {professionalLearningProgram && (
                           <TextLink
                             text={i18n.facilitatorLedWorkshops()}
                             href={professionalLearningProgram}
                             icon={
-                              <FontAwesome
-                                icon="arrow-up-right-from-square"
-                                className="fa-solid"
+                              <FontAwesomeV6Icon
+                                iconName="arrow-up-right-from-square"
+                                iconStyle="solid"
                               />
                             }
                           />
@@ -201,9 +234,9 @@ const ExpandedCurriculumCatalogCard = ({
                             text={i18n.selfPacedPl()}
                             href={selfPacedPlCourseOfferingPath}
                             icon={
-                              <FontAwesome
-                                icon="arrow-up-right-from-square"
-                                className="fa-solid"
+                              <FontAwesomeV6Icon
+                                iconName="arrow-up-right-from-square"
+                                iconStyle="solid"
                               />
                             }
                           />
@@ -214,73 +247,133 @@ const ExpandedCurriculumCatalogCard = ({
               </div>
               <hr className={style.horizontalDivider} />
               <div className={style.compatibilityContainer}>
-                {Object.keys(devices).map(device => (
-                  <div key={device} className={style.iconWithDescription}>
-                    <FontAwesome
-                      icon={iconData[devices[device]].icon}
-                      className={`fa-solid ${iconData[devices[device]].color}`}
+                {Object.keys(devices).map(
+                  device =>
+                    devices[device] !== '' && (
+                      <div key={device} className={style.iconWithDescription}>
+                        <FontAwesomeV6Icon
+                          iconName={iconData[devices[device]].icon}
+                          iconStyle="solid"
+                          className={iconData[devices[device]].color}
+                        />
+                        <Typography variant="body2" gutterBottom>
+                          {device !== 'no_device'
+                            ? translatedCourseOfferingDeviceTypes[device]
+                                .charAt(0)
+                                .toUpperCase() +
+                              translatedCourseOfferingDeviceTypes[device].slice(
+                                1
+                              )
+                            : i18n.offline()}
+                        </Typography>
+                      </div>
+                    )
+                )}
+                {aiChatToolsDependency === AiChatToolsDependency.ESSENTIAL && (
+                  <div className={style.iconWithDescription}>
+                    <FontAwesomeV6Icon
+                      iconName="ai-bot-solid"
+                      iconFamily="kit"
+                      className={style.aiBotIcon}
                     />
-                    <BodyTwoText>
-                      {device !== 'no_device'
-                        ? translatedCourseOfferingDeviceTypes[device]
-                            .charAt(0)
-                            .toUpperCase() +
-                          translatedCourseOfferingDeviceTypes[device].slice(1)
-                        : i18n.offline()}
-                    </BodyTwoText>
+                    <Typography variant="body2" gutterBottom>
+                      Requires AI chat tools
+                    </Typography>
                   </div>
-                ))}
+                )}
               </div>
               <hr className={style.horizontalDivider} />
               <div className={style.buttonsContainer}>
-                <Button
-                  __useDeprecatedTag
-                  color={quickViewButtonColor}
-                  type="button"
-                  href={pathToCourse}
-                  aria-label={
-                    isTeacherOrSignedOut
-                      ? i18n.quickViewDescription({
-                          course_name: courseDisplayName,
-                        })
-                      : i18n.tryCourseNow({
-                          course_name: courseDisplayName,
-                        })
-                  }
-                  text={
-                    isTeacherOrSignedOut
-                      ? i18n.seeCurriculumDetails()
-                      : i18n.tryNow()
-                  }
-                  className={centererStyle.buttonFlex}
-                />
-                {isTeacherOrSignedOut && (
-                  <Button
-                    color={Button.ButtonColor.brandSecondaryDefault}
-                    type="button"
-                    onClick={() => assignButtonOnClick('expanded-card')}
-                    aria-label={assignButtonDescription}
-                    text={i18n.assignToClassSections()}
+                {isTeacherOrSignedOut ? (
+                  <>
+                    <MuiButton
+                      variant="outlined"
+                      color="secondary"
+                      size="medium"
+                      className={centererStyle.buttonFlex}
+                      aria-label={i18n.quickViewDescription({
+                        course_name: courseDisplayName,
+                      })}
+                      href={pathToCourse}
+                    >
+                      {i18n.seeCurriculumDetails()}
+                    </MuiButton>
+                    <MuiButton
+                      variant="contained"
+                      color="primary"
+                      size="medium"
+                      className={centererStyle.buttonFlex}
+                      onClick={() => assignButtonOnClick('expanded-card')}
+                      aria-label={assignButtonDescription}
+                      type="button"
+                    >
+                      {i18n.assignToClassSections()}
+                    </MuiButton>
+                  </>
+                ) : (
+                  <MuiButton
+                    variant="contained"
+                    color="primary"
+                    size="medium"
                     className={centererStyle.buttonFlex}
-                  />
+                    aria-label={i18n.tryCourseNow({
+                      course_name: courseDisplayName,
+                    })}
+                    href={pathToCourse}
+                  >
+                    {i18n.tryNow()}
+                  </MuiButton>
                 )}
               </div>
             </div>
             <div className={style.relatedCurriculaContainer}>
-              <div className={style.closeButton}>
-                <Button
+              <div className={style.closeButtonContainer}>
+                <CloseButton
                   onClick={onClose}
-                  icon="xmark"
-                  iconClassName="fa-solid"
                   aria-label="Close Button"
+                  size="l"
                 />
               </div>
-              <div className={style.relatedContainer} style={{display: 'none'}}>
-                <Heading4 visualAppearance="heading-xs">
-                  {i18n.relatedCurricula()}
-                </Heading4>
-                <hr className={style.thickDivider} />
-              </div>
+              {recommendedSimilarCurriculum && (
+                <div className={style.relatedContainer}>
+                  <Typography component="h4" variant="h6" gutterBottom>
+                    {i18n.relatedCurricula()}
+                  </Typography>
+                  <hr className={style.thickDivider} />
+                  <img
+                    id="similarCurriculumImage"
+                    src={recommendedSimilarCurriculum.image || defaultImageSrc}
+                    alt={recommendedSimilarCurriculum.display_name}
+                  />
+                  <Link
+                    id="similarCurriculumButton"
+                    name={recommendedSimilarCurriculum.display_name}
+                    className={style.relatedCurriculaLink}
+                    text={recommendedSimilarCurriculum.display_name}
+                    href={`#${curriculumCatalogCardIdPrefix}${recommendedSimilarCurriculum.key}`}
+                    onClick={handleClickRecommendedSimilarCurriculum}
+                  />
+                  {recommendedStretchCurriculum && (
+                    <>
+                      <img
+                        id="stretchCurriculumImage"
+                        src={
+                          recommendedStretchCurriculum.image || defaultImageSrc
+                        }
+                        alt={recommendedStretchCurriculum.display_name}
+                      />
+                      <Link
+                        id="stretchCurriculumButton"
+                        name={recommendedStretchCurriculum.display_name}
+                        className={style.relatedCurriculaLink}
+                        text={recommendedStretchCurriculum.display_name}
+                        href={`#${curriculumCatalogCardIdPrefix}${recommendedStretchCurriculum.key}`}
+                        onClick={handleClickRecommendedStretchCurriculum}
+                      />
+                    </>
+                  )}
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -288,12 +381,16 @@ const ExpandedCurriculumCatalogCard = ({
     </div>
   );
 };
+
 ExpandedCurriculumCatalogCard.propTypes = {
+  courseKey: PropTypes.string.isRequired,
   courseDisplayName: PropTypes.string.isRequired,
   duration: PropTypes.string.isRequired,
   gradeRange: PropTypes.string.isRequired,
   subjectsAndTopics: PropTypes.arrayOf(PropTypes.string).isRequired,
   deviceCompatibility: PropTypes.string.isRequired,
+  aiChatToolsDependency: PropTypes.oneOf(Object.values(AiChatToolsDependency))
+    .isRequired,
   description: PropTypes.string.isRequired,
   professionalLearningProgram: PropTypes.string,
   video: PropTypes.string,
@@ -303,11 +400,15 @@ ExpandedCurriculumCatalogCard.propTypes = {
   assignButtonOnClick: PropTypes.func,
   assignButtonDescription: PropTypes.string,
   onClose: PropTypes.func,
+  handleSetExpandedCardKey: PropTypes.func.isRequired,
   isInUS: PropTypes.bool,
   imageSrc: PropTypes.string,
   imageAltText: PropTypes.string,
   availableResources: PropTypes.object,
   isTeacher: PropTypes.bool.isRequired,
   isSignedOut: PropTypes.bool.isRequired,
+  recommendedSimilarCurriculum: PropTypes.object,
+  recommendedStretchCurriculum: PropTypes.object,
 };
+
 export default ExpandedCurriculumCatalogCard;

@@ -1,14 +1,19 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import Link from '@code-dot-org/component-library/link';
+import orderBy from 'lodash/orderBy';
+import markdownToTxt from 'markdown-to-txt';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import i18n from '@cdo/locale';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
-import wrappedSortable from '../tables/wrapped_sortable';
+
+import {nestedUnitUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
+import i18n from '@cdo/locale';
+
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
-import orderBy from 'lodash/orderBy';
+import wrappedSortable from '../tables/wrapped_sortable';
+
 import {textResponsePropType} from './textReponsesDataApi';
-import {scriptUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 
 const TABLE_WIDTH = tableLayoutStyles.table.width;
 const TABLE_COLUMN_WIDTHS = {
@@ -25,35 +30,53 @@ class TextResponsesTable extends Component {
     responses: PropTypes.arrayOf(textResponsePropType),
     sectionId: PropTypes.number.isRequired,
     isLoading: PropTypes.bool,
-    scriptName: PropTypes.string,
+    courseVersionName: PropTypes.string,
+    unitPosition: PropTypes.number,
   };
 
   state = {};
 
   studentNameFormatter = (name, {rowData}) => {
-    const {sectionId, scriptName} = this.props;
-    const studentUrl = scriptUrlForStudent(
+    const {sectionId, courseVersionName, unitPosition} = this.props;
+    const studentUrl = nestedUnitUrlForStudent(
       sectionId,
-      scriptName,
+      courseVersionName,
+      unitPosition,
       rowData.studentId
     );
 
     if (studentUrl) {
       return (
-        <a
+        <Link
           className="uitest-name-cell"
-          style={tableLayoutStyles.link}
+          size="s"
           href={studentUrl}
-          target="_blank"
-          rel="noopener noreferrer"
+          openInNewTab
         >
           {name}
-        </a>
+        </Link>
       );
     } else {
       return <span className="uitest-name-cell">{name}</span>;
     }
   };
+
+  // Questions are often authored in markdown. Strip the formatting to plain
+  // text. markdownToTxt leaves a few things behind that we clean up ourselves:
+  //  - markdown images whose URL contains spaces aren't valid syntax, so they
+  //    survive as literal `![](...)` text;
+  //  - raw <img> tags authored as HTML;
+  //  - heading markers with no space after '#' (`##Foo`), which markdownToTxt
+  //    doesn't treat as a heading.
+
+  questionFormatter = question =>
+    question
+      ? markdownToTxt(question)
+          .replace(/!\[[^\]]*\]\([^)]*\)/g, '')
+          .replace(/<img[^>]*>/gi, '')
+          .replace(/^[ \t]*#+[ \t]*/gm, '')
+          .trim()
+      : question;
 
   responseFormatter = (_, {rowData}) => {
     const {response, url} = rowData;
@@ -65,14 +88,9 @@ class TextResponsesTable extends Component {
     return (
       <div>
         {clippedResponse}
-        <a
-          style={tableLayoutStyles.link}
-          href={url}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Link href={url} size="s" openInNewTab>
           {i18n.seeFullResponse()}
-        </a>
+        </Link>
       </div>
     );
   };
@@ -158,6 +176,7 @@ class TextResponsesTable extends Component {
           transforms: [sortable],
         },
         cell: {
+          formatters: [this.questionFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell,
@@ -209,10 +228,12 @@ class TextResponsesTable extends Component {
 
     if (isLoading) {
       return (
-        <FontAwesome
+        <FontAwesomeV6Icon
           id="uitest-spinner"
-          icon="spinner"
-          className="fa-pulse fa-3x"
+          iconName="spinner"
+          iconStyle="solid"
+          animationType="spin-pulse"
+          className="fa-3x"
         />
       );
     }

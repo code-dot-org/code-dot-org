@@ -1,0 +1,18 @@
+name 'CSA U5L6-L5_pilot-2025'
+title 'Check for Understanding'
+description 'Match each term to its correct definition.'
+height '100'
+
+question 'alias'
+answer 'a reference variable that points to the same object as another reference variable'
+
+question 'short-circuit evaluation'
+answer 'a process in which the evaluation of a logical expression exits when the result is clear, even before the complete evaluation of the expression'
+
+question 'instance method'
+answer 'a method that requires an object of the class to be created before it can be called'
+
+question 'cast'
+answer 'to assign a value of one type to another'
+
+allow_multiple_attempts true

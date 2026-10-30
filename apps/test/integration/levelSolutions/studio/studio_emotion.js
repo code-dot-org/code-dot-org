@@ -1,6 +1,8 @@
-var tickWrapper = require('../../util/tickWrapper');
 import {TestResults} from '@cdo/apps/constants';
+
 var Emotions = require('@cdo/apps/studio/constants.js').Emotions;
+
+var tickWrapper = require('../../util/tickWrapper');
 
 var levelDef = {
   map: [

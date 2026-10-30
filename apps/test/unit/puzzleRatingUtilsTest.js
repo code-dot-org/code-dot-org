@@ -1,5 +1,6 @@
 import $ from 'jquery';
-import {assert} from '../util/reconfiguredChai';
+
+import {assert} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 var puzzleRatingUtils = require('@cdo/apps/puzzleRatingUtils');
 
@@ -55,6 +56,7 @@ describe('Puzzle Rating Utils', function () {
     });
 
     it('saves the rating if a button is enabled', function () {
+      // eslint-disable-next-line no-restricted-properties
       container
         .querySelectorAll('.puzzle-rating-btn')[0]
         .classList.add('enabled');
@@ -67,6 +69,7 @@ describe('Puzzle Rating Utils', function () {
 
     it("doesn' squash existing ratings", function () {
       puzzleRatingUtils.setPuzzleRatings_(sampleRatings);
+      // eslint-disable-next-line no-restricted-properties
       container
         .querySelectorAll('.puzzle-rating-btn')[0]
         .classList.add('enabled');

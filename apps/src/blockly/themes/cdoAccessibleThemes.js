@@ -1,16 +1,19 @@
-import GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
+
 import fontConstants from '@cdo/apps/fontConstants';
+
 import {Themes} from '../constants';
+
 import {
   deuteranopiaBlockStyles,
   protanopiaBlockStyles,
   tritanopiaBlockStyles,
 } from './cdoAccessibleStyles';
 
-export const CdoProtanopiaTheme = GoogleBlockly.Theme.defineTheme(
+export const CdoProtanopiaTheme = BlocklyCore.Theme.defineTheme(
   Themes.PROTANOPIA,
   {
-    base: GoogleBlockly.Themes.Classic,
+    base: BlocklyCore.Themes.Classic,
     blockStyles: protanopiaBlockStyles,
     categoryStyles: {},
     componentStyles: {
@@ -24,10 +27,10 @@ export const CdoProtanopiaTheme = GoogleBlockly.Theme.defineTheme(
   }
 );
 
-export const CdoDeuteranopiaTheme = GoogleBlockly.Theme.defineTheme(
+export const CdoDeuteranopiaTheme = BlocklyCore.Theme.defineTheme(
   Themes.DEUTERANOPIA,
   {
-    base: GoogleBlockly.Themes.Classic,
+    base: BlocklyCore.Themes.Classic,
     blockStyles: deuteranopiaBlockStyles,
     categoryStyles: {},
     componentStyles: {
@@ -41,10 +44,10 @@ export const CdoDeuteranopiaTheme = GoogleBlockly.Theme.defineTheme(
   }
 );
 
-export const CdoTritanopiaTheme = GoogleBlockly.Theme.defineTheme(
+export const CdoTritanopiaTheme = BlocklyCore.Theme.defineTheme(
   Themes.TRITANOPIA,
   {
-    base: GoogleBlockly.Themes.Classic,
+    base: BlocklyCore.Themes.Classic,
     blockStyles: tritanopiaBlockStyles,
     categoryStyles: {},
     componentStyles: {

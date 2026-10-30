@@ -1,0 +1,22 @@
+name 'international-pedagogy-L18'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Congratulations, you are finished! 
+
+<img src="https://images.code.org/2df93307f477af0f75dc1c179d9a9a4c-image-1707852636486.30.31 AM.png" alt="Dance party chaacters celebrating" style="float: left; height: 350px; clear: both; margin: 0 20px 20px 0;">
+
+<div style="clear:both"/>
+<br>
+
+
+## Next Steps
+### **Start Teaching**
+
+Check out this <a href="https://support.code.org/hc/en-us/articles/115000488132-Creating-a-Classroom-Section" target="blank" rel="noopener noreferrer">support article</a> to learn how to create a class section. 
+
+### **Revisit This Content**
+
+You can return to this professional learning at any time to review your learning, access links or resources, or just refresh your memory!
+MARKDOWN

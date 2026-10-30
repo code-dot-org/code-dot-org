@@ -1,16 +1,19 @@
 import $ from 'jquery';
 import React from 'react';
-import PlayZone from '../components/playzone';
-import ReactDOM from 'react-dom';
-import {getResult} from './codeStudioLevels';
+
 import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
-import experiments from '@cdo/apps/util/experiments';
-import Sounds from '../../Sounds';
 import {
   LegacyErrorDialog,
   LegacySuccessDialog,
-} from '@cdo/apps/lib/ui/LegacyDialogContents';
+} from '@cdo/apps/legacySharedComponents/LegacyDialogContents';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
+import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
+
+import Sounds from '../../Sounds';
+import PlayZone from '../components/playzone';
+
+import {getResult} from './codeStudioLevels';
 
 /*
  * This file contains general logic for displaying modal dialogs
@@ -28,7 +31,9 @@ export function showDialog(component, callback, onHidden) {
     return;
   }
   const div = document.createElement('div');
-  ReactDOM.render(component, div);
+  createReactRoot(component, div, {
+    legacyReactDomRender: true,
+  });
   const content = div.childNodes[0];
   const dialog = new LegacyDialog({
     // Content is a div with a specific expected structure. See LegacyDialog.
@@ -156,14 +161,17 @@ export function processResults(onComplete, beforeHook) {
           const lessonName = `${i18n.lesson()} ${lessonInfo.position}: ${
             lessonInfo.name
           }`;
-          ReactDOM.render(
+          createReactRoot(
             <PlayZone
               lessonName={lessonName}
               onContinue={() => {
                 dialog.hide();
               }}
             />,
-            body
+            body,
+            {
+              legacyReactDomRender: true,
+            }
           );
           const dialog = new LegacyDialog({
             body: body,
@@ -171,7 +179,10 @@ export function processResults(onComplete, beforeHook) {
             redirect: lastServerResponse.nextRedirect,
           });
           dialog.show();
-        } else if (lastServerResponse.nextRedirect) {
+        } else if (
+          lastServerResponse.nextRedirect &&
+          !appOptions.stayOnLevelAfterSubmit
+        ) {
           if (appOptions.dialog.shouldShowDialog) {
             showDialog(getSuccessDialog(appOptions), null, () => {
               var lastServerResponse =

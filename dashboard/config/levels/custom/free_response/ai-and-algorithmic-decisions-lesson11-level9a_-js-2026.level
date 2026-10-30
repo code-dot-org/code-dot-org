@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2026-07-14T00:55:42.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "**Fixes:** List the changes you made to your app based on feedback or testing.",
+    "stay_on_level_after_submit": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_-js-2026",
+    "ai_tutor_available": "true"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-07-14T00:55:42.644+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson11-level9a_2026\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson11-level9a_2026\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

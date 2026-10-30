@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+
 import EmbeddedBlock from '@cdo/apps/templates/codeDocs/EmbeddedBlock';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 export const buildProgrammingExpressionMarkdown = function (
   programmingExpression
@@ -34,7 +35,7 @@ export default function StyledCodeBlock({programmingExpression}) {
 StyledCodeBlock.propTypes = {
   programmingExpression: PropTypes.shape({
     color: PropTypes.string,
-    syntax: PropTypes.string.isRequired,
+    syntax: PropTypes.string,
     link: PropTypes.string,
     parameters: PropTypes.array,
     name: PropTypes.string,

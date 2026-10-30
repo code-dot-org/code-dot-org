@@ -1,18 +1,26 @@
+import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import color from '../../../util/color';
-import LessonExtrasProgressBubble from '@cdo/apps/templates/progress/LessonExtrasProgressBubble';
+
+import {canUseLessonDeepDive} from '@cdo/apps/aichat/helpers/aiChatAccess';
 import {navigateToLevelId} from '@cdo/apps/code-studio/progressRedux';
 import {
-  levelsForLessonId,
   lessonExtrasUrl,
+  hasLessonPlan,
+  lessonTutorPath,
+  getCurrentLevel,
+  getCurrentLevels,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
+import LessonExtrasProgressBubble from '@cdo/apps/templates/progress/LessonExtrasProgressBubble';
+import LessonTutorProgressBubble from '@cdo/apps/templates/progress/LessonTutorProgressBubble';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import {levelWithProgressType} from '@cdo/apps/templates/progress/progressTypes';
-import {LevelKind, LevelStatus} from '@cdo/apps/util/sharedConstants';
+import experiments from '@cdo/apps/util/experiments';
+import {LevelKind, LevelStatus} from '@cdo/generated-scripts/sharedConstants';
+
 import {canChangeLevelInPage} from '../../browserNavigation';
-import $ from 'jquery';
+import remeasureOnFontsReady from '../header/remeasureOnFontsReady';
 
 /**
  * Lesson progress component used in level header and course overview.
@@ -22,17 +30,28 @@ class LessonProgress extends Component {
     levels: PropTypes.arrayOf(levelWithProgressType).isRequired,
     lessonName: PropTypes.string,
     lessonExtrasUrl: PropTypes.string,
+    hasLessonPlan: PropTypes.bool,
+    lessonTutorPath: PropTypes.string,
+    lessonId: PropTypes.number,
+    userId: PropTypes.number,
+    userType: PropTypes.string,
+    aiChatAccessLevel: PropTypes.string,
     isLessonExtras: PropTypes.bool,
     width: PropTypes.number,
     setDesiredWidth: PropTypes.func,
     currentPageNumber: PropTypes.number,
     currentLevelId: PropTypes.string,
     navigateToLevelId: PropTypes.func,
+    currentLevel: PropTypes.object,
   };
 
   getFullWidth() {
     const component = $(this.refs.fullProgressInner);
-    return component.length > 0 ? component.width() : 0;
+    // Measure with outerWidth so the inner's right padding counts: that
+    // padding reserves room for the assessment star badge, which overhangs
+    // the last bubble. Content width alone under-reports, and the container
+    // (overflow: hidden) then clips the badge.
+    return component.length > 0 ? component.outerWidth() : 0;
   }
 
   setDesiredWidth() {
@@ -43,6 +62,13 @@ class LessonProgress extends Component {
 
   componentDidMount() {
     this.setDesiredWidth();
+    this.cancelFontRemeasure = remeasureOnFontsReady(() =>
+      this.setDesiredWidth()
+    );
+  }
+
+  componentWillUnmount() {
+    this.cancelFontRemeasure?.();
   }
 
   componentDidUpdate() {
@@ -135,8 +161,27 @@ class LessonProgress extends Component {
   }
 
   render() {
-    const {currentPageNumber, lessonExtrasUrl, lessonName, navigateToLevelId} =
-      this.props;
+    const {
+      currentPageNumber,
+      lessonExtrasUrl,
+      hasLessonPlan,
+      lessonTutorPath,
+      lessonName,
+      lessonId,
+      userId,
+      userType,
+      aiChatAccessLevel,
+      navigateToLevelId,
+      currentLevel,
+      currentLevelId,
+    } = this.props;
+
+    const showLessonTutorBubble =
+      lessonTutorPath &&
+      hasLessonPlan &&
+      canUseLessonDeepDive(aiChatAccessLevel) &&
+      experiments.isEnabledAllowingQueryString(experiments.LESSON_TUTOR);
+
     let levels = this.props.levels;
 
     // Bonus levels should not count towards mastery.
@@ -147,8 +192,6 @@ class LessonProgress extends Component {
 
     const onBonusLevel = this.isOnBonusLevel();
 
-    const currentLevel = levels.find(level => level.isCurrentLevel);
-
     return (
       <div className="react_stage" style={styles.container}>
         <div
@@ -158,10 +201,12 @@ class LessonProgress extends Component {
           <div
             className="full_progress_inner"
             ref="fullProgressInner"
-            style={styles.inner}
+            style={styles.progressInner}
           >
             {levels.map((level, index) => {
-              let isCurrent = level.isCurrentLevel;
+              let isCurrent =
+                level.isCurrentLevel ||
+                level.sublevels?.some(sublevel => sublevel.isCurrentLevel);
               if (isCurrent && level.kind === LevelKind.assessment) {
                 isCurrent = currentPageNumber === level.pageNumber;
               }
@@ -202,6 +247,18 @@ class LessonProgress extends Component {
                 />
               </div>
             )}
+            {showLessonTutorBubble && (
+              <div>
+                <LessonTutorProgressBubble
+                  lessonTutorPath={lessonTutorPath}
+                  lessonId={lessonId}
+                  levelId={currentLevelId}
+                  lessonName={lessonName}
+                  userId={userId}
+                  userType={userType}
+                />
+              </div>
+            )}
           </div>
         </div>
         <div className="vignette" style={vignetteStyle} />
@@ -212,10 +269,10 @@ class LessonProgress extends Component {
 
 const styles = {
   container: {
-    backgroundColor: color.lightest_gray,
-    border: `1px solid ${color.lighter_gray}`,
+    backgroundColor: 'var(--background-neutral-secondary)',
+    border: '1px solid var(--borders-neutral-primary)',
     borderRadius: 5,
-    height: 40,
+    height: 42,
     position: 'relative',
     overflow: 'hidden',
   },
@@ -232,6 +289,18 @@ const styles = {
     alignItems: 'center',
     height: '100%',
   },
+  progressInner: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '100%',
+    // This padding is measured into the width reported to HeaderMiddle
+    // (getFullWidth uses outerWidth). Together with HeaderMiddle's 10px
+    // lessonProgressExtraWidth it fits the star badge overhanging the last
+    // bubble (8px past the content edge) with a 1px gap to the container
+    // edge, matching the badge's gap to the top.
+    paddingRight: 3,
+  },
   headerVignette: {
     width: '100%',
     height: '100%',
@@ -240,15 +309,15 @@ const styles = {
   },
   headerVignetteLeftRight: {
     background:
-      'linear-gradient(to right, rgba(231, 232, 234, 1) 0%, rgba(231, 232, 234, 0) 20px, rgba(231, 232, 234, 0) calc(100% - 20px), rgba(231, 232, 234, 1) 100%)',
+      'linear-gradient(to right, color-mix(in srgb, var(--background-neutral-secondary) 100%, transparent) 0%, color-mix(in srgb, var(--background-neutral-secondary) 0%, transparent) 20px, color-mix(in srgb, var(--background-neutral-secondary) 0%, transparent) calc(100% - 20px), color-mix(in srgb, var(--background-neutral-secondary) 100%, transparent) 100%)',
   },
   headerVignetteLeft: {
     background:
-      'linear-gradient(to right, rgba(231, 232, 234, 1) 0%, rgba(231, 232, 234, 0) 20px',
+      'linear-gradient(to right, color-mix(in srgb, var(--background-neutral-secondary) 100%, transparent) 0%, color-mix(in srgb, var(--background-neutral-secondary) 0%, transparent) 20px)',
   },
   headerVignetteRight: {
     background:
-      'linear-gradient(to right, rgba(231, 232, 234, 0) calc(100% - 20px), rgba(231, 232, 234, 1) 100%)',
+      'linear-gradient(to right, color-mix(in srgb, var(--background-neutral-secondary) 0%, transparent) calc(100% - 20px), color-mix(in srgb, var(--background-neutral-secondary) 100%, transparent) 100%)',
   },
   spacer: {
     marginRight: 'auto',
@@ -272,11 +341,24 @@ export const UnconnectedLessonProgress = LessonProgress;
 
 export default connect(
   state => ({
-    levels: levelsForLessonId(state.progress, state.progress.currentLessonId),
+    levels: getCurrentLevels(state),
+    currentLevel: getCurrentLevel(state),
     lessonExtrasUrl: lessonExtrasUrl(
       state.progress,
       state.progress.currentLessonId
     ),
+    hasLessonPlan: hasLessonPlan(
+      state.progress,
+      state.progress.currentLessonId
+    ),
+    lessonTutorPath: lessonTutorPath(
+      state.progress,
+      state.progress.currentLessonId
+    ),
+    lessonId: state.progress.currentLessonId,
+    userId: state.currentUser.userId,
+    userType: state.currentUser.userType,
+    aiChatAccessLevel: state.currentUser.aiChatAccessLevel,
     isLessonExtras: state.progress.isLessonExtras,
     currentPageNumber: state.progress.currentPageNumber,
     currentLevelId: state.progress.currentLevelId,

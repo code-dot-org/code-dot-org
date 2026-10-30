@@ -1,0 +1,25 @@
+name 'pl-aif-2-U3-array-method-CFU_2025'
+title 'Array Method Matching'
+
+height '75'
+
+question 'Adds an item to the end of the array.'
+answer '**push()**'
+question 'Adds an item to the front of an array.'
+answer '**unshift()**'
+question 'Removes the last item from the array.'
+answer '**pop()**'
+question 'Removes the first item from an array.'
+answer '**shift()**'
+
+
+markdown <<MARKDOWN
+
+MARKDOWN
+teacher_markdown <<MARKDOWN
+
+
+
+MARKDOWN
+
+allow_multiple_attempts true

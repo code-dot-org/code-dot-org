@@ -3,25 +3,22 @@
  */
 import _ from 'lodash';
 import {combineReducers} from 'redux';
-import {createUuid} from '@cdo/apps/utils';
+
+import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
+import {animations as animationsApi} from '@cdo/apps/clientApi';
+import {projectChanged, isOwner} from '@cdo/apps/code-studio/initApp/project';
 import {
   fetchURLAsBlob,
   blobToDataURI,
   dataURIToSourceSize,
 } from '@cdo/apps/imageUtils';
-import {animations as animationsApi} from '@cdo/apps/clientApi';
-import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
+import {createUuid} from '@cdo/apps/utils';
+
+import {P5LabInterfaceMode} from '../constants';
+import {throwIfSerializedAnimationListIsInvalid} from '../shapes';
+
 import {selectAnimation, selectBackground} from './animationTab';
 import {reportError} from './errorDialogStack';
-import {throwIfSerializedAnimationListIsInvalid} from '../shapes';
-import {
-  projectChanged,
-  isOwner,
-  getCurrentId,
-} from '@cdo/apps/code-studio/initApp/project';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
-import trackEvent from '@cdo/apps/util/trackEvent';
-import {P5LabInterfaceMode} from '../constants';
 
 // TODO: Overwrite version ID within session
 // TODO: Load exact version ID on project load
@@ -234,33 +231,11 @@ export function isNameUnique(name, animationListProps) {
  * @param {Object} animationList - object of {AnimationKey} to {AnimationProps}
  */
 function generateAnimationName(baseName, animationList) {
-  let unavailableNumbers = [];
-  // Match names with the form baseName_#
-  for (let animation in animationList) {
-    let animationName = animationList[animation].name;
-    if (
-      animationName &&
-      animationName.substring(0, baseName.length) === baseName
-    ) {
-      animationName = animationName.replace(baseName, '');
-      if (animationName[0] === '_') {
-        const brokenUpString = animationName.split('_');
-        // TODO: Address the fragility here if animationName includes multiple underscores.
-        const number = parseInt(brokenUpString.pop());
-        unavailableNumbers.push(number);
-      }
-    }
+  let number = 1;
+  while (!isNameUnique(`${baseName}_${number}`, animationList)) {
+    number++;
   }
-  unavailableNumbers.sort((a, b) => a - b);
-  let availableNumber = 1;
-  for (let i = 0; i < unavailableNumbers.length; i++) {
-    if (availableNumber === unavailableNumbers[i]) {
-      availableNumber++;
-    } else {
-      break;
-    }
-  }
-  return baseName + '_' + availableNumber.toString();
+  return `${baseName}_${number}`;
 }
 
 /**
@@ -280,7 +255,6 @@ export function setInitialAnimationList(
 
   // TODO (from 2015): Tear out this migration when it hasn't been used for at least 3 consecutive non-summer months.
   if (Array.isArray(serializedAnimationList)) {
-    trackEvent('Research', 'RanMigration', '2015-animation-migration');
     // We got old animation data that needs to be migrated.
     serializedAnimationList = {
       orderedKeys: serializedAnimationList.map(a => a.key),
@@ -306,15 +280,10 @@ export function setInitialAnimationList(
 
       if (animation.sourceUrl.includes('/v3/')) {
         // We want to replace this sprite with the /v1/ sprite
-        let details = `name=${animation.name};key=${loadedKey}`;
         if (animationsForV3Migration.propsByKey[loadedKey]) {
           // The key is the same in the main.json and in default sprites. Do a simple replacement.
           serializedAnimationList.propsByKey[loadedKey] =
             animationsForV3Migration.propsByKey[loadedKey];
-          trackEvent('Research', 'ReplacedSpriteByKey', details);
-        } else {
-          // We were unable to find a replacement for the /v3/ sprite
-          trackEvent('Research', 'CouldNotReplaceSprite', details);
         }
       }
     });
@@ -672,6 +641,11 @@ export function deleteAnimation(
 ) {
   return (dispatch, getState) => {
     const animationList = getState().animationList;
+    // A deleted image's object URL frees its Blob (no-op for dataURIs).
+    const removed = animationList.propsByKey[key];
+    if (removed?.dataURI?.startsWith('blob:')) {
+      URL.revokeObjectURL(removed.dataURI);
+    }
     let orderedKeys = animationList.orderedKeys;
     // If we're in spritelab, we need to make sure we don't set the selected animation to a background
     if (isSpriteLab) {
@@ -711,6 +685,38 @@ export function deleteAnimation(
   };
 }
 
+// Sprite Lab in Lab2 stores each loaded image as an object URL — a
+// ~30-byte handle onto the fetched Blob — instead of a base64 dataURI
+// string, which put roughly 1.3 bytes on the JS heap per image byte.
+// Legacy labs keep dataURIs (Piskel and the classic tab read them). See
+// SpriteLab2Engine.
+let storeLoadedImagesAsObjectUrls = false;
+export function setStoreLoadedImagesAsObjectUrls(enable) {
+  storeLoadedImagesAsObjectUrls = enable;
+}
+
+/**
+ * Revoke a list's object-URL images, freeing their Blobs. Call when the
+ * whole list is being replaced (level switch, Start Over re-seed).
+ */
+export function revokeObjectUrlImages(animationList) {
+  Object.values(animationList?.propsByKey || {}).forEach(props => {
+    if (props?.dataURI?.startsWith('blob:')) {
+      URL.revokeObjectURL(props.dataURI);
+    }
+  });
+}
+
+// Legacy labs must keep each loaded animation's Blob: cloneAnimation copies
+// it and saveAnimations re-uploads it under the clone's key. Sprite Lab in
+// Lab2 persists images through its own asset uploads and never calls
+// saveAnimations, so it opts out and saves the Blob's memory (see
+// SpriteLab2Engine).
+let retainBlobsOnLoad = true;
+export function setRetainBlobsOnLoad(retain) {
+  retainBlobsOnLoad = retain;
+}
+
 /**
  * Load the indicated animation (which must already have an entry in the project
  * animation list) from its source, whether that is S3 or the animation library.
@@ -736,26 +742,6 @@ function loadAnimationFromSource(key, callback) {
         // Brute-force recovery step: Remove the animation from our redux state;
         // it looks like it's already gone from the server.
 
-        // Log data about when this scenario occurs
-        firehoseClient.putRecord(
-          {
-            study: 'animation_no_load',
-            study_group: 'animation_no_load_v4',
-            event: isOwner()
-              ? 'animation_not_loaded_owner'
-              : 'animation_not_loaded_viewer',
-            project_id: getCurrentId(),
-            data_json: JSON.stringify({
-              sourceUrl: sourceUrl,
-              mainJsonSourceUrl: state.animationList.propsByKey[key].sourceUrl,
-              version: state.animationList.propsByKey[key].version,
-              animationName: state.animationList.propsByKey[key].name,
-              error: err.message,
-            }),
-          },
-          {includeUserId: true}
-        );
-
         if (isOwner()) {
           // Display error dialog
           dispatch(
@@ -770,12 +756,33 @@ function loadAnimationFromSource(key, callback) {
         return;
       }
 
+      if (storeLoadedImagesAsObjectUrls) {
+        // Reloading over a previous object URL frees the old Blob.
+        const previous = getState().animationList.propsByKey[key]?.dataURI;
+        if (previous?.startsWith('blob:')) {
+          URL.revokeObjectURL(previous);
+        }
+        const objectUrl = URL.createObjectURL(blob);
+        dataURIToSourceSize(objectUrl).then(sourceSize => {
+          dispatch({
+            type: DONE_LOADING_FROM_SOURCE,
+            key,
+            // The object URL alone keeps the Blob alive; redux retention
+            // follows the same opt-out as the dataURI path.
+            blob: retainBlobsOnLoad ? blob : undefined,
+            dataURI: objectUrl,
+            sourceSize,
+          });
+          callback();
+        });
+        return;
+      }
       blobToDataURI(blob, dataURI => {
         dataURIToSourceSize(dataURI).then(sourceSize => {
           dispatch({
             type: DONE_LOADING_FROM_SOURCE,
             key,
-            blob,
+            blob: retainBlobsOnLoad ? blob : undefined,
             dataURI,
             sourceSize,
           });
@@ -945,12 +952,28 @@ export function animationSourceUrl(key, props, channelId) {
 export function withAbsoluteSourceUrls(serializedList, channelId) {
   let list = _.cloneDeep(serializedList);
   list.orderedKeys.forEach(key => {
-    let props = list.propsByKey[key];
+    const props = list.propsByKey[key];
 
-    const relativeUrl = animationSourceUrl(key, props, channelId);
-    const sourceLocation = document.createElement('a');
-    sourceLocation.href = relativeUrl;
-    props.sourceUrl = sourceLocation.href;
+    const rawUrl = props.sourceUrl || animationSourceUrl(key, props, channelId);
+    let updatedUrl = rawUrl;
+
+    // Unwrap proxy if present
+    const proxyPrefix = '/media?u=';
+    if (rawUrl?.includes(proxyPrefix)) {
+      const encoded = rawUrl.split(proxyPrefix)[1];
+      updatedUrl = decodeURIComponent(encoded);
+    }
+
+    // Use relative URL for animation library URLs
+    if (updatedUrl.includes('v1/animation-library/')) {
+      props.sourceUrl = updatedUrl.split('code.org')[1] || updatedUrl;
+      return;
+    }
+
+    // Convert others to absolute URL (retaining original host)
+    const url = document.createElement('a');
+    url.href = updatedUrl;
+    props.sourceUrl = url.href;
   });
   return list;
 }

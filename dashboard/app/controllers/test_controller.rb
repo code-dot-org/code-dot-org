@@ -54,7 +54,7 @@ class TestController < ApplicationController
 
   def enroll_in_plc_course
     return unless (user = current_user)
-    unit_group = UnitGroup.find_by(name: 'All The PLC Things')
+    unit_group = UnitGroup.find_by(name: 'UI Test PLC Things')
     enrollment = Plc::UserCourseEnrollment.create(user: user, plc_course: unit_group.plc_course)
     enrollment.plc_unit_assignments.update_all(status: Plc::EnrollmentUnitAssignment::IN_PROGRESS)
     head :ok
@@ -71,12 +71,24 @@ class TestController < ApplicationController
     )
   end
 
-  def create_student_section_assigned_to_script
+  def create_student_section_assigned_to_course_and_unit
     return unless (user = current_user)
-    script = Unit.find_by_name(params.require(:script_name))
+    unit_group = UnitGroup.find_by_name!(params.require(:course_name))
+    unit_position = params.require(:unit_position).to_i
+    unit_group_unit = unit_group.default_unit_group_units.where(position: unit_position).first
+    raise "Unit not found for course #{unit_group.name} at position #{unit_position}" unless unit_group_unit
+    unit = unit_group_unit.script
 
-    Section.create!(name: "New Section", user: user, script: script, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
-    head :ok
+    ai_chat_access_level = AichatAccessHelper.compute_ai_chat_access_level(unit_group)
+    section = Section.create!(name: "New Section",
+                              user: user,
+                              script: unit,
+                              unit_group: unit_group,
+                              participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+                              ai_chat_access_level: ai_chat_access_level
+)
+
+    render json: {section_code: section.code}
   end
 
   def create_student_section_with_name
@@ -87,58 +99,101 @@ class TestController < ApplicationController
 
   def assign_course_and_unit_as_student
     return unless (user = current_user)
-    script = Unit.find_by_name(params.require(:script_name))
-    course = UnitGroup.find_by_name(params.require(:course_name))
+    course_name = params.require(:course_name)
+    unit_position = params.require(:unit_position).to_i
+    unit_context = Queries::Courses.get_unit_context(course_name, unit_position)
+    raise "Unit #{unit_position.inspect} not found in course #{course_name.inspect}" unless unit_context
+    unit_group = unit_context[:unit_group]
+    unit = unit_context[:unit]
 
-    name = "Fake User"
-    email = "user#{Time.now.to_i}_#{rand(1_000_000)}@test.xx"
-    password = name + "password"
-    attributes = {
-      name: name,
-      email: email,
-      password: password,
-      user_type: "teacher",
-      age: "21+"
-    }
-    fake_user = User.create!(attributes)
+    teacher_email = params[:teacher_email]
+    if teacher_email
+      teacher_user = User.find_by_email(teacher_email)
+    else
+      name = "Fake User"
+      email = "user#{Time.now.to_i}_#{rand(1_000_000)}@test.xx"
+      password = name + "password"
+      attributes = {
+        name: name,
+        email: email,
+        password: password,
+        user_type: "teacher",
+        age: "21+"
+      }
+      teacher_user = User.create!(attributes)
+    end
 
-    section = Section.create(name: "New Section", user: fake_user, script_id: script.id, course_id: course.id, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
+    section = Section.create(name: "New Section", user: teacher_user, script_id: unit.id, course_id: unit_group.id, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
     section.students << user
     section.save!
     head :ok
   end
 
-  def assign_script_as_student
+  def assign_course_as_student
     return unless (user = current_user)
-    script = Unit.find_by_name(params.require(:script_name))
+    course = UnitGroup.find_by_name(params.require(:course_name))
 
-    name = "Fake User"
-    email = "user#{Time.now.to_i}_#{rand(1_000_000)}@test.xx"
-    password = name + "password"
-    attributes = {
-      name: name,
-      email: email,
-      password: password,
-      user_type: "teacher",
-      age: "21+"
-    }
-    fake_user = User.create!(attributes)
+    teacher_email = params[:teacher_email]
+    if teacher_email
+      teacher_user = User.find_by_email(teacher_email)
+    else
+      name = "Fake User"
+      email = "user#{Time.now.to_i}_#{rand(1_000_000)}@test.xx"
+      password = name + "password"
+      attributes = {
+        name: name,
+        email: email,
+        password: password,
+        user_type: "teacher",
+        age: "21+"
+      }
+      teacher_user = User.create!(attributes)
+    end
 
-    section = Section.create(name: "New Section", user: fake_user, script: script, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
+    section_name = params[:section_name] || "New Section"
+    unit = course.single_unit_course? ? course.default_unit_group_units.first.script : nil
+    section = Section.create!(name: section_name, user: teacher_user, course_id: course.id, script: unit, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
     section.students << user
     section.save!
+
+    user.assign_script(unit, course) if unit
+
+    head :ok
+  end
+
+  def assign_section_to_course_and_unit
+    return unless (teacher = current_user)
+
+    course_name = params.require(:course_name)
+    unit_position = params.require(:unit_position)
+    unit_context = Queries::Courses.get_unit_context(course_name, unit_position)
+    raise "Unit #{unit_position.inspect} not found in course #{course_name.inspect}" unless unit_context
+    unit_group = unit_context[:unit_group]
+    unit = unit_context[:unit]
+
+    section = teacher.sections[params.require(:section_position).to_i - 1]
+    section.update!(unit_group: unit_group, script: unit)
+    section.students.each do |student|
+      student.assign_script(unit, unit_group)
+    end
+
     head :ok
   end
 
   def get_i18n_t
-    locale = params[:locale] || request.env['cdo.locale']
+    locale = params[:locale] || I18n.locale.to_s
     render plain: I18n.t(params.require(:key), locale: locale)
   end
 
   # Create a script containing a single lesson group, lesson and script level that has the is_migrated setting
+  #
+  # The name carries the curriculum data partition's "ui-test-" prefix, which is
+  # what lets the unit hold "UI Test " levels: those are the only levels a test
+  # environment seeds once the partition is complete, and ScriptLevel refuses to
+  # put one in any other unit. See dashboard/config/PARTITIONS.md.
   def create_migrated_script
     script = Retryable.retryable(on: ActiveRecord::RecordNotUnique) do
-      script_name = "temp-script-#{Time.now.to_i}-#{rand(1_000_000)}"
+      script_name = "ui-test-temp-script-#{Time.now.to_i}-#{rand(1_000_000)}"
       Unit.create!(name: script_name, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development)
     end
     script.is_migrated = true
@@ -180,9 +235,21 @@ class TestController < ApplicationController
       position: 1,
       activity_section_position: 1
     )
-    level = Level.find_by_name('Applab test')
+    level = Level.find_by_name!('UI Test Applab test')
     script_level.levels.push(level)
     render json: {script_name: script.name, lesson_id: lesson.id, lesson_without_lesson_plan_id: lesson_without_lesson_plan.id}
+  end
+
+  # "ui-test-" prefixed for the same reason as create_migrated_script: a temp
+  # course exists to hold a temp unit, and a unit on the test side of the
+  # partition belongs to a course on the test side.
+  def create_course
+    course = Retryable.retryable(on: ActiveRecord::RecordNotUnique) do
+      course_name = "ui-test-temp-course-#{Time.now.to_i}-#{rand(1_000_000)}"
+      UnitGroup.create!(name: course_name, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development)
+    end
+    course.save!
+    render json: {course_name: course.name}
   end
 
   # invalidate the specified script from the script cache, so that it will be
@@ -195,6 +262,12 @@ class TestController < ApplicationController
   def destroy_script
     script = Unit.find_by!(name: params[:script_name])
     script.destroy
+    head :ok
+  end
+
+  def destroy_course
+    course = UnitGroup.find_by!(name: params[:course_name])
+    course.destroy!
     head :ok
   end
 
@@ -282,7 +355,7 @@ class TestController < ApplicationController
 
   def create_applications
     %w(csd csp csa).each do |course|
-      (Pd::Application::TeacherApplication.statuses).each do |status|
+      Pd::Application::TeacherApplication.statuses.each do |status|
         teacher_email = "#{course}_#{status}@code.org"
         teacher = User.find_or_create_teacher(
           {name: "#{course} #{status}", email: teacher_email}, nil, nil
@@ -327,6 +400,11 @@ class TestController < ApplicationController
     head :ok
   end
 
+  def delete_workshop
+    Pd::Workshop.find_by_id(params[:workshop_id]).destroy
+    head :ok
+  end
+
   def create_pilot
     name = params.require(:pilot_name)
     Pilot.create_with(allow_joining_via_url: true, display_name: name).find_or_create_by(name: name)
@@ -341,8 +419,97 @@ class TestController < ApplicationController
     head :ok
   end
 
+  def set_single_section_experiment
+    SingleSectionExperiment.find_or_create_by!(
+      name: params[:experiment_name],
+      section: current_user.sections.first,
+      script: Unit.find_by(name: params[:script_name])
+    )
+    head :ok
+  end
+
   def get_validate_rubric_ai_config
-    EvaluateRubricJob.new.validate_ai_config
+    AiRubricConfig.validate_ai_config
     render plain: 'OK'
+  end
+
+  def complete_unit
+    course_name = params.require(:course_name)
+    unit_position = params.require(:unit_position).to_i
+    course_context = Queries::Courses.get_unit_context(course_name, unit_position)
+    unit_group = course_context[:unit_group]
+    unit_group_unit = course_context[:unit_group_unit]
+    raise "Unit not found for course #{unit_group.name} at position #{unit_position}" unless unit_group_unit
+    UserScript.create!(
+      user: current_user,
+      script: unit_group_unit.script,
+      unit_group: unit_group,
+      completed_at: Time.now
+    )
+    head :ok
+  end
+
+  # Creates the user and signs them in.
+  def create_user
+    user_params = params.require(:user)
+    user_opts = user_params.permit(
+      :user_type,
+      :email,
+      :password,
+      :password_confirmation,
+      :given_name,
+      :family_name,
+      :name,
+      :age,
+      :username,
+      :terms_of_service_version,
+      :sign_in_count,
+      :parent_email_preference_opt_in_required,
+      :parent_email_preference_opt_in,
+      :parent_email_preference_email,
+      :parent_email_preference_request_ip,
+      :parent_email_preference_source,
+      :provider,
+      :email_preference_opt_in,
+      :email_preference_form_kind,
+      :email_preference_request_ip,
+      :email_preference_source,
+      :created_at,
+      :country_code,
+      :us_state,
+      :user_provided_us_state,
+      :data_transfer_agreement_accepted,
+      :data_transfer_agreement_request_ip,
+      :data_transfer_agreement_kind,
+      :data_transfer_agreement_source,
+      :data_transfer_agreement_at,
+    )
+    if user_params[:sso]
+      user = User.new(**user_opts)
+      User.initialize_new_oauth_user(user, OmniAuth::AuthHash.new({provider: user_params[:sso], uid: user_params[:uid], info: {name: user_params[:name], given_name: user_params[:given_name], family_name: user_params[:family_name]}}), user_params)
+      user.save!
+    else
+      user = User.create!(**user_opts)
+    end
+    sign_in user
+    head :ok
+  end
+
+  # Accepts a parental request that was submitted by the current user
+  def accept_parental_request
+    permission_request = ParentalPermissionRequest.find_by(user: current_user)
+    Services::ChildAccount.grant_permission_request!(permission_request)
+    head :ok
+  end
+
+  # Endpoint for testing DCDO mocking.
+  # @see /dashboard/test/ui/features/dcdo_mocking.feature
+  def get_dcdo
+    render json: {
+      fetched: DCDO.get('dcdo_mocking_test', nil),
+      stored: DCDO.instance_variable_get(:@datastore_cache)&.
+        instance_variable_get(:@datastore)&.
+        get('dcdo_mocking_test'),
+    }
   end
 end

@@ -21,7 +21,7 @@
     "short_instructions": "Modify the \"get 3 nectar\" function so it makes me turn right instead of left to the flowers.",
     "use_modal_function_editor": "true",
     "use_contract_editor": "false",
-    "callout_json": "[\r\n  {\"localization_key\":\"edit_get_nectar\",\"callout_text\":\"Use this button to edit the function and change the direction the Bee will turn to get the nectar.\",\"element_id\":\"[block-id='4']>.blocklyIconGroup\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"left center\",\"at\":\"right center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
+    "callout_json": "[{\"localization_key\":\"edit_get_nectar\",\"callout_text\":\"Use this button to edit the function and change the direction the Bee will turn to get the nectar.\",\"element_id\":\"[block-id='4']>.blocklyIconGroup\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"left center\",\"at\":\"right center\"},\"style\":{\"classes\":\"\"}}},{\"element_id\":\"[data-id='4']>g>.blocklyFieldRect\",\"localization_key\":\"edit_get_nectar\",\"callout_text\":\"Use this button to edit the function and change the direction the Bee will turn to get the nectar.\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"left center\",\"at\":\"right center\"},\"style\":{\"classes\":\"\"}},\"on\":null}]",
     "long_instructions": "Modify the `get 3 nectar` function so it makes me turn right instead of left to the flowers.",
     "contract_highlight": "false",
     "contract_collapse": "false",
@@ -34,7 +34,7 @@
     "examples_required": "false",
     "fast_get_nectar_animation": "false",
     "hint_prompt_attempts_threshold": 4,
-    "contained_level_names": null
+    "preload_asset_list": null
   },
   "published": true,
   "level_concept_difficulty": {
@@ -54,7 +54,7 @@
                 <block type="maze_move">
                   <title name="DIR">moveForward</title>
                   <next>
-                    <block type="procedures_callnoreturn">
+                    <block type="procedures_callnoreturn" id="4">
                       <mutation name="get 3 nectar"/>
                       <next>
                         <block type="controls_repeat">

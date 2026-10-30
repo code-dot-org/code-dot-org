@@ -1,17 +1,22 @@
+import orderBy from 'lodash/orderBy';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import ReactTooltip from 'react-tooltip';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
-import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
-import i18n from '@cdo/locale';
-import wrappedSortable from '../tables/wrapped_sortable';
-import orderBy from 'lodash/orderBy';
-import PercentAnsweredCell from './PercentAnsweredCell';
+
 import styleConstants from '@cdo/apps/styleConstants';
-import {setQuestionIndex} from './sectionAssessmentsRedux';
-import ReactTooltip from 'react-tooltip';
+import i18n from '@cdo/locale';
+
+import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
+import wrappedSortable from '../tables/wrapped_sortable';
+
 import {optionDataPropTypeMatch} from './assessmentDataShapes';
+import PercentAnsweredCell from './PercentAnsweredCell';
+import {setQuestionIndex} from './sectionAssessmentsRedux';
+
+import moduleStyles from './match-overview-table.module.scss';
 
 export const COLUMNS = {
   OPTION: 0,
@@ -156,11 +161,11 @@ class MatchAssessmentsOverviewTable extends Component {
       props: {
         style: {
           ...tableLayoutStyles.cell,
-          ...styles.questionCell,
           maxWidth:
             styleConstants['content-width'] -
             numAnswers * (ANSWER_COLUMN_WIDTH + PADDING),
         },
+        className: moduleStyles.optionCell,
       },
     },
   });
@@ -236,11 +241,6 @@ const styles = {
   notAnsweredCell: {
     padding: 0,
     height: 40,
-  },
-  questionCell: {
-    overflow: 'hidden',
-    textOverflow: 'ellipsis',
-    whiteSpace: 'nowrap',
   },
 };
 

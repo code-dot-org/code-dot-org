@@ -1,13 +1,15 @@
+import * as BlocklyCore from 'blockly/core';
+
 import {commonI18n} from '@cdo/apps/types/locale';
 import color from '@cdo/apps/util/color';
+
 import {frameSizes} from './cdoConstants';
-import {BlockSvg, WorkspaceSvg} from 'blockly';
 
 /**
  * Represents an SVG frame element, used for Blockly block elements.
  */
 export default class SvgFrame {
-  protected element_: BlockSvg | WorkspaceSvg;
+  protected element_: BlocklyCore.BlockSvg | BlocklyCore.WorkspaceSvg;
   protected text: string;
   protected className: string;
   protected getColor: () => string;
@@ -32,7 +34,7 @@ export default class SvgFrame {
    * @param {number} [fontSize] - An optional override for the size of the header text.
    */
   constructor(
-    element: BlockSvg | WorkspaceSvg,
+    element: BlocklyCore.BlockSvg | BlocklyCore.WorkspaceSvg,
     text: string | undefined,
     className: string | undefined,
     getColor: () => string,
@@ -66,7 +68,7 @@ export default class SvgFrame {
   }
 
   initChildren(frameX: number, frameY: number) {
-    // Google Blockly's block ids are randomly generated and can
+    // Blockly's block ids are randomly generated and can
     // include invalid characters for element ids. Remove everything
     // except alphanumeric characters and whitespace, then collapse
     // multiple adjacent whitespace to single spaces.
@@ -159,7 +161,7 @@ export default class SvgFrame {
    * @param {number} [width] - The optional width of the frame.
    * @param {number} [height] - The optional height of the frame.
    */
-  render(width: number, height: number) {
+  render(width?: number, height?: number) {
     if (
       !this.frameGroup_ ||
       !this.frameClipRect_ ||

@@ -26,7 +26,8 @@
     },
     "contained_level_names": [
       "CSA U7L5-L1 Predict"
-    ]
+    ],
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2021-12-10T00:55:38.939+00:00\",\"changed\":[\"cloned from \\\"CSA U7L5-L1\\\"\"],\"cloned_from\":\"CSA U7L5-L1\"}]"

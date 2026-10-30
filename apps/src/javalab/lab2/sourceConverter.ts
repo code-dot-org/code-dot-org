@@ -1,0 +1,206 @@
+// Adapter between Java Lab's legacy flat source shape and codebridge's
+// MultiFileSource. The flat shape is what lives in S3 (in main.json under
+// `source:`) and what Rails emits as `start_sources`. Codebridge wants
+// MultiFileSource. Conversion happens at exactly two boundaries:
+// JavalabSourcesStore (S3 round-trip) and Javalab2View (start_sources at
+// mount). These functions are pure.
+//
+// Open/active tab state lives on the flat shape as optional `isOpen` and
+// `isActive` fields. Both are unknown extras to Javabuilder, which will safely ignore them.
+
+import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
+
+import {
+  FileId,
+  MultiFileSource,
+  ProjectFile,
+  ProjectFileType,
+} from '@cdo/apps/lab2/types';
+
+import {isStarterAssetUrl} from './starterAssets';
+import {JavalabFlatFile, JavalabFlatSource} from './types';
+
+function projectFileType(flat: JavalabFlatFile): ProjectFileType | undefined {
+  if (flat.isValidation) return ProjectFileType.VALIDATION;
+  if (!flat.isVisible) return ProjectFileType.SUPPORT;
+  // The flat shape doesn't persist types. A student's own uploads (url not
+  // under level_starter_assets) stay untyped; everything else is a starter,
+  // locked or not.
+  if (flat.url && !isStarterAssetUrl(flat.url)) {
+    return undefined;
+  }
+  return flat.locked ? ProjectFileType.LOCKED_STARTER : ProjectFileType.STARTER;
+}
+
+export function flatToMultiFile(
+  flat: JavalabFlatSource | null | undefined
+): MultiFileSource {
+  if (!flat || Object.keys(flat).length === 0) {
+    return {folders: {}, files: {}, openFiles: []};
+  }
+
+  const entries = Object.entries(flat);
+  const files: Record<FileId, ProjectFile> = {};
+  const idByName = new Map<string, FileId>();
+
+  // IDs must be numeric strings — codebridge's getNextFileId allocates new
+  // IDs as `String(max(Number(existingId)) + 1)`, so any non-numeric prefix
+  // here would make Number(id) === NaN and every newly-allocated id would
+  // collide on 'NaN'.
+  entries.forEach(([name, props], i) => {
+    const id = String(i);
+    idByName.set(name, id);
+    files[id] = {
+      id,
+      name,
+      contents: props.text ?? '',
+      folderId: DEFAULT_FOLDER_ID,
+      type: projectFileType(props),
+    };
+    if (props.url) files[id].url = props.url;
+  });
+
+  // Visible files (including validation files surfaced in start mode) are
+  // potential open tabs, ordered by legacy tabOrder. Ties and missing
+  // tabOrders fall back to original key order. Within that set, only files
+  // with isOpen !== false make it into openFiles (missing isOpen defaults
+  // to true).
+  const visible = entries
+    .map(([name, props], i) => ({name, props, i}))
+    .filter(e => e.props.isVisible || e.props.isValidation);
+  visible.sort((a, b) => {
+    const tabA = resolveTabOrder(a.props.tabOrder, a.i);
+    const tabB = resolveTabOrder(b.props.tabOrder, b.i);
+    if (tabA !== tabB) return tabA - tabB;
+    return a.i - b.i;
+  });
+  // Honor isActive on the first claiming file in tab order.
+  const activeEntry = visible.find(e => e.props.isActive === true);
+  if (activeEntry) {
+    const activeId = idByName.get(activeEntry.name);
+    if (activeId) files[activeId].active = true;
+  }
+
+  // openFiles = visible files where isOpen !== false. isActive=true
+  // implies open: codebridge's editing helpers assume active ⇒ open
+  // (see activateFileHelper / closeFileHelper), so we'd hand codebridge
+  // an inconsistent state otherwise.
+  const openFiles = visible
+    .filter(e => e.props.isOpen !== false || e.props.isActive === true)
+    .map(e => idByName.get(e.name))
+    .filter((id): id is FileId => !!id);
+
+  return {folders: {}, files, openFiles};
+}
+
+// tabOrder is optional on the legacy shape and can be missing, NaN, or
+// duplicated across files. Fall back to the file's position in the source
+// hash when it isn't a usable finite number.
+function resolveTabOrder(
+  tabOrder: number | undefined,
+  fallback: number
+): number {
+  return typeof tabOrder === 'number' && Number.isFinite(tabOrder)
+    ? tabOrder
+    : fallback;
+}
+
+function isVisibleForFlatShape(file: ProjectFile): boolean {
+  switch (file.type) {
+    case ProjectFileType.SUPPORT:
+    case ProjectFileType.SYSTEM_SUPPORT:
+    case ProjectFileType.VALIDATION:
+      return false;
+    default:
+      return true;
+  }
+}
+
+export function multiFileToFlat(
+  source: MultiFileSource | null | undefined
+): JavalabFlatSource {
+  if (!source || !source.files) return {};
+
+  const flat: JavalabFlatSource = {};
+  const openFiles = source.openFiles ?? [];
+  const openIndex = new Map<FileId, number>();
+  openFiles.forEach((id, idx) => openIndex.set(id, idx));
+
+  // tabOrder is set on open files (0..N-1) and omitted on everything
+  // else — closed tabs and support. Validation files are tabs in start
+  // mode, so they participate in openFiles like regular sources.
+  for (const file of Object.values(source.files)) {
+    const isVisible = isVisibleForFlatShape(file);
+    const isValidation = file.type === ProjectFileType.VALIDATION;
+    const isOpen = (isVisible || isValidation) && openIndex.has(file.id);
+    flat[file.name] = {
+      text: file.contents ?? '',
+      isVisible,
+      isValidation,
+      isOpen,
+      isActive: file.active === true,
+    };
+    if (file.url) flat[file.name].url = file.url;
+    if (file.type === ProjectFileType.LOCKED_STARTER) {
+      flat[file.name].locked = true;
+    }
+    if (openIndex.has(file.id)) {
+      flat[file.name].tabOrder = openIndex.get(file.id);
+    }
+  }
+
+  return flat;
+}
+
+// Levelbuilder save: split a MultiFileSource into `start_sources`
+// (everything except validation, in the flat shape) and `validation`
+// (validation files only, in the legacy `{text, tabOrder?}` shape plus
+// the lab2 isOpen/isActive flags so the editor restores tab state on
+// reload). The validation map is fed through `@level.validation=`, which
+// encrypts it into `encrypted_validation`. isValidation is implied by
+// the field name, so we drop it.
+export function splitForLevelbuilderSave(
+  source: MultiFileSource | null | undefined
+): {startSources: JavalabFlatSource; validation: JavalabFlatSource} {
+  const flat = multiFileToFlat(source);
+  const startSources: JavalabFlatSource = {};
+  const validation: JavalabFlatSource = {};
+  for (const [name, entry] of Object.entries(flat)) {
+    if (entry.isValidation) {
+      const v: JavalabFlatFile = {
+        text: entry.text,
+        isVisible: false,
+        isOpen: entry.isOpen,
+        isActive: entry.isActive,
+      };
+      if (entry.tabOrder !== undefined) v.tabOrder = entry.tabOrder;
+      validation[name] = v;
+    } else {
+      startSources[name] = entry;
+    }
+  }
+  return {startSources, validation};
+}
+
+// Start-mode load: merge the decrypted validation hash into the flat
+// start sources so the levelbuilder sees validation files as editable
+// tabs. Validation entries are tagged isValidation: true so they round
+// trip back into the validation hash on save.
+export function mergeValidationIntoStart(
+  flatStart: JavalabFlatSource | undefined,
+  validation: JavalabFlatSource | undefined
+): JavalabFlatSource | undefined {
+  if (!validation || Object.keys(validation).length === 0) {
+    return flatStart;
+  }
+  const merged: JavalabFlatSource = {...(flatStart ?? {})};
+  for (const [name, entry] of Object.entries(validation)) {
+    if (name in merged) {
+      console.warn(
+        `[javalab2] validation file "${name}" shadows a start source with the same name`
+      );
+    }
+    merged[name] = {...entry, isValidation: true};
+  }
+  return merged;
+}

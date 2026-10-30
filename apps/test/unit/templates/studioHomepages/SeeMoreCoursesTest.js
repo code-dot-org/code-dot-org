@@ -1,104 +1,52 @@
+import {Button as MuiButton} from '@mui/material';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {assert, expect} from '../../../util/reconfiguredChai';
-import SeeMoreCourses from '@cdo/apps/templates/studioHomepages/SeeMoreCourses';
-import ContentContainer from '@cdo/apps/templates/ContentContainer';
+
 import CourseCard from '@cdo/apps/templates/studioHomepages/CourseCard';
-import Button from '@cdo/apps/templates/Button';
-import color from '@cdo/apps/util/color';
+import SeeMoreCourses from '@cdo/apps/templates/studioHomepages/SeeMoreCourses';
+
 import {courses} from './homepagesTestData';
 
 describe('SeeMoreCourses', () => {
   it('shows a button when closed', () => {
     const wrapper = shallow(<SeeMoreCourses courses={courses} />);
-    assert(
-      wrapper.containsMatchingElement(
-        <Button
-          color={Button.ButtonColor.neutralDark}
-          icon="caret-down"
-          text="View more"
-        />
-      )
-    );
+    const button = wrapper.find(MuiButton);
+    expect(button.exists()).toBe(true);
+    expect(button.prop('children')).toBe('View more');
   });
 
   it('shows CourseCards when clicked', () => {
     const wrapper = shallow(<SeeMoreCourses courses={courses} />);
-    expect(wrapper.find('Button').exists());
-    wrapper.find('Button').simulate('click');
-    expect(wrapper.find('Button').exists()).to.be.false;
-    assert(
-      wrapper.containsMatchingElement(
-        <div>
-          <ContentContainer heading="" linkText="" link="" showLink={false}>
-            <div>
-              <CourseCard
-                title={courses[0].title}
-                description={courses[0].description}
-                link={courses[0].link}
-              />
-              <div
-                style={{
-                  width: 20,
-                  float: 'left',
-                  color: color.white,
-                }}
-              >
-                .
-              </div>
-            </div>
-            <div>
-              <CourseCard
-                title={courses[1].title}
-                description={courses[1].description}
-                link={courses[1].link}
-              />
-            </div>
-          </ContentContainer>
-        </div>
-      )
-    );
+    expect(wrapper.find(MuiButton).exists()).toBe(true);
+    wrapper.find(MuiButton).simulate('click');
+    expect(wrapper.find(MuiButton).exists()).toBe(false);
+    const courseCards = wrapper.find(CourseCard);
+    expect(courseCards).toHaveLength(courses.length);
+    courses.forEach((course, index) => {
+      expect(courseCards.at(index).props()).toMatchObject({
+        title: course.title,
+        description: course.description,
+        link: course.link,
+      });
+    });
   });
 
   it('shows PL CourseCards when clicked for PL Recent Courses area', () => {
     const wrapper = shallow(
       <SeeMoreCourses courses={courses} isProfessionalLearningCourse={true} />
     );
-    expect(wrapper.find('Button').exists());
-    wrapper.find('Button').simulate('click');
-    expect(wrapper.find('Button').exists()).to.be.false;
-    assert(
-      wrapper.containsMatchingElement(
-        <div>
-          <ContentContainer heading="" linkText="" link="" showLink={false}>
-            <div>
-              <CourseCard
-                title={courses[0].title}
-                description={courses[0].description}
-                link={courses[0].link}
-                isProfessionalLearningCourse={true}
-              />
-              <div
-                style={{
-                  width: 20,
-                  float: 'left',
-                  color: color.white,
-                }}
-              >
-                .
-              </div>
-            </div>
-            <div>
-              <CourseCard
-                title={courses[1].title}
-                description={courses[1].description}
-                link={courses[1].link}
-                isProfessionalLearningCourse={true}
-              />
-            </div>
-          </ContentContainer>
-        </div>
-      )
-    );
+    expect(wrapper.find(MuiButton).exists()).toBe(true);
+    wrapper.find(MuiButton).simulate('click');
+    expect(wrapper.find(MuiButton).exists()).toBe(false);
+    const courseCards = wrapper.find(CourseCard);
+    expect(courseCards).toHaveLength(courses.length);
+    courses.forEach((course, index) => {
+      expect(courseCards.at(index).props()).toMatchObject({
+        title: course.title,
+        description: course.description,
+        link: course.link,
+        isProfessionalLearningCourse: true,
+      });
+    });
   });
 });

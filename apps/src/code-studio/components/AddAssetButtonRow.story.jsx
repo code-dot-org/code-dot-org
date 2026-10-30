@@ -1,6 +1,7 @@
-import React from 'react';
-import AddAssetButtonRow from './AddAssetButtonRow';
 import {action} from '@storybook/addon-actions';
+import React from 'react';
+
+import AddAssetButtonRow from './AddAssetButtonRow';
 
 const mockApi = {
   getUploadUrl: () => {
@@ -28,6 +29,7 @@ const Template = args => (
     onUploadDone={action('onUploadDone')}
     onUploadError={action('onUploadError')}
     onSelectRecord={action('onSelectRecord')}
+    projectType="applab"
     {...args}
   />
 );

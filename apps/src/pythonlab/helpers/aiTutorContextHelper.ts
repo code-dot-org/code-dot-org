@@ -1,0 +1,106 @@
+import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
+import {codeBlock} from '@codebridge/utils/codeBlock';
+import {getFilePath} from '@codebridge/utils/getFilePath';
+
+import {tryFetchDocsForClass} from '@cdo/apps/aiTutor/docContextApi';
+import {
+  AiTutorContextHelper,
+  MAX_CONSOLE_LINES,
+} from '@cdo/apps/aiTutor/helpers/aiTutorContextHelper';
+import {AiTutorContext} from '@cdo/apps/aiTutor/types';
+import {stripAnsiSequences} from '@cdo/apps/codebridge/Console/MessageHelpers';
+import {ProjectFile} from '@cdo/apps/codebridge/types';
+import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
+import {studio} from '@cdo/apps/lib/util/urlHelpers';
+
+const LANGUAGES_TO_EXCLUDE_FROM_CONTEXT = ['md'];
+
+import PythonValidationTracker from '../progress/PythonValidationTracker';
+
+interface AiTutorPythonLabParams {
+  source: MultiFileSource | undefined;
+  validationFile: ProjectFile | undefined;
+  longInstructions: string | undefined;
+  miniAppName: string | undefined;
+  hasRun: boolean | undefined;
+  hasEdited: boolean | undefined;
+}
+export class AiTutorPythonLabContextHelper extends AiTutorContextHelper<AiTutorPythonLabParams> {
+  private documentationPromise?: Promise<string | undefined>;
+  private params?: AiTutorPythonLabParams;
+  protected override documentationLocation: string = studio(
+    '/docs/ide/pythonlab'
+  );
+
+  override setAiTutorContext(params: AiTutorPythonLabParams): void {
+    this.params = params;
+    if (
+      this.params.miniAppName &&
+      this.params.miniAppName === 'neighborhood' &&
+      !this.documentationPromise
+    ) {
+      this.documentationPromise = tryFetchDocsForClass('painter');
+    }
+  }
+
+  protected override async getAiTutorContext(): Promise<AiTutorContext> {
+    if (!this.params) return {};
+
+    const {source, validationFile, longInstructions, hasRun, hasEdited} =
+      this.params;
+    const sourceCode = source
+      ? Object.values(source.files)
+          .filter(file => {
+            const ext = file.name.split('.').pop()?.toLowerCase() ?? '';
+            if (LANGUAGES_TO_EXCLUDE_FROM_CONTEXT.includes(ext)) return false;
+            return (
+              (file.type !== ProjectFileType.VALIDATION &&
+                file.type !== ProjectFileType.SYSTEM_SUPPORT &&
+                file.type !== ProjectFileType.SUPPORT) ||
+              (file.type === ProjectFileType.SUPPORT && file.contents)
+            );
+          })
+          .map(file => {
+            const filePath = getFilePath(file, source.folders);
+            let prefix = '';
+            if (file.type === ProjectFileType.SUPPORT) {
+              prefix = `${filePath} is not visible to the student: \n`;
+            }
+
+            return `${prefix}filename: ${filePath}\n${codeBlock(
+              file.contents ?? ''
+            )}`;
+          })
+          .join('\n\n')
+      : undefined;
+
+    const validationContents = codeBlock(validationFile?.contents);
+
+    const validationResults = JSON.stringify(
+      PythonValidationTracker.getInstance().getValidationResults()
+    );
+
+    const documentation = await this.documentationPromise;
+
+    const consoleLines = CodebridgeRegistry.getInstance()
+      .getConsoleManager()
+      ?.getTerminalLines()
+      ?.slice(-MAX_CONSOLE_LINES)
+      ?.map(line => stripAnsiSequences(line));
+    const consoleOutput =
+      consoleLines && consoleLines.length > 0
+        ? codeBlock(consoleLines.join('\n'))
+        : undefined;
+
+    return {
+      sourceCode,
+      validationContents,
+      validationResults,
+      longInstructions,
+      documentation,
+      consoleOutput,
+      hasRun,
+      hasEdited,
+    };
+  }
+}

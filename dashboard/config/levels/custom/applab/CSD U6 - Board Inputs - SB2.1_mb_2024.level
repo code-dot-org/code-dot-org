@@ -1,0 +1,86 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2024-07-10T18:56:58.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "onBoardEvent": {
+        "dropdown": {
+          "0": [
+            "buttonA",
+            "buttonB"
+          ],
+          "1": [
+            "\"down\"",
+            "\"up\""
+          ]
+        }
+      },
+      "setProperty": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "long_instructions": "# Updating the Screen\r\n\r\nYou can also use buttons on the micro:bit to update elements on the screen. Let's create an app that updates the image to show arrows pointing left and right\r\n\r\n## Do This\r\n1) When the A button is down, show an arrow pointing right\r\n\t- Use an [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/) block to create a `down` event for the A button.\r\n\t- Use a [`setProperty()`(#fff176)](/docs/ide/applab/expressions/setProperty) block to update the `arrowImg` element so it's `image` property is a right arrow\r\n\t<details>\r\n    <summary> <strong>Show Me How</strong></summary>\r\n    <img src=\"https://images.code.org/2c544961336c062b89cc68f0759b6efe-arrow-right.gif\" />\r\n\t</details>\r\n    \r\n2) When the B button is down, show an arrow pointing left\r\n\t- Use an [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/) block to create a `down` event for the B button.\r\n\t- Use a [`setProperty()`(#fff176)](/docs/ide/applab/expressions/setProperty) block to update the `arrowImg` element so it's `image` property is a left arrow",
+    "instructions_important": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "disable_if_else_editing": "false",
+    "free_play": "false",
+    "validation_enabled": "true",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "execute_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "show_debug_watch": "true",
+    "fail_on_lint_errors": "false",
+    "debugger_disabled": "false",
+    "makerlab_enabled": "microbit",
+    "expand_debugger": "false",
+    "disable_procedure_autopopulate": "false",
+    "start_blocks": "//1) When the A button is down, show an arrow pointing right\r\n\r\n//2) When the B button is down, show an arrow pointing left\r\n",
+    "top_level_procedure_autopopulate": "false",
+    "parent_level_id": 20416,
+    "mini_rubric": "false",
+    "encrypted": "false",
+    "widget_mode": "false",
+    "libraries_enabled": "false",
+    "ai_enabled": "false",
+    "reference_links": [
+      "/courses/csd-2022/guides/microbit-physical-input",
+      "/courses/csd-2022/guides/microbit-display",
+      "/courses/csd-2022/guides/microbit-overview",
+      "/maker/setup"
+    ],
+    "start_html": "<div id=\"designModeViz\" class=\"appModern clip-content\" tabindex=\"1\" data-radium=\"true\" style=\"width: 320px; height: 450px; display: none;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"><img data-canonical-image-url=\"icon://fa-arrow-up\" data-image-type=\"icon\" data-object-fit=\"contain\" id=\"arrowImg\" style=\"height: 165px; width: 145px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; position: absolute; left: 85px; top: 155px; margin: 0px;\"></div></div>",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-07-10T18:56:58.929+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Inputs - SB2.1_mb2022\\\"\"],\"cloned_from\":\"CSD U6 - Board Inputs - SB2.1_mb2022\"}]"
+}]]></config>
+  <blocks/>
+</Applab>

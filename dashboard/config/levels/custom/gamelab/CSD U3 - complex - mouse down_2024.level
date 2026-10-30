@@ -1,5 +1,6 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 50,
   "created_at": "2023-11-28T21:12:24.000Z",
   "level_num": "custom",
@@ -71,7 +72,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "# Mouse Clicks\r\n\r\nHere's a program that drops a balloon down the screen.  Use an [`if / else`(#64B5F6)](/docs/ide/gamelab/expressions/ifElseBlock) statement to make the balloon go up and down according to whether or not the user is pressing the mouse.\r\n\r\n# Do This\r\n1) Add code that checks whether the mouse is being pressed.\r\n   - Drag out an [`if / else`(#64B5F6)](/docs/ide/gamelab/expressions/ifElseBlock) statement inside the draw loop.\r\n   - Add a [`mouseDown()`(#fff176)](/docs/ide/gamelab/expressions/mouseDown) to the [`if ()`(#64B5F6)](/docs/ide/gamelab/expressions/ifBlock) statement to detect if the left mouse button is being pressed.\r\n2) Move the balloon up the screen if the mouse is being pressed.\r\n   - Use the counter pattern inside the  [`if ()`(#64B5F6)](/docs/ide/gamelab/expressions/ifBlock) statement to make the balloon move up the screen.\r\n3) Otherwise, move the balloon down the screen.\r\n   - Move the existing counter pattern that moves the ballon down the screen into the  [`else`(#64B5F6)](/docs/ide/gamelab/expressions/ifElseBlock) part of the conditional statement.",
+    "long_instructions": "# Mouse Clicks\r\n\r\nHere's a program that drops a balloon down the screen.  Use an [`if / else`(#64B5F6)](/docs/ide/gamelab/expressions/ifElseBlock) statement to make the balloon go up and down according to whether or not the user is pressing the mouse.\r\n\r\n# Do This\r\n1) Add code that checks whether the mouse is being pressed.\r\n   - Drag out an [`if / else`(#64B5F6)](/docs/ide/gamelab/expressions/ifElseBlock) statement inside the draw loop.\r\n   - Add a [`mouseDown()`(#fff176)](/docs/ide/gamelab/expressions/mouseDown) to the [`if ()`(#64B5F6)](/docs/ide/gamelab/expressions/ifBlock) statement to detect if the left mouse button is being pressed.\r\n2) Move the balloon up the screen if the mouse is being pressed.\r\n   - Use the counter pattern inside the  [`if ()`(#64B5F6)](/docs/ide/gamelab/expressions/ifBlock) statement to make the balloon move up the screen.\r\n3) Otherwise, move the balloon down the screen.\r\n   - Move the existing counter pattern that moves the balloon down the screen into the  [`else`(#64B5F6)](/docs/ide/gamelab/expressions/ifElseBlock) part of the conditional statement.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "true",
@@ -111,27 +112,26 @@
     "parent_level_id": 20781,
     "name_suffix": "_2024",
     "reference_links": [
-      "/courses/csd-2022/guides/booleans-and-comparison-operators",
-      "/courses/csd-2022/guides/if-statements",
-      "/courses/csd-2022/guides/the-counter-pattern-2",
-      "/courses/csd-2022/guides/the-draw-loop",
-      "/courses/csd-2022/guides/sprites",
-      "/courses/csd-2022/guides/animation-tab",
-      "/courses/csd-2022/guides/sprite-properties",
-      "/courses/csd-2022/guides/random-numbers",
-      "/courses/csd-2022/guides/variables",
-      "/courses/csd-2022/guides/naming-variables"
+      "/courses/csd-2024/guides/booleans-and-comparison-operators",
+      "/courses/csd-2024/guides/if-statements",
+      "/courses/csd-2024/guides/the-counter-pattern-2",
+      "/courses/csd-2024/guides/the-draw-loop",
+      "/courses/csd-2024/guides/sprites",
+      "/courses/csd-2024/guides/animation-tab",
+      "/courses/csd-2024/guides/sprite-properties",
+      "/courses/csd-2024/guides/random-numbers",
+      "/courses/csd-2024/guides/variables",
+      "/courses/csd-2024/guides/naming-variables"
     ],
-    "map_reference": "/courses/csd-2022/guides/if-else-statements",
+    "map_reference": "/courses/csd-2024/guides/if-else-statements",
     "video_key": "csd_gamelab_if_else",
     "mini_rubric": "false",
     "encrypted": "false",
     "libraries_enabled": "false",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-11-28T21:12:24.622+00:00\",\"changed\":[\"cloned from \\\"CSD U3 - complex - mouse down_2023\\\"\"],\"cloned_from\":\"CSD U3 - complex - mouse down_2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-11-28T21:12:24.622+00:00\",\"changed\":[\"cloned from \\\"CSD U3 - complex - mouse down_2023\\\"\"],\"cloned_from\":\"CSD U3 - complex - mouse down_2023\"},{\"changed_at\":\"2024-11-14 23:32:48 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

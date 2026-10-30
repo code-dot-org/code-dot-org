@@ -1,22 +1,23 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
-import {getStore} from '@cdo/apps/redux';
 import {Provider} from 'react-redux';
-import getScriptData from '@cdo/apps/util/getScriptData';
-import i18n from '@cdo/locale';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
-import SummaryTopLinks from '@cdo/apps/templates/levelSummary/SummaryTopLinks';
-import SummaryResponses from '@cdo/apps/templates/levelSummary/SummaryResponses';
-import SummaryTeacherInstructions from '@cdo/apps/templates/levelSummary/SummaryTeacherInstructions';
+
 import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
+import {UnconnectedPredictSolution} from '@cdo/apps/lab2/views/components/Instructions/PredictSolution';
+import {getStore} from '@cdo/apps/redux';
+import SummaryContainer from '@cdo/apps/templates/levelSummary/SummaryContainer.jsx';
+import SummaryPredictQuestion from '@cdo/apps/templates/levelSummary/SummaryPredictQuestion';
+import SummaryTopLinks from '@cdo/apps/templates/levelSummary/SummaryTopLinks';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
+import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {
   const store = getStore();
   const scriptData = getScriptData('summary');
 
-  ReactDOM.render(
+  const isLevelGroup = scriptData.in_level_group;
+
+  createReactRoot(
     <Provider store={store}>
       <InstructorsOnly>
         <SummaryTopLinks scriptData={scriptData} />
@@ -25,45 +26,39 @@ $(document).ready(() => {
     document.getElementById('summary-top-links')
   );
 
-  $('.markdown-container').each(function () {
-    const container = this;
-    if (!container.dataset.markdown) {
-      return;
-    }
-
-    ReactDOM.render(
-      React.createElement(SafeMarkdown, container.dataset, null),
-      container
-    );
-  });
-
-  ReactDOM.render(
-    <Provider store={store}>
-      <InstructorsOnly>
-        <SummaryResponses scriptData={scriptData} />
-      </InstructorsOnly>
-    </Provider>,
+  createReactRoot(
+    <SummaryContainer
+      store={store}
+      scriptData={scriptData}
+      isLevelGroup={isLevelGroup}
+    />,
     document.getElementById('summary-responses')
   );
 
-  ReactDOM.render(
-    <Provider store={store}>
-      <InstructorsOnly>
-        <Notification
-          type={NotificationType.feedback}
-          notice={i18n.feedbackShareBannerTitle()}
-          details={i18n.feedbackShareBannerDesc()}
-          buttonText={i18n.feedbackShareBannerButton()}
-          buttonLink={'https://forms.gle/XsjRL9L3Mo5aC3KbA'}
-          dismissible={false}
-        />
-      </InstructorsOnly>
-    </Provider>,
-    document.getElementById('summary-feedback-banner')
-  );
+  // Predict levels are a lab2 feature that replace contained levels.
+  if (scriptData.levels[0].properties.predict_settings?.isPredictLevel) {
+    const predictQuestionContainer =
+      document.getElementById('predict-question');
+    const correctAnswerContainer = document.getElementById(
+      'summary-predict-correct-answer'
+    );
+    if (predictQuestionContainer) {
+      createReactRoot(
+        <SummaryPredictQuestion
+          question={scriptData.levels[0].properties.long_instructions}
+          predictSettings={scriptData.levels[0].properties.predict_settings}
+        />,
+        predictQuestionContainer
+      );
+    }
 
-  ReactDOM.render(
-    <SummaryTeacherInstructions scriptData={scriptData} />,
-    document.getElementById('summary-teacher-instructions')
-  );
+    if (correctAnswerContainer) {
+      createReactRoot(
+        <UnconnectedPredictSolution
+          predictSettings={scriptData.levels[0].properties.predict_settings}
+        />,
+        correctAnswerContainer
+      );
+    }
+  }
 });

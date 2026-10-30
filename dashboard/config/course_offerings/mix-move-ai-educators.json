@@ -1,0 +1,23 @@
+{
+  "key": "mix-move-ai-educators",
+  "display_name": "Mix & Move with AI - Educator's Experience",
+  "is_featured": false,
+  "assignable": true,
+  "curriculum_type": "Professional Learning",
+  "marketing_initiative": "HOAI",
+  "grade_levels": "K,1,2,3,4,5,6,7,8,9,10,11,12",
+  "header": "self_paced",
+  "image": "https://images.code.org/a4a8b1aa2a07228921f5af3f6dc9e041-Screenshot 2026-01-12 at 9.59.27 AM.png",
+  "cs_topic": null,
+  "school_subject": null,
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}",
+  "description": null,
+  "professional_learning_program": null,
+  "video": null,
+  "published_date": null,
+  "self_paced_pl_course_offering_key": null,
+  "ai_teaching_assistant_available": false,
+  "facilitator_course_permissions": [
+
+  ]
+}

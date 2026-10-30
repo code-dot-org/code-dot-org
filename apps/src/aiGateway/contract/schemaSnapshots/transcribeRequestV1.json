@@ -1,0 +1,18 @@
+{
+  "type": "object",
+  "properties": {
+    "token": {
+      "type": "string"
+    },
+    "model": {
+      "type": "string"
+    },
+    "audio": {}
+  },
+  "required": [
+    "token",
+    "model"
+  ],
+  "additionalProperties": false,
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

@@ -1,0 +1,25 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2026-03-04T01:44:52.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "aid-thinking-critically-lesson5-minilesson3-2026-test",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 28811,
+    "name_suffix": "_24",
+    "encrypted": "false",
+    "display_name": "Missing Perspectives",
+    "bubble_choice_description": "What might be left out of AI's responses?",
+    "thumbnail_url": "https://images.code.org/ffb7bb12bba0037eacc7627d77239915-video3.png"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2026-03-04T01:44:52.936+00:00\",\"changed\":[\"cloned from \\\"pl-aif-2-U2-updating-DOM-video\\\"\"],\"cloned_from\":\"pl-aif-2-U2-updating-DOM-video\"},{\"changed_at\":\"2026-03-04 01:49:08 +0000\",\"changed\":[\"video_key\",\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-03-04 01:59:09 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

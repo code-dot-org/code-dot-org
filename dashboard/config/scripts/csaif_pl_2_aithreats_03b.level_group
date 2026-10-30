@@ -1,0 +1,13 @@
+name 'csaif_pl_2_aithreats_03b'
+submittable 'false'
+anonymous 'false'
+activity_guide_level 'true'
+
+page
+text 'csaif_pl_2_aithreats_03'
+level 'csaif_pl_2_aithreats_03b-sub2'
+level 'csaif_pl_2_aithreats_03b-sub3'
+level 'csaif_pl_2_aithreats_03b-sub4'
+level 'csaif_pl_2_aithreats_03b-sub5'
+
+

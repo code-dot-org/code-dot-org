@@ -1,17 +1,22 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import NotificationBanner from '@code-dot-org/component-library/notification-banner';
+import {Button as MuiButton, Tooltip} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useMemo} from 'react';
 import {connect} from 'react-redux';
-import i18n from '@cdo/locale';
-import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
+
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
   asyncLoadCoteacherInvite,
   asyncLoadSectionData,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import Button from '../Button';
-import {BodyTwoText, StrongText} from '@cdo/apps/componentLibrary/typography';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import i18n from '@cdo/locale';
+
+import styles from './coteacher-invite-notification.module.scss';
+
+const COLLABORATE_ICON = {iconName: 'users'};
 
 const CoteacherInviteNotification = ({
   isForPl,
@@ -19,6 +24,7 @@ const CoteacherInviteNotification = ({
   asyncLoadSectionData,
   coteacherInvite,
   coteacherInviteForPl,
+  destructiveLoad = false,
 }) => {
   const invite = useMemo(() => {
     if (!!coteacherInviteForPl && isForPl) {
@@ -33,7 +39,7 @@ const CoteacherInviteNotification = ({
     HttpClient.put(api, '', true)
       .then(() => {
         asyncLoadCoteacherInvite();
-        asyncLoadSectionData();
+        asyncLoadSectionData(null, destructiveLoad);
       })
       .catch(err => console.error(err));
   };
@@ -55,39 +61,57 @@ const CoteacherInviteNotification = ({
   if (!invite) {
     return null;
   }
+
   return (
-    <Notification
-      dismissible={false}
-      type={NotificationType.collaborate}
-      iconStyles={styles.icon}
-      notice={i18n.coteacherInvite({
-        invitedByName: invite.invited_by_name,
-      })}
-      details={
-        <BodyTwoText style={{marginBottom: 0}}>
+    <NotificationBanner
+      variant="primary"
+      className={styles.notificationContainer}
+      icon={COLLABORATE_ICON}
+      title={
+        <>
+          {i18n.coteacherInvite({
+            invitedByName: invite.invited_by_name,
+          })}
+          <Tooltip title={i18n.coteacherTooltip()} placement="top">
+            <button
+              type="button"
+              className={styles.tooltipTrigger}
+              aria-label="More information"
+            >
+              <FontAwesomeV6Icon iconName="circle-info" />
+            </button>
+          </Tooltip>
+        </>
+      }
+      description={
+        <>
           {i18n.coteacherInviteDescription({
             invitedByEmail: invite.invited_by_email,
           })}
           <br />
-          <StrongText>{invite.section_name}</StrongText>
-        </BodyTwoText>
+          <strong>{invite.section_name}</strong>
+        </>
       }
-      tooltipText={i18n.coteacherTooltip()}
-      buttonsStyles={styles.buttons}
-      buttons={[
-        {
-          text: 'Decline',
-          onClick: () => declineCoteacherInvite(invite.id, invite.section_id),
-          color: Button.ButtonColor.neutralDark,
-          style: styles.declineButton,
-        },
-        {
-          text: 'Accept',
-          onClick: () => acceptCoteacherInvite(invite.id, invite.section_id),
-          color: Button.ButtonColor.brandSecondaryDefault,
-          style: styles.acceptButton,
-        },
-      ]}
+      actions={
+        <>
+          <MuiButton
+            onClick={() => declineCoteacherInvite(invite.id, invite.section_id)}
+            size="small"
+            variant="outlined"
+            color="secondary"
+          >
+            {'Decline'}
+          </MuiButton>
+          <MuiButton
+            onClick={() => acceptCoteacherInvite(invite.id, invite.section_id)}
+            size="small"
+            variant="contained"
+            color="primary"
+          >
+            {'Accept'}
+          </MuiButton>
+        </>
+      }
     />
   );
 };
@@ -112,30 +136,5 @@ CoteacherInviteNotification.propTypes = {
   asyncLoadSectionData: PropTypes.func.isRequired,
   coteacherInvite: PropTypes.object,
   coteacherInviteForPl: PropTypes.object,
-};
-
-// The Notification object uses styles instead of className for legacy reasons.
-const styles = {
-  acceptButton: {
-    marginLeft: '20px',
-    marginRight: '0px',
-    lineHeight: '100%',
-    display: 'flex',
-    alignItems: 'center',
-  },
-  declineButton: {
-    marginRight: 0,
-    display: 'flex',
-    alignItems: 'center',
-  },
-  buttons: {
-    // center vertically
-    display: 'flex',
-    alignItems: 'center',
-  },
-  icon: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+  destructiveLoad: PropTypes.bool,
 };

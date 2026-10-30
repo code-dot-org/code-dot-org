@@ -3,8 +3,8 @@ import React, {Component} from 'react';
 
 import i18n from '@cdo/locale';
 
-import ValidationStep, {Status} from '../../lib/ui/ValidationStep';
 import testImageAccess from '../../code-studio/url_test';
+import ValidationStep, {Status} from '../../sharedComponents/ValidationStep';
 import {
   BRAMBLE_READY_STATE,
   FILE_SYSTEM_ERROR,
@@ -260,8 +260,8 @@ class WebLabNetworkCheck extends Component {
           </ul>
           <br />
           <p>
-            Note: You do not need to be logged in to Code.org for this test to
-            be successful.
+            Note: You do not need to be logged in to CodeAI for this test to be
+            successful.
           </p>
           <label htmlFor="connect">
             Click "Connect" to check whether your school's network and device

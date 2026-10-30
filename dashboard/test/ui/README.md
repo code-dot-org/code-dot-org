@@ -2,7 +2,64 @@
 
 Automated UI tests for the dashboard.
 
-## Setup
+## CI/CD Testing
+
+### Drone (CI) Tests
+
+The UI tests run as part of our continuous integration tooling, via Drone whenever you create a pull request into the "staging" branch. In this scenario, tests are only run against Chrome, per [saucelabs_browsers_to_run in "ci.rake"](https://github.com/code-dot-org/code-dot-org/blob/staging/lib/rake/ci.rake#L182).
+
+Today, all UI tests and Eyes tests that run in Drone use a combination of (a) local chromedriver and (b) desktop chrome via AWS Device Farm.
+
+To run tests against other browsers in CI, you can apply tags to commit messages. Be aware that running any other browsers will force tests off of Device Farm and onto Sauce Labs:
+
+* `git commit -m "just a normal change"`
+* `git commit -m "fixing bug with firefox [skip chrome][test firefox]"`
+* `git commit -m "updating browsers_saucelabs.json [test all browsers]"`
+
+Review all supported tags in [ci.rake](https://github.com/code-dot-org/code-dot-org/blob/staging/lib/rake/ci.rake#L13)
+
+### DTT (CD) Tests
+
+The UI tests run as part of our deployment during the Deploy To Test (DTT) via `rake test:ui_all`, which dispatches five suites in parallel:
+
+| Suite | Provider | Browsers |
+|-------|----------|----------|
+| Chrome + Firefox UI | AWS Device Farm | `Windows Chrome`, `Windows Firefox` (`browsers_device_farm.json`) |
+| Safari + iPad + iPhone UI | SauceLabs | `macOS Safari`, `iPad Safari`, `iPhone Safari` (`browsers_device_farm.json`) |
+| Eyes | SauceLabs | `Windows Chrome` (Applitools visual diff, `@eyes`) |
+| Playwright | test machine | `chromium`, `firefox`, `webkit` (functional) |
+| Playwright Eyes | test machine | `chromium` (visual diffs) |
+
+Each Cucumber suite uploads its own status page (`test_status_{Safari_iPad_iPhone_UI,Chrome_Firefox_UI,Eyes}.html`) to the test machine and to S3. Playwright reports are uploaded to S3 and linked from Slack.
+
+## Concurrency limits
+
+SauceLabs and Device Farm each have their own cost structure and concurrency
+limits. SauceLabs charges by maximum concurrency. Device Farm charges per test
+run, but also has separate concurrency limits for desktop and mobile within each
+AWS account. Device Farm limits can be increased at no additional cost by
+negotiating with AWS support based on current need an availability.
+
+Today, the relevant concurrency limits are:
+
+| Provider            | AWS Account | Concurrency | Usage                   |
+|---------------------|-------------|-------------|-------------------------|
+| SauceLabs           | —           | 65          | DTT + local development |
+| Device Farm Desktop | codeorg     | 150         | DTT + local development |
+| Device Farm Desktop | codeorg-dev | 150         | Drone (CI)              |
+
+Staying under concurrency limits in DTT is straightforward, because only one DTT
+runs at a time. Staying under limits in Drone is less predictable, because there
+is no limit to the number of concurrent Drone runs, and each concurrent drone
+run might not be running the maximum number of UI tests at a given time.
+Therefore, the simplest plan is to request additional increases to Device Farm
+Desktop (codeorg-dev) concurrency if/when we start seeing UI tests fail in Drone
+with concurrency errors like this one:
+```
+Cannot exceed 150 concurrent sessions. Currently active=130, pending=20, failed=0 (Selenium::WebDriver::Error::SessionNotCreatedError)
+```
+
+## Local Setup
 
 ### On your machine: Chrome webdriver
 
@@ -28,39 +85,51 @@ If you get the error `unknown error: cannot get automation extension`, follow th
 
 Running tests remotely on [Sauce Labs](https://saucelabs.com) lets you review results, view visual logs of test runs and even watch live video of your tests running on different browsers in real-time.
 
-We currently have 120 available browsers, and the automated ui tests attempt to run 110.
+#### Installing Sauce Connect Proxy
 
-#### Credentials
+If you want to run tests on Sauce Labs against localhost you need to run the sauce connect proxy. This
+creates a tunnel which allows sauce labs to access your localhost server.
 
-Sauce Labs requires credentials to be set in locals.yml first.
+1. Follow [installation directions](https://docs.saucelabs.com/secure-connections/sauce-connect-5/installation/) for sauce connect proxy. `sc --version` should be >= 5.2
 
+2. Setup saucelabs credentials in locals.yml:
 ```
 # code-dot-org/locals.yml
 saucelabs_username: 'yourusername'
+# see https://app.saucelabs.com/user-settings under the "Access Key" header:
 saucelabs_authkey: 'xxxxxx-xxxx-xxxx-xxx-xxxxxxxxx'
-
+# can be anything, if you use multiple machines (e.g. EC2), should be unique to each:
+saucelabs_tunnel_name: cdo-tunnel
 ```
 
-You can find the values for these settings in your saucelabs account settings (`https://app.saucelabs.com/users/:username`) The key you need, `saucelabs_authkey`, will be under the "Access Key" header.
+### With remote browsers: Device Farm
 
-#### Sauce Labs tunnel
+Currently, we do not support running Device Farm against development machines which do not have public IP addresses, because Device Farm does not provide an equivalent to Sauce Connect. The current workarounds are:
+- local chromedriver (see above). This is a great option for debugging UI test failures in drone, which must have failed initially in chromedriver before falling back to Device Farm (see `--first-run-local` flag in `runner.rb`).
+- local saucelabs (see above).
 
-If you want to run tests on Sauce Labs against localhost you need to set up your tunnel:
+If you can't repro in chromedriver or SauceLabs:
+- run Device Farm locally against test-studio.code.org: `runner.rb --html --device-farm -c Chrome -f ...`
 
-1. Login to Sauce Labs and download the [tunnel](https://app.saucelabs.com/tunnels).
-   - If you work on a Linux EC2 instance:
-     - Download the Linux version (will end in .tar.gz)
-     - Secure copy this file into your dev environment with something like `scp sc-4.7.1-linux.tar.gz ubuntu@[ip_address]:/ec2-user/environment/code-dot-org`
-   - From the destination folder, unzip the file (or for EC2 instances, unzip and untar the file with `tar -xvzf sc-4.7.1-linux.tar`)
-2. `cd` into the unzipped folder and start the tunnel via `bin/sc --user <saucelabs-username> --api-key <saucelabs-api-key>`. You can find your username and key on the page linked in step 1. Note: the command listed there does not match the above.
-   - The `bin/sc` path only works once you've navigated into the unzipped file (on a mac, the full path might look something like `sc-4.8.2-osx/bin/sc`).
-   - The configuration of the `--tunnel-name` flag (formerly [`--tunnel-id`](https://docs.saucelabs.com/dev/cli/saucectl/run/#--tunnel-name)) depends on your environment:
-     - If you do *not* work on an EC2 instance, the `--tunnel-name` flag (included in the command given by Sauce Labs), can be removed. If you leave it in, you'll also need to set the `tunnelIdentifier` option in the `sauce_capabilities` config. See [Using Sauce Connect Tunnel Identifiers](https://wiki.saucelabs.com/display/DOCS/Using+Sauce+Connect+Tunnel+Identifiers#UsingSauceConnectTunnelIdentifiers-TheBasicsofUsingTunnelIdentifiers) for more details.
-     - If you *do* work on an EC2 instance, the `--tunnel-name` flag is required to launch the tunnel.
-3. (Re)start your dashboard-server `./bin/dashboard-server`.
-4. In a new terminal window, navigate back into `dashboard/test/ui` and run your ui tests `./runner.rb -d localhost-studio.code.org:3000 <whatever other arguments you want>`
+If you can't repro an issue in chromedriver of SauceLabs AND you need to test against modified application code:
+- connect to a drone UI test container via `bin/drone/shell` and rerun the test there, or
+- run Device Farm locally against an adhoc
 
-You can now watch your tests run at the [Sauce Labs dashboard](https://saucelabs.com/beta/dashboard/tests)
+If the above workarounds become too cumbersome, we could implement tunneling via [Connecting to Amazon VPC](https://docs.aws.amazon.com/devicefarm/latest/testgrid/techref-vpc.html).
+
+## Running UI Tests with Sauce Labs
+
+1. Start the sauce connect proxy:
+```
+bin/sauce_connect
+```
+2. Run your UI test
+```
+./runner.rb -l -c Chrome --html -f features/platform/policy_compliance.feature
+```
+
+- Log output can be found in `log/*.html`
+- You can watch your tests run on the [Sauce Labs dashboard](https://saucelabs.com/beta/dashboard/tests)
 
 ## Options
 
@@ -107,5 +176,7 @@ Run **eyes tests** on one feature in one saucelabs browser against your local ma
 
 ## See Also
 
+- [UI Test Curriculum Content](config/README.md) — the courses, units and
+  levels which exist only for these tests
 - [Adding an Eyes Test](../../../docs/testing-with-applitools-eyes.md)
 - [General Testing Instructions](../../../TESTING.md)

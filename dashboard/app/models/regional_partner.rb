@@ -24,6 +24,28 @@
 require 'state_abbr'
 
 class RegionalPartner < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :restricted,
+    name: :restricted,
+    group: :restricted,
+    urban: :restricted,
+    attention: :restricted,
+    street: :restricted,
+    apartment_or_suite: :restricted,
+    city: :restricted,
+    state: :restricted,
+    zip_code: :restricted,
+    phone_number: :restricted,
+    notes: :restricted,
+    created_at: :restricted,
+    updated_at: :restricted,
+    deleted_at: :restricted,
+    properties: :restricted,
+    is_active: :restricted,
+  )
+
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
   has_many :regional_partner_program_managers
@@ -128,7 +150,7 @@ class RegionalPartner < ApplicationRecord
       future.
       where(subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP).
       order_by_scheduled_start.
-      map {|w| w.slice(:location_name, :location_address, :workshop_date_range_string, :course)}
+      map {|w| w.slice(:format, :location_name, :location_address, :workshop_date_range_string, :course)}
   end
 
   before_validation do |model|
@@ -221,7 +243,7 @@ class RegionalPartner < ApplicationRecord
           end
         rescue StandardError => exception
           # Log geocoding errors to honeybadger but don't fail
-          Honeybadger.notify(exception,
+          Observability::Errors.report(exception,
             error_message: 'Error geocoding regional partner workshop zip_code',
             context: {
               zip_code: zip_code

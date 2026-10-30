@@ -1,19 +1,11 @@
-import {
-  init,
-  track,
-  Identify,
-  identify,
-  setSessionId,
-  flush,
-} from '@amplitude/analytics-browser';
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {isDevelopmentEnvironment} from '@cdo/apps/utils';
-import {Block} from 'blockly';
+import * as BlocklyCore from 'blockly/core';
 
-const BlockTypes = require('../blockly/blockTypes').BlockTypes;
-const FIELD_SOUNDS_NAME = require('../blockly/constants').FIELD_SOUNDS_NAME;
+import DCDO from '@cdo/apps/dcdo';
+import AnalyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import trackEvent from '@cdo/apps/util/trackEvent';
 
-const API_KEY_ENDPOINT = '/musiclab/analytics_key';
+import {BlockTypes} from '../blockly/blockTypes';
+import {FIELD_SOUNDS_NAME} from '../blockly/constants';
 
 const blockFeatureList = [
   BlockTypes.FOR_LOOP,
@@ -23,9 +15,11 @@ const blockFeatureList = [
   BlockTypes.PLAY_SOUNDS_SEQUENTIAL,
   'functions',
   BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2,
+  BlockTypes.PLAY_PATTERN_AI_AT_CURRENT_LOCATION_SIMPLE2,
+  BlockTypes.PLAY_TUNE_AT_CURRENT_LOCATION_SIMPLE2,
 ];
 
-const triggerBlocks = [
+const triggerBlocks: string[] = [
   BlockTypes.TRIGGERED_AT,
   BlockTypes.TRIGGERED_AT_SIMPLE,
   BlockTypes.TRIGGERED_AT_SIMPLE2,
@@ -43,105 +37,92 @@ interface BlockStats {
   maxTriggerBlocksWithCode: number;
 }
 
-interface SessionEndPayload {
-  durationSeconds: number;
-  mostInstructionsVisited: number;
-  lastInstructionsVisited: number;
-  soundsUsed: string[];
+interface CommonSessionFields {
   blockStats: BlockStats;
   featuresUsed: {[feature: string]: boolean};
+  soundsPlayed: {[id: string]: number};
+  selectedPack?: string;
+}
+
+interface Session extends CommonSessionFields {
+  startTime: number;
+  soundsUsed: Set<string>;
+}
+
+interface SessionEndPayload extends CommonSessionFields {
+  durationSeconds: number;
+  soundsUsed: string[];
+}
+
+interface ProjectContext {
+  levelType?: string;
+  mode?: string;
+  channelId?: string;
+  levelPath?: string;
+  scriptName?: string;
 }
 
 /**
- * An analytics reporter specifically used for the Music Lab prototype, which logs analytics
- * to Amplitude. For the more general Amplitude Analytics Reporter used across the application
- * outside of Music Lab, check {@link apps/src/lib/util/AnalyticsReporter}.
+ * An analytics reporter specifically used for Music Lab, which tracks Music Lab-specific
+ * session information and forwards events to the global CodeAI {@link AnalyticsReporter}.
  */
-export default class AnalyticsReporter {
-  private sessionInProgress: boolean;
-  private identifyObj: Identify;
-  private sessionStartTime: number;
-  private maxInstructionsSeen: number;
-  private currentInstructionsPage: number;
-  private soundsUsed: Set<string>;
-  private blockStats: BlockStats;
-  private featuresUsed: {[feature: string]: boolean};
+export default class MusicAnalyticsReporter {
+  private session: Session | undefined;
+  private projectContext: ProjectContext | undefined;
 
-  constructor() {
-    this.sessionInProgress = false;
-    this.identifyObj = new Identify();
-    this.sessionStartTime = -1;
-    this.maxInstructionsSeen = 0;
-    this.currentInstructionsPage = 0;
-    this.soundsUsed = new Set();
-    this.blockStats = {
-      endingBlockCount: 0,
-      endingTriggerBlockCount: 0,
-      endingTriggerBlocksWithCode: 0,
-      maxBlockCount: 0,
-      maxTriggerBlockCount: 0,
-      maxTriggerBlocksWithCode: 0,
+  startSession() {
+    const startTime = Date.now();
+
+    this.session = {
+      startTime,
+      soundsUsed: new Set(),
+      soundsPlayed: {},
+      blockStats: {
+        endingBlockCount: 0,
+        endingTriggerBlockCount: 0,
+        endingTriggerBlocksWithCode: 0,
+        maxBlockCount: 0,
+        maxTriggerBlockCount: 0,
+        maxTriggerBlocksWithCode: 0,
+      },
+      featuresUsed: {},
     };
-
-    this.featuresUsed = {};
-    blockFeatureList.forEach(feature => {
-      this.featuresUsed[feature] = false;
-    });
+    this.log(`Session start. Start time: ${this.session.startTime}`);
+    trackEvent('music', 'music_session_start');
   }
 
-  async startSession() {
-    // Capture start time before making init call
-    this.sessionStartTime = Date.now();
-
-    try {
-      await this.initialize();
-      setSessionId(this.sessionStartTime);
-
-      this.log(`Session start. Session ID: ${this.sessionStartTime}`);
-      this.sessionInProgress = true;
-    } catch (error) {
-      const message = error instanceof Error ? error.message : String(error);
-      console.log(
-        `[AMPLITUDE ANALYTICS] Did not initialize analytics reporter.  (${message})`
-      );
-
-      // Log an error if this is not development. On development, this error is expected.
-      if (!isDevelopmentEnvironment()) {
-        Lab2Registry.getInstance()
-          .getMetricsReporter()
-          .logError(message, error as Error);
-      }
-    }
+  isSessionInProgress() {
+    return !!this.session;
   }
 
-  async initialize(): Promise<void> {
-    const response = await fetch(API_KEY_ENDPOINT);
-    const responseJson = await response.json();
-
-    if (!responseJson.key) {
-      throw new Error('No key for analytics.');
-    }
-
-    return init(responseJson.key, undefined, {minIdLength: 1}).promise;
-  }
-
-  setUserProperties(userId: string, userType: string, signInState: string) {
-    if (!this.sessionInProgress) {
+  setProjectProperty<K extends keyof ProjectContext>(
+    property: K,
+    value: ProjectContext[K]
+  ) {
+    if (!this.session) {
       this.log('No session in progress');
       return;
     }
 
-    // Temporarily disabled, pending user privacy compliance discussions.
-    // if (userId) {
-    //   setUserId(hashString(userId));
-    // }
+    if (!this.projectContext) {
+      this.projectContext = {};
+    }
+    this.projectContext[property] = value;
 
-    this.identifyObj.set('userType', userType);
-    this.identifyObj.set('signInState', signInState);
+    this.log(`Project property: ${property}: ${value}`);
+  }
 
-    this.log(
-      `User properties: userId: ${userId}, userType: ${userType}, signInState: ${signInState}`
-    );
+  setSelectedPack(packId: string | undefined) {
+    if (!this.session) {
+      this.log('No session in progress');
+      return;
+    }
+    this.session.selectedPack = packId;
+  }
+
+  onPackSelected(packId: string) {
+    this.onButtonClicked('select-pack', {packId});
+    trackEvent('music', 'music_pack_selected', {value: packId});
   }
 
   onButtonClicked(buttonName: string, properties?: object) {
@@ -152,50 +133,70 @@ export default class AnalyticsReporter {
   }
 
   onKeyPressed(keyName: string, properties?: object) {
-    this.trackUIEvent('Key pressed', {
-      keyName,
-      ...properties,
-    });
+    this.log(
+      `Key pressed. Payload: ${JSON.stringify({
+        keyName,
+        ...properties,
+      })}`
+    );
   }
 
-  private trackUIEvent(eventType: string, payload: object) {
+  onValidationAttempt(passed: boolean, message: string) {
+    this.trackUIEvent('Validation attempt', {passed, message});
+  }
+
+  onOpenPatternAiPanel() {
+    this.trackUIEvent('Pattern AI panel opened');
+  }
+
+  onGenerateAiPatternStart(temperature: number) {
+    this.log(
+      `Generate AI pattern start. Payload: ${JSON.stringify({temperature})}`
+    );
+  }
+
+  onGenerateAiPatternEnd(
+    timeSeconds: number,
+    isInitialGenerate: boolean,
+    temperature: number
+  ) {
+    this.log(
+      `Generate AI pattern end. Payload: ${JSON.stringify({
+        timeSeconds,
+        isInitialGenerate,
+        temperature,
+      })}`
+    );
+  }
+
+  private trackUIEvent(eventType: string, payload: object = {}) {
     const logMessage = `${eventType}. Payload: ${JSON.stringify(payload)}`;
 
-    if (!this.sessionInProgress) {
+    if (!this.session) {
       this.log(`No session in progress.  (${logMessage})`);
       return;
     } else {
       this.log(logMessage);
     }
 
-    track(eventType, payload).promise;
+    this.sendEvent(eventType, payload);
   }
 
-  onVideoClosed(id: string, duration: number) {
-    const logMessage = `Video closed. Id: ${id}. Duration: ${duration}}`;
-
-    if (!this.sessionInProgress) {
-      this.log(`No session in progress.  (${logMessage})`);
+  onSoundPlayed(id: string) {
+    const shouldReport = DCDO.get('music-lab-samples-report', true);
+    if (!shouldReport) {
       return;
-    } else {
-      this.log(logMessage);
     }
-
-    track('Video closed', {id, duration}).promise;
-  }
-
-  onInstructionsVisited(page: number) {
-    if (!this.sessionInProgress) {
+    if (!this.session) {
       this.log('No session in progress');
       return;
     }
 
-    this.currentInstructionsPage = page;
-    this.maxInstructionsSeen = Math.max(this.maxInstructionsSeen, page);
+    this.session.soundsPlayed[id] = 1 + (this.session.soundsPlayed[id] ?? 0);
   }
 
-  onBlocksUpdated(blocks: Block[]) {
-    if (!this.sessionInProgress) {
+  onBlocksUpdated(blocks: BlocklyCore.Block[]) {
+    if (!this.session) {
       this.log('No session in progress');
       return;
     }
@@ -211,62 +212,66 @@ export default class AnalyticsReporter {
         }
       }
 
-      if (blockFeatureList.includes(block.type)) {
-        this.featuresUsed[block.type] = true;
+      if (this.session && blockFeatureList.includes(block.type)) {
+        this.session.featuresUsed[block.type] = true;
       }
 
-      if (functionBlocks.includes(block.type)) {
-        this.featuresUsed.functions = true;
+      if (this.session && functionBlocks.includes(block.type)) {
+        this.session.featuresUsed.functions = true;
       }
 
-      if (block.getField(FIELD_SOUNDS_NAME)) {
-        this.soundsUsed.add(block.getFieldValue(FIELD_SOUNDS_NAME));
+      if (this.session && block.getField(FIELD_SOUNDS_NAME)) {
+        this.session.soundsUsed.add(block.getFieldValue(FIELD_SOUNDS_NAME));
       }
     });
 
-    this.blockStats = {
+    this.session.blockStats = {
       endingBlockCount: totalBlockCount,
       endingTriggerBlockCount: triggerBlocksCount,
       endingTriggerBlocksWithCode: triggerBlocksWithCode,
-      maxBlockCount: Math.max(this.blockStats.maxBlockCount, totalBlockCount),
+      maxBlockCount: Math.max(
+        this.session.blockStats.maxBlockCount,
+        totalBlockCount
+      ),
       maxTriggerBlockCount: Math.max(
-        this.blockStats.maxTriggerBlockCount,
+        this.session.blockStats.maxTriggerBlockCount,
         triggerBlocksCount
       ),
       maxTriggerBlocksWithCode: Math.max(
-        this.blockStats.maxTriggerBlocksWithCode,
+        this.session.blockStats.maxTriggerBlocksWithCode,
         triggerBlocksWithCode
       ),
     };
   }
 
   endSession() {
-    if (!this.sessionInProgress) {
+    if (!this.session) {
       this.log('No session in progress');
       return;
     }
-    const duration = Date.now() - this.sessionStartTime;
-    this.sessionStartTime = -1;
-    this.sessionInProgress = false;
-
-    identify(this.identifyObj);
+    const duration = Date.now() - this.session.startTime;
 
     const payload: SessionEndPayload = {
+      ...this.session,
       durationSeconds: duration / 1000,
-      mostInstructionsVisited: this.maxInstructionsSeen,
-      lastInstructionsVisited: this.currentInstructionsPage,
-      soundsUsed: Array.from(this.soundsUsed),
-      blockStats: this.blockStats,
-      featuresUsed: this.featuresUsed,
+      soundsUsed: Array.from(this.session.soundsUsed),
     };
 
-    track('Session end', payload);
-    flush();
+    this.session = undefined;
+
+    this.sendEvent('Session end', payload);
 
     this.log(`Session end. Payload: ${JSON.stringify(payload)}`);
   }
 
   log(message: string) {
-    console.log(`[AMPLITUDE ANALYTICS EVENT]: ${message}`);
+    console.log(`[MUSIC ANALYTICS EVENT]: ${message}`);
+  }
+
+  private sendEvent(eventName: string, payload: object) {
+    AnalyticsReporter.sendEvent(`Music Lab ${eventName}`, {
+      ...payload,
+      ...this.projectContext,
+    });
   }
 }

@@ -1,4 +1,5 @@
 import $ from 'jquery';
+
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 export function getTeacherFeedbackForStudent(studentId, levelId, scriptId) {

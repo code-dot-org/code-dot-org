@@ -2,9 +2,7 @@ require 'test_helper'
 
 class DSLDefinedLevelTest < ActiveSupport::TestCase
   test 'localized_property defaults to property' do
-    level = create :match, properties: {
-      answers: [{text: "one"}, {text: "two"}, {text: "three"}]
-    }
+    level = create(:match, properties: {answers: [{text: "one"}, {text: "two"}, {text: "three"}]})
 
     # Note that we expect the answers to use string keys, even though it was
     # initialized with symbols
@@ -28,9 +26,11 @@ class DSLDefinedLevelTest < ActiveSupport::TestCase
     }
     I18n.backend.store_translations test_locale, custom_i18n
 
-    level = create :match, name: "Test DSLDefined", properties: {
-      answers: [{text: "one"}, {text: "two"}, {text: "three"}]
-    }
+    level = create(
+      :match,
+      name: "Test DSLDefined",
+      properties: {answers: [{text: "one"}, {text: "two"}, {text: "three"}]}
+    )
 
     # Note that we again expect string keys
     expected = [{'text' => "un"}, {'text' => "deux"}, {'text' => "troi"}]
@@ -51,9 +51,11 @@ class DSLDefinedLevelTest < ActiveSupport::TestCase
     }
     I18n.backend.store_translations test_locale, custom_i18n
 
-    level = create :match, name: "Test DSLDefined", properties: {
-      answers: [{text: "one"}, {text: "two"}, {text: "three"}]
-    }
+    level = create(
+      :match,
+      name: "Test DSLDefined",
+      properties: {answers: [{text: "one"}, {text: "two"}, {text: "three"}]}
+    )
 
     # Note that we again expect string keys
     expected = [{'text' => "un"}, {'text' => "two"}, {'text' => "three"}]
@@ -62,9 +64,11 @@ class DSLDefinedLevelTest < ActiveSupport::TestCase
 
   test 'cannot create level with default name' do
     e = assert_raises do
-      create :match, name: 'unique level name here', properties: {
-        answers: [{text: "one"}, {text: "two"}, {text: "three"}]
-      }
+      create(
+        :match,
+        name: 'unique level name here',
+        properties: {answers: [{text: "one"}, {text: "two"}, {text: "three"}]}
+      )
     end
     assert_includes(e.message, 'Name cannot be the default level name')
   end
@@ -98,5 +102,29 @@ class DSLDefinedLevelTest < ActiveSupport::TestCase
       External.create_from_level_builder({}, {dsl_text: "name '#{level_name}'"})
     end
     assert_includes e.message, 'file "config/scripts/my_level_name.external" already exists'
+  end
+
+  test 'canonical_filename is in the test/ui tree for UI Test levels' do
+    regular = Match.new(name: 'DSLDefined Filename Test')
+    assert_equal 'config/scripts/dsldefined_filename_test.match', regular.canonical_filename
+
+    ui_test = Match.new(name: 'UI Test DSLDefined Filename Test')
+    assert_equal 'test/ui/config/scripts/ui_test_dsldefined_filename_test.match', ui_test.canonical_filename
+  end
+
+  test 'existing_filename greps only the tree selected by the level name' do
+    level_name = 'UI Test DSLDefined existing_filename probe'
+    contents = "name '#{level_name}'\n"
+    with_tmp_rails_root do |root|
+      prod_file = root.join('config/scripts/ui_test_dsldefined_existing_filename_probe.match')
+      ui_test_file = root.join('test/ui/config/scripts/ui_test_dsldefined_existing_filename_probe.match')
+      [prod_file, ui_test_file].each do |file|
+        FileUtils.mkdir_p(File.dirname(file))
+        File.write(file, contents)
+      end
+
+      level = Match.new(name: level_name)
+      assert_equal ui_test_file.to_s, level.existing_filename
+    end
   end
 end

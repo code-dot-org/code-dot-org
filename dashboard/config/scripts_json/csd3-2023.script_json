@@ -7,6 +7,16 @@
       "announcements": [
         {
           "key": "7c0b3b50-62ba-43c3-bd32-37a58e1622fc",
+          "notice": "AI Teaching Assistant Available to Help Assess Student Projects",
+          "details": "AI Teaching Assistant is now available to support you in projects and mini-projects throughout this unit. This new tool is designed to save you time, using AI to assess student work. To learn more about how to integrate the AI Teaching Assistant into your lessons, please watch our introductory video or visit https://code.org/ai/teaching-assistant",
+          "link": "https://youtu.be/Lj7uZx-BKhw",
+          "type": "bullhorn",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Learn More"
+        },
+        {
+          "key": "0c8ac90e-1294-48d4-8073-b8009264a631",
           "notice": "New Self-Paced Professional Learning Module!",
           "details": "Want to teach CS Discoveries, but not sure where to start? Code.org has released a professional learning module all about CSD's Unit 3: Interactive Animations and Games. This two-hour, self-paced module will teach you what you need to know to teach CSD. Check it out at this link!",
           "link": "https://studio.code.org/courses/self-paced-pl-csd-unit3-2023",
@@ -16,7 +26,7 @@
           "buttonText": "Unit 3 Self-Paced PL"
         },
         {
-          "key": "0c8ac90e-1294-48d4-8073-b8009264a631",
+          "key": "8528531c-53d1-48d5-ac91-f7730b007f29",
           "notice": "Free Teacher Resources from Amazon Future Engineer",
           "details": "Code.org has partnered with Amazon Future Engineer to offer teachers at underserved schools a growing number of resources and benefits at no cost! ",
           "link": "https://code.org/afe",
@@ -26,6 +36,7 @@
           "buttonText": "Get free resources"
         }
       ],
+      "content_area": "curriculum_6_8",
       "curriculum_umbrella": "CSD",
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -34,12 +45,12 @@
       "show_calendar": true,
       "student_detail_progress_view": true,
       "tts": true,
-      "version_year": "2023",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-12-12 03:16:16 UTC",
+    "serialized_at": "2026-03-30 18:12:38 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -17520,6 +17531,7 @@
       "key": "variables_1",
       "properties": {
         "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/csd-u6-variables-mp4.mp4",
         "type": "Video"
       },
       "seeding_key": {
@@ -20372,6 +20384,7 @@
   "rubrics": [
     {
       "level_name": "CSD web project animated review_2023",
+      "s3_config_dir": "csd3-2023-L14",
       "seeding_key": {
         "lesson.key": "Mini-Project - Animation",
         "lesson_group.key": "lessonGroup-2",
@@ -20380,6 +20393,7 @@
     },
     {
       "level_name": "CSD U3 Sprites scene challenge_2023",
+      "s3_config_dir": "csd3-2023-L11",
       "seeding_key": {
         "lesson.key": "Mini-Project - Captioned Scenes",
         "lesson_group.key": "lessonGroup-2",
@@ -20388,6 +20402,7 @@
     },
     {
       "level_name": "CSD U3 collisions flyman bounceOff_2023",
+      "s3_config_dir": "csd3-2023-L24",
       "seeding_key": {
         "lesson.key": "Mini-Project - Flyer Game",
         "lesson_group.key": "lessonGroup-3",
@@ -20396,6 +20411,7 @@
     },
     {
       "level_name": "CSD games sidescroll review_2023",
+      "s3_config_dir": "csd3-2023-L21",
       "seeding_key": {
         "lesson.key": "Mini-Project - Side Scroller",
         "lesson_group.key": "lessonGroup-3",
@@ -20404,6 +20420,7 @@
     },
     {
       "level_name": "CSD games project review_2023",
+      "s3_config_dir": "csd3-2023-L28",
       "seeding_key": {
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "lessonGroup-3",
@@ -20412,6 +20429,7 @@
     },
     {
       "level_name": "CSD U3 Interactive Card Final_2023",
+      "s3_config_dir": "csd3-2023-L18",
       "seeding_key": {
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "lessonGroup-2",
@@ -20420,6 +20438,7 @@
     },
     {
       "level_name": "CSD U3 L7 mini project_2023",
+      "s3_config_dir": null,
       "seeding_key": {
         "lesson.key": "lesson-18",
         "lesson_group.key": "lessonGroup-2",
@@ -20601,7 +20620,7 @@
       "key": "57428b8b-954f-4e25-b6cf-1dd6338ef623",
       "position": 3,
       "learning_goal": "Program Development - Program Sequence",
-      "ai_enabled": true,
+      "ai_enabled": false,
       "tips": "(1) **Sequenced the program well**\n- If the program code is not sequenced correctly, some elements, such as shapes, sprites, and text, may be unintentionally hidden behind others. \n- In the specific case of sprites, if the `drawSprites()` code is not sequenced correctly, some or all sprites may not appear on the screen.\n\n(2) **Code in and out of the draw loop**\n- Code outside the draw loop is used to set up the program, its starting elements, and all created functions. \n- Code inside the draw loop at this point should be primarily function calls and perhaps some conditionals used with function calls in addition to the `drawSprites()` block.",
       "seeding_key": {
         "learning_goal.key": "57428b8b-954f-4e25-b6cf-1dd6338ef623",
@@ -20796,7 +20815,7 @@
       "key": "b747206d-550a-4bc5-8fb4-3f104909e68c",
       "position": 2,
       "learning_goal": "Program Development - Program Sequence",
-      "ai_enabled": false,
+      "ai_enabled": true,
       "tips": "(1) **Sequenced the program well**\n- If the program code is not sequenced correctly, some elements, such as shapes, sprites, and text, may be unintentionally hidden behind others. \n- In the specific case of sprites, if the `drawSprites()` code is not sequenced correctly, some or all sprites may not appear on the screen.\n\n(2) **Code in and out of the draw loop**\n- Code outside the draw loop is used to set up the program and its starting elements (creating sprites, setting sprite properties that won’t change, etc). \n- Code inside the draw loop is for things that are changing as the program is running. This includes updating properties or non-sprite variables as well as any shapes for the background, text, and the `drawSprites()` block.",
       "seeding_key": {
         "learning_goal.key": "b747206d-550a-4bc5-8fb4-3f104909e68c",
@@ -21110,7 +21129,7 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "At least 2 sprites created, each with at least one property updated after creation (2).",
+      "teacher_description": "At least 2 sprites created, each with at least one property updated after creation.",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 3,
@@ -21254,7 +21273,7 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "You sequenced the program well1  and properly separated code in and out of the draw loop (2).\n\n\n\n\n",
+      "teacher_description": "You sequenced the program well1  and properly separated code in and out of the draw loop.\n\n\n\n\n",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 3,
@@ -21302,7 +21321,7 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "At least 2 shapes, 2 sprites, and 2 lines of text are placed correctly on the screen using the coordinate system. At least 2 elements move in different ways (4).",
+      "teacher_description": "At least 2 shapes, 2 sprites, and 2 lines of text are placed correctly on the screen using the coordinate system. At least 2 elements move in different ways.",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 3,
@@ -21374,7 +21393,7 @@
     },
     {
       "understanding": 1,
-      "teacher_description": "Your program includes simple, independent movement (8).\n",
+      "teacher_description": "Your program includes simple, independent movement.\n",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 1,
@@ -21398,7 +21417,7 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "Your program includes at least two instances of complex movement (7).",
+      "teacher_description": "Your program includes at least two instances of complex movement.",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 3,
@@ -21542,7 +21561,7 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "Your program properly creates at least 2 non-sprite variables, such as score or health, that are displayed and updated during the game and affect how the game is played (9).\n",
+      "teacher_description": "Your program properly creates at least 2 non-sprite variables, such as score or health, that are displayed and updated during the game and affect how the game is played.\n",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 3,
@@ -21590,7 +21609,7 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "Your game has at least three backgrounds that are displayed during run time (3). At least one of these backgrounds is triggered automatically through a variable (4).\n",
+      "teacher_description": "Your game has at least three backgrounds that are displayed during run time. At least one of these backgrounds is triggered automatically through a variable.\n",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 3,
@@ -21638,7 +21657,7 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "You sequenced the program well (1)  and properly separated code in and out of the draw loop (2).",
+      "teacher_description": "You sequenced the program well  and properly separated code in and out of the draw loop.",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 3,
@@ -21842,7 +21861,7 @@
     },
     {
       "understanding": 0,
-      "teacher_description": "No elements (shapes, sprites, or text) are placed on the screen using the coordinate system.",
+      "teacher_description": "Consists solely of sprites or shapes with no inclusion of text, or it lacks any elements (shapes, sprites, or text) positioned on the screen using the coordinate system.",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 0,
@@ -21854,7 +21873,7 @@
     },
     {
       "understanding": 1,
-      "teacher_description": "A cumulative of at least a total of 3 elements are placed on the screen using the coordinate system (e.g 2 sprites & 1 line of text or 1 sprite, 1 shape, & 1 line of text)",
+      "teacher_description": "A cumulative total of at least 2 elements (one of which is text) are placed on the screen using the coordinate system (e.g., 1 sprite and 1 line of text or 1 shape and 1 line of text).",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 1,
@@ -22070,7 +22089,7 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "Your program responds to at least 2 different types of user input (5). ",
+      "teacher_description": "Your program responds to at least 2 different types of user input. ",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 3,
@@ -22118,7 +22137,7 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "Your program has conditionals to control multiple sprites’ looping behavior (6) inside the draw loop. ",
+      "teacher_description": "Your program has conditionals to control multiple sprites’ looping behavior inside the draw loop. ",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 3,
@@ -22262,7 +22281,7 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "Your program has conditionals to control multiple sprite interactions (7) inside the draw loop. ",
+      "teacher_description": "Your program has conditionals to control multiple sprite interactions inside the draw loop. ",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 3,
@@ -22358,7 +22377,7 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "You sequenced the program well(1)  and properly separated code in and out of the draw loop (2).",
+      "teacher_description": "You sequenced the program well  and properly separated code in and out of the draw loop.",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 3,
@@ -22502,7 +22521,7 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "You sequenced the program well (1)  and properly separated code in and out of the draw loop (2).",
+      "teacher_description": "You sequenced the program well and properly separated code in and out of the draw loop.",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 3,
@@ -22550,7 +22569,7 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "You sequenced the program well(1) and and all elements on the screen appear as intended.",
+      "teacher_description": "You sequenced the program well and and all elements on the screen appear as intended.",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 3,
@@ -22826,7 +22845,7 @@
     },
     {
       "understanding": 2,
-      "teacher_description": "Your program has conditionals meant to control the player sprite’s jumping, however the sprite does not respond as expected (5). ",
+      "teacher_description": "Your program has conditionals meant to control the player sprite’s jumping, however the sprite does not respond as expected. ",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 2,
@@ -22838,7 +22857,7 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "Your program has conditionals to control the player sprite’s jumping (4) inside the draw loop. ",
+      "teacher_description": "Your program has conditionals to control the player sprite’s jumping inside the draw loop. ",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 3,

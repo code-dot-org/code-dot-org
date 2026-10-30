@@ -1,11 +1,12 @@
+import throttle from 'lodash/debounce';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import color from '../../util/color';
-import PopUpMenu from '@cdo/apps/lib/ui/PopUpMenu';
+
+import PopUpMenu from '@cdo/apps/sharedComponents/PopUpMenu';
+
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
 import styleConstants from '../../styleConstants';
-import throttle from 'lodash/debounce';
-import FontAwesome from '../FontAwesome';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import color from '../../util/color';
 
 export const QuickActionsCellType = {
   header: 'header',
@@ -16,13 +17,6 @@ export default class QuickActionsCell extends Component {
   static propTypes = {
     children: PropTypes.oneOfType([PropTypes.node, PropTypes.array]).isRequired,
     type: PropTypes.oneOf(Object.keys(QuickActionsCellType)),
-    experimentDetails: PropTypes.shape({
-      study: PropTypes.string,
-      study_group: PropTypes.string,
-      event: PropTypes.string,
-      user_id: PropTypes.number,
-      data_json: PropTypes.string,
-    }),
   };
 
   static defaultProps = {
@@ -37,14 +31,22 @@ export default class QuickActionsCell extends Component {
     currWindowWidth: window.innerWidth, // used to calculate location of menu on resize
   };
 
+  handleClick = e => {
+    e.stopPropagation();
+
+    if (this.state.open) {
+      this.close();
+      this.onClose();
+    } else {
+      this.state.canOpen ? this.open() : undefined;
+    }
+  };
+
   // Menu open
   open = () => {
     this.updateMenuLocation();
     window.addEventListener('resize', throttle(this.updateMenuLocation, 50));
     this.setState({open: true, canOpen: false});
-    if (this.props.experimentDetails) {
-      firehoseClient.putRecord(this.props.experimentDetails);
-    }
   };
 
   // Menu closed
@@ -111,7 +113,7 @@ export default class QuickActionsCell extends Component {
           icon={icons[type]}
           style={iconStyle}
           className="ui-test-section-dropdown ui-projects-table-dropdown"
-          onClick={this.state.canOpen ? this.open : undefined}
+          onClick={this.handleClick}
           tabIndex="0"
           onKeyDown={e => {
             if ([' ', 'Enter', 'Spacebar'].includes(e.key)) {
@@ -145,13 +147,11 @@ const styles = {
     [QuickActionsCellType.body]: {
       border: '1px solid ' + color.white,
       borderRadius: 5,
-      color: color.darker_gray,
       margin: 3,
     },
     [QuickActionsCellType.header]: {
       fontSize: 20,
       lineHeight: '15px',
-      color: color.charcoal,
     },
   },
   hoverFocus: {
@@ -159,7 +159,6 @@ const styles = {
       backgroundColor: color.lighter_gray,
       border: '1px solid ' + color.light_gray,
       borderRadius: 5,
-      color: color.white,
     },
   },
 };

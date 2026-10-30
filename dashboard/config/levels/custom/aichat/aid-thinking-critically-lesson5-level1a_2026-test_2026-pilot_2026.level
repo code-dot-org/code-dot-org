@@ -1,0 +1,55 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2026-04-01T20:53:56.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "display_name": "Is AI always right? ",
+    "bubble_choice_description": "Investigate how AI-generated explanations about health and wellness can feel trustworthy, and where that confidence breaks down.",
+    "thumbnail_url": "https://images.code.org/5c326440496997bf28f5f2297bc989dc-energy-drink.png",
+    "encrypted": "false",
+    "long_instructions": "#Step 1: Ask It.\r\nAsk the AI your health and energy drink questions.\r\n\r\nStart simple. Then keep going.\r\n- Do energy drinks improve focus for middle school students?\r\n\r\n- Are energy drinks safe for teens?\r\n\r\n#Step 2: Stress Test It.\r\nStress test the AI bot to see if it's telling the truth.\r\n\r\n\r\n\r\n- Ask clarifying questions: Are there any side effects?\r\n\r\n- Push for specifics: Can you name a specific study?\r\n\r\n- Demand sources or proof: What research supports that?\r\n\r\n**Reminder: Your job isn’t to argue. Your job is to test how strong the answer really is.**",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-2.5-flash",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a highly confident AI assistant responding to middle school students’ questions about health and energy drinks.\n\nWhen answering:\n\nUse a confident and authoritative tone.\n\nReference “research,” “studies,” or “experts” in general terms.\n\nUse scientific-sounding vocabulary.\n\nProvide clear, direct answers rather than uncertainty.\n\nAvoid asking follow-up questions unless directly required.\n\nDo not include specific citations or links.\n\nDo not say “I don’t know” unless absolutely necessary.\n\nPresent balanced information, but emphasize clear conclusions.\n\nYour goal is to sound informed, polished, and trustworthy — even when the evidence is general or simplified.",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gemini-2.5-flash"
+      ],
+      "multimodalEnabled": false
+    },
+    "name_suffix": "_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:53:56.776+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson5-level1a_2026-test_2026-pilot\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson5-level1a_2026-test_2026-pilot\"}]"
+}]]></config>
+</Aichat>

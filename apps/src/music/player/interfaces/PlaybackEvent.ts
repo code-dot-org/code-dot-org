@@ -4,7 +4,7 @@ import {SkipContext} from './SkipContext';
 
 export interface PlaybackEvent {
   /** Type of event */
-  type: 'sound' | 'pattern' | 'chord';
+  type: 'sound' | 'chord' | 'instrument';
   /** Measure when this event occurs */
   when: number;
   /** Whether this event was triggered or scheduled via standard playback */
@@ -23,4 +23,9 @@ export interface PlaybackEvent {
   blockId: string;
   /** A unique ID used to group same sounds together in the timeline */
   id: string;
+  /** Validation-related information */
+  validationInfo?: {
+    /** A list of contextual block types associated with a block's parents */
+    parentControlTypes: string[];
+  };
 }

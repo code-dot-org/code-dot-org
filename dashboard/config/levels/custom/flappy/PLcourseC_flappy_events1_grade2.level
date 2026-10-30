@@ -1,0 +1,77 @@
+<Flappy>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 61,
+  "created_at": "2024-06-20T20:32:53.000Z",
+  "level_num": "custom",
+  "user_id": 156,
+  "properties": {
+    "skin": "flappy",
+    "instructions_important": "true",
+    "goal": "{\"startX\":100,\"startY\":0}",
+    "scale": "{\"snapRadius\":2}",
+    "app_specific_fail_error": "Your code looks good - it will flap with each click. But you need to click many times to flap to the target.",
+    "success_condition": "function successCondition() {\r\n\t        return Flappy.avatarY <= 40;\r\n\t      }",
+    "failure_condition": "function failureCondition() {\r\n\t        return Flappy.avatarY > Flappy.MAZE_HEIGHT;\r\n\t      }",
+    "short_instructions": "Attach the `flap normal amount` block to the `when click` event, then press \"Run\".    Click or tap on the play space to move Flappy to the target.",
+    "video_key": "flappy_intro",
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "true",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "default_flap": "NORMAL",
+    "free_play": "false",
+    "ground": "false",
+    "obstacles": "false",
+    "score": "false",
+    "shareable": "false",
+    "long_instructions": "<div style=\"background-color: #A6E3E8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\r\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"> \r\nRemember to attach the code directly to the event block. Then, press the orange run button on the left-hand side of your screen underneath the play space to test your code. You will need to click multiple times to pass the level.\r\n</p>\r\n</div>\r\n<br>\r\n\r\nAttach the `flap a normal amount` block to the `when click` event, then press \"Run\".   \r\n\r\n---\r\n\r\nClick or tap on the play space to move Flappy to the target.",
+    "authored_hints": "[{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)\",\"hint_id\":\"courseC_flappy_events1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/68b329da9893e34099c7d8ad5cb9c940/courseC_flappy_events1.mp3\"}]",
+    "parent_level_id": 21259,
+    "name_suffix": "_grade2",
+    "top_level_procedure_autopopulate": "false",
+    "show_type_hints": "false",
+    "encrypted": "false",
+    "preload_asset_list": null
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-06-20T20:32:53.372+00:00\",\"changed\":[\"cloned from \\\"courseC_flappy_events1_grade2\\\"\"],\"cloned_from\":\"courseC_flappy_events1_grade2\"},{\"changed_at\":\"2024-06-20 20:33:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2024-06-24 18:04:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="flappy_whenClick" deletable="false"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml id="toolbox" style="display: none;">
+        <block type="flappy_flap_height"/>
+        <block type="flappy_playSound"/>
+      </xml>
+    </toolbox_blocks>
+    <required_blocks>
+      <xml>
+        <block type="flappy_flap_height">
+          <title name="VALUE">???</title>
+        </block>
+      </xml>
+    </required_blocks>
+  </blocks>
+</Flappy>

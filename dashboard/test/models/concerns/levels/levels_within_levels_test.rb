@@ -35,8 +35,8 @@ class LevelsWithinLevelsTest < ActiveSupport::TestCase
   end
 
   test 'parent levels and child levels' do
-    parent = create :level
-    child = create :level
+    parent = create(:level)
+    child = create(:level)
     parent.child_levels << child
     assert_equal [parent], child.parent_levels
 
@@ -52,23 +52,23 @@ class LevelsWithinLevelsTest < ActiveSupport::TestCase
   end
 
   test 'scoped parent/child relationships' do
-    parent = create :level
+    parent = create(:level)
 
-    contained = create :free_response
+    contained = create(:free_response)
     ParentLevelsChildLevel.create(
       parent_level: parent,
       child_level: contained,
       kind: ParentLevelsChildLevel::CONTAINED
     )
 
-    project_template = create :level
+    project_template = create(:level)
     ParentLevelsChildLevel.create(
       parent_level: parent,
       child_level: project_template,
       kind: ParentLevelsChildLevel::PROJECT_TEMPLATE
     )
 
-    sublevel = create :level
+    sublevel = create(:level)
     ParentLevelsChildLevel.create(
       parent_level: parent,
       child_level: sublevel,
@@ -82,10 +82,10 @@ class LevelsWithinLevelsTest < ActiveSupport::TestCase
   end
 
   test 'child levels are in order of position' do
-    parent = create :level
-    child3 = create :level
-    child2 = create :level
-    child1 = create :level
+    parent = create(:level)
+    child3 = create(:level)
+    child2 = create(:level)
+    child1 = create(:level)
     ParentLevelsChildLevel.find_or_create_by!(
       parent_level: parent,
       child_level: child3,
@@ -105,16 +105,16 @@ class LevelsWithinLevelsTest < ActiveSupport::TestCase
   end
 
   test 'setup contained levels' do
-    level = create :level
+    level = create(:level)
     assert_equal [], level.child_levels.contained
 
     # can add
-    first_contained = create :multi
+    first_contained = create(:multi)
     level.update!(contained_level_names: [first_contained.name])
     assert_equal [first_contained], level.child_levels.contained
 
     # can reorder
-    second_contained = create :free_response
+    second_contained = create(:free_response)
     level.update!(contained_level_names: [first_contained.name, second_contained.name])
     assert_equal [first_contained, second_contained], level.child_levels.contained
     level.update!(contained_level_names: [second_contained.name, first_contained.name])
@@ -125,22 +125,22 @@ class LevelsWithinLevelsTest < ActiveSupport::TestCase
     assert_equal [], level.reload.child_levels.contained
 
     # cannot add contained levels of other types
-    bogus_contained = create :match
+    bogus_contained = create(:match)
     refute level.update(contained_level_names: [bogus_contained.name])
     assert_includes level.errors.full_messages.first, 'cannot add contained level of type Match'
   end
 
   test 'clone_child_levels clones child levels' do
-    parent = create :level
-    child = create :free_response, name: 'child_level'
+    parent = create(:level)
+    child = create(:free_response, name: 'child_level')
     assert ParentLevelsChildLevel.create(parent_level: parent, child_level: child)
     Level.clone_child_levels(parent, '_test_clone')
     assert_equal 'child_level_test_clone', parent.reload.child_levels.first.name
   end
 
   test 'clone_child_levels returns update params' do
-    parent = create :level
-    child = create :free_response, name: 'child_level'
+    parent = create(:level)
+    child = create(:free_response, name: 'child_level')
     assert ParentLevelsChildLevel.create(
       parent_level: parent,
       child_level: child,
@@ -176,31 +176,134 @@ class LevelsWithinLevelsTest < ActiveSupport::TestCase
   end
 
   test 'level cannot be its own project template level' do
-    level = create :level
+    level = create(:level)
     refute level.update(project_template_level_name: level.name)
     assert_includes level.errors.full_messages.first, 'level cannot be its own project template level'
   end
 
   test 'template level type must match level type' do
-    applab = create :applab
-    gamelab = create :gamelab
+    applab = create(:applab)
+    gamelab = create(:gamelab)
 
     refute applab.update(project_template_level_name: gamelab.name)
     assert_includes applab.errors.full_messages.first, 'template level type Gamelab does not match level type Applab'
   end
 
+  test 'contained_levels writes through to Rails.cache and reuses it' do
+    contained = create(:multi)
+    parent = create(:level, contained_level_names: [contained.name])
+    cache_key = "LevelsWithinLevels/contained/#{contained.name}"
+
+    # Rails.cache defaults to :null_store in unit tests (see test_helper.rb);
+    # opt back in to caching for this test via with_local_cache. Also stub
+    # Unit.should_cache? so the `force: !should_cache?` guard does not bypass
+    # the cache.
+    Unit.stubs(:should_cache?).returns(true)
+    Rails.cache.with_local_cache do
+      assert_nil Rails.cache.read(cache_key)
+      assert_equal [contained], parent.contained_levels
+      # If the block uses a non-local `return`, Rails.cache.fetch never writes.
+      assert_equal [contained], Rails.cache.read(cache_key),
+        'contained_levels did not populate Rails.cache'
+
+      # Block both DB recomputation paths so anything other than a cache hit
+      # would raise. The m2m path reads `child_levels`; the fallback path uses
+      # `Unit.cache_find_level`.
+      parent.expects(:child_levels).never
+      Unit.expects(:cache_find_level).never
+      assert_equal [contained], parent.contained_levels,
+        'subsequent contained_levels call did not come from cache'
+    end
+  end
+
+  test 'project_template_level writes through to Rails.cache and reuses it' do
+    template_level = create(:level)
+    real_level = create(:level, project_template_level_name: template_level.name)
+    cache_key = "LevelsWithinLevels/project_template/#{template_level.name}"
+
+    Unit.stubs(:should_cache?).returns(true)
+    Rails.cache.with_local_cache do
+      assert_nil Rails.cache.read(cache_key)
+      assert_equal template_level, real_level.project_template_level
+      assert_equal template_level, Rails.cache.read(cache_key),
+        'project_template_level did not populate Rails.cache'
+
+      # Block both DB recomputation paths. The m2m path reads `child_levels`;
+      # the fallback path uses `Level.find_by_key`.
+      real_level.expects(:child_levels).never
+      Level.expects(:find_by_key).never
+      assert_equal template_level, real_level.project_template_level,
+        'subsequent project_template_level call did not come from cache'
+    end
+  end
+
   test 'project template level cannot have its own project template level' do
-    project_backed_level = create :level, name: 'project backed'
-    template_level = create :level
+    project_backed_level = create(:level, name: 'project backed')
+    template_level = create(:level)
     project_backed_level.project_template_level_name = template_level.name
     project_backed_level.save!
 
-    parent_level = create :level
+    parent_level = create(:level)
     refute parent_level.update(project_template_level_name: project_backed_level.name)
     assert_includes parent_level.errors.full_messages.first, 'the project template level you have selected already has its own project template level'
 
-    template_template_level = create :level
+    template_template_level = create(:level)
     refute template_level.update(project_template_level_name: template_template_level.name)
     assert_includes template_level.errors.full_messages.first, 'this level is already a project template level of another level'
+  end
+
+  test 'a level and its children must be on the same side of the UI Test partition' do
+    ui_test_child = create(:level, name: 'UI Test LevelsWithinLevels child')
+    prod_child = create(:level, name: 'LevelsWithinLevels prod child')
+
+    level = create(:level, name: 'LevelsWithinLevels contained parent')
+    level.contained_level_names = [ui_test_child.name]
+    refute level.valid?
+    assert_includes level.errors.full_messages.first, ui_test_child.name
+
+    level = create(:level, name: 'LevelsWithinLevels template parent')
+    level.project_template_level_name = ui_test_child.name
+    refute level.valid?
+
+    ui_test_parent = create(:level, name: 'UI Test LevelsWithinLevels parent')
+    ui_test_parent.contained_level_names = [prod_child.name]
+    refute ui_test_parent.valid?
+    assert_includes ui_test_parent.errors.full_messages.first, prod_child.name
+    assert_includes ui_test_parent.errors.full_messages.first, 'Copy each to a name beginning with "UI Test "'
+
+    # same-side references are fine in both partitions
+    ui_test_parent.reload.contained_level_names = [ui_test_child.name]
+    assert ui_test_parent.valid?
+    level.reload.project_template_level_name = prod_child.name
+    assert level.valid?
+  end
+
+  test 'a level and its children must be on the same side of the standalone project partition' do
+    subproject = create(:level, name: 'LevelsWithinLevels Subproject')
+    prod_child = create(:level, name: 'LevelsWithinLevels standalone prod child')
+
+    level = create(:level, name: 'LevelsWithinLevels standalone contained parent')
+    level.contained_level_names = [subproject.name]
+    refute level.valid?
+    assert_includes level.errors.full_messages.first, subproject.name
+    assert_includes level.errors.full_messages.first, 'Copy each to a name without the "UI Test ...", "New ... Project", or "... Subproject" form'
+
+    project = create(:level, name: 'New LevelsWithinLevels Project')
+    project.project_template_level_name = prod_child.name
+    refute project.valid?
+    assert_includes project.errors.full_messages.first, prod_child.name
+    assert_includes project.errors.full_messages.first, 'Copy each to a name ending in " Subproject" and refer to the copy instead. Delete each old level and its file, unless they already exist outside of your development environment'
+
+    project.reload.project_template_level_name = subproject.name
+    assert project.valid?
+  end
+
+  test 'can create level with blank child level names' do
+    ['New LevelsWithinLevels Blank Project', 'UI Test LevelsWithinLevels blank parent', 'LevelsWithinLevels blank parent'].each do |name|
+      level = create(:level, name: name)
+      level.project_template_level_name = ''
+      level.contained_level_names = ['']
+      assert level.valid?, level.errors.full_messages.inspect
+    end
   end
 end

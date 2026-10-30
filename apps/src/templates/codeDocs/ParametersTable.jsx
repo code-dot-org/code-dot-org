@@ -1,11 +1,12 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
-import i18n from '@cdo/locale';
+import React from 'react';
 import * as Table from 'reactabular-table';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import color from '@cdo/apps/util/color';
+
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import {tableLayoutStyles} from '@cdo/apps/templates/tables/tableConstants';
+import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
 
 const requiredFormatter = required => {
   if (required) {
@@ -23,6 +24,7 @@ export default function ParametersTable({
   parameters,
   programmingEnvironmentLanguage,
   isSmallWindow,
+  isBlockly,
 }) {
   const descriptionFormatter = description => {
     if (description) {
@@ -37,7 +39,8 @@ export default function ParametersTable({
     }
   };
 
-  const hideRequiredColumn = programmingEnvironmentLanguage === 'java';
+  const hideRequiredColumn =
+    programmingEnvironmentLanguage === 'java' || isBlockly;
   let cellStyle = tableLayoutStyles.cell;
   if (isSmallWindow) {
     cellStyle = {...cellStyle, ...styles.smallCell};
@@ -133,6 +136,7 @@ ParametersTable.propTypes = {
   parameters: PropTypes.arrayOf(PropTypes.object),
   programmingEnvironmentLanguage: PropTypes.string,
   isSmallWindow: PropTypes.bool,
+  isBlockly: PropTypes.bool,
 };
 
 const styles = {

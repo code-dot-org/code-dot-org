@@ -22,6 +22,7 @@
 #  index_levels_on_game_id    (game_id)
 #  index_levels_on_level_num  (level_num)
 #  index_levels_on_name       (name)
+#  index_levels_on_type       (type)
 #
 
 class Weblab < Level
@@ -54,7 +55,7 @@ class Weblab < Level
     options = Rails.cache.fetch("#{cache_key}/#{I18n.locale}/non_blockly_puzzle_level_options/v2") do
       level_prop = {}
 
-      properties.keys.each do |dashboard|
+      properties.each_key do |dashboard|
         # Select value from properties json
         value = JSONValue.value(properties[dashboard].presence)
         apps_prop_name = dashboard.camelize(:lower)

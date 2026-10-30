@@ -1,4 +1,5 @@
 /* This file is only executed within JSInterpreter */
+/* This library is automatically loaded into any P5Lab level that has validation code. */
 
 function levelSuccess(testResult) {
   validationState = "succeeded";

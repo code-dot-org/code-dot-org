@@ -1,68 +1,61 @@
+import {fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
-
-import FontAwesome from '@cdo/apps/templates//FontAwesome';
-import LessonProgressColumnHeader from '@cdo/apps/templates/sectionProgressV2/LessonProgressColumnHeader.jsx';
-import skeletonizeContent from '@cdo/apps/componentLibrary/skeletonize-content.module.scss';
-import styles from '@cdo/apps/templates/sectionProgressV2/progress-table-v2.module.scss';
-import sinon from 'sinon';
 
 import {
   fakeLessonWithLevels,
   fakeLesson,
 } from '@cdo/apps/templates/progress/progressTestHelpers';
+import {UnconnectedLessonProgressColumnHeader} from '@cdo/apps/templates/sectionProgressV2/LessonProgressColumnHeader.jsx';
+import i18n from '@cdo/locale';
 
 const LESSON = fakeLessonWithLevels({numberedLesson: true}, 1);
 
 const DEFAULT_PROPS = {
+  sectionId: 1,
+  unitId: 1,
   lesson: LESSON,
   addExpandedLesson: () => {},
   allLocked: true,
 };
 
-const setUp = overrideProps => {
+const renderDefault = overrideProps => {
   const props = {...DEFAULT_PROPS, ...overrideProps};
-  return shallow(<LessonProgressColumnHeader {...props} />);
+  render(<UnconnectedLessonProgressColumnHeader {...props} />);
 };
 
 describe('LessonProgressColumnHeader', () => {
   it('Shows skeleton if fake lesson', () => {
-    const wrapper = setUp({lesson: {id: 1, isFake: true}});
+    renderDefault({lesson: {id: 1, isFake: true}});
 
-    expect(
-      wrapper.find(`.${skeletonizeContent.skeletonizeContent}`)
-    ).to.have.length(1);
+    screen.getByLabelText(i18n.loadingLesson());
   });
 
   it('Shows uninteractive if no levels in lesson', () => {
     const lesson = fakeLesson();
     lesson.numberedLesson = true;
-    const wrapper = setUp({lesson});
+    renderDefault({lesson});
 
-    expect(wrapper.find(FontAwesome)).to.have.length(0);
+    expect(screen.queryByTitle(i18n.expand())).toBeNull();
   });
 
   it('Shows uninteractive if lockable lesson', () => {
     const lesson = fakeLesson();
     lesson.lockable = true;
-    const wrapper = setUp({lesson});
+    renderDefault({lesson});
 
-    expect(wrapper.find(FontAwesome)).to.have.length(1);
-    expect(wrapper.findWhere(n => n.prop('icon') === 'lock')).to.have.length(1);
+    expect(screen.queryByTitle(i18n.expand())).toBeNull();
+    screen.getByTitle(i18n.locked());
   });
 
   it('Shows lesson header and expands on click', () => {
-    const addExpandedLesson = sinon.spy();
-    const wrapper = setUp({addExpandedLesson: addExpandedLesson});
+    const addExpandedLesson = jest.fn();
+    renderDefault({addExpandedLesson: addExpandedLesson});
 
-    expect(wrapper.find(FontAwesome)).to.have.length(1);
-    expect(
-      wrapper.findWhere(n => n.prop('icon') === 'caret-right')
-    ).to.have.length(1);
-    expect(wrapper.find(`.${styles.lessonHeaderCell}`)).to.have.length(1);
+    screen.getByText(LESSON.relative_position);
 
-    wrapper.find(`.${styles.lessonHeaderCell}`).simulate('click');
-    expect(addExpandedLesson).to.have.been.calledOnce;
+    const caret = screen.getByTitle(i18n.expand());
+
+    fireEvent.click(caret);
+    expect(addExpandedLesson).toHaveBeenCalledTimes(1);
   });
 });

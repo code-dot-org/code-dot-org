@@ -43,6 +43,7 @@ module Levels
         through: :levels_child_levels
 
       before_validation :sanitize_contained_level_names
+      validate :children_stay_within_partition
       after_save :setup_contained_levels
       after_save :setup_project_template_level
     end
@@ -73,6 +74,54 @@ module Levels
 
         return update_params
       end
+
+      # Create ParentLevelsChildLevel many-to-many relationships based on the
+      # contents of the specified levels' `contained_level_names` or `project_template_level_name` properties.
+      # Differentiated by child_level_kind (either ParentLevelsChildLevel::CONTAINED or ParentLevelsChildLevel::PROJECT_TEMPLATE)
+      def setup_child_levels_for(levels, child_level_kinds)
+        outdated_levels_child_level_ids = []
+        new_levels_child_levels = []
+
+        # This expects `level.levels_child_levels.child_level` to be preloaded.
+        child_level_kinds.each do |child_level_kind|
+          levels.each do |level|
+            # Determine which level names to use based on child_level_kind
+            child_level_names = child_level_kind == ParentLevelsChildLevel::CONTAINED ? level.contained_level_names : [level.project_template_level_name]
+            # Skip if the current level's child levels already match the names
+            next if level.levels_child_levels.map {|levels_child_level| levels_child_level.child_level.name} == child_level_names
+
+            # Don't access `level.child_levels` or `level.levels_child_levels.{kind}` here, because it will go to the database which is slow
+            outdated_levels_child_level_ids += level.levels_child_levels.filter {|parent_levels_child_level| parent_levels_child_level.kind == child_level_kind}.map(&:id)
+
+            next if child_level_names.blank?
+
+            # Create new relationships for matching names
+            Level.where(name: child_level_names).find_each do |child_level|
+              position = child_level_names.index(child_level.name) if child_level_kind == ParentLevelsChildLevel::CONTAINED
+              new_levels_child_levels << ParentLevelsChildLevel.new(
+                parent_level: level,
+                child_level: child_level,
+                kind: child_level_kind,
+                position: position
+              )
+            end
+          end
+        end
+
+        # Delete outdated child levels in batches
+        outdated_levels_child_level_ids.each_slice(1000) do |ids_batch|
+          ParentLevelsChildLevel.where(id: ids_batch).delete_all
+        end
+
+        # Insert new child level relationships in batches
+        ParentLevelsChildLevel.import!(new_levels_child_levels, batch_size: 1000) if new_levels_child_levels.any?
+
+        # Reset child level caches for each level
+        levels.each do |level|
+          level.levels_child_levels.reset
+          level.child_levels.reset
+        end
+      end
     end
 
     # Returns all child levels of this level, which could include contained
@@ -96,21 +145,31 @@ module Levels
     def contained_levels
       return [] if contained_level_names.blank?
       cache_key = "LevelsWithinLevels/contained/#{contained_level_names&.join('/')}"
-      Rails.cache.fetch(cache_key, force: !Unit.should_cache?) do
-        result = child_levels.contained
+      Rails.cache.fetch(cache_key, force: !Unit.should_cache?, skip_nil: true) do
+        # Curriculum data which does not update frequently. We can have ~20ms replication lag,
+        # by reading from the :reading role
+        ActiveRecord::Base.connected_to(role: :reading) do
+          # Materialize the relation with `.to_a` so the SELECT happens on the
+          # reader. A lazy relation returned from this block would defer the
+          # query to the caller's enumeration site, which is typically outside
+          # any `connected_to(role: :reading)` scope and would hit the writer.
+          result = child_levels.contained.to_a
 
-        # attempt to use the new parent-child many-to-many table to retrieve the
-        # levels themselves, but if we have a contained_level_names property and
-        # no actual associations, fall back to retrieving the levels directly.
-        # Once the new m2m implementation has been fully deployed, we can remove
-        # this fallback.
-        if result.blank?
-          result = contained_level_names.map do |contained_level_name|
-            Unit.cache_find_level(contained_level_name)
+          # attempt to use the new parent-child many-to-many table to retrieve the
+          # levels themselves, but if we have a contained_level_names property and
+          # no actual associations, fall back to retrieving the levels directly.
+          # Once the new m2m implementation has been fully deployed, we can remove
+          # this fallback.
+          if result.blank?
+            result = contained_level_names.map do |contained_level_name|
+              Unit.cache_find_level(contained_level_name)
+            end
           end
-        end
 
-        return result
+          # NOTE: do not use `return` here; a non-local return from inside the
+          # Rails.cache.fetch block would skip the cache write.
+          result
+        end
       end
     end
 
@@ -119,19 +178,56 @@ module Levels
     def project_template_level
       return nil if try(:project_template_level_name).nil?
       cache_key = "LevelsWithinLevels/project_template/#{project_template_level_name}"
-      Rails.cache.fetch(cache_key, force: !Unit.should_cache?) do
-        # attempt to use the new parent-child many-to-many table to retrieve
-        # the level, but if we have a project_template_level_name property and
-        # no actual association, fall back to retrieving the level directly.
-        # Once the new m2m implementation has been fully deployed, we can
-        # remove this fallback.
-        return (child_levels.project_template.first ||
-                Level.find_by_key(project_template_level_name))
+      Rails.cache.fetch(cache_key, force: !Unit.should_cache?, skip_nil: true) do
+        # Curriculum data which does not update frequently. We can have ~20ms replication lag,
+        # by reading from the :reading role
+        ActiveRecord::Base.connected_to(role: :reading) do
+          # attempt to use the new parent-child many-to-many table to retrieve
+          # the level, but if we have a project_template_level_name property and
+          # no actual association, fall back to retrieving the level directly.
+          # Once the new m2m implementation has been fully deployed, we can
+          # remove this fallback.
+          # NOTE: do not use `return` here; a non-local return from inside the
+          # Rails.cache.fetch block would skip the cache write.
+          child_levels.project_template.first ||
+            Level.find_by_key(project_template_level_name)
+        end
       end
     end
 
     def host_level
       project_template_level || self
+    end
+
+    # A parent level and its children must be in the same partition; see
+    # dashboard/config/PARTITIONS.md.
+    #
+    # The row-level check lives on ParentLevelsChildLevel, where it covers
+    # every path that writes parent/child rows. This validation is the
+    # name-based complement for the two relationships whose child names live
+    # in properties, contained levels and project templates: unlike the row
+    # check, it also catches names which resolve to no level at all.
+    def children_stay_within_partition
+      offending = cross_partition_child_names(
+        Array(contained_level_names) + [try(:project_template_level_name)]
+      )
+      return if offending.empty?
+      errors.add(:base, cross_partition_children_message(offending))
+    end
+
+    # Of the given child level names, those in a different partition from
+    # this level. Ignores blank entries, which the edit form submits for an
+    # empty project template field.
+    def cross_partition_child_names(child_names)
+      child_names.compact_blank.reject {|child_name| Policies::LevelFiles.same_partition?(child_name, name)}
+    end
+
+    def cross_partition_children_message(offending_child_names)
+      "level #{name.dump} and its child levels must be in the same partition " \
+        "(\"UI Test \", standalone project, or production); offending children: " \
+        "#{offending_child_names.map(&:dump).join(', ')}. Copy each " \
+        "#{Policies::LevelFiles.copy_into_partition_of(name)} and refer to the copy instead. " \
+        "Delete each old level and its file, unless they already exist outside of your development environment"
     end
 
     def sanitize_contained_level_names
@@ -141,39 +237,12 @@ module Levels
       properties["contained_level_names"] = contained_level_names
     end
 
-    # Create ParentLevelsChildLevel many-to-many relationships based on the
-    # contents of this level's `contained_level_names` property.
     def setup_contained_levels
-      # if our existing contained levels already match the given names, do
-      # nothing
-      return if child_levels.contained.map(&:name) == contained_level_names
-
-      # otherwise, update contained levels to match
-      levels_child_levels.contained.destroy_all
-      Level.where(name: contained_level_names).each do |contained_level|
-        ParentLevelsChildLevel.create!(
-          child_level: contained_level,
-          kind: ParentLevelsChildLevel::CONTAINED,
-          parent_level: self,
-          position: contained_level_names.index(contained_level.name)
-        )
-      end
+      self.class.setup_child_levels_for([self], [ParentLevelsChildLevel::CONTAINED])
     end
 
     def setup_project_template_level
-      # if we already have a project template level which matches the specified
-      # name, do nothing.
-      return if child_levels.project_template.first&.name == project_template_level_name
-
-      # otherwise, update project template level to match
-      levels_child_levels.project_template.destroy_all
-      return if project_template_level_name.blank?
-      template_level = Level.find_by_name!(project_template_level_name)
-      ParentLevelsChildLevel.create!(
-        child_level: template_level,
-        kind: ParentLevelsChildLevel::PROJECT_TEMPLATE,
-        parent_level: self
-      )
+      self.class.setup_child_levels_for([self], [ParentLevelsChildLevel::PROJECT_TEMPLATE])
     end
   end
 end

@@ -1,0 +1,57 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-04-13T14:20:48.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "pseudocode.md",
+          "contents": "",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1"
+      ]
+    },
+    "encrypted": "false",
+    "display_name": "Write Pseudocode",
+    "long_instructions": "### **Write Pseudocode**\r\n\r\n### **Do This:**\r\n\r\n1. Use AI Tutor to generate pseudocode for your feature.\r\n2. Include:\r\n   * user action\r\n   * what changes\r\n   * any conditions\r\n3. Save to your Backpack",
+    "bubble_choice_description": "Draft simple pseudocode to explain what your feature should do.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "code",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "thumbnail_url": "https://images.code.org/91feb259528427731b69bc770672f7c7-Colored bars on paper with speech bubble.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-13 14:44:26 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-13 14:47:23 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-13 14:59:26 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Weblab2>

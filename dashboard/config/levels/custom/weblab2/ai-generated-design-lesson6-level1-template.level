@@ -1,0 +1,79 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-03-17T04:45:42.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "designer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Solé – Home</title>\n    <link rel=\"stylesheet\" href=\"style.css\" />\n  </head>\n  <body>\n\n    <header>\n      <h1>Solé</h1>\n      <nav>\n        <a href=\"index.html\">Home</a>\n        <a href=\"music.html\">Music</a>\n      </nav>\n    </header>\n\n    <main>\n\n      <section id=\"hero\">\n        <h2>Independent Artist. Oakland, CA.</h2>\n        <p>\n          Blending Afrobeats, R&B, and spoken word into music that moves\n          both body and mind.\n        </p>\n        <a href=\"music.html\">Explore the music</a>\n      </section>\n\n      <section id=\"about\">\n        <h2>About</h2>\n        <p>\n          Solé grew up between Lagos and Oakland, and you can hear both in\n          every track she makes. Her debut EP <em>Roots & Static</em> was\n          recorded entirely in her bedroom studio and released independently\n          in 2024.\n        </p>\n        <p>\n          When she's not in the studio, Solé runs free music production\n          workshops for teens in her neighborhood through her project,\n          The Static Room.\n        </p>\n      </section>\n\n      <section id=\"featured\">\n        <h2>Latest Release</h2>\n        <h3>Roots & Static – EP</h3>\n        <p>Four tracks. No features. All feeling.</p>\n        <ul>\n          <li>Golden Hour</li>\n          <li>No Signal</li>\n          <li>Carry On</li>\n          <li>Static Love</li>\n        </ul>\n        <a href=\"music.html\">See full discography</a>\n      </section>\n\n      <section id=\"shows\">\n        <h2>Upcoming Shows</h2>\n        <ul>\n          <li>July 12 – The New Parish, Oakland CA</li>\n          <li>July 26 – Café du Nord, San Francisco CA</li>\n          <li>August 3 – Lodge Room, Los Angeles CA</li>\n        </ul>\n        <p><a href=\"#\">Get tickets</a></p>\n      </section>\n\n    </main>\n\n    <footer>\n      <p>\n        <a href=\"#\">Instagram</a>\n        <a href=\"#\">SoundCloud</a>\n        <a href=\"#\">Email</a>\n      </p>\n      <p>&copy; 2025 Solé. All rights reserved.</p>\n    </footer>\n\n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "music.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Solé – Music</title>\n    <link rel=\"stylesheet\" href=\"style.css\" />\n  </head>\n  <body>\n\n    <header>\n      <h1>Solé</h1>\n      <nav>\n        <a href=\"index.html\">Home</a>\n        <a href=\"music.html\">Music</a>\n      </nav>\n    </header>\n\n    <main>\n\n      <section id=\"discography\">\n        <h2>Discography</h2>\n\n        <article>\n          <h3>Roots & Static</h3>\n          <p><strong>EP – 2024</strong></p>\n          <p>\n            Recorded over six months in a converted closet, <em>Roots & Static</em>\n            is about finding signal in the noise — figuring out who you are\n            when everything around you is pulling in different directions.\n          </p>\n          <h4>Tracklist</h4>\n          <ol>\n            <li>Golden Hour</li>\n            <li>No Signal</li>\n            <li>Carry On</li>\n            <li>Static Love</li>\n          </ol>\n        </article>\n\n        <article>\n          <h3>Drift</h3>\n          <p><strong>Single – 2023</strong></p>\n          <p>\n            A lo-fi R&B track about distance — physical and emotional.\n            <em>Drift</em> was Solé's first self-produced release and racked\n            up over 200K streams in its first month.\n          </p>\n        </article>\n\n        <article>\n          <h3>Homecoming</h3>\n          <p><strong>Single – 2022</strong></p>\n          <p>\n            Written on a flight back from Lagos, <em>Homecoming</em> explores\n            what it means to belong somewhere — and what it costs to leave.\n          </p>\n        </article>\n\n      </section>\n\n      <section id=\"contact\">\n        <h2>Booking & Press</h2>\n        <p>For inquiries, reach out at <a href=\"mailto:booking@solemusic.com\">booking@solemusic.com</a></p>\n      </section>\n\n    </main>\n\n    <footer>\n      <p>\n        <a href=\"#\">Instagram</a>\n        <a href=\"#\">SoundCloud</a>\n        <a href=\"#\">Email</a>\n      </p>\n      <p>&copy; 2025 Solé. All rights reserved.</p>\n    </footer>\n\n  </body>\n</html>",
+          "folderId": "0",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "prompt.md",
+          "contents": "1. What is the goal?\nWhat should your website look and feel like after styling? What mood or tone should it communicate?\n\nAnswer:\n\n---\n\n2. What are the constraints?\n- What brand colors and fonts must be used?\n- Which sections must be styled consistently (header, nav, main content, footer)?\n- Are there any readability or usability requirements?\n\nAnswer:\n\n---\n\n3. What are the edge cases?\nWhat styling problems should be avoided? For example: low contrast text, hard-to-read fonts, inconsistent spacing, etc.\n\nAnswer:\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "5"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n9M5PNuU5srgrOvxuVW7ERFmakK77\n",
+    "name_suffix": "_2026",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML",
+        "buildCSS",
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-03-17T04:45:42.345+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson6-level4-template\\\"\"],\"cloned_from\":\"ai-generated-design-lesson6-level4-template\"},{\"changed_at\":\"2026-03-17 04:46:23 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-03-17 05:13:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-03-17 05:13:52 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-03-26 11:00:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-10 05:27:41 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-10 05:27:41 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-10 06:08:35 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-16 01:23:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-16 01:27:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-16 01:30:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-16 02:03:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Weblab2>

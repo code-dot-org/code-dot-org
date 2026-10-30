@@ -1,0 +1,15 @@
+name 'Data Sci U1 Post Q12_2024-pilot'
+
+question 'What is a key element of effective data storytelling?'
+
+wrong 'Using technical jargon.'
+right 'Including clear visuals and narratives.'
+wrong 'Presenting only raw data.'
+wrong 'Focusing on complex algorithms.'
+
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+
+MARKDOWN

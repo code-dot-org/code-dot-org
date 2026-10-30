@@ -1,13 +1,16 @@
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import MultipleChoiceSurveyOverviewTable from './MultipleChoiceSurveyOverviewTable';
+import {connect} from 'react-redux';
+
+import i18n from '@cdo/locale';
+
 import {multipleChoiceDataPropType} from './assessmentDataShapes';
+import MultipleChoiceSurveyOverviewTable from './MultipleChoiceSurveyOverviewTable';
 import {
   getMultipleChoiceSurveyResults,
   countSubmissionsForCurrentAssessment,
 } from './sectionAssessmentsRedux';
-import {connect} from 'react-redux';
-import i18n from '@cdo/locale';
 
 class MultipleChoiceSurveyOverviewContainer extends Component {
   static propTypes = {
@@ -24,12 +27,12 @@ class MultipleChoiceSurveyOverviewContainer extends Component {
     } = this.props;
     return (
       <div>
-        <h2>
+        <Typography variant="h6" component="h2">
           {i18n.multipleChoiceQuestionsOverview({
             numSubmissions: totalStudentSubmissions,
             numStudents: totalStudentCount,
           })}
-        </h2>
+        </Typography>
         {multipleChoiceSurveyData.length > 0 && (
           <MultipleChoiceSurveyOverviewTable
             multipleChoiceSurveyData={multipleChoiceSurveyData}

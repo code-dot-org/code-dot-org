@@ -1,9 +1,5 @@
 <%
-require 'cdo/aws/dms'
-require 'active_support/core_ext/numeric/bytes'
-require 'active_support/core_ext/numeric/time'
 require 'active_support/inflector'
-require 'cdo/redshift'
 self.tags.push key: 'environment', value: rack_env
 -%>
 ---
@@ -13,29 +9,15 @@ Description: Data layer including RedShift cluster configuration and synchroniza
 # redshift_password: abcdef
 # Parameters are only required for initial stack creation, and reused if not provided on stack update.
 Parameters:
-  RDSIdentifier:
+  ProductionAuroraClusterARN:
     Type: String
-  # MySQL user must have granted REPLICATION CLIENT and REPLICATION SLAVE permissions.
-  # Ref: http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MySQL.html#CHAP_Source.MySQL.Security
-  RDSUsername:
-    Type: String
-  RDSPassword:
-    Type: String
-    NoEcho: true
-  RDSHost:
-    Type: String
-  # Typically in the form: `cluster-[random-AWS-assigned-string].[region].rds.amazonaws.com` without leading dot.
-  RDSClusterEndpointRootDomain:
-    Type: String
-  ReportingCluster:
-    Type: String
+    Description: The ARN of the production Aurora cluster so we can authorize it as a Redshift source for Zero-ETL.
   RedshiftDatabase:
     Type: String
     Default: dashboard
-  RedshiftUsername:
+  RedshiftAdminUsername:
     Type: String
-    Default: dev
-  RedshiftPassword:
+  RedshiftAdminPassword:
     Type: String
     NoEcho: true
   RDSBackupAccount:
@@ -44,42 +26,68 @@ Parameters:
   LogsBucket:
     Type: String
 Resources:
+  TableauProductionParameterGroup:
+    Type: AWS::Redshift::ClusterParameterGroup
+    DeletionPolicy: Retain
+    UpdateReplacePolicy: Retain
+    Properties:
+      ParameterGroupName: production
+      Description: Parameter Group for production Redshift cluster
+      ParameterGroupFamily: redshift-1.0
+      Parameters:
+        - ParameterName: require_ssl
+          ParameterValue: 'true'
+        # Required on the target of the Zero-ETL Integration from Aurora MySQL cluster.
+        - ParameterName: enable_case_sensitive_identifier
+          ParameterValue: 'true'
+        - ParameterName: wlm_json_configuration
+          ParameterValue: '[{"query_concurrency":10,"max_execution_time":0,"query_group":[],"query_group_wild_card":0,"user_group":[],"user_group_wild_card":0},{"short_query_queue":true,"max_execution_time":10000}]'
   Tableau:
     Type: AWS::Redshift::Cluster
+    Metadata:
+      ForceUpdate: "2026-03-24-v1"
     DeletionPolicy: Retain
     Properties:
       AllowVersionUpgrade: true
       AutomatedSnapshotRetentionPeriod: 5
-      ClusterParameterGroupName: default.redshift-1.0
+      # Stale on purpose. The cluster really uses TableauParameterGroup (`cdo`).
+      ClusterParameterGroupName: !Ref TableauProductionParameterGroup
       ClusterSubnetGroupName: !ImportValue VPC-RedshiftSubnetGroup
-      ClusterType: single-node
+      ClusterType: multi-node
       ClusterVersion: 1.0
       DBName: {Ref: RedshiftDatabase}
       Encrypted: true
       KmsKeyId: alias/aws/redshift
-      MasterUsername: {Ref: RedshiftUsername}
-      MasterUserPassword: {Ref: RedshiftPassword}
-      NodeType: dc1.large
-      # This maintenance can interfere with the daily export from MySQL to Redshift which starts at 02:00 UTC, so set it
-      # to start at least 1 hour before the export begins (it typically takes 15 minutes).
-      PreferredMaintenanceWindow: 'Tue:01:00-Tue:01:30'
+      MasterUsername: {Ref: RedshiftAdminUsername}
+      MasterUserPassword: {Ref: RedshiftAdminPassword}
+      NodeType: rg.4xlarge
+      NumberOfNodes: 3
+      # This maintenance can interfere with analytics batch routines that execute a sequence of long duration SQL
+      # statements over an extended period, such as the dbt model runs. This is scheduled to avoid conflicting.
+      PreferredMaintenanceWindow: 'mon:22:30-mon:23:00'
       PubliclyAccessible: true
       VpcSecurityGroupIds: [!ImportValue VPC-RedshiftSecurityGroup]
-  DMSReplicationInstance:
-    Type: AWS::DMS::ReplicationInstance
-    Properties:
-      ReplicationInstanceIdentifier: export-mysql-to-redshift
-      AllowMajorVersionUpgrade: true
-      AllocatedStorage: 250
-      EngineVersion: 3.5.1
-      MultiAZ: true
-      PubliclyAccessible: false
-      ReplicationInstanceClass: dms.r4.4xlarge
-      ReplicationSubnetGroupIdentifier: !ImportValue VPC-DMSSubnetGroup
-      VpcSecurityGroupIds: [!ImportValue VPC-DMSSecurityGroup]
-      # This maintenance can interfere with the daily export from MySQL to Redshift which starts at 02:00 UTC, so set it
-      # to start at least 1 hour before the export begins.
-      PreferredMaintenanceWindow: 'Tue:01:00-Tue:01:30'
+#  Redshift does not yet support configuring a Resource Policy on a Provisioned Cluster. We configure this one policy
+#  manually.
+#  TODO: Move our Redshift datawarehouse to a Serverless and/or implement this via CloudFormation when Provisioned
+#  cluster Resources are supported.
+#  RedshiftZeroETLResourcePolicy:
+#    Type: AWS::RedshiftServerless::ResourcePolicy
+#    Properties:
+#      ResourceArn: !GetAtt Tableau.ClusterNamespaceArn
+#      Policy:
+#        Version: "2012-10-17"
+#        Statement:
+#          - Sid: AllowZeroETLFromProductionAurora
+#            Effect: Allow
+#            Principal:
+#              Service: "redshift.amazonaws.com"
+#            Action:
+#              - "redshift:AuthorizeInboundIntegration"
+#            Resource: !GetAtt Tableau.ClusterNamespaceArn
+#            Condition:
+#              ArnEquals:
+#                "redshift:SourceArn": !Ref ProductionAuroraClusterARN
   # Note that this is an incomplete set of Policies attached to the
   # redshift-s3 Role. The Role itself and other Policies were generated manually
   # in the AWS Console, and we should continue to move these Resources here over time.
@@ -97,128 +105,6 @@ Resources:
             Resource:
               - 'arn:aws:s3:::cdo-data-sharing-internal/*'
               - 'arn:aws:s3:::cdo-data-sharing-internal'
-  RDSEndpoint:
-    Type: AWS::DMS::Endpoint
-    Properties:
-      EndpointIdentifier: !Sub "RDS-${AWS::StackName}"
-      EndpointType: source
-      EngineName: mysql
-      ServerName: !Ref RDSHost
-      Port: 3306
-      Username: !Ref RDSUsername
-      Password: !Ref RDSPassword
-      ExtraConnectionAttributes: ResumeFetchForXRows=0;UnloadTimeout=86400
-  AuroraCloneEndpoint:
-    Type: AWS::DMS::Endpoint
-    Properties:
-      EndpointIdentifier: !Sub "AuroraCloneEndpoint-${AWS::StackName}"
-      EndpointType: source
-      EngineName: aurora
-      # At the time this template is rendered the Redshift Import Clone may not exist, so we can't use the RDS describe
-      # endpoints API to get this server name.
-      ServerName: !Sub "<%= RedshiftImport::CLONE_CLUSTER_ID %>.${RDSClusterEndpointRootDomain}"
-      Port: 3306
-      Username: !Ref RDSUsername
-      Password: !Ref RDSPassword
-      ExtraConnectionAttributes: ResumeFetchForXRows=0;UnloadTimeout=86400
-  RedshiftEndpoint:
-    Type: AWS::DMS::Endpoint
-    Properties:
-      EndpointIdentifier: !Sub "Redshift-${AWS::StackName}"
-      EndpointType: target
-      EngineName: redshift
-      ServerName: !GetAtt Tableau.Endpoint.Address
-      Port: !GetAtt Tableau.Endpoint.Port
-      Username: !Ref RedshiftUsername
-      Password: !Ref RedshiftPassword
-      DatabaseName: !Ref RedshiftDatabase
-      # Extra Connection Attributes:
-      # https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Introduction.ConnectionAttributes.html#CHAP_Introduction.ConnectionAttributes.Redshift
-      ExtraConnectionAttributes: <%={
-         # maxFileSize - Specifies the maximum size (in KB) of any CSV file used to transfer data to Amazon Redshift.
-         # Default value: 32768 KB (32 MB)
-         # Valid values: 1 - 1048576
-         # Note: Redshift limit is currently 5 GB according to AWS Support.
-         maxFileSize: 5.gigabytes / 1.kilobyte,
-         # fileTransferUploadStreams - Specifies the number of threads used to upload a single file.
-         # Default value: 10
-         # Valid values: 1 - 64
-         fileTransferUploadStreams: 20,
-         # writeBufferSize - Specifies the size (in KB) of the LOB write buffer.
-         # Giving extra memory can speed up the data load process when you have
-         # large varchar / text / LOB data to be moved to the destination.
-         # Default value: 1000 KB (1 MB)
-         writeBufferSize: 8.megabytes / 1.kilobyte
-      }.map{|x|x.join('=')}.join(';')%>
-<% Cdo::DMS.tasks(aws_dir('dms/tasks.yml')).each do |task_name, table_mappings, schedule| -%>
-  DMS<%=task_name.underscore.camelize%>:
-    Type: AWS::DMS::ReplicationTask
-    Properties:
-      MigrationType: full-load
-      ReplicationInstanceArn: !Ref DMSReplicationInstance
-      ReplicationTaskIdentifier: <%= task_name %>
-      SourceEndpointArn: !Ref AuroraCloneEndpoint
-      TargetEndpointArn: !Ref RedshiftEndpoint
-      ReplicationTaskSettings: !Sub |
-        <%= YAML.load(erb_file(aws_dir('dms/replication-task-settings.yml.erb'))).to_json %>
-      TableMappings: !Sub |
-          <%= table_mappings.to_json %>
-      Tags:
-        -
-          Key: schedule
-          Value: <%=schedule%>
-<% end -%>
-  DMSS3Role:
-    Type: AWS::IAM::Role
-    Properties:
-      RoleName: DMSS3Role
-      AssumeRolePolicyDocument:
-        Statement:
-          - Effect: Allow
-            Principal: {Service: [dms.amazonaws.com]}
-            Action: 'sts:AssumeRole'
-      Policies:
-        - PolicyName: DMSRolePolicy
-          PolicyDocument:
-            Version: "2012-10-17"
-            Statement:
-              - Effect: Allow
-                Action:
-                  - 's3:PutObject'
-                  - 's3:DeleteObject'
-                  - 's3:PutObjectTagging'
-                  - 's3:ListBucket'
-                Resource: 'arn:aws:s3:::cdo-activities-archive*'
-      PermissionsBoundary: !ImportValue IAM-DevPermissions
-  AuroraS3Role:
-    Type: AWS::IAM::Role
-    Properties:
-      RoleName: AuroraS3Role
-      AssumeRolePolicyDocument:
-        Statement:
-          - Effect: Allow
-            Principal: {Service: [rds.amazonaws.com]}
-            Action: 'sts:AssumeRole'
-      Policies:
-        # SELECT INTO OUTFILE S3 permissions:
-        # https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Integrating.Authorizing.IAM.S3CreatePolicy.html
-        - PolicyName: SelectIntoOutfileS3
-          PolicyDocument:
-            Version: "2012-10-17"
-            Statement:
-              - Effect: Allow
-                Action:
-                  - 's3:AbortMultipartUpload'
-                  - 's3:DeleteObject'
-                  - 's3:GetObject'
-                  - 's3:ListMultipartUploadParts'
-                  - 's3:PutObject'
-                Resource: 'arn:aws:s3:::cdo-activities-archive/*'
-              - Effect: Allow
-                Action:
-                  - 's3:ListBucket'
-                Resource: 'arn:aws:s3:::cdo-activities-archive'
-      PermissionsBoundary: !ImportValue IAM-DevPermissions
 <%
   # Add CloudWatch Logs Metric Filters for RDS Enhanced Monitoring metrics.
   # Ref: https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.OS.html#w2ab1c20c23c17b7b5
@@ -568,6 +454,46 @@ Resources:
                 Value: <%=environment%>-dashboard-cdn/
               - Name: suffix
                 Value: .gz
+<% if stack_name == 'DATA-production' -%>
+  # These CloudWatch Log Groups collect syslog from EC2 Instances in multiple Stack, and are organized by environment type.
+  AdhocSyslog:
+    Type: AWS::Logs::LogGroup
+    DeletionPolicy: Retain
+    UpdateReplacePolicy: Retain
+    Properties:
+      LogGroupName: adhoc-syslog
+      RetentionInDays: 90
+  StagingSyslog:
+    Type: AWS::Logs::LogGroup
+    DeletionPolicy: Retain
+    UpdateReplacePolicy: Retain
+    Properties:
+      LogGroupName: staging-syslog
+      RetentionInDays: 90
+  TestSyslog:
+    Type: AWS::Logs::LogGroup
+    DeletionPolicy: Retain
+    UpdateReplacePolicy: Retain
+    Properties:
+      LogGroupName: test-syslog
+      RetentionInDays: 545
+  LevelbuilderSyslog:
+    Type: AWS::Logs::LogGroup
+    DeletionPolicy: Retain
+    UpdateReplacePolicy: Retain
+    Properties:
+      LogGroupName: levelbuilder-syslog
+      RetentionInDays: 545
+      DeletionProtectionEnabled: true
+  ProductionSyslog:
+    Type: AWS::Logs::LogGroup
+    DeletionPolicy: Retain
+    UpdateReplacePolicy: Retain
+    Properties:
+      LogGroupName: production-syslog
+      RetentionInDays: 1096
+      DeletionProtectionEnabled: true
+<% end -%>
   AuditLogs:
     Type: AWS::Logs::LogGroup
     Properties:
@@ -611,3 +537,96 @@ Resources:
     Properties:
       AliasName: alias/auditlogs
       TargetKeyId: !Ref AuditLogsKey
+  # WAF WebACL Logs S3 Bucket
+  WebApplicationFirewallAccessControlListLogsBucket:
+    Type: "AWS::S3::Bucket"
+    DeletionPolicy: Retain
+    Properties:
+      BucketName: "aws-waf-logs-cdo"
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: "AES256"
+      VersioningConfiguration:
+        Status: "Enabled"
+      LifecycleConfiguration:
+        Rules:
+          - Id: "Expire old Versions after 15 months"
+            NoncurrentVersionExpirationInDays: 455
+            Status: "Enabled"
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+  WAFLogsDatabase:
+    Type: "AWS::Glue::Database"
+    Properties:
+      CatalogId: !Ref "AWS::AccountId"
+      DatabaseInput:
+        Name: "waf_logs_db"
+        Description: "Database for WAF WebACL logs"
+  GlobalWebACLLogsTable:
+    Type: AWS::Glue::Table
+    Properties:
+      DatabaseName: !Ref WAFLogsDatabase
+      CatalogId: !Ref "AWS::AccountId"
+      TableInput:
+        Name: waf_logs_code_dot_org
+        Description: WAF WebACL logs table for code-dot-org Global WebACL
+        TableType: EXTERNAL_TABLE
+        Parameters:
+          classification: json
+          projection.enabled: "true"
+          projection.timestamp_folder.format: "yyyy/MM/dd/HH/mm"
+          projection.timestamp_folder.interval: "1"
+          projection.timestamp_folder.interval.unit: "MINUTES"
+          projection.timestamp_folder.range: "2024/01/01/00/00,NOW"
+          projection.timestamp_folder.type: "date"
+          storage.location.template: !Sub "s3://${WebApplicationFirewallAccessControlListLogsBucket}/AWSLogs/${AWS::AccountId}/WAFLogs/cloudfront/code-dot-org/${!timestamp_folder}"
+          transient_lastDdlTime: "1733787890"
+        PartitionKeys:
+          - Name: timestamp_folder
+            Type: string
+        StorageDescriptor:
+          Location: !Sub "s3://${WebApplicationFirewallAccessControlListLogsBucket}/AWSLogs/${AWS::AccountId}/WAFLogs/cloudfront/code-dot-org"
+          Columns:
+            - Name: timestamp
+              Type: bigint
+            - Name: formatversion
+              Type: int
+            - Name: webaclid
+              Type: string
+            - Name: terminatingruleid
+              Type: string
+            - Name: terminatingruletype
+              Type: string
+            - Name: action
+              Type: string
+            - Name: httpsourcename
+              Type: string
+            - Name: httpsourceid
+              Type: string
+            - Name: responsecodesent
+              Type: string
+            - Name: httprequest
+              Type: struct<clientip:string,country:string,headers:array<struct<name:string,value:string>>,uri:string,args:string,httpmethod:string,requestid:string>
+            - Name: nonterminatingmatchingrules
+              Type: array<struct<ruleid:string,action:string,rulematchdetails:array<struct<conditiontype:string,sensitivitylevel:string,location:string,matchedelements:array<string>>>,captcharesponse:struct<responsecode:int,solvetimestamp:bigint>,challengeresponse:struct<responsecode:int,solvetimestamp:bigint>>>
+            - Name: ja3fingerprint
+              Type: string
+          OutputFormat: org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat
+          InputFormat: org.apache.hadoop.mapred.TextInputFormat
+          SerdeInfo:
+            SerializationLibrary: org.openx.data.jsonserde.JsonSerDe
+Outputs:
+  RedshiftClusterIdentifier:
+    Value: !Ref Tableau
+    Description: "Redshift Cluster Identifier."
+    Export:
+      Name: !Sub "${AWS::StackName}-RedshiftClusterIdentifier"
+  RedshiftClusterNamespace:
+    Value: !GetAtt Tableau.ClusterNamespaceArn
+    Description: "Redshift Cluster Namespace ARN for Zero-ETL targeting."
+    Export:
+      Name: !Sub "${AWS::StackName}-RedshiftClusterNamespace"

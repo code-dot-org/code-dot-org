@@ -1,0 +1,61 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-03-13T12:10:54.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+      },
+      "openFiles": [
+
+      ]
+    },
+    "encrypted": "false",
+    "display_name": "Attach the Event Listener",
+    "long_instructions": "# Attach the Event Listener\r\n\r\n**Goal:** When the user clicks a button, your code should know which card was clicked.\r\n\r\n1. **Select the Buttons:** Use a selector to grab all reveal buttons after the cards render.\r\n2. **Add Click Handlers:** Attach an event listener to each button.\r\n3. **Target the Correct Card:** Make sure the click handler identifies the specific card (using an id, index, or data attribute).\r\n4. **Test the Click:** Show something like the card's id or index to the console or DOM to confirm your targeting works.",
+    "bubble_choice_description": "Connect each card's button to a click event so only the selected card responds when the user clicks \"See More.\" ***(supports completing Milestone 2 tasks)***",
+    "thumbnail_url": "https://images.code.org/23382d2ce740afaee461162b5ef7335d-event-listener.png",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML",
+        "buildCSS",
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode",
+        "testCase",
+        "buildJavaScript"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "project_template_level_name": "designing-reliable-apps-lesson11-template-test_2025-pilot",
+    "name_suffix": "_2025-pilot"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-03-13T12:10:54.323+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson11-milestone2-level2b-test_2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson11-milestone2-level2b-test_2025-pilot\"}]"
+}]]></config>
+</Weblab2>

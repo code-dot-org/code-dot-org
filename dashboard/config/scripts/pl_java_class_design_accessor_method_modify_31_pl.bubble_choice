@@ -1,0 +1,9 @@
+name 'pl-java-class-design-accessor-method-modify-31_pl'
+display_name 'Skill Building: Mutator Methods'
+description 'Write a mutator method in a class to change the value assigned to its instance variable.'
+
+sublevels
+level 'CSA U2L9-L4a_pilot_oo2025_pl'
+level 'CSA U2L9-L4b_pilot_oo2025_pl'
+level 'CSA U2L9-L4c_pilot_oo2025_pl'
+level 'CSA U2L9-L4d_pilot_oo2025_pl'

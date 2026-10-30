@@ -1,7 +1,5 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
-import color from '@cdo/apps/util/color';
+import React from 'react';
 
 class LessonExtrasFlagIcon extends React.PureComponent {
   static propTypes = {
@@ -10,38 +8,56 @@ class LessonExtrasFlagIcon extends React.PureComponent {
     size: PropTypes.number,
   };
 
+  state = {
+    isHovering: false,
+  };
+
   render() {
     const {isPerfect, isSelected, size} = this.props;
     const sizeStyle = {...styles.smallStack, fontSize: size};
-    const colorStyle = {
-      ...styles.default,
-      ...(isSelected && styles.selected),
-      ...(isPerfect && styles.perfect),
-    };
+
+    let colorStyle = {...styles.default};
+    if (isSelected) {
+      colorStyle = {...colorStyle, ...styles.selected};
+    }
+    if (isPerfect) {
+      colorStyle = {...colorStyle, ...styles.perfect};
+    }
+    if (this.state.isHovering) {
+      colorStyle = {...colorStyle, ...styles.hover};
+    }
 
     return (
-      <span className="fa-stack fa-1x" style={sizeStyle}>
-        <i className="fa fa-flag fa-stack-1x fa-inverse" />
-        <i className="fa fa-flag-checkered fa-stack-1x" style={colorStyle} />
+      <span
+        className="fa-stack fa-1x"
+        style={sizeStyle}
+        onMouseEnter={() => this.setState({isHovering: true})}
+        onMouseLeave={() => this.setState({isHovering: false})}
+      >
+        <i className="fa-solid fa-flag fa-stack-1x fa-inverse" />
+        <i
+          className="fa-solid fa-flag-checkered fa-stack-1x"
+          style={colorStyle}
+        />
       </span>
     );
   }
 }
 
-export default Radium(LessonExtrasFlagIcon);
+export default LessonExtrasFlagIcon;
 
 const styles = {
   default: {
-    color: color.lighter_gray,
-    ':hover': {
-      color: color.orange,
-    },
+    color: 'var(--text-neutral-tertiary)',
   },
   selected: {
-    color: color.charcoal,
+    color: 'var(--text-neutral-primary)',
   },
   perfect: {
-    color: color.level_perfect,
+    color: 'var(--text-success-primary)',
+  },
+  hover: {
+    color: 'var(--text-accent-orange-primary)',
   },
   smallStack: {
     width: '1em',

@@ -1,4 +1,3 @@
-import {expect} from '../../util/reconfiguredChai';
 import {__TestInterface} from '@cdo/apps/storage/getColumnDropdown';
 
 describe('getTableNameFromColumnSocket', () => {
@@ -19,12 +18,12 @@ describe('getTableNameFromColumnSocket', () => {
   it('gets the table name from the socket', () => {
     let socket = makeFakeSocket('Table Name');
     let tableName = __TestInterface.getTableNameFromColumnSocket(socket);
-    expect(tableName).to.equal('Table Name');
+    expect(tableName).toBe('Table Name');
   });
 
   it('preserves apostrophes in table name', () => {
     let socket = makeFakeSocket("FIFA Women's World Cup Results");
     let tableName = __TestInterface.getTableNameFromColumnSocket(socket);
-    expect(tableName).to.equal("FIFA Women's World Cup Results");
+    expect(tableName).toBe("FIFA Women's World Cup Results");
   });
 });

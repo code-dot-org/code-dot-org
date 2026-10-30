@@ -1,18 +1,43 @@
-@import "color.scss";
-
 .progress-bubble {
   &.enabled {
-    transition:
-      background-color 0.2s ease-out,
-      border-color 0.2s ease-out,
+    transition: background-color 0.2s ease-out, border-color 0.2s ease-out,
       color 0.2s ease-out;
     &:hover {
       text-decoration: none;
-      color: $white !important;
-      border-color: $level_current !important;
-      background-color: $level_current !important;
+    }
+
+    // Per-state hover, per the CADS bubble spec. levelHoverClass picks the
+    // class; !important because the base fill and border arrive as inline
+    // styles from levelProgressStyle.
+    &.hover-not-started:hover {
+      border-color: var(--border-neutral-secondary) !important;
+      background-color: var(--background-neutral-tertiary) !important;
+    }
+
+    &.hover-in-progress:hover {
+      border-color: var(--border-success-strong) !important;
+      background-color: var(--background-success-light) !important;
+    }
+
+    // The two filled hovers draw their border in the fill color; the -strong
+    // border tokens sit lighter and would show as a ring.
+    &.hover-completed:hover {
+      color: var(--text-neutral-inverse) !important;
+      border-color: var(--background-success-strong) !important;
+      background-color: var(--background-success-strong) !important;
+    }
+
+    // Not in the spec; peer review rejection is the one red base state.
+    &.hover-rejected:hover {
+      color: var(--text-neutral-inverse) !important;
+      border-color: var(--background-error-strong) !important;
+      background-color: var(--background-error-strong) !important;
     }
   }
+}
+
+.uitest-ProgressPill:focus-visible {
+  outline-offset: 1px;
 }
 
 a.progress-bubble-link {
@@ -24,6 +49,16 @@ a.progress-bubble-link {
 
   &:hover {
     text-decoration: none;
+  }
+
+  &:focus {
+    // Override the default focus style to prevent outline
+    outline: none;
+  }
+
+  &:focus-visible {
+    // Use revert to allow browser default focus styles
+    outline: revert;
   }
 }
 
@@ -39,22 +74,23 @@ table.progress-legend {
 }
 .progress-legend {
   text-align: center;
+  color: var(--text-neutral-primary);
+  font-weight: 400;
   td {
     padding: 10px;
   }
   tr {
-    border: 2px solid $lightest_gray;
-    background-color: $white;
+    border: 2px solid var(--borders-neutral-primary);
+    background-color: var(--background-neutral-primary);
   }
   thead {
-    color: $charcoal;
     tr {
-      background-color: $lightest_gray;
+      background-color: var(--background-neutral-secondary);
       &:first-of-type {
-        background-color: $white;
+        background-color: var(--background-neutral-primary);
         border: none;
         td {
-          font-weight: bold;
+          font-weight: 600;
           font-size: 18px;
         }
       }
@@ -65,7 +101,7 @@ table.progress-legend {
   }
   tbody {
     td:first-of-type {
-      border-inline-end: 2px solid $lightest_gray;
+      border-inline-end: 2px solid var(--borders-neutral-primary);
     }
   }
   div {
@@ -84,6 +120,6 @@ table.progress-legend {
     }
   }
   .end-border {
-    border-inline-end: 2px solid $lightest_gray;
+    border-inline-end: 2px solid var(--borders-neutral-primary);
   }
 }

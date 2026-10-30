@@ -1,6 +1,7 @@
 /** @file Textbox that only allows positive integer values, used in crypto widget */
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import color from '../util/color';
 
 export default class IntegerTextbox extends React.Component {
@@ -24,7 +25,7 @@ export default class IntegerTextbox extends React.Component {
     }
 
     const style = {
-      width: 75,
+      width: 87,
       paddingLeft: 8,
       margin: '0 5px',
       backgroundColor: backgroundColor || 'white',

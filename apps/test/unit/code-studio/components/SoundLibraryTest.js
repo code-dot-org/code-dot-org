@@ -1,22 +1,34 @@
-import {expect} from '../../../util/reconfiguredChai';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {mount} from 'enzyme';
+import {act} from 'react-dom/test-utils';
+
 import SoundLibrary from '@cdo/apps/code-studio/components/SoundLibrary';
-import sinon from 'sinon';
+jest.mock(
+  '@cdo/static/json/code-studio/soundLibrary.json',
+  () => 'http://localhost/soundLibrary.json'
+);
 
 describe('SoundListEntry', () => {
-  it('stops playing sound when user chooses a sound', () => {
+  it('stops playing sound when user chooses a sound', async () => {
     const wrapper = mount(<SoundLibrary assetChosen={() => true} />);
-    wrapper.setState({
-      category: 'Animals',
-      search: 'b',
-      selectedSound: {},
+    await act(async () => {
+      wrapper.setState({
+        category: 'Animals',
+        search: 'b',
+        selectedSound: {},
+      });
     });
+    wrapper.update();
     let sounds = wrapper.instance().sounds;
-    sinon.stub(sounds, 'stopAllAudio');
-    wrapper.find('.primary').simulate('click');
-    expect(sounds.stopAllAudio).to.have.been.calledOnce;
-    sounds.stopAllAudio.restore();
+    jest.spyOn(sounds, 'stopAllAudio').mockClear().mockImplementation();
+    await act(async () => {
+      wrapper
+        .find('button')
+        .filterWhere(n => n.text() === 'Choose')
+        .simulate('click');
+    });
+    expect(sounds.stopAllAudio).toHaveBeenCalledTimes(1);
+    sounds.stopAllAudio.mockRestore();
     wrapper.unmount();
   });
 });

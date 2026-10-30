@@ -1,0 +1,17 @@
+// :global(.MuiMenuItem-root) outranks MUI's default padding / min-height.
+.customOptionRow:global(.MuiMenuItem-root) {
+  justify-content: space-between;
+  gap: 8px;
+  padding: 6px 12px;
+  border-top: 1px solid var(--borders-neutral-primary);
+  margin-top: 4px;
+  height: 32px;
+}
+
+.customOptionRowSelected:global(.MuiMenuItem-root.Mui-selected) {
+  background-color: var(--background-brand-teal-primary);
+}
+
+.customOptionLabelSelected {
+  color: var(--text-neutral-white-fixed);
+}

@@ -1,0 +1,54 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T19:55:56.000Z",
+  "level_num": "custom",
+  "user_id": 4,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Computational Thinking \r\n## Part 2 - Refine Your Plan\r\n\r\nUse the chatbot to apply **abstraction** by focusing only on the most important tasks in your event plan.\r\n\r\n### Do This:\r\n- Tell the chatbot what event you're planning.\r\n- Share the list of tasks you’ve already written.\r\n- Ask the chatbot to help you simplify your plan by identifying the most essential tasks and removing anything unnecessary.\r\n\r\n**Example Prompt:**\r\n- **Refine:** *I'm planning a school spirit week. My task list includes picking a theme for each day, designing flyers, creating a playlist, organizing a pep rally, ordering decorations, and buying snacks. Which of these are the most important, and which could I combine or remove?*",
+    "system_prompt": "deprecated",
+    "bot_title": "deprecated",
+    "bot_description": "deprecated",
+    "disable_projects": true,
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "levelSystemPrompt": "You are helping a student revise their event planning task list by applying abstraction — focusing on only the most essential and high-level tasks. The student’s goal is to simplify and improve their event plan.\n\nAfter the student shares what kind of event they are planning and their plan, help them by:\n- Combining or removing tasks that are too detailed or unnecessary\n- Simplifying broad tasks into clear, high-level categories\n- Providing a revised, numbered list of the most essential tasks only\n\nDo not provide detailed explanations for each original task. Your final response should be a short, revised task list that reflects the most important steps for planning the event."
+    },
+    "name_suffix": "_v2-2025",
+    "display_name": "Troubleshooting Bot",
+    "bubble_choice_description": "This chatbot is meant to help people troubleshoot their device when it stops working as expected."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:55:56.623+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson2-level2_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson2-level2_2025\"}]"
+}]]></config>
+</Aichat>

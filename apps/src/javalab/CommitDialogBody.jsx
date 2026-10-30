@@ -1,9 +1,11 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import i18n from '@cdo/javalab/locale';
-import color from '@cdo/apps/util/color';
-import CommitDialogFileRow from './CommitDialogFileRow';
+import React from 'react';
+
 import fontConstants from '@cdo/apps/fontConstants';
+import color from '@cdo/apps/util/color';
+import i18n from '@cdo/javalab/locale';
+
+import CommitDialogFileRow from './CommitDialogFileRow';
 
 export const fileShape = {
   name: PropTypes.string.isRequired,
@@ -79,5 +81,9 @@ const styles = {
     width: '98%',
     height: 75,
     resize: 'none',
+    // BaseDialog's card is hardcoded white and ignores the page theme, so the
+    // textarea must not follow a dark color scheme either
+    colorScheme: 'light',
+    color: color.default_text,
   },
 };

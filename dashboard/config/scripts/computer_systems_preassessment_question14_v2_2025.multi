@@ -1,0 +1,17 @@
+name 'computer-systems-preassessment-question14_v2-2025'
+title 'Computer Systems and Devices Pre-Assessment: Question 14'
+
+right 'To collect feedback for improvements'
+wrong 'To make a product more expensive'
+wrong 'To reduce the number of users'
+wrong 'To keep technology secret'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Why is user testing important?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 11: User Testing
+MARKDOWN

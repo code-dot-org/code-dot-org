@@ -58,7 +58,7 @@
     "hint_prompt_attempts_threshold": "1",
     "display_name": "Food Theme",
     "bubble_choice_description": "Create an interactive program with lots of sprites.",
-    "thumbnail_url": "https://code.org/images/csc/helloworld/helloworldhappyfoodtheme.png",
+    "thumbnail_url": "/blockly/media/csc/helloworld/helloworldhappyfoodtheme.png",
     "soft_buttons": [
       "leftButton",
       "rightButton",

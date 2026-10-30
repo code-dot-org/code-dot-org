@@ -1,0 +1,53 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-09-25T20:08:21.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "true",
+    "panels": [
+      {
+        "text": "### Make a Pie Chart\n- Highlight a column\n- Click **Insert** -> **Chart** \n",
+        "imageUrl": "https://images.code.org/a316f9f71dfa9035fcdaae76694b9787-makechart.gif",
+        "key": "hardware-components-3d887b32-d501-4032-b990-2a51ae5b4de8",
+        "layout": "text-bottom-right",
+        "typing": false,
+        "fadeInOverPrevious": false
+      },
+      {
+        "text": "### Change Title and Axis Label\n\nDouble click on the title to rename it",
+        "imageUrl": "https://images.code.org/b87247ef1a0e98a5d9563ae355d545b6-piechartaddtitle.gif",
+        "key": "hardware-components-e56bb056-0af5-475f-b8e1-7b49f9c79f82",
+        "layout": "text-bottom-right",
+        "typing": false,
+        "fadeInOverPrevious": false
+      },
+      {
+        "text": "### Creating a Donut Pie Chart\n- Switch to the **Customize** tab\n- Click **Pie chart**\n- From the **Donut hole** dropdown select a **Percentage**",
+        "imageUrl": "https://images.code.org/965d1ca35cb96bec414380d3a3f25d1a-piechartdonut.gif",
+        "key": "data-science-lesson7-panel3_2025_launch_2025-42dc0b63-6627-4cd2-bafe-148eeb3d7b8c"
+      },
+      {
+        "text": "### Changing the Color\n- Open the **Pie slice** toggle\n- Select a **color**",
+        "imageUrl": "https://images.code.org/941587c264f285df1b0334e466f7cd5f-piechartslicecolor.gif",
+        "key": "data-science-lesson7-panel3_2025_launch_2025-270b9c98-3203-4e85-9e11-c7b3607a0501"
+      },
+      {
+        "text": "### Spotlight a Slice\n- Open the **Pie slice** toggle\n- Select a **Distance from Center** ",
+        "imageUrl": "https://images.code.org/b0ab441487f618be8e7deeadcf2e9b29-piechartdistance.gif",
+        "key": "data-science-lesson7-panel3_2025_launch_2025-86df446a-6b7a-45c4-bf9b-9249be745754"
+      },
+      {
+        "text": "### Adding Percentages\n- Open the **Pie chart** toggle\n- Click **Slice label**\n- Choose **Percentage** from the dropdown",
+        "imageUrl": "https://images.code.org/183ec86e7f153156826785304405c602-piechartpercent.gif",
+        "key": "data-science-lesson7-panel3_2025_launch_2025-64810ff4-9212-4e52-9584-c0fc53669111"
+      }
+    ],
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T20:08:21.762+00:00\",\"changed\":[\"cloned from \\\"data-science-lesson7-panel3_2025_launch_2025\\\"\"],\"cloned_from\":\"data-science-lesson7-panel3_2025_launch_2025\"}]"
+}]]></config>
+</Panels>

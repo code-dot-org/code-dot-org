@@ -1,7 +1,8 @@
 import React from 'react';
+import {Provider} from 'react-redux';
+
 import CourseRollup from '@cdo/apps/templates/courseRollupPages/CourseRollup';
 import UnitRollup from '@cdo/apps/templates/courseRollupPages/UnitRollup';
-import {Provider} from 'react-redux';
 import {reduxStore} from '@cdo/storybook/decorators';
 
 const defaultProps = {
@@ -20,6 +21,7 @@ const defaultProps = {
             link: '/s/unit-1/lessons/1',
             position: 1,
             displayName: 'Lesson One',
+            title: 'Lesson One Title',
             vocabularies: [
               {
                 key: 'key',
@@ -71,6 +73,7 @@ const defaultProps = {
             key: 'l2',
             position: 2,
             displayName: 'Lesson Two',
+            title: 'Lesson Two Title',
             link: '/s/unit-1/lessons/2',
             vocabularies: [
               {
@@ -131,6 +134,7 @@ const defaultProps = {
             position: 1,
             link: '/s/unit-2/lessons/1',
             displayName: 'Lesson One',
+            title: 'Lesson One Title',
             vocabularies: [],
             standards: [],
             programmingExpressions: [],
@@ -141,6 +145,7 @@ const defaultProps = {
             key: 'l4',
             position: 2,
             displayName: 'Lesson Two',
+            title: 'Lesson Two Title',
             link: '/s/unit-2/lessons/2',
             vocabularies: [
               {

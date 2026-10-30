@@ -1,13 +1,13 @@
 require_relative 'test_helper'
-# rubocop:disable CustomCops/PegasusRequires
-require_relative '../../pegasus/test/sequel_test_case'
-# rubocop:enable CustomCops/PegasusRequires
-require 'mocha/mini_test'
+require_relative '../../lib/test/sequel_test_case'
+require 'mocha/minitest'
 require 'cdo/poste'
 require 'digest/md5'
 
 # rubocop:disable CustomCops/PegasusDbUsage
 class PosteTest < SequelTestCase
+  include SetupTest
+
   STUDENT_EMAIL = 'student@example.net'.freeze
   STUDENT_EMAIL_HASH = Digest::MD5.hexdigest(STUDENT_EMAIL).freeze
   TEACHER_EMAIL = 'teacher@example.net'.freeze
@@ -136,6 +136,8 @@ class PosteTest < SequelTestCase
 end
 
 class Poste2Test < SequelTestCase
+  include SetupTest
+
   FROM_NAME = 'Code dot org'.freeze
   FROM_EMAIL = 'noreply@code.org'.freeze
   REPLY_TO_NAME = 'Reply-to Person'.freeze

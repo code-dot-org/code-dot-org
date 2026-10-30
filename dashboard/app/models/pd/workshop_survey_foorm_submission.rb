@@ -22,6 +22,21 @@
 #
 
 class Pd::WorkshopSurveyFoormSubmission < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :restricted,
+    foorm_submission_id: :restricted,
+    user_id: :restricted,
+    pd_session_id: :restricted,
+    pd_workshop_id: :restricted,
+    day: :restricted,
+    created_at: :restricted,
+    updated_at: :restricted,
+    facilitator_id: :restricted,
+    workshop_agenda: :restricted,
+  )
+
   belongs_to :foorm_submission, class_name: 'Foorm::Submission', optional: true
   belongs_to :user
   belongs_to :pd_session, class_name: 'Pd::Session', optional: true
@@ -63,7 +78,7 @@ class Pd::WorkshopSurveyFoormSubmission < ApplicationRecord
       session_count = pd_workshop.sessions.count
       if day > session_count
         errors.add(:day, "#{day} is not valid for workshop #{pd_workshop.id}")
-        Honeybadger.notify("Foorm was submitted for day #{day} for workshop #{pd_workshop.id}, which only had #{session_count} sessions.")
+        Observability::Errors.report("Foorm was submitted for day #{day} for workshop #{pd_workshop.id}, which only had #{session_count} sessions.")
       end
     end
   end

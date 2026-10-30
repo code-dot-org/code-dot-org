@@ -1,50 +1,35 @@
-@import "color";
-
-$preview-button-width: 32px;
-$preview-button-margin-left: 8px;
-$preview-button-border-width: 1px;
-
 .songSelectorWrapper {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 10px;
 
   .selectStyle {
-    width: calc(100% - ($preview-button-width + $preview-button-margin-left));
-    height: 32px;
-    color: $neutral_dark;
-    border-color: $neutral_dark;
+    flex: 1;
 
-    &:focus-visible {
-      outline: 2px solid $light_primary_500;
-      outline-offset: 2px;
-    }
-
-    &:disabled {
-      color: $light_gray_200;
-      border-color: $light_gray_200;
-      background-color: $neutral_white;
+    // flex:1 grows this label to fill the row, but SimpleDropdown's
+    // select-wrapper (the div around the select) stays content-width on its
+    // own, so force it to fill. Otherwise the preview button drifts right of
+    // the short select.
+    > div {
+      width: 100%;
     }
   }
 
-  button.previewSongButton {
+  .previewSongButton {
     height: 32px;
-    width: $preview-button-width;
+    width: 32px;
     padding: 0;
-    margin: 0 0 10px 0;
-    margin-inline-start: $preview-button-margin-left;
-    border-width: $preview-button-border-width;
+    margin-inline-start: 8px;
 
     &.previewActiveButton {
-      color: $neutral_white;
-      background-color: $light_primary_500;
-      border-color: $light_primary_500;
+      color: var(--text-neutral-white-fixed);
+      background-color: var(--background-brand-teal-primary);
+      border-color: var(--borders-brand-teal-primary);
 
       &:hover {
-        background-color: $light_primary_700;
-        border-color: $light_primary_700;
+        background-color: var(--background-brand-teal-strong);
+        border-color: var(--borders-brand-teal-strong);
       }
-    }
-
-    span {
-      margin: 0;
     }
   }
 }

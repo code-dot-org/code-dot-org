@@ -1,9 +1,12 @@
+import TextField from '@code-dot-org/component-library/textField';
+import {Button as MuiButton, Typography} from '@mui/material';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../../util/reconfiguredChai';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import AddCoteacher from '@cdo/apps/templates/sectionsRefresh/coteacherSettings/AddCoteacher';
+
+import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const DEFAULT_PROPS = {
   numCoteachers: 3,
@@ -27,9 +30,10 @@ const makeSpyWithAssertions = (assertions, done) =>
   });
 
 const addTeacher = (wrapper, email) => {
-  wrapper.find('input').simulate('change', {target: {value: email}});
+  wrapper.find(TextField).simulate('change', {target: {value: email}});
   wrapper
-    .find('Button[id="add-coteacher"]')
+    .find(MuiButton)
+    .filterWhere(node => node.props().id === 'add-coteacher')
     .simulate('click', {preventDefault: () => {}});
 };
 
@@ -47,28 +51,45 @@ describe('AddCoteacher', () => {
   it('shows input, button and count', () => {
     const wrapper = shallow(<AddCoteacher {...DEFAULT_PROPS} />);
 
-    expect(wrapper.find('input').first()).to.exist;
-    expect(wrapper.find('Button').first().props().disabled).to.be.false;
-    expect(wrapper.find('Figcaption').dive().text()).to.equal(
-      '3/5 co-teachers added'
-    );
+    expect(wrapper.find(TextField).first()).to.exist;
+    expect(wrapper.find(MuiButton).first().props().disabled).to.be.false;
+    const caption = wrapper
+      .find(Typography)
+      .filterWhere(node => node.props().variant === 'figcaption')
+      .at(0);
+    expect(caption.text()).to.equal('3/5 co-teachers added');
   });
   it('shows error', () => {
     const wrapper = shallow(
       <AddCoteacher {...DEFAULT_PROPS} addError={'The T-rex ate everyone'} />
     );
-    expect(wrapper.find('input').first()).to.exist;
-    expect(wrapper.find('Button').first().props().disabled).to.be.false;
-    expect(wrapper.find('Figcaption').dive().text()).to.include(
+    expect(wrapper.find(TextField).props().errorMessage).to.equal(
       'The T-rex ate everyone'
     );
-    expect(wrapper.find('FontAwesome').props().icon).to.include('info-circle');
+    expect(wrapper.find(MuiButton).first().props().disabled).to.be.false;
+    expect(
+      wrapper
+        .find(Typography)
+        .filterWhere(node => node.props().variant === 'figcaption')
+    ).to.have.lengthOf(0);
   });
   it('disables add button when max coteachers reached', () => {
     const wrapper = shallow(
       <AddCoteacher {...DEFAULT_PROPS} numCoteachers={5} />
     );
-    expect(wrapper.find('Button').first().props().disabled).to.be.true;
+    expect(wrapper.find(MuiButton).first().props().disabled).to.be.true;
+  });
+
+  it('disables email input and add button when disabled', () => {
+    const wrapper = shallow(<AddCoteacher {...DEFAULT_PROPS} disabled />);
+
+    expect(wrapper.find(TextField).first().props().disabled).to.be.true;
+    expect(wrapper.find(MuiButton).first().props().disabled).to.be.true;
+    expect(
+      wrapper
+        .find(Typography)
+        .filterWhere(node => node.props().variant === 'figcaption')
+    ).to.have.lengthOf(0);
   });
 
   it('adds coteacher when valid email is added', done => {
@@ -156,7 +177,7 @@ describe('AddCoteacher', () => {
 
     const setAddErrorSpy = makeSpyWithAssertions(error => {
       expect(error).to.equal(
-        'invalid-email@code.org is not associated with a Code.org teacher account.'
+        'invalid-email@code.org is not associated with a CodeAI teacher account.'
       );
       expect(setCoteachersToAddSpy).not.to.have.been.called;
 
@@ -248,7 +269,7 @@ describe('AddCoteacher', () => {
 
     const setAddErrorSpy = makeSpyWithAssertions(error => {
       expect(error).to.equal(
-        'invalid-email@code.org is not associated with a Code.org teacher account.'
+        'invalid-email@code.org is not associated with a CodeAI teacher account.'
       );
       expect(setCoteachersToAddSpy).not.to.have.been.called;
       expect(fetchSpy).to.have.been.calledOnce;

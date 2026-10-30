@@ -1,23 +1,4 @@
-@import "codemirror/lib/codemirror";
-@import "codemirror/addon/lint/lint";
-@import "codemirror-spell-checker/src/css/spell-checker";
 @import "json_editor";
-
-.CodeMirror {
-  border: 1px solid #eee;
-  height: auto;
-}
-.CodeMirror-scroll {
-  overflow-y: hidden;
-  overflow-x: auto;
-}
-.CodeMirror-matchingtag {
-  background: rgb(255 150 0 / 0.3);
-}
-
-.cm-trailingspace {
-  border-bottom: 1px dotted #c00;
-}
 
 .contract-editor-config td {
   text-align: center;
@@ -176,13 +157,13 @@ table.checkboxes {
 }
 
 .aligned-input-group {
-  padding-top: 1%;
+  padding-top: 8px;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
 
   label {
-    padding-left: 1%;
+    padding-left: 8px;
   }
 
   input:disabled ~ label {

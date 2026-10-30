@@ -5,7 +5,7 @@ class Form2 < OpenStruct
     params = params.dup
     params[:data] = JSON.parse(params[:data]) if params[:data].present?
     params[:processed_data] = JSON.parse(params[:processed_data]) if params[:processed_data].present?
-    super params
+    super
   end
 
   def self.from_row(row)

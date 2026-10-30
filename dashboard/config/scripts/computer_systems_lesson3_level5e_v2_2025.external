@@ -1,0 +1,29 @@
+name 'computer-systems-lesson3-level5e_v2-2025'
+title 'Medical Robots'
+description 'Learn how specialists develop and maintain advanced robotic systems used in healthcare.'
+display_name 'Medical Robots'
+bubble_choice_description 'Learn how specialists develop and maintain advanced robotic systems used in healthcare.'
+thumbnail_url 'https://images.code.org/c6edf0a6008202b5ec9a87af8376f18b-Pasted%20Graphic%2079.png'
+
+markdown <<MARKDOWN
+# Medical Robots
+
+Learn how specialists develop and maintain advanced robotic systems used in healthcare.
+
+As you watch, be prepared to reflect on the following in the next activity:
+
+- What kind of hardware components are used by people in this career?  
+- What kind of troubleshooting might they need to do? Put another way, what kinds of bugs could they run into?  
+
+**Note**: This video opens in a new tab ⧉.  
+
+<div style="text-align: center; margin-top: 20px;">
+  <a href="https://docs.google.com/presentation/d/1IGiJi1HiD-pGHOvnEhdkCVR54ruFQH8PRqLQlkFT-WI/edit?slide=id.g34818ae2bc5_0_11#slide=id.g34818ae2bc5_0_11" target="_blank" rel="noopener noreferrer">
+    <img src="https://images.code.org/c6edf0a6008202b5ec9a87af8376f18b-Pasted%20Graphic%2079.png" 
+         alt="YouTube Video Thumbnail" 
+         style="width: 80%; max-width: 600px; border-radius: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);">
+  </a>
+</div>
+
+
+MARKDOWN

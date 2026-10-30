@@ -1,0 +1,11 @@
+name 'sp-pl-DS-project-samples'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Sample Projects 
+
+(holding for sample projects)
+
+![](https://images.code.org/b18d2fbc58c419c49ab98861ff101ef6-image-1724434897526.png)
+MARKDOWN

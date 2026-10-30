@@ -1,0 +1,443 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-05-31T02:57:39.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "#### Using Loops\r\nJoel made a beat that he loves, but he doesn't know how to use loops yet.\r\n\r\nHis code works, but it's long and hard to follow because it repeats the same beats over and over.\r\n\r\n**Your task:** Use **abstraction** to simplify Joel's remix. Replace the repeated beats with loop blocks that hide the repetition behind a simple structure. Your remix should sound the same, just written in a smarter way!\r\n\r\n![](https://images.code.org/00cb2ed9d1462558388b475480c5b86c-image-1741897772945.29.26 PM.png)",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "sounds": {
+        "hiphop": [
+          "drum_beat_cuts",
+          "bass_flow"
+        ],
+        "groove": [
+          "guitar_cloud",
+          "bass_sub_stroll"
+        ],
+        "indie": [
+          "guitar_tremolo_line"
+        ]
+      },
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "repeat_simple2",
+            "play_sounds_sequential"
+          ]
+        },
+        "type": "flyout"
+      },
+      "packId": "default",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "next": {
+                "shadow": {
+                  "type": "play_sounds_together",
+                  "id": "play_sounds_together",
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "inputs": {
+                    "code": {
+                      "shadow": {
+                        "type": "play_sounds_sequential",
+                        "id": "s;Lhd-jfJ=JS;eJmCbe$",
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "inputs": {
+                          "code": {
+                            "shadow": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "8A/MX:^Ju5}t!|tNSs,)",
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "sound": "hiphop/drum_beat_cuts"
+                              },
+                              "next": {
+                                "shadow": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": ")Gv{nv!yr^[B$-fgh^/1",
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "fields": {
+                                    "sound": "hiphop/drum_beat_cuts"
+                                  },
+                                  "next": {
+                                    "shadow": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "P.q{bV(}Ku9YSH%?trqY",
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "sound": "hiphop/drum_beat_cuts"
+                                      },
+                                      "next": {
+                                        "shadow": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "xO`ZUoq)42WEqMO$1pgs",
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "fields": {
+                                            "sound": "hiphop/drum_beat_cuts"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "next": {
+                          "shadow": {
+                            "type": "play_sounds_sequential",
+                            "id": "P6y6/kz4B~2nZ;i6i,j@",
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "inputs": {
+                              "code": {
+                                "shadow": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "=J`eOD+/z#{xj9Y~^lD[",
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "fields": {
+                                    "sound": "groove/guitar_cloud"
+                                  },
+                                  "next": {
+                                    "shadow": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "s1}wQDU[b{6LeB_7;4.)",
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "sound": "groove/guitar_cloud"
+                                      },
+                                      "next": {
+                                        "shadow": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "r|%bcsCCCW)#ix*5-r?D",
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "fields": {
+                                            "sound": "groove/guitar_cloud"
+                                          },
+                                          "next": {
+                                            "shadow": {
+                                              "type": "play_sound_at_current_location_simple2",
+                                              "id": "J@d3rIXK=x4:JSa0F(2w",
+                                              "extraState": {
+                                                "disableNextConnection": false
+                                              },
+                                              "fields": {
+                                                "sound": "groove/guitar_cloud"
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "next": {
+                              "shadow": {
+                                "type": "play_sounds_sequential",
+                                "id": "HD?hHbk12m;48Wv0q?Dx",
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "inputs": {
+                                  "code": {
+                                    "shadow": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "play_sound_at_current_location_simple2",
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "sound": "hiphop/bass_flow"
+                                      },
+                                      "next": {
+                                        "shadow": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "jSs4S]=BxSu:@.-E#89e",
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "fields": {
+                                            "sound": "hiphop/bass_flow"
+                                          },
+                                          "next": {
+                                            "shadow": {
+                                              "type": "play_sound_at_current_location_simple2",
+                                              "id": "r2?6+DQf@r=4A+F_57)m",
+                                              "extraState": {
+                                                "disableNextConnection": false
+                                              },
+                                              "fields": {
+                                                "sound": "hiphop/bass_flow"
+                                              },
+                                              "next": {
+                                                "shadow": {
+                                                  "type": "play_sound_at_current_location_simple2",
+                                                  "id": "F-[+1C.Ae.PFS`t]bYU-",
+                                                  "extraState": {
+                                                    "disableNextConnection": false
+                                                  },
+                                                  "fields": {
+                                                    "sound": "hiphop/bass_flow"
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "shadow": {
+                      "type": "play_sounds_together",
+                      "id": "Qnsa}JCq9eL3^)ks){gd",
+                      "extraState": {
+                        "disableNextConnection": false
+                      },
+                      "inputs": {
+                        "code": {
+                          "shadow": {
+                            "type": "play_sounds_sequential",
+                            "id": "kh6ff4nb^e5+7#W?(8|6",
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "inputs": {
+                              "code": {
+                                "shadow": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "*k6db;Q7-6s~G?#a+~]}",
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "fields": {
+                                    "sound": "hiphop/drum_beat_cuts"
+                                  },
+                                  "next": {
+                                    "shadow": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "#hSW!*-}3ah|sE2.+?!(",
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "sound": "hiphop/drum_beat_cuts"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "next": {
+                              "shadow": {
+                                "type": "play_sounds_sequential",
+                                "id": "x}UtgX1s^uw%etF1SlU/",
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "inputs": {
+                                  "code": {
+                                    "shadow": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "y0D:d=HXWAQDZw*8=ysM",
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "sound": "indie/guitar_tremolo_line"
+                                      },
+                                      "next": {
+                                        "shadow": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "^?Bou@eO(sp.s2p},V3g",
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "fields": {
+                                            "sound": "indie/guitar_tremolo_line"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                "next": {
+                                  "shadow": {
+                                    "type": "play_sounds_sequential",
+                                    "id": "|M1a1T/J!c+)!:AtH+Za",
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "inputs": {
+                                      "code": {
+                                        "shadow": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "kTlw~A)tH2udj:H=/}ha",
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "fields": {
+                                            "sound": "groove/bass_sub_stroll"
+                                          },
+                                          "next": {
+                                            "shadow": {
+                                              "type": "play_sound_at_current_location_simple2",
+                                              "id": "UW[WZN)ek8J2nIS4G119",
+                                              "extraState": {
+                                                "disableNextConnection": false
+                                              },
+                                              "fields": {
+                                                "sound": "groove/bass_sub_stroll"
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "toolboxDefinition": {
+        "contents": [
+          {
+            "kind": "block",
+            "type": "play_sound_at_current_location_simple2",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "sound": "groove/bass_sub_stroll"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_together",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "repeat_simple2",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "times": 1
+            },
+            "enabled": true
+          }
+        ],
+        "kind": "flyoutToolbox"
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "showSoundFilters": true
+    },
+    "display_name": "Help Joel use Loops!",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/hiphop/hiphop.png",
+    "encrypted_exemplar_sources": "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\nxXXs7fUzZV4Y21/wIgR1ap0OZbJc6H7FpfI=\n",
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": true,
+      "playerTitle": "Joel's Song",
+      "validationSuccessMessage": "You did it! The song matches the example!",
+      "validationFailureMessage": "Something's not quite right! Try listening to the example again!"
+    },
+    "validations": [
+      {
+        "key": "test-music-lab-loops-explore-challenge-choice-a_ff845fa8-c77c-4e89-b2b7-5420c3a2b6ed",
+        "message": "[exemplar validation]",
+        "next": true,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "repeat_simple2:2"
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-loops-explore-challenge-choice-a_ddc06922-f860-492d-9e49-320b79379626",
+        "message": "Make sure your code uses loops to solve this problem!",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "bubble_choice_description": "Help re-create Joel's timeline using multiple loops",
+    "name_suffix": "_v2",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:39.004+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-explore-challenge-choice-a\\\"\"],\"cloned_from\":\"test-music-lab-loops-explore-challenge-choice-a\"},{\"changed_at\":\"2025-06-12 16:05:43 +0000\",\"changed\":[\"thumbnail_url\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-24 20:53:51 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

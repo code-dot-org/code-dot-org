@@ -1,0 +1,57 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-02-23T15:41:23.000Z",
+  "level_num": "custom",
+  "user_id": 21019,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "<h1>\r\nFix the Mobile Layout\r\n</h1>\r\n<ol>\r\n<li>Prompt AI Tutor to improve the mobile layout of this website so that the:</li>\r\n<ul>\r\n<li>The hero title is smaller on mobile</li>\r\n<li>The hero buttons stack vertically</li>\r\n</ul>\r\n<li>After AI Tutor finishes generates, review the code for changes, and accept them.</li>\r\n<li>In the description box that appears after you accept, enter the changes AI Tutor made to the following (make sure to include the <b>original</b> value and the <b>new</b> value):</li>\r\n<ul>\r\n<li>Hero title <span style=\"font-family:monospace;font-size:12px;\">font-size</span></li>\r\n<li>Hero buttons <span style=\"font-family:monospace;font-size:12px;\">flex-direction</span></li>\r\n</ul>\r\n</ol>",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n  <title>Studio Landing</title>\n  <link rel=\"stylesheet\" href=\"style.css\" />\n</head>\n<body>\n\n  <header class=\"site-header\">\n    <div class=\"container header-row\">\n      <a class=\"brand\" href=\"#\">Studio</a>\n\n      <nav class=\"nav\">\n        <a href=\"#features\">Features</a>\n        <a href=\"#pricing\">Pricing</a>\n        <a href=\"#contact\" class=\"nav-cta\">Get Started</a>\n      </nav>\n    </div>\n  </header>\n\n  <main>\n    <section class=\"hero\">\n      <div class=\"container hero-grid\">\n        <div class=\"hero-content\">\n          <p class=\"eyebrow\">Build and Learn</p>\n          <h1 class=\"hero-title\">Create Something Great</h1>\n          <p class=\"hero-subtitle\">\n            Use AI to update your site and review exactly what changed in your code.\n          </p>\n\n          <div class=\"hero-buttons\">\n            <a href=\"#contact\" class=\"btn btn-primary\">Start Project</a>\n            <a href=\"#features\" class=\"btn btn-secondary\">View Examples</a>\n          </div>\n        </div>\n\n        <div class=\"hero-media\" aria-hidden=\"true\">\n          <div class=\"mock-box\">\n            <div class=\"mock-topbar\"></div>\n            <div class=\"mock-lines\">\n              <div class=\"line w-60\"></div>\n              <div class=\"line w-80\"></div>\n              <div class=\"line w-70\"></div>\n              <div class=\"line w-50\"></div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </section>\n\n    <section class=\"section\" id=\"features\">\n      <div class=\"container\">\n        <h2 class=\"section-title\">Features</h2>\n        <div class=\"cards\">\n          <div class=\"card\">\n            <h3 class=\"card-title\">Prompt and iterate</h3>\n            <p class=\"card-body\">Ask for changes in plain language.</p>\n          </div>\n          <div class=\"card\">\n            <h3 class=\"card-title\">Review updates</h3>\n            <p class=\"card-body\">See what changed before saving.</p>\n          </div>\n          <div class=\"card\">\n            <h3 class=\"card-title\">Keep learning</h3>\n            <p class=\"card-body\">Understand your code as it evolves.</p>\n          </div>\n        </div>\n      </div>\n    </section>\n  </main>\n\n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "/* Base layout */\n\n* { box-sizing: border-box; }\n\nbody {\n  margin: 0;\n  font-family: Arial, sans-serif;\n  background-color: #0b1220;\n  color: #e5e7eb;\n  line-height: 1.5;\n}\n\na { color: inherit; }\n\n.container {\n  max-width: 1000px;\n  margin: 0 auto;\n  padding: 0 20px;\n}\n\n/* Header */\n\n.site-header {\n  background-color: #0f172a;\n  border-bottom: 1px solid #2a3446;\n}\n\n.header-row {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding: 16px 16px;\n  gap: 16px;\n}\n\n.brand {\n  font-weight: 800;\n  letter-spacing: 0.2px;\n  text-decoration: none;\n}\n\n.nav {\n  display: flex;\n  align-items: center;\n  gap: 16px;\n  flex-wrap: wrap;\n  justify-content: flex-end;\n}\n\n.nav a {\n  text-decoration: none;\n  font-size: 14px;\n  opacity: 0.95;\n}\n\n.nav a:hover {\n  opacity: 1;\n  text-decoration: underline;\n}\n\n.nav-cta {\n  padding: 8px 12px;\n  border: 1px solid #2a3446;\n  border-radius: 8px;\n  text-decoration: none;\n}\n\n/* Buttons */\n\n.btn {\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  padding: 12px 16px;\n  border-radius: 10px;\n  font-weight: 700;\n  text-decoration: none;\n  border: 1px solid transparent;\n}\n\n.btn-primary {\n  background-color: #3b82f6;\n  color: white;\n}\n\n.btn-secondary {\n  background-color: #1f2937;\n  color: #e5e7eb;\n  border-color: #2a3446;\n}\n\n/* HERO */\n\n.hero {\n  background-color: #111827;\n  padding: 56px 0;\n  border-bottom: 1px solid #2a3446;\n}\n\n.hero-grid {\n  display: grid;\n  grid-template-columns: 1.2fr 0.8fr;\n  gap: 40px;\n  align-items: center;\n}\n\n.hero-content {\n  min-width: 0;\n}\n\n.eyebrow {\n  margin: 0 0 10px;\n  font-size: 12px;\n  letter-spacing: 0.14em;\n  text-transform: uppercase;\n  color: #93c5fd;\n}\n\n.hero-title {\n  margin: 0 0 14px;\n  font-size: 84px; \n  line-height: 1.05;\n}\n\n.hero-subtitle {\n  margin: 0 0 22px;\n  font-size: 18px;\n  color: #9ca3af;\n  max-width: 60ch;\n}\n\n.hero-buttons {\n  display: flex;\n  gap: 16px; \n}\n\n.hero-media {\n  display: flex;\n  justify-content: flex-end;\n  min-width: 0;\n}\n\n/* Mock card */\n\n.mock-box {\n  width: 320px;\n  border-radius: 12px;\n  background-color: #0f172a;\n  border: 1px solid #2a3446;\n  overflow: hidden;\n}\n\n.mock-topbar {\n  height: 32px;\n  background-color: #111827;\n  border-bottom: 1px solid #2a3446;\n}\n\n.mock-lines {\n  padding: 18px;\n  display: grid;\n  gap: 12px;\n}\n\n.line {\n  height: 10px;\n  border-radius: 999px;\n  background-color: #1f2937;\n}\n\n.w-50 { width: 50%; }\n.w-60 { width: 60%; }\n.w-70 { width: 70%; }\n.w-80 { width: 80%; }\n\n/* Feature Section */\n\n.section {\n  padding: 72px 0;\n}\n\n.section-title {\n  margin: 0 0 18px;\n  font-size: 28px;\n  line-height: 1.2;\n}\n\n.cards {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  gap: 24px;\n}\n\n.card {\n  background-color: #111827;\n  padding: 24px;\n  border-radius: 12px;\n  border: 1px solid #2a3446;\n}\n\n.card-title {\n  margin: 0 0 8px;\n  font-size: 16px;\n}\n\n.card-body {\n  margin: 0;\n  color: #9ca3af;\n}\n\n/* Responsive Adjustments */\n\n@media (max-width: 900px) {\n\n  .hero-grid {\n    grid-template-columns: 1fr;\n  }\n\n  .hero-media {\n    justify-content: flex-start;\n  }\n\n  .hero-title {\n    font-size: 84px;\n  }\n\n  .hero-buttons {\n    display: flex;\n    gap: 16px;\n  }\n  \n  .mock-box {\n    width: 100%;\n  }\n\n  .cards {\n    grid-template-columns: 1fr;\n  }\n}",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-23 16:16:03 +0000\",\"changed\":[],\"changed_by_id\":21019,\"changed_by_email\":\"moshe.bari@code.org\"},{\"changed_at\":\"2026-02-23 16:24:43 +0000\",\"changed\":[],\"changed_by_id\":21019,\"changed_by_email\":\"moshe.bari@code.org\"},{\"changed_at\":\"2026-02-23 16:25:12 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":21019,\"changed_by_email\":\"moshe.bari@code.org\"},{\"changed_at\":\"2026-02-23 16:30:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":21019,\"changed_by_email\":\"moshe.bari@code.org\"},{\"changed_at\":\"2026-02-23 16:31:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":21019,\"changed_by_email\":\"moshe.bari@code.org\"},{\"changed_at\":\"2026-02-23 17:30:40 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":21019,\"changed_by_email\":\"moshe.bari@code.org\"},{\"changed_at\":\"2026-02-23 17:32:18 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":21019,\"changed_by_email\":\"moshe.bari@code.org\"},{\"changed_at\":\"2026-02-24 19:45:18 +0000\",\"changed\":[],\"changed_by_id\":21019,\"changed_by_email\":\"moshe.bari@code.org\"},{\"changed_at\":\"2026-02-24 19:45:23 +0000\",\"changed\":[],\"changed_by_id\":21019,\"changed_by_email\":\"moshe.bari@code.org\"}]"
+}]]></config>
+</Weblab2>

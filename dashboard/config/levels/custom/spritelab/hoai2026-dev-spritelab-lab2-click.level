@@ -1,0 +1,131 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 64,
+  "created_at": "2026-09-12T00:00:00.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "uses_lab2": "true",
+    "block_pools": [
+      "GamelabJr",
+      "GameDev"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab",
+      "zGameDev"
+    ],
+    "standalone_app_name": "spritelab",
+    "skin": "gamelab",
+    "hide_custom_blocks": true,
+    "hide_share_and_remix": "true",
+    "encrypted": "false",
+    "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
+    "level_mode": {
+      "kind": "code"
+    },
+    "image_role_defaults": {
+      "sprite": "friend"
+    },
+    "pinned_scene": {
+      "id": "story-scene",
+      "name": "Story",
+      "type": "story"
+    },
+    "objectives": {
+      "title": "**Talk later**",
+      "items": [
+        {
+          "text": "Drag a **say** block onto the dotted outline.",
+          "check": {
+            "kind": "block",
+            "type": "gamelab_spriteSay",
+            "data": "at-6"
+          }
+        },
+        {
+          "text": "Click **Play** and wait for it.",
+          "check": {
+            "kind": "play",
+            "seconds": 6
+          }
+        }
+      ]
+    },
+    "long_instructions": "# Talk later\nDrag a **say** block onto the dotted outline under **at [6] seconds**. Your new character speaks 6 seconds in.",
+    "toolbox_definition": {
+      "kind": "flyoutToolbox",
+      "contents": [
+        {
+          "kind": "block",
+          "type": "gamelab_spriteSay",
+          "fields": {
+            "SPEECH": "Let's go!"
+          },
+          "inputs": {
+            "SPRITE": {
+              "shadow": {
+                "type": "gamelab_allSpritesWithAnimation"
+              }
+            }
+          }
+        },
+        {
+          "kind": "block",
+          "type": "gamelab_atTime",
+          "inputs": {
+            "N": {
+              "shadow": {
+                "type": "math_number",
+                "fields": {
+                  "NUM": 3
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "add_blocks": [
+      {
+        "type": "gamelab_atTime",
+        "data": "at-6",
+        "fields": {
+          "UNIT": "\"seconds\""
+        },
+        "inputs": {
+          "N": {
+            "shadow": {
+              "type": "math_number",
+              "fields": {
+                "NUM": 6
+              }
+            }
+          }
+        },
+        "next": {
+          "shadow": {
+            "type": "spritelab2_placeholder",
+            "extraState": {
+              "like": {
+                "type": "gamelab_spriteSay",
+                "fields": {
+                  "SPEECH": "Let's go!"
+                },
+                "inputs": {
+                  "SPRITE": {
+                    "shadow": {
+                      "type": "gamelab_allSpritesWithAnimation"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ],
+    "header_label": "Make a story"
+  }
+}]]></config>
+</GamelabJr>

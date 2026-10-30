@@ -1,0 +1,92 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2024-07-10T18:56:48.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "onEvent": null,
+      "ledScreen.on": null,
+      "ledScreen.off": null,
+      "ledScreen.toggle": null,
+      "ledScreen.clear": null,
+      "ledScreen.scrollNumber": null,
+      "ledScreen.scrollString": null,
+      "playSound": {
+        "paletteParams": [
+          "url"
+        ],
+        "params": [
+          "\"sound://default.mp3\""
+        ]
+      },
+      "setProperty": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "disable_if_else_editing": "false",
+    "free_play": "false",
+    "validation_enabled": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "execute_palette_apis_only": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "hide_view_data_button": "true",
+    "show_debug_watch": "true",
+    "expand_debugger": "false",
+    "fail_on_lint_errors": "false",
+    "debugger_disabled": "false",
+    "makerlab_enabled": "microbit",
+    "long_instructions": "# LED Grid\r\n\r\nCreate an app that lets the user turn on different LEDs by clicking buttons on a grid on the screen.\r\n\r\nThe app has already been started for you - continue the pattern to finish the app!",
+    "top_level_procedure_autopopulate": "false",
+    "parent_level_id": 20396,
+    "reference_links": [
+      "/courses/csd-2022/guides/microbit-overview",
+      "/courses/csd-2022/guides/microbit-display",
+      "/maker/setup"
+    ],
+    "mini_rubric": "false",
+    "text_mode_at_start": "false",
+    "encrypted": "false",
+    "widget_mode": "false",
+    "libraries_enabled": "false",
+    "ai_enabled": "false",
+    "display_name": "LED Grid",
+    "thumbnail_url": "https://images.code.org/7f8fca3bef40cd07285bdab6b8858b1a-mb-Challenge.png",
+    "bubble_choice_description": "Create an app that controls the LEDs on the micro:bit using buttons on the app screen",
+    "encrypted_examples": "pXkZrTvuarAfDfFbSaG9M98wtn1vKxDOP2kEK3B0oe1EX39LGNO4Kl/s9Ob/\na6nVOui8hKTp3hrcJaTcqBaPuw==\n",
+    "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"><button id=\"button00\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 40px; width: 40px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 45px; top: 125px;\"></button><button id=\"button10\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 40px; width: 40px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 95px; top: 125px;\"></button><button id=\"button20\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 40px; width: 40px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 145px; top: 125px;\"></button><button id=\"button30\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 40px; width: 40px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 195px; top: 125px;\"></button><button id=\"button40\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 40px; width: 40px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 245px; top: 125px;\"></button><button id=\"button01\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 40px; width: 40px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 45px; top: 175px;\"></button><button id=\"button11\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 40px; width: 40px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 95px; top: 175px;\"></button><button id=\"button21\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 40px; width: 40px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 145px; top: 175px;\"></button><button id=\"button31\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 40px; width: 40px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 195px; top: 175px;\"></button><button id=\"button41\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 40px; width: 40px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 245px; top: 175px;\"></button><button id=\"button02\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 40px; width: 40px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 45px; top: 225px;\"></button><button id=\"button12\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 40px; width: 40px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 95px; top: 225px;\"></button><button id=\"button22\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 40px; width: 40px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 145px; top: 225px;\"></button><button id=\"button32\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 40px; width: 40px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 195px; top: 225px;\"></button><button id=\"button42\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 40px; width: 40px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 245px; top: 225px;\"></button><button id=\"button03\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 40px; width: 40px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 45px; top: 275px;\"></button><button id=\"button13\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 40px; width: 40px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 95px; top: 275px;\"></button><button id=\"button23\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 40px; width: 40px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 145px; top: 275px;\"></button><button id=\"button33\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 40px; width: 40px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 195px; top: 275px;\"></button><button id=\"button43\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 40px; width: 40px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 245px; top: 275px;\"></button><button id=\"button04\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 40px; width: 40px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 45px; top: 325px;\"></button><button id=\"button14\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 40px; width: 40px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 95px; top: 325px;\"></button><button id=\"button24\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 40px; width: 40px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 145px; top: 325px;\"></button><button id=\"button34\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 40px; width: 40px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 195px; top: 325px;\"></button><button id=\"button44\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 40px; width: 40px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 245px; top: 325px;\"></button></div></div>",
+    "start_blocks": "onEvent(\"button00\", \"click\", function( ) {\r\n  ledScreen.on(0, 0);\r\n  setProperty(\"button00\", \"background-color\", \"red\");\r\n});\r\nonEvent(\"button10\", \"click\", function( ) {\r\n  ledScreen.on(1, 0);\r\n  setProperty(\"button10\", \"background-color\", \"red\");\r\n});\r\n",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-07-10T18:56:48.401+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Outputs - ChalF_mb2022\\\"\"],\"cloned_from\":\"CSD U6 - Board Outputs - ChalF_mb2022\"}]"
+}]]></config>
+  <blocks/>
+</Applab>

@@ -1,0 +1,132 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2024-09-12T23:57:36.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "#### Customize a Drum Beat\r\n\r\n- Drag an [AI Beat](#clickable=) block under [when run](#clickable=when-run-block).\r\n- Click the [AI Beat](#clickable=) block to create custom beats. AI Bot will help you generate a new beat for your song. ",
+    "hide_share_and_remix": "false",
+    "validations": [
+      {
+        "key": "music-ai-skill-sequence_72970c41-8593-4cb2-a028-efec3f9d143b",
+        "message": "That sounds great!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_patterns",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "key": "music-ai-skill-sequence_a0f44420-3323-439a-be62-f0aa67dbcbe1",
+        "message": "Add the [play drums](#clickable=play-drums-block) block and make your own beats!",
+        "next": false,
+        "conditions": [
+
+        ]
+      },
+      {
+        "key": "music-ai-skill-aibeats_2ec51257-daa4-40af-b5d4-4b42a2cfaf11",
+        "message": "Click on the [play drums](#clickable=play-drums-block) block and use the beat maker to create a custom beat.",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "level_data": {
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when_run_simple2",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
+      "toolbox": {
+        "blocks": {
+          "Control": [
+            "play_sounds_together"
+          ],
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ],
+          "Functions": [
+
+          ]
+        }
+      },
+      "library": "launch2024",
+      "packId": "chainsmokers_coldplay_something_just_like_this",
+      "sounds": {
+        "chainsmokers_coldplay_something_just_like_this": [
+          "vocals_do_do_do_low",
+          "vocals_do_do_do_high",
+          "vocals_hook_high",
+          "vocals_hook_low",
+          "vocals_prechorus_1",
+          "vocals_prechorus_2",
+          "vocals_prechorus_3",
+          "vocals_prechorus_4",
+          "vocals_verse_1",
+          "vocals_verse_2",
+          "vocals_verse_3",
+          "vocals_verse_4",
+          "drums_drop_beat",
+          "drums_fill",
+          "drums_live_beat",
+          "drums_live_build",
+          "drums_perc_build",
+          "drums_riser",
+          "drums_tom_build",
+          "drums_verse_beat",
+          "bass_live_1",
+          "bass_live_2",
+          "bass_live_3",
+          "bass_sub",
+          "bass_synth",
+          "guitar_acoustic",
+          "guitar_chime",
+          "guitar_intro",
+          "guitar_lead_1",
+          "guitar_lead_2",
+          "guitar_muted_1",
+          "guitar_muted_2",
+          "guitar_verse_1",
+          "guitar_verse_2",
+          "piano_build",
+          "piano_full_1",
+          "piano_full_2",
+          "piano_melody",
+          "wurly",
+          "synth_arp",
+          "synth_drop_1",
+          "synth_drop_2",
+          "synth_lead",
+          "vocals_glitch",
+          "drums_crash",
+          "drums_vibraslap",
+          "vocals_ahh_swell",
+          "vocals_ohahh"
+        ]
+      }
+    },
+    "name_suffix": "_v1",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-09-12T23:57:36.143+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-aibeats\\\"\"],\"cloned_from\":\"music-ai-skill-aibeats\"}]"
+}]]></config>
+  <blocks/>
+</Music>

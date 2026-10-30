@@ -1,0 +1,9 @@
+{
+  "key": "producing-output",
+  "course_version_key": "2024",
+  "course_offering_key": "focus-on-design-with-purpose",
+  "parent_reference_guide_key": "circuit-playground-parent",
+  "display_name": "Circuit Playground Buzzer",
+  "content": "<img src=\"//curriculum.code.org/images/circuitplayground/cp_buzzer.png\" style=\"float: right; width: 300px; margin-left: 10px;\">\n\nThe LED is probably the simplest form of output available, and though there are many useful things a simple light can communicate, sometimes we need a different form of output. We've used light as an output, but what about sound? Your board has a [`buzzer`(#f78183)](/docs/applab/buzzer/) object that can play simple sounds.\n\n### The Buzzer\n\nDon't expect the [`buzzer`(#f78183)](/docs/applab/buzzer/) to make beautiful music - it's a simple tool for simple output!\n\n1. This cube contains a simple buzzer (also known as a _piezo_ or _piezoelectric_ buzzer). When electricity is sent to the buzzer, it vibrates and makes noise.\n\n<div style=\"clear: both;\"></div>\n\n### Making Different Sounds\n\n<img src=\"//curriculum.code.org/images/circuitplayground/cp_buzzer_pwm.png\" style=\"float: left; width: 200px; margin-right: 10px;\">\n\nWhen using the LED our choice of output was pretty simple; it's either on or off. The buzzer can actually play a range of different sounds. We're able to do that by sending pulses of electricity to the buzzer at different speeds. This is like turning on and off a light repeatedly - the faster we flip the switch, the higher the sound it will produce.\n\n<div style=\"clear: both;\"></div>",
+  "position": 3
+}

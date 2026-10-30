@@ -1,0 +1,14 @@
+name 'ai-powered-threats-defenses-postassessment-q13_2025-pilot'
+
+question ‘Why might an AI system flag a series of encrypted messages as “suspicious,” even without knowing their content?’
+
+wrong ‘The AI can detect bad language through the encryption’
+right ‘The AI can recognize behavioral patterns in metadata that match known risk signals’
+wrong ‘The AI uses brute force to reveal partial message content’
+wrong ‘The AI detects keywords in the message subject line’
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 10: AI in Encryption
+MARKDOWN

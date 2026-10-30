@@ -6,12 +6,12 @@ class SmsController < ApplicationController
   def send_to_phone
     if params[:level_source].present? && params[:phone] && (level_source = LevelSource.find(params[:level_source]))
       send_sms_link(level_source_url(level_source), params[:phone])
-    elsif params[:channel_id] && params[:phone] && ProjectsController::STANDALONE_PROJECTS.include?(params[:type])
+    elsif params[:channel_id] && params[:phone] && Policies::StandaloneProjects.all.include?(params[:type])
       url =
         if params[:type] == 'weblab'
           "https://codeprojects.org/#{params[:channel_id]}"
         else
-          polymorphic_url(["#{params[:type]}_project_share".to_sym, :projects], channel_id: params[:channel_id])
+          polymorphic_url([:"#{params[:type]}_project_share", :projects], channel_id: params[:channel_id])
         end
       send_sms_link(url, params[:phone])
     else
@@ -21,7 +21,8 @@ class SmsController < ApplicationController
 
   private def send_sms_link(link, phone)
     decorated_link = link + '?sms=true'
-    body = "Check this out on Code Studio: #{decorated_link} (reply STOP to stop receiving this)"
+    brand_name = Cdo::Brand.legal_name(request)
+    body = "Check this out on #{brand_name}: #{decorated_link} (reply STOP to stop receiving this)"
     send_sms(body, phone)
   end
 
@@ -43,7 +44,7 @@ class SmsController < ApplicationController
     when /The message From\/To pair violates a blacklist rule./
       # recipient unsubscribed from twilio, pretend it succeeded
       head :ok
-    when /The \'To\' number .* is not a valid phone number\./
+    when /The 'To' number .* is not a valid phone number\./
       head :bad_request
     else
       raise

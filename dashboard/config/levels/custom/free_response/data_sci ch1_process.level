@@ -1,0 +1,24 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-05-06T23:16:06.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Describe your data analysis process including what data set you used and why as well as how you went about analyzing the data. ",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "bubble_choice_description": "Student responses should demonstrate accuracy in the data analysis processes, demonstrating skillful use of statistical tools and techniques.\r\n\r\n## Example\r\n\r\n_**Dataset Selection**_\r\n\r\n_The original dataset, titled \"Bee Colonies.csv,\" consists of monthly data on bee colony losses from various states across the United States. I chose to aggregate this monthly data into annual totals to provide a clearer view of trends over time without the noise that monthly fluctuations might introduce. This approach also simplifies the analysis by focusing on larger patterns rather than transient changes._\r\n\r\n_**Dataset Decisions**_\r\n\r\n* _Different Places, Different Climates: These five states are really different from each other. For example, Texas is pretty hot and dry, while Maine is cooler and has different kinds of plants and weather. This variety can show us how different environments affect the bees._\r\n* _Reduction of Complexity: Monthly data can be inconsistent; annual totals provide a more stable basis for identifying long-term trends and making meaningful comparisons between different geographical regions._\r\n\r\n_**Steps in Data Analysis**_\r\n\r\n1. _Data Aggregation:_\r\n   - _ First, I took the monthly loss percentages from the dataset and added them up to get a total loss percentage for each year. This way, I didn’t have to deal with so many numbers and could see the bigger picture more easily._\r\n\r\n2. _Data Filtering:_\r\n   * _I removed data from states that I wasn’t focusing on. This made my dataset cleaner and more targeted to what I wanted to study._\r\n\r\n3. _Descriptive Statistics:_\r\n   - _I figured out the average loss percentage for each state over the years to see what’s normal and what’s not._\r\n   - _I looked at the highest and lowest loss percentages to understand how much they can change from year to year._\r\n\r\n4. _Trend Analysis:_\r\n   - _I used CODAP \"graph\" tool to create a graph that showed the annual loss percentages for each of the five states from 2015 to 2020. The \"year\" attribute was used for the x-axis and percentage loss was used for the y-axis, while the states were used as a legend to the graph_\r\n   - _I used a CODAP plugin to draw connecting lines between the graph's plots in order to show the trends for each state throughout the years._\r\n\r\n5. _Comparative Analysis:_\r\n   - _I used my visuals to compare the loss percentages between states. This shows which states have more stable environments for bees and which ones don’t._\r\n\r\n6. _Correlation Analysis:_\r\n   - _I tried to connect the bee losses to things like the weather, pesticide use, or how much farming is done in each state. For this, I might need to find more data about weather or farming practices in the future._\r\n\r\n7. _Conclusion Drawing:_\r\n   - _I put all my findings together to see if I could figure out why bees are losing their colonies in these states. I also thought about what questions I still have and what I could study next._"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-05-06T23:16:06.207+00:00\",\"changed\":[\"cloned from \\\"data_sci ch1_analysis\\\"\"],\"cloned_from\":\"data_sci ch1_analysis\"},{\"changed_at\":\"2024-05-06 23:18:40 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-07 00:05:21 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-07 00:21:13 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

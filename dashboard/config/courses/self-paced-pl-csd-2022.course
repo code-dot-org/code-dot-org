@@ -6,6 +6,12 @@
     "self-paced-pl-csd3-2022",
     "self-paced-pl-csd4-2022"
   ],
+  "original_script_names": [
+    "self-paced-pl-csd3-2022",
+    "self-paced-pl-csd1-2022",
+    "self-paced-pl-csd2-2022",
+    "self-paced-pl-csd4-2022"
+  ],
   "published_state": "stable",
   "instruction_type": "self_paced",
   "participant_audience": "teacher",

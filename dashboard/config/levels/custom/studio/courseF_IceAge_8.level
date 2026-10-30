@@ -25,7 +25,7 @@
     "success_condition": "function successCondition() {\r\n\t      return Studio.sprite[0].isCollidingWith(1) && Studio.playerScore === 1;\r\n\t    }",
     "failure_condition": "function failureCondition() {\r\n\t      return Studio.sprite[0].isCollidingWith(1) && Studio.playerScore !== 1;\r\n\t    }",
     "short_instructions": "Can you finish this program to make it so that you both **play a sound** and **score a point** when Sid and Granny collide? ",
-    "callout_json": "[{\"localization_key\":\"playlab_add_score\",\"callout_text\":null,\"element_id\":\"[block-id='3']\",\"qtip_config\":{\"position\":{\"my\":\"top left\",\"at\":\"bottom left\",\"adjust\":{\"x\":22,\"y\":4}}},\"on\":null}]",
+    "callout_json": "[{\"localization_key\":\"playlab_add_score\",\"callout_text\":null,\"element_id\":\"[block-id='3']\",\"qtip_config\":{\"position\":{\"my\":\"top left\",\"at\":\"bottom left\",\"adjust\":{\"x\":22,\"y\":4}}},\"on\":null},{\"element_id\":\"[data-id='3']\",\"localization_key\":\"playlab_add_score\",\"callout_text\":null,\"qtip_config\":{\"position\":{\"my\":\"top left\",\"at\":\"bottom left\",\"adjust\":{\"x\":22,\"y\":4}}},\"on\":null}]",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[16,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
     "long_instructions": "Here is your code from the last puzzle, as well as the code to move Granny left and right. \r\nCan you finish the program to make it so that you both **play a sound** and **score a point** when Sid and Granny collide? \r\nPress \"Run\" to play the game.",
@@ -58,7 +58,7 @@
     "sprites_hidden_to_start": "false",
     "timeout_after_when_run": "false",
     "project_template_level_name": "courseF_IceAge_template",
-    "contained_level_names": null
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
@@ -72,7 +72,7 @@
         <block type="studio_whenSpriteCollided" deletable="false" x="20" y="20"/>
         <block type="studio_repeatForever" deletable="false" x="20" y="150">
           <statement name="DO">
-            <block type="studio_moveDistance">
+            <block type="studio_moveDistance" id="3">
               <title name="SPRITE">1</title>
               <title name="DIR">2</title>
               <title name="DISTANCE">400</title>

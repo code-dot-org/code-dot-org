@@ -1,0 +1,51 @@
+.compareModelsModal {
+  align-self: stretch;
+  margin-inline: auto;
+  max-height: calc(90vh - 100px);
+  overflow: hidden;
+
+  > div:nth-of-type(2) {
+    flex: 1 1 auto;
+    min-height: 0;
+    max-height: none;
+    overflow: hidden;
+    align-self: stretch;
+  }
+}
+
+.textContainer {
+  background-color: var(--background-neutral-tertiary);
+  border-radius: 0.25rem;
+}
+
+.modelText {
+  padding: 0.3125rem 0.625rem 0.3125rem 0.625rem;
+}
+
+.modelDescriptionPanelContainer {
+  flex: 1;
+  padding: 0.3125rem 0.625rem;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.modelComparisonContainer {
+  display: flex;
+  gap: 1rem;
+  overflow-y: hidden;
+  flex: 1;
+  min-height: 0;
+  min-width: 0;
+}
+
+.modelDescriptionContainer {
+  overflow-y: auto;
+  flex: 1;
+  min-height: 0;
+}
+
+.compareModelsDropdown {
+  width: 100%;
+  display: inline-block;
+}

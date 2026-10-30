@@ -1,11 +1,16 @@
 import {FieldGridDropdown} from '@blockly/field-grid-dropdown';
-import color from '@cdo/apps/util/color';
-import {BlockSvg, MenuItem, MenuOption} from 'blockly';
-import {ImageProperties} from 'blockly/core/field_dropdown';
+import * as BlocklyCore from 'blockly/core';
 
-interface ButtonConfig {
+import {
+  arrayToMap,
+  CustomMenuGenerator,
+  getUpdatedOptionsFromConfig,
+} from './cdoFieldDropdown';
+
+export interface ButtonConfig {
   text: string;
   action: () => void;
+  className?: string;
 }
 
 // Note that this class *does not* inherit from CdoFieldDropdown
@@ -13,12 +18,16 @@ export class CdoFieldImageDropdown extends FieldGridDropdown {
   private buttons_: ButtonConfig[] | undefined;
   private imageWidth_: number;
   private imageHeight_: number;
+  private whiteBackground: boolean;
+  private focusColour_?: string;
+  private config: string | null | undefined;
 
   constructor(
-    menuGenerator: MenuOption[] | (() => MenuOption[]),
+    menuGenerator: BlocklyCore.MenuOption[] | (() => BlocklyCore.MenuOption[]),
     width: number,
     height: number,
-    buttons: ButtonConfig[] | undefined
+    buttons: ButtonConfig[] | undefined,
+    whiteBackground: boolean = true
   ) {
     // We have to decide how many columns to have when we create the block. The
     // number of options in the block can change over time, but we can just use
@@ -40,151 +49,172 @@ export class CdoFieldImageDropdown extends FieldGridDropdown {
     this.buttons_ = buttons;
     this.imageWidth_ = width;
     this.imageHeight_ = height;
+    this.whiteBackground = whiteBackground;
+    this.focusColour_ = 'rgba(0,0,0,.3)';
   }
 
   /**
    * @override
-   * Duplicated from Blockly.FieldDropdown.showEditor_ and FieldGridDropdown.showEditor_
-   * There are two functionality changes:
-   * 1. Override primaryColour to always be white. FieldGridGropdown allows overriding the primary
-   *  color via config, but it happens in showEditor_, which we need to override because of 2.
-   * 2. Create MenuItems for the buttons and add them before we render the menu.
-   * We are accessing private fields here, so if we upgrade Blockly we should verify no names changed.
+   * Customized version of `Blockly.FieldDropdown.showEditor_` and
+   * `FieldGridDropdown.showEditor_` with the following functionality changes:
+   *
+   * 1. Overrides grid colours based on the source block.
+   * 2. Dynamically styles grid items and their embedded images.
+   * 3. Adds custom buttons below the grid.
+   *
+   * @param e Optional mouse event that triggered the field to open, or
+   *  undefined if triggered programmatically.
    */
-  showEditor_(opt_e?: MouseEvent) {
-    // dropdownCreate is private in the parent.
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    (this as any).dropdownCreate();
-    // dropdownCreate creates a menu, this is just to make TypeScript happy.
-    if (!this.menu_) {
-      return;
+  protected showEditor_(e?: MouseEvent) {
+    super.showEditor_(e);
+
+    const block = this.getSourceBlock() as BlocklyCore.BlockSvg | null;
+    if (block) {
+      const parent = block.getParent();
+      const isShadow = block.isShadow();
+
+      const colorSourceBlock = isShadow ? parent! : block;
+      if (this.whiteBackground) {
+        this.focusColour_ = colorSourceBlock.style.colourTertiary;
+        // Empty strings keep the themed panel from cdoCss.
+        Blockly.DropDownDiv.setColour('', '');
+      } else {
+        // White images need the block's colours or they disappear.
+        Blockly.DropDownDiv.setColour(
+          colorSourceBlock.style.colourTertiary,
+          colorSourceBlock.style.colourPrimary
+        );
+      }
     }
-    if (opt_e && typeof opt_e.clientX === 'number') {
-      this.menu_.openingCoords = new Blockly.utils.Coordinate(
-        opt_e.clientX,
-        opt_e.clientY
-      );
-    } else {
-      this.menu_.openingCoords = null;
-    }
+
+    const gridItems: HTMLElement[] = Array.from(
+      document.querySelectorAll('.blocklyFieldGrid .blocklyFieldGridItem')
+    );
+    gridItems.forEach(element => {
+      // Dynamic styling for .blocklyFieldGrid .blocklyFieldGridItem
+      element.style.height = this.imageHeight_ + 'px';
+      element.style.width = this.imageWidth_ + 'px';
+      element.addEventListener('focus', () => {
+        element.style.boxShadow = `0 0 0 4px ${this.focusColour_}`;
+      });
+      element.addEventListener('blur', () => {
+        element.style.boxShadow = '';
+      });
+
+      // Dynamic styling for .blocklyFieldGrid .blocklyFieldGridItem img
+      const imgElement = element.querySelector(
+        'img'
+      ) as HTMLImageElement | null;
+      if (imgElement) {
+        imgElement.style.maxWidth = this.imageWidth_ + 'px';
+        imgElement.style.maxHeight = this.imageHeight_ + 'px';
+      }
+    });
 
     if (this.buttons_) {
-      // Force buttons to a new row by adding blank elements if needed.
-      // menuItems is private in the parent.
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      const numItems = ((this.menu_ as any).menuItems as MenuItem[]).length;
-      // columns is private in the parent.
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      const columns = (this as any).columns as number;
-      const numInLastRow = numItems % columns;
-      const numBlankToAdd = numInLastRow > 0 ? columns - numInLastRow : 0;
-      for (let i = 0; i < numBlankToAdd; i++) {
-        const item = document.createElement('div');
-        item.style.width = this.imageWidth_ + 'px';
-        item.style.height = this.imageHeight_ + 'px';
-        const menuItem = new Blockly.MenuItem(item, '');
-        menuItem.setEnabled(false);
-        this.menu_.addChild(menuItem);
-      }
-
-      // Add buttons to menu
+      const gridContainer = document.querySelector(
+        '.blocklyFieldGridContainer'
+      ) as HTMLElement;
+      // Add buttons below the grid.
       this.buttons_.forEach(button => {
         const buttonElement = document.createElement('BUTTON');
         buttonElement.innerHTML = button.text;
+        if (button.className) {
+          buttonElement.className = button.className;
+        }
         buttonElement.addEventListener('click', button.action);
         buttonElement.addEventListener('click', () =>
           Blockly.DropDownDiv.hideIfOwner(this, true)
         );
-        const menuItem = new Blockly.MenuItem(buttonElement, '');
-        menuItem.setRole(Blockly.utils.aria.Role.OPTION);
-        menuItem.setRightToLeft(this.sourceBlock_?.RTL || false);
-        menuItem.setEnabled(false);
-        this.menu_?.addChild(menuItem);
+        gridContainer.appendChild(buttonElement);
       });
     }
-
-    // Element gets created in render.
-    this.menu_.render(Blockly.DropDownDiv.getContentDiv());
-    const menuElement = this.menu_.getElement();
-    if (menuElement) {
-      Blockly.utils.dom.addClass(menuElement, 'blocklyDropdownMenu');
-      Blockly.utils.dom.addClass(menuElement, 'fieldGridDropDownContainer');
-    }
-
-    if (this.sourceBlock_) {
-      const primaryColour = color.white;
-      const sourceBlockSvg = this.sourceBlock_ as BlockSvg;
-      const parent = sourceBlockSvg.getParent();
-      const borderColour =
-        sourceBlockSvg.isShadow() && parent
-          ? parent.style.colourTertiary
-          : sourceBlockSvg.style.colourTertiary;
-      Blockly.DropDownDiv.setColour(primaryColour, borderColour);
-    }
-
-    // Focusing needs to be handled after the menu is rendered and positioned.
-    // Otherwise it will cause a page scroll to get the misplaced menu in
-    // view. See issue #1329.
-    this.menu_.focus();
-
-    // selectedMenuItem is private in the parent.
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const selectedMenuItem = (this as any).selectedMenuItem as MenuItem | null;
-    if (selectedMenuItem) {
-      this.menu_.setHighlighted(selectedMenuItem);
-    }
-
-    this.applyColour();
-
-    // updateColumnsStyling_ is private in the parent.
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    (this as any).updateColumnsStyling_();
-
-    Blockly.DropDownDiv.showPositionedByField(
-      this,
-      this.dropdownDispose_.bind(this)
-    );
   }
 
   /**
-   * @override
-   * Ensure that the input value is a valid language-neutral option.
-   * The only change we made from the parent method is to not use the cache,
-   * as the list of options can change.
+   * Sets the field's state based on the given state value. Should only be
+   * called by the serialization system.
    *
-   * @param newValue The input value.
-   * @returns A valid language-neutral option, or null if invalid.
+   * @param state The state we want to apply to the field.
+   * @override because `state` is stored as either json or xml in our code base.
    */
-  doClassValidation_(newValue: string) {
-    /* Begin CDO Customization */
-    const options = this.getOptions(false); // false = do not use cache
-    /* End CDO Customization */
-
-    const isValueValid = options.some(option => option[1] === newValue);
-
-    if (!isValueValid) {
-      if (this.sourceBlock_) {
-        console.warn(
-          "Cannot set the dropdown's value to an unavailable option." +
-            ' Block type: ' +
-            this.sourceBlock_.type +
-            ', Field name: ' +
-            this.name +
-            ', Value: ' +
-            newValue
-        );
+  // Blockly uses any here
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  loadState(state: any) {
+    // Check if state is not stringified xml, i.e., value from json.
+    const fieldTagRegEx = /<field/;
+    if (!fieldTagRegEx.test(state)) {
+      if (this.isOptionListDynamic()) {
+        this.getOptions(false);
       }
-      return null;
+      this.setValue(state);
+      return;
     }
-    return newValue;
+    const field = BlocklyCore.utils.xml.textToDom(state);
+    // Currently, we support the `config` attribute if `config` is stored in xml, but not in json.
+    // The config is handled by `fromXml`.
+    this.fromXml(field);
+  }
+
+  /**
+   * Converts xml element into dropdown field
+   * @param element xml
+   * @override
+   */
+  fromXml(element: Element) {
+    // If the field xml contains a `config`, then the dropdown options
+    // are determined by `config`.
+    // Suppose that `config` is assigned ""ITEM1", "ITEM2", "ITEMX""
+    // Then menu dropdown options would be: 'first item', 'second item', 'itemx'.
+    // See CDO implementation at https://github.com/code-dot-org/blockly/blob/main/core/ui/fields/field_dropdown.js#L305
+    this.config = element.getAttribute('config');
+    if (this.config) {
+      // If `menuGenerator_` is an array, it is an array of options with
+      // each option represented by an array containing 2 elements -
+      // a human-readable string and a language-neutral string. For example,
+      // [['first item', 'ITEM1'], ['second item', 'ITEM2'], ['third item', 'ITEM3']].
+      // Options are included in the block definition.
+      const optionsArray =
+        typeof this.menuGenerator_ === 'function'
+          ? this.menuGenerator_()
+          : this.menuGenerator_;
+      const existingOptionsMap = arrayToMap(
+        optionsArray as CustomMenuGenerator
+      );
+      this.menuGenerator_ = getUpdatedOptionsFromConfig(
+        this.config,
+        existingOptionsMap
+      );
+      if (this.menuGenerator_.length === 1) {
+        this.EDITABLE = false;
+        // No-op showing the dropdown editor since there is only one option.
+        this.showEditor_ = () => {};
+      }
+    }
+    // Call super so value is set.
+    super.fromXml(element);
+  }
+
+  /**
+   * Converts dropdown field options into xml element
+   * @param element xml
+   * @return element
+   * @override
+   */
+  toXml(element: Element) {
+    if (this.config) {
+      element.setAttribute('config', this.config);
+    }
+    super.toXml(element);
+    return element;
   }
 }
 
 export function fixMenuGenerator(
-  menuGenerator: MenuOption[] | (() => MenuOption[]),
+  menuGenerator: BlocklyCore.MenuOption[] | (() => BlocklyCore.MenuOption[]),
   width: number,
   height: number
-): MenuOption[] {
+): BlocklyCore.MenuOption[] {
   // Google Blockly supports images in dropdowns but has a different format,
   // so we just need to restructure our menu items before passing through to
   // the FieldDropdown constructor.
@@ -205,6 +235,6 @@ export function fixMenuGenerator(
     return [
       {src: url, width: width, height: height, alt: code_id},
       code_id,
-    ] as [ImageProperties, string];
+    ] as [BlocklyCore.ImageProperties, string];
   });
 }

@@ -1,0 +1,45 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-05-28T18:17:05.000Z",
+  "level_num": "custom",
+  "user_id": 574,
+  "properties": {
+    "panels": [
+      {
+        "key": "test-brendan-2d-review-2d-basics-84fddcda-6a61-4e52-bb81-636315d8f7aa",
+        "text": "We started by learning that all the amazing things you see on a computer screen are made up of 2D graphics, drawn on a digital 'canvas' using code!",
+        "imageUrl": "https://images.code.org/48cc30f8a10db841375daa5cca5a1f8b-test-brendan-2d-review-2d-basics-panel-1-d160bc90-9556-4b8f-8ec0-4652293838c1.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "test-brendan-2d-review-2d-basics-ca000edc-5cb3-4296-bbbe-3ce2df50d8bc",
+        "text": "Then, we discovered the canvas's special map: the coordinate system! Remember, (0,0) is at the top-left, X goes right, and Y goes down.",
+        "imageUrl": "https://images.code.org/d312960583e9028e0491aa5f656ba583-test-brendan-2d-review-2d-basics-panel-2-76577c0d-6a28-4d5d-a3ed-49c355754e20.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "test-brendan-2d-review-2d-basics-b30721b5-fbe6-471c-a725-422fdff67d98",
+        "text": "We learned to draw rectangles using `fillRect()`, controlling their starting point, width, and height. Super useful for building blocks!",
+        "imageUrl": "https://images.code.org/4e0fdbbb0e12d9f208463c356f6f7a15-test-brendan-2d-review-2d-basics-panel-3-35e0523a-6a82-401b-9571-d4353dc77733.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "test-brendan-2d-review-2d-basics-1123e797-387d-43d1-a6a8-c8945b6598fb",
+        "text": "And then, circles! With `drawCircle()`, we positioned them by their center and set their size with a radius.",
+        "imageUrl": "https://images.code.org/af36f6766ba7a99fb111a7f9759bc405-test-brendan-2d-review-2d-basics-panel-4-a23975de-0659-40c4-afbf-16bb91342992.png",
+        "layout": "text-bottom-right"
+      },
+      {
+        "key": "test-brendan-2d-review-2d-basics-e2217810-1db3-42e1-af00-5f4a9c663dcb",
+        "text": "Both `x` and `y` coordinates are super important! They tell the computer *exactly* where to place each part of your drawing on the canvas.",
+        "imageUrl": "https://images.code.org/9bdeb5226995d873ac87b90df4af696c-test-brendan-2d-review-2d-basics-panel-5-8cc533e4-e9d6-4993-bac2-95dd1e796735.png",
+        "layout": "text-top-center"
+      }
+    ],
+    "generate_outline": "Summarize the key concepts learned about 2D graphics, the coordinate system, and how to draw basic shapes like rectangles and circles. Emphasize how x and y values are crucial for positioning."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-28 18:17:55 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-28 18:17:55 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

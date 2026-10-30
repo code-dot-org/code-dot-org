@@ -1,0 +1,9 @@
+{
+  "key": "responding-to-user-input",
+  "course_version_key": "2024",
+  "course_offering_key": "focus-on-creativity",
+  "parent_reference_guide_key": "app-lab",
+  "display_name": "Responding to User Input",
+  "content": "Design Mode makes it really easy to lay out the User Interface for your app, but we'll need to dive into Code Mode to make it actually respond to users.\n\nIn Game Lab the Draw loop just constantly ran code, using conditionals to check for interactions from the user. App Lab, on the other hand, waits to respond to certain **events** that occur in a program. It's App Lab's way of saying \"Hey! Something just happened!\". This means that there doesn't need to be any code running when you aren't directly interacting with an app, and your code can respond to each of these events as they happen.\n\nIn App Lab all event handling starts by adding a special block of code called [`onEvent`(#fff176)](/docs/applab/onEvent/).  Here is how to do it:\n\n<img src=\"https://images.code.org/9b506faaaadf61338dc738a4eafb66b2-image-1476740205599.png\" />\n\n[diagram_nums]\n\n1. Switch into Code Mode\n2. Drag an [`onEvent`(#fff176)](/docs/applab/onEvent/) block from the toolbox into the workspace.\n3. Use the pulldown menu to select the _ID_ of the UI element you want to setup to respond to some event. The IDs of all UI elements added in design mode will be listed here.\n4. Use the pulldown menu to select the _type_ of event you want to respond to. (Just use \"click\" for now).\n5. Add code inside the function that you want to run _when_ the event happens.  The function will run once every time the event occurs.\n\n[/diagram_nums]\n",
+  "position": 1
+}

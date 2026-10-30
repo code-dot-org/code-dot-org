@@ -1,0 +1,20 @@
+# Validate the Kubernetes manifests used by local Skaffold and k8s-gitops.
+#
+# This is currently an experimental feature, see: k8s/experimental.yaml
+
+name: k8s
+on:
+  # Trigger on any PR, then filter to source branches containing "k8s" below.
+  # Image publication is owned by the root docker family workflows. Kargo
+  # watches cdo-rails and writes deployment values files.
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  validate:
+    if: github.event_name != 'pull_request' || contains(github.head_ref, 'k8s')
+    name: validate
+    uses: ./.github/workflows/k8s-validate.yml
+
+permissions:
+  contents: read

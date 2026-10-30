@@ -1,63 +1,65 @@
-import React from 'react';
+import {RadioButton} from '@code-dot-org/component-library/radioButton';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import {LockStatus} from '@cdo/apps/code-studio/components/progress/lessonLockDialog/LessonLockDataApi';
-import color from '@cdo/apps/util/color';
+import React from 'react';
 
-const StudentRow = ({index, name, lockStatus, handleRadioChange}) => {
+import {LockStatus} from '@cdo/apps/code-studio/components/progress/lessonLockDialog/LessonLockDataApi';
+import DemoChip from '@cdo/apps/templates/DemoChip';
+import i18n from '@cdo/locale';
+
+import styles from './student-row.module.scss';
+
+// Accessible names for the radios; match the column headers rendered by
+// LessonLockDialog.
+const statusLabel = {
+  [LockStatus.Locked]: () => i18n.locked(),
+  [LockStatus.Editable]: () => i18n.editable(),
+  [LockStatus.ReadonlyAnswers]: () => i18n.answersVisible(),
+};
+
+const StudentRow = ({
+  index,
+  name,
+  lockStatus,
+  isDemoStudent,
+  handleRadioChange,
+}) => {
   const radioChangeEvent = event => {
     const modifiedIndex = parseInt(event.target.name, 10);
     const lockStatus = event.target.value;
     handleRadioChange(modifiedIndex, lockStatus);
   };
 
+  const radioCell = status => (
+    <td
+      className={classNames(
+        styles.tableCell,
+        styles.radioCell,
+        lockStatus === status && styles.selectedCell
+      )}
+    >
+      <RadioButton
+        className={styles.radio}
+        name={String(index)}
+        value={status}
+        checked={lockStatus === status}
+        onChange={radioChangeEvent}
+        disabled={isDemoStudent}
+        ariaLabel={statusLabel[status]()}
+        size="s"
+      />
+    </td>
+  );
+
   return (
     <tr>
-      <td style={styles.tableCell}>{name}</td>
-      <td
-        style={{
-          ...styles.tableCell,
-          ...styles.radioCell,
-          ...(lockStatus === LockStatus.Locked && styles.selectedCell),
-        }}
-      >
-        <input
-          type="radio"
-          name={index}
-          value={LockStatus.Locked}
-          checked={lockStatus === LockStatus.Locked}
-          onChange={radioChangeEvent}
-        />
+      <td className={styles.tableCell}>
+        {name}
+        {isDemoStudent && <DemoChip />}
       </td>
-      <td
-        style={{
-          ...styles.tableCell,
-          ...styles.radioCell,
-          ...(lockStatus === LockStatus.Editable && styles.selectedCell),
-        }}
-      >
-        <input
-          type="radio"
-          name={index}
-          value={LockStatus.Editable}
-          checked={lockStatus === LockStatus.Editable}
-          onChange={radioChangeEvent}
-        />
-      </td>
-      <td
-        style={{
-          ...styles.tableCell,
-          ...styles.radioCell,
-          ...(lockStatus === LockStatus.ReadonlyAnswers && styles.selectedCell),
-        }}
-      >
-        <input
-          type="radio"
-          name={index}
-          value={LockStatus.ReadonlyAnswers}
-          checked={lockStatus === LockStatus.ReadonlyAnswers}
-          onChange={radioChangeEvent}
-        />
-      </td>
+      {radioCell(LockStatus.Locked)}
+      {radioCell(LockStatus.Editable)}
+      {radioCell(LockStatus.ReadonlyAnswers)}
     </tr>
   );
 };
@@ -66,22 +68,8 @@ StudentRow.propTypes = {
   index: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   lockStatus: PropTypes.oneOf(Object.values(LockStatus)).isRequired,
+  isDemoStudent: PropTypes.bool,
   handleRadioChange: PropTypes.func.isRequired,
-};
-
-const styles = {
-  tableCell: {
-    borderWidth: 1,
-    borderStyle: 'solid',
-    borderColor: color.light_gray,
-    padding: 10,
-  },
-  radioCell: {
-    textAlign: 'center',
-  },
-  selectedCell: {
-    backgroundColor: color.lightest_teal,
-  },
 };
 
 export default StudentRow;

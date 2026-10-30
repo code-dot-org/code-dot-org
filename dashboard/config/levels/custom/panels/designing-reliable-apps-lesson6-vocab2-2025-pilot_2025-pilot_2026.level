@@ -1,0 +1,23 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-04-01T21:44:15.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# Parsing JSON\n\n**Parsing** means looking at a string of symbols and breaking it down into smaller, meaningful sections.\n\nWhen we **parse JSON**, we turn the raw data into JavaScript objects usable by our program.\n<br>\n<br>\n```\n{   \n     “name” : “Maria”,\n     “age”: 15,\n     “city”: “Los Angeles”\n     “photo”: “profile.png”\n}\n```\n",
+        "imageUrl": "https://images.code.org/21058310a0e6cb01e0a4669ec272774a-Screenshot 2026-02-05 at 11.27.41 AM.png",
+        "key": "designing-reliable-apps-lesson6-vocab2-2025-pilot-190b69c7-704f-4aec-83b5-454884a462fb",
+        "layout": "text-top-left"
+      }
+    ],
+    "name_suffix": "_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T21:44:15.295+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson6-vocab2-2025-pilot_2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson6-vocab2-2025-pilot_2025-pilot\"}]"
+}]]></config>
+</Panels>

@@ -1,0 +1,74 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-07-30T16:41:24.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Visualize Heart Health Data\r\n\r\nUse the imported datasets to create two data visualizations about heart health.\r\n\r\n### Line Chart\r\n\r\nUse `line_chart_data` from `health_data.csv` to create a line chart that:\r\n\r\n- Uses `Date` for the x-axis and `Pulse` for the y-axis\r\n- Includes a meaningful title and axis labels\r\n- Displays when the program runs\r\n\r\n### Bar Chart\r\n\r\nUse `bar_chart_data` from `pulse_counts.csv` to create a bar chart that:\r\n\r\n- Uses `Pulse values` for the x-axis and `count` for the y-axis\r\n- Includes a meaningful title and axis labels\r\n- Displays when the program runs\r\n\r\nRun the program and check that both charts display the correct data clearly.\r\n\r\n::: details [Not sure where to start?]\r\n\r\nUse AI Tutor to:\r\n\r\n- View examples using different data\r\n- Learn how a Matplotlib function works\r\n- Understand an error message\r\n\r\nThen use what you learn to write your own code.\r\n\r\n:::",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "import pandas as pd\n\n# Import the datasets\nline_chart_data = pd.read_csv('health_data.csv')\nbar_chart_data = pd.read_csv('pulse_counts.csv')\n\n# Import matplotlib.pyplot\n\n\n# Create a line chart\n\n\n# Create a bar chart",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        },
+        "1": {
+          "id": "1",
+          "name": "pulse_counts.csv",
+          "contents": ",Pulse values,count\n0,100,6\n1,103,4\n2,102,3\n3,98,3\n4,110,2\n5,117,2\n6,109,2\n7,104,2\n8,92,2\n9,106,1\n10,90,1\n11,97,1\n12,108,1\n13,130,1\n14,105,1",
+          "folderId": "0",
+          "active": false
+        },
+        "2": {
+          "id": "2",
+          "name": "health_data.csv",
+          "contents": ",Duration,Date,Pulse,Maxpulse,Calories\n0,60,2020-12-01,110,130,409.1\n1,60,2020-12-02,117,145,479.0\n2,60,2020-12-03,103,135,340.0\n3,45,2020-12-04,109,175,282.4\n4,45,2020-12-05,117,148,406.0\n5,60,2020-12-06,102,127,300.0\n6,60,2020-12-07,110,136,374.0\n7,450,2020-12-08,104,134,253.3\n8,30,2020-12-09,109,133,195.1\n9,60,2020-12-10,98,124,269.0\n10,60,2020-12-11,103,147,329.3\n11,60,2020-12-12,100,120,250.7\n12,60,2020-12-12,100,120,250.7\n13,60,2020-12-13,106,128,345.3\n14,60,2020-12-14,104,132,379.3\n15,60,2020-12-15,98,123,275.0\n16,60,2020-12-16,98,120,215.2\n17,60,2020-12-17,100,120,300.0\n18,45,2020-12-18,90,112,\n19,60,2020-12-19,103,123,323.0\n20,45,2020-12-20,97,125,243.0\n21,60,2020-12-21,108,131,364.2\n22,45,2020-12-22,100,119,282.0\n23,60,2020-12-23,130,101,300.0\n24,45,2020-12-24,105,132,246.0\n25,60,2020-12-25,102,126,334.5\n26,60,2020-12-26,100,120,250.0\n27,60,2020-12-27,92,118,241.0\n28,60,2020-12-28,103,132,\n29,60,2020-12-29,100,132,280.0\n30,60,2020-12-30,102,129,380.3\n31,60,2020-12-31,92,115,243.0\n",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1",
+        "2"
+      ]
+    },
+    "display_name": "Heart Health",
+    "teacher_markdown": "Remind students of the purpose of each library: pandas for data manipulation and matplotlib for plotting graphs.\r\n",
+    "bubble_choice_description": "Practice importing the necessary libraries and creating charts with heart health datasets.",
+    "thumbnail_url": "https://images.code.org/51b370e23d0f3bc610d64676e839b144-heart.png",
+    "name_suffix": "_2026",
+    "offer_browser_tts": "false",
+    "disable_edit_run_for_submission": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "explainCode",
+        "example",
+        "documentation"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFc6NTxXBvrspkjVV5rBPpKsbmXrcwrHyTPgfAln2\nnzG+3eCQyKdBOvf6E7A8GiNWQGh+5CjWvXmVaQcfN4jSGXDFntm3XqpaOSFH\n9KyGy4FBXCvgfj1rfMzk64jg5T68rTne0GbU/FEvHEoSfT04Yzy1GPEepWTa\nOWUiRiJfnMNRXQOqKolcMFszvaF1FTRcMb9obv5UxeNuz3ehNjSl2hwo4Xe4\nnloBsBbb8zPzDKTHLZb6Bg36y4BIOqZLPK7Af6Ik3EGkjdCBeFcRBm8HqcRK\nuWLD+BeOaUv/dmayIKZGbOKxiiBf8XczB55VOU+gPgIfh6Z/kjnsfHz+aWbP\npkAOS5ITG3NkSEtmeLJyigOobbAMLlrfybq7sQibSlg39kbZZxTuS2pY7X2m\nOnqDf3moxLBY83Jw5U/e3sftFZW79MJN7XYnI+zKm8dbWwP/GCbDI6FXArmZ\ngy/XxwIEbaS1QGAEibVK0n1jz0JZfW3QhnZgR04Th519i1vz4RQQJ1jQaT7R\n9PhUpPZW7Xvehkg22JV9iyh5p+LZgPi245BTGwyBY/YulD9tyUjhrabcWoOo\nw4/AbD3gJd7GCK3XJJedAH07cE8Ltvc+dvjZMt+ccaRuL3UQ44gnnooTlYnc\nPFG2lcS08s89OkooN8i2gx2oXYa+w61TYoLd9CN37sYFzhwuxEo3lSgy4qFD\n7NsHrpxXhZhTMAtjHqT3agxnpMd9Da5nxyRjkwBbnZrFpzUYoT7QMkyqVpeM\nYIwmjIEuN0zRHJKnR2gD0bNPBmfQXUofnsp62Pn1ttcCv/PXZpw0MuxxDCmX\nyPI40AbOVM0jKRukgT2CrxJ0EsiTKx6Nxk1/rgdTVBYkNkWBOEDpYsMm4OuX\n6JvGNrHLC1HkYP7tV5reWAgJHjB8JHObhK4adhAfPJyW2gitmTIqIqBXAL9E\n+4OnY1peBi26LjK2NAISp6IkkkluXfsA8EZRxWoN6zw+jtD319JaeWfx7Qp5\nNcR0uFZeQYlu+KTGcDre1t6uLpsCmoyKJ63nTuP4rtqj8PT4KkjGeJo5e4dC\n7lo1pYGC99Y7SfNNa5oWhhhg6G1k2JvRnNwMWFKp7SnoCv3AKLqge0ouDJVo\ns+GThnT4PaHQ2VPqbLuoZgbWPS/NtoS6EoM0Zqb3/Mckzhh18e5ncnPuQNEP\n9YGR6722V+euy9EQvQZYdW1hx9iCOfSV76yW6V1YRPQ9WVbXIcw5FB6eu49L\nysDwL3Gg+WtCBmKhoYr2nKaWdzHvcBLKzLWy7Mc1lkiVuYc2U3UgHkm7QwIT\n/6lf33Vs9YtMvqwo/kmzFSK3jiErorWJkGCpcYm55b3t6CA1ArWYmVe0bg7p\n6Ag15IdxVqhqj6wp9+F2jyec19I5Y54tBwadyxrl3oZHeEeG6pTIqfNhRz6u\nJ5LZw+keJOctTg3wJicoCMXV09tzWNVKwI7gkxA1G2rXX0SpCkM3Gp1z1R6c\ntSc/IVU/S0p+POOOp7XDYlt5ql8Vdg5K1T7KCAK7ZsPGqjt9b+wNh0oo/fs/\nNR8VnNUcaVO87F0+msJIr39AywMlCXb/Ueiu740WCfOAV9e1cS07I+9Bb2q+\nEOvRqOLs7K6zUHjHhMrdzYjtT2OpKh1a7YUf63IgAB27bkaeNjKw4AMIznxX\nHC4TSqEMt1XOM6ektd42sWIqLQaESFEXB1tOWNMsTopbAKALUc/v8h+TJhgQ\nzkT7fm97d5V3TdfjvLR8ZBCGGpzPLs9Spc1a+0Q88MlwdRPOGMYtlqS3lBR9\nHjdmJzESsf+7Si2ocYoZ6EVx20maZiGpVeyJykzx0avGZeI3kWj3zAvhFYOi\nqL1Aty1YNg2bV9u+TFXMzeyT+syT7i+7aq3bv7FoPV35TRH2hiOWV5G9rktU\nTSo93KIYMfKx6E+w7xU8oLHcnvdaBhqkJyJdhb97uqan+eZiQyAmtrKdhDOr\nhvTpqZbaESzhnA439x+CVsMlfLOUzoRdD6zSXX4+pRFdL7EFql45X5P+45zp\nILCYMoGKdHd5SElmleub44B6sw+Qw3zaenZ3B3cT731QuxsbjKQLiJAHibqB\n8qDUUPokIzby//PdJWH0qtMh1ChALrr1JYNdRwojniuZDYGH8QHzLF3rNxpr\nAh0wiU+TbBhSXdZab3UzN15AYfy6HRrktG6eUjZOd25vylLjR3u/IP1MfcRs\nVayjqXgbC+5jbbWs1pf8wQtT/mBts00jm8mIhwTQn8pMCpXDqwvJloyYBilY\n1mOP2fSaAcrGZe1N3t6BCeaNAVFh9foPKtUogXBO2gujICzS7a1drfPWUhaZ\nmjJLadmDUfhiGuh7slAKlzJGS8jZtkXKgh6meSlCfIgC+qfwXI2EwF+KWKvh\nJBAS1XhZccwadhV47E2qKjBQdHaoKQIKejTy+KrmRGok9/3VbhI46e/CHNgc\nRdZNRF6x/ljFxByjKltiRdud68Na7QnLz2/whR13OHHHhl2bkMP9uKgyDwz9\nxPi5z5GDv9jIGVAl31e84y12zFqXlDL9JjG8HaJHiU/NNBL6J35mDQ3yREoW\nSvTeD8g0aLU2+cSE0zfYT0RRhq92UvNOwasNKXTU4hm4327sz7C6LpMT9Qwf\n/tDb5+EqDkgkbNq82W+M+qI6LisiXk4UpQz/OCAOlDAYqgoCLuqCYxqzMZay\nkF83Yja/enrS4WJdsloF8cn7fc/q8Qi6nG4AV177NGugt2LcxAx/+mVGmvO6\nGLnbQDNBDAJUlTvencALKv28BYnp/qfu16s5biZiV2CAvZVhEsc9l+ur\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-07-30T16:41:24.843+00:00\",\"changed\":[\"cloned from \\\"datasciencewithpython-lesson5-level5b-v1-2026\\\"\"],\"cloned_from\":\"datasciencewithpython-lesson5-level5b-v1-2026\"},{\"changed_at\":\"2026-07-30 16:43:06 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-07-30 16:44:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-07-30 18:24:16 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-07-30 18:25:15 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Pythonlab>

@@ -1,0 +1,14 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.4;
+  background-color: black;
+  z-index: 1020;
+}
+
+.minecraft {
+  opacity: 0.8;
+}

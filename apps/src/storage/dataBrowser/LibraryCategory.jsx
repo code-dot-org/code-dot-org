@@ -1,8 +1,11 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import FontAwesome from '../../templates/FontAwesome';
+
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
+
 import LibraryTable from './LibraryTable';
-import classNames from 'classnames';
+
 import style from './library-category.module.scss';
 
 class LibraryCategory extends React.Component {

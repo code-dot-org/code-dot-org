@@ -1,0 +1,158 @@
+{
+  "script": {
+    "name": "teaching-ps-with-ai-v2-2025",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "content_area": "other",
+      "curriculum_umbrella": "Other",
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2026-04-17 18:33:12 UTC",
+    "hide_within_course": false,
+    "published_state": "in_development",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "teaching-ps-with-ai-v2-2025"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "teaching-ps-with-ai-v2-2025"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Introduction",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "teaching-ps-with-ai-v2-2025"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "f3a14b4a-92e2-4999-88fe-4d3e72926c91",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f3a14b4a-92e2-4999-88fe-4d3e72926c91",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "teaching-ps-with-ai-v2-2025"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "de90c24d-f648-492f-b721-0cfd55d6b9d2",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "de90c24d-f648-492f-b721-0cfd55d6b9d2",
+        "lesson_activity.key": "f3a14b4a-92e2-4999-88fe-4d3e72926c91"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "allthethings sketchlab 1_go25_2026"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "teaching-ps-with-ai-v2-2025",
+        "activity_section.key": "de90c24d-f648-492f-b721-0cfd55d6b9d2"
+      },
+      "level_keys": [
+        "allthethings sketchlab 1_go25_2026"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "allthethings sketchlab 1_go25_2026",
+        "script_level.level_keys": [
+          "allthethings sketchlab 1_go25_2026"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "teaching-ps-with-ai-v2-2025",
+        "activity_section.key": "de90c24d-f648-492f-b721-0cfd55d6b9d2"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

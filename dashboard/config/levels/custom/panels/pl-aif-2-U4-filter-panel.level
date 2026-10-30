@@ -1,0 +1,77 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-04-09T21:36:36.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "## Filter method \nThe `.filter()` is an array method that makes a new list from an old list by keeping only the items that pass a test. \n\nLet’s see how it works. ",
+        "imageUrl": "https://images.code.org/da3d5f2c34d07e7a1246fa393760ac52-filter.png",
+        "key": "pl-aif-2-U4-filter-panel-1f3102b1-ca1c-4d54-b5e0-a073d764da64",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Community Volunteer Example\n\nIn this example, we will use a community volunteer finder app. \n\nThe app has a dropdown for categories and a check box for age.\n",
+        "imageUrl": "https://images.code.org/1fdb4796d55a7cbfe26b0b28b9bd6628-filter (1).png",
+        "key": "pl-aif-2-U4-filter-panel-9415ea53-59bb-44f9-b29b-a9e029b666ec",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Opportunities Data Set\n\nFirst take a look at the data set called opportunities. ",
+        "imageUrl": "https://images.code.org/d0f608164497c866c16d3063de31f33c-filter (2).png",
+        "key": "pl-aif-2-U4-filter-panel-e22e0181-f323-4ed5-901b-430d1b66f4db",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Properties \n\nNotice properties like `role`, `category`, `minAge`, and `remote`.\n\nThis is the full data set, but users do not always need the full data set. \n\nIn this app, users select a category with a dropdown menu and age with the checkbox. \n\nLet’s create the filter. ",
+        "imageUrl": "https://images.code.org/3739408b6401a01079b6887ec384c879-filter (3).png",
+        "key": "pl-aif-2-U4-filter-panel-b686421b-f3d5-4261-bee3-f109fc3c8a82",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Filter Function\n\nThe code starts with defining a function called `applyFilter()`. \n\nThe variables here check the value of the dropdown and check box.",
+        "imageUrl": "https://images.code.org/a57475c54827d31e8bf717486b27703d-filter (4).png",
+        "key": "pl-aif-2-U4-filter-panel-083f81e3-1bb2-4cdb-b46d-dad205653519",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Building a new array\n\nThis line uses .filter() to create a new array called `filteredList` by going through each item in the opportunities array one at a time. \n",
+        "imageUrl": "https://images.code.org/fe4e86ffbfe90545fbc6329dbb448ff7-filter (5).png",
+        "key": "pl-aif-2-U4-filter-panel-0ad02655-3b92-4c54-94c6-7afc18b7d5b8",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Checking for matches\n\nThe next line checks if the job matches the selected category.\n\nIf user chose \"all\", everything passes, otherwise, only jobs with matching categories pass.\n\n`||` means or, so either one can be true for the category to pass.\n",
+        "imageUrl": "https://images.code.org/9b9adca66c36dc990fddd0ff98e18180-filter (6).png",
+        "key": "pl-aif-2-U4-filter-panel-4c95aa64-41e4-43f3-a25a-41a2ee0c82a7",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Checking the age rule\n\nThis part checks if the job meets the age rule.\n\nIf the filter is OFF → all jobs pass.\n\nIf ON → only jobs with minAge 12 or lower pass.\n",
+        "imageUrl": "https://images.code.org/3606716dcc64277b9abdfbbbf64eab6b-filter (7).png",
+        "key": "pl-aif-2-U4-filter-panel-5a39eb61-3ca0-42d0-8129-82b6f5672cd1",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Checking both rules\n\nThe last line only keeps jobs that pass BOTH conditions\n\n&& means “AND” — both must be true\n\nIf true → job is included\nIf false → job is skipped \n",
+        "imageUrl": "https://images.code.org/e611240fc252384a134b4ff020a01e42-filter (8).png",
+        "key": "pl-aif-2-U4-filter-panel-bf47b56c-5f9a-4406-9cd5-7feb71cd21e3",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## In summary: \nThe function gets the user’s filter choices, checks each job against those rules, and returns a new list with only the jobs that match both conditions.",
+        "imageUrl": "https://images.code.org/e61faeba35ca4ee6c9ae7facfcd2e739-filter (9).png",
+        "key": "pl-aif-2-U4-filter-panel-7d48aef8-32d9-44b2-8fd7-bc15cecb1269",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "name_suffix": "_2025-pilot"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-09T21:36:36.260+00:00\",\"changed\":[\"cloned from \\\"pl-aif-2-U4-forloop-panel\\\"\"],\"cloned_from\":\"pl-aif-2-U4-forloop-panel\"},{\"changed_at\":\"2026-04-09 21:48:14 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-04-09 21:50:28 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+}]]></config>
+</Panels>

@@ -1,7 +1,0 @@
-{{ featured_tutorial, title: "Helló világ: Foci", body: "Te vagy a csapatkapitány, és közben a focipályán játszódó interaktív jeleneteket kódolsz. GÓÓÓL!", image: "/images/hoc2022-hello-world-soccer.png", url: "https://studio.code.org/s/hello-world-soccer-2022/reset" }}
-
-{{ featured_tutorial, title: "Sport", body: "Készíts egy kosárlabda-játékot, vagy keverj össze a különböző sportágakat.", image: "/shared/images/courses/logo_tall_sports.jpg", url: "https://code.org/athletes" }}
-
-{{ featured_tutorial, title: "Laza kódolás", body: "Akarsz egy saját játékot írni kevesebb mint 10 perc alatt? Nézd meg a Laza kódolás útmutatóját!", image: "/shared/images/courses/logo_tall_flappy.jpg", url: "https://studio.code.org/s/flappy/reset" }}
-
-{{ featured_tutorial, title: "Minecraft Kódolás órája", body: "Visszatér a Minecraft a Kódolás órájának egy új tevékenységével! Utazás a Minecraft világában kódolás segítségével.", image: "/images/hoc2022-mc-escape.png", url: "https://aka.ms/HourofCode2022" }}

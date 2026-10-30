@@ -3,8 +3,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {connect} from 'react-redux';
 
-import SafeMarkdown from './SafeMarkdown';
 import {openDialog} from '@cdo/apps/redux/instructionsDialog';
+
+import SafeMarkdown from './SafeMarkdown';
 import {renderExpandableImages} from './utils/expandableImages';
 
 export class UnconnectedExpandableImagesWrapper extends React.Component {
@@ -38,11 +39,12 @@ export class UnconnectedExpandableImagesWrapper extends React.Component {
 }
 
 export const ExpandableImagesWrapper = connect(null, dispatch => ({
-  showImageDialog(imgUrl) {
+  showImageDialog(imgUrl, imgAlt) {
     dispatch(
       openDialog({
         imgOnly: true,
         imgUrl,
+        imgAlt,
       })
     );
   },
@@ -86,10 +88,21 @@ export class ClickableTextWrapper extends React.Component {
 
   renderClickableText(node) {
     const clickableTextAll = node.querySelectorAll('b.clickable-text');
-    for (const clickableText of clickableTextAll) {
+    clickableTextAll.forEach((clickableText, index) => {
       const id = clickableText.dataset.id;
+      const extraClass = ` clickable-text-with-glow clickable-text-${index}`;
+      if (!clickableText.className.includes(extraClass)) {
+        clickableText.className += extraClass;
+      }
+      clickableText.setAttribute('role', 'button');
+      clickableText.setAttribute('tabIndex', '0');
       clickableText.onclick = () => this.props.handleInstructionsTextClick(id);
-    }
+      clickableText.onkeydown = event => {
+        if (event.key === 'Enter') {
+          clickableText.click();
+        }
+      };
+    });
   }
 
   render() {

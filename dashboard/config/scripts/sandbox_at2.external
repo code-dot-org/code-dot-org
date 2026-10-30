@@ -1,0 +1,21 @@
+name 'sandbox_AT2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Computational Thinking
+
+**Computational thinking** is a problem-solving process that involves breaking down complex challenges, identifying patterns, generalizing principles, and designing step-by-step algorithms. 
+
+## Vocabulary Practice
+
+Use the cards below to test your knowledge of computational thinking!
+
+<iframe
+  src="https://atrejo-code.github.io/demo_embeddings"
+  title="Computational Thinking Vocabulary Flashcards"
+  width="100%"
+  height="560"
+  frameborder="0">
+</iframe>
+MARKDOWN

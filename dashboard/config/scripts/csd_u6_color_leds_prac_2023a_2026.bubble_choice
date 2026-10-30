@@ -1,0 +1,8 @@
+name 'CSD U6 - Color LEDs - Prac_2023a_2026'
+display_name 'Practice Levels'
+
+sublevels
+level 'CSD U6 - Color LEDs - PracA_2026'
+level 'CSD U6 - Color LEDs - PracB_2026'
+level 'CSD U6 - Color LEDs - PracC_2026'
+level 'CSD U6 - Color LEDs - PracD_2026'

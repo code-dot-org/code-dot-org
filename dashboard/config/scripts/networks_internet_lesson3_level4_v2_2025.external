@@ -1,0 +1,73 @@
+name 'networks-internet-lesson3-level4_v2-2025'
+title 'AI-Assisted Routing'
+description 'description here'
+
+markdown <<MARKDOWN
+## Level 4: AI-Assisted Routing  
+
+### Scenario 1: Handling Conflicting IP Addresses
+![Ryan and Sofia's devices have the same IP address](https://images.code.org/6781bb757701559fbf6d842f0a0daceb-image-1740207669051.jpg)
+
+**Scenario:**  
+Two employees at a tech company, **Ryan and Sofia**, both connect their personal laptops to the company’s Wi-Fi. However, both devices are accidentally assigned the **same IP address** (192.168.2.1), causing a network conflict.  
+
+**How AI Helps:**  
+AI-driven **network management systems** can **detect conflicting IP addresses in real-time** and automatically **reassign unique addresses** using **dynamic IP addressing (DHCP)**. AI can also predict and prevent IP conflicts before they happen.  
+
+**Discussion:**  
+- How does **dynamic IP addressing** prevent devices from being assigned the same IP?  
+
+### Scenario 2: AI Detecting Network Congestion  
+
+![A busy network with AI helping route traffic](https://images.code.org/1f883bb8f5522669e51aee8b35b2a52c-image-1740207669050.jpg)
+
+**Scenario:**  
+It’s lunchtime at a large office, and employees are **streaming videos, joining video calls, and sending large files all at once**. **Routers A and C** are overloaded, slowing down the network.  
+
+**How AI Helps:**  
+AI monitors **real-time traffic patterns** and **predicts congestion** before it happens. When a bottleneck is detected, AI can **dynamically reroute traffic** through an alternate path, such as **Router E**, to maintain smooth network performance.  
+
+**Discussion:**  
+- How does **AI compare to traditional manual traffic rerouting**?  
+
+### Scenario 3: AI Detecting and Fixing Packet Loss  
+
+![Jake streaming a live soccer match](https://images.code.org/b4fa67a7c55f8f52cc698e3d0e2a9b1b-image-1740207669049.jpg)
+
+**Scenario:**  
+Jake is streaming a **live soccer match** on his **Streaming Device (192.168.1.5)** from **YouTube’s server (192.175.4.9)**. Suddenly, the video starts buffering, and the image quality drops. AI in the network **detects that packets are being lost in transmission**.  
+
+**How AI Helps:**  
+AI **identifies packet loss in real-time**, predicts potential disruptions, and **automatically resends lost packets** to ensure a smooth viewing experience. AI-powered **error correction** techniques can reduce buffering and **improve video quality**.  
+
+**Discussion:**  
+- How does AI’s ability to **detect and fix packet loss** improve live streaming quality?  
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+### **Scenario 1: Handling Conflicting IP Addresses**  
+**Diagram Instructions:**  
+Indicate **Ryan’s Laptop → Wi-Fi Router → Sofia’s Laptop** to represent the IP conflict. Add an **AI symbol** near the router to show AI detecting and resolving the issue.  
+
+**Discussion Goal:**  
+Students discuss what happens when **two devices share the same IP address** and why this causes network issues. The conversation includes how **dynamic IP addressing (DHCP) assigns unique addresses** and how **AI helps prevent conflicts before they happen**.  
+
+---
+
+### **Scenario 2: AI Detecting Network Congestion**  
+**Diagram Instructions:**  
+Show **Routers A and C** as overloaded with **heavy traffic** from multiple employees streaming and joining calls. Draw an **AI-assisted rerouting path** through **Router E** to balance the load.  
+
+**Discussion Goal:**  
+Students talk about **how overloaded networks slow down performance** and why **data takes alternate paths** when one route is congested. The discussion includes how **AI predicts traffic patterns**, reroutes data automatically, and **compares AI-driven solutions to manual rerouting**.  
+
+---
+
+### **Scenario 3: AI Detecting and Fixing Packet Loss**  
+**Diagram Instructions:**  
+Indicate **Jake’s Streaming Device (192.168.1.7) → Router → ISP → YouTube Server (192.175.4.9)**. Highlight areas where **packet loss occurs** and mark an **AI symbol** detecting and retransmitting lost packets.  
+
+**Discussion Goal:**  
+Students explain **what happens when packets are lost during transmission** and how this affects streaming quality. The conversation includes **how AI detects missing packets, resends them, and improves video playback** compared to traditional methods.  
+
+MARKDOWN

@@ -1,17 +1,18 @@
-import React, {useState, useEffect, useRef} from 'react';
-import {connect} from 'react-redux';
-import PropTypes from 'prop-types';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import moment from 'moment';
-import javalabMsg from '@cdo/javalab/locale';
-import color from '@cdo/apps/util/color';
-import fontConstants from '@cdo/apps/fontConstants';
-import msg from '@cdo/locale';
-import {reviewCommentShape} from '@cdo/apps/templates/instructions/codeReviewV2/shapes';
-import InlineDropdownMenu from '@cdo/apps/templates/InlineDropdownMenu';
+import PropTypes from 'prop-types';
+import React, {useState, useEffect} from 'react';
+import {connect} from 'react-redux';
+
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
+import fontConstants from '@cdo/apps/fontConstants';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
+import InlineDropdownMenu from '@cdo/apps/templates/InlineDropdownMenu';
+import {reviewCommentShape} from '@cdo/apps/templates/instructions/codeReviewV2/shapes';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import color from '@cdo/apps/util/color';
+import javalabMsg from '@cdo/javalab/locale';
+import msg from '@cdo/locale';
 import '@cdo/apps/templates/instructions/codeReviewV2/comment.scss';
 
 const FLASH_ERROR_TIME_MS = 5000;
@@ -24,7 +25,7 @@ function Comment({
   currentUserId,
   viewingAsOwner,
 }) {
-  const isMounted = useRef(false);
+  const isMounted = React.useRef(false);
   const [isCommentResolved, setIsCommentResolved] = useState(
     comment.isResolved
   );
@@ -111,7 +112,8 @@ function Comment({
         text: isCommentResolved
           ? javalabMsg.markIncomplete()
           : javalabMsg.markComplete(),
-        iconClass: isCommentResolved ? 'circle-o' : 'check-circle',
+        iconClass: isCommentResolved ? 'circle' : 'circle-check',
+        ...(isCommentResolved && {iconStyle: 'regular'}),
       });
     }
     if (viewAsTeacher) {
@@ -140,9 +142,11 @@ function Comment({
 
       return (
         <a onClick={onClickWrapper} key={index} className="comment-menu-item">
-          <span
+          <FontAwesomeV6Icon
+            iconName={item.iconClass}
+            iconStyle={item.iconStyle}
             style={styles.icon}
-            className={'fa fa-fw fa-' + item.iconClass}
+            className="fa-fw"
           />
           <span style={styles.text}>{item.text}</span>
         </a>
@@ -170,9 +174,9 @@ function Comment({
     >
       <div style={styles.commentHeaderContainer}>
         {isCommentResolved && (
-          <FontAwesome
+          <FontAwesomeV6Icon
             className="resolved-checkmark"
-            icon="check-circle"
+            iconName="circle-check"
             style={styles.check}
           />
         )}

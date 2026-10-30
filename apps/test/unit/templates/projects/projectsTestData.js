@@ -1,5 +1,5 @@
 export const projects = {
-  applab: [
+  featured: [
     {
       currentGallery: 'public',
       projectData: {
@@ -15,25 +15,4 @@ export const projects = {
       },
     },
   ],
-  artist: [],
-  events: [],
-  gamelab: [],
-  k1: [],
-  minecraft: [
-    {
-      currentGallery: 'public',
-      projectData: {
-        channel: '67890',
-        name: 'My Minecart Project',
-        publishedAt: '2017-12-08T10:00:00.000+00:00',
-        publishedToClass: true,
-        publishedToPublic: true,
-        studentAgeRange: '13+',
-        studentName: 'Y',
-        thumbnailUrl: '/v3/files-public/fake_thumbnail.png',
-        type: 'minecraft',
-      },
-    },
-  ],
-  playlab: [],
 };

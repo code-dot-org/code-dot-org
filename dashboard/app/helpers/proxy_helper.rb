@@ -1,7 +1,6 @@
 require 'net/http'
 require 'uri'
-
-SSL_HOSTNAME_MISMATCH_REGEX = /does not match the server certificate/
+require 'cdo/safe_http'
 
 # Helper which fetches the specified URL, optionally caching and following redirects.
 module ProxyHelper
@@ -24,32 +23,26 @@ module ProxyHelper
     url = URI.parse(location)
 
     raise URI::InvalidURIError.new if url.host.nil? || url.port.nil?
-    unless allowed_ip_address?(url.host)
+
+    resolved_ip_address = resolve_and_validate_ip_address(url.host)
+    unless resolved_ip_address
       render_error_response 400, "Target IP address is restricted"
       return
     end
+
     unless allowed_hostname?(url, allowed_hostname_suffixes)
       render_error_response 400, "Hostname '#{url.host}' is not in the list of allowed hostnames. " \
           "The list of allowed hostname suffixes is: #{allowed_hostname_suffixes.join(', ')}. " \
           "If you wish to access a URL which is not currently allowed, please email support@code.org."
       return
     end
-    http = Net::HTTP.new(url.host, url.port)
-    http.use_ssl = url.scheme == 'https'
-    path = (url.path.empty?) ? '/' : url.path
-    query = url.query || ''
 
-    # Limit how long in seconds we're willing to wait.
-    http.open_timeout = 3
-    http.read_timeout = 3
-
-    # Get the media.
-    query_string = query.empty? ? '' : "?#{query}" # don't include the ? if the query is empty
-    media = http.request_get(path + query_string)
+    http = SafeHttp.http_client(url, resolved_ip_address)
+    media = http.request_get(SafeHttp.request_path(url))
 
     # generate content-type from file name if we weren't given one
     if media.content_type.nil?
-      media.content_type = Rack::Mime.mime_type(File.extname(path))
+      media.content_type = Rack::Mime.mime_type(File.extname(url.path))
     end
 
     if media.is_a? Net::HTTPRedirection
@@ -108,17 +101,13 @@ module ProxyHelper
       return 200, location
     end
 
-    http = Net::HTTP.new(url.host, url.port)
-    http.use_ssl = url.scheme == 'https'
-    path = (url.path.empty?) ? '/' : url.path
-    query = url.query || ''
+    resolved_ip_address = resolve_and_validate_ip_address(url.host)
+    unless resolved_ip_address
+      return 400, "Target IP address is restricted"
+    end
 
-    # Limit how long in seconds we're willing to wait.
-    http.open_timeout = 3
-    http.read_timeout = 3
-
-    # Get the response.
-    response = http.request_head(path + '?' + query)
+    http = SafeHttp.http_client(url, resolved_ip_address)
+    response = http.request_head(SafeHttp.request_path(url))
 
     if response.is_a? Net::HTTPRedirection
       resolve_redirect_url(response['location'], allowed_hostname_suffixes: allowed_hostname_suffixes, redirect_limit: redirect_limit - 1)
@@ -154,22 +143,11 @@ module ProxyHelper
     render plain: text, status: status
   end
 
-  # Do not permit proxying to a server on our own private network, unless it is our own dashboard IP Address (we
-  # sometimes proxy to ourselves, which is an internal IP address on development / continuous integration environments).
-  private def allowed_ip_address?(hostname)
-    host_ip_address = IPAddr.new(IPSocket.getaddress(hostname))
-    public_ip_address?(host_ip_address) || host_ip_address == ProxyHelper.dashboard_ip_address
+  private def resolve_and_validate_ip_address(hostname)
+    SafeHttp.resolved_ip_address(hostname, allow_ips: [ProxyHelper.dashboard_ip_address])
   end
 
-  private def public_ip_address?(ip_address)
-    return (
-      !ip_address.link_local? &&
-      !ip_address.loopback? &&
-      !ip_address.private? &&
-      # IPAddr doesn't have an exclude? method
-      # rubocop:disable Rails/NegateInclude
-      !IPAddr.new('0.0.0.0/8').include?(ip_address)
-      # rubocop:enable Rails/NegateInclude
-    )
+  private def allowed_ip_address?(hostname)
+    !resolve_and_validate_ip_address(hostname).nil?
   end
 end

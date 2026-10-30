@@ -1,0 +1,48 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-04-10T19:36:19.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/aec764deed670c5661f986275d6894d9-title_card_2.png",
+        "key": "data-science-lesson7-panel5-2025-launch-80ee1552-7589-4722-bcad-747eef7fc7c9"
+      },
+      {
+        "text": "### Create a Filter\n- Click the *down arrow* at the top of the column to filter\n- Select **Create a filter**\n- The column will turn green when a filter is created",
+        "imageUrl": "https://images.code.org/eb0f2e5c90a89952b5dbded7d18b43fd-L7P6-1-ezgif.com-optimize.gif",
+        "key": "hardware-components-3d887b32-d501-4032-b990-2a51ae5b4de8",
+        "layout": "text-top-right",
+        "typing": false,
+        "fadeInOverPrevious": false
+      },
+      {
+        "text": "### Filter by Values\n- Click the *filter icon* at the top of the column\n- Under the **Filter by values** dropdown, select **Clear**\n- Select the value(s) that you want to display. Press **OK**",
+        "imageUrl": "https://images.code.org/076a1f3ee7e374feda241a10310c7298-L7P6-2-ezgif.com-optimize.gif",
+        "key": "data-science-lesson7-panel5-2025-launch-109d0466-9ca3-4cc7-86b0-0af49c80e409",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "### Filter by Condition\n- Click the *filter icon* at the top of the column\n- Under the **Filter by condition** dropdown, select an option\n- Try filtering by using the **Text contains** property",
+        "imageUrl": "https://images.code.org/27021c7df2d03bb404af033763a90758-L7P6-3-ezgif.com-optimize.gif",
+        "key": "data-science-lesson7-panel5-2025-launch-0c6eb66a-db23-45b0-ad6c-e7dced4eae49",
+        "layout": "text-top-right"
+      },
+      {
+        "text": "There are many ways to filter your data!\n\nWhat can *you* discover?",
+        "imageUrl": "https://images.code.org/46cf3e2e4249b13918734d70e7aeb54d-image_3.png",
+        "key": "data-science-lesson7-panel6-2025-launch-7e911894-8345-4cdc-9d11-70042bd0e2d2",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "name_suffix": "_2025"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-04-10T19:36:19.171+00:00\",\"changed\":[\"cloned from \\\"data-science-lesson7-panel5-2025-launch\\\"\"],\"cloned_from\":\"data-science-lesson7-panel5-2025-launch\"},{\"changed_at\":\"2025-04-10 21:04:45 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

@@ -1,18 +1,21 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
-import ExpandableImageDialog from '@cdo/apps/templates/lessonOverview/ExpandableImageDialog';
+
 import announcementsReducer, {
   addAnnouncement,
 } from '@cdo/apps/code-studio/announcementsRedux';
-import getScriptData from '@cdo/apps/util/getScriptData';
-import instructionsDialog from '@cdo/apps/redux/instructionsDialog';
+import {retrieveProgress} from '@cdo/apps/code-studio/progress';
 import {getStore} from '@cdo/apps/code-studio/redux';
 import {registerReducers} from '@cdo/apps/redux';
+import instructionsDialog from '@cdo/apps/redux/instructionsDialog';
+import ExpandableImageDialog from '@cdo/apps/templates/lessonOverview/ExpandableImageDialog';
 import StudentLessonOverview from '@cdo/apps/templates/lessonOverview/StudentLessonOverview';
-import {retrieveProgress} from '@cdo/apps/code-studio/progress';
+import {prepareBlocklyForEmbeddingAllEnvironments} from '@cdo/apps/templates/utils/embeddedBlocklyUtils';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
+import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(function () {
+  prepareBlocklyForEmbeddingAllEnvironments();
   displayLessonOverview();
   prepareExpandableImageDialog();
 });
@@ -35,7 +38,7 @@ async function displayLessonOverview() {
     );
   }
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={store}>
       <StudentLessonOverview lesson={lessonData} />
     </Provider>,
@@ -55,7 +58,7 @@ function prepareExpandableImageDialog() {
   const container = document.createElement('div');
   document.body.appendChild(container);
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={getStore()}>
       <ExpandableImageDialog />
     </Provider>,

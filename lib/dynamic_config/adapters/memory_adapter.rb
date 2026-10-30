@@ -2,6 +2,7 @@
 # can be used with the datastore_cache
 
 require 'oj'
+require 'observability/errors'
 
 class MemoryAdapter
   def initialize
@@ -16,7 +17,7 @@ class MemoryAdapter
     return nil unless @hash.key?(key)
     Oj.load(@hash[key])
   rescue => exception
-    Honeybadger.notify(exception)
+    Observability::Errors.report(exception)
     nil
   end
 

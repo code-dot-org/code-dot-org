@@ -1,0 +1,23 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-10-10T00:11:25.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "###Edit by Hand\nSometimes the fastest fix is your own hands.\n\n- Edit it yourself when the change is tiny: a word, a color, a typo.\n- Prompt again when the change is bigger or you’re not sure how.\n\nAccept it if it matches, and fix what doesn’t.",
+        "imageUrl": "https://images.code.org/4a23141fcf517e4c841c297b194b2866-Panda Page_ Tiny Fix, Big Change.png",
+        "key": "adaptive-test-override-60b37260-0f71-4910-b9c8-20a0882bb3d1",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "use_links": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-10-10 00:12:57 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-10 00:14:09 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-10 00:14:31 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>

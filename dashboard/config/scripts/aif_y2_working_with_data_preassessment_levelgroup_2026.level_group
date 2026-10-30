@@ -1,0 +1,27 @@
+name 'aif-y2-working-with-data-preassessment-levelgroup-2026'
+title 'Working with Data Pre-Assessment'
+submittable 'true'
+anonymous 'false'
+activity_guide_level 'false'
+
+page
+text 'aif-y2-working-with-data-preassessment-intro-2026'
+level 'aif-y2-working-with-data-preassessment-q1-2026'
+level 'aif-y2-working-with-data-preassessment-q2-2026'
+level 'aif-y2-working-with-data-preassessment-q3-2026'
+level 'aif-y2-working-with-data-preassessment-q4-2026'
+level 'aif-y2-working-with-data-preassessment-q5-2026'
+
+page
+level 'aif-y2-working-with-data-preassessment-q6-2026'
+level 'aif-y2-working-with-data-preassessment-q7-2026'
+level 'aif-y2-working-with-data-preassessment-q8-2026'
+level 'aif-y2-working-with-data-preassessment-q9-2026'
+level 'aif-y2-working-with-data-preassessment-q10-2026'
+
+page
+level 'aif-y2-working-with-data-preassessment-q11-2026'
+level 'aif-y2-working-with-data-preassessment-q12-2026'
+level 'aif-y2-working-with-data-preassessment-q13-2026'
+level 'aif-y2-working-with-data-preassessment-q14-2026'
+level 'aif-y2-working-with-data-preassessment-q15-2026'

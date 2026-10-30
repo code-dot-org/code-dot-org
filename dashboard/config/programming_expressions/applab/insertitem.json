@@ -13,7 +13,7 @@
     {
       "name": "Example: Fibonacci",
       "description": "Generate the first 10 numbers in the fibonacci sequence.",
-      "code": "```\n// Generate the first 10 numbers in the fibonacci sequence.\nvar fibonacci=[1,1];\nvar nextTerm=0;\nfor (var i=3; i<=10; i++) {\n  nextTerm=fibonacci[i-2]+fibonacci[i-3];\n  insertItem(fibonacci, i, nextTerm);\n}\nconsole.log(fibonacci);\n```\n"
+      "code": "```\n// Generate the first 10 numbers in the fibonacci sequence.\nvar fibonacci=[1,1];\nvar nextTerm=0;\nfor (var i=2; i<10; i++) {\n  nextTerm=fibonacci[i-1]+fibonacci[i-2];\n  insertItem(fibonacci, i, nextTerm);\n}\nconsole.log(fibonacci);\n```\n"
     }
   ],
   "palette_params": [

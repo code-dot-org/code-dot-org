@@ -1,0 +1,94 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-05-03T01:07:49.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<link href=\"https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Quicksand:wght@400;600&display=swap\" rel=\"stylesheet\">\n<link rel=\"stylesheet\" href=\"style.css\">\n\n<section class=\"dessert-card\">\n  <h2>Dessert</h2>\n  <p><strong>Name:</strong> <span id=\"name\"></span></p>\n  <p><strong>Flavor:</strong> <span id=\"flavor\"></span></p>\n  <p><strong>Frozen:</strong> <span id=\"frozen\"></span></p>\n</section>\n\n<section class=\"controls\">\n  <input id=\"input-name\" type=\"text\" placeholder=\"New name\">\n  <input id=\"input-flavor\" type=\"text\" placeholder=\"New flavor\">\n\n  <select id=\"input-frozen\">\n    <option value=\"true\">Frozen</option>\n    <option value=\"false\">Not Frozen</option>\n  </select>\n\n  <button id=\"update-dessert\">Update Dessert</button>\n</section>\n\n<script src=\"script.js\" defer></script>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  font-family: 'Quicksand', sans-serif;\n  background-color: #fff5f8;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  min-height: 100vh;\n  margin: 0;\n  gap: 20px;\n}\n\n.dessert-card,\n.controls {\n  background-color: white;\n  border: 4px solid #f8a5c2;\n  border-radius: 20px;\n  padding: 30px;\n  width: 300px;\n  box-shadow: 0 8px 16px rgba(246, 107, 157, 0.2);\n  text-align: center;\n}\n\nh2 {\n  font-family: 'Fredoka', sans-serif;\n  color: #c44569;\n  margin-top: 0;\n  font-size: 2em;\n}\n\np {\n  color: #596275;\n  font-size: 1.1em;\n  margin: 15px 0;\n  border-bottom: 2px dashed #f1f2f6;\n  padding-bottom: 10px;\n}\n\nstrong {\n  color: #c44569;\n}\n\nspan {\n  font-weight: 600;\n  color: #303952;\n}\n\n.controls {\n  display: flex;\n  flex-direction: column;\n  gap: 10px;\n}\n\ninput,\nselect,\nbutton {\n  font-family: 'Quicksand', sans-serif;\n  font-size: 1rem;\n  padding: 10px;\n  border: 2px solid #f8a5c2;\n  border-radius: 10px;\n}\n\nbutton {\n  background-color: #f78fb3;\n  color: white;\n  font-weight: 600;\n  cursor: pointer;\n}\n\nbutton:hover {\n  background-color: #e66767;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// --- Select Elements ---\nconst nameSpan = document.getElementById(\"name\");\nconst flavorSpan = document.getElementById(\"flavor\");\nconst frozenSpan = document.getElementById(\"frozen\");\n\nconst inputName = document.getElementById(\"input-name\");\nconst inputFlavor = document.getElementById(\"input-flavor\");\nconst inputFrozen = document.getElementById(\"input-frozen\");\nconst updateButton = document.getElementById(\"update-dessert\");\n\n// --- Dessert Object ---\nconst dessert = {\n  name: \"Brownie\",\n  flavor: \"Chocolate\",\n  isFrozen: false\n};\n\n// --- Render Function ---\nconst render = () => {\n  nameSpan.textContent = dessert.name;\n  flavorSpan.textContent = dessert.flavor;\n  frozenSpan.textContent = dessert.isFrozen;\n};\n\n// --- Level 6: Update Object from Inputs ---\nupdateButton.addEventListener(\"click\", () => {\n  dessert.name = inputName.value;\n  dessert.flavor = inputFlavor.value;\n  dessert.isFrozen = inputFrozen.value === \"true\";\n\n  render();\n});\n\nrender();",
+          "folderId": "0",
+          "active": true
+        },
+        "4": {
+          "id": "4",
+          "name": "prompt.md",
+          "language": "md",
+          "contents": "",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "4",
+        "3",
+        "1"
+      ]
+    },
+    "name_suffix": "_2026",
+    "long_instructions": "template",
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML",
+        "buildCSS",
+        "buildJavaScript",
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-03T01:07:49.980+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson4-level5_6_template-test_2025-_2026\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson4-level5_6_template-test_2025-_2026\"},{\"changed_at\":\"2026-05-03 01:08:01 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-03 01:11:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-03 01:11:37 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-03 01:11:38 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-03 02:01:17 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

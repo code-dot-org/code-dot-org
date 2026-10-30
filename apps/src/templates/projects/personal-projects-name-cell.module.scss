@@ -1,0 +1,32 @@
+.infoButton {
+  background-color: transparent;
+  box-shadow: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 7px;
+  padding: 1px;
+}
+
+.infoButton:hover {
+  box-shadow: none;
+}
+
+.infoButton:focus {
+  border: solid;
+}
+
+.infoIcon {
+  color: var(--text-neutral-secondary) !important;
+  font-size: 1rem;
+}
+
+.infoIcon:hover {
+  color: var(--text-neutral-primary) !important;
+  font-size: 1rem;
+}
+
+.inputBox {
+  width: 200px;
+}
+

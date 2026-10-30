@@ -1,6 +1,8 @@
 import React from 'react';
-import MultipleChoiceSurveyOverviewTable from './MultipleChoiceSurveyOverviewTable';
+
 import i18n from '@cdo/locale';
+
+import MultipleChoiceSurveyOverviewTable from './MultipleChoiceSurveyOverviewTable';
 
 export default {
   component: MultipleChoiceSurveyOverviewTable,

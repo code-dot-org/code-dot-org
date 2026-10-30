@@ -1,7 +1,20 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
-import {MIN_NUM_MEASURES} from '../constants';
-import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
+
+import {RootState} from '@cdo/apps/types/redux';
+import {ValueOf} from '@cdo/apps/types/utils';
+
+import {
+  BlockMode,
+  DEFAULT_BPM,
+  DEFAULT_KEY,
+  MAX_BPM,
+  MIN_BPM,
+  MIN_NUM_MEASURES,
+} from '../constants';
 import {FunctionEvents} from '../player/interfaces/FunctionEvents';
+import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
+import {MusicLevelData} from '../types';
+import {Key} from '../utils/Notes';
 
 const registerReducers = require('@cdo/apps/redux').registerReducers;
 
@@ -10,12 +23,24 @@ const registerReducers = require('@cdo/apps/redux').registerReducers;
  */
 
 export enum InstructionsPosition {
-  TOP = 'TOP',
   LEFT = 'LEFT',
   RIGHT = 'RIGHT',
 }
 
+type AiGenerateState =
+  | 'none'
+  | 'generating'
+  | 'generated'
+  | 'listening'
+  | 'listened'
+  | 'editing'
+  | 'edited'
+  | 'clearing-before-none'
+  | 'clearing-before-generating';
+
 export interface MusicState {
+  /** Current pack ID, if a specific restricted pack from the current music library is selected */
+  packId: string | null;
   /** If the song is currently playing */
   isPlaying: boolean;
   /** The current 1-based playhead position, scaled to measures */
@@ -34,6 +59,8 @@ export interface MusicState {
   hideHeaders: boolean;
   /** The current list of playback events */
   playbackEvents: PlaybackEvent[];
+  /** The playback events associated with the exemplar player */
+  exemplarPlaybackEvents: PlaybackEvent[];
   /** The current ordered functions */
   orderedFunctions: FunctionEvents[];
   /** The current last measure of the song */
@@ -44,10 +71,8 @@ export interface MusicState {
   soundLoadingProgress: number;
   /** The 1-based playhead position to start playback from, scaled to measures */
   startingPlayheadPosition: number;
-  undoStatus: {
-    canUndo: boolean;
-    canRedo: boolean;
-  };
+  canUndo: boolean;
+  canRedo: boolean;
   /** A callout that's currently being shown.  The index lets the same callout be
    * reshown multiple times in a row.
    */
@@ -55,9 +80,22 @@ export interface MusicState {
     id?: string;
     index: number;
   };
+
+  // State used by advanced controls (currently internal-only) with the ToneJS player
+  loopEnabled: boolean;
+  loopStart: number;
+  loopEnd: number;
+  key: Key;
+  bpm: number;
+
+  // Some code to load.  Reset to undefined when the code is loaded.
+  codeToLoad?: string;
+  // Status of AI generation.
+  aiGenerateState: AiGenerateState;
 }
 
 const initialState: MusicState = {
+  packId: null,
   isPlaying: false,
   currentPlayheadPosition: 0,
   selectedBlockId: undefined,
@@ -67,26 +105,35 @@ const initialState: MusicState = {
   instructionsPosition: InstructionsPosition.LEFT,
   hideHeaders: false,
   playbackEvents: [],
+  exemplarPlaybackEvents: [],
   orderedFunctions: [],
   lastMeasure: 0,
   // Default to 1 (fully loaded). When loading a new sound, the progress will be set back to 0 before the load starts.
   // This is to prevent the progress bar from showing if there are no sounds to load initially.
   soundLoadingProgress: 1,
   startingPlayheadPosition: 1,
-  undoStatus: {
-    canUndo: false,
-    canRedo: false,
-  },
+  canUndo: false,
+  canRedo: false,
   currentCallout: {
     id: undefined,
     index: 0,
   },
+  loopEnabled: false,
+  loopStart: 1,
+  loopEnd: 5,
+  key: DEFAULT_KEY,
+  bpm: DEFAULT_BPM,
+  codeToLoad: undefined,
+  aiGenerateState: 'none',
 };
 
 const musicSlice = createSlice({
   name: 'music',
   initialState,
   reducers: {
+    setPackId: (state, action: PayloadAction<string>) => {
+      state.packId = action.payload;
+    },
     setIsPlaying: (state, action: PayloadAction<boolean>) => {
       state.isPlaying = action.payload;
     },
@@ -155,28 +202,23 @@ const musicSlice = createSlice({
     },
     clearPlaybackEvents: state => {
       state.playbackEvents = [];
-      state.lastMeasure = 0;
     },
     clearOrderedFunctions: state => {
       state.orderedFunctions = [];
     },
-    addPlaybackEvents: (
-      state,
-      action: PayloadAction<{events: PlaybackEvent[]; lastMeasure: number}>
-    ) => {
-      state.playbackEvents.push(...action.payload.events);
-      state.lastMeasure = action.payload.lastMeasure;
+    addPlaybackEvents: (state, action: PayloadAction<PlaybackEvent[]>) => {
+      state.playbackEvents.push(...action.payload);
     },
-    addOrderedFunctions: (
-      state,
-      action: PayloadAction<{orderedFunctions: FunctionEvents[]}>
-    ) => {
-      state.orderedFunctions.push(...action.payload.orderedFunctions);
+    setLastMeasure: (state, action: PayloadAction<number>) => {
+      state.lastMeasure = action.payload;
+    },
+    addOrderedFunctions: (state, action: PayloadAction<FunctionEvents[]>) => {
+      state.orderedFunctions.push(...action.payload);
     },
     setSoundLoadingProgress: (state, action: PayloadAction<number>) => {
       state.soundLoadingProgress = action.payload;
     },
-    setStartPlayheadPosition: (state, action: PayloadAction<number>) => {
+    setStartingPlayheadPosition: (state, action: PayloadAction<number>) => {
       state.startingPlayheadPosition = action.payload;
     },
     moveStartPlayheadPositionForward: state => {
@@ -195,7 +237,8 @@ const musicSlice = createSlice({
       state,
       action: PayloadAction<{canUndo: boolean; canRedo: boolean}>
     ) => {
-      state.undoStatus = action.payload;
+      state.canUndo = action.payload.canUndo;
+      state.canRedo = action.payload.canRedo;
     },
     showCallout: (state, action: PayloadAction<string>) => {
       state.currentCallout.id = action.payload;
@@ -203,6 +246,44 @@ const musicSlice = createSlice({
     },
     clearCallout: state => {
       state.currentCallout.id = undefined;
+    },
+    setLoopEnabled: (state, action: PayloadAction<boolean>) => {
+      state.loopEnabled = action.payload;
+    },
+    setLoopStart: (state, action: PayloadAction<number>) => {
+      state.loopStart = action.payload;
+    },
+    setLoopEnd: (state, action: PayloadAction<number>) => {
+      state.loopEnd = action.payload;
+    },
+    setKey: (state, action: PayloadAction<Key>) => {
+      let key = action.payload;
+      if (Key[key] === undefined) {
+        console.warn('Invalid key. Defaulting to C');
+        key = Key.C;
+      }
+
+      state.key = key;
+    },
+    setBpm: (state, action: PayloadAction<number>) => {
+      let bpm = action.payload;
+      if (bpm < MIN_BPM || bpm > MAX_BPM) {
+        console.warn('Invalid BPM. Defaulting to 120');
+        bpm = DEFAULT_BPM;
+      }
+
+      state.bpm = bpm;
+    },
+    // Some code to load.
+    setCodeToLoad: (state, action: PayloadAction<string | undefined>) => {
+      if (action.payload === undefined || action.payload === '') {
+        state.codeToLoad = undefined;
+      } else {
+        state.codeToLoad = action.payload;
+      }
+    },
+    setAiGenerateState: (state, action: PayloadAction<AiGenerateState>) => {
+      state.aiGenerateState = action.payload;
     },
   },
 });
@@ -235,6 +316,20 @@ export const getCurrentlyPlayingBlockIds = (state: {
   return playingBlockIds;
 };
 
+/**
+ * @deprecated TODO: derive block mode from props.
+ */
+export const getBlockMode = (state: RootState): ValueOf<typeof BlockMode> => {
+  const {initialSources, levelProperties} = state.lab;
+  return (
+    (initialSources?.labConfig?.music?.blockMode as ValueOf<
+      typeof BlockMode
+    >) ||
+    (levelProperties?.levelData as MusicLevelData | undefined)?.blockMode ||
+    BlockMode.SIMPLE2
+  );
+};
+
 // TODO: If/when a top-level component is created that wraps {@link MusicView}, then
 // registering reducers should happen there. We are registering reducers here for now
 // because MusicView is currently the top-level entrypoint into Music Lab and also needs
@@ -242,6 +337,7 @@ export const getCurrentlyPlayingBlockIds = (state: {
 registerReducers({music: musicSlice.reducer});
 
 export const {
+  setPackId,
   setIsPlaying,
   setCurrentPlayheadPosition,
   selectBlockId,
@@ -259,12 +355,20 @@ export const {
   clearPlaybackEvents,
   clearOrderedFunctions,
   addPlaybackEvents,
+  setLastMeasure,
   addOrderedFunctions,
   setSoundLoadingProgress,
-  setStartPlayheadPosition,
+  setStartingPlayheadPosition,
   moveStartPlayheadPositionForward,
   moveStartPlayheadPositionBackward,
   setUndoStatus,
   showCallout,
   clearCallout,
+  setLoopEnabled,
+  setLoopStart,
+  setLoopEnd,
+  setKey,
+  setBpm,
+  setCodeToLoad,
+  setAiGenerateState,
 } = musicSlice.actions;

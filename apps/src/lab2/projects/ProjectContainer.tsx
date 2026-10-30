@@ -5,47 +5,52 @@
  */
 
 import React, {useEffect} from 'react';
-import {useSelector} from 'react-redux';
-import Lab2Registry from '../Lab2Registry';
-import {
-  LabState,
-  setUpWithLevel,
-  setUpWithoutLevel,
-  shouldHideShareAndRemix,
-} from '../lab2Redux';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
-import {getLevelPropertiesPath} from '@cdo/apps/code-studio/progressReduxSelectors';
-import {ProgressState} from '@cdo/apps/code-studio/progressRedux';
+
 import header from '@cdo/apps/code-studio/header';
 import {clearHeader} from '@cdo/apps/code-studio/headerRedux';
-import {AppName} from '../types';
+import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
+import {setUpWithLevel} from '@cdo/apps/lab2/lab2Redux';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {resetProjectMetadata} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
+import {LifecycleEvent} from '@cdo/apps/lab2/utils';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import {lab2EntryPoints} from '../../../lab2EntryPoints';
+import {useLevelProperties} from '../views/LevelPropertiesWrapper';
 
 const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
   children,
   channelId,
-  appName,
 }) => {
-  const currentLevelId = useSelector(
-    (state: {progress: ProgressState}) => state.progress.currentLevelId
+  const {levelProperties} = useLevelProperties();
+  const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
+  const userId = useAppSelector(
+    state => state.progress.viewAsUserId || undefined
   );
-  const scriptId = useSelector(
-    (state: {progress: ProgressState}) => state.progress.scriptId || undefined
-  );
-
-  const isStandaloneProjectLevel = useSelector(
-    (state: {lab: LabState}) => state.lab.levelProperties?.isProjectLevel
-  );
-  const hideShareAndRemix = useSelector(shouldHideShareAndRemix);
-  const loadedChannelId = useSelector(
-    (state: {lab: LabState}) => state.lab.channel && state.lab.channel.id
-  );
-  const isOwnerOfChannel = useSelector(
-    (state: {lab: LabState}) => state.lab.channel && state.lab.channel.isOwner
+  const scriptId = useAppSelector(
+    state => state.progress.scriptId || undefined
   );
 
-  const levelPropertiesPath = useSelector(getLevelPropertiesPath);
+  const isStandaloneProjectLevel = levelProperties.isProjectLevel;
+  // Only show share and remix if hideShareAndRemix is explicitly false.
+  const hideShareAndRemix = levelProperties.hideShareAndRemix !== false;
+  const loadedChannelId = useAppSelector(
+    state => state.lab.channel && state.lab.channel.id
+  );
+  const isOwnerOfChannel = useAppSelector(
+    state => state.lab.channel && state.lab.channel.isOwner
+  );
 
   const dispatch = useAppDispatch();
+  const isReadOnly = useAppSelector(isReadOnlyWorkspace);
+  const managesOwnProject =
+    lab2EntryPoints[levelProperties.appName]?.managesOwnProject;
+
+  // When the level changes, reset metadata relating to the project in redux.
+  useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () =>
+    dispatch(resetProjectMetadata())
+  );
 
   useEffect(() => {
     // The redux types are very complicated, so in order to re-use this variable
@@ -55,40 +60,34 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
     // Before loading, clear the header so we don't accidentally show share and remix
     // for a level that does not allow it.
     dispatch(clearHeader());
-    if (currentLevelId && levelPropertiesPath) {
+    if (currentLevelId) {
       // If we have a level id, set up the lab with that level. If we also have a channel id,
       // we will load the project based on that channel id, otherwise we will look up a channel id
       // for the level.
       promise = dispatch(
         setUpWithLevel({
           levelId: parseInt(currentLevelId),
+          userId,
           scriptId,
-          levelPropertiesPath,
+          levelProperties,
           channelId,
+          managesOwnProject,
         })
-      );
-    } else if (channelId && appName) {
-      // Otherwise, if we have a channel id, set up the lab using the channel id.
-      // This path should only be used for lab pages that don't have a level, such as
-      // /projectbeats. App name also must be provided if using this path.
-      promise = dispatch(setUpWithoutLevel({channelId, appName}));
-    } else if (channelId || appName) {
-      console.warn(
-        'If loading a lab without a level, channel ID and app name must both be provided'
       );
     }
     return () => {
       // If we have an early return, we will abort the promise in progress.
       // An early return could happen if the level is changed mid-load.
-      promise.abort();
+      promise?.abort();
     };
   }, [
     channelId,
-    appName,
     currentLevelId,
     scriptId,
-    levelPropertiesPath,
+    levelProperties,
     dispatch,
+    userId,
+    managesOwnProject,
   ]);
 
   useEffect(() => {
@@ -97,18 +96,20 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
       // Force a save before the page unloads, if there are unsaved changes.
       // If we need to force a save, prevent navigation so we can save first.
       // We skip this if we are already force reloading, as that will occur when
-      // saving already encountered an issue.
+      // saving already encountered an issue. We also can skip this in read only mode,
+      // as we never save in read only mode.
       if (
         projectManager &&
         !projectManager.isForceReloading() &&
-        projectManager.hasUnsavedChanges()
+        projectManager.hasUnsavedChanges() &&
+        !isReadOnly
       ) {
         projectManager.cleanUp();
         event.preventDefault();
         event.returnValue = '';
       }
     });
-  }, []);
+  }, [isReadOnly]);
 
   useEffect(() => {
     // Ensure the header is cleared when we have a change,
@@ -151,11 +152,6 @@ interface ProjectContainerProps {
   children: React.ReactNode;
   /** Channel ID for the project, if already known. Used for standalone projects and projects without levels. */
   channelId?: string;
-  /**
-   * App name for the lab that will be displayed, used only for projects without levels. Must be provided
-   * if loading a lab without a level.
-   */
-  appName?: AppName;
 }
 
 export default ProjectContainer;

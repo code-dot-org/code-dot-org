@@ -1,0 +1,151 @@
+require 'test_helper'
+
+class JSONVideoTest < ActiveSupport::TestCase
+  setup do
+    @objective1 = create(:objective, key: 'obj-1')
+    @objective2 = create(:objective, key: 'obj-2')
+  end
+
+  def video_data(overrides = {})
+    {
+      key: 'test-video',
+      description: 'A test video',
+      s3_uri: 's3://bucket/test.json',
+      json_schema_version: 1,
+      audience: 'Student',
+    }.merge(overrides)
+  end
+
+  test 'valid audiences are accepted' do
+    JSONVideo::AUDIENCES.each do |audience|
+      video = build(:json_video, audience: audience)
+      assert video.valid?, "Expected #{audience.inspect} to be valid"
+    end
+  end
+
+  test 'invalid audience is rejected' do
+    video = build(:json_video, audience: 'student')
+    refute video.valid?
+    assert_includes video.errors[:audience], 'is not included in the list'
+  end
+
+  test 'summarize returns expected hash' do
+    video = create(:json_video, key: 'test-key', description: 'Test desc', audience: 'Student')
+    summary = video.summarize
+
+    assert_equal video.id, summary[:id]
+    assert_equal 'test-key', summary[:key]
+    assert_equal 'Test desc', summary[:description]
+    assert_equal 'Student', summary[:audience]
+  end
+
+  test 'summarize_for_lesson_edit scopes objectiveIds to the given lesson' do
+    lesson = create(:lesson)
+    other_lesson = create(:lesson)
+    lesson_objective = create(:objective, lesson: lesson)
+    other_objective = create(:objective, lesson: other_lesson)
+    video = create(:json_video)
+    video.objectives = [lesson_objective, other_objective]
+
+    summary = video.summarize_for_lesson_edit(lesson)
+
+    assert_equal video.id, summary[:id]
+    assert_equal video.s3_uri, summary[:s3Uri]
+    assert_equal [lesson_objective.id], summary[:objectiveIds]
+  end
+
+  test 'summarize_for_lesson_edit without a lesson returns all objectiveIds' do
+    video = create(:json_video)
+    video.objectives = [@objective1, @objective2]
+
+    summary = video.summarize_for_lesson_edit
+
+    assert_equal [@objective1.id, @objective2.id].sort, summary[:objectiveIds].sort
+  end
+
+  test 'seed_record creates a new video' do
+    File.stubs(:read).returns(video_data.to_json)
+
+    key = JSONVideo.seed_record('config/json_videos/test-video.json')
+    video = JSONVideo.find_by!(key: 'test-video')
+
+    assert_equal 'test-video', key
+    assert_equal 'A test video', video.description
+    assert_equal 's3://bucket/test.json', video.s3_uri
+    assert_equal 1, video.json_schema_version
+    assert_equal 'Student', video.audience
+  end
+
+  test 'seed_record updates an existing video' do
+    create(:json_video, key: 'test-video', description: 'Old description')
+
+    File.stubs(:read).returns(video_data(description: 'New description').to_json)
+    JSONVideo.seed_record('config/json_videos/test-video.json')
+
+    assert_equal 'New description', JSONVideo.find_by!(key: 'test-video').description
+  end
+
+  test 'seed_record associates objectives via objective_keys' do
+    data = video_data.merge(objective_keys: [@objective1.key, @objective2.key])
+    File.stubs(:read).returns(data.to_json)
+
+    JSONVideo.seed_record('config/json_videos/test-video.json')
+    video = JSONVideo.find_by!(key: 'test-video')
+
+    assert_equal 2, video.objectives.count
+    assert_includes video.objectives, @objective1
+    assert_includes video.objectives, @objective2
+  end
+
+  test 'seed_record clears objectives when objective_keys is empty' do
+    video = create(:json_video, key: 'test-video')
+    video.objectives << @objective1
+
+    File.stubs(:read).returns(video_data.merge(objective_keys: []).to_json)
+    JSONVideo.seed_record('config/json_videos/test-video.json')
+
+    assert_equal 0, video.reload.objectives.count
+  end
+
+  test 'seed_record clears objectives when objective_keys is absent from file' do
+    video = create(:json_video, key: 'test-video')
+    video.objectives << @objective1
+
+    File.stubs(:read).returns(video_data.to_json)
+    JSONVideo.seed_record('config/json_videos/test-video.json')
+
+    assert_equal 0, video.reload.objectives.count
+  end
+
+  test 'write_serialization writes a file readable by seed_record' do
+    Dir.mktmpdir do |tmpdir|
+      video = create(:json_video, key: 'write-test', description: 'Test', s3_uri: 's3://b/v.json', json_schema_version: 1, audience: 'Teacher')
+      video.objectives << @objective1
+
+      Rails.application.config.stubs(:levelbuilder_mode).returns(true)
+      video.stubs(:file_path).returns(Pathname.new(tmpdir).join('write-test.json'))
+
+      video.write_serialization
+
+      written = JSON.parse(File.read(video.file_path))
+      assert_equal 'write-test', written['key']
+      assert_equal 'Test', written['description']
+      assert_equal 's3://b/v.json', written['s3_uri']
+      assert_equal 1, written['json_schema_version']
+      assert_equal 'Teacher', written['audience']
+      assert_equal [@objective1.key], written['objective_keys']
+    end
+  end
+
+  test 'seed_all raises with the file path when a config is invalid' do
+    Dir.mktmpdir do |tmpdir|
+      root = Pathname.new(tmpdir)
+      File.write(root.join('bad.json'), 'not valid json {{')
+
+      error = assert_raises(RuntimeError) do
+        JSONVideo.seed_all(root_dir: root, glob: '*.json')
+      end
+      assert_match 'bad.json', error.message, 'error should identify the offending file'
+    end
+  end
+end

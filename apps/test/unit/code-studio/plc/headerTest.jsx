@@ -1,6 +1,6 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+
 import PlcHeader from '@cdo/apps/code-studio/plc/header';
 
 const TEST_UNIT_NAME = 'Test Unit';
@@ -21,11 +21,11 @@ describe('PlcHeader', () => {
       wrapper.containsMatchingElement(
         <div>
           <a href={TEST_COURSE_VIEW_PATH}>My Learning Plan</a>
-          <span className="fa fa-caret-right" />
+          <span className="fa-solid fa-caret-right" />
           <span>{TEST_UNIT_NAME}</span>
         </div>
       )
-    ).to.be.ok;
+    ).toBeTruthy();
   });
 
   it('renders an extra layer of breadcrumb with a page name', () => {
@@ -42,14 +42,14 @@ describe('PlcHeader', () => {
       wrapper.containsMatchingElement(
         <div>
           <a href={TEST_COURSE_VIEW_PATH}>My Learning Plan</a>
-          <span className="fa fa-caret-right" />
+          <span className="fa-solid fa-caret-right" />
           <span>
             <a href={TEST_UNIT_VIEW_PATH}>{TEST_UNIT_NAME}</a>
-            <span className="fa fa-caret-right" />
+            <span className="fa-solid fa-caret-right" />
             <span>{TEST_PAGE_NAME}</span>
           </span>
         </div>
       )
-    ).to.be.ok;
+    ).toBeTruthy();
   });
 });

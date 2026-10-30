@@ -4,20 +4,22 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "curriculum_umbrella": "CSC",
+      "content_area": "curriculum_k_5",
+      "curriculum_umbrella": "CSC K-5",
       "hideable_lessons": true,
-      "is_course": true,
       "is_migrated": true,
+      "show_calendar": true,
       "tts": true,
-      "version_year": "2023"
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
-    "family_name": "csc-timecapsule",
-    "serialized_at": "2023-07-25 22:13:52 UTC",
-    "published_state": "stable",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "family_name": null,
+    "serialized_at": "2025-10-21 19:59:25 UTC",
+    "hide_within_course": false,
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csc-timecapsule-2023"
     }
@@ -944,6 +946,7 @@
       "position": 4,
       "properties": {
         "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Display**: Show “Level 2 - Bring Your Time Capsule to Life\" slide\n\n**Level 2 - Choice Level**: Level 2 is a choice level in which students will review the skills from lesson 1 to add backgrounds, text effects, sounds, sprites, events and sprite behaviors. Students also have the option to return to Lesson 1 and rewatch any of the videos.\n",
+        "progression_name": "Choice Level: Add Effects",
         "tips": [
           {
             "type": "teachingTip",
@@ -1135,7 +1138,7 @@
         "tips": [
           {
             "type": "contentCorner",
-            "markdown": "**Social Studies:**\n- CSC  <a href=\"studio.code.org/s/csc-mappinglandmarks-2023\" target=\"_blank\">Coding an Interactive Map</a> continues to connect computer science and social studies.\n\n**ELA:**\n- CSC <a href=\"studio.code.org/s/poetry\" target=\"_blank\">Coding with Poetry</a> continues to connect computer science with poetry.\n\n**Computer Science:**\n- Play CSF  <a href=\"https://studio.code.org/s/coursee-2023/lessons/3\" target=\"_blank\">Swimming Fish</a> to develop additional skills related to sprites and events.\n- Try CSF <a href=\"URL\" target=\"_blank\">Sprites in Action</a> to continue learning about sprites. Students will learn a greater variety of event blocks and sprite behaviors.\n\n"
+            "markdown": "**Social Studies:**\n- CSC  <a href=\"studio.code.org/s/csc-mappinglandmarks-2023\" target=\"_blank\">Coding an Interactive Map</a> continues to connect computer science and social studies.\n\n**ELA:**\n- CSC <a href=\"studio.code.org/s/poetry\" target=\"_blank\">Coding with Poetry</a> continues to connect computer science with poetry.\n\n**Computer Science:**\n- Play CSF  <a href=\"https://studio.code.org/s/coursee-2023/lessons/3\" target=\"_blank\">Swimming Fish</a> to develop additional skills related to sprites and events.\n- Try CSF <a href=\"https://studio.code.org/courses/coursef-2025/units/1/lessons/5\" target=\"_blank\">Sprites in Action</a> to continue learning about sprites. Students will learn a greater variety of event blocks and sprite behaviors.\n\n"
           }
         ]
       },
@@ -1479,7 +1482,8 @@
       "properties": {
         "level_keys": [
           "csc_timecapsule_choice_lesson_3"
-        ]
+        ],
+        "progression": "Choice Level: Add Effects"
       },
       "bonus": false,
       "seeding_key": {
@@ -2623,6 +2627,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

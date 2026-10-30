@@ -1,64 +1,63 @@
-import React, {useState, useEffect, useRef, useCallback, useMemo} from 'react';
-import moduleStyles from './dance-ai-modal.module.scss';
-import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
-import Button from '@cdo/apps/templates/Button';
-import {useSelector} from 'react-redux';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
-import {closeAiModal, DanceState} from '../danceRedux';
+import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
+import * as BlocklyCore from 'blockly/core';
 import classNames from 'classnames';
-import {FieldDropdown, Workspace} from 'blockly/core';
-import DanceAiScore, {ScoreColors} from './DanceAiScore';
-import AiVisualizationPreview from './AiVisualizationPreview';
+import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
+import {useSelector} from 'react-redux';
 
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {useInterval} from '@cdo/apps/util/useInterval';
+import inputLibraryJson from '@cdo/static/dance/ai/ai-inputs.json';
+import aiBotBodyNormal from '@cdo/static/dance/ai/bot/ai-bot-body-normal.png';
+import aiBotBodyThink0 from '@cdo/static/dance/ai/bot/ai-bot-body-think0.png';
+import aiBotBodyThink1 from '@cdo/static/dance/ai/bot/ai-bot-body-think1.png';
+import aiBotBodyThink2 from '@cdo/static/dance/ai/bot/ai-bot-body-think2.png';
+import aiBotBodyYes from '@cdo/static/dance/ai/bot/ai-bot-body-yes.png';
+import aiBotHeadNormal from '@cdo/static/dance/ai/bot/ai-bot-head-normal.png';
+import aiBotHeadYes from '@cdo/static/dance/ai/bot/ai-bot-head-yes.png';
+
+import danceMetricsReporter from '../danceMetricsReporter';
+import {closeAiModal, DanceState} from '../danceRedux';
+
+import AiVisualizationPreview from './AiVisualizationPreview';
+import CdoFieldDanceAi from './cdoFieldDanceAi';
+import {DANCE_AI_FIELD_NAME} from './constants';
+import DanceAiModalFlipCard from './DanceAiModalFlipCard';
+import DanceAiModalHeader from './DanceAiModalHeader';
+import DanceAiScore, {ScoreColors} from './DanceAiScore';
+import EmojiIcon from './EmojiIcon';
+import EmojiInputGrid from './EmojiInputGrid';
+import ModalButton from './ModalButton';
 import {
   AiFieldValue,
+  DanceAiModalMode,
   DanceAiModalOutputType,
+  DanceAiPreviewButtonToggleState,
   DanceAiSound,
+  EffectsQuality,
+  EmojiItem,
   FieldKey,
   GeneratedEffect,
   MinMax,
-  EffectsQuality,
-  DanceAiModalMode,
-  DanceAiPreviewButtonToggleState,
-  EmojiItem,
 } from './types';
 import {
   chooseEffects,
   generateAiEffectBlocks,
   generateAiEffectBlocksFromResult,
   getAiEmojiItem,
-  getPreviewCode,
   getGeneratedEffectScores,
   getLabelMap,
+  getPreviewCode,
   getRangeArray,
   lerp,
-  useInterval,
 } from './utils';
-import color from '@cdo/apps/util/color';
-const ToggleGroup = require('@cdo/apps/templates/ToggleGroup').default;
+
+import moduleStyles from './dance-ai-modal.module.scss';
+
 const i18n = require('../locale');
-
-import EmojiIcon from './EmojiIcon';
-import DanceAiModalHeader from './DanceAiModalHeader';
-import DanceAiModalFlipCard from './DanceAiModalFlipCard';
-import EmojiInputGrid from './EmojiInputGrid';
-
-import aiBotHeadNormal from '@cdo/static/dance/ai/bot/ai-bot-head-normal.png';
-import aiBotBodyNormal from '@cdo/static/dance/ai/bot/ai-bot-body-normal.png';
-import aiBotHeadYes from '@cdo/static/dance/ai/bot/ai-bot-head-yes.png';
-import aiBotBodyYes from '@cdo/static/dance/ai/bot/ai-bot-body-yes.png';
-import aiBotBodyThink0 from '@cdo/static/dance/ai/bot/ai-bot-body-think0.png';
-import aiBotBodyThink1 from '@cdo/static/dance/ai/bot/ai-bot-body-think1.png';
-import aiBotBodyThink2 from '@cdo/static/dance/ai/bot/ai-bot-body-think2.png';
-
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import ModalButton from './ModalButton';
-import danceMetricsReporter from '../danceMetricsReporter';
-import CdoFieldDanceAi from './cdoFieldDanceAi';
-import {DANCE_AI_FIELD_NAME} from './constants';
-
-import inputLibraryJson from '@cdo/static/dance/ai/ai-inputs.json';
 
 // Progress in the generating mode has a step and a substep.
 // Each step is a now effect, while each substep shows progress for
@@ -265,17 +264,17 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
   }, [currentAiModalField, mode, calculateMinMax]);
 
   const labels = useMemo(() => {
-    const tempWorkspace = new Workspace();
+    const tempWorkspace = new BlocklyCore.Workspace();
     const blocksSvg = generateAiEffectBlocks(tempWorkspace);
 
     const foregroundLabels = getLabelMap(
-      blocksSvg[0].getField('EFFECT') as FieldDropdown
+      blocksSvg[0].getField('EFFECT') as BlocklyCore.FieldDropdown
     );
     const backgroundLabels = getLabelMap(
-      blocksSvg[1].getField('EFFECT') as FieldDropdown
+      blocksSvg[1].getField('EFFECT') as BlocklyCore.FieldDropdown
     );
     const paletteLabels = getLabelMap(
-      blocksSvg[1].getField('PALETTE') as FieldDropdown
+      blocksSvg[1].getField('PALETTE') as BlocklyCore.FieldDropdown
     );
 
     tempWorkspace.dispose();
@@ -333,12 +332,8 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
   }, [startAi]);
 
   const handleGenerateClick = useCallback(() => {
-    analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_GENERATED, {
-      emojis: inputs,
-    });
-
     startGenerating();
-  }, [startGenerating, inputs]);
+  }, [startGenerating]);
 
   const onClose = useCallback(() => dispatch(closeAiModal()), [dispatch]);
 
@@ -524,21 +519,21 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
         origBlock
           ?.getPreviousBlock()
           ?.getInput('DO')
-          ?.connection?.connect(blocksSvg[0].previousConnection);
+          ?.connection?.connect(blocksSvg[0].previousConnection!);
       } else {
         // origBlock has a regular block above it.
         origBlock
           ?.getPreviousBlock()
-          ?.nextConnection?.connect(blocksSvg[0].previousConnection);
+          ?.nextConnection?.connect(blocksSvg[0].previousConnection!);
       }
 
       origBlock
         ?.getNextBlock()
-        ?.previousConnection?.connect(blocksSvg[1].nextConnection);
+        ?.previousConnection?.connect(blocksSvg[1].nextConnection!);
 
       blocksSvg.forEach(blockSvg => {
         blockSvg.initSvg();
-        blockSvg.render();
+        blockSvg.queueRender();
       });
 
       origBlock.dispose(false);
@@ -549,15 +544,8 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
   }, [currentAiModalField, onClose, inputs]);
 
   const handleOnClose = useCallback(() => {
-    analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_MODAL_CLOSED, {
-      emojis: inputs,
-      mode,
-      currentToggle,
-      generatingStep: generatingProgress.step,
-    });
-
     onClose();
-  }, [inputs, mode, currentToggle, generatingProgress.step, onClose]);
+  }, [onClose]);
 
   const showUseButton =
     mode === DanceAiModalMode.RESULTS &&
@@ -632,7 +620,10 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
       className={moduleStyles.dialog}
       onClose={handleOnClose}
       initialFocus={false}
-      styles={{modalBackdrop: moduleStyles.modalBackdrop}}
+      styles={{
+        modalBackdrop: moduleStyles.modalBackdrop,
+        xCloseButton: moduleStyles.xCloseButton,
+      }}
     >
       <DanceAiModalHeader
         onClose={onClose}
@@ -648,29 +639,25 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
             className={moduleStyles.toggleArea}
             style={{zIndex: mode === DanceAiModalMode.RESULTS ? 1 : 0}}
           >
-            <ToggleGroup
-              selected={currentToggle}
-              activeColor={color['light_primary_500']}
-              onChange={(value: DanceAiPreviewButtonToggleState) => {
-                setCurrentToggle(value);
+            <SegmentedButtons
+              selectedButtonValue={currentToggle}
+              size="s"
+              onChange={(value: string) => {
+                setCurrentToggle(value as DanceAiPreviewButtonToggleState);
               }}
-              useRebrandedLikeStyles
-            >
-              <button
-                id="toggle-effect-button"
-                type="button"
-                value={DanceAiPreviewButtonToggleState.EFFECT}
-              >
-                {i18n.danceAiModalEffectButton()}
-              </button>
-              <button
-                id="toggle-code-button"
-                type="button"
-                value={DanceAiPreviewButtonToggleState.CODE}
-              >
-                {i18n.danceAiModalCodeButton()}
-              </button>
-            </ToggleGroup>
+              buttons={[
+                {
+                  value: DanceAiPreviewButtonToggleState.EFFECT,
+                  label: i18n.danceAiModalEffectButton(),
+                  id: 'toggle-effect-button',
+                },
+                {
+                  value: DanceAiPreviewButtonToggleState.CODE,
+                  label: i18n.danceAiModalCodeButton(),
+                  id: 'toggle-code-button',
+                },
+              ]}
+            />
           </div>
         )}
 

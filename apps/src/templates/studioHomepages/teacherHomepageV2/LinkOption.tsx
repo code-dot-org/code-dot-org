@@ -1,0 +1,90 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography} from '@mui/material';
+import React, {useMemo} from 'react';
+// import {useNavigate, NavigateFunction, Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
+
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {TEACHER_NAVIGATION_PATHS} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
+
+import styles from './teacherHomepage.module.scss';
+
+interface LinkElementProps {
+  value: string;
+  label: string;
+  labelStyle?: 'b' | 'i';
+  iconName?: string;
+  url: string;
+  eventName?: string;
+  eventOptions: object;
+}
+
+const LinkOption: React.FC<LinkElementProps> = ({
+  value,
+  label,
+  labelStyle,
+  iconName,
+  url,
+  eventName,
+  eventOptions,
+}) => {
+  const isTeacherDashboard = useMemo(
+    () => Object.values(TEACHER_NAVIGATION_PATHS).includes(value),
+    [value]
+  );
+
+  return (
+    <li>
+      {isTeacherDashboard ? (
+        <Link
+          id={`ui-test-${label.replaceAll(' ', '-')}`}
+          to={url}
+          className={styles.dropdownMenuItem}
+          onClick={() => {
+            if (eventName) analyticsReporter.sendEvent(eventName, eventOptions);
+          }}
+        >
+          {iconName && (
+            <FontAwesomeV6Icon iconName={iconName} iconStyle="solid" />
+          )}
+          <Typography variant="body2" component="span">
+            {label}
+          </Typography>
+        </Link>
+      ) : (
+        <a
+          id={
+            url.includes('lesson')
+              ? `ui-test-lesson-${label.replaceAll(' ', '-')}`
+              : `ui-test-unit-${label.replaceAll(' ', '-')}`
+          }
+          className={styles.dropdownMenuItem}
+          href={url}
+          onClick={() => {
+            if (eventName) analyticsReporter.sendEvent(eventName, eventOptions);
+          }}
+        >
+          {labelStyle === 'b' ? (
+            <Typography component="span" variant="body2">
+              <b>{label}</b>
+            </Typography>
+          ) : labelStyle === 'i' ? (
+            <Typography
+              component="span"
+              variant="body2"
+              style={{paddingLeft: '1em'}}
+            >
+              {label}
+            </Typography>
+          ) : (
+            <Typography component="span" variant="body2">
+              {label}
+            </Typography>
+          )}
+        </a>
+      )}
+    </li>
+  );
+};
+
+export default LinkOption;

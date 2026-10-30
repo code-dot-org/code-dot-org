@@ -15,8 +15,8 @@ When(/^I open my eyes to test "([^"]*)"$/) do |test_name|
   next if CDO.disable_all_eyes_running
   ensure_eyes_available
 
-  batch = Applitools::BatchInfo.new(ENV['BATCH_NAME'])
-  batch.id = ENV['BATCH_ID']
+  batch = Applitools::BatchInfo.new(ENV.fetch('BATCH_NAME', nil))
+  batch.id = ENV.fetch('BATCH_ID', nil)
   @eyes.batch = batch
 
   @eyes.branch_name = GitUtils.current_branch
@@ -27,8 +27,6 @@ When(/^I open my eyes to test "([^"]*)"$/) do |test_name|
     config[:viewport_size] = {width: 1024, height: 690}
   end
   @browser.capabilities[:takes_screenshot] = true
-  @eyes.force_full_page_screenshot = true
-  # Default stitch mode can be customized for each checkpoint in the I See No Difference step.
   @eyes.stitch_mode = Applitools::STITCH_MODE[:css]
 
   @eyes.open(config)
@@ -47,24 +45,38 @@ And(/^I close my eyes$/) do
 end
 
 # A Feature can optionally specify the stitch mode ('css' or 'scroll') for Eyes to create the full screenshot.
-And(/^I see no difference for "([^"]*)"(?: using stitch mode "([^"]*)")?$/) do |identifier, stitch_mode|
+And(/^I see no difference for "([^"]*)"?( in the current viewport)?( without waiting for Font Awesome to load)?$/) do |identifier, skip_full_page, skip_fa_wait|
   next if CDO.disable_all_eyes_running
 
-  if stitch_mode == "none"
-    @eyes.force_full_page_screenshot = false
-  else
-    @eyes.stitch_mode = stitch_mode == "scroll" ?
-      Applitools::STITCH_MODE[:scroll] :
-      Applitools::STITCH_MODE[:css]
+  # Capture only after the webfonts have loaded and the header has re-laid-out against
+  # them. Otherwise text and icons shift as the fallback font swaps out, producing
+  # spurious diffs ("font wiggle").
+  wait_until do
+    fonts_loaded? && header_relaid_out? && (skip_fa_wait || font_awesome_loaded?)
   end
 
-  @eyes.check_window(identifier, MATCH_TIMEOUT, false)
+  is_full_page_screenshot = !skip_full_page
+  @eyes.check_window(identifier, MATCH_TIMEOUT, is_full_page_screenshot)
+end
 
-  # Return to full page screenshot for remaining checkpoints in this Scenario.
-  @eyes.force_full_page_screenshot = true
+And(/^I see no difference for "([^"]*)" within "([^"]*)"$/) do |identifier, selector|
+  next if CDO.disable_all_eyes_running
 
-  # Return to default stitch mode for remaining checkpoints in this Scenario.
-  @eyes.stitch_mode = Applitools::STITCH_MODE[:css]
+  element = nil
+  wait_until do
+    element = @browser.find_element(:css, selector)
+    element.displayed? && fonts_loaded? && header_relaid_out?
+  end
+
+  @eyes.check_region(element, tag: identifier, match_timeout: MATCH_TIMEOUT, stitch_content: true)
+end
+
+And(/^The header is finished animating$/) do
+  wait_for_jquery
+
+  wait_until do
+    @browser.execute_script('return $("#header_middle_content").css("opacity") === \'1\'') == true
+  end
 end
 
 def ensure_eyes_available
@@ -72,4 +84,34 @@ def ensure_eyes_available
   @eyes = Applitools::Selenium::Eyes.new
   @eyes.api_key = CDO.applitools_eyes_api_key
   @eyes.log_handler = Logger.new('../../log/eyes.log')
+end
+
+# There are several fonts we sometimes load associated with Font Awesome, but Font Awesome 6 at the "solid" weight (900) is our default,
+# and used in the header (which appears across almost all pages), so we wait for that one to load at least.
+def font_awesome_loaded?
+  @browser.execute_script('return [...document.fonts].find(font => font.family === "Font Awesome 6 Pro" && font.weight === "900")?.status === "loaded"') == true
+end
+
+def fonts_loaded?
+  # document.fonts.status reads "loaded" whenever nothing is currently loading, which
+  # holds before the page's webfonts are even requested. Await the readiness promise
+  # instead: it settles only after the in-use fonts have loaded and laid out.
+  @browser.execute_async_script(<<~JS) == true
+    const done = arguments[arguments.length - 1];
+    document.fonts.ready.then(() => done(document.fonts.status === 'loaded'));
+  JS
+end
+
+# HeaderMiddle.jsx sets data-header-present when the React header mounts and
+# data-header-fonts-relaid-out after it re-measures on the font swap. Waiting for the latter
+# captures the final layout rather than the fallback-font one. Key on data-header-present
+# (set by the component), not the .header_middle element: that element is also server-rendered
+# on non-lab dashboard pages that never mount this header, and those must pass straight
+# through instead of blocking on a flag that will never appear.
+def header_relaid_out?
+  @browser.execute_script(<<~JS) == true
+    const de = document.documentElement;
+    return de.dataset.headerPresent !== 'true' ||
+      de.dataset.headerFontsRelaidOut === 'true';
+  JS
 end

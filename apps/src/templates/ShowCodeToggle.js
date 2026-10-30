@@ -1,15 +1,14 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import logToCloud from '../logToCloud';
-import trackEvent from '../util/trackEvent';
-import {singleton as studioApp} from '../StudioApp';
-import {PaneButton} from './PaneHeader';
-import msg from '@cdo/locale';
-import UserPreferences from '../lib/util/UserPreferences';
-import project from '../code-studio/initApp/project';
 
-const BLOCKS_GLYPH_DARK =
-  'data:image/gif;base64,R0lGODlhEAAQAIAAAE1XX01XXyH+GkNyZWF0ZWQgd2l0aCBHSU1QIG9uIGEgTWFjACH5BAEKAAEALAAAAAAQABAAAAIdjI+py40AowRp2molznBzB3LTIWpGGZEoda7gCxYAOw==';
+import msg from '@cdo/locale';
+
+import project from '../code-studio/initApp/project';
+import UserPreferences from '../lib/util/UserPreferences';
+import logToCloud from '../logToCloud';
+import {singleton as studioApp} from '../StudioApp';
+
+import {PaneButton} from './PaneHeader';
 
 const commonProps = {
   hasFocus: PropTypes.bool,
@@ -34,29 +33,19 @@ class ShowCodeButton extends Component {
   };
 
   onClick() {
-    trackEvent('showCode', 'click', 'header');
     this.props.onClick();
   }
 
   render() {
-    const blockGlyphIconStyle = {
-      ...styles.blocksGlyph,
-      ...(this.props.isRtl && styles.blocksGlyphRtl),
-    };
-    const iconImageStyle = {
-      ...styles.iconImage,
-      ...(this.props.isRtl && styles.blocksGlyphImageRtl),
-    };
-    const blocksGlyphIcon = (
-      <i style={blockGlyphIconStyle}>
-        <img src={BLOCKS_GLYPH_DARK} style={iconImageStyle} alt="" />
-      </i>
-    );
     return (
       <PaneButton
         id="show-code-header"
-        iconClass={this.props.showingBlocks ? 'fa fa-code' : ''}
-        icon={this.props.showingBlocks ? null : blocksGlyphIcon}
+        iconProps={{
+          iconName: this.props.showingBlocks
+            ? 'code'
+            : 'chart-simple-horizontal',
+          iconStyle: 'solid',
+        }}
         label={
           this.props.showingBlocks
             ? this.props.showCodeLabel
@@ -66,9 +55,7 @@ class ShowCodeButton extends Component {
         isMinecraft={!!this.props.isMinecraft}
         headerHasFocus={!!this.props.hasFocus}
         onClick={this.onClick.bind(this)}
-        style={
-          this.props.hidden ? {display: 'none'} : {display: 'inline-block'}
-        }
+        style={this.props.hidden ? {display: 'none'} : undefined}
       />
     );
   }
@@ -188,26 +175,3 @@ export default class ShowCodeToggle extends Component {
     );
   }
 }
-
-const styles = {
-  blocksGlyph: {
-    lineHeight: '22px',
-    paddingRight: 8,
-    fontSize: 15,
-    fontWeight: 'bold',
-  },
-  iconImage: {
-    verticalAlign: 'text-bottom',
-  },
-  blocksGlyphRtl: {
-    paddingRight: 0,
-    paddingLeft: 8,
-  },
-  blocksGlyphImageRtl: {
-    transform: 'scale(-1, 1)',
-    MozTransform: 'scale(-1, 1)',
-    WebkitTransform: 'scale(-1, 1)',
-    OTransform: 'scale(-1, 1)',
-    msTransform: 'scale(-1, 1)',
-  },
-};

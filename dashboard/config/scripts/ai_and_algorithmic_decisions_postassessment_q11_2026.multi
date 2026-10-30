@@ -1,0 +1,14 @@
+name 'ai-and-algorithmic-decisions-postassessment-q11_2026'
+
+question 'A streaming service shows a "Spoiler Alert" image only if the user has BOTH not finished the movie AND the page has spoiler tags turned on. What structure best handles this logic?'
+
+wrong 'A single if statement with no else branch.'
+wrong 'Two separate functions called one after the other.'
+wrong 'A variable that stores the spoiler text.'
+right 'A nested conditional — one if statement inside another — so both conditions are checked in sequence.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 8
+MARKDOWN

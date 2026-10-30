@@ -1,0 +1,10 @@
+name 'pl-ai-101-V2-mod3-tools-05'
+display_name 'Practice'
+description '####Take some time to explore **AI Integrated Tools**. Choose one or more of the following activities to complete.'
+
+sublevels
+level 'pl-ai-101-V2-mod3-tools-05a'
+level 'pl-ai-101-V2-mod3-tools-05b'
+level 'pl-ai-101-V2-mod3-tools-05c'
+
+uses_lab2

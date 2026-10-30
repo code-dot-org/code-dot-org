@@ -1,0 +1,16 @@
+.timestampCell {
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+
+.timestampText {
+  margin-right: 5px;
+}
+
+.submittedIcon {
+  color: var(--text-brand-purple-primary);
+  font-size: 16px;
+}

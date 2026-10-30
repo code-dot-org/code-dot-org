@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import 'selectize';
+import '@selectize/selectize';
 
 export default function SchoolInfoManager(existingOptions) {
   var districtListFirstLoad = true;

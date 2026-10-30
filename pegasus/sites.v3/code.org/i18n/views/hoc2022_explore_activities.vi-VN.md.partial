@@ -1,7 +1,0 @@
-{{ featured_tutorial, title: "Xin chào cả thế giới: Vũ trụ", body: "Hãy tạo cảnh giữa các thiên hà với nhân vật và âm thanh trong đó bạn nói \"Xin chào cả thế giới!\" nhé", image: "/images/hoc2022-hello-world-space.png", url: "https://studio.code.org/s/hello-world-space-2022/reset" }}
-
-{{ featured_tutorial, title: "NASA's Space Jam", body: "Hãy tạo hệ mặt trời thật ngầu, tìm hiểu về âm nhạc, thiên văn học, đồng thời lập trình nhé!", image: "/images/hoc2022-nasa-space-jam.png", url: "https://chandra.si.edu/sound/code/" }}
-
-{{ featured_tutorial, title: "Chiến tranh giữa các vì sao", body: "Hãy tìm hiểu cách lập trình người máy và làm game Chiến tranh giữa các vì sao của riêng bạn ở một thiên hà xa rất xa.", image: "/shared/images/courses/logo_tall_starwars.jpg", url: "https://code.org/starwars" }}
-
-{{ featured_tutorial, title: "SciGirls Code Quest", body: "Trong chuyến phiêu lưu lập trình trực tuyến này, bạn sẽ đóng vai tàu ngầm Subby để vượt qua những thử thách dưới đại dương.", image: "/images/hoc2022-scigirls-code-quest.png", url: "https://pbskids.org/scigirls/games/code-quest" }}

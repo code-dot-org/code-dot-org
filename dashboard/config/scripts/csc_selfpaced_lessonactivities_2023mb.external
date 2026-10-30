@@ -3,27 +3,28 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Lesson Activities
+# Teaching CS Fundamentals Maker with micro:bit
 
-#### CS Fundamentals Maker with micro:bit offers different types of activities to better support students with learning computer science. Students build their skills and confidence to ultimately work with the micro:bit. 
+CS Fundamentals Maker with micro:bit offers different pathways and activities to better support students with learning computer science. Students build their skills and confidence to ultimately work with the micro:bit. 
 
-## Types of Activities
+**First,** choose the grade level you are teaching. **Then,** decide the challenge level you want your students to try.
 
-### **Off the computer** <img src="https://images.code.org/e6be160511c661e117a54e32f2b8b1c0-image-1699392745224.png" alt="An icon of a an electric outlet being unplugged to signial this portion of the module does not use a computer." width="30px" style="border-radius:10px; float:left; margin: 5px 0 0 0px;">
-* #### **Unplugged Activity** - Students tie the concepts of events to a dance experience.  
-	* #### *You are encouraged to customize this lesson to fit within the context of topics or standards currently being taught.*
+The **main pathway** includes the Meet Your micro:bit lesson and assumes students do not have experience with micro:bits. 
 
-### **On the computer** <img src="https://images.code.org/bfc84a3ecdf44395ca5e5177738eb80d-image-1699392681086.png" alt="An icon of a computer screen to signial this portion of the module uses a computer." width="30px" style="border-radius:10px; float:left; margin: 0 0 0 0px;">
-* #### **Skill-building** - Students learn new concepts through guided lessons.
-<br> 
+**Extension pathways** can be taught after the main lesson or taught as standalone lessons. 
 
-### 🤖 **With micro:bit** 
-* #### **Physical Computing** - Students apply coding concepts to program a physical device.
+Remember, these courses are designed with **flexibility** in mind. 
+
+You can chose to work your way through an entire course, or assign different pathways to different students. **The choice is yours.** 
+
+## Pathway Overview 
+
+<img src="https://images.code.org/c26a1de4bbf8201ff908b82bc3f3f3c0-image-1718915924119.png" alt="diagram of course pathway" width="800px">
+
+
 
 
 ## Let's keep learning! 
 
-
-
-
+![]()
 MARKDOWN

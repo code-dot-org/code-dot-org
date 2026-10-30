@@ -1,0 +1,89 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-04-03T22:31:42.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "encrypted": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "tutor",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "display_name": "Now Playing",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Now Playing</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <h1>🎬 Now Playing</h1>\n\n  <label>Choose a Show:</label>\n  <select id=\"showSelect\">\n    <option value=\"Midnight Case\">Midnight Case</option>\n    <option value=\"Sunny Days\">Sunny Days</option>\n    <option value=\"Wild Earth\">Wild Earth</option>\n    <option value=\"Fast Track\">Fast Track</option>\n  </select>\n\n  <br><br>\n\n  <label>Choose a Viewing Mode:</label>\n  <select id=\"modeSelect\">\n    <option value=\"HD\">HD</option>\n    <option value=\"4K\">4K</option>\n    <option value=\"Subtitled\">Subtitled</option>\n    <option value=\"Dubbed\">Dubbed</option>\n  </select>\n\n  <br><br>\n\n  <button id=\"watchBtn\">Watch Now</button>\n\n  <p id=\"output\"></p>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// --- SELECT ELEMENTS ---\nconst showSelect = document.getElementById(\"showSelect\");\nconst modeSelect = document.getElementById(\"modeSelect\");\nconst watchBtn = document.getElementById(\"watchBtn\");\nconst outputElement = document.getElementById(\"output\");\n\n// --- FUNCTION WITH PARAMETERS ---\n// Write a function that takes in two parameters.\n// Choose a clear name based on what your function does.\n// Use the parameters to build a “Now Playing” message.\n// Display the message on screen.\n\n\n\n\n// --- EVENT LISTENER ---\nwatchBtn.addEventListener(\"click\", () => {\n  const selectedShow = showSelect.value;\n  const selectedMode = modeSelect.value;\n\n  // Call your function here\n  \n});",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  font-family: Arial, sans-serif;\n  text-align: center;\n  margin-top: 50px;\n}\n\nselect, button {\n  padding: 6px 10px;\n  margin: 5px;\n  font-size: 16px;\n}\n\n#output {\n  margin-top: 20px;\n  font-weight: bold;\n  font-size: 18px;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "documentation.md",
+          "language": "md",
+          "contents": "# Function: <your function name>\n\n# What it does\n\n# Inputs\n\n# What is displayed (output)",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "2",
+        "4"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nfFr68Rq/3TQ4hdq5etl481tSaPHsRYQKDp8=\n",
+    "long_instructions": "## Now Playing\r\n\r\n1. Plan: In `documentation.md`, decide:\r\n   - your function name\r\n   - what it does\r\n   - what inputs it takes  \r\n2. Write a function using your chosen name that takes in two parameters.\r\n\r\n3. Build a “Now Playing” message using the parameters.\r\n\r\n4. Display the message on screen.\r\n\r\n5. Call your function inside the event listener so it runs when the button is clicked.\r\n\r\n_Challenge: Add another input to include one more detail about the show._",
+    "bubble_choice_description": "Code a function that takes in two parameters and updates the display with a Now Playing message.",
+    "thumbnail_url": "https://images.code.org/28c74c6d771904457540fc8917de7335-tv-app.png",
+    "name_suffix": "_2026",
+    "offer_browser_tts": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "example",
+        "explainCode",
+        "documentation"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-03T22:31:42.039+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson6-level4a_2026\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson6-level4a_2026\"},{\"changed_at\":\"2026-04-03 22:35:22 +0000\",\"changed\":[\"display_name\",\"long_instructions\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-03 22:39:27 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-03 22:39:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-03 22:40:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-03 22:40:53 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-03 22:40:53 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-03 22:40:53 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-03 22:42:37 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-03 23:10:38 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-03 23:11:39 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-03 23:11:39 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-03 23:11:39 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-03 23:11:58 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-03 23:11:58 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-03 23:12:18 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-03 23:12:18 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-05 23:20:58 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-05 23:21:34 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-05 23:22:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-05 23:25:23 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-05 23:25:23 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-05 23:25:23 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-05 23:25:23 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-05 23:25:24 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-05 23:25:24 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-05 23:25:24 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-05 23:27:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-05 23:28:02 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-06 00:58:37 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-06 00:58:38 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-06 00:58:39 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-06 00:58:52 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

@@ -1,16 +1,28 @@
-import {connect} from 'react-redux';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {studentShape} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import StudentColumn from './StudentColumn';
-import styles from './progress-table-v2.module.scss';
+import {connect} from 'react-redux';
+
+import {
+  getSelectedCourseId,
+  getSelectedUnitPosition,
+} from '@cdo/apps/redux/unitSelectionRedux';
+import {studentShape} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import stringKeyComparator from '@cdo/apps/util/stringKeyComparator';
-import {getCurrentUnitData} from '../sectionProgress/sectionProgressRedux';
-import {unitDataPropType} from '../sectionProgress/sectionProgressConstants';
+
+import {studentLevelProgressType} from '../progress/progressTypes';
+
 import ExpandedProgressDataColumn from './ExpandedProgressDataColumn';
+import FloatingHeader from './floatingHeader/FloatingHeader';
+import FloatingScrollbar from './floatingScrollbar/FloatingScrollbar';
 import LessonProgressDataColumn from './LessonProgressDataColumn';
-import classNames from 'classnames';
+import {unitDataPropType} from './sectionProgressConstants';
+import {loadUnitProgress} from './sectionProgressLoader';
+import {getCurrentUnitData} from './sectionProgressRedux';
 import SkeletonProgressDataColumn from './SkeletonProgressDataColumn';
+import StudentColumn from './StudentColumn';
+
+import styles from './progress-table-v2.module.scss';
 
 const NUM_STUDENT_SKELETON_ROWS = 6;
 const STUDENT_SKELETON_IDS = [...Array(NUM_STUDENT_SKELETON_ROWS).keys()];
@@ -24,17 +36,49 @@ function ProgressTableV2({
   students,
   unitData,
   expandedLessonIds,
-  setExpandedLessons,
   isSkeleton,
+  unitId,
+  courseId,
+  unitPosition,
+  levelProgressByStudent,
+  isLoadingSectionData,
 }) {
+  const outsideTableRef = React.useRef();
+
+  const [scrollCallback, setScrollCallback] = React.useState(undefined);
+
+  // Filter out all students without progress and reload unit data.
+  // This is most likely because a new student was added.
+  const filteredStudents = React.useMemo(() => {
+    return [...students].filter(
+      student => isSkeleton || levelProgressByStudent[student.id]
+    );
+  }, [students, levelProgressByStudent, isSkeleton]);
+
+  React.useEffect(() => {
+    if (!isSkeleton && filteredStudents.length !== students.length) {
+      loadUnitProgress(unitId, sectionId, courseId, unitPosition);
+    }
+  }, [
+    filteredStudents,
+    students,
+    unitId,
+    sectionId,
+    isSkeleton,
+    courseId,
+    unitPosition,
+  ]);
+
   const sortedStudents = React.useMemo(() => {
-    if (isSkeleton && students.length === 0) {
+    if (isSkeleton && filteredStudents.length === 0) {
       return STUDENT_SKELETON_IDS.map(id => ({id}));
     }
     return isSortedByFamilyName
-      ? students.sort(stringKeyComparator(['familyName', 'name']))
-      : students.sort(stringKeyComparator(['name', 'familyName']));
-  }, [students, isSortedByFamilyName, isSkeleton]);
+      ? [...filteredStudents].sort(stringKeyComparator(['familyName', 'name']))
+      : [...filteredStudents].sort(stringKeyComparator(['name', 'familyName']));
+  }, [filteredStudents, isSortedByFamilyName, isSkeleton]);
+
+  const tableRef = React.useRef();
 
   const getRenderedColumn = React.useCallback(
     (lesson, index) => {
@@ -52,11 +96,6 @@ function ProgressTableV2({
           <ExpandedProgressDataColumn
             lesson={lesson}
             sortedStudents={sortedStudents}
-            removeExpandedLesson={lessonId =>
-              setExpandedLessons(
-                expandedLessonIds.filter(id => id !== lessonId)
-              )
-            }
             key={index}
           />
         );
@@ -65,47 +104,78 @@ function ProgressTableV2({
           <LessonProgressDataColumn
             lesson={lesson}
             sortedStudents={sortedStudents}
-            addExpandedLesson={lessonId =>
-              setExpandedLessons([...expandedLessonIds, lessonId])
-            }
             key={index}
           />
         );
       }
     },
-    [isSkeleton, sortedStudents, expandedLessonIds, setExpandedLessons]
+    [isSkeleton, sortedStudents, expandedLessonIds]
   );
 
   const table = React.useMemo(() => {
-    const lessons =
-      isSkeleton && unitData === undefined
-        ? LESSON_SKELETON_DATA.map(id => ({id, isFake: true}))
-        : unitData?.lessons;
+    if (isSkeleton && (isLoadingSectionData || unitData === undefined)) {
+      const lessons = LESSON_SKELETON_DATA.map(id => ({id, isFake: true}));
+      return (
+        <div className={styles.tableLoading}>
+          {lessons.map(getRenderedColumn)}
+        </div>
+      );
+    }
 
-    if (lessons === undefined) {
+    if (unitData?.lessons === undefined) {
       // TODO: add no lesson state
       return null;
     }
-    const tableStyles = isSkeleton
-      ? classNames(styles.table, styles.tableLoading)
-      : styles.table;
-    return <div className={tableStyles}>{lessons.map(getRenderedColumn)}</div>;
-  }, [isSkeleton, getRenderedColumn, unitData]);
+
+    return (
+      <div ref={outsideTableRef} className={styles.outerTable}>
+        <FloatingScrollbar childRef={tableRef} scrollCallback={scrollCallback}>
+          <div
+            className={classNames(
+              styles.table,
+              isSkeleton && styles.tableLoading
+            )}
+            ref={tableRef}
+          >
+            <FloatingHeader
+              setScrollCallback={setScrollCallback}
+              sortedStudents={sortedStudents}
+              outsideTableRef={outsideTableRef}
+            >
+              <div className={styles.tableInterior}>
+                {unitData.lessons.map(getRenderedColumn)}
+              </div>
+            </FloatingHeader>
+          </div>
+        </FloatingScrollbar>
+      </div>
+    );
+  }, [
+    isLoadingSectionData,
+    isSkeleton,
+    getRenderedColumn,
+    unitData,
+    tableRef,
+    setScrollCallback,
+    sortedStudents,
+    outsideTableRef,
+    scrollCallback,
+  ]);
 
   return (
-    <div className={styles.progressTableV2}>
+    <div className={styles.progressTableV2} id="ui-test-progress-table-v2">
       <StudentColumn
         sortedStudents={sortedStudents}
         unitName={unitData?.title}
         sectionId={sectionId}
-        isSkeleton={isSkeleton && students.length === 0}
+        isSkeleton={
+          isSkeleton && (students.length === 0 || isLoadingSectionData)
+        }
       />
       {table}
     </div>
   );
 }
-
-export const UnconnectedProgressTableV2 = ProgressTableV2;
 
 ProgressTableV2.propTypes = {
   isSortedByFamilyName: PropTypes.bool,
@@ -113,8 +183,14 @@ ProgressTableV2.propTypes = {
   students: PropTypes.arrayOf(studentShape),
   unitData: unitDataPropType,
   expandedLessonIds: PropTypes.arrayOf(PropTypes.number).isRequired,
-  setExpandedLessons: PropTypes.func.isRequired,
   isSkeleton: PropTypes.bool,
+  unitId: PropTypes.number,
+  courseId: PropTypes.number,
+  unitPosition: PropTypes.number,
+  levelProgressByStudent: PropTypes.objectOf(
+    PropTypes.objectOf(studentLevelProgressType)
+  ),
+  isLoadingSectionData: PropTypes.bool.isRequired,
 };
 
 export default connect(state => ({
@@ -122,4 +198,16 @@ export default connect(state => ({
   sectionId: state.teacherSections.selectedSectionId,
   students: state.teacherSections.selectedStudents,
   unitData: getCurrentUnitData(state),
+  unitId: state.unitSelection.scriptId,
+  courseId: getSelectedCourseId(state),
+  unitPosition: getSelectedUnitPosition(state),
+  levelProgressByStudent:
+    state.sectionProgress.studentLevelProgressByUnit[
+      state.unitSelection.scriptId
+    ],
+  expandedLessonIds:
+    state.sectionProgress.expandedLessonIds[
+      state.teacherSections.selectedSectionId
+    ] || [],
+  isLoadingSectionData: state.teacherSections.isLoadingSectionData,
 }))(ProgressTableV2);

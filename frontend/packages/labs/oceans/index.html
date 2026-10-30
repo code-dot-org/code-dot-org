@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI for Oceans</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!--
+      Visual-test deterministic-mode bootstrap. Activated by ?testFreeze=1.
+      Must run before any module so lodash / helpers.ts capture the patched
+      Math.random + Date.now, not the native ones.
+    -->
+    <script>
+      (function () {
+        if (
+          new URLSearchParams(window.location.search).get('testFreeze') !== '1'
+        )
+          return;
+        // Deterministic stand-ins: 0.5 from random (midpoint of any range),
+        // fixed timestamp 2026-01-01T00:00:00Z from Date.now.
+        Math.random = function () {
+          return 0.5;
+        };
+        Date.now = function () {
+          return 1767225600000;
+        };
+      })();
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

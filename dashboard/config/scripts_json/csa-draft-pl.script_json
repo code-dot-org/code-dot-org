@@ -4,19 +4,19 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "is_course": true,
+      "content_area": "other",
+      "curriculum_umbrella": "Other",
       "is_migrated": true,
       "student_detail_progress_view": true,
-      "tts": true,
-      "version_year": "unversioned"
+      "tts": true
     },
     "new_name": null,
-    "family_name": "csa-draft-pl",
-    "serialized_at": "2023-11-17 16:28:51 UTC",
-    "published_state": "stable",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "facilitator",
-    "participant_audience": "teacher",
+    "family_name": null,
+    "serialized_at": "2025-03-28 09:29:05 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csa-draft-pl"
     }
@@ -151,21 +151,6 @@
       },
       "seeding_key": {
         "lesson.key": "lesson-8",
-        "lesson_group.key": "",
-        "script.name": "csa-draft-pl"
-      }
-    },
-    {
-      "key": "lesson-9",
-      "name": "Module X",
-      "absolute_position": 9,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 9,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-9",
         "lesson_group.key": "",
         "script.name": "csa-draft-pl"
       }

@@ -1,0 +1,12 @@
+name 'pl-ai-101-V2-mod4-about-02'
+display_name 'Examples from the Classroom'
+description '####Check out some examples of teaching **about AI** in different grade bands.'
+
+sublevels
+level 'pl-ai-101-V2-mod4-about-02a'
+level 'pl-ai-101-V2-mod4-about-02b'
+
+uses_lab2
+markdown <<MARKDOWN
+
+MARKDOWN

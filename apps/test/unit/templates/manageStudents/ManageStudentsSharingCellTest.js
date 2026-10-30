@@ -1,9 +1,11 @@
+import Checkbox from '@code-dot-org/component-library/checkbox';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/deprecatedChai';
+
 import {UnconnectedManageStudentsSharingCell as ManageStudentsSharingCell} from '@cdo/apps/templates/manageStudents/ManageStudentsSharingCell';
-import {Checkbox} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+
+import {expect} from '../../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
 describe('ManageStudentsSharingCell', () => {
   it('renders a checked Checkbox if editing and can share', () => {
@@ -15,9 +17,9 @@ describe('ManageStudentsSharingCell', () => {
         editedValue={true}
       />
     );
-    expect(wrapper).to.containMatchingElement(
-      <input type="checkbox" checked={true} />
-    );
+    const checkbox = wrapper.find(Checkbox);
+    expect(checkbox.exists()).to.equal(true);
+    expect(checkbox.prop('checked')).to.equal(true);
   });
 
   it('renders an unchecked Checkbox if editing and can not share', () => {
@@ -29,9 +31,9 @@ describe('ManageStudentsSharingCell', () => {
         editedValue={false}
       />
     );
-    expect(wrapper).to.containMatchingElement(
-      <input type="checkbox" checked={false} />
-    );
+    const checkbox = wrapper.find(Checkbox);
+    expect(checkbox.exists()).to.equal(true);
+    expect(checkbox.prop('checked')).to.equal(false);
   });
 
   it('renders nothing if not editing and can not share', () => {
@@ -43,10 +45,8 @@ describe('ManageStudentsSharingCell', () => {
         editedValue={true}
       />
     );
-    expect(wrapper.containsMatchingElement(<Checkbox />)).to.equal(false);
-    expect(
-      wrapper.containsMatchingElement(<FontAwesome icon="check" />)
-    ).to.equal(false);
+    expect(wrapper.find(Checkbox).exists()).to.equal(false);
+    expect(wrapper.find(FontAwesomeV6Icon).exists()).to.equal(false);
   });
 
   it('renders a FontAwesome checkmark if not editing and can share', () => {
@@ -58,6 +58,8 @@ describe('ManageStudentsSharingCell', () => {
         editedValue={true}
       />
     );
-    expect(wrapper).to.containMatchingElement(<FontAwesome icon="check" />);
+    const icon = wrapper.find(FontAwesomeV6Icon);
+    expect(icon.exists()).to.equal(true);
+    expect(icon.prop('iconName')).to.equal('check');
   });
 });

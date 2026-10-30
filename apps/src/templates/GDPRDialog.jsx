@@ -1,10 +1,13 @@
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import Button from './Button';
+
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
+
 import BaseDialog from './BaseDialog';
 import DialogFooter from './teacherDashboard/DialogFooter';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 export default class GDPRDialog extends Component {
   static propTypes = {
@@ -20,8 +23,13 @@ export default class GDPRDialog extends Component {
 
   handleYesClick = () => {
     this.setState({isDialogOpen: false});
-    $.post(`/dashboardapi/v1/users/accept_data_transfer_agreement`, {
+    $.post('/dashboardapi/v1/users/accept_data_transfer_agreement', {
       user_id: this.props.currentUserId,
+    }).then(() => {
+      const gdprDataScript = document.querySelector('script[data-gdpr]');
+      const gdprData = JSON.parse(gdprDataScript.dataset['gdpr']);
+      gdprData.show_gdpr_dialog = false;
+      gdprDataScript.dataset['gdpr'] = JSON.stringify(gdprData);
     });
   };
 
@@ -38,35 +46,42 @@ export default class GDPRDialog extends Component {
         style={styles.dialog}
         uncloseable
       >
-        <h2 className="ui-test-gdpr-dialog">
-          {i18n.gdprDialogHeaderUpdated()}
-        </h2>
-        <div>{i18n.gdprDialogDetailsUpdated()}</div>
-        <div style={styles.instructions}>
-          <a
-            href={pegasus('/privacy')}
-            className="ui-test-gdpr-dialog-privacy-link"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {i18n.gdprDialogVisitPrivacyPolicy()}
-          </a>
+        <div style={styles.dialogBody}>
+          <h2 className="ui-test-gdpr-dialog">
+            {i18n.gdprDialogHeaderUpdated()}
+          </h2>
+          <div>{i18n.gdprDialogDetailsUpdated()}</div>
+          <div style={styles.instructions}>
+            <a
+              href={pegasus('/privacy')}
+              className="ui-test-gdpr-dialog-privacy-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {i18n.gdprDialogVisitPrivacyPolicy()}
+            </a>
+          </div>
         </div>
         <DialogFooter>
-          <Button
-            __useDeprecatedTag
-            text={i18n.gdprDialogLogout()}
-            href={logOutUrl}
-            color={Button.ButtonColor.gray}
+          <MuiButton
+            variant="outlined"
+            color="tertiary"
+            size="medium"
             className="ui-test-gdpr-dialog-logout"
-          />
-          <Button
-            __useDeprecatedTag
-            text={i18n.gdprDialogYes()}
-            onClick={this.handleYesClick}
-            color={Button.ButtonColor.brandSecondaryDefault}
+            href={logOutUrl}
+          >
+            {i18n.gdprDialogLogout()}
+          </MuiButton>
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="medium"
             className="ui-test-gdpr-dialog-accept"
-          />
+            onClick={this.handleYesClick}
+            type="button"
+          >
+            {i18n.gdprDialogYes()}
+          </MuiButton>
         </DialogFooter>
       </BaseDialog>
     );
@@ -75,6 +90,10 @@ export default class GDPRDialog extends Component {
 
 const styles = {
   dialog: {
+    color: color.default_text,
+    width: 740,
+  },
+  dialogBody: {
     paddingLeft: 20,
     paddingRight: 20,
     paddingBottom: 20,

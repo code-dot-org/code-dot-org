@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 export const evidenceLevelShape = PropTypes.shape({
-  understanding: PropTypes.number,
+  understanding: PropTypes.number.isRequired,
   teacherDescription: PropTypes.string,
 });
 
@@ -14,9 +14,17 @@ export const learningGoalShape = PropTypes.shape({
 });
 
 export const rubricShape = PropTypes.shape({
+  id: PropTypes.number.isRequired,
   learningGoals: PropTypes.arrayOf(learningGoalShape),
   lesson: PropTypes.shape({
     position: PropTypes.number,
+    name: PropTypes.string,
+  }),
+  script: PropTypes.shape({
+    id: PropTypes.number,
+  }),
+  level: PropTypes.shape({
+    id: PropTypes.number,
     name: PropTypes.string,
   }),
 });
@@ -30,7 +38,7 @@ export const reportingDataShape = PropTypes.shape({
 
 export const studentLevelInfoShape = PropTypes.shape({
   name: PropTypes.string,
-  timeSpentMinutes: PropTypes.number,
+  timeSpent: PropTypes.number,
   attempts: PropTypes.number,
   lastAttempt: PropTypes.string,
   user_id: PropTypes.number,
@@ -46,6 +54,15 @@ export const aiEvaluationShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
   learning_goal_id: PropTypes.number.isRequired,
   understanding: PropTypes.number.isRequired,
-  ai_confidence: PropTypes.number,
+  aiConfidencePassFail: PropTypes.number,
+  aiConfidenceExactMatch: PropTypes.number,
+  showExactMatch: PropTypes.bool,
   observations: PropTypes.string,
+  evidence: PropTypes.string,
+});
+
+export const aiEvidenceShape = PropTypes.shape({
+  firstLine: PropTypes.number,
+  lastLine: PropTypes.number,
+  message: PropTypes.string,
 });

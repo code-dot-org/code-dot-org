@@ -1,0 +1,11 @@
+name 'aif-y2-logic-based-ai-lesson2-level1-2026'
+display_name 'Contributions to AI'
+description 'People from a variety of different backgrounds and disciplines have contributed to innovations and developments in AI. Choose a field to explore.'
+
+sublevels
+level 'aif-y2-logic-based-ai-lesson2-level1-choice1-2026'
+level 'aif-y2-logic-based-ai-lesson2-level1-choice2-2026'
+level 'aif-y2-logic-based-ai-lesson2-level1-choice3-2026'
+level 'aif-y2-logic-based-ai-lesson2-level1-choice4-2026'
+
+uses_lab2

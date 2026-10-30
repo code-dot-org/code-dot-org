@@ -1,6 +1,6 @@
 class Api::V1::TeacherFeedbacksController < Api::V1::JSONApiController
-  authorize_resource
   load_resource only: :create
+  authorize_resource
 
   use_reader_connection_for_route(:get_feedback_from_teacher)
 
@@ -20,6 +20,7 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JSONApiController
     if @feedback.nil?
       head :no_content
     else
+      authorize! :get_feedback_from_teacher, @feedback
       render json: @feedback.summarize(true)
     end
   end
@@ -32,13 +33,21 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JSONApiController
     # Setting CSRF token header allows us to access the token manually in subsequent POST requests.
     headers['csrf-token'] = form_authenticity_token
 
+    student_id = params.require(:student_id)
+    # For demo students, only show feedback from the current teacher to avoid cross-teacher leakage.
+    teacher_id = current_user.id if Policies::DemoSections.demo_student?(student_id.to_i)
     @level_feedbacks = TeacherFeedback.get_latest_feedbacks_received(
-      params.require(:student_id),
+      student_id,
       params.require(:level_id),
-      params.require(:script_id)
-    ).map {|feedback| feedback.summarize(true)}
+      params.require(:script_id),
+      teacher_id
+    )
 
-    render json: @level_feedbacks
+    @level_feedbacks.each do |feedback|
+      authorize! :get_feedbacks, feedback
+    end
+
+    render json: @level_feedbacks.map {|feedback| feedback.summarize(true)}
   end
 
   # Determine how many not yet seen feedback entries from any verified teacher
@@ -73,6 +82,7 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JSONApiController
   # Records metrics for student viewing teacher feedback.
   def increment_visit_count
     feedback = TeacherFeedback.find(params[:id])
+    authorize! :increment_visit_count, feedback
     if feedback&.increment_visit_count
       head :no_content
     else
@@ -81,6 +91,8 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JSONApiController
   end
 
   private def reset_progress_for_keep_working(teacher_feedback)
+    student = User.find(teacher_feedback.student_id)
+    return unless can?(:manage, student)
     UserLevel.update_best_result(
       teacher_feedback.student_id,
       teacher_feedback.level_id,

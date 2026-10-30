@@ -20,7 +20,7 @@
     },
     "project_template_level_name": "CSA U3L9-Nested PBT_2023",
     "teacher_markdown": "Students should notice that the inner `for` loop repeats until its condition is `false` for each iteration of the outer `for` loop. If they change the starting value or the condition for the outer `for` loop, this will impact the number of times the entire code segment repeats. If they change the starting value or the condition for the inner `for` loop, this will impact the number of times the inner loop will repeat for each iteration of the outer loop.",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2023-01-12T22:21:40.107+00:00\",\"changed\":[\"cloned from \\\"CSA Investigate Level Template\\\"\"],\"cloned_from\":\"CSA Investigate Level Template\"},{\"changed_at\":\"2023-01-12 22:21:47 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-30 00:37:49 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-03-31 21:27:49 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"

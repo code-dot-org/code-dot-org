@@ -1,0 +1,106 @@
+import {Typography} from '@mui/material';
+import classNames from 'classnames';
+import React, {useMemo} from 'react';
+
+import {modelDescriptions} from '@cdo/apps/aichat/constants';
+import {
+  MODEL_CARD_FIELDS_LABELS_ICONS,
+  TECHNICAL_INFO_FIELDS,
+} from '@cdo/apps/aichatLab/views/modelCustomization/constants';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import ModelCardRow from './ModelCardRow';
+
+import moduleStyles from './presentation-view.module.scss';
+import styles from '@cdo/apps/aichatLab/views/model-customization-workspace.module.scss';
+
+const PresentationView: React.FunctionComponent = () => {
+  const savedAiCustomizations = useAppSelector(
+    state => state.aichatLab.savedAiCustomizations
+  );
+  const {selectedModelId, systemPrompt, temperature, retrievalContexts} =
+    savedAiCustomizations;
+  const modelCardInfo = savedAiCustomizations.modelCardInfo;
+  const {
+    name: modelName = '',
+    trainingData = '',
+    overview = '',
+  } = modelDescriptions.find(model => model.id === selectedModelId) ?? {};
+
+  const technicalInfo = useMemo(() => {
+    const technicalInfoData: {
+      [key in (typeof TECHNICAL_INFO_FIELDS)[number]]:
+        | string
+        | number
+        | boolean;
+    } = {
+      'Model Name': modelName,
+      Overview: overview,
+      'Training Data': trainingData,
+      'System Prompt': systemPrompt,
+      Temperature: temperature,
+      'Retrieval Used': retrievalContexts.length > 0,
+    };
+    const technicalInfo = TECHNICAL_INFO_FIELDS.map(field => {
+      if (typeof technicalInfoData[field] === 'boolean') {
+        return `${field}: ${technicalInfoData[field] ? 'Yes' : 'No'}`;
+      }
+      return `${field}: ${technicalInfoData[field]}`;
+    });
+    return technicalInfo;
+  }, [
+    retrievalContexts,
+    systemPrompt,
+    temperature,
+    modelName,
+    overview,
+    trainingData,
+  ]);
+
+  return (
+    <div
+      className={classNames(
+        styles.verticalFlexContainer,
+        moduleStyles.container
+      )}
+    >
+      <Typography
+        id="uitest-presentation-view-header"
+        className={moduleStyles.modelCardTitle}
+        variant="h4"
+        gutterBottom
+      >
+        {modelCardInfo['botName']}
+      </Typography>
+      <div className={moduleStyles.modelCardFields}>
+        {MODEL_CARD_FIELDS_LABELS_ICONS.map(
+          ({property, label, icon, displayTooltip}) => {
+            if (property === 'botName' || property === 'isPublished') {
+              return null;
+            }
+            return (
+              <ModelCardRow
+                title={label}
+                titleIcon={icon}
+                expandedContent={modelCardInfo[property]}
+                key={property}
+                tooltipText={displayTooltip}
+              />
+            );
+          }
+        )}
+        <ModelCardRow
+          title={'Technical Info'}
+          titleIcon="screwdriver-wrench"
+          expandedContent={technicalInfo}
+          key="technicalInfo"
+          tooltipText={
+            'Behind-the-scenes technical information for the underlying language model.'
+          }
+        />
+      </div>
+    </div>
+  );
+};
+
+export default PresentationView;

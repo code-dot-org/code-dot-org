@@ -1,16 +1,15 @@
 PUZZLE_SOLUTIONS = {
-  "http://studio.code.org/s/allthethings/lessons/2/levels/1" => %{
-    And I drag block "4" to block "5"
-    And I drag block "4" to block "6" plus offset 0, 50
+  "http://studio.code.org/courses/ui-test-all-the-levels/units/1/lessons/2/levels/1" => %{
+    And I've initialized the workspace with k1 maze blocks
   },
-  "http://studio.code.org/s/allthethings/lessons/29/levels/1?level_name=2-3 Maze 1" => %{
-    And I drag block "1" to block "4"
-    And I drag block "1" to block "5"
+  "http://studio.code.org/courses/ui-test-all-the-levels/units/1/lessons/3/levels/2" => %{
+    And I've initialized the workspace with winning artist blocks
   },
-  "http://studio.code.org/s/allthethings/lessons/29/levels/4?level_name=2-3 Artist 1 new" => %{
-    And I drag block "1" to block "25"
-    And I drag block "2" to block "26"
-    And I drag block "1" to block "27"
+  "http://studio.code.org/courses/ui-test-level-swap/units/1/lessons/1/levels/1?level_name=UI Test 2-3 Maze 1" => %{
+    And I've initialized the workspace with two move forward blocks
+  },
+  "http://studio.code.org/courses/ui-test-level-swap/units/1/lessons/1/levels/4?level_name=UI Test 2-3 Artist 1 new" => %{
+    And I've initialized the workspace with winning artist blocks
   },
 }
 
@@ -25,7 +24,7 @@ end
 Then /^I complete the level on "([^"]*)"$/ do |puzzle_url|
   steps %{
     And I am on "#{append_noautoplay(puzzle_url)}"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
   }
   steps PUZZLE_SOLUTIONS[puzzle_url]
   steps %{
@@ -43,12 +42,15 @@ Then /^I complete the free response on "([^"]*)"$/ do |puzzle_url|
   }
 end
 
+# The URL must point at a level group; the confirmation is the level group
+# submit dialog (apps/src/code-studio/levels/LevelGroupSubmitDialog.jsx).
 Then /^I submit the assessment on "([^"]*)"$/ do |puzzle_url|
   steps %{
     And I am on "#{append_noautoplay(puzzle_url)}"
-    And I click selector ".answers:nth(0) .answerbutton[index=1]" once I see it
+    And I click selector ".answers:eq(0) .answerbutton[index=1]" once I see it
+    And I wait for 5 seconds
     And I click selector ".submitButton" once I see it
-    And I wait until element ".modal" is visible
-    And I click selector ".modal #ok-button" to load a new page
+    And I wait until element "#levelgroup-submit-ok-button" is visible
+    And I click selector "#levelgroup-submit-ok-button" to load a new page
   }
 end

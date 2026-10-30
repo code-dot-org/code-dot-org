@@ -1,6 +1,6 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+
 import TooltipWithIcon from '@cdo/apps/templates/progress/TooltipWithIcon';
 
 const DEFAULT_PROPS = {
@@ -11,19 +11,15 @@ const DEFAULT_PROPS = {
 };
 
 describe('TooltipWithIcon', () => {
-  it('includes the check-circle icon if level is an assessment', () => {
+  it('includes the star icon if level is an assessment', () => {
     const wrapper = shallow(
       <TooltipWithIcon {...DEFAULT_PROPS} includeAssessmentIcon={true} />
     );
-    expect(wrapper.find('FontAwesome').first().props().icon).to.equal(
-      'check-circle'
-    );
+    expect(wrapper.find('FontAwesome').first().props().icon).toBe('star');
   });
 
-  it('does not include the check-circle icon if level is not an assessment', () => {
+  it('does not include the star icon if level is not an assessment', () => {
     const wrapper = shallow(<TooltipWithIcon {...DEFAULT_PROPS} />);
-    expect(wrapper.find('FontAwesome').first().props().icon).not.to.equal(
-      'check-circle'
-    );
+    expect(wrapper.find('FontAwesome').first().props().icon).not.toBe('star');
   });
 });

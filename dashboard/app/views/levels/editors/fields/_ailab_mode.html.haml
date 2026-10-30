@@ -2,5 +2,8 @@
   Mode
 
 #mode.in.collapse
-  = f.label :ailab_mode, 'Mode JSON'
-  = f.text_area :mode, placeholder: 'Insert JSON Data', rows: 10, style: 'width: 50%', value: @level.mode
+  #ailab-mode-editor
+
+- content_for :body_scripts do
+  %script{src: webpack_asset_path('js/levels/editors/fields/_ailab_mode.js'),
+        data: {ailabmode: @level.mode.to_json}}

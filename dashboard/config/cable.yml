@@ -1,0 +1,23 @@
+development:
+  adapter: async
+
+# Using the test adapter allows us to use `ActionCable::TestHelper` assertions in our tests
+test:
+  adapter: test
+
+# Configure ActionCable to use redis with CDO.redis_url as the shared server
+shared_redis: &shared_redis
+  adapter: redis
+  url: <%= CDO.redis_url %>
+
+adhoc:
+  <<: *shared_redis
+
+levelbuilder:
+  <<: *shared_redis
+
+staging:
+  <<: *shared_redis
+
+production:
+  <<: *shared_redis

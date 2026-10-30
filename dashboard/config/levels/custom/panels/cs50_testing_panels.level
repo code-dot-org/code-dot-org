@@ -1,0 +1,24 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-03-30T14:49:51.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "Here's some example text. **Formatted**",
+        "imageUrl": "https://images.code.org/1069e3a0cac662605bc1a5cb4f5a3030-Untitled.001.jpeg",
+        "key": "cs50_testing_panels-63b44820-b4b3-46eb-8776-787c0c7a2e9a",
+        "typing": false,
+        "layout": "text-top-right",
+        "fadeInOverPrevious": false
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2026-03-30 14:54:28 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-03-30 17:53:32 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Panels>

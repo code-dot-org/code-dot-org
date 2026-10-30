@@ -1,0 +1,19 @@
+name 'networks-preassessment-question13_v2-2025'
+title 'Networks and the Internet Pre-Assessment: Question 13'
+
+wrong 'It is easier to set up and manage'
+wrong 'It allows more devices to connect at once'
+right 'It provides a more stable and faster connection'
+wrong 'It does not require a router'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Which of the following is an advantage of using a wired Ethernet connection instead of Wi-Fi?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 2: Sending Bits
+
+Lesson 4: Routers and Redundancy
+MARKDOWN

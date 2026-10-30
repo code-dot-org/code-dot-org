@@ -1,0 +1,15 @@
+name 'CSD U2L9-L1-2025'
+editor_experiment ''
+display_name 'Sample Website'
+css 'unplugged'
+markdown <<MARKDOWN
+# Sample Websites
+
+Click the website below to discover some new types of styling for your pages.
+
+|Sample 1| Sample 2|Sample 3|
+|-|-|-|
+|[![](https://images.code.org/7c31d954229b205eff20e4a131271845-image-1585070245513.png)](https://studio.code.org/projects/weblab2/fb2c5136-eb3b-40e6-b166-1fe40c7540c5/view)|[![](https://images.code.org/00410044eee7dedc993ec9d6c8887444-image-1589309900750.56.13 PM.png)](https://studio.code.org/projects/weblab2/036dc2a7-94d3-4b28-b44e-372c9c36671a/view)|[![](https://images.code.org/c67c9e9b8e44094a403e3974db09e2e3-image-1589314612876.15.47 PM.png)](https://studio.code.org/projects/weblab2/c414c08e-2675-44f9-bb43-e50e57a15a61/view)|
+
+
+MARKDOWN

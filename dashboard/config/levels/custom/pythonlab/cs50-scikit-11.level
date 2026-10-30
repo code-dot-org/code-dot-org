@@ -1,0 +1,42 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-02-18T16:57:13.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "ai_tutor_available": "true",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# CIW AI Associate Standard: 6.1\n# Standard Description: Define a cost function, given the outcome, to train a neural network.\n#\n# Rationale: A Neural Network learns by trying to minimize its \"Cost\" (also called \n# \"Loss\"). Think of a cost function as a teacher's red pen: it marks how far off \n# the student's answer was. This tutorial uses a Multi-layer Perceptron (MLP) \n# and plots its \"Loss Curve\" to show how the cost function guides the learning.\n\n\"\"\"\nWelcome! Today we are looking inside the \"brain\" of a Neural Network.\nHow does a computer know it's getting smarter? It uses a Cost Function.\n\nA Cost Function is a math formula that calculates one number: \n\"How much did I mess up?\"\n- High Cost = The AI is guessing wildly.\n- Low Cost = The AI is getting very close to the truth.\n\nWe will watch the AI look at its \"Cost\" and try to make it smaller!\n\"\"\"\n\nfrom sklearn.neural_network import MLPClassifier\nfrom sklearn.datasets import make_moons\nimport matplotlib.pyplot as plt\n\n# DAN NEEDED TO ADD THESE!\nimport warnings\nfrom sklearn.exceptions import ConvergenceWarning\n\nwarnings.filterwarnings(\"ignore\", category=ConvergenceWarning)\n#</end Dan Additions>\n\n\n# --- PREPARING DATA ---\n# We'll use the \"Moons\" dataset again because it requires a \"smart\" brain to solve.\nX, y = make_moons(n_samples=500, noise=0.2, random_state=42)\n\n# --- THE NEURAL NETWORK ---\nprint(\"--- Training the Neural Network ---\")\n\n# We create a Multi-layer Perceptron (MLP).\n# 'max_iter=1' means we will train it one step at a time so we can see the cost.\n# 'warm_start=True' lets us keep training the same brain instead of starting over.\nnn = MLPClassifier(hidden_layer_sizes=(10, 10), \n                    max_iter=1, \n                    warm_start=True, \n                    solver='sgd', \n                    learning_rate_init=0.01,\n                    random_state=42)\n\ncosts = []\n\n# We will \"loop\" through training 100 times to watch the cost change.\nfor i in range(100):\n    nn.fit(X, y)\n    # The 'loss_' attribute is the result of the Cost Function for this step!\n    costs.append(nn.loss_)\n    \n    if i % 10 == 0:\n        print(f\"Step {i}: The Cost is {nn.loss_:.4f}\")\n\n# --- VISUALIZATION ---\nplt.figure(figsize=(10, 5))\n\n# Plot the Loss Curve\nplt.subplot(1, 2, 1)\nplt.plot(costs, color='red', linewidth=2)\nplt.title(\"The Cost Function in Action\")\nplt.xlabel(\"Training Steps (Epochs)\")\nplt.ylabel(\"Cost (Error Score)\")\nplt.grid(True, alpha=0.3)\n\n# Plot the Decision Boundary\nimport numpy as np\nplt.subplot(1, 2, 2)\nh = .02\nx_min, x_max = X[:, 0].min() - .5, X[:, 0].max() + .5\ny_min, y_max = X[:, 1].min() - .5, X[:, 1].max() + .5\nxx, yy = np.meshgrid(np.arange(x_min, x_max, h), np.arange(y_min, y_max, h))\nZ = nn.predict(np.c_[xx.ravel(), yy.ravel()])\nZ = Z.reshape(xx.shape)\nplt.contourf(xx, yy, Z, alpha=0.8, cmap='coolwarm')\nplt.scatter(X[:, 0], X[:, 1], c=y, edgecolors='k', cmap='coolwarm')\nplt.title(\"The Final 'Brain' Results\")\n\nplt.tight_layout()\nprint(\"\\nLook at the graph! As the red line (Cost) goes down, the AI gets smarter.\")\nplt.show()\n\n\"\"\"\n--- YOUR TURN ---\nThe \"Learning Rate\" determines how much the AI listens to the Cost Function.\n- If it's too high, the AI overreacts and the cost might jump around.\n- If it's too low, the AI learns too slowly.\n\n1. We've set a learning rate of 0.01.\n2. Try changing it to 0.0001 (very slow) and look at the graph.\n3. Try changing it to 0.5 (very fast) and see if the cost curve gets \"shaky\".\n\"\"\"\n\n# STARTING CODE FOR STUDENT:\n# TODO: Experiment with 'learning_rate_init'\n# my_nn = MLPClassifier(hidden_layer_sizes=(10, 10), learning_rate_init=0.01)\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFTDG6jyYgtI/CEUE/82dEkG4hlI8OLsdjJD0In8S\n03BB+jPkGgyYB0/9C3zqHMHEFpKeCsugYbpGMxzBNwrd7qASagJaFzMnVUyM\n2TXS7Hau9lj7JpZIHXn9fmxXRRANWeN4o2qlH+pvhJrbJu71TSJ0ov2OktlH\nBLsUFaZBJN6AlYic/7GlqQO1aZPsr6jh27liwlI0918IVcz+BzTcc5EjAoxS\nEg+UxmewamRclg7nN3fWwLhrJDhUwGpDK3hXis90iXD5QJZr4R+JNw7+AKbr\nPdvZ5Sznpu/6/AtTM28adlTi+Gq4FpSvKEET6QiUI0OMnpJnHABuMyfCWb8o\nv08MOJCR4xFp63KbnIdwNJN22VArZi+lQrSVtEsv0kkhQ0ZleQELcyh3aMu2\nG5YstZooEyfgMgLACsm2p8ZP/f1V+lmgSUo3+y3dFrFKAzRLj7Lad6iz1za7\ncKoVzoeh9KgMU5CG3EnpK7q6jnuAKVS8tuwq2N+80UgNDcE8prgxG9uK/OLL\naz0zsKih5sRo8Moyk3PmU4g6M9r1fNVuwkaKlsYMSEyvLjkR4hd9TXzvGlBd\nxSX7d7AwC/5DkWqv2/t2v2INx26+zSp+X/2wxWiZPWpsnEZtFFZnYALEq/hI\nqPKE5BCycJDxmJLH9bcUiyPAUYoPuUIODkC+seISz93+Iv7JRwClP9+J11Zm\ndpPbpj3TmWxEVnov2SEaRR5G68rSxSMY+t0o215U8TSLyGhc1Tt+8uoDP+9A\nkgIOl/MZff4h0VLa3HecKmSI9kSdMY9eqQRzTnM1MqUgIeGv+U/9HsZs2uZx\nncfZ9beKvZ202CT0LEYoKP23XctmYIYFCAY55/HUn/Y6hRF7VjC8jDWqLgkZ\nRkDLd/kkN5/IJm1PVcXTCXhvlZKfzhSf+KDUF/K4DFbyHnU+m5baveeN7NP9\n0MJ3Br3eN6YwPPcZnMpo7bytrvwZ0kgId43U3nJVDk8EXgI9QzSCcyghLuSQ\nsK7zzlreae7DTCTart40pEzJH2NMr7RJOk0gfzcne6MhKTa5VJ1L0EBXwN49\np2Dg4fFSh3jkNFpPSr/PVfMjO9V2hK/Mt+3NCg95HkBYMmLNSJBoQ/z6euzN\neAlMJtqkcCAvDnbTAXsTo0jZWDQO2AP2uOCPN+49oTgCS3NRP9iuGw7Tr4Xw\n+/yehcacQdSmwL+p7BTQB5xC+YBN5ZIG8nzAneKYCI+YUgPOH353a/rE08Vl\n8X2PID37UDzp87MVgHgwXUh3LXMYb22tBCgWpThElZP41aPzQp1Daarsz9Q4\n4gVA/fI1iYMAgeRVj80pG9nSaJ8oDfNs4iQtkdtSal+haoMRoBn1xTi/oGgz\n2oYL46Y6Jys+mPMYK+mkM/AoxuEyUtqgXZ5G6AnCJRYlce4Tr/6mAC00mRqu\ndcycf+XTWZ3bohmuwm2tl5on7jk3dP5wWAi9a3uyehB/yV4OLPDf8Vwh3FOO\nJZG47af5utX5vJS2M3ESgDONbl4IQovURJzUf7MkCh4Aswl3/whM2J93g/sC\nGGGrdmHkLf+4VuKndOxQA+nGvhsZ6xL+jfrwCMfHbS8Q4T04uPjfFlcVv3AF\nq65pucNudOoT9P0cgCUkVi6j8wxlOtuIeppx8IcVreGe6Yl9Ctc9quKIE64r\nwZuRS/ix16US/zbc3sH2FM38r5ykqjf4LkhdTF18csPzgST2TFOp5bo2Es4M\n2pFnYU42/g==\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-18T16:57:13.847+00:00\",\"changed\":[\"cloned from \\\"cs50-scikit-10\\\"\"],\"cloned_from\":\"cs50-scikit-10\"},{\"changed_at\":\"2026-02-18 16:57:16 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:28:25 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:28:42 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-24 19:32:37 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Pythonlab>

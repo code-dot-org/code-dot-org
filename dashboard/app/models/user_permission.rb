@@ -16,6 +16,16 @@
 require 'cdo/chat_client'
 
 class UserPermission < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :confidential,
+    user_id: :confidential,
+    permission: :confidential,
+    created_at: :confidential,
+    updated_at: :confidential,
+  )
+
   belongs_to :user, optional: true
 
   VALID_PERMISSIONS = [
@@ -44,8 +54,8 @@ class UserPermission < ApplicationRecord
     PROGRAM_MANAGER = 'program_manager'.freeze,
     # Grants ability to be the instructor of any course no matter instructor_audience
     UNIVERSAL_INSTRUCTOR = 'universal_instructor'.freeze,
-    # Grants access to use AI Tutor which uses AI Chat API
-    AI_TUTOR_ACCESS = 'ai_tutor_access'.freeze,
+    #  Grants access to an internal tool to pull AI-evaluated samples of student work
+    STUDENT_WORK_ACCESS = 'student_work_access'.freeze,
   ].freeze
 
   # Do not log the granting/removal of these permissions to slack

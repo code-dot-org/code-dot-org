@@ -1,38 +1,31 @@
-import React from 'react';
-import ParticipantSections from './ParticipantSections';
 import {action} from '@storybook/addon-actions';
-import {reduxStore} from '@cdo/storybook/decorators';
+import React from 'react';
 import {Provider} from 'react-redux';
+
+import {reduxStore} from '@cdo/storybook/decorators';
+
+import ParticipantSections from './ParticipantSections';
 
 const sections = [
   {
     name: 'Algebra Period 1',
     teacherName: 'Ms. Frizzle',
-    linkToProgress: 'to Progress tab',
     assignedTitle: 'CS in Algebra',
     linkToAssigned: 'to Course',
-    numberOfStudents: 14,
-    linkToStudents: 'to Manage Students tab',
     code: 'ABCDEF',
   },
   {
     name: 'Algebra Period 2',
     teacherName: 'Ms. Frizzle',
-    linkToProgress: 'to Progress tab',
     assignedTitle: 'CS in Algebra',
     linkToAssigned: 'to Course',
-    numberOfStudents: 19,
-    linkToStudents: 'to Manage Students tab',
     code: 'EEB206',
   },
   {
     name: 'Period 3',
     teacherName: 'Ms. Frizzle',
-    linkToProgress: 'to Progress tab',
     assignedTitle: 'Course 4',
     linkToAssigned: 'to Course',
-    numberOfStudents: 22,
-    linkToStudents: 'to Manage Students tab',
     code: 'HPRWHG',
   },
 ];

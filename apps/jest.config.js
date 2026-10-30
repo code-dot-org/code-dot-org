@@ -1,0 +1,293 @@
+const {APPLICATION_ALIASES, LOCALE_ALIASES} = require('./webpack.config');
+
+process.env.TZ = 'UTC';
+
+/**
+ * Sets the module name mapper property in jest. This module name mapper is based on the webpack aliases but adds
+ * some jest stubs.
+ */
+const jestAliases = {
+  ...LOCALE_ALIASES,
+  // Force module uuid to resolve with the CJS entry point, because Jest does not support package.json.exports. See https://github.com/uuidjs/uuid/issues/451
+  uuid: require.resolve('uuid'),
+  // Pin react and react-dom to the apps versions when used in conjunction with linked npm packages
+  '^react$': require.resolve('react'),
+  '^react-dom$': require.resolve('react-dom'),
+  '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|ico)$':
+    'jest-transform-stub',
+  '\\.(css)$': 'identity-obj-proxy',
+  '^firmata$': 'mock-firmata/mock-firmata',
+  // Stub out core's api module, since it carries in ESM-only packages which don't play well with apps' CommonJS build.
+  '^@code-dot-org/core/api$': '<rootDir>/test/util/stubCoreApi.ts',
+  'script-loader!@code-dot-org/(.*)': '<rootDir>/node_modules/@code-dot-org/$1',
+};
+
+/**
+ * Imports the application level aliases from webpack
+ */
+Object.entries(APPLICATION_ALIASES).forEach(([alias, localPath]) => {
+  // Anchor to avoid matching unrelated packages that merely contain `${alias}/`
+  jestAliases[`^${alias}/(.*)$`] = `${localPath}/$1`;
+});
+
+/**
+ * For a detailed explanation regarding each configuration property, visit:
+ * https://jestjs.io/docs/configuration
+ */
+/** @type {import('jest').Config} */
+const config = {
+  // All imported modules in your tests should be mocked automatically
+  // automock: false,
+
+  // Stop running tests after `n` failures
+  // bail: 0,
+
+  // The directory where Jest should store its cached dependency information
+  // cacheDirectory: "/tmp/jest_rs",
+
+  // Automatically clear mock calls, instances, contexts and results before every test
+  clearMocks: true,
+
+  // Indicates whether the coverage information should be collected while executing the test
+  collectCoverage: process.env.COVERAGE === '1',
+
+  // An array of glob patterns indicating a set of files for which coverage information should be collected
+  // collectCoverageFrom: undefined,
+
+  // The directory where Jest should output its coverage files
+  coverageDirectory: 'coverage',
+
+  // An array of regexp pattern strings used to skip coverage collection
+  // coveragePathIgnorePatterns: [
+  //   "/node_modules/"
+  // ],
+
+  // Indicates which provider should be used to instrument code for coverage
+  // coverageProvider: "babel",
+
+  // A list of reporter names that Jest uses when writing coverage reports
+  // coverageReporters: [
+  //   "json",
+  //   "text",
+  //   "lcov",
+  //   "clover"
+  // ],
+
+  // An object that configures minimum threshold enforcement for coverage results
+  // coverageThreshold: undefined,
+
+  // A path to a custom dependency extractor
+  // dependencyExtractor: undefined,
+
+  // Make calling deprecated APIs throw helpful error messages
+  // errorOnDeprecated: false,
+
+  // The default configuration for fake timers
+  // fakeTimers: {
+  //   "enableGlobally": false
+  // },
+
+  // Force coverage collection from ignored files using an array of glob patterns
+  // forceCoverageMatch: [],
+
+  // A path to a module which exports an async function that is triggered once before all test suites
+  // globalSetup: undefined,
+
+  // A path to a module which exports an async function that is triggered once after all test suites
+  // globalTeardown: undefined,
+
+  // A set of global variables that need to be available in all test environments
+  // globals: {},
+
+  // The maximum amount of workers used to run your tests. Can be specified as % or a number. E.g. maxWorkers: 10% will use 10% of your CPU amount + 1 as the maximum worker number. maxWorkers: 2 will use a maximum of 2 workers.
+  // On CI (process.env.CI=true set by prepare_ci_env.sh) the key is omitted so
+  // run-tests-in-parallel.sh's --maxWorkers flag wins. On dev machines, cap at
+  // 50% of cores to prevent OOM on low-RAM hosts (e.g. 8 GB MacBooks). Jest
+  // validates this key's type, so we must omit it rather than set undefined.
+  ...(process.env.CI ? {} : {maxWorkers: '50%'}),
+
+  // An array of directory names to be searched recursively up from the requiring module's location
+  // moduleDirectories: [
+  //   "node_modules"
+  // ],
+
+  // An array of file extensions your modules use
+  // moduleFileExtensions: [
+  //   "js",
+  //   "mjs",
+  //   "cjs",
+  //   "jsx",
+  //   "ts",
+  //   "tsx",
+  //   "json",
+  //   "node"
+  // ],
+
+  // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
+  moduleNameMapper: jestAliases,
+
+  // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
+  // Builds place a second pyodide package under build/package/js — the
+  // @pyodide/webpack-plugin copy patterns ship the npm dist, package.json
+  // included — and jest's haste map then either errors on the duplicate
+  // or resolves the copy instead of node_modules.  Only pyodide is
+  // hidden: setupJest.js requires locale files from build/ by path, so
+  // build/ cannot be ignored wholesale.
+  modulePathIgnorePatterns: ['<rootDir>/build/.*/pyodide/'],
+
+  // Activates notifications for test results
+  // notify: false,
+
+  // An enum that specifies notification mode. Requires { notify: true }
+  // notifyMode: "failure-change",
+
+  // A preset that is used as a base for Jest's configuration
+  // preset: "ts-jest",
+
+  // Run tests from one or more projects
+  // projects: undefined,
+
+  // Use this configuration option to add custom reporters to Jest
+  reporters: [
+    'default',
+    [
+      './node_modules/jest-html-reporter',
+      {
+        includeFailureMsg: true,
+        includeStackTrace: true,
+        includeSuiteFailure: true,
+        pageTitle: 'Test Report',
+        outputPath: '<rootDir>/build/test-report/index.html',
+      },
+    ],
+  ],
+
+  // Automatically reset mock state before every test
+  // resetMocks: false,
+
+  // Reset the module registry before running each individual test
+  // resetModules: false,
+
+  // A path to a custom resolver
+  // resolver: undefined,
+
+  // Automatically restore mock state and implementation before every test
+  // restoreMocks: false,
+
+  // The root directory that Jest should scan for tests and modules within
+  // rootDir: undefined,
+
+  // A list of paths to directories that Jest should use to search for files in
+  // roots: [
+  //   "<rootDir>"
+  // ],
+
+  // Allows you to use a custom runner instead of Jest's default test runner
+  // runner: "jest-runner",
+
+  // The paths to modules that run some code to configure or set up the testing environment before each test
+  setupFiles: [
+    './test/setupJest.js',
+    'jest-canvas-mock',
+    './test/setupJquery.js',
+  ],
+
+  // A list of paths to modules that run some code to configure or set up the testing framework before each test
+  setupFilesAfterEnv: ['./test/setupJestAfterEnv.js'],
+  // The number of seconds after which a test is considered as slow and reported as such in the results.
+  // slowTestThreshold: 5,
+
+  // A list of paths to snapshot serializer modules Jest should use for snapshot testing
+  // snapshotSerializers: [],
+
+  // The test environment that will be used for testing
+  testEnvironment: 'jsdom',
+
+  // Options that will be passed to the testEnvironment
+  testEnvironmentOptions: {
+    url: 'http://localhost-studio.code.org',
+  },
+
+  // Adds a location field to test results
+  // testLocationInResults: false,
+
+  // The glob patterns Jest uses to detect test files
+  testMatch: ['**/test/unit/**/*Test.[jt]s?(x)'],
+
+  // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
+  // testPathIgnorePatterns: [
+  //   "/node_modules/"
+  // ],
+
+  // The regexp pattern or array of patterns that Jest uses to detect test files
+  // testRegex: [],
+
+  // This option allows the use of a custom results processor
+  // testResultsProcessor: undefined,
+
+  // This option allows use of a custom test runner
+  // testRunner: "jest-circus/runner",
+
+  // A map from regular expressions to paths to transformers
+  transform: {
+    '\\.jsx?$': [
+      'babel-jest',
+      {extends: './babel.config.json', exclude: ['\\.ejs']},
+    ],
+    '^.+\\.scss$': '<rootDir>/test/jest-scss.transformer.js',
+    '\\.(ejs)$': '<rootDir>/test/jest-ejs.transformer.js',
+    '\\.md$': '<rootDir>/test/jest-md.transformer.js',
+    '^.+\\.tsx?$': [
+      'ts-jest',
+      {
+        // Transpile only, no type-checking (mirrors ts-loader's transpileOnly
+        // in webpack.config.js). With type-checking on, every jest worker built
+        // a TS program spanning all of src/ and test/ (~3 GB heap, ~20s CPU per
+        // worker), pinning CI workers near the default ~4 GB V8 heap limit; the
+        // resulting GC stalls made unrelated async tests exceed their timeouts.
+        // Type errors are still caught by ForkTsCheckerWebpackPlugin in `yarn
+        // start` and `yarn build`, in development and CI alike.
+        //
+        // Transpile-only is enabled by isolatedModules in tsconfig.build.json.
+        // Do not remove it there, or performance problems may come back.
+
+        tsconfig: {
+          target: 'es6',
+
+          // Keeps dynamic import() working in jest: it compiles import() down
+          // to require, which jest's CJS runtime executes natively, so
+          // React.lazy(() => import(...)) components load in tests. (The
+          // inherited module: node16 would emit real import() calls, which
+          // jest's VM only supports behind --experimental-vm-modules.)
+          module: 'commonjs',
+
+          // The inherited moduleResolution: node16 is invalid next to
+          // module: commonjs (TS5110), so override it with a compatible
+          // value. No effect beyond satisfying validation, since jest
+          // resolves imports itself.
+          moduleResolution: 'node',
+        },
+      },
+    ],
+  },
+
+  // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
+  // The d3 packages are ESM-only and reach jest untranspiled.
+  transformIgnorePatterns: [
+    'node_modules/(?!vmsg|@code-dot-org/johnny-five|@code-dot-org/js-interpreter|blockly/core|d3-(color|dispatch|drag|ease|interpolate|selection|timer|transition|zoom)/)',
+  ],
+
+  // An array of regexp pattern strings that are matched against all modules before the module loader will automatically return a mock for them
+  // unmockedModulePathPatterns: undefined,
+
+  // Indicates whether each individual test should be reported during the run
+  // verbose: undefined,
+
+  // An array of regexp patterns that are matched against all source file paths before re-running tests in watch mode
+  // watchPathIgnorePatterns: [],
+
+  // Whether to use watchman for file crawling
+  // watchman: true,
+};
+
+module.exports = config;

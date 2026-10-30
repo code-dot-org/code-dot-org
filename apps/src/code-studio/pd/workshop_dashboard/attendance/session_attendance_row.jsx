@@ -2,10 +2,9 @@
  * Display and edit attendance for a single teacher in a session,
  * for use in SessionAttendance.
  */
-import PropTypes from 'prop-types';
-
-import React from 'react';
 import $ from 'jquery';
+import PropTypes from 'prop-types';
+import React from 'react';
 import {OverlayTrigger, Tooltip} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
 export default class SessionAttendanceRow extends React.Component {
@@ -126,8 +125,8 @@ export default class SessionAttendanceRow extends React.Component {
 
   renderEditableAttendedCellContents() {
     const checkBoxClass = this.props.attendance.attended
-      ? 'fa fa-check-square-o'
-      : 'fa fa-square-o';
+      ? 'fa-regular fa-square-check'
+      : 'fa-regular fa-square';
     if (this.props.isReadOnly || this.state.pendingRequest) {
       return (
         <div>

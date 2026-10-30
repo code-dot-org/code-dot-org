@@ -5,7 +5,7 @@ require 'cdo/firehose'
 #
 class AnimationBucket < BucketHelper
   def initialize
-    super CDO.animations_s3_bucket, CDO.animations_s3_directory
+    super(CDO.animations_s3_bucket, CDO.animations_s3_directory)
   end
 
   def allowed_file_types

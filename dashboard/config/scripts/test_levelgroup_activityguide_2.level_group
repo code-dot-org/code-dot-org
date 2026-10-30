@@ -1,0 +1,11 @@
+name 'test-levelgroup-activityguide-2'
+title 'Activity Guide Levelgroup'
+submittable 'false'
+anonymous 'false'
+activity_guide_level 'true'
+
+page
+level 'test-single-multi-retriable-in-levelgroup'
+level 'test-free-response-retriable-in-levelgroup'
+level 'K-1 Plant a Seed Multi 1'
+level 'K-1 Plant a Seed Multi 2'

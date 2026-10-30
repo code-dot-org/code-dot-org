@@ -1,6 +1,5 @@
 <Weblab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 58,
   "created_at": "2023-11-28T16:58:26.000Z",
   "level_num": "custom",
@@ -14,7 +13,7 @@
     "encrypted_examples": "KhPwzzTrCYyvq5YDRjsps14XEIlTw/m36q7x2ZbgYZDaIA3Dfa9gT21v559k\n+HkImdHeAz/rQWq7BhWRRXYB4A==\n",
     "parent_level_id": 20003,
     "name_suffix": "_2024",
-    "map_reference": "/courses/csd-2022/guides/html-tags",
+    "map_reference": "/courses/csd-2024/guides/html-tags",
     "video_key": "csd_weblab_intro_2",
     "encrypted": "false",
     "mini_rubric": "false",
@@ -23,10 +22,11 @@
     "bubble_choice_description": "This simple web page has some issues which are preventing the content from being displayed correctly. Identify and fix the issues.",
     "thumbnail_url": "https://images.code.org/ad84c1993d33ea4669f5db415aa36389-debugging.png",
     "reference_links": [
-      "/courses/csd-2022/guides/headings-and-paragraphs",
-      "/courses/csd-2022/guides/web-lab"
+      "/courses/csd-2024/guides/headings-and-paragraphs",
+      "/courses/csd-2024/guides/web-lab"
     ]
   },
+  "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2023-11-28T16:58:26.565+00:00\",\"changed\":[\"cloned from \\\"CSD U2 HTML Debug Paragraphs_2023\\\"\"],\"cloned_from\":\"CSD U2 HTML Debug Paragraphs_2023\"},{\"changed_at\":\"2024-01-10 18:11:30 +0000\",\"changed\":[\"hide_share_and_remix\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>

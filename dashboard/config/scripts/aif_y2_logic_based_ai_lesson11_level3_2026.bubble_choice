@@ -1,0 +1,11 @@
+name 'aif-y2-logic-based-ai-lesson11-level3-2026'
+display_name 'Two or More Questions'
+description 'Choose the decision tree you want to build.'
+
+sublevels
+level 'aif-y2-logic-based-ai-lesson11-level3-choice1-2026'
+level 'aif-y2-logic-based-ai-lesson11-level3-choice2-2026'
+
+navigation_type 'next_level'
+
+uses_lab2

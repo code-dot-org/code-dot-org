@@ -1,0 +1,51 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T20:04:58.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "This chatbot is designed to help you explore how networking components function and how data flows across the Internet.\r\n\r\n### Do This:\r\n- Work with a partner and interact with the AI chatbot to identify the function of each networking component on your activity guide.\r\n- Use the activity guide  to **label each component** and **draw arrows** to show how data moves\r\n- Once you've finished, upload a photo of your diagram to the chatbot and ask for feedback.\r\n\r\n**Example Questions to Ask the Chatbot**\r\n- What does a router do when I visit a website?\r\n- What is a switch? How does it direct data?\r\n- How does a server help load a webpage?\r\n- What happens when I send a message online?\r\n\r\n**Tip**\r\n- Be specific with your questions, and if answers are too vague, or you don't understand them, rephrase your question for better results!   ",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+          "Internet Tower: a piece of infrastructure that sends and receives wireless signals\nrouter: a type of computer that forwards data across a network\nserver: a powerful computer that stores and delivers websites, files, and messages when requested by a user\nswitch: a component that helps send data to the right place inside a local network\n"
+        ],
+        "modelCardInfo": {
+          "botName": "Network Chatbot",
+          "description": "The Network Chatbot is designed to help students understand how the Internet works by providing clear, concise explanations about networking components, data flow, and Internet communication. It supports student learning by answering questions related to routers, switches, servers, Internet towers, Wi-Fi, Ethernet, and data transmission protocols.",
+          "intendedUse": "Classroom learning: Supports lessons on network infrastructure and Internet communication.\nInteractive exploration: Helps students engage with key concepts through question-driven inquiry.\nGuided student activities: Used alongside the Internet Simulator and Activity Guide to reinforce understanding.\nSelf-paced review: Students can revisit concepts by interacting with the chatbot at any time.",
+          "limitationsAndWarnings": "Only provides networking-related responses: The chatbot will not answer unrelated topics and will redirect students if they go off-topic.\nDoes not replace teacher instruction: It is a supplementary tool, meant to reinforce learning, not replace classroom discussions.\nResponses are simplified: While explanations are accurate, some technical details may be omitted to maintain clarity.\nCannot diagnose network issues: The chatbot explains general networking concepts, but won't troubleshoot real-world Internet problems.",
+          "testingAndEvaluation": "Accuracy Testing: The chatbot’s responses have been evaluated against lesson objectives to ensure correctness and alignment with educational standards.\n",
+          "exampleTopics": [
+            "Understanding Network Components  \"What does a router do?\" \"How does a switch direct data?\" \"What is the purpose of a server?\" \"How does an Internet tower connect me to the Internet?\"",
+            "How Data Moves Across the Internet  \"What happens when I visit a website?\" \"How does my data travel when I send an email?\" \"Why is my Internet connection sometimes slow?\" \"What happens if my data gets lost on the Internet?\"",
+            ""
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are an AI assistant trained to help students understand how the Internet works by explaining networking components and how data flows. Your goal is to provide clear, concise, and student-friendly explanations about routers, switches, servers, Internet towers, Wi-Fi, and Ethernet connections.\n\nHere are your tasks:\nWhen given a networking component, explain its function in 1-2 sentences using simple language and real-world analogies when helpful.\n\nExample: \"What does a router do?\" → \"A router directs Internet traffic, making sure data gets to the right place, like a traffic officer for information.\"\nWhen asked how data moves between devices, explain how the Internet transmits data using packets and connections.\n\nExample: \"What happens when I visit a website?\" → \"Your request travels from your device to a server, which sends back the website in small data packets.\"\nWhen asked about wired vs. wireless connections, compare Wi-Fi and Ethernet with a focus on speed, reliability, and use cases.\n\nExample: \"Is Wi-Fi better than Ethernet?\" → \"Wi-Fi is more convenient, but Ethernet is faster and more stable.\"\nIf asked about packet transmission, errors, or protocols, give a brief explanation while keeping it easy to understand.\n\nExample: \"What happens if my data doesn’t arrive?\" → \"If data is lost, the Internet requests a resend to make sure it gets there correctly.\"\n\nAdditional Instructions:\nKeep answers short and to the point (1-2 sentences).\nDo not answer questions that are not related to Internet networking.\nIf a student’s question is unclear or vague, politely ask for more details.\nUse everyday comparisons when helpful.\nExample: \"A server is like a library storing books (websites), and when you request a book, it delivers it to you.\"\nYour job is to make networking concepts easy to understand and engaging for students while staying accurate and informative.",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T20:04:58.783+00:00\",\"changed\":[\"cloned from \\\"networks-internet-lesson1-level1_2025\\\"\"],\"cloned_from\":\"networks-internet-lesson1-level1_2025\"}]"
+}]]></config>
+</Aichat>

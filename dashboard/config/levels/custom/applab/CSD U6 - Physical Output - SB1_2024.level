@@ -80,7 +80,7 @@
     "teacher_markdown": "**Why Are We Talking Pins?** You may notice that in the early levels of this lesson students are programming in a much different way than they have before, directly manipulating pins. The `digitalWrite()` and `pinMode()` commands are useful to get our wiring set up quickly, but are not the core concerns of this lesson. As soon as students are comfortable wiring LED circuits we will introduce techniques to control those LEDs with the higher level commands that have been used up to this point (like `led.on()` and `led.off()`).",
     "parent_level_id": 20595,
     "name_suffix": "_2024",
-    "map_reference": "/courses/csd-2022/guides/circuits-and-leds",
+    "map_reference": "/courses/csd-2024/guides/circuits-and-leds",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "encrypted": "false",

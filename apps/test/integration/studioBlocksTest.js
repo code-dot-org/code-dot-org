@@ -1,9 +1,12 @@
-import {assert} from '../util/reconfiguredChai';
-import {parseElement} from '@cdo/apps/xml';
-import {setupTestBlockly, getStudioAppSingleton} from './util/testBlockly';
+import {getBlockFields} from '@cdo/apps/blockly/utils';
 import blocksCommon from '@cdo/apps/blocksCommon';
 import blocks from '@cdo/apps/studio/blocks';
 import skins from '@cdo/apps/studio/skins';
+import {parseElement} from '@cdo/apps/xml';
+
+import {assert} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+
+import {setupTestBlockly, getStudioAppSingleton} from './util/testBlockly';
 
 describe('Custom studio blocks', function () {
   let studioApp, skin;
@@ -25,10 +28,7 @@ describe('Custom studio blocks', function () {
       assert(Blockly.mainBlockSpace.getAllBlocks().length === 1);
 
       var block = Blockly.mainBlockSpace.getAllBlocks()[0];
-      var lastTitle =
-        Blockly.cdoUtils.getBlockFields(block)[
-          Blockly.cdoUtils.getBlockFields(block).length - 1
-        ];
+      var lastTitle = getBlockFields(block)[getBlockFields(block).length - 1];
 
       assert(block.getFieldValue('SPRITENAME') === '"witch"');
       assert(lastTitle.getText().indexOf('witch') !== -1);
@@ -45,10 +45,7 @@ describe('Custom studio blocks', function () {
       assert(Blockly.mainBlockSpace.getAllBlocks().length === 1);
 
       var block = Blockly.mainBlockSpace.getAllBlocks()[0];
-      var lastTitle =
-        Blockly.cdoUtils.getBlockFields(block)[
-          Blockly.cdoUtils.getBlockFields(block).length - 1
-        ];
+      var lastTitle = getBlockFields(block)[getBlockFields(block).length - 1];
 
       assert(block.getFieldValue('SPRITENAME') === '"dinosaur"');
       assert(lastTitle.getText().indexOf('dinosaur') !== -1);

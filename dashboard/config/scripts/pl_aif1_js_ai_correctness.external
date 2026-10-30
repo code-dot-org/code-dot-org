@@ -1,0 +1,45 @@
+name 'pl-aif1-js-ai-correctness'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<h1>AI Confidence Isn't AI Correctness</h1>
+
+<p>The code you just explored included a line that finds an element by its ID: <code>document.getElementById("buttonID")</code>. AI wrote that ID as a guess, one that sounds exactly like something that should exist. Whether it actually does is a different question entirely.</p>
+
+<div style="background-color: #D5EFFF; color: #06338D; border-radius: 10px; padding: 14px 18px; margin: 20px 0; text-align: center;">
+<p>AI doesn't know if it's correct. It generates its best guess.</p>
+</div>
+
+
+<div style="text-align: center; margin: 20px 0;">
+<img src="https://images.code.org/d73f4ddcf765d32c5937f300788dcf94-image-1786374966907.png" alt="A code snippet reading const btn = document.getElementById('buttonID'); with 'buttonID' circled in red and an arrow pointing to a handwritten annotation asking, Does this actually exist on the web page?" style="max-width: 650px; width: 100%; border-radius: 10px;">
+</div>
+
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px;">
+<p>📖 <b>Context Blindness</b> is when AI generates code based on patterns from similar pages it's seen before, rather than actually seeing your specific page. When it guesses an ID like "buttonID" that doesn't exist on your page, that's context blindness in action.</p>
+</div>
+<br>
+
+
+<p>This is the same pattern-matching behavior you've seen throughout this unit, AI producing what's statistically likely rather than what's actually true for your page. It's the same reason accessibility gaps show up reliably in AI-generated code: AI isn't checking, it's predicting.</p>
+
+<h2>Three Ways to Debug AI's Guesses</h2>
+
+<p>When you're troubleshooting AI-generated code with a student, try:</p>
+
+<ul>
+<li><b>Show the element.</b> Include a screenshot of the actual element in your prompt or conversation with AI.</li>
+<li><b>Describe the element.</b> Give details like the text it contains, its color, or its position on the page.</li>
+<li><b>Ask AI to confirm.</b> Have it verify which element it's actually selecting before assuming the code is right.</li>
+</ul>
+
+<div style="background-color: #E4E2F8; color: #222222; border-radius: 10px; padding: 16px 20px; margin: 20px 0;">
+<p><strong>💡 Teacher tip:</strong> when a student's code doesn't work, the instinct is often to assume AI made a mistake it should fix on its own. It won't, not without more context. Teaching students to show, describe, or confirm is the debugging skill that actually matters here, more than any specific line of code.</p>
+</div>
+
+<p>Next, you'll put all of this together in Web Lab: adding a real event listener and handler to a button, and troubleshooting it the way your students will.</p>
+
+
+MARKDOWN

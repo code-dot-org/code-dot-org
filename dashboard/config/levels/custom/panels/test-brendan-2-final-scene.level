@@ -1,0 +1,45 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-05-28T17:03:37.000Z",
+  "level_num": "custom",
+  "user_id": 574,
+  "properties": {
+    "panels": [
+      {
+        "key": "test-brendan-2-final-scene-2755609f-4630-435d-b04b-bafe918bc7fd",
+        "text": "We've explored how **lighting** sculpts 3D objects, adding crucial depth and making them look solid rather than flat.",
+        "imageUrl": "https://images.code.org/ea7bc24346289283bf6b1b5f659e43ca-test-brendan-2-final-scene-panel-1-73f5235c-4c68-4f24-8f82-a78221ee3269.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "test-brendan-2-final-scene-d3f85f8c-550c-40c9-86be-810554678dc4",
+        "text": "Then, we saw how **materials** define an object's surface, controlling its color, shininess, and how it reflects light, bringing texture and realism.",
+        "imageUrl": "https://images.code.org/7c6890a1dd9426c494e2dff5f299eb1a-test-brendan-2-final-scene-panel-2-7b96c0dc-bc0f-4a0c-b773-f135f47bd3fe.png",
+        "layout": "text-bottom-left"
+      },
+      {
+        "key": "test-brendan-2-final-scene-eb1500ab-39f3-4d80-9bd4-a014f540530a",
+        "text": "Finally, we learned that **user interaction** transforms static scenes into dynamic, responsive experiences, allowing users to move or rotate objects with a keyboard or mouse.",
+        "imageUrl": "https://images.code.org/09d70221b0f5519b9d48bba2dac67617-test-brendan-2-final-scene-panel-3-cd0b8fd2-e612-4e3f-a23b-594142edc30e.png",
+        "layout": "text-top-right"
+      },
+      {
+        "key": "test-brendan-2-final-scene-df56baf7-d96e-48b5-ab3c-6309aa6c3b8a",
+        "text": "When **lighting**, **materials**, and **interaction** are combined, your 3D creations truly come alive. Imagine controlling a shiny, metallic sphere bouncing through a lit tunnel!",
+        "imageUrl": "https://images.code.org/e4b8b68529ae4885c75f84058a5f1b4c-test-brendan-2-final-scene-panel-4-59b25eca-51a1-4c80-9518-14edf0ff7b2b.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "test-brendan-2-final-scene-87eb2832-1e53-4d5c-bd77-0344210424d9",
+        "text": "By mastering these concepts, you can build engaging, immersive 3D web experiences that are not only visually stunning but also interactive and fun!",
+        "imageUrl": "https://images.code.org/b78b6ab9f99d7989de2a57c1750bfad7-test-brendan-2-final-scene-panel-5-1b8efa0b-8822-4bcf-8019-4408f1967483.png",
+        "layout": "text-top-left"
+      }
+    ],
+    "generate_outline": "Summarize how lighting, materials, and user interaction combine to create dynamic and visually appealing 3D scenes. Provide examples of what students can achieve by integrating these concepts."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-28 17:04:31 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-28 17:04:31 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

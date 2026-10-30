@@ -1,0 +1,74 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2024-05-04T02:44:55.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "skin": "gamelab",
+    "code_functions": {
+      "ellipse": null,
+      "declareAssign_x": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "start_blocks": "var xPosition = 50;\r\n\r\nellipse(xPosition, 350, 100, 100);",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "true",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "validation_enabled": "false",
+    "text_mode_at_start": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "true",
+    "instructions_important": "false",
+    "hide_animation_mode": "true",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "pause_animations_by_default": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_debug_watch": "true",
+    "expand_debugger": "false",
+    "long_instructions": "predict level",
+    "parent_level_id": 20661,
+    "name_suffix": "_CSD-PL-24",
+    "reference_links": [
+      "/courses/csd-2024/guides/drawing-shapes",
+      "/courses/csd-2024/guides/shapes-and-parameters",
+      "/courses/csd-2024/guides/random-numbers"
+    ],
+    "map_reference": "/courses/csd-2024/guides/variables",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "show_type_hints": "false",
+    "contained_level_names": [
+      "CSD game variable predict_CSD-PL-24"
+    ],
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "libraries_enabled": "false",
+    "teacher_markdown": "Students may notice that the term `xPosition` is associated with the value 50, and so when we see the term `xPosition` farther down in the code, they may think it will use the value of 50 in that spot and draw the circle on the left side of the screen. When describing this relationship, they may not have the correct words to describe what's happening and may wonder what the purple `var` keyword means. Encourage students to use other familiar words when describing this relationship, like \"container\" or \"placeholder\", before introducing vocabulary",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-05-04T02:44:55.593+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Variables Predict Where X_2024\\\"\"],\"cloned_from\":\"CSD U3 Variables Predict Where X_2024\"}]"
+}]]></config>
+  <blocks/>
+</Gamelab>

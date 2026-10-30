@@ -4,17 +4,22 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_course": true,
+      "content_area": "other",
+      "curriculum_umbrella": "Other",
       "is_migrated": true,
-      "version_year": "unversioned"
+      "supported_locales": [
+        "es-LA",
+        "es-MX",
+        "es-ES"
+      ]
     },
     "new_name": null,
-    "family_name": "pixelation",
-    "serialized_at": "2021-11-22 19:57:09 UTC",
-    "published_state": "preview",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "family_name": null,
+    "serialized_at": "2025-03-28 09:30:15 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "pixelation"
     }
@@ -548,6 +553,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

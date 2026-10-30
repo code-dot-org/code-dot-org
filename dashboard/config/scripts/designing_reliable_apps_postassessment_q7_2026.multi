@@ -1,0 +1,14 @@
+name 'designing-reliable-apps-postassessment-q7_2026'
+
+question 'A developer wants to rewrite this Promise chain using async/await: fetch(url).then(res => res.json()).then(data => display(data)); — Which refactored version is correct?'
+
+wrong 'function getData() { const res = fetch(url); const data = res.json(); display(data); }'
+wrong 'async function getData() { const res = fetch(url); const data = res.json(); display(data); }'
+wrong 'function getData() { const res = await fetch(url); const data = await res.json(); display(data); }'
+right 'async function getData() { const res = await fetch(url); const data = await res.json(); display(data); }'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 4
+MARKDOWN

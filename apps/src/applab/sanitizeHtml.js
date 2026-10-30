@@ -1,4 +1,5 @@
 import sanitize from 'sanitize-html';
+
 import * as elementUtils from './designElements/elementUtils';
 
 /**

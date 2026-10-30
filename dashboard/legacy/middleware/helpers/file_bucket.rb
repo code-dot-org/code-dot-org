@@ -6,12 +6,32 @@ class FileBucket < BucketHelper
   MAXIMUM_FILENAME_LENGTH = 512
 
   def initialize
-    super CDO.files_s3_bucket, CDO.files_s3_directory
+    super(CDO.files_s3_bucket, CDO.files_s3_directory)
   end
 
   def allowed_file_type?(extension)
-    # Allow all file types recognized by Sinatra
-    Sinatra::Base.mime_type(extension)
+    # use Sinatra to get the mime_type
+    mime_type = Sinatra::Base.mime_type(extension)
+
+    # and compare it against of our allowed regex-ish strings.
+    allowed_mime_regexes = [
+      "image/",
+      "text/",
+      "audio/",
+      "video/",
+      "application/json",
+      "application/ld+json",
+      "application/pdf",
+      "application/rtf",
+    ]
+
+    allowed_mime_regexes.each do |type|
+      if Regexp.new(type).match(mime_type)
+        return true
+      end
+    end
+
+    return false
   end
 
   def get_manifest(channel_id)
@@ -25,7 +45,7 @@ class FileBucket < BucketHelper
   def copy_files(src_channel, dest_channel, options = {})
     # copy everything except the manifest
     options[:exclude_filenames] = [MANIFEST_FILENAME]
-    result = super src_channel, dest_channel, options
+    result = super
     # return right away if there are no files in the source project
     return [] if result.empty?
 
@@ -53,7 +73,7 @@ class FileBucket < BucketHelper
   # expiration.
   #
   def make_temporary_public_url(encrypted_channel_id, filename, expires_in = 5.minutes)
-    owner_id, storage_app_id = storage_decrypt_channel_id(encrypted_channel_id)
+    owner_id, storage_app_id = get_storage_id_and_project_id(encrypted_channel_id)
     key = s3_path owner_id, storage_app_id, filename
     Aws::S3::Presigner.new(client: s3).presigned_url(
       :get_object,

@@ -1,0 +1,53 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-09-07T14:20:16.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Energy Usage Data",
+    "long_instructions": "You’d like to convert the energy usage data from [the spreadsheet](https://docs.google.com/spreadsheets/d/18UwtdBHy_PiAWNgZKEWYslFm9PpX24r9Sw1yivG7gvc/edit?usp=sharing) to a CSV file so that Python programs can more easily work with the data.\r\n\r\n**☑️ Do This:**\r\n\r\n1. Populate `energy.csv` with data from at least three rows from the spreadsheet. Remember to also include a header row with column names!\r\n2. Press “Run” to see a visual representation of the CSV file and verify that it looks like what you expect.",
+    "bubble_choice_description": "Create a CSV file for a school's energy usage.",
+    "thumbnail_url": "https://images.code.org/e71e29a735284b85e65c8239702a5631-eco-house.png",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "import csv\n\nFILENAME = \"energy.csv\"\n\n\ndef read_rows(filename):\n    with open(filename) as f:\n        return [row for row in csv.reader(f)]\n\n\ndef column_widths(rows):\n    widths = []\n    for row in rows:\n        for i, cell in enumerate(row):\n            if i == len(widths):\n                widths.append(0)\n            widths[i] = max(widths[i], len(cell))\n    return widths\n\n\ndef separator(widths):\n    return \"+\" + \"+\".join(\"-\" * (w + 2) for w in widths) + \"+\"\n\n\ndef format_row(row, widths):\n    cells = []\n    for i, w in enumerate(widths):\n        cell = row[i] if i < len(row) else \"\"\n        cells.append(\" \" + cell.ljust(w) + \" \")\n    return \"|\" + \"|\".join(cells) + \"|\"\n\n\ndef main():\n    rows = read_rows(FILENAME)\n    if len(rows) == 0:\n        print(f\"{FILENAME} is empty. Add your data and try again.\")\n        return\n\n    widths = column_widths(rows)\n    line = separator(widths)\n\n    print(line)\n    print(format_row(rows[0], widths))\n    print(line)\n    for row in rows[1:]:\n        print(format_row(row, widths))\n    print(line)\n\n\nmain()",
+          "folderId": "0",
+          "active": false,
+          "type": "support"
+        },
+        "1": {
+          "id": "1",
+          "name": "energy.csv",
+          "contents": "",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\ngyqRrNbDmxmW3CIGl/3mFjGJHf/yxg==\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-07 14:20:55 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 14:21:03 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>

@@ -1,0 +1,28 @@
+<Pixelation>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 44,
+  "created_at": "2026-10-03T22:54:55.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "short_instructions": "Let’s gain even more control by using 3 bits per color this time, or 9 bits per pixel!  Again, we’ve done the red row for you.  Your job is to complete the shades of green and blue.",
+    "long_instructions": "# Color Pixelation: Task 2\r\n**Directions:**\r\nLet’s gain even more control by using 3 bits per color this time, or 9 bits per pixel!  Again, we’ve done the red row for you.  Your job is to complete the shades of green and blue.",
+    "version": "3",
+    "data": "000010000000001100001001000000000001000000010000000011000000100000000101000000110000000111000000",
+    "href": "pixelation/pixelation.html",
+    "skip_dialog": true,
+    "parent_level_id": 18944,
+    "name_suffix": "_2025",
+    "instructions_important": "false",
+    "hex": "false",
+    "hide_encoding_controls": "false",
+    "v1_hide_sliders": "false",
+    "encrypted": "false",
+    "map_reference": "/courses/csp-2024/guides/update-screen-pattern",
+    "ai_tutor_available": "true"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2026-10-03T22:54:55.143+00:00\",\"changed\":[\"cloned from \\\"CSP U1L10 Color Pixelation Widget 3_2025\\\"\"],\"cloned_from\":\"CSP U1L10 Color Pixelation Widget 3_2025\"},{\"changed_at\":\"2026-10-03 22:54:57 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Pixelation>

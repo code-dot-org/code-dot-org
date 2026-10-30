@@ -1,0 +1,37 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-11-12T19:30:46.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "true",
+    "panels": [
+      {
+        "text": "#Confirmation Message\n\nAn “Are you sure?” confirmation message appears when a website wants to double-check that you really want to do something, like delete a file or submit a form.",
+        "imageUrl": "https://images.code.org/10a35356def12590057b47080bbb55d9-Screenshot 2025-10-16 at 12.21.36 PM.png",
+        "key": "computer-systems-lesson3-onlineresources-1-5c25ddab-c99a-4b94-8628-1e8d9bc30c38",
+        "layout": "text-top-left"
+      },
+      {
+        "text": "#Timothy\n_Graphic Designer_\n\n> I like moving fast when I’m creating, but those “Are you sure?” pop-ups keep interrupting my flow. \n> I just want to get my ideas out without stopping every few seconds to confirm something!",
+        "imageUrl": "https://images.code.org/b8ea07066b317bdcb386520417f28451-Screenshot 2025-10-16 at 12.34.07 PM.png",
+        "key": "undefined-91f68b3a-8101-4f9c-861a-555ac85b7c47"
+      },
+      {
+        "text": "#Martina\n_Retired Art Teacher_\n\n> I love creating my own digital art projects and sharing them with others. On a different site, I once deleted my work by accident—but here, I really appreciate that I always get an “Are you sure?” pop-up before anything is deleted!",
+        "imageUrl": "https://images.code.org/2d214a703693dbbe3a6468172e31bb9b-Screenshot 2025-10-16 at 12.34.44 PM.png",
+        "key": "ai-and-algorithmic-decisions-lesson1-level3b-test-2025-4ea4078e-bd1e-4e8b-9689-3877632820ff",
+        "layout": "text-top-left"
+      }
+    ],
+    "display_name": "Confirmation Messages",
+    "thumbnail_url": "https://images.code.org/917ca40deb1b2acf3cd3930f71d30d5d-Screenshot 2025-10-16 at 12.40.45 PM.png",
+    "name_suffix": "_2025",
+    "bubble_choice_description": "Hear from different users on their opinion of **confirmation messages**."
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-12T19:30:46.114+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson1-level3b-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson1-level3b-test-2025\"},{\"changed_at\":\"2025-11-12 19:31:43 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Panels>

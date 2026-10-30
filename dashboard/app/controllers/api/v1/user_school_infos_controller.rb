@@ -32,8 +32,6 @@ class Api::V1::UserSchoolInfosController < ApplicationController
         else
           # VALIDATION_COMPLETE is passed when the school_id does not exist to check
           # form for completeness; specifically, school name is required.
-          # If school_id does not exist, ncesSchoolId is set to -1 when the checkbox
-          # for school not found is clicked.
           SchoolInfo.where(school_info_params).
             first_or_create(validation_type: SchoolInfo::VALIDATION_COMPLETE)
         end
@@ -51,6 +49,6 @@ class Api::V1::UserSchoolInfosController < ApplicationController
 
   private def school_info_params
     @school_info_params ||= params.require(:user).require(:school_info_attributes).
-      permit(:school_type, :school_name, :full_address, :country, :school_id)
+      permit(:school_type, :school_name, :full_address, :country, :school_id, :zip)
   end
 end

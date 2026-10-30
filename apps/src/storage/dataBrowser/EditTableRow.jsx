@@ -1,12 +1,18 @@
-import FirebaseStorage from '../firebaseStorage';
-import PropTypes from 'prop-types';
-import React from 'react';
-import PendingButton from '../../templates/PendingButton';
-import {castValue, displayableValue, editableValue} from './dataUtils';
-import dataStyles from './data-styles.module.scss';
+import TextField from '@code-dot-org/component-library/textField';
+import {Button as MuiButton, Typography} from '@mui/material';
 import classNames from 'classnames';
 import _ from 'lodash';
+import PropTypes from 'prop-types';
+import React from 'react';
+
 import msg from '@cdo/locale';
+
+import {storageBackend} from '../storage';
+
+import {castValue, displayableValue, editableValue} from './dataUtils';
+import {refreshCurrentDataView} from './loadDataForView';
+
+import dataStyles from './data-styles.module.scss';
 
 const INITIAL_STATE = {
   isDeleting: false,
@@ -57,10 +63,10 @@ class EditTableRow extends React.Component {
         castValue(inputString, /* allowUnquotedStrings */ false)
       );
       this.setState({isSaving: true});
-      FirebaseStorage.updateRecord(
+      storageBackend().updateRecord(
         this.props.tableName,
         newRecord,
-        this.resetState,
+        this.onRecordChanged,
         msg => console.warn(msg)
       );
     } catch (e) {
@@ -69,11 +75,13 @@ class EditTableRow extends React.Component {
     }
   };
 
-  resetState = () => {
+  onRecordChanged = () => {
     // Deleting a row may have caused this component to become unmounted.
     if (this.isMounted_) {
       this.setState(INITIAL_STATE);
     }
+
+    refreshCurrentDataView();
   };
 
   handleEdit = () => {
@@ -85,10 +93,10 @@ class EditTableRow extends React.Component {
 
   handleDelete = () => {
     this.setState({isDeleting: true});
-    FirebaseStorage.deleteRecord(
+    storageBackend().deleteRecord(
       this.props.tableName,
       this.props.record,
-      this.resetState,
+      this.onRecordChanged,
       msg => console.warn(msg)
     );
   };
@@ -107,14 +115,19 @@ class EditTableRow extends React.Component {
         {this.props.columnNames.map(columnName => (
           <td key={columnName} className={dataStyles.cell}>
             {this.state.isEditing && columnName !== 'id' ? (
-              <input
-                className={dataStyles.input}
+              <TextField
+                name={columnName}
+                className={dataStyles.dataField}
+                color="gray"
+                size="s"
                 value={this.state.newInput[columnName] || ''}
                 onChange={event => this.handleChange(columnName, event)}
                 onKeyUp={this.handleKeyUp}
               />
             ) : (
-              displayableValue(this.props.record[columnName])
+              <Typography variant="body2" component="span">
+                {displayableValue(this.props.record[columnName])}
+              </Typography>
             )}
           </td>
         ))}
@@ -125,40 +138,58 @@ class EditTableRow extends React.Component {
           <td className={classNames(dataStyles.cell, dataStyles.editButton)}>
             {!this.state.isDeleting &&
               (this.state.isEditing ? (
-                <PendingButton
-                  isPending={this.state.isSaving}
+                <MuiButton
+                  variant="outlined"
+                  color="tertiary"
+                  size="small"
+                  loading={this.state.isSaving}
+                  disabled={this.state.isSaving}
+                  className={classNames(
+                    dataStyles.button,
+                    dataStyles.buttonText,
+                    dataStyles.buttonRightMargin
+                  )}
+                  id="saveTableRowButton"
                   onClick={this.handleSave}
-                  pendingText={msg.saving()}
-                  className={classNames(
-                    dataStyles.button,
-                    dataStyles.buttonBlue,
-                    dataStyles.buttonBlueSave
-                  )}
-                  text={msg.save()}
-                />
-              ) : (
-                <button
+                  aria-label={msg.save()}
                   type="button"
+                >
+                  {msg.save()}
+                </MuiButton>
+              ) : (
+                <MuiButton
+                  variant="outlined"
+                  color="tertiary"
+                  size="small"
+                  disabled={this.state.isSaving}
                   className={classNames(
                     dataStyles.button,
-                    dataStyles.buttonWhite,
-                    dataStyles.buttonWhiteEdit
+                    dataStyles.buttonText,
+                    dataStyles.buttonRightMargin
                   )}
+                  id="editTableRowButton"
                   onClick={this.handleEdit}
+                  aria-label={msg.edit()}
+                  type="button"
                 >
                   {msg.edit()}
-                </button>
+                </MuiButton>
               ))}
-
             {!this.state.isSaving && (
-              <PendingButton
-                isPending={this.state.isDeleting}
+              <MuiButton
+                variant="contained"
+                color="error"
+                size="small"
+                loading={this.state.isDeleting}
+                disabled={this.state.isDeleting}
+                className={classNames(dataStyles.button, dataStyles.buttonText)}
+                id="deleteTableRowButton"
                 onClick={this.handleDelete}
-                pendingStyle={{float: 'right'}}
-                pendingText={msg.deletingWithEllipsis()}
-                className={classNames(dataStyles.button, dataStyles.buttonRed)}
-                text={msg.delete()}
-              />
+                aria-label={msg.delete()}
+                type="button"
+              >
+                {msg.delete()}
+              </MuiButton>
             )}
           </td>
         )}

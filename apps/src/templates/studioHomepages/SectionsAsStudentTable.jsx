@@ -1,24 +1,42 @@
+import Link from '@code-dot-org/component-library/link';
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import color from '@cdo/apps/util/color';
-import styleConstants from '../../styleConstants';
-import i18n from '@cdo/locale';
-import shapes from './shapes';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
-import Button from '@cdo/apps/templates/Button';
-import {tableLayoutStyles} from '../tables/tableConstants';
+
 import fontConstants from '@cdo/apps/fontConstants';
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
+import i18n from '@cdo/locale';
+
+import styleConstants from '../../styleConstants';
+import {plTableLayoutStyles} from '../tables/tableConstants';
+
+import shapes from './shapes';
 
 class SectionsAsStudentTable extends React.Component {
   static propTypes = {
-    sections: shapes.sections,
+    sections: shapes.participantSections,
     isRtl: PropTypes.bool.isRequired,
     canLeave: PropTypes.bool.isRequired,
     updateSections: PropTypes.func,
     updateSectionsResult: PropTypes.func,
     isPlSections: PropTypes.bool,
   };
+
+  renderSectionCodeCell(section) {
+    if (section.login_type === SectionLoginType.clever) {
+      return i18n.loginTypeClever();
+    } else if (section.login_type === SectionLoginType.google_classroom) {
+      return i18n.loginTypeGoogleClassroom();
+    } else if (section.login_type === SectionLoginType.classlink) {
+      return i18n.loginTypeClassLink();
+    } else if (!section.code) {
+      // Demo sections have no join code; students are pre-enrolled.
+      return i18n.notApplicable();
+    } else {
+      return section.code;
+    }
+  }
 
   onLeave(sectionCode, sectionName) {
     $.post({
@@ -37,6 +55,9 @@ class SectionsAsStudentTable extends React.Component {
 
   render() {
     const {sections, isRtl, canLeave} = this.props;
+    const styles = this.props.isPlSections
+      ? plTableLayoutStyles
+      : studentSectionsStyles;
 
     return (
       <table
@@ -49,33 +70,41 @@ class SectionsAsStudentTable extends React.Component {
       >
         <thead>
           <tr style={styles.headerRow}>
-            <td
+            <th
               style={{
                 ...styles.col,
+                ...styles.colHeader,
                 ...styles.sectionNameCol,
                 ...styles.headerRowPadding,
               }}
             >
               <div style={styles.colText}>{i18n.section()}</div>
-            </td>
-            <td style={{...styles.col, ...styles.courseCol}}>
+            </th>
+            <th
+              style={{...styles.col, ...styles.colHeader, ...styles.courseCol}}
+            >
               <div style={styles.colText}>{i18n.course()}</div>
-            </td>
-            <td style={{...styles.col, ...styles.teacherCol}}>
+            </th>
+            <th
+              style={{...styles.col, ...styles.colHeader, ...styles.teacherCol}}
+            >
               <div style={styles.colText}>{i18n.teacher()}</div>
-            </td>
-            <td
+            </th>
+            <th
               style={{
                 ...styles.col,
+                ...styles.colHeader,
                 ...(isRtl ? styles.sectionCodeColRtl : styles.sectionCodeCol),
               }}
             >
               <div style={styles.colText}>{i18n.sectionCode()}</div>
-            </td>
+            </th>
             {canLeave && (
-              <td style={{...styles.col, ...styles.leaveCol}}>
+              <th
+                style={{...styles.col, ...styles.colHeader, ...styles.leaveCol}}
+              >
                 <div style={styles.colText} />
-              </td>
+              </th>
             )}
           </tr>
         </thead>
@@ -93,20 +122,18 @@ class SectionsAsStudentTable extends React.Component {
                 <div>{section.name}</div>
               </td>
               <td style={{...styles.col, ...styles.courseCol}}>
-                <a href={section.linkToAssigned} style={styles.link}>
+                <Link href={section.linkToAssigned} size="s">
                   {section.assignedTitle}
-                </a>
-                {section.currentUnitTitle && (
-                  <div style={styles.currentUnit}>
-                    <div>{i18n.currentUnit()}</div>
-                    <a
-                      href={section.linkToCurrentUnit}
-                      style={tableLayoutStyles.link}
-                    >
-                      {section.currentUnitTitle}
-                    </a>
-                  </div>
-                )}
+                </Link>
+                {!section.is_assigned_single_unit_course &&
+                  section.currentUnitTitle && (
+                    <div style={styles.currentUnit}>
+                      <div>{i18n.currentUnit()}</div>
+                      <Link href={section.linkToCurrentUnit} size="s">
+                        {section.currentUnitTitle}
+                      </Link>
+                    </div>
+                  )}
               </td>
               <td style={{...styles.col, ...styles.col3Student}}>
                 {section.teacherName}
@@ -117,24 +144,25 @@ class SectionsAsStudentTable extends React.Component {
                   ...(isRtl ? styles.sectionCodeColRtl : styles.sectionCodeCol),
                 }}
               >
-                {section.login_type === SectionLoginType.clever
-                  ? i18n.loginTypeClever()
-                  : section.login_type === SectionLoginType.google_classroom
-                  ? i18n.loginTypeGoogleClassroom()
-                  : section.code}
+                {this.renderSectionCodeCell(section)}
               </td>
               {canLeave && (
                 <td style={{...styles.col, ...styles.leaveCol}}>
-                  <Button
-                    style={{marginLeft: 5}}
-                    text={i18n.leaveSection()}
-                    onClick={this.onLeave.bind(
-                      this,
-                      section.code,
-                      section.name
-                    )}
-                    color={Button.ButtonColor.gray}
-                  />
+                  {section.code && (
+                    <MuiButton
+                      style={styles.leaveButton}
+                      variant="outlined"
+                      color="tertiary"
+                      size="small"
+                      onClick={this.onLeave.bind(
+                        this,
+                        section.code,
+                        section.name
+                      )}
+                    >
+                      {i18n.leaveSection()}
+                    </MuiButton>
+                  )}
                 </td>
               )}
             </tr>
@@ -147,17 +175,16 @@ class SectionsAsStudentTable extends React.Component {
 
 // When this table gets converted to reacttabular, it should also
 // use styles from /tables/tableConstants.js
-const styles = {
+const studentSectionsStyles = {
   table: {
     borderWidth: 1,
     borderStyle: 'solid',
-    borderColor: color.border_gray,
+    borderColor: 'var(--borders-neutral-primary)',
     width: styleConstants['content-width'],
   },
   headerRow: {
-    backgroundColor: color.table_header,
     fontWeight: 'bold',
-    borderColor: color.border_light_gray,
+    borderColor: 'var(--borders-neutral-primary)',
     borderStyle: 'solid',
     borderBottomWidth: 1,
     borderTopWidth: 0,
@@ -169,13 +196,13 @@ const styles = {
     paddingBottom: 20,
   },
   lightRow: {
-    backgroundColor: color.table_light_row,
+    backgroundColor: 'var(--background-neutral-primary)',
   },
   darkRow: {
-    backgroundColor: color.table_dark_row,
+    backgroundColor: 'var(--background-neutral-secondary)',
   },
   row: {
-    borderBottomColor: color.border_light_gray,
+    borderBottomColor: 'var(--borders-neutral-primary)',
     borderBottomWidth: 1,
     borderBottomStyle: 'solid',
     paddingTop: 20,
@@ -183,14 +210,17 @@ const styles = {
   },
   col: {
     borderRightWidth: 1,
-    borderRightColor: color.border_light_gray,
+    borderRightColor: 'var(--borders-neutral-primary)',
     borderRightStyle: 'solid',
     borderTopWidth: 0,
     borderLeftWidth: 0,
     borderBottomWidth: 0,
-    color: color.charcoal,
+    color: 'var(--text-neutral-tertiary)',
     paddingLeft: 20,
     paddingRight: 20,
+  },
+  colHeader: {
+    backgroundColor: 'var(--background-neutral-tertiary)',
   },
   sectionNameCol: {
     width: 310,
@@ -219,20 +249,17 @@ const styles = {
   leaveCol: {
     width: 110,
     borderLeftWidth: 1,
-    borderLeftColor: color.border_light_gray,
+    borderLeftColor: 'var(--borders-neutral-primary)',
     borderLeftStyle: 'solid',
   },
+  leaveButton: {
+    marginLeft: 5,
+  },
   colText: {
-    color: color.charcoal,
+    color: 'var(--text-neutral-tertiary)',
     ...fontConstants['main-font-semi-bold'],
     fontSize: 14,
     lineHeight: '22px',
-  },
-  link: {
-    color: color.teal,
-    ...fontConstants['main-font-semi-bold'],
-    fontSize: 14,
-    textDecoration: 'none',
   },
   currentUnit: {
     marginTop: 10,

@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-05-06T18:36:13.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Describe 2-3 different groups of people you would want to test the chatbot with before it gets published.\r\n\r\n(For example: young women, or folks who live in rural communities.)",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_2025",
+    "stay_on_level_after_submit": "true"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-06T18:36:13.219+00:00\",\"changed\":[\"cloned from \\\"genai-hallucinations-activity-lvl1e_2025\\\"\"],\"cloned_from\":\"genai-hallucinations-activity-lvl1e_2025\"},{\"changed_at\":\"2025-05-06 18:36:17 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

@@ -1,107 +1,34 @@
 @import 'color.scss';
 @import './common.scss';
 
-// We actually fade out the block to reveal the lab underneath.
-// We will do it over 1s, and then leave it invisible.
-@keyframes fade-out-block {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-// We will fade in the spinner container for 1s after a 2s delay, then leave it showing.
-@keyframes fade-in-spinner-container {
-  0% {
-    opacity: 0;
-  }
-  66% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-// We will fade in the spinner text for 1s after a 10s delay, then leave it showing.
-@keyframes fade-in-spinner-text {
-  0% {
-    opacity: 0;
-  }
-  91% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
+// The lab and the TA drawer are laid out side by side: the lab gets whatever
+// the drawer is not using, so it can measure its own box rather than being
+// told how much of the window to leave alone.
 .labContainer {
-  position: fixed;
-  top: 52px;
-  bottom: 2px;
+  position: absolute;
+  top: $top-spacing;
+  bottom: 0;
   left: 0;
   right: 0;
+  display: flex;
   font-size: 13px;
 
   &Loading {
     pointer-events: none;
   }
 
-  .solidBlock {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: $dark_black;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 52px;
-    left: 0;
-    right: 0;
+  &ShareView {
+    top: 0;
     bottom: 0;
-    pointer-events: none;
-    opacity: 0;
-    z-index: 70;
+  }
 
-    &.noFadeLoading {
-      opacity: 0;
-      pointer-events: initial;
-    }
-
-    &.noFadeLoaded {
-      opacity: 0;
-    }
-
-    &.fadeLoading {
-      opacity: 1;
-      pointer-events: initial;
-    }
-
-    &.fadeLoaded {
-      animation: fade-out-block 0.5s;
-    }
-
-
-
-    .slowLoadContainer {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-
-      .spinnerContainer {
-        color: $neutral_dark40;
-        animation: fade-in-spinner-container 3s;
-      }
-
-      .spinnerText {
-        color: $neutral_dark60;
-        animation: fade-in-spinner-text 11s;
-      }
-    }
+  .labContent {
+    position: relative;
+    flex: 1;
+    // Without this a wide lab refuses to shrink below its content when the
+    // drawer opens, and pushes the drawer off the edge instead.
+    min-width: 0;
+    height: 100%;
   }
 
   .pageErrorContainer {
@@ -109,21 +36,50 @@
     animation: fadein 0.5s;
 
     .pageError {
+      display: flex;
       background-color: $neutral_light;
+      flex-direction: column;
+      align-items: center;
       border-radius: 5px;
       padding: 20px;
-      text-align: center;
+      gap: 20px;
 
       &Image {
         width: 120px;
-        display: block;
-        margin: 2px auto 15px auto;
       }
 
       &Message {
         color: $neutral_dark70;
-        margin-top: 10px;
       }
     }
+  }
+
+  .blockedProjectUIContainer {
+    background-color: $white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 80;
+  }
+
+  // Position the toast container at the top of the lab container.
+  > .labToast {
+    position: absolute;
+    top: 8px;
+    pointer-events: none;
+
+    > * {
+      pointer-events: auto;
+    }
+  }
+
+  .blockedProjectUIContainerProjectValidator {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    z-index: 80;
   }
 }

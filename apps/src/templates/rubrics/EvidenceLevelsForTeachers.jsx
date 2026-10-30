@@ -1,16 +1,15 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import RadioButton from '@code-dot-org/component-library/radioButton';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
+
 import i18n from '@cdo/locale';
-import style from './rubrics.module.scss';
-import {evidenceLevelShape} from './rubricShapes';
-import RadioButton from '@cdo/apps/componentLibrary/radioButton/RadioButton';
-import {
-  BodyThreeText,
-  StrongText,
-  Heading6,
-} from '@cdo/apps/componentLibrary/typography';
+
 import {UNDERSTANDING_LEVEL_STRINGS} from './rubricHelpers';
+import {evidenceLevelShape} from './rubricShapes';
+
+import style from './rubrics.module.scss';
 
 export default function EvidenceLevelsForTeachers({
   evidenceLevels,
@@ -24,7 +23,9 @@ export default function EvidenceLevelsForTeachers({
   if (canProvideFeedback) {
     return (
       <div className={style.evidenceLevelSet}>
-        <Heading6>{i18n.assignARubricScore()}</Heading6>
+        <Typography variant="h6" gutterBottom>
+          {i18n.assignARubricScore()}
+        </Typography>
         {evidenceLevels.map(evidenceLevel => (
           <div
             key={evidenceLevel.id}
@@ -45,11 +46,13 @@ export default function EvidenceLevelsForTeachers({
               checked={understanding === evidenceLevel.understanding}
               disabled={isAutosaving}
             />
-            <BodyThreeText
+            <Typography
               className={classNames(style.evidenceLevelDescriptionIndented)}
+              variant="body3"
+              gutterBottom
             >
               {evidenceLevel.teacherDescription}
-            </BodyThreeText>
+            </Typography>
           </div>
         ))}
       </div>
@@ -57,16 +60,20 @@ export default function EvidenceLevelsForTeachers({
   } else {
     return (
       <div className={style.evidenceLevelSet}>
-        <Heading6>{i18n.rubricScores()}</Heading6>
+        <Typography variant="h6" gutterBottom>
+          {i18n.rubricScores()}
+        </Typography>
         {evidenceLevels.map(evidenceLevel => (
           <div key={evidenceLevel.id} className={style.evidenceLevelOption}>
             {/*TODO: [DES-321] Label-two styles here*/}
-            <BodyThreeText>
-              <StrongText>
+            <Typography variant="body3" gutterBottom>
+              <Typography variant="strong">
                 {UNDERSTANDING_LEVEL_STRINGS[evidenceLevel.understanding]}
-              </StrongText>
-            </BodyThreeText>
-            <BodyThreeText>{evidenceLevel.teacherDescription}</BodyThreeText>
+              </Typography>
+            </Typography>
+            <Typography variant="body3" gutterBottom>
+              {evidenceLevel.teacherDescription}
+            </Typography>
           </div>
         ))}
       </div>

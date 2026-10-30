@@ -2,9 +2,15 @@
 // because they are quite complex and progressRedux.js is already quite large.
 
 import _ from 'lodash';
-import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
-import {processedLevel} from '@cdo/apps/templates/progress/progressHelpers';
+
 import {TestResults} from '@cdo/apps/constants';
+import {processedLevel} from '@cdo/apps/templates/progress/progressHelpers';
+import {
+  LevelStatus,
+  LevelKind,
+  BubbleChoiceNavigationTypes,
+} from '@cdo/generated-scripts/sharedConstants';
+
 import {activityCssClass} from './activityUtils';
 
 const PEER_REVIEW_ID = -1;
@@ -16,6 +22,9 @@ export const hasLockableLessons = state =>
   state.lessons.some(lesson => lesson.lockable);
 
 export const hasGroups = state => Object.keys(groupedLessons(state)).length > 1;
+
+export const getCurrentLesson = state =>
+  state.progress.lessons?.find(l => l.id === state.progress.currentLessonId);
 
 /**
  * Extract the relevant portions of a particular lesson from the store.
@@ -36,9 +45,13 @@ const lessonFromLesson = lesson =>
     'lockable',
     'lessonNumber',
     'lessonStartUrl',
+    'hasLessonPlan',
+    'lessonTutorPath',
+    'assessment',
     'lesson_plan_html_url',
     'lesson_feedback_url',
     'student_lesson_plan_html_url',
+    'title',
     'description_student',
     'description_teacher',
   ]);
@@ -93,25 +106,23 @@ export const getProgressLevelType = state => {
 };
 
 /**
- * Returns the dashboard URL path to retrieve the level properties for a script
- * level (if we have lessons) or a level (if we don't have lessons). If we don't
- * have a current level, this returns undefined.
+ * Returns the dashboard URL path to retrieve the user app options for a script level.
+ * If we don't have a current level, this returns undefined.
  */
-export const getLevelPropertiesPath = state => {
+export const getUserAppOptionsPath = state => {
   if (state.progress.lessons) {
     const scriptName = state.progress.scriptName;
+
     const lessonPosition = state.progress.lessons?.find(
       lesson => lesson.id === state.progress.currentLessonId
     ).relative_position;
-    const levelNumber =
-      levelsForLessonId(
-        state.progress,
-        state.progress.currentLessonId
-      ).findIndex(level => level.isCurrentLevel) + 1;
-    return `/s/${scriptName}/lessons/${lessonPosition}/levels/${levelNumber}/level_properties`;
-  } else if (state.progress.currentLevelId !== null) {
+
+    const currentLevel = getCurrentLevel(state);
+    const levelPosition = currentLevel.levelNumber;
+
     const levelId = state.progress.currentLevelId;
-    return `/levels/${levelId}/level_properties`;
+
+    return `/api/user_app_options/${scriptName}/${lessonPosition}/${levelPosition}/${levelId}`;
   } else {
     return undefined;
   }
@@ -126,9 +137,10 @@ export const getLevelPropertiesPath = state => {
 const levelWithProgress = (
   {levelResults, unitProgress, levelPairing = {}, currentLevelId},
   level,
-  isLockable
+  isLockable,
+  parentLevelId
 ) => {
-  const normalizedLevel = processedLevel(level);
+  const normalizedLevel = processedLevel(level, parentLevelId);
   if (level.ids) {
     // make sure we're using the id with best progress
     normalizedLevel.id = bestResultLevelId(level.ids, levelResults);
@@ -148,7 +160,9 @@ const levelWithProgress = (
     status = levelProgress.status;
     locked = levelProgress.locked;
     teacherFeedbackReviewState = levelProgress.teacherFeedbackReviewState;
-  } else if (level.kind !== LevelKind.assessment) {
+  } else if (
+    !(level.kind === LevelKind.assessment && level.app === 'level_group')
+  ) {
     // if we don't have levelProgress, get the status from `levelResults`.
     // however, `levelResults` doesn't track per-page results for multi-page
     // assessments, so for assessments we leave default values.
@@ -167,6 +181,14 @@ const levelWithProgress = (
     paired: levelPairing[level.activeId],
     isLocked: locked,
     teacherFeedbackReviewState: teacherFeedbackReviewState,
+    sublevels: level.sublevels?.map(sublevel =>
+      levelWithProgress(
+        {levelResults, unitProgress, levelPairing, currentLevelId},
+        sublevel,
+        isLockable,
+        normalizedLevel.id
+      )
+    ),
   };
 };
 
@@ -187,15 +209,6 @@ export const levelsByLesson = ({
         level,
         lesson.lockable
       );
-      if (statusLevel.sublevels) {
-        statusLevel.sublevels = level.sublevels.map(sublevel =>
-          levelWithProgress(
-            {levelResults, unitProgress, levelPairing, currentLevelId},
-            sublevel,
-            lesson.lockable
-          )
-        );
-      }
       return statusLevel;
     })
   );
@@ -211,21 +224,115 @@ export const levelsForLessonId = (state, lessonId) => {
 };
 
 /**
- * Get the index of the current level. On script levels, check
- * which level has isCurrentLevel set. For single levels, return 0.
- * Otherwise, return undefined.
+ * Given a lesson ID, and a level ID, returns the requested level.
  */
-export const currentLevelIndex = state => {
-  if (getProgressLevelType(state) === ProgressLevelType.LEVEL) {
-    return 0;
+export const levelById = (state, lessonId, levelId) => {
+  return levelsForLessonId(state, lessonId)
+    ?.flatMap(level => [level, ...(level?.sublevels || [])])
+    ?.find(level => level.id === levelId);
+};
+
+export const getCurrentLevel = state => {
+  return getCurrentLevels(state)
+    ?.flatMap(level => [level, ...(level?.sublevels || [])])
+    ?.find(level => level.isCurrentLevel);
+};
+
+export const getCurrentLevels = state => {
+  return levelsForLessonId(state.progress, state.progress.currentLessonId);
+};
+
+/**
+ * Get the script level ID of the current level. If the current level is a sublevel,
+ * (and therefore not a script level) return the parent script level ID.
+ * Returns undefined if there is no current level.
+ */
+export const getCurrentScriptLevelId = state => {
+  const currentLevel = getCurrentLevel(state);
+  if (!currentLevel) {
+    return;
   }
-  if (getProgressLevelType(state) === ProgressLevelType.SCRIPT_LEVEL) {
-    return levelsForLessonId(
+
+  if (currentLevel.parentLevelId) {
+    return levelById(
       state.progress,
-      state.progress.currentLessonId
-    ).findIndex(level => level.isCurrentLevel);
+      state.progress.currentLessonId,
+      currentLevel.parentLevelId
+    )?.scriptLevelId;
+  } else {
+    return currentLevel.scriptLevelId;
   }
-  return undefined;
+};
+
+/**
+ * Get a reference to the parent level, if it exists.
+ */
+export const getParentLevel = state => {
+  const currentLevel = getCurrentLevel(state);
+
+  if (currentLevel?.parentLevelId) {
+    return levelById(
+      state.progress,
+      state.progress.currentLessonId,
+      currentLevel.parentLevelId
+    );
+  }
+};
+
+/**
+ * Get a reference to the next level in the progression, if it exists.
+ *
+ * Bubble choice navigation is determined by the navigationType of the current level.
+ * If no navigationType is specified, we default to the parent level.
+ *
+ * Returns undefined if not currently in a script level or currently
+ * on the last level.
+ */
+export const getNextLevel = state => {
+  if (getProgressLevelType(state) !== ProgressLevelType.SCRIPT_LEVEL) {
+    return;
+  }
+
+  const levels = levelsForLessonId(
+    state.progress,
+    state.progress.currentLessonId
+  );
+  const currentLevel = getCurrentLevel(state);
+
+  if (!currentLevel) {
+    return;
+  }
+
+  const parentLevel = currentLevel.parentLevelId
+    ? getParentLevel(state)
+    : undefined;
+
+  // For navigation purposes, use the index of the parent level if this is bubble choice sublevel, or the current level.
+  const navigationLevelIndex = levels.findIndex(
+    level => level.id === (parentLevel ? parentLevel.id : currentLevel.id)
+  );
+
+  const isLastLevel = navigationLevelIndex === levels.length - 1;
+  const nextLevel = isLastLevel ? undefined : levels[navigationLevelIndex + 1];
+
+  if (
+    !parentLevel ||
+    currentLevel.navigationType === BubbleChoiceNavigationTypes.NEXT_LEVEL
+  ) {
+    return nextLevel;
+  }
+
+  if (
+    currentLevel.navigationType === BubbleChoiceNavigationTypes.NEXT_SUBLEVEL
+  ) {
+    const sublevelIndex = parentLevel.sublevels.findIndex(
+      sl => sl.id === currentLevel.id
+    );
+    const nextSublevel = nextLevel?.sublevels?.[sublevelIndex];
+    return nextSublevel || nextLevel;
+  }
+
+  return parentLevel;
 };
 
 /**
@@ -234,21 +341,7 @@ export const currentLevelIndex = state => {
  * currently on the last level.
  */
 export const nextLevelId = state => {
-  if (getProgressLevelType(state) !== ProgressLevelType.SCRIPT_LEVEL) {
-    return undefined;
-  }
-
-  const levels = levelsForLessonId(
-    state.progress,
-    state.progress.currentLessonId
-  );
-  const currentLevelIndex = levels.findIndex(level => level.isCurrentLevel);
-  if (currentLevelIndex === levels.length - 1) {
-    return undefined;
-  }
-
-  const nextLevel = levels[currentLevelIndex + 1];
-  return nextLevel.id;
+  return getNextLevel(state)?.id;
 };
 
 export const levelCount = state => {
@@ -256,17 +349,28 @@ export const levelCount = state => {
     return 1;
   }
   if (getProgressLevelType(state) === ProgressLevelType.SCRIPT_LEVEL) {
-    return levelsForLessonId(state.progress, state.progress.currentLessonId)
-      .length;
+    return getCurrentLevels(state).length;
   }
   return 0;
 };
+
+/**
+ * Returns the number of lessons in the current progression.
+ */
+export const getLessonCount = state =>
+  state.progress.lessons?.[0]?.num_script_lessons || 1;
 
 export const lessonExtrasUrl = (state, lessonId) =>
   state.lessonExtrasEnabled
     ? state.lessons.find(lesson => lesson.id === lessonId)
         .lesson_extras_level_url
     : '';
+
+export const lessonTutorPath = (state, lessonId) =>
+  state.lessons.find(lesson => lesson.id === lessonId)?.lessonTutorPath || '';
+
+export const hasLessonPlan = (state, lessonId) =>
+  !!state.lessons.find(lesson => lesson.id === lessonId)?.hasLessonPlan;
 
 export const isPerfect = (state, levelId) =>
   !!state.levelResults &&

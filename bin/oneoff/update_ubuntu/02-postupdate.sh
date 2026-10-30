@@ -4,16 +4,20 @@ if [[ $(/usr/bin/id -u) -ne 0 ]]; then
   exit
 fi
 
-# Unhold the packages we held prior to the update now that the
-# update is finished.
-apt-mark unhold mysql-server mysql-client;
-apt-mark unhold imagemagick libmagickcore-dev libmagickwand-dev;
+set -e
 
-# Rerun chef build; this is at the very minimum required to reinstall node and
-# resolve the "Can't connect to local MySQL server through socket" error we
-# otherwise get.  The `do-release-upgrade` process also makes some undesired
-# apt configuration changes, which this will revert as desired.
-/opt/chef/bin/chef-client;
+# Upgrade apt packages following the distro upgrade
+apt update;
+apt upgrade --yes;
 
-# Finally, run a regular build to get everything working again!
-echo "now kick off a regular build with something like 'start-build'";
+# Reinstall rmagick to resolve the error:
+#   This installation of RMagick was configured with ImageMagick 6.9.10 but
+#   ImageMagick 6.9.11-60 is in use.
+# Bundle should be run as local rather than root user
+sudo -u ubuntu bundle exec gem uninstall rmagick;
+sudo -u ubuntu bundle install;
+
+# Run a regular build once we're done to get everything working again!
+echo "after the server reboots, kick off a regular build with something like 'start-build'";
+
+reboot;

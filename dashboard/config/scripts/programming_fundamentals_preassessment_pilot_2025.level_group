@@ -1,0 +1,27 @@
+name 'programming-fundamentals-preassessment_pilot-2025'
+title 'Foundations of AI Programming Pre-Assessment'
+submittable 'true'
+anonymous 'false'
+activity_guide_level 'false'
+
+page
+text 'programming-fundamentals-preassessment-intro_pilot-2025'
+level 'programming-fundamentals-preassessment-question1_pilot-2025'
+level 'programming-fundamentals-preassessment-question2_pilot-2025'
+level 'programming-fundamentals-preassessment-question3_pilot-2025'
+level 'programming-fundamentals-preassessment-question4_pilot-2025'
+level 'programming-fundamentals-preassessment-question5_pilot-2025'
+
+page
+level 'programming-fundamentals-preassessment-question6_pilot-2025'
+level 'programming-fundamentals-preassessment-question7_pilot-2025'
+level 'programming-fundamentals-preassessment-question8_pilot-2025'
+level 'programming-fundamentals-preassessment-question9_pilot-2025'
+level 'programming-fundamentals-preassessment-question10_pilot-2025'
+
+page
+level 'programming-fundamentals-preassessment-question11_pilot-2025'
+level 'programming-fundamentals-preassessment-question12_pilot-2025'
+level 'programming-fundamentals-preassessment-question13_pilot-2025'
+level 'programming-fundamentals-preassessment-question14_pilot-2025'
+level 'programming-fundamentals-preassessment-question15_pilot-2025'

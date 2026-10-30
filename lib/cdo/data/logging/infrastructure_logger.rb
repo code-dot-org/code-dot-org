@@ -1,4 +1,5 @@
 require 'cdo/aws/metrics'
+require 'observability/errors'
 # Singleton class that keeps track of metrics owned by the infrastructure team
 # This class is design to keep all the logging centralized regardless of their destination (cloudwatch, honeybadger, etc)
 # The class can also hold common dimensions and logging information relevant to the infrastructure team
@@ -20,10 +21,9 @@ module Infrastructure
       unless @enabled
         return
       end
-      metric_name = "#{CLOUD_WATCH_NAMESPACE}/#{metric_name}"
       metric_value = 1 if metric_value.nil?
       dimensions = extra_dimensions.nil? ? extra_dimensions : extra_dimensions.merge(@dimensions)
-      Cdo::Metrics.put(metric_name, metric_value, dimensions)
+      Cdo::Metrics.put(CLOUD_WATCH_NAMESPACE, metric_name, metric_value, dimensions)
     end
 
     def self.flush
@@ -33,7 +33,7 @@ module Infrastructure
       begin
         flush!
       rescue => exception
-        Honeybadger.notify(
+        Observability::Errors.report(
           exception,
           error_message: "Failed to log rake task information in cloudwatch",
           )

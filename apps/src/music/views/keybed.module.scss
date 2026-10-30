@@ -1,0 +1,84 @@
+@import 'color.scss';
+
+.keybed {
+  display: flex;
+  flex-direction: row;
+
+  &Vertical {
+    flex-direction: column;
+  }
+
+  .key {
+    border-style: solid;
+    border-color: black;
+    border-radius: 0 0 4px 4px;
+    box-sizing: border-box;
+    transition: background-color 0.1s ease;
+    cursor: pointer;
+    position: relative;
+
+    &.whiteKey {
+      border-width: 2px 1px;
+      width: 15px;
+      height: 40px;
+      background-color: white;
+
+      &Vertical {
+        border-width: 1px 2px;
+        width: 40px;
+        height: 15px;
+      }
+    }
+
+    &.blackKey {
+      border-width: 2px 2px;
+      z-index: 1;
+      width: 10px;
+      height: 23px;
+      background-color: black;
+      margin: 0 -5px;
+
+      &Vertical {
+        width: 23px;
+        height: 10px;
+        margin: -5px 0;
+      }
+    }
+
+    &.disabled {
+      background-color: $neutral_dark50;
+
+      &:hover {
+        background-color: $neutral_dark50;
+      }
+    }
+
+    &.selected {
+      background-color: $light_cyan;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $lighter_cyan;
+      }
+    }
+
+    .noteLabel {
+      bottom: 2px;
+      position: absolute;
+      width: 13px;
+      text-align: center;
+      color: $neutral_dark60;
+      font-size: 8px;
+      height: 8px;
+      line-height: 1em;
+
+      &Vertical {
+        right: 1px;
+      }
+    }
+
+    &:hover {
+      background-color: $lightest_cyan;
+    }
+  }
+}

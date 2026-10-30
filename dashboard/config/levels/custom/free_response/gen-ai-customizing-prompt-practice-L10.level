@@ -1,0 +1,30 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-05-03T23:38:33.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "long_instructions": "Hawa is making a chatbot, but all she has for the system prompt is \"Your goal is to help people fix their computer with internet issues\". What are 2 suggestions you would give Hawa to make the chatbot clearer and easier to use? Include specific suggestions!",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 19018,
+    "name_suffix": "2022",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "title": "Check-In",
+    "placeholder": "Type your answer here!",
+    "teacher_markdown": "Look for responses that emphasize the strategies from this lesson, and include specifics."
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-05-03T23:38:33.216+00:00\",\"changed\":[\"cloned from \\\"gen-ai-response-template\\\"\"],\"cloned_from\":\"gen-ai-response-template\"},{\"changed_at\":\"2024-05-07 03:13:21 +0000\",\"changed\":[\"long_instructions\",\"optional\",\"title\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-07 03:13:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

@@ -1,22 +1,34 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
+
+import {showLevelBuilderSaveButton} from '@cdo/apps/code-studio/header';
+import project from '@cdo/apps/code-studio/initApp/project';
+import {lockContainedLevelAnswers} from '@cdo/apps/code-studio/levels/codeStudioLevels';
+import {TestResults} from '@cdo/apps/constants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import Neighborhood from '@cdo/apps/miniApps/neighborhood/Neighborhood';
+import Theater from '@cdo/apps/miniApps/theater/Theater';
 import {getStore, registerReducers} from '@cdo/apps/redux';
+import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
+import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
+import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/userLevelInteractionsApi';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
+import {UserLevelInteractions} from '@cdo/generated-scripts/sharedConstants';
 import javalabMsg from '@cdo/javalab/locale';
+
+import {
+  getContainedLevelResultInfo,
+  postContainedLevelAttempt,
+  runAfterPostContainedLevel,
+} from '../containedLevels';
+import {initializeSubmitHelper, onSubmitComplete} from '../submitHelper';
+
+import {CsaViewMode, ExecutionType, InputMessageType} from './constants';
+import {getDisplayThemeFromString} from './DisplayTheme';
+import JavabuilderConnection from './JavabuilderConnection';
 import JavalabView from './JavalabView';
-import javalab, {
-  setIsStartMode,
-  setLevelName,
-  setIsRunning,
-  setIsTesting,
-  setBackpackEnabled,
-  setIsReadOnlyWorkspace,
-  setHasOpenCodeReview,
-  setValidationPassed,
-  setHasRunOrTestedCode,
-  setIsJavabuilderConnecting,
-  setIsCaptchaDialogOpen,
-} from './redux/javalabRedux';
+import NeighborhoodVisualizationColumn from './neighborhood/NeighborhoodVisualizationColumn';
 import javalabConsole, {
   appendOutputLog,
   appendNewlineToConsoleLog,
@@ -31,26 +43,20 @@ import {
   setAllValidation,
   setHasCompilationError,
 } from './redux/editorRedux';
+import javalab, {
+  setIsStartMode,
+  setLevelName,
+  setIsRunning,
+  setIsTesting,
+  setBackpackEnabled,
+  setIsReadOnlyWorkspace,
+  setHasOpenCodeReview,
+  setValidationPassed,
+  setHasRunOrTestedCode,
+  setIsJavabuilderConnecting,
+} from './redux/javalabRedux';
 import javalabView, {setDisplayTheme} from './redux/viewRedux';
-import {TestResults} from '@cdo/apps/constants';
-import project from '@cdo/apps/code-studio/initApp/project';
-import JavabuilderConnection from './JavabuilderConnection';
-import {showLevelBuilderSaveButton} from '@cdo/apps/code-studio/header';
-import Neighborhood from './neighborhood/Neighborhood';
-import NeighborhoodVisualizationColumn from './neighborhood/NeighborhoodVisualizationColumn';
 import TheaterVisualizationColumn from './theater/TheaterVisualizationColumn';
-import Theater from './theater/Theater';
-import {CsaViewMode, ExecutionType, InputMessageType} from './constants';
-import {getDisplayThemeFromString} from './DisplayTheme';
-import {
-  getContainedLevelResultInfo,
-  postContainedLevelAttempt,
-  runAfterPostContainedLevel,
-} from '../containedLevels';
-import {lockContainedLevelAnswers} from '@cdo/apps/code-studio/levels/codeStudioLevels';
-import {initializeSubmitHelper, onSubmitComplete} from '../submitHelper';
-import {BackpackAPIContext} from './BackpackAPIContext';
-import BackpackClientApi from '../code-studio/components/backpack/BackpackClientApi';
 
 /**
  * On small mobile devices, when in portrait orientation, we show an overlay
@@ -91,6 +97,8 @@ Javalab.prototype.init = function (config) {
 
   this.skin = config.skin;
   this.level = config.level;
+  this.levelIdForAnalytics = config.serverLevelId;
+  this.scriptIdForAnalytics = config.serverScriptId;
   // Sets display theme based on displayTheme user preference
   this.displayTheme = getDisplayThemeFromString(config.displayTheme);
   this.isStartMode = !!config.level.editBlocks;
@@ -112,7 +120,6 @@ Javalab.prototype.init = function (config) {
   config.noInstructionsWhenCollapsed = true;
 
   config.pinWorkspaceToBottom = true;
-
   config.getCode = this.getCode.bind(this);
   config.afterClearPuzzle = this.afterClearPuzzle.bind(this);
   const onRun = this.onRun.bind(this);
@@ -130,14 +137,22 @@ Javalab.prototype.init = function (config) {
       this.miniApp = new Neighborhood(
         this.onOutputMessage,
         this.onNewlineMessage,
-        this.setIsRunning
+        this.setIsRunning,
+        // In Java Lab we don't distinguish between partial lines and full lines,
+        // the provided message should have a newline at the end to be treated as
+        // a full line.
+        this.onOutputMessage
       );
       config.afterInject = () =>
         this.miniApp.afterInject(
           this.level,
           this.skin,
           config,
-          this.studioApp_
+          (sound, options) =>
+            this.studioApp_.playAudio(sound, {...options, noOverlap: true}),
+          this.studioApp_.playAudioOnFailure.bind(this.studioApp_),
+          this.studioApp_.loadAudio.bind(this.studioApp_),
+          this.studioApp_.getTestResults.bind(this.studioApp_)
         );
       this.visualization = <NeighborhoodVisualizationColumn />;
       break;
@@ -166,6 +181,8 @@ Javalab.prototype.init = function (config) {
     container.className = container.className + ' pin_bottom';
     this.studioApp_.initTimeSpent();
     this.studioApp_.initProjectTemplateWorkspaceIconCallout();
+    // studioApp.init() normally does this; we skip init so call it here.
+    this.studioApp_.alertIfAbusiveProject();
 
     initializeSubmitHelper({
       studioApp: this.studioApp_,
@@ -195,7 +212,6 @@ Javalab.prototype.init = function (config) {
     isResponsive: true,
     isSubmittable: !!config.level.submittable,
     isSubmitted: !!config.level.submitted,
-    recaptchaSiteKey: config.level.recaptchaSiteKey,
   });
 
   registerReducers({javalab, javalabConsole, javalabView});
@@ -295,7 +311,7 @@ Javalab.prototype.init = function (config) {
 
   let backpackApi = null;
   if (backpackEnabled) {
-    backpackApi = new BackpackClientApi(config.backpackChannel);
+    backpackApi = new BackpackClientApi('javalab', config.backpackChannel);
   }
 
   // Used for some post requests made in Javalab, namely
@@ -305,7 +321,7 @@ Javalab.prototype.init = function (config) {
     method: 'GET',
   }).then(response => (this.csrf_token = response.headers.get('csrf-token')));
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={getStore()}>
       <BackpackAPIContext.Provider value={backpackApi}>
         <JavalabView
@@ -326,7 +342,10 @@ Javalab.prototype.init = function (config) {
         />
       </BackpackAPIContext.Provider>
     </Provider>,
-    document.getElementById(config.containerId)
+    document.getElementById(config.containerId),
+    {
+      legacyReactDomRender: true,
+    }
   );
 
   window.addEventListener('beforeunload', this.beforeUnload.bind(this));
@@ -352,10 +371,30 @@ Javalab.prototype.onRun = function () {
   }
 
   this.miniApp?.reset?.();
+  logUserLevelInteraction({
+    levelId: this.levelIdForAnalytics,
+    scriptId: this.scriptIdForAnalytics,
+    interaction: UserLevelInteractions.click_run,
+  });
   this.executeJavabuilder(ExecutionType.RUN);
 };
 
 Javalab.prototype.onTest = function () {
+  const validation = this.level.validation;
+  const validated = !!validation && Object.keys(validation).length !== 0;
+
+  // Clear any leftover mini app signal queue state (e.g. Neighborhood's
+  // processSignals index) from a prior Run.
+  this.miniApp?.reset?.();
+  logUserLevelInteraction({
+    levelId: this.levelIdForAnalytics,
+    scriptId: this.scriptIdForAnalytics,
+    interaction: UserLevelInteractions.click_validate,
+  });
+  analyticsReporter.sendEvent(EVENTS.JAVALAB_TEST_BUTTON_CLICK, {
+    levelId: this.levelIdForAnalytics,
+    validated: validated,
+  });
   this.executeJavabuilder(ExecutionType.TEST);
 };
 
@@ -391,8 +430,7 @@ Javalab.prototype.executeJavabuilder = function (executionType) {
     this.csrf_token,
     () => this.onValidationPassed(this.studioApp_),
     () => this.onValidationFailed(this.studioApp_),
-    () => getStore().dispatch(setIsJavabuilderConnecting(false)),
-    () => getStore().dispatch(setIsCaptchaDialogOpen(true))
+    () => getStore().dispatch(setIsJavabuilderConnecting(false))
   );
 
   let connectToJavabuilder;

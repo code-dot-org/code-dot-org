@@ -1,0 +1,16 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2026-09-03T22:57:38.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "display_name": "Explore resources in Game Lab",
+    "bubble_choice_description": "A Game Lab level, so the bubble choice has something to show.",
+    "long_instructions": "This level exists only so the bubble choice above it renders.",
+    "preload_asset_list": null
+  },
+  "published": true
+}]]></config>
+  <blocks/>
+</Gamelab>

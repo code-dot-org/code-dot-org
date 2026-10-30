@@ -1,0 +1,11 @@
+name 'HoAI26-Choice-Background'
+display_name 'Generate'
+description "Create an image for your background"
+uses_lab2
+
+sublevels
+level 'HoAI26-Playtest1-Platform-Background'
+level 'HoAI26-Playtest1-Story-Background'
+
+
+navigation_type 'next_sublevel'

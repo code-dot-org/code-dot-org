@@ -1,4 +1,5 @@
 import React from 'react';
+
 import QuestionAveragesTable from './question_averages_table';
 
 const questions = [

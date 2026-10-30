@@ -1,45 +1,49 @@
+import classNames from 'classnames';
 import $ from 'jquery';
+import _ from 'lodash';
+import PropTypes from 'prop-types';
+import queryString from 'query-string';
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
-import classNames from 'classnames';
 import {connect} from 'react-redux';
-import _ from 'lodash';
-import TeacherOnlyMarkdown from './TeacherOnlyMarkdown';
+
+import {queryParams} from '@cdo/apps/code-studio/utils';
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import TeacherFeedbackTab from '@cdo/apps/templates/instructions/teacherFeedback/TeacherFeedbackTab';
-import ContainedLevel from '../ContainedLevel';
-import ContainedLevelAnswer from '../ContainedLevelAnswer';
-import HelpTabContents from './HelpTabContents';
-import DocumentationTab from './DocumentationTab';
-import CommitsAndReviewTab from './CommitsAndReviewTab';
+import {rubricShape} from '@cdo/apps/templates/rubrics/rubricShapes';
+import StudentRubricView from '@cdo/apps/templates/rubrics/StudentRubricView';
+import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/userLevelInteractionsApi';
+import {UserLevelInteractions} from '@cdo/generated-scripts/sharedConstants';
+import i18n from '@cdo/locale';
+
+import commonStyles from '../../commonStyles';
 import {
-  toggleInstructionsCollapsed,
+  setInstructionsRenderedHeightAndCollapsed,
   setInstructionsMaxHeightNeeded,
   setInstructionsRenderedHeight,
   setAllowInstructionsResize,
   getDynamicInstructions,
 } from '../../redux/instructions';
-import color from '../../util/color';
 import styleConstants from '../../styleConstants';
-import commonStyles from '../../commonStyles';
-import Instructions from './Instructions';
+import color from '../../util/color';
+import ContainedLevel from '../ContainedLevel';
+import ContainedLevelAnswer from '../ContainedLevelAnswer';
+import {Z_INDEX as OVERLAY_Z_INDEX} from '../Overlay';
+
+import {AudioQueue} from './AudioQueue';
+import CommitsAndReviewTab from './CommitsAndReviewTab';
+import ContainedLevelResetButton from './ContainedLevelResetButton';
+import DocumentationTab from './DocumentationTab';
 import DynamicInstructions from './DynamicInstructions';
 import HeightResizer from './HeightResizer';
-import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import queryString from 'query-string';
+import HelpTabContents from './HelpTabContents';
+import Instructions from './Instructions';
 import InstructionsCSF from './InstructionsCSF';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
-import {hasInstructions} from './utils';
+import TeacherOnlyMarkdown from './TeacherOnlyMarkdown';
 import * as topInstructionsDataApi from './topInstructionsDataApi';
 import TopInstructionsHeader from './TopInstructionsHeader';
-import {Z_INDEX as OVERLAY_Z_INDEX} from '../Overlay';
-import Button from '../Button';
-import i18n from '@cdo/locale';
-import ContainedLevelResetButton from './ContainedLevelResetButton';
-import {queryParams} from '@cdo/apps/code-studio/utils';
-import {rubricShape} from '@cdo/apps/templates/rubrics/rubricShapes';
-import StudentRubricView from '@cdo/apps/templates/rubrics/StudentRubricView';
+import {hasInstructions} from './utils';
 
 const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
@@ -85,7 +89,7 @@ class TopInstructions extends Component {
     ttsLongInstructionsUrl: PropTypes.string,
     isCollapsed: PropTypes.bool.isRequired,
     noVisualization: PropTypes.bool.isRequired,
-    toggleInstructionsCollapsed: PropTypes.func,
+    setInstructionsRenderedHeightAndCollapsed: PropTypes.func,
     setInstructionsRenderedHeight: PropTypes.func.isRequired,
     setInstructionsMaxHeightNeeded: PropTypes.func.isRequired,
     documentationUrl: PropTypes.string,
@@ -112,6 +116,10 @@ class TopInstructions extends Component {
     resizable: PropTypes.bool,
     setAllowInstructionsResize: PropTypes.func,
     collapsible: PropTypes.bool,
+    collapseIcon: PropTypes.node,
+    expandIcon: PropTypes.node,
+    upIcon: PropTypes.node,
+    downIcon: PropTypes.node,
     displayDocumentationTab: PropTypes.bool,
     displayReviewTab: PropTypes.bool,
     initialSelectedTab: PropTypes.oneOf(Object.values(TabType)),
@@ -410,31 +418,19 @@ class TopInstructions extends Component {
    */
   handleClickCollapser = () => {
     const {
-      toggleInstructionsCollapsed,
+      setInstructionsRenderedHeightAndCollapsed,
       isCollapsed,
       noInstructionsWhenCollapsed,
       expandedHeight,
     } = this.props;
 
-    toggleInstructionsCollapsed();
-
-    // record event
-    const eventName = isCollapsed
-      ? 'expand-instructions'
-      : 'collapse-instructions';
-
-    this.recordEvent(eventName, {
-      data_json: JSON.stringify({
-        csfStyleInstructions: !noInstructionsWhenCollapsed,
-      }),
-    });
-
-    // adjust rendered height based on next collapsed state
-    const height =
-      !isCollapsed && noInstructionsWhenCollapsed
+    const nextIsCollapsed = !isCollapsed;
+    const nextHeight =
+      nextIsCollapsed && noInstructionsWhenCollapsed
         ? HEADER_HEIGHT
         : expandedHeight;
-    this.props.setInstructionsRenderedHeight(height);
+
+    setInstructionsRenderedHeightAndCollapsed(nextHeight, nextIsCollapsed);
   };
 
   /**
@@ -449,15 +445,6 @@ class TopInstructions extends Component {
     win.focus();
   };
 
-  recordEvent(eventName, additionalData = {}) {
-    const record = {
-      study: 'top-instructions',
-      event: eventName,
-      ...additionalData,
-    };
-    firehoseClient.putRecord(record);
-  }
-
   handleTabClick = newTab => {
     this.scrollToTopOfTab();
     this.setState({tabSelected: newTab}, () => {
@@ -468,7 +455,11 @@ class TopInstructions extends Component {
 
   handleHelpTabClick = () => {
     this.handleTabClick(TabType.RESOURCES);
-    this.recordEvent('click-help-and-tips-tab');
+    logUserLevelInteraction({
+      levelId: this.props.serverLevelId,
+      scriptId: this.props.serverScriptId,
+      interaction: UserLevelInteractions.click_help_and_tips,
+    });
   };
 
   handleCommentTabClick = () => {
@@ -478,7 +469,6 @@ class TopInstructions extends Component {
     if (this.state.tabSelected !== TabType.COMMENTS) {
       this.incrementFeedbackVisitCount();
     }
-    this.recordEvent('click-feedback-tab');
 
     this.setState({tabSelected: TabType.COMMENTS}, () => {
       this.forceTabResizeToMaxHeight();
@@ -488,7 +478,6 @@ class TopInstructions extends Component {
 
   handleTeacherOnlyTabClick = () => {
     this.handleTabClick(TabType.TEACHER_ONLY);
-    this.recordEvent('click-teacher-only-tab');
   };
 
   scrollToTopOfTab = () => {
@@ -555,6 +544,10 @@ class TopInstructions extends Component {
           adjustMaxNeededHeight={this.adjustMaxNeededHeight}
           isEmbedView={isEmbedView}
           teacherViewingStudentWork={teacherViewingStudentWork}
+          collapseIcon={this.props.collapseIcon}
+          expandIcon={this.props.expandIcon}
+          upIcon={this.props.upIcon}
+          downIcon={this.props.downIcon}
         />
       );
     } else if (tabSelected === TabType.INSTRUCTIONS) {
@@ -640,26 +633,26 @@ class TopInstructions extends Component {
     const isCSF = !noInstructionsWhenCollapsed;
     const isCSDorCSP = !isCSF;
 
-    const topInstructionsStyle = [
-      isRtl ? styles.mainRtl : styles.main,
-      mainStyle,
-      {
+    const topInstructionsStyle = {
+      ...(isRtl ? styles.mainRtl : styles.main),
+      ...(noVisualization ? styles.noViz : {}),
+      ...mainStyle,
+      ...{
         height: explicitHeight ? explicitHeight : height - RESIZER_HEIGHT,
       },
-      noVisualization && styles.noViz,
-      isEmbedView && styles.embedView,
-      dynamicInstructions &&
-        overlayVisible &&
-        styles.dynamicInstructionsWithOverlay,
-    ];
+      ...(isEmbedView ? styles.embedView : {}),
+      ...(dynamicInstructions && overlayVisible
+        ? styles.dynamicInstructionsWithOverlay
+        : {}),
+    };
 
-    const instructionsContainerStyle = [
-      isCSF && !hasContainedLevels && tabSelected === TabType.INSTRUCTIONS
+    const instructionsContainerStyle = {
+      ...(isCSF && !hasContainedLevels && tabSelected === TabType.INSTRUCTIONS
         ? styles.csfBody
-        : containerStyle || styles.body,
-      isMinecraft && craftStyles.instructionsBody,
-      tabSelected === TabType.REVIEW && styles.commitAndReview,
-    ];
+        : containerStyle || styles.body),
+      ...(isMinecraft ? craftStyles.instructionsBody : {}),
+      ...(tabSelected === TabType.REVIEW ? styles.commitAndReview : {}),
+    };
 
     // Only display the help tab when there are one or more videos or
     // additional resource links.
@@ -670,10 +663,9 @@ class TopInstructions extends Component {
       (levelVideos && levelVideos.length > 0) || !!levelResourcesAvailable;
 
     const displayFeedbackTab =
-      !taRubric &&
-      (!!miniRubric ||
-        (teacherViewingStudentWork && teacherCanLeaveFeedback) ||
-        (this.isViewingAsStudent && !!latestFeedback));
+      !!miniRubric ||
+      (teacherViewingStudentWork && teacherCanLeaveFeedback) ||
+      (this.isViewingAsStudent && !!latestFeedback);
 
     const displayTaRubricTab =
       !!taRubric && !teacherViewingStudentWork && this.isViewingAsStudent;
@@ -715,123 +707,129 @@ class TopInstructions extends Component {
         className={classNames({'editor-column': !standalone})}
         ref={ref => (this.topInstructions = ref)}
       >
-        <TopInstructionsHeader
-          teacherOnly={teacherOnly}
-          isOldPurpleColor={isOldPurpleColorHeader}
-          tabSelected={tabSelected}
-          isCSDorCSP={isCSDorCSP}
-          displayHelpTab={displayHelpTab}
-          displayFeedback={displayFeedbackTab}
-          levelHasMiniRubric={!!miniRubric}
-          displayDocumentationTab={displayDocumentationTab}
-          displayTaRubricTab={displayTaRubricTab}
-          displayReviewTab={displayReviewTab}
-          isViewingAsTeacher={this.isViewingAsTeacher}
-          hasBackgroundMusic={hasBackgroundMusic}
-          fetchingData={fetchingData}
-          handleDocumentationClick={this.handleDocumentationClick}
-          handleInstructionTabClick={() =>
-            this.handleTabClick(TabType.INSTRUCTIONS)
-          }
-          handleHelpTabClick={this.handleHelpTabClick}
-          handleCommentTabClick={this.handleCommentTabClick}
-          handleDocumentationTabClick={() =>
-            this.handleTabClick(TabType.DOCUMENTATION)
-          }
-          handleTaRubricTabClick={() => this.handleTabClick(TabType.TA_RUBRIC)}
-          handleReviewTabClick={() => this.handleTabClick(TabType.REVIEW)}
-          handleTeacherOnlyTabClick={this.handleTeacherOnlyTabClick}
-          collapsible={this.props.collapsible}
-          handleClickCollapser={this.handleClickCollapser}
-          {...passThroughHeaderProps}
-        />
-        <div style={[isCollapsed && isCSDorCSP && commonStyles.hidden]}>
-          <div style={instructionsContainerStyle} id="scroll-container">
-            {this.renderInstructions(isCSF)}
-            {tabSelected === TabType.RESOURCES && (
-              <HelpTabContents
-                ref={ref => (this.helpTab = ref)}
-                videoData={levelVideos ? levelVideos[0] : []}
-                mapReference={mapReference}
-                referenceLinks={referenceLinks}
-                openReferenceLinksInNewTab={
-                  this.props.openReferenceLinksInNewTab
-                }
-              />
-            )}
-            {!fetchingData && (
-              <TeacherFeedbackTab
-                teacherViewingStudentWork={teacherViewingStudentWork}
-                visible={tabSelected === TabType.COMMENTS}
-                rubric={miniRubric}
-                innerRef={ref => (this.commentTab = ref)}
-                latestFeedback={latestFeedback}
-                token={token}
-                serverScriptId={this.props.serverScriptId}
-                serverLevelId={this.props.serverLevelId}
-                teacher={user}
-                allowUnverified={isCSF}
-              />
-            )}
-            {tabSelected === TabType.DOCUMENTATION && (
-              <DocumentationTab ref={ref => (this.documentationTab = ref)} />
-            )}
-            {tabSelected === TabType.REVIEW && (
-              <CommitsAndReviewTab
-                ref={ref => (this.reviewTab = ref)}
-                onLoadComplete={this.forceTabResizeToMaxOrAvailableHeight}
-              />
-            )}
-            {tabSelected === TabType.TEACHER_ONLY &&
-              exampleSolutions.length > 0 && (
-                <div style={styles.exampleSolutions}>
-                  {exampleSolutions.map((example, index) => (
-                    <Button
-                      __useDeprecatedTag
-                      key={index}
-                      text={i18n.exampleSolution({number: index + 1})}
-                      color={Button.ButtonColor.blue}
-                      href={example}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      ref={ref => (this.teacherOnlyTab = ref)}
-                      style={styles.exampleSolutionButton}
-                    />
-                  ))}
-                </div>
+        <AudioQueue>
+          <TopInstructionsHeader
+            teacherOnly={teacherOnly}
+            isOldPurpleColor={isOldPurpleColorHeader}
+            tabSelected={tabSelected}
+            isCSDorCSP={isCSDorCSP}
+            displayHelpTab={displayHelpTab}
+            displayFeedback={displayFeedbackTab}
+            levelHasMiniRubric={!!miniRubric}
+            displayDocumentationTab={displayDocumentationTab}
+            displayTaRubricTab={displayTaRubricTab}
+            displayReviewTab={displayReviewTab}
+            isViewingAsTeacher={this.isViewingAsTeacher}
+            hasBackgroundMusic={hasBackgroundMusic}
+            fetchingData={fetchingData}
+            handleDocumentationClick={this.handleDocumentationClick}
+            handleInstructionTabClick={() =>
+              this.handleTabClick(TabType.INSTRUCTIONS)
+            }
+            handleHelpTabClick={this.handleHelpTabClick}
+            handleCommentTabClick={this.handleCommentTabClick}
+            handleDocumentationTabClick={() =>
+              this.handleTabClick(TabType.DOCUMENTATION)
+            }
+            handleTaRubricTabClick={() =>
+              this.handleTabClick(TabType.TA_RUBRIC)
+            }
+            handleReviewTabClick={() => this.handleTabClick(TabType.REVIEW)}
+            handleTeacherOnlyTabClick={this.handleTeacherOnlyTabClick}
+            collapsible={this.props.collapsible}
+            handleClickCollapser={this.handleClickCollapser}
+            {...passThroughHeaderProps}
+          />
+          <div
+            style={isCollapsed && isCSDorCSP ? commonStyles.hidden : undefined}
+          >
+            <div style={instructionsContainerStyle} id="scroll-container">
+              {this.renderInstructions(isCSF)}
+              {tabSelected === TabType.RESOURCES && (
+                <HelpTabContents
+                  ref={ref => (this.helpTab = ref)}
+                  videoData={levelVideos ? levelVideos[0] : []}
+                  mapReference={mapReference}
+                  referenceLinks={referenceLinks}
+                  openReferenceLinksInNewTab={
+                    this.props.openReferenceLinksInNewTab
+                  }
+                />
               )}
-            {tabSelected === TabType.TA_RUBRIC && (
-              <StudentRubricView
-                rubric={this.props.taRubric}
-                submittedEvaluation={this.state.taRubricEvaluation}
+              {!fetchingData && displayFeedbackTab && (
+                <TeacherFeedbackTab
+                  teacherViewingStudentWork={teacherViewingStudentWork}
+                  visible={tabSelected === TabType.COMMENTS}
+                  rubric={miniRubric}
+                  innerRef={ref => (this.commentTab = ref)}
+                  latestFeedback={latestFeedback}
+                  token={token}
+                  serverScriptId={this.props.serverScriptId}
+                  serverLevelId={this.props.serverLevelId}
+                  teacher={user}
+                  allowUnverified={isCSF}
+                />
+              )}
+              {tabSelected === TabType.DOCUMENTATION && (
+                <DocumentationTab ref={ref => (this.documentationTab = ref)} />
+              )}
+              {tabSelected === TabType.REVIEW && (
+                <CommitsAndReviewTab
+                  ref={ref => (this.reviewTab = ref)}
+                  onLoadComplete={this.forceTabResizeToMaxOrAvailableHeight}
+                />
+              )}
+              {tabSelected === TabType.TEACHER_ONLY &&
+                exampleSolutions.length > 0 && (
+                  <div style={styles.exampleSolutions}>
+                    {exampleSolutions.map((example, index) => (
+                      <Button
+                        __useDeprecatedTag
+                        key={index}
+                        text={i18n.exampleSolution({number: index + 1})}
+                        color={Button.ButtonColor.blue}
+                        href={example}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        ref={ref => (this.teacherOnlyTab = ref)}
+                        style={styles.exampleSolutionButton}
+                      />
+                    ))}
+                  </div>
+                )}
+              {tabSelected === TabType.TA_RUBRIC && (
+                <StudentRubricView
+                  rubric={this.props.taRubric}
+                  submittedEvaluation={this.state.taRubricEvaluation}
+                />
+              )}
+              {(this.isViewingAsTeacher || isViewingAsInstructorInTraining) &&
+                (hasContainedLevels || teacherMarkdown) && (
+                  <div>
+                    {hasContainedLevels && (
+                      <ContainedLevelAnswer
+                        ref={ref => (this.teacherOnlyTab = ref)}
+                        hidden={tabSelected !== TabType.TEACHER_ONLY}
+                      />
+                    )}
+                    {tabSelected === TabType.TEACHER_ONLY && (
+                      <TeacherOnlyMarkdown
+                        ref={ref => (this.teacherOnlyTab = ref)}
+                        content={teacherMarkdown}
+                      />
+                    )}
+                  </div>
+                )}
+            </div>
+            {!isEmbedView && resizable && !dynamicInstructions && (
+              <HeightResizer
+                resizeItemTop={this.getItemTop}
+                position={height}
+                onResize={this.handleHeightResize}
               />
             )}
-            {(this.isViewingAsTeacher || isViewingAsInstructorInTraining) &&
-              (hasContainedLevels || teacherMarkdown) && (
-                <div>
-                  {hasContainedLevels && (
-                    <ContainedLevelAnswer
-                      ref={ref => (this.teacherOnlyTab = ref)}
-                      hidden={tabSelected !== TabType.TEACHER_ONLY}
-                    />
-                  )}
-                  {tabSelected === TabType.TEACHER_ONLY && (
-                    <TeacherOnlyMarkdown
-                      ref={ref => (this.teacherOnlyTab = ref)}
-                      content={teacherMarkdown}
-                    />
-                  )}
-                </div>
-              )}
           </div>
-          {!isEmbedView && resizable && !dynamicInstructions && (
-            <HeightResizer
-              resizeItemTop={this.getItemTop}
-              position={height}
-              onResize={this.handleHeightResize}
-            />
-          )}
-        </div>
+        </AudioQueue>
       </div>
     );
   }
@@ -908,7 +906,7 @@ const styles = {
 };
 // Note: usually the unconnected component is only used for tests, in this case it is used
 // in LevelDetailsDialog, so all of it's children may not rely on the redux store for data
-export const UnconnectedTopInstructions = Radium(TopInstructions);
+export const UnconnectedTopInstructions = TopInstructions;
 export default connect(
   state => ({
     isEmbedView: state.pageConstants.isEmbedView,
@@ -953,8 +951,8 @@ export default connect(
     taRubric: state.instructions.taRubric,
   }),
   dispatch => ({
-    toggleInstructionsCollapsed() {
-      dispatch(toggleInstructionsCollapsed());
+    setInstructionsRenderedHeightAndCollapsed(height, isCollapsed) {
+      dispatch(setInstructionsRenderedHeightAndCollapsed(height, isCollapsed));
     },
     setInstructionsRenderedHeight(height) {
       dispatch(setInstructionsRenderedHeight(height));
@@ -968,4 +966,4 @@ export default connect(
   }),
   null,
   {forwardRef: true}
-)(Radium(TopInstructions));
+)(TopInstructions);

@@ -1,9 +1,12 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {mount} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+
 import LessonStandards, {
   ExpandMode,
 } from '@cdo/apps/templates/lessonOverview/LessonStandards';
+
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+
 import {cspStandards, cstaStandards} from './sampleStandardsData';
 
 describe('LessonStandards', () => {
@@ -43,12 +46,12 @@ describe('LessonStandards', () => {
     const frameworks = wrapper.find('Framework');
     expect(frameworks.length).to.equal(2);
 
-    const parentCategories = wrapper.find('UnconnectedParentCategory');
+    const parentCategories = wrapper.find('ParentCategory');
     expect(parentCategories.length > 0).to.be.true;
     parentCategories.forEach(parentCategory => {
       expect(isOpen(parentCategory)).to.be.false;
     });
-    const categories = wrapper.find('UnconnectedCategory');
+    const categories = wrapper.find('Category');
     expect(categories.length > 0).to.be.true;
     categories.forEach(category => {
       expect(isOpen(category)).to.be.false;
@@ -63,13 +66,13 @@ describe('LessonStandards', () => {
     const frameworks = wrapper.find('Framework');
     expect(frameworks.length).to.equal(2);
 
-    const parentCategories = wrapper.find('UnconnectedParentCategory');
+    const parentCategories = wrapper.find('ParentCategory');
     expect(parentCategories.length > 0).to.be.true;
     parentCategories.forEach(parentCategory => {
       expect(isOpen(parentCategory)).to.be.true;
     });
 
-    const categories = wrapper.find('UnconnectedCategory');
+    const categories = wrapper.find('Category');
     expect(categories.length > 0).to.be.true;
     categories.forEach(category => {
       expect(isOpen(category)).to.be.true;

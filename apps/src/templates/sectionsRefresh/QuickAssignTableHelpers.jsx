@@ -1,7 +1,12 @@
-import React from 'react';
+import RadioButton from '@code-dot-org/component-library/radioButton';
+import {Typography} from '@mui/material';
 import classnames from 'classnames';
+import React from 'react';
+
+import taImage from '@cdo/apps/templates/rubrics/images/ai-teaching-assistant-assign.png';
+import experiments from '@cdo/apps/util/experiments';
+
 import moduleStyles from './sections-refresh.module.scss';
-import {Heading5} from '@cdo/apps/componentLibrary/typography';
 
 /*
 This is a file to house the shared pieces of both types of Curriculum
@@ -17,18 +22,22 @@ export function renderRows(
   courseData,
   sectionCourse,
   updateCourse,
-  setSelectedCourseOffering
+  setSelectedCourseOffering,
+  selectedCourseUnavailable
 ) {
   const headers = Object.keys(courseData);
   return headers.map(header => (
     <tr key={header} className={moduleStyles.courseTableRow}>
       <td className={moduleStyles.courseHeaders}>
-        <Heading5>{header}</Heading5>
+        <Typography variant="h5" gutterBottom>
+          {header}
+        </Typography>
         {renderOfferings(
           courseData[header],
           sectionCourse,
           updateCourse,
-          setSelectedCourseOffering
+          setSelectedCourseOffering,
+          selectedCourseUnavailable
         )}
       </td>
     </tr>
@@ -43,41 +52,49 @@ function renderOfferings(
   courseData,
   sectionCourse,
   updateCourse,
-  setSelectedCourseOffering
+  setSelectedCourseOffering,
+  selectedCourseUnavailable
 ) {
   const courseValues = Object.values(courseData);
 
-  return courseValues.map(course => (
-    <div
-      className={classnames(
-        moduleStyles.flexDisplay,
-        moduleStyles.courseOption
-      )}
-      key={course.display_name}
-    >
-      <input
-        id={course.display_name}
+  return courseValues.map(course => {
+    const isSelected = sectionCourse?.courseOfferingId === course.id;
+    return (
+      <div
         className={classnames(
-          moduleStyles.radio,
-          moduleStyles.withBrandAccentColor
+          moduleStyles.flexDisplay,
+          moduleStyles.courseOption
         )}
-        type="radio"
-        name={course.display_name}
-        value={course.display_name}
-        checked={sectionCourse?.courseOfferingId === course.id}
-        onChange={() => {
-          updateSectionCourse(updateCourse, course);
-          setSelectedCourseOffering(course);
-        }}
-      />
-      <label
-        className={moduleStyles.courseOptionLabel}
-        htmlFor={course.display_name}
+        key={course.display_name}
       >
-        {course.display_name}
-      </label>
-    </div>
-  ));
+        <div>
+          <RadioButton
+            name={course.display_name}
+            label={course.display_name}
+            value={course.display_name}
+            checked={isSelected}
+            onChange={() => {
+              updateSectionCourse(updateCourse, course);
+              setSelectedCourseOffering(course);
+            }}
+          />
+          {isSelected && selectedCourseUnavailable && (
+            <span className={moduleStyles.unavailableLanguageTag}>
+              Unavailable for the current language
+            </span>
+          )}
+        </div>
+        {course.ai_teaching_assistant_available &&
+          !experiments.isEnabled('ta-teacher-panel') && (
+            <img
+              src={taImage}
+              className={moduleStyles.taImage}
+              alt="AI Teaching Assistant available"
+            />
+          )}
+      </div>
+    );
+  });
 }
 
 function updateSectionCourse(updateCourse, course) {
@@ -105,24 +122,18 @@ function updateSectionCourse(updateCourse, course) {
   }
 
   const courseVersion = courseVersions[courseVersionId];
-  const isStandaloneUnit = courseVersion.type === 'Unit';
 
-  let hasLessonExtras;
-  let hasTextToSpeech;
-
-  if (isStandaloneUnit) {
-    hasLessonExtras = Object.values(courseVersion.units)[0]
-      .lesson_extras_available;
-    hasTextToSpeech = Object.values(courseVersion.units)[0]
-      .text_to_speech_enabled;
-  }
+  const hasLessonExtras = Object.values(courseVersion.units)[0]
+    .lesson_extras_available;
+  const hasTextToSpeech = Object.values(courseVersion.units)[0]
+    .text_to_speech_enabled;
 
   updateCourse({
     displayName: course.display_name,
     courseOfferingId: course.id,
     versionId: courseVersionId,
     unitId: null,
-    hasLessonExtras: hasLessonExtras,
-    hasTextToSpeech: hasTextToSpeech,
+    lessonExtrasAvailable: hasLessonExtras,
+    textToSpeechEnabled: hasTextToSpeech,
   });
 }

@@ -1,0 +1,27 @@
+.duotone {
+  --fa-primary-color: var(--text-neutral-white-fixed);
+  --fa-secondary-opacity: 1.0;
+  --fa-primary-opacity: 1.0;
+}
+
+.green {
+  color: var(--background-success-primary);
+}
+
+.red {
+  color: var(--background-error-primary);
+}
+
+.yellow {
+  color: var(--background-warning-primary);
+
+  --fa-primary-color: var(--background-neutral-black-fixed);
+}
+
+.gray {
+  color: var(--text-neutral-quaternary);
+}
+
+.icon {
+  font-size: 16px;
+}

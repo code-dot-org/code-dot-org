@@ -1,0 +1,13 @@
+name 'ai-and-the-systems-that-power-it-lesson3-online-choice'
+display_name 'Online Resources for Troubleshooting'
+description 'Examine a message board, a product chat, and part of a user manual to assist with troubleshooting your issue.'
+navigation_type 'next_sublevel'
+
+sublevels
+level 'ai-and-the-systems-that-power-it-lesson3-online-resources-amara'
+level 'ai-and-the-systems-that-power-it-lesson3-online-resources-joaquin'
+level 'ai-and-the-systems-that-power-it-lesson3-online-resources-denise'
+level 'ai-and-the-systems-that-power-it-lesson3-online-resources-marcus'
+level 'ai-and-the-systems-that-power-it-lesson3-online-resources-layla'
+
+uses_lab2

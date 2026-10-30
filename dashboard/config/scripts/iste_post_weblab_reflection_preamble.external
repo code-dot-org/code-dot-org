@@ -1,0 +1,16 @@
+name 'iste_post_weblab_reflection_preamble'
+markdown <<MARKDOWN
+# Reflection
+
+## Consider your role when working with AI Tools:
+
+For each of the prompts below, consider how you leveraged the AI Tutor in designing and building the website:
+
+(**Reminder:** The example content files were for efficiency and likely would have been only the Build-Your-Own template for a student activity)
+***
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+
+MARKDOWN

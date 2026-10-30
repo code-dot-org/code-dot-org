@@ -1,0 +1,54 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-09-09T20:35:35.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "example",
+        "explainCode",
+        "hint",
+        "documentation"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "name = \"Sam\"\nage = 12\nmessage = \"Happy birthday, \" + name + \"! You are \" + age + \"!\"\nprint(message)",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "long_instructions": "### Modify: Debug\r\n\r\nThis code should print a birthday message, but it causes an error. \r\n\r\nFind the bug and fix it. ",
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMraRGpcpYu1d1d8\nrprebCIZB0cvwW8pqK00vzqbiiz+lXL8aIVGT+Hpg8KjcDKcIEgw/dCbp/Mg\nziJkxesxAWHrh0eiLUGFNySaf9rYw/c6xxz2CfvyXHiaGj38swr6T7eIJpjf\nuSTE/Jem24H+pd4Z8u05lKrnysMiHLN37IU3ZcvD8J0b35MRykAv8B4OiGtc\nhtp0T+q89u09WDxwwMPoFBkSUJXrTP/QtDgcZDkCQlhjCIGnxttsHuu2Emdy\nUk+KAzGydGWsagzDTizBK4ZQOTEsA/56Fb7fyATG6MtwicTW1NCj42imAsTb\n+EP05bez0/MuJP+0pJyzC3psEo9xsHOS8y7xMwgo4hRnwQZ1zw==\n",
+    "display_name": "The Broken Greeting",
+    "bubble_choice_description": "Fix a birthday message that crashes before it can print.",
+    "thumbnail_url": "https://images.code.org/f87061dd354a1ba9788150b401a5d77e-birthday-cake.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-09T20:35:35.104+00:00\",\"changed\":[\"cloned from \\\"csp-unit1-lesson25-modify_27_28\\\"\"],\"cloned_from\":\"csp-unit1-lesson25-modify_27_28\"},{\"changed_at\":\"2026-09-09 20:35:51 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-09 20:36:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-09 20:36:27 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-09 20:45:06 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-09 21:07:16 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-09 21:07:25 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-09 21:10:01 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-09 21:10:15 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-10 18:13:02 +0000\",\"changed\":[\"predict_settings\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

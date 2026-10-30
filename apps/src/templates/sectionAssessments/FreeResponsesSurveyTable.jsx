@@ -1,12 +1,16 @@
+import {Typography} from '@mui/material';
+import orderBy from 'lodash/orderBy';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
-import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
+
 import i18n from '@cdo/locale';
+
+import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import wrappedSortable from '../tables/wrapped_sortable';
-import orderBy from 'lodash/orderBy';
-import color from '@cdo/apps/util/color';
+
+import moduleStyles from './free-responses-table.module.scss';
 
 export const COLUMNS = {
   RESPONSE: 0,
@@ -49,9 +53,11 @@ class FreeResponsesSurveyTable extends Component {
   studentResponseColumnFormatter = (response, {rowIndex}) => {
     return (
       <div>
-        {response && <div>{response}</div>}
+        {response && <Typography variant="body3">{response}</Typography>}
         {!response && (
-          <div style={styles.noResponse}>{i18n.emptyFreeResponse()}</div>
+          <Typography variant="body3" className={moduleStyles.noResponse}>
+            {i18n.emptyFreeResponse()}
+          </Typography>
         )}
       </div>
     );
@@ -98,11 +104,5 @@ class FreeResponsesSurveyTable extends Component {
     );
   }
 }
-
-const styles = {
-  noResponse: {
-    color: color.lighter_gray,
-  },
-};
 
 export default FreeResponsesSurveyTable;

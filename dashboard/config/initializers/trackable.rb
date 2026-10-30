@@ -1,9 +1,10 @@
 module OverrideUpdateTrackedFields
   def update_tracked_fields(request)
-    super(request)
+    super
     if persisted? && id
       SignIn.create(
         user_id: id,
+        anon_user_id: request.anon_user_id,
         sign_in_at: DateTime.now,
         sign_in_count: sign_in_count
       )

@@ -58,7 +58,7 @@ class LevelSourcesController < ApplicationController
     expires_in 10.hours, public: true # cache
 
     if @game.app == Game::ARTIST
-      redirect_to @level_source.level_source_image.s3_framed_url
+      redirect_to @level_source.level_source_image.s3_framed_url, allow_other_host: true
     else
       original_image
     end
@@ -72,9 +72,7 @@ class LevelSourcesController < ApplicationController
     redirect_to @level_source.level_source_image.s3_url
   end
 
-  protected
-
-  def set_level_source
+  protected def set_level_source
     reset_abuse_user = current_user&.permission?(UserPermission::PROJECT_VALIDATOR)
     # Depending on the url route, one of params[:level_source_id_and_user_id] (for /r/ links) or
     # params[:id] (for /c/ links) is set. For the former, deobfuscate the level_source_id.
@@ -110,7 +108,7 @@ class LevelSourcesController < ApplicationController
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.
-  def level_source_params
+  protected def level_source_params
     params.require(:level_source).permit(:hidden)
   end
 end

@@ -1,0 +1,22 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-11-19T19:20:18.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# Array\n\nAn **array** is a special kind of variable that stores an ordered list of related values (*such as numbers, words, or images*). \n\nEach value has a position number called an *index*",
+        "imageUrl": "https://images.code.org/acf8fe644edb2d5bb9ceb20aab2a9b8a-array-vocab.png",
+        "key": "undefined-ea03636a-a1b5-4568-be2b-86c3c6462665",
+        "layout": "text-bottom-right"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-19T19:20:18.871+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson1-panel-tradeoff-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson1-panel-tradeoff-test-2025\"},{\"changed_at\":\"2025-11-19 19:33:04 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-19 19:35:23 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

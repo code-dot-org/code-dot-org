@@ -1,0 +1,40 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-09-08T16:34:11.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "#Welcome! \n\nToday, you will generate images and write code to create a unique project!",
+        "imageUrl": "",
+        "key": "HoAI26-Playtest1-Intro-7c11e75b-3129-4f2d-8087-1fde8888b041",
+        "layout": "text-top-center"
+      },
+      {
+        "text": "#You choose!\nFirst, you will choose to create either a GAME or a STORY.\n",
+        "imageUrl": "",
+        "key": "HoAI26-Playtest1-Intro-73a3b74d-66a9-4f4b-a1e0-943291e2b1aa",
+        "layout": "text-top-center"
+      },
+      {
+        "text": "#Use AI to generate images\n\n- **Write a prompt** to describe the image you want AI to generate.\n\n- **Choose which style** you'd like, smooth or pixel art.\n\n- **Press Generate, and then decide if you want to Accept, or change the image.**",
+        "imageUrl": "https://images.code.org/73eeea3caf5b114b6e810e8e21ebecb4-imageGenPanel2.png",
+        "key": "HoAI26-Playtest1-Intro-1ba65752-8425-465c-9a85-d972f45f4102",
+        "layout": "text-bottom-left"
+      },
+      {
+        "text": "#Use code to create your project\n\n- **Add Sprites** as characters, players, platforms and objects\n\n- **Add Events** to control timing and reactions\n\n- Work up to **switching the direction of gravity or zoom level**!",
+        "imageUrl": "https://images.code.org/26d20127b54879d70ff6f58dd40c649a-CodePanel.png",
+        "key": "HoAI26-Playtest1-Intro-d32b314e-6b91-447e-8f33-bea577296393"
+      }
+    ],
+    "use_links": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-08 16:36:34 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-08 16:39:45 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-08 16:52:42 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-08 16:53:17 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-08 17:18:15 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-08 17:19:21 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-08 17:20:25 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-08 23:24:06 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-08 23:24:41 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-08 23:25:46 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-08 23:26:13 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-08 23:27:38 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-08 23:31:06 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-08 23:35:02 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>

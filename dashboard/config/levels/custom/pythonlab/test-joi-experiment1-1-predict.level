@@ -1,0 +1,32 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-09-15T20:32:53.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "38e0f4e5-8270-4aba-afa8-a490aa79e2ba": {
+          "id": "38e0f4e5-8270-4aba-afa8-a490aa79e2ba",
+          "name": "main.py",
+          "contents": "# Boba Run Splitter\n# Totals a boba order, adds a tip, and splits it among friends.\n\nprint(\"Boba Run Splitter\")\n\nnum_drinks = int(input(\"How many drinks? \"))\ndrink_price = float(input(\"Price per drink: \"))\ncopon = float(input(\"Coupon amount: \"))\nnum_friends = int(input(\"How many friends are splitting? \"))\n\nsubtotal = num_drinks * drink_price - copon\ntotal_cents = round(subtotal * 1.18 * 100)\n\nper_person = round(total_cents / num_friends)\nleftover_cents = total_cents % num_friends\n\nprint(\"Each person pays: $\" + str(per_person / 100))\nprint(\"Leftover cents: \" + str(leftover_cents))\nprint(\"Whoever picked the shop covers the leftover!\")\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "38e0f4e5-8270-4aba-afa8-a490aa79e2ba"
+      ]
+    },
+    "long_instructions": "TODOs:\r\n- Read the code in `main.py`\r\n- Identify the inputs the program expects and their data types\r\n- Trace the program's execution with the specified inputs: 4 drinks, $5.50 per drink, $2.00 coupon, 3 friends\r\n- Predict the exact output text, character for character\r\n- Predict the final value of every variable created in `main.py`\r\n- Write down your predictions before running the code",
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMqISbVzsAQJnwiesv/A\n/x20rZJe+ZXhPgRq7OiVvs28DOjJCFDzSkG2PXs7jprbyBzR29VoYi5YSqSs\n4AFgy6i/qS+OnSFndrwzMUUp6H7yjiVwz25+rGXpN76+gUWX40HvKhUXxVhy\ndYcO6dlnMDTad4GPqbxBrNV3iLVbYPc0qkoGfOKVIPq9mzGrZl2Hcxtz3qRW\nsXno/uL/MuokTJMh11nxq9VpyScBknXVabYrrB76wTuVwBrdStvVb3zBfSyR\nqzxQndAlDPaOoaLdi7sYlG2xghTL8NuXNc9JSiSMj9+BHM8WCO4lc1vARX6l\n3KUv5JUcsVojx3qrbPv/oXeblZUibR4JosVTVO11XcGunE81PEjU8vbzDrV3\nIwRFyXyAOkMYtrlxCcza8Zn3OaAOxhiTUPwvo+ml8KIaJToq917ukXr2fPaL\n+7uQzM7JQNZ+dQ+dbX78odVBp4eFM/R4wKpbs3dsmVTGjKsZYTBBY79AeMeQ\nvcjoPJfapuoKHlM1unMmR+LbY0AP4Bdm9t6P6iNvS9ChQOhUcKNHX6EPlI5K\ncFVh6bkpjptixMTdr20Kqs3t/iC9QMrwTB1A/7g2nGJkk2XuOpkq34lo72zx\nhwh0pyYVw/RBZVq3ZrBbIHp2oLxq7M9hJCe/AjGhrIzyj1KGuT+561PqCEcN\n+Lhfet57P8AzMxWQfcjSiHWH4/t7sHkU9UjX0A3429IAz2k3kDfIfj6xWRp4\nPnJLGxcy2Xvda790DgkBNXbSkHY1x7Ru+S+FcM2aCXXC7KC4FTRhi10gCtSC\n5radl4i1qnOiyfIaeFp7eoC+i0HeeGjI6ANpRZun6ZoEc+GjIdVIQnKhAAHQ\nsTcYhdI6eXlKUwqaoW8eUCzlKLzA8j+i42JfmP/Yd7OR65iUtRMjyI7LmPUl\nb0BGiYIEvYV+cq7N7QznthMzE8YVlUnWjpBlytQ8e3EQfds1o0qqqpswg5am\nLuyrjQoXLMj99j115fZBwouOR7NHoz9ACq94Gqujobrya2G42GCjIPKZ3TI3\njgWuOs3iisBqHOtBWjrs1STfAttEZoB8znAjhsw00Qm1FuaYLcuWpnYUzNnJ\n6bPXt0dsRk+XqlDXH4dP0N1UPH3lReXwRjTechesGAfGelw3cTGE0vfJ7hjG\n1m32zrK7N5VVcGEEeXw/BIT0RQhVZRAGmcwU/w==\n",
+    "generate_outline": "Students receive the Boba Run Splitter seed program and the following inputs: 4 drinks, $5.50 per drink, $2.00 coupon, 3 friends. Task: Write down (1) the exact output text, character for character, and (2) the final value of every variable. Commit predictions in writing before touching a keyboard.",
+    "generate_supplied_code": "# Boba Run Splitter\r\n# Totals a boba order, adds a tip, and splits it among friends.\r\n\r\nprint(\"Boba Run Splitter\")\r\n\r\nnum_drinks = int(input(\"How many drinks? \"))\r\ndrink_price = float(input(\"Price per drink: \"))\r\ncoupon = float(input(\"Coupon amount: \"))\r\nnum_friends = int(input(\"How many friends are splitting? \"))\r\n\r\nsubtotal = num_drinks * drink_price - coupon\r\ntotal_cents = round(subtotal * 1.18 * 100)\r\n\r\nper_person = round(total_cents / num_friends)\r\nleftover_cents = total_cents % num_friends\r\n\r\nprint(\"Each person pays: $\" + str(per_person / 100))\r\nprint(\"Leftover cents: \" + str(leftover_cents))\r\nprint(\"Whoever picked the shop covers the leftover!\")"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-15 20:33:01 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-15 20:33:01 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-15 20:33:48 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-15 20:33:49 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Pythonlab>

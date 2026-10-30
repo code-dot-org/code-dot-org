@@ -1,0 +1,81 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-01T20:47:31.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Anchor Tag States - \"hover\" & \"active\"\r\n\r\nWe applied two of the four states for the anchor (`<a>`) tag in the previous level. Let's try the other two states - \"hover\" and \"active.\"\r\n- **hover**: when the mouse is hovered over, but not clicked, the link\r\n- **active**: the moment the mouse is actively clicking down on the link\r\n\r\n# Do This\r\n\r\n**In the CSS file:**\r\n1. Add a rule to style the \"hover\" state of the `<a>` element.\r\n   - The selector of your rule should look like this: `a:hover`\r\n   - Add the `color` property with a dark color value of your choice.\r\n   - Add the `background-color` property with a bright color value of your choice.\r\n   - Add the `font-size` property with the value of your choice that is larger than 16px.\r\n   - **Optional:** Add the `border-radius` property to give the background color rounded edges.\r\n   - This will define what your link looks like when the mouse is hovering over it - Add any other properties of your choice.\r\n\r\n<br>\r\n\r\n2. Add a rule to style the \"active\" state of the `<a>` element.\r\n   - The selector of your rule should look like this: `a:active`\r\n   - Add the `color` property with a different color than the \"hover\" state.\r\n   - Add the `background-color` property with a different color than the \"hover\" state.\r\n   - Add the `text-decoration-style` property with a value of your choice.\r\n   - This will define what your link looks _as it is being clicked_ - Add any other properties of your choice.\r\n\r\n**In the Preview Window:**\r\n1. Click the \"Refresh and Save\" button to make sure your styles have been applied.\r\n2. Hover over the link to see your \"hover\" styling. \r\n3. **_Slowly_** click on the link to see your \"active\" styling.\r\n\r\n\r\n<br>\r\n\r\n::: details [🔎 **Show Me How To Get Started** 🔍]\r\n\r\n<img src=\"https://images.code.org/658813d064f69739a87cf1285f8d2fab-image-1708196841495.gif\" style=\"width:500px\">\r\n:::\r\n\r\n<br>\r\n\r\n::: details [Help & Tips]\r\n- [<i class=\"fa-regular fa-map\"></i> Pseudo Classes](https://studio.code.org/courses/csd-2024/guides/pseudo-classes)\r\n- [<i class=\"fa-solid fa-book\"></i> Hyperlinks](https://studio.code.org/courses/csd-2024/guides/hyperlinks)\r\n- [<i class=\"fa-solid fa-book\"></i> Flex Children](https://studio.code.org/courses/csd-2024/guides/flex-children)\r\n- [<i class=\"fa-solid fa-book\"></i> Flexbox](https://studio.code.org/courses/csd-2024/guides/flexbox)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Selectors](https://studio.code.org/courses/csd-2024/guides/html-selectors)\r\n- [<i class=\"fa-solid fa-book\"></i> Div Tags](https://studio.code.org/courses/csd-2024/guides/div)\r\n- [<i class=\"fa-solid fa-book\"></i> Classes](https://studio.code.org/courses/csd-2024/guides/classes)\r\n- [<i class=\"fa-solid fa-book\"></i> Layout Properties](https://studio.code.org/courses/csd-2024/guides/layout-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Body Styling](https://studio.code.org/courses/csd-2024/guides/body-styling)\r\n- [<i class=\"fa-solid fa-book\"></i> Images in HTML](https://studio.code.org/courses/csd-2024/guides/images-in-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Text Properties](https://studio.code.org/courses/csd-2024/guides/text-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Creative Commons Search](https://studio.code.org/courses/csd-2024/guides/creative-commons-search)\r\n- [<i class=\"fa-solid fa-book\"></i> Style Sheets](https://studio.code.org/courses/csd-2024/guides/style-sheets)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Lists](https://studio.code.org/courses/csd-2024/guides/lists)\r\n- [<i class=\"fa-solid fa-book\"></i> Headings and Paragraphs](https://studio.code.org/courses/csd-2024/guides/headings-and-paragraphs)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Tags](https://studio.code.org/courses/csd-2024/guides/html-tags)\r\n- [<i class=\"fa-solid fa-book\"></i> Debugging in HTML](https://studio.code.org/courses/csd-2022/guides/debugging-html)\r\n:::",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    \n    <!-- instruction paragraph -->\n    <p>Add the \"hover\" and \"active\" pseudo-classes to this link in the CSS file:</p> \n    \n    <!-- hyperlink to another page -->\n    <a href=\"another-page.html\">Another Page</a>\n\n\n\n  </body>\n</html>",
+          "active": true,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "/* 1) Add a rule to style the \"hover\" state of the <a> element */\n\n\n\n\n/* 2) Add a rule to style the \"active\" state of the <a> element. */\n\n\n\n/* paragraph style */\np {\n  font-family: sans-serif;\n  font-size: 24px;\n  background-color: #4cff00;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "another-page.html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    \n    <!-- instruction paragraph -->\n    <p>Add the \"hover\" and \"active\" pseudo-classes to this link in the CSS file:</p> \n    \n    <!-- hyperlink to home page -->\n    <a href=\"index.html\">Go back</a>\n\n\n\n  </body>\n</html>",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1",
+        "2"
+      ]
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "name_suffix": "_2025-v2",
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMrWCAxWj7bhVJrdUvEy\nnAj9VwIfatz0cdK4+3TfWvT/p2el9FNg+dkJsyUGxLVcWnnQqx8mTVjigxYp\nSn472K7JsdrRWQSGzbWZXi13iCHHi5fcGCrG0Hfb0LzSNJb/TTB/9cQ8gVJC\ngIIf2MyqPxWwFtGiwGJLJOr3cDpEBk9uE3FiiMFYoRUz10j9jivL43a5+SDI\nUiC44GhfYUvpuwy+GUaOBt4kQBEaXNPdOdq/MUS/3QJl1aaixnrxpqHJl80H\n7wTooPRpyjY6SLtXFtSljD01B9nNrbeacQcHIskHH3JRzwqNbyH8dyGY3O+I\n+S351uDy6YetDI2hK0dThhZ1Fi1m5ALLmY/jRdIgEuCM2oNdWZnTIbeHWdHN\nAtpMiG2Ny8bS+evR/dC5ZDM1P9XSDHxGDzGUAgrPz7GBFeXL0ePQxCoqhtrq\npxUKRpOw/luhr2eMoBpbb0oTnGB6kRFWma33pszNmQUpyGrYqcXzJjhwtfbL\ni5/WJ1ZomA6QkghLQgYSDGtVtZll6AQzyYel6p025ToVis6VXwqK5e0EelW+\nQcXcpWyg3ENZuzubn3yR001RtG9IPeKwGyMN6rMzWHWB0t6i3b/oYbHKJuhP\n3i3ghW6LnxZe1eYsU6gWYUnwlqDKemr+Q2C5M2lfrcdFNRB8t6dOJDrLreSi\n76stv7Zgn3gZm+dei0pem9pp/KFsnpebrZQxhWSe75DeB3Spaq1VAXxrNu6k\npEuPzmLN1EN8repSWQsIR37cXotnljgfLua/hXnD8AQPnmm1iNmg9wS8iNKB\nlkp5kcEDPIET1hJJMkTqYYGoEaP1ga2Vo1FR1Xf7YpK2s6+4VoK8Vc/vjWhL\nfbcLPOjBgf64ihu9ftITbYKiKpf0b1BUGsT0um2+nogVsKhDJ9HFGOZ6Lnrs\nZA9+UQXBlvClP1pDTwewh5VRM3+TLWy8jgVGnDeO3ThfsbIhH/mOc5qL5fmU\natZ7YAoRB2KbYqtXzBwmX6BYodeWQwSGov0s1sfRCGS1lVM8ogP3+UxyKD/Q\no85dt0T1/y2Jjtbo5zZK8P170LO1lxWvWtt99ZXEKA7MRAEQLlTRG+KVa0t9\ni/fT7uI/7/UsBNQ539yzdHiOb7kr68BmTt0zB1WUBLfm0il9h+o+efxgP4SN\nnt+v2JyYBiquxVxOber8JUwmgXDqKaREgAIZRPWt/oUcKt0pwO8+wEaoPf7Q\n1Ki3eGWhroiKR/zf6suQoYtxeDAXzWUq9lLADximqxP2aEKr6z+wWD87Scrx\nqU28BRc9H+zuzxpu42JdQ+D6DgrkiHAAL9qJUoMUkXx0d5+IAg80YVn0ieKB\nCnYEP2dG3vb1A1dLxxef5v49owi7BSF3uBmSRRC098aVq6Gcr4q0MaJipEae\nxsVzZ3NayYPiOI23JlXTRWh4IrStZtEGpLmJwEiDmg9s+sJImCbUpSo2z+KR\nh4zlLBEMGvzpbnkbSTdObOZfDPLV9IviKOHXwGO/G7BE2J26xaFwuaCnQpiu\n1w/lWdEvotK+nznwIfen0adZWhvIotjlXYqoWVq4rIRL8/Ep1cPRJTgX6olm\njm67PyF5ee4vYdF7P2CimDEU02C9joJ/+Ba8+OMrFeOZlzFJ2A0Z6fdcEMbT\nFa188kQxNBAfzyUo2S0tc4f2iJ4CBJ5WrnHuG13xpuPi+pnlnAtP5mP6paUm\no1yG7j5fT+NeAvei9XXsarGXPFjsD8xiChMM8sSBixzcPnvKKUnctC+4QyB6\nPwChoHeGXjMZoPBXjNusnu/L/2c0rwaNrrC/1ZPqoZ+is6/Vaiuj/idt9um/\nhgnCHWu+64M7W2swCKe5+raXOA2LImrfSGEirTZfheaC8Y28g6VVhXjm1sM2\n4UdUn+ivQIB9FdAwpfrZxQ==\n",
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:47:31.951+00:00\",\"changed\":[\"cloned from \\\"CSD U2L18-L3-2025\\\"\"],\"cloned_from\":\"CSD U2L18-L3-2025\"},{\"changed_at\":\"2026-05-19 21:02:08 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-19 21:02:16 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-23 17:41:25 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-07-23 17:42:02 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

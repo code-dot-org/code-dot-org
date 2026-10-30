@@ -8,48 +8,50 @@ class ScriptLevelsHelperTest < ActionView::TestCase
   setup do
     @teacher = create(:teacher)
     @student = create(:student)
-    script = create(:script, :with_levels, lessons_count: 3, levels_count: 3, lesson_extras_available: true)
+    script = create(:script, :in_single_unit_course, :with_levels, lessons_count: 3, levels_count: 3, lesson_extras_available: true)
     create(:section, user: @teacher, script: script)
     @section = create(:section, user: @teacher, script: script)
     create(:follower, section: @section, student_user: @student)
+
+    # HOC tutorial URLs are derived from the unit name, so these tests need
+    # units with the exact tutorial names.
+    # HOC_2013_NAME ('Hour of Code') needs skip_name_format_validation because
+    # of its legacy spaces-and-capitals name.
+    [Unit::HOC_2013_NAME, Unit::FROZEN_NAME, Unit::STARWARS_NAME, Unit::ARTIST_NAME].each do |name|
+      create(:script, name: name, skip_name_format_validation: true)
+    end
+    setup_script_cache
   end
 
   test 'tracking_pixel_url' do
     # hoc
-    assert_equal '//test.code.org/api/hour/begin_codeorg.png', tracking_pixel_url(Unit.get_from_cache(Unit::HOC_2013_NAME))
+    assert_equal 'https://test-studio.code.org/api/hour/begin_codeorg.png', tracking_pixel_url(Unit.get_from_cache(Unit::HOC_2013_NAME))
 
-    assert_equal '//test.code.org/api/hour/begin_frozen.png', tracking_pixel_url(Unit.get_from_cache(Unit::FROZEN_NAME))
-    assert_equal '//test.code.org/api/hour/begin_course4.png', tracking_pixel_url(Unit.get_from_cache(Unit::COURSE4_NAME))
-    assert_equal '//test.code.org/api/hour/begin_artist.png', tracking_pixel_url(Unit.get_from_cache(Unit::ARTIST_NAME))
+    assert_equal 'https://test-studio.code.org/api/hour/begin_frozen.png', tracking_pixel_url(Unit.get_from_cache(Unit::FROZEN_NAME))
+    assert_equal 'https://test-studio.code.org/api/hour/begin_artist.png', tracking_pixel_url(Unit.get_from_cache(Unit::ARTIST_NAME))
   end
 
   test 'hoc_finish_url' do
     # hoc
-    assert_equal '//test.code.org/api/hour/finish', Unit.get_from_cache(Unit::HOC_2013_NAME).hoc_finish_url
+    assert_equal 'https://test-studio.code.org/api/hour/finish', Unit.get_from_cache(Unit::HOC_2013_NAME).hoc_finish_url
 
-    assert_equal '//test.code.org/api/hour/finish/frozen', Unit.get_from_cache(Unit::FROZEN_NAME).hoc_finish_url
-    assert_equal '//test.code.org/api/hour/finish/course4', Unit.get_from_cache(Unit::COURSE4_NAME).hoc_finish_url
-    assert_equal '//test.code.org/api/hour/finish/starwars', Unit.get_from_cache(Unit::STARWARS_NAME).hoc_finish_url
-    assert_equal '//test.code.org/api/hour/finish/artist', Unit.get_from_cache(Unit::ARTIST_NAME).hoc_finish_url
+    assert_equal 'https://test-studio.code.org/api/hour/finish/frozen', Unit.get_from_cache(Unit::FROZEN_NAME).hoc_finish_url
+    assert_equal 'https://test-studio.code.org/api/hour/finish/starwars', Unit.get_from_cache(Unit::STARWARS_NAME).hoc_finish_url
+    assert_equal 'https://test-studio.code.org/api/hour/finish/artist', Unit.get_from_cache(Unit::ARTIST_NAME).hoc_finish_url
   end
 
-  test 'script name instead of lesson name in header for HOC' do
+  test 'unit name instead of lesson name in header for single-lesson unit' do
     stubs(:current_user).returns(nil)
-    script_level = Unit.find_by_name(Unit::HOC_NAME).get_script_level_by_chapter 1
-    assert_equal 'Classic Maze', script_level.lesson.summarize[:title]
+    unit = create(:unit, :with_levels)
+    script_level = unit.get_script_level_by_chapter 1
+    assert_equal unit.name, script_level.lesson.summarize[:title]
   end
 
-  test 'show lesson name in header for multi-lesson script' do
+  test 'show lesson name in header for multi-lesson unit' do
     stubs(:current_user).returns(nil)
-    script = Unit.find_by_name(Unit::COURSE4_NAME)
-    script_level = script.get_script_level_by_relative_position_and_puzzle_position 3, 1, false
+    unit = create(:unit, :with_levels, lessons_count: 3)
+    script_level = unit.get_script_level_by_relative_position_and_puzzle_position 3, 1, false
     assert_equal "Lesson 3: #{script_level.lesson.name}", script_level.lesson.summarize[:title]
-  end
-
-  test 'show lesson position in header for default script' do
-    stubs(:current_user).returns(nil)
-    script_level = Unit.twenty_hour_unit.script_levels.fifth
-    assert_equal 'Lesson 2: The Maze', script_level.lesson.summarize[:title]
   end
 
   test 'get End-of-Lesson experience when enabled' do

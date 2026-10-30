@@ -1,15 +1,23 @@
+import {render, screen} from '@testing-library/react';
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+import {Provider} from 'react-redux';
 
-import {UnconnectedLessonProgressDataColumn} from '@cdo/apps/templates/sectionProgressV2/LessonProgressDataColumn.jsx';
-import LessonProgressColumnHeader from '@cdo/apps/templates/sectionProgressV2/LessonProgressColumnHeader.jsx';
-import LessonDataCell from '@cdo/apps/templates/sectionProgressV2/LessonDataCell.jsx';
-
+import {
+  getStore,
+  registerReducers,
+  restoreRedux,
+  stubRedux,
+} from '@cdo/apps/redux';
+import unitSelection, {setUnit} from '@cdo/apps/redux/unitSelectionRedux';
 import {
   fakeLessonWithLevels,
   fakeLesson,
 } from '@cdo/apps/templates/progress/progressTestHelpers';
+import LessonProgressDataColumn from '@cdo/apps/templates/sectionProgressV2/LessonProgressDataColumn.jsx';
+import sectionProgress, {
+  addDataByUnit,
+} from '@cdo/apps/templates/sectionProgressV2/sectionProgressRedux';
+import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 const STUDENT_1 = {id: 1, name: 'Student 1', familyName: 'FamNameB'};
 const STUDENT_2 = {id: 2, name: 'Student 2', familyName: 'FamNameA'};
@@ -20,7 +28,6 @@ const LESSON_PROGRESS = {
   [STUDENT_1.id]: {
     [LESSON.id]: {
       incompletePercent: 20,
-      imperfectPercent: 20,
       completedPercent: 60,
       timeSpent: 300, // time spent = 5 minutes
       lastTimestamp: 1614841198, // date = 3/4
@@ -29,7 +36,6 @@ const LESSON_PROGRESS = {
   [STUDENT_2.id]: {
     [LESSON.id]: {
       incompletePercent: 0,
-      imperfectPercent: 0,
       completedPercent: 100,
       timeSpent: 300, // time spent = 5 minutes
       lastTimestamp: 1614841198, // date = 3/4
@@ -43,6 +49,7 @@ const LEVEL_PROGRESS = {
       status: 'perfect',
       result: 100,
       paired: true,
+      teacherFeedbackNew: false,
     },
   },
   [STUDENT_2.id]: {
@@ -51,39 +58,71 @@ const LEVEL_PROGRESS = {
       status: 'not_tried',
       result: 1,
       paired: false,
+      teacherFeedbackNew: true,
     },
   },
 };
 
 const DEFAULT_PROPS = {
   lesson: LESSON,
-  lessonProgressByStudent: LESSON_PROGRESS,
-  levelProgressByStudent: LEVEL_PROGRESS,
   sortedStudents: STUDENTS,
   addExpandedLesson: () => {},
 };
 
-const setUp = overrideProps => {
-  const props = {...DEFAULT_PROPS, ...overrideProps};
-  return shallow(<UnconnectedLessonProgressDataColumn {...props} />);
-};
-
 describe('LessonProgressDataColumn', () => {
-  it('Shows header lesson', () => {
-    const wrapper = setUp();
+  let store;
 
-    expect(wrapper.find(LessonProgressColumnHeader)).to.have.length(1);
+  beforeEach(() => {
+    stubRedux();
+    registerReducers({
+      sectionProgress,
+      unitSelection,
+      teacherSections,
+    });
+
+    store = getStore();
+    store.dispatch(setUnit(1, 1));
+    store.dispatch(
+      addDataByUnit({
+        unitDataByUnit: {},
+        studentLevelProgressByUnit: {1: LEVEL_PROGRESS},
+        studentLessonProgressByUnit: {1: LESSON_PROGRESS},
+        studentLastUpdateByUnit: {},
+      })
+    );
+
+    store = getStore();
+  });
+
+  function renderDefault(propOverrides) {
+    render(
+      <Provider store={store}>
+        <LessonProgressDataColumn {...DEFAULT_PROPS} {...propOverrides} />
+      </Provider>
+    );
+  }
+
+  afterEach(() => {
+    restoreRedux();
+  });
+  it('Shows header lesson', () => {
+    renderDefault();
+
+    screen.findAllByText(LESSON.id);
   });
 
   it('Shows no expansion if no levels', () => {
-    const wrapper = setUp({lesson: fakeLesson()});
+    renderDefault({lesson: fakeLesson()});
 
-    expect(wrapper.find('FontAwesome')).to.have.length(0);
+    expect(screen.queryByRole('button')).toBeNull;
   });
 
   it('shows progress for all students', () => {
-    const wrapper = setUp();
+    renderDefault();
 
-    expect(wrapper.find(LessonDataCell)).to.have.length(STUDENTS.length);
+    // eslint-disable-next-line no-restricted-properties
+    expect(screen.queryAllByTestId(/lesson-data-cell/)).toHaveLength(
+      STUDENTS.length
+    );
   });
 });

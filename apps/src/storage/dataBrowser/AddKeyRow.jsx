@@ -1,13 +1,19 @@
 /** @overview Component for adding a key/value pair row. */
-import FirebaseStorage from '../firebaseStorage';
-import PendingButton from '../../templates/PendingButton';
+import TextField from '@code-dot-org/component-library/textField';
+import {Button as MuiButton} from '@mui/material';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {castValue} from './dataUtils';
-import dataStyles from './data-styles.module.scss';
-import classNames from 'classnames';
-import {WarningType} from '../constants';
+
 import msg from '@cdo/locale';
+
+import {WarningType} from '../constants';
+import {storageBackend} from '../storage';
+
+import {castValue} from './dataUtils';
+import {refreshCurrentDataView} from './loadDataForView';
+
+import dataStyles from './data-styles.module.scss';
 
 const INITIAL_STATE = {
   isAdding: false,
@@ -41,10 +47,13 @@ class AddKeyRow extends React.Component {
           this.state.value,
           /* allowUnquotedStrings */ false
         );
-        FirebaseStorage.setKeyValue(
+        storageBackend().setKeyValue(
           this.state.key,
           value,
-          () => this.setState(INITIAL_STATE),
+          () => {
+            this.setState(INITIAL_STATE);
+            refreshCurrentDataView();
+          },
           err => {
             if (
               err.type === WarningType.KEY_INVALID ||
@@ -76,8 +85,11 @@ class AddKeyRow extends React.Component {
     return (
       <tr id="uitest-addKeyValuePairRow" className={dataStyles.row}>
         <td className={dataStyles.cell}>
-          <input
-            className={dataStyles.input}
+          <TextField
+            name="key"
+            className={dataStyles.dataField}
+            color="gray"
+            size="s"
             onChange={this.handleKeyChange}
             onKeyUp={this.handleKeyUp}
             placeholder={msg.enterText()}
@@ -85,8 +97,11 @@ class AddKeyRow extends React.Component {
           />
         </td>
         <td className={dataStyles.cell}>
-          <input
-            className={dataStyles.input}
+          <TextField
+            name="value"
+            className={dataStyles.dataField}
+            color="gray"
+            size="s"
             onChange={this.handleValueChange}
             onKeyUp={this.handleKeyUp}
             placeholder={msg.enterText()}
@@ -94,13 +109,20 @@ class AddKeyRow extends React.Component {
           />
         </td>
         <td className={classNames(dataStyles.cell, dataStyles.addButton)}>
-          <PendingButton
-            isPending={this.state.isAdding}
+          <MuiButton
+            variant="outlined"
+            color="tertiary"
+            size="small"
+            loading={this.state.isAdding}
+            disabled={this.state.isAdding}
+            className={classNames(dataStyles.buttonText)}
+            id="addKeyValuePairButton"
             onClick={this.handleAdd}
-            pendingText={msg.addingToTable()}
-            className={classNames(dataStyles.button, dataStyles.buttonBlue)}
-            text={msg.addPairToTable()}
-          />
+            aria-label={msg.addPairToTable()}
+            type="button"
+          >
+            {msg.addPairToTable()}
+          </MuiButton>
         </td>
       </tr>
     );

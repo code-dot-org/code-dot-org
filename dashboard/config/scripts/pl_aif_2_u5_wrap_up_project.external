@@ -1,0 +1,53 @@
+name 'pl-aif-2-U5-wrap-up-project'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Putting it All Toghether: Revisiting the Final Project
+
+
+In the *Tap for More* project, students design an interactive explore-style app that fetches live data from an external API and presents it in a grid of cards with a detail view.
+
+Inspired by apps like Pinterest, Yelp, TikTok, and news feeds, students curate content and design how users explore and learn more about individual items.
+
+<iframe src="https://amandadennard-dotcom.github.io/Unit5AIF2/museum-explorer-app.html" width="100%" height="900" style="border:none;"></iframe>
+
+---
+
+## How the Unit Builds Toward This Project
+
+Across the lessons, students progressively develop the skills they need to succeed:
+
+<div style="max-width:760px; margin:24px auto;">
+
+  <div style="width:520px; margin-left:174px; background:#d5efff; border:0px solid #6b7280; border-radius:10px; padding:18px 22px; margin-bottom:14px; font-size:18px;">
+    <strong>4.</strong> Design defensively to keep apps usable when data is  <strong>delayed, incomplete, or unavailable</strong> 
+  </div>
+
+  <div style="width:520px; margin-left:116px; background:#f7f8fa; border:0px solid #6b7280; border-radius:10px; padding:18px 22px; margin-bottom:14px; font-size:18px;">
+    <strong>3.</strong> Implement  <strong>error handling</strong>  to prevent app crashes
+  </div>
+
+  <div style="width:520px; margin-left:58px; background:#ccf1d0; border:0px solid #6b7280; border-radius:10px; padding:18px 22px; margin-bottom:14px; font-size:18px;">
+    <strong>2.</strong> Parse and work with  <strong>JSON data structures</strong> 
+  </div>
+
+  <div style="width:520px; margin-left:0px; background:#e4e2f8; border:0px solid #6b7280; border-radius:10px; padding:18px 22px; margin-bottom:24px; font-size:18px;">
+    <strong>1.</strong> Use <b>async/await</b> to manage asynchronous API calls 
+  </div>
+
+</div>
+
+
+Each concept appears first in isolation, then comes together in the final project where students integrate data, logic, and user experience design.
+
+---
+
+<p style="font-size:18px; background-color:#F5F7F8; padding:10px; border-left:5px solid #8148B2; display:inline-block;">
+  ➡️ <strong>Optional:</strong> Open the <a href="https://studio.code.org/courses/ai-foundations-designing-and-building-with-ai-2026/units/4/lessons/11" target="_blank" rel="noopener noreferrer" style="text-decoration:none; font-weight:bold;">Project Lesson Plan</a> to see more details on the project.
+</p>
+
+
+
+
+MARKDOWN

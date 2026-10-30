@@ -1,0 +1,14 @@
+name 'capstone-project-lesson1-level3-hub-test-2025'
+display_name 'Milestone Three Hub'
+description '**Goal:** This version runs and works as intended at its current scope.
+
+Use these levels in whatever way helps you understand how your app behaves at its current scope. You are in control of how and when you use these supports to build, test, and learn from a real version of your app.
+
+This milestone is about **testing and observing behavior**, not finishing features. You should return to these levels as you refine or adjust your app.'
+uses_lab2
+
+sublevels
+level 'capstone-project-lesson1-level3a-test-2025'
+level 'capstone-project-lesson1-level3b-test-2025'
+
+

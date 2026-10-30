@@ -1,0 +1,10 @@
+name 'foundations-of-ai-programming-js-lesson3-level4-2026'
+display_name 'CSS Challenge'
+description 'Choose one of the styling challenges.'
+
+sublevels
+level 'foundations-of-ai-programming-js-lesson3-level4a-2026'
+level 'foundations-of-ai-programming-js-lesson3-level4b-2026'
+level 'foundations-of-ai-programming-js-lesson3-level4c-2026'
+level 'foundations-of-ai-programming-js-lesson3-level4d-2026'
+uses_lab2

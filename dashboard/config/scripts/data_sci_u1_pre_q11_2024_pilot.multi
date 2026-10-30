@@ -1,0 +1,14 @@
+name 'Data Sci U1 Pre Q11_2024-pilot'
+
+question 'What is the primary purpose of visualizing data in storytelling?'
+
+wrong 'To summarize numerical values for computational purposes.'
+right 'To identify relationships and trends within data for clearer communication.'
+wrong 'To ensure all data types are represented equally.'
+wrong 'To validate data through graphical comparisons.'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+
+MARKDOWN

@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import React, {Component} from 'react';
+
 import fontConstants from '@cdo/apps/fontConstants';
-import color from '../util/color';
-import Button from './Button';
+import {studio} from '@cdo/apps/lib/util/urlHelpers';
 
 /**
  * A card used on /congrats to display information about a particular course or
@@ -72,14 +72,14 @@ class VerticalImageResourceCard extends Component {
       'dance-party-2': require('@cdo/static/resource_cards/danceparty2.png'),
       'dance-party-2-2019': require('@cdo/static/resource_cards/danceparty2-2019.png'),
       'dance-party-sloth-2019': require('@cdo/static/resource_cards/danceparty-sloth-2019.png'),
-      course2: pegasus('/shared/images/courses/logo_tall_course2.jpg'),
-      course3: pegasus('/shared/images/courses/logo_tall_course3.jpg'),
-      course4: pegasus('/shared/images/courses/logo_tall_course4.jpg'),
-      courseB: pegasus('/shared/images/courses/logo_tall_courseb.png'),
-      courseC: pegasus('/shared/images/courses/logo_tall_coursec.png'),
-      courseD: pegasus('/shared/images/courses/logo_tall_coursed.png'),
-      courseE: pegasus('/shared/images/courses/logo_tall_coursee.png'),
-      courseF: pegasus('/shared/images/courses/logo_tall_coursef.png'),
+      course2: studio('/shared/images/courses/logo_tall_course2.jpg'),
+      course3: studio('/shared/images/courses/logo_tall_course3.jpg'),
+      course4: studio('/shared/images/courses/logo_tall_course4.jpg'),
+      courseB: studio('/shared/images/courses/logo_tall_courseb.png'),
+      courseC: studio('/shared/images/courses/logo_tall_coursec.png'),
+      courseD: studio('/shared/images/courses/logo_tall_coursed.png'),
+      courseE: studio('/shared/images/courses/logo_tall_coursee.png'),
+      courseF: studio('/shared/images/courses/logo_tall_coursef.png'),
     };
     const imgSrc = filenameToImgUrl[image];
 
@@ -104,13 +104,14 @@ class VerticalImageResourceCard extends Component {
               />
             )}
           </div>
-          <Button
-            __useDeprecatedTag
+          <MuiButton
+            variant="contained"
+            color="primary"
             href={link}
-            color={Button.ButtonColor.gray}
-            text={buttonText}
             style={{...styles.button}}
-          />
+          >
+            {buttonText}
+          </MuiButton>
         </div>
       </div>
     );
@@ -126,18 +127,18 @@ const styles = {
     overflow: 'hidden',
     borderWidth: 1,
     borderStyle: 'solid',
-    borderColor: color.border_gray,
+    borderColor: 'var(--borders-neutral-primary)',
     width: 308,
-    backgroundColor: color.white,
+    backgroundColor: 'var(--background-neutral-primary)',
   },
   jumboCard: {
     overflow: 'hidden',
     borderWidth: 1,
     borderStyle: 'solid',
-    borderColor: color.border_gray,
+    borderColor: 'var(--borders-neutral-primary)',
     width: 473,
     marginBottom: 20,
-    backgroundColor: color.white,
+    backgroundColor: 'var(--background-neutral-primary)',
   },
   cardHeight: {
     height: 440,
@@ -153,7 +154,7 @@ const styles = {
   },
   text: {
     ...fontConstants['main-font-regular'],
-    color: color.charcoal,
+    color: 'var(--text-neutral-primary)',
   },
   title: {
     paddingTop: 20,
@@ -177,7 +178,8 @@ const styles = {
   shareLink: {
     borderWidth: 1,
     borderStyle: 'solid',
-    borderColor: color.border_gray,
+    borderColor: 'var(--borders-neutral-primary)',
+    backgroundColor: 'var(--background-neutral-primary)',
     fontSize: 14,
     marginTop: 5,
     padding: 5,

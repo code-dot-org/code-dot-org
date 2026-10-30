@@ -1,16 +1,19 @@
+import {Typography as MuiTypography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
-import AssetManager from './AssetManager';
-import color from '../../util/color';
+
+import fontConstants from '@cdo/apps/fontConstants';
+import i18n from '@cdo/locale';
+
 import {
   SOUND_PREFIX,
   DEFAULT_SOUND_PATH_PREFIX,
 } from '../../assetManagement/assetPrefix';
-import SoundLibrary from './SoundLibrary';
-import i18n from '@cdo/locale';
 import Sounds from '../../Sounds';
+
+import AssetManager from './AssetManager';
 import {RecordingFileType} from './recorders';
-import fontConstants from '@cdo/apps/fontConstants';
+import SoundLibrary from './SoundLibrary';
 
 const audioExtension = '.mp3';
 
@@ -53,52 +56,70 @@ export default class SoundPicker extends React.Component {
 
   render() {
     const isFileMode = this.state.mode === MODE.files;
+    const modeSwitchButtonBase = {
+      fontSize: 16,
+      cursor: 'pointer',
+      background: 'none',
+      border: 'none',
+      padding: 0,
+    };
     const headerStyles = {
       soundModeToggle: {
+        ...modeSwitchButtonBase,
         float: 'left',
         margin: '0 20px 0 0',
-        fontSize: 16,
-        cursor: 'pointer',
       },
       fileModeToggle: {
+        ...modeSwitchButtonBase,
         margin: 0,
-        fontSize: 16,
-        cursor: 'pointer',
       },
     };
 
     if (isFileMode) {
       headerStyles.soundModeToggle = {
         ...headerStyles.soundModeToggle,
-        color: color.light_gray,
+        color: 'var(--text-neutral-quaternary)',
       };
 
       headerStyles.fileModeToggle = {
         ...headerStyles.fileModeToggle,
         ...fontConstants['main-font-semi-bold'],
+        color: 'var(--text-brand-purple-primary)',
       };
     } else {
       headerStyles.soundModeToggle = {
         ...headerStyles.soundModeToggle,
         ...fontConstants['main-font-semi-bold'],
+        color: 'var(--text-brand-purple-primary)',
       };
       headerStyles.fileModeToggle = {
         ...headerStyles.fileModeToggle,
-        color: color.light_gray,
+        color: 'var(--text-neutral-quaternary)',
       };
     }
 
-    let modeSwitch;
-    let title = <p>{i18n.chooseSounds()}</p>;
+    let title = (
+      <MuiTypography variant="h3" gutterBottom>
+        {i18n.chooseSounds()}
+      </MuiTypography>
+    );
 
-    modeSwitch = (
+    const modeSwitch = (
       <div id="modeSwitch">
-        <p onClick={this.setSoundMode} style={headerStyles.soundModeToggle}>
+        <button
+          type="button"
+          onClick={this.setSoundMode}
+          style={headerStyles.soundModeToggle}
+        >
           {i18n.soundLibrary()}
-        </p>
-        <p onClick={this.setFileMode} style={headerStyles.fileModeToggle}>
+        </button>
+        <button
+          type="button"
+          onClick={this.setFileMode}
+          style={headerStyles.fileModeToggle}
+        >
           {i18n.makeNewSounds()}
-        </p>
+        </button>
       </div>
     );
 
@@ -124,10 +145,19 @@ export default class SoundPicker extends React.Component {
         {!this.props.libraryOnly && (
           <div>
             {this.props.showUnderageWarning && (
-              <p style={styles.warning}>
+              <MuiTypography
+                variant="body4"
+                component="span"
+                sx={{
+                  display: 'block',
+                  color: 'var(--text-error-primary)',
+                  fontWeight: 'bold',
+                  marginBottom: '0.75em',
+                }}
+              >
                 Warning: Do not upload anything that contains personal
                 information.
-              </p>
+              </MuiTypography>
             )}
             {modeSwitch}
           </div>
@@ -144,12 +174,7 @@ const styles = {
     margin: '0 0 0 5px',
   },
   divider: {
-    borderColor: color.purple,
+    borderColor: 'var(--borders-brand-purple-primary)',
     margin: '5px 0',
-  },
-  warning: {
-    color: color.red,
-    fontSize: 13,
-    fontWeight: 'bold',
   },
 };

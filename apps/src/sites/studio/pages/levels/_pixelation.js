@@ -47,6 +47,8 @@ function setMinTextValues() {
   bitsPerPixelText.value = getPositiveValue(bitsPerPixelText);
 }
 
+window.setMinTextValues = setMinTextValues;
+
 function isHexSelected() {
   return 'hex' === document.querySelector('input[name="binHex"]:checked').value;
 }
@@ -724,6 +726,25 @@ function changeVal(elementID) {
 }
 
 window.changeVal = changeVal;
+
+/**
+ * Updates the sliders when they are updated via the text inputs or key input
+ * on the Pixelation widget.
+ */
+function setSliders() {
+  // Make sure slider value is at least 1
+  heightRange.value = getPositiveValue(heightText);
+  widthRange.value = getPositiveValue(widthText);
+  bitsPerPixelRange.value = getPositiveValue(bitsPerPixelText);
+
+  if (options.version !== '1') {
+    updateBinaryDataToMatchSliders();
+    formatBitDisplay();
+  }
+  drawGraph();
+}
+
+window.setSliders = setSliders;
 
 /**
  * Creates a PNG the given canvas and opens it in a new window.  Image can be copy/pasted, saved, etc. from there.

@@ -1,0 +1,80 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-10-22T00:39:12.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "encrypted": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "outline",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Game Stats</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <h1>🎮 Game Actions</h1>\n\n  <button id=\"attackBtn\">Attack</button>\n  <button id=\"healBtn\">Heal</button>\n  <button id=\"bonusBtn\">Bonus</button>\n\n  <p id=\"output\"></p>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  font-family: Arial, sans-serif;\n  text-align: center;\n  margin-top: 50px;\n}\n\nbutton {\n  margin: 10px;\n  padding: 8px 16px;\n  font-size: 16px;\n  cursor: pointer;\n}\n\n#output {\n  margin-top: 20px;\n  font-weight: bold;\n  font-size: 20px;\n}\n",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// --- SELECT ELEMENTS ---\nconst outputElement = document.getElementById(\"output\");\nconst attackBtn = document.getElementById(\"attackBtn\");\nconst healBtn = document.getElementById(\"healBtn\");\nconst bonusBtn = document.getElementById(\"bonusBtn\");\n\n// --- GAME VARIABLES ---\nlet score = 0;\nlet health = 100;\n\n// --- PARAMETERIZED FUNCTION ---\n\n\n// --- EVENT LISTENERS ---\nattackBtn.addEventListener(\"click\", () => updateStats(\"attack\"));\nhealBtn.addEventListener(\"click\", () => updateStats(\"heal\"));\nbonusBtn.addEventListener(\"click\", () => updateStats(\"bonus\"));\n\n// --- INITIAL DISPLAY ---\nupdateStats();",
+          "folderId": "0",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "documentation.md",
+          "language": "md",
+          "contents": "# Function: <updateStats>\n\n# What it does\nAdjust the player’s score and health based on the chosen action, then refresh the UI.\n\n# Inputs\naction — a string: \"attack\", \"heal\", or \"bonus\"\n\n# What it changes\nVariables: Updates score and health according to the action.\nOn screen: Sets the score/health elements’ text to the new values \n(e.g., scoreEl.textContent = score;, healthEl.textContent = health;).",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "4",
+        "3",
+        "1",
+        "2"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nzQSlCfnRDYKljE34DEg=\n",
+    "long_instructions": "# Attack, Heal, or Bonus\r\n\r\n1. Create a function called `updateStats` that takes in one parameter.\r\n2. Use conditionals to check if the value of the parameter is set to \"attack\", \"heal\" or \"bonus\" and update the score and health variables accordingly.\r\n3. Display the updated score and health values on screen.\r\n\r\n_Challenge: Create a fourth button for `Battle` or another action of your choice and update the function and display._",
+    "display_name": "Attack, Defend, or Heal",
+    "bubble_choice_description": "Code a function that takes in a parameter and updates the score and health variables.",
+    "thumbnail_url": "https://images.code.org/5591f620a607285f762fb74b9f5a62c1-Screenshot 2025-10-21 at 7.54.58 PM.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-22T00:39:12.454+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson6-level4a-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson6-level4a-test-2025\"},{\"changed_at\":\"2025-10-22 00:40:10 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-22 01:10:32 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-22 01:16:03 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-22 01:16:34 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-22 01:50:07 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-22 01:51:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-22 01:54:26 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-22 01:55:52 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-22 01:56:25 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-29 18:36:03 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-29 18:36:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-29 18:45:11 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-29 18:46:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-29 18:48:38 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-29 18:49:15 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-29 18:49:31 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-31 17:48:48 +0000\",\"changed\":[\"ai_tutor_mode\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

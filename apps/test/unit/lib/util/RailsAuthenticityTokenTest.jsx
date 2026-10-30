@@ -1,7 +1,8 @@
+import {assert} from 'chai'; // eslint-disable-line no-restricted-imports
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
-import {assert} from 'chai';
-import {shallow} from 'enzyme';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 import logToCloud from '@cdo/apps/logToCloud';
 
@@ -33,7 +34,7 @@ describe('RailsAuthenticityToken', () => {
       ),
       'rendered the hidden field as expected'
     );
-    assert(logToCloud.logError.notCalled, 'logged nothing to New Relic');
+    assert(logToCloud.logError.notCalled, 'logged nothing to observability');
   });
 
   it('renders empty and logs to cloud when meta tags are not found', () => {
@@ -41,7 +42,7 @@ describe('RailsAuthenticityToken', () => {
 
     const wrapper = shallow(<RailsAuthenticityToken />);
     assert(wrapper.isEmptyRender(), 'rendered nothing');
-    assert(logToCloud.logError.calledOnce, 'logged an error to New Relic');
+    assert(logToCloud.logError.calledOnce, 'logged an error to observability');
   });
 });
 

@@ -26,8 +26,22 @@ class DelivererTest < Minitest::Test
   def test_deliverer_render
     template = @deliverer.load_template("dashboard")
     header, html, text = template.render
-    assert_equal "Code.org <noreply@code.org>", header["from"]
+    assert_equal "CodeAI <noreply@code.org>", header["from"]
     refute_nil html
+    assert_nil text
+  end
+
+  def test_deliverer_render_with_populated_header
+    template = @deliverer.load_template("dashboard")
+    header, html, text = template.render(
+      "from" => "Code.org Testing <test@code.org>",
+      "subject" => "Testing out our emails",
+      "body" => "<h1>Testing</h1>"
+    )
+    assert_equal "Code.org Testing <test@code.org>", header["from"]
+    assert_equal "Testing out our emails", header["subject"]
+    assert_includes html, "<html><body>"
+    assert_includes html, "<h1>Testing</h1>"
     assert_nil text
   end
 
@@ -45,7 +59,9 @@ class DelivererTest < Minitest::Test
       id: 1,
       contact_id: contact[:id],
       message_id: message_id,
-      params: {}.to_json
+      params: {
+        body: 'This is a test email'
+      }.to_json
     }
     @deliverer.send(delivery)
     assert_match "To: #{email}", @fake_smtp.message

@@ -7,7 +7,7 @@
 require_relative '../../../dashboard/config/environment'
 require 'optparse'
 
-CDO.log = Logger.new(STDOUT)
+CDO.log = Logger.new($stdout)
 ActiveRecord::Base.record_timestamps = false
 
 options = {interstitial_days: nil, csv_file: '/tmp/fix_bad_school_info_in_users.201710112304.csv'}

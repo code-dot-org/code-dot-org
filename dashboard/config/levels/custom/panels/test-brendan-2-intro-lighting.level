@@ -1,0 +1,45 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-05-28T16:56:11.000Z",
+  "level_num": "custom",
+  "user_id": 574,
+  "properties": {
+    "panels": [
+      {
+        "key": "test-brendan-2-intro-lighting-0a5f9bdd-23a7-437a-8b2f-56caaf0d46e8",
+        "text": "In 3D graphics, lighting is crucial for creating depth and realism. Without it, objects can look flat and lifeless, like these simple shapes.",
+        "imageUrl": "https://images.code.org/22b451f576601ecd5a8c184e3463049d-test-brendan-2-intro-lighting-panel-1-f0b24569-b49b-4f8d-b8e1-a6ba58ecfa1b.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "test-brendan-2-intro-lighting-3a453bb3-0dae-45e4-9181-d36e48a3679f",
+        "text": "Ambient light provides an overall, uniform illumination. It brightens everything evenly, like the general, diffused light in a room with no direct sun.",
+        "imageUrl": "https://images.code.org/df538bdc8f6a421d83c5e2efbd291037-test-brendan-2-intro-lighting-panel-2-976ea548-1183-4ca1-8548-6f5b2ad85161.png",
+        "layout": "text-bottom-left"
+      },
+      {
+        "key": "test-brendan-2-intro-lighting-ccaeab8f-f140-4ee1-8a2f-e01697a00089",
+        "text": "A point light emits light from a single source in all directions. Think of a lightbulb in the middle of a dark room – it creates distinct highlights and shadows that radiate outwards.",
+        "imageUrl": "https://images.code.org/245afef083f40e6c64cf84c9946465fc-test-brendan-2-intro-lighting-panel-3-911c5275-ba64-40e2-9bfe-20a05c23f952.png",
+        "layout": "text-top-right"
+      },
+      {
+        "key": "test-brendan-2-intro-lighting-dd8df682-1ecc-426a-a7fa-e560593d2d9e",
+        "text": "Directional light simulates a distant light source, like the sun. Its rays are parallel, creating uniform shadows and a strong sense of direction across the entire scene.",
+        "imageUrl": "https://images.code.org/0ba76a036848b0cb395d49b152f26e92-test-brendan-2-intro-lighting-panel-4-6feb0757-6fae-4806-93ed-4adf3d5f4485.png",
+        "layout": "text-bottom-right"
+      },
+      {
+        "key": "test-brendan-2-intro-lighting-a67d3b47-007b-4bc6-ac60-9bce605e5be3",
+        "text": "Each light type drastically changes how we perceive shape and depth. Combining them allows us to create rich, complex, and realistic 3D scenes!",
+        "imageUrl": "https://images.code.org/7d49508c1b520841259d07bdf70eb33f-test-brendan-2-intro-lighting-panel-5-ff472acd-1055-49f2-ba0b-7cd84d1284c3.png",
+        "layout": "text-top-left"
+      }
+    ],
+    "generate_outline": "Introduce different types of lighting in 3D scenes, such as ambient, point, and directional lights. Explain their properties and how they affect the perception of depth and realism."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-28 16:56:58 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-28 16:56:58 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

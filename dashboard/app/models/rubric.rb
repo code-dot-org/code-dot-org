@@ -2,20 +2,41 @@
 #
 # Table name: rubrics
 #
-#  id         :bigint           not null, primary key
-#  lesson_id  :integer          not null
-#  level_id   :integer          not null
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+#  id            :bigint           not null, primary key
+#  lesson_id     :integer          not null
+#  level_id      :integer          not null
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#  s3_config_dir :string(255)
 #
 # Indexes
 #
+#  index_rubrics_on_lesson_id               (lesson_id) UNIQUE
 #  index_rubrics_on_lesson_id_and_level_id  (lesson_id,level_id) UNIQUE
 #
 class Rubric < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :public,
+    lesson_id: :public,
+    level_id: :public,
+    created_at: :public,
+    updated_at: :public,
+    s3_config_dir: :public,
+  )
+
   has_many :learning_goals, -> {order(:position)}, dependent: :destroy, inverse_of: :rubric
   belongs_to :level
   belongs_to :lesson
+  has_and_belongs_to_many :jit_pl_concepts, join_table: :jit_pl_concepts_rubrics
+
+  validate :validate_ai_config
+  def validate_ai_config
+    AiRubricConfig.validate_ai_config_for_rubric(self)
+  rescue => exception
+    errors.add(:base, exception.message)
+  end
 
   def get_script_level
     lesson.script_levels.find {|sl| sl.levels.include?(level)}
@@ -26,11 +47,17 @@ class Rubric < ApplicationRecord
     {
       id: id,
       learningGoals: learning_goals.map(&:summarize),
+      script: {
+        id: get_script_level.script.id,
+      },
       lesson: {
+        id: lesson.id,
         name: lesson.name,
         position: lesson.relative_position,
+        title: lesson.localized_title,
       },
       level: {
+        id: level.id,
         name: level.name,
         position: script_level&.position,
       }
@@ -49,6 +76,7 @@ class Rubric < ApplicationRecord
       id: id,
       lessonId: lesson_id,
       levelId: level_id,
+      s3ConfigDir: s3_config_dir,
       learningGoals: learning_goals.map(&:summarize_for_rubric_edit),
     }
   end

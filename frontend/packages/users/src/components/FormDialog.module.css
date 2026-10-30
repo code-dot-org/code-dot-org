@@ -1,0 +1,20 @@
+/*
+ * DialogContent for a form modal: a column of fields whose DSCO inputs are
+ * stretched to fill the dialog (they keep a fixed width otherwise). Pair with
+ * <Dialog fullWidth maxWidth="xs"> so the paper has a stable width to fill.
+ * :not([type="radio"]) leaves radio controls alone.
+ */
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.content.content.content > * {
+  width: 100%;
+  min-width: 0;
+}
+
+.content.content.content input:not([type='radio']) {
+  width: 100%;
+}

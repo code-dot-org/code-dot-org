@@ -1,0 +1,72 @@
+name 'networks-internet-lesson3-level3.5_v2-2025'
+title 'AI-Assisted Routing'
+description 'description here'
+
+markdown <<MARKDOWN
+## Level 4: What Is AI-Based Routing?
+
+![Side-by-side traditional vs. AI routing](https://images.code.org/c984ae5050f5162fb6983800865e7c32-Screenshot 2025-04-05 230112.png)
+
+### What Does It Mean?
+
+**AI-based routing** means using **smart systems** to help choose the **fastest** or **least crowded** path for your data to travel.  
+Unlike traditional routers that follow fixed rules, AI routing adapts in real time.
+
+### Traditional vs. AI Routing
+
+| Traditional Routing                          | AI-Based Routing                            |
+|----------------------------------------------|---------------------------------------------|
+| Fixed paths                                   | Dynamic routing                             |
+| Doesn’t adapt to congestion                   | Detects & avoids congestion                 |
+| Sends data the same way every time            | Learns from past traffic patterns           |
+
+---
+
+## AI Routing Is Like...
+
+![Google Maps traffic analogy](https://images.code.org/389d4209aef4b1f5e54ccb4f5ee16ad3-Screenshot 2025-04-05 231032.png)
+
+**Imagine you're driving with a GPS app like Google Maps or Waze.**  
+If there's traffic on your usual route, the app **automatically finds a faster way** around it.
+
+**That’s what AI does for your data—**  
+it finds better paths based on current network traffic, just like GPS apps do for roads.
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+## Purpose:  
+This level builds foundational understanding of AI-based routing before students explore specific AI scenarios in the network.
+
+
+### What Does It Mean?
+
+- **Teaching Tip:** Emphasize the contrast between **static vs. adaptive systems**. Clarify that traditional routers follow predetermined paths, while AI-based routing adjusts based on real-time network conditions.
+- Use the visual to point out how **AI reroutes data** the way a navigation app finds new routes.
+- Encourage students to describe what “smart systems” might need to make decisions (e.g., traffic data, past usage, predicted congestion).
+
+**Optional Discussion Prompts:**  
+- What might AI “look at” when deciding how to route data?  
+- Why would adapting to real-time traffic help the network run better?
+
+---
+### Traditional vs. AI Routing Table**
+- **Teaching Tip:** Have students compare each row and explain which situation they’d prefer for their own internet use.
+- Option: Turn this into a brief Think-Pair-Share (e.g., “Which routing method would help most during a livestream?”)
+
+**AI Routing Is Like...**
+- **Goal:** Ground the concept in a relatable system—**GPS rerouting during traffic**.
+- **Teaching Tip:** Ask students if they’ve experienced rerouting in a navigation app. Draw parallels:
+  - Roads = network paths  
+  - Traffic = data congestion  
+  - Driver = data packet  
+  - GPS = AI in the network
+
+**Optional Discussion Prompts:**  
+- What happens when your GPS finds a better route?  
+- What would happen if your GPS didn’t update with traffic info?
+
+**Key Takeaway for Students:**  
+AI-based routing **adapts** to real-world conditions and **improves performance** without human intervention—just like how modern apps help us avoid traffic jams.
+
+MARKDOWN

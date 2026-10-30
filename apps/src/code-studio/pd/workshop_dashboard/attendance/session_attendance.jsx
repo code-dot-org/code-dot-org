@@ -1,24 +1,29 @@
 /**
  * Display and edit attendance for a workshop session, for display in a WorkshopAttendance tab.
  */
-import PropTypes from 'prop-types';
-import React from 'react';
-import {connect} from 'react-redux';
 import $ from 'jquery';
 import _ from 'lodash';
-import fontConstants from '@cdo/apps/fontConstants';
-import SessionAttendanceRow from './session_attendance_row';
-import VisibilitySensor from '../components/visibility_sensor';
-import Spinner from '../../components/spinner';
+import PropTypes from 'prop-types';
+import React from 'react';
 import {Table} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import IdleTimer from 'react-idle-timer';
-import {COURSE_CSF} from '../workshopConstants';
+import {connect} from 'react-redux';
+
+import fontConstants from '@cdo/apps/fontConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+
+import Spinner from '../../../../sharedComponents/Spinner';
+import VisibilitySensor from '../components/visibility_sensor';
 import {
   PermissionPropType,
   WorkshopAdmin,
   ProgramManager,
   Facilitator,
 } from '../permission';
+import {COURSE_CSF} from '../workshopConstants';
+
+import SessionAttendanceRow from './session_attendance_row';
 
 // in milliseconds
 const REFRESH_DELAY = 5000;
@@ -129,6 +134,13 @@ export class SessionAttendance extends React.Component {
       this.setState({
         attendance: clonedAttendance,
       });
+
+      if (value.attended) {
+        analyticsReporter.sendEvent(EVENTS.WORKSHOP_ATTENDANCE_MARKED_EVENT, {
+          user_logged_own_attendance: false,
+          session_id: this.props.sessionId,
+        });
+      }
     }
     this.props.onSaved(value);
   };
@@ -188,7 +200,7 @@ export class SessionAttendance extends React.Component {
                   <th>Email</th>
                   <th>Verified Teacher Account</th>
                   {this.props.scholarshipWorkshop && (
-                    <th>Code.org Scholarship?</th>
+                    <th>CodeAI Scholarship?</th>
                   )}
                   {this.props.scholarshipWorkshop && (
                     <th>Other Scholarship?</th>

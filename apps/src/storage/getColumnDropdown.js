@@ -1,15 +1,18 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import msg from '@cdo/locale';
-import GetColumnParamPicker, {ParamType} from './GetColumnParamPicker';
+
 import {getFirstParam} from '../dropletUtils';
 import {stripEncapsulatingDoubleQuotes} from '../utils';
+
+import GetColumnParamPicker, {ParamType} from './GetColumnParamPicker';
 
 function openModal(type, callback, table) {
   const modalDiv = document.createElement('div');
   modalDiv.setAttribute('id', 'modalDiv');
   document.body.appendChild(modalDiv);
-  ReactDOM.render(
+  createReactRoot(
     <GetColumnParamPicker
       param={type}
       table={table}
@@ -19,7 +22,10 @@ function openModal(type, callback, table) {
         element.parentNode.removeChild(element);
       }}
     />,
-    document.querySelector('#modalDiv')
+    document.querySelector('#modalDiv'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 }
 

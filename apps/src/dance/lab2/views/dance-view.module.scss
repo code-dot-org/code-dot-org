@@ -1,28 +1,84 @@
-@import 'color.scss';
-@import './constants.scss';
+$tinted-background-color: color-mix(
+  in srgb,
+  var(--background-neutral-tertiary),
+  transparent 30%
+);
 
 .danceLab {
   height: 100%;
+  width: 100%;
   display: flex;
-  flex-direction: row;
-  gap: 2px;
+  flex-direction: column;
+
+  &.share {
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background-neutral-black-fixed);
+
+    .visualizationColumn {
+      box-shadow: 3px 3px 6px black;
+      border: 1px solid var(--borders-neutral-primary);
+      border-radius: 4px;
+      gap: 8px;
+      padding: 16px 24px;
+      background-color: var(--background-neutral-secondary);
+      max-width: min(400px, 80%);
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        width: calc(100% - 8px);
+        padding: 0 10px;
+        box-sizing: border-box;
+        background-color: $tinted-background-color;
+        border-radius: 4px;
+        margin: 4px;
+
+        >h3 {
+          margin: 0;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+
+        >img {
+          height: 70px;
+        }
+      }
+
+      canvas {
+        width: 100% !important;
+        height: 100% !important;
+      }
+    }
+
+    .controlButton {
+      flex: 1;
+    }
+  }
 }
 
-.visualizationArea {
-  flex: 0;
-  height: 100%;
-  background-color: $neutral_dark10;
+.mainContent {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  position: relative;
 }
 
 .visualizationColumn {
   margin: 2px 5px;
+  display: flex;
+  flex-direction: column;
 }
 
 .visualization {
-  // TODO: support resizing
-  width: $visualization-size;
-  height: $visualization-size;
-  background-color: $neutral_white;
+  width: 100%;
+  background-color: var(--background-neutral-secondary);
+  position: relative;
+  border: 1px solid var(--borders-neutral-primary);
+  box-sizing: border-box;
 }
 
 .workArea {
@@ -33,8 +89,99 @@
 
 .instructionsArea {
   flex: 0;
+  min-width: 25%;
+}
+
+.visualizationArea {
+  flex: 0;
+  background-color: var(--background-neutral-primary);
+
+  &.jumbo {
+    flex: initial;
+    width: min(33vw, calc(100vh - 250px));
+
+    canvas {
+      width: 100% !important;
+      height: 100% !important;
+    }
+  }
 }
 
 .workspaceArea {
   flex: 1;
+}
+
+.panelHeader {
+  border-bottom: 1px solid var(--borders-neutral-primary);
+}
+
+.divider {
+  width: 1px;
+  height: 100%;
+  background-color: var(--background-neutral-quaternary);
+}
+
+.controlsContainer {
+  display: flex;
+  margin: 5px 0;
+}
+
+.verticalFlex {
+  display: flex;
+  flex-direction: column;
+  flex: 0;
+}
+
+.loading {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.1s ease-in;
+  background-color: white;
+
+  &Show {
+    opacity: 1;
+  }
+
+  .loadingGif {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.timelineContainer {
+  height: 150px;
+  display: none;
+}
+
+/* With the logo pinned in the upper-left, and the language selector in the
+ * lower-left, there is room for the timeline on taller screens when those items
+ * are above and below the share UI, and on slightly shorter screens with extra
+ * width so they can sit beside the share UI.
+ */
+@media screen and (min-height: 800px),
+screen and (min-height: 720px) and (min-width: 970px) {
+  .timelineContainer {
+    display: initial;
+  }
+}
+
+.musicProjectOverlay {
+  position: absolute;
+  bottom: 0;
+  right: 4px;
+  left: 4px;
+  border-radius: 4px;
+  background-color: $tinted-background-color;
+  border: none;
+}
+
+.actionBar {
+  display: flex;
+  justify-content: space-between;
 }

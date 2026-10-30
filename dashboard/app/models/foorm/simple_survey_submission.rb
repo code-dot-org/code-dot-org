@@ -17,6 +17,18 @@
 #
 
 class Foorm::SimpleSurveySubmission < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :restricted,
+    foorm_submission_id: :restricted,
+    user_id: :restricted,
+    simple_survey_form_id: :restricted,
+    misc_form_path: :restricted,
+    created_at: :restricted,
+    updated_at: :restricted,
+  )
+
   belongs_to :foorm_submission, class_name: 'Foorm::Submission', optional: true
   belongs_to :user, optional: true
   belongs_to :simple_survey_form

@@ -1,8 +1,9 @@
+import {Pagination} from '@react-bootstrap/pagination';
+import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
-import $ from 'jquery';
 import {Button, Alert, FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
-import {Pagination} from '@react-bootstrap/pagination';
+
 import i18n from '@cdo/locale';
 
 /**
@@ -492,7 +493,7 @@ export default class FormController extends React.Component {
         style={styles.pageButtons}
         items={this.getPageComponents().length}
         activePage={this.state.currentPage + 1}
-        onSelect={i => this.setPage(i - 1)} // eslint-disable-line react/jsx-no-bind
+        onSelect={i => this.setPage(i - 1)}
       />
     );
 

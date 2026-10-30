@@ -1,5 +1,6 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 50,
   "created_at": "2023-11-28T21:13:38.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "skin": "gamelab",
     "embed": "false",
-    "long_instructions": "# Calling Functions Multiple Times\r\n\r\nYou'll often want to use the same code at many places in your program. Once you've created a function you can call it as many times as you like.\r\n\r\n# Do This\r\n\r\nThis code creates a sprite that moves across the screen once. How can you make it go back across the screen?\r\n\r\n1) ::: details [Call the setFlyman() function to make the sprite go back across the screen.]\r\n   - **Note:** The setFlyman() function is already called once at the beginning of your program to make the sprite move across the screen once.\r\n   - Find the [`if ()`(#64B5F6)](/docs/ide/gamelab/expressions/ifBlock) statement inside the draw loop.\r\n   - Read the condition of this [`if ()`(#64B5F6)](/docs/ide/gamelab/expressions/ifBlock) statement to understand what it is checking.\r\n   - Drag out a [`myFunction();`(#68D995)](/docs/ide/gamelab/expressions/callMyFunction) call inside this [`if ()`(#64B5F6)](/docs/ide/gamelab/expressions/ifBlock) statement to make the sprite move across the screen **multiple times**.\r\n:::",
+    "long_instructions": "# Calling Functions Multiple Times\r\n\r\nYou'll often want to use the same code at many places in your program. Once you've created a function you can call it as many times as you like.\r\n\r\n# Do This\r\n\r\nThis code creates a sprite that moves across the screen once. How can you make it go back across the screen?\r\n\r\n1) ::: details [Call the setFlyer() function to make the sprite go back across the screen.]\r\n   - **Note:** The setFlyer() function is already called once at the beginning of your program to make the sprite move across the screen once.\r\n   - Find the [`if ()`(#64B5F6)](/docs/ide/gamelab/expressions/ifBlock) statement inside the draw loop.\r\n   - Read the condition of this [`if ()`(#64B5F6)](/docs/ide/gamelab/expressions/ifBlock) statement to understand what it is checking.\r\n   - Drag out a [`myFunction();`(#68D995)](/docs/ide/gamelab/expressions/callMyFunction) call inside this [`if ()`(#64B5F6)](/docs/ide/gamelab/expressions/ifBlock) statement to make the sprite move across the screen **multiple times**.\r\n:::",
     "start_blocks": "var flyman = createSprite();\r\nflyman.setAnimation(\"flyMan_fly\");\r\nsetFlyman();\r\n\r\nfunction draw(){\r\n  treesBackground();\r\n  if(flyman.x < -50){\r\n\r\n  }\r\n  drawSprites();\r\n}\r\n\r\nfunction setFlyman(){\r\n  flyman.x = 450;\r\n  flyman.y = 200;\r\n  flyman.velocityX = -1;\r\n}\r\n\r\nfunction treesBackground(){\r\n noStroke();\r\n background(color(0,200,255));\r\n \r\n fill(\"green\");\r\n rect(0,380,400,20);\r\n \r\n fill(\"yellow\");\r\n ellipse(350,50,20,20);\r\n \r\n strokeWeight(20);\r\n stroke(color(150,100,0));\r\n line(20,300,20,380);\r\n line(80,300,80,380);\r\n line(120,300,120,380);\r\n line(160,300,160,380);\r\n line(200,300,200,380);\r\n line(250,300,250,380);\r\n fill(\"green\");\r\n noStroke();\r\n ellipse(20,300,100,100);\r\n ellipse(80,300,110,110);\r\n ellipse(120,300,95,95);\r\n ellipse(160,300,110,110);\r\n ellipse(200,300,100,100);\r\n ellipse(250,300,100,100);\r\n}",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -61,9 +62,8 @@
     "validation_enabled": "false",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-11-28T21:13:38.594+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Functions Reset Sprite_2023\\\"\"],\"cloned_from\":\"CSD U3 Functions Reset Sprite_2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-11-28T21:13:38.594+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Functions Reset Sprite_2023\\\"\"],\"cloned_from\":\"CSD U3 Functions Reset Sprite_2023\"},{\"changed_at\":\"2024-08-28 20:37:55 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2024-08-28 20:39:40 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2024-12-03 17:03:16 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

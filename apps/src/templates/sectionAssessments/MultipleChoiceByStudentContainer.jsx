@@ -1,18 +1,21 @@
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import MultipleChoiceByStudentTable from './MultipleChoiceByStudentTable';
+import {connect} from 'react-redux';
+
+import i18n from '@cdo/locale';
+
 import {
   studentWithMCResponsesPropType,
   multipleChoiceQuestionPropType,
 } from './assessmentDataShapes';
+import MultipleChoiceByStudentTable from './MultipleChoiceByStudentTable';
 import {
   getMultipleChoiceStructureForCurrentAssessment,
   getStudentMCResponsesForCurrentAssessment,
   ALL_STUDENT_FILTER,
   currentStudentHasResponses,
 } from './sectionAssessmentsRedux';
-import i18n from '@cdo/locale';
-import {connect} from 'react-redux';
 
 class MultipleChoiceByStudentContainer extends Component {
   static propTypes = {
@@ -33,11 +36,11 @@ class MultipleChoiceByStudentContainer extends Component {
       <div>
         {studentId !== ALL_STUDENT_FILTER && currentStudentHasResponses && (
           <div>
-            <h2>
+            <Typography variant="h6" component="h2">
               {i18n.multipleChoiceStudentOverview({
                 studentName: studentAnswerData.name,
               })}
-            </h2>
+            </Typography>
             <MultipleChoiceByStudentTable
               questionAnswerData={multipleChoiceStructure}
               studentAnswerData={studentAnswerData}

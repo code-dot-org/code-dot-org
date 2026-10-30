@@ -1,0 +1,119 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 64,
+  "created_at": "2026-09-21T00:00:00.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "uses_lab2": "true",
+    "block_pools": [
+      "GamelabJr",
+      "GameDev"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab",
+      "zGameDev"
+    ],
+    "standalone_app_name": "spritelab",
+    "skin": "gamelab",
+    "hide_custom_blocks": true,
+    "hide_share_and_remix": "true",
+    "encrypted": "false",
+    "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
+    "level_mode": {
+      "kind": "code"
+    },
+    "image_role_defaults": {
+      "sprite": "friend",
+      "gamelab_checkTouching": [
+        "hero",
+        "friend"
+      ]
+    },
+    "pinned_scene": {
+      "id": "platform-scene",
+      "name": "Platformer",
+      "type": "platform"
+    },
+    "objectives": {
+      "title": "**Go and meet them**",
+      "items": [
+        {
+          "text": "Drag **when touches** into the workspace, then **say** or **restart scene** under it.",
+          "check": {
+            "kind": "block",
+            "type": [
+              "gamelab_spriteSay",
+              "spritelab2_restartScene",
+              "spritelab2_burst",
+              "spritelab2_playSound"
+            ],
+            "data": "patrol-touch"
+          }
+        },
+        {
+          "text": "Click **Play** and go meet them.",
+          "check": {
+            "kind": "reach",
+            "role": "friend"
+          }
+        }
+      ]
+    },
+    "long_instructions": "# Go and meet them\nDrag **when touches** into the workspace, then a **say** block under it for a hello, or **restart scene** to send your player back to the start.",
+    "toolbox_definition": {
+      "kind": "flyoutToolbox",
+      "contents": [
+        {
+          "kind": "block",
+          "type": "gamelab_checkTouching",
+          "fields": {
+            "CONDITION": "\"when\""
+          },
+          "inputs": {
+            "SPRITE1": {
+              "shadow": {
+                "type": "gamelab_allSpritesWithAnimation"
+              }
+            },
+            "SPRITE2": {
+              "shadow": {
+                "type": "gamelab_allSpritesWithAnimation"
+              }
+            }
+          },
+          "data": "patrol-touch"
+        },
+        {
+          "kind": "block",
+          "type": "gamelab_spriteSay",
+          "fields": {
+            "SPEECH": "Hello!"
+          },
+          "inputs": {
+            "SPRITE": {
+              "shadow": {
+                "type": "gamelab_allSpritesWithAnimation"
+              }
+            }
+          }
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_restartScene"
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_burst"
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_playSound"
+        }
+      ]
+    },
+    "header_label": "Make a platformer"
+  }
+}]]></config>
+</GamelabJr>

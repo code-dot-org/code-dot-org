@@ -1,10 +1,10 @@
 /** @file Tests for Game Lab helper methods that make decisions based on redux state */
-import {expect} from '../../util/reconfiguredChai';
-import {forEveryBooleanPermutation} from '../../util/testUtils';
 import {
   allowAnimationMode,
   countAllowedModes,
 } from '@cdo/apps/p5lab/stateQueries';
+
+import {forEveryBooleanPermutation} from '../../util/testUtils';
 
 describe('stateQueries', function () {
   describe('allowAnimationMode', function () {
@@ -19,7 +19,7 @@ describe('stateQueries', function () {
               isReadOnlyWorkspace: c,
             })
           )
-        ).to.be.false;
+        ).toBe(false);
       });
     });
 
@@ -30,7 +30,7 @@ describe('stateQueries', function () {
             showAnimationMode: true,
           })
         )
-      ).to.be.true;
+      ).toBe(true);
     });
 
     it('...unless isEmbedView', function () {
@@ -42,7 +42,7 @@ describe('stateQueries', function () {
               isEmbedView: true,
             })
           )
-        ).to.be.false;
+        ).toBe(false);
       });
     });
 
@@ -55,7 +55,7 @@ describe('stateQueries', function () {
               isShareView: true,
             })
           )
-        ).to.be.false;
+        ).toBe(false);
       });
     });
 
@@ -68,7 +68,7 @@ describe('stateQueries', function () {
               isReadOnlyWorkspace: true,
             })
           )
-        ).to.be.false;
+        ).toBe(false);
       });
     });
   });
@@ -77,7 +77,7 @@ describe('stateQueries', function () {
     it('is either 1 or 2, depending on whether animation mode is allowed', function () {
       forEveryBooleanPermutation(a => {
         const state = stateFromPageConstants({showAnimationMode: a});
-        expect(countAllowedModes(state)).to.equal(a ? 2 : 1);
+        expect(countAllowedModes(state)).toBe(a ? 2 : 1);
       });
     });
   });

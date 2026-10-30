@@ -4,7 +4,7 @@ require 'cdo/aws/s3'
 
 class FilesTest < FilesApiTestBase
   def setup
-    NewRelic::Agent.reset_stub
+    ObservabilityTestRecorder.install
     @channel_id = create_channel
     @api = FilesApiTestHelper.new(current_session, 'files', @channel_id)
     @api.ensure_aws_credentials
@@ -39,7 +39,7 @@ class FilesTest < FilesApiTestBase
     assert successful?
     assert_equal file_data, last_response.body
 
-    assert_newrelic_metrics %w(
+    assert_recorded_metric_names %w(
       Custom/ListRequests/FileBucket/BucketHelper.app_size
       Custom/ListRequests/FileBucket/BucketHelper.object_and_app_size
     )
@@ -67,7 +67,7 @@ class FilesTest < FilesApiTestBase
     @api.delete_object(new_filename)
     assert successful?
 
-    assert_newrelic_metrics %w(
+    assert_recorded_metric_names %w(
       Custom/ListRequests/FileBucket/BucketHelper.app_size
       Custom/ListRequests/FileBucket/BucketHelper.object_and_app_size
     )
@@ -94,7 +94,7 @@ class FilesTest < FilesApiTestBase
     @api.delete_object(old_filename)
     assert successful?
 
-    assert_newrelic_metrics %w(
+    assert_recorded_metric_names %w(
       Custom/ListRequests/FileBucket/BucketHelper.app_size
     )
 
@@ -154,7 +154,7 @@ class FilesTest < FilesApiTestBase
     @api.get_codeproject_object(dog_image_filename, '', {'HTTP_HOST' => CDO.canonical_hostname('codeprojects.org')})
     assert_equal dog_image_body, last_response.body
 
-    assert_newrelic_metrics %w(
+    assert_recorded_metric_names %w(
       Custom/ListRequests/FileBucket/BucketHelper.app_size
       Custom/ListRequests/FileBucket/BucketHelper.app_size
       Custom/ListRequests/FileBucket/BucketHelper.app_size
@@ -222,6 +222,43 @@ class FilesTest < FilesApiTestBase
     delete_all_manifest_versions
   end
 
+  def test_invalid_weblab_html_file_is_not_found_on_read
+    DCDO.stubs(:get).with('disallowed_html_tags', []).returns(['script', 'meta[http-equiv]'])
+    DCDO.stubs(:get).with('s3_timeout', 15).returns(15)
+    DCDO.stubs(:get).with('s3_slow_request', 15).returns(15)
+
+    filename = 'index.html'
+    invalid_html = '<button onclick="alert(1)">Click me</button>'
+
+    Projects.any_instance.stubs(:get).returns({projectType: 'applab'})
+    @api.put_object(filename, invalid_html)
+    assert successful?
+
+    Projects.any_instance.unstub(:get)
+    Projects.any_instance.stubs(:get).returns({projectType: 'weblab'})
+
+    @api.get_object(filename)
+    assert not_found?
+
+    @api.get_object(filename, '', {'HTTP_IF_MODIFIED_SINCE' => Time.now.httpdate})
+    assert not_found?
+
+    get "/projects/weblab/#{@channel_id}/", '', {'HTTP_HOST' => CDO.canonical_hostname('codeprojects.org')}
+    assert not_found?
+
+    get "/projects/weblab/#{@channel_id}/", '', {
+      'HTTP_HOST' => CDO.canonical_hostname('codeprojects.org'),
+      'HTTP_IF_MODIFIED_SINCE' => Time.now.httpdate
+    }
+    assert not_found?
+
+    Projects.any_instance.unstub(:get)
+    @api.delete_object(filename)
+    assert successful?
+
+    delete_all_manifest_versions
+  end
+
   def test_content_disposition
     dog_image_filename = @api.randomize_filename('dog.png')
     dog_image_body = 'stub-dog-contents'
@@ -259,11 +296,72 @@ class FilesTest < FilesApiTestBase
     @api.delete_object(html_filename)
     assert successful?
 
-    assert_newrelic_metrics %w(
+    assert_recorded_metric_names %w(
       Custom/ListRequests/FileBucket/BucketHelper.app_size
       Custom/ListRequests/FileBucket/BucketHelper.app_size
     )
 
+    delete_all_manifest_versions
+  end
+
+  def test_content_type_for_webp_and_markdown
+    webp_filename = @api.randomize_filename('image.webp')
+    md_filename = @api.randomize_filename('readme.md')
+
+    post_file_data(@api, webp_filename, 'fake-webp-bytes', 'image/webp')
+    assert successful?
+    post_file_data(@api, md_filename, '# Hello', 'text/markdown')
+    assert successful?
+
+    @api.get_object(webp_filename)
+    assert successful?
+    assert_match 'image/webp', last_response['Content-Type']
+
+    @api.get_object(md_filename)
+    assert successful?
+    assert_match 'text/markdown', last_response['Content-Type']
+
+    @api.delete_object(webp_filename)
+    assert successful?
+    @api.delete_object(md_filename)
+    assert successful?
+
+    delete_all_manifest_versions
+  end
+
+  # Quick pass/fail tests for the Content-Disposition header sanitization
+  def test_content_disposition_header_injection
+    # Upload a file with CR/LF in the filename to test header injection sanitization
+    malicious = "evil\r\nname.txt"
+    post_file_data(@api, malicious, 'data', 'text/plain')
+    # List files to get the actual stored filename (sanitized by storage logic)
+    files = @api.list_objects["files"]
+    expected_name = malicious.gsub(/[^\w.\-]/, '-')
+    stored_name = files.find {|f| f["filename"] == expected_name}["filename"]
+    # Fetch the file using the sanitized filename
+    @api.get_object(stored_name)
+    assert successful?
+    header = last_response['Content-Disposition']
+    # Header should not contain CR or LF
+    refute_match(/[\r\n]/, header, "Header contains CR or LF: #{header.inspect}")
+    # Header should match the sanitized filename
+    assert_equal "attachment; filename=\"#{stored_name}\"", header, "Header was: #{header.inspect}"
+    delete_all_manifest_versions
+  end
+
+  def test_content_disposition_header_escaping_spaces
+    # Upload a file with spaces in the filename to test space escaping
+    name = @api.randomize_filename('file name.txt')
+    post_file_data(@api, name, 'data', 'text/plain')
+    # List files to get the actual stored filename (spaces replaced with dashes)
+    files = @api.list_objects["files"]
+    stored_name = files.find {|f| f["filename"] == name.tr(' ', '-')}["filename"]
+    # Fetch the file using the sanitized filename
+    @api.get_object(stored_name)
+    assert successful?
+    header = last_response['Content-Disposition']
+    # Header should match the sanitized filename
+    assert_equal "attachment; filename=\"#{stored_name}\"", header, "Header was: #{header.inspect}"
     delete_all_manifest_versions
   end
 
@@ -302,7 +400,7 @@ class FilesTest < FilesApiTestBase
     @api.delete_object(mismatched_filename)
     assert successful?
 
-    assert_newrelic_metrics %w(
+    assert_recorded_metric_names %w(
       Custom/ListRequests/FileBucket/BucketHelper.app_size
     )
 
@@ -337,7 +435,7 @@ class FilesTest < FilesApiTestBase
     @api.delete_object(escaped_filename2)
     assert successful?
 
-    assert_newrelic_metrics %w(
+    assert_recorded_metric_names %w(
       Custom/ListRequests/FileBucket/BucketHelper.app_size
       Custom/ListRequests/FileBucket/BucketHelper.app_size
     )
@@ -363,7 +461,7 @@ class FilesTest < FilesApiTestBase
     @api.delete_object(different_case_filename)
     assert successful?
 
-    assert_newrelic_metrics %w(
+    assert_recorded_metric_names %w(
       Custom/ListRequests/FileBucket/BucketHelper.app_size
     )
 
@@ -391,7 +489,7 @@ class FilesTest < FilesApiTestBase
     @api.delete_object(dog_image_filename)
     assert successful?
 
-    assert_newrelic_metrics %w(
+    assert_recorded_metric_names %w(
       Custom/ListRequests/FileBucket/BucketHelper.app_size
     )
 
@@ -460,7 +558,7 @@ class FilesTest < FilesApiTestBase
     @api.delete_object(filename)
     assert successful?
 
-    assert_newrelic_metrics %w(
+    assert_recorded_metric_names %w(
       Custom/ListRequests/FileBucket/BucketHelper.app_size
       Custom/ListRequests/FileBucket/BucketHelper.app_size
       Custom/ListRequests/FileBucket/BucketHelper.list_versions
@@ -526,7 +624,7 @@ class FilesTest < FilesApiTestBase
   def test_invalid_file_extension
     @api.get_object('bad_extension.css%22')
     assert unsupported_media_type?
-    assert_newrelic_metrics []
+    assert_recorded_metric_names []
   end
 
   def test_bad_channel_id
@@ -534,7 +632,7 @@ class FilesTest < FilesApiTestBase
     api = FilesApiTestHelper.new(current_session, 'files', bad_channel_id)
     api.list_objects
     assert not_found?
-    assert_newrelic_metrics []
+    assert_recorded_metric_names []
   end
 
   def test_thumbnail
@@ -549,7 +647,7 @@ class FilesTest < FilesApiTestBase
 
     assert_equal thumbnail_body, @api.get_object(thumbnail_filename)
 
-    assert_newrelic_metrics %w(
+    assert_recorded_metric_names %w(
       Custom/ListRequests/FileBucket/BucketHelper.app_size
     )
 
@@ -589,7 +687,7 @@ class FilesTest < FilesApiTestBase
     # file contents has not changed
     assert_equal thumbnail_body, @api.get_object(thumbnail_filename)
 
-    assert_newrelic_metrics %w(
+    assert_recorded_metric_names %w(
       Custom/ListRequests/FileBucket/BucketHelper.app_size
     )
 
@@ -619,7 +717,7 @@ class FilesTest < FilesApiTestBase
     @api.get_object(bogus_metadata_filename)
     assert not_found?
 
-    assert_newrelic_metrics []
+    assert_recorded_metric_names []
   end
 
   def test_rename_mixed_case
@@ -651,7 +749,7 @@ class FilesTest < FilesApiTestBase
     @api.delete_object(escaped_filename2)
     assert successful?
 
-    assert_newrelic_metrics %w(
+    assert_recorded_metric_names %w(
       Custom/ListRequests/FileBucket/BucketHelper.app_size
       Custom/ListRequests/FileBucket/BucketHelper.object_and_app_size
     )
@@ -712,7 +810,7 @@ class FilesTest < FilesApiTestBase
     refute_equal response_before_rename['filesVersionId'], response_after_rename['filesVersionId']
     assert_equal file_infos[0]['versionId'], file_infos_after_rename[0]['versionId']
 
-    assert_newrelic_metrics %w(
+    assert_recorded_metric_names %w(
       Custom/ListRequests/FileBucket/BucketHelper.app_size
     )
 
@@ -745,8 +843,8 @@ class FilesTest < FilesApiTestBase
     # Can't test abuse score functionality, since it's been moved to Rails.
     #src_api.patch_abuse(10)
 
-    expected_image_info = {'filename' =>  image_filename, 'category' => 'image', 'size' => image_body.length}
-    expected_sound_info = {'filename' =>  escaped_sound_filename, 'category' => 'audio', 'size' => sound_body.length}
+    expected_image_info = {'filename' => image_filename, 'category' => 'image', 'size' => image_body.length}
+    expected_sound_info = {'filename' => escaped_sound_filename, 'category' => 'audio', 'size' => sound_body.length}
 
     copy_file_infos = JSON.parse(copy_all(@channel_id, dest_channel_id))
     dest_file_infos = dest_api.list_objects["files"]
@@ -770,7 +868,7 @@ class FilesTest < FilesApiTestBase
     assert_equal 0, FileBucket.new.get_abuse_score(dest_channel_id, CGI.escape(image_filename.downcase))
     assert_equal 0, FileBucket.new.get_abuse_score(dest_channel_id, escaped_sound_filename.downcase)
 
-    assert_newrelic_metrics %w(
+    assert_recorded_metric_names %w(
       Custom/ListRequests/FileBucket/BucketHelper.app_size
       Custom/ListRequests/FileBucket/BucketHelper.app_size
       Custom/ListRequests/FileBucket/BucketHelper.copy_files
@@ -799,7 +897,7 @@ class FilesTest < FilesApiTestBase
     # Has a 5-minute timeout by default
     assert_includes temp_url, 'X-Amz-Expires=300'
 
-    assert_newrelic_metrics %w(
+    assert_recorded_metric_names %w(
       Custom/ListRequests/FileBucket/BucketHelper.app_size
     )
 
@@ -822,7 +920,7 @@ class FilesTest < FilesApiTestBase
     # Has a 5-minute timeout by default
     assert_includes temp_url, 'X-Amz-Expires=3600'
 
-    assert_newrelic_metrics %w(
+    assert_recorded_metric_names %w(
       Custom/ListRequests/FileBucket/BucketHelper.app_size
     )
 
@@ -830,34 +928,172 @@ class FilesTest < FilesApiTestBase
     assert successful?
   end
 
-  private
+  def test_moderate_image_supported_types
+    png_data = 'fake-png-bytes'
+    jpeg_data = 'fake-jpeg-bytes'
 
-  def delete_all_files(bucket)
+    png_moderation_result = {
+      'categoriesAnalysis' => [
+        {'category' => 'Sexual', 'severity' => 0},
+        {'category' => 'Hate', 'severity' => 0}
+      ]
+    }
+    ImageModeration.expects(:moderate_image).with(instance_of(StringIO), 'image/png').returns(png_moderation_result)
+
+    header 'CONTENT_TYPE', 'image/png'
+    post '/v3/images/moderate', png_data
+    assert successful?
+    assert_equal png_moderation_result, JSON.parse(last_response.body)
+
+    jpeg_moderation_result = {
+      'categoriesAnalysis' => [
+        {'category' => 'Sexual', 'severity' => 2}
+      ]
+    }
+    ImageModeration.expects(:moderate_image).with(instance_of(StringIO), 'image/jpeg').returns(jpeg_moderation_result)
+
+    header 'CONTENT_TYPE', 'image/jpeg'
+    post '/v3/images/moderate', jpeg_data
+    assert successful?
+    assert_equal jpeg_moderation_result, JSON.parse(last_response.body)
+  end
+
+  def test_moderate_image_unsupported_type
+    header 'CONTENT_TYPE', 'image/bmp'
+    post '/v3/images/moderate', 'fake-bmp-bytes'
+    assert_equal 400, last_response.status
+    allowed = SharedConstants::SAFE_AND_SUPPORTED_IMAGE_TYPES.map {|t| t.split('/').last.upcase}.join(', ')
+    assert_equal({'error' => "Unsupported image type. Only #{allowed} files are allowed."}, JSON.parse(last_response.body))
+  end
+
+  def test_moderate_image_empty_body_returns_400
+    ImageModeration.expects(:moderate_image).never
+    header 'CONTENT_TYPE', 'image/png'
+    post '/v3/images/moderate', ''
+    assert_equal 400, last_response.status
+    assert_equal({'error' => 'No image data provided.'}, JSON.parse(last_response.body))
+  end
+
+  def test_moderate_image_url_success
+    url = 'https://images.example.com/safe.png'
+    moderation_result = {
+      'categoriesAnalysis' => [
+        {'category' => 'Sexual', 'severity' => 0},
+        {'category' => 'Hate', 'severity' => 0}
+      ]
+    }
+
+    FilesApi.any_instance.expects(:fetch_image_for_moderation).with(url).returns(['fake-image-bytes', 'image/png'])
+    ImageModeration.expects(:moderate_image).with(instance_of(StringIO), 'image/png').returns(moderation_result)
+
+    header 'CONTENT_TYPE', 'application/json'
+    post '/v3/images/moderate_url', {url:}.to_json
+
+    assert successful?
+    assert_equal moderation_result, JSON.parse(last_response.body)
+  end
+
+  def test_moderate_image_url_requires_url
+    FilesApi.any_instance.expects(:fetch_image_for_moderation).never
+    ImageModeration.expects(:moderate_image).never
+
+    header 'CONTENT_TYPE', 'application/json'
+    post '/v3/images/moderate_url', {}.to_json
+
+    assert_equal 400, last_response.status
+    assert_equal({'error' => 'No image URL provided.'}, JSON.parse(last_response.body))
+  end
+
+  def test_moderate_image_url_rejects_disallowed_host
+    url = 'https://127.0.0.1/image.png'
+
+    FilesApi.any_instance.expects(:fetch_image_for_moderation).with(url).raises(SecurityError)
+    ImageModeration.expects(:moderate_image).never
+
+    header 'CONTENT_TYPE', 'application/json'
+    post '/v3/images/moderate_url', {url:}.to_json
+
+    assert_equal 400, last_response.status
+    assert_equal({'error' => 'Unable to moderate image URL.'}, JSON.parse(last_response.body))
+  end
+
+  def test_moderate_image_url_reports_dns_failure_as_fetch_error
+    url = 'https://does-not-resolve.example/image.png'
+
+    IPSocket.expects(:getaddress).with('does-not-resolve.example').raises(SocketError)
+    ImageModeration.expects(:moderate_image).never
+
+    header 'CONTENT_TYPE', 'application/json'
+    post '/v3/images/moderate_url', {url:}.to_json
+
+    assert_equal 400, last_response.status
+    assert_equal({'error' => 'Unable to moderate image URL.'}, JSON.parse(last_response.body))
+  end
+
+  def test_moderate_image_url_rejects_unsupported_type
+    url = 'https://images.example.com/unsafe.bmp'
+
+    FilesApi.any_instance.expects(:fetch_image_for_moderation).with(url).raises(AzureAiContentSafety::UnsupportedContentType)
+    ImageModeration.expects(:moderate_image).never
+
+    header 'CONTENT_TYPE', 'application/json'
+    post '/v3/images/moderate_url', {url:}.to_json
+
+    assert_equal 400, last_response.status
+    assert_equal({'error' => 'Unable to moderate image URL.'}, JSON.parse(last_response.body))
+  end
+
+  def test_moderate_image_url_rejects_oversized_streamed_body
+    url = 'https://images.example.com/huge.png'
+
+    FilesApi.any_instance.stubs(:max_file_size).returns(10)
+    IPSocket.stubs(:getaddress).with('images.example.com').returns('203.0.113.10')
+    ImageModeration.expects(:moderate_image).never
+
+    header 'CONTENT_TYPE', 'application/json'
+    post '/v3/images/moderate_url', {url:}.to_json
+
+    assert_equal 400, last_response.status
+    assert_equal({'error' => 'Unable to moderate image URL.'}, JSON.parse(last_response.body))
+  end
+
+  private def delete_all_files(bucket)
     delete_all_objects(CDO.files_s3_bucket, bucket)
   end
 
-  def copy_all(src_channel_id, dest_channel_id)
+  private def copy_all(src_channel_id, dest_channel_id)
     FileBucket.new.copy_files(src_channel_id, dest_channel_id).to_json
   end
 
-  def post_file(api, uploaded_file)
+  private def post_file(api, uploaded_file)
     body = {files: [uploaded_file]}
     headers = {'CONTENT_TYPE' => 'multipart/form-data'}
     api.post_object '', body, headers
   end
 
-  def post_file_data(api, filename, file_contents, content_type)
+  private def post_file_data(api, filename, file_contents, content_type)
     file = api.create_uploaded_file(filename, file_contents, content_type)
     post_file(api, file)
   end
 
-  def delete_all_file_versions(*filenames)
+  private def delete_all_file_versions(*filenames)
     filenames.each do |filename|
       delete_all_versions(CDO.files_s3_bucket, "files_test/1/1/#{filename}")
     end
   end
 
-  def delete_all_manifest_versions
+  private def delete_all_manifest_versions
     delete_all_file_versions 'manifest.json'
+  end
+end
+
+class FilesApiHtmlValidationTest < Minitest::Test
+  def test_valid_html_content_disallows_on_attrs
+    DCDO.stubs(:get).with('disallowed_html_tags', []).returns(['script', 'meta[http-equiv]'])
+
+    api = FilesApi.allocate
+
+    assert api.valid_html_content?('<div></div>')
+    refute api.valid_html_content?('<button onclick="alert(1)">Click me</button>')
   end
 end

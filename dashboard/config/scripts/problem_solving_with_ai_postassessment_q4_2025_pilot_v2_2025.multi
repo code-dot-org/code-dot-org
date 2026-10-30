@@ -1,0 +1,14 @@
+name 'problem-solving-with-ai-postassessment-q4_2025-pilot_v2-2025'
+
+question 'When is AI the BEST tool for solving a problem?'
+
+wrong 'When the task requires ethics and emotional reasoning.'
+right 'When the task involves recognizing large-scale patterns in data quickly.'
+wrong 'When the task requires unique human experience.'
+wrong 'When the task involves a creative approach that has never been done before.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 4: Smart or Just Predictable?
+MARKDOWN

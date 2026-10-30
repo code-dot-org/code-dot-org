@@ -1,16 +1,18 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+
+import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
+
 var msg = require('@cdo/locale');
 
-var GameButtons = require('../templates/GameButtons').default;
 var BelowVisualization = require('../templates/BelowVisualization');
-import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
+var GameButtons = require('../templates/GameButtons').default;
 
 const FlappyVisualizationColumn = ({showFinishButton}) => {
   return (
     <span>
       <ProtectedVisualizationDiv>
-        <svg version="1.1" id="svgFlappy" />
+        <svg id="svgFlappy" />
       </ProtectedVisualizationDiv>
       <GameButtons>
         {showFinishButton && (

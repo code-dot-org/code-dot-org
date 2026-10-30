@@ -1,0 +1,14 @@
+name 'designing-reliable-apps-preassessment-q4_2026'
+
+question 'You open a rideshare app in Airplane Mode. The buttons and menu appear immediately, but the list of nearby drivers never loads. What does this best illustrate?'
+
+wrong 'The app has a bug that prevents it from showing all its content at the same time'
+wrong 'The server received the request but rejected it with an error code'
+right 'The buttons and menus are static content built into the app, while the driver list is dynamic content fetched from a live server'
+wrong 'The app successfully loaded all its content from a local cache on the device'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 2
+MARKDOWN

@@ -17,9 +17,7 @@ jobs:
       - name: say-hello
         uses: ./.github/actions/start-server-job-actions  
       - name: Install mysql
-        uses: ./.github/actions/install-mysql                    
-      - name: Install test variables
-        uses: ./.github/actions/install-test-variables            
+        uses: ./.github/actions/install-mysql
       - name: Install Ruby
         uses: ./.github/actions/install-ruby
       - name: Install apt packages

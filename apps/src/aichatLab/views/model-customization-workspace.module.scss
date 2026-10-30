@@ -1,0 +1,235 @@
+@use '@code-dot-org/component-library-styles/mixins.scss' as mixins;
+@import '../../mixins.scss';
+@import '../../aichat/views/aichat-common.module.scss';
+
+// Constants
+$default-spacing: 4px;
+
+%full-width {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+%dsco-field-base {
+  @extend %full-width;
+  box-sizing: border-box;
+  margin: 0;
+  border-radius: 0.25rem;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--borders-neutral-solid);
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  caret-color: var(--borders-brand-teal-primary);
+
+  &::placeholder {
+    color: var(--text-neutral-placeholder);
+  }
+
+  &:focus-visible {
+    @include mixins.focus-styles;
+    border-color: var(--borders-neutral-solid);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    border-color: var(--borders-neutral-disabled);
+    color: var(--text-neutral-disabled);
+  }
+}
+
+.modelCustomizationWorkspace {
+  @extend %panel-section;
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  flex-direction: column;
+  background: var(--background-neutral-primary);
+
+  .tabsContainer {
+    background-color: var(--background-neutral-tertiary);
+    padding: $default-spacing $default-spacing 0 $default-spacing;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 0;
+      border-bottom: 1px solid var(--borders-neutral-primary);
+      pointer-events: none;
+    }
+
+    ul {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      width: 100%;
+
+      &::after {
+        display: none;
+      }
+
+      li button[role='tab'].selectedTab {
+        border-bottom-color: var(--background-neutral-primary);
+      }
+    }
+  }
+
+  .tabPanels {
+    padding: 16px 0;
+    flex: 1;
+    overflow: hidden;
+
+    > div {
+      height: 100%;
+    }
+  }
+
+  .systemPromptInput {
+    @extend %dsco-field-base;
+    height: 240px;
+    resize: vertical;
+  }
+
+  textarea {
+    @extend %dsco-field-base;
+    height: 120px;
+    min-height: 50px;
+    resize: vertical;
+  }
+
+  .temperatureSlider {
+    @extend %full-width;
+  }
+
+  .temperatureValue {
+    color: var(--text-neutral-primary);
+  }
+
+  input[type='text'] {
+    @extend %dsco-field-base;
+    height: 30px;
+  }
+}
+
+.horizontalFlexContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.verticalFlexContainer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.customizationContainer {
+  overflow-y: auto;
+  flex: 1;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footerButtonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid var(--borders-neutral-primary);
+  padding: 10px 6px 0 6px;
+}
+
+label.selectedModelDropdown {
+  @extend %full-width;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+button.updateButton {
+  width: 100%;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.buttonNoMargin {
+  width: 100%;
+  margin: 0;
+}
+
+.compareModelsButton {
+  padding: 5px 16px;
+  margin: 10px 0;
+  width: 100%;
+}
+
+.fieldLabelContainer {
+  display: flex;
+  gap: 6px;
+  align-items: baseline;
+}
+
+.fieldLabel {
+  margin: 0;
+}
+
+.saveAlertContainer {
+  min-height: 25px;
+}
+
+.saveAlert {
+  margin-left: 4px;
+  padding-top: 0;
+  padding-bottom: 0;
+  background: none;
+}
+
+/* Used in MultiInputCustomization */
+
+.itemContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  border-radius: 0.25rem;
+  border: 1px solid var(--borders-neutral-primary);
+  color: var(--text-neutral-primary);
+  background: var(--background-neutral-primary);
+
+  span {
+    padding: 6px 12px;
+  }
+}
+
+.removeItemIcon {
+  color: var(--text-neutral-quaternary);
+  margin: 6px;
+
+  &:hover {
+    color: var(--text-error-primary);
+  }
+}
+
+.removeItemButton {
+  @include remove-button-styles;
+}
+
+.addItemContainer {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.addedItemsHeaderContainer {
+  border-bottom: 1px solid var(--borders-neutral-primary);
+  color: var(--text-neutral-primary);
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.examplePromptAlert {
+  padding: 0;
+  background: none;
+}

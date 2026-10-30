@@ -107,12 +107,10 @@ class Services::AFEEnrollmentTest < ActiveSupport::TestCase
     )
   end
 
-  private
-
   # Check that certain input params turn into expected output params
   # @param input_params [Hash] partial input params, to be merged over valid input
   # @param expected_params [Hash] expected params sent to AFE; does not need to be complete
-  def assert_param_translation(input_params, expected_params)
+  private def assert_param_translation(input_params, expected_params)
     captured_params = nil
     expected_request = Net::HTTP.expects(:post_form).with do |_, params|
       captured_params = params; true
@@ -127,7 +125,7 @@ class Services::AFEEnrollmentTest < ActiveSupport::TestCase
     end
   end
 
-  def valid_test_params
+  private def valid_test_params
     {
       first_name: 'test-first-name',
       last_name: 'test-last-name',
@@ -145,7 +143,7 @@ class Services::AFEEnrollmentTest < ActiveSupport::TestCase
     }
   end
 
-  def fake_success_response
+  private def fake_success_response
     mock.tap do |response|
       response.stubs(:code).returns('200')
       response.stubs(:body).returns(<<~BODY)
@@ -154,7 +152,7 @@ class Services::AFEEnrollmentTest < ActiveSupport::TestCase
     end
   end
 
-  def fake_validation_failure_response
+  private def fake_validation_failure_response
     mock.tap do |response|
       # This reflects the actual behavior of the Pardot form handler: It returns a
       # 200 when a validation failure occurs.
@@ -166,7 +164,7 @@ class Services::AFEEnrollmentTest < ActiveSupport::TestCase
     end
   end
 
-  def fake_unavailable_response
+  private def fake_unavailable_response
     mock.tap do |response|
       response.stubs(:code).returns('503')
     end

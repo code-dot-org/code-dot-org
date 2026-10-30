@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "content_area": "curriculum_9_12",
       "curriculum_umbrella": "CSP",
       "has_lesson_plan": true,
       "has_verified_resources": true,
@@ -13,12 +14,12 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
-      "version_year": "2021",
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-01-12 21:52:38 UTC",
+    "serialized_at": "2025-04-08 14:40:15 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -433,7 +434,7 @@
       "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  Have students read the summary of the program requirements on page 2. The goal of this section should be to highlight the four takeaways in the Survival Guide. These should be familiar ideas to students from reviewing sample submissions in the previous lesson.",
-        "duration": "5",
+        "duration": "10",
         "name": "What is Required of My Program?"
       },
       "seeding_key": {
@@ -458,7 +459,7 @@
       "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  Ask students to complete the activity on page 3, using the scoring guidelines on page 4. For each of the provided algorithms they need to decide whether the function would earn each row. Give students roughly 10 minutes to score each of the functions and then take 5 minutes to discuss their work and the main takeaways from this activity.",
-        "duration": "10",
+        "duration": "15",
         "name": "Function Requirement Activity 1: Does It Count?"
       },
       "seeding_key": {
@@ -474,30 +475,6 @@
       },
       "seeding_key": {
         "activity_section.key": "1d56e8a8-5bdf-4405-889c-a283adc3a18a",
-        "lesson_activity.key": "d058f34f-4b49-4789-9a81-51361348f8b6"
-      }
-    },
-    {
-      "key": "12967a94-8011-443f-8121-0c88dacac6b3",
-      "position": 8,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  Ask students to \ncomplete the activity on page 5. Students should brainstorm two possible arguments that could be used with the provided functions. They should then identify the condition that will run differently in each case and the ways the functions will run differently as a result.",
-        "duration": "10",
-        "name": "Function Requirements Activity 2: Two Function Calls:"
-      },
-      "seeding_key": {
-        "activity_section.key": "12967a94-8011-443f-8121-0c88dacac6b3",
-        "lesson_activity.key": "d058f34f-4b49-4789-9a81-51361348f8b6"
-      }
-    },
-    {
-      "key": "69dcee86-ef08-41f6-b898-a63d1563fdab",
-      "position": 9,
-      "properties": {
-        "description": "**Discuss:** *Have students share and compare their responses with a classmate. Afterward, lead a discussion on the patterns they see.*\n\n**Discussion Goal:** This activity is designed to help students anticipate how they'll need to make some decisions about how to design their functions. Here are some things they may notice:\n\n* It is much more straightforward to answer the question in the second example since the parameter is being used directly in the conditional statement.\n* In either case students should come up with example arguments that run differently from one another.\n"
-      },
-      "seeding_key": {
-        "activity_section.key": "69dcee86-ef08-41f6-b898-a63d1563fdab",
         "lesson_activity.key": "d058f34f-4b49-4789-9a81-51361348f8b6"
       }
     },
@@ -626,7 +603,7 @@
       "key": "d4ad2fc4-918b-4ff7-8230-0807744acbe3",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Create PT Written Response Organizer (page 9) - 5 mins:** Quickly review this organizer with students. Encourage them to use it throughout the 12 class hours to track their progress and make sure they have every component needed to answer the questions.\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Create PT Completion Timeline (page 10) - 5 mins:** Review the sample schedule provided on page 10.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Create PT Written Response Organizer (page 9) - 5 mins:** Quickly review this organizer with students. Encourage them to use it throughout the 9 class hours to track their progress and make sure they have every component needed to answer the questions.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Create PT Completion Timeline (page 10) - 5 mins:** Review the sample schedule provided on page 10.",
         "name": "Make a Plan\r"
       },
       "seeding_key": {
@@ -1174,6 +1151,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp-pt-tech-setup-and-tools2022_2024"
+        ],
         "progression": "Tech Setup and Tools for Create PT"
       },
       "bonus": false,
@@ -1196,6 +1176,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Create PT Workspace 2020_2024"
+        ],
         "progression": "Create PT Coding Workspace"
       },
       "bonus": false,
@@ -1218,6 +1201,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csp8_2024"
+        ],
         "progression": "End-of-Unit Survey"
       },
       "bonus": false,
@@ -1240,6 +1226,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp-post-survey-2021-markdown-with-link-to-survey_csp9_2024"
+        ],
         "progression": "Post-Course Survey Instructions"
       },
       "bonus": false,
@@ -1309,8 +1298,8 @@
   ],
   "resources": [
     {
-      "name": "[KEY] Create PT Survival Guide 23-24",
-      "url": "https://docs.google.com/document/d/1W2Rr1AaABirBXR2leyUsKct-CJSQu8PbutRzSYxKw34/edit?usp=sharing",
+      "name": "[KEY] Create PT Survival Guide",
+      "url": "https://docs.google.com/document/d/1W2Rr1AaABirBXR2leyUsKct-CJSQu8PbutRzSYxKw34/",
       "key": "_key_create_pt_survival_guide_23-24",
       "properties": {
         "audience": "Verified Teacher",
@@ -1487,8 +1476,20 @@
       }
     },
     {
-      "name": "Create PT Survival Guide 23-24",
-      "url": "https://docs.google.com/document/d/1TgVzXFCMqLLu8U2wHCWfj6rC9yUSBAWLOsdaEV8xxF8/edit?usp=sharing",
+      "name": "Create PT Prep Unit Slides",
+      "url": "https://docs.google.com/presentation/d/1ZrbWqbI3vLGUJgtYpkByMFP63Wm2knDgy6r_YEtjqnM/template/preview",
+      "key": "create_pt_prep_unit_slides",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "create_pt_prep_unit_slides"
+      }
+    },
+    {
+      "name": "Create PT Survival Guide",
+      "url": "https://docs.google.com/document/d/1TgVzXFCMqLLu8U2wHCWfj6rC9yUSBAWLOsdaEV8xxF8/",
       "key": "create_pt_survival_guide_23-24",
       "properties": {
         "audience": "Student",
@@ -1501,11 +1502,10 @@
     },
     {
       "name": "CSP Unit 9 - Lesson 1 - Deep Dive",
-      "url": "https://docs.google.com/presentation/d/1dsD-lgtWxLdsVx4w550hnI6S9kBVvE0wXGCUVz6CBXI/copy",
+      "url": "https://docs.google.com/presentation/d/1JS5mum0fYIPzMalI2BAj3z7OWcapT6cCx0vP03BYEXI/template/preview",
       "key": "csp_unit_9_-_lesson_1_-_deep_dive",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1dsD-lgtWxLdsVx4w550hnI6S9kBVvE0wXGCUVz6CBXI/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -1514,11 +1514,10 @@
     },
     {
       "name": "CSP Unit 9 - Lesson 2 - Make a Plan",
-      "url": "https://docs.google.com/presentation/d/1TbiwTPCsPiXrM_TJYZTuPR_ndhnCL2idVYl0EMKdU3c/copy",
+      "url": "https://docs.google.com/presentation/d/18xTvcFOYsOneiO_Dgm99FhFxaitTNhtEjSAClidvDok/template/preview",
       "key": "csp_unit_9_-_lesson_2_-_make_a_plan",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1TbiwTPCsPiXrM_TJYZTuPR_ndhnCL2idVYl0EMKdU3c/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -1527,15 +1526,36 @@
     },
     {
       "name": "CSP Unit 9 - Lesson 3 - Complete the Task",
-      "url": "https://docs.google.com/presentation/d/1YT1jYL6gbsKi_LbkpPzesdedQjvNzYWXXsY8_YuDpJU/copy",
+      "url": "https://docs.google.com/presentation/d/1f1CTBIYAY24GzUz0Z1nm2UseiDDatXzPEQcDAGk3jbg/template/preview",
       "key": "csp_unit_9_-_lesson_3_-_complete_the_task",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1YT1jYL6gbsKi_LbkpPzesdedQjvNzYWXXsY8_YuDpJU/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "csp_unit_9_-_lesson_3_-_complete_the_task"
+      }
+    },
+    {
+      "name": "CSP Unit 9 - Slides",
+      "url": "https://docs.google.com/presentation/d/1ZrbWqbI3vLGUJgtYpkByMFP63Wm2knDgy6r_YEtjqnM/template/preview",
+      "key": "csp_unit_9_-_slides",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_9_-_slides"
+      }
+    },
+    {
+      "name": "Help Students Sign Up For The AP Exam",
+      "url": "https://drive.google.com/file/d/1zwC1ZVW1ug9EUJfZ9a9ZitqMFQ0DScbU/view?usp=drive_link",
+      "key": "help_students_sign_up_for_the_ap_exam",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "help_students_sign_up_for_the_ap_exam"
       }
     },
     {
@@ -1564,7 +1584,7 @@
     },
     {
       "name": "Unit 9 Lesson 4 - Create PT Mock Exam - Slides",
-      "url": "https://docs.google.com/presentation/d/1ndJrvTZB2rcUnV502a1KIuCoH21_b0IAPZtIpgnUInE/edit?usp=drive_link",
+      "url": "https://docs.google.com/presentation/d/1Rpvj3kbGbce1x9ednUVH1NSndvefY84s9Q5tU160-ac/template/preview",
       "key": "unit_9_lesson_4_-_create_pt_mock_exam_-_slides",
       "properties": {
         "audience": "Teacher",
@@ -1639,6 +1659,12 @@
     {
       "seeding_key": {
         "lesson.key": "Create PT Deep Dive",
+        "resource.key": "create_pt_prep_unit_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT Deep Dive",
         "resource.key": "create_pt_survival_guide_23-24"
       }
     },
@@ -1707,6 +1733,18 @@
     {
       "seeding_key": {
         "resource.key": "course_vocabulary",
+        "script.name": "csp9-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csp_unit_9_-_slides",
+        "script.name": "csp9-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "help_students_sign_up_for_the_ap_exam",
         "script.name": "csp9-2024"
       }
     },

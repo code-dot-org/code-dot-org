@@ -6,6 +6,7 @@
 .rake_test_cache
 .rvmrc
 .rbenv-version
+vendor/bundle
 
 # Emacs
 *~

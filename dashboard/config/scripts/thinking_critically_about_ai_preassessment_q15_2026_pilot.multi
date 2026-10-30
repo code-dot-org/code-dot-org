@@ -1,0 +1,14 @@
+name 'thinking-critically-about-ai-preassessment-q15_2026-pilot'
+
+question 'A student is working on a math problem they have never seen before. They want to learn how to solve it. Which approach best demonstrates good judgment about when to use AI?'
+
+wrong 'Immediately ask AI for the full solution so the problem is finished quickly.'
+wrong 'Never use AI at all, because using AI for schoolwork is always cheating.'
+right 'Attempt the problem independently first, then use AI to check their reasoning or get a hint if stuck, rather than to replace their own thinking.'
+wrong 'Ask AI to explain an entirely different, easier problem so they never have to struggle.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 4
+MARKDOWN

@@ -1,0 +1,9 @@
+name 'CSD U3 - Interactive Card - ExampleChoice_-pr-2024'
+display_name 'Your Interactive Card'
+description 'In the next few levels, you\'ll be completing your own interactive card. Here are some examples to give you some ideas.'
+
+sublevels
+level 'CSD U3 - Interactive Card - Example1_-pr-2024'
+level 'CSD U3 - Interactive Card - Example2_-pr-2024'
+level 'CSD U3 - Interactive Card - Example3_-pr-2024'
+level 'CSD U3 - Interactive Card - Example4_-pr-2024'

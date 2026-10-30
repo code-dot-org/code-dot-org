@@ -1,0 +1,51 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-05-29T11:50:33.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Create Your Own Task",
+    "long_instructions": "## Create Your Own Task\r\n\r\n**Before You Start:**\r\n\r\nMake sure you’ve filled in the **K** and **W** columns of your KWL chart for this task.\r\n\r\n**Do:**\r\n\r\nWrite your own prompt for something you want to test with AI!\r\n\r\n**Try:**\r\n\r\nAsk something playful, surprising, or hard to get right.\r\n\r\n**Check:**\r\n\r\nDid the AI give you what you were expecting? Was the result useful, confusing, or unexpected?\r\n\r\n**After You Try It:**\r\n\r\n1. Fill in the **L** column of your KWL chart\r\n2. Press **Continue** to return to the task menu\r\n",
+    "bubble_choice_description": "Come up with your own newspaper-style task to test what AI can do.",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/cc11c98d8d215a009e7842de8d515c2c-light-bulb.png",
+    "name_suffix": "_2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-05-29T11:50:33.595+00:00\",\"changed\":[\"cloned from \\\"exploring_generative_ai_newsroom_choice_i\\\"\"],\"cloned_from\":\"exploring_generative_ai_newsroom_choice_i\"}]"
+}]]></config>
+</Aichat>

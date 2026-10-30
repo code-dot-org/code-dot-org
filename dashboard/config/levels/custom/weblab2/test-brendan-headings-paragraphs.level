@@ -1,0 +1,17 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-09-15T07:01:12.000Z",
+  "level_num": "custom",
+  "user_id": 574,
+  "properties": {
+    "require_edit_to_continue": true,
+    "long_instructions": "TODOs:\r\n* In `index.html`, replace the placeholder text \"My first web page!\" within the `<body>` tags.\r\n* Add a main heading for your page using the `<h1>` tag, for example, \"My Pet Fish\".\r\n* Below your `<h1>` tag, add a sub-heading using the `<h2>` tag, such as \"About My Fish\".\r\n* Underneath the `<h2>` tag, add a paragraph of text about your pet fish using the `<p>` tag.\r\n* Add a second `<h2>` tag for another section, for example, \"My Fish's Favorite Things\".\r\n* Include another paragraph (`<p>`) describing your fish's preferences.\r\n* Observe the new headings and paragraphs displayed in the browser preview.",
+    "project_template_level_name": "test-brendan-template-pet-fish-page",
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMobnNM9LZ4v9+vbVrV+\nf2yZP24vc50HwDBpjz+hTeuw0JCw0Ajmq8t8wiLIhjcBHpqbwU+6vB5buVZR\nx4Dk29mey1rdvMWOStEmHSCFzy/lTHl4bOZpaMPsEhYQK9oxc3yl3bIlLkPo\nDhK/RxRlV8shVqEg391mjI1X6Ku7XH/PuNWUKJPEjkwuZ0vxbcePRZ6dQNbr\ndfRR+OhSNNkTTwD7WhkXWs3dqoz3LDUZ/kaCj2lA/tWEW10mX8MpJQBGLYtg\nHDj3gqClR3gxysQsfnOkf59fQSc9s1EKesJtn8CxJuw2R1UNvnRaCFOVKO9v\nHf/MQ/ug4to4vDOIZs6hkeyz4ZXN3+KwzYeQep2jBX/BfWQMS3LH0aNU7xP+\nN1F71VklVde/7bZ+D+aEsNsG/bulxC33mgNvQotjvjGwO2OtXiItvvnWnjJ3\nS2ZauudkWTEO0Ywsz2MQKIjwvilmCHQelttZql0JnJTsSBRbbXL2v+ShMEbp\nyemB3ZdZB5BiS63uZUP/YuOaHG333qTbBLI5Foonf0DsdUi77xvpnuHgZWAd\nWK8eap6dz2zuA4U0wo7cM2TGhU3HhJEEBiCtIswvmU+lHFGdyLNXjaut8Zio\n6LDoCqdvnQPVD79JYLCAMjPMcTCdHgWI13BdnRB7RfeT7YXDE8J+wAh1Dy65\niKFFfnz1KZZG23zx1FG58ZQqJVMSR4EBMisofdancAQB/tYSq3c78BSIDPGU\na5ppKkZZ/0ZWIaPutLCcWFxKDEFGwnxk9q82eWNaC2ohVRDhawW3VPbF1YFg\nRc2xv+cnd8mBwcKCaE6xEeJm0WLRSRGndHR6SKL5QFcgm6gIFJckI0enYYBV\nEKYeYJrNNMV5Yj+KQ6ukXuRBzJJg2sPO1ZH5t1UOf+3i0VpuAyCOlRGCi/K2\nAy4F9Y+gM+wGeaAxq2L9mS72NwLiQBgmDUk76/nalmUxYATdrOB28q3RA3gg\ncXstOIyZ+ixm88dbIVyplCntqX51a9IBlzWb17Ex9CDiZFfbitY7JfwK4aFa\nApBRj/+jb8FmLwnKDvQgiFs3f4wGli0sLh+5GiaIGh2+YBU4jZwyqa6/5Oiw\nKqNZfN7yLltamSZCuUPxHeyeAgKqaaFewosA2A7x6DS2JpditSCzh3DF6NJO\nKIAWQRHLuN3r8lbFmdv9LiDX88Kbrw4fzN+fcA==\n",
+    "generate_outline": "Add meaningful content to your pet fish page. Learn how to use heading tags like `<h1>` and `<h2>` for important sections, and `<p>` tags for paragraphs of text about your fish."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-15 07:01:17 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-15 07:01:49 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-15 07:01:53 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-15 07:01:53 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

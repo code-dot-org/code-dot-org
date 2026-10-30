@@ -7,13 +7,14 @@
  */
 require('../utils'); // For Function.prototype.inherits()
 import $ from 'jquery';
+
 var i18n = require('@cdo/netsim/locale');
+
 var markup = require('./NetSimBitLogPanel.html.ejs');
-var NetSimPanel = require('./NetSimPanel');
 var NetSimEncodingControl = require('./NetSimEncodingControl');
 var NetSimGlobals = require('./NetSimGlobals');
-
 var logger = require('./NetSimLogger').getSingleton();
+var NetSimPanel = require('./NetSimPanel');
 
 /**
  * Generator and controller for bit-log, which receives bits one at a time.

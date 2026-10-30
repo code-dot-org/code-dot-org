@@ -1,0 +1,9 @@
+name 'pl-java-class-design-choice-10_pl'
+display_name 'Skill Building: Declaring Instance Variables'
+description 'Declare instance variables in a class for the specified attributes.'
+
+sublevels
+level 'CSA U2L1-L3a_pilot_oo2025_pl'
+level 'CSA U2L1-L3b_pilot_oo2025_pl'
+level 'CSA U2L1-L3c_pilot_oo2025_pl'
+level 'CSA U2L1-L3d_pilot_oo2025_pl'

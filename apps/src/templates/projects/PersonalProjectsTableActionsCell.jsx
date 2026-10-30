@@ -1,27 +1,22 @@
+import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import QuickActionsCell from '../tables/QuickActionsCell';
-import PopUpMenu, {MenuBreak} from '@cdo/apps/lib/ui/PopUpMenu';
-import color from '../../util/color';
-import FontAwesome from '../FontAwesome';
-import Button from '../Button';
+
 import i18n from '@cdo/locale';
+
+import {showDeleteDialog} from './deleteDialog/deleteProjectDialogRedux';
+import ProjectNameFailureDialog from './ProjectNameFailureDialog';
 import {
   startRenamingProject,
   cancelRenamingProject,
   saveProjectName,
-  remix,
   unsetNameFailure,
 } from './projectsRedux';
-import {showDeleteDialog} from './deleteDialog/deleteProjectDialogRedux';
-import NameFailureDialog from '../../code-studio/components/NameFailureDialog';
 
-export const styles = {
-  xIcon: {
-    paddingRight: 5,
-  },
-};
+import moduleStyles from './personal-projects-table-actions-cell.module.scss';
 
 export class PersonalProjectsTableActionsCell extends Component {
   static propTypes = {
@@ -34,9 +29,9 @@ export class PersonalProjectsTableActionsCell extends Component {
     updatedName: PropTypes.string,
     cancelRenamingProject: PropTypes.func.isRequired,
     saveProjectName: PropTypes.func.isRequired,
-    remix: PropTypes.func.isRequired,
     projectNameFailure: PropTypes.string,
     unsetNameFailure: PropTypes.func.isRequired,
+    isFrozen: PropTypes.bool,
   };
 
   onDelete = () => {
@@ -56,54 +51,88 @@ export class PersonalProjectsTableActionsCell extends Component {
   };
 
   onRemix = () => {
-    this.props.remix(this.props.projectId, this.props.projectType);
+    window.location = `/projects/${this.props.projectType}/${this.props.projectId}/remix`;
   };
 
   handleNameFailureDialogClose = () => {
     this.props.unsetNameFailure(this.props.projectId);
   };
 
+  buildActionOptions = () => {
+    const {projectId, isFrozen} = this.props;
+    const options = [];
+    if (!isFrozen) {
+      options.push({
+        value: `rename-${projectId}`,
+        label: i18n.rename(),
+        icon: {iconName: 'pencil', iconStyle: 'solid'},
+        onClick: this.onRename,
+      });
+    }
+    options.push({
+      value: `remix-${projectId}`,
+      label: i18n.remix(),
+      icon: {iconName: 'clone', iconStyle: 'solid'},
+      onClick: this.onRemix,
+    });
+    if (!isFrozen) {
+      options.push({
+        value: `delete-${projectId}`,
+        label: i18n.delete(),
+        icon: {iconName: 'circle-xmark', iconStyle: 'solid'},
+        isOptionDestructive: true,
+        onClick: this.onDelete,
+      });
+    }
+    return options;
+  };
+
   render() {
-    const {isEditing, isSaving} = this.props;
+    const {isEditing, isSaving, projectId} = this.props;
 
     return (
       <div>
         {!isEditing && (
-          <QuickActionsCell>
-            <PopUpMenu.Item onClick={this.onRename}>
-              {i18n.rename()}
-            </PopUpMenu.Item>
-            <PopUpMenu.Item onClick={this.onRemix}>
-              {i18n.remix()}
-            </PopUpMenu.Item>
-            <MenuBreak />
-            <PopUpMenu.Item onClick={this.onDelete} color={color.red}>
-              <FontAwesome icon="times-circle" style={styles.xIcon} />
-              {i18n.delete()}
-            </PopUpMenu.Item>
-          </QuickActionsCell>
+          <ActionDropdown
+            name={`project-actions-${projectId}`}
+            labelText={i18n.quickActions()}
+            size="s"
+            menuPlacement="right"
+            options={this.buildActionOptions()}
+            triggerButtonProps={{
+              className: 'ui-projects-table-dropdown',
+              variant: 'outlined',
+              color: 'secondary',
+              children: <FontAwesomeV6Icon iconName="ellipsis-vertical" />,
+            }}
+          />
         )}
         {isEditing && (
           <div>
-            <Button
-              __useDeprecatedTag
-              onClick={this.onSave}
-              color={Button.ButtonColor.brandSecondaryDefault}
-              text={i18n.save()}
-              style={styles.saveButton}
+            <MuiButton
+              variant="contained"
+              color="primary"
+              size="small"
               disabled={isSaving}
-              className="ui-projects-rename-save"
-            />
-            <br />
-            <Button
-              __useDeprecatedTag
+              className={moduleStyles.buttonMargin}
+              id="ui-projects-rename-save"
+              onClick={this.onSave}
+              type="button"
+            >
+              {i18n.save()}
+            </MuiButton>
+            <MuiButton
+              variant="outlined"
+              color="tertiary"
+              size="small"
               onClick={this.onCancel}
-              color={Button.ButtonColor.gray}
-              text={i18n.cancel()}
-            />
+              type="button"
+            >
+              {i18n.cancel()}
+            </MuiButton>
           </div>
         )}
-        <NameFailureDialog
+        <ProjectNameFailureDialog
           flaggedText={this.props.projectNameFailure}
           isOpen={!!this.props.projectNameFailure}
           handleClose={this.handleNameFailureDialogClose}
@@ -127,9 +156,6 @@ export default connect(
     },
     saveProjectName(projectId, updatedName, lastUpdatedAt) {
       dispatch(saveProjectName(projectId, updatedName, lastUpdatedAt));
-    },
-    remix(projectId, projectType) {
-      dispatch(remix(projectId, projectType));
     },
     unsetNameFailure(projectId) {
       dispatch(unsetNameFailure(projectId));

@@ -1,0 +1,182 @@
+/**
+ * Every test renders a bare `Tooltip` from `@mui/material`; the `MuiTooltip`
+ * entry in styleOverrides/tooltip.ts (on CdoTheme) styles and configures it.
+ *
+ * jsdom treats every focus as a keyboard focus, clicks included, so a true
+ * "a click leaves it shut" check needs a browser.
+ */
+import {Tooltip as MuiTooltip, ThemeProvider, createTheme} from '@mui/material';
+import {render, screen} from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+
+import CdoTheme from '@/themes/code.org';
+
+import {keyboardOnlyTooltipProps} from './../index';
+
+const BACKGROUND = 'var(--background-neutral-primary-inverse)';
+const FOREGROUND = 'var(--text-neutral-primary-inverse)';
+
+describe('Design System - Tooltip (theme-only)', () => {
+  let user: ReturnType<typeof userEvent.setup>;
+  beforeEach(() => {
+    user = userEvent.setup();
+  });
+
+  const renderTooltip = (
+    props: Record<string, unknown> = {},
+    theme = CdoTheme,
+  ) =>
+    render(
+      <ThemeProvider theme={theme}>
+        <MuiTooltip title="tooltipText" {...props}>
+          <button type="button">trigger</button>
+        </MuiTooltip>
+      </ThemeProvider>,
+    );
+
+  const openAndGetBubble = async () => {
+    await user.hover(screen.getByRole('button'));
+    await screen.findByRole('tooltip');
+    return document.querySelector('.MuiTooltip-tooltip') as HTMLElement;
+  };
+
+  describe('styles a bare MUI tooltip from the theme', () => {
+    it('uses our CADS color, shape, and shadow tokens', async () => {
+      renderTooltip();
+      const s = getComputedStyle(await openAndGetBubble());
+
+      expect(s.backgroundColor).toBe(BACKGROUND);
+      expect(s.color).toBe(FOREGROUND);
+      expect(s.borderRadius).toBe('var(--shape-sm)');
+      expect(s.boxShadow).toBe('var(--shadow-md)');
+      expect(s.maxWidth).toBe('16rem');
+      expect(s.paddingTop).toBe('0.25rem');
+      expect(s.paddingLeft).toBe('0.75rem');
+      expect(s.textAlign).toBe('start');
+    });
+
+    it('is one fixed size, the theme body3', async () => {
+      renderTooltip();
+      const s = getComputedStyle(await openAndGetBubble());
+      expect(s.fontSize).toBe('0.875rem');
+      expect(s.lineHeight).toBe('1.57');
+    });
+
+    it('sizes the arrow, which MUI measures in em', async () => {
+      renderTooltip();
+      await openAndGetBubble();
+      const arrow = document.querySelector('.MuiTooltip-arrow') as HTMLElement;
+      expect(getComputedStyle(arrow).fontSize).toBe('0.375rem');
+      expect(getComputedStyle(arrow).color).toBe(BACKGROUND);
+    });
+
+    it('sits 8px from the trigger when the caret is on (4px air + 4px tail)', async () => {
+      renderTooltip();
+      const s = getComputedStyle(await openAndGetBubble());
+      expect(s.marginTop).toBe('0.5rem');
+    });
+
+    it('sits 6px from the trigger when the caret is off', async () => {
+      renderTooltip({arrow: false});
+      const s = getComputedStyle(await openAndGetBubble());
+      expect(s.marginTop).toBe('0.375rem');
+    });
+  });
+
+  describe('flipped defaults, from defaultProps not JSX', () => {
+    it('shows a tail by default', async () => {
+      renderTooltip();
+      await openAndGetBubble();
+      expect(document.querySelector('.MuiTooltip-arrow')).not.toBeNull();
+    });
+
+    it('drops the tail with arrow={false}', async () => {
+      renderTooltip({arrow: false});
+      await openAndGetBubble();
+      expect(document.querySelector('.MuiTooltip-arrow')).toBeNull();
+    });
+
+    it('describes the trigger rather than naming it', async () => {
+      renderTooltip();
+      await openAndGetBubble();
+      const trigger = screen.getByRole('button');
+      expect(trigger).toHaveAttribute('aria-describedby');
+      expect(trigger).not.toHaveAttribute('aria-label');
+    });
+
+    it("defaults to MUI's centered bottom", async () => {
+      renderTooltip();
+      await openAndGetBubble();
+      expect(document.querySelector('[data-popper-placement]')).toHaveAttribute(
+        'data-popper-placement',
+        'bottom',
+      );
+    });
+
+    it('pins the caret to the bubble start edge, not the trigger center', async () => {
+      renderTooltip({placement: 'bottom-start'});
+      await openAndGetBubble();
+      // Popper centers the caret with inline `left: 0; transform:
+      // translate(x, 0)`; the theme beats that with !important rules keyed on
+      // data-popper-placement. jsdom's cascade wrongly lets inline styles win
+      // over stylesheet !important, so assert on the injected rule, not
+      // getComputedStyle.
+      const css = Array.from(document.querySelectorAll('style'))
+        .map(el => el.textContent)
+        .join('\n');
+      const rule = css.match(
+        /[^{}]*\[data-popper-placement="bottom-start"\][^{}]*\{[^}]*\}/,
+      )?.[0];
+      expect(rule).toContain('.MuiTooltip-arrow');
+      expect(rule).toContain('transform:none!important');
+      expect(rule).toContain('left:0.75rem!important');
+    });
+  });
+
+  it('sizes a leading icon composed into the title', async () => {
+    renderTooltip({
+      title: (
+        <>
+          <i className="fa-solid fa-circle-info" />
+          text
+        </>
+      ),
+    });
+    await openAndGetBubble();
+    const icon = document.querySelector('.MuiTooltip-tooltip i') as HTMLElement;
+    expect(getComputedStyle(icon).width).toBe('0.875rem');
+  });
+
+  describe('keyboardOnlyTooltipProps', () => {
+    it('opens on Tab, not on hover', async () => {
+      renderTooltip(keyboardOnlyTooltipProps);
+
+      await user.hover(screen.getByRole('button'));
+      expect(screen.queryByRole('tooltip')).toBeNull();
+
+      await user.tab();
+      expect(screen.getByRole('button')).toHaveFocus();
+      expect(await screen.findByRole('tooltip')).toBeInTheDocument();
+    });
+  });
+
+  it('renders nothing for an empty title', async () => {
+    renderTooltip({title: ''});
+    await user.hover(screen.getByRole('button'));
+    expect(screen.queryByRole('tooltip')).not.toBeInTheDocument();
+  });
+
+  // MUI mirrors -start/-end placements when the theme has a direction. CdoTheme
+  // sets none, so this test supplies one.
+  it('mirrors -start/-end placements in a right-to-left theme', async () => {
+    const rtlTheme = createTheme(CdoTheme, {direction: 'rtl'});
+    renderTooltip({placement: 'bottom-start'}, rtlTheme);
+
+    await user.hover(screen.getByRole('button'));
+    const popper = await screen.findByRole('tooltip');
+    expect(popper.closest('[data-popper-placement]')).toHaveAttribute(
+      'data-popper-placement',
+      'bottom-end',
+    );
+  });
+});

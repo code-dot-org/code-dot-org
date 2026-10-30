@@ -1,16 +1,27 @@
 require 'rack/request'
+require 'rack/session/abstract/id'
+require 'i18n'
 require 'ipaddr'
 require 'json'
 require 'country_codes'
+require 'cdo/anon_user_id'
+require 'cdo/global_edition'
+require 'cdo/shared_constants'
 
 module Cdo
   module RequestExtension
+    STATSIG_STABLE_ID_FORMAT = /\A#{SharedConstants::STATSIG_STABLE_ID_PATTERN}\z/i
+
     TRUSTED_PROXIES = JSON.parse(File.read(deploy_dir('lib/cdo/trusted_proxies.json')))['ranges'].map do |proxy|
       IPAddr.new(proxy)
     end
 
     def trusted_proxy?(ip)
-      super(ip) || TRUSTED_PROXIES.any? {|proxy| proxy.include?(ip) rescue false}
+      super || TRUSTED_PROXIES.any? do |proxy|
+        proxy.include?(ip)
+      rescue
+        false
+      end
     end
 
     def json_body
@@ -24,7 +35,7 @@ module Cdo
     end
 
     def locale
-      env['cdo.locale'] || 'en-US'
+      ::I18n.locale.to_s
     end
 
     def referer_site_with_port
@@ -35,6 +46,11 @@ module Cdo
       return 'code.org'
     rescue URI::InvalidURIError
       return 'code.org'
+    end
+
+    def http_host_and_port(host, port = 80)
+      return host if port == 80
+      "#{host}:#{port}"
     end
 
     def site
@@ -54,14 +70,14 @@ module Cdo
       host_parts.sub!('-', '.') unless rack_env?(:production)
       parts = host_parts.split('.')
 
-      if parts.count >= 3
-        domains = (%w(studio learn advocacy) + CDO.partners).map {|x| x + '.code.org'}
+      if parts.count >= 2
+        domains = (%w(studio learn) + CDO.partners).map {|x| x + '.code.org'}
         domain = parts.last(3).join('.').split(':').first
         return domain if domains.include? domain
       end
 
       domain = parts.last(2).join('.').split(':').first
-      return domain if %w(csedweek.org hourofcode.com codeprojects.org).include?(domain)
+      return domain if %w(csedweek.org hourofcode.com codeprojects.org codeaiprojects.org).include?(domain)
 
       'code.org'
     end
@@ -83,28 +99,66 @@ module Cdo
       env[:splat_path_info]
     end
 
-    def user_id
-      @user_id ||= user_id_from_session_cookie
+    # Statsig stable ID from the cookie or the session, without generating one.
+    #
+    # @return [String, nil] the anonymous (signed-out) user ID in UUID v4 format
+    def existing_statsig_stable_id
+      # This cookie is used by the Statsig SDK for backend, frontend, and Marketing site
+      # See: apps/src/metrics/statsigHelpers.js
+      cookies_stable_id = cookies[SharedConstants::STATSIG_STABLE_ID_KEY]
+      return cookies_stable_id if STATSIG_STABLE_ID_FORMAT.match?(cookies_stable_id)
+
+      session_stable_id = session[SharedConstants::STATSIG_STABLE_ID_KEY]
+      return session_stable_id if session_stable_id.is_a?(String) && STATSIG_STABLE_ID_FORMAT.match?(session_stable_id)
+
+      nil
     end
 
-    def user_id_from_session_cookie
+    # Statsig stable ID for use of anonymous (signed-out) user tracking.
+    #
+    # @return [String] the anonymous (signed-out) user ID in UUID v4 format
+    def statsig_stable_id
+      existing_statsig_stable_id || (session[SharedConstants::STATSIG_STABLE_ID_KEY] = Cdo::AnonUserId.generate)
+    end
+
+    # Anonymous (signed-out) user ID for our own records, such as anonymous level progress.
+    #
+    # It reuses the Statsig stable ID, which already handles OneTrust consent, its cookie and the session.
+    # It is a separate method because our records need a stable anonymous identity, not Statsig as such:
+    # Statsig is only where the ID comes from today. Callers use this method, never statsig_stable_id,
+    # so if Statsig is removed or replaced, only this method changes, not every caller.
+    #
+    # @return [String] the anonymous (signed-out) user ID in UUID v4 format
+    def anon_user_id
+      statsig_stable_id
+    end
+
+    def user
+      env['warden']&.user
+    end
+
+    def user_id
+      @user_id ||= user_id_from_session_store
+    end
+
+    # Fetch the user ID directly from the underlying Rails session store. This
+    # is a bit of a hack, but is necessary to preserve backwards compatibility.
+    def user_id_from_session_store
       session_cookie_key = "_learn_session"
       session_cookie_key += "_#{rack_env}" unless rack_env?(:production)
 
       message = CGI.unescape(cookies[session_cookie_key].to_s)
+      session_id = Rack::Session::SessionId.new(message)
 
-      key_generator = ActiveSupport::KeyGenerator.new(
-        CDO.dashboard_secret_key_base,
-        iterations: 1000
-      )
-
-      encryptor = ActiveSupport::MessageEncryptor.new(
-        key_generator.generate_key('encrypted cookie')[0, ActiveSupport::MessageEncryptor.key_len],
-        key_generator.generate_key('signed encrypted cookie')
-      )
-
-      return nil unless cookie = encryptor.decrypt_and_verify(message)
-      return nil unless warden = cookie['warden.user.user.key']
+      # Fetch session data from the session store; this is essentially a manual
+      # reimplementation of the private `get_session_with_fallback` method
+      # which is used by `find_session` under the hood.
+      # See https://github.com/redis-store/redis-rack/blob/v3.0.0/lib/rack/session/redis.rb#L87-L89
+      session = dashboard_session_store.with do |connection|
+        connection.get(session_id.private_id) || connection.get(session_id.public_id)
+      end
+      return nil unless session
+      return nil unless warden = session['warden.user.user.key']
       warden.first.first
     rescue
       return nil
@@ -115,8 +169,25 @@ module Cdo
         location&.country_code
     end
 
+    def country_code
+      country.to_s.strip.upcase.presence
+    end
+
     def gdpr?
       gdpr_country_code?(country)
+    end
+
+    def ge_region
+      Cdo::GlobalEdition.current_region
+    end
+
+    # Initialize a private instance of the SessionStore used in Dashboard, so
+    # we can access data stored there (ie, the id of the current user).
+    private def dashboard_session_store
+      @@dashboard_session_store ||= Dashboard::Application.config.session_store.new(
+        Dashboard::Application,
+        Dashboard::Application.config.session_options
+      )
     end
   end
 end

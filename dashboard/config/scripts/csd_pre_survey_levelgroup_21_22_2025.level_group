@@ -1,0 +1,42 @@
+name 'csd-pre-survey-levelgroup_21_22_2025'
+title 'Student Pre-Course Survey'
+submittable 'true'
+anonymous 'true'
+
+page
+text 'csp-pre-survey-2017 preamble 1_2025'
+level 'csp-pre-survey-2017-q3_copy2_2025'
+level 'csp-pre-survey-2017-q4_copy2_2025'
+level 'csp-pre-survey-2017-q9_copy2_2025'
+
+page
+text 'csp-pre-survey-2017 preamble 2 cs in general_copy2_2025'
+level 'csp-pre-survey-2017-q10_copy2_2025'
+level 'interested-in-learning-cs_2025'
+level 'csp-pre-survey-2017-q16_copy2_2025'
+level 'confident-ability-to-learn_2025'
+level 'csp-pre-survey-2017-q13_2025'
+level 'csp-pre-survey-2017-q17_copy2_2025'
+level 'naturally-better-at-cs_copy2_2025'
+
+page
+text 'csp-pre-survey-2017 preamble 4 the future_2025'
+level 'csp-pre-survey-2017-q30_2025'
+level 'csp-pre-survey-2017-q31_2025'
+text 'csp-pre-survey-2017 preamble 5 demographics_2025'
+level 'ever-learned-cs_2025'
+level 'ever-learned-cs-outside-school_2025'
+
+page
+text 'csp-pre-survey-2017 preamble 3 this class_copy2_2025'
+level 'csp-pre-survey-2017-q19_2025'
+level 'csp-pre-survey-2017-q20_2025'
+level 'csp-pre-survey-2017-q22_2025'
+level 'will-be-myself-in-cs_2025'
+level 'worried-seen-incapable_2025'
+level 'reasons-took-course-csd_2025'
+level 'family_encourage_2025'
+level 'teacher_encourage_2025'
+level 'counselor_encourage_2025'
+level 'someone_else_encourage_2025'
+level 'most-excited-for-in-this-class_copy1_2025'

@@ -1,49 +1,55 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
 import {Provider} from 'react-redux';
+
+import {displayDifferentiationChat} from '@cdo/apps/aiDifferentiation/aiDiffUtils';
+import announcementReducer from '@cdo/apps/code-studio/announcementsRedux';
+import hiddenLesson from '@cdo/apps/code-studio/hiddenLessonRedux';
+import isRtl from '@cdo/apps/code-studio/isRtlRedux';
+import progressRedux from '@cdo/apps/code-studio/progressRedux';
+import verifiedInstructor from '@cdo/apps/code-studio/verifiedInstructorRedux';
+import viewAs from '@cdo/apps/code-studio/viewAsRedux';
+import {FlashHandler} from '@cdo/apps/flashes/FlashHandler';
 import {getStore, registerReducers} from '@cdo/apps/redux';
-import manageStudents, {
-  setLoginType,
-  setShowSharingColumn,
-} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
-import teacherSections, {
-  setSections,
-  selectSection,
-  setRosterProvider,
-  setRosterProviderName,
-  setCourseOfferings,
-  setShowLockSectionField, // DCDO Flag - show/hide Lock Section field
-  setStudentsForCurrentSection,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import stats from '@cdo/apps/templates/teacherDashboard/statsRedux';
-import sectionAssessments from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
-import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-import sectionStandardsProgress from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
-import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
-import TeacherDashboard from '@cdo/apps/templates/teacherDashboard/TeacherDashboard';
-import currentUser, {
-  setCurrentUserHasSeenStandardsReportInfo,
-} from '@cdo/apps/templates/currentUserRedux';
-import {
-  setCoursesWithProgress,
-  setScriptId,
-} from '../../../../redux/unitSelectionRedux';
 import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
+import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
+import currentUser, {
+  setShowAITALessonSummary,
+  setHasCompletedPersonalizationQuiz,
+  setShowAITAPodcasts,
+} from '@cdo/apps/templates/currentUserRedux';
+import manageStudents from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
+import sectionAssessments from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
+import sectionProgress from '@cdo/apps/templates/sectionProgressV2/sectionProgressRedux';
+import TeacherHomepage from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/TeacherHomepage';
+import stats from '@cdo/apps/templates/teacherDashboard/statsRedux';
+import teacherSections, {
+  setAuthProviders,
+  selectSection,
+  setSections,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {setSelectedSectionData} from '@cdo/apps/templates/teacherNavigation/selectedSectionLoader';
+import TeacherNavigationRouter from '@cdo/apps/templates/teacherNavigation/TeacherNavigationRouter';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
+import experiments from '@cdo/apps/util/experiments';
+
+// 6 seconds
+const FLASH_DURATION = 6 * 1000;
 
 const script = document.querySelector('script[data-dashboard]');
 const scriptData = JSON.parse(script.dataset.dashboard);
 const {
   section,
   sections,
-  validCourseOfferings,
   localeCode,
-  hasSeenStandardsReportInfo,
-  coursesWithProgress,
-  canViewStudentAIChatMessages,
+  showAITALessonSummary,
+  showAITAPodcasts,
+  hasCompletedPersonalizationQuiz,
+  sectionOrder,
+  providers,
+  flash,
+  logoTransitionEnabled,
 } = scriptData;
-const baseUrl = `/teacher_dashboard/sections/${section.id}`;
 
 $(document).ready(function () {
   registerReducers({
@@ -54,66 +60,56 @@ $(document).ready(function () {
     stats,
     sectionAssessments,
     currentUser,
-    sectionStandardsProgress,
     locales,
+    viewAs,
+    hiddenLesson,
+    verifiedInstructor,
+    announcementReducer,
+    progressRedux,
+    isRtl,
   });
+
   const store = getStore();
-  store.dispatch(
-    setCurrentUserHasSeenStandardsReportInfo(hasSeenStandardsReportInfo)
-  );
-  store.dispatch(setSections(sections));
-  store.dispatch(selectSection(section.id));
-  store.dispatch(setStudentsForCurrentSection(section.id, section.students));
-  store.dispatch(setRosterProvider(section.login_type));
-  store.dispatch(setRosterProviderName(section.login_type_name));
-  store.dispatch(setLoginType(section.login_type));
-  store.dispatch(setCourseOfferings(validCourseOfferings));
+  if (showAITALessonSummary) {
+    store.dispatch(setShowAITALessonSummary(true));
+    store.dispatch(setShowAITAPodcasts(showAITAPodcasts));
+    store.dispatch(
+      setHasCompletedPersonalizationQuiz(hasCompletedPersonalizationQuiz)
+    );
+  }
+  store.dispatch(setSections(sections, false, sectionOrder));
   store.dispatch(setLocaleCode(localeCode));
+  store.dispatch(setAuthProviders(providers));
 
-  // DCDO Flag - show/hide Lock Section field
-  store.dispatch(setShowLockSectionField(scriptData.showLockSectionField));
+  if (sections.length > 0) {
+    const selectedSectionFromList = window.location.pathname.includes(
+      '/teacher_dashboard/home'
+    )
+      ? sections[0]
+      : sections.find(s => s.id === section.id);
+    const selectedSection = {...selectedSectionFromList, ...section};
 
-  if (!section.sharing_disabled && section.script.project_sharing) {
-    store.dispatch(setShowSharingColumn(true));
+    store.dispatch(selectSection(selectedSection.id));
+
+    setSelectedSectionData(selectedSection);
   }
 
-  // Default the scriptId to the script assigned to the section
-  const defaultScriptId = section.script ? section.script.id : null;
-  if (defaultScriptId) {
-    store.dispatch(setScriptId(defaultScriptId));
-  }
-  // Reorder coursesWithProgress so that the current section is at the top and other sections are in order from newest to oldest
-  const reorderedCourses = [
-    ...coursesWithProgress.filter(
-      course => course.id !== section.course_version_id
-    ),
-    ...coursesWithProgress.filter(
-      course => course.id === section.course_version_id
-    ),
-  ].reverse();
-  store.dispatch(setCoursesWithProgress(reorderedCourses));
-
-  const showAITutorTab = canViewStudentAIChatMessages;
-
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={store}>
-      <Router basename={baseUrl}>
-        <Route
-          path="/"
-          component={props => (
-            <TeacherDashboard
-              {...props}
-              studioUrlPrefix={scriptData.studioUrlPrefix}
-              sectionId={section.id}
-              sectionName={section.name}
-              studentCount={section.students.length}
-              coursesWithProgress={coursesWithProgress}
-              showAITutorTab={showAITutorTab}
-            />
-          )}
+      {sections.length === 0 && !experiments.isEnabled('demo-section') ? (
+        <TeacherHomepage
+          studioUrlPrefix={scriptData.studioUrlPrefix}
+          logoTransitionEnabled={!!logoTransitionEnabled}
         />
-      </Router>
+      ) : (
+        <TeacherNavigationRouter
+          studioUrlPrefix={scriptData.studioUrlPrefix}
+          logoTransitionEnabled={!!logoTransitionEnabled}
+        />
+      )}
+      <FlashHandler flash={flash} autoHideDuration={FLASH_DURATION} />
     </Provider>,
     document.getElementById('teacher-dashboard')
   );
+  displayDifferentiationChat();
 });

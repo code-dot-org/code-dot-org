@@ -2,6 +2,7 @@ require lib_dir 'cdo/data/logging/timed_task_with_logging'
 require lib_dir 'cdo/data/logging/infrastructure_logger'
 require 'cdo/github'
 require 'cdo/git_utils'
+require 'observability/errors'
 class RakeTaskEventLogger
   STUDY_TABLE = 'rake_performance'.freeze
   CURRENT_LOGGING_VERSION = 'v1'.freeze
@@ -11,7 +12,7 @@ class RakeTaskEventLogger
     @start_time = 0
     @end_time = 0
     @rake_task = rake_task
-    @enabled_firehose = !([:development, :test].include?(rack_env))
+    @enabled_firehose = ![:development, :test].include?(rack_env)
   end
 
   def self.depth
@@ -73,7 +74,7 @@ class RakeTaskEventLogger
         }
       )
     rescue => exception
-      Honeybadger.notify(
+      Observability::Errors.report(
         exception,
         error_message: "Failed to log rake task information in firehose",
         context: {

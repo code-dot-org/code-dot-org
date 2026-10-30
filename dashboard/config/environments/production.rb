@@ -23,14 +23,6 @@ Dashboard::Application.configure do
   config.public_file_server.enabled = true
   config.public_file_server.headers = {'Cache-Control' => "public, max-age=86400, s-maxage=43200"}
 
-  # Compress JavaScripts and CSS.
-  # webpack handles js compression for us
-  # config.assets.js_compressor = :uglifier
-  # config.assets.css_compressor = :sass
-
-  # Version of your assets, change this if you want to expire all your assets.
-  config.assets.version = '1.0'
-
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = "X-Sendfile" # for apache
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for nginx
@@ -67,11 +59,12 @@ Dashboard::Application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = Logger::Formatter.new
 
-  # Log condensed lines to syslog for centralized logging.
   config.lograge.enabled = true
   config.lograge.formatter = Lograge::Formatters::Cee.new
   require 'syslog/logger'
   config.logger = Syslog::Logger.new 'dashboard', Syslog::LOG_LOCAL0
+
+  config.action_view.logger = nil
 
   # don't act like a levelbuilder by default
   config.levelbuilder_mode = CDO.with_default(false).levelbuilder_mode

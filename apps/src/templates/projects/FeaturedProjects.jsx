@@ -1,5 +1,7 @@
+import {Typography as MuiTypography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import FeaturedProjectsTable from './FeaturedProjectsTable';
 import {featuredProjectDataPropType} from './projectConstants';
 
@@ -16,7 +18,9 @@ export default class FeaturedProjects extends React.Component {
   render() {
     return (
       <div>
-        <h3>Featured Projects</h3>
+        <MuiTypography variant="h3" component="h3" gutterBottom>
+          Featured Projects
+        </MuiTypography>
         <FeaturedProjectsTable
           activeList={this.props.activeFeaturedProjects}
           bookmarkedList={this.props.bookmarkedFeaturedProjects}

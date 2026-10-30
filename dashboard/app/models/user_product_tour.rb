@@ -1,0 +1,39 @@
+# == Schema Information
+#
+# Table name: user_product_tours
+#
+#  id           :bigint           not null, primary key
+#  user_id      :integer          not null
+#  tour_name    :string(255)      not null
+#  completed_at :datetime
+#  started_at   :datetime
+#  properties   :json
+#
+# Indexes
+#
+#  index_user_product_tours_on_user_id_and_tour_name  (user_id,tour_name) UNIQUE
+#
+
+class UserProductTour < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :confidential,
+    user_id: :confidential,
+    tour_name: :confidential,
+    started_at: :confidential,
+    completed_at: :confidential,
+    properties: :restricted,
+  )
+
+  belongs_to :user
+
+  VALID_TOUR_NAMES = [
+    CREATE_CLASS_SECTION = 'create_class_section'.freeze,
+    VIEW_SYLLABUS = 'view_syllabus'.freeze,
+    LEARN_TO_EVALUATE = 'learn_to_evaluate'.freeze,
+  ].freeze
+
+  validates :tour_name, inclusion: {in: VALID_TOUR_NAMES}
+  validates :tour_name, uniqueness: {scope: :user_id}
+end

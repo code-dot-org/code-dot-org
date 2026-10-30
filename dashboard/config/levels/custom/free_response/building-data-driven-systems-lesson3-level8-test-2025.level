@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-11-20T02:43:55.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "> Think about the helper functions you wrote in the Social Media Story Scheduler  \r\n> (for example, `addUrgentAlert()`, `removeLastPost()`, `addFridayPromo()`, `moveMondayToFront()`).  \r\n>  \r\n> 1. In your own words, **how do helper functions help protect data consistency** when you are working with multiple parallel arrays?  \r\n> 2. Give a specific example from your project of what might go wrong if you *forgot* to update one of the arrays inside a helper.",
+    "stay_on_level_after_submit": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "title": "Reflection: Helper Functions",
+    "teacher_markdown": "A successful reflection shows that the student:\r\n- can explain that helpers encapsulate the logic for updating all related arrays in one place, reducing mistakes and keeping data aligned, and can describe a realistic desync bug that would occur if an array were omitted from a helper.",
+    "height": "100",
+    "placeholder": "enter response here..."
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-20T02:43:55.863+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson3-level2-test-2025\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson3-level2-test-2025\"},{\"changed_at\":\"2025-11-20 02:45:36 +0000\",\"changed\":[\"long_instructions\",\"title\",\"teacher_markdown\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

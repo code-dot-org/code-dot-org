@@ -188,3 +188,30 @@ export const TOOLBOX_EDIT_MODE = 'toolbox_blocks';
 export const NOTIFICATION_ALERT_TYPE = 'notification';
 
 export const START_BLOCKS = 'start_blocks';
+
+export const DEPRECATED_PROJECT_TYPES = ['algebra_game', 'calc', 'eval'];
+
+export const OPEN_ENDED_LEGACY_PROJECT_TYPES = [
+  'applab',
+  'gamelab',
+  'weblab',
+  'javalab',
+  'spritelab',
+  'poetry',
+  'playlab',
+  'game_design',
+];
+
+export const OPEN_ENDED_LAB2_PROJECT_TYPES = [
+  'pythonlab',
+  'weblab2',
+  'sketchlab',
+];
+
+export const OPEN_ENDED_PROJECTS_YOUNG_AGE = [
+  'spritelab',
+  'poetry',
+  'playlab',
+  'starwarsblocks',
+  'game_design',
+];

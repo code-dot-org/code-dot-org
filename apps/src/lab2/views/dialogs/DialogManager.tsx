@@ -1,24 +1,40 @@
 import React, {useCallback, useState} from 'react';
-import moduleStyles from './dialog-manager.module.scss';
+
+import {
+  getDeferredPromise,
+  DeferredPromiseObject,
+} from '@cdo/apps/lab2/utils/getDeferredPromise';
+
+import {DialogControlContext} from './DialogControlContext';
+import GenericAlertDialog from './GenericAlertDialog';
+import GenericConfirmationDialog from './GenericConfirmationDialog';
+import GenericDialog from './GenericDialog';
+import GenericDropdown from './GenericDropdown';
+import GenericPrompt from './GenericPrompt';
+import PendingDialog from './PendingDialog';
+import SkipDialog from './SkipDialog';
 import StartOverDialog from './StartOverDialog';
+import {
+  DialogType,
+  TypedDialogProps,
+  AnyDialogType,
+  DialogCloseActionType,
+  DialogClosePromiseReturnType,
+} from './types';
 
 /**
  * Manages displaying common dialogs for Lab2.
  */
 
-export enum DialogType {
-  StartOver = 'StartOver',
-}
-
-export interface BaseDialogProps {
-  handleConfirm: () => void;
-  handleCancel: () => void;
-}
-
-const DialogViews: {
-  [key in DialogType]: React.FunctionComponent<BaseDialogProps>;
-} = {
+const DialogViews = {
   [DialogType.StartOver]: StartOverDialog,
+  [DialogType.Skip]: SkipDialog,
+  [DialogType.GenericAlert]: GenericAlertDialog,
+  [DialogType.GenericConfirmation]: GenericConfirmationDialog,
+  [DialogType.GenericDialog]: GenericDialog,
+  [DialogType.GenericDropdown]: GenericDropdown,
+  [DialogType.GenericPrompt]: GenericPrompt,
+  [DialogType.PendingDialog]: PendingDialog,
 };
 
 interface DialogManagerProps {
@@ -33,55 +49,66 @@ interface DialogManagerProps {
 const DialogManager: React.FunctionComponent<DialogManagerProps> = ({
   children,
 }) => {
-  const [openDialog, setOpenDialog] = useState<DialogType | null>(null);
-  const [dialogCallback, setDialogCallback] = useState<(() => void) | null>(
-    () => null
-  );
+  const [shouldThrowOnCancel, setShouldThrowOnCancel] =
+    useState<boolean>(false);
+  const [promiseArgs, setPromiseArgs] = useState<unknown>();
+  const [activeDialog, setActiveDialog] = useState<{
+    type: DialogType | null;
+    dialogArgs?: AnyDialogType;
+  } | null>(null);
+  const [deferredPromiseObject, setDeferredPromiseObject] =
+    useState<DeferredPromiseObject>(getDeferredPromise());
 
   const showDialog = useCallback(
-    (dialogType: DialogType, callback: () => void) => {
-      setOpenDialog(dialogType);
-      setDialogCallback(() => callback);
+    ({type, throwOnCancel = false, ...dialogArgs}: TypedDialogProps) => {
+      const newDeferredPromise = getDeferredPromise();
+      setDeferredPromiseObject(newDeferredPromise);
+      setPromiseArgs(undefined);
+      setShouldThrowOnCancel(throwOnCancel);
+      setActiveDialog({type, dialogArgs});
+
+      return newDeferredPromise.deferred as Promise<DialogClosePromiseReturnType>;
     },
-    [setOpenDialog, setDialogCallback]
+    [setActiveDialog]
   );
 
-  const handleConfirm = useCallback(() => {
-    if (dialogCallback) {
-      dialogCallback();
-      setOpenDialog(null);
-    }
-  }, [dialogCallback, setOpenDialog]);
+  const closeDialog = useCallback(
+    (closeType: DialogCloseActionType) => {
+      setActiveDialog(null);
+      const resolver =
+        shouldThrowOnCancel && closeType === 'cancel'
+          ? deferredPromiseObject.reject
+          : deferredPromiseObject.resolve;
+      resolver?.({type: closeType, args: promiseArgs});
+    },
+    [setActiveDialog, deferredPromiseObject, shouldThrowOnCancel, promiseArgs]
+  );
 
-  const handleCancel = useCallback(() => {
-    setOpenDialog(null);
-  }, [setOpenDialog]);
-
-  const DialogView = openDialog && dialogCallback && DialogViews[openDialog];
+  // Allow the any because if it's NOT any, then line 63 with DialogView's args will toss an error.
+  // Keep this until we have a better solution. ¯\_(ツ)_/¯
+  // The typing on the `showDialog` function ensures the props are correct, so we're still safe'
+  // eslint-disable-next-line
+  const DialogView: any =
+    activeDialog?.type &&
+    activeDialog?.dialogArgs &&
+    DialogViews[activeDialog.type];
 
   return (
-    <DialogContext.Provider
+    <DialogControlContext.Provider
       value={{
+        closeDialog,
         showDialog,
+        deferredPromiseObject,
+        promiseArgs,
+        setPromiseArgs,
       }}
     >
-      {DialogView && (
-        <div className={moduleStyles.dialogContainer}>
-          <DialogView
-            handleConfirm={handleConfirm}
-            handleCancel={handleCancel}
-          />
-        </div>
-      )}
-      {children}
-    </DialogContext.Provider>
+      {DialogView && <DialogView {...activeDialog?.dialogArgs} />}
+      {/* Adding inert attribute to disable interaction with underlying content
+          when a dialog is open so keyboard navigation works as expected */}
+      <div {...(DialogView ? {inert: ''} : {})}>{children}</div>
+    </DialogControlContext.Provider>
   );
 };
-
-interface DialogControl {
-  showDialog: (dialogType: DialogType, callback: () => void) => void;
-}
-
-export const DialogContext = React.createContext<DialogControl | null>(null);
 
 export default DialogManager;

@@ -1,0 +1,53 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-04-08T16:31:14.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Analyze Data with AI\r\n\r\nUse AI Chat to analyze the pizza dataset. The bot will help you summarize key details, identify trends, and suggest how much pizza to order.\r\n\r\n---\r\n\r\nDo This:\r\n1. Upload the **PDF file** of the pizza dataset from the library.\r\n2. Ask AI Chat these questions:\r\n   * Can you summarize this pizza dataset?\r\n   * What trends do you notice?\r\n   * How much pizza should we order based on this data?",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a friendly data assistant helping students analyze a pizza dataset showing how many slices people eat and their favorite kind of pizza.\n\nWhen students ask:\n- “Can you summarize this pizza dataset?”\n- “What trends do you notice?”\n- “How much pizza should we order based on this data?”\n\nYou should:\n1. Clearly summarize the data and types of pizza.\n2. Highlight patterns in favorite types and slice counts.\n3. Estimate how much pizza to order (assume 8 slices per pizza), explaining your reasoning.\n4. Encourage students to compare your analysis with their own.\n\nKeep your tone clear, helpful, and easy to understand—no jargon. Be concise as possible to not overwhelm the student and flood the chat.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "starter_assets": {
+      "Pizza_Slice_Dataset.pdf": "7426a459-fd9e-4337-b339-24416586106b.pdf"
+    },
+    "display_name": "Analyze Data with AI",
+    "bubble_choice_description": "Use AI Chat to analyze data from the pizza survey."
+  },
+  "audit_log": "[{\"changed_at\":\"2025-04-08 16:32:11 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-04-08 16:33:15 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-04-08 16:34:47 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-04-08 16:37:43 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Aichat>

@@ -2,7 +2,7 @@
 <% function getPrefixedName () {
   return locals.tipPrefix ? locals.tipPrefix + locals.functionName : locals.functionName;
 } %>
-<div class="function-name">
+<div class="function-name" data-notranslate="true">
   <% if (locals.signatureOverride) { -%>
     <%= locals.signatureOverride %>
   <% } else if (locals.isProperty) { -%>

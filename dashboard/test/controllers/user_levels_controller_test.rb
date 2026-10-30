@@ -2,11 +2,11 @@ require 'test_helper'
 
 class UserLevelsControllerTest < ActionController::TestCase
   test "student's teacher can unsubmit user level" do
-    follower = create :follower
+    follower = create(:follower)
     student = follower.student_user
     teacher = follower.user
 
-    user_level = create :user_level, user: student, submitted: true
+    user_level = create(:user_level, user: student, submitted: true)
 
     sign_in teacher
 
@@ -19,10 +19,10 @@ class UserLevelsControllerTest < ActionController::TestCase
   end
 
   test "student can unsubmit own user level" do
-    follower = create :follower
+    follower = create(:follower)
     student = follower.student_user
 
-    user_level = create :user_level, user: student, submitted: true
+    user_level = create(:user_level, user: student, submitted: true)
 
     sign_in student
 
@@ -35,10 +35,10 @@ class UserLevelsControllerTest < ActionController::TestCase
   end
 
   test "teacher cannot unsubmit random user level" do
-    follower = create :follower
+    follower = create(:follower)
     teacher = follower.user
 
-    user_level = create :user_level, user: create(:user), submitted: true
+    user_level = create(:user_level, user: create(:user), submitted: true)
 
     sign_in teacher
 
@@ -51,11 +51,11 @@ class UserLevelsControllerTest < ActionController::TestCase
   end
 
   test "students teacher can clear response for user level" do
-    follower = create :follower
+    follower = create(:follower)
     student = follower.student_user
     teacher = follower.user
 
-    user_level = create :user_level, user: student
+    user_level = create(:user_level, user: student)
 
     sign_in teacher
 
@@ -66,10 +66,10 @@ class UserLevelsControllerTest < ActionController::TestCase
   end
 
   test "student cannot clear response for own user level" do
-    follower = create :follower
+    follower = create(:follower)
     student = follower.student_user
 
-    user_level = create :user_level, user: student
+    user_level = create(:user_level, user: student)
 
     sign_in student
 
@@ -80,10 +80,10 @@ class UserLevelsControllerTest < ActionController::TestCase
   end
 
   test "teacher cannot clear response for random user level" do
-    follower = create :follower
+    follower = create(:follower)
     teacher = follower.user
 
-    user_level = create :user_level, user: create(:user)
+    user_level = create(:user_level, user: create(:user))
 
     sign_in teacher
 
@@ -95,11 +95,11 @@ class UserLevelsControllerTest < ActionController::TestCase
 
   [Multi, FreeResponse].each do |level_type|
     test "teacher can delete own progress on #{level_type} level" do
-      user = create :teacher
+      user = create(:teacher)
       sign_in user
-      script = create :script
-      level = create :level, type: level_type
-      create :user_level, user: user, script: script, level: level
+      script = create(:unit, :in_single_unit_course)
+      level = create(:level, type: level_type)
+      create(:user_level, user: user, script: script, level: level)
 
       assert_destroys(UserLevel) do
         post :delete_predict_level_progress, params: {
@@ -111,12 +111,12 @@ class UserLevelsControllerTest < ActionController::TestCase
     end
 
     test "teacher only deletes their progress on #{level_type} level" do
-      user = create :teacher
-      other_user = create :teacher
+      user = create(:teacher)
+      other_user = create(:teacher)
       sign_in user
-      script = create :script
-      level = create :level, type: level_type
-      create :user_level, user: other_user, script: script, level: level
+      script = create(:unit, :in_single_unit_course)
+      level = create(:level, type: level_type)
+      create(:user_level, user: other_user, script: script, level: level)
 
       assert_does_not_destroy(UserLevel) do
         post :delete_predict_level_progress, params: {
@@ -128,11 +128,11 @@ class UserLevelsControllerTest < ActionController::TestCase
     end
 
     test "student cannot delete their own progress on #{level_type} level" do
-      user = create :student
+      user = create(:student)
       sign_in user
-      script = create :script
-      level = create :level, type: level_type
-      create :user_level, user: user, script: script, level: level
+      script = create(:unit, :in_single_unit_course)
+      level = create(:level, type: level_type)
+      create(:user_level, user: user, script: script, level: level)
 
       assert_does_not_destroy(UserLevel) do
         post :delete_predict_level_progress, params: {
@@ -144,12 +144,28 @@ class UserLevelsControllerTest < ActionController::TestCase
     end
   end
 
-  test "teacher cannot delete own progress on an unsupported level" do
-    user = create :teacher
+  test "teacher can delete own progress on a Python Lab predict level" do
+    user = create(:teacher)
     sign_in user
-    script = create :script
-    level = create :level, type: 'Blockly'
-    create :user_level, user: user, script: script, level: level
+    script = create(:unit, :in_single_unit_course)
+    level = create(:level, type: "Pythonlab", properties: {predict_settings: {isPredictLevel: true}})
+    create(:user_level, user: user, script: script, level: level)
+
+    assert_destroys(UserLevel) do
+      post :delete_predict_level_progress, params: {
+        script_id: script.id,
+        level_id: level.id
+      }
+      assert_response :success
+    end
+  end
+
+  test "teacher cannot delete own progress on a regular Python Lab level" do
+    user = create(:teacher)
+    sign_in user
+    script = create(:unit, :in_single_unit_course)
+    level = create(:level, type: "Pythonlab")
+    create(:user_level, user: user, script: script, level: level)
 
     assert_does_not_destroy(UserLevel) do
       post :delete_predict_level_progress, params: {
@@ -158,5 +174,304 @@ class UserLevelsControllerTest < ActionController::TestCase
       }
       assert_response :bad_request
     end
+  end
+
+  test "teacher cannot delete own progress on an unsupported level" do
+    user = create(:teacher)
+    sign_in user
+    script = create(:unit, :in_single_unit_course)
+    level = create(:level, type: 'Blockly')
+    create(:user_level, user: user, script: script, level: level)
+
+    assert_does_not_destroy(UserLevel) do
+      post :delete_predict_level_progress, params: {
+        script_id: script.id,
+        level_id: level.id
+      }
+      assert_response :bad_request
+    end
+  end
+
+  test "user can get their level source data" do
+    user = create(:user)
+    sign_in user
+
+    script = create(:unit, :in_single_unit_course)
+    level = create(:level)
+    level_source_data = 'my level source'
+    level_source = create(:level_source, level: @level, data: level_source_data)
+    create(:user_level, user: user, best_result: 100, script: script,
+      level: level, level_source: level_source
+)
+
+    get :get_level_source, params: {script_id: script.id, level_id: level.id}
+    assert_response :success
+    body = JSON.parse(response.body)
+    assert_equal level_source_data, body['data']
+  end
+
+  test "signed out user cannot get level source data" do
+    other_user = create(:user)
+    script = create(:unit, :in_single_unit_course)
+    level = create(:level)
+
+    level_source_data = 'my level source'
+    level_source = create(:level_source, level: @level, data: level_source_data)
+    create(:user_level, user: other_user, best_result: 100, script: script,
+      level: level, level_source: level_source
+)
+
+    @request.headers["Accept"] = "*/*"
+    get :get_level_source, params: {script_id: script.id, level_id: level.id}
+    assert_response :forbidden
+  end
+
+  test "user without level source gets nil data for level source" do
+    user = create(:user)
+    sign_in user
+
+    script = create(:unit, :in_single_unit_course)
+    level = create(:level)
+
+    get :get_level_source, params: {script_id: script.id, level_id: level.id}
+    assert_response :success
+    body = JSON.parse(response.body)
+    assert_nil body['data']
+  end
+
+  test "teacher can get their student's level source data" do
+    follower = create(:follower)
+    student = follower.student_user
+    teacher = follower.user
+    sign_in teacher
+
+    script = create(:unit, :in_single_unit_course)
+    level = create(:level)
+    level_source_data = 'student level source'
+    level_source = create(:level_source, level: level, data: level_source_data)
+    create(:user_level, user: student, best_result: 100, script: script,
+      level: level, level_source: level_source
+)
+
+    get :get_level_source, params: {script_id: script.id, level_id: level.id, user_id: student.id}
+    assert_response :success
+    body = JSON.parse(response.body)
+    assert_equal level_source_data, body['data']
+  end
+
+  test "teacher gets nil data for student who has not responded" do
+    follower = create(:follower)
+    student = follower.student_user
+    teacher = follower.user
+    sign_in teacher
+
+    script = create(:unit, :in_single_unit_course)
+    level = create(:level)
+
+    get :get_level_source, params: {script_id: script.id, level_id: level.id, user_id: student.id}
+    assert_response :success
+    assert_nil JSON.parse(response.body)['data']
+  end
+
+  test "teacher cannot get level source data for a user who is not their student" do
+    teacher = create(:teacher)
+    sign_in teacher
+    other_student = create(:student)
+
+    script = create(:unit, :in_single_unit_course)
+    level = create(:level)
+    level_source = create(:level_source, level: level, data: 'private')
+    create(:user_level, user: other_student, best_result: 100, script: script,
+      level: level, level_source: level_source
+)
+
+    get :get_level_source, params: {script_id: script.id, level_id: level.id, user_id: other_student.id}
+    assert_response :forbidden
+  end
+
+  test "student cannot get another student's level source data" do
+    student = create(:student)
+    sign_in student
+    other_student = create(:student)
+
+    script = create(:unit, :in_single_unit_course)
+    level = create(:level)
+    level_source = create(:level_source, level: level, data: 'private')
+    create(:user_level, user: other_student, best_result: 100, script: script,
+      level: level, level_source: level_source
+)
+
+    get :get_level_source, params: {script_id: script.id, level_id: level.id, user_id: other_student.id}
+    assert_response :forbidden
+  end
+
+  test "get level source for a nonexistent user_id is forbidden, not an error" do
+    teacher = create(:teacher)
+    sign_in teacher
+
+    script = create(:unit, :in_single_unit_course)
+    level = create(:level)
+
+    get :get_level_source, params: {script_id: script.id, level_id: level.id, user_id: 0}
+    assert_response :forbidden
+  end
+
+  test "teacher reads student's migrated predict response from contained level" do
+    follower = create(:follower)
+    student = follower.student_user
+    teacher = follower.user
+    sign_in teacher
+
+    script = create(:unit, :in_single_unit_course)
+    contained = create(:level, type: "Multi")
+    parent = create(:level, type: "Javalab", properties: {predict_settings: {isPredictLevel: true}, contained_level_names: [contained.name]})
+    level_source = create(:level_source, level: contained, data: "0")
+    create(:user_level, user: student, best_result: 30, script: script, level: contained, level_source: level_source)
+
+    get :get_level_source, params: {script_id: script.id, level_id: parent.id, user_id: student.id}
+    assert_response :success
+    assert_equal "0", JSON.parse(response.body)["data"]
+  end
+
+  test "teacher can get their section respose summary" do
+    teacher = create(:teacher)
+    sign_in teacher
+
+    section = create(:section, user: teacher)
+    student = create(:student)
+    section.students << student
+    student2 = create(:student)
+    section.students << student2
+    level = create(:level)
+
+    create(:user_level, user: student, level: level)
+
+    get :get_section_response_summary, params: {section_id: section.id, level_id: level.id}
+    assert_response :success
+    body = JSON.parse(response.body)
+    assert_equal 1, body['response_count']
+    assert_equal 2, body['num_students']
+  end
+
+  test "migrated Java Lab predict level reads legacy response from contained level" do
+    user = create(:user)
+    sign_in user
+    script = create(:unit, :in_single_unit_course)
+    contained = create(:level, type: "Multi")
+    parent = create(:level, type: "Javalab", properties: {predict_settings: {isPredictLevel: true}, contained_level_names: [contained.name]})
+    level_source = create(:level_source, level: contained, data: "0")
+    create(:user_level, user: user, best_result: 30, script: script, level: contained, level_source: level_source)
+
+    get :get_level_source, params: {script_id: script.id, level_id: parent.id}
+    assert_response :success
+    assert_equal "0", JSON.parse(response.body)["data"]
+  end
+
+  test "migrated Java Lab predict level with both responses prefers the most recent response" do
+    user = create(:user)
+    sign_in user
+    script = create(:unit, :in_single_unit_course)
+    contained = create(:level, type: "Multi")
+    parent = create(:level, type: "Javalab", properties: {predict_settings: {isPredictLevel: true}, contained_level_names: [contained.name]})
+
+    legacy_source = create(:level_source, level: contained, data: "0")
+    legacy_user_level = create(:user_level, user: user, best_result: 30, script: script, level: contained, level_source: legacy_source)
+    legacy_user_level.update_column(:updated_at, 1.day.ago)
+    new_source = create(:level_source, level: parent, data: "2")
+    create(:user_level, user: user, best_result: 30, script: script, level: parent, level_source: new_source)
+
+    get :get_level_source, params: {script_id: script.id, level_id: parent.id}
+    assert_response :success
+    assert_equal "2", JSON.parse(response.body)["data"]
+  end
+
+  test "teacher deleting progress on a migrated Java Lab predict level clears parent and contained" do
+    teacher = create(:teacher)
+    sign_in teacher
+    script = create(:unit, :in_single_unit_course)
+    contained = create(:level, type: "Multi")
+    parent = create(:level, type: "Javalab", properties: {predict_settings: {isPredictLevel: true}, contained_level_names: [contained.name]})
+    create(:user_level, user: teacher, script: script, level: contained)
+    create(:user_level, user: teacher, script: script, level: parent)
+
+    assert_difference("UserLevel.count", -2) do
+      post :delete_predict_level_progress, params: {script_id: script.id, level_id: parent.id}
+      assert_response :success
+    end
+  end
+
+  test "section response summary for a migrated Java Lab predict level counts students across both levels" do
+    teacher = create(:teacher)
+    sign_in teacher
+    section = create(:section, user: teacher)
+    contained = create(:level, type: "Multi")
+    parent = create(:level, type: "Javalab", properties: {predict_settings: {isPredictLevel: true}, contained_level_names: [contained.name]})
+
+    only_legacy = create(:student)
+    both_levels = create(:student)
+    section.students << only_legacy
+    section.students << both_levels
+    create(:user_level, user: only_legacy, level: contained)
+    # A student with a response on both levels should be counted once.
+    create(:user_level, user: both_levels, level: contained)
+    create(:user_level, user: both_levels, level: parent)
+
+    get :get_section_response_summary, params: {section_id: section.id, level_id: parent.id}
+    assert_response :success
+    body = JSON.parse(response.body)
+    assert_equal 2, body["response_count"]
+    assert_equal 2, body["num_students"]
+  end
+
+  test "migrated predict level reads legacy contained response for any lab2 lab" do
+    user = create(:user)
+    sign_in user
+    script = create(:unit, :in_single_unit_course)
+    contained = create(:level, type: "Multi")
+    parent = create(:level, type: "Pythonlab", properties: {predict_settings: {isPredictLevel: true}, contained_level_names: [contained.name]})
+    level_source = create(:level_source, level: contained, data: "0")
+    create(:user_level, user: user, best_result: 30, script: script, level: contained, level_source: level_source)
+
+    get :get_level_source, params: {script_id: script.id, level_id: parent.id}
+    assert_response :success
+    assert_equal "0", JSON.parse(response.body)["data"]
+  end
+
+  test "predict level with no contained level reads its own response" do
+    user = create(:user)
+    sign_in user
+    script = create(:unit, :in_single_unit_course)
+    parent = create(:level, type: "Javalab", properties: {predict_settings: {isPredictLevel: true}})
+    level_source = create(:level_source, level: parent, data: "2")
+    create(:user_level, user: user, best_result: 30, script: script, level: parent, level_source: level_source)
+
+    get :get_level_source, params: {script_id: script.id, level_id: parent.id}
+    assert_response :success
+    assert_equal "2", JSON.parse(response.body)["data"]
+  end
+
+  test "student cannot get section response summary" do
+    student = create(:student)
+    sign_in student
+
+    section = create(:section)
+    section.students << student
+    level = create(:level)
+
+    get :get_section_response_summary, params: {section_id: section.id, level_id: level.id}
+    assert_response :forbidden
+  end
+
+  test "teacher cannot get section response summary for section they don't own" do
+    teacher = create(:teacher)
+    sign_in teacher
+
+    section = create(:section)
+    student = create(:student)
+    section.students << student
+    level = create(:level)
+
+    get :get_section_response_summary, params: {section_id: section.id, level_id: level.id}
+    assert_response :forbidden
   end
 end

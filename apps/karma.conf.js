@@ -1,7 +1,7 @@
-var webpackKarmaConfig = require('./webpackKarma.config');
-var envConstants = require('./envConstants');
-
 var path = require('path');
+
+var envConstants = require('./envConstants');
+var webpackKarmaConfig = require('./webpackKarma.config');
 
 // We run all tests in the UTC timezone so datetimes don't vary by local timezone
 process.env.TZ = 'UTC';
@@ -73,6 +73,7 @@ module.exports = function (config) {
 
       // Serve ./build/karma/, our webpack bundle, as /webpack_output/
       '/webpack_output/': '/base/build/karma/',
+      '/assets/js/images/': '/base/build/karma/images/',
     },
 
     preprocessors: {
@@ -94,23 +95,11 @@ module.exports = function (config) {
       KARMA_CLI_FLAGS,
     },
 
-    reporters: [
-      'mocha',
-      ...(envConstants.DRONE ? ['junit', 'coverage-istanbul'] : []),
-      ...(envConstants.COVERAGE ? ['coverage-istanbul'] : []),
-    ],
+    reporters: ['mocha'],
 
     junitReporter: {
-      outputDir: envConstants.CIRCLECI
-        ? `${envConstants.CIRCLE_TEST_REPORTS}/apps`
-        : '',
+      outputDir: envConstants.CI ? `${envConstants.CI_TEST_REPORTS}/apps` : '',
       outputFile: `${KARMA_CLI_FLAGS.testType}.xml`,
-    },
-
-    coverageIstanbulReporter: {
-      reports: ['html', 'lcovonly'],
-      dir: `coverage/${KARMA_CLI_FLAGS.testType}`,
-      fixWebpackSourcePaths: true,
     },
 
     mochaReporter: {
@@ -144,6 +133,9 @@ module.exports = function (config) {
     // increase timeout to wait for webpack to do its thing.
     captureTimeout: 90000,
     browserNoActivityTimeout: 90000, // 60 seconds
+    pingTimeout: 60000,
+    browserDisconnectTimeout: 60000,
+    browserDisconnectTolerance: 3,
 
     sourceMapLoader: {
       remapPrefixes: {

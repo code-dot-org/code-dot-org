@@ -1,0 +1,14 @@
+name 'designing-reliable-apps-postassessment-q1_2026'
+
+question 'A developer wants to display real-time air quality data for a user\'s city using an external service. Which correctly describes the request-response flow?'
+
+wrong 'The developer\'s app downloads the entire air quality database to the user\'s device, then filters it locally'
+wrong 'The external service pushes data to the app automatically every few seconds without the app requesting it'
+right 'The app sends a request to the API endpoint, the server processes it, and the server sends back the relevant data as a response'
+wrong 'The API directly modifies the app\'s HTML file to insert the data onto the page'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 1
+MARKDOWN

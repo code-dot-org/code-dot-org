@@ -1,0 +1,18 @@
+name 'programming-fundamentals-lesson8-vocab_v2-2025'
+title 'Check Your Understanding'
+description 'Match each term with the correct definition.'
+height '100'
+
+question 'method'
+answer 'an action that an object can do'
+
+question 'loop'
+answer 'a way to tell a computer to repeat a set of instructions'
+
+question 'object'
+answer 'something that has attributes (what it knows) and methods (what it can do)'
+
+question 'condition'
+answer 'a rule that the computer checks to decide if it should keep going'
+
+allow_multiple_attempts true

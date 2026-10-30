@@ -1,0 +1,14 @@
+name 'thinking-critically-about-ai-preassessment-q9_2026-pilot'
+
+question 'When checking whether an AI-generated image or message is trustworthy, which strategy is most useful?'
+
+right 'Slow down, look for specific details that can be verified, and cross-check against reliable sources.'
+wrong 'Trust the output if the AI tool is from a well-known company.'
+wrong 'Assume the AI is always correct if it gives a confident-sounding response.'
+wrong 'Only check AI outputs if you personally feel unsure about the topic.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lessons 5, 6
+MARKDOWN

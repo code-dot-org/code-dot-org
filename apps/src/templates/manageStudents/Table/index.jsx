@@ -1,0 +1,1030 @@
+import {Button as MuiButton, Typography} from '@mui/material';
+import orderBy from 'lodash/orderBy';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import ReactTooltip from 'react-tooltip';
+import * as Table from 'reactabular-table';
+import * as sort from 'sortabular';
+
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import HelpTip from '@cdo/apps/sharedComponents/HelpTip';
+import Notification, {
+  NotificationType,
+} from '@cdo/apps/sharedComponents/Notification';
+import CodeReviewGroupsDataApi from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsDataApi';
+import {setSortByFamilyName} from '@cdo/apps/templates/currentUserRedux';
+import DemoSectionTooltip from '@cdo/apps/templates/DemoSectionTooltip';
+import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
+import AddMultipleStudents from '@cdo/apps/templates/manageStudents/AddMultipleStudents';
+import CodeReviewGroupsDialog from '@cdo/apps/templates/manageStudents/CodeReviewGroupsDialog';
+import DownloadParentLetter from '@cdo/apps/templates/manageStudents/DownloadParentLetter';
+import ManageStudentsActionsCell from '@cdo/apps/templates/manageStudents/ManageStudentsActionsCell';
+import ManageStudentsActionsHeaderCell from '@cdo/apps/templates/manageStudents/ManageStudentsActionsHeaderCell';
+import ManageStudentsAgeCell from '@cdo/apps/templates/manageStudents/ManageStudentsAgeCell';
+import ManageStudentsFamilyNameCell from '@cdo/apps/templates/manageStudents/ManageStudentsFamilyNameCell';
+import ManageStudentsGenderCell from '@cdo/apps/templates/manageStudents/ManageStudentsGenderCell';
+import ManageStudentsLoginInfo from '@cdo/apps/templates/manageStudents/ManageStudentsLoginInfo';
+import ManageStudentsNameCell from '@cdo/apps/templates/manageStudents/ManageStudentsNameCell';
+import {
+  convertStudentDataToArray,
+  AddStatus,
+  RowType,
+  saveAllStudents,
+  editAll,
+  TransferStatus,
+  TransferType,
+  ParentLetterButtonMetricsCategory,
+  PrintLoginCardsButtonMetricsCategory,
+} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
+import ManageStudentsSharingCell from '@cdo/apps/templates/manageStudents/ManageStudentsSharingCell';
+import MoveStudents from '@cdo/apps/templates/manageStudents/MoveStudents';
+import PasswordReset from '@cdo/apps/templates/manageStudents/PasswordReset';
+import PrintLoginCards from '@cdo/apps/templates/manageStudents/PrintLoginCards';
+import SharingControlActionsHeaderCell from '@cdo/apps/templates/manageStudents/SharingControlActionsHeaderCell';
+import ShowSecret from '@cdo/apps/templates/manageStudents/ShowSecret';
+import UsStateColumn from '@cdo/apps/templates/manageStudents/Table/UsStateColumn';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import JoinLinkCopyButton from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/JoinLink/JoinLinkCopyButton';
+import {
+  tableLayoutStyles,
+  sortableOptions,
+} from '@cdo/apps/templates/tables/tableConstants';
+import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
+import {
+  LOGIN_TYPES_WITH_ACTIONS_COLUMN,
+  LOGIN_TYPES_WITH_GENDER_COLUMN,
+  LOGIN_TYPES_WITH_PASSWORD_COLUMN,
+  NON_LMS_LOGIN_TYPES,
+  PICTURE_OR_WORD_LOGIN_TYPES,
+} from '@cdo/apps/templates/teacherDashboard/LoginTypeConstants';
+import {
+  selectedSectionSelector,
+  syncEnabled,
+  sectionCode,
+  sectionName,
+  sectionUnitName,
+  isDemoSection,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
+import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
+import experiments from '@cdo/apps/util/experiments';
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
+import i18n from '@cdo/locale';
+
+import moduleStyles from './table.module.scss';
+
+const MANAGE_STUDENTS_TABLE = 'ManageStudentsTable';
+
+export const studentSectionDataPropType = PropTypes.shape({
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string,
+  familyName: PropTypes.string,
+  username: PropTypes.string,
+  email: PropTypes.string,
+  age: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  gender: PropTypes.string,
+  genderTeacherInput: PropTypes.string,
+  isDemoStudent: PropTypes.bool,
+  secretWords: PropTypes.string,
+  secretPictureUrl: PropTypes.string,
+  sectionId: PropTypes.number,
+  loginType: PropTypes.string,
+  hasEverSignedIn: PropTypes.bool,
+  dependsOnThisSectionForLogin: PropTypes.bool,
+  rowType: PropTypes.oneOf(Object.values(RowType)),
+  userType: PropTypes.string,
+  usState: PropTypes.string,
+});
+
+/** @enum {number} */
+export const COLUMNS = {
+  NAME: 0,
+  FAMILY_NAME: 1,
+  AGE: 2,
+  GENDER: 3,
+  PASSWORD: 4,
+  ACTIONS: 5,
+};
+
+class ManageStudentsTable extends Component {
+  static propTypes = {
+    studioUrlPrefix: PropTypes.string,
+
+    // Provided by redux
+    currentUser: PropTypes.object,
+    sectionId: PropTypes.number,
+    sectionCode: PropTypes.string,
+    sectionName: PropTypes.string,
+    sectionUnitName: PropTypes.string,
+    participantType: PropTypes.string,
+    studentData: PropTypes.arrayOf(studentSectionDataPropType),
+    loginType: PropTypes.string,
+    isSectionAssignedCSA: PropTypes.bool,
+    editingData: PropTypes.object,
+    addStatus: PropTypes.object,
+    saveAllStudents: PropTypes.func,
+    showSharingColumn: PropTypes.bool,
+    editAll: PropTypes.func,
+    transferData: PropTypes.object,
+    transferStatus: PropTypes.object,
+    setSortByFamilyName: PropTypes.func,
+    syncEnabled: PropTypes.bool,
+    isDemoSection: PropTypes.bool,
+  };
+
+  constructor(props) {
+    super(props);
+    this.renderTransferSuccessNotification =
+      this.renderTransferSuccessNotification.bind(this);
+    this.studentDataMinusBlanks = this.studentDataMinusBlanks.bind(this);
+    this.isMoveStudentsEnabled = this.isMoveStudentsEnabled.bind(this);
+    this.passwordHeaderFormatter = this.passwordHeaderFormatter.bind(this);
+    this.passwordFormatter = this.passwordFormatter.bind(this);
+    this.familyNameFormatter = this.familyNameFormatter.bind(this);
+    this.actionsFormatter = this.actionsFormatter.bind(this);
+    this.actionsHeaderFormatter = this.actionsHeaderFormatter.bind(this);
+    this.projectSharingHeaderFormatter =
+      this.projectSharingHeaderFormatter.bind(this);
+    this.getSortingColumns = this.getSortingColumns.bind(this);
+    this.onSort = this.onSort.bind(this);
+    this.getColumns = this.getColumns.bind(this);
+    this.onPrintLoginCards = this.onPrintLoginCards.bind(this);
+    this.handleSaveAllClick = this.handleSaveAllClick.bind(this);
+  }
+
+  state = {
+    sortingColumns: {
+      [COLUMNS.NAME]: {
+        direction: 'asc',
+        position: 0,
+      },
+    },
+    showPasswordLengthFailure: false,
+  };
+
+  renderTransferSuccessNotification() {
+    const {type, numStudents, sectionDisplay} = this.props.transferStatus;
+    let notification = {};
+
+    switch (type) {
+      case TransferType.MOVE_STUDENTS:
+        notification.notice = i18n.studentsSuccessfullyMovedNotice;
+        notification.details = i18n.studentsSuccessfullyMovedDetails;
+        break;
+      case TransferType.COPY_STUDENTS:
+        notification.notice = i18n.studentsSuccessfullyCopiedNotice;
+        notification.details = i18n.studentsSuccessfullyCopiedDetails;
+        break;
+    }
+
+    return (
+      <Notification
+        type={NotificationType.success}
+        notice={notification.notice()}
+        details={notification.details({
+          numStudents: numStudents,
+          section: sectionDisplay,
+        })}
+        dismissible={false}
+      />
+    );
+  }
+
+  studentDataMinusBlanks() {
+    return this.props.studentData.filter(sd => sd.rowType === RowType.STUDENT);
+  }
+
+  isMoveStudentsEnabled() {
+    const {loginType} = this.props;
+    return NON_LMS_LOGIN_TYPES.includes(loginType);
+  }
+
+  // Helper function to determine if user is a teacher
+  isTeacher(userType) {
+    return userType === 'teacher';
+  }
+
+  shouldShowActionColumn() {
+    const {loginType} = this.props;
+    return LOGIN_TYPES_WITH_ACTIONS_COLUMN.includes(loginType);
+  }
+
+  // Cell formatters.
+  passwordHeaderFormatter() {
+    const {loginType} = this.props;
+    return (
+      <span className={moduleStyles.verticalAlign}>
+        <div data-for="password" data-tip="" id="password-header">
+          {this.getPasswordLabel(loginType)}
+        </div>
+        <ReactTooltip
+          id="password"
+          class="react-tooltip-hover-stay"
+          role="tooltip"
+          effect="solid"
+          place="top"
+          delayHide={1000}
+        >
+          <div>{this.getPasswordTooltip(loginType)}</div>
+        </ReactTooltip>
+      </span>
+    );
+  }
+
+  getPasswordLabel(loginType) {
+    const labels = {
+      [SectionLoginType.picture]: i18n.picturePassword(),
+      [SectionLoginType.word]: i18n.secretWords(),
+      [SectionLoginType.email]: i18n.password(),
+    };
+
+    return labels[loginType];
+  }
+
+  getPasswordTooltip(loginType) {
+    const tooltipContent = {
+      [SectionLoginType.picture]: i18n.editSectionLoginTypePicDesc(),
+      [SectionLoginType.word]: i18n.editSectionLoginTypeWordDesc(),
+      [SectionLoginType.email]: i18n.editSectionLoginTypeEmailDesc(),
+    };
+
+    return tooltipContent[loginType];
+  }
+
+  passwordFormatter(loginType, {rowData}) {
+    const {sectionId} = this.props;
+    const isTeacherRow = this.isTeacher(rowData.userType);
+    const isDemoStudent = !!rowData.isDemoStudent;
+    const resetDisabled = isTeacherRow || isDemoStudent;
+    const secretLoginDisabled = isTeacherRow;
+    return (
+      <div>
+        {!rowData.isEditing && (
+          <div>
+            {rowData.loginType === SectionLoginType.email && (
+              <PasswordReset
+                initialIsResetting={false}
+                sectionId={sectionId}
+                studentId={rowData.id}
+                resetDisabled={resetDisabled}
+                isDemoStudent={isDemoStudent}
+                setPasswordLengthFailure={isFailing =>
+                  this.setState({showPasswordLengthFailure: isFailing})
+                }
+              />
+            )}
+            {PICTURE_OR_WORD_LOGIN_TYPES.includes(rowData.loginType) && (
+              <ShowSecret
+                initialIsShowing={false}
+                secretWord={rowData.secretWords}
+                secretPictureUrl={rowData.secretPictureUrl}
+                loginType={rowData.loginType}
+                id={rowData.id}
+                sectionId={sectionId}
+                secretLoginDisabled={secretLoginDisabled}
+                resetDisabled={resetDisabled}
+                isDemoStudent={isDemoStudent}
+              />
+            )}
+          </div>
+        )}
+        {rowData.isEditing && (
+          <Typography variant="body3" component="p" sx={{textAlign: 'center'}}>
+            {i18n.autoGenerated()}
+          </Typography>
+        )}
+      </div>
+    );
+  }
+
+  ageFormatter(age, {rowData}) {
+    const editedValue = rowData.isEditing ? rowData.editingData.age : 0;
+    return (
+      <ManageStudentsAgeCell
+        age={age}
+        id={rowData.id}
+        isEditing={rowData.isEditing}
+        editedValue={editedValue}
+      />
+    );
+  }
+
+  genderFormatter(genderTeacherInput, {rowData}) {
+    const editedValue = rowData.isEditing
+      ? rowData.editingData.genderTeacherInput
+      : '';
+    return (
+      <ManageStudentsGenderCell
+        genderTeacherInput={genderTeacherInput || rowData.gender}
+        id={rowData.id}
+        isEditing={rowData.isEditing}
+        editedValue={editedValue}
+      />
+    );
+  }
+
+  nameFormatter(name, {rowData}) {
+    const editedValue = rowData.isEditing ? rowData.editingData.name : '';
+    return (
+      <ManageStudentsNameCell
+        id={rowData.id}
+        sectionId={rowData.sectionId}
+        name={name}
+        username={rowData.username}
+        email={rowData.email}
+        isDemoStudent={rowData.isDemoStudent}
+        isEditing={rowData.isEditing}
+        editedValue={editedValue}
+      />
+    );
+  }
+
+  familyNameFormatter(familyName, {rowData}) {
+    const editedValue = rowData.isEditing ? rowData.editingData.familyName : '';
+    const isTeacher = this.isTeacher(rowData.userType);
+    return (
+      <ManageStudentsFamilyNameCell
+        id={rowData.id}
+        familyName={familyName}
+        isEditing={rowData.isEditing}
+        editedValue={editedValue}
+        inputDisabled={isTeacher}
+      />
+    );
+  }
+
+  actionsFormatter(actions, {rowData}) {
+    let disableSaving = rowData.isEditing
+      ? rowData.editingData.name.length === 0
+      : false;
+    return (
+      <ManageStudentsActionsCell
+        id={rowData.id}
+        sectionId={rowData.sectionId}
+        isEditing={rowData.isEditing}
+        isSaving={rowData.isSaving}
+        disableSaving={disableSaving}
+        rowType={rowData.rowType}
+        loginType={rowData.loginType}
+        studentName={rowData.name}
+        hasEverSignedIn={rowData.hasEverSignedIn}
+        dependsOnThisSectionForLogin={rowData.dependsOnThisSectionForLogin}
+        canEdit={!this.isTeacher(rowData.userType) && !rowData.isDemoStudent}
+        rowData={rowData}
+        syncEnabled={this.props.syncEnabled}
+      />
+    );
+  }
+
+  handleSaveAllClick() {
+    this.props.saveAllStudents();
+
+    analyticsReporter.sendEvent(
+      EVENTS.SECTION_STUDENTS_TABLE_SAVE_ALL_CLICKED,
+      {
+        sectionId: this.props.sectionId,
+        sectionLoginType: this.props.loginType,
+      }
+    );
+  }
+
+  actionsHeaderFormatter() {
+    const numberOfEditingRows = Object.keys(this.props.editingData).length;
+    return (
+      <div>
+        {numberOfEditingRows > 1 && (
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="small"
+            onClick={this.handleSaveAllClick}
+            className={moduleStyles.actionColumnHeaderSaveAllButton}
+            type="button"
+          >
+            {i18n.saveAll()}
+          </MuiButton>
+        )}
+        {numberOfEditingRows <= 1 && (
+          <span className={moduleStyles.verticalAlign}>
+            <div className={moduleStyles.headerName}>{i18n.actions()}</div>
+            <div>
+              <ManageStudentsActionsHeaderCell
+                editAll={this.props.editAll}
+                isShareColumnVisible={this.props.showSharingColumn}
+                isDemoSection={this.props.isDemoSection}
+              />
+            </div>
+          </span>
+        )}
+      </div>
+    );
+  }
+
+  projectSharingHeaderFormatter() {
+    return (
+      <span className={moduleStyles.verticalAlign}>
+        <div
+          className={moduleStyles.headerName}
+          data-for="explain-sharing"
+          data-tip=""
+        >
+          {i18n.projectSharingColumnHeader()}
+        </div>
+        <ReactTooltip
+          id="explain-sharing"
+          class="react-tooltip-hover-stay"
+          role="tooltip"
+          effect="solid"
+          place="top"
+          delayHide={1000}
+        >
+          <div>{i18n.shareSettingMoreDetailsTooltip()}</div>
+        </ReactTooltip>
+        <div>
+          <SharingControlActionsHeaderCell
+            isDemoSection={this.props.isDemoSection}
+          />
+        </div>
+      </span>
+    );
+  }
+
+  projectSharingFormatter(projectSharing, {rowData}) {
+    let disabled = rowData.isEditing
+      ? rowData.editingData.age.length === 0
+      : true;
+    const editedValue = rowData.isEditing
+      ? rowData.editingData.sharingDisabled
+      : true;
+
+    return (
+      <ManageStudentsSharingCell
+        id={rowData.id}
+        isEditing={rowData.isEditing}
+        disabled={disabled}
+        checked={!rowData.sharingDisabled}
+        editedValue={!editedValue}
+      />
+    );
+  }
+
+  getSortingColumns() {
+    return this.state.sortingColumns || {};
+  }
+
+  // The user requested a new sorting column. Adjust the state accordingly.
+  onSort(selectedColumn) {
+    this.setState({
+      sortingColumns: sort.byColumn({
+        sortingColumns: this.state.sortingColumns,
+        // Custom sortingOrder removes 'no-sort' from the cycle
+        sortingOrder: {
+          FIRST: 'asc',
+          asc: 'desc',
+          desc: 'asc',
+        },
+        selectedColumn,
+      }),
+    });
+    if (
+      this.props.participantType === 'student' &&
+      selectedColumn === COLUMNS.FAMILY_NAME
+    ) {
+      this.props.setSortByFamilyName(
+        true,
+        this.props.sectionId,
+        this.props.sectionUnitName,
+        MANAGE_STUDENTS_TABLE
+      );
+    } else if (selectedColumn === COLUMNS.NAME) {
+      this.props.setSortByFamilyName(
+        false,
+        this.props.sectionId,
+        this.props.sectionUnitName,
+        MANAGE_STUDENTS_TABLE
+      );
+    }
+  }
+
+  getColumns(sortable) {
+    const {loginType} = this.props;
+
+    const columns = [this.nameColumn(sortable)];
+
+    // Only include family name in non-PL sections
+    if (this.props.participantType === 'student') {
+      columns.push(this.familyNameColumn(sortable));
+    }
+
+    columns.push(this.ageColumn(sortable));
+
+    if (
+      !experiments.isEnabledAllowingQueryString(
+        experiments.GENDER_FEATURE_ENABLED
+      ) ||
+      LOGIN_TYPES_WITH_GENDER_COLUMN.includes(loginType)
+    ) {
+      columns.push(this.genderColumn(sortable));
+    }
+
+    if (this.props.currentUser?.isTeacher && this.props.currentUser?.inUSA) {
+      columns.push(UsStateColumn(this.props.isDemoSection));
+    }
+
+    if (LOGIN_TYPES_WITH_PASSWORD_COLUMN.includes(loginType)) {
+      columns.push(this.passwordColumn());
+    }
+    if (this.props.showSharingColumn) {
+      columns.push(this.projectSharingColumn());
+    }
+
+    if (this.shouldShowActionColumn()) {
+      columns.push(this.controlsColumn());
+    }
+
+    return columns;
+  }
+
+  nameColumn(sortable) {
+    return {
+      property: 'name',
+      header: {
+        label: i18n.displayName(),
+        props: {
+          style: {
+            ...tableLayoutStyles.headerCell,
+          },
+        },
+        transforms: [sortable],
+      },
+      cell: {
+        formatters: [this.nameFormatter],
+        props: {
+          style: {
+            ...tableLayoutStyles.cell,
+          },
+        },
+      },
+    };
+  }
+
+  familyNameColumn(sortable) {
+    return {
+      property: 'familyName',
+      header: {
+        label: i18n.familyName(),
+        props: {
+          style: {
+            ...tableLayoutStyles.headerCell,
+          },
+        },
+        transforms: [
+          (label, columnInfo) => ({
+            ...sortable(label, columnInfo),
+            children: (
+              <>
+                {React.cloneElement(sortable(label, columnInfo).children, {
+                  key: '1',
+                })}
+                <HelpTip key="2">
+                  <p>{i18n.familyNameHelpTip()}</p>
+                </HelpTip>
+              </>
+            ),
+          }),
+        ],
+      },
+      cell: {
+        formatters: [this.familyNameFormatter],
+        props: {
+          style: {
+            ...tableLayoutStyles.cell,
+          },
+        },
+      },
+    };
+  }
+
+  ageColumn(sortable) {
+    return {
+      property: 'age',
+      header: {
+        label: i18n.age(),
+        props: {
+          style: {
+            ...tableLayoutStyles.headerCell,
+            width: 110,
+          },
+        },
+        transforms: [sortable],
+      },
+      cell: {
+        formatters: [this.ageFormatter],
+        props: {
+          style: {
+            ...tableLayoutStyles.cell,
+            width: 110,
+          },
+        },
+      },
+    };
+  }
+
+  genderColumn(sortable) {
+    return {
+      property: 'genderTeacherInput',
+      header: {
+        label: i18n.gender(),
+        props: {
+          style: {
+            ...tableLayoutStyles.headerCell,
+            width: 140,
+          },
+        },
+        transforms: [sortable],
+      },
+      cell: {
+        formatters: [this.genderFormatter],
+        props: {
+          style: {
+            ...tableLayoutStyles.cell,
+            width: 140,
+          },
+        },
+      },
+    };
+  }
+
+  passwordColumn() {
+    return {
+      property: 'password',
+      header: {
+        formatters: [this.passwordHeaderFormatter],
+        props: {
+          style: {
+            ...tableLayoutStyles.cell,
+            ...tableLayoutStyles.headerCell,
+            width: 220,
+          },
+        },
+      },
+      cell: {
+        formatters: [this.passwordFormatter],
+        props: {
+          style: {
+            ...tableLayoutStyles.cell,
+            width: 220,
+            maxWidth: 220,
+          },
+        },
+      },
+    };
+  }
+
+  projectSharingColumn() {
+    return {
+      property: 'projectSharing',
+      header: {
+        label: i18n.projectSharingColumnHeader(),
+        formatters: [this.projectSharingHeaderFormatter],
+        props: {
+          style: {
+            ...tableLayoutStyles.cell,
+            ...tableLayoutStyles.headerCell,
+            width: 130,
+          },
+        },
+      },
+      cell: {
+        formatters: [this.projectSharingFormatter],
+        props: {
+          style: {
+            ...tableLayoutStyles.cell,
+            ...{textAlign: 'center', width: 130},
+          },
+        },
+      },
+    };
+  }
+
+  controlsColumn() {
+    return {
+      property: 'actions',
+      header: {
+        label: i18n.actions(),
+        formatters: [this.actionsHeaderFormatter],
+        props: {
+          style: {
+            ...tableLayoutStyles.cell,
+            ...tableLayoutStyles.headerCell,
+          },
+        },
+      },
+      cell: {
+        formatters: [this.actionsFormatter],
+        props: {
+          style: {
+            ...tableLayoutStyles.cell,
+          },
+        },
+      },
+    };
+  }
+
+  onPrintLoginCards() {
+    const {sectionId} = this.props;
+    const url =
+      teacherDashboardUrl(sectionId, '/login_info') + `?autoPrint=true`;
+    window.open(url, '_blank', 'noopener,noreferrer');
+  }
+
+  render() {
+    // Define a sorting transform that can be applied to each column
+    const sortable = wrappedSortable(
+      this.getSortingColumns,
+      this.onSort,
+      sortableOptions
+    );
+    const columns = this.getColumns(sortable);
+    const sortingColumns = this.getSortingColumns();
+
+    const decoratedRows = this.props.studentData.map(rowData => ({
+      ...rowData,
+      editingData: this.props.editingData[rowData.id],
+    }));
+    const sortedRows = sort.sorter({
+      columns,
+      sortingColumns,
+      sort: sortRows,
+    })(decoratedRows);
+
+    const {
+      addStatus,
+      loginType,
+      transferStatus,
+      transferData,
+      sectionId,
+      sectionName,
+      sectionCode,
+      studentData,
+      isSectionAssignedCSA,
+    } = this.props;
+
+    return (
+      <div>
+        {addStatus.status === AddStatus.SUCCESS && (
+          <Notification
+            type={NotificationType.success}
+            notice={i18n.manageStudentsNotificationSuccess()}
+            details={i18n.manageStudentsNotificationAddSuccess({
+              numStudents: addStatus.numStudents,
+            })}
+            dismissible={false}
+          />
+        )}
+        {this.state.showPasswordLengthFailure && (
+          <Notification
+            type={NotificationType.failure}
+            notice={i18n.passwordsMustBeSixChars()}
+            details={i18n.passwordUpdateFailed()}
+            dismissible={false}
+          />
+        )}
+        {addStatus.status === AddStatus.FULL && (
+          <ManageStudentsNotificationFull manageStatus={addStatus} />
+        )}
+        {transferStatus.status === TransferStatus.FULL && (
+          <ManageStudentsNotificationFull manageStatus={transferStatus} />
+        )}
+        {addStatus.status === AddStatus.FAIL && (
+          <Notification
+            type={NotificationType.failure}
+            notice={i18n.manageStudentsNotificationFailure()}
+            details={i18n.manageStudentsNotificationCannotAdd({
+              numStudents: addStatus.numStudents,
+            })}
+            dismissible={false}
+          />
+        )}
+        {transferStatus.status === TransferStatus.SUCCESS &&
+          this.renderTransferSuccessNotification()}
+        <div className={moduleStyles.additionalControlsContainer}>
+          <div className={moduleStyles.additionalControlsButtonsRow}>
+            {PICTURE_OR_WORD_LOGIN_TYPES.includes(loginType) && (
+              <DemoSectionTooltip
+                isDemoSection={this.props.isDemoSection}
+                tooltipId="demo-add-students-tooltip"
+                text="Students cannot be added to or removed from a demo section"
+              >
+                <AddMultipleStudents
+                  sectionId={this.props.sectionId}
+                  disabled={this.props.isDemoSection}
+                />
+              </DemoSectionTooltip>
+            )}
+            {this.isMoveStudentsEnabled() && (
+              <DemoSectionTooltip
+                isDemoSection={this.props.isDemoSection}
+                tooltipId="demo-move-students-tooltip"
+              >
+                <MoveStudents
+                  studentData={this.studentDataMinusBlanks().filter(
+                    s => !s.isDemoStudent
+                  )}
+                  transferData={transferData}
+                  transferStatus={transferStatus}
+                  disabled={this.props.isDemoSection}
+                />
+              </DemoSectionTooltip>
+            )}
+            {PICTURE_OR_WORD_LOGIN_TYPES.includes(loginType) && (
+              <DemoSectionTooltip
+                isDemoSection={this.props.isDemoSection}
+                tooltipId="demo-print-login-cards-manage-tooltip"
+              >
+                <PrintLoginCards
+                  sectionId={this.props.sectionId}
+                  entryPointForMetrics={
+                    PrintLoginCardsButtonMetricsCategory.MANAGE_STUDENTS
+                  }
+                  onPrintLoginCards={this.onPrintLoginCards}
+                  disabled={this.props.isDemoSection}
+                />
+              </DemoSectionTooltip>
+            )}
+            <GlobalEditionWrapper
+              component={() => (
+                <DownloadParentLetter
+                  sectionId={this.props.sectionId}
+                  buttonMetricsCategory={
+                    ParentLetterButtonMetricsCategory.ABOVE_TABLE
+                  }
+                />
+              )}
+              componentId="DownloadParentLetterButton"
+            />
+            {isSectionAssignedCSA && (
+              <CodeReviewGroupsDialog
+                dataApi={new CodeReviewGroupsDataApi(sectionId)}
+              />
+            )}
+          </div>
+          <div>
+            <JoinLinkCopyButton
+              sectionId={sectionId}
+              sectionCode={sectionCode}
+              loginType={loginType}
+              studioUrlPrefix={this.props.studioUrlPrefix}
+              sourceName="ManageStudentsTable"
+              isDemoSection={this.props.isDemoSection}
+            />
+          </div>
+        </div>
+        <div>
+          <Table.Provider
+            columns={columns}
+            style={{...tableLayoutStyles.table, width: '100%', minWidth: 1050}}
+            id="uitest-manage-students-table"
+          >
+            <Table.Header />
+            <Table.Body rows={sortedRows} rowKey="id" />
+          </Table.Provider>
+        </div>
+
+        <GlobalEditionWrapper
+          component={ManageStudentsLoginInfo}
+          componentId="ManageStudentsLoginInfo"
+          props={{
+            sectionId: sectionId,
+            sectionName: sectionName,
+            studentData: studentData,
+            loginType: loginType,
+            sectionCode: this.props.sectionCode,
+            studioUrlPrefix: this.props.studioUrlPrefix,
+            providePrivacyLetter: true,
+          }}
+        />
+      </div>
+    );
+  }
+}
+
+// The "add row" should always be pinned to the top when sorting.
+// The "new student rows" should always be next.
+// This function takes into account having multiple "add rows"
+export const sortRows = (data, columnIndexList, orderList) => {
+  // Add secondary and tertiary sorting factors
+  columnIndexList.push('name');
+  orderList.push(orderList[0]);
+  columnIndexList.push('id');
+  orderList.push(orderList[0]);
+  // Organize student rows
+  let addRows = [];
+  let newStudentRows = [];
+  let studentRows = [];
+  for (let i = 0; i < data.length; i++) {
+    if (data[i].rowType === RowType.ADD) {
+      addRows.push(data[i]);
+    } else if (data[i].rowType === RowType.NEW_STUDENT) {
+      newStudentRows.push(data[i]);
+    } else {
+      studentRows.push(data[i]);
+    }
+  }
+  addRows = orderBy(addRows, columnIndexList, orderList);
+  newStudentRows = orderBy(newStudentRows, columnIndexList, orderList);
+  studentRows = orderBy(studentRows, columnIndexList, orderList);
+  return addRows.concat(newStudentRows).concat(studentRows);
+};
+
+export const ManageStudentsNotificationFull = ({manageStatus}) => {
+  const {sectionCapacity, sectionCode, sectionStudentCount} = manageStatus;
+
+  const sectionSpotsRemaining =
+    sectionCapacity - sectionStudentCount > 0
+      ? sectionCapacity - sectionStudentCount
+      : 0;
+
+  const notificationParams = {
+    studentLimit: sectionCapacity,
+    currentStudentCount: sectionStudentCount,
+    sectionCode: sectionCode,
+    availableSpace: sectionSpotsRemaining,
+  };
+
+  const notification = {
+    notice: i18n.manageStudentsNotificationCannotVerb({
+      numStudents: manageStatus.numStudents,
+      verb: manageStatus.verb || 'add',
+    }),
+    details: `${
+      sectionSpotsRemaining === 0
+        ? i18n.manageStudentsNotificationFull(notificationParams)
+        : i18n.manageStudentsNotificationWillBecomeFull(notificationParams)
+    }
+          ${i18n.contactSupportFullSection({
+            supportLink: 'https://support.code.org/hc/en-us/requests/new',
+          })}`,
+  };
+
+  return (
+    <Notification
+      type={NotificationType.failure}
+      notice={notification.notice}
+      details={
+        // SafeMarkedown required to convert i18n string to clickable link
+        <SafeMarkdown markdown={notification.details} />
+      }
+      dismissible={false}
+    />
+  );
+};
+
+ManageStudentsNotificationFull.propTypes = {
+  manageStatus: PropTypes.object.isRequired,
+};
+
+export const UnconnectedManageStudentsTable = ManageStudentsTable;
+
+export default connect(
+  state => ({
+    currentUser: state.currentUser,
+    sectionId: state.teacherSections.selectedSectionId,
+    sectionCode: sectionCode(state, state.teacherSections.selectedSectionId),
+    sectionName: sectionName(state, state.teacherSections.selectedSectionId),
+    sectionUnitName: sectionUnitName(
+      state,
+      state.teacherSections.selectedSectionId
+    ),
+    participantType:
+      state.teacherSections.sections[state.teacherSections.selectedSectionId]
+        .participantType,
+    loginType: state.manageStudents.loginType,
+    studentData: convertStudentDataToArray(state.manageStudents.studentData),
+    isSectionAssignedCSA: selectedSectionSelector(state).isAssignedCSA,
+    editingData: state.manageStudents.editingData,
+    showSharingColumn: state.manageStudents.showSharingColumn,
+    addStatus: state.manageStudents.addStatus,
+    transferData: state.manageStudents.transferData,
+    transferStatus: state.manageStudents.transferStatus,
+    syncEnabled: syncEnabled(state, state.teacherSections.selectedSectionId),
+    isDemoSection: isDemoSection(
+      state,
+      state.teacherSections.selectedSectionId
+    ),
+  }),
+  dispatch => ({
+    saveAllStudents() {
+      dispatch(saveAllStudents());
+    },
+    editAll() {
+      dispatch(editAll());
+    },
+    setSortByFamilyName(isSortedByFamilyName, sectionId, unitName, source) {
+      dispatch(
+        setSortByFamilyName(isSortedByFamilyName, sectionId, unitName, source)
+      );
+    },
+  })
+)(ManageStudentsTable);

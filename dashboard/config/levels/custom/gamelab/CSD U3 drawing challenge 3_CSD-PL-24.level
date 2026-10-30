@@ -1,0 +1,94 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2024-05-04T02:44:35.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "skin": "gamelab",
+    "code_functions": {
+      "rect": {
+        "paletteParams": [
+          "x",
+          "y"
+        ],
+        "params": [
+          "200",
+          "200"
+        ]
+      },
+      "fill": null,
+      "ellipse": {
+        "paletteParams": [
+          "x",
+          "y"
+        ],
+        "params": [
+          "200",
+          "200"
+        ]
+      },
+      "point": null,
+      "stroke": null,
+      "noStroke": null,
+      "noFill": null,
+      "strokeWeight": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "instructions_important": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "true",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "disable_if_else_editing": "false",
+    "free_play": "false",
+    "text_mode_at_start": "false",
+    "hide_animation_mode": "true",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "true",
+    "pause_animations_by_default": "false",
+    "callout_json": "[ \r\n {\r\n  \"localization_key\": \"CSD_U3_rect_c1\",\r\n  \"callout_text\": \"Here is the code\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"fill\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"fill\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top center\",\r\n    \"at\": \"bottom right\",\r\n    \"adjust\": {\r\n     \"x\": 50,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"CSD_U3_rect_c2\",\r\n  \"callout_text\": \"Drag this block into the code area.\",\r\n  \"element_id\": \"#droplet_palette_block_rect\",\r\n  \"on\": \"rect_block\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "long_instructions": "<img src=\"https://images.code.org/d4a374335300d43e25fd903cfbdec7ff-image-1561834319250.51.40 AM.png\" style=\"float:right;width:150px;\">\r\n\r\n# Points: Draw a Dice\r\n\r\nYou can draw individual points on the screen using two commands:\r\n- [`point()`(#4dd0e1)](/docs/ide/gamelab/expressions/point) draws a single point on the screen\r\n- [`strokeWeight()`(#4dd0e1)](/docs/ide/gamelab/expressions/strokeWeight) controls how big the point is.\r\n\r\nLet's use these new blocks to draw a dice on the screen. The code has already been started for you - see if you can finish it!\r\n\r\n# Do This\r\n\r\n1) Read the code that makes the picture.\r\n2) Use the [`strokeWeight()`(#4dd0e1)](/docs/ide/gamelab/expressions/strokeWeight) block to finish the code so it matches the picture.",
+    "encrypted_examples": "heXtJnzIa+HNb/0Ln2R6JrdVOGDN9BQZ2IYa6dk9zO8KdSRM6L1/0Nk5d5mf\ncHJx0quu+Thjl6PPnf+KZhUwFQ==\n",
+    "parent_level_id": 18779,
+    "name_suffix": "_CSD-PL-24",
+    "map_reference": "/courses/csd-2022/guides/drawing-shapes",
+    "video_key": "csd_gamelab_draw_2",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "start_blocks": "//2) Use the strokeWeight() block to finish the code so it matches the picture.\r\nfill(\"ivory\");\r\nrect(160, 180);\r\npoint(170, 190);\r\npoint(185, 205);\r\npoint(200, 220);\r\n",
+    "display_name": "Points: Draw a Dice",
+    "thumbnail_url": "https://images.code.org/bc25e630542bb55629a855850df75748-image-1561834242717.49.46 AM.png",
+    "bubble_choice_description": "Learn how to draw points and use them to create a dice",
+    "libraries_enabled": "false",
+    "validation_enabled": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-05-04T02:44:35.388+00:00\",\"changed\":[\"cloned from \\\"CSD U3 drawing challenge 3_2024\\\"\"],\"cloned_from\":\"CSD U3 drawing challenge 3_2024\"}]"
+}]]></config>
+  <blocks/>
+</Gamelab>

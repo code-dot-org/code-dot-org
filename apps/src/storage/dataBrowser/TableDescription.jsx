@@ -1,11 +1,13 @@
 /**
  * @overview Component for description of a data table.
  */
+import Link from '@code-dot-org/component-library/link';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
-import msg from '@cdo/locale';
+
 import {getDatasetInfo} from '@cdo/apps/storage/dataBrowser/dataUtils';
-import {Link} from '@dsco_/link';
+import msg from '@cdo/locale';
 
 export default class TableDescription extends React.Component {
   static propTypes = {
@@ -20,9 +22,11 @@ export default class TableDescription extends React.Component {
     if (datasetInfo) {
       return (
         <div>
-          <p>{datasetInfo.description}</p>
+          <Typography variant="body3" sx={{mb: '10px'}}>
+            {datasetInfo.description}
+          </Typography>
           {datasetInfo.docUrl && (
-            <Link href={datasetInfo.docUrl} openInNewTab external>
+            <Link href={datasetInfo.docUrl} openInNewTab size="s">
               {msg.moreInfo()}
             </Link>
           )}

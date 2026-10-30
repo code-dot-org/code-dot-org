@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-06-28T23:19:57.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "skip_dialog": true,
+    "skip_sound": true,
+    "encrypted": "false",
+    "long_instructions": "Reflect on the reveal interaction you added to your app.\r\n\r\n>1. How does your reveal interaction improve your app's usability?\r\n>\r\n>2. Why is this information hidden at first instead of shown in the summary view?\r\n>\r\n>3. How did you check that the correct details appear for the correct card?",
+    "stay_on_level_after_submit": "false",
+    "submittable": "false",
+    "allow_multiple_attempts": "false",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "name_suffix": "_2026",
+    "title": "Milestone 2 Reflection"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-06-28T23:19:57.465+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson11-milestone2-level2e-test_20_2025-_2026\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson11-milestone2-level2e-test_20_2025-_2026\"},{\"changed_at\":\"2026-06-28 23:21:42 +0000\",\"changed\":[\"display_name\",\"long_instructions\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-06-29 00:46:46 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

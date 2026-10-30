@@ -1,0 +1,11 @@
+{
+  "extends": "@code-dot-org/lint-config/typescript/tsconfig.vite.app.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    // The dev shell imports host types from apps/. Under verbatimModuleSyntax
+    // an unmarked type import survives as a runtime edge, which drags
+    // apps/src/redux.js (CJS-in-ESM) into the graph.
+    "verbatimModuleSyntax": false
+  },
+  "include": ["src"]
+}

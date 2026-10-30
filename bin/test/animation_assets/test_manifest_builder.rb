@@ -5,7 +5,7 @@ describe ManifestBuilder do
   let(:aws_credentials) {Aws::Credentials.new('test_aws_key', 'test_aws_secret')}
 
   before do
-    STDOUT.stubs(:print)
+    $stdout.stubs(:print)
     Aws::CredentialProviderChain.any_instance.stubs(:static_credentials).returns(aws_credentials)
   end
 

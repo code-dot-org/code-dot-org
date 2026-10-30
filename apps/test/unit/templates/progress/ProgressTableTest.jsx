@@ -1,13 +1,15 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {expect} from '../../../util/deprecatedChai';
-import {shallow} from 'enzyme';
+
+import DetailProgressTable from '@cdo/apps/templates/progress/DetailProgressTable';
+import LessonGroup from '@cdo/apps/templates/progress/LessonGroup';
 import {
   UnconnectedProgressTable as ProgressTable,
   styles,
 } from '@cdo/apps/templates/progress/ProgressTable';
 import SummaryProgressTable from '@cdo/apps/templates/progress/SummaryProgressTable';
-import DetailProgressTable from '@cdo/apps/templates/progress/DetailProgressTable';
-import LessonGroup from '@cdo/apps/templates/progress/LessonGroup';
+
+import {expect} from '../../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
 const FAKE_LESSONS = [];
 const FAKE_LEVELS = [];

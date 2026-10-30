@@ -1,6 +1,6 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {mount} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+
 import {UnconnectedShowSecret as ShowSecret} from '@cdo/apps/templates/manageStudents/ShowSecret';
 
 const DEFAULT_PROPS = {
@@ -15,21 +15,21 @@ const DEFAULT_PROPS = {
 describe('ShowSecret', () => {
   it('disables show picture/word button if secretLoginDisabled prop is true', () => {
     let wrapper = mount(<ShowSecret {...DEFAULT_PROPS} />);
-    let showSecretButton = wrapper.find('Button.uitest-show-picture-or-word');
-    expect(showSecretButton.prop('disabled')).to.equal(undefined);
+    let showSecretButton = wrapper.find('button.uitest-show-picture-or-word');
+    expect(showSecretButton.prop('disabled')).toBeFalsy();
 
     wrapper = mount(
       <ShowSecret {...DEFAULT_PROPS} secretLoginDisabled={true} />
     );
-    showSecretButton = wrapper.find('Button.uitest-show-picture-or-word');
-    expect(showSecretButton.prop('disabled')).to.be.true;
+    showSecretButton = wrapper.find('button.uitest-show-picture-or-word');
+    expect(showSecretButton.prop('disabled')).toBe(true);
   });
 
   it('disables reset password button if resetDisabled prop is true', () => {
     DEFAULT_PROPS.initialIsShowing = true;
 
     let wrapper = mount(<ShowSecret {...DEFAULT_PROPS} />);
-    let resetPasswordButton = wrapper.find('Button.uitest-reset-password');
-    expect(resetPasswordButton.prop('disabled')).to.equal(undefined);
+    let resetPasswordButton = wrapper.find('button.uitest-reset-password');
+    expect(resetPasswordButton.prop('disabled')).toBeFalsy();
   });
 });

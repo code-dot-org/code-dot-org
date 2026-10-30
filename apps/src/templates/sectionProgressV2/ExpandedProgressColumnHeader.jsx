@@ -1,83 +1,120 @@
-import React from 'react';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import PropTypes from 'prop-types';
-import styles from './progress-table-v2.module.scss';
-import classNames from 'classnames';
-import FontAwesome from '../FontAwesome';
-import i18n from '@cdo/locale';
-import LevelProgressHeader from './LevelProgressHeader';
-import LessonTitleTooltip, {getTooltipId} from './LessonTitleTooltip';
+import React from 'react';
+import {connect} from 'react-redux';
 
-export default function ExpandedProgressColumnHeader({
+import i18n from '@cdo/locale';
+
+import LessonTitleTooltip, {getTooltipId} from './LessonTitleTooltip';
+import {getLessonColumnHeaderId} from './LevelDataCell';
+import LevelProgressHeader from './LevelProgressHeader';
+import {removeExpandedLesson} from './sectionProgressRedux';
+
+import styles from './progress-table-v2.module.scss';
+
+function ExpandedProgressColumnHeader({
+  unitId,
+  sectionId,
   lesson,
   removeExpandedLesson,
-  expandedChoiceLevels,
-  toggleExpandedChoiceLevel,
+  expandedChoiceLevelIds,
 }) {
+  const expandedLevelHeaderRef = React.useRef();
+
+  const [headerWidth, setHeaderWidth] = React.useState(0);
+
+  React.useEffect(() => {
+    const resizeObserver = new ResizeObserver(([entry]) => {
+      if (entry.borderBoxSize) {
+        // toFixed(1) is necessary because most browsers round to one decimal point,
+        // But with zoom, borderBoxSize can be a float with many decimal points.
+        const newWidth = entry.borderBoxSize[0].inlineSize.toFixed(1);
+        setHeaderWidth(newWidth);
+      }
+    });
+    resizeObserver.observe(expandedLevelHeaderRef.current);
+
+    return () => resizeObserver.disconnect();
+  }, [setHeaderWidth, expandedLevelHeaderRef]);
+
   // If there are 2 or less levels, we only show the number so that the text fits the cell.
   const headerText =
-    lesson.levels.length < 3 && expandedChoiceLevels.length === 0
+    lesson.levels.length < 3 && expandedChoiceLevelIds.length === 0
       ? lesson.relative_position
-      : i18n.lessonNumbered({
-          lessonNumber: lesson.relative_position,
-          lessonName: lesson.name,
-        });
-
-  // Manual width is necessary so that overflow text is hidden and lesson header exactly fits levels.
-  // Add (numLevels + 1)px to account for borders.
-  // Also count expanded lessons and account for larger borders
-  const width = React.useMemo(() => {
-    const levelWidth = parseInt(styles.levelCellWidth) + 1;
-    const lessonHeaderWidth = lesson.levels.reduce((acc, level) => {
-      if (
-        level.sublevels?.length > 0 &&
-        expandedChoiceLevels.includes(level.id)
-      ) {
-        return acc + (level.sublevels.length + 1) * levelWidth;
-      }
-      return acc + levelWidth;
-    }, 0);
-    return lessonHeaderWidth + 1 + 'px';
-  }, [lesson, expandedChoiceLevels]);
+      : lesson.title;
 
   return (
-    <div
-      className={styles.expandedHeader}
-      key={lesson.id}
-      data-tip
-      data-for={getTooltipId(lesson)}
-    >
-      <LessonTitleTooltip lesson={lesson} />
-      <div
-        className={classNames(
-          styles.gridBox,
-          styles.expandedHeaderLessonCell,
-          styles.pointerMouse
-        )}
-        style={{width}}
-        onClick={() => removeExpandedLesson(lesson.id)}
-        aria-label={headerText}
+    <tbody className={styles.expandedHeader} key={lesson.id}>
+      <tr>
+        <th
+          className={styles.expandedHeaderLessonCell}
+          style={{width: headerWidth + 'px', maxWidth: headerWidth + 'px'}}
+          data-tip
+          data-for={getTooltipId(lesson)}
+          id={getLessonColumnHeaderId(lesson.id)}
+          scope="colgroup"
+        >
+          <button
+            id={
+              'ui-test-expanded-progress-column-header-' +
+              lesson.relative_position
+            }
+            onClick={() => removeExpandedLesson(unitId, sectionId, lesson.id)}
+            aria-label={headerText}
+            aria-expanded={true}
+            type="button"
+            className={styles.expandedHeaderLessonCellButton}
+          >
+            <LessonTitleTooltip lesson={lesson} />
+            <FontAwesomeV6Icon
+              iconName="caret-down"
+              iconStyle="solid"
+              className={styles.expandedHeaderCaret}
+              title={i18n.unexpand()}
+            />
+            <div
+              className={styles.expandedHeaderLessonText}
+              title={lesson.title}
+            >
+              {headerText}
+            </div>
+          </button>
+        </th>
+      </tr>
+      <tr
+        className={styles.expandedHeaderSecondRow}
+        ref={expandedLevelHeaderRef}
       >
-        <FontAwesome icon="caret-down" className={styles.expandedHeaderCaret} />
-        <div className={styles.expandedHeaderLessonText}>{headerText}</div>
-      </div>
-      <div className={styles.expandedHeaderSecondRow}>
         {lesson.levels.map(level => (
           <LevelProgressHeader
             key={level.id}
             lesson={lesson}
             level={level}
-            isLevelExpanded={expandedChoiceLevels.includes(level.id)}
-            toggleExpandedChoiceLevel={toggleExpandedChoiceLevel}
+            isLevelExpanded={expandedChoiceLevelIds.includes(level.id)}
           />
         ))}
-      </div>
-    </div>
+      </tr>
+    </tbody>
   );
 }
 
+export default connect(
+  state => ({
+    sectionId: state.teacherSections.selectedSectionId,
+    unitId: state.unitSelection.scriptId,
+    expandedChoiceLevelIds: state.sectionProgress.expandedChoiceLevelIds,
+  }),
+  dispatch => ({
+    removeExpandedLesson(unitId, sectionId, lessonId) {
+      dispatch(removeExpandedLesson(unitId, sectionId, lessonId));
+    },
+  })
+)(ExpandedProgressColumnHeader);
+
 ExpandedProgressColumnHeader.propTypes = {
+  unitId: PropTypes.number.isRequired,
+  sectionId: PropTypes.number.isRequired,
   lesson: PropTypes.object.isRequired,
   removeExpandedLesson: PropTypes.func.isRequired,
-  expandedChoiceLevels: PropTypes.arrayOf(PropTypes.string).isRequired,
-  toggleExpandedChoiceLevel: PropTypes.func.isRequired,
+  expandedChoiceLevelIds: PropTypes.arrayOf(PropTypes.string).isRequired,
 };

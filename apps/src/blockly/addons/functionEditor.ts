@@ -1,28 +1,20 @@
 import {
+  ObservableParameterModel,
   ObservableProcedureModel,
   ProcedureBase,
 } from '@blockly/block-shareable-procedures';
-import {
-  ScrollBlockDragger,
-  ScrollOptions,
-} from '@blockly/plugin-scroll-options';
-import {flyoutCategory as functionsFlyoutCategory} from '@cdo/apps/blockly/customBlocks/googleBlockly/proceduresBlocks';
-import {flyoutCategory as behaviorsFlyoutCategory} from '@cdo/apps/blockly/customBlocks/googleBlockly/behaviorBlocks';
-import {commonI18n} from '@cdo/apps/types/locale';
+import {ScrollOptions} from '@blockly/plugin-scroll-options';
+import * as BlocklyCore from 'blockly/core';
+
+import {flyoutCategory as behaviorsFlyoutCategory} from '@cdo/apps/blockly/customBlocks/behaviorBlocks';
+import {flyoutCategory as functionsFlyoutCategory} from '@cdo/apps/blockly/customBlocks/proceduresBlocks';
+import {flyoutCategory as variablesFlyoutCategory} from '@cdo/apps/blockly/customBlocks/variableBlocks';
 import {disableOrphans} from '@cdo/apps/blockly/eventHandlers';
-import {
-  MODAL_EDITOR_ID,
-  MODAL_EDITOR_CLOSE_ID,
-  MODAL_EDITOR_DELETE_ID,
-} from './functionEditorConstants';
-import CdoConnectionChecker from './cdoConnectionChecker';
-import CdoMetricsManager from './cdoMetricsManager';
-import WorkspaceSvgFrame from './workspaceSvgFrame';
-import {BLOCK_TYPES} from '../constants';
-import {frameSizes} from './cdoConstants';
-import CdoTrashcan from './cdoTrashcan';
+import {commonI18n} from '@cdo/apps/types/locale';
 import {getAlphanumericId} from '@cdo/apps/utils';
-import {initializeScrollbarPair} from './cdoScrollbar';
+
+import {BLOCK_TYPES} from '../constants';
+import CdoTheme from '../themes/cdoTheme';
 import {
   EditorWorkspaceSvg,
   ExtendedBlocklyOptions,
@@ -30,15 +22,28 @@ import {
   ProcedureBlockConfiguration,
   ProcedureType,
 } from '../types';
-import {Block, WorkspaceSvg} from 'blockly';
-import {IProcedureModel} from 'blockly/core/procedures';
-import {State} from 'blockly/core/serialization/blocks';
+import {getUserTheme, setThemeAndRenderBlocks} from '../utils';
+
+import CdoConnectionChecker from './cdoConnectionChecker';
+import {frameSizes} from './cdoConstants';
+import CdoMetricsManager from './cdoMetricsManager';
+import {initializeScrollbarPair} from './cdoScrollbar';
+import {CdoScrollBlockDragger} from './cdoScrollBlockDragger';
+import CdoTrashcan from './cdoTrashcan';
+import {removeIdsFromBlocks} from './cdoXml';
+import {
+  MODAL_EDITOR_ID,
+  MODAL_EDITOR_CLOSE_ID,
+  MODAL_EDITOR_DELETE_ID,
+} from './functionEditorConstants';
+import {registerCloseModalEditorShortcut} from './shortcutItems';
+import WorkspaceSvgFrame from './workspaceSvgFrame';
 
 // This class creates the modal function editor, which is used by Sprite Lab and Artist.
 export default class FunctionEditor {
   private isReadOnly: boolean;
   private dom: HTMLElement | undefined;
-  private primaryWorkspace: WorkspaceSvg | undefined;
+  private primaryWorkspace: BlocklyCore.WorkspaceSvg | undefined;
   private editorWorkspace: EditorWorkspaceSvg | undefined;
   private block: ProcedureBlock | undefined;
 
@@ -47,6 +52,7 @@ export default class FunctionEditor {
   }
 
   init(options: ExtendedBlocklyOptions) {
+    const defaultTheme = (options.theme || CdoTheme) as BlocklyCore.Theme;
     // The workspace we'll show to users for editing
     const modalEditor = document.getElementById(MODAL_EDITOR_ID);
     if (!modalEditor) {
@@ -56,8 +62,19 @@ export default class FunctionEditor {
 
     this.dom = modalEditor;
     this.isReadOnly = options.readOnly || false;
+    let toolbox = options.toolbox;
+    if (typeof options.toolbox === 'string') {
+      // Remove the block ids from the toolbox. Otherwise, it would be possible
+      // to add a block with the same id to multiple different procedure definitions.
+      // Because we mirror block creation onto the hidden workspace, we need to avoid
+      // trying to create blocks with ids that are already used in other definitions.
+      const toolboxDom = Blockly.Xml.textToDom(options.toolbox);
+      removeIdsFromBlocks(toolboxDom);
+      toolbox = Blockly.Xml.domToText(toolboxDom);
+    }
 
-    this.primaryWorkspace = Blockly.getMainWorkspace() as WorkspaceSvg;
+    this.primaryWorkspace =
+      Blockly.getMainWorkspace() as BlocklyCore.WorkspaceSvg;
     // Customize auto-populated Functions toolbox category.
     this.editorWorkspace = Blockly.blockly_.inject(modalEditor, {
       comments: false, // Disables Blockly's built-in comment functionality.
@@ -72,43 +89,66 @@ export default class FunctionEditor {
       },
       plugins: {
         metricsManager: CdoMetricsManager,
-        blockDragger: ScrollBlockDragger,
+        blockDragger: CdoScrollBlockDragger,
         connectionChecker: CdoConnectionChecker,
       },
       readOnly: options.readOnly,
       renderer: options.renderer,
       rtl: options.rtl,
-      theme: Blockly.cdoUtils.getUserTheme(options.theme),
-      toolbox: options.toolbox,
+      theme: defaultTheme,
+      toolbox,
       trashcan: false, // Don't use default trashcan.
       modalInputs: false,
     }) as EditorWorkspaceSvg;
+    getUserTheme(this.editorWorkspace.getTheme()).then(
+      (theme: BlocklyCore.Theme) => {
+        setThemeAndRenderBlocks(this.editorWorkspace!, theme, defaultTheme);
+      }
+    );
+    this.editorWorkspace.registerToolboxCategoryCallback(
+      'VARIABLE',
+      variablesFlyoutCategory
+    );
     const scrollOptionsPlugin = new ScrollOptions(this.editorWorkspace);
     scrollOptionsPlugin.init();
     initializeScrollbarPair(this.editorWorkspace);
     // Disable blocks that aren't attached. We don't want these to generate
     // code in the hidden workspace.
     this.editorWorkspace.addChangeListener(disableOrphans);
-    Blockly.navigationController.addWorkspace(this.editorWorkspace);
     // Close handler
     document
       .getElementById(MODAL_EDITOR_CLOSE_ID)
       ?.addEventListener('click', () => this.hide());
-
+    document
+      .getElementById(MODAL_EDITOR_CLOSE_ID)
+      ?.addEventListener('keydown', event => {
+        if (event.key === 'Enter') {
+          this.hide(); // Also call the hide function when Enter is pressed
+        }
+      });
+    // Adds an ESC key shortcut to Blockly's shortcut registry.
+    registerCloseModalEditorShortcut(this.hide.bind(this));
     // Handler for delete button. We only enable the delete button for writeable workspaces.
     if (!this.isReadOnly) {
       document
         .getElementById(MODAL_EDITOR_DELETE_ID)
         ?.addEventListener('click', this.onDeletePressed.bind(this));
+      document
+        .getElementById(MODAL_EDITOR_DELETE_ID)
+        ?.addEventListener('keydown', event => {
+          if (event.key === 'Enter') {
+            this.onDeletePressed();
+          }
+        });
     }
 
     // Editor workspace toolbox procedure category callback
     const functionEditorOpen = true;
     this.editorWorkspace.registerToolboxCategoryCallback('PROCEDURE', () =>
-      functionsFlyoutCategory(this.editorWorkspace, functionEditorOpen)
+      functionsFlyoutCategory(this.editorWorkspace!, functionEditorOpen)
     );
     this.editorWorkspace.registerToolboxCategoryCallback('Behavior', () =>
-      behaviorsFlyoutCategory(this.editorWorkspace, functionEditorOpen)
+      behaviorsFlyoutCategory(this.editorWorkspace!, functionEditorOpen)
     );
 
     // Set up the "new procedure" button in the toolbox
@@ -125,16 +165,11 @@ export default class FunctionEditor {
 
     const functionEditorTrashcan = new CdoTrashcan(this.editorWorkspace);
     functionEditorTrashcan.init();
+    // Set primary workspace to be active (until a function is shown).
+    Blockly.common.setMainWorkspace(this.primaryWorkspace);
   }
 
   hide() {
-    // If keyboard navigation was on, enable it on the primary workspace
-    if (this.editorWorkspace?.keyboardAccessibilityMode) {
-      // Disable it on the current workspace so there's no chance of
-      // controlling it accidentally while it is hidden.
-      Blockly.navigationController.disable(this.editorWorkspace);
-      Blockly.navigationController.enable(this.primaryWorkspace);
-    }
     if (this.dom) {
       this.dom.style.display = 'none';
       this.editorWorkspace?.hideChaff();
@@ -142,6 +177,11 @@ export default class FunctionEditor {
     if (this.primaryWorkspace) {
       Blockly.common.setMainWorkspace(this.primaryWorkspace);
     }
+    // This method is also used as a callback for the Blockly shortcut registry.
+    // The registry expects callbacks to return a boolean. We return false
+    // explicitly so that other shortcuts assigned to the same key code still run.
+    // This includes 'escape' (hide chaff, from Core) and 'exit' (from keyboard navigation).
+    return false;
   }
 
   // We kept this around for backwards compatibility with the CDO
@@ -159,10 +199,8 @@ export default class FunctionEditor {
   }
 
   // Leaving these two functions as placeholders for when we implement parameters.
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars, @typescript-eslint/no-empty-function
   renameParameter(_oldName: string, _newName: string) {}
 
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
   refreshParamsEverywhere() {}
 
   autoOpenFunction(functionName: string) {
@@ -196,8 +234,8 @@ export default class FunctionEditor {
   }
 
   showForFunctionHelper(
-    existingProcedureBlock: Block | null,
-    newProcedure?: IProcedureModel,
+    existingProcedureBlock: BlocklyCore.Block | null,
+    newProcedure?: BlocklyCore.Procedures.IProcedureModel,
     procedureType?: ProcedureType
   ) {
     if (
@@ -269,21 +307,14 @@ export default class FunctionEditor {
     }
     this.block?.setDeletable(false);
 
-    // If keyboard navigation was on, enable it on the editor workspace.
-    if (
-      this.editorWorkspace.keyboardAccessibilityMode ||
-      this.primaryWorkspace?.keyboardAccessibilityMode
-    ) {
-      // Disable it on the primary workspace so there's no chance of
-      // controlling it accidentally while the function editor is open.
-      Blockly.navigationController.disable(this.primaryWorkspace);
-      Blockly.navigationController.enable(this.editorWorkspace);
-      // If this editor was already open (e.g. changing from one function to another)
-      // we need to re-focus so the cursor highlights the correct block.
-      Blockly.navigationController.navigation.focusWorkspace(
-        this.editorWorkspace
-      );
+    // We store the workspace width for RTL workspaces so that we can move
+    // blocks back to the correct positions after a browser window resize.
+    // See: https://github.com/google/blockly/issues/8637
+    if (this.editorWorkspace.RTL) {
+      this.editorWorkspace.previousViewWidth =
+        this.editorWorkspace.getMetrics().viewWidth;
     }
+
     // We only want to be able to delete things that are user-created (functions and behaviors)
     // and not things that are being previewed from a read-only workspace.
     // We allow deleting non-user created behaviors in start mode.
@@ -300,7 +331,7 @@ export default class FunctionEditor {
 
     // Used to create and render an SVG frame instance.
     const getDefinitionBlockColor = () => {
-      return Blockly.cdoUtils.getBlockColor(this.block);
+      return this.block?.style?.colourPrimary || '';
     };
 
     this.editorWorkspace.svgFrame_ = new WorkspaceSvgFrame(
@@ -315,6 +346,8 @@ export default class FunctionEditor {
 
     // Make the function editor workspace the active/focused workspace.
     Blockly.common.setMainWorkspace(this.editorWorkspace);
+    // Focus the procedure block.
+    Blockly.FocusManager.getFocusManager().focusNode(this.block!);
   }
 
   /**
@@ -436,13 +469,13 @@ export default class FunctionEditor {
   }
 
   setUpEditorWorkspaceChangeListeners() {
-    // Mirror procedure events from editor workspace to main workspace.
+    // Mirror procedure and variable events from editor workspace to main workspace.
     // This allows updates for things like procedure name to propogate to the main
-    // workspace.
+    // workspace, as well as variables being created/renamed/deleted.
     this.editorWorkspace?.addChangeListener(e => {
       // If the main workspace hasn't been initialized yet, don't do anything
       if (!Blockly.mainBlockSpace) return;
-      if (e instanceof ProcedureBase) {
+      if (e instanceof ProcedureBase || e instanceof Blockly.Events.VarBase) {
         let event;
         try {
           event = Blockly.Events.fromJson(e.toJson(), Blockly.mainBlockSpace);
@@ -457,6 +490,34 @@ export default class FunctionEditor {
         // Update the toolbox in case this change is happening
         // while the flyout is open.
         Blockly.mainBlockSpace?.getToolbox()?.refreshSelection();
+      }
+    });
+
+    // Mirror variable events from main workspace to the hidden workspace.
+    // This is allows newly created/renamed/deleted variables to propogate
+    // to the other workspaces.
+    this.primaryWorkspace?.addChangeListener(e => {
+      if (!this.editorWorkspace) {
+        return;
+      }
+      if (e instanceof Blockly.Events.VarBase) {
+        let newHiddenWorkspaceEvent;
+        try {
+          newHiddenWorkspaceEvent = Blockly.Events.fromJson(
+            e.toJson(),
+            Blockly.getHiddenDefinitionWorkspace()
+          );
+        } catch (err) {
+          // Could not deserialize event. This is expected to happen. E.g. When
+          // round-tripping parameter deletes, the delete in the secondary workspace
+          // cannot be deserialized into the original workspace.
+          return;
+        }
+        newHiddenWorkspaceEvent.run(true);
+
+        // Update the toolbox in case this change is happening
+        // while the flyout is open.
+        this.editorWorkspace?.getToolbox()?.refreshSelection();
       }
     });
 
@@ -483,7 +544,9 @@ export default class FunctionEditor {
    * @param blockConfig: Block json configuration
    * @returns Block configuration with x and y coordinates
    */
-  addEditorWorkspaceBlockConfig(blockConfig: State) {
+  addEditorWorkspaceBlockConfig(
+    blockConfig: BlocklyCore.serialization.blocks.State
+  ) {
     // Position the blocks within the workspace svg frame.
     const x = frameSizes.MARGIN_SIDE + 5;
     const y = frameSizes.MARGIN_TOP + frameSizes.WORKSPACE_HEADER_HEIGHT + 15;
@@ -523,14 +586,31 @@ export default class FunctionEditor {
   }
 
   createProcedureModelForWorkspace(
-    workspace: WorkspaceSvg,
-    procedure: IProcedureModel
+    workspace: BlocklyCore.WorkspaceSvg,
+    procedure: BlocklyCore.Procedures.IProcedureModel
   ) {
-    return new ObservableProcedureModel(
+    const newProcedure = new ObservableProcedureModel(
       workspace,
       procedure.getName(),
       procedure.getId()
     );
+
+    // Copy parameters from the old procedure to the new one
+    procedure.getParameters().forEach((param, index) => {
+      // Type assertion to ensure we can get the variable model.
+      const observableParam = param as ObservableParameterModel;
+
+      const newParam = new ObservableParameterModel(
+        workspace,
+        observableParam.getName(),
+        observableParam.getId(),
+        observableParam.getVariableModel().getId()
+      );
+
+      newProcedure.insertParameter(newParam, index);
+    });
+
+    return newProcedure;
   }
 
   // Clear the editor workspace to prepare for a new function definition.
@@ -559,6 +639,21 @@ export default class FunctionEditor {
     // procedure definition.
     Blockly.Events.disable();
     this.editorWorkspace.clear();
+    // The previous line also clears the variable map. We need to manually rebuild it
+    // so that student variables continue to be defined on the editor workspace.
+    const primaryWorkspaceVariableMap = this.primaryWorkspace?.getVariableMap();
+    const functionEditorVariableMap = this.editorWorkspace.getVariableMap();
+    if (primaryWorkspaceVariableMap) {
+      const variables = primaryWorkspaceVariableMap.getAllVariables();
+
+      variables.forEach(variable => {
+        functionEditorVariableMap.createVariable(
+          variable.getName(),
+          variable.getType(),
+          variable.getId()
+        );
+      });
+    }
     Blockly.Events.enable();
   }
 }

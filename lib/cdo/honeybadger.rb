@@ -34,12 +34,7 @@ module Honeybadger
   # stdout - captured stdout from the command
   # stderr - captured stderr from the command
   def self.notify_command_error(command, status, stdout, stderr)
-    return if stderr.to_s.empty? && status == 0
-
-    # Temporarily ignore this high-volume deprecation warning, until we can
-    # implement alternatives to the deprecated functionality.
-    # TODO: eliminate this warning, and remove this exception
-    return if stderr.start_with?("WARNING: MYSQL_OPT_RECONNECT is deprecated and will be removed in a future version.")
+    return if status == 0
 
     error_message, backtrace = parse_exception_dump stderr
 
@@ -62,10 +57,10 @@ module Honeybadger
 
   # notify_cronjob_error - logs a Honeybadger error in the Cronjobs project
   # See https://docs.honeybadger.io/ruby/gem-reference/api.html#honeybadger-notify-error-opts
-  def self.notify_cronjob_error(opts)
+  def self.notify_cronjob_error(...)
     # Configure and start Honeybadger
     Honeybadger.configure do |config|
-      config.env = ENV['RACK_ENV']
+      config.env = ENV.fetch('RACK_ENV', nil)
       config.api_key = CDO.cronjobs_honeybadger_api_key
       config.logging.path = "STDOUT"
       config.logging.level = "ERROR"
@@ -73,7 +68,7 @@ module Honeybadger
       config.report_data = true
     end
 
-    result = Honeybadger.notify(opts)
+    result = Honeybadger.notify(...)
     Honeybadger.flush # these events are sometimes getting swallowed without this
     result
   end
@@ -84,7 +79,7 @@ module Honeybadger
   def self.parse_exception_dump(error)
     return if error.to_s.empty?
 
-    # Unhandled Ruby exceptions are dumped to STDERR in the following format:
+    # Unhandled Ruby exceptions are dumped to $stderr in the following format:
     #   file:number:in `method': message
     #     from file:number:in `method'
     #     from ...
@@ -101,13 +96,13 @@ module Honeybadger
     [error_message, error_lines]
   end
 
-  # Returns all issues (across cronjobs, dashboard, and pegasus) that have occured since midnight.
+  # Returns all issues (across cronjobs and dashboard) that have occured since midnight.
   # @return [Array[Hash]] An array of hashes summarizing the recent issues.
   def self.get_recent_issues
     raise 'CDO.honeybadger_api_token undefined' unless CDO.honeybadger_api_token
     issues = []
 
-    {cronjobs: 45435, dashboard: 3240, pegasus: 34365}.each do |project, project_id|
+    {cronjobs: 45435, dashboard: 3240}.each do |project, project_id|
       next_url = "/v2/projects/#{project_id}/faults" \
         "?occurred_after=#{1.day.ago.to_i}&q=-is:resolved%20-is:paused%20-is:ignored"
       while next_url

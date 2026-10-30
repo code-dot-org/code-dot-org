@@ -8,6 +8,8 @@
  */
 export const PUZZLE_PAGE_NONE = -1;
 
+export type LessonBackground = 'light' | 'dark' | null;
+
 export interface Lesson {
   assessment: boolean;
   description_student: string;
@@ -31,6 +33,7 @@ export interface Lesson {
   script_name: string;
   title: string;
   unplugged: boolean | null;
+  background: LessonBackground;
 }
 
 export interface LessonGroup {
@@ -50,16 +53,21 @@ export interface Level {
   display_as_unplugged: boolean;
   freePlay: boolean;
   icon: string | null;
-  id: number;
+  id: string;
   ids: string[];
   inactiveIds: string[];
   is_concept_level: boolean;
   kind: string;
+  levelNumber: number;
   position: number;
   title: number;
   url: string;
+  path: string;
+  scriptLevelId: string;
   status?: string;
+  sublevels?: Level[];
   usesLab2: boolean;
+  parentLevelId?: string;
 }
 
 export interface LevelWithProgress extends Level {
@@ -67,6 +75,7 @@ export interface LevelWithProgress extends Level {
   paired?: boolean;
   isLocked?: boolean;
   isCurrentLevel?: boolean;
+  sublevels?: LevelWithProgress[];
 }
 
 export interface UnitProgress {
@@ -77,6 +86,7 @@ export interface UnitProgress {
   result: number;
   status: string;
   teacherFeedbackReviewState: keyof typeof ReviewStates | undefined;
+  teacherFeedbackNew: boolean;
   timeSpent: number | undefined;
 }
 
@@ -124,12 +134,14 @@ export interface InitProgressPayload {
   unitTitle: string | null;
   unitDescription: string | undefined;
   unitStudentDescription: string | undefined;
+  unitHasUnnumberedLessons: boolean;
   courseId: number | null;
   courseVersionId: number | undefined;
   isLessonExtras: boolean;
   peerReviewLessonInfo: PeerReviewLessonInfo | null;
   isFullProgress: boolean;
   currentPageNumber: number;
+  courseName: string | null;
 }
 
 // LevelResults is a map of levelId -> TestResult. TestResult is a number.

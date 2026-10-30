@@ -53,8 +53,9 @@ class ExpiredChildAccountPurger
     check_constraints accounts
 
     account_purger = AccountPurger.new dry_run: @dry_run, log: @log
-    accounts.each do |account|
+    accounts.find_each do |account|
       account_purger.purge_data_for_account account
+      Services::ChildAccount::EventLogger.log_account_purging(account)
       @num_accounts_purged += 1
     rescue StandardError => exception
       # If we failed to purge the account, add it to our manual review queue.
@@ -70,9 +71,7 @@ class ExpiredChildAccountPurger
     report_results unless skip_report
   end
 
-  private
-
-  def reset
+  private def reset
     # Logging stream we can pass down to the account purger component so it
     # can add its own content to the log
     @log = StringIO.new
@@ -86,12 +85,12 @@ class ExpiredChildAccountPurger
     start_activity_log
   end
 
-  def start_activity_log
+  private def start_activity_log
     @log.puts "Starting purge_expired_child_accounts!"
     @log.puts "(dry-run)" if @dry_run
   end
 
-  def check_constraints(accounts)
+  private def check_constraints(accounts)
     if accounts.count > @max_accounts_to_purge
       @purge_size_limit_exceeded = 1
       raise SafetyConstraintViolation, "Found #{accounts.count} " \
@@ -100,7 +99,7 @@ class ExpiredChildAccountPurger
     end
   end
 
-  def report_results
+  private def report_results
     review_queue_depth = QueuedAccountPurge.count
     manual_reviews_needed = QueuedAccountPurge.needing_manual_review.count
     metrics = build_metrics review_queue_depth, manual_reviews_needed
@@ -123,7 +122,7 @@ class ExpiredChildAccountPurger
     upload_metrics metrics unless @dry_run
   end
 
-  def build_metrics(review_queue_depth, manual_reviews_needed)
+  private def build_metrics(review_queue_depth, manual_reviews_needed)
     {
       # 0 or 1 if the size of the purge would exceed the limit
       PurgeSizeLimitExceeded: @purge_size_limit_exceeded,
@@ -138,17 +137,17 @@ class ExpiredChildAccountPurger
     }
   end
 
-  def metric_name(name)
+  private def metric_name(name)
     "Custom/ExpiredChildAccountPurger/#{name}"
   end
 
-  def log_metrics(metrics)
+  private def log_metrics(metrics)
     metrics.each do |key, value|
       @log.puts "#{key}: #{value}"
     end
   end
 
-  def upload_metrics(metrics)
+  private def upload_metrics(metrics)
     aws_metrics = metrics.map do |key, value|
       {
         metric_name: key,
@@ -161,7 +160,7 @@ class ExpiredChildAccountPurger
     Cdo::Metrics.push('ExpiredChildAccountPurger', aws_metrics)
   end
 
-  def build_summary(review_queue_depth, manual_reviews_needed)
+  private def build_summary(review_queue_depth, manual_reviews_needed)
     formatted_duration = Time.at(Time.now.to_i - @start_time.to_i).utc.strftime("%H:%M:%S")
 
     summary = expired_accounts_summary
@@ -169,17 +168,17 @@ class ExpiredChildAccountPurger
     summary + "\n🕐 #{formatted_duration}"
   end
 
-  def purged_accounts_summary
+  private def purged_accounts_summary
     intro = @dry_run ? 'Would have purged' : 'Purged'
     "#{intro} #{@num_accounts_purged} child account(s)."
   end
 
-  def expired_accounts_summary
+  private def expired_accounts_summary
     "#{@num_accounts_to_be_purged} child account(s) have expired."
   end
 
   # @return [String] HTML link to view uploaded log
-  def upload_activity_log
+  private def upload_activity_log
     log_url = AWS::S3::LogUploader.
       new('cdo-audit-logs', "expired-child-account-purger-activity/#{CDO.rack_env}").
       upload_log(@start_time.strftime('%Y%m%dT%H%M%S%z'), @log.string)
@@ -187,24 +186,24 @@ class ExpiredChildAccountPurger
   end
 
   # Send error messages to #cron-daily and #user-accounts
-  def yell(message)
+  private def yell(message)
     @log.puts message
     say message, 'cron-daily', color: 'red', notify: 1
     say message, 'user-accounts', color: 'red', notify: 1
   end
 
   # Send warning messages to #cron-daily and #user-accounts
-  def warn(message)
+  private def warn(message)
     say message, 'cron-daily', color: 'yellow'
     say message, 'user-accounts', color: 'yellow'
   end
 
   # Send messages to Slack #cron-daily
-  def say(message, channel = 'cron-daily', options = {})
+  private def say(message, channel = 'cron-daily', options = {})
     ChatClient.message channel, prefixed(message), options
   end
 
-  def prefixed(message)
+  private def prefixed(message)
     "*ExpiredChildAccountPurger* #{@dry_run ? '(dry-run)' : ''}" \
     "<https://github.com/code-dot-org/code-dot-org/blob/production/dashboard/lib/expired_child_account_purger.rb|(source)>" \
     "\n#{message}"

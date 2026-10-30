@@ -1,9 +1,16 @@
+import {fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+import {Provider} from 'react-redux';
+
+import {
+  getStore,
+  registerReducers,
+  restoreRedux,
+  stubRedux,
+} from '@cdo/apps/redux';
+import currentUser from '@cdo/apps/templates/currentUserRedux';
+import sectionProgress from '@cdo/apps/templates/sectionProgressV2/sectionProgressRedux';
 import StudentColumn from '@cdo/apps/templates/sectionProgressV2/StudentColumn.jsx';
-import SortByNameDropdown from '@cdo/apps/templates/SortByNameDropdown';
-import styles from '@cdo/apps/templates/sectionProgressV2/progress-table-v2.module.scss';
 
 const studentA = {
   name: 'Sherlock',
@@ -17,61 +24,81 @@ const studentB = {
   id: 2,
 };
 
+const DEFAULT_PROPS = {
+  sortedStudents: [],
+  sectionId: 1,
+  unitName: 'test unit',
+  isSkeleton: false,
+};
+
 describe('StudentColumn', () => {
-  it('shows SortByNameDropdown', () => {
-    const wrapper = shallow(
-      <StudentColumn sectionId={1} unitName="test unit" sortedStudents={[]} />
+  let store;
+
+  beforeEach(() => {
+    stubRedux();
+    registerReducers({
+      sectionProgress,
+      currentUser,
+    });
+
+    store = getStore();
+  });
+
+  afterEach(() => {
+    restoreRedux();
+  });
+
+  function renderDefault(propOverrides = {}) {
+    return render(
+      <Provider store={store}>
+        <StudentColumn {...DEFAULT_PROPS} {...propOverrides} />
+      </Provider>
     );
-    expect(wrapper.find(SortByNameDropdown)).to.have.length(1);
-    const dropdown = wrapper.find(SortByNameDropdown);
-    expect(dropdown.props().sectionId).to.equal(1);
-    expect(dropdown.props().source).to.equal('SectionProgressV2');
+  }
+
+  it('shows SortByNameDropdown', () => {
+    renderDefault();
+    screen.getByLabelText('Sort by:');
   });
 
   it('shows no students if empty', () => {
-    const wrapper = shallow(
-      <StudentColumn sectionId={1} unitName="test unit" sortedStudents={[]} />
-    );
-    expect(wrapper.find(`.${styles.gridBox}`)).to.have.length(0);
+    renderDefault();
+    expect(screen.queryByText('Holmes')).toBeNull();
   });
 
   it('shows all students', () => {
-    const wrapper = shallow(
-      <StudentColumn
-        sectionId={1}
-        unitName="test unit"
-        sortedStudents={[studentA, studentB]}
-      />
-    );
-    expect(wrapper.find(`.${styles.gridBox}`)).to.have.length(2);
-  });
-
-  it('joins family name and name if both are present', () => {
-    const wrapper = shallow(
-      <StudentColumn
-        sectionId={1}
-        unitName="test unit"
-        sortedStudents={[studentA]}
-      />
-    );
-    expect(wrapper.find(`.${styles.gridBox}`).text()).to.equal(
-      'Sherlock Holmes'
-    );
+    renderDefault({
+      sortedStudents: [studentA, studentB],
+    });
+    screen.getByText('Sherlock Holmes');
+    screen.getByText('John Watson');
   });
 
   it('shows only name if family name is missing', () => {
-    const wrapper = shallow(
-      <StudentColumn
-        sectionId={1}
-        unitName="test unit"
-        sortedStudents={[
-          {
-            name: 'Moriarty',
-            id: 3,
-          },
-        ]}
-      />
-    );
-    expect(wrapper.find(`.${styles.gridBox}`).text()).to.equal('Moriarty');
+    renderDefault({
+      sortedStudents: [
+        {
+          name: 'Moriarty',
+          id: 3,
+        },
+      ],
+    });
+    screen.getByText('Moriarty');
+  });
+
+  it('shows expansion', () => {
+    renderDefault({
+      sortedStudents: [studentA, studentB],
+    });
+    let holmesButton = screen.getByText('Sherlock Holmes').closest('button');
+    expect(holmesButton.getAttribute('aria-expanded')).toBe('false');
+
+    fireEvent.click(holmesButton);
+
+    holmesButton = screen.getByText('Sherlock Holmes').closest('button');
+    expect(holmesButton.getAttribute('aria-expanded')).toBe('true');
+
+    screen.getByText('Time Spent (mins)');
+    screen.getByText('Last Updated');
   });
 });

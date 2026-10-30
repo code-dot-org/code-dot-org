@@ -22,15 +22,14 @@
 #  index_levels_on_game_id    (game_id)
 #  index_levels_on_level_num  (level_num)
 #  index_levels_on_name       (name)
+#  index_levels_on_type       (type)
 #
 
 # Music uses level_data, which is actual JSON in each .level file, and
 # currently contains the following top-level fields:
 #
-#   text: instructions text
 #   toolbox: an object containing blockly toolbox categories and member blocks
 #   sounds: an object containing sound categories and member sounds
-#   validations: an array containing validation conditions, responses, and actions.
 #   startSources: an object used as starter content for blockly
 
 class Music < Blockly
@@ -38,10 +37,17 @@ class Music < Blockly
     hide_share_and_remix
     is_project_level
     submittable
+    disable_edit_run_for_submission
     background
     level_data
+    predict_settings
     validations
+    encrypted_exemplar_sources
+    exemplar_settings
   )
+
+  validate :has_correct_multiple_choice_answer?
+  before_save :clean_up_predict_settings
 
   def self.create_from_level_builder(params, level_params)
     create!(
@@ -52,10 +58,6 @@ class Music < Blockly
         properties: {}
       )
     )
-  end
-
-  def uses_google_blockly?
-    true
   end
 
   def uses_lab2?

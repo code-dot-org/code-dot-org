@@ -1,0 +1,14 @@
+{
+  "category_key": "javascript",
+  "content": "# Query Selector\n\nThe `document.querySelector()` method finds the first element on the page that matches a CSS selector. Use it when your JavaScript needs to select an element by class, `id`, tag name, or another selector.",
+  "examples": "[{\"name\":\"Select an Element by Class\",\"description\":\"This selects the first element with the class `bell-icon.`\",\"code\":\"`const bellIcon = document.querySelector(\\\".bell-icon\\\");`\"}]",
+  "external_documentation": "",
+  "fields": "[]",
+  "key": "query-selector",
+  "name": "Query Selector",
+  "syntax": "`const bellIcon = document.querySelector(\".bell-icon\");`",
+  "tips": "- `document.querySelector()` selects the first element that matches the selector.\n- Use `.` before a class name, like `\".bell-icon\"`.\n- Use `#` before an `id`, like `\"#message\"`.\n- Remember to put the selector inside quotation marks.\n- In Web Lab, this method often appears near the top of `script.js` to store page elements in variables.",
+  "methods": [
+
+  ]
+}

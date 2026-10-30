@@ -1,6 +1,7 @@
 /** @file Crosshair and guides over visualization */
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import {isPointInBounds} from '../util/grid';
 export const CROSSHAIR_MARGIN = 6;
 

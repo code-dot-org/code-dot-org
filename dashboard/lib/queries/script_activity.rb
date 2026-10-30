@@ -24,7 +24,9 @@ class Queries::ScriptActivity
   #
   # return [UserScript]
   def self.working_on_user_scripts(user)
-    user.user_scripts.where(user_scripts: {completed_at: nil})
+    user.user_scripts.
+      joins(:script).
+      where(user_scripts: {completed_at: nil})
   end
 
   # Retrieve all UserScripts for scripts this user has completed
@@ -36,9 +38,13 @@ class Queries::ScriptActivity
     user.user_scripts.where.not(user_scripts: {completed_at: nil})
   end
 
-  # return the primary unit with progress for all student units
-  def self.primary_student_unit(user)
-    working_on_student_units(user).first.try(:cached)
+  # return the primary unit and unit group with progress for all student units
+  def self.primary_student_unit_context(user)
+    user_script = working_on_user_scripts(user).first
+    return nil unless user_script
+    unit = user_script.script
+    unit_group_unit = Queries::Courses.unit_group_unit(unit, user_script.unit_group)
+    {unit: unit, unit_group_unit: unit_group_unit}
   end
 
   # return the primary unit with progress for all pl units
@@ -52,7 +58,7 @@ class Queries::ScriptActivity
   def self.in_progress_and_completed_scripts(user)
     user.user_scripts.compact.reject do |user_script|
       user_script.script.nil?
-    rescue
+    rescue ActiveRecord::RecordNotFound
       # Getting user_script.script can raise if the script does not exist
       # In that case we should also reject this user_script.
       true

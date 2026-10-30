@@ -5,7 +5,16 @@ require 'cdo/rack/request'
 require 'sinatra/base'
 require 'cdo/sinatra'
 require 'cdo/image_moderation'
+require 'cdo/safe_http'
+require 'net/http'
+require 'stringio'
+require 'uri'
 require 'nokogiri'
+
+# Rack's built-in mime type table doesn't include some extensions we serve.
+# Register them globally so Sinatra::Base.mime_type() resolves them correctly.
+Rack::Mime::MIME_TYPES['.webp'] = 'image/webp'
+Rack::Mime::MIME_TYPES['.md'] = 'text/markdown'
 
 class FilesApi < Sinatra::Base
   set :mustermann_opts, check_anchors: false
@@ -19,6 +28,9 @@ class FilesApi < Sinatra::Base
   end
 
   SOURCES_PUBLIC_CACHE_DURATION = 20.seconds
+
+  # Each channel in a multi-channel library list costs one S3 list request, so bound them.
+  MAX_LIST_CHANNELS = 20
 
   def get_bucket_impl(endpoint)
     case endpoint
@@ -37,18 +49,18 @@ class FilesApi < Sinatra::Base
     end
   end
 
-  def can_view_abusive_assets?(encrypted_channel_id)
+  def can_view_flagged_assets?(encrypted_channel_id)
     return true if owns_channel?(encrypted_channel_id) || admin? || has_permission?('project_validator')
 
     # teachers can see abusive assets of their students
-    owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
+    owner_storage_id, _ = get_storage_id_and_project_id(encrypted_channel_id)
     owner_user_id = user_id_for_storage_id(owner_storage_id)
 
     teaches_student?(owner_user_id)
   end
 
   def codeprojects_can_view?(encrypted_channel_id)
-    owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
+    owner_storage_id, _ = get_storage_id_and_project_id(encrypted_channel_id)
 
     # Attempt to find active project in database. This will raise Projects::NotFound if
     # no active project exists, which is handled below.
@@ -60,10 +72,6 @@ class FilesApi < Sinatra::Base
   # Default to cannot view if there is an error
   rescue Projects::NotFound, ArgumentError, OpenSSL::Cipher::CipherError
     false
-  end
-
-  def can_view_profane_or_pii_assets?(encrypted_channel_id)
-    owns_channel?(encrypted_channel_id) || admin? || has_permission?('project_validator')
   end
 
   def file_too_large(quota_type)
@@ -90,22 +98,20 @@ class FilesApi < Sinatra::Base
   end
 
   def record_metric(quota_event_type, quota_type, value = 1)
-    return unless CDO.newrelic_logging
-
-    NewRelic::Agent.record_metric("Custom/FilesApi/#{quota_event_type}_#{quota_type}", value)
+    OpenTelemetry::Trace.current_span.set_attribute(
+      "Custom/FilesApi/#{quota_event_type}_#{quota_type}", value
+    )
   end
 
   def record_event(quota_event_type, quota_type, encrypted_channel_id)
-    return unless CDO.newrelic_logging
-
-    owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
+    owner_storage_id, _ = get_storage_id_and_project_id(encrypted_channel_id)
     owner_user_id = user_id_for_storage_id(owner_storage_id)
-    event_details = {
-      quota_type: quota_type,
-      encrypted_channel_id: encrypted_channel_id,
-      owner_user_id: owner_user_id
-    }
-    NewRelic::Agent.record_custom_event("FilesApi#{quota_event_type}", event_details)
+    span = OpenTelemetry::Trace.current_span
+    event_name = "FilesApi#{quota_event_type}"
+    span.set_attribute(event_name, true)
+    span.set_attribute("#{event_name}.quota_type", quota_type)
+    span.set_attribute("#{event_name}.encrypted_channel_id", encrypted_channel_id)
+    span.set_attribute("#{event_name}.owner_user_id", owner_user_id)
   end
 
   helpers do
@@ -124,6 +130,31 @@ class FilesApi < Sinatra::Base
     condition do
       (request.host == CDO.canonical_hostname('codeprojects.org')) == val
     end
+  end
+
+  #
+  # GET /v3/libraries?channels=<channel-id>,<channel-id>
+  #
+  # List filenames and sizes for several channels at once. The response maps each
+  # requested channel id to its list of files, or to null if that channel id could
+  # not be read.
+  #
+  get %r{/v3/libraries$} do
+    dont_cache
+    content_type :json
+
+    channel_ids = params['channels'].to_s.split(',').map(&:strip).reject(&:empty?)
+    bad_request if channel_ids.empty? || channel_ids.length > MAX_LIST_CHANNELS
+
+    bucket = LibraryBucket.new
+    channel_ids.uniq.each_with_object({}) do |encrypted_channel_id, files_by_channel|
+      files_by_channel[encrypted_channel_id] =
+        begin
+          bucket.list(encrypted_channel_id)
+        rescue ArgumentError, OpenSSL::Cipher::CipherError
+          nil
+        end
+    end.to_json
   end
 
   #
@@ -221,9 +252,6 @@ class FilesApi < Sinatra::Base
   # @return [IO] requested file body as an IO stream
   #
   def get_file(endpoint, encrypted_channel_id, filename, code_projects_domain_root_route = false, cache_duration: nil)
-    # We occasionally serve HTML files through theses APIs - we don't want NewRelic JS inserted...
-    NewRelic::Agent.ignore_enduser rescue nil
-
     buckets = get_bucket_impl(endpoint).new
     cache_duration ||= buckets.cache_duration_seconds
     set_object_cache_duration cache_duration
@@ -236,29 +264,44 @@ class FilesApi < Sinatra::Base
     type = File.extname(filename)
     not_found if type.empty?
     unsupported_media_type unless buckets.allowed_file_type?(type)
-    content_type type
+    content_type(type)
 
     # Unless this is hosted by codeprojects.org or is a safely viewable file type,
     # serve all files with Content-Disposition set to attachment so browsers
     # will not render potential HTML content inline. User-generated content can
     # contain script that we don't want to host as authentic web content from
     # our domain.
+    #
+    # Use Sinatra's attachment helper to set Content-Disposition header
+    #  NOTE: this protects against header injection attacks by escaping the filename
+    #  See Jira task: BC-72
     unless code_projects_domain_root_route || safely_viewable_file_type?(type)
-      response.headers['Content-Disposition'] = "attachment; filename=\"#{filename}\""
+      attachment(filename)
     end
 
-    result = buckets.get(encrypted_channel_id, filename, env['HTTP_IF_MODIFIED_SINCE'], request.GET['version'])
+    project = Projects.new(get_storage_id).get(encrypted_channel_id) if valid_encrypted_channel_id(encrypted_channel_id)
+    project_type = project[:projectType]&.downcase if project
+
+    # we always fetch weblab1 html files to ensure they still pass our latest no-js validations
+    if_modified_since = html_file?(filename) && project_type == 'weblab' ? nil : env['HTTP_IF_MODIFIED_SINCE']
+
+    result = buckets.get(encrypted_channel_id, filename, if_modified_since, request.GET['version'])
     not_found if result[:status] == 'NOT_FOUND'
     not_modified if result[:status] == 'NOT_MODIFIED'
-    last_modified result[:last_modified]
 
     metadata = result[:metadata]
     abuse_score = [metadata['abuse_score'].to_i, metadata['abuse-score'].to_i].max
-    not_found if abuse_score >= SharedConstants::ABUSE_CONSTANTS.ABUSE_THRESHOLD && !can_view_abusive_assets?(encrypted_channel_id)
-    not_found if profanity_privacy_violation?(filename, result[:body]) && !can_view_profane_or_pii_assets?(encrypted_channel_id)
+    not_found if abuse_score >= SharedConstants::ABUSE_CONSTANTS.ABUSE_THRESHOLD && !can_view_flagged_assets?(encrypted_channel_id)
+    not_found if profanity_privacy_violation?(filename, result[:body], project_type) && !can_view_flagged_assets?(encrypted_channel_id)
     not_found if code_projects_domain_root_route && !codeprojects_can_view?(encrypted_channel_id)
+    not_found if html_file?(filename) && !valid_html_file?(encrypted_channel_id, filename, result[:body].string)
+
+    # clients still get a 304 Not Modified from us if their cache is fresh,
+    # even if we had to fetch html from s3 to validate it
+    last_modified result[:last_modified]
 
     if code_projects_domain_root_route && html?(response.headers)
+      response.headers['Content-Security-Policy'] = "connect-src 'self'"
       return "<head>\n<script>\nvar encrypted_channel_id='#{encrypted_channel_id}';\n</script>\n<script async src='/weblab/footer.js'></script>\n<link rel='stylesheet' href='/weblab/footer.css'></head>\n" << result[:body].string
     end
 
@@ -276,7 +319,7 @@ class FilesApi < Sinatra::Base
   def should_sanitize_for_under_13?(encrypted_channel_id)
     return false if owns_channel?(encrypted_channel_id)
 
-    owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
+    owner_storage_id, _ = get_storage_id_and_project_id(encrypted_channel_id)
     owner_id = user_id_for_storage_id(owner_storage_id)
     under_13?(owner_id)
   end
@@ -350,7 +393,13 @@ class FilesApi < Sinatra::Base
       '//' + tag_dup
     end
 
-    Nokogiri::HTML(body).xpath(*disallowed_tag_selectors).empty?
+    # no HTML event handler attributes (on*), e.g. onclick, onsubmit, etc
+    disallow_on_attrs_selector = '//*[@*[starts-with(name(), "on")]]'
+
+    Nokogiri::HTML(body).xpath(
+      *disallowed_tag_selectors,
+      disallow_on_attrs_selector,
+    ).empty?
   end
 
   # Determine whether or not a file is a valid HTML file.
@@ -383,7 +432,7 @@ class FilesApi < Sinatra::Base
     end
   end
 
-  def put_file(endpoint, encrypted_channel_id, filename, body)
+  def put_file(endpoint, encrypted_channel_id, filename, body, project_type = nil)
     not_authorized unless owns_channel?(encrypted_channel_id)
     file_type = File.extname(filename)
     buckets = get_bucket_impl(endpoint).new
@@ -408,23 +457,30 @@ class FilesApi < Sinatra::Base
       quota_crossed_half_used(endpoint, encrypted_channel_id) if quota_crossed_half_used?(app_size, body.length)
     end
 
-    # Block libraries with PII/profanity from being published.
-    #
-    # Javalab's "backpack" feature uses libraries to allow students to share code
-    # between their own projects -- skip this check for .java files, since in this use case
-    # the files are only being used by a single user.
-    if endpoint == 'libraries' && file_type != '.java'
+    unless project_type
+      project = Projects.new(get_storage_id).get(encrypted_channel_id)
+      project_type = project[:projectType]&.downcase if project
+    end
+
+    # Block non-backpack files (e.g., App Lab libraries) with PII/profanity from being published
+    # or shared with other users.
+    # The "backpack" feature uses the libraries endpoint to allow users to share code
+    # between their own projects -- skip this check for backpack files since the files are
+    # only being used by a single user.
+    # Backpack is used in Java Lab, Python Lab, and Web Lab 2, but not in App Lab.
+    if endpoint == 'libraries' && project_type != 'backpack'
       begin
-        share_failure = ShareFiltering.find_failure(body, request.locale)
+        # For App Lab libraries (JSON format), extract only name, description and source (user-created text)
+        # instead of the raw JSON body. Scanning the raw JSON can produce false positives.
+        # Non-JSON library files (e.g. .js, .py) fall back to the raw body.
+        text_to_check = ShareFiltering.share_filter_text_from_library_request_body(body)
+        share_failure = ShareFiltering.find_failure(text_to_check, request.locale)
       rescue StandardError => exception
         return file_too_large(endpoint) if exception.instance_of?(WebPurify::TextTooLongError)
         details = exception.message.empty? ? nil : exception.message
         return json_bad_request(details)
       end
-      # TODO(JillianK): we are temporarily ignoring address share failures because our address detection is very broken.
-      # Once we have a better geocoding solution in H1, we should start filtering for addresses again.
-      # Additional context: https://codedotorg.atlassian.net/browse/STAR-1361
-      if share_failure && share_failure[:type] != "address"
+      if share_failure
         details_key = share_failure.type == ShareFiltering::FailureType::PROFANITY ? "profaneWords" : "pIIWords"
         details = {details_key => [share_failure.content]}
         return json_bad_request(details)
@@ -479,9 +535,25 @@ class FilesApi < Sinatra::Base
     if source.is_a?(Hash)
       # Iterate over each file
       source.each_key do |key|
-        # Multi-file source structure:
-        # {"source":{"MyClass.java":{"text":"“public class ClassName: {...<code here>...}”","isVisible":true}}
-        return false unless source[key]["text"]&.force_encoding("UTF-8")&.valid_encoding?
+        if source[key].is_a?(Hash) && source[key]["text"].is_a?(String)
+          # Multi-file source structure, used in Java Lab
+          # {"source":{"MyClass.java":{"text":"“public class ClassName: {...<code here>...}”","isVisible":true}}
+          return false unless source[key]["text"]&.force_encoding("UTF-8")&.valid_encoding?
+        elsif key == "files"
+          # Nested file source structure for lab2 labs such as Python Lab and Web Lab 2 is
+          # {files: {filename: {contents: "...<code here>...",...}}, folders: {id: {id: <id>, name: <folder_name>,...}}}
+          source[key].each_key do |file|
+            contents = source[key][file]["contents"]
+
+            # Sketch Lab sources are managed by a third party (Excalidraw)
+            # but also have a "files" attribute (with a different property structure),
+            # so we skip encoding checks there.
+            if contents && !contents&.force_encoding("UTF-8")&.valid_encoding?
+              return false
+            end
+          end
+        end
+        # TODO: do we need to validate folders?
       end
       return true
     end
@@ -539,8 +611,9 @@ class FilesApi < Sinatra::Base
     # this prevents us from rejecting large files based on the Content-Length
     # header.
     body = request.body.read
+    project_type = params[:projectType]
 
-    put_file(endpoint, encrypted_channel_id, filename, body)
+    put_file(endpoint, encrypted_channel_id, filename, body, project_type)
   end
 
   # POST /v3/assets/<channel-id>/
@@ -655,7 +728,7 @@ class FilesApi < Sinatra::Base
       versions = get_bucket_impl(endpoint).new.list_versions(encrypted_channel_id, filename, with_comments: request.GET['with_comments'])
       return versions.to_json if owns_channel?(encrypted_channel_id)
 
-      owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
+      owner_storage_id, _ = get_storage_id_and_project_id(encrypted_channel_id)
       owner_user_id = user_id_for_storage_id(owner_storage_id)
       return versions.to_json if teaches_student?(owner_user_id)
 
@@ -958,6 +1031,96 @@ class FilesApi < Sinatra::Base
   THUMBNAIL_FILENAME = 'thumbnail.png'
   METADATA_FILENAMES = [THUMBNAIL_FILENAME].freeze
 
+  # Assets-bucket metadata: which AssetManager upload was accepted after a
+  # flagged moderation verdict (at most one; further uploads are disabled).
+  # Uses "metadata/" (no leading dot) — ".metadata/" is flaky through some
+  # local proxies; files-bucket thumbnails keep ".metadata/" separately.
+  # The flagged *asset* name is in the JSON body, not the URL.
+  ASSETS_METADATA_PATH = 'metadata'.freeze
+  ASSETS_METADATA_FLAGGED = 'image_moderation_flagged'.freeze
+  ASSETS_METADATA_FLAGGED_ROUTE =
+    %r{/v3/assets/([^/]+)/#{ASSETS_METADATA_PATH}/#{ASSETS_METADATA_FLAGGED}$}
+  # {"filename":"<asset>"} is tiny; reject anything larger as abuse.
+  ASSETS_METADATA_FLAGGED_MAX_BYTES = 1024
+
+  def assets_metadata_flagged_path
+    "#{ASSETS_METADATA_PATH}/#{ASSETS_METADATA_FLAGGED}"
+  end
+
+  # Returns a normalized JSON string {"filename":"..."}.
+  # Raises ArgumentError if the body is invalid.
+  def parse_assets_metadata_flagged_body(body)
+    if body.nil? || body.bytesize > ASSETS_METADATA_FLAGGED_MAX_BYTES
+      raise ArgumentError, 'body too large or missing'
+    end
+
+    begin
+      data = JSON.parse(body)
+    rescue JSON::ParserError
+      raise ArgumentError, 'invalid JSON'
+    end
+
+    raise ArgumentError, 'expected object' unless data.is_a?(Hash)
+    filename = data['filename']
+    raise ArgumentError, 'filename required' unless filename.is_a?(String) && !filename.empty?
+    if filename.length > FileBucket::MAXIMUM_FILENAME_LENGTH
+      raise ArgumentError, 'filename too long'
+    end
+    if filename.include?('/') || filename.include?('\\')
+      raise ArgumentError, 'filename must not contain path separators'
+    end
+    # Same character set as AssetManager uploads (BucketHelper.replace_unsafe_chars).
+    if filename != BucketHelper.replace_unsafe_chars(filename)
+      raise ArgumentError, 'filename contains unsafe characters'
+    end
+
+    {filename: filename}.to_json
+  end
+
+  #
+  # PUT /v3/assets/<channel-id>/metadata/image_moderation_flagged
+  # Body: {"filename":"<asset-name>"}
+  #
+  put ASSETS_METADATA_FLAGGED_ROUTE do |encrypted_channel_id|
+    dont_cache
+    content_type :json
+    body = request.body.read
+
+    not_authorized unless owns_channel?(encrypted_channel_id)
+
+    begin
+      normalized = parse_assets_metadata_flagged_body(body)
+    rescue ArgumentError
+      bad_request
+    end
+    path = assets_metadata_flagged_path
+    AssetBucket.new.create_or_replace(encrypted_channel_id, path, normalized)
+    {filename: path}.to_json
+  end
+
+  #
+  # GET /v3/assets/<channel-id>/metadata/image_moderation_flagged
+  #
+  get ASSETS_METADATA_FLAGGED_ROUTE do |encrypted_channel_id|
+    dont_cache
+    not_authorized unless can_view_flagged_assets?(encrypted_channel_id)
+    result = AssetBucket.new.get(encrypted_channel_id, assets_metadata_flagged_path)
+    not_found if result[:status] == 'NOT_FOUND'
+    content_type :json
+    result[:body]
+  end
+
+  #
+  # DELETE /v3/assets/<channel-id>/metadata/image_moderation_flagged
+  #
+  delete ASSETS_METADATA_FLAGGED_ROUTE do |encrypted_channel_id|
+    dont_cache
+    not_authorized unless owns_channel?(encrypted_channel_id)
+
+    AssetBucket.new.delete(encrypted_channel_id, assets_metadata_flagged_path)
+    no_content
+  end
+
   #
   # PUT /v3/files/<channel-id>/.metadata/<filename>?version=<version-id>
   #
@@ -988,11 +1151,6 @@ class FilesApi < Sinatra::Base
     get_file('files', encrypted_channel_id, "#{METADATA_PATH}/#{filename}")
   end
 
-  MODERATE_THUMBNAILS_FOR_PROJECT_TYPES = %w(
-    applab
-    gamelab
-  )
-
   #
   # GET /v3/files-public/<channel-id>/.metadata/<filename>?version=<version-id>
   #
@@ -1001,38 +1159,7 @@ class FilesApi < Sinatra::Base
   get %r{/v3/files-public/([^/]+)/.metadata/([^/]+)$} do |encrypted_channel_id, filename|
     s3_prefix = "#{METADATA_PATH}/#{filename}"
     file = get_file('files', encrypted_channel_id, s3_prefix)
-
-    if filename == THUMBNAIL_FILENAME
-      project = Projects.new(get_storage_id)
-      project_type = project.project_type_from_channel_id(encrypted_channel_id)
-      if moderate_type?(project_type) && moderate_channel?(encrypted_channel_id)
-        file_mime_type = mime_type(File.extname(filename.downcase))
-        rating = ImageModeration.rate_image(file, file_mime_type, request.fullpath)
-
-        case rating
-        when :adult, :racy
-          # Incrementing abuse score by 15 to differentiate from manually reported projects
-          new_score = project.increment_abuse(encrypted_channel_id, 15)
-          FileBucket.new.replace_abuse_score(encrypted_channel_id, s3_prefix, new_score)
-          response.headers['x-cdo-content-rating'] = rating.to_s
-          cache_for 1.hour
-          not_found
-          return
-        when :unknown
-          # Content moderation was unable to scan the image, usually because we've exceeded
-          # the moderation service's request limit.  Return the default image for now and
-          # cache for 1-2 minutes to spread out future requests to the moderation service.
-          cache_for rand(60..120).seconds
-          send_file apps_dir('/static/projects/project_default.png'), type: 'image/png'
-          return
-        end
-      end
-    end
-
     cache_for 1.hour
-    # Because we _might_ have already read from this IO object during image
-    # moderation, rewind to the start of the file before responding with it.
-    file.seek(0, IO::SEEK_SET)
     file
   end
 
@@ -1053,21 +1180,122 @@ class FilesApi < Sinatra::Base
     no_content
   end
 
-  private
+  #
+  # POST /v3/images/moderate
+  #
+  # Moderate an image upload via ImageModeration using Azure AI Content Safety and return the
+  # moderation result as JSON. Returns null if the moderation service is unavailable.
+  #
+  post %r{/v3/images/moderate$} do
+    content_type :json
+    dont_cache
+
+    # Read the raw bytes and wrap in an IO.
+    raw = request.body.read
+    if raw.empty?
+      status 400
+      return {error: 'No image data provided.'}.to_json
+    end
+    image_stream = StringIO.new(raw)
+
+    # Determine reported MIME type (e.g. "image/png", "image/jpeg", "image/webp", "image/gif").
+    content_type_header = request.content_type
+
+    result = ImageModeration.moderate_image(image_stream, content_type_header)
+    result.to_json
+  rescue AzureAiContentSafety::UnsupportedContentType
+    status 400
+    allowed = SharedConstants::SAFE_AND_SUPPORTED_IMAGE_TYPES.map {|t| t.split('/').last.upcase}.join(', ')
+    {error: "Unsupported image type. Only #{allowed} files are allowed."}.to_json
+  end
+
+  def fetch_image_for_moderation(location, redirect_limit = 5)
+    raise URI::InvalidURIError.new if redirect_limit < 0
+
+    url = URI.parse(location)
+    raise URI::InvalidURIError.new if url.host.nil? || url.port.nil?
+    raise URI::InvalidURIError.new unless %w(http https).include?(url.scheme)
+
+    resolved_ip_address = SafeHttp.resolved_ip_address(url.host)
+    raise SecurityError.new('Image URL host is not allowed.') unless resolved_ip_address
+
+    http = SafeHttp.http_client(url, resolved_ip_address)
+
+    redirect_url = nil
+    body = nil
+    content_type = nil
+
+    # Stream the body so we can enforce max_file_size before an arbitrarily large
+    # payload is fully buffered (Content-Length may be missing or incorrect).
+    http.request_get(SafeHttp.request_path(url)) do |response|
+      if response.is_a?(Net::HTTPRedirection)
+        redirect_target = response['location']
+        raise URI::InvalidURIError.new if redirect_target.nil? || redirect_target.empty?
+        redirect_url = URI.join(url.to_s, redirect_target).to_s
+        next
+      end
+
+      unless response.is_a?(Net::HTTPSuccess)
+        raise StandardError.new("Image URL request failed with status #{response.code}.")
+      end
+
+      content_type = response.content_type
+      unless SharedConstants::SAFE_AND_SUPPORTED_IMAGE_TYPES.include?(content_type)
+        raise AzureAiContentSafety::UnsupportedContentType
+      end
+
+      content_length = response['content-length']&.to_i
+      if content_length && content_length > max_file_size
+        raise StandardError.new('Image URL content exceeds maximum file size.')
+      end
+
+      body = +''
+      response.read_body do |chunk|
+        body << chunk
+        if body.bytesize > max_file_size
+          raise StandardError.new('Image URL content exceeds maximum file size.')
+        end
+      end
+    end
+
+    return fetch_image_for_moderation(redirect_url, redirect_limit - 1) if redirect_url
+
+    raise StandardError.new('No image data provided.') if body.nil? || body.empty?
+
+    [body, content_type]
+  end
+
+  #
+  # POST /v3/images/moderate_url
+  #
+  # Moderate an image URL by fetching bytes server-side and passing them to
+  # ImageModeration (Azure AI Content Safety). Returns null if the moderation
+  # service is unavailable.
+  #
+  post %r{/v3/images/moderate_url$} do
+    content_type :json
+    dont_cache
+
+    payload = JSON.parse(request.body.read)
+    image_url = payload['url']
+    unless image_url.is_a?(String) && !image_url.empty?
+      status 400
+      return {error: 'No image URL provided.'}.to_json
+    end
+
+    raw, fetched_content_type = fetch_image_for_moderation(image_url)
+    result = ImageModeration.moderate_image(StringIO.new(raw), fetched_content_type)
+    result.to_json
+  # SecurityError is not a StandardError (inherits Exception directly).
+  rescue SecurityError, StandardError
+    status 400
+    {error: 'Unable to moderate image URL.'}.to_json
+  end
 
   #
   # Returns the (parsed) manifest associated with the given encrypted_channel_id.
   #
-  def get_manifest(bucket, encrypted_channel_id)
+  private def get_manifest(bucket, encrypted_channel_id)
     bucket.get_manifest(encrypted_channel_id)
-  end
-
-  def moderate_type?(project_type)
-    MODERATE_THUMBNAILS_FOR_PROJECT_TYPES.include?(project_type)
-  end
-
-  def moderate_channel?(encrypted_channel_id)
-    project = Projects.new(get_storage_id)
-    !project.content_moderation_disabled?(encrypted_channel_id)
   end
 end

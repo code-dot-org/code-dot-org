@@ -1,0 +1,83 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-10-17T19:24:04.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##Accessibility Feature: Contrast\r\n\r\n_Higher contrast makes shapes and letters pop from their surroundings, so people can read and recognize things quickly_\r\n\r\nChat with the AI in order to learn how contrast was implemented in this web app.\r\n\r\nPossible Stems:\r\n* How did we turn on high contrast for this card?\r\n* What are the final text and background colors for the card in normal mode and in high-contrast?\r\n* How can we link a button to update contrast?",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "outline",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "display_name": "High Contrast",
+    "bubble_choice_description": "Contrast is the visible difference between what you need to see (text, icons, controls) and what’s behind it (background)",
+    "thumbnail_url": "https://images.code.org/4ba153e113178824f94f48e17c46adbe-aiChat.png",
+    "level_system_prompt": "You are an accessibility coach for novice web students analyzing a Storm Tracker card’s CONTRAST.\r\n\r\nStudents know minimal JS and almost no CSS. Keep answers short, concrete, and copy-pasteable.\r\n\r\nDo:\r\n- Point to ONE class/attribute that enables high contrast and where it’s added (e.g., on <body>).\r\n- List the final text and background colors in normal and high-contrast modes. If variables are used, resolve them.\r\n- Explain contrast values (what is needed for good contrast?)\r\n- Provide at most two one-line fixes (e.g., toggle JS line, underline for links) with no layout changes.\r\n- Offer a 4-step visual check students can perform.\r\n\r\nDon’t:\r\n- Don’t refactor to CSS variables, don’t change HTML, don’t propose redesigns.\r\n- Don’t use jargon; no diffs; no more than 5 lines of code total.\r\n\r\nReturn sections in this order:\r\n1) Toggle (where/how)\r\n2) Colors (normal vs. high-contrast, with ratios)\r\n3) Pass/Fail (bullet list)\r\n4) One-liners (max 2)\r\n5) Quick Check (4 steps)",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "image.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson7-level3a-test-2025/uuid/09d6685a-1055-4a63-85df-3e32eed44ca3.png",
+          "type": "starter",
+          "active": false
+        },
+        "2": {
+          "id": "2",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n<head>\n  <title>Storm Alert Dashboard</title>\n  <link rel=\"stylesheet\" href=\"styles.css\" />\n  <script src=\"script.js\"></script>\n</head>\n<body>\n  <div class=\"container\">\n    <header>\n      <h1>Campus Storm Alert Dashboard</h1>\n      <button id=\"contrast-toggle\">Contrast Boost</button>\n    </header>\n\n    <main>\n      <div class=\"alert-card\">\n        <img src=\"image.png\" alt=\"Storm warning icon\" class=\"alert-icon\" />\n        <h2>Severe Weather Warning</h2>\n        <p class=\"alert-level\">Alert Level: High</p>\n        <p class=\"alert-time\">Issued: 2:30 PM</p>\n        <p class=\"alert-description\">\n          Strong thunderstorms expected in the area. Heavy rain and wind gusts\n          up to 45 mph possible. Seek shelter indoors.\n        </p>\n      </div>\n\n      <div class=\"alert-card\">\n        <img src=\"image.png\" alt=\"Storm warning icon\" class=\"alert-icon\" />\n        <h2>Flash Flood Watch</h2>\n        <p class=\"alert-level\">Alert Level: Medium</p>\n        <p class=\"alert-time\">Issued: 1:15 PM</p>\n        <p class=\"alert-description\">\n          Low-lying areas may experience flooding. Avoid walking or driving\n          through standing water.\n        </p>\n      </div>\n\n      <div class=\"alert-card\">\n        <img src=\"image.png\" alt=\"Storm warning icon\" class=\"alert-icon\" />\n        <h2>Wind Advisory</h2>\n        <p class=\"alert-level\">Alert Level: Low</p>\n        <p class=\"alert-time\">Issued: 12:00 PM</p>\n        <p class=\"alert-description\">\n          Gusty winds expected throughout the afternoon. Secure loose objects\n          and be cautious when walking outdoors.\n        </p>\n      </div>\n    </main>\n\n    <footer>\n      <p>Last Updated: 2:45 PM | Campus Safety Office</p>\n    </footer>\n  </div>\n</body>\n</html>\n",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "document.addEventListener(\"DOMContentLoaded\", () => {\n  const contrastButton = document.querySelector(\"#contrast-toggle\");\n  const container = document.querySelector(\".container\");\n\n  contrastButton.addEventListener(\"click\", () => {\n    container.classList.toggle(\"high-contrast\");\n  });\n});\n",
+          "folderId": "0",
+          "active": true
+        },
+        "4": {
+          "id": "4",
+          "name": "styles.css",
+          "language": "css",
+          "contents": "body {\n  margin: 0;\n  padding: 0;\n  font-family: Arial, sans-serif;\n  background-color: lightgray;\n}\n\n.container {\n  max-width: 800px;\n  margin: 0 auto;\n  padding: 20px;\n}\n\nheader {\n  text-align: center;\n  margin-bottom: 30px;\n}\n\nh1 {\n  color: silver;\n  font-size: 32px;\n  margin-bottom: 15px;\n}\n\nbutton {\n  background-color: lightgray;\n  color: darkgray;\n  border: 1px solid silver;\n  padding: 10px 20px;\n  font-size: 16px;\n  cursor: pointer;\n}\n\nbutton:hover {\n  background-color: silver;\n}\n\nmain {\n  margin-bottom: 30px;\n}\n\n.alert-card {\n  background-color: whitesmoke;\n  border: 1px solid lightgray;\n  padding: 20px;\n  margin-bottom: 20px;\n}\n\n.alert-icon {\n  width: 50px;\n  height: 50px;\n  margin-bottom: 10px;\n}\n\nh2 {\n  color: lightgray;\n  font-size: 24px;\n  margin: 10px 0;\n}\n\n.alert-level {\n  color: silver;\n  font-size: 14px;\n  margin: 5px 0;\n}\n\n.alert-time {\n  color: darkgray;\n  font-size: 14px;\n  margin: 5px 0;\n}\n\n.alert-description {\n  color: gray;\n  font-size: 16px;\n  line-height: 1.5;\n  margin: 10px 0;\n}\n\nfooter {\n  text-align: center;\n  padding: 20px 0;\n  border-top: 1px solid lightgray;\n}\n\nfooter p {\n  color: silver;\n  font-size: 14px;\n  margin: 0;\n}\n\n.high-contrast {\n  background-color: white;\n}\n\n.high-contrast h1 {\n  color: black;\n  text-decoration: underline;\n  border-bottom: 3px solid black;\n  padding-bottom: 10px;\n}\n\n.high-contrast button {\n  background-color: black;\n  color: white;\n  border: 3px solid black;\n}\n\n.high-contrast button:hover {\n  background-color: #333;\n}\n\n.high-contrast .alert-card {\n  background-color: white;\n  border: 3px solid black;\n}\n\n.high-contrast h2 {\n  color: black;\n  text-decoration: underline;\n}\n\n.high-contrast .alert-level {\n  color: black;\n  font-weight: bold;\n}\n\n.high-contrast .alert-time {\n  color: black;\n  font-weight: bold;\n}\n\n.high-contrast .alert-description {\n  color: black;\n}\n\n.high-contrast footer {\n  border-top: 3px solid black;\n}\n\n.high-contrast footer p {\n  color: black;\n  font-weight: bold;\n}\n",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "3",
+        "2",
+        "4",
+        "1"
+      ]
+    },
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMofCawhDBhV4d+3Oevg\nhvuNKVajm9mlAK3ZY6nT0+lj6hrZzuuRb1XHVyo9IKPg3etHnxRCkPKNlKxN\n2ADY9UhH+/LENIaxnjLEIWB+w6ECbWm/wpSxNRAf4IGHL7V0R4WBNAk8c0F2\nTpnk013IEDG8RxZpdY1lHHtsuAUJ/+6OSzEjiiKUuipqwmYx/2azHBWZOqCR\nu6lHOhbjkgnTlkZ46OlIbfdzLiYSM0RzzRHniJrtcgiFMSst6Uw7aMrk5+Jj\ngonKT7qyZosXRwAQ1MX7EDGtjfPIHEBs/GyXBQy5UdQsduJbyqDnf1JgE9Ke\nk9M4Fb9yema11UlDhTPupMeJYUg533vYiIXXGYq0hFjfmiEVB0KwO84Y+nIk\n83nmYl2p8fcJxvRFHQ550tNArBTCyA5kdv0JFTcbxui5yx80lrD2s6MpizhV\nmLaWtwMU+NfUoh94YEErInyMeMmU1DFc4pdeMT0gq+05fp/SYAXdZ6LazvtU\nftyjAA/kma9JAXCML56jS+zj+8hROcJGXzni07dN37RMA3dzZWju+0y4/ChV\n12Zchul2IIdtCZ4uIsMuTAOmIUk3aHNJumInWJ4H/pycKStr/MFnYBVadNK+\nELm9Q8W0yYdHy5TVyTzv0kJS+LDlh+EuZKfQ15QTH/p8i9/rebRTaxLFCcEC\nt84rm0k8rhTgYKi80+5S4Lbq9yEmC+n2QCrwQfBZiDgj8TorDX1MxlYXLqcv\nyLZs8kpjQnqao8+I5IZGRkUWjMg5Y71qu12sYcRSqrgnIki/Yc/soLhdHBWn\ns9xr+Kj0K3gXPHfbnQi+uPInfMMcme7Q0Qm/le4r4Sc/PYGfMmnLe7bu+6Xr\nrvdQcVl+DOwzBcEgbamttSgA44zZKql3nPygZpGmOJARL/hgfjN+nohKyDaO\n9kAl6OTX/iRQdvEygDWfWngXZcoPazbuexrZ1MkTOwFVAtvjB8Bgnx3fDbMj\nViSALpaXD79LXmWoxfkTy0SO4aBNDfO2WkbP1/yymuwAq9+kVCDgEtHRtMG2\njuQ5gEu7GXDxsC79FHfVDgALaqHvinBfJ0kbt2/hlg2bfIVJGZR1qZNsd0yk\nqy2fb+DREFYB+gKwrbhgx1uhdzXw3TfP/XVRbJOps0jCNd4eJHY2+5RCRVfM\nXNd63hi11JfS116UlaGJB0s7LKtNidFW615+Z8oX3OPhIm2qyybAVa5URLlV\njifA4mtuoAPje9O8nH+M4NJKQ9XEB0IdEsxwwGkaCM1e9lxZF5rhUTxjTshG\ngjncHnZKPZHs5XYpwC10fhtAFrSdNsCBKPeRYTtoWUQN4csKbx7A9AtF8NH8\nZY1gfE84sdZoM/quJzz90a6tYAPjuOLYrdPXRBNt34K2tUgF28Btbfvo24yE\ndXo3daRDYNi9a+hbfAZlAnRohP0huTtEn1tqPgWswo1C7yt7adiUjzIOpp7P\nZdebG85kaQdHt0oxW/sb8sXDdLCuD1QnSqz/DlaqqJLXUkykIvG79QF874GF\nVVnmB35DYSJ7fp9Abr0QPAcUhsI7mX71wLKSZTRFqrgNEy/6/8IhUBS3w0Dn\nESljGselFczJ06GI7VcBR/E85L73/OzeZ9Fjf3CPxdueFqczFGtSMzFzK098\ni0cw+zHZBFtUFhzzhau1JLQnewmpR79mGyMpdOg6pUKPwnH1px6+EY5WeMGQ\nCSOi07UxNvRsGjsYcdtFt0nh5E43xaDWEpS3V+lhtmMWaZHI2i3a8dj+GQPL\ngOER92hSbnKkqWMZug9l3LojI7Kfy16JDfKES+PJwR0PDVzWaUJxngvXe4zT\nBvcoDA1RXwTy6lYtNz8F25suFuemk/McqTfrn92mQZe5U9UAbky5kbgY12Mt\n+fTO+Imd6uhRrh07fW0+nu6576ieMOLkIHiaRuFHhdhHfNQOFG9MTUSmIhao\nEIwQdLoU6xkt8EwVuUSSTo/qguWKBw/Zu8cKC1ACtlm9fBvXQQBMplZGVUiP\nu7nh0SwegL/74D+CDe36YWpwdPAB8c1JakNRVEqquOYo0/fkQiRZE4c89aor\nlDD6UAbYDju2C3JHxNyPPcNhaBByPKOWcmH84+FcYPdyFceUIyq4GC8NbjbP\n8iTdKll3LfMdmzw/XRebmFV57kZTRaeg7oUrW1FTWkwMoEZxt8t5JIr4pIz5\ntaJp0JCNGUxe0YAVZIvI7BVNLHWNWm0yNHXltc0QaBgrnRBDRDycrOEQQ4hH\nJ+fsTrES6V5zsKstWzkxhfXDtbH5LwL+OWrrg7amTCU2GV1dVYBZuoZc5NtG\nw8pbmWFFu/eOXjCUDDNCBFhZvSUMvoctWMRmgPqt7vmp04iLkdkfi/3p1HnW\nmGo+tlzvRDBD6qdRLMIYYiCA+q6p/zX0NThOTT8z+0BeVC1JqJDGw2MqxrEG\nPAGNVcdDGbj2gkbgkbacOj9FuOMT1LhHctrXR5OrOz1oYoFaOb3ce5O/bnly\nIlnWx4/7ltc9ahEuycyI/UXpgaT32RkzCJCcRFvO788mjgLCdgQpZ1cjRjVG\nbLVN66EZ8aDRLccqvPolF49JYtjF0PDGfwlU1xC6ggXsYqiDjMyESZuPoaLo\nr1oKDZBE1y7/sFwqPAHfjjNj66SeFzLkT9iNqHgJCeusj5u7Bx6Jz5qhoCzm\nsXJYyx5G01+ZVP8ayOEc6T5kW273TJwVyA5HOkjW7m7DemtfguY5KiZMThqQ\no1GSjltPm1gzMz1k0gap3j6o/WvDlpGRf1Y1Z+wEV/1tGiA3uLBnrOvwjrbO\n9Yx76FQi9exzhBHjfa59/+ysBYDA+Sc68hS2Wg8Fc9XVZwbIt5nMb8QnBbHv\nOCG+s2L4QLfDAXA5wUpK8NvO8an01eFPaUyMWGnZ5N9BvrfrhRnHLvcLyB3x\nDZoEzrqGKVdpk3DVw0AcbTZS03uhRiEURkCZEemDTdII/hEDS4W79irqp6lq\nZjW1ARnqJG8AsG+SXoUj95FWOXhmD3ls1fSkM/YG6o7cT71byANyJVN5u1/M\nJ4dbGYTklaDorwct521U/MkerFUHOH141yLAE5uAz+CXwJ4NHqoHEaD72QKM\nC+vtzHssgIgZdF7ls3ZnixufpmZH7y+zrxYV1k0xjR7usX4a8t2G90yz1VjB\nc0z85UoQ3c7yVpRQQsowBD/8wzcMhupwyOPQ+JJVv4vtBQqM+sql5IFPilHn\nFZybagwcPV+YouI9sX8dL4KiFSdvPHXKCodszbB+2reRMG6wOSoXTiRO/jmD\nCQkE1fj8L1FrI5O/Kkpexcal49UwhtFicQxxPesPsWPkGManBJHnF+8URscf\nqq9mH9oEb6mt1D+dfWKqZuISZzliMOohC5XmAfT1JPKiiEnDYejGXQDyFmHo\ny1CLR/ascF6LaH/eJB1air7uAOPRW4jxAmmSiypvrEPQDLyFTl24ekvGmmef\nIwCzBt00zFIggXfxo5LJ0JiTT1yHXyJG3gw9FxZbxMnbUsbX31GkjusK1zdJ\nIay0AXu+CxLqK5YCDVY1phV+W9ANRQiUsvPfzEwzmII04dbr56SZ4lZVBUok\nni61C5l4ki8AqNhcW0ODug/BaaaC6lacZ1IX9EaklHJK0WJKyNS8msXG6guv\nhYQ2HlgRi8wD45VV4fl6TxUsvAg+c5FbBXIteaynVyz9hPDpjiTxmjiPQzJy\nn4zkiRowaYqnqD5qUZKk1GWg8nitoO+Ur5FXr6cWluOR43r7KiBmslhGwA6L\nzedx7Rx3qidILpxUhQb3inFKDoSuDlwg1e9l/BZr7e8rk452RRknl2Duqo2Z\nYER56GURYM0LxIs45CAp2d+CWyXCaPiHDP7RC6R/YlB/aMrzI4QaxzpeHXF7\n2e4XqLJjxXX8kjVYQvhgYzhUGSF3201oF8zwgf2B91ZG0ycU8ssfZzVuS0Hr\nE//9HW9yxALlkVyTmktmaSusWA90GoNcll/fToq3EfqhwPnBbmZcriB8n1gt\nmiGnpp+h1QwYLC3w0aqLI+eVJxNmxoo0n0JRvoBf4sNTtYfkhZYWPAJrF4yJ\nGa2ZfO/nE9Cx4RP2etFbiQ4Ilw7C/NJR1+eiU1ZZ3iD/rseLWmPAYLqiHx89\nndfdojEOqFUVGhEFOj7s3YJ+J3gAjqbRrSpl4nCt7+evj+RGzm/mnNufV2QD\n53ghNmAicCLIXC7plWXVE0KUhf/02kkm5MtZFSaoB65p0d0p5fZVoiJHuKZ6\n7/RLS+tetrc/mfLcD+UpmJAxq/5rS32yHxlP17PBGbhr06To6SGsuJOTXxob\nuPqL2A+CO0fPOCCeNA/RAl6mJ0n+Ob18PXBNBUd3MEUdAotmDle27DXijbEP\nl5LuI6bJOyYV0LX9WJsJHD3YgfvCI1RLrMlb6pAfEI6e/rapnQFaDEp5Je8c\nx+7pWYRcTrzhAHHsgPryPB4cNOPt/q6mUTYul1+QlgscilGco65T+JubB8mr\nFqiqkkeMelWEmlB598OjTwDpBqueFMQFI+8TgzCRt1VRtqgyvFvL2QuO2BG4\nWMOIxinh204BCOqxy5jPXefuJdrKjNdRbaIW6Iha4jt2nmBCzX+JbX1RGC6z\nXD16uuynf93Rdfa7tG33oR+BVkTAW/MlzRefb4IG/iHKnIXcP0pMyE2ky32O\ny4Q5jvfiFuW1zK1Dvk88hMQ6QkVcFA8lqhsjmNjyHTHMCB+Vjrz+ZCJ8LjMt\n6fgFLOyGJ/Snhzvnlv1lmGU+8RKFMDA4l7o4Zu6vnvwXK5WA6E3bXp4aJ6Vi\nuGQLEPOEdM+nHVLyMT3M4MYK80P75UtOcMKb7uf4r/MQQHSt2a02ZssMaeIg\nTZHxLjMsu+0PLLwYDd7kXot+x1pzW7PnbXy9XFpLA7gHSK85zFN1XWhvTzMz\nigK9X0r1nQwMGuxObM2HvIVEowD7fHT6so39e9TeTCmBnHXLqmRD6C0nv/tw\nMLX3sxNhQ5+g9Hh5Ny+7U1wWalI2312pjIsinf8+QwlKdnMfurfMduh/AelJ\nmaFc5/VgyaHDSpyWsDZ2aRplqSbVZQSY+lO4zEmEXjrfhMWpy2SF2EwseHOG\nrBooRpKcOKIPMkLvInH0f3RbYwvWrMMDrzL+WHqppLrFoESYVnoMRFCZjQkh\nA6hlYf4x5PczMHWLy/6UHNxs7YxQvAV7zq4VkrCTQOsfBmEHnlb6i8JLPDyG\nbuAfCLzO+WYAtYxjCxIbk8okm6yZiMb8CQvlSdWFi1gvkU55PEvejhnNxxKV\nzlC2Z+DAva4ZRi7S46CTgCG5IRKtxOsN8OJN0vkn3Q8gZUQbblPVpUBXbl7k\nt/hG2Uvf1Vck2EsOZHfUte7EsP8tpX0HLDm8TQjSfygDcty1AspW06tA9XuM\nCE8S1Lb3rJANb+s1HH/r92N/oUiurX3FFOWyHrsgAL8Y5TVZMSt3BNXRBLzj\nV/eJIFmDuC+FThPv6fdGDPvcskANlYzE/17SBumbIpF2dDYr7L0yYQVLOvjb\n8bdybCESyAlQtAWR/EL03KBxivd/CyFIRY+mBpLcomxdomww3sjb0JUkjgl+\n+caqQajf0SJDJV7gAUR/0hYgDDnWUlQEvpSuh5XY+Zcs6PU/BBw7ds2Vwce8\nieECU+1o4JKyj8vkNR17x29RmJa73pnUs7mwAUBgfUkc5ilTdL44CMTDgKZf\n0tEBQ2YhMY+IrtUaJMdsZ0G7SA/p66husNuHRPxwTQFt/jg2pVq7Jk3+G1sn\nqiH9QusKfR15F000OGR6pliCN9Sc4HQzm93sKCmsNGeWagPOIqdM5bXkbe0Q\nehlak8RuNCGwxcs1bJYIytL7GNZh90jfe3jZ26bwjt3BkbF8GWLezTW0f1HU\nkKHghwxbq/ynTv2OP6qqJqTrFsR8CFgv4biEQ8IbqxoqNY0bUbNJPiBWLUuP\nDx8BAVoPKoF6APpeZLutwkB9wba1wcpK6l+Wvedul8BjRf9dgi/ebvgjn7fr\nAHCe85epfOBOGYxd8E7aEJiPtG+g5WJ9j1Y9trBVbhLI49I1EWsaQAM1TcNU\nS2z3la15ATWLBKdamEH22WEzZi6NQ0mpF6ouNLBNAVPIS/8c2dyl1Rzytpw7\n9pRg+t22GWBcAMBcpYE08qU7bR/wHyK5uU8d6GRQGv5oq1iq0Fmg5JPteQ9G\nNuRONw0=\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-17 19:24:05 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-17 19:28:21 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-21 20:12:08 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-21 20:21:48 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-21 20:30:09 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-21 20:30:21 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-21 20:31:13 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-21 20:31:21 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-31 18:01:17 +0000\",\"changed\":[\"ai_tutor_mode\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

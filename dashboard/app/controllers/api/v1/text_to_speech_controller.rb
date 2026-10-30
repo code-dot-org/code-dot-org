@@ -34,6 +34,6 @@ class Api::V1::TextToSpeechController < Api::V1::JSONApiController
   end
 
   private def locale
-    params[:locale] || request.locale
+    params[:locale] || I18n.locale.to_s
   end
 end

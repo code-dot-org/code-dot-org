@@ -1,0 +1,27 @@
+name 'Data Sci U2 Post Q3_2024-pilot'
+
+
+
+wrong 'legend, name, True, graph'
+wrong 'grid, label, lines, table'
+wrong 'color, label, black, showlegend'
+right 'color, label, True, legend'
+
+
+
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+Given the following code snippet, choose the answer that will correctly fill in the blanks to create a graph that has a legend, grid lines, and a labeled green line:
+
+```
+plt.plot(x, y, _____ = ‘green’, ______ = 'Data Line' ) 
+plt.xlabel('X-Axis Label') 
+plt.ylabel('Y-Axis Label') 
+plt.title('Line Plot Title') 
+plt.grid(____) 
+plt._____() 
+plt.show()
+```
+MARKDOWN

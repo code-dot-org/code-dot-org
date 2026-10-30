@@ -1,0 +1,9 @@
+name 'programming-fundamentals-lesson6-level6_2025-launch_pilot-2025'
+display_name 'Build a Bigger Function'
+description 'Choose **ONE** scenario and create a new function that brings together smaller ones.'
+
+sublevels
+level 'programming-fundamentals-lesson6-level6a_2025-launch_pilot-2025'
+level 'programming-fundamentals-lesson6-level6b_2025-launch_pilot-2025'
+level 'programming-fundamentals-lesson6-level6c_2025-launch_pilot-2025'
+level 'programming-fundamentals-lesson6-level6d_2025-launch_pilot-2025'

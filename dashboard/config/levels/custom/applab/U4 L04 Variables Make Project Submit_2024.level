@@ -1,7 +1,7 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2024-01-12T21:32:49.000Z",
+  "created_at": "2025-06-11T18:57:19.000Z",
   "level_num": "custom",
   "user_id": 832,
   "properties": {
@@ -26,8 +26,8 @@
     },
     "encrypted_examples": "es/ZziwLN0gMvrSJknv/dZ71IY4KDIyJ0Rp9k1tMQQ5htdii4umjrKukWGIw\ne4d3uLkdwXejQTHame+WGMQ2qg==\n",
     "reference_links": [
-      "/docs/concepts/patterns/counter-patterns-with-event/",
-      "/docs/concepts/patterns/variable-with-string-concatenation-pattern/"
+      "/courses/csp-2024/guides/counter-patterns-with-event",
+      "/courses/csp-2024/guides/variable-with-string-concatenation-pattern"
     ],
     "embed": "false",
     "instructions_important": "false",

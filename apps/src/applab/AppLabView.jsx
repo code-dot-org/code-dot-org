@@ -2,17 +2,20 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
+
+import ExternalRedirectDialog from '@cdo/apps/applab/ExternalRedirectDialog';
+
+import VisualizationResizeBar from '../code-studio/components/VisualizationResizeBar';
+import DataWorkspace from '../storage/dataBrowser/DataWorkspace';
+import CodeWorkspace from '../templates/CodeWorkspace';
+import InstructionsWithWorkspace from '../templates/instructions/InstructionsWithWorkspace';
+import StudioAppWrapper from '../templates/StudioAppWrapper';
+
+import ApplabVisualizationColumn from './ApplabVisualizationColumn';
+import {ApplabInterfaceMode, WIDGET_WIDTH} from './constants';
 import ImportProjectDialog from './ImportProjectDialog';
 import ImportScreensDialog from './ImportScreensDialog';
-import ApplabVisualizationColumn from './ApplabVisualizationColumn';
-import StudioAppWrapper from '../templates/StudioAppWrapper';
-import InstructionsWithWorkspace from '../templates/instructions/InstructionsWithWorkspace';
-import {ApplabInterfaceMode, WIDGET_WIDTH} from './constants';
-import CodeWorkspace from '../templates/CodeWorkspace';
-import DataWorkspace from '../storage/dataBrowser/DataWorkspace';
 import ProtectedDesignWorkspace from './ProtectedDesignWorkspace';
-import VisualizationResizeBar from '../lib/ui/VisualizationResizeBar';
-import ExternalRedirectDialog from '@cdo/apps/applab/ExternalRedirectDialog';
 
 /**
  * Top-level React wrapper for App Lab.

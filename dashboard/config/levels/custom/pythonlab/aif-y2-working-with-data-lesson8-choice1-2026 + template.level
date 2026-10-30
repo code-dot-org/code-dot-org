@@ -1,0 +1,46 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-09-07T21:55:43.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "import matplotlib.pyplot as plt\n\n# Rap\nrap_bpm = [140, 95, 128, 84, 150, 102, 88, 134, 78, 145, 110, 92, 155, 120, 86, 138, 98, 112, 82, 130]\nrap_danceability = [0.88, 0.79, 0.92, 0.85, 0.81, 0.90, 0.71, 0.87, 0.83, 0.75, 0.94, 0.84, 0.78, 0.86, 0.91, 0.68, 0.89, 0.77, 0.82, 0.85]\n\n# R&B\nrnb_bpm = [72, 90, 65, 104, 80, 96, 68, 112, 76, 88, 62, 100, 84, 70, 108, 94, 66, 82, 98, 74]\nrnb_danceability = [0.64, 0.72, 0.58, 0.84, 0.68, 0.61, 0.70, 0.79, 0.55, 0.66, 0.73, 0.62, 0.86, 0.59, 0.71, 0.67, 0.76, 0.63, 0.69, 0.57]\n\nplt.scatter(rap_bpm, rap_danceability)\nplt.scatter(rnb_bpm, rnb_danceability)\n\nplt.show()",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-07 21:56:03 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 21:56:10 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

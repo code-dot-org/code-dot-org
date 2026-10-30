@@ -1,27 +1,23 @@
-import React, {useState} from 'react';
+import CloseButton from '@code-dot-org/component-library/closeButton';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography} from '@mui/material';
+import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import style from './rubrics.module.scss';
+import React, {useState} from 'react';
+
 import i18n from '@cdo/locale';
-import {
-  BodyThreeText,
-  BodyTwoText,
-  Heading5,
-} from '@cdo/apps/componentLibrary/typography';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+
+import LearningGoals from './LearningGoals';
 import {
   aiEvaluationShape,
   reportingDataShape,
   rubricShape,
   studentLevelInfoShape,
 } from './rubricShapes';
-import LearningGoals from './LearningGoals';
-import Button from '@cdo/apps/templates/Button';
-import HttpClient from '@cdo/apps/util/HttpClient';
-import classnames from 'classnames';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import SectionSelector from './SectionSelector';
 import StudentSelector from './StudentSelector';
-import SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSelector';
+
+import style from './rubrics.module.scss';
 
 const formatTimeSpent = timeSpent => {
   const minutes = Math.floor(timeSpent / 60);
@@ -38,6 +34,7 @@ const formatLastAttempt = lastAttempt => {
 };
 
 export default function RubricContent({
+  productTour,
   studentLevelInfo,
   rubric,
   open,
@@ -47,54 +44,19 @@ export default function RubricContent({
   reportingData,
   visible,
   aiEvaluations,
+  feedbackAdded,
+  setFeedbackAdded,
+  sectionId,
+  reloadOnStudentChange = true,
 }) {
   const {lesson} = rubric;
   const rubricLevel = rubric.level;
 
-  const [isSubmittingToStudent, setIsSubmittingToStudent] = useState(false);
-  const [errorSubmitting, setErrorSubmitting] = useState(false);
-  const [lastSubmittedTimestamp, setLastSubmittedTimestamp] = useState(false);
-  const [feedbackAdded, setFeedbackAdded] = useState(false);
-  const submitFeedbackToStudent = () => {
-    analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_SUBMITTED, {
-      ...reportingData,
-      studentId: studentLevelInfo.user_id,
-    });
-    setIsSubmittingToStudent(true);
-    setErrorSubmitting(false);
-    const body = JSON.stringify({
-      student_id: studentLevelInfo.user_id,
-    });
-    const endPoint = `/rubrics/${rubric.id}/submit_evaluations`;
-    HttpClient.post(endPoint, body, true, {'Content-Type': 'application/json'})
-      .then(response => response.json())
-      .then(json => {
-        setIsSubmittingToStudent(false);
-        if (!json.submittedAt) {
-          throw new Error('Unexpected response object');
-        }
-        const lastSubmittedDateObj = new Date(json.submittedAt);
-        setLastSubmittedTimestamp(lastSubmittedDateObj.toLocaleString());
-      })
-      .catch(() => {
-        setIsSubmittingToStudent(false);
-        setErrorSubmitting(true);
-      });
-    if (feedbackAdded) {
-      analyticsReporter.sendEvent(
-        EVENTS.TA_RUBRIC_SUBMITTEED_WRITTEN_FEEDBACK,
-        {
-          ...reportingData,
-          studentId: studentLevelInfo.user_id,
-        }
-      );
-      setFeedbackAdded(false);
-    }
-  };
-
   let infoText = null;
   if (!onLevelForEvaluation) {
     infoText = i18n.rubricCanOnlyBeEvaluatedOnProjectLevelAlert();
+  } else if (!sectionId) {
+    infoText = i18n.selectASectionToEvaluateAlert();
   } else if (!studentLevelInfo) {
     infoText = i18n.selectAStudentToEvaluateAlert();
   }
@@ -109,19 +71,18 @@ export default function RubricContent({
     >
       {infoText && <InfoAlert text={infoText} />}
       <div className={style.studentInfoGroup}>
-        <Heading5>
-          {i18n.lessonNumbered({
-            lessonNumber: lesson.position,
-            lessonName: lesson.name,
-          })}
-        </Heading5>
+        <Typography variant="h3" gutterBottom>
+          {lesson?.title}
+        </Typography>
 
         <div className={style.selectors}>
-          <SectionSelector reloadOnChange={true} requireSelection={false} />
+          <SectionSelector reloadOnChange={true} />
           <StudentSelector
             styleName={style.studentSelector}
             selectedUserId={studentLevelInfo ? studentLevelInfo.user_id : null}
-            reloadOnChange={true}
+            reloadOnChange={reloadOnStudentChange}
+            sectionId={sectionId}
+            reportingData={reportingData}
           />
         </div>
 
@@ -131,41 +92,56 @@ export default function RubricContent({
               {onLevelForEvaluation && (
                 <div className={style.studentMetadata}>
                   {studentLevelInfo.timeSpent && (
-                    <BodyThreeText className={style.singleMetadatum}>
-                      <FontAwesome icon="clock" />
+                    <Typography
+                      className={style.singleMetadatum}
+                      variant="body3"
+                      gutterBottom
+                    >
+                      <FontAwesomeV6Icon iconName="clock" />
                       <span>{formatTimeSpent(studentLevelInfo.timeSpent)}</span>
-                    </BodyThreeText>
+                    </Typography>
                   )}
-                  <BodyThreeText className={style.singleMetadatum}>
-                    <FontAwesome icon="rocket" />
+                  <Typography
+                    className={style.singleMetadatum}
+                    variant="body3"
+                    gutterBottom
+                  >
+                    <FontAwesomeV6Icon iconName="rocket" />
                     {i18n.numAttempts({
                       numAttempts: studentLevelInfo.attempts || 0,
                     })}
-                  </BodyThreeText>
+                  </Typography>
                   {studentLevelInfo.lastAttempt && (
-                    <BodyThreeText className={style.singleMetadatum}>
-                      <FontAwesome icon="calendar" />
+                    <Typography
+                      className={style.singleMetadatum}
+                      variant="body3"
+                      gutterBottom
+                    >
+                      <FontAwesomeV6Icon iconName="calendar" />
                       <span>
                         {formatLastAttempt(studentLevelInfo.lastAttempt)}
                       </span>
-                    </BodyThreeText>
+                    </Typography>
                   )}
                 </div>
               )}
               {!onLevelForEvaluation && rubricLevel?.position && (
-                <BodyThreeText>
+                <Typography variant="body3" gutterBottom>
                   {i18n.feedbackAvailableOnLevel({
                     levelPosition: rubricLevel.position,
                   })}
-                </BodyThreeText>
+                </Typography>
               )}
             </div>
           </div>
         )}
       </div>
       <div className={style.learningGoalsWrapper}>
-        <Heading5>{i18n.rubric()}</Heading5>
+        <Typography variant="h4" gutterBottom>
+          {i18n.rubric()}
+        </Typography>
         <LearningGoals
+          productTour={productTour}
           open={open}
           learningGoals={rubric.learningGoals}
           teacherHasEnabledAi={teacherHasEnabledAi}
@@ -178,39 +154,12 @@ export default function RubricContent({
           aiEvaluations={aiEvaluations}
         />
       </div>
-      {canProvideFeedback && (
-        <div className={style.rubricContainerFooter}>
-          <div className={style.submitToStudentButtonAndError}>
-            <Button
-              id="ui-submitFeedbackButton"
-              text={i18n.submitToStudent()}
-              color={Button.ButtonColor.brandSecondaryDefault}
-              onClick={submitFeedbackToStudent}
-              className={style.submitToStudentButton}
-              disabled={isSubmittingToStudent}
-            />
-            {errorSubmitting && (
-              <BodyThreeText className={style.errorMessage}>
-                {i18n.errorSubmittingFeedback()}
-              </BodyThreeText>
-            )}
-            {!errorSubmitting && !!lastSubmittedTimestamp && (
-              <div id="ui-feedback-submitted-timestamp">
-                <BodyThreeText>
-                  {i18n.feedbackSubmittedAt({
-                    timestamp: lastSubmittedTimestamp,
-                  })}
-                </BodyThreeText>
-              </div>
-            )}
-          </div>
-        </div>
-      )}
     </div>
   );
 }
 
 RubricContent.propTypes = {
+  productTour: PropTypes.bool,
   onLevelForEvaluation: PropTypes.bool,
   canProvideFeedback: PropTypes.bool,
   rubric: rubricShape.isRequired,
@@ -220,6 +169,10 @@ RubricContent.propTypes = {
   teacherHasEnabledAi: PropTypes.bool,
   visible: PropTypes.bool,
   aiEvaluations: PropTypes.arrayOf(aiEvaluationShape),
+  feedbackAdded: PropTypes.bool,
+  setFeedbackAdded: PropTypes.func,
+  sectionId: PropTypes.number,
+  reloadOnStudentChange: PropTypes.bool,
 };
 
 export const InfoAlert = ({text, dismissable}) => {
@@ -234,20 +187,25 @@ export const InfoAlert = ({text, dismissable}) => {
         [style.infoAlert]: !closed,
         [style.infoAlertClosed]: !!closed,
       })}
+      // eslint-disable-next-line react/forbid-dom-props
+      data-testid="info-alert"
     >
       <div className={style.infoAlertLeft}>
-        <FontAwesome icon="info-circle" className={style.infoAlertIcon} />
-        <BodyTwoText>{text}</BodyTwoText>
+        <FontAwesomeV6Icon
+          iconName="circle-info"
+          className={style.infoAlertIcon}
+          title="info circle icon"
+        />
+        <Typography variant="body2" gutterBottom>
+          {text}
+        </Typography>
       </div>
       {!!dismissable && (
-        <button
-          type="button"
+        <CloseButton
           onClick={closeButtonCallback}
-          className={classnames('close', style.infoAlertRight)}
-          aria-label="Close"
-        >
-          <span aria-hidden="true">&times;</span>
-        </button>
+          className={style.infoAlertRight}
+          aria-label={i18n.closeDialog()}
+        />
       )}
     </div>
   );

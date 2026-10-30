@@ -1,21 +1,25 @@
-import {getStore, registerReducers} from './redux';
-import {wrapNumberValidatorsForLevelBuilder, valueOr} from './utils';
-import {makeTestsFromBuilderRequiredBlocks} from './required_block_utils';
-import {singleton as studioApp} from './StudioApp';
-import {generateAuthoredHints} from './authoredHintUtils';
-import {addReadyListener} from './dom';
-import * as blocksCommon from './blocksCommon';
-import * as commonReducers from './redux/commonReducers';
+import * as Observability from '@code-dot-org/core/plugins/observability';
+
 import {
   installCustomBlocks,
   appendBlocksByCategory,
 } from '@cdo/apps/block_utils';
-import logToCloud from './logToCloud';
+import {getProjectXml} from '@cdo/apps/blockly/addons/cdoXml';
+
+import {generateAuthoredHints} from './authoredHintUtils';
+import * as blocksCommon from './blocksCommon';
+import {addReadyListener} from './dom';
+import {getStore, registerReducers} from './redux';
+import * as commonReducers from './redux/commonReducers';
+import {makeTestsFromBuilderRequiredBlocks} from './required_block_utils';
 import defaultSkinModule from './skins.js';
+import {singleton as studioApp} from './StudioApp';
+import {valueOr} from './utils';
 
 window.__TestInterface = {
   loadBlocks: (...args) => studioApp().loadBlocks(...args),
-  getBlockXML: () => Blockly.cdoUtils.getCode(Blockly.mainBlockSpace),
+  getBlockXML: () =>
+    Blockly.Xml.domToText(getProjectXml(Blockly.mainBlockSpace)),
   arrangeBlockPosition: (...args) => studioApp().arrangeBlockPosition(...args),
   getDropletContents: () => studioApp().editor.getValue(),
   getDroplet: () => studioApp().editor,
@@ -77,10 +81,6 @@ export default function (app, levels, options) {
       level: options.level,
     };
 
-    if (options.level && options.level.edit_blocks) {
-      wrapNumberValidatorsForLevelBuilder();
-    }
-
     blocksCommon.install(Blockly, blockInstallOptions);
     options.blocksModule.install(Blockly, blockInstallOptions);
 
@@ -114,7 +114,6 @@ export default function (app, levels, options) {
         }
       }
     }
-    Blockly.setInfiniteLoopTrap();
   }
 
   function onReady() {
@@ -138,8 +137,6 @@ export default function (app, levels, options) {
         next();
       }
     }
-    logToCloud.reportPageSize();
-    logToCloud.loadFinished();
   }
   // exported apps can and need to be setup synchronously
   // since the student code executes immediately at page load
@@ -150,7 +147,10 @@ export default function (app, levels, options) {
     addReadyListener(onReady);
   }
 
-  // Report app type to newRelic
-  logToCloud.setCustomAttribute('appType', options && options.app);
-  logToCloud.setCustomAttribute('locale', options && options.locale);
+  if (options?.app) {
+    Observability.setTag('appType', options.app);
+  }
+  if (options?.locale) {
+    Observability.setTag('locale', options.locale);
+  }
 }

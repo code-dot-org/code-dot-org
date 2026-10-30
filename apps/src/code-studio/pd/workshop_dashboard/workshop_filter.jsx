@@ -2,20 +2,11 @@
  * Workshop Filter.
  * Route: /workshops/filter
  */
-import PropTypes from 'prop-types';
-
-import React from 'react';
-import {connect} from 'react-redux';
 import $ from 'jquery';
 import _ from 'lodash';
-import Select from 'react-select';
-import 'react-select/dist/react-select.css';
-import {SelectStyleProps} from '../constants';
-import ServerSortWorkshopTable from './components/server_sort_workshop_table';
-import DatePicker from './components/date_picker';
-import {DATE_FORMAT} from './workshopConstants';
-import {PermissionPropType, WorkshopAdmin} from './permission';
 import moment from 'moment';
+import PropTypes from 'prop-types';
+import React from 'react';
 /* eslint-disable no-restricted-imports */
 import {
   Grid,
@@ -31,15 +22,27 @@ import {
   Clearfix,
 } from 'react-bootstrap';
 /* eslint-enable no-restricted-imports */
+import {connect} from 'react-redux';
+import Select from 'react-select';
+
+import 'react-select/dist/react-select.css';
+import {RouterContext} from '@cdo/apps/code-studio/legacyDashboardRoutingCompatibility';
 import {
   Courses,
   Subjects,
   LegacySubjects,
   States,
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+
+import DatePicker from '../../../sharedComponents/DatePicker';
 import RegionalPartnerDropdown, {
   RegionalPartnerPropType,
 } from '../components/regional_partner_dropdown';
+import {SelectStyleProps, DATE_ORDER_ASC, DATE_ORDER_DESC} from '../constants';
+
+import ServerSortWorkshopTable from './components/server_sort_workshop_table';
+import {PermissionPropType, WorkshopAdmin} from './permission';
+import {DATE_FORMAT} from './workshopConstants';
 
 const limitOptions = [
   {value: 25, text: 'first 25'},
@@ -71,9 +74,7 @@ export class WorkshopFilter extends React.Component {
     showRegionalPartnerDropdown: PropTypes.bool,
   };
 
-  static contextTypes = {
-    router: PropTypes.object.isRequired,
-  };
+  static contextType = RouterContext;
 
   state = {
     facilitatorsLoading: true,
@@ -277,7 +278,7 @@ export class WorkshopFilter extends React.Component {
       organizer_id: urlParams.organizer_id,
       teacher_email: urlParams.teacher_email,
       only_attended: urlParams.only_attended,
-      regional_partner_id: this.props.regionalPartnerFilter.value,
+      regional_partner_id: this.props.regionalPartnerFilter?.value,
     });
   }
 
@@ -292,6 +293,11 @@ export class WorkshopFilter extends React.Component {
     return `${this.props.location.pathname}?${$.param(
       this.getUrlParamsHash(newFilters)
     )}`;
+  }
+
+  getDefaultOrderBy() {
+    const workshopState = this.getFiltersFromUrlParams().state;
+    return workshopState === 'Not Started' ? DATE_ORDER_ASC : DATE_ORDER_DESC;
   }
 
   // Updates the URL with the new query params so it can be shared.
@@ -529,6 +535,7 @@ export class WorkshopFilter extends React.Component {
             showStatus
             showOrganizer={this.props.permission.has(WorkshopAdmin)}
             generateCaptionFromWorkshops={this.generateCaptionFromWorkshops}
+            initialOrderBy={this.getDefaultOrderBy()}
           />
         </Row>
       </Grid>
@@ -542,3 +549,5 @@ export default connect(state => ({
   showRegionalPartnerDropdown:
     state.regionalPartners.regionalPartners.length > 1,
 }))(WorkshopFilter);
+
+export {WorkshopFilter as UnconnectedWorkshopFilter};

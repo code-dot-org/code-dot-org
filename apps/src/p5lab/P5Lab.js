@@ -1,23 +1,30 @@
 import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
-import ReactDOM from 'react-dom';
+
+import {getCode} from '@cdo/apps/blockly/utils';
+import BlocklyModeErrorHandler from '@cdo/apps/BlocklyModeErrorHandler';
+import JavaScriptModeErrorHandler from '@cdo/apps/JavaScriptModeErrorHandler';
+import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
+import {
+  outputError,
+  injectErrorHandler,
+} from '@cdo/apps/lib/util/javascriptMode';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
+import experiments from '@cdo/apps/util/experiments';
+
 import {changeInterfaceMode, viewAnimationJson} from './actions';
-import {startInAnimationTab} from './stateQueries';
 import {P5LabInterfaceMode, APP_WIDTH} from './constants';
 import {
   SpritelabReservedWords,
   valueTypeTabShapeMap,
 } from './spritelab/constants';
-import {TOOLBOX_EDIT_MODE} from '../constants';
-import experiments from '@cdo/apps/util/experiments';
-import {
-  outputError,
-  injectErrorHandler,
-} from '@cdo/apps/lib/util/javascriptMode';
-import JavaScriptModeErrorHandler from '@cdo/apps/JavaScriptModeErrorHandler';
-import BlocklyModeErrorHandler from '@cdo/apps/BlocklyModeErrorHandler';
-import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
+import {startInAnimationTab} from './stateQueries';
+
+// eslint autocorrection was unable to automatically fix these violations of the import/order rule.
+// Because moving the require statements may have unintended side effects, we disable the rule for these statements
+// until we are able to investigate whether any behavior is changed by order, at which point we can apply the reordering manually.
+/* eslint-disable import/order */
 var apiJavascript = require('./gamelab/apiJavascript');
 var consoleApi = require('@cdo/apps/consoleApi');
 var utils = require('@cdo/apps/utils');
@@ -31,7 +38,7 @@ var p5GroupWrapper = require('./P5GroupWrapper');
 var gamelabCommands = require('./gamelab/commands');
 import {initializeSubmitHelper, onSubmitComplete} from '@cdo/apps/submitHelper';
 var dom = require('@cdo/apps/dom');
-import {initFirebaseStorage} from '@cdo/apps/storage/firebaseStorage';
+import {initStorage, DATABLOCK_STORAGE} from '../storage/storage';
 import {getStore} from '@cdo/apps/redux';
 import {
   allAnimationsSingleFrameSelector,
@@ -58,11 +65,9 @@ import Sounds from '@cdo/apps/Sounds';
 import {TestResults, ResultType} from '@cdo/apps/constants';
 import {showHideWorkspaceCallouts} from '@cdo/apps/code-studio/callouts';
 import wrap from './gamelab/debugger/replay';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {
   clearMarks,
   clearMeasures,
-  getEntriesByName,
   mark,
   measure,
 } from '@cdo/apps/util/performance';
@@ -72,6 +77,7 @@ import project from '@cdo/apps/code-studio/initApp/project';
 import {hasInstructions} from '@cdo/apps/templates/instructions/utils';
 import {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+/* eslint-enable import/order */
 
 const defaultMobileControlsConfig = {
   spaceButtonVisible: true,
@@ -254,12 +260,9 @@ export default class P5Lab {
     config.usesAssets = true;
 
     this.studioApp_.labUserId = config.labUserId;
-    this.studioApp_.storage = initFirebaseStorage({
+
+    this.studioApp_.storage = initStorage(DATABLOCK_STORAGE, {
       channelId: config.channel,
-      firebaseName: config.firebaseName,
-      firebaseAuthToken: config.firebaseAuthToken,
-      firebaseChannelIdSuffix: config.firebaseChannelIdSuffix || '',
-      showRateLimitAlert: this.studioApp_.showRateLimitAlert,
     });
 
     this.p5Wrapper.init({
@@ -495,7 +498,7 @@ export default class P5Lab {
     const loader = this.studioApp_
       .loadLibraries(this.level.helperLibraries)
       .then(() =>
-        ReactDOM.render(
+        createReactRoot(
           <Provider store={getStore()}>
             <P5LabView
               showFinishButton={finishButtonFirstLine && showFinishButton}
@@ -506,7 +509,10 @@ export default class P5Lab {
               labType={this.getLabType()}
             />
           </Provider>,
-          document.getElementById(config.containerId)
+          document.getElementById(config.containerId),
+          {
+            legacyReactDomRender: true,
+          }
         )
       );
 
@@ -725,9 +731,6 @@ export default class P5Lab {
         ].join(',')
       );
       Blockly.JavaScript.addReservedWords(SpritelabReservedWords.join(','));
-
-      // Don't add infinite loop protection
-      Blockly.clearInfiniteLoopTrap();
     }
 
     if (this.level.blocklyVariables) {
@@ -759,7 +762,6 @@ export default class P5Lab {
   }
 
   haltExecution_() {
-    this.reportMetrics();
     clearMarks(DRAW_LOOP_START);
     clearMeasures(DRAW_LOOP_MEASURE);
     this.spriteTotalCount = 0;
@@ -906,31 +908,7 @@ export default class P5Lab {
       this.message = null;
     } else {
       let textBlocks;
-      if (Blockly.version === 'Google') {
-        textBlocks = Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
-      } else {
-        // We're using CDO Blockly, report the program as xml
-        var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
-
-        // When SharedFunctions (aka shared behavior_definitions) are enabled, they
-        // are always appended to startBlocks on page load.
-        // See StudioApp -> setStartBlocks_
-        // Because of this, we need to remove the SharedFunctions when we are in
-        // toolbox edit mode. Otherwise, they end up in a student's toolbox.
-        if (this.level.edit_blocks === TOOLBOX_EDIT_MODE) {
-          var allBlocks = Array.from(xml.querySelectorAll('xml > block'));
-          var toRemove = allBlocks.filter(element => {
-            return (
-              element.getAttribute('type') === 'behavior_definition' &&
-              element.getAttribute('usercreated') !== 'true'
-            );
-          });
-          toRemove.forEach(element => {
-            xml.removeChild(element);
-          });
-        }
-        textBlocks = Blockly.Xml.domToText(xml);
-      }
+      textBlocks = getCode(Blockly.mainBlockSpace);
       program = encodeURIComponent(textBlocks);
     }
 
@@ -984,10 +962,6 @@ export default class P5Lab {
    */
   runButtonClick() {
     this.studioApp_.toggleRunReset('reset');
-    // document.getElementById('spinner').style.visibility = 'visible';
-    if (this.studioApp_.isUsingBlockly()) {
-      Blockly.mainBlockSpace.traceOn(true);
-    }
     this.studioApp_.attempts++;
     this.execute();
 
@@ -1031,11 +1005,7 @@ export default class P5Lab {
     this.p5Wrapper.startExecution();
     this.p5Wrapper.setLoop(true);
 
-    if (
-      !this.JSInterpreter ||
-      !this.JSInterpreter.initialized() ||
-      this.executionError
-    ) {
+    if (this.executionError) {
       return;
     }
 
@@ -1061,6 +1031,11 @@ export default class P5Lab {
 
       if (this.isBlockly) {
         this.library = this.createLibrary({p5: this.p5Wrapper.p5});
+        // Add each command name to the Blockly generator's reserved word list.
+        // This prevents students from overriding commands with their functions.
+        Object.keys(this.library.commands).forEach(commandName => {
+          Blockly.JavaScript.nameDB_.reservedWords.add(commandName);
+        });
 
         const libraryCommands = this.library.commands;
         for (const command in libraryCommands) {
@@ -1208,7 +1183,7 @@ export default class P5Lab {
    */
   onP5Preload() {
     this.preloadLabAssets()
-      .then(this.runPreloadEventHandler_())
+      .then(() => this.runPreloadEventHandler_())
       .then(() => this.p5Wrapper.notifyPreloadPhaseComplete());
     return false;
   }
@@ -1465,32 +1440,6 @@ export default class P5Lab {
     this.initialCaptureComplete = true;
     captureThumbnailFromCanvas(document.getElementById('defaultCanvas0'));
   }
-
-  /**
-   * Log some performance numbers to firehose
-   */
-  reportMetrics() {
-    const drawLoopTimes = getEntriesByName(DRAW_LOOP_MEASURE)
-      .map(entry => entry.duration)
-      .sort();
-    if (!drawLoopTimes.length) {
-      return;
-    }
-
-    const levelType = this.level.editCode
-      ? 'GameLab'
-      : this.level.helperLibraries && this.level.helperLibraries[0];
-    firehoseClient.putRecord({
-      study: 'gamelab_performance',
-      event: 'performance_report',
-      data_string: levelType,
-      data_json: JSON.stringify({
-        drawLoopAverageMs: drawLoopTimes[Math.floor(drawLoopTimes.length / 2)],
-        spriteAverageCount: this.spriteTotalCount / drawLoopTimes.length,
-      }),
-    });
-  }
-
   completeRedrawIfDrawComplete() {
     if (
       this.drawInProgress &&

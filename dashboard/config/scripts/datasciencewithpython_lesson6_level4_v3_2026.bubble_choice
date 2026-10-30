@@ -1,0 +1,12 @@
+name 'datasciencewithpython-lesson6-level4-v3-2026'
+display_name 'Data Types Practice'
+description 'Choose a survey dataset to inspect and convert.'
+
+sublevels
+
+level 'datasciencewithpython-lesson6-level4a-v2-2026'
+level 'datasciencewithpython-lesson6-level4b-v2-2026'
+level 'datasciencewithpython-lesson6-level4c-v2-2026'
+level 'datasciencewithpython-lesson6-level4d-v2-2026'
+
+uses_lab2

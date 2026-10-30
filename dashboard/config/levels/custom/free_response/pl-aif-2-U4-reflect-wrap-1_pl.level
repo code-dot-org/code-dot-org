@@ -1,0 +1,30 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2026-07-10T19:01:53.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Revisiting the Final Project",
+    "placeholder": "Enter your reflection here.",
+    "long_instructions": "\r\n\r\n\r\n## Reflection\r\n\r\n>What is one way this project pushes students to think beyond “does the code work?” and instead consider reliability, user experience, or data ownership? How might you help students recognize that shift?\r\n\r\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "submittable": "false",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "instructions_important": "false",
+    "parent_level_id": 18982,
+    "name_suffix": "_pl",
+    "encrypted": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "stay_on_level_after_submit": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2026-07-10T19:01:53.011+00:00\",\"changed\":[\"cloned from \\\"pl-aif-2-U4-reflect-wrap-1\\\"\"],\"cloned_from\":\"pl-aif-2-U4-reflect-wrap-1\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

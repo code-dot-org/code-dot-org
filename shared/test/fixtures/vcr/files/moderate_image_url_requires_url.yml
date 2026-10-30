@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Amz-Checksum-Mode:
+      - ENABLED
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Thu, 30 Jul 2026 18:02:07 GMT
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>files_test/1/1/manifest.json</Key><RequestId>N3N0GK27GW5TCMPP</RequestId><HostId>J1F2OLasY9QpGtbWUwv1wkGD5SNq0b4058unfuQcTc/czK4YTVU5Hpp9treelxnKCpD+7lQ7XmF1b6wcyWy1/ypLlvyEzHtJ</HostId></Error>
+  recorded_at: Thu, 30 Jul 2026 18:02:07 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Amz-Checksum-Mode:
+      - ENABLED
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Thu, 30 Jul 2026 18:02:06 GMT
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>files_test/1/1/manifest.json</Key><RequestId>N3NA17G38VNSY917</RequestId><HostId>b3yl2VwI5lMxdec5SbWF36m5e8sDT37SCZ0tI7HXE2gf6nFBxwnJzSaXYjlg2W7C3sxf0NMOZClkHUk3XnyBfRKsyBHL2igG</HostId></Error>
+  recorded_at: Thu, 30 Jul 2026 18:02:07 GMT
+recorded_with: VCR 6.2.0

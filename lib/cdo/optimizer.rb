@@ -6,6 +6,7 @@ require 'active_support/core_ext/numeric/bytes'
 require 'cdo/shared_cache'
 require 'image_size'
 require 'image_optim'
+require 'observability/errors'
 
 # Optimizes content on-the-fly based on provided content-type.
 # If the process takes longer than specified timeout, the original data will be returned
@@ -55,7 +56,11 @@ module Cdo
     # Optimizes image content.
     def self.optimize_image(data)
       # Skip image optimization if image is too big.
-      pixels = ImageSize.new(data).size.inject(&:*) rescue 0
+      pixels = begin
+        ImageSize.new(data).size.inject(&:*)
+      rescue
+        0
+      end
       if pixels > DCDO.get('image_optim_pixel_max', IMAGE_OPTIM_PIXEL_MAX)
         return data
       end
@@ -97,7 +102,7 @@ module Cdo
       end
     rescue => exception
       # Log error and return original content.
-      Honeybadger.notify(exception,
+      Observability::Errors.report(exception,
         context: {
           key: cache_key
         }

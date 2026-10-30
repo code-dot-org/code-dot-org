@@ -1,19 +1,30 @@
-import {makeEnum} from '../utils';
-import analyticsReport from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReport from '@cdo/apps/metrics/AnalyticsReporter';
+import statsigReporter from '@cdo/apps/metrics/StatsigReporter';
 import experiments from '@cdo/apps/util/experiments';
+import {UserTypes} from '@cdo/generated-scripts/sharedConstants';
+
+import {makeEnum} from '../utils';
 
 const SET_CURRENT_USER_NAME = 'currentUser/SET_CURRENT_USER_NAME';
 const SET_USER_SIGNED_IN = 'currentUser/SET_USER_SIGNED_IN';
 const SET_USER_TYPE = 'currentUser/SET_USER_TYPE';
 const SET_OVER_21 = 'currentUser/SET_OVER_21';
 const SET_USER_ROLE_IN_COURSE = 'currentUser/SET_USER_ROLE_IN_COURSE';
-const SET_HAS_SEEN_STANDARDS_REPORT =
-  'currentUser/SET_HAS_SEEN_STANDARDS_REPORT';
 const SET_INITIAL_DATA = 'currentUser/SET_INITIAL_DATA';
 const SET_MUTE_MUSIC = 'currentUser/SET_MUTE_MUSIC';
 const SET_SORT_BY_FAMILY_NAME = 'currentUser/SET_SORT_BY_FAMILY_NAME';
-const SET_SHOW_PROGRESS_TABLE_V2 = 'currentUser/SET_SHOW_PROGRESS_TABLE_V2';
+const SET_HAS_SEEN_HOMEPAGE_WELCOME =
+  'currentUser/SET_HAS_SEEN_HOMEPAGE_WELCOME';
+const SET_AI_RUBRICS_DISABLED = 'currentUser/SET_AI_RUBRICS_DISABLED';
+const SET_AI_DIFFERENTIATION_ENABLED =
+  'currentUser/SET_AI_DIFFERENTIATION_ENABLED';
+const SET_SHOW_AI_TA_LESSON_SUMMARY =
+  'currentUser/SET_SHOW_AI_TA_LESSON_SUMMARY';
+const SET_SHOW_AI_TA_PODCASTS = 'currentUser/SET_SHOW_AI_TA_PODCASTS';
+const SET_HAS_COMPLETED_PERSONALIZATION_QUIZ =
+  'currentUser/SET_HAS_COMPLETED_PERSONALIZATION_QUIZ';
+const SET_USER_CREATED_AT = 'currentUser/SET_USER_CREATED_AT';
 
 export const SignInState = makeEnum('Unknown', 'SignedIn', 'SignedOut');
 
@@ -24,11 +35,6 @@ export const setCurrentUserName = userName => ({
   type: SET_CURRENT_USER_NAME,
   userName,
 });
-export const setCurrentUserHasSeenStandardsReportInfo =
-  hasSeenStandardsReport => ({
-    type: SET_HAS_SEEN_STANDARDS_REPORT,
-    hasSeenStandardsReport,
-  });
 export const setUserSignedIn = isSignedIn => ({
   type: SET_USER_SIGNED_IN,
   isSignedIn,
@@ -66,23 +72,63 @@ export const setSortByFamilyName = (
   unitName,
   source,
 });
-export const setShowProgressTableV2 = showProgressTableV2 => ({
-  type: SET_SHOW_PROGRESS_TABLE_V2,
-  showProgressTableV2,
+export const setAiRubricsDisabled = aiRubricsDisabled => ({
+  type: SET_AI_RUBRICS_DISABLED,
+  aiRubricsDisabled,
+});
+export const setAiDifferentiationEnabled = aiDifferentiationEnabled => ({
+  type: SET_AI_DIFFERENTIATION_ENABLED,
+  aiDifferentiationEnabled,
+});
+export const setShowAITALessonSummary = showAITALessonSummary => ({
+  type: SET_SHOW_AI_TA_LESSON_SUMMARY,
+  showAITALessonSummary,
+});
+export const setShowAITAPodcasts = showAITAPodcasts => ({
+  type: SET_SHOW_AI_TA_PODCASTS,
+  showAITAPodcasts,
+});
+export const setHasCompletedPersonalizationQuiz =
+  hasCompletedPersonalizationQuiz => ({
+    type: SET_HAS_COMPLETED_PERSONALIZATION_QUIZ,
+    hasCompletedPersonalizationQuiz,
+  });
+export const setUserCreatedAt = userCreatedAt => ({
+  type: SET_USER_CREATED_AT,
+  userCreatedAt,
+});
+export const setHasSeenHomepageWelcome = hasSeenHomepageWelcome => ({
+  type: SET_HAS_SEEN_HOMEPAGE_WELCOME,
+  hasSeenHomepageWelcome,
 });
 
 const initialState = {
   userId: null,
   userName: null,
+  gradesTeaching: [],
   userType: 'unknown',
   userRoleInCourse: CourseRoles.Unknown,
   signInState: SignInState.Unknown,
-  hasSeenStandardsReportInfo: false,
+  aiDifferentiationEnabled: null,
+  showAITALessonSummary: false,
+  showAITAPodcasts: false,
+  hasCompletedPersonalizationQuiz: false,
   isBackgroundMusicMuted: false,
   isSortedByFamilyName: false,
+  isLti: undefined,
+  isTeacher: undefined,
+  isLevelbuilder: undefined,
   // Setting default under13 value to true to err on the side of caution for age-restricted content.
   under13: true,
   over21: false,
+  childAccountComplianceState: null,
+  countryCode: null,
+  usStateCode: null,
+  inSection: null,
+  userCreatedAt: null,
+  userSharingDisabled: false,
+  hasSeenHomepageWelcome: false,
+  usOnlyAichatModelsDisabled: false,
 };
 
 export default function currentUser(state = initialState, action) {
@@ -90,12 +136,6 @@ export default function currentUser(state = initialState, action) {
     return {
       ...state,
       userName: action.userName,
-    };
-  }
-  if (action.type === SET_HAS_SEEN_STANDARDS_REPORT) {
-    return {
-      ...state,
-      hasSeenStandardsReportInfo: action.hasSeenStandardsReport,
     };
   }
   if (action.type === SET_USER_SIGNED_IN) {
@@ -150,38 +190,118 @@ export default function currentUser(state = initialState, action) {
       isSortedByFamilyName: action.isSortedByFamilyName,
     };
   }
-  if (action.type === SET_SHOW_PROGRESS_TABLE_V2) {
+  if (action.type === SET_AI_RUBRICS_DISABLED) {
     return {
       ...state,
-      showProgressTableV2: action.showProgressTableV2,
+      aiRubricsDisabled: action.aiRubricsDisabled,
     };
   }
+  if (action.type === SET_AI_DIFFERENTIATION_ENABLED) {
+    return {
+      ...state,
+      aiDifferentiationEnabled: action.aiDifferentiationEnabled,
+    };
+  }
+  if (action.type === SET_SHOW_AI_TA_LESSON_SUMMARY) {
+    return {
+      ...state,
+      showAITALessonSummary: action.showAITALessonSummary,
+    };
+  }
+  if (action.type === SET_SHOW_AI_TA_PODCASTS) {
+    return {
+      ...state,
+      showAITAPodcasts: action.showAITAPodcasts,
+    };
+  }
+  if (action.type === SET_HAS_COMPLETED_PERSONALIZATION_QUIZ) {
+    return {
+      ...state,
+      hasCompletedPersonalizationQuiz: action.hasCompletedPersonalizationQuiz,
+    };
+  }
+  if (action.type === SET_USER_CREATED_AT) {
+    return {
+      ...state,
+      userCreatedAt: action.userCreatedAt,
+    };
+  }
+  if (action.type === SET_HAS_SEEN_HOMEPAGE_WELCOME) {
+    return {
+      ...state,
+      hasSeenHomepageWelcome: action.hasSeenHomepageWelcome,
+    };
+  }
+
   if (action.type === SET_INITIAL_DATA) {
     const {
       id,
       username,
+      display_name,
+      grades_teaching,
       user_type,
       mute_music,
       under_13,
       over_21,
       sort_by_family_name,
-      show_progress_table_v2,
+      ai_rubrics_disabled,
+      ai_differentiation_enabled,
+      is_lti,
+      is_levelbuilder,
+      child_account_compliance_state,
+      country_code,
+      us_state_code,
+      age,
+      in_section,
+      created_at,
+      is_verified_instructor,
+      has_completed_ai_differentiation_welcome,
+      teacher_panel_v2_seen,
+      educator_role,
+      sharing_disabled,
+      has_seen_homepage_welcome,
+      ai_chat_access_level,
+      us_only_aichat_models_disabled,
     } = action.serverUser;
-    analyticsReport.setUserProperties(
-      id,
-      user_type,
-      experiments.getEnabledExperiments()
-    );
+    // TODO: Once Amplitude is fully removed, the StatsigReporter class should be
+    // renamed to AnalyticsReporter.
+    statsigReporter.setUserProperties({
+      userId: id,
+      userType: user_type,
+      isVerifiedInstructor: is_verified_instructor,
+      enabledExperiments: experiments.getEnabledExperiments(),
+      educatorRole: educator_role,
+    });
     return {
       ...state,
       userId: id,
       userName: username,
+      gradesTeaching: grades_teaching || [],
       userType: user_type,
+      displayName: display_name,
       isBackgroundMusicMuted: mute_music,
       under13: under_13,
       over21: over_21,
       isSortedByFamilyName: sort_by_family_name,
-      showProgressTableV2: show_progress_table_v2,
+      aiRubricsDisabled: ai_rubrics_disabled,
+      aiDifferentiationEnabled: ai_differentiation_enabled,
+      isLti: is_lti,
+      isTeacher: user_type === UserTypes.TEACHER,
+      isLevelbuilder: is_levelbuilder,
+      inUSA: ['US', 'RD'].includes(country_code) || !!us_state_code,
+      hasCompletedAiDifferentiationWelcome:
+        has_completed_ai_differentiation_welcome,
+      teacherPanelV2Seen: teacher_panel_v2_seen,
+      childAccountComplianceState: child_account_compliance_state,
+      countryCode: country_code,
+      usStateCode: us_state_code,
+      age,
+      inSection: in_section,
+      userCreatedAt: created_at,
+      userSharingDisabled: sharing_disabled,
+      hasSeenHomepageWelcome: has_seen_homepage_welcome,
+      aiChatAccessLevel: ai_chat_access_level,
+      usOnlyAichatModelsDisabled: us_only_aichat_models_disabled ?? false,
     };
   }
 

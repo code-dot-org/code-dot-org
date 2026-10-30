@@ -1,0 +1,62 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+
+  th,
+  td {
+    border: 1px solid var(--borders-neutral-light, #ccc);
+    padding: 7px;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  th:nth-child(1) {
+    width: 20%;
+  }
+
+  th:nth-child(2) {
+    width: 40%;
+  }
+
+  th:nth-child(3) {
+    width: 30%;
+  }
+
+  th:nth-child(4) {
+    width: 10%;
+  }
+}
+
+.empty {
+  padding: 7px;
+  color: var(--text-neutral-secondary, #555);
+  font-style: italic;
+}
+
+.actionButton {
+  padding: 5px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.objectiveList {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.addButton {
+  margin-top: 10px;
+  margin-left: 0;
+  padding: 7px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  background: #eee;
+  box-shadow: inset 0 1px 0 0 rgb(255 255 255 / 80%);
+  font-size: 14px;
+  text-align: center;
+
+  i {
+    margin-right: 7px;
+  }
+}

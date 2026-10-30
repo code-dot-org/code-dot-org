@@ -1,6 +1,5 @@
 <Weblab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 58,
   "created_at": "2024-01-04T01:06:58.000Z",
   "level_num": "custom",
@@ -20,23 +19,24 @@
     "encrypted_examples": "0mtKn060/ScOmgFOU5bQcASlnZRxOmG1NQeIvC0aPKQnavi60nbM1FIz9JhJ\nAyLIoVfvs8cebSGDi+DbzqURbA==\n",
     "long_instructions": "<img src=\"https://images.code.org/c23e6ee57283f815bfe70987365ca8c3-image-1706114255476.png\" style=\"float: right; width: 400px; margin-left: 10px;\">\r\n\r\n# Wonders of the World\r\n\r\nBrodie is making a web page of the ancient and new Wonders of the World. He would like the user to be able to test their knowledge by looking at the gallery of images to guess what each wonder is and then scroll down to the bottom of the page to check the answers and see if they were right. Can you help him make sure the order of the images match the answers?\r\n\r\n# Do This\r\n1. Put all of the images inside a container.\r\n2. Style the container's layout so that the layout of the images matches the order of the answers.\r\n   - _An example of the what layout should look like is provided to the right._\r\n\r\n![]()",
     "reference_links": [
-      "/courses/csd-2022/guides/div",
-      "/courses/csd-2022/guides/classes",
-      "/courses/csd-2022/guides/layout-properties",
-      "/courses/csd-2022/guides/body-styling",
-      "/courses/csd-2022/guides/images-in-html",
-      "/courses/csd-2022/guides/creative-commons-search",
-      "/courses/csd-2022/guides/style-sheets",
-      "/courses/csd-2022/guides/text-properties",
-      "/courses/csd-2022/guides/formatting-html",
-      "/courses/csd-2022/guides/lists",
-      "/courses/csd-2022/guides/headings-and-paragraphs",
-      "/courses/csd-2022/guides/html-tags",
-      "/courses/csd-2022/guides/web-lab",
-      "/courses/csd-2022/guides/debugging-html"
+      "/courses/csd-2024/guides/div",
+      "/courses/csd-2024/guides/classes",
+      "/courses/csd-2024/guides/layout-properties",
+      "/courses/csd-2024/guides/body-styling",
+      "/courses/csd-2024/guides/images-in-html",
+      "/courses/csd-2024/guides/creative-commons-search",
+      "/courses/csd-2024/guides/style-sheets",
+      "/courses/csd-2024/guides/text-properties",
+      "/courses/csd-2024/guides/formatting-html",
+      "/courses/csd-2024/guides/lists",
+      "/courses/csd-2024/guides/headings-and-paragraphs",
+      "/courses/csd-2024/guides/html-tags",
+      "/courses/csd-2024/guides/web-lab",
+      "/courses/csd-2024/guides/debugging-html"
     ],
-    "map_reference": "/courses/csd-2022/guides/flexbox"
+    "map_reference": "/courses/csd-2024/guides/flexbox"
   },
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-04 19:03:41 +0000\",\"changed\":[\"published\",\"validation_enabled\"],\"changed_by_id\":19162,\"changed_by_email\":\"carl.reiner@code.org\"},{\"changed_at\":\"2024-01-05 18:03:47 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-01-23 18:30:23 +0000\",\"changed\":[\"mini_rubric\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-01-24 16:38:57 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-01-24 16:46:50 +0000\",\"changed\":[\"start_sources\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-16 18:15:37 +0000\",\"changed\":[\"start_sources\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-20 18:51:16 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab>

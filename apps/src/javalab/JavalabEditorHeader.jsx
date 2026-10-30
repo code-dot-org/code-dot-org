@@ -1,17 +1,20 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import {connect} from 'react-redux';
-import {openEditorDialog} from './redux/editorRedux';
-import msg from '@cdo/locale';
-import javalabMsg from '@cdo/javalab/locale';
+
+import Backpack from '@cdo/apps/javalab/Backpack';
 import PaneHeader, {
   PaneSection,
   PaneButton,
 } from '@cdo/apps/templates/PaneHeader';
-import {DisplayTheme} from './DisplayTheme';
-import Backpack from './Backpack';
-import {JavalabEditorDialog} from './types';
+import javalabMsg from '@cdo/javalab/locale';
+import msg from '@cdo/locale';
+
 import ProjectTemplateWorkspaceIcon from '../templates/ProjectTemplateWorkspaceIcon';
+
+import {DisplayTheme} from './DisplayTheme';
+import {openEditorDialog} from './redux/editorRedux';
+import {JavalabEditorDialog} from './types';
 
 /**
  * Renders the header portion of the Java Lab editor, consisting of the New File,
@@ -30,10 +33,15 @@ function JavalabEditorHeader({
     : javalabMsg.editor();
 
   return (
-    <PaneHeader hasFocus isOldPurpleColor>
+    <PaneHeader
+      style={{
+        backgroundColor: '#7665a0',
+        paddingLeft: '0.125rem',
+      }}
+    >
       <PaneButton
         id="javalab-editor-create-file"
-        iconClass="fa fa-plus-circle"
+        iconProps={{iconName: 'circle-plus', iconStyle: 'solid'}}
         onClick={() => openEditorDialog(JavalabEditorDialog.CREATE_FILE)}
         headerHasFocus
         isLegacyStyles
@@ -43,39 +51,41 @@ function JavalabEditorHeader({
         isDisabled={isReadOnlyWorkspace}
       />
       {backpackEnabled && (
-        <PaneSection style={styles.backpackSection}>
-          <Backpack
-            id={'javalab-editor-backpack'}
-            displayTheme={displayTheme}
-            isButtonDisabled={isReadOnlyWorkspace}
-            onImport={onBackpackImportFile}
-          />
-        </PaneSection>
+        <Backpack
+          id={'javalab-editor-backpack'}
+          displayTheme={displayTheme}
+          isButtonDisabled={isReadOnlyWorkspace}
+          onImport={onBackpackImportFile}
+        />
       )}
-      <PaneButton
-        id="data-mode-versions-header"
-        isLegacyStyles
-        iconClass="fa fa-clock-o"
-        label={msg.showVersionsHeader()}
-        headerHasFocus
-        isRtl={false}
-        onClick={() => openEditorDialog(JavalabEditorDialog.VERSION_HISTORY)}
-        isDisabled={isReadOnlyWorkspace}
-      />
+      <PaneSection
+        style={{
+          flex: '1 1 0',
+        }}
+      >
+        {showProjectTemplateWorkspaceIcon && <ProjectTemplateWorkspaceIcon />}
+        {editorHeaderText}
+      </PaneSection>
       <PaneButton
         id="javalab-editor-save"
         isLegacyStyles
-        iconClass="fa fa-check-circle"
+        iconProps={{iconName: 'circle-check', iconStyle: 'solid'}}
         onClick={() => openEditorDialog(JavalabEditorDialog.COMMIT_FILES)}
         headerHasFocus
         isRtl={false}
         label={javalabMsg.commitCode()}
         isDisabled={isReadOnlyWorkspace}
       />
-      <PaneSection>
-        {showProjectTemplateWorkspaceIcon && <ProjectTemplateWorkspaceIcon />}
-        {editorHeaderText}
-      </PaneSection>
+      <PaneButton
+        id="data-mode-versions-header"
+        isLegacyStyles
+        iconProps={{iconName: 'clock', iconStyle: 'regular'}}
+        label={msg.showVersionsHeader()}
+        headerHasFocus
+        isRtl={false}
+        onClick={() => openEditorDialog(JavalabEditorDialog.VERSION_HISTORY)}
+        isDisabled={isReadOnlyWorkspace}
+      />
     </PaneHeader>
   );
 }
@@ -88,15 +98,6 @@ JavalabEditorHeader.propTypes = {
   backpackEnabled: PropTypes.bool.isRequired,
   displayTheme: PropTypes.oneOf(Object.values(DisplayTheme)),
   showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired,
-};
-
-const styles = {
-  backpackSection: {
-    textAlign: 'left',
-    display: 'inline-block',
-    float: 'left',
-    overflow: 'visible',
-  },
 };
 
 export default connect(

@@ -1,0 +1,20 @@
+name 'sp-pl-Code_w_AI-chk_LLM_24_24'
+editor_experiment ''
+title 'Check for Understanding: Large Language Models'
+type 'multi1'
+question 'Which of the following best describes a Large Language Model (LLM)?'
+
+
+
+wrong 'A type of calculator that can perform complex mathematical operations.'
+wrong 'A software program designed to edit and enhance images.'
+right 'A computer program trained to understand and generate human language.'
+wrong 'A robotic device used for manufacturing and assembly lines'
+
+
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
+
+allow_multiple_attempts true

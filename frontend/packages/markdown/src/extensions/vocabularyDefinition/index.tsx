@@ -1,0 +1,151 @@
+import type {ElementContent, Nodes, Root} from 'hast';
+import type {Components} from 'hast-util-to-jsx-runtime';
+import type {ReactNode} from 'react';
+
+import {Tooltip} from '@mui/material';
+
+import type {MarkdownExtension} from '../../extension';
+
+import moduleStyles from './vocabularyDefinition.module.css';
+
+/** A resolved vocabulary term. */
+export interface VocabularyTerm {
+  /** Display text. Defaults to the term key from the source. */
+  word?: string;
+  /** The definition, shown in the tooltip. */
+  definition: string;
+}
+
+/**
+ * Resolves a vocabulary term key to its definition. Synchronous: it should read
+ * already-fetched data (e.g. a cache populated by an API call) and return
+ * `undefined` on a miss. When the backing data later loads and the consumer
+ * re-renders, the term re-resolves automatically.
+ */
+export type VocabularyLookup = (term: string) => VocabularyTerm | undefined;
+
+export interface VocabularyDefinitionOptions {
+  lookup: VocabularyLookup;
+}
+
+// `[v term]` — the term may contain spaces; capture everything up to `]`.
+const VOCAB_TEST = /\[v [^\]]+\]/;
+const VOCAB_RE = /\[v ([^\]]+)\]/g;
+// Don't rewrite the syntax inside code, where it is literal.
+const SKIP_TAGS = new Set(['code', 'pre']);
+
+// Split a text value into text/`<vocab>` nodes around each `[v term]`.
+const splitVocab = (value: string): ElementContent[] => {
+  const parts: ElementContent[] = [];
+  let last = 0;
+  VOCAB_RE.lastIndex = 0;
+  let match: RegExpExecArray | null;
+  while ((match = VOCAB_RE.exec(value)) !== null) {
+    if (match.index > last) {
+      parts.push({type: 'text', value: value.slice(last, match.index)});
+    }
+    parts.push({
+      type: 'element',
+      tagName: 'vocab',
+      properties: {},
+      children: [{type: 'text', value: match[1].trim()}],
+    });
+    last = match.index + match[0].length;
+  }
+  if (last < value.length) {
+    parts.push({type: 'text', value: value.slice(last)});
+  }
+  return parts;
+};
+
+const vocabularySyntax = () => (tree: Root) => {
+  const walk = (node: Nodes): void => {
+    if (node.type === 'element' && SKIP_TAGS.has(node.tagName)) {
+      return;
+    }
+    if (!('children' in node)) {
+      return;
+    }
+    const next: ElementContent[] = [];
+    for (const child of node.children) {
+      if (child.type === 'text' && VOCAB_TEST.test(child.value)) {
+        next.push(...splitVocab(child.value));
+      } else {
+        next.push(child as ElementContent);
+        walk(child);
+      }
+    }
+    node.children = next as typeof node.children;
+  };
+  walk(tree);
+};
+
+const textOf = (children: ReactNode): string => {
+  if (typeof children === 'string') {
+    return children;
+  }
+  if (Array.isArray(children)) {
+    return children.map(textOf).join('');
+  }
+  return '';
+};
+
+const makeVocab = (lookup: VocabularyLookup) => {
+  const Vocab = ({children}: {children?: ReactNode}) => {
+    const term = textOf(children).trim();
+    const entry = lookup(term);
+
+    // Fallback: an unknown term renders as its plain text.
+    if (!entry) {
+      return <span>{term}</span>;
+    }
+
+    /*
+     * MUI's tooltip clones its child rather than wrapping it, so the trigger
+     * stays a <span> -- phrasing content, which is what a term sitting
+     * mid-sentence inside a <p> has to be. (The DSCO tooltip this replaced
+     * wrapped its trigger in a block <div>, which is why this used the native
+     * `title` before.) CdoTheme styles every MUI tooltip, so this matches the design
+     * system without importing a wrapper.
+     *
+     * `tabIndex` makes the trigger keyboard-reachable: MUI opens the tooltip on
+     * :focus-visible, and the native `title` it replaces could be reached only
+     * with a pointer. The term is a tab stop but not a control -- there is
+     * nothing to activate, and the theme's `describeChild` ties the definition
+     * to it with aria-describedby rather than naming it. A reader who skips
+     * past it still gets every definition from the vocabulary list the lesson
+     * plan renders separately.
+     */
+    return (
+      <Tooltip title={entry.definition}>
+        <span className={moduleStyles.vocab} tabIndex={0}>
+          {entry.word ?? term}
+        </span>
+      </Tooltip>
+    );
+  };
+  Vocab.displayName = 'VocabularyDefinition';
+  return Vocab;
+};
+
+/**
+ * Resolves the `[v term]` syntax against an injected lookup, rendering each
+ * known term with its definition in a design-system tooltip (on hover, and on
+ * focus for keyboard users) and falling back to the bare term otherwise.
+ *
+ * The lookup is synchronous (rendering is): point it at already-fetched data.
+ * This replaces the legacy flow where Dashboard resolved `[v key]` server-side
+ * against the database; resolution now happens client-side via the consumer's
+ * data (eventually an API call).
+ */
+export const vocabularyDefinition = ({
+  lookup,
+}: VocabularyDefinitionOptions): MarkdownExtension => ({
+  name: 'vocabularyDefinition',
+  rehypePlugins: [vocabularySyntax],
+  // `vocab` is the custom element the syntax produces; allow it through
+  // sanitization. (A dedicated tag avoids colliding with the <span>-based
+  // extensions.)
+  sanitizeSchema: {tagNames: ['vocab']},
+  components: {vocab: makeVocab(lookup)} as Partial<Components>,
+});

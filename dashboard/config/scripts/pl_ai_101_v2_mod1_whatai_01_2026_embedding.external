@@ -1,0 +1,135 @@
+name 'pl-ai-101-V2-mod1-whatai-01_2026_embedding'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# What is AI?
+
+Let's start by activating your current understanding of AI.
+
+Below are examples of various technologies. Use the toggle switches and classify each one as something that does use or do not use AI. 
+
+👉 Click on the box to get the answer and explanation. It’s okay if you don’t get them all!
+
+---
+
+<!--Self-Driving Cars-->
+
+<div style="display:flex; align-items:center; gap:24px; max-width:1100px; margin:20px auto;">
+<iframe src="https://micahkennedy.github.io/embeddings/" width="190" height="70" style="border:none; overflow:hidden; flex-shrink:0; display:block; margin-top:8px;"></iframe>
+<div style="flex:1;">
+<details style="margin-bottom:12px; border:1px solid #D9DDE3; border-radius:10px; overflow:hidden; background:white;">
+<summary style="cursor:pointer; padding:16px 18px; background-color:#F7F8FA; font-size:18px; font-weight:600;">
+Self-Driving Cars
+</summary>
+<div style="padding:18px 24px; background:white; border-top:1px solid #E5E7EB;">
+<div style="display:flex; align-items:flex-start; gap:14px;">
+<div style="display:inline-block; font-size:12px; font-weight:700; color:white; background:#2E7D32; padding:4px 10px; border-radius:999px; white-space:nowrap; margin-top:2px;">
+Uses AI
+</div>
+<div style="font-size:15px; line-height:1.45; color:#555;">
+Self-driving cars use AI and machine learning to analyze sensor data, understand surroundings, and make safe driving decisions in real time.
+</div>
+</div>
+</div>
+</details>
+</div>
+</div>
+
+<!--3D Printing-->
+
+<div style="display:flex; align-items:center; gap:24px; max-width:1100px; margin:20px auto;">
+<iframe src="https://micahkennedy.github.io/embeddings/" width="190" height="70" style="border:none; overflow:hidden; flex-shrink:0; display:block; margin-top:8px;"></iframe>
+<div style="flex:1;">
+<details style="margin-bottom:12px; border:1px solid #D9DDE3; border-radius:10px; overflow:hidden; background:white;">
+<summary style="cursor:pointer; padding:16px 18px; background-color:#F7F8FA; font-size:18px; font-weight:600;">
+3D Printing
+</summary>
+<div style="padding:18px 24px; background:white; border-top:1px solid #E5E7EB;">
+<div style="display:flex; align-items:flex-start; gap:14px;">
+<div style="display:inline-block; font-size:12px; font-weight:700; color:white; background:#C62828; padding:4px 10px; border-radius:999px; white-space:nowrap; margin-top:2px;">
+Does Not Use AI
+</div>
+<div style="font-size:15px; line-height:1.45; color:#555;">
+3D printing builds objects layer by layer from a digital file and does not use AI because it follows preset models and instructions.
+</div>
+</div>
+</div>
+</details>
+</div>
+</div>
+
+<!--Music Recommendation Systems-->
+<div style="display:flex; align-items:center; gap:24px; max-width:1100px; margin:20px auto;">
+<iframe src="https://micahkennedy.github.io/embeddings/" width="190" height="70" style="border:none; overflow:hidden; flex-shrink:0; display:block; margin-top:8px;"></iframe>
+<div style="flex:1;">
+<details style="margin-bottom:12px; border:1px solid #D9DDE3; border-radius:10px; overflow:hidden; background:white;">
+<summary style="cursor:pointer; padding:16px 18px; background-color:#F7F8FA; font-size:18px; font-weight:600;">
+Music Recommendation Systems
+</summary>
+<div style="padding:18px 24px; background:white; border-top:1px solid #E5E7EB;">
+<div style="display:flex; align-items:flex-start; gap:14px;">
+<div style="display:inline-block; font-size:12px; font-weight:700; color:white; background:#2E7D32; padding:4px 10px; border-radius:999px; white-space:nowrap; margin-top:2px;">
+Uses AI
+</div>
+<div style="font-size:15px; line-height:1.45; color:#555;">
+Music recommendation systems use AI to analyze listening history and preferences to predict and improve song or artist suggestions.
+</div>
+</div>
+</div>
+</details>
+</div>
+</div>
+
+<!--Smart Home Devices-->
+<div style="display:flex; align-items:center; gap:24px; max-width:1100px; margin:20px auto;">
+<iframe src="https://micahkennedy.github.io/embeddings/" width="190" height="70" style="border:none; overflow:hidden; flex-shrink:0; display:block; margin-top:8px;"></iframe>
+<div style="flex:1;">
+<details style="margin-bottom:12px; border:1px solid #D9DDE3; border-radius:10px; overflow:hidden; background:white;">
+<summary style="cursor:pointer; padding:16px 18px; background-color:#F7F8FA; font-size:18px; font-weight:600;">
+Smart Home Devices
+</summary>
+<div style="padding:18px 24px; background:white; border-top:1px solid #E5E7EB;">
+<div style="display:flex; align-items:flex-start; gap:14px;">
+<div style="display:inline-block; font-size:12px; font-weight:700; color:white; background:#B56A00; padding:4px 10px; border-radius:999px; white-space:nowrap; margin-top:2px;">
+It Depends
+</div>
+<div style="font-size:15px; line-height:1.45; color:#555;">
+<div style="font-style:italic; margin-bottom:6px;">This one’s tricky on purpose.</div>
+Some smart home devices follow simple rules, while others use AI to learn routines or recognize voices, so it depends on how they are designed.
+</div>
+</div>
+</div>
+</details>
+</div>
+</div>
+
+<!--Digital Cameras-->
+<div style="display:flex; align-items:center; gap:24px; max-width:1100px; margin:20px auto;">
+<iframe src="https://micahkennedy.github.io/embeddings/" width="190" height="70" style="border:none; overflow:hidden; flex-shrink:0; display:block; margin-top:8px;"></iframe>
+<div style="flex:1;">
+<details style="margin-bottom:12px; border:1px solid #D9DDE3; border-radius:10px; overflow:hidden; background:white;">
+<summary style="cursor:pointer; padding:16px 18px; background-color:#F7F8FA; font-size:18px; font-weight:600;">
+Digital Cameras
+</summary>
+<div style="padding:18px 24px; background:white; border-top:1px solid #E5E7EB;">
+<div style="display:flex; align-items:flex-start; gap:14px;">
+<div style="display:inline-block; font-size:12px; font-weight:700; color:white; background:#B56A00; padding:4px 10px; border-radius:999px; white-space:nowrap; margin-top:2px;">
+It Depends
+</div>
+<div style="font-size:15px; line-height:1.45; color:#555;">
+<div style="font-style:italic; margin-bottom:6px;">This one’s tricky on purpose.</div>
+Digital cameras use sensors and electronics to capture images, and while some features such as face-detection may use AI, the main photo-taking process does not.
+</div>
+</div>
+</div>
+</details>
+</div>
+</div>
+
+> **💬 Quick Reflection:** Before you move on, think of a technology you use at school or at home. Classify your example as AI or Not. To help you decide, ask yourself whether the technology:
+> - Senses the environment?
+> - Learns from data?
+> - Makes predictions or decisions?
+
+MARKDOWN

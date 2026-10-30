@@ -1,0 +1,14 @@
+name 'self-paced-pl-gen-ai-foundations-preview-01c_2025'
+display_name 'AI Newsroom Playground'
+description '**Try out a chatbot**. Choose **one** newsroom task to explore what AI Chat can do. After the task, you will **reflect on what worked, what did not work, and what you learned**.'
+
+sublevels
+level 'exploring_generative_ai_newsroom_choice_a_2025'
+level 'exploring_generative_ai_newsroom_choice_b_2025'
+level 'exploring_generative_ai_newsroom_choice_c_2025'
+level 'exploring_generative_ai_newsroom_choice_d_2025'
+level 'exploring_generative_ai_newsroom_choice_e_2025'
+level 'exploring_generative_ai_newsroom_choice_f_2025'
+level 'exploring_generative_ai_newsroom_choice_g_2025'
+level 'exploring_generative_ai_newsroom_choice_h_2025'
+level 'exploring_generative_ai_newsroom_choice_i_2025'

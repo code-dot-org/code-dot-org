@@ -1,14 +1,17 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import classNames from 'classnames';
 import {connect} from 'react-redux';
-import {isResponsiveFromState} from '../templates/ProtectedVisualizationDiv';
-import StudioAppWrapper from './StudioAppWrapper';
-import InstructionsWithWorkspace from './instructions/InstructionsWithWorkspace';
-import CodeWorkspace from './CodeWorkspace';
-import Overlay from './Overlay';
-import VisualizationResizeBar from '../lib/ui/VisualizationResizeBar';
+
 import ModalFunctionEditor from '@cdo/apps/blockly/components/ModalFunctionEditor';
+
+import VisualizationResizeBar from '../code-studio/components/VisualizationResizeBar';
+import {isResponsiveFromState} from '../templates/ProtectedVisualizationDiv';
+
+import CodeWorkspace from './CodeWorkspace';
+import InstructionsWithWorkspace from './instructions/InstructionsWithWorkspace';
+import Overlay from './Overlay';
+import StudioAppWrapper from './StudioAppWrapper';
 
 /**
  * Top-level React wrapper for our standard blockly apps.
@@ -18,6 +21,10 @@ class AppView extends React.Component {
     hideSource: PropTypes.bool.isRequired,
     isResponsive: PropTypes.bool.isRequired,
     pinWorkspaceToBottom: PropTypes.bool.isRequired,
+    collapseIcon: PropTypes.node,
+    expandIcon: PropTypes.node,
+    upIcon: PropTypes.node,
+    downIcon: PropTypes.node,
 
     // not provided by redux
     visualizationColumn: PropTypes.element,
@@ -41,7 +48,12 @@ class AppView extends React.Component {
           {this.props.visualizationColumn}
         </div>
         <VisualizationResizeBar />
-        <InstructionsWithWorkspace>
+        <InstructionsWithWorkspace
+          collapseIcon={this.props.collapseIcon}
+          expandIcon={this.props.expandIcon}
+          upIcon={this.props.upIcon}
+          downIcon={this.props.downIcon}
+        >
           <CodeWorkspace />
           <ModalFunctionEditor />
         </InstructionsWithWorkspace>

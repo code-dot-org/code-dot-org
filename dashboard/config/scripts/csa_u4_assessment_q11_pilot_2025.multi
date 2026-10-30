@@ -1,0 +1,69 @@
+name 'CSA U4 Assessment q11_pilot-2025'
+
+wrong '`boolean b = false || ((5 / 4) % 3 == 1);`'
+right '`boolean b = false && ((5 / 4) % 3 == 1);`'
+wrong '`boolean b = true || ((5 / 4) % 3 == 1);`'
+wrong '`boolean b = true && ((5 / 4) % 3 == 1);`'
+wrong '`boolean b = !true || !false;`'
+
+markdown <<MARKDOWN
+Consider the following statement, which assigns a value to `a`.
+
+```
+boolean a = true && ((5 / 4) % 3 == 2);
+```
+
+Which of the following assigns the same value to `b` as the value stored in `a`?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+This expression would be evaluated as follows:
+
+```
+boolean a = true && ((5 / 4) % 3 == 2);
+boolean a = true && (1 % 3 == 2);
+boolean a = true && false;
+boolean a = false;
+```
+
+This means we want an expression that also evaluates to `false`.
+
+```
+Option A
+----------
+boolean b = false || ((5 / 4) % 3 == 1);
+boolean b = false || (1 % 3 == 1);
+boolean b = false || true;
+boolean b = true;
+
+Option B (Correct)
+----------
+boolean b = false && ((5 / 4) % 3 == 1);
+boolean b = false && (1 % 3 == 1);
+boolean b = false && true;
+boolean b = false;
+
+Option C
+----------
+boolean b = true || ((5 / 4) % 3 == 1);
+boolean b = true;
+// Because of short-circuit evaluation and the || (OR) operator, if
+// the first part of the expression is true, then the result is true.
+// The second part of the expression is not evaluated.
+
+Option D
+----------
+boolean b = true && ((5 / 4) % 3 == 1);
+boolean b = true && (1 % 3 == 1);
+boolean b = true && true;
+boolean b = true;
+
+Option E
+----------
+boolean b = !true || !false;
+boolean b = false || true;
+boolean b = true;
+```
+MARKDOWN
+
+allow_multiple_attempts true

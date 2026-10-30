@@ -20,7 +20,7 @@
     },
     "project_template_level_name": "CSA U6L7-Lists PBT_2023",
     "teacher_markdown": "We receive an error message that our program uses unchecked or unsafe operations. It will compile, but we are at high risk for programming errors since we have different object types in one `ArrayList`. This is an example of a non-generic `ArrayList`.",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2023-04-03T15:49:53.791+00:00\",\"changed\":[\"cloned from \\\"CSA U6L7-L2_2023\\\"\"],\"cloned_from\":\"CSA U6L7-L2_2023\"},{\"changed_at\":\"2023-04-03 15:49:55 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-02 11:55:09 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"

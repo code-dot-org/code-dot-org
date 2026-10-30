@@ -1,0 +1,14 @@
+{
+  "category_key": "javascript",
+  "content": "# If Statement\n\nAn `if` statement checks a condition. If the condition is `true`, JavaScript runs the code inside the curly braces.",
+  "examples": "[{\"name\":\"Check the Temperature\",\"description\":\"This changes the message if the temperature is greater than `70`.\",\"code\":\"```\\nif (temperature \\u003e 70) {\\n  message.textContent = \\\"It is warm outside!\\\";\\n}\\n```\"}]",
+  "external_documentation": "",
+  "fields": "[]",
+  "key": "if-statement",
+  "name": "If Statement",
+  "syntax": "`if (temperature > 70) { ... }`",
+  "tips": "- Put the condition inside parentheses.\n- Put the code that should run inside curly braces.\n- The code inside the `if` statement only runs when the condition is `true`.\n- Use comparison operators like `>`, `<`, or `===` to create conditions.\n- In Web Lab, `if` statements often appear inside event handlers or functions that update the page based on user choices.",
+  "methods": [
+
+  ]
+}

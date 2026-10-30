@@ -22,19 +22,31 @@
 #  index_levels_on_game_id    (game_id)
 #  index_levels_on_level_num  (level_num)
 #  index_levels_on_name       (name)
+#  index_levels_on_type       (type)
 #
 class Pythonlab < Level
   serialized_attrs %w(
     start_sources
     encrypted_exemplar_sources
-    encrypted_validation
     hide_share_and_remix
     is_project_level
     submittable
-    encrypted_examples
+    disable_edit_run_for_submission
     starter_assets
-    contained_level_names
+    predict_settings
+    validation_file
+    enable_micro_bit
+    mini_app
+    serialized_maze
+    widget_view
+    widget_view_allow_show_code
+    ai_tutor_prompt_settings
+    mini_app_variant
   )
+
+  validate :has_correct_multiple_choice_answer?
+  validate :validate_ai_tutor_prompt_settings
+  before_save :clean_up_predict_settings, :clean_up_mini_app_settings, :parse_maze
 
   def self.create_from_level_builder(params, level_params)
     create!(
@@ -46,7 +58,106 @@ class Pythonlab < Level
     )
   end
 
+  def self.mini_apps
+    [['None', nil], ['Neighborhood', 'neighborhood'], ['Theater', 'theater']]
+  end
+
+  DEFAULT_MINI_APP_VARIANTS = {
+    'neighborhood' => 'object_oriented',
+    'theater' => 'functional',
+  }.freeze
+
+  def self.mini_app_variants
+    [['Functional', 'functional'], ['Object Oriented', 'object_oriented']]
+  end
+
+  def mini_app_variant_or_default
+    mini_app_variant || DEFAULT_MINI_APP_VARIANTS[mini_app]
+  end
+
   def uses_lab2?
     true
+  end
+
+  def add_starter_asset!(_, _)
+    true
+  end
+
+  # Return the validation condition for this level. If the level has a validation file, the condition
+  # is that all tests passed. If there is no validation file, there are no conditions.
+  def get_validations
+    if validation_file
+      [{
+        conditions: [
+          {
+            name: 'PASSED_ALL_TESTS',
+            value: "true"
+          }
+        ],
+        message: '',
+        next: true,
+      }]
+    else
+      nil
+    end
+  end
+
+  def get_starter_code
+    properties["start_sources"]
+  end
+
+  def summarize_for_lab2_properties(script, script_level = nil, current_user = nil, unit_group_unit: nil)
+    level_properties = super
+    level_properties[:serializedMaze] = get_serialized_maze
+    level_properties['miniAppVariant'] = mini_app_variant_or_default
+    level_properties
+  end
+
+  def get_serialized_maze
+    serialized_maze || project_template_level&.try(:serialized_maze)
+  end
+
+  def clean_up_mini_app_settings
+    if mini_app != 'neighborhood'
+      properties.delete('serialized_maze')
+    end
+    properties.delete('mini_app_variant') if mini_app.blank?
+  end
+
+  # Copied from javalab.rb
+  def parse_maze
+    return if serialized_maze.blank? && project_template_level&.try(:serialized_maze).present?
+    if serialized_maze.nil? && mini_app == 'neighborhood'
+      raise ArgumentError.new('neighborhood must have a serialized_maze')
+    end
+    return if serialized_maze.nil?
+    # convert maze into json object and validate each cell has a tileType
+    maze_json = serialized_maze.is_a?(Array) ? serialized_maze.to_json : serialized_maze
+    maze = JSON.parse(maze_json)
+    maze.each_with_index do |row, x|
+      row.each_with_index do |cell, y|
+        unless cell.is_a?(Hash) && cell.key?('tileType')
+          raise ArgumentError.new("Cell (#{x},#{y}) has no defined tileType")
+        end
+      end
+    end
+    # paint bucket asset id is 303
+    if serialized_maze.include?("303") && (maze.length >= 20)
+      raise ArgumentError.new("Large mazes cannot have paint buckets")
+    end
+    self.serialized_maze = maze
+  end
+
+  private def validate_ai_tutor_prompt_settings
+    return if ai_tutor_prompt_settings.nil?
+
+    answer_types = ai_tutor_prompt_settings['answerTypes']
+    unless answer_types.is_a?(Array) && answer_types.all?(String)
+      errors.add(:ai_tutor_prompt_settings, 'answerTypes must be an array of strings.')
+    end
+    customizations = ai_tutor_prompt_settings['answerTypeCustomizations']
+    if customizations.present? && !(customizations.is_a?(Hash) && customizations.values.all?(String))
+      errors.add(:ai_tutor_prompt_settings, 'answerTypeCustomizations must be an object mapping answerType to string.')
+    end
   end
 end

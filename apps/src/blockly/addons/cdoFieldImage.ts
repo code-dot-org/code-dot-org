@@ -1,11 +1,28 @@
-import GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 
-export default class CdoFieldImage extends GoogleBlockly.FieldImage {
+import {FIELD_IMAGE_DEFAULT_SIZE} from '../constants';
+
+export default class CdoFieldImage extends BlocklyCore.FieldImage {
   // Y_PADDING is private in the parent class, so we need to redefine it here.
   private static readonly Y_PADDING_COPY = 1;
   newWidth: number | null = null;
   newHeight: number | null = null;
   allowImageChange = true;
+
+  // width and height are required in the parent class, but were optional
+  // in the CDO Blockly implementation. We override the constructor in order
+  // to provide default values for the image width and height.
+  constructor(
+    src: string | typeof BlocklyCore.Field.SKIP_SETUP,
+    width: string | number = FIELD_IMAGE_DEFAULT_SIZE,
+    height: string | number = FIELD_IMAGE_DEFAULT_SIZE,
+    alt?: string,
+    onClick?: (p1: BlocklyCore.FieldImage) => void,
+    flipRtl?: boolean,
+    config?: BlocklyCore.FieldImageConfig
+  ) {
+    super(src, width, height, alt, onClick, flipRtl, config);
+  }
 
   updateDimensions(width: number, height: number) {
     this.newWidth = width;

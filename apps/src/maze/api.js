@@ -1,4 +1,5 @@
 var tiles = require('@code-dot-org/maze').tiles;
+
 var Direction = tiles.Direction;
 var MoveDirection = tiles.MoveDirection;
 var TurnDirection = tiles.TurnDirection;

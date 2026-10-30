@@ -1,0 +1,56 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-10-20T22:10:15.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "### Behind the scenes\nHow does AI make an image from your words?\n",
+        "imageUrl": "https://images.code.org/8b6420bcb71cdfde2997b6575a7034c8-behind the scene.gif",
+        "key": "Generate_dancer_info-e349bed8-89d6-4efc-8a0e-29b8a1e5afb1",
+        "layout": "text-bottom-center"
+      },
+      {
+        "text": "**AI went through a training process** \n\nIn training, it looked at millions of pictures and their descriptions.\n",
+        "imageUrl": "https://images.code.org/99df39da5a4588f82a70c0fde6edfcb1-scan images.png",
+        "key": "Generate_dancer_info-93102ee9-aa96-4429-aafb-52f8fe7fd787",
+        "layout": "text-bottom-center",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "**AI makes predictions**\n\nWhen you give the AI a prompt, it starts by predicting one detail after another.\n\n--- \nFor example: \n\n\"Design a cool dog with sunglasses.\" ",
+        "imageUrl": "",
+        "key": "Generate_dancer_info-35731f8b-92f2-4309-954a-d8481cc58b14",
+        "layout": "text-bottom-center",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "**AI generates something new**\n\nBy predicting detail after detail, it generates full images, like a new dancer!",
+        "imageUrl": "",
+        "key": "HoAI_pilot_5_dancer_info-0ae6fab6-0f3d-4751-bd68-31f5bc186f74",
+        "layout": "text-bottom-center"
+      },
+      {
+        "text": "**AI isn’t magic…it’s math**\n\nAI doesn’t think or feel. It uses math to make predictions based on its training data.",
+        "imageUrl": "",
+        "key": "Generate_dancer_info-07287924-c7c1-45c4-86e6-1dc2621827a0",
+        "layout": "text-bottom-center",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "**You’re the judge**\n\nIf it’s wrong or weird, you decide to keep it or try again!",
+        "imageUrl": "",
+        "key": "Generate_dancer_info_2-571b0646-acfe-4ce0-804b-d73443dba600",
+        "layout": "text-bottom-left"
+      }
+    ],
+    "name_suffix": "_7"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-20T22:10:15.158+00:00\",\"changed\":[\"cloned from \\\"HoAI_pilot_6_dancer_info\\\"\"],\"cloned_from\":\"HoAI_pilot_6_dancer_info\"},{\"changed_at\":\"2025-10-20 22:21:42 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-20 22:22:22 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-23 20:14:28 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-23 20:14:54 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-23 20:33:05 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-23 21:21:10 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-25 00:59:34 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-10-25 02:06:31 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-10-27 14:55:30 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-27 14:56:46 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-27 16:26:44 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-27 16:28:18 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-27 16:28:51 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-29 16:38:59 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-29 16:39:54 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

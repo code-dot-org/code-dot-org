@@ -1,0 +1,42 @@
+name 'self-paced-TCaAI-L2-BI1-KeyLessonMoments_26'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Key Lesson Moments: Humans Shape AI Outputs
+
+The idea that humans shape AI outputs starts early with Lesson 1. Take a look at the key lesson moment in this and the next level to gain an understanding of how this big idea shows up for you and your students.
+
+## Lesson 1: Prompting AI
+
+<img src="https://images.code.org/80bc909560b8bc5c6ddaf0e3147f04c7-image-1779228298721.04.53 PM.png" alt="" style="width:40%; border-radius:10px; margin:0px 0px 10px 15px; float:right;">
+
+<a href="https://studio.code.org/courses/ai-discoveries-2026/units/1/lessons/1" target="blank" rel="noopener noreferrer">Lesson Plan Link</a>
+
+**Lesson Objectives**: 
+
+* Describe how prompts affect what AI creates
+* Explain what AI is in your own words
+
+### Student Activity: Generate and Explore
+
+In one of the first activities of the unit, students begin experimenting directly with AI image generation by creating dancer images. As they revise prompts and compare outputs, students quickly notice that changing small details in a prompt can dramatically change what the AI produces.
+
+This lesson introduces students to algorithmic thinking and helps them begin recognizing that AI outputs are shaped by human choices.
+
+<div style="clear:both;"></div>
+
+### Try It Out!
+
+Open the Lesson 1 lesson plan and read through the Warm-Up and Activity sections. Then, try completing <a href="https://studio.code.org/courses/ai-discoveries-2026/units/1/lessons/1/levels/1" target="blank" rel="noopener noreferrer">Levels 1–4</a> of the lesson progression.
+
+As you do, consider the following question:
+
+<div style="background-color:#F5F7F8; padding:18px; border-radius:10px; margin:20px 0px;">
+
+<p style="font-size:16px; margin:0;">
+<strong>Reflection:</strong> What questions could I ask students to help them connect their prompt revisions to specific output changes?
+</p>
+
+</div>
+MARKDOWN

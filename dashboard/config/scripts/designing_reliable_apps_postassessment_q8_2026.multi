@@ -1,0 +1,14 @@
+name 'designing-reliable-apps-postassessment-q8_2026'
+
+question 'A developer has this array: [{name: "Cleo", score: 90}, {name: "Omar", score: 85}]. They want to create a new array containing only the names: ["Cleo", "Omar"]. Which code correctly does this?'
+
+wrong 'students.filter(student => student.name)'
+right 'students.map(student => student.name)'
+wrong 'students.forEach(student => student.name)'
+wrong 'students.find(student => student.name)'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 5
+MARKDOWN

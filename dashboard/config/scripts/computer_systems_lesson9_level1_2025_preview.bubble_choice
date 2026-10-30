@@ -1,0 +1,9 @@
+name 'computer-systems-lesson9-level1_2025-preview'
+display_name 'Explore an AI Model'
+description 'Watch the video about your assigned AI model and take notes in your activity guide on how it processes data and makes decisions.'
+
+sublevels
+level 'computer-systems-lesson9-level1a_2025-preview'
+level 'computer-systems-lesson9-level1b_2025-preview'
+level 'computer-systems-lesson9-level1c_2025-preview'
+level 'computer-systems-lesson9-level1d_2025-preview'

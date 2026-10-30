@@ -1,17 +1,20 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
 import classNames from 'classnames';
-import PreviewPaneHeader from '../PreviewPaneHeader';
+import PropTypes from 'prop-types';
+import React from 'react';
+import {connect} from 'react-redux';
+
+import {toggleVisualizationCollapsed} from '@cdo/apps/javalab/redux/viewRedux';
 import {
   VISUALIZATION_DIV_ID,
   isResponsiveFromState,
 } from '@cdo/apps/templates/ProtectedVisualizationDiv';
-import {toggleVisualizationCollapsed} from '@cdo/apps/javalab/redux/viewRedux';
-import style from './theater-visualization-column.module.scss';
+
 import JavalabCrosshairOverlay, {
   showOverlayFromState,
 } from '../JavalabCrosshairOverlay';
+import PreviewPaneHeader from '../PreviewPaneHeader';
+
+import style from './theater-visualization-column.module.scss';
 
 class TheaterVisualizationColumn extends React.Component {
   static propTypes = {

@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import i18n from '@cdo/locale';
 import {connect} from 'react-redux';
+
+import i18n from '@cdo/locale';
+
 import {canShowGoogleShareButton} from './googlePlatformApiRedux';
 
 const style = {

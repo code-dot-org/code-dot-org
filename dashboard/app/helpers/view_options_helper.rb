@@ -38,18 +38,18 @@ module ViewOptionsHelper
     :current_script_level_url,
     :responsive_content, # The container for the main page content will be responsive to small screen sizes.
     :answerdash,
-    :signed_replay_log_url,
     :azure_speech_service_voices,
     :authenticity_token,
-    :blocklyVersion,
     :disallowed_html_tags,
+    :disallowed_html_attrs,
     :backpack_channel,
     :backpack_enabled,
     :level_requires_channel,
     :reduce_channel_updates,
     :has_open_code_review,
     :is_viewing_own_project,
-    :code_owners_name
+    :code_owners_name,
+    :stay_on_level_after_submit,
   )
   # Sets custom options to be used by the view layer. The option hash is frozen once read.
   def view_options(opts = nil)
@@ -87,7 +87,8 @@ module ViewOptionsHelper
     :pairing_attempt,
     :pairing_channel_id,
     :project_type,
-    :validation
+    :validation,
+    :is_building_quiz_questions,
   )
   # Sets custom level options to be used by the view layer. The option hash is
   # frozen once read. Accepts a level_id argument. If an option isn't naturally

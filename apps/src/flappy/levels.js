@@ -1,9 +1,10 @@
 // todo - i think our prepoluated code counts as LOCs
 
-var constants = require('./constants');
-var flappyMsg = require('./locale');
 var tb = require('../block_utils').createToolbox;
 var utils = require('../utils');
+
+var constants = require('./constants');
+var flappyMsg = require('./locale');
 
 var flapBlock = '<block type="flappy_flap"></block>';
 var flapHeightBlock = '<block type="flappy_flap_height"></block>';

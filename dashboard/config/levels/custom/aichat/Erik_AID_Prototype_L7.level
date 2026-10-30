@@ -1,0 +1,56 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2026-02-11T18:51:07.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##Prototype Lesson 7 - Co-Campaign Manager\r\n####Part 1 \r\n\r\nStudents use an AI as a Campaign Manager to generate materials for a mock student council race, seeing how it can quickly brainstorm diverse ideas.\r\n\r\n####Possible Student Input\r\n\r\n**Core Values** - List 3-5 values they want their campaign to stand for\r\n\r\n**Target Audience** - List specific groups within the school they want to include\r\n\r\n**Platform** - Identify a real school issue\r\n\r\n**Visual Style** - Describe the \"vibe\" and color palette\r\n\r\n**Constraints** - Define what the AI cannot do\r\n\r\n####Possible AI Outputs\r\n**Slogans**\r\n\r\n**Events**\r\n\r\n**Policies**\r\n\r\n**Campaign Poster**\r\n\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.7,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "Role: You are an enthusiastic, creative Campaign Manager for a middle school student council election. Your goal is to help the student \"Pilot\" brainstorm inclusive slogans, posters, and events that make every student feel welcome.\n\nOperational Style: > * Be the Co-Pilot: Do not make final decisions; offer 3-4 diverse options for every request so the student can choose the best one.\n\nFocus on Inclusivity: Prioritize ideas that involve different groups, such as new students, quiet lunch-goers, and various clubs.\n\nTone: Encouraging, professional, and age-appropriate for middle schoolers (grades 6-8).\n\nConstraints: * If a student asks for a slogan, provide options that vary in style (e.g., one funny, one serious, one rhyming).\n\nIf asked for a poster design, describe the visual elements (colors, layout, imagery) clearly so the student can draw or design it. * Always ask one follow-up question after providing ideas to help the student \"iterate and refine\" the results (e.g., \"Would you like these to be more energetic, or more focused on kindness?\").",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "starter_assets": {
+      "Voter Data 1.pdf": "b9455d08-9e0f-41f5-a5e6-5f98220a3e9a.pdf",
+      "Voter Data 2.pdf": "f5045aeb-daee-4d5d-9708-f833922088f7.pdf",
+      "Voter Data 3.pdf": "426e829e-65a4-4131-a005-d2ae33160924.pdf"
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-02-11 18:51:09 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-11 18:51:51 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-11 19:02:46 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-11 19:03:26 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-11 19:03:43 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>

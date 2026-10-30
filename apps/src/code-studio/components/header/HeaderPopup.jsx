@@ -1,11 +1,13 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+
+import i18n from '@cdo/locale';
+
 import progress from '../../progress';
 import MiniView from '../progress/MiniView';
-import i18n from '@cdo/locale';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+
 import styles from './header-popup.module.scss';
-import classNames from 'classnames';
 
 export default class HeaderPopup extends Component {
   static propTypes = {
@@ -28,24 +30,14 @@ export default class HeaderPopup extends Component {
     );
   }
 
-  handleClickOpen = () => {
+  handleClickOpen = e => {
+    e.stopPropagation();
     this.setState({open: true});
 
     progress.retrieveProgress(
       this.props.scriptName,
       this.props.scriptData,
       this.props.currentLevelId
-    );
-
-    firehoseClient.putRecord(
-      {
-        study: 'mini_view',
-        event: 'mini_view_opened',
-        data_json: JSON.stringify({
-          current_level_id: this.props.currentLevelId,
-        }),
-      },
-      {includeUserId: true}
     );
 
     $(document).on('click', this.handleClickDocument);
@@ -67,6 +59,9 @@ export default class HeaderPopup extends Component {
   };
 
   render() {
+    const scriptData = this.props.scriptData;
+    const courseName = scriptData?.course_name;
+    const unitPosition = scriptData?.unit_position;
     return (
       <div>
         {!this.state.open && (
@@ -79,7 +74,7 @@ export default class HeaderPopup extends Component {
             )}
             onClick={this.handleClickOpen}
           >
-            <i className={classNames('fa fa-caret-down', styles.caret)} />
+            <i className={classNames('fa-solid fa-caret-down', styles.caret)} />
             <div className={styles.more}>{i18n.moreAllCaps()}</div>
           </button>
         )}
@@ -95,7 +90,7 @@ export default class HeaderPopup extends Component {
               )}
               onClick={this.handleClickClose}
             >
-              <i className={classNames('fa fa-caret-up', styles.caret)} />
+              <i className={classNames('fa-solid fa-caret-up', styles.caret)} />
               <div className={styles.more}>{i18n.lessAllCaps()}</div>
             </button>
 
@@ -106,7 +101,11 @@ export default class HeaderPopup extends Component {
               >
                 <div className="header_popup_body">
                   <div className="user-stats-block">
-                    <MiniView minimal={this.props.minimal} />
+                    <MiniView
+                      minimal={this.props.minimal}
+                      courseName={courseName}
+                      unitPosition={unitPosition}
+                    />
                   </div>
                 </div>
               </div>

@@ -1,10 +1,30 @@
 import $ from 'jquery';
+import React from 'react';
+import {Provider} from 'react-redux';
+
+import AdaptiveHeaderPortal from '@cdo/apps/code-studio/components/header/AdaptiveHeaderPortal';
+import HeaderMiddle from '@cdo/apps/code-studio/components/header/HeaderMiddle';
+import SimpleHeader from '@cdo/apps/code-studio/components/header/SimpleHeader';
+import {setVerified} from '@cdo/apps/code-studio/verifiedInstructorRedux';
+import {
+  setUserSignedIn,
+  setInitialData,
+} from '@cdo/apps/templates/currentUserRedux';
+import {PUZZLE_PAGE_NONE} from '@cdo/apps/templates/progress/progressTypes';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
+
+import {getStore} from '../redux';
+
+import {setupNavigationHandler} from './browserNavigation';
+import SignInCalloutWrapper from './components/header/SignInCalloutWrapper';
 import {
   showProjectHeader,
   showMinimalProjectHeader,
   showProjectBackedHeader,
   showLevelBuilderSaveButton,
 } from './headerRedux';
+import progress from './progress';
+import {setCurrentLevelId} from './progressRedux';
 import {
   setProjectUpdatedError,
   setProjectUpdatedSaving,
@@ -13,24 +33,6 @@ import {
   refreshProjectName,
   setShowTryAgainDialog,
 } from './projectRedux';
-import React from 'react';
-import ReactDOM from 'react-dom';
-
-import {Provider} from 'react-redux';
-import progress from './progress';
-import {getStore} from '../redux';
-import {
-  setUserSignedIn,
-  setInitialData,
-} from '@cdo/apps/templates/currentUserRedux';
-import {setVerified} from '@cdo/apps/code-studio/verifiedInstructorRedux';
-import logToCloud from '../logToCloud';
-
-import {PUZZLE_PAGE_NONE} from '@cdo/apps/templates/progress/progressTypes';
-import HeaderMiddle from '@cdo/apps/code-studio/components/header/HeaderMiddle';
-import SignInCalloutWrapper from './components/header/SignInCalloutWrapper';
-import {setupNavigationHandler} from './browserNavigation';
-import {setCurrentLevelId} from './progressRedux';
 
 /**
  * Dynamic header generation and event bindings for header actions.
@@ -106,28 +108,62 @@ header.build = function (
 
   // Set up a navigation handler, in case we contain levels that don't
   // require a page reload when switching between them.
-  setupNavigationHandler(lessonData);
+  if (lessonData.levels.some(level => level.uses_lab2)) {
+    setupNavigationHandler(currentLevelId);
+  }
 
-  // Hold off on rendering HeaderMiddle.  This will allow the "app load"
-  // to potentially begin before we first render HeaderMiddle, giving HeaderMiddle
-  // the opportunity to wait until the app is loaded before rendering.
+  // Hold off on rendering the header middle.  This will allow the "app load"
+  // to potentially begin before we first render it, giving it the
+  // opportunity to wait until the app is loaded before rendering.
   $(document).ready(function () {
-    ReactDOM.render(
-      <Provider store={getStore()}>
-        <HeaderMiddle
-          scriptNameData={scriptNameData}
-          lessonData={lessonData}
-          scriptData={scriptData}
-        />
-      </Provider>,
-      document.querySelector('.header_level')
+    const isAdaptiveLevel = lessonData.levels.some(
+      level => level.app === 'adaptive' && level.ids?.includes(currentLevelId)
+    );
+    // An adaptive level draws its own header. A unit with simple progress has
+    // no bubbles to fit, so its header is a plain flex row rather than the
+    // measured one.
+    const middle = isAdaptiveLevel ? (
+      <AdaptiveHeaderPortal />
+    ) : scriptData.simpleProgress ? (
+      <SimpleHeader scriptData={scriptData} scriptNameData={scriptNameData} />
+    ) : (
+      <HeaderMiddle
+        scriptNameData={scriptNameData}
+        lessonData={lessonData}
+        scriptData={scriptData}
+      />
+    );
+    createReactRoot(
+      <Provider store={getStore()}>{middle}</Provider>,
+      document.querySelector('.header_level'),
+      {
+        legacyReactDomRender: true,
+      }
     );
     // Only render sign in callout if the course is CSF and the user is
     // not signed in
     if (scriptData.show_sign_in_callout && signedIn === false) {
-      ReactDOM.render(
+      // Additionally, update those urls to return user to level after
+      const currentUrl = window.location.pathname;
+      const buttons = [
+        document.querySelector('#signin_button'),
+        document.querySelector('#create_account_button'),
+      ];
+
+      buttons.forEach(button => {
+        if (button) {
+          const url = new URL(button.href);
+          url.searchParams.set('user_return_to', currentUrl);
+          button.href = url.toString();
+        }
+      });
+
+      createReactRoot(
         <SignInCalloutWrapper />,
-        document.querySelector('.signin_callout_wrapper')
+        document.querySelector('.signin_callout_wrapper'),
+        {
+          legacyReactDomRender: true,
+        }
       );
     }
   });
@@ -139,22 +175,28 @@ header.buildProjectInfoOnly = function (currentLevelId) {
   // Store the current level ID in the progressRedux store.
   store.dispatch(setCurrentLevelId(currentLevelId));
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={store}>
       <HeaderMiddle projectInfoOnly={true} />
     </Provider>,
-    document.querySelector('.header_level')
+    document.querySelector('.header_level'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 };
 
 // When viewing the level page in code review mode, we want to show only the
 // lesson information (which is displayed by the ScriptName component).
 header.buildScriptNameOnly = function (scriptNameData) {
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={getStore()}>
       <HeaderMiddle scriptNameData={scriptNameData} scriptNameOnly={true} />
     </Provider>,
-    document.querySelector('.header_level')
+    document.querySelector('.header_level'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 };
 
@@ -177,37 +219,6 @@ header.buildUserMenu = function () {
   });
 };
 
-function setupReduxSubscribers(store) {
-  let state = {};
-  store.subscribe(() => {
-    let lastState = state;
-    state = store.getState();
-
-    // Update the project state when a PublishDialog state transition indicates
-    // that a project has just been published.
-    if (
-      lastState.publishDialog &&
-      lastState.publishDialog.lastPublishedAt !==
-        state.publishDialog.lastPublishedAt
-    ) {
-      window.dashboard.project.setPublishedAt(
-        state.publishDialog.lastPublishedAt
-      );
-    }
-
-    // Update the project state when a ShareDialog state transition indicates
-    // that a project has just been unpublished.
-    if (
-      lastState.shareDialog &&
-      !lastState.shareDialog.didUnpublish &&
-      state.shareDialog.didUnpublish
-    ) {
-      window.dashboard.project.setPublishedAt(null);
-    }
-  });
-}
-setupReduxSubscribers(getStore());
-
 function setUpGlobalData(store) {
   fetch('/api/v1/users/current', {
     credentials: 'same-origin',
@@ -218,8 +229,6 @@ function setUpGlobalData(store) {
       if (data.is_signed_in) {
         store.dispatch(setInitialData(data));
         data.is_verified_instructor && store.dispatch(setVerified());
-
-        logToCloud.setCustomAttribute('userId', data.id);
       }
     })
     .catch(err => {

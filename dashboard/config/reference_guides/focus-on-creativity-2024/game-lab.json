@@ -1,0 +1,9 @@
+{
+  "key": "game-lab",
+  "course_version_key": "2024",
+  "course_offering_key": "focus-on-creativity",
+  "parent_reference_guide_key": null,
+  "display_name": "Game Lab",
+  "content": "Game Lab is a tool built with [JavaScript](/concepts/javascript/) that can be used to create art, games, and animations. Read more about Game Lab's commands in the [Game Lab documentation](https://studio.code.org/docs/gamelab/).",
+  "position": 0
+}

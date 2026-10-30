@@ -1,0 +1,43 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-05-01T23:03:13.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "require_edit_to_continue": "true",
+    "encrypted": "false",
+    "display_name": "Community Events",
+    "long_instructions": "## Analyze Patterns\r\n\r\n### **Do This:**\r\n\r\n1. Look through the `events` array.\r\n2. Count how many events of each type appear.\r\n3. Look at the `location` field across the dataset.\r\n4. Compare the `description` field across events.\r\n\r\n### **Reflect:**\r\n\r\n- Which type of event appears most often?\r\n- Which type appears least?\r\n- What patterns do you notice about where events are located?\r\n- Which events have more detailed descriptions? Which have less?",
+    "bubble_choice_description": "Examine the dataset to identify patterns in how events are represented.",
+    "thumbnail_url": "https://images.code.org/d1ff4cd1af981c011e4e49948f32919f-community.png",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "explainCode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "project_template_level_name": "template_building-data-driven-systems-lesson5-level1_choiceb_2026"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-05-01T23:03:13.766+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson5-level2_choiceA_2026\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson5-level2_choiceA_2026\"},{\"changed_at\":\"2026-05-04 14:06:30 +0000\",\"changed\":[\"require_edit_to_continue\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-04 14:06:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-04 14:41:27 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Weblab2>

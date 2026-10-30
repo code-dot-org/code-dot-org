@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2023-02-01T10:46:04.000Z",
   "level_num": "custom",
@@ -43,13 +44,12 @@
     "design_mode_at_start": "false",
     "hide_design_mode": "true",
     "beginner_mode": "false",
-    "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\" data-theme=\"classic\"><button id=\"blueButton\" style=\"padding: 0px; margin: 0px; font-size: 14px; color: rgb(255, 255, 255); background-color: blue; position: absolute; left: 0px; width: 160px; height: 225px; top: 225px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; font-family: Arial, Helvetica, sans-serif;\"></button><button id=\"yellowButton\" style=\"padding: 0px; margin: 0px; font-size: 14px; color: rgb(255, 255, 255); background-color: yellow; position: absolute; width: 160px; height: 225px; top: 226px; left: 160px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; font-family: Arial, Helvetica, sans-serif;\"></button><button id=\"redButton\" style=\"padding: 0px; margin: 0px; font-size: 14px; color: rgb(255, 255, 255); background-color: red; position: absolute; left: 20px; top: 125px; width: 160px; height: 225px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; font-family: Arial, Helvetica, sans-serif;\"></button><button id=\"greenButton\" style=\"padding: 0px; margin: 0px; font-size: 14px; color: rgb(255, 255, 255); background-color: green; position: absolute; left: 135px; width: 160px; height: 225px; top: 125px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; font-family: Arial, Helvetica, sans-serif;\"></button></div></div>",
+    "start_html": "<div id=\"designModeViz\" class=\"appModern clip-content\" data-radium=\"true\" style=\"width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\" data-theme=\"classic\"><button id=\"blueButton\" style=\"padding: 0px; margin: 0px; font-size: 14px; color: rgb(255, 255, 255); background-color: blue; position: absolute; left: 0px; width: 160px; height: 225px; top: 225px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; font-family: Arial, Helvetica, sans-serif;\"></button><button id=\"yellowButton\" style=\"padding: 0px; margin: 0px; font-size: 14px; color: rgb(255, 255, 255); background-color: yellow; position: absolute; width: 160px; height: 225px; top: 226px; left: 160px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; font-family: Arial, Helvetica, sans-serif;\"></button><button id=\"redButton\" style=\"padding: 0px; margin: 0px; font-size: 14px; color: rgb(255, 255, 255); background-color: red; position: absolute; left: 20px; top: 125px; width: 160px; height: 225px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; font-family: Arial, Helvetica, sans-serif;\"></button><button id=\"greenButton\" style=\"padding: 0px; margin: 0px; font-size: 14px; color: rgb(255, 255, 255); background-color: green; position: absolute; left: 135px; width: 160px; height: 225px; top: 125px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; font-family: Arial, Helvetica, sans-serif;\"></button><img src=\"https://images.code.org/aabca4bc4aee737aa58b7511cee62315-grid.png\" data-canonical-image-url=\"https://images.code.org/aabca4bc4aee737aa58b7511cee62315-grid.png\" data-image-type=\"url\" data-object-fit=\"contain\" id=\"coordinatGrid\" style=\"height: 450px; width: 320px; border-style: solid; border-width: 0px; border-color: rgba(0, 0, 0, 0); border-radius: 0px; position: absolute; left: 0px; top: 0px; margin: 0px;\"></div></div>",
     "hide_view_data_button": "true",
     "show_debug_watch": "true",
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "false",
     "encrypted_examples": "csKt+1zIxzqVj/T/iJIjf6nrLvyKkpVLUPCaJQ8kuQMLtb3dfT7K4+f7qXtM\npQKQLQIJLanspbI+nUTAI+0+BA==\n",
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 20377,
@@ -69,9 +69,8 @@
     "ai_enabled": "false",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-02-01T10:46:04.728+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Screen Outputs - SB2_2222\\\"\"],\"cloned_from\":\"CSD U6 - Screen Outputs - SB2_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-01T10:46:04.728+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Screen Outputs - SB2_2222\\\"\"],\"cloned_from\":\"CSD U6 - Screen Outputs - SB2_2222\"},{\"changed_at\":\"2024-03-28 18:39:01 +0000\",\"changed\":[\"code_functions\",\"hide_design_mode\",\"makerlab_enabled\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-28 18:42:24 +0000\",\"changed\":[\"start_blocks\",\"start_html\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-28 18:44:04 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"hide_design_mode\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

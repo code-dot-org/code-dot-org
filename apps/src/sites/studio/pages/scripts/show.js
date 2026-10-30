@@ -1,35 +1,40 @@
 import $ from 'jquery';
-
-import {Provider} from 'react-redux';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {Provider} from 'react-redux';
+
+import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
 import announcementsReducer, {
   addAnnouncement,
 } from '@cdo/apps/code-studio/announcementsRedux';
+import UnitOverview from '@cdo/apps/code-studio/components/progress/UnitOverview.jsx';
+import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import plcHeaderReducer, {
   setPlcHeader,
 } from '@cdo/apps/code-studio/plc/plcHeaderRedux';
+import {initViewAs, initCourseProgress} from '@cdo/apps/code-studio/progress';
+import {setStudentDefaultsSummaryView} from '@cdo/apps/code-studio/progressRedux';
 import {getStore} from '@cdo/apps/code-studio/redux';
-import {registerReducers} from '@cdo/apps/redux';
+import {updateQueryParam, queryParams} from '@cdo/apps/code-studio/utils';
 import {
   setVerified,
   setVerifiedResources,
 } from '@cdo/apps/code-studio/verifiedInstructorRedux';
-import {tooltipifyVocabulary} from '@cdo/apps/utils';
+import {registerReducers} from '@cdo/apps/redux';
+import ParentalPermissionBanner from '@cdo/apps/templates/policy_compliance/ParentalPermissionBanner';
 import googlePlatformApi, {
   loadGooglePlatformApi,
 } from '@cdo/apps/templates/progress/googlePlatformApiRedux';
+import {resumeReviewSyllabusOnboardingTour} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/useReviewSyllabusTour';
 import {
   selectSection,
   setSections,
   setPageType,
   pageTypes,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenLessonRedux';
-import progress from '@cdo/apps/code-studio/progress';
-import UnitOverview from '@cdo/apps/code-studio/components/progress/UnitOverview.jsx';
-import {setStudentDefaultsSummaryView} from '@cdo/apps/code-studio/progressRedux';
-import {updateQueryParam, queryParams} from '@cdo/apps/code-studio/utils';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
+import experiments from '@cdo/apps/util/experiments';
+import {tooltipifyVocabulary} from '@cdo/apps/utils';
+import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
 
 import locales, {setLocaleCode} from '../../../../redux/localesRedux';
 
@@ -38,6 +43,9 @@ $(document).ready(initPage);
 function initPage() {
   const script = document.querySelector('script[data-scriptoverview]');
   const config = JSON.parse(script.dataset.scriptoverview);
+  const parentalPermissionBannerData = JSON.parse(
+    script.dataset.parentalPermissionBanner
+  );
 
   const {scriptData, plcBreadcrumb} = config;
   const store = getStore();
@@ -76,18 +84,15 @@ function initPage() {
   if (scriptData.student_detail_progress_view) {
     store.dispatch(setStudentDefaultsSummaryView(false));
   }
-  progress.initViewAs(
-    store,
-    scriptData.user_id !== null,
-    scriptData.is_instructor
-  );
+  initViewAs(store, scriptData.user_id !== null, scriptData.is_instructor);
   if (scriptData.is_instructor) {
     initializeStoreWithSections(store, scriptData.sections, scriptData.section);
   }
   store.dispatch(initializeHiddenScripts(scriptData.section_hidden_unit_info));
   store.dispatch(setPageType(pageTypes.scriptOverview));
 
-  progress.initCourseProgress(scriptData);
+  // Don't show the teacher panel if v2 dashboard is enabled
+  initCourseProgress(scriptData);
 
   const mountPoint = document.createElement('div');
   $('.user-stats-block').prepend(mountPoint);
@@ -102,8 +107,15 @@ function initPage() {
     false
   );
 
-  ReactDOM.render(
+  const showAiAssessmentsAnnouncement =
+    scriptData.showAiAssessmentsAnnouncement;
+
+  createReactRoot(
     <Provider store={store}>
+      {parentalPermissionBannerData && (
+        <ParentalPermissionBanner {...parentalPermissionBannerData} />
+      )}
+
       <UnitOverview
         id={scriptData.id}
         courseId={scriptData.course_id}
@@ -111,6 +123,7 @@ function initPage() {
         courseVersionId={scriptData.courseVersionId}
         courseTitle={scriptData.course_title}
         courseLink={scriptData.course_link}
+        isSingleUnitCourse={scriptData.is_single_unit_course}
         excludeCsfColumnInLegend={!scriptData.csf}
         teacherResources={scriptData.teacher_resources}
         studentResources={scriptData.student_resources || []}
@@ -133,20 +146,21 @@ function initPage() {
         unitHasLevels={unitHasLevels}
         isMigrated={scriptData.is_migrated}
         scriptOverviewPdfUrl={scriptData.scriptOverviewPdfUrl}
+        scriptPath={scriptData.scriptPath}
         scriptResourcesPdfUrl={scriptData.scriptResourcesPdfUrl}
-        showUnversionedRedirectWarning={
-          scriptData.show_unversioned_redirect_warning
-        }
         isCsdOrCsp={scriptData.isCsd || scriptData.isCsp}
         completedLessonNumber={completedLessonNumber}
         publishedState={scriptData.publishedState}
         participantAudience={scriptData.participantAudience}
+        showAiAssessmentsAnnouncement={showAiAssessmentsAnnouncement}
       />
     </Provider>,
     mountPoint
   );
 
+  resumeReviewSyllabusOnboardingTour();
   tooltipifyVocabulary();
+  displayDifferentiationChat(scriptData);
 }
 
 function initializeGooglePlatformApi(store) {
@@ -176,4 +190,25 @@ function initializeStoreWithSections(store, sections, currentSection) {
   }
   store.dispatch(setSections(sections));
   store.dispatch(selectSection(currentSection.id.toString()));
+}
+
+function displayDifferentiationChat(scriptData) {
+  const aiDiffFabMountPoint = document.getElementById(
+    'ai-differentiation-fab-mount-point'
+  );
+
+  if (aiDiffFabMountPoint && experiments.isEnabled('ai-differentiation')) {
+    createReactRoot(
+      <Provider store={getStore()}>
+        <AiDiffFloatingActionButton
+          context={{
+            type: AiDiffContext.UNIT,
+            unitId: scriptData.id,
+          }}
+          scriptName={scriptData.name}
+        />
+      </Provider>,
+      aiDiffFabMountPoint
+    );
+  }
 }

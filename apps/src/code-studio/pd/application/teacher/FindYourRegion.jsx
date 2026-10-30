@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
+import React, {useEffect, useState} from 'react';
 /* eslint-disable no-restricted-imports */
 import {
   FormGroup,
@@ -9,25 +9,28 @@ import {
   Row,
   Col,
 } from 'react-bootstrap';
+
 /* eslint-enable no-restricted-imports */
-import {getProgramInfo, styles} from './TeacherApplicationConstants';
 import {
   PageLabels,
   SectionHeaders,
 } from '@cdo/apps/generated/pd/teacherApplicationConstants';
-import {LabeledInput} from '../../form_components_func/labeled/LabeledInput';
-import {LabeledSelect} from '../../form_components_func/labeled/LabeledSelect';
-import {LabelsContext} from '../../form_components_func/LabeledFormComponent';
-import {LabeledRadioButtons} from '../../form_components_func/labeled/LabeledRadioButtons';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
+import {isZipCode} from '@cdo/apps/util/formatValidation';
+
+import {useRegionalPartner} from '../../components/useRegionalPartner';
 import {
   FormContext,
   getValidationState,
 } from '../../form_components_func/FormComponent';
-import {isZipCode} from '@cdo/apps/util/formatValidation';
-import {useRegionalPartner} from '../../components/useRegionalPartner';
-import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {LabeledInput} from '../../form_components_func/labeled/LabeledInput';
+import {LabeledRadioButtons} from '../../form_components_func/labeled/LabeledRadioButtons';
+import {LabeledSelect} from '../../form_components_func/labeled/LabeledSelect';
+import {LabelsContext} from '../../form_components_func/LabeledFormComponent';
+
+import {getProgramInfo, styles} from './TeacherApplicationConstants';
 
 const PD_RESOURCES_URL =
   'https://support.code.org/hc/en-us/articles/115003865532';
@@ -79,13 +82,13 @@ const FindYourRegion = props => {
       <Modal show={data.country === INTERNATIONAL}>
         <Modal.Header>
           <Modal.Title>
-            Thank you for your interest in Code.org’s Professional Learning
+            Thank you for your interest in CodeAI’s Professional Learning
             Program.
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
           At this time, we are only able to provide this program to teachers in
-          the United States. Please visit our website for additional Code.org{' '}
+          the United States. Please visit our website for additional CodeAI{' '}
           <a href={PD_RESOURCES_URL} target="_blank" rel="noopener noreferrer">
             professional development resources
           </a>{' '}
@@ -141,9 +144,9 @@ const FindYourRegion = props => {
             </strong>
           </p>
           <p>
-            Code.org will review your application and contact you with options
-            for joining a virtual cohort of {programInfo.name} teachers from
-            another region.
+            CodeAI will review your application and contact you with options for
+            joining a virtual cohort of {programInfo.name} teachers from another
+            region.
           </p>
         </>
       );

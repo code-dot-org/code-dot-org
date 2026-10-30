@@ -1,0 +1,37 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2024-05-15T21:03:57.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "validation_enabled": "true",
+    "encrypted": "false",
+    "long_instructions": "# Display, Direction and Wrap\r\n\r\nThe first three steps we typically follow when applying Flex properties are: 1) establish the layout, 2) define the flow direction and if items should wrap, and 3) define how the items should be distributed. Let's try out the **first two steps**:  **1) establish flex layout** and **2) define the direction and wrap**.\r\n\r\n# Do This\r\n\r\n1. Add a `div` container around the image tags.\r\n2. Add the class name `.container` to the `div` tag.\r\n3. Add the following Flex properties to the container:\r\n   - Establish flex layout with `display: flex;`\r\n   - Define the flow direction with `flex-direction: row;`. \r\n    - Define if items should wrap with `flex-wrap: wrap;`.\r\n4. Change the size of your Preview window to see the wrapping effects (see gif below).\r\n5. Change the values for the `flex-direction` property to see what each one does: \r\n   - Value options include:\r\n      - `row`\r\n      - `row-reverse`\r\n      - `column`\r\n      - `column-reverse`\r\n6. Change the values for the `flex-wrap` property to see what each one does: \r\n   - Value options include:\r\n      - `wrap`\r\n      - `nowrap`\r\n      - `wrap-reverse`\r\n\r\n<br>\r\n\r\n::: details [🔎 **Show Me How To Complete This Level** 🔍]\r\n\r\n<img src=\"https://images.code.org/ca4e91d3af0695944b52bd7e4e7adc8c-image-1708131687846.gif\" style=\"width:500px\">\r\n\r\n**More resources are in the \"Help and Tips\" tab**\r\n:::\r\n\r\n<br>\r\n\r\n::: details [**Show Me How To Resize The Preview Window**]\r\n\r\n<img src=\"https://images.code.org/3af3419482a8b0d3c7d8929e61547c21-image-1705694267212.gif\" style=\"width: 250px\">\r\n\r\n\r\n:::\r\n\r\n<br>\r\n\r\n**Don't forget to refer back to your <a href=\"https://docs.google.com/document/d/1f5t7oUfV-5PRtcKrJVskrb_Mt_r8941VT-Qa-07mP9o/edit?usp=sharing\">Flexbox Cheat Sheet</a> when needed!**\r\n\r\n![]()",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "start_sources": "              {\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html>\\n<html>\\n  <head>\\n    <link rel=\\\"stylesheet\\\" href=\\\"style.css\\\">\\n  </head>\\n  <body>\\n    \\n    <!-- ADD A DIV container with a class attribute around the 6 images -->\\n \\n      <img src=\\\"one.jpg\\\" alt=\\\"one\\\">\\n      <img src=\\\"two.jpg\\\" alt=\\\"two\\\">\\n      <img src=\\\"three.jpg\\\" alt=\\\"three\\\">\\n      <img src=\\\"four.jpg\\\" alt=\\\"four\\\">\\n      <img src=\\\"five.jpg\\\" alt=\\\"five\\\">\\n      <img src=\\\"six.jpg\\\" alt=\\\"six\\\">\\n\\n    \\n  </body>\\n</html>\"\r\n    },\r\n    {\r\n      \"name\": \"style.css\",\r\n      \"data\": \".container {\\n  /* We gave the div container a background color so you can see how the items are positioned within it */\\n  background: #b691d6;\\n  \\n  /* First, create a flex layout context */\\n\\n\\n\\n  /* Then, define the flow direction \\n  and if the items should wrap */\\n\\n \\n}\\n\\n\\nimg {\\n  border-style: solid;\\n  width: 100px;\\n}\"\r\n    },\r\n    {\r\n      \"name\": \"one.jpg\",\r\n      \"url\": \"https://images.code.org/6d03fd210c0f3527e02bf011f46575b5-one.jpg\"\r\n    },\r\n    {\r\n      \"name\": \"two.jpg\",\r\n      \"url\": \"https://images.code.org/553a4b7c78ab37b38695b095a5a12517-two.jpg\"\r\n    },\r\n    {\r\n      \"name\": \"three.jpg\",\r\n      \"url\": \"https://images.code.org/f3fe826f3692d138b269d153089d697b-three.jpg\"\r\n    },\r\n    {\r\n      \"name\": \"four.jpg\",\r\n      \"url\": \"https://images.code.org/efe517869f6385313ef456b740961174-four.jpg\"\r\n    },\r\n    {\r\n      \"name\": \"five.jpg\",\r\n      \"url\": \"https://images.code.org/babf3e1c199abdce5aeb270b66f16eb1-five.jpg\"\r\n    },\r\n    {\r\n      \"name\": \"six.jpg\",\r\n      \"url\": \"https://images.code.org/dbf46e859657df01200e8300e271b5da-six.jpg\"\r\n    }\r\n  ]\r\n}\r\n            ",
+    "hide_share_and_remix": "true",
+    "reference_links": [
+      "/courses/csd-2024/guides/flexbox",
+      "/courses/csd-2024/guides/classes",
+      "/courses/csd-2024/guides/layout-properties",
+      "/courses/csd-2024/guides/body-styling",
+      "/courses/csd-2024/guides/images-in-html",
+      "/courses/csd-2024/guides/creative-commons-search",
+      "/courses/csd-2024/guides/style-sheets",
+      "/courses/csd-2024/guides/text-properties",
+      "/courses/csd-2024/guides/formatting-html",
+      "/courses/csd-2024/guides/lists",
+      "/courses/csd-2024/guides/headings-and-paragraphs",
+      "/courses/csd-2024/guides/html-tags",
+      "/courses/csd-2024/guides/web-lab",
+      "/courses/csd-2024/guides/debugging-html"
+    ],
+    "map_reference": "/courses/csd-2024/guides/div",
+    "name_suffix": "_2024"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-05-15T21:03:57.841+00:00\",\"changed\":[\"cloned from \\\"CSD U2L12 Div Flex SB_1\\\"\"],\"cloned_from\":\"CSD U2L12 Div Flex SB_1\"}]"
+}]]></config>
+</Weblab>

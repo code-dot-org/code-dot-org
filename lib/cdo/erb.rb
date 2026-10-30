@@ -1,6 +1,8 @@
 require 'erb'
 require 'ostruct'
 
+require_relative 'git_utils' # Necessary for 'test' environment to load test.erb.yml
+
 def erb_file_to_string(path, binding)
   ERB.new(File.read(path), trim_mode: '-').
     tap {|erb| erb.filename = path}.

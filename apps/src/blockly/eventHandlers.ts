@@ -1,12 +1,22 @@
-// Event Handlers for Google Blockly.
+// Event Handlers for Blockly.
+
+import * as BlocklyCore from 'blockly/core';
 
 import {handleWorkspaceResizeOrScroll} from '@cdo/apps/code-studio/callouts';
-import {BLOCK_TYPES} from './constants';
-import {Abstract} from 'blockly/core/events/events_abstract';
-import {BlockChange} from 'blockly/core/events/events_block_change';
-import {BlockMove} from 'blockly/core/events/events_block_move';
-import {BlockCreate} from 'blockly/core/events/events_block_create';
-import {Block, WorkspaceSvg} from 'blockly';
+import color from '@cdo/apps/util/color';
+
+import BlockSvgLimitIndicator from './addons/blockSvgLimitIndicator';
+import {BLOCK_TYPES, BlockColors} from './constants';
+import {
+  ExtendedBlock,
+  ExtendedBlockSvg,
+  ExtendedWorkspace,
+  ExtendedWorkspaceSvg,
+} from './types';
+import {
+  updateBlockEnabled,
+  disableOrphanBlocks,
+} from './utils/workspace/disabledBlocks';
 
 // A custom version of Blockly's Events.disableOrphans. This makes a couple
 // changes to the original function.
@@ -28,22 +38,26 @@ import {Block, WorkspaceSvg} from 'blockly';
 // We re-disable any orphan call blocks when the definition block is dragged.
 // This bug is tracked by the Blockly team:
 // https://github.com/google/blockly-samples/issues/2035
-export function disableOrphans(event: Abstract) {
+export function disableOrphans(event: BlocklyCore.Events.Abstract) {
   // This check is for when a block goes from disabled to enabled (value false is enabled).
   // We need to run the check on this event due to the Blockly bug described above.
   if (
     event.type !== Blockly.Events.BLOCK_CHANGE &&
     event.type !== Blockly.Events.BLOCK_MOVE &&
+    event.type !== Blockly.Events.BLOCK_DRAG &&
     event.type !== Blockly.Events.BLOCK_CREATE
   ) {
     return;
   }
-  const blockEvent = event as BlockChange | BlockMove | BlockCreate;
+  const blockEvent = event as
+    | BlocklyCore.Events.BlockChange
+    | BlocklyCore.Events.BlockMove
+    | BlocklyCore.Events.BlockCreate;
   const isEnabledEvent =
     blockEvent.type === Blockly.Events.BLOCK_CHANGE &&
-    (blockEvent as BlockChange).element === 'disabled' &&
-    !(blockEvent as BlockChange).newValue &&
-    (blockEvent as BlockChange).oldValue;
+    (blockEvent as BlocklyCore.Events.BlockChange).element === 'disabled' &&
+    !(blockEvent as BlocklyCore.Events.BlockChange).newValue &&
+    (blockEvent as BlocklyCore.Events.BlockChange).oldValue;
 
   if (!blockEvent.blockId || !blockEvent.workspaceId) {
     return;
@@ -65,43 +79,15 @@ export function disableOrphans(event: Abstract) {
     block.type === BLOCK_TYPES.procedureDefinition &&
     eventWorkspace
   ) {
-    // When a function definition is moved, we should not suddenly enable
-    // its call blocks.
-    eventWorkspace.getTopBlocks().forEach(block => {
-      if (block.type === BLOCK_TYPES.procedureCall) {
-        block.setEnabled(false);
-      }
-      updateBlockEnabled(block);
-    });
-  }
-}
-
-function updateBlockEnabled(block: Block) {
-  // Changing blocks as part of this event shouldn't be undoable.
-  const initialUndoFlag = Blockly.Events.getRecordUndo();
-  try {
-    Blockly.Events.setRecordUndo(false);
-    const parent = block.getParent();
-    if (parent && parent.isEnabled()) {
-      const children = block.getDescendants(false);
-      for (let i = 0, child; (child = children[i]); i++) {
-        child.setEnabled(true);
-      }
-    } else if (block.outputConnection || block.previousConnection) {
-      let currentBlock: Block | null = block;
-      do {
-        currentBlock.setEnabled(false);
-        currentBlock = currentBlock.getNextBlock();
-      } while (currentBlock);
-    }
-  } finally {
-    Blockly.Events.setRecordUndo(initialUndoFlag);
+    disableOrphanBlocks(eventWorkspace);
   }
 }
 
 // When the viewport of the workspace is changed (due to scrolling for example),
 // we need to reposition any callouts.
-export function adjustCalloutsOnViewportChange(event: Abstract) {
+export function adjustCalloutsOnViewportChange(
+  event: BlocklyCore.Events.Abstract
+) {
   if (event.type === Blockly.Events.VIEWPORT_CHANGE) {
     handleWorkspaceResizeOrScroll();
   }
@@ -109,11 +95,200 @@ export function adjustCalloutsOnViewportChange(event: Abstract) {
 
 // When the browser is resized, we need to re-adjust the width of any open flyout.
 export function reflowToolbox() {
-  const mainWorkspace = Blockly.getMainWorkspace() as WorkspaceSvg;
+  const mainWorkspace = Blockly.getMainWorkspace() as BlocklyCore.WorkspaceSvg;
   mainWorkspace?.getFlyout()?.reflow();
 
   if (Blockly.functionEditor) {
-    const modalWorkspace = Blockly.getFunctionEditorWorkspace() as WorkspaceSvg;
+    const modalWorkspace =
+      Blockly.getFunctionEditorWorkspace() as BlocklyCore.WorkspaceSvg;
     modalWorkspace?.getFlyout()?.reflow();
+    BlocklyCore;
+  }
+}
+
+// We store the workspace width for RTL workspaces so that we can move
+// blocks back to the correct positions after a browser window resize.
+// See: https://github.com/google/blockly/issues/8637
+export function storeWorkspaceWidth(e: BlocklyCore.Events.Abstract) {
+  if (e.type === Blockly.Events.FINISHED_LOADING && e.workspaceId) {
+    const workspace = Blockly.Workspace.getById(
+      `${e.workspaceId}`
+    ) as ExtendedWorkspaceSvg;
+    if (workspace?.RTL && workspace?.rendered) {
+      workspace.previousViewWidth = workspace?.getMetrics().viewWidth;
+    }
+  }
+}
+
+// Jigsaw only. Sets a fill pattern defines a path in order to show pictures
+// over the blocks.
+export function setPathFill(e: BlocklyCore.Events.Abstract) {
+  const expectedEventTypes: string[] = [
+    Blockly.Events.FINISHED_LOADING,
+    Blockly.Events.BLOCK_MOVE,
+  ];
+  if (expectedEventTypes.includes(e.type) && e.workspaceId) {
+    if (!Blockly.isJigsaw) {
+      return;
+    }
+    const workspace = Blockly.Workspace.getById(
+      `${e.workspaceId}`
+    ) as ExtendedWorkspace;
+    workspace
+      .getAllBlocks()
+      .map(block => block as ExtendedBlock)
+      .forEach(block => {
+        const pattern = block.getFillPattern?.();
+        if (block instanceof BlocklyCore.BlockSvg) {
+          if (!block.svgPathFill) {
+            block.svgPathFill = BlocklyCore.utils.dom.createSvgElement(
+              'path',
+              {class: 'blocklyPath'},
+              block.getSvgRoot()
+            );
+          }
+          const pathDescription = block.pathObject.svgPath.getAttribute('d');
+          if (pattern && pathDescription) {
+            block.svgPathFill.setAttribute('stroke', color.neutral_light);
+            block.svgPathFill.setAttribute('fill', 'url(#' + pattern + ')');
+            block.svgPathFill.setAttribute('d', pathDescription);
+          }
+        }
+      });
+  }
+}
+
+// Blockly always anchors the workspace to the left, which causes it to
+// scroll unexpectedly when the browser is resized. We need to move RTL
+// over by the change in workspace width to compensate.
+// See: https://github.com/google/blockly/issues/8637
+export function bumpRTLBlocks() {
+  const studentWorkspaces = [
+    Blockly.getMainWorkspace(),
+    Blockly.getFunctionEditorWorkspace(),
+  ];
+
+  studentWorkspaces.forEach(workspace => {
+    if (workspace?.RTL && workspace?.rendered) {
+      if (typeof workspace.previousViewWidth === 'number') {
+        const newViewWidth = workspace.getMetrics().viewWidth;
+        const widthChange = newViewWidth - workspace.previousViewWidth;
+        workspace.getTopBlocks().forEach(block => {
+          block.moveBy(widthChange, 0);
+        });
+        workspace.previousViewWidth = newViewWidth;
+      }
+    }
+  });
+}
+
+// When blocks on the main workspace are changed, update the block limits indicators.
+export function updateBlockLimits(event: BlocklyCore.Events.Abstract) {
+  const expectedEventTypes: string[] = [
+    Blockly.Events.BLOCK_CHANGE,
+    Blockly.Events.BLOCK_MOVE,
+    Blockly.Events.BLOCK_CREATE,
+    // High Contrast theme has a different font size, so we update the indicators.
+    Blockly.Events.THEME_CHANGE,
+  ];
+  if (!expectedEventTypes.includes(event.type)) {
+    return;
+  }
+
+  if (!event.workspaceId) {
+    return;
+  }
+  const eventWorkspace = Blockly.Workspace.getById(
+    event.workspaceId
+  ) as ExtendedWorkspaceSvg | null;
+  if (!eventWorkspace) {
+    return;
+  }
+  return updateBlockCountMap(eventWorkspace);
+}
+
+export function updateBlockCountMap(workspace: ExtendedWorkspaceSvg) {
+  const blockLimitMap = Blockly.blockLimitMap;
+  if (!blockLimitMap || !(blockLimitMap.size > 0)) {
+    return;
+  }
+  const allWorkspaceBlocks = workspace.getAllBlocks();
+
+  // Define a Map to store block counts for each type
+  const blockCountMap = new Map<string, number>();
+  Blockly.blockCountMap = blockCountMap;
+  // Initialize block counts based on blockLimitMap. Each type needs a value
+  // in both maps so that we can calculate the number remaining.
+  blockLimitMap.forEach((_, type) => {
+    blockCountMap.set(type, 0);
+  });
+  // Count the enabled blocks of each type
+  allWorkspaceBlocks.forEach(block => {
+    if (blockLimitMap.has(block.type) && block.isEnabled()) {
+      blockCountMap.set(block.type, (blockCountMap.get(block.type) || 0) + 1);
+    }
+  });
+
+  const flyout = workspace.getFlyout();
+  if (!flyout) {
+    return;
+  }
+  // Get all blocks from the flyout
+  const flyoutBlocks = flyout
+    .getWorkspace()
+    .getTopBlocks() as ExtendedBlockSvg[];
+
+  // Create limit indicators on flyout blocks
+  flyoutBlocks.forEach(flyoutBlock => {
+    const limit = blockLimitMap.get(flyoutBlock.type);
+    if (typeof limit !== 'number') {
+      return;
+    }
+    const blockLimitCount = blockLimitMap.get(flyoutBlock.type) as number;
+    const blockUsedCount = blockCountMap.get(flyoutBlock.type) as number;
+    const remainingCount = blockLimitCount - blockUsedCount;
+    if (flyoutBlock.blockSvgLimitIndicator) {
+      flyoutBlock.blockSvgLimitIndicator.updateCount(remainingCount);
+    } else {
+      flyoutBlock.blockSvgLimitIndicator = new BlockSvgLimitIndicator(
+        flyoutBlock,
+        remainingCount
+      );
+    }
+  });
+}
+
+export function handleGrayUndeletableBlocks(
+  event: BlocklyCore.Events.Abstract
+) {
+  const expectedEventTypes: string[] = [
+    Blockly.Events.BLOCK_CREATE,
+    Blockly.Events.FINISHED_LOADING,
+    Blockly.Events.SELECTED,
+  ];
+
+  // Common top blocks that we do not want to gray out.
+  const unexpectedBlockTypes: string[] = [
+    BLOCK_TYPES.whenRun,
+    BLOCK_TYPES.procedureDefinition,
+  ];
+
+  if (expectedEventTypes.includes(event.type) && event.workspaceId) {
+    const workspace = Blockly.Workspace.getById(
+      `${event.workspaceId}`
+    ) as ExtendedWorkspaceSvg;
+    if (workspace && !workspace.isReadOnly()) {
+      workspace
+        .getAllBlocks()
+        .filter(
+          block =>
+            block.isDeletable() === false &&
+            !unexpectedBlockTypes.includes(block.type)
+        )
+        .forEach(block => {
+          const [h, s, v] = BlockColors.DISABLED;
+          block.setColour(Blockly.utils.colour.hsvToHex(h, s, v * 255));
+        });
+    }
   }
 }

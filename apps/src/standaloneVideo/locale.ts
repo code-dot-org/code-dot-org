@@ -1,8 +1,9 @@
 /**
- * A TypeScript wrapper for the StandaloneVideolocale object which casts
- * it to the {@link StandaloneVideoLocale} type.
+ * A TypeScript wrapper for the StandaloneVideoLocale object which casts
+ * it to the {@link Locale} type.
  */
-import {StandaloneVideoLocale} from './types';
-const standaloneVideoLocale = require('@cdo/standaloneVideo/locale');
+import {Locale} from '@cdo/apps/types/locale';
 
-export default standaloneVideoLocale as StandaloneVideoLocale;
+export default require('@cdo/standaloneVideo/locale') as Locale<
+  typeof import('@cdo/i18n/standaloneVideo/en_us.json')
+>;

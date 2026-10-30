@@ -1,0 +1,482 @@
+import {fireEvent, render, screen} from '@testing-library/react';
+import React from 'react';
+import {Provider} from 'react-redux';
+import {
+  createMemoryRouter,
+  createRoutesFromElements,
+  Outlet,
+  Route,
+  RouterProvider,
+  useLocation,
+} from 'react-router-dom';
+
+import {setChatIsOpen} from '@cdo/apps/aiTeacherDrawer/redux';
+import {aiDiffChatReducer} from '@cdo/apps/aiTeacherDrawer/redux/slice';
+import {getStore, registerReducers} from '@cdo/apps/redux';
+import currentUser, {
+  setInitialData,
+} from '@cdo/apps/templates/currentUserRedux';
+import teacherSections, {
+  selectSection,
+  setSections,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {serverSectionFromSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
+import * as selectedSectionLoader from '@cdo/apps/templates/teacherNavigation/selectedSectionLoader';
+import TeacherNavigationBar from '@cdo/apps/templates/teacherNavigation/TeacherNavigationBar';
+import {
+  SPECIFIC_SECTION_BASE_URL,
+  TEACHER_NAVIGATION_BASE_URL,
+  TEACHER_NAVIGATION_SECTIONS_URL,
+} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
+import experiments from '@cdo/apps/util/experiments';
+import i18n from '@cdo/locale';
+
+jest.mock('@cdo/apps/util/HttpClient', () => ({
+  put: jest.fn(() => Promise.resolve({})),
+  post: jest.fn(() =>
+    Promise.resolve({
+      ok: true,
+      json: () => Promise.resolve({}),
+    })
+  ),
+  fetchJson: jest.fn(() => Promise.resolve({})),
+}));
+
+const LocationElement = () => {
+  const location = useLocation();
+  return <div>{location.pathname} path</div>;
+};
+
+jest.mock('@react-pdf/renderer', () => ({
+  PDFDownloadLink: () => null,
+  StyleSheet: {
+    create: () => null,
+  },
+}));
+
+jest.mock('@cdo/apps/aiTeacherDrawer/AiDiffDrawer', () => {
+  const React = require('react');
+  const {useSelector} = require('react-redux');
+  const MockDrawer = () => {
+    const chatIsOpen = useSelector(state => state.aiDiffChat.chatIsOpen);
+    return (
+      <div style={chatIsOpen ? undefined : {display: 'none'}}>
+        <span>AI Teaching Assistant</span>
+      </div>
+    );
+  };
+  return {__esModule: true, default: MockDrawer};
+});
+
+describe('TeacherNavigationBar', () => {
+  const sections = [
+    {
+      id: 11,
+      name: 'Period 1',
+      hidden: false,
+      courseVersionName: 'csd-2024',
+      unitName: null,
+      participantType: 'student',
+    },
+    {
+      id: 12,
+      name: 'Period 2',
+      demo_type: 'middle',
+      hidden: false,
+      courseVersionName: 'csd-2023',
+      unitName: null,
+      participantType: 'student',
+    },
+    {
+      id: 13,
+      name: 'Period 3',
+      hidden: false,
+      courseVersionName: 'csd-2022',
+      unitName: 'csd3-2022',
+      unitPosition: 1,
+      participantType: 'student',
+    },
+    {
+      id: 14,
+      name: 'Period 4',
+      hidden: false,
+      courseVersionName: 'csd-2022',
+      unitName: 'csd6-2022',
+      unitPosition: 6,
+      participantType: 'student',
+    },
+    {
+      id: 15,
+      name: 'hidden',
+      hidden: true,
+      courseVersionName: 'csd-2022',
+      unitName: null,
+      participantType: 'student',
+    },
+    {
+      id: 16,
+      name: 'Period 5',
+      hidden: false,
+      courseVersionName: 'csa-2022',
+      unitName: 'csa1-2022',
+      unitPosition: 1,
+      participantType: 'student',
+    },
+    // Assigned a course that cannot be completed without AI chat tools, using
+    // models the teacher's region blocks. Unfixable from AI settings.
+    {
+      id: 17,
+      name: 'Period 6',
+      hidden: false,
+      courseVersionName: 'csa-2022',
+      unitName: 'csa1-2022',
+      unitPosition: 1,
+      participantType: 'student',
+      assigned_ai_chat_tools_dependency: 'essential',
+      assigned_required_inaccessible_ai_models: true,
+      ai_chat_access_level: 'enabled',
+    },
+    // Same essential course, but the tools are switched off for the section.
+    // Fixable from AI settings.
+    {
+      id: 18,
+      name: 'Period 7',
+      hidden: false,
+      courseVersionName: 'csa-2022',
+      unitName: 'csa1-2022',
+      unitPosition: 1,
+      participantType: 'student',
+      assigned_ai_chat_tools_dependency: 'essential',
+      assigned_required_inaccessible_ai_models: false,
+      ai_chat_access_level: 'disabled',
+    },
+  ];
+  const serverSections = sections.map(serverSectionFromSection);
+
+  let store;
+
+  let loadSelectedSectionSpy;
+
+  const renderDefault = (
+    selectedSectionId = 11,
+    selectedRoute = null,
+    showAiChatSettings = false,
+    aiDiffEnabled = true
+  ) => {
+    store = getStore();
+    registerReducers({
+      teacherSections,
+      currentUser,
+      aiDiffChat: aiDiffChatReducer,
+    });
+    // The redux store persists across tests in this file (no restoreRedux
+    // call), and now that the FAB always mounts (regardless of the ai diff
+    // preference), an earlier test's drawer-open state would otherwise leak
+    // into this render.
+    store.dispatch(setChatIsOpen(false));
+    store.dispatch(setSections(serverSections, true, [12, 13, 14, 11]));
+    store.dispatch(
+      setInitialData({
+        id: 1,
+        name: 'test_user',
+        has_completed_ai_differentiation_welcome: true,
+        ai_differentiation_enabled: aiDiffEnabled,
+      })
+    );
+
+    loadSelectedSectionSpy = jest
+      .spyOn(selectedSectionLoader, 'asyncLoadSelectedSection')
+      .mockImplementation(sectionId => {
+        store.dispatch(selectSection(sectionId));
+        return () => {};
+      });
+
+    const initialRoute = !selectedRoute
+      ? `/teacher_dashboard/sections/${selectedSectionId}/progress`
+      : selectedRoute;
+    render(
+      <Provider store={store}>
+        <RouterProvider
+          router={createMemoryRouter(
+            createRoutesFromElements([
+              <Route
+                path={TEACHER_NAVIGATION_SECTIONS_URL}
+                element={
+                  <div>
+                    <TeacherNavigationBar
+                      showAiChatSettings={showAiChatSettings}
+                    />
+                    <Outlet />
+                  </div>
+                }
+              >
+                <Route
+                  path={SPECIFIC_SECTION_BASE_URL}
+                  element={
+                    <div>
+                      <Outlet />
+                    </div>
+                  }
+                >
+                  <Route
+                    path={'progress'}
+                    element={
+                      <div>
+                        <LocationElement location={location} />
+                      </div>
+                    }
+                  />
+                  <Route
+                    path={'roster'}
+                    element={
+                      <div>
+                        <LocationElement location={location} />
+                      </div>
+                    }
+                  />
+                  <Route
+                    path={'unit/:unitName?'}
+                    element={
+                      <div>
+                        <LocationElement location={location} />
+                      </div>
+                    }
+                  />
+                  <Route
+                    path={'courses/:courseVersionName?'}
+                    element={
+                      <div>
+                        <LocationElement location={location} />
+                      </div>
+                    }
+                  />
+                </Route>
+              </Route>,
+            ]),
+            {
+              initialEntries: [initialRoute],
+              basename: TEACHER_NAVIGATION_BASE_URL,
+            }
+          )}
+        />
+      </Provider>
+    );
+  };
+
+  beforeEach(() => {
+    window.HTMLElement.prototype.scrollIntoView = () => {};
+    localStorage.clear();
+  });
+
+  afterEach(() => {
+    jest.restoreAllMocks();
+    localStorage.clear();
+  });
+
+  test('renders correctly with visible sections', async () => {
+    renderDefault();
+
+    await screen.findByText(i18n.classSections());
+    screen.getByRole('combobox');
+    const p1 = await screen.findByText('Period 1');
+    const p2 = screen.getByText('Period 2 (demo)');
+    expect(p1.compareDocumentPosition(p2)).toBe(
+      Node.DOCUMENT_POSITION_PRECEDING
+    );
+    screen.getByText('Period 3');
+    expect(screen.queryByText('hidden')).toBeNull();
+    expect(loadSelectedSectionSpy).toHaveBeenCalledWith('11');
+  });
+
+  test('renders demo marker in section dropdown options', async () => {
+    renderDefault(12);
+    const dropdown = await screen.findByRole('combobox');
+
+    expect(dropdown.selectedOptions[0].textContent).toBe('Period 2 (demo)');
+    screen.getByRole('option', {name: 'Period 2 (demo)'});
+    screen.getByRole('option', {name: 'Period 1'});
+  });
+
+  test('renders all navbarComponents', async () => {
+    renderDefault();
+
+    // Check for section headers
+    await screen.findByText('Course Content');
+    screen.getByText('Performance');
+    screen.getByText('Classroom');
+
+    // Check for NavBar content
+    screen.getByText(i18n.course());
+    screen.getByText(i18n.lessonMaterials());
+    screen.getByText(i18n.calendar());
+    screen.getByText(i18n.progress());
+    screen.getByText(i18n.teacherTabStatsTextResponses());
+    screen.getByText(i18n.assessments());
+    screen.getByText(i18n.teacherTabStats());
+    screen.getByText(i18n.studentProjects());
+    screen.getByText('Student Snapshot');
+    screen.getByText(i18n.roster());
+    screen.getByText(i18n.settings());
+  });
+
+  test('page button switches url', async () => {
+    renderDefault();
+
+    await screen.findByText('/sections/11/progress path');
+
+    screen.getByText('Roster').click();
+
+    await screen.findByText('/sections/11/roster path');
+  });
+
+  test('section dropdown switches url', async () => {
+    renderDefault(12);
+    const dropdown = await screen.findByRole('combobox');
+
+    screen.getByText('/sections/12/progress path');
+    expect(dropdown).toHaveValue('12');
+    expect(loadSelectedSectionSpy).toHaveBeenCalledWith('12');
+
+    // Change dropdown value
+
+    fireEvent.change(dropdown, {target: {value: '11'}});
+
+    await screen.findByText('/sections/11/progress path');
+    const dropdownAfterClick = screen.getByRole('combobox');
+    expect(dropdownAfterClick).toHaveValue('11');
+    expect(loadSelectedSectionSpy).toHaveBeenCalledWith('11');
+  });
+
+  test('course link navigates to course when unit is not assigned', async () => {
+    renderDefault(12);
+    await screen.findByText('Course Content');
+    screen.getByText(i18n.course()).click();
+    await screen.findByText('/sections/12/courses/csd-2023 path');
+    expect(loadSelectedSectionSpy).toHaveBeenCalledWith('12');
+  });
+
+  test('course link navigates to unit when unit is assigned', async () => {
+    renderDefault(13);
+    await screen.findByText('Course Content');
+    screen.getByText(i18n.course()).click();
+    await screen.findByText('/sections/13/unit/csd3-2022 path');
+    expect(loadSelectedSectionSpy).toHaveBeenCalledWith('13');
+  });
+
+  test('section switch on unit page goes to selected unit', async () => {
+    renderDefault(13, `/teacher_dashboard/sections/13/unit/csd3-2022`);
+    const dropdown = await screen.findByRole('combobox');
+
+    screen.getByText('/sections/13/unit/csd3-2022 path');
+    expect(dropdown).toHaveValue('13');
+
+    // Change dropdown value
+
+    fireEvent.change(dropdown, {target: {value: '14'}});
+
+    await screen.findByText('/sections/14/unit/csd6-2022 path');
+    const dropdownAfterClick = screen.getByRole('combobox');
+    expect(dropdownAfterClick).toHaveValue('14');
+    expect(loadSelectedSectionSpy).toHaveBeenCalledWith('14');
+  });
+
+  test('hidden section not in sectionOrder is shown when selected', async () => {
+    renderDefault(15);
+    const dropdown = await screen.findByRole('combobox');
+
+    expect(dropdown).toHaveValue('15');
+    screen.getByText('hidden');
+    expect(loadSelectedSectionSpy).toHaveBeenCalledWith('15');
+  });
+
+  test('AI settings tab displayed when teacher has access', async () => {
+    renderDefault(16, `/teacher_dashboard/sections/16/unit/csa1-2022`, true);
+    await screen.findByText('Course Content');
+
+    screen.getByText(i18n.aiSettings());
+  });
+
+  test('AI settings tab not displayed when teacher does not have access', async () => {
+    renderDefault(16, `/teacher_dashboard/sections/16/unit/csa1-2022`, false);
+    await screen.findByText('Course Content');
+
+    expect(screen.queryByText(i18n.aiSettings())).toBeNull();
+  });
+
+  // The sidebar option carrying the error icon tells the teacher where to go
+  // to understand the problem, so which option carries it is the behavior
+  // under test.
+  const errorIconOwner = () => {
+    const icon = document.querySelector('.errorIcon');
+    return icon?.closest('a')?.textContent ?? null;
+  };
+
+  test('flags the Course option when assigned models are unavailable in the region', async () => {
+    renderDefault(17, `/teacher_dashboard/sections/17/unit/csa1-2022`, true);
+    await screen.findByText('Course Content');
+
+    expect(errorIconOwner()).toContain(i18n.course());
+  });
+
+  test('flags AI Settings, not Course, when essential AI tools are switched off', async () => {
+    renderDefault(18, `/teacher_dashboard/sections/18/unit/csa1-2022`, true);
+    await screen.findByText('Course Content');
+
+    expect(errorIconOwner()).toContain(i18n.aiSettings());
+  });
+
+  test('flags nothing when the assigned course has no AI problem', async () => {
+    renderDefault(16, `/teacher_dashboard/sections/16/unit/csa1-2022`, true);
+    await screen.findByText('Course Content');
+
+    expect(errorIconOwner()).toBeNull();
+  });
+
+  test('does not render AiDiffFloatingActionButton component when experiement is not enabled', async () => {
+    // mock experiment is disabled
+    experiments.isEnabled = jest.fn(() => false);
+    renderDefault(13, `/teacher_dashboard/sections/13/unit/csd3-2022`);
+
+    expect(
+      screen.queryByRole('button', {name: i18n.openOrCloseTeachingAssistant()})
+    ).toBeNull();
+  });
+
+  test('still renders AiDiffFloatingActionButton component when user pref is not enabled', async () => {
+    // Prevents the FAB from auto-opening on what it thinks is the user's
+    // first session, same as the 'renders AiDiffFloatingActionButton
+    // component' test below — otherwise the drawer opens immediately and
+    // hides the closed-state round button this test is asserting on.
+    localStorage.setItem('AiDiffHasOpenedKey', 'true');
+    // mock experiment is enabled
+    experiments.isEnabled = jest.fn(() => true);
+    // mock user preference disabled: the FAB should render regardless, since
+    // the preference only trims content within the drawer (see AiDiffDrawer)
+    // rather than preventing it from mounting.
+    renderDefault(
+      13,
+      `/teacher_dashboard/sections/13/unit/csd3-2022`,
+      false,
+      false
+    );
+
+    expect(
+      await screen.findByRole('button', {
+        name: i18n.openOrCloseTeachingAssistant(),
+      })
+    ).toBeVisible();
+  });
+
+  test('renders AiDiffFloatingActionButton component', async () => {
+    // mock experiment is enabled
+    localStorage.setItem('AiDiffHasOpenedKey', 'true');
+    experiments.isEnabled = jest.fn(() => true);
+    renderDefault(13, `/teacher_dashboard/sections/13/unit/csd3-2022`);
+
+    const chatButton = await screen.findByRole('button', {
+      name: i18n.openOrCloseTeachingAssistant(),
+    });
+    fireEvent.click(chatButton);
+    expect(screen.getByText('AI Teaching Assistant')).toBeVisible();
+  });
+});

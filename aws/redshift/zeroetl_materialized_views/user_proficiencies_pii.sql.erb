@@ -1,0 +1,68 @@
+-- GENERATED FILE -- do not edit by hand.
+-- Regenerated from the ActiveRecord model by `rake db:migrate` and by
+-- `rake analytics_export:generate_materialized_view_templates`; edits here are overwritten.
+-- Committing a change to this file does NOT update the materialized view in Redshift. That
+-- needs a coordinated DROP/CREATE -- see aws/redshift/zeroetl_materialized_views/README.md
+-- and coordinate with the data (RED) and Infrastructure Engineering teams.
+CREATE MATERIALIZED VIEW learning_platform_<%=environment_type%>_pii.user_proficiencies
+  BACKUP NO
+  DISTSTYLE KEY DISTKEY ("id")
+  AUTO REFRESH NO
+AS SELECT
+  "id",
+  "user_id",
+  "created_at",
+  "updated_at",
+  "last_progress_at",
+  "sequencing_d1_count",
+  "sequencing_d2_count",
+  "sequencing_d3_count",
+  "sequencing_d4_count",
+  "sequencing_d5_count",
+  "debugging_d1_count",
+  "debugging_d2_count",
+  "debugging_d3_count",
+  "debugging_d4_count",
+  "debugging_d5_count",
+  "repeat_loops_d1_count",
+  "repeat_loops_d2_count",
+  "repeat_loops_d3_count",
+  "repeat_loops_d4_count",
+  "repeat_loops_d5_count",
+  "repeat_until_while_d1_count",
+  "repeat_until_while_d2_count",
+  "repeat_until_while_d3_count",
+  "repeat_until_while_d4_count",
+  "repeat_until_while_d5_count",
+  "for_loops_d1_count",
+  "for_loops_d2_count",
+  "for_loops_d3_count",
+  "for_loops_d4_count",
+  "for_loops_d5_count",
+  "events_d1_count",
+  "events_d2_count",
+  "events_d3_count",
+  "events_d4_count",
+  "events_d5_count",
+  "variables_d1_count",
+  "variables_d2_count",
+  "variables_d3_count",
+  "variables_d4_count",
+  "variables_d5_count",
+  "functions_d1_count",
+  "functions_d2_count",
+  "functions_d3_count",
+  "functions_d4_count",
+  "functions_d5_count",
+  "functions_with_params_d1_count",
+  "functions_with_params_d2_count",
+  "functions_with_params_d3_count",
+  "functions_with_params_d4_count",
+  "functions_with_params_d5_count",
+  "conditionals_d1_count",
+  "conditionals_d2_count",
+  "conditionals_d3_count",
+  "conditionals_d4_count",
+  "conditionals_d5_count",
+  "basic_proficiency_at"
+FROM <%=environment_type%>_learningplatform_mysql_zeroetl.dashboard_<%=environment_type%>.user_proficiencies;

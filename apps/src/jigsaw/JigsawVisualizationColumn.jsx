@@ -1,7 +1,9 @@
 import React from 'react';
-var GameButtons = require('../templates/GameButtons').default;
-var BelowVisualization = require('../templates/BelowVisualization');
+
 import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
+
+var BelowVisualization = require('../templates/BelowVisualization');
+var GameButtons = require('../templates/GameButtons').default;
 
 /**
  * For jigsaw, this all ends up being hidden, but StudioApp still has expectation

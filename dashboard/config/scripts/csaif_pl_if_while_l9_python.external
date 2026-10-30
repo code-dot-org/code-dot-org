@@ -1,0 +1,27 @@
+name 'csaif_pl_if-while-L9_python'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<h1>Understanding How <code style="font-size:1em;">if</code> and <code style="font-size:1em;">while</code> Work Together</h1>
+<p>Throughout this lesson, we've explored the key differences between if statements and while loops.</p>
+<p style="margin: 0 0 6px 0;">• <code style="font-size:14px;">if</code> statements check a condition once and execute the code if it's true.</p>
+<p style="margin: 0;">• <code style="font-size:14px;">while</code> loops continue running as long as the condition remains true, making them useful for repeating actions.</p>
+<p>These two structures often work together in a program. For example, an <code style="font-size:14px;">if</code> statement can check a condition inside a <code style="font-size:14px;">while</code> loop to decide when to stop or when to adjust behavior.</p>
+
+<p>Let's trace through how this actually plays out, pass by pass.</p>
+
+---
+
+<div style="border-radius:10px; overflow:hidden;">
+<iframe src="https://amandadennard-dotcom.github.io/Unit5AIF2/if_while_together_walkthrough.html" width="100%" height="770" style="border:none;" title="Interactive walkthrough: how if and while work together"></iframe>
+</div>
+
+
+
+
+
+
+
+
+MARKDOWN

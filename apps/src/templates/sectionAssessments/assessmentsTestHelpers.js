@@ -1,8 +1,8 @@
-import i18n from '@cdo/locale';
 import {
   inProgressFakeTimestamp,
   notStartedFakeTimestamp,
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
+import i18n from '@cdo/locale';
 
 export const testDataTimestamps = {
   newest: new Date('2019-04-09T20:52:05.000+00:00'),

@@ -1,0 +1,125 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-08-19T18:58:43.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "require_edit_to_continue": "false",
+    "encrypted": "false",
+    "long_instructions": "Anita tracks customers’ experiences, as well as whether they leave a positive review. With this data, she's created a classification model. It uses a customer’s experiences to predict how likely they are to leave a positive or negative review.\r\n\r\n☑️ Do This:\r\n- Turn customer experiences on and off. How does each affect the prediction?\r\n- Combine different experiences. How do these combinations affect the prediction?\r\n- Be prepared to answer a question about how the model works.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "true",
+    "hide_share_and_remix": "true",
+    "widget_view": "true",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "folders": {
+        "1": {
+          "id": "1",
+          "name": "components",
+          "parentId": "0",
+          "open": true
+        }
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!doctype html>\n<html lang=\"en\">\n    <head>\n        <!-- Meta -->\n        <meta charset=\"UTF-8\" />\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n        <title>Classification</title>\n\n        <!-- Styles -->\n        <link rel=\"stylesheet\" href=\"styles.css\" />\n\n        <!-- Google Fonts -->\n        <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\" />\n        <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin />\n        <link\n            href=\"https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap\"\n            rel=\"stylesheet\"\n        />\n    </head>\n    <body>\n        <header><h1>Predicting Reviews</h1></header>\n        <main>\n            <section class=\"features-container\" aria-label=\"Customer Features\">\n                <p class=\"block-label\">Customer...</p>\n                <div class=\"feature-list\" id=\"feature-list\"></div>\n            </section>\n\n            <div class=\"arrow\">→</div>\n\n            <section\n                id=\"prediction-container\"\n                class=\"prediction-container\"\n                role=\"status\"\n                aria-label=\"Positive Review Probability\"\n            >\n                <p class=\"block-label\">Positive review?</p>\n                <p class=\"verdict\" id=\"verdict\">Yes</p>\n                <div class=\"prob-bars\">\n                    <div class=\"prob-row\">\n                        <span class=\"prob-name\">Yes</span>\n                        <div class=\"prob-track\">\n                            <div class=\"prob-fill yes\" id=\"bar-yes\"></div>\n                        </div>\n                        <span class=\"prob-pct\" id=\"pct-yes\">50%</span>\n                    </div>\n                    <div class=\"prob-row\">\n                        <span class=\"prob-name\">No</span>\n                        <div class=\"prob-track\">\n                            <div class=\"prob-fill no\" id=\"bar-no\"></div>\n                        </div>\n                        <span class=\"prob-pct\" id=\"pct-no\">50%</span>\n                    </div>\n                </div>\n            </section>\n        </main>\n\n        <template id=\"feature-row-template\">\n            <label class=\"feature\">\n                <span class=\"feature-name\"></span>\n                <span class=\"toggle\">\n                    <input\n                        type=\"checkbox\"\n                        aria-controls=\"prediction-container\"\n                    />\n                    <span class=\"slider\"></span>\n                </span>\n            </label>\n        </template>\n\n        <script type=\"module\" src=\"app.js\"></script>\n    </body>\n</html>\n",
+          "active": false,
+          "folderId": "0",
+          "type": "support"
+        },
+        "2": {
+          "id": "2",
+          "name": "app.js",
+          "contents": "/**\n * The classification widget\n */\n\nimport { getFeatureDefinitions, createClassifier } from \"./model.js\";\nimport { createFeatureRow } from \"./components/feature-row.js\";\nimport { createVerdictDisplay } from \"./components/verdict-display.js\";\n\n// Update layout on resize\nconst query = window.matchMedia(\"(max-width: 700px)\");\nconst arrow = document.querySelector(\".arrow\");\nfunction handleResize(e) {\n  if (e.matches) {\n    arrow.innerText = \"↓\";\n  } else {\n    arrow.innerText = \"→\";\n  }\n}\nquery.addEventListener(\"change\", handleResize);\nhandleResize(query);\n\n// Create classification model\nconst classifier = createClassifier();\n\n// Create verdict display\nconst verdictDisplay = createVerdictDisplay();\n\n// Create feature toggles\nconst featureValues = new Map();\nconst featureList = document.getElementById(\"feature-list\");\nfor (const feature of getFeatureDefinitions()) {\n  featureValues.set(feature.id, false);\n  const row = createFeatureRow(feature, (on) => {\n    featureValues.set(feature.id, on);\n    predictAndRender();\n  });\n  featureList.appendChild(row.element);\n}\n\n// Render\nfunction predictAndRender() {\n  verdictDisplay.update(classifier.predict(featureValues));\n}\npredictAndRender();\n",
+          "folderId": "0",
+          "active": false,
+          "type": "support"
+        },
+        "3": {
+          "id": "3",
+          "name": "model.js",
+          "contents": "/**\n * The review prediction model.\n */\n\nconst PRIOR_YES = 0.5;\n\nconst FEATURES = [\n  { id: \"mood\", name: \"Was in a good mood\", pYes: 0.7, pNo: 0.4 },\n  {\n    id: \"flavor\",\n    name: \"Ordered their favorite flavor\",\n    pYes: 0.75,\n    pNo: 0.45,\n  },\n  { id: \"service\", name: \"Got friendly service\", pYes: 0.72, pNo: 0.38 },\n  { id: \"wait\", name: \"Waited in a long line\", pYes: 0.3, pNo: 0.6 },\n  { id: \"scoop\", name: \"Received the wrong order\", pYes: 0.05, pNo: 0.9 },\n];\n\nexport function getFeatureDefinitions() {\n  return FEATURES.map((f) => ({ ...f }));\n}\n\nexport function createClassifier() {\n  return {\n    predict(values) {\n      let logYes = Math.log(PRIOR_YES);\n      let logNo = Math.log(1 - PRIOR_YES);\n      for (const f of FEATURES) {\n        const on = values.get(f.id) ?? false;\n        logYes += Math.log(on ? f.pYes : 1 - f.pYes);\n        logNo += Math.log(on ? f.pNo : 1 - f.pNo);\n      }\n      const m = Math.max(logYes, logNo);\n      const eYes = Math.exp(logYes - m);\n      const eNo = Math.exp(logNo - m);\n      return eYes / (eYes + eNo);\n    },\n  };\n}\n",
+          "folderId": "0",
+          "active": false,
+          "type": "support"
+        },
+        "4": {
+          "id": "4",
+          "name": "styles.css",
+          "contents": "@import url(\"components/feature-row.css\");\n@import url(\"components/verdict-display.css\");\n\n:root {\n    --gray-0: #fdfdfd;\n    --gray-50: #f9f9f9;\n    --gray-100: #f4f4f4;\n    --gray-150: #eeeeee;\n    --gray-200: #e5e5e5;\n    --gray-300: #d4d4d4;\n    --gray-400: #a3a3a3;\n    --gray-500: #737373;\n    --gray-600: #525252;\n    --gray-700: #404040;\n    --gray-800: #262626;\n    --gray-900: #171717;\n    --gray-950: #0a0a0a;\n    --purple-0: rgb(245, 244, 253);\n    --purple-100: rgb(234, 232, 251);\n    --purple-200: rgb(214, 210, 246);\n    --purple-300: rgb(192, 188, 240);\n    --purple-400: rgb(169, 163, 232);\n    --purple-500: rgb(105, 98, 210);\n    --purple-600: rgb(82, 75, 184);\n    --purple-700: rgb(59, 53, 153);\n    --purple-800: rgb(41, 35, 126);\n    --purple-900: rgb(30, 25, 113);\n    --mint-0: rgb(244, 252, 247);\n    --mint-100: rgb(230, 247, 237);\n    --mint-200: rgb(211, 240, 211);\n    --mint-300: rgb(184, 228, 196);\n    --mint-400: rgb(141, 207, 170);\n    --mint-500: rgb(91, 175, 138);\n    --mint-600: rgb(56, 140, 110);\n    --mint-700: rgb(34, 107, 86);\n    --mint-800: rgb(21, 74, 60);\n    --mint-900: rgb(12, 46, 38);\n}\n\nbody {\n    align-items: center;\n    background-color: var(--gray-50);\n    box-sizing: border-box;\n    display: flex;\n    flex-direction: column;\n    font-family: \"Geist\", sans-serif;\n    justify-content: center;\n    margin: 0;\n    gap: 2em;\n    min-height: 100vh;\n    padding: 1.5em 1em;\n    color: var(--purple-900);\n}\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\np {\n    margin: 0;\n}\n\nheader {\n    color: var(--purple-900);\n    font-family: \"Space Grotesk\", monospace;\n    font-weight: bold;\n    text-align: center;\n}\n\nmain {\n    align-items: center;\n    justify-content: center;\n    display: flex;\n    gap: 1em;\n}\n\n@media (max-width: 700px) {\n    main {\n        flex-direction: column;\n    }\n}\n\nsection {\n    background-color: var(--gray-0);\n    border-radius: 0.5em;\n    box-sizing: border-box;\n    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);\n    padding: 1em;\n}\n\n.block-label {\n    margin: 0;\n    font-size: 1rem;\n    color: var(--purple-700);\n    font-family: \"Space Grotesk\", monospace;\n    font-weight: 600;\n}\n\n.arrow {\n    align-self: center;\n    color: var(--purple-300);\n    font-size: 1.6rem;\n    line-height: 1;\n}\n\n.features-container {\n    display: flex;\n    flex-direction: column;\n    gap: 0.75em;\n    max-width: 22em;\n    width: 100%;\n}\n\n.feature-list {\n    display: flex;\n    flex-direction: column;\n    gap: 0.5em;\n}\n\n.prediction-container {\n    align-items: center;\n    justify-content: center;\n    display: flex;\n    flex-direction: column;\n    gap: 0.75em;\n    max-width: 16em;\n    width: 100%;\n}\n\n@media (prefers-reduced-motion: reduce) {\n    *,\n    *::before {\n        transition: none !important;\n    }\n}\n",
+          "folderId": "0",
+          "active": false,
+          "type": "support"
+        },
+        "5": {
+          "id": "5",
+          "name": "feature-row.css",
+          "contents": ".feature {\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n    gap: 1em;\n    background-color: var(--purple-0);\n    border-radius: 0.6em;\n    padding: 0.7em 0.9em;\n    /* Whole row is the label, so the entire row is the pointer target (>=44px). */\n    cursor: pointer;\n}\n\n.feature-name {\n    font-size: 1rem;\n    color: var(--purple-900);\n}\n\n.toggle {\n    position: relative;\n    flex: none;\n    width: 3.2em;\n    height: 1.8em;\n}\n\n.toggle input {\n    position: absolute;\n    inset: 0;\n    width: 100%;\n    height: 100%;\n    margin: 0;\n    opacity: 0;\n    cursor: pointer;\n}\n\n.slider {\n    position: absolute;\n    inset: 0;\n    background-color: var(--gray-700);\n    border-radius: 999px;\n    transition: background-color 0.15s ease;\n    cursor: pointer;\n}\n\n.slider::before {\n    content: \"\";\n    position: absolute;\n    top: 0.2em;\n    left: 0.2em;\n    width: 1.4em;\n    height: 1.4em;\n    background-color: var(--gray-0);\n    border-radius: 50%;\n    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);\n    transition: transform 0.15s ease;\n}\n\n.toggle input:checked + .slider {\n    background-color: var(--purple-700);\n}\n\n.toggle input:checked + .slider::before {\n    transform: translateX(1.4em);\n}\n\n.toggle input:focus-visible + .slider {\n    outline: 3px solid var(--purple-900);\n    outline-offset: 2px;\n}\n",
+          "folderId": "1",
+          "active": false,
+          "type": "support"
+        },
+        "6": {
+          "id": "6",
+          "name": "feature-row.js",
+          "contents": "/**\n * A feature toggle\n */\n\nexport function createFeatureRow(feature, onToggle) {\n  const template = document.getElementById(\"feature-row-template\");\n  const node = template.content.firstElementChild.cloneNode(true);\n\n  const nameEl = node.querySelector(\".feature-name\");\n  const input = node.querySelector(\"input\");\n\n  // The wrapping <label class=\"feature\"> makes the whole row the activation\n  // target and supplies the checkbox's accessible name from this text, so no\n  // aria-label is needed (avoids a duplicated, drift-prone name).\n  nameEl.textContent = feature.name;\n  input.addEventListener(\"change\", () => onToggle(input.checked));\n\n  return { element: node };\n}\n",
+          "folderId": "1",
+          "active": false,
+          "type": "support"
+        },
+        "7": {
+          "id": "7",
+          "name": "verdict-display.css",
+          "contents": ".verdict {\n    font-family: \"Space Grotesk\", monospace;\n    font-size: 2.4rem;\n    font-weight: 700;\n    line-height: 1;\n}\n\n.verdict.yes {\n    color: var(--mint-700);\n}\n\n.verdict.no {\n    color: var(--purple-700);\n}\n\n.prob-bars {\n    display: flex;\n    flex-direction: column;\n    gap: 0.6em;\n    width: 100%;\n}\n\n.prob-row {\n    display: grid;\n    grid-template-columns: 2.2em 1fr 2.8em;\n    align-items: center;\n    gap: 0.5em;\n}\n\n.prob-name {\n    font-size: 0.95rem;\n    font-weight: 600;\n    color: var(--purple-700);\n}\n\n.prob-track {\n    height: 0.9em;\n    background-color: var(--gray-150);\n    border-radius: 999px;\n    overflow: hidden;\n}\n\n.prob-fill {\n    height: 100%;\n    border-radius: 999px;\n    transition: width 0.25s ease;\n}\n\n.prob-fill.yes {\n    background-color: var(--mint-600);\n}\n\n.prob-fill.no {\n    background-color: var(--purple-600);\n}\n\n.prob-pct {\n    font-size: 0.95rem;\n    font-weight: 600;\n    color: var(--purple-900);\n    text-align: right;\n}\n",
+          "folderId": "1",
+          "active": false,
+          "type": "support"
+        },
+        "8": {
+          "id": "8",
+          "name": "verdict-display.js",
+          "contents": "/**\n * The verdict display\n */\n\nexport function createVerdictDisplay() {\n  const verdictEl = document.getElementById(\"verdict\");\n  const barYes = document.getElementById(\"bar-yes\");\n  const barNo = document.getElementById(\"bar-no\");\n  const pctYes = document.getElementById(\"pct-yes\");\n  const pctNo = document.getElementById(\"pct-no\");\n\n  return {\n    update(pYes) {\n      const yesPct = Math.round(pYes * 100);\n      const noPct = 100 - yesPct;\n\n      barYes.style.width = `${pYes * 100}%`;\n      barNo.style.width = `${(1 - pYes) * 100}%`;\n      pctYes.textContent = `${yesPct}%`;\n      pctNo.textContent = `${noPct}%`;\n\n      const yes = pYes >= 0.5;\n      verdictEl.textContent = yes ? \"Yes\" : \"No\";\n      verdictEl.className = `verdict ${yes ? \"yes\" : \"no\"}`;\n    },\n  };\n}\n",
+          "folderId": "1",
+          "active": true,
+          "type": "support"
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-08-19 19:11:39 +0000\",\"changed\":[\"require_edit_to_continue\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-08-19 19:14:24 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Weblab2>

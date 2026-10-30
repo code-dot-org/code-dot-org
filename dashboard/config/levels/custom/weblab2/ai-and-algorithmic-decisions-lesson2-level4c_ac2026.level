@@ -1,0 +1,97 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-05-26T21:39:50.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "start_sources": {
+      "folders": {
+        "1": {
+          "id": "1",
+          "name": "images",
+          "parentId": "0",
+          "open": false
+        }
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <title>Alternate Universe Newsfeed</title>\n    <link rel=\"stylesheet\" href=\"style.css\" />\n    <script defer src=\"script.js\"></script>\n  </head>\n  <body>\n    <h1 class=\"title\">📡 Alternate Universe Newsfeed</h1>\n    <main class=\"container\">\n      <section class=\"left\">\n        <img id=\"image\" class=\"image\" src=\"images/header.png\" alt=\"Alternate universe newsfeed illustration\" />\n      </section>\n      <section class=\"right\">\n        <p class=\"prompt\">Select a universe to see the latest headlines.</p>\n        <h2 id=\"headline\" class=\"headline\">BREAKING: No universe selected.</h2>\n        <div class=\"buttons\">\n          <button id=\"dinosaursButton\" type=\"button\">🦕 Dinosaurs Never Died</button>\n          <button id=\"catsButton\" type=\"button\">🐱 Cats Are in Charge</button>\n          <button id=\"sleepButton\" type=\"button\">😴 No One Needs Sleep</button>\n        </div>\n      </section>\n    </main>\n  </body>\n</html>",
+          "folderId": "0",
+          "active": true
+        },
+        "2": {
+          "id": "2",
+          "name": "script.js",
+          "language": "js",
+          "contents": "",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "style.css",
+          "language": "css",
+          "contents": "* {\n  box-sizing: border-box;\n}\nhtml,\nbody {\n  height: 100%;\n}\nbody {\n  margin: 0;\n  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;\n  background: #0f172a;\n  color: #e2e8f0;\n}\n.title {\n  text-align: center;\n  margin: 16px 0 0;\n  font-size: 1.75rem;\n  letter-spacing: 0.5px;\n  color: #38bdf8;\n}\n.container {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  gap: 24px;\n  padding: 24px;\n  max-width: 1000px;\n  margin: 0 auto;\n}\n.left {\n  background: #1e293b;\n  border: 1px solid #334155;\n  border-radius: 12px;\n  padding: 16px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  overflow: hidden;\n}\n.image {\n  display: block;\n  max-width: 100%;\n  height: auto;\n  border-radius: 8px;\n  object-fit: contain;\n}\n.right {\n  display: flex;\n  flex-direction: column;\n  gap: 16px;\n}\n.prompt {\n  margin: 0;\n  font-size: 0.95rem;\n  color: #94a3b8;\n}\n.headline {\n  margin: 0;\n  font-size: 1.4rem;\n  line-height: 1.4;\n  color: #f8fafc;\n  border-left: 4px solid #38bdf8;\n  padding-left: 12px;\n}\n.buttons {\n  display: flex;\n  flex-direction: column;\n  gap: 12px;\n  width: 260px;\n  margin-inline: auto;\n}\n.buttons button {\n  padding: 12px 16px;\n  font-size: 1rem;\n  border-radius: 10px;\n  border: 1px solid #38bdf8;\n  background: #1e293b;\n  color: #e2e8f0;\n  cursor: pointer;\n  transition: background-color 120ms ease, color 120ms ease;\n}\n.buttons button:hover {\n  background: #38bdf8;\n  color: #0f172a;\n}\n.buttons button:active {\n  transform: translateY(1px);\n}\n@media (max-width: 800px) {\n  .container {\n    grid-template-columns: 1fr;\n  }\n  .buttons {\n    width: 100%;\n  }\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "header.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson2-level4c_2026/uuid/2533f9fa-c7dc-4ff3-b6f6-581f4da11ab6.png",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "2",
+        "1"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\noQG0HdH1E5drJPWqZHABjiP88mbHDxW7OA==\n",
+    "encrypted": "false",
+    "display_name": "Alternate Universe",
+    "bubble_choice_description": "Build an Alternate Universe Newsfeed where clicking each universe button updates the headline to show a breaking news story from that world.",
+    "thumbnail_url": "https://images.code.org/9626dcb91a13d93da895915eb985ef89-header.png",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "tutor",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "long_instructions": "## Do This:\r\n\r\nYou're a junior Front-End Developer at The Multiverse Times, a satire news site. Today's task:\r\n\r\n> \"Three universe buttons. Click one, headline updates to breaking news from that world. The weirder the better.\"\r\n\r\n1. Decide the first universe's headline, then complete: \"When the user clicks [button name], the page should [exact response].\" Reference this when you prompt AI and check the result.\r\n\r\n2. Ask AI to generate the code so clicking that button updates the headline.\r\n\r\n3. Click the button to test. If something's off, update your prompt or edit the code.\r\n\r\n4. Read through the code. Can you find where it selects the button, listens for the click, and makes the change?\r\n\r\n5. Repeat for two more universes.\r\n",
+    "name_suffix": "_ac2026",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "documentation",
+        "buildJavaScript"
+      ],
+      "answerTypeCustomizations": {
+        "buildJavaScript": "Do not instruct students to look at or edit the index.html file. Do not ask students guiding questions — give direct, complete answers. When explaining the code you generated, you may reference event listeners and event handlers, but do not use the word \"function\" or explain code in terms of functions. Do not generate code that uses functions — write event handlers directly. If a student asks for the ID of any button or element, look at the code for the correct ID and tell them directly."
+      }
+    },
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-26T21:39:50.846+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson2-level4c_2026\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson2-level4c_2026\"}]"
+}]]></config>
+</Weblab2>

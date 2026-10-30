@@ -1,0 +1,68 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2025-11-24T16:06:17.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Introduction to .map()\r\n\r\n1. **Run the code** to see the lists appear on the screen.\r\n2. Compare the **Original List** card to the **Doubled List** card.\r\n3. Explore how **.map()** functions in code to transform the data. Have a conversation with the AI Tutor to explore this idea further.\r\n\r\n",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <title>Intro to Map</title>\n    <link rel=\"stylesheet\" href=\"style.css\">\n    <script src=\"script.js\" defer></script>\n  </head>\n  <body>\n    <div class=\"container\">\n      <h1>Mapping Numbers</h1>\n      \n      <div class=\"card\">\n        <h2>Original List</h2>\n        <p id=\"original-display\">...</p>\n      </div>\n\n      <div class=\"card\">\n        <h2>Doubled List</h2>\n        <p id=\"doubled-display\">...</p>\n      </div>\n      \n      <p class=\"instructions\">Read the code to see how the second list was created!</p>\n    </div>\n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// script.js (Starter Code)\n\n// 1) Create an array of numbers\nconst nums = [1, 2, 3, 4, 5];\n\n// 2) Use .map() to create a NEW array with values doubled\nconst doubled = nums.map(x => x * 2);\n\n// 3) Select the HTML elements\nconst originalDisplay = document.querySelector(\"#original-display\");\nconst doubledDisplay = document.querySelector(\"#doubled-display\");\n\n// 4) Update the screen with the arrays\noriginalDisplay.innerHTML = nums;\ndoubledDisplay.innerHTML = doubled;\n",
+          "folderId": "0",
+          "active": true
+        },
+        "3": {
+          "id": "3",
+          "name": "style.css",
+          "language": "css",
+          "contents": "@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');\n\nbody {\n  font-family: 'Roboto', sans-serif;\n  background-color: #eef2f5;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100vh;\n  margin: 0;\n  color: #333;\n}\n\n.container {\n  width: 400px;\n  text-align: center;\n}\n\n.card {\n  background: white;\n  border-radius: 10px;\n  padding: 1rem;\n  margin-bottom: 1rem;\n  box-shadow: 0 2px 5px rgba(0,0,0,0.1);\n}\n\nh2 {\n  font-size: 1rem;\n  color: #555;\n  text-transform: uppercase;\n  letter-spacing: 1px;\n  margin-top: 0;\n}\n\np {\n  font-size: 1.5rem;\n  font-weight: bold;\n  color: #2980b9;\n  margin: 0.5rem 0;\n}\n\n.instructions {\n  font-size: 0.9rem;\n  color: #7f8c8d;\n  font-weight: normal;\n}",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "2",
+        "1",
+        "3"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nvpujFNpLIQ==\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-11-24T16:06:17.450+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-template\\\"\"],\"cloned_from\":\"building-data-driven-systems-template\"},{\"changed_at\":\"2025-11-24 16:06:23 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-24 16:20:00 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-24 16:20:59 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-24 16:24:35 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-24 16:25:36 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

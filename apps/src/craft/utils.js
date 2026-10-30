@@ -1,6 +1,6 @@
-import i18n from './locale';
-import trackEvent from '@cdo/apps/util/trackEvent';
 import * as craftRedux from '@cdo/apps/craft/redux';
+
+import i18n from './locale';
 
 export const ARROW_KEY_NAMES = [
   'ArrowLeft',
@@ -98,9 +98,7 @@ export function handlePlayerSelection(
   craftRedux.openPlayerSelectionDialog(selectedPlayer => {
     craftRedux.closePlayerSelectionDialog();
 
-    if (selectedPlayer) {
-      trackEvent(craftEventType, 'ClickedCharacter', selectedPlayer);
-    } else {
+    if (!selectedPlayer) {
       selectedPlayer = defaultPlayer;
     }
 

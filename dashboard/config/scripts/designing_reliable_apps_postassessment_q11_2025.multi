@@ -1,0 +1,14 @@
+name 'designing-reliable-apps-postassessment-q11_2025'
+
+question 'A developer\'s image-loading function encounters an invalid URL. Option A silently skips the image and shows nothing. Option B immediately throws an error that halts execution and logs a detailed message. What principle does Option B represent, and why is it preferable during development?'
+
+wrong 'Defensive design — because showing error messages keeps end users informed about what went wrong'
+right 'Fail fast — because surfacing errors immediately during development makes bugs easier to locate and fix'
+wrong 'Asynchronous design — because throwing errors non-blocking allows the rest of the app to continue'
+wrong 'Human-centered reliability — because detailed error messages improve the experience for end users'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 7
+MARKDOWN

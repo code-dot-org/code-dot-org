@@ -6,7 +6,7 @@
         {
           "type": "html",
           "name": "question1",
-          "html": "<h2>Code.org Self-paced Online Professional Learning</h2><p><strong>Welcome to the program!</strong></p>\n\n<p>Code.org relies on surveys as a crucial tool through which we remain connected to teachers, and to give you the opportunity to provide feedback about our curriculum and your teaching experience, as well as to improve our programs.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul><li>Your individual responses here are completely confidential.</li>\n<li>Your identity will never be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share anonymous, aggregate data (representing all responses) publicly.</li>\n<li>Your anonymized responses will be used by Code.org and our Regional Partners for program improvement.</li></ul>\n\n<p><strong>Your honesty and candor are appreciated.</strong></p><hr><h3>Pre-Survey</h3>"
+          "html": "<h2>CodeAI Self-paced Online Professional Learning</h2><p><strong>Welcome to the program!</strong></p>\n\n<p>CodeAI relies on surveys as a crucial tool through which we remain connected to teachers, and to give you the opportunity to provide feedback about our curriculum and your teaching experience, as well as to improve our programs.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul><li>Your individual responses here are completely confidential.</li>\n<li>Your identity will never be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share anonymous, aggregate data (representing all responses) publicly.</li>\n<li>Your anonymized responses will be used by CodeAI and our Regional Partners for program improvement.</li></ul>\n\n<p><strong>Your honesty and candor are appreciated.</strong></p><hr><h3>Pre-Survey</h3>"
         },
         {
           "type": "radiogroup",
@@ -35,15 +35,15 @@
           "choices": [
             {
               "value": "did_not_know",
-              "text": "I did not know that there was facilitator-led Code.org professional development"
+              "text": "I did not know that there was facilitator-led CodeAI professional development"
             },
             {
               "value": "not_available",
-              "text": "Facilitator-led Code.org professional development is not available in my region"
+              "text": "Facilitator-led CodeAI professional development is not available in my region"
             },
             {
               "value": "no_time",
-              "text": "I do not have time to go to an facilitator-led workshop"
+              "text": "I do not have time to go to a facilitator-led workshop"
             },
             {
               "value": "dont_need",
@@ -99,7 +99,7 @@
           "name": "interest_learning_cs",
           "title": "How interested are you in learning computer science?",
           "rateMax": 7,
-          "minRateDescription": "Very uninterested",
+          "minRateDescription": "Not interested at all",
           "maxRateDescription": "Very interested"
         },
         {
@@ -107,7 +107,7 @@
           "name": "interest_teaching_cs",
           "title": "How interested are you in teaching computer science?",
           "rateMax": 7,
-          "minRateDescription": "Very uninterested",
+          "minRateDescription": "Not interested at all",
           "maxRateDescription": "Very interested"
         },
         {
@@ -115,7 +115,7 @@
           "name": "confidence_to_teache",
           "title": "How confident do you feel in your ability to teach computer science effectively right now?",
           "rateMax": 7,
-          "minRateDescription": "Very unconfident",
+          "minRateDescription": "Not confident at all",
           "maxRateDescription": "Very confident"
         },
         {
@@ -123,7 +123,7 @@
           "name": "how_nessessary_to_learn",
           "title": "How necessary is it for students to learn computer science?",
           "rateMax": 7,
-          "minRateDescription": "Very unnecessary",
+          "minRateDescription": "Not necessary at all",
           "maxRateDescription": "Very necessary"
         }
       ]

@@ -1,7 +1,0 @@
-{{ featured_tutorial, title: "ಡ್ಯಾನ್ಸ್‌ ಪಾರ್ಟಿ", body: "ಒಂದು ಡ್ಯಾನ್ಸ್ ಪಾರ್ಟಿ ಕೋಡ್ ಮಾಡಿ! ಬಿಯಾನ್ಸೆ, ಹ್ಯಾರಿ ಸ್ಟೈಲ್ಸ್, ಲಿಝೋ, ಲಿಲ್ ನ್ಯಾಸ್ ಎಕ್ಸ್‌, ಸೆಲೆನಾ ಗೋಮ್ಸ್‌, ಡಿಸ್ನೆಯ \"ಎನ್‌ಕ್ಯಾಂಟೋ\" ಮತ್ತು ಇನ್ನಷ್ಟರಿಂದ ಸಂಗೀತವನ್ನು ಫೀಚರ್ ಆಗಿದೆ!", image: "/images/hoc2022-dance-party.png", url: "https://code.org/dance" }}
-
-{{ featured_tutorial, title: "ಪೋಯೆಮ್ ಆರ್ಟ್‌", body: "ಈ ಅವರ್ ಆಫ್‌ ಕೋಡ್ ಚಟುವಟಿಕೆಯಲ್ಲಿ ಕವನವೊಂದಕ್ಕೆ ಆರ್ಟ್‌ ಮತ್ತು ಆನಿಮೇಶನ್ ಅನ್ನು ಸೇರಿಸಿ!", image: "/shared/images/courses/logo_tall_poem-art.jpg", url: "https://studio.code.org/s/poem-art-2021/reset" }}
-
-{{ featured_tutorial, title: "ಆರ್ಟಿಸ್ಟ್‌", body: "ಆರ್ಟಿಸ್ಟ್‌ ಜೊತೆಗೆ ಸುಂದರ ಚಿತ್ರಗಳು ಮತ್ತು ವಿನ್ಯಾಸಗಳನ್ನು ರಚಿಸಿ!", image: "/shared/images/courses/logo_tall_artist.jpg", url: "https://studio.code.org/s/artist/reset" }}
-
-{{ featured_tutorial, title: "ಇನ್‌ಫಿನಿಟಿ ಪ್ಲೇ ಲ್ಯಾಬ್‌", body: "ಡಿಸ್ನೆ ಇನ್‌ಫಿನಿಟಿ ಪಾತ್ರಗಳನ್ನು ಹೊಂದಿರುವ ಸ್ಟೋರಿ ಅಥವಾ ಹೇಮ್ ಅನ್ನು ರಚಿಸಲು ಪ್ಲೇ ಲ್ಯಾಬ್ ಬಳಸಿ.", image: "/shared/images/courses/logo_tall_infinity.jpg", url: "https://studio.code.org/s/infinity/reset" }}

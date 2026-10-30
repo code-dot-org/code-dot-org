@@ -1,0 +1,122 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-05-03T19:38:03.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Explore `.map()`\r\n\r\n### Do This:\r\n\r\n- Look at the `campusJobs` array.\r\n- Find the `.map()` code.\r\n- Look at the job cards on the page.\r\n\r\n### Think:\r\n\r\n- How many cards are created?\r\n- What is changing in each card?\r\n- What seems to be repeating?",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "start_sources": {
+      "folders": {
+        "1": {
+          "id": "1",
+          "name": "images",
+          "parentId": "0"
+        }
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"utf-8\" />\n    <title id=\"pageTitle\">Campus Jobs</title>\n    <link rel=\"stylesheet\" href=\"style.css\" />\n  </head>\n  <body>\n    <main id=\"mainContainer\" class=\"page\">\n      <header id=\"header\">\n        <h1 id=\"heading\">Latest Campus Jobs</h1>\n        <p id=\"subtitle\">Check out today’s featured jobs.</p>\n      </header>\n\n      <section id=\"cardContainer\" class=\"card-container\"></section>\n    </main>\n\n    <script src=\"helpers.js\"></script>\n    <script src=\"script.js\"></script>\n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  margin: 0;\n  font-family: Arial, sans-serif;\n  background: #eef1f6;\n  color: #14213d;\n}\n\n#mainContainer {\n  max-width: 1100px;\n  margin: 0 auto;\n  padding: 32px 16px 40px;\n}\n\n#header {\n  margin-bottom: 20px;\n}\n\n#heading {\n  margin: 0 0 8px;\n  font-size: 2rem;\n}\n\n#subtitle {\n  margin: 0;\n  font-size: 0.95rem;\n  color: #5f687a;\n}\n\n/* ---------- CARD VIEW ---------- */\n\n#cardContainer {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(260px, 320px));\n  gap: 20px;\n}\n\n.card {\n  background: #ffffff;\n  border-radius: 16px;\n  padding: 12px;\n  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);\n}\n\n.card-image {\n  width: 100%;\n  height: 200px;\n  object-fit: cover;\n  border-radius: 12px;\n}\n\n.card-body {\n  padding: 12px 4px 0;\n}\n\n.card-title {\n  margin: 0 0 6px;\n  font-size: 1.4rem;\n}\n\n.card-description {\n  margin: 0 0 12px;\n  font-size: 0.9rem;\n  color: #5f687a;\n}\n\n.card-badge {\n  display: inline-block;\n  padding: 4px 10px;\n  border-radius: 8px;\n  background: #e6f4ea;\n  color: #2e7d32;\n  font-size: 0.75rem;\n  font-weight: 600;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "const campusJobs = [\n  {\n    company: \"Campus Café\",\n    role: \"Barista\",\n    location: \"Student Center\",\n    pay: \"$14/hr\",\n    image: \"images/cafe.png\"\n  },\n  {\n    company: \"University Library\",\n    role: \"Front Desk Assistant\",\n    location: \"Main Library\",\n    pay: \"$13/hr\",\n    image: \"images/library.png\"\n  },\n  {\n    company: \"IT Help Desk\",\n    role: \"Tech Support\",\n    location: \"Tech Building\",\n    pay: \"$15/hr\",\n    image: \"images/it.png\"\n  }\n];\n\ncampusJobs.map(job => {\n  createCard(job.image, job.company, job.role, job.pay)\n}) \n",
+          "folderId": "0",
+          "active": true
+        },
+        "4": {
+          "id": "4",
+          "name": "library.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/building-data-driven-systems-lesson6-level1c-v1-2026/uuid/4e05d0dd-9298-45df-8ee7-ea887b451afc.png",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "it.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/building-data-driven-systems-lesson6-level1c-v1-2026/uuid/3014deb7-6bbe-4c77-84dc-b9538fe38d7d.png",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "cafe.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/building-data-driven-systems-lesson6-level1c-v1-2026/uuid/c83b7ed7-5628-4722-b1a8-1a7edb9e7d67.png",
+          "type": "starter",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "helpers.js",
+          "contents": "let cardCount = 0;\n\nconst createCard = (imageSrc, title, description, badgeText) => {\n  const container = document.getElementById(\"cardContainer\");\n\n  const card = document.createElement(\"article\");\n  card.className = \"card\";\n  card.id = \"card\" + cardCount;\n\n  const image = document.createElement(\"img\");\n  image.className = \"card-image\";\n  image.id = \"image\" + cardCount;\n  image.src = imageSrc;\n  image.alt = title;\n\n  const body = document.createElement(\"div\");\n  body.className = \"card-body\";\n  body.id = \"body\" + cardCount;\n\n  const heading = document.createElement(\"h2\");\n  heading.className = \"card-title\";\n  heading.id = \"title\" + cardCount;\n  heading.textContent = title;\n\n  const descriptionEl = document.createElement(\"p\");\n  descriptionEl.className = \"card-description\";\n  descriptionEl.id = \"description\" + cardCount;\n  descriptionEl.textContent = description;\n\n  const badge = document.createElement(\"div\");\n  badge.className = \"card-badge\";\n  badge.id = \"badge\" + cardCount;\n  badge.textContent = badgeText;\n\n  body.appendChild(heading);\n  body.appendChild(descriptionEl);\n  body.appendChild(badge);\n\n  card.appendChild(image);\n  card.appendChild(body);\n\n  container.appendChild(card);\n\n  cardCount++;\n};",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "3"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nA6ljeAs=\n",
+    "name_suffix": "_2025-pilot",
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "explainCode"
+      ],
+      "answerTypeCustomizations": {
+        "buildJavaScript": "",
+        "ask": "You are helping a beginner student understand how a card UI is built from data.\n\nExplain how the values passed into a function (like createCard) control what is shown on the card.\n\nFocus on:\n- how each value maps to parts of the card (image, title, description)\n- what one card represents\n- what would change if one value changes\n\nKeep explanations short and clear.",
+        "explainCode": "You are helping a beginner student understand how a card UI is built from data.\n\nExplain how the values passed into a function (like createCard) control what is shown on the card.\n\nFocus on:\n- how each value maps to parts of the card (image, title, description)\n- what one card represents\n- what would change if one value changes\n\nKeep explanations short and clear."
+      }
+    },
+    "display_name": "Campus Jobs",
+    "bubble_choice_description": "See how a list of campus jobs turns into multiple cards on the page using `.map()`.",
+    "thumbnail_url": "https://images.code.org/2649132666b25013c6e5af72c14dcdb9-cafe.png"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-03T19:38:02.995+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson6-level1b-v1-2026\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson6-level1b-v1-2026\"},{\"changed_at\":\"2026-05-03 19:38:30 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-03 19:42:50 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-03 19:43:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-03 19:44:11 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-03 19:44:27 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-03 19:44:28 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-03 19:44:57 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-03 19:44:57 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-03 19:44:59 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-03 19:46:07 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-08 03:25:13 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-08 03:25:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-08 03:26:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-08 03:26:57 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-08 03:42:00 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-08 03:43:20 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-08 03:43:32 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-08 03:43:41 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

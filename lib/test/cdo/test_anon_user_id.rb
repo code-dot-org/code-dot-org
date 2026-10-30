@@ -1,0 +1,81 @@
+# frozen_string_literal: true
+
+require_relative '../test_helper'
+require 'cdo/anon_user_id'
+
+describe Cdo::AnonUserId do
+  describe '.generate' do
+    let(:generate) {Cdo::AnonUserId.generate}
+
+    it 'returns UUID v4' do
+      _(generate).must_match Cdo::AnonUserId::FORMAT
+    end
+  end
+
+  describe '.valid?' do
+    let(:valid?) {Cdo::AnonUserId.valid?(input)}
+    let(:input) {SecureRandom.uuid}
+
+    it 'returns true for UUID v4' do
+      _(valid?).must_equal true
+    end
+
+    context 'when value is an uppercase UUID' do
+      let(:input) {SecureRandom.uuid.upcase}
+
+      it 'returns true' do
+        _(valid?).must_equal true
+      end
+    end
+
+    context 'when value has a non-RFC variant nibble' do
+      let(:input) {'37fdc3bf-8392-45d2-0810-7ea304d2d9c9'}
+
+      it 'returns true' do
+        _(valid?).must_equal true
+      end
+    end
+
+    context 'when value is another UUID version' do
+      let(:input) do
+        SecureRandom.uuid.tap {|uuid| uuid[14] = '1'}
+      end
+
+      it 'returns false' do
+        _(valid?).must_equal false
+      end
+    end
+
+    context 'when value is a malformed string' do
+      let(:input) {'invalid'}
+
+      it 'returns false' do
+        _(valid?).must_equal false
+      end
+    end
+
+    context 'when value is nil' do
+      let(:input) {nil}
+
+      it 'returns false' do
+        _(valid?).must_equal false
+      end
+    end
+
+    context 'when value has surrounding whitespace' do
+      ["\n%s", "%s\n", "%s\r\n", ' %s '].each do |format|
+        it "rejects #{format.inspect}" do
+          _(Cdo::AnonUserId.valid?(format % SecureRandom.uuid)).must_equal false
+        end
+      end
+    end
+
+    context 'when value is not a string' do
+      let(:input) {123}
+
+      it 'returns false' do
+        _(valid?).must_equal false
+      end
+    end
+  end
+end

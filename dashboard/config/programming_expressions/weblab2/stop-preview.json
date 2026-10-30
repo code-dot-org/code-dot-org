@@ -1,0 +1,8 @@
+{
+  "key": "stop-preview",
+  "name": "Stop Preview",
+  "category": "Lab Features",
+  "category_key": "lab_features",
+  "content": "The preview area runs your website live as you code. If something goes wrong — like a loop that never ends or a page that won't respond — you can stop the preview to regain control.\n\n---\n\n## When you might need to stop it\n\n- The preview is frozen or unresponsive.\n- A JavaScript loop is running forever and has locked up the page.\n- An animation or event keeps firing and won't stop.\n- You want to clear and reload the preview cleanly.\n\n---\n\n## How to stop the preview\n\n**1. Find the Stop button**\nLook in the toolbar above the preview area for a stop icon (⏹) or a refresh icon (↺).\n\n**2. Click Stop**\nThis halts whatever is currently running. The preview will go blank or show a stopped state.\n\n**3. Fix your code**\nSwitch to the editor and fix the issue — for example, correct the loop condition or add a missing exit case.\n\n**4. Restart the preview**\nClick \"Reload Preview\" to run your updated code.\n\n> ⚠️ If the page is completely frozen and you can't click anything, refresh the browser tab. Your code is still saved in the editor.\n\n---\n",
+  "short_description": "The preview area runs your website live as you code. If something goes wrong — like a loop that never ends or a page that won't respond — you can stop the preview to regain control."
+}

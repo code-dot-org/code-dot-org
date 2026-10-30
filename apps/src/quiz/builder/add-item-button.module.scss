@@ -1,0 +1,7 @@
+.addItem {
+  width: 100%;
+
+  &:global(.MuiButton-outlined) {
+    border-style: dashed;
+  }
+}

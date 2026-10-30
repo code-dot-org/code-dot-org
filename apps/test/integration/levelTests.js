@@ -9,33 +9,39 @@
 // todo - should we also have tests around which blocks to show as part of the
 // feedback when a user gets the puzzle wrong?
 
-import {assert} from '../util/reconfiguredChai';
-import sinon from 'sinon';
-import {stubRedux, restoreRedux, registerReducers} from '@cdo/apps/redux';
 import jQuery from 'jquery';
-var tickWrapper = require('./util/tickWrapper');
-import lessonLock from '@cdo/apps/code-studio/lessonLockRedux';
-import runState from '@cdo/apps/redux/runState';
-import {reducers as jsDebuggerReducers} from '@cdo/apps/lib/tools/jsdebugger/redux';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import project from '@cdo/apps/code-studio/initApp/project';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
-import progress from '@cdo/apps/code-studio/progressRedux';
-import currentUser from '@cdo/apps/templates/currentUserRedux';
-import arrowDisplay from '@cdo/apps/templates/arrowDisplayRedux';
-import FirebaseStorage from '@cdo/apps/storage/firebaseStorage';
 import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
-import loadSource from './util/loadSource';
+import lessonLock from '@cdo/apps/code-studio/lessonLockRedux';
+import progress from '@cdo/apps/code-studio/progressRedux';
 import projectRedux from '@cdo/apps/code-studio/projectRedux';
+import {reducers as jsDebuggerReducers} from '@cdo/apps/lib/tools/jsdebugger/redux';
+import {stubRedux, restoreRedux, registerReducers} from '@cdo/apps/redux';
+import runState from '@cdo/apps/redux/runState';
+import {
+  isInitialized as isStorageInitialized,
+  storageBackend,
+} from '@cdo/apps/storage/storage';
+import arrowDisplay from '@cdo/apps/templates/arrowDisplayRedux';
+import currentUser from '@cdo/apps/templates/currentUserRedux';
 
-var wrappedEventListener = require('./util/wrappedEventListener');
+import {assert} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+
+import loadSource from './util/loadSource';
+import {setupBlocklyFrame} from './util/testBlockly';
+
+var testUtils = require('../util/testUtils');
+
 var testCollectionUtils = require('./util/testCollectionUtils');
+var tickWrapper = require('./util/tickWrapper');
+var wrappedEventListener = require('./util/wrappedEventListener');
 
 window.appOptions = {};
 window.jQuery = jQuery;
 window.$ = jQuery;
-
-var testUtils = require('../util/testUtils');
-import {setupBlocklyFrame} from './util/testBlockly';
 
 const defaultTimeout = 20000;
 
@@ -211,12 +217,9 @@ describe('Level tests', function () {
       window.Studio.interpreter = null;
     }
 
-    // Firebase is only used by Applab tests, but we don't have a reliable way
-    // to test for the app type here because window.Applab is always defined
-    // because loadApplab is always required (the same is true for other app
-    // types). Therefore, rely on FirebaseStorage to defensively reset itself.
-
-    FirebaseStorage.resetForTesting();
+    if (isStorageInitialized) {
+      storageBackend().resetForTesting();
+    }
 
     LegacyDialog.prototype.hide.restore();
     LegacyDialog.prototype.show.restore();

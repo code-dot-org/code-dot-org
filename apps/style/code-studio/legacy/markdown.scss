@@ -1,0 +1,22 @@
+[data-markdown] {
+  [style*="float: left"] {
+    float: inline-start !important;
+  }
+
+  [style*="float: right"] {
+    float: inline-end !important;
+  }
+
+  // TODO: Remove the fallback RTL rule after updating the platform browser version requirements
+  //  to those that support float style properties `inline-start` and `inline-end`.
+  // See: https://caniuse.com/mdn-css_properties_float_inline-start
+  [dir="rtl"] & {
+    [style*="float: left"] {
+      float: right !important;
+    }
+
+    [style*="float: right"] {
+      float: left !important;
+    }
+  }
+}

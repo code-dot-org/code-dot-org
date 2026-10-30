@@ -15,7 +15,7 @@ Dashboard::Application.configure do
 
   # Consider disabling full error reports for profiling/load-testing by setting
   # this flag to false, due to memory leak: https://github.com/rails/rails/issues/27273
-  config.consider_all_requests_local = true
+  config.consider_all_requests_local = ENV['STACK_NAME'] != 'bugcrowd'
 
   config.action_controller.perform_caching = true
   config.public_file_server.enabled = true
@@ -24,17 +24,15 @@ Dashboard::Application.configure do
   # Set to :debug to see everything in the log.
   config.log_level = :info
 
-  # Version of your assets, change this if you want to expire all your assets.
-  config.assets.version = '1.0'
-
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = Logger::Formatter.new
 
-  # Log condensed lines to syslog for centralized logging.
-  config.lograge.enabled = false
+  config.lograge.enabled = true
   config.lograge.formatter = Lograge::Formatters::Cee.new
   require 'syslog/logger'
   config.logger = Syslog::Logger.new 'dashboard', Syslog::LOG_LOCAL0
+
+  config.action_view.logger = nil
 
   # Show mail previews (rails/mailers).
   # See http://edgeguides.rubyonrails.org/action_mailer_basics.html#previewing-emails

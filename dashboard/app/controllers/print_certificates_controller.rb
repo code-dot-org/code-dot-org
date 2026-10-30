@@ -18,6 +18,7 @@ class PrintCertificatesController < ApplicationController
     end
 
     @student_name = data['name']
+    @course_name = CurriculumHelper.find_matching_unit_or_unit_group(data['course'])&.localized_title || I18n.t('certificates.one_hour_of_code')
     @certificate_image_url = certificate_image_url(data['name'], data['course'], data['donor'])
   end
 

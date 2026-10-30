@@ -1,8 +1,8 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {mount} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
-import {UnconnectedMatchAssessmentsOverviewTable} from '@cdo/apps/templates/sectionAssessments/MatchAssessmentsOverviewTable';
+
 import {matchQuestionWith4Pairs} from '@cdo/apps/templates/sectionAssessments/assessmentsTestHelpers';
+import {UnconnectedMatchAssessmentsOverviewTable} from '@cdo/apps/templates/sectionAssessments/MatchAssessmentsOverviewTable';
 
 describe('MatchAssessmentsOverviewTable', () => {
   it('renders the correct number of cells', () => {
@@ -15,12 +15,12 @@ describe('MatchAssessmentsOverviewTable', () => {
     );
 
     const answerCells = wrapper.find('PercentAnsweredCell');
-    expect(answerCells).to.have.length(20);
+    expect(answerCells).toHaveLength(20);
 
     const tableHeaders = wrapper.find('th');
-    expect(tableHeaders).to.have.length(6);
+    expect(tableHeaders).toHaveLength(6);
 
     const tableRows = wrapper.find('tr');
-    expect(tableRows).to.have.length(5);
+    expect(tableRows).toHaveLength(5);
   });
 });

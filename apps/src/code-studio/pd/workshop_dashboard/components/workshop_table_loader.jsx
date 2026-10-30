@@ -10,7 +10,24 @@ import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Spinner from '../../components/spinner';
+
+import Spinner from '../../../../sharedComponents/Spinner';
+import {COURSE_BUILD_YOUR_OWN} from '../workshopConstants';
+
+// To allow the workshop table to display/sort by Subjects/Topics, the subjects and topics have to all be
+// under the same field name. So, only for the purposes of displaying the info to the user, the Build Your
+// Own workshop course offerings will be set as the workshop's subject.
+function processWorkshopData(workshopData) {
+  return {
+    ...workshopData,
+    workshops: workshopData.workshops?.map(ws => {
+      if (ws.course === COURSE_BUILD_YOUR_OWN) {
+        ws.subject = ws.course_offering_names;
+      }
+      return ws;
+    }),
+  };
+}
 
 export default class WorkshopTableLoader extends React.Component {
   static propTypes = {
@@ -69,7 +86,7 @@ export default class WorkshopTableLoader extends React.Component {
     }).done(data => {
       this.setState({
         loading: false,
-        workshops: data,
+        workshops: processWorkshopData(data),
       });
     });
   };
@@ -96,7 +113,11 @@ export default class WorkshopTableLoader extends React.Component {
     if (this.state.loading) {
       return (
         // While reloading, preserve the height of the previous child component so the refresh is smoother.
-        <div style={{height: this.childHeight}}>
+        <div
+          style={{height: this.childHeight}}
+          // eslint-disable-next-line react/forbid-dom-props
+          data-testid={'enrolled-workshops-loader'}
+        >
           <Spinner />
         </div>
       );

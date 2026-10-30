@@ -3,11 +3,11 @@
  * A draggable, horizontal toolbar. As it is dragged, it calls back to onResize
  * which handles any movement.
  */
-import React from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
-import color from '../../util/color';
+import React from 'react';
+
 import styleConstants from '../../styleConstants';
+import color from '../../util/color';
 
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
@@ -152,25 +152,21 @@ class HeightResizer extends React.Component {
   render() {
     let mainStyle, ellipsisStyle, ellipsisClassName;
     if (this.props.vertical) {
-      mainStyle = [
-        styles.mainVertical,
-        {
-          left: this.props.position - RESIZER_HEIGHT,
-        },
-        this.props.style,
-      ];
+      mainStyle = {
+        ...styles.mainVertical,
+        left: this.props.position - RESIZER_HEIGHT,
+        ...this.props.style,
+      };
       ellipsisStyle = styles.ellipsisVertical;
-      ellipsisClassName = 'fa fa-ellipsis-v';
+      ellipsisClassName = 'fa-solid fa-ellipsis-vertical';
     } else {
-      mainStyle = [
-        styles.main,
-        {
-          top: this.props.position - RESIZER_HEIGHT,
-        },
-        this.props.style,
-      ];
+      mainStyle = {
+        ...styles.main,
+        top: this.props.position - RESIZER_HEIGHT,
+        ...this.props.style,
+      };
       ellipsisStyle = styles.ellipsis;
-      ellipsisClassName = 'fa fa-ellipsis-h';
+      ellipsisClassName = 'fa-solid fa-ellipsis';
     }
 
     return (
@@ -222,4 +218,4 @@ const styles = {
   },
 };
 
-export default Radium(HeightResizer);
+export default HeightResizer;

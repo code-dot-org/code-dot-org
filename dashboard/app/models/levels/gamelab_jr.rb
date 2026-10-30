@@ -22,6 +22,7 @@
 #  index_levels_on_game_id    (game_id)
 #  index_levels_on_level_num  (level_num)
 #  index_levels_on_name       (name)
+#  index_levels_on_type       (type)
 #
 
 class GamelabJr < Gamelab
@@ -36,14 +37,47 @@ class GamelabJr < Gamelab
     blockly_variables
     instructions_icon
     standalone_app_name
+    enable_big_playspace
+    uses_lab2
+    level_mode
+    image_role_defaults
+    add_blocks
+    pinned_scene
+    extra_scene
+    world_start_pattern
+    starter_images
+    callouts
+    objectives
+    block_catalog
+    no_project
   )
 
   def shared_blocks
     Block.for(*block_pools.presence || type)
   end
 
+  # A level whose content is all its own (a demo to play, say) runs with no
+  # project: nothing the student does there is saved.
+  def channel_backed?
+    return false if properties['no_project'].to_s == 'true'
+    super
+  end
+
+  # Lab2 Sprite Lab starter assets are always uploaded by UUID.
+  def add_starter_asset!(_, _)
+    true
+  end
+
   def self.standalone_app_names
-    [['Sprite Lab', 'spritelab'], ['Story', 'story'], ['Science', 'science'], ['Adaptations', 'adaptations'], ['Ecosystems', 'ecosystems']]
+    [
+      ['Sprite Lab', 'spritelab'],
+      ['Story', 'story'],
+      ['Science', 'science'],
+      ['Adaptations', 'adaptations'],
+      ['Ecosystems', 'ecosystems'],
+      ['Sprite Lab (Game Design)', 'game_design'],
+      ['Transformers', 'transformers']
+    ]
   end
 
   def standalone_app_name_or_default
@@ -181,10 +215,6 @@ class GamelabJr < Gamelab
 
   def uses_droplet?
     false
-  end
-
-  def uses_google_blockly?
-    true
   end
 
   def age_13_required?

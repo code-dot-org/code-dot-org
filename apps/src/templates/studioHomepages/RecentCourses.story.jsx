@@ -1,7 +1,9 @@
 import React from 'react';
-import RecentCourses from './RecentCourses';
 import {Provider} from 'react-redux';
+
 import {reduxStore} from '@cdo/storybook/decorators';
+
+import RecentCourses from './RecentCourses';
 
 export default {
   component: RecentCourses,

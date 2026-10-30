@@ -2,14 +2,16 @@
 #
 # Table name: learning_goal_ai_evaluations
 #
-#  id                      :bigint           not null, primary key
-#  rubric_ai_evaluation_id :bigint           not null
-#  learning_goal_id        :bigint           not null
-#  understanding           :integer
-#  ai_confidence           :integer
-#  created_at              :datetime         not null
-#  updated_at              :datetime         not null
-#  observations            :text(65535)
+#  id                        :bigint           not null, primary key
+#  rubric_ai_evaluation_id   :bigint           not null
+#  learning_goal_id          :bigint           not null
+#  understanding             :integer
+#  ai_confidence             :integer
+#  created_at                :datetime         not null
+#  updated_at                :datetime         not null
+#  observations              :text(65535)
+#  ai_confidence_exact_match :integer
+#  evidence                  :text(65535)
 #
 # Indexes
 #
@@ -17,6 +19,21 @@
 #  index_learning_goal_ai_evaluations_on_rubric_ai_evaluation_id  (rubric_ai_evaluation_id)
 #
 class LearningGoalAiEvaluation < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :confidential,
+    rubric_ai_evaluation_id: :confidential,
+    learning_goal_id: :confidential,
+    understanding: :confidential,
+    ai_confidence: :confidential,
+    created_at: :confidential,
+    updated_at: :confidential,
+    observations: :restricted,
+    ai_confidence_exact_match: :confidential,
+    evidence: :restricted,
+  )
+
   belongs_to :rubric_ai_evaluation, inverse_of: :learning_goal_ai_evaluations
   belongs_to :learning_goal
 
@@ -26,6 +43,7 @@ class LearningGoalAiEvaluation < ApplicationRecord
   has_one :rubric, through: :learning_goal
   has_one :lesson, through: :rubric
   has_one :level, through: :rubric
+  has_many :learning_goal_ai_evaluation_feedbacks, inverse_of: :learning_goal_ai_evaluation, dependent: :destroy
 
   AI_CONFIDENCE_LEVELS = {
     LOW: 1,
@@ -34,6 +52,7 @@ class LearningGoalAiEvaluation < ApplicationRecord
   }.freeze
 
   validates :ai_confidence, inclusion: {in: AI_CONFIDENCE_LEVELS.values}, allow_nil: true
+  validates :ai_confidence_exact_match, inclusion: {in: AI_CONFIDENCE_LEVELS.values}, allow_nil: true
   validates :understanding, presence: true, inclusion: {in: SharedConstants::RUBRIC_UNDERSTANDING_LEVELS.to_h.values}
 
   def summarize_for_instructor
@@ -42,7 +61,11 @@ class LearningGoalAiEvaluation < ApplicationRecord
       understanding: understanding,
       learning_goal_id: learning_goal_id,
       observations: observations,
+      evidence: evidence,
+      # temporarily include this until client code is updated to use aiConfidencePassFail
       ai_confidence: ai_confidence,
+      aiConfidencePassFail: ai_confidence,
+      aiConfidenceExactMatch: ai_confidence_exact_match,
     }
   end
 
@@ -60,7 +83,9 @@ class LearningGoalAiEvaluation < ApplicationRecord
       learning_goal: learning_goal.learning_goal,
       understanding: SharedConstants::RUBRIC_UNDERSTANDING_LEVELS.to_h.invert[understanding].to_s,
       observations: observations,
+      evidence: evidence,
       ai_confidence: AI_CONFIDENCE_LEVELS.invert[ai_confidence].to_s,
+      ai_confidence_exact_match: AI_CONFIDENCE_LEVELS.invert[ai_confidence_exact_match].to_s,
     }
   end
 end

@@ -1,5 +1,5 @@
-import vmsg from 'vmsg';
 import Recorder from 'recorder-js';
+import vmsg from 'vmsg';
 
 class Mp3Recorder {
   constructor() {
@@ -69,6 +69,10 @@ export const RecordingFileType = {
   WAV: '.wav',
 };
 
+/**
+ * Recorder for MP3/WAV file recording.
+ * For native browser recording, use {@link AudioRecorder.ts}
+ */
 const getRecorder = extension => {
   if (extension === RecordingFileType.WAV) {
     return new WavRecorder();

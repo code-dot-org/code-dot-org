@@ -1,0 +1,72 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2025-12-15T17:11:03.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "#Milestone Two: Rendering your UI\r\n\r\n**Goal**: Design a clear, accessible interface that displays your dataset using .map()\r\n\r\n1.  **Wirefames:** Import your Sketch Lab wireframes of the full-page and card views 2.  \r\n2.  **Create the UI:** Use saved CHAT prompts and PAIR programming techniques to work with AI to render your UI based on the wireframes that you designed.\r\n3.  **Connect to Data:** Render your dataset within the cards.\r\n4.  **Test:** Make sure that your UI is set-up properly and that each card shows the correct info.\r\n",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "",
+          "active": true,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "script.js",
+          "language": "js",
+          "contents": "",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "style.css",
+          "language": "css",
+          "contents": "",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    "project_template_level_name": "building-data-driven-systems-lesson11-template-test_2025-pilot",
+    "display_name": "Render Your UI",
+    "bubble_choice_description": "Turn your wireframes into code by building your HTML/CSS structure and using `map()` to display your dataset clearly and accessibly ***(supports completing Milestone 2 tasks)***.",
+    "thumbnail_url": "https://images.code.org/ae6f63421668b4869f5d5308ddf03e11-user-experience.png",
+    "name_suffix": "_2025-pilot"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-12-15T17:11:03.541+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson11-level4-test-2025\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson11-level4-test-2025\"}]"
+}]]></config>
+</Weblab2>

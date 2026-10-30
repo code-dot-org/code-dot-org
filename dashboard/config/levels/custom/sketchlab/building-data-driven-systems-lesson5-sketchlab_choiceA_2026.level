@@ -1,0 +1,14 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 75,
+  "created_at": "2026-05-01T14:03:34.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Plan the Data\r\n\r\nDesign what information one animal should include so your app can display and use it.\r\n\r\n\r\n#### **Do This:**\r\n\r\n1. Decide what your card represents. Each card represents one animal available for adoption.\r\n\r\n2. Rename the properties to match your system. *(Example: `title` → `petName`)*\r\n\r\n3. Add an example value for each property.\r\n\r\n4. Save your sketch to your Backpack.\r\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-05-01 14:42:12 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-01 14:43:36 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Sketchlab>

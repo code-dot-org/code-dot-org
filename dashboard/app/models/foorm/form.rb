@@ -16,6 +16,18 @@
 #
 
 class Foorm::Form < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :restricted,
+    name: :restricted,
+    version: :restricted,
+    questions: :restricted,
+    created_at: :restricted,
+    updated_at: :restricted,
+    published: :restricted,
+  )
+
   include Seeded
   include Pd::Foorm::Constants
 
@@ -33,15 +45,16 @@ class Foorm::Form < ApplicationRecord
     "#{name}.#{version}"
   end
 
-  def self.setup
+  def self.setup(dashboard_root = '.')
     # Seed all forms inside of a transaction, such that all forms are imported/updated successfully
     # or none at all.
     ActiveRecord::Base.transaction do
-      Dir.glob('config/foorm/forms/**/*.json').each do |path|
+      prefix = "#{dashboard_root}/config/foorm/forms/"
+      Dir.glob("#{prefix}**/*.json").each do |path|
         # Given: "config/foorm/forms/surveys/pd/pre_workshop_survey.0.json"
         # we get full_name: "surveys/pd/pre_workshop_survey"
         #      and version: 0
-        unique_path = path.partition("config/foorm/forms/")[2]
+        unique_path = path.partition(prefix)[2]
         filename_and_version = File.basename(unique_path, ".json")
         filename, version = filename_and_version.split(".")
         version = version.to_i
@@ -222,7 +235,7 @@ class Foorm::Form < ApplicationRecord
   def submissions_to_csv(submissions_to_report = nil)
     calculated_readable_questions = readable_questions
     headers = calculated_readable_questions[:general]
-    has_facilitator_questions = !(calculated_readable_questions[:facilitator].nil_or_empty?)
+    has_facilitator_questions = !calculated_readable_questions[:facilitator].nil_or_empty?
     filtered_submissions = submissions_to_report || submissions
 
     if has_facilitator_questions

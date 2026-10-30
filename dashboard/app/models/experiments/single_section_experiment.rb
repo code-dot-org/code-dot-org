@@ -35,7 +35,7 @@ class SingleSectionExperiment < Experiment
 
   # set a limit on the total number of SingleSectionExperiment records, to mitigate performance problems
   # when calling Experiment.get_all_enabled on hot codepaths
-  MAX_COUNT = 1_000
+  MAX_COUNT = 2_000
 
   def max_count
     MAX_COUNT

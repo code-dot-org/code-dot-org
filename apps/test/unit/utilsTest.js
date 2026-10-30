@@ -1,7 +1,9 @@
 import _ from 'lodash';
-import {stub} from 'sinon';
-import {assert, expect} from '../util/reconfiguredChai';
+import {stub} from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import * as utils from '@cdo/apps/utils';
+
+import {assert, expect} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const {
   isSubsequence,
@@ -9,7 +11,6 @@ const {
   cloneWithoutFunctions,
   stripQuotes,
   stripEncapsulatingDoubleQuotes,
-  wrapNumberValidatorsForLevelBuilder,
   escapeHtml,
   escapeText,
   unescapeText,
@@ -247,57 +248,6 @@ describe('utils modules', () => {
       assert(stripQuotes('t"e"s"t"') === 'test');
       assert(stripQuotes('test') === 'test');
       assert(stripQuotes('') === '');
-    });
-  });
-
-  describe('wrapNumberValidatorsForLevelBuilder', function () {
-    let oldBlockly;
-
-    beforeEach(function () {
-      // Blockly hasn't actually been loaded at this point, but we can simulate it.
-      // First stash the current blockly in case things change and we do have it
-      // loaded.
-      oldBlockly = global.Blockly;
-    });
-
-    afterEach(function () {
-      global.Blockly = oldBlockly;
-    });
-
-    it('will allow ??? in number validators after being wrapped', function () {
-      global.Blockly = {
-        FieldTextInput: {
-          // fake our validators
-          nonnegativeIntegerValidator: function (text) {
-            return isNaN(text) ? null : text;
-          },
-          numberValidator: function (text) {
-            return isNaN(text) ? null : text;
-          },
-        },
-      };
-
-      assert.equal(
-        Blockly.FieldTextInput.nonnegativeIntegerValidator('123'),
-        123
-      );
-      assert.equal(Blockly.FieldTextInput.numberValidator('123'), 123);
-      assert.equal(
-        Blockly.FieldTextInput.nonnegativeIntegerValidator('???'),
-        null
-      );
-      assert.equal(Blockly.FieldTextInput.numberValidator('???'), null);
-      wrapNumberValidatorsForLevelBuilder();
-      assert.equal(
-        Blockly.FieldTextInput.nonnegativeIntegerValidator('123'),
-        123
-      );
-      assert.equal(Blockly.FieldTextInput.numberValidator('123'), 123);
-      assert.equal(
-        Blockly.FieldTextInput.nonnegativeIntegerValidator('???'),
-        '???'
-      );
-      assert.equal(Blockly.FieldTextInput.numberValidator('???'), '???');
     });
   });
 

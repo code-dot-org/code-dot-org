@@ -2,8 +2,8 @@
  * @file Droplet-friendly command definitions for timeout and
  * interval commands (shared between App Lab and Game Lab).
  */
-import * as apiTimeoutList from './timeoutList';
 import {apiValidateType, OPTIONAL} from './javascriptMode';
+import * as apiTimeoutList from './timeoutList';
 
 /**
  * Inject an executeCmd method so this mini-library can be used in both

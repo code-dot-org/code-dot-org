@@ -1,8 +1,11 @@
 import $ from 'jquery';
+
+import {getAllAvailableDropletBlocks} from '../dropletUtils';
+
+var dom = require('../dom');
+
 var DropletFunctionTooltipMarkup = require('./DropletParameterTooltip.html.ejs');
 var tooltipUtils = require('./tooltipUtils.js');
-var dom = require('../dom');
-import {getAllAvailableDropletBlocks} from '../dropletUtils';
 
 /**
  * @fileoverview Displays tooltips for Droplet blocks

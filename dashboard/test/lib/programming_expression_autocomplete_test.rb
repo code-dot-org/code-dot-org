@@ -21,7 +21,7 @@ class ProgrammingExpressionAutocompleteTest < ActiveSupport::TestCase
   test "finds multiple matches" do
     matches = ProgrammingExpressionAutocomplete.get_search_matches(1, 'play',  nil)
     assert_equal 2, matches[:programmingExpressions].length
-    keys = matches[:programmingExpressions].map {|m| m[:key]}
+    keys = matches[:programmingExpressions].pluck(:key)
     assert_includes(keys, 'playSound-1')
     assert_includes(keys, 'playSound-2')
   end

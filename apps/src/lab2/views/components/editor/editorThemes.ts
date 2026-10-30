@@ -1,26 +1,75 @@
-import {EditorView} from '@codemirror/view';
-import color from '@cdo/apps/util/color';
 import {
   syntaxHighlighting,
   defaultHighlightStyle,
   HighlightStyle,
 } from '@codemirror/language';
+import {EditorView} from '@codemirror/view';
 import {tags} from '@lezer/highlight';
+
+import color from '@cdo/apps/util/color';
 
 // modified from @codemirror/theme-one-dark
 const chalky = '#e5c07b',
-  coral = '#e06c75',
+  coral = '#E48189',
   cyan = '#56b6c2',
   invalid = '#ffffff',
-  stone = '#7d8799',
+  stone = color.light_gray_500,
   malibu = '#61afef',
   sage = '#98c379',
   whiskey = '#d19a66',
   violet = '#c678dd',
-  darkBackground = '#21252b',
+  darkBackground = color.light_black,
   highlightBackground = '#2c313a',
-  selection = '#3E4451',
-  cursor = '#528bff';
+  selection = '#484D57',
+  cursor = '#528bff',
+  hotPink = '#FF69B4';
+
+/**
+ * Lab 2 only: editor + gutters use semantic tokens under ThemeProvider data-theme.
+ * Do not use in legacy labs (e.g. Java Lab) that lack that context.
+ */
+export const lab2EditorBackgroundTheme = EditorView.theme({
+  '&.cm-editor': {
+    backgroundColor: 'var(--background-neutral-primary)',
+  },
+  '&.cm-editor .cm-gutters': {
+    backgroundColor: 'var(--background-neutral-primary)',
+  },
+});
+
+/**
+ * Theme to use brand colors when displaying diffs in the Codebridge editor.
+ * This is used in the AI Tutor accept/reject flow to highlight lines that have been added or removed.
+ */
+export const lab2DiffViewerTheme = EditorView.theme({
+  '&.cm-merge-a .cm-changedLine, .cm-deletedChunk': {
+    backgroundColor: 'var(--background-error-light)',
+  },
+  '&.cm-merge-b .cm-changedLine, .cm-inlineChangedLine': {
+    backgroundColor: 'var(--background-success-light)',
+  },
+  '&.cm-merge-a .cm-changedLineGutter, .cm-deletedLineGutter': {
+    backgroundColor: 'var(--border-error-primary)',
+  },
+  '&.cm-merge-b .cm-changedLineGutter, .cm-inlineChangedLineGutter': {
+    backgroundColor: 'var(--border-success-primary)',
+  },
+  '&.cm-merge-a .cm-changedText, .cm-deletedChunk .cm-deletedText': {
+    background:
+      'linear-gradient(var(--border-error-primary), var(--border-error-primary)) bottom/100% 2px no-repeat',
+  },
+  '&.cm-merge-b .cm-changedText': {
+    background:
+      'linear-gradient(var(--border-success-primary), var(--border-success-primary)) bottom/100% 2px no-repeat',
+  },
+  '&.cm-merge-b .cm-deletedText': {
+    backgroundColor: 'var(--background-error-light)',
+  },
+  '.cm-collapsedLines': {
+    background:
+      'linear-gradient(to bottom, transparent 0, var(--background-neutral-secondary) 30%, var(--background-neutral-secondary) 70%, transparent 100%)',
+  },
+});
 
 /**
 The editor theme styles for dark mode.
@@ -29,16 +78,15 @@ export const darkTheme = EditorView.theme(
   {
     '&': {
       color: color.lighter_gray,
-      backgroundColor: color.darkest_slate_gray,
+      backgroundColor: darkBackground,
     },
     '.cm-content': {
       caretColor: cursor,
     },
     '&.cm-focused .cm-cursor': {borderLeftColor: cursor},
-    '&.cm-focused .cm-selectionBackground, .cm-selectionBackground, ::selection':
-      {
-        backgroundColor: selection,
-      },
+
+    '&.cm-focused > .cm-scroller > .cm-selectionLayer .cm-selectionBackground, .cm-selectionBackground, .cm-content ::selection':
+      {backgroundColor: selection},
     '.cm-panels': {backgroundColor: darkBackground, color: color.lighter_gray},
     '.cm-panels button': {color: color.lightest_gray},
     '.cm-panels.cm-panels-top': {borderBottom: '2px solid black'},
@@ -50,16 +98,22 @@ export const darkTheme = EditorView.theme(
     '.cm-searchMatch.cm-searchMatch-selected': {
       backgroundColor: '#6199ff2f',
     },
-    '.cm-activeLine': {backgroundColor: color.dark_gray},
+    '.cm-activeLine': {backgroundColor: '#6699ff0b'},
     '.cm-selectionMatch': {backgroundColor: '#aafe661a'},
     '.cm-matchingBracket, .cm-nonmatchingBracket': {
       backgroundColor: '#bad0f847',
       outline: '1px solid #515a6b',
     },
     '.cm-gutters': {
-      backgroundColor: color.darkest_slate_gray,
+      backgroundColor: darkBackground,
       color: stone,
       border: 'none',
+      paddingInline: '0.25rem',
+    },
+    '.cm-lintRange-error': {
+      backgroundImage: 'none !important',
+      textDecoration: 'underline wavy',
+      textDecorationColor: hotPink,
     },
     '.cm-activeLineGutter': {
       backgroundColor: highlightBackground,
@@ -160,13 +214,19 @@ export const darkMode = [darkTheme, syntaxHighlighting(darkHighlightStyle)];
 // The default light theme styles for codemirror
 export const lightTheme = EditorView.theme(
   {
-    // Sets the background color for the main editor area
     '&': {
       backgroundColor: color.white,
     },
-    // Sets the background color for the left-hand side gutters
     '.cm-gutters': {
       backgroundColor: color.white,
+      border: 'none',
+      paddingInline: '0.25rem',
+    },
+    // Use the same wavy underline style for errors as the dark theme
+    '.cm-lintRange-error': {
+      backgroundImage: 'none !important',
+      textDecoration: 'underline wavy',
+      textDecorationColor: color.red,
     },
   },
   {dark: false}

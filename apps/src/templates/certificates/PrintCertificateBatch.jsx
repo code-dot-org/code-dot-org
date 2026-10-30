@@ -1,7 +1,8 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import i18n from '@cdo/locale';
+import React from 'react';
+
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import i18n from '@cdo/locale';
 
 export default function PrintCertificateBatch({imageUrls}) {
   const onPrint = () => {

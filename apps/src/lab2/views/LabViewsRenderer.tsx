@@ -3,165 +3,126 @@
  * currently active Lab (determined by the current app name). This
  * helps facilitate level-switching between labs without page reloads.
  */
-import AichatView from '@cdo/apps/aichat/views/AichatView';
-import DanceView from '@cdo/apps/dance/lab2/views/DanceView';
-import {setUpBlocklyForMusicLab} from '@cdo/apps/music/blockly/setup';
-import MusicView from '@cdo/apps/music/views/MusicView';
-import StandaloneVideo from '@cdo/apps/standaloneVideo/StandaloneVideo';
-import classNames from 'classnames';
-import React, {useContext, useEffect, useState} from 'react';
-import {useSelector} from 'react-redux';
-import {LabState} from '../lab2Redux';
-import ProgressContainer from '../progress/ProgressContainer';
-import {AppName} from '../types';
+import React, {createContext, Suspense, useEffect, useState} from 'react';
+
+import {queryParams} from '@cdo/apps/code-studio/utils';
+import {PERMISSIONS} from '@cdo/apps/lab2/constants';
+import {useInitialLabTheme} from '@cdo/apps/lab2/hooks/useInitialLabTheme';
+import ProgressContainer from '@cdo/apps/lab2/progress/ProgressContainer';
+import {getAppOptionsViewingExemplar} from '@cdo/apps/lab2/projects/utils';
+import {getLabViewPageAction, getIsLabViewBlocked} from '@cdo/apps/lab2/utils';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import useRequiredContext from '@cdo/apps/util/hooks/useRequiredContext';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import {lab2EntryPoints} from '../../../lab2EntryPoints';
+import KeyboardShortcutsDialog from '../keyboardShortcuts/KeyboardShortcutsDialog';
+
+import NoExemplarPage from './components/NoExemplarPage';
+import ExtraLinks from './ExtraLinks';
+import Loading from './Loading';
+
 import moduleStyles from './lab-views-renderer.module.scss';
-import {DEFAULT_THEME, Theme, ThemeContext} from './ThemeWrapper';
-import PythonlabView from '@cdo/apps/pythonlab/PythonlabView';
-import PanelsView from '@cdo/apps/panels/PanelsView';
-import Weblab2View from '@cdo/apps/weblab2/Weblab2View';
 
-// Configuration for how a Lab should be rendered
-interface AppProperties {
-  /**
-   * Whether this lab should remain rendered in the background once mounted.
-   * If true, the lab will always be present in the tree, but will be hidden
-   * via visibility: hidden when not active. If false, the lab will only
-   * be rendered in the tree when active.
-   */
-  backgroundMode: boolean;
-  /** React View for the Lab */
-  node: React.ReactNode;
-  /**
-   * Display theme for this lab. This will likely be configured by user
-   * preferences eventually, but for now this is fixed for each lab. Defaults
-   * to the default theme if not specified.
-   */
-  theme?: Theme;
-  /**
-   * Optional function to run when the lab is first mounted. This is useful
-   * for any one-time setup actions such as setting up Blockly.
-   */
-  setupFunction?: () => void;
-}
+const queryHideExtraLinks = queryParams('hide-extra-links') === 'true';
 
-const appsProperties: {[appName in AppName]?: AppProperties} = {
-  music: {
-    backgroundMode: true,
-    node: <MusicView />,
-    theme: Theme.DARK,
-    setupFunction: setUpBlocklyForMusicLab,
-  },
-  standalone_video: {
-    backgroundMode: false,
-    node: <StandaloneVideo />,
-  },
-  aichat: {
-    backgroundMode: false,
-    node: <AichatView />,
-    theme: Theme.LIGHT,
-  },
-  dance: {
-    backgroundMode: false,
-    node: <DanceView />,
-    theme: Theme.LIGHT,
-  },
-  pythonlab: {
-    backgroundMode: false,
-    node: <PythonlabView />,
-    theme: Theme.LIGHT,
-  },
-  panels: {
-    backgroundMode: false,
-    node: <PanelsView />,
-  },
-  weblab2: {
-    backgroundMode: false,
-    node: <Weblab2View />,
-    theme: Theme.LIGHT,
-  },
-};
+const ExtraLinksButtonContext = createContext<{
+  setShowExtraLinksButton: (show: boolean) => void;
+} | null>(null);
+
+/** Allows downstream components to show/hide the Extra Links button */
+export const useExtraLinksButtonContext = () =>
+  useRequiredContext(ExtraLinksButtonContext, 'ExtraLinksButtonContext');
 
 const LabViewsRenderer: React.FunctionComponent = () => {
-  const currentAppName = useSelector(
-    (state: {lab: LabState}) => state.lab.levelProperties?.appName
+  const levelProperties = useAppSelector(state => state.lab.levelProperties);
+  const initialSources = useAppSelector(state => state.lab.initialSources);
+  const channel = useAppSelector(state => state.lab.channel);
+
+  const currentAppName = levelProperties?.appName;
+  useEffect(() => {
+    // Set the level path and app name in the analytics reporter for Statsig events.
+    analyticsReporter.setProjectProperty('levelPath', window.location.pathname);
+    currentAppName &&
+      analyticsReporter.setProjectProperty('appName', currentAppName);
+  }, [currentAppName]);
+
+  const exemplarSources = levelProperties?.exemplarSources;
+
+  const isBlockedAbuse = useAppSelector(state => !!state.lab.isBlockedAbuse);
+  const projectSharingDisabled = useAppSelector(
+    state => !!state.lab.projectSharingDisabled
+  );
+  const hasPrivacyProfanityViolation = useAppSelector(
+    state => !!state.lab.shareFailure
+  );
+  const isTeacherOfProjectOwner = useAppSelector(
+    state => !!state.lab.isTeacherOfProjectOwner
+  );
+  const isOwner = useAppSelector(state => state.lab.channel?.isOwner || false);
+  const isProjectValidator = useAppSelector(state =>
+    state.lab.permissions?.includes(PERMISSIONS.PROJECT_VALIDATOR)
   );
 
-  const [appsToRender, setAppsToRender] = useState<AppName[]>([]);
+  const pageAction = getLabViewPageAction() || '';
 
-  // When navigating to a new app type, add it to the list of apps to render.
-  useEffect(() => {
-    if (currentAppName && !appsToRender.includes(currentAppName)) {
-      // Run the setup function for the Lab if it has one.
-      appsProperties[currentAppName]?.setupFunction?.();
-      setAppsToRender([...appsToRender, currentAppName]);
-    }
-  }, [currentAppName, appsToRender]);
+  const isViewingExemplar = getAppOptionsViewingExemplar();
 
-  // Set the theme for the current app.
-  const {setTheme} = useContext(ThemeContext);
-  useEffect(() => {
-    if (currentAppName) {
-      const theme = appsProperties[currentAppName]?.theme || DEFAULT_THEME;
-      setTheme(theme);
-    }
-  }, [currentAppName, setTheme]);
+  const [showExtraLinksButton, setShowExtraLinksButton] = useState(true);
 
-  // Iterate through appsToRender and render Lab views for each. If
-  // backgroundMode is true, the Lab view will always be rendered, but
-  // visibility will be toggled based on whether the app is active. If
-  // backgroundMode is false, the Lab view will only be rendered when the
-  // app is active.
-  return (
-    <>
-      {appsToRender.map(appName => {
-        const properties = appsProperties[appName];
-        if (!properties) {
-          console.warn("Don't know how to render app: " + appName);
-          return null;
-        }
+  useInitialLabTheme({
+    currentAppName,
+    levelProperties,
+  });
 
-        return (
-          <ProgressContainer key={appName} appType={appName}>
-            {properties.backgroundMode && (
-              <VisibilityContainer
-                appName={appName}
-                visible={currentAppName === appName}
-              >
-                {properties.node}
-              </VisibilityContainer>
-            )}
-
-            {!properties.backgroundMode && currentAppName === appName && (
-              <VisibilityContainer appName={appName} visible={true}>
-                {properties.node}
-              </VisibilityContainer>
-            )}
-          </ProgressContainer>
-        );
-      })}
-    </>
+  const blockLabView = getIsLabViewBlocked(
+    pageAction,
+    isBlockedAbuse,
+    projectSharingDisabled,
+    hasPrivacyProfanityViolation,
+    isOwner,
+    isTeacherOfProjectOwner,
+    isProjectValidator
   );
-};
 
-interface VisibilityContainerProps {
-  appName: AppName;
-  visible: boolean;
-  children: React.ReactNode;
-}
+  if (!currentAppName || blockLabView) {
+    return null;
+  }
+  // Show a fallback no exemplar page if we are trying to view
+  // exemplar but there is not exemplar for this level.
+  if (isViewingExemplar && !exemplarSources) {
+    return <NoExemplarPage />;
+  }
 
-const VisibilityContainer: React.FunctionComponent<
-  VisibilityContainerProps
-> = ({appName, visible, children}) => {
+  const properties = currentAppName && lab2EntryPoints[currentAppName];
+  if (!properties) {
+    console.warn("Don't know how to render app: " + currentAppName);
+    return null;
+  }
+
+  const LabView = properties.view;
+
   return (
-    <div
-      id={`lab2-${appName}`}
-      className={classNames(
-        moduleStyles.visibilityContainer,
-        visible && moduleStyles.visible
-      )}
-    >
-      {children}
-    </div>
+    <ProgressContainer key={currentAppName} appType={currentAppName}>
+      <ExtraLinksButtonContext.Provider value={{setShowExtraLinksButton}}>
+        <div
+          id={`lab2-${currentAppName}`}
+          className={moduleStyles.labContainer}
+        >
+          <Suspense fallback={<Loading isLoading={true} />}>
+            <LabView
+              levelProperties={levelProperties}
+              initialSources={initialSources}
+              channel={channel}
+            />
+          </Suspense>
+          {!queryHideExtraLinks && showExtraLinksButton && (
+            <ExtraLinks levelId={levelProperties.id} />
+          )}
+          <KeyboardShortcutsDialog appName={currentAppName} />
+        </div>
+      </ExtraLinksButtonContext.Provider>
+    </ProgressContainer>
   );
 };
 

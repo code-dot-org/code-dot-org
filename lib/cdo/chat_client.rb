@@ -2,7 +2,7 @@ require 'fileutils'
 require 'net/http'
 require 'net/http/responses'
 require 'uri'
-require 'cdo/circle_utils'
+require 'cdo/ci_utils'
 require 'cdo/slack'
 
 # This class is intended to be a thin wrapper around our chat client
@@ -19,6 +19,10 @@ class ChatClient
     end
   end
 
+  def self.bold_tags_to_terminal_escapes(input)
+    input.gsub(/<b>(.*?)<\/b>/, "\e[1m\\1\e[22m")
+  end
+
   # @param room [String] The room to post to which message should be posted.
   # @param message [String] The message to post. Can also be anything that
   #   responds to the method to_s.
@@ -26,11 +30,14 @@ class ChatClient
   #   color (optional): The color the message should be posted.
   # @return [Boolean] Whether the message was posted successfully.
   def self.message(room, message, options = {})
+    message = Slack.tag_user_group(message, options[:notify_group]) if options[:notify_group]
+
     unless @@logger
       FileUtils.mkdir_p(deploy_dir('log'))
       @@logger = Logger.new(deploy_dir('log', 'chat_messages.log'))
     end
     @@logger.info("[#{room}] #{message}")
+    puts bold_tags_to_terminal_escapes message
 
     unless CDO.hip_chat_logging
       return
@@ -42,10 +49,6 @@ class ChatClient
       username: @@name,
       color: options[:color]
     )
-  end
-
-  def self.snippet(message)
-    Slack.snippet(CDO.slack_log_room, message)
   end
 
   def self.wrap(name, backtrace: false)

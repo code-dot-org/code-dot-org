@@ -1,0 +1,517 @@
+import {MuiCustomDialog as CustomDialog} from '@code-dot-org/component-library/dialog';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import TextField from '@code-dot-org/component-library/textField';
+import {Button as MuiButton, IconButton as MuiIconButton} from '@mui/material';
+import classNames from 'classnames';
+import React, {useState} from 'react';
+
+import useThemeMode from '@cdo/apps/pixelEditor/useThemeMode';
+
+import {GeneratedImageResult} from '../ai/images/imageGeneration';
+import {
+  IMAGE_STYLE_LABELS,
+  ImageGenerationMetadata,
+  imageKindLabel,
+  ImageType,
+} from '../ai/images/types';
+import {AnimationPoses} from '../characterAnimations';
+import {
+  IMAGE_NAME_MAX_LENGTH,
+  nextImageName,
+  sanitizeImageName,
+} from '../imageReferences';
+
+import AnimatedSheetPreview from './AnimatedSheetPreview';
+import DeleteImageButton from './DeleteImageButton';
+import GenerateImageView, {ImageFormOptions} from './GenerateImageView';
+import ImagePaneButton from './ImagePaneButton';
+import SentenceDialogBody, {NewImageDraft} from './SentenceDialogBody';
+
+import moduleStyles from './image-details-dialog.module.scss';
+
+interface ImageDetailsDialogProps extends ImageFormOptions {
+  // null = the "new image" state: it opens straight into the generate view
+  // and nothing is created until a generation succeeds.
+  animKey: string | null;
+  name?: string;
+  thumb?: string;
+  /**
+   * Set for a character set: its sheet, shown playing. Sets are not
+   * painted (the editor would see one frame of many).
+   */
+  sheet?: {
+    src: string;
+    frameSize: {x: number; y: number};
+    poses: AnimationPoses;
+  };
+  generation?: ImageGenerationMetadata;
+  onClose: () => void;
+  /** Open the paint editor on this image. */
+  onPaint: () => void;
+  /** New image only: open the paint editor on a blank canvas. */
+  onPaintNew?: (draft: NewImageDraft) => void;
+  /** New image only: form values to reopen with after a cancelled paint. */
+  newImageDraft?: NewImageDraft;
+  /** Rename this image everywhere; error or null. */
+  onRename: (newName: string) => string | null;
+  onDelete: () => void;
+  /** The image's kind; locked while regenerating an existing image. */
+  imageType?: ImageType;
+  /** This session replaced the image it opened on (closing keeps that). */
+  imageChanged?: boolean;
+  /** Show the full internal dialog — the image's name (and renaming),
+      Start from, temperature. The default is the student version. */
+  advanced?: boolean;
+  /** The image is pixel art: previews upscale it with hard edges. */
+  pixelated?: boolean;
+  /** No paint entry points: the pane is a plain preview and new images
+      offer no blank canvas. */
+  paintDisabled?: boolean;
+  /** The level requires a rating (thumbs up or down) on every generated
+      picture. While a fresh picture is unrated, Keep is disabled and the
+      dialog cannot be closed. */
+  verdictRequired?: boolean;
+  /** Stored pixel size of the image (one frame of a sheet). */
+  resolution?: {x: number; y: number};
+  /** Pixel art's physical px per art pixel; sets the resolution row's
+      logical size (the 1px brush grid). */
+  pixelGridSize?: number;
+  /** Current pixels, for generation's "use previous image". */
+  getDataURI: () => Promise<string | null>;
+  /** Whether another image already uses this name. */
+  isNameTaken: (name: string) => boolean;
+  /** Persist an accepted generation (newName set when creating). */
+  onAcceptGenerated: (
+    result: GeneratedImageResult,
+    newName?: string
+  ) => Promise<void>;
+  /** This dialog session's recent generations; shown when there's a choice. */
+  alternatives?: AlternativeImage[];
+  /** Make this alternative the image. */
+  onSelectAlternative?: (id: string) => void;
+}
+
+/**
+ * The Resolution row's text. Pixel art leads with its logical size — the
+ * grid the 1px brush paints on, which is the resolution we treat the image
+ * as — with the stored size in parentheses; the parenthetical goes away if
+ * pixel art is ever stored at its logical size (which needs the engine to
+ * upscale with hard edges).
+ */
+export function resolutionLabel(
+  resolution: {x: number; y: number},
+  pixelGridSize?: number
+): string {
+  const stored = `${resolution.x} × ${resolution.y}`;
+  if (!pixelGridSize || pixelGridSize <= 1) {
+    return stored;
+  }
+  const logicalX = Math.round(resolution.x / pixelGridSize);
+  const logicalY = Math.round(resolution.y / pixelGridSize);
+  return `${logicalX} × ${logicalY} (${stored})`;
+}
+
+/** One choice in the Alternatives strip. */
+export interface AlternativeImage {
+  id: string;
+  thumb: string;
+  selected: boolean;
+}
+
+/**
+ * The image dialog. An existing image opens on the summary view: the image
+ * large on the left (click it to paint), how it was made on the right, and
+ * delete/regenerate in the footer; in the advanced dialog its name sits in
+ * the header with a pencil to rename. A new image opens straight into the
+ * generate view. Wears the pixel editor's chrome, following the page's
+ * light/dark theme.
+ */
+const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
+  animKey,
+  name,
+  thumb,
+  sheet,
+  generation,
+  onClose,
+  onPaint,
+  onPaintNew,
+  newImageDraft,
+  onRename,
+  onDelete,
+  imageType,
+  lockedImageType,
+  lockedImageSubject,
+  imageChanged,
+  advanced,
+  defaultStyle,
+  generationsLeft,
+  paintDisabled,
+  verdictRequired,
+  pixelated,
+  resolution,
+  pixelGridSize,
+  getDataURI,
+  isNameTaken,
+  onGenerateStart,
+  onAcceptGenerated,
+  alternatives,
+  onSelectAlternative,
+}) => {
+  const isNew = animKey === null;
+  const mode = useThemeMode();
+  const [view, setView] = useState<'details' | 'generate'>(
+    isNew ? 'generate' : 'details'
+  );
+  // SentenceScene reports when a generated picture still needs its rating.
+  // While one does, the dialog is given no onClose, which removes its close
+  // button and makes it ignore Escape.
+  const [awaitingVerdict, setAwaitingVerdict] = useState(false);
+  const closable = !verdictRequired || !awaitingVerdict;
+  // The student's generate view hosts the sentence scene; the advanced
+  // dialog keeps its full form. Both want room for the word menus.
+  const sentenceView = view === 'generate' && !advanced;
+  const [renaming, setRenaming] = useState(false);
+  const [nameDraft, setNameDraft] = useState('');
+  const [nameError, setNameError] = useState<string | null>(null);
+
+  // Flag a duplicate as it's typed and hold Save until it's unique (an
+  // image keeps its own name while renaming).
+  const draftName = nameDraft.trim();
+  const duplicateName =
+    !!draftName && draftName !== name && isNameTaken(draftName);
+  const draftUsable = !!draftName && !duplicateName;
+  const shownNameError = duplicateName
+    ? 'That name is already used.'
+    : nameError;
+
+  // Students see auto-generated names, so the title says only what the
+  // dialog is — keeping the new-image case distinct for screen readers.
+  const title = isNew ? 'New image' : advanced ? name || 'Image' : 'Image';
+
+  const commitRename = () => {
+    const trimmed = nameDraft.trim();
+    if (!trimmed || trimmed === name) {
+      setRenaming(false);
+      setNameError(null);
+      return;
+    }
+    const error = onRename(trimmed);
+    setNameError(error);
+    if (!error) {
+      setRenaming(false);
+    }
+  };
+
+  const cancelRename = () => {
+    setRenaming(false);
+    setNameError(null);
+  };
+
+  const panelBody = (
+    <>
+      <span id="dsco-dialog-description" className={moduleStyles.srOnly}>
+        {view === 'generate'
+          ? 'Describe the image and generate it with AI.'
+          : advanced
+          ? 'View, edit, rename, or delete this image.'
+          : 'View, edit, or delete this image.'}
+      </span>
+      <div className={moduleStyles.header}>
+        {renaming ? (
+          <>
+            <TextField
+              name="imageName"
+              aria-label="Image name"
+              className={moduleStyles.headerNameField}
+              value={nameDraft}
+              aria-invalid={!!shownNameError || undefined}
+              aria-describedby={
+                shownNameError ? 'rename-image-error' : undefined
+              }
+              maxLength={IMAGE_NAME_MAX_LENGTH}
+              onChange={e => {
+                setNameDraft(sanitizeImageName(e.target.value));
+                setNameError(null);
+              }}
+              onKeyDown={e => {
+                if (e.key === 'Enter' && draftUsable) {
+                  commitRename();
+                } else if (e.key === 'Escape') {
+                  // Stop it here or the whole dialog closes.
+                  e.stopPropagation();
+                  cancelRename();
+                }
+              }}
+            />
+            <MuiIconButton
+              variant="text"
+              color="tertiary"
+              size="small"
+              aria-label="Save name"
+              disabled={!draftUsable}
+              onClick={commitRename}
+            >
+              <FontAwesomeV6Icon iconName="check" />
+            </MuiIconButton>
+            <MuiIconButton
+              variant="text"
+              color="tertiary"
+              size="small"
+              aria-label="Cancel rename"
+              onClick={cancelRename}
+            >
+              <FontAwesomeV6Icon iconName="xmark" />
+            </MuiIconButton>
+            {/* Beside the field: below it would change the header's height
+                  for the moment it shows. */}
+            {shownNameError && (
+              <span
+                id="rename-image-error"
+                role="status"
+                className={moduleStyles.inlineFieldError}
+              >
+                {shownNameError}
+              </span>
+            )}
+          </>
+        ) : (
+          <>
+            {/* Tabbable so the focus trap lands on the title first (the
+                  pixel editor's pattern). */}
+            {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex */}
+            <span className={moduleStyles.headerTitle} tabIndex={0}>
+              {title}
+            </span>
+            {advanced && !isNew && view === 'details' && (
+              <MuiIconButton
+                variant="text"
+                color="tertiary"
+                size="small"
+                aria-label="Rename"
+                onClick={() => {
+                  setNameDraft(name || '');
+                  setNameError(null);
+                  setRenaming(true);
+                }}
+              >
+                <FontAwesomeV6Icon iconName="pencil" />
+              </MuiIconButton>
+            )}
+          </>
+        )}
+      </div>
+      {sentenceView ? (
+        // The student form: the sentence scene's sentence and picture. A
+        // new image's name is the next free one for its type.
+        <SentenceDialogBody
+          imageType={
+            isNew
+              ? newImageDraft?.imageType ?? lockedImageType ?? 'sprite'
+              : imageType || 'sprite'
+          }
+          imageSubject={
+            isNew
+              ? newImageDraft?.subject ?? lockedImageSubject
+              : generation?.subject
+          }
+          typeChoice={isNew && !lockedImageType}
+          generationsLeft={generationsLeft}
+          onKeep={async result => {
+            await onAcceptGenerated(
+              result,
+              isNew
+                ? nextImageName(result.generation.imageType, isNameTaken)
+                : undefined
+            );
+            setView('details');
+          }}
+          onCancel={onClose}
+          verdictRequired={verdictRequired}
+          onAwaitingVerdict={setAwaitingVerdict}
+          onPaintManually={
+            isNew && !paintDisabled && onPaintNew
+              ? draft =>
+                  onPaintNew({
+                    ...draft,
+                    name: nextImageName(draft.imageType, isNameTaken),
+                  })
+              : undefined
+          }
+          onGenerateStart={onGenerateStart}
+        />
+      ) : view === 'generate' ? (
+        <GenerateImageView
+          existing={
+            isNew
+              ? undefined
+              : {
+                  generation,
+                  imageType: imageType || 'sprite',
+                  getDataURI,
+                }
+          }
+          thumb={isNew ? undefined : thumb}
+          sheet={isNew ? undefined : sheet}
+          thumbPixelated={pixelated}
+          create={isNew ? {isNameTaken, initial: newImageDraft} : undefined}
+          lockedImageType={lockedImageType}
+          lockedImageSubject={lockedImageSubject}
+          advanced={advanced}
+          defaultStyle={defaultStyle}
+          onPaintManually={isNew && !paintDisabled ? onPaintNew : undefined}
+          onGenerateStart={onGenerateStart}
+          onAccept={async (result, newName) => {
+            await onAcceptGenerated(result, newName);
+            setView('details');
+          }}
+          // A brand-new image has no summary to fall back to.
+          onCancel={isNew ? onClose : () => setView('details')}
+          onDelete={isNew ? undefined : onDelete}
+        />
+      ) : (
+        <>
+          <div className={moduleStyles.body}>
+            {/* A set is not painted (the editor would see one frame of
+                  many), and a paint-disabled level has nowhere to paint, so
+                  both show a plain pane instead of the paint button. */}
+            {sheet || paintDisabled ? (
+              <div
+                className={classNames(
+                  moduleStyles.imagePane,
+                  moduleStyles.imagePaneChecker
+                )}
+              >
+                {sheet ? (
+                  <AnimatedSheetPreview {...sheet} />
+                ) : (
+                  thumb && (
+                    <img
+                      src={thumb}
+                      alt=""
+                      className={classNames(pixelated && moduleStyles.pixelArt)}
+                    />
+                  )
+                )}
+              </div>
+            ) : (
+              <ImagePaneButton
+                thumb={thumb}
+                pixelated={pixelated}
+                iconName="pen"
+                label="Edit with paint tools"
+                onClick={onPaint}
+              />
+            )}
+            <div className={moduleStyles.detailsPane}>
+              {(generation || resolution) && (
+                <dl className={moduleStyles.metadata}>
+                  {generation && (
+                    <>
+                      <dt>Prompt</dt>
+                      {/* Italic: the one field here the user wrote
+                          themselves. */}
+                      <dd className={moduleStyles.promptValue}>
+                        {generation.prompt}
+                      </dd>
+                      <dt>Type</dt>
+                      <dd>
+                        {sheet
+                          ? 'Character (animated)'
+                          : imageKindLabel(
+                              generation.imageType,
+                              generation.subject
+                            )}
+                      </dd>
+                      <dt>Style</dt>
+                      <dd>{IMAGE_STYLE_LABELS[generation.style]}</dd>
+                    </>
+                  )}
+                  {resolution && (
+                    <>
+                      <dt>Resolution</dt>
+                      <dd>{resolutionLabel(resolution, pixelGridSize)}</dd>
+                    </>
+                  )}
+                  {advanced && generation?.temperature !== undefined && (
+                    <>
+                      <dt>Temperature</dt>
+                      <dd>{generation.temperature}</dd>
+                    </>
+                  )}
+                </dl>
+              )}
+              {alternatives && alternatives.length > 1 && (
+                <div className={moduleStyles.alternatives}>
+                  <div className={moduleStyles.alternativesLabel}>
+                    Alternatives
+                  </div>
+                  <div className={moduleStyles.alternativesRow}>
+                    {alternatives.map(alt => (
+                      <button
+                        key={alt.id}
+                        type="button"
+                        className={classNames(
+                          moduleStyles.alternativeThumb,
+                          alt.selected && moduleStyles.alternativeSelected
+                        )}
+                        aria-label="Use this image"
+                        aria-pressed={alt.selected}
+                        onClick={() => onSelectAlternative?.(alt.id)}
+                      >
+                        <img src={alt.thumb} alt="" />
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+          <div className={moduleStyles.footer}>
+            <div className={moduleStyles.footerLeft}>
+              <DeleteImageButton onDelete={onDelete} />
+            </div>
+            {/* Students make a new image rather than replacing one in
+                  place; the regenerate path stays for the advanced dialog. */}
+            {advanced && (
+              <MuiButton
+                variant="outlined"
+                color="secondary"
+                size="small"
+                startIcon={<FontAwesomeV6Icon iconName="sparkles" />}
+                onClick={() => setView('generate')}
+              >
+                Generate with AI
+              </MuiButton>
+            )}
+            <MuiButton
+              variant="contained"
+              color="primary"
+              size="small"
+              onClick={onClose}
+            >
+              {imageChanged ? 'Accept' : 'Done'}
+            </MuiButton>
+          </div>
+        </>
+      )}
+    </>
+  );
+
+  return (
+    <div className={moduleStyles.dialogHost}>
+      <CustomDialog
+        aria-label={title}
+        onClose={closable ? onClose : undefined}
+        mode={mode}
+        className={classNames(
+          moduleStyles.dialog,
+          view === 'generate' && moduleStyles.dialogWide
+        )}
+      >
+        {panelBody}
+      </CustomDialog>
+    </div>
+  );
+};
+
+export default ImageDetailsDialog;

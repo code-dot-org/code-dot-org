@@ -1,23 +1,26 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import {MuiCustomDialog as CustomDialog} from '@code-dot-org/component-library/dialog';
+import {Button as MuiButton, Typography} from '@mui/material';
+import {visuallyHidden} from '@mui/utils';
 import _ from 'lodash';
-import Dialog, {Body} from '@cdo/apps/templates/Dialog';
+import PropTypes from 'prop-types';
+import React from 'react';
 import {connect} from 'react-redux';
-import {hideLibraryCreationDialog} from '../shareDialogRedux';
-import i18n from '@cdo/locale';
+
+import {getStore} from '@cdo/apps/redux';
+import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 import PadAndCenter from '@cdo/apps/templates/teacherDashboard/PadAndCenter';
-import {Heading1, Heading2} from '@cdo/apps/lib/ui/Headings';
-import Spinner from '../../pd/components/spinner';
+import copyToClipboard from '@cdo/apps/util/copyToClipboard';
+import {findProfanity} from '@cdo/apps/utils';
+import i18n from '@cdo/locale';
+
+import Spinner from '../../../sharedComponents/Spinner';
+import {hideLibraryCreationDialog} from '../shareDialogRedux';
+
+import LibraryClientApi from './LibraryClientApi';
+import loadLibrary from './libraryLoader';
+import LibraryPublisher from './LibraryPublisher';
 import PublishSuccessDisplay from './PublishSuccessDisplay';
 import ShareTeacherLibraries from './ShareTeacherLibraries';
-import LibraryPublisher from './LibraryPublisher';
-import loadLibrary from './libraryLoader';
-import LibraryClientApi from './LibraryClientApi';
-import {getStore} from '@cdo/apps/redux';
-import {findProfanity} from '@cdo/apps/utils';
-import Button from '@cdo/apps/templates/Button';
-import copyToClipboard from '@cdo/apps/util/copyToClipboard';
-import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 
 const DEFAULT_COPY_BUTTON_TEXT = i18n.copyId();
 
@@ -86,7 +89,8 @@ class LibraryCreationDialog extends React.Component {
     };
 
     try {
-      const profaneWords = await findProfanity(libraryDetails.librarySource);
+      const userCode = libraryDetails.librarySource;
+      const profaneWords = await findProfanity(userCode, undefined, null, true);
       if (profaneWords && profaneWords.length > 0) {
         this.setState({
           dialogState: DialogState.CODE_PROFANITY,
@@ -127,20 +131,23 @@ class LibraryCreationDialog extends React.Component {
     );
 
     return (
-      <div style={styles.info}>
+      <Typography variant="body4" component="div">
         {libraryDetails && libraryDetails.alreadyPublished && (
           <div style={styles.idInfo}>
             <InlineMarkdown markdown={i18n.libraryExportId({channelId})} />
-            <Button
-              text={this.state.copyButtonText}
-              color={Button.ButtonColor.blue}
-              style={styles.copyBtn}
+            <MuiButton
+              variant="outlined"
+              color="secondary"
+              size="small"
               onClick={onClickCopy}
-            />
+              sx={{marginLeft: '16px'}}
+            >
+              {this.state.copyButtonText}
+            </MuiButton>
           </div>
         )}
         {i18n.libraryExportSubtitle()}
-      </div>
+      </Typography>
     );
   };
 
@@ -218,23 +225,35 @@ class LibraryCreationDialog extends React.Component {
       dialogState === DialogState.SHARE_TEACHER_LIBRARIES
         ? i18n.manageYourLibraries()
         : i18n.libraryExportTitle();
+
+    if (!dialogIsOpen) {
+      return null;
+    }
+
     return (
-      <Dialog
-        isOpen={dialogIsOpen}
-        handleClose={this.handleClose}
-        useUpdatedStyles
-        style={{width: 800}}
+      <CustomDialog
+        style={styles.dialog}
+        onClose={this.handleClose}
+        closeLabel={i18n.closeDialog()}
+        aria-labelledby="library-creation-dialog-title"
       >
-        <Body>
-          <PadAndCenter>
-            <div style={styles.libraryBoundary}>
-              <Heading1>{title}</Heading1>
-              {subtitleContent}
-              {bodyContent}
-            </div>
-          </PadAndCenter>
-        </Body>
-      </Dialog>
+        <PadAndCenter>
+          <div style={styles.libraryBoundary}>
+            <Typography
+              variant="h3"
+              gutterBottom
+              id="library-creation-dialog-title"
+            >
+              {title}
+            </Typography>
+            <span id="dsco-dialog-description" style={visuallyHidden}>
+              Publish or manage a library from this project.
+            </span>
+            {subtitleContent}
+            {bodyContent}
+          </div>
+        </PadAndCenter>
+      </CustomDialog>
     );
   }
 }
@@ -244,7 +263,15 @@ export class ErrorDisplay extends React.Component {
 
   render() {
     const {message} = this.props;
-    return <div>{message}</div>;
+    return (
+      <Typography
+        variant="body2"
+        component="div"
+        sx={{color: 'var(--text-error-primary)'}}
+      >
+        {message}
+      </Typography>
+    );
   }
 }
 
@@ -262,16 +289,26 @@ export class UnpublishSuccessDisplay extends React.Component {
   render() {
     return (
       <div>
-        <Heading2>
-          <b>{i18n.libraryUnPublishTitle()}</b>
-        </Heading2>
-        <p>{i18n.libraryUnPublishExplanation()}</p>
+        <Typography variant="h4" gutterBottom>
+          {i18n.libraryUnPublishTitle()}
+        </Typography>
+        <Typography variant="body2">
+          {i18n.libraryUnPublishExplanation()}
+        </Typography>
       </div>
     );
   }
 }
 
 const styles = {
+  dialog: {
+    width: 800,
+    padding: '20px 24px',
+    maxHeight: '85vh',
+    overflowY: 'auto',
+    cursor: 'default',
+    colorScheme: 'light',
+  },
   libraryBoundary: {
     padding: 10,
     width: '90%',
@@ -280,19 +317,8 @@ const styles = {
     display: 'flex',
     justifyContent: 'center',
   },
-  info: {
-    fontSize: 12,
-    fontStyle: 'italic',
-    lineHeight: 1.2,
-  },
   idInfo: {
     marginBottom: 10,
-  },
-  copyBtn: {
-    margin: '0 15px',
-    ':hover': {
-      cursor: 'copy',
-    },
   },
 };
 

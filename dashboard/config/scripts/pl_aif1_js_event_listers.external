@@ -1,0 +1,33 @@
+name 'pl-aif1-js-event-listers'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<h1>Event Listeners and Event Handlers</h1>
+
+<p>A front-end developer uses JavaScript to make a button respond to a click. If that developer were prompting AI to build a "Like" button instead of hand-writing the code, they'd still need to tell AI the same two things: what to watch for, and what to do when it happens. Those two jobs have names.</p>
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px;">
+<p>📖 <b>Event Listener</b> is a JavaScript feature that attaches to a web page element and waits for a specific event to happen. It detects when the event occurs and calls an event handler.</p>
+</div>
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin-top: 12px;">
+<p>📖 <b>Event Handler</b> is a block of code that runs in response to an event on a web page element. It's called by the event listener.</p>
+</div><br>
+
+<h2>How to Handle an Event</h2>
+
+<p>Put together, the pattern is always the same: something happens, something is listening for it, and something runs because of it.</p>
+
+<div style="text-align: center; margin: 20px 0;">
+<img src="https://images.code.org/1fe15ba5bcb1cd430fb77b386c8ca334-image-1786373585267.png" alt="A three-step diagram. Interact: a hand selects an element, shown as clicking a button. Listen: the page listens for that event to happen, shown as an ear with a sound wave. Respond: the page responds, shown as a screen where text or an image changes." style="max-width: 700px; width: 100%; border-radius: 10px;">
+</div>
+
+<div style="background-color: #E4E2F8; color: #222222; border-radius: 10px; padding: 16px 20px; margin: 20px 0;">
+<p><strong>💡 Teacher tip:</strong> a great way to make this concrete for students is having them act it out in groups of four, one person is the Element, one is the User, one is the Listener, and one is the Handler. The User acts, the Listener says "Event detected" and "Run," and only then does the Handler perform the action. The physical rule, the Handler can't act until the Listener calls it, tends to stick with students far better than the definition alone.</p>
+</div>
+
+<p>Next, you'll see what an event listener and handler actually look like written in JavaScript.</p>
+
+
+MARKDOWN

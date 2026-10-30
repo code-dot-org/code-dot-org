@@ -1,0 +1,10 @@
+name 'CSD U2L14-L1-2025'
+display_name 'Chapter 1 Project - Option 1 Choices'
+description 'Demonstrate your skills with one of these users.'
+
+sublevels
+level 'CSD U2L14-L1a-2025'
+level 'CSD U2L14-L1b-2025'
+level 'CSD U2L14-L1c-2025'
+
+uses_lab2

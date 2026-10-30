@@ -1,11 +1,12 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
-import {mount} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
-import i18n from '@cdo/locale';
 import {combineReducers, createStore} from 'redux';
+
 import reducer from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import SharingControlActionsHeaderCell from '@cdo/apps/templates/manageStudents/SharingControlActionsHeaderCell';
+import i18n from '@cdo/locale';
+
 import {allowConsoleWarnings} from '../../../util/throwOnConsole';
 
 describe('SharingControlActionsHeaderCell', () => {

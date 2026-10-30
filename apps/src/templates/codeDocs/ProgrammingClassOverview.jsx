@@ -1,11 +1,13 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
+
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
+import i18n from '@cdo/locale';
+
 import Example from './Example';
 import FieldsTable from './FieldsTable';
-import MethodWithOverloads from './MethodWithOverloads';
-import i18n from '@cdo/locale';
 import MethodSummaryTable from './MethodSummaryTable';
+import MethodWithOverloads from './MethodWithOverloads';
 
 export default function ProgrammingClassOverview({
   programmingClass,

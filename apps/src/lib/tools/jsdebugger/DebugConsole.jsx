@@ -6,7 +6,9 @@
  */
 import PropTypes from 'prop-types';
 import React from 'react';
+import {Inspector, chromeLight} from 'react-inspector';
 import {connect} from 'react-redux';
+
 import i18n from '@cdo/locale';
 
 import {KeyCodes} from '../../../constants';
@@ -14,10 +16,9 @@ import {
   add as addWatchExpression,
   remove as removeWatchExpression,
 } from '../../../redux/watchedExpressions';
+
 import CommandHistory from './CommandHistory';
 import {actions, selectors} from './redux';
-import color from '../../../util/color';
-import {Inspector, chromeLight} from 'react-inspector';
 
 const DEBUG_INPUT_HEIGHT = 16;
 const DEBUG_CONSOLE_LEFT_PADDING = 3;
@@ -40,10 +41,10 @@ const style = {
     flexGrow: 1,
   },
   debugOutputBackgroundError: {
-    backgroundColor: color.lightest_red,
+    backgroundColor: 'var(--background-error-extra-light)',
   },
   debugOutputBackgroundWarning: {
-    backgroundColor: color.lightest_yellow,
+    backgroundColor: 'var(--background-warning-extra-light)',
   },
   debugInputWrapper: {
     flexGrow: 0,
@@ -54,7 +55,7 @@ const style = {
     flexGrow: 0,
     flexShrink: 0,
     display: 'flex',
-    backgroundColor: '#eee',
+    backgroundColor: 'var(--background-neutral-disabled)',
   },
   debugInputPrompt: {
     height: DEBUG_INPUT_HEIGHT,

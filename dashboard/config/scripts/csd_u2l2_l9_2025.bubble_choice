@@ -1,0 +1,9 @@
+name 'CSD U2L2-L9-2025'
+display_name 'Challenge Levels'
+description 'Try out what you\'ve learned on one or more of the following activities.'
+uses_lab2
+sublevels
+level 'CSD U2L2-L9a-2025'
+level 'CSD U2L2-L9b-2025'
+level 'CSD U2L2-L9c-2025'
+level 'CSD U2L2-L9d-2025'

@@ -2,9 +2,9 @@ module.exports = {
   rules: {
     'style-blocks-below-class': {
       meta: {
-        fixable: 'code'
+        fixable: 'code',
       },
-      create: function(context) {
+      create: function (context) {
         function isStyleBlock(item) {
           return (
             item.type === 'VariableDeclaration' &&
@@ -43,11 +43,10 @@ module.exports = {
               context.report({
                 node: styleBlock,
                 message: 'Style block should be declared after class',
-                fix: function(fixer) {
+                fix: function (fixer) {
                   const sourceCode = context.getSourceCode();
-                  const styleComments = sourceCode.getCommentsBefore(
-                    styleBlock
-                  );
+                  const styleComments =
+                    sourceCode.getCommentsBefore(styleBlock);
 
                   // if there are style comments, don't automatically re-arrange block
                   if (styleComments.length) {
@@ -62,14 +61,14 @@ module.exports = {
                     fixer.insertTextAfter(
                       lastClassDeclaration,
                       '\n\n' + styleBlockText
-                    )
+                    ),
                   ];
-                }
+                },
               });
             }
-          }
+          },
         };
-      }
-    }
-  }
+      },
+    },
+  },
 };

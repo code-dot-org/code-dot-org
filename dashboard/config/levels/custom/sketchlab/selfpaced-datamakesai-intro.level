@@ -1,0 +1,15 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "game_id": 75,
+  "created_at": "2026-09-15T20:59:35.000Z",
+  "level_num": "custom",
+  "user_id": 10559,
+  "properties": {
+    "require_edit_to_continue": true,
+    "long_instructions": "TODOs:\r\n* Draw a basic geometric shape.\r\n* Label its key features.\r\n* Add an arrow to indicate a specific property or direction.\r\n* Draw a second shape that interacts with the first.\r\n* Annotate the drawing with a short descriptive sentence.\r\n* Use two different colors to distinguish between parts of your drawing.",
+    "generate_outline": "test"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-15 20:59:39 +0000\",\"changed\":[],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2026-09-15 21:00:09 +0000\",\"changed\":[],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2026-09-15 21:04:08 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
+}]]></config>
+</Sketchlab>

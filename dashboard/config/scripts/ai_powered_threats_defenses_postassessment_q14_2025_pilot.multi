@@ -1,0 +1,14 @@
+name 'ai-powered-threats-defenses-postassessment-q14_2025-pilot'
+
+question ‘Which of the following is the best example of a security feature with high security but low usability?’
+
+wrong ‘A device that unlocks with a 6-digit PIN shared among students’
+right ‘A system that requires facial recognition and a unique passcode to log in’
+wrong ‘A site that automatically logs in users who visited it recently’
+wrong ‘A password strength meter that turns green after any long password is entered’
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 11: Security vs Usability
+MARKDOWN

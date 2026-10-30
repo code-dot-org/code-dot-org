@@ -1,10 +1,14 @@
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import RollupUnitEntry from './RollupUnitEntry';
-import i18n from '@cdo/locale';
+
 import {linkWithQueryParams} from '@cdo/apps/utils';
-import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
+
 import {unitShape} from './rollupShapes';
+import RollupUnitEntry from './RollupUnitEntry';
+
+import style from './courseRollup.module.scss';
 
 export default class UnitRollup extends Component {
   static propTypes = {
@@ -34,14 +38,20 @@ export default class UnitRollup extends Component {
 
   render() {
     return (
-      <div>
+      <div className={style.rollupPage}>
         <a
           href={linkWithQueryParams(this.props.unit.link)}
-          style={styles.navLink}
+          className={style.navLink}
         >
           {`< ${this.props.unit.title}`}
         </a>
-        <h1>{this.getPageTitle()}</h1>
+        <Typography
+          variant="inherit"
+          component="h1"
+          className={style.pageTitle}
+        >
+          {this.getPageTitle()}
+        </Typography>
         <RollupUnitEntry
           objectToRollUp={this.props.objectToRollUp}
           unit={this.props.unit}
@@ -50,12 +60,3 @@ export default class UnitRollup extends Component {
     );
   }
 }
-
-const styles = {
-  navLink: {
-    fontSize: 14,
-    lineHeight: '22px',
-    color: color.purple,
-    margin: '10px 0px',
-  },
-};

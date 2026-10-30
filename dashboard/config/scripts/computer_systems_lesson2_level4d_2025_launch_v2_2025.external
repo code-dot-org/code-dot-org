@@ -1,0 +1,27 @@
+name 'computer-systems-lesson2-level4d_2025-launch_v2-2025'
+title 'Graphic Designer'
+description 'Graphic designers increase the allocated RAM for large design programs.'
+display_name 'Graphic Designer'
+thumbnail_url 'https://images.code.org/3cf031b7192ce53ce077a52bcb345b84-Icon%20Template%20(8).png'
+bubble_choice_description 'Graphic designers increase the allocated RAM for large design programs.'
+
+markdown <<MARKDOWN
+## Graphic Designer
+
+Graphic designers increase the allocated RAM for large design programs.
+
+As you watch, be prepared to reflect on the following in the next level:
+
+* How does the hardware used in this career impact the professional's ability to work efficiently, and what would happen if they had weaker or outdated components?
+
+
+**Note:** This video opens in a new tab.
+
+<div style="text-align: center; margin-top: 20px;">
+  <a href="https://docs.google.com/presentation/d/1sMRC23R1GQJFwtyIP11jf32l8hCxvEe7Ah2pZ7xuX7k/edit?slide=id.g34c29487735_0_11#slide=id.g34c29487735_0_11" target="_blank" rel="noopener noreferrer">
+    <img src="https://images.code.org/173931dede72097bb6c2dcadc58f2126-graphicdesign.jpg" 
+         alt="YouTube Video Thumbnail" 
+         style="width: 80%; max-width: 600px; border-radius: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);">
+  </a>
+</div>
+MARKDOWN

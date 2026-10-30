@@ -47,6 +47,13 @@ module ApplicationHelper
     end
   end
 
+  # The format analytics uses, "YYYY-YY+1" (e.g. "2022-23"). The boundary itself
+  # lives in Policies::SchoolYear.
+  def school_year
+    year = Policies::SchoolYear.starting_year
+    "#{year}-#{year.to_s[-2..].to_i + 1}"
+  end
+
   def activity_css_class(user_level)
     best_activity_css_class([user_level])
   end
@@ -80,17 +87,29 @@ module ApplicationHelper
     ret = ''
     if notice.present?
       ret += content_tag(:div, flash.notice, {class: 'alert alert-success'})
-      flash.notice = nil
+      if session[:keep_flashes]
+        session[:keep_flashes] = false
+      else
+        flash.notice = nil
+      end
     end
 
     if flash[:info].present?
       ret += content_tag(:div, flash[:info], {class: 'alert alert-info'})
-      flash[:info] = nil
+      if session[:keep_flashes]
+        session[:keep_flashes] = false
+      else
+        flash[:info] = nil
+      end
     end
 
     if alert.present?
       ret += content_tag(:div, flash.alert, {class: 'alert alert-danger'})
-      flash.alert = nil
+      if session[:keep_flashes]
+        session[:keep_flashes] = false
+      else
+        flash.alert = nil
+      end
     end
 
     ret
@@ -98,19 +117,6 @@ module ApplicationHelper
 
   def code_org_root_path
     CDO.code_org_url
-  end
-
-  def home_url
-    '/home'
-  end
-
-  def teacher_dashboard_section_progress_url(section)
-    "/teacher_dashboard/sections/#{section.id}/progress"
-  end
-
-  # used by sign-up to retrieve the user return_to URL from the session and delete it.
-  def get_and_clear_session_user_return_to
-    return session.delete(:user_return_to) if session[:user_return_to]
   end
 
   # used by devise to redirect user after signing in
@@ -125,8 +131,6 @@ module ApplicationHelper
     case provider.to_sym
     when :facebook
       'https://www.facebook.com/logout.php'
-    when :windowslive
-      'http://login.live.com/logout.srf'
     when :google_oauth2
       'https://accounts.google.com/logout'
     end
@@ -155,7 +159,7 @@ module ApplicationHelper
           level_source.level_source_image.s3_url
         end
       end
-    elsif [Game::FLAPPY, Game::STUDIO, Game::CRAFT, Game::APPLAB, Game::GAMELAB, Game::WEBLAB, Game::DANCE, Game::SPRITELAB].include? app
+    elsif [Game::FLAPPY, Game::STUDIO, Game::CRAFT, Game::APPLAB, Game::GAMELAB, Game::WEBLAB, Game::DANCE, Game::SPRITELAB, Game::MUSIC].include? app
       asset_url "#{app}_sharing_drawing.png"
     elsif app == Game::BOUNCE
       if ["basketball", "sports"].include? skin
@@ -163,6 +167,9 @@ module ApplicationHelper
       else
         asset_url "bounce_sharing_drawing.png"
       end
+    elsif opts[:level].is_a?(BubbleChoice)
+      project_type = opts[:level].try(:project_type)
+      asset_url "#{project_type}_sharing_drawing.png"
     else
       asset_url 'sharing_drawing.png'
     end
@@ -201,6 +208,10 @@ module ApplicationHelper
   # wrap the code in question in this function.
   def brakeman_no_warn(obj)
     obj
+  end
+
+  def render_shared_haml(name, locals = {})
+    render inline: File.read(CDO.dir("shared/haml/#{name}.haml")), type: :haml, locals: locals # rubocop:disable Rails/RenderInline
   end
 
   private def share_failure_message(failure_type)

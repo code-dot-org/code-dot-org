@@ -10,6 +10,16 @@
     "vpl-csd-ci-6b",
     "vpl-csd-ci-7"
   ],
+  "original_script_names": [
+    "vpl-csd-ci-1",
+    "vpl-csd-ci-2",
+    "vpl-csd-ci-3",
+    "vpl-csd-ci-4",
+    "vpl-csd-ci-5",
+    "vpl-csd-ci-6",
+    "vpl-csd-ci-7",
+    "vpl-csd-ci-6b"
+  ],
   "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "teacher",

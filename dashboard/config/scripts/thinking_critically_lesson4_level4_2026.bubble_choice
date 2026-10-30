@@ -1,0 +1,12 @@
+name 'thinking_critically_lesson4_level4_2026'
+display_name 'AI-Assisted Creation'
+description 'Test AI to see what does and doesn\'t work well for your purposes.'
+
+sublevels
+level 'thinking_critically_lesson4_level4a_2026'
+level 'thinking_critically_lesson4_level4b_2026'
+level 'thinking_critically_lesson4_level4c_2026'
+level 'thinking_critically_lesson4_level4e_2026'
+level 'thinking_critically_lesson4_level4d_2026'
+
+uses_lab2

@@ -1,12 +1,14 @@
-import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
-import React from 'react';
 import memoize from 'memoize-one';
-import * as shapes from '../shapes';
+import PropTypes from 'prop-types';
+import React from 'react';
+import {connect} from 'react-redux';
+
 import {KeyCodes} from '@cdo/apps/constants';
 import {selectors} from '@cdo/apps/lib/tools/jsdebugger/redux';
-import {PromptType} from '../redux/spritelabInput';
+
 import {animationSourceUrl} from '../redux/animationList';
+import {PromptType} from '../redux/spritelabInput';
+import * as shapes from '../shapes';
 
 class SpritelabInput extends React.Component {
   static propTypes = {
@@ -107,7 +109,7 @@ class SpritelabInput extends React.Component {
               onClick={this.onTextSubmit}
               disabled={disabled}
             >
-              <i className="fa fa-check" />
+              <i className="fa-solid fa-check" />
             </button>
           </div>
         );
@@ -162,7 +164,7 @@ class SpritelabInput extends React.Component {
         <div style={styles.prompt}>
           {numPrompts > 1 && (
             <span style={styles.circle} className="fa-stack">
-              <i className="fa fa-circle fa-stack-2x" />
+              <i className="fa-solid fa-circle fa-stack-2x" />
               <strong className="fa-stack-1x" style={styles.number}>
                 {numPrompts}
               </strong>
@@ -183,14 +185,14 @@ class SpritelabInput extends React.Component {
 
 const styles = {
   container: {
-    background: 'rgba(34, 42, 51, 0.85)',
+    background: 'var(--neutral-black-alpha-80)',
     textAlign: 'center',
     position: 'absolute',
     bottom: 0,
     width: '100%',
   },
   prompt: {
-    color: 'white',
+    color: 'var(--text-neutral-white-fixed)',
     fontSize: 15,
   },
   promptText: {
@@ -203,7 +205,7 @@ const styles = {
     whiteSpace: 'nowrap',
   },
   icon: {
-    color: 'white',
+    color: 'var(--text-neutral-white-fixed)',
   },
   inputRow: {
     padding: 0,
@@ -226,7 +228,7 @@ const styles = {
     fontSize: 11,
   },
   number: {
-    color: 'rgb(34, 42, 51)',
+    color: 'var(--text-neutral-primary)',
     fontSize: 9,
   },
   choiceButton: {

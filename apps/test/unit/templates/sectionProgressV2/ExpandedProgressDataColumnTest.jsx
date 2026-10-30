@@ -1,15 +1,6 @@
-import React from 'react';
 import {fireEvent, render, screen} from '@testing-library/react';
-import {expect} from '../../../util/reconfiguredChai';
-
-import ExpandedProgressDataColumn from '@cdo/apps/templates/sectionProgressV2/ExpandedProgressDataColumn.jsx';
-
+import React from 'react';
 import {Provider} from 'react-redux';
-import sectionProgress, {
-  addDataByUnit,
-} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-import unitSelection, {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
-import {PROGRESS_ICON_TITLE_PREFIX} from '@cdo/apps/templates/sectionProgressV2/ProgressIcon';
 
 import {
   getStore,
@@ -17,12 +8,21 @@ import {
   restoreRedux,
   stubRedux,
 } from '@cdo/apps/redux';
-
+import unitSelection, {setUnit} from '@cdo/apps/redux/unitSelectionRedux';
 import {
   fakeLessonWithLevels,
   fakeStudentLevelProgress,
   fakeLevelWithSubLevels,
 } from '@cdo/apps/templates/progress/progressTestHelpers';
+import ExpandedProgressDataColumn from '@cdo/apps/templates/sectionProgressV2/ExpandedProgressDataColumn.jsx';
+import {ITEM_TYPE} from '@cdo/apps/templates/sectionProgressV2/ItemType';
+import sectionProgress, {
+  addDataByUnit,
+} from '@cdo/apps/templates/sectionProgressV2/sectionProgressRedux';
+import teacherSections, {
+  selectSection,
+  setSections,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 const STUDENT_1 = {id: 1, name: 'Student 1', familyName: 'FamNameB'};
 const STUDENT_2 = {id: 2, name: 'Student 2', familyName: 'FamNameA'};
@@ -30,6 +30,25 @@ const STUDENTS = [STUDENT_1, STUDENT_2];
 const NUM_LEVELS = 4;
 const LESSON = fakeLessonWithLevels({}, NUM_LEVELS);
 const LEVEL_PROGRESS = fakeStudentLevelProgress(LESSON.levels, STUDENTS);
+
+const FAKE_SECTION = {
+  id: 101,
+  location: '/v2/sections/101',
+  name: 'My Section',
+  login_type: 'google_oauth2',
+  participant_type: 'student',
+  grade: '2',
+  code: 'PMTKVH',
+  lesson_extras: false,
+  pairing_allowed: true,
+  sharing_disabled: false,
+  script: null,
+  course_id: 29,
+  course_version_id: 99,
+  studentCount: 5,
+  students: Object.values(STUDENTS),
+  hidden: false,
+};
 
 const DEFAULT_PROPS = {
   lesson: LESSON,
@@ -42,12 +61,15 @@ describe('ExpandedProgressDataColumn', () => {
 
   beforeEach(() => {
     stubRedux();
-    registerReducers({sectionProgress, unitSelection});
+    registerReducers({sectionProgress, unitSelection, teacherSections});
     store = getStore();
-    store.dispatch(setScriptId(1));
+    store.dispatch(setUnit(1, 99));
     store.dispatch(
       addDataByUnit({studentLevelProgressByUnit: {1: LEVEL_PROGRESS}})
     );
+
+    store.dispatch(setSections([FAKE_SECTION]));
+    store.dispatch(selectSection(FAKE_SECTION.id));
   });
 
   afterEach(() => {
@@ -86,15 +108,15 @@ describe('ExpandedProgressDataColumn', () => {
       screen.getAllByText(
         'Lesson ' + LESSON.relative_position + ': ' + LESSON.name
       )
-    ).to.have.length(2);
+    ).toHaveLength(2);
 
     LESSON.levels.forEach(level => {
       expect(
         screen.getByText(LESSON.relative_position + '.' + level.bubbleText)
-      ).to.exist;
+      ).toBeDefined();
     });
 
-    expect(screen.queryAllByRole('link')).to.have.length(
+    expect(screen.queryAllByRole('link')).toHaveLength(
       LESSON.levels.length * STUDENTS.length
     );
   });
@@ -105,34 +127,33 @@ describe('ExpandedProgressDataColumn', () => {
     lesson.levels.forEach(level => {
       expect(
         screen.getByText(lesson.relative_position + '.' + level.bubbleText)
-      ).to.exist;
+      ).toBeDefined();
     });
 
     levelWithSublevels.sublevels.forEach(sublevel => {
-      expect(screen.queryByText(sublevel.bubbleText)).to.not.exist;
+      expect(screen.queryByText(sublevel.bubbleText)).toBeFalsy();
     });
 
-    expect(screen.queryAllByRole('link')).to.have.length(
+    expect(screen.queryAllByRole('link')).toHaveLength(
       lesson.levels.length * STUDENTS.length
     );
   });
 
   it('Shows expanded choice level', () => {
     const {lesson, levelWithSublevels} = renderWithSublevels();
-
     const choiceLevelHeader = screen.getByText(
       lesson.relative_position + '.' + levelWithSublevels.bubbleText
     );
     fireEvent.click(choiceLevelHeader);
 
-    expect(screen.queryAllByRole('link')).to.have.length(
+    expect(screen.queryAllByRole('link')).toHaveLength(
       (lesson.levels.length + levelWithSublevels.sublevels.length) *
         STUDENTS.length
     );
 
     expect(
-      screen.queryAllByTitle(PROGRESS_ICON_TITLE_PREFIX + 'split')
-    ).to.have.length(STUDENTS.length);
+      screen.queryAllByLabelText(ITEM_TYPE.CHOICE_LEVEL.title)
+    ).toHaveLength(STUDENTS.length);
   });
 
   it('Shows unexpanded choice level after clicking twice', () => {
@@ -151,11 +172,11 @@ describe('ExpandedProgressDataColumn', () => {
     lesson.levels.forEach(level => {
       expect(
         screen.getByText(lesson.relative_position + '.' + level.bubbleText)
-      ).to.exist;
+      ).toBeDefined();
     });
 
     levelWithSublevels.sublevels.forEach(sublevel => {
-      expect(screen.queryByText(sublevel.bubbleText)).to.not.exist;
+      expect(screen.queryByText(sublevel.bubbleText)).toBeFalsy();
     });
   });
 });

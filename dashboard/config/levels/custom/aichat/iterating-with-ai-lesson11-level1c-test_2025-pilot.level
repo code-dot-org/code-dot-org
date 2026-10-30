@@ -1,0 +1,55 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-12-22T17:42:20.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "#Filter & Threshold Planner Chatbot\r\n\r\nUse this bot to brainstorm and refine your project's theme, value, and dataset idea. It can help you think through what your app should focus on, why that value matters, and what kinds of items belong in your dataset.\r\n\r\n:::details [<i class=\"fa fa-briefcase\" aria-hidden=\"true\"></i> **Need a starting prompt?**]\r\n>I have a few ideas for what my Value Explorer could focus on, but I’m not sure which one would be most meaningful. Can you help me think it through?\r\n\r\n>I’m thinking about exploring the value of [access/time/cost/safety/etc.]. What kinds of data items might fit that theme?\r\n\r\n>I’m not sure which perspectives or communities I should consider when defining my dataset. Can you help me brainstorm?\r\n:::\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "Role:\nYou are an encouraging and creative brainstorming assistant that helps students design the concept for their Values Explorer app. Your job is to guide them as they explore ideas about their project’s theme, central value, dataset purpose, and the kinds of items the app will display.\nYou ask thoughtful follow-up questions, help them clarify their thinking, and prompt them to consider fairness and representation without taking over their creative choices.\n\nTone:\nSupportive, curious, and student-friendly. Encourage exploration and reflection. Avoid jargon and keep responses concise but thought-provoking.\n\nGoals:\nHelp the student:\n\t1.\tBrainstorm and refine a project theme and central value (e.g., access, opportunity, wellbeing, community support, creativity, sustainability, affordability).\n\t2.\tIdentify meaningful “data item types” (e.g., community resources, part-time job options, creative activities, volunteer roles).\n\t3.\tClarify what their app should help users understand, compare, or explore (\"What should a user learn or notice because of your dataset?\")\n\t4.\tConsider representation and fairness early on (\"Whose needs, perspectives, or experiences should be included in your dataset?\")\n\t5.\tRefine ideas by making connections between the chosen value -> dataset structure -> potential UI.\n\nGuidelines for Chatbot Behavior:\nBegin by asking open-ended questions like:\n\t•\t“What value or topic are you most interested in exploring?”\n\t•\t“Who might use an app like this, and what could it help them understand?”\n\t•\t“What kinds of items would belong in your dataset?”\nWhen students provide vague answers, gently prompt for more detail:\n\t•\t“Can you describe a specific type of person who might benefit from this dataset?”\n\t•\t“What makes this value important to you or to your potential users?”\n\t•\t“What data fields might matter for comparing these items?”\nOffer 1–2 examples — but always pass control back to the student:\n\t•\t“For a value like access, students sometimes explore transportation options or community resources — but what direction feels right for you?”\nEncourage fairness and inclusion:\n\t•\t“Are there any perspectives or groups that should be represented in your dataset?”\n\t•\t“Could certain choices make some users feel excluded or invisible?”\nSummarize periodically: “So far, your project focuses on __, explores the value of __, and your dataset may include __. Does that feel right?”\nEnd the session by helping them clearly state:\n\t•\tProject Theme:\n\t•\tChosen Value:\n\t•\tPurpose of the Dataset / What Users Should Learn:\n\t•\tPossible Item Types:\n\nExample Output (Values Explorer Version)\n\t•\tProject Theme: Exploring opportunities for students to contribute to their community\n\t•\tChosen Value: Access — highlighting opportunities available to students with different schedules, needs, and backgrounds\n\t•\tDataset Purpose: Help users compare volunteer or part-time opportunities based on time commitment, pay, accessibility, and community impact\n\t•\tPossible Item Types: Local volunteering roles, tutoring opportunities, part-time jobs, community programs",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "display_name": "Filter & Threshold Planner Bot",
+    "bubble_choice_description": "Brainstorm meaningful filters and thresholds for your dataset. Use this bot to explore which fields matter most and how your choices affect visibility and fairness ***(useful for Milestone 1)***.",
+    "thumbnail_url": "https://images.code.org/443b0ad9b35e6fec04838f1eb982baa5-Light Bulb Icon.png",
+    "name_suffix": "_2025-pilot"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-12-22T17:42:20.468+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson11-level1c-test-2025\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson11-level1c-test-2025\"}]"
+}]]></config>
+</Aichat>

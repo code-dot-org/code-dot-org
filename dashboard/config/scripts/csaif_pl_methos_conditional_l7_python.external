@@ -1,0 +1,33 @@
+name 'csaif-pl_methos-conditional-L7-Python'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<h1>Method vs. Function: What's the Difference?</h1>
+<div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin: 20px 0;">
+  <div style="background-color: #F7F7FB; border: 1px solid #E4E2F8; border-radius: 12px; padding: 20px; width: 280px; text-align: center;">
+    <p><b>A method, like <code style="font-size:14px;">is&#95;on&#95;paint()</code>,</b> already exists on the Painter object. You do not write these, you just call them to check something the Painter already knows how to do.</p>
+  </div>
+  <div style="background-color: #F7F7FB; border: 1px solid #E4E2F8; border-radius: 12px; padding: 20px; width: 280px; text-align: center;">
+    <p><b>A function you define, like <code style="font-size:14px;">move&#95;if&#95;can()</code>,</b> is something you build yourself, usually by combining a conditional with one or more of these built-in methods.</p>
+  </div>
+</div>
+
+<h2>Simplifying with Functions</h2>
+<p>Even though methods like <code style="font-size:14px;">can_move()</code> already exist on the Painter, you can still write your own function. Functions become useful when you want to combine more than one check or action into a single reusable step, something no single built-in method does on its own. Here's an example.</p>
+<div style="max-width: 380px; margin: 16px auto; border-radius: 10px; overflow: hidden;">
+  <div style="background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-family: 'Courier New', Courier, monospace; font-size: 14px; padding: 8px 14px;">custom.py</div>
+  <div style="background-color:#1C1F2A; color:#FFFFFF; padding:14px 16px; font-family:'Courier New',Courier,monospace; font-size:16px; line-height:1.8;">
+    <span style="color:#6FCAFF;">def</span> <span style="color:#F07FB0;">move&#95;and&#95;refill</span>(painter):<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6FCAFF;">if</span> <span style="color:#F07FB0;">painter</span>.<span style="color:#F07FB0;">is&#95;on&#95;bucket</span>():<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#F07FB0;">painter</span>.<span style="color:#F07FB0;">take&#95;paint</span>()<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6FCAFF;">if</span> <span style="color:#F07FB0;">painter</span>.<span style="color:#F07FB0;">can&#95;move</span>():<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#F07FB0;">painter</span>.<span style="color:#F07FB0;">move</span>()
+  </div>
+</div>
+<p>No single built-in method checks for paint <i>and</i> moves. By combining <code style="font-size:14px;">is_on_bucket()</code> and <code style="font-size:14px;">can_move()</code> into one function, the programmer can call <code style="font-size:14px;">move_and_refill(ryan)</code> instead of writing both checks out every time.</p>
+<p>Now the programmer can simply call the function using the function name instead of writing the <code style="font-size:14px;">if</code> statement over and over: <code style="font-size:14px;">move&#95;if&#95;can("south")</code></p>
+
+<h2>Let's continue!</h2>
+<p>The next level looks at how <code style="font-size:14px;">if</code> and <code style="font-size:14px;">while</code> work together.</p>
+MARKDOWN

@@ -1,0 +1,27 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2025-09-25T20:00:19.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# **User Testing Results**\r\n<div markdown=\"1\" style=\"float: right; margin: 20px; width:150px;\">\r\n\r\n![](https://images.code.org/48dddc219622be457cde83b2841372f6-healthdevice.png)\r\n\r\n</div>\r\n\r\n## **Wearable Stress-Monitoring Device**\r\n\r\n### **Observations from Testing**\r\n- **User 1:** The device frequently lost connection to the mobile app during busy hallway transitions.\r\n- **User 2:** The stress level alerts (vibration) were too subtle to notice during noisy environments like the cafeteria.\r\n- **User 3:** Found the interface confusing, especially when trying to interpret the “stress level graph” on the app.\r\n- **User 4:** Wore the device on their dominant wrist, causing frequent accidental taps on the screen.\r\n- **User 5:** Device fit was uncomfortable after prolonged use, particularly during physical education class.\r\n\r\n### **Survey Results**\r\n| Question                                  | User 1 | User 2 | User 3 | User 4 | User 5 | Avg. |\r\n|------------------------------------------|--------|--------|--------|--------|--------|------|\r\n| Device accurately measured stress levels. | 4      | 3      | 5      | 3      | 4      | 3.8  |\r\n| Alerts were helpful in managing stress.   | 3      | 2      | 4      | 3      | 4      | 3.2  |\r\n| Device was comfortable to wear all day.   | 2      | 4      | 3      | 3      | 2      | 2.8  |\r\n| The app was easy to navigate and use.     | 3      | 4      | 2      | 3      | 4      | 3.2  |\r\n\r\n### **Quotes from User Interviews**\r\n- **User 1:** *\"I liked that it could measure my stress, but it disconnected from the app every time I went to class.\"*\r\n- **User 2:** *\"The alert vibration was too weak; I missed most of them when I wasn’t paying attention.\"*\r\n- **User 3:** *\"The graph on the app was interesting but hard to understand—I couldn’t tell if my stress was going up or down.\"*\r\n- **User 4:** *\"It got in the way when I was writing or using my hands a lot. I wish there was a way to adjust it better.\"*\r\n- **User 5:** *\"I noticed it was squeezing my wrist too tightly during gym, even on the loosest setting.\"*\r\n\r\n---\r\n\r\nBased on the results above, what are the top 3 pain points and/or themes about the product?",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "display_name": "Wearable Stress-Monitor",
+    "thumbnail_url": "https://images.code.org/48dddc219622be457cde83b2841372f6-healthdevice.png",
+    "bubble_choice_description": "A school is testing a new wearable wristband designed to help students track their stress levels throughout the day, but early user feedback reveals issues with accuracy, comfort, and connectivity.",
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T20:00:19.241+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson11-level1a_2025\\\"\"],\"cloned_from\":\"computer-systems-lesson11-level1a_2025\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

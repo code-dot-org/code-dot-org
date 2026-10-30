@@ -1,0 +1,14 @@
+name 'ai-powered-threats-defenses-postassessment-q8_2025-pilot'
+
+question ‘A system loses its data due to accidental deletion by someone with full access. Which CIA pillar was most impacted?’
+
+wrong ‘Confidentiality’
+right ‘Integrity’
+wrong ‘Availability’
+wrong ‘Accountability’
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 7: Authentication, Authorization, and Accounting
+MARKDOWN

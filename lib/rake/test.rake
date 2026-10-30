@@ -7,7 +7,9 @@ require 'cdo/git_utils'
 require 'cdo/lighthouse'
 require 'parallel'
 require 'aws-sdk-s3'
+require 'cdo/playwright_report'
 require 'cdo/mysql_console_helper'
+require 'json'
 require lib_dir 'cdo/data/logging/rake_task_event_logger'
 include TimedTaskWithLogging
 
@@ -17,34 +19,74 @@ namespace :test do
     TestRunUtils.run_apps_tests
   end
 
+  desc 'Runs studio tests.'
+  timed_task_with_logging :studio do
+    Dir.chdir(frontend_dir) do
+      ChatClient.wrap('studio tests') do
+        RakeUtils.system_stream_output 'yarn test --filter @code-dot-org/studio'
+      end
+    end
+  end
+
   desc 'Run a single eyes test locally using chromedriver.'
   timed_task_with_logging :ui do
     TestRunUtils.run_local_ui_test
   end
 
-  timed_task_with_logging :regular_ui do
-    ChatClient.log 'Running <b>dashboard</b> UI tests...'
+  # Safari (Desktop) runs on SauceLabs because Device Farm does not support it.
+  # Mobile browsers run on SauceLabs because they are very expensive to run on
+  # Device Farm.
+  timed_task_with_logging :saucelabs_ui do
+    ChatClient.log 'Running <b>dashboard</b> Safari + iPad + iPhone UI tests...'
     failed_browser_count = RakeUtils.system_with_chat_logging(
       "cd #{dashboard_dir('test/ui')} &&",
       'bundle', 'exec', './runner.rb',
+      '-c', 'Safari,iPad,iPhone',
       '-d', CDO.site_host('studio.code.org'),
       '-p', CDO.site_host('code.org'),
       '--db', # Ensure features that require database access are run even if the server name isn't "test"
-      '--parallel', '120',
+      '--parallel', '65',
       '--magic_retry',
       '--with-status-page',
       '--fail_fast',
-      '--priority 0'
+      '--saucelabs-priority 0'
     )
     if failed_browser_count == 0
-      message = '┬──┬ ﻿ノ( ゜-゜ノ) UI tests for <b>dashboard</b> succeeded.'
+      message = '┬──┬ ﻿ノ( ゜-゜ノ) Safari UI tests for <b>dashboard</b> succeeded.'
       ChatClient.log message
       ChatClient.message 'server operations', message, color: 'green'
     else
-      message = "(╯°□°）╯︵ ┻━┻ UI tests for <b>dashboard</b> failed on #{failed_browser_count} browser(s)."
+      message = "(╯°□°）╯︵ ┻━┻ Safari UI tests for <b>dashboard</b> failed on #{failed_browser_count} browser(s)."
       ChatClient.log message, color: 'red'
       ChatClient.message 'server operations', message, color: 'red', notify: 1
-      raise "UI tests failed"
+      raise "Safari UI tests failed"
+    end
+  end
+
+  timed_task_with_logging :devicefarm_desktop_ui do
+    ChatClient.log 'Running <b>dashboard</b> Chrome + Firefox UI tests...'
+    failed_browser_count = RakeUtils.system_with_chat_logging(
+      "cd #{dashboard_dir('test/ui')} &&",
+      'bundle', 'exec', './runner.rb',
+      '--device-farm',
+      '-c', 'Chrome,Firefox',
+      '-d', CDO.site_host('studio.code.org'),
+      '-p', CDO.site_host('code.org'),
+      '--db', # Ensure features that require database access are run even if the server name isn't "test"
+      '--parallel', '50',
+      '--retry_count', '2',
+      '--with-status-page',
+      '--fail_fast'
+    )
+    if failed_browser_count == 0
+      message = '┬──┬ ﻿ノ( ゜-゜ノ) Chrome + Firefox UI tests for <b>dashboard</b> succeeded.'
+      ChatClient.log message
+      ChatClient.message 'server operations', message, color: 'green'
+    else
+      message = "(╯°□°）╯︵ ┻━┻ Chrome + Firefox UI tests for <b>dashboard</b> failed on #{failed_browser_count} browser(s)."
+      ChatClient.log message, color: 'red'
+      ChatClient.message 'server operations', message, color: 'red', notify: 1
+      raise 'Chrome + Firefox UI tests failed'
     end
   end
 
@@ -54,15 +96,16 @@ namespace :test do
     failed_browser_count = RakeUtils.system_with_chat_logging(
       "cd #{dashboard_dir('test/ui')} &&",
       'bundle', 'exec', './runner.rb',
-      '-c', 'Chrome,iPhone',
+      '--device-farm',
+      '-c', 'Chrome',
       '-d', CDO.site_host('studio.code.org'),
       '-p', CDO.site_host('code.org'),
       '--db', # Ensure features that require database access are run even if the server name isn't "test"
       '--eyes',
-      '--magic_retry',
+      '--retry_count', '2',
       '--with-status-page',
       '-f', eyes_features.join(","),
-      '--parallel', (eyes_features.count * 2).to_s
+      '--parallel', '20'
     )
     if failed_browser_count == 0
       message = '⊙‿⊙ Eyes tests for <b>dashboard</b> succeeded, no changes detected.'
@@ -78,19 +121,58 @@ namespace :test do
 
   desc 'Run Lighthouse audits against key pages (currently Code Studio homepage).'
   timed_task_with_logging :lighthouse do
-    Lighthouse.report CDO.studio_url('', CDO.default_scheme)
+    Lighthouse.report CDO.studio_url('')
   end
 
-  # Run the eyes tests and ui test suites in parallel. If one of these suites
-  # raises, allow the other suite to complete, then make sure this task raises.
-  timed_task_with_logging :ui_all do
-    Parallel.each([:eyes_ui, :regular_ui], in_threads: 3) do |target|
-      Rake::Task["test:#{target}"].invoke
+  # Both Playwright suites share one checkout, and ui_all starts them together.
+  # Rake runs a task once per process and serializes concurrent invokes, so this
+  # is the one install however many suites depend on it.
+  timed_task_with_logging :playwright_install do
+    Dir.chdir(frontend_dir('packages', 'e2e-tests')) do
+      RakeUtils.system_stream_output 'yarn install --immutable'
+      # Chef does not install the browsers. Each Playwright version needs its own.
+      RakeUtils.system_stream_output 'yarn exec playwright install chromium firefox webkit' if CDO.test_system?
     end
   end
 
+  timed_task_with_logging playwright_ui: :playwright_install do
+    raise 'Playwright e2e tests failed' unless run_playwright_suite(:functional, blocking: true)
+  end
+
+  # Runs the Playwright Eyes tests in the managed test environment.
+  timed_task_with_logging playwright_eyes: :playwright_install do
+    raise 'Playwright Eyes: this task runs only on the test system' unless CDO.test_system?
+    env = dtt_playwright_eyes_env
+    raise 'Playwright Eyes: the test system has no applitools_eyes_api_key' if env.empty?
+    secrets = {'APPLITOOLS_API_KEY' => CDO.applitools_eyes_api_key}
+    playwright_tests_passed = run_playwright_suite(:eyes, blocking: true, env: env, env_secrets: secrets)
+    raise 'Playwright Eyes e2e tests failed' unless playwright_tests_passed
+  end
+
+  # Run the deploy-time UI suites in parallel. If one suite raises, allow the
+  # others to complete, then make sure this task raises.
+  timed_task_with_logging :ui_all do
+    # map returns each suite's exception in order, so the rollup needs no state
+    # shared across the threads.
+    exceptions = Parallel.map(UI_SUITES.keys, in_threads: UI_SUITES.size) do |target|
+      Rake::Task["test:#{target}"].invoke
+      nil
+    rescue StandardError => exception
+      exception
+    end
+    failures = UI_SUITES.keys.zip(exceptions).to_h.compact
+
+    UI_SUITES_BY_ROLLUP.each do |title, suites|
+      ChatClient.log ui_all_rollup(title, suites, failures), color: (failures.slice(*suites.keys).empty? ? 'green' : 'red')
+    end
+
+    # aws/ci_build turns the DTT red off this raise. Which exception surfaces
+    # is arbitrary.
+    raise failures.values.first unless failures.empty?
+  end
+
   timed_task_with_logging :wait_for_test_server do
-    RakeUtils.wait_for_url CDO.studio_url('', CDO.default_scheme)
+    RakeUtils.wait_for_url CDO.studio_url('')
   end
 
   timed_task_with_logging ui_live: [
@@ -98,112 +180,38 @@ namespace :test do
     :ui_all
   ]
 
-  timed_task_with_logging :dashboard_ci do
+  # In each environment, we use the following databases by default:
+  #  - databases for web servers: dashboard_<env> and pegasus_<env>
+  #  - databases for unit tests: dashboard_test and pegasus_test
+  #
+  # On the chef-managed test system, where we run both unit and ui tests in the same environment,
+  # this leads to conflicting names for both pegasus and dashboard. We work around this as follows:
+  # - USE_PEGASUS_UNITTEST_DB=1 tells any unit tests to use pegasus_unittest instead of pegasus_test
+  # - PARALLEL_TEST_FIRST_IS_1=1 tells the parallel_tests gem (which uses multiple test databases
+  #   dashboard_test, dashboard_test2, etc. to run dashboard unit tests) to instead use
+  #   dashboard_test1, dashboard_test2, etc.
+  # - TEST_ENV_NUMBER=1 tells other ruby unit tests (not currently run in parallel) to use
+  #   dashboard_test1 as well.
+  #
+  # No such workaround is currently needed for CI, because Drone runs unit tests and UI tests in
+  # separate containers, so it is safe for both containers to use the default database names.
+  # However, We still set PARALLEL_TEST_FIRST_IS_1=1 in the unit pipeline in CI to simplify
+  # parallel database setup.
+
+  timed_task_with_logging :dashboard_qa do
     Dir.chdir(dashboard_dir) do
       ChatClient.wrap('dashboard ruby unit tests') do
         ENV['DISABLE_SPRING'] = '1'
-        ENV['UNIT_TEST'] = '1'
         ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
-        ENV['PARALLEL_TEST_FIRST_IS_1'] = '1'
-        # Parallel tests don't seem to run more quickly over 16 processes.
-        ENV['PARALLEL_TEST_PROCESSORS'] = '16' if RakeUtils.nproc > 16
 
-        # Hash of all seed-data and -config content
-        #
-        # Data:
-        # - All fixture files
-        # - CSV data (only videos right now, may want to add more; cdo-languages.csv particularly)
-        #
-        # Config:
-        # - schema.rb
-        # - seed.rake
-        fixture_path = "#{dashboard_dir}/test/fixtures/"
-        fixture_hash = Digest::MD5.hexdigest(
-          Dir["#{fixture_path}/{**,*}/*.yml"].
-            push(dashboard_dir('db/schema.rb')).
-            push(dashboard_dir('config/videos.csv')).
-            push(dashboard_dir('lib/tasks/seed.rake')).
-            select {|filename| File.file?(filename)}.
-            sort.
-            map {|filename| Digest::MD5.file(filename)}.
-            join
-        )
-        CDO.log.info "Fixture hash: #{fixture_hash}"
+        TestRunUtils.run_dashboard_tests(parallel: true, upload_seed_data: true)
 
-        # Try to fetch seed data from S3
-        bucket_name = 'cdo-build-package'
-        s3_key = "test_db/#{fixture_hash}.gz"
-        s3_client = Aws::S3::Client.new
-        require 'zlib'
-        require 'stringio'
-
-        seed_data = begin
-          response = s3_client.get_object(bucket: bucket_name, key: s3_key)
-          Zlib::GzipReader.new(response.body).read
-        rescue Aws::Errors::MissingCredentialsError, Aws::S3::Errors::ServiceError
-          CDO.log.info "Seed data not found on S3 at #{s3_key}"
-          nil
-        end
-
-        seed_file = Tempfile.new(['db_seed', '.sql'])
-        auto_inc = 's/ AUTO_INCREMENT=[0-9]*\b//'
-        writer = URI.parse(CDO.dashboard_db_writer || 'mysql://root@localhost/dashboard_test')
-        database = writer.path[1..]
-        writer.path = ''
-        opts = MysqlConsoleHelper.options(writer)
-        mysqldump_opts = "mysqldump #{opts} --skip-comments --set-gtid-purged=OFF"
-
-        if seed_data
-          File.write(seed_file, seed_data)
-        else
-          # Generate new DB contents
-          ENV['TEST_ENV_NUMBER'] = '1'
-          RakeUtils.rake_stream_output 'db:create db:test:prepare'
-          ENV.delete 'TEST_ENV_NUMBER'
-          # Store new DB contents
-          `#{mysqldump_opts} #{database}1 | sed '#{auto_inc}' > #{seed_file.path}`
-          gzip_data = Zlib::GzipWriter.wrap(StringIO.new) {|gz| IO.copy_stream(seed_file.path, gz); gz.finish}.tap(&:rewind)
-
-          s3_client.put_object(
-            bucket: bucket_name,
-            key: s3_key,
-            body: gzip_data,
-            acl: 'public-read'
-          )
-          CDO.log.info "Uploaded seed data to #{s3_key}"
-        end
-
-        cloned_data = `#{mysqldump_opts} #{database}2 | sed '#{auto_inc}'`
-        if seed_data.equal?(cloned_data)
-          CDO.log.info 'Test data not modified'
-        else
-          seed_2_file = Tempfile.new(['db_seed', '.sql'])
-          File.write(seed_2_file, cloned_data)
-          puts "Diff:\n"
-          puts `diff #{seed_file.path} #{seed_2_file.path}`
-
-          # Clone single DB across all databases
-          require 'parallel_tests'
-          procs = ParallelTests.determine_number_of_processes(nil)
-          CDO.log.info "Test data modified, cloning across #{procs} databases..."
-          databases = Array.new(procs) {|i| "#{database}#{i + 1}"}
-          databases.each do |db|
-            recreate_db = "DROP DATABASE IF EXISTS #{db}; CREATE DATABASE IF NOT EXISTS #{db};"
-            RakeUtils.system_stream_output "echo '#{recreate_db}' | mysql #{opts}"
-          end
-          pipes = databases.map {|db| ">(mysql #{opts} #{db})"}.join(' ')
-          RakeUtils.system_stream_output "/bin/bash -c 'tee <#{seed_file.path} #{pipes} >/dev/null'"
-        end
-
-        TestRunUtils.run_dashboard_tests(parallel: true)
-
-        ENV.delete 'UNIT_TEST'
         ENV.delete 'USE_PEGASUS_UNITTEST_DB'
       end
     end
   end
 
-  timed_task_with_logging :dashboard_legacy_ci do
+  timed_task_with_logging :dashboard_legacy_qa do
     # isolate unit tests from the pegasus_test DB
     ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
     ENV['TEST_ENV_NUMBER'] = '1'
@@ -212,7 +220,34 @@ namespace :test do
     ENV.delete 'USE_PEGASUS_UNITTEST_DB'
   end
 
-  timed_task_with_logging :shared_ci do
+  timed_task_with_logging :dashboard_hoc_legacy_engine_qa do
+    # isolate unit tests from the pegasus_test DB
+    ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
+    ENV['TEST_ENV_NUMBER'] = '1'
+    TestRunUtils.run_dashboard_hoc_legacy_engine_tests
+    ENV.delete 'TEST_ENV_NUMBER'
+    ENV.delete 'USE_PEGASUS_UNITTEST_DB'
+  end
+
+  timed_task_with_logging :dashboard_cdo_contentful_engine_qa do
+    # isolate unit tests from the pegasus_test DB
+    ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
+    ENV['TEST_ENV_NUMBER'] = '1'
+    TestRunUtils.run_dashboard_cdo_contentful_engine_tests
+    ENV.delete 'TEST_ENV_NUMBER'
+    ENV.delete 'USE_PEGASUS_UNITTEST_DB'
+  end
+
+  timed_task_with_logging :dashboard_observability_engine_qa do
+    # isolate unit tests from the pegasus_test DB
+    ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
+    ENV['TEST_ENV_NUMBER'] = '1'
+    TestRunUtils.run_dashboard_observability_engine_tests
+    ENV.delete 'TEST_ENV_NUMBER'
+    ENV.delete 'USE_PEGASUS_UNITTEST_DB'
+  end
+
+  timed_task_with_logging :shared_qa do
     # isolate unit tests from the pegasus_test DB
     ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
     ENV['TEST_ENV_NUMBER'] = '1'
@@ -221,7 +256,7 @@ namespace :test do
     ENV.delete 'USE_PEGASUS_UNITTEST_DB'
   end
 
-  timed_task_with_logging :pegasus_ci do
+  timed_task_with_logging :pegasus_qa do
     # isolate unit tests from the pegasus_test DB
     ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
     ENV['TEST_ENV_NUMBER'] = '1'
@@ -230,7 +265,7 @@ namespace :test do
     ENV.delete 'USE_PEGASUS_UNITTEST_DB'
   end
 
-  timed_task_with_logging :lib_ci do
+  timed_task_with_logging :lib_qa do
     # isolate unit tests from the pegasus_test DB
     ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
     ENV['TEST_ENV_NUMBER'] = '1'
@@ -239,7 +274,7 @@ namespace :test do
     ENV.delete 'USE_PEGASUS_UNITTEST_DB'
   end
 
-  timed_task_with_logging :bin_ci do
+  timed_task_with_logging :bin_qa do
     # isolate unit tests from the pegasus_test DB
     ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
     ENV['TEST_ENV_NUMBER'] = '1'
@@ -248,24 +283,46 @@ namespace :test do
     ENV.delete 'USE_PEGASUS_UNITTEST_DB'
   end
 
-  timed_task_with_logging ci: [
-    :shared_ci,
-    :pegasus_ci,
-    :dashboard_ci,
-    :dashboard_legacy_ci,
-    :lib_ci,
-    :bin_ci,
+  desc 'Runs full QA test pass (to be run on the chef-managed test system)'
+  timed_task_with_logging qa: [
+    :dashboard_qa,
+    :dashboard_legacy_qa,
+    :dashboard_hoc_legacy_engine_qa,
+    :dashboard_cdo_contentful_engine_qa,
+    :dashboard_observability_engine_qa,
+    :shared_qa,
+    :pegasus_qa,
+    :lib_qa,
+    :bin_qa,
     :ui_live
   ]
 
   desc 'Runs dashboard tests.'
   timed_task_with_logging :dashboard do
-    TestRunUtils.run_dashboard_tests
+    # This task can be run locally or in CI (the chef-managed test system uses dashboard_qa).
+    # By default, we only want to run in parallel in CI to avoid overloading local machines.
+    parallel = CI::Utils.ci_job_unit_tests?
+    TestRunUtils.run_dashboard_tests(parallel: parallel)
   end
 
   desc 'Runs dashboard legacy tests.'
   timed_task_with_logging :dashboard_legacy do
     TestRunUtils.run_dashboard_legacy_tests
+  end
+
+  desc 'Runs dashboard cdo_contentful engine tests.'
+  timed_task_with_logging :dashboard_cdo_contentful_engine do
+    TestRunUtils.run_dashboard_cdo_contentful_engine_tests
+  end
+
+  desc 'Runs dashboard hoc_legacy engine tests.'
+  timed_task_with_logging :dashboard_hoc_legacy_engine do
+    TestRunUtils.run_dashboard_hoc_legacy_engine_tests
+  end
+
+  desc 'Runs dashboard observability engine tests.'
+  timed_task_with_logging :dashboard_observability_engine do
+    TestRunUtils.run_dashboard_observability_engine_tests
   end
 
   desc 'Runs pegasus tests.'
@@ -283,12 +340,30 @@ namespace :test do
     TestRunUtils.run_lib_tests
   end
 
+  desc 'Runs python tests.'
+  timed_task_with_logging :python do
+    TestRunUtils.run_python_tests
+  end
+
   desc 'Runs bin tests.'
   timed_task_with_logging :bin do
     TestRunUtils.run_bin_tests
   end
 
+  desc 'Runs frontend tests.'
+  timed_task_with_logging :frontend do
+    TestRunUtils.run_frontend_tests
+  end
+
   namespace :changed do
+    desc 'Runs frontend tests if frontend might have changed from staging.'
+    timed_task_with_logging :frontend do
+      # The portal links in apps/package.json pick the packages
+      run_tests_if_changed('frontend', ['frontend/**/*', 'apps/package.json']) do
+        TestRunUtils.run_frontend_tests
+      end
+    end
+
     desc 'Runs apps tests if apps might have changed from staging.'
     timed_task_with_logging :apps do
       run_tests_if_changed(
@@ -296,17 +371,15 @@ namespace :test do
         [
           'apps/**/*',
           'dashboard/config/libraries/*.interpreted.js',
-          'shared/js/**/*',
+          # Adaptive content is validated by apps/test/unit/adaptive/contentFilesTest.ts.
+          'dashboard/config/level_content/**/*',
           'shared/css/**/*',
+          'frontend/**/*',
+          'lib/cdo/shared_constants/**/*',
+          'lib/cdo/shared_constants.rb',
         ]
       ) do
         TestRunUtils.run_apps_tests
-      end
-    end
-
-    timed_task_with_logging :interpreter do
-      run_tests_if_changed('interpreter', ['apps/src/lib/tools/jsinterpreter/patchInterpreter.js']) do
-        TestRunUtils.run_interpreter_tests
       end
     end
 
@@ -324,7 +397,10 @@ namespace :test do
         ],
         ignore: ['dashboard/test/ui/**/*', 'dashboard/db/schema_cache.yml']
       ) do
-        TestRunUtils.run_dashboard_tests
+        # This task is typically only run in CI, so gate on CI just as a safeguard
+        # in case a developer tries to run it locally.
+        parallel = CI::Utils.ci_job_unit_tests?
+        TestRunUtils.run_dashboard_tests(parallel: parallel)
       end
     end
 
@@ -343,6 +419,44 @@ namespace :test do
         ignore: ['dashboard/test/ui/**/*', 'dashboard/db/schema_cache.yml']
       ) do
         TestRunUtils.run_dashboard_legacy_tests
+      end
+    end
+
+    desc 'Runs dashboard cdo_contentful engine tests'
+    timed_task_with_logging :dashboard_cdo_contentful_engine do
+      run_tests_if_changed(
+        'dashboard cdo_contentful engine',
+        %w[Gemfile Gemfile.lock dashboard/engines/cdo_contentful/**/*],
+      ) do
+        TestRunUtils.run_dashboard_cdo_contentful_engine_tests
+      end
+    end
+
+    desc 'Runs dashboard hoc_legacy engine tests if dashboard might have changed from staging.'
+    timed_task_with_logging :dashboard_hoc_legacy_engine do
+      run_tests_if_changed(
+        'dashboard hoc_legacy engine',
+        [
+          'Gemfile',
+          'Gemfile.lock',
+          'deployment.rb',
+          'dashboard/**/*',
+          'lib/**/*',
+          'shared/**/*'
+        ],
+        ignore: ['dashboard/test/ui/**/*', 'dashboard/db/schema_cache.yml']
+      ) do
+        TestRunUtils.run_dashboard_hoc_legacy_engine_tests
+      end
+    end
+
+    desc 'Runs dashboard observability engine tests'
+    timed_task_with_logging :dashboard_observability_engine do
+      run_tests_if_changed(
+        'dashboard observability engine',
+        %w[Gemfile Gemfile.lock dashboard/engines/observability/**/*],
+      ) do
+        TestRunUtils.run_dashboard_observability_engine_tests
       end
     end
 
@@ -382,27 +496,72 @@ namespace :test do
 
     desc 'Runs lib tests if lib might have changed from staging.'
     timed_task_with_logging :lib do
-      run_tests_if_changed('lib', ['Gemfile', 'Gemfile.lock', 'deployment.rb', 'lib/**/*']) do
+      run_tests_if_changed(
+        'lib',
+        [
+          'Gemfile',
+          'Gemfile.lock',
+          'deployment.rb',
+          'lib/**/*',
+          'config/**/*'
+        ]
+      ) do
         TestRunUtils.run_lib_tests
+      end
+    end
+
+    desc 'Runs python tests if python might have changed from staging.'
+    task :python do
+      run_tests_if_changed(
+        'python',
+        [
+          'pyproject.toml',
+          'uv.lock',
+          'python/**/*',
+          'lib/cdo/python_venv.py',
+          'Gemfile',
+          'Gemfile.lock',
+          'deployment.rb',
+          'config/**/*',
+        ]
+      ) do
+        TestRunUtils.run_python_tests
       end
     end
 
     desc 'Runs lib tests if lib might have changed from staging.'
     timed_task_with_logging :bin do
-      run_tests_if_changed('bin', ['Gemfile', 'Gemfile.lock', 'deployment.rb', 'bin/**/*']) do
+      run_tests_if_changed(
+        'bin',
+        [
+          'Gemfile',
+          'Gemfile.lock',
+          'deployment.rb',
+          'bin/**/*',
+          # i18n tests depend on curriculum models
+          'dashboard/app/models/**/*'
+        ]
+      ) do
         TestRunUtils.run_bin_tests
       end
     end
 
-    all_tasks = [:apps,
-                 # currently disabled because these tests take too long to run on circle
-                 # :interpreter,
-                 :dashboard,
-                 :dashboard_legacy,
-                 :pegasus,
-                 :shared,
-                 :lib,
-                 :bin]
+    all_tasks = [
+      :frontend,
+      :apps,
+      # currently disabled because these tests take too long to run on CI
+      # :interpreter,
+      :dashboard,
+      :dashboard_legacy,
+      :dashboard_cdo_contentful_engine,
+      :dashboard_hoc_legacy_engine,
+      :dashboard_observability_engine,
+      :pegasus,
+      :shared,
+      :lib,
+      :python,
+      :bin
+    ]
 
     timed_task_with_logging all_but_apps: all_tasks.reject {|t| t == :apps}
 
@@ -411,16 +570,179 @@ namespace :test do
 
   timed_task_with_logging changed: ['changed:all']
 
-  timed_task_with_logging all: [:apps, :dashboard, :dashboard_legacy, :pegasus, :shared, :lib, :bin]
+  timed_task_with_logging all: [
+    :frontend,
+    :apps,
+    :dashboard,
+    :dashboard_legacy,
+    :dashboard_cdo_contentful_engine,
+    :dashboard_hoc_legacy_engine,
+    :dashboard_observability_engine,
+    :pegasus,
+    :shared,
+    :lib,
+    :bin,
+  ]
 end
 timed_task_with_logging test: ['test:changed']
 
 # Some files are so fundamental to our test runner(s) that changes to them
 # should cause us to run all tests.
 GLOBS_AFFECTING_EVERYTHING = %w(
-  .circleci/config.yml
+  .drone.yml
+  .gitattributes
   lib/rake/test.rake
+  config/**/*
+  docker/ci/**/*
 )
+
+PLAYWRIGHT_SUITES = {functional: 'Playwright', eyes: '👁️ Playwright Eyes'}.freeze
+
+# The suites test:ui_all dispatches, and the names its rollups give them, by rollup.
+UI_SUITES_BY_ROLLUP = {
+  'Deploy-time UI suites:' => {
+    eyes_ui: 'Eyes',
+    saucelabs_ui: 'Safari + iPad + iPhone UI',
+    devicefarm_desktop_ui: 'Chrome + Firefox UI',
+  },
+  '🎭 Deploy-time Playwright suites:' => {
+    playwright_ui: PLAYWRIGHT_SUITES.fetch(:functional),
+    playwright_eyes: PLAYWRIGHT_SUITES.fetch(:eyes),
+  },
+}.freeze
+UI_SUITES = UI_SUITES_BY_ROLLUP.values.reduce(:merge).freeze
+
+# Which run_playwright_suite rollup stands in for a UI_SUITES entry.
+PLAYWRIGHT_UI_SUITES = {playwright_ui: :functional, playwright_eyes: :eyes}.freeze
+
+# An exception cannot carry the test counts and the report link.
+PLAYWRIGHT_ROLLUP = {}
+
+# Empty without the key. The key itself travels as a secret, not in here. The
+# batch id is the commit, as on GitHub Actions, so both Playwright Eyes runs of
+# a deploy share one batch; Applitools documents that as the way to aggregate:
+# https://applitools.com/docs/eyes/concepts/best-practices/batching#associate-tests-with-a-common-batch
+def dtt_playwright_eyes_env
+  return {} unless CDO.test_system? && CDO.applitools_eyes_api_key
+  {
+    'VISUAL_PROVIDER' => 'applitools',
+    'APPLITOOLS_BATCH_ID' => RakeUtils.git_revision,
+    'APPLITOOLS_BATCH_NAME' => 'DTT Playwright Visual Diff Tests',
+    'APPLITOOLS_BRANCH' => GitUtils.current_branch,
+  }
+end
+
+def applitools_batch_url(batch_id)
+  return nil if batch_id.blank?
+  "https://eyes.applitools.com/app/batches/?startInfoBatchId=#{batch_id}&hideBatchList=true"
+end
+
+# Never raises. The caller decides if a failure stops the build. `env` is
+# logged with the command; `env_secrets` are not.
+def run_playwright_suite(suite, blocking:, env: {}, env_secrets: {})
+  label = PLAYWRIGHT_SUITES.fetch(suite)
+  # Both suites run in one directory. Equal names would lose the first report.
+  suffix = suite == :eyes ? '-eyes' : ''
+  target_url = ENV['TARGET_URL'].presence || CDO.studio_url('')
+  e2e_dir = frontend_dir('packages', 'e2e-tests')
+  script = File.join(e2e_dir, 'bin', 'run-playwright-tests-ci.sh')
+
+  provider =
+    if CDO.test_system?            then 'dtt'
+    elsif CI::Utils.running_on_ci? then 'drone'
+    end
+
+  # The key does not change, so this link works when the run ends.
+  pending_report = Cdo::PlaywrightReport.index_url(name: "playwright#{suffix}")
+  batch_url = applitools_batch_url(env.fetch('APPLITOOLS_BATCH_ID') {ENV.fetch('APPLITOOLS_BATCH_ID', nil)}) if suite == :eyes
+  start_message = "Starting <b>dashboard</b> #{label} e2e tests against #{target_url}."
+  start_message += %( The <a href="#{pending_report}">HTML report</a> publishes here when the run finishes.) if pending_report
+  start_message += %( Visual diffs can be found <a href="#{batch_url}">here</a>.) if batch_url
+  ChatClient.log start_message
+
+  # system_with_chat_logging would hide the output. This method must not raise.
+  start_time = Time.now
+  passed =
+    begin
+      env_prefix = ["TARGET_URL=#{target_url}"]
+      env_prefix << "PLAYWRIGHT_PROVIDER=#{provider}" if provider
+      env_prefix += env.map {|key, value| "#{key}=#{Shellwords.escape(value)}"}
+      RakeUtils.system_stream_output(*env_prefix, script, suite.to_s, env_secrets: env_secrets)
+      true
+    rescue StandardError
+      false
+    end
+  duration = Time.now - start_time
+
+  report_url = Cdo::PlaywrightReport.upload(File.join(e2e_dir, "playwright-report#{suffix}"), name: "playwright#{suffix}")
+  summary = playwright_results_summary(File.join(e2e_dir, "test-results#{suffix}", 'results.json'))
+
+  pass_fail_line = playwright_pass_fail_summary(summary, duration)
+  qualifier = blocking ? '' : ' (non-blocking)'
+  # Yellow: the suite failed and the build did not.
+  glyph, color =
+    if passed
+      ['✅', 'green']
+    elsif !blocking
+      ['🟡', 'yellow']
+    else
+      ['❌', 'red']
+    end
+
+  rollup = "#{glyph} #{label}#{qualifier}: #{pass_fail_line}"
+  rollup += %( <a href="#{report_url}">HTML report</a>.) if report_url
+  rollup += %( <a href="#{batch_url}">Visual diffs</a>.) if batch_url
+  PLAYWRIGHT_ROLLUP[suite] = rollup
+
+  status = passed ? '<b>✅ PASSED</b>' : "<b>#{glyph} FAILED</b>#{qualifier}"
+  report = "#{label} e2e tests for <b>dashboard</b>: #{status}\n"
+  report += pass_fail_line
+  report += %(\nSee <a href="#{report_url}">the HTML report</a>.) if report_url
+  report += %( Visual diffs can be found <a href="#{batch_url}">here</a>.) if batch_url
+  ChatClient.log report, color: color
+
+  passed
+end
+
+# The suites report minutes apart and interleaved with everything else in the
+# room, so this is the only place the whole deploy window can be read at once.
+def ui_all_rollup(title, suites, failures)
+  lines = suites.map do |target, label|
+    rollup = PLAYWRIGHT_ROLLUP[PLAYWRIGHT_UI_SUITES[target]]
+    next rollup if rollup
+    failures[target] ? "❌ #{label}: #{failures[target].message}." : "✅ #{label}: passed."
+  end
+  [title, *lines].join("\n")
+end
+
+def playwright_results_summary(results_json)
+  return nil unless File.file?(results_json)
+  stats = JSON.parse(File.read(results_json)).fetch('stats', {})
+  expected = stats['expected'].to_i
+  unexpected = stats['unexpected'].to_i
+  flaky = stats['flaky'].to_i
+  skipped = stats['skipped'].to_i
+  {
+    passed: expected,
+    failed: unexpected,
+    flaky: flaky,
+    skipped: skipped,
+    total: expected + unexpected + flaky + skipped,
+  }
+rescue StandardError => exception
+  ChatClient.log "Could not parse Playwright results: #{exception.message}"
+  nil
+end
+
+def playwright_pass_fail_summary(summary, duration)
+  formatted_duration = RakeUtils.format_duration(duration)
+  return "Duration: #{formatted_duration}. (test counts unavailable)" unless summary
+  line = "#{summary[:passed]} passed. #{summary[:failed]} failed. " \
+    "#{summary[:skipped]} skipped. Test count: #{summary[:total]}. " \
+    "Duration: #{formatted_duration}."
+  line += " Flaky (passed on retry): #{summary[:flaky]}." if summary[:flaky].positive?
+  line
+end
 
 def run_tests_if_changed(test_name, changed_globs, ignore: [])
   base_branch = GitUtils.current_branch_base

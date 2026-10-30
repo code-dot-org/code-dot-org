@@ -1,11 +1,16 @@
-import React, {useState, useEffect, useCallback} from 'react';
-import classNames from 'classnames';
-import {getNoteName, isBlackKey} from '../utils/Notes';
-import MusicLibrary from '../player/MusicLibrary';
-import {ChordEventValue, PlayStyle} from '../player/interfaces/ChordEvent';
-import {generateGraphDataFromChord, ChordGraphNote} from '../utils/Chords';
-import PreviewControls from './PreviewControls';
+import React, {useState, useEffect, useCallback, useMemo} from 'react';
+import FocusLock from 'react-focus-lock';
+
 import musicI18n from '../locale';
+import MusicRegistry from '../MusicRegistry';
+import {ChordEventValue, PlayStyle} from '../player/interfaces/ChordEvent';
+import MusicLibrary from '../player/MusicLibrary';
+import {generateGraphDataFromChord, ChordGraphNote} from '../utils/Chords';
+
+import Keybed from './Keybed';
+import LoadingOverlay from './LoadingOverlay';
+import PreviewControls from './PreviewControls';
+
 import moduleStyles from './chordPanel.module.scss';
 
 const NUM_OCTAVES = 3;
@@ -20,21 +25,13 @@ const styleDropdownOptions: [PlayStyle, string][] = [
 ];
 
 export interface ChordPanelProps {
-  library: MusicLibrary;
   initValue: ChordEventValue;
   onChange: (value: ChordEventValue) => void;
-  previewChord: (chord: ChordEventValue, onStop?: () => void) => void;
-  previewNote: (note: number, instrument: string, onStop?: () => void) => void;
-  cancelPreviews: () => void;
 }
 
 const ChordPanel: React.FunctionComponent<ChordPanelProps> = ({
   initValue,
   onChange,
-  previewChord,
-  previewNote,
-  cancelPreviews,
-  library,
 }) => {
   const [selectedNotes, setSelectedNotes] = useState<number[]>(initValue.notes);
   const [playStyle, setPlayStyle] = useState<PlayStyle>(initValue.playStyle);
@@ -42,10 +39,17 @@ const ChordPanel: React.FunctionComponent<ChordPanelProps> = ({
   const [isDisabled, setIsDisabled] = useState<boolean>(
     selectedNotes.length >= MAX_NOTES
   );
+  const [isLoading, setIsLoading] = useState(false);
+  const [isPlayingPreview, setIsPlayingPreview] = useState(false);
 
-  const instruments: [string, string][] = library.groups[0].folders
-    .filter(folder => folder.type === 'instrument')
-    .map(folder => [folder.name, folder.path]);
+  const instruments: [string, string][] = useMemo(
+    () =>
+      MusicLibrary.getInstance()?.instruments.map(folder => [
+        folder.name,
+        folder.id,
+      ]) || [],
+    []
+  );
 
   const onPressKey = useCallback(
     (note: number) => {
@@ -54,12 +58,34 @@ const ChordPanel: React.FunctionComponent<ChordPanelProps> = ({
         newSelectedNotes.splice(newSelectedNotes.indexOf(note), 1);
       } else {
         newSelectedNotes.push(note);
-        previewNote(note, instrument);
+        MusicRegistry.player.previewNote(note, instrument);
       }
       setSelectedNotes(newSelectedNotes);
     },
-    [selectedNotes, instrument, setSelectedNotes, previewNote]
+    [selectedNotes, instrument, setSelectedNotes]
   );
+
+  useEffect(() => {
+    if (!MusicRegistry.player.isInstrumentLoaded(instrument)) {
+      setIsLoading(true);
+      // If the instrument is already loading, register a callback and wait for it to finish.
+      if (MusicRegistry.player.isInstrumentLoading(instrument)) {
+        MusicRegistry.player.registerCallback(
+          'InstrumentLoaded',
+          instrumentName => {
+            if (instrumentName === instrument) {
+              setIsLoading(false);
+            }
+          }
+        );
+      } else {
+        // Otherwise, initiate the load.
+        MusicRegistry.player.setupSampler(instrument, () =>
+          setIsLoading(false)
+        );
+      }
+    }
+  }, [setIsLoading, instrument]);
 
   useEffect(() => {
     onChange({
@@ -73,138 +99,100 @@ const ChordPanel: React.FunctionComponent<ChordPanelProps> = ({
     setIsDisabled(selectedNotes.length >= MAX_NOTES);
   }, [selectedNotes]);
 
-  const playPreview = useCallback(
-    () =>
-      previewChord({
+  const playPreview = useCallback(() => {
+    MusicRegistry.player.previewChord(
+      {
         notes: selectedNotes,
         playStyle,
         instrument,
-      }),
-    [previewChord, selectedNotes, playStyle, instrument]
-  );
+      },
+      undefined, // TODO: use onTick() callback to highlight notes
+      () => setIsPlayingPreview(false)
+    );
+    setIsPlayingPreview(true);
+  }, [selectedNotes, playStyle, instrument]);
+
+  const stopPreview = useCallback(() => {
+    MusicRegistry.player.cancelPreviews();
+    setIsPlayingPreview(false);
+  }, [setIsPlayingPreview]);
+
+  useEffect(() => {
+    // On unmount.
+    return () => {
+      stopPreview();
+    };
+  }, [stopPreview]);
 
   const onClear = useCallback(() => setSelectedNotes([]), [setSelectedNotes]);
 
   return (
-    <div className={moduleStyles.chordPanelContainer}>
-      <div className={moduleStyles.optionsRow}>
-        <select
-          value={instrument}
-          onChange={event => setInstrument(event.target.value)}
-          className={moduleStyles.dropdown}
-        >
-          {instruments.map(([name, value]) => (
-            <option key={value} value={value}>
-              {name}
-            </option>
-          ))}
-        </select>
-        <select
-          value={playStyle}
-          onChange={event => setPlayStyle(event.target.value as PlayStyle)}
-          className={moduleStyles.dropdown}
-        >
-          {styleDropdownOptions.map(([playStyle, label]) => (
-            <option key={playStyle} value={playStyle}>
-              {label}
-            </option>
-          ))}
-        </select>
+    <FocusLock>
+      <div className={moduleStyles.chordPanelContainer}>
+        <div className={moduleStyles.optionsRow}>
+          <select
+            value={instrument}
+            // Stand-in for `disabled` while loading — the native attribute
+            // blurs the select and closes Blockly's DropDownDiv.
+            onChange={event => {
+              if (isLoading) {
+                return;
+              }
+              setInstrument(event.target.value);
+            }}
+            onKeyDown={event => {
+              if (isLoading && event.key !== 'Tab') {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+            }}
+            aria-disabled={isLoading}
+            data-loading={isLoading}
+            className={moduleStyles.dropdown}
+          >
+            {instruments.map(([name, value]) => (
+              <option key={value} value={value}>
+                {name}
+              </option>
+            ))}
+          </select>
+          <select
+            value={playStyle}
+            onChange={event => setPlayStyle(event.target.value as PlayStyle)}
+            className={moduleStyles.dropdown}
+          >
+            {styleDropdownOptions.map(([playStyle, label]) => (
+              <option key={playStyle} value={playStyle}>
+                {label}
+              </option>
+            ))}
+          </select>
+        </div>
+        <Keybed
+          numOctaves={NUM_OCTAVES}
+          startOctave={START_OCTAVE}
+          selectedNotes={selectedNotes}
+          onPressKey={onPressKey}
+          isDisabled={isDisabled || isLoading}
+          isVertical={false}
+        />
+        <NoteGrid
+          numOctaves={NUM_OCTAVES}
+          startOctave={START_OCTAVE}
+          selectedNotes={selectedNotes}
+          playStyle={playStyle}
+          instrument={instrument}
+        />
+        <LoadingOverlay show={isLoading} />
+        <PreviewControls
+          enabled={selectedNotes.length > 0 && !isLoading}
+          playPreview={playPreview}
+          onClickClear={onClear}
+          cancelPreviews={stopPreview}
+          isPlayingPreview={isPlayingPreview}
+        />
       </div>
-      <Keybed
-        numOctaves={NUM_OCTAVES}
-        startOctave={START_OCTAVE}
-        selectedNotes={selectedNotes}
-        onPressKey={onPressKey}
-        isDisabled={isDisabled}
-      />
-      <NoteGrid
-        numOctaves={NUM_OCTAVES}
-        startOctave={START_OCTAVE}
-        selectedNotes={selectedNotes}
-        playStyle={playStyle}
-        instrument={instrument}
-      />
-      <PreviewControls
-        enabled={selectedNotes.length > 0}
-        playPreview={playPreview}
-        onClickClear={onClear}
-        cancelPreviews={cancelPreviews}
-      />
-    </div>
-  );
-};
-
-interface KeybedProps {
-  numOctaves: number;
-  startOctave: number;
-  selectedNotes: number[];
-  onPressKey: (note: number) => void;
-  isDisabled: boolean;
-}
-
-const Keybed: React.FunctionComponent<KeybedProps> = ({
-  numOctaves,
-  startOctave,
-  selectedNotes,
-  onPressKey,
-  isDisabled,
-}) => {
-  const keys = [];
-  const startingNote = startOctave * 12;
-
-  for (
-    let currentNote = startingNote;
-    currentNote < startingNote + numOctaves * 12;
-    currentNote++
-  ) {
-    keys.push(
-      <Key
-        key={currentNote}
-        type={isBlackKey(currentNote) ? 'black' : 'white'}
-        isDisabled={isDisabled}
-        isSelected={selectedNotes.includes(currentNote)}
-        onClick={() => onPressKey(currentNote)}
-        text={!isBlackKey(currentNote) ? getNoteName(currentNote) : undefined}
-      />
-    );
-  }
-
-  return (
-    <div id="keypad" className={moduleStyles.keybed}>
-      {keys}
-    </div>
-  );
-};
-
-interface KeyProps {
-  type: 'white' | 'black';
-  isSelected: boolean;
-  isDisabled: boolean;
-  onClick: () => void;
-  text?: string;
-}
-
-const Key: React.FunctionComponent<KeyProps> = ({
-  type,
-  isSelected,
-  isDisabled,
-  onClick,
-  text,
-}: KeyProps) => {
-  return (
-    <div
-      className={classNames(
-        moduleStyles.key,
-        isDisabled && moduleStyles.disabled,
-        isSelected && moduleStyles.selected,
-        type === 'white' && moduleStyles.whiteKey,
-        type === 'black' && moduleStyles.blackKey
-      )}
-      onClick={isSelected || !isDisabled ? onClick : undefined}
-    >
-      <div className={moduleStyles.noteLabel}>{text}</div>
-    </div>
+    </FocusLock>
   );
 };
 

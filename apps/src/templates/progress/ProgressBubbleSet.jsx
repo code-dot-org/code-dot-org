@@ -1,14 +1,15 @@
 /**
  * An ordered set of progress bubbles.
  */
-import React from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
-import ProgressBubble from './ProgressBubble';
-import color from '@cdo/apps/util/color';
-import {levelWithProgressType} from './progressTypes';
-import {DOT_SIZE, DIAMOND_DOT_SIZE} from './progressStyles';
+import React from 'react';
 import {connect} from 'react-redux';
+
+import ProgressBubble from './ProgressBubble';
+import {DOT_SIZE} from './progressStyles';
+import {levelWithProgressType} from './progressTypes';
+
+import moduleStyles from './progress-bubble-set.module.scss';
 
 // Deprecated in favor of ProgressTableDetailCell
 // component will be removed as part of https://codedotorg.atlassian.net/browse/LP-1606
@@ -36,17 +37,14 @@ class ProgressBubbleSet extends React.Component {
 
     // Adjust background styles if locale is RTL
     const backgroundFirstStyle = isRtl
-      ? styles.backgroundLast
-      : styles.backgroundFirst;
+      ? inlineStyles.backgroundLast
+      : inlineStyles.backgroundFirst;
     const backgroundLastStyle = isRtl
-      ? styles.backgroundFirst
-      : styles.backgroundLast;
+      ? inlineStyles.backgroundFirst
+      : inlineStyles.backgroundLast;
 
     const backgroundStyleProp = {
-      ...styles.background,
-      ...(level.isConceptLevel && styles.backgroundDiamond),
-      ...(isSublevel && styles.backgroundSublevel),
-      ...(level.isUnplugged && styles.backgroundPill),
+      ...inlineStyles.background,
       ...(!isSublevel && index === 0 && backgroundFirstStyle),
       ...(!isSublevel &&
         !level.sublevels &&
@@ -55,14 +53,12 @@ class ProgressBubbleSet extends React.Component {
     };
 
     const containerStyleProp = {
-      ...styles.container,
-      ...(level.isUnplugged && styles.pillContainer),
-      ...(level.isConceptLevel && styles.diamondContainer),
-      ...(isSublevel && styles.containerSublevel),
+      ...inlineStyles.container,
+      ...(level.isUnplugged && inlineStyles.pillContainer),
     };
 
     return (
-      <div style={styles.withBackground} key={index}>
+      <div className={moduleStyles.withBackground} key={index}>
         <div style={backgroundStyleProp} />
         <div style={containerStyleProp}>
           <ProgressBubble
@@ -83,7 +79,7 @@ class ProgressBubbleSet extends React.Component {
   render() {
     const {levels, style, showSublevels} = this.props;
     return (
-      <div style={{...styles.main, ...style}}>
+      <div className={moduleStyles.main} style={style}>
         {levels.map((level, index) => {
           return (
             <span key={index}>
@@ -105,33 +101,20 @@ class ProgressBubbleSet extends React.Component {
   }
 }
 
-const styles = {
-  main: {
-    position: 'relative',
-    display: 'inline-block',
-  },
-  withBackground: {
-    display: 'inline-block',
-    position: 'relative',
-  },
+// Height of a bubble row: full circle bubble (dot plus 2px borders) plus its
+// 3px top and bottom margins. Every bubble — pills, diamonds, circles and
+// small sublevel dots alike — is centered within this height so all shapes
+// share one vertical center.
+const ROW_HEIGHT = DOT_SIZE + 4 + 6;
+
+const inlineStyles = {
   background: {
     height: 10,
-    backgroundColor: color.lighter_gray,
+    backgroundColor: 'var(--background-neutral-quinary)',
     position: 'absolute',
     left: 0,
     right: 0,
-    // dot size, plus borders, plus margin, minus our height of "background"
-    top: (DOT_SIZE + 4 + 6 - 10) / 2,
-  },
-  backgroundDiamond: {
-    top: (DIAMOND_DOT_SIZE + 4 + 12 - 10) / 2,
-  },
-  backgroundPill: {
-    // pill has height of 18, border of 2, padding of 6, margin of 3
-    top: (18 + 4 + 12 + 6 - 10) / 2,
-  },
-  backgroundSublevel: {
-    top: 9,
+    top: (ROW_HEIGHT - 10) / 2,
   },
   backgroundFirst: {
     left: 15,
@@ -141,18 +124,12 @@ const styles = {
   },
   container: {
     position: 'relative',
-  },
-  containerSublevel: {
-    top: 5,
-  },
-  diamondContainer: {
-    // Height needed only by IE to get diamonds to line up properly
-    height: 36,
+    height: ROW_HEIGHT,
+    display: 'flex',
+    alignItems: 'center',
   },
   pillContainer: {
     marginRight: 2,
-    // Height needed only by IE to get pill to line up properly
-    height: 37,
   },
 };
 
@@ -160,4 +137,4 @@ export const UnconnectedProgressBubbleSet = ProgressBubbleSet;
 
 export default connect(state => ({
   isRtl: state.isRtl,
-}))(Radium(ProgressBubbleSet));
+}))(ProgressBubbleSet);

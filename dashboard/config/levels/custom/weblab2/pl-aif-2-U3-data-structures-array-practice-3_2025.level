@@ -1,0 +1,67 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-01-20T05:14:15.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##Build your Favorites\r\n\r\n**1. Declare the Array -** In `script.js`, complete the code declaring the favorites array by filling it with at least 3 related string values (e.g., movies, foods).\r\n\r\n**2. Display Indexed Items -** Use `document.getElementById()` and indices `0`, `1`, and `2` to display the first three items of the array into the elements with IDs: `item0`, `item1`, and `item2`.\r\n\r\n**3. Show Total Count -** Use the `.length` property of the array to display the total number of items in the element with the ID count.\r\n\r\n**4. Select and Display One Favorite -** Choose any index (e.g., `1` or `2`) and display that single chosen item into the element with the ID favorite.\r\n\r\n**Success Check:** Your script is working if:\r\n\r\n- Three specific items from your array are visible under \"The First Three.\"\r\n- The total number of favorites is correctly displayed using .length.\r\n- One chosen favorite item is displayed under \"Selected Favorite.\"\r\n\r\n---\r\n\r\nYou may use **AI** to check ID matches, request an example array, or debug \"undefined\" errors,\r\n",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>My Favorites</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n\n  <header>\n    <h1>My Favorites List</h1>\n\n  <main>\n    <h2>The First Three</h2>\n    <p id=\"item0\">Item 1 Placeholder</p>\n    <p id=\"item1\">Item 2 Placeholder</p>\n    <p id=\"item2\">Item 3 Placeholder</p>\n\n    <h2>Selected Favorite</h2>\n    <p id=\"favorite\">Your chosen favorite will appear here.</p>\n\n    <h2>Total Count</h2>\n    <p id=\"count\">Total number of favorites: 0</p>\n  </main>\n\n  <script src=\"script.js\" defer></script>\n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  font-family: Arial, sans-serif;\n  padding: 20px;\n  background-color: #f4f4f9;\n  color: #333;\n}\n\nheader {\n  margin-bottom: 20px;\n}\n\nh1 {\n  color: #2c3e50;\n}\n\nh2 {\n  border-bottom: 2px solid #ccc;\n  padding-bottom: 5px;\n  margin-top: 30px;\n  color: #34495e;\n}\n\np {\n  padding: 5px 0;\n  margin: 5px 0;\n  background-color: #fff;\n  border-left: 5px solid #3498db;\n  padding-left: 10px;\n}\n\n#favorite {\n  font-weight: bold;\n  font-size: 1.1em;\n  border-left-color: #e74c3c;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "\nconst favorites = [];\n\n\ndocument.getElementById(\"item0\").textContent = \"\"; \n\ndocument.getElementById(\"item1\").textContent = \"\";\n\ndocument.getElementById(\"item2\").textContent =  \"\";\n\ndocument.getElementById(\"count\").textContent =\n  \"Total number of favorites: \" + \"\";\n\n\nconst favoriteIndex = 0; \ndocument.getElementById(\"favorite\").textContent =\n  \"My selected favorite is: \" +  \"\";",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "3"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n",
+    "name_suffix": "_2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-01-20T05:14:15.291+00:00\",\"changed\":[\"cloned from \\\"pl-aif-2-U3-data-structures-array-practice-3\\\"\"],\"cloned_from\":\"pl-aif-2-U3-data-structures-array-practice-3\"}]"
+}]]></config>
+</Weblab2>

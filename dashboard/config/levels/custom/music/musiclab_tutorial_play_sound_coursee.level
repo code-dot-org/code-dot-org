@@ -1,0 +1,75 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2024-06-03T22:50:39.000Z",
+  "level_num": "custom",
+  "user_id": 976,
+  "properties": {
+    "encrypted": "false",
+    "background": "music-black",
+    "long_instructions": "####Play a Sound\r\n\r\n\r\n\r\n1. Drag the [play](#clickable=play-sound-block) block and connect it under [when run](#clickable=when-run-block). \r\n2. Then press [Run](#clickable=run-button).",
+    "level_data": {
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when_run_simple2",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
+      "sounds": {
+        "beats": [
+          "drum_kit_disco",
+          "drum_beat_edm",
+          "drum_beat_club",
+          "drum_beat_knock",
+          "drum_kit_pop"
+        ]
+      },
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ]
+        },
+        "type": "flyout"
+      }
+    },
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "name_suffix": "_coursee",
+    "validations": [
+      {
+        "conditions": [
+          {
+            "name": "played_sounds_together",
+            "value": 1
+          }
+        ],
+        "message": "Nice work.  You played a sound!",
+        "next": true,
+        "key": "musiclab_intro_play_sound_34517aac-bcf5-4183-a71d-fafd0498e499"
+      },
+      {
+        "message": "You found the Run button! Now, drag the [play](#clickable=play-sound-block) block and connect it under [when run](#clickable=when-run-block). ",
+        "key": "musiclab_intro_play_sound_10152a9d-29b4-46e9-9080-9ad7a8937433",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-06-03T22:50:39.664+00:00\",\"changed\":[\"cloned from \\\"musiclab_tutorial_play_sound_course-d\\\"\"],\"cloned_from\":\"musiclab_tutorial_play_sound_course-d\"}]"
+}]]></config>
+  <blocks/>
+</Music>

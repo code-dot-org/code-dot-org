@@ -1,10 +1,20 @@
+import {MuiDialog as Dialog} from '@code-dot-org/component-library/dialog';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {createUuid, makeEnum} from '@cdo/apps/utils';
 import {connect} from 'react-redux';
+
+import HiddenUploader from '@cdo/apps/code-studio/components/HiddenUploader';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
+import {AnimationProps} from '@cdo/apps/p5lab/shapes';
+import FlaggedImageModal from '@cdo/apps/sharedComponents/FlaggedImageModal';
 import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
-var msg = require('@cdo/locale');
-import styles from './styles';
+import HttpClient from '@cdo/apps/util/HttpClient';
+import {moderateImage} from '@cdo/apps/util/moderateImage';
+import {createUuid, makeEnum} from '@cdo/apps/utils';
+
 import {
   hide,
   pickNewAnimation,
@@ -13,14 +23,32 @@ import {
   handleUploadComplete,
   handleUploadError,
   saveSelectedAnimations,
+  setUploadsEnabled,
 } from '../redux/animationPicker';
+
 import AnimationPickerBody from './AnimationPickerBody.jsx';
-import HiddenUploader from '@cdo/apps/code-studio/components/HiddenUploader';
-import {AnimationProps} from '@cdo/apps/p5lab/shapes';
-import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
+import styles from './styles';
+
+import style from './animation-picker-body.module.scss';
+
+var msg = require('@cdo/locale');
 // Some operating systems round their file sizes, so max size is 101KB even
 // though our error message says 100KB, to help users avoid confusion.
 const MAX_UPLOAD_SIZE = 101000;
+
+let cachedSelectedAnimationsByUrl = null;
+let cachedSelectedAnimationsList = [];
+
+function getSelectedAnimations(state) {
+  const selectedAnimationsByUrl = state.animationPicker.selectedAnimations;
+  if (selectedAnimationsByUrl === cachedSelectedAnimationsByUrl) {
+    return cachedSelectedAnimationsList;
+  }
+
+  cachedSelectedAnimationsByUrl = selectedAnimationsByUrl;
+  cachedSelectedAnimationsList = Object.values(selectedAnimationsByUrl);
+  return cachedSelectedAnimationsList;
+}
 
 export const PICKER_TYPE = makeEnum(
   'spritelab',
@@ -31,7 +59,7 @@ export const PICKER_TYPE = makeEnum(
 
 /**
  * Dialog used for finding/selecting/uploading one or more assets to add to a
- * GameLab project.
+ * Game Lab/Sprite Lab project or curriculum levels.
  *
  * When opened, the picker can have one of two goals:
  *   NEW_ANIMATION - the picked assets become new animations in the project.
@@ -56,6 +84,7 @@ class AnimationPicker extends React.Component {
     hideCostumes: PropTypes.bool.isRequired,
     pickerType: PropTypes.oneOf(Object.values(PICKER_TYPE)).isRequired,
     shouldWarnOnAnimationUpload: PropTypes.bool.isRequired,
+    projectType: PropTypes.string,
 
     // Provided via Redux
     visible: PropTypes.bool.isRequired,
@@ -71,11 +100,33 @@ class AnimationPicker extends React.Component {
     playAnimations: PropTypes.bool.isRequired,
     onAnimationSelectionComplete: PropTypes.func.isRequired,
     uploadWarningShowing: PropTypes.bool.isRequired,
+    uploadsEnabled: PropTypes.bool.isRequired,
+    disableUploads: PropTypes.func.isRequired,
   };
 
   state = {
     exitingDialog: false,
+    showFlaggedModal: false,
+    pendingUploadData: null,
+    flaggedModalError: null,
+    // Stable for the duration of one open cycle; regenerated on each
+    // visible false ->true transition so subsequent opens get a fresh URL.
+    uploadUrl:
+      '/v3/animations/' + this.props.channelId + '/' + createUuid() + '.png',
   };
+
+  componentDidUpdate(prevProps) {
+    if (!prevProps.visible && this.props.visible) {
+      this.setState({
+        uploadUrl:
+          '/v3/animations/' +
+          this.props.channelId +
+          '/' +
+          createUuid() +
+          '.png',
+      });
+    }
+  }
 
   onUploadClick = () => this.refs.uploader.openFileChooser();
 
@@ -106,7 +157,11 @@ class AnimationPicker extends React.Component {
         <h1>{msg.animationPicker_error({message: this.props.uploadError})}</h1>
       );
     } else if (this.props.uploadInProgress) {
-      return <h1 style={styles.title}>{msg.animationPicker_uploading()}</h1>;
+      return (
+        <Typography variant="h4" component="h1" className={style.title}>
+          {msg.animationPicker_uploading()}
+        </Typography>
+      );
     }
 
     const contextName = this.contextSpecificName();
@@ -128,35 +183,115 @@ class AnimationPicker extends React.Component {
           selectedAnimations={this.props.selectedAnimations}
           pickerType={this.props.pickerType}
           shouldWarnOnAnimationUpload={this.props.shouldWarnOnAnimationUpload}
+          uploadsEnabled={this.props.uploadsEnabled}
+          projectType={this.props.projectType}
         />
-        <StylizedBaseDialog
-          title={msg.animationPicker_leaveSelectionTitle()}
-          isOpen={this.state.exitingDialog}
-          backdropStyle={{
-            top: -15,
-            right: -15,
-            bottom: -15,
-            left: -15,
-          }}
-          hideCloseButton={true}
-          handleClose={() => {
-            this.setState({exitingDialog: false});
-          }}
-          cancellationButtonText={msg.animationPicker_discardSelection()}
-          handleCancellation={() => {
-            this.props.onClose();
-            this.setState({exitingDialog: false});
-          }}
-          confirmationButtonText={msg.animationPicker_returnToLibrary()}
-          handleConfirmation={() => {
-            this.setState({exitingDialog: false});
-          }}
-          style={styles.dialog}
-          body={<p>{msg.animationPicker_leaveSelectionText({contextName})}</p>}
-        />
+        {this.state.exitingDialog && (
+          <Dialog
+            title={msg.animationPicker_leaveSelectionTitle()}
+            description={msg.animationPicker_leaveSelectionText({contextName})}
+            primaryButtonProps={{
+              children: msg.animationPicker_returnToLibrary(),
+              onClick: () => this.setState({exitingDialog: false}),
+            }}
+            secondaryButtonProps={{
+              children: msg.animationPicker_discardSelection(),
+              onClick: () => {
+                this.props.onClose();
+                this.setState({exitingDialog: false});
+              },
+            }}
+          />
+        )}
       </div>
     );
   }
+
+  /**
+   * Send the uploaded image file to be moderated. Then continue with uploadStart.
+   */
+  handleModeratedUploadStart = async data => {
+    const file = data?.files?.[0];
+    if (!file) {
+      console.error('No file found in upload data.');
+      return;
+    }
+    if (file.size >= MAX_UPLOAD_SIZE) {
+      this.props.onUploadError(msg.animationPicker_unsupportedSize());
+      return;
+    }
+    if (file.type !== 'image/png' && file.type !== 'image/jpeg') {
+      this.props.onUploadError(msg.animationPicker_unsupportedType());
+      return;
+    }
+
+    this.setState({pendingUploadData: data});
+
+    try {
+      const moderationStatus = await moderateImage(
+        file,
+        this.props.projectType,
+        {
+          uploaderType: 'AnimationPicker',
+          assetUrl: this.state.uploadUrl,
+        }
+      );
+      if (moderationStatus === 'flagged') {
+        this.setState({showFlaggedModal: true});
+      } else {
+        this.props.onUploadStart(data);
+      }
+    } catch (err) {
+      MetricsReporter.logError('Error moderating uploaded image: ' + err);
+      this.props.onUploadError(msg.animationPicker_uploadingError());
+    }
+  };
+
+  handleAcceptFlaggedImage = () => {
+    const {pendingUploadData} = this.state;
+    if (!pendingUploadData) return;
+
+    const body = JSON.stringify({type: 'flag'});
+    HttpClient.post(
+      `/v3/channels/${this.props.channelId}/abuse/image`,
+      body,
+      true,
+      {'Content-Type': 'application/json; charset=UTF-8'}
+    )
+      .then(response => response.json())
+      .then(() => {
+        this.props.onUploadStart(pendingUploadData);
+        this.setState({
+          showFlaggedModal: false,
+          pendingUploadData: null,
+        });
+        this.props.disableUploads();
+        analyticsReporter.sendEvent(EVENTS.ACCEPT_FLAGGED_CUSTOM_IMAGE, {
+          UploaderType: 'Animation Picker',
+          ProjectType: this.props.projectType,
+        });
+      })
+      .catch(err => {
+        this.setState({
+          showFlaggedModal: true,
+          flaggedModalError: msg.animationPicker_uploadingError(),
+        });
+        MetricsReporter.logError('Update project abuse error: ' + err);
+      });
+  };
+
+  handleCancelFlaggedImage = () => {
+    this.setState({
+      showFlaggedModal: false,
+      pendingUploadData: null,
+      flaggedModalError: null,
+    });
+    analyticsReporter.sendEvent(EVENTS.CANCEL_FLAGGED_CUSTOM_IMAGE, {
+      UploaderType: 'Animation Picker',
+      ProjectType: this.props.projectType,
+    });
+    this.props.onClose(); // Close the entire AnimationPicker
+  };
 
   render() {
     if (!this.props.visible) {
@@ -172,21 +307,24 @@ class AnimationPicker extends React.Component {
         }
         fullWidth={true}
         style={styles.dialog}
+        bodyClassName={style.pickerDialog}
       >
         <HiddenUploader
+          key={this.state.uploadUrl}
           ref="uploader"
-          toUrl={
-            '/v3/animations/' +
-            this.props.channelId +
-            '/' +
-            createUuid() +
-            '.png'
-          }
+          toUrl={this.state.uploadUrl}
           allowedExtensions={this.props.allowedExtensions}
-          onUploadStart={this.props.onUploadStart}
+          onUploadStart={this.handleModeratedUploadStart}
           onUploadDone={this.props.onUploadDone}
           onUploadError={this.props.onUploadError}
         />
+        {this.state.showFlaggedModal && (
+          <FlaggedImageModal
+            onAccept={this.handleAcceptFlaggedImage}
+            onCancel={this.handleCancelFlaggedImage}
+            errorMessage={this.state.flaggedModalError}
+          />
+        )}
         {this.renderVisibleBody()}
       </BaseDialog>
     );
@@ -203,8 +341,9 @@ export default connect(
     uploadInProgress: state.animationPicker.uploadInProgress,
     uploadError: state.animationPicker.uploadError,
     playAnimations: !state.pageConstants.allAnimationsSingleFrame,
-    selectedAnimations: Object.values(state.animationPicker.selectedAnimations),
+    selectedAnimations: getSelectedAnimations(state),
     uploadWarningShowing: state.animationPicker.uploadWarningShowing,
+    uploadsEnabled: state.animationPicker.uploadsEnabled,
   }),
   dispatch => ({
     onClose() {
@@ -217,17 +356,8 @@ export default connect(
       dispatch(pickLibraryAnimation(animation));
     },
     onUploadStart(data) {
-      if (data.files[0].size >= MAX_UPLOAD_SIZE) {
-        dispatch(handleUploadError(msg.animationPicker_unsupportedSize()));
-      } else if (
-        data.files[0].type === 'image/png' ||
-        data.files[0].type === 'image/jpeg'
-      ) {
-        dispatch(beginUpload(data.files[0].name));
-        data.submit();
-      } else {
-        dispatch(handleUploadError(msg.animationPicker_unsupportedType()));
-      }
+      dispatch(beginUpload(data.files[0].name));
+      data.submit();
     },
     onUploadDone(result) {
       dispatch(handleUploadComplete(result));
@@ -237,6 +367,9 @@ export default connect(
     },
     onAnimationSelectionComplete() {
       dispatch(saveSelectedAnimations());
+    },
+    disableUploads() {
+      dispatch(setUploadsEnabled(false));
     },
   })
 )(AnimationPicker);

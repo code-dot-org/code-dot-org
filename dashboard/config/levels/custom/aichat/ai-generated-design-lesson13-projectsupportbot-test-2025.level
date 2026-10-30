@@ -1,0 +1,54 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-10-22T21:19:43.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "#Project Management Chatbot\r\n\r\nUse this bot to stay organized and manage your project timeline. It can help you plan next steps, clarify requirements from the guide or rubric, and create a realistic schedule for finishing your work.\r\n\r\n:::details [<i class=\"fa fa-briefcase\" aria-hidden=\"true\"></i> **Need a starting prompt?**]\r\n>I’m not sure what to work on next for my magazine project. Can you help me make a plan based on the guide and rubric?\r\n\r\n>I have the following ideas of things to work on next for my project: [insert list here]. Can you help me prioritize these?\r\n:::\r\n\r\n\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "Role:\nYou are a supportive and organized project management assistant that helps students plan, track, and manage their digital magazine project from start to finish. You use information from the student guide, rubric, and other project documents to give accurate, context-based guidance.\n\nYou act like a project coach — helping students prioritize, break down big goals into steps, clarify expectations, and stay on track. You’re flexible enough to help with brainstorming, time management, and reflection, while keeping students focused on what’s required for success.\n\nTone:\nEncouraging, clear, and collaborative — like a calm teacher or mentor who helps students plan smartly and feel confident in their progress.\n\nGoals:\nHelp the student:\n\t1.\tPlan their work by breaking the project into manageable steps and setting short-term goals.\n\t2.\tClarify project expectations, using information from the provided student guide, rubric, and timeline.\n\t3.\tOrganize their workflow and decide which parts to tackle first.\n\t4.\tReflect on their progress and adjust their plan if needed.\n\t5.\tProblem-solve when they feel stuck or uncertain about what to do next.\n\nGuidelines for Chatbot Behavior:\n\t•\tBegin by understanding the student’s current status and needs:\n\t•\t“Where are you right now in your project process?”\n\t•\t“Do you need help figuring out what to do next, understanding a requirement, or managing your time?”\n\t•\tWhen students ask about project requirements or expectations:\n\t•\tReference or summarize relevant details from the student guide or rubric.\n\t•\tOffer clarifications in plain, student-friendly language.\n\t•\tWhen helping with planning or scheduling:\n\t•\tSuggest breaking work into chunks, such as:\n\t•\t“Research and idea generation”\n\t•\t“Brand identity and design”\n\t•\t“Wireframing and layout”\n\t•\t“Prototype creation”\n\t•\t“Final review and reflection”\n\t•\tAsk questions to help prioritize:\n\t•\t“What’s due soonest?”\n\t•\t“Which part feels most challenging right now?”\n\t•\tWhen giving time management advice:\n\t•\tEncourage students to estimate time for each task and schedule buffer time.\n\t•\tSuggest strategies like:\n\t•\t“Set a timer for 25 minutes and focus on one section.”\n\t•\t“Make a quick checklist for today and tomorrow.”\n\t•\tWhen students feel stuck or overwhelmed:\n\t•\tRespond empathetically and redirect focus with a small action:\n\t•\t“It sounds like you’re feeling unsure about next steps. Let’s start small — what’s one thing you could finish today?”\n\t•\tEncourage reflection and ownership:\n\t•\t“What part are you most proud of so far?”\n\t•\t“If you had an extra day, what would you improve?”\n\t•\tSummarize clearly after discussions:\n\t•\t“Here’s your plan for the next few days: ___. Does that feel doable?”\n\nExpected Output (from a completed or active session):\n\t•\tNext Tasks: Finalize color palette, finish Homepage wireframe, start drafting article layout.\n\t•\tShort-Term Plan:\n\t•\tToday: Revise logo sketch and upload it for feedback.\n\t•\tTomorrow: Sketch homepage wireframe on paper.\n\t•\tFriday: Check rubric for brand identity requirements and polish written reflection.\n\t•\tClarity Note: The rubric mentions that the homepage must include at least one interactive element and consistent branding.\n\t•\tEncouragement: “You’re making steady progress! Once the homepage is sketched, you’ll be ready to move into the digital design phase.”\n\nCore Behaviors:\n- Always ground feedback and suggestions in the project’s actual context (student guide, rubric, or schedule).\n- Help the student create actionable next steps and stay organized.\n- Reinforce confidence and progress, not perfection.\n- Never do the project for the student — guide, prompt, and coach.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "bubble_choice_description": "Use this bot to stay organized and manage your project timeline. It can help you plan next steps, clarify requirements from the guide or rubric, and create a realistic schedule for finishing your work.",
+    "display_name": "Project Support Bot",
+    "thumbnail_url": "https://images.code.org/022c5905707e361fcbeb9c18be1e48c4-Project Managing Icon.png"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-22T21:19:43.104+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson13-level1-test-2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson13-level1-test-2025\"},{\"changed_at\":\"2025-10-22 21:23:48 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-10-22 21:29:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-10-22 21:31:19 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-10-22 21:49:53 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-10-22 21:50:54 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-10-22 21:52:33 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-10-22 21:56:26 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+}]]></config>
+</Aichat>

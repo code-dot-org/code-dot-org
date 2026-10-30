@@ -1,14 +1,20 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {
+  IconButton as MuiIconButton,
+  Typography as MuiTypography,
+} from '@mui/material';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import applabMsg from '@cdo/applab/locale';
-import msg from '@cdo/locale';
 import styleConstants from '@cdo/apps/styleConstants';
-import commonStyles from '../commonStyles';
-import color from '../util/color';
+import msg from '@cdo/locale';
+
+import SettingsCog from '../code-studio/components/SettingsCog';
 import PaneHeader, {PaneButton, PaneSection} from '../templates/PaneHeader';
-import SettingsCog from '../lib/ui/SettingsCog';
-import ProjectTemplateWorkspaceIcon from '../templates/ProjectTemplateWorkspaceIcon';
-import classNames from 'classnames';
+import ProjectTemplateWorkspaceIcon from '../templates/ProjectTemplateWorkspaceIconV2';
+import color from '../util/color';
 
 export default class DesignModeHeaders extends React.Component {
   static propTypes = {
@@ -31,7 +37,8 @@ export default class DesignModeHeaders extends React.Component {
       padding: 0,
       margin: 0,
       top: 0,
-      left: 8,
+      left: this.props.isRtl ? '' : 8,
+      right: this.props.isRtl ? 8 : '',
       border: 'none',
       boxShadow: 'none',
       backgroundColor: 'transparent',
@@ -53,26 +60,45 @@ export default class DesignModeHeaders extends React.Component {
 
   hideToolboxIcon() {
     return (
-      <button
-        className="hide-toolbox-icon"
+      <MuiIconButton
         type="button"
-        style={[commonStyles.hidden, this.chevronStyle(true)]}
+        variant="outlined"
+        color="secondary"
+        size="extraSmall"
+        aria-label="Hide the toolbox"
+        className="hide-toolbox-icon"
         onClick={this.onToggleToolbox}
+        sx={{
+          borderRadius: '50%',
+          height: '1rem',
+          width: '1rem',
+          '& > i': {transform: 'translateY(1px)'},
+        }}
       >
-        <i className="fa fa-chevron-circle-right" />
-      </button>
+        <FontAwesomeV6Icon iconName="chevron-left" iconStyle="solid" />
+      </MuiIconButton>
     );
   }
 
   showToolboxIcon() {
     return (
-      <button
+      <MuiIconButton
         type="button"
-        style={[commonStyles.hidden, this.chevronStyle(false)]}
+        variant="outlined"
+        color="secondary"
+        size="extraSmall"
+        aria-label="Show the toolbox"
         className="show-toolbox-icon"
+        onClick={this.onToggleToolbox}
+        sx={{
+          borderRadius: '50%',
+          height: '1rem',
+          width: '1rem',
+          '& > i': {transform: 'translateY(1px)'},
+        }}
       >
-        <i className="fa fa-chevron-circle-right" />
-      </button>
+        <FontAwesomeV6Icon iconName="chevron-right" iconStyle="solid" />
+      </MuiIconButton>
     );
   }
 
@@ -81,24 +107,37 @@ export default class DesignModeHeaders extends React.Component {
       toolboxHeader: {
         display: this.props.isToolboxVisible ? 'flex' : 'none',
         justifyContent: 'space-between',
-        width: 270,
-        borderRight: '1px solid gray',
-        float: 'left',
+        alignItems: 'center',
+        width: 271,
+        borderLeft: this.props.isRtl
+          ? '1px solid var(--borders-neutral-strong)'
+          : '',
+        borderRight: this.props.isRtl
+          ? ''
+          : '1px solid var(--borders-neutral-strong)',
+        paddingLeft: '.5rem',
+        paddingRight: '.5rem',
+        boxSizing: 'border-box',
+        gap: '.5rem',
       },
       showToolboxHeader: {
-        float: 'left',
         display: this.props.isToolboxVisible ? 'none' : 'flex',
+        alignItems: 'center',
         justifyContent: 'space-between',
-        paddingLeft: 10,
+        paddingLeft: '.5rem',
+        paddingRight: '.5rem',
+        boxSizing: 'border-box',
+        gap: '.5rem',
       },
       showToolboxClickable: {
-        marginLeft: 18,
+        marginLeft: this.props.isRtl ? '' : 18,
+        marginRight: this.props.isRtl ? 18 : '',
         ':hover': {
           color: color.white,
         },
       },
       iconContainer: {
-        float: 'right',
+        float: this.props.isRtl ? 'left' : 'right',
         marginRight: 10,
         marginLeft: 10,
         height: '100%',
@@ -127,7 +166,6 @@ export default class DesignModeHeaders extends React.Component {
       <PaneHeader
         id="design-headers"
         dir={this.props.isRtl ? 'rtl' : 'ltr'}
-        hasFocus={hasFocus}
         style={{color: 'white'}}
       >
         <PaneSection
@@ -139,7 +177,14 @@ export default class DesignModeHeaders extends React.Component {
           style={styles.toolboxHeader}
         >
           <span>{this.hideToolboxIcon()}</span>
-          <span>{applabMsg.designToolboxHeader()}</span>
+          <MuiTypography
+            variant="body4"
+            sx={{
+              color: 'var(--text-neutral-white-fixed)',
+            }}
+          >
+            {applabMsg.designToolboxHeader()}
+          </MuiTypography>
           <span>{settingsCog}</span>
         </PaneSection>
         <PaneSection
@@ -149,38 +194,47 @@ export default class DesignModeHeaders extends React.Component {
           )}
           style={styles.showToolboxHeader}
         >
-          <span
-            key="show-toolbox-clickable"
-            className="workspace-header-clickable"
-            style={styles.showToolboxClickable}
-            onClick={this.onToggleToolbox}
-          >
-            {this.showToolboxIcon()}
-          </span>
+          {this.showToolboxIcon()}
           <span>{msg.showToolbox()}</span>
           <span>{settingsCog}</span>
         </PaneSection>
-        <PaneButton
-          id="design-mode-versions-header"
-          style={this.props.isRunning ? styles.runningVersionHistoryButton : {}}
-          iconClass="fa fa-clock-o"
-          label={msg.showVersionsHeader()}
-          headerHasFocus={hasFocus}
-          isRtl={this.props.isRtl}
-          onClick={this.props.handleVersionHistory}
-        />
         <PaneSection
           id="design-workspace-header"
           className={classNames(
             'workspace-header',
             this.props.isRunning && 'is-running'
           )}
+          style={{
+            alignItems: 'center',
+            flex: '1 1 0',
+            gap: '0.5rem',
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'center',
+          }}
         >
           {this.props.showProjectTemplateWorkspaceIcon && (
-            <ProjectTemplateWorkspaceIcon />
+            <ProjectTemplateWorkspaceIcon tooltipPlace="onTop" />
           )}
-          <span>{applabMsg.designWorkspaceHeader()}</span>
+          <MuiTypography
+            variant="body4"
+            id="workspace-header-span"
+            sx={{
+              color: 'var(--text-neutral-white-fixed)',
+            }}
+          >
+            {applabMsg.designWorkspaceHeader()}
+          </MuiTypography>
         </PaneSection>
+        <PaneButton
+          id="design-mode-versions-header"
+          style={this.props.isRunning ? styles.runningVersionHistoryButton : {}}
+          iconProps={{iconName: 'clock', iconStyle: 'regular'}}
+          label={msg.showVersionsHeader()}
+          headerHasFocus={hasFocus}
+          isRtl={this.props.isRtl}
+          onClick={this.props.handleVersionHistory}
+        />
       </PaneHeader>
     );
   }

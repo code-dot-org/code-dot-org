@@ -62,7 +62,7 @@
     "hint_prompt_attempts_threshold": "1",
     "display_name": "Animals Theme",
     "bubble_choice_description": "Create an interactive program with lots of sprites.",
-    "thumbnail_url": "https://code.org/images/csc/helloworld/helloworldanimalstheme.png",
+    "thumbnail_url": "/blockly/media/csc/helloworld/helloworldanimalstheme.png",
     "soft_buttons": [
       "leftButton",
       "rightButton",

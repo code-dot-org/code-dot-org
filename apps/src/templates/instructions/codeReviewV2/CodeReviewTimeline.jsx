@@ -1,15 +1,16 @@
-import React, {useEffect, useRef} from 'react';
 import PropTypes from 'prop-types';
+import React, {useEffect, useRef} from 'react';
+
+import {timelineElementType} from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewDataApi';
+import CodeReviewTimelineCommit from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineCommit';
 import CodeReviewTimelineElement, {
   codeReviewTimelineElementType,
 } from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineElement';
-import CodeReviewTimelineCommit from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineCommit';
 import CodeReviewTimelineReview from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineReview';
 import {
   commitShape,
   reviewShape,
 } from '@cdo/apps/templates/instructions/codeReviewV2/shapes';
-import {timelineElementType} from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewDataApi';
 
 // CodeReviewTimeline dynamically renders the timeline based on commit and code review data.
 // It first renders a created node, then renders either commit or review timeline elements

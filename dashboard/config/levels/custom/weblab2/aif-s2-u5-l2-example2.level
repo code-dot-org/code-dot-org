@@ -1,0 +1,57 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-12-16T15:19:05.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "**Snippet 2: The UI Blocking Problem (Why we need Async)**\r\n\r\nThis optional snippet demonstrates the opposite (a bad synchronous block), which causes the browser to freeze and proves why the asynchronous pattern is mandatory.",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "script.js",
+          "language": "js",
+          "contents": "const outputElement = document.getElementById('status-output');\n\noutputElement.innerHTML = '<p style=\"color: red;\">WARNING: Browser will be unresponsive for 3 seconds after click Run Code.</p>';\n\ndocument.getElementById('start-button').addEventListener('click', () => {\n\n    const startTime = Date.now();\n    let counter = 0;\n    \n    // This blocks the main thread completely.\n    while (Date.now() - startTime < 3000) { // Loops for 3 seconds\n        counter++;\n    }\n    \n    // This message only appears AFTER the 3-second freeze.\n    outputElement.innerHTML = `\n        <p>Loop finished after 3 seconds.</p>\n        <p style=\"color: red; font-weight: bold;\">NOTICE: The button was unresponsive during this entire time!</p>\n    `;\n    \n    // The key learning point is visual: nothing updates on the page until the loop is done.\n});",
+          "folderId": "0",
+          "active": true
+        },
+        "2": {
+          "id": "2",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n  </head>\n  <body>\n    <div id=\"status-output\" style=\"min-height: 100px; border: 1px solid #ccc; padding: 10px;\">\n    </div>\n    <br/>\n    <button id=\"start-button\"> ▶ Run Code</button>\n    <script src=\"script.js\"></script>\n  </body>\n</html>",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "2",
+        "1"
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2025-12-16T15:19:05.308+00:00\",\"changed\":[\"cloned from \\\"aif-s2-u5-l2-example1\\\"\"],\"cloned_from\":\"aif-s2-u5-l2-example1\"},{\"changed_at\":\"2025-12-16 15:28:11 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-12-16 15:30:26 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-12-16 15:30:49 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Weblab2>

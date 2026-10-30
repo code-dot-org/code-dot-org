@@ -3,21 +3,20 @@ require 'test_helper'
 class Pd::AttendanceTest < ActiveSupport::TestCase
   freeze_time
 
-  self.use_transactional_test_case = true
   setup_all do
-    @workshop = create :workshop
+    @workshop = create(:workshop)
     2.times {@workshop.sessions << create(:pd_session)}
 
-    @teacher1 = create :teacher
-    @teacher2 = create :teacher
-    create :pd_attendance, session: @workshop.sessions[0], teacher: @teacher1
-    create :pd_attendance, session: @workshop.sessions[0], teacher: @teacher2
-    create :pd_attendance, session: @workshop.sessions[1], teacher: @teacher1
+    @teacher1 = create(:teacher)
+    @teacher2 = create(:teacher)
+    create(:pd_attendance, session: @workshop.sessions[0], teacher: @teacher1)
+    create(:pd_attendance, session: @workshop.sessions[0], teacher: @teacher2)
+    create(:pd_attendance, session: @workshop.sessions[1], teacher: @teacher1)
 
-    @another_workshop = create :workshop
+    @another_workshop = create(:workshop)
     @another_workshop.sessions << create(:pd_session)
-    @unrelated_teacher = create :teacher
-    create :pd_attendance, session: @another_workshop.sessions[0], teacher: @unrelated_teacher
+    @unrelated_teacher = create(:teacher)
+    create(:pd_attendance, session: @another_workshop.sessions[0], teacher: @unrelated_teacher)
   end
 
   test 'for_teacher for_workshop' do
@@ -46,7 +45,7 @@ class Pd::AttendanceTest < ActiveSupport::TestCase
   end
 
   test 'unique constraint on pd_session_id and teacher_id prevents duplicates' do
-    attendance = create :pd_attendance
+    attendance = create(:pd_attendance)
     dupe = attendance.dup
 
     assert_raises ActiveRecord::RecordNotUnique do
@@ -55,7 +54,7 @@ class Pd::AttendanceTest < ActiveSupport::TestCase
   end
 
   test 'soft delete' do
-    attendance = create :pd_attendance
+    attendance = create(:pd_attendance)
     attendance.reload.destroy!
 
     assert attendance.reload.deleted?
@@ -64,7 +63,7 @@ class Pd::AttendanceTest < ActiveSupport::TestCase
   end
 
   test 'teacher or enrollment must be present' do
-    attendance = build :pd_attendance, teacher: nil, enrollment: nil
+    attendance = build(:pd_attendance, teacher: nil, enrollment: nil)
     refute attendance.valid?
     assert_equal ['Teacher or enrollment must be present.'], attendance.errors.full_messages
 
@@ -77,9 +76,9 @@ class Pd::AttendanceTest < ActiveSupport::TestCase
   end
 
   test 'enrollment is populated on save' do
-    teacher = create :teacher
-    enrollment = create :pd_enrollment, workshop: @workshop, user_id: teacher.id
-    attendance = build :pd_attendance, teacher: teacher, workshop: @workshop, session: @workshop.sessions.first
+    teacher = create(:teacher)
+    enrollment = create(:pd_enrollment, workshop: @workshop, user_id: teacher.id)
+    attendance = build(:pd_attendance, teacher: teacher, workshop: @workshop, session: @workshop.sessions.first)
 
     assert_nil attendance.enrollment
     assert attendance.save
@@ -88,20 +87,23 @@ class Pd::AttendanceTest < ActiveSupport::TestCase
   end
 
   test 'enrollment user is updated on save' do
-    old_account = create :teacher
-    new_account = create :teacher
-    enrollment = create :pd_enrollment, workshop: @workshop, user: old_account
-    attendance = build :pd_attendance, teacher: new_account, workshop: @workshop,
+    old_account = create(:teacher)
+    new_account = create(:teacher)
+    enrollment = create(:pd_enrollment, workshop: @workshop, user: old_account)
+    attendance = build(:pd_attendance, teacher: new_account, workshop: @workshop,
       session: @workshop.sessions.first, enrollment: enrollment
+)
 
     assert attendance.save
     assert_equal new_account, enrollment.reload.user
   end
 
   test 'resolve_enrollment' do
-    teacher = create :teacher
-    enrollment = create :pd_enrollment, workshop: @workshop, user_id: teacher.id, email: teacher.email_for_enrollments
-    attendance = create :pd_attendance, teacher: teacher, workshop: @workshop, session: @workshop.sessions.first
+    teacher = create(:teacher)
+    create(:pd_teacher_application, user: teacher, status: 'accepted')
+    alternate_email = teacher.alternate_email
+    enrollment = create(:pd_enrollment, workshop: @workshop, user_id: teacher.id, email: teacher.email)
+    attendance = create(:pd_attendance, teacher: teacher, workshop: @workshop, session: @workshop.sessions.first)
 
     # by user id
     assert_equal enrollment, attendance.resolve_enrollment
@@ -112,6 +114,10 @@ class Pd::AttendanceTest < ActiveSupport::TestCase
 
     # by email with deleted user
     teacher.destroy!
+    assert_equal enrollment, attendance.reload.resolve_enrollment
+
+    # by alternate email with deleted user
+    enrollment.update!(email: alternate_email)
     assert_equal enrollment, attendance.reload.resolve_enrollment
 
     # soft-deleted enrollments are still matched
@@ -125,8 +131,8 @@ class Pd::AttendanceTest < ActiveSupport::TestCase
   end
 
   test 'find_restore_or_create_by' do
-    teacher = create :teacher
-    enrollment = create :pd_enrollment, :from_user, user: teacher
+    teacher = create(:teacher)
+    enrollment = create(:pd_enrollment, :from_user, user: teacher)
     attendance_params = {
       session: @workshop.sessions.first,
       teacher: teacher,

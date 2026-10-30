@@ -1,0 +1,45 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-06-29T17:05:39.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "panels": [
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-1-intro-generative-ai-5bf44be0-db9d-4475-a989-036058309779",
+        "text": "Have you ever wondered if a computer could create something entirely new, something it had never seen before?",
+        "imageUrl": "https://images.code.org/418e87107d119b0bfb13644a901ee51a-sample-aid-sc2-unit-generation-lesson-1-intro-generative-ai-panel-1-0241a402-f5f2-4f46-bb76-f0d049f04428.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-1-intro-generative-ai-ac2e35f7-deb5-4369-a028-a19d8e831f6b",
+        "text": "That's what Generative AI does! It can write stories, poems, emails, or even help you brainstorm ideas, just like a human writer.",
+        "imageUrl": "https://images.code.org/fb2fb08e96cde125da8728b08ae69136-sample-aid-sc2-unit-generation-lesson-1-intro-generative-ai-panel-2-4450bfa4-6901-4548-916b-88fc29fe7e0e.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-1-intro-generative-ai-6878e036-a6a2-4c69-9336-8656c739ab7b",
+        "text": "It can also create amazing images from just a few words, like a fantastical landscape or a unique creature, bringing imagination to life visually.",
+        "imageUrl": "https://images.code.org/5764a25463868009421007a30e701d0f-sample-aid-sc2-unit-generation-lesson-1-intro-generative-ai-panel-3-c933127a-328a-4b0b-b9fa-4d5c012b5bce.png",
+        "layout": "text-top-right"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-1-intro-generative-ai-41c11668-1c7b-4749-9a1b-ad0c8e0c313e",
+        "text": "But it's not just words and pictures. Generative AI can compose music, design 3D models, or even write simple computer code!",
+        "imageUrl": "https://images.code.org/4f61adc2298ce11c95ed324888f39db6-sample-aid-sc2-unit-generation-lesson-1-intro-generative-ai-panel-4-cdf34436-b733-4056-8ec0-3993c84eae14.png",
+        "layout": "text-bottom-left"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-1-intro-generative-ai-b2a68935-4a32-4c25-aa1f-ce6dd523ffad",
+        "text": "Essentially, Generative AI learns patterns from massive amounts of data and uses those patterns to predict and create something unique and brand new, every time.",
+        "imageUrl": "https://images.code.org/b6e64cebd521e6b84ac01f617084a5ed-sample-aid-sc2-unit-generation-lesson-1-intro-generative-ai-panel-5-f7096c08-2a29-41ca-b1b0-fd88847d9929.png",
+        "layout": "text-top-center"
+      }
+    ],
+    "generate_outline": "Introduce students to generative artificial intelligence (AI), defining what it is and providing clear examples of its capabilities, such as generating text, images, and other creative media."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-06-29 17:06:27 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-29 17:06:27 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

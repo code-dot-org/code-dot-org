@@ -8,12 +8,13 @@ class Api::V1::SectionsStudentsController < Api::V1::JSONApiController
 
   # GET /sections/<section_id>/students
   def index
-    summaries = @section.students.map do |student|
+    summaries = @section.students.includes(:primary_contact_info, :latest_parental_permission_request).map do |student|
       # Student depends on this section for login if student's account is
       # teacher managed and only belongs to the one section.
-      student.summarize.merge(depends_on_this_section_for_login:
-        student.teacher_managed_account? &&
-          student.sections_as_student.size == 1
+      student.summarize.merge(
+        depends_on_this_section_for_login:
+          student.teacher_managed_account? &&
+            student.sections_as_student.size == 1
       )
     end
     render json: summaries
@@ -34,8 +35,9 @@ class Api::V1::SectionsStudentsController < Api::V1::JSONApiController
   # PATCH /sections/<section_id>/students/<id>
   def update
     # Teachers aren't allowed to update other teachers' information, even if the teacher is
-    # a student in a section.
-    return head :forbidden if @student.teacher?
+    # a student in a section. Demo students are also blocked here via the
+    # `:manage, User` ability rule, which excludes them from teacher management.
+    return head :forbidden unless can?(:manage, @student) && !@student.teacher?
 
     @student.reset_secrets if params[:secrets] == User::RESET_SECRETS
 
@@ -49,6 +51,9 @@ class Api::V1::SectionsStudentsController < Api::V1::JSONApiController
   # Used only for picture and word sections
   # POST /sections/<section_id>/students/bulk_add
   def bulk_add
+    if @section.demo_section?
+      return render json: {errors: 'Cannot add students to a demo section'}, status: :forbidden
+    end
     unless @section.login_type == Section::LOGIN_TYPE_WORD || @section.login_type == Section::LOGIN_TYPE_PICTURE
       return render json: {errors: 'Not a valid section type'}, status: :bad_request
     end
@@ -93,6 +98,7 @@ class Api::V1::SectionsStudentsController < Api::V1::JSONApiController
           gender: student["gender"],
           gender_teacher_input: student["gender_teacher_input"],
           sharing_disabled: !!student["sharing_disabled"],
+          us_state: student['us_state'].presence,
         )
         @section.add_student(new_student, current_user)
         new_students.push(new_student.summarize)
@@ -112,6 +118,9 @@ class Api::V1::SectionsStudentsController < Api::V1::JSONApiController
   # Remove a student from the section
   # POST /sections/:section_id/students/:id/remove
   def remove
+    if @section.demo_section?
+      return render json: {errors: 'Cannot remove students from a demo section'}, status: :forbidden
+    end
     follower = Follower.where(section: @section.id, student_user_id: @student.id).first
     return render_404 unless @student && follower
 
@@ -133,6 +142,7 @@ class Api::V1::SectionsStudentsController < Api::V1::JSONApiController
       :name,
       :sharing_disabled,
       :password,
+      :us_state,
     )
   end
 end

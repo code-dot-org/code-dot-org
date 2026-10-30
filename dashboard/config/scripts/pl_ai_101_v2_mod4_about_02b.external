@@ -1,0 +1,30 @@
+name 'pl-ai-101-V2-mod4-about-02b'
+title 'title'
+description 'description here'
+display_name 'Secondary Examples'
+bubble_choice_description 'For grades 6-12.'
+thumbnail_url 'https://images.code.org/c8d5c049bf30a12688cf16cf08dc2f6c-Screenshot 2026-02-13 at 1.22.42 PM.png'
+
+markdown <<MARKDOWN
+# Secondary Examples
+
+## Scenario 1: How AI Generates Responses
+
+In a 7th-grade class, students input the same prompt into an AI tool and compare the different responses. The teacher leads a discussion on how AI generates answers based on patterns rather than understanding.
+
+## Scenario 2: Evaluating AI Accuracy
+
+In a 9th-grade science class, students use AI to summarize a concept, then fact-check the response using textbooks and credible sources. They identify what was accurate, missing, or misleading.
+
+## Scenario 3: Investigating Bias in Outputs
+
+In an 8th-grade social studies class, students ask AI to describe historical events or professions. They analyze whose perspectives are included, what might be missing, and how bias can appear in responses.
+
+## Scenario 4: Understanding Training Data
+
+In a 10th-grade computer science class, students explore how AI models are trained using datasets. They examine how limited or skewed data can impact the outputs an AI system produces.
+
+## Scenario 5: Exploring Ethical Impacts
+
+In an 11th-grade class, students discuss real-world uses of AI (e.g., hiring tools, social media algorithms). They evaluate potential benefits and risks, including fairness, privacy, and misinformation.
+MARKDOWN

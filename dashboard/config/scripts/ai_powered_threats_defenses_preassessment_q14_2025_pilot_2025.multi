@@ -1,0 +1,14 @@
+name 'ai-powered-threats-defenses-preassessment-q14_2025-pilot_2025'
+
+question ‘Why might a color-based password strength meter be poorly designed for some users?’
+
+wrong ‘It makes passwords too difficult to remember’
+right ‘It can\’t be understood by users with low vision or color blindness’
+wrong ‘It prevents users from creating long passwords’
+wrong ‘It always blocks weak passwords, even when users want to use them’
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 11: Security vs Usability
+MARKDOWN

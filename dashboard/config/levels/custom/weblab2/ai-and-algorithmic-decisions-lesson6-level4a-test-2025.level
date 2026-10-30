@@ -1,0 +1,80 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-10-22T00:37:59.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "encrypted": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "outline",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Status Indicator</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <h1>User Status</h1>\n\n  <button id=\"onlineBtn\">Go Online</button>\n  <button id=\"offlineBtn\">Go Offline</button>\n\n  <p id=\"output\"></p>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n\n  ",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// --- SELECT ELEMENTS ---\nconst outputElement = document.getElementById(\"output\");\nconst onlineBtn = document.getElementById(\"onlineBtn\");\nconst offlineBtn = document.getElementById(\"offlineBtn\");\nlet msg;\n\n// --- PARAMETERIZED FUNCTION ---\n\n\n\n\n// --- EVENT LISTENERS ---\nonlineBtn.addEventListener(\"click\", () => setStatus(\"online\"));\nofflineBtn.addEventListener(\"click\", () => setStatus(\"offline\"));\n",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  font-family: Arial, sans-serif;\n  text-align: center;\n  margin-top: 50px;\n}\n\n.online {\n  color: green;\n  font-weight: bold;\n}\n\n.offline {\n  color: gray;\n  font-weight: bold;\n}\n\nbutton {\n  margin: 10px;\n  padding: 8px 16px;\n  font-size: 16px;\n  cursor: pointer;\n}\n",
+          "folderId": "0",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "documentation.md",
+          "language": "md",
+          "contents": "# Function: <setStatus>\n\n# What it does\nDecide whether the user is online or offline and show that state in the UI.\n\n# Inputs\nstatus — a string set to \"online\" or \"offline\"\n\n# What it changes\nVariables: Create a local message (e.g., \"You are online.\" or \"You are offline.\").\nOn screen: Update the status message element’s text to the message.",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "4",
+        "2",
+        "1",
+        "3"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nv9xRZwTI3ABxoMLCMpXvg8b1ltzBVfsTEIi+hg==\n",
+    "long_instructions": "# Set Your Status\r\n\r\n1. Create a function called `setStatus` that takes in one parameter.\r\n2. Use conditionals to check if the value of the parameter is set to \"online\" or \"offline\" and set the message accordingly.\r\n3. Display the message on screen.\r\n\r\n_Challenge: Update the JavaScript and CSS code to display an \"online\" status differently from an \"offline\" status._",
+    "bubble_choice_description": "Code a function that takes in a parameter to set an online/offline status.",
+    "thumbnail_url": "https://images.code.org/bef89a52be15a46c063393b7895b2330-Screenshot 2025-10-21 at 7.05.08 PM.png",
+    "display_name": "Set Your Status"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-22 00:38:52 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-22 01:01:00 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-22 01:01:27 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-22 01:01:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-22 01:02:03 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-22 01:04:28 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-22 01:06:22 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-22 01:06:52 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-22 01:07:15 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-22 01:46:37 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-22 02:01:25 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-29 18:36:01 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-29 18:45:18 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-31 17:48:43 +0000\",\"changed\":[\"ai_tutor_mode\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

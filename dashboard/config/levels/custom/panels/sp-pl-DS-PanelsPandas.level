@@ -1,0 +1,60 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2024-09-25T20:39:21.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "panels": [
+      {
+        "text": "Now, let's take a look at some concepts you may have noticed in the modify levels. \n\n",
+        "imageUrl": "https://images.code.org/de136cb7482b05b7efd3aaadc7f20d7c-code.org graphics .png",
+        "key": "game_design_spr_types-6451ed33-47e5-458c-9da1-d89e123d039c",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/d33460383c1714622854fbf21ca94602-code.org graphics  (1).png",
+        "key": "game_design_spr_types-53c92e2f-0462-48a7-8070-e1224840f013"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/a6cc60e7c2ab572b867fa13d647da0f6-code.org graphics  (3).png",
+        "key": "game_design_spr_types-4936be88-574e-4dd8-a31f-e671e54e482b",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/1a92f167064207540a24a27081bd56dc-code.org graphics  (4).png",
+        "key": "gen-ai-panels-test-L1-a74895ac-5363-4d66-9831-a3d899ea8ed7",
+        "layout": "text-top-left"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/0d53f9778a53878979552a2c2b87057c-code.org graphics  (5).png",
+        "key": "sp-pl-DS-SpreadsheetVocab-79e6faa9-6b7f-4aab-a8d7-c91fdc3ca442"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/134807a315e1dfdcbfc2030ab0bdb751-code.org graphics  (6).png",
+        "key": "sp-pl-DS-PanelsPandas-cfc88da3-3fc6-4f62-8618-22e091abd30c"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/c7c70d2176e406b21cd120cf6b814c5e-code.org graphics  (7).png",
+        "key": "sp-pl-DS-PanelsPandas-9c3c994c-cb36-4dd7-9fe3-a0bd8f76c9fb"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/715788fce5e500a718151cbb4457dca9-code.org graphics  (8).png",
+        "key": "sp-pl-DS-PanelsPandas-ddd0c032-ee1e-40ba-9fb1-ce8246a2526a"
+      }
+    ],
+    "name_suffix": "_2024",
+    "offer_browser_tts": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-09-25T20:39:21.429+00:00\",\"changed\":[\"cloned from \\\"sp-pl-DS-PanelsExpressions\\\"\"],\"cloned_from\":\"sp-pl-DS-PanelsExpressions\"},{\"changed_at\":\"2024-09-26 18:32:37 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-09-26 18:42:10 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-09-26 18:43:43 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-11-19 22:17:20 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-11-19 22:21:42 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+}]]></config>
+</Panels>

@@ -1,0 +1,40 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-09-25T19:59:42.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "true",
+    "panels": [
+      {
+        "text": "### Central Processing Unit (CPU)\n\nThe **CPU** is the **brain of the computer**. It carries out all the instructions needed to run programs, solve problems, and perform calculations. The speed of the CPU affects how fast a computer can complete tasks.\n\n**Example**: When you open an app or search something on Google, the CPU processes the request and gives you results in seconds.",
+        "imageUrl": "https://images.code.org/cbf83883bca90f919f0c74fc937b46ec-cpu-central-processor-unit-isolated-2024-03-05-14-55-07-utc (1) (1).jpg",
+        "key": "hardware-components-e56bb056-0af5-475f-b8e1-7b49f9c79f82",
+        "layout": "text-bottom-right",
+        "typing": false,
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Graphics Processing Unit (GPU)\n\nThe **GPU** is a specialized processor that helps computers handle **graphics, video, and complex tasks more efficiently**. While it’s best known for improving gaming and video quality, it also helps with AI, scientific research, and multitasking by handling many small tasks at the same time.\n\n**Example**: GPUs make video games look realistic, help AI assistants recognize voices, and allow self-driving cars to quickly analyze road conditions.",
+        "imageUrl": "https://images.code.org/0fa54203712a5d3365ebdaeffc84701a-graphics-card-isolated-2024-10-24-03-02-59-utc (1).jpg",
+        "key": "hardware-components-ed2b07b1-278f-49d5-ba3b-02994f4bccd8",
+        "layout": "text-bottom-right",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Motherboard\n\nThe **motherboard** is the **main circuit board** of a computer. It connects and **allows all components**—like the CPU, RAM, storage, and GPU—to communicate with each other. Without a motherboard, the parts wouldn’t be able to work together.\n\n**Example**: Think of a gaming console or a laptop—inside, all the parts are attached to a motherboard so they can work as one system.",
+        "imageUrl": "https://images.code.org/a74ed1698a3a0f5d40a741b2cf23bcf2-motherboard-2025-02-12-01-43-12-utc (1).jpg",
+        "key": "hardware-components-3d887b32-d501-4032-b990-2a51ae5b4de8",
+        "layout": "text-bottom-right",
+        "typing": false,
+        "fadeInOverPrevious": true
+      }
+    ],
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:59:42.312+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson2-level2_2025\\\"\"],\"cloned_from\":\"computer-systems-lesson2-level2_2025\"}]"
+}]]></config>
+</Panels>

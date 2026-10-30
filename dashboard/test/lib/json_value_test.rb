@@ -6,13 +6,13 @@ class JSONValueTest < ActiveSupport::TestCase
 
   test 'force integer strings to integers' do
     assert_equal 5, JSONValue.value('5')
-    assert_equal (-5), JSONValue.value('-5')
+    assert_equal(-5, JSONValue.value('-5'))
     assert_equal 0, JSONValue.value('0')
   end
 
   test 'force float strings to floats' do
     assert_equal 5.00001, JSONValue.value('5.00001')
-    assert_equal (-5.00001), JSONValue.value('-5.00001')
+    assert_equal(-5.00001, JSONValue.value('-5.00001'))
   end
 
   test 'force boolean strings to boolean' do

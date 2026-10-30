@@ -1,0 +1,21 @@
+name 'ai-and-algorithmic-decisions-lesson9-cfu_2026'
+title 'Check for Understanding'
+
+wrong 'The condition is missing a semicolon.'
+wrong 'The function `awardBadge()` should be in quotes.'
+right 'There is no bug — the code works as described.'
+wrong 'The operator should be `&&` instead of `||`. As written, the badge is given if either is true, not both.'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+A fitness app should award a "Hydration Hero" badge when a user has logged a workout AND drunk 8 glasses of water. The code says:
+
+```
+if (loggedWorkout || drankWater) {
+    awardBadge();
+}
+```
+
+What is the bug?
+MARKDOWN

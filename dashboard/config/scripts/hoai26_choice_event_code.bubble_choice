@@ -1,0 +1,11 @@
+name 'HoAI26-Choice-Event-Code'
+display_name 'Code & Generate'
+description "Add an object"
+uses_lab2
+
+sublevels
+level 'HoAI26-Playtest1-Platform-SimpleCode3'
+level 'HoAI26-Playtest1-Story-SimpleCode5'
+
+
+navigation_type 'next_sublevel'

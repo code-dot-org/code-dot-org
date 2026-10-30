@@ -1,0 +1,44 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-02-24T13:54:59.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "Running millions of calculations creates intense heat!",
+        "imageUrl": "https://images.code.org/f901bd3ec12c3842ee837473b23f97b0-panel1environ.png",
+        "key": "mini lesson environmental-4a2f07a1-15c4-4f1c-8f42-5534be3a4df2",
+        "layout": "text-top-right"
+      },
+      {
+        "text": "AI centers use water and heavy air conditioning to cool them down. ",
+        "imageUrl": "https://images.code.org/814e997dc87a5618a3e3ecc95a129b94-panel2environ.png",
+        "key": "mini lesson environmental-859f8569-35e9-41b3-8863-9c6ef6796d65",
+        "layout": "text-top-right"
+      },
+      {
+        "text": "This water use impacts our environment. ",
+        "imageUrl": "https://images.code.org/d9e38bb666ead64c0a026cd50c01900a-panel2Benviron.png",
+        "key": "mini lesson environmental-13b3d315-ea64-41ac-9867-ea7e80460775"
+      },
+      {
+        "text": "But AI can actually save energy by helping people optimize city power grids or flight paths, offsetting its own \"carbon cost.\"",
+        "imageUrl": "https://images.code.org/2c0847439fe6a64fb89163b96834c18b-panel3environ.png",
+        "key": "mini lesson environmental-28ac0043-f976-440f-b26e-9909bb168c2c",
+        "layout": "text-top-right"
+      },
+      {
+        "text": "Now that you know a bit more about the environmental impact of using AI systems, you have more information to decide for yourself. \n\nWhen will you let the AI take the lead, and when will you keep some work human-powered?",
+        "imageUrl": "https://images.code.org/210b9133a70054a8f118ff30941e2ab4-panel5environ.png",
+        "key": "mini lesson environmental-eda899a9-9e55-4e06-a2ab-beddfefb3705"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2026-02-24 13:57:17 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-02-24 14:11:32 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-02-24 14:15:15 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-02-24 14:16:22 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-02-24 14:17:22 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-02-24 14:45:00 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-02-24 14:45:30 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-02-24 14:45:56 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-02-24 16:20:55 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>

@@ -1,9 +1,12 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+
 import ProgressLevelSet from '@cdo/apps/templates/progress/ProgressLevelSet';
-import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
+
 import LevelDetailsDialog from './LevelDetailsDialog';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+
+import styles from '../lesson-plan.module.scss';
 
 export default class ProgressionDetails extends Component {
   static propTypes = {
@@ -16,17 +19,6 @@ export default class ProgressionDetails extends Component {
 
   handleBubbleClick = level => {
     this.setState({previewingLevel: level});
-    firehoseClient.putRecord(
-      {
-        study: 'lesson-plan',
-        study_group: 'teacher-lesson-plan',
-        event: 'click-level-preview',
-        data_json: JSON.stringify({
-          scriptLevelId: level.id,
-        }),
-      },
-      {includeUserId: true}
-    );
   };
 
   convertScriptLevelForProgression = scriptLevel => {
@@ -72,7 +64,7 @@ export default class ProgressionDetails extends Component {
             handleClose={() => this.setState({previewingLevel: null})}
           />
         )}
-        <div style={styles.progressionBox}>
+        <div className={styles.progressionBox}>
           <ProgressLevelSet
             name={section.progressionName}
             levels={section.scriptLevels.map(scriptLevel =>
@@ -87,13 +79,3 @@ export default class ProgressionDetails extends Component {
     );
   }
 }
-
-const styles = {
-  progressionBox: {
-    margin: '10px, 0px',
-    padding: '0px 10px 10px 10px',
-  },
-  description: {
-    marginTop: 10,
-  },
-};

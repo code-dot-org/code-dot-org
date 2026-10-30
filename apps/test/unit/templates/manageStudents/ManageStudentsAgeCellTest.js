@@ -1,8 +1,10 @@
+import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow, mount} from 'enzyme';
-import {expect} from '../../../util/deprecatedChai';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import {UnconnectedManageStudentAgeCell as ManageStudentAgeCell} from '@cdo/apps/templates/manageStudents/ManageStudentsAgeCell';
+
+import {expect} from '../../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
 const DEFAULT_PROPS = {
   id: 2,
@@ -32,7 +34,7 @@ describe('ManageStudentAgeCell', () => {
   });
 
   it('renders age select dropdown, when editing', () => {
-    const wrapper = shallow(
+    const wrapper = mount(
       <ManageStudentAgeCell
         {...DEFAULT_PROPS}
         age={10}
@@ -41,7 +43,7 @@ describe('ManageStudentAgeCell', () => {
         setSharingDefault={setSharingDefault}
       />
     );
-    expect(wrapper.find('select').exists());
+    expect(wrapper.find('select').exists()).to.be.true;
     expect(wrapper.find('option')).to.have.length(19);
   });
 

@@ -1,43 +1,41 @@
-import React from 'react';
 import {render, screen} from '@testing-library/react';
-import {expect} from '../../../util/reconfiguredChai';
-import ProgressIcon, {
-  PROGRESS_ICON_TITLE_PREFIX,
-} from '@cdo/apps/templates/sectionProgressV2/ProgressIcon';
+import React from 'react';
+
 import {ITEM_TYPE} from '@cdo/apps/templates/sectionProgressV2/ItemType';
+import ProgressIcon from '@cdo/apps/templates/sectionProgressV2/ProgressIcon';
 
-describe('ProgressIcon Component', () => {
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+
+describe('ProgressIconComponent', () => {
   it('renders the FontAwesome icon for a specific itemType represented with a FontAwesomeIcon', () => {
-    const testType = ITEM_TYPE.VALIDATED;
-    console.log(testType);
-    render(<ProgressIcon itemType={testType} />);
+    const testTypes = [
+      ITEM_TYPE.ASSESSMENT_LEVEL,
+      ITEM_TYPE.CHOICE_LEVEL,
+      ITEM_TYPE.KEEP_WORKING,
+      ITEM_TYPE.NO_ONLINE_WORK,
+      ITEM_TYPE.IN_PROGRESS,
+      ITEM_TYPE.SUBMITTED,
+      ITEM_TYPE.VALIDATED,
+    ];
 
-    const iconElement = screen.getByTitle(
-      new RegExp(`^${PROGRESS_ICON_TITLE_PREFIX}${testType[0]}$`)
-    );
-    expect(iconElement).to.be.visible;
-  });
+    testTypes.forEach(testType => {
+      render(<ProgressIcon itemType={testType} />);
 
-  it('renders the not started box when itemType is NOT_STARTED', () => {
-    render(<ProgressIcon itemType={ITEM_TYPE.NOT_STARTED} />);
-    const progressBox = screen.getByTestId('progress-box');
-    expect(progressBox).to.be.visible;
-  });
-
-  it('renders the viewed box when itemType is VIEWED', () => {
-    render(<ProgressIcon itemType={ITEM_TYPE.VIEWED} />);
-    const progressBox = screen.getByTestId('progress-box');
-    expect(progressBox).to.be.visible;
+      const iconElement = screen.getByLabelText(testType.title);
+      expect(iconElement).to.be.visible;
+    });
   });
 
   it('renders the feedback given triangle when itemType is FEEDBACK_GIVEN', () => {
     render(<ProgressIcon itemType={ITEM_TYPE.FEEDBACK_GIVEN} />);
+    // eslint-disable-next-line no-restricted-properties
     const feedbackGivenTriangle = screen.getByTestId('feedback-given-triangle');
     expect(feedbackGivenTriangle).to.be.visible;
   });
 
   it('renders the feedback needed triangle when itemType is NEEDS_FEEDBACK', () => {
     render(<ProgressIcon itemType={ITEM_TYPE.NEEDS_FEEDBACK} />);
+    // eslint-disable-next-line no-restricted-properties
     const feedbackGivenTriangle = screen.getByTestId('needs-feedback-triangle');
     expect(feedbackGivenTriangle).to.be.visible;
   });

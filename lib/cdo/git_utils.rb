@@ -73,6 +73,10 @@ module GitUtils
 
   def self.git_revision
     `git rev-parse HEAD`.strip
+  rescue Errno::ENOENT
+    # ENOENT means the executable could not be found (e.g. Docker image
+    # intentionally does not have git installed). Return no revision.
+    ''
   end
 
   def self.git_revision_short(project_directory = Dir.pwd)
@@ -106,11 +110,11 @@ module GitUtils
   end
 
   def self.pr_base_branch_or_default_no_origin
-    circle_pr_branch_base_no_origin || current_branch_base_no_origin
+    ci_pr_base_branch_no_origin || current_branch_base_no_origin
   end
 
-  def self.circle_pr_branch_base_no_origin
-    ENV['DRONE_TARGET_BRANCH']
+  def self.ci_pr_base_branch_no_origin
+    ENV.fetch('CI_BASE_BRANCH', nil)
   end
 
   # Given a branch name, returns its likely base branch / merge destination
@@ -121,8 +125,8 @@ module GitUtils
     when 'test'
       'origin/production'
     else # levelbuilder, feature branches, etc.
-      # In Continuous Integration (Drone) builds, use the base branch of the Pull Request, which might be staging-next.
-      CDO.ci ? "origin/#{circle_pr_branch_base_no_origin}" : 'origin/staging'
+      # In CI builds, use the base branch of the Pull Request, which might be staging-next.
+      CDO.ci ? "origin/#{ci_pr_base_branch_no_origin}" : 'origin/staging'
     end
   end
 

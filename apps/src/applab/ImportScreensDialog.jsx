@@ -1,29 +1,41 @@
 /* eslint-disable react/no-danger */
-import React from 'react';
 import PropTypes from 'prop-types';
-
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
+import React from 'react';
 import {connect} from 'react-redux';
-import * as applabConstants from './constants';
-import Dialog, {Body, Buttons, Confirm, Cancel} from '../templates/Dialog';
+
 import AssetThumbnail, {
   styles as assetThumbnailStyles,
 } from '../code-studio/components/AssetThumbnail';
+import Dialog, {
+  Body,
+  Buttons,
+  Confirm,
+  Cancel,
+} from '../legacySharedComponents/Dialog';
+import Sounds from '../Sounds';
 import MultiCheckboxSelector, {
   styles as multiCheckboxStyles,
 } from '../templates/MultiCheckboxSelector';
 import color from '../util/color';
-import {toggleImportScreen, importIntoProject} from './redux/screens';
+
+import * as applabConstants from './constants';
 import {
   importableAssetShape,
   importableScreenShape,
   importableProjectShape,
 } from './import';
-import Sounds from '../Sounds';
+import {toggleImportScreen, importIntoProject} from './redux/screens';
 
 const SCALE = 0.1;
 const MARGIN = 10;
 const ICON_HEIGHT = applabConstants.APP_HEIGHT * SCALE;
+
+export const IMPORT_FAILURE_MESSAGE = `
+  Cannot import the following screens because their IDs or
+  contained design element IDs are already used in your existing
+  project. Fix the IDs in either project so they aren't
+  duplicated between the two projects before trying to import the following.
+`;
 
 // TODO: possibly refactor AssetRow to make it work here instead of
 // or with this component
@@ -46,7 +58,7 @@ class AssetListItemUnwrapped extends React.Component {
           projectId={projectId}
           soundPlayer={soundPlayer}
         />
-        <div style={[styles.assetListItemText, styles.subtext]}>
+        <div style={combineStyles(styles.assetListItemText, styles.subtext)}>
           {asset.filename}
           {asset.willReplace && (
             <p style={styles.warning}>
@@ -59,7 +71,7 @@ class AssetListItemUnwrapped extends React.Component {
     );
   }
 }
-export const AssetListItem = Radium(AssetListItemUnwrapped);
+export const AssetListItem = AssetListItemUnwrapped;
 
 function quotedCommaJoin(strings) {
   return strings.map(s => `"${s}"`).join(', ');
@@ -74,10 +86,10 @@ class ScreenListItemUnwrapped extends React.Component {
     const {screen} = this.props;
     return (
       <div
-        style={[
+        style={combineStyles(
           styles.screenListItem,
-          !screen.canBeImported && styles.disabledScreenListItem,
-        ]}
+          !screen.canBeImported && styles.disabledScreenListItem
+        )}
       >
         <div style={styles.miniScreenWrapper}>
           <div
@@ -101,7 +113,7 @@ class ScreenListItemUnwrapped extends React.Component {
             )}
           {screen.conflictingIds.length > 0 && (
             <p style={styles.warning}>
-              Uses existing element IDs:{' '}
+              Uses existing element or screen IDs:{' '}
               {quotedCommaJoin(screen.conflictingIds)}.
             </p>
           )}
@@ -110,7 +122,7 @@ class ScreenListItemUnwrapped extends React.Component {
     );
   }
 }
-export const ScreenListItem = Radium(ScreenListItemUnwrapped);
+export const ScreenListItem = ScreenListItemUnwrapped;
 
 export class ImportScreensDialog extends React.Component {
   static propTypes = {
@@ -155,7 +167,9 @@ export class ImportScreensDialog extends React.Component {
           }
           disabled={this.props.isImporting}
         >
-          {this.props.isImporting && <span className="fa fa-spin fa-spinner" />}
+          {this.props.isImporting && (
+            <span className="fa-solid fa-spin fa-spinner" />
+          )}
           {this.props.isImporting && ' '}
           Import
         </Confirm>
@@ -206,13 +220,7 @@ export class ImportScreensDialog extends React.Component {
             {nonImportableScreens.length > 0 && (
               <div style={styles.section}>
                 <h2 style={multiCheckboxStyles.header}>Cannot Import</h2>
-                <p style={styles.subtext}>
-                  Cannot import the following screens because they contain
-                  design elements with IDs already used in your existing
-                  project. Fix the IDs in either project so they aren't
-                  duplicated across different screens before trying to import
-                  the following.
-                </p>
+                <p style={styles.subtext}>{IMPORT_FAILURE_MESSAGE}</p>
                 <ul style={multiCheckboxStyles.list}>
                   {nonImportableScreens.map(screen => (
                     <li key={screen.id} style={multiCheckboxStyles.listItem}>
@@ -229,6 +237,9 @@ export class ImportScreensDialog extends React.Component {
     );
   }
 }
+
+const combineStyles = (...styles) =>
+  Object.assign({}, ...styles.filter(Boolean));
 
 // TODO: ditch color and fontSize in favor of more unified style components when they exist.
 const styles = {

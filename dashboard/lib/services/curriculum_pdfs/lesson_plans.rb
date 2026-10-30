@@ -19,7 +19,7 @@ module Services
         # <Pathname:csp1-2021/20210216001309/student-lesson-plans/Welcome to CSP.pdf>
         def get_lesson_plan_pathname(lesson, student_facing: false, versioned: true)
           return nil unless lesson&.script&.seeded_from
-          version_number = versioned ? Time.parse(lesson.script.seeded_from).to_s(:number) : 'fallback'
+          version_number = versioned ? Time.parse(lesson.script.seeded_from).to_formatted_s(:number) : 'fallback'
           suffix = student_facing ? '-Student' : ''
           filename = ActiveStorage::Filename.new(lesson.localized_name.parameterize(preserve_case: true) + suffix + ".pdf").to_s
           subdir = student_facing ? "student-lesson-plans" : "teacher-lesson-plans"
@@ -53,10 +53,12 @@ module Services
           ChatClient.log "Generating #{pathname.to_s.inspect} from #{url.inspect}" if DEBUG
 
           FileUtils.mkdir_p(File.join(directory, pathname.dirname))
-          PDF.generate_from_url(url, File.join(directory, pathname))
+          pdf_path = File.join(directory, pathname)
+          PDF.generate_from_url(url, pdf_path)
 
           FileUtils.mkdir_p(File.join(directory, fallback_pathname.dirname))
-          FileUtils.cp(File.join(directory, pathname), File.join(directory, fallback_pathname))
+          FileUtils.cp(pdf_path, File.join(directory, fallback_pathname))
+          pdf_path
         end
       end
     end

@@ -17,6 +17,19 @@
 #  index_standard_categories_on_parent_category_id          (parent_category_id)
 #
 class StandardCategory < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :public,
+    shortcode: :public,
+    framework_id: :public,
+    parent_category_id: :public,
+    category_type: :public,
+    properties: :public,
+    created_at: :public,
+    updated_at: :public,
+  )
+
   include SerializedProperties
 
   belongs_to :framework, optional: true
@@ -39,7 +52,10 @@ class StandardCategory < ApplicationRecord
       filename = "config/standards/#{framework.shortcode}_categories.csv"
       CSV.foreach(filename, headers: true) do |row|
         category = StandardCategory.find_or_initialize_by(framework: framework, shortcode: row['category'])
-        category.parent_category = StandardCategory.find_by!(shortcode: row['parent']) if row['parent']
+        if row['parent']
+          category.parent_category = StandardCategory.find_by(shortcode: row['parent'])
+          raise Exception.new("Error seeding StandardCategory: Couldn't find parent #{row['parent'].inspect} for category #{row['category'].inspect}") if category.parent_category.nil?
+        end
         category.category_type = row['type']
         category.description = row['description']
         category.save! if category.changed?

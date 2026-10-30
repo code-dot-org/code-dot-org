@@ -11,7 +11,7 @@ ChannelToken.find_in_batches(batch_size: 500) do |channel_tokens_batch|
   puts "PROCESSING: slice #{slice}..."
   ActiveRecord::Base.transaction do
     channel_tokens_batch.each do |channel_token|
-      _owner_id, storage_app_id = storage_decrypt_channel_id(channel_token.channel)
+      _owner_id, storage_app_id = get_storage_id_and_project_id(channel_token.channel)
       channel_token.storage_app_id = storage_app_id
       save_result = channel_token.save(touch: false)
       raise "ERROR: ID #{channel_token.id}. STORAGE_APP_ID: #{storage_app_id}." unless save_result

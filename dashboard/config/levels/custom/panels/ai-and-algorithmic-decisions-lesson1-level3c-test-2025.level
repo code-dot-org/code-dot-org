@@ -1,0 +1,37 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-10-16T17:37:22.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "true",
+    "panels": [
+      {
+        "text": "#Autoplay\n\nAutoplay automatically plays the next recommended video, song, or piece of content after the current one ends, without the user having to click anything.",
+        "imageUrl": "https://images.code.org/4e6dc970e1b1641f3a38a003617b60d0-Screenshot 2025-10-16 at 12.48.27 PM.png",
+        "key": "computer-systems-lesson3-onlineresources-1-5c25ddab-c99a-4b94-8628-1e8d9bc30c38",
+        "layout": "text-top-left"
+      },
+      {
+        "text": "#Jordan\n_Animation Designer_\n\n> Autoplay keeps the inspiration coming—I can watch new animation styles and techniques without pausing to search. It helps me stay in the creative zone while I design.",
+        "imageUrl": "https://images.code.org/18a4a5f66d1151528b91bc794df4c95d-Screenshot 2025-10-16 at 12.57.52 PM.png",
+        "key": "undefined-91f68b3a-8101-4f9c-861a-555ac85b7c47"
+      },
+      {
+        "text": "#Eileen\n_Journalist_\n\n>I often review multiple videos for my reporting, and autoplay makes it easy to lose track of sources. It’s important for my credibility to know exactly where each clip came from.",
+        "imageUrl": "https://images.code.org/790744e48cadcb9113c120c9ba6f370d-Screenshot 2025-10-16 at 12.55.51 PM.png",
+        "key": "ai-and-algorithmic-decisions-lesson1-level3c-test-2025-ae8e8691-dca1-493a-a5b1-c96222390c83",
+        "layout": "text-top-left"
+      }
+    ],
+    "display_name": "Autoplay",
+    "thumbnail_url": "https://images.code.org/e2428ac8a404889bab0145da179ef0f4-Screenshot 2025-10-16 at 1.04.04 PM.png",
+    "name_suffix": "_2025",
+    "bubble_choice_description": "Hear from different users on their opinion of **autoplay**."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-16T17:37:22.538+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson1-level3b-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson1-level3b-test-2025\"},{\"changed_at\":\"2025-10-16 17:37:23 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-16 18:14:41 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-16 18:47:41 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-16 18:53:30 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-16 18:56:03 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-16 18:58:16 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-16 19:01:15 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-16 19:04:56 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

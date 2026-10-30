@@ -1,0 +1,16 @@
+name 'building-data-driven-systems-postassessment-q4_2025'
+
+question 'What is a significant privacy risk when using AI to help generate example data for a new app?'
+
+wrong 'The AI might generate data that is too difficult for a human to read.'
+right 'If you provide the AI with real user data as examples, that sensitive information could become part of the AI\'s training set.'
+wrong 'The AI will charge you a fee for every piece of data it creates.'
+wrong 'Using AI data makes it impossible to use the `.map()` method later.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 2
+
+Sharing real, sensitive data with public AI tools can lead to data leaks. Developers should use "mock" or "synthetic" data when prompting AI to maintain privacy.
+MARKDOWN

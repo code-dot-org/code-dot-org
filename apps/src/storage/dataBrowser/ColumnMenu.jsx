@@ -1,11 +1,14 @@
 /**
  * @overview Component for the dropdown menu and icon in the column header.
  */
-import {ColumnType} from './dataUtils';
-import FontAwesome from '../../templates/FontAwesome';
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import msg from '@cdo/locale';
+
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
+
+import {ColumnType} from './dataUtils';
 
 export default class ColumnMenu extends React.Component {
   static propTypes = {
@@ -22,30 +25,59 @@ export default class ColumnMenu extends React.Component {
     /* TODO(dave): remove 'pull-right' once we upgrade to bootstrap 3.1.0 */
     return (
       <span className="dropdown pull-right" style={menuStyle}>
-        <a className="dropdown-toggle" data-toggle="dropdown">
-          <FontAwesome icon="cog" style={styles.icon} />
-        </a>
-        <ul className="dropdown-menu dropdown-menu-right" style={{minWidth: 0}}>
+        <button
+          type="button"
+          className="dropdown-toggle"
+          data-toggle="dropdown"
+          style={styles.dropdownToggle}
+        >
+          <FontAwesome icon="gear" style={styles.icon} />
+        </button>
+        <ul className="dropdown-menu dropdown-menu-right" style={styles.menu}>
           <li style={{cursor: 'pointer'}}>
-            <a onClick={this.props.handleRename}>{msg.rename()}</a>
+            <button
+              type="button"
+              onClick={this.props.handleRename}
+              style={styles.menuButton}
+            >
+              {msg.rename()}
+            </button>
           </li>
           <li style={{cursor: 'pointer'}}>
-            <a onClick={this.props.handleDelete}>{msg.delete()}</a>
+            <button
+              type="button"
+              onClick={this.props.handleDelete}
+              style={styles.menuButton}
+            >
+              {msg.delete()}
+            </button>
           </li>
           <li style={{cursor: 'pointer'}}>
-            <a onClick={() => this.props.coerceColumn(ColumnType.STRING)}>
+            <button
+              type="button"
+              onClick={() => this.props.coerceColumn(ColumnType.STRING)}
+              style={styles.menuButton}
+            >
               {msg.dataTableConvertToString()}
-            </a>
+            </button>
           </li>
           <li style={{cursor: 'pointer'}}>
-            <a onClick={() => this.props.coerceColumn(ColumnType.NUMBER)}>
+            <button
+              type="button"
+              onClick={() => this.props.coerceColumn(ColumnType.NUMBER)}
+              style={styles.menuButton}
+            >
               {msg.dataTableConvertToNumber()}
-            </a>
+            </button>
           </li>
           <li style={{cursor: 'pointer'}}>
-            <a onClick={() => this.props.coerceColumn(ColumnType.BOOLEAN)}>
+            <button
+              type="button"
+              onClick={() => this.props.coerceColumn(ColumnType.BOOLEAN)}
+              style={styles.menuButton}
+            >
               {msg.dataTableConvertToBoolean()}
-            </a>
+            </button>
           </li>
         </ul>
       </span>
@@ -53,9 +85,34 @@ export default class ColumnMenu extends React.Component {
   }
 }
 
+const buttonReset = {
+  background: 'none',
+  border: 'none',
+  font: 'inherit',
+  cursor: 'pointer',
+};
+
 const styles = {
   icon: {
-    color: 'white',
+    color: 'var(--text-neutral-white-fixed)',
     cursor: 'pointer',
+  },
+  menu: {
+    minWidth: 0,
+    backgroundColor: 'var(--background-neutral-primary)',
+    borderColor: 'var(--borders-neutral-strong)',
+  },
+  dropdownToggle: {
+    ...buttonReset,
+    padding: 0,
+    margin: 0,
+  },
+  menuButton: {
+    ...buttonReset,
+    display: 'block',
+    width: '100%',
+    textAlign: 'left',
+    padding: '2px 12px',
+    color: 'var(--text-neutral-primary)',
   },
 };

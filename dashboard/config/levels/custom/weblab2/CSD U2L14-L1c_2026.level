@@ -1,0 +1,141 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-01T20:50:46.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "User: Jamila",
+    "long_instructions": "# User: Jamila\r\n\r\nJamila has a passion for animals and would like you to style her \"Wild Guardian\" page about endangered species to look like the sketch on page 7 of your project guide.\r\n\r\n# Do This\r\n\r\n**In the HTML file:**\r\n1. Add class names to elements that will need to be styled differently from others of the same kind.\r\n\r\n**In the CSS file:**\r\n1. Add needed rules for your div containers to establish Flex layout where needed to meet your user's requests.\r\n2. Add needed Flex properties to achieve your user's desired layout.\r\n3. Add your user's requested styles to images and/or paragraphs.\r\n",
+    "bubble_choice_description": "Jamila would like you to style her page about endangered species awareness.",
+    "thumbnail_url": "https://images.code.org/08d2dc6fab12ce4a4e766f21a5a1ad97-risk.png",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n\n  <body>\n\n    <!-- header title and introduction -->\n    <div>\n      <h1>Wild Guardian</h1>\n      <p>Welcome to a journey through the eyes of those seldom seen. This website is dedicated to showcasing the beauty of endangered species around the globe.</p>\n      <p>Our goal is to educate and inspire action towards conservation efforts.</p>\n    </div>\n\n    <!-- container for featured species of the month -->\n    <div>\n      <!-- container for content on species list -->\n      <div>\n        <h2>🌟 Featured Species</h2>\n        <ul>\n          <li>Amur Leopard</li>\n          <li>Sumatran Elephant</li>\n          <li>Mountain Gorilla</li>\n        </ul>\n      </div>\n\n      <!-- container for content on top conservation efforts of the month -->\n      <div>\n        <h2>🌳 Top Conservation Efforts</h2>\n        <ol>\n          <li>Wildlife Protection Initiatives</li>\n          <li>Habitat Restoration Projects</li>\n          <li>Community Education and Engagement</li>\n        </ol>\n      </div>\n    </div>\n\n    <!-- photo gallery of endangered species -->\n    <h2>🖼️ Gallery</h2>\n    <div>\n      <!-- the amur leopard -->\n      <div>\n        <img src=\"amur_leopard.jpg\" alt=\"Amur Leopard\">\n        <h3>Amur Leopard</h3>\n        <p>Status: Critically Endangered</p>\n        <p>Population: more than 84 individuals</p>\n      </div>\n\n      <!-- animal card - the sumatran elephant -->\n      <div>\n        <img src=\"sumatran_elephant.jpg\" alt=\"Sumatran Elephant\">\n        <h3>Sumatran Elephant</h3>\n        <p>Status: Critically Endangered</p>\n        <p>Population: 2,400 - 2,800</p>\n      </div>\n\n      <!-- animal card - the mountain gorilla -->\n      <div>\n        <img src=\"mountain_gorilla.jpg\" alt=\"Mountain Gorilla\">\n        <h3>Mountain Gorilla</h3>\n        <p>Status: Endangered</p>\n        <p>Population: more than 1,000</p>\n      </div>\n\n      <!-- animal card - the vaquita -->\n      <div>\n        <img src=\"vaquita.jpg\" alt=\"Vaquita\">\n        <h3>Vaquita</h3>\n        <p>Status: Critically Endangered</p>\n        <p>Population: about 10 individuals</p>\n      </div>\n\n      <!-- animal card - the javan rhino -->\n      <div>\n        <img src=\"javan_rhino.jpg\" alt=\"Javan Rhino\">\n        <h3>Javan Rhino</h3>\n        <p>Status: Critically Endangered</p>\n        <p>Population: about 70</p>\n      </div>\n\n      <!-- animal card - the snow leopard -->\n      <div>\n        <img src=\"snow_leopard.jpg\" alt=\"Snow Leopard\">\n        <h3>Snow Leopard</h3>\n        <p>Status: Vulnerable</p>\n        <p>Population: 4,000 - 6,500</p>\n      </div>\n\n    </div>\n\n    <!-- credit for the images and facts -->\n    <div>\n      <p>images and facts courtesy of World Wildlife Fund <br /> www.worldwildlife.org</p>\n    </div>\n\n  </body>\n\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "/* ADD NEEDED RULE SETS AND PROPERTIES BELOW */\n\n/* style for title and introduction */\n\n\n\n/* style for the featured species and conservation efforts */\n\n\n\n/* style for the content inside the featured container */\n\n\n\n/* gallery style */\n\n\n\n/* style for each animal info card */\n\n\n\n/* style for the paragraph text in the animal info card */\n\n\n\n/* style for the footer containing the images credit */\n\n\n\n/* DO NOT EDIT CSS CODE BELOW */\n\n/* body style */\nbody {\n  font-family: Verdana, sans-serif;\n}\n\n/* h2 style */\nh2 {\n  color: #003E1F;\n}\n\n/* h3 style */\nh3 {\n  color: #053C5E;\n  margin-bottom: 10px;\n}\n\n/* style for images */\nimg {\n  width: auto;\n  height: 200px;\n  border: 2px solid #003E1F;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "vaquita.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L14-L1c-2025/uuid/361e8422-fde2-46fd-9ecd-dfbbd47e13f5.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "snow_leopard.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L14-L1c-2025/uuid/986d0ae2-b05b-4812-9c1d-63d85126c14a.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "mountain_gorilla.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L14-L1c-2025/uuid/4a2f1456-4d9b-4830-b0da-0f9c76fc02d1.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "javan_rhino.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L14-L1c-2025/uuid/c928f004-ede6-4b35-a3bf-94225819872b.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "amur_leopard.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L14-L1c-2025/uuid/c6011b2b-e538-4295-9aa3-d7021841a4cf.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "8": {
+          "id": "8",
+          "name": "sumatran_elephant.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L14-L1c-2025/uuid/327fc4e1-d3c9-4e5b-a1ff-c1dd14a0ce82.jpg",
+          "type": "starter",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nadTooCw=\n",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "name_suffix": "_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:50:46.433+00:00\",\"changed\":[\"cloned from \\\"CSD U2L14-L1c-2025\\\"\"],\"cloned_from\":\"CSD U2L14-L1c-2025\"}]"
+}]]></config>
+</Weblab2>

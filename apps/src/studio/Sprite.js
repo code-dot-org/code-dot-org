@@ -1,8 +1,9 @@
+import {valueOr} from '../utils';
+
 import * as constants from './constants';
 import Item from './Item';
 import StudioAnimation from './StudioAnimation';
 import StudioSpriteSheet from './StudioSpriteSheet';
-import {valueOr} from '../utils';
 
 const Direction = constants.Direction;
 const Emotions = constants.Emotions;

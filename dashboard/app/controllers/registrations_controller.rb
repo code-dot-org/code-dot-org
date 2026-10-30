@@ -1,43 +1,33 @@
-require 'cdo/firehose'
 require 'cdo/honeybadger'
-require 'cpa'
+require 'cdo/mailjet'
 require_relative '../../../shared/middleware/helpers/experiments'
+require 'metrics/events'
+require 'policies/lti'
+require 'queries/lti'
+require 'policies/devise/email_domains'
 
 class RegistrationsController < Devise::RegistrationsController
+  before_action :require_no_authentication, only: [:account_type, :login_type, :finish_student_account, :finish_teacher_account, :new, :create, :cancel]
+  before_action :assign_country_code, only: [:begin_sign_up, :login_type, :finish_student_account, :finish_teacher_account, :edit]
+  before_action :assign_redirect_url, only: [:finish_teacher_account, :finish_student_account]
+
   respond_to :json
   prepend_before_action :authenticate_scope!, only: [
     :edit, :update, :destroy, :upgrade, :set_email, :set_user_type,
-    :migrate_to_multi_auth, :demigrate_from_multi_auth
+    :migrate_to_multi_auth
   ]
-  skip_before_action :verify_authenticity_token, only: [:set_age]
-  skip_before_action :clear_sign_up_session_vars, only: [:new, :begin_sign_up, :cancel, :create]
+  skip_before_action :verify_authenticity_token, only: [:set_student_information]
+  skip_before_action :clear_sign_up_session_vars, only: [:new, :begin_sign_up, :begin_creating_user, :cancel, :create]
 
   #
   # GET /users/sign_up
   #
   def new
-    session[:user_return_to] ||= params[:user_return_to]
-    if PartialRegistration.in_progress?(session)
-      user_params = params[:user] || ActionController::Parameters.new
-      user_params[:user_type] ||= session[:default_sign_up_user_type]
-      @user = User.new_with_session(user_params.permit(:user_type), session)
-    else
-      save_default_sign_up_user_type
-      SignUpTracking.begin_sign_up_tracking(session, split_test: true)
-      super
+    sign_up_path = users_sign_up_account_type_url
+    if params[:user_return_to]
+      sign_up_path += "?user_return_to=#{params[:user_return_to]}"
     end
-  end
-
-  # If the user[user_type] queryparam is provided and valid, save its value
-  # into the session so we can use it as a default on the finish_sign_up page.
-  # If not, clear it from the session so we don't use a misleading default.
-  def save_default_sign_up_user_type
-    requested_user_type = params.dig(:user, :user_type)
-    if User::USER_TYPE_OPTIONS.include? requested_user_type
-      session[:default_sign_up_user_type] = requested_user_type
-    else
-      session.delete(:default_sign_up_user_type)
-    end
+    redirect_to sign_up_path
   end
 
   #
@@ -46,16 +36,73 @@ class RegistrationsController < Devise::RegistrationsController
   # Submit step 1 of the signup process for creating an email/password account.
   #
   def begin_sign_up
+    domain = params[:user][:email].split('@')[1] if params[:user][:email].present?
+    if Policies::Devise::EmailDomains::DISALLOWED_DOMAINS.key?(domain)
+      render json: {
+        error: I18n.t('devise.registrations.disallowed_domain', domain: domain)
+      }, status: :forbidden
+      return
+    end
     @user = User.new(begin_sign_up_params)
+    @user.country_code = @country_code
     @user.validate_for_finish_sign_up
-    SignUpTracking.log_begin_sign_up(@user, session)
 
     if @user.errors.blank?
       PartialRegistration.persist_attributes(session, @user)
-      redirect_to new_user_registration_path
     else
-      render 'new' # Re-render form to display validation errors
+      render json: {
+        error: @user.errors.as_json(full_messages: true)
+      }, status: :bad_request
     end
+  end
+
+  #
+  # Get /users/sign_up/account_type
+  #
+  def account_type
+    @is_signed_out = current_user.nil?
+    view_options(full_width: true, responsive_content: true)
+  end
+
+  #
+  # Get /users/sign_up/login_type
+  #
+  def login_type
+    @is_signed_out = current_user.nil?
+    @user_type = params[:user_type]
+    view_options(full_width: true, responsive_content: true)
+    render 'login_type'
+  end
+
+  #
+  # Get /users/gdpr_check
+  #
+  def gdpr_check
+    render json: {gdpr: request.gdpr?, force_in_eu: request.params['force_in_eu']}
+  end
+
+  #
+  # Get /users/sign_up/finish_student_account
+  #
+  def finish_student_account
+    @age_options = [{value: '', text: ''}] + User::AGE_DROPDOWN_OPTIONS.map do |age|
+      {value: age.to_s, text: age.to_s}
+    end
+    @us_ip = ['US', 'RD'].include?(@country_code)
+    @us_state_options = [{value: '', text: ''}] + User.us_state_dropdown_options.map do |code, name|
+      {value: code, text: name}
+    end
+
+    render 'finish_student_account'
+  end
+
+  #
+  # Get /users/sign_up/finish_teacher_account
+  #
+  def finish_teacher_account
+    @us_ip = ['US', 'RD'].include?(@country_code)
+
+    render 'finish_teacher_account'
   end
 
   #
@@ -64,10 +111,6 @@ class RegistrationsController < Devise::RegistrationsController
   # Cancels the in-progress partial user registration and redirects to sign-up page.
   #
   def cancel
-    provider = PartialRegistration.get_provider(session) || 'email'
-    SignUpTracking.log_cancel_finish_sign_up(session, provider)
-    SignUpTracking.end_sign_up_tracking(session)
-
     PartialRegistration.delete(session)
     redirect_to new_user_registration_path
   end
@@ -104,26 +147,77 @@ class RegistrationsController < Devise::RegistrationsController
   def create
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do |retries, exception|
       if retries > 0
-        Honeybadger.notify(
+        Observability::Errors.report(
           error_class: 'User creation required multiple attempts',
           error_message: "retry ##{retries} failed with exception: #{exception}"
         )
       end
-      super
+
+      begin
+        @user = Services::PartialRegistration::UserBuilder.call(request: request)
+      rescue ActiveRecord::RecordInvalid => exception
+        return render json: {
+          error: exception
+        }, status: :bad_request
+      end
+      sign_in @user
     end
 
-    should_send_new_teacher_email = current_user&.teacher?
-    TeacherMailer.new_teacher_email(current_user, request.locale).deliver_now if should_send_new_teacher_email
-    should_send_parent_email = current_user && current_user.parent_email.present?
-    ParentMailer.parent_email_added_to_student_account(current_user.parent_email, current_user).deliver_now if should_send_parent_email
+    if current_user && current_user.errors.blank?
+      if current_user.teacher?
+        begin
+          MailJet.create_contact_and_add_to_welcome_series(current_user, I18n.locale.to_s)
+        rescue => exception
+          # If we can't add the user to the welcome series, we don't want to disrupt
+          # sign up, but we do want to know about it.
+          Observability::Errors.report(
+            exception,
+            error_message: 'Failed to add user to welcome series',
+            context: {
+              locale: I18n.locale.to_s,
+            }
+          )
+        end
+      end
+      ParentMailer.parent_email_added_to_student_account(current_user.parent_email, current_user).deliver_now if current_user.parent_email.present?
 
-    if current_user # successful registration
       storage_id = take_storage_id_ownership_from_cookie(current_user.id)
-      current_user.generate_progress_from_storage_id(storage_id) if storage_id
+      current_user.generate_progress_from_storage_id(storage_id, locale: I18n.locale) if storage_id
       PartialRegistration.delete session
+      auto_verify_teacher! current_user
+      if Policies::Lti.lti? current_user
+        if session[:lti_deployment_id] && current_user.lti_user_identities.any?
+          deployment = LtiDeployment.find_by(id: session[:lti_deployment_id])
+          lti_identity = current_user.lti_user_identities.find_by(lti_integration_id: deployment.lti_integration_id)
+          if deployment && lti_identity && !deployment.lti_user_identities.exists?(lti_identity.id)
+            deployment.lti_user_identities << lti_identity
+          end
+        end
+        lms_name = Queries::Lti.get_lms_name_from_user(current_user)
+        metadata = {
+          'user_type' => current_user.user_type,
+          'lms_name' => lms_name,
+          'context' => 'registration_controller'
+        }
+        Metrics::Events.log_event(
+          user: current_user,
+          event_name: 'lti_user_created',
+          metadata: metadata,
+          request: request,
+        )
+      end
+      has_school = current_user.school_info&.school_id.present?
+      event_metadata = {
+        'has_school' => has_school,
+      }
+      Metrics::Events.log_event(
+        user: current_user,
+        event_name: 'Sign Up Finished Backend',
+        metadata: event_metadata,
+        get_enabled_experiments: true,
+        request: request,
+      )
     end
-
-    SignUpTracking.log_sign_up_result resource, session
   end
 
   #
@@ -206,15 +300,23 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   def begin_sign_up_params
-    params.require(:user).permit(:email, :password, :password_confirmation)
+    params.require(:user).permit(:email, :password, :password_confirmation, :user_type)
   end
 
-  # Set age for the current user if empty - skips CSRF verification because this can be called
+  # Set age, us_state and gender for the current user if empty - skips CSRF verification because this can be called
   # from cached pages which will not populate the CSRF token. This also skips lockout policy
   # checks since those depend on the age being set.
-  def set_age
+  def set_student_information
     return head(:forbidden) unless current_user
-    current_user.update(age: params[:user][:age]) if current_user.age.blank?
+    student_information = {}
+
+    student_information[:age] = params[:user][:age] if current_user.age.blank?
+    us_state_param = params[:user][:us_state]
+    student_information[:us_state] = us_state_param if us_state_param.present? && !current_user.user_provided_us_state
+    student_information[:user_provided_us_state] = params[:user][:us_state].present? unless current_user.user_provided_us_state
+    student_information[:gender_student_input] = params[:user][:gender_student_input] if current_user.gender.blank?
+    student_information[:country_code] = params[:user][:country_code] if current_user.country_code.blank?
+    current_user.update(student_information) unless student_information.empty?
   end
 
   def upgrade
@@ -224,7 +326,7 @@ class RegistrationsController < Devise::RegistrationsController
     user_params[:hashed_email] = User.hash_email(user_params[:email]) if user_params[:email].present?
     current_user.reload # Needed to make tests pass for reasons noted in registrations_controller_test.rb
 
-    successfully_updated = current_user.upgrade_to_personal_login(upgrade_params)
+    successfully_updated = Services::User::UpgradeToPersonalLogin.call(user: current_user, params: upgrade_params)
     has_email = current_user.parent_email.blank? && current_user.hashed_email.present?
     success_message_kind = has_email ? :personal_login_created_email : :personal_login_created_username
 
@@ -284,16 +386,20 @@ class RegistrationsController < Devise::RegistrationsController
   def set_user_type
     return head(:bad_request) if params[:user].nil?
     return head(:bad_request) if params[:user][:user_type].nil?
+    return head(:bad_request) unless current_user.can_change_own_user_type?
+
+    previous_user_type = current_user.user_type
 
     successfully_updated =
       if current_user.migrated?
         if forbidden_change?(current_user, params)
           false
         else
-          current_user.set_user_type(
-            set_user_type_params[:user_type],
-            set_user_type_params[:email],
-            email_preference_params(EmailPreference::ACCOUNT_TYPE_CHANGE, "0")
+          Services::User::UserTypeSetter.call(
+            user: current_user,
+            user_type: set_user_type_params[:user_type],
+            email: set_user_type_params[:email],
+            email_preference: email_preference_params(EmailPreference::ACCOUNT_TYPE_CHANGE, "0")
           )
         end
       else
@@ -306,6 +412,18 @@ class RegistrationsController < Devise::RegistrationsController
           current_user.update_without_password(set_user_type_params)
         end
       end
+
+    if successfully_updated && (previous_user_type != current_user.user_type)
+      Metrics::Events.log_event(
+        user: current_user,
+        event_name: 'user_type_changed',
+        metadata: {
+          from_user_type: previous_user_type,
+          to_user_type: current_user.user_type
+        },
+        request: request
+      )
+    end
 
     if successfully_updated
       head :no_content
@@ -325,15 +443,6 @@ class RegistrationsController < Devise::RegistrationsController
       notice: I18n.t('auth.migration_success')
   end
 
-  #
-  # GET /users/demigrate_from_multi_auth
-  #
-  def demigrate_from_multi_auth
-    current_user.demigrate_from_multi_auth
-    redirect_to edit_registration_path(current_user),
-      notice: I18n.t('auth.demigration_success')
-  end
-
   def existing_account
     params.require([:email, :provider])
     render 'existing_account'
@@ -343,23 +452,33 @@ class RegistrationsController < Devise::RegistrationsController
   # GET /users/edit
   #
   def edit
-    @permission_status = current_user.child_account_compliance_state
-    @personal_account_linking_enabled = true
+    @permission_status = current_user.cap_status
 
-    # Backfill us_state for pre-CPA students
-    if current_user.student? && current_user.us_state.nil?
-      Services::ChildAccount.update_us_state_from_teacher!(current_user)
-    end
+    # Get the request location
+    @is_usa = Policies::User.in_usa?(@country_code)
+
+    # A student is underage if they reside in a state with a CAP policy and are in the affected age range.
+    underage = Policies::ChildAccount.underage?(current_user)
+
+    # The student is in a 'lockout' flow if they are potentially locked out and not unlocked
+    @student_in_lockout_flow = underage && !Policies::ChildAccount::ComplianceState.permission_granted?(current_user)
+
+    @personal_account_linking_enabled = Policies::ChildAccount.personal_account_linking_enabled?(current_user, request_in_usa: @is_usa)
 
     # Handle users who aren't locked out, but still need parent permission to link personal accounts.
-    if Policies::ChildAccount.user_predates_policy?(current_user)
-      permission_request = Queries::ChildAccount.latest_permission_request(current_user)
+    if underage || !Policies::ChildAccount.has_required_information?(current_user)
+      permission_request = current_user.latest_parental_permission_request
       @pending_email = permission_request&.parent_email
       @request_date = permission_request&.updated_at || Date.new
-      @personal_account_linking_enabled = false unless Policies::ChildAccount.compliant?(current_user)
     end
+  end
 
-    @personal_account_linking_enabled = true unless experiment_value('cpa-partial-lockout', request)
+  #
+  # GET /users/personalization_information
+  #
+  def personalization_information
+    # Add in once data is ready
+    # @teacher_context = current_user.teacher_context || TeacherContext.new
   end
 
   private def update_user_email
@@ -454,6 +573,9 @@ class RegistrationsController < Devise::RegistrationsController
     params.require(:user).permit(
       :parent_email,
       :username,
+      :given_name,
+      :family_name,
+      :educator_role,
       :password,
       :encrypted_password,
       :current_password,
@@ -470,7 +592,12 @@ class RegistrationsController < Devise::RegistrationsController
       :provider,
       :us_state,
       :country_code,
+      :user_provided_us_state,
       :ai_rubrics_disabled,
+      :lti_roster_sync_enabled,
+      facilitator_info_attributes: [
+        :bio,
+      ],
       school_info_attributes: [
         :country,
         :school_type,
@@ -520,44 +647,45 @@ class RegistrationsController < Devise::RegistrationsController
       )
   end
 
-  private def log_account_deletion_to_firehose(current_user, dependent_users)
-    # Log event for user initiating account deletion.
-    FirehoseClient.instance.put_record(
-      :analysis,
-      {
-        study: 'user-soft-delete-audit-v2',
-        event: 'initiated-account-deletion',
-        user_id: current_user.id,
-        data_json: {
-          user_type: current_user.user_type,
-          dependent_user_ids: dependent_users.pluck(:id),
-        }.to_json
-      }
-    )
-
-    # Log separate events for dependent users destroyed in user-initiated account deletion.
-    # This should only happen for teachers.
-    dependent_users.each do |user|
-      FirehoseClient.instance.put_record(
-        :analysis,
-        {
-          study: 'user-soft-delete-audit-v2',
-          event: 'dependent-account-deletion',
-          user_id: user[:id],
-          data_json: {
-            user_type: user[:user_type],
-            deleted_by_id: current_user.id,
-          }.to_json
-        }
-      )
-    end
-  end
-
   private def destroy_users(current_user, dependent_users)
     users = [current_user] + dependent_users
     user_ids_to_destroy = users.pluck(:id)
     User.ignore_deleted_at_index.destroy(user_ids_to_destroy)
 
-    log_account_deletion_to_firehose(current_user, dependent_users)
+    Metrics::Events.log_event(
+      user: current_user,
+      event_name: 'user_self_deleted',
+      metadata: {
+        user_type: current_user.user_type,
+        dependent_user_count: dependent_users&.count,
+        dependent_user_ids: dependent_users&.pluck(:id),
+      },
+    )
+  end
+
+  private def us_ip?
+    # Get the request location
+    ['US', 'RD'].include?(request.country_code)
+  end
+
+  private def assign_country_code
+    @country_code = request.country_code
+  end
+
+  private def assign_redirect_url
+    @redirect_url = session[:user_return_to] || @redirect_url
+  end
+
+  # Auto-verify teachers who sign up using a school-owned login type: Clever, Classlink or LTI.
+  # Google Classroom teachers are not auto-verified at sign-up, but will be after they sync
+  # their first section. This proves they are a roster-bearing user, which is evidence of them being a real teacher.
+  private def auto_verify_teacher!(user)
+    return unless user.teacher? && !user.verified_teacher?
+
+    is_school_owned = user.authentication_options.any? do |auth_option|
+      Policies::User::SCHOOL_OWNED_TYPES.include?(auth_option.credential_type)
+    end
+
+    user.verify_teacher! if is_school_owned
   end
 end

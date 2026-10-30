@@ -1,0 +1,14 @@
+name 'designing-reliable-apps-preassessment-q13_2026'
+
+question 'A user searches for "jazz playlists" in a music app. The search works correctly, but no matching playlists exist in the database. The app shows: "No results found. Try searching for a different genre." Which app state does this represent?'
+
+right 'An empty state'
+wrong 'An error state'
+wrong 'A loading state'
+wrong 'A server failure state'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 9
+MARKDOWN

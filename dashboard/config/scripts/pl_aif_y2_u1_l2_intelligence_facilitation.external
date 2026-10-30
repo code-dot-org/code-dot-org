@@ -1,0 +1,79 @@
+name 'pl-aif-y2-u1-l2-intelligence-facilitation'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Facilitating the Discussion
+
+Lesson 1 runs on discussion, a card sort, and a live debate, not direct instruction. Your job is less about delivering content and more about noticing where student thinking gets stuck, and knowing what to say when it does.
+
+## What's Actually Happening in This Lesson
+
+<div style="background-color: #F7F7FB; border-radius: 10px; padding: 18px 20px; margin: 16px 0;">
+  <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px;">
+    <div style="background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 12px; width: 24px; height: 24px; min-width: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center;">1</div>
+    <div style="font-size: 16px; line-height: 1.5;"><strong>Warm-up discussion:</strong> students share their own working definition of "intelligence" before writing it down</div>
+  </div>
+  <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px;">
+    <div style="background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 12px; width: 24px; height: 24px; min-width: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center;">2</div>
+    <div style="font-size: 16px; line-height: 1.5;"><strong>Intelligence Card Sort:</strong> pairs sort cards describing real behaviors, human, animal, and machine, into groups based on what kind of intelligence (if any) each one shows</div>
+  </div>
+  <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px;">
+    <div style="background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 12px; width: 24px; height: 24px; min-width: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center;">3</div>
+    <div style="font-size: 16px; line-height: 1.5;"><strong>Turing Test demo:</strong> students compare two sets of interview responses and guess which one came from AI, then you reveal the answer</div>
+  </div>
+  <div style="display: flex; align-items: flex-start; gap: 12px;">
+    <div style="background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 12px; width: 24px; height: 24px; min-width: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center;">4</div>
+    <div style="font-size: 16px; line-height: 1.5;"><strong>Debate activity:</strong> students take a stance on whether the Turing Test actually measures intelligence, then debate it with AI to pressure-test their reasoning</div>
+  </div>
+</div>
+
+<hr>
+
+## Strong Answers vs. Stuck Answers
+
+Across both the warm-up discussion and the card sort, the same pattern shows up: students default to describing *outcomes*, not *mechanisms*. Watch for it in both places.
+
+<div style="display: flex; gap: 16px; margin: 20px 0; flex-wrap: wrap;">
+  <div style="flex: 1; min-width: 250px; background-color: #FFE3CE; border-radius: 10px; padding: 16px 18px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <div style="font-size: 16px; font-weight: bold; color: #611D00; margin-bottom: 10px;">Stuck: Outcome-Only</div>
+    <div style="font-size: 16px; color: #611D00; line-height: 1.6;">
+      "Gets good grades."<br><br>
+      "These are all the smart cards."
+    </div>
+  </div>
+  <div style="flex: 1; min-width: 250px; background-color: #CCF1D0; border-radius: 10px; padding: 16px 18px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <div style="font-size: 16px; font-weight: bold; color: #003F25; margin-bottom: 10px;">Strong: Names the Mechanism</div>
+    <div style="font-size: 16px; color: #003F25; line-height: 1.6;">
+      "Learns from mistakes."<br><br>
+      "These all learn from experience, like the baby learning to walk."
+    </div>
+  </div>
+</div>
+
+<hr>
+
+## Watch for: Fooling vs. Thinking
+
+The Turing Test debate surfaces a sharper version of the same issue. Students often conflate two different questions:
+
+<div style="background-color: #FFE3CE; border-radius: 10px; padding: 16px 18px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #611D00; line-height: 1.5;">
+    <strong>&#9888; Common conflation:</strong> "Fooling a human" and "thinking like a human" feel like the same claim to students, but they aren't. Passing the Turing Test only proves the first one.
+  </div>
+</div>
+
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;">
+    <strong>&#128161; Language to borrow:</strong> When you hear one of the patterns above in the moment, here's exactly what to say to redirect it without handing over the answer.
+  </div>
+
+  <div style="font-size: 13px; font-weight: bold; color: #4C42CF; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 16px; margin-bottom: 8px;">For an outcome-only answer</div>
+  <div style="font-size: 16px; color: #222222; margin-bottom: 8px;">&bull; "What is the brain doing that makes getting good grades possible?"</div>
+  <div style="font-size: 16px; color: #222222;">&bull; "Is the way a calculator solves a problem the same kind of thinking as the way a dog learns a new trick?"</div>
+
+  <div style="font-size: 13px; font-weight: bold; color: #4C42CF; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 16px; margin-bottom: 8px;">For the fooling vs. thinking conflation</div>
+  <div style="font-size: 16px; color: #222222; margin-bottom: 8px;">&bull; "What about the thermostat, is that intelligence at all?"</div>
+  <div style="font-size: 16px; color: #222222;">&bull; "Did the AI's argument actually mean something to you, or just sound persuasive?"</div>
+</div>
+MARKDOWN

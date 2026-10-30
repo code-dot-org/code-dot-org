@@ -1,0 +1,14 @@
+name 'designing-reliable-apps-postassessment-q2_2026'
+
+question 'A developer receives this API response: {"user": {"name": "Priya", "favorites": ["jazz", "afrobeats", "cumbia"]}}. Which statement about this data structure is accurate?'
+
+right '"favorites" is an array nested inside an object, which is itself nested inside another object'
+wrong '"favorites" is an object with three key-value pairs'
+wrong 'The entire response is an array of user objects'
+wrong '"user" is a value that belongs to the "name" key'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 1
+MARKDOWN

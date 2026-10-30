@@ -1,17 +1,22 @@
+import Link from '@code-dot-org/component-library/link';
+import {Button as MuiButton, Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
-import Certificate from './Certificate';
-import style from './certificate_batch.module.scss';
-import i18n from '@cdo/locale';
-import GraduateToNextLevel from '@cdo/apps/templates/certificates/GraduateToNextLevel';
-import {
-  BodyTwoText,
-  Heading3,
-  Heading4,
-} from '@cdo/apps/componentLibrary/typography';
 
-import selfPacedPlBanner from '@cdo/static/selfPacedPlBanner.png';
+import {hasQueryParam, queryParams} from '@cdo/apps/code-studio/utils';
+import {pegasus, studio} from '@cdo/apps/lib/util/urlHelpers';
+import GraduateToNextLevel from '@cdo/apps/templates/certificates/GraduateToNextLevel';
+import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
+import i18n from '@cdo/locale';
+import aiCurriculumHowItWorksImg from '@cdo/static/ai/ai-curriculum-how-ai-works.png';
 import facilitatorLedPlBanner from '@cdo/static/facilitatorLedPlBanner.png';
+import selfPacedPlBanner from '@cdo/static/selfPacedPlBanner.png';
+import teachPageTopImg from '@cdo/static/teach-page-top.png';
+
+import Certificate from './Certificate';
+import SuggestedAssignableCourses from './SuggestedAssignableCourses';
+
+import style from './certificate_batch.module.scss';
 
 export default function Congrats(props) {
   /**
@@ -23,45 +28,118 @@ export default function Congrats(props) {
    * Renders links to certificate alternatives when there is a special event going on.
    * @param {string} language The language code related to the special event i.e. 'en', 'es', 'ko', etc
    * @param {string} tutorial The type of tutorial the student finished i.e. 'dance', 'oceans', etc
+   * @param {Date} currentDate The Date to use when rendering the links.
    * @returns {HTMLElement} HTML for rendering the extra certificate links.
    */
-  const renderExtraCertificateLinks = (language, tutorial) => {
-    let extraLinkUrl, extraLinkText;
-    // If Adding extra links see this PR: https://github.com/code-dot-org/code-dot-org/pull/48515
+  const renderExtraCertificateLinks = (language, tutorial, currentDate) => {
+    const {extraLinkUrl, extraLinkText} = getExtraLinkData(
+      language,
+      tutorial,
+      currentDate
+    );
     if (!extraLinkUrl || !extraLinkText) {
       // There are no extra links to render.
       return;
     }
     return (
       <div className={style.extraLinkContainer}>
-        <a
-          href={extraLinkUrl}
-          target={'_blank'}
-          className={style.extraLink}
-          rel="noreferrer"
-        >
+        <Link href={extraLinkUrl} openInNewTab size="s">
           {extraLinkText}
-        </a>
+        </Link>
       </div>
     );
+  };
+
+  /**
+   * Uses the given parameters to select the extra link campaign to display
+   * to the user.
+   * @param {string} language The language code related to the special event i.e. 'en', 'es', 'ko', etc
+   * @param {string} tutorial The type of tutorial the student finished i.e. 'dance', 'oceans', etc
+   * @param {Date} currentDate The Date to use when rending the links. You can
+   * use the queryString param currentDate= to manually test these campaigns.
+   * @returns {Object} extraLinkUrl, extraLinkText
+   */
+  const getExtraLinkData = (language, tutorial, currentDate) => {
+    // https://codedotorg.atlassian.net/browse/P20-1635
+    const codingPartyStart = new Date('2025-10-13:00:00+09:00');
+    const codingPartyEnd = new Date('2025-11-25:00:00+09:00');
+    const codingPartyActive =
+      codingPartyStart <= currentDate && currentDate < codingPartyEnd;
+    if (language === 'ko' && codingPartyActive) {
+      const extraLinkText =
+        '온라인 코딩 파티 인증서 받으러 가기! (과학기술정보통신부 인증)';
+      if (/oceans/.test(tutorial)) {
+        return {
+          extraLinkUrl: studio(
+            '/blockly/media/certificates/ko/online-coding-party-2025-2-oceans.png'
+          ),
+          extraLinkText: extraLinkText,
+        };
+      } else if (/hero/.test(tutorial)) {
+        return {
+          extraLinkUrl: studio(
+            '/blockly/media/certificates/ko/online-coding-party-2025-2-hero.png'
+          ),
+          extraLinkText: extraLinkText,
+        };
+      } else if (/dance-ai/.test(tutorial)) {
+        return {
+          extraLinkUrl: studio(
+            '/blockly/media/certificates/ko/online-coding-party-2025-2-dance.png'
+          ),
+          extraLinkText: extraLinkText,
+        };
+      } else if (/music-jam/.test(tutorial)) {
+        return {
+          extraLinkUrl: studio(
+            '/blockly/media/certificates/ko/online-coding-party-2025-2-music.png'
+          ),
+          extraLinkText: extraLinkText,
+        };
+      }
+    }
+    // Mock extra link campaign used for testing
+    const demoStart = new Date('2000-01-01T00:00:00+00:00');
+    const demoEnd = new Date('2000-02-01T00:00:00+00:00');
+    const demoActive = demoStart <= currentDate && currentDate < demoEnd;
+    if (demoActive) {
+      return {
+        extraLinkUrl: pegasus('/files/extra-link-demo.png'),
+        extraLinkText: `This is the Demo extra link for ${tutorial}`,
+      };
+    }
+    return {};
   };
 
   const {
     tutorial,
     certificateId,
     userType,
+    userName,
     under13,
     language,
     randomDonorTwitter,
     randomDonorName,
-    initialCertificateImageUrl,
+    certificateData,
     isHocTutorial,
     isPlCourse,
     isK5PlCourse,
     nextCourseScriptName,
     nextCourseTitle,
     nextCourseDesc,
+    curriculumUrl,
+    assignableCourseSuggestions,
+    isEnglish,
   } = props;
+
+  // Determine what time we should consider the current time to be when
+  // rendering the page. This is useful for testing UI changes which happen
+  // at particular times of the year.
+  // the currentDate can be overridden using the query string param 'currentDate'
+  const currentDateOverride =
+    hasQueryParam('currentDate') && new Date(queryParams('currentDate'));
+  // default to the real current time.
+  const currentDate = currentDateOverride || props['currentDate'] || new Date();
 
   const teacherCourses = [
     {
@@ -96,7 +174,7 @@ export default function Congrats(props) {
         oldestGrade: '12',
       }),
       title: i18n.howAiWorks(),
-      image: 'https://code.org/images/ai/ai-curriculum-how-ai-works.png',
+      image: aiCurriculumHowItWorksImg,
       buttonText: i18n.exploreLessons(),
       description: i18n.howAiWorksDescription(),
       link: 'http://code.org/ai/how-ai-works',
@@ -149,7 +227,7 @@ export default function Congrats(props) {
     userType === 'student' ? studentCourses : teacherCourses;
 
   const curriculumCatalogImages = [
-    'https://code.org/images/ai/ai-curriclum-machine-learning.png',
+    '/blockly/media/ai/ai-curriclum-machine-learning.png',
     'https://images.code.org/11d83ab1d397cafda327782812e8988c-Book%20Covers.png',
     '/../../../../shared/images/courses/logo_csa.jpg',
     '/../../../../shared/images/courses/logo_mobile.jpg',
@@ -161,14 +239,14 @@ export default function Congrats(props) {
       title: i18n.teachWithCodeOrg(),
       description: i18n.teachWithCodeOrgDescription(),
       buttonText: i18n.teachWithCodeOrg(),
-      image: 'https://code.org/images/teach-page-top.png',
+      image: teachPageTopImg,
       link: 'https://code.org/teach',
     },
     {
       title: i18n.courseOfferingSelfPacedPl(),
       description: i18n.selfPacedPlDescription(),
       buttonText: i18n.exploreProfessionalLearning(),
-      image: 'https://code.org/shared/images/banners/self-paced-pl-hero.png',
+      image: studio('/shared/images/banners/self-paced-pl-hero.png'),
       link: 'https://code.org/educate/professional-development-online',
     },
   ];
@@ -214,9 +292,9 @@ export default function Congrats(props) {
       return (
         <div>
           <div className={style.continueBeyond}>
-            <Heading3 className={style.textCenter}>
-              {i18n.continueBeyondHourOfCode()}
-            </Heading3>
+            <Typography className={style.textCenter} variant="h3" gutterBottom>
+              Continue Beyond an Hour of AI
+            </Typography>
             <div
               className={`${style.actionBlockWrapper} ${style.actionBlockWrapperThreeCol} ${style.courseContainer}`}
             >
@@ -226,17 +304,30 @@ export default function Congrats(props) {
                   key={index}
                 >
                   <div className={style.contentWrapper}>
-                    <BodyTwoText className={style.overline}>
+                    <Typography
+                      className={style.overline}
+                      variant="overline2"
+                      gutterBottom
+                    >
                       {item.grade}
-                    </BodyTwoText>
-                    <Heading3>{item.title}</Heading3>
+                    </Typography>
+                    <Typography variant="h3" gutterBottom>
+                      {item.title}
+                    </Typography>
                     <img src={item.image} alt="" />
-                    <BodyTwoText>{item.description}</BodyTwoText>
+                    <Typography variant="body2" gutterBottom>
+                      {item.description}
+                    </Typography>
                   </div>
                   <div className={style.contentFooter}>
-                    <a className={style.linkButton} href={item.link}>
+                    <MuiButton
+                      className={style.linkButton}
+                      variant="contained"
+                      color="primary"
+                      href={item.link}
+                    >
                       {item.buttonText}
-                    </a>
+                    </MuiButton>
                   </div>
                 </div>
               ))}
@@ -244,8 +335,12 @@ export default function Congrats(props) {
             <hr />
 
             <div className={style.textCenter}>
-              <Heading4>{i18n.discoverMore()}</Heading4>
-              <BodyTwoText>{i18n.discoverMoreCatalogText()}</BodyTwoText>
+              <Typography variant="h4" gutterBottom>
+                {i18n.discoverMore()}
+              </Typography>
+              <Typography variant="body2" gutterBottom>
+                {i18n.discoverMoreCatalogText()}
+              </Typography>
               <div className={style.imageContainer}>
                 {curriculumCatalogImages.map((item, index) => (
                   <img key={index} src={item} alt="" />
@@ -253,33 +348,38 @@ export default function Congrats(props) {
               </div>
               {userType === 'student' ? (
                 <div className={style.studentButtonsContainer}>
-                  <a
+                  <MuiButton
                     className={`${style.linkButton} ${style.catalogButton}`}
+                    variant="contained"
+                    color="primary"
                     href={'https://code.org/student/elementary'}
                   >
                     {i18n.learningForAgesRange({
                       youngestAge: '5',
                       oldestAge: '11',
                     })}
-                  </a>
-                  <a
+                  </MuiButton>
+                  <MuiButton
                     className={`${style.linkButton} ${style.catalogButton}`}
+                    variant="contained"
+                    color="primary"
                     href={'https://code.org/student/middle-high'}
                   >
                     {i18n.learningForAgesPlus({age: '11'})}
-                  </a>
+                  </MuiButton>
                 </div>
               ) : (
-                <a
+                <MuiButton
                   className={`${style.linkButton} ${style.catalogButton}`}
+                  variant="contained"
+                  color="primary"
                   href={'/catalog'}
                 >
                   {i18n.viewCurriculumCatalog()}
-                </a>
+                </MuiButton>
               )}
             </div>
           </div>
-
           {userType !== 'student' && (
             <div className={style.professionalLearning}>
               <div
@@ -296,13 +396,22 @@ export default function Congrats(props) {
                         alt=""
                         className={style.professionalLearningImage}
                       />
-                      <Heading3>{item.title}</Heading3>
-                      <BodyTwoText>{item.description}</BodyTwoText>
+                      <Typography variant="h3" gutterBottom>
+                        {item.title}
+                      </Typography>
+                      <Typography variant="body2" gutterBottom>
+                        {item.description}
+                      </Typography>
                     </div>
                     <div className={style.contentFooter}>
-                      <a className={style.linkButton} href={item.link}>
+                      <MuiButton
+                        className={style.linkButton}
+                        variant="contained"
+                        color="primary"
+                        href={item.link}
+                      >
                         {item.buttonText}
-                      </a>
+                      </MuiButton>
                     </div>
                   </div>
                 ))}
@@ -328,13 +437,22 @@ export default function Congrats(props) {
                     alt=""
                     className={style.professionalLearningNextStepsImage}
                   />
-                  <Heading3>{item.title}</Heading3>
-                  <BodyTwoText>{item.description}</BodyTwoText>
+                  <Typography variant="h3" gutterBottom>
+                    {item.title}
+                  </Typography>
+                  <Typography variant="body2" gutterBottom>
+                    {item.description}
+                  </Typography>
                 </div>
                 <div className={style.contentFooter}>
-                  <a className={style.linkButton} href={item.link}>
+                  <MuiButton
+                    className={style.linkButton}
+                    variant="contained"
+                    color="primary"
+                    href={item.link}
+                  >
                     {item.buttonText}
-                  </a>
+                  </MuiButton>
                 </div>
               </div>
             ))}
@@ -356,21 +474,42 @@ export default function Congrats(props) {
 
   return (
     <div className={style.wrapper}>
-      <div className={style.certificateContainer}>
-        <Certificate
-          tutorial={tutorial}
-          certificateId={certificateId}
-          randomDonorTwitter={randomDonorTwitter}
-          randomDonorName={randomDonorName}
-          under13={under13}
-          initialCertificateImageUrl={initialCertificateImageUrl}
-          isHocTutorial={isHocTutorial}
-          isPlCourse={isPlCourse}
-        >
-          {renderExtraCertificateLinks(language, tutorial)}
-        </Certificate>
-      </div>
-      {renderRecommendedOptions()}
+      {certificateData.length > 0 && (
+        <>
+          <div className={style.certificateContainer}>
+            <Certificate
+              tutorial={tutorial}
+              certificateId={certificateId}
+              randomDonorTwitter={randomDonorTwitter}
+              randomDonorName={randomDonorName}
+              under13={under13}
+              certificateData={certificateData}
+              isHocTutorial={isHocTutorial}
+              isPlCourse={isPlCourse}
+              userType={userType}
+              userName={userName}
+            >
+              {renderExtraCertificateLinks(language, tutorial, currentDate)}
+            </Certificate>
+          </div>
+          {assignableCourseSuggestions && (
+            <SuggestedAssignableCourses
+              assignableCourseSuggestions={assignableCourseSuggestions}
+              isEnglish={isEnglish}
+            />
+          )}
+          {renderRecommendedOptions()}
+        </>
+      )}
+      {certificateData.length === 0 && (
+        <div>
+          <Typography variant="h3" gutterBottom>
+            <InlineMarkdown
+              markdown={i18n.noCertificateReturnToCourse({curriculumUrl})}
+            />
+          </Typography>
+        </div>
+      )}
     </div>
   );
 }
@@ -379,15 +518,20 @@ Congrats.propTypes = {
   certificateId: PropTypes.string,
   tutorial: PropTypes.string,
   userType: PropTypes.oneOf(['signedOut', 'teacher', 'student']).isRequired,
+  userName: PropTypes.string,
   under13: PropTypes.bool,
   language: PropTypes.string.isRequired,
   randomDonorTwitter: PropTypes.string,
   randomDonorName: PropTypes.string,
-  initialCertificateImageUrl: PropTypes.string.isRequired,
+  certificateData: PropTypes.arrayOf(PropTypes.object).isRequired,
+  curriculumUrl: PropTypes.string,
   isHocTutorial: PropTypes.bool,
   isPlCourse: PropTypes.bool,
   isK5PlCourse: PropTypes.bool,
   nextCourseScriptName: PropTypes.string,
   nextCourseTitle: PropTypes.string,
   nextCourseDesc: PropTypes.string,
+  currentDate: PropTypes.object,
+  assignableCourseSuggestions: PropTypes.array,
+  isEnglish: PropTypes.bool,
 };

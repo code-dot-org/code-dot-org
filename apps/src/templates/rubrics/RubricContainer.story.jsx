@@ -1,22 +1,40 @@
 import React from 'react';
-import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
-import RubricContainer from './RubricContainer';
-import {reduxStore} from '../../../.storybook/decorators';
 import {Provider} from 'react-redux';
-import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+
+import teacherPanel from '@cdo/apps/code-studio/teacherPanelRedux';
+import {createStoreWithReducers, registerReducers} from '@cdo/apps/redux';
+import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
+
+import teacherSections from '../teacherDashboard/teacherSectionsRedux';
+
+import RubricContainer from './RubricContainer';
 
 export default {
   component: RubricContainer,
 };
 
+const createRubricContainerStore = () => {
+  registerReducers({
+    teacherPanel,
+    teacherSections,
+  });
+  const store = createStoreWithReducers();
+  return store;
+};
+
 const rubricLevelName = 'free_play_level';
 
 const defaultRubric = {
+  id: 1,
   lesson: {
     position: 3,
     name: 'Testing',
   },
+  script: {
+    id: 107,
+  },
   level: {
+    id: 42,
     name: rubricLevelName,
     position: 5,
   },
@@ -85,15 +103,16 @@ const defaultStudentLevelInfo = {
   attempts: 2,
   timeSpent: 404,
   lastAttempt: '5/26/23',
+  user_id: 107,
 };
 
 const Template = args => (
-  <Provider store={reduxStore({teacherSections})}>
+  <Provider store={createRubricContainerStore()}>
     <RubricContainer
       rubric={defaultRubric}
       teacherHasEnabledAi={false}
       studentLevelInfo={defaultStudentLevelInfo}
-      currentLevelName={rubricLevelName}
+      onLevelForEvaluation={true}
       open
       {...args}
     />
@@ -118,7 +137,7 @@ export const ViewingStudentWorkOnNonAssessmentLevelAiEnabled = Template.bind(
 ViewingStudentWorkOnNonAssessmentLevelAiEnabled.args = {
   studentLevelInfo: {...defaultStudentLevelInfo, submitted: true},
   teacherHasEnabledAi: true,
-  currentLevelName: 'not_free_play_level',
+  onLevelForEvaluation: false,
 };
 
 export const ViewingStudentWorkOnNonAssessmentLevelAiDisabled = Template.bind(
@@ -127,7 +146,7 @@ export const ViewingStudentWorkOnNonAssessmentLevelAiDisabled = Template.bind(
 ViewingStudentWorkOnNonAssessmentLevelAiDisabled.args = {
   studentLevelInfo: {...defaultStudentLevelInfo, submitted: true},
   teacherHasEnabledAi: false,
-  currentLevelName: 'not_free_play_level',
+  onLevelForEvaluation: false,
 };
 
 export const ViewingStudentWorkOnAssessmentLevelAiEnabled = Template.bind({});

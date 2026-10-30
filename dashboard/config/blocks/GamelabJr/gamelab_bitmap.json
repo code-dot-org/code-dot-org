@@ -1,0 +1,16 @@
+{
+  "category": "Sprites",
+  "config": {
+    "name": "bitmap",
+    "expression": "VALUE",
+    "blockText": "{GRID}",
+    "args": [
+      {
+        "name": "GRID",
+        "customInput": "bitmap"
+      }
+    ],
+    "returnType": "Array",
+    "style": "text_blocks"
+  }
+}

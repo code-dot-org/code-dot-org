@@ -36,4 +36,38 @@ class LtiCourseTest < ActiveSupport::TestCase
       assert lti_section.reload.deleted_at.present?, "lti_section should be deleted"
     end
   end
+
+  describe 'unique constraint on (context_id, lti_integration_id, active)' do
+    subject(:lti_course_duplicate) do
+      build(:lti_course).tap do |duplicate|
+        duplicate.lti_integration = lti_course_original.lti_integration
+        duplicate.context_id      = lti_course_original.context_id
+        duplicate.deleted_at      = nil
+        duplicate.save!(validate: false)
+      end
+    end
+
+    let!(:lti_course_original) {create(:lti_course)}
+
+    it 'raises ActiveRecord::RecordNotUnique' do
+      exception = _ {lti_course_duplicate}.must_raise ActiveRecord::RecordNotUnique
+      _(exception.message).must_match /Duplicate entry .* for key 'lti_courses.index_lti_courses_on_context_integration_active'/
+    end
+
+    context 'when original record is soft deleted' do
+      before do
+        lti_course_original.destroy!
+      end
+
+      it 'allows to create duplicate' do
+        _ {lti_course_duplicate}.must_differ 'LtiCourse.count'
+        _(lti_course_duplicate.persisted?).must_equal true
+      end
+
+      it 'allows to delete duplicate' do
+        _ {lti_course_duplicate.destroy!}.must_differ 'LtiCourse.only_deleted.count'
+        _(lti_course_duplicate.deleted?).must_equal true
+      end
+    end
+  end
 end

@@ -1,0 +1,49 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-09-29T17:30:53.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "teacher_markdown": "Prototype 2\r\n\r\none final recommendation - slow reveal",
+    "mini_app": "theater",
+    "mini_app_variant": "functional",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "# PROTOTYPE 2 — \"Movie Night Matcher\" — THEATER PROGRAM (no lists, game-show reveal)\n# These five values stand in for what the console program calculated.\n# Students carry all of them over once their console program is working.\n\naction_score = 3\ncomedy_score = 5\nhorror_score = 2\ndocumentary_score = 1\nbest_option = \"Comedy Special\"\n\nfrom theater import Scene, play_scenes\n\nscene = Scene()\nscene.set_fill_color(\"black\")\nscene.draw_rectangle(0, 0, 400, 400)\n\nbaseline_y = 350\nbar_width = 60\npoints_per_pixel_step = 20\n\n# Bar 1: Action Flick (there's no list of options to loop over, so each\n# bar is its own block — this is exactly the kind of repetitive-but-\n# straightforward code AI Tutor is good at generating from a spec).\nx_position = 20\nscene.set_fill_color(\"red\")\nscene.set_text_color(\"white\")\nscene.set_text_height(12)\nscene.draw_text(\"Action Flick\", x_position, baseline_y + 20)\npoints_to_show = action_score\nif points_to_show < 0:\n    points_to_show = 0\nbuilt_height = 0\npoint_count = 0\nwhile point_count < points_to_show:\n    built_height = built_height + points_per_pixel_step\n    bar_y = baseline_y - built_height\n    scene.draw_rectangle(x_position, bar_y, bar_width, built_height)\n    scene.play_note(60 + point_count, 0.15)\n    scene.pause(0.15)\n    point_count = point_count + 1\nif points_to_show == 0:\n    scene.pause(0.2)\n\n# Bar 2: Comedy Special\nx_position = 115\nscene.set_fill_color(\"gold\")\nscene.set_text_color(\"white\")\nscene.set_text_height(12)\nscene.draw_text(\"Comedy Special\", x_position, baseline_y + 20)\npoints_to_show = comedy_score\nif points_to_show < 0:\n    points_to_show = 0\nbuilt_height = 0\npoint_count = 0\nwhile point_count < points_to_show:\n    built_height = built_height + points_per_pixel_step\n    bar_y = baseline_y - built_height\n    scene.draw_rectangle(x_position, bar_y, bar_width, built_height)\n    scene.play_note(60 + point_count, 0.15)\n    scene.pause(0.15)\n    point_count = point_count + 1\nif points_to_show == 0:\n    scene.pause(0.2)\n\n# Bar 3: Horror Movie\nx_position = 210\nscene.set_fill_color(\"purple\")\nscene.set_text_color(\"white\")\nscene.set_text_height(12)\nscene.draw_text(\"Horror Movie\", x_position, baseline_y + 20)\npoints_to_show = horror_score\nif points_to_show < 0:\n    points_to_show = 0\nbuilt_height = 0\npoint_count = 0\nwhile point_count < points_to_show:\n    built_height = built_height + points_per_pixel_step\n    bar_y = baseline_y - built_height\n    scene.draw_rectangle(x_position, bar_y, bar_width, built_height)\n    scene.play_note(60 + point_count, 0.15)\n    scene.pause(0.15)\n    point_count = point_count + 1\nif points_to_show == 0:\n    scene.pause(0.2)\n\n# Bar 4: Documentary\nx_position = 305\nscene.set_fill_color(\"teal\")\nscene.set_text_color(\"white\")\nscene.set_text_height(12)\nscene.draw_text(\"Documentary\", x_position, baseline_y + 20)\npoints_to_show = documentary_score\nif points_to_show < 0:\n    points_to_show = 0\nbuilt_height = 0\npoint_count = 0\nwhile point_count < points_to_show:\n    built_height = built_height + points_per_pixel_step\n    bar_y = baseline_y - built_height\n    scene.draw_rectangle(x_position, bar_y, bar_width, built_height)\n    scene.play_note(60 + point_count, 0.15)\n    scene.pause(0.15)\n    point_count = point_count + 1\nif points_to_show == 0:\n    scene.pause(0.2)\n\nscene.pause(0.4)\nscene.set_fill_color(\"black\")\nscene.draw_rectangle(0, 0, 400, 100)\nscene.set_text_color(\"white\")\nscene.set_text_height(24)\nscene.draw_text(\"And the winner is...\", 30, 60)\nscene.play_note(55, 0.2)\nscene.pause(0.3)\nscene.play_note(57, 0.2)\nscene.pause(0.3)\nscene.play_note(59, 0.2)\nscene.pause(0.5)\n\nscene.set_fill_color(\"gold\")\nscene.draw_rectangle(0, 0, 400, 400)\nscene.set_text_color(\"black\")\nscene.set_text_height(32)\nscene.draw_text(best_option, 30, 200)\nscene.play_note(72, 0.6)\nscene.pause(1.0)\n\nplay_scenes(scene)",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-29T17:30:53.070+00:00\",\"changed\":[\"cloned from \\\"ang-csp-u2-prototype2\\\"\"],\"cloned_from\":\"ang-csp-u2-prototype2\"},{\"changed_at\":\"2026-09-29 17:30:55 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-29 20:06:26 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-29 20:06:48 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-29 20:07:07 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

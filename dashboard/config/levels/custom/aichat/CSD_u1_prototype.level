@@ -1,0 +1,61 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2026-01-26T16:05:22.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-2.5-flash-image",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gemini-2.5-flash-image"
+      ],
+      "multimodalEnabled": true
+    },
+    "display_name": "Urban Planning",
+    "starter_assets": {
+      "City Zoning Guide.pdf": "ccee3f41-6c06-4ff0-9c1a-4fb1dd3651c2.pdf",
+      "City Transit Report.pdf": "349dee69-fd6f-4915-a9e6-0123d4a32fdc.pdf",
+      "City Urban Development.pdf": "9f1eb592-70e6-40a6-8a59-96bfeb647cc9.pdf",
+      "image1.jpg": "067e6e17-6d86-44df-9e2e-3b27617cec22.jpg",
+      "image3.jpg": "0d9870c0-0c25-4643-ad0c-b4e68b1b9762.jpg",
+      "image4.jpg": "5f1dcc70-9aa2-42c0-9eed-9d0d07574e1a.jpg"
+    },
+    "name_suffix": "_2025",
+    "submittable": "false",
+    "offer_browser_tts": "false",
+    "disable_edit_run_for_submission": "false",
+    "long_instructions": "##Pet Chooser\r\n- Explore what this chatbot believes makes a “good” pet.\r\n- Challenge its answers and see how it responds.\r\n- Don’t stop after one question."
+  },
+  "audit_log": "[{\"changed_at\":\"2026-01-26T16:05:22.586+00:00\",\"changed\":[\"cloned from \\\"chat_in_pl_test_1\\\"\"],\"cloned_from\":\"chat_in_pl_test_1\"},{\"changed_at\":\"2026-01-26 16:45:03 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-01-26 17:07:41 +0000\",\"changed\":[\"aichat_settings\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-01-26 17:09:02 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-01-26 17:11:04 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-01-26 17:22:48 +0000\",\"changed\":[\"aichat_settings\",\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-01-26 17:24:33 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-03-17 22:16:07 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-03-17 22:17:23 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-03-17 22:26:59 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Aichat>

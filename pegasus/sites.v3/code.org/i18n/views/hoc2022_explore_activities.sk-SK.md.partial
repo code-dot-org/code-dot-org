@@ -1,7 +1,0 @@
-{{ featured_tutorial, title: "Ahoj svet: Vesmír", body: "Vytvor intergalaktické scény s postavami a zvukmi, ktoré ťa prinútia povedať: \"Ahoj svety!\"", image: "/images/hoc2022-hello-world-space.png", url: "https://studio.code.org/s/hello-world-space-2022/reset" }}
-
-{{ featured_tutorial, title: "NASA's Space Jam", body: "Vytvor slnečnú sústavu, ktorá bude stáť za to, a uč sa o hudbe, astronómii a kódovaní!", image: "/images/hoc2022-nasa-space-jam.png", url: "https://chandra.si.edu/sound/code/" }}
-
-{{ featured_tutorial, title: "Hviezdne vojny", body: "Nauč sa programovať droidov a vytvor si vlastnú hru Hviezdne vojny v ďalekej galaxii.", image: "/shared/images/courses/logo_tall_starwars.jpg", url: "https://code.org/starwars" }}
-
-{{ featured_tutorial, title: "SciGirls Code Quest", body: "V tomto online dobrodružstve kódovania prevedieš ponorku Subby cez podvodné výzvy.", image: "/images/hoc2022-scigirls-code-quest.png", url: "https://pbskids.org/scigirls/games/code-quest" }}

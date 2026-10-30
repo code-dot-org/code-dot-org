@@ -1,12 +1,16 @@
-import {assert, expect} from '../../../../util/reconfiguredChai';
+import Checkbox from '@code-dot-org/component-library/checkbox';
+import TextField from '@code-dot-org/component-library/textField';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
+import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
+import libraryParser from '@cdo/apps/code-studio/components/libraries/libraryParser';
 import LibraryPublisher, {
   PublishState,
 } from '@cdo/apps/code-studio/components/libraries/LibraryPublisher';
-import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
-import libraryParser from '@cdo/apps/code-studio/components/libraries/libraryParser';
-import sinon from 'sinon';
+
+import {assert, expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';
 
 describe('LibraryPublisher', () => {
@@ -23,9 +27,8 @@ describe('LibraryPublisher', () => {
   const defaultDescription = '';
   const librarySource = '//comment\nfunction foo(){}';
   const libraryName = 'libraryName';
-  const CHECKBOX_SELECTOR = 'input[type="checkbox"]';
 
-  before(() => {
+  beforeAll(() => {
     replaceOnWindow('dashboard', {
       project: {
         setLibraryDetails: () => {},
@@ -40,7 +43,7 @@ describe('LibraryPublisher', () => {
     publishSpy = sinon.stub(libraryClientApi, 'publish');
   });
 
-  after(() => {
+  afterAll(() => {
     libraryParser.suggestName.restore();
     libraryParser.sanitizeName.restore();
     restoreOnWindow('dashboard');
@@ -84,7 +87,7 @@ describe('LibraryPublisher', () => {
       );
 
       expect(wrapper.state().libraryName).to.equal(libraryName);
-      expect(wrapper.find('input').first().props().value).to.equal(libraryName);
+      expect(wrapper.find(TextField).props().value).to.equal(libraryName);
     });
 
     it('filters invalid functions from selectedFunctions', () => {
@@ -113,7 +116,7 @@ describe('LibraryPublisher', () => {
         <LibraryPublisher {...DEFAULT_PROPS} libraryDetails={libraryDetails} />
       );
 
-      let checkboxes = wrapper.find(CHECKBOX_SELECTOR);
+      let checkboxes = wrapper.find(Checkbox);
       expect(checkboxes.at(1).prop('disabled')).to.be.false;
       expect(checkboxes.at(2).prop('disabled')).to.be.true;
     });
@@ -128,7 +131,7 @@ describe('LibraryPublisher', () => {
         <LibraryPublisher {...DEFAULT_PROPS} libraryDetails={libraryDetails} />
       );
 
-      let checkboxes = wrapper.find(CHECKBOX_SELECTOR);
+      let checkboxes = wrapper.find(Checkbox);
       expect(checkboxes.at(1).prop('disabled')).to.be.false;
       expect(checkboxes.at(2).prop('disabled')).to.be.true;
     });
@@ -147,7 +150,7 @@ describe('LibraryPublisher', () => {
         <LibraryPublisher {...DEFAULT_PROPS} libraryDetails={libraryDetails} />
       );
 
-      let checkboxes = wrapper.find(CHECKBOX_SELECTOR);
+      let checkboxes = wrapper.find(Checkbox);
       expect(checkboxes.at(1).prop('disabled')).to.be.false;
       expect(checkboxes.at(2).prop('disabled')).to.be.false;
       expect(checkboxes.at(3).prop('disabled')).to.be.true;

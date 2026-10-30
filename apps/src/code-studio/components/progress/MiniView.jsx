@@ -1,10 +1,12 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import MiniViewTopRow from './MiniViewTopRow';
+
 import {hasGroups} from '@cdo/apps/code-studio/progressReduxSelectors';
-import ProgressTable from '@cdo/apps/templates/progress/ProgressTable';
 import GoogleClassroomAttributionLabel from '@cdo/apps/templates/progress/GoogleClassroomAttributionLabel';
+import ProgressTable from '@cdo/apps/templates/progress/ProgressTable';
+
+import MiniViewTopRow from './MiniViewTopRow';
 
 /**
  * The course progress dropdown you get when you click the arrow in the header.
@@ -14,6 +16,8 @@ function MiniView(props) {
     isSummaryView,
     hasGroups,
     scriptName,
+    courseName,
+    unitPosition,
     hasFullProgress,
     selectedSectionId,
     minimal,
@@ -34,7 +38,7 @@ function MiniView(props) {
           ...(hasGroups && styles.groupView),
         }}
       >
-        <ProgressTable minimal={minimal} />
+        <ProgressTable minimal={minimal} isOnLevelView={true} />
         <GoogleClassroomAttributionLabel />
       </div>
     );
@@ -45,6 +49,8 @@ function MiniView(props) {
       {!minimal && (
         <MiniViewTopRow
           scriptName={scriptName}
+          courseName={courseName}
+          unitPosition={unitPosition}
           selectedSectionId={selectedSectionId}
         />
       )}
@@ -60,6 +66,8 @@ MiniView.propTypes = {
   isSummaryView: PropTypes.bool.isRequired,
   hasGroups: PropTypes.bool.isRequired,
   scriptName: PropTypes.string.isRequired,
+  courseName: PropTypes.string,
+  unitPosition: PropTypes.number,
   hasFullProgress: PropTypes.bool.isRequired,
   selectedSectionId: PropTypes.number,
 };

@@ -1,19 +1,20 @@
 /* eslint no-unused-vars: ["error", { "ignoreRestSiblings": true }] */
+import {saveAs} from 'filesaver.js';
 import $ from 'jquery';
 import JSZip from 'jszip';
-import {saveAs} from 'filesaver.js';
 
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
 import download from '@cdo/apps/assetManagement/download';
+import logToCloud from '@cdo/apps/logToCloud';
 import exportGamelabCodeEjs from '@cdo/apps/templates/export/gamelabCode.js.ejs';
 import exportGamelabIndexEjs from '@cdo/apps/templates/export/gamelabIndex.html.ejs';
-import logToCloud from '@cdo/apps/logToCloud';
-import {APP_WIDTH, APP_HEIGHT} from '../constants';
 import {
   extractSoundAssets,
   rewriteAssetUrls,
   fetchWebpackRuntime,
 } from '@cdo/apps/util/exporter';
+
+import {APP_WIDTH, APP_HEIGHT} from '../constants';
 
 const CONTROLS_HEIGHT = 165;
 

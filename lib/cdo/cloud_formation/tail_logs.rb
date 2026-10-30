@@ -19,7 +19,11 @@ module Cdo::CloudFormation
         log_config[:start_time] = start
       end
       # Return silently if we can't get the log events for any reason.
-      resp = cw_logs.get_log_events(log_config) rescue return
+      resp = begin
+        cw_logs.get_log_events(log_config)
+      rescue
+        return
+      end
       resp.events.map(&:message).each {|message| log.info(message)}
       @log_token = resp.next_forward_token
     end

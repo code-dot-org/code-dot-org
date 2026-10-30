@@ -1,0 +1,19 @@
+name 'Data Sci U2 Post Q13_2024-pilot'
+
+question 'Which of the following best describes the purpose of the `groupby()` function in Pandas?'
+
+right 'To group rows that have the same values in specified columns and perform aggregate functions on each group.'
+wrong 'To sort data by a single column.'
+wrong 'To visualize relationships between grouped data points.'
+wrong 'To filter rows based on a single condition.'
+
+
+
+
+
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+
+MARKDOWN

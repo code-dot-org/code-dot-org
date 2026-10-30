@@ -1,0 +1,23 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-04-01T21:44:10.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# async / await\n\n**`async`** is a keyword that tells a function to handle asynchronous operations, like requesting a list of book titles.\n\n**`await`** is a keyword used inside an async function that tells the program to wait for a Promise to resolve before moving to the next line.\n\n```\nconst fetchBooks = async () => {\n    const response = await fetch('/books');\n    return await response.json();\n};\n```",
+        "imageUrl": "https://images.code.org/f160578af173c9011d72473095dd701f-books.jpg",
+        "key": "designing-reliable-apps-lesson2-level1-test_2025-pilot-e834eace-42c5-4df8-990e-d9987f293a0f",
+        "layout": "text-top-left"
+      }
+    ],
+    "name_suffix": "_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T21:44:10.533+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson4-vocab1-2025-pilot_2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson4-vocab1-2025-pilot_2025-pilot\"}]"
+}]]></config>
+</Panels>

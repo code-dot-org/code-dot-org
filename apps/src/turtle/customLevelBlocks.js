@@ -2,6 +2,10 @@
  * A set of blocks used by some of our custom levels (i.e. built by level builder)
  */
 
+import CdoFieldDropdown from '@cdo/apps/blockly/addons/cdoFieldDropdown';
+
+import {BlockStyles} from '../blockly/constants';
+
 var msg = require('./locale');
 
 exports.install = function (blockly, generator, gensym) {
@@ -57,13 +61,13 @@ function createACircleCode(size, gensym, indent) {
 function makeBlockInitializer(title, parameter) {
   return {
     init: function () {
-      this.setHSV(94, 0.84, 0.6);
+      this.setStyle(BlockStyles.PROCEDURE);
 
       this.appendDummyInput().appendField(title);
 
       if (parameter !== undefined) {
         this.appendValueInput('VALUE')
-          .setAlign(Blockly.ALIGN_RIGHT)
+          .setAlign(Blockly.inputs.Align.RIGHT)
           .setCheck(Blockly.BlockValueType.NUMBER)
           .appendField(parameter + ':');
       }
@@ -577,9 +581,9 @@ function installCreateASnowflakeDropdown(blockly, generator, gensym) {
     // We use custom initialization (instead of makeBlockInitializer) here
     // because each initialization needs a new instance of the FieldDropdown.
     init: function () {
-      this.setHSV(94, 0.84, 0.6);
+      this.setStyle(BlockStyles.PROCEDURE);
 
-      var title = new blockly.FieldDropdown(snowflakes);
+      var title = new CdoFieldDropdown(snowflakes);
       this.appendDummyInput().appendField(title, 'TYPE');
 
       this.setPreviousStatement(true);

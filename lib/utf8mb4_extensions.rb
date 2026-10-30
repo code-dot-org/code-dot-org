@@ -3,7 +3,7 @@ module CoreExtensions
     module Utf8mb4
       def utf8mb4?
         chars.each do |char|
-          if char.bytes.length >= 4
+          if char.bytesize >= 4
             return true
           end
         end
@@ -12,7 +12,17 @@ module CoreExtensions
 
       def strip_utf8mb4
         chars.delete_if do |char|
-          char.bytes.length >= 4
+          char.bytesize >= 4
+        end.join
+      end
+
+      def sanitize_utf8mb4
+        chars.map do |char|
+          if char.bytesize >= 4
+            '?'
+          else
+            char
+          end
         end.join
       end
     end

@@ -1,7 +1,9 @@
+import * as BlocklyCore from 'blockly/core';
+
 import {commonI18n} from '@cdo/apps/types/locale';
+
 import {frameSizes} from './cdoConstants';
 import SvgFrame from './svgFrame';
-import {BlockSvg} from 'blockly';
 
 /**
  * Represents an SVG frame specifically designed for blocks, rather than workspaces.
@@ -11,7 +13,7 @@ export default class BlockSvgFrame extends SvgFrame {
    * Constructs an svg frame for a block, such as a function definition.
    */
   constructor(
-    block: BlockSvg,
+    block: BlocklyCore.BlockSvg,
     text: string | undefined,
     className: string | undefined,
     getColor: () => string

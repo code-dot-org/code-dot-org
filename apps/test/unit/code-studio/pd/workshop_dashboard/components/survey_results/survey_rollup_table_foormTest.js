@@ -1,7 +1,7 @@
-import React from 'react';
-import {expect} from 'chai';
-import SurveyRollupTableFoorm from '@cdo/apps/code-studio/pd/workshop_dashboard/components/survey_results/survey_rollup_table_foorm';
 import mount from 'enzyme/build/mount';
+import React from 'react';
+
+import SurveyRollupTableFoorm from '@cdo/apps/code-studio/pd/workshop_dashboard/components/survey_results/survey_rollup_table_foorm';
 
 describe('Survey Rollup Table Foorm', () => {
   const sampleRollupAverages1 = {
@@ -77,24 +77,24 @@ describe('Survey Rollup Table Foorm', () => {
 
     // check headers are generated correctly
     const headerCells = rollupTable.find('HeaderRow').find('th');
-    expect(headerCells.at(1).text()).to.equal('Average for this workshop');
-    expect(headerCells.at(2).text()).to.equal(
+    expect(headerCells.at(1).text()).toBe('Average for this workshop');
+    expect(headerCells.at(2).text()).toBe(
       "Average across all of Facilitator 1's CS Fundamentals workshops"
     );
     // 5 expected columns: Question, Average for this workshop,
     // Average for facilitator 1, Average for facilitator 1,
     // Average for this course
-    expect(headerCells).to.have.length(4);
+    expect(headerCells).toHaveLength(4);
 
     // 7 rows are total response count, average for the matrix,
     // question header and averages for all 4 sub-questions
     const bodyRows = rollupTable.find('BodyRow');
-    expect(bodyRows).to.have.length(7);
+    expect(bodyRows).toHaveLength(7);
 
     const totalResponsesForThisWorkshop = bodyRows.first().find('td').at(1);
-    expect(totalResponsesForThisWorkshop.text()).to.equal('10');
+    expect(totalResponsesForThisWorkshop.text()).toBe('10');
 
     const perFacilitatorAverage = bodyRows.at(1).find('td').at(3);
-    expect(perFacilitatorAverage.text()).to.equal('4.2 / 7');
+    expect(perFacilitatorAverage.text()).toBe('4.2 / 7');
   });
 });

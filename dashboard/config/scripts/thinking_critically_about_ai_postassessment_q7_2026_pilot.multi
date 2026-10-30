@@ -1,0 +1,14 @@
+name 'thinking-critically-about-ai-postassessment-q7_2026-pilot'
+
+question 'A student shares their full name, birthday, school name, and a photo of their student ID with an AI tutoring tool to "personalize" their experience. What is the PRIMARY concern with this behavior?'
+
+wrong 'The AI tutoring tool will not work properly without this information.'
+wrong 'Sharing a birthday is always private, but a name and school are fine to share.'
+wrong 'The concern is mostly about the photo taking up too much storage space.'
+right 'Combining multiple pieces of identifying information — even ones that seem harmless individually — creates a detailed profile that could be misused or exposed in a data breach.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lessons 7, 8
+MARKDOWN

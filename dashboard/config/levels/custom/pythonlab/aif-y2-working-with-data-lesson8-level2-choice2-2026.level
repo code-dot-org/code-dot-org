@@ -1,0 +1,36 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-09-07T23:00:55.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "NBA vs. WNBA",
+    "project_template_level_name": "aif-y2-working-with-data-lesson8-choice2-2026 + template",
+    "long_instructions": "**☑️ Do This:**\r\n- Read the documentation given to you.\r\n- Improve your plot’s clarity. Label your plot with…\r\n  - A title\r\n  - A horizontal axis label\r\n  - A vertical axis label\r\n  - A legend",
+    "bubble_choice_description": "A free throw—in both the NBA and the WNBA—is the same shot every time. How do the two leagues compare?",
+    "thumbnail_url": "https://images.code.org/23571e993fab7fa6eb6b8b70d4d56ac1-basketball.jpg",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMoVyrdzK4wUBfYb\n/miH34AWPUZjYW7Y+oRqe9+qtwOFuddepXeThjUtVzgSzDxop5LIygJIKWDx\nQFap2716ZXjpwfiifeX+x2fmEEc/RxqNw0pn1p/68P9S0QMFZdpVu0kmYjRD\nQWMedIKD210hSX7t/o9OmNPIiQI32MIs5Hm+jBWzMUkl1lIsqWhhKXGbmIOl\nwiySe+sIr1fvpPCP6DGr/0zoQfttSJW3ojx7adZBJjr9bawBBVbpmEcj2MAj\nGwJun/yS7MPcyuuY8Rtm00ZD9yDNSA2h7eiAf0JjWSvaZbAMsyG6h8nV1ogs\nDDV8ggcvGuejtYWAHlrBZW8LlU57Whit9IRS7f4cZvWnlmEkK8PXKIycsjvq\nN2WbQUTszjb/KvDmIfX/V93F693kvqpmdwZmk04bktvGf28+Tm390xKi4X9r\nzlCZixWiTSjKNiF5zElzgMLoyWvdIMIQcW1Y5Tc5GrOG0VNJqgyyqKEtw6Cg\n0ZbcPMwfNy/W+Jib/TZF6HlsfUFRF961HmnAPZqehKA/YC++4DmL/5DpXWD/\nhQXxiG9p76JWQGDzCOji21zbmZ+ChrPo9jd3mEwQXw9ynR7E1iVHzBv7C3CA\nRwqSIo4iAm8Qk9RSGSmtSABH3AcidoLJTvZiAGKZ6+S2lyIn2yCMJKV32CWD\nSO8pg2TfaxU/vYoMnkb97XJfE95C7SBjVHLJiKliL4bwCVDm+Nj+PTMU/w3q\nI5yygp35mPsmX2KN7NXE/yJb99pATkjnGM8K+S4giVQjmEecvo5VOCcm0ni2\nDwKs0St/mmkOQ+kf3gEGcu/rnC8afcF3vIVpJnl/fcjCwnxhXZx5T4vawSME\n4WtVyBd1v6hGRgoPMJcB3SHuhnf9Bc77CHBvCZY9mKRJt4Zlimyk434Myfus\n0zF0/wxNebswm3NOR4+dN9J3TtS4IYXbsUodtaw8fBWKQaDsk66ZRkGHkDAC\n+OGsy2thCgO/2Us5F/1T8f/26vgVInq5pnELebZRjVaElzh3FsGqofRl/csu\nWs8ihORK23AfEnA3REsO9Ng79lS7vovyspa+WXn9iZ6J4vhqHIJRlPUmT6jb\n7UE3536N02I5asTJjvwh0BVOIgN0dM+aop5ldkIHgAEwWquRhv4xWtlAkWg=\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-07 23:03:52 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 23:11:48 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 23:12:08 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

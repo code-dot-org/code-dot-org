@@ -1,13 +1,14 @@
-import React, {Component} from 'react';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import i18n from '@cdo/locale';
-import Button from '@cdo/apps/templates/Button';
+import React, {Component} from 'react';
+
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
-import color from '@cdo/apps/util/color';
 import {navigationLessonShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
 import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
-import fontConstants from '@cdo/apps/fontConstants';
+import i18n from '@cdo/locale';
+
+import styles from './lesson-plan.module.scss';
 
 /*
  Component used to navigate between lesson plans. List
@@ -38,26 +39,7 @@ export default class LessonNavigationDropdown extends Component {
   handleDropdownClick = (e, listItem) => {
     e.preventDefault();
     if (listItem.link) {
-      firehoseClient.putRecord(
-        {
-          study: 'lesson-plan',
-          study_group: this.props.isStudentLessonPlan
-            ? 'student-lesson-plan'
-            : 'teacher-lesson-plan',
-          event: 'navigate-between-lessons',
-          data_int: this.props.lesson.id,
-          data_json: JSON.stringify({
-            startingLessonId: this.props.lesson.id,
-            endingLessonId: listItem.id,
-          }),
-        },
-        {
-          includeUserId: true,
-          callback: () => {
-            navigateToHref(linkWithQueryParams(listItem.link));
-          },
-        }
-      );
+      navigateToHref(linkWithQueryParams(listItem.link));
     } else {
       this.setState({currentSection: listItem.sectionNumber});
     }
@@ -101,11 +83,12 @@ export default class LessonNavigationDropdown extends Component {
 
   render() {
     const {lesson} = this.props;
+    const {hasUnnumberedLessons} = lesson.unit;
 
     const lessonsList = this.createSectionsOfLessons();
 
     return (
-      <div style={styles.dropdown}>
+      <div className={styles.dropdown}>
         <DropdownButton
           text={i18n.otherLessonsInUnit()}
           color={Button.ButtonColor.purple}
@@ -116,18 +99,23 @@ export default class LessonNavigationDropdown extends Component {
               key={index}
               onClick={e => this.handleDropdownClick(e, listItem)}
               href={listItem.link && linkWithQueryParams(listItem.link)}
-              className={listItem.link ? 'navigate' : 'no-navigation'} // Used to specify if the dropdown should collapse when clicked
-              style={listItem.link ? styles.lesson : styles.section}
+              className={classNames(
+                // Used to specify if the dropdown should collapse when clicked
+                listItem.link ? 'navigate' : 'no-navigation',
+                listItem.link ? styles.lesson : styles.section
+              )}
             >
               {listItem.link && (
-                <span style={{marginLeft: 10}}>
+                <span className={styles.lessonLabelWrapper}>
                   <span
-                    style={{
-                      ...{margin: '0px 2px'},
-                      ...(listItem.key === lesson.key && styles.boldText),
-                    }}
+                    className={classNames(
+                      styles.lessonLabel,
+                      listItem.key === lesson.key && styles.boldText
+                    )}
                   >
-                    {`${listItem.position} - ${listItem.displayName}`}
+                    {hasUnnumberedLessons
+                      ? listItem.displayName
+                      : `${listItem.position} - ${listItem.displayName}`}
                   </span>
                 </span>
               )}
@@ -139,21 +127,3 @@ export default class LessonNavigationDropdown extends Component {
     );
   }
 }
-
-const styles = {
-  dropdown: {
-    display: 'inline-block',
-  },
-  boldText: {
-    ...fontConstants['main-font-bold'],
-  },
-  section: {
-    width: 300,
-    ...fontConstants['main-font-regular'],
-    backgroundColor: color.lightest_purple,
-  },
-  lesson: {
-    width: 300,
-    ...fontConstants['main-font-regular'],
-  },
-};

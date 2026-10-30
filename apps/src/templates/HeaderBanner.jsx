@@ -3,9 +3,10 @@
  * can put a text header and subheader over that banner image.
  */
 
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
-import Typography from '@cdo/apps/componentLibrary/typography';
+
 import style from './header-banner.module.scss';
 
 export default class HeaderBanner extends React.Component {
@@ -14,7 +15,8 @@ export default class HeaderBanner extends React.Component {
     subHeadingText: PropTypes.string,
     description: PropTypes.string,
     children: PropTypes.node,
-    backgroundUrl: PropTypes.string.isRequired,
+    backgroundUrl: PropTypes.string,
+    backgroundColor: PropTypes.string,
     backgroundImageStyling: PropTypes.object,
     imageUrl: PropTypes.string,
     imgStyling: PropTypes.object,
@@ -27,13 +29,15 @@ export default class HeaderBanner extends React.Component {
       description,
       children,
       backgroundUrl,
+      backgroundColor,
       backgroundImageStyling,
       imageUrl,
       imgStyling,
     } = this.props;
 
     const backgroundImageStyle = {
-      backgroundImage: `url(${backgroundUrl})`,
+      ...(backgroundColor && {backgroundColor}),
+      ...(backgroundUrl && {backgroundImage: `url(${backgroundUrl})`}),
       ...backgroundImageStyling,
     };
 
@@ -41,18 +45,12 @@ export default class HeaderBanner extends React.Component {
       <div style={backgroundImageStyle} className={style.banner}>
         <div className={style.contentWrapper}>
           <div className={style.textWrapper}>
-            <Typography semanticTag="h1" visualAppearance="heading-xxl">
-              {headingText}
-            </Typography>
+            <Typography variant="h1">{headingText}</Typography>
             {subHeadingText && (
-              <Typography semanticTag="p" visualAppearance="body-one">
-                {subHeadingText}
-              </Typography>
+              <Typography variant="body1">{subHeadingText}</Typography>
             )}
             {description && (
-              <Typography semanticTag="p" visualAppearance="body-one">
-                {description}
-              </Typography>
+              <Typography variant="body1">{description}</Typography>
             )}
             {children}
           </div>

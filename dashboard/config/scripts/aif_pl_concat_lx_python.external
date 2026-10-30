@@ -1,0 +1,60 @@
+name 'aif_pl_concat_LX_python'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Using Commas in Print 
+
+
+In the previous levels, you worked with **print statements** and strings.
+
+<div role="group" aria-label="Python code and its printed output" style="max-width:420px; margin:20px 0; border-radius:8px; overflow:hidden; box-shadow:0 3px 8px rgba(0,0,0,0.18); font-family:'Courier New',Courier,monospace; font-size:16px; line-height:1.7;">
+
+  <!-- Python code -->
+  <div aria-label="Python code" style="background-color:#1C1F2A; color:#FFFFFF; padding:18px 20px; box-sizing:border-box;">
+
+   <span style="color:#F07FB0;">username</span> = <span style="color:#7CDB87;">"Kai"</span><br>
+
+   <span style="color:#F07FB0;">level</span> = <span style="color:#FFA668;">4</span><br>
+
+   <br>
+
+  <span style="color:#6FCAFF;">print</span>(<span style="color:#7CDB87;">"User:"</span>, <span style="color:#F07FB0;">username</span>)<br>
+  
+   <span style="color:#6FCAFF;">print</span>(<span style="color:#7CDB87;">"Level:"</span>, <span style="color:#F07FB0;">level</span>)
+
+  </div>
+
+  <!-- Program output -->
+  <div aria-label="Program output" style="background-color:#000000; color:#FFFFFF; padding:14px 20px; box-sizing:border-box;  border-top:1px solid #ACA8EA;">
+
+  <p style: "font-size: 16px;"> User: Kai <br>
+    
+    Level: 4 </p>
+
+  </div>
+
+</div>
+
+<br>
+
+## Using a comma ',' in print()
+
+When you use commas inside a `print()` statement, Python treats each item as a separate argument. 
+
+Here's what that means in simple terms:
+
+- Python will automatically convert each item into a string, if it's not already.
+- Python will also add a space between each item when it prints them.
+
+
+
+
+<p style="font-size: 16px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ This concept is covered in Lesson 4. You can find more details in the full <a href='https://studio.code.org/s/aif2-2025/lessons/4' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a>.
+</p>
+
+## Let's practice with a choice level!
+
+
+MARKDOWN
