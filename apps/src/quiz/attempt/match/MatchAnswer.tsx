@@ -21,7 +21,7 @@ const MatchAnswer: React.FunctionComponent<{
   result: MatchResult;
   isViewingStudent?: boolean;
 }> = ({question, result, isViewingStudent}) => {
-  const correctAnswerId = useId();
+  const correctAnswerLabelId = useId();
   const matchSets = question.matchSets ?? NO_MATCH_SETS;
   const correctPairs =
     result.correct === null ? undefined : result.correctPairs ?? undefined;
@@ -37,7 +37,7 @@ const MatchAnswer: React.FunctionComponent<{
       {correctPairs && !result.correct && (
         <>
           <Typography
-            id={correctAnswerId}
+            id={correctAnswerLabelId}
             variant="overline2"
             component="p"
             className={styles.correctAnswerLabel}
@@ -48,7 +48,7 @@ const MatchAnswer: React.FunctionComponent<{
             matchSets={matchSets}
             pairs={correctPairs}
             correctPairs={correctPairs}
-            labelledBy={correctAnswerId}
+            labelledBy={correctAnswerLabelId}
           />
         </>
       )}
