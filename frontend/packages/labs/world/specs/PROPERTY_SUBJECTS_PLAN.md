@@ -231,12 +231,13 @@ player` and the event, and its `when this screen loads` sets the one and
   Story table, which gains `story/screen` and `story/watch`. The stock
   Health Bar's own passages (UI_ACTORS.md, ENHANCEMENTS.md, MAPS.md) stand,
   since that bar is unchanged.
+- **After the plan, healing raises `is healed`**, the Health rule's third
+  event on `Has Health`, raised only when a heal gives something back. The
+  starter's bar hears it as it hears `is damaged`; the lesson takes both
+  handlers out, since the second would be the answer written out.
 
 ## Open
 
-- **Healing raises nothing.** `heal` changes health and says so to nobody,
-  so a bar filled by events misses it. The starter heals nobody. The likely
-  answer is an `is healed` event on Health beside `is damaged`.
 - **An actor file's hat about its own property**, as above, which is what
   would retire the Health Bar's step.
 

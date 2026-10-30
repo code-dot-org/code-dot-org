@@ -332,30 +332,34 @@ const showFraction = (value: object) => ({
   inputs: {ACTOR: {shadow: {type: 'world_this_actor'}}, VALUE: value},
 });
 
+/** `when ⟨current player⟩ ⟨event⟩`: show what health the subject has left. */
+const hearsCurrentPlayer = (event: string, y: number) => ({
+  type: `world_on_Health_${event}`,
+  fields: {SUBJECT: CURRENT_PLAYER},
+  x: 20,
+  y,
+  next: {
+    block: showFraction(
+      healthLeft(() => ({block: {type: 'world_subject_actor'}})),
+    ),
+  },
+});
+
 /**
- * The health bar's own code: two handlers, and nothing run every frame
- * (specs/PROPERTY_SUBJECTS_PLAN.md, step 5). Damage moves it, and so does
- * the game saying the player has arrived, which no damage would.
+ * The health bar's own code: handlers, and nothing run every frame
+ * (specs/PROPERTY_SUBJECTS_PLAN.md, step 5). Damage and healing move it,
+ * and so does the game saying the player has arrived, which neither would.
  */
 const HEALTH_BAR_CODE = {
   blocks: {
     languageVersion: 0,
     blocks: [
-      {
-        type: 'world_on_Health_IsDamagedEvent',
-        fields: {SUBJECT: CURRENT_PLAYER},
-        x: 20,
-        y: 20,
-        next: {
-          block: showFraction(
-            healthLeft(() => ({block: {type: 'world_subject_actor'}})),
-          ),
-        },
-      },
+      hearsCurrentPlayer('IsDamagedEvent', 20),
+      hearsCurrentPlayer('IsHealedEvent', 200),
       {
         type: 'world_on_ScreensMain_PlayerArrivedEvent',
         x: 20,
-        y: 200,
+        y: 380,
         next: {
           block: showFraction(
             healthLeft(() => ({block: {type: CURRENT_PLAYER}})),

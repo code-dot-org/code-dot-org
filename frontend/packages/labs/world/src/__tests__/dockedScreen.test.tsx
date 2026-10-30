@@ -63,5 +63,10 @@ describe('the starter’s HUD', () => {
     world.emit(member('IsDamaged'), named('Player'));
     world.tick(1 / 60);
     expect(bar()).toBeCloseTo(2 / 3);
+
+    // …and healed, through the rule's own `heal`.
+    named('Player').act(member('HealAction'), 1);
+    world.tick(1 / 60);
+    expect(bar()).toBeCloseTo(1);
   });
 });

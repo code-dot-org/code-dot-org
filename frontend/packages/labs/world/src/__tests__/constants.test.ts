@@ -150,6 +150,7 @@ describe('the starter project', () => {
     // …and the bar hears both.
     expect(bar?.blocks?.blocks.blocks.map(hat => hat.type)).toEqual([
       'world_on_Health_IsDamagedEvent',
+      'world_on_Health_IsHealedEvent',
       'world_on_ScreensMain_PlayerArrivedEvent',
     ]);
     expect(bar?.blocks?.blocks.blocks[0].fields).toEqual({

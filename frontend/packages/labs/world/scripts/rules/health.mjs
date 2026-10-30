@@ -147,6 +147,12 @@ const isDamaged = hurtable.event(['is damaged']);
  */
 const runsOut = hurtable.event(['runs out of health']);
 
+/**
+ * `when ⟨Player⟩ is healed` — raised when a heal gives health back, so a
+ * display filled by events sees health go up as well as down.
+ */
+const isHealed = hurtable.event(['is healed']);
+
 /** `when ⟨Spike⟩ damages ⟨Player⟩` — the dangerous thing's side. */
 const damages = dangerous.event(['damages', param('other', 'actor')]);
 
@@ -213,7 +219,7 @@ const gained = rule.local('gained', 'Number');
 export const heal = hurtable.block({
   returns: 'none',
   description:
-    'Get some health back, up to full. Does nothing once health has run out — coming back is a bigger decision than a potion.',
+    'Get some health back, up to full. Raises “is healed”. Does nothing once health has run out — coming back is a bigger decision than a potion.',
   say: ['heal', param('amount', 'number')],
   body: ({amount}) => [
     doc(
@@ -233,6 +239,7 @@ export const heal = hurtable.block({
               mostHealth.of(thisActor()),
             ),
           ),
+          isHealed({}, thisActor()),
         ],
       ],
     ]),

@@ -3996,8 +3996,11 @@ const watchSource = () => {
     }>;
   };
   const bar = screen.actors.find(actor => actor.id === 'HealthBar')!;
+  // …and not healing either, which would be the answer written out.
   bar.blocks!.blocks.blocks = bar.blocks!.blocks.blocks.filter(
-    hat => hat.type !== 'world_on_Health_IsDamagedEvent',
+    hat =>
+      hat.type !== 'world_on_Health_IsDamagedEvent' &&
+      hat.type !== 'world_on_Health_IsHealedEvent',
   );
   main.contents = JSON.stringify(screen, null, 2);
   return source;

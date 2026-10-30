@@ -335,12 +335,17 @@ describe('Health', () => {
       .instantiate('player');
     world.addActor(player);
 
+    const healed: string[] = [];
+    player.on(of('rules/health', 'IsHealedEvent'), () => healed.push('healed'));
+
     // An actor action: the subject is the receiver, not an argument. `heal` is
     // declared on the trait, so it is something an actor DOES.
     player.act(of('rules/health', 'HealAction'), 10);
     world.tick(1 / 60);
 
     expect(player.get(of('rules/health', 'HealthProperty'))).toBe(3);
+    // …and says so, for a display that is filled by events.
+    expect(healed).toEqual(['healed']);
   });
 
   it('does not heal something already dead', () => {
@@ -356,10 +361,14 @@ describe('Health', () => {
       .instantiate('player');
     world.addActor(player);
 
+    const healed: string[] = [];
+    player.on(of('rules/health', 'IsHealedEvent'), () => healed.push('healed'));
+
     player.act(of('rules/health', 'HealAction'), 5);
     world.tick(1 / 60);
 
     expect(player.get(of('rules/health', 'HealthProperty'))).toBe(0);
+    expect(healed).toEqual([]);
   });
 
   it('carries a full of its own, which a boss may set higher', () => {
