@@ -1,0 +1,507 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 75,
+  "created_at": "2026-10-26T21:14:05.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "#Identify  Data Features\r\nExamine these new photos that were gathered to help train the Smart Room App model. \r\n\r\nIn your activity guide, write down **features** that you think would be helpful in order to judge whether a room is **clean** or **not**.",
+    "hide_share_and_remix": "false",
+    "require_edit_to_continue": "true",
+    "start_sources": {
+      "source": {
+        "nodes": [
+          {
+            "id": "fa67e928-0df5-4563-8351-984f34121058",
+            "type": "text",
+            "data": {
+              "text": "Room One",
+              "strokeColor": "transparent",
+              "fontSize": 60,
+              "fontFamily": "draw",
+              "locked": true
+            },
+            "position": {
+              "x": -13.745378447214819,
+              "y": 272.45897005923706
+            },
+            "width": 501.55124770246556,
+            "height": 56.375763041083076,
+            "measured": {
+              "width": 502,
+              "height": 56
+            },
+            "dragging": false
+          },
+          {
+            "id": "c1aace30-3403-4131-86db-f14b086f6f21",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-lesson5-sketch-lab/uuid/3974fd39-f03e-49bd-8aa2-3eb7533839a5.jpg",
+              "altText": "room-one",
+              "locked": true
+            },
+            "position": {
+              "x": -17.844262864423968,
+              "y": 341.00251102426535
+            },
+            "width": 529.6058869627404,
+            "height": 537.6883510925586,
+            "measured": {
+              "width": 530,
+              "height": 538
+            },
+            "dragging": false
+          },
+          {
+            "id": "a041b68c-4001-4edc-b2e5-3655b339829a",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "rotation": 0,
+              "locked": true
+            },
+            "position": {
+              "x": -19.07020332964504,
+              "y": 342.81242660059934
+            },
+            "width": 530.2313139085246,
+            "height": 532.6241769606613,
+            "measured": {
+              "width": 530,
+              "height": 533
+            },
+            "dragging": false
+          },
+          {
+            "id": "d5ba9b47-a4d2-47c6-a3c2-a354ab12ec71",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-lesson5-sketch-lab/uuid/8e396eba-9c76-4a99-b109-07c582b1f3c9.png",
+              "altText": "arrows (1)"
+            },
+            "position": {
+              "x": 519.8398576947088,
+              "y": 519.7252146367102
+            },
+            "width": 161.13770796950035,
+            "height": 146.60985762748044,
+            "measured": {
+              "width": 161,
+              "height": 147
+            },
+            "dragging": false
+          },
+          {
+            "id": "b79e1f91-5bd5-4e4a-8114-49f9bf1b1613",
+            "type": "text",
+            "data": {
+              "text": "Room Two",
+              "strokeColor": "transparent",
+              "fontSize": 60,
+              "fontFamily": "draw",
+              "locked": true
+            },
+            "position": {
+              "x": 703.3252543594217,
+              "y": 278.1305328251363
+            },
+            "width": 501.55124770246556,
+            "height": 56.375763041083076,
+            "measured": {
+              "width": 502,
+              "height": 56
+            },
+            "dragging": false
+          },
+          {
+            "id": "368e0915-0153-491c-8a93-b85b279a2f5f",
+            "type": "text",
+            "data": {
+              "text": "Room Three",
+              "strokeColor": "transparent",
+              "fontSize": 60,
+              "fontFamily": "draw",
+              "locked": true
+            },
+            "position": {
+              "x": 1408.57736509076,
+              "y": 277.00769023859266
+            },
+            "width": 501.55124770246556,
+            "height": 56.375763041083076,
+            "measured": {
+              "width": 502,
+              "height": 56
+            },
+            "dragging": false
+          },
+          {
+            "id": "16245fbb-450b-46ed-9691-e55ee0c8d5b2",
+            "type": "text",
+            "data": {
+              "text": "Room Four",
+              "strokeColor": "transparent",
+              "fontSize": 60,
+              "fontFamily": "draw",
+              "locked": true
+            },
+            "position": {
+              "x": 2117.6160502920475,
+              "y": 272.458970059237
+            },
+            "width": 501.55124770246556,
+            "height": 56.375763041083076,
+            "measured": {
+              "width": 502,
+              "height": 56
+            },
+            "dragging": false
+          },
+          {
+            "id": "31d360ce-deb9-42e3-90d8-4f2842343194",
+            "type": "text",
+            "data": {
+              "text": "Room Five",
+              "strokeColor": "transparent",
+              "fontSize": 60,
+              "fontFamily": "draw",
+              "locked": true
+            },
+            "position": {
+              "x": 2814.836213418037,
+              "y": 269.62318867628744
+            },
+            "width": 501.55124770246556,
+            "height": 56.375763041083076,
+            "measured": {
+              "width": 502,
+              "height": 56
+            },
+            "dragging": false
+          },
+          {
+            "id": "2af4f3ee-ee5f-4d45-90a5-4bbbff028d50",
+            "type": "text",
+            "data": {
+              "text": "Room Six",
+              "strokeColor": "transparent",
+              "fontSize": 60,
+              "fontFamily": "draw",
+              "locked": true
+            },
+            "position": {
+              "x": 3520.5637206928745,
+              "y": 263.9516259103882
+            },
+            "width": 501.55124770246556,
+            "height": 56.375763041083076,
+            "measured": {
+              "width": 502,
+              "height": 56
+            },
+            "dragging": false
+          },
+          {
+            "id": "0d8de7db-16ca-42d6-a6a8-6b2484ed14e2",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "rotation": 0,
+              "locked": true
+            },
+            "position": {
+              "x": 688.6924951181619,
+              "y": 344.52536539700543
+            },
+            "width": 530.2313139085246,
+            "height": 532.6241769606613,
+            "measured": {
+              "width": 530,
+              "height": 533
+            },
+            "dragging": false
+          },
+          {
+            "id": "db87439e-67bc-4e23-a155-605133a904b9",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "rotation": 0,
+              "locked": true
+            },
+            "position": {
+              "x": 1396.98793994265,
+              "y": 338.8538026311062
+            },
+            "width": 530.2313139085246,
+            "height": 532.6241769606613,
+            "measured": {
+              "width": 530,
+              "height": 533
+            },
+            "dragging": false
+          },
+          {
+            "id": "f1bbfe7c-c5f9-43fe-b883-cacda1736c19",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "rotation": 0,
+              "locked": true
+            },
+            "position": {
+              "x": 2103.0376995940514,
+              "y": 333.18223986520707
+            },
+            "width": 530.2313139085246,
+            "height": 532.6241769606613,
+            "measured": {
+              "width": 530,
+              "height": 533
+            },
+            "dragging": false
+          },
+          {
+            "id": "6d96c992-e089-46df-83a5-69e9744e6ff8",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "rotation": 0,
+              "locked": true
+            },
+            "position": {
+              "x": 2806.251677862502,
+              "y": 330.3464584822576
+            },
+            "width": 530.2313139085246,
+            "height": 532.6241769606613,
+            "measured": {
+              "width": 530,
+              "height": 533
+            },
+            "dragging": false
+          },
+          {
+            "id": "cb8b140d-b238-4a7e-bb80-7bf607cf7a5f",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "rotation": 0,
+              "locked": true
+            },
+            "position": {
+              "x": 3512.3014375139032,
+              "y": 324.6748957163584
+            },
+            "width": 530.2313139085246,
+            "height": 532.6241769606613,
+            "measured": {
+              "width": 530,
+              "height": 533
+            },
+            "dragging": false
+          },
+          {
+            "id": "169c7c51-7fd0-41ab-b639-63ac7e91326e",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-lesson5-sketch-lab/uuid/8e396eba-9c76-4a99-b109-07c582b1f3c9.png",
+              "altText": "arrows (1)",
+              "locked": true
+            },
+            "position": {
+              "x": 1228.168672907123,
+              "y": 518.8468837809464
+            },
+            "width": 161.13770796950035,
+            "height": 146.60985762748044,
+            "measured": {
+              "width": 161,
+              "height": 147
+            },
+            "dragging": false
+          },
+          {
+            "id": "b37b2158-4194-4c95-888b-a6f56ee7a72b",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-lesson5-sketch-lab/uuid/8e396eba-9c76-4a99-b109-07c582b1f3c9.png",
+              "altText": "arrows (1)",
+              "locked": true
+            },
+            "position": {
+              "x": 1935.0448641739094,
+              "y": 517.7240411944026
+            },
+            "width": 161.13770796950035,
+            "height": 146.60985762748044,
+            "measured": {
+              "width": 161,
+              "height": 147
+            },
+            "dragging": false
+          },
+          {
+            "id": "bb3b16b1-62e5-41b5-9f25-c41a0b509a39",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-lesson5-sketch-lab/uuid/8e396eba-9c76-4a99-b109-07c582b1f3c9.png",
+              "altText": "arrows (1)",
+              "locked": true
+            },
+            "position": {
+              "x": 3344.0003283524748,
+              "y": 513.1587231369962
+            },
+            "width": 161.13770796950035,
+            "height": 146.60985762748044,
+            "measured": {
+              "width": 161,
+              "height": 147
+            },
+            "dragging": false
+          },
+          {
+            "id": "518af646-f5fb-4042-b0a1-237f26648547",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-lesson5-sketch-lab/uuid/8e396eba-9c76-4a99-b109-07c582b1f3c9.png",
+              "altText": "arrows (1)",
+              "locked": true
+            },
+            "position": {
+              "x": 2642.871848527696,
+              "y": 510.8964400858579
+            },
+            "width": 161.13770796950035,
+            "height": 146.60985762748044,
+            "measured": {
+              "width": 161,
+              "height": 147
+            },
+            "dragging": false
+          },
+          {
+            "id": "3e5283d4-1359-4db7-bf7e-4901291a751c",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-lesson5-sketch-lab/uuid/0327e498-dfce-45bf-9475-5211100dc7e2.jpg",
+              "altText": "room-two",
+              "locked": true
+            },
+            "position": {
+              "x": 693.319328023661,
+              "y": 350.07386779093895
+            },
+            "width": 521.0539773054131,
+            "height": 523.6117759351159,
+            "measured": {
+              "width": 521,
+              "height": 524
+            },
+            "dragging": false
+          },
+          {
+            "id": "21fcdf32-4e7c-459c-8f19-a9d52ef39569",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-lesson5-sketch-lab/uuid/4516c823-272e-4595-913c-7b0c3ffd7e22.jpg",
+              "altText": "room-three",
+              "locked": true
+            },
+            "position": {
+              "x": 1401.4681259163167,
+              "y": 343.95692192238823
+            },
+            "width": 522.4267560012602,
+            "height": 523.6116837652023,
+            "measured": {
+              "width": 522,
+              "height": 524
+            },
+            "dragging": false
+          },
+          {
+            "id": "0561cfe0-b85a-4daf-b011-70de2b9ff41f",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-lesson5-sketch-lab/uuid/dbab0e1b-16c6-4e29-a923-705f6453d215.jpg",
+              "altText": "room-five",
+              "locked": true
+            },
+            "position": {
+              "x": 2808.0964150524414,
+              "y": 333.38613885072897
+            },
+            "width": 525.1725899026956,
+            "height": 527.7302041925706,
+            "measured": {
+              "width": 525,
+              "height": 528
+            },
+            "dragging": false
+          },
+          {
+            "id": "2ece9317-dbfb-4800-bb1c-767dccc3194f",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-lesson5-sketch-lab/uuid/b43a385a-4a6b-4f29-be78-d4e84e64fc32.jpg",
+              "altText": "room-six",
+              "locked": true
+            },
+            "position": {
+              "x": 3517.2491991072375,
+              "y": 329.89331125365317
+            },
+            "width": 521.0538851354995,
+            "height": 529.1030750583312,
+            "measured": {
+              "width": 521,
+              "height": 529
+            },
+            "dragging": false
+          },
+          {
+            "id": "c45e0f12-ac13-44cf-9750-93f5a3c2af00",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-lesson5-sketch-lab/uuid/b3b8c3fa-916c-4080-b928-2bfe1e67b9ea.png",
+              "altText": "",
+              "locked": true
+            },
+            "position": {
+              "x": 2107.6559343908975,
+              "y": 337.4047060556097
+            },
+            "width": 519.7170426957714,
+            "height": 523.3191449109893,
+            "measured": {
+              "width": 520,
+              "height": 523
+            },
+            "dragging": false
+          }
+        ],
+        "edges": [
+
+        ],
+        "viewport": {
+          "x": 118.19684843650106,
+          "y": -93.32871611875288,
+          "zoom": 0.5837920199473284
+        }
+      }
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-10-26 21:14:07 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-27 15:30:56 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-27 15:32:59 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-27 18:12:37 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-27 18:13:11 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Sketchlab>

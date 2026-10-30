@@ -111,6 +111,10 @@ class Weblab2 < Level
         answer_types.all?(String)
       errors.add(:ai_tutor_prompt_settings, 'must contain at least one answer type.')
     end
+    disable_commit_messages = ai_tutor_prompt_settings['disableCommitMessages']
+    unless disable_commit_messages.nil? || [true, false].include?(disable_commit_messages)
+      errors.add(:ai_tutor_prompt_settings, 'disableCommitMessages must be a boolean.')
+    end
   end
 
   private def validate_widget2

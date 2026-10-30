@@ -349,6 +349,9 @@ Devise.setup do |config|
     auth.cookies[environment_specific_cookie_name("_assumed_identity")] = {value: "", expires: Time.at(0), domain: :all, httponly: true}
     # The Statsig stable ID cookie is user-specific; the next user in this browser gets a new one.
     auth.cookies[SharedConstants::STATSIG_STABLE_ID_KEY] = {value: "", expires: Time.at(0), domain: :all}
+    # The same request may sign in another user, who must not read the old ID from the incoming cookie/session.
+    auth.request.cookies.delete(SharedConstants::STATSIG_STABLE_ID_KEY)
+    auth.raw_session.delete(SharedConstants::STATSIG_STABLE_ID_KEY)
 
     # These marketing cookies are set in the home_controller in init_homepage. When the user logs out, we
     # remove these cookies because they are user-specific. The cookies are set in init_homepage instead of after_set_user

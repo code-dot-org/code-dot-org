@@ -14,16 +14,26 @@ export interface QuizViewContent {
 // TODO: derive from SharedConstants.
 export type QuizQuestionType =
   | 'MultipleChoiceQuestion'
-  | 'FreeResponseQuestion';
+  | 'MultipleSelectQuestion'
+  | 'FreeResponseQuestion'
+  | 'MatchQuestion';
 
-// Answer fields (correctChoiceId, explanation) are deliberately excluded.
+export interface QuizQuestionItem {
+  id: string;
+  text: string;
+}
+
+// Answer keys and the explanation are deliberately excluded.
 export interface QuizQuestionSummary {
   id: number;
   type: QuizQuestionType;
   questionName: string;
   questionTitle: string;
   description?: string | null;
-  choices?: {id: string; text: string}[];
+  choices?: QuizQuestionItem[];
+  // A match question's two sets of items: the first in authored order, the
+  // second shuffled, the same way for every student.
+  matchSets?: [QuizQuestionItem[], QuizQuestionItem[]];
   page: number;
 }
 

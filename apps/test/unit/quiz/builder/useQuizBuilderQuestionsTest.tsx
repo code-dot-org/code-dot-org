@@ -75,6 +75,57 @@ describe('useQuizBuilderQuestions', () => {
     });
   });
 
+  it('adds a multiple select placeholder with the first option correct', async () => {
+    const {result, waitForNextUpdate} = renderHook(() =>
+      useQuizBuilderQuestions(42)
+    );
+    await waitForNextUpdate();
+
+    act(() => {
+      result.current.addPendingQuestion(1, 'MultipleSelectQuestion');
+    });
+
+    expect(result.current.questions[1]).toMatchObject({
+      type: 'MultipleSelectQuestion',
+      choices: [
+        {id: '0', text: 'Option A'},
+        {id: '1', text: 'Option B'},
+      ],
+      correctChoiceIds: ['0'],
+    });
+  });
+
+  it('adds a match placeholder with two pairs, each id random and distinct', async () => {
+    const {result, waitForNextUpdate} = renderHook(() =>
+      useQuizBuilderQuestions(42)
+    );
+    await waitForNextUpdate();
+
+    act(() => {
+      result.current.addPendingQuestion(1, 'MatchQuestion');
+      result.current.addPendingQuestion(1, 'MatchQuestion');
+    });
+
+    const [first, second] = result.current.questions.slice(1);
+    expect(first).toMatchObject({
+      type: 'MatchQuestion',
+      pairs: [
+        {items: [{text: 'Term A'}, {text: 'Definition A'}]},
+        {items: [{text: 'Term B'}, {text: 'Definition B'}]},
+      ],
+    });
+    const ids = [first, second].flatMap(question =>
+      question.type === 'MatchQuestion'
+        ? question.pairs.flatMap(pair => [
+            pair.id,
+            ...pair.items.map(item => item.id),
+          ])
+        : []
+    );
+    expect(ids).toHaveLength(12);
+    expect(new Set(ids).size).toBe(12);
+  });
+
   it('adds the placeholder to the given page', async () => {
     const {result, waitForNextUpdate} = renderHook(() =>
       useQuizBuilderQuestions(42)
@@ -227,6 +278,41 @@ describe('useQuizBuilderQuestions', () => {
       );
       expect(updatedId).toBe(99);
       expect(result.current.questions.map(q => q.id)).toEqual([7, 99]);
+    });
+
+    it('creates a pending question as the type it was switched to before its first save', async () => {
+      const {result, waitForNextUpdate} = renderHook(() =>
+        useQuizBuilderQuestions(42)
+      );
+      await waitForNextUpdate();
+
+      let pendingId: number | undefined;
+      act(() => {
+        pendingId = result.current.addPendingQuestion(
+          1,
+          'MultipleChoiceQuestion'
+        );
+      });
+
+      const {correctChoiceId, ...rest} = PAYLOAD;
+      void correctChoiceId;
+      const switched = {
+        ...rest,
+        type: 'MultipleSelectQuestion' as const,
+        correctChoiceIds: ['a', 'b'],
+      };
+      postSpy.mockResolvedValue({
+        json: async () => ({...QUESTION, ...switched, id: 99}),
+      } as Response);
+
+      await act(async () => {
+        await result.current.saveQuestion(pendingId!, switched);
+      });
+
+      expect(JSON.parse(postSpy.mock.calls[0][1] as string)).toMatchObject({
+        type: 'MultipleSelectQuestion',
+        correctChoiceIds: ['a', 'b'],
+      });
     });
 
     it("posts the pending question's own page, not always page 1", async () => {

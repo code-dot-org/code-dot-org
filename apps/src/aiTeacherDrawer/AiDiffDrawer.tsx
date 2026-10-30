@@ -1,4 +1,5 @@
 import Drawer from '@mui/material/Drawer';
+import classNames from 'classnames';
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
 
 import {useTeachingProfileData} from '@cdo/apps/aiDifferentiation/hooks/useTeachingProfileData';
@@ -193,13 +194,22 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
     }
   }
 
+  const isRebranded = experiments.isEnabled('ta-teacher-panel');
+
   const panel = (
     <div style={{display: 'flex', flexDirection: 'column', height: '100%'}}>
       <AiDiffHeader
         closeTutor={closeTutor}
         closeButtonClassName={AI_DIFF_CLOSE_BUTTON_CLASSNAME}
       />
-      <div className={style.fabBackgroundDrawer}>{content}</div>
+      <div
+        className={classNames(
+          style.fabBackgroundDrawer,
+          isRebranded && style.fabBackgroundDrawerTa
+        )}
+      >
+        {content}
+      </div>
       <BottomNav
         activeLabel={activeNav}
         onNavChange={label => {
@@ -207,6 +217,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
           setShowChatList(label === 'Chats');
         }}
         unreadNotificationCount={unreadNotificationCount}
+        rebranded={isRebranded}
         showChats={showChats}
         showLearn={showLearn}
         showTeacherPanel={showTeacherPanel}
@@ -246,7 +257,15 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
       open={chatIsOpen}
       variant="persistent"
       PaperProps={{
-        sx: {width: drawerWidth, top: 50, height: 'calc(100% - 50px)'},
+        sx: {
+          width: drawerWidth,
+          top: 50,
+          height: 'calc(100% - 50px)',
+          // The docked paper draws its own full-height border, which runs past
+          // the rounded corners of the header and nav that make up our own
+          // outline. Ours is the one to keep.
+          ...(isRebranded ? {border: 'none'} : {}),
+        },
       }}
     >
       {panel}

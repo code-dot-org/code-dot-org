@@ -86,9 +86,32 @@ class ParentLevelsChildLevelTest < ActiveSupport::TestCase
       ParentLevelsChildLevel.create!(parent_level: ui_test_level, child_level: prod_level)
     end
     assert_includes e.message, prod_level.name
+    assert_includes e.message, 'copy it to a name beginning with "UI Test "'
 
     # same-side rows are fine in both partitions
     ParentLevelsChildLevel.create!(parent_level: prod_level, child_level: create(:level, name: 'PLCL prod child'))
     ParentLevelsChildLevel.create!(parent_level: ui_test_level, child_level: create(:level, name: 'UI Test PLCL child'))
+  end
+
+  test 'parent and child must be on the same side of the standalone project partition' do
+    prod_level = create(:level, name: 'PLCL standalone prod level')
+    project = create(:level, name: 'New PLCL Project')
+    subproject = create(:level, name: 'PLCL Subproject')
+
+    e = assert_raises ActiveRecord::RecordInvalid do
+      ParentLevelsChildLevel.create!(parent_level: project, child_level: prod_level)
+    end
+    assert_includes e.message, prod_level.name
+    assert_includes e.message, 'same partition'
+    assert_includes e.message, 'copy it to a name ending in " Subproject". Delete the old level and its file, unless they already exist outside of your development environment'
+
+    e = assert_raises ActiveRecord::RecordInvalid do
+      ParentLevelsChildLevel.create!(parent_level: prod_level, child_level: subproject)
+    end
+    assert_includes e.message, subproject.name
+    assert_includes e.message, 'copy it to a name without the "UI Test ...", "New ... Project", or "... Subproject" form'
+
+    ParentLevelsChildLevel.create!(parent_level: project, child_level: subproject)
+    ParentLevelsChildLevel.create!(parent_level: prod_level, child_level: create(:level, name: 'PLCL standalone prod child'))
   end
 end

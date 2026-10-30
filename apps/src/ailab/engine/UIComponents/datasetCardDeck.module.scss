@@ -1,0 +1,96 @@
+$deck-step: 10.5px;
+$deck-ease: cubic-bezier(0.32, 0.72, 0, 1);
+// Room for the cards that rise above the front one.
+$deck-top: 24px;
+
+.root {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.stage {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+  padding: 10px;
+  overflow: hidden;
+  background-color: var(--background-neutral-secondary);
+}
+
+.deck {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: min(100%, 400px);
+  min-height: 0;
+  max-height: 100%;
+  box-sizing: border-box;
+  padding-top: $deck-top;
+}
+
+// 0 is the front card. Higher depths sit behind it and peek above.
+.slot {
+  display: flex;
+  flex-direction: column;
+  z-index: calc(10 - var(--deck-depth));
+  min-height: 0;
+  opacity: calc(1 - var(--deck-depth) * 0.15);
+  transform: translateY(calc(var(--deck-depth) * -#{$deck-step}))
+    scale(calc(1 - var(--deck-depth) * 0.05));
+  transform-origin: top center;
+  transition:
+    transform 280ms $deck-ease,
+    opacity 280ms $deck-ease;
+
+  // Out of flow, so only the front card sizes the deck.
+  &[aria-hidden='true'] {
+    position: absolute;
+    inset: $deck-top 0 0;
+    pointer-events: none;
+  }
+}
+
+.dealt {
+  z-index: 11;
+  opacity: 0;
+  transform: translateY(28px) scale(1.03);
+}
+
+.waiting {
+  opacity: 0;
+}
+
+.ghost {
+  flex: 1;
+  box-sizing: border-box;
+  border: 1px solid var(--border-neutral-primary);
+  border-radius: var(--shape-lg);
+  background-color: var(--background-neutral-primary);
+}
+
+.pager {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px;
+  border-top: 1px solid var(--border-neutral-primary);
+  background-color: var(--background-neutral-primary);
+}
+
+.pager .counter {
+  color: var(--text-neutral-tertiary);
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .slot {
+    transition: none;
+  }
+}

@@ -1,29 +1,75 @@
-// Response data is what was posted for the question. Its fields are
+// responseData is what was posted for the question. Its fields are
 // optional because a skipped question is saved as {}.
-export interface MultipleChoiceResponseData {
-  selectedChoiceId?: string;
+export interface MultipleChoiceQuestionResponse {
+  questionType: 'MultipleChoiceQuestion';
+  responseData: {selectedChoiceId?: string};
 }
 
-export interface FreeResponseResponseData {
-  answerText?: string;
+export interface MultipleSelectQuestionResponse {
+  questionType: 'MultipleSelectQuestion';
+  responseData: {selectedChoiceIds?: string[]};
 }
 
-// Switch on questionType to narrow responseData.
+export interface FreeResponseQuestionResponse {
+  questionType: 'FreeResponseQuestion';
+  responseData: {answerText?: string};
+}
+
+// Each pair is two item ids, one from each set, in either order.
+export interface MatchQuestionResponse {
+  questionType: 'MatchQuestion';
+  responseData: {pairs?: [string, string][]};
+}
+
+// Narrow with the type guards below to read responseData.
 export type QuizQuestionResponse =
-  | {
-      questionType: 'MultipleChoiceQuestion';
-      responseData: MultipleChoiceResponseData;
-    }
-  | {
-      questionType: 'FreeResponseQuestion';
-      responseData: FreeResponseResponseData;
-    };
+  | MultipleChoiceQuestionResponse
+  | MultipleSelectQuestionResponse
+  | FreeResponseQuestionResponse
+  | MatchQuestionResponse;
+
+export type QuizQuestionResponseData = QuizQuestionResponse['responseData'];
+
+export function isMultipleChoiceResponse(
+  response: QuizQuestionResponse
+): response is MultipleChoiceQuestionResponse {
+  return response.questionType === 'MultipleChoiceQuestion';
+}
+
+export function isMultipleSelectResponse(
+  response: QuizQuestionResponse
+): response is MultipleSelectQuestionResponse {
+  return response.questionType === 'MultipleSelectQuestion';
+}
+
+export function isFreeResponseResponse(
+  response: QuizQuestionResponse
+): response is FreeResponseQuestionResponse {
+  return response.questionType === 'FreeResponseQuestion';
+}
+
+export function isMatchResponse(
+  response: QuizQuestionResponse
+): response is MatchQuestionResponse {
+  return response.questionType === 'MatchQuestion';
+}
+
+// How a choice is marked in a submitted question's results.
+export type ChoiceResultStatus =
+  | 'correct'
+  | 'incorrect'
+  | 'selected_ungraded'
+  | 'neutral';
 
 export type QuizQuestionResult = QuizQuestionResponse & {
   quizQuestionId: number;
+  // Absent before submission.
+  answered?: boolean;
   correct: boolean | null;
   explanation: string | null;
-  correctChoiceId: string | null;
+  // The answer key, by question type; null when hidden.
+  correctChoiceId?: string | null;
+  correctChoiceIds?: string[] | null;
 };
 
 // Unanswered questions are omitted.

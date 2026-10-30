@@ -1,0 +1,25 @@
+name 'aif-y2-making-predictions-postassessment-q13-2026'
+
+wrong 'Does the book have at most 200 pages?'
+right 'Is the book part of a series?'
+wrong 'Does the book have at most 300 pages?'
+wrong 'Does your friend like the book?'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+You are building a model to predict whether a friend will like a book, given the training data below. Which of these questions is the best one for a decision tree to ask first?
+
+| Pages | Series? | Liked? |
+|---|---|---|
+| 120 | yes | yes |
+| 300 | yes | yes |
+| 150 | no | no |
+| 280 | no | no |
+| 200 | yes | yes |
+| 320 | no | no |
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 10: Decision Tree Learning
+MARKDOWN
