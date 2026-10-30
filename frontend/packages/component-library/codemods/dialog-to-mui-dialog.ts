@@ -8,7 +8,8 @@
  * rewrite are reported per file for hand work. See codemods/README.md.
  *
  *   cd frontend/packages/component-library
- *   yarn codemod:dialog [--dry --print] <paths...>
+ *   TS_NODE_TRANSPILE_ONLY=true yarn jscodeshift -t ./codemods/dialog-to-mui-dialog.ts \
+ *     --parser=tsx --extensions=js,jsx,ts,tsx --require ts-node/register [--dry --print] <paths...>
  */
 
 import type {
