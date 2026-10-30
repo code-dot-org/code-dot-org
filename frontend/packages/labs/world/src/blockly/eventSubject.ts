@@ -30,7 +30,11 @@ import {localization} from '@code-dot-org/core/plugins/localization';
 
 import {MAIN_SCREEN_PATH} from '../mainWorld';
 
-import {editingActorModule, editingFileModule} from './editingRule';
+import {
+  editingActorModule,
+  editingFileModule,
+  subjectPropertiesWithheld,
+} from './editingRule';
 import {
   actorFieldOptions,
   bindLiveOptions,
@@ -96,12 +100,13 @@ export const subjectOptions = (field?: FieldDropdown): DropdownOptions => {
     // `actorFieldOptions` says "(no actors yet)" with the empty value when
     // there are none, which here is the row above.
     ...actorFieldOptions().filter(([, value]) => value !== ''),
-    // …and the actor properties in scope, by name.
+    // …and the actor properties in scope, by name, once the shelf holds
+    // them. A hat keeps the one it holds either way.
     ...[...subjectProperties]
       .filter(
         ([getterType, property]) =>
           !block ||
-          inScope(block, property) ||
+          (!subjectPropertiesWithheld(block) && inScope(block, property)) ||
           block.getFieldValue(SUBJECT_FIELD) === getterType,
       )
       .map(

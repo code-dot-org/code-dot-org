@@ -2358,6 +2358,66 @@ describe('the screen lesson’s check', () => {
   });
 });
 
+describe('the watch lesson’s check', () => {
+  // specs/PROPERTY_SUBJECTS_PLAN.md, step 6.
+  const lesson = LESSONS['story/watch'];
+
+  /** The bar's code with `when ⟨subject⟩ is damaged` filling it again. */
+  const hearing = (subject: string) =>
+    editing(lesson.source, 'main.screen', contents => {
+      const screen = JSON.parse(contents) as {
+        actors: Array<{id: string; blocks: {blocks: {blocks: object[]}}}>;
+      };
+      const of = (exportName: string) => ({
+        block: {
+          type: `world_get_Health_${exportName}`,
+          inputs: {ACTOR: {block: {type: 'world_subject_actor'}}},
+        },
+      });
+      screen.actors
+        .find(actor => actor.id === 'HealthBar')!
+        .blocks.blocks.blocks.push({
+          type: 'world_on_Health_IsDamagedEvent',
+          fields: {SUBJECT: subject},
+          x: 20,
+          y: 400,
+          next: {
+            block: {
+              type: 'world_set_ActorsProgressBar_FractionProperty',
+              inputs: {
+                ACTOR: {shadow: {type: 'world_this_actor'}},
+                VALUE: {
+                  block: {
+                    type: 'math_arithmetic',
+                    fields: {OP: 'DIVIDE'},
+                    inputs: {
+                      A: of('HealthProperty'),
+                      B: of('MostHealthProperty'),
+                    },
+                  },
+                },
+              },
+            },
+          },
+        });
+      return JSON.stringify(screen);
+    });
+
+  it('refuses a bar that never moves', async () => {
+    const {passes} = await check('story/watch', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  it('accepts the bar hearing `current player` being damaged', async () => {
+    const {passes, result} = await check(
+      'story/watch',
+      hearing('world_get_ScreensMain_CurrentPlayerProperty'),
+    );
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+});
+
 describe('the placement-script lesson’s check', () => {
   const lesson = LESSONS['place/script'];
 

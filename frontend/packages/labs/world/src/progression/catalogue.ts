@@ -2822,6 +2822,56 @@ export const TILES: readonly Tile[] = [
     },
   },
   {
+    id: 'story/watch',
+    region: 'story',
+    // Past the screen over the game: a HUD is the other thing a screen holds,
+    // and what it shows is about an actor somewhere else.
+    at: at('story', 5, 1),
+    title: 'A bar about the player',
+    teaches:
+      'A handler can be about a value rather than an actor, and hears whichever actor the value holds when the event happens.',
+    task: 'The health bar never moves. Make it hear the current player being damaged.',
+    requires: ['story/screen'],
+    unlocks: [
+      {kind: 'affordance', id: 'subject-properties'},
+      {kind: 'block', type: 'world_subject_actor'},
+    ],
+    // A fraction is a division, and Story is reached without Math.
+    offers: [{kind: 'block', type: 'math_arithmetic'}],
+    check: {
+      kind: 'outcome',
+      says: 'Walking into the Crawler empties the bar as it empties the Player.',
+      falsePass:
+        'A handler about `any ⟨Player⟩` instead of `current player`, which moves the bar the same way in a game with one Player. The check accepts it: the two differ only once the value is set to another actor, which this level never does.',
+      run: {
+        probes: {
+          health: {kind: 'property', of: 'Player', name: 'health'},
+          bar: {kind: 'property', of: 'Progress Bar', name: 'fraction'},
+        },
+        trace: [
+          ...Array.from({length: 6}, () => ({
+            hold: ['ArrowRight'],
+            seconds: 0.25,
+          })),
+          {hold: [], seconds: 0.25},
+        ],
+      },
+      passes: ({samples}) => {
+        const first = (sample: unknown) => (sample as unknown[])[0];
+        const health = (samples.health ?? []).map(first);
+        const bar = (samples.bar ?? []).map(first);
+        const last = health.at(-1);
+        const shown = bar.at(-1);
+        return (
+          typeof last === 'number' &&
+          typeof shown === 'number' &&
+          last < 3 &&
+          Math.abs(shown - last / 3) < 0.01
+        );
+      },
+    },
+  },
+  {
     id: 'story/scene',
     region: 'story',
     at: at('story', 2, 3),

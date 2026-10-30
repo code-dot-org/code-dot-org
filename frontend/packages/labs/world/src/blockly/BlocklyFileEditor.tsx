@@ -68,7 +68,12 @@ import {
 import {actorCodeChoices, rootCodeRows} from './codeRoots';
 import {documentExtras, withDocumentExtras} from './documentExtras';
 import {buildDomainPalette, heldNotOffered} from './domainBlocks';
-import {setEditingActor, setEditingFile} from './editingRule';
+import {
+  setEditingActor,
+  setEditingFile,
+  setSubjectPropertiesWithheld,
+  SUBJECT_PROPERTIES,
+} from './editingRule';
 import {movedItself} from './editorEvents';
 import {type EventChoice} from './eventChoices';
 import type {BlockPart} from './extensions/blockDesigner';
@@ -1120,6 +1125,11 @@ export const BlocklyFileEditor = ({
         workspaceRef.current,
         fileKind ? {kind: fileKind, offered: holdable} : undefined,
       );
+      // …and whether a hat may be about an actor property yet.
+      setSubjectPropertiesWithheld(
+        workspaceRef.current,
+        shelf ? !shelf.holds(SUBJECT_PROPERTIES) : false,
+      );
       // …and now that the workspace knows which file it is, the blocks that
       // draw the actor they are about can say so. HERE rather than only on
       // creation, because a block is created before it is connected and a
@@ -1134,6 +1144,7 @@ export const BlocklyFileEditor = ({
     fileId,
     fileKind,
     holdable,
+    shelf,
   ]);
 
   // Swap the surface, and keep it swapped.

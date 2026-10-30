@@ -7,10 +7,13 @@
 
 import type {Blockly} from '@code-dot-org/blockly';
 
+import type {UnlockTarget} from '../progression/types';
+
 /** The tags, on the workspace object itself. */
 interface Tagged {
   __editingActorModule?: string;
   __editingFileModule?: string;
+  __subjectPropertiesWithheld?: boolean;
 }
 
 /**
@@ -78,4 +81,37 @@ export function editingFileModule(
     ? (workspace.targetWorkspace as (Blockly.WorkspaceSvg & Tagged) | undefined)
     : workspace;
   return target?.__editingFileModule;
+}
+
+/** The shelf's grant that lets a hat be about an actor property. */
+export const SUBJECT_PROPERTIES: UnlockTarget = {
+  kind: 'affordance',
+  id: 'subject-properties',
+};
+
+/**
+ * Record whether a gated lab withholds actor properties as a hat's subject
+ * (the `subject-properties` affordance, specs/PROPERTY_SUBJECTS_PLAN.md).
+ */
+export function setSubjectPropertiesWithheld(
+  workspace: Blockly.Workspace,
+  withheld: boolean,
+): void {
+  (workspace as Tagged).__subjectPropertiesWithheld = withheld;
+}
+
+/** Whether this block's workspace withholds actor properties as subjects. */
+export function subjectPropertiesWithheld(
+  block: Blockly.Block | undefined,
+): boolean {
+  const workspace = block?.workspace as
+    | (Blockly.WorkspaceSvg & Tagged)
+    | undefined;
+  if (!workspace) {
+    return false;
+  }
+  const target = workspace.isFlyout
+    ? (workspace.targetWorkspace as (Blockly.WorkspaceSvg & Tagged) | undefined)
+    : workspace;
+  return target?.__subjectPropertiesWithheld ?? false;
 }

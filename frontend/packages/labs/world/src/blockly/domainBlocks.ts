@@ -10664,7 +10664,9 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // How long it has been here — what a bullet, a spark or a lapsing shield
       // compares against to know it is done.
       'world_actor_age',
-      // The actor an event was about, inside a handler for one that carries it.
+      // The actor an event happened to, under a hat about a kind or a
+      // property, and the one actor it carries (specs/PROPERTY_SUBJECTS_PLAN.md).
+      'world_subject_actor',
       'world_object_actor',
       // …and the other half of what a hat hands over: what the event CARRIED —
       // the key that was pressed, the frame an animation reached. It was in

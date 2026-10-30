@@ -173,6 +173,13 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
   // and the rule arrive placed and elected, so what the lesson asks for is the
   // property, the actor to hang it on, and a number to put in it.
   'story/screen': ['world_show_screen'],
+  'story/watch': [
+    'world_on_Health_IsDamagedEvent',
+    'world_get_Health_HealthProperty',
+    'world_get_Health_MostHealthProperty',
+    'world_subject_actor',
+    'math_arithmetic',
+  ],
   'story/form': [
     'world_set_TabNavigation_TabOrderProperty',
     'world_this_actor',

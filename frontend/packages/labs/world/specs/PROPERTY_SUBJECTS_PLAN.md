@@ -1,6 +1,6 @@
 # Plan: an actor property as an event's subject
 
-STATUS: BUILDING, October 2026. Steps 1 to 5 are done.
+STATUS: BUILDING, October 2026. Steps 1 to 6 are done.
 
 A hat can be about `this actor` or `any ⟨kind⟩`. This plan adds a third
 subject: an actor-typed property in scope. `when ⟨current player⟩ is hurt`
@@ -210,6 +210,21 @@ player` and the event, and its `when this screen loads` sets the one and
   be event-driven, a hat in an actor file would have to be about the
   actor's own property, held once per instance. No scope compiles that
   yet: an own property is read only from a placement's code.
+
+- **Step 6 is `story/watch`, "A bar about the player"**, beside
+  `story/screen`. Its project is the starter with the bar's `is damaged`
+  handler taken out; the learner puts it back, about `current player`. The
+  check walks into the Crawler and asks that the bar ends at the Player's
+  health over three. It grants `subject actor`, now in the Actor drawer
+  beside `object actor`, and lends `math_arithmetic`.
+- **The grant is an affordance, `subject-properties`**, read by the subject
+  dropdown through a workspace tag (`setSubjectPropertiesWithheld`) that the
+  file editor and the placement editor set from the shelf. Withheld, a hat
+  offers no property but the one it already holds. The placement editor
+  sets it when its workspace is made, so a lesson passed while the editor
+  is open takes effect when it is next opened.
+- **The lesson is not written as a world**, since its HUD and the bar's own
+  code have no `define world` form; the world-view test passes over it.
 
 ## Open
 

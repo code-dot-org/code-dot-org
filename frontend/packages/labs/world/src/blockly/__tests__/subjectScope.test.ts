@@ -33,19 +33,25 @@ registerSubjectProperty(
 );
 
 /** The subject field of a hat in a workspace tagged as editing `file`. */
-const fieldIn = (file?: string, actor?: string, held = '') =>
+const fieldIn = (file?: string, actor?: string, held = '', withheld = false) =>
   ({
     getSourceBlock: () => ({
       workspace: {
         __editingFileModule: file,
         __editingActorModule: actor,
+        __subjectPropertiesWithheld: withheld,
       },
       getFieldValue: () => held,
     }),
   }) as never;
 
-const offered = (file?: string, actor?: string, held?: string) =>
-  subjectOptions(fieldIn(file, actor, held))
+const offered = (
+  file?: string,
+  actor?: string,
+  held?: string,
+  withheld?: boolean,
+) =>
+  subjectOptions(fieldIn(file, actor, held, withheld))
     .map(([, value]) => value)
     .filter(value => String(value).startsWith('test_get_'));
 
@@ -81,5 +87,12 @@ describe('the properties a hat may be about', () => {
       'test_get_settings_pick',
       'test_get_bar_subject',
     ]);
+  });
+
+  it('are none while the shelf withholds them, but the one a hat holds', () => {
+    expect(offered('maps/level', undefined, '', true)).toEqual([]);
+    expect(
+      offered('maps/level', undefined, 'test_get_game_player', true),
+    ).toEqual(['test_get_game_player']);
   });
 });

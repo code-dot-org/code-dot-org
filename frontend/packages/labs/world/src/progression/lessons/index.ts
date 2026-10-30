@@ -36,6 +36,7 @@ import {
   useTrait,
   words,
 } from '../../actors/stock/workspace';
+import {DEFAULT_PROJECT} from '../../constants';
 import type {WorldScenario} from '../../fixtures/scenarios';
 import type {RuleData, RuleTrait} from '../../rules/ruleData';
 import type {LessonProperties, TileId} from '../types';
@@ -3976,6 +3977,62 @@ see it, a panel with a Resume and a Quit button.
 `.trim(),
 };
 
+// ── story/watch ──────────────────────────────────────────────────────────────
+
+/**
+ * The starter, its health bar hearing only `player arrived`: full when the
+ * game starts, and full however often the Player is hurt
+ * (specs/PROPERTY_SUBJECTS_PLAN.md, step 6).
+ */
+const watchSource = () => {
+  const source = structuredClone(DEFAULT_PROJECT.source);
+  const main = Object.values(source.files).find(
+    file => file.name === 'main.screen',
+  )!;
+  const screen = JSON.parse(main.contents) as {
+    actors: Array<{
+      id: string;
+      blocks?: {blocks: {blocks: Array<{type: string}>}};
+    }>;
+  };
+  const bar = screen.actors.find(actor => actor.id === 'HealthBar')!;
+  bar.blocks!.blocks.blocks = bar.blocks!.blocks.blocks.filter(
+    hat => hat.type !== 'world_on_Health_IsDamagedEvent',
+  );
+  main.contents = JSON.stringify(screen, null, 2);
+  return source;
+};
+
+const watchLesson: WorldScenario = {
+  name: 'A bar about the player',
+  description:
+    'The health bar fills when the game starts and never moves again, however often the Player is hurt.',
+  source: watchSource(),
+  instructions: `
+## A bar about the player
+
+Walk into the Crawler. The Player is hurt, and hurt again until the board
+says GAME OVER, and the health bar in the corner stays full the whole time.
+
+The bar is on the Main Screen and the Player is in the level, so the bar
+cannot name the Player. The game can: it keeps an actor value, **current
+player**, and sets it as the game starts. A handler can be about that value
+instead of about an actor, and it hears whichever actor the value holds when
+the event happens.
+
+### What you do
+
+1. Open the Main Screen, select the health bar, and open its code. It hears
+   **player arrived** and fills itself from **current player**.
+2. Add **when ⟨this actor⟩ is damaged** from the Health drawer, and change
+   **this actor** to **current player**.
+3. Under it, **set fraction of ⟨this actor⟩** to **health of ⟨subject
+   actor⟩ ÷ most health of ⟨subject actor⟩**. **subject actor** is the actor
+   the event happened to; the **+** on the hat has it.
+4. Run it and walk into the Crawler. The bar goes down with each hit.
+`.trim(),
+};
+
 // ── story/form ───────────────────────────────────────────────────────────────
 
 /**
@@ -6636,6 +6693,7 @@ const written: Readonly<Record<TileId, WorldScenario>> = {
   'story/script': script,
   'story/choice': choice,
   'story/screen': screenLesson,
+  'story/watch': watchLesson,
   'story/form': form,
   'story/scene': scene,
   'simulation/many': crowd,

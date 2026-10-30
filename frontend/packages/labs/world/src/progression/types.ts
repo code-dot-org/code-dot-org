@@ -123,7 +123,8 @@ export type Affordance =
   | 'rule-properties'
   | 'rule-traits'
   | 'rule-blocks'
-  | 'rule-steps';
+  | 'rule-steps'
+  | 'subject-properties';
 
 export type Unlock = UnlockTarget & {
   /**

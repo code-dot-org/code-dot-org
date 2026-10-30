@@ -376,6 +376,7 @@ const AFFORDANCE_NAMES: Record<Affordance, string> = {
   'rule-traits': 'Traits in a rule',
   'rule-blocks': 'Blocks in a rule',
   'rule-steps': 'Steps in a rule',
+  'subject-properties': 'Events about a value',
 };
 
 /**

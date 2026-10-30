@@ -40,7 +40,12 @@ import {useLocalization} from '@code-dot-org/core/plugins/localization';
 import {useSources} from '@code-dot-org/lab/contexts';
 
 import {buildDomainPalette} from '../blockly/domainBlocks';
-import {setEditingActor, setEditingFile} from '../blockly/editingRule';
+import {
+  setEditingActor,
+  setEditingFile,
+  setSubjectPropertiesWithheld,
+  SUBJECT_PROPERTIES,
+} from '../blockly/editingRule';
 import {type EventChoice} from '../blockly/eventChoices';
 import type {FileKind} from '../blockly/fileKind';
 import {eventsNarrowerFor, eventsUnheardBy} from '../blockly/kindEvents';
@@ -55,6 +60,7 @@ import {markCode} from '../blockly/workspaceRoots';
 import {useWorldBlocklyTheme} from '../blockly/worldBlocklyTheme';
 import {refreshFor} from '../library/refreshRegistries';
 import {MAIN_SCREEN_PATH} from '../mainWorld';
+import {useMaybeProgression} from '../progression/progressionContext';
 import {projectFiles} from '../runtime/projectFiles';
 
 import styles from './mapEditor.module.css';
@@ -108,6 +114,7 @@ export const PlacementScriptEditor = ({
   isReadOnly,
 }: PlacementScriptEditorProps) => {
   const {currentSources} = useSources<MultiFileSource>();
+  const progression = useMaybeProgression();
   // `locale` is not read; it is the signal to translate again, as in the
   // file editor (`BlocklyFileEditor.localizedBlocks`).
   const locale = useLocalization();
@@ -273,6 +280,12 @@ export const PlacementScriptEditor = ({
               setEditingActor(
                 workspace,
                 kind === 'placement' ? actorKind : undefined,
+              );
+              setSubjectPropertiesWithheld(
+                workspace,
+                progression?.gated
+                  ? !progression.holds(SUBJECT_PROPERTIES)
+                  : false,
               );
               sections.onInject(workspace);
             }}
