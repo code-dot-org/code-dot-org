@@ -49,7 +49,7 @@
       "description": "Intro panels",
       "routeAfterCompletion": true,
       "plan": {
-        "template": "Build me a site about {topic} for {audience} that should feel {style}. The problem it helps with: {objective}"
+        "template": "Build me a site about {topic} for {audience} that should feel {style}. What it should do: {purpose}"
       },
       "steps": [
         {
@@ -119,7 +119,7 @@
                 },
                 {
                   "id": "e",
-                  "text": "School and studying"
+                  "text": "School and education"
                 },
                 {
                   "id": "f",
@@ -142,335 +142,34 @@
           ]
         },
         {
-          "id": "intro-better-music",
-          "title": "What could be better?",
+          "id": "intro-purpose",
+          "title": "What should your site do?",
           "kind": "questions",
-          "showIf": {
-            "stepId": "intro-interest",
-            "questionId": 201,
-            "choiceId": "a"
-          },
-          "description": "Thinking about music and art. Pick the one that sounds most like you, or type your own.",
           "questions": [
             {
               "id": 202,
               "type": "MultipleChoiceQuestion",
-              "questionName": "intro-better-music",
-              "questionTitle": "What could be better about it?",
+              "questionName": "intro-purpose",
+              "questionTitle": "What should your site do?",
               "choices": [
                 {
                   "id": "a",
-                  "text": "I never know what to listen to next"
+                  "text": "Share a message"
                 },
                 {
                   "id": "b",
-                  "text": "I want to share my music or art with people"
+                  "text": "Help them decide or plan"
                 },
                 {
                   "id": "c",
-                  "text": "I lose track of what I am working on"
+                  "text": "Bring people together"
+                },
+                {
+                  "id": "d",
+                  "text": "Let them play or try something"
                 }
               ],
-              "allowOther": {
-                "placeholder": "Or describe it, like: finding a study spot"
-              },
-              "plan": "objective"
-            }
-          ]
-        },
-        {
-          "id": "intro-better-sports",
-          "title": "What could be better?",
-          "kind": "questions",
-          "showIf": {
-            "stepId": "intro-interest",
-            "questionId": 201,
-            "choiceId": "b"
-          },
-          "description": "Thinking about sports and fitness. Pick the one that sounds most like you, or type your own.",
-          "questions": [
-            {
-              "id": 203,
-              "type": "MultipleChoiceQuestion",
-              "questionName": "intro-better-sports",
-              "questionTitle": "What could be better about it?",
-              "choices": [
-                {
-                  "id": "a",
-                  "text": "I have trouble staying consistent with workouts"
-                },
-                {
-                  "id": "b",
-                  "text": "My team can never decide who does what"
-                },
-                {
-                  "id": "c",
-                  "text": "I want to find the right sport or routine"
-                }
-              ],
-              "allowOther": {
-                "placeholder": "Or describe it, like: finding a study spot"
-              },
-              "plan": "objective"
-            }
-          ]
-        },
-        {
-          "id": "intro-better-food",
-          "title": "What could be better?",
-          "kind": "questions",
-          "showIf": {
-            "stepId": "intro-interest",
-            "questionId": 201,
-            "choiceId": "c"
-          },
-          "description": "Thinking about food and cooking. Pick the one that sounds most like you, or type your own.",
-          "questions": [
-            {
-              "id": 204,
-              "type": "MultipleChoiceQuestion",
-              "questionName": "intro-better-food",
-              "questionTitle": "What could be better about it?",
-              "choices": [
-                {
-                  "id": "a",
-                  "text": "My friends can never decide where to eat"
-                },
-                {
-                  "id": "b",
-                  "text": "I want to keep track of recipes to try"
-                },
-                {
-                  "id": "c",
-                  "text": "I want to build my perfect meal"
-                }
-              ],
-              "allowOther": {
-                "placeholder": "Or describe it, like: finding a study spot"
-              },
-              "plan": "objective"
-            }
-          ]
-        },
-        {
-          "id": "intro-better-gaming",
-          "title": "What could be better?",
-          "kind": "questions",
-          "showIf": {
-            "stepId": "intro-interest",
-            "questionId": 201,
-            "choiceId": "d"
-          },
-          "description": "Thinking about gaming. Pick the one that sounds most like you, or type your own.",
-          "questions": [
-            {
-              "id": 205,
-              "type": "MultipleChoiceQuestion",
-              "questionName": "intro-better-gaming",
-              "questionTitle": "What could be better about it?",
-              "choices": [
-                {
-                  "id": "a",
-                  "text": "I want to show my friends what I am into"
-                },
-                {
-                  "id": "b",
-                  "text": "I want to track my goals and progress"
-                },
-                {
-                  "id": "c",
-                  "text": "I want to make my own mini game"
-                }
-              ],
-              "allowOther": {
-                "placeholder": "Or describe it, like: finding a study spot"
-              },
-              "plan": "objective"
-            }
-          ]
-        },
-        {
-          "id": "intro-better-school",
-          "title": "What could be better?",
-          "kind": "questions",
-          "showIf": {
-            "stepId": "intro-interest",
-            "questionId": 201,
-            "choiceId": "e"
-          },
-          "description": "Thinking about school and studying. Pick the one that sounds most like you, or type your own.",
-          "questions": [
-            {
-              "id": 206,
-              "type": "MultipleChoiceQuestion",
-              "questionName": "intro-better-school",
-              "questionTitle": "What could be better about it?",
-              "choices": [
-                {
-                  "id": "a",
-                  "text": "I need to figure out how I study best"
-                },
-                {
-                  "id": "b",
-                  "text": "I cannot keep track of homework"
-                },
-                {
-                  "id": "c",
-                  "text": "I want to make studying less boring"
-                }
-              ],
-              "allowOther": {
-                "placeholder": "Or describe it, like: finding a study spot"
-              },
-              "plan": "objective"
-            }
-          ]
-        },
-        {
-          "id": "intro-better-animals",
-          "title": "What could be better?",
-          "kind": "questions",
-          "showIf": {
-            "stepId": "intro-interest",
-            "questionId": 201,
-            "choiceId": "f"
-          },
-          "description": "Thinking about animals and nature. Pick the one that sounds most like you, or type your own.",
-          "questions": [
-            {
-              "id": 207,
-              "type": "MultipleChoiceQuestion",
-              "questionName": "intro-better-animals",
-              "questionTitle": "What could be better about it?",
-              "choices": [
-                {
-                  "id": "a",
-                  "text": "I want to help people choose the right pet"
-                },
-                {
-                  "id": "b",
-                  "text": "I want to track pet or plant care"
-                },
-                {
-                  "id": "c",
-                  "text": "I want to teach people about animals"
-                }
-              ],
-              "allowOther": {
-                "placeholder": "Or describe it, like: finding a study spot"
-              },
-              "plan": "objective"
-            }
-          ]
-        },
-        {
-          "id": "intro-better-fashion",
-          "title": "What could be better?",
-          "kind": "questions",
-          "showIf": {
-            "stepId": "intro-interest",
-            "questionId": 201,
-            "choiceId": "g"
-          },
-          "description": "Thinking about fashion and style. Pick the one that sounds most like you, or type your own.",
-          "questions": [
-            {
-              "id": 208,
-              "type": "MultipleChoiceQuestion",
-              "questionName": "intro-better-fashion",
-              "questionTitle": "What could be better about it?",
-              "choices": [
-                {
-                  "id": "a",
-                  "text": "I cannot decide what to wear"
-                },
-                {
-                  "id": "b",
-                  "text": "I want to design my own look"
-                },
-                {
-                  "id": "c",
-                  "text": "I want to find my style"
-                }
-              ],
-              "allowOther": {
-                "placeholder": "Or describe it, like: finding a study spot"
-              },
-              "plan": "objective"
-            }
-          ]
-        },
-        {
-          "id": "intro-better-friends",
-          "title": "What could be better?",
-          "kind": "questions",
-          "showIf": {
-            "stepId": "intro-interest",
-            "questionId": 201,
-            "choiceId": "h"
-          },
-          "description": "Thinking about friends and community. Pick the one that sounds most like you, or type your own.",
-          "questions": [
-            {
-              "id": 209,
-              "type": "MultipleChoiceQuestion",
-              "questionName": "intro-better-friends",
-              "questionTitle": "What could be better about it?",
-              "choices": [
-                {
-                  "id": "a",
-                  "text": "Our group can never decide what to do"
-                },
-                {
-                  "id": "b",
-                  "text": "We need to organize an event or club"
-                },
-                {
-                  "id": "c",
-                  "text": "I want to help people at my school find something"
-                }
-              ],
-              "allowOther": {
-                "placeholder": "Or describe it, like: finding a study spot"
-              },
-              "plan": "objective"
-            }
-          ]
-        },
-        {
-          "id": "intro-better-other",
-          "title": "What could be better?",
-          "kind": "questions",
-          "showIf": {
-            "stepId": "intro-interest",
-            "questionId": 201,
-            "choiceId": "other"
-          },
-          "description": "Pick the one that sounds most like you, or type your own.",
-          "questions": [
-            {
-              "id": 210,
-              "type": "MultipleChoiceQuestion",
-              "questionName": "intro-better-other",
-              "questionTitle": "What could be better about it?",
-              "choices": [
-                {
-                  "id": "a",
-                  "text": "I want to help people find the right thing"
-                },
-                {
-                  "id": "b",
-                  "text": "I want to help people keep track of something"
-                },
-                {
-                  "id": "c",
-                  "text": "I want to make something fun to share"
-                }
-              ],
-              "allowOther": {
-                "placeholder": "Or describe it, like: finding a study spot"
-              },
-              "plan": "objective"
+              "plan": "purpose"
             }
           ]
         },
@@ -487,21 +186,28 @@
               "choices": [
                 {
                   "id": "a",
-                  "text": "Me"
-                },
-                {
-                  "id": "b",
                   "text": "My friends and family"
                 },
                 {
+                  "id": "b",
+                  "text": "My class or school"
+                },
+                {
                   "id": "c",
-                  "text": "My team or club"
+                  "text": "People into the same topic"
                 },
                 {
                   "id": "d",
-                  "text": "My school or community"
+                  "text": "My team or club"
+                },
+                {
+                  "id": "e",
+                  "text": "Just me"
                 }
               ],
+              "allowOther": {
+                "placeholder": "Or type your own"
+              },
               "plan": "audience"
             },
             {
@@ -535,10 +241,10 @@
           "id": "intro-review",
           "title": "Your plan",
           "kind": "review",
-          "description": "Build a first version of your site from this plan, or skip and start from a blank page.",
+          "description": "Build a first version with AI, or start from a blank page.",
           "questionId": 214,
-          "buildLabel": "Build my site",
-          "skipLabel": "Skip, I'll build it myself"
+          "buildLabel": "Build with AI",
+          "skipLabel": "Start from a blank page"
         },
         {
           "id": "intro-starter",
