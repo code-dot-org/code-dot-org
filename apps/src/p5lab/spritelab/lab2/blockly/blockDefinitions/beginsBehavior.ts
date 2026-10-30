@@ -10,8 +10,8 @@ export const BEGINS_BEHAVIOR_BLOCK_TYPE = 'spritelab2_beginsBehavior';
 
 /** The dropdown's behaviors: label, and the helper that makes one. */
 export const BEHAVIOR_OPTIONS: [string, string][] = [
-  ['patrolling left and right on blocks', 'patrollingOnBlocks'],
-  ['wandering on blocks', 'wanderingOnBlocks'],
+  ['patrolling left and right', 'patrollingOnBlocks'],
+  ['wandering', 'wanderingOnBlocks'],
   ['following the player', 'followingPlayerOnBlocks'],
   ['floating', 'floating'],
 ];

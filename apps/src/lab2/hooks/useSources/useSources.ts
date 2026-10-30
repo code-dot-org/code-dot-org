@@ -2,19 +2,12 @@ import {isEqual} from 'lodash';
 import {useCallback, useEffect, useRef, useState} from 'react';
 
 import {clearHeader} from '@cdo/apps/code-studio/headerRedux';
-import {
-  INITIAL_VERSION_ID,
-  START_SOURCES,
-  TOOLBOX_BLOCKS,
-} from '@cdo/apps/lab2/constants';
+import {INITIAL_VERSION_ID} from '@cdo/apps/lab2/constants';
 import {setChannel as setChannelAction} from '@cdo/apps/lab2/lab2Redux';
 import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
 import ProjectManagerFactory from '@cdo/apps/lab2/projects/ProjectManagerFactory';
 import {getSourcesStoreForApp} from '@cdo/apps/lab2/projects/sourcesStoreForApp';
-import {
-  getAppOptionsEditBlocks,
-  getAppOptionsEditingExemplar,
-} from '@cdo/apps/lab2/projects/utils';
+import {getIsLevelEditMode} from '@cdo/apps/lab2/projects/utils';
 import type {
   Channel,
   LevelProperties,
@@ -29,10 +22,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import configureHeader from './configureHeader';
 import setProjectCallbacks from './setProjectCallbacks';
 
-const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
-const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
-const isLevelEditMode =
-  isStartMode || isToolboxMode || !!getAppOptionsEditingExemplar();
+const isLevelEditMode = getIsLevelEditMode();
 
 export interface UseSourcesInput<T extends ProjectSources> {
   /** Level properties for the current level */
@@ -185,9 +175,6 @@ export default function useSources<T extends ProjectSources>({
     // resurrect the previous level's sources or double-attach callbacks.
     async (isCancelled: () => boolean = () => false) => {
       const {usesProjects, id, isProjectLevel} = levelProperties;
-      if (!usesProjects) {
-        return;
-      }
       // Clear out existing data.
       setSources(undefined);
       setVersionList([]);
@@ -197,6 +184,15 @@ export default function useSources<T extends ProjectSources>({
       setChannel(undefined);
       await projectManagerRef.current?.cleanUp();
       if (isCancelled()) return;
+      // A level that uses no project has nothing to load; the lab supplies
+      // its sources, and nothing is saved. Level edit mode goes on to load
+      // the level's own sources below, as it does for any level, so a
+      // levelbuilder can edit them.
+      if (!usesProjects && !isLevelEditMode) {
+        projectManagerRef.current = null;
+        dispatch(setChannelAction(undefined));
+        return;
+      }
 
       // Set up new Project Manager, unless we're in level edit mode.
       if (!isLevelEditMode) {

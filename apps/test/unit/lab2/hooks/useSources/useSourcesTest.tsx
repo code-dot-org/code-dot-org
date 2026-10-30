@@ -167,12 +167,14 @@ describe('useSources', () => {
       expect(result.current.currentSources).toEqual(DEFAULT_SOURCES);
     });
 
-    it('does not load when the level does not use projects', async () => {
+    it('loads nothing for a level without a project', async () => {
       const {result} = renderUseSources({...LEVEL_ONE, usesProjects: false});
       await flush();
 
       expect(mockGetProjectManagerForLevel).not.toHaveBeenCalled();
+      expect(result.current.projectManager).toBeNull();
       expect(result.current.currentSources).toBeUndefined();
+      expect(result.current.isEditable).toBe(false);
     });
 
     it('surfaces load errors', async () => {

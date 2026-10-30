@@ -66,4 +66,18 @@ describe('SceneDropdown', () => {
     fireEvent.click(screen.getByRole('button', {name: 'Scene: Cave'}));
     expect(menuNames()).toEqual(['Forest', 'Cave']);
   });
+
+  it('is a still label with one scene and nothing else to pick', () => {
+    renderDropdown({scenes: [SCENES[1]], locked: true});
+    const trigger = screen.getByRole('button', {name: 'Scene: Cave'});
+    expect(trigger).toBeDisabled();
+    fireEvent.click(trigger);
+    expect(screen.queryByRole('list', {name: 'Scenes'})).toBeNull();
+  });
+
+  it('opens with one scene while a scene can still be made', () => {
+    renderDropdown({scenes: [SCENES[1]]});
+    fireEvent.click(screen.getByRole('button', {name: 'Scene: Cave'}));
+    expect(menuNames()).toEqual(['Cave', 'New scene…']);
+  });
 });

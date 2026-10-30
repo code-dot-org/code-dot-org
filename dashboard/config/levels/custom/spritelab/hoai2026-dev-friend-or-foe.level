@@ -1,0 +1,77 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "properties": {
+    "uses_lab2": "true",
+    "block_pools": [
+      "GamelabJr",
+      "GameDev"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab",
+      "zGameDev"
+    ],
+    "standalone_app_name": "spritelab",
+    "skin": "gamelab",
+    "hide_custom_blocks": true,
+    "hide_share_and_remix": "true",
+    "encrypted": "false",
+    "project_template_level_name": "hoai2026-dev-revised-template",
+    "level_mode": {
+      "kind": "world",
+      "imageType": "sprite",
+      "imageRole": "friend",
+      "paletteRoles": [
+        "friend",
+        "block"
+      ],
+      "imageFirst": true
+    },
+    "pinned_scene": {
+      "id": "scene-1",
+      "name": "Scene 1"
+    },
+    "image_role_defaults": {
+      "sprite": "hero"
+    },
+    "objectives": {
+      "title": "**Friend or foe?**",
+      "items": [
+        {
+          "text": "In **Images**, click **New image** and make a friend or a foe.",
+          "check": {
+            "kind": "image",
+            "imageType": "sprite"
+          }
+        },
+        {
+          "text": "In **World**, click a square on top of some blocks to put them there. Add more if you like.",
+          "check": {
+            "kind": "world",
+            "role": "friend"
+          }
+        }
+      ]
+    },
+    "long_instructions": "# Friend or foe?\nIn **Images**, click **New image** and make a friend or a foe. Then, in **World**, put them on top of some blocks. You can add as many as you like.",
+    "header_label": "Friend or foe?",
+    "callouts": [
+      {
+        "target": "world-tab",
+        "when": {
+          "done": [
+            0
+          ],
+          "tabNot": "World"
+        }
+      }
+    ],
+    "preload_asset_list": null
+  },
+  "published": true,
+  "game_id": 64,
+  "created_at": "2026-10-28T00:00:00.000Z",
+  "level_num": "custom",
+  "user_id": 1
+}]]></config>
+  <blocks/>
+</GamelabJr>
