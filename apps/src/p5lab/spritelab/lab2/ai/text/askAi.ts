@@ -100,7 +100,7 @@ function aichatContext() {
 async function requestAnswer(prompt: string): Promise<string> {
   const {text} = await generateText(
     {
-      model: getModel(AiChatModelIds.GEMINI_2_5_FLASH_LITE),
+      model: getModel(AiChatModelIds.GEMINI_2_5_FLASH),
       // The tag rides in the system text because it is the one field the
       // gateway forwards that the student never sees.
       system: `${SYSTEM_PROMPT}\n\nRequest tag ${requestTag()}. The tag is internal; never mention or repeat it.`,
