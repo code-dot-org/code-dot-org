@@ -29,7 +29,7 @@ import {
   styleClause,
 } from './imageGeneration';
 import {checkImageSafety, checkPromptSafety, markHandled} from './imageSafety';
-import {chooseKeyColor, KEY_COLORS, KeyColor} from './keyColor';
+import {chooseKeyColor, KeyColor} from './keyColor';
 import {
   CHARACTER_SET_IMAGE_SIZE,
   getCharacterSetImageModel,
@@ -370,21 +370,14 @@ export async function generateCharacterSet(
   onProgress?: (progress: CharacterSetProgress) => void
 ): Promise<GeneratedImageResult> {
   const {cached} = options;
-  const sidecar = cached ? await cached.sidecar() : undefined;
-  // A cached set was drawn on the colour its generator chose from the
-  // words of its day; the sidecar says which, in case the words changed.
-  const key =
-    (sidecar?.keyColor &&
-      KEY_COLORS[sidecar.keyColor as keyof typeof KEY_COLORS]) ||
-    chooseKeyColor(prompt);
+  // A cached set was drawn on the colour this choice made from the same
+  // prompt, so it keys the same way.
+  const key = chooseKeyColor(prompt);
   // One seed for the whole set; parallel frames offset it so alike prompts
   // don't collapse into alike drawings.
   const seed = options.seed ?? Math.floor(Math.random() * 2 ** 31);
   const {temperature} = options;
-  const pixelBlock = pixelBlockFor(
-    'sprite',
-    sidecar?.pixelGrid ?? options.pixelGrid
-  );
+  const pixelBlock = pixelBlockFor('sprite', options.pixelGrid);
   const drawFrame = (
     frame: string,
     text: string,

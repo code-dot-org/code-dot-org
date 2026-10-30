@@ -116,7 +116,7 @@ describe('exploreSentences', () => {
     ).toBe('A golden key with a ribbon');
   });
 
-  it('word ids are single words: the cache joins them with dashes', () => {
+  it('word ids are lowercase words: each is a folder in the cache', () => {
     const words = [
       ...Object.values(manifest.wordSets).flat(),
       ...Object.values(manifest.sentences).flatMap(sentence =>
@@ -126,7 +126,7 @@ describe('exploreSentences', () => {
       ),
     ];
     expect(words.length).toBeGreaterThan(0);
-    words.forEach(word => expect(word.id).toMatch(/^[a-z0-9]+$/));
+    words.forEach(word => expect(word.id).toMatch(/^[a-z0-9]+(-[a-z0-9]+)*$/));
   });
 
   it("every sentence's optional slots are the ones inside phrases", () => {

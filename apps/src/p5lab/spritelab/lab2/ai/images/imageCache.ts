@@ -5,28 +5,30 @@
 // it as on a live result, so improvements to that pipeline reach cached
 // images on their next use.
 //
-// Layout, one folder per filled sentence, one per style inside it:
+// Layout: one folder per word, in the order the sentence reads its slots,
+// then one per style:
 //
-//   <base>/<version>/<sentenceId>/<word-ids>/<style>/<NN>.json      sidecar
-//   <base>/<version>/<sentenceId>/<word-ids>/<style>/<NN>.png       single
-//   <base>/<version>/<sentenceId>/<word-ids>/<style>/<NN>-base.png  set frames
-//   <base>/<version>/<sentenceId>/<word-ids>/<style>/<NN>-walking.png ...
+//   <base>/<version>/<sentenceId>/<word>/<word>/<word>/<style>/<NN>.png          single
+//   <base>/<version>/<sentenceId>/<word>/<word>/<word>/<style>/<NN>.jpg          smooth background
+//   <base>/<version>/<sentenceId>/<word>/<word>/<word>/<style>/<NN>-base.png     set frames
+//   <base>/<version>/<sentenceId>/<word>/<word>/<word>/<style>/<NN>-walking.png  ...
 //
-// <word-ids> are the chosen word ids (single words, see exploreSentences.ts)
-// in the order the sentence reads its slots, joined by '-', with
-// EMPTY_WORD_ID for an optional slot left empty. A generator writes this tree offline, VARIANT_COUNT variants per
-// filling; there is no index of what exists. A filling the tree lacks, or
-// a variant review deleted, is found by its sidecar being missing.
+// An optional slot left empty is EMPTY_WORD_ID. A generator writes this
+// tree offline, VARIANT_COUNT variants per filling, and nothing describes
+// it: whether a filling is a set or one picture, its grid and its key
+// colour follow from the level and the prompt, the same way they do for a
+// live picture. A variant is there when its first frame is; a filling the
+// tree lacks, or a variant review deleted, is found by that file missing.
 //
-// The sidecar does not record the prompt: a version of the tree is drawn
-// with the prompt builders of its day, and the two move together, so the
-// lab's own builders describe a cached picture.
+// A version of the tree is drawn with the prompt builders of its day, and
+// the two move together, so the lab's own builders describe a cached
+// picture.
 
 import type {GeneratedFile} from 'ai';
 import {shuffle} from 'lodash';
 
 import {bytesToBase64} from './encoding';
-import {ImageStyle} from './types';
+import {ImageStyle, ImageType} from './types';
 
 /** Where a level's pictures come from: the model, or the tree, which is
     assumed complete. A picture the tree lacks is an error, not a fallback. */
@@ -48,7 +50,7 @@ export const IMAGE_CACHE_BASE_URL =
 export const IMAGE_CACHE_VERSION = 'v1';
 
 /** Stands in a path for an optional slot the student left empty. Word ids
-    are kebab-case, so it cannot be one. */
+    are words, so it cannot be one. */
 export const EMPTY_WORD_ID = '_';
 
 /** How many variants the generator draws per filling, numbered from 00. */
@@ -58,16 +60,13 @@ export const VARIANT_COUNT = 3;
     'single'. */
 export type CachedFrame = 'single' | 'base' | string;
 
-/** What the generator recorded beside one variant's files: only what the
-    lab's pipeline needs to finish them. Other keys are ignored. */
-export interface CachedSidecar {
-  /** The five pose files are there; absent on a single picture. */
-  characterSet?: boolean;
-  /** The flat colour a set was drawn on (a KEY_COLORS name). A single
-      picture is keyed from its corner and names none. */
-  keyColor?: string;
-  /** The logical grid a pixel-style picture was asked for. */
-  pixelGrid?: number;
+/** What a filling's files look like, known from the level before any is
+    fetched. */
+export interface CachedShape {
+  imageType: ImageType;
+  style: ImageStyle;
+  /** Five pose files rather than one picture. */
+  characterSet: boolean;
 }
 
 /** Thrown when a file the variant should have is not there. */
@@ -82,7 +81,6 @@ export class ImageCacheMissError extends Error {
 export interface CachedImage {
   variant: number;
   characterSet: boolean;
-  sidecar(): Promise<CachedSidecar>;
   /** The model's raw output for one frame. A set's 'single' is its base. */
   raw(frame: CachedFrame): Promise<GeneratedFile>;
 }
@@ -91,14 +89,21 @@ export function variantName(variant: number): string {
   return String(variant).padStart(2, '0');
 }
 
-/** The file a frame's bytes live in: `<NN>.png` for a single picture,
-    `<NN>-<frame>.png` for a set's frame. */
+// A smooth background is photographic and keeps the model's JPEG, as the
+// live path does; everything else is keyed or grid-read and must be PNG.
+function fileExtension({imageType, style}: CachedShape): string {
+  return imageType === 'background' && style === 'smooth' ? 'jpg' : 'png';
+}
+
+/** The file a frame's bytes live in: `<NN>.png` (or `.jpg`) for a single
+    picture, `<NN>-<frame>.png` for a set's frame. */
 export function frameFileName(
   variant: number,
   frame: string,
-  characterSet: boolean
+  shape: CachedShape
 ): string {
-  return `${variantName(variant)}${characterSet ? `-${frame}` : ''}.png`;
+  const pose = shape.characterSet ? `-${frame}` : '';
+  return `${variantName(variant)}${pose}.${fileExtension(shape)}`;
 }
 
 export function sentencePath(
@@ -106,37 +111,16 @@ export function sentencePath(
   wordIds: string[],
   style: ImageStyle
 ): string {
-  return `${sentenceId}/${wordIds.join('-')}/${style}`;
+  return `${sentenceId}/${wordIds.join('/')}/${style}`;
 }
 
-// One sidecar fetch per page per URL, hit or miss: Generate again asks
+// A frame found missing stays missing for the page: Generate again asks
 // about the same variants, and a filling the tree lacks stays absent.
-const sidecars = new Map<string, Promise<CachedSidecar | undefined>>();
+const missing = new Set<string>();
 
-async function fetchSidecar(url: string): Promise<CachedSidecar | undefined> {
-  try {
-    const response = await fetch(url);
-    if (!response.ok) {
-      return undefined;
-    }
-    return (await response.json()) as CachedSidecar;
-  } catch {
-    return undefined;
-  }
-}
-
-function loadSidecar(url: string): Promise<CachedSidecar | undefined> {
-  let pending = sidecars.get(url);
-  if (!pending) {
-    pending = fetchSidecar(url);
-    sidecars.set(url, pending);
-  }
-  return pending;
-}
-
-/** Tests: drop remembered sidecars. */
-export function resetSidecarCache() {
-  sidecars.clear();
+/** Tests: forget which frames were missing. */
+export function resetMissingFrames() {
+  missing.clear();
 }
 
 async function fetchRaw(url: string): Promise<GeneratedFile> {
@@ -146,7 +130,8 @@ async function fetchRaw(url: string): Promise<GeneratedFile> {
   }
   const uint8Array = new Uint8Array(await response.arrayBuffer());
   const mediaType =
-    response.headers.get('content-type')?.split(';')[0] || 'image/png';
+    response.headers.get('content-type')?.split(';')[0] ||
+    (url.endsWith('.jpg') ? 'image/jpeg' : 'image/png');
   return {
     uint8Array,
     mediaType,
@@ -156,11 +141,10 @@ async function fetchRaw(url: string): Promise<GeneratedFile> {
   };
 }
 
-export interface FindCachedImageParams {
+export interface FindCachedImageParams extends CachedShape {
   sentenceId: string;
   /** Word ids in the sentence's slot order (sentenceWordIds). */
   wordIds: string[];
-  style: ImageStyle;
   /** The variant shown last time; another is preferred when one exists. */
   avoidVariant?: number;
   /** Override for tests and QA; defaults to the published tree. */
@@ -170,9 +154,11 @@ export interface FindCachedImageParams {
 
 /**
  * A variant of the filled sentence the cache holds, chosen at random among
- * the ones whose sidecar is there, or undefined when none is: the sentence
- * was not drawn with those words in that style, or review deleted every
- * variant. The variant shown last is passed over while another exists.
+ * the ones whose first frame is there, or undefined when none is: the
+ * sentence was not drawn with those words in that style, or review deleted
+ * every variant. The variant shown last is passed over while another
+ * exists. The first frame is fetched to find the variant and kept, so
+ * asking for it again costs nothing.
  */
 export async function findCachedImage(
   params: FindCachedImageParams
@@ -181,33 +167,47 @@ export async function findCachedImage(
     sentenceId,
     wordIds,
     style,
+    imageType,
+    characterSet,
     avoidVariant,
     baseUrl = IMAGE_CACHE_BASE_URL,
     version = IMAGE_CACHE_VERSION,
   } = params;
-  const path = sentencePath(sentenceId, wordIds, style);
-  const folder = `${baseUrl}${version}/${path}`;
+  const shape = {imageType, style, characterSet};
+  const folder = `${baseUrl}${version}/${sentencePath(
+    sentenceId,
+    wordIds,
+    style
+  )}`;
+  const fileUrl = (variant: number, frame: string) =>
+    `${folder}/${frameFileName(variant, frame, shape)}`;
+  const firstFrame = characterSet ? 'base' : 'single';
   const variants = [...Array(VARIANT_COUNT).keys()];
-  // Random order, the last shown at the end: the first sidecar found wins.
+  // Random order, the last shown at the end: the first frame found wins.
   const order = [
     ...shuffle(variants.filter(v => v !== avoidVariant)),
     ...variants.filter(v => v === avoidVariant),
   ];
   for (const variant of order) {
-    const sidecar = await loadSidecar(`${folder}/${variantName(variant)}.json`);
-    if (!sidecar) {
+    const url = fileUrl(variant, firstFrame);
+    if (missing.has(url)) {
       continue;
     }
-    const characterSet = !!sidecar.characterSet;
+    let first: GeneratedFile;
+    try {
+      first = await fetchRaw(url);
+    } catch {
+      missing.add(url);
+      continue;
+    }
     return {
       variant,
       characterSet,
-      sidecar: async () => sidecar,
       async raw(frame) {
         const wanted = characterSet && frame === 'single' ? 'base' : frame;
-        return fetchRaw(
-          `${folder}/${frameFileName(variant, wanted, characterSet)}`
-        );
+        return wanted === firstFrame
+          ? first
+          : fetchRaw(fileUrl(variant, wanted));
       },
     };
   }

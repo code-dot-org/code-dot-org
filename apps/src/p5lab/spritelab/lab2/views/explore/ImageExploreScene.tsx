@@ -109,8 +109,8 @@ interface ImageExploreSceneProps {
   instructions?: string;
   /** Offer the read-aloud button on the instructions. */
   showTts?: boolean;
-  /** Where a sentence's picture comes from: the model, the cache, or the
-      cache with the model behind it (imageCache.ts). The model when unset. */
+  /** Where a sentence's picture comes from: the model or the cache
+      (imageCache.ts). The model when unset. */
   imageSource?: ImageSource;
   /** Another tree to read cached pictures from (QA). */
   imageCacheUrl?: string;
@@ -155,22 +155,29 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
   const lastCachedVariantRef = useRef<number>();
 
   // The cached picture for the sentence as filled, when the level reads
-  // from the cache and it has one of the right style and form.
+  // from the cache and the tree has one.
   const findCached = useCallback(async (): Promise<CachedImage | undefined> => {
     if (imageSource === 'live') {
       return undefined;
     }
-    const cached = await findCachedImage({
+    return findCachedImage({
       sentenceId: sentence.id,
       wordIds: sentenceWordIds(sentence, choices),
+      imageType,
       style,
+      characterSet: canAnimate,
       avoidVariant: lastCachedVariantRef.current,
       baseUrl: imageCacheUrl,
     });
-    // A set's base frame serves as a single picture; a single picture
-    // cannot become a set.
-    return canAnimate && cached && !cached.characterSet ? undefined : cached;
-  }, [imageSource, sentence, choices, style, imageCacheUrl, canAnimate]);
+  }, [
+    imageSource,
+    sentence,
+    choices,
+    imageType,
+    style,
+    canAnimate,
+    imageCacheUrl,
+  ]);
 
   const generate = useCallback(async () => {
     const run = ++runRef.current;

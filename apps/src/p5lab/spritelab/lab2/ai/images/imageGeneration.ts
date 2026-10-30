@@ -141,9 +141,8 @@ export type GenerateImageOptions = Partial<
    * data URI, not raw bytes: the request body is JSON.
    */
   inputImageDataURI?: string;
-  /** Take the model's output from the cache instead of asking it. The
-      sidecar's grid replaces the one given, and the record carries no
-      seed. Reviewed before upload: no judges run. */
+  /** Take the model's output from the cache instead of asking it; the
+      record carries no seed. Reviewed before upload: no judges run. */
   cached?: CachedImage;
 };
 
@@ -310,15 +309,11 @@ export async function generateImage(
   options: GenerateImageOptions = {}
 ): Promise<GeneratedImageResult> {
   const {imageType = 'sprite', style = 'smooth', cached} = options;
-  const sidecar = cached ? await cached.sidecar() : undefined;
   // Always choose the seed ourselves: the service doesn't report the one it
   // rolls, and an unrecorded roll can never be replayed.
   const seed = options.seed ?? Math.floor(Math.random() * 2 ** 31);
   const {temperature} = options;
-  const pixelBlock = pixelBlockFor(
-    imageType,
-    sidecar?.pixelGrid ?? options.pixelGrid
-  );
+  const pixelBlock = pixelBlockFor(imageType, options.pixelGrid);
 
   let raw: RawImage;
   if (cached) {

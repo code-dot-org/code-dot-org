@@ -106,7 +106,6 @@ describe('generateImage', () => {
     const cached = {
       variant: 1,
       characterSet: false,
-      sidecar: async () => ({pixelGrid: 32}),
       raw: jest.fn(async () => ({
         mediaType: 'image/jpeg',
         uint8Array: new Uint8Array([5, 6]),
