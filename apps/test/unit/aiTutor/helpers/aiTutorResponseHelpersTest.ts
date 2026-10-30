@@ -132,6 +132,28 @@ describe('getMergedAiTutorCodeWithSource', () => {
       expect(result.files['1'].isAiTutorVersionUpdated).toBe(true);
     });
 
+    it('clears the url of a replaced url-backed file', () => {
+      const source = createSource({
+        '1': {
+          ...createProjectFile('1', 'data.json', '', '0', true),
+          url: 'https://example.com/data.json',
+        },
+        '2': {
+          ...createProjectFile('2', 'other.json', ''),
+          url: 'https://example.com/other.json',
+        },
+      });
+      const aiCode = [
+        createAiCodeFile('data.json', '{"a": 1}'),
+        createAiCodeFile('other.json', '{"b": 2}'),
+      ];
+
+      const result = getMergedAiTutorCodeWithSource(aiCode, source, []);
+
+      expect(result.files['1'].url).toBeUndefined();
+      expect(result.files['2'].url).toBeUndefined();
+    });
+
     it('sets all original files to inactive', () => {
       const source = createSource({
         '1': createProjectFile('1', 'index.html', 'content', '0', true),

@@ -114,6 +114,9 @@ const PythonlabView: React.FunctionComponent<
   );
   const hasRun = useAppSelector(state => state.lab2System.hasRun);
   const hasEdited = useAppSelector(state => state.lab2Project.hasEdited);
+  const isAiTutorVersion = useAppSelector(
+    state => state.lab2Project.viewingAiTutorVersion
+  );
   const aiChatAccessLevel = useAppSelector(
     state => state.currentUser.aiChatAccessLevel
   );
@@ -202,6 +205,12 @@ const PythonlabView: React.FunctionComponent<
     restartPyodideIfProgramIsRunning
   );
 
+  // A run that spans the start or end of an AI Tutor review would save the
+  // wrong code when it finishes.
+  useEffect(() => {
+    restartPyodideIfProgramIsRunning();
+  }, [isAiTutorVersion]);
+
   useEffect(() => {
     if (isAiTutorVisible) {
       aiTutorHelper.setAiTutorContext({
@@ -238,7 +247,10 @@ const PythonlabView: React.FunctionComponent<
     );
   }, [levelProperties.aiTutorPromptSettings]);
 
-  const aiTutorResponseSchemaSettings = useAiTutorResponseSchemaSettings();
+  const aiTutorResponseSchemaSettings = useAiTutorResponseSchemaSettings(
+    source,
+    levelProperties.widgetView
+  );
 
   const onRun = async (
     runTests: boolean,
