@@ -1289,6 +1289,99 @@ module Cdo
             refute(batches.flatten.any? {|sql| sql.include?(pii_fqn)})
           end
 
+          it 'with operations [:add] creates a new view and declines its changed sibling' do
+            pii_fqn = 'learning_platform_production_pii.users'
+            non_pii_fqn = 'learning_platform_production.users'
+            # Only the PII view exists, and its committed hash is stale, so it is to_update while the
+            # non-PII view is to_add.
+            client.stubs(:execute).returns(
+              [{'schema' => 'learning_platform_production_pii', 'name' => 'users', 'comment' => 'stale-hash'}]
+            )
+            batches = []
+            client.stubs(:batch_execute_async).with {|sqls| batches << sqls; true}.returns(['id'])
+
+            result = MaterializedViewManager.provision_all_views(
+              client: client, environment_type: :production, models: [model], operations: [:add]
+            )
+
+            assert_equal [non_pii_fqn], result[:to_add]
+            assert_equal [pii_fqn], result[:to_update]
+            assert_equal [non_pii_fqn], result[:statements].keys
+            assert_equal [pii_fqn], result[:declined][:update]
+            assert_empty result[:declined][:add]
+            refute(batches.flatten.any? {|sql| sql.include?(pii_fqn)})
+          end
+
+          it 'with operations [:add] submits no orphan drops and declines them' do
+            orphan_pii = 'learning_platform_production_pii.old_table'
+            orphan_non_pii = 'learning_platform_production.old_table'
+            client.stubs(:execute).returns(
+              [
+                {'schema' => 'learning_platform_production_pii', 'name' => 'old_table', 'comment' => nil},
+                {'schema' => 'learning_platform_production', 'name' => 'old_table', 'comment' => nil}
+              ]
+            )
+            batches = []
+            client.stubs(:batch_execute_async).with {|sqls| batches << sqls; true}.returns(['id'])
+
+            result = MaterializedViewManager.provision_all_views(
+              client: client, environment_type: :production, models: [model], operations: [:add]
+            )
+
+            assert_equal [orphan_non_pii, orphan_pii].sort, result[:declined][:drop].sort
+            refute(result[:statements].keys.any? {|key| key.start_with?('__drop_orphans__')})
+            refute(batches.flatten.any? {|sql| sql.start_with?('DROP MATERIALIZED VIEW IF EXISTS learning_platform_production_pii.old_table')})
+          end
+
+          it 'declines nothing when every operation is allowed' do
+            client.stubs(:execute).returns([])
+            client.stubs(:batch_execute_async).returns(['id'])
+
+            result = MaterializedViewManager.provision_all_views(
+              client: client, environment_type: :production, models: [model]
+            )
+
+            assert_equal({add: [], update: [], drop: []}, result[:declined])
+          end
+
+          it 'defers a model whose source table Zero ETL has not finished populating' do
+            client.stubs(:execute).returns([])
+            client.expects(:batch_execute_async).never
+            ZeroEtl.stubs(:synced_table_names).returns(Set.new)
+
+            result = MaterializedViewManager.provision_all_views(
+              client: client, environment_type: :production, models: [model], require_synced_sources: true
+            )
+
+            assert_equal ['users'], result[:deferred]
+            assert_empty result[:statements]
+          end
+
+          it 'provisions a model whose source table is synced' do
+            client.stubs(:execute).returns([])
+            client.stubs(:batch_execute_async).returns(['id'])
+            ZeroEtl.stubs(:synced_table_names).returns(Set.new(['users']))
+
+            result = MaterializedViewManager.provision_all_views(
+              client: client, environment_type: :production, models: [model], require_synced_sources: true
+            )
+
+            assert_empty result[:deferred]
+            refute_empty result[:statements]
+          end
+
+          it 'consults Zero ETL table state only when asked to' do
+            client.stubs(:execute).returns([])
+            client.stubs(:batch_execute_async).returns(['id'])
+            ZeroEtl.expects(:synced_table_names).never
+
+            result = MaterializedViewManager.provision_all_views(
+              client: client, environment_type: :production, models: [model]
+            )
+
+            assert_empty result[:deferred]
+          end
+
           it 'classifies orphaned views as to_drop' do
             client.stubs(:execute).returns(
               [
