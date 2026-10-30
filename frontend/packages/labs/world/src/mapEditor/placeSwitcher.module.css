@@ -1,8 +1,14 @@
+/* Scrolls itself because the design system's dialog panel has no height
+   limit, and a project's places can outnumber the window. */
 .body {
   display: flex;
+  max-height: 46vh;
   flex-direction: column;
   gap: 1rem;
+  box-sizing: border-box;
   min-width: min(28rem, 80vw);
+  padding: 2px;
+  overflow-y: auto;
 }
 
 .section {
