@@ -725,6 +725,23 @@ describe('LessonMaterialsContainer', () => {
       summary.tips.forEach((tip: string) => screen.getByText(tip));
     });
 
+    it('renders lesson materials without the summary when the summary is malformed', async () => {
+      const malformedSummary = {
+        ...LESSON_SUMMARY,
+        lesson_summary: JSON.stringify({
+          ...summary,
+          lesson_beats: summary.lesson_beats.map((name: string) => ({name})),
+        }),
+      };
+      await renderDefault(false, mockLessonData, malformedSummary);
+
+      screen.getByRole('combobox', {name: 'Select a unit'});
+      expect(screen.queryByText(i18n.teachingTips())).toBe(null);
+      summary.lesson_beats.forEach((beat: string) =>
+        expect(screen.queryByText(beat)).toBe(null)
+      );
+    });
+
     it('renders audio summary transcript dialog when transcript data is present', async () => {
       store.dispatch(setShowAITAPodcasts(true));
 

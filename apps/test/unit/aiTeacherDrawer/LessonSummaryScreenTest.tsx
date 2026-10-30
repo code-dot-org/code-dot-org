@@ -108,6 +108,24 @@ describe('LessonSummaryScreen', () => {
     );
   });
 
+  it('shows no-summary message when the summary is malformed', async () => {
+    (HttpClient.fetchJson as jest.Mock).mockResolvedValue({
+      response: {ok: true},
+      value: {
+        lesson_summary: JSON.stringify({
+          ...SUMMARY_PAYLOAD,
+          lesson_beats: SUMMARY_PAYLOAD.lesson_beats.map(name => ({name})),
+        }),
+      },
+    });
+    await renderAndSettle(<LessonSummaryScreen {...DEFAULT_PROPS} />);
+    await waitFor(() =>
+      expect(
+        screen.getByText(/no lesson summary is available/i)
+      ).toBeInTheDocument()
+    );
+  });
+
   it('shows no-summary message when fetch throws', async () => {
     (HttpClient.fetchJson as jest.Mock).mockRejectedValue(new Error('network'));
     await renderAndSettle(<LessonSummaryScreen {...DEFAULT_PROPS} />);
