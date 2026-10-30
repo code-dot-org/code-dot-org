@@ -6,7 +6,7 @@ import {
   AskAiError,
   cleanAnswer,
   isAskAiEnabled,
-  MAX_ANSWER_TOKENS,
+  SYSTEM_PROMPT,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/text/askAi';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
@@ -67,13 +67,28 @@ describe('askAiText', () => {
     expect(extra.aichatContext.currentLevelId).toBe(7);
   });
 
-  // Thinking tokens count against maxOutputTokens: left on, the model can
-  // spend the cap thinking and return nothing, which the gateway 500s on.
-  it('turns thinking off so the token cap buys actual output', async () => {
+  // additionalProperties: false — anything else is dropped before the model
+  // sees it, so sending it would only look like it was doing something.
+  it('sends nothing outside the gateway request contract', async () => {
     await askAiText('hello');
     const [sent] = generateText.mock.calls[0];
-    expect(sent.providerOptions.google.thinkingConfig.thinkingBudget).toBe(0);
-    expect(sent.maxOutputTokens).toBe(MAX_ANSWER_TOKENS);
+    expect(Object.keys(sent).sort()).toEqual([
+      'model',
+      'prompt',
+      'system',
+      'temperature',
+    ]);
+  });
+
+  it('varies the system text per request, so one question can differ', async () => {
+    await askAiText('hello');
+    await askAiText('hello');
+    const [first] = generateText.mock.calls[0];
+    const [second] = generateText.mock.calls[1];
+    expect(first.system).not.toBe(second.system);
+    // The question itself is untouched; only the tag moves.
+    expect(first.prompt).toBe(second.prompt);
+    expect(first.system).toContain(SYSTEM_PROMPT);
   });
 
   it('throws with the prompt phase when the question is flagged', async () => {
