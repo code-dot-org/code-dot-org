@@ -12,7 +12,7 @@ import {ProjectSources} from '@cdo/apps/lab2/types';
 import {Progress} from '../progress/model';
 import {checkpointPlan} from '../project/plan';
 import {applyGeneratedFiles, editableFiles} from '../project/projectGeneration';
-import {Checkpoint, LevelStep, Pathway, PathwayProjectInfo} from '../types';
+import {Checkpoint, LevelStep, Pathway} from '../types';
 
 import {generate, isAdaptiveAiEnabled, moderateInput} from './generate';
 import {
@@ -26,8 +26,7 @@ export interface GenerateProjectOptions {
   checkpoint: Checkpoint;
   step: LevelStep;
   progress: Progress;
-  projectInfo: PathwayProjectInfo;
-  /** The project as it stands, which is the template when nothing is saved. */
+  /** What the project is built over: the template, so a rebuild starts clean. */
   sources: ProjectSources;
   /** The shell's own context, not the mounted chat's. */
   aichatContext: AichatContext;
@@ -42,17 +41,15 @@ export interface GeneratedProject {
 }
 
 /**
- * Builds the project a project step asks for. A name or description the
- * student already gave stays theirs; the model's fills whichever is missing.
- * What the student typed is moderated first; the model is never asked about
- * answers that did not clear.
+ * Builds the project a project step asks for, named and described by the
+ * model from the same call. What the student typed is moderated first; the
+ * model is never asked about answers that did not clear.
  */
 export async function generateProject({
   pathway,
   checkpoint,
   step,
   progress,
-  projectInfo,
   sources,
   aichatContext,
 }: GenerateProjectOptions): Promise<GeneratedProject | undefined> {
@@ -67,7 +64,6 @@ export async function generateProject({
     checkpoint,
     step,
     plan,
-    project: projectInfo,
     files,
   });
   // Only what the student wrote is moderated; a chosen answer is authored text.
@@ -110,8 +106,8 @@ export async function generateProject({
   const seeded = applyGeneratedFiles(sources, output.files);
   if (!seeded) return undefined;
   return {
-    name: projectInfo.name ?? output.name,
-    description: projectInfo.description ?? output.description,
+    name: output.name,
+    description: output.description,
     sources: seeded,
     traceId,
   };

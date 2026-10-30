@@ -24,7 +24,7 @@ export interface UseGenerateProjectOptions
   extends Omit<GenerateProjectOptions, 'sources'> {
   /** Whether to generate; undefined while the project is loading and the answer is not known. */
   shouldGenerate: boolean | undefined;
-  /** The project's sources; undefined until loaded. */
+  /** What the project is built over; undefined until known. */
   sources: ProjectSources | undefined;
   channel: Channel | undefined;
   projectManager: ProjectManager | null;
@@ -42,7 +42,6 @@ export function useGenerateProject({
   checkpoint,
   step,
   progress,
-  projectInfo,
   aichatContext,
 }: UseGenerateProjectOptions): ProjectGenerationState {
   const [resolved, setResolved] = useState(shouldGenerate === false);
@@ -70,7 +69,6 @@ export function useGenerateProject({
         checkpoint,
         step,
         progress,
-        projectInfo,
         aichatContext,
         sources,
       });
@@ -106,7 +104,6 @@ export function useGenerateProject({
     checkpoint,
     step,
     progress,
-    projectInfo,
     aichatContext,
   ]);
 

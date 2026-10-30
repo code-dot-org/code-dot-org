@@ -16,6 +16,8 @@ class AdaptiveProgressController < ApplicationController
   MAX_TEXT_LENGTH = 10_000
   # OTHER_CHOICE_ID in apps/src/adaptive/schema/question.ts.
   OTHER_CHOICE_ID = 'other'
+  # REVIEW_DECISIONS in apps/src/adaptive/schema/steps/review.ts.
+  REVIEW_DECISIONS = %w[build skip].freeze
 
   # GET /adaptive_progress?scriptId=&levelId=
   def show
@@ -171,12 +173,22 @@ class AdaptiveProgressController < ApplicationController
     }.compact
   end
 
+  # The step's question with `question_id`, or nil. A review step's decision
+  # is a multiple choice question over its decisions.
+  private def step_question(step, question_id)
+    if step['kind'] == 'review'
+      return nil unless step['questionId'].to_s == question_id
+      return {'id' => step['questionId'], 'type' => 'MultipleChoiceQuestion', 'choices' => REVIEW_DECISIONS.map {|id| {'id' => id}}}
+    end
+    Array(step['questions']).find {|q| q.is_a?(Hash) && q['id'].to_s == question_id}
+  end
+
   # {question id => student responses checked against the content}, or nil if they do not fit.
   private def student_responses(step, answers)
     return nil unless answers.is_a?(Hash) && answers['list'].is_a?(Array)
     question_id = answers['questionId'].to_s
     return nil if question_id.empty?
-    question = Array(step['questions']).find {|q| q.is_a?(Hash) && q['id'].to_s == question_id}
+    question = step_question(step, question_id)
     return nil unless question
 
     entries = answers['list']

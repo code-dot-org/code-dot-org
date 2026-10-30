@@ -124,3 +124,32 @@
   flex: 1;
   min-height: 0;
 }
+
+// Review step
+
+.reviewAnswers {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0 0 24px;
+}
+
+.reviewAnswer {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+
+  dt {
+    color: var(--text-neutral-secondary);
+  }
+
+  dd {
+    margin: 0;
+  }
+}
+
+.reviewPlan {
+  padding: 16px;
+  border-radius: 0.25rem;
+  background: var(--background-neutral-secondary);
+}
