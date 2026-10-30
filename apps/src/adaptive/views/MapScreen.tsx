@@ -21,8 +21,8 @@ import ProjectCard from './ProjectCard';
 
 import styles from './mapScreen.module.scss';
 
-// Multiples of the size at which the whole map fits.
-const ZOOM_LEVELS = [1, 1.5, 2, 3];
+// Percentages of the size at which the whole map fits.
+const ZOOM_PERCENTAGES = [100, 150, 200, 300];
 
 const THEME_ITEMS = [
   {value: 'Light', text: 'Light'},
@@ -85,9 +85,8 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
               &nbsp;Back to map
             </MuiButton>
           )}
-          {/* The checkpoint zoom assumes an unzoomed, unscrolled map. */}
           <MapZoom
-            levels={ZOOM_LEVELS}
+            zoomPercentages={ZOOM_PERCENTAGES}
             startLevel={0}
             fit="whole"
             disabled={!!focusId}
