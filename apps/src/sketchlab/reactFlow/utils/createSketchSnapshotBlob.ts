@@ -83,7 +83,7 @@ const captureSketch = async (
     : '#ffffff';
 
   // html-to-image multiplies the output by the device pixel ratio. Keep that
-  // detail, but not past a canvas iOS Safari will refuse to draw.
+  // detail, but not past our max canvas size.
   const pixelRatio = Math.min(
     Math.max(window.devicePixelRatio || 1, 1),
     Math.sqrt(MAX_EXPORT_CANVAS_PIXELS / (imageWidth * imageHeight))

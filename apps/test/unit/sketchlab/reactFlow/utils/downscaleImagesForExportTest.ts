@@ -75,7 +75,6 @@ describe('downscaleImagesForExport', () => {
     expect(image.src).toBe(changed);
   });
 
-  // The 4:3 photo sits in a 3:2 box, so it fits to the box height.
   it('draws at the exported size, keeping the source aspect ratio', () => {
     const image = addImage('/v3/assets/channel/photo.png', PHOTO);
     const drawImage = jest.fn();

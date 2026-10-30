@@ -1,8 +1,6 @@
 // html-to-image inlines every <img> as base64 at its original resolution, so a
-// sketch with a few photos produces tens of megabytes of SVG and
-// Safari fails to render it. Swap each oversized image for one drawn at the
+// sketch can balloon in size with multiple images. Swap each oversized image for one drawn at the
 // size the export will actually show, and put the originals back afterwards.
-// html-to-image leaves a data-url source alone, so our version is what it embeds.
 
 const JPEG_SOURCE_PATTERN = /^data:image\/jpeg|\.jpe?g(\?|$)/i;
 const JPEG_QUALITY = 0.85;
@@ -59,8 +57,6 @@ export const downscaleImagesForExport = (
   Array.from(root.querySelectorAll('img')).forEach(image => {
     let replacement: string | undefined;
     try {
-      // Reading a canvas tainted by a cross-origin image throws; that image
-      // keeps its original source and gets embedded the old way.
       replacement = downscaledDataUrl(image, outputScale);
     } catch (error) {
       return;
