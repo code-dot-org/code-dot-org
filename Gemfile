@@ -24,7 +24,7 @@ gem 'drb' # needed for activesupport in Ruby >= 3.4, drop explicit after we upgr
 gem 'observer' # needed for activesupport in Ruby >= 3.4, drop explicit after we upgrade to activesupport >= 7.2
 gem 'syslog' # needed for activesupport in Ruby >= 3.4, drop explicit after we upgrade to activesupport >= 7.2
 
-gem 'rails', '~> 7.1'
+gem 'rails', '~> 7.0'
 gem 'rails-controller-testing', '~> 1.0.5'
 
 # Compile Sprockets assets concurrently in `assets:precompile`.
@@ -197,7 +197,7 @@ gem 'nokogiri', '~> 1.18.9'
 
 gem 'highline', '~> 3.1.0'
 
-gem 'honeybadger', '~> 5.1.0' # error monitoring
+gem 'honeybadger', '>= 4.5.6' # error monitoring
 
 gem 'redcarpet', '~> 3.6.0'
 
@@ -230,7 +230,7 @@ gem 'twitter_cldr', '~> 6.12.1'
 gem 'sequel', '~> 5.29'
 gem 'user_agent_parser'
 
-gem 'paranoia', '~> 2.6.3'
+gem 'paranoia', '~> 2.5.0'
 
 # JSON model serializer for REST APIs.
 gem 'active_model_serializers', '~> 0.10.13'
@@ -305,6 +305,9 @@ gem 'sshkit'
 gem 'validates_email_format_of'
 gem 'validate_url', '~> 1.0.15'
 
+# Target 14.0.5 specifically, because 14.0.6 removed an important performance optimization.
+gem 'composite_primary_keys', '14.0.5'
+
 # GitHub API; used by the DotD script to automatically create new
 # releases on deploy
 gem 'octokit'
@@ -330,7 +333,7 @@ gem 'sort_alphabetical', github: 'grosser/sort_alphabetical'
 
 gem 'recaptcha', require: 'recaptcha/rails'
 
-gem 'loofah', '~> 2.21'
+gem 'loofah', '~> 2.19.1'
 
 gem 'activerecord-import', '~> 1.7.0'
 gem 'active_record_union'

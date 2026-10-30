@@ -2,7 +2,7 @@ import {act, renderHook} from '@testing-library/react-hooks';
 
 import {usePlayProgress} from '@cdo/apps/p5lab/spritelab/lab2/views/useObjectives';
 
-const NEEDS = {seconds: false, touch: false, height: false, move: true};
+const NEEDS = {touch: false, move: true};
 
 describe('usePlayProgress', () => {
   it('measures a run from its first report, and starts over on the next run', () => {
