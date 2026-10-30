@@ -63,8 +63,7 @@ const DestinationsMap: React.FunctionComponent<DestinationsMapProps> = ({
   statusMap,
   turns,
   focusId,
-  zoom,
-  startId,
+  fit,
   onSelect,
 }) => {
   const layout = useMemo(
@@ -88,8 +87,7 @@ const DestinationsMap: React.FunctionComponent<DestinationsMapProps> = ({
       lines={lines}
       statusMap={statusMap}
       focus={focusId ? layout.nodes[focusId] : undefined}
-      zoom={zoom}
-      start={startId ? layout.nodes[startId] : undefined}
+      fit={fit}
     >
       {boxes.map(box => (
         <div

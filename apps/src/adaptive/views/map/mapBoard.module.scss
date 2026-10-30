@@ -6,13 +6,8 @@
   min-height: 0;
 }
 
-.scrolling {
-  overflow: auto;
-  // A scrollbar that came and went would change the width the board fits.
-  scrollbar-gutter: stable;
-}
-
-.scrollExtent {
+.byWidth {
+  flex: none;
   overflow: hidden;
 }
 

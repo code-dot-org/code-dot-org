@@ -20,8 +20,7 @@ const TreeMap: React.FunctionComponent<MapProps> = ({
   pathway,
   statusMap,
   focusId,
-  zoom,
-  startId,
+  fit,
   onSelect,
 }) => {
   const layout = useMemo(
@@ -50,8 +49,7 @@ const TreeMap: React.FunctionComponent<MapProps> = ({
       lines={lines}
       statusMap={statusMap}
       focus={focusId ? layout.nodes[focusId] : undefined}
-      zoom={zoom}
-      start={startId ? layout.nodes[startId] : undefined}
+      fit={fit}
     >
       {pathway.checkpoints.map(checkpoint => (
         <MapNode
