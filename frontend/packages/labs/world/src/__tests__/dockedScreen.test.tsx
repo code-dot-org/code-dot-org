@@ -35,23 +35,33 @@ describe.each(['simple', 'flappy', 'breakout'] as const)(
 );
 
 describe('the starter’s HUD', () => {
-  it('is a bar over the game, the Health Bar watching the Player in the level', async () => {
-    const {world} = await compileProject(
+  it('is a bar over the game, filled by the game’s `current player`', async () => {
+    const {world, modules} = await compileProject(
       projectFiles(WORLD_SCENARIOS.simple.source),
     );
-    world.tick(1 / 60);
     const named = (id: string) =>
       [...world.actors].find(actor => actor.id === id)!;
+    const health = modules['rules/health'];
+    const member = (part: string) =>
+      Object.entries(health).find(([name]) => name.includes(part))![1] as never;
+    const fraction = modules['actors/progressBar'].FractionProperty as never;
+    const bar = () => named('HealthBar').get(fraction) as unknown as number;
+
+    // Hurt before the first frame, so `player arrived` has a thing to show.
+    named('Player').set(member('HealthProperty'), 1 as never);
+    world.tick(1 / 60);
 
     // Fixed at the right of a bar one tile tall, a whole room under it.
     expect(named('HealthBar').get(PositionProperty)).toEqual(
       new Vector(320 - 48, 16),
     );
     expect(named('Game').get(HeightProperty)).toBe(320);
-    // …and it watches the Player, who is in another space.
-    const subject = named('HealthBar')
-      .ownProperties()
-      .find(property => property.id === 'subject')!;
-    expect(named('HealthBar').get(subject)).toEqual([named('Player')]);
+    expect(bar()).toBeCloseTo(1 / 3);
+
+    // …and it hears the Player, who is in another space, being damaged.
+    named('Player').set(member('HealthProperty'), 2 as never);
+    world.emit(member('IsDamaged'), named('Player'));
+    world.tick(1 / 60);
+    expect(bar()).toBeCloseTo(2 / 3);
   });
 });

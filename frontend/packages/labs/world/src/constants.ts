@@ -11,7 +11,6 @@ import {importStockActor} from './actors/importStockActor';
 import {stockActorById} from './actors/stock';
 import {coinActor} from './actors/stock/coin';
 import {groundActor} from './actors/stock/ground';
-import {healthBarActor} from './actors/stock/healthBar';
 import {labelActor} from './actors/stock/label';
 import {progressBarActor} from './actors/stock/progressBar';
 import {
@@ -233,7 +232,7 @@ export const LEVEL1_ACTORS = [
 
 // The level, `maps/main.map`: what the Main Screen's Viewport shows.
 //
-// The HUD — the Scoreboard and the Health Bar — is not in it: it is on the
+// The HUD — the Scoreboard and the health bar — is not in it: it is on the
 // Main Screen, docked above the Viewport (`STARTER_HUD`).
 const MAIN_MAP = JSON.stringify(
   {
@@ -307,29 +306,82 @@ export const gameScreen = (
 
 /** How tall the starter's HUD bar is: one tile. */
 const HUD_HEIGHT = TILE_SIZE;
-/** …and how much of it the Health Bar takes, at its right. */
+/** …and how much of it the health bar takes, at its right. */
 const HEALTH_BAR_WIDTH = 96;
 
+/** The Main Screen's actor value naming the Player, and the getter for it. */
+const CURRENT_PLAYER = 'world_get_ScreensMain_CurrentPlayerProperty';
+
+/** `⟨health ÷ most health⟩ of ⟨who⟩`, the fraction a health bar shows. */
+const healthLeft = (who: () => object) => {
+  const of = (exportName: string) => ({
+    block: {type: `world_get_Health_${exportName}`, inputs: {ACTOR: who()}},
+  });
+  return {
+    block: {
+      type: 'math_arithmetic',
+      fields: {OP: 'DIVIDE'},
+      inputs: {A: of('HealthProperty'), B: of('MostHealthProperty')},
+    },
+  };
+};
+
+/** `set fraction of ⟨this actor⟩ to ⟨value⟩`. */
+const showFraction = (value: object) => ({
+  type: 'world_set_ActorsProgressBar_FractionProperty',
+  inputs: {ACTOR: {shadow: {type: 'world_this_actor'}}, VALUE: value},
+});
+
 /**
- * The starter's HUD: the Scoreboard and the Health Bar, in a bar docked
- * above the Viewport, the Health Bar fixed at the right and the Scoreboard
- * taking the rest (specs/DOCKING_PLAN.md, step 6). Their positions are where
- * the editor first draws them; docked, the layout places them.
+ * The health bar's own code: two handlers, and nothing run every frame
+ * (specs/PROPERTY_SUBJECTS_PLAN.md, step 5). Damage moves it, and so does
+ * the game saying the player has arrived, which no damage would.
+ */
+const HEALTH_BAR_CODE = {
+  blocks: {
+    languageVersion: 0,
+    blocks: [
+      {
+        type: 'world_on_Health_IsDamagedEvent',
+        fields: {SUBJECT: CURRENT_PLAYER},
+        x: 20,
+        y: 20,
+        next: {
+          block: showFraction(
+            healthLeft(() => ({block: {type: 'world_subject_actor'}})),
+          ),
+        },
+      },
+      {
+        type: 'world_on_ScreensMain_PlayerArrivedEvent',
+        x: 20,
+        y: 200,
+        next: {
+          block: showFraction(
+            healthLeft(() => ({block: {type: CURRENT_PLAYER}})),
+          ),
+        },
+      },
+    ],
+  },
+};
+
+/**
+ * The starter's HUD: the Scoreboard and a health bar, in a bar docked above
+ * the Viewport, the bar fixed at the right and the Scoreboard taking the
+ * rest (specs/DOCKING_PLAN.md, step 6). Their positions are where the editor
+ * first draws them; docked, the layout places them.
  *
- * The Health Bar watches the Player, who is in the level the Viewport
- * shows, a map this one cannot name a placement in. So it names the KIND,
- * and watches the first Player there is. `Health_Bar` is the actor's own id,
- * which is what an own property is filed under.
+ * The bar is a plain Progress Bar. The Player is in the level, a map this
+ * screen cannot name a placement in, so the bar hears whoever the game's
+ * `current player` holds.
  */
 const STARTER_HUD = {
   actors: [
     place('actors/scoreboard', 'Scoreboard', tileCenter(3), tileCenter(0)),
     {
-      ...place('actors/healthBar', 'HealthBar', tileCenter(8), tileCenter(0)),
-      properties: {
-        positional: {position: {x: tileCenter(8), y: tileCenter(0)}},
-        Health_Bar: {subject: 'actors/player'},
-      },
+      ...place('actors/progressBar', 'HealthBar', tileCenter(8), tileCenter(0)),
+      blocks: HEALTH_BAR_CODE,
     },
   ],
   layout: {
@@ -347,6 +399,37 @@ const STARTER_HUD = {
   },
 };
 
+/**
+ * The Main Screen's own code: as the game starts, name the Player and say it
+ * has arrived. A game with levels says both again after each `load map`.
+ */
+const MAIN_SCREEN_CODE = {
+  blocks: {
+    languageVersion: 0,
+    blocks: [
+      {
+        type: 'world_on_screen_loads',
+        x: 20,
+        y: 20,
+        next: {
+          block: {
+            type: 'world_set_ScreensMain_CurrentPlayerProperty',
+            inputs: {
+              VALUE: {
+                block: {
+                  type: 'world_actor_kind',
+                  fields: {ACTOR: 'actors/player'},
+                },
+              },
+            },
+            next: {block: {type: 'world_emit_ScreensMain_PlayerArrivedEvent'}},
+          },
+        },
+      },
+    ],
+  },
+};
+
 const MAIN_SCREEN = gameScreen(
   'Platform World',
   {
@@ -360,6 +443,9 @@ const MAIN_SCREEN = gameScreen(
         value: '30',
       },
     ],
+    properties: [{name: 'current player', type: 'actor', value: ''}],
+    events: [{name: 'player arrived'}],
+    blocks: MAIN_SCREEN_CODE,
   },
   // A tile taller than the level, for the HUD bar over it, so the Viewport
   // shows the whole room.
@@ -683,20 +769,6 @@ const SCOREBOARD_ACTOR = JSON.stringify(
   2,
 );
 
-// What being hurt LOOKS like — and it is the STOCK Health Bar, verbatim.
-//
-// The starter used to carry a bar of its own that asked the world for the
-// first actor with health. That worked for exactly one game: the one with a
-// single hurtable thing in it. The stock one carries the actor it is about
-// (`actors/stock/healthBar`), which is the same picture pointed rather than
-// guessing — and it is the file a learner gets by importing, so the starter
-// is now a worked example of the shelf rather than a thing beside it.
-//
-// WHO IT IS ABOUT IS SET IN THE MAP, which is the whole of the wiring and no
-// blocks at all: a placement holds the id of another placement and `loadMap`
-// resolves it once every entry exists (specs/MAPS.md). Select the bar in the
-// map editor and the line to the Player is drawn.
-
 // The one thing in the starter that can go wrong.
 //
 // Everything else here is a reward: coins to take, a platform to reach, a
@@ -923,21 +995,11 @@ export const STARTER_SPEC: ProjectSpec = {
       contents: COIN_ACTOR,
       folderId: 'actors',
     },
-    // The bar the Health Bar ACTS LIKE. `acts like` names a module path, and a
-    // path naming a file the project does not hold inherits nothing at all —
-    // no trait, no picture — so the parent is here beside the child
-    // (`actors/stock/healthBar`).
+    // The HUD's health bar, filled by its own handlers.
     progressBar: {
       name: 'progressBar.actor',
       language: 'actor',
       contents: progressBarActor,
-      folderId: 'actors',
-    },
-    healthBar: {
-      name: 'healthBar.actor',
-      language: 'actor',
-      // For both: a HUD on the Main Screen, and a bar a game may place.
-      contents: withPurpose(healthBarActor, 'interface'),
       folderId: 'actors',
     },
     crawler: {

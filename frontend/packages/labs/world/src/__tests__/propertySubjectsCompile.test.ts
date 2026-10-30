@@ -52,8 +52,8 @@ const scoreboardHears = (subject: string, body: object = says('hurt')) => ({
 });
 
 /**
- * The starter, its Main Screen holding `current player`, set to the Player
- * as the screen loads, and the Scoreboard hearing `subject`.
+ * The starter, its Main Screen's `current player` set to the Player as the
+ * screen loads or not at all, and the Scoreboard hearing `subject`.
  */
 const project = (
   subject: string,
@@ -66,17 +66,15 @@ const project = (
     actors: Array<{id: string; blocks?: object}>;
     blocks?: {blocks: {blocks: object[]}};
   };
-  screen.properties = [
-    ...(screen.properties ?? []),
-    {name: 'current player', type: 'actor', value: ''},
-  ];
   screen.actors = screen.actors.map(actor =>
     actor.id === 'Scoreboard'
       ? {...actor, blocks: scoreboardHears(subject, body)}
       : actor,
   );
+  // The starter sets `current player` itself; this one decides.
+  const roots: object[] = [];
+  screen.blocks = {blocks: {...screen.blocks?.blocks, blocks: roots}};
   if (setsPlayer) {
-    const roots = screen.blocks?.blocks.blocks ?? [];
     roots.push({
       type: 'world_on_screen_loads',
       x: 400,
@@ -95,7 +93,6 @@ const project = (
         },
       },
     });
-    screen.blocks = {blocks: {...screen.blocks?.blocks, blocks: roots}};
   }
   return {...files, [SCREEN]: JSON.stringify(screen)};
 };

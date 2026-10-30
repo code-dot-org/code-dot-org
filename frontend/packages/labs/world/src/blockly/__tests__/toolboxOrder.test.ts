@@ -18,6 +18,8 @@
 
 import {describe, expect, it} from 'vitest';
 
+import {withPurpose} from '../../actors/actorPurpose';
+import {healthBarActor} from '../../actors/stock/healthBar';
 import {WORLD_SCENARIOS} from '../../fixtures/scenarios';
 import {SOKOBAN} from '../../fixtures/sokoban';
 import {mouseRule} from '../../rules/stock';
@@ -124,8 +126,17 @@ describe('the toolbox', () => {
   });
 });
 
+/**
+ * The starter with the stock Health Bar imported, as the Health enhancement
+ * imports it: an actor that declares `subject` and acts like a Progress Bar.
+ */
+const starterWithHealthBar = () => ({
+  ...projectFiles(WORLD_SCENARIOS.simple.source),
+  'actors/healthBar.actor': withPurpose(healthBarActor, 'interface'),
+});
+
 describe('the drawer for the file being edited', () => {
-  const files = projectFiles(WORLD_SCENARIOS.simple.source);
+  const files = starterWithHealthBar();
   const rules = projectRuleMetas(files);
   const own = projectOwnMetas(files);
 
@@ -239,9 +250,9 @@ describe('the drawer for the file being edited', () => {
 });
 
 describe('an actor’s own blocks', () => {
-  /** The starter, whose Health Bar declares `subject` and nothing else does. */
+  /** The starter and a Health Bar, which declares `subject`. */
   const starter = () => {
-    const files = projectFiles(WORLD_SCENARIOS.simple.source);
+    const files = starterWithHealthBar();
     return buildDomainPalette(projectRuleMetas(files), {
       fileKind: 'actor',
       ownProperties: projectOwnMetas(files),

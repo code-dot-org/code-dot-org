@@ -1,6 +1,6 @@
 # Plan: an actor property as an event's subject
 
-STATUS: BUILDING, October 2026. Steps 1 to 4 are done.
+STATUS: BUILDING, October 2026. Steps 1 to 5 are done.
 
 A hat can be about `this actor` or `any ⟨kind⟩`. This plan adds a third
 subject: an actor-typed property in scope. `when ⟨current player⟩ is hurt`
@@ -195,14 +195,29 @@ screen loads` for the first: `set current player to ⟨any Player⟩`.
 - **Renaming a property rewrites the hats about it**: `rewriteWorkspace`
   maps a `SUBJECT` holding a getter's block type as it maps the getter.
 
+- **Step 5 took `player arrived`.** The Main Screen declares `current
+player` and the event, and its `when this screen loads` sets the one and
+  raises the other. The HUD's bar is a plain Progress Bar whose placement
+  code hears `when ⟨current player⟩ is damaged` and `player arrived`, and
+  sets its own fraction from each; nothing runs every frame. The starter no
+  longer holds `healthBar.actor`.
+- **The builder raises a world event** (`WorldBuilder.emitToWorld`), since
+  the Main Screen's `when this screen loads` runs while `world` is still the
+  builder. Outside a frame it is deferred, and the World made from the
+  description dispatches it on its first tick, after every handler is hung.
+- **The stock Health Bar keeps its step.** The Health enhancement gives
+  each actor a bar of its own and sets the bar's `subject`; for that bar to
+  be event-driven, a hat in an actor file would have to be about the
+  actor's own property, held once per instance. No scope compiles that
+  yet: an own property is read only from a placement's code.
+
 ## Open
 
-- **Telling a display the subject has arrived or changed.** A handler on
-  `is hurt` does not run when the player first arrives or a new level gives
-  a new one, so a health bar starts wrong. The recommendation is that the
-  game raises its own event after it sets the property, `player arrived`,
-  and the display hears it; it is explicit and needs nothing new. The other
-  shape is a `when ⟨current player⟩ changes` hat. To decide by step 5.
+- **Healing raises nothing.** `heal` changes health and says so to nobody,
+  so a bar filled by events misses it. The starter heals nobody. The likely
+  answer is an `is healed` event on Health beside `is damaged`.
+- **An actor file's hat about its own property**, as above, which is what
+  would retire the Health Bar's step.
 
 ## Not in this plan
 

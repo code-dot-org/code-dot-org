@@ -11,8 +11,6 @@ import {describe, expect, it} from 'vitest';
 
 import {getNextFileId, getNextFolderId} from '@code-dot-org/codebridge';
 
-import {withPurpose} from '../actors/actorPurpose';
-import {healthBarActor} from '../actors/stock/healthBar';
 import {DEFAULT_PROJECT, starterFile} from '../constants';
 import {dockedIds} from '../engine/core/layout';
 
@@ -115,44 +113,48 @@ describe('the starter project', () => {
     );
   });
 
-  it('ships the stock health bar, on the Main Screen, pointed at the Player', () => {
-    // The bar used to be one the starter kept for itself, asking the world for
-    // the first actor with health — which works for exactly one game: the one
-    // with a single hurtable thing in it. This is the file a learner gets by
-    // importing, so the starter is a worked example of the shelf rather than a
-    // thing beside it.
-    // …for an interface, since it is drawn; placed in a level from that
-    // tab as on a screen (`actorPurpose`).
-    expect(starterFile('healthBar').contents).toBe(
-      withPurpose(healthBarActor, 'interface'),
-    );
-
-    // It is on the Main Screen, docked in the HUD bar over the Viewport
-    // (specs/DOCKING_PLAN.md, step 6) …
+  it('fills its health bar from `current player`, by events', () => {
+    // A plain Progress Bar: no per-frame step, and no file of its own
+    // (specs/PROPERTY_SUBJECTS_PLAN.md, step 5).
+    expect(() => starterFile('healthBar')).toThrow();
     const screen = JSON.parse(starterFile('main').contents) as {
       layout: unknown;
+      properties: Array<{name: string; type: string}>;
+      events: Array<{name: string}>;
+      blocks: {blocks: {blocks: Array<{type: string}>}};
       actors: Array<{
         id?: string;
-        properties?: Record<string, Record<string, unknown>>;
+        type?: string;
+        blocks?: {blocks: {blocks: Array<{type: string; fields?: object}>}};
       }>;
     };
     const bar = screen.actors.find(actor => actor.id === 'HealthBar');
+    expect(bar?.type).toBe('actors/progressBar');
+    // Docked in the HUD bar over the Viewport (specs/DOCKING_PLAN.md, step 6).
     expect(dockedIds(screen.layout as never)).toEqual([
       'Scoreboard',
       'HealthBar',
       'Game',
     ]);
-    // …and the Player it watches is in the level the Viewport shows, a map
-    // it cannot name a placement in: it names the kind, and the world points
-    // it at the first Player there is.
-    expect(bar?.properties?.Health_Bar?.subject).toBe('actors/player');
-    const level = JSON.parse(starterFile('level').contents) as {
-      actors: Array<{id?: string; type?: string}>;
-    };
-    expect(level.actors.some(actor => actor.type === 'actors/player')).toBe(
-      true,
+
+    // The game names the Player and says it has arrived…
+    expect(screen.properties).toContainEqual({
+      name: 'current player',
+      type: 'actor',
+      value: '',
+    });
+    expect(screen.events).toContainEqual({name: 'player arrived'});
+    expect(JSON.stringify(screen.blocks)).toContain(
+      'world_emit_ScreensMain_PlayerArrivedEvent',
     );
-    expect(level.actors.some(actor => actor.id === 'HealthBar')).toBe(false);
+    // …and the bar hears both.
+    expect(bar?.blocks?.blocks.blocks.map(hat => hat.type)).toEqual([
+      'world_on_Health_IsDamagedEvent',
+      'world_on_ScreensMain_PlayerArrivedEvent',
+    ]);
+    expect(bar?.blocks?.blocks.blocks[0].fields).toEqual({
+      SUBJECT: 'world_get_ScreensMain_CurrentPlayerProperty',
+    });
   });
 
   it('gives the player a jump, in one block instead of four', () => {

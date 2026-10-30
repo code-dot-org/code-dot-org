@@ -61,9 +61,16 @@ describe('a Main Screen', () => {
   });
 
   it('declares and starts the game-wide values its data holds', async () => {
+    // Beside the starter's own: its HUD hears `player arrived`.
+    const starter = JSON.parse(
+      projectFiles(WORLD_SCENARIOS.simple.source)['screens/main.screen'],
+    ) as {properties: object[]; events: object[]};
     const files = simpleOnAScreen({
-      properties: [{name: 'score', type: 'number', value: '3'}],
-      events: [{name: 'quit'}],
+      properties: [
+        ...starter.properties,
+        {name: 'score', type: 'number', value: '3'},
+      ],
+      events: [...starter.events, {name: 'quit'}],
     });
     const {world, modules} = await compileProject(files);
 
@@ -74,8 +81,14 @@ describe('a Main Screen', () => {
     const own = projectOwnMetas(files).find(
       meta => meta.modulePath === 'screens/main',
     );
-    expect(own?.properties.map(property => property.name)).toEqual(['score']);
-    expect(own?.events.map(event => event.name)).toEqual(['quit']);
+    expect(own?.properties.map(property => property.name)).toEqual([
+      'current player',
+      'score',
+    ]);
+    expect(own?.events.map(event => event.name)).toEqual([
+      'player arrived',
+      'quit',
+    ]);
   });
 
   it('gives a rule the setting its data holds', async () => {

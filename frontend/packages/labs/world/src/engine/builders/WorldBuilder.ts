@@ -291,6 +291,20 @@ export class WorldBuilder {
   }
 
   /**
+   * Raise a world event. See {@link World.emitToWorld}.
+   *
+   * Logged only outside a frame, as `act` is: `emit ⟨player arrived⟩` under
+   * the Main Screen's `when this screen loads` is part of how the game starts.
+   */
+  emitToWorld(event: GameEvent, ...values: readonly unknown[]): this {
+    if (this.built?.ticking) {
+      this.built.emitToWorld(event, ...values);
+      return this;
+    }
+    return this.defer('emitToWorld', event, ...values);
+  }
+
+  /**
    * Set a world-scoped property. See {@link World.set}.
    *
    * COLLAPSED IN THE LOG rather than appended to it, alone among the deferred
