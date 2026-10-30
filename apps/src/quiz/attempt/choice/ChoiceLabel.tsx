@@ -1,7 +1,7 @@
 import {Typography} from '@mui/material';
 import React from 'react';
 
-import {formatChoiceLetter} from '../utils';
+import {formatChoiceLetter} from '../../utils';
 
 import styles from './choice-label.module.scss';
 

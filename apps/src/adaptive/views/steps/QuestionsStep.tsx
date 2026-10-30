@@ -8,7 +8,7 @@ import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import React, {useEffect, useRef, useState} from 'react';
 
 import AttemptCard from '@cdo/apps/quiz/attempt/AttemptCard';
-import MultiChoiceQuestionContainer from '@cdo/apps/quiz/attempt/MultiChoiceQuestionContainer';
+import MultiChoiceQuestionContainer from '@cdo/apps/quiz/attempt/choice/MultiChoiceQuestionContainer';
 
 import {Answer, StepAnswers} from '../../progress';
 import {

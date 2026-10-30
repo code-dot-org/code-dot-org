@@ -15,16 +15,16 @@ import {QuizQuestionSummary} from '../types';
 import {groupByPage, toBool} from '../utils';
 
 import AttemptCard from './AttemptCard';
-import FreeResponseQuestionContainer from './FreeResponseQuestionContainer';
+import MultiChoiceQuestionContainer from './choice/MultiChoiceQuestionContainer';
+import MultipleSelectQuestionContainer from './choice/MultipleSelectQuestionContainer';
+import FreeResponseQuestionContainer from './freeResponse/FreeResponseQuestionContainer';
 import IntroCard from './IntroCard';
 import MatchQuestionContainer from './match/MatchQuestionContainer';
 import {MatchPairs} from './match/types';
-import MultiChoiceQuestionContainer from './MultiChoiceQuestionContainer';
-import MultipleSelectQuestionContainer from './MultipleSelectQuestionContainer';
 import PageDivider from './PageDivider';
-import QuestionResultCard from './QuestionResultCard';
 import QuizFooter from './QuizFooter';
-import ResultsCard from './ResultsCard';
+import QuestionResultCard from './results/QuestionResultCard';
+import ResultsCard from './results/ResultsCard';
 import {
   isFreeResponseResponse,
   isMatchResponse,

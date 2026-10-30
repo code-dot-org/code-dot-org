@@ -1,14 +1,14 @@
 import React from 'react';
 
-import {QuizQuestionSummary} from '../types';
-import {selectedAnswerLabel} from '../utils';
-
-import ChoiceAnswer from './ChoiceAnswer';
+import {QuizQuestionSummary} from '../../types';
+import {selectedAnswerLabel} from '../../utils';
 import {
   ChoiceResultStatus,
   MultipleChoiceQuestionResponse,
   QuizQuestionResult,
-} from './types';
+} from '../types';
+
+import ChoiceAnswer from './ChoiceAnswer';
 
 type MultipleChoiceResult = QuizQuestionResult & MultipleChoiceQuestionResponse;
 

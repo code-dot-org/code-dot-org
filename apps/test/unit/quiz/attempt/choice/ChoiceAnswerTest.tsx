@@ -4,7 +4,7 @@ import React from 'react';
 
 import ChoiceAnswer, {
   ChoiceAnswerOption,
-} from '@cdo/apps/quiz/attempt/ChoiceAnswer';
+} from '@cdo/apps/quiz/attempt/choice/ChoiceAnswer';
 
 const CHOICES: ChoiceAnswerOption[] = [
   {id: '0', text: 'Three', status: 'neutral', isSelected: false},
