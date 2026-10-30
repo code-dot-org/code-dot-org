@@ -43,6 +43,10 @@ describe('downscaleImagesForExport', () => {
     document.body.innerHTML = '';
   });
 
+  afterEach(() => {
+    jest.restoreAllMocks();
+  });
+
   it('replaces an image larger than the export will show', () => {
     const image = addImage('/v3/assets/channel/photo.png', PHOTO);
 
@@ -160,5 +164,36 @@ describe('downscaleImagesForExport', () => {
 
     expect(image.src).toBe(source);
     expect(() => restore()).not.toThrow();
+  });
+
+  it('keeps the original source when the canvas encodes to nothing', () => {
+    const source = 'http://localhost-studio.code.org/v3/assets/channel/big.png';
+    const image = addImage(source, PHOTO);
+    jest
+      .spyOn(HTMLCanvasElement.prototype, 'toDataURL')
+      .mockReturnValue('data:,');
+
+    downscaleImagesForExport(document.body, 1);
+
+    expect(image.src).toBe(source);
+  });
+
+  it('empties the downscale canvas after encoding', () => {
+    addImage('/v3/assets/channel/photo.png', PHOTO);
+    const canvases: HTMLCanvasElement[] = [];
+    const createElement = document.createElement.bind(document);
+    jest.spyOn(document, 'createElement').mockImplementation(tagName => {
+      const element = createElement(tagName);
+      if (tagName === 'canvas') {
+        canvases.push(element as HTMLCanvasElement);
+      }
+      return element;
+    });
+
+    downscaleImagesForExport(document.body, 1);
+
+    expect(canvases).toHaveLength(1);
+    expect(canvases[0].width).toBe(0);
+    expect(canvases[0].height).toBe(0);
   });
 });

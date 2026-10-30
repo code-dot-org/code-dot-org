@@ -34,15 +34,23 @@ const downscaledDataUrl = (
   const canvas = document.createElement('canvas');
   canvas.width = targetWidth;
   canvas.height = targetHeight;
-  const context = canvas.getContext('2d');
-  if (!context) {
-    return undefined;
+  try {
+    const context = canvas.getContext('2d');
+    if (!context) {
+      return undefined;
+    }
+    context.imageSmoothingQuality = 'high';
+    context.drawImage(image, 0, 0, targetWidth, targetHeight);
+    const dataUrl = JPEG_SOURCE_PATTERN.test(image.src)
+      ? canvas.toDataURL('image/jpeg', JPEG_QUALITY)
+      : canvas.toDataURL('image/png');
+    // Safari returns "data:," instead of throwing when it cannot encode the canvas.
+    return dataUrl.startsWith('data:image/') ? dataUrl : undefined;
+  } finally {
+    // Safari holds canvas memory until garbage collection unless the canvas is emptied.
+    canvas.width = 0;
+    canvas.height = 0;
   }
-  context.imageSmoothingQuality = 'high';
-  context.drawImage(image, 0, 0, targetWidth, targetHeight);
-  return JPEG_SOURCE_PATTERN.test(image.src)
-    ? canvas.toDataURL('image/jpeg', JPEG_QUALITY)
-    : canvas.toDataURL('image/png');
 };
 
 // Returns a function restoring the sources this replaced.
