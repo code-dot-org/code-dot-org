@@ -216,8 +216,16 @@ function transformer(file: FileInfo, api: API) {
           const returns = factory.body.body.filter(
             statement => statement.type === 'ReturnStatement',
           );
-          // A return inside a branch would go unpatched.
-          const allReturns = j(factory.body).find(j.ReturnStatement).size();
+          // A return inside a branch would go unpatched; a nested function's returns are its own.
+          const allReturns = j(factory.body)
+            .find(j.ReturnStatement)
+            .filter(path => {
+              for (let up = path.parent; up; up = up.parent) {
+                if (j.Function.check(up.value)) return false;
+              }
+              return true;
+            })
+            .size();
           returned =
             returns.length === 1 &&
             allReturns === 1 &&
