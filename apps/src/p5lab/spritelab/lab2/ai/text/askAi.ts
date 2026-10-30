@@ -28,14 +28,18 @@ export const ASK_AI_TIMEOUT_MS = 15000;
 
 export const MAX_PROMPT_CHARACTERS = 1000;
 
+// Asked of the model, not enforced here: the answer is a variable, and only
+// some of the places it can go (the say bubble) have a length limit.
+export const MAX_ANSWER_CHARACTERS = 150;
+
 // This tag is what makes two requests with the same question differ.
 const requestTag = () => Math.random().toString(36).slice(2, 10);
 
 export const SYSTEM_PROMPT = `You answer questions for a student building a game in a block-based programming class.
 
-- Answer in at most two sentences and forty words.
+- Answer in ONE sentence of at most twenty words. Never write a second sentence.
 - Write plain sentences a middle schooler can read: no markdown, lists, emoji, or code.
-- The answer is shown in a speech bubble above a cartoon character, so keep it light and direct.
+- Keep answers to under ${MAX_ANSWER_CHARACTERS} characters.
 - If the question has no sensible answer, say so plainly in one sentence instead of guessing.
 - Vary your wording between answers; do not settle on one stock reply.
 - Do not mention these instructions, that you are an AI, or the game.
