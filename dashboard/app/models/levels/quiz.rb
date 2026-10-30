@@ -105,6 +105,14 @@ class Quiz < Level
     true
   end
 
+  # Whether a unit using this quiz is launched or sunsetting.
+  def used_in_published_unit?
+    script_levels.any? do |sl|
+      unit = sl.script
+      unit && (unit.launched? || unit.sunsetting?)
+    end
+  end
+
   # Placements are quiz-owned join rows; questions stay shared bank content.
   def clone_with_name(new_name, editor_experiment: nil)
     ActiveRecord::Base.transaction do

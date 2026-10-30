@@ -120,12 +120,7 @@ class QuizQuestion < ApplicationRecord
     # includes above), so per-placement would repeat it once per placement
     # on a shared level instead of once per unique level.
     question_ids_by_level = placements.group_by(&:level).transform_values {|ps| ps.map(&:quiz_question_id)}
-    published_level_ids = question_ids_by_level.each_key.select do |level|
-      level.script_levels.any? do |sl|
-        unit = sl.script
-        unit && (unit.launched? || unit.get_published_state == Curriculum::SharedCourseConstants::PUBLISHED_STATE.sunsetting)
-      end
-    end.to_set(&:id)
+    published_level_ids = question_ids_by_level.each_key.select(&:used_in_published_unit?).to_set(&:id)
 
     usage = question_ids.index_with {false}
     question_ids_by_level.each do |level, ids|

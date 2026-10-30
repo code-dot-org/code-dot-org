@@ -83,6 +83,15 @@ class QuizzesControllerTest < ActionController::TestCase
     assert_equal 2, questions.last['page']
   end
 
+  test "show flags a quiz used in a published unit" do
+    Quiz.any_instance.stubs(:used_in_published_unit?).returns(true)
+
+    get :show, params: {level_id: @quiz.id}
+
+    assert_response :success
+    assert_equal true, JSON.parse(response.body)['usedInPublishedUnit']
+  end
+
   test "show flags a question used in a published unit" do
     question = create(:multiple_choice_question)
     create(:quiz_question_placement, level: @quiz, quiz_question: question, page: 1, position: 1)
