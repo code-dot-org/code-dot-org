@@ -8,11 +8,11 @@ import styles from './match-question-container.module.scss';
 export interface MatchBoardProps {
   matchSets: MatchSets;
   pairs: MatchPairs;
+  label: string;
   // Omit for a read-only board, as in results.
   onClickItem?: (side: MatchSide, id: string) => void;
   selection?: MatchSelection;
   disabled?: boolean;
-  label: string;
   describedBy?: string;
 }
 

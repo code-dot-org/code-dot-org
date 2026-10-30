@@ -36,6 +36,10 @@
 // Extra padding on the dot's side keeps text clear of it.
 .card {
   position: relative;
+  // A button centers its content, but a read-only list item doesn't.
+  display: flex;
+  align-items: center;
+  justify-content: center;
   // Grow to fill a taller column, but never shrink below the text.
   flex: 1 0 auto;
   min-height: 46px;
