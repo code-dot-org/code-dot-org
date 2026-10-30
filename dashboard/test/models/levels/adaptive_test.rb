@@ -141,6 +141,46 @@ class AdaptiveTest < ActiveSupport::TestCase
     assert_empty level.step_levels
   end
 
+  test "progress_json is empty for a user with no progress, and creates nothing" do
+    write_levels_pathway
+    level = create(:adaptive, adaptive_id: 'levels')
+    unit = create(:script_level, levels: [level]).script
+
+    assert_no_difference ['UserLevel.count', 'UserAdaptiveStep.count'] do
+      assert_equal({'steps' => {}}, level.progress_json(user_id: create(:student).id, script_id: unit.id))
+    end
+  end
+
+  test "progress_json merges a level step's UserLevel over its step row" do
+    sandbox = create(:weblab2, name: 'adaptive-test-sandbox')
+    write_levels_pathway
+    level = create(:adaptive, adaptive_id: 'levels')
+    unit = create(:script_level, levels: [level]).script
+    student = create(:student)
+    adaptive_user_level = create(:user_level, user: student, level: level, script: unit)
+    UserAdaptiveStep.create!(user_level: adaptive_user_level, step_id: 'try', generated_instructions: {'instructions' => 'Go.'})
+    UserAdaptiveStep.create!(user_level: adaptive_user_level, step_id: 'read', progress: {'startedAt' => '2026-10-01T00:00:00Z', 'timeSpent' => 4})
+    create(:user_level, user: student, level: sandbox, script: unit, best_result: ActivityConstants::FREE_PLAY_RESULT, time_spent: 9)
+
+    steps = level.progress_json(user_id: student.id, script_id: unit.id)['steps']
+
+    assert_equal({'status' => 'complete', 'timeSpent' => 9, 'generatedInstructions' => {'instructions' => 'Go.'}}, steps['try'])
+    assert_equal 'started', steps['read']['status']
+    assert_equal 4, steps['read']['timeSpent']
+  end
+
+  test "progress_json reads only the given user's and unit's progress" do
+    sandbox = create(:weblab2, name: 'adaptive-test-sandbox')
+    write_levels_pathway
+    level = create(:adaptive, adaptive_id: 'levels')
+    unit = create(:script_level, levels: [level]).script
+    other_student = create(:student)
+    create(:user_level, user: other_student, level: sandbox, script: unit, best_result: ActivityConstants::FREE_PLAY_RESULT)
+    create(:user_level, user: other_student, level: sandbox, script: create(:unit), best_result: ActivityConstants::FREE_PLAY_RESULT)
+
+    assert_empty level.progress_json(user_id: create(:student).id, script_id: unit.id)['steps']
+  end
+
   test "sharing_levels lists every level with the same content id, by name" do
     second = create(:adaptive, name: 'Adaptive B', adaptive_id: 'sample')
     first = create(:adaptive, name: 'Adaptive A', adaptive_id: 'sample')

@@ -76,6 +76,16 @@ class Adaptive < Level
     names.filter_map {|step_id, name| [step_id, levels[name]] if levels[name]}.to_h
   end
 
+  # A student's progress on this pathway in one unit: each step's row, with
+  # each level step's UserLevel merged on top. Reads only.
+  def progress_json(user_id:, script_id:)
+    user_level = UserLevel.find_by(user_id: user_id, level_id: id, script_id: script_id)
+    rows = user_level&.user_adaptive_steps || []
+    steps = rows.filter_map {|row| (entry = row.step_json) && [row.step_id, entry]}.to_h
+    steps.merge!(level_step_progress(user_id, script_id)) {|_step_id, entry, progress| entry.merge(progress)}
+    {'steps' => steps}
+  end
+
   def sharing_levels
     Adaptive.order(:name).select {|level| level.adaptive_id == adaptive_id}
   end
@@ -146,6 +156,17 @@ class Adaptive < Level
       steps = checkpoint.is_a?(Hash) ? checkpoint['steps'] : nil
       steps.is_a?(Array) ? steps.select {|step| step.is_a?(Hash)} : []
     end
+  end
+
+  # Step id => progress, for each level step the user has a UserLevel on.
+  private def level_step_progress(user_id, script_id)
+    levels = step_levels
+    user_levels = UserLevel.where(user_id: user_id, script_id: script_id, level_id: levels.values.map(&:id)).index_by(&:level_id)
+    levels.filter_map do |step_id, level|
+      user_level = user_levels[level.id]
+      next unless user_level
+      [step_id, {'status' => user_level.passing? ? 'complete' : 'started', 'timeSpent' => user_level.time_spent || 0}]
+    end.to_h
   end
 
   # Level step id => level name, the project's step included as find_step sees it.

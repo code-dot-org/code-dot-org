@@ -20,7 +20,8 @@ class StudentSnapshotsController < ApplicationController
         hasLessonPlan: lesson.has_lesson_plan,
         isLockable: lesson.lockable,
         position: lesson.relative_position,
-        hasCodeLevel: Queries::Lessons.get_assessment_level_for_lesson(lesson).present?
+        hasCodeLevel: Queries::Lessons.get_assessment_level_for_lesson(lesson).present?,
+        hasAdaptiveLevel: Queries::Lessons.get_adaptive_level_for_lesson(lesson).present?
       }
     end
 
@@ -236,6 +237,27 @@ class StudentSnapshotsController < ApplicationController
     else
       render json: {studentCode: nil}
     end
+  end
+
+  # GET /student_snapshots/units/:unit_id/lessons/:lesson_id/students/:student_id/adaptive
+  def adaptive
+    lesson = Lesson.find_by(id: params[:lesson_id])
+    return render json: {error: "Can't find Lesson id=#{params[:lesson_id]}"}, status: :bad_request unless lesson
+
+    student = User.find_by(id: params[:student_id])
+    return render json: {error: "Can't find Student id=#{params[:student_id]}"}, status: :bad_request unless student
+
+    unless student.student_of?(current_user)
+      return render json: {error: "Unauthorized access to student data"}, status: :forbidden
+    end
+
+    level = Queries::Lessons.get_adaptive_level_for_lesson(lesson)
+    return render json: {pathway: nil, progress: nil} unless level
+
+    render json: {
+      pathway: level.content,
+      progress: level.progress_json(user_id: student.id, script_id: params[:unit_id]),
+    }
   end
 
   # GET /student_snapshots/exemplar_code/{lesson_id}

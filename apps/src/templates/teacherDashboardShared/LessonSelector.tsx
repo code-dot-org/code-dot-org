@@ -48,6 +48,7 @@ export interface LessonOption {
   isLockable: boolean;
   position: number;
   hasCodeLevel?: boolean;
+  hasAdaptiveLevel?: boolean;
 }
 
 interface LessonSelectorProps {

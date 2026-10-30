@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {CheckpointStatusMap} from '../../progress';
+import {CheckpointStatusMap} from '../../progress/model';
 import {Pathway} from '../../types';
 
 import DestinationsMap from './DestinationsMap';

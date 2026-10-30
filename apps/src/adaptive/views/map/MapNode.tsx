@@ -2,7 +2,7 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import classNames from 'classnames';
 import React from 'react';
 
-import {CheckpointStatus, STATUS_LABELS} from '../../progress';
+import {CheckpointStatus, STATUS_LABELS} from '../../progress/model';
 import {Checkpoint} from '../../types';
 
 import {NodePosition} from './layout/types';

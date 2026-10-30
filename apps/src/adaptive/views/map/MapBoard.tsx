@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React, {useContext} from 'react';
 
-import {CheckpointStatusMap} from '../../progress';
+import {CheckpointStatusMap} from '../../progress/model';
 
 import {DrawnEdge} from './layout/busRoutes';
 import {MapLayout, NodePosition} from './layout/types';
