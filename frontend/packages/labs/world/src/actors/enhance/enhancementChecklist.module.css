@@ -6,12 +6,17 @@
 /* The full width of the step, which is the full width of the dialog: the
    wizard settles that once for all three (`create/actorCreator.module.css`),
    so a row opening wraps its sentence inside a width that is already decided
-   rather than asking for a wider dialog. */
+   rather than asking for a wider dialog. It scrolls itself because the
+   design system's dialog panel has no height limit. */
 .groups {
   display: flex;
   width: 100%;
+  max-height: 46vh;
   flex-direction: column;
   gap: 10px;
+  box-sizing: border-box;
+  padding: 2px;
+  overflow-y: auto;
 }
 
 .heading {
