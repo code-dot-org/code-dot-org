@@ -660,12 +660,37 @@ export default class SpriteLab2Engine extends SpriteLab {
       this.triggerSceneJump_(this.onGoToExternalScene, String(sceneKey));
     };
     getStore().dispatch(clearPrompt());
-    library.commands.setPrompt = (promptText, variableName, setterCallback) => {
+    const promptUser = (promptText, variableName, setterCallback, choices) => {
       library.registerPrompt(promptText, variableName, setterCallback);
       // Last prompt always wins, so we only ever have 1 active prompt unlike legacy.
       library.numActivePrompts = 1;
       getStore().dispatch(
-        showPrompt({promptText: String(promptText ?? ''), variableName})
+        showPrompt({
+          promptText: String(promptText ?? ''),
+          variableName,
+          choices,
+        })
+      );
+    };
+    library.commands.setPrompt = (promptText, variableName, setterCallback) =>
+      promptUser(promptText, variableName, setterCallback);
+    library.commands.setPromptWithChoices = (
+      promptText,
+      variableName,
+      choice1,
+      choice2,
+      choice3,
+      setterCallback
+    ) => {
+      const choices = [choice1, choice2, choice3]
+        .filter(choice => choice !== undefined && choice !== null)
+        .map(String)
+        .filter(choice => choice !== '');
+      promptUser(
+        promptText,
+        variableName,
+        setterCallback,
+        choices.length ? choices : undefined
       );
     };
     return library;

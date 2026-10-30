@@ -38,6 +38,7 @@ export interface MusicProjectOption {
 export interface ActivePrompt {
   promptText: string;
   variableName: string;
+  choices?: string[];
 }
 
 export interface SpriteLab2State {
