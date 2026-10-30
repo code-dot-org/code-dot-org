@@ -4,18 +4,13 @@
 import {Button as MuiButton} from '@mui/material';
 import React, {useEffect, useMemo, useRef} from 'react';
 
+import {PANEL_CONTROLS_HEIGHT, fitPanel} from '@cdo/apps/panels/geometry';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import useElementSize from '@cdo/apps/util/hooks/useElementSize';
 
 import {MarkdownStep as MarkdownStepContent} from '../../types';
 
 import styles from './stepPlayer.module.scss';
-
-// The panels view's geometry, so a markdown card sits where a panel would.
-const HORIZONTAL_MARGIN = 40;
-const VERTICAL_MARGIN = 50;
-const ACTIONS_HEIGHT = 70;
-const ASPECT_RATIO = 16 / 9;
 
 interface MarkdownStepProps {
   step: MarkdownStepContent;
@@ -27,16 +22,6 @@ interface MarkdownStepProps {
 const withLineBreaks = (markdown: string) =>
   markdown.replace(/(?<!\n)\n(?!\n)/g, '  \n');
 
-/** The largest 16:9 box that fits the host beside its margins and the button row. */
-function canvasSize(hostWidth: number, hostHeight: number) {
-  const maxWidth = hostWidth - HORIZONTAL_MARGIN * 2;
-  const maxHeight = hostHeight - VERTICAL_MARGIN * 2 - ACTIONS_HEIGHT;
-  if (maxWidth / maxHeight > ASPECT_RATIO) {
-    return {width: maxHeight * ASPECT_RATIO, height: maxHeight};
-  }
-  return {width: maxWidth, height: maxWidth / ASPECT_RATIO};
-}
-
 const MarkdownStep: React.FunctionComponent<MarkdownStepProps> = ({
   step,
   continueLabel,
@@ -45,7 +30,7 @@ const MarkdownStep: React.FunctionComponent<MarkdownStepProps> = ({
   const host = useRef<HTMLDivElement>(null);
   const [hostWidth, hostHeight] = useElementSize(host);
   const size = useMemo(
-    () => canvasSize(hostWidth, hostHeight),
+    () => fitPanel(hostWidth, hostHeight),
     [hostWidth, hostHeight]
   );
 
@@ -70,7 +55,7 @@ const MarkdownStep: React.FunctionComponent<MarkdownStepProps> = ({
           </div>
           <div
             className={styles.markdownActions}
-            style={{width: size.width, height: ACTIONS_HEIGHT}}
+            style={{width: size.width, height: PANEL_CONTROLS_HEIGHT}}
           >
             <MuiButton
               variant="contained"
