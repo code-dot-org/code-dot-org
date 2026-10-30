@@ -59,6 +59,13 @@ export default project => {
     });
   }
 
+  if (project.getCurrentId()) {
+    $('.admin-abuse-score').text(project.getAbuseScore());
+    $('#admin-abuse-reset').click(function () {
+      project.adminResetAbuseScore(0);
+    });
+  }
+
   if (
     $('.admin-project-sharing').length &&
     (project.isProjectLevel() || !project.shouldHideShareAndRemix())
@@ -66,10 +73,6 @@ export default project => {
     var sharingDisabled = project.getSharingDisabled();
     var privateOrProfane = project.hasPrivacyProfanityViolation();
     var abuseScore = project.getAbuseScore();
-    $('.admin-abuse-score').text(abuseScore);
-    $('#admin-abuse-reset').click(function () {
-      project.adminResetAbuseScore(0);
-    });
     var abusive = project.exceedsAbuseThreshold();
     if (sharingDisabled || privateOrProfane || abusive) {
       $('.blocked').show();

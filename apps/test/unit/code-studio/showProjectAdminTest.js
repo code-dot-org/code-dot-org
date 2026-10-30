@@ -9,6 +9,8 @@ describe('showProjectAdmin', () => {
 
     beforeEach(() => {
       project = {
+        getCurrentId: jest.fn().mockReturnValue('channel-id'),
+        adminResetAbuseScore: jest.fn(),
         isPublished: jest.fn(),
         isProjectLevel: jest.fn(),
         shouldHideShareAndRemix: jest.fn(),
@@ -105,6 +107,31 @@ describe('showProjectAdmin', () => {
           assertHidden('.privacy-profanity');
           assertHidden('.abusive-image');
           assertHidden('.reported-abuse');
+        });
+
+        it('shows the abuse score and resets it', () => {
+          project.getAbuseScore.mockReturnValue(15);
+          showProjectAdmin(project);
+          expect(document.querySelector('.admin-abuse-score').textContent).toBe(
+            '15'
+          );
+          document.querySelector('#admin-abuse-reset').click();
+          expect(project.adminResetAbuseScore).toHaveBeenCalledWith(0);
+        });
+      });
+
+      describe('on a level without a project', () => {
+        beforeEach(() => {
+          project.getCurrentId.mockReturnValue(undefined);
+          project.isProjectLevel.mockReturnValue(false);
+          project.shouldHideShareAndRemix.mockReturnValue(true);
+        });
+
+        it('does not show an abuse score', () => {
+          showProjectAdmin(project);
+          expect(document.querySelector('.admin-abuse-score').textContent).toBe(
+            ''
+          );
         });
       });
 
