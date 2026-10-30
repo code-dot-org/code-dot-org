@@ -1,33 +1,22 @@
 class UserPreferencesController < ApplicationController
   before_action :authenticate_user!
 
+  # MySQL error for a FOR UPDATE NOWAIT that finds the row already locked.
+  ER_LOCK_NOWAIT = 3572
+
   def update
     preference = UserPreference.find_or_initialize_by(user_id: current_user.id)
-    # Merge existing editor/console font size JSON with new values if param is present.
-    # to_h handles if current editor/console font size is nil.
-    merged_editor_font_size = update_params[:editor_font_size] ?
-      preference.editor_font_size.to_h.merge(update_params[:editor_font_size]) :
-      preference.editor_font_size
+    section_order = update_params[:section_order]
 
-    merged_console_font_size = update_params[:console_font_size] ?
-      preference.console_font_size.to_h.merge(update_params[:console_font_size]) :
-      preference.console_font_size
-
-    merged_theme = update_params[:theme] ?
-      preference.theme.to_h.merge(update_params[:theme]) :
-      preference.theme
-
-    merged_editor_settings = update_params[:editor_settings] ?
-      preference.editor_settings.to_h.merge(update_params[:editor_settings]) :
-      preference.editor_settings
-
-    preference.update!(
-      section_order: update_params[:section_order] || preference.section_order,
-      editor_font_size: merged_editor_font_size,
-      console_font_size: merged_console_font_size,
-      theme: merged_theme,
-      editor_settings: merged_editor_settings,
-    )
+    # Section order saves for one user arrive in concurrent bursts; refuse one rather than queue on the row lock.
+    if preference.persisted? && section_order && section_order != preference.section_order
+      preference.with_lock('FOR UPDATE NOWAIT') {apply_update(preference)}
+    else
+      apply_update(preference)
+    end
+  rescue ActiveRecord::StatementInvalid => exception
+    raise unless exception.cause.is_a?(Mysql2::Error) && exception.cause.error_number == ER_LOCK_NOWAIT
+    head :conflict
   end
 
   def console_font_size
@@ -69,6 +58,34 @@ class UserPreferencesController < ApplicationController
     else
       render json: {}, status: :not_found
     end
+  end
+
+  private def apply_update(preference)
+    # Merge existing editor/console font size JSON with new values if param is present.
+    # to_h handles if current editor/console font size is nil.
+    merged_editor_font_size = update_params[:editor_font_size] ?
+      preference.editor_font_size.to_h.merge(update_params[:editor_font_size]) :
+      preference.editor_font_size
+
+    merged_console_font_size = update_params[:console_font_size] ?
+      preference.console_font_size.to_h.merge(update_params[:console_font_size]) :
+      preference.console_font_size
+
+    merged_theme = update_params[:theme] ?
+      preference.theme.to_h.merge(update_params[:theme]) :
+      preference.theme
+
+    merged_editor_settings = update_params[:editor_settings] ?
+      preference.editor_settings.to_h.merge(update_params[:editor_settings]) :
+      preference.editor_settings
+
+    preference.update!(
+      section_order: update_params[:section_order] || preference.section_order,
+      editor_font_size: merged_editor_font_size,
+      console_font_size: merged_console_font_size,
+      theme: merged_theme,
+      editor_settings: merged_editor_settings,
+    )
   end
 
   private def update_params
