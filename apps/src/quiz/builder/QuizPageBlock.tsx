@@ -33,7 +33,7 @@ export function questionCountLabel(count: number): string {
 interface QuizPageBlockProps {
   page: number;
   questions: QuizBuilderQuestion[];
-  chrome: boolean;
+  showPageChrome: boolean;
   expandedId: number | null;
   onExpandedChange: (questionId: number, expanded: boolean) => void;
   error: string | null;
@@ -43,13 +43,13 @@ interface QuizPageBlockProps {
   onCreate: (type: QuizQuestionType) => void;
   createDisabledReason?: string;
   // Set only for the unsaved empty page. A page that has questions stays.
-  onDismiss?: () => void;
+  onDelete?: () => void;
 }
 
 const QuizPageBlock: React.FunctionComponent<QuizPageBlockProps> = ({
   page,
   questions,
-  chrome,
+  showPageChrome,
   expandedId,
   onExpandedChange,
   error,
@@ -58,18 +58,18 @@ const QuizPageBlock: React.FunctionComponent<QuizPageBlockProps> = ({
   onRemove,
   onCreate,
   createDisabledReason,
-  onDismiss,
+  onDelete,
 }) => {
   const [collapsed, setCollapsed] = useState(false);
   const toggleRef = useRef<HTMLButtonElement>(null);
   const bodyRef = useRef<HTMLDivElement>(null);
   const pageTitle = `Page ${page}`;
-  const nested = chrome;
 
   const toggleCollapsed = () => {
     const willCollapse = !collapsed;
     if (willCollapse) {
       const active = document.activeElement;
+      // Focus the toggle first: [hidden] drops the focused control from the tab order.
       if (active instanceof HTMLElement && bodyRef.current?.contains(active)) {
         toggleRef.current?.focus();
       }
@@ -85,7 +85,7 @@ const QuizPageBlock: React.FunctionComponent<QuizPageBlockProps> = ({
             {index > 0 && <OutlineTick size="item" />}
             <QuizQuestionCard
               question={question}
-              nested={nested}
+              nested={showPageChrome}
               isExpanded={question.id === expandedId}
               onExpandedChange={expanded =>
                 onExpandedChange(question.id, expanded)
@@ -101,7 +101,7 @@ const QuizPageBlock: React.FunctionComponent<QuizPageBlockProps> = ({
       <div
         className={classNames(
           styles.addQuestionRow,
-          nested && styles.addQuestionRowNested
+          showPageChrome && styles.addQuestionRowNested
         )}
       >
         <CreateQuestionDropdown
@@ -148,7 +148,7 @@ const QuizPageBlock: React.FunctionComponent<QuizPageBlockProps> = ({
       stack
     );
 
-  if (!chrome) {
+  if (!showPageChrome) {
     return body;
   }
 
@@ -185,7 +185,7 @@ const QuizPageBlock: React.FunctionComponent<QuizPageBlockProps> = ({
             </Typography>
           </div>
           <div className={styles.pageActions}>
-            {onDismiss && (
+            {onDelete && (
               <ActionDropdown
                 name={`page-${page}-options`}
                 labelText={`${pageTitle} options`}
@@ -203,7 +203,7 @@ const QuizPageBlock: React.FunctionComponent<QuizPageBlockProps> = ({
                     label: 'Delete page',
                     isOptionDestructive: true,
                     icon: {iconName: 'trash', iconStyle: 'solid'},
-                    onClick: onDismiss,
+                    onClick: onDelete,
                   },
                 ]}
               />

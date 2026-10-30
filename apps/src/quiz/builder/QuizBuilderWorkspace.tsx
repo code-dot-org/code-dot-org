@@ -36,8 +36,6 @@ function attemptsLabel(allowMultipleAttempts: boolean): string {
   return allowMultipleAttempts ? 'Unlimited attempts' : '1 attempt';
 }
 
-// The center column: the quiz's question outline plus a create action.
-// Each row is a QuizQuestionCard, expandable in place for editing.
 const QuizBuilderWorkspace: React.FunctionComponent<
   QuizBuilderWorkspaceProps
 > = ({
@@ -189,7 +187,7 @@ const QuizBuilderWorkspace: React.FunctionComponent<
             <QuizPageBlock
               page={page}
               questions={pageQuestions}
-              chrome={showPageChrome}
+              showPageChrome={showPageChrome}
               expandedId={expandedId}
               onExpandedChange={(questionId, expanded) =>
                 setExpandedId(expanded ? questionId : null)
@@ -200,7 +198,7 @@ const QuizBuilderWorkspace: React.FunctionComponent<
               onRemove={removeQuestion}
               onCreate={type => handleCreate(page, type)}
               createDisabledReason={createDisabledReason}
-              onDismiss={
+              onDelete={
                 page === addedEmptyPage
                   ? () => setAddedEmptyPage(null)
                   : undefined
