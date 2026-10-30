@@ -28,9 +28,17 @@ describe('PromptBar', () => {
     render(<PromptBar prompt={namePrompt} onAnswer={onAnswer} />);
     const field = screen.getByRole('textbox') as HTMLInputElement;
     fireEvent.change(field, {target: {value: 'Ada'}});
-    fireEvent.click(screen.getByRole('button', {name: 'Send'}));
-    expect(onAnswer).toHaveBeenCalledWith('name', 'Ada');
+    fireEvent.click(screen.getByRole('button', {name: 'Send'}), {detail: 1});
+    expect(onAnswer).toHaveBeenCalledWith('name', 'Ada', false);
     expect(field.value).toBe('');
+  });
+
+  it('reports a keyboard answer when Send is not clicked by a pointer', () => {
+    const onAnswer = jest.fn();
+    render(<PromptBar prompt={namePrompt} onAnswer={onAnswer} />);
+    fireEvent.change(screen.getByRole('textbox'), {target: {value: 'Ada'}});
+    fireEvent.click(screen.getByRole('button', {name: 'Send'}), {detail: 0});
+    expect(onAnswer).toHaveBeenCalledWith('name', 'Ada', true);
   });
 
   it('answers when the form is submitted from the field', () => {
@@ -39,7 +47,7 @@ describe('PromptBar', () => {
     const field = screen.getByRole('textbox');
     fireEvent.change(field, {target: {value: '7'}});
     fireEvent.submit(field);
-    expect(onAnswer).toHaveBeenCalledWith('name', '7');
+    expect(onAnswer).toHaveBeenCalledWith('name', '7', true);
   });
 
   it('shows the question but takes no answer while disabled', () => {
@@ -71,7 +79,7 @@ describe('PromptBar', () => {
     expect(field.value).toBe('');
     fireEvent.change(field, {target: {value: '9'}});
     fireEvent.submit(field);
-    expect(onAnswer).toHaveBeenCalledWith('age', '9');
+    expect(onAnswer).toHaveBeenCalledWith('age', '9', true);
   });
 
   it('keeps the half-typed answer when the same question is asked again', () => {
@@ -124,8 +132,15 @@ describe('PromptBar', () => {
     it('answers with the chosen choice', () => {
       const onAnswer = jest.fn();
       render(<PromptBar prompt={colorPrompt} onAnswer={onAnswer} />);
-      fireEvent.click(screen.getByRole('button', {name: 'blue'}));
-      expect(onAnswer).toHaveBeenCalledWith('color', 'blue');
+      fireEvent.click(screen.getByRole('button', {name: 'blue'}), {detail: 1});
+      expect(onAnswer).toHaveBeenCalledWith('color', 'blue', false);
+    });
+
+    it('reports a keyboard choice', () => {
+      const onAnswer = jest.fn();
+      render(<PromptBar prompt={colorPrompt} onAnswer={onAnswer} />);
+      fireEvent.click(screen.getByRole('button', {name: 'blue'}), {detail: 0});
+      expect(onAnswer).toHaveBeenCalledWith('color', 'blue', true);
     });
 
     it('takes no answer while disabled', () => {
