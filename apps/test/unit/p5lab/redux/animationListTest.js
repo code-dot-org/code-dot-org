@@ -335,6 +335,23 @@ describe('animationList', function () {
       ).to.equal('images (1).jpg_1_2');
     });
 
+    it('should rename a duplicate to a name no other animation has', function () {
+      let animationList = createAnimationList(5);
+      animationList.propsByKey['animation_1'].name = 'cat';
+      animationList.propsByKey['animation_2'].name = 'cat';
+      animationList.propsByKey['animation_3'].name = 'cat_1';
+      animationList.propsByKey['animation_4'].name = 'cat_1_copy_1';
+      animationList.propsByKey['animation_5'].name = 'cat_2';
+      store.dispatch(setInitialAnimationList(animationList));
+
+      expect(
+        store.getState().animationList.propsByKey['animation_2'].name
+      ).to.equal('cat_3');
+      expect(
+        store.getState().animationList.propsByKey['animation_5'].name
+      ).to.equal('cat_2');
+    });
+
     it('when animationList has migratable animations, check that animation is substituted', function () {
       let animationList = createAnimationList(2, true);
       let defaultSprites = createAnimationList(2);
@@ -537,6 +554,19 @@ describe('animationList', function () {
       store.dispatch(addBlankAnimation('ANIMATION'));
 
       let blankAnimationKey = store.getState().animationList.orderedKeys[2];
+      expect(
+        store.getState().animationList.propsByKey[blankAnimationKey].name
+      ).to.equal('animation_3');
+    });
+
+    it('new blank animations skip a name in use when a copy ends in the same number', function () {
+      let animationList = createAnimationList(3);
+      animationList.propsByKey['animation_2'].name = 'animation_1_copy_1';
+      animationList.propsByKey['animation_3'].name = 'animation_2';
+      store.dispatch(setInitialAnimationList(animationList));
+      store.dispatch(addBlankAnimation('ANIMATION'));
+
+      let blankAnimationKey = store.getState().animationList.orderedKeys[3];
       expect(
         store.getState().animationList.propsByKey[blankAnimationKey].name
       ).to.equal('animation_3');
