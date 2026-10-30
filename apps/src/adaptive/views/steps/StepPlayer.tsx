@@ -1,9 +1,9 @@
 import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import Lab2ProgressTimer from '@cdo/apps/lab2/utils/Lab2ProgressTimer';
 
-import {Answer, StepAnswers} from '../../progress';
+import {Answer, Progress, StepAnswers, visibleSteps} from '../../progress';
 import {Checkpoint, Step} from '../../types';
 import AdaptiveHeader from '../AdaptiveHeader';
 import {checkpointStepFromUrl, updateUrl} from '../checkpointUrl';
@@ -42,7 +42,30 @@ interface StepPlayerProps {
   onFinishPathway?: () => void;
 }
 
-/** Plays a checkpoint's steps in order, then reports the checkpoint finished. */
+/** The progress with one question's answers replaced, before the store reports them. */
+function withAnswers(
+  progress: Progress,
+  stepId: string,
+  questionId: number,
+  answers: Answer[]
+): Progress {
+  const entry = progress.steps[stepId];
+  return {
+    steps: {
+      ...progress.steps,
+      [stepId]: {
+        ...(entry ?? {timeSpent: 0}),
+        answers: {...entry?.answers, [questionId]: answers},
+      },
+    },
+  };
+}
+
+/**
+ * Plays a checkpoint's visible steps in order, then reports the checkpoint
+ * finished. A step behind a showIf appears once its answer is in, so the
+ * current step is tracked by id rather than position.
+ */
 const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
   checkpoint,
   finishLabel = 'Complete checkpoint',
@@ -57,15 +80,24 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
   onFinishPathway,
 }) => {
   const {progress} = usePathwayContext();
-  const steps = checkpoint.steps;
-  const [index, setIndex] = useState(() => {
-    if (!initialStepId) return 0;
-    const i = steps.findIndex(s => s.id === initialStepId);
-    return i >= 0 ? i : 0;
-  });
-  const step = steps[index];
-  const last = index === steps.length - 1;
+  const steps = useMemo(
+    () => visibleSteps(checkpoint, progress),
+    [checkpoint, progress]
+  );
+  const [currentStepId, setCurrentStepId] = useState(
+    () => initialStepId ?? checkpoint.steps[0].id
+  );
+  const currentStepIndex = Math.max(
+    0,
+    steps.findIndex(s => s.id === currentStepId)
+  );
+  const step = steps[currentStepIndex];
+  const last = currentStepIndex === steps.length - 1;
   const continueLabel = last ? finishLabel : 'Continue';
+  // Answers saved this render, so advancing right after a save sees the
+  // steps that answer reveals before the next render does.
+  const latestProgress = useRef(progress);
+  latestProgress.current = progress;
 
   // Lab2IdleTimer, mounted above every Lab2 lab, keeps this clock's idle time.
   const takeElapsed = useCallback(() => {
@@ -83,8 +115,7 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
     const handler = () => {
       const {checkpointId, stepId} = checkpointStepFromUrl();
       if (checkpointId !== checkpoint.id || !stepId) return;
-      const i = steps.findIndex(s => s.id === stepId);
-      if (i >= 0) setIndex(i);
+      if (steps.some(s => s.id === stepId)) setCurrentStepId(stepId);
     };
     window.addEventListener('popstate', handler);
     return () => window.removeEventListener('popstate', handler);
@@ -102,8 +133,36 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
 
   const advance = () => {
     onCompleteStep(step, takeElapsed());
-    if (last) onFinish();
-    else setIndex(index + 1);
+    // Read visible steps from the ref, not the `steps` memo: an answer saved
+    // in this same click can decide which step plays next, and the memo
+    // lags until progress updates on the next render.
+    const visibleStepsFromLatestProgress = visibleSteps(
+      checkpoint,
+      latestProgress.current
+    );
+    const activeStepIndex = visibleStepsFromLatestProgress.findIndex(
+      s => s.id === step.id
+    );
+    if (
+      activeStepIndex < 0 ||
+      activeStepIndex === visibleStepsFromLatestProgress.length - 1
+    )
+      onFinish();
+    else
+      setCurrentStepId(visibleStepsFromLatestProgress[activeStepIndex + 1].id);
+  };
+
+  const saveAnswers = (questionId: number, list: Answer[]) => {
+    // Keep a copy of progress with these answers applied: they can decide
+    // which step plays next, and the context's progress will not have them
+    // until the next render.
+    latestProgress.current = withAnswers(
+      latestProgress.current,
+      step.id,
+      questionId,
+      list
+    );
+    onSaveAnswers(step, questionId, list, takeElapsed());
   };
 
   const renderStep = (step: Step) => {
@@ -125,9 +184,7 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
             key={step.id}
             step={step}
             answers={progress.steps[step.id]?.answers ?? NO_ANSWERS}
-            onSaveAnswers={(questionId, list) =>
-              onSaveAnswers(step, questionId, list, takeElapsed())
-            }
+            onSaveAnswers={saveAnswers}
             onComplete={advance}
           />
         );
