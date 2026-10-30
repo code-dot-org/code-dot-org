@@ -1,3 +1,4 @@
+import {isEqual} from 'lodash';
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
 
 import {
@@ -76,6 +77,8 @@ const SpriteLab2Container: React.FunctionComponent<
   const {
     currentSources: storedSources,
     updateSources: updateStoredSources,
+    patchSources: patchStoredSources,
+    startOver: startStoredOver,
     channel,
     projectManager,
     loadError,
@@ -88,34 +91,61 @@ const SpriteLab2Container: React.FunctionComponent<
     computeHasEdited: isStudentEdit,
   });
   // A level with no project (the no_project level property) has nothing in
-  // a channel: its sources are the level's own, shown read-only.
+  // a channel. Its sources are the level's own, held here in memory: a
+  // student sees them read-only, levelbuilder's start-sources mode edits
+  // them, and nothing is ever saved to a project. A world in them may be
+  // packed (packedWorld.ts); it is expanded once here, so the rest of the
+  // lab only sees the grid.
   const projectless = levelProperties.usesProjects === false;
   const levelSources = useMemo(
     () =>
       projectless
-        ? getInitialSources<Sources>(
-            levelProperties,
-            undefined,
-            getToolboxEditSources(levelProperties)
-          ) ?? defaultSources
+        ? unpackSources(
+            getInitialSources<Sources>(
+              levelProperties,
+              undefined,
+              getToolboxEditSources(levelProperties)
+            ) ?? (defaultSources as Sources)
+          )
         : undefined,
     [projectless, levelProperties]
   );
-  // A level's start sources may write a scene's world in the packed form
-  // (packedWorld.ts). It is expanded here, for readers and for the base an
-  // updater builds on, so the rest of the lab only ever sees the grid.
-  const currentSources = useMemo(() => {
-    const sources = storedSources ?? levelSources;
-    return sources && unpackSources(sources);
-  }, [storedSources, levelSources]);
+  const [own, setOwn] = useState<{from?: Sources; sources?: Sources}>({});
+  let ownSources = own.sources;
+  if (own.from !== levelSources) {
+    ownSources = levelSources;
+    setOwn({from: levelSources, sources: levelSources});
+  }
+  const currentSources = projectless ? ownSources : storedSources;
   const updateSources = useCallback<typeof updateStoredSources>(
-    (next, forceSave) =>
-      updateStoredSources(
-        typeof next === 'function' ? prev => next(unpackSources(prev)) : next,
-        forceSave
-      ),
-    [updateStoredSources]
+    (next, forceSave) => {
+      if (!projectless) {
+        updateStoredSources(next, forceSave);
+        return;
+      }
+      setOwn(prev => {
+        if (!prev.sources) {
+          return prev;
+        }
+        const sources = typeof next === 'function' ? next(prev.sources) : next;
+        return isEqual(sources, prev.sources) ? prev : {...prev, sources};
+      });
+    },
+    [projectless, updateStoredSources]
   );
+  const patchSources = useCallback<typeof patchStoredSources>(
+    (patch, forceSave) =>
+      updateSources(prev => ({...prev, ...patch}), forceSave),
+    [updateSources]
+  );
+  const startOver = useCallback(() => {
+    if (!projectless) {
+      startStoredOver();
+      return;
+    }
+    setOwn({from: levelSources, sources: levelSources});
+    handleReinitialize();
+  }, [projectless, startStoredOver, levelSources, handleReinitialize]);
 
   // Set the project manager in the registry for external components that need it (e.g. header).
   useEffect(() => {
@@ -136,10 +166,15 @@ const SpriteLab2Container: React.FunctionComponent<
   if (!currentSources) {
     return <Loading isLoading={true} />;
   }
+  // One view per level: a level change remounts it, so no effect of the
+  // last level runs against this one's sources.
   return (
     <SpriteLab2View
+      key={levelProperties.id}
       currentSources={currentSources}
       updateSources={updateSources}
+      patchSources={patchSources}
+      startOver={startOver}
       levelProperties={levelProperties}
       channelId={channel?.id}
       sourcesReinitializedCount={sourcesReinitializedCount}

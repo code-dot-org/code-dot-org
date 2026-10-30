@@ -97,6 +97,7 @@ import {
   withUnavailableSongs,
 } from '../musicProjects';
 import {runtimeNeeds, WorkspaceSource} from '../objectives';
+import {packSources} from '../packedWorld';
 import {requestPicture} from '../picturePicker';
 import {
   countImagesByType,
@@ -341,14 +342,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const [previewWidth, setPreviewWidth] = useState(0);
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
   // The project is shared by every level of the lesson, so Start Over sends
-  // the student back to the lesson's first level to remake it. A level
-  // outside a lesson has no first level to go to, so it resets itself in
-  // place. A level with no project (no_project) also leaves for the first
-  // level, since that is where a lesson's reset begins; the level's own
-  // content is restored when the student reaches it again.
+  // the student back to the lesson's first level to remake it; a level
+  // outside a lesson has no first level to go to and resets itself in place.
+  // A level with no project (no_project) is not editable but is offered
+  // Start Over all the same, since it also leaves for the first level.
   const projectless = levelProperties.usesProjects === false;
-  // A level with no project is not editable, but Start Over still leaves it
-  // for the lesson's first level.
   const startOverOffered = isEditable || projectless;
   const firstLevelId = useAppSelector(
     state => getCurrentLevels(state)?.[0]?.id as string | undefined
@@ -1211,11 +1209,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             }
           });
         }
+        // A level with no project keeps its worlds packed in the level file.
+        const saved =
+          mode === 'start' && projectless ? packSources(sources) : sources;
         return {
-          [mode === 'start' ? 'start_sources' : 'exemplar_sources']: sources,
+          [mode === 'start' ? 'start_sources' : 'exemplar_sources']: saved,
         };
       },
-      [currentSources, getToolboxDefinition]
+      [currentSources, getToolboxDefinition, projectless]
     )
   );
 

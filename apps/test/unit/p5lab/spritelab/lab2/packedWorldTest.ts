@@ -1,5 +1,7 @@
 import {
   isPackedWorld,
+  packSources,
+  packWorld,
   unpackSources,
   unpackWorld,
 } from '@cdo/apps/p5lab/spritelab/lab2/packedWorld';
@@ -32,8 +34,50 @@ describe('packedWorld', () => {
 
   it('recognizes only the packed form', () => {
     expect(isPackedWorld({size: 2, rows: [], legend})).toBe(true);
+    expect(isPackedWorld({size: 2, rows: []})).toBe(false);
     expect(isPackedWorld({grid: [[null]]})).toBe(false);
     expect(isPackedWorld(undefined)).toBe(false);
+  });
+
+  it('packs a grid into trimmed rows and a legend, and back', () => {
+    const world = unpackWorld({size: 4, rows: ['.S', 'BBB', '', 'B'], legend});
+    const packed = packWorld(world);
+    expect(packed).toEqual({
+      size: 4,
+      rows: ['.A', 'BBB', '', 'B'],
+      legend: {A: legend.S, B: legend.B},
+    });
+    expect(unpackWorld(packed as never)).toEqual(world);
+    expect(
+      packWorld({
+        grid: [
+          [null, null],
+          [null, null],
+        ],
+      })
+    ).toEqual({
+      size: 2,
+      rows: [],
+      legend: {},
+    });
+  });
+
+  it('packs every scene world for a level file', () => {
+    const sources: Sources = {
+      source: '',
+      scenes: [
+        {id: 'a', name: 'A', world: {grid: [[legend.B]]}},
+        {id: 'b', name: 'B'},
+      ],
+    };
+    const out = packSources(sources);
+    expect(out.scenes?.[0].world).toEqual({
+      size: 1,
+      rows: ['A'],
+      legend: {A: legend.B},
+    });
+    expect(out.scenes?.[1]).toBe(sources.scenes?.[1]);
+    expect(packSources({source: ''})).toEqual({source: ''});
   });
 
   it('expands packed scenes and leaves the rest alone', () => {
