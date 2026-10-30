@@ -18,6 +18,8 @@ describe('BLOCK_HELP', () => {
     'spritelab2_restartScene',
     'gamelab_atTime',
     'spritelab2_whenPlayer',
+    'spritelab2_askAI',
+    'spritelab2_whenAIAnswers',
   ]);
 
   it('gives every entry an animation, or is known to be waiting for one', () => {

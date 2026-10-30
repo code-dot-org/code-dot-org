@@ -80,7 +80,3 @@ export const STORED_MAX_PX: {[type in ImageType]?: number} = {
 export function defaultPixelGrid(imageType: ImageType): number {
   return MODEL_OUTPUT_PX / ASSUMED_BLOCK[imageType];
 }
-
-export function getTextModel() {
-  return googleProvider(AiChatModelIds.GEMINI_2_5_FLASH);
-}

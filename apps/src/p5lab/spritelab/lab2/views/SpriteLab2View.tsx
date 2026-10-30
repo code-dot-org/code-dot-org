@@ -13,7 +13,7 @@ import {getCodeFromSerializedWorkspace} from '@cdo/apps/blockly/utils/workspace/
 import {navigateToLevelId} from '@cdo/apps/code-studio/progressRedux';
 import {getCurrentLevels} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import {TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
+import {PERMISSIONS, TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
 import {useBlocklySettings} from '@cdo/apps/lab2/hooks/useBlocklySettings';
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
 import {UseSourcesOutput} from '@cdo/apps/lab2/hooks/useSources';
@@ -58,11 +58,13 @@ import {
   newBlockTypes,
 } from '../blockCatalog';
 import {toolboxBlockTypes} from '../blockLocks';
+import {ASK_AI_BLOCK_TYPE} from '../blockly/blockDefinitions/askAi';
 import {
   refreshSceneDropdowns,
   setSceneMenuActiveId,
 } from '../blockly/blockDefinitions/goToScene';
 import {PLAY_MUSIC_BLOCK_TYPE} from '../blockly/blockDefinitions/playMusic';
+import {WHEN_AI_ANSWERS_BLOCK_TYPE} from '../blockly/blockDefinitions/whenAiAnswers';
 import {setExternalSceneRefreshHandler} from '../blockly/externalSceneDropdown';
 import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
 import {activeCallout, calloutSelector} from '../callouts';
@@ -200,6 +202,10 @@ const ENABLED_TABS: readonly Tab[] = ['Images', 'Code', 'Play'];
 const PICTURES_DRAWER_ID = 'spritelab2-pictures';
 // On hover over a control a level withholds.
 const LOCKED_REASON = 'Unlocks later in the lesson.';
+
+// Levelbuilders only, for now. The gateway enforces this too; hiding the
+// blocks keeps a student from dragging out one that could only fail.
+const AI_BLOCK_TYPES = [ASK_AI_BLOCK_TYPE, WHEN_AI_ANSWERS_BLOCK_TYPE];
 
 const DEFAULT_SCENE_SOURCE = defaultSources.source;
 const DEFAULT_SCENE_ID = 'scene-1';
@@ -448,10 +454,15 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     () => new Set(chosenBlocks ?? []),
     [chosenBlocks]
   );
-  const hiddenBlockTypes = useMemo(
-    () => heldBackBlockTypes(catalog, chosenBlocks),
-    [catalog, chosenBlocks]
+  // Permissions arrive after mount and start empty, so the AI blocks are
+  // hidden until the fetch says otherwise rather than the other way round.
+  const isLevelbuilder = useAppSelector(state =>
+    state.lab.permissions?.includes(PERMISSIONS.LEVELBUILDER)
   );
+  const hiddenBlockTypes = useMemo(() => {
+    const held = heldBackBlockTypes(catalog, chosenBlocks);
+    return isLevelbuilder ? held : new Set([...held, ...AI_BLOCK_TYPES]);
+  }, [catalog, chosenBlocks, isLevelbuilder]);
   const [showBlockCatalog, setShowBlockCatalog] = useState(false);
   // Dismissing the catalog, not opening it, is what counts as seen: an
   // opening cut short (a Start Over that leaves the level, a reload) comes

@@ -52,6 +52,18 @@ export const BLOCK_HELP: Record<string, BlockHelp> = {
     summary: 'Whichever sprite is the platform player right now.',
     body: 'Drop it into any block that takes a sprite.',
   },
+  spritelab2_askAI: {
+    title: 'Ask AI',
+    summary: 'Asks the AI a question and puts its answer in a variable.',
+    body:
+      'The answer takes a moment to arrive, so the variable stays empty ' +
+      'until it does. Use **when AI answers** to do something with it.',
+  },
+  spritelab2_whenAIAnswers: {
+    title: 'When AI answers',
+    summary: 'Runs the blocks below once an answer comes back.',
+    body: 'Pair it with **ask AI**, which asks the question.',
+  },
   spritelab2_playSound: {
     title: 'Play sound',
     animation: {src: animPlaySound, alt: 'The play sound block in action.'},

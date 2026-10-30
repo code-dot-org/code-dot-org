@@ -1,6 +1,7 @@
 import * as BlocklyCore from 'blockly/core';
 
 import BlocklyModeErrorHandler from '@cdo/apps/BlocklyModeErrorHandler';
+import {PERMISSIONS} from '@cdo/apps/lab2/constants';
 import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
 import {APP_HEIGHT, APP_WIDTH} from '@cdo/apps/p5lab/constants';
 import {
@@ -12,6 +13,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 
 import SpriteLab from '../SpriteLab';
 
+import {askAiText, AskAiError, isAskAiEnabled} from './ai/text/askAi';
 import {SPRITELAB2_HELPER_CODE} from './blockly/blockDefinitions';
 import {burstBoxes} from './bursts';
 import {
@@ -200,6 +202,10 @@ export default class SpriteLab2Engine extends SpriteLab {
     // behind must not start a program in it.
     this.destroyed_ = false;
     this.rerunAfterExecute_ = false;
+    // Bumped per run, so an AI answer in flight when the program restarts
+    // is dropped instead of writing into the new run's variables.
+    this.askAiRunId_ = 0;
+    this.aiAnswerCallbacks_ = [];
     // True from a jump trigger until the target runs; repeat triggers are
     // ignored meanwhile.
     this.sceneJumpInFlight_ = false;
@@ -668,7 +674,55 @@ export default class SpriteLab2Engine extends SpriteLab {
         showPrompt({promptText: String(promptText ?? ''), variableName})
       );
     };
+    // Deliberately apart from the prompt plumbing above: that path carries
+    // UI state, number coercion and a prompt count that mean nothing here.
+    this.aiAnswerCallbacks_ = [];
+    // Answers from a previous run must not land in this one's variables.
+    const askAiRun = ++this.askAiRunId_;
+    library.commands.whenAIAnswers = callback => {
+      this.aiAnswerCallbacks_.push(callback);
+    };
+    library.commands.askAI = (promptText, variableName, setterCallback) => {
+      if (!this.canAskAi_()) {
+        return;
+      }
+      askAiText(String(promptText ?? '')).then(
+        text => {
+          if (this.destroyed_ || askAiRun !== this.askAiRunId_) {
+            return;
+          }
+          setterCallback?.(text);
+          this.aiAnswerCallbacks_.forEach(callback => callback());
+        },
+        error => {
+          if (this.destroyed_ || askAiRun !== this.askAiRunId_) {
+            return;
+          }
+          // The variable keeps whatever it had: a refusal is not an answer.
+          console.warn(
+            error instanceof AskAiError
+              ? `SpriteLab2: the ask AI block's ${error.phase} did not pass the safety check.`
+              : `SpriteLab2: the ask AI block got no answer (${error.message}).`
+          );
+        }
+      );
+    };
     return library;
+  }
+
+  // Mirrors the gateway's own check (User::AiAccessible), so a request it
+  // would refuse never leaves the browser.
+  canAskAi_() {
+    if (!isAskAiEnabled()) {
+      console.warn('SpriteLab2: the ask AI block is turned off.');
+      return false;
+    }
+    const permissions = getStore().getState().lab?.permissions;
+    if (!permissions?.includes(PERMISSIONS.LEVELBUILDER)) {
+      console.warn('SpriteLab2: the ask AI block needs levelbuilder access.');
+      return false;
+    }
+    return true;
   }
 
   onPromptAnswer(variableName, value) {

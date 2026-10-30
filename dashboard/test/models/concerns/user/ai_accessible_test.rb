@@ -314,6 +314,7 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
     let(:theater_description) {SharedConstants::AI_CHAT_CLIENT_TYPES[:THEATER_DESCRIPTION]}
     let(:lesson_deep_dive) {SharedConstants::AI_CHAT_CLIENT_TYPES[:LESSON_DEEP_DIVE]}
     let(:curriculum_generator) {SharedConstants::AI_CHAT_CLIENT_TYPES[:CURRICULUM_GENERATOR]}
+    let(:spritelab_ask_ai) {SharedConstants::AI_CHAT_CLIENT_TYPES[:SPRITELAB_ASK_AI]}
 
     before do
       allow(user).to receive(:has_aichat_access?).and_return(false)
@@ -368,6 +369,23 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
       allow(user).to receive(:levelbuilder?).and_return(true)
       allow(user).to receive(:has_aichat_access?).and_return(true)
       _(user.can_access_aichat_chat_completion?(curriculum_generator, nil)).must_equal true
+    end
+
+    it 'returns false for SPRITELAB_ASK_AI when the user is not a levelbuilder, even with access' do
+      allow(user).to receive(:has_aichat_access?).and_return(true)
+      _(user.can_access_aichat_chat_completion?(spritelab_ask_ai, nil)).must_equal false
+    end
+
+    it 'returns true for SPRITELAB_ASK_AI when a levelbuilder has access' do
+      allow(user).to receive(:levelbuilder?).and_return(true)
+      allow(user).to receive(:has_aichat_access?).and_return(true)
+      _(user.can_access_aichat_chat_completion?(spritelab_ask_ai, nil)).must_equal true
+    end
+
+    # Sprite Lab 2's ambient client type is trusted; this one must not inherit that.
+    it 'returns false for SPRITELAB_ASK_AI for a non-levelbuilder on a trusted client' do
+      allow(user).to receive(:trust_chat_client?).and_return(true)
+      _(user.can_access_aichat_chat_completion?(spritelab_ask_ai, nil)).must_equal false
     end
 
     it 'does not block CURRICULUM_GENERATOR when the AI_CHAT_LAB DCDO flag is set' do

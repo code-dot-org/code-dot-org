@@ -61,6 +61,7 @@ module User::AiAccessible
     return false if client_type == AI_CHAT_CLIENT_TYPES[:THEATER_DESCRIPTION] && !DCDO.get("theater-ai-descriptions-enabled", false)
     return false if client_type == AI_CHAT_CLIENT_TYPES[:LESSON_DEEP_DIVE] && !can_use_lesson_deep_dive?
     return false if client_type == AI_CHAT_CLIENT_TYPES[:CURRICULUM_GENERATOR] && !levelbuilder?
+    return false if client_type == AI_CHAT_CLIENT_TYPES[:SPRITELAB_ASK_AI] && !levelbuilder?
 
     has_aichat_access?(level_id) || trust_chat_client?(client_type)
   end

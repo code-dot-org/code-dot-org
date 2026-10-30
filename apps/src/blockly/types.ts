@@ -455,7 +455,14 @@ type ArgumentJson =
   | FieldInput
   | FieldDropdown
   | FieldNumber
-  | FieldImageJson;
+  | FieldImageJson
+  | InputValue;
+
+interface InputValue extends FieldJson {
+  type: 'input_value';
+  /** Connection type(s) accepted; omitted to accept any block. */
+  check?: string | string[];
+}
 
 interface FieldImageJson extends FieldJson {
   type: 'field_image';
