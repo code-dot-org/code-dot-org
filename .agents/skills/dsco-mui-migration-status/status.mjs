@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 // Reports where the DSCO-to-MUI migration stands. It stores nothing: the picture is
-// derived from MIGRATION_STATUS.md on a git ref (origin/staging by default) and from
-// the open pull requests whose titles the two migration workflows emit. Run it from
-// any checkout of the repo; the current branch does not matter.
+// derived from MIGRATION_STATUS.md on a git ref (origin/staging by default), from the
+// open pull requests whose titles the two migration workflows emit, and from each
+// migrated component's "Deferred changes" table. Run it from any checkout of the
+// repo; the current branch does not matter.
 //
 //   node status.mjs [--format slack|slack-md|markdown|json] [--ref origin/staging]
 //                   [--no-fetch] [--no-counts]
@@ -13,7 +14,9 @@
 
 import {execFileSync} from 'node:child_process';
 
-const REPO = 'code-dot-org/code-dot-org';
+const OWNER = 'code-dot-org';
+const REPO = `${OWNER}/code-dot-org`;
+const TRUNK = 'staging';
 const LIB = 'frontend/packages/component-library';
 const STATUS_DOC = `${LIB}/MIGRATION_STATUS.md`;
 const CONSUMER_ROOTS = [
@@ -23,15 +26,23 @@ const CONSUMER_ROOTS = [
   'frontend/apps',
 ];
 const PR_FIELDS =
-  'number,title,url,isDraft,baseRefName,headRefName,reviewDecision,reviewRequests,' +
-  'reviews,createdAt,updatedAt,author,statusCheckRollup';
-// Title shapes come from dsco-mui-design-system-migration.js and dsco-mui-finish-migration.js.
-// The button step-4 PR predates the word "legacy" in the finish title, hence the optional group.
+  'number,title,url,isDraft,baseRefName,headRefName,headRepositoryOwner,' +
+  'reviewDecision,reviewRequests,reviews,createdAt,updatedAt,author,statusCheckRollup';
+const SEARCH_LIMIT = 200;
+// Title shapes come from dsco-mui-design-system-migration.js and
+// dsco-mui-finish-migration.js; older step-4 titles lack the word "legacy".
 const TITLE = {
   designSystem: /^\[Design System\] Add MUI (\S+)/,
   consumers: /^\[MUI Migration\] (\S+) consumers \((\d+)\/(\d+)\)/,
   deleteLegacy: /^\[MUI Migration\] (\S+): delete the (?:legacy )?DSCO source/,
   deferred: /^\[MUI Migration\] (\S+): hand (.+) to MUI$/,
+};
+// Components that share a base and migrate in one run, keyed by family member.
+const FAMILY = {
+  actionDropdown: 'dropdown',
+  checkboxDropdown: 'dropdown',
+  iconDropdown: 'dropdown',
+  simpleDropdown: 'dropdown',
 };
 const QUIET_DAYS = 7;
 const STATE_ORDER = [
@@ -45,13 +56,18 @@ const STATE_ORDER = [
 
 const opts = parseArgs(process.argv.slice(2));
 const now = Date.now();
+const warnings = [];
 
 function parseArgs(argv) {
   const o = {format: 'slack', ref: 'origin/staging', fetch: true, counts: true};
+  const value = i => {
+    if (i >= argv.length) throw new Error(`${argv[i - 1]} needs a value`);
+    return argv[i];
+  };
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
-    if (a === '--format') o.format = argv[++i];
-    else if (a === '--ref') o.ref = argv[++i];
+    if (a === '--format') o.format = value(++i);
+    else if (a === '--ref') o.ref = value(++i);
     else if (a === '--no-fetch') o.fetch = false;
     else if (a === '--no-counts') o.counts = false;
     else if (a === '--help' || a === '-h') {
@@ -88,15 +104,12 @@ const gh = args => JSON.parse(run('gh', ['--repo', REPO, ...args]));
 
 const days = iso => Math.floor((now - Date.parse(iso)) / 86400000);
 const stripMd = s => s.replace(/\*\*|`/g, '').trim();
-// The workflows title PRs with the capitalized directory name: dialog -> Dialog, closeButton -> CloseButton.
-const dirName = title => title.charAt(0).toLowerCase() + title.slice(1);
 const norm = s =>
   s
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, ' ')
     .trim();
-
-// ─── Status doc ────────────────────────────────────────────────────────────────
+const same = (a, b) => a.toLowerCase() === b.toLowerCase();
 
 function parseStatusDoc(doc) {
   const rows = [];
@@ -115,7 +128,6 @@ function parseStatusDoc(doc) {
 }
 
 function parseDeferredRows(planDoc) {
-  if (!planDoc) return [];
   const rows = [];
   let inSection = false;
   let header = null;
@@ -131,19 +143,22 @@ function parseDeferredRows(planDoc) {
       header = cells.map(norm);
       continue;
     }
-    if (/^-+$/.test(cells[0] || '')) continue;
+    if (/^:?-+:?$/.test(cells[0] || '') || !cells[0]) continue;
+    if (norm(cells[0]) === header[0]) continue;
     const ticketIdx = header.indexOf('ticket');
+    const ticket = ticketIdx >= 0 ? stripMd(cells[ticketIdx] || '') : '';
     rows.push({
       behavior: stripMd(cells[0]),
-      ticket: ticketIdx >= 0 ? stripMd(cells[ticketIdx] || '') : '',
+      ticket,
+      optional: /optional/i.test(ticket),
     });
   }
   return rows;
 }
 
+// Finish step 4 renames Mui<X>.tsx to <X>.tsx, so a Mui* file means the legacy source is still there.
 function legacyPresent(component) {
   const listing = gitShow(`${LIB}/src/${component}/`);
-  // The finish step 4 renames Mui<X>.tsx to <X>.tsx, so a Mui* file means the legacy source still exists.
   return !!listing && /^Mui[A-Z]\w*\.tsx$/m.test(listing);
 }
 
@@ -154,7 +169,7 @@ function importerCount(component) {
       'grep',
       '-l',
       '-E',
-      `component-library/${component}['"]`,
+      `component-library/${component}(/[^'"]*)?['"]`,
       opts.ref,
       '--',
       ...CONSUMER_ROOTS,
@@ -164,23 +179,16 @@ function importerCount(component) {
   return out ? out.trim().split('\n').filter(Boolean).length : 0;
 }
 
-// ─── Pull requests ─────────────────────────────────────────────────────────────
-
 function classify(pr) {
   let m;
   if ((m = TITLE.designSystem.exec(pr.title)))
-    return {kind: 'design-system', component: dirName(m[1])};
+    return {kind: 'design-system', component: m[1]};
   if ((m = TITLE.consumers.exec(pr.title)))
-    return {
-      kind: 'consumers',
-      component: dirName(m[1]),
-      index: +m[2],
-      total: +m[3],
-    };
+    return {kind: 'consumers', component: m[1], index: +m[2], total: +m[3]};
   if ((m = TITLE.deleteLegacy.exec(pr.title)))
-    return {kind: 'delete-legacy', component: dirName(m[1])};
+    return {kind: 'delete-legacy', component: m[1]};
   if ((m = TITLE.deferred.exec(pr.title)))
-    return {kind: 'deferred', component: dirName(m[1]), behavior: m[2]};
+    return {kind: 'deferred', component: m[1], behavior: m[2]};
   return null;
 }
 
@@ -205,23 +213,16 @@ function checksState(pr) {
   return pending ? 'pending' : items.length ? 'green' : 'none';
 }
 
+const reviewers = (pr, state) => [
+  ...new Set(
+    (pr.reviews || [])
+      .filter(r => r.state === state)
+      .map(r => r.author?.login)
+      .filter(Boolean),
+  ),
+];
+
 function decorate(pr) {
-  const approvedBy = [
-    ...new Set(
-      (pr.reviews || [])
-        .filter(r => r.state === 'APPROVED')
-        .map(r => r.author?.login)
-        .filter(Boolean),
-    ),
-  ];
-  const changesBy = [
-    ...new Set(
-      (pr.reviews || [])
-        .filter(r => r.state === 'CHANGES_REQUESTED')
-        .map(r => r.author?.login)
-        .filter(Boolean),
-    ),
-  ];
   return {
     number: pr.number,
     title: pr.title,
@@ -230,9 +231,10 @@ function decorate(pr) {
     draft: pr.isDraft,
     base: pr.baseRefName,
     head: pr.headRefName,
+    headOwner: pr.headRepositoryOwner?.login || '',
     decision: pr.reviewDecision || '',
-    approvedBy,
-    changesBy,
+    approvedBy: reviewers(pr, 'APPROVED'),
+    changesBy: reviewers(pr, 'CHANGES_REQUESTED'),
     requested: (pr.reviewRequests || [])
       .map(r => r.login || r.name)
       .filter(Boolean),
@@ -241,52 +243,69 @@ function decorate(pr) {
     checks: checksState(pr),
     role: classify(pr),
     blockedBy: [],
+    orphanBase: false,
   };
 }
 
 function fetchPRs() {
-  const byNumber = new Map();
+  const raw = new Map();
   for (const q of ['MUI in:title', 'DSCO in:title']) {
-    for (const pr of gh([
-      'pr',
-      'list',
-      '--state',
-      'open',
-      '--limit',
-      '200',
-      '--search',
-      q,
-      '--json',
-      PR_FIELDS,
-    ])) {
-      byNumber.set(pr.number, pr);
-    }
-  }
-  const prs = new Map(
-    [...byNumber.values()].map(pr => [pr.number, decorate(pr)]),
-  );
-
-  // A PR whose base is another open PR's head cannot merge first. Pull in bases the
-  // title search missed (a workflow-infra PR, say) so the chain is complete.
-  const byHead = new Map([...prs.values()].map(p => [p.head, p]));
-  const baseName = opts.ref.replace(/^origin\//, '');
-  for (const p of [...prs.values()]) {
-    if (p.base === baseName || byHead.has(p.base)) continue;
     const found = gh([
       'pr',
       'list',
       '--state',
       'open',
-      '--head',
-      p.base,
+      '--limit',
+      String(SEARCH_LIMIT),
+      '--search',
+      q,
       '--json',
       PR_FIELDS,
     ]);
-    for (const pr of found) {
-      const d = decorate(pr);
-      prs.set(d.number, d);
-      byHead.set(d.head, d);
+    if (found.length >= SEARCH_LIMIT)
+      warnings.push(`search "${q}" hit the ${SEARCH_LIMIT} PR limit; the list may be incomplete`);
+    for (const pr of found) raw.set(pr.number, pr);
+  }
+  const prs = new Map([...raw.values()].map(pr => [pr.number, decorate(pr)]));
+
+  // Only branches in this repo can be bases of other PRs here; a fork head named
+  // like the trunk must not be mistaken for it.
+  const headKey = p => (p.headOwner === OWNER && p.head !== TRUNK ? p.head : null);
+  const byHead = new Map();
+  const index = p => {
+    const k = headKey(p);
+    if (k && !byHead.has(k)) byHead.set(k, p);
+  };
+  for (const p of prs.values()) index(p);
+
+  // A PR based on another open PR's head cannot merge first. The base PR is pulled in
+  // when the title search missed it, repeatedly, so a deep stack resolves end to end.
+  const queried = new Set();
+  let pending = [...prs.values()];
+  while (pending.length) {
+    const next = [];
+    for (const p of pending) {
+      if (p.base === TRUNK || byHead.has(p.base) || queried.has(p.base)) continue;
+      queried.add(p.base);
+      const found = gh([
+        'pr',
+        'list',
+        '--state',
+        'open',
+        '--head',
+        p.base,
+        '--json',
+        PR_FIELDS,
+      ]).filter(pr => pr.headRepositoryOwner?.login === OWNER);
+      for (const pr of found) {
+        if (prs.has(pr.number)) continue;
+        const d = decorate(pr);
+        prs.set(d.number, d);
+        index(d);
+        next.push(d);
+      }
     }
+    pending = next;
   }
   for (const p of prs.values()) {
     const chain = [];
@@ -296,15 +315,14 @@ function fetchPRs() {
       cur = byHead.get(cur.base);
     }
     p.blockedBy = chain;
+    p.orphanBase = p.base !== TRUNK && !byHead.has(p.base);
   }
   return prs;
 }
 
-// ─── Model ─────────────────────────────────────────────────────────────────────
-
 function build() {
-  if (opts.fetch)
-    git('fetch', '-q', 'origin', opts.ref.replace(/^origin\//, ''));
+  if (opts.fetch && opts.ref.startsWith('origin/'))
+    git('fetch', '-q', 'origin', opts.ref.slice('origin/'.length));
   const statusDoc = gitShow(STATUS_DOC);
   if (!statusDoc) throw new Error(`${STATUS_DOC} not found at ${opts.ref}`);
   const rows = parseStatusDoc(statusDoc);
@@ -314,12 +332,19 @@ function build() {
   const blockerNumbers = new Set(tracked.flatMap(p => p.blockedBy));
   const blocks = n =>
     tracked.filter(p => p.blockedBy.includes(n)).map(p => p.number);
+  const nums = list => list.map(p => `#${p.number}`).join(' ');
 
   const components = rows.map(row => {
-    const mine = tracked.filter(
-      p => p.role.component.toLowerCase() === row.component.toLowerCase(),
-    );
-    const c = {...row, prs: mine.map(p => p.number), next: [], deferred: []};
+    const mine = tracked.filter(p => same(p.role.component, row.component));
+    const c = {
+      ...row,
+      prs: mine.map(p => p.number),
+      family: FAMILY[row.component] || null,
+      next: [],
+      runnable: null,
+      deferred: [],
+      warnings: [],
+    };
     const ds = mine.find(p => p.role.kind === 'design-system');
     const consumers = mine
       .filter(p => p.role.kind === 'consumers')
@@ -327,44 +352,61 @@ function build() {
     const del = mine.find(p => p.role.kind === 'delete-legacy');
     const deferredPRs = mine.filter(p => p.role.kind === 'deferred');
 
-    if (/^not started$/i.test(row.status)) {
-      if (ds)
+    if (c.family) {
+      c.next.push(`part of the ${c.family} run`);
+    } else if (/^not started/i.test(row.status)) {
+      if (ds) {
         c.next.push(
-          `migrate run in flight: DS PR #${ds.number}${consumers.length ? `, consumers ${consumers.map(p => `#${p.number}`).join(' ')}` : ''}`,
+          `migrate run in flight: DS PR #${ds.number}${consumers.length ? `, consumers ${nums(consumers)}` : ''}`,
         );
-      else c.next.push('migrate run');
-    } else if (/^in progress$/i.test(row.status)) {
+      } else {
+        c.next.push('runnable: migrate run');
+        c.runnable = 'migrate';
+      }
+    } else if (/^in progress/i.test(row.status)) {
       c.next.push(
         consumers.length
-          ? `consumers ${consumers.map(p => `#${p.number}`).join(' ')}`
+          ? `consumers ${nums(consumers)}`
           : 'consumer sweep not open',
       );
     } else if (/^migrated/i.test(row.status)) {
-      if (del) c.next.push(`step 4 delete legacy: #${del.number}`);
-      else if (legacyPresent(row.component))
-        c.next.push('step 4 delete legacy: not started');
-      const plan = gitShow(
-        `${LIB}/src/${row.component}/${row.component.toUpperCase().replace(/-/g, '_')}_MIGRATION_TO_MUI.md`,
-      );
-      for (const d of parseDeferredRows(plan)) {
+      let step4Done = false;
+      if (del) c.next.push(`step 4 delete legacy: #${del.number} in review`);
+      else if (legacyPresent(row.component)) {
+        c.next.push('runnable: step 4 delete legacy');
+        c.runnable = 'finish';
+      } else step4Done = true;
+
+      const planPath = `${LIB}/src/${row.component}/${row.component.toUpperCase().replace(/-/g, '_')}_MIGRATION_TO_MUI.md`;
+      const plan = gitShow(planPath);
+      const deferredRows = plan ? parseDeferredRows(plan) : [];
+      if (/behavior pending/i.test(row.status) && !deferredRows.length)
+        c.warnings.push(
+          plan
+            ? `no Deferred changes rows parsed from ${planPath}`
+            : `plan doc missing: ${planPath}`,
+        );
+      for (const d of deferredRows) {
         const pr = deferredPRs.find(
           p =>
             norm(p.role.behavior).includes(norm(d.behavior)) ||
             norm(d.behavior).includes(norm(p.role.behavior)),
         );
         c.deferred.push({
-          behavior: d.behavior,
-          ticket: d.ticket,
+          ...d,
           pr: pr ? pr.number : null,
+          state: pr ? 'in-review' : step4Done ? 'runnable' : 'after-step-4',
         });
       }
+      if (step4Done && c.deferred.some(d => d.state === 'runnable'))
+        c.runnable = 'finish';
     }
     return c;
   });
 
   if (opts.counts) {
     for (const c of components)
-      if (/^not started$/i.test(c.status))
+      if (/^not started/i.test(c.status) && !c.family)
         c.importers = importerCount(c.component);
   }
 
@@ -377,22 +419,23 @@ function build() {
   const listed = tracked.concat(
     all.filter(p => blockerNumbers.has(p.number) && !p.role),
   );
-  const byAge = (a, b) => a.ageDays - b.ageDays || a.number - b.number;
+  const oldestFirst = (a, b) => b.ageDays - a.ageDays || a.number - b.number;
   const needsReview = listed
     .filter(p => !p.draft && p.decision !== 'APPROVED')
-    .sort((a, b) => b.ageDays - a.ageDays);
+    .sort(oldestFirst);
   const approved = listed
     .filter(p => !p.draft && p.decision === 'APPROVED')
-    .sort(byAge);
-  const drafts = listed.filter(p => p.draft).sort(byAge);
+    .sort(oldestFirst);
+  const drafts = listed.filter(p => p.draft).sort(oldestFirst);
   const related = all
     .filter(p => !listed.includes(p) && /\b(mui|dsco)\b/i.test(p.title))
-    .sort(byAge);
+    .sort(oldestFirst);
 
   const withBlocks = p => ({...p, blocks: blocks(p.number)});
   return {
     generatedAt: new Date(now).toISOString(),
     ref: opts.ref,
+    warnings,
     counts,
     needsReview: needsReview.map(withBlocks),
     approved: approved.map(withBlocks),
@@ -408,43 +451,78 @@ function build() {
   };
 }
 
-// ─── Rendering ─────────────────────────────────────────────────────────────────
-
 function prFacts(p) {
   const f = [`${p.ageDays}d old`];
   if (p.decision === 'APPROVED')
     f.push(`approved by ${p.approvedBy.join(', ') || '?'}`);
   else if (p.decision === 'CHANGES_REQUESTED')
     f.push(`changes requested by ${p.changesBy.join(', ') || '?'}`);
+  else if (p.approvedBy.length)
+    f.push(`approved by ${p.approvedBy.join(', ')}, review still required`);
   else f.push('no approval');
-  if (p.requested.length) f.push(`waiting on ${p.requested.join(', ')}`);
-  else if (!p.draft && p.decision !== 'APPROVED') f.push('nobody requested');
+  if (p.decision !== 'APPROVED') {
+    if (p.requested.length) f.push(`waiting on ${p.requested.join(', ')}`);
+    else if (!p.draft) f.push('nobody requested');
+  }
   if (p.quietDays >= QUIET_DAYS) f.push(`quiet ${p.quietDays}d`);
   if (p.checks === 'red') f.push('checks red');
   if (p.checks === 'pending') f.push('checks pending');
   if (p.blockedBy.length)
     f.push(`blocked by ${p.blockedBy.map(n => `#${n}`).join(' ')}`);
+  if (p.orphanBase) f.push(`base ${p.base} has no open PR`);
   if (p.blocks.length) f.push(`blocks ${p.blocks.map(n => `#${n}`).join(' ')}`);
   return f.join(', ');
 }
 
+const deferredLabel = d => {
+  const ticket = d.ticket.replace(/\s*\((optional)\)/i, ', $1');
+  return d.behavior + (ticket ? ` (${ticket})` : d.optional ? ' (optional)' : '');
+};
+
 function componentLine(c) {
-  const bits = [];
-  for (const n of c.next) bits.push(n);
-  if (c.deferred.length) {
-    const open = c.deferred
-      .filter(d => d.pr)
-      .map(d => `${d.behavior} #${d.pr}`);
-    const rest = c.deferred.filter(d => !d.pr).map(d => d.behavior);
-    if (open.length) bits.push(`step 5 in review: ${open.join(', ')}`);
-    if (rest.length) bits.push(`step 5 not started: ${rest.join(', ')}`);
-  }
+  const bits = [...c.next];
+  const group = (state, label) => {
+    const rows = c.deferred.filter(d => d.state === state);
+    if (rows.length)
+      bits.push(
+        `${label}: ${rows.map(d => (d.pr ? `${deferredLabel(d)} #${d.pr}` : deferredLabel(d))).join(', ')}`,
+      );
+  };
+  group('in-review', 'step 5 in review');
+  group('runnable', 'runnable: step 5');
+  group('after-step-4', 'step 5 after step 4');
+  for (const w of c.warnings) bits.push(`warning: ${w}`);
   return bits.join('; ');
+}
+
+const escapeMrkdwn = s =>
+  s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+const escapeCell = s => s.replace(/\|/g, '\\|');
+
+function queueLine(m) {
+  const queue = m.components.filter(
+    c => /^not started/i.test(c.status) && !c.prs.length && !c.family,
+  );
+  if (!queue.length) return null;
+  const members = c =>
+    Object.keys(FAMILY).filter(k => FAMILY[k] === c.component);
+  const name = c =>
+    members(c).length ? `${c.component} (+${members(c).length} family)` : c.component;
+  const sorted = opts.counts
+    ? [...queue].sort((a, b) => a.importers - b.importers)
+    : queue;
+  return {
+    title: `(${sorted.length}${opts.counts ? ', by importing files' : ''})`,
+    body: sorted
+      .map(c => (opts.counts ? `${name(c)} ${c.importers}` : name(c)))
+      .join(' · '),
+  };
 }
 
 function renderSlack(m, md) {
   const link = p => (md ? `[#${p.number}](${p.url})` : `<${p.url}|#${p.number}>`);
   const b = s => (md ? `**${s}**` : `*${s}*`);
+  const text = md ? s => s : escapeMrkdwn;
   const date = m.generatedAt.slice(0, 10);
   const out = [`${b('DSCO → MUI migration')} · ${date}`];
   out.push(
@@ -452,11 +530,13 @@ function renderSlack(m, md) {
       .map(([s, n]) => `${s} ${n}`)
       .join(' · '),
   );
+  for (const w of m.warnings) out.push(`warning: ${text(w)}`);
 
   const section = (title, list) => {
     if (!list.length) return;
     out.push('', b(title));
-    for (const p of list) out.push(`• ${link(p)} ${p.title} — ${prFacts(p)}`);
+    for (const p of list)
+      out.push(`• ${link(p)} ${text(p.title)} — ${text(prFacts(p))}`);
   };
   section('Needs review (oldest first)', m.needsReview);
   section('Approved, waiting to merge', m.approved);
@@ -464,39 +544,25 @@ function renderSlack(m, md) {
 
   const inFlight = m.components.filter(
     c =>
-      c.prs.length ||
-      c.deferred.length ||
-      (/^migrated/i.test(c.status) && c.next.length),
+      !c.family &&
+      (c.prs.length ||
+        c.deferred.length ||
+        c.warnings.length ||
+        (/^migrated/i.test(c.status) && c.next.length)),
   );
   if (inFlight.length) {
     out.push('', b('By component'));
     for (const c of inFlight)
-      out.push(`• \`${c.component}\` ${c.status} — ${componentLine(c)}`);
+      out.push(`• \`${c.component}\` ${c.status} — ${text(componentLine(c))}`);
   }
 
-  const queue = m.components.filter(
-    c => /^not started$/i.test(c.status) && !c.prs.length,
-  );
-  if (queue.length) {
-    const sorted =
-      'importers' in (queue[0] || {})
-        ? [...queue].sort((a, b) => a.importers - b.importers)
-        : queue;
-    out.push(
-      '',
-      `${b('Not started')} (${sorted.length}${opts.counts ? ', by importing files' : ''})`,
-    );
-    out.push(
-      sorted
-        .map(c => (opts.counts ? `${c.component} ${c.importers}` : c.component))
-        .join(' · '),
-    );
-  }
+  const queue = queueLine(m);
+  if (queue) out.push('', `${b('Not started')} ${queue.title}`, queue.body);
 
   if (m.related.length) {
     out.push('', b('Other open PRs mentioning MUI or DSCO'));
     for (const p of m.related.slice(0, 8))
-      out.push(`• ${link(p)} ${p.title} (${p.author}, ${p.ageDays}d)`);
+      out.push(`• ${link(p)} ${text(p.title)} (${p.author}, ${p.ageDays}d)`);
   }
   return out.join('\n');
 }
@@ -510,6 +576,7 @@ function renderMarkdown(m) {
       .join(' · '),
     '',
   );
+  for (const w of m.warnings) out.push(`> warning: ${w}`, '');
   const section = (title, list) => {
     if (!list.length) return;
     out.push(`## ${title}`, '');
@@ -530,10 +597,10 @@ function renderMarkdown(m) {
     if (/^(n\/a|mui-native)$/i.test(c.status)) continue;
     const prs = c.prs.map(n => `#${n}`).join(' ');
     const next =
-      componentLine(c) ||
-      (c.importers !== undefined ? `${c.importers} importing files` : '');
+      componentLine(c) +
+      (c.importers !== undefined ? ` (${c.importers} importing files)` : '');
     out.push(
-      `| \`${c.component}\` | ${c.status} | ${c.mui} | ${prs} | ${next} |`,
+      `| \`${c.component}\` | ${c.status} | ${escapeCell(c.mui)} | ${prs} | ${escapeCell(next)} |`,
     );
   }
   out.push('');
