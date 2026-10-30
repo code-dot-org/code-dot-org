@@ -414,10 +414,17 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // The catalog's blocks are the ones no earlier level of the lesson
   // required (blockCatalog.ts); outside a lesson there are none.
   const {levelPropertiesMap} = useLevelProperties();
-  const lessonLevelIds = useAppSelector(state =>
-    (getCurrentLevels(state) as {id: string | number}[] | undefined)?.map(
-      level => String(level.id)
-    )
+  // Selected as one string, which compares by value. The levels list is
+  // built fresh on every read, and an array here would re-derive the catalog,
+  // and so rebuild the toolbox, on every render.
+  const lessonLevelIdList = useAppSelector(state =>
+    (getCurrentLevels(state) as {id: string | number}[] | undefined)
+      ?.map(level => String(level.id))
+      .join(',')
+  );
+  const lessonLevelIds = useMemo(
+    () => lessonLevelIdList?.split(','),
+    [lessonLevelIdList]
   );
   const earlierLevels = useMemo(() => {
     const currentLevelIndex =
