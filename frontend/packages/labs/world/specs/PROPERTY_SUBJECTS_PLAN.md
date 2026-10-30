@@ -239,7 +239,7 @@ player` and the event, and its `when this screen loads` sets the one and
 ## Open
 
 - **An actor file's hat about its own property**, as above, which is what
-  would retire the Health Bar's step.
+  would retire the Health Bar's step. Planned in specs/OWN_SUBJECTS_PLAN.md.
 
 ## Not in this plan
 
