@@ -64,9 +64,11 @@ export const FileTabs = React.memo(() => {
     const {active, over} = event;
     setDraggingFileId(null);
 
-    if (active.id !== over!.id) {
+    // over is null when the drag ends before a drop target registers, such as
+    // a click that the 0.01px activation distance turned into a drag.
+    if (over && active.id !== over.id) {
       const oldIndex = files.indexOf(files.find(f => f.id === active.id)!);
-      const newIndex = files.indexOf(files.find(f => f.id === over!.id)!);
+      const newIndex = files.indexOf(files.find(f => f.id === over.id)!);
 
       dispatch(
         rearrangeFilesThunk(
