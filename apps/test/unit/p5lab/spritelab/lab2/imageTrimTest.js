@@ -264,7 +264,7 @@ describe('SpriteLab2 trimAnimationListImages native pixel art', () => {
   });
 
   it('upscales a grid-1 image for the engine, geometry included', async () => {
-    const out = await trimAnimationListImages(native, undefined, {
+    const out = await trimAnimationListImages(native, {
       forEngine: true,
     });
     expect(upscaleImageNearest).toHaveBeenCalledWith(
@@ -294,7 +294,7 @@ describe('SpriteLab2 trimAnimationListImages native pixel art', () => {
         },
       },
     };
-    const out = await trimAnimationListImages(stored, undefined, {
+    const out = await trimAnimationListImages(stored, {
       forEngine: true,
     });
     expect(upscaleImageNearest).not.toHaveBeenCalled();
