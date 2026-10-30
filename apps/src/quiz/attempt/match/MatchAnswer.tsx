@@ -47,7 +47,7 @@ const MatchAnswer: React.FunctionComponent<{
           <MatchBoard
             matchSets={matchSets}
             pairs={correctPairs}
-            correctPairs={correctPairs}
+            isAnswerKey
             labelledBy={correctAnswerLabelId}
           />
         </>

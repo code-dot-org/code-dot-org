@@ -104,11 +104,12 @@ describe('MatchAnswer', () => {
       '3, not matched',
       '2, matched with 2 + 1, incorrect',
     ]);
+    // The board's name already says these pairs are correct.
     expect(spokenTexts('Correct answer')).toEqual([
-      '1 + 1, matched with 2, correct',
-      '2 + 1, matched with 3, correct',
-      '3, matched with 2 + 1, correct',
-      '2, matched with 1 + 1, correct',
+      '1 + 1, matched with 2',
+      '2 + 1, matched with 3',
+      '3, matched with 2 + 1',
+      '2, matched with 1 + 1',
     ]);
   });
 
