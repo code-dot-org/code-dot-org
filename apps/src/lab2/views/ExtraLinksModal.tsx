@@ -471,15 +471,15 @@ const ProjectLinkData: React.FunctionComponent<ProjectLinkDataProps> = ({
                 onBookmark={onBookmark}
               />
             </li>
-            {abuseScore !== undefined && (
-              <li>
-                <AbuseScoreInfo
-                  abuseScore={abuseScore}
-                  onResetAbuseScore={onResetAbuseScore}
-                />
-              </li>
-            )}
           </>
+        )}
+        {abuseScore !== undefined && (
+          <li>
+            <AbuseScoreInfo
+              abuseScore={abuseScore}
+              onResetAbuseScore={onResetAbuseScore}
+            />
+          </li>
         )}
       </ul>
     </>

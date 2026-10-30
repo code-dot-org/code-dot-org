@@ -384,7 +384,7 @@ var projects = (module.exports = {
   },
 
   /**
-   * Allows admin user to reset abuse score to 0 and then saves the project.
+   * Resets the current project's abuse score to 0. Returns the request promise.
    */
   adminResetAbuseScore() {
     return HttpClient.post(
