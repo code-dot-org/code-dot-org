@@ -134,8 +134,11 @@ module User::LevelProgressable
   def script_level_hidden?(script_level)
     return false if script_level.script.can_be_instructor?(self)
 
+    sections = sections_as_student
+    return false if sections.empty?
+
     # Archived sections are ignored, matching User#get_participant_hidden_ids.
-    sections = sections_as_student.reject(&:hidden)
+    sections = sections.reject(&:hidden)
     return false if sections.empty?
 
     script_sections = sections.select {|s| s.script.try(:id) == script_level.script.id}
