@@ -18,6 +18,11 @@ export type QuizQuestionType =
   | 'FreeResponseQuestion'
   | 'MatchQuestion';
 
+export interface QuizQuestionItem {
+  id: string;
+  text: string;
+}
+
 // Answer keys and the explanation are deliberately excluded.
 export interface QuizQuestionSummary {
   id: number;
@@ -25,7 +30,10 @@ export interface QuizQuestionSummary {
   questionName: string;
   questionTitle: string;
   description?: string | null;
-  choices?: {id: string; text: string}[];
+  choices?: QuizQuestionItem[];
+  // A match question's two sets of items. The server shuffles each set on
+  // every load.
+  matchSets?: [QuizQuestionItem[], QuizQuestionItem[]];
   page: number;
 }
 
