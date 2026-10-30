@@ -12,6 +12,7 @@ import {usePathwayContext} from '../PathwayContext';
 import LevelStep from './LevelStep';
 import PanelsStep from './PanelsStep';
 import QuestionsStep from './QuestionsStep';
+import ReviewStep from './ReviewStep';
 import VideoStep from './VideoStep';
 
 import styles from './stepPlayer.module.scss';
@@ -185,6 +186,15 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
             step={step}
             answers={progress.steps[step.id]?.answers ?? NO_ANSWERS}
             onSaveAnswers={saveAnswers}
+            onComplete={advance}
+          />
+        );
+      case 'review':
+        return (
+          <ReviewStep
+            key={step.id}
+            step={step}
+            onSaveAnswers={list => saveAnswers(step.questionId, list)}
             onComplete={advance}
           />
         );

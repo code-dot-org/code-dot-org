@@ -31,6 +31,13 @@ export interface PathwayContextValue {
   ) => void;
   /** What the shell's own AI calls present for an access token. */
   aiContext: AichatContext;
+  /**
+   * Whether the student asked, on a review step, for the project to be
+   * built at the next project step with a prompt. The review sets it, that
+   * step spends it, and leaving the checkpoint drops it.
+   */
+  buildRequested: boolean;
+  setBuildRequested: (requested: boolean) => void;
 }
 
 export const PathwayContext = createContext<PathwayContextValue | null>(null);
