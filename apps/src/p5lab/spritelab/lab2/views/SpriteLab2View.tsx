@@ -415,9 +415,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // The catalog's blocks are the ones no earlier level of the lesson
   // required (blockCatalog.ts); outside a lesson there are none.
   const {levelPropertiesMap} = useLevelProperties();
-  // Compared item by item: the levels list is built fresh on every read, and
-  // a new array each render would re-derive the catalog and so rebuild the
-  // toolbox.
+  // getCurrentLevels returns a new list every time it is called. shallowEqual
+  // compares the ids one by one, so this value only changes when the lesson's
+  // levels do. Without it, every render would rebuild the toolbox.
   const lessonLevelIds = useAppSelector(
     state =>
       (getCurrentLevels(state) as {id: string | number}[] | undefined)?.map(
