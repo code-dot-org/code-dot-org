@@ -46,6 +46,9 @@
     "mini_toolbox": "false",
     "hide_pause_button": "false",
     "enable_big_playspace": "false",
+    "level_mode": {
+      "kind": "freeplay"
+    },
     "toolbox_definition": {
       "kind": "categoryToolbox",
       "contents": [
