@@ -121,6 +121,28 @@ describe('MultiChoiceQuestionContainer', () => {
     expect(screen.getAllByText('Incorrect')).toHaveLength(1);
   });
 
+  it('offers a typed answer after the choices, picked by typing', () => {
+    const onSelectChoice = jest.fn();
+    const onChangeText = jest.fn();
+    render(
+      <MultiChoiceQuestionContainer
+        question={QUESTION}
+        selectedChoiceId={null}
+        onSelectChoice={onSelectChoice}
+        other={{id: 'other', placeholder: 'Your own', text: '', onChangeText}}
+      />
+    );
+    const radios = screen.getAllByRole('radio');
+    expect(radios).toHaveLength(3);
+    expect(radios[2]).toHaveAccessibleName(/C\. Other/);
+
+    fireEvent.change(screen.getByRole('textbox', {name: 'Your own'}), {
+      target: {value: 'Nine'},
+    });
+    expect(onChangeText).toHaveBeenCalledWith('Nine');
+    expect(onSelectChoice).toHaveBeenCalledWith('other');
+  });
+
   it('disables every option when disabled', () => {
     render(
       <MultiChoiceQuestionContainer

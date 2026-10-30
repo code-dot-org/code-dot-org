@@ -447,25 +447,48 @@ describe('findReferenceProblems', () => {
     ]);
   });
 
+  it('accepts a typed answer on a question', () => {
+    const raw = served();
+    Object.assign(questionOf(raw), {
+      allowOther: {placeholder: 'Or type your own'},
+    });
+    expect(problemsOf(raw)).toEqual([]);
+  });
+
+  it("flags a choice that takes the typed answer's id", () => {
+    const raw = served();
+    const question = questionOf(raw);
+    if (question.type !== 'MultipleChoiceQuestion') throw new Error();
+    question.choices.push({id: 'other', text: 'Other'});
+    expect(problemsOf(raw)).toEqual([
+      "checkpoints.intro.steps.quiz.questions.0: choice id 'other' is reserved for a typed answer",
+    ]);
+  });
+
   describe('showIf', () => {
     // A survey question in the intro, followed by the step under test.
-    const branched = (showIf: {
-      stepId: string;
-      questionId: number;
-      choiceId: string;
-    }): Raw => {
+    const branched = (
+      showIf: {stepId: string; questionId: number; choiceId: string},
+      allowOther = false
+    ): Raw => {
       const raw = served();
       const question = questionOf(raw);
       if (question.type !== 'MultipleChoiceQuestion') throw new Error();
       delete question.correctChoiceId;
+      if (allowOther) question.allowOther = {};
       raw.checkpoints[0].steps.push({...panels('branch'), showIf});
       return raw;
     };
     const where = 'checkpoints.intro.steps.branch.showIf';
 
-    it('accepts a condition on an earlier choice', () => {
+    it('accepts a condition on an earlier choice, or the typed answer where allowed', () => {
       expect(
         problemsOf(branched({stepId: 'quiz', questionId: 1, choiceId: 'b'}))
+      ).toEqual([]);
+      expect(
+        problemsOf(
+          branched({stepId: 'quiz', questionId: 1, choiceId: 'other'}, true)
+        )
       ).toEqual([]);
     });
 
@@ -493,10 +516,13 @@ describe('findReferenceProblems', () => {
       ).toEqual([`${where}: 'quiz' has no multiple choice question 7`]);
     });
 
-    it('flags a choice the question lacks', () => {
+    it('flags a choice the question lacks, including a typed answer it does not allow', () => {
       expect(
         problemsOf(branched({stepId: 'quiz', questionId: 1, choiceId: 'z'}))
       ).toEqual([`${where}: 'z' is not one of question 1's choices`]);
+      expect(
+        problemsOf(branched({stepId: 'quiz', questionId: 1, choiceId: 'other'}))
+      ).toEqual([`${where}: 'other' is not one of question 1's choices`]);
     });
   });
 
@@ -704,6 +730,19 @@ describe('evidence fields', () => {
       `${where}.0.measures: a question with a correctChoiceId measures one evidenceLevel, not evidenceLevels by choice`,
       `${where}.1.measures: evidenceLevel needs a correctChoiceId; a survey question lists evidenceLevels by choice`,
     ]);
+  });
+
+  it('accepts an evidence level for the typed answer only where the question allows one', () => {
+    const raw = served();
+    const question = questionOf(raw);
+    if (question.type !== 'MultipleChoiceQuestion') throw new Error();
+    delete question.correctChoiceId;
+    question.measures = {skillId: 'prompting', evidenceLevels: {other: 1}};
+    expect(problemsOf(raw)).toEqual([
+      "checkpoints.intro.steps.quiz.questions.0.measures: 'other' is not one of its choices",
+    ]);
+    question.allowOther = {};
+    expect(problemsOf(raw)).toEqual([]);
   });
 
   it('flags a choice id that is not among the choices', () => {

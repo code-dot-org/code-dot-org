@@ -71,3 +71,18 @@
   clip-path: inset(50%);
   white-space: nowrap;
 }
+
+.otherInput {
+  width: 100%;
+  margin-top: 8px;
+  padding: 10px 12px;
+  border: 1px solid var(--border-neutral-primary);
+  border-radius: var(--shape-sm);
+  background: var(--background-neutral-primary);
+  color: inherit;
+  // Matches ChoiceLabel's body2 text.
+  font: inherit;
+  font-size: 1rem;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
