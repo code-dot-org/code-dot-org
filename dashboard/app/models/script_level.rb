@@ -66,7 +66,6 @@ class ScriptLevel < ApplicationRecord
   belongs_to :activity_section, optional: true
 
   has_and_belongs_to_many :levels
-  has_and_belongs_to_many :objectives
   has_many :callouts, inverse_of: :script_level
   has_many :levels_script_levels # join table. we need this association for seeding logic
   has_many :objectives_script_levels, dependent: :delete_all
