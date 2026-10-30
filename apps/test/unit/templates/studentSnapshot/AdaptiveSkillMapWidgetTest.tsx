@@ -2,8 +2,6 @@ import {fireEvent, render, screen, waitFor} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
-import {Checkpoint} from '@cdo/apps/adaptive/types';
-import {layoutDestinations} from '@cdo/apps/adaptive/views/map/layout/destinations';
 import AdaptiveSkillMapWidget from '@cdo/apps/templates/studentSnapshot/adaptiveSkillMapWidget';
 
 jest.mock('@cdo/apps/util/HttpClient', () => ({
@@ -216,7 +214,7 @@ describe('AdaptiveSkillMapWidget', () => {
     const originalResizeObserver = window.ResizeObserver;
 
     beforeEach(() => {
-      // jsdom lays nothing out, so the board measures this box.
+      // jsdom lays nothing out, so the map measures this box.
       window.ResizeObserver = class {
         observe() {}
         disconnect() {}
@@ -233,23 +231,34 @@ describe('AdaptiveSkillMapWidget', () => {
       window.ResizeObserver = originalResizeObserver;
     });
 
-    it('opens scrolled down to the root checkpoint', async () => {
-      const pathway = {...PATHWAY, map: {layout: 'destinations'}};
-      respondWith({pathway, progress: PROGRESS});
+    it('opens with the root checkpoint at the center of the view', async () => {
+      // Where the root's circle sits in the scrolled content.
+      const ROOT = {x: 300, y: 500, size: 20};
+      const box = (left: number, top: number, width: number, height: number) =>
+        ({left, top, width, height} as DOMRect);
+      jest
+        .spyOn(HTMLElement.prototype, 'getBoundingClientRect')
+        .mockImplementation(function (this: HTMLElement) {
+          if (this.dataset.checkpointId !== 'intro') {
+            return box(0, 0, WIDTH, HEIGHT);
+          }
+          const view = this.closest('.view') as HTMLElement;
+          return box(
+            ROOT.x - view.scrollLeft,
+            ROOT.y - view.scrollTop,
+            ROOT.size,
+            ROOT.size
+          );
+        });
+      respondWith({pathway: PATHWAY, progress: PROGRESS});
       renderWidget();
       const root = await screen.findByRole('button', {
         name: 'Checkpoint intro: Complete',
       });
 
-      const layout = layoutDestinations(pathway.checkpoints as Checkpoint[], 0);
-      // The widget starts zoomed out to three quarters of the width, too
-      // narrow to scroll sideways, so only the vertical scroll is reachable.
-      const fit = (WIDTH / layout.width) * 0.75;
-      const fitTop = Math.max(0, (HEIGHT - layout.height * fit) / 2);
-      const {y} = layout.nodes.intro;
-      const view = root.closest('.scrolling') as HTMLElement;
-      expect(layout.height * fit).toBeGreaterThan(HEIGHT);
-      expect(view.scrollTop).toBeCloseTo(fitTop + y * fit - HEIGHT / 2);
+      const view = root.closest('.view') as HTMLElement;
+      expect(view.scrollLeft).toBeCloseTo(ROOT.x + ROOT.size / 2 - WIDTH / 2);
+      expect(view.scrollTop).toBeCloseTo(ROOT.y + ROOT.size / 2 - HEIGHT / 2);
     });
   });
 

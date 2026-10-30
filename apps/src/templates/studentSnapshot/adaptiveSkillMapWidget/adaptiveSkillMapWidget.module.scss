@@ -1,9 +1,5 @@
-// The map measures this box to scale itself, so it needs a definite height
-// and a flex column for the map's own flex: 1.
+// The map measures this box to scale itself, so it needs a definite height.
 .map {
-  position: relative;
-  display: flex;
-  flex-direction: column;
   height: 100%;
 }
 
@@ -22,11 +18,4 @@
   top: 8px;
   right: 24px;
   z-index: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  padding: 4px;
-  border: 1px solid var(--borders-neutral-primary);
-  border-radius: 4px;
-  background: var(--background-neutral-primary);
 }

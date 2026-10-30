@@ -1,5 +1,4 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {IconButton, Typography} from '@mui/material';
+import {Typography} from '@mui/material';
 import React, {useEffect, useMemo, useState} from 'react';
 
 import {EMPTY_PROGRESS, Progress} from '@cdo/apps/adaptive/progress/model';
@@ -8,6 +7,7 @@ import {parsePathway} from '@cdo/apps/adaptive/schema';
 import {Pathway} from '@cdo/apps/adaptive/types';
 import {resolveMapSettings} from '@cdo/apps/adaptive/views/map/mapSettings';
 import MapView from '@cdo/apps/adaptive/views/map/MapView';
+import MapZoom from '@cdo/apps/adaptive/views/map/MapZoom';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 import WidgetTemplate from '../widgetTemplate';
@@ -57,61 +57,32 @@ const parseOrUndefined = (raw: unknown): Pathway | undefined => {
   }
 };
 
-const ZoomControls: React.FC<{
-  level: number;
-  setLevel: (level: number) => void;
-}> = ({level, setLevel}) => (
-  <div className={styles.zoomControls}>
-    <IconButton
-      size="small"
-      aria-label="Zoom in"
-      disabled={level === ZOOM_LEVELS.length - 1}
-      onClick={() => setLevel(level + 1)}
-    >
-      <FontAwesomeV6Icon iconName="magnifying-glass-plus" />
-    </IconButton>
-    <IconButton
-      size="small"
-      aria-label="Zoom out"
-      disabled={level === 0}
-      onClick={() => setLevel(level - 1)}
-    >
-      <FontAwesomeV6Icon iconName="magnifying-glass-minus" />
-    </IconButton>
-    <IconButton
-      size="small"
-      aria-label="Reset zoom"
-      disabled={level === START_ZOOM}
-      onClick={() => setLevel(START_ZOOM)}
-    >
-      <FontAwesomeV6Icon iconName="expand" />
-    </IconButton>
-  </div>
-);
-
 const SkillMap: React.FC<{
   pathway: Pathway;
   progress: Progress;
-  zoomLevel: number;
-  setZoomLevel: (level: number) => void;
-}> = ({pathway, progress, zoomLevel, setZoomLevel}) => {
+}> = ({pathway, progress}) => {
   const {statusMap} = usePathwayStatus(pathway, progress);
   // The snapshot page's own query string must not pick the layout.
   const settings = useMemo(() => resolveMapSettings(pathway, ''), [pathway]);
   // The root, which a student starts from.
   const startId = pathway.checkpoints.find(c => !c.requires?.length)?.id;
   return (
-    <div className={styles.map}>
-      <ZoomControls level={zoomLevel} setLevel={setZoomLevel} />
+    <MapZoom
+      levels={ZOOM_LEVELS}
+      startLevel={START_ZOOM}
+      fit="width"
+      startId={startId}
+      className={styles.map}
+      controlsClassName={styles.zoomControls}
+    >
       <MapView
         pathway={pathway}
         statusMap={statusMap}
         settings={settings}
-        zoom={ZOOM_LEVELS[zoomLevel]}
-        startId={startId}
+        fit="width"
         onSelect={noop}
       />
-    </div>
+    </MapZoom>
   );
 };
 
@@ -128,7 +99,6 @@ const AdaptiveSkillMapWidget: React.FC<AdaptiveSkillMapWidgetProps> = ({
   hasAdaptiveLevel,
 }) => {
   const [fetched, setFetched] = useState<Fetched>({state: 'loading'});
-  const [zoomLevel, setZoomLevel] = useState(START_ZOOM);
 
   useEffect(() => {
     if (
@@ -174,14 +144,7 @@ const AdaptiveSkillMapWidget: React.FC<AdaptiveSkillMapWidgetProps> = ({
   if (!hasStudent) {
     content = <Message text="Select a student to see their skill map." />;
   } else if (pathway) {
-    content = (
-      <SkillMap
-        pathway={pathway}
-        progress={progress}
-        zoomLevel={zoomLevel}
-        setZoomLevel={setZoomLevel}
-      />
-    );
+    content = <SkillMap pathway={pathway} progress={progress} />;
   } else {
     content = <Message text="Skill map unavailable." />;
   }
