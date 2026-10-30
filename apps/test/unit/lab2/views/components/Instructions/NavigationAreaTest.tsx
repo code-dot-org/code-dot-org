@@ -355,6 +355,17 @@ describe('NavigationArea', () => {
       expect(btn.dataset.tooltip).toBe('To continue, submit your prediction');
     });
 
+    it('waits for the checklist, then continues', () => {
+      renderDefault({objectivesDone: false});
+      let btn = getContinueButton();
+      expect(btn.dataset.disabled).toBe('true');
+      expect(btn.dataset.tooltip).toBe('To continue, finish the checklist');
+      document.body.innerHTML = '';
+      renderDefault({objectivesDone: true});
+      btn = getContinueButton();
+      expect(btn.dataset.disabled).toBe('false');
+    });
+
     it('is enabled when isPredictLevel and predict is submitted', () => {
       store.dispatch(setHasSubmittedResponse(true));
       renderDefault({

@@ -1,25 +1,18 @@
-import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {MuiCustomDialog as CustomDialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Markdown} from '@code-dot-org/markdown';
 import {Button as MuiButton} from '@mui/material';
+import classNames from 'classnames';
 import React, {useState} from 'react';
 
+import useThemeMode from '@cdo/apps/pixelEditor/useThemeMode';
 import {getRunButtonSx} from '@cdo/apps/templates/runButtonSx';
 
 import {CatalogEntry} from '../blockCatalog';
-import {SceneType} from '../types';
 
 import moduleStyles from './block-catalog.module.scss';
 
 const TITLE = 'Discover blocks';
-
-// Where a block can be used, by the scene type whose toolbox offers it.
-const SCENE_TYPE_NOTES: Record<SceneType, string> = {
-  platform: 'For platformer scenes',
-  story: 'For story scenes',
-};
-const ANY_SCENE_NOTE = 'For any scene';
 
 interface BlockCatalogDialogProps {
   entries: readonly CatalogEntry[];
@@ -39,8 +32,7 @@ const BlockCatalogDialog: React.FunctionComponent<BlockCatalogDialogProps> = ({
   onAdd,
   onClose,
 }) => {
-  const {theme} = useTheme();
-  const mode = theme === 'Dark' ? 'dark' : 'light';
+  const mode = useThemeMode();
   // Opens on the first block not yet added, so the next choice is in view.
   const [selectedType, setSelectedType] = useState(
     () => (entries.find(entry => !chosen.has(entry.type)) ?? entries[0])?.type
@@ -49,7 +41,7 @@ const BlockCatalogDialog: React.FunctionComponent<BlockCatalogDialogProps> = ({
   const added = !!selected && chosen.has(selected.type);
 
   return (
-    <div className={moduleStyles.dialogHost} data-theme={mode}>
+    <div className={moduleStyles.dialogHost}>
       <CustomDialog
         aria-label={TITLE}
         onClose={onClose}
@@ -96,18 +88,23 @@ const BlockCatalogDialog: React.FunctionComponent<BlockCatalogDialogProps> = ({
               <>
                 <div className={moduleStyles.infoHeader}>
                   <h3>{selected.help.title}</h3>
-                  <span className={moduleStyles.scenePill}>
-                    {selected.sceneType
-                      ? SCENE_TYPE_NOTES[selected.sceneType]
-                      : ANY_SCENE_NOTE}
-                  </span>
                 </div>
                 <div className={moduleStyles.infoRow}>
-                  {selected.help.animation && (
+                  {selected.help.animation ? (
                     <img
                       className={moduleStyles.animation}
                       src={selected.help.animation.src}
                       alt={selected.help.animation.alt}
+                    />
+                  ) : (
+                    // An empty outline where the block's picture goes, for an
+                    // entry that has none yet.
+                    <div
+                      className={classNames(
+                        moduleStyles.animation,
+                        moduleStyles.animationPending
+                      )}
+                      aria-hidden
                     />
                   )}
                   <div className={moduleStyles.infoText}>

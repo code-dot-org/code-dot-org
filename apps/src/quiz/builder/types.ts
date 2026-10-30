@@ -1,9 +1,4 @@
-import {QuizQuestionType} from '../types';
-
-export interface QuizQuestionItem {
-  id: string;
-  text: string;
-}
+import {QuizQuestionItem, QuizQuestionType} from '../types';
 
 // A subset of the Ruby Standard#summarize_for_lesson_edit payload - the
 // fields the builder reads today. The rest ride along untyped.

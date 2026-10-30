@@ -19,6 +19,7 @@ import {
   saveModel,
   setCurrentPanel,
 } from './redux';
+import {getData} from './selectors';
 import {useTrainingData} from './TrainingDataContext';
 import type {
   InstructionsKey,
@@ -30,6 +31,7 @@ import type {
 import ColumnAnalysis from './UIComponents/ColumnAnalysis';
 import DataCard from './UIComponents/DataCard';
 import DataDisplay from './UIComponents/DataDisplay';
+import EmptyState from './UIComponents/EmptyState';
 import ModelCard from './UIComponents/ModelCard';
 import Results from './UIComponents/Results';
 import SaveModel from './UIComponents/SaveModel';
@@ -267,7 +269,8 @@ const App = ({
   usePretrainOnLoad(restoringModel);
 
   const datasetPending = useAppSelector(
-    state => !!state.csvfile && state.data.length === 0 && !state.invalidData
+    state =>
+      !!state.csvfile && getData(state).length === 0 && !state.invalidData
   );
   /*
     Datasets load while on the select dataset panel, don't hide that panel
@@ -276,6 +279,12 @@ const App = ({
   const loading =
     currentPanel !== 'selectDataset' &&
     (datasetPending || isProjectLoading || restoringModel);
+  // The picker reports its own failures.
+  const datasetFailed = useAppSelector(
+    state =>
+      state.currentPanel !== 'selectDataset' &&
+      state.invalidData === 'loadFailed'
+  );
 
   // Notify the consumer of instructions key changes when they occur.
   useEffect(() => {
@@ -300,7 +309,22 @@ const App = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [latestResult]);
 
-  // TODO: don't load forever if the dataset fails to load.
+  if (datasetFailed) {
+    return (
+      <div className={styles.app} style={colorVariables}>
+        <BodyContainer flush>
+          <div className={styles.panelRow} role="alert">
+            <EmptyState
+              iconName="triangle-exclamation"
+              title="Dataset could not be loaded"
+              message="Reload the page to try again."
+            />
+          </div>
+        </BodyContainer>
+      </div>
+    );
+  }
+
   if (loading) {
     return <div className={styles.app} style={colorVariables} />;
   }

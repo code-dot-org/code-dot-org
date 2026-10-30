@@ -1,7 +1,8 @@
 <Ailab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 67,
-  "created_at": "2026-10-09T16:01:30.000Z",
+  "created_at": "2026-10-12T09:33:13.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -11,7 +12,6 @@
     "hide_share_and_remix": "false",
     "mode": "{\r\n  \"datasets\": [\r\n    \"zoo\"\r\n  ],\r\n  \"trainer\": \"decisionTree\",\r\n  \"requireAccuracy\": 75\r\n}"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-10-09T12:01:30.924-04:00\",\"changed\":[\"cloned from \\\"UI Test Allthelevels AI Lab Lab2 Decision Tree\\\"\"],\"cloned_from\":\"UI Test Allthelevels AI Lab Lab2 Decision Tree\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-10-09T12:01:30.924-04:00\",\"changed\":[\"cloned from \\\"UI Test Allthelevels AI Lab Lab2 Decision Tree\\\"\"],\"cloned_from\":\"UI Test Allthelevels AI Lab Lab2 Decision Tree\"},{\"changed_at\":\"2026-10-27 12:57:54 +0000\",\"changed\":[\"mode\"],\"changed_by_id\":22403,\"changed_by_email\":\"alex.brown@code.org\"},{\"changed_at\":\"2026-10-27 13:53:28 +0000\",\"changed\":[\"mode\"],\"changed_by_id\":22403,\"changed_by_email\":\"alex.brown@code.org\"}]"
 }]]></config>
 </Ailab>

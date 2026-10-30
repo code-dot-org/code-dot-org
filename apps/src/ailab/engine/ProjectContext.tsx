@@ -15,7 +15,7 @@ import {
   sortByColumnOrder,
 } from './helpers/projectColumns';
 import {useAppSelector} from './hooks';
-import {getSelectableColumns} from './selectors';
+import {getData, getSelectableColumns} from './selectors';
 import type {TrainingRun} from './trainers/types';
 import {defaultProject, type AilabProject} from './types';
 import {useResetSignal} from './useResetSignal';
@@ -62,6 +62,7 @@ export const ProjectProvider = ({
   const [project, setProject] = useState<AilabProject>(defaultProject);
   const [isProjectLoaded, setIsProjectLoaded] = useState(false);
   const previousRun = useRef<TrainingRunOutputs | undefined>(undefined);
+  const openedProject = useRef<AilabProject | undefined>(undefined);
   const onProjectChangeRef = useRef(onProjectChange);
   onProjectChangeRef.current = onProjectChange;
   // A project waiting for the dataset to load.
@@ -74,15 +75,12 @@ export const ProjectProvider = ({
   const isProjectLoading =
     pendingProject !== undefined && datasetSelectionPending;
   const isDefaultProject = project === defaultProject;
-  const data = useAppSelector(state => state.data);
+  const data = useAppSelector(getData);
   const presetColumns = useAppSelector(state => state.presetColumns);
   const selectableColumns = useAppSelector(getSelectableColumns);
   const lockedLabel = useAppSelector(state => !!state.mode?.hideSelectLabel);
   const lockedFeatures = useAppSelector(state => !!state.mode?.lockFeatures);
-  const columnsByDataType = useAppSelector(state => state.columnsByDataType);
-  const datasetDescribed =
-    data.length > 0 &&
-    Object.keys(data[0]).every(column => columnsByDataType[column]);
+  const datasetLoaded = useAppSelector(state => !!state.dataset);
 
   useResetSignal(
     useCallback(() => {
@@ -165,17 +163,17 @@ export const ProjectProvider = ({
         selectableColumns,
         data
       );
-      setProject(
-        presetColumns
-          ? applyPresetColumns(
-              reconciledProject,
-              presetColumns,
-              lockedLabel,
-              lockedFeatures,
-              data
-            )
-          : reconciledProject
-      );
+      const opened = presetColumns
+        ? applyPresetColumns(
+            reconciledProject,
+            presetColumns,
+            lockedLabel,
+            lockedFeatures,
+            data
+          )
+        : reconciledProject;
+      openedProject.current = opened;
+      setProject(opened);
       setIsProjectLoaded(true);
     },
     [selectableColumns, data, presetColumns, lockedLabel, lockedFeatures]
@@ -197,17 +195,21 @@ export const ProjectProvider = ({
   }, [initialProject]);
 
   useEffect(() => {
-    if (pendingProject && datasetDescribed) {
+    if (pendingProject && datasetLoaded) {
       setPendingProject(undefined);
       applyProject(pendingProject);
     }
-  }, [pendingProject, datasetDescribed, applyProject]);
+  }, [pendingProject, datasetLoaded, applyProject]);
 
-  // TODO: skip notifying on project change if the change is due to on-load
-  // reconciliation of the project with the saved state, as that is not a user
-  // change and shouldn't count as an 'edit'.
+  // Only report project changes that are not the initial opened project
+  // or the default project. Those are not real edits by students, and would
+  // be recreated on a reload.
   useEffect(() => {
-    if (isProjectLoaded && !isDefaultProject) {
+    if (
+      isProjectLoaded &&
+      !isDefaultProject &&
+      project !== openedProject.current
+    ) {
       onProjectChangeRef.current?.(project);
     }
   }, [isProjectLoaded, isDefaultProject, project]);

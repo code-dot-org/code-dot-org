@@ -11,8 +11,9 @@ import {
   CheckpointStatusMap,
   GeneratedContent,
   Progress,
+  ValidationAttempt,
 } from '../progress/model';
-import {Checkpoint, Pathway} from '../types';
+import {Checkpoint, Pathway, Step} from '../types';
 
 export interface PathwayContextValue {
   pathway: Pathway;
@@ -22,6 +23,11 @@ export interface PathwayContextValue {
   saveGeneratedInstructions: (
     stepId: string,
     content: GeneratedContent
+  ) => void;
+  /** Records one check of a project step's work. */
+  recordValidation: (
+    step: Step,
+    attempt: Omit<ValidationAttempt, 'at'>
   ) => void;
   /** What the shell's own AI calls present for an access token. */
   aiContext: AichatContext;

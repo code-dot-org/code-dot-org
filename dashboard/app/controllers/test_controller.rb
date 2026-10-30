@@ -190,7 +190,7 @@ class TestController < ApplicationController
   # The name carries the curriculum data partition's "ui-test-" prefix, which is
   # what lets the unit hold "UI Test " levels: those are the only levels a test
   # environment seeds once the partition is complete, and ScriptLevel refuses to
-  # put one in any other unit. See dashboard/test/ui/config/README.md.
+  # put one in any other unit. See dashboard/config/PARTITIONS.md.
   def create_migrated_script
     script = Retryable.retryable(on: ActiveRecord::RecordNotUnique) do
       script_name = "ui-test-temp-script-#{Time.now.to_i}-#{rand(1_000_000)}"

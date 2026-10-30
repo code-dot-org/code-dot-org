@@ -1,37 +1,33 @@
+import HttpClient from '@cdo/apps/util/HttpClient';
+
 import {ColumnTypes} from './constants';
-import {getDatasetLoadId, isCurrentDatasetLoad} from './datasetLoad';
-import {setImportedMetadata, setColumnsByDataType} from './redux';
-import {store} from './store';
 import type {Metadata} from './types';
 
-// If a newer load starts first or the fetch fails, the promise never resolves.
-export const parseJSON = (jsonfile: string): Promise<void> =>
-  new Promise(resolve => {
-    const loadId = getDatasetLoadId();
-    const rawFile = new XMLHttpRequest();
-    rawFile.overrideMimeType('application/json');
-    rawFile.open('GET', jsonfile, true);
-    rawFile.onreadystatechange = function () {
-      if (
-        rawFile.readyState === 4 &&
-        rawFile.status === 200 &&
-        isCurrentDatasetLoad(loadId)
-      ) {
-        updateData(rawFile.responseText);
-        resolve();
-      }
-    };
-    rawFile.send(null);
-  });
+export type MetadataResult =
+  | {ok: true; metadata: Metadata}
+  | {ok: false; reason: 'loadFailed'};
 
-const updateData = (result: string): void => {
-  const metadata: Metadata = JSON.parse(result);
-  store.dispatch(setImportedMetadata(metadata));
+const LOAD_FAILED: MetadataResult = {ok: false, reason: 'loadFailed'};
 
-  if (metadata.fields) {
-    for (const field of metadata.fields) {
-      const fieldType = field.type ? field.type : ColumnTypes.CATEGORICAL;
-      store.dispatch(setColumnsByDataType(field.id!, fieldType));
-    }
+/* Fetches a dataset's metadata. Resolves even when the fetch fails. */
+export const fetchMetadata = async (
+  jsonfile: string
+): Promise<MetadataResult> => {
+  try {
+    const {value} = await HttpClient.fetchJson<Metadata>(jsonfile);
+    return {ok: true, metadata: value};
+  } catch {
+    return LOAD_FAILED;
   }
 };
+
+/* The type each column is described as. A field with no type falls back to categorical. */
+export const columnTypesFromMetadata = (
+  metadata: Metadata
+): Record<string, string> =>
+  Object.fromEntries(
+    (metadata.fields ?? []).map(field => [
+      field.id!,
+      field.type ? field.type : ColumnTypes.CATEGORICAL,
+    ])
+  );

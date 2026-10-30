@@ -11,7 +11,7 @@ import {hasCurrentTrainingResult} from '../helpers/navigationValidation';
 import {deepEqual, useAppDispatch, useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
 import {readyToTrain, setTrainingModalStep} from '../redux';
-import {getSelectableColumns} from '../selectors';
+import {getDatasetId, getSelectableColumns} from '../selectors';
 import {useTrainingRun} from '../useTrainingRun';
 
 import FieldLabel from './FieldLabel';
@@ -22,7 +22,7 @@ import styles from './trainPanel.module.scss';
 
 const TrainPanel = () => {
   const dispatch = useAppDispatch();
-  const datasetId = useAppSelector(state => state.metadata?.name || '');
+  const datasetId = useAppSelector(state => getDatasetId(state) || '');
   const labelIsPreset = useAppSelector(state => !!state.mode?.hideSelectLabel);
   const featuresLocked = useAppSelector(state => !!state.mode?.lockFeatures);
   const pretrained = useAppSelector(state => !!state.mode?.pretrained);
