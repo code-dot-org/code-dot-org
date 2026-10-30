@@ -115,17 +115,16 @@ class DSLDefinedLevelTest < ActiveSupport::TestCase
   test 'existing_filename greps only the tree selected by the level name' do
     level_name = 'UI Test DSLDefined existing_filename probe'
     contents = "name '#{level_name}'\n"
-    prod_file = Rails.root.join('config/scripts/ui_test_dsldefined_existing_filename_probe.match')
-    ui_test_file = Rails.root.join('test/ui/config/scripts/ui_test_dsldefined_existing_filename_probe.match')
-    [prod_file, ui_test_file].each do |file|
-      FileUtils.mkdir_p(File.dirname(file))
-      File.write(file, contents)
-    end
+    with_tmp_rails_root do |root|
+      prod_file = root.join('config/scripts/ui_test_dsldefined_existing_filename_probe.match')
+      ui_test_file = root.join('test/ui/config/scripts/ui_test_dsldefined_existing_filename_probe.match')
+      [prod_file, ui_test_file].each do |file|
+        FileUtils.mkdir_p(File.dirname(file))
+        File.write(file, contents)
+      end
 
-    level = Match.new(name: level_name)
-    assert_equal ui_test_file.to_s, level.existing_filename
-  ensure
-    FileUtils.rm_f(prod_file)
-    FileUtils.rm_f(ui_test_file)
+      level = Match.new(name: level_name)
+      assert_equal ui_test_file.to_s, level.existing_filename
+    end
   end
 end

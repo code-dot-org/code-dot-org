@@ -1,4 +1,4 @@
-import {START_SOURCES} from '@cdo/apps/lab2/constants';
+import {START_SOURCES, TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
 import currentLocale from '@cdo/apps/util/currentLocale';
 import getScriptData, {hasScriptData} from '@cdo/apps/util/getScriptData';
 
@@ -58,6 +58,17 @@ export function getAppOptionsEditBlocks(): string | undefined {
 
 export function getIsStartMode() {
   return getAppOptionsEditBlocks() === START_SOURCES;
+}
+
+/** Whether a levelbuilder is editing the level's start sources, toolbox or
+    exemplar, rather than a student working in a project. */
+export function getIsLevelEditMode() {
+  const editBlocks = getAppOptionsEditBlocks();
+  return (
+    editBlocks === START_SOURCES ||
+    editBlocks === TOOLBOX_BLOCKS ||
+    !!getAppOptionsEditingExemplar()
+  );
 }
 
 /**

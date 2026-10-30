@@ -379,7 +379,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
     );
   };
 
-  // Like answer text, a failed save keeps the pairs; submit resends them.
+  // Do not rollback state update on failed save -- submit resends pairs.
   const handleChangePairs = (questionId: number, pairs: MatchPairs) => {
     const responseData = {pairs};
     setResponsesByQuestionId(prev => ({

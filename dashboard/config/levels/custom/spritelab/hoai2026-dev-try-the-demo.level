@@ -1,0 +1,260 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "properties": {
+    "block_pools": [
+      "GamelabJr",
+      "GameDev"
+    ],
+    "encrypted": "false",
+    "header_label": "Try the demo",
+    "helper_libraries": [
+      "NativeSpriteLab",
+      "zGameDev"
+    ],
+    "hide_custom_blocks": true,
+    "hide_share_and_remix": "true",
+    "level_mode": {
+      "kind": "play"
+    },
+    "long_instructions": "# Try the demo\nHere is a game like the one you will make. Use the arrow keys to run and jump up to the crystal.",
+    "no_project": true,
+    "objectives": {
+      "title": "**Try the demo**\n\nHere is a game like the one you will make.",
+      "items": [
+        {
+          "text": "Use the arrow keys to run and jump up to the crystal.",
+          "check": {
+            "kind": "reach",
+            "role": "demo-treasure"
+          }
+        }
+      ]
+    },
+    "pinned_scene": {
+      "id": "demo-scene",
+      "name": "Demo"
+    },
+    "skin": "gamelab",
+    "standalone_app_name": "spritelab",
+    "start_sources": {
+      "animations": {
+        "orderedKeys": [
+          "25264d82-7179-477f-a3c9-ddc60bea8e2b",
+          "c314c9ee-013d-47f1-a824-426bc92755dd",
+          "5e3eb5e2-0ded-4c14-8a5f-18cc4c1de27c",
+          "adf02487-46fd-4faa-a06b-36db83b39864"
+        ],
+        "propsByKey": {
+          "25264d82-7179-477f-a3c9-ddc60bea8e2b": {
+            "name": "Forest",
+            "sourceUrl": "/blockly/media/spritelab_lab2/demo/background.png",
+            "frameSize": {
+              "x": 600,
+              "y": 600
+            },
+            "frameCount": 1,
+            "looping": true,
+            "frameDelay": 2,
+            "categories": [
+              "backgrounds"
+            ]
+          },
+          "c314c9ee-013d-47f1-a824-426bc92755dd": {
+            "name": "Stone",
+            "sourceUrl": "/blockly/media/spritelab_lab2/blocks/block-2.png",
+            "frameSize": {
+              "x": 256,
+              "y": 256
+            },
+            "frameCount": 1,
+            "looping": true,
+            "frameDelay": 2,
+            "categories": [
+              "blocks"
+            ],
+            "role": "block",
+            "pixelGridSize": 7
+          },
+          "5e3eb5e2-0ded-4c14-8a5f-18cc4c1de27c": {
+            "name": "Crystal",
+            "sourceUrl": "/blockly/media/spritelab_lab2/demo/treasure.png",
+            "frameSize": {
+              "x": 128,
+              "y": 128
+            },
+            "frameCount": 1,
+            "looping": true,
+            "frameDelay": 2,
+            "categories": [
+
+            ],
+            "role": "demo-treasure"
+          },
+          "adf02487-46fd-4faa-a06b-36db83b39864": {
+            "name": "Blob",
+            "sourceUrl": "/blockly/media/spritelab_lab2/demo/blob.png",
+            "frameSize": {
+              "x": 512,
+              "y": 512
+            },
+            "frameCount": 5,
+            "looping": true,
+            "frameDelay": 20,
+            "categories": [
+
+            ],
+            "role": "demo-hero",
+            "poses": {
+              "stand-right": {
+                "start": 0,
+                "count": 2,
+                "frameDelay": 20
+              },
+              "walk-right": {
+                "start": 1,
+                "count": 2,
+                "frameDelay": 8
+              },
+              "jump-right": {
+                "start": 3,
+                "count": 2,
+                "frameDelay": 8
+              }
+            }
+          }
+        }
+      },
+      "source": {
+        "blocks": {
+          "blocks": [
+            {
+              "type": "spritelab2_whenRun",
+              "x": 20,
+              "y": 20,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
+      "scenes": [
+        {
+          "id": "demo-scene",
+          "name": "Demo",
+          "source": {
+            "blocks": {
+              "languageVersion": 0,
+              "blocks": [
+                {
+                  "type": "spritelab2_whenRun",
+                  "x": 20,
+                  "y": 20,
+                  "deletable": false,
+                  "movable": false,
+                  "next": {
+                    "block": {
+                      "type": "gamelab_setBackgroundImageAs",
+                      "fields": {
+                        "IMG": "\"Forest\""
+                      },
+                      "next": {
+                        "block": {
+                          "type": "spritelab2_setAsPlatformPlayer",
+                          "fields": {
+                            "ANIMATION_NAME": "\"Blob\""
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "gamelab_checkTouching",
+                  "x": 20,
+                  "y": 220,
+                  "fields": {
+                    "CONDITION": "\"when\""
+                  },
+                  "inputs": {
+                    "SPRITE1": {
+                      "shadow": {
+                        "type": "gamelab_allSpritesWithAnimation",
+                        "fields": {
+                          "ANIMATION": "\"Blob\""
+                        }
+                      }
+                    },
+                    "SPRITE2": {
+                      "shadow": {
+                        "type": "gamelab_allSpritesWithAnimation",
+                        "fields": {
+                          "ANIMATION": "\"Crystal\""
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "spritelab2_burst",
+                      "fields": {
+                        "COUNT": 20,
+                        "LOOK": "confetti",
+                        "ORIGIN": "\"Crystal\""
+                      },
+                      "next": {
+                        "block": {
+                          "type": "spritelab2_playSound",
+                          "fields": {
+                            "SOUND": "sound://category_achievements/melodic_win_1.mp3"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "world": {
+            "size": 30,
+            "rows": [
+              "",
+              "",
+              "...O",
+              "..BBB",
+              "",
+              "......BBB",
+              "",
+              "...BBB",
+              "S",
+              "BBBBBBBBBB"
+            ],
+            "legend": {
+              "B": {
+                "image": "Stone",
+                "kind": "block"
+              },
+              "S": {
+                "image": "Blob",
+                "kind": "sprite"
+              },
+              "O": {
+                "image": "Crystal",
+                "kind": "sprite"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "uses_lab2": "true",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "game_id": 64,
+  "created_at": "2026-10-28T00:00:00.000Z",
+  "level_num": "custom",
+  "user_id": 1
+}]]></config>
+  <blocks/>
+</GamelabJr>

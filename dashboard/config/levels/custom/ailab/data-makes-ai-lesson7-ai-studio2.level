@@ -1,0 +1,17 @@
+<Ailab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 67,
+  "created_at": "2026-10-28T20:51:12.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "mode": "{\r\n  \"trainer\": \"decisionTree\",\r\n  \"reserveLastRows\": true,\r\n  \"datasets\": [\r\n    \"SC1-L07-previs-base\"\r\n  ],\r\n  \"label\": \"Decision\"\r\n}",
+    "uses_lab2": "true",
+    "dynamic_instructions": "{\r\n  \"datasetView\": \"#Training a Model\\n\\nStudent moves: the Predict dropdown, the Using checklist, and Train model. Students train with Mood, Indoors or Outdoors, and Mostly Talking, then read the first question in the tree.\\n\\nTrain with different features, then read the first question in the tree.\",\r\n  \"results\": \"#Examine the Model\\n\\nStudent moves: reading the leaf badges. “This many test scenes landed here, and this many were right.”\\n\\nCompare the accuracy results. Click the to see history\"\r\n}"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-10-28T20:51:12.659+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-lesson7-ai-studio1\\\"\"],\"cloned_from\":\"data-makes-ai-lesson7-ai-studio1\"},{\"changed_at\":\"2026-10-28 20:52:05 +0000\",\"changed\":[\"dynamic_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-29 14:24:09 +0000\",\"changed\":[\"mode\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-29 19:35:28 +0000\",\"changed\":[\"dynamic_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-29 20:06:31 +0000\",\"changed\":[\"mode\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-29 20:06:50 +0000\",\"changed\":[\"mode\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Ailab>

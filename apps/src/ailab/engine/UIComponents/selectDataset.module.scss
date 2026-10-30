@@ -25,6 +25,10 @@
   background-color: var(--background-neutral-secondary);
 }
 
+.alert {
+  margin: 8px;
+}
+
 .upload {
   display: flex;
   align-items: center;
@@ -41,8 +45,4 @@
 
 .upload .fileInput {
   display: none;
-}
-
-.upload .invalidData {
-  color: var(--text-error-primary);
 }

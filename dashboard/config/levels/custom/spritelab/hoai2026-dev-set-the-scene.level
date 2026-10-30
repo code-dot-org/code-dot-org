@@ -1,0 +1,91 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "properties": {
+    "uses_lab2": "true",
+    "block_pools": [
+      "GamelabJr",
+      "GameDev"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab",
+      "zGameDev"
+    ],
+    "standalone_app_name": "spritelab",
+    "skin": "gamelab",
+    "hide_custom_blocks": true,
+    "hide_share_and_remix": "true",
+    "encrypted": "false",
+    "project_template_level_name": "hoai2026-dev-revised-template",
+    "level_mode": {
+      "kind": "code",
+      "imageType": "background",
+      "imageRole": "platform-background",
+      "imageFirst": true
+    },
+    "pinned_scene": {
+      "id": "scene-1",
+      "name": "Scene 1"
+    },
+    "image_role_defaults": {
+      "background": "platform-background"
+    },
+    "toolbox_definition": {
+      "kind": "flyoutToolbox",
+      "contents": [
+        {
+          "kind": "block",
+          "type": "gamelab_setBackgroundImageAs"
+        }
+      ]
+    },
+    "add_blocks": [
+      {
+        "attachTo": "spritelab2_whenRun",
+        "room": {
+          "type": "gamelab_setBackgroundImageAs"
+        }
+      }
+    ],
+    "objectives": {
+      "title": "**Set the scene**",
+      "items": [
+        {
+          "text": "In **Images**, click **New image** and make a background.",
+          "check": {
+            "kind": "image",
+            "imageType": "background"
+          }
+        },
+        {
+          "text": "In **Code**, put **set background** under **when run**.",
+          "check": {
+            "kind": "block",
+            "type": "gamelab_setBackgroundImageAs",
+            "under": "spritelab2_whenRun"
+          }
+        }
+      ]
+    },
+    "long_instructions": "# Set the scene\nIn **Images**, click **New image** and make a background. Then, in **Code**, put **set background** under **when run**.",
+    "header_label": "Set the scene",
+    "callouts": [
+      {
+        "target": "code-tab",
+        "when": {
+          "done": [
+            0
+          ],
+          "tabNot": "Code"
+        }
+      }
+    ],
+    "preload_asset_list": null
+  },
+  "published": true,
+  "game_id": 64,
+  "created_at": "2026-10-28T00:00:00.000Z",
+  "level_num": "custom",
+  "user_id": 1
+}]]></config>
+  <blocks/>
+</GamelabJr>

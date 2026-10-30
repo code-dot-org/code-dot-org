@@ -1,9 +1,11 @@
-import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {MuiCustomDialog as CustomDialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import TextField from '@code-dot-org/component-library/textField';
+import {Button as MuiButton, IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {useState} from 'react';
+
+import useThemeMode from '@cdo/apps/pixelEditor/useThemeMode';
 
 import {GeneratedImageResult} from '../ai/images/imageGeneration';
 import {
@@ -65,6 +67,10 @@ interface ImageDetailsDialogProps extends ImageFormOptions {
   /** No paint entry points: the pane is a plain preview and new images
       offer no blank canvas. */
   paintDisabled?: boolean;
+  /** The level requires a rating (thumbs up or down) on every generated
+      picture. While a fresh picture is unrated, Keep is disabled and the
+      dialog cannot be closed. */
+  verdictRequired?: boolean;
   /** Stored pixel size of the image (one frame of a sheet). */
   resolution?: {x: number; y: number};
   /** Pixel art's physical px per art pixel; sets the resolution row's
@@ -140,6 +146,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
   defaultStyle,
   generationsLeft,
   paintDisabled,
+  verdictRequired,
   pixelated,
   resolution,
   pixelGridSize,
@@ -151,11 +158,15 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
   onSelectAlternative,
 }) => {
   const isNew = animKey === null;
-  const {theme} = useTheme();
-  const mode = theme === 'Dark' ? 'dark' : 'light';
+  const mode = useThemeMode();
   const [view, setView] = useState<'details' | 'generate'>(
     isNew ? 'generate' : 'details'
   );
+  // SentenceScene reports when a generated picture still needs its rating.
+  // While one does, the dialog is given no onClose, which removes its close
+  // button and makes it ignore Escape.
+  const [awaitingVerdict, setAwaitingVerdict] = useState(false);
+  const closable = !verdictRequired || !awaitingVerdict;
   // The student's generate view hosts the sentence scene; the advanced
   // dialog keeps its full form. Both want room for the word menus.
   const sentenceView = view === 'generate' && !advanced;
@@ -232,23 +243,25 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
                 }
               }}
             />
-            <button
-              type="button"
-              className={moduleStyles.iconButton}
+            <MuiIconButton
+              variant="text"
+              color="tertiary"
+              size="small"
               aria-label="Save name"
               disabled={!draftUsable}
               onClick={commitRename}
             >
               <FontAwesomeV6Icon iconName="check" />
-            </button>
-            <button
-              type="button"
-              className={moduleStyles.iconButton}
+            </MuiIconButton>
+            <MuiIconButton
+              variant="text"
+              color="tertiary"
+              size="small"
               aria-label="Cancel rename"
               onClick={cancelRename}
             >
               <FontAwesomeV6Icon iconName="xmark" />
-            </button>
+            </MuiIconButton>
             {/* Beside the field: below it would change the header's height
                   for the moment it shows. */}
             {shownNameError && (
@@ -270,9 +283,10 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
               {title}
             </span>
             {advanced && !isNew && view === 'details' && (
-              <button
-                type="button"
-                className={moduleStyles.iconButton}
+              <MuiIconButton
+                variant="text"
+                color="tertiary"
+                size="small"
                 aria-label="Rename"
                 onClick={() => {
                   setNameDraft(name || '');
@@ -281,7 +295,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
                 }}
               >
                 <FontAwesomeV6Icon iconName="pencil" />
-              </button>
+              </MuiIconButton>
             )}
           </>
         )}
@@ -312,6 +326,8 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
             setView('details');
           }}
           onCancel={onClose}
+          verdictRequired={verdictRequired}
+          onAwaitingVerdict={setAwaitingVerdict}
           onPaintManually={
             isNew && !paintDisabled && onPaintNew
               ? draft =>
@@ -457,22 +473,24 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
             {/* Students make a new image rather than replacing one in
                   place; the regenerate path stays for the advanced dialog. */}
             {advanced && (
-              <button
-                type="button"
-                className={moduleStyles.button}
+              <MuiButton
+                variant="outlined"
+                color="secondary"
+                size="small"
+                startIcon={<FontAwesomeV6Icon iconName="sparkles" />}
                 onClick={() => setView('generate')}
               >
-                <FontAwesomeV6Icon iconName="sparkles" />
                 Generate with AI
-              </button>
+              </MuiButton>
             )}
-            <button
-              type="button"
-              className={moduleStyles.primaryButton}
+            <MuiButton
+              variant="contained"
+              color="primary"
+              size="small"
               onClick={onClose}
             >
               {imageChanged ? 'Accept' : 'Done'}
-            </button>
+            </MuiButton>
           </div>
         </>
       )}
@@ -480,12 +498,10 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
   );
 
   return (
-    // data-theme drives both the chrome's own colors and the design
-    // system's semantic colors inside the panel (the TextField reads them).
-    <div className={moduleStyles.dialogHost} data-theme={mode}>
+    <div className={moduleStyles.dialogHost}>
       <CustomDialog
         aria-label={title}
-        onClose={onClose}
+        onClose={closable ? onClose : undefined}
         mode={mode}
         className={classNames(
           moduleStyles.dialog,
