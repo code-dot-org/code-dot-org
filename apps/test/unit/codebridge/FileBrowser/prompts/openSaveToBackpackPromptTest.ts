@@ -2,104 +2,41 @@ import {openSaveToBackpackPrompt} from '@cdo/apps/codebridge/FileBrowser/prompts
 import {ProjectFile} from '@cdo/apps/lab2/types';
 import {DialogControlInterface, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 import UnifiedBackpackClientApi from '@cdo/apps/sharedComponents/backpack/UnifiedBackpackClientApi';
 
 import {
   getDialogConfirmationMock,
-  getBackpackAPIMock,
   getUnifiedBackpackAPIMock,
 } from '../../test_utils';
 
 describe('openSaveToBackpackPrompt', () => {
   let dialogMock: Pick<DialogControlInterface, 'showDialog'>,
     projectFile: ProjectFile,
-    analyticsMock: jest.Mock;
+    analyticsMock: jest.Mock,
+    toastMock: jest.Mock;
+
+  // A failure toast, ignoring the in-progress and success ones around it.
+  const errorToasts = () =>
+    toastMock.mock.calls.filter(([, options]) => options?.type === 'danger');
 
   beforeEach(() => {
     dialogMock = getDialogConfirmationMock('confirm');
     analyticsMock = jest.fn();
+    toastMock = jest.fn();
     projectFile = {
       name: 'project_file.py',
       contents: 'This is project_file.py.',
     } as ProjectFile;
   });
 
-  const runSaveToBackpackPrompt = (
-    backpackApi: BackpackClientApi | UnifiedBackpackClientApi
-  ) =>
+  const runSaveToBackpackPrompt = (backpackApi: UnifiedBackpackClientApi) =>
     openSaveToBackpackPrompt({
       dialogControl: dialogMock,
       backpackApi,
       file: projectFile,
+      showToast: toastMock,
       sendLab2AnalyticsEvent: analyticsMock,
     });
-
-  describe('with a per-lab backpack api', () => {
-    let mockBackpackApi: BackpackClientApi;
-
-    beforeEach(() => {
-      mockBackpackApi = getBackpackAPIMock(); // getFileList returns empty list.
-    });
-
-    it('should save a file to the backpack', async () => {
-      await runSaveToBackpackPrompt(mockBackpackApi);
-
-      expect(mockBackpackApi.getFileList).toHaveBeenCalled();
-      expect(mockBackpackApi.saveFile).toHaveBeenCalledWith(
-        'project_file.py',
-        'This is project_file.py.',
-        expect.any(Function),
-        expect.any(Function)
-      );
-    });
-
-    it('should not save a file when canceled', async () => {
-      dialogMock = getDialogConfirmationMock('cancel');
-
-      await runSaveToBackpackPrompt(mockBackpackApi);
-
-      expect(mockBackpackApi.getFileList).toHaveBeenCalled();
-      expect(mockBackpackApi.saveFile).not.toHaveBeenCalled();
-    });
-
-    it('should rename file when duplicate exists and rename (neutral) is selected', async () => {
-      mockBackpackApi = getBackpackAPIMock(['project_file.py']); // getFileList returns ['project_file.py'].
-      dialogMock = getDialogConfirmationMock('neutral');
-
-      await runSaveToBackpackPrompt(mockBackpackApi);
-
-      expect(mockBackpackApi.getFileList).toHaveBeenCalled();
-      expect(mockBackpackApi.saveFile).toHaveBeenCalledWith(
-        'project_file_1.py',
-        'This is project_file.py.',
-        expect.any(Function),
-        expect.any(Function)
-      );
-    });
-
-    it('should replace file when duplicate exists and replace (confirm) is selected', async () => {
-      mockBackpackApi = getBackpackAPIMock(['project_file.py']);
-
-      await runSaveToBackpackPrompt(mockBackpackApi);
-
-      expect(mockBackpackApi.getFileList).toHaveBeenCalled();
-      expect(mockBackpackApi.saveFile).toHaveBeenCalledWith(
-        'project_file.py',
-        'This is project_file.py.',
-        expect.any(Function),
-        expect.any(Function)
-      );
-    });
-
-    it('should not delete anything, since the per-lab api replaces in place', async () => {
-      mockBackpackApi = getBackpackAPIMock(['project_file.py']);
-
-      await runSaveToBackpackPrompt(mockBackpackApi);
-
-      expect(mockBackpackApi.deleteFiles).not.toHaveBeenCalled();
-    });
-  });
 
   describe('with the unified backpack api', () => {
     it('should save a new file to the universal backpack', async () => {
@@ -206,7 +143,13 @@ describe('openSaveToBackpackPrompt', () => {
         EVENTS.SAVE_TO_BACKPACK_REPLACE,
         {fileType: 'py'}
       );
-      expect(dialogMock.showDialog).toHaveBeenCalledWith(
+      expect(errorToasts()).toEqual([
+        [
+          "Saved project_file.py, but couldn't remove the old copy. You can delete it from your Backpack.",
+          expect.objectContaining({type: 'danger', autoHideDuration: 8000}),
+        ],
+      ]);
+      expect(dialogMock.showDialog).not.toHaveBeenCalledWith(
         expect.objectContaining({type: DialogType.GenericAlert})
       );
     });
@@ -224,12 +167,18 @@ describe('openSaveToBackpackPrompt', () => {
 
       expect(mockApi.deleteFromLegacyBackpacks).not.toHaveBeenCalled();
       expect(analyticsMock).not.toHaveBeenCalled();
-      expect(dialogMock.showDialog).toHaveBeenCalledWith(
+      expect(errorToasts()).toEqual([
+        [
+          "Couldn't save project_file.py to your Backpack. Please try again.",
+          expect.objectContaining({type: 'danger', autoHideDuration: 8000}),
+        ],
+      ]);
+      expect(dialogMock.showDialog).not.toHaveBeenCalledWith(
         expect.objectContaining({type: DialogType.GenericAlert})
       );
     });
 
-    it('should alert and not save when the file lists cannot be fetched', async () => {
+    it('should toast and not save when the file lists cannot be fetched', async () => {
       const mockApi = getUnifiedBackpackAPIMock();
       (mockApi.getFileLists as jest.Mock).mockRejectedValue(
         new Error('list boom')
@@ -238,10 +187,31 @@ describe('openSaveToBackpackPrompt', () => {
       await runSaveToBackpackPrompt(mockApi);
 
       expect(mockApi.saveFile).not.toHaveBeenCalled();
-      expect(dialogMock.showDialog).toHaveBeenCalledTimes(1);
-      expect(dialogMock.showDialog).toHaveBeenCalledWith(
-        expect.objectContaining({type: DialogType.GenericAlert})
-      );
+      // Never got as far as the confirmation dialog.
+      expect(dialogMock.showDialog).not.toHaveBeenCalled();
+      expect(errorToasts()).toEqual([
+        [
+          "Couldn't save project_file.py to your Backpack. Please try again.",
+          expect.objectContaining({type: 'danger', autoHideDuration: 8000}),
+        ],
+      ]);
+    });
+
+    it('should toast progress then success around a save', async () => {
+      const mockApi = getUnifiedBackpackAPIMock();
+
+      await runSaveToBackpackPrompt(mockApi);
+
+      expect(toastMock.mock.calls).toEqual([
+        [
+          'Saving project_file.py to your Backpack...',
+          expect.objectContaining({type: 'gray', autoHideDuration: null}),
+        ],
+        [
+          'project_file.py saved to your Backpack.',
+          expect.objectContaining({type: 'success', autoHideDuration: 4000}),
+        ],
+      ]);
     });
 
     it('should not save or delete when canceled', async () => {

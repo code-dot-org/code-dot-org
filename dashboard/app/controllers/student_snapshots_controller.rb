@@ -228,10 +228,10 @@ class StudentSnapshotsController < ApplicationController
     level = Queries::Lessons.get_assessment_level_for_lesson(lesson)
 
     if level
-      student_code_data = get_student_code(params[:student_id], level, params[:unit_id])
+      student_code_data = get_student_code(params[:student_id], level, params[:unit_id]) || {}
       render json: {
         studentCode: student_code_data[:student_code],
-        instructions: level.get_localized_property('long_instructions') || level.long_instructions
+        instructions: level.try(:generated_long_instructions) || level.get_localized_property('long_instructions') || level.long_instructions
       }
     else
       render json: {studentCode: nil}
@@ -263,7 +263,7 @@ class StudentSnapshotsController < ApplicationController
       id: level.id,
       name: level.name,
       exemplarSources: level.exemplar_sources,
-      instructions: level.get_localized_property('long_instructions') || level.long_instructions
+      instructions: level.try(:generated_long_instructions) || level.get_localized_property('long_instructions') || level.long_instructions
     }
   end
 

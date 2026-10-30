@@ -20,6 +20,7 @@ import {bytesToDataURI} from './encoding';
 import {
   GeneratedImageResult,
   logicalGridFor,
+  NO_WRITING_CLAUSE,
   pixelBlockFor,
   RawImage,
   rawImageToBlob,
@@ -37,48 +38,114 @@ import {
   loadImageFromBlob,
   removeKeyColor,
 } from './removeBackground';
-import {ImageGenerationMetadata, ImageStyle} from './types';
+import {BodyPlan, ImageGenerationMetadata, ImageStyle} from './types';
 
 /** One frame of the strip after the base: its label and pose description. */
-interface PosedFrame {
+export interface PosedFrame {
   label: string;
   pose: string;
 }
 
-// The frames drawn from the base. Each pose text is sent as an edit
-// request together with the base picture, so it describes only what
-// changes from the base. List order is strip order, except that the base
-// itself is inserted after the first entry (CHARACTER_STRIP_POSES).
-const POSED_FRAMES: PosedFrame[] = [
-  {
-    label: 'idling',
-    pose:
-      'a second idle frame: the very same standing pose with only a subtle ' +
-      'change — a small breath, the head or shoulders shifted a touch. The ' +
-      'feet do not move',
-  },
-  {
-    label: 'walking',
-    pose:
-      'halfway through a walking stride, seen from the side — mainly the ' +
-      'legs moving, one leg forward and one back, the arms swinging slightly',
-  },
-  {
-    label: 'jumping',
-    pose:
-      'the rising frame of a jump: knees bent and tucked, body springing ' +
-      'upward',
-  },
-  {
-    label: 'landing',
-    pose:
-      'the falling frame of a jump: body upright in the air, legs loose ' +
-      'beneath it, coming down',
-  },
-];
+// The base picture's stance, by body plan. An animal described only by
+// its name comes back standing like a person; the stance says otherwise.
+const STANCE: Record<BodyPlan, string> = {
+  upright:
+    'Arms hanging relaxed at the sides, hands open and empty. Feet near ' +
+    'the bottom of the image, nothing cut off.',
+  quadruped:
+    'A real animal on all four legs, the whole body in side profile with ' +
+    'the head toward the right. Not a person and not person-shaped: it ' +
+    'does not stand upright and has no arms or hands. Paws near the ' +
+    'bottom of the image, nothing cut off.',
+  bird:
+    'A real bird standing on its two legs with its wings held at its ' +
+    'sides, seen from the side with the beak toward the right. No arms or ' +
+    'hands. Feet near the bottom of the image, nothing cut off.',
+};
+
+const IDLE_FRAME: PosedFrame = {
+  label: 'idling',
+  pose:
+    'a second idle frame: the very same standing pose with only a subtle ' +
+    'change — a small breath, the head or shoulders shifted a touch. The ' +
+    'feet do not move',
+};
+
+// The frames drawn from the base, by body plan. Each pose text is sent as
+// an edit request together with the base picture, so it describes only
+// what changes from the base. List order is strip order, except that the
+// base itself is inserted after the first entry (CHARACTER_STRIP_POSES).
+// Every plan has the same four frames, so the strip's layout is one.
+const POSED_FRAMES: Record<BodyPlan, PosedFrame[]> = {
+  upright: [
+    IDLE_FRAME,
+    {
+      label: 'walking',
+      pose:
+        'halfway through a walking stride, seen from the side — mainly the ' +
+        'legs moving, one leg forward and one back, the arms swinging ' +
+        'slightly',
+    },
+    {
+      label: 'jumping',
+      pose:
+        'the rising frame of a jump: knees bent and tucked, body springing ' +
+        'upward',
+    },
+    {
+      label: 'landing',
+      pose:
+        'the falling frame of a jump: body upright in the air, legs loose ' +
+        'beneath it, coming down',
+    },
+  ],
+  quadruped: [
+    IDLE_FRAME,
+    {
+      label: 'walking',
+      pose:
+        'halfway through a walking stride on all four legs, seen from the ' +
+        'side — the front and back legs in motion, one of each pair forward ' +
+        'and one back, the body still on four legs',
+    },
+    {
+      label: 'jumping',
+      pose:
+        'the rising frame of a leap on four legs: hind legs pushing off, ' +
+        'front legs reaching forward, body springing upward',
+    },
+    {
+      label: 'landing',
+      pose:
+        'the falling frame of a leap: body level in the air on four legs, ' +
+        'legs reaching down toward the ground, coming down',
+    },
+  ],
+  bird: [
+    IDLE_FRAME,
+    {
+      label: 'walking',
+      pose:
+        'halfway through a waddling step, seen from the side — one foot ' +
+        'forward and one back, the wings held at its sides',
+    },
+    {
+      label: 'jumping',
+      pose:
+        'the rising frame of a hop: legs tucked, wings lifted a little, ' +
+        'body springing upward',
+    },
+    {
+      label: 'landing',
+      pose:
+        'the falling frame of a hop: body upright in the air, legs ' +
+        'reaching down, wings out a little, coming down',
+    },
+  ],
+};
 
 /** How many pictures a set costs: the base and each posed frame. */
-export const CHARACTER_SET_PICTURE_COUNT = 1 + POSED_FRAMES.length;
+export const CHARACTER_SET_PICTURE_COUNT = 1 + POSED_FRAMES.upright.length;
 
 // Each frame is drawn on its own, so a companion or prop the model adds to
 // one frame has no reason to recur in the next.
@@ -98,15 +165,22 @@ export function basePrompt(
   prompt: string,
   style: ImageStyle,
   key: KeyColor,
-  pixelBlock: number
+  pixelBlock: number,
+  bodyPlan: BodyPlan = 'upright'
 ): string {
   return (
     `${prompt}. Show the whole character standing, facing right: its face ` +
-    'and body point toward the right side of the image. Arms hanging ' +
-    'relaxed at the sides, hands open and empty. Feet near the bottom of ' +
-    'the image, nothing cut off. ' +
-    `${ONLY_THIS_CHARACTER} ${styleClause(style, pixelBlock)} ${keyClause(key)}`
+    `and body point toward the right side of the image. ${STANCE[bodyPlan]} ` +
+    `${ONLY_THIS_CHARACTER} ${styleClause(style, pixelBlock)} ${keyClause(
+      key
+    )} ` +
+    NO_WRITING_CLAUSE
   );
+}
+
+/** The posed frames a set of this body plan draws, in strip order. */
+export function posedFrames(bodyPlan: BodyPlan = 'upright'): PosedFrame[] {
+  return POSED_FRAMES[bodyPlan];
 }
 
 /**
@@ -128,7 +202,11 @@ export function posePrompt(
     'provided image: the same design, colors, proportions, outfit and art ' +
     'style, facing right, and the character at exactly the same size and ' +
     'position in the frame. ' +
-    `${ONLY_THIS_CHARACTER} ${keyClause(key)} ${styleClause(style, pixelBlock)}`
+    `${ONLY_THIS_CHARACTER} ${keyClause(key)} ${styleClause(
+      style,
+      pixelBlock
+    )} ` +
+    NO_WRITING_CLAUSE
   );
 }
 
@@ -259,6 +337,8 @@ export interface CharacterSetOptions {
   seed?: number;
   /** Logical grid to ask for (pixel style); absent = the sprite default. */
   pixelGrid?: number;
+  /** How the character is built; absent = a person-like figure. */
+  bodyPlan?: BodyPlan;
 }
 
 export interface CharacterSetProgress {
@@ -308,7 +388,7 @@ export async function generateCharacterSet(
 
   onProgress?.({done: 0, total, label: 'the character'});
   const base = await requestFrameWithRetry(
-    basePrompt(prompt, options.style, key, pixelBlock),
+    basePrompt(prompt, options.style, key, pixelBlock, options.bodyPlan),
     {
       seed,
       temperature: options.temperature,
@@ -330,7 +410,7 @@ export async function generateCharacterSet(
   // The posed frames each reference only the base, so they draw in
   // parallel: a set costs two round trips, not five.
   const posed = await Promise.all(
-    POSED_FRAMES.map(async (frame, index) => {
+    posedFrames(options.bodyPlan).map(async (frame, index) => {
       const raw = await requestFrameWithRetry(
         posePrompt(prompt, frame, options.style, key, pixelBlock),
         {
@@ -376,6 +456,7 @@ export async function generateCharacterSet(
     ...(options.style === 'pixel' && {
       pixelGrid: logicalGridFor(pixelBlock),
     }),
+    ...(options.bodyPlan && {bodyPlan: options.bodyPlan}),
   };
   const poses: AnimationPoses = CHARACTER_STRIP_POSES;
   return {

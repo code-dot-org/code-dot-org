@@ -1,0 +1,48 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-10-02T15:34:54.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "panels": [
+      {
+        "text": "## Walkthrough Overview\n\nThis panel walks you through the unplugged Smart Thermostat activity exactly as your students will experience it, data collection, then hand-tracing the hill-climbing algorithm itself, before any of it touches code.\n",
+        "imageUrl": "https://images.code.org/53687412373fee53c2f5800ceda68a89-Top-left 72°F thermostat.png",
+        "key": "sp-pl-DS-SpreadsheetVocab-23803e7b-4230-4c32-ac36-59aaf29309ce",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Students Collect Data\n\nFor each temperature named aloud, students raise their hands if they’d be comfortable right now. \n\nFor each one, they draw a bar on their chart showing how many classmates raised their hands, building a comfort chart across several temperatures before anyone touches the algorithm.",
+        "imageUrl": "https://images.code.org/954b3b7bcf4a311e0be9bf4bf5f564ed-Trimmed temperature comfort chart.png",
+        "key": "sp-pl-DS-pythonLab_tour-e31a5299-fb7b-4695-ac1f-5a80498a9378",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Students Hand-Trace the Algorithm\n\nStudents place a finger on a random temperature on their chart, then follow this exact algorithm:\n\n- If more students prefer the temperature to the left, move the finger one space left.\n- If more students prefer the temperature to the right, move the finger one space right.\n- Repeat until the finger doesn’t move.\n\nThis is hill climbing, performed entirely by hand, before students ever see a line of code.\n",
+        "imageUrl": "https://images.code.org/5738078aedc3d0c4c9e7999daa09cd6d-Orange hand points to 65.png",
+        "key": "sp-pl-DS-pythonLab_tour-62a7ff61-8b6a-4901-8cb3-26fcd990f873",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Students Repeat from Different Starting Points\n\nStudents run the same algorithm again, starting from a different temperature on the chart. \n\nSome will land in the same place as before; others won’t, depending on where they started. This is the experience that later gets a name: a local optimum.",
+        "imageUrl": "https://images.code.org/7fd66094a140d9ac9081038821693806-Orange finger points to 85.png",
+        "key": "pl-sandbox-aif2-U1-weblab-panels_10-f545a3f8-80df-47e7-a398-659a35ae4b5b",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Reflect\n\nBefore “hill climbing” is ever defined as a term, students are asked: “Reflect on your experience following the algorithm. How would you describe the way this algorithm works?” \n\nListen for language like “it just decides whether to go left or right” or “it ends up better than where it started,” that’s the bridge into the formal definition.\n\nFrom here, students move straight into Hill Climbing in Code, translating this exact algorithm, the one they just traced by hand, into the Python conditionals you’ll walk through in the next levels.",
+        "imageUrl": "https://images.code.org/7f935691d92e592c73c7eae9b2b94716-independent-work-icon-panel5.png",
+        "key": "pl-sandbox-aif2-U1-weblab-panels_10_2026-31887a3d-5ad5-424f-a333-ceecdb0181f9",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "name_suffix": "_2026",
+    "offer_browser_tts": "false",
+    "use_links": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-10-02T15:34:54.589+00:00\",\"changed\":[\"cloned from \\\"pl-aif-y2-u1-l3-algorithms-panel\\\"\"],\"cloned_from\":\"pl-aif-y2-u1-l3-algorithms-panel\"},{\"changed_at\":\"2026-10-29 16:26:56 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+}]]></config>
+</Panels>

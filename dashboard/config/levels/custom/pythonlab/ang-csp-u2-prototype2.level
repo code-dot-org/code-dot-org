@@ -1,0 +1,47 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-09-29T17:30:36.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "long_instructions": "Prototype 2\r\n\r\nsame as prototype 1 but with ranked output for the slow theater reveal",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "# PROTOTYPE 2 — \"Movie Night Matcher\" — CONSOLE PROGRAM \n# Same engine as Prototype 1 — this prototype is testing a different\n# Theater reveal style on top of identical console logic.\n\naction_score = 0\ncomedy_score = 0\nhorror_score = 0\ndocumentary_score = 0\n\nfor question_number in range(4):\n    if question_number == 0:\n        answer = input(\"On a scale of 1-5, how much do you want fast-paced action tonight? \")\n        rating = int(answer)\n        action_score = action_score + rating\n    elif question_number == 1:\n        answer = input(\"On a scale of 1-5, how much do you want to laugh tonight? \")\n        rating = int(answer)\n        comedy_score = comedy_score + rating\n    elif question_number == 2:\n        answer = input(\"On a scale of 1-5, how much do you enjoy horror movies? \")\n        rating = int(answer)\n        horror_score = horror_score + rating\n    elif question_number == 3:\n        answer = input(\"On a scale of 1-5, how much do you want to learn something new? \")\n        rating = int(answer)\n        documentary_score = documentary_score + rating\n\nokay_scared = input(\"Even if horror scores well, are you okay actually watching something scary tonight? (yes/no) \")\n\nbest_option = \"Action Flick\"\nbest_score = action_score\n\nif comedy_score > best_score:\n    best_score = comedy_score\n    best_option = \"Comedy Special\"\n\nif horror_score > best_score:\n    best_score = horror_score\n    best_option = \"Horror Movie\"\n\nif documentary_score > best_score:\n    best_score = documentary_score\n    best_option = \"Documentary\"\n\nif okay_scared == \"no\" and best_option == \"Horror Movie\":\n    best_option = \"Comedy Special\"\n\n# The game-show reveal needs every score, not just the winner, so students\n# carry over all four named values plus the final pick.\nprint(\"Action:\", action_score)\nprint(\"Comedy:\", comedy_score)\nprint(\"Horror:\", horror_score)\nprint(\"Documentary:\", documentary_score)\nprint(\"Your recommendation is:\", best_option)",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-29T17:30:36.771+00:00\",\"changed\":[\"cloned from \\\"ang-csp-u2-prototype1a\\\"\"],\"cloned_from\":\"ang-csp-u2-prototype1a\"},{\"changed_at\":\"2026-09-29 17:30:39 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-29 19:57:05 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-29 19:57:45 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-29 19:58:18 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-29 19:58:42 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

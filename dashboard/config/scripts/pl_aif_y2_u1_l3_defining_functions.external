@@ -1,0 +1,69 @@
+name 'pl-aif-y2-u1-l3-defining-functions'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Defining Functions
+
+Repeating the same steps over and over gets tedious to write out every time. Here's the same two workouts logged two different ways, same outcome either way.
+
+<div style="display: flex; gap: 16px; margin: 16px 0;">
+  <div style="width: 48%;">
+    <div style="font-size: 14px; font-weight: 700; color: #555; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 8px;">Without a Function</div>
+    <div style="border-radius: 10px; overflow: hidden; border: 1px solid #E4E2F8;">
+      <div style="background-color: #1F1976; padding: 28px 18px; font-family: 'Consolas', 'Courier New', monospace; font-size: 16px; color: #E4E2F8; line-height: 1.8;">
+print("Workout complete!")<br>
+print(f"You walked 2000 steps.")<br>
+<br>
+print("Workout complete!")<br>
+print(f"You walked 3000 steps.")
+      </div>
+      <div style="background-color: #E4E2F8; padding: 10px 18px; font-family: 'Consolas', 'Courier New', monospace; font-size: 16px; color: #1F1976; line-height: 1.7;">
+Workout complete!<br>
+You walked 2000 steps.<br>
+Workout complete!<br>
+You walked 3000 steps.
+      </div>
+    </div>
+  </div>
+  <div style="width: 48%;">
+    <div style="font-size: 14px; font-weight: 700; color: #555; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 8px;">With a Function</div>
+    <div style="border-radius: 10px; overflow: hidden; border: 1px solid #E4E2F8;">
+      <div style="background-color: #1F1976; padding: 16px 18px; font-family: 'Consolas', 'Courier New', monospace; font-size: 16px; color: #E4E2F8; line-height: 1.8;">
+def log_workout(steps):<br>
+&nbsp;&nbsp;print("Workout complete!")<br>
+&nbsp;&nbsp;print(f"You walked {steps} steps.")<br>
+<br>
+log_workout(2000)<br>
+log_workout(3000)
+      </div>
+      <div style="background-color: #E4E2F8; padding: 10px 18px; font-family: 'Consolas', 'Courier New', monospace; font-size: 16px; color: #1F1976; line-height: 1.7;">
+Workout complete!<br>
+You walked 2000 steps.<br>
+Workout complete!<br>
+You walked 3000 steps.
+      </div>
+    </div>
+  </div>
+</div>
+
+<p>Identical output, but the function version writes the repeated logic once and reuses it. <code style="font-size:16px;">def</code>, short for "define," starts a function. Everything belonging to it is indented beneath it, that's how Python knows what's inside and what isn't. Once defined, calling it by name, <code style="font-size:16px;">log_workout(2000)</code>, runs that code.</p>
+
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;">
+    <strong>&#128161; Teacher tip:</strong> if students haven't indented code before, this is the moment. In Python, indentation isn't a style choice, it's required syntax. Expect inconsistent indentation to be a real source of errors here.
+  </div>
+</div>
+
+---
+
+## Parameters
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+  <div style="font-size: 16px; line-height: 1.5;">
+    <strong>&#128214; Parameter:</strong> a variable that holds a function's input.
+  </div>
+</div>
+
+<p>Look back at that same function: <code style="font-size:16px;">steps</code> is the parameter. It's a variable the function can use internally, which is why <code style="font-size:16px;">log_workout(2000)</code> and <code style="font-size:16px;">log_workout(3000)</code> each print a different number, same function, different input.</p>
+MARKDOWN

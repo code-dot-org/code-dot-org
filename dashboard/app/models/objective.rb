@@ -23,6 +23,7 @@ class Objective < ApplicationRecord
 
   belongs_to :lesson, optional: true
   has_and_belongs_to_many :json_videos, join_table: :json_video_objectives
+  has_and_belongs_to_many :script_levels
 
   serialized_attrs %w(
     description

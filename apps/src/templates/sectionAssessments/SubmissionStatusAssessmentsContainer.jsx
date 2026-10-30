@@ -44,9 +44,9 @@ class SubmissionStatusAssessmentsContainer extends Component {
 
   render() {
     return (
-      <div>
+      <div className={moduleStyles.container}>
         <div className={moduleStyles.header}>
-          <Typography variant="h2">
+          <Typography variant="h6" component="h2">
             {i18n.studentOverviewTableHeader()}
           </Typography>
           <MuiButton

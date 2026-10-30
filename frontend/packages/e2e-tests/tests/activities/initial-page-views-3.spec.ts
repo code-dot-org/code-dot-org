@@ -105,6 +105,7 @@ test.describe('Looking at a few things with Applitools Eyes - Part 3', () => {
       async goto(page) {
         const overview = new UnitOverviewPage(page);
         await overview.gotoOverview();
+        await overview.header.waitForSettled();
         return {rootSelector: overview.mainContentSelector, masks: []};
       },
       violations: {},

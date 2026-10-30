@@ -1,5 +1,6 @@
 class ChallengeResponsesController < ApplicationController
   before_action :authenticate_user!
+  before_action {head :forbidden unless current_user.can_use_lesson_deep_dive?}
   # `create` builds the response and its nested assets by hand, so skip
   # CanCanCan's automatic resource loading for it (it would otherwise try to
   # build ChallengeResponse from `challenge_response_params`, which includes the
@@ -7,8 +8,9 @@ class ChallengeResponsesController < ApplicationController
   # `index` and `unit_counts` are skipped too: the :read ability is
   # block-based, which accessible_by cannot translate into a query, so those
   # actions build their own scope (see gallery_scope).
-  load_and_authorize_resource except: [:create, :index, :unit_counts]
+  load_and_authorize_resource except: [:create, :index, :unit_counts, :approve]
   before_action :authorize_create!, only: :create
+  before_action :load_and_authorize_approve!, only: :approve
 
   # GET /challenge_responses?section_id=:section_id&unit_id=:unit_id&sort=oldest
   # GET /challenge_responses?lesson_id=:lesson_id
@@ -23,7 +25,8 @@ class ChallengeResponsesController < ApplicationController
   # and instructors. With user_id it is that student's submissions (the
   # project page's version switcher), uncollapsed, listed only for the
   # student themselves and their teachers. The AI feedback stays private:
-  # student_feedback is only included on the caller's own rows.
+  # student_feedback is only included on the caller's own rows. Students
+  # see only successfully evaluated submissions (see gallery_scope).
   def index
     responses = gallery_scope.
       order(created_at: params[:sort] == 'oldest' ? :asc : :desc).
@@ -73,7 +76,8 @@ class ChallengeResponsesController < ApplicationController
   # The project page detail. What is included depends on who is looking:
   # the response's author gets their constructive feedback; the author's
   # teachers additionally get the scored rubric evaluation and the
-  # challenge's rubric; section peers get the work itself only. Every
+  # challenge's rubric; section peers get the work itself only, and only
+  # once it is successfully evaluated (see Ability). Every
   # viewer gets the challenge question and their own viewer_role so the
   # page can pick the right layout.
   def show
@@ -88,6 +92,15 @@ class ChallengeResponsesController < ApplicationController
     summary[:evaluated_at] = @challenge_response.evaluated_at unless role == 'peer'
     summary[:rubric] = @challenge_response.challenge.rubric if role == 'teacher'
     render json: summary
+  end
+
+  # PATCH /challenge_responses/:id/approve
+  #
+  # Sets approved on a response. Teacher-only: only the instructor of the
+  # submitting student may approve or revoke approval.
+  def approve
+    @challenge_response.update!(approved: params[:approved])
+    render json: @challenge_response.summarize(viewer: current_user)
   end
 
   # POST /challenge_responses/:id/evaluate
@@ -121,22 +134,31 @@ class ChallengeResponsesController < ApplicationController
   # (section_id) collapses per student per challenge; "My Projects" (the
   # caller's own work) collapses per challenge. Only the per-student version
   # switcher (user_id) is left uncollapsed: it lists every submission.
+  #
+  # Students see only successfully evaluated submissions, filtered before
+  # collapsing so a flagged resubmission falls back to the last good one.
+  # Teachers listing their students see every status.
   private def gallery_scope
     scope = ChallengeResponse.where(is_final: true)
     if params[:user_id].present?
       student = User.find(params[:user_id])
       authorize_student_listing! student
-      return scope.where(user_id: student.id)
+      scope = scope.where(user_id: student.id)
+      return student.id == current_user.id ? scope.evaluation_success : scope
     end
     # Final submissions are immutable, so the max id per group is the newest.
     if params[:section_id].blank?
-      own_scope = scope.where(user_id: current_user.id)
+      own_scope = scope.evaluation_success.where(user_id: current_user.id)
       return ChallengeResponse.where(id: own_scope.group(:challenge_id).select('MAX(id)'))
     end
 
     section = Section.find(params[:section_id])
     authorize! :list_projects, section
     section_scope = scope.where(user_id: section.students.select(:id))
+    unless current_user.students.exists?(id: section.students.select(:id))
+      section_scope = section_scope.evaluation_success
+      section_scope = section_scope.where(approved: true).or(section_scope.where(user_id: current_user.id))
+    end
     ChallengeResponse.where(id: section_scope.group(:challenge_id, :user_id).select('MAX(id)'))
   end
 
@@ -156,6 +178,13 @@ class ChallengeResponsesController < ApplicationController
     return 'owner' if @challenge_response.user_id == current_user.id
     return 'teacher' if current_user.students.exists?(id: @challenge_response.user_id)
     'peer'
+  end
+
+  private def load_and_authorize_approve!
+    @challenge_response = ChallengeResponse.find(params[:id])
+    unless current_user.students.exists?(id: @challenge_response.user_id)
+      raise CanCan::AccessDenied.new(nil, :approve, ChallengeResponse)
+    end
   end
 
   private def authorize_create!

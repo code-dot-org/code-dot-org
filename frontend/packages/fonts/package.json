@@ -44,6 +44,7 @@
   ],
   "scripts": {
     "build": "NODE_OPTIONS='--max-old-space-size=8192' tsup",
+    "clean": "rimraf dist",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "prettier": "prettier --check .",
@@ -88,6 +89,7 @@
     "@fontsource/space-grotesk": "^5.3.0",
     "react": "catalog:",
     "react-dom": "catalog:",
+    "rimraf": "catalog:",
     "sass": "catalog:",
     "stylelint": "catalog:",
     "tsup": "^8.3.6"

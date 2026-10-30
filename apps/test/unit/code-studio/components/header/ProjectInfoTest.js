@@ -35,4 +35,19 @@ describe('ProjectInfo', () => {
       expect(wrapper.find(component)).toHaveLength(1);
     });
   });
+
+  it('sits in flow, able to shrink, when the header gives it no width', () => {
+    const inFlow = shallow(
+      <ProjectInfo currentHeader={possibleHeaders.project} />
+    );
+    expect(inFlow.find('.project_info').prop('style')).toMatchObject({
+      minWidth: 0,
+    });
+    expect(inFlow.find('.project_info').prop('style').position).toBeUndefined();
+
+    const sized = shallow(
+      <ProjectInfo currentHeader={possibleHeaders.project} width={200} />
+    );
+    expect(sized.find('.project_info').prop('style').position).toBe('absolute');
+  });
 });

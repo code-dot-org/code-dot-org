@@ -7,6 +7,10 @@
   "user_id": 1,
   "properties": {
     "uses_lab2": "true",
+    "level_mode": {
+      "kind": "image",
+      "imageType": "sprite"
+    },
     "block_pools": [
       "GamelabJr",
       "GameDev"
@@ -21,11 +25,6 @@
     "hide_share_and_remix": "true",
     "encrypted": "false",
     "project_template_level_name": "HoAI26-Playtest1-Platform-Template",
-    "visible_tabs": [
-      "Images"
-    ],
-    "locked_image_type": "sprite",
-    "guide_mode": "instructions",
     "long_instructions": "# Make a platform block\r\nPlatformers are built from blocks. Create a square tile the player can stand on - grass, brick, ice, anything.",
     "embed": "false",
     "instructions_important": "false",

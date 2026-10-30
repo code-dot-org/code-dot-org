@@ -256,6 +256,7 @@ export default function currentUser(state = initialState, action) {
       created_at,
       is_verified_instructor,
       has_completed_ai_differentiation_welcome,
+      teacher_panel_v2_seen,
       educator_role,
       sharing_disabled,
       has_seen_homepage_welcome,
@@ -290,6 +291,7 @@ export default function currentUser(state = initialState, action) {
       inUSA: ['US', 'RD'].includes(country_code) || !!us_state_code,
       hasCompletedAiDifferentiationWelcome:
         has_completed_ai_differentiation_welcome,
+      teacherPanelV2Seen: teacher_panel_v2_seen,
       childAccountComplianceState: child_account_compliance_state,
       countryCode: country_code,
       usStateCode: us_state_code,

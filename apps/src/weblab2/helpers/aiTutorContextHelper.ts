@@ -1,9 +1,8 @@
-import {getFilePath} from '@codebridge/utils/getFilePath';
+import {describeSourceFiles} from '@codebridge/utils/describeSourceFiles';
 
 import {AiTutorContextHelper} from '@cdo/apps/aiTutor/helpers/aiTutorContextHelper';
 import {AiTutorContext} from '@cdo/apps/aiTutor/types';
-import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
-import {getFileExtension} from '@cdo/apps/lab2/utils/multiFileSourceUtils';
+import {MultiFileSource} from '@cdo/apps/lab2/types';
 
 interface AiTutorWebLab2Params {
   source: MultiFileSource | undefined;
@@ -25,24 +24,9 @@ export class AiTutorWebLab2ContextHelper extends AiTutorContextHelper<AiTutorWeb
 
     const {source, longInstructions, hasEdited, hasRun} = this.params;
     const sourceCode = source
-      ? Object.values(source.files)
-          .filter(
-            file =>
-              file.type !== ProjectFileType.VALIDATION &&
-              file.type !== ProjectFileType.SYSTEM_SUPPORT &&
-              !LANGUAGES_TO_EXCLUDE_FROM_CONTEXT.includes(
-                getFileExtension(file.name)
-              )
-          )
-          .map(file => {
-            const filePath = getFilePath(file, source.folders);
-            // Image/binary files are stored as asset URLs with no text contents.
-            if (file.url) {
-              return `image: ${filePath}`;
-            }
-            return `filename: ${filePath}\n${this.codeBlock(file.contents)}`;
-          })
-          .join('\n\n')
+      ? describeSourceFiles(source, {
+          excludeExtensions: LANGUAGES_TO_EXCLUDE_FROM_CONTEXT,
+        })
       : undefined;
 
     return {

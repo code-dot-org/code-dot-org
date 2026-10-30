@@ -16,6 +16,7 @@ const TOGGLEABLE_ANSWER_TYPES = [
   'buildHTML',
   'buildJavaScript',
   'buildJSON',
+  'buildPage',
   'debug',
   'documentation',
   'example',
@@ -31,6 +32,7 @@ const ANSWER_TYPE_TO_LABEL = {
   buildHTML: 'Build HTML',
   buildJavaScript: 'Build JavaScript',
   buildJSON: 'Build JSON',
+  buildPage: 'Build Page (HTML+CSS+JS)',
   debug: 'Debug',
   documentation: 'Documentation',
   example: 'Example',
@@ -54,6 +56,7 @@ $(document).ready(function () {
       answerTypeToLabel={ANSWER_TYPE_TO_LABEL}
       answerTypeContracts={ANSWER_TYPE_CONTRACTS}
       defaultAnswerTypes={DEFAULT_ANSWER_TYPES}
+      showCommitMessagesToggle
     />,
     document.getElementById('ai-tutor-prompt-settings-editor'),
     {

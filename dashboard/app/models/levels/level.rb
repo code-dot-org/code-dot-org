@@ -53,8 +53,6 @@ class Level < ApplicationRecord
   belongs_to :game, optional: true
   has_and_belongs_to_many :concepts
   has_and_belongs_to_many :script_levels
-  has_many :levels_skills
-  has_many :skills, through: :levels_skills
   belongs_to :ideal_level_source, class_name: "LevelSource", optional: true # "see the solution" link uses this
   belongs_to :user, optional: true
   has_one :level_concept_difficulty, dependent: :destroy
@@ -69,9 +67,22 @@ class Level < ApplicationRecord
   end)
 
   # scope for levels that require ai chat tools to reasonably function.
-  scope :with_essential_ai_chat_tools, -> {where(type: %w[Aichat Weblab2])}
+  scope :with_essential_ai_chat_tools, -> {where(type: %w[Aichat Weblab2 Adaptive])}
 
   scope :with_any_ai_chat_tools, -> {with_essential_ai_chat_tools.or(with_ai_tutor_available)}
+
+  # Aichat levels pick their model per level, so only those configured with a
+  # US only model count.
+  scope :with_us_only_aichat_model, (lambda do
+    where(type: 'Aichat').where(
+      "levels.properties->>'$.aichat_settings.initialCustomizations.selectedModelId' IN (?)",
+      SharedConstants::AI_CHAT_US_ONLY_MODEL_IDS
+    )
+  end)
+
+  scope :with_essential_us_only_ai_models, (lambda do
+    with_us_only_aichat_model.or(where(type: 'Weblab2'))
+  end)
 
   before_validation :strip_name
   before_destroy :remove_empty_script_levels
@@ -88,10 +99,11 @@ class Level < ApplicationRecord
   validates :level_num, uniqueness: {case_sensitive: true, scope: :game, conditions: -> {where.not(level_num: ['custom', nil])}}
 
   validate :validate_game, on: [:create, :update]
-  validate :name_change_stays_within_ui_test_partition, on: :update
-  validate :ui_test_levels_are_immutable_on_levelbuilder
+  validate :name_matches_at_most_one_partition
+  validate :name_change_stays_within_partition, on: :update
+  validate :non_production_levels_are_immutable_on_levelbuilder
   # prepend: the abort must come before remove_empty_script_levels destroys rows
-  before_destroy :ui_test_levels_are_immutable_on_levelbuilder, prepend: true
+  before_destroy :non_production_levels_are_immutable_on_levelbuilder, prepend: true
 
   after_save {Services::LevelFiles.write_custom_level_file(self)}
   after_destroy {Services::LevelFiles.delete_custom_level_file(self)}
@@ -135,7 +147,7 @@ class Level < ApplicationRecord
     use_secondary_finish_button
     skip_url
     stay_on_level_after_submit
-    skill_keys
+    header_label
     additional_ai_evaluation_instructions
     product_tours
     generate_outline
@@ -252,16 +264,20 @@ class Level < ApplicationRecord
 
   UI_TEST_NAME_PREFIX = 'ui test '.freeze
 
-  # Levels named "UI Test ..." exist only for UI tests and are stored apart
-  # from production levels; see dashboard/test/ui/config/README.md. Match on
-  # the level name, never the filename: the DSL file for "UI Test Foo" is
-  # ui_test_foo.<type>.
-  def self.ui_test_name?(name)
+  # Whether the level name falls into the UI test partition.
+  # See dashboard/config/PARTITIONS.md.
+  def self.ui_test_partition_name?(name)
     name.to_s.downcase.start_with?(UI_TEST_NAME_PREFIX)
   end
 
   def ui_test?
-    Level.ui_test_name?(name)
+    Level.ui_test_partition_name?(name)
+  end
+
+  # Whether the level name falls into the standalone project partition.
+  # See dashboard/config/PARTITIONS.md.
+  def self.standalone_partition_name?(name)
+    Policies::StandaloneProjects.partition_name?(name)
   end
 
   def should_localize?
@@ -367,6 +383,7 @@ class Level < ApplicationRecord
   end
 
   TYPES_WITHOUT_IDEAL_LEVEL_SOURCE = [
+    'Adaptive', # no ideal solution
     'Aichat', # no ideal solution
     'Ailab', # no ideal solution
     'Applab', # freeplay
@@ -489,29 +506,43 @@ class Level < ApplicationRecord
     end
   end
 
-  # Renaming across the "UI Test " boundary moves the level's definition file
-  # between the two trees, changing which environments seed it. Refuse while a
+  # Renaming into another partition moves the level's definition file to
+  # another tree, changing which environments seed it. Refuse while a
   # script references the level, or while it is attached to another level as a
   # parent or child (contained level, project template, LevelGroup/BubbleChoice
-  # sublevel), since parent and child must stay on the same side. See
-  # dashboard/test/ui/config/README.md.
-  def name_change_stays_within_ui_test_partition
+  # sublevel), since parent and child must stay in one partition. See
+  # dashboard/config/PARTITIONS.md.
+  def name_change_stays_within_partition
     return unless name_changed?
-    return if Level.ui_test_name?(name) == Level.ui_test_name?(name_was)
+    return if Policies::LevelFiles.same_partition?(name, name_was)
     return unless script_levels.exists? || parent_levels.exists? || child_levels.exists?
-    errors.add(:name, "cannot be renamed across the \"UI Test \" boundary while the level is used by a script or another level")
+    errors.add(:name, "cannot be renamed into another partition (\"UI Test \", standalone project, or production) while the level is used by a script or another level")
   end
 
-  # UI test levels are engineering-owned test content: developers author them
-  # locally, and their definition files live under dashboard/test/ui/config, a
-  # tree the daily content push from the levelbuilder environment must never
-  # modify. Refuse to save or destroy them there; the throw halts a destroy
-  # and is harmless during validation. See dashboard/test/ui/config/README.md.
-  def ui_test_levels_are_immutable_on_levelbuilder
-    return unless rack_env?(:levelbuilder)
-    return unless ui_test? || Level.ui_test_name?(name_was)
-    errors.add(:base, "UI test levels cannot be changed on levelbuilder; they are maintained in the repo under dashboard/test/ui/config")
+  # UI test and standalone project levels are engineering-owned: developers
+  # author them locally, and their definition files live under
+  # dashboard/test/ui/config and dashboard/config/standalone_projects, trees the
+  # daily content push from the levelbuilder environment must never modify.
+  # Refuse to save or destroy these levels from its web application, while
+  # allowing them to be modified by the seed task. The throw halts a destroy and
+  # is harmless during validation. See dashboard/config/PARTITIONS.md.
+  def non_production_levels_are_immutable_on_levelbuilder
+    return unless rack_env?(:levelbuilder) && CDO.running_web_application?
+    return if [name, name_was].none? {|n| Level.ui_test_partition_name?(n) || Level.standalone_partition_name?(n)}
+    errors.add(
+      :base,
+      'UI test and standalone project levels cannot be changed on levelbuilder; ' \
+        'they are maintained by engineers.'
+    )
     throw :abort
+  end
+
+  def name_matches_at_most_one_partition
+    return unless Level.ui_test_partition_name?(name) && Level.standalone_partition_name?(name)
+    errors.add(
+      :name,
+      'may match only one partition rule: "UI Test ..." or standalone project ("New ... Project", "... Subproject"); drop one of the markers'
+    )
   end
 
   # Uses specific knowledge of how the key method is implemented in hopes of
@@ -1143,49 +1174,9 @@ class Level < ApplicationRecord
     end
   end
 
-  def summarize_for_levels_skills
-    {
-      level_id: id,
-      level_name: name,
-      unit_names: unit_names,
-      skills: skill_identifiers,
-    }.deep_transform_keys {|key| key.to_s.camelize(:lower)}
-  end
-
-  # This method returns the names of all units that this level is part of.
-  # For contained levels, we also include the names of the units that
-  # the parent levels are part of.
-  # This is used to filter levels by unit for display on /skills.
-  def unit_names
-    unit_names = script_levels.map {|sl| sl.script.name}
-    parent_levels.each do |parent_level|
-      unit_names += parent_level.script_levels.map {|sl| sl.script.name}
-    end
-    unit_names.uniq.sort
-  end
-
-  def skill_identifiers
-    skills.map {|skill| {id: skill.id, key: skill.key}}
-  end
-
-  def remove_skill_key(skill_key)
-    leftover_skill_keys = JSON.parse(skill_keys)&.delete_if {|sk| sk == skill_key} if skill_keys
-    properties['skill_keys'] = leftover_skill_keys.empty? ? nil : leftover_skill_keys.to_json
-    save!
-  end
-
-  def add_skill_key(skill_key)
-    properties['skill_keys'] = if skill_keys && JSON.parse(skill_keys).is_a?(Array)
-                                 JSON.parse(skill_keys).push(skill_key).uniq.to_json
-                               else
-                                 [skill_key].to_json
-                               end
-    save!
-  end
-
   def uses_theme_preference?
     # These are the level types that set and use the theme preference in UserPreferences right now.
-    is_a?(Pythonlab) || is_a?(Weblab2) || is_a?(Sketchlab)
+    is_a?(Pythonlab) || is_a?(Weblab2) || is_a?(Sketchlab) || (is_a?(GamelabJr) && uses_lab2?)
   end
 
   def get_parent_level_for_script(script_id)

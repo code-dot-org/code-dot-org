@@ -1,23 +1,26 @@
-import Alert from '@code-dot-org/component-library/alert';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Button as MuiButton, Snackbar, Fade, Typography} from '@mui/material';
-import React, {useCallback, useEffect, useMemo, useState} from 'react';
-import {TransitionGroup} from 'react-transition-group';
+import {useToast} from '@code-dot-org/component-library/toast';
+import {Button as MuiButton, Typography} from '@mui/material';
+import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ProjectType} from '@cdo/apps/lab2/types';
 import {convertProjectTypeToDisplayName} from '@cdo/apps/lab2/utils';
 import {BackpackProps} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
+import {notifyWithToast} from '@cdo/apps/sharedComponents/backpack/backpackToasts';
 import {BackpackEvent} from '@cdo/apps/sharedComponents/backpack/types';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import BackpackFileChip from './BackpackFileChip';
+import BackpackFileChip, {
+  SHOW_RECENTLY_ADDED_DURATION_MS,
+} from './BackpackFileChip';
 import {
-  ALL_FILES_CATEGORY_ID,
   BackpackSortOrder,
-  FileCategoryId,
-  getFileCategory,
   sortBackpackFiles,
+  FileExtension,
+  ALL_FILES_ID,
+  getPopulatedFileTypeConfigs,
+  findConfigForFile,
 } from './backpackFileFilters';
 import BackpackListControls from './BackpackListControls';
 import BackpackMessage from './BackpackMessage';
@@ -25,42 +28,26 @@ import isFileTypeSupported from './isFileTypeSupported';
 
 import moduleStyles from './unified-backpack-panel.module.scss';
 
-const ALERT_AUTO_HIDE_MS = 3000;
-let nextAlertId = 0;
-
-interface AlertConfig {
-  id: number;
-  type: 'success' | 'danger' | 'info';
-  message: string;
-}
-
 interface UnifiedBackpackFile {
   appType: string;
   fileName: string;
 }
 
+const fileKeyFor = (appType: string, fileName: string) =>
+  `${appType}/${fileName}`;
+
 interface UnifiedBackpackPanelProps extends BackpackProps {
-  openPanelCallback: () => void;
   backpackRefreshKey: number;
 }
 
-// No-op transition for the Snackbar's transition slot
-// since the transition is handled by the inner TransitionGroup and Fade
-const SnackbarPassthrough = React.forwardRef<
-  HTMLDivElement,
-  {children?: React.ReactNode}
->(({children}, ref) => <div ref={ref}>{children}</div>);
-
 /**
- * Backpack panel behind the 'unified-backpack' experiment. It shows every backpack file the
- * user has as one list.
+ * Backpack panel. It shows every backpack file the user has as one list.
  */
 const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
   validateFileName,
   saveFileToProject,
   createNewProjectFile,
   findIdForFileName,
-  openPanelCallback,
   supportedFileTypes,
   backpackRefreshKey,
   addFileTooltipText,
@@ -69,18 +56,24 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
 }) => {
   const backpackApi = Lab2Registry.getInstance().getUnifiedBackpackApi();
   const currentUserId = useAppSelector(state => state.currentUser.userId);
+  const showToast = useToast();
   const viewingOldVersion = useAppSelector(
     state => state.lab2Project.viewingOldVersion
+  );
+  const workspaceNoun = useAppSelector(state =>
+    state.lab.levelProperties?.isProjectLevel ? 'project' : 'level'
   );
 
   const [files, setFiles] = useState<UnifiedBackpackFile[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [loadError, setLoadError] = useState<boolean>(false);
-  const [alertList, setAlertList] = useState<AlertConfig[]>([]);
+  const [recentlyAddedKeys, setRecentlyAddedKeys] = useState<Set<string>>(
+    new Set()
+  );
   const [actionInProgress, setActionInProgress] = useState<boolean>(false);
-  const [selectedCategoryId, setSelectedCategoryId] = useState<
-    FileCategoryId | typeof ALL_FILES_CATEGORY_ID
-  >(ALL_FILES_CATEGORY_ID);
+  const [selectedExtension, setSelectedExtension] = useState<
+    FileExtension | typeof ALL_FILES_ID
+  >(ALL_FILES_ID);
   const [sortOrder, setSortOrder] = useState<BackpackSortOrder>('name-asc');
 
   const loadFiles = useCallback(
@@ -107,6 +100,12 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
     [backpackApi]
   );
 
+  const fileNames = useMemo(() => files.map(({fileName}) => fileName), [files]);
+  const populatedFileTypeConfigs = useMemo(
+    () => getPopulatedFileTypeConfigs(fileNames, supportedFileTypes),
+    [fileNames, supportedFileTypes]
+  );
+
   useEffect(() => {
     // The backpack api redirects signed-out users to sign-in, so don't ask for files
     // we can't get.
@@ -124,48 +123,71 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
     }
   }, [currentUserId, backpackRefreshKey, loadFiles]);
 
-  useEffect(() => {
-    const listenerId = backpackApi.addEventListener(event => {
-      if (
-        event === BackpackEvent.FileAdded ||
-        event === BackpackEvent.FileDeleted
-      ) {
-        // Reload without the loading view, so the list doesn't flicker on every change.
-        loadFiles(false);
-      }
-    });
-    return () => backpackApi.removeEventListener(listenerId);
-  }, [backpackApi, loadFiles]);
+  const recentlyAddedTimers = useRef(
+    new Map<string, ReturnType<typeof setTimeout>>()
+  );
 
-  useEffect(() => {
-    // Deleting the last file of a category retires that category, so fall back to
-    // showing everything rather than leaving an empty filter selected.
-    if (
-      selectedCategoryId !== ALL_FILES_CATEGORY_ID &&
-      !files.some(
-        ({fileName}) => getFileCategory(fileName).id === selectedCategoryId
-      )
-    ) {
-      setSelectedCategoryId(ALL_FILES_CATEGORY_ID);
+  const markRecentlyAdded = useCallback((fileKey: string) => {
+    setRecentlyAddedKeys(prevKeys => new Set(prevKeys).add(fileKey));
+    // Saving the same file again restarts its window. Leaving the first timer in
+    // place would clear the flag partway through the second one.
+    const pendingTimer = recentlyAddedTimers.current.get(fileKey);
+    if (pendingTimer) {
+      clearTimeout(pendingTimer);
     }
-  }, [files, selectedCategoryId]);
-
-  const removeAlert = useCallback((id: number) => {
-    setAlertList(prevAlerts => prevAlerts.filter(alert => alert.id !== id));
+    recentlyAddedTimers.current.set(
+      fileKey,
+      setTimeout(() => {
+        recentlyAddedTimers.current.delete(fileKey);
+        setRecentlyAddedKeys(prevKeys => {
+          const nextKeys = new Set(prevKeys);
+          nextKeys.delete(fileKey);
+          return nextKeys;
+        });
+      }, SHOW_RECENTLY_ADDED_DURATION_MS)
+    );
   }, []);
 
-  const addAlert = useCallback(
-    (type: AlertConfig['type'], message: string, autoHide: boolean = true) => {
-      const id = nextAlertId++;
-      setAlertList(prevAlerts => [...prevAlerts, {id, type, message}]);
-      openPanelCallback();
-      if (autoHide) {
-        setTimeout(() => removeAlert(id), ALERT_AUTO_HIDE_MS);
+  useEffect(() => {
+    // Clean up any remaining timers on unmount.
+    const timers = recentlyAddedTimers.current;
+    return () => timers.forEach(timer => clearTimeout(timer));
+  }, []);
+
+  useEffect(() => {
+    const listenerId = backpackApi.addEventListener(
+      (event, fileName, appType) => {
+        if (
+          event === BackpackEvent.FileAdded ||
+          event === BackpackEvent.FileDeleted
+        ) {
+          // Reload without the loading view, so the list doesn't flicker on every change.
+          loadFiles(false);
+        }
+        if (event === BackpackEvent.FileAdded) {
+          markRecentlyAdded(fileKeyFor(appType, fileName));
+        }
       }
-      return id;
-    },
-    [openPanelCallback, removeAlert]
-  );
+    );
+    return () => backpackApi.removeEventListener(listenerId);
+  }, [backpackApi, loadFiles, markRecentlyAdded]);
+
+  useEffect(() => {
+    // Deleting the last file of an extension group retires that extension, so fall back to
+    // showing everything rather than leaving an empty filter selected.
+    if (
+      selectedExtension !== ALL_FILES_ID &&
+      !files.some(
+        ({fileName}) =>
+          findConfigForFile(fileName, populatedFileTypeConfigs).id ===
+          selectedExtension
+      )
+    ) {
+      setSelectedExtension(ALL_FILES_ID);
+    }
+  }, [files, populatedFileTypeConfigs, selectedExtension]);
+
+  const notify = useMemo(() => notifyWithToast(showToast), [showToast]);
 
   // Names held by more than one backpack. Those rows have to say which backpack they
   // came from, or they are indistinguishable.
@@ -191,12 +213,14 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
       const sourceDisplayName = duplicateFileNames.has(fileName)
         ? convertProjectTypeToDisplayName(appType as ProjectType) || undefined
         : undefined;
+      const fileKey = fileKeyFor(appType, fileName);
       return (
         <BackpackFileChip
-          key={`${appType}/${fileName}`}
+          key={fileKey}
           fileName={fileName}
           backpackApi={client}
-          addAlert={addAlert}
+          notify={notify}
+          isRecentlyAdded={recentlyAddedKeys.has(fileKey)}
           validateFileName={validateFileName}
           saveFileToProject={saveFileToProject}
           createNewProjectFile={createNewProjectFile}
@@ -214,7 +238,8 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
     [
       backpackApi,
       duplicateFileNames,
-      addAlert,
+      notify,
+      recentlyAddedKeys,
       validateFileName,
       saveFileToProject,
       createNewProjectFile,
@@ -226,31 +251,29 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
     ]
   );
 
-  const fileNames = useMemo(() => files.map(({fileName}) => fileName), [files]);
-
   const handleSaveToBackpackClick = useCallback(async () => {
     if (!saveToBackpackButton) {
       return;
     }
     setActionInProgress(true);
     try {
-      await saveToBackpackButton.onClick(fileNames, (error: string) =>
-        addAlert('danger', error, false)
-      );
+      await saveToBackpackButton.onClick(notify);
     } finally {
       setActionInProgress(false);
     }
-  }, [saveToBackpackButton, fileNames, addAlert]);
+  }, [saveToBackpackButton, notify]);
 
   const visibleFiles = useMemo(() => {
     const matchingFiles =
-      selectedCategoryId === ALL_FILES_CATEGORY_ID
+      selectedExtension === ALL_FILES_ID
         ? files
         : files.filter(
-            ({fileName}) => getFileCategory(fileName).id === selectedCategoryId
+            ({fileName}) =>
+              findConfigForFile(fileName, populatedFileTypeConfigs).id ===
+              selectedExtension
           );
     return sortBackpackFiles(matchingFiles, sortOrder);
-  }, [files, selectedCategoryId, sortOrder]);
+  }, [files, populatedFileTypeConfigs, selectedExtension, sortOrder]);
 
   const [supportedFiles, unsupportedFiles] = useMemo(() => {
     const supported: UnifiedBackpackFile[] = [];
@@ -318,10 +341,11 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
         {files.length > 0 && (
           <BackpackListControls
             fileNames={fileNames}
-            selectedCategoryId={selectedCategoryId}
-            onCategoryChange={setSelectedCategoryId}
+            selectedExtension={selectedExtension}
+            onExtensionChange={setSelectedExtension}
             sortOrder={sortOrder}
             onSortOrderChange={setSortOrder}
+            populatedFileTypeConfigs={populatedFileTypeConfigs}
           />
         )}
         <div className={moduleStyles.fileListContainer}>
@@ -343,7 +367,7 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
                       variant="strong"
                       className={moduleStyles.unsupportedText}
                     >
-                      {`Not supported in this lab (${unsupportedFiles.length})`}
+                      {`Not supported in this ${workspaceNoun} (${unsupportedFiles.length})`}
                     </Typography>
                   </Typography>
                   <FontAwesomeV6Icon
@@ -364,26 +388,6 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
 
   return (
     <div className={moduleStyles.unifiedBackpackPanel}>
-      <Snackbar
-        open
-        slots={{transition: SnackbarPassthrough}}
-        className={moduleStyles.alertContainer}
-      >
-        <TransitionGroup className={moduleStyles.alertList}>
-          {alertList.map(({id, type, message}) => (
-            <Fade key={id} mountOnEnter unmountOnExit>
-              <div>
-                <Alert
-                  type={type}
-                  text={message}
-                  size="s"
-                  onClose={() => removeAlert(id)}
-                />
-              </div>
-            </Fade>
-          ))}
-        </TransitionGroup>
-      </Snackbar>
       {panelContent}
       {saveToBackpackButton && (
         <MuiButton

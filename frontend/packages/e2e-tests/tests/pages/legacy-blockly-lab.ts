@@ -3,9 +3,13 @@ import {expect, type Locator, type Page} from '@playwright/test';
 import {AuthoredHintsComponent} from '../components/authored-hints';
 import {CalloutsComponent} from '../components/callouts';
 import {labLevelUrl, type LabLevelUrlParams} from '../shared/routes';
-import {waitUntilStable} from '../shared/stability';
+import {settle, waitUntilStable} from '../shared/stability';
 
 import {LessonLevelPage} from './lesson-level-page';
+
+interface WaitForReadyOptions {
+  dismissOverlays?: boolean;
+}
 
 /** Base for legacy Blockly labs (maze, artist, flappy, ...). */
 export class LegacyBlocklyLab extends LessonLevelPage {
@@ -40,9 +44,10 @@ export class LegacyBlocklyLab extends LessonLevelPage {
   readonly showCodeHeader: Locator;
 
   /**
-   * Show Code dialog's overlay (the DSCO Modal's role="presentation" backdrop,
-   * mounted on #showCodeModal appended to body). Carries the modal-backdrop
-   * z-index; this is the element whose stacking sits in front of the callouts.
+   * Show Code dialog's overlay (the DSCO Modal's MUI Dialog root, mounted on
+   * #showCodeModal appended to body). Carries the modal-backdrop z-index; this
+   * is the element whose stacking sits in front of the callouts. Its inner
+   * .MuiDialog-container is also role="presentation", so match the class.
    */
   readonly showCodeModalOverlay: Locator;
 
@@ -56,12 +61,16 @@ export class LegacyBlocklyLab extends LessonLevelPage {
   readonly congratsMessage: Locator;
 
   /**
-   * All SVGs inside the game visualization. Different labs use different ids
-   * (#svgMaze, #svgStudio + #visualizationOverlay), and the maze SVG
-   * overflows #visualization by ~1.5px (400x400 viewBox in a 300px box
-   * with overflow:visible), so masking the parent misses the edge.
+   * All SVGs and canvases inside the game visualization. Different labs use
+   * different ids (#svgMaze, #svgStudio + #visualizationOverlay for Blockly;
+   * a Phaser canvas for Craft), and the maze SVG overflows #visualization by
+   * ~1.5px (400x400 viewBox in a 300px box with overflow:visible), so
+   * masking the parent misses the edge.
    */
   readonly visualization: Locator;
+
+  /** Text-mode editor caret; Ace blinks it on a timer, so screenshots mask it. */
+  readonly codeEditorCursor: Locator;
 
   /** Continue button on the shared feedback/congrats dialog, rendered for all legacy Blockly labs. */
   readonly continueButton: Locator;
@@ -88,14 +97,13 @@ export class LegacyBlocklyLab extends LessonLevelPage {
     this.loadingSpinner = page.locator('#codeApp .loading');
     this.resetButton = page.locator('#resetButton');
     this.showCodeHeader = page.locator('#show-code-header');
-    this.showCodeModalOverlay = page.locator(
-      '#showCodeModal [role="presentation"]',
-    );
+    this.showCodeModalOverlay = page.locator('#showCodeModal .MuiDialog-root');
     this.inlineFeedback = page.locator(
       '.uitest-topInstructions-inline-feedback',
     );
     this.congratsMessage = page.locator('.congrats');
-    this.visualization = page.locator('#visualization svg');
+    this.visualization = page.locator('#visualization :is(svg, canvas)');
+    this.codeEditorCursor = page.locator('.ace_cursor');
     this.continueButton = page.locator('#continue-button');
     this.embeddedInstructionBlocks = page.locator(
       '.readonly-block-space-container',
@@ -134,9 +142,12 @@ export class LegacyBlocklyLab extends LessonLevelPage {
    * params (show_callouts). Same wait strategy as gotoLevel; prefer gotoLevel
    * when labLevelUrl can build the URL.
    */
-  async gotoLevelUrl(url: string): Promise<void> {
+  async gotoLevelUrl(
+    url: string,
+    options?: WaitForReadyOptions,
+  ): Promise<void> {
     await this.page.goto(url, {waitUntil: 'domcontentloaded'});
-    await this.waitForReady();
+    await this.waitForReady(options);
   }
 
   /**
@@ -155,8 +166,10 @@ export class LegacyBlocklyLab extends LessonLevelPage {
   /** Hook for lab-specific modals that must clear before the instructions overlay; see CraftLab. */
   protected async dismissLabInterstitials(): Promise<void> {}
 
-  /** Wait for the lab to be interactive: run button, header, overlay dismissed, header settled. */
-  async waitForReady(): Promise<void> {
+  /** Wait for the lab to be interactive and settled visually. */
+  async waitForReady({
+    dismissOverlays = true,
+  }: WaitForReadyOptions = {}): Promise<void> {
     // #runButton mounts on window 'load'; a cold or contended boot can exceed 15s.
     const LAB_LOAD_TIMEOUT_MS = 45_000;
     await expect(this.loadingSpinner).toBeHidden({
@@ -168,8 +181,10 @@ export class LegacyBlocklyLab extends LessonLevelPage {
     await this.header.waitForUserChrome();
     // Both of these stack above the instructions overlay handled below, whose
     // OK-dialog click they would otherwise intercept.
-    await this.introVideoModal.dismissIfShown();
-    await this.dismissLabInterstitials();
+    if (dismissOverlays) {
+      await this.introVideoModal.dismissIfShown();
+      await this.dismissLabInterstitials();
+    }
     // Dismiss the instructions overlay if shown (anonymous sessions). Its
     // backdrop (#overlay) fills the viewport and a plain .click() lands on
     // the default center point, which the instructions dialog itself can
@@ -179,7 +194,7 @@ export class LegacyBlocklyLab extends LessonLevelPage {
     // InstructionsCsfMiddleCol.jsx). Click the dialog's own OK button
     // instead: same dismissal (closeOverlay), no coordinate guessing.
     const overlay = this.page.locator('#overlay');
-    if (await overlay.isVisible()) {
+    if (dismissOverlays && (await overlay.isVisible())) {
       // Not by name: i18n.dialogOK() localizes it, so 'OK' misses on ar-sa.
       // The <hr> is in the same overlayVisible-gated block as the button.
       const dialogOk = this.instructionsPanel.locator('hr + button');
@@ -187,6 +202,8 @@ export class LegacyBlocklyLab extends LessonLevelPage {
       // first click can land before the dialog's onClick (closeOverlay) is
       // bound and silently no-op, leaving the overlay up; re-clicking once the
       // handler is attached clears it.
+      // A click during the panel's resize can leave the panel scrolled.
+      await waitUntilStable(this.instructionsPanel);
       await expect(async () => {
         if (await dialogOk.isVisible()) {
           await dialogOk.click();
@@ -195,6 +212,10 @@ export class LegacyBlocklyLab extends LessonLevelPage {
         }
         await expect(overlay).toBeHidden({timeout: 2_000});
       }).toPass({timeout: LAB_LOAD_TIMEOUT_MS});
+    }
+    const instructionsScrollContainer = this.page.locator('#scroll-container');
+    if (await instructionsScrollContainer.isVisible()) {
+      await waitUntilStable(instructionsScrollContainer, 400);
     }
     await this.header.waitForFadeIn();
   }
@@ -290,6 +311,27 @@ export class LegacyBlocklyLab extends LessonLevelPage {
       this.footer.localeDropdown.selectOption({label}),
     ]);
     await this.waitForReady();
+  }
+
+  /** Toggle a droplet lab to text mode and wait out droplet's melt animation. */
+  async showCode(): Promise<void> {
+    await this.showCodeHeader.click();
+    await this.page.waitForFunction(() => {
+      const droplet = window.__TestInterface?.getDroplet();
+      return (
+        droplet?.session.currentlyUsingBlocks === false &&
+        !droplet.currentlyAnimating
+      );
+    });
+    // The toggle re-renders under the pointer when droplet finishes, restarting its hover transition.
+    await settle(this.page);
+    await this.showCodeHeader.evaluate(toggle =>
+      Promise.all(
+        toggle
+          .getAnimations({subtree: true})
+          .map(animation => animation.finished),
+      ).then(() => undefined),
+    );
   }
 
   /**

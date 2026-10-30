@@ -19,10 +19,13 @@ class Challenge < ApplicationRecord
   belongs_to :lesson
   has_many :challenge_responses, dependent: :destroy
 
-  # whiteboard / video. Null = no default modality for this challenge.
+  # whiteboard / video / both. Null = no default modality for this challenge.
+  # 'both' challenges appear in both the whiteboard and video sections of the
+  # challenge selector.
   enum default_modality: {
     whiteboard: 'whiteboard',
     video: 'video',
+    both: 'both',
   }, _prefix: :default
 
   validates :question, presence: true

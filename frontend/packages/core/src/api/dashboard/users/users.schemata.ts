@@ -142,6 +142,7 @@ export const HasDismissedPersonalizationAlertSchema = z
 // --- My Account settings (GET /api/v1/users/me/settings) ---
 
 const AuthenticationOptionSchema = z.object({
+  id: z.number(),
   credential_type: z.string(),
   email: z.string().nullable(),
 });
@@ -174,6 +175,27 @@ const SchoolInfoSchema = z
     schoolId: s.school_id,
     schoolZip: s.school_zip,
     country: s.country,
+  }));
+
+// lti_roster_sync_enabled is absent where legacy hides the setting.
+const IntegrationsSchema = z
+  .object({
+    can_manage_linked_accounts: z.boolean(),
+    is_google_classroom_student: z.boolean(),
+    is_clever_student: z.boolean(),
+    personal_account_linking_enabled: z.boolean(),
+    lms_name: z.string().nullable(),
+    lti_roster_sync_enabled: z.boolean().optional(),
+  })
+  .transform(i => ({
+    canManageLinkedAccounts: i.can_manage_linked_accounts,
+    isGoogleClassroomStudent: i.is_google_classroom_student,
+    isCleverStudent: i.is_clever_student,
+    personalAccountLinkingEnabled: i.personal_account_linking_enabled,
+    lmsName: i.lms_name,
+    ...(i.lti_roster_sync_enabled !== undefined && {
+      ltiRosterSyncEnabled: i.lti_roster_sync_enabled,
+    }),
   }));
 
 // Wire (snake_case) shape of GET /api/v1/users/me/settings, transformed to the
@@ -210,6 +232,7 @@ export const UserSettingsResponseSchema = z
     educator_role: z.string().nullable().optional(),
     educator_role_options: z.array(EducatorRoleOptionSchema).optional(),
     school_info: SchoolInfoSchema.nullable().optional(),
+    integrations: IntegrationsSchema,
   })
   .transform(r => ({
     userType: r.user_type,
@@ -224,6 +247,7 @@ export const UserSettingsResponseSchema = z
     shouldSeeAddPasswordForm: r.should_see_add_password_form,
     shouldSeeEditEmailLink: r.should_see_edit_email_link,
     authenticationOptions: r.authentication_options.map(option => ({
+      id: option.id,
       credentialType: option.credential_type,
       email: option.email,
     })),
@@ -242,4 +266,5 @@ export const UserSettingsResponseSchema = z
       educatorRoleOptions: r.educator_role_options,
     }),
     ...(r.school_info !== undefined && {schoolInfo: r.school_info}),
+    integrations: r.integrations,
   }));

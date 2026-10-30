@@ -11,7 +11,7 @@ All builds run from the repo root; `podman` works everywhere `docker` appears.
 
 ```sh
 # Build the toolchain and dependency layers
-docker build -t cdo-build:local docker/build/
+docker build -f docker/build/Dockerfile -t cdo-build:local .
 docker build -f docker/deps/Dockerfile \
   --build-arg BUILD_IMAGE=cdo-build:local \
   -t cdo-deps:local .
@@ -48,6 +48,7 @@ on both docker and podman from the same Dockerfile.
 | cdo-build | [build/](build/README.md) | the compile toolchain, Node, and uv; builds the dependency layer and is then discarded | not published |
 | cdo-deps | [deps/](deps/README.md) | the production gem bundle and the python venv, named by a content key over its inputs | `ghcr.io/code-dot-org/cdo-deps` |
 | cdo-rails | [rails/](rails/README.md) | the Rails source slice; runs as api or worker | `ghcr.io/code-dot-org/cdo-rails` |
+| cdo-dev | [dev/](dev/README.md) | the development image: toolchain, Node, Playwright chromium, dev/test gems; source arrives as a volume | `ghcr.io/code-dot-org/cdo-dev` |
 
 Each build takes its parent as a build argument, so a caller can pin the parent
 by digest. `cdo-deps` is resolved by content key rather than by tag — see
@@ -132,7 +133,7 @@ Make sure everything works locally using the instructions above.
 cd docker/ci
 ```
 
-Sign in to Docker Hub through the command line; when prompted, enter the password found under "access token for docker cli authentication" in the lastpass docker hub notes field
+Sign in to Docker Hub through the command line; when prompted, enter the docker.com "Admin API Token" from 1password
 
 ```
 docker login -u codedotorg

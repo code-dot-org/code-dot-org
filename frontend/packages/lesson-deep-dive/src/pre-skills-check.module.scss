@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   height: 100%;
-  color: #fff;
+  color: var(--text-neutral-primary);
 }
 
 .heading {
@@ -11,7 +11,7 @@
   font-size: clamp(3.5rem, 14vw, 6.25rem);
   font-weight: 800;
   line-height: 1;
-  color: #fff;
+  color: var(--text-neutral-primary);
   margin: 0 0 24px;
 }
 
@@ -19,7 +19,7 @@
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.4;
-  color: #d4dae1;
+  color: var(--text-neutral-quaternary);
   margin: 0 0 32px;
   max-width: 460px;
 }
@@ -36,10 +36,10 @@
   align-items: center;
   gap: 8px;
   padding: 10px 16px;
-  border: 1px solid #fff;
+  border: 1px solid var(--borders-neutral-solid);
   border-radius: 4px;
   background: transparent;
-  color: #fff;
+  color: var(--text-neutral-primary);
   font-size: 1.25rem;
   font-weight: 600;
   cursor: pointer;
@@ -62,8 +62,8 @@
   padding: 10px 16px;
   border: none;
   border-radius: 4px;
-  background: #9657c7;
-  color: #fff;
+  background: var(--background-brand-purple-primary);
+  color: var(--text-neutral-primary);
   font-size: 1.25rem;
   font-weight: 600;
   cursor: pointer;

@@ -27,8 +27,6 @@ class CourseVersion < ApplicationRecord
   has_many :vocabularies, dependent: :destroy
   has_many :reference_guides, dependent: :destroy
 
-  attr_readonly :content_root_id
-
   KEY_CHAR_RE = /[a-z0-9\-]/
   KEY_RE = /\A#{KEY_CHAR_RE}+\Z/
   validates :key,
@@ -62,6 +60,7 @@ class CourseVersion < ApplicationRecord
   delegate :has_editor_experiment?, to: :content_root, allow_nil: true
   delegate :can_be_instructor?, to: :content_root, allow_nil: true
   delegate :course_assignable?, to: :content_root, allow_nil: true
+  delegate :course_progress_viewable?, to: :content_root, allow_nil: true
   delegate :can_view_version?, to: :content_root, allow_nil: true
   delegate :included_in_units?, to: :content_root, allow_nil: true
   delegate :link, to: :content_root, allow_nil: false
@@ -156,7 +155,7 @@ class CourseVersion < ApplicationRecord
   # the resulting data looks like
   def self.courses_for_unit_selector(unit_ids, user)
     Unit.joins(unit_groups: :course_version).where(id: unit_ids).
-      flat_map {|u| u.unit_groups.map(&:course_version)}.select {|cv| cv.course_assignable?(user)}.
+      flat_map {|u| u.unit_groups.map(&:course_version)}.select {|cv| cv.course_progress_viewable?(user)}.
       map(&:summarize_for_unit_selector).uniq.sort_by {|c| c[:display_name]}
   end
 
@@ -190,7 +189,7 @@ class CourseVersion < ApplicationRecord
     {
       id: id,
       course_name: content_root.name,
-      display_name: content_root.launched? ? content_root.localized_title : content_root.localized_title + ' *',
+      display_name: (content_root.launched? || content_root.sunsetting?) ? content_root.localized_title : content_root.localized_title + ' *',
       units: unit_summaries.sort_by {|u| u[:position]},
     }
   end

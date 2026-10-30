@@ -1,0 +1,42 @@
+name 'pl-aif1-what-is-a-webapp_aif-js-2026'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<h1 >What Is a Web App?</h1>
+
+A web app is a program that runs inside a browser like Chrome, Safari, or Edge, rather than being installed on a device. 
+
+Website and web app get used interchangeably a lot, and it is worth drawing the line for your students early. 
+
+- A **website**, like an online brochure, mostly displays information. 
+
+- A **web app** lets someone do something: submit a form, play a game, generate text with AI, or draw on a canvas. When a student's project responds to a click instead of just displaying text, that is the shift you are looking for.
+
+
+
+<div style="display: flex; justify-content: space-between; width: 95%; margin: 20px auto; padding: 0 5px;">
+  <img src="https://images.code.org/f717660937a4dfe9e5ee5c26c2559e84-image-1760984133668.png" alt="Gmail logo" style="border-radius: 10px; width: 32%;">
+  <img src="https://images.code.org/1c777228b8b20369dbbd4bdc9c541b32-image-1760984038365.png" alt="Netflix logo" style="border-radius: 10px; width: 32%;">
+  <img src="https://images.code.org/ddaccf7331f24af662dd70608194f8ae-image-1760984217033.png" alt="Amazon logo" style="border-radius: 10px; width: 32%;">
+</div>
+<p style="font-size:14px; line-height:1.5; color:#555555; text-align:center; margin-top:-10px;">Gmail, Netflix, and Amazon are web apps your students already use daily, even if they've never thought about them that way.</p>
+
+<hr style="border:none; border-top:1px solid #E4E2F8; margin:24px 0;">
+
+<h2>Key Components You'll See in Student Code</h2>
+
+<p>Every web app your students build this unit rests on the same three technologies, plus one new collaborator.</p>
+
+<div style="display: flex; align-items: center; gap: 24px; margin: 20px 0;">
+  <img src="https://images.code.org/8d807df6feff88160d926c1fc7409642-image-1787241342909.png" alt="HTML is the structure of a webpage, like the frame of a house." style="width: 35%; max-width: 220px; border-radius: 10px; flex-shrink: 0;">
+  <div style="flex: 1;">
+    <p style="margin: 0 0 10px 0;">• <b>HTML</b> gives a page its structure, the way framing gives a house its shape.</p>
+    <p style="margin: 0 0 10px 0;">• <b>CSS</b> handles the style: colors, fonts, and layout, the finishes that make the house look like something.</p>
+    <p style="margin: 0 0 10px 0;">• <b>JavaScript</b> adds interactivity and logic, the doors that open and the lights that turn on.</p>
+    <p style="margin: 0;">• <b>AI</b> now sits alongside all three as a creative assistant, suggesting, refining, and debugging code while your students stay in the driver's seat on every decision.</p>
+  </div>
+</div>
+
+
+MARKDOWN

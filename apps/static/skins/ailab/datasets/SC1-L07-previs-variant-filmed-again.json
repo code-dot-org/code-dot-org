@@ -1,0 +1,62 @@
+{
+  "name": "SC1-L07-previs-variant-filmed-again",
+  "card": {
+    "description": "Scenes from past movies, each described by what happens in it, like stunts, moving vehicles, or things getting destroyed. Each scene is labeled with what the movie team decided: make a 3D rough draft of the scene before filming (Rough Draft), or Just Film It. This version adds one more feature: whether the scene can be filmed again.",
+    "source": "Created for AI Discoveries, Lesson 7: How to Train Your Decision Tree",
+    "lastUpdated": "2026",
+    "context": {
+      "createdBy": "CodeAI",
+      "potentialUses": "Train a model that flags which scenes in a new movie script might need a rough draft before filming.",
+      "potentialMisuses": "These labels show what past movie teams decided, not always what each scene needed. Be careful about trusting this model for movies that are very different from the ones in this data."
+    }
+  },
+  "defaultLabelColumn": "Decision",
+  "defaultIdColumn": "Scene",
+  "fields": [
+    {
+      "type": "categorical",
+      "id": "Scene",
+      "description": "A short description of the scene from a past movie."
+    },
+    {
+      "type": "categorical",
+      "id": "Stunt",
+      "description": "Does someone do a stunt in this scene, like jumping, falling, or fighting? (Yes or No)"
+    },
+    {
+      "type": "categorical",
+      "id": "Moving Vehicles",
+      "description": "Are cars, trains, boats, planes, or other vehicles moving in this scene? (Yes or No)"
+    },
+    {
+      "type": "categorical",
+      "id": "Something Gets Destroyed",
+      "description": "Does something get broken, wrecked, or blown up in this scene? (Yes or No)"
+    },
+    {
+      "type": "categorical",
+      "id": "Mostly Talking",
+      "description": "Is this scene mostly people talking? (Yes or No)"
+    },
+    {
+      "type": "categorical",
+      "id": "Mood",
+      "description": "How is the scene supposed to make the audience feel? (Funny, Scary, or Serious)"
+    },
+    {
+      "type": "categorical",
+      "id": "Indoors or Outdoors",
+      "description": "Does the scene happen inside or outside? (Indoors or Outdoors)"
+    },
+    {
+      "type": "categorical",
+      "id": "Can Be Filmed Again",
+      "description": "If something goes wrong, can the team film this scene again? (Yes or No)"
+    },
+    {
+      "type": "categorical",
+      "id": "Decision",
+      "description": "Did the movie team make a 3D rough draft of this scene before filming, or did they just film it? (Rough Draft or Just Film It)"
+    }
+  ]
+}

@@ -57,7 +57,9 @@ Topic questions only show up for those who indicated that their school has a 10 
 | PLEDGED | "I pledge to expand computer science offerings at my school, and to engage a diverse group of students, to bring opportunity to all." |
 | SHARE_WITH_REGIONAL_PARTNERS | "Share my contact information with the Code.org regional partner in my state so I can be contacted about local professional learning, resources and events." |
 
-The census_submissions table is replicated into Redshift via [dms task](https://github.com/code-dot-org/code-dot-org/blob/80777d646a9351de59404fbd173c67799c43dbda/aws/dms/tasks.yml#L2), where the RED uses it as an input to compute whether a school teaches CS.
+The census_submissions table is replicated into Redshift via the Zero ETL Integration (see
+`AnalyticsExportable`), where the RED team uses it as an input to compute whether a school teaches
+CS. It was previously replicated by a Database Migration Service task, retired in September 2026.
 
 # Historic Notes
 

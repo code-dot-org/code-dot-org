@@ -5,6 +5,41 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     @user = create(:user)
   end
 
+  test 'teacher_panel_v2_seen starts false and is set by posting to it' do
+    sign_in(@user)
+    refute @user.teacher_panel_v2_seen?
+
+    post :post_teacher_panel_v2_seen
+    assert_response :no_content
+
+    @user.reload
+    assert @user.teacher_panel_v2_seen?
+  end
+
+  test 'a signed out request to teacher_panel_v2_seen is unauthorized' do
+    post :post_teacher_panel_v2_seen
+    assert_response :unauthorized
+  end
+
+  test 'current reports teacher_panel_v2_seen as false for a new teacher' do
+    sign_in(@user)
+
+    get :current
+
+    assert_equal false, JSON.parse(@response.body)['teacher_panel_v2_seen']
+  end
+
+  test 'current reports teacher_panel_v2_seen once it has been set' do
+    # Set before signing in: current_user is cached for the life of the
+    # request chain, so updating mid-test would not be reflected.
+    @user.update!(teacher_panel_v2_seen: true)
+    sign_in(@user)
+
+    get :current
+
+    assert_equal true, JSON.parse(@response.body)['teacher_panel_v2_seen']
+  end
+
   test 'a get request to using_text_mode returns using_text_mode attribute of user object' do
     sign_in(@user)
     get :get_using_text_mode, params: {user_id: 'me'}

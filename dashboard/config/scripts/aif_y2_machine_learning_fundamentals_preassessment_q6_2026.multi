@@ -5,7 +5,7 @@ wrong 'Linear regression uses training data values that all fall on the same lin
 wrong 'Linear regression converts each piece of training data into a line'
 right 'Linear regression uses a straight line to make predictions'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Which of the following accurately describes linear regression?

@@ -23,9 +23,6 @@ document.addEventListener('DOMContentLoaded', function () {
       {...userInfoParams}
       userEnrollment={userEnrollmentParams}
     />,
-    document.getElementById('workshop-container'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.getElementById('workshop-container')
   );
 });

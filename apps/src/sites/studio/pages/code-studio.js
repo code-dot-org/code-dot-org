@@ -13,6 +13,7 @@ import '@code-dot-org/component-library-styles/colors.css';
 import '@code-dot-org/component-library-styles/brandOverrides.css';
 import {injectFontAwesome} from '@code-dot-org/fonts';
 import $ from 'jquery';
+import 'bootstrap-sass';
 import React from 'react';
 
 import hashEmail from '@cdo/apps/code-studio/hashEmail';
@@ -46,7 +47,6 @@ var Sounds = require('@cdo/apps/Sounds');
 
 window.React = require('react');
 window.ReactDOM = require('react-dom');
-window.Radium = require('radium');
 
 // Prevent callstack exceptions when opening multiple dialogs
 // http://stackoverflow.com/a/15856139/2506748
@@ -122,10 +122,7 @@ $(document).ready(function () {
           isDialogOpen={gdprData.show_gdpr_dialog}
           currentUserId={gdprData.current_user_id}
         />,
-        document.getElementById('gdpr-dialog'),
-        {
-          legacyReactDomRender: true,
-        }
+        document.getElementById('gdpr-dialog')
       );
     }
   }

@@ -36,16 +36,16 @@ namespace :seed do
   CURRICULUM_CONTENT_DIR = ENV['CURRICULUM_CONTENT_DIR'] || '.'
   CURRICULUM_CONTENT_PATHNAME = Pathname(CURRICULUM_CONTENT_DIR)
 
-  timed_task_with_logging skills: :environment do
-    Skill.seed_all(root_dir: CURRICULUM_CONTENT_PATHNAME)
-  end
-
   timed_task_with_logging videos: :environment do
     Video.setup(CURRICULUM_CONTENT_DIR)
   end
 
   timed_task_with_logging json_videos: :environment do
     JSONVideo.seed_all(root_dir: CURRICULUM_CONTENT_PATHNAME)
+  end
+
+  timed_task_with_logging json_videos_ui_tests: :environment do
+    JSONVideo.seed_all(root_dir: CURRICULUM_CONTENT_PATHNAME, glob: 'test/ui/config/json_videos/*.json')
   end
 
   timed_task_with_logging practice_problems: :environment do
@@ -73,11 +73,14 @@ namespace :seed do
     Foorm::Form.setup(CURRICULUM_CONTENT_DIR)
   end
 
+  timed_task_with_logging quiz_questions: :environment do
+    QuizQuestion.setup(CURRICULUM_CONTENT_DIR)
+  end
+
   SCRIPTS_GLOB = Dir.glob("#{CURRICULUM_CONTENT_DIR}/config/scripts_json/**/*.script_json").sort.flatten.freeze
-  SPECIAL_UI_TEST_SCRIPTS = Dir.glob("#{CURRICULUM_CONTENT_DIR}/test/ui/config/scripts_json/*.script_json").sort.freeze
-  UI_TEST_SCRIPTS = SPECIAL_UI_TEST_SCRIPTS + %w(
-    allthethings
-  ).map {|script| "#{CURRICULUM_CONTENT_DIR}/config/scripts_json/#{script}.script_json"}.freeze
+
+  # Every unit the UI tests need now lives in the UI test curriculum tree.
+  UI_TEST_SCRIPTS = Dir.glob("#{CURRICULUM_CONTENT_DIR}/test/ui/config/scripts_json/*.script_json").sort.freeze
 
   # To improve adhoc start time, we only seed the most recent year of our common curriculum
   # Each year we should update this list and :courses_adhoc
@@ -176,12 +179,12 @@ namespace :seed do
     :environment,
     :check_migrations,
     :games,
-    :skills,
     :deprecated_blockly_levels,
     :child_dsls,
+    :quiz_questions,
     :custom_levels,
+    :standalone_project_levels,
     :parent_dsls,
-    :levels_skills,
     :code_docs,
     :blocks,
     :standards,
@@ -244,13 +247,7 @@ namespace :seed do
   end
 
   timed_task_with_logging courses_ui_tests: :environment do
-    # seed those courses that are needed for UI tests
-    %w(
-      allthethingscourse
-      original-allthethings-course
-    ).each do |course_name|
-      UnitGroup.load_from_path("#{CURRICULUM_CONTENT_DIR}/config/courses/#{course_name}.course")
-    end
+    # Every course the UI tests need now lives in the UI test curriculum tree.
     Dir.glob("#{CURRICULUM_CONTENT_DIR}/test/ui/config/courses/*.course").sort.each do |path|
       UnitGroup.load_from_path(path)
     end
@@ -296,9 +293,7 @@ namespace :seed do
     end
   end
 
-  # "UI Test " levels are seeded only for UI tests, after the normal level
-  # tasks, so a not-yet-migrated ui-test-* unit can still resolve normal
-  # levels; see dashboard/test/ui/config/README.md. Same child -> custom ->
+  # "UI Test " levels are seeded only for UI tests. Same child -> custom ->
   # parent ordering as above.
   UI_TEST_CHILD_DSL_FILES = dsl_files('test/ui/config/scripts', CHILD_DSL_TYPES).freeze
   UI_TEST_PARENT_DSL_FILES = dsl_files('test/ui/config/scripts', PARENT_DSL_TYPES).freeze
@@ -310,7 +305,7 @@ namespace :seed do
   end
 
   timed_task_with_logging custom_levels_ui_tests: :environment do
-    LevelLoader.load_custom_levels(nil, CURRICULUM_CONTENT_DIR, tree: :ui_test)
+    LevelLoader.load_custom_levels(nil, CURRICULUM_CONTENT_DIR, partition: :ui_test_curriculum)
   end
 
   timed_task_with_logging parent_dsls_ui_tests: :environment do
@@ -319,12 +314,24 @@ namespace :seed do
     end
   end
 
+  # The levels behind /projects/<key> and their sublevels, seeded in every
+  # environment. .level files first so the BubbleChoice finds its sublevels.
+  # See dashboard/config/standalone_projects/README.md.
+  STANDALONE_PROJECT_PARENT_DSL_FILES = dsl_files('config/standalone_projects/scripts', PARENT_DSL_TYPES).freeze
+
+  timed_task_with_logging standalone_project_levels: :environment do
+    LevelLoader.load_custom_levels(nil, CURRICULUM_CONTENT_DIR, partition: :standalone_projects)
+    DSLDefined.transaction do
+      parse_dsl_files(STANDALONE_PROJECT_PARENT_DSL_FILES, PARENT_DSL_TYPES)
+    end
+  end
+
   # Allow developers to seed just one dsl-defined level, e.g.
   # rake seed:single_dsl DSL_FILENAME=k-1_Artistloops_multi1.multi
   # rake seed:single_dsl DSL_FILENAME=csa_unit_6_assessment_2023.level_group
   timed_task_with_logging single_dsl: :environment do
     DSLDefined.transaction do
-      dsl_files = %w(config/scripts test/ui/config/scripts).flat_map do |scripts_dir|
+      dsl_files = %w(config/scripts test/ui/config/scripts config/standalone_projects/scripts).flat_map do |scripts_dir|
         Dir.glob("#{CURRICULUM_CONTENT_DIR}/#{scripts_dir}/**/#{ENV.fetch('DSL_FILENAME', nil)}")
       end
 
@@ -340,7 +347,9 @@ namespace :seed do
 
   # Parse each .[dsl] file and setup its model.
   def parse_dsl_files(dsl_files, dsl_types)
-    level_md5s_by_name = DSLDefined.pluck(:name, :md5).to_h
+    # Use explicit types to match every DSL level, without relying on their
+    # classes to have been eagerly loaded.
+    level_md5s_by_name = Level.where(type: dsl_types).pluck(:name, :md5).to_h
 
     dsl_files.each do |filename|
       dsl_class = dsl_types.detect {|type| filename.include?(".#{type.underscore}")}.try(:constantize)
@@ -349,12 +358,13 @@ namespace :seed do
         md5 = Digest::MD5.hexdigest(contents)
         data, _i18n = dsl_class.parse(contents, filename)
 
-        # A file must sit in the tree its level name selects, or seeding the
-        # other tree would quietly pick it up; see
-        # dashboard/test/ui/config/README.md.
-        if Policies::LevelFiles.tree_for_name(data[:name]) != Policies::LevelFiles.tree_for_path(filename)
+        # A file must sit in the tree its level name selects, or seeding
+        # another tree would quietly pick it up; see
+        # dashboard/config/PARTITIONS.md.
+        if Policies::LevelFiles.partition_for_name(data[:name]) != Policies::LevelFiles.partition_for_path(filename)
           raise "level #{data[:name].dump} does not belong in #{filename}: \"UI Test \" levels " \
-            "live under test/ui/config/scripts, all others under config/scripts"
+            "live under test/ui/config/scripts, standalone project levels (\"New ... Project\", " \
+            "\"... Subproject\") under config/standalone_projects/scripts, all others under config/scripts"
         end
 
         # Skip any files which have not been updated since last seed. To force a
@@ -386,19 +396,6 @@ namespace :seed do
   timed_task_with_logging custom_levels: :environment do
     level_name = ENV.fetch('LEVEL_NAME', nil)
     LevelLoader.load_custom_levels(level_name, CURRICULUM_CONTENT_DIR)
-  end
-
-  timed_task_with_logging levels_skills: :environment do
-    levels_with_skills = Level.where('properties like ?', '%"skill_keys":%').all
-    levels_with_skills.each do |level|
-      JSON.parse(level.skill_keys).each do |skill_key|
-        skill_id = Skill.find_by_key(skill_key).id
-        LevelsSkill.find_or_create_by!(
-          skill_id: skill_id,
-          level_id: level.id
-        )
-      end
-    end
   end
 
   timed_task_with_logging deprecated_blockly_levels: :environment do
@@ -586,7 +583,7 @@ namespace :seed do
   end
 
   FULL_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts, :json_videos, :practice_problems, :courses, :reference_guides, :data_docs, :jit_pl_concepts, :callouts, :school_districts, :schools, :census_summaries, :secret_words, :secret_pictures, :foorms, :datablock_storage, :validate_ai_rubrics].freeze
-  UI_TEST_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts_ui_tests, :courses_ui_tests, :jit_pl_concepts, :reseed_scripts_ui_tests, :callouts_ui_tests, :school_districts, :schools, :secret_words, :secret_pictures, :datablock_storage].freeze
+  UI_TEST_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts_ui_tests, :courses_ui_tests, :jit_pl_concepts, :reseed_scripts_ui_tests, :json_videos_ui_tests, :callouts_ui_tests, :school_districts, :schools, :secret_words, :secret_pictures, :datablock_storage].freeze
   ADHOC_SEED_TASKS = [:check_migrations, :videos, :concepts, :course_offerings_adhoc, :scripts_adhoc, :courses_adhoc, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :datablock_storage].freeze
 
   # Development seeds the UI test tree on top of production content, so that a
@@ -609,5 +606,5 @@ namespace :seed do
   timed_task_with_logging ui_test: UI_TEST_SEED_TASKS
 
   desc "seed only dashboard data required for tests"
-  timed_task_with_logging test: [:check_migrations, :videos, :games, :concepts, :secret_words, :secret_pictures, :school_districts, :schools, :standards, :foorms]
+  timed_task_with_logging test: [:check_migrations, :videos, :games, :concepts, :standalone_project_levels, :secret_words, :secret_pictures, :school_districts, :schools, :standards, :foorms]
 end

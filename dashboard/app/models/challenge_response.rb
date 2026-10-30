@@ -14,6 +14,7 @@
 #  created_at        :datetime         not null
 #  updated_at        :datetime         not null
 #  evaluation_status :integer
+#  approved          :boolean          default(FALSE), not null
 #
 # Indexes
 #
@@ -35,6 +36,7 @@ class ChallengeResponse < ApplicationRecord
     failure: 1000,
     pii_violation: 1001,
     profanity_violation: 1002,
+    feedback_violation: 1003,
   }, _prefix: :evaluation
 
   # A response can be evaluated once it is a final submission and every
@@ -70,6 +72,7 @@ class ChallengeResponse < ApplicationRecord
       transcript: transcript,
       evaluation_status: evaluation_status,
       is_final: is_final,
+      approved: approved,
       created_at: created_at,
       assets: challenge_response_assets.map {|asset| asset.summarize(upload: assets_for_upload)},
       reactions: reaction_summary(viewer),

@@ -3,13 +3,13 @@ import {Components, Theme} from '@mui/material/styles';
 /**
  * MUI Breadcrumbs theme overrides to match the design system Breadcrumbs component.
  *
- * Default size is 'm' (label2: 0.875rem / 14px, line-height: 1.54)
+ * Default size is 'm' (label2: 0.875rem / 14px, line-height: 1.57)
  *
  * Supports size prop: 'xs' | 's' | 'm' | 'l'
- * - size="xs": label4 (0.625rem / 10px, line-height: 1.8)
- * - size="s": label3 (0.75rem / 12px, line-height: 1.64)
- * - size="m": label2 (0.875rem / 14px, line-height: 1.54) - default
- * - size="l": label1 (1rem / 16px, line-height: 1.48)
+ * - size="xs": label4 (0.625rem / 10px, line-height: 1.6)
+ * - size="s": label3 (0.75rem / 12px, line-height: 1.5)
+ * - size="m": label2 (0.875rem / 14px, line-height: 1.57) - default
+ * - size="l": label1 (1rem / 16px, line-height: 1.5)
  */
 export const BREADCRUMBS_OVERRIDES: Components<Theme>['MuiBreadcrumbs'] = {
   styleOverrides: {

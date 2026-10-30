@@ -1,6 +1,6 @@
 require 'test_helper'
 require 'email_reminder'
-require 'mocha/mini_test'
+require 'mocha/minitest'
 
 class EmailReminderTest < ActiveSupport::TestCase
   setup do

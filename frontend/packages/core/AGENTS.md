@@ -20,7 +20,7 @@ When making changes, check if the following docs need updates:
 - **[README.md](./README.md)** — Update when changing:
 
   - The public import API (new exports, removed exports, renamed symbols)
-  - The `./api`, `./plugins/localization`, or `./plugins/observability` sub-path export surface
+  - The `./api`, `./plugins/localization`, `./plugins/observability`, `./plugins/consent`, or `./plugins/experiments` sub-path export surface
   - Boot requirements visible to consumers
   - Plugin registration patterns
 

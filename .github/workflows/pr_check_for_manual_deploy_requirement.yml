@@ -1,46 +1,58 @@
 name: Check for manual deployment requirements
 
+# The Materialized View DDL under `aws/redshift/zeroetl_materialized_views/` is generated from the
+# Models declared `export_to_analytics` and their `data_classification`, so a diff there is the one
+# signal that catches all three: a Model joining or leaving the export, a reclassified column, and a
+# hand-edited View. Committing that DDL changes nothing in Redshift, which is why this warns.
 on:
-  # Run on any pull request into the trunk branch
   pull_request:
-    types: [opened, synchronize]
+    types: [opened, synchronize, reopened]
     branches:
       - staging
+    paths:
+      - 'aws/redshift/zeroetl_materialized_views/**'
+
+permissions:
+  pull-requests: write
 
 jobs:
-  check-files:
+  zero-etl-materialized-views:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Check for file changes that must be deployed manually
-      id: check_files
+    - name: Comment that the Materialized Views need manual provisioning
       uses: actions/github-script@v7
       with:
         script: |
-          const prFiles = await github.rest.pulls.listFiles({
+          const marker = "[WARN: Zero ETL Materialized View DDL Modified]";
+
+          // Paginate: a busy pull request can hold more comments than one page, and a missed marker
+          // posts a duplicate warning on every push.
+          const comments = await github.paginate(github.rest.issues.listComments, {
             owner: context.repo.owner,
             repo: context.repo.repo,
-            pull_number: context.issue.number
+            issue_number: context.issue.number
           });
+          if (comments.some(comment => comment.body.includes(marker))) return;
 
-          const dmsTasksModified = prFiles.data.some(file => file.filename === 'aws/dms/tasks.yml');
+          const body = [
+            `${marker} This pull request changes the generated Materialized View DDL under`,
+            "`aws/redshift/zeroetl_materialized_views/`, so the Views in Redshift no longer match the Models.",
+            "Merging does not apply the change: committing the DDL touches no Redshift.",
+            "",
+            "Applying it takes a manual run of `analytics_export:provision_materialized_views[production]`.",
+            "If this pull request also changes which tables are exported, the Zero ETL Integration filter needs",
+            "`analytics_export:update_zero_etl_filter` as well.",
+            "",
+            "Redshift cannot ALTER a Materialized View, so provisioning DROPs and re-CREATEs each changed View.",
+            "A large View is unqueryable while it repopulates, which can take 1-2 hours, and the data team's dbt",
+            "models and Tableau dashboards fail against it for that whole period. Agree the timing with",
+            "@code-dot-org/red-team before applying."
+          ].join("\n");
 
-          if (dmsTasksModified) {
-            const dmsPrefix = "[WARN: DMS Config Modified]";
-            const comments = await github.rest.issues.listComments({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: context.issue.number
-            });
-
-            const commentExists = comments.data.some(comment => comment.body.includes(dmsPrefix));
-
-            if (!commentExists) {
-              await github.rest.issues.createComment({
-                issue_number: context.issue.number,
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                body: dmsPrefix + " This PR modifies the `aws/dms/tasks.yml` file. These changes must be deployed manually by @code-dot-org/infrastructure before merging."
-              });
-            }
-          }
+          await github.rest.issues.createComment({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            issue_number: context.issue.number,
+            body: body
+          });

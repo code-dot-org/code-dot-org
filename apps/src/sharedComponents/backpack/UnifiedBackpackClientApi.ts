@@ -69,7 +69,7 @@ export default class UnifiedBackpackClientApi {
     Object.entries(this.channelIdsByAppType).forEach(([appType, channelId]) => {
       const client = new BackpackClientApi(appType, channelId);
       client.addEventListener((event, filename) =>
-        this.notifyListeners(event, filename)
+        this.notifyListeners(event, filename, appType)
       );
       this.clientsByAppType[appType] = client;
     });
@@ -280,9 +280,13 @@ export default class UnifiedBackpackClientApi {
     return client;
   }
 
-  private notifyListeners(event: BackpackEvent, filename: string) {
+  private notifyListeners(
+    event: BackpackEvent,
+    filename: string,
+    appType: string
+  ) {
     Object.values(this.eventListeners).forEach(listener =>
-      listener(event, filename)
+      listener(event, filename, appType)
     );
   }
 }

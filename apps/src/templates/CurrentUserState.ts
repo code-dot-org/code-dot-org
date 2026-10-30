@@ -36,6 +36,8 @@ export interface CurrentUserState {
   isLti: boolean;
   aiDifferentiationEnabled: boolean;
   hasCompletedAiDifferentiationWelcome: boolean;
+  // Undefined until /api/v1/users/current resolves; see currentUserRedux.
+  teacherPanelV2Seen: boolean | undefined;
   showAITALessonSummary: boolean;
   showAITAPodcasts: boolean;
   hasCompletedPersonalizationQuiz: boolean;

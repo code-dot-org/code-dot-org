@@ -1,5 +1,5 @@
 require_relative 'test_helper'
-require 'mocha/mini_test'
+require 'mocha/minitest'
 
 require 'cdo/env'
 require 'cdo/honeybadger'

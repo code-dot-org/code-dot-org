@@ -7,6 +7,14 @@
   "user_id": 1,
   "properties": {
     "uses_lab2": "true",
+    "level_mode": {
+      "kind": "code"
+    },
+    "pinned_scene": {
+      "id": "story-scene",
+      "name": "Story",
+      "type": "story"
+    },
     "block_pools": [
       "GamelabJr",
       "GameDev"
@@ -21,13 +29,6 @@
     "hide_share_and_remix": "true",
     "encrypted": "false",
     "project_template_level_name": "HoAI26-Playtest1-Story-Template",
-    "visible_tabs": [
-      "Code",
-      "Play"
-    ],
-    "pinned_scene_id": "story-scene",
-    "pinned_scene_name": "Story",
-    "guide_mode": "instructions",
     "long_instructions": "# Code your main character\r\nUse the blocks to add your character, and make them speak.",
     "toolbox_definition": {
       "contents": [

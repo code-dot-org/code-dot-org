@@ -14,7 +14,7 @@ module AiSystemPrompts::SystemPromptHelper
   end
 
   def self.get_level_instructions(level)
-    level_instructions = level.properties["long_instructions"]
+    level_instructions = level.try(:generated_long_instructions) || level.properties["long_instructions"]
     "Your students have been given the following instructions: \n\n #{level_instructions} \n"
   end
 

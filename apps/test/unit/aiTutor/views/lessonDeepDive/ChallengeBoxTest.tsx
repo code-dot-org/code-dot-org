@@ -1,12 +1,9 @@
+import {Challenge, ChallengeResponse} from '@code-dot-org/lesson-deep-dive';
 import {act, fireEvent, render, screen, waitFor} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
 import ChallengeBox from '@cdo/apps/aiTutor/views/lessonDeepDive/ChallengeActivities/ChallengeBox';
-import {
-  Challenge,
-  ChallengeResponse,
-} from '@cdo/apps/aiTutor/views/lessonDeepDive/types';
 import {ReactFlowSketchLabSources} from '@cdo/apps/sketchlab/reactFlow/types';
 import {createSketchSnapshotBlob} from '@cdo/apps/sketchlab/reactFlow/utils/createSketchSnapshotBlob';
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -17,11 +14,34 @@ jest.mock('@cdo/apps/util/HttpClient', () => ({
   default: {fetchJson: jest.fn(), post: jest.fn(), put: jest.fn()},
 }));
 
+jest.mock('react-router-dom', () => ({
+  ...jest.requireActual('react-router-dom'),
+  useNavigate: () => jest.fn(),
+}));
+
 jest.mock(
   '@cdo/apps/sketchlab/reactFlow/utils/createSketchSnapshotBlob',
   () => ({
     createSketchSnapshotBlob: jest.fn(),
   })
+);
+
+jest.mock('@cdo/apps/aichat/api/client', () => ({
+  __esModule: true,
+  getClientApi: jest.fn(async () => ({
+    transcribeAudio: jest.fn(async () => 'a transcript'),
+  })),
+}));
+
+// Image moderation is WhiteboardChallenge's concern; pass every drawing here.
+jest.mock('@cdo/apps/util/moderateImage', () => ({
+  moderateImage: jest.fn(async () => 'safe'),
+}));
+
+// See the stub for what it reproduces of the real canvas, and why.
+jest.mock(
+  '@cdo/apps/aiTutor/views/lessonDeepDive/ChallengeActivities/VideoCanvas',
+  () => jest.requireActual('../../../../util/stubVideoCanvas')
 );
 
 // React Flow does not render in jsdom; the whiteboard canvas is stubbed out.
@@ -89,6 +109,7 @@ const fakeChallengeResponse = (
   student_feedback: null,
   evaluation_status: 'running',
   is_final: true,
+  approved: false,
   created_at: '2024-01-01T12:00:00Z',
   assets: [{id: 9, asset_type: 'whiteboard_image', download_url: null}],
   reactions: [],
@@ -109,6 +130,28 @@ const submitWhiteboardChallenge = async () => {
   fireEvent.click(screen.getByRole('button', {name: 'Text'}));
   fireEvent.click(screen.getByRole('button', {name: 'Draw something'}));
   fireEvent.click(screen.getByRole('button', {name: 'Submit'}));
+};
+
+const renderVideoChallenge = async () => {
+  render(
+    <ChallengeBox
+      lessonId={42}
+      challenge={{...fakeChallenge, default_modality: 'video'}}
+      challengeType={ChallengeTypes.VIDEO}
+    />
+  );
+  await waitFor(() =>
+    expect(
+      screen.getByText('Draw a flowchart of the algorithm.')
+    ).toBeInTheDocument()
+  );
+};
+
+// Clicks record then stop, and waits for the stub's blob
+const recordVideo = async () => {
+  fireEvent.click(screen.getByRole('button', {name: 'Start Recording'}));
+  fireEvent.click(screen.getByRole('button', {name: 'Stop Recording'}));
+  await act(async () => {});
 };
 
 // Advances fake timers by `ms` and flushes the resulting state updates,
@@ -140,7 +183,6 @@ describe('ChallengeBox', () => {
         lessonId={42}
         challenge={fakeChallenge}
         challengeType={ChallengeTypes.WHITEBOARD}
-        challengeSetCallback={jest.fn()}
       />
     );
     await submitWhiteboardChallenge();
@@ -151,6 +193,73 @@ describe('ChallengeBox', () => {
       ).toBeInTheDocument()
     );
     expect(document.querySelector('svg')).toBeInTheDocument();
+  });
+
+  it('returns to composing when the submit fails', async () => {
+    snapshot.mockResolvedValue({error: 'Could not capture your drawing.'});
+
+    render(
+      <ChallengeBox
+        lessonId={42}
+        challenge={fakeChallenge}
+        challengeType={ChallengeTypes.WHITEBOARD}
+      />
+    );
+    await submitWhiteboardChallenge();
+
+    await waitFor(() =>
+      expect(
+        screen.getByText('Could not capture your drawing.')
+      ).toBeInTheDocument()
+    );
+    expect(
+      screen.queryByText('Tutor is writing feedback...')
+    ).not.toBeInTheDocument();
+    expect(screen.getByRole('button', {name: 'Submit'})).toBeEnabled();
+    expect(
+      screen.getByPlaceholderText('Write your explanation here')
+    ).toBeEnabled();
+  });
+
+  it('shows a canned message and stops polling when the feedback is flagged', async () => {
+    jest.useFakeTimers();
+    fetchJson.mockResolvedValue({
+      value: fakeChallengeResponse({evaluation_status: 'feedback_violation'}),
+    });
+    snapshot.mockResolvedValue({
+      blob: new Blob(['png-bytes'], {type: 'image/png'}),
+    });
+    post.mockResolvedValue({ok: true, json: async () => createdResponse});
+    put.mockResolvedValue({});
+
+    render(
+      <ChallengeBox
+        lessonId={42}
+        challenge={fakeChallenge}
+        challengeType={ChallengeTypes.WHITEBOARD}
+      />
+    );
+    await submitWhiteboardChallenge();
+    await waitFor(() =>
+      expect(
+        screen.getByText('Tutor is writing feedback...')
+      ).toBeInTheDocument()
+    );
+
+    await tick(2000);
+
+    await waitFor(() =>
+      expect(
+        screen.getByText(
+          'Sorry, my feedback was flagged by our content moderation policy. Please try submitting again.'
+        )
+      ).toBeInTheDocument()
+    );
+    expect(
+      screen.queryByText('Tutor is writing feedback...')
+    ).not.toBeInTheDocument();
+
+    jest.useRealTimers();
   });
 
   it('displays the feedback once evaluation succeeds', async () => {
@@ -172,7 +281,6 @@ describe('ChallengeBox', () => {
         lessonId={42}
         challenge={fakeChallenge}
         challengeType={ChallengeTypes.WHITEBOARD}
-        challengeSetCallback={jest.fn()}
       />
     );
     await submitWhiteboardChallenge();
@@ -237,7 +345,6 @@ describe('ChallengeBox', () => {
         lessonId={42}
         challenge={fakeChallenge}
         challengeType={ChallengeTypes.WHITEBOARD}
-        challengeSetCallback={jest.fn()}
       />
     );
     await submitWhiteboardChallenge();
@@ -307,7 +414,6 @@ describe('ChallengeBox', () => {
         lessonId={42}
         challenge={fakeChallenge}
         challengeType={ChallengeTypes.WHITEBOARD}
-        challengeSetCallback={jest.fn()}
       />
     );
     await submitWhiteboardChallenge();
@@ -360,7 +466,6 @@ describe('ChallengeBox', () => {
         lessonId={42}
         challenge={fakeChallenge}
         challengeType={ChallengeTypes.WHITEBOARD}
-        challengeSetCallback={jest.fn()}
       />
     );
 
@@ -395,7 +500,6 @@ describe('ChallengeBox', () => {
         lessonId={42}
         challenge={fakeChallenge}
         challengeType={ChallengeTypes.WHITEBOARD}
-        challengeSetCallback={jest.fn()}
       />
     );
 
@@ -422,7 +526,6 @@ describe('ChallengeBox', () => {
         lessonId={42}
         challenge={fakeChallenge}
         challengeType={ChallengeTypes.WHITEBOARD}
-        challengeSetCallback={jest.fn()}
       />
     );
 
@@ -437,5 +540,71 @@ describe('ChallengeBox', () => {
     expect(
       screen.getByRole('button', {name: 'Start Recording'})
     ).toBeInTheDocument();
+  });
+
+  // Edit, record, preview, and back to edit
+  describe('video challenges', () => {
+    it('offers recording straight away, with nothing yet to submit', async () => {
+      await renderVideoChallenge();
+
+      expect(
+        screen.getByRole('button', {name: 'Start Recording'})
+      ).toBeInTheDocument();
+      // No explanation modality to pick: those belong to whiteboard.
+      expect(
+        screen.queryByRole('button', {name: 'Audio'})
+      ).not.toBeInTheDocument();
+      expect(
+        screen.queryByRole('button', {name: 'Text'})
+      ).not.toBeInTheDocument();
+      expect(
+        screen.queryByRole('button', {name: 'Submit'})
+      ).not.toBeInTheDocument();
+    });
+
+    it('walks the button from start, to stop, to editing the take', async () => {
+      await renderVideoChallenge();
+
+      fireEvent.click(screen.getByRole('button', {name: 'Start Recording'}));
+      expect(
+        screen.getByRole('button', {name: 'Stop Recording'})
+      ).toBeInTheDocument();
+
+      fireEvent.click(screen.getByRole('button', {name: 'Stop Recording'}));
+      await act(async () => {});
+      expect(
+        screen.getByRole('button', {name: 'Edit and Record Again'})
+      ).toBeInTheDocument();
+      expect(screen.getByRole('button', {name: 'Submit'})).toBeEnabled();
+    });
+
+    it('returns to the live canvas, take discarded, on Edit and Record Again', async () => {
+      await renderVideoChallenge();
+      await recordVideo();
+
+      fireEvent.click(
+        screen.getByRole('button', {name: 'Edit and Record Again'})
+      );
+
+      expect(
+        screen.getByRole('button', {name: 'Start Recording'})
+      ).toBeInTheDocument();
+      expect(screen.getByText('canvas mode: edit')).toBeInTheDocument();
+      expect(
+        screen.queryByRole('button', {name: 'Submit'})
+      ).not.toBeInTheDocument();
+    });
+
+    it('records a second take after editing', async () => {
+      await renderVideoChallenge();
+      await recordVideo();
+      fireEvent.click(
+        screen.getByRole('button', {name: 'Edit and Record Again'})
+      );
+      await recordVideo();
+
+      expect(screen.getByText('canvas mode: preview')).toBeInTheDocument();
+      expect(screen.getByRole('button', {name: 'Submit'})).toBeEnabled();
+    });
   });
 });

@@ -15,7 +15,8 @@
     "instructions_important": "false",
     "encrypted": "false",
     "optional": "false",
-    "allow_multiple_attempts": "true"
+    "allow_multiple_attempts": "true",
+    "encrypted_solution": "LLw6cjmcxedkdJfP5+AHxroSW+xWMfgN2P1ErnUIhqCsO6NC12OuK7rMGipm\nKDw3\n"
   },
   "published": true,
   "notes": "",

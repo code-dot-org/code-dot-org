@@ -1,0 +1,5 @@
+@use '../sharedMixins' as mixins;
+
+.toggle .segments {
+  @include mixins.segmented-buttons-xs;
+}

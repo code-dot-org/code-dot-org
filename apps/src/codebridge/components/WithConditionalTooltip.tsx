@@ -1,13 +1,10 @@
-import {muiPlacementFor} from '@code-dot-org/component-library/common/helpers';
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {TooltipProps} from '@code-dot-org/component-library/tooltip';
-import {Tooltip} from '@mui/material';
+import {Tooltip, TooltipProps as MuiTooltipProps} from '@mui/material';
 import React from 'react';
 
 interface WithConditionalTooltipProps {
   children: React.ReactNode;
   tooltipOverlayClassName?: string;
-  tooltipProps: TooltipProps;
+  tooltipProps: Omit<MuiTooltipProps, 'children'>;
   showTooltip: boolean;
 }
 
@@ -20,29 +17,8 @@ const WithConditionalTooltip: React.FunctionComponent<
     return <div className={tooltipOverlayClassName}>{children}</div>;
   }
 
-  const {text, direction, hideTail, iconLeft, iconRight, tooltipId} =
-    tooltipProps;
-  const dataTheme = tooltipProps['data-theme'];
-
-  const title =
-    iconLeft || iconRight ? (
-      <>
-        {iconLeft && <FontAwesomeV6Icon {...iconLeft} />}
-        {text}
-        {iconRight && <FontAwesomeV6Icon {...iconRight} />}
-      </>
-    ) : (
-      text
-    );
-
   return (
-    <Tooltip
-      id={tooltipId}
-      title={title}
-      placement={muiPlacementFor(direction)}
-      arrow={hideTail ? false : undefined}
-      slotProps={dataTheme ? {tooltip: {'data-theme': dataTheme}} : undefined}
-    >
+    <Tooltip placement="top" {...tooltipProps}>
       {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex -- the control inside is disabled, so this wrapper is the only way to reach the reason */}
       <div className={tooltipOverlayClassName} tabIndex={0}>
         {children}

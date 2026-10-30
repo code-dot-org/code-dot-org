@@ -23,7 +23,7 @@ class ProjectPlayer {
 
   constructor(
     private readonly player = new MusicPlayer(),
-    private readonly sourcesStore: SourcesStore = new SourcesStore(),
+    private readonly sourcesStore: SourcesStore = new SourcesStore('music'),
     private readonly workspace: MusicBlocklyWorkspace = new MusicBlocklyWorkspace()
   ) {
     setUpBlocklyForMusicLab();

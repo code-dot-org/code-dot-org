@@ -146,7 +146,7 @@ describe('Design System - Tabs', () => {
           text: 'tab1',
           value: 'tab1',
           tabContent: <div>tab1 content</div>,
-          tooltip: {text: 'Tooltip for tab1', tooltipId: 'tooltip1'},
+          tooltip: {title: 'Tooltip for tab1', id: 'tooltip1'},
         },
         {text: 'tab2', value: 'tab2', tabContent: <div>tab2 content</div>},
       ],
@@ -228,5 +228,19 @@ describe('Design System - Tabs', () => {
       expect(container).toHaveClass(moduleStyles.scroller);
       expect(container).toHaveClass(moduleStyles.tabs);
     });
+  });
+
+  it('names the tab list when asked', () => {
+    renderTabs({
+      defaultSelectedTabValue: 'tab1',
+      tabs: [
+        {text: 'tab1', value: 'tab1', tabContent: null},
+        {text: 'tab2', value: 'tab2', tabContent: null},
+      ],
+      onChange: () => {},
+      name: 'named',
+      tabListAriaLabel: 'Which words',
+    });
+    expect(screen.getByRole('tablist', {name: 'Which words'})).toBeTruthy();
   });
 });

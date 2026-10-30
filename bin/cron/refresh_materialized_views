@@ -1,0 +1,91 @@
+#!/usr/bin/env ruby
+
+# Refresh the Redshift Materialized Views that the data analytics team and their `dbt` models use to access the
+# Learning Platform MySQL tables that are continuously replicated to Redshift via Zero ETL. Scheduled in cron to start
+# in time that it will likely complete before dbt models are built on their daily schedule. In the future, the data
+# analytics team might modify their daily dbt job to invoke the refresh so that the two actions are more tightly coupled.
+
+require_relative 'only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
+
+require_relative '../../dashboard/config/environment' # Load Rails.
+# The managed test system and production are the only environments with a Zero ETL Integration.
+exit unless CDO.test_system? || (rack_env?(:production) && CDO.dashboard_hostname == 'studio.code.org')
+
+require 'cdo/chat_client'
+require 'cdo/aws/redshift/client'
+require 'cdo/aws/redshift/materialized_view_manager'
+
+DBT_MODEL_RUN_UTC_HOUR = 21 # Cron is configured to start this job in time to complete before the daily `dbt` model run.
+MAX_WAIT = 12.hours # Something is wrong if the REFRESH takes longer than this.
+ENVIRONMENT_TYPE = CDO.rack_env.to_s
+NOTIFICATION_CHANNEL = 'data-alerts'
+
+def notify_data_team(message, **options)
+  return unless ENVIRONMENT_TYPE == 'production'
+
+  ChatClient.message NOTIFICATION_CHANNEL, message, **options
+end
+
+begin
+  Rails.application.eager_load!
+
+  exportability_errors = AnalyticsExportable.exportability_errors
+  if exportability_errors.any?
+    notify_data_team \
+      "#{exportability_errors.length} model(s) can no longer be exported via Zero ETL and their Redshift " \
+        "materialized views are no longer being refreshed: #{exportability_errors.join('; ')}", color: 'red'
+  end
+
+  CDO.log.info "[redshift-zero-etl] refreshing #{ENVIRONMENT_TYPE} materialized views."
+
+  client = Cdo::Aws::Redshift::MaterializedViewManager.redshift_client
+  dbt_model_run_at = Time.now.utc.change(hour: DBT_MODEL_RUN_UTC_HOUR) # Today's dbt model run start time.
+
+  result = Cdo::Aws::Redshift::MaterializedViewManager.refresh_and_wait(
+    client: client,
+    environment_type: ENVIRONMENT_TYPE,
+    models: AnalyticsExportable.valid_exported_models,
+    timeout: MAX_WAIT.to_i
+  ) do |event, name, detail|
+    case event
+    when :submitted then CDO.log.info "[redshift-zero-etl] submitted #{name}: #{detail.join(', ')}"
+    when :skipped then CDO.log.info "[redshift-zero-etl] #{name} not stale; skipped."
+    when :no_views then CDO.log.info "[redshift-zero-etl] #{name} has no views."
+    when :error then CDO.log.error "[redshift-zero-etl] failed to submit #{name}: #{detail.message}"
+    when :finished then CDO.log.info "[redshift-zero-etl] refreshed #{name} in #{detail}s"
+    when :failed then CDO.log.error "[redshift-zero-etl] refresh failed for #{name}: #{detail}"
+    end
+  end
+
+  refreshed = result[:refreshed].length
+  failures = result[:failures]
+
+  if failures.any?
+    CDO.log.error "[redshift-zero-etl] #{failures.length} view(s) failed in #{ENVIRONMENT_TYPE}: #{failures.join(', ')}"
+    notify_data_team \
+      "#{failures.length} of #{failures.length + refreshed} Redshift materialized view(s) failed to refresh: " \
+        "#{failures.join(', ')}", color: 'red'
+  elsif refreshed.zero?
+    # Also reached when no models are exported at all, so this must not claim the views are fresh.
+    CDO.log.info '[redshift-zero-etl] no stale views to refresh.'
+    notify_data_team 'No stale Redshift materialized views to refresh.'
+  else
+    CDO.log.info "[redshift-zero-etl] refreshed #{refreshed} view(s) in #{ENVIRONMENT_TYPE}."
+    notify_data_team "Refreshed #{refreshed} Redshift materialized view(s)."
+  end
+
+  if Time.now.utc > dbt_model_run_at
+    CDO.log.warn "[redshift-zero-etl] refresh finished after the #{DBT_MODEL_RUN_UTC_HOUR}:00 UTC dbt model run began."
+    notify_data_team \
+      "Redshift materialized view refresh finished after the #{DBT_MODEL_RUN_UTC_HOUR}:00 UTC dbt model run began, " \
+        'which may have read partially stale views.', color: 'yellow'
+  end
+
+  # Exit non-zero for cron rather than raising if there were any views that failed to refresh.
+  exit 1 if failures.any?
+rescue StandardError => exception
+  CDO.log.error "[redshift-zero-etl] #{ENVIRONMENT_TYPE} refresh failed: #{exception.message}"
+  notify_data_team "Redshift materialized view refresh failed in #{ENVIRONMENT_TYPE}: #{exception.message}", color: 'red'
+  raise exception
+end

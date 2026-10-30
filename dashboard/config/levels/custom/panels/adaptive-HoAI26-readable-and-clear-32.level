@@ -1,0 +1,39 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-10-16T21:39:37.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "panels": [
+      {
+        "key": "adaptive-HoAI26-readable-and-clear-32-17cc1b70-462d-44ac-bdcb-93d7fd1edc7f",
+        "text": "### Make it readable.\nAsk AI to increase the **text size** so visitors can read comfortably.",
+        "imageUrl": "https://images.code.org/04225fdad5705f600a6ec8311bfd7e43-exec-242a4c84-857f-4ca2-bb8c-d1d687cf72a6.png",
+        "layout": "text-top-right",
+        "fadeInOverPrevious": true
+      },
+      {
+        "key": "adaptive-HoAI26-readable-and-clear-32-ec23ee87-9cb3-488f-b4c8-20ac96287a44",
+        "text": "### Help text stand out.\nUse strong **contrast** between text and its background.",
+        "imageUrl": "https://images.code.org/c5863c52866fb31b0d8c3cfab13edae8-exec-3ab911a1-e5f8-4fe7-ae9f-51c1510e1b0d.png",
+        "layout": "text-top-right",
+        "fadeInOverPrevious": true
+      },
+      {
+        "key": "adaptive-HoAI26-readable-and-clear-32-fe724db5-51e3-4045-95b1-5473f7cc8c7a",
+        "text": "### Keep wording simple.\n“Sign up for a hike” is clearer than “Utilize the registration portal.”",
+        "imageUrl": "https://images.code.org/550d5595a14bd71db0065557e9a005d3-exec-6adc946f-0d7f-42ac-8c4c-ec2a1a1fb7f1.png",
+        "layout": "text-top-right",
+        "fadeInOverPrevious": true
+      }
+    ],
+    "generate_outline": "Learn the principles of readability and clarity: text size for distance viewing, high contrast for easy reading, and short, plain wording for clear understanding.",
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "use_links": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-10-16 21:40:05 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-16 21:40:05 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-21 02:36:26 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-21 02:36:47 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>

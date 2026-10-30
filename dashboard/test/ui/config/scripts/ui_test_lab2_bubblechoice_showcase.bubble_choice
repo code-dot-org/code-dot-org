@@ -1,0 +1,10 @@
+name 'UI Test Lab2 BubbleChoice Showcase'
+display_name 'Lab2 Bubble Choice'
+description 'This Bubble Choice level and all sublevels use Lab2.'
+uses_lab2
+
+sublevels
+level 'UI Test AI Chat Sublevel'
+level 'UI Test Music Sublevel'
+level 'UI Test Python Lab Sublevel'
+level 'UI Test Weblab2 Sublevel'

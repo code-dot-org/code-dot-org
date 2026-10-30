@@ -4,13 +4,19 @@ import {generateText, type GenerateTextResult} from 'ai';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 import AichatContextManager from '../aichat/aichatContextManager';
+import {AichatContext} from '../aichat/types';
 
 import {
   CURRENT_SCHEMA_VERSION,
-  GatewayGenerateTextResponseV1Schema,
-  type GatewayGenerateTextResponseV1,
+  CurrentGatewayGenerateTextResponseSchema,
+  type CurrentGatewayGenerateTextResponse,
 } from './contract/gatewaySchemas';
 import {reportGatewayError} from './logHelper';
+import {
+  recordGatewayRequestError,
+  recordGatewayRequestOk,
+  recordTokenNotIssued,
+} from './requestMetric';
 import {AI_GATEWAY_URL, fetchAccessToken, getModelString} from './shared';
 import {
   fetchTurnstileToken,
@@ -56,9 +62,21 @@ const serializeOutputSchema = async (output?: SDKOptions['output']) => {
   return output;
 };
 
+/**
+ * The SDK result plus the worker's detached signature over `text`. A caller
+ * that persists the response must relay it to dashboard, which verifies it
+ * rather than taking the browser's word for what the model said.
+ */
+export type GatewayGenerateTextResult<
+  TOOLS extends SDKTools,
+  OUTPUT extends SDKOutput
+> = GenerateTextResult<TOOLS, OUTPUT> & {
+  responseSignature?: string;
+};
+
 const rehydrateAIResponse = <TOOLS extends SDKTools, OUTPUT extends SDKOutput>(
-  wire: GatewayGenerateTextResponseV1
-): GenerateTextResult<TOOLS, OUTPUT> => {
+  wire: CurrentGatewayGenerateTextResponse
+): GatewayGenerateTextResult<TOOLS, OUTPUT> => {
   return {
     ...wire,
     text: wire.text ?? '',
@@ -72,7 +90,7 @@ const rehydrateAIResponse = <TOOLS extends SDKTools, OUTPUT extends SDKOutput>(
     response: wire.response
       ? {...wire.response, timestamp: new Date(wire.response.timestamp)}
       : (undefined as unknown as GenerateTextResult<TOOLS, OUTPUT>['response']),
-  } as unknown as GenerateTextResult<TOOLS, OUTPUT>;
+  } as unknown as GatewayGenerateTextResult<TOOLS, OUTPUT>;
 };
 
 /**
@@ -86,16 +104,22 @@ const generateTextThroughGateway = async <
 >(
   options: SDKOptions,
   extraOptions?: ExtraOptions
-): Promise<GenerateTextResult<TOOLS, OUTPUT>> => {
+): Promise<GatewayGenerateTextResult<TOOLS, OUTPUT>> => {
   const {model, ...restOptions} = options;
   const phase = extraOptions?.phase as GatewayPhase | undefined;
+  // A caller outside a chat passes its own context for the access token.
+  const aichatContext =
+    (extraOptions?.aichatContext as AichatContext | undefined) ??
+    AichatContextManager.getContext();
   const modelString = getModelString(model);
   const promptLength =
     typeof options.prompt === 'string' ? options.prompt.length : 0;
-  const clientType = AichatContextManager.getContext().clientType;
+  const clientType = aichatContext.clientType;
 
   let schemaErrorReported = false;
-  const execute = async (): Promise<GenerateTextResult<TOOLS, OUTPUT>> => {
+  const execute = async (): Promise<
+    GatewayGenerateTextResult<TOOLS, OUTPUT>
+  > => {
     try {
       const serializedOutput = await serializeOutputSchema(options.output);
 
@@ -109,7 +133,13 @@ const generateTextThroughGateway = async <
       // Turnstile mode that decides whether a challenge is needed at all. The
       // manager pre-fetches a token after every delivery, so only the first
       // call of a session waits on a challenge here.
-      const {token, turnstileEnforcementMode} = await fetchAccessToken();
+      const access = await fetchAccessToken(aichatContext).catch(
+        (error: unknown) => {
+          recordTokenNotIssued();
+          throw error;
+        }
+      );
+      const {token, turnstileEnforcementMode} = access;
       const turnstileToken = await fetchTurnstileToken(
         turnstileEnforcementMode
       );
@@ -126,11 +156,15 @@ const generateTextThroughGateway = async <
         JSON.stringify({...payload, token}),
         false,
         headers
-      );
+      ).catch(async (error: unknown) => {
+        await recordGatewayRequestError(access.signingKey, error);
+        throw error;
+      });
+      recordGatewayRequestOk(access.signingKey);
 
       const rawResponse = await response.json();
       const parseResult =
-        GatewayGenerateTextResponseV1Schema.safeParse(rawResponse);
+        CurrentGatewayGenerateTextResponseSchema.safeParse(rawResponse);
       if (!parseResult.success) {
         await reportGatewayError(
           parseResult.error,
@@ -146,7 +180,7 @@ const generateTextThroughGateway = async <
       }
       const wire = parseResult.success
         ? parseResult.data
-        : (rawResponse as GatewayGenerateTextResponseV1);
+        : (rawResponse as CurrentGatewayGenerateTextResponse);
 
       return rehydrateAIResponse<TOOLS, OUTPUT>(wire);
     } catch (error) {

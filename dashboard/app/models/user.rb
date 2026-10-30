@@ -165,6 +165,7 @@ class User < ApplicationRecord
   include CredentialStrippable
   include Facilitator
   include TermsOfService
+  include LogTokenable
   include Rails.application.routes.url_helpers
 
   self.inheritance_column = :user_type
@@ -255,6 +256,7 @@ class User < ApplicationRecord
     ai_differentiation_toggled_off
     has_seen_ai_assessments_announcement
     has_completed_ai_differentiation_welcome
+    teacher_panel_v2_seen
     sort_by_family_name
     has_seen_homepage_welcome
     lti_roster_sync_enabled
@@ -472,6 +474,8 @@ class User < ApplicationRecord
 
   before_save :remove_cleartext_emails, if: -> {student? && migrated? && user_type_changed?}
 
+  before_save :enable_sharing_for_teachers, if: :teacher?
+
   before_destroy :soft_delete_channels
 
   after_create :associate_with_potential_pd_enrollments
@@ -604,6 +608,11 @@ class User < ApplicationRecord
     self.age = 21
   end
 
+  def enable_sharing_for_teachers
+    return unless teacher?
+    self.sharing_disabled = false if sharing_disabled?
+  end
+
   def normalize_email
     return if email.blank?
     self.email = email.strip.downcase
@@ -639,7 +648,7 @@ class User < ApplicationRecord
     end
 
     # Code studio admins should not have a password
-    errors.add(:admin, 'cannot have a password') if password.present?
+    errors.add(:admin, 'cannot have a password') if encrypted_password.present? || password.present?
   end
 
   def fix_by_user_type

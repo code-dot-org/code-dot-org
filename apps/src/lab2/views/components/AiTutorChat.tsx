@@ -30,10 +30,12 @@ const defaultChatButtonData: ChatButtonData[] = [
   ...defaultPrompts,
 ] as const;
 
-interface AiTutorChatProps {
+export interface AiTutorChatProps {
   hiddenContextCallback: () => Promise<string>;
   aiTutorMultimodalEnabled?: boolean;
+  levelId: number | null;
   levelName?: string;
+  levelSystemPrompt?: string;
   channelId?: string;
   aiTutorChatButtonData?: ChatButtonData[];
   aiTutorSystemPrompt?: string;
@@ -46,13 +48,16 @@ interface AiTutorChatProps {
   onAssetUploaded?: (asset: ChatAsset, assetUrl: string) => void;
   onAssetRemoved?: (asset: ChatAsset) => void;
   initialWelcomeMessage?: string;
+  disableCommitMessages?: boolean;
 }
 
 // A free chat with lab-supplied context added to each question.
 const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
   hiddenContextCallback,
   aiTutorMultimodalEnabled = false,
+  levelId,
   levelName,
+  levelSystemPrompt,
   channelId,
   aiTutorChatButtonData,
   aiTutorSystemPrompt,
@@ -65,6 +70,7 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
   onAssetUploaded,
   onAssetRemoved,
   initialWelcomeMessage,
+  disableCommitMessages,
 }) => {
   const viewingAiTutorVersionFileUpdates = useAppSelector(
     isViewingAiTutorVersionFileUpdates
@@ -125,9 +131,10 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
       <AiTutorVersionActions
         files={versionFiles!}
         onRequestScrollToBottom={onRequestScrollToBottom}
+        disableCommitMessages={disableCommitMessages}
       />
     ),
-    [versionFiles]
+    [versionFiles, disableCommitMessages]
   );
 
   const renderLastMessagePostText =
@@ -155,14 +162,17 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
         chatButtons={chatButtons}
         hiddenContextCallback={hiddenContextCallback}
         multimodalEnabled={aiTutorMultimodalEnabled}
+        levelId={levelId}
         levelName={levelName}
+        levelSystemPrompt={levelSystemPrompt}
         channelId={channelId}
         onAssetUploaded={onAssetUploaded}
         onAssetRemoved={onAssetRemoved}
         hideModelChangeMessage={true}
-        jsonSchemaResponseCallback={
-          aiTutorResponseSchemaSettings?.jsonSchemaResponseCallback
+        formatSchemaResponseForDisplay={
+          aiTutorResponseSchemaSettings?.formatForDisplay
         }
+        onSchemaResponse={aiTutorResponseSchemaSettings?.onResponse}
         hasInstructionsDrawer={hasInstructionsDrawer}
         lessonId={lessonId}
         disabledState={disabledState}

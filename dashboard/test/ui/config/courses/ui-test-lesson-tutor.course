@@ -1,0 +1,20 @@
+{
+  "name": "ui-test-lesson-tutor",
+  "script_names": [
+    "ui-test-lesson-tutor"
+  ],
+  "original_script_names": [
+    "ui-test-lesson-tutor"
+  ],
+  "published_state": "stable",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "ui-test-lesson-tutor",
+    "numbered_units": "auto",
+    "version_year": "unversioned"
+  },
+  "resources": [],
+  "student_resources": []
+}

@@ -26,10 +26,6 @@ class StorageIdTest < Minitest::Test
     end
   end
 
-  def setup
-    CDO.log.stubs(:info)
-  end
-
   def test_create_storage_id_cookie_with_anon_user_id
     stubs(:storage_encrypt_id).returns('encrypted-storage-id')
 
@@ -164,11 +160,6 @@ class StorageIdTest < Minitest::Test
     cookie_storage_id = 3
     cookie_value = CGI.escape(storage_encrypt_id(cookie_storage_id))
     request.stubs(:cookies).returns({storage_id_cookie_name => cookie_value})
-    request.stubs(:anon_user_id)
-    request.stubs(:statsig_stable_id)
-
-    statsig_stable_id = SecureRandom.uuid
-    request.stubs(:statsig_stable_id).returns(statsig_stable_id)
 
     # returns nil if storage id is invalid
     assert_nil storage_id_from_cookie
@@ -191,9 +182,6 @@ class StorageIdTest < Minitest::Test
     storage_id = 123
     project_id = 456
     mock_project = OpenStruct.new(id: project_id, storage_id: storage_id, uuid: nil)
-
-    # Create mock constants without defining classes
-    Object.const_set(:Projects, mock) unless Object.const_defined?(:Projects)
 
     # Stub Projects.table.where(...)
     projects_table = mock
@@ -231,9 +219,6 @@ class StorageIdTest < Minitest::Test
     uuid = SecureRandom.uuid
 
     mock_project = OpenStruct.new(id: project_id, storage_id: storage_id, uuid: uuid)
-
-    # Create mock constants without defining classes
-    Object.const_set(:Projects, mock) unless Object.const_defined?(:Projects)
 
     # Stub Projects.table.where(...)
     projects_table = mock

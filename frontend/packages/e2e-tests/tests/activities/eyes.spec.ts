@@ -246,17 +246,18 @@ test.describe('Looking at a few things with Applitools Eyes', () => {
     // waitForReady() covers the source's manual waits, including x-close.
     await starWars.gotoLevel({lesson: 24, level: 9, lang: 'ar-sa'});
     await starWars.waitForLessonHeaderRendered();
+    await starWars.header.waitForSettled();
 
     await waitForVisualStability(page);
     await visualCheck('star-wars-rtl-blocks', {
       mask: [starWars.visualization],
     });
 
-    await starWars.showCodeHeader.click();
+    await starWars.showCode();
 
     await waitForVisualStability(page);
     await visualCheck('star-wars-rtl-text-mode', {
-      mask: [starWars.visualization],
+      mask: [starWars.visualization, starWars.codeEditorCursor],
     });
   });
 });

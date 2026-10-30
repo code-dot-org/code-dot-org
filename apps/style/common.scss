@@ -671,6 +671,14 @@ input[type="radio"] {
     padding: 0 5px;
     cursor: pointer;
     display: inline-block;
+    vertical-align: middle;
+    background: none;
+    border: none;
+    appearance: none;
+
+    &:hover {
+      box-shadow: none;
+    }
 
     &#like {
       &:hover {
@@ -1100,25 +1108,6 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   font-size: 35px;
   margin-top: 35px;
   height: 44px;
-}
-
-#again-button:not(.arrow-container) {
-  background-color: $green;
-  border: 1px solid $green;
-  color: white;
-  margin-left: 0;
-  margin-right: 10px;
-  text-align: center;
-}
-
-#continue-button:not(.arrow-container),
-#confirm-button:not(.arrow-container) {
-  background-color: $orange;
-  border: 1px solid $orange;
-  color: white;
-  margin-left: 0;
-  margin-right: 10px;
-  text-align: center;
 }
 
 .hide {

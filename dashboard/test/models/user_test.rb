@@ -3017,6 +3017,14 @@ class UserTest < ActiveSupport::TestCase
     refute student.reload.sharing_disabled
   end
 
+  test 'teachers cannot have sharing disabled' do
+    teacher = create(:teacher, sharing_disabled: true)
+    refute teacher.reload.sharing_disabled
+
+    teacher.update!(sharing_disabled: true)
+    refute teacher.reload.sharing_disabled
+  end
+
   test 'students share setting updates after turning 13 if they are in no sections' do
     # create a birthday 12 years ago
     birthday = Time.zone.today - (12 * 365)
@@ -4071,24 +4079,22 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'can grant admin role when in development environment' do
-    with_rack_env(:development) do
-      email = 'katherinejohnson@code.org'
-      migrated_teacher = create(:teacher, email: email)
+    set_env(:development)
+    email = 'katherinejohnson@code.org'
+    migrated_teacher = create(:teacher, email: email)
 
-      assert migrated_teacher.update(admin: true)
+    assert migrated_teacher.update(admin: true)
 
-      assert migrated_teacher.reload.admin?
-    end
+    assert migrated_teacher.reload.admin?
   end
 
   test 'can grant admin role when in adhoc environment' do
-    with_rack_env(:adhoc) do
-      email = 'dorothyvaughan@code.org'
-      migrated_teacher = create(:teacher, email: email)
-      assert migrated_teacher.update(admin: true)
+    set_env(:adhoc)
+    email = 'dorothyvaughan@code.org'
+    migrated_teacher = create(:teacher, email: email)
+    assert migrated_teacher.update(admin: true)
 
-      assert migrated_teacher.reload.admin?
-    end
+    assert migrated_teacher.reload.admin?
   end
 
   test 'display_captcha returns false for new user with uninitialized section attempts hash' do

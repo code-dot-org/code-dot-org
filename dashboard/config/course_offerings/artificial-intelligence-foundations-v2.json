@@ -1,7 +1,7 @@
 {
   "key": "artificial-intelligence-foundations-v2",
   "display_name": "AI Foundations",
-  "is_featured": true,
+  "is_featured": false,
   "assignable": true,
   "curriculum_type": "Course",
   "marketing_initiative": "AIF",

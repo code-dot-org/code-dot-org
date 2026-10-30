@@ -20,6 +20,7 @@ module Observability
 
       ::Sentry.init do |config|
         config.dsn = CDO.dashboard_sentry_dsn
+        config.release = GitUtils.git_revision
         # Explicitly disable PII collection per privacy policy.
         # Sentry defaults this to false, but we set it explicitly to make the
         # intent clear.
@@ -36,9 +37,10 @@ module Observability
       end
     end
 
-    # Sets the user_id in the Sentry context. Intended to be called from a Warden after_fetch hook.
-    def self.set_user_id(id)
-      ::Sentry.set_user(id:)
+    def self.set_user_token(token)
+      return if token.nil? || token.to_s.empty?
+
+      ::Sentry.set_user(id: token)
     end
   end
 end

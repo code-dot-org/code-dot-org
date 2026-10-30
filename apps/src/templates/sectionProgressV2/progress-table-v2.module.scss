@@ -105,7 +105,7 @@ $level-cell-width: 53;
 
   &Metadata {
     text-align: center;
-    height: 29px;
+    height: 28px;
     line-height: 28px;
     font-size: 14px;
   }
@@ -168,6 +168,12 @@ $level-cell-width: 53;
     .titleUnitSelectorDropdown {
       margin-inline-start: 8px;
     }
+  }
+
+  .reviewExtensionActivitiesButton {
+    margin-inline-start: 8px;
+    height: 32px;
+    white-space: nowrap;
   }
 
   // CSV download button

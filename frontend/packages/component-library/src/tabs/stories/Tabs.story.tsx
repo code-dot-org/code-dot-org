@@ -219,9 +219,9 @@ TabsWithTooltips.args = {
       text: 'Tab 1',
       tabContent: <div>Tab 1 Content</div>,
       tooltip: {
-        text: 'Tooltip for Tab 1',
-        tooltipId: 'tooltip1',
-        direction: 'onBottom',
+        title: 'Tooltip for Tab 1',
+        id: 'tooltip1',
+        placement: 'bottom',
       },
     },
     {
@@ -229,9 +229,9 @@ TabsWithTooltips.args = {
       text: 'Tab 2',
       tabContent: <div>Tab 2 Content</div>,
       tooltip: {
-        text: 'Tooltip for Tab 2',
-        tooltipId: 'tooltip2',
-        direction: 'onBottom',
+        title: 'Tooltip for Tab 2',
+        id: 'tooltip2',
+        placement: 'bottom',
       },
     },
     {
@@ -239,9 +239,9 @@ TabsWithTooltips.args = {
       text: 'Tab 3',
       tabContent: <div>Tab 3 Content</div>,
       tooltip: {
-        text: 'Tooltip for Tab 3',
-        tooltipId: 'tooltip3',
-        direction: 'onBottom',
+        title: 'Tooltip for Tab 3',
+        id: 'tooltip3',
+        placement: 'bottom',
       },
     },
   ],

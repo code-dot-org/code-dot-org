@@ -239,6 +239,8 @@ dashboard_sentry_dsn: !Secret
 frontend_apps_sentry_dsn: !Secret
 # DSN for the frontend/apps/studio Vite app Sentry project.
 frontend_studio_sentry_dsn: !Secret
+# Organization auth token with the project:releases scope; aws/ci_build records each deploy with it.
+sentry_releases_token: !Secret
 
 # Credentials for Google-federated AWS access.
 # (Deprecated: move these configuration values to AWS config file)
@@ -441,8 +443,10 @@ dashboard_sock:
 puma_control_server_relative_socket_path: tmp/pumactl.sock
 puma_control_server_token: !Secret
 
-# Session timeout in days. Controls both the Devise timeout and the Rails session store (Redis) TTL.
-dashboard_session_ttl_days: 40
+# Session timeout in days. Controls both the Devise timeout and the Rails
+# session store (Redis) TTL. Targeting a little over two weeks, so students
+# should remain authenticated through winter break.
+dashboard_session_ttl_days: 18
 
 # Pegasus
 override_pegasus: 'code.org' # All deployments link to the production corporate site, now that Pegasus is deprecated.
@@ -559,6 +563,8 @@ devinternal_db_writer: !Secret
 
 # Until we have a better configuration setting service, use AWS Secrets Manager to store these non-secret values.
 db_cluster_id: !StackSecret
+# 'proxysql', 'rdsproxy', or 'none'. Unset keeps whatever this deployment connects through today.
+db_proxy: !StackSecret
 db_endpoint_writer: !StackSecret
 db_endpoint_writer_port: !StackSecret
 db_endpoint_proxy_writer: !StackSecret
@@ -633,6 +639,7 @@ openai_evaluate_rubric_api_key: !Secret
 openai_student_learning_api_key: !Secret
 openai_measures_of_learning_api_key: !Secret
 openai_lesson_summaries_api_key: !Secret
+openai_lesson_deep_dive_api_key: !Secret
 elevenlabs_api_key: !Secret
 
 # Credentials for Langfuse API
@@ -640,6 +647,8 @@ tutor_langfuse_secret_key: !Secret
 tutor_langfuse_public_key: !Secret
 ta_langfuse_secret_key: !Secret
 ta_langfuse_public_key: !Secret
+adaptive_langfuse_secret_key: !Secret
+adaptive_langfuse_public_key: !Secret
 
 # Credentials for Google Gemini API
 google_gemini_ai_chat_lab_api_key: !Secret
@@ -649,6 +658,10 @@ google_gemini_ai_tutor_api_key: !Secret
 ai_gateway_auth_key: !Secret
 ai_gateway_auth_public_key: !Secret
 ai_gateway_auth_key_passphrase: !Secret
+# One key pair per environment; the gateway verifies a token with the public key of the environment its kid (key ID) names.
+ai_gateway_jwt_auth_key: !Secret
+ai_gateway_jwt_auth_public_key: !Secret
+ai_gateway_jwt_auth_key_passphrase: !Secret
 
 # Credentials for Google Vertex API
 google_vertex_ai_tutor_service_account_key: !Secret
@@ -689,6 +702,13 @@ active_job_queue_priorities:
   :default: 0
   :low_priority: 10
 
+# Active Job priority range for the workers started by `rake build:start_active_job_workers`.
+# Blank leaves the range open. Ensure that another worker pool consumes the remaining jobs
+# if you restrict the priority range here.
+# Command-line --min-priority/--max-priority flags take precedence.
+active_job_worker_min_priority:
+active_job_worker_max_priority:
+
 # ActiveJob Queue Adapter
 active_job_queue_adapter: :delayed_job
 
@@ -704,11 +724,11 @@ contentful_space_id: "90t6bu6vlf76"
 contentful_api_key: !Secret
 contentful_hostname: cdn.contentful.com
 
-# CDO Contentful engine configs for CSforALL space
-contentful_cs_for_all_access_token: !Secret
-contentful_cs_for_all_space: 27jkibac934d
-contentful_cs_for_all_namespace: master
-contentful_cs_for_all_api_url: preview.contentful.com
+# CDO Contentful engine configs for Hour of AI space
+contentful_hour_of_ai_access_token: !Secret
+contentful_hour_of_ai_space: hwu8vzk5v0g2
+contentful_hour_of_ai_environment: master
+contentful_hour_of_ai_api_url: preview.contentful.com
 
 # HoC/HoAI tracking configuration. See `dashboard/engines/hoc_legacy`
 hoc_tracking_enabled: true

@@ -1,0 +1,55 @@
+name 'pl-aif-y2-u1-l4-facilitation'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Facilitating Optimization
+
+This lesson has three real discussion questions to consider as the lesson progresses.
+
+## The Three Discussion Questions
+
+<div style="background-color: #F7F7FB; border-radius: 10px; padding: 18px 20px; margin: 16px 0;">
+  <div style="font-size: 16px; line-height: 1.6; margin-bottom: 14px;"><strong>Warm-up:</strong> "Think of a decision you've made where the choice that seemed best in the moment turned out badly later. Or, a decision that seemed bad in the moment but turned out well. What happened?"</div>
+  <div style="font-size: 16px; line-height: 1.6; margin-bottom: 14px;"><strong>Mid-lesson:</strong> "Do the choices that are best in the moment always lead to the best outcome in the end?"</div>
+  <div style="font-size: 16px; line-height: 1.6;"><strong>After the unplugged activity:</strong> "Reflect on your experience following the algorithm. How would you describe the way this algorithm works?"</div>
+</div>
+
+<hr>
+
+## Watch for: "My Program Is Broken"
+
+<div style="display: flex; gap: 16px; margin: 20px 0; flex-wrap: wrap;">
+  <div style="flex: 1; min-width: 250px; background-color: #FFE3CE; border-radius: 10px; padding: 16px 18px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <div style="font-size: 16px; font-weight: bold; color: #611D00; margin-bottom: 10px;">Stuck: Assumes a Bug</div>
+    <div style="font-size: 16px; color: #611D00; line-height: 1.6;">On Level 5's two-peaked distribution, the thermostat settles on the smaller peak. Student assumes their program is broken.</div>
+  </div>
+  <div style="flex: 1; min-width: 250px; background-color: #CCF1D0; border-radius: 10px; padding: 16px 18px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <div style="font-size: 16px; font-weight: bold; color: #003F25; margin-bottom: 10px;">Strong: Recognizes the Local Optimum</div>
+    <div style="font-size: 16px; color: #003F25; line-height: 1.6;">The program worked correctly, it just found a local optimum, not the global one. Where it started determined where it ended up.</div>
+  </div>
+</div>
+
+## Watch for: Missing a Direction (Level 4)
+
+<div style="display: flex; gap: 16px; margin: 20px 0; flex-wrap: wrap;">
+  <div style="flex: 1; min-width: 250px; background-color: #FFE3CE; border-radius: 10px; padding: 16px 18px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <div style="font-size: 16px; font-weight: bold; color: #611D00; margin-bottom: 10px;">Stuck: Checks Only One Side</div>
+    <div style="font-size: 16px; color: #611D00; line-height: 1.6; font-family: 'Consolas', 'Courier New', monospace;">if up > current:<br>&nbsp;&nbsp;print("UP")<br>else:<br>&nbsp;&nbsp;print("STAY")</div>
+  </div>
+  <div style="flex: 1; min-width: 250px; background-color: #CCF1D0; border-radius: 10px; padding: 16px 18px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <div style="font-size: 16px; font-weight: bold; color: #003F25; margin-bottom: 10px;">Strong: Checks Both Directions</div>
+    <div style="font-size: 16px; color: #003F25; line-height: 1.6; font-family: 'Consolas', 'Courier New', monospace;">if up > current:<br>&nbsp;&nbsp;print("UP")<br>elif down > current:<br>&nbsp;&nbsp;print("DOWN")<br>else:<br>&nbsp;&nbsp;print("STAY")</div>
+  </div>
+</div>
+
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;"><strong>&#128161; Language to borrow:</strong></div>
+  <div style="font-size: 16px; color: #222222; margin-bottom: 8px;">&bull; For Level 4: "What does your program do when the better temperature is on the other side?"</div>
+  <div style="font-size: 16px; color: #222222;">&bull; For Level 5: "If you started your finger somewhere else on the activity guide, would you have ended up at the same peak?"</div>
+</div>
+
+<div style="background-color: #D5EFFF; border-radius: 10px; padding: 18px 18px; margin-top: 20px;">
+  <div style="font-size: 16px; color: #06338D; line-height: 1.6;"><strong>&#128161; Early finisher extension:</strong> "How could you fix the way your program only sometimes finds the best solution?" Productive answers: trying multiple starting points, occasionally moving in a random direction, looking two steps ahead instead of one. Students don't need to code these, just consider them.</div>
+</div>
+MARKDOWN

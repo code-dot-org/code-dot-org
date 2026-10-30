@@ -23,21 +23,17 @@
     "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
     "level_mode": {
       "kind": "image",
-      "imageType": "background"
+      "imageType": "background",
+      "imageRole": "platform-background",
+      "sentence": "place-detail",
+      "generatedInstructions": "**AI generated an image based on your prompt.**",
+      "paintInstructions": "**Draw a background for your game.**"
     },
-    "guide_steps": [
-      {
-        "text": "**Make a background for your game.** Your platformer needs scenery behind it. Pick the words for a place and press **Generate**."
-      },
-      {
-        "text": "**That sets the mood!** Continue when you're ready.",
-        "showContinue": true,
-        "after": {
-          "backgroundImages": 1
-        }
-      }
-    ],
-    "long_instructions": "# Make a background for your game\nYour platformer needs scenery behind it. Pick the words for a place and press **Generate**."
+    "objectives": {
+      "title": "**Prompt AI to make a background for your game**"
+    },
+    "long_instructions": "# Prompt AI to make a background for your game",
+    "header_label": "Make a platformer"
   }
 }]]></config>
 </GamelabJr>

@@ -1,0 +1,51 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 64,
+  "created_at": "2026-10-28T00:00:00.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "uses_lab2": "true",
+    "block_pools": [
+      "GamelabJr",
+      "GameDev"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab",
+      "zGameDev"
+    ],
+    "standalone_app_name": "spritelab",
+    "skin": "gamelab",
+    "hide_custom_blocks": true,
+    "hide_share_and_remix": "true",
+    "encrypted": "false",
+    "project_template_level_name": "hoai2026-dev-revised-template",
+    "level_mode": {
+      "kind": "image",
+      "imageType": "sprite",
+      "imageRole": "hero"
+    },
+    "objectives": {
+      "title": "**Make a character**",
+      "items": [
+        {
+          "text": "Click **New image** and make your character.",
+          "check": {
+            "kind": "image",
+            "imageType": "sprite"
+          }
+        },
+        {
+          "text": "Give it a thumbs up or thumbs down.",
+          "check": {
+            "kind": "rated"
+          }
+        }
+      ]
+    },
+    "long_instructions": "# Make a character\nClick **New image** and make your character. Then give it a thumbs up or thumbs down.",
+    "header_label": "Make a character"
+  }
+}]]></config>
+</GamelabJr>

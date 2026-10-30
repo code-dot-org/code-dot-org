@@ -1,0 +1,18 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2026-09-15T21:21:16.000Z",
+  "level_num": "custom",
+  "user_id": 19028,
+  "properties": {
+    "skip_dialog": true,
+    "skip_sound": true,
+    "long_instructions": "You've just built and debugged interactive Python programs that ask users for input and provide personalized responses. Now, propose a simple interactive program that you could use in your own classroom. Describe what questions it would ask students and how it would use their answers to provide a relevant or personalized message.",
+    "placeholder": "Propose an interactive program for your classroom...",
+    "encrypted_solution": "9olVbzUQXjtjdcfBNKav+6JQdPL6xgMbBvg5kYoAfWBOmxr0uy9HT/dbwKEo\nxnJiRjl2+MIycqqRP7/rHv3auUAQm2quu7/2JhMb0Jj33uvtmzAtHKaPwlLS\nFcb5CPEJd8qQwaLUeJB94E3a8tUnic+WRv6ZeBbQTp9C60iZ/T4AhNEsq/+D\nqdsL7ikjWXgoTGKBD9fpSaHqX0S/MomxpZc2An4K3OndA/T9Y5Iif0uhhMi8\nI+MIt6DsZHZyOmdnIaj0NWrrNdoA5waxX2pDYUcm+k+DlUZuFV7vbq3CtUyj\nut2Oq8FZyU0iyxRnFUPEFOI+cAG73wXGukiXX9/j2KPhThrMJwymQDNLVYFD\nELum/B8oVKX19KnJS49QZLKbnqEIWIZxcXhjbvu+wLmF8FV+qvylzHUDN3Y0\nVXFoS44WC8UhmCtJeP8IvGKfzpOOyTeUJluNMXTVO/O53PrXGUy3MJEJ2/FV\nzVYaCrT6fND3+sZyg2BxvASc6xMTiRkNDvDc3wkXUCxWiB85I2u57TyEG573\nedWLoRZgR3JJQ03sDvembVoTmFQgOQXw3ScxZt/GtcUGZmzGhGefzK6hnhZK\n0bytuH88l3r8BCACRJk=\n",
+    "generate_outline": "Propose a simple interactive Python program that could be useful in your classroom. Describe what questions it would ask students, what information it would gather, and how it would use that information to respond or provide feedback."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-15 21:21:22 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-09-15 21:21:55 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-09-15 21:21:55 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-09-15 21:21:55 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+}]]></config>
+</FreeResponse>

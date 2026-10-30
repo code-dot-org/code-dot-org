@@ -25,6 +25,7 @@ const INITIAL_VALUES: QuizConfigurationData = {
   showIntroScreen: true,
   purpose: 'practice',
   allowMultipleAttempts: true,
+  showQuestionsAfterSubmit: false,
 };
 
 const TIME_LIMIT_LABEL = /Set time limit/;
@@ -55,6 +56,26 @@ function lastRequestBody() {
 describe('QuizConfigurationPanel', () => {
   beforeEach(() => {
     put.mockReset();
+  });
+
+  it('turns the intro screen toggle off when the workspace removes the intro screen', () => {
+    const {rerender} = render(
+      <QuizConfigurationPanel
+        quizId={42}
+        initialValues={INITIAL_VALUES}
+        onSaved={jest.fn()}
+      />
+    );
+    expect(screen.getByLabelText('Show intro screen')).toBeChecked();
+
+    rerender(
+      <QuizConfigurationPanel
+        quizId={42}
+        initialValues={{...INITIAL_VALUES, showIntroScreen: false}}
+        onSaved={jest.fn()}
+      />
+    );
+    expect(screen.getByLabelText('Show intro screen')).not.toBeChecked();
   });
 
   it('shows the chooser when no purpose is set yet, and saves the chosen purpose', async () => {
@@ -231,15 +252,27 @@ describe('QuizConfigurationPanel', () => {
     expect(put).not.toHaveBeenCalled();
   });
 
-  it('does not save, and reverts, when turning off show intro screen while a time limit is set', async () => {
+  it('locks show intro screen on while a time limit is saved, and says why', () => {
     renderPanel({
       initialValues: {...INITIAL_VALUES, timeLimitMinutes: 10},
     });
 
-    const toggle = screen.getByLabelText(
-      'Show intro screen'
-    ) as HTMLInputElement;
-    fireEvent.click(toggle);
+    const toggle = screen.getByLabelText('Show intro screen');
+    expect(toggle).toBeChecked();
+    expect(toggle).toBeDisabled();
+    expect(toggle).toHaveAccessibleDescription(
+      'A timed quiz must have an intro screen, remove the time limit first.'
+    );
+  });
+
+  it('does not save a time limit while show intro screen is off', async () => {
+    renderPanel({
+      initialValues: {...INITIAL_VALUES, showIntroScreen: false},
+    });
+    const field = screen.getByLabelText(TIME_LIMIT_LABEL);
+
+    fireEvent.change(field, {target: {value: '10'}});
+    fireEvent.blur(field);
 
     expect(
       await screen.findByText(
@@ -247,7 +280,6 @@ describe('QuizConfigurationPanel', () => {
       )
     ).toBeInTheDocument();
     expect(put).not.toHaveBeenCalled();
-    expect(toggle.checked).toBe(true);
   });
 
   it("two saves for different fields in flight at once never carry each other's field, regardless of resolve order", async () => {
@@ -283,10 +315,14 @@ describe('QuizConfigurationPanel', () => {
     );
   });
 
-  it('turning off show correctness also clears reveal answer/explanation in the same request', async () => {
+  it('turning off showCorrectness also turns off reveal in the same request', async () => {
     put.mockResolvedValue(jsonResponse(INITIAL_VALUES));
     renderPanel({
-      initialValues: {...INITIAL_VALUES, revealAnswerExplanation: true},
+      initialValues: {
+        ...INITIAL_VALUES,
+        revealAnswerExplanation: true,
+        showQuestionsAfterSubmit: true,
+      },
     });
 
     fireEvent.click(screen.getByLabelText('Show correctness'));
@@ -301,7 +337,7 @@ describe('QuizConfigurationPanel', () => {
     ).not.toBeInTheDocument();
   });
 
-  it('reverts both show correctness and reveal answer/explanation together on failure', async () => {
+  it('reverts showCorrectness and reveal together when the save fails', async () => {
     put.mockRejectedValue(
       new NetworkError(
         '400 Bad Request',
@@ -312,7 +348,11 @@ describe('QuizConfigurationPanel', () => {
       )
     );
     renderPanel({
-      initialValues: {...INITIAL_VALUES, revealAnswerExplanation: true},
+      initialValues: {
+        ...INITIAL_VALUES,
+        revealAnswerExplanation: true,
+        showQuestionsAfterSubmit: true,
+      },
     });
 
     fireEvent.click(screen.getByLabelText('Show correctness'));
@@ -332,12 +372,86 @@ describe('QuizConfigurationPanel', () => {
 
   it('saves reveal answer/explanation independently once shown', async () => {
     put.mockResolvedValue(jsonResponse(INITIAL_VALUES));
-    renderPanel();
+    renderPanel({
+      initialValues: {...INITIAL_VALUES, showQuestionsAfterSubmit: true},
+    });
 
     fireEvent.click(screen.getByLabelText('Reveal answer and explanation'));
 
     await waitFor(() => expect(put).toHaveBeenCalled());
     expect(lastRequestBody().revealAnswerExplanation).toBe(true);
+  });
+
+  it('hides the reveal toggle when questions are hidden after submit, even if correctness is shown', () => {
+    renderPanel({
+      initialValues: {
+        ...INITIAL_VALUES,
+        showCorrectness: true,
+        showQuestionsAfterSubmit: false,
+      },
+    });
+
+    expect(
+      screen.queryByLabelText('Reveal answer and explanation')
+    ).not.toBeInTheDocument();
+  });
+
+  it('turning off showQuestionsAfterSubmit also turns off reveal in the same request', async () => {
+    put.mockResolvedValue(jsonResponse(INITIAL_VALUES));
+    renderPanel({
+      initialValues: {
+        ...INITIAL_VALUES,
+        showCorrectness: true,
+        revealAnswerExplanation: true,
+        showQuestionsAfterSubmit: true,
+      },
+    });
+
+    fireEvent.click(screen.getByLabelText('Show questions after submit'));
+
+    await waitFor(() => expect(put).toHaveBeenCalled());
+    expect(lastRequestBody()).toMatchObject({
+      showQuestionsAfterSubmit: false,
+      revealAnswerExplanation: false,
+    });
+    expect(
+      screen.queryByLabelText('Reveal answer and explanation')
+    ).not.toBeInTheDocument();
+  });
+
+  it('reverts showQuestionsAfterSubmit and reveal together when the save fails', async () => {
+    put.mockRejectedValue(
+      new NetworkError(
+        '400 Bad Request',
+        new Response(JSON.stringify({error: 'nope'}), {
+          status: 400,
+          headers: {'Content-Type': 'application/json'},
+        })
+      )
+    );
+    renderPanel({
+      initialValues: {
+        ...INITIAL_VALUES,
+        showCorrectness: true,
+        revealAnswerExplanation: true,
+        showQuestionsAfterSubmit: true,
+      },
+    });
+
+    fireEvent.click(screen.getByLabelText('Show questions after submit'));
+
+    expect(await screen.findByText('nope')).toBeInTheDocument();
+    expect(
+      (screen.getByLabelText('Show questions after submit') as HTMLInputElement)
+        .checked
+    ).toBe(true);
+    expect(
+      (
+        screen.getByLabelText(
+          'Reveal answer and explanation'
+        ) as HTMLInputElement
+      ).checked
+    ).toBe(true);
   });
 
   it("choosing a purpose for the first time applies that purpose's defaults to every field, in the same request", async () => {
@@ -360,6 +474,10 @@ describe('QuizConfigurationPanel', () => {
     expect(
       screen.queryByLabelText('Reveal answer and explanation')
     ).not.toBeInTheDocument();
+    expect(
+      (screen.getByLabelText('Show questions after submit') as HTMLInputElement)
+        .checked
+    ).toBe(false);
 
     await waitFor(() => expect(put).toHaveBeenCalled());
     expect(lastRequestBody()).toMatchObject({
@@ -369,6 +487,35 @@ describe('QuizConfigurationPanel', () => {
       allowMultipleAttempts: false,
       showCorrectness: false,
       revealAnswerExplanation: false,
+      showQuestionsAfterSubmit: false,
+    });
+  });
+
+  it('exam_simulation defaults: correctness shown, questions and explanation hidden', async () => {
+    put.mockResolvedValue(
+      jsonResponse({...INITIAL_VALUES, purpose: 'exam_simulation'})
+    );
+    renderPanel({initialValues: {...INITIAL_VALUES, purpose: undefined}});
+
+    fireEvent.click(screen.getByText('Exam simulation', {exact: true}));
+
+    expect(
+      (screen.getByLabelText('Show correctness') as HTMLInputElement).checked
+    ).toBe(true);
+    expect(
+      (screen.getByLabelText('Show questions after submit') as HTMLInputElement)
+        .checked
+    ).toBe(false);
+    expect(
+      screen.queryByLabelText('Reveal answer and explanation')
+    ).not.toBeInTheDocument();
+
+    await waitFor(() => expect(put).toHaveBeenCalled());
+    expect(lastRequestBody()).toMatchObject({
+      purpose: 'exam_simulation',
+      showCorrectness: true,
+      revealAnswerExplanation: false,
+      showQuestionsAfterSubmit: false,
     });
   });
 

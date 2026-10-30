@@ -16,7 +16,6 @@ import {
 
 import AiChatAccessControls from '@cdo/apps/aichat/views/accessControls/AiChatAccessControls';
 import TeacherUnitOverview from '@cdo/apps/code-studio/components/progress/TeacherUnitOverview';
-import DCDO from '@cdo/apps/dcdo';
 import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import {sectionDoesNotHaveNewData} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -29,7 +28,6 @@ import SectionProgressV2 from '../sectionProgressV2/SectionProgressV2';
 import StudentSnapshot from '../studentSnapshot/StudentSnapshot';
 import TeacherHomepage from '../studioHomepages/teacherHomepageV2/TeacherHomepage';
 import SectionLoginInfo from '../teacherDashboard/SectionLoginInfo';
-import SkillsDashboard from '../teacherDashboard/skillsDashboard/SkillsDashboard';
 import StatsTableWithData from '../teacherDashboard/StatsTableWithData';
 import {
   sectionProviderName,
@@ -333,12 +331,6 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
                 )
               }
             />
-            {DCDO.get('skills-dashboard', false) && (
-              <Route
-                path={TEACHER_NAVIGATION_PATHS.skills}
-                element={<SkillsDashboard />}
-              />
-            )}
           </Route>
         </Route>
       </Route>

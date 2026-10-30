@@ -46,9 +46,6 @@ function showHomepage() {
         />
       </div>
     </Provider>,
-    document.getElementById('homepage-container'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.getElementById('homepage-container')
   );
 }

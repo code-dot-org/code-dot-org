@@ -1,0 +1,31 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-09-15T21:01:34.000Z",
+  "level_num": "custom",
+  "user_id": 19028,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "0e7b4a3c-5bae-4d76-9539-683238de024b": {
+          "id": "0e7b4a3c-5bae-4d76-9539-683238de024b",
+          "name": "main.py",
+          "contents": "# This program displays information about a specific city.\n# It uses variables to store data and the print() function to show it.\n\n# --- Current City Information ---\ncity = \"Tokyo\"\ntemperature = 25\n\nprint(\"Welcome to:\", city)\nprint(\"The current temperature is:\", temperature, \"degrees Celsius.\")\n\n# -----------------------------------\n# Your turn! Make changes below this line.\n\n# TODO 1: Change the 'city' variable to your favorite city.\n# For example: city = \"London\"\n\n\n# TODO 2: Change the 'temperature' variable to a new number.\n# For example: temperature = 15\n\n\n# TODO 3: Modify the print() statements above or add a new one below\n#         to display additional information about your chosen city.\n#         For example: print(\"Population:\", \"9 million\")\n\n\n# TODO 4: Add comments (lines that start with a #) explaining what changes you made.\n# Example: # I changed the city to my hometown.\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "0e7b4a3c-5bae-4d76-9539-683238de024b"
+      ]
+    },
+    "long_instructions": "TODOs:\r\n- Run main.py to see the initial output of the program.\r\n- Change the value of the `city` variable to your favorite city.\r\n- Update the value of the `temperature` variable to a different number.\r\n- Modify the existing `print()` statements or add new ones to display your updated information.\r\n- Add comments (lines starting with `#`) to explain each change you made.\r\n- Run main.py again to observe your program's new output and comments.",
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMqdR2L3lCDb3KqYf74e\ny72STefyQWT3Ns9gWxYLVUiz7vmE2tJJmOU7j02tMVrk+woLzap0IY9lLNu/\nMTMpMMK/HddQbgU22j29FXewVnyn7/kN5s1d289hsehLpkGZacp+KOWrOFOf\nNHRRMiWal84J6HbpBRti1ekgEmaOENk7w5yc2/W0iauBfODxghQVn1BC+nhl\nfTvYT7OMZrjqfywpPq5vwnwkna9VbVH7Rel5x10BcQhJqJVX8Sw7QELhYBwF\niSRQgA70q6ydj+/o/lXqXYaaHuRga8DfbLWSKDxKzxvgHmadSPLFaF7otjzY\nLnV8ZznmIUd8srK5u4rVuzyMrqfACgvgjuipoa65JjLQteWI91GtDHGDrdD1\nZ/Dvnv453dCejivul+GQxKqdkCgXpeuwgCnY+pnF/o70N6xNZ+UWFCpnsYTv\nh4fYDF/puwI8+5Mf+57aURxiMdCAZ/VpQ8I/QWXgGV2fC2aWDBdvdY4xEaMf\n5dhBwD306HBE7bBY4R2EX5c83KMBXApc4WyMv1EyQzGeqzO8Wn4mTl6lmNov\nGoClzbjpnOqBAI2Dlgq3X64GLXS529fwFc8HMVCTnay/+RJInBbPmmU2g3p5\n1ZWZTP+kp+SYiqCf71G3wDqSkR0pYRSp7kgLttvx86IWkl60L3kPVbcsspcx\nBTK3fwPBOPqlAhxhJL7d5Mf9YSAZ9HxBhQcGMYSM1YGQq+WYL/GprAIIPPeK\nGq3RNzUaFBi3tjsYuI9dylo5AGDB7oH47ed4Qc2JVd02Xun4aHDPVTsJVYFC\nqa7Tb3FQng7CWuhAvXORmSyaQ3lm3Ghh1wWJZYjHVcd1n9FIM7L9aT+e8Is8\nopj7wst3p0G+LHb9kQ/GSXlPslRIBN9OTJ3PxoZJmpX49G6gikverJKEWywg\nGmBUM8n9iH78Z5UAJoA5yttMFewOG8x84iOq8raaKfTnvFPDQdISxGdvrXhW\n4jbloE7N3hlr4iPma/zGuMLT+NK6f/S9ytc/WvT5PzKCBBE9HuxxxsQ3SG+L\nvlh3J41aGiEJa00Nj0ZlVMQSjfZOCCgrB8f8hOE6jhXi8TAId+uDDi6Eesu+\noajAcHRlLF8zAcjyb6mGB7uvubnVQU4QBKsK/xOziGGGceGdegCbb23oJfCb\nHiExpwEPqF5rn5mHgYNcNzK1v7UYzfX2TB9lSbFzs9+q8Eg+e5KNzfNjMQWC\nA+SOe51weBMLzHL75/fUpQgUjr4bjkno4HHYqKHRqYbtqosp5/mmL9Xw064+\n0a7nW2d8Vf2k4xXyD1xoDrmkPqfgHcKZd3+65q/kVd5LbIdt4jKe66qmY8q5\n76Iz7NuEQaNUApj7KQFPjLRxXM/jCwXtqmd9x0FJeVgi4I3twkoDiUu7/usU\nWXSp2s+NQEBXTDfv330O2+q6h8iB8b1x6kJS2e/qFKvJukv1GxAh3832xY1q\nsGjaZ2SCEXxcCwdY6ynPTxuLEzuy7NLQppZg2Gv63Q+0mDHUwc9uMVQwTY9k\ntC48pUlGXM/WaoGvtxmPjcxOlpfLFL9dh8Bms8+bP+nNQT8OkZXpzsE4jlPf\nyY1i2foYXxKN6dT4iZGZWwSqf5MVywqGBmW9Hq+VPE1UeTnkb4gA/vOI7RGu\nvGCvHEs+zMxpeD4jtKBYy/d0BeZzNCbFyf8RN1g9M01KDWfL4C07YNrqr1Aq\nxulkUd61hO8PsOBfKu4SsJFZKuJrFarjh95ldx6M012npZjQ1TQEgCXo2//Q\no6r9A2rUjI2HxtMaAoqX8BSdeRzLCJrFZslbrtp4N98edZ8tnWcEauJbuOEJ\n5U4zqrspFNbURS2VGA==\n",
+    "generate_outline": "Practice your coding skills by modifying an existing Python program. You will change variables and `print()` statements, and then add comments to explain what changes you made and why."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-15 21:01:40 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-09-15 21:01:41 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-09-15 21:01:46 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-09-15 21:01:46 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+}]]></config>
+</Pythonlab>

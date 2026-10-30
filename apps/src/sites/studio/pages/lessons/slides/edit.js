@@ -24,9 +24,6 @@ $(document).ready(function () {
       generateSlidesUrl={generateSlidesUrl}
       slidesFilePath={data.slidesFilePath}
     />,
-    document.getElementById('slides-edit-container'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.getElementById('slides-edit-container')
   );
 });

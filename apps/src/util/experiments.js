@@ -35,8 +35,6 @@ experiments.BACKGROUNDS_AND_UPLOAD = 'backgroundsTab';
 experiments.GENDER_FEATURE_ENABLED = 'gender';
 // Experiment for enabling the AI-TA differentiation chat
 experiments.AI_DIFFERENTIATION = 'ai-differentiation';
-// Experiment for enabling the AI-TA differentiation artifacts
-experiments.AI_ARTIFACT = 'ai-artifact';
 // Adds a "Get help with this block" option to block context menus if docs exist (e.g. Sprite Lab)
 experiments.BLOCKLY_DOCS = 'blockly_docs';
 // Allows the playspace to be dragged to take up a larger portion of the screen
@@ -85,8 +83,10 @@ experiments.NEW_PREVIEW_DOMAIN = 'new-preview-domain';
 experiments.STUDENT_SCRAPBOOK = 'student-scrapbook';
 // Render the Teacher Panel inside the TA drawer on level pages.
 experiments.TA_TEACHER_PANEL = 'ta-teacher-panel';
-// Replace the Backpack tab's contents with the unified backpack panel.
-experiments.UNIFIED_BACKPACK = 'unified-backpack';
+// Offer teachers the Reset Progress option on the section progress page.
+experiments.RESET_PROGRESS = 'reset-progress';
+// Ask teachers to explain why they are resetting student progress.
+experiments.RESET_PROGRESS_REASON = 'reset-progress-reason';
 
 /**
  * Get our query string. Provided as a method so that tests can mock this.

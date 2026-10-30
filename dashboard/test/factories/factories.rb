@@ -847,6 +847,10 @@ FactoryBot.define do
       login_type {'email'}
       grades {['pl']}
     end
+
+    trait :picture_password do
+      login_type {Section::LOGIN_TYPE_PICTURE}
+    end
   end
 
   factory :section_instructor do
@@ -1110,13 +1114,21 @@ FactoryBot.define do
     level_num {'custom'}
   end
 
+  factory :adaptive, parent: :level, class: Adaptive do
+    game {Game.adaptive}
+    level_num {'custom'}
+    adaptive_id {'sample'}
+  end
+
   factory :music_dance_ai, parent: :bubble_choice_level do
     sequence(:name) {|n| "Music_Dance_AI_Level_#{n}"}
+    # Ensure sublevels fall on the parent's side of the standalone project partition.
     sublevels do
+      suffix = Level.standalone_partition_name?(name) ? ' Subproject' : ''
       [
-        create(:dance),
-        create(:music),
-        create(:dance)
+        create(:dance, name: "#{name} Dancer#{suffix}"),
+        create(:music, name: "#{name} Music#{suffix}"),
+        create(:dance, name: "#{name} Dance#{suffix}")
       ]
     end
   end
@@ -1169,18 +1181,6 @@ FactoryBot.define do
     script
     level
     level_source {create(:level_source, level: level)}
-  end
-
-  factory :skill do
-    sequence(:key) {|n| "skill-#{n}}"}
-    description {"Declares variables with conventional names"}
-    concept {"Variables"}
-    evaluation_criteria {"Does the student's work on this level demonstrate the skill?"}
-  end
-
-  factory :levels_skill do
-    association :level
-    association :skill
   end
 
   factory :unit, aliases: [:script] do
@@ -1466,7 +1466,7 @@ FactoryBot.define do
     active {false}
     problem_text {'fake problem text'}
     problem_type {'multiple_choice_single_select'}
-    solution {{}}
+    solution {[{option: 'a', correct: true}, {option: 'b', correct: false}]}
   end
 
   factory :user_practice_problem_attempt do
@@ -1496,6 +1496,10 @@ FactoryBot.define do
   factory :challenge_response do
     association :challenge
     association :user, factory: :student
+
+    trait :evaluated do
+      evaluation_status {:success}
+    end
   end
 
   factory :challenge_response_asset do
@@ -2376,16 +2380,6 @@ FactoryBot.define do
     student_work_evaluation_summary_id {1}
   end
 
-  factory :user_level_skill_evaluation do
-    association :student, factory: :student
-    association :level
-    association :unit
-    evaluator {"AI"}
-    evaluation {"Great"}
-    evaluation_criteria {"Does the student's work on this level demonstrate the skill?"}
-    reasoning {"The student's work demonstrated the skill."}
-  end
-
   factory :user_level_evaluation do
     association :student, factory: :student
     association :level
@@ -2530,7 +2524,7 @@ FactoryBot.define do
   factory :quiz_question do
     sequence(:key) {SecureRandom.uuid}
     sequence(:name) {|n| "Question #{n}"}
-    content {{stem: 'What is 2 + 2?', choices: ['3', '4', '5'], correct: ['4']}}
+    content {{question_title: 'What is 2 + 2?', choices: ['3', '4', '5'], correct: ['4']}}
   end
 
   factory :multiple_choice_question, class: MultipleChoiceQuestion do
@@ -2538,9 +2532,47 @@ FactoryBot.define do
     sequence(:name) {|n| "Multiple choice question #{n}"}
     content do
       {
-        stem: 'What is 2 + 2?',
+        question_title: 'What is 2 + 2?',
         choices: [{id: 'a', text: '3'}, {id: 'b', text: '4'}, {id: 'c', text: '5'}],
         correct_choice_id: 'b'
+      }
+    end
+  end
+
+  factory :free_response_question, class: FreeResponseQuestion do
+    sequence(:key) {SecureRandom.uuid}
+    sequence(:name) {|n| "Free response question #{n}"}
+    content do
+      {
+        question_title: 'Give one specific example of an abstraction you used during this lesson.',
+        description: 'An example of an abstraction is a function or class that encapsulates a concept or behavior.'
+      }
+    end
+  end
+
+  factory :multiple_select_question, class: MultipleSelectQuestion do
+    sequence(:key) {SecureRandom.uuid}
+    sequence(:name) {|n| "Multiple select question #{n}"}
+    content do
+      {
+        question_title: 'Which of these are even?',
+        choices: [{id: 'a', text: '2'}, {id: 'b', text: '3'}, {id: 'c', text: '4'}],
+        correct_choice_ids: ['a', 'c']
+      }
+    end
+  end
+
+  factory :match_question, class: MatchQuestion do
+    sequence(:key) {SecureRandom.uuid}
+    sequence(:name) {|n| "Match question #{n}"}
+    content do
+      {
+        question_title: 'Match each expression to its value.',
+        pairs: [
+          {id: 'p1', items: [{id: 'a', text: '1 + 1'}, {id: 'x', text: '2'}]},
+          {id: 'p2', items: [{id: 'b', text: '2 + 1'}, {id: 'y', text: '3'}]},
+          {id: 'p3', items: [{id: 'c', text: '2 + 2'}, {id: 'z', text: '4'}]},
+        ]
       }
     end
   end

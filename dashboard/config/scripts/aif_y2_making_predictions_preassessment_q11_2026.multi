@@ -1,0 +1,16 @@
+name 'aif-y2-making-predictions-preassessment-q11-2026'
+
+right 'Its differences are so much larger that they dominate the distance metric'
+wrong 'The model cannot store numbers larger than 1,000'
+wrong 'Large values make the model run too slowly to finish'
+wrong 'The model treats the feature with the largest values as the label'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+A nearest-neighbor classifier uses a workout's elevation gain in feet (40 to 1,800) and its average heart rate (118 to 168). Why can the unscaled elevation feature hurt its predictions?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 8: Scaling Features
+MARKDOWN

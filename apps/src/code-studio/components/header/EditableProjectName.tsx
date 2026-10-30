@@ -65,7 +65,11 @@ const EditableProjectName: React.FunctionComponent<
     );
   } else {
     return (
-      <DisplayProjectName beginEdit={beginEdit} projectName={projectName} />
+      <DisplayProjectName
+        beginEdit={beginEdit}
+        projectName={projectName}
+        onChangedWidth={onChangedWidth}
+      />
     );
   }
 };

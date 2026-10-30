@@ -1,5 +1,6 @@
 import {Meta, StoryFn} from '@storybook/react-vite';
 import {ChangeEvent, MouseEvent, useState, useCallback} from 'react';
+import {expect, userEvent, within} from 'storybook/test';
 
 import CheckboxDropdown, {CheckboxDropdownProps} from '../index';
 
@@ -55,6 +56,7 @@ const SingleTemplate: StoryFn<CheckboxDropdownProps> = args => {
         onClearAll={onClearAll}
         selectAllText="Select all"
         clearAllText="Clear all"
+        doneText="Done"
       />
     );
   } else {
@@ -178,6 +180,57 @@ DefaultCheckboxDropdown.args = {
   size: 'm',
 };
 
+// Twenty options is enough to reach the menu max-height.
+const longListOptions = Array.from({length: 20}, (_, index) => ({
+  value: `option-${index + 1}`,
+  label: `Option ${index + 1}`,
+}));
+
+export const LongListCheckboxDropdown = SingleTemplate.bind({});
+LongListCheckboxDropdown.args = {
+  name: 'long-list-dropdown',
+  allOptions: longListOptions,
+  labelText: 'Long list',
+  checkedOptions: ['option-1'],
+  disabled: false,
+  color: dropdownColors.black,
+  onChange: () => null,
+  onSelectAll: () => null,
+  onClearAll: () => null,
+  size: 'm',
+};
+LongListCheckboxDropdown.play = async ({canvasElement}) => {
+  const canvas = within(canvasElement);
+  const trigger = canvas.getByRole('button', {
+    name: /long-list-dropdown filter dropdown/i,
+  });
+  await userEvent.click(trigger);
+
+  const list = canvasElement.querySelector('ul');
+  const menu = list?.parentElement;
+  if (!list || !menu) {
+    throw new Error('checkbox menu did not open');
+  }
+
+  expect(list.scrollHeight).toBeGreaterThan(list.clientHeight);
+  const menuBox = menu.getBoundingClientRect();
+  const actionRow = canvas.getByRole('button', {
+    name: 'Done (1)',
+  }).parentElement;
+  if (!actionRow) {
+    throw new Error('checkbox menu action row did not render');
+  }
+  const borderBottom = parseFloat(getComputedStyle(menu).borderBottomWidth);
+  // The row sits inside the menu border. The button is inset by the row padding.
+  expect(menuBox.bottom - actionRow.getBoundingClientRect().bottom).toBeCloseTo(
+    borderBottom,
+    0,
+  );
+  expect(menuBox.width).toBeGreaterThanOrEqual(
+    trigger.getBoundingClientRect().width - 1,
+  );
+};
+
 export const NoSelectOrClearAllCheckboxDropdown = SingleTemplate.bind({});
 NoSelectOrClearAllCheckboxDropdown.args = {
   name: 'no-select-all-or-clear-all-dropdown',
@@ -260,6 +313,22 @@ StyledAsFieldCheckboxDropdown.args = {
   styleAsFormField: true,
   size: 'm',
 };
+StyledAsFieldCheckboxDropdown.play = async ({canvasElement}) => {
+  const canvas = within(canvasElement);
+  const trigger = canvas.getByRole('button', {
+    name: /styled-as-field-checkbox-dropdown filter dropdown/i,
+  });
+  await userEvent.click(trigger);
+
+  const menu = canvasElement.querySelector('ul')?.parentElement;
+  if (!menu) {
+    throw new Error('checkbox menu did not open');
+  }
+
+  expect(menu.getBoundingClientRect().width).toBeGreaterThanOrEqual(
+    trigger.getBoundingClientRect().width - 1,
+  );
+};
 
 export const WithErrorCheckboxDropdown = SingleTemplate.bind({});
 WithErrorCheckboxDropdown.args = {
@@ -323,6 +392,7 @@ ThickAndThinCheckboxDropdowns.args = {
       onClearAll: () => null,
       selectAllText: 'Select All',
       clearAllText: 'Clear All',
+      doneText: 'Done',
       size: 'm',
       disabled: false,
     },
@@ -340,6 +410,7 @@ ThickAndThinCheckboxDropdowns.args = {
       onClearAll: () => null,
       selectAllText: 'Select All',
       clearAllText: 'Clear All',
+      doneText: 'Done',
       size: 'm',
       disabled: false,
     },
@@ -362,6 +433,7 @@ GroupOfCheckboxDropdownColors.args = {
       onClearAll: () => null,
       selectAllText: 'Select All',
       clearAllText: 'Clear All',
+      doneText: 'Done',
       size: 'm',
       disabled: false,
       color: dropdownColors.white,
@@ -379,6 +451,7 @@ GroupOfCheckboxDropdownColors.args = {
       onClearAll: () => null,
       selectAllText: 'Select All',
       clearAllText: 'Clear All',
+      doneText: 'Done',
       size: 'm',
       color: dropdownColors.black,
       disabled: false,
@@ -396,6 +469,7 @@ GroupOfCheckboxDropdownColors.args = {
       onClearAll: () => null,
       selectAllText: 'Select All',
       clearAllText: 'Clear All',
+      doneText: 'Done',
       size: 'm',
       color: dropdownColors.gray,
       disabled: false,
@@ -419,6 +493,7 @@ GroupOfSizesOfCheckboxDropdown.args = {
       onClearAll: () => null,
       selectAllText: 'Select All',
       clearAllText: 'Clear All',
+      doneText: 'Done',
       size: 'xs',
       disabled: false,
       color: dropdownColors.black,
@@ -436,6 +511,7 @@ GroupOfSizesOfCheckboxDropdown.args = {
       onClearAll: () => null,
       selectAllText: 'Select All',
       clearAllText: 'Clear All',
+      doneText: 'Done',
       size: 's',
       disabled: false,
       color: dropdownColors.black,
@@ -453,6 +529,7 @@ GroupOfSizesOfCheckboxDropdown.args = {
       onClearAll: () => null,
       selectAllText: 'Select All',
       clearAllText: 'Clear All',
+      doneText: 'Done',
       size: 'm',
       disabled: false,
       color: dropdownColors.black,
@@ -470,6 +547,7 @@ GroupOfSizesOfCheckboxDropdown.args = {
       onClearAll: () => null,
       selectAllText: 'Select All',
       clearAllText: 'Clear All',
+      doneText: 'Done',
       size: 'l',
       disabled: false,
       color: dropdownColors.black,
@@ -493,6 +571,7 @@ GroupOfMenuPlacementOptions.args = {
       onClearAll: () => null,
       selectAllText: 'Select All',
       clearAllText: 'Clear All',
+      doneText: 'Done',
       size: 'm',
       color: dropdownColors.black,
       disabled: false,
@@ -511,6 +590,7 @@ GroupOfMenuPlacementOptions.args = {
       onClearAll: () => null,
       selectAllText: 'Select All',
       clearAllText: 'Clear All',
+      doneText: 'Done',
       size: 'm',
       color: dropdownColors.black,
       disabled: false,
@@ -535,6 +615,7 @@ GroupOfMenuVerticalPlacementOptions.args = {
       onClearAll: () => null,
       selectAllText: 'Select All',
       clearAllText: 'Clear All',
+      doneText: 'Done',
       size: 'm',
       color: dropdownColors.black,
       disabled: false,
@@ -553,6 +634,7 @@ GroupOfMenuVerticalPlacementOptions.args = {
       onClearAll: () => null,
       selectAllText: 'Select All',
       clearAllText: 'Clear All',
+      doneText: 'Done',
       size: 'm',
       color: dropdownColors.black,
       disabled: false,
@@ -577,6 +659,7 @@ GroupOfAllPlacements.args = {
       onClearAll: () => null,
       selectAllText: 'Select All',
       clearAllText: 'Clear All',
+      doneText: 'Done',
       size: 'm',
       color: dropdownColors.black,
       menuPlacement: 'left',
@@ -595,6 +678,7 @@ GroupOfAllPlacements.args = {
       onClearAll: () => null,
       selectAllText: 'Select All',
       clearAllText: 'Clear All',
+      doneText: 'Done',
       size: 'm',
       color: dropdownColors.black,
       menuPlacement: 'right',
@@ -613,6 +697,7 @@ GroupOfAllPlacements.args = {
       onClearAll: () => null,
       selectAllText: 'Select All',
       clearAllText: 'Clear All',
+      doneText: 'Done',
       size: 'm',
       color: dropdownColors.black,
       menuPlacement: 'left',
@@ -631,6 +716,7 @@ GroupOfAllPlacements.args = {
       onClearAll: () => null,
       selectAllText: 'Select All',
       clearAllText: 'Clear All',
+      doneText: 'Done',
       size: 'm',
       color: dropdownColors.black,
       menuPlacement: 'right',

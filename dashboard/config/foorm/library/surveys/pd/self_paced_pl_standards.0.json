@@ -439,6 +439,76 @@
           ]
         },
         {
+          "type": "matrix",
+          "name": "module_supported_learning_updated",
+          "title": "How did each of the following support your learning?",
+          "description": "Rate how helpful was each option from Not helpful (1) to Very helpful (7).",
+          "columns": [
+            {
+              "value": "1",
+              "text": "1 - Not helpful"
+            },
+            {
+              "value": "2",
+              "text": "2"
+            },
+            {
+              "value": "3",
+              "text": "3"
+            },
+            {
+              "value": "4",
+              "text": "4"
+            },
+            {
+              "value": "5",
+              "text": "5"
+            },
+            {
+              "value": "6",
+              "text": "6"
+            },
+            {
+              "value": "7",
+              "text": "7 - Very helpful"
+            }
+          ],
+          "rows": [
+            {
+              "value": "reading",
+              "text": "Reading a page that contained text and images about a topic."
+            },
+            {
+              "value": "reflections",
+              "text": "Writing reflections on experiences and teaching practices."
+            },
+            {
+              "value": "forum_participation",
+              "text": "Sharing strategies in the CodeAI forum."
+            },
+            {
+              "value": "video_content",
+              "text": "Engaging with video content."
+            },
+            {
+              "value": "student_facing_content",
+              "text": "Trying out student-facing content, such as a coding or lesson activity."
+            },
+            {
+              "value": "lesson_plans",
+              "text": "Exploring lesson plans and materials."
+            },
+            {
+              "value": "facilitating_student_projects",
+              "text": "Preparing to facilitate student projects."
+            },
+            {
+              "value": "checks_for_understanding",
+              "text": "Completing checks for understanding (matching, multiple-choice, etc.)."
+            }
+          ]
+        },
+        {
           "type": "rating",
           "name": "nps_self_paced_pd",
           "title": "How likely are you to recommend this self-paced professional learning experience to a friend or colleague?",

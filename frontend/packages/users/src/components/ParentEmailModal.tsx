@@ -11,7 +11,7 @@ import {CodeStudioConfig as siteConfig} from '@code-dot-org/core';
 import {
   DashboardApiClient,
   useUpdateParentEmail,
-  type ParentEmailOptIn,
+  type EmailOptIn,
 } from '@code-dot-org/core/api';
 
 import FormDialog from './FormDialog';
@@ -59,7 +59,7 @@ export default function ParentEmailModal({
   const {errors, resetErrors, onSubmit} = useModalForm();
   const [email, setEmail] = useState('');
   const [confirmEmail, setConfirmEmail] = useState('');
-  const [optIn, setOptIn] = useState<ParentEmailOptIn>('');
+  const [optIn, setOptIn] = useState<EmailOptIn>('');
   const [touched, setTouched] = useState({address: false, confirm: false});
   // Snapshot of the address on file when the dialog opened. A successful save
   // invalidates the settings query, so the prop catches up to what was just
@@ -214,7 +214,7 @@ export default function ParentEmailModal({
             value="yes"
             label="Yes"
             checked={optIn === 'yes'}
-            onChange={event => setOptIn(event.target.value as ParentEmailOptIn)}
+            onChange={event => setOptIn(event.target.value as EmailOptIn)}
             disabled={saving}
           />
           <RadioButton
@@ -222,7 +222,7 @@ export default function ParentEmailModal({
             value="no"
             label="No"
             checked={optIn === 'no'}
-            onChange={event => setOptIn(event.target.value as ParentEmailOptIn)}
+            onChange={event => setOptIn(event.target.value as EmailOptIn)}
             disabled={saving}
           />
         </Box>

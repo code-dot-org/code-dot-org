@@ -17,11 +17,17 @@ import {
 import {START_SOURCES, TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 
+import {withoutBlockTypes} from '../blockCatalog';
+import {lockBlocks, withoutLocks} from '../blockLocks';
+import PlaceholderPreviewer from '../blockly/placeholderPreviewer';
 import {installSharedBlocks} from '../blockly/setup';
 import {getCompleteToolboxDefinition} from '../blockly/toolbox/completeToolbox';
 import {applyToolboxAdditions} from '../blockly/toolbox/toolboxAdditions';
+import {STACK_ROOM_EVENT_GROUP, watchStackRoom} from '../stackRoom';
 
 export const BLOCKLY_DIV_ID = 'spritelab2-blockly-div';
+
+const NO_BLOCK_TYPES: ReadonlySet<string> = new Set();
 
 // In toolbox edit mode the roles swap: the toolbox offers every available block
 // (so any of them can be added to the level's toolbox), and the workspace holds
@@ -33,6 +39,8 @@ const isStartMode = editBlocksMode === START_SOURCES;
 interface UseBlocklyWorkspaceOptions {
   enabled: boolean;
   toolboxDefinition?: BlocklyCore.utils.toolbox.ToolboxInfo;
+  /** Block types kept out of the toolbox; read at inject and on refresh. */
+  hiddenBlockTypes?: ReadonlySet<string>;
   sharedBlocks?: BlockDefinition[];
   theme: 'Light' | 'Dark';
 }
@@ -51,8 +59,16 @@ interface UseBlocklyWorkspaceResult {
   getToolboxDefinition: () => BlocklyCore.utils.toolbox.ToolboxInfo | null;
   /** Re-render the toolbox, so flyout dropdowns show data fetched since. */
   refreshToolbox: (definition?: BlocklyCore.utils.toolbox.ToolboxInfo) => void;
-  /** Load code into the workspace. */
-  loadCode: (source: WorkspaceSerialization) => void;
+  /** Load code into the workspace. With `lock`, every loaded block is made
+      undeletable except the stacks `isOwnStack` claims as the level's own
+      (blockLocks.ts). */
+  loadCode: (
+    source: WorkspaceSerialization,
+    options?: {
+      lock?: boolean;
+      isOwnStack?: (top: BlocklyCore.Block) => boolean;
+    }
+  ) => void;
   /**
    * Register the change listeners:
    * - onWorkspaceChange fires with the serialized workspace after a user edit.
@@ -63,6 +79,11 @@ interface UseBlocklyWorkspaceResult {
     onWorkspaceChange: (source: WorkspaceSerialization) => void,
     onIntermediateChange?: () => void
   ) => () => void;
+  /** Blockly's undo stacks: edits since the last load, and undone ones. */
+  canUndo: boolean;
+  canRedo: boolean;
+  undo: () => void;
+  redo: () => void;
 }
 
 /**
@@ -71,10 +92,23 @@ interface UseBlocklyWorkspaceResult {
 export default function useBlocklyWorkspace({
   enabled,
   toolboxDefinition,
+  hiddenBlockTypes,
   sharedBlocks,
   theme,
 }: UseBlocklyWorkspaceOptions): UseBlocklyWorkspaceResult {
   const workspaceRef = useRef<BlocklyCore.WorkspaceSvg | null>(null);
+  const hiddenRef = useRef(hiddenBlockTypes);
+  hiddenRef.current = hiddenBlockTypes;
+  // A level's authored definition with the lab's additions, filtered to
+  // registered blocks and less the hidden ones.
+  const prepareToolbox = useCallback(
+    (definition: BlocklyCore.utils.toolbox.ToolboxInfo) =>
+      withoutBlockTypes(
+        filterToolboxToRegisteredBlocks(applyToolboxAdditions(definition)),
+        hiddenRef.current ?? NO_BLOCK_TYPES
+      ),
+    []
+  );
   const toolboxRef = useRef<
     BlocklyCore.utils.toolbox.ToolboxDefinition | undefined
   >(undefined);
@@ -83,6 +117,7 @@ export default function useBlocklyWorkspace({
   themeRef.current = theme;
   // Tracks workspace loads (as opposed to user edits).
   const pendingLoadsRef = useRef(0);
+  const [history, setHistory] = useState({canUndo: false, canRedo: false});
   const currentBlocksRef = useRef<WorkspaceSerialization | null>(null);
   const onWorkspaceChangeRef = useRef<(source: WorkspaceSerialization) => void>(
     () => {}
@@ -102,16 +137,12 @@ export default function useBlocklyWorkspace({
       return;
     }
 
-    // Levelbuilder edit modes get the complete toolbox; otherwise the
-    // level's authored definition gets the lab additions, filtered to
-    // registered blocks.
+    // Levelbuilder edit modes get the complete toolbox.
     let toolbox: BlocklyCore.utils.toolbox.ToolboxDefinition | undefined;
     if (isToolboxMode || isStartMode) {
       toolbox = getCompleteToolboxDefinition(blocksByCategory, isToolboxMode);
     } else if (toolboxDefinition && toolboxDefinition.contents?.length !== 0) {
-      toolbox = filterToolboxToRegisteredBlocks(
-        applyToolboxAdditions(toolboxDefinition)
-      );
+      toolbox = prepareToolbox(toolboxDefinition);
     }
 
     // Variable/behavior naming goes through Blockly.customSimpleDialog —
@@ -137,6 +168,11 @@ export default function useBlocklyWorkspace({
       editBlocks: getAppOptionsEditBlocks(),
     } as BlocklyCore.BlocklyOptions);
 
+    // Drags onto a placeholder keep the placeholder showing, not a marker.
+    workspaceRef.current.options.plugins[
+      BlocklyCore.registry.Type.CONNECTION_PREVIEWER.toString()
+    ] = PlaceholderPreviewer;
+
     // CDO Blockly shrinks the container by the workspace-header height to
     // leave room for a header bar we don't render, leaving a gap at the
     // bottom. Reclaim the full height and resize the workspace SVG to fill.
@@ -146,9 +182,16 @@ export default function useBlocklyWorkspace({
     const onChange = (e: BlocklyCore.Events.Abstract) => {
       if (pendingLoadsRef.current > 0) {
         if (e.type === BlocklyCore.Events.FINISHED_LOADING) {
-          // This load's event stream is over.
+          // This load's event stream is over. A load is not an edit to
+          // undo: a scene's blocks never undo into the last scene's.
           pendingLoadsRef.current--;
+          workspaceRef.current?.clearUndo();
         }
+        return;
+      }
+      // The stack-room pass tidies positions; it is not an edit to save or
+      // run.
+      if (e.group === STACK_ROOM_EVENT_GROUP) {
         return;
       }
       // Toolbox editing: flag blocks that won't serialize into a category.
@@ -177,22 +220,57 @@ export default function useBlocklyWorkspace({
       if (!workspaceRef.current) {
         return;
       }
-      const serialized = Blockly.serialization.workspaces.save(
+      // A drag out of the flyout creates the block while it is still in
+      // hand, and a release over the flyout deletes it again; the move or
+      // delete that ends the drag fires once the gesture is over, and that
+      // is the state to keep.
+      if (workspaceRef.current.isDragging()) {
+        return;
+      }
+      let serialized = Blockly.serialization.workspaces.save(
         workspaceRef.current
       ) as WorkspaceSerialization;
+      // A levelbuilder editing the level authors its locks, so they are kept.
+      // For a student the locks come from the level, not from the saved
+      // project, so any saved ones are stripped.
+      if (!isToolboxMode && !isStartMode) {
+        serialized = withoutLocks(serialized);
+      }
       currentBlocksRef.current = serialized;
       onWorkspaceChangeRef.current(serialized);
     };
 
     workspaceRef.current.addChangeListener(onChange);
+    // After onChange, which clears the stacks when a load ends.
+    const onHistoryChange = () => {
+      const workspace = workspaceRef.current;
+      if (!workspace) {
+        return;
+      }
+      const canUndo = workspace.getUndoStack().length > 0;
+      const canRedo = workspace.getRedoStack().length > 0;
+      setHistory(last =>
+        last.canUndo === canUndo && last.canRedo === canRedo
+          ? last
+          : {canUndo, canRedo}
+      );
+    };
+    workspaceRef.current.addChangeListener(onHistoryChange);
+    setHistory({canUndo: false, canRedo: false});
+    // Levelbuilder lays a toolbox and start sources out by hand.
+    const stopStackRoom =
+      isToolboxMode || isStartMode
+        ? undefined
+        : watchStackRoom(workspaceRef.current);
     setWorkspaceVersion(version => version + 1);
 
     return () => {
+      stopStackRoom?.();
       workspaceRef.current?.dispose();
       workspaceRef.current = null;
       currentBlocksRef.current = null;
     };
-  }, [enabled, sharedBlocks, toolboxDefinition]);
+  }, [enabled, sharedBlocks, toolboxDefinition, prepareToolbox]);
 
   // Update workspace theme on display-theme change. Resolve through
   // getUserTheme rather than applying cdoDark/cdoTheme directly: a user
@@ -217,22 +295,34 @@ export default function useBlocklyWorkspace({
     []
   );
 
-  const loadCode = useCallback((source: WorkspaceSerialization) => {
-    const workspace = workspaceRef.current;
-    if (!workspace) {
-      return;
-    }
-    pendingLoadsRef.current++;
-    try {
-      loadBlocksToWorkspace(workspace, JSON.stringify(source));
-      // Update ref here (instead of in change listener) since callers may read this synchronously.
-      currentBlocksRef.current = source;
-    } catch (e) {
-      // Decrement the counter if there was an error.
-      pendingLoadsRef.current--;
-      throw e;
-    }
-  }, []);
+  const loadCode = useCallback(
+    (
+      source: WorkspaceSerialization,
+      options?: {
+        lock?: boolean;
+        isOwnStack?: (top: BlocklyCore.Block) => boolean;
+      }
+    ) => {
+      const workspace = workspaceRef.current;
+      if (!workspace) {
+        return;
+      }
+      pendingLoadsRef.current++;
+      try {
+        loadBlocksToWorkspace(workspace, JSON.stringify(source));
+        if (options?.lock) {
+          lockBlocks(workspace, options.isOwnStack);
+        }
+        // Update ref here (instead of in change listener) since callers may read this synchronously.
+        currentBlocksRef.current = source;
+      } catch (e) {
+        // Decrement the counter if there was an error.
+        pendingLoadsRef.current--;
+        throw e;
+      }
+    },
+    []
+  );
 
   const getCurrentBlocks = useCallback(() => currentBlocksRef.current, []);
 
@@ -274,16 +364,17 @@ export default function useBlocklyWorkspace({
           : undefined;
       const kindMatches = definition?.kind === installedKind;
       if (definition && kindMatches && !isToolboxMode && !isStartMode) {
-        toolboxRef.current = filterToolboxToRegisteredBlocks(
-          applyToolboxAdditions(definition)
-        );
+        toolboxRef.current = prepareToolbox(definition);
       }
       if (workspaceRef.current?.rendered && toolboxRef.current) {
         workspaceRef.current.updateToolbox(toolboxRef.current);
       }
     },
-    []
+    [prepareToolbox]
   );
+
+  const undo = useCallback(() => workspaceRef.current?.undo(false), []);
+  const redo = useCallback(() => workspaceRef.current?.undo(true), []);
 
   return {
     workspaceVersion,
@@ -293,5 +384,9 @@ export default function useBlocklyWorkspace({
     loadCode,
     refreshToolbox,
     subscribeToChanges,
+    canUndo: history.canUndo,
+    canRedo: history.canRedo,
+    undo,
+    redo,
   };
 }

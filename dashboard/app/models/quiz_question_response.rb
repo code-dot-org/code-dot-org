@@ -23,6 +23,10 @@ class QuizQuestionResponse < ApplicationRecord
   belongs_to :quiz_attempt
   belongs_to :quiz_question
 
+  # Only questions still placed on the quiz count - finalize scores over
+  # placements too. nil level means the quiz was deleted, placements with it.
+  scope :in_quiz, ->(level) {where(quiz_question_id: level.question_ids) if level}
+
   GRADING_STATUSES = %w(
     auto_graded
     pending_ai
@@ -37,4 +41,9 @@ class QuizQuestionResponse < ApplicationRecord
   # expects exactly one response row per question whether or not it was answered.
   # Only nil (the column missing entirely) should be rejected.
   validates :response_data, exclusion: {in: [nil], message: "can't be nil"}
+
+  # Whether this response holds an answer, as opposed to a skip.
+  def answered?
+    quiz_question.response_answered?(response_data)
+  end
 end

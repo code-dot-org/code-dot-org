@@ -6,7 +6,10 @@
 // user_practice_problem_attempts, challenges, challenge_responses,
 // ai_student_podcasts, user_lesson_reflections, plus get_token for CSRF.
 
-import {registerMockFixture} from '@code-dot-org/core/api/mocks';
+import {
+  registerMockFixture,
+  type MockRoute,
+} from '@code-dot-org/core/api/mocks';
 
 import {PRACTICE_PROBLEMS} from './fixtures';
 
@@ -51,15 +54,17 @@ function silentWav(seconds = 1, sampleRate = 8000): Response {
 
 let nextAttemptId = 500;
 
+// AuthenticityTokenStore calls this before the first write and reads the
+// token from the csrf-token response header, not the body.
+export const csrfTokenRoute: MockRoute = {
+  path: '*/get_token',
+  respond: () =>
+    new Response(null, {headers: {'csrf-token': 'dev-shell-csrf-token'}}),
+};
+
 export function registerLessonDeepDiveMocks(): void {
   registerMockFixture([
-    // AuthenticityTokenStore calls this before the first write and reads the
-    // token from the csrf-token response header, not the body.
-    {
-      path: '*/get_token',
-      respond: () =>
-        new Response(null, {headers: {'csrf-token': 'dev-shell-csrf-token'}}),
-    },
+    csrfTokenRoute,
 
     // PracticeProblemsController#index filters by objective when asked. The
     // seeded problems hang off a different lesson's objective, so the deep

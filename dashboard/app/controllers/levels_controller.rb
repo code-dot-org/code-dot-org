@@ -18,6 +18,7 @@ class LevelsController < ApplicationController
 
   # All level types that can be requested via /levels/new
   LEVEL_CLASSES = [
+    Adaptive,
     Aichat,
     Ailab,
     Applab,
@@ -186,8 +187,10 @@ class LevelsController < ApplicationController
     bubble_choice_parents = BubbleChoice.parent_levels(@level.name)
     any_parent_in_script = bubble_choice_parents.any? {|pl| pl.script_levels.any?}
     @in_script = @level.script_levels.any? || any_parent_in_script
-    @standalone = ProjectsController::STANDALONE_PROJECTS.values.pluck(:name).include?(@level.name)
-    @skills = @level.skills.map {|skill| skill.attributes.deep_transform_keys {|key| key.to_s.camelize(:lower)}}
+    @standalone = Policies::StandaloneProjects.project_level_name?(@level.name)
+    # The header label shows only in a simple-progress unit's header.
+    @show_header_label = @level.header_label.present? ||
+      @level.script_levels.map(&:script).compact.any?(&:simple_progress?)
     if @level.is_a? Applab
       @dataset_library_manifest = DatablockStorageLibraryManifest.instance.library_manifest
     end
@@ -532,6 +535,8 @@ class LevelsController < ApplicationController
       elsif @type_class == Weblab2
         @game = Game.weblab2
         @widget2_ids = get_widget2_ids
+      elsif @type_class == Adaptive
+        @game = Game.adaptive
       end
       @level = @type_class.new
       render :edit
@@ -590,9 +595,9 @@ class LevelsController < ApplicationController
       script_level = ScriptLevel.find_by(id: params[:scriptLevelId].to_i)
     end
 
-    is_standalone_project = ProjectsController::STANDALONE_PROJECTS.values.pluck(:name).include?(@level.name)
+    is_standalone_project = Policies::StandaloneProjects.project_level_name?(@level.name)
 
-    # Curriculum writers rarely need to edit STANDALONE_PROJECTS levels, and accidental edits to these levels
+    # Curriculum writers rarely need to edit standalone project levels, and accidental edits to these levels
     # can be quite disruptive. As a workaround you can navigate directly to the edit url for these levels.
     # We allow editing from the test environment to enable UI testing of the edit page.
     if (Rails.application.config.levelbuilder_mode || rack_env?(:test)) && !is_standalone_project
@@ -675,60 +680,6 @@ class LevelsController < ApplicationController
       script_level_path_links: script_level_path_links,
       parent_level_path_links: parent_level_path_links
     }
-  end
-
-  def add_skill
-    level_id = params[:id].to_i
-    skill_id  = params[:skillId].to_i
-
-    begin
-      @level = Level.find(level_id)
-    rescue ActiveRecord::RecordNotFound
-      return render status: :not_found, json: "No level with id #{level_id}"
-    end
-
-    begin
-      @skill = Skill.find(skill_id)
-    rescue ActiveRecord::RecordNotFound
-      return render status: :not_found, json: "No skill with id #{skill_id}"
-    end
-
-    unless @level.skills.include?(@skill)
-      @level.skills << @skill
-      @level.add_skill_key(@skill.key)
-    end
-
-    if @level.save
-      render json: {status: 'success', message: "Skill #{@skill.id} successfully added to #{@level.id}"}, status: :created
-    else
-      render json: {status: 'error', message: @level.errors.full_messages.to_sentence}, status: :bad_request
-    end
-  end
-
-  def remove_skill
-    level_id = params[:id].to_i
-    skill_id  = params[:skillId].to_i
-
-    begin
-      @level = Level.find(level_id)
-    rescue ActiveRecord::RecordNotFound
-      return render status: :not_found, json: "No level with id #{level_id}"
-    end
-
-    begin
-      @skill = Skill.find(skill_id)
-    rescue ActiveRecord::RecordNotFound
-      return render status: :not_found, json: "No skill with id #{skill_id}"
-    end
-
-    @level.skills.delete(@skill)
-    @level.remove_skill_key(@skill.key)
-
-    if @level.save
-      render json: {status: 'success', message: "Skill #{@skill.id} successfully removed from #{@level.id}"}, status: :ok
-    else
-      render json: {status: 'error', message: @level.errors.full_messages.to_sentence}, status: :bad_request
-    end
   end
 
   # Use callbacks to share common setup or constraints between actions.

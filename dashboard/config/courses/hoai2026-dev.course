@@ -12,7 +12,7 @@
   "instructor_audience": "teacher",
   "properties": {
     "family_name": "hoai2026-dev",
-    "numbered_units": "auto",
+    "numbered_units": null,
     "version_year": "unversioned"
   },
   "resources": [

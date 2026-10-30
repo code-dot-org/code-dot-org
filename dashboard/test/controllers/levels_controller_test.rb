@@ -737,6 +737,32 @@ class LevelsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "edit hides the header label field from a level outside a simple-progress unit" do
+    script_level = create(:script_level, levels: [@level])
+    refute script_level.script.simple_progress?
+
+    get :edit, params: {id: @level.id}
+    assert_response :success
+    assert_select 'input#level_header_label', 0
+  end
+
+  test "edit shows the header label field for a level in a simple-progress unit" do
+    script_level = create(:script_level, levels: [@level])
+    script_level.script.update!(simple_progress: true)
+
+    get :edit, params: {id: @level.id}
+    assert_response :success
+    assert_select 'input#level_header_label', 1
+  end
+
+  test "edit keeps the header label field while the level has a label" do
+    @level.update!(header_label: 'Story')
+
+    get :edit, params: {id: @level.id}
+    assert_response :success
+    assert_select 'input#level_header_label[value=?]', 'Story'
+  end
+
   test "should get edit blocks" do
     @level.update(toolbox_blocks: @program)
     get :edit_blocks, params: {id: @level.id, type: 'toolbox_blocks'}
@@ -831,7 +857,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should prevent rename of stanadalone project level" do
-    level_name = ProjectsController::STANDALONE_PROJECTS.values.first[:name]
+    level_name = Policies::StandaloneProjects.all.values.first[:name]
     create(:level, name: level_name) unless Level.exists?(name: level_name)
     level = Level.find_by(name: level_name)
 
@@ -1366,43 +1392,6 @@ class LevelsControllerTest < ActionController::TestCase
     user: :platformization_partner,
     params: -> {{id: @partner_level.id, level: {name: 'new partner name'}}}
   )
-
-  test "add and remove skills" do
-    level = create(:level)
-    assert level.skills.empty?
-    refute level.skill_keys
-    # Add one skill, make sure it's as expected
-    skill_1 = create(:skill)
-    post :add_skill, params: {id: level.id, skillId: skill_1.id}
-    assert_response :success
-    level.reload
-    assert_equal [skill_1], level.skills
-    assert level.skill_keys.include?(skill_1.key)
-    assert level.skill_keys == [skill_1.key].to_json
-    # Add another skill, make sure both are expected
-    skill_2 = create(:skill)
-    post :add_skill, params: {id: level.id, skillId: skill_2.id}
-    assert_response :success
-    level.reload
-    assert_equal [skill_1, skill_2], level.skills
-    assert level.skill_keys.include?(skill_1.key)
-    assert level.skill_keys.include?(skill_2.key)
-    assert level.skill_keys == [skill_1.key, skill_2.key].to_json
-    # Remove one skill, make sure it's gone but the other is still there
-    post :remove_skill, params: {id: level.id, skillId: skill_1.id}
-    assert_response :success
-    level.reload
-    assert_equal [skill_2], level.skills
-    refute level.skill_keys.include?(skill_1.key)
-    assert level.skill_keys.include?(skill_2.key)
-    assert level.skill_keys == [skill_2.key].to_json
-    # Remove the last skill, make sure there are no skills left
-    post :remove_skill, params: {id: level.id, skillId: skill_2.id}
-    assert_response :success
-    level.reload
-    assert level.skills.empty?
-    refute level.skill_keys
-  end
 
   test "level_properties returns map of ID to properties" do
     level = create(:level)

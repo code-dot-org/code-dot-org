@@ -14,7 +14,7 @@ class Services::Roster::Clever::SectionSyncerTest < ActiveSupport::TestCase
   describe '#call' do
     subject(:call_service) {described_instance.call}
 
-    let(:clever_students_data) {stub(:clever_students_data)}
+    let(:clever_students_data) {stub(clever_students_data: nil)}
 
     let!(:clever_client_mock) do
       stub(:clever_client, get: nil).tap do |clever_client_mock|
@@ -28,7 +28,7 @@ class Services::Roster::Clever::SectionSyncerTest < ActiveSupport::TestCase
     end
 
     it 'returns synced Clever section' do
-      synced_clever_section = stub(:synced_clever_section)
+      synced_clever_section = stub(synced_clever_section: nil)
 
       CleverSection.
         expects(:from_service).

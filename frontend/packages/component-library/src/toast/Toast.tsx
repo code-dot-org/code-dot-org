@@ -15,6 +15,7 @@ import {
 } from 'react';
 
 import Alert, {AlertProps} from '@/alert';
+import {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
 
 import moduleStyles from './toast.module.scss';
 
@@ -215,6 +216,10 @@ export interface ShowToastOptions {
   type?: ToastType;
   /** Override auto-dismiss for this toast; `null` keeps it until closed. */
   autoHideDuration?: number | null;
+  /**
+   * Replaces the icon the `type` would otherwise pick.
+   */
+  icon?: FontAwesomeV6IconProps;
 }
 
 export type ShowToast = (message: string, options?: ShowToastOptions) => void;
@@ -238,6 +243,7 @@ interface ToastState {
   message: string;
   type: ToastType;
   autoHideDuration: number | null;
+  icon?: FontAwesomeV6IconProps;
 }
 
 export interface ToastProviderProps {
@@ -281,6 +287,7 @@ export function ToastProvider({
           options?.autoHideDuration !== undefined
             ? options.autoHideDuration
             : autoHideDuration,
+        icon: options?.icon,
       });
       setOpen(true);
     },
@@ -301,6 +308,7 @@ export function ToastProvider({
         message={toast?.message ?? ''}
         type={toast?.type}
         autoHideDuration={toast?.autoHideDuration}
+        alertProps={toast?.icon ? {icon: toast.icon} : undefined}
         anchorOrigin={anchorOrigin}
         className={className}
         politeness={politeness}

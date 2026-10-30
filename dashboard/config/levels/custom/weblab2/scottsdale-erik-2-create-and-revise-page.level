@@ -1,0 +1,51 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-09-15T20:43:25.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "require_edit_to_continue": "true",
+    "long_instructions": "TODOs:\r\n*   Open AI Tutor within Web Lab.\r\n*   Prompt AI Tutor to add the first website suggestion you brainstormed in Level 1 to `index.html`.\r\n*   Review the changes AI Tutor made to `index.html`.\r\n*   Prompt AI Tutor to add the second website suggestion to `index.html`, building on the existing content.\r\n*   Review the updated content in `index.html`.\r\n*   Prompt AI Tutor to add the third website suggestion to `index.html`.\r\n*   Review the final initial content generated in `index.html`.",
+    "project_template_level_name": "scottsdale-erik-template-website-builder",
+    "encrypted_exemplar_sources": "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\nk1EZs6k=\n",
+    "generate_outline": "Use AI Tutor within Web Lab to create the initial page, adding the suggestions from Level 1 incrementally and revising the website one step at a time.",
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML",
+        "buildCSS",
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode",
+        "testCase"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-15 20:43:29 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-15 20:44:01 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-15 20:44:06 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-15 20:44:06 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-15 20:52:26 +0000\",\"changed\":[\"require_edit_to_continue\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

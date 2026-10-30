@@ -1,0 +1,33 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-09-15T18:27:27.000Z",
+  "level_num": "custom",
+  "user_id": 574,
+  "properties": {
+    "panels": [
+      {
+        "key": "test-brendan-intro-html-fish-ae3b36a5-5166-4513-be8e-ddc4fa658e3e",
+        "text": "Ever wonder how websites like your favorite game's page or a funny animal video site are made? Today, we're diving into the exciting world of web pages!",
+        "imageUrl": "https://images.code.org/fd7ef57cee46b02f496e39309006daa7-test-brendan-intro-html-fish-panel-1-eeee1e92-25e8-47ab-afee-f981a6f94713.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "test-brendan-intro-html-fish-2e6f2870-9428-4094-b1e0-74efcaaf3fb7",
+        "text": "We'll start with HTML, which stands for HyperText Markup Language. Think of HTML as the *bones* or *structure* of a web page, telling your computer exactly what content to show.",
+        "imageUrl": "https://images.code.org/c362c44c095d70ee3271d979bfe9b30d-test-brendan-intro-html-fish-panel-2-59fc29bc-a111-4cd7-8347-4669f7de44f6.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "test-brendan-intro-html-fish-35ddf3a7-579d-42a7-b294-c3dd55abfb88",
+        "text": "By the end of this lesson, you'll create your very own web page, all about your fantastic pet fish! Get ready to share your finned friend with the world.",
+        "imageUrl": "https://images.code.org/7e9ed7d678b2481a0129a48a0c896d7f-test-brendan-intro-html-fish-panel-3-9bd77f8f-c51d-4998-bf40-6e48967842fb.png",
+        "layout": "text-top-right"
+      }
+    ],
+    "generate_outline": "Welcome to the world of web pages! In this lesson, you'll learn the basic building blocks of a web page using HTML. We'll start by understanding what HTML is and how it helps us tell the computer what to display. Get ready to make a web page about your pet fish!"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-15 18:27:54 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-15 18:27:54 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

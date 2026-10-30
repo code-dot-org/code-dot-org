@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-05-01 13:34:41 UTC",
+    "serialized_at": "2026-09-15 17:06:10 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -7553,21 +7553,51 @@
       "url": "https://support.code.org/hc/en-us/articles/30162711193741-AI-Chat-Lab-FAQ",
       "key": "ai_chat_faq",
       "properties": {
+        "embeddability_type": "embed_and_resource_dropdown"
       },
       "seeding_key": {
         "resource.key": "ai_chat_faq"
       }
     },
     {
-      "name": "AI In Grocery Stores - 1 ",
-      "url": "https://drive.google.com/file/d/1-MykYtR1K7qzncS7F7v34_2kCkJCa7DN/view",
+      "name": "AI In Grocery Stores Articles",
+      "url": "https://drive.google.com/drive/folders/1JaZwxEeDHVHHkPhkNqObp8ItbDTUC-g5",
       "key": "ai_in_grocery_stores_-_1",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "ai_in_grocery_stores_-_1"
+      }
+    },
+    {
+      "name": "AI in Medicine Articles",
+      "url": "https://drive.google.com/drive/folders/1LmwWUR583CsLd5jnrzlkaMB2WgLrI6xj",
+      "key": "ai_in_medicine_articles",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "ai_in_medicine_articles"
+      }
+    },
+    {
+      "name": "AI in Schools Articles",
+      "url": "https://drive.google.com/drive/folders/1wMP0SkMrordE67u_BN86jrei0hIXFk46",
+      "key": "ai_in_schools_articles",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "ai_in_schools_articles"
       }
     },
     {
@@ -7581,6 +7611,20 @@
       },
       "seeding_key": {
         "resource.key": "ai_in_the_community"
+      }
+    },
+    {
+      "name": "AI in Transportation Articles",
+      "url": "https://drive.google.com/drive/folders/1F81goyPQQouMJFC4eYKrb2sAVa-Zzr7r",
+      "key": "ai_in_transportation_articles",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "ai_in_transportation_articles"
       }
     },
     {
@@ -7660,7 +7704,7 @@
     },
     {
       "name": "All Resources",
-      "url": "/s/aif1-2025/resources",
+      "url": "/courses/artificial-intelligence-foundations-2026/resources",
       "key": "all_resources",
       "properties": {
         "is_rollup": true
@@ -7671,7 +7715,7 @@
     },
     {
       "name": "All Standards",
-      "url": "/s/aif1-2025/standards",
+      "url": "/courses/artificial-intelligence-foundations-2026/standards",
       "key": "all_standards",
       "properties": {
         "is_rollup": true
@@ -7682,7 +7726,7 @@
     },
     {
       "name": "All Vocabulary",
-      "url": "/s/aif1-2025/vocab",
+      "url": "/courses/artificial-intelligence-foundations-2026/vocab",
       "key": "all_vocabulary",
       "properties": {
         "is_rollup": true
@@ -8003,10 +8047,11 @@
     },
     {
       "name": "Viewing Student AI Chat History as a Teacher",
-      "url": "https://support.code.org/hc/en-us/articles/30681531276045-Viewing-Student-AI-Chat-History-as-a-Teacher",
+      "url": "\thttps://support.code.org/hc/en-us/articles/30681531276045-Viewing-Student-AI-Chat-History-as-a-Teacher",
       "key": "viewing_student_ai_chat_history_as_a_teacher",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Resource"
       },
       "seeding_key": {
@@ -8102,7 +8147,25 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 12: AI's Role in Society",
+        "resource.key": "ai_in_medicine_articles"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 12: AI's Role in Society",
+        "resource.key": "ai_in_schools_articles"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 12: AI's Role in Society",
         "resource.key": "ai_in_the_community"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 12: AI's Role in Society",
+        "resource.key": "ai_in_transportation_articles"
       }
     },
     {
@@ -9285,6 +9348,9 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [

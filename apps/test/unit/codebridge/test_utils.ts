@@ -5,7 +5,6 @@ import {
   TypedDialogProps,
 } from '@cdo/apps/lab2/views/dialogs';
 import {GenericPromptProps} from '@cdo/apps/lab2/views/dialogs/GenericPrompt';
-import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 import UnifiedBackpackClientApi from '@cdo/apps/sharedComponents/backpack/UnifiedBackpackClientApi';
 
 import {smallProject} from './test-files';
@@ -115,56 +114,6 @@ export const mockAppOptions = (innerAppOptions: Record<string, unknown>) => {
   } as unknown as Element);
 };
 
-export const getBackpackAPIMock = (
-  fileList: string[] = [],
-  headerValue: string = 'text/plain'
-): BackpackClientApi => {
-  return {
-    appType: 'pythonlab',
-    hasBackpack: jest.fn(() => true),
-    fetchChannelId: jest.fn(callback => callback()),
-    fetchFile: jest.fn((filename, onError, onSuccess) => {
-      onSuccess(`Mock contents of backpack file ${filename}`);
-    }),
-    fetchFileResponse: jest.fn(async (filename: string) => {
-      return Promise.resolve({
-        headers: {
-          get: jest.fn().mockReturnValue(headerValue),
-        },
-        text: async () => {
-          return Promise.resolve(`Mock contents of backpack file ${filename}`);
-        },
-        blob: async () => {
-          return new Blob([`Mock contents of backpack file ${filename}`], {
-            type: headerValue,
-          });
-        },
-      });
-    }),
-    // Callers may either pass callbacks or await the returned list.
-    getFileList: jest.fn(async (onError, onSuccess) => {
-      onSuccess?.(fileList);
-      return fileList;
-    }),
-    saveFiles: jest.fn(),
-    saveFile: jest.fn((filename, contents, onError, onSuccess) =>
-      onSuccess?.()
-    ),
-    saveFileFromUrl: jest.fn(async (filename, url, onError, onSuccess) =>
-      onSuccess?.()
-    ),
-    deleteFiles: jest.fn(),
-    updateFilesHelper: jest.fn(),
-    saveFilesHelper: jest.fn(),
-    writeSingleFileToBackpack: jest.fn(),
-    deleteFilesHelper: jest.fn(),
-    deleteSingleFileFromBackpack: jest.fn(),
-    onRequestComplete: jest.fn(),
-  } as unknown as BackpackClientApi;
-};
-
-// Mirrors getBackpackAPIMock for the unified client. Callers distinguish the two
-// by the presence of getFileLists, so this must have it and the other must not.
 export const getUnifiedBackpackAPIMock = (
   fileLists: {[appType: string]: string[]} = {}
 ): UnifiedBackpackClientApi => {

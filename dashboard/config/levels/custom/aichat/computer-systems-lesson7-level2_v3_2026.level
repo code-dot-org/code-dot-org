@@ -1,5 +1,6 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2026-04-01T21:27:35.000Z",
   "level_num": "custom",
@@ -54,10 +55,10 @@
       "MuseumCurator Dataset.pdf": "fd6ffd14-76e5-42f7-9896-b8cd79eb5f3f.pdf",
       "ConcertPromoter Dataset.pdf": "0c7417b9-ebb7-4238-9cd6-d5b59af2e3dd.pdf",
       "AirplanePilot Dataset.pdf": "c1dad33d-8a5a-4519-a4f8-480dc86c5f1f.pdf",
-      "GroceryStoreManager Dataset.pdf": "b48f5e49-db51-4601-993f-4edec8c2ed2f.pdf"
+      "GroceryStoreManager Dataset.pdf": "b48f5e49-db51-4601-993f-4edec8c2ed2f.pdf",
+      "SubwayTrainOperator.pdf": "5f263f78-3d77-469f-b8d9-e9effb01ab28.pdf"
     }
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-01T21:27:35.124+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson7-level2_v3-2025\\\"\"],\"cloned_from\":\"computer-systems-lesson7-level2_v3-2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-01T21:27:35.124+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson7-level2_v3-2025\\\"\"],\"cloned_from\":\"computer-systems-lesson7-level2_v3-2025\"},{\"changed_at\":\"2026-10-02 22:26:08 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Aichat>

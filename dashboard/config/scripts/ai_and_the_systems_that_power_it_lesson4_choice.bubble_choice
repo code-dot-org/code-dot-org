@@ -6,4 +6,5 @@ sublevels
 level 'ai-and-the-systems-that-power-it-lesson4-scavenger-hunt'
 level 'ai-and-the-systems-that-power-it-lesson4-computer-sim'
 
+navigation_type 'parent'
 uses_lab2

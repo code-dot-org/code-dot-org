@@ -1,0 +1,17 @@
+<Ailab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 67,
+  "created_at": "2026-10-28T20:55:21.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "mode": "{\r\n  \"trainer\": \"decisionTree\",\r\n  \"reserveLastRows\": true,\r\n  \"datasets\": [\r\n    \"SC1-L07-previs-base\"\r\n  ],\r\n  \"label\": \"Decision\",\r\n  \"pretrained\": true,\r\n  \"hideSelectLabel\": true,\r\n  \"lockFeatures\": true,\r\n  \"hideDatasetView\": true,\r\n  \"features\": [\r\n    \"Stunt\",\r\n    \"Moving Vehicles\",\r\n    \"Something Gets Destroyed\"\r\n  ],\r\n  \"hideSave\": true\r\n}",
+    "uses_lab2": "true",
+    "dynamic_instructions": "{\r\n  \"datasetView\": \"#Make a Prediction\\n\\nCreate a pre-trained model here.\",\r\n  \"results\": \"#Make a Prediction\\n\\nStudent moves: entering answers in the prediction panel, pressing Predict, and Replay to watch the path light\\n\\nStudents enter the two warm-up scenes (the subway crash and the kitchen argument), which ties back to their warm-up vote\\n\\nSkip the Random button\"\r\n}"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-10-28T20:55:21.580+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-lesson7-ai-studio2\\\"\"],\"cloned_from\":\"data-makes-ai-lesson7-ai-studio2\"},{\"changed_at\":\"2026-10-28 20:56:57 +0000\",\"changed\":[\"dynamic_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-29 14:25:10 +0000\",\"changed\":[\"mode\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-29 20:33:33 +0000\",\"changed\":[\"mode\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Ailab>

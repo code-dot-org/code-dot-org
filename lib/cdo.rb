@@ -334,6 +334,11 @@ module Cdo
       execution_context == :web_application
     end
 
+    # Whether this process is an ActiveJob worker, or the parent that preloads the application for them.
+    def running_active_job_worker?
+      execution_context == :active_job_worker
+    end
+
     # Whether this process preloads the application and will then fork worker processes, as puma does under preload_app!.
     def preforking_parent?
       !!@preforking_parent

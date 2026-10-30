@@ -171,6 +171,7 @@ interface UnitData {
   calendarLessons: CalendarLesson[];
   redirect_unit_url: string | null;
   unit_position: number | null;
+  requires_inaccessible_ai_models: boolean;
 }
 
 export const setUnitSummaryReduxData = (

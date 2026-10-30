@@ -1348,6 +1348,55 @@ class ApiControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
+  test "mass_progress_reset deletes progress for students in the teacher's section" do
+    UserLevel.create!(user: @student_1, script: @script, level: @level, best_result: 100)
+    UserLevel.create!(user: @student_2, script: @script, level: @level, best_result: 100)
+
+    post :mass_progress_reset, params: {unit_ids: [@script.id], student_ids: [@student_1.id, @student_2.id]}
+
+    assert_response :success
+    assert_equal({success: true}, JSON.parse(response.body).symbolize_keys)
+    assert_equal 0, UserLevel.where(user_id: [@student_1.id, @student_2.id], script_id: @script.id).count
+  end
+
+  test "mass_progress_reset leaves progress for students not in the teacher's section" do
+    outside_student = create(:student)
+    UserLevel.create!(user: outside_student, script: @script, level: @level, best_result: 100)
+
+    post :mass_progress_reset, params: {unit_ids: [@script.id], student_ids: [outside_student.id]}
+
+    assert_response :forbidden
+    assert_equal 1, UserLevel.where(user_id: outside_student.id, script_id: @script.id).count
+  end
+
+  test "mass_progress_reset rejects the whole request if any student is not in the teacher's sections" do
+    outside_student = create(:student)
+    UserLevel.create!(user: @student_1, script: @script, level: @level, best_result: 100)
+    UserLevel.create!(user: outside_student, script: @script, level: @level, best_result: 100)
+
+    post :mass_progress_reset, params: {unit_ids: [@script.id], student_ids: [@student_1.id, outside_student.id]}
+
+    assert_response :forbidden
+    assert_equal 1, UserLevel.where(user_id: @student_1.id, script_id: @script.id).count
+    assert_equal 1, UserLevel.where(user_id: outside_student.id, script_id: @script.id).count
+  end
+
+  test "mass_progress_reset returns forbidden if not signed in" do
+    sign_out @teacher
+
+    post :mass_progress_reset, params: {unit_ids: [@script.id], student_ids: [@student_1.id]}
+
+    assert_response :forbidden
+  end
+
+  test "mass_progress_reset returns bad_request for empty unit_ids or student_ids" do
+    post :mass_progress_reset, params: {unit_ids: [], student_ids: [@student_1.id]}
+    assert_response :bad_request
+
+    post :mass_progress_reset, params: {unit_ids: [@script.id], student_ids: []}
+    assert_response :bad_request
+  end
+
   test "teacher_panel_section returns summarized section when passed section id owned by logged in teacher" do
     get :teacher_panel_section, params: {
       section_id: @section.id
@@ -2460,6 +2509,20 @@ class ApiControllerTest < ActionController::TestCase
 
         it 'returns the outside_unit_group' do
           _(response.find {|cv| cv[:id] == outside_course_version.id}).must_be_instance_of Hash
+        end
+      end
+
+      context 'student has progress in a course that has since sunset' do
+        let(:sunsetting_unit_group) {create(:single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.sunsetting)}
+        let!(:sunsetting_course_version) {create(:course_version, content_root: sunsetting_unit_group)}
+
+        before do
+          create(:user_script, user: student, script: sunsetting_unit_group.default_units.first)
+        end
+
+        it 'returns the sunsetting_unit_group even though it can no longer be assigned' do
+          refute sunsetting_unit_group.course_assignable?(teacher)
+          _(response.find {|cv| cv[:id] == sunsetting_course_version.id}).must_be_instance_of Hash
         end
       end
     end

@@ -1,0 +1,40 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-10-12T20:05:27.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "aif-y2-making-predictions-lesson7-choice2-2026 + template",
+    "long_instructions": "**☑️ Do This:**\r\n\r\n- Test the model using `model.score` and print the score.\r\n- Classify a new unknown painting by using `model.predict` and print the prediction.\r\n\r\n💻 Coding Tip\r\n\r\nRemember that you can score a model with a line like:\r\n\r\n```\r\nmodel.score(test_inputs, test_outputs)\r\n```\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "debug",
+        "documentation",
+        "explainCode",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "encrypted_exemplar_sources": "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\ngTXxQH+4GzEqX5G1U8Tj7wT/PGhizC5UWiGPKQ==\n",
+    "display_name": "Art Authenticator",
+    "bubble_choice_description": "An art authenticator helps determine whether a painting is real or fake.",
+    "thumbnail_url": "https://images.code.org/6240c346c4bc430edb49f072db32a822-authenticator.jpg"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-12 20:07:36 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-12 20:08:47 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-12 20:16:49 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

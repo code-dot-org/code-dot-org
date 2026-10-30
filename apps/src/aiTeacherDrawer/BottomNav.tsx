@@ -3,6 +3,10 @@ import {Badge} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+
+import {sendTaEvent} from './analytics';
+
 import style from './bottom-nav.module.scss';
 
 interface NavItem {
@@ -14,29 +18,37 @@ interface BottomNavProps {
   activeLabel: string;
   onNavChange: (label: string) => void;
   unreadNotificationCount?: number;
+  showChats?: boolean;
   showLearn?: boolean;
   showTeacherPanel?: boolean;
+  showRubrics?: boolean;
+  rebranded?: boolean;
 }
 
 const BottomNav: React.FC<BottomNavProps> = ({
   activeLabel,
   onNavChange,
   unreadNotificationCount = 0,
+  showChats = true,
   showLearn = false,
   showTeacherPanel = false,
+  showRubrics = false,
+  rebranded = false,
 }) => {
   const navItems: NavItem[] = [
     // {label: 'Home', iconName: 'house'},
-    {label: 'Chats', iconName: 'comment'},
-    ...(showLearn ? [{label: 'Prepare', iconName: 'file-lines'}] : []),
-    ...(showTeacherPanel
-      ? [{label: 'Teacher Panel', iconName: 'chalkboard'}]
-      : []),
+    ...(showChats ? [{label: 'Chats', iconName: 'comment'}] : []),
+    ...(showLearn ? [{label: 'Prepare', iconName: 'folder-check'}] : []),
     {label: 'Alerts', iconName: 'bell'},
+    ...(showRubrics ? [{label: 'Rubrics', iconName: 'rectangle-list'}] : []),
+    ...(showTeacherPanel ? [{label: 'Roster', iconName: 'users'}] : []),
   ];
 
   return (
-    <nav className={style.nav} aria-label="Main navigation">
+    <nav
+      className={classNames(style.nav, rebranded && style.navTa)}
+      aria-label="Main navigation"
+    >
       {navItems.map(({label, iconName}) => {
         const active = label === activeLabel;
         const showDot = label === 'Alerts' && unreadNotificationCount > 0;
@@ -44,23 +56,38 @@ const BottomNav: React.FC<BottomNavProps> = ({
           <button
             key={label}
             type="button"
-            className={classNames(style.item, active && style.active)}
-            onClick={() => onNavChange(label)}
+            className={style.item}
+            onClick={() => {
+              sendTaEvent(
+                EVENTS.AI_TA_TAB_CLICKED,
+                {
+                  to_tab: label,
+                  from_tab: activeLabel,
+                  alert_badge_count: unreadNotificationCount,
+                },
+                label
+              );
+              onNavChange(label);
+            }}
           >
-            <Badge
-              variant="dot"
-              invisible={!showDot}
-              color="error"
-              overlap="circular"
-              sx={{'& .MuiBadge-badge': {top: -1, right: -1}}}
+            <div
+              className={classNames(style.itemContent, active && style.active)}
             >
-              <FontAwesomeV6Icon
-                iconName={iconName}
-                iconStyle={active ? 'solid' : 'regular'}
-                className={style.icon}
-              />
-            </Badge>
-            <span className={style.label}>{label}</span>
+              <Badge
+                variant="dot"
+                invisible={!showDot}
+                color="error"
+                overlap="circular"
+                sx={{'& .MuiBadge-badge': {top: -1, right: -1}}}
+              >
+                <FontAwesomeV6Icon
+                  iconName={iconName}
+                  iconStyle="solid"
+                  className={style.icon}
+                />
+              </Badge>
+              <span className={style.label}>{label}</span>
+            </div>
           </button>
         );
       })}

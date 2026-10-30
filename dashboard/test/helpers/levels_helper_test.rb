@@ -549,6 +549,13 @@ class LevelsHelperTest < ActionView::TestCase
     assert_equal 'http://test.host/sms/send', app_options[:send_to_phone_url]
   end
 
+  test 'widget_options skips instructions popup in readonly view' do
+    @level = Widget.create!(name: 'Readonly Widget', level_num: 'custom')
+    readonly_view_options
+
+    assert widget_options[:level]['skipInstructionsPopup']
+  end
+
   test 'submittable level is submittable for teacher enrolled in plc' do
     @level = create(:free_response, submittable: true, peer_reviewable: 'true')
     Plc::UserCourseEnrollment.stubs(:exists?).returns(true)
@@ -1125,5 +1132,29 @@ class LevelsHelperTest < ActionView::TestCase
     assert_equal true, options["share"]
 
     reset_view_options
+  end
+
+  test "get_student_code returns nil without reporting when the project has no saved code" do
+    unit = create(:unit)
+    create(:channel_token, level: @level, storage_id: 123, script_id: unit.id)
+    stubs(:storage_id_for_user_id).returns(123)
+    stubs(:get_project_channel_id).returns('fake-channel')
+    Observability::Errors.expects(:report).never
+
+    %w(NoSuchKey NoSuchVersion InvalidArgument).each do |error_code|
+      AWS::S3.stubs(:create_client).returns(Aws::S3::Client.new(stub_responses: {get_object: error_code}))
+      assert_nil get_student_code(456, @level, unit.id)
+    end
+  end
+
+  test "get_student_code reports other S3 errors" do
+    unit = create(:unit)
+    create(:channel_token, level: @level, storage_id: 123, script_id: unit.id)
+    stubs(:storage_id_for_user_id).returns(123)
+    stubs(:get_project_channel_id).returns('fake-channel')
+    AWS::S3.stubs(:create_client).returns(Aws::S3::Client.new(stub_responses: {get_object: 'AccessDenied'}))
+    Observability::Errors.expects(:report).once
+
+    assert_nil get_student_code(456, @level, unit.id)
   end
 end

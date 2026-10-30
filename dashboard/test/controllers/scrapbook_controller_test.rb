@@ -33,6 +33,21 @@ class ScrapbookControllerTest < ActionController::TestCase
     assert_response :not_found
   end
 
+  test 'image: returns 404 for a non-JSON token without touching S3' do
+    secret = Rails.application.key_generator.generate_key(Scrapbook::ImageStore::TOKEN_PURPOSE)
+    other_format = ActiveSupport::MessageVerifier.new(secret, serializer: Marshal)
+    message = other_format.generate(
+      {'user_id' => @user.id, 'filename' => FILENAME},
+      purpose: Scrapbook::ImageStore::TOKEN_PURPOSE,
+      expires_in: Scrapbook::ImageStore::TOKEN_TTL
+    )
+    token = Base64.urlsafe_encode64(message)
+
+    Scrapbook::ImageStore.expects(:read).never
+    get :image, params: {token: token}
+    assert_response :not_found
+  end
+
   test 'image: returns 404 when the image is missing in S3' do
     Scrapbook::ImageStore.expects(:read).raises(AWS::S3::NoSuchKey.new('gone'))
     get :image, params: {token: @token}

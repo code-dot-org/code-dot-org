@@ -70,6 +70,33 @@ class LevelTest < ActiveSupport::TestCase
     refute_includes result, maze_level
   end
 
+  test 'with_essential_us_only_ai_models returns Aichat levels configured with a US only model and Weblab2 levels' do
+    us_only_aichat_level = Level.create(
+      name: 'us_only_aichat',
+      type: 'Aichat',
+      properties: {'aichat_settings' => {'initialCustomizations' => {'selectedModelId' => SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH]}}}
+    )
+    openai_aichat_level = Level.create(
+      name: 'openai_aichat',
+      type: 'Aichat',
+      properties: {'aichat_settings' => {'initialCustomizations' => {'selectedModelId' => SharedConstants::AI_CHAT_MODEL_IDS[:CHATGPT]}}}
+    )
+    # AI Tutor has no per-level model and always uses a US only model, which
+    # blocks Weblab2, where the tutor is essential.
+    weblab2_level = Level.create(name: 'weblab2_us_only', type: 'Weblab2')
+    # Elsewhere the tutor is optional, so a blocked tutor still leaves the level
+    # completable.
+    ai_tutor_level = Level.create(name: 'ai_tutor_us_only', properties: {'ai_tutor_available' => 'true'})
+    maze_level = Level.create(name: 'maze_us_only', type: 'Maze')
+
+    result = Level.with_essential_us_only_ai_models
+    assert_includes result, us_only_aichat_level
+    assert_includes result, weblab2_level
+    refute_includes result, ai_tutor_level
+    refute_includes result, openai_aichat_level
+    refute_includes result, maze_level
+  end
+
   test 'types marked as having ideal level sources' do
     raise_unless_specifies_ideal_level_source(Level)
   end
@@ -1219,7 +1246,7 @@ class LevelTest < ActiveSupport::TestCase
     unit = create(:script)
     search_options = Level.search_options
     assert_equal search_options[:levelOptions].map {|option| option[0]}, [
-      "All types", "Aichat", "Ailab", "Applab", "Artist", "Blockly", "Bounce", "BubbleChoice",
+      "All types", "Adaptive", "Aichat", "Ailab", "Applab", "Artist", "Blockly", "Bounce", "BubbleChoice",
       "Craft", "CurriculumReference", "Dancelab", "EvaluationMulti", "External",
       "ExternalLink", "Fish", "Flappy", "FreeResponse", "FrequencyAnalysis", "Gamelab",
       "GamelabJr", "Javalab", "Karel", "LevelGroup", "Map", "Match", "Maze", "Multi", "Music", "NetSim",
@@ -1707,13 +1734,13 @@ class LevelTest < ActiveSupport::TestCase
     end
   end
 
-  test 'ui_test_name? detects the "UI Test " prefix' do
-    assert Level.ui_test_name?('UI Test Some Level')
-    assert Level.ui_test_name?('ui test lowercase')
-    refute Level.ui_test_name?('Some Level')
-    refute Level.ui_test_name?('My UI Test Level')
-    refute Level.ui_test_name?('UI Testless')
-    refute Level.ui_test_name?(nil)
+  test 'ui_test_partition_name? detects the "UI Test " prefix' do
+    assert Level.ui_test_partition_name?('UI Test Some Level')
+    assert Level.ui_test_partition_name?('ui test lowercase')
+    refute Level.ui_test_partition_name?('Some Level')
+    refute Level.ui_test_partition_name?('My UI Test Level')
+    refute Level.ui_test_partition_name?('UI Testless')
+    refute Level.ui_test_partition_name?(nil)
 
     assert create(:level, name: 'UI Test predicate probe').ui_test?
     refute create(:level, name: 'Regular predicate probe').ui_test?
@@ -1743,6 +1770,7 @@ class LevelTest < ActiveSupport::TestCase
     prod_level = create(:level, name: 'LevelTest levelbuilder guard')
 
     CDO.stubs(:rack_env).returns(:levelbuilder)
+    CDO.stubs(:running_web_application?).returns(true)
 
     refute build(:level, name: 'UI Test LevelTest levelbuilder create').valid?
 
@@ -1761,6 +1789,60 @@ class LevelTest < ActiveSupport::TestCase
     prod_level.notes = 'edited'
     assert prod_level.valid?
     assert prod_level.destroy
+  end
+
+  test 'standalone partition levels cannot be changed on levelbuilder, except by a seed' do
+    project = create(:level, name: 'New LevelTest Levelbuilder Project')
+    subproject = create(:level, name: 'LevelTest Levelbuilder Subproject')
+    prod_level = create(:level, name: 'LevelTest levelbuilder standalone lock')
+
+    CDO.stubs(:rack_env).returns(:levelbuilder)
+    CDO.stubs(:running_web_application?).returns(true)
+
+    refute build(:level, name: 'New LevelTest Levelbuilder Created Project').valid?
+    project.notes = 'edited'
+    refute project.valid?
+    assert_includes project.errors.full_messages.first, 'levelbuilder'
+    subproject.notes = 'edited'
+    refute subproject.valid?, 'the lock covers levels the yml does not name'
+    refute project.reload.destroy
+    refute project.destroyed?
+    prod_level.name = 'LevelTest levelbuilder standalone lock Subproject'
+    refute prod_level.valid?, 'renaming a level into the partition is refused too'
+
+    # a seed runs outside the web application and loads new and changed
+    # levels from the repo, with validations
+    CDO.stubs(:running_web_application?).returns(false)
+    Level.import!([{name: 'LevelTest Levelbuilder Seeded Subproject'}])
+    project.reload.notes = 'seeded'
+    assert project.valid?
+  end
+
+  test 'cannot rename a level into or out of the standalone partition while attached to another level' do
+    child = create(:level, name: 'LevelTest Attached Subproject')
+    parent = create(:level, name: 'New LevelTest Attached Project', child_levels: [child])
+
+    child.name = 'LevelTest Attached Plain Child'
+    refute child.valid?
+    assert_includes child.errors[:name].first, 'another partition'
+
+    parent.name = 'LevelTest Attached Plain Parent'
+    refute parent.valid?
+
+    # renames within the standalone partition are unaffected
+    child.reload.name = 'LevelTest Attached Renamed Subproject'
+    assert child.valid?
+  end
+  test 'a name may match only one partition rule' do
+    ['UI Test LevelTest Probe Subproject', 'ui test levelTest lowercase subproject'].each do |name|
+      level = build(:level, name: name)
+      refute level.valid?
+      assert_includes level.errors[:name].first, 'only one partition rule'
+    end
+
+    level = create(:level, name: 'LevelTest one rule probe')
+    level.name = 'UI Test LevelTest Probe Subproject'
+    refute level.valid?
   end
 
   test 'cannot rename a level across the UI Test boundary while attached to another level' do

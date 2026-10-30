@@ -10,11 +10,16 @@ import React, {
 
 import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import {LevelProperties} from '@cdo/apps/lab2/types';
+import {
+  LevelProperties,
+  ObjectiveItem,
+  ObjectivesChecklist,
+} from '@cdo/apps/lab2/types';
 import MainInstructionsContent from '@cdo/apps/lab2/views/components/Instructions/MainInstructionsContent';
 import TextToSpeech from '@cdo/apps/lab2/views/components/TextToSpeech';
 
 import NavigationArea from './NavigationArea';
+import ObjectivesList from './ObjectivesList';
 import PredictQuestion from './PredictQuestion';
 import PredictQuestionRunPrompt from './PredictQuestionRunPrompt';
 import PredictSummary from './PredictSummary';
@@ -41,12 +46,21 @@ export interface InstructionsProps {
   /** If the lab requires the user to click run in order to continue.
    * Only applies to non-validated levels. */
   requireRun?: boolean;
+  /** Replaces "validate your code" as the disabled Continue tooltip. */
+  validationTooltip?: string;
   /** If the navigation area should be hidden. */
   hideNavigation?: boolean;
   /** If the continue button should be hidden if disabled. */
   hideContinueIfDisabled?: boolean;
   /** Instructions content that updates dynamically throughout a level. Replaces `longInstructions` if provided. */
   dynamicInstructions?: string;
+  /** The level's checklist, under the text; Continue waits until every
+      item is done. Its title stands in for missing instructions. */
+  objectives?: ObjectivesChecklist;
+  /** The pointer, or focus, is over a checklist item, or over none. */
+  onObjectiveHover?: (item: ObjectiveItem | undefined, index: number) => void;
+  /** A checklist item was chosen; with this, the items are buttons. */
+  onObjectiveClick?: (item: ObjectiveItem, index: number) => void;
 }
 
 /**
@@ -64,6 +78,9 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   fixedDarkBackground,
   overrideTheme,
   dynamicInstructions,
+  objectives,
+  onObjectiveHover,
+  onObjectiveClick,
   hideNavigation = false,
   hideContinueIfDisabled = false,
   ...feedbackProps
@@ -88,11 +105,13 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
     return () => observer.disconnect();
   }, []);
 
-  const displayInstructions = dynamicInstructions || longInstructions;
+  const displayInstructions =
+    dynamicInstructions || longInstructions || objectives?.title;
   // Don't render anything if we don't have any instructions.
   if (displayInstructions === undefined) {
     return null;
   }
+  const checklist = objectives?.items.length ? objectives.items : undefined;
 
   return (
     <div
@@ -123,11 +142,21 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
             tabIndex={isScrollable ? 0 : undefined}
             aria-label={isScrollable ? 'Instructions' : undefined}
           >
-            <MainInstructionsContent
-              instructionsText={displayInstructions}
-              handleInstructionsTextClick={handleInstructionsTextClick}
-              ref={ref}
-            />
+            {/* One element holds the text and the checklist, so read-aloud
+                covers both. */}
+            <div ref={ref}>
+              <MainInstructionsContent
+                instructionsText={displayInstructions}
+                handleInstructionsTextClick={handleInstructionsTextClick}
+              />
+              {checklist && (
+                <ObjectivesList
+                  items={checklist}
+                  onItemHover={onObjectiveHover}
+                  onItemClick={onObjectiveClick}
+                />
+              )}
+            </div>
             <PredictQuestion
               levelProperties={levelProperties}
               className={moduleStyles.predictQuestion}
@@ -163,6 +192,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
         )}
         {!hideNavigation && (
           <NavigationArea
+            objectivesDone={objectives && objectives.allDone}
             {...feedbackProps}
             overrideTheme={overrideTheme}
             levelProperties={levelProperties}

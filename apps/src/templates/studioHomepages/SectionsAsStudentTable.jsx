@@ -28,6 +28,8 @@ class SectionsAsStudentTable extends React.Component {
       return i18n.loginTypeClever();
     } else if (section.login_type === SectionLoginType.google_classroom) {
       return i18n.loginTypeGoogleClassroom();
+    } else if (section.login_type === SectionLoginType.classlink) {
+      return i18n.loginTypeClassLink();
     } else if (!section.code) {
       // Demo sections have no join code; students are pre-enrolled.
       return i18n.notApplicable();

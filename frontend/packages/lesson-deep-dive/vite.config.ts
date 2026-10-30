@@ -58,6 +58,8 @@ const dashboardProxyPrefixes = [
   '/aichat_request',
   '/ai_gateway',
   '/get_token',
+  // A regex, not a prefix: '/api/v1' alone would proxy every JSON API.
+  '^/api/v1/scripts/[^/]+/lessons/[^/]+/tutor_gallery_data$',
 ];
 
 const dashboardTarget = 'http://localhost-studio.code.org:3000';
@@ -100,6 +102,7 @@ export default defineConfig(({command}) => ({
       'react',
       'react-dom',
       'react-redux',
+      'react-router-dom',
       '@mui/material',
       '@emotion/react',
       '@emotion/styled',
@@ -141,6 +144,9 @@ export default defineConfig(({command}) => ({
   // Keeping it out of build mode leaves the published dist/ untouched.
   publicDir: command === 'serve' ? 'public' : false,
   build: {
+    // Emptying dist mid-build breaks consumers watching it; on macOS webpack
+    // never recovers (INF-2257). `turbo clean` empties it once per session.
+    emptyOutDir: false,
     sourcemap: true,
     lib: {
       entry: ['src/index.ts'],

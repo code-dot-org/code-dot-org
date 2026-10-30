@@ -1,0 +1,19 @@
+name 'pl-aif-y2-u1-l4-career-context'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Career Context: Operations Researcher
+
+Lesson 6 ties hill climbing directly to a real profession:
+
+<div style="background-color: #D5EFFF; border-radius: 10px; padding: 18px 20px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #06338D; line-height: 1.6;"><strong>&#128188; Operations Researcher:</strong> uses data and AI to find the best solutions to big, real-world problems. They help improve hospitals, airlines, deliveries, and more.</div>
+</div>
+
+This isn't a loose connection. An operations researcher optimizing a delivery route or a hospital schedule is doing exactly what the thermostat activity simulates: searching step by step for a better solution, without knowing in advance what the perfect answer looks like.
+
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;"><strong>&#128161; Teacher tip:</strong> this is the local-vs-global optimum trade-off from the facilitation notes, showing up in a real career. Worth naming for students: the same limitation their thermostat has is one professionals actually work around every day.</div>
+</div>
+MARKDOWN

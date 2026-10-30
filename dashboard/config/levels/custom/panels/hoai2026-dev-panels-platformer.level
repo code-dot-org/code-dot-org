@@ -10,18 +10,23 @@
     "offer_browser_tts": "false",
     "panels": [
       {
-        "text": "##What is a platformer?\nA platformer is a game where a character runs and jumps across platforms - like the classic games you may know.\n\nThe player falls until they land on something!",
-        "imageUrl": "",
-        "key": "hoai2026-dev-panels-platformer-133b13bb-27cd-485c-9905-941bb6ffb678"
+        "text": "In a **platform game**, you run and jump across platforms. \n\n**Let's build it!**",
+        "imageUrl": "https://images.code.org/82839c921f2eef012ed92a00b77576c8-pixel-platform-adventure.gif",
+        "key": "hoai2026-dev-panels-platformer-2308d66b-c1d7-4d6d-be96-68043256f7cf"
       },
       {
-        "text": "##Build your own\nFirst you'll make your character the player and try the controls. Then you'll create a block image and build a whole world out of it.",
-        "imageUrl": "",
-        "key": "hoai2026-dev-panels-platformer-59c242fb-42d3-4e05-bbb7-ab05cebb1220",
-        "fadeInOverPrevious": true
+        "text": "**Add a treasure** for your character to find.",
+        "imageUrl": "https://images.code.org/fd02bdfa33bd3b2efa83eadea238ab10-pixel-platform-find-treasure.gif",
+        "key": "hoai2026-dev-panels-platformer-610a30c0-7350-4698-90e9-da6b6c177cb7"
+      },
+      {
+        "text": "**Bring back your second character.**\n\nChoose what happens when they meet.",
+        "imageUrl": "https://images.code.org/4d44a7c864c1671d8c62382532993b23-pixel-platform-meet-character.gif",
+        "key": "hoai2026-dev-panels-platformer-b2420e32-4a20-45dd-831b-fff1bf6d4691"
       }
     ],
-    "use_links": "false"
+    "use_links": "false",
+    "header_label": "Make a platformer"
   }
 }]]></config>
 </Panels>

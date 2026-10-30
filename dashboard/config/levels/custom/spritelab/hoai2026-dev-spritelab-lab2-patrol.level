@@ -24,79 +24,66 @@
     "level_mode": {
       "kind": "code"
     },
+    "image_role_defaults": {
+      "sprite": "friend"
+    },
     "pinned_scene": {
       "id": "platform-scene",
       "name": "Platformer",
       "type": "platform"
     },
-    "guide_steps": [
-      {
-        "text": "**Set them walking.** Use **sprite [them] begins [patrolling left and right on blocks]**.  Then add **when [ ] touches [ ]**, pick your player and your second character, and decide what happens: a **say** block for a friendly hello, or **restart scene** to send your player back to the start.  Click **Play** and go and meet them."
-      },
-      {
-        "text": "**Your world has company.** Continue when you're ready.",
-        "showContinue": true,
-        "after": {
-          "tab": "Play"
+    "objectives": {
+      "title": "**Set them walking**",
+      "items": [
+        {
+          "text": "Drag **begins patrolling** onto the dotted outline.",
+          "check": {
+            "kind": "block",
+            "type": "spritelab2_beginsBehavior",
+            "under": "spritelab2_whenRun",
+            "fields": {
+              "BEHAVIOR": "patrollingOnBlocks"
+            }
+          }
+        },
+        {
+          "text": "Click **Play** and watch them walk.",
+          "check": {
+            "kind": "play"
+          }
         }
-      }
-    ],
-    "long_instructions": "# Set them walking\nUse **sprite [them] begins [patrolling left and right on blocks]**, then decide what happens when your player meets them: a friendly hello, or back to the start.",
+      ]
+    },
+    "long_instructions": "# Set them walking\nDrag **begins patrolling** onto the dotted outline. Click **Play**.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [
         {
           "kind": "block",
-          "type": "gamelab_addBehaviorSimple",
-          "inputs": {
-            "SPRITE": {
-              "shadow": {
-                "type": "gamelab_allSpritesWithAnimation"
-              }
-            },
-            "BEHAVIOR": {
-              "block": {
-                "type": "spritelab2_patrollingOnBlocks"
-              }
-            }
-          }
-        },
-        {
-          "kind": "block",
-          "type": "gamelab_checkTouching",
-          "inputs": {
-            "SPRITE1": {
-              "shadow": {
-                "type": "gamelab_allSpritesWithAnimation"
-              }
-            },
-            "SPRITE2": {
-              "shadow": {
-                "type": "gamelab_allSpritesWithAnimation"
-              }
-            }
-          }
-        },
-        {
-          "kind": "block",
-          "type": "gamelab_spriteSay",
+          "type": "spritelab2_beginsBehavior",
           "fields": {
-            "SPEECH": "Hello!"
-          },
-          "inputs": {
-            "SPRITE": {
-              "shadow": {
-                "type": "gamelab_allSpritesWithAnimation"
-              }
-            }
+            "BEHAVIOR": "patrollingOnBlocks"
           }
-        },
-        {
-          "kind": "block",
-          "type": "spritelab2_restartScene"
         }
       ]
-    }
+    },
+    "add_blocks": [
+      {
+        "attachTo": "spritelab2_whenRun",
+        "shadow": {
+          "type": "spritelab2_placeholder",
+          "extraState": {
+            "like": {
+              "type": "spritelab2_beginsBehavior",
+              "fields": {
+                "BEHAVIOR": "patrollingOnBlocks"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "header_label": "Make a platformer"
   }
 }]]></config>
 </GamelabJr>

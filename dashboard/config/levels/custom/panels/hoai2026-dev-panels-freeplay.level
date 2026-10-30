@@ -10,12 +10,13 @@
     "offer_browser_tts": "false",
     "panels": [
       {
-        "text": "##You get everything now!\nAll of your images, all of your scenes, and every block you've used are unlocked. Add new scenes, make new images, and turn your project into a complete game. There's no wrong answer here - make it yours.",
+        "text": "##You get everything now!\nAll your images, scenes, and blocks are unlocked. Add scenes, make images, and turn your project into a whole game. Make it yours.",
         "imageUrl": "",
         "key": "hoai2026-dev-panels-freeplay-aa500533-21a5-4a7f-893c-443019a2e95e"
       }
     ],
-    "use_links": "false"
+    "use_links": "false",
+    "header_label": "Free play"
   }
 }]]></config>
 </Panels>

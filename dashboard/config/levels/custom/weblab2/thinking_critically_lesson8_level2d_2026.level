@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "display_name": "Food Delivery App Receipt",
-    "long_instructions": "## Digital Artifact\r\n\r\n1. Examine the artifact to the right.\r\n2. Find example(s) of **Public**, **Private**, and **Sensitive** data and add it to the table in your Activity Guide.\r\n",
+    "long_instructions": "## Sample Food Delivery Receipt\r\n\r\n1. Examine the sample food delivery receipt to the right.\r\n2. Find example(s) of **Public**, **Private**, and **Sensitive** data and write them to the table in your Activity Guide.\r\n",
     "bubble_choice_description": "A receipt from last night's dinner delivery",
     "offer_browser_tts": "false",
     "submittable": "false",
@@ -63,6 +63,6 @@
     },
     "thumbnail_url": "https://images.code.org/04a5c46585b1dec6dcbd0da007b0980e-four.jpg"
   },
-  "audit_log": "[{\"changed_at\":\"2026-04-28T16:14:13.019+00:00\",\"changed\":[\"cloned from \\\"thinking_critically_lesson8_level2c_2026\\\"\"],\"cloned_from\":\"thinking_critically_lesson8_level2c_2026\"},{\"changed_at\":\"2026-04-28 16:15:19 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 16:15:39 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 16:16:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 16:57:07 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-28T16:14:13.019+00:00\",\"changed\":[\"cloned from \\\"thinking_critically_lesson8_level2c_2026\\\"\"],\"cloned_from\":\"thinking_critically_lesson8_level2c_2026\"},{\"changed_at\":\"2026-04-28 16:15:19 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 16:15:39 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 16:16:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 16:57:07 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-30 17:51:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>

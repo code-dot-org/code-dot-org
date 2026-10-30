@@ -71,6 +71,11 @@
   }
 }
 
+.separator {
+  // Matches the gap the radio button leaves on the dot's other side.
+  margin-inline-end: 0.375rem;
+}
+
 .commitDescription {
   color: var(--text-neutral-secondary);
   border-top: variables.$default-border;

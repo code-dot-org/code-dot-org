@@ -53,7 +53,7 @@ class AdminSearchController < ApplicationController
   end
 
   def lookup_section
-    load_section if params[:section_code]
+    load_section if params[:section_code].present?
   end
 
   def set_section_picture_passwords

@@ -24,6 +24,7 @@ class Ability
       Rubric,
       :reports,
       :widget2, # levelbuilder only, see override below
+      :adaptive_pathway, # levelbuilder only, see override below
       User,
       UserPermission,
       Follower,
@@ -164,6 +165,12 @@ class Ability
         other_user.id == user.id || other_user.student_of?(user)
       end
 
+      # An authorized viewer of someone else's quiz attempt sees correctness.
+      # Only a verified instructor also sees the correct answer and its explanation.
+      can :reveal_quiz_attempt_answers, :quiz_attempt do
+        user.verified_instructor?
+      end
+
       can :create, CodeReviewComment do |code_review_comment|
         code_review_comment.code_review.open? && can?(:code_review, code_review_comment.code_review.owner)
       end
@@ -197,7 +204,6 @@ class Ability
       can :get_level_source, UserLevel
 
       can :evaluate, :openai_evaluate
-      can :evaluate_section, :openai_evaluate
       can :match_teaching_profile, :openai_personalization
 
       # all signed in users can access the aichat_request and aichat_events endpoints
@@ -331,14 +337,12 @@ class Ability
           can?(:manage, message.aidiff_thread)
         end
         can [:index, :show, :chat_completion, :curriculum_courses], AidiffThread, user_id: user.id
-        if Experiment.enabled?(user: user, experiment_name: 'ai-artifact')
-          can :create, AidiffArtifact
-          can :create, AidiffExitTicket
-          can :create, AidiffLessonHook
-          can [:index], AidiffArtifact, user_id: user.id
-          can [:index, :update, :show], AidiffExitTicket, user_id: user.id
-          can [:index, :update, :show], AidiffLessonHook, user_id: user.id
-        end
+        can :create, AidiffArtifact
+        can :create, AidiffExitTicket
+        can :create, AidiffLessonHook
+        can [:index], AidiffArtifact, user_id: user.id
+        can [:index, :update, :show], AidiffExitTicket, user_id: user.id
+        can [:index, :update, :show], AidiffLessonHook, user_id: user.id
       end
 
       can :create, UserPracticeProblemAttempt
@@ -347,23 +351,20 @@ class Ability
       can [:index, :show, :starter_image], Challenge
 
       # Students create and read their own challenge responses; teachers read
-      # their students' responses; section peers read each other's final
-      # submissions. Asset access mirrors response access.
+      # their students' responses; section peers read each other's final,
+      # successfully evaluated submissions. Asset access mirrors response
+      # access.
       can :create, ChallengeResponse
       can :read, ChallengeResponse do |challenge_response|
         challenge_response.user_id == user.id ||
           user.students.exists?(id: challenge_response.user_id) ||
-          (challenge_response.is_final &&
+          (challenge_response.is_final && challenge_response.evaluation_success? &&
             Follower.exists?(section_id: user.sections_as_student.select(:id), student_user_id: challenge_response.user_id))
       end
       # Only the response's owner triggers AI evaluation of it.
       can :evaluate, ChallengeResponse, user_id: user.id
       can :read, ChallengeResponseAsset do |asset|
-        response = asset.challenge_response
-        response.user_id == user.id ||
-          user.students.exists?(id: response.user_id) ||
-          (response.is_final &&
-            Follower.exists?(section_id: user.sections_as_student.select(:id), student_user_id: response.user_id))
+        can? :read, asset.challenge_response
       end
       # Only the response's owner uploads asset bytes.
       can :upload, ChallengeResponseAsset, challenge_response: {user_id: user.id}
@@ -433,7 +434,7 @@ class Ability
     # They don't necessarily have a model, permissions and redirects are run
     # through ProjectsController and their view/edit requirements are defined
     # there.
-    ProjectsController::STANDALONE_PROJECTS.each_pair do |project_type_key, project_type_props|
+    Policies::StandaloneProjects.all.each_pair do |project_type_key, project_type_props|
       if project_type_props[:levelbuilder_required]
         can :load_project, project_type_key if user.persisted? && user.levelbuilder?
       elsif project_type_props[:login_required]
@@ -509,6 +510,7 @@ class Ability
         JitPlExemplar,
         JitPlTeachingTip,
         JSONVideo,
+        PracticeProblem,
         CourseOffering,
         UnitGroup,
         Resource,
@@ -516,9 +518,8 @@ class Ability
         ScriptLevel,
         Video,
         Vocabulary,
-        Skill,
-        LevelsSkill,
         :foorm_editor,
+        :adaptive_pathway,
         Foorm::Form,
         Foorm::Library,
         Foorm::LibraryQuestion,
@@ -586,9 +587,11 @@ class Ability
         can [:edit, :update], Lesson, editor_experiment: editor_experiment
       end
 
-      # These checks control access to Javabuilder.
-      # Only verified instructors, and students assigned to a CSA section with a
-      # verified instructor, can generate a Javabuilder session token to run Java code.
+      # Three groups should be able to generate a Javabuilder session token to
+      # run Java code, and those groups are:
+      # 1. Verified instructors,
+      # 2. Students assigned to a CSA section with a verified instructor, and
+      # 3. Co-teachers assigned to a CSA section with a verified instructor.
       # The get_access_token endpoint is used for normal execution, and the access_token_with_override_sources
       # is used when viewing another version of a student's project (in preview or Code Review mode).
       # It is also used for running exemplars, but only teachers can access exemplars.
@@ -596,7 +599,8 @@ class Ability
       # channel's saved sources (access_token_with_override_validation) or
       # alongside override sources (access_token_with_override_sources_and_validation).
       can [:get_access_token, :access_token_with_override_sources], :javabuilder_session do
-        user.verified_instructor? || user.sections_as_student.any? {|s| s.assigned_csa? && s.teacher&.verified_instructor?}
+        user.verified_instructor? ||
+          (user.sections_as_student + user.sections_instructed).any? {|s| s.assigned_csa? && s.teacher&.verified_instructor?}
       end
 
       can [:access_token_with_override_validation, :access_token_with_override_sources_and_validation], :javabuilder_session do

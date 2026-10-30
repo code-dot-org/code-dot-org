@@ -102,10 +102,11 @@ export function paintWorldCell(
   col: number,
   cell: WorldCell | null
 ): World {
-  const grid = (world?.grid ?? createEmptyWorld().grid).map(cells => [
-    ...cells,
-  ]);
+  // Only the painted row gets a new identity: the editor memoizes its rows
+  // on theirs, so the other rows skip their render.
+  const grid = (world?.grid ?? createEmptyWorld().grid).slice();
   if (grid[row] && col < grid[row].length) {
+    grid[row] = grid[row].slice();
     grid[row][col] = cell;
   }
   return {grid};

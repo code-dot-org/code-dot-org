@@ -37,6 +37,8 @@ export const AI_CHAT_LAB_FAQ_LINK =
   'https://support.code.org/hc/en-us/articles/30162711193741-AI-Chat-Lab-FAQ';
 export const AI_TUTOR_FAQ_LINK =
   'https://support.code.org/hc/en-us/articles/40542019587213-AI-Tutor-FAQ';
+export const AI_COUNTRY_AVAILABILITY_SUPPORT_LINK =
+  'https://support.code.org/hc/en-us/articles/48956120058637-Are-AI-tools-available-in-all-countries';
 
 export const AI_CHAT_NOT_AUTHORIZED_TEACHER =
   'You must be a verified teacher or sign in via Google, Microsoft, Facebook, or an LMS to use and assign this tool.';
@@ -46,6 +48,9 @@ export const AI_CHAT_NOT_AVAILABLE_INTERNATIONAL =
   'This AI Chat level is not available in your region.';
 export const AI_TUTOR_NOT_AVAILABLE_INTERNATIONAL =
   'AI Tutor is not available in your region.';
+export type CourseOrUnit = 'course' | 'unit';
+export const usOnlyModelsEssentialMessage = (subject: CourseOrUnit) =>
+  `This ${subject} requires AI models that are not available in your region. AI chat tools will be disabled in some levels.`;
 
 export const MODEL_PARAMETER_LABELS: {
   [key in keyof ModelParameters]: string;

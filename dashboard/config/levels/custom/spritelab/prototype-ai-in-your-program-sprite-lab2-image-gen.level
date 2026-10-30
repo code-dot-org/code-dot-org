@@ -1,0 +1,445 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 64,
+  "created_at": "2026-10-09T15:56:14.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "uses_lab2": "true",
+    "block_pools": [
+      "GamelabJr",
+      "GameDev"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab",
+      "zGameDev"
+    ],
+    "standalone_app_name": "spritelab",
+    "skin": "gamelab",
+    "hide_share_and_remix": "true",
+    "encrypted": "false",
+    "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
+    "use_secondary_finish_button": "true",
+    "level_mode": {
+      "kind": "image",
+      "imageType": "sprite",
+      "imageUi": "explore",
+      "sentence": "character"
+    },
+    "image_role_defaults": {
+      "sprite": "hero",
+      "gamelab_addBehaviorSimple": [
+        "friend"
+      ],
+      "gamelab_checkTouching": [
+        "hero",
+        "treasure"
+      ]
+    },
+    "guide_steps": [
+      {
+        "text": "**Free play!** Everything is unlocked. Finish your game, and finish the lesson when you're done.",
+        "collapsedText": "Enjoy free play!",
+        "showContinue": true
+      }
+    ],
+    "long_instructions": "# Free play\r\nEverything is unlocked: all your images, scenes, and blocks. Finish your game!",
+    "toolbox_definition": {
+      "contents": [
+        {
+          "kind": "block",
+          "type": "gamelab_setBackgroundImageAs",
+          "id": "tFUQpQ+FXqT3BISqXv[N",
+          "fields": {
+            "IMG": "<field name=\"IMG\">null</field>"
+          },
+          "enabled": true
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_playSound",
+          "id": "8{5c!R6B$0B`PGACPMci",
+          "fields": {
+            "SOUND": "sound://category_pop/bubble_pop_cluster_airy_1.mp3"
+          },
+          "enabled": true
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_playMusic",
+          "id": "n{,5TYI6)0iTzRO9U2.K",
+          "fields": {
+            "SONG": ""
+          },
+          "enabled": true
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_setWeather",
+          "id": "O6cn~y#=HT7VKE7(|DYr",
+          "fields": {
+            "WEATHER": "<field name=\"WEATHER\">none</field>"
+          },
+          "enabled": true
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_burst",
+          "id": "=HRm.V|Qt)9IJ;9An~np",
+          "fields": {
+            "COUNT": 20,
+            "LOOK": "<field name=\"LOOK\">sparks</field>",
+            "ORIGIN": "<field name=\"ORIGIN\">null</field>"
+          },
+          "enabled": true
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_setAsPlatformPlayer",
+          "id": "-U$m*;klMjwjwZ07(X:?",
+          "fields": {
+            "ANIMATION_NAME": "<field name=\"ANIMATION_NAME\">null</field>"
+          },
+          "enabled": true
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_thePlayer",
+          "id": "womy-[BTEE/C3O7wEXne",
+          "enabled": true
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_setCameraZoom",
+          "id": "jdTmxUM8Fa@F?$^v/6sW",
+          "fields": {
+            "ZOOM": 2
+          },
+          "enabled": true
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_restartScene",
+          "id": "$Obp?%Z=1xcskQ${.[[{",
+          "enabled": true
+        },
+        {
+          "kind": "block",
+          "type": "gamelab_checkTouching",
+          "id": "M,Hy(a+ndr0k/T}zWcM7",
+          "fields": {
+            "CONDITION": "<field name=\"CONDITION\">\"when\"</field>"
+          },
+          "inputs": {
+            "SPRITE1": {
+              "shadow": {
+                "type": "gamelab_allSpritesWithAnimation",
+                "id": "N1%.Q{HI5;6.VUt@:COb",
+                "fields": {
+                  "ANIMATION": "<field name=\"ANIMATION\">null</field>"
+                }
+              }
+            },
+            "SPRITE2": {
+              "shadow": {
+                "type": "gamelab_allSpritesWithAnimation",
+                "id": "./Bl6Po1R%@ZTN68wF5_",
+                "fields": {
+                  "ANIMATION": "<field name=\"ANIMATION\">null</field>"
+                }
+              }
+            }
+          },
+          "enabled": true
+        },
+        {
+          "kind": "block",
+          "type": "gamelab_spriteSay",
+          "id": "0?|1Z;^7Z:qZ~}-ft!po",
+          "fields": {
+            "SPEECH": "Hello!"
+          },
+          "inputs": {
+            "SPRITE": {
+              "shadow": {
+                "type": "gamelab_allSpritesWithAnimation",
+                "id": "wN`9;,h^A`1m!C:fNUNS",
+                "fields": {
+                  "ANIMATION": "<field name=\"ANIMATION\">null</field>"
+                }
+              }
+            }
+          },
+          "enabled": true
+        },
+        {
+          "kind": "block",
+          "type": "gamelab_setBackgroundImageAs",
+          "id": "Pjpm=L9}+9jffv^4{Y6y",
+          "fields": {
+            "IMG": "<field name=\"IMG\">null</field>"
+          },
+          "enabled": true
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_playSound",
+          "id": "dLl?6kMe_~Np0oPVt;8g",
+          "fields": {
+            "SOUND": "sound://category_pop/bubble_pop_cluster_airy_1.mp3"
+          },
+          "enabled": true
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_playMusic",
+          "id": "qSj4UW^b`ry=Hw8T)$:e",
+          "fields": {
+            "SONG": ""
+          },
+          "enabled": true
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_setWeather",
+          "id": "+1_t]65gWH0biDNi)CO1",
+          "fields": {
+            "WEATHER": "<field name=\"WEATHER\">none</field>"
+          },
+          "enabled": true
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_burst",
+          "id": "rXz3YY1c5:[HtKwf/}MF",
+          "fields": {
+            "COUNT": 20,
+            "LOOK": "<field name=\"LOOK\">sparks</field>",
+            "ORIGIN": "<field name=\"ORIGIN\">null</field>"
+          },
+          "enabled": true
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_makeSpriteAtPosition",
+          "id": "jaYI085qG2UGVTke9snf",
+          "fields": {
+            "ANIMATION_NAME": "<field name=\"ANIMATION_NAME\">null</field>",
+            "POSITION": "<field name=\"POSITION\">left</field>"
+          },
+          "enabled": true
+        },
+        {
+          "kind": "block",
+          "type": "gamelab_setProp",
+          "id": ",oQG31X3Dv^38+%-caKT",
+          "fields": {
+            "PROPERTY": "<field name=\"PROPERTY\">\"scale\"</field>"
+          },
+          "inputs": {
+            "SPRITE": {
+              "shadow": {
+                "type": "gamelab_allSpritesWithAnimation",
+                "id": "bzWSYPrVnEL(+UbL;@Cn",
+                "fields": {
+                  "ANIMATION": "<field name=\"ANIMATION\">null</field>"
+                }
+              }
+            },
+            "VAL": {
+              "shadow": {
+                "type": "math_number",
+                "id": "zsoUcq4rYoe.rWxql#kY",
+                "fields": {
+                  "NUM": 100
+                }
+              }
+            }
+          },
+          "enabled": true
+        },
+        {
+          "kind": "block",
+          "type": "gamelab_spriteSay",
+          "id": "}0Dm0z8@m:-(M/xm`mgl",
+          "fields": {
+            "SPEECH": "Hello!"
+          },
+          "inputs": {
+            "SPRITE": {
+              "shadow": {
+                "type": "gamelab_allSpritesWithAnimation",
+                "id": "A|:Dz5P@RcOyZvqdvTCI",
+                "fields": {
+                  "ANIMATION": "<field name=\"ANIMATION\">null</field>"
+                }
+              }
+            }
+          },
+          "enabled": true
+        },
+        {
+          "kind": "block",
+          "type": "gamelab_spriteClicked",
+          "id": "vW9y{XHFz{f1XpXaQrsd",
+          "fields": {
+            "CONDITION": "<field name=\"CONDITION\">\"when\"</field>"
+          },
+          "inputs": {
+            "SPRITE": {
+              "shadow": {
+                "type": "gamelab_allSpritesWithAnimation",
+                "id": "X+`3r%D`Ls@N#om)5dwR",
+                "fields": {
+                  "ANIMATION": "<field name=\"ANIMATION\">null</field>"
+                }
+              }
+            }
+          },
+          "enabled": true
+        },
+        {
+          "kind": "block",
+          "type": "gamelab_atTime",
+          "id": "8[{!ruHd5P22Qy#hy76O",
+          "fields": {
+            "UNIT": "<field name=\"UNIT\">\"seconds\"</field>"
+          },
+          "inputs": {
+            "N": {
+              "shadow": {
+                "type": "math_number",
+                "id": "G{z-ffB_bw;kt~S.m]=8",
+                "fields": {
+                  "NUM": 3
+                }
+              }
+            }
+          },
+          "enabled": true
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_goToScene",
+          "id": "{}cB70B7ye_:O-]^W$ia",
+          "fields": {
+            "SCENE": "scene-1"
+          },
+          "enabled": true
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_goToExternalScene",
+          "id": "3jOvZr93mJ!/YFI_A8Ag",
+          "fields": {
+            "SCENE": ""
+          },
+          "enabled": true
+        },
+        {
+          "kind": "block",
+          "type": "gamelab_setPrompt",
+          "id": "lsV$8DSY^HKg~!fT?3h)",
+          "enabled": true
+        },
+        {
+          "kind": "block",
+          "type": "gamelab_setPromptWithChoices",
+          "id": ":Z-s=ik$-kyJO7tMM.C9",
+          "inputs": {
+            "QUESTION": {
+              "block": {
+                "type": "text",
+                "fields": {
+                  "TEXT": ""
+                }
+              }
+            },
+            "VAR": {
+              "block": {
+                "type": "text",
+                "fields": {
+                  "TEXT": ""
+                }
+              }
+            },
+            "A": {
+              "block": {
+                "type": "text",
+                "fields": {
+                  "TEXT": ""
+                }
+              }
+            },
+            "B": {
+              "block": {
+                "type": "text",
+                "fields": {
+                  "TEXT": ""
+                }
+              }
+            },
+            "C": {
+              "block": {
+                "type": "text",
+                "fields": {
+                  "TEXT": ""
+                }
+              }
+            }
+          },
+          "enabled": true
+        },
+        {
+          "kind": "block",
+          "type": "controls_if",
+          "id": "P7y{s?MrrC;myr4j}lHV",
+          "inputs": {
+            "IF0": {
+              "block": {
+                "type": "logic_compare",
+                "fields": {
+                  "OP": "<field name=\"OP\">EQ</field>"
+                }
+              }
+            }
+          },
+          "enabled": true
+        }
+      ],
+      "kind": "flyoutToolbox"
+    },
+    "header_label": "Free play",
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "use_modal_function_editor": "false",
+    "disable_if_else_editing": "false",
+    "include_shared_functions": "false",
+    "free_play": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "validation_enabled": "false",
+    "hide_animation_mode": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "use_default_sprites": "false",
+    "mini_toolbox": "false",
+    "hide_pause_button": "false",
+    "enable_big_playspace": "false",
+    "hide_custom_blocks": true,
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2026-10-09T15:56:14.683+00:00\",\"changed\":[\"cloned from \\\"prototype-ai-in-your-program-sprite-lab2-branching-story\\\"\"],\"cloned_from\":\"prototype-ai-in-your-program-sprite-lab2-branching-story\"},{\"changed_at\":\"2026-10-09 18:53:06 +0000\",\"changed\":[\"level_mode\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-09 18:53:09 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</GamelabJr>

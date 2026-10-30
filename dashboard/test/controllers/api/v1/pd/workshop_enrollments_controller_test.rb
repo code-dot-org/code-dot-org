@@ -210,8 +210,8 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ActionController::TestCas
   end
 
   test 'cancelling an active enrollment deletes it and sends email' do
-    Pd::WorkshopMailer.expects(:teacher_cancel_receipt).returns(stub(:deliver_now))
-    Pd::WorkshopMailer.expects(:organizer_cancel_receipt).returns(stub(:deliver_now))
+    Pd::WorkshopMailer.expects(:teacher_cancel_receipt).returns(stub(deliver_now: nil))
+    Pd::WorkshopMailer.expects(:organizer_cancel_receipt).returns(stub(deliver_now: nil))
 
     assert_destroys Pd::Enrollment do
       delete :cancel, params: {enrollment_code: @enrollment.code}
@@ -238,9 +238,9 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ActionController::TestCas
     application = create(:pd_teacher_application, course: 'csd', application_year: workshop.school_year, user: @teacher, status: 'accepted')
     enrollment = create(:pd_enrollment, application_id: application.id, user: @teacher, workshop: workshop)
 
-    Pd::WorkshopMailer.expects(:teacher_cancel_receipt).with(enrollment).returns(stub(:deliver_now))
-    Pd::WorkshopMailer.expects(:teacher_cancel_receipt).with(enrollment, @teacher.alternate_email).returns(stub(:deliver_now))
-    Pd::WorkshopMailer.expects(:organizer_cancel_receipt).returns(stub(:deliver_now))
+    Pd::WorkshopMailer.expects(:teacher_cancel_receipt).with(enrollment).returns(stub(deliver_now: nil))
+    Pd::WorkshopMailer.expects(:teacher_cancel_receipt).with(enrollment, @teacher.alternate_email).returns(stub(deliver_now: nil))
+    Pd::WorkshopMailer.expects(:organizer_cancel_receipt).returns(stub(deliver_now: nil))
 
     assert_destroys Pd::Enrollment do
       delete :cancel, params: {enrollment_code: enrollment.code}
@@ -263,7 +263,7 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ActionController::TestCas
   end
 
   test 'sends enrollment receipt email to both the users email and alternate summer email if available and for a summer workshop' do
-    Pd::WorkshopMailer.expects(:teacher_enrollment_receipt).returns(stub(:deliver_now)).times(2)
+    Pd::WorkshopMailer.expects(:teacher_enrollment_receipt).returns(stub(deliver_now: nil)).times(2)
 
     @teacher = create(:teacher, :with_school_info, given_name: 'Firstname', family_name: 'Lastname')
     sign_in @teacher

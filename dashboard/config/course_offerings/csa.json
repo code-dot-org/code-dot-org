@@ -1,7 +1,7 @@
 {
   "key": "csa",
   "display_name": "Computer Science A - Objects First",
-  "is_featured": true,
+  "is_featured": false,
   "assignable": true,
   "curriculum_type": "Course",
   "marketing_initiative": "CSA",

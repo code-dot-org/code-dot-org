@@ -6,7 +6,6 @@ require 'cdo/geocoder'
 
 Dir[File.expand_path('../lib/middleware/**/*.rb', __dir__)].sort.each {|file| require file}
 
-require 'bootstrap-sass'
 require 'cdo/global_edition'
 require 'cdo/hash'
 require 'cdo/i18n'
@@ -171,6 +170,7 @@ module Dashboard
       Rails.root.join('lib'),
       Rails.root.join('app', 'models', 'experiments'),
       Rails.root.join('app', 'models', 'levels'),
+      Rails.root.join('app', 'models', 'quiz_questions'),
       Rails.root.join('app', 'models', 'sections'),
       Rails.root.join('../lib/cdo/shared_constants')
     ]

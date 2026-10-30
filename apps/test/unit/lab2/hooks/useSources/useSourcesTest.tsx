@@ -135,6 +135,7 @@ describe('useSources', () => {
       expect(result.current.channel).toEqual(OWNED_CHANNEL);
       expect(result.current.isEditable).toBe(true);
       expect(result.current.hasEdited).toBe(false);
+      expect(result.current.hasSavedSources).toBe(true);
     });
 
     it('publishes the channel to redux on load (transition bridge)', async () => {
@@ -145,20 +146,37 @@ describe('useSources', () => {
       expect(dispatchSpy).toHaveBeenCalledWith(setChannel(OWNED_CHANNEL));
     });
 
+    it('refreshes the channel when a save changes it', async () => {
+      const {result} = renderUseSources();
+      await flush();
+      expect(result.current.channel).toBe(OWNED_CHANNEL);
+
+      const renamed = {...OWNED_CHANNEL, name: 'Renamed'} as Channel;
+      const listeners = (
+        fakeManager.addSaveSuccessListener as jest.Mock
+      ).mock.calls.map(([listener]) => listener);
+      act(() => listeners.forEach(listener => listener(renamed)));
+
+      expect(result.current.channel).toEqual(renamed);
+    });
+
     it('falls back to defaultSources when the project has none', async () => {
       (fakeManager.load as jest.Mock).mockResolvedValue({sources: undefined});
       const {result} = renderUseSources();
       await flush();
 
       expect(result.current.currentSources).toEqual(DEFAULT_SOURCES);
+      expect(result.current.hasSavedSources).toBe(false);
     });
 
-    it('does not load when the level does not use projects', async () => {
+    it('loads nothing for a level without a project', async () => {
       const {result} = renderUseSources({...LEVEL_ONE, usesProjects: false});
       await flush();
 
       expect(mockGetProjectManagerForLevel).not.toHaveBeenCalled();
+      expect(result.current.projectManager).toBeNull();
       expect(result.current.currentSources).toBeUndefined();
+      expect(result.current.isEditable).toBe(false);
     });
 
     it('surfaces load errors', async () => {
@@ -211,6 +229,27 @@ describe('useSources', () => {
         source: 'edited',
         extra: 'kept',
       });
+    });
+
+    it('drops an update that lands while a reload has cleared the sources', async () => {
+      const {result, rerender} = renderUseSources();
+      await flush();
+      expect(result.current.currentSources).toEqual(SAVED_SOURCES);
+
+      // The next level's load never settles; its start has already
+      // cleared the sources, as it does before the old view unmounts.
+      (fakeManager.load as jest.Mock).mockReturnValue(new Promise(() => {}));
+      rerender({levelProperties: LEVEL_TWO});
+      await flush();
+      expect(result.current.currentSources).toBeUndefined();
+
+      expect(() =>
+        act(() => {
+          result.current.updateSources(prev => ({...prev, source: 'late'}));
+        })
+      ).not.toThrow();
+      expect(fakeManager.save).not.toHaveBeenCalled();
+      expect(result.current.currentSources).toBeUndefined();
     });
 
     it('ignores updates when the viewer is not the project owner', async () => {
@@ -451,6 +490,20 @@ describe('useSources', () => {
   });
 
   describe('startOver', () => {
+    it('saves the start sources as ProjectSources even when the level stores them bare', async () => {
+      const bare = {folders: {}, files: {}};
+      const {result} = renderUseSources({
+        ...LEVEL_ONE,
+        startSources: bare,
+      } as LevelProperties);
+      await flush();
+
+      act(() => result.current.startOver());
+
+      expect(fakeManager.save).toHaveBeenCalledWith({source: bare}, true);
+      expect(result.current.currentSources).toEqual({source: bare});
+    });
+
     it('resets to start sources and force-saves', async () => {
       const startSources = {source: 'start'};
       const {result} = renderUseSources({...LEVEL_ONE, startSources});

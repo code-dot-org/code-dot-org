@@ -147,7 +147,16 @@ export class TurnstileManager {
       console.error(
         `${LOG} Throwing TurnstileDevToolsError — challenge cannot proceed`
       );
-      throw new TurnstileDevToolsError();
+      // This path returns before any challenge is enqueued, so it is the only
+      // place that can account for the token the caller will not receive.
+      const devToolsError = new TurnstileDevToolsError();
+      recordTurnstileOutcome({
+        acquisitionMode: 'on-demand',
+        enforcementMode,
+        durationMs: performance.now() - start,
+        error: devToolsError,
+      });
+      throw devToolsError;
     }
 
     // The mode is decided synchronously, before the challenge is awaited, so it

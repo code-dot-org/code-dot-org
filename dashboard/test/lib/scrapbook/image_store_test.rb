@@ -97,4 +97,17 @@ class Scrapbook::ImageStoreTest < ActiveSupport::TestCase
     token = Scrapbook::ImageStore.signed_token(7, 'abc.png')
     assert_nil Scrapbook::ImageStore.verify_token(token + 'tampered')
   end
+
+  test 'verify_token rejects a token that is not JSON' do
+    secret = Rails.application.key_generator.generate_key(Scrapbook::ImageStore::TOKEN_PURPOSE)
+    other_format = ActiveSupport::MessageVerifier.new(secret, serializer: Marshal)
+    message = other_format.generate(
+      {'user_id' => 7, 'filename' => 'abc.png'},
+      purpose: Scrapbook::ImageStore::TOKEN_PURPOSE,
+      expires_in: Scrapbook::ImageStore::TOKEN_TTL
+    )
+    token = Base64.urlsafe_encode64(message)
+
+    assert_nil Scrapbook::ImageStore.verify_token(token)
+  end
 end

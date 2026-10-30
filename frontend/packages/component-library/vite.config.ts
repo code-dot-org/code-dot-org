@@ -80,6 +80,9 @@ export default defineConfig({
     },
   },
   build: {
+    // Emptying dist mid-build breaks consumers watching it; on macOS webpack
+    // never recovers (INF-2257). `turbo clean` empties it once per session.
+    emptyOutDir: false,
     sourcemap: true,
     cssCodeSplit: true,
     lib: {

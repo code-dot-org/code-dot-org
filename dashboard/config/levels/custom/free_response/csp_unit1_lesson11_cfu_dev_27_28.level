@@ -1,0 +1,30 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-10-07T06:38:30.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "long_instructions": "## Club Matcher\r\n\r\nA school builds an app that learns from past club sign-ups to recommend a club to each student. Most past Robotics Club members were from one group of students.\r\n\r\nExplain how this app learns from its training data, how that could lead to unfair recommendations, and what the designers could do before launch to reduce that.",
+    "encrypted_solution": "jFa+cjtZjFbzs6f3VeqtDJ7OeSOdEKHsVBdK1gs6bgyEewU8n8hCHzWTkgy9\nEvZlP6TnzAEBv6YjGSjd9AzGmPFok1qAuC8OZimonghHbme1TTCr0K9rO0bY\naaJ+UitLfRPM0ZvTK+/ZMeXZPWBdRm8GsdLqIhuAWM6ojW0silHU9vrah7rD\nvsAuSh9pD6PZGDdJQkUbMjBJsRDWolG8xu74el13Cin/w6W4Mfa4at+gzYDg\nb0S3lNRlMSmfP7Lh4nLJLJ7DFsZyl6PQne6pKazJnzjU7jI6VrdWuCMcxre5\nmSlUjINZgeA4b7sEw9SOXkerVSIE7qZq01q/QHMdGyydz4/UQho3/3qpxgEa\n5GSyRrEDsl9+BcTC2jvP77tpB9TQiLhsjm5E5b5VpKb8XntbMQMxPCVTkM4z\nv+fvC1n419RWRgUA1wkDEny8t4VgVK0/RHQnz5m8KBN+enFbgT5tpglHMzFQ\nE3NPDUHiKB6HfViJGg9DtkFi1pqy+WsqK4bBrWqcoQcVIQ/GNlH4WkNZh5QE\nPfw/05z/lwf7wjc6vng71Fp/c3oAMd16GvE/Y2b4Vby2kkiS6gJanukKIUnl\n4K8SjQgiEo8liXs9SUosW1wEugG+myu9zQxE3iA1Yt84on0Hwov6d9U3BMp1\nxJibigyDuO29apeNA4pEYwR6mHG6A0jFtCw3dpql64tMEF4qZq+GYprL3pNX\nZq8CyvH0O/mvdPrFE1mZfC4V0SQMBDj0k1uOBapTC1BEvJ0ZDl0xfvd1o6QK\nGjNRVYoDFZSXBtV5XTDTF4AfZfhnd7PzMCTFIuZVnhL/MC/2SwP9G6IE+mB6\nM84mASLVgGxjlR8nqB5eSNwJvmQdWk/NwC3fFbME2+tLgd2PCZa1HOOKPPGg\nVPDiEMvGxxxoAUZfbzJmhFs8BTe8pu/Q24BvfX/gQrHYsAm8KFFxKRurfvQ6\ngflLoW1I1yZVZxmtxxHEFh/l+YaGBmo1LXbq4aJd2AitX5X8BpbVoNiL5KQe\nqxCGOaNIvbRBsCfVOTLZ2Fyj6fP0VSkwOjn6VRHz8YL4SEhcQUf1SPjKwJau\nWJKyuMJa+bNMIl3qh065lv1//6VTAVPRuTrPhwpsq8+M0HQP0UCrOILYn/DI\n2stc2zv0SVmnDZ3TkU6kHKqhWfW+VD0WrJjWYo/E4PNFY75U53ii/eIFk5pZ\nUJnaQafjVoti7Rjb\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 21694,
+    "name_suffix": "_2025",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "ai_tutor_available": "true",
+    "stay_on_level_after_submit": "false"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2026-10-07T06:38:30.558+00:00\",\"changed\":[\"cloned from \\\"U9L6 CFU ML Bias_2025\\\"\"],\"cloned_from\":\"U9L6 CFU ML Bias_2025\"},{\"changed_at\":\"2026-10-07 06:41:50 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-10-07 07:06:31 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

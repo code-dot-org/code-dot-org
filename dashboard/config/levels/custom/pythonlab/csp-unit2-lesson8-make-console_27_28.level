@@ -1,0 +1,60 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-10-22T17:07:47.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildPython",
+        "debug",
+        "example",
+        "explainCode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "# Scenario 1: Cat Adoption\nmoney = 39\nage = 17\n# can_adopt =\n\n\n# Scenario 2: Skip the Line\nhas_fast_pass = False\narrival_hour = 8\n# skip_line =\n\n\n# Scenario 3: Allowed Usernames\nusername = \"scout\"\n# allowed =",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMr9SYOY+qJdzaHX\nRkVoWUKSIUfGqkVbK4AwPt9Ntr+pWcy+h4BV/rXc2l9Ba/y4Wb2AbY8TVWOV\n6XPCYQSt2zKl2vWrOHykJZS2v8dVeBtVm9R3xPJj8rgL/hBWq4f0cjAf5Zqp\npYYqDMvu2EBh8BXz4L6L3/s0PJx8WpPG+m++8BE34JjCxunQ3rB7B9hlkFWz\nb70FGHKl+snI0SA2NKdEuF6J95A07P9WsLKCzy+0U/JRemmNFPeupeyreknD\nP+ojqXRrho0++AwYEkH2hZFoJI/XTW+OsXZSjuL/YMsFI+lP82hQ+7xAuUpV\nthjCaxyhdzV94sHFo7fHmheCpCXlz3LQH7M4k/tNurBzyQD7fUlOZjUrlOyH\nP3g3eXcZU153TSUGUtiBCNVfXwpI1Ol5wnXlBccwy8L0zafhrbV4eHX23wv9\nsyrNbWpLOC449hZSDE8e24n0ciB28y8rr797kKf+eWikkvHaAhZjlf0Ozrn2\nXKOw3QcaafnhR4bLo+B2yRm51MDuVqselUZiN9ci2jrYZX+M78lARzZYUOyy\nfpGhngDUZOeXxBHj+xlPzgZMBqvMI44bfyI1PAYCrIwvEDQoybIc/Eu1jV0f\n7BDhHnTtH4l6RwU5w2ZFv1B9rI/LU6AKa5DtBEg63dKxZIYM\n",
+    "teacher_markdown": "Misconceptions and what to test for:\r\n\r\n- Scenario 1 reuses the familiar cat-adoption values from Lessons 6 and 7 deliberately — an easy, confidence-building first write before two unfamiliar contexts.\r\n- Scenario 2 is a fresh context on purpose — per the PRIMM style guide, Make is where new contexts belong (Investigate/Modify stayed inside one shared context; Make is where that ownership releases).\r\n- Scenario 3 is the one that matters most. This is the classic `and`/`or` bug the lesson doc specifically calls out: a student who writes `username != \"admin\" or username != \"guest\"` will get `allowed` as `True` for every username, including `\"admin\"` itself — since any name can fail at most one of the two conditions, `or` is always satisfied. Have students specifically test with `username = \"admin\"` — correct code should print `allowed: False;` buggy `or`-written code will incorrectly print `True`. This test case is the whole point of the scenario, not an afterthought.",
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "contents": "from unittest import TestCase\nfrom unittest_runner import ValidationProtocol\n\n\nclass TestConsoleMake(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Run the student's code once and save the results\"\"\"\n        cls.stdout = ValidationProtocol().get_stdout_logs()\n\n    def test_can_adopt_correct(self):\n        \"\"\"Scenario 1 (can_adopt) prints the correct result\"\"\"\n        matching = [line for line in self.stdout if \"can_adopt\" in line]\n        if not matching:\n            self.skipTest(\"We didn't find anything printed for can_adopt. Make sure you've written and printed can_adopt for Scenario 1.\")\n        self.assertTrue(\n            any(\"False\" in line for line in matching),\n            \"With money = 39 and age = 17, can_adopt should be False. If you got True, check that you combined your two conditions with `and`, not `or`.\"\n        )\n\n    def test_skip_line_correct(self):\n        \"\"\"Scenario 2 (skip_line) prints the correct result\"\"\"\n        matching = [line for line in self.stdout if \"skip_line\" in line]\n        if not matching:\n            self.skipTest(\"We didn't find anything printed for skip_line. Make sure you've written and printed skip_line for Scenario 2.\")\n        self.assertTrue(\n            any(\"True\" in line for line in matching),\n            \"With has_fast_pass = False and arrival_hour = 8, skip_line should be True. If you got False, check that you combined your two conditions with `or`, not `and`.\"\n        )\n\n    def test_allowed_correct(self):\n        \"\"\"Scenario 3 (allowed) prints the correct result\"\"\"\n        matching = [line for line in self.stdout if \"allowed\" in line]\n        if not matching:\n            self.skipTest(\"We didn't find anything printed for allowed. Make sure you've written and printed allowed for Scenario 3.\")\n        self.assertTrue(\n            any(\"True\" in line for line in matching),\n            \"With username = \\\"scout\\\", allowed should be True. If you got False, double-check your != comparisons against \\\"admin\\\" and \\\"guest\\\".\"\n        )",
+      "folderId": "0",
+      "active": false,
+      "type": "validation"
+    },
+    "long_instructions": "#Make\r\n\r\nFor each scenario below, write a Boolean expression that correctly answers the question, store it in the given variable name, and print it. \r\n\r\nTest each one with different starting values to make sure it behaves the way the scenario describes.\r\n\r\n1. **Cat Adoption:** You can adopt a cat if you have saved at least $40 AND you are older than 14.\r\n2. **Skip the Line:** You can skip the line if you have a fast pass OR you arrived before 9 (24-hour time).\r\n3. **Allowed Usernames:** A username is allowed only if it is NOT \"admin\" and NOT \"guest\"."
+  },
+  "audit_log": "[{\"changed_at\":\"2026-10-22 17:07:50 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-22 17:10:24 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-22 17:10:47 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-22 17:14:24 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-22 17:34:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-22 18:40:15 +0000\",\"changed\":[\"predict_settings\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-22 19:35:37 +0000\",\"changed\":[\"start_sources\",\"validation_file\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-28 18:05:46 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

@@ -18,6 +18,7 @@ import type {
   NetsimSignedIn,
   PostponeCensusBanner,
   SchoolName,
+  UnlinkLtiAccountParams,
   UpdateEmailParams,
   UpdateParentEmailParams,
   UpdatePasswordParams,
@@ -390,6 +391,19 @@ export function useUpdateProfile(
 ) {
   return useSettingsMutation(
     params => api.users.updateProfile(params),
+    options,
+  );
+}
+
+export function useUnlinkLtiAccount(
+  api: ApiClient,
+  options?: Omit<
+    UseMutationOptions<void, Error, UnlinkLtiAccountParams>,
+    'mutationFn'
+  >,
+) {
+  return useSettingsMutation(
+    params => api.users.unlinkLtiAccount(params),
     options,
   );
 }

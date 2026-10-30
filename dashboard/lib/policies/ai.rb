@@ -34,6 +34,16 @@ class Policies::Ai
     !user.ai_differentiation_toggled_off?
   end
 
+  # Whether the AI TA (FAB + drawer) should mount at all, independent of the
+  # user's chat preference. The preference only trims content within an
+  # already-mounted drawer (see apps/src/aiTeacherDrawer) rather than
+  # preventing it from mounting.
+  def self.ai_differentiation_eligible?(user)
+    return false unless user
+
+    user.teacher?
+  end
+
   def self.ai_differentiation_enabled_for_unit?(unit_or_unit_group)
     # Documents are added to KB for all stable units.
     !!unit_or_unit_group.stable?

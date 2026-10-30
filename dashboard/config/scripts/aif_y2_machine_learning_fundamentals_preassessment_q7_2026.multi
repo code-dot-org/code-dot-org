@@ -5,7 +5,7 @@ wrong '5 and 8 are both pieces of training data for the model'
 wrong "The model's line touches 8 training data points but misses 5 points"
 right "8 is the slope of the model's line and 5 is the y-intercept"
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 The function below implements a linear regression model. Which of the following statements is accurate?

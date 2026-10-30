@@ -24,24 +24,34 @@
     "level_mode": {
       "kind": "code"
     },
+    "image_role_defaults": {
+      "background": "story-background"
+    },
     "pinned_scene": {
       "id": "story-scene",
       "name": "Story",
       "type": "story"
     },
-    "guide_steps": [
-      {
-        "text": "**Set the scene.** Use the **set background** block to put your new background behind your story. Then press **Play** and watch the whole story so far."
-      },
-      {
-        "text": "**That's your story!** Watch it play, then continue when you're ready.",
-        "showContinue": true,
-        "after": {
-          "tab": "Play"
+    "objectives": {
+      "title": "**Set the scene**",
+      "items": [
+        {
+          "text": "Drag **set background** onto the dotted outline.",
+          "check": {
+            "kind": "block",
+            "type": "gamelab_setBackgroundImageAs",
+            "under": "spritelab2_whenRun"
+          }
+        },
+        {
+          "text": "Click **Play** to watch your story.",
+          "check": {
+            "kind": "play"
+          }
         }
-      }
-    ],
-    "long_instructions": "# Set the scene\nUse the **set background** block to put your new background behind your story. Then press **Play** and watch the whole story so far.",
+      ]
+    },
+    "long_instructions": "# Set the scene\nDrag **set background** onto the dotted outline.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [
@@ -51,7 +61,17 @@
         },
         {
           "kind": "block",
-          "type": "spritelab2_makeSpriteAtPosition"
+          "type": "gamelab_atTime",
+          "inputs": {
+            "N": {
+              "shadow": {
+                "type": "math_number",
+                "fields": {
+                  "NUM": 3
+                }
+              }
+            }
+          }
         },
         {
           "kind": "block",
@@ -68,7 +88,21 @@
           }
         }
       ]
-    }
+    },
+    "add_blocks": [
+      {
+        "attachTo": "spritelab2_whenRun",
+        "shadow": {
+          "type": "spritelab2_placeholder",
+          "extraState": {
+            "like": {
+              "type": "gamelab_setBackgroundImageAs"
+            }
+          }
+        }
+      }
+    ],
+    "header_label": "Make a story"
   }
 }]]></config>
 </GamelabJr>

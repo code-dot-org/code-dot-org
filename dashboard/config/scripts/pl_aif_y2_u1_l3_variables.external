@@ -1,0 +1,66 @@
+name 'pl-aif-y2-u1-l3-variables'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Variables: What They Are, Why We Use Them
+
+This lesson opens with a quick comparison: three social media profiles. Some things stay the same across all of them, the layout, the buttons. Other things change, the name, the photo, the follower count.
+
+That distinction, what stays the same versus what changes, is the whole motivation for variables. Students build a simple chatbot as the vehicle for learning them.
+
+<div style="text-align: center; margin: 20px auto;">
+  <img src="https://images.code.org/0df910d24411432dfe653654fbde05b6-image-1790795232266.png" alt="Three social media profile cards showing Jada, Simon, and Mira. Each has a different name, photo, and post and follower count, but the same layout and button styling." style="width: 55%; border-radius: 10px;">
+  <div style="font-size: 16px; color: #555555; margin-top: 8px;">Same layout and buttons across all three. Different names, photos, and counts.</div>
+</div>
+
+---
+
+### Variables
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin-bottom: 12px;">
+  <div style="font-size: 16px; line-height: 1.5;">
+    <strong>&#128214; Variable:</strong> a container that stores a value in memory.
+  </div>
+</div>
+
+In the curriculum's example, <code style="font-size:16px;">posts</code> is a name the student chose, and <code style="font-size:16px;">31</code> is the value stored inside it.
+
+<div style="background-color: #1F1976; border-radius: 10px; padding: 16px 20px; margin: 16px 0; font-family: 'Consolas', 'Courier New', monospace; font-size: 16px; color: #E4E2F8;">
+posts = 31
+</div>
+
+### Data Types
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin-bottom: 12px;">
+  <div style="font-size: 16px; line-height: 1.5;">
+    <strong>&#128214; Data type:</strong> the format of the data a variable can hold.
+  </div>
+</div>
+
+Students will use three of these most often:
+
+<ul style="list-style-type: disc; padding-left: 20px; font-size: 16px;">
+  <li><strong>Integer</strong> (<code style="font-size:16px;">int</code>): a whole number</li><br>
+  <li><strong>String</strong> (<code style="font-size:16px;">string</code>): text</li><br>
+  <li><strong>Boolean</strong> (<code style="font-size:16px;">bool</code>): True or False</li>
+</ul>
+
+<div style="background-color: #1F1976; border-radius: 10px; padding: 16px 20px; margin: 16px 0; font-family: 'Consolas', 'Courier New', monospace; font-size: 16px; color: #E4E2F8; line-height: 2;">
+posts = 31 <span style="color:#ACA8EA;"># int</span><br>
+name = "Jada" <span style="color:#ACA8EA;"># string</span><br>
+following = True <span style="color:#ACA8EA;"># bool</span>
+</div>
+
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 14px 18px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;">
+    <strong>&#128161; Teacher tip:</strong> students choose their own variable names. Slide 12's own teaching tip is worth repeating to your class: descriptive names (<code style="font-size:16px;">posts</code>, not <code style="font-size:16px;">x</code>) make code easier for anyone, including their future selves, to read.
+  </div>
+</div>
+
+<div style="background-color: #D5EFFF; border-radius: 10px; padding: 16px 18px; margin-top: 20px;">
+  <div style="font-size: 16px; color: #06338D; line-height: 1.6;">
+    <strong>&#8505; Note:</strong> this PL assumes basic familiarity with Python and doesn't re-teach it in depth. If you'd like more practice before teaching this lesson, two good options: work through the curriculum lessons yourself before your students do, and/or complete the Intro to Python Programming PL module.
+  </div>
+</div>
+MARKDOWN

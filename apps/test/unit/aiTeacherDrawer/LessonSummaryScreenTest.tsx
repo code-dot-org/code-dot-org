@@ -5,11 +5,12 @@ import React from 'react';
 
 import LessonSummaryScreen from '@cdo/apps/aiTeacherDrawer/LessonSummaryScreen';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 jest.mock('@cdo/apps/util/HttpClient');
 jest.mock('@cdo/apps/util/reduxHooks', () => ({
   useAppDispatch: jest.fn(),
+  useAppSelector: jest.fn(),
 }));
 jest.mock('@cdo/apps/aiTeacherDrawer/redux', () => ({
   fetchThreadMessages: jest.fn(args => ({type: 'fetchThreadMessages', args})),
@@ -53,6 +54,7 @@ describe('LessonSummaryScreen', () => {
     jest.clearAllMocks();
     dispatch = jest.fn();
     (useAppDispatch as jest.Mock).mockReturnValue(dispatch);
+    (useAppSelector as jest.Mock).mockReturnValue(true);
     (HttpClient.fetchJson as jest.Mock).mockResolvedValue({
       response: {ok: true},
       value: {lesson_summary: JSON.stringify(SUMMARY_PAYLOAD)},
@@ -153,5 +155,16 @@ describe('LessonSummaryScreen', () => {
     );
     expect(dispatch).toHaveBeenCalledTimes(1);
     expect(onNavigateToChats).toHaveBeenCalledTimes(1);
+  });
+
+  it('hides the Ask AI TA button when the ai differentiation preference is disabled', async () => {
+    (useAppSelector as jest.Mock).mockReturnValue(false);
+    await renderAndSettle(<LessonSummaryScreen {...DEFAULT_PROPS} />);
+    await waitFor(() =>
+      expect(screen.getByText('Common Misconceptions')).toBeInTheDocument()
+    );
+    expect(
+      screen.queryByRole('button', {name: /ask ai teaching assistant/i})
+    ).not.toBeInTheDocument();
   });
 });

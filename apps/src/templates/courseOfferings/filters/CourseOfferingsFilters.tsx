@@ -95,6 +95,7 @@ const CourseOfferingsFilters = <TFilterKey extends string = string>({
               onClearAll={() => onClearAllOfOneFilter(typedName)}
               selectAllText={i18n.selectAll()}
               clearAllText={i18n.clearAll()}
+              doneText="Done"
               size="s"
             />
           );

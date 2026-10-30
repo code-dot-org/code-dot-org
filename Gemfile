@@ -110,7 +110,7 @@ group :development, :test do
 
   gem 'faker', '~> 3.4', require: false
   gem 'fakeredis', require: false
-  gem 'mocha', '~> 1.2.1', require: false
+  gem 'mocha', '~> 2.2.0', require: false
   gem 'timecop', '>= 0.9.4' # required for Ruby 3.1 support
 
   # For UI testing.
@@ -120,7 +120,7 @@ group :development, :test do
   gem 'minitest', '~> 5.15'
   gem 'minitest-around'
   gem 'minitest-rails', '~> 7.0', require: false
-  gem 'minitest-reporters', '~> 1.2.0.beta3'
+  gem 'minitest-reporters', '~> 1.6.1'
   gem 'minitest-spec-context', '~> 0.0.3'
   gem 'minitest-stub-const', '~> 0.6'
   gem 'net-http-persistent'
@@ -162,12 +162,6 @@ gem 'puma', git: 'https://github.com/puma/puma.git', ref: '42161dd0fc3f3ad9d5135
 
 gem 'chronic', '~> 0.10.2'
 
-gem 'sass-rails', '~> 6.0.0'
-# Temporarily use our own fork of sassc-rails (a dependency of sass-rails),
-# while we try to get some bugs fixed upstream.
-# See https://github.com/sass/sassc-rails/pull/153 for context.
-gem 'sassc-rails', github: 'code-dot-org/sassc-rails', ref: 'frozen-array-fix'
-
 # Use jquery as the JavaScript library.
 gem 'jquery-rails'
 
@@ -191,9 +185,8 @@ gem 'omniauth-microsoft_v2_auth', github: 'dooly-ai/omniauth-microsoft_v2_auth'
 # see: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-9284
 gem 'omniauth-rails_csrf_protection', '~> 1.0.2'
 
-# Target the same version of Bootstrap as we use in Javascript while we work on
-# moving all assets into the JS pipeline.
-gem 'bootstrap-sass', '~> 3.4.1'
+# Used by legacy SharedResources middleware; can be removed once we're no
+# longer serving CSS from /shared
 gem 'sass', '~> 3.2'
 
 gem 'haml', '~> 5.2.0'
@@ -267,6 +260,7 @@ gem 'aws-sdk-s3', '~> 1.113'
 gem 'aws-sdk-sagemaker'
 gem 'aws-sdk-sagemakerruntime'
 gem 'aws-sdk-secretsmanager'
+gem 'aws-sdk-ssm'
 
 # Lint tools
 group :development, :staging, :levelbuilder, :test do
@@ -341,17 +335,6 @@ gem 'recaptcha', require: 'recaptcha/rails'
 
 gem 'loofah', '~> 2.19.1'
 
-# Install pg gem only on specific production hosts.
-require_pg = lambda do
-  require 'socket'
-  %w[production-daemon production-console].include?(Socket.gethostname)
-end
-
-install_if require_pg do
-  # v1.3.0 required to support Postgres 14
-  gem 'pg', '~> 1.3.0', require: false
-end
-
 gem 'activerecord-import', '~> 1.7.0'
 gem 'active_record_union'
 gem 'scenic'
@@ -404,12 +387,6 @@ gem 'rubyzip'
 Dir[Bundler.root.join('{,dashboard/}engines/*/*.gemspec')].sort.each do |gemspec_path|
   gem File.basename(gemspec_path, '.gemspec'), path: '.', glob: '{,dashboard/}engines/*/*.gemspec'
 end
-
-# OpenSSL 3.6 broke Ruby's OpenSSL bindings, see: https://github.com/ruby/openssl/issues/949
-# By using the openssl gem, we can pick up the fixes without needing to upgrade Ruby.
-# This gem line can be removed once we upgrade to Ruby 3.4 >= 3.4.8, or Ruby 3.3 >= 3.3.10 or Ruby 3.2 >= 3.2.10
-# which will include the openssl fix by default, see: https://github.com/ruby/openssl/issues/949#issuecomment-3388132260
-gem 'openssl', '>= 3.3.1'
 
 # Used for Clever Client
 gem 'typhoeus', '~> 1.0', '>= 1.0.1'

@@ -1,0 +1,27 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-10-23T06:27:28.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "title": "Check Your Understanding",
+    "long_instructions": "> A city bus program uses this code to find a rider's fare:\r\n>\r\n> ```python\r\n> fare = 3\r\n> is_student = age < 25\r\n> if is_student:\r\n>     fare = 2\r\n> is_senior = age >= 65\r\n> if is_senior:\r\n>     fare = 1\r\n> ```\r\n>\r\n> 1. **Write a comment** to put above this code. Explain what the code is for, not what each line does.\r\n>\r\n> 2. Then **name the input and the output** of this code. For example, \"Input: ..., Output: ...\"",
+    "stay_on_level_after_submit": "false",
+    "height": "50",
+    "encrypted_solution": "nL2RfY+UvQdtPCYOpiM1Apn0HFrDBurAU12pIDd/8cXjZxqKCF+TPQUXjNxZ\nwj+/vAmbSbcuNKq+PIHVSPSniTz90UxE4Lpj0Zo8l4rzvLYJ3nYxgq1bvjBz\nKnN4bQvWbzu1Z0FnOuQ4HhLYKjl/odwtozTBkZ3Zu7mLnor2qOESJ10Nuprk\nh/M+HX0HDT+JOsmr34JCWiBL85zX0CgOL2WyehsAZL4rbbSHQzbb8Js=\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2026-10-23T06:27:28.609+00:00\",\"changed\":[\"cloned from \\\"csp-unit2-lesson8-cfu2_27_28\\\"\"],\"cloned_from\":\"csp-unit2-lesson8-cfu2_27_28\"},{\"changed_at\":\"2026-10-23 06:30:15 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-10-23 06:31:00 +0000\",\"changed\":[\"encrypted_solution\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-10-23 06:31:10 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

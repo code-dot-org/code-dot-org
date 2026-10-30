@@ -23,38 +23,111 @@
     "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
     "level_mode": {
       "kind": "world",
-      "imageType": "block"
+      "imageType": "block",
+      "imageRole": "block",
+      "sentence": "block",
+      "imageFirst": true,
+      "generatedInstructions": "**AI generated an image based on your prompt.**",
+      "paintInstructions": "**Draw a block.**"
+    },
+    "image_role_defaults": {
+      "block": "block"
     },
     "pinned_scene": {
       "id": "platform-scene",
       "name": "Platformer",
       "type": "platform"
     },
-    "world_start_pattern": [
-      "..........",
-      "..........",
-      "BB......BB",
-      "..........",
-      "....BB....",
-      "..........",
-      ".BB....BB.",
-      "....S.....",
-      "...BBBB...",
-      ".........."
-    ],
-    "guide_steps": [
-      {
-        "text": "**Make this world yours.** Pick your block in the palette and paint platforms onto the grid - add blocks, erase blocks, build new paths and towers. Then click **Play** to try your layout."
-      },
-      {
-        "text": "**You built a platformer!** Run and jump through what you made, then continue when you're ready.",
-        "showContinue": true,
-        "after": {
-          "tab": "Play"
+    "objectives": {
+      "title": "**Make this world yours**",
+      "items": [
+        {
+          "text": "Prompt AI to make a block.",
+          "check": {
+            "kind": "image",
+            "imageType": "block"
+          }
+        },
+        {
+          "text": "Add platforms on the grid.",
+          "check": {
+            "kind": "world",
+            "changed": true
+          }
+        },
+        {
+          "text": "Click **Play** and jump to the top.",
+          "check": {
+            "kind": "reach",
+            "height": 0.7
+          }
         }
-      }
-    ],
-    "long_instructions": "# Make this world yours\nPaint platforms onto the grid in the World tab - add blocks, erase blocks, build new paths and towers. Then press **Play** to try your layout."
+      ]
+    },
+    "long_instructions": "# Make this world yours\nMake your own block, then add platforms on the grid. Click **Play** and get to the top.",
+    "header_label": "Make a platformer",
+    "world_start_pattern": [
+      [
+        "..........",
+        "..........",
+        "..........",
+        "..........",
+        "....BB....",
+        "..........",
+        ".BB....BB.",
+        "....S.....",
+        "...BBBB...",
+        ".........."
+      ],
+      [
+        "..........",
+        "..........",
+        "..........",
+        "..........",
+        ".....BB...",
+        "..........",
+        "...BB...BB",
+        ".S........",
+        "BBB...BB..",
+        ".........."
+      ],
+      [
+        "..........",
+        "..........",
+        "..........",
+        "..........",
+        ".BB....BB.",
+        "..........",
+        "..BB..BB..",
+        "....S.....",
+        "...BBBB...",
+        ".........."
+      ],
+      [
+        "..........",
+        "..........",
+        "..........",
+        "BBB.......",
+        ".....BB...",
+        "..........",
+        "...BB..BB.",
+        ".S........",
+        "BBB..BBBBB",
+        ".........."
+      ],
+      [
+        "..........",
+        "..........",
+        "..........",
+        "..........",
+        "..........",
+        "...BBBB...",
+        "..........",
+        "BB......BB",
+        "....S.....",
+        "...BBBB..."
+      ]
+    ]
   }
 }]]></config>
 </GamelabJr>

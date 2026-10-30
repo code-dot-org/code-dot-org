@@ -1,0 +1,12 @@
+name 'ai-and-the-systems-that-power-it-lesson7-choice'
+display_name 'Sensors in Careers'
+description 'Select the career you are interested in below to see how we collect data with sensors'
+
+sublevels
+level 'ai-and-the-systems-that-power-it-lesson7-amara'
+level 'ai-and-the-systems-that-power-it-lesson7-joaquin'
+level 'ai-and-the-systems-that-power-it-lesson7-denise'
+level 'ai-and-the-systems-that-power-it-lesson7-marcus'
+level 'ai-and-the-systems-that-power-it-lesson7-layla'
+
+uses_lab2

@@ -4,7 +4,7 @@ wrong 'To print a value to the screen so that the user can see it'
 right 'To produce output that can be used later in a program'
 wrong 'To end the Python program so that no more lines of code run'
 wrong 'To give a value a name that the function can use later'
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Why might it be useful to return a value from a Python function?

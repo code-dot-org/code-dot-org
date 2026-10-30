@@ -10,10 +10,15 @@ import AichatContextManager from '../aichat/aichatContextManager';
 
 import {
   CURRENT_SCHEMA_VERSION,
-  GatewayTranscribeResponseV1Schema,
-  type GatewayTranscribeResponseV1,
+  CurrentGatewayTranscribeResponseSchema,
+  type CurrentGatewayTranscribeResponse,
 } from './contract/gatewaySchemas';
 import {reportGatewayError} from './logHelper';
+import {
+  recordGatewayRequestError,
+  recordGatewayRequestOk,
+  recordTokenNotIssued,
+} from './requestMetric';
 import {AI_GATEWAY_URL, fetchAccessToken, getModelString} from './shared';
 import {
   fetchTurnstileToken,
@@ -38,7 +43,11 @@ async function transcribeThroughGateway(
     try {
       // Serialized, not parallel: the access token response carries the
       // Turnstile mode that decides whether a challenge is needed at all.
-      const {token, turnstileEnforcementMode} = await fetchAccessToken();
+      const access = await fetchAccessToken().catch((error: unknown) => {
+        recordTokenNotIssued();
+        throw error;
+      });
+      const {token, turnstileEnforcementMode} = access;
       const turnstileToken = await fetchTurnstileToken(
         turnstileEnforcementMode
       );
@@ -62,11 +71,15 @@ async function transcribeThroughGateway(
           'x-ai-gateway-phase': 'transcription',
           ...turnstileHeaders(turnstileToken),
         }
-      );
+      ).catch(async (error: unknown) => {
+        await recordGatewayRequestError(access.signingKey, error);
+        throw error;
+      });
+      recordGatewayRequestOk(access.signingKey);
 
       const rawResponse = await response.json();
       const parseResult =
-        GatewayTranscribeResponseV1Schema.safeParse(rawResponse);
+        CurrentGatewayTranscribeResponseSchema.safeParse(rawResponse);
       if (!parseResult.success) {
         await reportGatewayError(
           parseResult.error,
@@ -81,7 +94,7 @@ async function transcribeThroughGateway(
       }
       const wire = parseResult.success
         ? parseResult.data
-        : (rawResponse as GatewayTranscribeResponseV1);
+        : (rawResponse as CurrentGatewayTranscribeResponse);
 
       return {
         ...wire,

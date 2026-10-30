@@ -5,7 +5,7 @@ wrong 'To measure how much data was missing from the training data'
 wrong "To measure how much a change to a model's input will affect its output"
 right "To measure how good or bad a model's predictions are"
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 What purpose does a loss function serve in machine learning?

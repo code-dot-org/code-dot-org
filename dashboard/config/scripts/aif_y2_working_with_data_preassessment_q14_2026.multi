@@ -5,7 +5,7 @@ wrong 'Analyzing data'
 wrong 'Communicating findings'
 wrong 'Learning new tools'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Data scientists tend to report spending most of their time...

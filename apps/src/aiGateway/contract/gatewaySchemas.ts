@@ -245,6 +245,26 @@ export const GatewayTranscribeResponseV1Schema = z.object({
 });
 
 // ---------------------------------------------------------------------------
+// Schema version 2
+// ---------------------------------------------------------------------------
+// A version covers the whole API, not one endpoint: the worker resolves one
+// version per request and looks up a serializer by it, so an endpoint with no
+// V2 entry would be an undefined lookup. Unchanged shapes are re-exported.
+
+export const GatewayGenerateTextResponseV2Schema =
+  GatewayGenerateTextResponseV1Schema.extend({
+    // Detached JWS over a digest of `text`; see AichatResponseSignature.
+    // Optional: absent with no signing key, and for the finish reasons that
+    // withhold `text`.
+    responseSignature: z.string().optional(),
+  });
+
+const GatewayGenerateTextRequestV2Schema = GatewayGenerateTextRequestV1Schema;
+const GatewayTranscribeRequestV2Schema = GatewayTranscribeRequestV1Schema;
+export const GatewayTranscribeResponseV2Schema =
+  GatewayTranscribeResponseV1Schema;
+
+// ---------------------------------------------------------------------------
 // Exported inferred types — use these in runtime code instead of hand-rolling
 // parallel type definitions.
 // ---------------------------------------------------------------------------
@@ -261,6 +281,12 @@ export type GatewayTranscribeRequestV1 = z.infer<
 export type GatewayTranscribeResponseV1 = z.infer<
   typeof GatewayTranscribeResponseV1Schema
 >;
+export type GatewayGenerateTextResponseV2 = z.infer<
+  typeof GatewayGenerateTextResponseV2Schema
+>;
+export type GatewayTranscribeResponseV2 = z.infer<
+  typeof GatewayTranscribeResponseV2Schema
+>;
 
 // ---------------------------------------------------------------------------
 // Versioned schema maps — the authoritative list of "what versions exist".
@@ -270,18 +296,22 @@ export type GatewayTranscribeResponseV1 = z.infer<
 
 export const generateTextRequestSchemas: Record<number, z.ZodTypeAny> = {
   1: GatewayGenerateTextRequestV1Schema,
+  2: GatewayGenerateTextRequestV2Schema,
 };
 
 export const generateTextResponseSchemas: Record<number, z.ZodTypeAny> = {
   1: GatewayGenerateTextResponseV1Schema,
+  2: GatewayGenerateTextResponseV2Schema,
 };
 
 export const transcribeRequestSchemas: Record<number, z.ZodTypeAny> = {
   1: GatewayTranscribeRequestV1Schema,
+  2: GatewayTranscribeRequestV2Schema,
 };
 
 export const transcribeResponseSchemas: Record<number, z.ZodTypeAny> = {
   1: GatewayTranscribeResponseV1Schema,
+  2: GatewayTranscribeResponseV2Schema,
 };
 
 export const ALL_GATEWAY_SCHEMA_GROUPS: Record<
@@ -301,4 +331,23 @@ export const ALL_GATEWAY_SCHEMA_GROUPS: Record<
 // version is introduced.
 // ---------------------------------------------------------------------------
 
-export const CURRENT_SCHEMA_VERSION = '1' as const;
+export const CURRENT_SCHEMA_VERSION = '2' as const;
+
+// ---------------------------------------------------------------------------
+// Current-version response schemas — what the client parses replies with.
+// ---------------------------------------------------------------------------
+// Parsing with an older version silently drops the newer fields: z.object()
+// strips unknown keys and callers use the parsed result. Separate exports
+// rather than a map lookup, which would erase the inferred types.
+
+export const CurrentGatewayGenerateTextResponseSchema =
+  GatewayGenerateTextResponseV2Schema;
+export const CurrentGatewayTranscribeResponseSchema =
+  GatewayTranscribeResponseV2Schema;
+
+export type CurrentGatewayGenerateTextResponse = z.infer<
+  typeof CurrentGatewayGenerateTextResponseSchema
+>;
+export type CurrentGatewayTranscribeResponse = z.infer<
+  typeof CurrentGatewayTranscribeResponseSchema
+>;

@@ -258,7 +258,7 @@ module LevelsHelper
     # and get the backpack channel token if it exists.
     # Backpack is used in lab2 apps also but app_options is only used by legacy labs.
     backpack_enabled = !!(@level.is_a?(Javalab) &&
-      (ProjectsController::STANDALONE_PROJECTS["javalab"]["name"] != @level.name) &&
+      (Policies::StandaloneProjects.all["javalab"]["name"] != @level.name) &&
       (@user || current_user))
 
     view_options(backpack_enabled: backpack_enabled)
@@ -459,6 +459,7 @@ module LevelsHelper
     app_options = {}
     app_options[:level] ||= {}
     app_options[:level].merge! @level.widget_app_options
+    app_options[:level].merge! level_view_options(@level.id).camelize_keys
     app_options.merge! view_options.camelize_keys
     set_puzzle_position_options(app_options[:level])
     app_options
@@ -1028,8 +1029,11 @@ module LevelsHelper
       s3_args[:version_id] = code_version if code_version
       begin
         body = s3.get_object(s3_args)[:body].read
+      # Opening a level creates its channel; main.json appears only on first save.
+      rescue Aws::S3::Errors::NoSuchKey, Aws::S3::Errors::NoSuchVersion, Aws::S3::Errors::InvalidArgument
+        return
       rescue => exception
-        Observability::Errors.report(exception, context: {message: "No code sample found in S3 with with args: #{s3_args}"})
+        Observability::Errors.report(exception, context: {message: "Failed to read student code from S3 with args: #{s3_args}"})
         return
       end
       student_code = nil

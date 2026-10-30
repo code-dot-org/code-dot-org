@@ -11,9 +11,6 @@ $(document).ready(function () {
 
   createReactRoot(
     <MiniMusicPlayer projects={channelIds} libraryName="launch2024" />,
-    document.getElementById('musiclab-container'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.getElementById('musiclab-container')
   );
 });

@@ -9,11 +9,9 @@ import {SourcesStore} from './SourcesStore';
 // to S3 verbatim. Java Lab is the exception: its S3 payload must remain
 // in the legacy flat shape that Javabuilder reads, so it gets a subclass
 // that converts at the wire boundary.
-export function getSourcesStoreForApp(
-  appName: AppName | undefined
-): SourcesStore {
+export function getSourcesStoreForApp(appName: AppName): SourcesStore {
   if (appName === 'javalab') {
     return new JavalabSourcesStore();
   }
-  return new SourcesStore();
+  return new SourcesStore(appName);
 }

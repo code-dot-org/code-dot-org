@@ -1,113 +1,50 @@
 import {getFolderPath} from '@codebridge/utils';
-import {useMemo} from 'react';
+import {useCallback} from 'react';
 
-import {ResponseSchemaSettings} from '@cdo/apps/aichat/types';
-import {formatCopyPasteResponse} from '@cdo/apps/aiTutor/helpers/aiTutorResponseHelpers';
-import {
-  setProjectSourceBeforeAiTutorVersion,
-  setSource,
-  setViewingAiTutorVersion,
-  setAiTutorVersionFiles,
-} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
+import {useSharedAiTutorResponseSchemaSettings} from '@cdo/apps/aiTutor/hooks/useSharedAiTutorResponseSchemaSettings';
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
-import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
-import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {
   acceptRejectAnswerTypes,
-  AiTutorAcceptRejectResponse,
+  acceptRejectFileTypes,
   aiTutorResponseJsonSchema,
-  formatAcceptRejectResponse,
-  getMergedAiTutorCodeWithSource,
-  isAcceptRejectCodeFileTypes,
 } from '../helpers/aiTutorStructuredResponseHelper';
 import {setAiFilePathToPreview} from '../weblab2Redux';
 
-/**
- * Custom hook that provides AI tutor response schema settings based on the current
- * AI tutor mode and experimental flags. Handles the complete flow of processing
- * AI tutor responses including accept/reject functionality.
- */
 export const useAiTutorResponseSchemaSettings = (
   source: MultiFileSource | undefined,
   isWidgetView?: boolean
-): ResponseSchemaSettings | undefined => {
+) => {
   const dispatch = useAppDispatch();
 
-  return useMemo(() => {
-    return {
-      jsonSchema: aiTutorResponseJsonSchema,
-      // Only ever invoked with the already-parsed jsonSchema response --
-      // submitChatContents parses it once, upstream of this callback.
-      jsonSchemaResponseCallback: (response: unknown) => {
-        const jsonResponse = response as {
-          answer: AiTutorAcceptRejectResponse;
-        };
-        console.log('🤖: AI Tutor response (in jsonSchema callback):', {
-          jsonResponse,
-        });
-        const formattedResponse = formatAcceptRejectResponse(
-          jsonResponse.answer
-        );
-        const answerType = formattedResponse.answerType;
-        const files = formattedResponse.code;
-        if (
-          !acceptRejectAnswerTypes.includes(answerType) ||
-          !isAcceptRejectCodeFileTypes(files) ||
-          isWidgetView
-        ) {
-          return formatCopyPasteResponse(jsonResponse.answer);
-        }
-        sendLab2AnalyticsEvent(EVENTS.AI_TUTOR_GENERATED_CODE, {
-          answerType,
-        });
-        const aiTutorVersionFiles: ProjectFile[] = [];
-        const mergedSourceVersion = getMergedAiTutorCodeWithSource(
-          formattedResponse.code,
-          source as MultiFileSource,
-          aiTutorVersionFiles
-        ) as MultiFileSource;
+  const onAiTutorVersionLoaded = useCallback(
+    (mergedSource: MultiFileSource, aiTutorVersionFiles: ProjectFile[]) => {
+      const firstHtmlFile = aiTutorVersionFiles.find(file =>
+        file.name.endsWith('.html')
+      );
+      if (!firstHtmlFile) {
+        return;
+      }
+      const folderPath = getFolderPath(
+        firstHtmlFile.folderId,
+        mergedSource.folders
+      ).substring(1);
+      const filePath =
+        folderPath === ''
+          ? firstHtmlFile.name
+          : folderPath + '/' + firstHtmlFile.name;
+      dispatch(setAiFilePathToPreview({path: filePath, timestamp: Date.now()}));
+    },
+    [dispatch]
+  );
 
-        // If no AI-updated files, return explanation without entering the
-        // read-only "viewing AI tutor version" accept/reject flow.
-        if (aiTutorVersionFiles.length === 0) {
-          return formattedResponse.explanation;
-        }
-
-        // When viewing AI Tutor version, store current sources as projectSourceBeforeAiTutorVersion.
-        // Workspace will be read-only until user clicks "accept" or "reject".
-
-        // If user clicks "reject", go back to projectSourceBeforeAiTutorVersion.
-        // If user clicks "accept":
-        // - force save a version for projectSourceBeforeAiTutorVersion (if there were any updates since the last saved version).
-        // - force save an AI version for AI tutor version with commit message 'AI***SAVE' + required user description.
-        // - workspace is now editable.
-        // - sources are updated with the newer updated AI files, but AI flags removed.
-        dispatch(setViewingAiTutorVersion(true));
-        dispatch(setAiTutorVersionFiles(aiTutorVersionFiles));
-        dispatch(setProjectSourceBeforeAiTutorVersion(source));
-        dispatch(setSource(mergedSourceVersion));
-
-        // Set the preview path to the first AI-updated HTML file, if it exists.
-        const firstHtmlFile = aiTutorVersionFiles.find(file => {
-          return file.name.endsWith('.html');
-        });
-        if (firstHtmlFile) {
-          const folderPath = getFolderPath(
-            firstHtmlFile.folderId,
-            mergedSourceVersion.folders
-          ).substring(1);
-          const filePath =
-            folderPath === ''
-              ? firstHtmlFile.name
-              : folderPath + '/' + firstHtmlFile.name;
-          dispatch(
-            setAiFilePathToPreview({path: filePath, timestamp: Date.now()})
-          );
-        }
-        return formattedResponse.explanation;
-      },
-    };
-  }, [dispatch, source, isWidgetView]);
+  return useSharedAiTutorResponseSchemaSettings({
+    source,
+    isWidgetView,
+    jsonSchema: aiTutorResponseJsonSchema,
+    acceptRejectAnswerTypes,
+    acceptRejectFileTypes,
+    onAiTutorVersionLoaded,
+  });
 };

@@ -1,0 +1,20 @@
+<Ailab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 67,
+  "created_at": "2026-10-28T21:08:06.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "mode": "{\r\n  \"trainer\": \"decisionTree\",\r\n  \"reserveLastRows\": true,\r\n  \"datasets\": [\r\n    \"SC1-L07-previs-variant-famous-actor\"\r\n  ]\r\n}",
+    "uses_lab2": "true",
+    "dynamic_instructions": "{\r\n  \"datasetView\": \"#Add one feature\\n\\nUse your new feature [Famous Actor] and experiment with other feature(s) in order to train your tree\",\r\n  \"results\": \"#Test the Tree\\n\\nRun several different combinations and try to get the most accurate tree possible.,\\n\"\r\n}",
+    "display_name": "Famous Actor",
+    "bubble_choice_description": "Add a feature to your dataset: Famous Actor",
+    "thumbnail_url": "https://images.code.org/a49b8925269fe39e5fbc4fe0c767e30b-famous-actor-card.jpg"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-10-28T21:08:06.935+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-lesson7-ai-studio5a\\\"\"],\"cloned_from\":\"data-makes-ai-lesson7-ai-studio5a\"},{\"changed_at\":\"2026-10-28 21:08:35 +0000\",\"changed\":[\"dynamic_instructions\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-29 14:26:30 +0000\",\"changed\":[\"mode\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Ailab>

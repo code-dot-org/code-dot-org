@@ -1,5 +1,6 @@
 require 'test_reporter'
 require 'faker'
+require 'tmpdir'
 
 require_relative '../../lib/cdo/ci_utils'
 
@@ -29,9 +30,12 @@ ENV['TZ'] = 'UTC'
 # but running unit tests in the test env for developers only sets
 # RAILS ENV. We fix it above but we need to reload some stuff...
 
-require 'mocha/mini_test'
+require 'mocha/minitest'
 
-CDO.stubs(:rack_env).returns(:test) if defined? CDO
+if defined? CDO
+  Mocha::Mockery.setup
+  CDO.stubs(:rack_env).returns(:test)
+end
 Rails.application&.reload_routes! if defined?(Rails) && defined?(Rails.application)
 
 require File.expand_path('../../config/environment', __FILE__)
@@ -58,10 +62,8 @@ end
 I18n.load_path += Dir[Rails.root.join('test', 'en.yml')]
 I18n.backend.reload!
 I18n.fallbacks[:'te-ST'] = [:'te-ST', :'en-US', :en]
-CDO.stubs(override_pegasus: nil)
-CDO.stubs(override_dashboard: nil)
 
-Dashboard::Application.routes.default_url_options = {protocol: 'https', host: CDO.dashboard_hostname, port: nil}
+Dashboard::Application.routes.default_url_options = {protocol: 'https', host: 'test-studio.code.org', port: nil}
 Dashboard::Application.config.action_mailer.default_url_options = Dashboard::Application.routes.default_url_options
 Devise.mailer.default_url_options = Dashboard::Application.routes.default_url_options
 
@@ -275,6 +277,17 @@ class ActiveSupport::TestCase
 
   def set_request_locale(locale)
     I18n.locale = locale
+  end
+
+  # Points Rails.root at an empty directory for the block, so a test can write
+  # curriculum files there instead of into the repo's trees.
+  def with_tmp_rails_root
+    Dir.mktmpdir do |dir|
+      Rails.stubs(:root).returns(Pathname.new(dir))
+      yield Rails.root
+    ensure
+      Rails.unstub(:root)
+    end
   end
 
   def with_default_locale(locale)
