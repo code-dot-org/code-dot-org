@@ -530,7 +530,7 @@ GEM
     hashie (5.0.0)
     highline (3.1.0)
       reline
-    honeybadger (5.1.0)
+    honeybadger (4.12.1)
     http (5.3.1)
       addressable (~> 2.8)
       http-cookie (~> 1.0)
@@ -1260,7 +1260,7 @@ DEPENDENCIES
   haml_lint
   highline (~> 3.1.0)
   hoc_legacy!
-  honeybadger (~> 5.1.0)
+  honeybadger (>= 4.5.6)
   http (~> 5.3.1)
   httparty (~> 0.24)
   image_optim!
