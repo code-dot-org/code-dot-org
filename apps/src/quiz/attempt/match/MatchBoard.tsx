@@ -1,19 +1,34 @@
+import classNames from 'classnames';
 import React, {useLayoutEffect, useRef, useState} from 'react';
 
 import MatchColumn from './MatchColumn';
 import {MatchPairs, MatchSelection, MatchSets, MatchSide} from './types';
+import {PairStatus, pairStatus} from './utils';
 
 import styles from './match-question-container.module.scss';
 
 export interface MatchBoardProps {
   matchSets: MatchSets;
   pairs: MatchPairs;
-  label: string;
+  // One of label or labelledBy names the board.
+  label?: string;
+  labelledBy?: string;
   // Omit for a read-only board, as in results.
   onClickItem?: (side: MatchSide, id: string) => void;
   selection?: MatchSelection;
   disabled?: boolean;
+  // Marks each pair in pairs as correct or incorrect.
+  correctPairs?: MatchPairs;
+  // Shows pairs as the answer key: marked correct, but not announced as such,
+  // since the board's name already says so.
+  isAnswerKey?: boolean;
   describedBy?: string;
+}
+
+interface Line {
+  key: string;
+  path: string;
+  status?: PairStatus;
 }
 
 interface Point {
@@ -38,10 +53,13 @@ const MatchBoard: React.FunctionComponent<MatchBoardProps> = ({
   onClickItem,
   selection = {},
   disabled,
+  correctPairs,
+  isAnswerKey,
   label,
+  labelledBy,
   describedBy,
 }) => {
-  const [linePaths, setLinePaths] = useState<string[]>([]);
+  const [lines, setLines] = useState<Line[]>([]);
   const boardRef = useRef<HTMLDivElement>(null);
   const dotRefs = useRef(new Map<string, HTMLElement>());
 
@@ -63,11 +81,21 @@ const MatchBoard: React.FunctionComponent<MatchBoardProps> = ({
             }
           : null;
       };
-      setLinePaths(
+      setLines(
         pairs.flatMap(([startId, endId]) => {
           const start = centerOf(startId);
           const end = centerOf(endId);
-          return start && end ? [curvePath(start, end)] : [];
+          return start && end
+            ? [
+                {
+                  key: `${startId}:${endId}`,
+                  path: curvePath(start, end),
+                  status: isAnswerKey
+                    ? 'correct'
+                    : correctPairs && pairStatus(pairs, correctPairs, startId),
+                },
+              ]
+            : [];
         })
       );
     };
@@ -81,7 +109,7 @@ const MatchBoard: React.FunctionComponent<MatchBoardProps> = ({
       .querySelectorAll(`.${styles.card}`)
       .forEach(card => observer.observe(card));
     return () => observer.disconnect();
-  }, [pairs, matchSets]);
+  }, [pairs, matchSets, correctPairs, isAnswerKey]);
 
   const dotRef = (id: string, element: HTMLElement | null) => {
     if (element) {
@@ -97,11 +125,19 @@ const MatchBoard: React.FunctionComponent<MatchBoardProps> = ({
       className={styles.board}
       role="group"
       aria-label={label}
+      aria-labelledby={labelledBy}
       aria-describedby={describedBy}
     >
       <svg className={styles.lines} aria-hidden="true">
-        {linePaths.map(path => (
-          <path key={path} d={path} className={styles.line} />
+        {lines.map(({key, path, status}) => (
+          <path
+            key={key}
+            d={path}
+            className={classNames(styles.line, {
+              [styles.lineCorrect]: status === 'correct',
+              [styles.lineIncorrect]: status === 'incorrect',
+            })}
+          />
         ))}
       </svg>
       {(['start', 'end'] as const).map(side => (
@@ -114,6 +150,8 @@ const MatchBoard: React.FunctionComponent<MatchBoardProps> = ({
           onClickItem={onClickItem && (id => onClickItem(side, id))}
           dotRef={dotRef}
           disabled={disabled}
+          correctPairs={correctPairs}
+          isAnswerKey={isAnswerKey}
         />
       ))}
     </div>

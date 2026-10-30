@@ -42,6 +42,22 @@ export function findPartner(pairs: MatchPairs, id: string): string | undefined {
   return undefined;
 }
 
+export type PairStatus = 'correct' | 'incorrect';
+
+// Undefined for an unpaired item, which has no pair to mark.
+export function pairStatus(
+  pairs: MatchPairs,
+  correctPairs: MatchPairs,
+  id: string
+): PairStatus | undefined {
+  const answeredPartnerId = findPartner(pairs, id);
+  if (!answeredPartnerId) {
+    return undefined;
+  }
+  const correctPartnerId = findPartner(correctPairs, id);
+  return answeredPartnerId === correctPartnerId ? 'correct' : 'incorrect';
+}
+
 // Each start item has a letter by position.
 export function letterOf(matchSets: MatchSets, id: string): string | undefined {
   const index = itemsInColumn(matchSets, 'start').findIndex(
