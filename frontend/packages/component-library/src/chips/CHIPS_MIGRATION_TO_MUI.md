@@ -486,8 +486,10 @@ export of `@code-dot-org/component-library/chips`; the ESLint rule in
 Parity: the five twins carry the Execute PR's Storybook gate; the sweep
 changed no package source, so it was not rerun.
 
-Apps parity: not sampled. No local studio was reachable during the run, so
-the three samples above are still owed before the consumer PR leaves draft.
+Apps parity: sampled after the run on a local studio (webpack dev server).
+The three samples above, in eight states, are pixel-identical before and
+after the consumer PR, and each consumer's behavior was checked there; see
+#76496.
 
 Codemod: rewrote the five source files, each to
 `import {MuiChips as Chips} from '@code-dot-org/component-library/chips'`,
