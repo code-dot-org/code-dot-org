@@ -3,7 +3,13 @@ import classNames from 'classnames';
 import React from 'react';
 
 import {MatchPairs, MatchSets, MatchSide} from './types';
-import {findPartner, itemsInColumn, letterOf, getItemText} from './utils';
+import {
+  findPartner,
+  itemsInColumn,
+  letterOf,
+  getItemText,
+  pairStatus,
+} from './utils';
 
 import styles from './match-question-container.module.scss';
 
@@ -17,6 +23,8 @@ interface MatchColumnProps {
   // Receives each item's dot, which MatchBoard draws lines to.
   dotRef: (id: string, element: HTMLElement | null) => void;
   disabled?: boolean;
+  // Marks each paired card as correct or incorrect.
+  correctPairs?: MatchPairs;
 }
 
 const MatchColumn: React.FunctionComponent<MatchColumnProps> = ({
@@ -27,6 +35,7 @@ const MatchColumn: React.FunctionComponent<MatchColumnProps> = ({
   onClickItem,
   dotRef,
   disabled,
+  correctPairs,
 }) => {
   const ColumnTag = onClickItem ? 'div' : 'ul';
   return (
@@ -37,6 +46,7 @@ const MatchColumn: React.FunctionComponent<MatchColumnProps> = ({
       {itemsInColumn(matchSets, side).map(item => {
         const partnerId = findPartner(pairs, item.id);
         const isSelected = selectedId === item.id;
+        const status = correctPairs && pairStatus(pairs, correctPairs, item.id);
         // An end item shows its partner's letter once paired.
         const letter =
           side === 'start'
@@ -46,7 +56,9 @@ const MatchColumn: React.FunctionComponent<MatchColumnProps> = ({
           styles.card,
           side === 'end' && styles.end,
           {
-            [styles.cardActive]: partnerId || isSelected,
+            [styles.cardActive]: (partnerId || isSelected) && !status,
+            [styles.cardCorrect]: status === 'correct',
+            [styles.cardIncorrect]: status === 'incorrect',
           }
         );
         const content = (
@@ -77,6 +89,7 @@ const MatchColumn: React.FunctionComponent<MatchColumnProps> = ({
                 {partnerId
                   ? `, matched with ${getItemText(matchSets, partnerId)}`
                   : ', not matched'}
+                {status && `, ${status}`}
               </span>
             </li>
           );

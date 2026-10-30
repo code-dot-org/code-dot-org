@@ -1,0 +1,11 @@
+.matchAnswer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.correctAnswerLabel {
+  margin: 0;
+  color: var(--text-neutral-tertiary);
+}
