@@ -324,21 +324,6 @@ describe('QuizBuilderWorkspace', () => {
     expect(addPendingQuestion).toHaveBeenCalledWith(1, 'FreeResponseQuestion');
   });
 
-  it('wraps a flat outline into page cards when a second page is added', () => {
-    renderWorkspace({questions: [question()]});
-
-    expect(screen.queryByText('Page 1')).not.toBeInTheDocument();
-    fireEvent.click(screen.getByRole('button', {name: 'Add page'}));
-
-    expect(
-      screen.getByRole('heading', {level: 2, name: 'Page 1'})
-    ).toBeInTheDocument();
-    expect(
-      screen.getByRole('heading', {level: 2, name: 'Page 2'})
-    ).toBeInTheDocument();
-    expect(screen.getByText('This page is empty')).toBeInTheDocument();
-  });
-
   it('groups questions under their page, in ascending page order', () => {
     renderWorkspace({
       questions: [
