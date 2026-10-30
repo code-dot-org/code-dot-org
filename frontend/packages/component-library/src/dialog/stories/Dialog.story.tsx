@@ -1,7 +1,6 @@
+import {Button} from '@mui/material';
 import {Meta, StoryFn} from '@storybook/react-vite';
 import {useState} from 'react';
-
-import {Button} from '@/button';
 
 import Dialog, {DialogProps} from '../Dialog';
 
@@ -15,7 +14,9 @@ const SingleTemplate: StoryFn<DialogProps> = args => {
 
   return (
     <div>
-      <Button onClick={() => setIsOpen(true)} text="Open Dialog" />
+      <Button variant="contained" onClick={() => setIsOpen(true)}>
+        Open Dialog
+      </Button>
       {isOpen && (
         <Dialog
           {...args}
@@ -48,12 +49,14 @@ const MultipleTemplate: StoryFn<{
         {args.components?.map((componentArg, index) => (
           <div key={index}>
             <Button
+              variant="contained"
               key={`button-${index}`}
               onClick={() =>
                 setValues({...values, [`${index}${componentArg.title}`]: true})
               }
-              text={`Open ${componentArg.title}`}
-            />
+            >
+              {`Open ${componentArg.title}`}
+            </Button>
             {values[`${index}${componentArg.title}`] && (
               <Dialog
                 {...componentArg}
@@ -183,9 +186,11 @@ DialogWithCustomBottomContent.args = {
   customBottomContent: (
     <div>
       <Button
-        text="Extra Action"
+        variant="contained"
         onClick={() => alert('Extra action clicked!')}
-      />
+      >
+        Extra Action
+      </Button>
     </div>
   ),
   onClose: () => console.log('Dialog with custom bottom content closed'),

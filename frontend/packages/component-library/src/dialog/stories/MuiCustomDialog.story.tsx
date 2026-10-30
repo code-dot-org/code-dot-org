@@ -1,7 +1,6 @@
+import {Button} from '@mui/material';
 import {Meta, StoryFn} from '@storybook/react-vite';
 import {useState} from 'react';
-
-import {Button} from '@/button';
 
 import MuiCustomDialog, {MuiCustomDialogProps} from '../MuiCustomDialog';
 
@@ -20,7 +19,9 @@ const SingleTemplate: StoryFn<MuiCustomDialogProps> = args => {
 
   return (
     <div>
-      <Button onClick={() => setIsOpen(true)} text="Open Dialog" />
+      <Button variant="contained" onClick={() => setIsOpen(true)}>
+        Open Dialog
+      </Button>
       {isOpen && (
         <MuiCustomDialog
           {...args}
@@ -60,9 +61,11 @@ const MultipleTemplate: StoryFn<{
         {args.components?.map((componentArg, index) => (
           <div key={index}>
             <Button
+              variant="contained"
               onClick={() => setValues({...values, [`dialog-${index}`]: true})}
-              text={`Open ${componentArg.title || 'Dialog'}`}
-            />
+            >
+              {`Open ${componentArg.title || 'Dialog'}`}
+            </Button>
             {values[`dialog-${index}`] && (
               <MuiCustomDialog
                 {...componentArg}
