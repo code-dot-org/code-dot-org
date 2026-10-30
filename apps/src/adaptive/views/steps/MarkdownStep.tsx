@@ -4,7 +4,7 @@
 import {Button as MuiButton} from '@mui/material';
 import React, {useEffect, useMemo, useRef} from 'react';
 
-import {PANEL_CONTROLS_HEIGHT, fitPanel} from '@cdo/apps/panels/geometry';
+import {PANEL_CONTROLS_HEIGHT, fitPanel} from '@cdo/apps/panels/fitPanel';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import useElementSize from '@cdo/apps/util/hooks/useElementSize';
 

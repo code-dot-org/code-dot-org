@@ -4,7 +4,7 @@ import {
   PANEL_HORIZONTAL_MARGIN,
   PANEL_VERTICAL_MARGIN,
   fitPanel,
-} from '@cdo/apps/panels/geometry';
+} from '@cdo/apps/panels/fitPanel';
 
 describe('fitPanel', () => {
   const sideMargins = PANEL_HORIZONTAL_MARGIN * 2;

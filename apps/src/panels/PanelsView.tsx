@@ -20,7 +20,7 @@ import {useBrowserTextToSpeech} from '../sharedComponents/BrowserTextToSpeechWra
 import EnhancedSafeMarkdown from '../templates/EnhancedSafeMarkdown';
 import {commonI18n} from '../types/locale';
 
-import {PANEL_CONTROLS_HEIGHT, fitPanel} from './geometry';
+import {PANEL_CONTROLS_HEIGHT, fitPanel} from './fitPanel';
 import {DEFAULT_PANEL_LINK_WIDTH, Panel, PanelLink} from './types';
 
 import styles from './panelsView.module.scss';
