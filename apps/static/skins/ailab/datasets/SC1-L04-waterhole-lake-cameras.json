@@ -1,0 +1,47 @@
+{
+  "name": "SC1-L04-waterhole-lake-cameras",
+  "card": {
+    "description": "Made-up records from a wildlife park. Each record is one time someone checked the waterhole, and the label says if elephants visited.",
+    "source": "Made-up (simulated data). Cut from tools/recipes/SC1-L04-waterhole-master.csv by tools/waterhole-build.js",
+    "lastUpdated": "2026",
+    "context": {
+      "createdBy": "CodeAI",
+      "potentialUses": "Look for the features that go with elephants visiting the waterhole.",
+      "potentialMisuses": "These records are made up, so they may not match what real elephants do."
+    }
+  },
+  "defaultLabelColumn": "Elephants Visit",
+  "defaultIdColumn": "Photo ID",
+  "fields": [
+    {
+      "type": "categorical",
+      "id": "Photo ID",
+      "description": "The camera photo this record came from."
+    },
+    {
+      "type": "categorical",
+      "id": "Season",
+      "description": "Is it the wet season or the dry season?"
+    },
+    {
+      "type": "categorical",
+      "id": "Time of Day",
+      "description": "When was the waterhole checked: morning, afternoon or night?"
+    },
+    {
+      "type": "categorical",
+      "id": "Water Level",
+      "description": "Is the water level high or low?"
+    },
+    {
+      "type": "categorical",
+      "id": "Temperature",
+      "description": "Is it hot or cool?"
+    },
+    {
+      "type": "categorical",
+      "id": "Elephants Visit",
+      "description": "Do elephants visit the waterhole?"
+    }
+  ]
+}
