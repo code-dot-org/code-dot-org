@@ -12,8 +12,9 @@ export interface PackedWorld {
   /** One string per row from the top. A row left off, or a row shorter
       than the size, is empty where nothing is written. */
   rows: string[];
-  /** The cell each character draws. A character not listed is empty. */
-  legend: Record<string, WorldCell>;
+  /** The cell each character draws. A character not listed is empty, so a
+      world with nothing in it needs no legend. */
+  legend?: Record<string, WorldCell>;
 }
 
 // The characters a legend is written with, in the order they are handed out.
@@ -26,14 +27,12 @@ export function isPackedWorld(world: unknown): world is PackedWorld {
     !!packed &&
     typeof packed === 'object' &&
     Array.isArray(packed.rows) &&
-    typeof packed.size === 'number' &&
-    !!packed.legend &&
-    typeof packed.legend === 'object'
+    typeof packed.size === 'number'
   );
 }
 
 export function unpackWorld(packed: PackedWorld): World {
-  const {size, rows, legend} = packed;
+  const {size, rows, legend = {}} = packed;
   const grid = Array.from({length: size}, (_, row) =>
     Array.from({length: size}, (_, col) => {
       const cell = legend[rows[row]?.[col] ?? ''];
@@ -45,8 +44,13 @@ export function unpackWorld(packed: PackedWorld): World {
 
 /** The packed form of a world: one legend character per distinct cell, in
     order of first appearance, with empty cells and rows trimmed from the
-    ends. A world with more distinct cells than characters stays a grid. */
+    ends. A grid that is not square, or has more distinct cells than there
+    are characters, stays a grid. */
 export function packWorld(world: World): PackedWorld | World {
+  const size = world.grid.length;
+  if (world.grid.some(row => row.length !== size)) {
+    return world;
+  }
   const legend: Record<string, WorldCell> = {};
   const charFor = new Map<string, string>();
   for (const cell of world.grid.flat()) {
@@ -69,7 +73,7 @@ export function packWorld(world: World): PackedWorld | World {
   while (rows.length && rows[rows.length - 1] === '') {
     rows.pop();
   }
-  return {size: world.grid.length, rows, legend};
+  return {size, rows, legend};
 }
 
 /** The sources with every packed world expanded; the same object when none

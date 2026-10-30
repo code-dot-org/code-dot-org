@@ -14,23 +14,31 @@ describe('tabsForMode', () => {
     expect(tabsForMode({kind: 'image'})).toEqual(['Images']);
   });
 
-  it('puts Images first on a code or world level about one image', () => {
-    expect(tabsForMode({kind: 'code', imageType: 'background'})).toEqual([
+  it('puts Images first when the level asks for it', () => {
+    expect(tabsForMode({kind: 'code', imageFirst: true})).toEqual([
       'Images',
       'Code',
+      'Play',
+    ]);
+    expect(tabsForMode({kind: 'world', imageFirst: true})).toEqual([
+      'Images',
+      'World',
+      'Play',
+    ]);
+    expect(tabsForMode({kind: 'freeplay', imageFirst: true})).toEqual([
+      'Code',
+      'Images',
+      'World',
       'Play',
     ]);
     expect(tabsForMode({kind: 'world', imageType: 'sprite'})).toEqual([
-      'Images',
       'World',
       'Play',
     ]);
-    expect(tabsForMode({kind: 'freeplay', imageType: 'sprite'})).toEqual([
-      'Code',
-      'Images',
-      'World',
-      'Play',
-    ]);
+  });
+
+  it('leaves a kind it does not know on the lab default', () => {
+    expect(tabsForMode({kind: 'build'} as never)).toBeUndefined();
   });
 
   it('leaves a level with no mode on the lab default', () => {

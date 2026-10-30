@@ -19,7 +19,8 @@
     "level_mode": {
       "kind": "code",
       "imageType": "background",
-      "imageRole": "platform-background"
+      "imageRole": "platform-background",
+      "imageFirst": true
     },
     "pinned_scene": {
       "id": "scene-1",

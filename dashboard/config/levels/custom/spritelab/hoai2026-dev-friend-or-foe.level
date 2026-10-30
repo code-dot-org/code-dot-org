@@ -23,7 +23,8 @@
       "paletteRoles": [
         "friend",
         "block"
-      ]
+      ],
+      "imageFirst": true
     },
     "pinned_scene": {
       "id": "scene-1",

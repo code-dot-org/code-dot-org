@@ -34,7 +34,8 @@ describe('packedWorld', () => {
 
   it('recognizes only the packed form', () => {
     expect(isPackedWorld({size: 2, rows: [], legend})).toBe(true);
-    expect(isPackedWorld({size: 2, rows: []})).toBe(false);
+    expect(isPackedWorld({size: 2, rows: []})).toBe(true);
+    expect(unpackWorld({size: 1, rows: ['B']}).grid).toEqual([[null]]);
     expect(isPackedWorld({grid: [[null]]})).toBe(false);
     expect(isPackedWorld(undefined)).toBe(false);
   });
@@ -60,6 +61,8 @@ describe('packedWorld', () => {
       rows: [],
       legend: {},
     });
+    const oblong = {grid: [[legend.B, null, null]]};
+    expect(packWorld(oblong)).toBe(oblong);
   });
 
   it('packs every scene world for a level file', () => {

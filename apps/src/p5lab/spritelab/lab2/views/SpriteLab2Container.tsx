@@ -1,16 +1,16 @@
-import React, {useCallback, useEffect, useMemo, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {
   toolboxToWorkspaceBlocks,
   toolboxXmlToDefinition,
 } from '@cdo/apps/blockly/utils/toolbox';
-import {START_SOURCES, TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
+import {TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
 import useSources from '@cdo/apps/lab2/hooks/useSources';
 import {setPageError} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {
   getAppOptionsEditBlocks,
-  getAppOptionsEditingExemplar,
+  getIsLevelEditMode,
 } from '@cdo/apps/lab2/projects/utils';
 import {LabProps} from '@cdo/apps/lab2/types';
 import getInitialSources from '@cdo/apps/lab2/utils/getInitialSources';
@@ -28,10 +28,7 @@ import type {SpriteLab2LevelProperties, Sources} from '../types';
 import SpriteLab2View from './SpriteLab2View';
 
 const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
-const isLevelEditMode =
-  getAppOptionsEditBlocks() === START_SOURCES ||
-  isToolboxMode ||
-  !!getAppOptionsEditingExemplar();
+const isLevelEditMode = getIsLevelEditMode();
 
 /**
  * Returns the level's toolbox as workspace blocks, if in toolbox mode.
@@ -95,31 +92,38 @@ const SpriteLab2Container: React.FunctionComponent<
     getToolboxEditSources,
     computeHasEdited: isStudentEdit,
   });
-  // A level with no project (the no_project level property) has nothing in
-  // a channel, and for a student the hook loads nothing: the level's own
-  // sources are shown read-only, and the lab's writes are dropped here
-  // rather than reaching a hook that may still hold the previous level.
-  // Levelbuilder's edit modes load them through the hook, like any level's.
+  // A student on a level with no project (the no_project level property)
+  // sees the level's own sources read-only; the lab's writes are dropped here
+  // so none reaches a hook that may still hold the previous level.
   const readOnlyLevel =
     levelProperties.usesProjects === false && !isLevelEditMode;
   const levelSources = useMemo(
     () =>
       readOnlyLevel
-        ? getInitialSources<Sources>(
-            levelProperties,
-            undefined,
-            getToolboxEditSources(levelProperties)
-          ) ?? (defaultSources as Sources)
+        ? getInitialSources<Sources>(levelProperties) ??
+          (defaultSources as Sources)
         : undefined,
     [readOnlyLevel, levelProperties]
   );
+  // The hook keeps the last level's sources for the render in which the
+  // level changes, until its load effect clears them. Those are not handed
+  // to the view, which would otherwise mount once against them and again
+  // against this level's.
+  const loadedForRef = useRef<number>();
+  if (storedSources === undefined) {
+    loadedForRef.current = undefined;
+  } else if (loadedForRef.current === undefined) {
+    loadedForRef.current = levelProperties.id;
+  }
+  const storedForLevel =
+    loadedForRef.current === levelProperties.id ? storedSources : undefined;
   // Such a level's start sources may write a scene's world in the packed
   // form (packedWorld.ts). It is expanded here, for readers and for the base
   // an updater builds on, so the rest of the lab only sees the grid.
   const currentSources = useMemo(() => {
-    const sources = readOnlyLevel ? levelSources : storedSources;
+    const sources = readOnlyLevel ? levelSources : storedForLevel;
     return sources && unpackSources(sources);
-  }, [readOnlyLevel, levelSources, storedSources]);
+  }, [readOnlyLevel, levelSources, storedForLevel]);
   const updateSources = useCallback<typeof updateStoredSources>(
     (next, forceSave) => {
       if (readOnlyLevel) {
