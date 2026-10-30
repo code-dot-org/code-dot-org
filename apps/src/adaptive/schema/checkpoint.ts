@@ -1,5 +1,6 @@
 import {z} from 'zod';
 
+import {planSchema} from './planTemplate';
 import {stepSchema, stepSourceSchema} from './steps';
 
 /**
@@ -38,6 +39,11 @@ export const checkpointSourceSchema = z.strictObject({
    * checkpoint, one that no other checkpoint requires, can have one.
    */
   destination: z.string().min(1).optional(),
+  /**
+   * The project plan this checkpoint's plan questions fill. Needed by a
+   * review step, and by any question that names a plan slot.
+   */
+  plan: planSchema.optional(),
   steps: z.array(stepSourceSchema).min(1),
 });
 
