@@ -1,6 +1,6 @@
 import {renderHook} from '@testing-library/react-hooks';
 
-import {useSharedAiTutorResponseSchemaSettings} from '@cdo/apps/aiTutor/hooks/useAiTutorResponseSchemaSettings';
+import {useSharedAiTutorResponseSchemaSettings} from '@cdo/apps/aiTutor/hooks/useSharedAiTutorResponseSchemaSettings';
 import * as weblab2 from '@cdo/apps/weblab2/helpers/aiTutorStructuredResponseHelper';
 
 const mockDispatch = jest.fn();

@@ -1,7 +1,7 @@
 import {getFolderPath} from '@codebridge/utils';
 import {useCallback} from 'react';
 
-import {useSharedAiTutorResponseSchemaSettings} from '@cdo/apps/aiTutor/hooks/useAiTutorResponseSchemaSettings';
+import {useSharedAiTutorResponseSchemaSettings} from '@cdo/apps/aiTutor/hooks/useSharedAiTutorResponseSchemaSettings';
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
