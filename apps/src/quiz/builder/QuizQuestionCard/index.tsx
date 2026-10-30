@@ -21,6 +21,7 @@ interface QuizQuestionCardProps {
   question: QuizBuilderQuestion;
   isExpanded: boolean;
   onExpandedChange: (expanded: boolean) => void;
+  nested?: boolean;
   error?: string | null;
   onSave: (
     id: number,
@@ -84,6 +85,7 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
   question,
   isExpanded,
   onExpandedChange,
+  nested = false,
   error,
   onSave,
   onRemove,
@@ -125,6 +127,8 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
     }
   };
 
+  const neverSaved = isPendingQuestionId(question.id);
+
   const handleDiscard = () => {
     setDraft(toDraft(question));
   };
@@ -148,8 +152,11 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
       isRemoving={isRemoving}
       error={error}
       onSave={handleSave}
-      onDiscard={handleDiscard}
+      onDiscard={neverSaved ? handleRemove : handleDiscard}
       onRemove={handleRemove}
+      nested={nested}
+      showCollapsedRemove
+      neverSaved={neverSaved}
     >
       <Tabs
         name={`question-${question.id}-tabs`}

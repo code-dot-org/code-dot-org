@@ -1,17 +1,24 @@
 .card {
   display: flex;
   flex-direction: column;
-  border: 1px solid var(--border-neutral-primary);
-  border-radius: var(--shape-sm);
-  background: var(--background-neutral-secondary);
+  box-sizing: border-box;
   overflow: hidden;
+  border: 1px solid var(--border-neutral-primary);
+  border-radius: var(--shape-lg);
+  background: var(--background-neutral-primary);
+}
+
+.cardNested {
+  border-radius: var(--shape-sm);
 }
 
 .header {
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 10px;
+  min-height: 46px;
+  padding: 10px 10px 10px 12px;
   background: var(--background-neutral-primary);
 }
 
@@ -19,16 +26,67 @@
   border-bottom: 1px solid var(--border-neutral-primary);
 }
 
-.headerPreview {
+.leading {
   display: flex;
+  flex: 1;
   align-items: center;
-  gap: 8px;
-  flex: 1 0 0;
+  gap: 10px;
   min-width: 0;
 }
 
 .typeIcon {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 22px;
   color: var(--text-neutral-quaternary);
+}
+
+.preview {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+}
+
+.name {
+  flex-shrink: 0;
+  color: var(--text-neutral-primary);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.nameClamp {
+  max-width: 42%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dot {
+  flex-shrink: 0;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background: var(--text-neutral-tertiary);
+}
+
+.peek {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  color: var(--text-neutral-tertiary);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.actions {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 6px;
 }
 
 .unsavedBadge {
@@ -44,13 +102,14 @@
   color: var(--text-warning-secondary);
 }
 
-.preview {
-  flex: 1 0 0;
-  min-width: 0;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  color: var(--text-neutral-tertiary);
+.hoverAction {
+  display: none;
+}
+
+.card:hover:not(.hoverSuppressed) .hoverAction,
+.card:not(.hoverSuppressed):has(.actions :focus-visible) .hoverAction,
+.hoverAction:focus-within {
+  display: flex;
 }
 
 .saveError {
@@ -63,7 +122,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 6px;
-  padding: 10px;
+  padding: 10px 8px 10px 10px;
   background: var(--background-neutral-primary);
   border-top: 1px solid var(--border-neutral-primary);
 }
@@ -79,4 +138,5 @@
   display: flex;
   align-items: center;
   gap: 6px;
+  margin-left: auto;
 }

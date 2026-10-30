@@ -10,24 +10,24 @@ interface AddItemButtonProps {
   disabled?: boolean;
 }
 
-// A full-width, dashed-outlined row for appending an item to a list.
 const AddItemButton: React.FunctionComponent<AddItemButtonProps> = ({
   label,
   onClick,
   disabled,
 }) => (
-  <Button
-    className={styles.addItem}
-    variant="outlined"
-    color="secondary"
-    size="small"
-    type="button"
-    disabled={disabled}
-    onClick={onClick}
-    startIcon={<FontAwesomeV6Icon iconName="plus" />}
-  >
-    {label}
-  </Button>
+  <div className={styles.addItem}>
+    <Button
+      variant="text"
+      color="secondary"
+      size="extraSmall"
+      type="button"
+      disabled={disabled}
+      onClick={onClick}
+      startIcon={<FontAwesomeV6Icon iconName="plus" />}
+    >
+      {label}
+    </Button>
+  </div>
 );
 
 export default AddItemButton;
