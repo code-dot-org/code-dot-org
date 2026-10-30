@@ -50,11 +50,12 @@ export function pairStatus(
   correctPairs: MatchPairs,
   id: string
 ): PairStatus | undefined {
-  const partnerId = findPartner(pairs, id);
-  if (!partnerId) {
+  const answeredPartnerId = findPartner(pairs, id);
+  if (!answeredPartnerId) {
     return undefined;
   }
-  return findPartner(correctPairs, id) === partnerId ? 'correct' : 'incorrect';
+  const correctPartnerId = findPartner(correctPairs, id);
+  return answeredPartnerId === correctPartnerId ? 'correct' : 'incorrect';
 }
 
 // Each start item has a letter by position.
