@@ -29,6 +29,9 @@ const IntroScreenCard: React.FunctionComponent<IntroScreenCardProps> = ({
   const [error, setError] = useState<string | null>(null);
   const isBusy = isSaving || isRemoving;
   const isDirty = draft !== customIntroText;
+  const peek =
+    draft.trim().split('\n')[0] ||
+    'Tell learners what to expect before they begin.';
 
   useEffect(() => {
     setDraft(customIntroText);
@@ -64,7 +67,7 @@ const IntroScreenCard: React.FunctionComponent<IntroScreenCardProps> = ({
     <BuilderCard
       iconName="hand-wave"
       name="Intro Screen"
-      preview={draft}
+      preview={peek}
       itemLabel="intro screen"
       isExpanded={isExpanded}
       onExpandedChange={setIsExpanded}
@@ -75,6 +78,7 @@ const IntroScreenCard: React.FunctionComponent<IntroScreenCardProps> = ({
       onSave={handleSave}
       onDiscard={() => setDraft(customIntroText)}
       onRemove={handleRemove}
+      clampName={false}
       cannotRemoveReason={
         hasTimeLimit
           ? 'Remove the time limit in Configuration before removing the intro screen.'
@@ -82,7 +86,13 @@ const IntroScreenCard: React.FunctionComponent<IntroScreenCardProps> = ({
       }
     >
       <div className={builderCommonStyles.section}>
-        <FormFieldWrapper label="Content" helperMessage="Supports markdown.">
+        <FormFieldWrapper
+          label="Content"
+          size="s"
+          color="gray"
+          helperMessage="Supports markdown."
+          className={builderCommonStyles.fullWidthField}
+        >
           <textarea
             className={builderCommonStyles.textarea}
             name="customIntroText"

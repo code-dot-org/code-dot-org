@@ -1,7 +1,8 @@
 import Alert from '@code-dot-org/component-library/alert';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button, IconButton, Tooltip, Typography} from '@mui/material';
-import React, {useEffect, useRef} from 'react';
+import classNames from 'classnames';
+import React, {useEffect, useRef, useState} from 'react';
 
 import styles from './builder-card.module.scss';
 
@@ -22,6 +23,12 @@ export interface BuilderCardProps {
   onRemove: () => void;
   // When set, Remove looks disabled but stays focusable to show this tooltip.
   cannotRemoveReason?: string;
+  // Nested in a page: item radius. Root / intro: block radius.
+  nested?: boolean;
+  showCollapsedRemove?: boolean;
+  // A new question that has not been posted yet: no Remove, Discard deletes it.
+  neverSaved?: boolean;
+  clampName?: boolean;
   children: React.ReactNode;
 }
 
@@ -40,11 +47,16 @@ const BuilderCard: React.FunctionComponent<BuilderCardProps> = ({
   onDiscard,
   onRemove,
   cannotRemoveReason,
+  nested = false,
+  showCollapsedRemove = false,
+  neverSaved = false,
+  clampName = true,
   children,
 }) => {
   const isBusy = isSaving || isRemoving;
   const toggleButtonRef = useRef<HTMLButtonElement>(null);
   const wasExpanded = useRef(isExpanded);
+  const [hoverSuppressed, setHoverSuppressed] = useState(false);
 
   // Collapsing after a save unmounts the focused Save button.
   useEffect(() => {
@@ -54,51 +66,98 @@ const BuilderCard: React.FunctionComponent<BuilderCardProps> = ({
     if (wasExpanded.current && !isExpanded && focusLost) {
       toggleButtonRef.current?.focus();
     }
+    if (wasExpanded.current && !isExpanded) {
+      setHoverSuppressed(true);
+    }
     wasExpanded.current = isExpanded;
   }, [isExpanded]);
 
   return (
-    <div className={styles.card}>
+    <div
+      className={classNames(
+        styles.card,
+        nested && styles.cardNested,
+        hoverSuppressed && styles.hoverSuppressed
+      )}
+      onPointerLeave={() => setHoverSuppressed(false)}
+    >
       <div className={styles.header}>
-        <div className={styles.headerPreview}>
-          <FontAwesomeV6Icon iconName={iconName} className={styles.typeIcon} />
-          <Typography variant="strong" component="span">
-            {name}
-          </Typography>
-          <Typography
-            variant="body3"
-            component="span"
-            className={styles.preview}
-          >
-            {preview}
-          </Typography>
+        <div className={styles.leading}>
+          <span className={styles.typeIcon} aria-hidden>
+            <FontAwesomeV6Icon iconName={iconName} />
+          </span>
+          <div className={styles.preview}>
+            <Typography
+              variant="body3"
+              component="span"
+              className={classNames(styles.name, clampName && styles.nameClamp)}
+            >
+              {name}
+            </Typography>
+            {preview ? (
+              <>
+                <span className={styles.dot} aria-hidden />
+                <Typography
+                  variant="body3"
+                  component="span"
+                  className={styles.peek}
+                >
+                  {preview}
+                </Typography>
+              </>
+            ) : null}
+          </div>
         </div>
-        {isDirty && (
-          <Tooltip title="Unsaved changes">
-            <div className={styles.unsavedBadge} aria-label="Unsaved changes">
-              <FontAwesomeV6Icon
-                iconName="triangle-exclamation"
-                iconStyle="solid"
-              />
-            </div>
-          </Tooltip>
-        )}
-        <IconButton
-          ref={toggleButtonRef}
-          aria-label={
-            isExpanded ? `Collapse ${itemLabel}` : `Edit ${itemLabel}`
-          }
-          aria-expanded={isExpanded}
-          size="extraSmall"
-          variant="outlined"
-          color="secondary"
-          type="button"
-          onClick={() => onExpandedChange(!isExpanded)}
-        >
-          <FontAwesomeV6Icon
-            iconName={isExpanded ? 'chevron-up' : 'pen-to-square'}
-          />
-        </IconButton>
+        <div className={styles.actions}>
+          {showCollapsedRemove && !isExpanded && (
+            <span className={styles.hoverAction}>
+              <Tooltip
+                title={neverSaved ? 'Discard question' : 'Remove from quiz'}
+              >
+                <IconButton
+                  aria-label={
+                    neverSaved ? 'Discard question' : 'Remove from quiz'
+                  }
+                  size="extraSmall"
+                  variant="text"
+                  color="error"
+                  type="button"
+                  disabled={isBusy}
+                  loading={isRemoving}
+                  onClick={neverSaved ? onDiscard : onRemove}
+                >
+                  <FontAwesomeV6Icon iconName="trash" />
+                </IconButton>
+              </Tooltip>
+            </span>
+          )}
+          {isDirty && (
+            <Tooltip title="Unsaved changes">
+              <div className={styles.unsavedBadge} aria-label="Unsaved changes">
+                <FontAwesomeV6Icon
+                  iconName="triangle-exclamation"
+                  iconStyle="solid"
+                />
+              </div>
+            </Tooltip>
+          )}
+          <IconButton
+            ref={toggleButtonRef}
+            aria-label={
+              isExpanded ? `Collapse ${itemLabel}` : `Edit ${itemLabel}`
+            }
+            aria-expanded={isExpanded}
+            size="extraSmall"
+            variant="outlined"
+            color="tertiary"
+            type="button"
+            onClick={() => onExpandedChange(!isExpanded)}
+          >
+            <FontAwesomeV6Icon
+              iconName={isExpanded ? 'chevron-up' : 'pen-to-square'}
+            />
+          </IconButton>
+        </div>
       </div>
 
       {isExpanded && (
@@ -115,31 +174,34 @@ const BuilderCard: React.FunctionComponent<BuilderCardProps> = ({
           )}
 
           <div className={styles.footer}>
-            <Tooltip describeChild title={cannotRemoveReason ?? ''}>
-              <Button
-                variant="outlined"
-                color="error"
-                size="extraSmall"
-                type="button"
-                className={styles.ariaDisabled}
-                disabled={isBusy}
-                aria-disabled={!!cannotRemoveReason}
-                loading={isRemoving}
-                onClick={() => !cannotRemoveReason && onRemove()}
-              >
-                Remove from quiz
-              </Button>
-            </Tooltip>
+            {!neverSaved && (
+              <Tooltip describeChild title={cannotRemoveReason ?? ''}>
+                <Button
+                  variant="outlined"
+                  color="error"
+                  size="extraSmall"
+                  type="button"
+                  className={styles.ariaDisabled}
+                  disabled={isBusy}
+                  aria-disabled={!!cannotRemoveReason}
+                  loading={isRemoving}
+                  onClick={() => !cannotRemoveReason && onRemove()}
+                >
+                  Remove from quiz
+                </Button>
+              </Tooltip>
+            )}
             <div className={styles.footerActions}>
               <Button
                 variant="outlined"
-                color="secondary"
+                color={neverSaved ? 'error' : 'secondary'}
                 size="extraSmall"
                 type="button"
                 disabled={isBusy || !isDirty}
+                loading={neverSaved ? isRemoving : false}
                 onClick={onDiscard}
               >
-                Discard changes
+                {neverSaved ? 'Discard' : 'Discard changes'}
               </Button>
               <Button
                 variant="contained"
@@ -150,7 +212,9 @@ const BuilderCard: React.FunctionComponent<BuilderCardProps> = ({
                 loading={isSaving}
                 onClick={onSave}
                 startIcon={
-                  <FontAwesomeV6Icon iconName="save" iconStyle="solid" />
+                  isSaving ? undefined : (
+                    <FontAwesomeV6Icon iconName="save" iconStyle="solid" />
+                  )
                 }
               >
                 Save

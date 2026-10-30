@@ -2,86 +2,325 @@
   display: flex;
   flex: 1;
   flex-direction: column;
-  gap: 16px;
   min-height: 0;
-  padding: 24px;
   overflow-y: auto;
   box-sizing: border-box;
   background: var(--background-neutral-secondary);
 }
 
-.introScreen {
-  flex-shrink: 0;
+.inner {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+  max-width: calc(800px + 64px);
+  margin: 0 auto;
+  padding: 64px 32px;
 }
 
 .header {
   display: flex;
   flex-direction: column;
-  gap: 4px;
-}
-
-.pages {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.page {
-  display: flex;
-  flex-direction: column;
   gap: 8px;
-  padding: 12px;
-  border: 1px solid var(--border-neutral-primary);
-  border-radius: var(--shape-md);
 }
 
-.pageHeader {
+.title {
+  margin: 0;
+}
+
+.metaRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.metaItem {
   display: flex;
   align-items: center;
   gap: 6px;
   color: var(--text-neutral-tertiary);
 }
 
-.pageLabel {
-  color: var(--text-neutral-secondary);
+.metaIcon {
+  color: var(--text-neutral-quaternary);
 }
 
-.pageHeaderDot {
-  font-size: 4px;
-  color: var(--background-neutral-quinary);
-  flex-shrink: 0;
-}
-
-.list {
+.outline {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+}
+
+.questionList {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.createHint {
-  color: var(--text-neutral-tertiary);
+.questionList > li {
+  display: flex;
+  flex-direction: column;
 }
 
-.addPageButton {
-  align-self: flex-start;
+.connector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  // .pageLabel sets its own color, so it misses the button's disabled color.
-  &:disabled .pageLabel {
-    color: var(--text-neutral-disabled);
+.connectorBlock {
+  height: 16px;
+}
+
+.connectorItem {
+  height: 8px;
+}
+
+.tick {
+  width: 1px;
+  height: 100%;
+  background: var(--border-neutral-primary);
+}
+
+// Isolating ancestor so deck layers (z-index -1) sit behind the card
+// border instead of painting over it. Isolation is only on the decked
+// state; otherwise an open ActionDropdown (no portal) stacks under the
+// next page. :focus-within lifts this page above following siblings.
+.pageBlock {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.pageBlock:focus-within {
+  z-index: 1;
+}
+
+.pageBlockDeck {
+  isolation: isolate;
+}
+
+.page {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border: 1px solid var(--border-neutral-primary);
+  border-radius: var(--shape-lg);
+  background: var(--background-neutral-primary);
+}
+
+// Two card edges tucked under a collapsed page that still has questions.
+.pageDeck {
+  margin-bottom: 10px;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 16px;
+    border: 1px solid var(--border-neutral-primary);
+    border-radius: var(--shape-lg);
+    background: var(--background-neutral-primary);
+  }
+
+  &::before {
+    left: 6px;
+    right: 6px;
+    z-index: -1;
+    transform: translateY(6px);
+  }
+
+  &::after {
+    left: 12px;
+    right: 12px;
+    z-index: -2;
+    transform: translateY(11px);
   }
 }
 
+.pageHeader {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 46px;
+  padding: 10px 10px 10px 12px;
+  border-bottom: 1px solid transparent;
+  border-radius: var(--shape-lg);
+  background: var(--background-neutral-primary);
+}
+
+.pageHeaderOpen {
+  border-bottom-color: var(--border-neutral-primary);
+  border-radius: var(--shape-lg) var(--shape-lg) 0 0;
+}
+
+.pageHeaderPreview {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+}
+
+.pageActions {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 6px;
+}
+
+.pageTitle {
+  flex-shrink: 0;
+  margin: 0;
+  color: var(--text-neutral-primary);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.dot {
+  flex-shrink: 0;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background: var(--text-neutral-tertiary);
+}
+
+.pageCount {
+  min-width: 0;
+  overflow: hidden;
+  color: var(--text-neutral-tertiary);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.pageBody {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  border-radius: 0 0 var(--shape-lg) var(--shape-lg);
+  background: var(--background-neutral-secondary);
+}
+
+// Author `display: flex` otherwise wins over the UA [hidden] rule.
+.pageBody[hidden] {
+  display: none;
+}
+
+.emptyPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 6px 0 10px;
+  text-align: center;
+}
+
+.emptyPageCopy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.emptyPageTitle {
+  margin: 0;
+  color: var(--text-neutral-primary);
+  font-weight: 600;
+}
+
+.emptyPageHint {
+  margin: 0;
+  color: var(--text-neutral-quaternary);
+}
+
+.emptyQuiz {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 46px;
+  padding: 30px 10px 32px;
+  border: 1px dashed var(--border-neutral-primary);
+  border-radius: var(--shape-md);
+  background: transparent;
+}
+
+.emptyQuizInner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.emptyQuizCopy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  text-align: center;
+}
+
+.emptyQuizTitle {
+  margin: 0;
+}
+
+.emptyQuizBody {
+  margin: 0;
+  color: var(--text-neutral-secondary);
+}
+
+.emptyQuizActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
 .addQuestionRow {
+  position: relative;
   display: flex;
   justify-content: center;
+  width: 100%;
   padding: 8px 0;
   border: 1px dashed var(--border-neutral-secondary);
+  border-radius: var(--shape-lg);
+  background: var(--background-neutral-secondary);
+}
+
+.addQuestionRow:focus-within {
+  z-index: 1;
+}
+
+.addQuestionRowNested {
   border-radius: var(--shape-sm);
 }
 
-.createButton {
-  align-self: flex-start;
+.addPageSlot {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  margin-inline: auto;
+  padding: 8px;
+  border: 1px dashed var(--border-neutral-secondary);
+  border-radius: var(--shape-lg);
+  background: var(--background-neutral-secondary);
 }
+

@@ -53,6 +53,14 @@ function createFromDropdown(index: number, typeLabel: string) {
   fireEvent.click(within(dropdown).getByRole('button', {name: typeLabel}));
 }
 
+function choosePageOption(page: number, optionLabel: string) {
+  fireEvent.click(screen.getByRole('button', {name: `Page ${page} options`}));
+  const dropdown = document.getElementById(
+    `page-${page}-options-dropdown`
+  ) as HTMLElement;
+  fireEvent.click(within(dropdown).getByRole('button', {name: optionLabel}));
+}
+
 function renderWorkspace(
   stateOverrides: Partial<QuizBuilderQuestionsState> = {},
   propOverrides: Partial<React.ComponentProps<typeof QuizBuilderWorkspace>> = {}
@@ -68,6 +76,7 @@ function renderWorkspace(
       showIntroScreen={false}
       customIntroText=""
       hasTimeLimit={false}
+      allowMultipleAttempts={false}
       onSaveQuizConfig={jest.fn()}
       {...propOverrides}
     />
@@ -103,12 +112,24 @@ describe('QuizBuilderWorkspace', () => {
     expect(screen.getByText('Loading questions…')).toBeInTheDocument();
   });
 
-  it('shows an empty message when the quiz has no questions', () => {
+  it('shows an empty quiz region when the quiz has no questions', () => {
     renderWorkspace();
     expect(
-      screen.getByText('This quiz has no questions yet.')
+      screen.getByRole('heading', {level: 2, name: 'This quiz is empty'})
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText('Start by creating a new question or adding a page.')
     ).toBeInTheDocument();
     expect(screen.getByText('0 questions')).toBeInTheDocument();
+    expect(screen.getByText('1 attempt')).toBeInTheDocument();
+    expect(screen.getByRole('button', {name: 'New page'})).toBeEnabled();
+  });
+
+  it('shows time limit and unlimited attempts in the workspace header', () => {
+    renderWorkspace({}, {timeLimitMinutes: 45, allowMultipleAttempts: true});
+    expect(screen.getByText('45 minutes')).toBeInTheDocument();
+    expect(screen.getByText('Unlimited attempts')).toBeInTheDocument();
+    expect(screen.queryByText('1 attempt')).not.toBeInTheDocument();
   });
 
   it('lists each placed question with its name and question title', () => {
@@ -123,9 +144,9 @@ describe('QuizBuilderWorkspace', () => {
       ],
     });
 
-    // Once for the workspace-wide total, once for the page 1 header - both
-    // questions default to page 1.
-    expect(screen.getAllByText('2 questions')).toHaveLength(2);
+    // A single page stays a flat outline, so the count is only the workspace total.
+    expect(screen.getAllByText('2 questions')).toHaveLength(1);
+    expect(screen.queryByText('Page 1')).not.toBeInTheDocument();
     expect(
       screen.getByText('JavaScript variable fundamentals')
     ).toBeInTheDocument();
@@ -184,7 +205,7 @@ describe('QuizBuilderWorkspace', () => {
     );
   });
 
-  it('adds an empty page one past the last existing page without creating a question', () => {
+  it('adds an empty page one past the last existing page without creating a question', async () => {
     const addPendingQuestion = jest.fn();
     renderWorkspace({
       questions: [
@@ -197,43 +218,40 @@ describe('QuizBuilderWorkspace', () => {
     fireEvent.click(screen.getByRole('button', {name: 'Add page'}));
     expect(addPendingQuestion).not.toHaveBeenCalled();
     expect(screen.getByText('Page 4')).toBeInTheDocument();
-    expect(screen.getByRole('button', {name: 'Add page'})).toBeDisabled();
+    expect(screen.getByText('This page is empty')).toBeInTheDocument();
+    const addPage = screen.getByRole('button', {name: 'Add page'});
+    expect(addPage).toHaveAttribute('aria-disabled', 'true');
+    fireEvent.mouseOver(addPage);
+    expect(
+      await screen.findByRole('tooltip', {name: 'You have an empty page'})
+    ).toBeInTheDocument();
 
     createFromDropdown(2, 'Free response');
     expect(addPendingQuestion).toHaveBeenCalledWith(4, 'FreeResponseQuestion');
   });
 
-  it('disables the create button while questions are still loading', () => {
+  it('hides create actions while questions are still loading', () => {
     renderWorkspace({isLoading: true});
     expect(
-      screen.getByRole('button', {name: 'Create question'})
-    ).toBeDisabled();
+      screen.queryByRole('button', {name: 'Create question'})
+    ).not.toBeInTheDocument();
   });
 
-  it('disables the per-page create and add-page buttons while a pending question already exists', () => {
+  it('disables create while a pending question already exists, but still allows adding a page', async () => {
     renderWorkspace({questions: [question({id: -1})]});
-    expect(
-      screen.getByRole('button', {name: 'Create question'})
-    ).toBeDisabled();
-    expect(screen.getByRole('button', {name: 'Add page'})).toBeDisabled();
-  });
+    const createQuestion = screen.getByRole('button', {
+      name: 'Create question',
+    });
+    const addPage = screen.getByRole('button', {name: 'Add page'});
+    expect(createQuestion).toHaveAttribute('aria-disabled', 'true');
+    expect(addPage).not.toHaveAttribute('aria-disabled', 'true');
 
-  it('explains why the create button is disabled by a pending question', () => {
-    renderWorkspace({questions: [question({id: -1})]});
+    fireEvent.mouseOver(createQuestion);
     expect(
-      screen.getByText(
-        'Save or remove your new question before creating another.'
-      )
+      await screen.findByRole('tooltip', {
+        name: 'You have a new unsaved question',
+      })
     ).toBeInTheDocument();
-  });
-
-  it('does not show the pending-question hint otherwise', () => {
-    renderWorkspace({questions: [question()]});
-    expect(
-      screen.queryByText(
-        'Save or remove your new question before creating another.'
-      )
-    ).toBeNull();
   });
 
   it('renders a server error', () => {
@@ -286,6 +304,41 @@ describe('QuizBuilderWorkspace', () => {
     expect(screen.queryByRole('alert')).toBeNull();
   });
 
+  it('adds the first page from the empty quiz without creating a question', () => {
+    const addPendingQuestion = jest.fn();
+    renderWorkspace({addPendingQuestion});
+
+    fireEvent.click(screen.getByRole('button', {name: 'New page'}));
+    expect(addPendingQuestion).not.toHaveBeenCalled();
+    expect(
+      screen.getByRole('heading', {level: 2, name: 'Page 1'})
+    ).toBeInTheDocument();
+    expect(screen.getByText('This page is empty')).toBeInTheDocument();
+    expect(screen.queryByText('This quiz is empty')).not.toBeInTheDocument();
+    expect(screen.getByRole('button', {name: 'Add page'})).toHaveAttribute(
+      'aria-disabled',
+      'true'
+    );
+
+    createFromDropdown(0, 'Free response');
+    expect(addPendingQuestion).toHaveBeenCalledWith(1, 'FreeResponseQuestion');
+  });
+
+  it('wraps a flat outline into page cards when a second page is added', () => {
+    renderWorkspace({questions: [question()]});
+
+    expect(screen.queryByText('Page 1')).not.toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', {name: 'Add page'}));
+
+    expect(
+      screen.getByRole('heading', {level: 2, name: 'Page 1'})
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', {level: 2, name: 'Page 2'})
+    ).toBeInTheDocument();
+    expect(screen.getByText('This page is empty')).toBeInTheDocument();
+  });
+
   it('groups questions under their page, in ascending page order', () => {
     renderWorkspace({
       questions: [
@@ -294,7 +347,7 @@ describe('QuizBuilderWorkspace', () => {
       ],
     });
 
-    const pageLabels = screen.getAllByText(/^Page \d$/);
+    const pageLabels = screen.getAllByRole('heading', {name: /^Page \d$/});
     expect(pageLabels.map(label => label.textContent)).toEqual([
       'Page 1',
       'Page 2',
@@ -315,5 +368,58 @@ describe('QuizBuilderWorkspace', () => {
 
     fireEvent.click(editButtons[1]);
     expect(screen.getAllByRole('tab', {name: 'Question'})).toHaveLength(1);
+  });
+
+  it('collapses a page and expands it again, keeping other pages open', () => {
+    renderWorkspace({
+      questions: [
+        question({id: 1, page: 1}),
+        question({id: 2, page: 2, questionName: 'MVC frameworks'}),
+      ],
+    });
+
+    expect(screen.getByText('JavaScript variable fundamentals')).toBeVisible();
+    expect(screen.getByText('MVC frameworks')).toBeVisible();
+
+    fireEvent.click(screen.getByRole('button', {name: 'Collapse Page 1'}));
+    expect(
+      screen.getByText('JavaScript variable fundamentals')
+    ).not.toBeVisible();
+    expect(screen.getByText('MVC frameworks')).toBeVisible();
+    expect(
+      screen.getByRole('button', {name: 'Expand Page 1'})
+    ).toBeInTheDocument();
+
+    fireEvent.click(screen.getByRole('button', {name: 'Expand Page 1'}));
+    expect(screen.getByText('JavaScript variable fundamentals')).toBeVisible();
+  });
+
+  it('deletes an empty page from the overflow menu without a confirmation', () => {
+    renderWorkspace({questions: [question()]});
+
+    fireEvent.click(screen.getByRole('button', {name: 'Add page'}));
+    expect(screen.getByText('This page is empty')).toBeVisible();
+
+    choosePageOption(2, 'Delete page');
+    expect(
+      screen.queryByRole('heading', {name: 'Page 2'})
+    ).not.toBeInTheDocument();
+    expect(screen.queryByRole('alertdialog')).not.toBeInTheDocument();
+  });
+
+  it('does not offer delete on a page that has questions', () => {
+    renderWorkspace({
+      questions: [
+        question({id: 1, page: 1}),
+        question({id: 2, page: 2, questionName: 'MVC frameworks'}),
+      ],
+    });
+
+    expect(
+      screen.queryByRole('button', {name: 'Page 1 options'})
+    ).not.toBeInTheDocument();
+    expect(
+      screen.queryByRole('button', {name: 'Page 2 options'})
+    ).not.toBeInTheDocument();
   });
 });
