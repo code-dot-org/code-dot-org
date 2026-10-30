@@ -6,9 +6,11 @@ import * as BlocklyCore from 'blockly/core';
 
 import {scrollIntoView} from './scrollIntoView';
 import {
+  clearRoom,
   ensureRoom,
   heightsSettled,
   measureStack,
+  reserveRoom,
   STACK_GAP_PX,
 } from './stackRoom';
 
@@ -27,10 +29,36 @@ export interface AttachShadow {
   shadow: BlocklyCore.serialization.blocks.State;
 }
 
-export type AddBlockEntry = AddBlock | AttachShadow;
+/**
+ * Empty room kept under a stack already in the workspace, where the student
+ * is expected to attach a block. Nothing is drawn there: the gap itself is
+ * the hint. The room closes once a block of the type is in the stack.
+ */
+export interface AttachRoom {
+  /** The type of the stack's top block. */
+  attachTo: string;
+  /** The tag the top block must carry, when one stack of the type is
+      meant: the `data` of the level's own entry for it. */
+  data?: string;
+  room: {type: string};
+}
+
+export type AddBlockEntry = AddBlock | AttachShadow | AttachRoom;
 
 export function isAttachShadow(entry: AddBlockEntry): entry is AttachShadow {
-  return 'attachTo' in entry;
+  return 'attachTo' in entry && !('room' in entry);
+}
+
+export function isAttachRoom(entry: AddBlockEntry): entry is AttachRoom {
+  return 'attachTo' in entry && 'room' in entry;
+}
+
+/** An entry that adds no block of its own: a placeholder shadow or empty
+    room attached to a stack already in the workspace. */
+export function isAttachment(
+  entry: AddBlockEntry
+): entry is AttachShadow | AttachRoom {
+  return isAttachShadow(entry) || isAttachRoom(entry);
 }
 
 /** A block in the workspace as the matcher sees it. */
@@ -46,6 +74,14 @@ export interface PresentBlock {
 export function matchesEntry(present: PresentBlock, entry: AddBlock): boolean {
   return (
     present.type === entry.type && (!entry.data || present.data === entry.data)
+  );
+}
+
+/** Whether a stack's top block is one this level added for the student to
+    build on, matched by type and tag. */
+export function ownsTop(entries: AddBlockEntry[], top: PresentBlock): boolean {
+  return entries.some(
+    entry => !isAttachment(entry) && matchesEntry(top, entry)
   );
 }
 
@@ -90,11 +126,18 @@ function samePlaceholder(a: Shadow | null | undefined, b: Shadow): boolean {
   return !!a && a.type === b.type && likeKey(a) === likeKey(b);
 }
 
+function isBlank(shadow: Shadow | null | undefined): boolean {
+  return !!(shadow?.extraState as {blank?: boolean} | undefined)?.blank;
+}
+
 /**
- * The connection under a stack's last real block, if `shadow` can hang
- * there. Blockly keeps a connection's shadow recorded while a real block
- * covers it, so a stack that already had this placeholder, filled in or
- * not, gets it nowhere else.
+ * The connection under a stack's last real block, if `shadow` can be
+ * attached there. Blockly keeps a connection's shadow recorded even while a
+ * real block covers it, so a stack that already received this placeholder,
+ * filled in or not, gets it nowhere else. A saved project keeps the
+ * placeholder as it was when the level drew it, so a placeholder still
+ * empty whose blank flag no longer matches the level's is attached again
+ * in its place.
  */
 export function freeStackEnd(
   top: BlocklyCore.Block,
@@ -102,12 +145,19 @@ export function freeStackEnd(
 ): BlocklyCore.Connection | null {
   for (let block: BlocklyCore.Block = top; ; ) {
     const connection = block.nextConnection;
-    if (!connection || samePlaceholder(connection.getShadowState(), shadow)) {
+    if (!connection) {
       return null;
     }
+    const recorded = connection.getShadowState();
     const next = connection.targetBlock();
+    if (samePlaceholder(recorded, shadow)) {
+      const waiting = !next || next.isShadow();
+      return waiting && isBlank(recorded) !== isBlank(shadow)
+        ? connection
+        : null;
+    }
     if (!next) {
-      return connection.getShadowState() ? null : connection;
+      return recorded ? null : connection;
     }
     if (next.isShadow()) {
       return null;
@@ -147,13 +197,15 @@ export function unfilledOutlines(
   for (const entry of entries) {
     const placeholder = isAttachShadow(entry)
       ? entry.shadow
+      : isAttachRoom(entry)
+      ? undefined
       : entry.next?.shadow;
     if (!placeholder) {
       continue;
     }
     for (const top of tops) {
       const end = trailingShadow(top);
-      const matches = isAttachShadow(entry)
+      const matches = isAttachment(entry)
         ? top.type === entry.attachTo
         : matchesEntry(top, entry);
       if (
@@ -204,8 +256,11 @@ export async function addMissingBlocks(
   if (!workspace.rendered) {
     return 0;
   }
+  // Reserved rooms belong to a level and the workspace is reused across
+  // levels, so the previous level's rooms are dropped first.
+  clearRoom(workspace);
   const blocks = entries.filter(
-    (entry): entry is AddBlock => !isAttachShadow(entry)
+    (entry): entry is AddBlock => !isAttachment(entry)
   );
   const present = workspace.getAllBlocks(false).filter(b => !b.isShadow());
   const missing = missingBlocks(present, blocks);
@@ -237,6 +292,14 @@ export async function addMissingBlocks(
       } catch (e) {
         console.warn(`add_blocks shadow for ${entry.attachTo} not hung:`, e);
       }
+    } else if (isAttachRoom(entry)) {
+      reserveRoom(workspace, {
+        attachTo: entry.attachTo,
+        data: entry.data,
+        type: entry.room.type,
+        height: blockHeight(workspace, entry.room.type),
+      });
+      ensureRoom(workspace);
     }
   }
   const show = new Set(added);
@@ -245,6 +308,29 @@ export async function addMissingBlocks(
   }
   showBlocks(workspace, [...show]);
   return added.length;
+}
+
+/** The rendered height of a block of the type, measured on a throwaway
+    block. Blockly events are disabled around it so the probe does not count
+    as an edit. */
+function blockHeight(
+  workspace: BlocklyCore.WorkspaceSvg,
+  type: string
+): number {
+  let probe: BlocklyCore.BlockSvg | undefined;
+  BlocklyCore.Events.disable();
+  try {
+    probe = workspace.newBlock(type) as BlocklyCore.BlockSvg;
+    probe.initSvg();
+    probe.render();
+    return probe.getHeightWidth().height;
+  } catch (e) {
+    console.warn(`add_blocks room for ${type} not measured:`, e);
+    return STACK_GAP_PX;
+  } finally {
+    probe?.dispose(false);
+    BlocklyCore.Events.enable();
+  }
 }
 
 // Scroll the blocks on screen: a long program can leave them below the

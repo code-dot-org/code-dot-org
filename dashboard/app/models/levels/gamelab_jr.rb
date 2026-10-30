@@ -43,64 +43,24 @@ class GamelabJr < Gamelab
     image_role_defaults
     add_blocks
     pinned_scene
+    extra_scene
     world_start_pattern
+    starter_images
+    callouts
     objectives
     block_catalog
+    no_project
   )
 
   def shared_blocks
     Block.for(*block_pools.presence || type)
   end
 
-  def summarize_for_lab2_properties(script, script_level = nil, current_user = nil, unit_group_unit: nil)
-    level_properties = super
-    level_properties[:newBlocks] = new_block_types(script, script_level) if script && script_level
-    level_properties
-  end
-
-  # The block types this level's toolbox offers that no earlier level of the
-  # unit offered: the ones a student meets here first.
-  def new_block_types(script, script_level)
-    # Keyed on this level's and the unit's versions: an earlier level's
-    # toolbox edit reaches it when the unit is republished.
-    Rails.cache.fetch("#{cache_key_with_version}/#{script.cache_key_with_version}/new_block_types", force: !Unit.should_cache?) do
-      earlier = script.script_levels.includes(:levels).take_while {|sl| sl.id != script_level.id}
-      seen = earlier.flat_map(&:levels).select {|level| level.is_a?(GamelabJr)}.flat_map(&:offered_block_types)
-      offered_block_types - seen
-    end
-  end
-
-  # Types of the blocks this level hands a student: its toolbox, and the
-  # blocks add_blocks places in the workspace ahead of them. Shadows are
-  # not offers: a block's own inputs, or a dashed placeholder for a block
-  # the toolbox already offers.
-  def offered_block_types
-    %w(toolbox_definition add_blocks).flat_map do |key|
-      value = properties[key]
-      value = JSON.parse(value) if value.is_a?(String)
-      GamelabJr.block_types_in(value)
-    rescue JSON::ParserError
-      []
-    end.uniq
-  end
-
-  # Serialized state under a block that is not a block: a field's value, a
-  # mutator's extra state, an icon's.
-  NON_BLOCK_KEYS = %w(fields extraState icons).freeze
-
-  def self.block_types_in(node, shadow: false)
-    case node
-    when Hash
-      own = node['type'].is_a?(String) && !shadow && node['kind'] != 'category' ? [node['type']] : []
-      own + node.flat_map do |key, value|
-        next [] if NON_BLOCK_KEYS.include?(key)
-        block_types_in(value, shadow: shadow || key == 'shadow')
-      end
-    when Array
-      node.flat_map {|value| block_types_in(value, shadow: shadow)}
-    else
-      []
-    end
+  # A level whose content is all its own (a demo to play, say) runs with no
+  # project: nothing the student does there is saved.
+  def channel_backed?
+    return false if properties['no_project'].to_s == 'true'
+    super
   end
 
   # Lab2 Sprite Lab starter assets are always uploaded by UUID.

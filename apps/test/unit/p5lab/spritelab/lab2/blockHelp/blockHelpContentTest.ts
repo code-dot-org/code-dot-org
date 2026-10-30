@@ -12,8 +12,20 @@ describe('BLOCK_HELP', () => {
     });
   });
 
-  it('gives every entry an animation', () => {
-    Object.values(BLOCK_HELP).forEach(help => {
+  // Entries still waiting for their picture; the catalog draws an outline.
+  const PICTURE_PENDING = new Set([
+    'gamelab_spriteSay',
+    'spritelab2_restartScene',
+    'gamelab_atTime',
+    'spritelab2_whenPlayer',
+  ]);
+
+  it('gives every entry an animation, or is known to be waiting for one', () => {
+    Object.entries(BLOCK_HELP).forEach(([type, help]) => {
+      if (PICTURE_PENDING.has(type)) {
+        expect(help.animation).toBeUndefined();
+        return;
+      }
       expect(help.animation?.src).toBeTruthy();
       expect(help.animation?.alt.trim()).not.toBe('');
     });
