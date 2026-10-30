@@ -159,7 +159,7 @@ class SessionsController < Devise::SessionsController
     submitted = params[:user] || {}
     hashed_email = submitted[:hashed_email].presence
     hashed_email ||= AuthenticationOption.hash_email(submitted[:login].strip) if submitted[:login].present?
-    return nil if hashed_email.blank?
+    return if hashed_email.blank?
 
     options = AuthenticationOption.
       where(hashed_email: hashed_email).
