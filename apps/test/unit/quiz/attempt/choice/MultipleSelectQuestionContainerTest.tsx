@@ -2,7 +2,7 @@ import {fireEvent, render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
-import MultipleSelectQuestionContainer from '@cdo/apps/quiz/attempt/MultipleSelectQuestionContainer';
+import MultipleSelectQuestionContainer from '@cdo/apps/quiz/attempt/choice/MultipleSelectQuestionContainer';
 import {QuizQuestionSummary} from '@cdo/apps/quiz/types';
 
 const QUESTION: QuizQuestionSummary = {
