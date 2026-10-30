@@ -44,8 +44,8 @@ const noop = () => {};
 
 // Multiples of the scale at which the map fills the widget's width. Below 1
 // the map is narrower than the widget and centered in it.
-const ZOOM_LEVELS = [0.5, 0.75, 1, 1.5, 2, 2.5, 3];
-const FIT_WIDTH = ZOOM_LEVELS.indexOf(1);
+const ZOOM_LEVELS = [0.25, 0.5, 0.75, 1, 1.5, 2];
+const START_ZOOM = ZOOM_LEVELS.indexOf(0.75);
 
 const parseOrUndefined = (raw: unknown): Pathway | undefined => {
   if (!raw) return undefined;
@@ -57,43 +57,11 @@ const parseOrUndefined = (raw: unknown): Pathway | undefined => {
   }
 };
 
-const SkillMap: React.FC<{
-  pathway: Pathway;
-  progress: Progress;
-  zoom: number;
-}> = ({pathway, progress, zoom}) => {
-  const {statusMap} = usePathwayStatus(pathway, progress);
-  // The snapshot page's own query string must not pick the layout.
-  const settings = useMemo(() => resolveMapSettings(pathway, ''), [pathway]);
-  // The root, which a student starts from.
-  const startId = pathway.checkpoints.find(c => !c.requires?.length)?.id;
-  return (
-    <div className={styles.map}>
-      <MapView
-        pathway={pathway}
-        statusMap={statusMap}
-        settings={settings}
-        zoom={zoom}
-        startId={startId}
-        onSelect={noop}
-      />
-    </div>
-  );
-};
-
 const ZoomControls: React.FC<{
   level: number;
   setLevel: (level: number) => void;
 }> = ({level, setLevel}) => (
   <div className={styles.zoomControls}>
-    <IconButton
-      size="small"
-      aria-label="Zoom out"
-      disabled={level === 0}
-      onClick={() => setLevel(level - 1)}
-    >
-      <FontAwesomeV6Icon iconName="magnifying-glass-minus" />
-    </IconButton>
     <IconButton
       size="small"
       aria-label="Zoom in"
@@ -104,14 +72,48 @@ const ZoomControls: React.FC<{
     </IconButton>
     <IconButton
       size="small"
-      aria-label="Fit to width"
-      disabled={level === FIT_WIDTH}
-      onClick={() => setLevel(FIT_WIDTH)}
+      aria-label="Zoom out"
+      disabled={level === 0}
+      onClick={() => setLevel(level - 1)}
     >
-      <FontAwesomeV6Icon iconName="arrows-left-right-to-line" />
+      <FontAwesomeV6Icon iconName="magnifying-glass-minus" />
+    </IconButton>
+    <IconButton
+      size="small"
+      aria-label="Reset zoom"
+      disabled={level === START_ZOOM}
+      onClick={() => setLevel(START_ZOOM)}
+    >
+      <FontAwesomeV6Icon iconName="expand" />
     </IconButton>
   </div>
 );
+
+const SkillMap: React.FC<{
+  pathway: Pathway;
+  progress: Progress;
+  zoomLevel: number;
+  setZoomLevel: (level: number) => void;
+}> = ({pathway, progress, zoomLevel, setZoomLevel}) => {
+  const {statusMap} = usePathwayStatus(pathway, progress);
+  // The snapshot page's own query string must not pick the layout.
+  const settings = useMemo(() => resolveMapSettings(pathway, ''), [pathway]);
+  // The root, which a student starts from.
+  const startId = pathway.checkpoints.find(c => !c.requires?.length)?.id;
+  return (
+    <div className={styles.map}>
+      <ZoomControls level={zoomLevel} setLevel={setZoomLevel} />
+      <MapView
+        pathway={pathway}
+        statusMap={statusMap}
+        settings={settings}
+        zoom={ZOOM_LEVELS[zoomLevel]}
+        startId={startId}
+        onSelect={noop}
+      />
+    </div>
+  );
+};
 
 const Message: React.FC<{text: string}> = ({text}) => (
   <div className={styles.message}>
@@ -126,7 +128,7 @@ const AdaptiveSkillMapWidget: React.FC<AdaptiveSkillMapWidgetProps> = ({
   hasAdaptiveLevel,
 }) => {
   const [fetched, setFetched] = useState<Fetched>({state: 'loading'});
-  const [zoomLevel, setZoomLevel] = useState(FIT_WIDTH);
+  const [zoomLevel, setZoomLevel] = useState(START_ZOOM);
 
   useEffect(() => {
     if (
@@ -176,7 +178,8 @@ const AdaptiveSkillMapWidget: React.FC<AdaptiveSkillMapWidgetProps> = ({
       <SkillMap
         pathway={pathway}
         progress={progress}
-        zoom={ZOOM_LEVELS[zoomLevel]}
+        zoomLevel={zoomLevel}
+        setZoomLevel={setZoomLevel}
       />
     );
   } else {
@@ -189,10 +192,6 @@ const AdaptiveSkillMapWidget: React.FC<AdaptiveSkillMapWidgetProps> = ({
       gridWidth={2}
       gridHeight={2}
       loading={hasStudent && fetched.state === 'loading'}
-      headerContent={
-        hasStudent &&
-        pathway && <ZoomControls level={zoomLevel} setLevel={setZoomLevel} />
-      }
     >
       {content}
     </WidgetTemplate>

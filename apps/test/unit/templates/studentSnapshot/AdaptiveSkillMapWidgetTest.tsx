@@ -153,30 +153,30 @@ describe('AdaptiveSkillMapWidget', () => {
     expect(screen.queryByText('Outpost')).not.toBeInTheDocument();
   });
 
-  it('zooms in and out from fitting the width, and back to it', async () => {
+  it('zooms in and out from the starting zoom, and back to it', async () => {
     respondWith({pathway: PATHWAY, progress: PROGRESS});
     renderWidget();
     const zoomIn = await screen.findByRole('button', {name: 'Zoom in'});
     const zoomOut = screen.getByRole('button', {name: 'Zoom out'});
-    const fitWidth = screen.getByRole('button', {name: 'Fit to width'});
+    const reset = screen.getByRole('button', {name: 'Reset zoom'});
 
-    expect(fitWidth).toBeDisabled();
+    expect(reset).toBeDisabled();
     expect(zoomOut).toBeEnabled();
 
     fireEvent.click(zoomIn);
-    expect(fitWidth).toBeEnabled();
+    expect(reset).toBeEnabled();
 
-    fireEvent.click(fitWidth);
-    expect(fitWidth).toBeDisabled();
+    fireEvent.click(reset);
+    expect(reset).toBeDisabled();
 
     fireEvent.click(zoomOut);
-    expect(fitWidth).toBeEnabled();
+    expect(reset).toBeEnabled();
 
     fireEvent.click(zoomIn);
-    expect(fitWidth).toBeDisabled();
+    expect(reset).toBeDisabled();
   });
 
-  it('stops zooming out at half the width', async () => {
+  it('stops zooming out at a quarter of the width', async () => {
     respondWith({pathway: PATHWAY, progress: PROGRESS});
     renderWidget();
     const zoomOut = await screen.findByRole('button', {name: 'Zoom out'});
@@ -188,12 +188,15 @@ describe('AdaptiveSkillMapWidget', () => {
     expect(zoomOut).toBeDisabled();
   });
 
-  it('stops zooming in at three times the width', async () => {
+  it('stops zooming in at twice the width', async () => {
     respondWith({pathway: PATHWAY, progress: PROGRESS});
     renderWidget();
     const zoomIn = await screen.findByRole('button', {name: 'Zoom in'});
 
-    for (let i = 0; i < 4; i++) fireEvent.click(zoomIn);
+    fireEvent.click(zoomIn);
+    fireEvent.click(zoomIn);
+    expect(zoomIn).toBeEnabled();
+    fireEvent.click(zoomIn);
 
     expect(zoomIn).toBeDisabled();
   });
@@ -230,7 +233,7 @@ describe('AdaptiveSkillMapWidget', () => {
       window.ResizeObserver = originalResizeObserver;
     });
 
-    it('opens with the root checkpoint at the center of the view', async () => {
+    it('opens scrolled down to the root checkpoint', async () => {
       const pathway = {...PATHWAY, map: {layout: 'destinations'}};
       respondWith({pathway, progress: PROGRESS});
       renderWidget();
@@ -239,11 +242,13 @@ describe('AdaptiveSkillMapWidget', () => {
       });
 
       const layout = layoutDestinations(pathway.checkpoints as Checkpoint[], 0);
-      const fit = WIDTH / layout.width;
+      // The widget starts zoomed out to three quarters of the width, too
+      // narrow to scroll sideways, so only the vertical scroll is reachable.
+      const fit = (WIDTH / layout.width) * 0.75;
       const fitTop = Math.max(0, (HEIGHT - layout.height * fit) / 2);
-      const {x, y} = layout.nodes.intro;
+      const {y} = layout.nodes.intro;
       const view = root.closest('.scrolling') as HTMLElement;
-      expect(view.scrollLeft).toBeCloseTo(x * fit - WIDTH / 2);
+      expect(layout.height * fit).toBeGreaterThan(HEIGHT);
       expect(view.scrollTop).toBeCloseTo(fitTop + y * fit - HEIGHT / 2);
     });
   });
