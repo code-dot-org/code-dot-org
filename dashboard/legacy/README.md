@@ -19,3 +19,9 @@ to move it here.
 If we get to a point where dashboard unit tests are no longer being run inside
 a single long-running transaction, then it would be worth trying again to
 consolidate this directory into `dashboard/lib` and `dashboard/test`.
+
+The tests for `ChannelsApi` and `Projects`, and the database tests for
+`storage_id.rb`, now live in `dashboard/test`. `ProjectsBackends`
+(`dashboard/test/testing/projects_backends.rb`) wraps each of them in a Sequel
+transaction that always rolls back, and runs it once against Sequel and once
+against ActiveRecord.
