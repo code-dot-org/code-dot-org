@@ -3,6 +3,7 @@ import {z} from 'zod';
 import {questionsStepSchema} from '../question';
 
 import {levelStepSchema, levelStepSourceSchema} from './level';
+import {markdownStepSchema} from './markdown';
 import {panelsStepSchema} from './panels';
 import {videoStepSchema, videoStepSourceSchema} from './video';
 
@@ -11,6 +12,7 @@ export const stepSourceSchema = z.discriminatedUnion('kind', [
   panelsStepSchema,
   questionsStepSchema,
   levelStepSourceSchema,
+  markdownStepSchema,
   videoStepSourceSchema,
 ]);
 
@@ -19,9 +21,11 @@ export const stepSchema = z.discriminatedUnion('kind', [
   panelsStepSchema,
   questionsStepSchema,
   levelStepSchema,
+  markdownStepSchema,
   videoStepSchema,
 ]);
 
 export * from './level';
+export * from './markdown';
 export * from './panels';
 export * from './video';
