@@ -16,9 +16,13 @@ import {Pathway} from '../types';
 import CheckpointCard from './CheckpointCard';
 import {resolveMapSettings} from './map/mapSettings';
 import MapView from './map/MapView';
+import MapZoom from './map/MapZoom';
 import ProjectCard from './ProjectCard';
 
 import styles from './mapScreen.module.scss';
+
+// Percentages of the size at which the whole map fits.
+const ZOOM_PERCENTAGES = [100, 150, 200, 300];
 
 const THEME_ITEMS = [
   {value: 'Light', text: 'Light'},
@@ -81,13 +85,21 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
               &nbsp;Back to map
             </MuiButton>
           )}
-          <MapView
-            pathway={pathway}
-            statusMap={statusMap}
-            settings={mapSettings}
-            focusId={focusId}
-            onSelect={id => onFocus(id === focusId ? undefined : id)}
-          />
+          <MapZoom
+            zoomPercentages={ZOOM_PERCENTAGES}
+            startLevel={0}
+            fit="whole"
+            disabled={!!focusId}
+            controlsClassName={styles.mapZoom}
+          >
+            <MapView
+              pathway={pathway}
+              statusMap={statusMap}
+              settings={mapSettings}
+              focusId={focusId}
+              onSelect={id => onFocus(id === focusId ? undefined : id)}
+            />
+          </MapZoom>
         </div>
         <aside className={styles.side}>
           {focused ? (
