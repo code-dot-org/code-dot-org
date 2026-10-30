@@ -27,7 +27,7 @@ import {
 export const THEATER_DESCRIPTIONS_DCDO_KEY = 'theater-ai-descriptions-enabled';
 
 // The fastest model, with thinking off, so the answer comes back quickly.
-const DESCRIPTION_MODEL_ID = AiChatModelIds.GEMINI_2_5_FLASH_LITE;
+const THEATER_DESCRIPTIONS_MODEL_ID = AiChatModelIds.GEMINI_2_5_FLASH_LITE;
 
 export const MAX_CODE_CHARACTERS = 20000;
 export const MAX_RUN_CHARACTERS = 8000;
@@ -80,7 +80,7 @@ export function canRequestTheaterDescription(): boolean {
   return (
     !!appName &&
     !isAiChatModelBlocked(
-      DESCRIPTION_MODEL_ID,
+      THEATER_DESCRIPTIONS_MODEL_ID,
       currentUser.blockedAichatProviders
     ) &&
     areAiChatToolsEnabled({
@@ -156,7 +156,7 @@ async function generateDescription(prompt: string): Promise<string> {
   const currentLevelId = state.progress.currentLevelId;
   const {text} = await generateText(
     {
-      model: getModel(DESCRIPTION_MODEL_ID),
+      model: getModel(THEATER_DESCRIPTIONS_MODEL_ID),
       system: SYSTEM_PROMPT,
       prompt,
       temperature: 0.2,
