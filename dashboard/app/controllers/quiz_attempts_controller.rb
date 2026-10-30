@@ -85,7 +85,9 @@ class QuizAttemptsController < ApplicationController
         # Re-save every response, not just missing ones - submit is the
         # authoritative grade regardless of any earlier per-question write.
         QuizQuestion.where(id: in_quiz_question_ids).find_each do |question|
-          response_data = submitted_responses[question.id.to_s] ||
+          submitted = submitted_responses[question.id.to_s]
+          # Non-Hash data is ignored, as in QuizQuestionResponsesController#create.
+          response_data = (submitted.is_a?(Hash) ? submitted : nil) ||
             stored_responses_by_question_id[question.id]&.response_data || {}
           grade_and_save_response!(attempt, question, response_data)
         end

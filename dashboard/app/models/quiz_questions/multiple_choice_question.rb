@@ -40,7 +40,7 @@ class MultipleChoiceQuestion < QuizQuestion
   end
 
   # response_data shape: {"selectedChoiceId" => "b"}
-  protected def response_answered?(response_data)
+  def answered?(response_data)
     response_data['selectedChoiceId'].present?
   end
 

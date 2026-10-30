@@ -304,6 +304,26 @@ class QuizAttemptsControllerTest < ActionController::TestCase
     assert_equal 1, body['maxScore']
   end
 
+  test "update ignores non-Hash submitted data and falls back to stored data" do
+    create(
+      :quiz_question_response,
+      quiz_attempt: @attempt,
+      quiz_question: @question,
+      response_data: {'selectedChoiceId' => 'b'},
+      score: 1,
+      max_score: 1,
+      grading_status: 'auto_graded'
+    )
+
+    sign_in @student
+    put :update, as: :json, params: {id: @attempt.id, responses: {@question.id => ['a']}}
+
+    assert_response :success
+    response = @attempt.reload.quiz_question_responses.find_by!(quiz_question_id: @question.id)
+    assert_equal({'selectedChoiceId' => 'b'}, response.response_data)
+    assert JSON.parse(@response.body)['questionResults'].first['answered']
+  end
+
   test "update omits score and maxScore from the response when the quiz does not show correctness" do
     quiz = create(:quiz, show_correctness: false)
     question = create(:multiple_choice_question)

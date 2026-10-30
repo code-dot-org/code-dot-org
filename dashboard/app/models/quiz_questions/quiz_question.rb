@@ -144,12 +144,7 @@ class QuizQuestion < ApplicationRecord
 
   # Whether response_data holds an answer, as opposed to a skip.
   def answered?(response_data)
-    response_data.is_a?(Hash) && response_answered?(response_data)
-  end
-
-  # answered? for a Hash response_data.
-  protected def response_answered?(response_data)
-    raise NotImplementedError, "#{self.class.name} must implement response_answered?"
+    raise NotImplementedError, "#{self.class.name} must implement answered?"
   end
 
   # Builds `content` from question builder request params.
