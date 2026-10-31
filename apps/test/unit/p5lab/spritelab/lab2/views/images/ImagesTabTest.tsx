@@ -62,6 +62,49 @@ jest.mock(
   })
 );
 
+// The pixel editor is stood in for: a stroke button and the parts a host
+// lays out, with save handing back fixed pixels.
+jest.mock('@cdo/apps/pixelEditor/PixelEditor', () => {
+  const PixelEditorStub = ({
+    tools,
+    onEdit,
+    onSave,
+    children,
+  }: {
+    tools?: readonly string[];
+    onEdit?: () => void;
+    onSave: (dataURI: string, meta: {pixelGridSize?: number}) => void;
+    children: (parts: unknown) => React.ReactNode;
+  }) => {
+    const [edited, setEdited] = React.useState(false);
+    return (
+      <div>
+        <button
+          type="button"
+          onClick={() => {
+            setEdited(true);
+            onEdit?.();
+          }}
+        >
+          stroke
+        </button>
+        <span>{tools ? `${tools.length} tools` : 'all tools'}</span>
+        {children({
+          ready: true,
+          loadError: false,
+          themeMode: 'light',
+          toolbar: <span>toolbar</span>,
+          canvas: <span>canvas</span>,
+          save: () => onSave('data:png', {pixelGridSize: 1}),
+          canSave: true,
+          edited,
+        })}
+      </div>
+    );
+  };
+  return {__esModule: true, default: PixelEditorStub};
+});
+
 const propsByKey: Record<string, Record<string, unknown>> = {};
 const animationList = () => ({
   orderedKeys: Object.keys(propsByKey),
@@ -78,13 +121,14 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/imageTrim', () => ({
   getImageThumbnail: () => undefined,
 }));
 const acceptGenerated = jest.fn();
+const saveEdited = jest.fn();
 const deleteImage = jest.fn();
 const endSession = jest.fn();
 jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/images/useImageWriter', () => ({
   __esModule: true,
   default: () => ({
     acceptGenerated: (...args: unknown[]) => acceptGenerated(...args),
-    saveEdited: jest.fn(),
+    saveEdited: (...args: unknown[]) => saveEdited(...args),
     deleteImage: (...args: unknown[]) => deleteImage(...args),
     endSession: () => endSession(),
   }),
@@ -107,6 +151,7 @@ describe('ImagesTab', () => {
   beforeEach(() => {
     Object.keys(propsByKey).forEach(key => delete propsByKey[key]);
     acceptGenerated.mockReset();
+    saveEdited.mockReset();
     deleteImage.mockReset();
     endSession.mockReset();
   });
@@ -173,5 +218,63 @@ describe('ImagesTab', () => {
       <ImagesTab onDeleteImage={jest.fn()} paneWidth={280} editingOffered />
     );
     expect(pressed()).toEqual(['Sprite 2']);
+  });
+
+  it('draws a new image in free play with every tool, and Done makes it an image', async () => {
+    renderTab({editingOffered: true});
+    fireEvent.click(screen.getByRole('button', {name: 'New image'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Draw my own'}));
+    expect(screen.getByText('all tools')).toBeTruthy();
+    expect(screen.getByText('toolbar')).toBeTruthy();
+    const done = screen.getByRole('button', {name: 'Done drawing'});
+    expect((done as HTMLButtonElement).disabled).toBe(true);
+    fireEvent.click(screen.getByRole('button', {name: 'stroke'}));
+    saveEdited.mockImplementation(async () => {
+      propsByKey.k1 = {name: 'Sprite 1', categories: []};
+      return 'k1';
+    });
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', {name: 'Done drawing'}));
+    });
+    expect(saveEdited).toHaveBeenCalledWith(
+      {key: null, imageType: 'sprite', subject: 'character'},
+      'data:png',
+      {pixelGridSize: 1}
+    );
+    expect(screen.queryByText('canvas')).toBeNull();
+    expect(pressed()).toEqual(['Sprite 1']);
+  });
+
+  it('edits an image with the few tools before free play, saving when the tab is left', async () => {
+    propsByKey.k1 = {name: 'Sprite 1', categories: [], role: 'hero'};
+    const {rerender} = renderTab({
+      lockedImageType: 'sprite',
+      imageRole: 'hero',
+    });
+    fireEvent.click(screen.getByRole('button', {name: 'Edit this image'}));
+    expect(screen.getByText('3 tools')).toBeTruthy();
+    fireEvent.click(screen.getByRole('button', {name: 'stroke'}));
+    saveEdited.mockResolvedValue('k1');
+    await act(async () => {
+      rerender(
+        <ImagesTab
+          onDeleteImage={jest.fn()}
+          paneWidth={280}
+          lockedImageType="sprite"
+          imageRole="hero"
+          active={false}
+        />
+      );
+    });
+    expect(saveEdited).toHaveBeenCalledTimes(1);
+    expect(saveEdited.mock.calls[0][0]).toEqual({
+      key: 'k1',
+      imageType: 'sprite',
+      subject: undefined,
+    });
+    // Still drawing: the tab comes back to the tools.
+    expect(screen.getByText('canvas')).toBeTruthy();
+    fireEvent.click(screen.getByRole('button', {name: 'Cancel'}));
+    expect(screen.queryByText('canvas')).toBeNull();
   });
 });

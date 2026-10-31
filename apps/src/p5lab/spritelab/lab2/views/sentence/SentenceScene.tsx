@@ -38,8 +38,7 @@ import {
   BACKGROUND_GROUND_COLOR,
   blankPaintImage,
 } from '@cdo/apps/p5lab/spritelab/lab2/paintBlank';
-import PixelEditor, {PaletteColor} from '@cdo/apps/pixelEditor/PixelEditor';
-import {PixelTool} from '@cdo/apps/pixelEditor/toolDefinitions';
+import PixelEditor from '@cdo/apps/pixelEditor/PixelEditor';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import characterOutline from '@cdo/static/spritelab_lab2/character-outline.svg';
 
@@ -49,6 +48,7 @@ import AlternativeThumbs from './AlternativeThumbs';
 import BehindTheScenes from './BehindTheScenes';
 import FiringBlob from './FiringBlob';
 import GeneratingSteps from './GeneratingSteps';
+import {PAINT_BRUSH_SIZES, PAINT_COLORS, PAINT_TOOLS} from './paintTools';
 import {PixelReveal, SparkleBurst} from './PixelReveal';
 import ResultActions, {
   Verdict,
@@ -82,16 +82,6 @@ const TEMPERATURE = 1;
 const SETTLE_MS = 500;
 
 export type Mode = 'edit' | 'generating' | 'result' | 'paint';
-
-const PAINT_TOOLS: readonly PixelTool[] = ['pen', 'bucket', 'eraser'];
-// The pixel editor's own starting blue, then black and white.
-const PAINT_COLORS: readonly PaletteColor[] = [
-  {name: 'Blue', rgba: [0, 155, 233, 255]},
-  {name: 'Black', rgba: [34, 34, 34, 255]},
-  {name: 'White', rgba: [255, 255, 255, 255]},
-];
-// One brush, the finest on the pixel grid.
-const PAINT_BRUSH_SIZES: readonly number[] = [1];
 
 interface GeneratedPicture {
   /** The result's filename, unique per generation. */
