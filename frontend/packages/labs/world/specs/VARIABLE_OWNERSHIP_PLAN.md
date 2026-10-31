@@ -108,20 +108,13 @@ ways a learner can see.
    hat, and pressing one drags out a getter for that hat's own variable, as
    a member head's sockets do (`memberHead`, `fields/dragGetterOut`). A
    field, not a plugged-in block, because a hat is saved and a member head
-   is not. Browser check.
+   is not. A filtered value gets one too, before its filter: `is hit by
+⟨who⟩ (any ▾) ⟨amount⟩`. The values stay in the `+` as well, which is
+   the keyboard's way to them. Browser check.
 6. The scope rule's exception: find what still sets a name no binding
    gives. If nothing, remove the exception, and every name is bound.
 7. Specs: this record; PASTE.md and EVENT_VALUES_PLAN.md where they
    describe the shared model; ACCESSIBILITY.md for the chips.
-
-## Open questions
-
-- **A filtered value's chip.** `is hit by ⟨who⟩ (any ▾) ⟨amount⟩` (chip,
-  then filter), or no chip for a filtered value. The first is
-  recommended.
-- **The values in the `+`.** Kept as the keyboard's way to the getters
-  until a chip can be taken without a pointer, or removed once the chips
-  are in.
 
 ## Not in this plan
 
