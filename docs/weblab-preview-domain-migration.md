@@ -1,5 +1,8 @@
 # Web Lab 2 / pyodide preview domain migration (codeprojects.org → codeaiprojects.org)
 
+Status (2026-10-13): infrastructure steps 1-2 (register `codeaiprojects.org`,
+delegate its hosted zone) are done. Steps 3-5 and Part 3 are not marked done.
+
 ## Why
 
 Some school-district content filters (e.g. Lightspeed) block `codeprojects.org`,
