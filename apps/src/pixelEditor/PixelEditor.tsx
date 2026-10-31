@@ -149,6 +149,8 @@ export interface PixelEditorProps {
   // to avoid a scrim gap.
   onReady?: () => void;
   onSave: (dataURI: string, meta: PixelEditorSaveMeta) => void;
+  // Fires as each stroke lands, for a host that saves on its own clock.
+  onEdit?: () => void;
   // The tools to offer, in TOOLS order; all of them when absent. Shortcuts
   // for tools left out do nothing.
   tools?: readonly PixelTool[];
@@ -185,6 +187,7 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
   opaqueGround,
   onReady,
   onSave,
+  onEdit,
   tools,
   fit = 'viewport',
   toolbarLayout = 'column',
@@ -292,6 +295,8 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
   const undoStackRef = useRef<Uint8ClampedArray[]>([]);
   const redoStackRef = useRef<Uint8ClampedArray[]>([]);
   const [historyVersion, setHistoryVersion] = useState(0);
+  const onEditRef = useRef(onEdit);
+  onEditRef.current = onEdit;
 
   // Recently used colors, in first-seen order (transparent excluded: it has
   // a permanent swatch of its own in the picker). Handed back on save for the
@@ -340,6 +345,7 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
     }
     redoStackRef.current = [];
     setHistoryVersion(v => v + 1);
+    onEditRef.current?.();
   }, []);
 
   const restoreSnapshot = useCallback((pixels: Uint8ClampedArray) => {

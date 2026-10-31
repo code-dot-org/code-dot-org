@@ -2512,6 +2512,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                   verdictRequired={imagePaneProps.verdictRequired}
                   paneWidth={paneWidthPx}
                   onImageLanded={saveImagesNow}
+                  active={activeTab === 'Images'}
                 />
               )}
             </div>

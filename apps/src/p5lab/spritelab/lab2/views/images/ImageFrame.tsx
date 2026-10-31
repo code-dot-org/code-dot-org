@@ -20,6 +20,11 @@ interface ImageFrameProps {
   /** A picture is being made: the frame is the plain box around the
       making, not a picture's checkerboard. */
   generating?: boolean;
+  /** The frame holds something to work on, not a picture to look at: no
+      image role, and its own class. */
+  workspaceClassName?: string;
+  /** Above the frame, across the column. */
+  above?: React.ReactNode;
   /** Down the frame's left. */
   beside?: React.ReactNode;
   /** Under the frame. */
@@ -33,12 +38,15 @@ const ImageFrame: React.FunctionComponent<ImageFrameProps> = ({
   image,
   live,
   generating,
+  workspaceClassName,
+  above,
   beside,
   under,
 }) => {
   // The frame is a square as large as the column allows, which a flex
   // item's percentage height cannot give before layout.
   const columnRef = useRef<HTMLDivElement>(null);
+  const aboveRef = useRef<HTMLDivElement>(null);
   const [side, setSide] = useState<number>();
   useLayoutEffect(() => {
     const column = columnRef.current;
@@ -49,31 +57,54 @@ const ImageFrame: React.FunctionComponent<ImageFrameProps> = ({
       setSide(
         Math.max(
           0,
-          Math.min(column.clientWidth, column.clientHeight - UNDER_PX)
+          Math.min(
+            column.clientWidth,
+            column.clientHeight -
+              UNDER_PX -
+              (aboveRef.current?.offsetHeight ?? 0)
+          )
         )
       );
     measure();
     const observer = new ResizeObserver(measure);
     observer.observe(column);
+    if (aboveRef.current) {
+      observer.observe(aboveRef.current);
+    }
     return () => observer.disconnect();
   }, []);
   const filled = live ? !generating : !!image;
   return (
     <div className={styles.frameWell}>
       <div ref={columnRef} className={styles.frameColumn}>
+        {above && (
+          <div ref={aboveRef} className={styles.above} style={{width: side}}>
+            {above}
+          </div>
+        )}
         <div className={styles.frameRow} style={{height: side}}>
           {beside && <div className={styles.beside}>{beside}</div>}
           <div
-            className={classNames(styles.frame, filled && styles.frameFilled)}
+            className={classNames(
+              styles.frame,
+              filled && styles.frameFilled,
+              workspaceClassName
+            )}
             style={{width: side, height: side}}
           >
             {/* The picture alone is the image to assistive tech; anything
                 else the frame holds stays reachable. */}
             <div
               className={styles.picture}
-              role="img"
+              role={workspaceClassName ? undefined : 'img'}
               aria-label={
-                live ? 'Your picture' : image ? image.name : 'No picture yet'
+                workspaceClassName
+                  ? undefined
+                  : live
+                  ? 'Your picture'
+                  : image
+                  ? image.name
+                  : 'No picture yet'
               }
             >
               {live ??

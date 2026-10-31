@@ -291,9 +291,51 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   justify-content: center;
 }
 
-// Never squeezed: the frame is sized from this slot's height, so a slot
-// that gave way would let its contents run off the column's bottom.
+// The drawing tools, across the frame's top.
+.above {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 8px;
+}
+
+// The editor's canvas fills the frame; its own border and ground go.
+.paintFrame {
+  border-style: solid;
+}
+
+.paintCanvas {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+// The outline sits over the canvas until the first stroke.
+.paintStack {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.paintOutline {
+  position: absolute;
+  inset: 8%;
+  width: 84%;
+  height: 84%;
+  object-fit: contain;
+  pointer-events: none;
+  opacity: 0.6;
+  transition: opacity 0.4s ease-out;
+}
+
+.paintOutlineGone {
+  opacity: 0;
+}
+
 .under {
+  // Never squeezed: the frame is sized from this slot's height, so a slot
+  // that gave way would let its contents run off the column's bottom.
   display: flex;
   flex: none;
   justify-content: flex-end;
