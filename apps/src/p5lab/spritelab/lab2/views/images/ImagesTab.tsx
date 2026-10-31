@@ -18,6 +18,7 @@ import {DEFAULT_IMAGE_STYLE} from '../../levelMode';
 import {BACKGROUND_GROUND_COLOR, blankPaintImage} from '../../paintBlank';
 import EditorStrip from '../components/EditorStrip';
 import SentenceScene from '../sentence/SentenceScene';
+import {readWordLayout} from '../sentence/wordLayout';
 
 import ImageFrame from './ImageFrame';
 import ImageList, {DraftEntry, NewImageKind} from './ImageList';
@@ -48,6 +49,8 @@ interface ImagesTabProps {
   verdictRequired?: boolean;
   /** The right pane's width, px: the preview column's. */
   paneWidth: number;
+  /** A picture became an image: the project should save now. */
+  onImageLanded?: () => void;
 }
 
 const DRAFT_ID = 'draft';
@@ -65,6 +68,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   editingOffered,
   verdictRequired,
   paneWidth,
+  onImageLanded,
 }) => {
   const animationList = useAppSelector(state => state.animationList);
   // Thumbnails land as the engine trims; re-list when they do.
@@ -142,6 +146,8 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   // picture's kind. A ref, so a slow upload lands where it was aimed.
   const chosenKeyRef = useRef(chosenId);
   chosenKeyRef.current = chosenImage?.key ?? null;
+  const landedRef = useRef(onImageLanded);
+  landedRef.current = onImageLanded;
   const land = useCallback(
     async (target: ImageTarget, write: () => Promise<string>) => {
       const key = await write();
@@ -153,9 +159,11 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
         setChosenId(id => (id === DRAFT_ID ? key : id));
         setDraft(null);
       }
+      landedRef.current?.();
     },
     []
   );
+  const wordLayout = useMemo(() => readWordLayout(), []);
   const handleKeep = useCallback(
     (result: GeneratedImageResult) => {
       const target: ImageTarget = {
@@ -251,6 +259,8 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
           onGenerateStart={onGenerate}
           onKeep={handleKeep}
           keepOnResult
+          wordLayout={wordLayout}
+          singleStep
           method="tab"
           layout={parts => (
             <>
@@ -261,6 +271,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                     ? parts.frame
                     : undefined
                 }
+                generating={parts.mode === 'generating'}
                 beside={parts.alternatives}
                 under={parts.underFrame}
               />

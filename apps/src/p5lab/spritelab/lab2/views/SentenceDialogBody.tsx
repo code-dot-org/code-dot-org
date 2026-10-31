@@ -124,6 +124,7 @@ const SentenceDialogBody: React.FunctionComponent<SentenceDialogBodyProps> = ({
               </p>
             )}
             {parts.sentence}
+            {parts.wordChooser}
             {parts.error}
             {parts.progress}
             {parts.fact}
