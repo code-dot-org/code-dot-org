@@ -496,6 +496,11 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   color: var(--background-neutral-primary);
 }
 
+// Read to screen readers only.
+.srOnly {
+  @include chrome.sr-only;
+}
+
 // The question wears the pixel editor's chrome, like the image dialog.
 .ratingHost {
   display: contents;

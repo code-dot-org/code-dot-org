@@ -100,6 +100,9 @@ const RatingBar: React.FunctionComponent<RatingBarProps> = ({
             mode={mode}
             className={styles.ratingDialog}
           >
+            <span id="dsco-dialog-description" className={styles.srOnly}>
+              Pick any reasons that fit, then Done.
+            </span>
             <h2 className={styles.ratingTitle}>{question.question}</h2>
             <div className={styles.ratingBody}>
               <Chips
