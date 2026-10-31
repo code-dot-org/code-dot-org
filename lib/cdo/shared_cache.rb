@@ -51,5 +51,3 @@ module Cdo
     end
   end
 end
-
-CDO_SHARED_CACHE = Cdo::SharedCache.cache
