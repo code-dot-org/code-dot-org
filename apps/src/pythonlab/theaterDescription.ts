@@ -4,7 +4,10 @@
 import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
 
 import {getModel} from '@cdo/apps/aichat/api/client/helpers/modelHelpers';
-import {areAiChatToolsEnabled} from '@cdo/apps/aichat/helpers/aiChatAccess';
+import {
+  areAiChatToolsEnabled,
+  isAiChatModelBlocked,
+} from '@cdo/apps/aichat/helpers/aiChatAccess';
 import {generateText} from '@cdo/apps/aiGateway';
 import DCDO from '@cdo/apps/dcdo';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -22,6 +25,9 @@ import {
 
 // Also gates the access token server-side (User::AiAccessible).
 export const THEATER_DESCRIPTIONS_DCDO_KEY = 'theater-ai-descriptions-enabled';
+
+// The fastest model, with thinking off, so the answer comes back quickly.
+const THEATER_DESCRIPTIONS_MODEL_ID = AiChatModelIds.GEMINI_2_5_FLASH_LITE;
 
 export const MAX_CODE_CHARACTERS = 20000;
 export const MAX_RUN_CHARACTERS = 8000;
@@ -73,7 +79,10 @@ export function canRequestTheaterDescription(): boolean {
   const appName = lab.levelProperties?.appName;
   return (
     !!appName &&
-    !currentUser.usOnlyAichatModelsDisabled &&
+    !isAiChatModelBlocked(
+      THEATER_DESCRIPTIONS_MODEL_ID,
+      currentUser.blockedAichatProviders
+    ) &&
     areAiChatToolsEnabled({
       appName,
       aiChatAccessLevel: currentUser.aiChatAccessLevel,
@@ -147,8 +156,7 @@ async function generateDescription(prompt: string): Promise<string> {
   const currentLevelId = state.progress.currentLevelId;
   const {text} = await generateText(
     {
-      // The fastest model, with thinking off, so the answer comes back quickly.
-      model: getModel(AiChatModelIds.GEMINI_2_5_FLASH_LITE),
+      model: getModel(THEATER_DESCRIPTIONS_MODEL_ID),
       system: SYSTEM_PROMPT,
       prompt,
       temperature: 0.2,

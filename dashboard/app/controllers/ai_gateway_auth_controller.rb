@@ -37,11 +37,11 @@ class AiGatewayAuthController < ApplicationController
       return render status: :forbidden, json: {user_type: current_user.user_type}
     end
 
-    # The gateway serves Gemini for generation (see shouldUseAiGateway), and the
-    # token it mints is not bound to a model, so a token issued for one model can
-    # be replayed against another. Refuse to mint at all when Gemini is blocked
-    # rather than trusting a client-supplied model id we cannot enforce later.
-    if current_user.us_only_aichat_models_disabled?
+    blocked_providers = current_user.blocked_aichat_providers
+
+    # Until the gateway handles blocked providers and rejects or falls back to another provider,
+    # we keep blocking token minting entirely.
+    if blocked_providers.any? && !DCDO.get('ai_gateway_enforces_blocked_providers', false)
       return render status: :forbidden, json: {user_type: current_user.user_type, error: AichatRequestsController::MODEL_REGION_BLOCKED_ERROR}
     end
 
@@ -88,6 +88,8 @@ class AiGatewayAuthController < ApplicationController
         channel_id: aichat_context[:channelId],
         lesson_id: aichat_context[:lessonId],
         turnstile_enforcement_mode: enforcement_mode,
+        # Omitted when nothing is blocked. Absent and empty both mean "unrestricted".
+        **(blocked_providers.any? ? {blocked_providers: blocked_providers} : {}),
       },
       private_key,
       'RS256',
