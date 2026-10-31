@@ -288,7 +288,6 @@ describe('ImagesTab', () => {
 
   it('tells how the picture was made after the first one on a level about one image, once', async () => {
     jest.useFakeTimers();
-    localStorage.clear();
     renderTab({lockedImageType: 'sprite', imageRole: 'hero'});
     acceptGenerated.mockImplementation(async () => {
       propsByKey.k2 = {name: 'Sprite 1', categories: [], role: 'hero'};

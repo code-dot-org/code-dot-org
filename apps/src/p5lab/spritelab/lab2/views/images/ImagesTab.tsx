@@ -74,30 +74,8 @@ const DEFAULT_PANE_WIDTH = 280;
 const IDLE_SAVE_MS = 20_000;
 // The reveal plays out before the story of how the picture was made.
 const LEARNING_DELAY_MS = 1800;
-// The kinds the story is told for, once each per project.
+// The kinds the story is told for.
 const LEARNING_KINDS: ImageType[] = ['sprite', 'background'];
-
-/** The kinds this project has had the story for, kept in the browser. */
-function learnedKinds(channelId: string | undefined): Set<string> {
-  try {
-    const raw = localStorage.getItem(`spritelab2-learned:${channelId ?? ''}`);
-    return new Set(raw ? (JSON.parse(raw) as string[]) : []);
-  } catch {
-    return new Set();
-  }
-}
-function rememberLearned(channelId: string | undefined, kind: string): void {
-  try {
-    const kinds = learnedKinds(channelId);
-    kinds.add(kind);
-    localStorage.setItem(
-      `spritelab2-learned:${channelId ?? ''}`,
-      JSON.stringify([...kinds])
-    );
-  } catch {
-    // Nothing to keep it in: the story is told again next time.
-  }
-}
 
 /** A drawing in progress: what it writes to, and what the editor opened. */
 interface Drawing {
@@ -122,7 +100,6 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   active = true,
 }) => {
   const animationList = useAppSelector(state => state.animationList);
-  const channelId = useAppSelector(state => state.lab.channel?.id);
   // Thumbnails land as the engine trims; re-list when they do.
   const [trimVersion, setTrimVersion] = useState(0);
   useEffect(() => onTrimsUpdated(() => setTrimVersion(v => v + 1)), []);
@@ -235,26 +212,27 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     []
   );
   const wordLayout = useMemo(() => readWordLayout(), []);
-  // The story of how the picture was made: told after the first character
-  // and the first background a level about one image makes.
+  // The story of how the picture was made: told once a visit, after the
+  // first picture a level about a character or a background makes.
   const [learning, setLearning] = useState<{
     picture: LearningPicture;
     prompt: string;
   } | null>(null);
+  const toldRef = useRef(false);
   const learningTimerRef = useRef<number>();
   useEffect(() => () => window.clearTimeout(learningTimerRef.current), []);
   const offerLearning = useCallback(
     (result: GeneratedImageResult) => {
       const {imageType, subject} = result.generation;
       if (
+        toldRef.current ||
         !lockedImageType ||
         !LEARNING_KINDS.includes(imageType) ||
-        subject === 'object' ||
-        learnedKinds(channelId).has(imageType)
+        subject === 'object'
       ) {
         return;
       }
-      rememberLearned(channelId, imageType);
+      toldRef.current = true;
       const src = bytesToDataURI(result.uint8Array, result.mediaType);
       const crop = result.frames
         ? {width: result.frames.frameSize.x, height: result.frames.frameSize.y}
@@ -268,7 +246,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
         LEARNING_DELAY_MS
       );
     },
-    [lockedImageType, channelId]
+    [lockedImageType]
   );
   // Once per picture: a verdict's second keep must not tell it again.
   const keptRef = useRef<string | null>(null);
