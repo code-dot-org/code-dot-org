@@ -107,6 +107,10 @@ const LearningDialog: React.FunctionComponent<LearningDialogProps> = ({
   return (
     <div className={styles.host}>
       <CustomDialog aria-label={TITLE} mode={mode} className={styles.dialog}>
+        <span id="dsco-dialog-description" className={styles.srOnly}>
+          Four short panels on how the AI made your picture. Next moves on; Got
+          it closes.
+        </span>
         <h2 className={styles.title}>{TITLE}</h2>
         <div key={index} className={styles.panel}>
           <div className={styles.visual}>{panel.visual(picture, prompt)}</div>
