@@ -77,9 +77,11 @@ export const PlaceHeading = ({fileId, isReadOnly}: PlaceHeadingProps) => {
     setActionsAt(null);
     void requestFileAct(request);
   };
-  const make = async (folder: string) => {
+  /** Make or clone one, which opens beside this one. */
+  const besideIt = async (request: Parameters<typeof requestFileAct>[0]) => {
     setSwitching(false);
-    const made = await requestFileAct({act: 'make', folder, answer: 'id'});
+    setActionsAt(null);
+    const made = await requestFileAct(request);
     if (typeof made === 'string') {
       trail?.openBeside(made);
     }
@@ -117,7 +119,11 @@ export const PlaceHeading = ({fileId, isReadOnly}: PlaceHeadingProps) => {
             </MenuItem>
             {/* A copy under a new name, opened: a second level that starts
                 as this one. */}
-            <MenuItem onClick={() => act({act: 'clone', fileId})}>
+            <MenuItem
+              onClick={() =>
+                void besideIt({act: 'clone', fileId, answer: 'id'})
+              }
+            >
               <ListItemText>Clone</ListItemText>
             </MenuItem>
             {!isEntry && (
@@ -134,7 +140,7 @@ export const PlaceHeading = ({fileId, isReadOnly}: PlaceHeadingProps) => {
           maps={maps}
           currentId={fileId}
           onOpen={open}
-          onNew={folder => void make(folder)}
+          onNew={folder => void besideIt({act: 'make', folder, answer: 'id'})}
           onClose={() => setSwitching(false)}
           isReadOnly={isReadOnly}
         />

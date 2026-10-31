@@ -56,8 +56,8 @@ ends in `activateFile`. When the active file changes, the trail:
 - is unchanged, if the last step is that file;
 - is cut back to that file, if it is an earlier step;
 - gains that file as a new step, otherwise;
-- is cut back to the entry and then gains it, if it was opened or made
-  from the switcher (step 4): a place chosen there sits beside the one in
+- is cut back to the entry and then gains it, if it was opened, made or
+  cloned from the switcher (step 4): a place chosen there sits beside the one in
   front, not inside it.
 
 The entry file (the Main Screen, or a world) is always the first step. A
@@ -151,7 +151,7 @@ Over the stage, shared by the Screen and the Map:
 - **the name**, drawn as a dropdown. It opens the switcher: a dialog with
   a section of Screens and a section of Maps, each listing its files by
   name with an Add button. Choosing or making one opens it as the step
-  after the entry.
+  after the entry, as does Clone in the actions menu.
 - **an actions menu** beside the name: Rename, and Delete after a
   confirmation. The Main Screen can be renamed but not deleted.
 - **the size**: tiles for a Map, as now; pixels for a Screen.
@@ -188,7 +188,8 @@ on Level 2 read as Main › Level 2 › Level 3, a path into Level 2, and a
 learner making maps in a row grew a trail that never shortened. Its
 choices now land after the entry (`TrailContextValue.openBeside`). A
 made one lands after its name prompt, and a cancelled prompt leaves the
-trail as it was.
+trail as it was. Clone does the same, and answers its copy's id as
+`make` does (`files/fileActs`).
 
 ### 5. Undo and redo
 

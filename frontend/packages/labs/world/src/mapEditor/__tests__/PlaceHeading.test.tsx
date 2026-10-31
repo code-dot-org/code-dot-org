@@ -105,6 +105,7 @@ describe('the head of the toolbar', () => {
     expect(requestFileAct).toHaveBeenCalledWith({
       act: 'clone',
       fileId: 'level',
+      answer: 'id',
     });
   });
 

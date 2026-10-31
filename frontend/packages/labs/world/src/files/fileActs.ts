@@ -4,7 +4,7 @@
 // One host owns the prompts and does each act (`files/FileMenus`), so the
 // doors ask it rather than doing it again
 // (`actors/actorDelete` is the same seam for an actor). A request resolves
-// once the act is done or abandoned. `make` and `draw` answer the new file —
+// once the act is done or abandoned. `make`, `draw` and `clone` answer the new file —
 // its id, or its name where the door knows its files by name, as the
 // Background field does — so the door that asked can take it; the rest
 // answer nothing, and what they did is seen in the project. A file made or
@@ -18,7 +18,7 @@ import {importSeam} from '../blockly/libraryImport';
 /** Which file: by id, or by its path in the project. */
 export type FileRef = {fileId: string} | {path: string};
 
-/** What `make` and `draw` answer: the new file's id, or its name. */
+/** What `make`, `draw` and `clone` answer: the new file's id, or its name. */
 export type MadeAnswer = 'id' | 'name';
 
 export type FileAct =
@@ -50,8 +50,8 @@ export type FileAct =
    * save its own file and ask this in one breath.
    */
   | ({act: 'open'} & FileRef)
-  /** `clone` is a copy, under a name the learner gives. */
-  | ({act: 'rename' | 'clone' | 'delete'} & FileRef);
+  /** `clone` is a copy, under a name the learner gives; only it answers. */
+  | ({act: 'rename' | 'clone' | 'delete'; answer?: MadeAnswer} & FileRef);
 
 const seam = importSeam<[act: FileAct]>();
 

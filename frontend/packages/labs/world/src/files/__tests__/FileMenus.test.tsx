@@ -272,8 +272,8 @@ describe('the file acts, as each door asks them', () => {
     render(<FileMenus />);
     await requestFileAct({act: 'clone', fileId: 'a'});
 
-    await vi.waitFor(() => expect(newFile).toHaveBeenCalled());
-    const written = newFile.mock.calls.at(-1)![0] as {
+    await vi.waitFor(() => expect(createNewFile).toHaveBeenCalled());
+    const written = createNewFile.mock.calls.at(-1)![0] as unknown as {
       fileName: string;
       contents: string;
       folderId: string;
@@ -710,6 +710,19 @@ describe('a Screen or Map acted on from the toolbar', () => {
     ).toBe('cave.png');
   });
 
+  it('clones, and answers the copy’s id', async () => {
+    render(<FileMenus />);
+    promptForName.mockResolvedValueOnce('Dark Cave');
+    const made = await requestFileAct({act: 'clone', fileId: 'e'});
+    expect(createExternalFile).toHaveBeenCalledWith(
+      expect.objectContaining({fileName: 'darkCave.png'}),
+    );
+    expect(made).toBe('made');
+
+    promptForName.mockResolvedValueOnce(undefined as never);
+    expect(await requestFileAct({act: 'clone', fileId: 'e'})).toBeUndefined();
+  });
+
   it('answers nothing for a folder nothing makes in', async () => {
     render(<FileMenus />);
     expect(await requestFileAct({act: 'make', folder: 'sounds'})).toBe(
@@ -735,7 +748,7 @@ describe('a Screen or Map acted on from the toolbar', () => {
     expect(promptForName).toHaveBeenCalledWith(
       expect.objectContaining({title: 'Clone gravity.rule'}),
     );
-    expect(newFile).toHaveBeenCalledWith(
+    expect(createNewFile).toHaveBeenCalledWith(
       expect.objectContaining({fileName: 'gravityTwo.rule'}),
     );
 

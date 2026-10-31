@@ -327,7 +327,7 @@ export const FileMenus = () => {
    * image editor reads and writes through.
    */
   const clone = useCallback(
-    async (file: ProjectFile, was: string) => {
+    async (file: ProjectFile, was: string): Promise<Made | undefined> => {
       await thenAsk();
       const extension = file.name.split('.').pop() ?? '';
       const name = await promptForName({
@@ -337,32 +337,39 @@ export const FileMenus = () => {
           nameProblem(ops.source, file.folderId, value, extension),
       });
       if (!name) {
-        return;
+        return undefined;
       }
       const fileName = fileNameFor(name, extension);
       const language = languageForFileName(config, fileName);
-      if (file.url) {
-        ops.newExternalFile({
-          fileName,
-          language,
-          folderId: file.folderId,
-          url: file.url,
-          mimeType: file.mimeType,
-        });
-        return;
-      }
-      ops.newFile({
-        fileName,
-        language,
-        folderId: file.folderId,
-        // Resolved, so a clone is a COPY. Cloning a reference would write a
-        // second reference to the same stock rule, and `renamed` would find no
-        // declaration in it to change — two files declaring one rule name,
-        // which is the ambiguity every other path here works to prevent.
-        contents: renamed(resolveRuleContents(file.contents ?? ''), name),
+      const source = ops.source;
+      const made = file.url
+        ? createExternalFile({
+            source,
+            fileName,
+            language,
+            folderId: file.folderId,
+            url: file.url,
+            mimeType: file.mimeType,
+          })
+        : createNewFile({
+            source,
+            fileName,
+            language,
+            folderId: file.folderId,
+            // Resolved, so a clone is a COPY. Cloning a reference would write a
+            // second reference to the same stock rule, and `renamed` would find no
+            // declaration in it to change — two files declaring one rule name,
+            // which is the ambiguity every other path here works to prevent.
+            contents: renamed(resolveRuleContents(file.contents ?? ''), name),
+          });
+      updateSources({
+        ...currentSources,
+        source: config.reconcileSource?.(made, source) ?? made,
       });
+      const id = Object.keys(made.files).find(each => !(each in source.files));
+      return id ? {id, name: fileName} : undefined;
     },
-    [ops, config, promptForName, thenAsk],
+    [ops.source, config, promptForName, thenAsk, updateSources, currentSources],
   );
 
   /**
@@ -796,7 +803,7 @@ export const FileMenus = () => {
       if (request.act === 'rename') {
         await rename(file, name);
       } else if (request.act === 'clone') {
-        await clone(file, name);
+        return answer(await clone(file, name), request.answer);
       } else {
         await remove(file);
       }
