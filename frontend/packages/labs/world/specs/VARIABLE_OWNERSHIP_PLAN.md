@@ -1,6 +1,6 @@
 # Plan: each binding owns its variable
 
-STATUS: PLANNED, not started. Comes before the event hat's value chips
+STATUS: IN PROGRESS. Step 2 is built. Comes before the event hat's value chips
 (below, step 5), which need it.
 
 A name in this language is lexical. It exists where a binding gives it: a
@@ -115,6 +115,18 @@ ways a learner can see.
    gives. If nothing, remove the exception, and every name is bound.
 7. Specs: this record; PASTE.md and EVENT_VALUES_PLAN.md where they
    describe the shared model; ACCESSIBILITY.md for the chips.
+
+## Built
+
+- **Step 2: the store** (`blockly/ownedVariableMap`), registered as every
+  workspace's default where the lab registers its variable fields
+  (`typedVariables`). It subclasses Blockly's and changes two methods:
+  `createVariable` makes a new variable whatever the name, and answers an
+  id it already holds with that variable; `renameVariable` renames one and
+  never merges. Nothing else changed behaviour: every lookup by name still
+  finds the one variable it found before, because nothing yet makes a
+  second of a name. The suite passed unchanged, and the Ball's event still
+  reaches its handler in the browser.
 
 ## Not in this plan
 
