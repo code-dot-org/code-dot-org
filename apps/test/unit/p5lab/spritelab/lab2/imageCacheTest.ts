@@ -46,7 +46,6 @@ const find = (overrides = {}) =>
   findCachedImage({
     sentenceId: 'character',
     wordIds: ['brave', 'dragon', '_'],
-    imageType: 'sprite',
     style: 'pixel',
     characterSet: true,
     baseUrl: BASE,
@@ -71,33 +70,9 @@ describe('imageCache', () => {
   });
 
   it("names a frame's file by variant and, for a set, its frame", () => {
-    const set = {
-      imageType: 'sprite',
-      style: 'pixel',
-      characterSet: true,
-    } as const;
-    expect(frameFileName(0, 'base', set)).toBe('00-base.png');
-    expect(frameFileName(3, 'walking', set)).toBe('03-walking.png');
-    const single = {...set, characterSet: false};
-    expect(frameFileName(3, 'single', single)).toBe('03.png');
-  });
-
-  it('keeps a smooth background as JPEG; pixel art and sprites are PNG', () => {
-    const background = (style: 'pixel' | 'smooth') =>
-      frameFileName(1, 'single', {
-        imageType: 'background',
-        style,
-        characterSet: false,
-      });
-    expect(background('smooth')).toBe('01.jpg');
-    expect(background('pixel')).toBe('01.png');
-    expect(
-      frameFileName(1, 'single', {
-        imageType: 'sprite',
-        style: 'smooth',
-        characterSet: false,
-      })
-    ).toBe('01.png');
+    expect(frameFileName(0, 'base', true)).toBe('00-base.png');
+    expect(frameFileName(3, 'walking', true)).toBe('03-walking.png');
+    expect(frameFileName(3, 'single', false)).toBe('03.png');
   });
 
   it('takes the first variant whose first frame is there', async () => {
@@ -153,12 +128,12 @@ describe('imageCache', () => {
   });
 
   it('finds a single picture by its one file', async () => {
-    const folder = `${BASE}${VERSION}/place/_/forest/smooth`;
+    const folder = `${BASE}${VERSION}/place/_/forest/pixel`;
     const calls: string[] = [];
     (global as unknown as {fetch: unknown}).fetch = jest.fn(
       async (input: RequestInfo | URL) => {
         calls.push(String(input));
-        return String(input) === `${folder}/00.jpg`
+        return String(input) === `${folder}/00.png`
           ? new Response(new Uint8Array([4]), {status: 200})
           : new Response('', {status: 404});
       }
@@ -166,16 +141,14 @@ describe('imageCache', () => {
     const found = await find({
       sentenceId: 'place',
       wordIds: ['_', 'forest'],
-      imageType: 'background',
-      style: 'smooth',
       characterSet: false,
     });
     expect(found?.variant).toBe(0);
     expect(found?.characterSet).toBe(false);
     const raw = await found!.raw('single');
     expect(Array.from(raw.uint8Array)).toEqual([4]);
-    expect(raw.mediaType).toBe('image/jpeg');
-    expect(calls).toEqual([`${folder}/00.jpg`]);
+    expect(raw.mediaType).toBe('image/png');
+    expect(calls).toEqual([`${folder}/00.png`]);
   });
 
   it('reports a frame file that is not there', async () => {

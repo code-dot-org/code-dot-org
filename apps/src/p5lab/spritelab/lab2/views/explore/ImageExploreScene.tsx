@@ -163,21 +163,12 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
     return findCachedImage({
       sentenceId: sentence.id,
       wordIds: sentenceWordIds(sentence, choices),
-      imageType,
       style,
       characterSet: canAnimate,
       avoidVariant: lastCachedVariantRef.current,
       baseUrl: imageCacheUrl,
     });
-  }, [
-    imageSource,
-    sentence,
-    choices,
-    imageType,
-    style,
-    canAnimate,
-    imageCacheUrl,
-  ]);
+  }, [imageSource, sentence, choices, style, canAnimate, imageCacheUrl]);
 
   const generate = useCallback(async () => {
     const run = ++runRef.current;

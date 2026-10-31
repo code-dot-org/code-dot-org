@@ -9,7 +9,6 @@
 // then one per style:
 //
 //   <base>/<version>/<sentenceId>/<word>/<word>/<word>/<style>/<NN>.png          single
-//   <base>/<version>/<sentenceId>/<word>/<word>/<word>/<style>/<NN>.jpg          smooth background
 //   <base>/<version>/<sentenceId>/<word>/<word>/<word>/<style>/<NN>-base.png     set frames
 //   <base>/<version>/<sentenceId>/<word>/<word>/<word>/<style>/<NN>-walking.png  ...
 //
@@ -28,7 +27,7 @@ import type {GeneratedFile} from 'ai';
 import {shuffle} from 'lodash';
 
 import {bytesToBase64} from './encoding';
-import {ImageStyle, ImageType} from './types';
+import {ImageStyle} from './types';
 
 /** Where a level's pictures come from: the model, or the tree, which is
     assumed complete. A picture the tree lacks is an error, not a fallback. */
@@ -60,15 +59,6 @@ export const VARIANT_COUNT = 3;
     'single'. */
 export type CachedFrame = 'single' | 'base' | string;
 
-/** What a filling's files look like, known from the level before any is
-    fetched. */
-export interface CachedShape {
-  imageType: ImageType;
-  style: ImageStyle;
-  /** Five pose files rather than one picture. */
-  characterSet: boolean;
-}
-
 /** Thrown when a file the variant should have is not there. */
 export class ImageCacheMissError extends Error {
   constructor(url: string, status?: number) {
@@ -89,21 +79,14 @@ export function variantName(variant: number): string {
   return String(variant).padStart(2, '0');
 }
 
-// A smooth background is photographic and keeps the model's JPEG, as the
-// live path does; everything else is keyed or grid-read and must be PNG.
-function fileExtension({imageType, style}: CachedShape): string {
-  return imageType === 'background' && style === 'smooth' ? 'jpg' : 'png';
-}
-
-/** The file a frame's bytes live in: `<NN>.png` (or `.jpg`) for a single
-    picture, `<NN>-<frame>.png` for a set's frame. */
+/** The file a frame's bytes live in: `<NN>.png` for a single picture,
+    `<NN>-<frame>.png` for a set's frame. */
 export function frameFileName(
   variant: number,
   frame: string,
-  shape: CachedShape
+  characterSet: boolean
 ): string {
-  const pose = shape.characterSet ? `-${frame}` : '';
-  return `${variantName(variant)}${pose}.${fileExtension(shape)}`;
+  return `${variantName(variant)}${characterSet ? `-${frame}` : ''}.png`;
 }
 
 export function sentencePath(
@@ -130,8 +113,7 @@ async function fetchRaw(url: string): Promise<GeneratedFile> {
   }
   const uint8Array = new Uint8Array(await response.arrayBuffer());
   const mediaType =
-    response.headers.get('content-type')?.split(';')[0] ||
-    (url.endsWith('.jpg') ? 'image/jpeg' : 'image/png');
+    response.headers.get('content-type')?.split(';')[0] || 'image/png';
   return {
     uint8Array,
     mediaType,
@@ -141,10 +123,13 @@ async function fetchRaw(url: string): Promise<GeneratedFile> {
   };
 }
 
-export interface FindCachedImageParams extends CachedShape {
+export interface FindCachedImageParams {
   sentenceId: string;
   /** Word ids in the sentence's slot order (sentenceWordIds). */
   wordIds: string[];
+  style: ImageStyle;
+  /** Five pose files rather than one picture. */
+  characterSet: boolean;
   /** The variant shown last time; another is preferred when one exists. */
   avoidVariant?: number;
   /** Override for tests and QA; defaults to the published tree. */
@@ -167,20 +152,18 @@ export async function findCachedImage(
     sentenceId,
     wordIds,
     style,
-    imageType,
     characterSet,
     avoidVariant,
     baseUrl = IMAGE_CACHE_BASE_URL,
     version = IMAGE_CACHE_VERSION,
   } = params;
-  const shape = {imageType, style, characterSet};
   const folder = `${baseUrl}${version}/${sentencePath(
     sentenceId,
     wordIds,
     style
   )}`;
   const fileUrl = (variant: number, frame: string) =>
-    `${folder}/${frameFileName(variant, frame, shape)}`;
+    `${folder}/${frameFileName(variant, frame, characterSet)}`;
   const firstFrame = characterSet ? 'base' : 'single';
   const variants = [...Array(VARIANT_COUNT).keys()];
   // Random order, the last shown at the end: the first frame found wins.
