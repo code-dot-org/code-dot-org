@@ -49,9 +49,19 @@ ways a learner can see.
   is the id it holds; which bindings it may hold is the scope rule.
 - **Renaming a binding renames its own variable**, and the getters holding
   its id follow. No other binding changes. Renaming never merges.
-- **Inner hides outer.** Where two bindings in scope give one name, the
-  getter menu offers the innermost, once. A getter already holding the
+- **Inner hides outer**, where a binding other than a `let` repeats a
+  name already visible: a loop's `amount` under a hat that gives `amount`.
+  The getter menu offers the innermost, once. A getter already holding the
   outer one's id keeps it and still works.
+- **A `let` that names a binding already visible joins it, and is
+  warned.** `let amount` and, three rows down, `let amount` again: the
+  second sets the first, as it does now (`variableScope.isRedeclaration`),
+  and carries a warning that it does. The same holds for a `let` under a
+  hat or loop that already gives the name. It joins that binding only,
+  never one out of scope, so a `let` cannot reach a variable the scope
+  rule hides from it. Decided over shadowing, under which a getter between
+  the two and one after both would draw `amount` and mean different
+  things.
 - **Generated code keeps them apart.** Blockly's generator maps each id to
   an identifier and makes a repeated name distinct (`amount`, `amount2`),
   so two bindings with one name never generate one identifier.
@@ -87,7 +97,8 @@ ways a learner can see.
 2. The variable store, registered for every World workspace, the compiler's
    headless one included. Tests: two records of one name; rename does not
    merge; load and save keep both.
-3. `let`s and loops own their variables (`variableName`). Paste and
+3. `let`s and loops own their variables (`variableName`); a `let` naming a
+   visible binding joins it, with its warning. Paste and
    Duplicate remap. Tests, and a browser check: two `let amount`s renamed
    apart. The test over the repository's content, above.
 4. Event hats own their values (`eventLocalIds`); `bindParams` stops
@@ -105,14 +116,6 @@ ways a learner can see.
 
 ## Open questions
 
-- **The same name twice in one body.** `let amount` and, three rows down,
-  `let amount` again. Today the second is an assignment to the first
-  (`variableScope.isRedeclaration`), since both hold one id. Owned, the
-  second is a new variable hiding the first for the rows below it. That is
-  ordinary lexical shadowing, but a getter between the two and a getter
-  after the second would both draw `amount` and mean different things.
-  Choices: keep it an assignment (typing a visible name into a `let` joins
-  that binding, and only that one); allow the shadow; or warn on it.
 - **A filtered value's chip.** `is hit by ⟨who⟩ (any ▾) ⟨amount⟩` (chip,
   then filter), or no chip for a filtered value. The first is
   recommended.
