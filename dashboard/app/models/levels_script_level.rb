@@ -14,7 +14,7 @@
 # Join table.
 # Don't add anything to this model, beyond what's needed for serialization and seeding; used for convenience for ActiveRecord Import.
 class LevelsScriptLevel < ApplicationRecord
-  self.primary_keys = :script_level_id, :level_id
+  self.primary_key = [:script_level_id, :level_id]
 
   export_to_analytics
 

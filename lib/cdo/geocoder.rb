@@ -173,6 +173,13 @@ def geocoder_config
     config[:cache] = ActiveSupport::Cache::RedisCacheStore.new(
       url: CDO.redis_url,
       expires_in: 1.week,
+
+      # Because this is used outside of the context of a Rails application,
+      # starting in Rails 7.1 it will by default attempt to use a deprecated
+      # serializer. If in the future we restrict this module to Dashboard or
+      # if a future version of Rails uses supported defaults, we can safely
+      # remove this line.
+      serializer: ActiveSupport::Cache::SerializerWithFallback[:marshal_7_1]
     )
     if CDO.mapbox_access_token
       config[:lookup] = :mapbox
