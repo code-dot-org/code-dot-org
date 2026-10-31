@@ -9,12 +9,18 @@ import InfoTooltipIcon from '@cdo/apps/aiComponentLibrary/infoTooltipIcon/InfoTo
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
-import {updateSectionAiChatAccessLevel} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {
+  updateSectionAiChallengeEnabled,
+  updateSectionAiChatAccessLevel,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {AiChatAccessLevels} from '@cdo/generated-scripts/sharedConstants';
 
-import {handleUpdateSectionAiChatAccessLevel} from '../../accessControlsApi';
+import {
+  handleUpdateSectionAiChallengeEnabled,
+  handleUpdateSectionAiChatAccessLevel,
+} from '../../accessControlsApi';
 import {
   AI_SETTINGS_SUPPORT_LINK,
   VERIFIED_TEACHER_SUPPORT_LINK,
@@ -72,6 +78,9 @@ const AiChatAccessControls: React.FC = () => {
   const [essentialOnlyCheckbox, setEssentialOnlyCheckbox] = useState(
     essentialOnlyCheckboxState(section.aiChatAccessLevel)
   );
+  const [challengeToggle, setChallengeToggle] = useState(
+    !!section.aiChallengeEnabled
+  );
 
   const shouldShowAlert = shouldShowAiChatEssentialAlert({
     assignedAiChatToolsDependency: section.assignedAiChatToolsDependency,
@@ -124,10 +133,34 @@ const AiChatAccessControls: React.FC = () => {
     }
   };
 
+  const handleChallengeToggle = async () => {
+    const previousValue = challengeToggle;
+    const newValue = !challengeToggle;
+    setChallengeToggle(newValue);
+    try {
+      await handleUpdateSectionAiChallengeEnabled(section.id, newValue);
+      dispatch(
+        updateSectionAiChallengeEnabled({
+          sectionId: section.id,
+          aiChallengeEnabled: newValue,
+        })
+      );
+      analyticsReporter.sendEvent(EVENTS.AI_CHALLENGE_SECTION_ENABLED_UPDATED, {
+        sectionId: section.id,
+        enabled: newValue,
+        courseAssigned: section.courseVersionName,
+        uiLocation: 'aiSettingsTeacherDashboardTab',
+      });
+    } catch (error) {
+      setChallengeToggle(previousValue);
+    }
+  };
+
   useEffect(() => {
     const accessLevel = section.aiChatAccessLevel;
     setEssentialOnlyCheckbox(essentialOnlyCheckboxState(accessLevel));
     setAccessToggle(accessToggleState(accessLevel));
+    setChallengeToggle(!!section.aiChallengeEnabled);
   }, [section]);
 
   return (
@@ -190,11 +223,28 @@ const AiChatAccessControls: React.FC = () => {
               <Toggle
                 id="uitest-ai-chat-section-access-toggle"
                 name="aiChatSectionAccessToggle"
+                aria-label="AI Chat Tools"
                 checked={isCurrentUserAccessDisabled ? false : accessToggle}
                 onChange={handleAccessToggle}
                 disabled={isCurrentUserAccessDisabled}
               />
             </div>
+            {accessToggle &&
+              !isCurrentUserAccessDisabled &&
+              section.lessonTutorAvailable && (
+                <div className={style.rowContainer}>
+                  <Typography className={style.semiBold} variant="body2">
+                    AI Tutor+ Challenges
+                  </Typography>
+                  <Toggle
+                    id="uitest-ai-challenge-section-toggle"
+                    name="aiChallengeSectionToggle"
+                    aria-label="AI Tutor+ Challenges"
+                    checked={challengeToggle}
+                    onChange={handleChallengeToggle}
+                  />
+                </div>
+              )}
           </>
         )}
       </div>

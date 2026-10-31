@@ -48,4 +48,5 @@ export interface CurrentUserState {
   isLevelbuilder: boolean;
   aiChatAccessLevel: AiChatAccessLevel;
   usOnlyAichatModelsDisabled: boolean;
+  canUseLessonDeepDiveChallenges: boolean;
 }

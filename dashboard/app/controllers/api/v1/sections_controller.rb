@@ -452,6 +452,14 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     render json: {result: 'invalid ai_chat_access_level'}, status: :bad_request
   end
 
+  # POST /api/v1/sections/<id>/ai_challenge_enabled
+  def set_ai_challenge_enabled
+    enabled = ActiveModel::Type::Boolean.new.cast(params[:ai_challenge_enabled])
+    return render json: {result: 'invalid ai_challenge_enabled'}, status: :bad_request if enabled.nil?
+    @section.update!(ai_challenge_enabled: enabled)
+    render json: {result: 'success'}
+  end
+
   # GET /api/v1/sections/<id>/suggested_lesson
   def suggested_lesson
     if @section.suggested_lesson_stale? && @section.script.present?

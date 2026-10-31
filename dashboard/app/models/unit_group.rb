@@ -649,6 +649,12 @@ class UnitGroup < ApplicationRecord
     course_version
   end
 
+  # Mirrors Unit#lesson_tutor_available?.
+  def lesson_tutor_available?
+    return false if pl_course?
+    !!get_course_version&.course_offering&.ai_initiative?
+  end
+
   def has_pilot_experiment?(user)
     return false unless pilot_experiment
     SingleUserExperiment.enabled?(user: user, experiment_name: pilot_experiment)

@@ -40,6 +40,11 @@ jest.mock('@cdo/apps/util/HttpClient', () => ({
   default: {post: jest.fn().mockResolvedValue(undefined)},
 }));
 
+let mockChallengesEnabled = true;
+jest.mock('@cdo/apps/aiTutor/hooks/useLessonDeepDiveChallengesEnabled', () => ({
+  useLessonDeepDiveChallengesEnabled: () => mockChallengesEnabled,
+}));
+
 const LESSON_DATA: LessonDeepDiveData = {
   lessonId: 1,
   lessonName: 'Test Lesson',
@@ -78,6 +83,7 @@ describe('LessonDeepDiveContainer story card sequence', () => {
   beforeEach(() => {
     jest.useFakeTimers();
     experiments.setEnabled(experiments.LESSON_TUTOR, true);
+    mockChallengesEnabled = true;
     (HttpClient.post as jest.Mock).mockClear();
   });
 
@@ -165,6 +171,7 @@ describe('LessonDeepDiveContainer story card sequence', () => {
 describe('LessonDeepDiveContainer URL param routing', () => {
   beforeEach(() => {
     experiments.setEnabled(experiments.LESSON_TUTOR, true);
+    mockChallengesEnabled = true;
   });
 
   afterEach(() => {
@@ -186,5 +193,33 @@ describe('LessonDeepDiveContainer URL param routing', () => {
   it('falls back to welcome when :screenId is not a known screen', () => {
     renderContainer('not-a-real-screen');
     expect(screen.getByText('welcome')).toBeInTheDocument();
+  });
+});
+
+describe('LessonDeepDiveContainer without challenges', () => {
+  beforeEach(() => {
+    experiments.setEnabled(experiments.LESSON_TUTOR, true);
+    mockChallengesEnabled = false;
+  });
+
+  afterEach(() => {
+    experiments.setEnabled(experiments.LESSON_TUTOR, false);
+  });
+
+  it('skips next-step going forward from reflection', () => {
+    renderContainer('reflection');
+    act(() => fireEvent.keyDown(window, {key: 'ArrowRight'}));
+    expect(screen.getByText('intervention')).toBeInTheDocument();
+  });
+
+  it('skips next-step going back from intervention', () => {
+    renderContainer('intervention');
+    act(() => fireEvent.keyDown(window, {key: 'ArrowLeft'}));
+    expect(screen.getByText('reflection')).toBeInTheDocument();
+  });
+
+  it('does not render next-step from the URL', () => {
+    renderContainer('next-step');
+    expect(screen.queryByText('next-step')).not.toBeInTheDocument();
   });
 });
