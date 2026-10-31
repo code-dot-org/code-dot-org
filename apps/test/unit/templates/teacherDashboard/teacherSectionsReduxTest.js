@@ -2046,19 +2046,11 @@ describe('teacherSectionsRedux', () => {
       assert.deepEqual(newState.sectionOrder, orderedSections);
     });
 
-    it('saves the order of sections to the BE if order is different', () => {
+    it('reconciles the order with the sections without saving it', () => {
       const state = reducer(initialState, setSections(sections));
       const orderedSections = [11, 12, 13];
-      const newState = reducer(state, setSectionOrder(orderedSections, true));
+      const newState = reducer(state, setSectionOrder(orderedSections));
       assert.deepEqual(newState.sectionOrder, [307, ...orderedSections]);
-      expect(putSpy).to.be.called.once;
-    });
-
-    it('does not save the order of sections to the BE if order is the same', () => {
-      const state = reducer(initialState, setSections(sections));
-      const orderedSections = [11, 12, 13, 307];
-      const newState = reducer(state, setSectionOrder(orderedSections, true));
-      assert.deepEqual(newState.sectionOrder, orderedSections);
       expect(putSpy).not.to.be.called;
     });
   });
