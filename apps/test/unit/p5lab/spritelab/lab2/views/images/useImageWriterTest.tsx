@@ -31,14 +31,16 @@ jest.mock('@cdo/apps/util/reduxHooks', () => ({
   useAppSelector: (select: (state: unknown) => unknown) =>
     select({lab: {channel: {id: 'chan'}}}),
 }));
-const createNamedAnimation = jest.fn(() => 'new-key');
-const repointAnimation = jest.fn(() => '/v3/assets/chan/old.png');
+const createNamedAnimation = jest.fn((...args: unknown[]) => 'new-key');
+const repointAnimation = jest.fn(
+  (...args: unknown[]) => '/v3/assets/chan/old.png'
+);
 jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/imageSave', () => ({
   ...jest.requireActual('@cdo/apps/p5lab/spritelab/lab2/views/imageSave'),
   createNamedAnimation: (...args: unknown[]) => createNamedAnimation(...args),
   repointAnimation: (...args: unknown[]) => repointAnimation(...args),
 }));
-const httpDelete = jest.fn(() => Promise.resolve());
+const httpDelete = jest.fn((...args: unknown[]) => Promise.resolve());
 jest.mock('@cdo/apps/util/HttpClient', () => ({
   __esModule: true,
   default: {delete: (...args: unknown[]) => httpDelete(...args)},
