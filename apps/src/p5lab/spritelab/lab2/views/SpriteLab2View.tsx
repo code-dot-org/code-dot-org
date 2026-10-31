@@ -3,6 +3,7 @@ import * as BlocklyCore from 'blockly/core';
 import classNames from 'classnames';
 import {cloneDeep, isEqual} from 'lodash';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
+import {shallowEqual} from 'react-redux';
 import {AnyAction, Reducer} from 'redux';
 
 import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
@@ -40,6 +41,7 @@ import {getSerializedAnimationList} from '@cdo/apps/p5lab/shapes';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
 import runState, {setIsRunning} from '@cdo/apps/redux/runState';
+import {isTargetEditable} from '@cdo/apps/util/isTargetEditable';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
@@ -154,6 +156,7 @@ import {Editor} from './components/EditorSwitch';
 import LabShell from './components/LabShell';
 import PlayBar from './components/PlayBar';
 import PlayControls from './components/PlayControls';
+import PromptBar from './components/PromptBar';
 import Sheet from './components/Sheet';
 import WorkspaceSceneBar from './components/WorkspaceSceneBar';
 import DiscoverBlocksButton from './DiscoverBlocksButton';
@@ -185,7 +188,6 @@ const p5labReducers = p5labReducersModule as unknown as Record<string, Reducer>;
 registerReducers({
   animationList: p5labReducers.animationList,
   textConsole: p5labReducers.textConsole,
-  spritelabInputList: p5labReducers.spritelabInputList,
   // Read/written by the location-picker block.
   locationPicker: p5labReducers.locationPicker,
   runState,
@@ -414,10 +416,15 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // The catalog's blocks are the ones no earlier level of the lesson
   // required (blockCatalog.ts); outside a lesson there are none.
   const {levelPropertiesMap} = useLevelProperties();
-  const lessonLevelIds = useAppSelector(state =>
-    (getCurrentLevels(state) as {id: string | number}[] | undefined)?.map(
-      level => String(level.id)
-    )
+  // getCurrentLevels returns a new list every time it is called. shallowEqual
+  // compares the ids one by one, so this value only changes when the lesson's
+  // levels do. Without it, every render would rebuild the toolbox.
+  const lessonLevelIds = useAppSelector(
+    state =>
+      (getCurrentLevels(state) as {id: string | number}[] | undefined)?.map(
+        level => String(level.id)
+      ),
+    shallowEqual
   );
   const earlierLevels = useMemo(() => {
     const currentLevelIndex =
@@ -1264,6 +1271,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     engine.runProgram(program, referencedImages, {holdFirstFrame: true});
   }, [dispatch, getCode, requestThumbnail]);
 
+  const activePrompt = useAppSelector(state => state.spriteLab2.prompt);
+  const handlePromptAnswer = useCallback(
+    (variableName: string, value: string) =>
+      engineRef.current?.onPromptAnswer(variableName, value),
+    []
+  );
+
   // Debounce re-runs so we don't restart the program on every keystroke/drag.
   const runTimer = useRef<number>();
   const scheduleRun = useCallback(() => {
@@ -1618,15 +1632,16 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   }, [activeTab]);
 
   // A game key aimed at a focused control belongs to the control: activate
-  // it, don't also jump. Stopping at document keeps the event from p5's
-  // window listener; the control's default activation is unaffected.
+  // it, don't also jump. Any key typed into a text field, such as the prompt's
+  // answer, is the field's alone. Stopping at document keeps the event from
+  // p5's window listener; the control's default action is unaffected.
   useEffect(() => {
     const swallowOnControls = (e: KeyboardEvent) => {
-      if (!GAME_KEYS.has(e.key)) {
-        return;
-      }
       const target = e.target instanceof Element ? e.target : null;
-      if (target?.closest(INTERACTIVE_CONTROLS)) {
+      if (
+        isTargetEditable(e.target) ||
+        (GAME_KEYS.has(e.key) && target?.closest(INTERACTIVE_CONTROLS))
+      ) {
         e.stopPropagation();
       }
     };
@@ -2493,6 +2508,15 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 }
                 onRestartScene={event =>
                   handleRestartClick(event, handleRestartScene)
+                }
+              />
+            }
+            prompt={
+              <PromptBar
+                prompt={activePrompt}
+                onAnswer={handlePromptAnswer}
+                disabled={
+                  playspaceMode !== 'play' || jumpCover || externalLoading
                 }
               />
             }

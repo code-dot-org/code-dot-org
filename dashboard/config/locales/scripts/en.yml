@@ -420,6 +420,8 @@ en:
               name: Choice Progression
             lesson-62:
               name: Quiz
+            lesson-63:
+              name: Sprite Lab2
         ui-test-all-the-levels:
           title: All The Levels!
           description: |-

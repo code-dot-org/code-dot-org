@@ -7,55 +7,69 @@ require 'dynamic_config/dcdo'
 writer = URI.parse(CDO.dashboard_db_writer) if CDO.dashboard_db_writer
 reader = URI.parse(CDO.dashboard_db_reader) if CDO.dashboard_db_reader
 
-# Which proxy, if any, the read replica pool connects through: 'proxysql', 'rdsproxy', or 'none'.
+# Which proxy, if any, this Rails process connects through: 'proxysql', 'rdsproxy', or 'none'.
 proxysql_installed = !CDO.db_proxy_admin.nil?
 database_proxy = CDO.db_proxy.to_s.strip
-# An unset Secret preserves the current production functionality, rather than silently moving reads off ProxySQL.
+# An unset `CDO.db_proxy` preserves the current production functionality, rather than silently moving reads off ProxySQL.
 database_proxy = proxysql_installed ? 'proxysql' : 'none' if database_proxy.empty?
 database_proxy = 'none' if database_proxy == 'proxysql' && !proxysql_installed
 
-# Client database connection configuration settings for the primary (writer instance), replica (read replica
-# instances), and reporting (reporting instances).
+# Client database connection configuration settings for the primary (writer instance), replica (read replica instances), and reporting (reporting instances).
+# Each defaults to its RDS Proxy endpoint; the overrides below select ProxySQL or a direct database connection where the deployment, or this process, calls for one.
 db_connection_settings = {
   primary: {
-    database: writer.path.sub(%r{^/}, "") || "dashboard_#{Rails.env}",
-    host: writer.host || 'localhost',
-    password: writer.password || '',
-    port: writer.port || 3306,
-    username: writer.user || 'root',
+    database: CDO.dashboard_db_name,
+    host: CDO.db_endpoint_proxy_writer,
+    port: CDO.db_endpoint_proxy_writer_port,
+    username: CDO.db_credential_writer['username'],
+    password: CDO.db_credential_writer['password'],
   },
   primary_replica: {
     database: CDO.dashboard_db_name,
     host: CDO.db_endpoint_proxy_reader,
-    password: CDO.db_credential_reader['password'],
     port: CDO.db_endpoint_proxy_reader_port,
     username: CDO.db_credential_reader['username'],
+    password: CDO.db_credential_reader['password'],
   },
   primary_reporting: {
     database: CDO.dashboard_db_name,
     host: CDO.db_endpoint_proxy_reporting,
-    password: CDO.db_credential_reader['password'],
     port: CDO.db_endpoint_proxy_reporting_port,
     username: CDO.db_credential_reader['username'],
+    password: CDO.db_credential_reader['password'],
   },
 }.tap do |hash|
+  # The Aurora cluster's writer endpoint (which resolves via DNS to the current writer database instance).
+  # This is set to the hostname of the MySQL daemon on development, continuous integration, and default adhoc systems.
+  writer_endpoint = {host: CDO.db_endpoint_writer, port: CDO.db_endpoint_writer_port}
+
   case database_proxy
   when 'proxysql'
-    # The Chef recipe that conditionally installs ProxySQL modifies the hostname and port in `CDO.dashboard_db_reader`
-    # to point to the localhost/port where ProxySQL is listening for client database connections.
+    hash[:primary] = {
+      database: writer.path.sub(%r{^/}, ""),
+      host: writer.host,
+      port: writer.port || 3306,
+      username: writer.user,
+      password: writer.password,
+    }
     hash[:primary_replica] = {
       database: reader.path.sub(%r{^/}, ""),
       host: reader.host,
-      password: reader.password,
       port: reader.port || 3306,
       username: reader.user,
+      password: reader.password,
     }
   when 'none'
-    # Use the writer endpoint with the read-only `reader` SQL user for read-split SELECT statements.
-    hash[:primary_replica] = hash[:primary_replica].merge(
-      host: CDO.db_endpoint_writer,
-      port: CDO.db_endpoint_writer_port
-    )
+    hash[:primary] = hash[:primary].merge(writer_endpoint)
+    hash[:primary_replica] = hash[:primary_replica].merge(writer_endpoint)
+  else
+    # Only use RDS Proxy for writer connections when executing in a web application server or an Active Job worker.
+    # Database connection multiplexing is for optimizing connections when multiple processes are executing requests/jobs
+    # concurrently. Build jobs and administrative Ruby shell scripts should talk directly to the cluster's writer endpoint
+    # to minimize complexity and risk.
+    unless CDO.running_web_application? || CDO.running_active_job_worker?
+      hash[:primary] = hash[:primary].merge(writer_endpoint)
+    end
   end
 end
 %>
@@ -108,9 +122,9 @@ environment_defaults: &environment_defaults
     <<: *mysql_defaults
     database: <%= db_connection_settings[:primary][:database] %>
     host: <%= db_connection_settings[:primary][:host] %>
-    password: <%= db_connection_settings[:primary][:password] %>
     port: <%= db_connection_settings[:primary][:port] %>
     username: <%= db_connection_settings[:primary][:username] %>
+    password: <%= db_connection_settings[:primary][:password] %>
   # Always provision a read replica and a reporting database pool, even in environments that do not have an Aurora
   # cluster (with reader database instances) and that do not have RDS Proxy reader/reporting endpoints. In local
   # development environments and continuous integration builds CDO.db_endpoint_proxy_reader and
@@ -120,9 +134,9 @@ environment_defaults: &environment_defaults
     <<: *mysql_defaults
     database: <%= db_connection_settings[:primary_replica][:database] %>
     host: <%= db_connection_settings[:primary_replica][:host] %>
-    password: <%= db_connection_settings[:primary_replica][:password] %>
     port: <%= db_connection_settings[:primary_replica][:port] %>
     username: <%= db_connection_settings[:primary_replica][:username] %>
+    password: <%= db_connection_settings[:primary_replica][:password] %>
   primary_reporting:
     replica: true
     <<: *mysql_defaults
@@ -133,9 +147,9 @@ environment_defaults: &environment_defaults
     <% end %>
     database: <%= db_connection_settings[:primary_reporting][:database] %>
     host: <%= db_connection_settings[:primary_reporting][:host] %>
-    password: <%= db_connection_settings[:primary_reporting][:password] %>
     port: <%= db_connection_settings[:primary_reporting][:port] %>
     username: <%= db_connection_settings[:primary_reporting][:username] %>
+    password: <%= db_connection_settings[:primary_reporting][:password] %>
 
 development:
   <<: *environment_defaults
@@ -161,10 +175,10 @@ test:
     <<: *mysql_defaults
     database: dashboard_test<%= ENV['TEST_ENV_NUMBER'] %>
     host: <%= db_connection_settings[:primary][:host] %>
-    password: <%= db_connection_settings[:primary][:password] %>
-    pool: <%= ENV['CI'] ? 20 : 5 %>
     port: <%= db_connection_settings[:primary][:port] %>
     username: <%= db_connection_settings[:primary][:username] %>
+    password: <%= db_connection_settings[:primary][:password] %>
+    pool: <%= ENV['CI'] ? 20 : 5 %>
 
 production:
   <<: *environment_defaults

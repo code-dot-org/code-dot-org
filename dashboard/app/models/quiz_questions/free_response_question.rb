@@ -32,7 +32,7 @@ class FreeResponseQuestion < QuizQuestion
   validate :validate_question_shape
 
   # response_data shape: {"answerText" => "..."}
-  def answered?(response_data)
+  def response_answered?(response_data)
     response_data['answerText'].present?
   end
 
