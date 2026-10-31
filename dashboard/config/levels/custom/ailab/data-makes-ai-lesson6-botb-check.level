@@ -8,10 +8,11 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "mode": "{\r\n  \"trainer\": \"decisionTree\"\r\n}",
+    "mode": "{\r\n  \"trainer\": \"decisionTree\",\r\n  \"reserveLastRows\": true\r\n}",
     "uses_lab2": "true",
-    "teacher_markdown": "- Sort the records by Before 2000.\r\n- Count the songs in each group.\r\n- Count the Bangers in each group.\r\n- Write the four counts in your guide."
+    "teacher_markdown": "- Sort the records by Before 2000.\r\n- Count the songs in each group.\r\n- Count the Bangers in each group.\r\n- Write the four counts in your guide.",
+    "dynamic_instructions": "{\r\n  \"datasetView\": \"- This tab shows the 10 records Playlist Bot A learned from. They match your Song Piles cards.\\n- Click the **Testing** tab to make a prediction.\",\r\n  \"results\": \"- Find the **Make a Prediction** section.\\n- Use the Soda Pop card on the slide. Set Before 2025 to No, Guest Artist to No, and Beat Drop to Yes.\\n- Click **Predict**. Read the prediction Playlist Bot A gives.\\n- Click **Replay**. Find the question that decided the prediction.\\n- Write the prediction and that question in your guide.\"\r\n}"
   },
-  "audit_log": "[{\"changed_at\":\"2026-10-28T22:05:31.962+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-lesson6-botb-records\\\"\"],\"cloned_from\":\"data-makes-ai-lesson6-botb-records\"},{\"changed_at\":\"2026-10-28 22:05:51 +0000\",\"changed\":[],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-28 22:11:09 +0000\",\"changed\":[\"mode\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-10-28T22:05:31.962+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-lesson6-botb-records\\\"\"],\"cloned_from\":\"data-makes-ai-lesson6-botb-records\"},{\"changed_at\":\"2026-10-28 22:05:51 +0000\",\"changed\":[],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-28 22:11:09 +0000\",\"changed\":[\"mode\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-30 23:55:29 +0000\",\"changed\":[\"mode\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]"
 }]]></config>
 </Ailab>
