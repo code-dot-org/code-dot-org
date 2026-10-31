@@ -1,11 +1,11 @@
 import {useDropdownContext} from '@code-dot-org/component-library/common/contexts';
 import {CustomDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useState} from 'react';
 
 import {SceneMetadata} from '@cdo/apps/p5lab/spritelab/lab2/redux/spriteLab2Redux';
-import {SceneType} from '@cdo/apps/p5lab/spritelab/lab2/types';
 
 import NewSceneDialog from '../NewSceneDialog';
 import ScenePicture from '../ScenePicture';
@@ -114,7 +114,7 @@ export interface SceneDropdownProps {
   lockedReason?: string;
   allowCreate?: boolean;
   onSelectScene: (sceneId: string) => void;
-  onCreateScene: (name: string, type: SceneType) => void;
+  onCreateScene: (name: string) => void;
   /** Opens the Scenes gallery from the menu; left out, the menu has no
       such option. */
   onManageScenes?: () => void;
@@ -124,7 +124,9 @@ export interface SceneDropdownProps {
 
 /**
  * A dropdown of the scenes with their pictures, the current one marked,
- * with New scene and All scenes at its foot when offered.
+ * with New scene and All scenes at the foot when offered. With one scene
+ * and nothing else to pick, it renders as a non-interactive label with the
+ * same look.
  */
 const SceneDropdown: React.FunctionComponent<SceneDropdownProps> = ({
   scenes,
@@ -139,6 +141,41 @@ const SceneDropdown: React.FunctionComponent<SceneDropdownProps> = ({
 }) => {
   const [naming, setNaming] = useState(false);
   const active = scenes.find(scene => scene.id === activeSceneId);
+  const label = (
+    <>
+      <ScenePicture
+        src={active?.thumbnail}
+        className={classNames(
+          moduleStyles.sceneThumb,
+          moduleStyles.sceneThumbSmall
+        )}
+      />
+      <span className={moduleStyles.sceneTriggerName}>
+        {active?.name ?? ''}
+      </span>
+    </>
+  );
+  const still =
+    scenes.length === 1 && (locked || (!allowCreate && !onManageScenes));
+  if (still) {
+    return (
+      <div className={moduleStyles.sceneDropdown}>
+        <MuiButton
+          variant="outlined"
+          color="secondary"
+          size="small"
+          className={classNames(
+            moduleStyles.sceneTrigger,
+            moduleStyles.sceneTriggerStill
+          )}
+          aria-label={`Scene: ${active?.name ?? ''}`}
+          disabled
+        >
+          {label}
+        </MuiButton>
+      </div>
+    );
+  }
   return (
     <>
       <CustomDropdown
@@ -156,16 +193,7 @@ const SceneDropdown: React.FunctionComponent<SceneDropdownProps> = ({
           className: moduleStyles.sceneTrigger,
           children: (
             <>
-              <ScenePicture
-                src={active?.thumbnail}
-                className={classNames(
-                  moduleStyles.sceneThumb,
-                  moduleStyles.sceneThumbSmall
-                )}
-              />
-              <span className={moduleStyles.sceneTriggerName}>
-                {active?.name ?? ''}
-              </span>
+              {label}
               <FontAwesomeV6Icon
                 iconStyle="solid"
                 iconName={

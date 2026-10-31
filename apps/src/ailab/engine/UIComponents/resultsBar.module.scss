@@ -26,26 +26,35 @@ $sentence-min-width: 280px;
   gap: 8px;
 }
 
-// Two classes, to outrank the theme's padding, so each half can fill its own box.
 .buttons .accuracyButton {
   gap: 0;
   padding: 0;
   overflow: hidden;
+
+  &:hover,
+  &:active {
+    background-color: var(--background-neutral-primary);
+
+    .accuracyIcon {
+      background-color: var(--background-neutral-quaternary);
+    }
+  }
 }
 
 .accuracyIcon {
   display: flex;
   align-items: center;
+  justify-content: center;
   align-self: stretch;
-  padding: 0 6px;
-  border-right: 1px solid var(--border-neutral-primary);
+  width: 24px;
+  transition: background-color 0.2s ease-in-out;
 }
 
 .accuracyText {
-  padding: 2px 8px;
-  background-color: var(--background-neutral-tertiary);
-}
-
-.accuracyButton:hover .accuracyText {
-  background-color: var(--background-neutral-quaternary);
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  padding: 0 6px;
+  border-left: 1px solid var(--border-neutral-secondary);
+  background-color: var(--background-neutral-secondary);
 }

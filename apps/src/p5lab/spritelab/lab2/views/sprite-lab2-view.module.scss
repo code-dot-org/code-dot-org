@@ -229,6 +229,13 @@ $z-over-blockly: 71;
   text-transform: none;
 }
 
+// A single-scene dropdown is disabled but keeps its normal colors: it reads
+// as a label, not as a button that is off.
+.sceneDropdown > button.sceneTriggerStill:disabled {
+  border-color: var(--borders-neutral-strong);
+  color: var(--text-neutral-primary);
+}
+
 .sceneTriggerName {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -611,28 +618,6 @@ $z-over-blockly: 71;
   gap: 16px;
 }
 
-.sceneTypeGroup {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin: 0;
-  padding: 0;
-  border: none;
-
-  // The global legend style carries a fixed dark color and a full-width
-  // underline, neither of which suits a themed dialog. Sized to read as a
-  // peer of the name field's label above it.
-  legend {
-    width: auto;
-    margin-bottom: 4px;
-    padding: 0;
-    border: none;
-    color: var(--text-neutral-primary);
-    font-size: 14px;
-    line-height: inherit;
-  }
-}
-
 .guideBody {
   display: flex;
   flex-direction: column;
@@ -815,6 +800,11 @@ $z-over-blockly: 71;
   align-items: flex-end;
   gap: 6px;
   pointer-events: auto;
+}
+
+.playspacePrompt {
+  position: absolute;
+  transform: translateY(-100%);
 }
 
 // The instructions' card under the preview; a long step scrolls inside.
@@ -1022,16 +1012,4 @@ $z-over-blockly: 71;
   @include chrome.sr-only;
 }
 
-// The lab's own ground, which the dance generator also sits on: black in
-// dark mode, so the panel and the floating guide read as the level itself.
-.imageLevelArea {
-  position: relative;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  flex: 1;
-  min-width: 0;
-  padding: 24px 16px;
-  overflow: auto;
-  background-color: var(--background-neutral-primary);
-}
+
