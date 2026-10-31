@@ -1,6 +1,7 @@
 # Plan: screens, and a way back (APPS.md, missing thing 5)
 
-STATUS: BUILT, not yet seen in the browser. What turns the Interface Kit from one screen into an
+STATUS: BUILT, and seen in the browser through what replaced it (below,
+"Seen in the browser"). What turns the Interface Kit from one screen into an
 app. The working record, as the other plans are.
 
 SUPERSEDED (specs/SCREEN_STACK_PLAN.md). Screens are built in, not a rule's:
@@ -175,3 +176,24 @@ an empty world.
 
 `the screen showing` should say the second while it is up and the first
 after.
+
+## Seen in the browser
+
+October 2026, in the Notes app, after the rule was gone: the three checks
+above put to `show screen` and `go back`, which replaced it.
+
+- **NEW NOTE shows the write screen over home**, and home is drawn under
+  it, since the write screen's background is transparent.
+- **Only the top screen hears a click.** NEW NOTE pressed again through the
+  write screen shows nothing more: one CANCEL afterwards is home.
+- **SAVE goes back with the note listed; CANCEL goes back without it.**
+  Home is as it was left, the earlier note still in its list.
+- **`go back` with only the Main Screen showing does nothing.** A second
+  `go back` added under the Main Screen's `when cancel` runs right after
+  the first has taken the write screen off: home stays, and NEW NOTE still
+  answers.
+- **A screen taken off loses what it held.** Text typed and cancelled is
+  not in the next write screen's field.
+
+Not seen: `the screen showing` has no successor, so there is nothing to ask
+which screen is up.
