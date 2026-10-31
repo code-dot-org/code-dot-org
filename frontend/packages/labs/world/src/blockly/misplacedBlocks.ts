@@ -36,7 +36,7 @@ import * as Blockly from 'blockly/core';
 
 import {createInjectPlugin} from '@code-dot-org/blockly';
 
-import {SUBJECT_FIELD, syncSubject} from './eventSubject';
+import {SUBJECT_FIELD, subjectKindOf, syncSubject} from './eventSubject';
 import {ROOT_HOMES, type FileKind} from './fileKind';
 
 /** The reason a block is disabled by, which is how it is enabled again. */
@@ -55,6 +55,10 @@ export interface FileContext {
    * still right to hold.
    */
   offered: ReadonlySet<string>;
+  /** In a placed actor's code: the hats that actor never hears. */
+  unheard?: ReadonlySet<string>;
+  /** …and what the actor is called, for saying so. */
+  actorName?: string;
 }
 
 interface Tagged {
@@ -132,14 +136,18 @@ export const misplacementOf = (block: Blockly.Block): string | undefined => {
   // anywhere else about this actor. Either arrives in the other kind of file
   // by a paste, and the dropdown on the block is how it is put right.
   if (block.type.startsWith('world_on_') && block.getField(SUBJECT_FIELD)) {
-    const kind = block.getFieldValue(SUBJECT_FIELD);
+    const subject = block.getFieldValue(SUBJECT_FIELD) as string | null;
     // A screen's code is the game's, as a world's was.
     const game = context.kind === 'world' || context.kind === 'screen';
-    if (game && !kind) {
+    if (game && !subject) {
       return 'A world’s handler is about a kind of actor: pick one after “any”.';
     }
-    if (!game && kind) {
+    // An actor file's handler is about this actor or its own property.
+    if (context.kind === 'actor' && subjectKindOf(block)) {
       return 'This handler is about this actor: choose “this actor” instead of a kind.';
+    }
+    if (!subject && context.unheard?.has(block.type)) {
+      return `A ${context.actorName ?? 'placed actor'} never hears this: choose a property or a kind instead of “this actor”.`;
     }
   }
   return undefined;

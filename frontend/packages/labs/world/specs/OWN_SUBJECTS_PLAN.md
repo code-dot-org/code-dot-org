@@ -140,6 +140,12 @@ damaged` and `when ⟨subject⟩ is healed` (`healthBarHears`).
   was. RULE_DEMOS.md stands: the bar still needs an actor with health to
   show anything.
 
+- **An own-property hat was greyed in its own file.** The misplaced check
+  read any subject other than `this actor` in an actor file as a kind
+  pasted from a world, and disabled the hat, so editing `healthBar.actor`
+  would have dropped both hats from its code. It asks for a kind
+  (`subjectKindOf`) now.
+
 ## Open
 
 - **Whether a placement's code should use this too.** A placement's own

@@ -18,7 +18,7 @@ import {collisionsRule} from '../../rules/stock/collisions';
 import {inputRule} from '../../rules/stock/input';
 import BlocklyGenerator from '../BlocklyGenerator';
 import {buildDomainPalette, heldNotOffered} from '../domainBlocks';
-import {SUBJECT_FIELD} from '../eventSubject';
+import {registerSubjectProperty, SUBJECT_FIELD} from '../eventSubject';
 import type {FileKind} from '../fileKind';
 import {
   MISPLACED,
@@ -183,6 +183,57 @@ describe('whose event a handler is, by file', () => {
     expect(misplacementOf(hatAbout(fileOf('actor'), 'actors/coin'))).toMatch(
       /this actor/,
     );
+  });
+
+  describe('about a property', () => {
+    /** An actor property a hat may be about, by its getter's type. */
+    const PROPERTY = 'world_get_Main_CurrentPlayerProperty';
+    registerSubjectProperty(PROPERTY, {
+      name: 'current player',
+    } as Parameters<typeof registerSubjectProperty>[1]);
+
+    it('is fine in a world, which holds the property', () => {
+      expect(
+        misplacementOf(hatAbout(fileOf('world'), PROPERTY)),
+      ).toBeUndefined();
+    });
+
+    it('is fine in an actor file, about its own', () => {
+      expect(
+        misplacementOf(hatAbout(fileOf('actor'), PROPERTY)),
+      ).toBeUndefined();
+    });
+  });
+
+  describe('in a placed actor’s code', () => {
+    /** A Progress Bar's code, which hears nothing of Input's. */
+    const placement = () => {
+      const workspace = new Blockly.Workspace();
+      setFileContext(workspace, {
+        kind: 'placement',
+        offered: holds('placement'),
+        unheard: new Set([ACTOR_HAT]),
+        actorName: 'Progress Bar',
+      });
+      return workspace;
+    };
+
+    it('is an orphan about this actor, when this actor never hears it', () => {
+      expect(misplacementOf(hatAbout(placement(), ''))).toMatch(
+        /A Progress Bar never hears this/,
+      );
+    });
+
+    it('is fine about a property or a kind instead', () => {
+      expect(
+        misplacementOf(
+          hatAbout(placement(), 'world_get_Main_CurrentPlayerProperty'),
+        ),
+      ).toBeUndefined();
+      expect(
+        misplacementOf(hatAbout(placement(), 'actors/coin')),
+      ).toBeUndefined();
+    });
   });
 });
 

@@ -135,6 +135,11 @@ const inScope = (block: Block, property: PropertyMeta): boolean => {
   return owner !== undefined && owner === editingActorModule(block);
 };
 
+/** Whether the dropdown on this block offers any actor property. */
+const offersProperty = (block: Block): boolean =>
+  !subjectPropertiesWithheld(block) &&
+  [...subjectProperties.values()].some(property => inScope(block, property));
+
 const setVisible = (block: Block, input: string, visible: boolean) => {
   const held = block.getInput(input);
   if (held && held.isVisible() !== visible) {
@@ -156,13 +161,19 @@ export function syncSubject(block: Block): void {
     return;
   }
   const kind = subjectKindOf(block) ?? subjectPropertyOf(block)?.name;
-  const picking = !kind && inWorld(block);
+  // The menu, for `this actor` too, once there is a property to change it to.
+  const picking = !kind && (inWorld(block) || offersProperty(block));
   setVisible(block, THIS_INPUT, !kind && !picking);
   setVisible(block, ANY_INPUT, Boolean(kind) || picking);
-  // `any` before a kind, and nothing before a property, which names one.
+  // `any` before a kind, and nothing before a property, which names one, or
+  // before `this actor` outside a world.
   block
     .getField(ANY_FIELD)
-    ?.setValue(subjectPropertyOf(block) ? '' : translate('any'));
+    ?.setValue(
+      subjectPropertyOf(block) || (picking && !inWorld(block))
+        ? ''
+        : translate('any'),
+    );
   (block as BlockSvg).queueRender?.();
 }
 

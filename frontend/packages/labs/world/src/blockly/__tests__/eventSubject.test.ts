@@ -4,11 +4,13 @@
 import * as Blockly from 'blockly/core';
 import {beforeAll, describe, expect, it} from 'vitest';
 
+import {setEditingFile, setSubjectPropertiesWithheld} from '../editingRule';
 import {
   ANY_FIELD,
   ANY_INPUT,
   EVENT_SUBJECT_EXTENSION,
   eventSubjectExtension,
+  registerSubjectProperty,
   SUBJECT_FIELD,
   subjectKindOf,
   THIS_FIELD,
@@ -107,5 +109,39 @@ describe('whose event a handler is', () => {
     expect(shown(hat)).toEqual([ANY_INPUT]);
     hat.setFieldValue('', SUBJECT_FIELD);
     expect(shown(hat)).toEqual([THIS_INPUT]);
+  });
+});
+
+describe('this actor, once a property is on offer', () => {
+  /** A placed actor's code, in the Main Screen, and a handler in it. */
+  const placed = (withheld: boolean) => {
+    const workspace = new Blockly.Workspace();
+    setEditingFile(workspace, 'screens/main');
+    setSubjectPropertiesWithheld(workspace, withheld);
+    return workspace.newBlock(HAT);
+  };
+
+  beforeAll(() => {
+    registerSubjectProperty('test_get_current_player', {
+      name: 'current player',
+      scope: 'world',
+      ref: {
+        source: 'project',
+        modulePath: 'screens/main',
+        exportName: 'CurrentPlayerProperty',
+      },
+    } as never);
+  });
+
+  it('is the menu, so the hat can be pointed at one', () => {
+    const hat = placed(false);
+    expect(shown(hat)).toEqual([ANY_INPUT]);
+    expect(hat.getFieldValue(ANY_FIELD)).toBe('');
+    hat.setFieldValue('test_get_current_player', SUBJECT_FIELD);
+    expect(shown(hat)).toEqual([ANY_INPUT]);
+  });
+
+  it('is plain words while the shelf withholds them', () => {
+    expect(shown(placed(true))).toEqual([THIS_INPUT]);
   });
 });

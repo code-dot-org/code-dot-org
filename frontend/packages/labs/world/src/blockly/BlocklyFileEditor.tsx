@@ -1119,16 +1119,17 @@ export const BlocklyFileEditor = ({
         workspaceRef.current,
         filePath(currentSources.source, fileId)?.replace(/\.[^./]+$/, ''),
       );
+      // …and whether a hat may be about an actor property yet, before the
+      // sweep below redraws each hat's subject by it.
+      setSubjectPropertiesWithheld(
+        workspaceRef.current,
+        shelf ? !shelf.holds(SUBJECT_PROPERTIES) : false,
+      );
       // …and what kind of file, and what it offers, which is what says a
       // block pasted here from another tab cannot be here (`misplacedBlocks`).
       setFileContext(
         workspaceRef.current,
         fileKind ? {kind: fileKind, offered: holdable} : undefined,
-      );
-      // …and whether a hat may be about an actor property yet.
-      setSubjectPropertiesWithheld(
-        workspaceRef.current,
-        shelf ? !shelf.holds(SUBJECT_PROPERTIES) : false,
       );
       // …and now that the workspace knows which file it is, the blocks that
       // draw the actor they are about can say so. HERE rather than only on

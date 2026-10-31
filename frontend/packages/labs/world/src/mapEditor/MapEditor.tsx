@@ -804,6 +804,7 @@ export const MapEditor = ({
         }
         kind={scripted ? 'placement' : (document.scriptKind ?? 'map')}
         actorKind={scripted?.type}
+        actorName={scripted ? kindName(scripted.type) : undefined}
         mapModule={mapModule}
         placements={map.actors.map(actor => actor.id)}
         contents={scripted ? scripted.blocks : map.blocks}

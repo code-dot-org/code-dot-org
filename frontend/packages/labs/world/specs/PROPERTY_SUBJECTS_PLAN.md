@@ -236,6 +236,21 @@ player` and the event, and its `when this screen loads` sets the one and
   event on `Has Health`, raised only when a heal gives something back. The
   starter's bar hears it as it hears `is damaged`; the lesson takes both
   handlers out, since the second would be the answer written out.
+- **Played in the browser, `story/watch` could not be done**, for three
+  reasons the tests could not see. The bar's Code button is `place/script`'s
+  to give, and Story is reached without Place; the lesson lends it
+  (`map-scripts` in its `offers`), and a shelf test now asks that each such
+  lesson holds what it needs. The placement editor offered no hat for an
+  event the placed actor cannot hear, which was every Health hat for a
+  Progress Bar; once the shelf holds `subject-properties` it offers them
+  all, in the drawers and under the `+`, and one left about `this actor` is
+  greyed with "A Progress Bar never hears this" (`misplacedBlocks`, told
+  the unheard hats by the editor). And a hat about `this actor` drew its
+  subject as plain words outside a world, with no menu to change it; it
+  draws the menu wherever a property is on offer (`syncSubject`).
+- **Seen in the browser**: the lesson opened the bar's code, took
+  `when … is damaged` from the `+`, greyed it, took `current player` from
+  its menu, ran, and the bar fell with each hit to empty at GAME OVER.
 
 ## Open
 

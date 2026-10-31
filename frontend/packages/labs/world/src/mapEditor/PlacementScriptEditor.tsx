@@ -50,6 +50,10 @@ import {type EventChoice} from '../blockly/eventChoices';
 import type {FileKind} from '../blockly/fileKind';
 import {eventsNarrowerFor, eventsUnheardBy} from '../blockly/kindEvents';
 import {localizeBlocks, localizeToolbox} from '../blockly/localizeBlocks';
+import {
+  MisplacedBlocksPlugin,
+  setFileContext,
+} from '../blockly/misplacedBlocks';
 import {setCurrentPlacements} from '../blockly/moduleOptions';
 import {projectOwnMetas, projectRuleMetas} from '../blockly/projectModules';
 import {standInBlocks} from '../blockly/standInBlocks';
@@ -69,6 +73,7 @@ const plugins = [
   ToolboxTrashcanPlugin,
   ScrollOptionsPlugin,
   DisableOrphansPlugin,
+  MisplacedBlocksPlugin,
   TriangleInputPlugin('Actor'),
   RectangleInputPlugin('Vector'),
   DesignSystemToolboxPlugin,
@@ -84,6 +89,8 @@ export interface PlacementScriptEditorProps {
   kind: Extract<FileKind, 'placement' | 'map' | 'screen'>;
   /** The placed actor's kind, `actors/button`; nothing for the map's own. */
   actorKind?: string;
+  /** …and what that kind is called, `Progress Bar`. */
+  actorName?: string;
   /**
    * What the session remembers this workspace's collapsed sections under:
    * the map file and the placement, or the map's own.
@@ -105,6 +112,7 @@ export const PlacementScriptEditor = ({
   title,
   kind,
   actorKind,
+  actorName,
   memoryKey,
   mapModule,
   placements,
@@ -130,7 +138,12 @@ export const PlacementScriptEditor = ({
   useMemo(() => refreshFor(currentSources.source), [currentSources]);
   useMemo(() => setCurrentPlacements(placements), [placements]);
 
-  const {blocks, toolbox} = useMemo(() => {
+  // Whether a hat may be about an actor property yet (`eventSubject`).
+  const propertiesWithheld = progression?.gated
+    ? !progression.holds(SUBJECT_PROPERTIES)
+    : false;
+
+  const {blocks, toolbox, unheard} = useMemo(() => {
     const rules = projectRuleMetas(files);
     const palette = buildDomainPalette(rules, {
       fileKind: kind,
@@ -138,8 +151,10 @@ export const PlacementScriptEditor = ({
       ownMapModule: mapModule,
     });
     const known = new Set(palette.blocks.map(block => block.type));
-    // No hat for an event the placed actor cannot hear: its handlers are
-    // about it and nobody else (`kindEvents`).
+    // The hats the placed actor cannot hear (`kindEvents`). Until a hat may
+    // be about a property, its handlers are about it and nobody else, so
+    // they are not offered; after, they are, and one left about this actor
+    // is marked (`misplacedBlocks`).
     const unheard = actorKind
       ? eventsUnheardBy(
           palette.toolbox,
@@ -154,10 +169,15 @@ export const PlacementScriptEditor = ({
         ...standInBlocks(Object.values(files), known),
       ],
       toolbox: withAddRules(
-        withoutEmptyHeadings(withoutBlocks(palette.toolbox, unheard)),
+        withoutEmptyHeadings(
+          propertiesWithheld
+            ? withoutBlocks(palette.toolbox, unheard)
+            : palette.toolbox,
+        ),
       ),
+      unheard,
     };
-  }, [files, kind, mapModule, actorKind]);
+  }, [files, kind, mapModule, actorKind, propertiesWithheld]);
   const localizedBlocks = useMemo(
     () => localizeBlocks(blocks),
     [blocks, locale],
@@ -182,14 +202,14 @@ export const PlacementScriptEditor = ({
 
   const workspaceRef = useRef<Blockly.WorkspaceSvg | null>(null);
   // A placed actor's "+" offers what its kind can hear, as the quick add
-  // does (`kindEvents`).
+  // does (`kindEvents`), until a hat may be about a property, as its drawers.
   const narrowEvents = useMemo(() => {
-    if (!actorKind) {
+    if (!actorKind || !propertiesWithheld) {
       return undefined;
     }
     const narrow = eventsNarrowerFor(files);
     return (choices: EventChoice[]) => narrow(choices, actorKind);
-  }, [files, actorKind]);
+  }, [files, actorKind, propertiesWithheld]);
   const sections = useSectionWorkspace({
     memoryKey,
     definitions: blocks,
@@ -281,12 +301,16 @@ export const PlacementScriptEditor = ({
                 workspace,
                 kind === 'placement' ? actorKind : undefined,
               );
-              setSubjectPropertiesWithheld(
-                workspace,
-                progression?.gated
-                  ? !progression.holds(SUBJECT_PROPERTIES)
-                  : false,
-              );
+              setSubjectPropertiesWithheld(workspace, propertiesWithheld);
+              // …and which hats here the placed actor never hears.
+              if (kind === 'placement') {
+                setFileContext(workspace, {
+                  kind,
+                  offered: new Set(blocks.map(block => block.type)),
+                  unheard,
+                  actorName,
+                });
+              }
               sections.onInject(workspace);
             }}
             startBlocks={startBlocks}
