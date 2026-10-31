@@ -45,6 +45,7 @@ interface AilabWorkspaceProps {
   save: (project: AilabProject) => void;
   startOver: () => void;
   projectManager: ProjectManager | null;
+  onLoadingChange: (isLoading: boolean) => void;
 }
 
 const AilabWorkspace: React.FC<AilabWorkspaceProps> = ({
@@ -54,6 +55,7 @@ const AilabWorkspace: React.FC<AilabWorkspaceProps> = ({
   save,
   startOver,
   projectManager,
+  onLoadingChange,
 }) => {
   // Read once: the sources change with every save, but the project the lab
   // opens with is the one this level was loaded with.
@@ -180,6 +182,7 @@ const AilabWorkspace: React.FC<AilabWorkspaceProps> = ({
                   saveTrainedModel={saveTrainedModel}
                   logMetric={logMetric}
                   onStartOver={onStartOver}
+                  onLoadingChange={onLoadingChange}
                 />
               </TrainingDataProvider>
             </ProjectProvider>

@@ -55,6 +55,18 @@ export function prefersReducedMotion(): boolean {
   return !!window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
 }
 
+// A timeout set from an animation frame runs after that frame paints.
+export function afterNextPaint(callback: () => void): () => void {
+  let timeout: number | undefined;
+  const frame = requestAnimationFrame(() => {
+    timeout = window.setTimeout(callback);
+  });
+  return () => {
+    cancelAnimationFrame(frame);
+    window.clearTimeout(timeout);
+  };
+}
+
 /*
   Both hyperparameters count something — neighbours, or splits — so both are
   whole numbers of at least one.
