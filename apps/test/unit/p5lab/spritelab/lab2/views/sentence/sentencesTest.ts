@@ -1,11 +1,15 @@
+import {EMPTY_WORD_ID} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageCache';
 import {
   chainedSlotIds,
   chosenBodyPlan,
   isComplete,
   promptText,
   sentenceFor,
+  sentenceSlotIds,
+  sentenceWordIds,
   slotsToOffer,
 } from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/sentences';
+import manifest from '@cdo/static/spritelab_lab2/sentences.json';
 
 const CHARACTER_SENTENCE = sentenceFor('sprite');
 
@@ -103,16 +107,29 @@ describe('sentences', () => {
     expect(
       full('place-time', {adjective: 'spooky', place: 'castle', time: 'night'})
     ).toBe('A spooky castle at night');
-    expect(
-      full('place-detail', {place: 'forest', detail: 'glowing-mushrooms'})
-    ).toBe('A forest with glowing mushrooms');
+    expect(full('place-detail', {place: 'forest', detail: 'mushrooms'})).toBe(
+      'A forest with glowing mushrooms'
+    );
     expect(full('block', {material: 'ice'})).toBe('A block of ice');
-    expect(full('block', {material: 'stone', detail: 'tiny-gems'})).toBe(
+    expect(full('block', {material: 'stone', detail: 'gems'})).toBe(
       'A block of stone with tiny gems'
     );
     expect(
-      full('treasure', {look: 'golden', treasure: 'key', detail: 'a-ribbon'})
+      full('treasure', {look: 'golden', treasure: 'key', detail: 'ribbon'})
     ).toBe('A golden key with a ribbon');
+  });
+
+  it('word ids are lowercase words: each is a folder in the cache', () => {
+    const words = [
+      ...Object.values(manifest.wordSets).flat(),
+      ...Object.values(manifest.sentences).flatMap(sentence =>
+        Object.values(sentence.slots).flatMap(slot =>
+          typeof slot.words === 'string' ? [] : slot.words
+        )
+      ),
+    ];
+    expect(words.length).toBeGreaterThan(0);
+    words.forEach(word => expect(word.id).toMatch(/^[a-z0-9]+(-[a-z0-9]+)*$/));
   });
 
   it("every sentence's optional slots are the ones inside phrases", () => {
@@ -127,5 +144,45 @@ describe('sentences', () => {
         chained
       );
     }
+  });
+});
+
+// The manifest's own sentences: an optional slot before the required one,
+// and a phrase whose slot shows only once filled.
+describe('sentences word ids', () => {
+  const placeTime = sentenceFor('background', undefined, 'place-time');
+
+  it('reads the slots in sentence order, phrases included', () => {
+    expect(sentenceSlotIds(placeTime)).toEqual(['adjective', 'place', 'time']);
+    expect(slotsToOffer(placeTime).map(s => s.id)).toEqual([
+      'place',
+      'adjective',
+      'time',
+    ]);
+  });
+
+  it('names a filled sentence by its word ids in slot order', () => {
+    const choices = {place: 'forest', adjective: 'sunny', time: 'night'};
+    expect(sentenceWordIds(placeTime, choices)).toEqual([
+      'sunny',
+      'forest',
+      'night',
+    ]);
+  });
+
+  it('marks an empty optional slot, as the prompt leaves its word out', () => {
+    const choices = {place: 'forest'};
+    expect(sentenceWordIds(placeTime, choices)).toEqual([
+      EMPTY_WORD_ID,
+      'forest',
+      EMPTY_WORD_ID,
+    ]);
+    expect(promptText(placeTime, choices)).not.toContain('at');
+  });
+
+  it('ignores a word that is not in its slot', () => {
+    expect(
+      sentenceWordIds(placeTime, {place: 'forest', time: 'dragon'})
+    ).toEqual([EMPTY_WORD_ID, 'forest', EMPTY_WORD_ID]);
   });
 });

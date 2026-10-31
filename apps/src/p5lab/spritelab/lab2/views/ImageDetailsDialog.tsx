@@ -7,6 +7,7 @@ import React, {useState} from 'react';
 
 import useThemeMode from '@cdo/apps/pixelEditor/useThemeMode';
 
+import {ImageSource} from '../ai/images/imageCache';
 import {GeneratedImageResult} from '../ai/images/imageGeneration';
 import {
   IMAGE_STYLE_LABELS,
@@ -71,6 +72,9 @@ interface ImageDetailsDialogProps extends ImageFormOptions {
       picture. While a fresh picture is unrated, Keep is disabled and the
       dialog cannot be closed. */
   verdictRequired?: boolean;
+  /** Where the sentence scene's pictures come from (imageCache.ts). */
+  imageSource?: ImageSource;
+  imageCacheUrl?: string;
   /** Stored pixel size of the image (one frame of a sheet). */
   resolution?: {x: number; y: number};
   /** Pixel art's physical px per art pixel; sets the resolution row's
@@ -147,6 +151,8 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
   generationsLeft,
   paintDisabled,
   verdictRequired,
+  imageSource,
+  imageCacheUrl,
   pixelated,
   resolution,
   pixelGridSize,
@@ -328,6 +334,8 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
           onCancel={onClose}
           verdictRequired={verdictRequired}
           onAwaitingVerdict={setAwaitingVerdict}
+          imageSource={imageSource}
+          imageCacheUrl={imageCacheUrl}
           onPaintManually={
             isNew && !paintDisabled && onPaintNew
               ? draft =>

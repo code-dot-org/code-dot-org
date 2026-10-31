@@ -1,6 +1,7 @@
 // What kind of level this is, and everything that follows from it: the
 // surfaces a student sees, and the image controls they get.
 
+import {ImageSource} from './ai/images/imageCache';
 import {ImageStyle, ImageSubject, ImageType} from './ai/images/types';
 import {Tab} from './redux/spriteLab2Redux';
 
@@ -25,6 +26,9 @@ export interface LevelMode {
   /** The level opens on the Images tab to make its image, then goes on to
       its own tabs. */
   imageFirst?: boolean;
+  /** Where the level's pictures come from (imageCache.ts); the model when
+      unset. */
+  imageSource?: ImageSource;
 }
 
 /** Generations a level before free play allows; free play has no limit. */
@@ -62,4 +66,9 @@ export function editsWorld(mode: LevelMode | undefined): boolean {
 /** The only mode offering the prompt box and the paint tools. */
 export function isFreeplayMode(mode: LevelMode | undefined): boolean {
   return mode?.kind === 'freeplay';
+}
+
+/** The source a mode's pictures come from: the model unless named. */
+export function imageSourceForMode(mode: LevelMode | undefined): ImageSource {
+  return mode?.imageSource ?? 'live';
 }

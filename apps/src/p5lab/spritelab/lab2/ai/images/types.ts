@@ -56,8 +56,9 @@ export interface ImageGenerationMetadata {
       and on other types. */
   subject?: ImageSubject;
   style: ImageStyle;
-  /** Sending the same seed and prompt again asks for the same image. */
-  seed: number;
+  /** Sending the same seed and prompt again asks for the same image.
+      Absent on a cached picture, which has no roll to replay. */
+  seed?: number;
   /** Sampling wildness the user chose; absent = the service default. */
   temperature?: number;
   /** Logical grid the pixel prompt asked for (e.g. 64 for 64x64); absent on

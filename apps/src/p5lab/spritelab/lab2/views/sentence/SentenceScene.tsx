@@ -16,6 +16,11 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {generateCharacterSet} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/characterSet';
 import {bytesToDataURI} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/encoding';
 import {
+  CachedImage,
+  findCachedImage,
+  ImageSource,
+} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageCache';
+import {
   GeneratedImageResult,
   generateImage,
   GenerateImageOptions,
@@ -62,6 +67,7 @@ import {
   isComplete,
   promptText,
   sentenceFor,
+  sentenceWordIds,
 } from './sentences';
 import SentenceSceneLayout from './SentenceSceneLayout';
 import {playSound} from './sentenceSounds';
@@ -175,6 +181,11 @@ interface SentenceSceneProps {
   onAwaitingVerdict?: (awaiting: boolean) => void;
   /** Lay the parts out instead of the level's two halves. */
   layout?: (parts: SentenceSceneParts) => React.ReactNode;
+  /** Where a sentence's picture comes from: the model or the cache
+      (imageCache.ts). The model when unset. */
+  imageSource?: ImageSource;
+  /** Another tree to read cached pictures from (QA). */
+  imageCacheUrl?: string;
 }
 
 const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
@@ -194,6 +205,8 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   verdictRequired,
   onAwaitingVerdict,
   layout,
+  imageSource = 'live',
+  imageCacheUrl,
 }) => {
   const dispatch = useAppDispatch();
   const {theme} = useTheme();
@@ -243,6 +256,24 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   const runRef = useRef(0);
   useEffect(() => () => void runRef.current++, []);
   const exhausted = generationsLeft !== undefined && generationsLeft <= 0;
+  // The cached variant shown last, so Generate again shows another.
+  const lastCachedVariantRef = useRef<number>();
+
+  // The cached picture for the sentence as filled, when the level reads
+  // from the cache and the tree has one.
+  const findCached = useCallback(async (): Promise<CachedImage | undefined> => {
+    if (imageSource === 'live') {
+      return undefined;
+    }
+    return findCachedImage({
+      sentenceId: sentence.id,
+      wordIds: sentenceWordIds(sentence, choices),
+      style,
+      characterSet: canAnimate,
+      avoidVariant: lastCachedVariantRef.current,
+      baseUrl: imageCacheUrl,
+    });
+  }, [imageSource, sentence, choices, style, canAnimate, imageCacheUrl]);
 
   const generate = useCallback(async () => {
     if (exhausted) {
@@ -250,6 +281,15 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     }
     const run = ++runRef.current;
     const prompt = promptText(sentence, choices);
+    // A live level never waits here: the generating state shows at once.
+    const cached = imageSource === 'cached' ? await findCached() : undefined;
+    if (run !== runRef.current) {
+      return;
+    }
+    if (imageSource === 'cached' && !cached) {
+      setError("This picture isn't ready yet. Try different words.");
+      return;
+    }
     // true attaches the project context for per-level breakdowns.
     analyticsReporter.sendEvent(
       EVENTS.HOAI2026_IMAGE_PROMPT,
@@ -260,6 +300,8 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         sentenceId: sentence.id,
         choices,
         style,
+        imageSource,
+        cached: !!cached,
       },
       true
     );
@@ -285,6 +327,8 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         ...(style === 'pixel' && {pixelGrid: defaultPixelGrid(imageType)}),
       };
       const bodyPlan = chosenBodyPlan(sentence, choices);
+      // What the lab would send. A cached picture was made from the same
+      // words by the same prompt builders, so this describes it as well.
       const sent: SentPrompts = sentPromptsFor(
         prompt,
         options,
@@ -298,10 +342,14 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
             temperature: TEMPERATURE,
             pixelGrid: options.pixelGrid,
             bodyPlan,
+            cached,
           })
-        : await generateImage(prompt, options);
+        : await generateImage(prompt, {...options, cached});
       if (run !== runRef.current) {
         return;
+      }
+      if (cached) {
+        lastCachedVariantRef.current = cached.variant;
       }
       setSettling(true);
       await new Promise(resolve => setTimeout(resolve, SETTLE_MS));
@@ -346,6 +394,8 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     method,
     onGenerateStart,
     exhausted,
+    imageSource,
+    findCached,
   ]);
 
   const keep = useCallback(async () => {

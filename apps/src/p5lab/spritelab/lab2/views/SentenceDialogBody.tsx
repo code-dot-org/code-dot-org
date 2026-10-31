@@ -6,6 +6,7 @@ import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
+import {ImageSource} from '../ai/images/imageCache';
 import {GeneratedImageResult} from '../ai/images/imageGeneration';
 import {
   imageKindLabel,
@@ -45,6 +46,9 @@ interface SentenceDialogBodyProps {
       to SentenceScene. */
   verdictRequired?: boolean;
   onAwaitingVerdict?: (awaiting: boolean) => void;
+  /** Passed through to SentenceScene. */
+  imageSource?: ImageSource;
+  imageCacheUrl?: string;
 }
 
 const SentenceDialogBody: React.FunctionComponent<SentenceDialogBodyProps> = ({
@@ -58,6 +62,8 @@ const SentenceDialogBody: React.FunctionComponent<SentenceDialogBodyProps> = ({
   onGenerateStart,
   verdictRequired,
   onAwaitingVerdict,
+  imageSource,
+  imageCacheUrl,
 }) => {
   const layout = (parts: SentenceSceneParts) => {
     const result = parts.mode === 'result';
@@ -205,6 +211,8 @@ const SentenceDialogBody: React.FunctionComponent<SentenceDialogBodyProps> = ({
       onGenerateStart={onGenerateStart}
       method="dialog"
       layout={layout}
+      imageSource={imageSource}
+      imageCacheUrl={imageCacheUrl}
     />
   );
 };

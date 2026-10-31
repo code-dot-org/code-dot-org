@@ -17,6 +17,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {createUuid} from '@cdo/apps/utils';
 
 import {bytesToDataURI, dataURIToBytes} from '../ai/images/encoding';
+import {ImageSource} from '../ai/images/imageCache';
 import {
   GeneratedImageResult,
   UploadImageFunction,
@@ -179,6 +180,9 @@ interface GenerateImagePaneProps {
   paintDisabled?: boolean;
   /** The level requires a rating on every generated picture. */
   verdictRequired?: boolean;
+  /** Where the sentence scene's pictures come from (imageCache.ts). */
+  imageSource?: ImageSource;
+  imageCacheUrl?: string;
   /** A picture asked for from a block or the world palette: opens the
       new-image dialog on its kind. A new object each time. */
   pickRequest?: PictureRequest | null;
@@ -249,6 +253,8 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   onPickCancel,
   jumboSide,
   verdictRequired,
+  imageSource,
+  imageCacheUrl,
 }) => {
   const dispatch = useAppDispatch();
 
@@ -930,6 +936,8 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
           generationsLeft={generationsLeft}
           paintDisabled={paintDisabled}
           verdictRequired={verdictRequired}
+          imageSource={imageSource}
+          imageCacheUrl={imageCacheUrl}
           pixelated={!!(targetProps?.pixelGridSize ?? detectedGridSize)}
           // A sheet's resolution is its frame: the image the pane shows.
           resolution={creating ? undefined : targetProps?.frameSize}

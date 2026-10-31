@@ -46,6 +46,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {addMissingBlocks, ownsTop} from '../addBlocks';
+import {ImageSource, isImageSource} from '../ai/images/imageCache';
 import {
   uploadAssetToLevel,
   uploadAssetToProject,
@@ -85,6 +86,7 @@ import {
   DEFAULT_IMAGE_STYLE,
   editsWorld,
   GENERATION_LIMIT,
+  imageSourceForMode,
   isFreeplayMode,
   tabsForMode,
 } from '../levelMode';
@@ -201,6 +203,19 @@ const PICTURES_DRAWER_ID = 'spritelab2-pictures';
 // On hover over a control a level withholds.
 const LOCKED_REASON = 'Unlocks later in the lesson.';
 
+// ?image-source=cached|live overrides the level's, and
+// ?image-cache-url= reads another tree (a local one, or a version under
+// review), for internal testing.
+function getImageSourceParam(): ImageSource | undefined {
+  const value = queryParams('image-source');
+  return isImageSource(value) ? value : undefined;
+}
+
+function getImageCacheUrlParam(): string | undefined {
+  const value = queryParams('image-cache-url');
+  return typeof value === 'string' && value ? value : undefined;
+}
+
 const DEFAULT_SCENE_SOURCE = defaultSources.source;
 const DEFAULT_SCENE_ID = 'scene-1';
 const NO_IMAGES: ImageCounts = {sprite: 0, background: 0, block: 0};
@@ -292,6 +307,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const dispatch = useAppDispatch();
 
   const activeTab = useAppSelector(state => state.spriteLab2.activeTab);
+  const imageSourceParam = useMemo(getImageSourceParam, []);
+  const imageCacheUrlParam = useMemo(getImageCacheUrlParam, []);
   // The image dialog defaults to the student form; this shows the full
   // internal one. Level edit modes author starter images, which needs the
   // naming controls.
@@ -2279,6 +2296,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     verdictRequired: !!levelProperties.objectives?.items?.some(
       item => item.check.kind === 'rated'
     ),
+    imageSource:
+      imageSourceParam || imageSourceForMode(levelProperties.levelMode),
+    imageCacheUrl: imageCacheUrlParam,
     pickRequest: pictures.pickRequest,
     onImageCreated: pictures.onImageCreated,
     onPickCancel: pictures.onPickCancel,
