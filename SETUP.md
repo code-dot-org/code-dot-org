@@ -21,8 +21,8 @@ You can do Code.org development using macOS, Ubuntu, or Windows (running Ubuntu 
     - *Important*: When done, check for correct versions of these dependencies:
 
      ```sh
-     ruby --version     # --> ruby 3.1.7
-     node --version     # --> v20.18.3
+     ruby --version     # --> version in .ruby-version
+     node --version     # --> major version in .nvmrc
      git-lfs --version  #  >= git-lfs/3.0
      uv --version       #  >= 0.5.8
      ```
@@ -496,7 +496,7 @@ If you run into an issue about mysql2 while running `bundle install` and the err
 
 If you run into an error like "Don't know how to set rpath on your system, if MySQL libraries are not in path mysql2 may not load" during `bundle install` and are running on a Mac with M1, try :
 
-- `gem install mysql2 -v '0.5.2' -- --with-opt-dir=$(brew --prefix openssl) --with-ldflags=-L/opt/homebrew/Cellar/zstd/1.5.0/lib`
+- `gem install mysql2 -v MYSQL2_VERSION -- --with-opt-dir=$(brew --prefix openssl) --with-ldflags=-L$(brew --prefix zstd)/lib`, where MYSQL2_VERSION is the version of mysql2 in [Gemfile.lock](./Gemfile.lock).
 
 #### bundler gem
 
@@ -504,32 +504,6 @@ If you run into the error message `can't find gem bundler (>= 0.a) with executab
 
 - `gem install bundler -v BUNDLED_WITH_VERSION`, where the version is the `BUNDLED WITH` version in [Gemfile.lock](./Gemfile.lock)).
 - `bundle install`
-
-#### thin
-
-If you run into error messages about `implicit declaration of function thin_xxx` when trying to compile the native extensions for thin:
-
-- `gem install thin -v THIN_VERSION -- --with-cflags="-Wno-error=implicit-function-declaration"` where THIN_VERSION is the current version of thin in [Gemfile.lock](./Gemfile.lock)).
-
-(More info [here](https://github.com/macournoyer/thin/pull/364))
-
-#### mimemagic
-
-If you run into an error message about `Could not find MIME type database in the following locations...` while installing the `mimemagic` gem, try:
-
-- `brew install shared-mime-info`
-
-(More info on mimemagic dependencies [here](https://github.com/mimemagicrb/mimemagic#dependencies), including help for OSes that don't support Homebrew.)
-
-#### eventmachine
-
-If bundle install fails with an error referencing `eventmachine`, try
-
-- `gem install eventmachine -v [VERSION] -- --with-openssl-dir=$(brew --prefix libressl)`
-
-Where [VERSION] is the current version of eventmachine in Gemfile.lock. For example:
-
-- `gem install eventmachine -v 1.2.7 -- --with-openssl-dir=$(brew --prefix libressl)`
 
 #### Xcode Set Up
 
