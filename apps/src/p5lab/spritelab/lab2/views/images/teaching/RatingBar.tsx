@@ -7,7 +7,7 @@ import {IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useId, useRef, useState} from 'react';
 
-import {Verdict} from '../../sentence/ResultActions';
+import {Verdict} from '../../sentence/verdict';
 
 import ReasonOptions, {ReasonOption} from './ReasonOptions';
 

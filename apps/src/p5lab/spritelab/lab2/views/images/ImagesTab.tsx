@@ -35,11 +35,16 @@ import SentenceScene from '../sentence/SentenceScene';
 import {sentPromptsFor} from '../sentence/sentPrompts';
 import {readWordLayout} from '../sentence/wordLayout';
 
+import AdvancedPopover, {
+  AdvancedSettings,
+  DEFAULT_ADVANCED,
+} from './AdvancedPopover';
 import DrawPane from './DrawPane';
 import FrameRow from './FrameRow';
 import {FRAME_LABELS, frameGroups} from './frames';
 import ImageFrame from './ImageFrame';
 import ImageList, {DraftEntry, NewImageKind} from './ImageList';
+import {currentPixels} from './imagePixels';
 import MakePane from './MakePane';
 import OwnWorkPane from './OwnWorkPane';
 import PaintPlaceholder from './PaintPlaceholder';
@@ -81,6 +86,8 @@ interface ImagesTabProps {
   /** The drawing's undo and redo, for the host's own buttons; null once
       nothing is being drawn. */
   onDrawingHistory?: (history: EditHistory | null) => void;
+  /** The advanced settings, for authors. */
+  advancedOffered?: boolean;
 }
 
 const DRAFT_ID = 'draft';
@@ -112,6 +119,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   onImageLanded,
   active = true,
   onDrawingHistory,
+  advancedOffered,
 }) => {
   const animationList = useAppSelector(state => state.animationList);
   // Thumbnails land as the engine trims; re-list when they do.
@@ -127,6 +135,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   );
   const writer = useImageWriter({uploadImage, imageRole, onDeleteImage});
 
+  const [advanced, setAdvanced] = useState<AdvancedSettings>(DEFAULT_ADVANCED);
   const [draft, setDraft] = useState<DraftEntry | null>(null);
   const [chosenId, setChosenId] = useState<string | null>(null);
   // Counts sessions: one image's run of generations, which the scene's
@@ -165,9 +174,18 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   const chosenImage: ProjectImage | null =
     images.find(image => image.key === chosenId) ?? null;
   const chosenDraft = chosenId === DRAFT_ID ? draft : null;
-  // The kind the scene makes: the image's own, or the draft's.
+  // The kind the scene makes: the image's own, or the draft's. A sprite
+  // that no longer says what it depicts (hand-drawn, edited) is taken for
+  // the level's kind when it is of the level's type.
   const kind = chosenImage
-    ? {imageType: chosenImage.imageType, subject: chosenImage.subject}
+    ? {
+        imageType: chosenImage.imageType,
+        subject:
+          chosenImage.subject ??
+          (chosenImage.imageType === lockedImageType
+            ? lockedImageSubject
+            : undefined),
+      }
     : chosenDraft
     ? {imageType: chosenDraft.imageType, subject: chosenDraft.subject}
     : null;
@@ -473,10 +491,21 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
           onGenerateStart={onGenerate}
           onBusyChange={setBusy}
           onKeep={handleKeep}
-          keepOnResult
           wordLayout={wordLayout}
           singleStep
           compactBehindTheScenes
+          advanced={
+            advancedOffered
+              ? {
+                  prompt: advanced.prompt,
+                  pixelScale: advanced.pixelScale,
+                  startFrom:
+                    advanced.startFrom && chosenImage
+                      ? () => currentPixels(chosenImage.props)
+                      : undefined,
+                }
+              : undefined
+          }
           method="tab"
           stillFrame={shownFrame}
           layout={parts => {
@@ -558,6 +587,17 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                     : undefined
                 }
                 drawLabel={chosenImage ? 'Edit this image' : 'Draw my own'}
+                extra={
+                  advancedOffered && (
+                    <AdvancedPopover
+                      imageType={parts.draft.imageType}
+                      settings={advanced}
+                      onChange={setAdvanced}
+                      hasImage={!!chosenImage}
+                      disabled={parts.busy}
+                    />
+                  )
+                }
               />
             );
             if (drawing) {

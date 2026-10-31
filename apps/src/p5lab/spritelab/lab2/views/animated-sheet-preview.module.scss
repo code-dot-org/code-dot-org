@@ -1,0 +1,23 @@
+// A character set plays one pose at a time at full size (the canvas takes
+// its host's img/canvas sizing), named in a pill in the host's top left
+// corner; the host supplies the positioned box.
+.sheetPreview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  inset: 0;
+}
+
+.sheetPreviewCaption {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--neutral-base-true-black) 45%, transparent);
+  color: var(--text-neutral-white-fixed);
+  font-size: 13px;
+  // The page gives every span user-select: text.
+  user-select: none;
+}

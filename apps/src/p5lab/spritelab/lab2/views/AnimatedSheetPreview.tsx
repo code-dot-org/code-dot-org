@@ -9,7 +9,7 @@ import {
   PoseKey,
 } from '../characterAnimations';
 
-import moduleStyles from './image-details-dialog.module.scss';
+import moduleStyles from './animated-sheet-preview.module.scss';
 
 // The sketch's frame rate, which pose frameDelays are counted in.
 const TICKS_PER_SECOND = 30;

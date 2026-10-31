@@ -25,6 +25,8 @@ interface MakePaneProps {
   drawLabel?: string;
   /** The image was made by AI and is unedited: generating makes it again. */
   regenerate?: boolean;
+  /** More for the header, after the way behind the scenes. */
+  extra?: React.ReactNode;
 }
 
 const MakePane: React.FunctionComponent<MakePaneProps> = ({
@@ -34,6 +36,7 @@ const MakePane: React.FunctionComponent<MakePaneProps> = ({
   onDraw,
   drawLabel = 'Draw my own',
   regenerate,
+  extra,
 }) => {
   const [confirming, setConfirming] = useState(false);
   const result = parts.mode === 'result';
@@ -78,7 +81,10 @@ const MakePane: React.FunctionComponent<MakePaneProps> = ({
               </>
             )}
           </p>
-          {parts.underFrame}
+          <span className={styles.paneHeaderTools}>
+            {parts.underFrame}
+            {extra}
+          </span>
         </div>
       )}
       {parts.sentence}
