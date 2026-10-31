@@ -25,7 +25,7 @@ Here's a quick overview of the major landmarks:
 * [TESTING](./TESTING.md): How to be sure nothing broke.
 * [STYLEGUIDE](./STYLEGUIDE.md): Our code style conventions.
 * Our [LICENSE](./LICENSE) and [NOTICE](./NOTICE).
-* There are many more topical guides in the [docs](./docs) folder.
+* There are many more topical guides in the [docs](./docs) folder; see its [index](./docs/README.md).
 * In addition, several sections of the repository have their own documentation:
   * [apps/README](./apps/README.md)
 
