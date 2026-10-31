@@ -10,7 +10,7 @@ in your python code in Python Lab and it will work without any further configura
 ## Adding a non-pyodide package
 For a `whl` not provided by pyodide that was either created by us or by someone else, 
 you can upload the wheel to this folder as well (for a package we did not author, ensure 
-you have permission to do so from the author). You can then update [pyodideWebWorker](../../src/pythonlab/pyodideWebWorker.js#17)
+you have permission to do so from the author). You can then update the `loadPackage` list in [pyodideWebWorker.ts](../../src/pythonlab/pyodideWebWorker.ts)
 with the full wheel name, prefixed by `/blockly/js/pyodide/${version}/` (follow the pattern of the pythonlab_setup
 package). This will import the package from our server on page load.
 
