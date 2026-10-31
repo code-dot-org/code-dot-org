@@ -10,7 +10,7 @@ import React, {useState} from 'react';
 
 import useThemeMode from '@cdo/apps/pixelEditor/useThemeMode';
 
-import {Verdict} from '../sentence/ResultActions';
+import {Verdict} from '../sentence/verdict';
 
 import styles from './images-tab.module.scss';
 

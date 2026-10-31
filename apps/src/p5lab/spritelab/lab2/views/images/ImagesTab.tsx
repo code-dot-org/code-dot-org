@@ -32,6 +32,10 @@ import {
 import SentenceScene from '../sentence/SentenceScene';
 import {readWordLayout} from '../sentence/wordLayout';
 
+import AdvancedPopover, {
+  AdvancedSettings,
+  DEFAULT_ADVANCED,
+} from './AdvancedPopover';
 import DrawPane from './DrawPane';
 import FrameRow from './FrameRow';
 import {
@@ -44,6 +48,7 @@ import {
 } from './frames';
 import ImageFrame from './ImageFrame';
 import ImageList, {DraftEntry} from './ImageList';
+import {currentPixels} from './imagePixels';
 import LearningDialog, {LearningPicture} from './LearningDialog';
 import MakePane from './MakePane';
 import {listProjectImages, ProjectImage} from './projectImages';
@@ -77,6 +82,8 @@ interface ImagesTabProps {
   onImageLanded?: () => void;
   /** The tab is the one showing; a drawing saves itself when it is not. */
   active?: boolean;
+  /** The advanced settings, for authors. */
+  advancedOffered?: boolean;
 }
 
 const DRAFT_ID = 'draft';
@@ -118,6 +125,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   paneWidth,
   onImageLanded,
   active = true,
+  advancedOffered,
 }) => {
   const animationList = useAppSelector(state => state.animationList);
   // Thumbnails land as the engine trims; re-list when they do.
@@ -133,6 +141,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   );
   const writer = useImageWriter({uploadImage, imageRole, onDeleteImage});
 
+  const [advanced, setAdvanced] = useState<AdvancedSettings>(DEFAULT_ADVANCED);
   const [draft, setDraft] = useState<DraftEntry | null>(null);
   const [chosenId, setChosenId] = useState<string | null>(null);
   // Counts sessions: one image's run of generations, which the scene's
@@ -206,9 +215,18 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   const chosenImage: ProjectImage | null =
     images.find(image => image.key === chosenId) ?? null;
   const chosenDraft = chosenId === DRAFT_ID ? draft : null;
-  // The kind the scene makes: the image's own, or the draft's.
+  // The kind the scene makes: the image's own, or the draft's. A sprite
+  // that no longer says what it depicts (hand-drawn, edited) is taken for
+  // the level's kind when it is of the level's type.
   const kind = chosenImage
-    ? {imageType: chosenImage.imageType, subject: chosenImage.subject}
+    ? {
+        imageType: chosenImage.imageType,
+        subject:
+          chosenImage.subject ??
+          (chosenImage.imageType === lockedImageType
+            ? lockedImageSubject
+            : undefined),
+      }
     : chosenDraft
     ? {imageType: chosenDraft.imageType, subject: chosenDraft.subject}
     : null;
@@ -587,10 +605,21 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
           verdictRequired={verdictRequired}
           onGenerateStart={onGenerate}
           onKeep={handleKeep}
-          keepOnResult
           wordLayout={wordLayout}
           singleStep
           compactBehindTheScenes
+          advanced={
+            advancedOffered
+              ? {
+                  prompt: advanced.prompt,
+                  pixelScale: advanced.pixelScale,
+                  startFrom:
+                    advanced.startFrom && chosenImage
+                      ? () => currentPixels(chosenImage.props)
+                      : undefined,
+                }
+              : undefined
+          }
           method="tab"
           layout={parts => (
             <>
@@ -630,6 +659,17 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                     : undefined
                 }
                 drawLabel={chosenImage ? 'Edit this image' : 'Draw my own'}
+                extra={
+                  advancedOffered && (
+                    <AdvancedPopover
+                      imageType={parts.draft.imageType}
+                      settings={advanced}
+                      onChange={setAdvanced}
+                      hasImage={!!chosenImage}
+                      disabled={parts.busy}
+                    />
+                  )
+                }
               />
             </>
           )}

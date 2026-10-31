@@ -22,6 +22,8 @@ interface MakePaneProps {
   onDraw?: () => void;
   /** The drawing button's text. */
   drawLabel?: string;
+  /** More for the header, after the way behind the scenes. */
+  extra?: React.ReactNode;
 }
 
 const MakePane: React.FunctionComponent<MakePaneProps> = ({
@@ -30,6 +32,7 @@ const MakePane: React.FunctionComponent<MakePaneProps> = ({
   overwriteWarns,
   onDraw,
   drawLabel = 'Draw my own',
+  extra,
 }) => {
   const [confirming, setConfirming] = useState(false);
   const result = parts.mode === 'result';
@@ -74,7 +77,10 @@ const MakePane: React.FunctionComponent<MakePaneProps> = ({
               </>
             )}
           </p>
-          {parts.underFrame}
+          <span className={styles.paneHeaderTools}>
+            {parts.underFrame}
+            {extra}
+          </span>
         </div>
       )}
       {/* The words scroll between the pinned headline and buttons. */}

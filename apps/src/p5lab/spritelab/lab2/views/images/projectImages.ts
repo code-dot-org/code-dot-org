@@ -1,4 +1,4 @@
-// The project's images as the Images tab lists them, read from the classic
+// The project's images as the Images tab lists them, read from the
 // animation-list store.
 
 import {PixelEditorSaveMeta} from '@cdo/apps/pixelEditor/PixelEditor';
@@ -70,7 +70,14 @@ export function listProjectImages(list: AnimationListState): ProjectImage[] {
         props,
         name: props.name ?? '',
         imageType,
-        subject: imageType === 'sprite' ? props.generation?.subject : undefined,
+        // A set is a character whatever its metadata says; a plain sprite
+        // keeps the subject it was made with, if any.
+        subject:
+          imageType !== 'sprite'
+            ? undefined
+            : props.poses
+            ? 'character'
+            : props.generation?.subject,
         thumb: getImageThumbnail(props.name ?? '') || src,
         src,
         pixelated: !!props.pixelGridSize,

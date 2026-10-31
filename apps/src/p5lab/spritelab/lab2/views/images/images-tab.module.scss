@@ -448,3 +448,55 @@ $pad: 16px;
 .frameLabel {
   white-space: nowrap;
 }
+
+// The advanced popover hangs off its button in the pane's header.
+.advancedHost {
+  position: relative;
+}
+
+// Hangs under its button, its right edge on the button's, so it stays
+// inside the pane at the window's right edge.
+.advancedHost .advancedPopover {
+  top: 100%;
+  right: 0;
+  left: auto;
+  width: 320px;
+  margin-top: 8px;
+  transform: none;
+}
+
+.advancedField {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 12px 0;
+  font-size: 14px;
+
+  input[type='checkbox'] + span {
+    display: inline;
+  }
+}
+
+.advancedField:has(input[type='checkbox']) {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.advancedPrompt {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 6px 8px;
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 6px;
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  font: inherit;
+  resize: vertical;
+}
+
+.paneHeaderTools {
+  display: flex;
+  flex: none;
+  align-items: center;
+}

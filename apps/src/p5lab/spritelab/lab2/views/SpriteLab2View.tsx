@@ -30,10 +30,8 @@ import {useLevelProperties} from '@cdo/apps/lab2/views/LevelPropertiesWrapper';
 // pull the ones the engine and image list need by key.
 import * as p5labReducersModule from '@cdo/apps/p5lab/reducers';
 import {
-  isNameUnique,
   revokeObjectUrlImages,
   SET_INITIAL_ANIMATION_LIST,
-  setAnimationName,
   setInitialAnimationList,
 } from '@cdo/apps/p5lab/redux/animationList';
 import {cancelLocationSelection} from '@cdo/apps/p5lab/redux/locationPicker';
@@ -72,8 +70,6 @@ import {
   removeImageReferences,
   collectImageReferences,
   removeImageReferencesOnWorkspace,
-  renameImageReferences,
-  renameImageReferencesOnWorkspace,
 } from '../imageReferences';
 import {
   defaultImageName,
@@ -82,7 +78,6 @@ import {
 } from '../imageRoleDefaults';
 import {onTrimsUpdated} from '../imageTrim';
 import {
-  DEFAULT_IMAGE_STYLE,
   editsWorld,
   GENERATION_LIMIT,
   isFreeplayMode,
@@ -159,19 +154,15 @@ import PromptBar from './components/PromptBar';
 import Sheet from './components/Sheet';
 import WorkspaceSceneBar from './components/WorkspaceSceneBar';
 import DiscoverBlocksButton from './DiscoverBlocksButton';
-import GenerateImagePane from './GenerateImagePane';
-import GenerateSpriteLab from './GenerateSpriteLab';
 import ImagesTab from './images/ImagesTab';
 import {createNamedAnimation} from './imageSave';
 import {ArrowSet, arrowSetFor, ControlsState} from './playBar';
 import Playspace, {PlayspaceMode} from './Playspace';
 import ScenesGallery from './ScenesGallery';
-import {readUiLayout} from './uiLayout';
 import useBlocklyWorkspace, {BLOCKLY_DIV_ID} from './useBlocklyWorkspace';
 import useDocumentHidden from './useDocumentHidden';
 import {useFlyoutDots} from './useFlyoutDots';
 import {useObjectives, usePlayProgress} from './useObjectives';
-import usePaneSlide from './usePaneSlide';
 import usePicturesSheet from './usePicturesSheet';
 import useSceneEditing from './useSceneEditing';
 import useSceneMusic from './useSceneMusic';
@@ -198,6 +189,12 @@ registerReducers({
 const ENABLED_TABS: readonly Tab[] = ['Images', 'Code', 'Play'];
 // The Images pane, for the hook that keeps it inert while closed.
 const PICTURES_DRAWER_ID = 'spritelab2-pictures';
+// The editor switch's order.
+const EDITORS: Editor[] = ['Images', 'World', 'Code'];
+// The preview column's share of the browser's width: beside a 280 px panel
+// at a 1280 px window this leaves the workspace about 720 px, free play's
+// widest toolbox block and widest stack side by side.
+const PREVIEW_SHARE = 0.22;
 // On hover over a control a level withholds.
 const LOCKED_REASON = 'Unlocks later in the lesson.';
 
@@ -292,9 +289,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const dispatch = useAppDispatch();
 
   const activeTab = useAppSelector(state => state.spriteLab2.activeTab);
-  // The image dialog defaults to the student form; this shows the full
-  // internal one. Level edit modes author starter images, which needs the
-  // naming controls.
+  // The advanced image settings, for authors; level edit modes have them.
   const imagesAdvanced =
     useMemo(() => queryParams('images-advanced') === 'true', []) ||
     isLevelEditMode;
@@ -546,49 +541,20 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     ],
     [tabs, enabledTabs, picturesOffered]
   );
-  // The lab's layout; `?ui=classic` brings back the earlier one.
-  const {
-    classic,
-    previewSide,
-    guideUnderPreview,
-    switchAtStart,
-    editors,
-    previewShare,
-  } = useMemo(() => readUiLayout(), []);
-  // The classic layout keeps the earlier Images editor, and so does the
-  // advanced form, which only that editor's dialog offers.
-  const classicImages = classic || imagesAdvanced;
-  // The instructions live in the guide or in the panel, never both; the
-  // panel offers no other tab while it carries them.
+  // The panel carries the instructions, and offers no other tab while it
+  // does.
   const panelLevelProperties = useMemo(
-    () =>
-      guideUnderPreview
-        ? levelProperties
-        : {...levelProperties, hideNonInstructionTabs: true},
-    [guideUnderPreview, levelProperties]
+    () => ({...levelProperties, hideNonInstructionTabs: true}),
+    [levelProperties]
   );
-  // In the classic layout the guide sits under the preview, which the Images
-  // pane covers, so a level that is only the Images tab takes the panel's
-  // instructions instead.
-  const imagesOnly = tabs.every(tab => tab === 'Images');
-  const panelIsSidebar =
-    guideUnderPreview && !!levelProperties.levelMode && !imagesOnly;
   // Images is open while its tab is: the hook's open state drives the
   // pane's inertness and its mount.
   const setPicturesOpen = pictures.setOpen;
   useEffect(() => {
     setPicturesOpen(activeTab === 'Images');
   }, [activeTab, setPicturesOpen]);
-  // The pane slides between the column's edge and the full width as its
-  // tab comes and goes.
-  const picturesSlide = usePaneSlide(
-    guideUnderPreview && activeTab === 'Images',
-    previewWidth,
-    pictures.sheetRef
-  );
-  // The room the editors keep clear of the column, on its side.
-  const clearOfPreview =
-    previewSide === 'left' ? {left: previewWidth} : {right: previewWidth};
+  // The room the editors keep clear of the preview's column, at the right.
+  const clearOfPreview = {right: previewWidth};
   // The workspace does not notice its container changing size.
   useEffect(() => {
     const workspace = Blockly.getMainWorkspace?.() as
@@ -1599,11 +1565,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     }
   }, [stageCovered, activeTab, worldMounted]);
 
-  // The classic layout slides Images in instead of fading it.
   const fade = useTabFade(activeTab, {
     Code: codeWrapperRef,
     World: worldWrapperRef,
-    ...(guideUnderPreview ? {} : {Images: pictures.sheetRef}),
+    Images: pictures.sheetRef,
   });
 
   // The scene Play (re)starts from: null means the beginning (the first
@@ -1851,38 +1816,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     }
     return undefined;
   }, [paletteRoles, animationList, levelProperties.levelMode, focusImageName]);
-  // Rename an image and cascade through every reference — blocks in all
-  // scenes, World grids, and the live workspace — so tidying a name never
-  // breaks the project.
-  const handleRenameImage = useCallback(
-    (oldName: string, newName: string): string | null => {
-      if (!newName) {
-        return 'Enter a name.';
-      }
-      const list = getStore().getState().animationList;
-      if (!isNameUnique(newName, list.propsByKey)) {
-        return 'That name is already used.';
-      }
-      const key = list.orderedKeys.find(
-        (k: string) => list.propsByKey[k]?.name === oldName
-      );
-      if (!key) {
-        return 'Image not found.';
-      }
-      dispatch(setAnimationName(key, newName) as unknown as AnyAction);
-      updateSources(prev => renameImageReferences(prev, oldName, newName));
-      renameImageReferencesOnWorkspace(
-        Blockly.getMainWorkspace(),
-        oldName,
-        newName
-      );
-      refreshAnimationDropdownThumbnails();
-      scheduleRun();
-      return null;
-    },
-    [dispatch, updateSources, scheduleRun]
-  );
-
   const handleDeleteImage = useCallback(
     (name: string) => {
       updateSources(prev => removeImageReferences(prev, name));
@@ -2267,23 +2200,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const catalogOffered = catalog.length > 0 && isEditable;
   const openBlockCatalog = () => setShowBlockCatalog(true);
 
-  const imagePaneProps = {
-    uploadImage,
-    onRenameImage: handleRenameImage,
-    onDeleteImage: handleDeleteImage,
-    lockedImageType: levelProperties.levelMode?.imageType,
-    lockedImageSubject: levelProperties.levelMode?.imageSubject,
-    imageRole: levelProperties.levelMode?.imageRole,
-    advanced: imagesAdvanced,
-    defaultStyle: DEFAULT_IMAGE_STYLE,
-    generationsLeft,
-    onGenerate: countGeneration,
-    // Freeplay hands back the paint tools.
-    paintDisabled: !isFreeplayMode(levelProperties.levelMode),
-    verdictRequired: !!levelProperties.objectives?.items?.some(
-      item => item.check.kind === 'rated'
-    ),
-  };
+  const verdictRequired = !!levelProperties.objectives?.items?.some(
+    item => item.check.kind === 'rated'
+  );
 
   return (
     <div className={moduleStyles.labRow}>
@@ -2336,20 +2255,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         hasRun={hasRun}
         hasEdited={hasEdited}
         settings={[...blocklySettings, themeSetting, ...gameAudio.settings]}
-        className={classNames(
-          !panelIsSidebar &&
-            (guideUnderPreview
-              ? moduleStyles.instructionsArea
-              : moduleStyles.instructionsColumn),
-          panelIsSidebar && moduleStyles.resourceSidebar
-        )}
-        sidebarOnly={panelIsSidebar}
-        // The checklist and the Continue gate ride in the panel unless
-        // the guide carries them.
-        objectives={
-          panelIsSidebar || !objectives.active ? undefined : objectives
-        }
-        hideContinueIfDisabled={!panelIsSidebar}
+        className={moduleStyles.instructionsColumn}
+        // The checklist and the Continue gate ride in the panel.
+        objectives={objectives.active ? objectives : undefined}
+        hideContinueIfDisabled
         footerButtons={
           startOverOffered && (
             <IconButtonWithTooltip
@@ -2395,9 +2304,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               <EditorStrip
                 editor={activeTab}
                 onChange={handleEditorChange}
-                editors={editors}
+                editors={EDITORS}
                 disabledEditors={disabledEditors}
-                switchAtStart={switchAtStart}
+                switchAtStart
                 history={
                   activeTab === 'Code'
                     ? {canUndo, canRedo, undo, redo}
@@ -2429,14 +2338,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
 
           {/* Kept mounted like the workspace: inserting the grid is the
           costly part. */}
-          {/* Images: kept mounted, and off to the right rather than
-            clipped while another editor shows, where a pick's dialog can
-            still open inside it. It covers the preview too; the classic
-            layout slides it in from the column's edge, the default fades
-            it in like the other editors. */}
+          {/* Images: kept mounted, and off to the right rather than clipped
+            while another editor shows. It covers the preview too. */}
           {pictures.mounted && (
             <div
-              ref={guideUnderPreview ? pictures.sheetRef : fade.ref('Images')}
+              ref={fade.ref('Images')}
               id={PICTURES_DRAWER_ID}
               role="region"
               aria-label="Images"
@@ -2444,33 +2350,24 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 moduleStyles.codeTabWrapper,
                 moduleStyles.picturesEditor,
                 editorsShown && moduleStyles.underEditorStrip,
-                (guideUnderPreview
-                  ? picturesSlide.parked
-                  : activeTab !== 'Images') && moduleStyles.picturesEditorParked
+                activeTab !== 'Images' && moduleStyles.picturesEditorParked
               )}
-              style={guideUnderPreview ? picturesSlide.style : undefined}
-              onTransitionEnd={
-                guideUnderPreview ? picturesSlide.onTransitionEnd : undefined
-              }
             >
-              {classicImages ? (
-                <GenerateImagePane {...imagePaneProps} />
-              ) : (
-                <ImagesTab
-                  uploadImage={uploadImage}
-                  onDeleteImage={handleDeleteImage}
-                  lockedImageType={levelProperties.levelMode?.imageType}
-                  lockedImageSubject={levelProperties.levelMode?.imageSubject}
-                  imageRole={levelProperties.levelMode?.imageRole}
-                  generationsLeft={generationsLeft}
-                  onGenerate={countGeneration}
-                  editingOffered={isFreeplayMode(levelProperties.levelMode)}
-                  verdictRequired={imagePaneProps.verdictRequired}
-                  paneWidth={previewWidth}
-                  onImageLanded={saveImagesNow}
-                  active={activeTab === 'Images'}
-                />
-              )}
+              <ImagesTab
+                uploadImage={uploadImage}
+                onDeleteImage={handleDeleteImage}
+                lockedImageType={levelProperties.levelMode?.imageType}
+                lockedImageSubject={levelProperties.levelMode?.imageSubject}
+                imageRole={levelProperties.levelMode?.imageRole}
+                generationsLeft={generationsLeft}
+                onGenerate={countGeneration}
+                editingOffered={isFreeplayMode(levelProperties.levelMode)}
+                verdictRequired={verdictRequired}
+                paneWidth={previewWidth}
+                onImageLanded={saveImagesNow}
+                active={activeTab === 'Images'}
+                advancedOffered={imagesAdvanced}
+              />
             </div>
           )}
           {worldTabEnabled && worldMounted && (
@@ -2510,8 +2407,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             mode={playspaceMode}
             columnHeader={<EditorStrip title="Preview" />}
             onPreviewWidth={setPreviewWidth}
-            side={previewSide}
-            columnShare={previewShare}
+            side="right"
+            columnShare={PREVIEW_SHARE}
             controls={
               <PlayControls
                 // On a pinned-scene level the game is that one scene, so there
@@ -2545,17 +2442,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 onPlayGame={pinnedSceneId ? undefined : handlePlayGame}
                 playSceneHidden={activeScene.id === scenes[0].id}
               />
-            }
-            below={
-              panelIsSidebar ? (
-                <GenerateSpriteLab
-                  docked
-                  levelMode={levelProperties.levelMode}
-                  instructions={levelProperties.longInstructions}
-                  objectives={objectives}
-                  levelProperties={levelProperties}
-                />
-              ) : undefined
             }
             fadeTrigger={fadeTrigger}
             covered={jumpCover}
