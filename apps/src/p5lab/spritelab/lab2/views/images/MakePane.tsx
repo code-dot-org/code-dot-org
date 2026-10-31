@@ -74,10 +74,13 @@ const MakePane: React.FunctionComponent<MakePaneProps> = ({
           )}
         </p>
       )}
-      {parts.sentence}
-      {parts.error}
-      {parts.progress}
-      {parts.verdict && <div className={styles.verdict}>{parts.verdict}</div>}
+      {/* The words scroll between the pinned headline and buttons. */}
+      <div className={styles.paneScroll}>
+        {parts.sentence}
+        {parts.error}
+        {parts.progress}
+        {parts.verdict && <div className={styles.verdict}>{parts.verdict}</div>}
+      </div>
       <div className={styles.paneBottom}>
         {confirming ? (
           <div className={styles.confirm} role="group" aria-label="Replace">
