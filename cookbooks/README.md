@@ -24,9 +24,6 @@ then connect to that server with `chef-client` to provision.
 
 `adhoc` environments work slightly differently by running `chef-client` in
 [Local Mode](https://docs.chef.io/ctl_chef_client/#run-in-local-mode) against locally-stored cookbooks.
-This is much simpler and will eventually become the default provisioning mode for all environments.
-
-In the future, Chef cookbooks may also be used to provision applications to Docker images/layers and/or local-development workstations.
 
 ## Testing cookbooks
 
@@ -66,9 +63,9 @@ so make sure to do this at the end of your testing!
 
 When adding a new dependency to an individual cookbook, there are three places you need to declare the dependency:
 
-1. The cookbook-specific Berksfile; ie, `cookbook 'pyenv'` in `cookbooks/cdo-python/Berksfile`
-2. The cookbook-specific metadata.rb; ie, `depends 'pyenv'` in `cookbooks/cdo-python/metadata.rb`
-3. The top-level Berksfile; ie, `cookbook 'pyenv'` in `cookbooks/Berksfile`
+1. The cookbook-specific Berksfile; ie, `cookbook 'chef_client_updater'` in `cookbooks/cdo-apps/Berksfile`
+2. The cookbook-specific metadata.rb; ie, `depends 'chef_client_updater'` in `cookbooks/cdo-apps/metadata.rb`
+3. The top-level Berksfile; ie, `cookbook 'chef_client_updater'` in `cookbooks/Berksfile`
 
 ## Deploying Cookbooks to Adhocs
 

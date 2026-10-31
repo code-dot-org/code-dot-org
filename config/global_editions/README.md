@@ -48,7 +48,7 @@ contains a set of properties. Only those properties are considered. If
 `false` is provided instead of a set of properties, the component is not
 rendered at all.
 
-Ex: (config/global/foo.yml)
+Ex: (config/global_editions/foo.yml)
 
 ```
 pages:
@@ -76,6 +76,7 @@ be removed.
 ## Tips for Creating a New Region
 
 You may find it useful to copy from an existing region that is most similar to
-the one you are creating. Just copy, for instance, the `root.yml` to your named
-region (e.g. `my-region.yml`) and restart your development server. There will
-now be a clone of the `root` site experience at `/<ge-region>`.
+the one you are creating. Just copy, for instance, `us.yml` (the default
+region) to your named region (e.g. `my-region.yml`), give it its own `locales`,
+and restart your development server. There will now be a clone of the default
+site experience at `/<ge-region>`.
