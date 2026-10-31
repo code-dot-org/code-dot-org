@@ -4,7 +4,7 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Popover from '@code-dot-org/component-library/popover';
 import Tabs from '@code-dot-org/component-library/tabs';
-import {Button as MuiButton} from '@mui/material';
+import {Button as MuiButton, IconButton as MuiIconButton} from '@mui/material';
 import React, {useLayoutEffect, useRef, useState} from 'react';
 
 import useThemeMode from '@cdo/apps/pixelEditor/useThemeMode';
@@ -30,11 +30,14 @@ const PANEL_ID = 'sentence-prompt-popover';
 interface BehindTheScenesProps {
   sent: SentPrompts;
   disabled?: boolean;
+  /** The icon alone, for a header with no room for the words. */
+  compact?: boolean;
 }
 
 const BehindTheScenes: React.FunctionComponent<BehindTheScenesProps> = ({
   sent,
   disabled,
+  compact,
 }) => {
   const [open, setOpen] = useState(false);
   const mode = useThemeMode();
@@ -106,22 +109,41 @@ const BehindTheScenes: React.FunctionComponent<BehindTheScenesProps> = ({
             } as React.CSSProperties)
       }
     >
-      <MuiButton
-        variant="text"
-        color="tertiary"
-        size="small"
-        ref={linkRef}
-        startIcon={<FontAwesomeV6Icon iconName="circle-info" aria-hidden />}
-        aria-expanded={open}
-        aria-controls={open ? PANEL_ID : undefined}
-        disabled={disabled}
-        onClick={() => {
-          setTab('picture');
-          setOpen(current => !current);
-        }}
-      >
-        {TITLE}
-      </MuiButton>
+      {compact ? (
+        <MuiIconButton
+          variant="text"
+          color="tertiary"
+          size="small"
+          ref={linkRef}
+          aria-label={TITLE}
+          aria-expanded={open}
+          aria-controls={open ? PANEL_ID : undefined}
+          disabled={disabled}
+          onClick={() => {
+            setTab('picture');
+            setOpen(current => !current);
+          }}
+        >
+          <FontAwesomeV6Icon iconName="circle-info" aria-hidden />
+        </MuiIconButton>
+      ) : (
+        <MuiButton
+          variant="text"
+          color="tertiary"
+          size="small"
+          ref={linkRef}
+          startIcon={<FontAwesomeV6Icon iconName="circle-info" aria-hidden />}
+          aria-expanded={open}
+          aria-controls={open ? PANEL_ID : undefined}
+          disabled={disabled}
+          onClick={() => {
+            setTab('picture');
+            setOpen(current => !current);
+          }}
+        >
+          {TITLE}
+        </MuiButton>
+      )}
       {open && (
         <Popover
           id={PANEL_ID}

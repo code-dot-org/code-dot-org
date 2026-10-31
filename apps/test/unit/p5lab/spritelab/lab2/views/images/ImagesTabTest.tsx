@@ -49,7 +49,9 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/sentence/SentenceScene', () => {
           onClick={() =>
             onKeep({
               filename: 'made.png',
-              generation: {imageType, subject: imageSubject},
+              uint8Array: new Uint8Array([137, 80, 78, 71]),
+              mediaType: 'image/png',
+              generation: {imageType, subject: imageSubject, prompt: 'A cat'},
             })
           }
         >
@@ -71,6 +73,12 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/sentence/SentenceScene', () => {
           progress: null,
           fact: null,
           verdict: null,
+          rating: {
+            offered: false,
+            verdict: null,
+            judge: jest.fn(),
+            explain: jest.fn(),
+          },
           awaitingVerdict: false,
           exhausted: false,
           generate: jest.fn(),
@@ -657,5 +665,39 @@ describe('ImagesTab', () => {
     });
     // Leaving the tab is Done: the strokes are kept and the tools close.
     expect(screen.queryByText('canvas')).toBeNull();
+  });
+
+  it('tells how the picture was made after the first one on a level about one image, once', async () => {
+    jest.useFakeTimers();
+    localStorage.clear();
+    renderTab({lockedImageType: 'sprite', imageRole: 'hero'});
+    acceptGenerated.mockImplementation(async () => {
+      propsByKey.k2 = {name: 'Sprite 1', categories: [], role: 'hero'};
+      return 'k2';
+    });
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', {name: /^land sprite$/}));
+    });
+    expect(screen.queryByRole('dialog')).toBeNull();
+    act(() => {
+      jest.advanceTimersByTime(2000);
+    });
+    const dialog = screen.getByRole('dialog', {name: 'How AI made your image'});
+    expect(dialog).toBeTruthy();
+    expect(screen.queryByRole('button', {name: /close/i})).toBeNull();
+    fireEvent.click(screen.getByRole('button', {name: 'Next'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Next'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Next'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Got it'}));
+    expect(screen.queryByRole('dialog')).toBeNull();
+    // Told once: the next picture of the kind passes quietly.
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', {name: /^land sprite$/}));
+    });
+    act(() => {
+      jest.advanceTimersByTime(2000);
+    });
+    expect(screen.queryByRole('dialog')).toBeNull();
+    jest.useRealTimers();
   });
 });

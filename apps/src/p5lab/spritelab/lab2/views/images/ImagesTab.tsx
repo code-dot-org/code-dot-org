@@ -9,6 +9,7 @@ import {queryParams} from '@cdo/apps/code-studio/utils';
 import PixelEditor from '@cdo/apps/pixelEditor/PixelEditor';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import {bytesToDataURI} from '../../ai/images/encoding';
 import {
   GeneratedImageResult,
   UploadImageFunction,
@@ -33,10 +34,12 @@ import {readWordLayout} from '../sentence/wordLayout';
 import DrawPane from './DrawPane';
 import ImageFrame from './ImageFrame';
 import ImageList, {DraftEntry, NewImageKind} from './ImageList';
+import LearningDialog, {LearningPicture} from './LearningDialog';
 import MakePane from './MakePane';
 import OwnWorkPane from './OwnWorkPane';
 import PaintPlaceholder from './PaintPlaceholder';
 import {listProjectImages, ProjectImage} from './projectImages';
+import RatingBar from './RatingBar';
 import BehindTheScenes from './teaching/BehindTheScenes';
 import useDrawing from './useDrawing';
 import useImageWriter, {ImageTarget} from './useImageWriter';
@@ -88,6 +91,33 @@ function editedMode(): EditedMode {
   return value === 'pane' || value === 'generate' ? value : 'paint';
 }
 
+// The reveal plays out before the story of how the picture was made.
+const LEARNING_DELAY_MS = 1800;
+// The kinds the story is told for, once each per project.
+const LEARNING_KINDS: ImageType[] = ['sprite', 'background'];
+
+/** The kinds this project has had the story for, kept in the browser. */
+function learnedKinds(channelId: string | undefined): Set<string> {
+  try {
+    const raw = localStorage.getItem(`spritelab2-learned:${channelId ?? ''}`);
+    return new Set(raw ? (JSON.parse(raw) as string[]) : []);
+  } catch {
+    return new Set();
+  }
+}
+function rememberLearned(channelId: string | undefined, kind: string): void {
+  try {
+    const kinds = learnedKinds(channelId);
+    kinds.add(kind);
+    localStorage.setItem(
+      `spritelab2-learned:${channelId ?? ''}`,
+      JSON.stringify([...kinds])
+    );
+  } catch {
+    // Nothing to keep it in: the story is told again next time.
+  }
+}
+
 const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   uploadImage,
   onDeleteImage,
@@ -104,6 +134,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   onDrawingHistory,
 }) => {
   const animationList = useAppSelector(state => state.animationList);
+  const channelId = useAppSelector(state => state.lab.channel?.id);
   // Thumbnails land as the engine trims; re-list when they do.
   const [trimVersion, setTrimVersion] = useState(0);
   useEffect(() => onTrimsUpdated(() => setTrimVersion(v => v + 1)), []);
@@ -200,6 +231,43 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   // Animated is on until the student turns it off, and stays as they left
   // it from image to image; no image or level turns it off for them.
   const [animated, setAnimated] = useState(true);
+  // The story of how the picture was made: told after the first character
+  // and the first background a level about one image makes.
+  const [learning, setLearning] = useState<{
+    picture: LearningPicture;
+    prompt: string;
+  } | null>(null);
+  const learningTimerRef = useRef<number>();
+  useEffect(() => () => window.clearTimeout(learningTimerRef.current), []);
+  const offerLearning = useCallback(
+    (result: GeneratedImageResult) => {
+      const {imageType, subject} = result.generation;
+      if (
+        !lockedImageType ||
+        !LEARNING_KINDS.includes(imageType) ||
+        subject === 'object' ||
+        learnedKinds(channelId).has(imageType)
+      ) {
+        return;
+      }
+      rememberLearned(channelId, imageType);
+      const src = bytesToDataURI(result.uint8Array, result.mediaType);
+      const crop = result.frames
+        ? {width: result.frames.frameSize.x, height: result.frames.frameSize.y}
+        : undefined;
+      learningTimerRef.current = window.setTimeout(
+        () =>
+          setLearning({
+            picture: {src, crop},
+            prompt: result.generation.prompt,
+          }),
+        LEARNING_DELAY_MS
+      );
+    },
+    [lockedImageType, channelId]
+  );
+  // Once per picture: a verdict's second keep must not tell it again.
+  const keptRef = useRef<string | null>(null);
   const handleKeep = useCallback(
     async (result: GeneratedImageResult) => {
       const target: ImageTarget = {
@@ -207,9 +275,14 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
         imageType: result.generation.imageType,
         subject: result.generation.subject,
       };
+      const firstKeep = keptRef.current !== result.filename;
+      keptRef.current = result.filename;
       await land(target, () => writer.acceptGenerated(target, result));
+      if (firstKeep) {
+        offerLearning(result);
+      }
     },
-    [writer, land]
+    [writer, land, offerLearning]
   );
 
   const tools = useDrawing({
@@ -422,6 +495,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
           keepOnResult
           wordLayout={wordLayout}
           singleStep
+          compactBehindTheScenes
           method="tab"
           layout={parts => {
             const generating = parts.mode === 'generating';
@@ -442,6 +516,18 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                     <div className={styles.underSteps}>{parts.progress}</div>
                   ) : (
                     parts.underFrame || reopenedBehindTheScenes
+                  parts.mode === 'generating' && (
+                    <div className={styles.underSteps}>{parts.progress}</div>
+                  )
+                }
+                overlay={
+                  parts.rating.offered && (
+                    <RatingBar
+                      verdict={parts.rating.verdict}
+                      onJudge={parts.rating.judge}
+                      onReasons={parts.rating.explain}
+                      disabled={parts.busy}
+                    />
                   )
                 }
               />
@@ -579,6 +665,13 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
             </p>
           </section>
         </>
+      )}
+      {learning && (
+        <LearningDialog
+          picture={learning.picture}
+          prompt={learning.prompt}
+          onDone={() => setLearning(null)}
+        />
       )}
     </div>
   );
