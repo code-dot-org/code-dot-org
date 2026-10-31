@@ -91,6 +91,17 @@ describe('the palette', () => {
     expect(document.activeElement).toHaveAccessibleName('Add a line break');
   });
 
+  it('names each value with its article', () => {
+    render(<Harness start={[word('heal')]} />);
+    const toolbar = screen.getByRole('toolbar', {name: 'Parts to add'});
+    expect(
+      within(toolbar).getByRole('button', {name: 'Add an actor value'}),
+    ).toBeInTheDocument();
+    expect(
+      within(toolbar).getByRole('button', {name: 'Add a number value'}),
+    ).toBeInTheDocument();
+  });
+
   it('adds after the chip with focus, focuses it and says where', async () => {
     render(<Harness start={[word('heal'), word('now')]} />);
     screen.getByRole('textbox', {name: 'Word, part 1'}).focus();

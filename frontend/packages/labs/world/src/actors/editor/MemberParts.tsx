@@ -581,7 +581,9 @@ const PaletteChip = ({
       tabIndex={tabIndex}
       aria-disabled={attributes['aria-disabled']}
       disabled={disabled}
-      aria-label={names[what] ?? `Add a ${label.toLowerCase()} value`}
+      aria-label={
+        names[what] ?? `Add ${withArticle(label.toLowerCase())} value`
+      }
       className={`${styles.chip} ${styles[`chip-${kindOf(what)}`]}`}
       onClick={onAdd}
     >
@@ -593,6 +595,9 @@ const PaletteChip = ({
     </button>
   );
 };
+
+const withArticle = (noun: string): string =>
+  `${/^[aeiou]/.test(noun) ? 'an' : 'a'} ${noun}`;
 
 const kindOf = (what: string): string =>
   what === 'label' || what === 'row' ? what : 'value';

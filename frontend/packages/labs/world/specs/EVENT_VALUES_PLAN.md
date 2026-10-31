@@ -1,6 +1,6 @@
 # Plan: named, typed values on an event (EVENTS.md, ideas 1 and 2)
 
-STATUS: BUILT, not yet seen in the browser. The first two ideas of
+STATUS: BUILT, and seen in the browser. The first two ideas of
 specs/EVENTS.md, which is otherwise deferred. The working record, as the
 other plans are.
 
@@ -140,8 +140,8 @@ block`'s body shares one with its signature, and a generated closure
 ## Verified
 
 Typecheck and lint clean. The suite passes in two halves, 229 files and
-2822 tests on the first, 151 and 2612 on the second. Nothing here has been
-seen in a browser.
+2822 tests on the first, 151 and 2612 on the second. Seen in the browser
+since; see "Seen in the browser" below.
 
 ## Learned while building
 
@@ -251,13 +251,17 @@ rule about.
   reads correctly under the hat and takes the name out of the menus
   elsewhere. That is what any binder in this lab already does to a free
   local of its name, so it is the rule working rather than a new hazard.
-- **The subject is not in the `+`.** The flyout holds what the event
-  carries; `this actor` is the default in every actor socket already and is
-  a drawer away.
+- **The subject is in the `+`, first.** It was not when this was built;
+  specs/PROPERTY_SUBJECTS_PLAN.md put it there, as `this` under a hat about
+  this actor.
 - **Nothing in the library carries two values yet.** The path is exercised
   by tests over a project-declared event, not by a shipped rule.
 
 ## What to look at in the browser
+
+Since written, an event is designed on its actor's page, not with a
+`define event` block (specs/RULE_EDITOR_PLAN.md, step 7); the walk below
+is the same check on that page.
 
 In a `.rule`, `define event` → pencil: the drawer should lead with the
 `let` blocks, as a `define block`'s does, and there should be no `choice`
@@ -281,3 +285,39 @@ that could not work before.
 
 On a contact hat (`starts touching`), the `+` should be unchanged: one
 block, `event actor`, and no local bound.
+
+## Seen in the browser
+
+In the Platformer, on the Ball's page, Blocks → New event, then an actor
+value and a number value, named `is hit by ⟨who⟩ ⟨amount⟩`:
+
+- **The head and the hat agree.** The page's head drew `when ⟨this actor⟩
+is hit by ⟨(any)⟩ amount`, a kind dropdown for `who` and the word for
+  `amount`, and the hat in the Ball drawer of the Ball's code drew the same.
+  The kind dropdown lists every kind in the project, after `(any)`.
+- **The `emit` block has a socket for each value**: `emit is hit by ⟨this⟩
+⟨0⟩ for ⟨this⟩`.
+- **The hat's `+` holds `this`, a `who` getter and an `amount` getter.**
+  A getter dragged from it under the hat offers `amount` alone in its
+  dropdown.
+- **The value arrives.** `when this actor is created` → `emit is hit by
+this 7 for this`, and under the hat `write to console ⟨amount⟩`: the
+  console printed 7. Filtered to Player, nothing; to Ball, 7 again.
+- **Out of scope is drawn as such.** The getter carried from under the hat
+  into the `emit` block's number socket plugged in and drew as `???`. Into
+  the actor socket it would not go, and the workspace removed it, as it
+  removes any block dropped loose.
+- **A contact hat is unchanged.** On the Player, `when this actor starts
+touching (any)` offers `this` and `object actor` behind its `+`, and
+  binds no local.
+
+Found on the way:
+
+- **The value chips said "Add a actor value".** Each one's name is built
+  from its type, and `a` was written in by hand. Fixed, with a test.
+- **The `emit` block's sockets have no words.** `emit is hit by this 7 for
+this` does not say which socket is `who` and which is `amount`; the hat
+  says it, the call does not. Not fixed.
+- **`???` loses the name.** A getter out of scope is drawn as `???`, so
+  the learner who carried `amount` out is not told it was `amount`. That
+  is the scope rule's drawing everywhere, not this plan's. Not fixed.
