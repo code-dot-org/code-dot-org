@@ -399,3 +399,52 @@ $pad: 16px;
   justify-content: space-between;
   gap: 8px;
 }
+
+// A set's frames under the one being drawn.
+.frameStrip {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.frameTile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  margin: 0;
+  padding: 4px;
+  border: 2px solid var(--borders-neutral-primary);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text-neutral-secondary);
+  cursor: pointer;
+  box-shadow: none;
+  font-size: 12px;
+
+  &:disabled {
+    cursor: default;
+  }
+}
+
+.frameTileChosen {
+  border-color: var(--borders-brand-teal-primary);
+  color: var(--text-neutral-primary);
+}
+
+.frameTileCanvas {
+  width: 56px;
+  height: 56px;
+  image-rendering: pixelated;
+
+  @include checkerboard.checkerboard(
+    8px,
+    var(--neutral-gray-10),
+    var(--neutral-base-white)
+  );
+}
+
+.frameLabel {
+  white-space: nowrap;
+}

@@ -15,6 +15,8 @@ interface DrawPaneProps {
   kind: {imageType: ImageType; subject?: ImageSubject};
   /** The drawing is over an image that exists, not a blank. */
   editing: boolean;
+  /** The drawing is one frame of a character set, named for its pose. */
+  frameLabel?: string;
   /** A stroke has landed since the drawing opened. */
   edited: boolean;
   saving: boolean;
@@ -28,6 +30,7 @@ const DrawPane: React.FunctionComponent<DrawPaneProps> = ({
   width,
   kind,
   editing,
+  frameLabel,
   edited,
   saving,
   onDone,
@@ -41,7 +44,11 @@ const DrawPane: React.FunctionComponent<DrawPaneProps> = ({
       aria-label={editing ? 'Edit your picture' : 'Draw your picture'}
     >
       <p className={styles.headline}>
-        {editing ? 'Edit this image.' : `Draw your ${kindLabel}.`}
+        {frameLabel
+          ? `Edit the ${frameLabel.toLowerCase()} frame.`
+          : editing
+          ? 'Edit this image.'
+          : `Draw your ${kindLabel}.`}
       </p>
       <div className={styles.paneBottom}>
         <MuiButton

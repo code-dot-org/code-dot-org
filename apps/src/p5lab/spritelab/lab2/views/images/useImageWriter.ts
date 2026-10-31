@@ -186,7 +186,11 @@ export default function useImageWriter({
         ...(existing?.poses
           ? {}
           : {frameSize, sourceSize: frameSize, ...framesPatch(undefined)}),
-        pixelGridSize: meta.pixelGridSize,
+        // A set's frame goes back into the strip at the strip's own size,
+        // so the strip keeps whatever grid it had.
+        pixelGridSize: existing?.poses
+          ? existing.pixelGridSize
+          : meta.pixelGridSize,
         trimmed: false,
         // Hand-edited pixels are not the prompt's output anymore.
         generation: undefined,

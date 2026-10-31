@@ -7,6 +7,8 @@ import classNames from 'classnames';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import {toImage} from '@cdo/apps/imageUtils';
+import {detectImageGridSize} from '@cdo/apps/pixelEditor/pixelArt';
 import PixelEditor, {
   PixelEditorSaveMeta,
 } from '@cdo/apps/pixelEditor/PixelEditor';
@@ -31,6 +33,15 @@ import SentenceScene from '../sentence/SentenceScene';
 import {readWordLayout} from '../sentence/wordLayout';
 
 import DrawPane from './DrawPane';
+import FrameRow from './FrameRow';
+import {
+  BASE_FRAME,
+  cutFrame,
+  FRAME_LABELS,
+  frameCount,
+  FrameSize,
+  replaceFrame,
+} from './frames';
 import ImageFrame from './ImageFrame';
 import ImageList, {DraftEntry} from './ImageList';
 import LearningDialog, {LearningPicture} from './LearningDialog';
@@ -90,6 +101,8 @@ interface Drawing {
   imageUrl: string;
   pixelGridSize?: number;
   recentColors?: PixelEditorSaveMeta['recentColors'];
+  /** A character set: the frame on the canvas is one cell of this strip. */
+  sheet?: {src: string; frameSize: FrameSize; index: number; count: number};
 }
 
 const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
@@ -299,10 +312,35 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   }, []);
   useEffect(() => clearIdleTimer, []);
   const startDrawing = useCallback(
-    (target: ImageTarget) => {
+    async (target: ImageTarget) => {
       const existing = target.key
         ? images.find(image => image.key === target.key)
         : undefined;
+      if (existing?.sheet) {
+        const {src, frameSize} = existing.sheet;
+        const sheetImage = await toImage(src);
+        const imageUrl = await cutFrame(src, frameSize, BASE_FRAME);
+        // A set is stored as the model drew it, with no grid recorded, so
+        // the grid is read off the frame: the editor then draws in whole
+        // art pixels instead of the finest brush.
+        const pixelGridSize =
+          existing.props.pixelGridSize ??
+          (await detectImageGridSize(imageUrl).catch(() => null)) ??
+          undefined;
+        setDrawing({
+          target,
+          imageUrl,
+          pixelGridSize,
+          recentColors: existing.props.recentColors,
+          sheet: {
+            src,
+            frameSize,
+            index: BASE_FRAME,
+            count: frameCount(sheetImage, frameSize),
+          },
+        });
+        return;
+      }
       if (existing?.src) {
         setDrawing({
           target,
@@ -330,6 +368,19 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
       }
     }, IDLE_SAVE_MS);
   }, []);
+  // The frame to open once the one on the canvas has saved.
+  const nextFrameRef = useRef<number | null>(null);
+  const openFrame = useCallback(async (index: number) => {
+    const current = drawingRef.current;
+    if (!current?.sheet) {
+      return;
+    }
+    const {src, frameSize} = current.sheet;
+    const imageUrl = await cutFrame(src, frameSize, index);
+    setDrawing(d =>
+      d?.sheet ? {...d, imageUrl, sheet: {...d.sheet, index}} : d
+    );
+  }, []);
   const handleDrawingSave = useCallback(
     async (dataURI: string, meta: PixelEditorSaveMeta) => {
       const current = drawingRef.current;
@@ -340,19 +391,55 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
       dirtyRef.current = false;
       setSaving(true);
       try {
+        // A set's frame goes back into its strip, and the strip is saved.
+        const pixels = current.sheet
+          ? await replaceFrame(
+              current.sheet.src,
+              current.sheet.frameSize,
+              current.sheet.index,
+              dataURI
+            )
+          : dataURI;
         const key = await land(current.target, () =>
-          writer.saveEdited(current.target, dataURI, meta)
+          writer.saveEdited(current.target, pixels, meta)
         );
-        // A blank that was saved is an image now: later saves replace it.
-        setDrawing(d => d && {...d, target: {...d.target, key}});
+        // A blank that was saved is an image now: later saves replace it;
+        // a saved strip is what the next frame is cut from.
+        setDrawing(
+          d =>
+            d && {
+              ...d,
+              target: {...d.target, key},
+              ...(d.sheet && {sheet: {...d.sheet, src: pixels}}),
+            }
+        );
       } finally {
         setSaving(false);
       }
       if (leaveAfterSaveRef.current) {
         stopDrawing();
+      } else if (nextFrameRef.current !== null) {
+        const next = nextFrameRef.current;
+        nextFrameRef.current = null;
+        await openFrame(next);
       }
     },
-    [land, writer, stopDrawing]
+    [land, writer, stopDrawing, openFrame]
+  );
+  // Another frame of the set: what is drawn on this one is saved first.
+  const selectFrame = useCallback(
+    (index: number) => {
+      if (index === drawingRef.current?.sheet?.index) {
+        return;
+      }
+      if (dirtyRef.current) {
+        nextFrameRef.current = index;
+        saveRef.current?.();
+      } else {
+        openFrame(index);
+      }
+    },
+    [openFrame]
   );
   // Leaving the tab saves what was drawn so far.
   useEffect(() => {
@@ -370,8 +457,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   }, [stopDrawing]);
   // Free play has every tool; a level before it keeps the few that draw.
   const limitedTools = !editingOffered;
-  // Character sets are sheets of frames; the editor paints one image.
-  const drawOffered = !!kind && !chosenImage?.sheet && !drawing;
+  const drawOffered = !!kind && !drawing;
 
   const deleteOffered = !!editingOffered;
   const paneWidthPx = paneWidth || DEFAULT_PANE_WIDTH;
@@ -443,6 +529,18 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                   image={null}
                   workspaceClassName={styles.paintFrame}
                   above={parts.toolbar}
+                  under={
+                    drawing.sheet && (
+                      <FrameRow
+                        sheetSrc={drawing.sheet.src}
+                        frameSize={drawing.sheet.frameSize}
+                        count={drawing.sheet.count}
+                        selected={drawing.sheet.index}
+                        onSelect={selectFrame}
+                        disabled={saving}
+                      />
+                    )
+                  }
                   live={
                     outline ? (
                       <div className={styles.paintStack}>
@@ -464,6 +562,11 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                 <DrawPane
                   width={paneWidthPx}
                   kind={kind}
+                  frameLabel={
+                    drawing.sheet
+                      ? FRAME_LABELS[drawing.sheet.index]
+                      : undefined
+                  }
                   editing={!!drawing.target.key}
                   edited={parts.edited}
                   saving={saving}
