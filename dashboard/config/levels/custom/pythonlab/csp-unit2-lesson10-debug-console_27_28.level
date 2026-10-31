@@ -1,0 +1,59 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-10-31T06:30:42.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildPython",
+        "explainCode",
+        "documentation"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "# This program should print whether you can go to the movies, then always print \"Program finished\".\ntime = int(input(\"What hour is it? \"))\ncan_go = time < 8\nif can_go\n    print(\"I can go to the movies!\")\n    print(\"Program finished\")",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMruuuESYMMZOURJ\nZC700uGyvcgHzPaGwZnWBEU2KF3j5LlRA5Hgdpf0+RGVjnFDcH6f6AmNkrhw\npTtdyK77UoWRcz7aVecVLuFEdg8T086EvvV0K2mm7pi2TEZPZ5C31BJtzPLd\nSv9i7Fn9Xh1bpMx8XcbSOhk6x/A+rV+/BlISuYGjBlQkwz4lmNlBqtZ+ZTnr\nNutZVRAxHDzoEdrC4du2B19wIB1DF1YRicljevz+OHcZA0Vox7iX2Dax2JfH\naebUdud//ufPLrGKohAsUfZkBC9onTnt16NL8bB+hOkxI3S07YT2f+aMYipN\njLX+ruygQMMDBpueyA43iT01FA9YTR+PJ/PaYzSRCcg+fFOXv4ysmHngb2S5\nq17kvbJSStQrlktU2CzRZyuyGsUdQeh5RVWwvIEFP/Jr9XOn7u7B2UPMJKti\nd8lJ6X3eNpjrGok=\n",
+    "teacher_markdown": "Misconceptions and what to test for:\r\n\r\n- There are two bugs. The first is a missing colon at the end of the if line, which stops the program with a SyntaxError before anything runs. The second is a stray indent: print(\"Program finished\") sits inside the if, so it only prints when can_go is True. That bug causes no error, so students find it by comparing the output with what should print.\r\n- Have students say which lines the if controls. Only the indented lines belong to it. A line that is not indented always runs. Ask: \"Which lines should depend on can_go, and which should always run?\"\r\n- After fixing only the colon, the program runs but prints nothing at time = 9. Ask: \"What should it print at 9, and why didn't it?\"\r\n- The fix for the second bug is to move print(\"Program finished\") back to the left edge. Moving it above the if also stops the missing output, but the order is wrong, and Validate checks the order.\r\n- An else is not needed here. Students have not learned it yet, and Validate fails a program that prints the movies message at 9.\r\n- If a student asks why the colon matters, say that it tells Python the if line is done and the block starts on the next line.\r\n- If a student uses Build Python, they still own the program. Ask them to explain which lines the if controls.\r\n\r\nValidation runs the program with time = 7 and time = 9 by supplying the hour in place of input(). It checks that the program runs without an error, that 7 prints the movies message and then Program finished, and that 9 prints only Program finished.",
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "contents": "import io\nfrom contextlib import redirect_stdout\nfrom unittest import TestCase\n\nGO = \"I can go to the movies!\"\nDONE = \"Program finished\"\n\n\ndef run_with_time(hour):\n    \"\"\"Run the student's main.py as if the user typed this hour.\"\"\"\n    with open('main.py') as main_file:\n        code = main_file.read()\n    output = io.StringIO()\n    error = None\n    fake_globals = {'input': lambda prompt='': str(hour), '__name__': '__main__'}\n    try:\n        with redirect_stdout(output):\n            exec(code, fake_globals)\n    except Exception as e:\n        error = e\n    lines = [line.strip() for line in output.getvalue().splitlines() if line.strip()]\n    return lines, error\n\n\nclass TestDebugIf(TestCase):\n    def test_1_runs_without_error(self):\n        \"\"\"Your program runs without an error\"\"\"\n        lines, error = run_with_time(7)\n        if error:\n            self.fail(f\"Your program stopped with a {type(error).__name__}. Read the error message, then check the end of your if line and the lines under it.\")\n\n    def test_2_before_8(self):\n        \"\"\"Before 8 o'clock, your program says you can go and then finishes\"\"\"\n        lines, error = run_with_time(7)\n        if error:\n            self.skipTest(\"Fix the error first, then we can check this.\")\n        if lines != [GO, DONE]:\n            self.fail(f\"With time = 7, your program should print \\\"{GO}\\\" and then \\\"{DONE}\\\".\")\n\n    def test_3_at_8_or_later(self):\n        \"\"\"At 8 o'clock or later, your program still finishes\"\"\"\n        lines, error = run_with_time(9)\n        if error:\n            self.skipTest(\"Fix the error first, then we can check this.\")\n        if lines != [DONE]:\n            self.fail(f\"With time = 9, your program should print only \\\"{DONE}\\\". Check which lines are indented under the if.\")",
+      "folderId": "0",
+      "active": false,
+      "type": "validation"
+    },
+    "long_instructions": "# Debug: Fix the If\r\n\r\nYour Task: This program should say whether you can go to the movies, and then always print \"Program finished\". It has two bugs. Find them and fix them.\r\n\r\nDo This:\r\n\r\n1. Run the program and read the error message. What is it telling you?\r\n2. Fix the first bug and run again. When it asks for the hour, type `7`. Then run it again and type `9`.\r\n3. Compare what prints with what should print. For `7`, it should print \"I can go to the movies!\" and then \"Program finished\". For `9`, it should print only \"Program finished\". Find the second bug and fix it.\r\n4. Use Validate to check your work.\r\n\r\nCoding Tip: Python uses a colon and indentation to know what belongs to an `if`. Check the end of the `if` line, and check which lines are indented under it."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-31T06:30:42.173+00:00\",\"changed\":[\"cloned from \\\"csp-unit2-lesson11-modify1_27_28\\\"\"],\"cloned_from\":\"csp-unit2-lesson11-modify1_27_28\"},{\"changed_at\":\"2026-10-31 06:30:59 +0000\",\"changed\":[\"predict_settings\",\"teacher_markdown\",\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-10-31 06:31:24 +0000\",\"changed\":[\"start_sources\",\"validation_file\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-10-31 06:31:42 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Pythonlab>

@@ -30476,6 +30476,8 @@ en:
               name: Lesson 10
             lesson-11:
               name: 'Lesson 12: Conditionals - Day 4 (Make)'
+            lesson-12:
+              name: Lesson 10 Conditionals - Day 2
           lesson_groups: {}
           name: csp-unit2-dev-27-28
           title: Unit 2 - Building Solutions Using Selection and Iteration

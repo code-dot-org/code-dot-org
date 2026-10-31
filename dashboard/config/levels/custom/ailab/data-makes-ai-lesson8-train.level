@@ -1,0 +1,17 @@
+<Ailab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 67,
+  "created_at": "2026-10-30T19:59:05.000Z",
+  "level_num": "custom",
+  "user_id": 23972,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "mode": "{\r\n  \"trainer\": \"decisionTree\",\r\n  \"reserveLastRows\": true\r\n}",
+    "uses_lab2": "true",
+    "dynamic_instructions": "{\r\n  \"datasetView\": \"- Check that the model will predict **Result** using Clip Type, Length, Famous Actor and Funny.\\n- Click **Train**.\",\r\n  \"results\": \"- Click the **Accuracy** button.\\n- Open the **Incorrect** tab.\\n- Click **Expand columns**.\\n- In your guide, write the three clips in the **Incorrect** tab. You're done when you have three clips.\"\r\n}"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-10-30T19:59:05.770+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-lesson8-meet\\\"\"],\"cloned_from\":\"data-makes-ai-lesson8-meet\"},{\"changed_at\":\"2026-10-30 19:59:10 +0000\",\"changed\":[],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-31 00:00:04 +0000\",\"changed\":[\"mode\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]"
+}]]></config>
+</Ailab>
