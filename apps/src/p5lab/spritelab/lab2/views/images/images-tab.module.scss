@@ -1,0 +1,273 @@
+@use '../checkerboard';
+@use '../imageTile' as tile;
+
+// Three columns: the list, the frame, the pane. The pane's width is set
+// inline to the preview column's; the list takes one to three tiles; the
+// frame takes what is left.
+$tile-px: 88px;
+$tile-gap: 8px;
+$column-gap: 20px;
+$pad: 16px;
+
+.tab {
+  display: flex;
+  gap: $column-gap;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: $pad;
+}
+
+.list {
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: column;
+  gap: 12px;
+  min-width: $tile-px;
+  max-width: 3 * $tile-px + 2 * $tile-gap;
+  // A fifth of the tab: one tile in a narrow window, three in a wide one.
+  width: 20%;
+  min-height: 0;
+}
+
+.listHeader {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+  min-height: 36px;
+}
+
+.listTitle {
+  flex: 1 1 auto;
+  margin: 0;
+  color: var(--text-neutral-quaternary);
+}
+
+.listQuestion {
+  flex-basis: 100%;
+  font-size: 14px;
+}
+
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, $tile-px);
+  gap: $tile-gap;
+  align-content: start;
+  min-height: 0;
+  overflow-y: auto;
+  // Room inside the scroll box for a hovered tile's growth.
+  margin: 0 -8px;
+  padding: 4px 8px 8px;
+}
+
+.tile {
+  @include tile.image-tile($tile-px);
+
+  border-radius: 6px;
+}
+
+.tileChosen {
+  border: 2px solid var(--borders-brand-teal-primary);
+}
+
+// The image not made yet: a dashed box where its tile will be.
+.tileDraft {
+  border-style: dashed;
+  background: transparent;
+  color: var(--text-neutral-secondary);
+  font-size: 24px;
+}
+
+.pixelArt {
+  image-rendering: pixelated;
+}
+
+.frameColumn {
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+  min-height: 0;
+}
+
+// The frame and, at its left, the session's other pictures.
+.frameRow {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+}
+
+.beside {
+  flex: none;
+  display: flex;
+  max-height: 100%;
+}
+
+.frame {
+  position: relative;
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border: 2px dashed var(--borders-neutral-primary);
+  border-radius: 12px;
+  background-color: var(--background-neutral-secondary);
+  overflow: hidden;
+
+  // The sheet preview's canvas holds one full-resolution frame scaled to
+  // the frame; hard edges keep crisp frames crisp on the way down.
+  canvas {
+    max-width: 100%;
+    max-height: 100%;
+    image-rendering: pixelated;
+  }
+}
+
+// The checkerboard shows a picture's transparency.
+.frameFilled {
+  border-style: solid;
+
+  @include checkerboard.checkerboard(
+    24px,
+    var(--neutral-gray-10),
+    var(--neutral-base-white)
+  );
+}
+
+// Fills the frame even when the stored image is smaller than it.
+.preview {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+// The dotted figure a character is drawn over.
+.outline {
+  width: 84%;
+  height: 84%;
+  object-fit: contain;
+  opacity: 0.6;
+}
+
+.under {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  min-height: 48px;
+  padding-top: 8px;
+}
+
+.pane {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  gap: 16px;
+  box-sizing: border-box;
+  min-height: 0;
+  padding: 16px;
+  border-radius: 12px;
+  background-color: var(--background-neutral-secondary);
+  color: var(--text-neutral-primary);
+  overflow-y: auto;
+
+  // Focus lands here on a mode change; the pane's edge is not the cue.
+  &:focus {
+    outline: none;
+  }
+}
+
+.headline {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.typeChoice {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.verdict {
+  display: flex;
+  flex-direction: column;
+}
+
+// Held at the pane's bottom.
+.paneBottom {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.confirm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.confirmButtons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+// Doubled to outrank the button's own padding and radius.
+.generateButton.generateButton {
+  min-height: 44px;
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.ready {
+  animation: ready-rock 2.4s ease-in-out infinite;
+
+  &:active {
+    animation: none;
+  }
+}
+
+@keyframes ready-rock {
+  0%,
+  70%,
+  100% {
+    transform: scale(1) rotate(0);
+  }
+  78% {
+    transform: scale(1.04) rotate(-2deg);
+  }
+  86% {
+    transform: scale(1.04) rotate(2deg);
+  }
+  94% {
+    transform: scale(1) rotate(0);
+  }
+}
+
+// The quieter neutral: Generate is the main call to action.
+.drawButton.drawButton {
+  border-color: var(--border-neutral-secondary);
+  color: var(--text-neutral-secondary);
+  font-size: 13px;
+  font-weight: 500;
+
+  &:hover {
+    border-color: var(--text-neutral-primary);
+    color: var(--text-neutral-primary);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ready {
+    animation: none;
+  }
+}
