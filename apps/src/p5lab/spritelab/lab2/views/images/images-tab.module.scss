@@ -174,12 +174,25 @@ $pad: 16px;
   border-radius: 12px;
   background-color: var(--background-neutral-secondary);
   color: var(--text-neutral-primary);
-  overflow-y: auto;
 
   // Focus lands here on a mode change; the pane's edge is not the cue.
   &:focus {
     outline: none;
   }
+}
+
+// What sits between the pinned headline and the pinned buttons, scrolling
+// when it runs past the room.
+.paneScroll {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 16px;
+  min-height: 0;
+  overflow-y: auto;
+  // Room for a hovered word's lift and the focus ring at the edges.
+  margin: 0 -8px;
+  padding: 4px 8px;
 }
 
 .headline {
@@ -199,12 +212,12 @@ $pad: 16px;
   flex-direction: column;
 }
 
-// Held at the pane's bottom.
+// Pinned at the pane's bottom.
 .paneBottom {
   display: flex;
+  flex: none;
   flex-direction: column;
   gap: 10px;
-  margin-top: auto;
 }
 
 .confirm {
