@@ -96,6 +96,12 @@ const LEARNING_DELAY_MS = 1800;
 // The kinds the story is told for.
 const LEARNING_KINDS: ImageType[] = ['sprite', 'background'];
 
+/** `?learning=always` tells the story after every picture, for looking at
+    it. */
+function learningForced(): boolean {
+  return queryParams('learning') === 'always';
+}
+
 
 const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   uploadImage,
@@ -221,12 +227,12 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   const offerLearning = useCallback(
     (result: GeneratedImageResult) => {
       const {imageType, subject} = result.generation;
-      if (
-        toldRef.current ||
-        !lockedImageType ||
-        !LEARNING_KINDS.includes(imageType) ||
-        subject === 'object'
-      ) {
+      const due =
+        !toldRef.current &&
+        !!lockedImageType &&
+        LEARNING_KINDS.includes(imageType) &&
+        subject !== 'object';
+      if (!due && !learningForced()) {
         return;
       }
       toldRef.current = true;
