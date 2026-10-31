@@ -317,7 +317,9 @@ Found on the way:
   from its type, and `a` was written in by hand. Fixed, with a test.
 - **The `emit` block's sockets have no words.** `emit is hit by this 7 for
 this` does not say which socket is `who` and which is `amount`; the hat
-  says it, the call does not. Not fixed.
+  says it, the call does not. Fixed: with two or more values each socket
+  is named, as an action's are, so it reads `emit is hit by who ⟨this⟩
+  amount ⟨7⟩ for ⟨this⟩`. One value stays bare.
 - **`???` loses the name.** A getter out of scope is drawn as `???`, so
   the learner who carried `amount` out is not told it was `amount`. That
   is the scope rule's drawing everywhere, not this plan's. Not fixed.

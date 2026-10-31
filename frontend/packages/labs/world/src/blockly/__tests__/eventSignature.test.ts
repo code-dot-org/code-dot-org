@@ -667,6 +667,12 @@ describe('an event that carries several values', () => {
     });
   });
 
+  it('names each `emit` socket when there are two or more', () => {
+    const emit = emitFor(ruleWithEvent(DAMAGED, DAMAGE_VARS));
+
+    expect(emit.message0).toBe('emit is damaged by who %1 amount %2');
+  });
+
   it('raises them all, in order, through the `emit` block', () => {
     const emit = emitFor(ruleWithEvent(DAMAGED, DAMAGE_VARS));
 

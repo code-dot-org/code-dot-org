@@ -1836,7 +1836,11 @@ const defineEmitBlock = (event: EventMeta) => {
     paramIndex += 1;
     args0.push(...built.args);
     shadows.push(...built.shadows);
-    message0 += ` ${built.message}`;
+    // Two or more are each named, as an action's are (`defineActionBlock`).
+    message0 +=
+      params.length > 1
+        ? ` ${part.name} ${built.message}`
+        : ` ${built.message}`;
   }
   // The subject last, as `emit … for …` always read — and only when there is
   // one. A world event happened to the world, so there is nobody to raise it
