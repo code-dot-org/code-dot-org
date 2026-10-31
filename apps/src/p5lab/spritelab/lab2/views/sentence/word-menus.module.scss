@@ -250,6 +250,50 @@ button.chipWord {
   gap: 4px;
 }
 
+// The arrows above and below the set instead of beside it.
+.carouselVertical {
+  flex-direction: column;
+  align-items: stretch;
+
+  .arrow {
+    align-self: center;
+  }
+}
+
+// Closer rows and a shorter set, for a narrow pane.
+.carouselTight {
+  gap: 0;
+  padding: 4px 4px 6px;
+
+  .set {
+    min-height: 72px;
+    padding: 4px;
+  }
+
+  .dotsRow {
+    min-height: 26px;
+  }
+}
+
+// Every open set at once, one cluster of words per set down the pane; the
+// set the sentence's blank stands at is marked.
+.clusters {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cluster {
+  padding: 8px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+}
+
+.clusterCurrent {
+  border-color: var(--border-neutral-secondary);
+  background-color: var(--background-neutral-primary);
+}
+
 // The arrows and dots fade in once there is a second set to go to.
 .arrow,
 .dots {

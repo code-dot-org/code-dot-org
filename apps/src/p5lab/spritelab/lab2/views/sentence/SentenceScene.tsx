@@ -2,6 +2,7 @@
 // controls on the right. A host with its own chrome (the image dialog)
 // passes a layout that places the same parts itself.
 
+import Checkbox from '@code-dot-org/component-library/checkbox';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
@@ -46,8 +47,9 @@ import AnimatedSheetPreview from '../AnimatedSheetPreview';
 
 import AlternativeThumbs from './AlternativeThumbs';
 import BehindTheScenes from './BehindTheScenes';
+import FiringBlob from './FiringBlob';
 import GeneratingSteps from './GeneratingSteps';
-import {PixelReveal, PixelShuffle, SparkleBurst} from './PixelReveal';
+import {PixelReveal, SparkleBurst} from './PixelReveal';
 import ResultActions, {
   Verdict,
   VerdictReason,
@@ -66,6 +68,8 @@ import {
 import SentenceSceneLayout from './SentenceSceneLayout';
 import {playSound} from './sentenceSounds';
 import {SentPrompts, sentPromptsFor} from './sentPrompts';
+import {slotLineColors} from './wordHues';
+import {WordLayout} from './wordLayout';
 import WordMenus from './WordMenus';
 
 import styles from './sentence-scene.module.scss';
@@ -123,6 +127,8 @@ export interface SentenceSceneParts {
   typeChoice: React.ReactNode;
   /** The word menus, or the sentence read back while busy. */
   sentence: React.ReactNode;
+  /** The Animated checkbox, for a character. */
+  animatedChoice: React.ReactNode;
   error: React.ReactNode;
   /** The model's steps, while generating. */
   progress: React.ReactNode;
@@ -178,6 +184,10 @@ interface SentenceSceneProps {
   /** Every picture that lands in the frame is kept through onKeep at once,
       and again with its rating when one is given; there is no Keep step. */
   keepOnResult?: boolean;
+  /** How the word menus lay their words out; the carousel unless given. */
+  wordLayout?: WordLayout;
+  /** The model's steps one at a time, each replacing the last. */
+  singleStep?: boolean;
 }
 
 const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
@@ -198,6 +208,8 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   onAwaitingVerdict,
   layout,
   keepOnResult,
+  wordLayout,
+  singleStep,
 }) => {
   const dispatch = useAppDispatch();
   const {theme} = useTheme();
@@ -211,8 +223,11 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   const sentence = sentenceFor(imageType, imageSubject, sentenceId);
   const [choices, setChoices] = useState<Choices>({});
   const complete = isComplete(sentence, choices);
-  // Every character is animated; an object or a background is one picture.
+  // A character can be animated, and is unless the box is unticked; an
+  // object or a background is one picture.
   const canAnimate = imageType === 'sprite' && imageSubject !== 'object';
+  const [animated, setAnimated] = useState(true);
+  const makesSet = canAnimate && animated;
 
   const [mode, setMode] = useState<Mode>('edit');
   // Every picture made this session; the chosen one shows in the frame
@@ -308,7 +323,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     setError(null);
     setFact(current =>
       pickFact(
-        {animated: canAnimate, pixel: style === 'pixel'},
+        {animated: makesSet, pixel: style === 'pixel'},
         current ?? undefined
       )
     );
@@ -326,10 +341,10 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         prompt,
         options,
         style,
-        canAnimate,
+        makesSet,
         bodyPlan
       );
-      const result = canAnimate
+      const result = makesSet
         ? await generateCharacterSet(prompt, {
             style,
             temperature: TEMPERATURE,
@@ -382,7 +397,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     imageType,
     imageSubject,
     style,
-    canAnimate,
+    makesSet,
     method,
     onGenerateStart,
     exhausted,
@@ -504,6 +519,13 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     }
     panelRef.current?.focus();
   }, [mode]);
+  // The blob's signal colors, read under the host's theme as a run starts.
+  const [signalColors, setSignalColors] = useState<string[]>([]);
+  useEffect(() => {
+    if (generating && panelRef.current) {
+      setSignalColors(slotLineColors(sentence, panelRef.current));
+    }
+  }, [generating, sentence]);
   const status = generating
     ? 'Making your picture…'
     : showingResult
@@ -643,9 +665,22 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         choices={choices}
         onChange={setChoices}
         disabled={busy}
+        layout={wordLayout}
       />
     );
-  const progressNode = generating && <GeneratingSteps done={settling} />;
+  const animatedChoiceNode = canAnimate && !generating && !showingResult && (
+    <Checkbox
+      label="Animated"
+      name="sentence-animated"
+      size="s"
+      checked={animated}
+      disabled={busy}
+      onChange={e => setAnimated(e.target.checked)}
+    />
+  );
+  const progressNode = generating && (
+    <GeneratingSteps done={settling} single={singleStep} />
+  );
   const factNode = generating && fact && (
     <aside
       className={classNames(styles.factBox, styles.bottomRow)}
@@ -663,7 +698,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   // A set's frames arrive one by one; none shows until all have.
   const frame = generating ? (
     <div className={styles.generating}>
-      <PixelShuffle />
+      <FiringBlob colors={signalColors} />
     </div>
   ) : chosenPicture ? (
     <>
@@ -773,6 +808,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
           status: statusNode,
           typeChoice: typeChoiceNode,
           sentence: sentenceNode,
+          animatedChoice: animatedChoiceNode,
           error: errorLine,
           progress: progressNode,
           fact: factNode,

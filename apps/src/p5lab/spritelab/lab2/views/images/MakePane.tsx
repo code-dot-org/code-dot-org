@@ -77,6 +77,7 @@ const MakePane: React.FunctionComponent<MakePaneProps> = ({
       {/* The words scroll between the pinned headline and buttons. */}
       <div className={styles.paneScroll}>
         {parts.sentence}
+        {parts.animatedChoice}
         {parts.error}
         {parts.progress}
         {parts.verdict && <div className={styles.verdict}>{parts.verdict}</div>}

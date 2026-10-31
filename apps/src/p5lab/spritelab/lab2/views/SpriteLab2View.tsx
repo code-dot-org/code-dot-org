@@ -1151,16 +1151,29 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   }, [levelProperties, initialSources]);
 
   // Persist Images-tab changes back to sources in the serialized shape.
-  useEffect(() => {
-    // Serialize from the LIVE store, not this commit's snapshot: this effect
-    // runs after compileExternalScene's synchronous merge-and-restore, and a
-    // snapshot save would leak the classmate's costumes into sources.
-    patchSources({
-      animations: getSerializedAnimationList(
-        getStore().getState().animationList
+  // Serialized from the LIVE store, not a commit's snapshot: the effect
+  // runs after compileExternalScene's synchronous merge-and-restore, and a
+  // snapshot save would leak the classmate's costumes into sources.
+  const writeAnimations = useCallback(
+    (forceSave?: boolean) =>
+      patchSources(
+        {
+          animations: getSerializedAnimationList(
+            getStore().getState().animationList
+          ),
+        },
+        forceSave
       ),
-    });
-  }, [animationList, patchSources]);
+    [patchSources]
+  );
+  useEffect(() => {
+    writeAnimations();
+  }, [animationList, writeAnimations]);
+  // A picture that just became an image is worth a save of its own.
+  const saveImagesNow = useCallback(
+    () => writeAnimations(true),
+    [writeAnimations]
+  );
 
   const {
     workspaceVersion,
@@ -2454,6 +2467,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                   editingOffered={isFreeplayMode(levelProperties.levelMode)}
                   verdictRequired={imagePaneProps.verdictRequired}
                   paneWidth={previewWidth}
+                  onImageLanded={saveImagesNow}
                 />
               )}
             </div>

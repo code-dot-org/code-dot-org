@@ -1,6 +1,7 @@
-// The sentence as prose above, with only the words chosen so far, and one
-// slot's words at a time below in a carousel. The sentence's only blank is
-// for the set on show.
+// The sentence as prose above, with only the words chosen so far, and the
+// words to choose from below: one slot's at a time in a carousel, or every
+// open slot's in clusters down the pane. The sentence's only blank is for
+// the set on show.
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {IconButton as MuiIconButton} from '@mui/material';
@@ -21,6 +22,7 @@ import {
   wordFor,
 } from './sentences';
 import {playSound} from './sentenceSounds';
+import {WordLayout} from './wordLayout';
 
 import styles from './word-menus.module.scss';
 
@@ -29,6 +31,8 @@ interface WordMenusProps {
   choices: Choices;
   onChange: (choices: Choices) => void;
   disabled?: boolean;
+  /** The carousel, moving sideways, unless given. */
+  layout?: WordLayout;
 }
 
 // An emoji is about this many letters wide.
@@ -44,7 +48,10 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
   choices,
   onChange,
   disabled,
+  layout,
 }) => {
+  const clusters = layout === 'clusters';
+  const vertical = layout === 'vcarousel';
   const slots = slotsToOffer(sentence);
   const [index, setIndex] = useState(0);
   // Which way the last move went, so the new set eases in from that side.
@@ -157,6 +164,15 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
       setIndex(lastAvailable);
     }
   }, [index, lastAvailable]);
+  // Clusters show every open set at once, so the sentence's blank stands
+  // at the first set still without a word.
+  const firstOpen = slots.findIndex(s => isAvailable(s) && !filled(s.id));
+  const clusterIndex = firstOpen >= 0 ? firstOpen : lastAvailable;
+  useEffect(() => {
+    if (clusters) {
+      setIndex(clusterIndex);
+    }
+  }, [clusters, clusterIndex]);
 
   const mentions = (segments: Segment[], slotId: string): boolean =>
     segments.some(
@@ -217,7 +233,7 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
             className={classNames(overSlotId === s.id && styles.dropTarget)}
             {...dropHandlers(s.id)}
           >
-            {disabled || !canMove || !isAvailable(s) ? (
+            {disabled || !canMove || !isAvailable(s) || clusters ? (
               <span className={styles.chipWord}>
                 <WordText word={word} />
               </span>
@@ -253,6 +269,57 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
         : [];
     });
 
+  const renderWords = (set: Slot) =>
+    set.words.map((word, wordIndex) => {
+      const chosen = choices[set.id] === word.id;
+      return (
+        <button
+          key={word.id}
+          type="button"
+          className={classNames(
+            styles.word,
+            hueClass(sentence, set.id),
+            chosen && styles.chosen
+          )}
+          style={{'--i': wordIndex} as React.CSSProperties}
+          aria-pressed={chosen}
+          disabled={disabled}
+          draggable={!disabled}
+          onDragStart={e => {
+            e.dataTransfer.setData(
+              WORD_DRAG_TYPE,
+              JSON.stringify({slot: set.id, word: word.id})
+            );
+            e.dataTransfer.effectAllowed = 'copy';
+          }}
+          onClick={() => choose(set.id, chosen ? undefined : word.id)}
+        >
+          <WordText word={word} />
+        </button>
+      );
+    });
+
+  const clustersNode = (
+    <div className={styles.clusters}>
+      {slots.map(
+        set =>
+          isAvailable(set) && (
+            <div
+              key={set.id}
+              role="group"
+              aria-label={`${set.label}${set.required ? ' (pick one)' : ''}`}
+              className={classNames(
+                styles.cluster,
+                set.id === slot.id && styles.clusterCurrent
+              )}
+            >
+              <div className={styles.words}>{renderWords(set)}</div>
+            </div>
+          )
+      )}
+    </div>
+  );
+
   return (
     <div className={styles.menus}>
       {/* A hidden longest form shares the cell, so the height holds. */}
@@ -270,119 +337,110 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
           {withPeriod(renderSegments(sentence.segments, longestChoices))}
         </p>
       </div>
-      <div className={styles.carouselBox}>
-        <div className={styles.carousel}>
-          <MuiIconButton
-            variant="text"
-            color="tertiary"
-            size="medium"
-            className={classNames(styles.arrow, oneSet && styles.navHidden)}
-            aria-label="Previous words"
-            disabled={!canMove || index === 0}
-            onClick={() => goTo(Math.max(0, index - 1))}
-          >
-            <FontAwesomeV6Icon iconName="chevron-left" aria-hidden />
-          </MuiIconButton>
-          {/* Every set is laid out in one cell; only the one on show is
-              visible. */}
-          <div className={styles.sets}>
-            {slots.map((set, i) => {
-              const shown = i === index;
-              return (
-                <div
-                  // Remounted on each arrival so the entrance replays.
-                  key={shown ? `${set.id}-${moveCount}` : set.id}
-                  className={classNames(
-                    styles.set,
-                    !shown && styles.setHidden,
-                    shown &&
-                      (direction === 'left'
-                        ? styles.enterFromLeft
-                        : styles.enterFromRight)
-                  )}
-                  role="group"
-                  aria-label={`${set.label}${
-                    set.required ? ' (pick one)' : ''
-                  }`}
-                  aria-hidden={!shown}
-                >
-                  <div className={styles.words}>
-                    {set.words.map((word, wordIndex) => {
-                      const chosen = choices[set.id] === word.id;
-                      return (
-                        <button
-                          key={word.id}
-                          type="button"
-                          className={classNames(
-                            styles.word,
-                            hueClass(sentence, set.id),
-                            chosen && styles.chosen
-                          )}
-                          style={{'--i': wordIndex} as React.CSSProperties}
-                          aria-pressed={chosen}
-                          disabled={disabled}
-                          draggable={!disabled}
-                          onDragStart={e => {
-                            e.dataTransfer.setData(
-                              WORD_DRAG_TYPE,
-                              JSON.stringify({slot: set.id, word: word.id})
-                            );
-                            e.dataTransfer.effectAllowed = 'copy';
-                          }}
-                          onClick={() =>
-                            choose(set.id, chosen ? undefined : word.id)
-                          }
-                        >
-                          <WordText word={word} />
-                        </button>
-                      );
-                    })}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-          <MuiIconButton
-            variant="text"
-            color="tertiary"
-            size="medium"
-            className={classNames(styles.arrow, oneSet && styles.navHidden)}
-            aria-label="Next words"
-            disabled={!canMove || index >= lastAvailable}
-            onClick={() => goTo(Math.min(lastAvailable, index + 1))}
-          >
-            <FontAwesomeV6Icon iconName="chevron-right" aria-hidden />
-          </MuiIconButton>
-        </div>
-        <div className={styles.dotsRow}>
-          <div className={classNames(styles.dots, oneSet && styles.navHidden)}>
-            {slots.map((s, i) =>
-              isAvailable(s) ? (
-                <button
-                  key={s.id}
-                  type="button"
-                  className={classNames(
-                    styles.dot,
-                    hueClass(sentence, s.id),
-                    i === index && styles.dotCurrent,
-                    filled(s.id) && styles.dotFilled
-                  )}
-                  aria-label={`${s.label} words${
-                    filled(s.id)
-                      ? `, ${
-                          wordFor(sentence, s.id, choices[s.id])?.text
-                        } chosen`
-                      : ''
-                  }`}
-                  aria-current={i === index ? 'true' : undefined}
-                  disabled={!canMove}
-                  onClick={() => goTo(i)}
-                />
-              ) : null
+      {clusters ? (
+        clustersNode
+      ) : (
+        <div
+          className={classNames(
+            styles.carouselBox,
+            layout === 'carousel' && styles.carouselTight
+          )}
+        >
+          <div
+            className={classNames(
+              styles.carousel,
+              vertical && styles.carouselVertical
             )}
+          >
+            <MuiIconButton
+              variant="text"
+              color="tertiary"
+              size="medium"
+              className={classNames(styles.arrow, oneSet && styles.navHidden)}
+              aria-label="Previous words"
+              disabled={!canMove || index === 0}
+              onClick={() => goTo(Math.max(0, index - 1))}
+            >
+              <FontAwesomeV6Icon
+                iconName={vertical ? 'chevron-up' : 'chevron-left'}
+                aria-hidden
+              />
+            </MuiIconButton>
+            {/* Every set is laid out in one cell; only the one on show is
+              visible. */}
+            <div className={styles.sets}>
+              {slots.map((set, i) => {
+                const shown = i === index;
+                return (
+                  <div
+                    // Remounted on each arrival so the entrance replays.
+                    key={shown ? `${set.id}-${moveCount}` : set.id}
+                    className={classNames(
+                      styles.set,
+                      !shown && styles.setHidden,
+                      shown &&
+                        (direction === 'left'
+                          ? styles.enterFromLeft
+                          : styles.enterFromRight)
+                    )}
+                    role="group"
+                    aria-label={`${set.label}${
+                      set.required ? ' (pick one)' : ''
+                    }`}
+                    aria-hidden={!shown}
+                  >
+                    <div className={styles.words}>{renderWords(set)}</div>
+                  </div>
+                );
+              })}
+            </div>
+            <MuiIconButton
+              variant="text"
+              color="tertiary"
+              size="medium"
+              className={classNames(styles.arrow, oneSet && styles.navHidden)}
+              aria-label="Next words"
+              disabled={!canMove || index >= lastAvailable}
+              onClick={() => goTo(Math.min(lastAvailable, index + 1))}
+            >
+              <FontAwesomeV6Icon
+                iconName={vertical ? 'chevron-down' : 'chevron-right'}
+                aria-hidden
+              />
+            </MuiIconButton>
+          </div>
+          <div className={styles.dotsRow}>
+            <div
+              className={classNames(styles.dots, oneSet && styles.navHidden)}
+            >
+              {slots.map((s, i) =>
+                isAvailable(s) ? (
+                  <button
+                    key={s.id}
+                    type="button"
+                    className={classNames(
+                      styles.dot,
+                      hueClass(sentence, s.id),
+                      i === index && styles.dotCurrent,
+                      filled(s.id) && styles.dotFilled
+                    )}
+                    aria-label={`${s.label} words${
+                      filled(s.id)
+                        ? `, ${
+                            wordFor(sentence, s.id, choices[s.id])?.text
+                          } chosen`
+                        : ''
+                    }`}
+                    aria-current={i === index ? 'true' : undefined}
+                    disabled={!canMove}
+                    onClick={() => goTo(i)}
+                  />
+                ) : null
+              )}
+            </div>
           </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };

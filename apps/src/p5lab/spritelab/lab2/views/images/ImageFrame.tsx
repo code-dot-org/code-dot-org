@@ -22,6 +22,9 @@ interface ImageFrameProps {
   /** The scene's own frame contents, which win while a picture is being
       made or has just been made. */
   live?: React.ReactNode;
+  /** A picture is being made: the frame is the plain box around the
+      making, not a picture's checkerboard. */
+  generating?: boolean;
   /** Down the frame's left. */
   beside?: React.ReactNode;
   /** Under the frame. */
@@ -35,6 +38,7 @@ const ImageFrame: React.FunctionComponent<ImageFrameProps> = ({
   image,
   draftKind,
   live,
+  generating,
   beside,
   under,
 }) => {
@@ -59,7 +63,7 @@ const ImageFrame: React.FunctionComponent<ImageFrameProps> = ({
     observer.observe(column);
     return () => observer.disconnect();
   }, []);
-  const filled = !!live || !!image;
+  const filled = live ? !generating : !!image;
   const outlineCharacter =
     !filled &&
     draftKind?.imageType === 'sprite' &&
