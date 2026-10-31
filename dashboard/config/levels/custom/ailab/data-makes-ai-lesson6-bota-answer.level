@@ -8,9 +8,10 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "mode": "{\r\n  \"trainer\": \"knn\"\r\n}",
-    "uses_lab2": "true"
+    "mode": "{\r\n  \"trainer\": \"decisionTree\",\r\n  \"reserveLastRows\": true\r\n}",
+    "uses_lab2": "true",
+    "dynamic_instructions": "{\r\n  \"datasetView\": \"- This tab shows Playlist Bot B's 20 records. They are the records you counted in Level 2.\\n- Click the **Testing** tab to make a prediction.\",\r\n  \"results\": \"- Find the **Make a Prediction** section.\\n- Enter Soda Pop again. Set Before 2025 to No, Guest Artist to No, and Beat Drop to Yes.\\n- Click **Predict**. Read the prediction Playlist Bot B gives.\\n- Click **Replay**. Find the question that decided the prediction.\\n- Write Bot B's prediction and its question next to Bot A's in your guide.\"\r\n}"
   },
-  "audit_log": "[{\"changed_at\":\"2026-10-28 21:51:08 +0000\",\"changed\":[],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-10-28 21:51:08 +0000\",\"changed\":[],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-30 18:07:36 +0000\",\"changed\":[\"mode\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-30 18:08:39 +0000\",\"changed\":[],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-30 19:21:53 +0000\",\"changed\":[\"mode\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-30 23:56:43 +0000\",\"changed\":[],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]"
 }]]></config>
 </Ailab>

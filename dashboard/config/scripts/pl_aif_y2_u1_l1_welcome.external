@@ -15,9 +15,9 @@ markdown <<MARKDOWN
 
 ## Welcome
 
-This professional learning module is designed to help you prepare to teach Unit 1: Logic-Based AI from CodeAI's **AI Foundations Year 2** curriculum, available at <a href="[INSERT AIF Y2 COURSE LINK]" target="_blank" rel="noopener noreferrer">AI Foundations Year 2</a>.
+This professional learning module is designed to help you prepare to teach Unit 1: Logic-Based AI from CodeAI's **Building AI Systems** curriculum, available at <a href="[INSERT AIF Y2 COURSE LINK]" target="_blank" rel="noopener noreferrer">Building AI Systems</a>.
 
-AI Foundations Year 2 is a year-long course for high school students, built as part of a Career and Technical Education (CTE) pathway aligned to the Microsoft Azure AI-901 certification exam.
+Building AI Systems is a year-long course for high school students, built as part of a Career and Technical Education (CTE) pathway aligned to the Microsoft Azure AI-901 certification exam.
 
 <!-- Goals Section -->
 <div style="margin: 20px auto; width: 90%; max-width: 900px; background: #FFFFFF; border: 1px solid #E4E2F8; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1); font-size: 14pt;">
@@ -31,7 +31,7 @@ AI Foundations Year 2 is a year-long course for high school students, built as p
     </ul>
 </div>
 
-**Suggested Total Time:** [CONFIRM: full Unit 1 module time]
+**Suggested Total Time:** 120 minutes
 
 **Lesson One Suggested Time:** 10 minutes
 
