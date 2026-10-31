@@ -13,12 +13,14 @@ import '@testing-library/jest-dom';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import {SectionList} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/SectionList';
 import teacherSections, {
+  removeSection,
   setSectionOrder,
   setSections,
   setAsyncLoad,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {serverSectionFromSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {TEACHER_NAVIGATION_PATHS} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import i18n from '@cdo/locale';
 
 jest.mock('@cdo/apps/util/HttpClient', () => ({
@@ -180,6 +182,23 @@ describe('SectionList', () => {
 
     expect(p1.compareDocumentPosition(p3)).toBe(
       Node.DOCUMENT_POSITION_FOLLOWING
+    );
+  });
+
+  it('saves the order once, without the removed section, when a section is removed', async () => {
+    renderComponent();
+    expect(HttpClient.put).not.toHaveBeenCalled();
+
+    await act(async () => {
+      store.dispatch(removeSection(12));
+    });
+
+    expect(HttpClient.put).toHaveBeenCalledTimes(1);
+    expect(HttpClient.put).toHaveBeenCalledWith(
+      '/user_preference',
+      JSON.stringify({sectionOrder: [11, 13, 14]}),
+      true,
+      expect.anything()
     );
   });
 

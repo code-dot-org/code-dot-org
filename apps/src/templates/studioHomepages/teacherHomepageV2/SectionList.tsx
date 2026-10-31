@@ -128,13 +128,16 @@ export const SectionList: React.FC<SectionListProps> = ({
 
   React.useEffect(() => {
     if (!_.isEqual(sortableSectionIds, reduxSectionOrder)) {
-      dispatch(setSectionOrder(sortableSectionIds, true));
-      // Update the backend with the new order
-      // This is done in `setSectionOrder` only when there are sections to be added or removed.
-      // We need to save manually here because the order is different.
-      saveSectionOrder(sortableSectionIds);
+      // sortableSectionIds trails a change to sections by one render, so
+      // reconcile it with them before saving.
+      const sectionOrder = getFilteredSectionOrderIds(
+        Object.values(sections),
+        sortableSectionIds
+      );
+      dispatch(setSectionOrder(sectionOrder));
+      saveSectionOrder(sectionOrder);
     }
-  }, [sortableSectionIds, dispatch, reduxSectionOrder]);
+  }, [sortableSectionIds, dispatch, reduxSectionOrder, sections]);
 
   const onDeleteClickCallback = (sectionId: number) => {
     setSectionToDelete(sectionId);

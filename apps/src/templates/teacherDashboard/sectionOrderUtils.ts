@@ -1,12 +1,11 @@
 import _ from 'lodash';
 
 import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
-import HttpClient from '@cdo/apps/util/HttpClient';
+import HttpClient, {isNetworkError} from '@cdo/apps/util/HttpClient';
 
 import {Section} from './types/teacherSectionTypes';
 
 // Takes filtered section IDs and ordered section IDs and returns a properly ordered list
-// If the results are different from the ordered section IDs, it updates the order in the backend.
 export const getOrderedSectionIds = (
   filteredSectionIds: number[],
   orderedSectionIds: number[]
@@ -43,13 +42,38 @@ export const getFilteredSectionOrderIds = (
   return getOrderedSectionIds(filteredSectionIds, orderedSectionIds);
 };
 
+let isSaving = false;
+let pendingSectionOrder: number[] | undefined;
+
+// Sends one save at a time; orders passed in meanwhile collapse to the latest.
 export const saveSectionOrder = (orderedSectionIds: number[]) => {
-  HttpClient.put(
-    '/user_preference',
-    JSON.stringify({sectionOrder: orderedSectionIds}),
-    true,
-    {
-      'Content-Type': 'application/json; charset=UTF-8',
+  pendingSectionOrder = orderedSectionIds;
+  if (!isSaving) {
+    isSaving = true;
+    sendPendingSectionOrders();
+  }
+};
+
+const sendPendingSectionOrders = async () => {
+  while (pendingSectionOrder) {
+    const sectionOrder = pendingSectionOrder;
+    pendingSectionOrder = undefined;
+    try {
+      await HttpClient.put(
+        '/user_preference',
+        JSON.stringify({sectionOrder}),
+        true,
+        {
+          'Content-Type': 'application/json; charset=UTF-8',
+        }
+      );
+    } catch (error) {
+      // 409: another save for this user held the row, and the server dropped
+      // this one rather than wait.
+      if (!(isNetworkError(error) && error.response.status === 409)) {
+        console.error('Failed to save section order', error);
+      }
     }
-  );
+  }
+  isSaving = false;
 };

@@ -5,7 +5,7 @@ import {
   saveSectionOrder,
 } from '@cdo/apps/templates/teacherDashboard/sectionOrderUtils';
 import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
-import HttpClient from '@cdo/apps/util/HttpClient';
+import HttpClient, {NetworkError} from '@cdo/apps/util/HttpClient';
 
 const SECTION: Section = {
   id: 11,
@@ -242,5 +242,62 @@ describe('Section Order Utils', () => {
         }
       );
     });
+
+    it('sends one save at a time, then only the latest order', async () => {
+      let finishFirstSave = () => {};
+      httpClientPutSpy.mockReturnValueOnce(
+        new Promise<Response>(resolve => {
+          finishFirstSave = () => resolve(new Response());
+        })
+      );
+
+      saveSectionOrder([1, 2, 3]);
+      saveSectionOrder([3, 2, 1]);
+      saveSectionOrder([2, 3, 1]);
+      expect(httpClientPutSpy).toHaveBeenCalledTimes(1);
+
+      finishFirstSave();
+      await flushPromises();
+
+      expect(httpClientPutSpy).toHaveBeenCalledTimes(2);
+      expect(httpClientPutSpy).toHaveBeenLastCalledWith(
+        '/user_preference',
+        JSON.stringify({sectionOrder: [2, 3, 1]}),
+        true,
+        expect.anything()
+      );
+    });
+
+    it('drops a save the server refused with 409 without logging it', async () => {
+      const consoleErrorSpy = jest
+        .spyOn(console, 'error')
+        .mockImplementation(() => {});
+      httpClientPutSpy.mockRejectedValueOnce(
+        new NetworkError('409 Conflict', new Response(null, {status: 409}))
+      );
+
+      saveSectionOrder([1, 2, 3]);
+      await flushPromises();
+
+      expect(consoleErrorSpy).not.toHaveBeenCalled();
+      consoleErrorSpy.mockRestore();
+    });
+
+    it('logs other failed saves', async () => {
+      const consoleErrorSpy = jest
+        .spyOn(console, 'error')
+        .mockImplementation(() => {});
+      httpClientPutSpy.mockRejectedValueOnce(
+        new NetworkError('500 Error', new Response(null, {status: 500}))
+      );
+
+      saveSectionOrder([1, 2, 3]);
+      await flushPromises();
+
+      expect(consoleErrorSpy).toHaveBeenCalledTimes(1);
+      consoleErrorSpy.mockRestore();
+    });
   });
 });
+
+const flushPromises = () => new Promise(resolve => setTimeout(resolve, 0));
