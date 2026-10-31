@@ -1,11 +1,12 @@
+import {QuizQuestionItem} from '@cdo/apps/quiz/types';
 import {formatChoiceLetter} from '@cdo/apps/quiz/utils';
 
-import {MatchItem, MatchPairs, MatchSets, MatchSide} from './types';
+import {MatchPairs, MatchSets, MatchSide} from './types';
 
 export function itemsInColumn(
   matchSets: MatchSets,
   side: MatchSide
-): MatchItem[] {
+): QuizQuestionItem[] {
   return matchSets[side === 'start' ? 0 : 1];
 }
 

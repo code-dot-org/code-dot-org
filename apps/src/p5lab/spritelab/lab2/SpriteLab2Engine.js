@@ -51,6 +51,7 @@ import {
   wallBox,
 } from './platformPhysics';
 import {createPlayerActionTracker, isPlayerAction} from './playerActions';
+import {clearPrompt, showPrompt} from './redux/spriteLab2Redux';
 import {
   asSoundEffect,
   playPreset,
@@ -658,7 +659,21 @@ export default class SpriteLab2Engine extends SpriteLab {
     library.commands.goToExternalScene = sceneKey => {
       this.triggerSceneJump_(this.onGoToExternalScene, String(sceneKey));
     };
+    getStore().dispatch(clearPrompt());
+    library.commands.setPrompt = (promptText, variableName, setterCallback) => {
+      library.registerPrompt(promptText, variableName, setterCallback);
+      // Last prompt always wins, so we only ever have 1 active prompt unlike legacy.
+      library.numActivePrompts = 1;
+      getStore().dispatch(
+        showPrompt({promptText: String(promptText ?? ''), variableName})
+      );
+    };
     return library;
+  }
+
+  onPromptAnswer(variableName, value) {
+    getStore().dispatch(clearPrompt());
+    this.library?.onPromptAnswer(variableName, value);
   }
 
   // Off the interpreter's step: the handler tears down the interpreter this
@@ -941,6 +956,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.destroyed_ = true;
     stopSoundEffects();
     this.reset();
+    getStore().dispatch(clearPrompt());
     this.stopTickTimer();
     this.imageWaitCancel_?.();
     this.clearLateImagesWatch_();

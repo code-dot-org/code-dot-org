@@ -7,6 +7,7 @@ import I18n from '@cdo/apps/ailab/engine/i18n';
 import rootReducer, {
   resetState,
   setCurrentPanel,
+  setInvalidData,
   setMode,
   setPresetColumns,
   setSelectedCSV,
@@ -155,6 +156,37 @@ describe('a pretrained level', () => {
     renderLevel(PRETRAINED);
     expect(screen.queryByRole('button', {name: 'Start over'})).toBeNull();
   });
+});
+
+describe('a level whose only dataset fails to load', () => {
+  beforeEach(() => I18n.initI18n());
+
+  test.each([{}, {hideDatasetView: true}])(
+    'reports the failure in place of the lab (mode %j)',
+    mode => {
+      const store = createStore(rootReducer);
+      store.dispatch(setMode(mode));
+      store.dispatch(setSelectedCSV('animals.csv'));
+      store.dispatch(setCurrentPanel('datasetView'));
+      renderWithProviders(
+        createElement(App, {
+          onContinue: () => {},
+          saveTrainedModel: () => {},
+          onStartOver: () => {},
+        }),
+        {store}
+      );
+      expect(screen.queryByRole('alert')).toBeNull();
+
+      act(() => {
+        store.dispatch(setInvalidData('loadFailed'));
+      });
+      expect(screen.getByRole('alert').textContent).toContain(
+        'Dataset could not be loaded'
+      );
+      expect(screen.queryByRole('heading', {name: 'Train'})).toBeNull();
+    }
+  );
 });
 
 describe('choosing a dataset', () => {

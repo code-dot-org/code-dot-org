@@ -14,6 +14,7 @@ import {
 } from '@cdo/apps/ailab/engine/ProjectContext';
 import rootReducer, {
   resetState,
+  setDatasetLoaded,
   setInvalidData,
   setMode,
   setPresetColumns,
@@ -22,7 +23,7 @@ import rootReducer, {
 import {store as singletonStore} from '@cdo/apps/ailab/engine/store';
 import {defaultProject} from '@cdo/apps/ailab/engine/types';
 
-import {seedDataset} from './levelStore';
+import {dataset, seedDataset} from './levelStore';
 
 jest.mock('@cdo/apps/ailab/engine/csvReaderWrapper');
 jest.mock('@cdo/apps/ailab/engine/jsonReaderWrapper');
@@ -636,30 +637,65 @@ describe('ProjectContext keeping a saved project in sync', () => {
       seedDataset(singletonStore, DATA, COLUMNS);
     });
 
-  // The readers dispatch the rows and then a type per column, in their own time.
   test('reports nothing until the saved project has been opened', () => {
     const {save} = renderSync();
 
     expect(save).not.toHaveBeenCalled();
   });
 
-  test('opens the saved project into the lab', () => {
+  test('opens the saved project into the lab without reporting it', () => {
     const {save, context} = renderSync();
 
     loadDataset();
 
     expect(context().project).toEqual(SAVED_COLUMNS);
-    expect(save).toHaveBeenCalledWith(SAVED_COLUMNS);
+    expect(save).not.toHaveBeenCalled();
+  });
+
+  test('does not report the columns opening drops', () => {
+    const {save, context} = renderSync({
+      ...SAVED_COLUMNS,
+      selectedFeatures: ['b', 'retired'],
+    });
+
+    loadDataset();
+
+    expect(context().project.selectedFeatures).toEqual(['b']);
+    expect(save).not.toHaveBeenCalled();
+  });
+
+  test('does not report the empty project a new student opens', () => {
+    const {save, context} = renderSync(defaultProject);
+
+    loadDataset();
+
+    expect(context().project).toEqual(defaultProject);
+    expect(save).not.toHaveBeenCalled();
+  });
+
+  test("does not report the level's preset columns applied on opening", () => {
+    const {save, context} = renderSync(defaultProject);
+
+    act(() => {
+      singletonStore.dispatch(
+        setDatasetLoaded({
+          dataset: dataset(DATA, COLUMNS),
+          presetColumns: {labelColumn: 'c'},
+        })
+      );
+    });
+
+    expect(context().project.labelColumn).toBe('c');
+    expect(save).not.toHaveBeenCalled();
   });
 
   test('does not open against the dataset the last level left behind', () => {
     loadDataset();
 
-    const {save, context} = renderSync();
+    const {context} = renderSync();
     loadDataset();
 
     expect(context().project).toEqual(SAVED_COLUMNS);
-    expect(save).toHaveBeenCalledWith(SAVED_COLUMNS);
   });
 
   test('reports a column the student chooses', () => {

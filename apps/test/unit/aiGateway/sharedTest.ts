@@ -4,6 +4,11 @@ import {fetchAccessToken} from '@cdo/apps/aiGateway/shared';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
+jest.mock('@code-dot-org/core/plugins/observability', () => ({
+  metrics: {count: jest.fn()},
+  recordError: jest.fn(),
+}));
+
 jest.mock('@cdo/apps/util/HttpClient', () => ({
   __esModule: true,
   default: {post: jest.fn()},
@@ -35,7 +40,32 @@ describe('fetchAccessToken', () => {
     expect(result).toEqual({
       token: 'jwt',
       turnstileEnforcementMode: 'disabled',
+      signingKey: undefined,
     });
+  });
+
+  it('returns the signing key Rails reports', async () => {
+    mockPost.mockResolvedValue({
+      json: async () => ({
+        token: 'jwt',
+        turnstileEnforcementMode: 'disabled',
+        signingKey: 'environment_key',
+      }),
+    });
+
+    const result = await fetchAccessToken();
+
+    expect(result.signingKey).toBe('environment_key');
+  });
+
+  it('throws when the response has no token', async () => {
+    mockPost.mockResolvedValue({
+      json: async () => ({turnstileEnforcementMode: 'disabled'}),
+    });
+
+    await expect(fetchAccessToken()).rejects.toThrow(
+      'AI Gateway token response has no token'
+    );
   });
 
   it('sends the given context instead when a caller passes one', async () => {
