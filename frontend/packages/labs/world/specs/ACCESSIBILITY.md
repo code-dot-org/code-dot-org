@@ -297,6 +297,16 @@ below, and are listed last.
 - **Untested**: not through a screen reader, and the dashed edge and the
   window's foot have not been measured for contrast against the stage.
 
+### A name carried out of what declares it (EVENT_VALUES_PLAN.md)
+
+- **The getter draws the name faint and slanted, and carries a warning**
+  saying where the name is known. The style is visual only; the warning's
+  text is what says it. (1.4.1 Use of Color does not apply: no color
+  changes.)
+- **Untested**: whether a screen reader reaches a block's warning, and the
+  faint text's contrast against the getter's fill, which is lower than
+  a working getter's by design.
+
 ## Not yet done for any phase
 
 - A keyboard-only pass through the shell: the breadcrumb, the palette, the

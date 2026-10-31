@@ -12,10 +12,12 @@ import {beforeEach, describe, expect, it} from 'vitest';
 import {
   SCOPED_DEFAULT_EXTENSION,
   scopedVariableDefaultExtension,
+  strayWarning,
 } from '../extensions/scopedVariableDefault';
 import {
   markPreviewWorkspace,
   SCOPED_VARIABLE_FIELD,
+  ScopedFieldVariable,
   UNNAMED,
 } from '../fields/scopedVariable';
 import {
@@ -32,6 +34,8 @@ const GETTER = 'test_get_number';
 const HOLDER = 'test_holds';
 /** …and a block that WRITES one, which is what makes a name the file's. */
 const USER = 'variables_set_Number';
+/** A binder, by the type `variableScope` knows: it declares over the rows below. */
+const LET = 'world_let_number';
 
 const options = (field: Blockly.Field): string[] =>
   (field as Blockly.FieldDropdown)
@@ -81,6 +85,20 @@ const define = () => {
       type: HOLDER,
       message0: 'holds %1',
       args0: [{type: 'input_value', name: 'IN'}],
+      previousStatement: true,
+      nextStatement: true,
+    },
+    {
+      type: LET,
+      message0: 'let %1',
+      args0: [
+        {
+          type: 'field_variable',
+          name: 'VAR',
+          variableTypes: ['Number'],
+          defaultType: 'Number',
+        },
+      ],
       previousStatement: true,
       nextStatement: true,
     },
@@ -208,6 +226,38 @@ describe('a name the block cannot see', () => {
     getter.setFieldValue(seen.getId(), 'VAR');
 
     expect(getter.getField('VAR')!.getText()).toBe('tally');
+  });
+
+  it('draws a declared name carried out of its binder, and says where', () => {
+    const amount = workspace
+      .getVariableMap()
+      .createVariable('amount', 'Number');
+    workspace.newBlock(LET).setFieldValue(amount.getId(), 'VAR');
+    const getter = workspace.newBlock(GETTER);
+    getter.setFieldValue(amount.getId(), 'VAR');
+    const field = getter.getField('VAR') as ScopedFieldVariable;
+
+    expect(field.getText()).toBe('amount');
+    expect(field.strayName()).toBe('amount');
+    expect(strayWarning(field)).toMatch(/^amount is only known inside “let/);
+  });
+
+  it('is not stray, and warns of nothing, under its binder', () => {
+    const amount = workspace
+      .getVariableMap()
+      .createVariable('amount', 'Number');
+    const let_ = workspace.newBlock(LET);
+    let_.setFieldValue(amount.getId(), 'VAR');
+    const holder = workspace.newBlock(HOLDER);
+    let_.nextConnection!.connect(holder.previousConnection!);
+    const getter = workspace.newBlock(GETTER);
+    getter.setFieldValue(amount.getId(), 'VAR');
+    holder.getInput('IN')!.connection!.connect(getter.outputConnection!);
+    const field = getter.getField('VAR') as ScopedFieldVariable;
+
+    expect(field.getText()).toBe('amount');
+    expect(field.strayName()).toBeUndefined();
+    expect(strayWarning(field)).toBeNull();
   });
 
   it('draws what it holds in a `define block`’s preview', () => {

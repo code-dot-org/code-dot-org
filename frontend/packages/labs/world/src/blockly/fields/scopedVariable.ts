@@ -20,7 +20,7 @@
 
 import * as Blockly from 'blockly/core';
 
-import {idsInScope} from '../variableScope';
+import {boundIds, idsInScope} from '../variableScope';
 
 /** What a field with no name in it draws, and the value that means it. */
 export const UNNAMED = '???';
@@ -79,13 +79,11 @@ export class ScopedFieldVariable extends Blockly.FieldVariable {
   }
 
   /**
-   * What it draws: the name, or `???` when that name is not this block's.
+   * What it draws: the name, a stray name, or `???`.
    *
-   * NOT MERELY WHEN IT HOLDS NOTHING. A getter dragged out of the drawer holds
-   * Blockly's default for its flavour — the field invents one the moment it
-   * has none — so it drew `flag` while its own menu offered only `???`. The
-   * two have to agree, and the menu is right: a name the block cannot see is
-   * not a name it can be showing.
+   * A drawer getter holds a default nothing in the file declares (`flag`),
+   * and drawing that beside a menu offering only `???` said two things at
+   * once; so a name out of scope draws `???` unless the file declares it.
    */
   override getText(): string {
     const block = this.getSourceBlock();
@@ -93,10 +91,36 @@ export class ScopedFieldVariable extends Blockly.FieldVariable {
     if (!block || typeof id !== 'string' || !id) {
       return UNNAMED;
     }
-    // In the flyout, and in a `define block`'s preview, there is no scope to be
-    // in and the block is a sample rather than part of a program — so it draws
-    // what it holds (`markPreviewWorkspace`).
-    return this.namesSomething() ? super.getText() || UNNAMED : UNNAMED;
+    // A sample draws what it holds, having no scope to be in (`isSample`).
+    if (this.namesSomething()) {
+      return super.getText() || UNNAMED;
+    }
+    return this.strayName() ?? UNNAMED;
+  }
+
+  /** The name it holds when the file declares it, but not where this sits. */
+  strayName(): string | undefined {
+    const block = this.getSourceBlock();
+    const id = this.getValue();
+    if (!block || typeof id !== 'string' || !id || this.namesSomething()) {
+      return undefined;
+    }
+    if (!boundIds(block.workspace).has(id)) {
+      return undefined;
+    }
+    return block.workspace.getVariableMap().getVariableById(id)?.getName();
+  }
+
+  /** …drawn slanted and faint, so it does not read as a working getter. */
+  protected override render_(): void {
+    super.render_();
+    const text = (this as unknown as {textElement_?: SVGTextElement | null})
+      .textElement_;
+    if (text) {
+      const stray = this.strayName() !== undefined;
+      text.style.fontStyle = stray ? 'italic' : '';
+      text.style.opacity = stray ? '0.6' : '';
+    }
   }
 
   /**

@@ -22,6 +22,7 @@ import * as Blockly from 'blockly/core';
 import {defineExtension, type Extension} from '@code-dot-org/blockly';
 
 import {NO_VARIABLE, ScopedFieldVariable} from '../fields/scopedVariable';
+import {binderOf} from '../variableScope';
 
 import {addOnChange} from './onChange';
 
@@ -48,6 +49,35 @@ function firstInScope(field: ScopedFieldVariable): string | undefined {
     }
   }
   return undefined;
+}
+
+const STRAY = 'stray-name';
+
+/** What a reader holding a name it cannot see is told, or null. */
+export function strayWarning(field: ScopedFieldVariable): string | null {
+  const name = field.strayName();
+  const block = field.getSourceBlock();
+  const id = field.getValue();
+  if (name === undefined || !block || typeof id !== 'string') {
+    return null;
+  }
+  const binder = binderOf(block.workspace, id);
+  const where = binder && block.workspace.getBlockById(binder.id);
+  const head = where ? headText(where) : '';
+  return head
+    ? `${name} is only known inside “${head}”.`
+    : `${name} is not known here.`;
+}
+
+/** A block's own words, as drawn: `toString` also reads hidden fields. */
+function headText(block: Block): string {
+  return block.inputList
+    .filter(input => input.isVisible())
+    .flatMap(input => input.fieldRow)
+    .filter(field => field.isVisible())
+    .map(field => field.getText().trim())
+    .filter(Boolean)
+    .join(' ');
 }
 
 export const scopedVariableDefaultExtension: Extension = defineExtension(
@@ -84,6 +114,7 @@ export const scopedVariableDefaultExtension: Extension = defineExtension(
             field.setValue(first);
           }
         }
+        block.setWarningText?.(strayWarning(field), STRAY);
         // AND REPAINT, whether or not a name was filled in. A field's text is
         // drawn once and redrawn when something says so, and BOTH ways a move
         // changes what it should say happen behind the render's back: a name
