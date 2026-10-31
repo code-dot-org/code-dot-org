@@ -20,9 +20,11 @@ import {LevelPropertiesProvider} from '@code-dot-org/lab/contexts';
 import labStore, {labActions} from '@code-dot-org/lab/redux';
 
 import {ImportRuleDialog} from '../../rules/ImportRuleDialog';
+import {TILES_BY_ID, unlockKey} from '../index';
 import {lessonChannel} from '../lessonRoute';
 import {ProgressionProvider} from '../ProgressionProvider';
-import type {TileId} from '../types';
+import {shelfKeys} from '../shelf';
+import type {Affordance, TileId} from '../types';
 
 /**
  * A level that does or does not gate the libraries.
@@ -140,5 +142,38 @@ describe('the lesson being done', () => {
   it('takes it back when the lesson is not the project', () => {
     dialog({gated: true});
     expect(offered('Keeps Score')).toBe(false);
+  });
+});
+
+/** The affordances a lesson's steps cannot be done without. */
+const NEEDS: Partial<Record<TileId, readonly Affordance[]>> = {
+  'motion/gravity': ['map-enhance'],
+  'story/watch': ['map-scripts', 'subject-properties'],
+};
+
+/** Every tile a learner must have finished to reach `id`. */
+const before = (id: TileId): Set<TileId> => {
+  const seen = new Set<TileId>();
+  const walk = (at: TileId) =>
+    TILES_BY_ID.get(at)?.requires?.forEach(each => {
+      if (!seen.has(each)) {
+        seen.add(each);
+        walk(each);
+      }
+    });
+  walk(id);
+  return seen;
+};
+
+describe('what a lesson needs', () => {
+  // `place/script` gives a placement's code, and Story is reached without
+  // Place: `story/watch` sent the learner to a Code button that was withheld.
+  it.each(Object.entries(NEEDS))('is held while %s is open', (id, needs) => {
+    const keys = shelfKeys(before(id as TileId), id as TileId);
+    for (const need of needs ?? []) {
+      expect(keys.has(unlockKey({kind: 'affordance', id: need})), need).toBe(
+        true,
+      );
+    }
   });
 });

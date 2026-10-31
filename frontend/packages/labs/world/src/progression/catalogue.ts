@@ -2836,8 +2836,13 @@ export const TILES: readonly Tile[] = [
       {kind: 'affordance', id: 'subject-properties'},
       {kind: 'block', type: 'world_subject_actor'},
     ],
-    // A fraction is a division, and Story is reached without Math.
-    offers: [{kind: 'block', type: 'math_arithmetic'}],
+    // A fraction is a division, and Story is reached without Math. The bar's
+    // code is a placement's, which is `place/script`'s to give, and Story is
+    // reached without Place.
+    offers: [
+      {kind: 'block', type: 'math_arithmetic'},
+      {kind: 'affordance', id: 'map-scripts'},
+    ],
     check: {
       kind: 'outcome',
       says: 'Walking into the Crawler empties the bar as it empties the Player.',
