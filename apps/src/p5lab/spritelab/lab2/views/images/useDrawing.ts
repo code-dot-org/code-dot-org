@@ -13,6 +13,13 @@ import {
   PixelEditorSaveMeta,
 } from '@cdo/apps/pixelEditor/PixelEditor';
 
+import {
+  BASE_FRAME,
+  cutFrame,
+  frameCount,
+  FrameSize,
+  replaceFrame,
+} from './frames';
 import {ImageProps, ProjectImage} from './projectImages';
 import {ImageTarget, ImageWriter} from './useImageWriter';
 
@@ -37,6 +44,8 @@ export interface Drawing {
   picture?: HTMLImageElement;
   pixelGridSize?: number;
   recentColors?: PixelEditorSaveMeta['recentColors'];
+  /** A character set: the frame on the canvas is one cell of this strip. */
+  sheet?: {src: string; frameSize: FrameSize; index: number; count: number};
 }
 
 /** The parts of the pixel editor this hook uses. */
@@ -79,6 +88,9 @@ export interface DrawingTools {
   /** A generated picture replaced the drawing's image: the tools close,
       and a save of the drawing still in flight goes nowhere. */
   abandonDrawing: () => void;
+  /** Another frame of a character set; what is drawn on this one is saved
+      first. */
+  selectFrame: (index: number) => void;
   /** The editor reports a change to the picture. */
   scheduleStrokeSave: () => void;
   /** The editor hands back the picture to save. */
@@ -201,9 +213,33 @@ export default function useDrawing({
       openedOnGenerationRef.current = existing?.props.generation;
       leaveAfterSaveRef.current = false;
       const id = ++drawingIdRef.current;
+      if (existing?.sheet) {
+        const {src, frameSize} = existing.sheet;
+        const sheetImage = await toImage(src);
+        const imageUrl = await cutFrame(src, frameSize, BASE_FRAME);
+        const picture = await decodeImage(imageUrl);
+        // A later start owns the tools now.
+        if (id !== drawingIdRef.current) {
+          return;
+        }
+        setDrawing({
+          id,
+          target,
+          imageUrl,
+          picture,
+          pixelGridSize: existing.props.pixelGridSize,
+          recentColors: existing.props.recentColors,
+          sheet: {
+            src,
+            frameSize,
+            index: BASE_FRAME,
+            count: frameCount(sheetImage, frameSize),
+          },
+        });
+        return;
+      }
       if (existing?.src) {
         const picture = await decodeImage(existing.src);
-        // A later start owns the tools now.
         if (id !== drawingIdRef.current) {
           return;
         }
@@ -251,6 +287,20 @@ export default function useDrawing({
     }, STROKE_SAVE_MS);
   }, []);
 
+  // The frame to open once the one on the canvas has saved.
+  const nextFrameRef = useRef<number | null>(null);
+  const openFrame = useCallback(async (index: number) => {
+    const current = drawingRef.current;
+    if (!current?.sheet) {
+      return;
+    }
+    const {src, frameSize} = current.sheet;
+    const imageUrl = await cutFrame(src, frameSize, index);
+    setDrawing(d =>
+      d?.sheet ? {...d, imageUrl, sheet: {...d.sheet, index}} : d
+    );
+  }, []);
+
   // `drawingToSave` is the drawing as the save knows it: the state, or for
   // a pending save what the save before it made, since React may not have
   // rendered that yet. `final` marks the drawing's last save (Done, the
@@ -270,8 +320,15 @@ export default function useDrawing({
       inFlightRef.current = true;
       let saved = drawingToSave;
       try {
-        // A new image needs its file; after that the file follows every few
-        // seconds, and when the drawing is done.
+        // A set's frame goes back into its strip, and the strip is saved.
+        const pixels = drawingToSave.sheet
+          ? await replaceFrame(
+              drawingToSave.sheet.src,
+              drawingToSave.sheet.frameSize,
+              drawingToSave.sheet.index,
+              dataURI
+            )
+          : dataURI;
         const upload =
           !drawingToSave.target.key ||
           final ||
@@ -279,7 +336,7 @@ export default function useDrawing({
         const key = await storePicture(
           drawingToSave.target,
           () =>
-            saveEdited(drawingToSave.target, dataURI, meta, {
+            saveEdited(drawingToSave.target, pixels, meta, {
               upload,
               stillWanted: () =>
                 abandonedDrawingIdRef.current !== drawingToSave.id,
@@ -295,11 +352,22 @@ export default function useDrawing({
         if (drawingRef.current?.id === drawingToSave.id) {
           uploadPendingRef.current = !upload;
         }
-        // A blank that was saved is an image now: later saves replace it.
-        saved = {...drawingToSave, target: {...drawingToSave.target, key}};
+        // A blank that was saved is an image now: later saves replace it;
+        // a saved strip is what the next frame is cut from.
+        saved = {
+          ...drawingToSave,
+          target: {...drawingToSave.target, key},
+          ...(drawingToSave.sheet && {
+            sheet: {...drawingToSave.sheet, src: pixels},
+          }),
+        };
         setDrawing(d =>
           d && d.id === drawingToSave.id
-            ? {...d, target: {...d.target, key}}
+            ? {
+                ...d,
+                target: {...d.target, key},
+                ...(d.sheet && {sheet: {...d.sheet, src: pixels}}),
+              }
             : d
         );
       } catch {
@@ -310,6 +378,7 @@ export default function useDrawing({
         uploadPendingRef.current = true;
         pendingRef.current = null;
         leaveAfterSaveRef.current = false;
+        nextFrameRef.current = null;
         inFlightRef.current = false;
         return;
       } finally {
@@ -319,18 +388,46 @@ export default function useDrawing({
       if (pending) {
         pendingRef.current = null;
         // A queued save reuses this save's result when both belong to the
-        // same drawing.
+        // same drawing, but keeps its own frame index: the student may
+        // have switched frames while this save ran.
         await runSave(
           pending.dataURI,
           pending.meta,
-          pending.drawing.id === saved.id ? saved : pending.drawing,
+          pending.drawing.id === saved.id
+            ? {
+                ...saved,
+                ...(saved.sheet &&
+                  pending.drawing.sheet && {
+                    sheet: {...saved.sheet, index: pending.drawing.sheet.index},
+                  }),
+              }
+            : pending.drawing,
           pending.final
         );
       } else if (final && drawingRef.current?.id === saved.id) {
         stopDrawing();
+      } else if (nextFrameRef.current !== null) {
+        const next = nextFrameRef.current;
+        nextFrameRef.current = null;
+        await openFrame(next);
       }
     },
-    [storePicture, saveEdited, stopDrawing]
+    [storePicture, saveEdited, stopDrawing, openFrame]
+  );
+
+  const selectFrame = useCallback(
+    (index: number) => {
+      if (index === drawingRef.current?.sheet?.index) {
+        return;
+      }
+      if (dirtyRef.current) {
+        nextFrameRef.current = index;
+        editorRef.current?.save();
+      } else {
+        openFrame(index);
+      }
+    },
+    [openFrame]
   );
 
   const handleSave = useCallback(
@@ -400,6 +497,7 @@ export default function useDrawing({
     finishDrawing,
     stopDrawing,
     abandonDrawing,
+    selectFrame,
     scheduleStrokeSave,
     handleSave,
     releasePlaceholder,

@@ -31,6 +31,8 @@ import {sentPromptsFor} from '../sentence/sentPrompts';
 import {readWordLayout} from '../sentence/wordLayout';
 
 import DrawPane from './DrawPane';
+import FrameRow from './FrameRow';
+import {FRAME_LABELS} from './frames';
 import ImageFrame from './ImageFrame';
 import ImageList, {DraftEntry, NewImageKind} from './ImageList';
 import MakePane from './MakePane';
@@ -254,7 +256,6 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   const drawingOpen = !!drawing;
   // Free play has every tool; a level before it keeps the few that draw.
   const limitedTools = !editingOffered;
-  // Character sets are sheets of frames; the editor paints one image.
   // An image that is the student's own work (no prompt made its pixels)
   // keeps the words that would replace it out of the way until Replace
   // image asks for them; the choice is per image.
@@ -271,12 +272,11 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   const paintsChosen =
     !!chosenImage && editedMode() === 'paint' && !!editingOffered;
   // Where the tools open by themselves, no button offers them.
-  const drawOffered =
-    !!kind && !chosenImage?.sheet && !drawing && !paintsChosen;
+  const drawOffered = !!kind && !drawing && !paintsChosen;
   // The chosen image opens in the paint tools by itself, again on return
   // to the tab, and again once a picture has landed over it.
   const chosenKey = chosenImage?.key;
-  const chosenHasSrc = !!chosenImage?.src && !chosenImage.sheet;
+  const chosenHasSrc = !!chosenImage?.src;
   const kindType = kind?.imageType;
   const kindSubject = kind?.subject;
   useEffect(() => {
@@ -440,7 +440,11 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
           method="tab"
           layout={parts => {
             const generating = parts.mode === 'generating';
-            const frame = (live?: React.ReactNode, above?: React.ReactNode) => (
+            const frame = (
+              live?: React.ReactNode,
+              above?: React.ReactNode,
+              under?: React.ReactNode
+            ) => (
               <ImageFrame
                 image={chosenImage}
                 workspaceClassName={live ? styles.paintFrame : undefined}
@@ -456,7 +460,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                   generating ? (
                     <div className={styles.underSteps}>{parts.progress}</div>
                   ) : (
-                    parts.underFrame || reopenedBehindTheScenes
+                    under ?? (parts.underFrame || reopenedBehindTheScenes)
                   )
                 }
                 overlay={
@@ -542,7 +546,16 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                           </div>,
                           // The tools stay mounted with their drawing while
                           // a picture is made over it, out of sight.
-                          generating ? undefined : editor.toolbar
+                          generating ? undefined : editor.toolbar,
+                          drawing.sheet && (
+                            <FrameRow
+                              sheetSrc={drawing.sheet.src}
+                              frameSize={drawing.sheet.frameSize}
+                              count={drawing.sheet.count}
+                              selected={drawing.sheet.index}
+                              onSelect={tools.selectFrame}
+                            />
+                          )
                         )}
                         {editingOffered && editedMode() === 'paint' ? (
                           words
@@ -550,6 +563,11 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                           <DrawPane
                             width={paneWidthPx}
                             kind={kind}
+                            frameLabel={
+                              drawing.sheet
+                                ? FRAME_LABELS[drawing.sheet.index]
+                                : undefined
+                            }
                             editing={!!drawing.target.key}
                             edited={editor.edited}
                             onDone={finishDrawing}
