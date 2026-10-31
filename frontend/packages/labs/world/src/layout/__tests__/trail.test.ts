@@ -2,7 +2,7 @@
 
 import {describe, expect, it} from 'vitest';
 
-import {follow, scriptOf, withScript, type Trail} from '../trail';
+import {follow, fromEntry, scriptOf, withScript, type Trail} from '../trail';
 
 const MAIN = 'main';
 const LEVEL = 'level';
@@ -25,6 +25,19 @@ describe('the trail', () => {
       LEVEL,
     ]);
     expect(follow(trail, MAIN, MAIN)).toEqual([{fileId: MAIN}]);
+  });
+
+  it('goes from the entry to a file opened beside the one in front', () => {
+    const other = 'other';
+    let trail = follow([], LEVEL, MAIN);
+    trail = follow(trail, HERO, MAIN);
+    expect(follow(fromEntry(trail), other, MAIN)).toEqual([
+      {fileId: MAIN},
+      {fileId: other},
+    ]);
+    expect(follow(fromEntry(trail), MAIN, MAIN)).toEqual([{fileId: MAIN}]);
+    const entry = follow([], MAIN, MAIN);
+    expect(fromEntry(entry)).toBe(entry);
   });
 
   it('is the same trail when nothing changed', () => {

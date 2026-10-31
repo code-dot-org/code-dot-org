@@ -70,6 +70,14 @@ export function follow(
 }
 
 /**
+ * The trail cut back to its entry, for a file opened beside the one in front
+ * rather than from inside it: `follow` then makes it the entry's next step.
+ */
+export function fromEntry(trail: Trail): Trail {
+  return trail.length > 1 ? trail.slice(0, 1) : trail;
+}
+
+/**
  * The script open in `fileId`, when it is the last step: a script is only
  * open while it is what the learner is looking at.
  */

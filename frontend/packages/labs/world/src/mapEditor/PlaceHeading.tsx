@@ -16,6 +16,7 @@ import {useSources} from '@code-dot-org/lab/contexts';
 
 import {requestFileAct} from '../files/fileActs';
 import {fileLabel} from '../files/fileLabel';
+import {useTrail} from '../layout/TrailContext';
 import {entryFileOf} from '../mainWorld';
 import {filePath} from '../runtime/projectFiles';
 
@@ -44,6 +45,7 @@ const placesOf = (source: MultiFileSource, extensions: RegExp): Place[] =>
 export const PlaceHeading = ({fileId, isReadOnly}: PlaceHeadingProps) => {
   const {currentSources, updateSources} = useSources<MultiFileSource>();
   const source = currentSources.source;
+  const trail = useTrail();
   const [switching, setSwitching] = useState(false);
   const [actionsAt, setActionsAt] = useState<HTMLElement | null>(null);
 
@@ -66,12 +68,21 @@ export const PlaceHeading = ({fileId, isReadOnly}: PlaceHeadingProps) => {
 
   const open = (id: string) => {
     setSwitching(false);
+    // A place chosen here sits beside this one, not inside it.
+    trail?.openBeside(id);
     updateSources({...currentSources, source: activateFile(source, id)});
   };
   const act = (request: Parameters<typeof requestFileAct>[0]) => {
     setSwitching(false);
     setActionsAt(null);
     void requestFileAct(request);
+  };
+  const make = async (folder: string) => {
+    setSwitching(false);
+    const made = await requestFileAct({act: 'make', folder, answer: 'id'});
+    if (typeof made === 'string') {
+      trail?.openBeside(made);
+    }
   };
 
   return (
@@ -123,7 +134,7 @@ export const PlaceHeading = ({fileId, isReadOnly}: PlaceHeadingProps) => {
           maps={maps}
           currentId={fileId}
           onOpen={open}
-          onNew={folder => act({act: 'make', folder})}
+          onNew={folder => void make(folder)}
           onClose={() => setSwitching(false)}
           isReadOnly={isReadOnly}
         />

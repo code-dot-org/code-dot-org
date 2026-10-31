@@ -70,7 +70,11 @@ describe('the head of the toolbar', () => {
     render(<PlaceHeading fileId="main" isReadOnly={false} />);
     fireEvent.click(screen.getByRole('button', {name: 'Coins'}));
     fireEvent.click(screen.getByRole('button', {name: 'New map'}));
-    expect(requestFileAct).toHaveBeenCalledWith({act: 'make', folder: 'maps'});
+    expect(requestFileAct).toHaveBeenCalledWith({
+      act: 'make',
+      folder: 'maps',
+      answer: 'id',
+    });
   });
 
   it('renames the Main Screen, and offers no way to delete it', () => {

@@ -13,6 +13,11 @@ export interface TrailContextValue {
   trail: Trail;
   /** Go back to the step at `index`. */
   goTo: (index: number) => void;
+  /**
+   * Follow the entry with `fileId` once it is in front: a file opened beside
+   * the one in front rather than from inside it.
+   */
+  openBeside: (fileId: string) => void;
   /** Open `script` in `fileId`, or close the one open there. */
   setScript: (fileId: string, script: ScriptStep | null) => void;
   /** Where the breadcrumb bar holds the open page's actions (`TrailActions`). */

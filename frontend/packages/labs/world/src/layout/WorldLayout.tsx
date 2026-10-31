@@ -46,7 +46,13 @@ import {ProgressionButton} from '../progression/ProgressionButton';
 import {fileIdAt} from '../runtime/projectFiles';
 
 import {Breadcrumb} from './Breadcrumb';
-import {follow, withScript, type ScriptStep, type Trail} from './trail';
+import {
+  follow,
+  fromEntry,
+  withScript,
+  type ScriptStep,
+  type Trail,
+} from './trail';
 import {TrailContext, type TrailContextValue} from './TrailContext';
 import styles from './worldLayout.module.css';
 
@@ -130,10 +136,18 @@ const WorldLayout = () => {
   // brought up to date as this renders, so no editor below ever reads one a
   // file behind.
   const [storedTrail, setTrail] = useState<Trail>([]);
+  // A file opened beside the one in front, which follows the entry once it
+  // is in front itself; a made file arrives after its prompt, not at once.
+  const [beside, setBeside] = useState<string>();
   const source = currentSources.source;
+  const activeId = getActiveFileForSource(source)?.id;
+  const cut = beside !== undefined && beside === activeId;
+  if (cut) {
+    setBeside(undefined);
+  }
   const trail = follow(
-    storedTrail,
-    getActiveFileForSource(source)?.id,
+    cut ? fromEntry(storedTrail) : storedTrail,
+    activeId,
     entryFileId,
     fileId => shouldShowFile(source.files[fileId]),
   );
@@ -165,7 +179,14 @@ const WorldLayout = () => {
   );
   const [actionsHost, setActionsHost] = useState<HTMLElement | null>(null);
   const trailContext = useMemo<TrailContextValue>(
-    () => ({trail, goTo, setScript, actionsHost, setActionsHost}),
+    () => ({
+      trail,
+      goTo,
+      openBeside: setBeside,
+      setScript,
+      actionsHost,
+      setActionsHost,
+    }),
     [trail, goTo, setScript, actionsHost],
   );
   const [instructionsWidth, setInstructionsWidth] = useState(
