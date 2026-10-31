@@ -36,13 +36,13 @@ This starts Vite at `http://localhost-studio.code.org:5173`. The dev server requ
 
 ## Studio integration
 
-Music Lab exports a single default React component. Studio registers it as a lazy-loaded route entry. See [docs/architecture.md](./docs/architecture.md) for the registration pattern and init ordering constraints.
+Music Lab exports a single default React component. Studio registers it as a lazy-loaded route entry. See [Studio architecture](../../../apps/studio/docs/architecture.md) for the registration pattern and init ordering constraints.
 
 ## Mock fixtures
 
-`src/fixtures/` holds per-scenario canned data (`simple.ts`, `complex.ts`,
-`error.ts`, …) consumed by MSW when Studio runs with `VITE_API_MODE=msw`. The
-package exposes them via the `./mocks` subpath:
+`src/fixtures/` holds per-scenario canned data (currently only `simple.ts`,
+collected in `index.ts`) consumed by MSW when Studio runs with
+`VITE_API_MODE=msw`. The package exposes them via the `./mocks` subpath:
 
 ```typescript
 import {MusicFixtures} from '@code-dot-org/music-lab/mocks';
