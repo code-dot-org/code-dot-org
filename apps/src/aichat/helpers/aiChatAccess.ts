@@ -5,7 +5,7 @@ import {
 import DCDO from '@cdo/apps/dcdo';
 import {
   AiChatAccessLevels,
-  AiChatModelProviders,
+  AiChatProviderByModelId,
   AiChatToolsDependency,
 } from '@cdo/generated-scripts/sharedConstants';
 
@@ -17,7 +17,7 @@ export const isAiChatModelBlocked = (
   modelId: string,
   blockedProviders: readonly string[]
 ): boolean => {
-  const provider = (AiChatModelProviders as Record<string, string>)[modelId];
+  const provider = (AiChatProviderByModelId as Record<string, string>)[modelId];
   return !!provider && blockedProviders.includes(provider);
 };
 
