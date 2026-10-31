@@ -1,5 +1,6 @@
 @use '../checkerboard';
 @use '../imageTile' as tile;
+@use '../../../../../pixelEditor/dialogChrome' as chrome;
 
 // Three columns: the list, the frame, the pane. The pane's width is set
 // inline to the preview column's; the list takes one to three tiles; the
@@ -325,4 +326,71 @@ $pad: 16px;
   .ready {
     animation: none;
   }
+}
+
+// The thumbs float over the frame's bottom edge.
+.ratingBar {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background-color: var(--background-neutral-primary);
+  box-shadow: 0 2px 8px var(--neutral-black-alpha-30);
+}
+
+.thumb {
+  color: var(--text-neutral-primary);
+}
+
+// Doubled to outrank the button's own hover background.
+.thumb.thumbChosen {
+  background-color: var(--text-neutral-primary);
+  color: var(--background-neutral-primary);
+}
+
+// The question wears the pixel editor's chrome, like the image dialog.
+.ratingHost {
+  display: contents;
+
+  @include chrome.theme;
+}
+
+.ratingHost .ratingDialog {
+  @include chrome.panel;
+
+  width: 420px;
+}
+
+.ratingHost .ratingDialog :focus-visible {
+  @include chrome.focus-ring;
+}
+
+.ratingTitle {
+  @include chrome.header;
+
+  margin: 0;
+  font-size: 20px;
+}
+
+.ratingBody {
+  padding: 20px 24px;
+}
+
+.ratingFooter {
+  @include chrome.footer;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+// The pane's first row: the headline, and the way behind the scenes.
+.paneHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
 }

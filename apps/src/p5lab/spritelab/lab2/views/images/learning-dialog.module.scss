@@ -1,0 +1,181 @@
+@use '../../../../../pixelEditor/dialogChrome' as chrome;
+
+// The dialog wears the pixel editor's chrome, following the page's theme
+// (the image dialog's pattern).
+.host {
+  display: contents;
+
+  @include chrome.theme;
+}
+
+.host .dialog {
+  @include chrome.panel;
+
+  width: 560px;
+}
+
+.host .dialog :focus-visible {
+  @include chrome.focus-ring;
+}
+
+@include chrome.keyframes;
+
+.srOnly {
+  @include chrome.sr-only;
+}
+
+.title {
+  @include chrome.header;
+
+  margin: 0;
+  font-size: 20px;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 24px 24px 8px;
+  animation: panel-in 0.3s ease-out;
+}
+
+@keyframes panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 180px;
+}
+
+.text {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+// Four rows of three pictures, appearing one after another.
+.mosaic {
+  display: grid;
+  grid-template-columns: repeat(4, 56px);
+  gap: 10px;
+  font-size: 32px;
+  color: var(--dialog-panel-text);
+}
+
+.mosaicCell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 8px;
+  background-color: var(--dialog-inset-bg);
+  animation: cell-in 0.4s ease-out both;
+}
+
+@keyframes cell-in {
+  from {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.words {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.quote {
+  opacity: 0.5;
+}
+
+// The guess at three stages, side by side.
+.stages {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.chunky {
+  width: 140px;
+  height: 140px;
+  border-radius: 8px;
+  image-rendering: pixelated;
+  object-fit: contain;
+  background-color: var(--dialog-inset-bg);
+}
+
+.guess {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .chunky {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+.dice {
+  position: absolute;
+  right: -28px;
+  bottom: -8px;
+  font-size: 40px;
+  color: var(--dialog-panel-text);
+}
+
+.footer {
+  @include chrome.footer;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dots {
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--dialog-control-border);
+}
+
+.dotNow {
+  background-color: var(--dialog-panel-text);
+}
+
+.buttons {
+  display: flex;
+  gap: 8px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .panel,
+  .mosaicCell {
+    animation: none;
+  }
+}

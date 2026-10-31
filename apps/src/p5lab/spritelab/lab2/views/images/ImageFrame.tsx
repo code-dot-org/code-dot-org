@@ -30,6 +30,8 @@ interface ImageFrameProps {
   workspaceClassName?: string;
   /** Above the frame, across the column. */
   above?: React.ReactNode;
+  /** Over the frame, positioned by its own class. */
+  overlay?: React.ReactNode;
   /** Down the frame's left. */
   beside?: React.ReactNode;
   /** Under the frame. */
@@ -46,6 +48,7 @@ const ImageFrame: React.FunctionComponent<ImageFrameProps> = ({
   generating,
   workspaceClassName,
   above,
+  overlay,
   beside,
   under,
 }) => {
@@ -128,6 +131,7 @@ const ImageFrame: React.FunctionComponent<ImageFrameProps> = ({
                 <img src={characterOutline} alt="" className={styles.outline} />
               )
             ))}
+          {overlay}
         </div>
       </div>
       <div className={styles.under}>{under}</div>

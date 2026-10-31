@@ -125,6 +125,15 @@ export interface SentenceSceneParts {
   fact: React.ReactNode;
   /** The question and the thumbs, once there is a picture. */
   verdict: React.ReactNode;
+  /** The rating as state, for a host that draws its own thumbs: offered
+      while a fresh picture (or, when the level rates every one, any
+      picture) is in the frame. */
+  rating: {
+    offered: boolean;
+    verdict: Verdict | null;
+    judge: (verdict: Verdict) => void;
+    explain: (reasons: string[]) => void;
+  };
   /** Some levels require the student's verdict on whether the generated
       picture is good or bad before it can be kept; true while that verdict
       is still owed. */
@@ -178,6 +187,8 @@ interface SentenceSceneProps {
   wordLayout?: WordLayout;
   /** The model's steps one at a time, each replacing the last. */
   singleStep?: boolean;
+  /** Behind the scenes as an icon alone, for a host's header. */
+  compactBehindTheScenes?: boolean;
 }
 
 const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
@@ -200,6 +211,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   keepOnResult,
   wordLayout,
   singleStep,
+  compactBehindTheScenes,
 }) => {
   const dispatch = useAppDispatch();
   const {theme} = useTheme();
@@ -475,6 +487,21 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     },
     [chosenPicture, sentence, choices, imageType]
   );
+  // A host's own question allows several reasons at once.
+  const explainMany = useCallback(
+    (reasons: string[]) => {
+      analyticsReporter.sendEvent(
+        EVENTS.HOAI2026_IMAGE_VERDICT_REASON,
+        {
+          reasons,
+          promptText: chosenPicture ? promptText(sentence, choices) : undefined,
+          imageType,
+        },
+        true
+      );
+    },
+    [chosenPicture, sentence, choices, imageType]
+  );
 
   // Put another picture from the strip into the frame. A swap plays no
   // reveal, and a verdict given so far was for the previous picture, so it
@@ -729,7 +756,11 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   ) : null;
 
   const underFrame = showingResult && chosenPicture && (
-    <BehindTheScenes sent={chosenPicture.sent} disabled={busy} />
+    <BehindTheScenes
+      sent={chosenPicture.sent}
+      disabled={busy}
+      compact={compactBehindTheScenes}
+    />
   );
   // Stays through editing and generating, so the frame does not shift.
   const alternativesNode = mode !== 'paint' && history.length > 1 && (
@@ -755,10 +786,12 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   // is in the frame, or of any picture in the frame when the level requires
   // a rating on every picture. `boxed` draws it in its own panel for a host
   // that lays the parts out; otherwise it sits plain among the buttons.
-  const verdictRow = (boxed: boolean) =>
+  const ratingOffered =
     showingResult &&
-    chosenPicture &&
-    (chosenPicture.id === freshId || verdictRequired) && (
+    !!chosenPicture &&
+    (chosenPicture.id === freshId || !!verdictRequired);
+  const verdictRow = (boxed: boolean) =>
+    ratingOffered && (
       <VerdictRow
         verdict={verdict}
         onJudge={judge}
@@ -803,6 +836,12 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
           progress: progressNode,
           fact: factNode,
           verdict: verdictRow(true),
+          rating: {
+            offered: ratingOffered,
+            verdict,
+            judge,
+            explain: explainMany,
+          },
           awaitingVerdict,
           exhausted,
           generate,

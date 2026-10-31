@@ -59,20 +59,23 @@ const MakePane: React.FunctionComponent<MakePaneProps> = ({
     >
       {parts.status}
       {!generating && (
-        <p className={styles.headline}>
-          {result ? (
-            'AI made this from your words.'
-          ) : (
-            <>
-              Generate {article}{' '}
-              {parts.typeChoice ? (
-                <span className={styles.typeChoice}>{parts.typeChoice}</span>
-              ) : (
-                kindLabel
-              )}
-            </>
-          )}
-        </p>
+        <div className={styles.paneHeader}>
+          <p className={styles.headline}>
+            {result ? (
+              'AI made this from your words.'
+            ) : (
+              <>
+                Generate {article}{' '}
+                {parts.typeChoice ? (
+                  <span className={styles.typeChoice}>{parts.typeChoice}</span>
+                ) : (
+                  kindLabel
+                )}
+              </>
+            )}
+          </p>
+          {parts.underFrame}
+        </div>
       )}
       {/* The words scroll between the pinned headline and buttons. */}
       <div className={styles.paneScroll}>
@@ -80,7 +83,6 @@ const MakePane: React.FunctionComponent<MakePaneProps> = ({
         {parts.animatedChoice}
         {parts.error}
         {parts.progress}
-        {parts.verdict && <div className={styles.verdict}>{parts.verdict}</div>}
       </div>
       <div className={styles.paneBottom}>
         {confirming ? (
