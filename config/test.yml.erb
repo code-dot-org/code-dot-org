@@ -35,6 +35,21 @@ puma_control_server_token: correct-horse-battery-staple
 
 google_maps_api_key: boguskey
 
+<%   if test_system? -%>
+db_cluster_id: !StackSecret
+db_proxy: !StackSecret
+db_endpoint_writer: !StackSecret
+db_endpoint_writer_port: !StackSecret
+db_endpoint_proxy_writer: !StackSecret
+db_endpoint_proxy_writer_port: !StackSecret
+db_endpoint_proxy_reader: !StackSecret
+db_endpoint_proxy_reader_port: !StackSecret
+db_endpoint_proxy_reporting: !StackSecret
+db_endpoint_proxy_reporting_port: !StackSecret
+db_credential_admin: !StackSecret
+db_credential_writer: !StackSecret
+db_credential_reader: !StackSecret
+<%   else -%>
 # Match values from development.yml.erb, to support running unit tests in local development environments.
 db_cluster_id: localhost
 db_proxy: none
@@ -51,6 +66,7 @@ db_credential_writer: {"username":"writer", "password":""}
 db_credential_reader: {"username":"reader", "password":""}
 
 db_writer: 'mysql://root@localhost/'
+<%   end -%>
 <% end -%>
 
 ##
