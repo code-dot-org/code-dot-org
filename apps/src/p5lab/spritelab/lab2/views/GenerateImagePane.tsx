@@ -5,7 +5,6 @@ import {dataURIToSourceSize, toImage} from '@cdo/apps/imageUtils';
 import {
   deleteAnimation,
   isNameUnique,
-  SET_INITIAL_ANIMATION_LIST,
 } from '@cdo/apps/p5lab/redux/animationList';
 import {
   NATIVE_PIXEL_GRID,
@@ -40,22 +39,20 @@ import {
   trimAnimationListImages,
 } from '../imageTrim';
 import {BACKGROUND_GROUND_COLOR, blankPaintImage} from '../paintBlank';
-import {PictureRequest} from '../picturePicker';
 
 import PictureLibrary, {LibraryGroup} from './components/PictureLibrary';
 import ImageDetailsDialog, {AlternativeImage} from './ImageDetailsDialog';
 import {
-  AnimationPatch,
   createNamedAnimation,
   framesPatch,
+  repointAnimation,
   uploadOrEmbed,
 } from './imageSave';
 import type {NewImageDraft} from './SentenceDialogBody';
 import {framesFromAnimation, useImageSession} from './useImageSession';
+import useReclaimAsset from './useReclaimAsset';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
-
-type Dispatch = ReturnType<typeof useAppDispatch>;
 
 /** Where a strip's standing frame sits — the base picture the set was drawn
     from (the last frame of the stand range; see CHARACTER_STRIP_POSES). */
@@ -128,35 +125,6 @@ async function alternativeThumb(
   }
 }
 
-/**
- * Point an existing animation at new pixels and refresh its thumbnails.
- * Uses the raw list-replace action because the classic edit action clears
- * sourceUrl, which is what Lab2 saves. Returns the file URL the change
- * replaced.
- */
-function repointAnimation(
-  dispatch: Dispatch,
-  key: string,
-  changes: AnimationPatch
-): string | undefined {
-  const current = getStore().getState().animationList;
-  const updated = {
-    orderedKeys: current.orderedKeys,
-    propsByKey: {
-      ...current.propsByKey,
-      [key]: {
-        ...current.propsByKey[key],
-        ...changes,
-        loadedFromSource: true,
-        saved: false,
-      },
-    },
-  };
-  dispatch({type: SET_INITIAL_ANIMATION_LIST, animationList: updated});
-  trimAnimationListImages(updated);
-  return current.propsByKey[key]?.sourceUrl;
-}
-
 interface GenerateImagePaneProps {
   uploadImage?: UploadImageFunction;
   /** Rename an image and every reference to it; error message or null. */
@@ -183,13 +151,6 @@ interface GenerateImagePaneProps {
   paintDisabled?: boolean;
   /** The level requires a rating on every generated picture. */
   verdictRequired?: boolean;
-  /** A picture asked for from a block or the world palette: opens the
-      new-image dialog on its kind. A new object each time. */
-  pickRequest?: PictureRequest | null;
-  /** A new image was made (generated or painted), by name and kind. */
-  onImageCreated?: (name: string, imageType: ImageType) => void;
-  /** The dialog a pick opened was closed without a picture. */
-  onPickCancel?: () => void;
   /** Which side the chosen picture takes; the right unless given. */
   jumboSide?: 'left' | 'right';
 }
@@ -248,9 +209,6 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   generationsLeft,
   onGenerate,
   paintDisabled,
-  pickRequest = null,
-  onImageCreated,
-  onPickCancel,
   jumboSide,
   verdictRequired,
 }) => {
@@ -285,27 +243,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
     trimAnimationListImages(animationList);
   }, [animationList]);
 
-  // Used only to recognize this project's own uploaded-file URLs.
-  const channelId = useAppSelector(state => state.lab.channel?.id);
-
-  // Delete an uploaded image file nothing uses anymore. Deliberately
-  // narrow and best-effort: only this project's own uploads, only when no
-  // image still points at the file, and a failed delete is ignored.
-  const deleteUnreferencedAsset = useCallback(
-    (url?: string) => {
-      if (!channelId || !url || !url.startsWith(`/v3/assets/${channelId}/`)) {
-        return;
-      }
-      const stillUsed = Object.values(
-        getStore().getState().animationList.propsByKey
-      ).some(p => (p as {sourceUrl?: string} | undefined)?.sourceUrl === url);
-      if (stillUsed) {
-        return;
-      }
-      HttpClient.delete(url, true).catch(() => undefined);
-    },
-    [channelId]
-  );
+  const deleteUnreferencedAsset = useReclaimAsset();
 
   // Guards a second Save click while one save is in flight. Reset on every
   // editor open, so a save that never settles can't leave Save dead for the
@@ -382,34 +320,14 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
     },
     [resetSession]
   );
-  // A pick opens the new-image dialog on the asker's kind; while it is
-  // open, that kind is the locked one.
-  useEffect(() => {
-    if (!pickRequest) {
-      return;
-    }
-    sessionEpochRef.current++;
-    triggerRef.current = null;
-    setDialogTarget('new');
-    setPaintNewDraft(null);
-    resetSession();
-  }, [pickRequest, resetSession]);
-  const lockedImageType = pickRequest?.imageType ?? levelImageType;
-  const lockedImageSubject = pickRequest?.subject ?? levelImageSubject;
-  // The asker gets the picture and the dialog closes, instead of the
-  // summary: the student is on their way back to the block or the world.
-  const pickedRef = useRef(onImageCreated);
-  pickedRef.current = onImageCreated;
+  const lockedImageType = levelImageType;
+  const lockedImageSubject = levelImageSubject;
   // Keeping a new picture closes the dialog: the library shows it large.
-  const finishNew = useCallback(
-    (name: string, imageType: ImageType) => {
-      pickedRef.current?.(name, imageType);
-      setDialogTarget(null);
-      setPainting('no');
-      endSession();
-    },
-    [endSession]
-  );
+  const finishNew = useCallback(() => {
+    setDialogTarget(null);
+    setPainting('no');
+    endSession();
+  }, [endSession]);
 
   const closeDialog = useCallback(() => {
     sessionEpochRef.current++;
@@ -417,11 +335,8 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
     setPainting('no');
     setPaintNewDraft(null);
     endSession();
-    if (pickRequest) {
-      onPickCancel?.();
-    }
     triggerRef.current?.focus();
-  }, [endSession, pickRequest, onPickCancel]);
+  }, [endSession]);
 
   // Leaving the tab mid-session must still reclaim the session's leftover
   // assets (and orphan any in-flight persist), exactly as closing would.
@@ -607,7 +522,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
         });
         // A new subject, even though the session continues.
         sessionEpochRef.current++;
-        finishNew(newName, result.generation.imageType);
+        finishNew();
         return;
       }
 
@@ -730,7 +645,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
         setPaintNewDraft(null);
         // A new subject, even though the session continues.
         sessionEpochRef.current++;
-        finishNew(name, imageType);
+        finishNew();
         return;
       }
 
@@ -877,9 +792,9 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
     creating && paintNewDraft
       ? paintNewDraft.imageType
       : imageTypeFromCategories(targetProps?.categories);
-  // The details dialog opens for a new picture or a pick; a chosen picture
-  // shows in the jumbo instead, and paints straight into the editor.
-  const detailsDialogShown = creating || !!pickRequest;
+  // The details dialog opens for a new picture; a chosen picture shows in
+  // the jumbo instead, and paints straight into the editor.
+  const detailsDialogShown = creating;
   return (
     <div className={moduleStyles.imagesManager}>
       <PictureLibrary

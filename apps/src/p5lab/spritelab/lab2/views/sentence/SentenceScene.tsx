@@ -175,6 +175,9 @@ interface SentenceSceneProps {
   onAwaitingVerdict?: (awaiting: boolean) => void;
   /** Lay the parts out instead of the level's two halves. */
   layout?: (parts: SentenceSceneParts) => React.ReactNode;
+  /** Every picture that lands in the frame is kept through onKeep at once,
+      and again with its rating when one is given; there is no Keep step. */
+  keepOnResult?: boolean;
 }
 
 const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
@@ -194,6 +197,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   verdictRequired,
   onAwaitingVerdict,
   layout,
+  keepOnResult,
 }) => {
   const dispatch = useAppDispatch();
   const {theme} = useTheme();
@@ -243,6 +247,39 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   const runRef = useRef(0);
   useEffect(() => () => void runRef.current++, []);
   const exhausted = generationsLeft !== undefined && generationsLeft <= 0;
+
+  const persist = useCallback(
+    async (picture: GeneratedPicture, pictureVerdict: Verdict | null) => {
+      setSaving(true);
+      // A verdict, when given, is saved in the image's generation metadata,
+      // which travels with the project.
+      const result = pictureVerdict
+        ? {
+            ...picture.result,
+            generation: {...picture.result.generation, verdict: pictureVerdict},
+          }
+        : picture.result;
+      try {
+        if (onKeep) {
+          await onKeep(result);
+        } else {
+          await saveGeneratedImage(dispatch, result, {
+            uploadImage,
+            imageType,
+            imageRole,
+          });
+          dispatch(continueOrFinishLesson());
+        }
+      } catch (e) {
+        console.error('Saving the image failed:', e);
+        setError("Couldn't save the picture. Try again.");
+      } finally {
+        // On the last level with no finish URL, the lesson does not move on.
+        setSaving(false);
+      }
+    },
+    [onKeep, dispatch, uploadImage, imageType, imageRole]
+  );
 
   const generate = useCallback(async () => {
     if (exhausted) {
@@ -320,6 +357,9 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       setFreshId(entry.id);
       setMode('result');
       playSound('reveal');
+      if (keepOnResult) {
+        await persist(entry, null);
+      }
     } catch (e) {
       if (run !== runRef.current) {
         return;
@@ -346,49 +386,16 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     method,
     onGenerateStart,
     exhausted,
+    keepOnResult,
+    persist,
   ]);
 
   const keep = useCallback(async () => {
     if (!chosenPicture || awaitingVerdict) {
       return;
     }
-    setSaving(true);
-    // A verdict, when given, is saved in the image's generation metadata,
-    // which travels with the project.
-    const result = verdict
-      ? {
-          ...chosenPicture.result,
-          generation: {...chosenPicture.result.generation, verdict},
-        }
-      : chosenPicture.result;
-    try {
-      if (onKeep) {
-        await onKeep(result);
-      } else {
-        await saveGeneratedImage(dispatch, result, {
-          uploadImage,
-          imageType,
-          imageRole,
-        });
-        dispatch(continueOrFinishLesson());
-      }
-    } catch (e) {
-      console.error('Saving the image failed:', e);
-      setError("Couldn't save the picture. Try again.");
-    } finally {
-      // On the last level with no finish URL, the lesson does not move on.
-      setSaving(false);
-    }
-  }, [
-    chosenPicture,
-    awaitingVerdict,
-    verdict,
-    onKeep,
-    dispatch,
-    uploadImage,
-    imageType,
-    imageRole,
-  ]);
+    await persist(chosenPicture, verdict);
+  }, [chosenPicture, awaitingVerdict, verdict, persist]);
 
   const startPaint = useCallback(() => {
     setError(null);
@@ -432,6 +439,9 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       setVerdict(next);
       setReason(null);
       playSound(next === 'up' ? 'cheer' : 'hmm');
+      if (keepOnResult && chosenPicture) {
+        persist(chosenPicture, next);
+      }
       analyticsReporter.sendEvent(
         EVENTS.HOAI2026_IMAGE_VERDICT,
         {
@@ -442,7 +452,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         true
       );
     },
-    [chosenPicture, sentence, choices, imageType]
+    [chosenPicture, sentence, choices, imageType, keepOnResult, persist]
   );
 
   const explain = useCallback(
@@ -464,12 +474,19 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   // Put another picture from the strip into the frame. A swap plays no
   // reveal, and a verdict given so far was for the previous picture, so it
   // is cleared.
-  const choosePicture = useCallback((id: string) => {
-    setChosenId(id);
-    setFreshId(null);
-    setVerdict(null);
-    setReason(null);
-  }, []);
+  const choosePicture = useCallback(
+    (id: string) => {
+      setChosenId(id);
+      setFreshId(null);
+      setVerdict(null);
+      setReason(null);
+      const picture = history.find(m => m.id === id);
+      if (keepOnResult && picture) {
+        persist(picture, null);
+      }
+    },
+    [history, keepOnResult, persist]
+  );
 
   const generating = mode === 'generating';
   const busy = generating || saving;

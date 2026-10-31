@@ -318,11 +318,14 @@ $z-over-blockly: 71;
 }
 
 // After .codeTabWrapper too: the Images pane off to the right while
-// another editor shows, as a closed sheet waits.
+// another editor shows, as a closed sheet waits. Hidden as well: off to the
+// right is where the page's own drawer opens, and the pane would paint over
+// it.
 .picturesEditorParked {
   left: 110%;
   right: auto;
   width: 100%;
+  visibility: hidden;
 }
 
 .blocklyDiv {

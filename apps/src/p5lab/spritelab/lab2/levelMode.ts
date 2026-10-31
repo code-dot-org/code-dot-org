@@ -59,7 +59,7 @@ export function editsWorld(mode: LevelMode | undefined): boolean {
   return mode?.kind === 'world';
 }
 
-/** The only mode offering the prompt box and the paint tools. */
+/** The only mode where students add images and draw on them. */
 export function isFreeplayMode(mode: LevelMode | undefined): boolean {
   return mode?.kind === 'freeplay';
 }

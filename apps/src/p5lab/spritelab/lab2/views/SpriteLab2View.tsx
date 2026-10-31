@@ -100,7 +100,6 @@ import {
 } from '../musicProjects';
 import {runtimeNeeds, WorkspaceSource} from '../objectives';
 import {packSources} from '../packedWorld';
-import {requestPicture} from '../picturePicker';
 import {
   countImagesByType,
   ImageCounts,
@@ -162,6 +161,7 @@ import WorkspaceSceneBar from './components/WorkspaceSceneBar';
 import DiscoverBlocksButton from './DiscoverBlocksButton';
 import GenerateImagePane from './GenerateImagePane';
 import GenerateSpriteLab from './GenerateSpriteLab';
+import ImagesTab from './images/ImagesTab';
 import {createNamedAnimation} from './imageSave';
 import {ArrowSet, arrowSetFor, ControlsState} from './playBar';
 import Playspace, {PlayspaceMode} from './Playspace';
@@ -473,10 +473,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
 
   // The project's pictures, in a sheet over the workspace.
   const picturesOffered = tabs.includes('Images');
-  const pictures = usePicturesSheet({
-    offered: picturesOffered,
-    ready: animationsSeeded,
-  });
+  const pictures = usePicturesSheet({ready: animationsSeeded});
 
   const scenes = useMemo(() => getScenes(currentSources), [currentSources]);
 
@@ -550,8 +547,17 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     [tabs, enabledTabs, picturesOffered]
   );
   // The lab's layout; `?ui=classic` brings back the earlier one.
-  const {previewSide, guideUnderPreview, switchAtStart, editors, previewShare} =
-    useMemo(() => readUiLayout(), []);
+  const {
+    classic,
+    previewSide,
+    guideUnderPreview,
+    switchAtStart,
+    editors,
+    previewShare,
+  } = useMemo(() => readUiLayout(), []);
+  // The classic layout keeps the earlier Images editor, and so does the
+  // advanced form, which only that editor's dialog offers.
+  const classicImages = classic || imagesAdvanced;
   // The instructions live in the guide or in the panel, never both; the
   // panel offers no other tab while it carries them.
   const panelLevelProperties = useMemo(
@@ -825,21 +831,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     },
     []
   );
-  // The world palette's New square: a placeable picture, selected once
-  // made.
-  const handleNewWorldPicture = useCallback(() => {
-    requestPicture({
-      onPicked: (name, imageType) => {
-        if (imageType !== 'background') {
-          choosePaletteSelection({
-            image: name,
-            kind: imageType === 'block' ? 'block' : 'sprite',
-          });
-        }
-      },
-    });
-  }, [choosePaletteSelection]);
-
   // The World palette preselects the level's image of its imageType. A
   // background is never preselected, since a world cell holds a sprite or a
   // block. A selection whose image has since been deleted counts as none.
@@ -2279,9 +2270,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     verdictRequired: !!levelProperties.objectives?.items?.some(
       item => item.check.kind === 'rated'
     ),
-    pickRequest: pictures.pickRequest,
-    onImageCreated: pictures.onImageCreated,
-    onPickCancel: pictures.onPickCancel,
   };
 
   return (
@@ -2452,7 +2440,22 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 guideUnderPreview ? picturesSlide.onTransitionEnd : undefined
               }
             >
-              <GenerateImagePane {...imagePaneProps} />
+              {classicImages ? (
+                <GenerateImagePane {...imagePaneProps} />
+              ) : (
+                <ImagesTab
+                  uploadImage={uploadImage}
+                  onDeleteImage={handleDeleteImage}
+                  lockedImageType={levelProperties.levelMode?.imageType}
+                  lockedImageSubject={levelProperties.levelMode?.imageSubject}
+                  imageRole={levelProperties.levelMode?.imageRole}
+                  generationsLeft={generationsLeft}
+                  onGenerate={countGeneration}
+                  editingOffered={isFreeplayMode(levelProperties.levelMode)}
+                  verdictRequired={imagePaneProps.verdictRequired}
+                  paneWidth={previewWidth}
+                />
+              )}
             </div>
           )}
           {worldTabEnabled && worldMounted && (
@@ -2481,9 +2484,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 only={paletteOnly}
                 selected={worldPaletteSelection}
                 onSelect={choosePaletteSelection}
-                onNewPicture={
-                  picturesOffered ? handleNewWorldPicture : undefined
-                }
               />
             </div>
           )}

@@ -6,6 +6,7 @@ import {AnyAction, Dispatch} from 'redux';
 import {
   addAnimation,
   isNameUnique,
+  SET_INITIAL_ANIMATION_LIST,
   setAnimationName,
 } from '@cdo/apps/p5lab/redux/animationList';
 import {
@@ -17,6 +18,8 @@ import {AnimationPoses} from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations
 import {PixelEditorSaveMeta} from '@cdo/apps/pixelEditor/PixelEditor';
 import {getStore} from '@cdo/apps/redux';
 import {createUuid} from '@cdo/apps/utils';
+
+import {trimAnimationListImages} from '../imageTrim';
 
 // The animation fields the save paths write. An explicit `undefined`
 // clears the field (the spread keeps the key).
@@ -108,4 +111,33 @@ export async function uploadOrEmbed(
   } catch {
     return dataURI;
   }
+}
+
+/**
+ * Point an existing animation at new pixels and refresh its thumbnails.
+ * Uses the raw list-replace action because the classic edit action clears
+ * sourceUrl, which is what Lab2 saves. Returns the file URL the change
+ * replaced.
+ */
+export function repointAnimation(
+  dispatch: Dispatch,
+  key: string,
+  changes: AnimationPatch
+): string | undefined {
+  const current = getStore().getState().animationList;
+  const updated = {
+    orderedKeys: current.orderedKeys,
+    propsByKey: {
+      ...current.propsByKey,
+      [key]: {
+        ...current.propsByKey[key],
+        ...changes,
+        loadedFromSource: true,
+        saved: false,
+      },
+    },
+  };
+  dispatch({type: SET_INITIAL_ANIMATION_LIST, animationList: updated});
+  trimAnimationListImages(updated);
+  return current.propsByKey[key]?.sourceUrl;
 }
