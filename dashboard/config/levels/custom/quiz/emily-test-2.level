@@ -1,0 +1,19 @@
+<Quiz>
+  <config><![CDATA[{
+  "game_id": 76,
+  "created_at": "2026-10-19T19:13:27.000Z",
+  "level_num": "custom",
+  "user_id": 10263,
+  "properties": {
+    "show_correctness": true,
+    "reveal_answer_explanation": true,
+    "purpose": "practice",
+    "allow_multiple_attempts": true,
+    "show_questions_after_submit": true
+  },
+  "published": true,
+  "placements": [
+
+  ]
+}]]></config>
+</Quiz>

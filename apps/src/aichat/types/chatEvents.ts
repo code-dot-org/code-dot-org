@@ -101,9 +101,16 @@ export interface Notification extends BaseChatEvent {
     | 'error'
     | 'success'
     | 'welcomeMessage'
+    /** Posted by the chat's host through its handle; shown as the tutor speaking. */
+    | 'hostMessage'
+    /** Posted by the chat's host; shown as a neutral or cautionary alert. */
+    | 'info'
+    | 'warning'
     | typeof AI_TUTOR_VERSION_ACTION_ACCEPT
     | typeof AI_TUTOR_VERSION_ACTION_REJECT;
   includeInChatHistory?: boolean;
+  /** Shows the alert without the time it was posted. */
+  hideTimestamp?: boolean;
   files?: ProjectFile[];
   commitDescription?: string;
 }

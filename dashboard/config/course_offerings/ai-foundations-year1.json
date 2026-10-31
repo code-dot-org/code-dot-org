@@ -1,7 +1,7 @@
 {
   "key": "ai-foundations-year1",
   "display_name": "AI Foundations Year 1",
-  "is_featured": false,
+  "is_featured": true,
   "assignable": true,
   "curriculum_type": "Course",
   "marketing_initiative": "AIF",

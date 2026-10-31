@@ -12,9 +12,6 @@ $(document).ready(() => {
     <Provider store={store}>
       <NewDataDocForm />
     </Provider>,
-    document.getElementById('form'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.getElementById('form')
   );
 });

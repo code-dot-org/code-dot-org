@@ -1,0 +1,114 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 64,
+  "created_at": "2026-10-28T00:00:00.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "uses_lab2": "true",
+    "block_pools": [
+      "GamelabJr",
+      "GameDev"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab",
+      "zGameDev"
+    ],
+    "standalone_app_name": "spritelab",
+    "skin": "gamelab",
+    "hide_custom_blocks": true,
+    "hide_share_and_remix": "true",
+    "encrypted": "false",
+    "project_template_level_name": "hoai2026-dev-revised-template",
+    "level_mode": {
+      "kind": "world",
+      "paletteRoles": [
+        "treasure",
+        "block"
+      ]
+    },
+    "starter_images": [
+      {
+        "name": "Ice",
+        "imageType": "block",
+        "role": "block",
+        "src": "/blockly/media/spritelab_lab2/blocks/block-1.png",
+        "frameSize": {
+          "x": 256,
+          "y": 256
+        },
+        "pixelGridSize": 8
+      },
+      {
+        "name": "Stone",
+        "imageType": "block",
+        "role": "block",
+        "src": "/blockly/media/spritelab_lab2/blocks/block-2.png",
+        "frameSize": {
+          "x": 630,
+          "y": 630
+        },
+        "pixelGridSize": 7
+      },
+      {
+        "name": "Lava",
+        "imageType": "block",
+        "role": "block",
+        "src": "/blockly/media/spritelab_lab2/blocks/block-3.png",
+        "frameSize": {
+          "x": 384,
+          "y": 384
+        },
+        "pixelGridSize": 8
+      },
+      {
+        "name": "Grass",
+        "imageType": "block",
+        "role": "block",
+        "src": "/blockly/media/spritelab_lab2/blocks/block-4.png",
+        "frameSize": {
+          "x": 224,
+          "y": 224
+        },
+        "pixelGridSize": 8
+      }
+    ],
+    "pinned_scene": {
+      "id": "scene-1",
+      "name": "Scene 1"
+    },
+    "image_role_defaults": {
+      "sprite": "hero"
+    },
+    "objectives": {
+      "title": "**Make your world**",
+      "items": [
+        {
+          "text": "Click a square to put your treasure somewhere your player can reach.",
+          "check": {
+            "kind": "world",
+            "role": "treasure"
+          }
+        },
+        {
+          "text": "Add some blocks to climb on.",
+          "check": {
+            "kind": "world",
+            "changed": true
+          }
+        },
+        {
+          "text": "Click **Play** and collect the treasure.",
+          "check": {
+            "kind": "reach",
+            "role": "treasure"
+          }
+        }
+      ]
+    },
+    "long_instructions": "# Make your world\nPut your treasure somewhere your player can reach, and add some blocks to climb on. Then click **Play** and collect the treasure.",
+    "header_label": "Make your world"
+  }
+}]]></config>
+</GamelabJr>

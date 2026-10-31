@@ -43,12 +43,24 @@ class GamelabJr < Gamelab
     image_role_defaults
     add_blocks
     pinned_scene
+    extra_scene
     world_start_pattern
-    guide_steps
+    starter_images
+    callouts
+    objectives
+    block_catalog
+    no_project
   )
 
   def shared_blocks
     Block.for(*block_pools.presence || type)
+  end
+
+  # A level whose content is all its own (a demo to play, say) runs with no
+  # project: nothing the student does there is saved.
+  def channel_backed?
+    return false if properties['no_project'].to_s == 'true'
+    super
   end
 
   # Lab2 Sprite Lab starter assets are always uploaded by UUID.

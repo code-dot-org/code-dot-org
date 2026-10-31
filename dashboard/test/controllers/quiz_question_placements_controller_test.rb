@@ -60,8 +60,48 @@ class QuizQuestionPlacementsControllerTest < ActionController::TestCase
     question = MultipleChoiceQuestion.find(body['id'])
     assert_equal 'New question', question.name
     assert_equal 'b', question.content['correct_choice_id']
+    refute question.content.key?('description')
     placement = @quiz.placements.find_by!(quiz_question_id: question.id)
     assert_equal 3, placement.position
+  end
+
+  test "create makes a multiple select question with its correct choice ids" do
+    post :create, params: {
+      level_id: @quiz.id,
+      type: 'MultipleSelectQuestion',
+      questionName: 'Evens',
+      questionTitle: 'Which of these are even?',
+      choices: [{id: 'a', text: '2'}, {id: 'b', text: '3'}, {id: 'c', text: '4'}],
+      correctChoiceIds: ['a', 'c'],
+      page: 1
+    }
+
+    assert_response :created
+    body = JSON.parse(response.body)
+    assert_equal ['a', 'c'], body['correctChoiceIds']
+    question = MultipleSelectQuestion.find(body['id'])
+    assert_equal ['a', 'c'], question.content['correct_choice_ids']
+  end
+
+  test "create makes a match question with its pairs" do
+    pairs = [
+      {id: 'p1', items: [{id: 'a', text: '1 + 1'}, {id: 'x', text: '2'}]},
+      {id: 'p2', items: [{id: 'b', text: '2 + 1'}, {id: 'y', text: '3'}]},
+    ]
+    post :create, as: :json, params: {
+      level_id: @quiz.id,
+      type: 'MatchQuestion',
+      questionName: 'Sums',
+      questionTitle: 'Match each expression to its value.',
+      pairs: pairs,
+      page: 1
+    }
+
+    assert_response :created
+    body = JSON.parse(response.body)
+    assert_equal pairs.map(&:deep_stringify_keys), body['pairs']
+    question = MatchQuestion.find(body['id'])
+    assert_equal pairs.map(&:deep_stringify_keys), question.content['pairs']
   end
 
   test "create returns bad_request when required fields are missing" do

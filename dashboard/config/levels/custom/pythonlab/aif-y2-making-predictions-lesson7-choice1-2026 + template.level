@@ -1,0 +1,46 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-10-12T19:57:44.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "from sklearn.model_selection import train_test_split\nfrom sklearn.neighbors import KNeighborsClassifier\n\n# Input features: [brightness (mag), angular_velocity (arcsec/s), angular_size (arcsec), color_index]\ninputs = [\n  [4.2, 0.03, 0.8, 0.60],\n  [4.1, 25000.0, 0.6, 0.18],\n  [10.4, 0.00, 30.0, 0.85],\n  [2.8, 12000.0, 0.4, 0.20],\n  [5.9, 250.0, 0.9, 0.70],\n  [11.8, 0.00, 26.0, 0.90],\n  [2.9, 18000.0, 0.5, 0.24],\n  [5.5, 320.0, 0.85, 0.65],\n  [3.6, 300.0, 0.5, 0.22],\n  [12.0, 0.00, 18.0, 1.05],\n  [4.8, 0.01, 0.7, 0.55],\n  [11.2, 0.00, 22.0, 0.95],\n  [3.2, 400.0, 0.45, 0.16],\n  [10.9, 0.00, 20.0, 0.88],\n  [6.7, 0.02, 1.1, 0.40]\n]\n\noutputs = [\n  \"star\",\n  \"meteor\",\n  \"galaxy\",\n  \"meteor\",\n  \"star\",\n  \"galaxy\",\n  \"meteor\",\n  \"star\",\n  \"meteor\",\n  \"galaxy\",\n  \"star\",\n  \"galaxy\",\n  \"meteor\",\n  \"galaxy\",\n  \"star\"\n]\n\n# Split into training and testing data\ntrain_inputs, test_inputs, train_outputs, test_outputs = train_test_split(\n  inputs,\n  outputs,\n  test_size=0.4,\n)\n\n# TODO 1: Configure the classifier using KNeighborsClassifier\n# TODO 2: Train the model with model.fit\n\n# TODO 3: Compute the accuracy using model.score() and print it out\n# TODO 4: Classify this new, unknown object and print out the prediction\nunknown_object = [[4.2, 28000.0, 0.4, 0.25]]",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-12 19:58:18 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-12 19:58:25 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-14 03:19:25 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>

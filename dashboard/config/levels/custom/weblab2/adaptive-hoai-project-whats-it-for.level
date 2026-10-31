@@ -1,0 +1,13 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-10-10T00:53:29.000Z",
+  "level_num": "custom",
+  "properties": {
+    "project_template_level_name": "adaptive-hoai-template",
+    "hide_share_and_remix": true,
+    "long_instructions": "**Do This**\n\n1.  Look at your page like a first-time visitor.\n2.  Ask each question and see if your page answers it:\n\n      - Hero section: What is this site?\n      - Feature cards: What can I get here?\n      - Interactive canvas: What can I try?\n      - Call-to-action: What should I do next?\n3.  Pick at least two blocks that don’t answer their question yet.\n4.  Change them so they do. Ask the AI or edit them yourself.\n5.  Look at your page again. Would a visitor get an answer now?\n\nMissing a block? Add it so your page answers that question."
+  },
+  "published": true
+}]]></config>
+</Weblab2>

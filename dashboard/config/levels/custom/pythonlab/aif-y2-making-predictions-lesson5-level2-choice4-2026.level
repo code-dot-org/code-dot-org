@@ -1,0 +1,40 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-10-11T00:25:36.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Going Viral (Or Not)",
+    "project_template_level_name": "aif-y2-making-predictions-lesson5-choice4-2026 + template",
+    "long_instructions": "**☑️ Do This:**\r\n\r\n- Fit the model by calling `model.fit` with `train_inputs` and `train_outputs`.\r\n- Measure your model’s loss. First, call `model.predict` with `test_inputs`. Then, calculate the mean squared error of those predictions against the `test_outputs`.\r\n- Print your model’s loss. \r\n\r\n\r\n**💻 Coding Tip**\r\n\r\nRemember you can fit a model with:\r\n\r\n```\r\nmodel.fit(train_inputs, train_outputs)\r\n```\r\n\r\nTo measure your model’s loss on the test data, first use the fitted model to make predictions from the test inputs.\r\n\r\n```\r\npredictions = model.predict(test_inputs)\r\n```\r\n\r\nThen, compute the mean squared error by comparing those predictions with the actual test outputs.\r\n\r\n```\r\nmse = mean_squared_error(test_outputs, predictions)\r\n```\r\n\r\nConsider rounding the result as you print it.\r\n\r\n```\r\nprint(round(mse, 2))\r\n```\r\n",
+    "bubble_choice_description": "Help a student predict whether a post will go viral.",
+    "thumbnail_url": "https://images.code.org/641892d3517949b373ce013cbcb73fad-going-viral.jpg",
+    "offer_browser_tts": "false",
+    "submittable": "true",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "debug",
+        "documentation",
+        "explainCode",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFX9JcY0EP21afMHISj6uVQg4g+59OIzUb4pa2W4J\nrpgF4fJi2rLr0nr8WnSVq0386eA0D+Fr2XW/3W5uJDibTY5Jehng2iGzFCms\nv2l5+xM9oZ6hxgrQlULBkvlBzRmhL/IM3xBdr14hS98pXyi8FhxbwDmMSqfq\nSh4UBtu6bcqe0AKH+Qmt92xJLGQFRVZK9MiqKjZd/4ijaXGE2OZkCOwI+Lr4\nuqEKuCu9MK+zQ8LsdgQ6RbTAtkM6bzj8Grlot3W006IpE4uSQGAcsxwC9ALJ\n5TcVUbyZXZ8mMz5Xo/YElrnCoIQ1UnmOYN8JvFLJFKxwZI9V1Du2VZHYtgp4\nAV5Q9t64F04RGHvmXw9kYTyUHY+E9JcUf8CkbY5+Q22tpz+ooOkuwV9dFPk+\nAr6hevK32IqLZ/1LC2r3dFdP6uVqClruge5Z+nSb+BAXG+bkgj08ejv78j9K\nzn8GQVexvjbBduxzxIeDPw3K/GptgmPwKsGeaAwjTbi+tu6hJizOiyapdhOJ\nUMd55SMYHmmx8VVtODYZQ/MIynhrk4hvoNv7+AV+GkVkL7UuVOLKwTa+ijFW\n3YyJ2EvuYJ+qgIu/Q+REqAnW9HS0njeRu24zaNrdbGL/Urx6Nb1XP9MLTsss\nL4ojW5kdFi+SyZ3fGLVNS1riarJvcj07W2fF6iXx48m4JNWyvoHrdn6v2W7C\nVN20lqQUqp8SJoq+lL/GrcBUHN9pLGliAhNKw3shW5iukE5XkzI0W8pXYdr4\nuDxa8s3UEVt2E71mvzKg69qadUnHx+x4nv4D8LqXFXnLHBMKUVUHU6QJgzzv\nM3VPW+iNVXckJLTzZFpKeFy9srNJ5dRNCwAhsHhlJEyMAqoP4nIM75fdNqBl\nnXPKAbd6aC0pZKd+9dx10HZKr415NNKfBPc0jz01pcOStAeq3m4NmvyLyNs6\nfzuwwzrF0qnpazMdXL4avMNJwIpFUqWrZSaet0LNoF2mbyD1ZvlMej0mmk9a\n0Vu6y4TC1oLcAkffWW7aQqAW5Xb4PF4zd5ZxPlAlQ6549hZkpLnhOZFa61J/\nneUlS9PRNVRa9Ir6sD4Ii8pL+gL47c9A93YK7POoHJBemkZxa2HDYY53htch\nmZp3L/+Rrb7uXqyE4xnNOeJhnkq/k0izGRAddnmfNKuCTjGYOxwoMHmiYQ10\nDDhJyvxZGbzty5tHAaIOL+cZMu2/QqkwoVcrb9JceEvKVj9zJBMu7tfKdMsp\nxXuAG2BNL+0xAQX3rMtQLaO/XvuVnmBKQB4YxvkAD3DvNMVI1gOj0JMFWwCY\nbTMqxXPZGRUNHullsmBjjnwUQkOckyyLjphR+tiGT76sqSclWkncqVhxE4O2\n0wS79bKxYNkbMA9GnEspAM5tJmTKUI5sDnJMmWb35zp7Df/VjtbobxItvHMx\nmlXQDLmwFyLGzbQOhtmuxQC9H1xdIs7WkYxz+GBIbLmngQIcCkREXT7lhIWo\nFNAp9j+e7efSeYY1UaHOIqvGIAKh/XEofRpvz/ysq90tW55cDGO8+XcwYqlk\noOIpPJwjI5czr0NVxcb08p5eqkIuwSG7ti3kmksFz9NIAd6xM4WnefvDMuz0\na5FAFbJFzfaptsWHnbngMTbMCK7nfvfOkdCo9Pp7x/phI9nQKstxFGsHS3K9\n9yExyzQpJndmFZw6ewj8a9SFd6xbQZwjszDhzm7iXQ4MKmmT9dY/JV5TXz4i\nyvh9euERD7p7pCFea19++WTXgQOv9yUzH6UQZCBuBTikH9w4WOjSBOttIemD\ngQRLkC/ygV32mZ7MTX9UTv478oRmugr1wq+/g8/Dsy0hkPwhC2hqKx+UfV31\nouPv70qh2bB2EqPrIA==\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-10-11 00:35:17 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-11 00:37:02 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-11 00:44:05 +0000\",\"changed\":[\"submittable\",\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

@@ -9,7 +9,5 @@ document.addEventListener('DOMContentLoaded', () => {
   document.body.appendChild(mountPoint);
 
   updateQueryParam('showSectionCreationDialog', undefined, true);
-  createReactRoot(<SectionCreationCelebrationDialog />, mountPoint, {
-    legacyReactDomRender: true,
-  });
+  createReactRoot(<SectionCreationCelebrationDialog />, mountPoint);
 });

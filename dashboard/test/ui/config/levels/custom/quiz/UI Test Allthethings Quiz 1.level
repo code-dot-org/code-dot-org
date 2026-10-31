@@ -13,6 +13,7 @@
     "allow_multiple_attempts": true
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-09-21T17:16:27.104+00:00\",\"changed\":[\"cloned from \\\"Allthethings Quiz 1\\\"\"],\"cloned_from\":\"Allthethings Quiz 1\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-09-21T17:16:27.104+00:00\",\"changed\":[\"cloned from \\\"Allthethings Quiz 1\\\"\"],\"cloned_from\":\"Allthethings Quiz 1\"}]",
+  "placements": []
 }]]></config>
 </Quiz>

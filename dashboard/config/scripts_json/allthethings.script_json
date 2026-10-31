@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-09-21 17:11:19 UTC",
+    "serialized_at": "2026-10-29 19:32:10 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -967,6 +967,21 @@
         "lesson_group.key": "",
         "script.name": "allthethings"
       }
+    },
+    {
+      "key": "lesson-63",
+      "name": "Sprite Lab2",
+      "absolute_position": 63,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 60,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-63",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
     }
   ],
   "lesson_activities": [
@@ -1759,6 +1774,18 @@
         "lesson_group.key": "",
         "script.name": "allthethings"
       }
+    },
+    {
+      "key": "e2889899-2314-4859-96d7-c455f6bb48bd",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e2889899-2314-4859-96d7-c455f6bb48bd",
+        "lesson.key": "lesson-63",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
     }
   ],
   "activity_sections": [
@@ -2380,6 +2407,16 @@
       "seeding_key": {
         "activity_section.key": "cd9ce499-9d29-4e05-a0da-683a036e7b99",
         "lesson_activity.key": "34827a8c-b3e6-443b-8b48-ebc1b4edd68e"
+      }
+    },
+    {
+      "key": "7e44e776-bcd5-4e43-9855-6a5e70db8f0c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "7e44e776-bcd5-4e43-9855-6a5e70db8f0c",
+        "lesson_activity.key": "e2889899-2314-4859-96d7-c455f6bb48bd"
       }
     }
   ],
@@ -8484,6 +8521,30 @@
     },
     {
       "chapter": 255,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Allthethings AI Lab Lab2 Decision Tree"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Allthethings AI Lab Lab2 Decision Tree"
+        ],
+        "lesson.key": "lesson-60",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "690b02ba-ac90-4d29-ae32-767d59f0b964"
+      },
+      "level_keys": [
+        "Allthethings AI Lab Lab2 Decision Tree"
+      ]
+    },
+    {
+      "chapter": 256,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8507,7 +8568,7 @@
       ]
     },
     {
-      "chapter": 256,
+      "chapter": 257,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -8531,7 +8592,7 @@
       ]
     },
     {
-      "chapter": 257,
+      "chapter": 258,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -8555,7 +8616,7 @@
       ]
     },
     {
-      "chapter": 258,
+      "chapter": 259,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -8579,7 +8640,7 @@
       ]
     },
     {
-      "chapter": 259,
+      "chapter": 260,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8603,7 +8664,7 @@
       ]
     },
     {
-      "chapter": 260,
+      "chapter": 261,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -8624,6 +8685,27 @@
       },
       "level_keys": [
         "Allthethings Quiz 2"
+      ]
+    },
+    {
+      "chapter": 262,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Allthethings SpriteLab2 Sandbox"
+        ],
+        "lesson.key": "lesson-63",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "7e44e776-bcd5-4e43-9855-6a5e70db8f0c"
+      },
+      "level_keys": [
+        "Allthethings SpriteLab2 Sandbox"
       ]
     }
   ],
@@ -11678,6 +11760,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "Allthethings AI Lab Lab2 Decision Tree",
+        "script_level.level_keys": [
+          "Allthethings AI Lab Lab2 Decision Tree"
+        ],
+        "lesson.key": "lesson-60",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "690b02ba-ac90-4d29-ae32-767d59f0b964"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "Lab2 Bubble Choice Progression 1",
         "script_level.level_keys": [
           "Lab2 Bubble Choice Progression 1"
@@ -11746,6 +11840,18 @@
         "lesson_group.key": "",
         "script.name": "allthethings",
         "activity_section.key": "cd9ce499-9d29-4e05-a0da-683a036e7b99"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Allthethings SpriteLab2 Sandbox",
+        "script_level.level_keys": [
+          "Allthethings SpriteLab2 Sandbox"
+        ],
+        "lesson.key": "lesson-63",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "7e44e776-bcd5-4e43-9855-6a5e70db8f0c"
       }
     }
   ],

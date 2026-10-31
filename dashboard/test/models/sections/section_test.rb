@@ -100,6 +100,14 @@ class SectionTest < ActiveSupport::TestCase
     assert student.sharing_disabled?
   end
 
+  test 'adding teacher as participant preserves their share setting when section share is disabled' do
+    section = create(:section, sharing_disabled: true)
+    teacher = create(:teacher)
+
+    assert_equal Section::ADD_STUDENT_SUCCESS, section.add_student(teacher)
+    refute teacher.reload.sharing_disabled?
+  end
+
   test 'removing a student from their last section enables student sharing when over 13' do
     section1 = Section.create @default_attrs
     section1.sharing_disabled = true

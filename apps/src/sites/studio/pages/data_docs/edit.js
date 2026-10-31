@@ -18,9 +18,6 @@ $(document).ready(() => {
         originalDataDocContent={dataDocContent}
       />
     </Provider>,
-    document.getElementById('edit-data-doc'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.getElementById('edit-data-doc')
   );
 });
