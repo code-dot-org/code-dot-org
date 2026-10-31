@@ -37,7 +37,7 @@ module User::AiAccessible
   end
 
   def can_use_aichat_model?(model_id)
-    provider = AI_CHAT_MODEL_PROVIDERS[model_id]
+    provider = AI_CHAT_PROVIDER_BY_MODEL_ID[model_id]
     provider.nil? || blocked_aichat_providers.exclude?(provider)
   end
 

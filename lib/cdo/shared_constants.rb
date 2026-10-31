@@ -893,7 +893,7 @@ module SharedConstants
   }
 
   # Models absent here (Mistral, served from SageMaker) are never blocked.
-  AI_CHAT_MODEL_PROVIDERS = AI_CHAT_GEMINI_MODEL_IDS.to_h {|id| [id, AI_CHAT_PROVIDERS[:GOOGLE]]}.
+  AI_CHAT_PROVIDER_BY_MODEL_ID = AI_CHAT_GEMINI_MODEL_IDS.to_h {|id| [id, AI_CHAT_PROVIDERS[:GOOGLE]]}.
     merge(AI_CHAT_MODEL_IDS[:CHATGPT] => AI_CHAT_PROVIDERS[:OPENAI]).
     freeze
 
@@ -901,7 +901,7 @@ module SharedConstants
   AI_CHAT_US_ONLY_PROVIDERS = [AI_CHAT_PROVIDERS[:GOOGLE]].freeze
 
   # For Level's SQL scope, which matches on model id.
-  AI_CHAT_US_ONLY_MODEL_IDS = AI_CHAT_MODEL_PROVIDERS.
+  AI_CHAT_US_ONLY_MODEL_IDS = AI_CHAT_PROVIDER_BY_MODEL_ID.
     select {|_, provider| AI_CHAT_US_ONLY_PROVIDERS.include?(provider)}.
     keys.
     freeze
