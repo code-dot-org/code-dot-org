@@ -39,7 +39,8 @@ class AiGatewayAuthController < ApplicationController
 
     blocked_providers = current_user.blocked_aichat_providers
 
-    # Until the gateway rejects blocked providers itself, we keep blocking token minting entirely.
+    # Until the gateway handles blocked providers and rejects or falls back to another provider,
+    # we keep blocking token minting entirely.
     if blocked_providers.any? && !DCDO.get('ai_gateway_enforces_blocked_providers', false)
       return render status: :forbidden, json: {user_type: current_user.user_type, error: AichatRequestsController::MODEL_REGION_BLOCKED_ERROR}
     end
@@ -70,9 +71,7 @@ class AiGatewayAuthController < ApplicationController
         channel_id: aichat_context[:channelId],
         lesson_id: aichat_context[:lessonId],
         turnstile_enforcement_mode: enforcement_mode,
-        # Omitted when nothing is blocked, which is nearly every token. Absent
-        # and empty both mean "unrestricted", so the gateway can treat a missing
-        # claim as no restriction and tokens minted by older dashboards stay valid.
+        # Omitted when nothing is blocked. Absent and empty both mean "unrestricted".
         **(blocked_providers.any? ? {blocked_providers: blocked_providers} : {}),
       },
       OpenSSL::PKey::RSA.new(PRIVATE_KEY, PASSPHRASE),

@@ -885,8 +885,6 @@ module SharedConstants
     AI_CHAT_MODEL_IDS[:GEMINI_3_1_FLASH_IMAGE],
   ].freeze
 
-  # Must match the provider names the AI gateway routes to; they travel in its
-  # access token as the blocked_providers claim.
   AI_CHAT_PROVIDERS = {
     GOOGLE: "google",
     OPENAI: "openai",
@@ -897,7 +895,7 @@ module SharedConstants
     merge(AI_CHAT_MODEL_IDS[:CHATGPT] => AI_CHAT_PROVIDERS[:OPENAI]).
     freeze
 
-  # Unavailable to users outside the US, per our agreement with Google.
+  # Unavailable to users outside the US
   AI_CHAT_US_ONLY_PROVIDERS = [AI_CHAT_PROVIDERS[:GOOGLE]].freeze
 
   # For Level's SQL scope, which matches on model id.
