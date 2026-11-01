@@ -132,15 +132,17 @@ $pad: 16px;
   image-rendering: pixelated;
 }
 
-// The middle column is a grey well, set off from the list and the pane.
+// The middle column is a grey well, set off from the list and the pane,
+// running the full height of the tab: it takes back the tab's own
+// top and bottom padding and keeps the frame where it was.
 .frameWell {
   display: flex;
   flex: 1 1 0;
   box-sizing: border-box;
   min-width: 0;
   min-height: 0;
-  padding: 16px;
-  border-radius: 12px;
+  margin: -$pad 0;
+  padding: $pad 16px;
   background-color: var(--background-neutral-secondary);
 }
 
