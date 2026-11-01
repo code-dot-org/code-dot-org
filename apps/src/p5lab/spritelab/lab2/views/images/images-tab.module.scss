@@ -38,9 +38,20 @@ $pad: 16px;
   min-height: 36px;
 }
 
+// The name over its count, with the plus at the right.
 .listTitle {
   flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.listName,
+.listCount {
   margin: 0;
+}
+
+.listCount {
   color: var(--text-neutral-quaternary);
 }
 

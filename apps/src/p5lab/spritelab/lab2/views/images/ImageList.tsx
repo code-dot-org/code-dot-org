@@ -93,13 +93,22 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
   return (
     <section className={styles.list} aria-label="Your images">
       <div className={styles.listHeader}>
-        <MuiTypography
-          component="h3"
-          variant="overline2"
-          className={styles.listTitle}
-        >
-          Your images
-        </MuiTypography>
+        <div className={styles.listTitle}>
+          <MuiTypography
+            component="h3"
+            variant="h6"
+            className={styles.listName}
+          >
+            Your images
+          </MuiTypography>
+          <MuiTypography
+            component="p"
+            variant="body3"
+            className={styles.listCount}
+          >
+            {images.length} {images.length === 1 ? 'image' : 'images'}
+          </MuiTypography>
+        </div>
         {onNew && (
           <ActionDropdown
             key={menuKey}

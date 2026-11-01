@@ -32,6 +32,11 @@ describe('ImageList', () => {
     expect(
       screen.getAllByRole('heading', {level: 4}).map(h => h.textContent)
     ).toEqual(['Characters', 'Objects', 'Backgrounds']);
+    expect(screen.getByRole('heading', {level: 3}).textContent).toBe(
+      'Your images'
+    );
+    // The count leaves the draft out.
+    expect(screen.getByText('3 images')).toBeTruthy();
     const list = screen.getByRole('region', {name: 'Your images'});
     const order = [...list.querySelectorAll('h4, button[aria-label]')].map(
       el => el.getAttribute('aria-label') ?? el.textContent
