@@ -258,7 +258,6 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
             <>
               <ImageFrame
                 image={chosenImage}
-                draftKind={chosenDraft ?? undefined}
                 live={
                   parts.mode === 'generating' || parts.frameFilled
                     ? parts.frame

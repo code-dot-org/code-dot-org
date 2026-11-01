@@ -1,13 +1,10 @@
-// The tab's middle: the chosen image large, or the outline of the one
+// The tab's middle: the chosen image large, or the empty frame of the one
 // about to be made, with the session's other pictures down its left and
 // the way behind the scenes under it.
 
 import classNames from 'classnames';
 import React, {useLayoutEffect, useRef, useState} from 'react';
 
-import characterOutline from '@cdo/static/spritelab_lab2/character-outline.svg';
-
-import {ImageSubject, ImageType} from '../../ai/images/types';
 import AnimatedSheetPreview from '../AnimatedSheetPreview';
 
 import {ProjectImage} from './projectImages';
@@ -17,8 +14,6 @@ import styles from './images-tab.module.scss';
 interface ImageFrameProps {
   /** The chosen image, when it exists. */
   image: ProjectImage | null;
-  /** The kind being made, for the outline shown before there are pixels. */
-  draftKind?: {imageType: ImageType; subject?: ImageSubject};
   /** The scene's own frame contents, which win while a picture is being
       made or has just been made. */
   live?: React.ReactNode;
@@ -33,7 +28,6 @@ const UNDER_PX = 56;
 
 const ImageFrame: React.FunctionComponent<ImageFrameProps> = ({
   image,
-  draftKind,
   live,
   beside,
   under,
@@ -60,10 +54,6 @@ const ImageFrame: React.FunctionComponent<ImageFrameProps> = ({
     return () => observer.disconnect();
   }, []);
   const filled = !!live || !!image;
-  const outlineCharacter =
-    !filled &&
-    draftKind?.imageType === 'sprite' &&
-    draftKind.subject !== 'object';
   return (
     <div ref={columnRef} className={styles.frameColumn}>
       <div className={styles.frameRow} style={{height: side}}>
@@ -88,11 +78,7 @@ const ImageFrame: React.FunctionComponent<ImageFrameProps> = ({
                   image.pixelated && styles.pixelArt
                 )}
               />
-            ) : (
-              outlineCharacter && (
-                <img src={characterOutline} alt="" className={styles.outline} />
-              )
-            ))}
+            ) : null)}
         </div>
       </div>
       <div className={styles.under}>{under}</div>

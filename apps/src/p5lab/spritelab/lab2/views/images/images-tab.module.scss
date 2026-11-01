@@ -159,14 +159,6 @@ $pad: 16px;
   object-fit: contain;
 }
 
-// The dotted figure a character is drawn over.
-.outline {
-  width: 84%;
-  height: 84%;
-  object-fit: contain;
-  opacity: 0.6;
-}
-
 .under {
   display: flex;
   justify-content: flex-end;
