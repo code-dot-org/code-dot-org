@@ -206,13 +206,15 @@ eventValue$2;` and the console prints the 7 the create handler emits.
   with it.
 - **Reads outside their binding, found on the way**, which the exception
   had not covered either. Teleport set `here` with `set` in two bodies
-  whose `let here` was elsewhere; both are `let`s now. Two remain, each
-  wanting a binding the lab does not have, and named in the content check
+  whose `let here` was elsewhere; both are `let`s now. Two more wanted
+  a binding the lab did not have. Collisions began `found`, `arrived` and
+  `left` with `empty`, and an actor set had no value to start a `let` at:
+  `no actors` is that value, in the Actor drawer, and each body now opens
+  with `let actor found be no actors`. Path's `queue` and `seen` are lists,
+  and there was no `let list`: there is now, in Variables after
+  `let actor`, starting at `create empty list`. The content check
   (`repositoryBindings.test`, "read every variable inside a binding of
-  it"): Collisions fills `found`, `arrived` and `left` with `clear` and
-  `push` blocks, and an actor list has no `let`; Path's `queue` and `seen`
-  are lists, and there is no `let list`. A getter of any of them draws
-  `???` in the editor, as it did before.
+  it") allows no exceptions.
 - **A named `add actor` is a binding**, found the same way: Meteors named
   `ball` with `add actor … as ⟨ball⟩`, which was not one. It binds over
   its `do`, the only place the generated `const` reaches, and its name is

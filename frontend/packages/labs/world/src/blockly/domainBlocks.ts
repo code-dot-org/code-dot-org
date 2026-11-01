@@ -4056,7 +4056,7 @@ const nameField = (variable: {
  * reading it could not agree on.
  */
 const localDeclaration = (
-  kind: 'number' | 'angle' | 'word' | 'vector' | 'actor' | 'boolean',
+  kind: 'number' | 'angle' | 'word' | 'vector' | 'actor' | 'boolean' | 'list',
   variable: {field: (name: string) => BlockArgDefinition},
   check: string | undefined,
   shadow: ShadowSpec | undefined,
@@ -4146,6 +4146,10 @@ const worldLetActor = localDeclaration(
   'Actor',
   undefined,
 );
+/** `let list ⟨items⟩ be ⟨empty list⟩`: a working list, made empty first. */
+const worldLetList = localDeclaration('list', ListVariable, 'Array', {
+  type: 'lists_create_empty',
+});
 const worldLetBoolean = localDeclaration(
   'boolean',
   BooleanVariable,
@@ -4186,6 +4190,7 @@ const LET_BLOCKS: string[] = [
   'world_let_vector',
   'world_let_position',
   'world_let_actor',
+  'world_let_list',
 ];
 
 const worldLetPosition = defineBlock({
@@ -5646,6 +5651,20 @@ const worldPushActor = defineBlock({
       const list = generator.getVariableName(block.getFieldValue('LIST'));
       const target = actorTarget(block, generator);
       return `${list} = WorldLab.pushed(${list}, ${oneActor(target)});\n`;
+    },
+  },
+});
+
+/** A set of actors with nobody in it, as a value: what `let` starts one at. */
+const worldNoActors = defineBlock({
+  type: 'world_no_actors',
+  message0: 'no actors',
+  output: 'Actor',
+  style: 'sprite_blocks',
+  tooltip: 'A group with no actors in it yet.',
+  generator: {
+    javascript() {
+      return ['[]', Order.ATOMIC] as [string, number];
     },
   },
 });
@@ -10424,6 +10443,7 @@ export const DOMAIN_BLOCKS = [
   worldLetVector,
   worldLetPosition,
   worldLetActor,
+  worldLetList,
   worldLetBoolean,
   worldForEachWord,
   worldForEachPlace,
@@ -10462,6 +10482,7 @@ export const DOMAIN_BLOCKS = [
   worldTime,
   worldViewSize,
   worldPushActor,
+  worldNoActors,
   worldClearActors,
   worldCountActors,
   worldCountOfKind,
@@ -10692,6 +10713,7 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       'world_same_actor',
       'world_extreme_actor',
       // Building a group up, and asking about one.
+      'world_no_actors',
       'world_push_actor',
       'world_clear_actors',
       'world_count_actors',

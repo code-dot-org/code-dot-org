@@ -204,7 +204,7 @@ key` exists because "what changed this frame" is what a rule cannot work out
    else goes through `WorldLab.all`. A real `for … of` either way, because a
    body may `return` out of the query it is in.
 3. ✅ `all actors` (step 2) and `any ⟨Kind ▾⟩`'s second compilation (step 1).
-4. **Building one.** ✅ `add ⟨actor⟩ to ⟨var⟩`, `empty ⟨var⟩`,
+4. **Building one.** ✅ `no actors`, `add ⟨actor⟩ to ⟨var⟩`, `empty ⟨var⟩`,
    `how many actors in ⟨…⟩`, `⟨actor⟩ is in ⟨…⟩`. The variable is a FIELD on the
    first two, because they change what a variable HOLDS and a socket hands over
    a value rather than a place to put one.

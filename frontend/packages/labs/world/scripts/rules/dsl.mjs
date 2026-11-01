@@ -228,6 +228,9 @@ export const lastOf = list => ({
 /** `an empty list` — what a list is set back to. */
 export const emptyList = () => ({type: 'lists_create_empty'});
 
+/** `no actors` — a group with nobody in it. */
+export const noActors = () => ({type: 'world_no_actors'});
+
 /** `how many in <list>`. */
 export const countIn = list => ({
   type: 'lists_length',
@@ -485,18 +488,14 @@ export const when = (branches, otherwise) => {
  * so both live here — the committed `cameraConfined` had the two disagreeing,
  * which showed up nowhere because the map won.
  */
-/**
- * The `let` block that DECLARES each flavour, by the variable type it binds.
- *
- * `List` has none: the lab offers no `let list`, so a rule wanting one still
- * writes it the old way and `let` is simply not available to it.
- */
+/** The `let` block that DECLARES each flavour, by the variable type it binds. */
 const LET_BLOCK = {
   Number: 'world_let_number',
   String: 'world_let_word',
   Boolean: 'world_let_boolean',
   Vector: 'world_let_vector',
   Actor: 'world_let_actor',
+  List: 'world_let_list',
 };
 
 function makeLocal(id, name, type) {
@@ -1293,6 +1292,7 @@ export const BINDING_BLOCKS = {
   world_let_vector: LET_OVER,
   world_let_position: LET_OVER,
   world_let_actor: LET_OVER,
+  world_let_list: LET_OVER,
   world_for_each: LOOP_OVER,
   world_for_each_number: LOOP_OVER,
   world_for_each_word: LOOP_OVER,

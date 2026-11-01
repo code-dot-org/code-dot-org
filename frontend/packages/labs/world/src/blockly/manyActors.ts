@@ -50,6 +50,8 @@ const MANY_BY_TYPE = new Set([
   // (specs/SPACE_CAMERAS_PLAN.md).
   'world_in_this_space',
   'world_extreme_actor',
+  // None at all, which wants the wrapper as a search matching nothing does.
+  'world_no_actors',
 ]);
 
 /**

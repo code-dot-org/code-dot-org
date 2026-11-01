@@ -184,20 +184,6 @@ function unboundReads(source: string): string[] {
   return [...found];
 }
 
-/**
- * Names written by blocks that bind nothing, and read where nothing binds
- * them. Each wants a binding the lab does not have yet.
- */
-const KNOWN_UNBOUND = new Set([
-  // Filled by `clear` and `push` blocks; an actor list has no `let`.
-  'Collisions_found',
-  'Collisions_arrived',
-  'Collisions_left',
-  // Lists, and there is no `let list`.
-  'Path_queue',
-  'Path_seen',
-]);
-
 const files: Array<[string, string]> = [
   ...STOCK_RULES.map((rule): [string, string] => [
     `stock rule ${rule.id}`,
@@ -239,9 +225,7 @@ describe('the repository’s files', () => {
 
   it('read every variable inside a binding of it', () => {
     const found = files.flatMap(([where, source]) =>
-      unboundReads(source)
-        .filter(id => !KNOWN_UNBOUND.has(id))
-        .map(id => `${where}: ${id}`),
+      unboundReads(source).map(id => `${where}: ${id}`),
     );
     expect(found).toEqual([]);
   });

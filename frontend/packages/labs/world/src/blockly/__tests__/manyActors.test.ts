@@ -60,6 +60,18 @@ describe('manyActorVariables', () => {
     expect([...manyActorVariables(space as never)]).toEqual(['coins']);
   });
 
+  it('names a variable a `let` starts at no actors', () => {
+    const space = workspace([
+      {
+        type: 'world_let_actor',
+        fields: {VAR: 'found'},
+        value: {type: 'world_no_actors'},
+      },
+    ]);
+
+    expect([...manyActorVariables(space as never)]).toEqual(['found']);
+  });
+
   it('carries it along a chain of assignments', () => {
     // `set ⟨a⟩ to ⟨all actors⟩`, then `set ⟨b⟩ to ⟨a⟩`: both hold many, and the
     // second only by way of the first, so one pass would miss it.

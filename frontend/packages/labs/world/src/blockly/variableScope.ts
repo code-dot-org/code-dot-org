@@ -64,6 +64,7 @@ export const BINDERS: Readonly<Record<string, Binder>> = {
   // sibling does (`domainBlocks.worldLetPosition`).
   world_let_position: DECLARATION,
   world_let_actor: DECLARATION,
+  world_let_list: DECLARATION,
   // The loops, which have always bound a name and never said where it reached.
   world_for_each: LOOP,
   world_for_each_number: LOOP,

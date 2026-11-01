@@ -7,6 +7,7 @@ import {
   both,
   axisOf,
   clearActors,
+  noActors,
   defineRule,
   doc,
   equals,
@@ -230,7 +231,7 @@ rule.step('find', 'touch', [
   forEach(body, {
     from: allWithTrait(CanCollide),
     body: [
-      clearActors(found),
+      found.let(noActors()),
       doc(
         'ASKED OF THE WORLD, not walked. Pairing every collider with every other one is n² a frame, and a thousand actors is a million questions; this asks the index for the few whose middles are near enough to be able to overlap, and the test below is the same test it always was.',
       ),
@@ -335,7 +336,7 @@ const untold = rule.local('untold', 'Actor');
 // exactly what steering a ball off a paddle has to survive.
 canCollide.step('notice contacts', 'react', [
   note('Touching now and not before: those arrived this frame.'),
-  clearActors(arrived),
+  arrived.let(noActors()),
   forEach(met, {
     from: filter(met, {
       from: contacts.of(thisActor()),
@@ -344,7 +345,7 @@ canCollide.step('notice contacts', 'react', [
     body: [pushActor(arrived, met.get())],
   }),
   note('Touching before and not now: those left.'),
-  clearActors(left),
+  left.let(noActors()),
   forEach(gone, {
     from: filter(gone, {
       from: contactsBefore.of(thisActor()),

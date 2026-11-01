@@ -2807,6 +2807,7 @@ describe('builder-context warnings', () => {
       // easier to write (`world_let_position`).
       'world_let_position',
       'world_let_actor',
+      'world_let_list',
       'variables_get_Number',
       'variables_set_Number',
       'variables_get_Boolean',

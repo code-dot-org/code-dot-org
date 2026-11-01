@@ -56,6 +56,7 @@ const NOT_TAUGHT: Record<string, readonly string[]> = {
     'world_any_actor',
     'world_same_actor',
     'world_extreme_actor',
+    'world_no_actors',
     'world_push_actor',
     'world_clear_actors',
     'world_any_actors',
