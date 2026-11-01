@@ -126,6 +126,7 @@ import {soundImportFieldExtension} from './extensions/soundImportField';
 import {spritePickExtension} from './extensions/spritePickField';
 import {traitTooltipExtension} from './extensions/traitTooltip';
 import {worldContextExtension} from './extensions/worldContext';
+import {eventLocalsExtension} from './fields/eventLocal';
 import fieldAnglePlugin, {fieldAngleArg} from './fields/FieldAngle';
 import {
   FieldColorPicker,
@@ -1613,6 +1614,8 @@ const defineEventBlock = (event: EventMeta) => {
   }));
   if (!lonelyActor && carried.length > 0) {
     registerEventLocals(eventBlockType(event), locals);
+    // The hat's own variable for each value (`fields/eventLocal`).
+    extensions.push(eventLocalsExtension);
   }
   // The hat's `+`: the subject, the object, and the named values
   // (`extensions/eventActorToolbox`, specs/PROPERTY_SUBJECTS_PLAN.md).

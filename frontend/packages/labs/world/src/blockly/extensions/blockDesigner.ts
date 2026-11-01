@@ -101,10 +101,9 @@ export const shadowed = (state: SocketState): ShadowSpec | undefined => {
  * naming one in the design has to be a variable rename, which is what makes
  * the name change everywhere the body already uses it.
  *
- * A name is made free of both the workspace's other variables and this
- * signature's earlier parameters: two inputs sharing a name would generate a
- * function with a duplicated argument, which is a syntax error, and one
- * shadowing a rule-level variable would silently cut the body off from it.
+ * A name is made free of this signature's earlier parameters: two inputs
+ * sharing a name would generate a function with a duplicated argument, which
+ * is a syntax error.
  */
 export function bindParams(
   map: Blockly.IVariableMap<Blockly.IVariableModel<Blockly.IVariableState>>,
@@ -127,15 +126,10 @@ export function bindParams(
     // the next rebuild — silently, and everywhere the body uses it.
     const wanted =
       (part.name ?? '').trim() || variable?.getName() || (tag as string);
+    // A name elsewhere in the file is another binding's, which this one
+    // hides (specs/VARIABLE_OWNERSHIP_PLAN.md).
     const free = (candidate: string): boolean =>
-      !used.has(candidate.toLowerCase()) &&
-      !map
-        .getAllVariables()
-        .some(
-          other =>
-            other.getId() !== variable?.getId() &&
-            other.getName().toLowerCase() === candidate.toLowerCase(),
-        );
+      !used.has(candidate.toLowerCase());
     let name = wanted;
     for (let suffix = 2; !free(name); suffix++) {
       name = `${wanted}${suffix}`;

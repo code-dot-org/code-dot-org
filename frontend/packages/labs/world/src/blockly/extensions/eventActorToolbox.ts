@@ -33,6 +33,7 @@ import {
 } from '@code-dot-org/blockly/fields/miniToolbox';
 
 import {SUBJECT_FIELD} from '../eventSubject';
+import {localFieldName} from '../fields/eventLocal';
 
 import {addOnChange} from './onChange';
 
@@ -69,10 +70,15 @@ export const eventFlyoutBlocks = (
   hatType: string,
 ): readonly MiniToolboxBlock[] => flyouts.get(hatType)?.values ?? [];
 
-/** Everything the `+` offers on this hat as it stands now. */
+/**
+ * Everything the `+` offers on this hat as it stands now. `idAt` gives the
+ * hat's own variable for each value, so a getter taken out reads this hat's
+ * and not another of the same name (specs/VARIABLE_OWNERSHIP_PLAN.md).
+ */
 export const hatFlyoutBlocks = (
   hatType: string,
   subject: string,
+  idAt: (at: number) => string | undefined = () => undefined,
 ): MiniToolboxBlock[] => {
   const flyout = flyouts.get(hatType);
   if (!flyout) {
@@ -83,7 +89,14 @@ export const hatFlyoutBlocks = (
       ? [subject ? 'world_subject_actor' : 'world_this_actor']
       : []),
     ...(flyout.object ? ['world_object_actor'] : []),
-    ...flyout.values,
+    ...flyout.values.map((value, at) => {
+      const id = idAt(at);
+      if (!id || typeof value === 'string') {
+        return value;
+      }
+      const held = (value.fields?.VAR ?? {}) as object;
+      return {...value, fields: {...value.fields, VAR: {...held, id}}};
+    }),
   ];
 };
 
@@ -94,7 +107,11 @@ export const eventHatToolboxExtension: Extension = defineExtension(
   {
     extension() {
       const subject = () => String(this.getFieldValue?.(SUBJECT_FIELD) ?? '');
-      const live = hatFlyoutBlocks(this.type, subject());
+      const idAt = (at: number) => {
+        const id = this.getFieldValue?.(localFieldName(at));
+        return typeof id === 'string' && id ? id : undefined;
+      };
+      const live = hatFlyoutBlocks(this.type, subject(), idAt);
       if (live.length === 0) {
         return;
       }
@@ -107,7 +124,11 @@ export const eventHatToolboxExtension: Extension = defineExtension(
       // The list the flyout reads, rewritten in place: a subject set from
       // this actor to a kind turns `this actor` into `subject actor`.
       addOnChange(this, () => {
-        live.splice(0, live.length, ...hatFlyoutBlocks(this.type, subject()));
+        live.splice(
+          0,
+          live.length,
+          ...hatFlyoutBlocks(this.type, subject(), idAt),
+        );
       });
     },
   },

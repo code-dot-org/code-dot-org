@@ -14,6 +14,7 @@ import {WORLD_SCENARIOS} from '../../fixtures/scenarios';
 import {LESSONS} from '../../progression/lessons';
 import {STOCK_RULES} from '../../rules/stock';
 import {projectFiles} from '../../runtime/projectFiles';
+import {isLocalField} from '../fields/eventLocal';
 import {BINDERS, REST} from '../variableScope';
 
 interface Node {
@@ -46,7 +47,11 @@ function sharedBindings(source: string): string[] {
   // `above` holds the ids bound over the rows being walked: a `let` naming
   // one of them is a join.
   const walkBlock = (node: Node, above: ReadonlySet<string>): void => {
-    const binder = node.type ? BINDERS[node.type] : undefined;
+    const locals = Object.keys(node.fields ?? {}).filter(isLocalField);
+    const binder = node.type
+      ? (BINDERS[node.type] ??
+        (locals.length ? {fields: locals, over: [REST]} : undefined))
+      : undefined;
     let here = above;
     for (const field of binder?.fields ?? []) {
       const id = idOf(node.fields?.[field]);
@@ -70,9 +75,10 @@ function sharedBindings(source: string): string[] {
         }
       }
     }
+    const after = binder?.over.includes(REST) ? here : above;
     for (const child of [node.next?.block, node.next?.shadow]) {
       if (child) {
-        walkBlock(child, here);
+        walkBlock(child, after);
       }
     }
   };

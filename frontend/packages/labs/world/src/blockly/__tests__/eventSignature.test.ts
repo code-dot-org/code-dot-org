@@ -433,23 +433,15 @@ describe('an event that carries several values', () => {
    */
   const codeWithLocals = (
     hat: ReturnType<typeof hatFor>,
-    names: ReadonlyArray<{name: string; type: string; id: string}>,
+    names: ReadonlyArray<{name: string; type: string; id: string; at: number}>,
   ) =>
     hat.generator.javascript(
       {
         type: hat.type,
-        getFieldValue: () => null,
+        // The hat's own variable for each value, in its `LOCAL` fields.
+        getFieldValue: (field: string) =>
+          names.find(one => `LOCAL${one.at}` === field)?.id ?? null,
         getNextBlock: () => ({}),
-        workspace: {
-          getVariableMap: () => ({
-            getVariable: (name: string, type: string) => {
-              const found = names.find(
-                one => one.name === name && one.type === type,
-              );
-              return found ? {getId: () => found.id} : null;
-            },
-          }),
-        },
       },
       {
         valueToCode: () => 'Player',
@@ -586,21 +578,20 @@ describe('an event that carries several values', () => {
     const hat = hatFor(ruleWithEvent(DAMAGED, DAMAGE_VARS));
 
     const code = codeWithLocals(hat, [
-      {name: 'who', type: 'Actor', id: 'w1'},
-      {name: 'amount', type: 'Number', id: 'a1'},
+      {name: 'who', type: 'Actor', id: 'w1', at: 0},
+      {name: 'amount', type: 'Number', id: 'a1', at: 1},
     ]);
 
     expect(code).toContain('let who = eventValue;');
     expect(code).toContain('let amount = eventValue$2;');
   });
 
-  it('binds only the names the file actually has', () => {
-    // A getter enters a file by being dragged out of the `+`; until then the
-    // name is Blockly's "potential" variable and the file has none.
+  it('binds only the values the hat holds a variable for', () => {
+    // A hat not yet on a workspace holds none (`fields/eventLocal`).
     const hat = hatFor(ruleWithEvent(DAMAGED, DAMAGE_VARS));
 
     const code = codeWithLocals(hat, [
-      {name: 'amount', type: 'Number', id: 'a1'},
+      {name: 'amount', type: 'Number', id: 'a1', at: 1},
     ]);
 
     expect(code).toContain('let amount = eventValue$2;');

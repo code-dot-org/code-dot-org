@@ -1,6 +1,6 @@
 # Plan: each binding owns its variable
 
-STATUS: IN PROGRESS. Steps 2 and 3 are built. Comes before the event hat's value chips
+STATUS: IN PROGRESS. Steps 2, 3 and 4 are built. Comes before the event hat's value chips
 (below, step 5), which need it.
 
 A name in this language is lexical. It exists where a binding gives it: a
@@ -159,6 +159,26 @@ ways a learner can see.
   handlers; renaming the first to `total` leaves the second `amount`. The
   second sits under `when … is hit by … amount`, so it joined the hat's
   value, wears the warning, and generates `amount = 0;`.
+
+- **Step 4: a hat owns its values.** Each value is a field on the hat,
+  `LOCAL0`, `LOCAL1`, … (`fields/eventLocal`), holding the hat's own
+  variable: made when the hat reaches a workspace, saved with it, and
+  renamed when the event renames the value. They sit in an input of their
+  own, hidden until step 5 draws them. Added by an extension rather than
+  written into the hat's message, so the message, and the menu label read
+  from it, stay the event's. The scope rule reads the fields
+  (`eventLocalIds`), the `+` gives each getter the hat's id
+  (`hatFlyoutBlocks`), and the paster and the content check count them as
+  bindings.
+- **Only the stock List read a hat's value**, in its scroll and drag
+  handlers, so only it carries the fields by hand.
+- **A member's values keep their names** (`bindParams`): a name is made
+  free of the signature's other values only, not of the whole file.
+- **Two tests built a hat's binding by creating a variable of its name**
+  (`eventSignature`, `variableScope`), and now set the hat's field instead.
+- **Seen in the browser**: in the Ball's code, `amount` from the hit-by
+  hat's `+` into `write to console`; the code binds `let amount =
+eventValue$2;` and the console prints the 7 the create handler emits.
 
 ## Not in this plan
 

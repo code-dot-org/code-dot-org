@@ -119,13 +119,13 @@ export function registerEventLocals(
   eventLocals.set(hatType, locals);
 }
 
+/** What a hat of `hatType` binds, in order; empty for any other block. */
+export const localsOf = (hatType: string): readonly EventLocal[] =>
+  eventLocals.get(hatType) ?? [];
+
 /**
- * The variable each of `block`'s locals names on ITS OWN workspace, in order.
- *
- * `undefined` where the file has no such variable, which is the ordinary case
- * and not a fault: the name comes into a file when somebody drags the getter
- * out of the hat's `+`, and a handler that never reads what it was handed
- * never makes one. A hat that is not an event hat has no locals and no ids.
+ * The variable the hat holds for each of its values, in order
+ * (`fields/eventLocal`). `undefined` for a hat not yet on a workspace.
  */
 export function eventLocalIds(
   block: Block | IndexedBlock,
@@ -134,8 +134,10 @@ export function eventLocalIds(
   if (!locals) {
     return [];
   }
-  const map = block.workspace.getVariableMap();
-  return locals.map(local => map.getVariable(local.name, local.type)?.getId());
+  return locals.map((_local, at) => {
+    const id = block.getFieldValue(`LOCAL${at}`);
+    return typeof id === 'string' && id ? id : undefined;
+  });
 }
 
 /** The variable ids a member's head names as its parameters. */

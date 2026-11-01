@@ -8,6 +8,7 @@
 
 import * as Blockly from 'blockly/core';
 
+import {isLocalField} from './fields/eventLocal';
 import {BINDERS} from './variableScope';
 
 type State = Blockly.serialization.blocks.State;
@@ -53,7 +54,11 @@ export function freshBindings(
   const map = workspace.getVariableMap();
   const renamed = new Map<string, Fresh>();
   for (const block of blocks) {
-    for (const field of BINDERS[block.type]?.fields ?? []) {
+    const binds = [
+      ...(BINDERS[block.type]?.fields ?? []),
+      ...Object.keys(block.fields ?? {}).filter(isLocalField),
+    ];
+    for (const field of binds) {
       const value = block.fields?.[field];
       const id = idOf(value);
       if (!id || renamed.has(id)) {

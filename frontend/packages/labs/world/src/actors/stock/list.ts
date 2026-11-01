@@ -73,9 +73,8 @@ const ROW_VARIABLE = {id: 'listRow', name: 'row', type: 'Number'};
 /**
  * What `is chosen` carries, and what `is dragged by` hands over.
  *
- * A carried value is read by NAME on the workspace that hears it, so the
- * variable has to exist here even though the event was declared elsewhere
- * (specs/EVENT_VALUES_PLAN.md). `movement` is the Gestures rule's; `word` and
+ * A carried value is the hat's own variable, named in its `LOCAL` field
+ * (specs/VARIABLE_OWNERSHIP_PLAN.md). `movement` is the Gestures rule's; `word` and
  * `place` are this file's own.
  */
 const MOVEMENT: BlockParam = {
@@ -533,12 +532,16 @@ export const listActor = actorFile(
       // with the finger, a wheel pushes it away.
       {
         type: 'world_on_Mouse_IsScrolledByEvent',
+        fields: {LOCAL0: {id: BY.id, name: BY.name, type: BY.binds}},
         next: {
           block: scrollTo(arithmetic('ADD', scroll(), paramValue(BY))),
         },
       },
       {
         type: 'world_on_Gestures_IsDraggedByEvent',
+        fields: {
+          LOCAL0: {id: MOVEMENT.id, name: MOVEMENT.name, type: MOVEMENT.binds},
+        },
         next: {
           block: chain([
             scrollTo(

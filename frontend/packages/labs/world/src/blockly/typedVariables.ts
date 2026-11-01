@@ -12,6 +12,7 @@ import {createTypedVariable, type TypedVariable} from '@code-dot-org/blockly';
 
 import {enumRefOfParamType} from './enums';
 import {scopedVariableDefaultExtension} from './extensions/scopedVariableDefault';
+import {registerEventLocalField} from './fields/eventLocal';
 import {
   registerScopedVariableField,
   SCOPED_VARIABLE_FIELD,
@@ -25,6 +26,7 @@ import {registerOwnedVariableMap} from './ownedVariableMap';
 // about fails to build at all.
 registerScopedVariableField();
 registerVariableNameField();
+registerEventLocalField();
 // …and before any workspace is made, since a workspace picks its store once.
 registerOwnedVariableMap();
 registerOwnedPaster();

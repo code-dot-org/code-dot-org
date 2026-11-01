@@ -84,7 +84,10 @@ const define = () => {
       // An event's hat, with only the part the scope rule reads: a handler's
       // body is the chain below it, and the hat has no previous connection.
       type: 'world_on_Test_TypedEvent',
-      message0: 'when typed',
+      // The hat's own variable for its value (`fields/eventLocal`), as a
+      // plain field: what the scope rule reads is the id in it.
+      message0: 'when typed %1',
+      args0: [{type: 'field_input', name: 'LOCAL0', text: ''}],
       nextStatement: true,
     },
   ]);
@@ -215,6 +218,7 @@ describe('what an event hat binds', () => {
     const variable = workspace
       .getVariableMap()
       .createVariable('character', 'Number');
+    hat.setFieldValue(variable.getId(), 'LOCAL0');
     const body = workspace.newBlock('reader');
     hat.nextConnection!.connect(body.previousConnection!);
 
@@ -228,6 +232,7 @@ describe('what an event hat binds', () => {
     const variable = workspace
       .getVariableMap()
       .createVariable('character', 'Number');
+    hat.setFieldValue(variable.getId(), 'LOCAL0');
     const body = workspace.newBlock('reader');
     hat.nextConnection!.connect(body.previousConnection!);
     const elsewhere = workspace.newBlock('reader');
@@ -235,10 +240,7 @@ describe('what an event hat binds', () => {
     expect(idsInScope(elsewhere).has(variable.getId())).toBe(false);
   });
 
-  it('binds nothing when the file has no such name', () => {
-    // A getter enters a file by being dragged out of the hat's `+`. Until
-    // then the name is one of Blockly's potential variables and the file
-    // holds none, which is not a fault and not a warning.
+  it('binds nothing when the hat holds no variable', () => {
     const hat = workspace.newBlock('world_on_Test_TypedEvent');
     const body = workspace.newBlock('reader');
     hat.nextConnection!.connect(body.previousConnection!);
@@ -246,9 +248,7 @@ describe('what an event hat binds', () => {
     expect(idsInScope(body).size).toBe(0);
   });
 
-  it('binds by flavour as well as by name', () => {
-    // `character` the word and `character` the actor are two variables, and
-    // the hat hands over the one its signature typed.
+  it('binds its own variable, not another of the same name', () => {
     const hat = workspace.newBlock('world_on_Test_TypedEvent');
     const other = workspace
       .getVariableMap()
