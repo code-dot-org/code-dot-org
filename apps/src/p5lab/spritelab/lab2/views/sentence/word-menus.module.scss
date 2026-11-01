@@ -219,15 +219,12 @@ button.chipWord {
   border-radius: 50%;
 }
 
+// No frame of its own: the pane frames the whole word area.
 .carouselBox {
   display: flex;
   flex-direction: column;
   gap: 2px;
   padding: 8px 6px 8px;
-  border-radius: 16px;
-  border: 1px solid var(--border-neutral-secondary);
-  background-color: var(--background-neutral-primary);
-  box-shadow: 0 4px 0 var(--neutral-black-alpha-30);
 }
 
 @media (max-height: 800px) {
@@ -277,14 +274,18 @@ button.chipWord {
 
 // Every open set at once, one cluster of words per set down the pane; the
 // set the sentence's blank stands at is marked.
+// The clusters stack with a rule between each pair.
 .clusters {
   display: flex;
   flex-direction: column;
-  gap: 10px;
 }
 
 .cluster {
-  padding: 4px 0;
+  padding: 10px 0;
+
+  & + & {
+    border-top: 1px solid var(--border-neutral-secondary);
+  }
 }
 
 // The arrows and dots fade in once there is a second set to go to.
