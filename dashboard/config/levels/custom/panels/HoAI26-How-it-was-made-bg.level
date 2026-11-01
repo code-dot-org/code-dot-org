@@ -1,0 +1,47 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-10-31T22:02:15.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "**It learned from lots of pictures**\n\nBefore you ever used it, the AI was **trained** on many example pictures, so it learned what usually goes with words like these.",
+        "imageUrl": "https://images.code.org/86fd27c51f5e12202e7c374bb0b96a53-01-training-pictures.png",
+        "key": "HoAI26-How-it-was-made-78ee9aae-3acf-4a21-9cab-5a3b723caa44"
+      },
+      {
+        "text": "**Your words steer what the AI makes**\n\nThe AI starts with some instructions, then adds your words. Change your words, change your sprite. ",
+        "imageUrl": "https://images.code.org/3771ad32e4748e970df600f34684b6be-02-words-steer.png",
+        "key": "HoAI26-How-it-was-made-3c54033c-bf11-4782-af0b-f045173629b2"
+      },
+      {
+        "text": "**It predicts each pixel**\n\nStep by step, it adjusts the colors to better fit your words, until a picture appears. \n",
+        "imageUrl": "https://images.code.org/edd727214bc7a05b3b4f3c8c6235fa8d-03-noise-to-picture.png",
+        "key": "HoAI26-How-it-was-made-30a7570c-df6c-44e9-9ace-1ffb8fc53cbb"
+      },
+      {
+        "text": "**Every Generate is a new guess**\n\ndf\nClick Generate again and you get something different. ",
+        "imageUrl": "https://images.code.org/0d2cdf393b399cdf4d87162d63cbe96d-04-new-guess.png",
+        "key": "HoAI26-How-it-was-made-4ea083a6-5ba7-4661-8437-d43542533bd5"
+      },
+      {
+        "text": "**Evaluate what the AI made**\n\nDoes the result match what you asked for? Look closely, then rate it.\n",
+        "imageUrl": "https://images.code.org/4731495aa43a03a43cbb4721a334fa7c-05-check-and-rate.png",
+        "key": "HoAI26-How-it-was-made-d59cfeb3-e77e-40bf-9d5b-2e9873b8763a"
+      },
+      {
+        "text": "**A background is a big job**\n\nIt has 4 times the pixels of a character, object or block, and they all have to fit together into one scene. The AI makes it in seconds. By hand, it could take you a long time!",
+        "imageUrl": "https://images.code.org/cd5dbb346cf8a7182ee2ede5db229cd8-01-background-pixel-scale.png",
+        "key": "HoAI26-How-it-was-made-bg-8b3aa41a-bdaf-4085-b834-bf70dbdb1183"
+      }
+    ],
+    "use_links": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-10-31T22:02:15.054+00:00\",\"changed\":[\"cloned from \\\"HoAI26-How-it-was-made\\\"\"],\"cloned_from\":\"HoAI26-How-it-was-made\"},{\"changed_at\":\"2026-10-31 22:05:46 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-31 22:17:42 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>
