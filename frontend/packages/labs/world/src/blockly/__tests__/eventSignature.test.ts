@@ -148,7 +148,10 @@ describe('an event with a designed phrasing', () => {
     // filter is the first argument rather than the second.
     const hat = hatFor(ruleWithEvent(PRESSED, KEY_VAR));
 
-    expect(hat.message0).toBe('when %1 is pressed');
+    // The value's own field after it, hidden: a key filtered by its choices
+    // is not drawn twice (`fields/eventLocal`).
+    expect(hat.message0).toBe('when %1 is pressed %2 %3');
+    expect(hat.args0[1]).toMatchObject({name: 'LOCAL0', hidden: true});
     expect(hat.args0[0]).toMatchObject({
       type: 'field_dropdown',
       name: 'FILTER0',
@@ -457,14 +460,17 @@ describe('an event that carries several values', () => {
   it('names the values it cannot filter on, so the hat reads as a sentence', () => {
     const hat = hatFor(ruleWithEvent(DAMAGED, DAMAGE_VARS));
 
-    // The kind dropdown for the actor, the WORD for the number — a filter is a
-    // dropdown of named choices and a number has no such set, but the hat
-    // still carries the value and the name is how it says so.
-    expect(hat.message0).toContain('is damaged by');
-    expect(hat.message0).toContain('amount');
-    expect(hat.args0.filter(arg => arg.type === 'field_dropdown')).toHaveLength(
-      1,
-    );
+    // The kind dropdown for the actor, and each value as its getter: `who`
+    // before its filter, `amount` where the word was
+    // (specs/VARIABLE_OWNERSHIP_PLAN.md, step 5).
+    expect(hat.message0).toBe('when is damaged by %1 %2 %3');
+    expect(hat.args0.map(arg => arg.type)).toEqual([
+      'field_event_local',
+      'field_dropdown',
+      'field_event_local',
+    ]);
+    expect(hat.args0[0]).toMatchObject({local: 'who'});
+    expect(hat.args0[2]).toMatchObject({local: 'amount'});
   });
 
   it('hands the handler one parameter per value', () => {

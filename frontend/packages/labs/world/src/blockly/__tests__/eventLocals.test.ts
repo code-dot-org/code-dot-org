@@ -10,13 +10,33 @@ import {
   hatFlyoutBlocks,
   registerEventFlyout,
 } from '../extensions/eventActorToolbox';
-import {eventLocalsExtension} from '../fields/eventLocal';
+import {EVENT_LOCAL_FIELD} from '../fields/eventLocal';
 import {freshBindings} from '../ownedPaster';
 import {eventLocalIds, idsInScope, registerEventLocals} from '../variableScope';
 
 const HAT = 'test_on_hit';
 const GET = 'test_read';
-const LOCALS = 'world_event_locals';
+
+/** The hat, as an event whose second value is called `amount` mints it. */
+const hatDefinition = (amount: string) => ({
+  type: HAT,
+  message0: 'when %1 hit by %2',
+  args0: [
+    {
+      type: EVENT_LOCAL_FIELD,
+      name: 'LOCAL0',
+      local: 'who',
+      variableType: 'Actor',
+    },
+    {
+      type: EVENT_LOCAL_FIELD,
+      name: 'LOCAL1',
+      local: amount,
+      variableType: 'Number',
+    },
+  ],
+  nextStatement: true,
+});
 
 beforeAll(() => {
   Blockly.Msg.RENAME_VARIABLE = 'Rename…';
@@ -25,19 +45,8 @@ beforeAll(() => {
     {name: 'who', type: 'Actor'},
     {name: 'amount', type: 'Number'},
   ]);
-  if (!Blockly.Extensions.isRegistered(LOCALS)) {
-    Blockly.Extensions.register(
-      LOCALS,
-      eventLocalsExtension.extension as never,
-    );
-  }
   Blockly.defineBlocksWithJsonArray([
-    {
-      type: HAT,
-      message0: 'when hit',
-      nextStatement: true,
-      extensions: [LOCALS],
-    },
+    hatDefinition('amount'),
     {
       type: GET,
       message0: 'read %1',
@@ -115,10 +124,8 @@ describe('a hat saved and loaded', () => {
     const saved = Blockly.serialization.workspaces.save(workspace);
     const id = eventLocalIds(hat)[1]!;
 
-    registerEventLocals(HAT, [
-      {name: 'who', type: 'Actor'},
-      {name: 'damage', type: 'Number'},
-    ]);
+    // The event's hat is minted again from its new signature.
+    Blockly.defineBlocksWithJsonArray([hatDefinition('damage')]);
     try {
       const loaded = new Blockly.Workspace();
       Blockly.serialization.workspaces.load(saved, loaded);
@@ -126,10 +133,7 @@ describe('a hat saved and loaded', () => {
         'damage',
       );
     } finally {
-      registerEventLocals(HAT, [
-        {name: 'who', type: 'Actor'},
-        {name: 'amount', type: 'Number'},
-      ]);
+      Blockly.defineBlocksWithJsonArray([hatDefinition('amount')]);
     }
   });
 });

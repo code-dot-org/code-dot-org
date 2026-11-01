@@ -1,6 +1,6 @@
 # Plan: each binding owns its variable
 
-STATUS: IN PROGRESS. Steps 2, 3 and 4 are built. Comes before the event hat's value chips
+STATUS: IN PROGRESS. Steps 2 to 5 are built. Comes before the event hat's value chips
 (below, step 5), which need it.
 
 A name in this language is lexical. It exists where a binding gives it: a
@@ -179,6 +179,23 @@ ways a learner can see.
 - **Seen in the browser**: in the Ball's code, `amount` from the hit-by
   hat's `+` into `write to console`; the code binds `let amount =
 eventValue$2;` and the console prints the 7 the create handler emits.
+
+- **Step 5: the values as chips.** Each value's field is in the hat's
+  wording now, where the value is: `when ⟨this actor⟩ is hit by ⟨who⟩
+(any ▾) ⟨amount⟩`. It draws as a chip in its getter's colour, and a
+  press takes out a getter for that hat's variable through the drag the
+  member head uses (`beginGetterDrag`); the chip stays. In the flyout a
+  press takes the hat. The menu label reads a chip as its name, so the
+  hit-by hat is `when … is hit by who … amount`.
+- **A value filtered by a set of choices is not drawn**, by decision while
+  building: `presses ⟨pressed key⟩ (space ▾)` says the key twice on the
+  hat lessons use most. Its field stays, hidden, at the end of the hat,
+  and its getter is in the `+`. Kept open for the author of the plan.
+- **The stray warning says only what is known**: "amount is not known
+  here." `binderOf` and the code that described the binding are gone.
+- **Seen in the browser**: the Ball's hit-by hat draws `who` and `amount`
+  as chips; `amount` pressed and dragged into `write to console` lands as a
+  getter, the chip stays, and the console prints 7.
 
 ## Not in this plan
 

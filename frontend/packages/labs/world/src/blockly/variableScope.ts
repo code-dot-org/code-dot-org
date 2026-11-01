@@ -243,19 +243,6 @@ export function visibleNamed(
   return undefined;
 }
 
-/** The block in the file that declares `id`, if any does. */
-export function binderOf(
-  workspace: Workspace,
-  id: string,
-): Block | IndexedBlock | undefined {
-  for (const block of indexedBlocks(workspace)) {
-    if (bindingsOf(block).ids.includes(id)) {
-      return block;
-    }
-  }
-  return undefined;
-}
-
 /**
  * Every id some block on the workspace WRITES — a setter, or a binder.
  *

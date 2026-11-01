@@ -15,6 +15,7 @@ import type {Toolbox, ToolboxCategory} from '@code-dot-org/blockly';
 import {viewOf} from '../actors/actorData';
 
 import {ANY_FIELD, THIS_FIELD} from './eventSubject';
+import {EVENT_LOCAL_FIELD} from './fields/eventLocal';
 import type {EventMeta, RuleMeta} from './ruleMeta';
 import {memberLocalName, memberValue} from './ruleRegistry';
 
@@ -57,8 +58,20 @@ const labelOf = (definition: Definition | undefined, type: string): string => {
         : [],
     ),
   );
+  // A value's chip reads as the value's name (`fields/eventLocal`).
+  const named = (at: number): string | undefined => {
+    const arg = definition?.args0?.[at - 1] as
+      | {type?: string; local?: string; hidden?: boolean}
+      | undefined;
+    if (arg?.type !== EVENT_LOCAL_FIELD) {
+      return undefined;
+    }
+    return arg.hidden ? '' : arg.local;
+  };
   return (definition?.message0 ?? type)
-    .replace(/%(\d+)/g, (_, at) => (silent.has(Number(at)) ? '' : '…'))
+    .replace(/%(\d+)/g, (_, at) =>
+      silent.has(Number(at)) ? '' : (named(Number(at)) ?? '…'),
+    )
     .replace(/\s+/g, ' ')
     .trim();
 };

@@ -1,21 +1,27 @@
-// The variable an event hat gives one of its values, held by the hat.
+// The variable an event hat gives one of its values, drawn as its getter.
 //
 // A hat owns its values as a `let` owns its name
 // (specs/VARIABLE_OWNERSHIP_PLAN.md): each hat makes its own variable for
 // each value, so two handlers of one event read two variables. The id is
-// saved with the hat; the name is the event's, and follows it.
+// saved with the hat; the name is the event's, and follows it. Pressing the
+// chip takes out a getter for it, as a member head's sockets do
+// (`memberHead`).
 
 import * as Blockly from 'blockly/core';
 
 import {defineExtension, type Extension} from '@code-dot-org/blockly';
 
-import {localsOf} from '../variableScope';
+import {beginGetterDrag} from './dragGetterOut';
 
 interface Config extends Blockly.FieldConfig {
   /** The value's name in the event's signature. */
   local?: string;
   /** The variable type it is read as — `Number`, `Actor`, … */
   variableType?: string;
+  /** The getter a press takes out. */
+  getterType?: string;
+  /** That getter's block style, which the chip is drawn in. */
+  chipStyle?: string;
 }
 
 export class EventLocalField extends Blockly.Field<string> {
@@ -24,11 +30,15 @@ export class EventLocalField extends Blockly.Field<string> {
 
   private readonly local: string;
   private readonly variableType: string;
+  private readonly getterType: string;
+  private readonly chipStyle: string;
 
   constructor(config: Config = {}) {
     super('', null, config);
     this.local = config.local ?? '';
     this.variableType = config.variableType ?? '';
+    this.getterType = config.getterType ?? '';
+    this.chipStyle = config.chipStyle ?? '';
   }
 
   static override fromJson(options: Config): EventLocalField {
@@ -82,6 +92,59 @@ export class EventLocalField extends Blockly.Field<string> {
     this.initModel();
   }
 
+  /** The value's name, never the id. */
+  protected override getText_(): string {
+    const id = this.getValue();
+    const variable = id ? this.map()?.getVariableById(id) : null;
+    return variable?.getName() ?? this.local;
+  }
+
+  override initView(): void {
+    super.initView();
+    const block = this.getSourceBlock() as Blockly.BlockSvg | null;
+    const group = this.fieldGroup_;
+    if (!block || !group) {
+      return;
+    }
+    group.classList.add('worldEventLocal');
+    group.style.cursor = 'grab';
+    // Before the block's own listener: a press here is a getter taken out,
+    // not the hat dragged. In the flyout the hat itself is what is taken.
+    group.addEventListener('pointerdown', event => {
+      const id = this.getValue();
+      if (
+        block.isInFlyout ||
+        block.workspace.isReadOnly() ||
+        !id ||
+        !this.getterType
+      ) {
+        return;
+      }
+      event.stopPropagation();
+      event.preventDefault();
+      beginGetterDrag({
+        workspace: block.workspace,
+        variableId: id,
+        getterType: this.getterType,
+        event,
+      });
+    });
+  }
+
+  /** Painted as the getter is: its style's colour, its text white. */
+  override applyColour(): void {
+    const block = this.getSourceBlock() as Blockly.BlockSvg | null;
+    const style = block?.workspace.getTheme().blockStyles[this.chipStyle];
+    if (this.borderRect_ && style) {
+      this.borderRect_.setAttribute('fill', style.colourPrimary);
+      this.borderRect_.setAttribute('stroke', style.colourTertiary);
+      this.borderRect_.style.fillOpacity = '1';
+    }
+    if (this.textElement_ && style) {
+      this.textElement_.style.fill = '#fff';
+    }
+  }
+
   protected override doClassValidation_(value?: unknown): string | null {
     return typeof value === 'string' ? value : null;
   }
@@ -100,33 +163,17 @@ export const localFieldName = (at: number): string => `LOCAL${at}`;
 /** Whether a field of that name holds a hat's value (`variableScope`). */
 export const isLocalField = (name: string): boolean => /^LOCAL\d+$/.test(name);
 
-/** The input the value fields sit in. */
+/** The input a hat's undrawn value fields sit in. */
 export const LOCALS_INPUT = 'LOCALS';
 
-/**
- * One field per value the hat's event carries, in a hidden input of their
- * own: the ids are the hat's business, and its message stays the event's.
- */
-export const eventLocalsExtension: Extension = defineExtension(
-  'world_event_locals',
+/** Hides that input, whose fields are not drawn as chips. */
+export const hiddenLocalsExtension: Extension = defineExtension(
+  'world_event_locals_hidden',
   {
     extension() {
-      const block = this as unknown as Blockly.Block;
-      const locals = localsOf(block.type);
-      if (!locals.length) {
-        return;
-      }
-      const input = block.appendDummyInput(LOCALS_INPUT);
-      locals.forEach((local, at) => {
-        input.appendField(
-          new EventLocalField({
-            local: local.name,
-            variableType: local.type,
-          }) as unknown as Blockly.Field,
-          localFieldName(at),
-        );
-      });
-      input.setVisible(false);
+      (this as unknown as Blockly.Block)
+        .getInput(LOCALS_INPUT)
+        ?.setVisible(false);
     },
   },
 );

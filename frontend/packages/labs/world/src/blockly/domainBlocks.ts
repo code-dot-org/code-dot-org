@@ -126,7 +126,12 @@ import {soundImportFieldExtension} from './extensions/soundImportField';
 import {spritePickExtension} from './extensions/spritePickField';
 import {traitTooltipExtension} from './extensions/traitTooltip';
 import {worldContextExtension} from './extensions/worldContext';
-import {eventLocalsExtension} from './fields/eventLocal';
+import {
+  EVENT_LOCAL_FIELD,
+  hiddenLocalsExtension,
+  localFieldName,
+  LOCALS_INPUT,
+} from './fields/eventLocal';
 import fieldAnglePlugin, {fieldAngleArg} from './fields/FieldAngle';
 import {
   FieldColorPicker,
@@ -1519,9 +1524,44 @@ const defineEventBlock = (event: EventMeta) => {
   // Every value the event carries, in the signature's order, so the blocks
   // that name them can be minted and the handler's closure can take them.
   const carried: Array<{name: string; type: string}> = [];
-  for (const part of settledParts(
+  const parts = settledParts(
     event.parts ?? [{kind: 'label', text: event.name}],
-  )) {
+  );
+  const values = parts.filter(part => part.kind === 'param');
+  // A lone actor is `object actor`, and binds nothing (below).
+  const chipped = !(values.length === 1 && values[0].type === 'actor');
+  // The hat's own variable for a value, drawn as its getter: press it to
+  // take one out (`fields/eventLocal`, specs/VARIABLE_OWNERSHIP_PLAN.md).
+  //
+  // A value filtered by a set of choices keeps its field hidden: `presses
+  // ⟨pressed key⟩ (space ▾)` says the key twice. Its getter is in the `+`.
+  const hiddenLocals: BlockArgDefinition[] = [];
+  const chip = (
+    at: number,
+    part: {name: string; type: string},
+    shown = true,
+  ) => {
+    if (!chipped) {
+      return;
+    }
+    const flavour = paramFlavour(part.type);
+    const field = {
+      type: EVENT_LOCAL_FIELD,
+      name: localFieldName(at),
+      local: part.name,
+      variableType: flavour.type,
+      getterType: flavour.getterType,
+      chipStyle: (flavour.getterBlock as {style?: string}).style,
+      ...(shown ? {} : {hidden: true}),
+    } as unknown as BlockArgDefinition;
+    if (!shown) {
+      hiddenLocals.push(field);
+      return;
+    }
+    args0.push(field);
+    message0 += ` %${args0.length}`;
+  };
+  for (const part of parts) {
     if (part.kind === 'label') {
       message0 += ` ${part.text}`;
       continue;
@@ -1537,16 +1577,13 @@ const defineEventBlock = (event: EventMeta) => {
     if (!choice) {
       if (part.type !== 'actor') {
         // NOTHING TO FILTER ON, BUT SOMETHING TO SAY. A filter is a dropdown
-        // of named choices, and a number has no such set. The name goes into
-        // the phrasing as a word, so `when ⟨this actor⟩ is damaged by
-        // ⟨amount⟩` reads as a sentence and says what it hands over, rather
-        // than trailing off after "by" as it did when a value the hat could
-        // not filter on was dropped from the wording altogether.
-        if (part.name) {
-          message0 += ` ${part.name}`;
-        }
+        // of named choices, and a number has no such set. The value goes into
+        // the phrasing as its getter, so `when ⟨this actor⟩ is damaged by
+        // ⟨amount⟩` reads as a sentence and says what it hands over.
+        chip(at, part);
         continue;
       }
+      chip(at, part);
       const field = filterFieldName(filters.length + kinds.length);
       // Pictures where the project has them, names where it does not — and
       // `(any)` is always a word, since "no filter" has nothing to draw.
@@ -1577,6 +1614,7 @@ const defineEventBlock = (event: EventMeta) => {
     // one field, two fields' worth of meaning. Nothing in the library mixes
     // the two, which is why it went unseen; a signature that may now name
     // several values makes mixing them ordinary.
+    chip(at, part, false);
     const field = filterFieldName(filters.length + kinds.length);
     const options = (): Array<[string, string]> => [
       ANY_CHOICE,
@@ -1592,6 +1630,15 @@ const defineEventBlock = (event: EventMeta) => {
     );
     filters.push({field, ref: choice, carried: at});
     message0 += ` %${args0.length}`;
+  }
+  if (hiddenLocals.length) {
+    for (const field of hiddenLocals) {
+      args0.push(field);
+      message0 += ` %${args0.length}`;
+    }
+    args0.push({type: 'input_dummy', name: LOCALS_INPUT});
+    message0 += ` %${args0.length}`;
+    extensions.push(hiddenLocalsExtension);
   }
   // What the `+` offers, and whether there is one at all.
   //
@@ -1614,8 +1661,6 @@ const defineEventBlock = (event: EventMeta) => {
   }));
   if (!lonelyActor && carried.length > 0) {
     registerEventLocals(eventBlockType(event), locals);
-    // The hat's own variable for each value (`fields/eventLocal`).
-    extensions.push(eventLocalsExtension);
   }
   // The hat's `+`: the subject, the object, and the named values
   // (`extensions/eventActorToolbox`, specs/PROPERTY_SUBJECTS_PLAN.md).

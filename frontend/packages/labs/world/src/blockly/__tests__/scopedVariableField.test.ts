@@ -228,7 +228,7 @@ describe('a name the block cannot see', () => {
     expect(getter.getField('VAR')!.getText()).toBe('tally');
   });
 
-  it('draws a declared name carried out of its binder, and says where', () => {
+  it('draws a declared name carried out of its binder, and says so', () => {
     const amount = workspace
       .getVariableMap()
       .createVariable('amount', 'Number');
@@ -239,7 +239,7 @@ describe('a name the block cannot see', () => {
 
     expect(field.getText()).toBe('amount');
     expect(field.strayName()).toBe('amount');
-    expect(strayWarning(field)).toMatch(/^amount is only known inside “let/);
+    expect(strayWarning(field)).toBe('amount is not known here.');
   });
 
   it('is not stray, and warns of nothing, under its binder', () => {

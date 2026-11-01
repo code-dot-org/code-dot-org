@@ -299,13 +299,24 @@ below, and are listed last.
 
 ### A name carried out of what declares it (EVENT_VALUES_PLAN.md)
 
-- **The getter draws the name faint and slanted, and carries a warning**
-  saying where the name is known. The style is visual only; the warning's
+- **The getter draws the name faint and slanted, and carries a warning**:
+  "amount is not known here." The style is visual only; the warning's
   text is what says it. (1.4.1 Use of Color does not apply: no color
   changes.)
 - **Untested**: whether a screen reader reaches a block's warning, and the
   faint text's contrast against the getter's fill, which is lower than
   a working getter's by design.
+
+### A hat's values as chips (VARIABLE_OWNERSHIP_PLAN.md, step 5)
+
+- **A chip is taken with a pointer only.** Pressing one drags out a getter;
+  there is no key that does it. The `+` on the same hat offers the same
+  getters and is the keyboard's way to them, which is why the values stay
+  there. (2.1.1 Keyboard, met through the `+`.)
+- **A chip is drawn in its getter's colour with white text**, and says the
+  value's name, so colour is not the only thing that tells it apart.
+- **Untested**: the white text's contrast on each getter colour, and what a
+  screen reader says of a chip inside the hat.
 
 ## Not yet done for any phase
 
