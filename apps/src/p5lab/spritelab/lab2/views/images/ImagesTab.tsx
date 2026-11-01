@@ -231,13 +231,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
         }}
         onNew={
           editingOffered
-            ? () => {
-                if (draft) {
-                  startSession(DRAFT_ID);
-                } else {
-                  startDraft('sprite', 'character');
-                }
-              }
+            ? kind => startDraft(kind.imageType, kind.subject)
             : undefined
         }
         onDelete={deleteOffered ? writer.deleteImage : undefined}
@@ -247,7 +241,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
           key={session}
           imageType={kind.imageType}
           imageSubject={kind.subject}
-          typeChoice={!!chosenDraft && !lockedImageType}
+          typeChoice={false}
           generationsLeft={generationsLeft}
           verdictRequired={verdictRequired}
           onGenerateStart={onGenerate}

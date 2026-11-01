@@ -82,7 +82,16 @@ describe('ImageList', () => {
     fireEvent.click(screen.getByRole('button', {name: 'Sprite 2'}));
     expect(onChoose).toHaveBeenCalledWith('b');
     fireEvent.click(screen.getByRole('button', {name: 'New image'}));
-    expect(onNew).toHaveBeenCalled();
+    expect(
+      ['Character', 'Background', 'Object', 'Block'].map(
+        name => !!screen.getByRole('button', {name})
+      )
+    ).toEqual([true, true, true, true]);
+    fireEvent.click(screen.getByRole('button', {name: 'Object'}));
+    expect(onNew).toHaveBeenCalledWith({
+      imageType: 'sprite',
+      subject: 'object',
+    });
   });
 
   it('deletes the chosen image only after asking', () => {

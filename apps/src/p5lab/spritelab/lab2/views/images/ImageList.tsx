@@ -1,6 +1,8 @@
 // The tab's left column: every image of the project as a tile, the one
 // being worked on marked, with the way to add one and to delete one.
 
+import {DropdownProviderWrapper} from '@code-dot-org/component-library/common/contexts';
+import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {
   Button as MuiButton,
@@ -13,6 +15,28 @@ import React, {useEffect, useState} from 'react';
 import {imageKindLabel, ImageSubject, ImageType} from '../../ai/images/types';
 
 import {ProjectImage} from './projectImages';
+
+/** A new image's kind, chosen under the plus. */
+export interface NewImageKind {
+  imageType: ImageType;
+  subject?: ImageSubject;
+}
+
+/** The kinds the plus offers, in the menu's order. */
+const NEW_KINDS: {label: string; iconName: string; kind: NewImageKind}[] = [
+  {
+    label: 'Character',
+    iconName: 'face-smile',
+    kind: {imageType: 'sprite', subject: 'character'},
+  },
+  {label: 'Background', iconName: 'image', kind: {imageType: 'background'}},
+  {
+    label: 'Object',
+    iconName: 'key',
+    kind: {imageType: 'sprite', subject: 'object'},
+  },
+  {label: 'Block', iconName: 'cube', kind: {imageType: 'block'}},
+];
 
 /** The list's kinds, in the order they are listed. */
 type KindId = 'character' | 'object' | 'background' | 'block';
@@ -44,8 +68,9 @@ interface ImageListProps {
   /** The chosen image's key, or the draft's id. */
   chosenId: string | null;
   onChoose: (id: string) => void;
-  /** The plus: a new image, offered where the level lets students add. */
-  onNew?: () => void;
+  /** The plus: a new image of the kind picked under it, offered where the
+      level lets students add. */
+  onNew?: (kind: NewImageKind) => void;
   /** Delete the chosen image; absent where images cannot be deleted. */
   onDelete?: (key: string) => void;
 }
@@ -74,15 +99,26 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
           Your images
         </MuiTypography>
         {onNew && (
-          <MuiIconButton
-            variant="contained"
-            color="primary"
-            className={styles.newButton}
-            aria-label="New image"
-            onClick={onNew}
-          >
-            <FontAwesomeV6Icon iconName="plus" />
-          </MuiIconButton>
+          <DropdownProviderWrapper>
+            <ActionDropdown
+              name="new-image"
+              labelText="New image"
+              size="m"
+              menuPlacement="right"
+              triggerButtonProps={{
+                variant: 'contained',
+                color: 'primary',
+                className: styles.newButton,
+                children: <FontAwesomeV6Icon iconName="plus" />,
+              }}
+              options={NEW_KINDS.map(({label, iconName, kind}) => ({
+                value: label,
+                label,
+                icon: {iconName},
+                onClick: () => onNew(kind),
+              }))}
+            />
+          </DropdownProviderWrapper>
         )}
       </div>
       <div className={styles.tiles}>

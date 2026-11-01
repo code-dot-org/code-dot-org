@@ -140,14 +140,18 @@ describe('ImagesTab', () => {
     expect(screen.getByRole('button', {name: /^land sprite/})).toBeTruthy();
   });
 
-  it('adds a draft in free play, one session per image', () => {
+  it('adds a draft of the kind picked under the plus, one session per image', () => {
     propsByKey.k1 = {name: 'Sprite 1', categories: []};
     renderTab({editingOffered: true});
     expect(pressed()).toEqual(['Sprite 1']);
     fireEvent.click(screen.getByRole('button', {name: 'New image'}));
+    // Nothing is set up until a kind is picked.
+    expect(pressed()).toEqual(['Sprite 1']);
+    fireEvent.click(screen.getByRole('button', {name: 'Character'}));
     expect(pressed()).toEqual(['New character']);
+    // The kind is settled by the pick: no Type choice in the scene.
     expect(
-      screen.getByRole('button', {name: 'land sprite character choice'})
+      screen.getByRole('button', {name: 'land sprite character'})
     ).toBeTruthy();
     expect(endSession).toHaveBeenCalledTimes(1);
     fireEvent.click(screen.getByRole('button', {name: 'Sprite 1'}));
