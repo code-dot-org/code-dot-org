@@ -118,6 +118,18 @@ $pad: 16px;
   image-rendering: pixelated;
 }
 
+// The middle column is a grey well, set off from the list and the pane.
+.frameWell {
+  display: flex;
+  flex: 1 1 0;
+  box-sizing: border-box;
+  min-width: 0;
+  min-height: 0;
+  padding: 16px;
+  border-radius: 12px;
+  background-color: var(--background-neutral-secondary);
+}
+
 .frameColumn {
   display: flex;
   flex: 1 1 0;
@@ -151,7 +163,7 @@ $pad: 16px;
   box-sizing: border-box;
   border: 2px dashed var(--borders-neutral-primary);
   border-radius: 12px;
-  background-color: var(--background-neutral-secondary);
+  background-color: var(--background-neutral-primary);
   overflow: hidden;
 
   // The sheet preview's canvas holds one frame at its stored size, scaled

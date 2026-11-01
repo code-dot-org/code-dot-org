@@ -55,33 +55,35 @@ const ImageFrame: React.FunctionComponent<ImageFrameProps> = ({
   }, []);
   const filled = !!live || !!image;
   return (
-    <div ref={columnRef} className={styles.frameColumn}>
-      <div className={styles.frameRow} style={{height: side}}>
-        {beside && <div className={styles.beside}>{beside}</div>}
-        <div
-          className={classNames(styles.frame, filled && styles.frameFilled)}
-          style={{width: side, height: side}}
-          role="img"
-          aria-label={
-            live ? 'Your picture' : image ? image.name : 'No picture yet'
-          }
-        >
-          {live ??
-            (image?.sheet ? (
-              <AnimatedSheetPreview {...image.sheet} />
-            ) : image?.src ? (
-              <img
-                src={image.src}
-                alt=""
-                className={classNames(
-                  styles.preview,
-                  image.pixelated && styles.pixelArt
-                )}
-              />
-            ) : null)}
+    <div className={styles.frameWell}>
+      <div ref={columnRef} className={styles.frameColumn}>
+        <div className={styles.frameRow} style={{height: side}}>
+          {beside && <div className={styles.beside}>{beside}</div>}
+          <div
+            className={classNames(styles.frame, filled && styles.frameFilled)}
+            style={{width: side, height: side}}
+            role="img"
+            aria-label={
+              live ? 'Your picture' : image ? image.name : 'No picture yet'
+            }
+          >
+            {live ??
+              (image?.sheet ? (
+                <AnimatedSheetPreview {...image.sheet} />
+              ) : image?.src ? (
+                <img
+                  src={image.src}
+                  alt=""
+                  className={classNames(
+                    styles.preview,
+                    image.pixelated && styles.pixelArt
+                  )}
+                />
+              ) : null)}
+          </div>
         </div>
+        <div className={styles.under}>{under}</div>
       </div>
-      <div className={styles.under}>{under}</div>
     </div>
   );
 };
