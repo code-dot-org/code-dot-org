@@ -79,6 +79,8 @@ export const BINDERS: Readonly<Record<string, Binder>> = {
   world_filter_actors: {fields: ['VAR'], over: ['WHERE']},
   world_ordered_actors: {fields: ['VAR'], over: ['KEY']},
   world_extreme_actor: {fields: ['VAR'], over: ['KEY']},
+  // `add actor ⟨Ball⟩ as ⟨ball⟩`, which names what it places for its body.
+  world_add_actor: {fields: ['VAR'], over: ['DO']},
 };
 
 /**

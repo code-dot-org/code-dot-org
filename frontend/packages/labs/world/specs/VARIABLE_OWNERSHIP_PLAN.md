@@ -204,14 +204,18 @@ eventValue$2;` and the console prints the 7 the create handler emits.
   with it.
 - **Reads outside their binding, found on the way**, which the exception
   had not covered either. Teleport set `here` with `set` in two bodies
-  whose `let here` was elsewhere; both are `let`s now. Three remain, each
+  whose `let here` was elsewhere; both are `let`s now. Two remain, each
   wanting a binding the lab does not have, and named in the content check
   (`repositoryBindings.test`, "read every variable inside a binding of
   it"): Collisions fills `found`, `arrived` and `left` with `clear` and
   `push` blocks, and an actor list has no `let`; Path's `queue` and `seen`
-  are lists, and there is no `let list`; Meteors names `ball` with `add
-actor … named`, which is not a binding. A getter of any of them draws
+  are lists, and there is no `let list`. A getter of any of them draws
   `???` in the editor, as it did before.
+- **A named `add actor` is a binding**, found the same way: Meteors named
+  `ball` with `add actor … as ⟨ball⟩`, which was not one. It binds over
+  its `do`, the only place the generated `const` reaches, and its name is
+  typed as a `let`'s is (`VariableNameField`), so two spawns naming `ball`
+  have a variable each.
 
 - **Step 7: the specs.** EVENT_VALUES_PLAN.md and PASTE.md carry a note
   on what this changed in them; ACCESSIBILITY.md has the chips.

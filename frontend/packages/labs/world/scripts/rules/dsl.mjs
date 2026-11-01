@@ -1304,6 +1304,7 @@ export const BINDING_BLOCKS = {
   world_filter_actors: {fields: ['VAR'], over: ['WHERE']},
   world_ordered_actors: {fields: ['VAR'], over: ['KEY']},
   world_extreme_actor: {fields: ['VAR'], over: ['KEY']},
+  world_add_actor: {fields: ['VAR'], over: ['DO']},
 };
 
 /**

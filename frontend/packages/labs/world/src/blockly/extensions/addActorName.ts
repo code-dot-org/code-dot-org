@@ -8,7 +8,8 @@
 // arithmetic silently reads the ball's own position twice.
 //
 // Choosing `as ⟨name⟩` binds the new actor to a variable instead, which leaves
-// `this actor` meaning what it means everywhere else in the file.
+// `this actor` meaning what it means everywhere else in the file. The name is
+// typed, as a `let`'s is, and is known only inside the block's `do`.
 //
 // THE CHOICE APPEARS ONLY WHERE IT MEANS SOMETHING. A world describing its
 // level has nothing to shadow, so the block reads `add actor ⟨Coin⟩` there and
@@ -30,6 +31,7 @@
 import {Blockly, defineExtension, defineMutator} from '@code-dot-org/blockly';
 
 import {SUBJECT_FIELD} from '../eventSubject';
+import {VariableNameField} from '../fields/variableName';
 import {ActorVariable} from '../typedVariables';
 
 export const ADD_ACTOR_NAME_MUTATOR = 'add_actor_name_mutator';
@@ -170,19 +172,17 @@ export const addActorNameMutator = defineMutator(ADD_ACTOR_NAME_MUTATOR, {
       return;
     }
     if (wanted) {
-      input.appendField(
-        // Typed to Actor, so the getter it makes only plugs into Actor sockets
-        // and its dropdown offers no loop variable of another flavour. Named
-        // `placed` rather than the flavour's `other`: what it holds is the
-        // thing just put into the world.
-        new Blockly.FieldVariable(
-          'placed',
-          undefined,
-          [ActorVariable.type],
-          ActorVariable.type,
-        ),
-        VAR_FIELD,
-      );
+      // Typed, as a `let`'s name is: the variable is this binding's own, and
+      // reaches only its `do` body (`variableScope.BINDERS`).
+      const field = VariableNameField.fromJson({
+        variable: 'placed',
+        defaultType: ActorVariable.type,
+      });
+      input.appendField(field as unknown as Blockly.Field, VAR_FIELD);
+      // Loaded, the saved id arrives next; chosen, there is none to wait for.
+      if (!this.isInFlyout && !this.workspace.isFlyout) {
+        field.initModel();
+      }
     } else {
       input.removeField(VAR_FIELD, true);
     }

@@ -196,8 +196,6 @@ const KNOWN_UNBOUND = new Set([
   // Lists, and there is no `let list`.
   'Path_queue',
   'Path_seen',
-  // `add actor … named ⟨ball⟩` names it, and is not a binding.
-  'meteorsBallVar',
 ]);
 
 const files: Array<[string, string]> = [
