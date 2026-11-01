@@ -1264,12 +1264,111 @@ export function defineRule({name, ability, header, purpose}) {
         // What Blockly itself writes at the top of a serialized workspace. It
         // reads it back and a file without one still loads, but a generated
         // workspace should be the shape the editor would have saved.
-        blocks: {languageVersion: 0, blocks: layout(roots)},
+        blocks: {
+          languageVersion: 0,
+          blocks: layout(ownBindings(roots, variables)),
+        },
         ...(variables.length ? {variables} : {}),
       };
     },
   };
   return rule;
+}
+
+// ── Bindings ─────────────────────────────────────────────────────────────────
+
+/**
+ * What each binding block binds, and where: `blockly/variableScope`'s table,
+ * restated because a script cannot import it. `repositoryBindings.test`
+ * fails if the two drift.
+ */
+const NEXT = 'next';
+const LET_OVER = {fields: ['VAR'], over: [NEXT]};
+const LOOP_OVER = {fields: ['VAR'], over: ['DO']};
+export const BINDING_BLOCKS = {
+  world_let_number: LET_OVER,
+  world_let_angle: LET_OVER,
+  world_let_word: LET_OVER,
+  world_let_boolean: LET_OVER,
+  world_let_vector: LET_OVER,
+  world_let_position: LET_OVER,
+  world_let_actor: LET_OVER,
+  world_for_each: LOOP_OVER,
+  world_for_each_number: LOOP_OVER,
+  world_for_each_word: LOOP_OVER,
+  world_for_each_place: LOOP_OVER,
+  world_for_each_key: LOOP_OVER,
+  world_for_each_typed: LOOP_OVER,
+  world_for_each_button: LOOP_OVER,
+  world_count_with: LOOP_OVER,
+  world_filter_actors: {fields: ['VAR'], over: ['WHERE']},
+  world_ordered_actors: {fields: ['VAR'], over: ['KEY']},
+  world_extreme_actor: {fields: ['VAR'], over: ['KEY']},
+};
+
+/**
+ * Each binding with a variable of its own (specs/VARIABLE_OWNERSHIP_PLAN.md).
+ *
+ * `rule.local` makes one variable per name, and a rule binds the same name in
+ * several bodies. The first binding keeps the id; each later one gets a new
+ * id, declared in `variables`, and the readers in its scope follow. A `let`
+ * under a binding of its own id joins it and keeps it.
+ */
+function ownBindings(roots, variables) {
+  // Through JSON, not `structuredClone`: a row reused in two bodies is one
+  // object, and must become two blocks with a binding each.
+  const trees = JSON.parse(JSON.stringify(roots));
+  const owned = new Set();
+  const fresh = id => {
+    let n = 2;
+    while (variables.some(v => v.id === `${id}_${n}`)) {
+      n += 1;
+    }
+    const base = variables.find(v => v.id === id);
+    variables.push({...base, id: `${id}_${n}`});
+    return `${id}_${n}`;
+  };
+  // A `let` stores the bare id (its field is a text box over a variable);
+  // every other field stores `{id, name}`.
+  const idOf = value => (typeof value === 'string' ? value : value && value.id);
+  const withId = (value, id) =>
+    typeof value === 'string' ? id : {...value, id};
+  const read = (value, scope) =>
+    scope.has(idOf(value)) ? withId(value, scope.get(idOf(value))) : value;
+  const walk = (node, scope) => {
+    const binder = BINDING_BLOCKS[node.type];
+    let here = scope;
+    for (const [name, value] of Object.entries(node.fields ?? {})) {
+      const id = idOf(value);
+      if (!binder?.fields.includes(name) || !id) {
+        node.fields[name] = read(value, scope);
+        continue;
+      }
+      const joins = node.type.startsWith('world_let_') && scope.has(id);
+      const mine = joins ? scope.get(id) : owned.has(id) ? fresh(id) : id;
+      owned.add(id);
+      node.fields[name] = withId(value, mine);
+      here = new Map(here).set(id, mine);
+    }
+    for (const [name, input] of Object.entries(node.inputs ?? {})) {
+      const inside = binder?.over.includes(name) ? here : scope;
+      for (const child of [input?.block, input?.shadow]) {
+        if (child) {
+          walk(child, inside);
+        }
+      }
+    }
+    const after = binder?.over.includes(NEXT) ? here : scope;
+    for (const child of [node.next?.block, node.next?.shadow]) {
+      if (child) {
+        walk(child, after);
+      }
+    }
+  };
+  for (const root of trees) {
+    walk(root, new Map());
+  }
+  return trees;
 }
 
 // ── Layout ───────────────────────────────────────────────────────────────────

@@ -236,12 +236,15 @@ const joined = (parts: object[]): object => {
   return chained as object;
 };
 
-/** The loop's name for one record, as the rebuild below walks them. */
-const ROW = {id: 'appNoteRow', name: 'note', type: 'Actor'};
-const row = () => ({
+/** The loop's name for one record; each loop has its own (`rebuildRows`). */
+interface Row {
+  id: string;
+  name: string;
+}
+const row = (loop: Row) => ({
   block: {
     type: 'variables_get_Actor',
-    fields: {VAR: {id: ROW.id, name: ROW.name}},
+    fields: {VAR: {id: loop.id, name: loop.name}},
   },
 });
 
@@ -265,10 +268,10 @@ const NOTE_ACTOR = actorFile('Note', [
 ]);
 
 /** `⟨text⟩ of ⟨the note⟩`, and `⟨at⟩ of ⟨the note⟩`. */
-const fieldOf = (exportName: string) => ({
+const fieldOf = (loop: Row, exportName: string) => ({
   block: {
     type: `world_get_ActorsNote_${exportName}`,
-    inputs: {ACTOR: row()},
+    inputs: {ACTOR: row(loop)},
   },
 });
 
@@ -289,38 +292,41 @@ const showNotes = () => ({
  * fields, and what is shown is made from them — so a row can be dated without
  * the date living inside the words.
  */
-const rebuildRows = () => [
-  {
-    type: 'world_set_ScreensMain_NotesProperty',
-    inputs: {VALUE: {block: {type: 'lists_create_empty'}}},
-  },
-  {
-    type: 'world_for_each',
-    fields: {VAR: {id: ROW.id, name: ROW.name}},
-    inputs: {
-      SOURCE: kind('actors/note'),
-      DO: {
-        block: {
-          type: 'world_push_ScreensMain_NotesProperty',
-          inputs: {
-            ITEM: joined([
-              {
-                block: {
-                  type: 'world_time_text',
-                  fields: {STYLE: 'date'},
-                  inputs: {TIME: fieldOf('AtProperty')},
+const rebuildRows = (key: string) => {
+  const loop = {id: `appNoteRow_${key}`, name: 'note'};
+  return [
+    {
+      type: 'world_set_ScreensMain_NotesProperty',
+      inputs: {VALUE: {block: {type: 'lists_create_empty'}}},
+    },
+    {
+      type: 'world_for_each',
+      fields: {VAR: loop},
+      inputs: {
+        SOURCE: kind('actors/note'),
+        DO: {
+          block: {
+            type: 'world_push_ScreensMain_NotesProperty',
+            inputs: {
+              ITEM: joined([
+                {
+                  block: {
+                    type: 'world_time_text',
+                    fields: {STYLE: 'date'},
+                    inputs: {TIME: fieldOf(loop, 'AtProperty')},
+                  },
                 },
-              },
-              words('  '),
-              fieldOf('TextProperty'),
-            ]),
+                words('  '),
+                fieldOf(loop, 'TextProperty'),
+              ]),
+            },
           },
         },
       },
     },
-  },
-  showNotes(),
-];
+    showNotes(),
+  ];
+};
 
 const MEMORY = 'notes';
 
@@ -397,7 +403,7 @@ const MAIN_SCREEN = JSON.stringify(
                     },
                   },
                 },
-                ...rebuildRows(),
+                ...rebuildRows('created'),
               ]),
             },
           },
@@ -435,7 +441,7 @@ const MAIN_SCREEN = JSON.stringify(
                     },
                   },
                 },
-                ...rebuildRows(),
+                ...rebuildRows('saved'),
                 {
                   type: 'world_set_ScreensMain_SavedProperty',
                   inputs: {

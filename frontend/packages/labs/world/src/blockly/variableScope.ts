@@ -195,6 +195,52 @@ export function boundIds(workspace: Workspace): Set<string> {
   return bound;
 }
 
+/** How many bindings in the file give `id`. */
+export function bindingCount(workspace: Workspace, id: string): number {
+  let count = 0;
+  for (const block of indexedBlocks(workspace)) {
+    if (bindingsOf(block).ids.includes(id)) {
+      count += 1;
+    }
+  }
+  return count;
+}
+
+/**
+ * The variable a `name` of `type` means where `block` stands: the innermost
+ * binding around it that gives one, else a name nothing binds. `block`'s own
+ * binding is not consulted.
+ */
+export function visibleNamed(
+  block: Block,
+  name: string,
+  type: string,
+): string | undefined {
+  const map = block.workspace.getVariableMap();
+  const named = (id: string): boolean => {
+    const variable = map.getVariableById(id);
+    return variable?.getName() === name && variable.getType() === type;
+  };
+  let child: Block = block;
+  for (let at = block.getParent(); at; at = at.getParent()) {
+    const {ids, over} = bindingsOf(at);
+    const input = inputHolding(at, child);
+    const hit =
+      input !== undefined && over.includes(input) ? ids.find(named) : undefined;
+    if (hit) {
+      return hit;
+    }
+    child = at;
+  }
+  const bound = boundIds(block.workspace);
+  for (const id of writtenIds(block.workspace)) {
+    if (!bound.has(id) && named(id)) {
+      return id;
+    }
+  }
+  return undefined;
+}
+
 /** The block in the file that declares `id`, if any does. */
 export function binderOf(
   workspace: Workspace,

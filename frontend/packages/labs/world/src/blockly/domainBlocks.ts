@@ -151,6 +151,7 @@ import {
   layerOptionsExtension,
 } from './layers';
 import {lessonFlyoutButton} from './lessonFlyoutButton';
+import {letBindingExtension} from './letBinding';
 import {localizeText} from './localizeBlocks';
 import {registerManyActorBlock, yieldsMany} from './manyActors';
 import {memberHead} from './memberHead';
@@ -4055,7 +4056,10 @@ const localDeclaration = (
     inputsInline: true,
     previousStatement: true,
     nextStatement: true,
-    ...(shadow ? {extensions: [valueShadowExtension]} : {}),
+    extensions: [
+      ...(shadow ? [valueShadowExtension] : []),
+      letBindingExtension,
+    ],
     style: 'variable_blocks',
     tooltip:
       `A ${kind} the blocks BELOW this one can use — set it, read it, and ` +
@@ -4173,7 +4177,7 @@ const worldLetPosition = defineBlock({
   inputsInline: true,
   previousStatement: true,
   nextStatement: true,
-  extensions: [valueShadowExtension],
+  extensions: [valueShadowExtension, letBindingExtension],
   style: 'variable_blocks',
   tooltip:
     'A place the blocks BELOW this one can use, written as two numbers. It ' +

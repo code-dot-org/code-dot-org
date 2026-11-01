@@ -9,16 +9,13 @@
 // SO THE FIELD IS A TEXT BOX OVER A REAL VARIABLE. What it stores is the
 // variable's id, exactly as `field_variable` does, so everything downstream is
 // unchanged — the getters list it, the generator maps it to one identifier,
-// and the workspace serialises it. What it shows and edits is the NAME: type
-// one that exists and the block points at it, type one that does not and it is
-// made.
-//
-// WHICH IS WHY RENAMING STILL WORKS FROM THE OTHER END. A getter's menu
-// renames the variable, and this field draws the variable's current name — so
-// the `let` follows, because there was only ever one name and both blocks were
-// showing it.
+// and the workspace serialises it. What it shows and edits is the NAME, and
+// the variable is this binding's own (`resolve`).
 
 import * as Blockly from 'blockly/core';
+
+import {isLet, moveReaders} from '../letBinding';
+import {bindingCount, isRedeclaration, visibleNamed} from '../variableScope';
 
 /** What a field with nothing usable in it draws. */
 const UNNAMED = '?';
@@ -63,45 +60,64 @@ export class VariableNameField extends Blockly.FieldTextInput {
   }
 
   /**
-   * The variable of this name and flavour, made if there is not one.
+   * The variable a name typed here gives.
    *
-   * By NAME, so typing a name that is already declared points at the same
-   * variable rather than at a second one wearing the same word — which is what
-   * a reader means by typing it, and is what lets a `let` and the getters
-   * below it agree without anybody choosing from a menu.
+   * A binding owns its variable (specs/VARIABLE_OWNERSHIP_PLAN.md). A `let`
+   * naming one already visible joins it, and the readers below follow; any
+   * other name renames this binding's own variable, or makes it one if it
+   * shares its variable with another binding.
    */
   private resolve(name: string): string {
     const block = this.getSourceBlock();
     const workspace = block?.workspace;
-    // NOT FROM THE FLYOUT. A block in the toolbox carries a default name, and
-    // making the variable for it would put that name on the workspace before
-    // anybody had dragged anything out — where every getter's dropdown would
-    // then offer it (`variableScope`). The flyout draws the name it was given
-    // and makes nothing.
-    if (!workspace || block?.isInFlyout) {
+    // Nothing from the flyout: a toolbox block's default name would otherwise
+    // be made on the workspace before anything was dragged out.
+    if (!block || !workspace || block.isInFlyout) {
       return '';
     }
     const map = workspace.getVariableMap();
-    const existing = map.getVariable(name, this.variableType);
-    if (existing) {
-      return existing.getId();
-    }
-    // A NEW NAME FOR THE ONE IT ALREADY DECLARES, rather than a second
-    // variable. This field only ever sits on a block that DECLARES — a `let`,
-    // a loop — so editing it is renaming the thing declared, and the readers
-    // below go on reading it: Blockly tells every field showing that variable,
-    // and they redraw themselves.
-    //
-    // Making a fresh variable instead would leave those readers pointing at
-    // the old one, which nothing declares any more — so they would quietly
-    // become out-of-scope reads of a name that had merely been spelled
-    // differently.
     const held = this.variable();
-    if (held) {
+    const heldId = held?.getId();
+    if (isLet(block)) {
+      const joined = visibleNamed(block, name, this.variableType);
+      if (joined) {
+        if (heldId && heldId !== joined) {
+          moveReaders(block, heldId, joined);
+        }
+        return joined;
+      }
+    }
+    if (
+      held &&
+      held.getType() === this.variableType &&
+      bindingCount(workspace, held.getId()) <= 1 &&
+      !(isLet(block) && isRedeclaration(block))
+    ) {
       map.renameVariable(held, name);
       return held.getId();
     }
     return map.createVariable(name, this.variableType).getId();
+  }
+
+  /** The name and flavour too, when asked, so a paste elsewhere can make it. */
+  override saveState(doFullSerialization?: boolean): unknown {
+    const variable = this.variable();
+    if (!doFullSerialization || !variable) {
+      return super.saveState(doFullSerialization);
+    }
+    return {
+      id: variable.getId(),
+      name: variable.getName(),
+      type: variable.getType(),
+    };
+  }
+
+  override loadState(state: unknown): void {
+    if (state && typeof state === 'object') {
+      this.setValue(state as never);
+      return;
+    }
+    super.loadState(state);
   }
 
   /** Shown and edited: the NAME, where the value is the id. */

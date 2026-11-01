@@ -17,6 +17,7 @@ import {
   SCOPED_VARIABLE_FIELD,
 } from './fields/scopedVariable';
 import {registerVariableNameField} from './fields/variableName';
+import {registerOwnedPaster} from './ownedPaster';
 import {registerOwnedVariableMap} from './ownedVariableMap';
 
 // BEFORE ANY FLAVOUR IS MADE, because each names this field in the JSON of the
@@ -26,6 +27,7 @@ registerScopedVariableField();
 registerVariableNameField();
 // …and before any workspace is made, since a workspace picks its store once.
 registerOwnedVariableMap();
+registerOwnedPaster();
 
 /**
  * What every flavour here has in common: a dropdown that offers the names the

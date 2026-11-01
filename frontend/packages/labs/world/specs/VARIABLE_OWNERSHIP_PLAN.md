@@ -1,6 +1,6 @@
 # Plan: each binding owns its variable
 
-STATUS: IN PROGRESS. Step 2 is built. Comes before the event hat's value chips
+STATUS: IN PROGRESS. Steps 2 and 3 are built. Comes before the event hat's value chips
 (below, step 5), which need it.
 
 A name in this language is lexical. It exists where a binding gives it: a
@@ -127,6 +127,38 @@ ways a learner can see.
   finds the one variable it found before, because nothing yet makes a
   second of a name. The suite passed unchanged, and the Ball's event still
   reaches its handler in the browser.
+
+- **Step 3: a `let` owns its variable.** Typing a name into a `let` or a
+  loop (`fields/variableName`) renames that binding's own variable, or
+  makes one if it shares its variable with another binding. A `let` typed
+  with a name visible above it joins that binding instead, and its readers
+  follow (`letBinding.moveReaders`). The same is asked when a `let` is
+  MOVED (`letBinding.settleLet`, on the block's own move): carried under a
+  binding of its name it joins it, and carried out from under one it is
+  given a variable of its own again. A joined `let` carries the warning
+  "amount is already known here, so this sets it rather than making a new
+  one."
+- **Paste and Duplicate** go through a block paster of the lab's own
+  (`ownedPaster`): each binding in the copy gets a fresh id, made before
+  the copy loads so its fields find it by id and not by name, and the
+  readers in the copy follow. A `let`'s field now saves its name and type
+  as well as its id when Blockly asks for a full copy, so a pasted `let`
+  can be made in a file that never had its variable.
+- **The repository's content shared ids, 554 times.** The rule DSL made one
+  variable per name per rule (`rule.local`) and every body binding that
+  name used it, so `Collisions_other` was bound in several bodies of one
+  rule, and every scenario and lesson that copies the rule copied that. The
+  DSL now gives each later binding its own id as the rule's workspace is
+  written (`ownBindings`), from a copy of the binding table that
+  `repositoryBindings.test` holds equal to the editor's. The Notes app's
+  two rebuild loops each have their own variable too.
+- **Two tests asserted the shared model** (`scopedLocals`: two unconnected
+  `let`s of one name are one variable; typing a taken name joins it), and
+  were rewritten for this one.
+- **Seen in the browser**: in the Ball's code, a `let amount` in each of two
+  handlers; renaming the first to `total` leaves the second `amount`. The
+  second sits under `when … is hit by … amount`, so it joined the hat's
+  value, wears the warning, and generates `amount = 0;`.
 
 ## Not in this plan
 

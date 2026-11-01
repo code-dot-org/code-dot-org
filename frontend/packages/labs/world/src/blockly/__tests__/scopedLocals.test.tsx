@@ -179,24 +179,22 @@ describe('naming a local', () => {
     expect(block.getFieldValue('VAR')).toBe(made!.getId());
   });
 
-  it('points at the name that is already there, rather than a second one', async () => {
-    // Two `let`s of one name are one variable, which is what a reader means by
-    // typing it twice — and is what lets the second generate an assignment
-    // rather than a second declaration.
+  it('joins a `let` of that name above it, and only one above it', async () => {
+    // A `let` owns its variable unless the name is already visible, when it
+    // sets that one and generates an assignment
+    // (specs/VARIABLE_OWNERSHIP_PLAN.md).
     const workspace = new Blockly.Workspace();
     const first = workspace.newBlock('world_let_number');
     const second = workspace.newBlock('world_let_number');
+    const apart = workspace.newBlock('world_let_number');
+    first.nextConnection!.connect(second.previousConnection!);
 
     first.setFieldValue('tally', 'VAR');
     second.setFieldValue('tally', 'VAR');
+    apart.setFieldValue('tally', 'VAR');
 
     expect(second.getFieldValue('VAR')).toBe(first.getFieldValue('VAR'));
-    expect(
-      workspace
-        .getVariableMap()
-        .getAllVariables()
-        .filter(one => one.getName() === 'tally'),
-    ).toHaveLength(1);
+    expect(apart.getFieldValue('VAR')).not.toBe(first.getFieldValue('VAR'));
   });
 
   it('draws the variable’s name, so renaming from a getter reaches it', async () => {
@@ -243,15 +241,18 @@ describe('renaming a local', () => {
     ).toHaveLength(1);
   });
 
-  it('points at a name that already exists rather than colliding', () => {
-    // Two variables cannot share a name, so typing one that is taken joins it.
+  it('renames its own variable to a name another binding holds', () => {
+    // Names may repeat; a binding never takes over another's variable.
     const workspace = new Blockly.Workspace();
     const taken = workspace.getVariableMap().createVariable('total', 'Number');
     const block = workspace.newBlock('world_let_number');
     block.setFieldValue('tally', 'VAR');
+    const own = block.getFieldValue('VAR');
 
     block.setFieldValue('total', 'VAR');
 
-    expect(block.getFieldValue('VAR')).toBe(taken.getId());
+    expect(block.getFieldValue('VAR')).toBe(own);
+    expect(block.getFieldValue('VAR')).not.toBe(taken.getId());
+    expect(taken.getName()).toBe('total');
   });
 });
