@@ -67,8 +67,8 @@ const MakePane: React.FunctionComponent<MakePaneProps> = ({
       {!generating && (
         <div className={styles.paneHeader}>
           <p className={styles.headline}>
-            {result ? (
-              'AI made this from your words.'
+            {result || regenerate ? (
+              `Regenerate this ${kindLabel}`
             ) : (
               <>
                 Generate {article}{' '}
