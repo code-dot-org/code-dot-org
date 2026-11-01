@@ -295,18 +295,11 @@ button.chipWord {
   }
 }
 
-// The arrows fade in once there is a second set to go to.
+// The arrows are always there; one with nowhere to go is disabled.
 .arrow {
   flex: none;
   align-self: center;
   margin: 0;
-  transition: opacity 0.3s ease-out;
-
-  // Doubled to outrank the component's disabled look.
-  &.navHidden.navHidden {
-    opacity: 0;
-    visibility: hidden;
-  }
 }
 
 // All sets share one grid cell, so the stack is as tall as the tallest set.
@@ -319,12 +312,13 @@ button.chipWord {
   overflow-y: auto;
 }
 
+// The words sit mid-height in a short set; a tall set scrolls from its
+// top (auto margins center without clipping, where align-items would).
 .set {
   grid-area: 1 / 1;
   min-width: 0;
   min-height: 108px;
   display: flex;
-  align-items: center;
   padding: 6px 4px;
 }
 
@@ -381,8 +375,10 @@ button.chipWord {
 // zero it so these gaps are the whole gap.
 .words {
   display: flex;
+  flex: 1 1 auto;
   flex-wrap: wrap;
   gap: 6px;
+  margin: auto 0;
 }
 
 .word {

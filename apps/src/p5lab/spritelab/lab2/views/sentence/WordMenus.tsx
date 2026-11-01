@@ -162,8 +162,6 @@ export function useWordMenus({
     (last, s, i) => (isAvailable(s) ? i : last),
     0
   );
-  // With one set to show, there is nowhere to go: no arrows, no dots.
-  const oneSet = lastAvailable === 0;
   // If the set on show becomes unavailable, move to the last available one.
   useEffect(() => {
     if (index > lastAvailable) {
@@ -365,7 +363,7 @@ export function useWordMenus({
                 variant="text"
                 color="tertiary"
                 size="medium"
-                className={classNames(styles.arrow, oneSet && styles.navHidden)}
+                className={styles.arrow}
                 aria-label="Previous words"
                 disabled={!canMove || index === 0}
                 onClick={() => goTo(Math.max(0, index - 1))}
@@ -407,7 +405,7 @@ export function useWordMenus({
                 variant="text"
                 color="tertiary"
                 size="medium"
-                className={classNames(styles.arrow, oneSet && styles.navHidden)}
+                className={styles.arrow}
                 aria-label="Next words"
                 disabled={!canMove || index >= lastAvailable}
                 onClick={() => goTo(Math.min(lastAvailable, index + 1))}
