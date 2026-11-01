@@ -5,14 +5,11 @@
 #
 # Statements carry student program source and other personal data, so only a statement's size, ActiveRecord's label for
 # it, the table it names and the frame that issued it are logged. Never the SQL itself.
-require 'dynamic_config/dcdo'
 
 module Cdo
   module OversizedSqlStatements
     # Fixed in RDS Proxy for MySQL; there is no setting that raises it.
     LIMIT_BYTES = 16_384
-
-    DCDO_KEY = 'log_oversized_sql_statements'.freeze
 
     # This file's own frames sit above the caller's in the subscriber's stack, and survive the backtrace cleaner
     # because they are application code.
@@ -28,8 +25,6 @@ module Cdo
         # so this is the same length the proxy measures.
         bytes = sql.bytesize
         next unless bytes > LIMIT_BYTES
-        # Checked after the size, which is a cheaper gate on a path that runs for every query.
-        next unless DCDO.get(DCDO_KEY, false)
 
         CDO.log.warn(
           'event=oversized_sql_statement ' \
