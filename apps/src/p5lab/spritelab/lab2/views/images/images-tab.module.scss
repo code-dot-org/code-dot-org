@@ -44,6 +44,27 @@ $pad: 16px;
   color: var(--text-neutral-quaternary);
 }
 
+// The plus: a brand square like a dialog header's icon.
+.newButton {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  font-size: 20px;
+}
+
+// The trash can, in a row pinned to the column's bottom; the question
+// takes the row over while it is asked.
+.listFooter {
+  display: flex;
+  flex: none;
+  margin-top: auto;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 4px;
+  min-height: 36px;
+}
+
 .listQuestion {
   flex-basis: 100%;
   font-size: 14px;

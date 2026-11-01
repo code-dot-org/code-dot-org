@@ -66,61 +66,23 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
   return (
     <section className={styles.list} aria-label="Your images">
       <div className={styles.listHeader}>
-        {confirming && chosenImage ? (
-          <>
-            <span className={styles.listQuestion}>Delete this image?</span>
-            <MuiButton
-              variant="outlined"
-              color="secondary"
-              size="small"
-              onClick={() => setConfirming(false)}
-            >
-              Cancel
-            </MuiButton>
-            <MuiButton
-              variant="contained"
-              color="error"
-              size="small"
-              onClick={() => {
-                setConfirming(false);
-                onDelete?.(chosenImage.key);
-              }}
-            >
-              Delete
-            </MuiButton>
-          </>
-        ) : (
-          <>
-            <MuiTypography
-              component="h3"
-              variant="overline2"
-              className={styles.listTitle}
-            >
-              Your images
-            </MuiTypography>
-            {deletable && (
-              <MuiIconButton
-                variant="text"
-                color="tertiary"
-                size="small"
-                aria-label="Delete image"
-                onClick={() => setConfirming(true)}
-              >
-                <FontAwesomeV6Icon iconName="trash-can" />
-              </MuiIconButton>
-            )}
-            {onNew && (
-              <MuiIconButton
-                variant="text"
-                color="tertiary"
-                size="small"
-                aria-label="New image"
-                onClick={onNew}
-              >
-                <FontAwesomeV6Icon iconName="plus" />
-              </MuiIconButton>
-            )}
-          </>
+        <MuiTypography
+          component="h3"
+          variant="overline2"
+          className={styles.listTitle}
+        >
+          Your images
+        </MuiTypography>
+        {onNew && (
+          <MuiIconButton
+            variant="contained"
+            color="primary"
+            className={styles.newButton}
+            aria-label="New image"
+            onClick={onNew}
+          >
+            <FontAwesomeV6Icon iconName="plus" />
+          </MuiIconButton>
         )}
       </div>
       <div className={styles.tiles}>
@@ -192,6 +154,44 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
           );
         })}
       </div>
+      {deletable && (
+        <div className={styles.listFooter}>
+          {confirming ? (
+            <>
+              <span className={styles.listQuestion}>Delete this image?</span>
+              <MuiButton
+                variant="outlined"
+                color="secondary"
+                size="small"
+                onClick={() => setConfirming(false)}
+              >
+                Cancel
+              </MuiButton>
+              <MuiButton
+                variant="contained"
+                color="error"
+                size="small"
+                onClick={() => {
+                  setConfirming(false);
+                  onDelete?.(chosenImage.key);
+                }}
+              >
+                Delete
+              </MuiButton>
+            </>
+          ) : (
+            <MuiIconButton
+              variant="text"
+              color="tertiary"
+              size="small"
+              aria-label="Delete image"
+              onClick={() => setConfirming(true)}
+            >
+              <FontAwesomeV6Icon iconName="trash-can" />
+            </MuiIconButton>
+          )}
+        </div>
+      )}
     </section>
   );
 };
