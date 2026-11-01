@@ -1,13 +1,10 @@
 // How the picture came to be, told once over four panels after a student's
 // first picture of a kind: nothing closes it but reading to the end.
 
-import {MuiCustomDialog as CustomDialog} from '@code-dot-org/component-library/dialog';
+import {MuiDialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {useState} from 'react';
-
-import useThemeMode from '@cdo/apps/pixelEditor/useThemeMode';
 
 import ChunkyPicture from './ChunkyPicture';
 
@@ -100,23 +97,23 @@ const LearningDialog: React.FunctionComponent<LearningDialogProps> = ({
   prompt,
   onDone,
 }) => {
-  const mode = useThemeMode();
   const [index, setIndex] = useState(0);
   const last = index === PANELS.length - 1;
   const panel = PANELS[index];
   return (
-    <div className={styles.host}>
-      <CustomDialog aria-label={TITLE} mode={mode} className={styles.dialog}>
-        <span id="dsco-dialog-description" className={styles.srOnly}>
-          Four short panels on how the AI made your picture. Next moves on; Got
-          it closes.
-        </span>
-        <h2 className={styles.title}>{TITLE}</h2>
-        <div key={index} className={styles.panel}>
-          <div className={styles.visual}>{panel.visual(picture, prompt)}</div>
-          <p className={styles.text}>{panel.text}</p>
-        </div>
-        <div className={styles.footer}>
+    <MuiDialog
+      title={TITLE}
+      className={styles.dialog}
+      customContent={
+        <>
+          <span id="dsco-dialog-description" className={styles.srOnly}>
+            Four short panels on how the AI made your picture. Next moves on;
+            Got it closes.
+          </span>
+          <div key={index} className={styles.panel}>
+            <div className={styles.visual}>{panel.visual(picture, prompt)}</div>
+            <p className={styles.text}>{panel.text}</p>
+          </div>
           <div className={styles.dots} aria-hidden>
             {PANELS.map((_, i) => (
               <span
@@ -128,27 +125,18 @@ const LearningDialog: React.FunctionComponent<LearningDialogProps> = ({
           <span className={styles.srOnly} role="status">
             Step {index + 1} of {PANELS.length}
           </span>
-          <div className={styles.buttons}>
-            {index > 0 && (
-              <MuiButton
-                variant="outlined"
-                color="secondary"
-                onClick={() => setIndex(i => i - 1)}
-              >
-                Back
-              </MuiButton>
-            )}
-            <MuiButton
-              variant="contained"
-              color="primary"
-              onClick={() => (last ? onDone() : setIndex(i => i + 1))}
-            >
-              {last ? 'Got it' : 'Next'}
-            </MuiButton>
-          </div>
-        </div>
-      </CustomDialog>
-    </div>
+        </>
+      }
+      secondaryButtonProps={
+        index > 0
+          ? {children: 'Back', onClick: () => setIndex(i => i - 1)}
+          : undefined
+      }
+      primaryButtonProps={{
+        children: last ? 'Got it' : 'Next',
+        onClick: () => (last ? onDone() : setIndex(i => i + 1)),
+      }}
+    />
   );
 };
 

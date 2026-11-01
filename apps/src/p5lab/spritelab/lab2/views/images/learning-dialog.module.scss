@@ -1,34 +1,13 @@
-@use '../../../../../pixelEditor/dialogChrome' as chrome;
+@use "../sentence/sr-only";
 
-// The dialog wears the pixel editor's chrome, following the page's theme
-// (the image dialog's pattern).
-.host {
-  display: contents;
-
-  @include chrome.theme;
+// The design-system dialog, wider than its default for the three pictures.
+.dialog {
+  width: 600px;
+  max-width: 100%;
 }
-
-.host .dialog {
-  @include chrome.panel;
-
-  width: 560px;
-}
-
-.host .dialog :focus-visible {
-  @include chrome.focus-ring;
-}
-
-@include chrome.keyframes;
 
 .srOnly {
-  @include chrome.sr-only;
-}
-
-.title {
-  @include chrome.header;
-
-  margin: 0;
-  font-size: 20px;
+  @include sr-only.sr-only;
 }
 
 .panel {
@@ -36,7 +15,7 @@
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  padding: 24px 24px 8px;
+  padding: 8px 0;
   animation: panel-in 0.3s ease-out;
 }
 
@@ -72,7 +51,7 @@
   grid-template-columns: repeat(4, 56px);
   gap: 10px;
   font-size: 32px;
-  color: var(--dialog-panel-text);
+  color: var(--text-neutral-primary);
 }
 
 .mosaicCell {
@@ -82,7 +61,7 @@
   width: 56px;
   height: 56px;
   border-radius: 8px;
-  background-color: var(--dialog-inset-bg);
+  background-color: var(--background-neutral-secondary);
   animation: cell-in 0.4s ease-out both;
 }
 
@@ -121,7 +100,7 @@
   border-radius: 8px;
   image-rendering: pixelated;
   object-fit: contain;
-  background-color: var(--dialog-inset-bg);
+  background-color: var(--background-neutral-secondary);
 }
 
 .guess {
@@ -141,36 +120,25 @@
   right: -28px;
   bottom: -8px;
   font-size: 40px;
-  color: var(--dialog-panel-text);
-}
-
-.footer {
-  @include chrome.footer;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  color: var(--text-neutral-primary);
 }
 
 .dots {
   display: flex;
+  justify-content: center;
   gap: 8px;
+  margin-top: 12px;
 }
 
 .dot {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: var(--dialog-control-border);
+  background-color: var(--borders-neutral-primary);
 }
 
 .dotNow {
-  background-color: var(--dialog-panel-text);
-}
-
-.buttons {
-  display: flex;
-  gap: 8px;
+  background-color: var(--text-neutral-primary);
 }
 
 @media (prefers-reduced-motion: reduce) {
