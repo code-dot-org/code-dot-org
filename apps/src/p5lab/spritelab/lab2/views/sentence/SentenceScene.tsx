@@ -106,9 +106,6 @@ export interface SentenceSceneParts {
   frameFilled: boolean;
   /** Behind the scenes, once there is a picture. */
   underFrame: React.ReactNode;
-  /** The session's pictures as a column of tiles down the frame's left,
-      the one in the frame marked. */
-  alternatives: React.ReactNode;
   /** The screen reader's status line. */
   status: React.ReactNode;
   /** The Type dropdown, when the host offers the choice. */
@@ -168,8 +165,6 @@ interface SentenceSceneProps {
   onBusyChange?: (busy: boolean) => void;
   /** Analytics: which surface generated. */
   method?: string;
-  /** The level asks for a rating of every picture. */
-  verdictRequired?: boolean;
   /** Lays the parts out. */
   layout: (parts: SentenceSceneParts) => React.ReactNode;
   /** How the word menus lay their words out; the carousel unless given. */
@@ -195,7 +190,6 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   onGenerateStart,
   onBusyChange,
   method = 'scene',
-  verdictRequired,
   layout,
   wordLayout,
   singleStep,
@@ -223,14 +217,10 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   const makesSet = canAnimate && animated && !typedPrompt;
 
   const [mode, setMode] = useState<Mode>('edit');
-  // Every picture made this session; the chosen one shows in the frame
-  // and is the image.
-  const [history, setHistory] = useState<GeneratedPicture[]>([]);
-  const [chosenId, setChosenId] = useState<string | null>(null);
-  const chosenPicture = history.find(m => m.id === chosenId) ?? null;
-  // The picture just generated plays the reveal and is asked about; one
-  // swapped back in from the strip does neither.
-  const [freshId, setFreshId] = useState<string | null>(null);
+  // The picture made last, showing in the frame; it is the image.
+  const [chosenPicture, setChosenPicture] = useState<GeneratedPicture | null>(
+    null
+  );
   const [verdict, setVerdict] = useState<Verdict | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [saving, setSaving] = useState(false);
@@ -357,9 +347,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         prompt,
         sent,
       };
-      setHistory(current => [...current, entry]);
-      setChosenId(entry.id);
-      setFreshId(entry.id);
+      setChosenPicture(entry);
       setMode('result');
       playSound('reveal');
       await persist(entry, null);
@@ -427,21 +415,6 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       );
     },
     [chosenPicture, imageType]
-  );
-
-  // Another picture from the strip into the frame: no reveal, and the
-  // rating given so far was for the previous picture.
-  const choosePicture = useCallback(
-    (id: string) => {
-      setChosenId(id);
-      setFreshId(null);
-      setVerdict(null);
-      const picture = history.find(m => m.id === id);
-      if (picture) {
-        persist(picture, null);
-      }
-    },
-    [history, persist]
   );
 
   const generating = mode === 'generating';
@@ -578,29 +551,25 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       )}
       {/* Keyed by picture, so each new one remounts and plays the reveal
           once. */}
-      {chosenPicture.id === freshId && (
-        <>
-          <PixelReveal
-            key={`reveal-${chosenPicture.id}`}
-            src={chosenPicture.dataURI}
-            crop={
-              sheet
-                ? {
-                    // A generated set's frames stand in one row.
-                    ...stripCellOrigin(
-                      CHARACTER_STRIP_FRAME_COUNT * sheet.frameSize.x,
-                      sheet.frameSize,
-                      stillFrame ?? 0
-                    ),
-                    width: sheet.frameSize.x,
-                    height: sheet.frameSize.y,
-                  }
-                : undefined
-            }
-          />
-          <SparkleBurst key={`burst-${chosenPicture.id}`} />
-        </>
-      )}
+      <PixelReveal
+        key={`reveal-${chosenPicture.id}`}
+        src={chosenPicture.dataURI}
+        crop={
+          sheet
+            ? {
+                // A generated set's frames stand in one row.
+                ...stripCellOrigin(
+                  CHARACTER_STRIP_FRAME_COUNT * sheet.frameSize.x,
+                  sheet.frameSize,
+                  stillFrame ?? 0
+                ),
+                width: sheet.frameSize.x,
+                height: sheet.frameSize.y,
+              }
+            : undefined
+        }
+      />
+      <SparkleBurst key={`burst-${chosenPicture.id}`} />
     </>
   ) : null;
 
@@ -611,30 +580,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       compact={compactBehindTheScenes}
     />
   );
-  // Stays through editing and generating, so the frame does not shift.
-  const alternativesNode = history.length > 1 && (
-    <AlternativeThumbs
-      thumbs={history.map(m => ({
-        id: m.id,
-        src: m.dataURI,
-        prompt: m.prompt,
-        crop: m.result.frames?.poses
-          ? {
-              width: m.result.frames.frameSize.x,
-              height: m.result.frames.frameSize.y,
-            }
-          : undefined,
-        pixelArt: !!m.result.pixelGridSize,
-      }))}
-      chosenId={chosenId}
-      onChoose={choosePicture}
-      disabled={busy}
-    />
-  );
-  const ratingOffered =
-    showingResult &&
-    !!chosenPicture &&
-    (chosenPicture.id === freshId || !!verdictRequired);
+  const ratingOffered = showingResult && !!chosenPicture;
 
   return (
     <>
@@ -646,7 +592,6 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         frame,
         frameFilled: !!chosenPicture && !generating,
         underFrame,
-        alternatives: alternativesNode,
         status: statusNode,
         typeChoice: typeChoiceNode,
         sentence: sentenceNode,

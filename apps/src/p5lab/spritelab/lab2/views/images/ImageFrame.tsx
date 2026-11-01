@@ -30,8 +30,6 @@ interface ImageFrameProps {
   above?: React.ReactNode;
   /** Over the frame, positioned by its own class. */
   overlay?: React.ReactNode;
-  /** Down the frame's left. */
-  beside?: React.ReactNode;
   /** Under the frame. */
   under?: React.ReactNode;
 }
@@ -47,7 +45,6 @@ const ImageFrame: React.FunctionComponent<ImageFrameProps> = ({
   workspaceClassName,
   above,
   overlay,
-  beside,
   under,
 }) => {
   // The frame is a square as large as the column allows, which a flex
@@ -94,7 +91,6 @@ const ImageFrame: React.FunctionComponent<ImageFrameProps> = ({
           </div>
         )}
         <div className={styles.frameRow} style={{height: side}}>
-          {beside && <div className={styles.beside}>{beside}</div>}
           <div
             className={classNames(
               styles.frame,

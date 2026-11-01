@@ -75,8 +75,6 @@ interface ImagesTabProps {
   onGenerate?: () => void;
   /** Students may add images and draw on them (free play). */
   editingOffered?: boolean;
-  /** The level requires a rating on every generated picture. */
-  verdictRequired?: boolean;
   /** The right pane's width, px: the preview column's. */
   paneWidth: number;
   /** A picture became an image: the project should save now. */
@@ -114,7 +112,6 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   generationsLeft,
   onGenerate,
   editingOffered,
-  verdictRequired,
   paneWidth,
   onImageLanded,
   active = true,
@@ -487,7 +484,6 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
           initialAnimated={animated}
           onAnimatedChange={setAnimated}
           generationsLeft={generationsLeft}
-          verdictRequired={verdictRequired}
           onGenerateStart={onGenerate}
           onBusyChange={setBusy}
           onKeep={handleKeep}
@@ -545,6 +541,12 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                 }
                 generating={generating}
                 beside={parts.alternatives}
+                live={
+                  parts.mode === 'generating' || parts.frameFilled
+                    ? parts.frame
+                    : undefined
+                }
+                generating={parts.mode === 'generating'}
                 under={
                   generating ? (
                     <div className={styles.underSteps}>{parts.progress}</div>

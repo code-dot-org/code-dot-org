@@ -2255,10 +2255,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const catalogOffered = catalog.length > 0 && isEditable;
   const openBlockCatalog = () => setShowBlockCatalog(true);
 
-  const verdictRequired = !!levelProperties.objectives?.items?.some(
-    item => item.check.kind === 'rated'
-  );
-
   return (
     <div className={moduleStyles.labRow}>
       {showStartOver && startOverOffered && (
@@ -2426,7 +2422,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 generationsLeft={generationsLeft}
                 onGenerate={countGeneration}
                 editingOffered={isFreeplayMode(levelProperties.levelMode)}
-                verdictRequired={verdictRequired}
                 paneWidth={paneWidthPx}
                 onImageLanded={saveImagesNow}
                 active={activeTab === 'Images'}

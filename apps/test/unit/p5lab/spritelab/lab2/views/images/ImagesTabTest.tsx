@@ -73,7 +73,6 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/sentence/SentenceScene', () => {
           frame: generating ? <span>spinner</span> : null,
           frameFilled: false,
           underFrame: null,
-          alternatives: null,
           status: null,
           typeChoice: null,
           sentence: <span>words</span>,

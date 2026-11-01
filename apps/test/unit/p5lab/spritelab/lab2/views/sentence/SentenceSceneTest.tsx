@@ -44,7 +44,6 @@ const RESULT = {
 const layout = (parts: SentenceSceneParts) => (
   <div>
     <div>{parts.frame}</div>
-    {parts.alternatives}
     {parts.underFrame}
     <section ref={parts.panelRef} tabIndex={-1} aria-label="Make your picture">
       {parts.status}
@@ -253,41 +252,6 @@ describe('SentenceScene', () => {
       (screen.getByRole('button', {name: 'Generate'}) as HTMLButtonElement)
         .disabled
     ).toBe(true);
-  });
-
-  it('shows every picture as a tile and swaps one in, keeping it, without a question', async () => {
-    generateCharacterSet
-      .mockResolvedValueOnce(RESULT)
-      .mockResolvedValueOnce({...RESULT, filename: 'cat2.png'});
-    renderScene();
-    pickCreature();
-    await generate();
-    await generate();
-    const tiles = screen.getAllByRole('button', {name: /^Picture \d: A cat$/});
-    expect(tiles).toHaveLength(2);
-    expect(onKeep).toHaveBeenCalledTimes(2);
-    fireEvent.click(tiles[0]);
-    expect(onKeep).toHaveBeenCalledTimes(3);
-    expect(onKeep.mock.calls[2][0].filename).toBe('cat.png');
-    expect(
-      screen.queryByRole('group', {name: 'How did the AI do?'})
-    ).toBeNull();
-  });
-
-  it('asks about any picture when the level rates every one', async () => {
-    generateCharacterSet
-      .mockResolvedValueOnce(RESULT)
-      .mockResolvedValueOnce({...RESULT, filename: 'cat2.png'});
-    renderScene({verdictRequired: true});
-    pickCreature();
-    await generate();
-    await generate();
-    fireEvent.click(
-      screen.getAllByRole('button', {name: /^Picture \d: A cat$/})[0]
-    );
-    expect(
-      screen.getByRole('group', {name: 'How did the AI do?'})
-    ).toBeTruthy();
   });
 
   it('says so when the words are not allowed', async () => {

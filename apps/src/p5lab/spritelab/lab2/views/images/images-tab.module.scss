@@ -236,19 +236,13 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   container-type: inline-size;
 }
 
-// The frame and, at its left, the session's other pictures.
+// The frame's row.
 .frameRow {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   gap: 12px;
   width: 100%;
-}
-
-.beside {
-  flex: none;
-  display: flex;
-  max-height: 100%;
 }
 
 .frame {
