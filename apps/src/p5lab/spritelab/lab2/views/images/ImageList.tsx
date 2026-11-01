@@ -186,9 +186,7 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
                     ownDraft.subject
                   ).toLowerCase()}`}
                   onClick={() => onChoose(ownDraft.id)}
-                >
-                  <FontAwesomeV6Icon iconName="plus" aria-hidden />
-                </button>
+                />
               )}
             </React.Fragment>
           );

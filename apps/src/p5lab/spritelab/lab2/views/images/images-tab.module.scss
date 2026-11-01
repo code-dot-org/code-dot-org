@@ -120,12 +120,10 @@ $pad: 16px;
   outline-offset: 3px;
 }
 
-// The image not made yet: a dashed box where its tile will be.
+// The image not made yet: an empty dotted box where its tile will be.
 .tileDraft {
-  border-style: dashed;
+  border: 2px dotted var(--borders-neutral-primary);
   background: transparent;
-  color: var(--text-neutral-secondary);
-  font-size: 24px;
 }
 
 .pixelArt {
