@@ -591,6 +591,19 @@ export function assumePixelGrid(
   };
 }
 
+/**
+ * The grid at a pitch decided elsewhere, with this raster's own offsets and
+ * confidence. The frames of a character set are edits of one base picture
+ * and share its pitch, but each lands on a phase of its own, so the base
+ * frame's offsets cannot be sampled across the set.
+ */
+export function gridAtPitch(raster: Raster, size: number): PixelGrid {
+  const x = fitOffset(edgeHistogram(raster, 'x'), size);
+  const y = fitOffset(edgeHistogram(raster, 'y'), size);
+  const grid = {sizeX: size, sizeY: size, offsetX: x.offset, offsetY: y.offset};
+  return {...grid, confidence: 1 - gridMismatch(raster, grid)};
+}
+
 /** Cell boundaries along one axis for a grid (offset partial cell included). */
 function cellBounds(length: number, size: number, offset: number): number[] {
   const bounds = [0];

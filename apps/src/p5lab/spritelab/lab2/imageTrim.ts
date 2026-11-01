@@ -241,7 +241,11 @@ async function upscaledForDisplay(
   }
   const {dataURI, factor} = await upscaleImageNearest(
     props.dataURI,
-    crispScaleFor
+    // A sheet's factor comes from one frame, not the whole strip.
+    (width, height) =>
+      props.frameSize
+        ? crispScaleFor(props.frameSize.x, props.frameSize.y)
+        : crispScaleFor(width, height)
   );
   return factor > 1
     ? {...scaleAnimationGeometry(props, factor), dataURI}

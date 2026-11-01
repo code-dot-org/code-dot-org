@@ -93,33 +93,26 @@ const BLOCK_PROMPT_CLAUSE =
  * ~10-20px block (the model can't emit small canvases). Normalize: detect the
  * block grid and downsample to true logical resolution, which is how the
  * image is stored; the load-time pass (imageTrim.ts) upscales it for the
- * engine. Left unchanged (no grid size) when no grid is detected. The
- * pixelGridSize of 1 recorded on the animation marks it pixel art at its
- * logical size.
+ * engine. Always: the style choice is the classifier, and the prompt's own
+ * block stands in when no grid can be read, so pixel art is never stored at
+ * the model's size. The pixelGridSize of 1 recorded on the animation marks
+ * it pixel art at its logical size.
  */
-async function normalizeIfPixelArt(
+async function normalizePixelArt(
   blob: Blob,
   imageType: ImageType,
   fallbackBlock: number
-): Promise<{blob: Blob; pixelGridSize?: number}> {
-  const squareGrid = imageType === 'background';
-  try {
-    // A background must stay square and full-frame (it letterboxes over the
-    // stage otherwise), so its grid is pinned square to the frame instead of
-    // following a detected offset.
-    const normalized = await normalizePixelArtBlob(blob, fallbackBlock, {
-      squareGrid,
-    });
-    if (
-      !normalized ||
-      (squareGrid && normalized.logicalWidth !== normalized.logicalHeight)
-    ) {
-      return {blob};
-    }
-    return {blob: normalized.blob, pixelGridSize: NATIVE_PIXEL_GRID};
-  } catch {
-    return {blob};
+): Promise<{blob: Blob; pixelGridSize: number}> {
+  // A background must stay square and full-frame (it letterboxes over the
+  // stage otherwise), so its grid is pinned square to the frame instead of
+  // following a detected offset.
+  const normalized = await normalizePixelArtBlob(blob, fallbackBlock, {
+    squareGrid: imageType === 'background',
+  });
+  if (!normalized) {
+    throw new Error('The picture could not be brought to its pixel grid.');
   }
+  return {blob: normalized.blob, pixelGridSize: NATIVE_PIXEL_GRID};
 }
 
 /** What to generate; every omitted field falls back to a default. */
@@ -386,7 +379,7 @@ export async function generateImage(
   }
   let pixelGridSize: number | undefined;
   if (style === 'pixel') {
-    const normalized = await normalizeIfPixelArt(blob, imageType, pixelBlock);
+    const normalized = await normalizePixelArt(blob, imageType, pixelBlock);
     blob = normalized.blob;
     pixelGridSize = normalized.pixelGridSize;
   } else {

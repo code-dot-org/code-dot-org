@@ -14,6 +14,13 @@ import {
   CHARACTER_STRIP_POSES,
 } from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
 import {findOpaqueBounds} from '@cdo/apps/p5lab/spritelab/lab2/imageTrim';
+import {
+  assumePixelGrid,
+  downsampleToGrid,
+  gridAtPitch,
+  NATIVE_PIXEL_GRID,
+} from '@cdo/apps/pixelEditor/pixelArt';
+import {Raster} from '@cdo/apps/pixelEditor/tools';
 import {createUuid} from '@cdo/apps/utils';
 
 import {bytesToDataURI} from './encoding';
@@ -315,6 +322,112 @@ async function composeStrip(
   return canvasToBlob(strip);
 }
 
+// The strip's standing frame: the base picture every posed frame was drawn
+// from, so its pitch is the set's.
+const BASE_FRAME_INDEX =
+  CHARACTER_STRIP_POSES['stand-right']!.start +
+  CHARACTER_STRIP_POSES['stand-right']!.count -
+  1;
+
+const rasterOf = (img: HTMLImageElement, width: number, height: number) => {
+  const canvas = document.createElement('canvas');
+  canvas.width = width;
+  canvas.height = height;
+  const ctx = canvas.getContext('2d', {willReadFrequently: true})!;
+  ctx.drawImage(img, 0, 0, width, height);
+  return ctx.getImageData(0, 0, width, height);
+};
+
+const canvasOf = (raster: Raster) => {
+  const canvas = document.createElement('canvas');
+  canvas.width = raster.width;
+  canvas.height = raster.height;
+  canvas
+    .getContext('2d')!
+    .putImageData(
+      new ImageData(
+        new Uint8ClampedArray(raster.data),
+        raster.width,
+        raster.height
+      ),
+      0,
+      0
+    );
+  return canvas;
+};
+
+/**
+ * The keyed frames of a pixel-style set, each brought to its logical
+ * resolution and laid into one strip of square cells, one image pixel per
+ * art pixel. The posed frames are edits of the base, so they share its
+ * pitch (the same to a hundredth of a pixel across a set, measured on
+ * stored sets), but each lands on a phase of its own, so the offset is
+ * fitted per frame. The crop is the union of every frame's content, as
+ * composeStrip cuts it, and nothing is scaled: the cell is the crop's
+ * larger side. A frame a cell smaller than the rest (its phase cost it an
+ * edge cell) draws transparent where it ends.
+ */
+async function composePixelStrip(
+  frames: Blob[],
+  fallbackBlock: number
+): Promise<{blob: Blob; cell: number}> {
+  const images = await Promise.all(frames.map(loadImageFromBlob));
+  const width = images[0].width;
+  const height = images[0].height;
+  const rasters = images.map(img => rasterOf(img, width, height));
+  const pitch = assumePixelGrid(rasters[BASE_FRAME_INDEX], fallbackBlock).sizeX;
+  const logical = rasters.map(raster =>
+    downsampleToGrid(raster, gridAtPitch(raster, pitch))
+  );
+  const boxes = logical
+    .map(r => findOpaqueBounds(r.data, r.width, r.height, SOLID_ALPHA))
+    .filter((b): b is NonNullable<typeof b> => b !== null);
+  const grounded = logical
+    .slice(0, GROUNDED_FRAMES)
+    .map(r => findOpaqueBounds(r.data, r.width, r.height, SOLID_ALPHA))
+    .filter((b): b is NonNullable<typeof b> => b !== null);
+  const crop = boxes.length
+    ? {
+        left: Math.min(...boxes.map(b => b.left)),
+        top: Math.min(...boxes.map(b => b.top)),
+        right: Math.max(...boxes.map(b => b.right)),
+        bottom: Math.max(
+          ...(grounded.length ? grounded : boxes).map(b => b.bottom)
+        ),
+      }
+    : {
+        left: 0,
+        top: 0,
+        right: logical[0].width - 1,
+        bottom: logical[0].height - 1,
+      };
+  const cropW = crop.right - crop.left + 1;
+  const cropH = crop.bottom - crop.top + 1;
+  const cell = Math.max(cropW, cropH);
+  const dx = Math.floor((cell - cropW) / 2);
+  const dy = cell - cropH;
+
+  const strip = document.createElement('canvas');
+  strip.width = cell * frames.length;
+  strip.height = cell;
+  const ctx = strip.getContext('2d')!;
+  ctx.imageSmoothingEnabled = false;
+  logical.forEach((raster, index) => {
+    ctx.drawImage(
+      canvasOf(raster),
+      crop.left,
+      crop.top,
+      cropW,
+      cropH,
+      index * cell + dx,
+      dy,
+      cropW,
+      cropH
+    );
+  });
+  return {blob: await canvasToBlob(strip), cell};
+}
+
 // One pause-and-retry per frame: a transient failure gets one more try
 // after a breath rather than a burst.
 const RETRY_DELAY_MS = 4000;
@@ -356,9 +469,9 @@ export interface CharacterSetProgress {
  * ranges). The base frame is drawn first; the posed frames are drawn from
  * it in parallel.
  *
- * Pixel style is keyed like a single sprite but not grid-normalized: each
- * frame would find its own grid and land at its own scale, and the frames
- * of one strip must agree.
+ * Pixel style is stored at its logical size like a single sprite: every
+ * frame is brought to the base frame's pitch (composePixelStrip), so the
+ * frames of one strip agree.
  */
 export async function generateCharacterSet(
   prompt: string,
@@ -438,11 +551,17 @@ export async function generateCharacterSet(
   // Strip order: the second idle, the base between the ranges that share
   // it, then the walk and jump frames (CHARACTER_STRIP_POSES).
   const stripFrames = [posed[0], baseKeyed, ...posed.slice(1)];
-  let cell = STRIP_CELL_PX;
-  let blob = await composeStrip(stripFrames, cell, options.style);
-  if (blob.size > MAX_STRIP_BYTES) {
-    cell = Math.round(cell * 0.6);
+  let cell: number;
+  let blob: Blob;
+  if (options.style === 'pixel') {
+    ({blob, cell} = await composePixelStrip(stripFrames, pixelBlock));
+  } else {
+    cell = STRIP_CELL_PX;
     blob = await composeStrip(stripFrames, cell, options.style);
+    if (blob.size > MAX_STRIP_BYTES) {
+      cell = Math.round(cell * 0.6);
+      blob = await composeStrip(stripFrames, cell, options.style);
+    }
   }
 
   const generation: ImageGenerationMetadata = {
@@ -463,6 +582,7 @@ export async function generateCharacterSet(
     filename: `generated-${createUuid()}.png`,
     uint8Array: new Uint8Array(await blob.arrayBuffer()),
     mediaType: 'image/png',
+    ...(options.style === 'pixel' && {pixelGridSize: NATIVE_PIXEL_GRID}),
     generation,
     frames: {
       frameSize: {x: cell, y: cell},
