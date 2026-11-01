@@ -418,36 +418,6 @@ export function useWordMenus({
                 />
               </MuiIconButton>
             </div>
-            <div className={styles.dotsRow}>
-              <div
-                className={classNames(styles.dots, oneSet && styles.navHidden)}
-              >
-                {slots.map((s, i) =>
-                  isAvailable(s) ? (
-                    <button
-                      key={s.id}
-                      type="button"
-                      className={classNames(
-                        styles.dot,
-                        hueClass(sentence, s.id),
-                        i === index && styles.dotCurrent,
-                        filled(s.id) && styles.dotFilled
-                      )}
-                      aria-label={`${s.label} words${
-                        filled(s.id)
-                          ? `, ${
-                              wordFor(sentence, s.id, choices[s.id])?.text
-                            } chosen`
-                          : ''
-                      }`}
-                      aria-current={i === index ? 'true' : undefined}
-                      disabled={!canMove}
-                      onClick={() => goTo(i)}
-                    />
-                  ) : null
-                )}
-              </div>
-            </div>
           </div>
         )}
       </>

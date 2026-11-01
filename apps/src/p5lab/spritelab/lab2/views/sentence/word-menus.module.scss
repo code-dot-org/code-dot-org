@@ -266,10 +266,6 @@ button.chipWord {
     min-height: 72px;
     padding: 4px;
   }
-
-  .dotsRow {
-    min-height: 26px;
-  }
 }
 
 // Every open set at once, one cluster of words per set down the pane; the
@@ -288,21 +284,12 @@ button.chipWord {
   }
 }
 
-// The arrows and dots fade in once there is a second set to go to.
-.arrow,
-.dots {
-  transition: opacity 0.3s ease-out;
-}
-
-.dots.navHidden {
-  opacity: 0;
-  visibility: hidden;
-}
-
+// The arrows fade in once there is a second set to go to.
 .arrow {
   flex: none;
   align-self: center;
   margin: 0;
+  transition: opacity 0.3s ease-out;
 
   // Doubled to outrank the component's disabled look.
   &.navHidden.navHidden {
@@ -376,75 +363,12 @@ button.chipWord {
   }
 }
 
-// The page gives every button a 5px margin; the chips, dots and arrows
+// The page gives every button a 5px margin; the chips and arrows
 // zero it so these gaps are the whole gap.
 .words {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-}
-
-.dotsRow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 32px;
-}
-
-.dots {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-}
-
-// A 24px button around a 12px dot: a neutral ring until the set has its
-// word (a hue ring fails contrast on one theme's tray or the other), filled
-// with the set's color once it does, and ringed darker while on show.
-.dot {
-  position: relative;
-  width: 24px;
-  height: 24px;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  background: transparent;
-  cursor: pointer;
-  animation: dot-in 0.3s ease-out;
-
-  &::before {
-    content: '';
-    position: absolute;
-    inset: 6px;
-    border-radius: 50%;
-    border: 2px solid var(--text-neutral-secondary);
-  }
-}
-
-@keyframes dot-in {
-  from {
-    opacity: 0;
-    transform: scale(0.6);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .dot {
-    animation: none;
-  }
-}
-
-.dotFilled::before {
-  background-color: var(--hue);
-}
-
-.dotCurrent::before {
-  background-color: var(--hue);
-  border-color: var(--text-neutral-primary);
-  transform: scale(1.25);
 }
 
 .word {
