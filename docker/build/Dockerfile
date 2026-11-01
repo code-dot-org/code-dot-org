@@ -11,7 +11,7 @@ ARG BASE_IMAGE=ghcr.io/code-dot-org/cdo-base:latest
 # uv from Astral's published image, the method their Docker guide documents.
 # Written out rather than built from an ARG so dependabot can read it, and
 # pinned by digest as well as tag so the reference cannot move under us.
-FROM ghcr.io/astral-sh/uv:0.5.18@sha256:e2101b9e627153b8fe4e8a1249cc4194f1b38ece7f28a5a9b8f958e3b560e69c AS uv
+FROM ghcr.io/astral-sh/uv:0.13.6@sha256:af22a52f5eafef3d78e551599d405c02df61919d18028f0cea8eda93bc9986d0 AS uv
 
 FROM ${BASE_IMAGE}
 
