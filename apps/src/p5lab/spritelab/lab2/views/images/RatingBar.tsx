@@ -29,17 +29,17 @@ export const RATING_QUESTIONS: Record<
   up: {
     question: 'What did AI do well?',
     options: [
-      {value: 'matches', label: 'It matches my words'},
-      {value: 'looks-right', label: 'It looks right'},
-      {value: 'style', label: 'I like the style'},
+      {value: 'matches', label: 'Matches my prompt'},
+      {value: 'great', label: 'Looks great'},
+      {value: 'unexpected-liked', label: 'Not what I expected, but I like it'},
     ],
   },
   down: {
     question: 'What went wrong?',
     options: [
-      {value: 'mismatch', label: "It doesn't match my words"},
-      {value: 'wrong', label: "It doesn't look right"},
-      {value: 'colors', label: 'The colors are off'},
+      {value: 'mismatch', label: "Doesn't match my prompt"},
+      {value: 'wrong', label: "Doesn't look right"},
+      {value: 'unexpected', label: 'Not what I expected'},
     ],
   },
 };

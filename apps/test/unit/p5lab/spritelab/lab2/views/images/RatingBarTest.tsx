@@ -20,10 +20,10 @@ describe('RatingBar', () => {
       screen.getByRole('alertdialog', {name: 'What went wrong?'})
     ).toBeTruthy();
     expect(screen.queryByRole('button', {name: /close/i})).toBeNull();
-    fireEvent.click(screen.getByLabelText("It doesn't match my words"));
-    fireEvent.click(screen.getByLabelText('The colors are off'));
+    fireEvent.click(screen.getByLabelText("Doesn't match my prompt"));
+    fireEvent.click(screen.getByLabelText('Not what I expected'));
     fireEvent.click(screen.getByRole('button', {name: 'Done'}));
-    expect(onReasons).toHaveBeenCalledWith(['mismatch', 'colors']);
+    expect(onReasons).toHaveBeenCalledWith(['mismatch', 'unexpected']);
     expect(screen.queryByRole('alertdialog')).toBeNull();
     expect(
       screen
