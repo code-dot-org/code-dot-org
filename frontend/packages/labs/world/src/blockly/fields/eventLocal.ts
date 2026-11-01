@@ -9,8 +9,6 @@
 
 import * as Blockly from 'blockly/core';
 
-import {defineExtension, type Extension} from '@code-dot-org/blockly';
-
 import {beginGetterDrag} from './dragGetterOut';
 
 interface Config extends Blockly.FieldConfig {
@@ -162,21 +160,6 @@ export const localFieldName = (at: number): string => `LOCAL${at}`;
 
 /** Whether a field of that name holds a hat's value (`variableScope`). */
 export const isLocalField = (name: string): boolean => /^LOCAL\d+$/.test(name);
-
-/** The input a hat's undrawn value fields sit in. */
-export const LOCALS_INPUT = 'LOCALS';
-
-/** Hides that input, whose fields are not drawn as chips. */
-export const hiddenLocalsExtension: Extension = defineExtension(
-  'world_event_locals_hidden',
-  {
-    extension() {
-      (this as unknown as Blockly.Block)
-        .getInput(LOCALS_INPUT)
-        ?.setVisible(false);
-    },
-  },
-);
 
 let registered = false;
 

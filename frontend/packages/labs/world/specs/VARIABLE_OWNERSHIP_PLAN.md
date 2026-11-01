@@ -187,10 +187,10 @@ eventValue$2;` and the console prints the 7 the create handler emits.
   member head uses (`beginGetterDrag`); the chip stays. In the flyout a
   press takes the hat. The menu label reads a chip as its name, so the
   hit-by hat is `when … is hit by who … amount`.
-- **A value filtered by a set of choices is not drawn**, by decision while
-  building: `presses ⟨pressed key⟩ (space ▾)` says the key twice on the
-  hat lessons use most. Its field stays, hidden, at the end of the hat,
-  and its getter is in the `+`. Kept open for the author of the plan.
+- **A value filtered by a set of choices is drawn too**, before its
+  filter: `presses ⟨pressed key⟩ (space ▾)`. Hidden at first, since the
+  key reads twice; drawn since, for the plan's author, so every value a
+  hat hands over is a chip.
 - **The stray warning says only what is known**: "amount is not known
   here." `binderOf` and the code that described the binding are gone.
 - **Seen in the browser**: the Ball's hit-by hat draws `who` and `amount`

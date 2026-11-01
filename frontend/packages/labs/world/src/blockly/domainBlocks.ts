@@ -126,12 +126,7 @@ import {soundImportFieldExtension} from './extensions/soundImportField';
 import {spritePickExtension} from './extensions/spritePickField';
 import {traitTooltipExtension} from './extensions/traitTooltip';
 import {worldContextExtension} from './extensions/worldContext';
-import {
-  EVENT_LOCAL_FIELD,
-  hiddenLocalsExtension,
-  localFieldName,
-  LOCALS_INPUT,
-} from './fields/eventLocal';
+import {EVENT_LOCAL_FIELD, localFieldName} from './fields/eventLocal';
 import fieldAnglePlugin, {fieldAngleArg} from './fields/FieldAngle';
 import {
   FieldColorPicker,
@@ -1532,15 +1527,8 @@ const defineEventBlock = (event: EventMeta) => {
   const chipped = !(values.length === 1 && values[0].type === 'actor');
   // The hat's own variable for a value, drawn as its getter: press it to
   // take one out (`fields/eventLocal`, specs/VARIABLE_OWNERSHIP_PLAN.md).
-  //
-  // A value filtered by a set of choices keeps its field hidden: `presses
-  // ⟨pressed key⟩ (space ▾)` says the key twice. Its getter is in the `+`.
-  const hiddenLocals: BlockArgDefinition[] = [];
-  const chip = (
-    at: number,
-    part: {name: string; type: string},
-    shown = true,
-  ) => {
+  // A filtered value draws one too, before its filter.
+  const chip = (at: number, part: {name: string; type: string}) => {
     if (!chipped) {
       return;
     }
@@ -1552,12 +1540,7 @@ const defineEventBlock = (event: EventMeta) => {
       variableType: flavour.type,
       getterType: flavour.getterType,
       chipStyle: (flavour.getterBlock as {style?: string}).style,
-      ...(shown ? {} : {hidden: true}),
     } as unknown as BlockArgDefinition;
-    if (!shown) {
-      hiddenLocals.push(field);
-      return;
-    }
     args0.push(field);
     message0 += ` %${args0.length}`;
   };
@@ -1614,7 +1597,7 @@ const defineEventBlock = (event: EventMeta) => {
     // one field, two fields' worth of meaning. Nothing in the library mixes
     // the two, which is why it went unseen; a signature that may now name
     // several values makes mixing them ordinary.
-    chip(at, part, false);
+    chip(at, part);
     const field = filterFieldName(filters.length + kinds.length);
     const options = (): Array<[string, string]> => [
       ANY_CHOICE,
@@ -1630,15 +1613,6 @@ const defineEventBlock = (event: EventMeta) => {
     );
     filters.push({field, ref: choice, carried: at});
     message0 += ` %${args0.length}`;
-  }
-  if (hiddenLocals.length) {
-    for (const field of hiddenLocals) {
-      args0.push(field);
-      message0 += ` %${args0.length}`;
-    }
-    args0.push({type: 'input_dummy', name: LOCALS_INPUT});
-    message0 += ` %${args0.length}`;
-    extensions.push(hiddenLocalsExtension);
   }
   // What the `+` offers, and whether there is one at all.
   //

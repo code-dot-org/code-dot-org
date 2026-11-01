@@ -61,12 +61,9 @@ const labelOf = (definition: Definition | undefined, type: string): string => {
   // A value's chip reads as the value's name (`fields/eventLocal`).
   const named = (at: number): string | undefined => {
     const arg = definition?.args0?.[at - 1] as
-      | {type?: string; local?: string; hidden?: boolean}
+      | {type?: string; local?: string}
       | undefined;
-    if (arg?.type !== EVENT_LOCAL_FIELD) {
-      return undefined;
-    }
-    return arg.hidden ? '' : arg.local;
+    return arg?.type === EVENT_LOCAL_FIELD ? arg.local : undefined;
   };
   return (definition?.message0 ?? type)
     .replace(/%(\d+)/g, (_, at) =>

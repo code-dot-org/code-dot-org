@@ -148,18 +148,17 @@ describe('an event with a designed phrasing', () => {
     // filter is the first argument rather than the second.
     const hat = hatFor(ruleWithEvent(PRESSED, KEY_VAR));
 
-    // The value's own field after it, hidden: a key filtered by its choices
-    // is not drawn twice (`fields/eventLocal`).
-    expect(hat.message0).toBe('when %1 is pressed %2 %3');
-    expect(hat.args0[1]).toMatchObject({name: 'LOCAL0', hidden: true});
-    expect(hat.args0[0]).toMatchObject({
+    // The value's chip, then its filter (`fields/eventLocal`).
+    expect(hat.message0).toBe('when %1 %2 is pressed');
+    expect(hat.args0[0]).toMatchObject({name: 'LOCAL0'});
+    expect(hat.args0[1]).toMatchObject({
       type: 'field_dropdown',
       name: 'FILTER0',
     });
     // `(any)` leads, because "fires for every key" has to be sayable — and as
     // an emptied socket it would be a thing a learner found by deleting a block.
-    expect(hat.args0[0].options?.[0]).toEqual(['(any)', '']);
-    expect(hat.args0[0].options).toContainEqual(['space', 'space']);
+    expect(hat.args0[1].options?.[0]).toEqual(['(any)', '']);
+    expect(hat.args0[1].options).toContainEqual(['space', 'space']);
   });
 
   it('generates the guard the learner would have written', () => {
