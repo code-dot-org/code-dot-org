@@ -496,44 +496,87 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   color: var(--background-neutral-primary);
 }
 
-// Read to screen readers only.
-.srOnly {
-  @include chrome.sr-only;
+// The question: the design-system dialog, its content a line with the
+// thumb and the reasons as rows.
+.ratingDialog {
+  width: 520px;
 }
 
-// The question wears the pixel editor's chrome, like the image dialog.
-.ratingHost {
-  display: contents;
-
-  @include chrome.theme;
+.ratingPrompt {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 16px;
+  font-size: 18px;
 }
 
-.ratingHost .ratingDialog {
-  @include chrome.panel;
-
-  width: 420px;
-}
-
-.ratingHost .ratingDialog :focus-visible {
-  @include chrome.focus-ring;
-}
-
-.ratingTitle {
-  @include chrome.header;
-
-  margin: 0;
+.ratingPromptIcon {
   font-size: 20px;
 }
 
-.ratingBody {
-  padding: 20px 24px;
+.ratingPromptUp {
+  color: var(--sentiment-success-70);
 }
 
-.ratingFooter {
-  @include chrome.footer;
+.ratingPromptDown {
+  color: var(--brand-orange-50);
+}
 
+.reasonList {
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  gap: 12px;
+}
+
+// A row is a label around its checkbox; the box is hidden and the row
+// shows the state: a tint and a check when picked, a ring on focus.
+.reasonRow {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 8px;
+  background-color: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+
+  &:hover {
+    border-color: var(--borders-neutral-strong);
+  }
+
+  &:has(:focus-visible) {
+    outline: 2px solid var(--borders-brand-teal-primary);
+    outline-offset: 2px;
+  }
+}
+
+.reasonRowPicked {
+  border-color: var(--borders-brand-teal-primary);
+  background-color: var(--background-brand-light);
+  color: var(--text-brand-primary);
+}
+
+.reasonInput {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+// Holds the check's room, so the text does not shift when it lands.
+.reasonCheck {
+  display: inline-flex;
+  flex: none;
+  width: 20px;
+  justify-content: center;
+  color: var(--text-brand-primary);
 }
 
 // The pane's first row: the headline, and the way behind the scenes.

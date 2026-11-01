@@ -1,16 +1,15 @@
 // The two thumbs over the picture, and after one is pressed the question
 // of why, answered by picking from three reasons.
 
-import {Chips} from '@code-dot-org/component-library/chips';
-import {MuiCustomDialog as CustomDialog} from '@code-dot-org/component-library/dialog';
+import {MuiDialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Button as MuiButton, IconButton as MuiIconButton} from '@mui/material';
+import {IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {useState} from 'react';
 
-import useThemeMode from '@cdo/apps/pixelEditor/useThemeMode';
-
 import {Verdict} from '../sentence/ResultActions';
+
+import ReasonOptions from './ReasonOptions';
 
 import styles from './images-tab.module.scss';
 
@@ -51,7 +50,6 @@ const RatingBar: React.FunctionComponent<RatingBarProps> = ({
   onReasons,
   disabled,
 }) => {
-  const mode = useThemeMode();
   // The question opens with the thumb and closes with Done.
   const [asking, setAsking] = useState<Verdict | null>(null);
   const [picked, setPicked] = useState<string[]>([]);
@@ -93,41 +91,42 @@ const RatingBar: React.FunctionComponent<RatingBarProps> = ({
           <FontAwesomeV6Icon iconName="thumbs-down" aria-hidden />
         </MuiIconButton>
       </div>
-      {question && (
-        <div className={styles.ratingHost}>
-          <CustomDialog
-            aria-label={question.question}
-            mode={mode}
-            className={styles.ratingDialog}
-          >
-            <span id="dsco-dialog-description" className={styles.srOnly}>
-              Pick any reasons that fit, then Done.
-            </span>
-            <h2 className={styles.ratingTitle}>{question.question}</h2>
-            <div className={styles.ratingBody}>
-              <Chips
+      {question && asking && (
+        <MuiDialog
+          title={question.question}
+          className={styles.ratingDialog}
+          customContent={
+            <>
+              <p id="dsco-dialog-description" className={styles.ratingPrompt}>
+                <FontAwesomeV6Icon
+                  iconName={asking === 'up' ? 'thumbs-up' : 'thumbs-down'}
+                  iconStyle="solid"
+                  className={classNames(
+                    styles.ratingPromptIcon,
+                    asking === 'up'
+                      ? styles.ratingPromptUp
+                      : styles.ratingPromptDown
+                  )}
+                  aria-hidden
+                />
+                Pick any that fit.
+              </p>
+              <ReasonOptions
                 name="rating-reasons"
-                label="Pick any that fit"
                 options={question.options}
                 values={picked}
-                setValues={setPicked}
-                size="m"
+                onChange={setPicked}
               />
-            </div>
-            <div className={styles.ratingFooter}>
-              <MuiButton
-                variant="contained"
-                color="primary"
-                onClick={() => {
-                  onReasons(picked);
-                  setAsking(null);
-                }}
-              >
-                Done
-              </MuiButton>
-            </div>
-          </CustomDialog>
-        </div>
+            </>
+          }
+          primaryButtonProps={{
+            children: 'Done',
+            onClick: () => {
+              onReasons(picked);
+              setAsking(null);
+            },
+          }}
+        />
       )}
     </>
   );

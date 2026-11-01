@@ -10,19 +10,21 @@ describe('RatingBar', () => {
     const {rerender} = render(
       <RatingBar verdict={null} onJudge={onJudge} onReasons={onReasons} />
     );
-    expect(screen.queryByRole('dialog')).toBeNull();
+    expect(screen.queryByRole('alertdialog')).toBeNull();
     fireEvent.click(screen.getByRole('button', {name: 'Not so good'}));
     expect(onJudge).toHaveBeenCalledWith('down');
     rerender(
       <RatingBar verdict="down" onJudge={onJudge} onReasons={onReasons} />
     );
-    expect(screen.getByRole('dialog', {name: 'What went wrong?'})).toBeTruthy();
+    expect(
+      screen.getByRole('alertdialog', {name: 'What went wrong?'})
+    ).toBeTruthy();
     expect(screen.queryByRole('button', {name: /close/i})).toBeNull();
     fireEvent.click(screen.getByLabelText("It doesn't match my words"));
     fireEvent.click(screen.getByLabelText('The colors are off'));
     fireEvent.click(screen.getByRole('button', {name: 'Done'}));
     expect(onReasons).toHaveBeenCalledWith(['mismatch', 'colors']);
-    expect(screen.queryByRole('dialog')).toBeNull();
+    expect(screen.queryByRole('alertdialog')).toBeNull();
     expect(
       screen
         .getByRole('button', {name: 'Not so good'})
