@@ -1,5 +1,6 @@
 // The tab's right column while a picture is drawn: what is being drawn,
-// and the way out, done or not.
+// and the way out. An edit always keeps its strokes; the editor's undo is
+// the way back. A blank can be dropped.
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton} from '@mui/material';
@@ -20,7 +21,7 @@ interface DrawPaneProps {
   saving: boolean;
   /** Keep what is drawn and leave the tools. */
   onDone: () => void;
-  /** Leave the tools; a blank is dropped, an image keeps its last save. */
+  /** Drop a blank and leave the tools; not offered over an image. */
   onCancel: () => void;
 }
 
@@ -44,14 +45,16 @@ const DrawPane: React.FunctionComponent<DrawPaneProps> = ({
         {editing ? 'Edit this image.' : `Draw your ${kindLabel}.`}
       </p>
       <div className={styles.paneBottom}>
-        <MuiButton
-          variant="outlined"
-          color="secondary"
-          disabled={saving}
-          onClick={onCancel}
-        >
-          Cancel
-        </MuiButton>
+        {!editing && (
+          <MuiButton
+            variant="outlined"
+            color="secondary"
+            disabled={saving}
+            onClick={onCancel}
+          >
+            Cancel
+          </MuiButton>
+        )}
         <MuiButton
           variant="contained"
           color="primary"

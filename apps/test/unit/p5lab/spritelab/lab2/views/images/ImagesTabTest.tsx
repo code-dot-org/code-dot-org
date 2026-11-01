@@ -372,9 +372,13 @@ describe('ImagesTab', () => {
       imageType: 'sprite',
       subject: undefined,
     });
-    // Still drawing: the tab comes back to the tools.
+    // Still drawing: the tab comes back to the tools. An edit has no
+    // Cancel; Done keeps the strokes and leaves.
     expect(screen.getByText('canvas')).toBeTruthy();
-    fireEvent.click(screen.getByRole('button', {name: 'Cancel'}));
+    expect(screen.queryByRole('button', {name: 'Cancel'})).toBeNull();
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', {name: 'Done editing'}));
+    });
     expect(screen.queryByText('canvas')).toBeNull();
   });
 });
