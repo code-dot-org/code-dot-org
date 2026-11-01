@@ -3,14 +3,12 @@
 // right. A picture is the image the moment it lands; there is no dialog and
 // no Keep.
 
-import classNames from 'classnames';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import PixelEditor, {
   PixelEditorSaveMeta,
 } from '@cdo/apps/pixelEditor/PixelEditor';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-import characterOutline from '@cdo/static/spritelab_lab2/character-outline.svg';
 
 import {
   GeneratedImageResult,
@@ -408,33 +406,13 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
         >
           {parts => {
             saveRef.current = parts.save;
-            const outline =
-              !drawing.target.key &&
-              kind.imageType === 'sprite' &&
-              kind.subject !== 'object';
             return (
               <>
                 <ImageFrame
                   image={null}
                   workspaceClassName={styles.paintFrame}
                   above={parts.toolbar}
-                  live={
-                    outline ? (
-                      <div className={styles.paintStack}>
-                        {parts.canvas}
-                        <img
-                          src={characterOutline}
-                          alt=""
-                          className={classNames(
-                            styles.paintOutline,
-                            parts.edited && styles.paintOutlineGone
-                          )}
-                        />
-                      </div>
-                    ) : (
-                      parts.canvas
-                    )
-                  }
+                  live={parts.canvas}
                 />
                 <DrawPane
                   width={paneWidthPx}
