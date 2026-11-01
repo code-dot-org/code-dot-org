@@ -178,24 +178,16 @@ describe('what a block can see', () => {
     expect(idsInScope(block).has(ghost.getId())).toBe(false);
   });
 
-  it('sees a name nothing declares, from anywhere', () => {
-    // The additive half, and the reason this could ship without migrating
-    // anything: every stock rule sets and reads free locals in its step
-    // bodies, and a strict scope would have taken them out of the dropdown of
-    // the rule that owns them.
+  it('does not see a name nothing binds, even one that is set', () => {
+    // Every name is bound (specs/VARIABLE_OWNERSHIP_PLAN.md): a `set` of a
+    // name no binding gives does not make it known anywhere.
     const free = workspace.getVariableMap().createVariable('total', 'Number');
-    // …WRITTEN by a block, which is what a rule's free local is: set in a step
-    // body, and declared by nothing.
     workspace
       .newBlock('variables_set_Number')
       .setFieldValue(free.getId(), 'VAR');
-    const {block} = withLocal('n');
-    const below = workspace.newBlock('reader');
-    block.nextConnection!.connect(below.previousConnection!);
     const elsewhere = workspace.newBlock('reader');
 
-    expect(idsInScope(below).has(free.getId())).toBe(true);
-    expect(idsInScope(elsewhere).has(free.getId())).toBe(true);
+    expect(idsInScope(elsewhere).has(free.getId())).toBe(false);
   });
 });
 

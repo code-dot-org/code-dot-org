@@ -1,6 +1,6 @@
 # Plan: each binding owns its variable
 
-STATUS: IN PROGRESS. Steps 2 to 5 are built. Comes before the event hat's value chips
+STATUS: IN PROGRESS. Steps 2 to 6 are built. Comes before the event hat's value chips
 (below, step 5), which need it.
 
 A name in this language is lexical. It exists where a binding gives it: a
@@ -196,6 +196,22 @@ eventValue$2;` and the console prints the 7 the create handler emits.
 - **Seen in the browser**: the Ball's hit-by hat draws `who` and `amount`
   as chips; `amount` pressed and dragged into `write to console` lands as a
   getter, the chip stays, and the console prints 7.
+
+- **Step 6: every name is bound.** Nothing in the repository set a name
+  no binding gives, once the rule DSL's first writes were `let`s, so the
+  scope rule's exception is gone: a name no binding gives is known
+  nowhere, `set` or not (`idsInScope`, `visibleNamed`). `writtenIds` went
+  with it.
+- **Reads outside their binding, found on the way**, which the exception
+  had not covered either. Teleport set `here` with `set` in two bodies
+  whose `let here` was elsewhere; both are `let`s now. Three remain, each
+  wanting a binding the lab does not have, and named in the content check
+  (`repositoryBindings.test`, "read every variable inside a binding of
+  it"): Collisions fills `found`, `arrived` and `left` with `clear` and
+  `push` blocks, and an actor list has no `let`; Path's `queue` and `seen`
+  are lists, and there is no `let list`; Meteors names `ball` with `add
+actor … named`, which is not a binding. A getter of any of them draws
+  `???` in the editor, as it did before.
 
 ## Not in this plan
 

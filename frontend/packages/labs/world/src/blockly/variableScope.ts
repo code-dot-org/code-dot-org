@@ -12,13 +12,9 @@
 // everywhere would be offering a name that generates a reference to a
 // different variable — the module-level `var` Blockly writes for the same id.
 //
-// THE RULE IS ADDITIVE, and deliberately. A name a binder declares is visible
-// inside that binder and nowhere else; a name NO binder declares is visible
-// everywhere, because that is what it is — the free locals every stock rule
-// uses in its step bodies, which nothing has migrated and which would
-// otherwise vanish from the dropdown of the rule that owns them. So `with`
-// scopes, and everything that was global stays global until something moves
-// it.
+// EVERY NAME IS BOUND. A name exists inside the binding that gives it — a
+// `let`, a loop, an event hat, a member's head — and nowhere else; a name no
+// binding gives is known nowhere (specs/VARIABLE_OWNERSHIP_PLAN.md).
 
 import type {Block, Workspace} from 'blockly';
 
@@ -210,8 +206,7 @@ export function bindingCount(workspace: Workspace, id: string): number {
 
 /**
  * The variable a `name` of `type` means where `block` stands: the innermost
- * binding around it that gives one, else a name nothing binds. `block`'s own
- * binding is not consulted.
+ * binding around it that gives one. `block`'s own binding is not consulted.
  */
 export function visibleNamed(
   block: Block,
@@ -234,47 +229,7 @@ export function visibleNamed(
     }
     child = at;
   }
-  const bound = boundIds(block.workspace);
-  for (const id of writtenIds(block.workspace)) {
-    if (!bound.has(id) && named(id)) {
-      return id;
-    }
-  }
   return undefined;
-}
-
-/**
- * Every id some block on the workspace WRITES — a setter, or a binder.
- *
- * NOT every id a block names, and not the variable map. Both of those hold
- * more than the file does, and in the same way: every block in the TOOLBOX
- * carries a default name — `amount`, `flag`, `text`, `other` — and Blockly
- * makes the variable so the flyout can draw it, so a getter dragged out of the
- * drawer arrives carrying one of them. Counting a READ as making a name is
- * what let that dragged getter turn `flag` into a name of the file's, offered
- * everywhere, for a variable nothing ever assigns.
- *
- * A name is made by being written to. That is what a rule's free locals are —
- * set in a step body and declared by nothing — and it is exactly what a
- * dangling read is not.
- */
-export function writtenIds(workspace: Workspace): Set<string> {
-  const written = new Set<string>();
-  // The whole file, built or not: a local written only in a collapsed body is
-  // still one of the file's names (`workspaceIndex`).
-  for (const block of indexedBlocks(workspace)) {
-    const binds = bindingsOf(block).ids;
-    // A setter is the other way a name comes to exist. Recognised by the
-    // shape of its type rather than by a list, so a new flavour needs no
-    // entry here (`createTypedVariable`).
-    const assigns = /^variables_set_/.test(block.type)
-      ? block.getVarModels().map(one => one.getId())
-      : [];
-    for (const id of [...binds, ...assigns]) {
-      written.add(id);
-    }
-  }
-  return written;
 }
 
 /**
@@ -306,25 +261,13 @@ function inputHolding(parent: Block, child: Block): string | undefined {
 }
 
 /**
- * The variable ids `block` can see: what its ancestors bind, plus everything
- * nobody binds.
+ * The variable ids `block` can see: what its ancestors bind.
  *
  * Walked from the block outwards, asking at each step which INPUT the child
  * came out of — a name bound over `DO` is not in scope in the list beside it.
  */
 export function idsInScope(block: Block): Set<string> {
-  const workspace = block.workspace;
   const seen = new Set<string>();
-  // Everything the file USES that no binder declares. These are its own — a
-  // rule's free locals, which nothing has migrated — and the two halves are
-  // both needed: without `used` the toolbox's default names are offered
-  // everywhere, and without `bound` a local would be.
-  const bound = boundIds(workspace);
-  for (const id of writtenIds(workspace)) {
-    if (!bound.has(id)) {
-      seen.add(id);
-    }
-  }
   let child: Block = block;
   for (let at = block.getParent(); at; at = at.getParent()) {
     const {ids, over} = bindingsOf(at);

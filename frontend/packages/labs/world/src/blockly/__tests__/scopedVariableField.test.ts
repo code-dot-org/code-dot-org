@@ -32,8 +32,6 @@ import {
 const GETTER = 'test_get_number';
 /** Something with a socket, so plugging a reader in counts as moving it. */
 const HOLDER = 'test_holds';
-/** …and a block that WRITES one, which is what makes a name the file's. */
-const USER = 'variables_set_Number';
 /** A binder, by the type `variableScope` knows: it declares over the rows below. */
 const LET = 'world_let_number';
 
@@ -41,6 +39,23 @@ const options = (field: Blockly.Field): string[] =>
   (field as Blockly.FieldDropdown)
     .getOptions(false)
     .map(([, id]) => String(id));
+
+/**
+ * Put `getter` where `id` is bound: in a holder under a `let` of it. A name
+ * is known only inside the binding that gives it.
+ */
+const under = (
+  workspace: Blockly.Workspace,
+  id: string,
+  getter: Blockly.Block,
+): Blockly.Block => {
+  const binder = workspace.newBlock(LET);
+  binder.setFieldValue(id, 'VAR');
+  const holder = workspace.newBlock(HOLDER);
+  binder.nextConnection!.connect(holder.previousConnection!);
+  holder.getInput('IN')!.connection!.connect(getter.outputConnection!);
+  return binder;
+};
 
 /**
  * The messages, the extension and the two blocks these cases build.
@@ -91,21 +106,6 @@ const define = () => {
     {
       type: LET,
       message0: 'let %1',
-      args0: [
-        {
-          type: 'field_variable',
-          name: 'VAR',
-          variableTypes: ['Number'],
-          defaultType: 'Number',
-        },
-      ],
-      previousStatement: true,
-      nextStatement: true,
-    },
-    {
-      // A block that WRITES the name, which is what makes one the file's.
-      type: USER,
-      message0: 'set %1 to something',
       args0: [
         {
           type: 'field_variable',
@@ -183,9 +183,8 @@ describe('a getter’s menu', () => {
     // The other half: `???` is what an empty scope looks like, not what the
     // field always looks like.
     const seen = workspace.getVariableMap().createVariable('tally', 'Number');
-    const user = workspace.newBlock(USER);
-    user.setFieldValue(seen.getId(), 'VAR');
     const getter = workspace.newBlock(GETTER);
+    under(workspace, seen.getId(), getter);
 
     expect(options(getter.getField('VAR')!)).toContain(seen.getId());
   });
@@ -212,18 +211,16 @@ describe('a name the block cannot see', () => {
     getter.setFieldValue(stray.getId(), 'VAR');
 
     // It holds the id — nothing has taken it away — and shows the absence,
-    // because nothing in the file writes that name.
+    // because nothing in the file binds that name.
     expect(getter.getFieldValue('VAR')).toBe(stray.getId());
     expect(getter.getField('VAR')!.getText()).toBe(UNNAMED);
   });
 
-  it('draws the name once the file writes it', () => {
-    // The other half: `???` is what being out of scope looks like, not what
-    // the field always looks like.
+  it('draws the name under the binding that gives it', () => {
     const seen = workspace.getVariableMap().createVariable('tally', 'Number');
-    workspace.newBlock(USER).setFieldValue(seen.getId(), 'VAR');
     const getter = workspace.newBlock(GETTER);
     getter.setFieldValue(seen.getId(), 'VAR');
+    under(workspace, seen.getId(), getter);
 
     expect(getter.getField('VAR')!.getText()).toBe('tally');
   });
@@ -311,9 +308,9 @@ describe('the option list', () => {
     // Nothing in scope yet, so nothing to offer.
     expect(field.getOptions().map(([, id]) => String(id))).toEqual(['']);
 
-    // …and now a name the file writes.
+    // …and now a name bound around it.
     const seen = workspace.getVariableMap().createVariable('tally', 'Number');
-    workspace.newBlock(USER).setFieldValue(seen.getId(), 'VAR');
+    under(workspace, seen.getId(), getter);
 
     // Asked WITH the cache, which is what the menu does. A remembered list
     // would still be the empty one.
@@ -373,8 +370,8 @@ describe('a reader with nothing chosen', () => {
 
   it('takes the one name in scope rather than saying `???`', () => {
     const seen = workspace.getVariableMap().createVariable('tally', 'Number');
-    workspace.newBlock(USER).setFieldValue(seen.getId(), 'VAR');
     const getter = workspace.newBlock(GETTER);
+    under(workspace, seen.getId(), getter);
     expect(getter.getFieldValue('VAR')).toBeFalsy();
     settled(getter);
 
@@ -399,8 +396,8 @@ describe('a reader with nothing chosen', () => {
     // "corrected" to nothing at the moment it is least able to say what it
     // means.
     const seen = workspace.getVariableMap().createVariable('tally', 'Number');
-    workspace.newBlock(USER).setFieldValue(seen.getId(), 'VAR');
     const getter = workspace.newBlock(GETTER);
+    under(workspace, seen.getId(), getter);
 
     created(getter);
 
@@ -413,14 +410,13 @@ describe('a reader with nothing chosen', () => {
     // and that what it would draw is the absence — the paint itself is
     // Blockly's and wants a browser.
     const seen = workspace.getVariableMap().createVariable('tally', 'Number');
-    const setter = workspace.newBlock(USER);
-    setter.setFieldValue(seen.getId(), 'VAR');
     const getter = workspace.newBlock(GETTER);
     getter.setFieldValue(seen.getId(), 'VAR');
+    const binder = under(workspace, seen.getId(), getter);
     expect(getter.getField('VAR')!.getText()).toBe('tally');
 
-    // The block that wrote the name goes, so nothing in the file writes it.
-    setter.dispose(false);
+    // The binding goes, so nothing in the file gives the name.
+    binder.dispose(true);
     settled(getter);
 
     expect(getter.getField('VAR')!.getText()).toBe(UNNAMED);
@@ -431,10 +427,12 @@ describe('a reader with nothing chosen', () => {
     // reader pointed at the second must stay pointed at the second.
     const first = workspace.getVariableMap().createVariable('one', 'Number');
     const second = workspace.getVariableMap().createVariable('two', 'Number');
-    workspace.newBlock(USER).setFieldValue(first.getId(), 'VAR');
-    workspace.newBlock(USER).setFieldValue(second.getId(), 'VAR');
     const getter = workspace.newBlock(GETTER);
     getter.setFieldValue(second.getId(), 'VAR');
+    const inner = under(workspace, second.getId(), getter);
+    const outer = workspace.newBlock(LET);
+    outer.setFieldValue(first.getId(), 'VAR');
+    outer.nextConnection!.connect(inner.previousConnection!);
 
     settled(getter);
 

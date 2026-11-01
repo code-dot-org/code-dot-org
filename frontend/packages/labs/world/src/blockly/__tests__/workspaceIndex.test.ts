@@ -11,7 +11,7 @@ import * as Blockly from 'blockly/core';
 import {beforeAll, describe, expect, it} from 'vitest';
 
 import {mapGridSize} from '../fields/mapGridSize';
-import {boundIds, writtenIds} from '../variableScope';
+import {boundIds} from '../variableScope';
 import {
   hasIndexedBlock,
   indexedBlocks,
@@ -130,7 +130,6 @@ const answers = (workspace: Blockly.Workspace) => {
   const world = workspace.getBlockById('world')!;
   return {
     grid: mapGridSize(world),
-    written: [...writtenIds(workspace)],
     bound: [...boundIds(workspace)],
   };
 };
@@ -140,7 +139,6 @@ describe('the workspace index', () => {
     const built = answers(loaded());
     // The file's own answers, so the comparison is not of two empty lists.
     expect(built.grid).toMatchObject({columns: 20, rows: 12});
-    expect(built.written).toEqual(['v-count']);
 
     const workspace = loaded();
     unbuild(workspace);

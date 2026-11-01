@@ -102,6 +102,104 @@ function sharedBindings(source: string): string[] {
   return [...shared];
 }
 
+/**
+ * Variables read, or set, where no binding of them reaches. Every name is
+ * bound (specs/VARIABLE_OWNERSHIP_PLAN.md, step 6), so a read outside its
+ * binding reads nothing the editor will name.
+ */
+function unboundReads(source: string): string[] {
+  let parsed: unknown;
+  try {
+    parsed = JSON.parse(source);
+  } catch {
+    return [];
+  }
+  const found = new Set<string>();
+  const withAll = (
+    scope: ReadonlySet<string>,
+    ids: Array<string | undefined>,
+  ) => new Set([...scope, ...ids.filter((id): id is string => Boolean(id))]);
+  const walkBlock = (
+    node: Node & {extraState?: {parts?: Array<{var?: string}>}},
+    scope: ReadonlySet<string>,
+  ): void => {
+    const locals = Object.keys(node.fields ?? {}).filter(isLocalField);
+    const binder = node.type
+      ? (BINDERS[node.type] ??
+        (locals.length ? {fields: locals, over: [REST]} : undefined))
+      : undefined;
+    // A member's own head binds its values over all of it.
+    const params = node.extraState?.parts?.map(part => part.var) ?? [];
+    let here = withAll(
+      scope,
+      (binder?.fields ?? []).map(field => idOf(node.fields?.[field])),
+    );
+    here = withAll(here, params);
+    const whole = params.length > 0;
+    if (/^variables_(get|set)_/.test(node.type ?? '')) {
+      const id = idOf(node.fields?.VAR);
+      if (id && !scope.has(id)) {
+        found.add(id);
+      }
+    }
+    for (const [name, input] of Object.entries(node.inputs ?? {})) {
+      const inside = whole || binder?.over.includes(name) ? here : scope;
+      for (const child of [input.block, input.shadow]) {
+        if (child) {
+          walkBlock(child, inside);
+        }
+      }
+    }
+    const after = whole || binder?.over.includes(REST) ? here : scope;
+    for (const child of [node.next?.block, node.next?.shadow]) {
+      if (child) {
+        walkBlock(child, after);
+      }
+    }
+  };
+  // A rule's members hold their values in `parts` beside their body.
+  const walk = (value: unknown, scope: ReadonlySet<string>): void => {
+    if (Array.isArray(value)) {
+      value.forEach(one => walk(one, scope));
+      return;
+    }
+    if (!value || typeof value !== 'object') {
+      return;
+    }
+    const node = value as Node & {parts?: Array<{var?: string}>};
+    if (
+      typeof node.type === 'string' &&
+      (node.fields || node.inputs || node.next)
+    ) {
+      walkBlock(node, scope);
+      return;
+    }
+    const inner = withAll(
+      scope,
+      (node.parts ?? []).map(part => part.var),
+    );
+    Object.values(value).forEach(one => walk(one, inner));
+  };
+  walk(parsed, new Set());
+  return [...found];
+}
+
+/**
+ * Names written by blocks that bind nothing, and read where nothing binds
+ * them. Each wants a binding the lab does not have yet.
+ */
+const KNOWN_UNBOUND = new Set([
+  // Filled by `clear` and `push` blocks; an actor list has no `let`.
+  'Collisions_found',
+  'Collisions_arrived',
+  'Collisions_left',
+  // Lists, and there is no `let list`.
+  'Path_queue',
+  'Path_seen',
+  // `add actor … named ⟨ball⟩` names it, and is not a binding.
+  'meteorsBallVar',
+]);
+
 const files: Array<[string, string]> = [
   ...STOCK_RULES.map((rule): [string, string] => [
     `stock rule ${rule.id}`,
@@ -139,6 +237,15 @@ describe('the repository’s files', () => {
       ]),
     );
     expect(BINDING_BLOCKS).toEqual(asScript);
+  });
+
+  it('read every variable inside a binding of it', () => {
+    const found = files.flatMap(([where, source]) =>
+      unboundReads(source)
+        .filter(id => !KNOWN_UNBOUND.has(id))
+        .map(id => `${where}: ${id}`),
+    );
+    expect(found).toEqual([]);
   });
 
   it('never bind one variable twice', () => {

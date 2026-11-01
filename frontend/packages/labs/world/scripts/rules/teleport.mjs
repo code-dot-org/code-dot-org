@@ -274,7 +274,7 @@ export const usePad = travels.block({
     doc(
       'One pad is a pad with nowhere to go, which is the right answer rather than a special case — see the header.',
     ),
-    here.set(firstActor(padsUnder())),
+    here.let(firstActor(padsUnder())),
     when([
       [
         both(
@@ -404,7 +404,7 @@ travels.step('travel', 'push', [
       doc(
         'An enemy has no choice, which is what makes a room with pads in it one you cannot plan a route through — but it waits until it is OVER THE MIDDLE of one. Touching starts at the edge, half a body before that, and a thing that vanishes on the touch has vanished while it still looks beside the pad rather than on it. The pad is read out first: asking where nothing is is asking an actor that is not there for its position (`rules/prowling` makes the same guard for the same reason).',
       ),
-      here.set(firstActor(padsUnder())),
+      here.let(firstActor(padsUnder())),
       when([
         [
           both(
