@@ -87,13 +87,13 @@ const MakePane: React.FunctionComponent<MakePaneProps> = ({
         </div>
       )}
       {parts.sentence}
-      {parts.animatedChoice}
-      {/* The words scroll between the pinned sentence, the Animated
-          switch and the buttons. */}
+      {/* The words scroll in a frame of their own between the pinned
+          sentence and the Animated switch. */}
       <div className={styles.paneScroll}>
         {parts.wordChooser}
         {parts.error}
       </div>
+      {parts.animatedChoice}
       <div className={styles.paneBottom}>
         {confirming ? (
           <div className={styles.confirm} role="group" aria-label="Replace">

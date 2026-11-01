@@ -284,14 +284,7 @@ button.chipWord {
 }
 
 .cluster {
-  padding: 8px;
-  border-radius: 12px;
-  border: 1px solid transparent;
-}
-
-.clusterCurrent {
-  border-color: var(--border-neutral-secondary);
-  background-color: var(--background-neutral-primary);
+  padding: 4px 0;
 }
 
 // The arrows and dots fade in once there is a second set to go to.

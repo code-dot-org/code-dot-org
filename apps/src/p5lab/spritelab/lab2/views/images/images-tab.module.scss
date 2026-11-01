@@ -381,6 +381,7 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
 
 // What sits between the pinned headline and the pinned buttons, scrolling
 // when it runs past the room.
+// One rounded frame around the whole word list; the words scroll inside.
 .paneScroll {
   display: flex;
   flex: 1 1 auto;
@@ -388,9 +389,12 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   gap: 16px;
   min-height: 0;
   overflow-y: auto;
-  // Room for a hovered word's lift and the focus ring at the edges.
-  margin: 0 -8px;
-  padding: 4px 8px;
+  box-sizing: border-box;
+  // Room for the focus ring at the edges.
+  padding: 8px;
+  border: 1px solid var(--border-neutral-secondary);
+  border-radius: 12px;
+  background-color: var(--background-neutral-primary);
 }
 
 .headline {

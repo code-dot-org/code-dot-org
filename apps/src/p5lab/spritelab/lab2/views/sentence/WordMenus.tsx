@@ -315,10 +315,7 @@ export function useWordMenus({
               key={set.id}
               role="group"
               aria-label={`${set.label}${set.required ? ' (pick one)' : ''}`}
-              className={classNames(
-                styles.cluster,
-                set.id === slot.id && styles.clusterCurrent
-              )}
+              className={classNames(styles.cluster)}
             >
               <div className={styles.words}>{renderWords(set)}</div>
             </div>
