@@ -97,6 +97,20 @@ $pad: 16px;
   @include tile.image-tile($tile-px);
 
   border-radius: 6px;
+  overflow: hidden;
+
+  // The tile and its ring hold still; only the picture grows, inside.
+  &:hover {
+    transform: none;
+  }
+
+  img {
+    transition: transform 0.15s ease;
+  }
+
+  &:hover:not(:disabled) img {
+    transform: scale(1.12);
+  }
 }
 
 // The chosen tile: a ring standing off the tile, so the image keeps its
