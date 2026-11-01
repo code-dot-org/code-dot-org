@@ -47,8 +47,8 @@ one actor owns the key.`,
 // the other (specs/UI_ACTORS.md).`,
 });
 
-const pressed = rule.event([param('pressed key', KEY), 'is pressed']);
-const released = rule.event([param('released key', KEY), 'is released']);
+const pressed = rule.event([param('key', KEY), 'is pressed']);
+const released = rule.event([param('key', KEY), 'is released']);
 /**
  * `⟨a⟩ is typed` — one character, as it was actually typed.
  *
@@ -62,7 +62,7 @@ const typed = rule.event([param('character', 'string'), 'is typed']);
 const takesInput = rule
   .trait('Takes Keyboard Input')
   .describe('Hears keys being pressed, held and let go.');
-const presses = takesInput.event(['presses', param('pressed key', KEY)]);
+const presses = takesInput.event(['presses', param('key', KEY)]);
 /**
  * `repeats ⟨down arrow⟩` — held long enough to start firing again.
  *
@@ -77,8 +77,8 @@ const presses = takesInput.event(['presses', param('pressed key', KEY)]);
  * held" already has `is key down` read every frame, which is what walking a
  * character is. Nobody has asked for the other one.
  */
-const repeats = takesInput.event(['repeats', param('repeated key', KEY)]);
-const releases = takesInput.event(['releases', param('released key', KEY)]);
+const repeats = takesInput.event(['repeats', param('key', KEY)]);
+const releases = takesInput.event(['releases', param('key', KEY)]);
 const types = takesInput.event(['types', param('character', 'string')]);
 
 const each = rule.local('each', 'Actor');
@@ -115,15 +115,15 @@ rule.step('keyEvents', 'sense', [
   doc(
     'The world knows which keys are held. What it also knows, and nothing else can work out, is which ones CHANGED this frame.',
   ),
-  forEachKey('PRESSED', key, announce(pressed, presses, 'pressed key')),
-  forEachKey('RELEASED', key, announce(released, releases, 'released key')),
+  forEachKey('PRESSED', key, announce(pressed, presses, 'key')),
+  forEachKey('RELEASED', key, announce(released, releases, 'key')),
   doc(
     'And the keys held long enough to fire AGAIN — the world counts the delay and the rate, because it is the one holding the frame clock (`World.repeatingKeys`).',
   ),
   forEachKey('REPEATING', key, [
     forEach(each, {
       from: audience(),
-      body: [repeats({'repeated key': key.get()}, each.get())],
+      body: [repeats({key: key.get()}, each.get())],
     }),
   ]),
   doc(

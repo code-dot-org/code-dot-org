@@ -188,9 +188,11 @@ eventValue$2;` and the console prints the 7 the create handler emits.
   press takes the hat. The menu label reads a chip as its name, so the
   hit-by hat is `when … is hit by who … amount`.
 - **A value filtered by a set of choices is drawn too**, before its
-  filter: `presses ⟨pressed key⟩ (space ▾)`. Hidden at first, since the
-  key reads twice; drawn since, for the plan's author, so every value a
-  hat hands over is a chip.
+  filter: `presses ⟨key⟩ (space ▾)`. Hidden at first, since the key read
+  twice; drawn since, for the plan's author, so every value a hat hands
+  over is a chip. The Input and Mouse rules' values were renamed for it,
+  from `pressed key`, `released button` and the like to `key` and
+  `button`: the hat's verb already says which.
 - **The stray warning says only what is known**: "amount is not known
   here." `binderOf` and the code that described the binding are gone.
 - **Seen in the browser**: the Ball's hit-by hat draws `who` and `amount`

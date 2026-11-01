@@ -76,7 +76,7 @@ describe('rules/input.rule', () => {
     ]);
     expect(own[0].parts).toEqual([
       {kind: 'label', text: 'presses'},
-      {kind: 'param', name: 'pressed key', type: 'enum:Engine#Key'},
+      {kind: 'param', name: 'key', type: 'enum:Engine#Key'},
     ]);
     expect(own.map(event => event.ownerTraitId)).toEqual([
       'Takes_Keyboard_Input',
@@ -91,7 +91,7 @@ describe('rules/input.rule', () => {
     // then the wording — so the hat carries a dropdown and the handler it
     // generates runs for that key alone (specs/ENUMS.md).
     expect(meta.events[0].parts).toEqual([
-      {kind: 'param', name: 'pressed key', type: 'enum:Engine#Key'},
+      {kind: 'param', name: 'key', type: 'enum:Engine#Key'},
       {kind: 'label', text: 'is pressed'},
     ]);
     expect(meta.events[1].parts?.[1]).toEqual({

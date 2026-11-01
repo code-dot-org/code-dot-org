@@ -36,7 +36,7 @@ describe('rules/mouse.rule', () => {
     expect(meta.events[0].parts).toEqual([
       {
         kind: 'param',
-        name: 'pressed button',
+        name: 'button',
         type: 'enum:Engine#MouseButton',
       },
       {kind: 'label', text: 'is pressed'},
@@ -79,7 +79,7 @@ describe('rules/mouse.rule', () => {
     // is one hat, not a test written inside a handler for all of them.
     expect(clicked[0].parts).toEqual([
       {kind: 'label', text: 'is clicked with'},
-      {kind: 'param', name: 'pressed button', type: 'enum:Engine#MouseButton'},
+      {kind: 'param', name: 'button', type: 'enum:Engine#MouseButton'},
     ]);
   });
 

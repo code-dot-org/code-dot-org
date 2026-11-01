@@ -54,28 +54,25 @@ itself.`,
 // to ask, which is storing what the World already knows.`,
 });
 
-const pressed = rule.event([param('pressed button', BUTTON), 'is pressed']);
-const released = rule.event([param('released button', BUTTON), 'is released']);
+const pressed = rule.event([param('button', BUTTON), 'is pressed']);
+const released = rule.event([param('button', BUTTON), 'is released']);
 
 const takesMouse = rule
   .trait('Takes Mouse Input')
   .describe('Hears mouse buttons being pressed and let go.');
 const presses = takesMouse.event([
   'presses mouse button',
-  param('pressed button', BUTTON),
+  param('button', BUTTON),
 ]);
 const releases = takesMouse.event([
   'releases mouse button',
-  param('released button', BUTTON),
+  param('button', BUTTON),
 ]);
 
 const clickable = rule
   .trait('Can Be Clicked')
   .describe('Hears when it is clicked.');
-const clicked = clickable.event([
-  'is clicked with',
-  param('pressed button', BUTTON),
-]);
+const clicked = clickable.event(['is clicked with', param('button', BUTTON)]);
 
 /**
  * …and the wheel, which is a THIRD trait and not a third event on the others.
@@ -125,7 +122,7 @@ const clickTargets = () => [
         under(target.get()),
       ),
     }),
-    body: [clicked({'pressed button': button.get()}, target.get())],
+    body: [clicked({button: button.get()}, target.get())],
   }),
 ];
 
@@ -172,14 +169,10 @@ rule.step('buttonEvents', 'sense', [
     'The world knows which buttons are held. What it also knows, and nothing else can work out, is which ones CHANGED this frame.',
   ),
   forEachButton('PRESSED', button, [
-    ...announce(pressed, presses, 'pressed button'),
+    ...announce(pressed, presses, 'button'),
     ...clickTargets(),
   ]),
-  forEachButton(
-    'RELEASED',
-    button,
-    announce(released, releases, 'released button'),
-  ),
+  forEachButton('RELEASED', button, announce(released, releases, 'button')),
 ]);
 
 export default () => moduleFor(rule, 'mouse');

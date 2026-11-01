@@ -61,7 +61,7 @@ describe('the events that can reach a kind', () => {
     );
     // Affected by Gravity and Takes Keyboard Input are the Player's.
     expect(player).toContain('when … starts falling');
-    expect(player).toContain('when … presses pressed key …');
+    expect(player).toContain('when … presses key …');
     // Dealing damage and being collected are other kinds' traits.
     expect(player).not.toContain('when … damages …');
     expect(player).not.toContain('when … is collected by …');
@@ -105,7 +105,7 @@ describe('the events other kinds declare for themselves', () => {
     expect(button).not.toContain('Slider: when … changed');
     expect(button.some(row => row.startsWith('Toggle:'))).toBe(false);
     // …which still hears its own traits'.
-    expect(button).toContain('Mouse: when … is clicked with pressed button …');
+    expect(button).toContain('Mouse: when … is clicked with button …');
   });
 
   it('are offered to the kind that declares them', () => {
