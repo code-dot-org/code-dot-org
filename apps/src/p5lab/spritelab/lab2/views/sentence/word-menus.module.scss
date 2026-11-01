@@ -16,6 +16,13 @@
   gap: 12px;
 }
 
+// A carousel takes the room its host gives, so the set scrolls between
+// arrows that stay put; the clusters grow and let the host scroll.
+.menusFill {
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
 .srOnly {
   @include sr-only.sr-only;
 }
@@ -222,8 +229,10 @@ button.chipWord {
 // No frame of its own: the pane frames the whole word area.
 .carouselBox {
   display: flex;
+  flex: 1 1 auto;
   flex-direction: column;
   gap: 2px;
+  min-height: 0;
   padding: 8px 6px 8px;
 }
 
@@ -243,8 +252,10 @@ button.chipWord {
 // One slot's words at a time, between the arrows.
 .carousel {
   display: flex;
+  flex: 1 1 auto;
   align-items: stretch;
   gap: 4px;
+  min-height: 0;
 }
 
 // The arrows above and below the set instead of beside it.
@@ -299,10 +310,13 @@ button.chipWord {
 }
 
 // All sets share one grid cell, so the stack is as tall as the tallest set.
+// The set on show scrolls here while the arrows at the edges stay put.
 .sets {
   flex: 1 1 auto;
   min-width: 0;
+  min-height: 0;
   display: grid;
+  overflow-y: auto;
 }
 
 .set {

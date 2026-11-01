@@ -429,7 +429,12 @@ export function useWordMenus({
 const WordMenus: React.FunctionComponent<WordMenusProps> = props => {
   const parts = useWordMenus(props);
   return (
-    <div className={styles.menus}>
+    <div
+      className={classNames(
+        styles.menus,
+        props.layout !== 'clusters' && styles.menusFill
+      )}
+    >
       {parts.sentence}
       {parts.chooser}
     </div>
