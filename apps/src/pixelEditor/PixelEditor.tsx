@@ -243,6 +243,9 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
     () => palette?.[0]?.rgba ?? DEFAULT_COLOR
   );
   const [loaded, setLoaded] = useState(false);
+  // Bumped as each picture lands, so a new picture given to a mounted
+  // editor is sized and painted in place; the old one stays up until then.
+  const [loadVersion, setLoadVersion] = useState(0);
   const [loadError, setLoadError] = useState(false);
   // See the onReady prop; by ref so a changing identity can't re-fire it.
   const onReadyRef = useRef(onReady);
@@ -574,6 +577,11 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
         1,
         Math.floor(MAX_DISPLAY_SIZE / Math.max(backing.width, backing.height))
       );
+      // A new picture is a new history.
+      undoStackRef.current = [];
+      redoStackRef.current = [];
+      setHistoryVersion(v => v + 1);
+      setLoadVersion(v => v + 1);
       setLoaded(true);
     };
     const loadViaImage = () => {
@@ -714,7 +722,7 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
     const observer = new ResizeObserver(size);
     observer.observe(area);
     return () => observer.disconnect();
-  }, [loaded, repaint, fit]);
+  }, [loaded, loadVersion, repaint, fit]);
 
   // Map a pointer event to backing-canvas pixel coordinates.
   const toPixel = useCallback((e: React.PointerEvent<HTMLCanvasElement>) => {

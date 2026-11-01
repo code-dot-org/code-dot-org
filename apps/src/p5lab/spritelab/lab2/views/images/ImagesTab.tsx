@@ -3,6 +3,7 @@
 // right. A picture is the image the moment it lands; there is no dialog and
 // no Keep.
 
+import classNames from 'classnames';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import PixelEditor, {
@@ -236,13 +237,15 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     setDrawing(null);
   }, []);
   useEffect(() => clearIdleTimer, []);
-  // The host's undo and redo go once the drawing ends, or the tab goes.
+  // The host's undo and redo go once the drawing ends, or the tab goes; a
+  // change of picture within one drawing keeps them.
+  const drawingOpen = !!drawing;
   useEffect(() => {
-    if (!drawing) {
-      onDrawingHistory?.(null);
+    if (!drawingOpen) {
+      return;
     }
     return () => onDrawingHistory?.(null);
-  }, [drawing, onDrawingHistory]);
+  }, [drawingOpen, onDrawingHistory]);
   const startDrawing = useCallback(
     (target: ImageTarget) => {
       const existing = target.key
@@ -398,7 +401,6 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
       />
       {drawing && kind ? (
         <PixelEditor
-          key={drawing.imageUrl}
           imageUrl={drawing.imageUrl}
           knownPixelGrid={drawing.pixelGridSize}
           initialRecentColors={drawing.recentColors}
@@ -426,7 +428,24 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                   image={null}
                   workspaceClassName={styles.paintFrame}
                   above={parts.toolbar}
-                  live={parts.canvas}
+                  live={
+                    <div className={styles.paintStack}>
+                      {parts.canvas}
+                      {/* The frame's own picture covers the canvas until
+                          the editor has decoded it, so a switch never
+                          shows a blank. */}
+                      {!parts.ready && (
+                        <img
+                          src={drawing.imageUrl}
+                          alt=""
+                          className={classNames(
+                            styles.paintPlaceholder,
+                            drawing.pixelGridSize && styles.pixelArt
+                          )}
+                        />
+                      )}
+                    </div>
+                  }
                 />
                 <DrawPane
                   width={paneWidthPx}
