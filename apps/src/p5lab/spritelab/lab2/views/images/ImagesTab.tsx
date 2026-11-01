@@ -280,7 +280,13 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                 }
                 generating={parts.mode === 'generating'}
                 beside={parts.alternatives}
-                under={parts.underFrame}
+                under={
+                  parts.mode === 'generating' ? (
+                    <div className={styles.underSteps}>{parts.progress}</div>
+                  ) : (
+                    parts.underFrame
+                  )
+                }
               />
               <MakePane
                 parts={parts}

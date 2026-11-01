@@ -83,7 +83,6 @@ const MakePane: React.FunctionComponent<MakePaneProps> = ({
         {parts.wordChooser}
         {parts.animatedChoice}
         {parts.error}
-        {parts.progress}
         {parts.verdict && <div className={styles.verdict}>{parts.verdict}</div>}
       </div>
       <div className={styles.paneBottom}>

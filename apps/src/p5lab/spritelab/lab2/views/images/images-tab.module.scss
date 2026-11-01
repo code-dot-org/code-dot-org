@@ -283,6 +283,14 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   object-fit: contain;
 }
 
+// The model's steps, one at a time, centered under the frame while a
+// picture is made.
+.underSteps {
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: center;
+}
+
 // Never squeezed: the frame is sized from this slot's height, so a slot
 // that gave way would let its contents run off the column's bottom.
 .under {
