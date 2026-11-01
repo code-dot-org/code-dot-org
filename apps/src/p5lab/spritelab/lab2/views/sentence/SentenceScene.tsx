@@ -4,6 +4,7 @@
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Typography as MuiTypography} from '@mui/material';
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
@@ -40,7 +41,7 @@ import StripFrame from '../StripFrame';
 
 import AlternativeThumbs from './AlternativeThumbs';
 import GeneratingSteps from './GeneratingSteps';
-import {PixelReveal, PixelShuffle, SparkleBurst} from './PixelReveal';
+import {PixelReveal, SparkleBurst} from './PixelReveal';
 import SentenceReadOnly from './SentenceReadOnly';
 import {
   Choices,
@@ -549,7 +550,12 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   // A set's frames arrive one by one; none shows until all have.
   const frame = generating ? (
     <div className={styles.generating}>
-      <PixelShuffle />
+      <FontAwesomeV6Icon
+        iconName="spinner"
+        animationType="spin"
+        className={styles.spinner}
+        aria-hidden
+      />
     </div>
   ) : chosenPicture ? (
     <>

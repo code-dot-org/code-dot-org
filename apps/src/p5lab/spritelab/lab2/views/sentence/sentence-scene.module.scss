@@ -28,6 +28,12 @@
   box-sizing: border-box;
 }
 
+// The spinner shown while the picture is made.
+.spinner {
+  font-size: 48px;
+  color: var(--text-neutral-quaternary);
+}
+
 .error {
   color: var(--text-error-primary);
 }
