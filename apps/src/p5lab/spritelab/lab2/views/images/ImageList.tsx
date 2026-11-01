@@ -1,7 +1,6 @@
 // The tab's left column: every image of the project as a tile, the one
 // being worked on marked, with the way to add one and to delete one.
 
-import {DropdownProviderWrapper} from '@code-dot-org/component-library/common/contexts';
 import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {
@@ -85,6 +84,9 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
 }) => {
   // Delete asks once; a new choice withdraws the question.
   const [confirming, setConfirming] = useState(false);
+  // The library's action dropdown closes through a context its own wrapper
+  // does not share, so a pick would leave the menu open; a remount closes it.
+  const [menuKey, setMenuKey] = useState(0);
   useEffect(() => setConfirming(false), [chosenId]);
   const chosenImage = images.find(image => image.key === chosenId);
   const deletable = !!onDelete && !!chosenImage;
@@ -99,26 +101,28 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
           Your images
         </MuiTypography>
         {onNew && (
-          <DropdownProviderWrapper>
-            <ActionDropdown
-              name="new-image"
-              labelText="New image"
-              size="m"
-              menuPlacement="right"
-              triggerButtonProps={{
-                variant: 'contained',
-                color: 'primary',
-                className: styles.newButton,
-                children: <FontAwesomeV6Icon iconName="plus" />,
-              }}
-              options={NEW_KINDS.map(({label, iconName, kind}) => ({
-                value: label,
-                label,
-                icon: {iconName},
-                onClick: () => onNew(kind),
-              }))}
-            />
-          </DropdownProviderWrapper>
+          <ActionDropdown
+            key={menuKey}
+            name="new-image"
+            labelText="New image"
+            size="m"
+            menuPlacement="right"
+            triggerButtonProps={{
+              variant: 'contained',
+              color: 'primary',
+              className: styles.newButton,
+              children: <FontAwesomeV6Icon iconName="plus" />,
+            }}
+            options={NEW_KINDS.map(({label, iconName, kind}) => ({
+              value: label,
+              label,
+              icon: {iconName},
+              onClick: () => {
+                setMenuKey(k => k + 1);
+                onNew(kind);
+              },
+            }))}
+          />
         )}
       </div>
       <div className={styles.tiles}>

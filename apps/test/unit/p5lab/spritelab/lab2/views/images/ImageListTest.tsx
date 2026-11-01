@@ -92,6 +92,8 @@ describe('ImageList', () => {
       imageType: 'sprite',
       subject: 'object',
     });
+    // The pick closes the menu.
+    expect(document.querySelector('[class~="open"]')).toBeNull();
   });
 
   it('deletes the chosen image only after asking', () => {
