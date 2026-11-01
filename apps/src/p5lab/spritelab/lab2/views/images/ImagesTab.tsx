@@ -19,6 +19,7 @@ import {onTrimsUpdated, trimAnimationListImages} from '../../imageTrim';
 import {DEFAULT_IMAGE_STYLE} from '../../levelMode';
 import {BACKGROUND_GROUND_COLOR, blankPaintImage} from '../../paintBlank';
 import EditorStrip from '../components/EditorStrip';
+import EditorStrip, {EditHistory} from '../components/EditorStrip';
 import {
   PAINT_BRUSH_SIZES,
   PAINT_COLORS,
@@ -63,6 +64,9 @@ interface ImagesTabProps {
   onImageLanded?: () => void;
   /** The tab is the one showing; a drawing saves itself when it is not. */
   active?: boolean;
+  /** The drawing's undo and redo, for the host's own buttons; null once
+      nothing is being drawn. */
+  onDrawingHistory?: (history: EditHistory | null) => void;
 }
 
 const DRAFT_ID = 'draft';
@@ -92,6 +96,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   paneWidth,
   onImageLanded,
   active = true,
+  onDrawingHistory,
 }) => {
   const animationList = useAppSelector(state => state.animationList);
   // Thumbnails land as the engine trims; re-list when they do.
@@ -231,6 +236,13 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     setDrawing(null);
   }, []);
   useEffect(() => clearIdleTimer, []);
+  // The host's undo and redo go once the drawing ends, or the tab goes.
+  useEffect(() => {
+    if (!drawing) {
+      onDrawingHistory?.(null);
+    }
+    return () => onDrawingHistory?.(null);
+  }, [drawing, onDrawingHistory]);
   const startDrawing = useCallback(
     (target: ImageTarget) => {
       const existing = target.key
@@ -400,6 +412,8 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
           brushSizes={limitedTools ? PAINT_BRUSH_SIZES : undefined}
           fit="container"
           toolbarLayout="row"
+          hostUndoRedo
+          onHistoryChange={onDrawingHistory}
           canvasClassName={styles.paintCanvas}
           onEdit={noteStroke}
           onSave={handleDrawingSave}

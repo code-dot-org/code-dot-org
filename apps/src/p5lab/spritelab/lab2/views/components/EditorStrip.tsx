@@ -9,7 +9,7 @@ import EditorSwitch, {Editor} from './EditorSwitch';
 import moduleStyles from '../sprite-lab2-view.module.scss';
 
 /** The workspace's undo and redo, offered across from the switch. */
-interface EditHistory {
+export interface EditHistory {
   canUndo: boolean;
   canRedo: boolean;
   undo: () => void;

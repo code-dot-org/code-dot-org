@@ -85,14 +85,19 @@ jest.mock('@cdo/apps/pixelEditor/PixelEditor', () => {
     tools,
     onEdit,
     onSave,
+    onHistoryChange,
     children,
   }: {
     tools?: readonly string[];
     onEdit?: () => void;
     onSave: (dataURI: string, meta: {pixelGridSize?: number}) => void;
+    onHistoryChange?: (history: {canUndo: boolean}) => void;
     children: (parts: unknown) => React.ReactNode;
   }) => {
     const [edited, setEdited] = React.useState(false);
+    React.useEffect(() => {
+      onHistoryChange?.({canUndo: edited});
+    }, [onHistoryChange, edited]);
     return (
       <div>
         <button
@@ -321,7 +326,8 @@ describe('ImagesTab', () => {
   });
 
   it('draws a new image in free play with every tool, and Done makes it an image', async () => {
-    renderTab({editingOffered: true});
+    const onDrawingHistory = jest.fn();
+    renderTab({editingOffered: true, onDrawingHistory});
     fireEvent.click(screen.getByRole('button', {name: 'New image'}));
     fireEvent.click(screen.getByRole('button', {name: 'Character'}));
     fireEvent.click(screen.getByRole('button', {name: 'Draw my own'}));
@@ -329,7 +335,10 @@ describe('ImagesTab', () => {
     expect(screen.getByText('toolbar')).toBeTruthy();
     const done = screen.getByRole('button', {name: 'Done drawing'});
     expect((done as HTMLButtonElement).disabled).toBe(true);
+    // The host hears what undo can do, for its own buttons.
+    expect(onDrawingHistory).toHaveBeenLastCalledWith({canUndo: false});
     fireEvent.click(screen.getByRole('button', {name: 'stroke'}));
+    expect(onDrawingHistory).toHaveBeenLastCalledWith({canUndo: true});
     saveEdited.mockImplementation(async () => {
       propsByKey.k1 = {name: 'Sprite 1', categories: []};
       return 'k1';
@@ -344,6 +353,7 @@ describe('ImagesTab', () => {
     );
     expect(screen.queryByText('canvas')).toBeNull();
     expect(pressed()).toEqual(['Sprite 1']);
+    expect(onDrawingHistory).toHaveBeenLastCalledWith(null);
   });
 
   it('edits an image with the few tools before free play, saving when the tab is left', async () => {

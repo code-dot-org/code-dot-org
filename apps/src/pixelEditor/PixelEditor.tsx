@@ -124,6 +124,14 @@ interface PixelEditorParts {
   edited: boolean;
 }
 
+/** Undo and redo as a host's own buttons need them. */
+export interface PixelEditorHistory {
+  canUndo: boolean;
+  canRedo: boolean;
+  undo: () => void;
+  redo: () => void;
+}
+
 /** One color of a fixed palette, named for the screen reader. */
 export interface PaletteColor {
   name: string;
@@ -159,6 +167,11 @@ export interface PixelEditorProps {
   fit?: 'viewport' | 'container';
   // The toolbar as the modal's two-column strip, or as one row.
   toolbarLayout?: 'column' | 'row';
+  // The host draws undo and redo itself; the toolbar leaves its own out.
+  hostUndoRedo?: boolean;
+  // Fires with undo and redo whenever what they can do changes, for a host
+  // drawing its own buttons.
+  onHistoryChange?: (history: PixelEditorHistory) => void;
   // Added to the canvas box, e.g. to drop its border inside a host's frame.
   canvasClassName?: string;
   // One round swatch each, in place of the spectrum picker; the first is
@@ -191,6 +204,8 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
   tools,
   fit = 'viewport',
   toolbarLayout = 'column',
+  hostUndoRedo = false,
+  onHistoryChange,
   canvasClassName,
   palette,
   brushSizes,
@@ -1351,6 +1366,9 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
   // stacks themselves live in refs.
   const canUndo = historyVersion >= 0 && undoStackRef.current.length > 0;
   const canRedo = historyVersion >= 0 && redoStackRef.current.length > 0;
+  useEffect(() => {
+    onHistoryChange?.({canUndo, canRedo, undo, redo});
+  }, [onHistoryChange, canUndo, canRedo, undo, redo]);
 
   const colorControl = palette ? (
     <PaletteSwatches palette={palette} color={color} onChange={setColor} />
@@ -1438,37 +1456,39 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
             </>
           )}
         </div>
-        <div className={moduleStyles.historyRow}>
-          <PixelTooltip
-            tooltipId="pixel-undo-tooltip"
-            text="Undo (Ctrl+Z)"
-            fromLeftColumn={column}
-          >
-            <button
-              type="button"
-              aria-label="Undo (Ctrl+Z)"
-              className={moduleStyles.toolButton}
-              disabled={!canUndo}
-              onClick={undo}
+        {!hostUndoRedo && (
+          <div className={moduleStyles.historyRow}>
+            <PixelTooltip
+              tooltipId="pixel-undo-tooltip"
+              text="Undo (Ctrl+Z)"
+              fromLeftColumn={column}
             >
-              <FontAwesomeV6Icon iconName="rotate-left" />
-            </button>
-          </PixelTooltip>
-          <PixelTooltip
-            tooltipId="pixel-redo-tooltip"
-            text="Redo (Ctrl+Shift+Z)"
-          >
-            <button
-              type="button"
-              aria-label="Redo (Ctrl+Shift+Z)"
-              className={moduleStyles.toolButton}
-              disabled={!canRedo}
-              onClick={redo}
+              <button
+                type="button"
+                aria-label="Undo (Ctrl+Z)"
+                className={moduleStyles.toolButton}
+                disabled={!canUndo}
+                onClick={undo}
+              >
+                <FontAwesomeV6Icon iconName="rotate-left" />
+              </button>
+            </PixelTooltip>
+            <PixelTooltip
+              tooltipId="pixel-redo-tooltip"
+              text="Redo (Ctrl+Shift+Z)"
             >
-              <FontAwesomeV6Icon iconName="rotate-right" />
-            </button>
-          </PixelTooltip>
-        </div>
+              <button
+                type="button"
+                aria-label="Redo (Ctrl+Shift+Z)"
+                className={moduleStyles.toolButton}
+                disabled={!canRedo}
+                onClick={redo}
+              >
+                <FontAwesomeV6Icon iconName="rotate-right" />
+              </button>
+            </PixelTooltip>
+          </div>
+        )}
         {!column && <div className={moduleStyles.colorRow}>{colorControl}</div>}
       </div>
     ),
