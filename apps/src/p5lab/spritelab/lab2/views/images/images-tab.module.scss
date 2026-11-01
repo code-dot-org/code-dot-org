@@ -61,6 +61,17 @@ $pad: 16px;
   padding: 4px 8px 8px;
 }
 
+// A kind's name over its tiles, across the whole row.
+.tilesHeader {
+  grid-column: 1 / -1;
+  margin: 10px 0 0;
+  color: var(--text-neutral-quaternary);
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
 .tile {
   @include tile.image-tile($tile-px);
 

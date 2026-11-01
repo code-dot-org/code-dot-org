@@ -13,9 +13,40 @@ const image = (key: string, name: string): ProjectImage => ({
   src: `data:${key}`,
   pixelated: false,
 });
-const images = [image('a', 'Sprite 1'), image('b', 'Sprite 2')];
+const images = [
+  image('a', 'Sprite 1'),
+  image('b', 'Sprite 2'),
+  {...image('c', 'Background 1'), imageType: 'background' as const},
+];
 
 describe('ImageList', () => {
+  it('names each kind over its tiles, the draft under its own kind', () => {
+    render(
+      <ImageList
+        images={images}
+        draft={{id: 'draft', imageType: 'sprite', subject: 'object'}}
+        chosenId="draft"
+        onChoose={jest.fn()}
+      />
+    );
+    expect(
+      screen.getAllByRole('heading', {level: 4}).map(h => h.textContent)
+    ).toEqual(['Characters', 'Objects', 'Backgrounds']);
+    const list = screen.getByRole('region', {name: 'Your images'});
+    const order = [...list.querySelectorAll('h4, button[aria-label]')].map(
+      el => el.getAttribute('aria-label') ?? el.textContent
+    );
+    expect(order).toEqual([
+      'Characters',
+      'Sprite 1',
+      'Sprite 2',
+      'Objects',
+      'New object',
+      'Backgrounds',
+      'Background 1',
+    ]);
+  });
+
   it('lists the images and the draft, marking the chosen one', () => {
     render(
       <ImageList

@@ -14,6 +14,21 @@ import {imageKindLabel, ImageSubject, ImageType} from '../../ai/images/types';
 
 import {ProjectImage} from './projectImages';
 
+/** The list's kinds, in the order they are listed. */
+type KindId = 'character' | 'object' | 'background' | 'block';
+const KINDS: {id: KindId; title: string}[] = [
+  {id: 'character', title: 'Characters'},
+  {id: 'object', title: 'Objects'},
+  {id: 'background', title: 'Backgrounds'},
+  {id: 'block', title: 'Blocks'},
+];
+const kindOf = (imageType: ImageType, subject?: ImageSubject): KindId =>
+  imageType === 'sprite'
+    ? subject === 'object'
+      ? 'object'
+      : 'character'
+    : imageType;
+
 import styles from './images-tab.module.scss';
 
 /** An image not made yet: its tile stands where the image will. */
@@ -109,45 +124,73 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
         )}
       </div>
       <div className={styles.tiles}>
-        {images.map(image => {
-          const chosen = image.key === chosenId;
+        {KINDS.map(kind => {
+          const own = images.filter(
+            image => kindOf(image.imageType, image.subject) === kind.id
+          );
+          const ownDraft =
+            draft && kindOf(draft.imageType, draft.subject) === kind.id
+              ? draft
+              : null;
+          if (!own.length && !ownDraft) {
+            return null;
+          }
           return (
-            <button
-              key={image.key}
-              type="button"
-              className={classNames(styles.tile, chosen && styles.tileChosen)}
-              aria-pressed={chosen}
-              aria-label={image.name || 'image'}
-              onClick={() => onChoose(image.key)}
-            >
-              {image.thumb && (
-                <img
-                  src={image.thumb}
-                  alt=""
-                  className={classNames(image.pixelated && styles.pixelArt)}
-                />
+            <React.Fragment key={kind.id}>
+              <MuiTypography
+                component="h4"
+                variant="overline2"
+                className={styles.tilesHeader}
+              >
+                {kind.title}
+              </MuiTypography>
+              {own.map(image => {
+                const chosen = image.key === chosenId;
+                return (
+                  <button
+                    key={image.key}
+                    type="button"
+                    className={classNames(
+                      styles.tile,
+                      chosen && styles.tileChosen
+                    )}
+                    aria-pressed={chosen}
+                    aria-label={image.name || 'image'}
+                    onClick={() => onChoose(image.key)}
+                  >
+                    {image.thumb && (
+                      <img
+                        src={image.thumb}
+                        alt=""
+                        className={classNames(
+                          image.pixelated && styles.pixelArt
+                        )}
+                      />
+                    )}
+                  </button>
+                );
+              })}
+              {ownDraft && (
+                <button
+                  type="button"
+                  className={classNames(
+                    styles.tile,
+                    styles.tileDraft,
+                    ownDraft.id === chosenId && styles.tileChosen
+                  )}
+                  aria-pressed={ownDraft.id === chosenId}
+                  aria-label={`New ${imageKindLabel(
+                    ownDraft.imageType,
+                    ownDraft.subject
+                  ).toLowerCase()}`}
+                  onClick={() => onChoose(ownDraft.id)}
+                >
+                  <FontAwesomeV6Icon iconName="plus" aria-hidden />
+                </button>
               )}
-            </button>
+            </React.Fragment>
           );
         })}
-        {draft && (
-          <button
-            type="button"
-            className={classNames(
-              styles.tile,
-              styles.tileDraft,
-              draft.id === chosenId && styles.tileChosen
-            )}
-            aria-pressed={draft.id === chosenId}
-            aria-label={`New ${imageKindLabel(
-              draft.imageType,
-              draft.subject
-            ).toLowerCase()}`}
-            onClick={() => onChoose(draft.id)}
-          >
-            <FontAwesomeV6Icon iconName="plus" aria-hidden />
-          </button>
-        )}
       </div>
     </section>
   );
