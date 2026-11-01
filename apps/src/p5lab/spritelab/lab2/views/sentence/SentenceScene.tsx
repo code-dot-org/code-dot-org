@@ -116,7 +116,8 @@ export interface SentenceSceneParts {
   /** The sentence line: its word chips, or the sentence read back while
       busy. */
   sentence: React.ReactNode;
-  /** The words to choose from, while the sentence is open. */
+  /** The words to choose from; the picture made from them stays in the
+      frame until the next generation. */
   wordChooser: React.ReactNode;
   /** The Animated checkbox, for a character. */
   animatedChoice: React.ReactNode;
@@ -134,7 +135,6 @@ export interface SentenceSceneParts {
   /** The level's generations are used up: Generate stays off. */
   exhausted: boolean;
   generate: () => void;
-  changeWords: () => void;
   /** The style and the kind the host's own paint entry would start from. */
   draft: {imageType: ImageType; subject?: ImageSubject; style: ImageStyle};
 }
@@ -394,12 +394,6 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     persist,
   ]);
 
-  // Back to the words with the picture still showing; the next Generate
-  // replaces it.
-  const changeWords = useCallback(() => {
-    setMode('edit');
-  }, []);
-
   const judge = useCallback(
     (next: Verdict) => {
       setVerdict(next);
@@ -520,29 +514,28 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       {status}
     </div>
   );
-  const sentenceOpen = !showingResult && !generating;
+  // The words stay open under a made picture, so Regenerate can take new
+  // ones or the same ones.
+  const sentenceOpen = !generating;
   const sentenceNode = sentenceOpen ? (
     menus.sentence
   ) : (
     <SentenceReadOnly sentence={sentence} choices={choices} />
   );
   const wordChooserNode = sentenceOpen ? menus.chooser : null;
-  const animatedChoiceNode = canAnimate &&
-    !typedPrompt &&
-    !generating &&
-    !showingResult && (
-      <Checkbox
-        label="Animated"
-        name="sentence-animated"
-        size="s"
-        checked={animated}
-        disabled={busy}
-        onChange={e => {
-          setAnimated(e.target.checked);
-          onAnimatedChange?.(e.target.checked);
-        }}
-      />
-    );
+  const animatedChoiceNode = canAnimate && !typedPrompt && !generating && (
+    <Checkbox
+      label="Animated"
+      name="sentence-animated"
+      size="s"
+      checked={animated}
+      disabled={busy}
+      onChange={e => {
+        setAnimated(e.target.checked);
+        onAnimatedChange?.(e.target.checked);
+      }}
+    />
+  );
   const progressNode = generating && (
     <GeneratingSteps done={settling} single={singleStep} />
   );
@@ -660,7 +653,6 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         rating: {offered: ratingOffered, verdict, judge, explain},
         exhausted,
         generate,
-        changeWords,
         draft: {imageType, subject: imageSubject, style},
       })}
     </>

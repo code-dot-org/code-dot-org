@@ -76,10 +76,7 @@ const layout = (parts: SentenceSceneParts) => (
         disabled={!parts.complete || parts.busy || parts.exhausted}
         onClick={parts.generate}
       >
-        {parts.mode === 'result' ? 'Generate again' : 'Generate'}
-      </button>
-      <button type="button" onClick={parts.changeWords}>
-        Change words
+        Generate
       </button>
     </section>
   </div>
@@ -119,10 +116,10 @@ const pendingGeneration = () => {
   return (value: typeof RESULT) => finish(value);
 };
 
-// Presses Generate (or Generate again) and waits out the settle.
-const generate = async (name = 'Generate') => {
+// Presses Generate and waits out the settle.
+const generate = async () => {
   await act(async () => {
-    fireEvent.click(screen.getByRole('button', {name}));
+    fireEvent.click(screen.getByRole('button', {name: 'Generate'}));
   });
   await act(async () => {
     jest.advanceTimersByTime(SETTLE_MS);
@@ -179,7 +176,7 @@ describe('SentenceScene', () => {
       style: 'pixel',
       bodyPlan: 'quadruped',
     });
-    fireEvent.click(screen.getByRole('button', {name: 'Change words'}));
+    // The words and the Animated box stay open under the picture.
     fireEvent.click(screen.getByRole('checkbox', {name: 'Animated'}));
     await generate();
     expect(generateImage).toHaveBeenCalledTimes(1);
@@ -222,7 +219,7 @@ describe('SentenceScene', () => {
     });
   });
 
-  it('shows the making of the picture, then reads the words back', async () => {
+  it('shows the making of the picture, then the picture with the words still open', async () => {
     const finish = pendingGeneration();
     renderScene();
     pickCreature();
@@ -238,10 +235,9 @@ describe('SentenceScene', () => {
     await act(async () => {
       jest.advanceTimersByTime(SETTLE_MS);
     });
-    expect(screen.getByRole('status').textContent).toBe(
-      'Your picture is ready.'
-    );
+    expect(screen.getByText('Your picture is ready.')).toBeTruthy();
     expect(screen.getByRole('img', {name: 'A cat'})).toBeTruthy();
+    expect(screen.getByRole('button', {name: 'cat'})).toBeTruthy();
     expect(
       screen.getByRole('button', {name: 'Behind the scenes'})
     ).toBeTruthy();
@@ -266,7 +262,7 @@ describe('SentenceScene', () => {
     renderScene();
     pickCreature();
     await generate();
-    await generate('Generate again');
+    await generate();
     const tiles = screen.getAllByRole('button', {name: /^Picture \d: A cat$/});
     expect(tiles).toHaveLength(2);
     expect(onKeep).toHaveBeenCalledTimes(2);
@@ -285,7 +281,7 @@ describe('SentenceScene', () => {
     renderScene({verdictRequired: true});
     pickCreature();
     await generate();
-    await generate('Generate again');
+    await generate();
     fireEvent.click(
       screen.getAllByRole('button', {name: /^Picture \d: A cat$/})[0]
     );

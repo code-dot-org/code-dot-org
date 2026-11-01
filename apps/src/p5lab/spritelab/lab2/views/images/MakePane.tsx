@@ -95,36 +95,41 @@ const MakePane: React.FunctionComponent<MakePaneProps> = ({
         {parts.error}
       </div>
       <div className={styles.paneBottom}>
-        {result ? (
-          <>
-            <MuiButton
-              variant="outlined"
-              color="secondary"
-              disabled={parts.busy}
-              onClick={parts.changeWords}
-            >
-              Change words
-            </MuiButton>
-            <MuiButton
-              variant="outlined"
-              color="primary"
-              startIcon={<FontAwesomeV6Icon iconName="sparkles" aria-hidden />}
-              disabled={parts.busy || parts.exhausted}
-              onClick={generate}
-            >
-              Regenerate
-            </MuiButton>
-          </>
+        {confirming ? (
+          <div className={styles.confirm} role="group" aria-label="Replace">
+            <span>Replace your drawing with a new picture?</span>
+            <div className={styles.confirmButtons}>
+              <MuiButton
+                variant="outlined"
+                color="secondary"
+                size="small"
+                onClick={() => setConfirming(false)}
+              >
+                Keep drawing
+              </MuiButton>
+              <MuiButton
+                variant="contained"
+                color="primary"
+                size="small"
+                onClick={() => {
+                  setConfirming(false);
+                  parts.generate();
+                }}
+              >
+                Replace
+              </MuiButton>
+            </div>
+          </div>
         ) : (
           <MuiButton
             variant={regenerate ? 'outlined' : 'contained'}
             color="primary"
             className={classNames(
-              !regenerate && styles.generateButton,
-              !regenerate &&
-                parts.complete &&
+              styles.generateButton,
+              parts.complete &&
                 !parts.busy &&
                 !parts.exhausted &&
+                !result &&
                 styles.ready
             )}
             startIcon={<FontAwesomeV6Icon iconName="sparkles" aria-hidden />}
@@ -133,7 +138,7 @@ const MakePane: React.FunctionComponent<MakePaneProps> = ({
           >
             {generating
               ? 'Generating…'
-              : regenerate
+              : result || regenerate
               ? 'Regenerate'
               : 'Generate'}
           </MuiButton>

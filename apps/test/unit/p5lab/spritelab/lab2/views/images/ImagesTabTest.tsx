@@ -90,7 +90,6 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/sentence/SentenceScene', () => {
           awaitingVerdict: false,
           exhausted: false,
           generate: jest.fn(),
-          changeWords: jest.fn(),
           keep: jest.fn(),
           draft: {imageType, subject: imageSubject, style: 'pixel'},
         })}
