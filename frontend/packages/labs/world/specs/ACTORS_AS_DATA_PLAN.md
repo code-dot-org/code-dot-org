@@ -459,7 +459,15 @@ it. Left for its own investigation.
 ## Open
 
 - **Check my work in the browser checks an empty world** (step 8): found
-  here, older than this phase.
+  here, older than this phase. FIXED, November 2026. The sandbox played
+  `instantiate()`, which replays what the project declares and places
+  nothing: maps and screens place actors as the module loads, into the
+  builder's own world. It now loads the check's bundle under a URL of its
+  own (`checkModuleUrl`), so the project's setup runs again into a world
+  of its own, and plays that world's `getWorld()`, as the test runner
+  does. In the browser, `origin/first-world` with a second Hero placed now
+  reads "That works"; without the fix it read "Not yet", and the running
+  game is left as it was.
 
 ## Decided after
 

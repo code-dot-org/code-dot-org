@@ -494,9 +494,11 @@ anything depends on it.
    somebody else's code as small as it can be and means a wrong check can be
    corrected without rebuilding anything down there.
 
-   Fresh, through `WorldBuilder.instantiate()` rather than `getWorld()`: the
-   latter memoizes, so a check would otherwise be handed the world the learner
-   has been playing, with their own keypresses in its history.
+   Fresh, by loading the bundle again under a URL of its own
+   (`checkModuleUrl`) and taking that copy's `getWorld()`. The game's own
+   `getWorld()` is the world the learner has been playing, with their
+   keypresses in its history; `instantiate()` places nothing, since maps and
+   screens place their actors as the module loads.
 
    Ten probes — an actor count, the positions of a kind, how many actors draw
    anything, which sprites are on screen, a world property, a named property

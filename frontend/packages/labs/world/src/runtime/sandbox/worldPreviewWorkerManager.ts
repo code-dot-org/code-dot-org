@@ -15,6 +15,7 @@ import type {
   WorldSnapshot,
 } from 'world-lab';
 
+import {checkModuleUrl} from '../checkModuleUrl';
 import type {CheckResult} from '../checks';
 import {drawingThumbnail, frameThumbnail} from '../driver/frameThumbnail';
 import {PhaserBinding} from '../driver/PhaserBinding';
@@ -245,11 +246,6 @@ export async function start(): Promise<void> {
   /**
    * Play a check's script against a FRESH world and report what the probes saw.
    *
-   * Fresh, through `instantiate()` rather than `getWorld()`: the latter
-   * memoizes, so a check would otherwise be handed the world the learner has
-   * been playing, with their own keypresses already in its history and its
-   * actors wherever they left them.
-   *
    * NO JUDGEMENT HERE. The probes report numbers and the lab decides what they
    * mean (../checks) — which keeps this side, the side that runs somebody
    * else's code, as small as it can be.
@@ -258,18 +254,18 @@ export async function start(): Promise<void> {
     let result: CheckResult = {samples: {}, console: []};
     try {
       lastAssets = assets ?? lastAssets;
+      // A URL of its own is a module of its own, whose setup places the map
+      // again; the build worker serves by path, so it is the same bundle.
+      // Not `instantiate()`, which places nothing, nor the game's `getWorld()`,
+      // which is the world the learner has been playing.
       const mod: {default?: WorldBuilder} = await import(
-        /* @vite-ignore */ moduleUrl
+        /* @vite-ignore */ checkModuleUrl(moduleUrl, id)
       );
       const builder = mod.default;
-      if (!builder || typeof builder.instantiate !== 'function') {
+      if (!builder || typeof builder.getWorld !== 'function') {
         throw new Error('entry module does not build a world');
       }
-      // FRESH, through `instantiate()` rather than `getWorld()`: the latter
-      // memoizes, so a check would otherwise be handed the world the learner
-      // has been playing, with their own keypresses already in its history and
-      // its actors wherever they left them.
-      result = playCheck(builder.instantiate(), run);
+      result = playCheck(builder.getWorld(), run);
     } catch (thrown) {
       result = {
         samples: {},

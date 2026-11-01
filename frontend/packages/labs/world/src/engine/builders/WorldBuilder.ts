@@ -279,8 +279,8 @@ export class WorldBuilder {
    * click for the life of the game, and replay every one of them into the next
    * world made from this description. An action taken during a frame is a thing
    * that HAPPENED; one taken while the description is still being written is
-   * part of what the world IS, and that is the one a fresh `instantiate()` — a
-   * check run — has to see again.
+   * part of what the world IS, and that is the one a fresh `instantiate()`
+   * has to see again.
    */
   act(action: WorldAction, ...args: unknown[]): this {
     if (this.built?.ticking) {
