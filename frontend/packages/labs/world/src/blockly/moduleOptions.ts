@@ -47,7 +47,8 @@ let projectRuleModules: Array<[string, string]> = [];
 let projectMaps: Record<string, string[]> = {};
 // `[name, id]` for every layer the project's maps and screens hold, an id once
 // — what a LAYER dropdown offers (blockly/layers).
-let projectLayerList: Array<[string, string]> = [];
+/** Each map's layers, as `[name, id]`, by the map's module path. */
+let mapLayers: Record<string, Array<[string, string]>> = {};
 /**
  * The placements of the map whose workspace is open — `[id, id]` rows.
  *
@@ -211,13 +212,17 @@ export function placementOptions(): Array<[string, string]> {
 }
 
 /** Replace the layer registry. */
-export function setProjectLayers(layers: Array<[string, string]>): void {
-  projectLayerList = layers;
+export function setMapLayers(
+  layers: Record<string, Array<[string, string]>>,
+): void {
+  mapLayers = layers;
 }
 
-/** Every layer the project's maps hold, as `[name, id]`. */
-export function projectLayers(): Array<[string, string]> {
-  return projectLayerList;
+/** The layers one map holds, as `[name, id]`; none for anything else. */
+export function mapLayerRows(
+  modulePath: string | undefined,
+): Array<[string, string]> {
+  return (modulePath && mapLayers[modulePath]) || [];
 }
 
 /** Replace the map registry (path -> the actor modules each map places). */

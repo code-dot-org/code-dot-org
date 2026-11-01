@@ -67,12 +67,18 @@ describe('what App Builder names', () => {
     );
   });
 
-  it('hides blocks the world’s toolbox actually lists', () => {
-    const {toolbox} = buildDomainPalette([], {fileKind: 'world'});
+  it('hides blocks the world’s or a map’s toolbox actually lists', () => {
+    // A layer is a map's, so the blocks naming one are in a map's palette.
     const listed = new Set(
-      (toolbox as Array<{blocks?: unknown[]}>).flatMap(category =>
-        (category.blocks ?? []).filter(
-          (item): item is string => typeof item === 'string',
+      (['world', 'map'] as const).flatMap(fileKind =>
+        (
+          buildDomainPalette([], {fileKind}).toolbox as Array<{
+            blocks?: unknown[];
+          }>
+        ).flatMap(category =>
+          (category.blocks ?? []).filter(
+            (item): item is string => typeof item === 'string',
+          ),
         ),
       ),
     );

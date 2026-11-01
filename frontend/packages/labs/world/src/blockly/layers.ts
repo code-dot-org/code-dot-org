@@ -10,11 +10,19 @@ import type {Blockly} from '@code-dot-org/blockly';
 
 import {DEFAULT_LAYER_ID} from '../engine/core/Layer';
 
-import {liveDropdown, projectLayers} from './moduleOptions';
+import {editingFileModule} from './editingRule';
+import {mapLayerRows, liveDropdown} from './moduleOptions';
 
-/** The `[label, value]` rows a LAYER dropdown offers: every map's layers. */
-export const layerOptions = (): Array<[string, string]> => {
-  const rows = projectLayers();
+/**
+ * The `[label, value]` rows a LAYER dropdown offers: the layers of the map
+ * whose code it is in, a placement's included.
+ */
+export const layerOptions = (
+  field?: Blockly.FieldDropdown,
+): Array<[string, string]> => {
+  const rows = mapLayerRows(
+    editingFileModule(field?.getSourceBlock() ?? undefined),
+  );
   return rows.some(([, id]) => id === DEFAULT_LAYER_ID)
     ? rows
     : [['Main', DEFAULT_LAYER_ID], ...rows];

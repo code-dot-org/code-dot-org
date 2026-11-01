@@ -104,6 +104,9 @@ export const ROOT_HOMES: ReadonlyMap<string, ReadonlySet<FileKind>> = new Map([
   ['world_map', new Set<FileKind>(['map'])],
   ['world_placement', new Set<FileKind>(['map', 'placement'])],
   ['world_unload_this_map', new Set<FileKind>(['map', 'placement'])],
+  // A layer's name is its map's, so a block naming one is the map's too.
+  ['world_all_actors_in_layer', new Set<FileKind>(['map', 'placement'])],
+  ['world_is_in_layer', new Set<FileKind>(['map', 'placement'])],
   ['world_on_map_loads', new Set<FileKind>(['map'])],
   ['world_on_map_unloads', new Set<FileKind>(['map'])],
   ['world_on_screen_loads', new Set<FileKind>(['screen'])],

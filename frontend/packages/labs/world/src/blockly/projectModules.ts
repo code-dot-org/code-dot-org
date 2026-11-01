@@ -9,6 +9,7 @@
 import {isBackgroundPath} from '../appearance/backgroundsFolder';
 import type {EffectParameter} from '../effect/model/types';
 import {MAIN_SCREEN_PATH} from '../mainWorld';
+import {layerName, layersOf, type MapDoc} from '../mapEditor/mapModel';
 import {soundLabel} from '../sound/soundFiles';
 
 import {BUILTIN_RULE_META} from './builtinMeta';
@@ -237,36 +238,37 @@ export function projectEffectParameters(
 }
 
 /**
- * Every layer the project's maps hold, as `[name, id]`, each id once and the
- * first name it is given: what a LAYER dropdown offers. A screen has none
+ * Each map's layers, as `[name, id]`, by the map's module path. A layer's
+ * name is its map's, and known only in that map's code; a screen has none
  * (specs/ONE_WORLD_PLAN.md).
  */
-export function projectLayerOptions(
+export function mapLayerOptions(
   files: Record<string, string>,
-): Array<[string, string]> {
-  const rows: Array<[string, string]> = [];
-  const taken = new Set<string>();
-  for (const path of Object.keys(files).sort()) {
+): Record<string, Array<[string, string]>> {
+  const byMap: Record<string, Array<[string, string]>> = {};
+  for (const path of Object.keys(files)) {
     if (!/^maps\/.*\.map$/.test(path)) {
       continue;
     }
-    let layers: unknown;
+    let doc: MapDoc;
     try {
-      layers = (JSON.parse(files[path]) as {layers?: unknown}).layers;
+      doc = JSON.parse(files[path]) as MapDoc;
     } catch {
       continue;
     }
-    for (const layer of Array.isArray(layers) ? layers : []) {
-      const id = (layer as {id?: unknown})?.id;
-      if (typeof id !== 'string' || taken.has(id)) {
+    const rows: Array<[string, string]> = [];
+    for (const layer of Array.isArray(doc?.layers) ? layersOf(doc) : []) {
+      if (
+        typeof layer?.id !== 'string' ||
+        rows.some(([, taken]) => taken === layer.id)
+      ) {
         continue;
       }
-      taken.add(id);
-      const name = (layer as {name?: unknown}).name;
-      rows.push([typeof name === 'string' && name.trim() ? name : id, id]);
+      rows.push([layerName(layer), layer.id]);
     }
+    byMap[path.replace(/\.map$/, '')] = rows;
   }
-  return rows;
+  return byMap;
 }
 
 /**

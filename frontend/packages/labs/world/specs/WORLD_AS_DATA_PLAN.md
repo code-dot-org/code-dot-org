@@ -76,6 +76,7 @@ color` and a `set` row per rule setting, loads them into the headless
    did (COMPILE_FROM_DATA_PLAN.md, step 8). Each is worth doing on its own
    account. What cannot wait is Tapper's `define layer`, kept as code by
    the converter (step 8).
+
 7. **`define world` goes. BUILT, but for the layers.** The block and its
    generator, `use theme` and `define event` are deleted, with the rules
    button and the event designer that rode on them, `parseWorldOwnMeta`,
@@ -91,12 +92,12 @@ color` and a `set` row per rule setting, loads them into the headless
    with `builderWorldExtension` and `layerPlan`. Code places into the
    default layer; a layer's contents are placements, which name their
    layer. `this layer moves …` and `this layer is fixed` act on the layer
-   the code runs in, as the slot blocks do. `all actors in layer` and `is
-   in layer` offer every layer of the project's maps and screens, by name
-   (`projectLayerOptions`), storing the map's own id. The converter makes
-   a lesson's `define layer` a layer of the level map, with its literal
-   `add actor`s placed on it and the rest kept as code. Tapper's Game
-   layer is the default now, and its Interface the map's fixed layer,
+   the code runs in, as the slot blocks do. The two blocks that ask about
+   a layer by name store the map's own id of it; which layers they offer
+   is under Open. The converter makes a lesson's `define layer` a layer of
+   the level map, with its literal `add actor`s placed on it and the rest
+   kept as code. Tapper's Game layer is the default now, and its Interface
+   the map's fixed layer,
    holding the three literal labels; the score label, which code names,
    is in the default layer, which looks the same since Tapper's camera
    does not move. `place/layers` grants `all actors in layer`.
@@ -135,5 +136,15 @@ Steps 2 and 3 change no output.
   be enclosed in, and it serves a spawn and a later move alike. Not
   `within layer`: screen code can enter a Viewport's map, so a block
   enclosing it has no one map to name a layer of.
-- **A LAYER dropdown in a map's own code** offers every map's layers, not
-  that map's alone.
+- **A LAYER dropdown in a map's own code** offered every map's layers, not
+  that map's alone. ANSWERED, November 2026: a layer's name is its map's,
+  and known only in that map's code. The two blocks that name one are
+  offered to a map's code and its placements' alone (`ROOT_HOMES`), and
+  offer that map's layers under that map's names (`mapLayerOptions`, read
+  by the block's file through `editingFileModule`). Nothing registers
+  every map's layers any more.
+- **Layers named for the whole project.** A project could name its layers
+  once, and each map use those it has; a block anywhere could then name
+  one, and find nothing in a map without it, as `World.addActor` already
+  places into the default for a layer a map lacks. Not built: a layer is
+  made in its map today. The saved value is the layer's id either way.

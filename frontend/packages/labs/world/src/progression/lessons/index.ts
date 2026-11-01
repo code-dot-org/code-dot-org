@@ -1613,8 +1613,9 @@ it, front at the top.
    Hills on it. They now drift slower than the floor, which is what makes
    them look far away.
 
-An actor added while the game runs goes on a layer with **within layer ⟨…⟩
-do**; the layers themselves are the map's, and are made here.
+An actor added while the game runs goes on the default layer. The layers
+themselves are the map's, and are made here; the map's own code can ask
+what is on one with **all actors in layer ⟨…⟩**.
 `.trim(),
 };
 
