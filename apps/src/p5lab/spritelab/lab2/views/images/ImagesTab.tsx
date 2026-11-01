@@ -254,6 +254,13 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
           imageType={kind.imageType}
           imageSubject={kind.subject}
           typeChoice={false}
+          initialChoices={
+            chosenImage?.props.generation?.choices && {
+              sentenceId: chosenImage.props.generation.sentenceId,
+              choices: chosenImage.props.generation.choices,
+            }
+          }
+          initialAnimated={!chosenImage || !!chosenImage.sheet}
           generationsLeft={generationsLeft}
           verdictRequired={verdictRequired}
           onGenerateStart={onGenerate}
@@ -279,6 +286,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                 parts={parts}
                 width={paneWidthPx}
                 overwriteWarns={!!chosenImage && !chosenImage.props.generation}
+                regenerate={!!chosenImage?.props.generation}
                 onDraw={
                   drawOffered
                     ? () =>

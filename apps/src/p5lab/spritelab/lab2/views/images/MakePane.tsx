@@ -22,6 +22,8 @@ interface MakePaneProps {
   onDraw?: () => void;
   /** The drawing button's text. */
   drawLabel?: string;
+  /** The image was made by AI and is unedited: generating makes it again. */
+  regenerate?: boolean;
 }
 
 const MakePane: React.FunctionComponent<MakePaneProps> = ({
@@ -30,6 +32,7 @@ const MakePane: React.FunctionComponent<MakePaneProps> = ({
   overwriteWarns,
   onDraw,
   drawLabel = 'Draw my own',
+  regenerate,
 }) => {
   const [confirming, setConfirming] = useState(false);
   const result = parts.mode === 'result';
@@ -127,7 +130,7 @@ const MakePane: React.FunctionComponent<MakePaneProps> = ({
               disabled={parts.busy || parts.exhausted}
               onClick={generate}
             >
-              Generate again
+              Regenerate
             </MuiButton>
           </>
         ) : (
@@ -142,7 +145,11 @@ const MakePane: React.FunctionComponent<MakePaneProps> = ({
             disabled={!parts.complete || parts.busy || parts.exhausted}
             onClick={generate}
           >
-            {generating ? 'Generating…' : 'Generate'}
+            {generating
+              ? 'Generating…'
+              : regenerate
+              ? 'Regenerate'
+              : 'Generate'}
           </MuiButton>
         )}
         {onDraw && !generating && !confirming && (

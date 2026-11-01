@@ -215,6 +215,43 @@ export function promptText(sentence: Sentence, choices: Choices): string {
     .trim();
 }
 
+/** Choices saved on an image: the sentence they were made in, and the
+    word per slot. */
+export interface SavedChoices {
+  sentenceId?: string;
+  choices: Record<string, string>;
+}
+
+/**
+ * Saved choices as this sentence can hold them now: a slot the sentence no
+ * longer has, or a word its slot no longer offers, is dropped, and a
+ * phrase's slots after a dropped one go with it, as clearing them would.
+ * The sentence id is not checked: slots and words are matched by their
+ * own ids, so a word set shared between sentences carries over.
+ */
+export function restoreChoices(
+  sentence: Sentence,
+  saved: SavedChoices | undefined
+): Choices {
+  if (!saved) {
+    return {};
+  }
+  const restored: Choices = {};
+  Object.entries(saved.choices).forEach(([slotId, wordId]) => {
+    if (wordFor(sentence, slotId, wordId)) {
+      restored[slotId] = wordId;
+    }
+  });
+  const chained = chainedSlotIds(sentence);
+  const firstMissing = chained.findIndex(id => !restored[id]);
+  if (firstMissing >= 0) {
+    chained.slice(firstMissing).forEach(id => {
+      delete restored[id];
+    });
+  }
+  return restored;
+}
+
 /** The body plan of the chosen creature, when the sentence has one. */
 export function chosenBodyPlan(
   sentence: Sentence,

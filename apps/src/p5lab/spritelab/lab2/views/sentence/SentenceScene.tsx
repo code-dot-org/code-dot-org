@@ -62,6 +62,8 @@ import {
   chosenBodyPlan,
   isComplete,
   promptText,
+  restoreChoices,
+  SavedChoices,
   sentenceFor,
 } from './sentences';
 import SentenceSceneLayout from './SentenceSceneLayout';
@@ -168,6 +170,11 @@ interface SentenceSceneProps {
   /** Offer the Type dropdown; imageType and imageSubject are then where it
       starts. */
   typeChoice?: boolean;
+  /** The words the image was made with, put back as far as the sentence
+      still holds them. */
+  initialChoices?: SavedChoices;
+  /** Where the Animated box starts; ticked unless given. */
+  initialAnimated?: boolean;
   /** Keep a made picture; the level's own saving when unset. */
   onKeep?: (result: GeneratedImageResult) => Promise<void> | void;
   /** A generation request is leaving. */
@@ -202,6 +209,8 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   generationsLeft,
   showTts,
   typeChoice,
+  initialChoices,
+  initialAnimated = true,
   onKeep,
   onGenerateStart,
   method = 'scene',
@@ -222,12 +231,14 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     ? IMAGE_KINDS.find(k => k.value === kind) ?? IMAGE_KINDS[0]
     : {imageType: initialImageType, subject: initialImageSubject};
   const sentence = sentenceFor(imageType, imageSubject, sentenceId);
-  const [choices, setChoices] = useState<Choices>({});
+  const [choices, setChoices] = useState<Choices>(() =>
+    restoreChoices(sentence, initialChoices)
+  );
   const complete = isComplete(sentence, choices);
   // A character can be animated, and is unless the box is unticked; an
   // object or a background is one picture.
   const canAnimate = imageType === 'sprite' && imageSubject !== 'object';
-  const [animated, setAnimated] = useState(true);
+  const [animated, setAnimated] = useState(initialAnimated);
   const makesSet = canAnimate && animated;
 
   const [mode, setMode] = useState<Mode>('edit');
@@ -361,9 +372,22 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       if (run !== runRef.current) {
         return;
       }
+      // The words go on the image, so a return to it can put them back.
+      const chosenWords = Object.fromEntries(
+        Object.entries(choices).filter(
+          (pair): pair is [string, string] => typeof pair[1] === 'string'
+        )
+      );
       const entry: GeneratedPicture = {
         id: result.filename,
-        result,
+        result: {
+          ...result,
+          generation: {
+            ...result.generation,
+            sentenceId: sentence.id,
+            choices: chosenWords,
+          },
+        },
         dataURI: bytesToDataURI(result.uint8Array, result.mediaType),
         prompt,
         sent,
