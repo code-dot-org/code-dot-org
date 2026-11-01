@@ -437,14 +437,6 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   flex-wrap: wrap;
 }
 
-// Doubled to outrank the button's own padding and radius.
-.generateButton.generateButton {
-  min-height: 44px;
-  border-radius: 999px;
-  font-size: 16px;
-  font-weight: 700;
-}
-
 
 // The quieter neutral: Generate is the main call to action.
 .drawButton.drawButton {

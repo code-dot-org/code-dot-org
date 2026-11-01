@@ -124,7 +124,6 @@ const MakePane: React.FunctionComponent<MakePaneProps> = ({
           <MuiButton
             variant={regenerate ? 'outlined' : 'contained'}
             color="primary"
-            className={styles.generateButton}
             startIcon={<FontAwesomeV6Icon iconName="sparkles" aria-hidden />}
             disabled={!parts.complete || parts.busy || parts.exhausted}
             onClick={generate}
