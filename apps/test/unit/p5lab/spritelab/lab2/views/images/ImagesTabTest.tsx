@@ -323,6 +323,7 @@ describe('ImagesTab', () => {
   it('draws a new image in free play with every tool, and Done makes it an image', async () => {
     renderTab({editingOffered: true});
     fireEvent.click(screen.getByRole('button', {name: 'New image'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Character'}));
     fireEvent.click(screen.getByRole('button', {name: 'Draw my own'}));
     expect(screen.getByText('all tools')).toBeTruthy();
     expect(screen.getByText('toolbar')).toBeTruthy();
