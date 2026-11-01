@@ -1,10 +1,10 @@
 // Making a picture from a sentence of word chips: the words, the model's
 // run, the pictures it made, and the rating. A host lays the parts out.
 
-import Checkbox from '@code-dot-org/component-library/checkbox';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import Toggle from '@code-dot-org/component-library/toggle';
 import {Typography as MuiTypography} from '@mui/material';
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
@@ -523,18 +523,22 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     <SentenceReadOnly sentence={sentence} choices={choices} />
   );
   const wordChooserNode = sentenceOpen ? menus.chooser : null;
+  // The caption at the left, the switch at the right edge.
   const animatedChoiceNode = canAnimate && !typedPrompt && !generating && (
-    <Checkbox
-      label="Animated"
-      name="sentence-animated"
-      size="s"
-      checked={animated}
-      disabled={busy}
-      onChange={e => {
-        setAnimated(e.target.checked);
-        onAnimatedChange?.(e.target.checked);
-      }}
-    />
+    <div className={styles.animatedRow}>
+      <Toggle
+        label="Animated"
+        name="sentence-animated"
+        position="right"
+        size="s"
+        checked={animated}
+        disabled={busy}
+        onChange={e => {
+          setAnimated(e.target.checked);
+          onAnimatedChange?.(e.target.checked);
+        }}
+      />
+    </div>
   );
   const progressNode = generating && (
     <GeneratingSteps done={settling} single={singleStep} />

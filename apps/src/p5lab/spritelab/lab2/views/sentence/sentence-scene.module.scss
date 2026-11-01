@@ -37,3 +37,10 @@
 .error {
   color: var(--text-error-primary);
 }
+
+// The Animated switch's row: its label at the left, the switch at the
+// right edge of the pane.
+.animatedRow > label {
+  justify-content: space-between;
+  width: 100%;
+}
