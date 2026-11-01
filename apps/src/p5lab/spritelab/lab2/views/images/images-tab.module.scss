@@ -78,8 +78,11 @@ $pad: 16px;
   border-radius: 6px;
 }
 
+// The chosen tile: a ring standing off the tile, so the image keeps its
+// own edge.
 .tileChosen {
-  border: 2px solid var(--borders-brand-teal-primary);
+  outline: 2px solid var(--borders-brand-teal-primary);
+  outline-offset: 3px;
 }
 
 // The image not made yet: a dashed box where its tile will be.
