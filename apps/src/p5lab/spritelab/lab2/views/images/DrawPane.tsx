@@ -54,7 +54,6 @@ const DrawPane: React.FunctionComponent<DrawPaneProps> = ({
         <MuiButton
           variant="contained"
           color="primary"
-          className={styles.generateButton}
           startIcon={<FontAwesomeV6Icon iconName="check" aria-hidden />}
           disabled={!editing && !edited}
           onClick={onDone}
