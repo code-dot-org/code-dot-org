@@ -1,7 +1,7 @@
 # Plan: each binding owns its variable
 
-STATUS: IN PROGRESS. Steps 2 to 6 are built. Comes before the event hat's value chips
-(below, step 5), which need it.
+STATUS: BUILT, October 2026, and seen in the browser. The working record,
+as the other plans are.
 
 A name in this language is lexical. It exists where a binding gives it: a
 `let`, a loop, an event hat, a member's head. Outside those it does not
@@ -212,6 +212,9 @@ eventValue$2;` and the console prints the 7 the create handler emits.
   are lists, and there is no `let list`; Meteors names `ball` with `add
 actor … named`, which is not a binding. A getter of any of them draws
   `???` in the editor, as it did before.
+
+- **Step 7: the specs.** EVENT_VALUES_PLAN.md and PASTE.md carry a note
+  on what this changed in them; ACCESSIBILITY.md has the chips.
 
 ## Not in this plan
 

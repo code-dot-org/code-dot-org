@@ -7,6 +7,16 @@ other plans are.
 Since: `event actor` is `object actor` (specs/PROPERTY_SUBJECTS_PLAN.md).
 What is said of it here holds under the new name.
 
+Since: a hat OWNS its values (specs/VARIABLE_OWNERSHIP_PLAN.md, steps 4
+and 5). Each value is a field on the hat holding the hat's own variable,
+made when the hat reaches a workspace and saved with it, and drawn as a
+chip a getter can be pulled from. So the matching BY NAME described below
+is gone, and with it three things this record calls known: renaming a
+value renames the hat's variable rather than orphaning its getters; a
+name the file holds elsewhere is another binding's, not the hat's; and the
+`+` hands out the hat's own variable by id. A name nobody binds is no
+longer visible everywhere (step 6).
+
 ## What an event can say today, and what it cannot
 
 - **One value.** `emit(event, actor, detail?)`, a queue of

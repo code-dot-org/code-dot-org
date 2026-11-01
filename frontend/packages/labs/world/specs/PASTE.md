@@ -4,6 +4,14 @@ What it takes for a block copied in one file's tab to be pasted into
 another's — which does nothing today — and what has to be true of the block
 once it lands.
 
+Since: a binding owns its variable (specs/VARIABLE_OWNERSHIP_PLAN.md). Paste
+and Duplicate go through a block paster of the lab's own (`ownedPaster`),
+which gives each binding in the copy — a `let`, a loop, a hat's value — a
+fresh variable, made before the copy loads so its fields find it by id and
+not by name, and points the readers in the copy at it. A reader whose
+binding was not copied keeps its id. A `let`'s field saves its name and type
+beside the id in a full copy, as a variable field does.
+
 ## Why it does nothing today
 
 Two facts, one on each side of the seam.
