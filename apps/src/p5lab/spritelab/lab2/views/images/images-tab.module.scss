@@ -447,30 +447,6 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   font-weight: 700;
 }
 
-.ready {
-  animation: ready-rock 2.4s ease-in-out infinite;
-
-  &:active {
-    animation: none;
-  }
-}
-
-@keyframes ready-rock {
-  0%,
-  70%,
-  100% {
-    transform: scale(1) rotate(0);
-  }
-  78% {
-    transform: scale(1.04) rotate(-2deg);
-  }
-  86% {
-    transform: scale(1.04) rotate(2deg);
-  }
-  94% {
-    transform: scale(1) rotate(0);
-  }
-}
 
 // The quieter neutral: Generate is the main call to action.
 .drawButton.drawButton {
@@ -482,12 +458,6 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   &:hover {
     border-color: var(--text-neutral-primary);
     color: var(--text-neutral-primary);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .ready {
-    animation: none;
   }
 }
 

@@ -459,37 +459,32 @@ button.chipWord {
   gap: 8px;
   margin: 0;
   min-height: 44px;
-  border: 2px solid var(--hue-line);
+  border: 1px solid var(--borders-neutral-primary);
   border-radius: 999px;
-  background: var(--background-neutral-secondary);
+  background: var(--background-neutral-primary);
   color: var(--text-neutral-primary);
   font: inherit;
   font-size: 17px;
-  font-weight: 600;
-  padding: 4px 16px 4px 6px;
-  box-shadow: 0 3px 0 var(--hue-dark);
+  font-weight: 700;
+  padding: 4px 16px 4px 10px;
   cursor: grab;
   transition:
-    transform 0.12s ease-out,
-    box-shadow 0.12s ease-out;
+    background-color 0.12s ease-out,
+    border-color 0.12s ease-out;
   // Backwards only: a fill after the end would hold the pop's transform
   // over the hover and press ones.
   animation: word-pop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
   animation-delay: calc(var(--i) * 35ms);
 
+  // The emoji sits plain beside the word, no badge.
   .emojiBadge {
-    background: var(--hue);
-    color: var(--hue-text);
+    background: transparent;
+    color: inherit;
   }
 
   &:hover:not(:disabled, .chosen) {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 0 var(--hue-dark);
-  }
-
-  &:active:not(:disabled) {
-    transform: translateY(3px);
-    box-shadow: 0 0 0 var(--hue-dark);
+    background: var(--background-neutral-secondary);
+    border-color: var(--borders-neutral-strong);
   }
 
   &:disabled {
@@ -508,14 +503,11 @@ button.chipWord {
   }
 }
 
-// Outranks the hover above.
+// Outranks the hover above: the picked word in its slot's color.
 .word.chosen {
+  border-color: var(--hue-line);
   background-color: var(--hue);
   color: var(--hue-text);
-
-  .emojiBadge {
-    background: var(--neutral-white-alpha-80);
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {

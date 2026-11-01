@@ -4,7 +4,6 @@
 import {MuiDialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton} from '@mui/material';
-import classNames from 'classnames';
 import React, {useState} from 'react';
 
 import {imageKindLabel} from '../../ai/images/types';
@@ -124,14 +123,7 @@ const MakePane: React.FunctionComponent<MakePaneProps> = ({
           <MuiButton
             variant={regenerate ? 'outlined' : 'contained'}
             color="primary"
-            className={classNames(
-              styles.generateButton,
-              parts.complete &&
-                !parts.busy &&
-                !parts.exhausted &&
-                !result &&
-                styles.ready
-            )}
+            className={styles.generateButton}
             startIcon={<FontAwesomeV6Icon iconName="sparkles" aria-hidden />}
             disabled={!parts.complete || parts.busy || parts.exhausted}
             onClick={generate}
