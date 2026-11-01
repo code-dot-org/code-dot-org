@@ -1,6 +1,7 @@
 require 'sequel'
 require 'sequel/connection_pool/threaded'
 require 'uri'
+require 'cdo/database_proxy'
 require 'dynamic_config/gatekeeper'
 require 'dynamic_config/dcdo'
 
@@ -31,6 +32,29 @@ module Cdo
         port: port,
         path: database && "/#{database}"
       ).to_s
+    end
+
+    # The dashboard writer connection URI for this process.
+    #
+    # @return [String] e.g. "mysql2://writer:p%40ssword@proxy.example.com:3306/dashboard_production"
+    def self.dashboard_writer_uri
+      # Chef substitutes ProxySQL's local listener into this URI at build time, so there is nothing to compose.
+      return CDO.dashboard_db_writer if Cdo::DatabaseProxy.selected == Cdo::DatabaseProxy::PROXYSQL
+
+      host, port =
+        if Cdo::DatabaseProxy.rds_proxy_for_writes?
+          [CDO.db_endpoint_proxy_writer, CDO.db_endpoint_proxy_writer_port]
+        else
+          [CDO.db_endpoint_writer, CDO.db_endpoint_writer_port]
+        end
+
+      mysql2_uri(
+        host: host,
+        port: port,
+        username: CDO.db_credential_writer['username'],
+        password: CDO.db_credential_writer['password'],
+        database: CDO.dashboard_db_name
+      )
     end
 
     # Create and return a Sequel::Database object, which represents a connection pool to a database and can be
