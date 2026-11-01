@@ -472,28 +472,44 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   }
 }
 
-// The thumbs float over the frame's bottom edge.
+// The question and the thumbs float over the frame's bottom edge, dark on
+// any theme, as a strip of their own.
 .ratingBar {
   position: absolute;
-  bottom: 12px;
+  bottom: 16px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: 8px;
-  padding: 4px 8px;
-  border-radius: 999px;
-  background-color: var(--background-neutral-primary);
+  align-items: center;
+  gap: 4px;
+  padding: 6px 10px 6px 18px;
+  border-radius: 12px;
+  background-color: var(--neutral-gray-95);
+  color: var(--neutral-base-white);
   box-shadow: 0 2px 8px var(--neutral-black-alpha-30);
+  white-space: nowrap;
 }
 
-.thumb {
-  color: var(--text-neutral-primary);
+.ratingQuestion {
+  margin-right: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  user-select: none;
 }
 
-// Doubled to outrank the button's own hover background.
+// Doubled to outrank the button's own colors.
+.thumb.thumb {
+  color: var(--neutral-base-white);
+  font-size: 20px;
+
+  &:hover {
+    background-color: var(--neutral-white-alpha-20);
+  }
+}
+
 .thumb.thumbChosen {
-  background-color: var(--text-neutral-primary);
-  color: var(--background-neutral-primary);
+  background-color: var(--neutral-base-white);
+  color: var(--neutral-gray-95);
 }
 
 // The question: the design-system dialog, its content a line with the
@@ -522,10 +538,13 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   color: var(--brand-orange-50);
 }
 
+// Full width: the dialog centers its content otherwise.
 .reasonList {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  width: 100%;
+  text-align: left;
 }
 
 // A row is a label around its checkbox; the box is hidden and the row

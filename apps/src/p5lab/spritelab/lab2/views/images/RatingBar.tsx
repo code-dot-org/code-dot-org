@@ -64,8 +64,11 @@ const RatingBar: React.FunctionComponent<RatingBarProps> = ({
       <div
         className={styles.ratingBar}
         role="group"
-        aria-label="How did the AI do?"
+        aria-labelledby="rating-bar-question"
       >
+        <span id="rating-bar-question" className={styles.ratingQuestion}>
+          How did AI do?
+        </span>
         <MuiIconButton
           aria-label="Good"
           aria-pressed={verdict === 'up'}
@@ -76,7 +79,11 @@ const RatingBar: React.FunctionComponent<RatingBarProps> = ({
           disabled={disabled}
           onClick={() => judge('up')}
         >
-          <FontAwesomeV6Icon iconName="thumbs-up" aria-hidden />
+          <FontAwesomeV6Icon
+            iconName="thumbs-up"
+            iconStyle="regular"
+            aria-hidden
+          />
         </MuiIconButton>
         <MuiIconButton
           aria-label="Not so good"
@@ -88,7 +95,11 @@ const RatingBar: React.FunctionComponent<RatingBarProps> = ({
           disabled={disabled}
           onClick={() => judge('down')}
         >
-          <FontAwesomeV6Icon iconName="thumbs-down" aria-hidden />
+          <FontAwesomeV6Icon
+            iconName="thumbs-down"
+            iconStyle="regular"
+            aria-hidden
+          />
         </MuiIconButton>
       </div>
       {question && asking && (
