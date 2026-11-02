@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React, {useLayoutEffect, useRef, useState} from 'react';
+import React, {useLayoutEffect, useMemo, useRef, useState} from 'react';
 
 import MatchColumn from './MatchColumn';
 import {MatchPairs, MatchSelection, MatchSets, MatchSide} from './types';
@@ -44,6 +44,25 @@ function curvePath(start: Point, end: Point): string {
   } ${end.y}, ${end.x} ${end.y}`;
 }
 
+// Both items of a pair, and the line between them, share its status.
+function statusesById(
+  pairs: MatchPairs,
+  correctPairs: MatchPairs | undefined,
+  isAnswerKey: boolean | undefined
+): Map<string, PairStatus> {
+  const statuses = new Map<string, PairStatus>();
+  pairs.forEach(([startId, endId]) => {
+    const status = isAnswerKey
+      ? 'correct'
+      : correctPairs && pairStatus(pairs, correctPairs, startId);
+    if (status) {
+      statuses.set(startId, status);
+      statuses.set(endId, status);
+    }
+  });
+  return statuses;
+}
+
 // The two columns of cards, with a line drawn between each pair's dots.
 const MatchBoard: React.FunctionComponent<MatchBoardProps> = ({
   matchSets,
@@ -60,6 +79,10 @@ const MatchBoard: React.FunctionComponent<MatchBoardProps> = ({
   const [lines, setLines] = useState<Line[]>([]);
   const boardRef = useRef<HTMLDivElement>(null);
   const dotRefs = useRef(new Map<string, HTMLElement>());
+  const statusById = useMemo(
+    () => statusesById(pairs, correctPairs, isAnswerKey),
+    [pairs, correctPairs, isAnswerKey]
+  );
 
   // Measured after layout, and again whenever a card changes size, since
   // the line endpoints are wherever the dots actually render.
@@ -88,9 +111,7 @@ const MatchBoard: React.FunctionComponent<MatchBoardProps> = ({
                 {
                   key: `${startId}:${endId}`,
                   path: curvePath(start, end),
-                  status: isAnswerKey
-                    ? 'correct'
-                    : correctPairs && pairStatus(pairs, correctPairs, startId),
+                  status: statusById.get(startId),
                 },
               ]
             : [];
@@ -107,7 +128,7 @@ const MatchBoard: React.FunctionComponent<MatchBoardProps> = ({
       .querySelectorAll(`.${styles.card}`)
       .forEach(card => observer.observe(card));
     return () => observer.disconnect();
-  }, [pairs, matchSets, correctPairs, isAnswerKey]);
+  }, [pairs, matchSets, statusById]);
 
   const dotRef = (id: string, element: HTMLElement | null) => {
     if (element) {
@@ -148,7 +169,7 @@ const MatchBoard: React.FunctionComponent<MatchBoardProps> = ({
           onClickItem={onClickItem && (id => onClickItem(side, id))}
           dotRef={dotRef}
           disabled={disabled}
-          correctPairs={correctPairs}
+          statusById={statusById}
           isAnswerKey={isAnswerKey}
         />
       ))}

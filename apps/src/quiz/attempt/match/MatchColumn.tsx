@@ -4,11 +4,11 @@ import React from 'react';
 
 import {MatchPairs, MatchSets, MatchSide} from './types';
 import {
+  PairStatus,
   findPartner,
   itemsInColumn,
   letterOf,
   getItemText,
-  pairStatus,
 } from './utils';
 
 import styles from './match-question-container.module.scss';
@@ -23,8 +23,8 @@ interface MatchColumnProps {
   // Receives each item's dot, which MatchBoard draws lines to.
   dotRef: (id: string, element: HTMLElement | null) => void;
   disabled?: boolean;
-  // Marks each paired card as correct or incorrect.
-  correctPairs?: MatchPairs;
+  // Absent for an unpaired card, or when correctness isn't shown.
+  statusById: Map<string, PairStatus>;
   isAnswerKey?: boolean;
 }
 
@@ -36,7 +36,7 @@ const MatchColumn: React.FunctionComponent<MatchColumnProps> = ({
   onClickItem,
   dotRef,
   disabled,
-  correctPairs,
+  statusById,
   isAnswerKey,
 }) => {
   const ColumnTag = onClickItem ? 'div' : 'ul';
@@ -48,11 +48,7 @@ const MatchColumn: React.FunctionComponent<MatchColumnProps> = ({
       {itemsInColumn(matchSets, side).map(item => {
         const partnerId = findPartner(pairs, item.id);
         const isSelected = selectedId === item.id;
-        const status = isAnswerKey
-          ? partnerId
-            ? 'correct'
-            : undefined
-          : correctPairs && pairStatus(pairs, correctPairs, item.id);
+        const status = statusById.get(item.id);
         // An end item shows its partner's letter once paired.
         const letter =
           side === 'start'
