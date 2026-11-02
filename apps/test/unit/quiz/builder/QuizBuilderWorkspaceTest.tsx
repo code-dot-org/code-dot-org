@@ -398,33 +398,4 @@ describe('QuizBuilderWorkspace', () => {
     expect(pageOf('Page 1').querySelector('[data-dirty]')).toBeInTheDocument();
     expect(pageOf('Page 2').querySelector('[data-dirty]')).toBeNull();
   });
-
-  it('deletes an empty page without a confirmation', () => {
-    renderWorkspace({questions: [question()]});
-
-    fireEvent.click(screen.getByRole('button', {name: 'Add page'}));
-    expect(screen.getByText('This page is empty')).toBeVisible();
-
-    fireEvent.click(screen.getByRole('button', {name: 'Delete Page 2'}));
-    expect(
-      screen.queryByRole('heading', {name: 'Page 2'})
-    ).not.toBeInTheDocument();
-    expect(screen.queryByRole('alertdialog')).not.toBeInTheDocument();
-  });
-
-  it('does not offer delete on a page that has questions', () => {
-    renderWorkspace({
-      questions: [
-        question({id: 1, page: 1}),
-        question({id: 2, page: 2, questionName: 'MVC frameworks'}),
-      ],
-    });
-
-    expect(
-      screen.queryByRole('button', {name: 'Delete Page 1'})
-    ).not.toBeInTheDocument();
-    expect(
-      screen.queryByRole('button', {name: 'Delete Page 2'})
-    ).not.toBeInTheDocument();
-  });
 });

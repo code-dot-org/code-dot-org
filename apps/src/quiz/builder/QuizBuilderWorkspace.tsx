@@ -119,11 +119,6 @@ const QuizBuilderWorkspace: React.FunctionComponent<
                 ? UNSAVED_QUESTION_REASON
                 : undefined
             }
-            onDelete={
-              page === addedEmptyPage
-                ? () => setAddedEmptyPage(null)
-                : undefined
-            }
           >
             {pageQuestions.map(question => (
               <li key={question.id}>

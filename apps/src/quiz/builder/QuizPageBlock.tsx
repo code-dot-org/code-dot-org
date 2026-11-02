@@ -1,5 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {IconButton, Tooltip, Typography} from '@mui/material';
+import {IconButton, Typography} from '@mui/material';
 import classNames from 'classnames';
 import React, {useRef, useState} from 'react';
 
@@ -18,8 +18,6 @@ interface QuizPageBlockProps {
   onCreate: (type: QuizQuestionType) => void;
   createDisabledReason?: string;
   hint?: string;
-  // Set only for the unsaved empty page.
-  onDelete?: () => void;
   // One <li> per question.
   children?: React.ReactNode;
 }
@@ -30,7 +28,6 @@ const QuizPageBlock: React.FunctionComponent<QuizPageBlockProps> = ({
   onCreate,
   createDisabledReason,
   hint,
-  onDelete,
   children,
 }) => {
   const [collapsed, setCollapsed] = useState(false);
@@ -83,20 +80,6 @@ const QuizPageBlock: React.FunctionComponent<QuizPageBlockProps> = ({
             <span className={styles.unsaved}>
               <UnsavedBadge label="Page contains an unsaved question" />
             </span>
-            {onDelete && (
-              <Tooltip title="Delete page">
-                <IconButton
-                  aria-label={`Delete ${pageTitle}`}
-                  size="extraSmall"
-                  variant="text"
-                  color="error"
-                  type="button"
-                  onClick={onDelete}
-                >
-                  <FontAwesomeV6Icon iconName="trash" />
-                </IconButton>
-              </Tooltip>
-            )}
             <IconButton
               ref={toggleRef}
               aria-label={
