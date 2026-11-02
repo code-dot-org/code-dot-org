@@ -4,8 +4,9 @@ import React, {useMemo, useState} from 'react';
 
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 
+import QuizMetadataList from '../QuizMetadataList';
 import {QuizQuestionType} from '../types';
-import {attemptsLabel, groupByPage, pluralize} from '../utils';
+import {groupByPage, pluralize} from '../utils';
 
 import CreateQuestionDropdown from './CreateQuestionDropdown';
 import IntroScreenCard from './IntroScreenCard';
@@ -165,40 +166,12 @@ const QuizBuilderWorkspace: React.FunctionComponent<
           <Typography variant="h2" component="h1" className={styles.title}>
             {quizTitle || 'Untitled quiz'}
           </Typography>
-          <ul className={styles.metaRow} aria-label="Quiz details">
-            <li className={styles.metaItem}>
-              <FontAwesomeV6Icon
-                iconName="circle-question"
-                className={styles.metaIcon}
-                aria-hidden
-              />
-              <Typography variant="body3" component="span">
-                {pluralize(questions.length, 'question')}
-              </Typography>
-            </li>
-            {!!timeLimitMinutes && (
-              <li className={styles.metaItem}>
-                <FontAwesomeV6Icon
-                  iconName="clock"
-                  className={styles.metaIcon}
-                  aria-hidden
-                />
-                <Typography variant="body3" component="span">
-                  {pluralize(timeLimitMinutes, 'minute')}
-                </Typography>
-              </li>
-            )}
-            <li className={styles.metaItem}>
-              <FontAwesomeV6Icon
-                iconName="bullseye-arrow"
-                className={styles.metaIcon}
-                aria-hidden
-              />
-              <Typography variant="body3" component="span">
-                {attemptsLabel(allowMultipleAttempts)}
-              </Typography>
-            </li>
-          </ul>
+          <QuizMetadataList
+            questionCount={questions.length}
+            timeLimitMinutes={timeLimitMinutes}
+            allowMultipleAttempts={allowMultipleAttempts}
+            iconClassName={styles.metaIcon}
+          />
         </header>
 
         {/* A question-specific error shows on that question's card instead - see error prop below. */}

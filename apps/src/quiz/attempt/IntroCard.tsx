@@ -4,7 +4,7 @@ import React from 'react';
 
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
-import {attemptsLabel, pluralize} from '../utils';
+import QuizMetadataList from '../QuizMetadataList';
 
 import AttemptCard from './AttemptCard';
 
@@ -31,17 +31,6 @@ const IntroCard: React.FunctionComponent<IntroCardProps> = ({
   onBegin,
   headingRef,
 }) => {
-  const metadata = [
-    {icon: 'circle-question', text: pluralize(questionCount, 'question')},
-    ...(timeLimitMinutes
-      ? [{icon: 'clock', text: pluralize(timeLimitMinutes, 'minute')}]
-      : []),
-    {
-      icon: 'bullseye-arrow',
-      text: attemptsLabel(allowMultipleAttempts),
-    },
-  ];
-
   return (
     <AttemptCard
       label="Before you begin"
@@ -60,16 +49,11 @@ const IntroCard: React.FunctionComponent<IntroCardProps> = ({
       }
       footer={
         <>
-          <ul className={styles.metadata}>
-            {metadata.map(({icon, text}) => (
-              <li key={icon} className={styles.metadataItem}>
-                <FontAwesomeV6Icon iconName={icon} />
-                <Typography variant="body3" component="span">
-                  {text}
-                </Typography>
-              </li>
-            ))}
-          </ul>
+          <QuizMetadataList
+            questionCount={questionCount}
+            timeLimitMinutes={timeLimitMinutes}
+            allowMultipleAttempts={allowMultipleAttempts}
+          />
           <MuiButton
             variant="contained"
             color="primary"

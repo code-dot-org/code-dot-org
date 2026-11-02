@@ -5,9 +5,6 @@ export const toBool = (value: boolean | undefined) => value ?? false;
 export const pluralize = (count: number, noun: string) =>
   `${count} ${noun}${count === 1 ? '' : 's'}`;
 
-export const attemptsLabel = (allowMultipleAttempts: boolean) =>
-  allowMultipleAttempts ? 'Unlimited attempts' : '1 attempt';
-
 // Groups a flat question list into pages, ascending by page number.
 export function groupByPage<T extends {page: number | null}>(
   questions: T[]
