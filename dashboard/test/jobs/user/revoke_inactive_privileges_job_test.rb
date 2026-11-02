@@ -65,15 +65,40 @@ class User::RevokeInactivePrivilegesJobTest < ActiveJob::TestCase
     assert admin.reload.admin?
   end
 
-  test 'uses a 90-day period in production' do
-    User::RevokeInactivePrivilegesJob.any_instance.stubs(:rack_env?).with(:production).returns(true)
-    stale = create_admin(current_sign_in_at: 100.days.ago)
-    active = create_admin(current_sign_in_at: 80.days.ago)
+  test 'uses 90 days for admin and a year for levelbuilder in production' do
+    User::RevokeInactivePrivilegesJob.any_instance.stubs(:rack_env).returns(:production)
+    stale_admin = create_admin(current_sign_in_at: 100.days.ago)
+    active_admin = create_admin(current_sign_in_at: 80.days.ago)
+    levelbuilder = create_levelbuilder(current_sign_in_at: 100.days.ago)
 
     User::RevokeInactivePrivilegesJob.perform_now
 
-    refute stale.reload.admin?
-    assert active.reload.admin?
+    refute stale_admin.reload.admin?
+    assert active_admin.reload.admin?
+    assert levelbuilder?(levelbuilder)
+  end
+
+  test 'uses 90 days for admin and levelbuilder on the levelbuilder server' do
+    User::RevokeInactivePrivilegesJob.any_instance.stubs(:rack_env).returns(:levelbuilder)
+    admin = create_admin(current_sign_in_at: 100.days.ago)
+    stale_levelbuilder = create_levelbuilder(current_sign_in_at: 100.days.ago)
+    active_levelbuilder = create_levelbuilder(current_sign_in_at: 80.days.ago)
+
+    User::RevokeInactivePrivilegesJob.perform_now
+
+    refute admin.reload.admin?
+    refute levelbuilder?(stale_levelbuilder)
+    assert levelbuilder?(active_levelbuilder)
+  end
+
+  test 'uses a year for both elsewhere' do
+    admin = create_admin(current_sign_in_at: 100.days.ago)
+    levelbuilder = create_levelbuilder(current_sign_in_at: 100.days.ago)
+
+    User::RevokeInactivePrivilegesJob.perform_now
+
+    assert admin.reload.admin?
+    assert levelbuilder?(levelbuilder)
   end
 
   test 'revokes levelbuilder from inactive account' do
@@ -115,7 +140,7 @@ class User::RevokeInactivePrivilegesJobTest < ActiveJob::TestCase
     admin = create_admin
     levelbuilder = create_levelbuilder
     User.any_instance.stubs(:update_attribute).raises(ActiveRecord::StatementInvalid)
-    ChatClient.expects(:message).with('cron-daily', regexp_matches(/levelbuilder from 1 accounts.* 1 failed/), color: 'red')
+    ChatClient.expects(:message).with('cron-daily', regexp_matches(/levelbuilder from 1 .* 1 failed/), color: 'red')
 
     User::RevokeInactivePrivilegesJob.perform_now
 
@@ -127,7 +152,7 @@ class User::RevokeInactivePrivilegesJobTest < ActiveJob::TestCase
     create_admin
     create_admin(current_sign_in_at: 13.months.ago)
     create_levelbuilder
-    ChatClient.expects(:message).with('cron-daily', regexp_matches(/admin from 2 and levelbuilder from 1 accounts/))
+    ChatClient.expects(:message).with('cron-daily', regexp_matches(/admin from 2 accounts .* levelbuilder from 1 /))
 
     User::RevokeInactivePrivilegesJob.perform_now
   end

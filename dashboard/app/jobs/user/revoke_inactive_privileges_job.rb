@@ -4,32 +4,43 @@ require 'cdo/chat_client'
 
 class User
   # Revokes admin and the levelbuilder permission from accounts that have not
-  # signed in for 90 days in production, or for a year elsewhere.
+  # signed in recently; see inactivity_period for how recently.
   class RevokeInactivePrivilegesJob < ApplicationJob
     queue_as :default
 
+    ADMIN = 'admin'
     SLACK_CHANNEL = 'cron-daily'
 
     def perform(dry_run: false)
-      period = inactivity_period
-      cutoff = period.ago
+      admin_period = inactivity_period(ADMIN)
+      levelbuilder_period = inactivity_period(UserPermission::LEVELBUILDER)
       admin_ids, levelbuilder_ids = ActiveRecord::Base.connected_to(role: :reporting) do
-        [inactive_admins(cutoff).pluck(:id), inactive_levelbuilders(cutoff).pluck(:user_id)]
+        [
+          inactive_admins(admin_period.ago).pluck(:id),
+          inactive_levelbuilders(levelbuilder_period.ago).pluck(:user_id),
+        ]
       end
 
       # User ids only: this log is the audit record, and emails are PII.
-      log_info('revoke_inactive_privileges_candidates', dry_run:, cutoff: cutoff.iso8601, admin_user_ids: admin_ids, levelbuilder_user_ids: levelbuilder_ids)
+      log_info(
+        'revoke_inactive_privileges_candidates',
+        dry_run:,
+        admin_period: admin_period.inspect,
+        levelbuilder_period: levelbuilder_period.inspect,
+        admin_user_ids: admin_ids,
+        levelbuilder_user_ids: levelbuilder_ids,
+      )
       return if dry_run
 
-      admins, admin_failures = revoke('admin', admin_ids) {|id| revoke_admin(id)}
+      admins, admin_failures = revoke(ADMIN, admin_ids) {|id| revoke_admin(id)}
       levelbuilders, levelbuilder_failures = revoke(UserPermission::LEVELBUILDER, levelbuilder_ids) {|id| revoke_levelbuilder(id)}
       log_info('revoke_inactive_privileges_revoked', admin_user_ids: admins, levelbuilder_user_ids: levelbuilders)
 
       failures = admin_failures.size + levelbuilder_failures.size
       return if admins.empty? && levelbuilders.empty? && failures.zero?
 
-      message = "#{rack_env}: revoked admin from #{admins.size} and levelbuilder from #{levelbuilders.size} " \
-        "accounts with no sign-in for #{period.inspect}."
+      message = "#{rack_env}: revoked admin from #{admins.size} accounts with no sign-in for #{admin_period.inspect}, " \
+        "and levelbuilder from #{levelbuilders.size} with no sign-in for #{levelbuilder_period.inspect}."
       if failures.zero?
         ChatClient.message(SLACK_CHANNEL, message)
       else
@@ -37,8 +48,12 @@ class User
       end
     end
 
-    private def inactivity_period
-      rack_env?(:production) ? 90.days : 1.year
+    # Short where the privilege is most dangerous: admin on production or the
+    # levelbuilder server, and levelbuilder on the levelbuilder server, where
+    # saving a level runs its text as Ruby.
+    private def inactivity_period(privilege)
+      high_risk = privilege == ADMIN ? rack_env?(:production, :levelbuilder) : rack_env?(:levelbuilder)
+      high_risk ? 90.days : 1.year
     end
 
     private def inactive_users(cutoff)
