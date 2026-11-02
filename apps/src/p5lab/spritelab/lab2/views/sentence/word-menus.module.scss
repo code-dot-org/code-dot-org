@@ -118,12 +118,13 @@
   // The vertical margin is the room between the sentence's lines.
   margin: 6px 2px;
   padding: 4px 26px 4px 6px;
+  border: 1px solid var(--borders-neutral-primary);
   border-radius: 999px;
   font-weight: 600;
   line-height: 1.4;
-  background-color: var(--hue);
-  color: var(--hue-text);
-  box-shadow: 0 2px 0 var(--hue-dark);
+  // The page's ground and text, whatever the slot: no colors of its own.
+  background-color: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
   vertical-align: middle;
   animation: chip-land 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
@@ -187,7 +188,7 @@ button.chipWord {
   min-height: 1.5em;
   padding-right: 14px;
   background: transparent;
-  border: 2px dashed var(--hue-line);
+  border: 2px dashed var(--borders-neutral-primary);
   box-shadow: none;
   opacity: 0.8;
   animation: slot-pulse 1.6s ease-in-out infinite;
@@ -210,7 +211,7 @@ button.chipWord {
 .dropTarget {
   opacity: 1;
   transform: scale(1.08);
-  box-shadow: 0 0 0 4px var(--hue);
+  box-shadow: 0 0 0 3px var(--borders-neutral-strong);
 }
 
 .placeholder.dropTarget {
@@ -221,12 +222,16 @@ button.chipWord {
   opacity: 0.5;
 }
 
-// The chip's corner badge. Nested under the chip to outrank the button's
-// own shape.
+// The chip's corner badge, a true circle. Nested under the chip to outrank
+// the button's own shape and padding.
 .chip .remove {
   position: absolute;
   top: -12px;
   right: -12px;
+  width: 24px;
+  height: 24px;
+  min-width: 0;
+  padding: 0;
   border: 2px solid var(--background-neutral-primary);
   border-radius: 50%;
 }
