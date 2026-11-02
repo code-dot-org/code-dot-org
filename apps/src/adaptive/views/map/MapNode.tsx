@@ -61,6 +61,7 @@ const MapNode: React.FunctionComponent<MapNodeProps> = ({
       type="button"
       id={tourId}
       className={styles.circle}
+      data-checkpoint-id={checkpoint.id}
       onClick={() => onSelect(checkpoint.id)}
       aria-label={`${checkpoint.title}: ${STATUS_LABELS[status]}`}
       aria-pressed={focusId === checkpoint.id}
