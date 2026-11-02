@@ -1,53 +1,84 @@
-# Constants for use in the image generation and validation scripts
+# Constants for use in the image generation, validation and review scripts
 
 require 'cdo/shared_constants'
 
-# Bucket locations
+# Bucket locations. curriculum.code.org serves the production bucket through
+# CloudFront; the devel bucket is read straight from S3.
 BUCKET_NAME = 'cdo-curriculum'
 BUCKET_PATH = 'media/spritelab/generate/images'
+PUBLIC_URLS = {
+  'production' => "https://curriculum.code.org/#{BUCKET_PATH}/",
+  'devel' => "https://#{BUCKET_NAME}-devel.s3.amazonaws.com/#{BUCKET_PATH}/",
+}.freeze
 
-# Where generated images land locally, relative to this directory
+# The tree's version, a folder above everything else. Matches
+# IMAGE_CACHE_VERSION in apps/src/p5lab/spritelab/lab2/ai/images/imageCache.ts:
+# bump both when the words or the prompts change, so a browser holding the
+# old files never mixes them with the new.
+CACHE_VERSION = 'v1'
+
+# Where things land locally, relative to this directory. image_output holds
+# exactly the published tree; image_records holds what the tree may not
+# (prompts, seeds, verdicts); image_attic holds every image a redraw
+# replaced, since nothing here deletes an image.
 OUTPUT_DIRECTORY = 'image_output'
+RECORDS_DIRECTORY = 'image_records'
+ATTIC_DIRECTORY = 'image_attic'
 
 # The cached output of dump_prompts.ts, rewritten on every run
 PROMPTS_FILE = 'prompts.jsonl'
 
+# The prompt judge's verdicts, by model and prompt; a prompt is judged once.
+PROMPT_VERDICTS_FILE = 'prompt_verdicts.json'
+
+# Stands in a path for an optional slot left empty, as EMPTY_WORD_ID does in
+# imageCache.ts.
+EMPTY_WORD_ID = '_'
+
+# How many variants the lab looks for per filling, numbered from 00
+# (VARIANT_COUNT in imageCache.ts). More are drawn only on request and the
+# lab never shows them.
+VARIANTS = 3
+
+# Styles the lab can ask for; the sentence layout asks only for pixel art.
+STYLES = %w[pixel smooth]
+
 # The image services this script can ask (override with --provider).
-# 'gemini' is what the lab itself generates with, through the AI Gateway;
-# 'openai' can return a transparent background, which Gemini cannot.
-PROVIDERS = %w[openai gemini]
-DEFAULT_PROVIDER = 'openai'
+# 'gemini' is what the lab itself generates with, through the AI Gateway.
+PROVIDERS = %w[gemini openai]
+DEFAULT_PROVIDER = 'gemini'
 
 # OpenAI image endpoints
 OPENAI_GENERATIONS_URL = 'https://api.openai.com/v1/images/generations'
 OPENAI_EDITS_URL = 'https://api.openai.com/v1/images/edits'
 
-# Gemini generates and edits through one endpoint; %<model>s is the model id.
+# Gemini generates, edits and judges through one endpoint; %{model} is the
+# model id.
 GEMINI_URL = 'https://generativelanguage.googleapis.com/v1beta/models/%{model}:generateContent'
 
 # Default model per provider (override with --model). Gemini's comes from
 # the shared constants the lab's image model is named in, so the two track.
 DEFAULT_MODELS = {
-  'openai' => 'gpt-image-1',
   'gemini' => SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_3_1_FLASH_IMAGE],
+  'openai' => 'gpt-image-1',
 }.freeze
 
 # The config key each provider's credentials come from (override with
-# --key). Gemini has two; the tutor key is the one the 2025 music script
-# generated with.
+# --key). The safety judges run on Gemini whatever draws the images.
 API_KEY_NAMES = {
-  'openai' => 'openai_student_learning_api_key',
   'gemini' => 'google_gemini_ai_tutor_api_key',
+  'openai' => 'openai_student_learning_api_key',
 }.freeze
 
-# Only OpenAI can return an alpha channel; Gemini is asked for the flat key
-# color the lab erases after a generation (see --no-transparent).
+# Only OpenAI can return an alpha channel, and only with --transparent: the
+# lab keys a cached set on the colour chooseKeyColor() names in its prompt,
+# so a published image must be drawn on that colour as a live one is.
 TRANSPARENT_PROVIDERS = %w[openai].freeze
 
 # Gemini's output size, matching SINGLE_IMAGE_SIZE in modelHelpers.ts.
 GEMINI_IMAGE_SIZE = '1K'
 
-# Sampling wildness Gemini is asked for; the explore layout sends this.
+# Sampling wildness Gemini is asked for; SentenceScene sends this.
 # The OpenAI image API takes no temperature.
 TEMPERATURE = 1.0
 
@@ -59,20 +90,23 @@ SIZE = '1024x1024'
 # Rendering quality ('low', 'medium', 'high', 'auto'); nil omits it
 QUALITY = nil
 
-# Styles the student form offers (see IMAGE_STYLE_LABELS in types.ts)
-STYLES = %w[pixel smooth]
+# The model both safety judges run on, as DEFAULT_SAFETY_CONFIG and
+# DEFAULT_IMAGE_SAFETY_CONFIG name it in aichat's safetyHelpers.ts.
+JUDGE_MODEL = SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH]
 
-# What --list-words calls an optional slot's empty choice, matching
-# NO_CHOICE in dump_prompts.ts.
-NO_CHOICE = 'none'
+# Azure severity at or above which an image is flagged, per category: the
+# lab's CATEGORY_SEVERITY_LEVEL_BLOCKED in util/moderateImage.ts with the
+# {Violence: 2} that getImageModerationStatus() in safetyHelpers.ts applies
+# to generated images. Severities are 0, 2, 4 and 6.
+AZURE_BLOCKED_SEVERITY = {
+  'Hate' => 2,
+  'SelfHarm' => 2,
+  'Sexual' => 2,
+  'Violence' => 2,
+}.freeze
 
-# The image UIs whose choices dump_prompts.ts enumerates: the image
-# dialog's adlib dropdowns, and the explore layout's word chips.
-SOURCES = %w[adlib explore]
-
-# The number of different images to produce per combo. Each live generation
-# rolls a fresh seed, so one per combo understates the variety.
-VARIANTS = 3
+# Times a flagged variant is redrawn before it is left out.
+MAX_REDRAWS = 2
 
 # Concurrent requests
 JOBS = 4

@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Image Review</title>
+<style>
+  :root {
+    --bg: #f6f7f9; --panel: #ffffff; --text: #1d2228; --muted: #5d6670;
+    --line: #d9dde3; --accent: #0b6bcb; --ok: #1b7f3b; --bad: #b42318;
+    --warn: #a15c07; --check-a: #e9ecef; --check-b: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #15181c; --panel: #1e2328; --text: #e6e9ec; --muted: #9aa4ae;
+      --line: #333a42; --accent: #5aa9ff; --ok: #4cc27a; --bad: #ff7a6b;
+      --warn: #f0b35a; --check-a: #2a3037; --check-b: #22272d;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+         font: 14px/1.4 system-ui, -apple-system, Segoe UI, sans-serif; }
+  header { position: sticky; top: 0; z-index: 2; background: var(--panel);
+           border-bottom: 1px solid var(--line); padding: 10px 16px;
+           display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; }
+  header h1 { font-size: 16px; margin: 0 8px 0 0; }
+  label { display: flex; gap: 6px; align-items: center; color: var(--muted); }
+  select, input, button { font: inherit; color: var(--text); background: var(--bg);
+                          border: 1px solid var(--line); border-radius: 6px; padding: 4px 8px; }
+  button { cursor: pointer; }
+  button:disabled { opacity: 0.4; cursor: default; }
+  #url { width: 28em; max-width: 100%; }
+  #counts { color: var(--muted); }
+  main { padding: 16px; display: grid; gap: 14px; }
+  .filling { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 12px; }
+  .filling h2 { font-size: 15px; margin: 0 0 2px; }
+  .words { color: var(--muted); font-family: ui-monospace, monospace; font-size: 12px; margin-bottom: 10px; }
+  .variants { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 10px; }
+  .variant { border: 2px solid var(--line); border-radius: 8px; padding: 8px; outline: none; }
+  .variant.focused { border-color: var(--accent); }
+  .variant.approved { border-color: var(--ok); }
+  .variant.rejected { border-color: var(--bad); }
+  .variant.unavailable { opacity: 0.6; }
+  .frames { display: flex; gap: 4px; flex-wrap: wrap; }
+  .frame { position: relative; width: 120px; height: 120px; border-radius: 4px; overflow: hidden;
+           background: repeating-conic-gradient(var(--check-a) 0 25%, var(--check-b) 0 50%) 0 0 / 16px 16px; }
+  .animated .frame { width: 76px; height: 76px; }
+  .frame img { width: 100%; height: 100%; object-fit: contain; image-rendering: pixelated; display: block; }
+  .frame .name { position: absolute; left: 2px; bottom: 2px; font-size: 10px; padding: 0 3px;
+                 background: rgba(0,0,0,0.55); color: #fff; border-radius: 3px; }
+  .frame .missing { display: grid; place-items: center; height: 100%; color: var(--muted); font-size: 12px; }
+  .meta { display: flex; gap: 6px; flex-wrap: wrap; margin: 8px 0 6px; font-size: 12px; }
+  .badge { border: 1px solid var(--line); border-radius: 999px; padding: 0 8px; }
+  .badge.pass, .badge.approved { color: var(--ok); border-color: var(--ok); }
+  .badge.flagged, .badge.rejected, .badge.abandoned { color: var(--bad); border-color: var(--bad); }
+  .badge.pending, .badge.error, .badge.stale { color: var(--warn); border-color: var(--warn); }
+  .actions { display: flex; gap: 6px; align-items: center; }
+  .actions input { flex: 1; min-width: 0; }
+  .approve { border-color: var(--ok); color: var(--ok); }
+  .reject { border-color: var(--bad); color: var(--bad); }
+  details { margin-top: 6px; color: var(--muted); font-size: 12px; }
+  pre { white-space: pre-wrap; margin: 4px 0 0; }
+  footer { padding: 0 16px 24px; display: flex; gap: 8px; align-items: center; }
+  .hint { color: var(--muted); font-size: 12px; }
+  @media (max-width: 600px) { header { position: static; } #url { width: 100%; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>Image review</h1>
+  <label>Source
+    <select id="source"></select>
+  </label>
+  <input id="url" aria-label="Base URL" spellcheck="false">
+  <label>Sentence <select id="sentence"></select></label>
+  <label>Show
+    <select id="status">
+      <option value="all">all</option>
+      <option value="unreviewed">unreviewed</option>
+      <option value="approved">approved</option>
+      <option value="rejected">rejected</option>
+      <option value="attention">flagged, pending or error</option>
+      <option value="missing">not drawn locally</option>
+    </select>
+  </label>
+  <label>Words <input id="words" placeholder="e.g. dragon" spellcheck="false"></label>
+  <span id="counts"></span>
+</header>
+<main id="list"></main>
+<footer>
+  <button id="prev">Previous</button>
+  <span id="page"></span>
+  <button id="next">Next</button>
+  <span class="hint">Keys: j/k move, a approve, r reject, u clear, n/p page.</span>
+</footer>
+<script>
+const PAGE_SIZE = 20;
+const state = {config: null, jobs: [], shown: [], page: 0, focus: 0};
+const $ = id => document.getElementById(id);
+
+function remember(key, value) {
+  try { localStorage.setItem('review.' + key, value); } catch (e) {}
+}
+function recall(key) {
+  try { return localStorage.getItem('review.' + key); } catch (e) { return null; }
+}
+
+async function init() {
+  state.config = await (await fetch('/api/config')).json();
+  for (const name of Object.keys(state.config.sources)) {
+    $('source').add(new Option(name, name));
+  }
+  $('source').add(new Option('custom', 'custom'));
+  for (const id of state.config.sentences) {
+    $('sentence').add(new Option(id, id));
+  }
+  $('source').value = recall('source') || 'local';
+  $('url').value = recall('url') || '';
+  $('sentence').value = recall('sentence') || state.config.sentences[0];
+  syncUrl();
+  $('source').onchange = () => { remember('source', $('source').value); syncUrl(); render(); };
+  $('url').onchange = () => { remember('url', $('url').value); render(); };
+  $('sentence').onchange = () => { remember('sentence', $('sentence').value); load(); };
+  $('status').onchange = () => { state.page = 0; filter(); };
+  $('words').oninput = () => { state.page = 0; filter(); };
+  $('prev').onclick = () => turn(-1);
+  $('next').onclick = () => turn(1);
+  document.addEventListener('keydown', onKey);
+  load();
+}
+
+function syncUrl() {
+  const source = $('source').value;
+  $('url').disabled = source !== 'custom';
+  if (source !== 'custom') $('url').value = state.config.sources[source];
+}
+
+function baseUrl() {
+  const url = $('url').value.trim();
+  return url.endsWith('/') ? url : url + '/';
+}
+
+async function load() {
+  const sentence = $('sentence').value;
+  const jobs = await (await fetch('/api/jobs?sentence=' + encodeURIComponent(sentence))).json();
+  // A slower answer for a sentence no longer chosen must not replace the
+  // current one.
+  if (sentence !== $('sentence').value) return;
+  state.jobs = jobs;
+  state.page = 0;
+  filter();
+}
+
+function matches(job) {
+  const words = $('words').value.trim().toLowerCase();
+  if (words && !words.split(/\s+/).every(w => job.wordIds.some(id => id.includes(w)) || job.prompt.toLowerCase().includes(w))) {
+    return false;
+  }
+  const status = $('status').value;
+  const v = job.variants;
+  switch (status) {
+    case 'unreviewed': return v.some(x => x.local && !(x.review && x.review.current));
+    case 'approved': return v.some(x => x.review && x.review.verdict === 'approved');
+    case 'rejected': return v.some(x => x.review && x.review.verdict === 'rejected');
+    case 'attention': return v.some(x => x.local && x.moderation !== 'pass');
+    case 'missing': return v.some(x => !x.local);
+    default: return true;
+  }
+}
+
+function filter() {
+  state.shown = state.jobs.filter(matches);
+  state.focus = 0;
+  render();
+}
+
+function turn(delta) {
+  const pages = Math.max(1, Math.ceil(state.shown.length / PAGE_SIZE));
+  state.page = Math.min(pages - 1, Math.max(0, state.page + delta));
+  state.focus = 0;
+  render();
+  window.scrollTo(0, 0);
+}
+
+function imageUrl(job, file) {
+  return baseUrl() + state.config.version + '/' + job.sentenceId + '/' +
+    job.wordIds.map(encodeURIComponent).join('/') + '/' + job.style + '/' + file;
+}
+
+function badge(text, kind) {
+  const span = document.createElement('span');
+  span.className = 'badge ' + (kind || text);
+  span.textContent = text;
+  return span;
+}
+
+function variantCard(job, v, index) {
+  const card = document.createElement('div');
+  card.className = 'variant' + (job.animated ? ' animated' : '');
+  if (v.review) card.classList.add(v.review.verdict);
+  card.tabIndex = -1;
+  card.dataset.index = index;
+  card.onclick = () => { state.focus = index; markFocus(); };
+
+  const approve = Object.assign(document.createElement('button'), {className: 'approve', textContent: 'Approve'});
+  const reject = Object.assign(document.createElement('button'), {className: 'reject', textContent: 'Reject'});
+
+  const frames = document.createElement('div');
+  frames.className = 'frames';
+  for (const name of job.frames) {
+    const box = document.createElement('div');
+    box.className = 'frame';
+    const img = document.createElement('img');
+    img.loading = 'lazy';
+    img.alt = job.prompt + ', ' + name;
+    img.src = imageUrl(job, v.files[name]);
+    img.onerror = () => {
+      box.replaceChildren(Object.assign(document.createElement('div'), {className: 'missing', textContent: 'missing'}));
+      // A picture that is not there cannot be judged.
+      card.classList.add('unavailable');
+      approve.disabled = true;
+      reject.disabled = true;
+    };
+    box.append(img);
+    if (job.animated) box.append(Object.assign(document.createElement('span'), {className: 'name', textContent: name}));
+    frames.append(box);
+  }
+
+  const meta = document.createElement('div');
+  meta.className = 'meta';
+  meta.append(badge(String(v.variant).padStart(2, '0'), 'plain'));
+  if (!v.local) meta.append(badge('not local', 'pending'));
+  meta.append(badge(v.moderation));
+  if (v.review) {
+    meta.append(badge(v.review.verdict));
+    if (!v.review.current) meta.append(badge('review is of an earlier drawing', 'stale'));
+  }
+  if (v.redraws) meta.append(badge('redrawn ' + v.redraws + 'x', 'pending'));
+
+  const actions = document.createElement('div');
+  actions.className = 'actions';
+  const note = Object.assign(document.createElement('input'), {placeholder: 'note', value: (v.review && v.review.note) || ''});
+  note.setAttribute('aria-label', 'Review note');
+  const clear = Object.assign(document.createElement('button'), {textContent: 'Clear'});
+  approve.onclick = () => review(job, v, 'approved', note.value);
+  reject.onclick = () => review(job, v, 'rejected', note.value);
+  clear.onclick = () => review(job, v, null, '');
+  actions.append(approve, reject, clear, note);
+
+  const details = document.createElement('details');
+  details.append(Object.assign(document.createElement('summary'), {textContent: 'checks and drawing'}));
+  details.append(Object.assign(document.createElement('pre'), {textContent: JSON.stringify(
+    {provider: v.provider, model: v.model, seed: v.seed, promptCheck: v.promptCheck, checks: v.checks}, null, 1)}));
+
+  card.append(frames, meta, actions, details);
+  card.reviewWith = verdict => {
+    if (verdict && card.classList.contains('unavailable')) return;
+    review(job, v, verdict, note.value);
+  };
+  return card;
+}
+
+async function review(job, v, verdict, note) {
+  const response = await fetch('/api/review', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({sentenceId: job.sentenceId, wordIds: job.wordIds, style: job.style,
+                          variant: v.variant, verdict, note, source: $('source').value})
+  });
+  if (!response.ok) {
+    alert('Could not save the review: ' + (await response.text()));
+    return;
+  }
+  Object.assign(v, await response.json());
+  render();
+}
+
+function render() {
+  const pages = Math.max(1, Math.ceil(state.shown.length / PAGE_SIZE));
+  const start = state.page * PAGE_SIZE;
+  const list = $('list');
+  list.replaceChildren();
+  let index = 0;
+  for (const job of state.shown.slice(start, start + PAGE_SIZE)) {
+    const section = document.createElement('section');
+    section.className = 'filling';
+    section.append(Object.assign(document.createElement('h2'), {textContent: job.prompt}));
+    section.append(Object.assign(document.createElement('div'), {className: 'words', textContent: job.folder}));
+    const row = document.createElement('div');
+    row.className = 'variants';
+    for (const v of job.variants) row.append(variantCard(job, v, index++));
+    section.append(row);
+    list.append(section);
+  }
+  const reviewed = state.jobs.reduce((n, j) => n + j.variants.filter(v => v.review && v.review.current).length, 0);
+  const total = state.jobs.reduce((n, j) => n + j.variants.filter(v => v.local).length, 0);
+  $('counts').textContent = state.shown.length + ' of ' + state.jobs.length + ' fillings; ' +
+    reviewed + ' of ' + total + ' local variants reviewed';
+  $('page').textContent = 'page ' + (state.page + 1) + ' of ' + pages;
+  $('prev').disabled = state.page === 0;
+  $('next').disabled = state.page >= pages - 1;
+  markFocus();
+}
+
+function cards() { return [...document.querySelectorAll('.variant')]; }
+
+function markFocus() {
+  const all = cards();
+  all.forEach((card, i) => card.classList.toggle('focused', i === state.focus));
+  if (all[state.focus]) all[state.focus].focus({preventScroll: true});
+}
+
+function onKey(event) {
+  if (event.target.tagName === 'INPUT' || event.target.tagName === 'SELECT') return;
+  const all = cards();
+  const card = all[state.focus];
+  switch (event.key) {
+    case 'j': state.focus = Math.min(all.length - 1, state.focus + 1); break;
+    case 'k': state.focus = Math.max(0, state.focus - 1); break;
+    case 'a': if (card) card.reviewWith('approved'); return;
+    case 'r': if (card) card.reviewWith('rejected'); return;
+    case 'u': if (card) card.reviewWith(null); return;
+    case 'n': turn(1); return;
+    case 'p': turn(-1); return;
+    default: return;
+  }
+  markFocus();
+  if (all[state.focus]) all[state.focus].scrollIntoView({block: 'nearest'});
+}
+
+init();
+</script>
+</body>
+</html>

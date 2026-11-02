@@ -1,220 +1,167 @@
 # Hour of AI 2026 Image Generation Scripts
 
-These scripts generate images for the Hour of AI 2026 Sprite Lab image
-levels (the `hoai2026-dev` progression).
+These scripts pre-generate the images for the Hour of AI 2026 Sprite Lab
+image levels, for the lab's image cache (`imageCache.ts` in
+`apps/src/p5lab/spritelab/lab2/ai/images/`).
 
-## Quick overview
+A student describes an image by filling a sentence with words: "A
+[adjective] [creature] wearing a [clothing]". A level can draw its picture
+live, or read it from a tree of pictures drawn in advance. These scripts
+draw that tree: every way each sentence can be filled, three variants each,
+each one moderated, reviewed by a person, and published to the
+`cdo-curriculum` bucket.
 
-An image level lets a student describe an image by choosing words, never by
-typing a prompt. The lab has two UIs for that, and this script covers both:
+The flow is:
 
-- **explore** (`source` `explore`) is the word-chip sentence of the
-  hoai2026-dev image levels, the ones with `level_mode.imageUi` set to
-  `explore`. Its sentences and words live in
-  `apps/static/spritelab_lab2/exploreSentences.json`, and a level picks one
-  by id with `level_mode.sentence`. A slot that is not `required` can be
-  left empty, and the phrase around it then drops out of the prompt, so an
-  empty choice is one of its combinations.
-- **adlib** (`source` `adlib`) is the image dialog's sentence with a
-  dropdown per slot, from
-  `apps/static/spritelab_lab2/imageAdlibManifest.json`, one entry per
-  `<kind>-<set>`. Free play uses the `expanded` sets; any level whose
-  `imageUi` is not `explore` uses the rest. Every slot is filled.
+1. `generate_images` draws and moderates everything not yet drawn.
+2. `review_images` serves a page for approving or rejecting each variant.
+3. `generate_images` again draws a fresh variant for each one review rejected.
+4. `generate_images --no-dry-run` publishes to the devel bucket, where the review page can also read it.
+5. `generate_images --no-dry-run --production` publishes the approved variants for live use.
 
-The script generates an image for every combination of choices, in each
-style, so the variety can be reviewed and the results cached for playtests
-and for when the AI service is down or costly.
+## The words
 
-The general flow is to:
+The words come from `sentences.json` beside these scripts, a pinned copy of
+the lab's `apps/static/spritelab_lab2/sentences.json`. A cached picture's
+path is its word ids, so the words the tree was drawn from must not change
+under it. The copy here is taken from code-dot-org PR 75426, whose word ids
+the published paths must match. While it differs from the lab's file,
+every run says so.
 
-1. See the words on offer with `--list-words`, and the size of what you are about to generate with `--list-ids`.
-2. Generate the content, narrowed with `--source`, `--id`, `--filter`, `--style`, and `--variants`.
-3. Check the output in the `image_output` path relative to the script.
-4. Upload it via the `--no-dry-run` flag and then carefully, with appropriate AWS credentials, the `--production` flag.
+To change the words, edit `sentences.json` here and the lab's copy
+together. Then bump `CACHE_VERSION` in `constants.rb` and
+`IMAGE_CACHE_VERSION` in `imageCache.ts`, so no browser mixes pictures of
+the old words with the new.
 
-## Prompts
+Only four sentences are reachable: the lab picks one by what it is making
+(`sentenceFor` in `sentences.ts`), so `character`, `object`, `place` and
+`block` are drawn, and any other sentence in the file is ignored. Every
+picture is pixel art. A character is a five-picture set: a base image, then
+four poses (idling, walking, jumping, landing), each drawn with the base as
+a reference, in the stance the creature's `bodyPlan` names.
 
-The prompts are not written here. `dump_prompts.ts` imports the prompt
-builders the lab itself uses (`imagePrompts.ts` and `characterSetPrompts.ts`
-in `apps/src/p5lab/spritelab/lab2/ai/images/`) and prints one job per line.
-`generate_images` runs it through `npx tsx` and caches its output as
-`prompts.jsonl`. This needs Node 18 or newer (`nvm use 22`).
-
-A job is one image, or, for a character sprite, one animated set: a base
-image, then four poses (idling, walking, jumping, landing) that each send
-the base image back as a reference, just as the lab does. A set costs five
-requests. The explore layout animates every character, so an explore
-character job is always a set; the image dialog offers it as a checkbox, so
-an adlib character is dumped both ways. The stance and poses follow the
-creature choice's `bodyPlan` in the manifest (upright, quadruped or bird;
-upright when absent), as the lab's do.
-
-Those modules must stay free of `@cdo/...` imports and browser APIs, or
-`dump_prompts.ts` stops working.
-
-## Providers and transparency
-
-The lab generates with Gemini, which cannot emit an alpha channel, so its
-prompts ask sprites and blocks for a flat key color that the lab erases
-afterwards. OpenAI's image models can return a transparent background
-directly (`background: "transparent"`), so by default this script sends
-sprites, objects, blocks and animated sets that parameter, with prompts
-asking for a transparent background in place of the key color. Each job
-line from `dump_prompts.ts` carries both versions of each prompt
-(`prompt` and `transparentPrompt`). Backgrounds fill their frame and are
-always opaque.
-
-`--no-transparent` sends the lab's key-color prompts instead, and
-`--provider gemini` forces that, saying so, since Gemini cannot return an
-alpha channel. A job made with the other setting, per its metadata file, is
-regenerated rather than skipped, so switching provider regenerates rather
-than mixing the two.
-
-## Usage
-
-`generate_images` asks one of two image services, chosen with
-`--provider`:
-
-| | `openai` (default) | `gemini` |
-|---|---|---|
-| model | `gpt-image-1` | `gemini-3.1-flash-image`, from `AI_CHAT_MODEL_IDS` in `lib/cdo/shared_constants.rb`, so it tracks the lab's |
-| config key | `openai_student_learning_api_key` | `google_gemini_ai_tutor_api_key` |
-| transparent background | yes, asked for directly | no; gets the key-color prompts instead |
-| seed | not accepted, so none is recorded | recorded, and a set offsets it per frame as the lab does |
-| temperature | not accepted | `--temperature`, default 1.0, as the explore layout sends |
-
-Gemini is what the lab itself generates with, through the AI Gateway, so it
-is the closer match to a live image; OpenAI's transparency saves the
-background removal. Override either default with `--model` and `--key`.
-
-To see every sentence and the words each slot offers:
+To see the words, and the size of a run:
 
 ```
 ./bin/oneoff/hoai_2026/imagegen/generate_images --list-words
-./bin/oneoff/hoai_2026/imagegen/generate_images --list-words -S explore -i character
+./bin/oneoff/hoai_2026/imagegen/generate_images --list-sentences
 ```
 
-It prints each slot's id, the label the student sees when it differs, and
-every word id, with the word's text when that differs too. An optional slot
-lists `none` first: that is the empty choice, and it is a combination like
-any other.
+All of it is 568 fillings, 1,704 variants and 7,080 images. The character
+sentence is 6,720 of those images.
 
-To see how many jobs and images each sentence would produce:
+## Prompts
 
-```
-./bin/oneoff/hoai_2026/imagegen/generate_images --list-ids
-./bin/oneoff/hoai_2026/imagegen/generate_images --list-ids --produce-animations
-```
+The prompts are not written here. `dump_prompts.ts` imports the lab's prompt
+builders (`imagePrompts.ts` and `characterSetPrompts.ts`) and prints one job
+per filled sentence; the scripts run it through `npx tsx`, which needs Node
+18 or newer (`nvm use 22`). Its mirrors of `promptText` and
+`sentenceWordIds` were checked against the lab's own on every filling.
 
-One image per combination of everything is 42,488 images, animated sets
-included; at the default of three variants, three times that. Start with
-what the hoai2026-dev levels actually show, which is 3,148 jobs and 10,316
-images at one variant:
+Those modules, and aichat's `safetyPrompts.ts`, must stay free of `@cdo/...`
+imports and browser APIs, or `dump_prompts.ts` stops working.
 
-```
-./bin/oneoff/hoai_2026/imagegen/generate_images -v 1 -S explore --produce-animations \
-  -i character -i friend -i place-time -i place-detail -i block -i treasure
-```
-
-For a first look at character variety, sweep one slot and pin the rest. One
-character per creature, pixel style, is 8 sets of 5 pictures:
+## Drawing
 
 ```
-./bin/oneoff/hoai_2026/imagegen/generate_images -S explore -i character \
-  --produce-animations --no-produce-singles -s pixel -v 1 \
-  -c adjective=brave -c clothing=none
+./bin/oneoff/hoai_2026/imagegen/generate_images
 ```
 
-To try the pipeline on a handful of jobs first:
+draws and moderates every variant not yet drawn. Narrow it with
+`-i/--id SENTENCE`, `-f/--filter TEXT`, `-v/--variants N` and `--limit N`.
+`-c/--choice SLOT=WORD` pins a slot (`_` for an empty optional slot), so a
+small batch can sweep one slot and hold the rest. One character per
+creature is 8 sets of 5 pictures:
 
 ```
-./bin/oneoff/hoai_2026/imagegen/generate_images -a sprite-simple -s pixel -v 1 --limit 5
+./bin/oneoff/hoai_2026/imagegen/generate_images -i character -v 1 \
+  -c adjective=brave -c clothing=_
 ```
 
-To write each job's metadata file, prompts included, without sending
-anything to the AI service:
+A run skips what is already drawn and checked, so it can be stopped and run
+again. Failed requests are listed at the end and drawn on the next run.
+
+The images are Gemini's, `gemini-3.1-flash-image` through
+`google_gemini_ai_tutor_api_key`, as the lab draws a live picture.
+`--provider openai` draws with `gpt-image-1` instead, and `--model` and
+`--key` override either. The lab keys a cached set on the colour its prompt
+names, so the tree is drawn on that colour; OpenAI's `--transparent` is for
+experiments only.
+
+## Moderation
+
+The lab runs no safety check on a cached picture, so these are the only ones
+it gets. They mirror the lab's live checks (`imageSafety.ts`):
+
+- **Azure AI Content Safety** checks every frame, always. A frame is flagged
+  at severity 2 or above in any category, the lab's thresholds for a
+  generated image. It needs the `azure_ai_content_safety_key` and
+  `azure_ai_content_safety_endpoint` config.
+- **`--judge`** adds aichat's LLM judges on `gemini-2.5-flash`, with the
+  lab's own instructions: one on every frame, and one on each distinct
+  prompt before anything is drawn. A prompt it refuses is never drawn or
+  published, on any later run too; verdicts are kept in
+  `prompt_verdicts.json`.
+
+A flagged variant is redrawn with a new seed, up to `MAX_REDRAWS` times, then
+left out; `--redraw-abandoned` tries it again. A check whose service fails
+is retried on the next run. Nothing without a passing verdict is published.
+`--no-moderation` skips Azure for an experiment, and a later run without it
+checks what was skipped.
+
+## Review
 
 ```
-./bin/oneoff/hoai_2026/imagegen/generate_images -a sprite-simple --just-save-prompt
+./bin/oneoff/hoai_2026/imagegen/review_images
 ```
 
-Unlike the music script, a saved prompt does not block a later run from
-generating: a job is skipped only when all of its images exist. Remove
-images from `image_output` to regenerate them.
+serves a page at http://localhost:4567 (localhost only) listing every
+filling with its variants side by side, its moderation verdicts, and
+Approve and Reject buttons. It reads pictures from the local tree, from the
+devel bucket (`cdo-curriculum-devel.s3.amazonaws.com`), from production
+(`curriculum.code.org`, CloudFront in front of `cdo-curriculum`), or any
+other copy of the tree. Keys: `j`/`k` move, `a` approve, `r` reject, `u`
+clear, `n`/`p` page.
 
-Failed requests (a moderation refusal, say) are listed at the end of the
-run and left ungenerated; running the script again retries them. Timeouts,
-rate limits, and server errors are retried in place.
+Verdicts are written to each variant's record. A rejected variant is drawn
+again on the next run, and its old frames move to the attic. An approval
+belongs to the drawing it was given to: a redrawn variant needs reviewing
+again, and the page says when a verdict is of an earlier drawing.
 
-### Filtering
+## Publishing
 
-- `-S`/`--source SOURCE` restricts to one UI's choices, `explore` or `adlib` (repeatable).
-- `-c`/`--choice SLOT=WORD` pins a slot to one word, `none` for an empty optional slot (repeatable). Pin every slot but one to sweep that one; `--limit` alone takes whole combinations in enumeration order, which varies the last slot and repeats the first.
-- `-i`/`--id ID` restricts to the given sentence or adlib ids (repeatable).
-- `-f`/`--filter TEXT` keeps ids containing the text, e.g. `--filter=-simple`.
-- `-s`/`--style STYLE` restricts to `pixel` or `smooth` (repeatable).
-- `--produce-animations` adds animated character sets; `--no-produce-singles` leaves only those. An explore character is animated only, so it needs this flag; the script says so when it skips one.
-- `-v`/`--variants N` sets how many images to make per combo. Each live generation is a fresh roll, so one per combo understates the variety.
+`--dry-run` is the default: a run reports what it would publish, and why
+anything is held back, and uploads nothing. `--no-dry-run` uploads to
+`cdo-curriculum-devel`; adding `--production` uploads to `cdo-curriculum`
+and publishes only variants approved in review (`--unreviewed` overrides).
+`--just-upload` skips drawing.
 
-## Output
+A variant is published whole or not at all: the lab finds a variant by its
+first frame, and a set missing a pose after that is an error to it. A
+filling with no publishable variant is an error to the lab too, so a
+production upload with such gaps is refused unless `--allow-gaps`.
 
-Files are the raw model output, before the lab's background removal,
-cropping, and pixel-grid normalization. The lab is meant to fetch a cached
-image and run that same pipeline on it, so a cached image ends up like a
-live one.
+Two things an upload does not do: it never deletes a published file, so a
+variant rejected after publishing stays published until it is redrawn and
+uploaded again; and CloudFront may serve a replaced production file for a
+while after the upload.
 
-Paths are built from the choice ids in sentence slot order, which never
-contain dots; an empty optional slot is `none`:
+## Files
 
 ```
-<source>/<id>/<style>/<choice ids>.<variant>.<png|jpg>
-<source>/<id>/<style>/<choice ids>.<variant>.json
-<source>/<id>/<style>/animated/<choice ids>.<variant>.<pose>.<png|jpg>
-<source>/<id>/<style>/animated/<choice ids>.<variant>.json
+image_output/v1/<sentence>/<word>/<word>/pixel/NN.png        the published tree, PNG only
+image_output/v1/<sentence>/<word>/<word>/pixel/NN-base.png   a set's frames: base, idling, ...
+image_records/v1/<sentence>/<word>/<word>/pixel/NN.json      prompts, seed, verdicts, review
+image_attic/...                                              every image a redraw replaced
 ```
 
-The extension is the format the provider actually returned, read from the
-bytes rather than from the media type the response declared, because the two
-have disagreed. Gemini returns a JPEG as readily as a PNG; the file is
-stored as it arrived rather than re-encoded, since the lab reads either.
-Regenerating a frame that comes back in the other format removes the file it
-replaces, so the two never sit side by side.
+Words are in the order the sentence reads them, and `_` is an optional slot
+left empty: `character/brave/dragon/_/pixel/00-base.png`. The published tree
+holds nothing else; the lab derives everything a record holds from the level
+and the prompt. Gemini returns a JPEG as readily as a PNG, and it is
+converted on arrival: the lab's live path decodes it onto a canvas that
+encodes PNG, so the pixels are the same.
 
-For example, `adlib/sprite-simple/pixel/brave.robot.00.png` and
-`explore/character/pixel/animated/none.blob.cape.00.base.png`. The `.json` file
-records the prompts sent, the model, whether the images are transparent,
-and the frame files. A Gemini image also records its
-seed, per job and per frame, so it can be asked for again; the OpenAI image
-API takes no seed, so an OpenAI image records none.
-
-### Uploading to S3
-
-The `--dry-run` option is on by default. This means, it looks at uploading
-but does not actually try to copy to S3. Specify `--no-dry-run` to enable
-the uploading to S3, under `media/spritelab/generate/images/`.
-
-By default it will go to the non-production bucket `cdo-curriculum-devel`.
-Specify `--production` to ensure it goes to the live `cdo-curriculum`
-bucket. There's no warning and this **WILL** overwrite live content.
-
-A job uploads whole or not at all: an animated set missing a pose is not
-uploaded.
-
-If you only want to upload certain files:
-
-1. Ensure only those files exist in the `image_output` directory.
-2. Run with `--just-upload` to not generate anything new.
-3. Run with `--no-dry-run` and see if the proper content gets to the devel bucket.
-4. Run with `--no-dry-run --production` when you are certain.
-
-### Validating
-
-You can run the `validate_images` script to check that every image in
-`image_output` is square, really is the format its name claims, and, where
-its metadata file says it was made transparent, has an alpha channel. A transparent sprite must also have
-four transparent corners; a block may fill its frame, so it is not held to
-that. The same check runs before uploading.
-
-To automatically delete the offending files, specify the `--delete` flag.
-After doing this, the `generate_images` script can be invoked another time
-to generate any missing content.
+Nothing here deletes an image. `validate_images` checks that every frame is
+a square PNG with a record, and `--attic` moves an invalid one aside, so the
+next run draws it again.
