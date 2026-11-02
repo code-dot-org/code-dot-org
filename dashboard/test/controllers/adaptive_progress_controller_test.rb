@@ -17,6 +17,7 @@ class AdaptiveProgressControllerTest < ActionController::TestCase
           {'id' => 'quiz', 'kind' => 'questions', 'questions' => [
             {'id' => 1, 'type' => 'MultipleChoiceQuestion', 'choices' => [{'id' => 'a'}, {'id' => 'b'}], 'correctChoiceId' => 'b'},
             {'id' => 2, 'type' => 'MultipleChoiceQuestion', 'choices' => [{'id' => 'a'}, {'id' => 'b'}]},
+            {'id' => 3, 'type' => 'MultipleChoiceQuestion', 'choices' => [{'id' => 'a'}, {'id' => 'b'}], 'allowOther' => {}},
             {'id' => 'why', 'type' => 'freeResponse', 'text' => 'Why?'},
             {'id' => 'how', 'type' => 'scale', 'text' => 'How much?', 'scale' => {'min' => 1, 'max' => 5}},
           ]},
@@ -122,6 +123,14 @@ class AdaptiveProgressControllerTest < ActionController::TestCase
     assert entry['submitted']
   end
 
+  test "a typed answer is stored with its text where the question allows one" do
+    put_step 'quiz', answers: {questionId: 3, list: [{answerId: 'other', text: 'Neither, really', isCorrect: true}]}
+    put_step 'quiz', answers: {questionId: 2, list: [{answerId: 'a', text: 'dropped'}]}
+
+    assert_equal [{'answerId' => 'other', 'text' => 'Neither, really'}], steps['quiz']['answers']['3']
+    assert_equal [{'answerId' => 'a'}], steps['quiz']['answers']['2']
+  end
+
   test "free response answers are stored as text without correctness" do
     put_step 'quiz', answers: {questionId: 'why', list: [{text: 'Because.', isCorrect: true}]}
 
@@ -138,6 +147,9 @@ class AdaptiveProgressControllerTest < ActionController::TestCase
       ['quiz', {answers: {questionId: 'how', list: [{answerId: '3'}]}}],
       ['quiz', {answers: {questionId: 1, list: [{answerId: 'z'}]}}],
       ['quiz', {answers: {questionId: 1, list: [{text: 'a'}]}}],
+      ['quiz', {answers: {questionId: 2, list: [{answerId: 'other', text: 'no typing here'}]}}],
+      ['quiz', {answers: {questionId: 3, list: [{answerId: 'other'}]}}],
+      ['quiz', {answers: {questionId: 3, list: [{answerId: 'other', text: 'x' * 10_001}]}}],
       ['quiz', {answers: {questionId: 'why', list: [{text: 'x' * 10_001}]}}],
       ['read', {timeSinceLastSave: 'soon'}],
       ['try', {}],

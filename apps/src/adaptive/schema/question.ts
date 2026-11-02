@@ -29,6 +29,9 @@ export const measuresSchema = z.union([
 /** What a question's answer says about one skill. */
 export type Measures = z.infer<typeof measuresSchema>;
 
+/** The answer id of a typed answer to a multiple choice question that allows one. */
+export const OTHER_CHOICE_ID = 'other';
+
 /** A multiple choice question that does not rely on Quiz BE (but looks like a Quiz).
  * This should be used for diagnostics and surveys and Quiz backed levels (when implemented)
  * should be used for evaluation.
@@ -37,6 +40,7 @@ export const multipleChoiceDiagnosticQuestionSchema = subsetOf<
   Omit<QuizQuestionSummary, 'page'> & {
     correctChoiceId?: string;
     measures?: Measures;
+    allowOther?: {placeholder?: string};
   }
 >()(
   z.strictObject({
@@ -53,6 +57,13 @@ export const multipleChoiceDiagnosticQuestionSchema = subsetOf<
      */
     correctChoiceId: z.string().min(1).optional(),
     measures: measuresSchema.optional(),
+    /**
+     * Offers a typed answer beside the choices, saved under the answer id
+     * OTHER_CHOICE_ID with its text.
+     */
+    allowOther: z
+      .strictObject({placeholder: z.string().min(1).optional()})
+      .optional(),
   })
 );
 

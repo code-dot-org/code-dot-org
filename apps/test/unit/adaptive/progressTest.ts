@@ -165,6 +165,7 @@ describe('visibleSteps', () => {
           {id: 'a', text: 'A'},
           {id: 'b', text: 'B'},
         ],
+        allowOther: {},
       },
     ],
   };
@@ -176,9 +177,10 @@ describe('visibleSteps', () => {
     ask,
     branch('if-a', 'a'),
     branch('if-b', 'b'),
+    branch('if-other', 'other'),
     panels('after'),
   ]);
-  const answered = (...answers: {answerId: string}[]) => ({
+  const answered = (...answers: {answerId: string; text?: string}[]) => ({
     steps: {ask: {timeSpent: 0, answers: {1: answers}}},
   });
   const ids = (progress: Progress) => visibleSteps(cp, progress).map(s => s.id);
@@ -187,11 +189,16 @@ describe('visibleSteps', () => {
     expect(ids(EMPTY_PROGRESS)).toEqual(['ask', 'after']);
   });
 
-  it('shows the branch of the latest answer', () => {
+  it('shows the branch of the latest answer, typed answers included', () => {
     expect(ids(answered({answerId: 'a'}))).toEqual(['ask', 'if-a', 'after']);
     expect(ids(answered({answerId: 'a'}, {answerId: 'b'}))).toEqual([
       'ask',
       'if-b',
+      'after',
+    ]);
+    expect(ids(answered({answerId: 'other', text: 'C'}))).toEqual([
+      'ask',
+      'if-other',
       'after',
     ]);
   });
