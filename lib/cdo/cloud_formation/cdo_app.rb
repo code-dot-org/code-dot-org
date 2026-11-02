@@ -34,6 +34,8 @@ module Cdo::CloudFormation
     DOMAIN = 'cdn-code.org'
     SSH_KEY_NAME = 'server_access_key'.freeze
     S3_BUCKET = 'cdo-dist'.freeze
+    # S3 rejects bucket names over this length, and CloudFormation only reports it mid-create.
+    S3_BUCKET_NAME_MAX_LENGTH = 63
     BOOTSTRAP_CHEF = aws_dir('cloudformation/bootstrap_chef_stack.sh.erb')
 
     # number of seconds to configure as Time To Live for DNS record
@@ -70,8 +72,10 @@ module Cdo::CloudFormation
       options.domain        ||= DOMAIN
       options.console       ||= rack_env?(:production)
 
-      stack_name << "-#{branch}" if stack_name == 'adhoc'
+      stack_name_from_branch = stack_name == 'adhoc'
+      stack_name << "-#{branch}" if stack_name_from_branch
       raise "Stack name must not include 'dashboard'" if stack_name.include?('dashboard')
+      check_stack_name_length!(stack_name_from_branch)
 
       # Use alternate legacy EC2 instance resource name for standalone-adhoc stack.
       @daemon = rack_env?(:adhoc) && !frontends ?
@@ -126,6 +130,31 @@ To specify an alternate branch name, run `rake adhoc:start branch=BRANCH`."
     #   test-studio.code.org -> org.code.test-studio
     def s3_bucket_namespace
       studio_subdomain.split('.').reverse.join('.')
+    end
+
+    def user_content_bucket_name
+      "#{s3_bucket_namespace}.user-content"
+    end
+
+    # The stack name is embedded in the user-content bucket name, which is the
+    # longest name derived from it, so it bounds how long the stack name may be.
+    # Raises before any AWS call, since CloudFormation fails the create only
+    # after most of the stack's resources have been attempted.
+    def check_stack_name_length!(stack_name_from_branch = false)
+      bucket_name = user_content_bucket_name
+      excess = bucket_name.length - S3_BUCKET_NAME_MAX_LENGTH
+      return if excess <= 0
+      max_stack_name = stack_name.length - excess
+      message = "Stack name '#{stack_name}' is too long: S3 bucket name " \
+        "'#{bucket_name}' would be #{bucket_name.length} characters, but S3 allows at most " \
+        "#{S3_BUCKET_NAME_MAX_LENGTH}. Use a stack name of at most #{max_stack_name} characters."
+      if stack_name_from_branch
+        max_branch = max_stack_name - 6 # "adhoc-"
+        message += "\nThe default adhoc stack name is 'adhoc-<branch>', so a branch name longer than " \
+          "#{max_branch} characters needs an explicit shorter name, e.g.: " \
+          "rake adhoc:start STACK_NAME=adhoc-#{branch[0, max_branch].sub(/-+\z/, '')}"
+      end
+      raise ArgumentError, message
     end
 
     # Lookup ACM certificate for ELB and CloudFront SSL.

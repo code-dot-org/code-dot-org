@@ -173,11 +173,11 @@ Resources:
               - 's3:GetObject'
               - 's3:PutObject'
               - 's3:DeleteObject'
-            Resource: !Sub "arn:aws:s3:::<%=s3_bucket_namespace%>.user-content/*"
+            Resource: !Sub "arn:aws:s3:::<%=user_content_bucket_name%>/*"
           - Effect: Allow
             Action:
               - 's3:ListBucket'
-            Resource: !Sub "arn:aws:s3:::<%=s3_bucket_namespace%>.user-content"
+            Resource: !Sub "arn:aws:s3:::<%=user_content_bucket_name%>"
           # General s3 access.
           # TODO: Switch from `allow *` then `deny risky` to a proper least-privilege allow-list
           - Effect: Allow
