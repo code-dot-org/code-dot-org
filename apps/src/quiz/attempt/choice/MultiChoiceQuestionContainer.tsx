@@ -23,6 +23,16 @@ export interface MultiChoiceQuestionContainerProps {
   selectedChoiceStatus?: 'correct' | 'incorrect';
   headingRef?: React.Ref<HTMLHeadingElement>;
   disabled?: boolean;
+  /**
+   * A typed answer offered after the choices under its own id, picked by
+   * its radio or by typing.
+   */
+  other?: {
+    id: string;
+    placeholder?: string;
+    text: string;
+    onChangeText: (text: string) => void;
+  };
 }
 
 const MultiChoiceQuestionContainer: React.FunctionComponent<
@@ -35,6 +45,7 @@ const MultiChoiceQuestionContainer: React.FunctionComponent<
   selectedChoiceStatus,
   headingRef,
   disabled,
+  other,
 }) => (
   <AttemptCard
     label={questionLabel}
@@ -86,7 +97,36 @@ const MultiChoiceQuestionContainer: React.FunctionComponent<
           </RadioButton>
         );
       })}
+      {other && (
+        <RadioButton
+          name={`question-${question.id}`}
+          value={other.id}
+          checked={other.id === selectedChoiceId}
+          onChange={() => onSelectChoice(other.id)}
+          disabled={disabled}
+          className={classNames(
+            styles.option,
+            other.id === selectedChoiceId && styles.optionSelected
+          )}
+        >
+          <ChoiceLabel index={question.choices?.length ?? 0} text="Other" />
+        </RadioButton>
+      )}
     </div>
+    {other && (
+      <input
+        type="text"
+        className={styles.otherInput}
+        aria-label={other.placeholder ?? 'Your own answer'}
+        placeholder={other.placeholder}
+        value={other.text}
+        disabled={disabled}
+        onChange={e => {
+          other.onChangeText(e.target.value);
+          if (other.id !== selectedChoiceId) onSelectChoice(other.id);
+        }}
+      />
+    )}
   </AttemptCard>
 );
 

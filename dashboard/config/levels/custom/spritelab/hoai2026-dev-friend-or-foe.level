@@ -1,5 +1,10 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 64,
+  "created_at": "2026-10-30T09:28:03.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "properties": {
     "uses_lab2": "true",
     "block_pools": [
@@ -44,7 +49,7 @@
           }
         },
         {
-          "text": "In **World**, click a square on top of some blocks to put them there. Add more if you like.",
+          "text": "In **World**, click a square to place one or more.",
           "check": {
             "kind": "world",
             "role": "friend"
@@ -52,7 +57,7 @@
         }
       ]
     },
-    "long_instructions": "# Friend or foe?\nIn **Images**, click **New image** and make a friend or a foe. Then, in **World**, put them on top of some blocks. You can add as many as you like.",
+    "long_instructions": "# Friend or foe?\r\n\r\nMake another character to share your world with your player.",
     "header_label": "Friend or foe?",
     "callouts": [
       {
@@ -65,13 +70,34 @@
         }
       }
     ],
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "use_modal_function_editor": "false",
+    "disable_if_else_editing": "false",
+    "include_shared_functions": "false",
+    "free_play": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "validation_enabled": "false",
+    "hide_animation_mode": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "use_default_sprites": "false",
+    "mini_toolbox": "false",
+    "hide_pause_button": "false",
+    "enable_big_playspace": "false"
   },
-  "published": true,
-  "game_id": 64,
-  "created_at": "2026-10-28T00:00:00.000Z",
-  "level_num": "custom",
-  "user_id": 1
+  "audit_log": "[{\"changed_at\":\"2026-11-01 18:29:31 +0000\",\"changed\":[\"objectives\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-01 18:29:35 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </GamelabJr>

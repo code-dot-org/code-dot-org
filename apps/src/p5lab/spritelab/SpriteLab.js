@@ -86,6 +86,12 @@ export default class SpriteLab extends P5Lab {
     this.preview();
   }
 
+  onP5Setup() {
+    // p5.play's clock starts before asset preload; restart it with the program.
+    this.library.commands.resetTimer.call(this.library);
+    super.onP5Setup();
+  }
+
   onPause(isPaused) {
     const current = new Date().getTime();
     if (isPaused) {

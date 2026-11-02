@@ -242,6 +242,29 @@ describe('parsePathway', () => {
     expect(problemsOf(raw)).toHaveLength(1);
   });
 
+  it('accepts a markdown step with its own button label', () => {
+    const raw = served();
+    raw.checkpoints[0].steps.push({
+      id: 'card',
+      title: 'Card',
+      kind: 'markdown',
+      markdown: '## Welcome\n\nA note.',
+      continueLabel: 'Start',
+    });
+    expect(problemsOf(raw)).toEqual([]);
+    expect(parsePathway(raw).checkpoints[0].steps.at(-1)).toMatchObject({
+      kind: 'markdown',
+      continueLabel: 'Start',
+    });
+  });
+
+  it('accepts an icon on a skill', () => {
+    const raw = served();
+    raw.skills.css.icon = 'message-code';
+    expect(problemsOf(raw)).toEqual([]);
+    expect(parsePathway(raw).skills.css.icon).toBe('message-code');
+  });
+
   it('accepts a video step with resolved URLs', () => {
     const raw = served();
     const watch = raw.checkpoints[0].steps[2];
@@ -445,6 +468,85 @@ describe('findReferenceProblems', () => {
     expect(problemsOf(raw)).toEqual([
       "checkpoints: question id '1' is used more than once",
     ]);
+  });
+
+  it('accepts a typed answer on a question', () => {
+    const raw = served();
+    Object.assign(questionOf(raw), {
+      allowOther: {placeholder: 'Or type your own'},
+    });
+    expect(problemsOf(raw)).toEqual([]);
+  });
+
+  it("flags a choice that takes the typed answer's id", () => {
+    const raw = served();
+    const question = questionOf(raw);
+    if (question.type !== 'MultipleChoiceQuestion') throw new Error();
+    question.choices.push({id: 'other', text: 'Other'});
+    expect(problemsOf(raw)).toEqual([
+      "checkpoints.intro.steps.quiz.questions.0: choice id 'other' is reserved for a typed answer",
+    ]);
+  });
+
+  describe('showIf', () => {
+    // A survey question in the intro, followed by the step under test.
+    const branched = (
+      showIf: {stepId: string; questionId: number; choiceId: string},
+      allowOther = false
+    ): Raw => {
+      const raw = served();
+      const question = questionOf(raw);
+      if (question.type !== 'MultipleChoiceQuestion') throw new Error();
+      delete question.correctChoiceId;
+      if (allowOther) question.allowOther = {};
+      raw.checkpoints[0].steps.push({...panels('branch'), showIf});
+      return raw;
+    };
+    const where = 'checkpoints.intro.steps.branch.showIf';
+
+    it('accepts a condition on an earlier choice, or the typed answer where allowed', () => {
+      expect(
+        problemsOf(branched({stepId: 'quiz', questionId: 1, choiceId: 'b'}))
+      ).toEqual([]);
+      expect(
+        problemsOf(
+          branched({stepId: 'quiz', questionId: 1, choiceId: 'other'}, true)
+        )
+      ).toEqual([]);
+    });
+
+    it('flags a step that is not earlier in the checkpoint', () => {
+      expect(
+        problemsOf(
+          branched({stepId: 'css-intro', questionId: 1, choiceId: 'a'})
+        )
+      ).toEqual([
+        `${where}: 'css-intro' is not an earlier step in the checkpoint`,
+      ]);
+      expect(
+        problemsOf(branched({stepId: 'branch', questionId: 1, choiceId: 'a'}))
+      ).toEqual([
+        `${where}: 'branch' is not an earlier step in the checkpoint`,
+      ]);
+    });
+
+    it('flags a step with no questions and a question it does not have', () => {
+      expect(
+        problemsOf(branched({stepId: 'welcome', questionId: 1, choiceId: 'a'}))
+      ).toEqual([`${where}: 'welcome' is not a questions step`]);
+      expect(
+        problemsOf(branched({stepId: 'quiz', questionId: 7, choiceId: 'a'}))
+      ).toEqual([`${where}: 'quiz' has no multiple choice question 7`]);
+    });
+
+    it('flags a choice the question lacks, including a typed answer it does not allow', () => {
+      expect(
+        problemsOf(branched({stepId: 'quiz', questionId: 1, choiceId: 'z'}))
+      ).toEqual([`${where}: 'z' is not one of question 1's choices`]);
+      expect(
+        problemsOf(branched({stepId: 'quiz', questionId: 1, choiceId: 'other'}))
+      ).toEqual([`${where}: 'other' is not one of question 1's choices`]);
+    });
   });
 
   it('flags a choice id used twice in one question, once', () => {
@@ -651,6 +753,19 @@ describe('evidence fields', () => {
       `${where}.0.measures: a question with a correctChoiceId measures one evidenceLevel, not evidenceLevels by choice`,
       `${where}.1.measures: evidenceLevel needs a correctChoiceId; a survey question lists evidenceLevels by choice`,
     ]);
+  });
+
+  it('accepts an evidence level for the typed answer only where the question allows one', () => {
+    const raw = served();
+    const question = questionOf(raw);
+    if (question.type !== 'MultipleChoiceQuestion') throw new Error();
+    delete question.correctChoiceId;
+    question.measures = {skillId: 'prompting', evidenceLevels: {other: 1}};
+    expect(problemsOf(raw)).toEqual([
+      "checkpoints.intro.steps.quiz.questions.0.measures: 'other' is not one of its choices",
+    ]);
+    question.allowOther = {};
+    expect(problemsOf(raw)).toEqual([]);
   });
 
   it('flags a choice id that is not among the choices', () => {

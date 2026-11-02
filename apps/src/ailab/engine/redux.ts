@@ -259,6 +259,7 @@ const ailabSlice = createSlice({
       return {
         ...initialState,
         mode: state.mode,
+        datasetLayout: state.datasetLayout,
         reserveLocation: state.reserveLocation,
         instructionsEnabled: state.instructionsEnabled,
         resetCount: state.resetCount + 1,

@@ -47,4 +47,12 @@ describe('loadLevel', () => {
     loadLevel({reserveLastRows: true});
     expect(store.getState().reserveLocation).toBe('end');
   });
+
+  test('shows the dataset as a table unless the mode asks for cards', () => {
+    loadLevel({defaultCardView: true});
+    expect(store.getState().datasetLayout).toBe('cards');
+
+    loadLevel(undefined);
+    expect(store.getState().datasetLayout).toBe('table');
+  });
 });

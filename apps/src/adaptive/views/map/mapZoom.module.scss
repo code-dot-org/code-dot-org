@@ -1,0 +1,35 @@
+.mapZoom {
+  position: relative;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+}
+
+.view {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  // A scrollbar that came and went would change the width the map fits.
+  scrollbar-gutter: stable;
+}
+
+.still {
+  overflow: hidden;
+}
+
+// The content keeps its unscaled size, so this box, at the scaled size, sets
+// the scroll extent. Auto margins center it without clipping an overflow.
+.extent {
+  flex: none;
+  margin: auto;
+  overflow: hidden;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  transform-origin: left top;
+}

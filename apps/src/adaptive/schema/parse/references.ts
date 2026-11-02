@@ -1,11 +1,12 @@
 // Checks the schemas alone cannot make: skill references, checkpoint graph
-// shape, question and choice ids, each level played by at most one step, and whether
-// each level step's `project` flag agrees with the level the server resolved
-// for it.
+// shape, question and choice ids, branch conditions, each level played by at
+// most one step, and whether each level step's `project` flag agrees with the
+// level the server resolved for it.
 
 import {z} from 'zod';
 
 import {pathwaySchema, pathwaySourceSchema} from '../pathway';
+import {OTHER_CHOICE_ID} from '../question';
 
 // A source has no resolved levels, so its project flags go unchecked.
 type Pathway =
@@ -20,6 +21,7 @@ export function findReferenceProblems(pathway: Pathway): string[] {
     ...findSkillProblems(pathway),
     ...findCheckpointProblems(pathway),
     ...findQuestionProblems(pathway),
+    ...findBranchProblems(pathway),
     ...findLevelReuseProblems(pathway),
     ...findLevelStepProblems(pathway),
     ...findEvidenceProblems(pathway),
@@ -28,7 +30,8 @@ export function findReferenceProblems(pathway: Pathway): string[] {
 
 /**
  * Detects question ids used more than once, and multiple choice questions
- * whose choice ids repeat or whose correct choice is not among them.
+ * whose choice ids repeat, take the typed answer's id, or whose correct
+ * choice is not among them.
  */
 function findQuestionProblems(pathway: Pathway): string[] {
   const problems: string[] = [];
@@ -52,6 +55,11 @@ function findQuestionProblems(pathway: Pathway): string[] {
         for (const id of repeated) {
           problems.push(`${where}: choice id '${id}' is used more than once`);
         }
+        if (choiceIds.has(OTHER_CHOICE_ID)) {
+          problems.push(
+            `${where}: choice id '${OTHER_CHOICE_ID}' is reserved for a typed answer`
+          );
+        }
         const {correctChoiceId} = question;
         if (correctChoiceId !== undefined && !choiceIds.has(correctChoiceId)) {
           problems.push(
@@ -67,6 +75,52 @@ function findQuestionProblems(pathway: Pathway): string[] {
     ),
     ...problems,
   ];
+}
+
+/**
+ * Detects branch conditions that can never be met: `showIf` must name an
+ * earlier questions step in the same checkpoint, a multiple choice question
+ * in it, and one of that question's choices, or the typed answer where the
+ * question allows one.
+ */
+function findBranchProblems(pathway: Pathway): string[] {
+  const problems: string[] = [];
+  for (const checkpoint of pathway.checkpoints) {
+    checkpoint.steps.forEach((step, index) => {
+      if (!step.showIf) return;
+      const where = `checkpoints.${checkpoint.id}.steps.${step.id}.showIf`;
+      const {stepId, questionId, choiceId} = step.showIf;
+      const target = checkpoint.steps
+        .slice(0, index)
+        .find(earlier => earlier.id === stepId);
+      if (!target) {
+        problems.push(
+          `${where}: '${stepId}' is not an earlier step in the checkpoint`
+        );
+        return;
+      }
+      if (target.kind !== 'questions') {
+        problems.push(`${where}: '${stepId}' is not a questions step`);
+        return;
+      }
+      const question = target.questions.find(q => q.id === questionId);
+      if (!question || question.type !== 'MultipleChoiceQuestion') {
+        problems.push(
+          `${where}: '${stepId}' has no multiple choice question ${questionId}`
+        );
+        return;
+      }
+      const allowed =
+        question.choices.some(c => c.id === choiceId) ||
+        (choiceId === OTHER_CHOICE_ID && !!question.allowOther);
+      if (!allowed) {
+        problems.push(
+          `${where}: '${choiceId}' is not one of question ${questionId}'s choices`
+        );
+      }
+    });
+  }
+  return problems;
 }
 
 /**
@@ -336,6 +390,7 @@ function findEvidenceProblems(pathway: Pathway): string[] {
           );
         }
         const choiceIds = new Set(question.choices.map(c => c.id));
+        if (question.allowOther) choiceIds.add(OTHER_CHOICE_ID);
         for (const [choiceId, evidenceLevel] of Object.entries(
           measures.evidenceLevels
         )) {

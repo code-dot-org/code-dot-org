@@ -6,9 +6,11 @@ import AttemptCard from '../AttemptCard';
 import MultipleChoiceAnswer from '../choice/MultipleChoiceAnswer';
 import MultipleSelectAnswer from '../choice/MultipleSelectAnswer';
 import FreeResponseAnswer from '../freeResponse/FreeResponseAnswer';
+import MatchAnswer from '../match/MatchAnswer';
 import QuestionDescription from '../QuestionDescription';
 import {
   isFreeResponseResponse,
+  isMatchResponse,
   isMultipleChoiceResponse,
   isMultipleSelectResponse,
   QuizQuestionResult,
@@ -85,6 +87,13 @@ const QuestionResultCard: React.FunctionComponent<QuestionResultCardProps> = ({
       )}
       {isMultipleSelectResponse(result) && (
         <MultipleSelectAnswer
+          question={question}
+          result={result}
+          isViewingStudent={isViewingStudent}
+        />
+      )}
+      {isMatchResponse(result) && (
+        <MatchAnswer
           question={question}
           result={result}
           isViewingStudent={isViewingStudent}
