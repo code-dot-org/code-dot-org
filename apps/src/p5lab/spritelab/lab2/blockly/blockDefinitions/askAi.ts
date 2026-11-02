@@ -5,11 +5,6 @@ import {BlockJson, GeneratorFunction} from '@cdo/apps/blockly/types';
 
 export const ASK_AI_BLOCK_TYPE = 'spritelab2_askAI';
 
-/**
- * Send a question to a language model and put the answer in a variable.
- * The answer takes a second or more to arrive, so the variable stays empty
- * until it does; the "when AI answers" block is how a program waits for it.
- */
 const definition: BlockJson = {
   type: ASK_AI_BLOCK_TYPE,
   message0: 'ask AI %1',
@@ -22,7 +17,7 @@ const definition: BlockJson = {
   style: BlockStyles.DEFAULT,
   tooltip:
     'Ask the AI a question. The answer arrives a moment later, so use the ' +
-    '"when AI answers" block to do something with it.',
+    '"when ... answered" block to do something with it.',
 };
 
 // The variable socket yields a setter rather than a value, the way the
