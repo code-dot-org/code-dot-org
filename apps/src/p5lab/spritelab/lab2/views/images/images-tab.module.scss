@@ -103,9 +103,10 @@ $pad: 16px;
   align-content: start;
   min-height: 0;
   overflow-y: auto;
-  // Room inside the scroll box for a hovered tile's growth.
-  margin: 0 -8px;
-  padding: 4px 8px 8px;
+  // Room inside the scroll box for a hovered tile's growth and the chosen
+  // tile's ring, grown with it.
+  margin: 0 -12px;
+  padding: 8px 12px 12px;
 }
 
 // A kind's name over its tiles, across the whole row.
@@ -125,17 +126,10 @@ $pad: 16px;
   border-radius: 6px;
   overflow: hidden;
 
-  // The tile and its ring hold still; only the picture grows, inside.
-  &:hover {
-    transform: none;
-  }
-
-  img {
-    transition: transform 0.15s ease;
-  }
-
-  &:hover:not(:disabled) img {
-    transform: scale(1.12);
+  // The whole tile grows a little, frame, checker and picture together,
+  // to just inside where the chosen ring stands; nothing is cropped.
+  &:hover:not(:disabled) {
+    transform: scale(1.08);
   }
 }
 
