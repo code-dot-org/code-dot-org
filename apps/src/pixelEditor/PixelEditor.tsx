@@ -160,8 +160,10 @@ export interface PixelEditorProps {
   // to avoid a scrim gap.
   onReady?: () => void;
   onSave: (dataURI: string, meta: PixelEditorSaveMeta) => void;
-  // Fires as each stroke lands, and on undo and redo, for a host that saves
-  // on its own clock.
+  // Fires whenever the picture's pixels change: each stamp of a stroke as
+  // it is dragged, a fill, a shape, an undo or a redo. A host that saves on
+  // its own clock restarts that clock on each one, so it saves once the
+  // picture has been still for a moment.
   onEdit?: () => void;
   // The tools to offer, in TOOLS order; all of them when absent. Shortcuts
   // for tools left out do nothing.
@@ -372,7 +374,6 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
     }
     redoStackRef.current = [];
     setHistoryVersion(v => v + 1);
-    onEditRef.current?.();
   }, []);
 
   const restoreSnapshot = useCallback((pixels: Uint8ClampedArray) => {
@@ -386,6 +387,7 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
       0,
       0
     );
+    onEditRef.current?.();
   }, []);
 
   const currentPixels = useCallback(() => {
@@ -498,8 +500,6 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
     restoreSnapshot(previous);
     repaint();
     setHistoryVersion(v => v + 1);
-    // What the host saves changed, as it does on a stroke.
-    onEditRef.current?.();
   }, [currentPixels, restoreSnapshot, repaint]);
 
   const redo = useCallback(() => {
@@ -514,7 +514,6 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
     restoreSnapshot(next);
     repaint();
     setHistoryVersion(v => v + 1);
-    onEditRef.current?.();
   }, [currentPixels, restoreSnapshot, repaint]);
   // Refs so the window keydown listener below can stay mounted once.
   const undoRef = useRef(undo);
@@ -805,6 +804,11 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
       op(imageData);
       ctx.putImageData(imageData, 0, 0);
       repaint();
+      // Every tool writes the picture through here; the preview canvas is
+      // not the picture.
+      if (target === backingRef.current) {
+        onEditRef.current?.();
+      }
     },
     [repaint]
   );
