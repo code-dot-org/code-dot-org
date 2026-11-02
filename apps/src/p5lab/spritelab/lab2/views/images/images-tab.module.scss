@@ -295,6 +295,8 @@ $pad: 16px;
 
 // Pinned at the pane's bottom.
 .paneBottom {
+  // Pinned to the pane's foot, however little stands above it.
+  margin-top: auto;
   display: flex;
   flex: none;
   flex-direction: column;
