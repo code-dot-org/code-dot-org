@@ -51,7 +51,7 @@ interface ImagesTabProps {
 
 const DRAFT_ID = 'draft';
 // The pane's width before the preview column has reported its own.
-const DEFAULT_PANE_WIDTH = 280;
+export const DEFAULT_PANE_WIDTH = 280;
 
 const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   uploadImage,

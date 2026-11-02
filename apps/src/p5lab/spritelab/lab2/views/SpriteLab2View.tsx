@@ -162,7 +162,7 @@ import WorkspaceSceneBar from './components/WorkspaceSceneBar';
 import DiscoverBlocksButton from './DiscoverBlocksButton';
 import GenerateImagePane from './GenerateImagePane';
 import GenerateSpriteLab from './GenerateSpriteLab';
-import ImagesTab from './images/ImagesTab';
+import ImagesTab, {DEFAULT_PANE_WIDTH} from './images/ImagesTab';
 import {createNamedAnimation} from './imageSave';
 import {ArrowSet, arrowSetFor, ControlsState} from './playBar';
 import Playspace, {PlayspaceMode} from './Playspace';
@@ -2395,6 +2395,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 style={clearOfPreview}
               />
             )}
+          {/* The Images tab's pane is a panel of its own, headed where the
+              preview's header sits on the other tabs. */}
+          {editorsShown && activeTab === 'Images' && (
+            <EditorStrip
+              title="AI"
+              style={{left: 'auto', width: previewWidth || DEFAULT_PANE_WIDTH}}
+            />
+          )}
           {editorsShown &&
             (activeTab === 'World' ||
               activeTab === 'Code' ||
