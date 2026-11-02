@@ -675,12 +675,16 @@ describe('ImagesTab', () => {
   it('tells how the picture was made after the first one on a level about one image, once', async () => {
     jest.useFakeTimers();
     renderTab({lockedImageType: 'sprite', imageRole: 'hero'});
+    fireEvent.click(screen.getByRole('button', {name: 'New image'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Character'}));
     acceptGenerated.mockImplementation(async () => {
       propsByKey.k2 = {name: 'Sprite 1', categories: [], role: 'hero'};
       return 'k2';
     });
     await act(async () => {
-      fireEvent.click(screen.getByRole('button', {name: /^land sprite$/}));
+      fireEvent.click(
+        screen.getByRole('button', {name: /^land sprite character$/})
+      );
     });
     expect(screen.queryByRole('alertdialog')).toBeNull();
     act(() => {
