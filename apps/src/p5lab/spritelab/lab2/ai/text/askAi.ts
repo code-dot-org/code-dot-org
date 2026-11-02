@@ -50,13 +50,17 @@ export class AskAiError extends Error {
   }
 }
 
+export class AskAiTimeoutError extends Error {
+  constructor() {
+    super('The AI took too long to answer.');
+    this.name = 'AskAiTimeoutError';
+  }
+}
+
 export function withTimeout<T>(promise: Promise<T>, ms: number): Promise<T> {
   let timer: number;
   const deadline = new Promise<never>((_, reject) => {
-    timer = window.setTimeout(
-      () => reject(new Error('The AI took too long to answer.')),
-      ms
-    );
+    timer = window.setTimeout(() => reject(new AskAiTimeoutError()), ms);
   });
   return Promise.race([promise, deadline]).finally(() =>
     window.clearTimeout(timer)
@@ -115,13 +119,19 @@ export async function askAiText(prompt: string): Promise<string> {
 
   const deadline = Date.now() + ASK_AI_TIMEOUT_MS;
   const remaining = () => Math.max(0, deadline - Date.now());
+  // Counts here rather than at each call site, so a request that times out
+  // or throws is still one metric rather than silence.
+  const bounded = <T>(work: Promise<T>): Promise<T> =>
+    withTimeout(work, remaining()).catch(error => {
+      count(error instanceof AskAiTimeoutError ? 'timeout' : 'error');
+      throw error;
+    });
 
-  const [verdict, answer] = await withTimeout(
+  const [verdict, answer] = await bounded(
     Promise.allSettled([
       isTextSafe(question, 'input_filter', undefined, aichatContext()),
       requestAnswer(question),
-    ]),
-    remaining()
+    ])
   );
 
   if (verdict.status === 'rejected') {
@@ -143,9 +153,8 @@ export async function askAiText(prompt: string): Promise<string> {
     throw new Error('The AI answer came back empty.');
   }
 
-  const safe = await withTimeout(
-    isTextSafe(text, 'output_filter', undefined, aichatContext()),
-    remaining()
+  const safe = await bounded(
+    isTextSafe(text, 'output_filter', undefined, aichatContext())
   );
   if (!safe) {
     count('answer_flagged');

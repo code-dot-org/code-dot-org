@@ -1,3 +1,5 @@
+import * as Observability from '@code-dot-org/core/plugins/observability';
+
 import {isTextSafe} from '@cdo/apps/aichat/api/client/helpers/safetyHelpers';
 import {generateText} from '@cdo/apps/aiGateway';
 import DCDO from '@cdo/apps/dcdo';
@@ -85,6 +87,24 @@ describe('askAiText', () => {
     await jest.advanceTimersByTimeAsync(ASK_AI_TIMEOUT_MS + 1);
     await settled;
     jest.useRealTimers();
+    // Uncounted, a gateway slowdown would read as nobody using the block.
+    expect(Observability.metrics.count).toHaveBeenCalledWith(
+      expect.any(String),
+      1,
+      {result: 'timeout'}
+    );
+  });
+
+  it('counts an output judge that throws', async () => {
+    isTextSafe
+      .mockResolvedValueOnce(true)
+      .mockRejectedValueOnce(new Error('judge exploded'));
+    await expect(askAiText('hello')).rejects.toThrow('judge exploded');
+    expect(Observability.metrics.count).toHaveBeenCalledWith(
+      expect.any(String),
+      1,
+      {result: 'error'}
+    );
   });
 
   it('throws with the prompt phase when the question is flagged', async () => {
