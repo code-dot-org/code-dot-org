@@ -197,14 +197,13 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   chosenKeyRef.current = chosenImage?.key ?? null;
   const landedRef = useRef(onImageLanded);
   landedRef.current = onImageLanded;
-  // `settled`: the picture is at rest, worth a project save of its own; a
-  // stroke's save in the middle of a drawing leaves that to the project's
-  // own clock.
+  // `saveNow`: a made picture is worth a project save of its own; a
+  // drawing's saves leave that to the project's own clock.
   const land = useCallback(
     async (
       target: ImageTarget,
       write: () => Promise<string>,
-      settled = true
+      saveNow = true
     ) => {
       const key = await write();
       if (!target.key) {
@@ -215,7 +214,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
         setChosenId(id => (id === DRAFT_ID ? key : id));
         setDraft(null);
       }
-      if (settled || !target.key) {
+      if (saveNow) {
         landedRef.current?.();
       }
       return key;
@@ -339,7 +338,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
         const key = await land(
           current.target,
           () => writer.saveEdited(current.target, dataURI, meta, {upload}),
-          settled
+          false
         );
         if (upload) {
           lastUploadRef.current = Date.now();

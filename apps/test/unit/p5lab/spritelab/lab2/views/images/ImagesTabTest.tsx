@@ -379,7 +379,7 @@ describe('ImagesTab', () => {
       jest.advanceTimersByTime(800);
     });
     // The blank became an image, file and all, and the tools stayed open
-    // on it.
+    // on it; the project saves on its own clock, never forced by drawing.
     expect(saveEdited).toHaveBeenCalledTimes(1);
     expect(saveEdited.mock.calls[0][0]).toEqual({
       key: null,
@@ -387,11 +387,10 @@ describe('ImagesTab', () => {
       subject: 'character',
     });
     expect(saveEdited.mock.calls[0][3]).toEqual({upload: true});
-    expect(onImageLanded).toHaveBeenCalledTimes(1);
+    expect(onImageLanded).not.toHaveBeenCalled();
     expect(screen.getByText('canvas')).toBeTruthy();
     expect(pressed()).toEqual(['Sprite 1']);
-    // The next pause saves onto that image, pixels only, with no project
-    // save of its own.
+    // The next pause saves onto that image, pixels only.
     fireEvent.click(screen.getByRole('button', {name: 'stroke'}));
     await act(async () => {
       jest.advanceTimersByTime(800);
@@ -403,14 +402,13 @@ describe('ImagesTab', () => {
       subject: 'character',
     });
     expect(saveEdited.mock.calls[1][3]).toEqual({upload: false});
-    expect(onImageLanded).toHaveBeenCalledTimes(1);
-    // Done sends the file those pixels are owed, and the project saves.
+    // Done sends the file those pixels are owed.
     await act(async () => {
       fireEvent.click(screen.getByRole('button', {name: 'Done editing'}));
     });
     expect(saveEdited).toHaveBeenCalledTimes(3);
     expect(saveEdited.mock.calls[2][3]).toEqual({upload: true});
-    expect(onImageLanded).toHaveBeenCalledTimes(2);
+    expect(onImageLanded).not.toHaveBeenCalled();
     expect(screen.queryByText('canvas')).toBeNull();
     jest.useRealTimers();
   });
