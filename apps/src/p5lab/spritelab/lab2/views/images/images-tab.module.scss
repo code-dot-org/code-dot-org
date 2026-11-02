@@ -76,24 +76,24 @@ $pad: 16px;
   min-height: 36px;
 }
 
-// The image about to go, large, in the asking dialog.
-.deletePreview {
+// The image about to go, small, beside the asking dialog's words.
+.deleteLead {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 14px;
 }
 
 .deleteThumb {
-  width: 120px;
-  height: 120px;
+  flex: none;
+  width: 64px;
+  height: 64px;
   object-fit: contain;
   border-radius: 8px;
   background-color: var(--background-neutral-secondary);
 }
 
-.deleteName {
-  font-weight: 600;
+.deleteText {
+  margin: 0;
 }
 
 .tiles {
