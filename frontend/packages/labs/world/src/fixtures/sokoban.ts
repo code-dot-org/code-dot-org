@@ -30,6 +30,7 @@
 // designed by dragging is already aligned with the only movement this game
 // has. Nothing had to be taught to agree.
 
+import {actorDocument} from '../actors/actorDocument';
 import {
   buildProject,
   gameScreen,
@@ -37,7 +38,6 @@ import {
   stack,
   starterSprites,
   tileCenter,
-  useTrait,
   type ProjectSpec,
 } from '../constants';
 import {TILE_SIZE} from '../engine/core/viewport';
@@ -217,68 +217,43 @@ const everyCrateIsHome = () => ({
   },
 });
 
-const PLAYER_ACTOR = JSON.stringify({
-  blocks: {
-    blocks: [
-      {
-        type: 'world_actor',
-        x: 20,
-        y: 20,
-        fields: {NAME: 'Player'},
-        next: {
-          block: stack([
-            useTrait('Grid#StepsOnTheGridTrait'),
-            useTrait('Input#TakesKeyboardInputTrait'),
-            {type: 'world_set_sprite', fields: {SPRITE: 'player.png'}},
-          ]),
-        },
+const PLAYER_ACTOR = actorDocument({
+  name: 'Player',
+  sprite: 'player.png',
+  traits: ['Grid#StepsOnTheGridTrait', 'Input#TakesKeyboardInputTrait'],
+  code: [
+    // The whole of the controls. Four handlers, one block each, and no
+    // mention anywhere of walls or crates — that is the rule's business.
+    //
+    // THE LAB'S NAME FOR THE KEY, not the browser's. The driver translates
+    // `KeyboardEvent.key` before the world ever sees it (`engine/core/keys`),
+    // so a handler registered for "ArrowUp" waits for a key that never
+    // arrives — which is exactly what this fixture did, and why it rendered
+    // a board nobody could move.
+    ...(
+      [
+        ['up arrow', 'StepUpAction', 320],
+        ['down arrow', 'StepDownAction', 420],
+        ['left arrow', 'StepLeftAction', 520],
+        ['right arrow', 'StepRightAction', 620],
+      ] as const
+    ).map(([key, action, y]) => ({
+      type: 'world_on_Input_PressesEvent',
+      fields: {FILTER0: key},
+      x: 20,
+      y,
+      next: {
+        block: {type: `world_do_Grid_${action}`, inputs: {ACTOR: me()}},
       },
-      // The whole of the controls. Four handlers, one block each, and no
-      // mention anywhere of walls or crates — that is the rule's business.
-      //
-      // THE LAB'S NAME FOR THE KEY, not the browser's. The driver translates
-      // `KeyboardEvent.key` before the world ever sees it (`engine/core/keys`),
-      // so a handler registered for "ArrowUp" waits for a key that never
-      // arrives — which is exactly what this fixture did, and why it rendered
-      // a board nobody could move.
-      ...(
-        [
-          ['up arrow', 'StepUpAction', 320],
-          ['down arrow', 'StepDownAction', 420],
-          ['left arrow', 'StepLeftAction', 520],
-          ['right arrow', 'StepRightAction', 620],
-        ] as const
-      ).map(([key, action, y]) => ({
-        type: 'world_on_Input_PressesEvent',
-        fields: {FILTER0: key},
-        x: 20,
-        y,
-        next: {
-          block: {type: `world_do_Grid_${action}`, inputs: {ACTOR: me()}},
-        },
-      })),
-    ],
-  },
+    })),
+  ],
 });
 
 /** A wall: the smallest actor in the catalogue that still does something. */
-const WALL_ACTOR = JSON.stringify({
-  blocks: {
-    blocks: [
-      {
-        type: 'world_actor',
-        x: 20,
-        y: 20,
-        fields: {NAME: 'Wall'},
-        next: {
-          block: stack([
-            useTrait('Grid#FillsATileTrait'),
-            {type: 'world_set_sprite', fields: {SPRITE: 'wall.png'}},
-          ]),
-        },
-      },
-    ],
-  },
+const WALL_ACTOR = actorDocument({
+  name: 'Wall',
+  sprite: 'wall.png',
+  traits: ['Grid#FillsATileTrait'],
 });
 
 /**
@@ -289,90 +264,79 @@ const WALL_ACTOR = JSON.stringify({
  * blocks but cannot move is a wall, and one that moves but does not block is
  * scenery.
  */
-const CRATE_ACTOR = JSON.stringify({
-  variables: [CRATE_VAR, TARGET_VAR],
-  blocks: {
-    blocks: [
-      {
-        type: 'world_actor',
-        x: 20,
-        y: 20,
-        fields: {NAME: 'Crate'},
-        next: {
+const CRATE_ACTOR = actorDocument({
+  name: 'Crate',
+  sprite: 'box.png',
+  traits: [
+    'Grid#StepsOnTheGridTrait',
+    'Grid#FillsATileTrait',
+    'Grid#CanBePushedTrait',
+  ],
+  code: [
+    {
+      type: 'world_define_drawing',
+      inputs: {
+        WIDTH: {
+          shadow: {type: 'math_number', fields: {NUM: TILE_SIZE}},
+        },
+        HEIGHT: {
+          shadow: {type: 'math_number', fields: {NUM: TILE_SIZE}},
+        },
+        DO: {
           block: stack([
-            useTrait('Grid#StepsOnTheGridTrait'),
-            useTrait('Grid#FillsATileTrait'),
-            useTrait('Grid#CanBePushedTrait'),
-            {type: 'world_set_sprite', fields: {SPRITE: 'box.png'}},
             {
-              type: 'world_define_drawing',
+              type: 'world_pen_fill',
               inputs: {
-                WIDTH: {
-                  shadow: {type: 'math_number', fields: {NUM: TILE_SIZE}},
+                COLOR: {
+                  block: {
+                    type: 'colour_picker',
+                    fields: {COLOUR: '#d8a032'},
+                  },
                 },
-                HEIGHT: {
-                  shadow: {type: 'math_number', fields: {NUM: TILE_SIZE}},
-                },
-                DO: {
-                  block: stack([
-                    {
-                      type: 'world_pen_fill',
-                      inputs: {
-                        COLOR: {
-                          block: {
-                            type: 'colour_picker',
-                            fields: {COLOUR: '#d8a032'},
-                          },
-                        },
-                      },
-                    },
-                    // Centred in the tile and small enough that a crate standing on
-                    // one plainly covers it, which is how the board says "done".
-                    {
-                      type: 'world_draw_rectangle',
-                      inputs: {
-                        X: number(TILE_SIZE / 2 - 6),
-                        Y: number(TILE_SIZE / 2 - 6),
-                        WIDTH: number(12),
-                        HEIGHT: number(12),
-                      },
-                    },
-                  ]),
-                },
+              },
+            },
+            // Centred in the tile and small enough that a crate standing on
+            // one plainly covers it, which is how the board says "done".
+            {
+              type: 'world_draw_rectangle',
+              inputs: {
+                X: number(TILE_SIZE / 2 - 6),
+                Y: number(TILE_SIZE / 2 - 6),
+                WIDTH: number(12),
+                HEIGHT: number(12),
               },
             },
           ]),
         },
       },
-      // The win, checked when a crate lands — the only moment the answer can
-      // change. Counting what is WRONG rather than what is right: zero crates
-      // off target is the finish line, and it needs no total to compare with.
-      {
-        type: 'world_on_Grid_FinishesAStepEvent',
-        x: 20,
-        y: 320,
-        next: {
-          block: {
-            type: 'controls_if',
-            // A statement input is an `inputs` entry like any other — Blockly's
-            // JSON has no separate `statements` key, and a body put under one
-            // is dropped without complaint.
-            inputs: {
-              IF0: everyCrateIsHome(),
-              DO0: {
-                block: {
-                  type: 'world_print',
-                  inputs: {
-                    VALUE: {shadow: {type: 'text', fields: {TEXT: 'Solved!'}}},
-                  },
+    },
+    // The win, checked when a crate lands — the only moment the answer can
+    // change. Counting what is WRONG rather than what is right: zero crates
+    // off target is the finish line, and it needs no total to compare with.
+    {
+      type: 'world_on_Grid_FinishesAStepEvent',
+      next: {
+        block: {
+          type: 'controls_if',
+          // A statement input is an `inputs` entry like any other — Blockly's
+          // JSON has no separate `statements` key, and a body put under one
+          // is dropped without complaint.
+          inputs: {
+            IF0: everyCrateIsHome(),
+            DO0: {
+              block: {
+                type: 'world_print',
+                inputs: {
+                  VALUE: {shadow: {type: 'text', fields: {TEXT: 'Solved!'}}},
                 },
               },
             },
           },
         },
       },
-    ],
-  },
+    },
+  ],
+  variables: [CRATE_VAR, TARGET_VAR],
 });
 
 /** A target: a picture and nothing else. It is a place, not a mechanic. */
@@ -390,17 +354,8 @@ const CRATE_ACTOR = JSON.stringify({
  * for. A second root, beside the definition rather than chained under it: a
  * drawing takes no previous connection (specs/DRAWING.md).
  */
-const TARGET_ACTOR = JSON.stringify({
-  blocks: {
-    blocks: [
-      {
-        type: 'world_actor',
-        x: 20,
-        y: 20,
-        fields: {NAME: 'Target'},
-      },
-    ],
-  },
+const TARGET_ACTOR = actorDocument({
+  name: 'Target',
 });
 
 const LEVEL1_MAP = JSON.stringify(

@@ -47,7 +47,8 @@
 // this actor's", which is a comparison against another actor's position every
 // frame, and there is no block for a step a project defines.
 
-import {stack, starterSprites, useTrait, type ProjectSpec} from '../constants';
+import {actorDocument} from '../actors/actorDocument';
+import {stack, starterSprites, type ProjectSpec} from '../constants';
 import {} from '../rules/stock';
 import {referenceToStock} from '../rules/ruleReference';
 import {TILE_SIZE, VIEWPORT_TILES} from '../runtime/viewport';
@@ -173,131 +174,114 @@ export const GRAVITY = 9;
 export const FORWARD = 1.0;
 export const FLAP = -2.8;
 
-const BIRD_ACTOR = JSON.stringify({
-  blocks: {
-    blocks: [
-      {
-        type: 'world_actor',
-        x: 20,
-        y: 20,
-        fields: {NAME: 'Bird'},
-        next: {
-          block: stack([
-            // Gravity brings "Can Move" and "Can Collide" with it, which is
-            // everything else this actor needs to fall, to hit a pipe, and to
-            // take a coin.
-            useTrait('Gravity#AffectedByGravityTrait'),
-            useTrait('Input#TakesKeyboardInputTrait'),
-            useTrait('Collection#CollectsTrait'),
-            {type: 'world_set_sprite', fields: {SPRITE: 'ship.png'}},
-            // The ship points up; the bird goes right.
-            {
-              type: 'world_set_Space_RotationProperty',
-              inputs: {ACTOR: me(), VALUE: number(90)},
-            },
-            // Weightless until the first flap, which is what "tap to start"
-            // IS — and here it is a property rather than a state machine,
-            // because gravity already has a per-actor dial for exactly this.
-            //
-            // Not a nicety. A world starts running the moment it compiles, so
-            // a bird that falls from frame one has left the map before a
-            // reader has finished looking at the level, and the scenario
-            // greets them with an empty screen and "Out of the world!".
-            {
-              type: 'world_set_Gravity_GravityScaleProperty',
-              inputs: {ACTOR: me(), VALUE: number(0)},
-            },
-          ]),
-        },
+const BIRD_ACTOR = actorDocument({
+  name: 'Bird',
+  sprite: 'ship.png',
+  traits: [
+    // Gravity brings "Can Move" and "Can Collide" with it, which is
+    // everything else this actor needs to fall, to hit a pipe, and to
+    // take a coin.
+    'Gravity#AffectedByGravityTrait',
+    'Input#TakesKeyboardInputTrait',
+    'Collection#CollectsTrait',
+  ],
+  values: [
+    // The ship points up; the bird goes right.
+    {setter: 'world_set_Space_RotationProperty', type: 'number', value: 90},
+    // Weightless until the first flap, which is what "tap to start"
+    // IS — and here it is a property rather than a state machine,
+    // because gravity already has a per-actor dial for exactly this.
+    //
+    // Not a nicety. A world starts running the moment it compiles, so
+    // a bird that falls from frame one has left the map before a
+    // reader has finished looking at the level, and the scenario
+    // greets them with an empty screen and "Out of the world!".
+    {
+      setter: 'world_set_Gravity_GravityScaleProperty',
+      type: 'number',
+      value: 0,
+    },
+  ],
+  code: [
+    // The flap. Up rather than space: this lab already spends space on the
+    // platformer's jump, and an arrow is the key a hand is already on.
+    {
+      type: 'world_on_Input_PressesEvent',
+      fields: {FILTER0: 'up arrow'},
+      next: {
+        block: stack([
+          // The first one of these is what starts the game; the rest are
+          // no-ops that cost a property write.
+          {
+            type: 'world_set_Gravity_GravityScaleProperty',
+            inputs: {ACTOR: me(), VALUE: number(1)},
+          },
+          {
+            type: 'world_set_Physics_VelocityProperty',
+            inputs: {ACTOR: me(), VALUE: vector(FORWARD, FLAP)},
+          },
+        ]),
       },
-      // The flap. Up rather than space: this lab already spends space on the
-      // platformer's jump, and an arrow is the key a hand is already on.
-      {
-        type: 'world_on_Input_PressesEvent',
-        fields: {FILTER0: 'up arrow'},
-        x: 20,
-        y: 320,
-        next: {
-          block: stack([
-            // The first one of these is what starts the game; the rest are
-            // no-ops that cost a property write.
-            {
-              type: 'world_set_Gravity_GravityScaleProperty',
-              inputs: {ACTOR: me(), VALUE: number(1)},
+    },
+    // Crashing, which is the end of the game.
+    //
+    // Taking the bird OUT is what makes it an ending rather than a remark.
+    // Said and not acted on, the bird flew on through the pipe and the
+    // console filled with "Crashed!" once a frame; stopping it instead would
+    // have been undone by the next flap, since nothing here remembers that
+    // the game is over. Removal is the one ending this project can state
+    // without a flag it would have to define, and it ends the CAMERA too —
+    // "actor to follow" empties, the follow step is guarded on it, and the
+    // view holds where it was.
+    {
+      type: 'world_on_Collisions_StartsTouchingEvent',
+      fields: {FILTER0: 'actors/pipe'},
+      next: {
+        block: stack([
+          {
+            type: 'world_print',
+            inputs: {
+              VALUE: {shadow: {type: 'text', fields: {TEXT: 'Crashed!'}}},
             },
-            {
-              type: 'world_set_Physics_VelocityProperty',
-              inputs: {ACTOR: me(), VALUE: vector(FORWARD, FLAP)},
-            },
-          ]),
-        },
+          },
+          {type: 'world_remove_actor', inputs: {ACTOR: me()}},
+        ]),
       },
-      // Crashing, which is the end of the game.
-      //
-      // Taking the bird OUT is what makes it an ending rather than a remark.
-      // Said and not acted on, the bird flew on through the pipe and the
-      // console filled with "Crashed!" once a frame; stopping it instead would
-      // have been undone by the next flap, since nothing here remembers that
-      // the game is over. Removal is the one ending this project can state
-      // without a flag it would have to define, and it ends the CAMERA too —
-      // "actor to follow" empties, the follow step is guarded on it, and the
-      // view holds where it was.
-      {
-        type: 'world_on_Collisions_StartsTouchingEvent',
-        fields: {FILTER0: 'actors/pipe'},
-        x: 20,
-        y: 460,
-        next: {
-          block: stack([
-            {
-              type: 'world_print',
-              inputs: {
-                VALUE: {shadow: {type: 'text', fields: {TEXT: 'Crashed!'}}},
-              },
-            },
-            {type: 'world_remove_actor', inputs: {ACTOR: me()}},
-          ]),
-        },
-      },
-      // …and the other way to lose, which needs no pipes at all. The map is
-      // one screen tall, so the floor and the ceiling ARE its edges.
-      {
-        type: 'world_on_Space_LeftMapEvent',
-        x: 20,
-        y: 580,
-        next: {
-          block: stack([
-            {
-              type: 'world_print',
-              inputs: {
-                VALUE: {
-                  shadow: {type: 'text', fields: {TEXT: 'Out of the world!'}},
-                },
-              },
-            },
-            {type: 'world_remove_actor', inputs: {ACTOR: me()}},
-          ]),
-        },
-      },
-      // The score.
-      {
-        type: 'world_on_Collection_CollectsEvent',
-        x: 20,
-        y: 700,
-        next: {
-          block: {
+    },
+    // …and the other way to lose, which needs no pipes at all. The map is
+    // one screen tall, so the floor and the ceiling ARE its edges.
+    {
+      type: 'world_on_Space_LeftMapEvent',
+      next: {
+        block: stack([
+          {
             type: 'world_print',
             inputs: {
               VALUE: {
-                block: {
-                  type: 'world_count_of_kind',
-                  fields: {TYPE: 'actors/coin'},
-                  inputs: {
-                    LIST: {
-                      block: {
-                        type: 'world_get_Collection_CollectedProperty',
-                        inputs: {ACTOR: me()},
-                      },
+                shadow: {type: 'text', fields: {TEXT: 'Out of the world!'}},
+              },
+            },
+          },
+          {type: 'world_remove_actor', inputs: {ACTOR: me()}},
+        ]),
+      },
+    },
+    // The score.
+    {
+      type: 'world_on_Collection_CollectsEvent',
+      next: {
+        block: {
+          type: 'world_print',
+          inputs: {
+            VALUE: {
+              block: {
+                type: 'world_count_of_kind',
+                fields: {TYPE: 'actors/coin'},
+                inputs: {
+                  LIST: {
+                    block: {
+                      type: 'world_get_Collection_CollectedProperty',
+                      inputs: {ACTOR: me()},
                     },
                   },
                 },
@@ -306,8 +290,8 @@ const BIRD_ACTOR = JSON.stringify({
           },
         },
       },
-    ],
-  },
+    },
+  ],
 });
 
 // A pipe segment. It does not move, it is not solid, and it has no opinion
@@ -315,45 +299,19 @@ const BIRD_ACTOR = JSON.stringify({
 // handler does the rest. Not solid on purpose: a solid pipe would stop the bird
 // dead against it and leave it sitting there, which reads as a bug rather than
 // as a crash.
-const PIPE_ACTOR = JSON.stringify({
-  blocks: {
-    blocks: [
-      {
-        type: 'world_actor',
-        x: 20,
-        y: 20,
-        fields: {NAME: 'Pipe'},
-        next: {
-          block: stack([
-            useTrait('Collisions#CanCollideTrait'),
-            // A pipe SEGMENT, which is what this is: `pipe` above stacks one
-            // per tile in the column, and the drawing has nothing horizontal
-            // in it so no seam shows where two meet.
-            {type: 'world_set_sprite', fields: {SPRITE: 'pipe.png'}},
-          ]),
-        },
-      },
-    ],
-  },
+const PIPE_ACTOR = actorDocument({
+  name: 'Pipe',
+  // A pipe SEGMENT, which is what this is: `pipe` above stacks one
+  // per tile in the column, and the drawing has nothing horizontal
+  // in it so no seam shows where two meet.
+  sprite: 'pipe.png',
+  traits: ['Collisions#CanCollideTrait'],
 });
 
-const COIN_ACTOR = JSON.stringify({
-  blocks: {
-    blocks: [
-      {
-        type: 'world_actor',
-        x: 20,
-        y: 20,
-        fields: {NAME: 'Coin'},
-        next: {
-          block: stack([
-            useTrait('Collection#CanBeCollectedTrait'),
-            {type: 'world_set_sprite', fields: {SPRITE: 'coin.png'}},
-          ]),
-        },
-      },
-    ],
-  },
+const COIN_ACTOR = actorDocument({
+  name: 'Coin',
+  sprite: 'coin.png',
+  traits: ['Collection#CanBeCollectedTrait'],
 });
 
 /** The screen, in pixels: one screen of the level at a time. */

@@ -7,59 +7,48 @@
 // starts with one, 96 by 32, and a drawing as big as its box, a panel the
 // learner can draw over.
 
-import {withPurpose, type PaletteTab} from '../actorPurpose';
-import {labelSizeOf} from '../stock/label';
+import {actorDocument} from '../actorDocument';
+import {type PaletteTab} from '../actorPurpose';
+import {boxValue, labelSizeOf} from '../stock/label';
 import {BORDER, LOOK, RADIUS_TIGHT} from '../stock/look';
 import {
-  actorFile,
   corner,
+  drawingRow,
   fill,
   outline,
   rectangle,
   swatch,
-  useTrait,
 } from '../stock/workspace';
 
 /** How big a new Interface Actor's box is: a button's size. */
 export const NEW_INTERFACE_BOX = {width: 96, height: 32};
 
-/** `set ⟨width|height⟩ of this actor to ⟨n⟩`, the box's two values. */
-const boxed = (name: 'Width' | 'Height', value: number) => ({
-  type: `world_set_Boxed_${name}Property`,
-  inputs: {
-    ACTOR: {block: {type: 'world_this_actor'}},
-    VALUE: {shadow: {type: 'math_number', fields: {NUM: value}}},
-  },
-});
-
 /** The file an actor made from nothing starts as, for `purpose`. */
 export function newActorFile(name: string, purpose: PaletteTab): string {
   if (purpose === 'game') {
-    return withPurpose(actorFile(name, []), 'game');
+    return actorDocument({name, for: 'game'});
   }
   const width = () => labelSizeOf('Width');
   const height = () => labelSizeOf('Height');
-  return withPurpose(
-    actorFile(
-      name,
-      [
-        useTrait('Boxed#HasABoxTrait'),
-        boxed('Width', NEW_INTERFACE_BOX.width),
-        boxed('Height', NEW_INTERFACE_BOX.height),
-      ],
-      {
-        drawing: {
-          width: width(),
-          height: height(),
-          commands: [
-            fill(swatch(LOOK.field)),
-            outline(swatch(LOOK.primaryStrong), BORDER),
-            corner(RADIUS_TIGHT),
-            rectangle(0, 0, width(), height()),
-          ],
-        },
-      },
-    ),
-    'interface',
-  );
+  return actorDocument({
+    name,
+    for: 'interface',
+    traits: ['Boxed#HasABoxTrait'],
+    values: [
+      boxValue('Width', NEW_INTERFACE_BOX.width),
+      boxValue('Height', NEW_INTERFACE_BOX.height),
+    ],
+    code: [
+      drawingRow({
+        width: width(),
+        height: height(),
+        commands: [
+          fill(swatch(LOOK.field)),
+          outline(swatch(LOOK.primaryStrong), BORDER),
+          corner(RADIUS_TIGHT),
+          rectangle(0, 0, width(), height()),
+        ],
+      }),
+    ],
+  });
 }

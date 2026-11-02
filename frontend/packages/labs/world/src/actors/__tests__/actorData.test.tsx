@@ -11,10 +11,7 @@ import {refreshProjectDropdowns} from '../../blockly/projectDropdowns';
 import {projectOwnMetas, projectRuleMetas} from '../../blockly/projectModules';
 import {registerProjectRules} from '../../blockly/ruleRegistry';
 import {DEFAULT_PROJECT} from '../../constants';
-import {
-  SCENARIOS_AS_WRITTEN as WORLD_SCENARIOS,
-  WORLD_SCENARIOS as SCENARIOS,
-} from '../../fixtures/scenarios';
+import {WORLD_SCENARIOS} from '../../fixtures/scenarios';
 import {LESSONS} from '../../progression/lessons';
 import {projectFiles} from '../../runtime/projectFiles';
 import {
@@ -29,13 +26,57 @@ import {
   type ActorData,
 } from '../actorData';
 import {STOCK_ACTORS} from '../stock';
-import {
-  actorRows,
-  defineProperty,
-  setText,
-  swatch,
-  useTrait,
-} from '../stock/workspace';
+import {chain, drawingRow, setText, swatch} from '../stock/workspace';
+
+// The rows a `define actor` is written in, which the fold reads.
+const useTrait = (trait: string) => ({
+  type: 'world_use_trait',
+  fields: {TRAIT: trait},
+});
+const defineProperty = (type: string, name: string, value?: string) => ({
+  type: 'world_rule_property',
+  fields: {
+    TYPE: type,
+    ACCESS: 'writable',
+    NAME: name,
+    ...(value === undefined ? {} : {DEFAULT: value}),
+  },
+});
+const actorRows = (
+  name: string,
+  rows: object[],
+  extras: {
+    drawing?: Parameters<typeof drawingRow>[0];
+    handlers?: object[];
+  } = {},
+): string =>
+  JSON.stringify({
+    blocks: {
+      blocks: [
+        {
+          type: 'world_actor',
+          x: 20,
+          y: 20,
+          fields: {NAME: name},
+          ...(rows.length || extras.drawing
+            ? {
+                next: {
+                  block: chain([
+                    ...rows,
+                    ...(extras.drawing ? [drawingRow(extras.drawing)] : []),
+                  ]),
+                },
+              }
+            : {}),
+        },
+        ...(extras.handlers ?? []).map((handler, index) => ({
+          ...handler,
+          x: 20,
+          y: 60 + index * 40,
+        })),
+      ],
+    },
+  });
 
 /** The types down a hat's chain, top to bottom. */
 const chainTypes = (hat: Record<string, unknown>): string[] => {
@@ -360,7 +401,7 @@ describe('every actor the lab ships or teaches with', () => {
   const stored: Array<[string, Record<string, string>]> = [
     PROJECTS[0],
     ['default', projectFiles(DEFAULT_PROJECT.source)],
-    ...Object.entries(SCENARIOS).map(
+    ...Object.entries(WORLD_SCENARIOS).map(
       ([tag, scenario]) =>
         [`scenario ${tag}`, projectFiles(scenario.source)] as [
           string,

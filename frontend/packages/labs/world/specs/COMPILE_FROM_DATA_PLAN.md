@@ -248,9 +248,8 @@ as` was still offered in an actor's Actor drawer, where it did nothing,
    it brings included; `importStockActorAsData` is gone. Before, the
    health and scoreboard enhancements and a map's import wrote their stock
    actors as rows, which the Actor Editor cannot open. Scenarios, the
-   starter project and the lessons were already folded where they are
-   listed, and stay so: their fixtures run to thousands of lines of rows,
-   and rewriting them as data literals buys nothing a reader sees. The
+   starter project and the lessons were folded where they are listed;
+   they are written as data since (5d, step 1). The
    enhancements read and write an actor through its view in the patch
    layer (`enhance/patch`), not through a wrapper around each one, so one
    called directly works on data. All 489 actors the repository builds
@@ -274,6 +273,39 @@ choices`, with the `use rule` dropdown, the `use trait` dropdown and the
    — and the walks over a project's blocks read. Nothing defines them, and
    the stand-ins leave them alone. `each frame` and `define actor` stay;
    `define property` went with the actor's rows (step 5).
+
+#### 5d. One idiom: an actor is written and edited as data
+
+After 5c an actor was stored as data and still written and edited as
+`define actor` rows, folded on the way in and viewed on the way out. Two
+forms of one thing, kept inverse to each other, is where the edge cases
+were: an effect that is off survives a round trip only if the original
+is handed back, a row the fold cannot say is moved to a created handler,
+and the deleted rows' names are still listed (`viewRows`). This makes
+data the one form. In order, each its own commit:
+
+1. BUILT, November 2026. Authoring. `actorDocument` writes an actor's
+   file from its fields: traits, properties, values and members as the
+   data holds them, a still picture as `sprite`, and its code as the roots
+   of its workspace. The stock shelf, the scenarios, the starter project,
+   the lessons and a new actor are written with it; the stock helpers make
+   data parts (`property`, `labelValue`, `event`, `block`,
+   `stockAnimations`), and a lesson's actor is that spec with an `id`.
+   Nothing folds where a project is listed now: `inDataShape` is gone. All
+   589 actor files the repository builds hold the same data as before,
+   where their roots sit aside.
+2. Enhancements edit data: `wears`, `electTraits`, a property, a handler,
+   a variable. The typewriter's rows and `looksLike` go with it.
+3. Renames rewrite the keys that hold names — `actsLike`, `traits`, a
+   value's setter, an effect's path, a member's `var`s — beside the
+   workspace walk, with a test over the repository's content.
+4. Readers read the data: `eventChoices`, `drawingReader`,
+   `standInBlocks`, `catalogue`.
+5. The tutor proposes an actor as data. Then `foldActor`, `actorView`,
+   `viewOf`, `asActorData`, `throughView` and the actor half of
+   `VIEW_ROWS` go, and a file in rows is one that cannot be read.
+
+Rules have the same two forms, and follow once actors are done.
 
 ## Open
 

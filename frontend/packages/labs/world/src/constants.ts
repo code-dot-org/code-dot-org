@@ -5,7 +5,7 @@ import type {
   ProjectSources,
 } from '@code-dot-org/core/api';
 
-import {inDataShape} from './actors/actorData';
+import {actorDocument} from './actors/actorDocument';
 import {withPurpose} from './actors/actorPurpose';
 import {importStockActor} from './actors/importStockActor';
 import {stockActorById} from './actors/stock';
@@ -14,11 +14,10 @@ import {groundActor} from './actors/stock/ground';
 import {labelActor} from './actors/stock/label';
 import {progressBarActor} from './actors/stock/progressBar';
 import {
-  actsLike,
   drawText,
   fill,
-  looksLike,
-  showAs,
+  labelValue,
+  stockAnimations,
   textOf,
 } from './actors/stock/workspace';
 import {serializeSheetFile, sheetFileName} from './appearance/sheetFile';
@@ -92,13 +91,6 @@ export const useTrait = (trait: string) => ({
   fields: {TRAIT: trait},
 });
 
-/**
- * A one-block `.actor` file: a `define actor` root and the body under it.
- *
- * Three of the starter's four are exactly this. The player is not, because it
- * also has event handlers, and a handler is its own top-level block rather than
- * something chained inside the definition.
- */
 /** `set text of ⟨this actor⟩ to …` — the scoreboard's only verb. */
 const setText = (value: object) => ({
   type: 'world_set_ActorsLabel_TextProperty',
@@ -107,25 +99,6 @@ const setText = (value: object) => ({
     VALUE: {block: value},
   },
 });
-
-const actorFile = (name: string, rows: object[]) =>
-  JSON.stringify(
-    {
-      blocks: {
-        blocks: [
-          {
-            type: 'world_actor',
-            x: 20,
-            y: 20,
-            fields: {NAME: name},
-            next: {block: stack(rows)},
-          },
-        ],
-      },
-    },
-    null,
-    2,
-  );
 
 // Each event has its own cap-hat block (`world_on_<event>`); the handler body
 // attaches below it as the next statement, not nested in a `do` input.
@@ -457,160 +430,138 @@ const MAIN_SCREEN = gameScreen(
   STARTER_HUD,
 );
 
-const PLAYER_ACTOR = JSON.stringify(
-  {
-    blocks: {
-      blocks: [
-        {
-          type: 'world_actor',
-          x: 20,
-          y: 20,
-          fields: {NAME: 'Player'},
-          next: {
-            block: stack([
-              useTrait('Gravity#AffectedByGravityTrait'),
-              // Something to lose. Without it the Crawler is scenery that
-              // walks — `Deals Damage` needs somebody with health to deal it
-              // to, and the two halves live in different files on purpose.
-              useTrait('Health#HasHealthTrait'),
-              // Jumping requires being affected by gravity, which is why it
-              // sits under it here: a jump is a push AWAY from a ground, and
-              // an actor nothing pulls down has no ground to push away from.
-              useTrait('Jumping#JumpsTrait'),
-              useTrait('Arrow Keys#MovesAcrossTrait'),
-              // Hearing the keyboard is something an actor ELECTS. The world's
-              // own key events are raised once a frame whatever is in it; this
-              // trait is what makes `rules/input` also tell THIS actor, and it
-              // is why that broadcast walks one player rather than every coin.
-              useTrait('Input#TakesKeyboardInputTrait'),
-              // The other side of the coin's "Can Be Collected": what makes
-              // walking into one take it. The player names no kind here — the
-              // rule takes whatever it touches that says it can be taken, so
-              // making a second kind of thing collectible is an edit to that
-              // thing and not to this file.
-              useTrait('Collection#CollectsTrait'),
-              // Looks like the library's bob, which is its own Main animation
-              // (specs/ANIMATION_PLAN.md). Position is set by the map when
-              // the world places this actor, not here.
-              //
-              // No `use trait Has Appearance` above it any more: every actor
-              // has that, and being positioned, without electing either
-              // (ActorBuilder's foundation). What is left are the traits that
-              // make this actor a PLAYER rather than a coin.
-              looksLike('playerBob'),
-            ]),
-          },
+const PLAYER_ACTOR = actorDocument({
+  name: 'Player',
+  // Looks like the library's bob, which is its own Main animation
+  // (specs/ANIMATION_PLAN.md). Position is set by the map when
+  // the world places this actor, not here.
+  //
+  // No `use trait Has Appearance` above it any more: every actor
+  // has that, and being positioned, without electing either
+  // (ActorBuilder's foundation). What is left are the traits that
+  // make this actor a PLAYER rather than a coin.
+  animations: stockAnimations({Main: 'playerBob'}),
+  traits: [
+    'Gravity#AffectedByGravityTrait',
+    // Something to lose. Without it the Crawler is scenery that
+    // walks — `Deals Damage` needs somebody with health to deal it
+    // to, and the two halves live in different files on purpose.
+    'Health#HasHealthTrait',
+    // Jumping requires being affected by gravity, which is why it
+    // sits under it here: a jump is a push AWAY from a ground, and
+    // an actor nothing pulls down has no ground to push away from.
+    'Jumping#JumpsTrait',
+    'Arrow Keys#MovesAcrossTrait',
+    // Hearing the keyboard is something an actor ELECTS. The world's
+    // own key events are raised once a frame whatever is in it; this
+    // trait is what makes `rules/input` also tell THIS actor, and it
+    // is why that broadcast walks one player rather than every coin.
+    'Input#TakesKeyboardInputTrait',
+    // The other side of the coin's "Can Be Collected": what makes
+    // walking into one take it. The player names no kind here — the
+    // rule takes whatever it touches that says it can be taken, so
+    // making a second kind of thing collectible is an edit to that
+    // thing and not to this file.
+    'Collection#CollectsTrait',
+  ],
+  code: [
+    // Space to jump. WHICH key is on the hat — `rules/input` declares its
+    // trait's events as "presses ⟨a key⟩", so the handler is registered for
+    // the space bar and never runs for anything else (specs/ENUMS.md).
+    //
+    // The TRAIT's event, not the world's. A world event is handed no actor
+    // and registers on the world, which an `.actor` module has no binding
+    // for — "this actor presses space" is the statement an actor can make.
+    //
+    // ONE BLOCK INSIDE, and it used to be four. This handler was
+    //
+    //     if ⟨this actor⟩ is on the ground?
+    //       apply force ⟨0, -5⟩ on ⟨this actor⟩
+    //
+    // which is a jump, and is also the jump `rules/jump` was written
+    // because of. It refuses a late press by a single frame — walk off a
+    // ledge and the space bar does nothing — and it pushes rather than
+    // sets, so a jump taken while already rising goes higher than one
+    // taken from standing. `make ⟨who⟩ jump` owns both of those, along
+    // with the count that turns `jumps allowed: 2` into a double jump.
+    //
+    // The old shape is not lost: it is in the rule's own header, as the
+    // thing the rule exists to replace.
+    {
+      type: 'world_on_Input_PressesEvent',
+      fields: {FILTER0: 'space'},
+      next: {
+        block: {
+          type: 'world_do_Jumping_MakeJumpAction',
+          inputs: {VALUE: {block: {type: 'world_this_actor'}}},
         },
-        // Space to jump. WHICH key is on the hat — `rules/input` declares its
-        // trait's events as "presses ⟨a key⟩", so the handler is registered for
-        // the space bar and never runs for anything else (specs/ENUMS.md).
-        //
-        // The TRAIT's event, not the world's. A world event is handed no actor
-        // and registers on the world, which an `.actor` module has no binding
-        // for — "this actor presses space" is the statement an actor can make.
-        //
-        // ONE BLOCK INSIDE, and it used to be four. This handler was
-        //
-        //     if ⟨this actor⟩ is on the ground?
-        //       apply force ⟨0, -5⟩ on ⟨this actor⟩
-        //
-        // which is a jump, and is also the jump `rules/jump` was written
-        // because of. It refuses a late press by a single frame — walk off a
-        // ledge and the space bar does nothing — and it pushes rather than
-        // sets, so a jump taken while already rising goes higher than one
-        // taken from standing. `make ⟨who⟩ jump` owns both of those, along
-        // with the count that turns `jumps allowed: 2` into a double jump.
-        //
-        // The old shape is not lost: it is in the rule's own header, as the
-        // thing the rule exists to replace.
-        {
-          type: 'world_on_Input_PressesEvent',
-          fields: {FILTER0: 'space'},
-          x: 20,
-          y: 440,
-          next: {
-            block: {
-              type: 'world_do_Jumping_MakeJumpAction',
-              inputs: {VALUE: {block: {type: 'world_this_actor'}}},
+      },
+    },
+    onEvent('Gravity_StartsFallingEvent', 20, 200, 'Player started falling'),
+    // The ending the starter did not have. Health raises `runs out of
+    // health` and removes nothing — running out is a fact, not a policy —
+    // so what it MEANS is this handler, and here it means the board says
+    // so.
+    //
+    // It reaches another actor to say it, which is the only block in the
+    // starter that does: `any ⟨Scoreboard⟩` names the kind, and an actor
+    // socket handed several takes the first. A game with two scoreboards
+    // would want a rule; a game with one wants this.
+    {
+      type: 'world_on_Health_RunsOutOfHealthEvent',
+      next: {
+        block: {
+          type: 'world_set_ActorsLabel_TextProperty',
+          inputs: {
+            ACTOR: {
+              block: {
+                type: 'world_actor_kind',
+                fields: {ACTOR: 'actors/scoreboard'},
+              },
             },
+            VALUE: {block: {type: 'text', fields: {TEXT: 'GAME OVER'}}},
           },
         },
-        onEvent(
-          'Gravity_StartsFallingEvent',
-          20,
-          200,
-          'Player started falling',
-        ),
-        // The ending the starter did not have. Health raises `runs out of
-        // health` and removes nothing — running out is a fact, not a policy —
-        // so what it MEANS is this handler, and here it means the board says
-        // so.
-        //
-        // It reaches another actor to say it, which is the only block in the
-        // starter that does: `any ⟨Scoreboard⟩` names the kind, and an actor
-        // socket handed several takes the first. A game with two scoreboards
-        // would want a rule; a game with one wants this.
-        {
-          type: 'world_on_Health_RunsOutOfHealthEvent',
-          x: 20,
-          y: 560,
+      },
+    },
+    onEvent('Gravity_StopsFallingEvent', 20, 320, 'Player landed!'),
+    // Taking the coin is the RULE's business — this handler is only told
+    // that it happened, which is why the coin is already out of the world
+    // by the time anything reads the count.
+    //
+    // TWO THINGS, and they answer different questions. `add 10 to the
+    // score` is the game's number: shared, shown on the Scoreboard, and
+    // the thing the target is measured against. The print below it is the
+    // learner's — `collected` is a LIST of what was taken rather than a
+    // tally, so "how many coins" is a question asked of it, and so is "and
+    // how many of the other thing", without a second counter to keep
+    // agreeing.
+    //
+    // Collection knows nothing about points and Scoring knows nothing
+    // about coins. This handler is where the starter says they are the
+    // same event, and it is one block.
+    {
+      type: 'world_on_Collection_CollectsEvent',
+      next: {
+        block: {
+          type: 'world_do_Scoring_AddToTheScoreAction',
+          inputs: {
+            VALUE: {block: {type: 'math_number', fields: {NUM: 10}}},
+          },
           next: {
             block: {
-              type: 'world_set_ActorsLabel_TextProperty',
+              type: 'world_print',
               inputs: {
-                ACTOR: {
+                VALUE: {
                   block: {
-                    type: 'world_actor_kind',
-                    fields: {ACTOR: 'actors/scoreboard'},
-                  },
-                },
-                VALUE: {block: {type: 'text', fields: {TEXT: 'GAME OVER'}}},
-              },
-            },
-          },
-        },
-        onEvent('Gravity_StopsFallingEvent', 20, 320, 'Player landed!'),
-        // Taking the coin is the RULE's business — this handler is only told
-        // that it happened, which is why the coin is already out of the world
-        // by the time anything reads the count.
-        //
-        // TWO THINGS, and they answer different questions. `add 10 to the
-        // score` is the game's number: shared, shown on the Scoreboard, and
-        // the thing the target is measured against. The print below it is the
-        // learner's — `collected` is a LIST of what was taken rather than a
-        // tally, so "how many coins" is a question asked of it, and so is "and
-        // how many of the other thing", without a second counter to keep
-        // agreeing.
-        //
-        // Collection knows nothing about points and Scoring knows nothing
-        // about coins. This handler is where the starter says they are the
-        // same event, and it is one block.
-        {
-          type: 'world_on_Collection_CollectsEvent',
-          x: 20,
-          y: 620,
-          next: {
-            block: {
-              type: 'world_do_Scoring_AddToTheScoreAction',
-              inputs: {
-                VALUE: {block: {type: 'math_number', fields: {NUM: 10}}},
-              },
-              next: {
-                block: {
-                  type: 'world_print',
-                  inputs: {
-                    VALUE: {
-                      block: {
-                        type: 'world_count_of_kind',
-                        fields: {TYPE: 'actors/coin'},
-                        inputs: {
-                          LIST: {
-                            block: {
-                              type: 'world_get_Collection_CollectedProperty',
-                              inputs: {
-                                ACTOR: {block: {type: 'world_this_actor'}},
-                              },
-                            },
+                    type: 'world_count_of_kind',
+                    fields: {TYPE: 'actors/coin'},
+                    inputs: {
+                      LIST: {
+                        block: {
+                          type: 'world_get_Collection_CollectedProperty',
+                          inputs: {
+                            ACTOR: {block: {type: 'world_this_actor'}},
                           },
                         },
                       },
@@ -621,12 +572,10 @@ const PLAYER_ACTOR = JSON.stringify(
             },
           },
         },
-      ],
+      },
     },
-  },
-  null,
-  2,
-);
+  ],
+});
 
 // A ground tile: landable ("Acts as Ground", from the project's own gravity
 // rule) and a wall ("Solid", from its own solid-bodies rule), drawn with the
@@ -674,104 +623,87 @@ const COIN_ACTOR = coinActor;
 export const SCOREBOARD_WIDTH = 96;
 export const SCOREBOARD_HEIGHT = 24;
 
-const SCOREBOARD_ACTOR = JSON.stringify(
-  {
-    blocks: {
-      blocks: [
-        {
-          type: 'world_actor',
-          x: 20,
-          y: 20,
-          fields: {NAME: 'Scoreboard'},
-          next: {
-            block: stack([
-              // A Label that watches the score. The words, their size and
-              // color, and the box they fill all come across
-              // (`ActorBuilder.actsLike`); what this adds is the watching.
-              actsLike('actors/label'),
-              useTrait('Scoring#WatchesTheScoreTrait'),
-              // The picker's symbol, which is not the picture — that is the
-              // drawing below (blockly/actorIconMeta).
-              showAs('text'),
-              // Something to read before the first coin. Without it the board
-              // is blank until the score moves, which looks like a broken
-              // scoreboard rather than a score of nothing.
-              setText({type: 'text', fields: {TEXT: 'SCORE 0'}}),
-              // THE DRAWING, and without it this actor is a plain rectangle.
-              //
-              // `Shows Text` has no steps and draws nothing: it declares what an
-              // actor's words ARE and leaves the drawing to the actor that elects it
-              // (specs/DRAWING.md). An actor with the trait, the text and no drawing
-              // is an actor nothing knows how to paint, so the driver paints the
-              // fallback box — which is exactly what this shipped as at first.
-              //
-              // Two commands, the same two `actors/stock/label` uses: ink of
-              // whatever color the actor carries, then the words at the middle of
-              // the canvas. Every part of the text is READ off the actor rather than
-              // typed here, which is what makes the trait worth having.
-              {
-                type: 'world_define_drawing',
-                inputs: {
-                  WIDTH: {
-                    shadow: {
-                      type: 'math_number',
-                      fields: {NUM: SCOREBOARD_WIDTH},
-                    },
-                  },
-                  HEIGHT: {
-                    shadow: {
-                      type: 'math_number',
-                      fields: {NUM: SCOREBOARD_HEIGHT},
-                    },
-                  },
-                  DO: {
-                    block: stack([
-                      fill(textOf('TextColorProperty')),
-                      drawText(SCOREBOARD_WIDTH / 2, SCOREBOARD_HEIGHT / 2),
-                    ]),
-                  },
-                },
-              },
-            ]),
+const SCOREBOARD_ACTOR = actorDocument({
+  name: 'Scoreboard',
+  // A Label that watches the score. The words, their size and
+  // color, and the box they fill all come across
+  // (`ActorBuilder.actsLike`); what this adds is the watching.
+  actsLike: 'actors/label',
+  // The picker's symbol, which is not the picture — that is the
+  // drawing below (blockly/actorIconMeta).
+  icon: 'text',
+  traits: ['Scoring#WatchesTheScoreTrait'],
+  values: [
+    // Something to read before the first coin. Without it the board
+    // is blank until the score moves, which looks like a broken
+    // scoreboard rather than a score of nothing.
+    labelValue('TextProperty', {type: 'string', value: 'SCORE 0'}),
+  ],
+  code: [
+    // THE DRAWING, and without it this actor is a plain rectangle.
+    //
+    // `Shows Text` has no steps and draws nothing: it declares what an
+    // actor's words ARE and leaves the drawing to the actor that elects it
+    // (specs/DRAWING.md). An actor with the trait, the text and no drawing
+    // is an actor nothing knows how to paint, so the driver paints the
+    // fallback box — which is exactly what this shipped as at first.
+    //
+    // Two commands, the same two `actors/stock/label` uses: ink of
+    // whatever color the actor carries, then the words at the middle of
+    // the canvas. Every part of the text is READ off the actor rather than
+    // typed here, which is what makes the trait worth having.
+    {
+      type: 'world_define_drawing',
+      inputs: {
+        WIDTH: {
+          shadow: {
+            type: 'math_number',
+            fields: {NUM: SCOREBOARD_WIDTH},
           },
         },
-        {
-          type: 'world_on_Scoring_SeesTheScoreChangeEvent',
-          x: 20,
-          y: 200,
-          next: {
-            block: setText({
-              type: 'text',
-              fields: {TEXT: 'SCORE '},
-              inputs: {
-                ADD: {
-                  block: {
-                    type: 'world_as_text',
-                    inputs: {
-                      VALUE: {
-                        block: {type: 'world_get_Scoring_ScoreProperty'},
-                      },
-                    },
-                  },
-                },
-              },
-            }),
+        HEIGHT: {
+          shadow: {
+            type: 'math_number',
+            fields: {NUM: SCOREBOARD_HEIGHT},
           },
         },
-        {
-          type: 'world_on_Scoring_SeesTheGameWonEvent',
-          x: 20,
-          y: 320,
-          next: {
-            block: setText({type: 'text', fields: {TEXT: 'YOU WIN'}}),
-          },
+        DO: {
+          block: stack([
+            fill(textOf('TextColorProperty')),
+            drawText(SCOREBOARD_WIDTH / 2, SCOREBOARD_HEIGHT / 2),
+          ]),
         },
-      ],
+      },
     },
-  },
-  null,
-  2,
-);
+    {
+      type: 'world_on_Scoring_SeesTheScoreChangeEvent',
+      next: {
+        block: setText({
+          type: 'text',
+          fields: {TEXT: 'SCORE '},
+          inputs: {
+            ADD: {
+              block: {
+                type: 'world_as_text',
+                inputs: {
+                  VALUE: {
+                    block: {type: 'world_get_Scoring_ScoreProperty'},
+                  },
+                },
+              },
+            },
+          },
+        }),
+      },
+    },
+    {
+      type: 'world_on_Scoring_SeesTheGameWonEvent',
+      next: {
+        block: setText({type: 'text', fields: {TEXT: 'YOU WIN'}}),
+      },
+    },
+  ],
+});
 
 // The one thing in the starter that can go wrong.
 //
@@ -791,14 +723,17 @@ const SCOREBOARD_ACTOR = JSON.stringify(
 // day Patrol was written, and a rock pacing a corridor reads as a rock nobody
 // stopped. The picture is the only thing that says a thing is dangerous before
 // it has hurt you.
-const CRAWLER_ACTOR = actorFile('Crawler', [
-  useTrait('Patrol#PatrolsAcrossTrait'),
-  useTrait('Health#DealsDamageTrait'),
-  {type: 'world_set_sprite', fields: {SPRITE: 'crawler.png'}},
-]);
+const CRAWLER_ACTOR = actorDocument({
+  name: 'Crawler',
+  sprite: 'crawler.png',
+  traits: ['Patrol#PatrolsAcrossTrait', 'Health#DealsDamageTrait'],
+});
 
 // A ball pulsing — the library's Pulse, its Main animation.
-const BALL_ACTOR = actorFile('Ball', [looksLike('pulse')]);
+const BALL_ACTOR = actorDocument({
+  name: 'Ball',
+  animations: stockAnimations({Main: 'pulse'}),
+});
 
 /**
  * A starter file as written below: no id, and naming its folder rather than
@@ -1129,10 +1064,7 @@ const STARTER = buildProject(STARTER_SPEC);
 
 export const DEFAULT_PROJECT: ProjectSources<MultiFileSource> = {
   // …with the stock Viewport the level is played in, and what it needs.
-  // Its actors in the data shape (specs/ACTOR_EDITOR_PLAN.md, step 5).
-  source: inDataShape(
-    importStockActor(STARTER.source, stockActorById('viewport')!).source,
-  ),
+  source: importStockActor(STARTER.source, stockActorById('viewport')!).source,
 };
 
 /**

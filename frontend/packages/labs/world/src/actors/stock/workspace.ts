@@ -1,11 +1,9 @@
-// Building a stock `.actor` file. It is written here as `define actor` rows,
-// with the helpers below, and stored as the data they fold to
-// (`actors/actorData`), as the rule DSL stores a rule's.
+// Building a stock `.actor` file as data (`actors/actorDocument`), and the
+// blocks its code is made of.
 //
 // The stock RULES are generated from `scripts/rules/*.mjs`, because a rule runs
 // to hundreds of blocks and hand-written JSON at that size is unreadable and
-// unmaintainable. These are two dozen, so they are written here directly — with
-// helpers for the two shapes that would otherwise be a wall of nested `next`.
+// unmaintainable. These are two dozen, so they are written here directly.
 //
 // Nothing about a stock actor is privileged. It is a file a learner opens and
 // reads, and the first thing they read is that a Label is an actor that elects
@@ -18,7 +16,6 @@ import type {Timeline} from '../../engine/core/keyframes';
 import {MAIN_SCREEN_PATH} from '../../mainWorld';
 import {
   ANIMATIONS_ROW,
-  asActorData,
   type ActorLiteral,
   type ActorMember,
   type ActorProperty,
@@ -26,62 +23,9 @@ import {
   type Block,
 } from '../actorData';
 
-/**
- * How far apart a stock actor's handlers are listed.
- *
- * NOT A LAYOUT — AN ORDER. A block's real height is the renderer's to know and
- * no file can ask, so this file stopped guessing. The handlers are stacked one
- * short step apart, which means they overlap, which means the editor measures
- * and arranges them the moment the file is opened (`blockly/tidyLayout`). All
- * this number has to do is keep them in the order they are written in, since
- * that ordering is the only thing the tidy reads out of the positions.
- */
-const HANDLER_STEP = 40;
-
 /** Chain statement blocks, first at the top. */
 export const chain = (blocks: object[]): object =>
   blocks.reduceRight((next, block) => ({...block, next: {block: next}}));
-
-/** `use trait ⟨Rule#Trait⟩` — how an actor takes a share of a rule. */
-export const useTrait = (trait: string) => ({
-  type: 'world_use_trait',
-  fields: {TRAIT: trait},
-});
-
-/**
- * `show as ⟨icon⟩` — the symbol a picker draws this kind with.
- *
- * Every stock interface actor wants one, because every one of them looks like
- * whatever this instance happens to say: at 24 pixels in a dropdown a Label and
- * a Button are the same smudge, and there is no name beside it
- * (specs/UI_ACTORS.md).
- */
-/**
- * `acts like ⟨actors/progressBar⟩` — be everything another kind is.
- *
- * The traits, the property slots, the per-frame work and the picture come
- * across; the KIND does not, so `any ⟨Progress Bar⟩` still means the Progress
- * Bars (`ActorBuilder.actsLike`). The actor named has to be a file the project
- * holds, which is what a shelf entry's `actors` brings.
- */
-/**
- * `is data` — this kind is a RECORD, with fields and nowhere to be.
- *
- * Not drawn, in no search over places, hit-tested by nothing; still has its
- * properties, its events and its place in `all actors`
- * (specs/RECORDS_PLAN.md).
- */
-export const isData = () => ({type: 'world_actor_is_data'});
-
-export const actsLike = (path: string) => ({
-  type: 'world_acts_like',
-  fields: {ACTOR: path},
-});
-
-export const showAs = (icon: string) => ({
-  type: 'world_show_as',
-  fields: {ICON: icon},
-});
 
 /** `this actor`, as a socket's contents. */
 export const me = () => ({block: {type: 'world_this_actor'}});
@@ -131,12 +75,6 @@ export const setText = (
   inputs: {ACTOR: me(), VALUE: value},
 });
 
-/** `set sprite ⟨file⟩` — a still picture, named by its file. */
-export const setSprite = (file: string) => ({
-  type: 'world_set_sprite',
-  fields: {SPRITE: file},
-});
-
 /**
  * `when this actor presses ⟨key⟩` — a key binding the actor owns.
  *
@@ -182,60 +120,6 @@ export const animationsRow = (byName: Record<string, string>) => ({
 
 /** An actor that looks like a stock animation: it is its Main. */
 export const looksLike = (id: string) => animationsRow({Main: id});
-
-/**
- * `define ⟨type⟩ ⟨property⟩ ⟨name⟩ with default ⟨value⟩` — state this KIND keeps.
- *
- * The same block a rule and a trait declare with; where it sits decides whose
- * it is (`blockly/ownProperties`). READ-ONLY means the declaring file owns the
- * value: the setter is offered inside this `.actor` and nowhere else, which is
- * what a count some handler of the actor's own advances wants.
- */
-export const defineProperty = (
-  type: string,
-  name: string,
-  value?: string,
-  opts: {readonly?: boolean} = {},
-) => ({
-  type: 'world_rule_property',
-  fields: {
-    TYPE: type,
-    ACCESS: opts.readonly ? 'readonly' : 'writable',
-    NAME: name,
-    // NOT FOR A TYPE THAT STARTS EMPTY. The block offers no default field for
-    // those, so a file that writes one is writing a field the block does not
-    // have: Blockly says "Ignoring non-existant field DEFAULT" and drops it
-    // (`ruleMeta.STARTS_EMPTY`). The List and the Dropdown both did, and the
-    // warning is what made a real bug beside it hard to read.
-    ...(value === undefined || STARTS_EMPTY.has(type) ? {} : {DEFAULT: value}),
-  },
-});
-
-/**
- * `define event` — something that HAPPENS to this kind.
- *
- * The words are the hat it makes: `finishes revealing` becomes
- * `when ⟨…⟩ finishes revealing`.
- *
- * A part is either wording or a VALUE THE EVENT CARRIES. It could only be
- * wording until an event could carry more than one unnamed thing
- * (specs/EVENT_VALUES_PLAN.md); a carried value is named and typed, the hat
- * says its name, and a handler reads it with the ordinary getter for that
- * name. A parameter is a workspace variable like a `define block`'s, so its
- * id has to be in the file's `variables` as well (`ActorExtras`).
- */
-export const defineEvent = (...parts: Array<string | BlockParam>) => ({
-  type: 'world_rule_event',
-  extraState: {
-    parts: parts.map(part =>
-      typeof part === 'string'
-        ? {kind: 'label', text: part}
-        : {kind: 'param', name: part.name, type: part.type, var: part.id},
-    ),
-  },
-});
-
-// ── The same, as data (`actorDocument`) ─────────────────────────────────
 
 /** A property this kind keeps: `define property`, as data. */
 export const property = (
@@ -333,43 +217,6 @@ export const paramValue = (param: BlockParam) => ({
 });
 
 /**
- * `define block` — a named thing this kind does, and the blocks it runs.
- *
- * Statements only: the form that REPORTS a value wants a `defineQuery` beside
- * `defineAction`, which does not exist yet (`ownProperties.designedBlock`).
- */
-export const defineBlock = (spec: {
-  /** The block's face, in order: words, and the parameters between them. */
-  say: ReadonlyArray<string | BlockParam>;
-  /** The sentence somebody reads on hovering it months later. */
-  description: string;
-  /**
-   * Shut the eye: this kind's own work, offered in no other file's toolbox.
-   *
-   * `keep the caret in view` means nothing outside the file that knows what a
-   * caret is, and a block a reader cannot mean anything by is one they should
-   * not be shown (`extensions/blockVisibility`).
-   */
-  private?: boolean;
-  body: object[];
-}) => ({
-  type: 'world_rule_block',
-  fields: {
-    RETURNS: 'none',
-    DESCRIPTION: spec.description,
-    ACCESS: spec.private ? 'private' : 'shared',
-  },
-  extraState: {
-    parts: spec.say.map(part =>
-      typeof part === 'string'
-        ? {kind: 'label', text: part}
-        : {kind: 'param', type: part.type, var: part.id, name: part.name},
-    ),
-  },
-  inputs: {DO: {block: chain(spec.body)}},
-});
-
-/**
  * `define drawing ⟨w⟩ by ⟨h⟩` — the row that says what a kind looks like.
  *
  * The size is SOCKETS rather than fields (`domainBlocks.worldDefineDrawing`),
@@ -392,110 +239,6 @@ export const drawingRow = (drawing: {
     DO: {block: chain(drawing.commands)},
   },
 });
-
-/** What an actor file may hold beside its `define actor`. */
-export interface ActorExtras {
-  /**
-   * The picture it paints, for an actor that has no sprite.
-   *
-   * Only an interface actor needs one. A Label has no picture and must paint
-   * itself; a Coin has a picture and must not, since a drawing would cover it.
-   */
-  drawing?: {
-    width: number | object;
-    height: number | object;
-    commands: object[];
-  };
-  /**
-   * Event handlers — `when this actor presses ⟨space⟩` and the like.
-   *
-   * A hat is a root of its own, so these sit beside the definition. They are
-   * for what the actor does to ITSELF: a Player binds the space bar because
-   * a control scheme is what a player is. What it does to other actors is the
-   * project's, and belongs in the world.
-   */
-  handlers?: object[];
-  /**
-   * The workspace's variables, which a `define block`'s parameters are.
-   *
-   * Blockly resolves a variable by ID and treats the name on a block as a
-   * hint, so a file using one that is not declared here loads with an empty
-   * field — the same bargain `scripts/rules/dsl` states for a rule.
-   */
-  variables?: ReadonlyArray<{id: string; name: string; type: string}>;
-}
-
-/**
- * A stock actor's file, as data: the definition's rows, its drawing, and the
- * handlers beside it.
- */
-export const actorFile = (
-  name: string,
-  rows: object[],
-  extras: ActorExtras = {},
-): string => asActorData(actorRows(name, rows, extras));
-
-/** The same file as `define actor` rows, which `actorFile` stores the fold of. */
-export const actorRows = (
-  name: string,
-  rows: object[],
-  extras: ActorExtras = {},
-): string =>
-  JSON.stringify(
-    {
-      blocks: {
-        blocks: [
-          {
-            type: 'world_actor',
-            x: 20,
-            y: 20,
-            fields: {NAME: name},
-            // The drawing is the LAST ROW of the definition, after whatever the
-            // actor declares. It used to be a root beside it; it is a row like
-            // `each frame` and `define block` now, with the pen behind its own
-            // pencil (specs/DRAWING.md).
-            ...(rows.length || extras.drawing
-              ? {
-                  next: {
-                    block: chain([
-                      ...rows,
-                      ...(extras.drawing ? [drawingRow(extras.drawing)] : []),
-                    ]),
-                  },
-                }
-              : {}),
-          },
-          // The handlers, LISTED RATHER THAN PLACED.
-          //
-          // Two guesses at a layout came before this one. Starting them at
-          // y=180 under the definition assumed a `define actor` stack was
-          // short, which is true of a Label and wildly wrong for an actor with
-          // a big `define drawing`: the first handler began inside the
-          // definition and the rest overlapped each other. Moving them into a
-          // second column fixed the definition running into them and left them
-          // still running into each other, because 220 apart is a guess about a
-          // handler's height in just the same way.
-          //
-          // There is no third guess to make. The file says which handlers there
-          // are and what order to read them in, and the editor — where a
-          // renderer exists and the sizes are real — decides where they go
-          // (`blockly/tidyLayout`). They are stacked a short step apart so that
-          // they overlap on purpose, which is what asks for the arrangement.
-          ...(extras.handlers ?? []).map((handler, index) => ({
-            ...handler,
-            x: 20,
-            // Strictly below the definition, which sits at the origin: the
-            // tidy reads the order off the positions, and a tie would leave it
-            // to depend on which came first in the array.
-            y: 20 + (index + 1) * HANDLER_STEP,
-          })),
-        ],
-      },
-      ...(extras.variables?.length ? {variables: extras.variables} : {}),
-    },
-    null,
-    2,
-  );
 
 /**
  * `⟨a⟩ + ⟨b⟩ + ⟨c⟩` — words joined in the order they are read.

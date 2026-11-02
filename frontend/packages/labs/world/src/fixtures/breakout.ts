@@ -45,8 +45,9 @@
 // The serve was on that list until the ball was left at rest, which is the
 // smaller lesson: some of what is missing is missing because nobody wrote it.
 
+import {actorDocument} from '../actors/actorDocument';
 import {hearWorldEvent} from '../actors/stock/workspace';
-import {stack, starterSprites, useTrait, type ProjectSpec} from '../constants';
+import {stack, starterSprites, type ProjectSpec} from '../constants';
 import {MAIN_SCREEN_PATH} from '../mainWorld';
 import {} from '../rules/stock';
 import {referenceToStock} from '../rules/ruleReference';
@@ -285,140 +286,94 @@ export const lostBall = () =>
 // not the thing that hits it. A ball with a bounciness of 1 hitting a wall with
 // the default 0 stops dead against it, which is what this scenario did until
 // the wall was given the dial.
-const WALL_ACTOR = JSON.stringify({
-  blocks: {
-    blocks: [
-      {
-        type: 'world_actor',
-        x: 20,
-        y: 20,
-        fields: {NAME: 'Wall'},
-        next: {
-          block: stack([
-            useTrait('Solid Bodies#SolidTrait'),
-            setNumber('world_set_SolidBodies_BouncinessProperty', 1),
-            {type: 'world_set_sprite', fields: {SPRITE: 'wall.png'}},
-          ]),
-        },
-      },
-    ],
-  },
+const WALL_ACTOR = actorDocument({
+  name: 'Wall',
+  sprite: 'wall.png',
+  traits: ['Solid Bodies#SolidTrait'],
+  values: [
+    {
+      setter: 'world_set_SolidBodies_BouncinessProperty',
+      type: 'number',
+      value: 1,
+    },
+  ],
 });
 
 // Solid, so the ball comes off it, AND collectible, so hitting it takes it out
 // of the world. Both, on the same contact: Solid Bodies pushes apart in
 // `settle` and Collection removes in `react`, so the bounce is worked out
 // before the brick goes.
-const BRICK_ACTOR = JSON.stringify({
-  blocks: {
-    blocks: [
-      {
-        type: 'world_actor',
-        x: 20,
-        y: 20,
-        fields: {NAME: 'Brick'},
-        next: {
-          block: stack([
-            useTrait('Solid Bodies#SolidTrait'),
-            useTrait('Collection#CanBeCollectedTrait'),
-            setNumber('world_set_SolidBodies_BouncinessProperty', 1),
-            {type: 'world_set_sprite', fields: {SPRITE: 'box.png'}},
-          ]),
-        },
-      },
-    ],
-  },
+const BRICK_ACTOR = actorDocument({
+  name: 'Brick',
+  sprite: 'box.png',
+  traits: ['Solid Bodies#SolidTrait', 'Collection#CanBeCollectedTrait'],
+  values: [
+    {
+      setter: 'world_set_SolidBodies_BouncinessProperty',
+      type: 'number',
+      value: 1,
+    },
+  ],
 });
 
 // The paddle: the only one of the four that a learner drives.
-const PADDLE_ACTOR = JSON.stringify({
-  blocks: {
-    blocks: [
-      {
-        type: 'world_actor',
-        x: 20,
-        y: 20,
-        fields: {NAME: 'Paddle'},
-        next: {
-          block: stack([
-            {
-              type: 'world_use_trait',
-              fields: {TRAIT: 'Arrow Keys#MovesAcrossTrait'},
-            },
-            {
-              type: 'world_use_trait',
-              fields: {TRAIT: 'Input#TakesKeyboardInputTrait'},
-            },
-            // Solid, so the ball comes off it rather than through it.
-            {
-              type: 'world_use_trait',
-              fields: {TRAIT: 'Solid Bodies#SolidTrait'},
-            },
-            {type: 'world_set_sprite', fields: {SPRITE: 'ground.png'}},
-            // The surface's dial again: without it the ball dies on the paddle.
-            setNumber('world_set_SolidBodies_BouncinessProperty', 1),
-            // A tile, stretched: 64 wide and 16 tall. What it collides as, too
-            // — `intrinsic size` times scale is one notion of how big an actor
-            // is, shared by Collisions and "Stays in the Map".
-            {
-              type: 'world_set_Space_ScaleProperty',
-              inputs: {
-                ACTOR: {block: {type: 'world_this_actor'}},
-                X: {block: {type: 'math_number', fields: {NUM: 2}}},
-                Y: {block: {type: 'math_number', fields: {NUM: 0.5}}},
-              },
-            },
-          ]),
-        },
-      },
-    ],
-  },
+const PADDLE_ACTOR = actorDocument({
+  name: 'Paddle',
+  sprite: 'ground.png',
+  traits: [
+    'Arrow Keys#MovesAcrossTrait',
+    'Input#TakesKeyboardInputTrait',
+    // Solid, so the ball comes off it rather than through it.
+    'Solid Bodies#SolidTrait',
+  ],
+  values: [
+    // The surface's dial again: without it the ball dies on the paddle.
+    {
+      setter: 'world_set_SolidBodies_BouncinessProperty',
+      type: 'number',
+      value: 1,
+    },
+    // A tile, stretched: 64 wide and 16 tall. What it collides as, too
+    // — `intrinsic size` times scale is one notion of how big an actor
+    // is, shared by Collisions and "Stays in the Map".
+    {
+      setter: 'world_set_Space_ScaleProperty',
+      type: 'vector',
+      value: {x: 2, y: 0.5},
+    },
+  ],
 });
 
-const BALL_ACTOR = JSON.stringify({
-  blocks: {
-    blocks: [
-      {
-        type: 'world_actor',
-        x: 20,
-        y: 20,
-        fields: {NAME: 'Ball'},
-        next: {
-          block: stack([
-            {type: 'world_use_trait', fields: {TRAIT: 'Physics#CanMoveTrait'}},
-            // NOT Solid. Solid is what a body bounces OFF; this is the body.
-            // It can still touch things — "Collects" needs contacts and brings
-            // "Can Collide" with it.
-            // What takes the bricks out of the world when it hits them.
-            {
-              type: 'world_use_trait',
-              fields: {TRAIT: 'Collection#CollectsTrait'},
-            },
-            {type: 'world_set_sprite', fields: {SPRITE: 'ball.png'}},
-            // At rest until it is served. `serveHandler`, in the world, says
-            // why the first move is the player's.
-          ]),
-        },
-      },
-      // The score, such as it is: how many bricks this ball has taken.
-      {
-        type: 'world_on_Collection_CollectsEvent',
-        x: 20,
-        y: 320,
-        next: {
-          block: {
-            type: 'world_print',
-            inputs: {
-              VALUE: {
-                block: {
-                  type: 'world_count_of_kind',
-                  fields: {TYPE: 'actors/brick'},
-                  inputs: {
-                    LIST: {
-                      block: {
-                        type: 'world_get_Collection_CollectedProperty',
-                        inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
-                      },
+const BALL_ACTOR = actorDocument({
+  name: 'Ball',
+  sprite: 'ball.png',
+  traits: [
+    'Physics#CanMoveTrait',
+    // NOT Solid. Solid is what a body bounces OFF; this is the body.
+    // It can still touch things — "Collects" needs contacts and brings
+    // "Can Collide" with it.
+    // What takes the bricks out of the world when it hits them.
+    'Collection#CollectsTrait',
+    // At rest until it is served. `serveHandler`, in the world, says
+    // why the first move is the player's.
+  ],
+  code: [
+    // The score, such as it is: how many bricks this ball has taken.
+    {
+      type: 'world_on_Collection_CollectsEvent',
+      next: {
+        block: {
+          type: 'world_print',
+          inputs: {
+            VALUE: {
+              block: {
+                type: 'world_count_of_kind',
+                fields: {TYPE: 'actors/brick'},
+                inputs: {
+                  LIST: {
+                    block: {
+                      type: 'world_get_Collection_CollectedProperty',
+                      inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
                     },
                   },
                 },
@@ -427,15 +382,10 @@ const BALL_ACTOR = JSON.stringify({
           },
         },
       },
-      // Losing. The room is open at the bottom and nowhere else.
-      {
-        type: 'world_on_Space_LeftMapEvent',
-        x: 20,
-        y: 460,
-        next: {block: lostBall()},
-      },
-    ],
-  },
+    },
+    // Losing. The room is open at the bottom and nowhere else.
+    {type: 'world_on_Space_LeftMapEvent', next: {block: lostBall()}},
+  ],
 });
 
 /** The whole screen: the level is as big as the view. */

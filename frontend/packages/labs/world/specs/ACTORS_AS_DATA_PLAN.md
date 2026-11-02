@@ -27,10 +27,8 @@ handler, which runs once the instance exists and before it is first drawn.
   as roots, and no `define actor` (`blockly/codeRoots`).
 - **Blocks-shaped files.** The Actor Editor opens only data; an actor whose
   contents are not data cannot be read there. Every actor the lab ships or
-  teaches with is stored as data (`actorData.test`). The stock actors
-  store their fold (`stock/workspace.actorFile`); scenarios, the starter
-  project and the lessons are folded where they are listed
-  (`WORLD_SCENARIOS`, `DEFAULT_PROJECT`, `lessons/support`).
+  teaches with is stored as data (`actorData.test`), and is written as
+  data (`actorDocument`, COMPILE_FROM_DATA_PLAN.md 5d).
 - **The panel** edits purpose, traits, Self, values, effects and looks. Acts
   like, is a record and the icon are data with no field: the creation wizard
   and the enhancements set them. It offers the same looks whatever the actor

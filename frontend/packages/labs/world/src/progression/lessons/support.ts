@@ -15,7 +15,6 @@
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
-import {inDataShape} from '../../actors/actorData';
 import {importStockActor} from '../../actors/importStockActor';
 import {stockActorById} from '../../actors/stock';
 import {
@@ -54,7 +53,7 @@ export interface LessonSpec {
    * Actor files, by stem: `hero` becomes `actors/hero.actor`.
    *
    * Beside the ones the world spec listed, for an actor written out by hand
-   * (`actors/stock/workspace.actorFile`). A stem given both ways is one file,
+   * (`actors/actorDocument`). A stem given both ways is one file,
    * and this one wins.
    */
   actors?: Record<string, string>;
@@ -184,11 +183,6 @@ export const lessonSource = (spec: LessonSpec): MultiFileSource => {
   }
   // The world a Main Screen showing a map, as a game is
   // (specs/LESSONS_AS_SCREENS_PLAN.md), which brings the Viewport.
-  //
-  // …and every actor as data, as the scenarios' are: an actor's file is data
-  // and events, made in the Actor Editor, and no actor is opened as a `define
-  // actor` (specs/ACTORS_AS_DATA_PLAN.md, step 5). A lesson writes its
-  // actors as workspaces because that is how they are easiest to write.
   let screen = asScreenProject(source);
   for (const id of spec.stockScreens ?? []) {
     screen = importStockMap(
@@ -196,7 +190,7 @@ export const lessonSource = (spec: LessonSpec): MultiFileSource => {
       need(stockMapById(id), 'screen', id),
     ).source;
   }
-  return rememberWorld(inDataShape(screen), world);
+  return rememberWorld(screen, world);
 };
 
 /** A stock item, or a thrown error naming what was asked for. */

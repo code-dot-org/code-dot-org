@@ -92,25 +92,23 @@
 // WHAT IT IS NOT: there is no second level for the door to lead to (JETPACK.md,
 // phases 4 to 7). It is the smallest thing that plays.
 
+import {actorDocument} from '../actors/actorDocument';
 import {climbArrowsHandlers} from '../actors/enhance/climbArrows';
 import {labelActor} from '../actors/stock/label';
 import {progressBarActor} from '../actors/stock/progressBar';
 import {
-  actsLike,
-  animationsRow,
   drawText,
   fill,
-  looksLike,
+  labelValue,
   rectangle,
   setText,
-  swatch,
+  stockAnimations,
 } from '../actors/stock/workspace';
 import {
   gameScreen,
   stack,
   starterAnimationPictures,
   starterSprites,
-  useTrait,
   type ProjectSpec,
 } from '../constants';
 import {} from '../rules/stock';
@@ -462,10 +460,6 @@ const kind = (path: string) => ({
   block: {type: 'world_actor_kind', fields: {ACTOR: path}},
 });
 
-const truth = (value: boolean) => ({
-  block: {type: 'logic_boolean', fields: {BOOL: value ? 'TRUE' : 'FALSE'}},
-});
-
 /**
  * What a full can is worth, and what a small one is.
  *
@@ -620,265 +614,231 @@ const teleportSafely = () => [
   },
 ];
 
-const PILOT_ACTOR = JSON.stringify({
-  blocks: {
-    blocks: [
-      {
-        type: 'world_actor',
-        x: 20,
-        y: 20,
-        fields: {NAME: 'Pilot'},
-        next: {
-          block: stack([
-            // Gravity brings "Can Move" and "Can Collide", so this list is
-            // shorter than it looks: everything that falls, walks, lands,
-            // takes a can and flies is in these five rows.
-            useTrait('Gravity#AffectedByGravityTrait'),
-            useTrait('Input#TakesKeyboardInputTrait'),
-            useTrait('Arrow Keys#MovesAcrossTrait'),
-            useTrait('Jumping#JumpsTrait'),
-            useTrait('Jetpack#FliesWithAJetpackTrait'),
-            // What flying and climbing look like: the Pilot's own animations,
-            // played by the handlers below (specs/ANIMATION_PLAN.md).
-            animationsRow({Fly: 'pilotFly', Climb: 'pilotClimb'}),
-            // Up and down climb, and only on a ladder. `Climbs` is the
-            // mechanic; the keys that steer it are the step below, which is
-            // what `actors/enhance/climbArrows` writes for a learner — the
-            // control scheme belongs to the actor, not to the rule.
-            useTrait('Climbing#ClimbsTrait'),
-            // …and the pads, which it uses when it asks to rather than
-            // whenever it stands on one — see the handler below and
-            // `rules/teleport` on why that is not the same choice an enemy
-            // gets.
-            useTrait('Teleport#UsesTeleportPadsTrait'),
-            useTrait('Digging#DigsTrait'),
-            // A GAP ONE BLOCK WIDE IS EXACTLY ONE PILOT WIDE, and this room
-            // is full of them — the hole a dig leaves, the shaft the ladder
-            // is in, the space between two ledges. Without a few pixels of
-            // forgiveness, flying up into one means being lined up to the
-            // pixel, and what a player sees is a flight that plainly fitted
-            // and did not go (`corner reach`, in Physics).
+const PILOT_ACTOR = actorDocument({
+  name: 'Pilot',
+  sprite: 'pilot.png',
+  // What flying and climbing look like: the Pilot's own animations,
+  // played by the handlers below (specs/ANIMATION_PLAN.md).
+  animations: stockAnimations({Fly: 'pilotFly', Climb: 'pilotClimb'}),
+  traits: [
+    // Gravity brings "Can Move" and "Can Collide", so this list is
+    // shorter than it looks: everything that falls, walks, lands,
+    // takes a can and flies is in these five rows.
+    'Gravity#AffectedByGravityTrait',
+    'Input#TakesKeyboardInputTrait',
+    'Arrow Keys#MovesAcrossTrait',
+    'Jumping#JumpsTrait',
+    'Jetpack#FliesWithAJetpackTrait',
+    // Up and down climb, and only on a ladder. `Climbs` is the
+    // mechanic; the keys that steer it are the step below, which is
+    // what `actors/enhance/climbArrows` writes for a learner — the
+    // control scheme belongs to the actor, not to the rule.
+    'Climbing#ClimbsTrait',
+    // …and the pads, which it uses when it asks to rather than
+    // whenever it stands on one — see the handler below and
+    // `rules/teleport` on why that is not the same choice an enemy
+    // gets.
+    'Teleport#UsesTeleportPadsTrait',
+    'Digging#DigsTrait',
+    // What makes the belt, the ice and the sludge mean anything: one
+    // trait, and it meets all three (`rules/surfaces`).
+    'Surfaces#StandsOnSurfacesTrait',
+    // Something to lose. The enemies deal damage and know nothing
+    // about who to; this is the other half of that, and neither
+    // names the other (`rules/health`).
+    'Health#HasHealthTrait',
+    'Collection#CollectsTrait',
+  ],
+  values: [
+    // A GAP ONE BLOCK WIDE IS EXACTLY ONE PILOT WIDE, and this room
+    // is full of them — the hole a dig leaves, the shaft the ladder
+    // is in, the space between two ledges. Without a few pixels of
+    // forgiveness, flying up into one means being lined up to the
+    // pixel, and what a player sees is a flight that plainly fitted
+    // and did not go (`corner reach`, in Physics).
+    {setter: 'world_set_Physics_CornerReachProperty', type: 'number', value: 5},
+    {
+      setter: 'world_set_Teleport_TravelSecondsProperty',
+      type: 'number',
+      value: PILOT_TRIP,
+    },
+    // Enough to get ON to a single tile and no more, which is what
+    // "a weak hop" has to mean if it is to be any use: the default of
+    // 5 clears four tiles and would make half the ledges reachable
+    // without ever touching a can, and 2.4 clears 32 pixels of AIR —
+    // which leaves the Pilot's feet exactly level with the top of a
+    // one-tile step and catching on it. Rise is v²/2g, so the margin
+    // costs almost nothing: 2.6 buys 37 pixels for a 32-pixel step.
+    {
+      setter: 'world_set_Jumping_JumpStrengthProperty',
+      type: 'number',
+      value: 2.6,
+    },
+    // Eight hits and a second and a half of mercy, against defaults
+    // of three and a half. The defaults are tuned for a level where
+    // an enemy is something you walk into; this room has three that
+    // come to YOU — a ball rolling the floor, a rocket circling the
+    // walls, and a robot that follows you up ladders — and a Pilot
+    // who stands still for four seconds while learning the controls
+    // should not lose the game for it.
+    {setter: 'world_set_Health_MostHealthProperty', type: 'number', value: 8},
+    {setter: 'world_set_Health_HealthProperty', type: 'number', value: 8},
+    {setter: 'world_set_Health_MercyTimeProperty', type: 'number', value: 1.5},
+    // Half a tank to start with. A full one crosses the whole room,
+    // which would leave the first two cans as scenery.
+    {setter: 'world_set_Jetpack_FuelProperty', type: 'number', value: 50},
+  ],
+  code: [
+    // THE SHOVEL: `z` held, and whichever arrow is held with it — which is
+    // what JETPACK.md asks for ("in the direction they are also holding").
+    // With no arrow at all the direction is nothing, the aimed-at point is
+    // where the Pilot is standing, and the nearest diggable block to that is
+    // the one under its feet. Which is the right answer for a shovel.
+    //
+    // A STEP RATHER THAN A HAT, because holding a key is a state and not a
+    // moment; and polling costs nothing, since digging a block that is
+    // already a hole does nothing (`rules/digging`).
+    {
+      type: 'world_trait_step',
+      fields: {PHASE: 'touch', NAME: 'dig where it is pointing'},
+      inputs: {
+        DO: {
+          block: onlyIf(
+            {block: {type: 'world_is_key_down', fields: {KEY: 'z'}}},
             {
-              type: 'world_set_Physics_CornerReachProperty',
-              inputs: {ACTOR: me(), VALUE: number(5)},
-            },
-            {
-              type: 'world_set_Teleport_TravelSecondsProperty',
-              inputs: {ACTOR: me(), VALUE: number(PILOT_TRIP)},
-            },
-            // What makes the belt, the ice and the sludge mean anything: one
-            // trait, and it meets all three (`rules/surfaces`).
-            useTrait('Surfaces#StandsOnSurfacesTrait'),
-            // Something to lose. The enemies deal damage and know nothing
-            // about who to; this is the other half of that, and neither
-            // names the other (`rules/health`).
-            useTrait('Health#HasHealthTrait'),
-            useTrait('Collection#CollectsTrait'),
-            {type: 'world_set_sprite', fields: {SPRITE: 'pilot.png'}},
-            // Enough to get ON to a single tile and no more, which is what
-            // "a weak hop" has to mean if it is to be any use: the default of
-            // 5 clears four tiles and would make half the ledges reachable
-            // without ever touching a can, and 2.4 clears 32 pixels of AIR —
-            // which leaves the Pilot's feet exactly level with the top of a
-            // one-tile step and catching on it. Rise is v²/2g, so the margin
-            // costs almost nothing: 2.6 buys 37 pixels for a 32-pixel step.
-            {
-              type: 'world_set_Jumping_JumpStrengthProperty',
-              inputs: {ACTOR: me(), VALUE: number(2.6)},
-            },
-            // Eight hits and a second and a half of mercy, against defaults
-            // of three and a half. The defaults are tuned for a level where
-            // an enemy is something you walk into; this room has three that
-            // come to YOU — a ball rolling the floor, a rocket circling the
-            // walls, and a robot that follows you up ladders — and a Pilot
-            // who stands still for four seconds while learning the controls
-            // should not lose the game for it.
-            {
-              type: 'world_set_Health_MostHealthProperty',
-              inputs: {ACTOR: me(), VALUE: number(8)},
-            },
-            {
-              type: 'world_set_Health_HealthProperty',
-              inputs: {ACTOR: me(), VALUE: number(8)},
-            },
-            {
-              type: 'world_set_Health_MercyTimeProperty',
-              inputs: {ACTOR: me(), VALUE: number(1.5)},
-            },
-            // Half a tank to start with. A full one crosses the whole room,
-            // which would leave the first two cans as scenery.
-            {
-              type: 'world_set_Jetpack_FuelProperty',
-              inputs: {ACTOR: me(), VALUE: number(50)},
-            },
-            // THE SHOVEL: `z` held, and whichever arrow is held with it — which is
-            // what JETPACK.md asks for ("in the direction they are also holding").
-            // With no arrow at all the direction is nothing, the aimed-at point is
-            // where the Pilot is standing, and the nearest diggable block to that is
-            // the one under its feet. Which is the right answer for a shovel.
-            //
-            // A STEP RATHER THAN A HAT, because holding a key is a state and not a
-            // moment; and polling costs nothing, since digging a block that is
-            // already a hole does nothing (`rules/digging`).
-            {
-              type: 'world_trait_step',
-              fields: {PHASE: 'touch', NAME: 'dig where it is pointing'},
+              type: 'world_do_Digging_DigTowardsAction',
               inputs: {
-                DO: {
-                  block: onlyIf(
-                    {block: {type: 'world_is_key_down', fields: {KEY: 'z'}}},
-                    {
-                      type: 'world_do_Digging_DigTowardsAction',
-                      inputs: {
-                        ACTOR: me(),
-                        VALUE: {
-                          block: {
-                            type: 'world_vector_of',
-                            inputs: {
-                              X: {
-                                block: {
-                                  type: 'math_arithmetic',
-                                  fields: {OP: 'MINUS'},
-                                  inputs: {
-                                    A: keyAsNumber('right arrow'),
-                                    B: keyAsNumber('left arrow'),
-                                  },
-                                },
-                              },
-                              Y: keyAsNumber('down arrow'),
-                            },
+                ACTOR: me(),
+                VALUE: {
+                  block: {
+                    type: 'world_vector_of',
+                    inputs: {
+                      X: {
+                        block: {
+                          type: 'math_arithmetic',
+                          fields: {OP: 'MINUS'},
+                          inputs: {
+                            A: keyAsNumber('right arrow'),
+                            B: keyAsNumber('left arrow'),
                           },
                         },
                       },
+                      Y: keyAsNumber('down arrow'),
                     },
-                  ),
+                  },
                 },
               },
             },
-          ]),
+          ),
         },
       },
-      // THE LADDER, as four moments rather than a poll: up and down each
-      // start a climb, and letting either go ends it. The same blocks
-      // `actors/enhance/climbArrows` writes for a learner — shared rather than
-      // copied, so the Pilot and a learner's actor cannot drift apart — laid
-      // out here where the Pilot's other handlers are.
-      ...climbArrowsHandlers().map((hat, index) => ({
-        ...hat,
-        x: 20,
-        y: 900 + index * 120,
-      })),
-      // The press does BOTH, in this order and with no question round it —
-      // see the header. With fuel, the hop is lost inside the thrust; with an
-      // empty tank, `start flying` does nothing and the hop is all there is.
-      {
-        type: 'world_on_Input_PressesEvent',
-        x: 20,
-        y: 260,
-        fields: {FILTER0: 'space'},
-        next: {
-          block: stack([
-            {type: 'world_do_Jumping_MakeJumpAction', inputs: {VALUE: me()}},
-            {
-              type: 'world_do_Jetpack_StartFlyingAction',
-              inputs: {VALUE: me()},
-            },
-          ]),
-        },
-      },
-      // DOWN, which is free everywhere a pad can be. The Pilot's other use
-      // for it is climbing down a ladder, and a pad on a rung would be a
-      // press that meant two things — so the level does not put one there.
-      {
-        type: 'world_on_Input_PressesEvent',
-        x: 20,
-        y: 540,
-        fields: {FILTER0: 'down arrow'},
-        next: {
-          block: {
-            type: 'world_do_Teleport_UseThePadAction',
-            inputs: {ACTOR: me()},
-          },
-        },
-      },
-      {
-        type: 'world_on_Input_ReleasesEvent',
-        x: 20,
-        y: 400,
-        fields: {FILTER0: 'space'},
-        next: {
-          block: {
-            type: 'world_do_Jetpack_StopFlyingAction',
+    },
+    // THE LADDER, as four moments rather than a poll: up and down each
+    // start a climb, and letting either go ends it. The same blocks
+    // `actors/enhance/climbArrows` writes for a learner — shared rather than
+    // copied, so the Pilot and a learner's actor cannot drift apart — laid
+    // out here where the Pilot's other handlers are.
+    ...climbArrowsHandlers().map((hat, index) => ({
+      ...hat,
+      x: 20,
+      y: 900 + index * 120,
+    })),
+    // The press does BOTH, in this order and with no question round it —
+    // see the header. With fuel, the hop is lost inside the thrust; with an
+    // empty tank, `start flying` does nothing and the hop is all there is.
+    {
+      type: 'world_on_Input_PressesEvent',
+      fields: {FILTER0: 'space'},
+      next: {
+        block: stack([
+          {type: 'world_do_Jumping_MakeJumpAction', inputs: {VALUE: me()}},
+          {
+            type: 'world_do_Jetpack_StartFlyingAction',
             inputs: {VALUE: me()},
           },
+        ]),
+      },
+    },
+    // DOWN, which is free everywhere a pad can be. The Pilot's other use
+    // for it is climbing down a ladder, and a pad on a rung would be a
+    // press that meant two things — so the level does not put one there.
+    {
+      type: 'world_on_Input_PressesEvent',
+      fields: {FILTER0: 'down arrow'},
+      next: {
+        block: {
+          type: 'world_do_Teleport_UseThePadAction',
+          inputs: {ACTOR: me()},
         },
       },
-      // The tank emptying is a moment the player has to be told about, and
-      // this is the only thing in the project that says so. Without it the
-      // jetpack simply stops and the game reads as having broken.
-      {
-        type: 'world_on_Jetpack_RunsOutOfFuelEvent',
-        x: 20,
-        y: 520,
-        next: {
-          block: {
-            type: 'world_print',
-            inputs: {
-              VALUE: {shadow: {type: 'text', fields: {TEXT: 'Out of fuel!'}}},
-            },
+    },
+    {
+      type: 'world_on_Input_ReleasesEvent',
+      fields: {FILTER0: 'space'},
+      next: {
+        block: {
+          type: 'world_do_Jetpack_StopFlyingAction',
+          inputs: {VALUE: me()},
+        },
+      },
+    },
+    // The tank emptying is a moment the player has to be told about, and
+    // this is the only thing in the project that says so. Without it the
+    // jetpack simply stops and the game reads as having broken.
+    {
+      type: 'world_on_Jetpack_RunsOutOfFuelEvent',
+      next: {
+        block: {
+          type: 'world_print',
+          inputs: {
+            VALUE: {shadow: {type: 'text', fields: {TEXT: 'Out of fuel!'}}},
           },
         },
       },
-      refuel('actors/fuelCan', FULL_CAN, 640),
-      refuel('actors/fuelSmall', SMALL_CAN, 760),
-      // The four moments the two rules raise, and what they are FOR. Neither
-      // rule names a picture — a jetpack does not know it has a flame — so
-      // this is where the project says what flying and climbing look like,
-      // and it is four handlers and nothing else.
-      looks('Jetpack_StartsFlyingEvent', playAnimation('Fly'), 880),
-      looks('Jetpack_StopsFlyingEvent', still(), 1000),
-      looks('Climbing_StartsClimbingEvent', playAnimation('Climb'), 1120),
-      looks('Climbing_StopsClimbingEvent', still(), 1240),
-      // A coin is a point BECAUSE THIS LINE SAYS SO. The coin elects the same
-      // trait a gem does and knows nothing about either.
-      {
-        type: 'world_on_Collection_CollectsEvent',
-        x: 20,
-        y: 1360,
-        fields: {FILTER0: 'actors/coin'},
-        next: {
-          block: {
-            type: 'world_do_Scoring_AddToTheScoreAction',
-            inputs: {VALUE: number(1)},
-          },
+    },
+    refuel('actors/fuelCan', FULL_CAN, 640),
+    refuel('actors/fuelSmall', SMALL_CAN, 760),
+    // The four moments the two rules raise, and what they are FOR. Neither
+    // rule names a picture — a jetpack does not know it has a flame — so
+    // this is where the project says what flying and climbing look like,
+    // and it is four handlers and nothing else.
+    looks('Jetpack_StartsFlyingEvent', playAnimation('Fly'), 880),
+    looks('Jetpack_StopsFlyingEvent', still(), 1000),
+    looks('Climbing_StartsClimbingEvent', playAnimation('Climb'), 1120),
+    looks('Climbing_StopsClimbingEvent', still(), 1240),
+    // A coin is a point BECAUSE THIS LINE SAYS SO. The coin elects the same
+    // trait a gem does and knows nothing about either.
+    {
+      type: 'world_on_Collection_CollectsEvent',
+      fields: {FILTER0: 'actors/coin'},
+      next: {
+        block: {
+          type: 'world_do_Scoring_AddToTheScoreAction',
+          inputs: {VALUE: number(1)},
         },
       },
-      // The other ending, and it is Goals' business rather than Health's:
-      // running out of health is a moment, and what a game DOES about one is
-      // the project's to say.
-      {
-        type: 'world_on_Health_RunsOutOfHealthEvent',
-        x: 20,
-        y: 1600,
-        next: {block: {type: 'world_do_Goals_LoseTheGameAction'}},
+    },
+    // The other ending, and it is Goals' business rather than Health's:
+    // running out of health is a moment, and what a game DOES about one is
+    // the project's to say.
+    {
+      type: 'world_on_Health_RunsOutOfHealthEvent',
+      next: {block: {type: 'world_do_Goals_LoseTheGameAction'}},
+    },
+    // …and walking into the way out ends the level, if there is nothing
+    // left to collect. The same question the Door asks itself: see the
+    // header on why neither of them remembers the answer.
+    {
+      type: 'world_on_Collisions_StartsTouchingEvent',
+      fields: {FILTER0: 'actors/door'},
+      next: {
+        block: onlyIf(noneLeft('actors/gem'), {
+          type: 'world_do_Goals_WinTheGameAction',
+        }),
       },
-      // …and walking into the way out ends the level, if there is nothing
-      // left to collect. The same question the Door asks itself: see the
-      // header on why neither of them remembers the answer.
-      {
-        type: 'world_on_Collisions_StartsTouchingEvent',
-        x: 20,
-        y: 1480,
-        fields: {FILTER0: 'actors/door'},
-        next: {
-          block: onlyIf(noneLeft('actors/gem'), {
-            type: 'world_do_Goals_WinTheGameAction',
-          }),
-        },
-      },
-      ...teleportSafely(),
-    ],
-  },
+    },
+    ...teleportSafely(),
+  ],
 });
 
 /** A tile that holds you up and cannot be walked through. */
@@ -897,132 +857,95 @@ const PILOT_ACTOR = JSON.stringify({
  * asking an enemy for health it has not got is asking a question that throws.
  */
 const diggableLedgeActor = (name: string, sprite: string) =>
-  JSON.stringify({
-    blocks: {
-      blocks: [
-        {
-          type: 'world_actor',
-          x: 20,
-          y: 20,
-          fields: {NAME: name},
-          next: {
-            block: stack([
-              useTrait('Gravity#ActsAsGroundTrait'),
-              useTrait('Solid Bodies#SolidTrait'),
-              useTrait('Digging#CanBeDugTrait'),
-              // Long enough to climb down through and look around, short
-              // enough that a hole is not a staircase.
-              {
-                type: 'world_set_Digging_ClosesAfterProperty',
-                inputs: {ACTOR: me(), VALUE: number(3)},
-              },
-              {type: 'world_set_sprite', fields: {SPRITE: sprite}},
-            ]),
-          },
-        },
-        // A HOLE HAS TO LOOK LIKE ONE, which is the half this was missing:
-        // `passes through things` is invisible, so a dug ledge went on looking
-        // like solid floor while the Pilot fell through it, and the mechanic
-        // read as a bug. Faded rather than switched, because the moment a
-        // block gives way is the moment worth seeing — and the two events the
-        // rule already raises are exactly the two ends of it.
-        {
-          type: 'world_define_tween',
-          id: 'ledgeGiveWay',
-          x: 320,
-          y: 20,
-          fields: {NAME: 'give way', CURVE: 'linear'},
-          inputs: {
-            SECONDS: number(0.25),
-            DO: {
-              block: {
-                type: 'world_set_Appearance_OpacityProperty',
-                inputs: {ACTOR: me(), VALUE: number(0.25)},
-              },
-            },
-          },
-        },
-        {
-          type: 'world_define_tween',
-          id: 'ledgeComeBack',
-          x: 320,
-          y: 200,
-          fields: {NAME: 'come back', CURVE: 'linear'},
-          inputs: {
-            SECONDS: number(0.25),
-            DO: {
-              block: {
-                type: 'world_set_Appearance_OpacityProperty',
-                inputs: {ACTOR: me(), VALUE: number(1)},
-              },
-            },
-          },
-        },
-        {
-          type: 'world_on_Digging_IsDugEvent',
-          x: 320,
-          y: 380,
-          next: {
+  actorDocument({
+    name: name,
+    sprite: sprite,
+    traits: [
+      'Gravity#ActsAsGroundTrait',
+      'Solid Bodies#SolidTrait',
+      'Digging#CanBeDugTrait',
+    ],
+    values: [
+      // Long enough to climb down through and look around, short
+      // enough that a hole is not a staircase.
+      {
+        setter: 'world_set_Digging_ClosesAfterProperty',
+        type: 'number',
+        value: 3,
+      },
+    ],
+    code: [
+      // A HOLE HAS TO LOOK LIKE ONE, which is the half this was missing:
+      // `passes through things` is invisible, so a dug ledge went on looking
+      // like solid floor while the Pilot fell through it, and the mechanic
+      // read as a bug. Faded rather than switched, because the moment a
+      // block gives way is the moment worth seeing — and the two events the
+      // rule already raises are exactly the two ends of it.
+      {
+        type: 'world_define_tween',
+        id: 'ledgeGiveWay',
+        fields: {NAME: 'give way', CURVE: 'linear'},
+        inputs: {
+          SECONDS: number(0.25),
+          DO: {
             block: {
+              type: 'world_set_Appearance_OpacityProperty',
+              inputs: {ACTOR: me(), VALUE: number(0.25)},
+            },
+          },
+        },
+      },
+      {
+        type: 'world_define_tween',
+        id: 'ledgeComeBack',
+        fields: {NAME: 'come back', CURVE: 'linear'},
+        inputs: {
+          SECONDS: number(0.25),
+          DO: {
+            block: {
+              type: 'world_set_Appearance_OpacityProperty',
+              inputs: {ACTOR: me(), VALUE: number(1)},
+            },
+          },
+        },
+      },
+      {
+        type: 'world_on_Digging_IsDugEvent',
+        next: {
+          block: {
+            type: 'world_play_tween',
+            fields: {TWEEN: 'ledgeGiveWay'},
+            inputs: {ACTOR: me()},
+          },
+        },
+      },
+      {
+        type: 'world_on_Digging_FillsInEvent',
+        next: {
+          block: stack([
+            {
               type: 'world_play_tween',
-              fields: {TWEEN: 'ledgeGiveWay'},
+              fields: {TWEEN: 'ledgeComeBack'},
               inputs: {ACTOR: me()},
             },
-          },
-        },
-        {
-          type: 'world_on_Digging_FillsInEvent',
-          x: 20,
-          y: 220,
-          next: {
-            block: stack([
+            onlyIf(
+              // COUNTED rather than asked of one actor. `⟨x⟩ is a ⟨Pilot⟩`
+              // reads the kind off the actor it is given, and the first
+              // actor of an empty list is no actor at all — which is a
+              // question with nothing to ask it of, and it throws. Counting
+              // how many Pilots are in the hole is the same question with an
+              // answer for none of them.
               {
-                type: 'world_play_tween',
-                fields: {TWEEN: 'ledgeComeBack'},
-                inputs: {ACTOR: me()},
-              },
-              onlyIf(
-                // COUNTED rather than asked of one actor. `⟨x⟩ is a ⟨Pilot⟩`
-                // reads the kind off the actor it is given, and the first
-                // actor of an empty list is no actor at all — which is a
-                // question with nothing to ask it of, and it throws. Counting
-                // how many Pilots are in the hole is the same question with an
-                // answer for none of them.
-                {
-                  block: {
-                    type: 'logic_compare',
-                    fields: {OP: 'GT'},
-                    inputs: {
-                      A: {
-                        block: {
-                          type: 'world_count_of_kind',
-                          fields: {TYPE: 'actors/pilot'},
-                          inputs: {
-                            LIST: {
-                              block: {
-                                type: 'world_get_Collisions_ContactsProperty',
-                                inputs: {ACTOR: me()},
-                              },
-                            },
-                          },
-                        },
-                      },
-                      B: number(0),
-                    },
-                  },
-                },
-                {
-                  type: 'world_do_Health_TakeDamageAction',
+                block: {
+                  type: 'logic_compare',
+                  fields: {OP: 'GT'},
                   inputs: {
-                    // WHOEVER IS IN IT, rather than looking the Pilot up
-                    // again: the question above has already established that
-                    // the thing in this hole is one, and asking the world for
-                    // a Pilot would hurt the wrong one in a room with two.
-                    ACTOR: {
+                    A: {
                       block: {
-                        type: 'world_first_actor',
+                        type: 'world_count_of_kind',
+                        fields: {TYPE: 'actors/pilot'},
                         inputs: {
-                          SOURCE: {
+                          LIST: {
                             block: {
                               type: 'world_get_Collisions_ContactsProperty',
                               inputs: {ACTOR: me()},
@@ -1031,39 +954,51 @@ const diggableLedgeActor = (name: string, sprite: string) =>
                         },
                       },
                     },
-                    VALUE: number(1),
+                    B: number(0),
                   },
                 },
-              ),
-            ]),
-          },
+              },
+              {
+                type: 'world_do_Health_TakeDamageAction',
+                inputs: {
+                  // WHOEVER IS IN IT, rather than looking the Pilot up
+                  // again: the question above has already established that
+                  // the thing in this hole is one, and asking the world for
+                  // a Pilot would hurt the wrong one in a room with two.
+                  ACTOR: {
+                    block: {
+                      type: 'world_first_actor',
+                      inputs: {
+                        SOURCE: {
+                          block: {
+                            type: 'world_get_Collisions_ContactsProperty',
+                            inputs: {ACTOR: me()},
+                          },
+                        },
+                      },
+                    },
+                  },
+                  VALUE: number(1),
+                },
+              },
+            ),
+          ]),
         },
-      ],
-    },
+      },
+    ],
   });
 
 const tileActor = (name: string, sprite: string) =>
-  JSON.stringify({
-    blocks: {
-      blocks: [
-        {
-          type: 'world_actor',
-          x: 20,
-          y: 20,
-          fields: {NAME: name},
-          next: {
-            block: stack([
-              // The pair that makes an ordinary floor ordinary: "Acts as
-              // Ground" alone is a one-way platform you rise through, which
-              // is not what a wall is (`rules/gravity`).
-              useTrait('Gravity#ActsAsGroundTrait'),
-              useTrait('Solid Bodies#SolidTrait'),
-              {type: 'world_set_sprite', fields: {SPRITE: sprite}},
-            ]),
-          },
-        },
-      ],
-    },
+  actorDocument({
+    name: name,
+    sprite: sprite,
+    traits: [
+      // The pair that makes an ordinary floor ordinary: "Acts as
+      // Ground" alone is a one-way platform you rise through, which
+      // is not what a wall is (`rules/gravity`).
+      'Gravity#ActsAsGroundTrait',
+      'Solid Bodies#SolidTrait',
+    ],
   });
 
 /**
@@ -1074,25 +1009,10 @@ const tileActor = (name: string, sprite: string) =>
  * floor.
  */
 const actingTile = (name: string, sprite: string, trait: string) =>
-  JSON.stringify({
-    blocks: {
-      blocks: [
-        {
-          type: 'world_actor',
-          x: 20,
-          y: 20,
-          fields: {NAME: name},
-          next: {
-            block: stack([
-              useTrait('Gravity#ActsAsGroundTrait'),
-              useTrait('Solid Bodies#SolidTrait'),
-              useTrait(trait),
-              {type: 'world_set_sprite', fields: {SPRITE: sprite}},
-            ]),
-          },
-        },
-      ],
-    },
+  actorDocument({
+    name: name,
+    sprite: sprite,
+    traits: ['Gravity#ActsAsGroundTrait', 'Solid Bodies#SolidTrait', trait],
   });
 
 /**
@@ -1102,24 +1022,10 @@ const actingTile = (name: string, sprite: string, trait: string) =>
  * to stand: landing asks which way you were going, so the rungs below the one
  * you cross are passed straight through (`rules/gravity`).
  */
-const RUNG_ACTOR = JSON.stringify({
-  blocks: {
-    blocks: [
-      {
-        type: 'world_actor',
-        x: 20,
-        y: 20,
-        fields: {NAME: 'Rung'},
-        next: {
-          block: stack([
-            useTrait('Climbing#CanBeClimbedTrait'),
-            useTrait('Gravity#ActsAsGroundTrait'),
-            {type: 'world_set_sprite', fields: {SPRITE: 'ladder.png'}},
-          ]),
-        },
-      },
-    ],
-  },
+const RUNG_ACTOR = actorDocument({
+  name: 'Rung',
+  sprite: 'ladder.png',
+  traits: ['Climbing#CanBeClimbedTrait', 'Gravity#ActsAsGroundTrait'],
 });
 
 /**
@@ -1138,68 +1044,61 @@ const enemyActor = (
   aim: number,
   points: boolean,
 ) =>
-  JSON.stringify({
-    blocks: {
-      blocks: [
-        {
-          type: 'world_actor',
-          x: 20,
-          y: 20,
-          fields: {NAME: name},
-          next: {
-            block: stack([
-              useTrait('Turning#TurnsWhenItHitsSomethingTrait'),
-              // Both axes, because a rocket travels on both. See the header:
-              // the edge stops it, and being stopped is what makes it turn.
-              useTrait('Boundaries#StaysAcrossTrait'),
-              useTrait('Boundaries#StaysDownTrait'),
-              ...(falls ? [useTrait('Gravity#AffectedByGravityTrait')] : []),
-              // What makes it an enemy rather than an obstacle. It does not
-              // know who it damages, and the Pilot does not know what damaged
-              // it (`rules/health`).
-              useTrait('Health#DealsDamageTrait'),
-              // An enemy has no choice about a pad, which is the other half
-              // of the mechanic: a shortcut you can take is a shortcut
-              // something else is already coming through.
-              useTrait('Teleport#UsesTeleportPadsTrait'),
-              {
-                type: 'world_set_Teleport_TakesAnyPadItTouchesProperty',
-                inputs: {ACTOR: me(), VALUE: truth(true)},
-              },
-              // Shorter than the Pilot's, which is the difference between a
-              // thing that happens TO you and one you asked for.
-              {
-                type: 'world_set_Teleport_TravelSecondsProperty',
-                inputs: {ACTOR: me(), VALUE: number(ENEMY_TRIP)},
-              },
-              {type: 'world_set_sprite', fields: {SPRITE: sprite}},
-              {
-                type: 'world_set_Turning_TurnByProperty',
-                inputs: {ACTOR: me(), VALUE: number(turnBy)},
-              },
-              {
-                type: 'world_set_Turning_HeadingProperty',
-                inputs: {ACTOR: me(), VALUE: number(aim)},
-              },
-              // Faster than the rule's default of one unit, which is tuned
-              // for a ten-tile room. This one is twenty-six across: at a
-              // hundred pixels a second a hazard takes eight seconds to
-              // cross it, which is a hazard you stroll past.
-              {
-                type: 'world_set_Turning_TravelSpeedProperty',
-                inputs: {ACTOR: me(), VALUE: number(1.8)},
-              },
-              // The rocket's nose follows its heading; the ball is round and
-              // a rotating highlight would be the only thing it said.
-              {
-                type: 'world_set_Turning_PointsWhereItGoesProperty',
-                inputs: {ACTOR: me(), VALUE: truth(points)},
-              },
-            ]),
-          },
-        },
-      ],
-    },
+  actorDocument({
+    name: name,
+    sprite: sprite,
+    traits: [
+      'Turning#TurnsWhenItHitsSomethingTrait',
+      // Both axes, because a rocket travels on both. See the header:
+      // the edge stops it, and being stopped is what makes it turn.
+      'Boundaries#StaysAcrossTrait',
+      'Boundaries#StaysDownTrait',
+      ...(falls ? ['Gravity#AffectedByGravityTrait'] : []),
+      // What makes it an enemy rather than an obstacle. It does not
+      // know who it damages, and the Pilot does not know what damaged
+      // it (`rules/health`).
+      'Health#DealsDamageTrait',
+      // An enemy has no choice about a pad, which is the other half
+      // of the mechanic: a shortcut you can take is a shortcut
+      // something else is already coming through.
+      'Teleport#UsesTeleportPadsTrait',
+    ],
+    values: [
+      {
+        setter: 'world_set_Teleport_TakesAnyPadItTouchesProperty',
+        type: 'boolean',
+        value: true,
+      },
+      // Shorter than the Pilot's, which is the difference between a
+      // thing that happens TO you and one you asked for.
+      {
+        setter: 'world_set_Teleport_TravelSecondsProperty',
+        type: 'number',
+        value: ENEMY_TRIP,
+      },
+      {
+        setter: 'world_set_Turning_TurnByProperty',
+        type: 'number',
+        value: turnBy,
+      },
+      {setter: 'world_set_Turning_HeadingProperty', type: 'number', value: aim},
+      // Faster than the rule's default of one unit, which is tuned
+      // for a ten-tile room. This one is twenty-six across: at a
+      // hundred pixels a second a hazard takes eight seconds to
+      // cross it, which is a hazard you stroll past.
+      {
+        setter: 'world_set_Turning_TravelSpeedProperty',
+        type: 'number',
+        value: 1.8,
+      },
+      // The rocket's nose follows its heading; the ball is round and
+      // a rotating highlight would be the only thing it said.
+      {
+        setter: 'world_set_Turning_PointsWhereItGoesProperty',
+        type: 'boolean',
+        value: points,
+      },
+    ],
   });
 
 /**
@@ -1235,116 +1134,102 @@ const enemyActor = (
  * cannot disagree with the behavior if there is only one fact.
  */
 const switchedWallActor = (name: string, color: string) =>
-  JSON.stringify({
-    blocks: {
-      blocks: [
-        {
-          type: 'world_actor',
-          x: 20,
-          y: 20,
-          fields: {NAME: name},
-          next: {
-            block: stack([
-              useTrait('Switches#IsASwitchedWallTrait'),
-              useTrait('Gravity#ActsAsGroundTrait'),
-              useTrait('Solid Bodies#SolidTrait'),
-              {
-                type: 'world_set_Switches_WallColorProperty',
-                inputs: {ACTOR: me(), VALUE: swatch(color)},
-              },
-              {
-                type: 'world_trait_step',
-                fields: {PHASE: 'react', NAME: 'look like what it is'},
-                inputs: {
-                  DO: {
-                    block: {
-                      type: 'world_set_Appearance_OpacityProperty',
-                      inputs: {
-                        ACTOR: me(),
-                        VALUE: {
-                          block: {
-                            type: 'logic_ternary',
-                            inputs: {
-                              IF: {
-                                block: {
-                                  type: 'world_get_Collisions_PassesThroughThingsProperty',
-                                  inputs: {ACTOR: me()},
-                                },
-                              },
-                              THEN: number(0.25),
-                              ELSE: number(1),
-                            },
-                          },
+  actorDocument({
+    name: name,
+    traits: [
+      'Switches#IsASwitchedWallTrait',
+      'Gravity#ActsAsGroundTrait',
+      'Solid Bodies#SolidTrait',
+    ],
+    values: [
+      {
+        setter: 'world_set_Switches_WallColorProperty',
+        type: 'color',
+        value: color,
+      },
+    ],
+    code: [
+      {
+        type: 'world_trait_step',
+        fields: {PHASE: 'react', NAME: 'look like what it is'},
+        inputs: {
+          DO: {
+            block: {
+              type: 'world_set_Appearance_OpacityProperty',
+              inputs: {
+                ACTOR: me(),
+                VALUE: {
+                  block: {
+                    type: 'logic_ternary',
+                    inputs: {
+                      IF: {
+                        block: {
+                          type: 'world_get_Collisions_PassesThroughThingsProperty',
+                          inputs: {ACTOR: me()},
                         },
                       },
+                      THEN: number(0.25),
+                      ELSE: number(1),
                     },
                   },
                 },
               },
-              {
-                type: 'world_define_drawing',
-                inputs: {
-                  WIDTH: {shadow: {type: 'math_number', fields: {NUM: 32}}},
-                  HEIGHT: {shadow: {type: 'math_number', fields: {NUM: 32}}},
-                  DO: {
-                    block: stack([
-                      fill({
-                        block: {
-                          type: 'world_get_Switches_WallColorProperty',
-                          inputs: {ACTOR: me()},
-                        },
-                      }),
-                      rectangle(0, 0, 32, 32),
-                    ]),
-                  },
+            },
+          },
+        },
+      },
+      {
+        type: 'world_define_drawing',
+        inputs: {
+          WIDTH: {shadow: {type: 'math_number', fields: {NUM: 32}}},
+          HEIGHT: {shadow: {type: 'math_number', fields: {NUM: 32}}},
+          DO: {
+            block: stack([
+              fill({
+                block: {
+                  type: 'world_get_Switches_WallColorProperty',
+                  inputs: {ACTOR: me()},
                 },
-              },
+              }),
+              rectangle(0, 0, 32, 32),
             ]),
           },
         },
-      ],
-    },
+      },
+    ],
   });
 
 const switchActor = (name: string, color: string) =>
-  JSON.stringify({
-    blocks: {
-      blocks: [
-        {
-          type: 'world_actor',
-          x: 20,
-          y: 20,
-          fields: {NAME: name},
-          next: {
+  actorDocument({
+    name: name,
+    traits: ['Switches#IsASwitchTrait'],
+    values: [
+      {
+        setter: 'world_set_Switches_SwitchColorProperty',
+        type: 'color',
+        value: color,
+      },
+    ],
+    code: [
+      {
+        type: 'world_define_drawing',
+        inputs: {
+          WIDTH: {shadow: {type: 'math_number', fields: {NUM: 32}}},
+          HEIGHT: {shadow: {type: 'math_number', fields: {NUM: 32}}},
+          DO: {
             block: stack([
-              useTrait('Switches#IsASwitchTrait'),
-              {
-                type: 'world_set_Switches_SwitchColorProperty',
-                inputs: {ACTOR: me(), VALUE: swatch(color)},
-              },
-              {
-                type: 'world_define_drawing',
-                inputs: {
-                  WIDTH: {shadow: {type: 'math_number', fields: {NUM: 32}}},
-                  HEIGHT: {shadow: {type: 'math_number', fields: {NUM: 32}}},
-                  DO: {
-                    block: stack([
-                      fill({
-                        block: {
-                          type: 'world_get_Switches_SwitchColorProperty',
-                          inputs: {ACTOR: me()},
-                        },
-                      }),
-                      rectangle(4, 20, 24, 12),
-                    ]),
-                  },
+              fill({
+                block: {
+                  type: 'world_get_Switches_SwitchColorProperty',
+                  inputs: {ACTOR: me()},
                 },
-              },
+              }),
+              rectangle(4, 20, 24, 12),
             ]),
           },
         },
-      ],
-    },
+      },
+    ],
   });
 
 /**
@@ -1373,96 +1258,77 @@ const switchActor = (name: string, color: string) =>
  * traveler without the traveler defining anything.
  */
 const padActor = (seconds: number) =>
-  JSON.stringify({
-    blocks: {
-      blocks: [
-        {
-          type: 'world_actor',
-          x: 20,
-          y: 20,
-          fields: {NAME: 'Pad'},
-          next: {
+  actorDocument({
+    name: 'Pad',
+    traits: ['Teleport#IsATeleportPadTrait'],
+    code: [
+      {
+        type: 'world_define_drawing',
+        inputs: {
+          WIDTH: {shadow: {type: 'math_number', fields: {NUM: 32}}},
+          HEIGHT: {shadow: {type: 'math_number', fields: {NUM: 32}}},
+          DO: {
             block: stack([
-              useTrait('Teleport#IsATeleportPadTrait'),
-              {
-                type: 'world_define_drawing',
-                inputs: {
-                  WIDTH: {shadow: {type: 'math_number', fields: {NUM: 32}}},
-                  HEIGHT: {shadow: {type: 'math_number', fields: {NUM: 32}}},
-                  DO: {
-                    block: stack([
-                      fill({
-                        block: {
-                          type: 'world_get_Teleport_PadColorProperty',
-                          inputs: {ACTOR: me()},
-                        },
-                      }),
-                      rectangle(0, 22, 32, 10),
-                    ]),
-                  },
+              fill({
+                block: {
+                  type: 'world_get_Teleport_PadColorProperty',
+                  inputs: {ACTOR: me()},
                 },
-              },
+              }),
+              rectangle(0, 22, 32, 10),
             ]),
           },
         },
-        {
-          type: 'world_define_tween',
-          id: 'padFadeOut',
-          x: 320,
-          y: 20,
-          fields: {NAME: 'fade out', CURVE: 'linear'},
-          inputs: {
-            SECONDS: number(seconds),
-            DO: {
-              block: {
-                type: 'world_set_Appearance_OpacityProperty',
-                inputs: {ACTOR: me(), VALUE: number(0)},
-              },
-            },
-          },
-        },
-        {
-          type: 'world_define_tween',
-          id: 'padFadeIn',
-          x: 320,
-          y: 200,
-          fields: {NAME: 'fade in', CURVE: 'linear'},
-          inputs: {
-            SECONDS: number(seconds),
-            DO: {
-              block: {
-                type: 'world_set_Appearance_OpacityProperty',
-                inputs: {ACTOR: me(), VALUE: number(1)},
-              },
-            },
-          },
-        },
-        {
-          type: 'world_on_Teleport_SendsEvent',
-          x: 320,
-          y: 380,
-          next: {
+      },
+      {
+        type: 'world_define_tween',
+        id: 'padFadeOut',
+        fields: {NAME: 'fade out', CURVE: 'linear'},
+        inputs: {
+          SECONDS: number(seconds),
+          DO: {
             block: {
-              type: 'world_play_tween',
-              fields: {TWEEN: 'padFadeOut'},
-              inputs: {ACTOR: {block: {type: 'world_object_actor'}}},
+              type: 'world_set_Appearance_OpacityProperty',
+              inputs: {ACTOR: me(), VALUE: number(0)},
             },
           },
         },
-        {
-          type: 'world_on_Teleport_ReceivesEvent',
-          x: 320,
-          y: 500,
-          next: {
+      },
+      {
+        type: 'world_define_tween',
+        id: 'padFadeIn',
+        fields: {NAME: 'fade in', CURVE: 'linear'},
+        inputs: {
+          SECONDS: number(seconds),
+          DO: {
             block: {
-              type: 'world_play_tween',
-              fields: {TWEEN: 'padFadeIn'},
-              inputs: {ACTOR: {block: {type: 'world_object_actor'}}},
+              type: 'world_set_Appearance_OpacityProperty',
+              inputs: {ACTOR: me(), VALUE: number(1)},
             },
           },
         },
-      ],
-    },
+      },
+      {
+        type: 'world_on_Teleport_SendsEvent',
+        next: {
+          block: {
+            type: 'world_play_tween',
+            fields: {TWEEN: 'padFadeOut'},
+            inputs: {ACTOR: {block: {type: 'world_object_actor'}}},
+          },
+        },
+      },
+      {
+        type: 'world_on_Teleport_ReceivesEvent',
+        next: {
+          block: {
+            type: 'world_play_tween',
+            fields: {TWEEN: 'padFadeIn'},
+            inputs: {ACTOR: {block: {type: 'world_object_actor'}}},
+          },
+        },
+      },
+    ],
   });
 
 /**
@@ -1487,79 +1353,67 @@ const padActor = (seconds: number) =>
  * mechanic — the mechanic is `rules/flapping`, and the header there is the
  * argument for it.
  */
-const BAT_ACTOR = JSON.stringify({
-  blocks: {
-    blocks: [
-      {
-        type: 'world_actor',
-        x: 20,
-        y: 20,
-        fields: {NAME: 'Bat'},
-        next: {
-          block: stack([
-            useTrait('Flapping#FlapsAndGlidesTrait'),
-            useTrait('Health#DealsDamageTrait'),
-            // Every enemy takes any pad it touches, this one included — and
-            // it is the one that reaches the pads on the high ledges, since
-            // nothing else in the room can get up there without a tank.
-            useTrait('Teleport#UsesTeleportPadsTrait'),
-            {
-              type: 'world_set_Teleport_TakesAnyPadItTouchesProperty',
-              inputs: {ACTOR: me(), VALUE: truth(true)},
-            },
-            {
-              type: 'world_set_Teleport_TravelSecondsProperty',
-              inputs: {ACTOR: me(), VALUE: number(ENEMY_TRIP)},
-            },
-            // Both axes, unlike the Robot's: a bat can reach the ceiling, and
-            // nothing else in the room stops it there.
-            useTrait('Boundaries#StaysAcrossTrait'),
-            useTrait('Boundaries#StaysDownTrait'),
-            {type: 'world_set_sprite', fields: {SPRITE: 'bat.png'}},
-            // Slower than the Pilot's walk of 1.5, and that is the balance
-            // rather than a detail: a bat you cannot outrun is a bat you have
-            // to fight, and there is nothing in this level to fight with.
-            // Under it is where the player is meant to go, and the long slow
-            // flapping phase is what gives them time to get there.
-            {
-              type: 'world_set_Flapping_GlideSpeedProperty',
-              inputs: {ACTOR: me(), VALUE: number(1)},
-            },
-            {
-              type: 'world_set_Flapping_FlapSpeedProperty',
-              inputs: {ACTOR: me(), VALUE: number(0.6)},
-            },
-            {
-              type: 'world_set_Flapping_FlapLiftProperty',
-              inputs: {ACTOR: me(), VALUE: number(1.1)},
-            },
-          ]),
-        },
-      },
-      // WHO IT HUNTS, on the frame it arrives — a row under `define actor` is
-      // a declaration and has no world to ask, which is the same trap the
-      // Robot's own handler below is written to avoid.
-      {
-        type: 'world_on_Space_CreatedEvent',
-        x: 20,
-        y: 220,
-        next: {
-          block: {
-            type: 'world_set_Flapping_ActorToHuntProperty',
-            inputs: {
-              ACTOR: me(),
-              VALUE: {
-                block: {
-                  type: 'world_first_actor',
-                  inputs: {SOURCE: kind('actors/pilot')},
-                },
+const BAT_ACTOR = actorDocument({
+  name: 'Bat',
+  sprite: 'bat.png',
+  traits: [
+    'Flapping#FlapsAndGlidesTrait',
+    'Health#DealsDamageTrait',
+    // Every enemy takes any pad it touches, this one included — and
+    // it is the one that reaches the pads on the high ledges, since
+    // nothing else in the room can get up there without a tank.
+    'Teleport#UsesTeleportPadsTrait',
+    // Both axes, unlike the Robot's: a bat can reach the ceiling, and
+    // nothing else in the room stops it there.
+    'Boundaries#StaysAcrossTrait',
+    'Boundaries#StaysDownTrait',
+  ],
+  values: [
+    {
+      setter: 'world_set_Teleport_TakesAnyPadItTouchesProperty',
+      type: 'boolean',
+      value: true,
+    },
+    {
+      setter: 'world_set_Teleport_TravelSecondsProperty',
+      type: 'number',
+      value: ENEMY_TRIP,
+    },
+    // Slower than the Pilot's walk of 1.5, and that is the balance
+    // rather than a detail: a bat you cannot outrun is a bat you have
+    // to fight, and there is nothing in this level to fight with.
+    // Under it is where the player is meant to go, and the long slow
+    // flapping phase is what gives them time to get there.
+    {setter: 'world_set_Flapping_GlideSpeedProperty', type: 'number', value: 1},
+    {
+      setter: 'world_set_Flapping_FlapSpeedProperty',
+      type: 'number',
+      value: 0.6,
+    },
+    {setter: 'world_set_Flapping_FlapLiftProperty', type: 'number', value: 1.1},
+  ],
+  code: [
+    // WHO IT HUNTS, on the frame it arrives — what the actor declares has
+    // no world to ask, which is the same trap the
+    // Robot's own handler below is written to avoid.
+    {
+      type: 'world_on_Space_CreatedEvent',
+      next: {
+        block: {
+          type: 'world_set_Flapping_ActorToHuntProperty',
+          inputs: {
+            ACTOR: me(),
+            VALUE: {
+              block: {
+                type: 'world_first_actor',
+                inputs: {SOURCE: kind('actors/pilot')},
               },
             },
           },
         },
       },
-    ],
-  },
+    },
+  ],
 });
 
 /**
@@ -1585,316 +1439,119 @@ const BAT_ACTOR = JSON.stringify({
  * never have to work out that the spring and the shuriken are the same rule.
  */
 const springActor = () =>
-  JSON.stringify({
-    blocks: {
-      blocks: [
-        {
-          type: 'world_actor',
-          x: 20,
-          y: 20,
-          fields: {NAME: 'Spring'},
-          next: {
-            block: stack([
-              useTrait('Turning#TurnsWhenItHitsSomethingTrait'),
-              useTrait('Health#DealsDamageTrait'),
-              useTrait('Boundaries#StaysDownTrait'),
-              {type: 'world_set_sprite', fields: {SPRITE: 'spring.png'}},
-              // Straight up, and a half circle when it gets nowhere. No
-              // gravity at all: a spring that fell would be a ball.
-              {
-                type: 'world_set_Turning_HeadingProperty',
-                inputs: {ACTOR: me(), VALUE: number(-90)},
-              },
-              {
-                type: 'world_set_Turning_TurnByProperty',
-                inputs: {ACTOR: me(), VALUE: number(180)},
-              },
-              {
-                type: 'world_set_Turning_TravelSpeedProperty',
-                inputs: {ACTOR: me(), VALUE: number(2.4)},
-              },
-            ]),
-          },
-        },
-      ],
-    },
+  actorDocument({
+    name: 'Spring',
+    sprite: 'spring.png',
+    traits: [
+      'Turning#TurnsWhenItHitsSomethingTrait',
+      'Health#DealsDamageTrait',
+      'Boundaries#StaysDownTrait',
+    ],
+    values: [
+      // Straight up, and a half circle when it gets nowhere. No
+      // gravity at all: a spring that fell would be a ball.
+      {setter: 'world_set_Turning_HeadingProperty', type: 'number', value: -90},
+      {setter: 'world_set_Turning_TurnByProperty', type: 'number', value: 180},
+      {
+        setter: 'world_set_Turning_TravelSpeedProperty',
+        type: 'number',
+        value: 2.4,
+      },
+    ],
   });
 
 const shurikenActor = () =>
-  JSON.stringify({
-    blocks: {
-      blocks: [
-        {
-          type: 'world_actor',
-          x: 20,
-          y: 20,
-          fields: {NAME: 'Shuriken'},
-          next: {
-            block: stack([
-              useTrait('Turning#TurnsWhenItHitsSomethingTrait'),
-              useTrait('Health#DealsDamageTrait'),
-              useTrait('Boundaries#StaysAcrossTrait'),
-              useTrait('Boundaries#StaysDownTrait'),
-              {type: 'world_set_sprite', fields: {SPRITE: 'shuriken.png'}},
-              // Off the diagonal, so that its first bounce is a reflection
-              // rather than a reversal — aimed along an axis it would come
-              // straight back and never show what it is.
-              {
-                type: 'world_set_Turning_HeadingProperty',
-                inputs: {ACTOR: me(), VALUE: number(35)},
-              },
-              {
-                type: 'world_set_Turning_BouncesOffWhatStopsItProperty',
-                inputs: {ACTOR: me(), VALUE: truth(true)},
-              },
-              {
-                type: 'world_set_Turning_TravelSpeedProperty',
-                inputs: {ACTOR: me(), VALUE: number(2)},
-              },
-              // THE SPIN, which is the level's and not the rule's: `points where it
-              // goes` would aim it, and a shuriken does not point anywhere. Turning
-              // the drawing a little every frame is all a spin is.
-              {
-                type: 'world_trait_step',
-                fields: {PHASE: 'react', NAME: 'spin'},
-                inputs: {
-                  DO: {
-                    block: {
-                      type: 'world_set_Space_RotationProperty',
-                      inputs: {
-                        ACTOR: me(),
-                        VALUE: {
-                          block: {
-                            type: 'math_arithmetic',
-                            fields: {OP: 'ADD'},
-                            inputs: {
-                              A: {
-                                block: {
-                                  type: 'world_get_Space_RotationProperty',
-                                  inputs: {ACTOR: me()},
-                                },
-                              },
-                              B: number(9),
-                            },
-                          },
+  actorDocument({
+    name: 'Shuriken',
+    sprite: 'shuriken.png',
+    traits: [
+      'Turning#TurnsWhenItHitsSomethingTrait',
+      'Health#DealsDamageTrait',
+      'Boundaries#StaysAcrossTrait',
+      'Boundaries#StaysDownTrait',
+    ],
+    values: [
+      // Off the diagonal, so that its first bounce is a reflection
+      // rather than a reversal — aimed along an axis it would come
+      // straight back and never show what it is.
+      {setter: 'world_set_Turning_HeadingProperty', type: 'number', value: 35},
+      {
+        setter: 'world_set_Turning_BouncesOffWhatStopsItProperty',
+        type: 'boolean',
+        value: true,
+      },
+      {
+        setter: 'world_set_Turning_TravelSpeedProperty',
+        type: 'number',
+        value: 2,
+      },
+    ],
+    code: [
+      // THE SPIN, which is the level's and not the rule's: `points where it
+      // goes` would aim it, and a shuriken does not point anywhere. Turning
+      // the drawing a little every frame is all a spin is.
+      {
+        type: 'world_trait_step',
+        fields: {PHASE: 'react', NAME: 'spin'},
+        inputs: {
+          DO: {
+            block: {
+              type: 'world_set_Space_RotationProperty',
+              inputs: {
+                ACTOR: me(),
+                VALUE: {
+                  block: {
+                    type: 'math_arithmetic',
+                    fields: {OP: 'ADD'},
+                    inputs: {
+                      A: {
+                        block: {
+                          type: 'world_get_Space_RotationProperty',
+                          inputs: {ACTOR: me()},
                         },
                       },
+                      B: number(9),
                     },
                   },
                 },
               },
-            ]),
+            },
           },
         },
-      ],
-    },
+      },
+    ],
   });
 
 const eyeballActor = () =>
-  JSON.stringify({
-    blocks: {
-      blocks: [
-        {
-          type: 'world_actor',
-          x: 20,
-          y: 20,
-          fields: {NAME: 'Eyeball'},
-          next: {
-            block: stack([
-              useTrait('Steering#ChasesTrait'),
-              useTrait('Health#DealsDamageTrait'),
-              // THE ONE THING A WALL DOES NOT STOP. `ignores walls` is the
-              // mover's fact rather than the wall's, and is read by nothing
-              // but Solid — so it still touches, and still hurts, which
-              // `passes through things` would have taken away.
-              {
-                type: 'world_set_Physics_IgnoresWallsProperty',
-                inputs: {ACTOR: me(), VALUE: truth(true)},
-              },
-              // Slow, because nothing in the room can be put between you and
-              // it: the only answer is to keep moving, and that has to be an
-              // answer a player can carry out.
-              {
-                type: 'world_set_Steering_ChaseSpeedProperty',
-                inputs: {ACTOR: me(), VALUE: number(0.55)},
-              },
-              {type: 'world_set_sprite', fields: {SPRITE: 'eyeball.png'}},
-            ]),
-          },
-        },
-        {
-          type: 'world_on_Space_CreatedEvent',
-          x: 20,
-          y: 220,
-          next: {
-            block: {
-              type: 'world_set_Steering_ActorToChaseProperty',
-              inputs: {
-                ACTOR: me(),
-                VALUE: {
-                  block: {
-                    type: 'world_first_actor',
-                    inputs: {SOURCE: kind('actors/pilot')},
-                  },
-                },
-              },
-            },
-          },
-        },
-      ],
-    },
-  });
-
-/** `a random whole number from ⟨low⟩ to ⟨high⟩`. */
-const randomFrom = (low: number, high: number) => ({
-  block: {
-    type: 'math_random_int',
-    inputs: {FROM: number(low), TO: number(high)},
-  },
-});
-
-const blobActor = () =>
-  JSON.stringify({
-    blocks: {
-      blocks: [
-        {
-          type: 'world_actor',
-          x: 20,
-          y: 20,
-          fields: {NAME: 'Blob'},
-          next: {
-            block: stack([
-              useTrait('Time#HasATimerTrait'),
-              useTrait('Health#DealsDamageTrait'),
-              useTrait('Gravity#AffectedByGravityTrait'),
-              useTrait('Boundaries#StaysAcrossTrait'),
-              {type: 'world_set_sprite', fields: {SPRITE: 'blob.png'}},
-              // Often enough that it never commits to anything, which is the
-              // opposite of every other enemy here: the robot, the ball and
-              // the bat are all readable, and this one is not.
-              {
-                type: 'world_set_Time_TimerPeriodProperty',
-                inputs: {ACTOR: me(), VALUE: number(0.7)},
-              },
-            ]),
-          },
-        },
-        // A SMALL RANDOM DIRECTION on each beat, sideways only — the vertical
-        // is gravity's, as it is for everything else that walks. No rule for
-        // this: a timer and a number are what "wanders" means.
-        {
-          type: 'world_on_Time_TimerFiresEvent',
-          x: 20,
-          y: 220,
-          next: {
-            block: {
-              type: 'world_set_Physics_VelocityProperty',
-              inputs: {
-                ACTOR: me(),
-                VALUE: {
-                  block: {
-                    type: 'world_vector_of',
-                    inputs: {
-                      X: {
-                        block: {
-                          type: 'math_arithmetic',
-                          fields: {OP: 'MULTIPLY'},
-                          inputs: {A: randomFrom(-1, 1), B: number(0.9)},
-                        },
-                      },
-                      // Its own downward speed, kept: the vertical is
-                      // gravity's here as it is for everything else that
-                      // walks. A velocity is a vector, so the component comes
-                      // off it with `⟨y⟩ of ⟨…⟩` rather than from a field on
-                      // the getter.
-                      Y: {
-                        block: {
-                          type: 'world_vector_component',
-                          fields: {COMPONENT: 'y'},
-                          inputs: {
-                            VEC: {
-                              block: {
-                                type: 'world_get_Physics_VelocityProperty',
-                                inputs: {ACTOR: me()},
-                              },
-                            },
-                          },
-                        },
-                      },
-                    },
-                  },
-                },
-              },
-            },
-          },
-        },
-      ],
-    },
-  });
-
-/**
- * The robot: the only actor in the level that knows the Pilot is there.
- *
- * It is pointed at the Pilot BY KIND — `first actor in ⟨any Pilot⟩` — which is
- * the same one cross-actor line the gauge uses, and it is set once when the
- * robot is defined rather than every frame: what it hunts does not change, and
- * a step that re-read it would be re-deciding something nobody asked about.
- */
-const ROBOT_ACTOR = JSON.stringify({
-  blocks: {
-    blocks: [
+  actorDocument({
+    name: 'Eyeball',
+    sprite: 'eyeball.png',
+    traits: ['Steering#ChasesTrait', 'Health#DealsDamageTrait'],
+    values: [
+      // THE ONE THING A WALL DOES NOT STOP. `ignores walls` is the
+      // mover's fact rather than the wall's, and is read by nothing
+      // but Solid — so it still touches, and still hurts, which
+      // `passes through things` would have taken away.
       {
-        type: 'world_actor',
-        x: 20,
-        y: 20,
-        fields: {NAME: 'Robot'},
-        next: {
-          block: stack([
-            useTrait('Gravity#AffectedByGravityTrait'),
-            useTrait('Climbing#ClimbsTrait'),
-            useTrait('Prowling#ProwlsTrait'),
-            // Across only: a robot walks, and staying DOWN as well would have
-            // it hovering at the ceiling of the map rather than falling.
-            useTrait('Boundaries#StaysAcrossTrait'),
-            useTrait('Health#DealsDamageTrait'),
-            // The floor is where the blue pair is, so the Robot is the enemy
-            // a player meets coming the other way through one.
-            useTrait('Teleport#UsesTeleportPadsTrait'),
-            {
-              type: 'world_set_Teleport_TakesAnyPadItTouchesProperty',
-              inputs: {ACTOR: me(), VALUE: truth(true)},
-            },
-            {
-              type: 'world_set_Teleport_TravelSecondsProperty',
-              inputs: {ACTOR: me(), VALUE: number(ENEMY_TRIP)},
-            },
-            {type: 'world_set_sprite', fields: {SPRITE: 'robot.png'}},
-            // Setting off LEFTWARDS, towards where the Pilot starts. Its
-            // first junction is landing, which can happen before the handler
-            // below has named its quarry — and a robot with nothing to hunt
-            // yet keeps whatever it was born with, so being born facing the
-            // right way is what makes the first ten seconds read properly.
-            {
-              type: 'world_set_Prowling_GoingProperty',
-              inputs: {ACTOR: me(), VALUE: number(-1)},
-            },
-          ]),
-        },
+        setter: 'world_set_Physics_IgnoresWallsProperty',
+        type: 'boolean',
+        value: true,
       },
-      // WHO IT HUNTS, on the frame it arrives rather than in the rows above.
-      // A row under `define actor` is a declaration and has no world to ask —
-      // `any ⟨Pilot⟩` there is a `ReferenceError: world is not defined`, which
-      // presents as the whole project failing to build. `when created` is a
-      // handler, so it has one, and it is the right moment anyway: what a
-      // robot hunts does not change, and a step re-reading it every frame
-      // would be re-deciding something nobody asked about.
+      // Slow, because nothing in the room can be put between you and
+      // it: the only answer is to keep moving, and that has to be an
+      // answer a player can carry out.
+      {
+        setter: 'world_set_Steering_ChaseSpeedProperty',
+        type: 'number',
+        value: 0.55,
+      },
+    ],
+    code: [
       {
         type: 'world_on_Space_CreatedEvent',
-        x: 20,
-        y: 200,
         next: {
           block: {
-            type: 'world_set_Prowling_ActorToHuntProperty',
+            type: 'world_set_Steering_ActorToChaseProperty',
             inputs: {
               ACTOR: me(),
               VALUE: {
@@ -1908,7 +1565,154 @@ const ROBOT_ACTOR = JSON.stringify({
         },
       },
     ],
+  });
+
+/** `a random whole number from ⟨low⟩ to ⟨high⟩`. */
+const randomFrom = (low: number, high: number) => ({
+  block: {
+    type: 'math_random_int',
+    inputs: {FROM: number(low), TO: number(high)},
   },
+});
+
+const blobActor = () =>
+  actorDocument({
+    name: 'Blob',
+    sprite: 'blob.png',
+    traits: [
+      'Time#HasATimerTrait',
+      'Health#DealsDamageTrait',
+      'Gravity#AffectedByGravityTrait',
+      'Boundaries#StaysAcrossTrait',
+    ],
+    values: [
+      // Often enough that it never commits to anything, which is the
+      // opposite of every other enemy here: the robot, the ball and
+      // the bat are all readable, and this one is not.
+      {
+        setter: 'world_set_Time_TimerPeriodProperty',
+        type: 'number',
+        value: 0.7,
+      },
+    ],
+    code: [
+      // A SMALL RANDOM DIRECTION on each beat, sideways only — the vertical
+      // is gravity's, as it is for everything else that walks. No rule for
+      // this: a timer and a number are what "wanders" means.
+      {
+        type: 'world_on_Time_TimerFiresEvent',
+        next: {
+          block: {
+            type: 'world_set_Physics_VelocityProperty',
+            inputs: {
+              ACTOR: me(),
+              VALUE: {
+                block: {
+                  type: 'world_vector_of',
+                  inputs: {
+                    X: {
+                      block: {
+                        type: 'math_arithmetic',
+                        fields: {OP: 'MULTIPLY'},
+                        inputs: {A: randomFrom(-1, 1), B: number(0.9)},
+                      },
+                    },
+                    // Its own downward speed, kept: the vertical is
+                    // gravity's here as it is for everything else that
+                    // walks. A velocity is a vector, so the component comes
+                    // off it with `⟨y⟩ of ⟨…⟩` rather than from a field on
+                    // the getter.
+                    Y: {
+                      block: {
+                        type: 'world_vector_component',
+                        fields: {COMPONENT: 'y'},
+                        inputs: {
+                          VEC: {
+                            block: {
+                              type: 'world_get_Physics_VelocityProperty',
+                              inputs: {ACTOR: me()},
+                            },
+                          },
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    ],
+  });
+
+/**
+ * The robot: the only actor in the level that knows the Pilot is there.
+ *
+ * It is pointed at the Pilot BY KIND — `first actor in ⟨any Pilot⟩` — which is
+ * the same one cross-actor line the gauge uses, and it is set once when the
+ * robot is defined rather than every frame: what it hunts does not change, and
+ * a step that re-read it would be re-deciding something nobody asked about.
+ */
+const ROBOT_ACTOR = actorDocument({
+  name: 'Robot',
+  sprite: 'robot.png',
+  traits: [
+    'Gravity#AffectedByGravityTrait',
+    'Climbing#ClimbsTrait',
+    'Prowling#ProwlsTrait',
+    // Across only: a robot walks, and staying DOWN as well would have
+    // it hovering at the ceiling of the map rather than falling.
+    'Boundaries#StaysAcrossTrait',
+    'Health#DealsDamageTrait',
+    // The floor is where the blue pair is, so the Robot is the enemy
+    // a player meets coming the other way through one.
+    'Teleport#UsesTeleportPadsTrait',
+  ],
+  values: [
+    {
+      setter: 'world_set_Teleport_TakesAnyPadItTouchesProperty',
+      type: 'boolean',
+      value: true,
+    },
+    {
+      setter: 'world_set_Teleport_TravelSecondsProperty',
+      type: 'number',
+      value: ENEMY_TRIP,
+    },
+    // Setting off LEFTWARDS, towards where the Pilot starts. Its
+    // first junction is landing, which can happen before the handler
+    // below has named its quarry — and a robot with nothing to hunt
+    // yet keeps whatever it was born with, so being born facing the
+    // right way is what makes the first ten seconds read properly.
+    {setter: 'world_set_Prowling_GoingProperty', type: 'number', value: -1},
+  ],
+  code: [
+    // WHO IT HUNTS, on the frame it arrives rather than in the values above.
+    // What the actor declares has no world to ask —
+    // `any ⟨Pilot⟩` there is a `ReferenceError: world is not defined`, which
+    // presents as the whole project failing to build. `when created` is a
+    // handler, so it has one, and it is the right moment anyway: what a
+    // robot hunts does not change, and a step re-reading it every frame
+    // would be re-deciding something nobody asked about.
+    {
+      type: 'world_on_Space_CreatedEvent',
+      next: {
+        block: {
+          type: 'world_set_Prowling_ActorToHuntProperty',
+          inputs: {
+            ACTOR: me(),
+            VALUE: {
+              block: {
+                type: 'world_first_actor',
+                inputs: {SOURCE: kind('actors/pilot')},
+              },
+            },
+          },
+        },
+      },
+    },
+  ],
 });
 
 /**
@@ -1924,36 +1728,25 @@ const ROBOT_ACTOR = JSON.stringify({
  * NOT SOLID. A door you cannot walk into is a wall, and touching it is how the
  * level ends.
  */
-const DOOR_ACTOR = JSON.stringify({
-  blocks: {
-    blocks: [
-      {
-        type: 'world_actor',
-        x: 20,
-        y: 20,
-        fields: {NAME: 'Door'},
-        next: {
-          block: stack([
-            useTrait('Collisions#CanCollideTrait'),
-            {type: 'world_set_sprite', fields: {SPRITE: 'door.png'}},
-            {
-              type: 'world_trait_step',
-              fields: {PHASE: 'react', NAME: 'open when the gems are gone'},
-              inputs: {
-                DO: {
-                  block: onlyIf(noneLeft('actors/gem'), {
-                    type: 'world_set_sprite',
-                    fields: {SPRITE: 'doorOpen.png'},
-                    inputs: {ACTOR: me()},
-                  }),
-                },
-              },
-            },
-          ]),
+const DOOR_ACTOR = actorDocument({
+  name: 'Door',
+  sprite: 'door.png',
+  traits: ['Collisions#CanCollideTrait'],
+  code: [
+    {
+      type: 'world_trait_step',
+      fields: {PHASE: 'react', NAME: 'open when the gems are gone'},
+      inputs: {
+        DO: {
+          block: onlyIf(noneLeft('actors/gem'), {
+            type: 'world_set_sprite',
+            fields: {SPRITE: 'doorOpen.png'},
+            inputs: {ACTOR: me()},
+          }),
         },
       },
-    ],
-  },
+    },
+  ],
 });
 
 /**
@@ -1964,116 +1757,88 @@ const DOOR_ACTOR = JSON.stringify({
  * written is the Main Screen's code, reaching back out for whichever actor is
  * the board.
  */
-const SCOREBOARD_ACTOR = JSON.stringify({
-  blocks: {
-    blocks: [
-      {
-        type: 'world_actor',
-        x: 20,
-        y: 20,
-        fields: {NAME: 'Scoreboard'},
-        next: {
+const SCOREBOARD_ACTOR = actorDocument({
+  name: 'Scoreboard',
+  // A Label that watches the score, as the starter's is.
+  actsLike: 'actors/label',
+  icon: 'text',
+  traits: [
+    'Scoring#WatchesTheScoreTrait',
+    // …and the ending, for the same reason: an `.actor` file has no
+    // binding for a WORLD event, so hearing about one at all means
+    // electing the trait that turns it into the actor's own.
+    'Goals#WatchesTheEndingTrait',
+  ],
+  values: [
+    // Something to read before the first coin: a board that is blank
+    // until the score moves reads as a broken board.
+    labelValue('TextProperty', {type: 'string', value: 'COINS 0'}),
+  ],
+  code: [
+    {
+      type: 'world_define_drawing',
+      inputs: {
+        WIDTH: {shadow: {type: 'math_number', fields: {NUM: 96}}},
+        HEIGHT: {shadow: {type: 'math_number', fields: {NUM: 24}}},
+        DO: {
           block: stack([
-            // A Label that watches the score, as the starter's is.
-            actsLike('actors/label'),
-            useTrait('Scoring#WatchesTheScoreTrait'),
-            // …and the ending, for the same reason: an `.actor` file has no
-            // binding for a WORLD event, so hearing about one at all means
-            // electing the trait that turns it into the actor's own.
-            useTrait('Goals#WatchesTheEndingTrait'),
-            {type: 'world_show_as', fields: {ICON: 'text'}},
-            // Something to read before the first coin: a board that is blank
-            // until the score moves reads as a broken board.
-            setText('TextProperty', {
-              block: {type: 'text', fields: {TEXT: 'COINS 0'}},
-            }),
-            {
-              type: 'world_define_drawing',
-              inputs: {
-                WIDTH: {shadow: {type: 'math_number', fields: {NUM: 96}}},
-                HEIGHT: {shadow: {type: 'math_number', fields: {NUM: 24}}},
-                DO: {
-                  block: stack([
-                    fill({
-                      block: {
-                        type: 'world_get_ActorsLabel_TextColorProperty',
-                        inputs: {ACTOR: me()},
-                      },
-                    }),
-                    drawText(48, 12),
-                  ]),
-                },
+            fill({
+              block: {
+                type: 'world_get_ActorsLabel_TextColorProperty',
+                inputs: {ACTOR: me()},
               },
-            },
+            }),
+            drawText(48, 12),
           ]),
         },
       },
-      {
-        type: 'world_on_Scoring_SeesTheScoreChangeEvent',
-        x: 20,
-        y: 340,
-        next: {
-          block: setText('TextProperty', {
-            block: {
-              type: 'text',
-              fields: {TEXT: 'COINS '},
-              inputs: {
-                ADD: {
-                  block: {
-                    type: 'world_as_text',
-                    inputs: {
-                      VALUE: {block: {type: 'world_get_Scoring_ScoreProperty'}},
-                    },
+    },
+    {
+      type: 'world_on_Scoring_SeesTheScoreChangeEvent',
+      next: {
+        block: setText('TextProperty', {
+          block: {
+            type: 'text',
+            fields: {TEXT: 'COINS '},
+            inputs: {
+              ADD: {
+                block: {
+                  type: 'world_as_text',
+                  inputs: {
+                    VALUE: {block: {type: 'world_get_Scoring_ScoreProperty'}},
                   },
                 },
               },
             },
-          }),
-        },
+          },
+        }),
       },
-      {
-        type: 'world_on_Goals_SeesTheGameWonEvent',
-        x: 20,
-        y: 460,
-        next: {
-          block: setText('TextProperty', {
-            block: {type: 'text', fields: {TEXT: 'YOU MADE IT OUT'}},
-          }),
-        },
+    },
+    {
+      type: 'world_on_Goals_SeesTheGameWonEvent',
+      next: {
+        block: setText('TextProperty', {
+          block: {type: 'text', fields: {TEXT: 'YOU MADE IT OUT'}},
+        }),
       },
-      {
-        type: 'world_on_Goals_SeesTheGameLostEvent',
-        x: 20,
-        y: 580,
-        next: {
-          block: setText('TextProperty', {
-            block: {type: 'text', fields: {TEXT: 'CAUGHT'}},
-          }),
-        },
+    },
+    {
+      type: 'world_on_Goals_SeesTheGameLostEvent',
+      next: {
+        block: setText('TextProperty', {
+          block: {type: 'text', fields: {TEXT: 'CAUGHT'}},
+        }),
       },
-    ],
-  },
+    },
+  ],
 });
 
 /** A can: something to pick up, and nothing else. It does not know it is fuel. */
 const canActor = (name: string, sprite: string) =>
-  JSON.stringify({
-    blocks: {
-      blocks: [
-        {
-          type: 'world_actor',
-          x: 20,
-          y: 20,
-          fields: {NAME: name},
-          next: {
-            block: stack([
-              useTrait('Collection#CanBeCollectedTrait'),
-              {type: 'world_set_sprite', fields: {SPRITE: sprite}},
-            ]),
-          },
-        },
-      ],
-    },
+  actorDocument({
+    name: name,
+    sprite: sprite,
+    traits: ['Collection#CanBeCollectedTrait'],
   });
 
 /**
@@ -2088,64 +1853,56 @@ const canActor = (name: string, sprite: string) =>
  * has placed one; `fuel fraction` of nothing is nothing, and the bar draws
  * empty for that frame rather than failing.
  */
-const FUEL_BAR_ACTOR = JSON.stringify({
-  blocks: {
-    blocks: [
-      {
-        type: 'world_actor',
-        x: 20,
-        y: 20,
-        fields: {NAME: 'Fuel Bar'},
-        next: {
-          block: stack([
-            // IT IS A PROGRESS BAR, said in a row rather than assembled out of
-            // one. `acts like` brings the `Shows Progress` trait, the fraction
-            // it fills to, the two colors it fills in and the picture — which
-            // used to be a `use trait` here and a copy of `progressBarDrawing`
-            // at the bottom, a share written in TypeScript that a learner
-            // opening this file could not see (`ActorBuilder.actsLike`).
-            actsLike('actors/progressBar'),
-            {type: 'world_show_as', fields: {ICON: 'bar'}},
-            // The bar is 64 by 8, which is a readable widget in a ten-tile
-            // room and a smear in an 832-pixel one. Scaled rather than
-            // redrawn, so it stays the stock bar at a size this room can
-            // read — three tiles across, half a tile tall.
-            {
-              type: 'world_set_Space_ScaleProperty',
-              inputs: {ACTOR: me(), X: number(1.5), Y: number(2)},
-            },
-            {
-              type: 'world_trait_step',
-              fields: {PHASE: 'react', NAME: 'follow the tank'},
-              inputs: {
-                DO: {
-                  block: {
-                    type: 'world_set_ActorsProgressBar_FractionProperty',
-                    inputs: {
-                      ACTOR: me(),
-                      VALUE: {
-                        block: {
-                          type: 'world_query_Jetpack_FuelFractionQuery',
-                          inputs: {
-                            ACTOR: {
-                              block: {
-                                type: 'world_first_actor',
-                                inputs: {SOURCE: kind('actors/pilot')},
-                              },
-                            },
-                          },
-                        },
+const FUEL_BAR_ACTOR = actorDocument({
+  name: 'Fuel Bar',
+  // IT IS A PROGRESS BAR, said in a row rather than assembled out of
+  // one. `acts like` brings the `Shows Progress` trait, the fraction
+  // it fills to, the two colors it fills in and the picture — which
+  // used to be a `use trait` here and a copy of `progressBarDrawing`
+  // at the bottom, a share written in TypeScript that a learner
+  // opening this file could not see (`ActorBuilder.actsLike`).
+  actsLike: 'actors/progressBar',
+  icon: 'bar',
+  values: [
+    // The bar is 64 by 8, which is a readable widget in a ten-tile
+    // room and a smear in an 832-pixel one. Scaled rather than
+    // redrawn, so it stays the stock bar at a size this room can
+    // read — three tiles across, half a tile tall.
+    {
+      setter: 'world_set_Space_ScaleProperty',
+      type: 'vector',
+      value: {x: 1.5, y: 2},
+    },
+  ],
+  code: [
+    {
+      type: 'world_trait_step',
+      fields: {PHASE: 'react', NAME: 'follow the tank'},
+      inputs: {
+        DO: {
+          block: {
+            type: 'world_set_ActorsProgressBar_FractionProperty',
+            inputs: {
+              ACTOR: me(),
+              VALUE: {
+                block: {
+                  type: 'world_query_Jetpack_FuelFractionQuery',
+                  inputs: {
+                    ACTOR: {
+                      block: {
+                        type: 'world_first_actor',
+                        inputs: {SOURCE: kind('actors/pilot')},
                       },
                     },
                   },
                 },
               },
             },
-          ]),
+          },
         },
       },
-    ],
-  },
+    },
+  ],
 });
 
 /**
@@ -2284,23 +2041,10 @@ export const JETPACK_SPEC: ProjectSpec = {
     coinActor: {
       name: 'coin.actor',
       language: 'actor',
-      contents: JSON.stringify({
-        blocks: {
-          blocks: [
-            {
-              type: 'world_actor',
-              x: 20,
-              y: 20,
-              fields: {NAME: 'Coin'},
-              next: {
-                block: stack([
-                  useTrait('Collection#CanBeCollectedTrait'),
-                  looksLike('coinSpin'),
-                ]),
-              },
-            },
-          ],
-        },
+      contents: actorDocument({
+        name: 'Coin',
+        animations: stockAnimations({Main: 'coinSpin'}),
+        traits: ['Collection#CanBeCollectedTrait'],
       }),
       folderId: 'actors',
     },

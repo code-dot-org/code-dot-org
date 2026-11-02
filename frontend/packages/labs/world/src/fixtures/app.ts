@@ -37,17 +37,16 @@
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
+import {actorDocument} from '../actors/actorDocument';
 import {importStockActor} from '../actors/importStockActor';
 import {stockActorById} from '../actors/stock';
 import {
-  actorFile,
   chain,
   defineMap,
-  defineProperty,
   emitWorldEvent,
   hearWorldEvent,
-  isData,
   me,
+  property,
 } from '../actors/stock/workspace';
 import {APP_ACTORS} from '../appBuilder';
 import {MAIN_SCREEN_PATH} from '../mainWorld';
@@ -261,11 +260,11 @@ const row = (loop: Row) => ({
  * there was. The date is a number on the record now, and the row on screen is
  * built from the two at the moment it is shown.
  */
-const NOTE_ACTOR = actorFile('Note', [
-  isData(),
-  defineProperty('string', 'text', ''),
-  defineProperty('number', 'at', '0'),
-]);
+const NOTE_ACTOR = actorDocument({
+  name: 'Note',
+  isData: true,
+  properties: [property('string', 'text', ''), property('number', 'at', '0')],
+});
 
 /** `⟨text⟩ of ⟨the note⟩`, and `⟨at⟩ of ⟨the note⟩`. */
 const fieldOf = (loop: Row, exportName: string) => ({

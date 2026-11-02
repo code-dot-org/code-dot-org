@@ -18,23 +18,21 @@
 // What is written is milestone 4 of specs/PROGRESSION_UI.md and then some: all
 // six FOUNDATIONS, and Arcade, Story and Making whole after them.
 
-import {writeProperty} from '../../actors/actorData';
+import {actorDocument} from '../../actors/actorDocument';
 import {climbArrowsHandlers} from '../../actors/enhance/climbArrows';
 import {LABEL_PROPERTIES} from '../../actors/stock/label';
 import {
-  actorFile,
-  actsLike,
   chain as chainRows,
+  drawingRow,
   drawText,
   fill,
+  labelValue,
   me,
   num,
+  property,
   rectangle,
-  setSprite,
   setText,
-  showAs,
   swatch,
-  useTrait,
   words,
 } from '../../actors/stock/workspace';
 import {DEFAULT_PROJECT} from '../../constants';
@@ -44,7 +42,6 @@ import type {LessonProperties, TileId} from '../types';
 
 import {opensOnTheLevel} from './asScreen';
 import {lessonSource} from './support';
-import type {MainCameraSettings} from './worlds';
 import {
   addActor,
   anyKind,
@@ -53,6 +50,8 @@ import {
   placeAt,
   placeInMap,
   worldFile,
+  type ActorSpec,
+  type MainCameraSettings,
 } from './worlds';
 
 // No `tiles` on any of these worlds: a world that says nothing is one screen,
@@ -100,7 +99,13 @@ const firstWorld: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [placeInMap(actorPath('hero'), [placed('Hero', 160, 160)])],
-      actors: [{id: 'hero', name: 'Hero', rows: [setSprite('player.png')]}],
+      actors: [
+        {
+          id: 'hero',
+          name: 'Hero',
+          sprite: 'player.png',
+        },
+      ],
     }),
     // Two pictures, so that changing the Hero's can be seen.
     sprites: ['player', 'coin'],
@@ -149,7 +154,13 @@ const arrows: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [placeInMap(actorPath('hero'), [placed('Hero', 160, 160)])],
-      actors: [{id: 'hero', name: 'Hero', rows: [setSprite('player.png')]}],
+      actors: [
+        {
+          id: 'hero',
+          name: 'Hero',
+          sprite: 'player.png',
+        },
+      ],
     }),
     sprites: ['player'],
     rules: ['arrows'],
@@ -197,8 +208,8 @@ const speed: WorldScenario = {
         {
           id: 'hero',
           name: 'Hero',
-          rows: [
-            setSprite('player.png'),
+          sprite: 'player.png',
+          code: [
             {
               // In `move`, the moment of the frame when things go somewhere —
               // which is exactly the moment the Physics rule would have done this
@@ -295,8 +306,16 @@ const gravity: WorldScenario = {
         placeInMap(actorPath('ground'), [placed('Ground', 160, 272)]),
       ],
       actors: [
-        {id: 'hero', name: 'Hero', rows: [setSprite('player.png')]},
-        {id: 'ground', name: 'Ground', rows: [setSprite('ground.png')]},
+        {
+          id: 'hero',
+          name: 'Hero',
+          sprite: 'player.png',
+        },
+        {
+          id: 'ground',
+          name: 'Ground',
+          sprite: 'ground.png',
+        },
       ],
     }),
     sprites: ['player', 'ground'],
@@ -353,12 +372,13 @@ const sprite: WorldScenario = {
         {
           id: 'hero',
           name: 'Hero',
-          rows: [],
-          drawing: {
-            width: 24,
-            height: 24,
-            commands: [fill(swatch('#8d8d99')), rectangle(0, 0, 24, 24)],
-          },
+          code: [
+            drawingRow({
+              width: 24,
+              height: 24,
+              commands: [fill(swatch('#8d8d99')), rectangle(0, 0, 24, 24)],
+            }),
+          ],
         },
       ],
     }),
@@ -429,19 +449,21 @@ const drawing: WorldScenario = {
           // and this lesson is the clearest argument against that: what makes
           // two Bars draw differently is something each Bar HOLDS, and holding
           // a number is what `define property` is.
-          rows: [declareProperty('number', 'fraction', '1')],
-          drawing: {
-            width: 96,
-            height: 12,
-            commands: [
-              fill(swatch('#3d3d47')),
-              bar(num(96)),
-              fill(swatch('#4caf50')),
-              // The number this lesson is about: the green bar is as wide as
-              // the track, whatever the Bar it is drawn for happens to hold.
-              bar(num(96)),
-            ],
-          },
+          properties: [property('number', 'fraction', '1')],
+          code: [
+            drawingRow({
+              width: 96,
+              height: 12,
+              commands: [
+                fill(swatch('#3d3d47')),
+                bar(num(96)),
+                fill(swatch('#4caf50')),
+                // The number this lesson is about: the green bar is as wide as
+                // the track, whatever the Bar it is drawn for happens to hold.
+                bar(num(96)),
+              ],
+            }),
+          ],
         },
       ],
     }),
@@ -487,7 +509,13 @@ const background: WorldScenario = {
         },
         placeInMap(actorPath('hero'), [placed('Hero', 160, 200)]),
       ],
-      actors: [{id: 'hero', name: 'Hero', rows: [setSprite('player.png')]}],
+      actors: [
+        {
+          id: 'hero',
+          name: 'Hero',
+          sprite: 'player.png',
+        },
+      ],
     }),
     sprites: ['player'],
   }),
@@ -533,10 +561,8 @@ const animation: WorldScenario = {
         {
           id: 'hero',
           name: 'Hero',
-          rows: [
-            useTrait('Arrow Keys#MovesAcrossTrait'),
-            setSprite('player.png'),
-          ],
+          sprite: 'player.png',
+          traits: ['Arrow Keys#MovesAcrossTrait'],
         },
       ],
     }),
@@ -589,8 +615,16 @@ const effect: WorldScenario = {
         addActor(actorPath('coin'), [placeAt(220, 160)]),
       ],
       actors: [
-        {id: 'hero', name: 'Hero', rows: [setSprite('player.png')]},
-        {id: 'coin', name: 'Coin', rows: [setSprite('coin.png')]},
+        {
+          id: 'hero',
+          name: 'Hero',
+          sprite: 'player.png',
+        },
+        {
+          id: 'coin',
+          name: 'Coin',
+          sprite: 'coin.png',
+        },
       ],
     }),
     sprites: ['player', 'coin'],
@@ -641,7 +675,13 @@ const position: WorldScenario = {
       // A POST, which is what a marker is. Drawn as a coin, three of them in a
       // heap read as treasure to collect rather than as places, and the whole
       // lesson is putting each one somewhere.
-      actors: [{id: 'marker', name: 'Marker', rows: [setSprite('post.png')]}],
+      actors: [
+        {
+          id: 'marker',
+          name: 'Marker',
+          sprite: 'post.png',
+        },
+      ],
     }),
     sprites: ['post'],
   }),
@@ -683,10 +723,8 @@ const press: WorldScenario = {
         {
           id: 'hero',
           name: 'Hero',
-          rows: [
-            useTrait('Arrow Keys#MovesAcrossTrait'),
-            setSprite('player.png'),
-          ],
+          sprite: 'player.png',
+          traits: ['Arrow Keys#MovesAcrossTrait'],
         },
       ],
     }),
@@ -727,7 +765,13 @@ const mouse: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [addActor(actorPath('target'), [placeAt(160, 160)])],
-      actors: [{id: 'target', name: 'Target', rows: [setSprite('coin.png')]}],
+      actors: [
+        {
+          id: 'target',
+          name: 'Target',
+          sprite: 'coin.png',
+        },
+      ],
     }),
     sprites: ['coin'],
     rules: ['mouse'],
@@ -784,10 +828,8 @@ const twoHands: WorldScenario = {
         {
           id: 'ship',
           name: 'Ship',
-          rows: [
-            useTrait('Arrow Keys#MovesAcrossTrait'),
-            setSprite('ship.png'),
-          ],
+          sprite: 'ship.png',
+          traits: ['Arrow Keys#MovesAcrossTrait'],
         },
       ],
     }),
@@ -821,7 +863,7 @@ the way it is pointing.
 
 /** `set velocity of ⟨this actor⟩ to ⟨x, y⟩`, for a world's `add actor` body. */
 /** The Ball three lessons start from: it can move, and it has a picture. */
-const BALL = [useTrait('Physics#CanMoveTrait'), setSprite('ball.png')];
+const BALL = {traits: ['Physics#CanMoveTrait'], sprite: 'ball.png'};
 
 const setVelocity = (x: number, y: number) => ({
   type: 'world_set_Physics_VelocityProperty',
@@ -870,11 +912,8 @@ const force: WorldScenario = {
         {
           id: 'ball',
           name: 'Ball',
-          rows: [
-            useTrait('Physics#CanMoveTrait'),
-            useTrait('Input#TakesKeyboardInputTrait'),
-            setSprite('ball.png'),
-          ],
+          sprite: 'ball.png',
+          traits: ['Physics#CanMoveTrait', 'Input#TakesKeyboardInputTrait'],
         },
       ],
       handlers: [onPressed('ball', 'space', consoleLine('bang'))],
@@ -919,7 +958,7 @@ const units: WorldScenario = {
           movingAt('Ball', 16, 160, {x: 60, y: 0}),
         ]),
       ],
-      actors: [{id: 'ball', name: 'Ball', rows: BALL}],
+      actors: [{id: 'ball', name: 'Ball', ...BALL}],
     }),
     sprites: ['ball'],
     rules: ['motion'],
@@ -978,11 +1017,8 @@ const drag: WorldScenario = {
         {
           id: 'ball',
           name: 'Ball',
-          rows: [
-            useTrait('Physics#CanMoveTrait'),
-            useTrait('Screen Wrap#WrapsAcrossTrait'),
-            setSprite('ball.png'),
-          ],
+          sprite: 'ball.png',
+          traits: ['Physics#CanMoveTrait', 'Screen Wrap#WrapsAcrossTrait'],
         },
       ],
     }),
@@ -1026,8 +1062,16 @@ const tween: WorldScenario = {
         addActor(actorPath('post'), [placeAt(256, 160)]),
       ],
       actors: [
-        {id: 'door', name: 'Door', rows: [setSprite('door.png')]},
-        {id: 'post', name: 'Post', rows: [setSprite('post.png')]},
+        {
+          id: 'door',
+          name: 'Door',
+          sprite: 'door.png',
+        },
+        {
+          id: 'post',
+          name: 'Post',
+          sprite: 'post.png',
+        },
       ],
     }),
     sprites: ['door', 'post'],
@@ -1078,7 +1122,7 @@ const conditional: WorldScenario = {
       rows: [
         addActor(actorPath('ball'), [placeAt(24, 160), setVelocity(1.6, 0)]),
       ],
-      actors: [{id: 'ball', name: 'Ball', rows: BALL}],
+      actors: [{id: 'ball', name: 'Ball', ...BALL}],
     }),
     sprites: ['ball'],
     rules: ['motion'],
@@ -1120,13 +1164,14 @@ const collision: WorldScenario = {
         {
           id: 'ball',
           name: 'Ball',
-          rows: [
-            useTrait('Physics#CanMoveTrait'),
-            useTrait('Collisions#CanCollideTrait'),
-            setSprite('ball.png'),
-          ],
+          sprite: 'ball.png',
+          traits: ['Physics#CanMoveTrait', 'Collisions#CanCollideTrait'],
         },
-        {id: 'wall', name: 'Wall', rows: [setSprite('ground.png')]},
+        {
+          id: 'wall',
+          name: 'Wall',
+          sprite: 'ground.png',
+        },
       ],
     }),
     sprites: ['ball', 'ground'],
@@ -1171,8 +1216,8 @@ const andOr: WorldScenario = {
         {
           id: 'ball',
           name: 'Ball',
-          rows: [
-            ...BALL,
+          ...BALL,
+          code: [
             {
               type: 'world_trait_step',
               fields: {PHASE: 'decide', NAME: 'stop in the middle'},
@@ -1268,24 +1313,20 @@ const kinds: WorldScenario = {
         {
           id: 'ball',
           name: 'Ball',
-          rows: [
-            useTrait('Physics#CanMoveTrait'),
-            useTrait('Collisions#CanCollideTrait'),
-            setSprite('ball.png'),
-          ],
+          sprite: 'ball.png',
+          traits: ['Physics#CanMoveTrait', 'Collisions#CanCollideTrait'],
         },
         {
           id: 'coin',
           name: 'Coin',
-          rows: [useTrait('Collisions#CanCollideTrait'), setSprite('coin.png')],
+          sprite: 'coin.png',
+          traits: ['Collisions#CanCollideTrait'],
         },
         {
           id: 'spike',
           name: 'Spike',
-          rows: [
-            useTrait('Collisions#CanCollideTrait'),
-            setSprite('spike.png'),
-          ],
+          sprite: 'spike.png',
+          traits: ['Collisions#CanCollideTrait'],
         },
       ],
       handlers: [onTouching('ball', consoleLine('I touched something'))],
@@ -1339,8 +1380,16 @@ const map: WorldScenario = {
         ]),
       ],
       actors: [
-        {id: 'hero', name: 'Hero', rows: [setSprite('player.png')]},
-        {id: 'ground', name: 'Ground', rows: [setSprite('ground.png')]},
+        {
+          id: 'hero',
+          name: 'Hero',
+          sprite: 'player.png',
+        },
+        {
+          id: 'ground',
+          name: 'Ground',
+          sprite: 'ground.png',
+        },
       ],
     }),
     sprites: ['player', 'ground'],
@@ -1395,9 +1444,14 @@ const camera: WorldScenario = {
         {
           id: 'hero',
           name: 'Hero',
-          rows: [useTrait('Physics#CanMoveTrait'), setSprite('player.png')],
+          sprite: 'player.png',
+          traits: ['Physics#CanMoveTrait'],
         },
-        {id: 'ground', name: 'Ground', rows: [setSprite('ground.png')]},
+        {
+          id: 'ground',
+          name: 'Ground',
+          sprite: 'ground.png',
+        },
       ],
     }),
     sprites: ['player', 'ground'],
@@ -1465,12 +1519,14 @@ const cameraFeel: WorldScenario = {
         {
           id: 'hero',
           name: 'Hero',
-          rows: [
-            useTrait('Arrow Keys#MovesAcrossTrait'),
-            setSprite('player.png'),
-          ],
+          sprite: 'player.png',
+          traits: ['Arrow Keys#MovesAcrossTrait'],
         },
-        {id: 'ground', name: 'Ground', rows: [setSprite('ground.png')]},
+        {
+          id: 'ground',
+          name: 'Ground',
+          sprite: 'ground.png',
+        },
       ],
     }),
     sprites: ['player', 'ground'],
@@ -1551,34 +1607,49 @@ const layers: WorldScenario = {
         {
           id: 'hero',
           name: 'Hero',
-          rows: [
-            useTrait('Arrow Keys#MovesAcrossTrait'),
-            setSprite('player.png'),
-          ],
+          sprite: 'player.png',
+          traits: ['Arrow Keys#MovesAcrossTrait'],
         },
-        {id: 'ground', name: 'Ground', rows: [setSprite('ground.png')]},
-        {id: 'hill', name: 'Hill', rows: [setSprite('hill.png')]},
+        {
+          id: 'ground',
+          name: 'Ground',
+          sprite: 'ground.png',
+        },
+        {
+          id: 'hill',
+          name: 'Hill',
+          sprite: 'hill.png',
+        },
         {
           id: 'score',
           name: 'Score',
           // ITS OWN four text properties. A world's own actor cannot act like
           // the Label FILE — this project has none — so it declares what a
           // Label declares (`actors/stock/label`).
-          rows: [
-            ...LABEL_PROPERTIES.map(writeProperty),
-            showAs('text'),
-            setText('TextProperty', words('SCORE 0'), SCORE_OWNER),
+          icon: 'text',
+          properties: [...LABEL_PROPERTIES],
+          values: [
+            labelValue(
+              'TextProperty',
+              {type: 'string', value: 'SCORE 0'},
+              SCORE_OWNER,
+            ),
           ],
-          drawing: {
-            width: 96,
-            height: 24,
-            // The MIDDLE of the canvas, as the stock Label and Button draw
-            // theirs: the text is placed with whatever anchor the actor
-            // carries, and the default centers it — so drawn at x=0 half of
-            // "SCORE 0" fell off the left of its own 96-pixel canvas and the
-            // world showed "RE 0".
-            commands: [fill(swatch('#f2f2f7')), drawText(48, 12, SCORE_OWNER)],
-          },
+          code: [
+            drawingRow({
+              width: 96,
+              height: 24,
+              // The MIDDLE of the canvas, as the stock Label and Button draw
+              // theirs: the text is placed with whatever anchor the actor
+              // carries, and the default centers it — so drawn at x=0 half of
+              // "SCORE 0" fell off the left of its own 96-pixel canvas and the
+              // world showed "RE 0".
+              commands: [
+                fill(swatch('#f2f2f7')),
+                drawText(48, 12, SCORE_OWNER),
+              ],
+            }),
+          ],
         },
       ],
     }),
@@ -1709,20 +1780,18 @@ const jump: WorldScenario = {
         {
           id: 'hero',
           name: 'Hero',
-          rows: [
-            useTrait('Gravity#AffectedByGravityTrait'),
-            useTrait('Input#TakesKeyboardInputTrait'),
-            useTrait('Arrow Keys#MovesAcrossTrait'),
-            setSprite('player.png'),
+          sprite: 'player.png',
+          traits: [
+            'Gravity#AffectedByGravityTrait',
+            'Input#TakesKeyboardInputTrait',
+            'Arrow Keys#MovesAcrossTrait',
           ],
         },
         {
           id: 'ground',
           name: 'Ground',
-          rows: [
-            useTrait('Gravity#ActsAsGroundTrait'),
-            setSprite('ground.png'),
-          ],
+          sprite: 'ground.png',
+          traits: ['Gravity#ActsAsGroundTrait'],
         },
       ],
       handlers: [
@@ -1794,22 +1863,19 @@ const jetpack: WorldScenario = {
         {
           id: 'hero',
           name: 'Hero',
-          rows: [
-            useTrait('Gravity#AffectedByGravityTrait'),
-            useTrait('Input#TakesKeyboardInputTrait'),
-            useTrait('Arrow Keys#MovesAcrossTrait'),
-            useTrait('Jumping#JumpsTrait'),
-            setSprite('player.png'),
+          sprite: 'player.png',
+          traits: [
+            'Gravity#AffectedByGravityTrait',
+            'Input#TakesKeyboardInputTrait',
+            'Arrow Keys#MovesAcrossTrait',
+            'Jumping#JumpsTrait',
           ],
         },
         {
           id: 'ground',
           name: 'Ground',
-          rows: [
-            useTrait('Gravity#ActsAsGroundTrait'),
-            useTrait('Solid Bodies#SolidTrait'),
-            setSprite('ground.png'),
-          ],
+          sprite: 'ground.png',
+          traits: ['Gravity#ActsAsGroundTrait', 'Solid Bodies#SolidTrait'],
         },
       ],
       handlers: [
@@ -1895,29 +1961,24 @@ const ladders: WorldScenario = {
         {
           id: 'hero',
           name: 'Hero',
-          rows: [
-            useTrait('Gravity#AffectedByGravityTrait'),
-            useTrait('Input#TakesKeyboardInputTrait'),
-            useTrait('Arrow Keys#MovesAcrossTrait'),
-            setSprite('player.png'),
+          sprite: 'player.png',
+          traits: [
+            'Gravity#AffectedByGravityTrait',
+            'Input#TakesKeyboardInputTrait',
+            'Arrow Keys#MovesAcrossTrait',
           ],
         },
         {
           id: 'ground',
           name: 'Ground',
-          rows: [
-            useTrait('Gravity#ActsAsGroundTrait'),
-            useTrait('Solid Bodies#SolidTrait'),
-            setSprite('ground.png'),
-          ],
+          sprite: 'ground.png',
+          traits: ['Gravity#ActsAsGroundTrait', 'Solid Bodies#SolidTrait'],
         },
         {
           id: 'ledge',
           name: 'Ledge',
-          rows: [
-            useTrait('Gravity#ActsAsGroundTrait'),
-            setSprite('ground.png'),
-          ],
+          sprite: 'ground.png',
+          traits: ['Gravity#ActsAsGroundTrait'],
         },
         {
           id: 'ladder',
@@ -1925,7 +1986,7 @@ const ladders: WorldScenario = {
           // A picture and nothing else, which is the lesson: it LOOKS like a
           // ladder and the Hero stands there ignoring it, because looking
           // like one is not a thing the world knows about.
-          rows: [setSprite('ladder.png')],
+          sprite: 'ladder.png',
         },
       ],
     }),
@@ -2028,21 +2089,18 @@ const surfaces: WorldScenario = {
         {
           id: 'hero',
           name: 'Hero',
-          rows: [
-            useTrait('Gravity#AffectedByGravityTrait'),
-            useTrait('Input#TakesKeyboardInputTrait'),
-            useTrait('Arrow Keys#MovesAcrossTrait'),
-            setSprite('player.png'),
+          sprite: 'player.png',
+          traits: [
+            'Gravity#AffectedByGravityTrait',
+            'Input#TakesKeyboardInputTrait',
+            'Arrow Keys#MovesAcrossTrait',
           ],
         },
         {
           id: 'ground',
           name: 'Ground',
-          rows: [
-            useTrait('Gravity#ActsAsGroundTrait'),
-            useTrait('Solid Bodies#SolidTrait'),
-            setSprite('ground.png'),
-          ],
+          sprite: 'ground.png',
+          traits: ['Gravity#ActsAsGroundTrait', 'Solid Bodies#SolidTrait'],
         },
         // The three below are the SAME actor as Ground, three times, with
         // three pictures — which is the lesson standing still: a floor that
@@ -2050,29 +2108,20 @@ const surfaces: WorldScenario = {
         {
           id: 'belt',
           name: 'Belt',
-          rows: [
-            useTrait('Gravity#ActsAsGroundTrait'),
-            useTrait('Solid Bodies#SolidTrait'),
-            setSprite('conveyor.png'),
-          ],
+          sprite: 'conveyor.png',
+          traits: ['Gravity#ActsAsGroundTrait', 'Solid Bodies#SolidTrait'],
         },
         {
           id: 'sludge',
           name: 'Sludge',
-          rows: [
-            useTrait('Gravity#ActsAsGroundTrait'),
-            useTrait('Solid Bodies#SolidTrait'),
-            setSprite('sludge.png'),
-          ],
+          sprite: 'sludge.png',
+          traits: ['Gravity#ActsAsGroundTrait', 'Solid Bodies#SolidTrait'],
         },
         {
           id: 'ice',
           name: 'Ice',
-          rows: [
-            useTrait('Gravity#ActsAsGroundTrait'),
-            useTrait('Solid Bodies#SolidTrait'),
-            setSprite('ice.png'),
-          ],
+          sprite: 'ice.png',
+          traits: ['Gravity#ActsAsGroundTrait', 'Solid Bodies#SolidTrait'],
         },
       ],
     }),
@@ -2144,14 +2193,16 @@ const pads: WorldScenario = {
         {
           id: 'hero',
           name: 'Hero',
-          rows: [
-            useTrait('Gravity#AffectedByGravityTrait'),
-            useTrait('Input#TakesKeyboardInputTrait'),
-            useTrait('Arrow Keys#MovesAcrossTrait'),
+          sprite: 'player.png',
+          traits: [
+            'Gravity#AffectedByGravityTrait',
+            'Input#TakesKeyboardInputTrait',
+            'Arrow Keys#MovesAcrossTrait',
             // It already knows how to use one. What it has not got is
             // anywhere to go, which is the lesson.
-            useTrait('Teleport#UsesTeleportPadsTrait'),
-            setSprite('player.png'),
+            'Teleport#UsesTeleportPadsTrait',
+          ],
+          code: [
             // The key, as a step rather than a hat: an actor definition holds
             // rows, and a hat is a root of its own. Polling costs nothing
             // here — `use the pad` does nothing off a pad, mid-trip, or on
@@ -2187,11 +2238,8 @@ const pads: WorldScenario = {
         {
           id: 'ground',
           name: 'Ground',
-          rows: [
-            useTrait('Gravity#ActsAsGroundTrait'),
-            useTrait('Solid Bodies#SolidTrait'),
-            setSprite('ground.png'),
-          ],
+          sprite: 'ground.png',
+          traits: ['Gravity#ActsAsGroundTrait', 'Solid Bodies#SolidTrait'],
         },
         // TWO PADS, BOTH REAL, AND NO TWO OF A COLOR. Everything about them
         // works: they are pads, the Hero uses pads, the key is wired. What is
@@ -2199,34 +2247,40 @@ const pads: WorldScenario = {
         {
           id: 'here',
           name: 'Near Pad',
-          rows: [
-            useTrait('Teleport#IsATeleportPadTrait'),
+          traits: ['Teleport#IsATeleportPadTrait'],
+          values: [
             {
-              type: 'world_set_Teleport_PadColorProperty',
-              inputs: {ACTOR: me(), VALUE: swatch('#e0484a')},
+              setter: 'world_set_Teleport_PadColorProperty',
+              type: 'color',
+              value: '#e0484a',
             },
           ],
-          drawing: {
-            width: 32,
-            height: 32,
-            commands: [padFill(), rectangle(0, 22, 32, 10)],
-          },
+          code: [
+            drawingRow({
+              width: 32,
+              height: 32,
+              commands: [padFill(), rectangle(0, 22, 32, 10)],
+            }),
+          ],
         },
         {
           id: 'there',
           name: 'Far Pad',
-          rows: [
-            useTrait('Teleport#IsATeleportPadTrait'),
+          traits: ['Teleport#IsATeleportPadTrait'],
+          values: [
             {
-              type: 'world_set_Teleport_PadColorProperty',
-              inputs: {ACTOR: me(), VALUE: swatch('#3f7fe0')},
+              setter: 'world_set_Teleport_PadColorProperty',
+              type: 'color',
+              value: '#3f7fe0',
             },
           ],
-          drawing: {
-            width: 32,
-            height: 32,
-            commands: [padFill(), rectangle(0, 22, 32, 10)],
-          },
+          code: [
+            drawingRow({
+              width: 32,
+              height: 32,
+              commands: [padFill(), rectangle(0, 22, 32, 10)],
+            }),
+          ],
         },
       ],
     }),
@@ -2272,16 +2326,18 @@ Try it. Nothing happens — and nothing is wrong. A pad sends you to another pad
 // ── platformer/walls ─────────────────────────────────────────────────────────
 
 /** A block that shows whether it is in the way, drawn from its own color. */
-const switchedWall = (color: string) => ({
+const switchedWall = (color: string): ActorSpec => ({
   id: 'wall',
   name: 'Wall',
-  rows: [
-    useTrait('Switches#IsASwitchedWallTrait'),
-    useTrait('Solid Bodies#SolidTrait'),
+  traits: ['Switches#IsASwitchedWallTrait', 'Solid Bodies#SolidTrait'],
+  values: [
     {
-      type: 'world_set_Switches_WallColorProperty',
-      inputs: {ACTOR: me(), VALUE: swatch(color)},
+      setter: 'world_set_Switches_WallColorProperty',
+      type: 'color',
+      value: color,
     },
+  ],
+  code: [
     // FAINT WHEN IT IS NOT THERE. A wall that goes on looking like a wall
     // while you walk through it teaches the wrong thing twice: that it is
     // still in the way, and that the rule did nothing.
@@ -2314,20 +2370,20 @@ const switchedWall = (color: string) => ({
         },
       },
     },
+    drawingRow({
+      width: 32,
+      height: 32,
+      commands: [
+        fill({
+          block: {
+            type: 'world_get_Switches_WallColorProperty',
+            inputs: {ACTOR: me()},
+          },
+        }),
+        rectangle(0, 0, 32, 32),
+      ],
+    }),
   ],
-  drawing: {
-    width: 32,
-    height: 32,
-    commands: [
-      fill({
-        block: {
-          type: 'world_get_Switches_WallColorProperty',
-          inputs: {ACTOR: me()},
-        },
-      }),
-      rectangle(0, 0, 32, 32),
-    ],
-  },
 });
 
 const walls: WorldScenario = {
@@ -2349,47 +2405,47 @@ const walls: WorldScenario = {
         {
           id: 'hero',
           name: 'Hero',
-          rows: [
-            useTrait('Gravity#AffectedByGravityTrait'),
-            useTrait('Input#TakesKeyboardInputTrait'),
-            useTrait('Arrow Keys#MovesAcrossTrait'),
-            setSprite('player.png'),
+          sprite: 'player.png',
+          traits: [
+            'Gravity#AffectedByGravityTrait',
+            'Input#TakesKeyboardInputTrait',
+            'Arrow Keys#MovesAcrossTrait',
           ],
         },
         {
           id: 'ground',
           name: 'Ground',
-          rows: [
-            useTrait('Gravity#ActsAsGroundTrait'),
-            useTrait('Solid Bodies#SolidTrait'),
-            setSprite('ground.png'),
-          ],
+          sprite: 'ground.png',
+          traits: ['Gravity#ActsAsGroundTrait', 'Solid Bodies#SolidTrait'],
         },
         // A REAL SWITCH, already wired, already pressed every time you walk
         // over it. What it is not is the same color as the wall.
         {
           id: 'plate',
           name: 'Plate',
-          rows: [
-            useTrait('Switches#IsASwitchTrait'),
+          traits: ['Switches#IsASwitchTrait'],
+          values: [
             {
-              type: 'world_set_Switches_SwitchColorProperty',
-              inputs: {ACTOR: me(), VALUE: swatch('#3fbf6a')},
+              setter: 'world_set_Switches_SwitchColorProperty',
+              type: 'color',
+              value: '#3fbf6a',
             },
           ],
-          drawing: {
-            width: 32,
-            height: 32,
-            commands: [
-              fill({
-                block: {
-                  type: 'world_get_Switches_SwitchColorProperty',
-                  inputs: {ACTOR: me()},
-                },
-              }),
-              rectangle(0, 22, 32, 10),
-            ],
-          },
+          code: [
+            drawingRow({
+              width: 32,
+              height: 32,
+              commands: [
+                fill({
+                  block: {
+                    type: 'world_get_Switches_SwitchColorProperty',
+                    inputs: {ACTOR: me()},
+                  },
+                }),
+                rectangle(0, 22, 32, 10),
+              ],
+            }),
+          ],
         },
         switchedWall('#e0484a'),
       ],
@@ -2456,12 +2512,14 @@ const digging: WorldScenario = {
           name: 'Hero',
           // It can already dig, and the key is already wired. What it has
           // nothing to dig is soil that says it can be.
-          rows: [
-            useTrait('Gravity#AffectedByGravityTrait'),
-            useTrait('Input#TakesKeyboardInputTrait'),
-            useTrait('Arrow Keys#MovesAcrossTrait'),
-            useTrait('Digging#DigsTrait'),
-            setSprite('player.png'),
+          sprite: 'player.png',
+          traits: [
+            'Gravity#AffectedByGravityTrait',
+            'Input#TakesKeyboardInputTrait',
+            'Arrow Keys#MovesAcrossTrait',
+            'Digging#DigsTrait',
+          ],
+          code: [
             {
               type: 'world_trait_step',
               fields: {PHASE: 'touch', NAME: 'dig when asked'},
@@ -2513,22 +2571,16 @@ const digging: WorldScenario = {
         {
           id: 'ground',
           name: 'Ground',
-          rows: [
-            useTrait('Gravity#ActsAsGroundTrait'),
-            useTrait('Solid Bodies#SolidTrait'),
-            setSprite('ground.png'),
-          ],
+          sprite: 'ground.png',
+          traits: ['Gravity#ActsAsGroundTrait', 'Solid Bodies#SolidTrait'],
         },
         // ORDINARY FLOOR, so far. Solid, holds you up, and has never heard of
         // a shovel.
         {
           id: 'soil',
           name: 'Soil',
-          rows: [
-            useTrait('Gravity#ActsAsGroundTrait'),
-            useTrait('Solid Bodies#SolidTrait'),
-            setSprite('ground.png'),
-          ],
+          sprite: 'ground.png',
+          traits: ['Gravity#ActsAsGroundTrait', 'Solid Bodies#SolidTrait'],
         },
       ],
     }),
@@ -2601,31 +2653,26 @@ const enemies: WorldScenario = {
         {
           id: 'hero',
           name: 'Hero',
-          rows: [
-            useTrait('Gravity#AffectedByGravityTrait'),
-            useTrait('Input#TakesKeyboardInputTrait'),
-            useTrait('Arrow Keys#MovesAcrossTrait'),
-            setSprite('player.png'),
+          sprite: 'player.png',
+          traits: [
+            'Gravity#AffectedByGravityTrait',
+            'Input#TakesKeyboardInputTrait',
+            'Arrow Keys#MovesAcrossTrait',
           ],
         },
         {
           id: 'ground',
           name: 'Ground',
-          rows: [
-            useTrait('Gravity#ActsAsGroundTrait'),
-            useTrait('Solid Bodies#SolidTrait'),
-            setSprite('ground.png'),
-          ],
+          sprite: 'ground.png',
+          traits: ['Gravity#ActsAsGroundTrait', 'Solid Bodies#SolidTrait'],
         },
         {
           id: 'ball',
           name: 'Ball',
           // It falls, and that is all. Sitting on the floor is what an enemy
           // with nothing to move it looks like.
-          rows: [
-            useTrait('Gravity#AffectedByGravityTrait'),
-            setSprite('pinball.png'),
-          ],
+          sprite: 'pinball.png',
+          traits: ['Gravity#AffectedByGravityTrait'],
         },
       ],
     }),
@@ -2714,22 +2761,24 @@ const hunter: WorldScenario = {
         {
           id: 'hero',
           name: 'Hero',
-          rows: [
-            useTrait('Gravity#AffectedByGravityTrait'),
-            useTrait('Input#TakesKeyboardInputTrait'),
-            useTrait('Arrow Keys#MovesAcrossTrait'),
-            useTrait('Climbing#ClimbsTrait'),
-            setSprite('player.png'),
+          sprite: 'player.png',
+          traits: [
+            'Gravity#AffectedByGravityTrait',
+            'Input#TakesKeyboardInputTrait',
+            'Arrow Keys#MovesAcrossTrait',
+            'Climbing#ClimbsTrait',
           ],
-          // The keys that steer the climb — four moments, not a poll. The
-          // same blocks the sparkles write (`actors/enhance/climbArrows`):
-          // the rule owns climbing, the actor owns the controls. HATS, so
-          // they are roots beside the definition rather than rows inside it.
-          handlers: climbArrowsHandlers({
-            kind: 'actor',
-            path: 'actors/hero',
-            name: 'Hero',
-          }),
+          code: [
+            // The keys that steer the climb — four moments, not a poll. The
+            // same blocks the sparkles write (`actors/enhance/climbArrows`):
+            // the rule owns climbing, the actor owns the controls. HATS, so
+            // they are roots beside the definition rather than rows inside it.
+            ...climbArrowsHandlers({
+              kind: 'actor',
+              path: 'actors/hero',
+              name: 'Hero',
+            }),
+          ],
         },
         {
           id: 'ground',
@@ -2738,20 +2787,14 @@ const hunter: WorldScenario = {
           // chaser moves in two dimensions and would otherwise rise straight
           // through the upper floor to reach you. Solid gives the room walls,
           // so the only way up is the hole the ladder is in.
-          rows: [
-            useTrait('Gravity#ActsAsGroundTrait'),
-            useTrait('Solid Bodies#SolidTrait'),
-            setSprite('ground.png'),
-          ],
+          sprite: 'ground.png',
+          traits: ['Gravity#ActsAsGroundTrait', 'Solid Bodies#SolidTrait'],
         },
         {
           id: 'ladder',
           name: 'Ladder',
-          rows: [
-            useTrait('Climbing#CanBeClimbedTrait'),
-            useTrait('Gravity#ActsAsGroundTrait'),
-            setSprite('ladder.png'),
-          ],
+          sprite: 'ladder.png',
+          traits: ['Climbing#CanBeClimbedTrait', 'Gravity#ActsAsGroundTrait'],
         },
         {
           id: 'robot',
@@ -2764,16 +2807,18 @@ const hunter: WorldScenario = {
           // what to chase is `first actor in ⟨any Hero⟩`, which is unlocked
           // on a different branch, so a lesson that asked a learner to go and
           // find one would be asking for something they have not got.
-          rows: [
-            useTrait('Gravity#AffectedByGravityTrait'),
-            useTrait('Solid Bodies#SolidTrait'),
-            useTrait('Climbing#ClimbsTrait'),
+          sprite: 'robot.png',
+          traits: [
+            'Gravity#AffectedByGravityTrait',
+            'Solid Bodies#SolidTrait',
+            'Climbing#ClimbsTrait',
             // The map's edge stops it, which is a robot that got nowhere,
             // which is a moment to decide something. Two rules that have
             // never heard of each other, and no wall needed.
-            useTrait('Boundaries#StaysAcrossTrait'),
-            useTrait('Steering#ChasesTrait'),
-            setSprite('robot.png'),
+            'Boundaries#StaysAcrossTrait',
+            'Steering#ChasesTrait',
+          ],
+          code: [
             // WHO IT IS AFTER, in a step of the Robot's own.
             //
             // Not a row beside the traits: a row under `define actor` is a
@@ -2882,21 +2927,18 @@ const flier: WorldScenario = {
         {
           id: 'hero',
           name: 'Hero',
-          rows: [
-            useTrait('Gravity#AffectedByGravityTrait'),
-            useTrait('Input#TakesKeyboardInputTrait'),
-            useTrait('Arrow Keys#MovesAcrossTrait'),
-            setSprite('player.png'),
+          sprite: 'player.png',
+          traits: [
+            'Gravity#AffectedByGravityTrait',
+            'Input#TakesKeyboardInputTrait',
+            'Arrow Keys#MovesAcrossTrait',
           ],
         },
         {
           id: 'ground',
           name: 'Ground',
-          rows: [
-            useTrait('Gravity#ActsAsGroundTrait'),
-            useTrait('Solid Bodies#SolidTrait'),
-            setSprite('ground.png'),
-          ],
+          sprite: 'ground.png',
+          traits: ['Gravity#ActsAsGroundTrait', 'Solid Bodies#SolidTrait'],
         },
         {
           id: 'bat',
@@ -2906,9 +2948,9 @@ const flier: WorldScenario = {
           // up at all; here it can, and arrives — the failure is that there
           // is nothing you can do about it. A learner has to feel that before
           // the fix means anything.
-          rows: [
-            useTrait('Steering#ChasesTrait'),
-            setSprite('bat.png'),
+          sprite: 'bat.png',
+          traits: ['Steering#ChasesTrait'],
+          code: [
             {
               type: 'world_trait_step',
               fields: {PHASE: 'sense', NAME: 'know who to hunt'},
@@ -2999,21 +3041,19 @@ const pickups: WorldScenario = {
         {
           id: 'hero',
           name: 'Hero',
-          rows: [
-            useTrait('Physics#CanMoveTrait'),
-            useTrait('Collisions#CanCollideTrait'),
-            setSprite('player.png'),
-          ],
+          sprite: 'player.png',
+          traits: ['Physics#CanMoveTrait', 'Collisions#CanCollideTrait'],
         },
         {
           id: 'coin',
           name: 'Coin',
-          rows: [useTrait('Collisions#CanCollideTrait'), setSprite('coin.png')],
+          sprite: 'coin.png',
+          traits: ['Collisions#CanCollideTrait'],
         },
         {
           id: 'ground',
           name: 'Ground',
-          rows: [setSprite('ground.png')],
+          sprite: 'ground.png',
         },
       ],
     }),
@@ -3060,25 +3100,26 @@ const hazards: WorldScenario = {
         {
           id: 'hero',
           name: 'Hero',
-          rows: [
-            useTrait('Arrow Keys#MovesAcrossTrait'),
-            useTrait('Collisions#CanCollideTrait'),
+          sprite: 'player.png',
+          traits: [
+            'Arrow Keys#MovesAcrossTrait',
+            'Collisions#CanCollideTrait',
             // Solid, so walking into the Spike is LEANING on it rather than
             // passing through it.
-            useTrait('Solid Bodies#SolidTrait'),
-            setSprite('player.png'),
+            'Solid Bodies#SolidTrait',
           ],
         },
         {
           id: 'spike',
           name: 'Spike',
-          rows: [
-            useTrait('Collisions#CanCollideTrait'),
-            useTrait('Solid Bodies#SolidTrait'),
-            setSprite('spike.png'),
-          ],
+          sprite: 'spike.png',
+          traits: ['Collisions#CanCollideTrait', 'Solid Bodies#SolidTrait'],
         },
-        {id: 'ground', name: 'Ground', rows: [setSprite('ground.png')]},
+        {
+          id: 'ground',
+          name: 'Ground',
+          sprite: 'ground.png',
+        },
       ],
     }),
     sprites: ['player', 'spike', 'ground'],
@@ -3141,47 +3182,43 @@ const level: WorldScenario = {
         {
           id: 'hero',
           name: 'Hero',
-          rows: [
-            useTrait('Gravity#AffectedByGravityTrait'),
-            useTrait('Arrow Keys#MovesAcrossTrait'),
-            useTrait('Collisions#CanCollideTrait'),
-            useTrait('Collection#CollectsTrait'),
-            useTrait('Health#HasHealthTrait'),
+          sprite: 'player.png',
+          traits: [
+            'Gravity#AffectedByGravityTrait',
+            'Arrow Keys#MovesAcrossTrait',
+            'Collisions#CanCollideTrait',
+            'Collection#CollectsTrait',
+            'Health#HasHealthTrait',
             // …and it stays in the room, which `place/edges` is for.
-            useTrait('Boundaries#StaysAcrossTrait'),
-            setSprite('player.png'),
+            'Boundaries#StaysAcrossTrait',
           ],
         },
         {
           id: 'coin',
           name: 'Coin',
-          rows: [
-            useTrait('Collisions#CanCollideTrait'),
-            useTrait('Collection#CanBeCollectedTrait'),
-            setSprite('coin.png'),
+          sprite: 'coin.png',
+          traits: [
+            'Collisions#CanCollideTrait',
+            'Collection#CanBeCollectedTrait',
           ],
         },
         {
           id: 'spike',
           name: 'Spike',
-          rows: [
-            useTrait('Collisions#CanCollideTrait'),
-            useTrait('Health#DealsDamageTrait'),
-            setSprite('spike.png'),
-          ],
+          sprite: 'spike.png',
+          traits: ['Collisions#CanCollideTrait', 'Health#DealsDamageTrait'],
         },
         {
           id: 'flag',
           name: 'Flag',
-          rows: [useTrait('Collisions#CanCollideTrait'), setSprite('flag.png')],
+          sprite: 'flag.png',
+          traits: ['Collisions#CanCollideTrait'],
         },
         {
           id: 'ground',
           name: 'Ground',
-          rows: [
-            useTrait('Gravity#ActsAsGroundTrait'),
-            setSprite('ground.png'),
-          ],
+          sprite: 'ground.png',
+          traits: ['Gravity#ActsAsGroundTrait'],
         },
       ],
     }),
@@ -3260,21 +3297,18 @@ const bounce: WorldScenario = {
         {
           id: 'ball',
           name: 'Ball',
-          rows: [
-            useTrait('Physics#CanMoveTrait'),
-            useTrait('Collisions#CanCollideTrait'),
-            useTrait('Solid Bodies#SolidTrait'),
-            setSprite('ball.png'),
+          sprite: 'ball.png',
+          traits: [
+            'Physics#CanMoveTrait',
+            'Collisions#CanCollideTrait',
+            'Solid Bodies#SolidTrait',
           ],
         },
         {
           id: 'wall',
           name: 'Wall',
-          rows: [
-            useTrait('Collisions#CanCollideTrait'),
-            useTrait('Solid Bodies#SolidTrait'),
-            setSprite('ground.png'),
-          ],
+          sprite: 'ground.png',
+          traits: ['Collisions#CanCollideTrait', 'Solid Bodies#SolidTrait'],
         },
       ],
     }),
@@ -3327,8 +3361,8 @@ const paddle: WorldScenario = {
         {
           id: 'paddle',
           name: 'Paddle',
-          rows: [
-            useTrait('Arrow Keys#MovesAcrossTrait'),
+          traits: ['Arrow Keys#MovesAcrossTrait'],
+          code: [
             // The hand-written fence: keep the paddle's POSITION on screen,
             // which is not the same as keeping the paddle on screen.
             {
@@ -3357,12 +3391,12 @@ const paddle: WorldScenario = {
                 },
               },
             },
+            drawingRow({
+              width: 96,
+              height: 16,
+              commands: [fill(swatch('#5b8def')), rectangle(0, 0, 96, 16)],
+            }),
           ],
-          drawing: {
-            width: 96,
-            height: 16,
-            commands: [fill(swatch('#5b8def')), rectangle(0, 0, 96, 16)],
-          },
         },
       ],
     }),
@@ -3416,15 +3450,14 @@ const zap: WorldScenario = {
         {
           id: 'ship',
           name: 'Ship',
-          rows: [
-            useTrait('Input#TakesKeyboardInputTrait'),
-            setSprite('ship.png'),
-          ],
+          sprite: 'ship.png',
+          traits: ['Input#TakesKeyboardInputTrait'],
         },
         {
           id: 'ball',
           name: 'Energy Ball',
-          rows: [useTrait('Physics#CanMoveTrait'), setSprite('energyBall.png')],
+          sprite: 'energyBall.png',
+          traits: ['Physics#CanMoveTrait'],
         },
       ],
       handlers: [onPressed('ship', 'space', sendOne())],
@@ -3479,16 +3512,14 @@ const bricks: WorldScenario = {
         {
           id: 'ball',
           name: 'Ball',
-          rows: [
-            useTrait('Physics#CanMoveTrait'),
-            useTrait('Collisions#CanCollideTrait'),
-            setSprite('ball.png'),
-          ],
+          sprite: 'ball.png',
+          traits: ['Physics#CanMoveTrait', 'Collisions#CanCollideTrait'],
         },
         {
           id: 'brick',
           name: 'Brick',
-          rows: [useTrait('Collisions#CanCollideTrait'), setSprite('box.png')],
+          sprite: 'box.png',
+          traits: ['Collisions#CanCollideTrait'],
         },
       ],
       handlers: [
@@ -3557,17 +3588,21 @@ const waves: WorldScenario = {
         {
           id: 'spawner',
           name: 'Spawner',
-          rows: [useTrait('Time#HasATimerTrait'), showAs('text')],
-          drawing: {
-            width: 32,
-            height: 16,
-            commands: [fill(swatch('#8d8d99')), rectangle(0, 0, 32, 16)],
-          },
+          icon: 'text',
+          traits: ['Time#HasATimerTrait'],
+          code: [
+            drawingRow({
+              width: 32,
+              height: 16,
+              commands: [fill(swatch('#8d8d99')), rectangle(0, 0, 32, 16)],
+            }),
+          ],
         },
         {
           id: 'rock',
           name: 'Rock',
-          rows: [useTrait('Physics#CanMoveTrait'), setSprite('asteroid.png')],
+          sprite: 'asteroid.png',
+          traits: ['Physics#CanMoveTrait'],
         },
       ],
       handlers: [
@@ -3944,10 +3979,8 @@ const screenLesson: WorldScenario = {
         {
           id: 'hero',
           name: 'Hero',
-          rows: [
-            useTrait('Arrow Keys#MovesAcrossTrait'),
-            setSprite('player.png'),
-          ],
+          sprite: 'player.png',
+          traits: ['Arrow Keys#MovesAcrossTrait'],
         },
       ],
       handlers: [pauseOnP],
@@ -4255,11 +4288,11 @@ const crowd: WorldScenario = {
         {
           id: 'wanderer',
           name: 'Wanderer',
-          rows: [
-            useTrait('Physics#CanMoveTrait'),
-            useTrait('Screen Wrap#WrapsAcrossTrait'),
-            useTrait('Screen Wrap#WrapsDownTrait'),
-            setSprite('coin.png'),
+          sprite: 'coin.png',
+          traits: [
+            'Physics#CanMoveTrait',
+            'Screen Wrap#WrapsAcrossTrait',
+            'Screen Wrap#WrapsDownTrait',
           ],
         },
       ],
@@ -4337,21 +4370,20 @@ const steering: WorldScenario = {
         {
           id: 'player',
           name: 'Player',
-          rows: [
-            useTrait('Arrow Keys#MovesAcrossTrait'),
-            useTrait('Arrow Keys#MovesDownTrait'),
-            setSprite('player.png'),
-          ],
+          sprite: 'player.png',
+          traits: ['Arrow Keys#MovesAcrossTrait', 'Arrow Keys#MovesDownTrait'],
         },
         {
           id: 'chaser',
           name: 'Chaser',
-          rows: [useTrait('Physics#CanMoveTrait'), setSprite('box.png')],
+          sprite: 'box.png',
+          traits: ['Physics#CanMoveTrait'],
         },
         {
           id: 'fleer',
           name: 'Fleer',
-          rows: [useTrait('Physics#CanMoveTrait'), setSprite('coin.png')],
+          sprite: 'coin.png',
+          traits: ['Physics#CanMoveTrait'],
         },
       ],
     }),
@@ -4462,11 +4494,8 @@ const ruleProperty: WorldScenario = {
           // both Leaves off a 320-pixel world in under three seconds, and the
           // lesson's last step — one Leaf at strength 3, the other left alone —
           // is a comparison you have to be able to keep watching.
-          rows: [
-            useTrait('Wind#BlownTrait'),
-            useTrait('Screen Wrap#WrapsAcrossTrait'),
-            setSprite('coin.png'),
-          ],
+          sprite: 'coin.png',
+          traits: ['Wind#BlownTrait', 'Screen Wrap#WrapsAcrossTrait'],
         },
       ],
     }),
@@ -4519,17 +4548,17 @@ const grid: WorldScenario = {
         {
           id: 'player',
           name: 'Player',
-          rows: [
-            useTrait('Arrow Keys#MovesAcrossTrait'),
-            useTrait('Arrow Keys#MovesDownTrait'),
-            useTrait('Input#TakesKeyboardInputTrait'),
-            setSprite('player.png'),
+          sprite: 'player.png',
+          traits: [
+            'Arrow Keys#MovesAcrossTrait',
+            'Arrow Keys#MovesDownTrait',
+            'Input#TakesKeyboardInputTrait',
           ],
         },
         {
           id: 'wall',
           name: 'Wall',
-          rows: [setSprite('ground.png')],
+          sprite: 'ground.png',
         },
       ],
     }),
@@ -4586,21 +4615,20 @@ const push: WorldScenario = {
         {
           id: 'player',
           name: 'Player',
-          rows: [
-            useTrait('Grid#StepsOnTheGridTrait'),
-            useTrait('Input#TakesKeyboardInputTrait'),
-            setSprite('player.png'),
-          ],
+          sprite: 'player.png',
+          traits: ['Grid#StepsOnTheGridTrait', 'Input#TakesKeyboardInputTrait'],
         },
         {
           id: 'crate',
           name: 'Crate',
-          rows: [useTrait('Grid#FillsATileTrait'), setSprite('box.png')],
+          sprite: 'box.png',
+          traits: ['Grid#FillsATileTrait'],
         },
         {
           id: 'wall',
           name: 'Wall',
-          rows: [useTrait('Grid#FillsATileTrait'), setSprite('ground.png')],
+          sprite: 'ground.png',
+          traits: ['Grid#FillsATileTrait'],
         },
       ],
       handlers: [
@@ -4657,10 +4685,8 @@ const people: WorldScenario = {
         {
           id: 'villager',
           name: 'Villager',
-          rows: [
-            useTrait('Patrol#PatrolsAcrossTrait'),
-            setSprite('player.png'),
-          ],
+          sprite: 'player.png',
+          traits: ['Patrol#PatrolsAcrossTrait'],
         },
       ],
     }),
@@ -4725,20 +4751,20 @@ const errand: WorldScenario = {
           // how every other Adventure lesson moves.
           id: 'hero',
           name: 'Hero',
-          rows: [
-            useTrait('Arrow Keys#MovesAcrossTrait'),
-            useTrait('Collisions#CanCollideTrait'),
-            useTrait('Collection#CollectsTrait'),
-            setSprite('player.png'),
+          sprite: 'player.png',
+          traits: [
+            'Arrow Keys#MovesAcrossTrait',
+            'Collisions#CanCollideTrait',
+            'Collection#CollectsTrait',
           ],
         },
         {
           id: 'token',
           name: 'Token',
-          rows: [
-            useTrait('Collisions#CanCollideTrait'),
-            useTrait('Collection#CanBeCollectedTrait'),
-            setSprite('coin.png'),
+          sprite: 'coin.png',
+          traits: [
+            'Collisions#CanCollideTrait',
+            'Collection#CanBeCollectedTrait',
           ],
         },
       ],
@@ -4787,10 +4813,8 @@ const changeRule: WorldScenario = {
         {
           id: 'guard',
           name: 'Guard',
-          rows: [
-            useTrait('Patrol#PatrolsAcrossTrait'),
-            setSprite('player.png'),
-          ],
+          sprite: 'player.png',
+          traits: ['Patrol#PatrolsAcrossTrait'],
         },
       ],
     }),
@@ -4849,21 +4873,21 @@ const ownTrait: WorldScenario = {
         {
           id: 'leaf',
           name: 'Leaf',
-          rows: [
-            useTrait('Weather#BlownTrait'),
-            useTrait('Screen Wrap#WrapsAcrossTrait'),
-            useTrait('Screen Wrap#WrapsDownTrait'),
-            setSprite('coin.png'),
+          sprite: 'coin.png',
+          traits: [
+            'Weather#BlownTrait',
+            'Screen Wrap#WrapsAcrossTrait',
+            'Screen Wrap#WrapsDownTrait',
           ],
         },
         {
           id: 'stone',
           name: 'Stone',
-          rows: [
-            useTrait('Weather#BlownTrait'),
-            useTrait('Screen Wrap#WrapsAcrossTrait'),
-            useTrait('Screen Wrap#WrapsDownTrait'),
-            setSprite('box.png'),
+          sprite: 'box.png',
+          traits: [
+            'Weather#BlownTrait',
+            'Screen Wrap#WrapsAcrossTrait',
+            'Screen Wrap#WrapsDownTrait',
           ],
         },
       ],
@@ -4972,12 +4996,14 @@ const ownRule: WorldScenario = {
         {
           id: 'fish',
           name: 'Fish',
-          rows: [setSprite('coin.png'), bobStep()],
+          sprite: 'coin.png',
+          code: [bobStep()],
         },
         {
           id: 'bird',
           name: 'Bird',
-          rows: [setSprite('ball.png'), bobStep()],
+          sprite: 'ball.png',
+          code: [bobStep()],
         },
       ],
     }),
@@ -5037,13 +5063,17 @@ const bigWorld: WorldScenario = {
         {
           id: 'walker',
           name: 'Walker',
-          rows: [
-            useTrait('Arrow Keys#MovesAcrossTrait'),
-            useTrait('Boundaries#StaysAcrossTrait'),
-            setSprite('player.png'),
+          sprite: 'player.png',
+          traits: [
+            'Arrow Keys#MovesAcrossTrait',
+            'Boundaries#StaysAcrossTrait',
           ],
         },
-        {id: 'ground', name: 'Ground', rows: [setSprite('ground.png')]},
+        {
+          id: 'ground',
+          name: 'Ground',
+          sprite: 'ground.png',
+        },
       ],
     }),
     sprites: ['player', 'ground'],
@@ -5091,18 +5121,14 @@ const readRule: WorldScenario = {
         {
           id: 'hero',
           name: 'Hero',
-          rows: [
-            useTrait('Gravity#AffectedByGravityTrait'),
-            setSprite('player.png'),
-          ],
+          sprite: 'player.png',
+          traits: ['Gravity#AffectedByGravityTrait'],
         },
         {
           id: 'ground',
           name: 'Ground',
-          rows: [
-            useTrait('Gravity#ActsAsGroundTrait'),
-            setSprite('ground.png'),
-          ],
+          sprite: 'ground.png',
+          traits: ['Gravity#ActsAsGroundTrait'],
         },
       ],
     }),
@@ -5223,12 +5249,14 @@ const ownBlock: WorldScenario = {
         {
           id: 'cork',
           name: 'Cork',
-          rows: [useTrait('Bobbing#BobsGentlyTrait'), setSprite('coin.png')],
+          sprite: 'coin.png',
+          traits: ['Bobbing#BobsGentlyTrait'],
         },
         {
           id: 'buoy',
           name: 'Buoy',
-          rows: [useTrait('Bobbing#BobsWildlyTrait'), setSprite('ball.png')],
+          sprite: 'ball.png',
+          traits: ['Bobbing#BobsWildlyTrait'],
         },
       ],
     }),
@@ -5282,31 +5310,29 @@ const movingGround: WorldScenario = {
         {
           id: 'hero',
           name: 'Hero',
-          rows: [
-            useTrait('Gravity#AffectedByGravityTrait'),
-            useTrait('Collisions#CanCollideTrait'),
-            useTrait('Arrow Keys#MovesAcrossTrait'),
-            setSprite('player.png'),
+          sprite: 'player.png',
+          traits: [
+            'Gravity#AffectedByGravityTrait',
+            'Collisions#CanCollideTrait',
+            'Arrow Keys#MovesAcrossTrait',
           ],
         },
         {
           id: 'platform',
           name: 'Platform',
-          rows: [
-            useTrait('Patrol#PatrolsAcrossTrait'),
-            useTrait('Gravity#ActsAsGroundTrait'),
-            useTrait('Solid Bodies#SolidTrait'),
-            useTrait('Collisions#CanCollideTrait'),
-            setSprite('ground.png'),
+          sprite: 'ground.png',
+          traits: [
+            'Patrol#PatrolsAcrossTrait',
+            'Gravity#ActsAsGroundTrait',
+            'Solid Bodies#SolidTrait',
+            'Collisions#CanCollideTrait',
           ],
         },
         {
           id: 'ground',
           name: 'Ground',
-          rows: [
-            useTrait('Gravity#ActsAsGroundTrait'),
-            setSprite('ground.png'),
-          ],
+          sprite: 'ground.png',
+          traits: ['Gravity#ActsAsGroundTrait'],
         },
       ],
     }),
@@ -5374,20 +5400,17 @@ const goal: WorldScenario = {
         {
           id: 'player',
           name: 'Player',
-          rows: [
-            useTrait('Grid#StepsOnTheGridTrait'),
-            useTrait('Input#TakesKeyboardInputTrait'),
-            setSprite('player.png'),
-          ],
+          sprite: 'player.png',
+          traits: ['Grid#StepsOnTheGridTrait', 'Input#TakesKeyboardInputTrait'],
         },
         {
           id: 'crate',
           name: 'Crate',
-          rows: [
-            useTrait('Grid#FillsATileTrait'),
-            useTrait('Grid#CanBePushedTrait'),
-            useTrait('Collisions#CanCollideTrait'),
-            setSprite('box.png'),
+          sprite: 'box.png',
+          traits: [
+            'Grid#FillsATileTrait',
+            'Grid#CanBePushedTrait',
+            'Collisions#CanCollideTrait',
           ],
         },
         {
@@ -5396,23 +5419,25 @@ const goal: WorldScenario = {
           // or nothing could ever be pushed onto it.
           id: 'mark',
           name: 'Mark',
-          rows: [
-            useTrait('Collisions#CanCollideTrait'),
+          sprite: 'coin.png',
+          traits: ['Collisions#CanCollideTrait'],
+          values: [
             // A SMALL box, deliberately. A tile-sized one is touched by a
             // crate in the next tile along — boxes a tile wide meet at the
             // edge — so a crate one push short of the mark would already
             // count as being on it.
             {
-              type: 'world_set_Collisions_SizeProperty',
-              inputs: {ACTOR: me(), X: num(8), Y: num(8)},
+              setter: 'world_set_Collisions_SizeProperty',
+              type: 'vector',
+              value: {x: 8, y: 8},
             },
-            setSprite('coin.png'),
           ],
         },
         {
           id: 'wall',
           name: 'Wall',
-          rows: [useTrait('Grid#FillsATileTrait'), setSprite('ground.png')],
+          sprite: 'ground.png',
+          traits: ['Grid#FillsATileTrait'],
         },
       ],
       handlers: [
@@ -5505,16 +5530,20 @@ const rooms: WorldScenario = {
     }),
     stockActors: ['viewport'],
     actors: {
-      player: actorFile('Player', [
-        useTrait('Arrow Keys#MovesAcrossTrait'),
-        useTrait('Collisions#CanCollideTrait'),
-        setSprite('player.png'),
-      ]),
-      door: actorFile('Door', [
-        useTrait('Collisions#CanCollideTrait'),
-        setSprite('door.png'),
-      ]),
-      chest: actorFile('Chest', [setSprite('coin.png')]),
+      player: actorDocument({
+        name: 'Player',
+        sprite: 'player.png',
+        traits: ['Arrow Keys#MovesAcrossTrait', 'Collisions#CanCollideTrait'],
+      }),
+      door: actorDocument({
+        name: 'Door',
+        sprite: 'door.png',
+        traits: ['Collisions#CanCollideTrait'],
+      }),
+      chest: actorDocument({
+        name: 'Chest',
+        sprite: 'coin.png',
+      }),
     },
     maps: {
       room1: mapFile([
@@ -5578,12 +5607,12 @@ const keys: WorldScenario = {
         {
           id: 'player',
           name: 'Player',
-          rows: [
-            useTrait('Arrow Keys#MovesAcrossTrait'),
-            useTrait('Collisions#CanCollideTrait'),
-            useTrait('Collection#CollectsTrait'),
-            useTrait('Inventory#CarriesTrait'),
-            setSprite('player.png'),
+          sprite: 'player.png',
+          traits: [
+            'Arrow Keys#MovesAcrossTrait',
+            'Collisions#CanCollideTrait',
+            'Collection#CollectsTrait',
+            'Inventory#CarriesTrait',
           ],
         },
         {
@@ -5591,16 +5620,17 @@ const keys: WorldScenario = {
           // dropdown every other block names a kind with.
           id: 'key',
           name: 'Key',
-          rows: [
-            useTrait('Collection#CanBeCollectedTrait'),
-            useTrait('Inventory#CanBeCarriedTrait'),
-            setSprite('coin.png'),
+          sprite: 'coin.png',
+          traits: [
+            'Collection#CanBeCollectedTrait',
+            'Inventory#CanBeCarriedTrait',
           ],
         },
         {
           id: 'door',
           name: 'Door',
-          rows: [useTrait('Solid Bodies#SolidTrait'), setSprite('door.png')],
+          sprite: 'door.png',
+          traits: ['Solid Bodies#SolidTrait'],
         },
       ],
     }),
@@ -5739,11 +5769,13 @@ const emergent: WorldScenario = {
         {
           id: 'boid',
           name: 'Boid',
-          rows: [
-            useTrait('Physics#CanMoveTrait'),
-            useTrait('Screen Wrap#WrapsAcrossTrait'),
-            useTrait('Screen Wrap#WrapsDownTrait'),
-            setSprite('ball.png'),
+          sprite: 'ball.png',
+          traits: [
+            'Physics#CanMoveTrait',
+            'Screen Wrap#WrapsAcrossTrait',
+            'Screen Wrap#WrapsDownTrait',
+          ],
+          code: [
             // Keep apart: the one of the three that is written for you.
             {
               type: 'world_trait_step',
@@ -5860,11 +5892,13 @@ const dials: WorldScenario = {
         {
           id: 'boid',
           name: 'Boid',
-          rows: [
-            useTrait('Physics#CanMoveTrait'),
-            useTrait('Screen Wrap#WrapsAcrossTrait'),
-            useTrait('Screen Wrap#WrapsDownTrait'),
-            setSprite('ball.png'),
+          sprite: 'ball.png',
+          traits: [
+            'Physics#CanMoveTrait',
+            'Screen Wrap#WrapsAcrossTrait',
+            'Screen Wrap#WrapsDownTrait',
+          ],
+          code: [
             {
               type: 'world_trait_step',
               fields: {PHASE: 'decide', NAME: 'flock'},
@@ -5993,19 +6027,21 @@ const neighbors: WorldScenario = {
         {
           id: 'dot',
           name: 'Dot',
-          rows: [setSprite('box.png')],
+          sprite: 'box.png',
         },
         {
           id: 'walker',
           name: 'Walker',
-          rows: [
-            useTrait('Physics#CanMoveTrait'),
+          sprite: 'player.png',
+          traits: [
+            'Physics#CanMoveTrait',
             // …and round again, so "watch the lit patch travel with the
             // Walker" is something a learner can do more than once. At one
             // unit a second the Walker is off a 320-pixel world in three, and
             // a patch that has already gone past is a patch nobody saw.
-            useTrait('Screen Wrap#WrapsAcrossTrait'),
-            setSprite('player.png'),
+            'Screen Wrap#WrapsAcrossTrait',
+          ],
+          code: [
             {
               type: 'world_trait_step',
               fields: {PHASE: 'decide', NAME: 'look around'},
@@ -6068,31 +6104,29 @@ const turns: WorldScenario = {
         {
           id: 'player',
           name: 'Player',
-          rows: [
-            useTrait('Grid#StepsOnTheGridTrait'),
-            useTrait('Input#TakesKeyboardInputTrait'),
-            setSprite('player.png'),
-          ],
+          sprite: 'player.png',
+          traits: ['Grid#StepsOnTheGridTrait', 'Input#TakesKeyboardInputTrait'],
         },
         {
           id: 'enemy',
           name: 'Enemy',
-          rows: [
-            useTrait('Grid#StepsOnTheGridTrait'),
-            useTrait('Time#HasATimerTrait'),
+          sprite: 'asteroid.png',
+          traits: ['Grid#StepsOnTheGridTrait', 'Time#HasATimerTrait'],
+          values: [
             // Close enough to a person pressing a key that it looks right for
             // a second or two, which is what makes it worth taking away.
             {
-              type: 'world_set_Time_TimerPeriodProperty',
-              inputs: {ACTOR: me(), VALUE: num(0.4)},
+              setter: 'world_set_Time_TimerPeriodProperty',
+              type: 'number',
+              value: 0.4,
             },
-            setSprite('asteroid.png'),
           ],
         },
         {
           id: 'wall',
           name: 'Wall',
-          rows: [useTrait('Grid#FillsATileTrait'), setSprite('ground.png')],
+          sprite: 'ground.png',
+          traits: ['Grid#FillsATileTrait'],
         },
       ],
       handlers: [
@@ -6163,32 +6197,27 @@ const undo: WorldScenario = {
         {
           id: 'player',
           name: 'Player',
-          rows: [
-            useTrait('Grid#StepsOnTheGridTrait'),
-            useTrait('Input#TakesKeyboardInputTrait'),
-            setSprite('player.png'),
-          ],
+          sprite: 'player.png',
+          traits: ['Grid#StepsOnTheGridTrait', 'Input#TakesKeyboardInputTrait'],
         },
         {
           id: 'crate',
           name: 'Crate',
-          rows: [
-            useTrait('Grid#FillsATileTrait'),
-            useTrait('Grid#CanBePushedTrait'),
-            setSprite('box.png'),
-          ],
+          sprite: 'box.png',
+          traits: ['Grid#FillsATileTrait', 'Grid#CanBePushedTrait'],
         },
         {
           // Paint on the floor: where the Crate is meant to end up, and
           // nothing else. Counting whether it is there is `puzzle/goal`.
           id: 'mark',
           name: 'Mark',
-          rows: [setSprite('coin.png')],
+          sprite: 'coin.png',
         },
         {
           id: 'wall',
           name: 'Wall',
-          rows: [useTrait('Grid#FillsATileTrait'), setSprite('ground.png')],
+          sprite: 'ground.png',
+          traits: ['Grid#FillsATileTrait'],
         },
       ],
       handlers: [
@@ -6236,7 +6265,7 @@ const edges: WorldScenario = {
       rows: [
         addActor(actorPath('ball'), [placeAt(160, 160), setVelocity(3, 3)]),
       ],
-      actors: [{id: 'ball', name: 'Ball', rows: BALL}],
+      actors: [{id: 'ball', name: 'Ball', ...BALL}],
     }),
     sprites: ['ball'],
     rules: ['motion', 'bounds', 'wrap'],
@@ -6280,7 +6309,13 @@ const variable: WorldScenario = {
         addActor(actorPath('post'), [placeAt(160, 160)]),
         addActor(actorPath('post'), [placeAt(260, 160)]),
       ],
-      actors: [{id: 'post', name: 'Post', rows: [setSprite('post.png')]}],
+      actors: [
+        {
+          id: 'post',
+          name: 'Post',
+          sprite: 'post.png',
+        },
+      ],
     }),
     sprites: ['post'],
   }),
@@ -6323,7 +6358,13 @@ const many: WorldScenario = {
         addActor(actorPath('coin'), [placeAt(160, 240)]),
         addActor(actorPath('coin'), [placeAt(260, 240)]),
       ],
-      actors: [{id: 'coin', name: 'Coin', rows: [setSprite('box.png')]}],
+      actors: [
+        {
+          id: 'coin',
+          name: 'Coin',
+          sprite: 'box.png',
+        },
+      ],
     }),
     sprites: ['box', 'coin'],
   }),
@@ -6443,12 +6484,17 @@ const actorState: WorldScenario = {
       ],
     }),
     actors: {
-      lamp: actorFile('Lamp', [actsLike('actors/label'), showAs('text')], {
-        drawing: {
-          width: 96,
-          height: 24,
-          commands: [fill(swatch('#ffcc66')), drawText(48, 12)],
-        },
+      lamp: actorDocument({
+        name: 'Lamp',
+        actsLike: 'actors/label',
+        icon: 'text',
+        code: [
+          drawingRow({
+            width: 96,
+            height: 24,
+            commands: [fill(swatch('#ffcc66')), drawText(48, 12)],
+          }),
+        ],
       }),
     },
     // The Label the Lamp ACTS LIKE, which is where its words come from.
@@ -6573,7 +6619,13 @@ const scoreLesson: WorldScenario = {
         declareProperty('number', 'counted', '0'),
         addActor(actorPath('target'), [placeAt(160, 160)]),
       ],
-      actors: [{id: 'target', name: 'Target', rows: [setSprite('coin.png')]}],
+      actors: [
+        {
+          id: 'target',
+          name: 'Target',
+          sprite: 'coin.png',
+        },
+      ],
       handlers: [
         {
           // The WORLD's telling: a press happened, and it is about nobody. The

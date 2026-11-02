@@ -7,6 +7,10 @@
 // (`src/fixtures`, and AGENTS.md on dumping the palette before writing a
 // block).
 
+import {
+  actorDocument,
+  type ActorSpec as DataSpec,
+} from '../../actors/actorDocument';
 import {chain, me, num} from '../../actors/stock/workspace';
 import type {CameraValue} from '../../blockly/placementCameras';
 
@@ -47,21 +51,6 @@ export const anyKind = (id: string) => ({
 });
 
 /** A drawing spec as the ROW an actor's chain holds. */
-const drawingBlock = (drawing: {
-  width: number;
-  height: number;
-  commands: object[];
-}) => ({
-  type: 'world_define_drawing',
-  // Sockets rather than fields: the size is read off the actor now, so a fixed
-  // one is a number shadow in each (`actors/stock/workspace.drawingRow`).
-  inputs: {
-    WIDTH: {shadow: {type: 'math_number', fields: {NUM: drawing.width}}},
-    HEIGHT: {shadow: {type: 'math_number', fields: {NUM: drawing.height}}},
-    DO: {block: chain(drawing.commands)},
-  },
-});
-
 /**
  * How tall a stack of rows draws, in rows.
  *
@@ -102,7 +91,7 @@ const below = (y: number, rows: number): number =>
   y + rows * PIXELS_PER_ROW + GAP;
 
 /** An actor a lesson's world places: a file of its own, beside the world. */
-export interface ActorSpec {
+export interface ActorSpec extends DataSpec {
   /**
    * The file's stem: `hero` is `actors/hero.actor`.
    *
@@ -112,50 +101,15 @@ export interface ActorSpec {
    * is capitalised (`ruleRegistry.pathSlug`).
    */
   id: string;
-  /** Its NAME, which is the kind — what `is a ⟨Hero⟩` reads. */
-  name: string;
-  /** The rows of the definition: traits, a sprite, its own properties. */
-  rows: object[];
-  /** The picture it paints, for an actor with no sprite. */
-  drawing?: {width: number; height: number; commands: object[]};
-  /**
-   * Event handlers of the actor's own, each a ROOT beside its definition.
-   *
-   * A hat about `this actor` belongs in the actor's file, where `this actor`
-   * is the kind being defined; written in the world it would be about
-   * nobody. A hat about `any ⟨Kind⟩` is the world's and goes in `handlers`
-   * on the world spec instead.
-   */
-  handlers?: object[];
 }
 
-/**
- * `define actor ⟨Hero⟩`, as the root of the actor's own file.
- *
- * A drawing is a ROW in the chain, which is where an actor file keeps one
- * (`actors/stock/workspace.drawingRow`).
- */
-const defineActor = ({name, rows, drawing}: ActorSpec) => ({
-  type: 'world_actor',
-  x: 20,
-  y: 20,
-  fields: {NAME: name},
-  next: {
-    block: chain([...rows, ...(drawing ? [drawingBlock(drawing)] : [])]),
-  },
-});
-
-/** An `.actor` file holding one definition, and its own hats beside it. */
-export const actorFileOf = (spec: ActorSpec): string => {
-  const root = defineActor(spec);
-  let y = below(20, rowsTall(root));
-  const beside = (spec.handlers ?? []).map(hat => {
-    const at = {...hat, x: 20, y};
-    y = below(y, rowsTall(hat));
-    return at;
-  });
-  return JSON.stringify({blocks: {blocks: [root, ...beside]}}, null, 2);
-};
+/** An `.actor` file holding the actor's data. */
+export const actorFileOf = (spec: ActorSpec): string =>
+  actorDocument(
+    Object.fromEntries(
+      Object.entries(spec).filter(([key]) => key !== 'id'),
+    ) as DataSpec,
+  );
 
 /**
  * `define ⟨type⟩ property ⟨name⟩ with default ⟨…⟩`.

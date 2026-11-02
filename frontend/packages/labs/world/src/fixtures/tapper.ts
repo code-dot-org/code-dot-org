@@ -37,13 +37,13 @@
 // than when something happens. The crosshair reads it every frame, which is
 // what makes a game feel aimed rather than merely clicked at.
 
+import {actorDocument} from '../actors/actorDocument';
 import {labelActor} from '../actors/stock/label';
 import {emitWorldEvent, hearWorldEvent} from '../actors/stock/workspace';
 import {
   buildProject,
   stack,
   starterSprites,
-  useTrait,
   type ProjectSpec,
 } from '../constants';
 import {asScreenProject} from '../progression/lessons/asScreen';
@@ -98,22 +98,6 @@ const mouseAxis = (component: 'x' | 'y') => ({
     inputs: {VEC: {block: {type: 'world_mouse_position'}}},
   },
 });
-
-/** An actor file: one `define actor` and its rows. */
-const actorFile = (name: string, rows: object[]) =>
-  JSON.stringify({
-    blocks: {
-      blocks: [
-        {
-          type: 'world_actor',
-          x: 20,
-          y: 20,
-          fields: {NAME: name},
-          next: {block: stack(rows)},
-        },
-      ],
-    },
-  });
 
 /**
  * The Main Screen's Labels: the score, which its own code keeps up to date,
@@ -268,22 +252,23 @@ const COIN_GRID = countTo(
 // nothing to collect it, nothing to clean up afterwards, because the rule
 // works out what the pointer was over from where the coin is and how big it
 // is drawn.
-const COIN_ACTOR = actorFile('Coin', [
-  useTrait('Mouse#CanBeClickedTrait'),
-  useTrait('Spin#SpinTrait'),
-  {type: 'world_set_sprite', fields: {SPRITE: 'coin.png'}},
-]);
+const COIN_ACTOR = actorDocument({
+  name: 'Coin',
+  sprite: 'coin.png',
+  traits: ['Mouse#CanBeClickedTrait', 'Spin#SpinTrait'],
+});
 
 // Somebody to hear the clicks. It elects `Takes Mouse Input`, which is what
 // makes the rule tell it — the world hears every click either way, and an
 // actor hears the ones it asked for (rules/mouse).
-const SCOREBOARD_ACTOR = actorFile('Scoreboard', [
-  useTrait('Mouse#TakesMouseInputTrait'),
+const SCOREBOARD_ACTOR = actorDocument({
+  name: 'Scoreboard',
   // ONE CELL of the switch sheet: `switch.png` is a strip of three, and an
   // actor drawing the whole strip is three switches side by side rather than
   // a thing (blockly/spriteCells).
-  {type: 'world_set_sprite', fields: {SPRITE: 'switch.png#0'}},
-]);
+  sprite: 'switch.png#0',
+  traits: ['Mouse#TakesMouseInputTrait'],
+});
 
 /**
  * The crosshair, and the `each frame` that is the whole reason it exists.
@@ -292,46 +277,37 @@ const SCOREBOARD_ACTOR = actorFile('Scoreboard', [
  * one trait, elected by one actor, shared with nobody — for a crosshair that
  * follows the pointer.
  */
-const CROSSHAIR_ACTOR = JSON.stringify({
-  blocks: {
-    blocks: [
-      {
-        type: 'world_actor',
-        x: 20,
-        y: 20,
-        fields: {NAME: 'Crosshair'},
-        next: {
-          block: stack([
-            {type: 'world_set_sprite', fields: {SPRITE: 'switch.png#1'}},
-            // The same trait the coins carry, which is the whole of what a
-            // shared one is FOR: the crosshair's own `each frame` below
-            // belongs to the crosshair alone, and this belongs to anything
-            // that asks for it.
-            useTrait('Spin#SpinTrait'),
-            {
-              // In `sense`, the first moment of the frame: the crosshair is reading
-              // the world rather than deciding anything, and everything that runs
-              // afterwards sees it where the pointer is.
-              type: 'world_trait_step',
-              fields: {PHASE: 'sense', NAME: 'follow the pointer'},
-              inputs: {
-                DO: {
-                  block: {
-                    type: 'world_set_position',
-                    inputs: {
-                      ACTOR: me(),
-                      X: mouseAxis('x'),
-                      Y: mouseAxis('y'),
-                    },
-                  },
-                },
-              },
+const CROSSHAIR_ACTOR = actorDocument({
+  name: 'Crosshair',
+  sprite: 'switch.png#1',
+  traits: [
+    // The same trait the coins carry, which is the whole of what a
+    // shared one is FOR: the crosshair's own `each frame` below
+    // belongs to the crosshair alone, and this belongs to anything
+    // that asks for it.
+    'Spin#SpinTrait',
+  ],
+  code: [
+    {
+      // In `sense`, the first moment of the frame: the crosshair is reading
+      // the world rather than deciding anything, and everything that runs
+      // afterwards sees it where the pointer is.
+      type: 'world_trait_step',
+      fields: {PHASE: 'sense', NAME: 'follow the pointer'},
+      inputs: {
+        DO: {
+          block: {
+            type: 'world_set_position',
+            inputs: {
+              ACTOR: me(),
+              X: mouseAxis('x'),
+              Y: mouseAxis('y'),
             },
-          ]),
+          },
         },
       },
-    ],
-  },
+    },
+  ],
 });
 
 /**
