@@ -8,7 +8,8 @@ class UserPreferencesController < ApplicationController
     preference = UserPreference.find_or_initialize_by(user_id: current_user.id)
     section_order = update_params[:section_order]
 
-    # Section order saves for one user arrive in concurrent bursts; refuse one rather than queue on the row lock.
+    # Section order saves for one user arrive in concurrent bursts; fail fast if another database connection has a lock
+    # on the rows we want to update instead of waiting for the other connection to release its lock.
     if preference.persisted? && section_order && section_order != preference.section_order
       preference.with_lock('FOR UPDATE NOWAIT') {apply_update(preference)}
     else
