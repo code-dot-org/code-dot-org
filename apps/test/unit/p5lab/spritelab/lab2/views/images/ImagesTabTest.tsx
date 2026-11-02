@@ -82,9 +82,11 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/sentence/SentenceScene', () => {
           verdict: null,
           rating: {
             offered: false,
+            required: false,
             verdict: null,
             judge: jest.fn(),
             explain: jest.fn(),
+            dismiss: jest.fn(),
           },
           awaitingVerdict: false,
           exhausted: false,

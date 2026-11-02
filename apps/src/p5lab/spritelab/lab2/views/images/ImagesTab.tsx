@@ -86,6 +86,9 @@ interface ImagesTabProps {
   onDrawingHistory?: (history: EditHistory | null) => void;
   /** The advanced settings, for authors. */
   advancedOffered?: boolean;
+  /** The level checks that the picture was rated: the rating strip stays
+      until a thumb is given. */
+  ratingRequired?: boolean;
 }
 
 const DRAFT_ID = 'draft';
@@ -117,6 +120,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   active = true,
   onDrawingHistory,
   advancedOffered,
+  ratingRequired,
 }) => {
   const animationList = useAppSelector(state => state.animationList);
   // Thumbnails land as the engine trims; re-list when they do.
@@ -483,6 +487,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
           }
           initialAnimated={animated}
           onAnimatedChange={setAnimated}
+          ratingRequired={ratingRequired}
           generationsLeft={generationsLeft}
           onGenerateStart={onGenerate}
           onBusyChange={setBusy}
@@ -561,6 +566,9 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                       onJudge={parts.rating.judge}
                       onReasons={parts.rating.explain}
                       onAsking={handleAsking}
+                      onDismiss={
+                        parts.rating.required ? undefined : parts.rating.dismiss
+                      }
                       disabled={parts.busy}
                     />
                   )

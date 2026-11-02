@@ -125,9 +125,13 @@ export interface SentenceSceneParts {
       every one, any picture) is in the frame. */
   rating: {
     offered: boolean;
+    /** The level checks for a rating: the host offers no way to dismiss. */
+    required: boolean;
     verdict: Verdict | null;
     judge: (verdict: Verdict) => void;
     explain: (reasons: string[]) => void;
+    /** Put the rating away unanswered, for this picture. */
+    dismiss: () => void;
   };
   /** The level's generations are used up: Generate stays off. */
   exhausted: boolean;
@@ -163,6 +167,8 @@ interface SentenceSceneProps {
   /** The scene is making or keeping a picture, or has stopped; a host can
       hold its other controls still meanwhile. */
   onBusyChange?: (busy: boolean) => void;
+  /** The level checks that the picture was rated. */
+  ratingRequired?: boolean;
   /** Analytics: which surface generated. */
   method?: string;
   /** Lays the parts out. */
@@ -189,6 +195,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   onKeep,
   onGenerateStart,
   onBusyChange,
+  ratingRequired = false,
   method = 'scene',
   layout,
   wordLayout,
@@ -222,6 +229,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     null
   );
   const [verdict, setVerdict] = useState<Verdict | null>(null);
+  const [ratingDismissed, setRatingDismissed] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [saving, setSaving] = useState(false);
   // The picture is back and the last step's tick is showing.
@@ -276,6 +284,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     setMode('generating');
     setSettling(false);
     setVerdict(null);
+    setRatingDismissed(false);
     setError(null);
     playSound('go');
     try {
@@ -580,7 +589,8 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       compact={compactBehindTheScenes}
     />
   );
-  const ratingOffered = showingResult && !!chosenPicture;
+  const ratingOffered = showingResult && !!chosenPicture && !ratingDismissed;
+  const dismissRating = useCallback(() => setRatingDismissed(true), []);
 
   return (
     <>
@@ -599,7 +609,14 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         animatedChoice: animatedChoiceNode,
         error: errorLine,
         progress: progressNode,
-        rating: {offered: ratingOffered, verdict, judge, explain},
+        rating: {
+          offered: ratingOffered,
+          required: ratingRequired,
+          verdict,
+          judge,
+          explain,
+          dismiss: dismissRating,
+        },
         exhausted,
         generate,
         draft: {imageType, subject: imageSubject, style},

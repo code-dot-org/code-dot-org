@@ -67,6 +67,9 @@ const layout = (parts: SentenceSceneParts) => (
           >
             Explain
           </button>
+          <button type="button" onClick={parts.rating.dismiss}>
+            Dismiss
+          </button>
           <span>{parts.rating.verdict ?? 'unrated'}</span>
         </div>
       )}
@@ -198,6 +201,24 @@ describe('SentenceScene', () => {
       expect.objectContaining({reasons: ['mismatch', 'colors']}),
       true
     );
+  });
+
+  it('puts the rating away unanswered on Dismiss, until the next picture', async () => {
+    generateCharacterSet.mockResolvedValue(RESULT);
+    renderScene();
+    pickCreature();
+    await generate();
+    expect(
+      screen.getByRole('group', {name: 'How did the AI do?'})
+    ).toBeTruthy();
+    fireEvent.click(screen.getByRole('button', {name: 'Dismiss'}));
+    expect(
+      screen.queryByRole('group', {name: 'How did the AI do?'})
+    ).toBeNull();
+    await generate();
+    expect(
+      screen.getByRole('group', {name: 'How did the AI do?'})
+    ).toBeTruthy();
   });
 
   it('records the words on the picture, and puts saved words back', async () => {

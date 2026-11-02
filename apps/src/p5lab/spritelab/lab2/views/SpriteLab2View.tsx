@@ -2031,6 +2031,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const [drawingHistory, setDrawingHistory] = useState<EditHistory | null>(
     null
   );
+  // A level that checks for a rating keeps the rating strip up until a
+  // thumb is given.
+  const ratingRequired = !!levelProperties.objectives?.items?.some(
+    item => item.check.kind === 'rated'
+  );
   const handleEditorChange = useCallback(
     (editor: Editor) => dispatch(setActiveTab(editor)),
     [dispatch]
@@ -2427,6 +2432,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 active={activeTab === 'Images'}
                 advancedOffered={imagesAdvanced}
                 onDrawingHistory={setDrawingHistory}
+                ratingRequired={ratingRequired}
               />
             </div>
           )}
