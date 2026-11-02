@@ -88,11 +88,14 @@ const MakePane: React.FunctionComponent<MakePaneProps> = ({
       )}
       <div className={styles.sentencePanel}>{parts.sentence}</div>
       {/* The words scroll in a frame of their own between the pinned
-          sentence and the Animated switch. */}
-      <div className={styles.paneScroll}>
-        {parts.wordChooser}
-        {parts.error}
-      </div>
+          sentence and the Animated switch; while a picture is made there
+          are no words to show, so no frame either. */}
+      {!generating && (
+        <div className={styles.paneScroll}>
+          {parts.wordChooser}
+          {parts.error}
+        </div>
+      )}
       {parts.animatedChoice}
       <div className={styles.paneBottom}>
         {confirming ? (
