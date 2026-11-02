@@ -9,7 +9,8 @@ import {NodePosition} from './layout/types';
 
 import styles from './mapNode.module.scss';
 
-const ICONS: {[status in CheckpointStatus]: string} = {
+// Shown in the circle for a checkpoint with no skill icon.
+const STATUS_ICONS: {[status in CheckpointStatus]: string} = {
   locked: 'lock',
   available: 'play',
   inProgress: 'ellipsis',
@@ -21,6 +22,8 @@ interface MapNodeProps {
   checkpoint: Checkpoint;
   position: NodePosition;
   status: CheckpointStatus;
+  /** The skill's icon in the circle; the status icon when absent. */
+  icon?: string;
   /** Checkpoint the map is zoomed onto, if any. */
   focusId?: string;
   /** How far the node's top sits above the circle's center. */
@@ -39,6 +42,7 @@ const MapNode: React.FunctionComponent<MapNodeProps> = ({
   checkpoint,
   position,
   status,
+  icon,
   focusId,
   circleTop,
   width,
@@ -66,7 +70,12 @@ const MapNode: React.FunctionComponent<MapNodeProps> = ({
       aria-label={`${checkpoint.title}: ${STATUS_LABELS[status]}`}
       aria-pressed={focusId === checkpoint.id}
     >
-      <FontAwesomeV6Icon iconName={ICONS[status]} />
+      <FontAwesomeV6Icon iconName={icon ?? STATUS_ICONS[status]} />
+      {icon && status === 'locked' && (
+        <span className={styles.badge} aria-hidden="true">
+          <FontAwesomeV6Icon iconName="lock" />
+        </span>
+      )}
     </button>
     {children}
   </div>
