@@ -136,10 +136,15 @@ describe('ImageList', () => {
     );
     fireEvent.click(screen.getByRole('button', {name: 'Delete image'}));
     expect(onDelete).not.toHaveBeenCalled();
+    // The dialog shows which image, by picture and name.
+    const dialog = screen.getByRole('alertdialog');
+    expect(dialog.textContent).toContain('Sprite 2');
+    expect(dialog.querySelector('img')).toBeTruthy();
     fireEvent.click(screen.getByRole('button', {name: 'Cancel'}));
-    expect(screen.getByRole('button', {name: 'Delete image'})).toBeTruthy();
+    expect(screen.queryByRole('alertdialog')).toBeNull();
     fireEvent.click(screen.getByRole('button', {name: 'Delete image'}));
     fireEvent.click(screen.getByRole('button', {name: 'Delete'}));
     expect(onDelete).toHaveBeenCalledWith('b');
+    expect(screen.queryByRole('alertdialog')).toBeNull();
   });
 });

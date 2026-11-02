@@ -1,10 +1,10 @@
 // The tab's left column: every image of the project as a tile, the one
 // being worked on marked, with the way to add one and to delete one.
 
+import {MuiDialog} from '@code-dot-org/component-library/dialog';
 import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {
-  Button as MuiButton,
   IconButton as MuiIconButton,
   Typography as MuiTypography,
 } from '@mui/material';
@@ -214,41 +214,50 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
       </div>
       {deletable && (
         <div className={styles.listFooter}>
-          {confirming ? (
-            <>
-              <span className={styles.listQuestion}>Delete this image?</span>
-              <MuiButton
-                variant="outlined"
-                color="secondary"
-                size="small"
-                onClick={() => setConfirming(false)}
-              >
-                Cancel
-              </MuiButton>
-              <MuiButton
-                variant="contained"
-                color="error"
-                size="small"
-                onClick={() => {
-                  setConfirming(false);
-                  onDelete?.(chosenImage.key);
-                }}
-              >
-                Delete
-              </MuiButton>
-            </>
-          ) : (
-            <MuiIconButton
-              variant="text"
-              color="tertiary"
-              size="small"
-              aria-label="Delete image"
-              onClick={() => setConfirming(true)}
-            >
-              <FontAwesomeV6Icon iconName="trash-can" />
-            </MuiIconButton>
-          )}
+          <MuiIconButton
+            variant="text"
+            color="tertiary"
+            size="small"
+            aria-label="Delete image"
+            onClick={() => setConfirming(true)}
+          >
+            <FontAwesomeV6Icon iconName="trash-can" />
+          </MuiIconButton>
         </div>
+      )}
+      {confirming && chosenImage && (
+        <MuiDialog
+          title="Delete this image?"
+          description="It goes from your project, and from any scene using it."
+          customContent={
+            <div className={styles.deletePreview}>
+              {chosenImage.thumb && (
+                <img
+                  src={chosenImage.thumb}
+                  alt=""
+                  className={classNames(
+                    styles.deleteThumb,
+                    chosenImage.pixelated && styles.pixelArt
+                  )}
+                />
+              )}
+              <span className={styles.deleteName}>{chosenImage.name}</span>
+            </div>
+          }
+          onClose={() => setConfirming(false)}
+          secondaryButtonProps={{
+            children: 'Cancel',
+            onClick: () => setConfirming(false),
+          }}
+          primaryButtonProps={{
+            children: 'Delete',
+            color: 'error',
+            onClick: () => {
+              setConfirming(false);
+              onDelete?.(chosenImage.key);
+            },
+          }}
+        />
       )}
     </section>
   );

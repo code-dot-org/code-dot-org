@@ -76,9 +76,24 @@ $pad: 16px;
   min-height: 36px;
 }
 
-.listQuestion {
-  flex-basis: 100%;
-  font-size: 14px;
+// The image about to go, large, in the asking dialog.
+.deletePreview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.deleteThumb {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  border-radius: 8px;
+  background-color: var(--background-neutral-secondary);
+}
+
+.deleteName {
+  font-weight: 600;
 }
 
 .tiles {
