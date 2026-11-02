@@ -7,8 +7,9 @@ import React, {
   useState,
 } from 'react';
 
+import useElementSize from '@cdo/apps/util/hooks/useElementSize';
+
 import {MapFit} from './MapView';
-import {useElementSize} from './useElementSize';
 import ZoomControls from './ZoomControls';
 
 import styles from './mapZoom.module.scss';
@@ -86,12 +87,14 @@ const MapZoom: React.FunctionComponent<MapZoomProps> = ({
   children,
 }) => {
   const [level, setLevel] = useState(startLevel);
-  const [viewRef, view] = useElementSize<HTMLDivElement>();
-  const [contentRef, content] = useElementSize<HTMLDivElement>();
+  const viewRef = useRef<HTMLDivElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
+  const [viewWidth, viewHeight] = useElementSize(viewRef);
+  const [contentWidth, contentHeight] = useElementSize(contentRef);
   const moved = useRef(false);
   const zoom = useEasedZoom(zoomPercentages[level] / 100);
-  const left = Math.max(0, (view.width - content.width * zoom) / 2);
-  const top = Math.max(0, (view.height - content.height * zoom) / 2);
+  const left = Math.max(0, (viewWidth - contentWidth * zoom) / 2);
+  const top = Math.max(0, (viewHeight - contentHeight * zoom) / 2);
   // Read in render: scrolling does not render, and a disabled view cannot
   // scroll, so this holds for as long as it is disabled.
   const element = viewRef.current;
@@ -121,13 +124,13 @@ const MapZoom: React.FunctionComponent<MapZoomProps> = ({
       top +
       (element.scrollTop + clientHeight / 2 - prev.top) * ratio -
       clientHeight / 2;
-  }, [zoom, left, top, viewRef]);
+  }, [zoom, left, top]);
 
   // The map inside fits itself after this box is measured, so this repeats
   // as sizes settle.
   useLayoutEffect(() => {
     const element = viewRef.current;
-    if (!element || !startId || moved.current || !content.width) return;
+    if (!element || !startId || moved.current || !contentWidth) return;
     const node = Array.from(
       element.querySelectorAll<HTMLElement>('[data-checkpoint-id]')
     ).find(n => n.dataset.checkpointId === startId);
@@ -142,7 +145,7 @@ const MapZoom: React.FunctionComponent<MapZoomProps> = ({
       nodeBox.top +
       nodeBox.height / 2 -
       (viewBox.top + element.clientTop + element.clientHeight / 2);
-  }, [startId, view, content, viewRef]);
+  }, [startId, viewWidth, viewHeight, contentWidth, contentHeight]);
 
   const onMove = () => {
     moved.current = true;
@@ -172,10 +175,10 @@ const MapZoom: React.FunctionComponent<MapZoomProps> = ({
         <div
           className={styles.extent}
           style={
-            content.width
+            contentWidth
               ? {
-                  width: Math.floor(content.width * zoom),
-                  height: Math.floor(content.height * zoom),
+                  width: Math.floor(contentWidth * zoom),
+                  height: Math.floor(contentHeight * zoom),
                 }
               : undefined
           }
@@ -184,8 +187,8 @@ const MapZoom: React.FunctionComponent<MapZoomProps> = ({
             ref={contentRef}
             className={styles.content}
             style={{
-              width: view.width || undefined,
-              height: fit === 'whole' ? view.height || undefined : undefined,
+              width: viewWidth || undefined,
+              height: fit === 'whole' ? viewHeight || undefined : undefined,
               transform: zoom === 1 ? undefined : `scale(${zoom})`,
             }}
           >
