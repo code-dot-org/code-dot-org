@@ -51,19 +51,34 @@ class SequelTest < Minitest::Test
     assert_equal password, URI::DEFAULT_PARSER.unescape(parsed.password)
   end
 
-  # Cdo::Sequel.database_connection_pool rewrites a 'mysql:' scheme to 'mysql2:'
-  # with a plain String#gsub. Percent-encoding keeps a ':' out of the userinfo,
-  # so a password containing the literal text 'mysql:' cannot be corrupted.
-  def test_mysql2_uri_survives_scheme_rewrite
-    uri = Cdo::Sequel.mysql2_uri(
-      host: 'localhost',
-      username: 'root',
-      password: 'mysql:pw',
-      database: 'dashboard'
-    )
+  # We used to utilize a regular expression to convert `mysql://` to `mysql2://` and that was changing the database
+  # name if it ended in `mysql`.
+  def test_database_connection_pool_renames_only_the_scheme
+    db = Cdo::Sequel.database_connection_pool('mysql://writer:not-a-secret@hostname-that-ends-with-mysql:3306/dashboard_test')
 
-    assert_equal uri, uri.gsub('mysql:', 'mysql2:')
-    assert_equal 'mysql:pw', URI::DEFAULT_PARSER.unescape(URI.parse(uri).password)
+    assert_equal 'hostname-that-ends-with-mysql', db.opts[:host]
+    assert_equal 3306, db.opts[:port]
+  ensure
+    db&.disconnect
+  end
+
+  def test_database_connection_pool_accepts_a_uri_already_naming_the_adapter
+    db = Cdo::Sequel.database_connection_pool('mysql2://writer:hostname-that-ends-with-mysql:3306/dashboard_test')
+
+    assert_equal 'hostname-that-ends-with-mysql', db.opts[:host]
+  ensure
+    db&.disconnect
+  end
+
+  # A password carrying the scheme's own text is no longer a hazard, but it is the case that first prompted
+  # percent-encoding the userinfo, so it stays covered.
+  def test_database_connection_pool_preserves_a_password_containing_the_scheme
+    uri = Cdo::Sequel.mysql2_uri(host: 'localhost', username: 'root', password: 'mysql:pw', database: 'dashboard')
+    db = Cdo::Sequel.database_connection_pool(uri)
+
+    assert_equal 'mysql:pw', db.opts[:password]
+  ensure
+    db&.disconnect
   end
 
   PROXYSQL_URI = 'mysql://dashboard:not-a-secret@127.0.0.1:6033/dashboard_production'.freeze

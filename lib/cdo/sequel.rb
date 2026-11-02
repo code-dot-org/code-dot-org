@@ -73,7 +73,10 @@ module Cdo
       # Enable string literals in dataset filtering methods for backwards compatibility.
       ::Sequel::Database.extension :auto_literal_strings
 
-      writer = writer.gsub 'mysql:', 'mysql2:'
+      # Sequel names its MySQL adapter `mysql2`.
+      uri = URI.parse(writer)
+      uri.scheme = 'mysql2' if uri.scheme == 'mysql'
+      writer = uri.to_s
 
       db_options = {
         encoding: 'utf8mb4',
