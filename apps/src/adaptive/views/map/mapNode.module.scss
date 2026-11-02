@@ -90,6 +90,23 @@ button.circle {
   box-shadow: 0 0 0 10px var(--background-brand-purple-light);
 }
 
+// The lock, in a corner of a circle that shows its skill's icon instead.
+.badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border: 2px solid var(--background-neutral-primary);
+  border-radius: 50%;
+  background: var(--background-neutral-secondary);
+  color: var(--text-neutral-secondary);
+  font-size: 10px;
+}
+
 @keyframes pulse {
   0%,
   100% {
