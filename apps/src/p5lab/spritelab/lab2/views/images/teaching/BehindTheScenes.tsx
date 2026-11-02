@@ -71,7 +71,10 @@ const BehindTheScenes: React.FunctionComponent<BehindTheScenesProps> = ({
             MAX_PANEL_HEIGHT_PX,
             Math.max(
               MIN_PANEL_HEIGHT_PX,
-              row.getBoundingClientRect().top - PANEL_TOP_MARGIN_PX
+              // The room under the row, where the panel hangs.
+              window.innerHeight -
+                row.getBoundingClientRect().bottom -
+                PANEL_TOP_MARGIN_PX
             )
           )
         );

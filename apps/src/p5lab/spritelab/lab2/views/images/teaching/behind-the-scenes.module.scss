@@ -22,15 +22,18 @@ $panel-inset: 6px;
   }
 }
 
-// Above the link, in the frame's bottom right corner. Doubled to outrank
-// the component's own width and margin.
+// Under its button, its right edge on the button's, reaching left over
+// the frame: the button sits at the pane's header now, and the pane is
+// narrower than the panel. Doubled to outrank the component's own width
+// and margin.
 .promptPopover.promptPopover {
   position: absolute;
-  right: $panel-inset;
-  bottom: calc(100% + #{$frame-gap + $panel-inset});
+  right: 0;
+  top: calc(100% + #{$frame-gap + $panel-inset});
+  bottom: auto;
   margin: 0;
   width: 460px;
-  max-width: 100%;
+  max-width: calc(100vw - 32px);
   border: 1px solid var(--border-neutral-secondary);
   // One height whichever tab is on show; the words scroll in what is left.
   height: var(--prompt-panel-height, 60vh);
