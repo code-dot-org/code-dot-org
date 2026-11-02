@@ -55,6 +55,13 @@ export const CHARACTER_STRIP_POSES: AnimationPoses = {
 
 export const CHARACTER_STRIP_FRAME_COUNT = 5;
 
+/** The strip's standing frame: the base picture every posed frame was drawn
+    from, so the one editing opens on and the one a tile shows for the set. */
+export const CHARACTER_STRIP_BASE_FRAME =
+  CHARACTER_STRIP_POSES['stand-right']!.start +
+  CHARACTER_STRIP_POSES['stand-right']!.count -
+  1;
+
 /** Right first: the left-facing frames are mirrored from the right ones. */
 export const CHARACTER_FACINGS: CharacterFacing[] = ['right', 'left'];
 

@@ -3,7 +3,10 @@
 
 import {toImage} from '@cdo/apps/imageUtils';
 
-import {CHARACTER_STRIP_FRAME_COUNT} from '../../characterAnimations';
+import {
+  CHARACTER_STRIP_BASE_FRAME,
+  CHARACTER_STRIP_FRAME_COUNT,
+} from '../../characterAnimations';
 
 /** What each frame of the strip shows, in strip order (see
     CHARACTER_STRIP_POSES). */
@@ -16,7 +19,7 @@ export const FRAME_LABELS: readonly string[] = [
 ];
 
 /** The frame a set is drawn from, and so the one editing opens on. */
-export const BASE_FRAME = 1;
+export const BASE_FRAME = CHARACTER_STRIP_BASE_FRAME;
 /** The frames as the row shows them: the standing frame first, since it is
     the one the set was drawn from and the one editing opens on, then the
     strip's order. */
