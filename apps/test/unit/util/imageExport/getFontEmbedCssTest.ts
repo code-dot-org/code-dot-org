@@ -61,6 +61,22 @@ const addTextElement = (
   document.body.appendChild(element);
 };
 
+const computedStyle = window.getComputedStyle.bind(window);
+
+// jsdom does not compute pseudo-elements.
+const stubPseudoElements = (
+  pseudoStyle: (element: Element, pseudo: string) => object = () => ({
+    content: 'none',
+  })
+) =>
+  jest
+    .spyOn(window, 'getComputedStyle')
+    .mockImplementation((element, pseudo) =>
+      pseudo
+        ? (pseudoStyle(element, pseudo) as CSSStyleDeclaration)
+        : computedStyle(element)
+    );
+
 // The real --font-family-main stack: Geist first, then the per-locale Noto
 // fallbacks that cover scripts Geist has no glyphs for.
 const MAIN_FONT_STACK =
@@ -82,6 +98,7 @@ describe('getFontEmbedCss', () => {
     document.head.innerHTML = '';
     document.body.innerHTML = '';
     mockGet.mockResolvedValue(fontResponse([1, 2, 3]));
+    stubPseudoElements();
   });
 
   // jest.config.js clears mocks between tests but does not restore them, and
@@ -254,5 +271,83 @@ describe('getFontEmbedCss', () => {
     // The surviving url would point at a server the exported image cannot reach.
     expect(css).not.toContain('two-source-fallback.woff');
     expect(css).toContain("format('woff2')");
+  });
+
+  describe('a stylesheet it cannot read in place', () => {
+    const iconFace = (file: string) => `
+      @font-face {
+        font-family: 'Icon Font';
+        font-weight: 900;
+        src: url('../webfonts/${file}.woff2') format('woff2');
+      }
+    `;
+
+    const useCrossOriginSheet = (href: string) => {
+      const crossOrigin = {
+        href,
+        get cssRules(): CSSRuleList {
+          throw new Error('SecurityError');
+        },
+      } as CSSStyleSheet;
+      jest
+        .spyOn(document, 'styleSheets', 'get')
+        .mockReturnValue([crossOrigin] as unknown as StyleSheetList);
+    };
+
+    const serveSheet = (css: string) =>
+      mockGet.mockImplementation((url: string) =>
+        Promise.resolve(
+          url.endsWith('.css')
+            ? ({text: () => Promise.resolve(css)} as unknown as Response)
+            : fontResponse([5])
+        )
+      );
+
+    it('fetches the sheet and resolves its font urls against it', async () => {
+      useCrossOriginSheet('https://cdn.example.org/kit/css/fetched.css');
+      serveSheet(iconFace('fetched-face'));
+      addTextElement("'Icon Font'", 'font-weight: 900;');
+
+      const css = await getFontEmbedCss(document.body);
+
+      expect(mockGet).toHaveBeenCalledWith(
+        'https://cdn.example.org/kit/webfonts/fetched-face.woff2'
+      );
+      expect(css).toContain('url(data:font/woff2;base64,BQ==)');
+    });
+
+    it('fetches the sheet once across exports, even when it fails', async () => {
+      useCrossOriginSheet('https://cdn.example.org/kit/css/refused.css');
+      mockGet.mockRejectedValue(new TypeError('Failed to fetch'));
+      addTextElement("'Icon Font'", 'font-weight: 900;');
+
+      await expect(getFontEmbedCss(document.body)).resolves.toBe('');
+      await expect(getFontEmbedCss(document.body)).resolves.toBe('');
+
+      expect(mockGet).toHaveBeenCalledTimes(1);
+    });
+
+    it('embeds the icon font a pseudo-element draws with', async () => {
+      useCrossOriginSheet('https://cdn.example.org/kit/css/icons.css');
+      serveSheet(iconFace('pseudo-glyph'));
+      const icon = document.createElement('i');
+      document.body.appendChild(icon);
+      stubPseudoElements((element, pseudo) =>
+        element === icon && pseudo === '::before'
+          ? {
+              content: '"\\f058"',
+              fontFamily: "'Icon Font'",
+              fontWeight: '900',
+              fontStyle: 'normal',
+            }
+          : {content: 'none'}
+      );
+
+      await getFontEmbedCss(document.body);
+
+      expect(mockGet).toHaveBeenCalledWith(
+        'https://cdn.example.org/kit/webfonts/pseudo-glyph.woff2'
+      );
+    });
   });
 });

@@ -3,8 +3,10 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 // Builds the `fontEmbedCSS` we hand to html-to-image when exporting an element.
 // By default, html-to-image inlines every font it finds on the page as base64,
 // which can get very large.
-// Instead we inline only the faces the element actually draws with, from
-// stylesheets we are allowed to read. Any other fonts will fall back to OS fonts.
+// Instead we inline only the faces the element actually draws with, including
+// icon fonts drawn in ::before and ::after. A stylesheet from another origin
+// cannot be read in place, so we fetch its text, which works when its server
+// sends CORS headers. Any other fonts will fall back to OS fonts.
 //
 // For each piece of text we embed the first family in its font stack that is readable
 // at the weight and style in use. If there are characters in the text
@@ -16,19 +18,29 @@ const WEIGHT_KEYWORDS = new Map([
   ['normal', 400],
   ['bold', 700],
 ]);
+const PSEUDO_ELEMENTS = ['::before', '::after'];
+const NO_CONTENT = ['', 'none', 'normal'];
 
 const FONT_SRC_DESCRIPTOR_PATTERN = /src\s*:\s*[^;}]+/;
 // One entry of a `src` list: the url, plus the format() that usually follows.
 const FONT_SOURCE_PATTERN = /url\((["']?)([^"')]+)\1\)(\s*format\([^)]*\))?/;
 
+interface SheetRules {
+  rules: CSSRule[];
+  // Relative font urls resolve against the sheet's own address.
+  baseHref: string;
+}
+
 // A readable @font-face, with the parts we match on pulled out once.
 interface FontFaceCandidate {
   rule: CSSFontFaceRule;
+  baseHref: string;
   style: string;
   weights: {low: number; high: number};
 }
 
 const fontFileCache = new Map<string, Promise<string>>();
+const fetchedSheetCache = new Map<string, Promise<SheetRules | undefined>>();
 
 const unquote = (value: string) => value.trim().replace(/^["']|["']$/g, '');
 
@@ -60,20 +72,71 @@ const hasOwnText = (element: Element): boolean =>
     node => node.nodeType === Node.TEXT_NODE && node.textContent?.trim()
   );
 
+// The computed styles that draw text on this element: its own text, and the
+// glyph an icon font draws in a pseudo-element.
+const textStyles = (element: Element): CSSStyleDeclaration[] => {
+  const pseudoStyles = PSEUDO_ELEMENTS.map(pseudo =>
+    window.getComputedStyle(element, pseudo)
+  ).filter(style => !NO_CONTENT.includes(style.content));
+  return hasOwnText(element)
+    ? [window.getComputedStyle(element), ...pseudoStyles]
+    : pseudoStyles;
+};
+
+// A media query that never matches keeps the fetched sheet from styling the
+// page while we read it.
+const parseRules = (css: string): CSSRule[] => {
+  const style = document.createElement('style');
+  style.media = 'not all';
+  style.textContent = css;
+  document.head.appendChild(style);
+  const rules = Array.from(style.sheet?.cssRules ?? []);
+  style.remove();
+  return rules;
+};
+
+// A sheet served without CORS headers refuses every time, so a failure is
+// cached too: retrying would only log the same console error on each export.
+const fetchSheetRules = (href: string): Promise<SheetRules | undefined> => {
+  const cached = fetchedSheetCache.get(href);
+  if (cached) {
+    return cached;
+  }
+  const pending = HttpClient.get(href)
+    .then(response => response.text())
+    .then(css => ({rules: parseRules(css), baseHref: href}))
+    .catch(() => undefined);
+  fetchedSheetCache.set(href, pending);
+  return pending;
+};
+
+// Reading a stylesheet from another origin throws unless the page loaded it
+// in CORS mode.
+const readSheetRules = (
+  sheet: CSSStyleSheet
+): Promise<SheetRules | undefined> => {
+  try {
+    return Promise.resolve({
+      rules: Array.from(sheet.cssRules),
+      baseHref: sheet.href || document.baseURI,
+    });
+  } catch {
+    return sheet.href
+      ? fetchSheetRules(sheet.href)
+      : Promise.resolve(undefined);
+  }
+};
+
 // Readable @font-face rules, grouped by the family they declare.
-// If a stylesheet is from another origin not loaded with CORS,
-// attempting to read it will throw a security error, and we will return nothing.
-const readCandidatesByFamily = (): Map<string, FontFaceCandidate[]> => {
+const readCandidatesByFamily = async (): Promise<
+  Map<string, FontFaceCandidate[]>
+> => {
+  const sheets = await Promise.all(
+    Array.from(document.styleSheets, readSheetRules)
+  );
   const byFamily = new Map<string, FontFaceCandidate[]>();
-  Array.from(document.styleSheets).forEach(sheet => {
-    let sheetRules: CSSRule[];
-    try {
-      sheetRules = Array.from(sheet.cssRules);
-    } catch {
-      // Reading this stylesheet failed, probably due to CORS restrictions. Skip it.
-      return;
-    }
-    sheetRules.forEach(rule => {
+  sheets.forEach(sheet => {
+    sheet?.rules.forEach(rule => {
       if (!(rule instanceof CSSFontFaceRule)) {
         return;
       }
@@ -87,6 +150,7 @@ const readCandidatesByFamily = (): Map<string, FontFaceCandidate[]> => {
       const candidates = byFamily.get(family) ?? [];
       candidates.push({
         rule,
+        baseHref: sheet.baseHref,
         style: normalizeStyle(rule.style.getPropertyValue('font-style')),
         weights,
       });
@@ -96,17 +160,13 @@ const readCandidatesByFamily = (): Map<string, FontFaceCandidate[]> => {
   return byFamily;
 };
 
-const collectUsedRules = (
+const collectUsedFaces = (
   root: HTMLElement,
   byFamily: Map<string, FontFaceCandidate[]>
-): CSSFontFaceRule[] => {
-  const used = new Set<CSSFontFaceRule>();
+): FontFaceCandidate[] => {
+  const used = new Set<FontFaceCandidate>();
   const elements = [root, ...Array.from(root.querySelectorAll('*'))];
-  elements.forEach(element => {
-    if (!hasOwnText(element)) {
-      return;
-    }
-    const computed = window.getComputedStyle(element);
+  elements.flatMap(textStyles).forEach(computed => {
     const weight = Number(computed.fontWeight) || DEFAULT_FONT_WEIGHT;
     const style = normalizeStyle(computed.fontStyle);
     const stack = computed.fontFamily
@@ -123,7 +183,7 @@ const collectUsedRules = (
           weight <= candidate.weights.high
       );
       if (matches.length > 0) {
-        matches.forEach(match => used.add(match.rule));
+        matches.forEach(match => used.add(match));
         return;
       }
     }
@@ -156,17 +216,17 @@ const fetchFontAsDataUrl = (url: string): Promise<string> => {
 // A face usually lists two files, woff2 and a woff fallback. We inline the
 // first and drop the rest: a second copy of the same face is wasted bytes, and
 // left alone its url would point at a server the exported image cannot reach.
-const inlineFontFaceRule = async (
-  rule: CSSFontFaceRule
-): Promise<string | undefined> => {
+const inlineFontFace = async ({
+  rule,
+  baseHref,
+}: FontFaceCandidate): Promise<string | undefined> => {
   const descriptor = FONT_SRC_DESCRIPTOR_PATTERN.exec(rule.cssText);
   const source = descriptor && FONT_SOURCE_PATTERN.exec(descriptor[0]);
   if (!source) {
     return undefined;
   }
   const [, , path, format = ''] = source;
-  const base = rule.parentStyleSheet?.href || document.baseURI;
-  const dataUrl = await fetchFontAsDataUrl(new URL(path, base).href);
+  const dataUrl = await fetchFontAsDataUrl(new URL(path, baseHref).href);
   return rule.cssText.replace(
     descriptor[0],
     () => `src: url(${dataUrl})${format}`
@@ -177,13 +237,13 @@ const inlineFontFaceRule = async (
 // inlined, or to an empty string when there is nothing to embed -- which tells
 // html-to-image to skip its own font handling entirely.
 export const getFontEmbedCss = async (root: HTMLElement): Promise<string> => {
-  const byFamily = readCandidatesByFamily();
+  const byFamily = await readCandidatesByFamily();
   if (byFamily.size === 0) {
     return '';
   }
-  const usedRules = collectUsedRules(root, byFamily);
+  const usedFaces = collectUsedFaces(root, byFamily);
   const inlined = await Promise.all(
-    usedRules.map(rule => inlineFontFaceRule(rule).catch(() => undefined))
+    usedFaces.map(face => inlineFontFace(face).catch(() => undefined))
   );
   return inlined.filter(Boolean).join('\n');
 };
