@@ -258,6 +258,13 @@ describe('parsePathway', () => {
     });
   });
 
+  it('accepts an icon on a skill', () => {
+    const raw = served();
+    raw.skills.css.icon = 'message-code';
+    expect(problemsOf(raw)).toEqual([]);
+    expect(parsePathway(raw).skills.css.icon).toBe('message-code');
+  });
+
   it('accepts a video step with resolved URLs', () => {
     const raw = served();
     const watch = raw.checkpoints[0].steps[2];

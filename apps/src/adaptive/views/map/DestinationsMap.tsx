@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import React, {useMemo} from 'react';
 
+import {checkpointIcon} from './checkpointIcon';
 import {busRoutes} from './layout/busRoutes';
 import {layoutDestinations} from './layout/destinations';
 import {MapLayout, NODE_RADIUS} from './layout/types';
@@ -127,6 +128,7 @@ const DestinationsMap: React.FunctionComponent<DestinationsMapProps> = ({
             checkpoint={checkpoint}
             position={layout.nodes[checkpoint.id]}
             status={statusMap[checkpoint.id]}
+            icon={checkpointIcon(pathway, checkpoint)}
             focusId={focusId}
             circleTop={NODE_RADIUS}
             width={NODE_WIDTH}

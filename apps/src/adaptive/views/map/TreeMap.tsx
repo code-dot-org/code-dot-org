@@ -1,6 +1,7 @@
 import {Typography as MuiTypography} from '@mui/material';
 import React, {useMemo} from 'react';
 
+import {checkpointIcon} from './checkpointIcon';
 import {DrawnEdge} from './layout/busRoutes';
 import {layoutCheckpoints} from './layout/tree';
 import {NODE_RADIUS} from './layout/types';
@@ -74,6 +75,7 @@ const TreeMap: React.FunctionComponent<MapProps> = ({
           checkpoint={checkpoint}
           position={layout.nodes[checkpoint.id]}
           status={statusMap[checkpoint.id]}
+          icon={checkpointIcon(pathway, checkpoint)}
           focusId={focusId}
           circleTop={NODE_RADIUS + LABEL_HEIGHT}
           width={NODE_WIDTH}
