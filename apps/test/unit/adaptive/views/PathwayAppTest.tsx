@@ -42,6 +42,26 @@ jest.mock('@cdo/apps/adaptive/views/AdaptiveHeader', () => ({
     </div>
   ),
 }));
+jest.mock('@cdo/apps/adaptive/views/AdaptiveTabBar', () => ({
+  __esModule: true,
+  default: ({
+    activeTab,
+    onTabChange,
+  }: {
+    activeTab: string;
+    onTabChange: (tab: string) => void;
+  }) => (
+    <div>
+      tabs: {activeTab}
+      <button type="button" onClick={() => onTabChange('project')}>
+        My project tab
+      </button>
+      <button type="button" onClick={() => onTabChange('map')}>
+        Practice skills tab
+      </button>
+    </div>
+  ),
+}));
 jest.mock('@cdo/apps/adaptive/views/steps/StepPlayer', () => ({
   __esModule: true,
   // Finishing completes the last step first, as the real player does.
@@ -52,6 +72,8 @@ jest.mock('@cdo/apps/adaptive/views/steps/StepPlayer', () => ({
     onExit,
     onFinish,
     onFinishPathway,
+    activeTab,
+    onTabChange,
   }: {
     checkpoint: {title: string; steps: unknown[]};
     initialStepId?: string;
@@ -59,10 +81,13 @@ jest.mock('@cdo/apps/adaptive/views/steps/StepPlayer', () => ({
     onExit: () => void;
     onFinish: () => void;
     onFinishPathway?: () => void;
+    activeTab?: string;
+    onTabChange?: (tab: string) => void;
   }) => (
     <div>
       playing {checkpoint.title}
       {initialStepId ? ` at ${initialStepId}` : ''}
+      {activeTab && <span>step-tab: {activeTab}</span>}
       <button type="button" onClick={onExit}>
         exit
       </button>
@@ -78,6 +103,11 @@ jest.mock('@cdo/apps/adaptive/views/steps/StepPlayer', () => ({
       {onFinishPathway && (
         <button type="button" onClick={onFinishPathway}>
           finish pathway
+        </button>
+      )}
+      {onTabChange && (
+        <button type="button" onClick={() => onTabChange('map')}>
+          step tab: map
         </button>
       )}
     </div>
@@ -466,5 +496,58 @@ describe('PathwayApp', () => {
 
     expect(screen.getByText('playing My Project')).toBeTruthy();
     expect(screen.queryByText('finish pathway')).toBeNull();
+  });
+
+  describe('tab bar', () => {
+    it('shows the tab bar in map view with the map tab active', async () => {
+      mockLoad.mockResolvedValue({
+        steps: {'intro-step': {status: 'started', timeSpent: 0}},
+      });
+      await renderSettled();
+
+      expect(screen.getByText('tabs: map')).toBeTruthy();
+    });
+
+    it('opens the project when the My project tab is clicked in map view', async () => {
+      mockLoad.mockResolvedValue({
+        steps: {'intro-step': {status: 'started', timeSpent: 0}},
+      });
+      await renderSettled();
+
+      act(() => screen.getByRole('button', {name: 'My project tab'}).click());
+
+      expect(screen.getByText('playing My Project')).toBeTruthy();
+    });
+
+    it('passes the project tab as active to StepPlayer in project view', async () => {
+      mockLoad.mockResolvedValue({
+        steps: {'intro-step': {status: 'started', timeSpent: 0}},
+      });
+      await renderSettled();
+      act(() => screen.getByRole('button', {name: 'My project tab'}).click());
+
+      expect(screen.getByText('step-tab: project')).toBeTruthy();
+    });
+
+    it('returns to the map when the Practice skills tab is clicked in project view', async () => {
+      mockLoad.mockResolvedValue({
+        steps: {'intro-step': {status: 'started', timeSpent: 0}},
+      });
+      await renderSettled();
+      act(() => screen.getByRole('button', {name: 'My project tab'}).click());
+      expect(screen.getByText('playing My Project')).toBeTruthy();
+
+      act(() => screen.getByRole('button', {name: 'step tab: map'}).click());
+
+      expect(screen.getByText('tabs: map')).toBeTruthy();
+    });
+
+    it('does not show the tab bar while playing a checkpoint step', async () => {
+      await renderSettled();
+
+      // Auto-started into a checkpoint step, not the map.
+      expect(screen.getByText(/playing Intro/)).toBeTruthy();
+      expect(screen.queryByText(/tabs:/)).toBeNull();
+    });
   });
 });

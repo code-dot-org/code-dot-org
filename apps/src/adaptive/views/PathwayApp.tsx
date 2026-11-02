@@ -25,6 +25,7 @@ import {nextCheckpoint} from '../routing/route';
 import {Checkpoint, Pathway} from '../types';
 
 import AdaptiveHeader from './AdaptiveHeader';
+import AdaptiveTabBar from './AdaptiveTabBar';
 import {checkpointStepFromUrl, clearUrl} from './checkpointUrl';
 import MapScreen from './MapScreen';
 import {PathwayContext} from './PathwayContext';
@@ -260,23 +261,24 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
   if (pathwayContext) {
     const isProject = view.kind === 'project';
     const {checkpoint} = pathwayContext;
+    const goToMap = () => {
+      clearUrl();
+      setView({kind: 'map'});
+    };
     return (
       <div className={styles.app}>
         <PathwayContext.Provider value={pathwayContext}>
           <StepPlayer
             key={checkpoint.id}
             checkpoint={checkpoint}
-            finishLabel={isProject ? 'Back to map' : undefined}
+            finishLabel={isProject ? 'Practice skills' : undefined}
             headerTitle={isProject ? checkpoint.title : undefined}
             initialStepId={view.kind === 'step' ? view.stepId : undefined}
             onStartStep={startStep}
             onCompleteStep={completeStep}
             onLeaveStep={leaveStep}
             onSaveAnswers={saveAnswers}
-            onExit={() => {
-              clearUrl();
-              setView({kind: 'map'});
-            }}
+            onExit={goToMap}
             onFinish={() => {
               clearUrl();
               setView({
@@ -285,6 +287,14 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
               });
             }}
             onFinishPathway={isProject ? undefined : openProject}
+            activeTab={isProject ? 'project' : undefined}
+            onTabChange={
+              isProject
+                ? tab => {
+                    if (tab === 'map') goToMap();
+                  }
+                : undefined
+            }
           />
         </PathwayContext.Provider>
       </div>
@@ -300,6 +310,12 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
       <AdaptiveHeader
         title={`Skill Tree: ${pathway.title}`}
         onFinish={openProject}
+      />
+      <AdaptiveTabBar
+        activeTab="map"
+        onTabChange={tab => {
+          if (tab === 'project') openProject();
+        }}
       />
       <MapScreen
         pathway={pathway}

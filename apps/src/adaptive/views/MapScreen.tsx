@@ -5,7 +5,7 @@
 import {Theme, useTheme} from '@code-dot-org/component-library/common/contexts';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
+import {Button as MuiButton} from '@mui/material';
 import React, {useMemo, useRef, useState} from 'react';
 
 import {CheckpointStatusMap} from '../progress';
@@ -174,9 +174,6 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
           showStepNumbers: true,
         }}
       />
-      <header className={styles.mapBar}>
-        <MuiTypography variant="strong">{pathway.title}</MuiTypography>
-      </header>
       <div className={styles.mapBody}>
         <div
           id="adaptive-tour-map"

@@ -6,6 +6,7 @@ import Lab2ProgressTimer from '@cdo/apps/lab2/utils/Lab2ProgressTimer';
 import {Answer, Progress, StepAnswers, visibleSteps} from '../../progress';
 import {Checkpoint, Step} from '../../types';
 import AdaptiveHeader from '../AdaptiveHeader';
+import AdaptiveTabBar from '../AdaptiveTabBar';
 import {checkpointStepFromUrl, updateUrl} from '../checkpointUrl';
 import {usePathwayContext} from '../PathwayContext';
 
@@ -41,6 +42,9 @@ interface StepPlayerProps {
   onFinish: () => void;
   /** Leaves for the final project; the header offers it when given. */
   onFinishPathway?: () => void;
+  /** Active top-level tab; shows the My project / Practice skills switcher. */
+  activeTab?: 'map' | 'project';
+  onTabChange?: (tab: 'map' | 'project') => void;
 }
 
 /** The progress with one question's answers replaced, before the store reports them. */
@@ -79,6 +83,8 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
   onExit,
   onFinish,
   onFinishPathway,
+  activeTab,
+  onTabChange,
 }) => {
   const {progress} = usePathwayContext();
   const steps = useMemo(
@@ -229,6 +235,12 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
         onViewSkillTree={() => leave(onExit)}
         onFinish={onFinishPathway && (() => leave(onFinishPathway))}
       />
+      {activeTab !== undefined && onTabChange && (
+        <AdaptiveTabBar
+          activeTab={activeTab}
+          onTabChange={tab => leave(() => onTabChange(tab))}
+        />
+      )}
       <div className={styles.playerBody}>{renderStep(step)}</div>
     </div>
   );

@@ -37,6 +37,24 @@ jest.mock('@cdo/apps/adaptive/views/AdaptiveHeader', () => ({
   ),
 }));
 
+jest.mock('@cdo/apps/adaptive/views/AdaptiveTabBar', () => ({
+  __esModule: true,
+  default: ({
+    activeTab,
+    onTabChange,
+  }: {
+    activeTab: string;
+    onTabChange: (tab: string) => void;
+  }) => (
+    <div>
+      tab bar: {activeTab}
+      <button type="button" onClick={() => onTabChange('map')}>
+        go to map tab
+      </button>
+    </div>
+  ),
+}));
+
 const timer = Lab2ProgressTimer.getInstance();
 
 // A kind the player has no view for, so it shows its own Continue button.
@@ -166,6 +184,30 @@ describe('StepPlayer', () => {
   it('offers no way to the final project without a handler for it', () => {
     renderPlayer();
     expect(screen.queryByRole('button', {name: "I'm finished!"})).toBeNull();
+  });
+
+  describe('tab bar', () => {
+    it('is hidden when no activeTab prop is given', () => {
+      renderPlayer();
+      expect(screen.queryByText(/tab bar:/)).toBeNull();
+    });
+
+    it('shows the tab bar with the active tab when activeTab and onTabChange are given', () => {
+      const onTabChange = jest.fn();
+      renderPlayer({activeTab: 'project', onTabChange});
+      expect(screen.getByText('tab bar: project')).toBeTruthy();
+    });
+
+    it('records leave time then calls onTabChange when a tab is clicked', () => {
+      const onTabChange = jest.fn();
+      const {calls} = renderPlayer({activeTab: 'project', onTabChange});
+
+      now.mockReturnValue(3000);
+      fireEvent.click(screen.getByRole('button', {name: 'go to map tab'}));
+
+      expect(calls).toContainEqual(['leave', checkpoint.steps[0], 2000]);
+      expect(onTabChange).toHaveBeenCalledWith('map');
+    });
   });
 
   describe('URL parameters', () => {
