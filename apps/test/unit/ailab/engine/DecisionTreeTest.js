@@ -492,3 +492,16 @@ describe('DecisionTree', () => {
     });
   });
 });
+
+describe('DecisionTree image menu', () => {
+  afterEach(() => I18n.reset());
+
+  it('keeps the save button out of the zoom group', () => {
+    renderTrainedTree();
+    const zoomGroup = screen.getByRole('group', {name: 'Zoom'});
+
+    expect(zoomGroup).not.toContainElement(
+      screen.getByRole('button', {name: 'Save image'})
+    );
+  });
+});
