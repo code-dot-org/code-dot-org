@@ -11,7 +11,9 @@
   color: var(--text-neutral-primary);
   border-radius: 4px;
   cursor: pointer;
-  transition: filter 0.15s ease, transform 0.15s ease;
+  transition:
+    filter 0.15s ease,
+    transform 0.15s ease;
 
   &draggable {
     margin: 5px;
