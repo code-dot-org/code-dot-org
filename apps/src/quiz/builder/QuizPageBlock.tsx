@@ -18,7 +18,7 @@ interface QuizPageBlockProps {
   onCreate: (type: QuizQuestionType) => void;
   createDisabledReason?: string;
   hint?: string;
-  // Set only for the unsaved empty page. A page that has questions stays.
+  // Set only for the unsaved empty page.
   onDelete?: () => void;
   // One <li> per question.
   children?: React.ReactNode;

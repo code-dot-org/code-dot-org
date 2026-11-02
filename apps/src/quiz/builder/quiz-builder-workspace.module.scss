@@ -4,7 +4,6 @@
   flex-direction: column;
   gap: 32px;
   min-height: 0;
-  // Centers an 800px column without a wrapper.
   padding: 64px max(32px, calc((100% - 800px) / 2));
   overflow-y: auto;
   box-sizing: border-box;
