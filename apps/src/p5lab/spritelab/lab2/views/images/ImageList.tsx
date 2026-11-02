@@ -166,6 +166,27 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
               >
                 {kind.title}
               </MuiTypography>
+              {/* First, where the finished image will land: the project
+                  puts new images at the front. */}
+              {ownDraft && (
+                <div
+                  className={classNames(
+                    styles.tileSlot,
+                    ownDraft.id === chosenId && styles.tileSlotChosen
+                  )}
+                >
+                  <button
+                    type="button"
+                    className={classNames(styles.tile, styles.tileDraft)}
+                    aria-pressed={ownDraft.id === chosenId}
+                    aria-label={`New ${imageKindLabel(
+                      ownDraft.imageType,
+                      ownDraft.subject
+                    ).toLowerCase()}`}
+                    onClick={() => onChoose(ownDraft.id)}
+                  />
+                </div>
+              )}
               {own.map(image => {
                 const chosen = image.key === chosenId;
                 return (
@@ -196,25 +217,6 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
                   </div>
                 );
               })}
-              {ownDraft && (
-                <div
-                  className={classNames(
-                    styles.tileSlot,
-                    ownDraft.id === chosenId && styles.tileSlotChosen
-                  )}
-                >
-                  <button
-                    type="button"
-                    className={classNames(styles.tile, styles.tileDraft)}
-                    aria-pressed={ownDraft.id === chosenId}
-                    aria-label={`New ${imageKindLabel(
-                      ownDraft.imageType,
-                      ownDraft.subject
-                    ).toLowerCase()}`}
-                    onClick={() => onChoose(ownDraft.id)}
-                  />
-                </div>
-              )}
             </React.Fragment>
           );
         })}
