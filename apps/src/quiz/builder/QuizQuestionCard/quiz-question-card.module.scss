@@ -1,29 +1,11 @@
 .tabsRow {
   padding: 0 10px;
+  background: var(--background-neutral-secondary);
   border-bottom: 1px solid var(--border-neutral-primary);
 }
 
 .tabPanels {
   background: var(--background-neutral-primary);
-}
-
-.fieldGroup {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 4px;
-  min-width: 0;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  color: var(--text-neutral-primary);
-}
-
-// A legend floats over the fieldset border by default.
-.fieldGroupLabel {
-  float: none;
-  margin: 0;
-  padding: 0;
 }
 
 .optionsField {
@@ -37,13 +19,15 @@
 .optionsList {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
 }
 
 .optionRow {
   display: flex;
   align-items: center;
   gap: 6px;
+  width: 100%;
+  overflow: hidden;
   padding: 8px;
   border: 1px solid var(--border-neutral-primary);
   border-radius: var(--shape-sm);
@@ -75,15 +59,26 @@
   border-radius: var(--shape-sm) 0 0 var(--shape-sm);
 
   label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 0;
+  }
+
+  // DSCO radios/checkboxes offset the glyph for labeled rows; this slot has no label.
+  i {
+    margin-top: 0 !important;
   }
 }
 
 // FormFieldWrapper aligns its children to flex-start, so the input needs its own width.
 .fullWidthField {
   width: 100%;
+  min-width: 0;
+  max-width: 100%;
 
-  input {
+  input,
+  textarea {
     width: 100%;
   }
 }
@@ -91,12 +86,6 @@
 .optionText {
   flex: 1 0 0;
   min-width: 0;
-}
-
-.pairsGroup {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
 }
 
 .pairRow {
@@ -121,6 +110,7 @@
   display: flex;
   flex-direction: column;
   gap: 2px;
+  min-width: 0;
 }
 
 .fieldHelp {
