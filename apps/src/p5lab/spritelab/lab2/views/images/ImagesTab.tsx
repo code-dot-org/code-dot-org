@@ -302,12 +302,6 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     },
     [land, writer, stopDrawing]
   );
-  // Leaving the tab saves what was drawn so far.
-  useEffect(() => {
-    if (!active && drawingRef.current && dirtyRef.current) {
-      saveRef.current?.();
-    }
-  }, [active]);
   const finishDrawing = useCallback(() => {
     if (dirtyRef.current) {
       leaveAfterSaveRef.current = true;
@@ -316,6 +310,12 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
       stopDrawing();
     }
   }, [stopDrawing]);
+  // Leaving the tab is Done: what was drawn is saved and the tools close.
+  useEffect(() => {
+    if (!active && drawingRef.current) {
+      finishDrawing();
+    }
+  }, [active, finishDrawing]);
   // Free play has every tool; a level before it keeps the few that draw.
   const limitedTools = !editingOffered;
   // Character sets are sheets of frames; the editor paints one image.
