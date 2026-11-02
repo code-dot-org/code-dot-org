@@ -278,8 +278,7 @@ export const HTMLPreview: React.FC = () => {
     return () => document.removeEventListener('keydown', onKeyDown);
   }, [isFullScreen, dispatch]);
 
-  // The flag is lab-wide state; left set, it carries into the next level or
-  // adaptive step.
+  // Clear the lab-wide flag on unmount so it does not leak into the next level.
   useEffect(
     () => () => {
       dispatch(setIsFullScreenView(false));

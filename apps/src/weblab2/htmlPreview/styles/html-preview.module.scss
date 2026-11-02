@@ -10,8 +10,8 @@
   grid-template-rows: 40px 1fr;
 }
 
-// Fixed, not absolute: an adaptive step's host is positioned inside a box that
-// clips its overflow, which cut off the header and its exit button.
+// Fixed, not absolute: an ancestor that clips its overflow would cut off the
+// header and its exit button.
 .fullScreenPanelContainer {
   position: fixed;
   inset: 0;
