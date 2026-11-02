@@ -151,7 +151,7 @@ Rails.application.config.active_support.message_serializer = :json_allow_marshal
 # leave this optimization off on the first deploy, then enable it on a
 # subsequent deploy.
 #++
-# Rails.application.config.active_support.use_message_serializer_for_metadata = true
+Rails.application.config.active_support.use_message_serializer_for_metadata = true
 
 ###
 # Set the maximum size for Rails log files.
@@ -207,7 +207,7 @@ Rails.application.config.active_record.default_column_serializer = nil
 # leave this optimization off on the first deploy, then enable it on a
 # subsequent deploy.
 #++
-# Rails.application.config.active_record.marshalling_format_version = 7.1
+Rails.application.config.active_record.marshalling_format_version = 7.1
 
 ###
 # Run `after_commit` and `after_*_commit` callbacks in the order they are defined in a model.
