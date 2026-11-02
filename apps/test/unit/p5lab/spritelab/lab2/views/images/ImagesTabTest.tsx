@@ -443,21 +443,36 @@ describe('ImagesTab', () => {
     expect(screen.queryByText('canvas')).toBeNull();
   });
 
-  it("guards an image that is the student's own work, until Generate new image", () => {
+  it("guards an image that is the student's own work, until Replace image", () => {
     propsByKey.k1 = {name: 'Sprite 1', categories: [], edited: true};
     propsByKey.k2 = {
       name: 'Sprite 2',
       categories: [],
       generation: {imageType: 'sprite', prompt: 'A cat'},
     };
-    renderTab({editingOffered: true});
+    const {rerender} = renderTab({editingOffered: true});
     // The edited image: its own pane, no words.
     expect(screen.getByText('Your edited image')).toBeTruthy();
     expect(screen.queryByText('words')).toBeNull();
     expect(screen.getByRole('button', {name: 'Edit this image'})).toBeTruthy();
-    fireEvent.click(screen.getByRole('button', {name: 'Generate new image'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Replace image'}));
     expect(screen.getByText('words')).toBeTruthy();
     expect(screen.queryByText('Your edited image')).toBeNull();
+    // Leaving the tab and coming back puts the guard up again.
+    rerender(
+      <ImagesTab
+        onDeleteImage={jest.fn()}
+        paneWidth={280}
+        editingOffered
+        active={false}
+      />
+    );
+    rerender(
+      <ImagesTab onDeleteImage={jest.fn()} paneWidth={280} editingOffered />
+    );
+    expect(screen.getByText('Your edited image')).toBeTruthy();
+    fireEvent.click(screen.getByRole('button', {name: 'Replace image'}));
+    expect(screen.getByText('words')).toBeTruthy();
     // The made image has its words from the start; back on the edited
     // one, the guard is up again.
     fireEvent.click(screen.getByRole('button', {name: 'Sprite 2'}));

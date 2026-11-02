@@ -1,7 +1,7 @@
 // The tab's right column for an image that is the student's own work: drawn
 // by hand, or drawn on since a prompt made it. The words that would make a
 // new picture stay out of the way, since they would replace that work;
-// Generate new image brings them back.
+// Replace image brings them back.
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton} from '@mui/material';
@@ -41,7 +41,7 @@ const OwnWorkPane: React.FunctionComponent<OwnWorkPaneProps> = ({
         disabled={disabled}
         onClick={onGenerate}
       >
-        Generate new image
+        Replace image
       </MuiButton>
       {onDraw && (
         <MuiButton

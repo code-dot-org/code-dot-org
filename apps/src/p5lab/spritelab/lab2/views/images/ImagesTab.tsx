@@ -396,13 +396,14 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   const limitedTools = !editingOffered;
   // Character sets are sheets of frames; the editor paints one image.
   // An image that is the student's own work (no prompt made its pixels)
-  // keeps the words that would replace it out of the way until Generate
-  // new image asks for them; the choice is per image.
+  // keeps the words that would replace it out of the way until Replace
+  // image asks for them; the choice is per image.
   const ownWork = !!chosenImage && !chosenImage.props.generation;
+  // Another image, or another tab, puts the guard back.
   const [wordsAsked, setWordsAsked] = useState(false);
   useEffect(() => {
     setWordsAsked(false);
-  }, [chosenId]);
+  }, [chosenId, active]);
   const ownWorkPane = ownWork && !wordsAsked && !editedKeepsWords();
   const drawOffered = !!kind && !chosenImage?.sheet && !drawing;
 
