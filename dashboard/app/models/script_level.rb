@@ -73,7 +73,7 @@ class ScriptLevel < ApplicationRecord
   validate :anonymous_must_be_assessment
   validate :validate_activity_section_lesson
   validate :validate_activity_section_position
-  validate :levels_stay_within_ui_test_partition
+  validate :levels_stay_within_partition
 
   # Make sure we never create a level that is not an assessment, but is anonymous,
   # as in that case it wouldn't actually be treated as anonymous
@@ -95,32 +95,28 @@ class ScriptLevel < ApplicationRecord
     end
   end
 
-  # A unit and the levels it references must be on the same side of the
-  # "UI Test " partition. See dashboard/config/PARTITIONS.md.
-  #
-  # For now, the rule is not enforced between the standalone projects partition
-  # and the production partition, because there are still some production units
-  # containing standalone project levels. Once the data is cleaned up, this rule
-  # can be enforced across all partitions.
-  def levels_stay_within_ui_test_partition
+  # A unit and the levels it references must be in the same partition. See
+  # dashboard/config/PARTITIONS.md.
+  def levels_stay_within_partition
     offending = cross_partition_level_keys(level_keys || [])
     return if offending.empty?
     errors.add(:script_level, cross_partition_levels_message(offending))
   end
 
-  # Returns those level keys on the wrong side of the "UI Test " partition for
-  # this script_level's unit.
+  # Returns those level keys in another partition than this script_level's
+  # unit. A unit is in the production or UI test partition, never the
+  # standalone projects partition.
   def cross_partition_level_keys(keys)
     # Ignore deprecated blockly levels, which are allowed in any unit.
     keys = keys.compact.reject {|key| key.start_with?('blockly:')}
     return [] if keys.empty?
     ui_test_script = ui_test_script?
-    keys.reject {|key| Level.ui_test_partition_name?(key) == ui_test_script}
+    keys.reject {|key| Level.ui_test_partition_name?(key) == ui_test_script && !Level.standalone_partition_name?(key)}
   end
 
   def cross_partition_levels_message(offending_level_keys)
-    "a unit and its levels must be on the same side of the \"UI Test \" " \
-      "partition, but \"#{script&.name}\" references: #{offending_level_keys.join(', ')}"
+    "a unit and its levels must be in the same partition (\"UI Test \", standalone project, " \
+      "or production), but \"#{script&.name}\" references: #{offending_level_keys.join(', ')}"
   end
 
   def ui_test_script?
@@ -785,7 +781,7 @@ class ScriptLevel < ApplicationRecord
       Level.find(level_data['id'])
     end
 
-    # Explicitly enforce UI Test partition rules, because the levels HABTM
+    # Explicitly enforce partition rules, because the levels HABTM
     # rows are written directly without triggering model validations.
     offending = cross_partition_level_keys(levels.map(&:key))
     raise cross_partition_levels_message(offending) if offending.any?

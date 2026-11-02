@@ -6750,13 +6750,13 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "New Poetry HOC Project"
+          "Poetry HOC Project"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "New Poetry HOC Project"
+          "Poetry HOC Project"
         ],
         "lesson.key": "lesson-48",
         "lesson_group.key": "",
@@ -6764,7 +6764,7 @@
         "activity_section.key": "b68acb29-b590-46e0-82a1-ade0d51c420f"
       },
       "level_keys": [
-        "New Poetry HOC Project"
+        "Poetry HOC Project"
       ]
     },
     {
@@ -6774,13 +6774,13 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "New Poetry Project"
+          "Poetry Project"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "New Poetry Project"
+          "Poetry Project"
         ],
         "lesson.key": "lesson-48",
         "lesson_group.key": "",
@@ -6788,7 +6788,7 @@
         "activity_section.key": "b68acb29-b590-46e0-82a1-ade0d51c420f"
       },
       "level_keys": [
-        "New Poetry Project"
+        "Poetry Project"
       ]
     },
     {
@@ -10872,9 +10872,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "New Poetry HOC Project",
+        "level.key": "Poetry HOC Project",
         "script_level.level_keys": [
-          "New Poetry HOC Project"
+          "Poetry HOC Project"
         ],
         "lesson.key": "lesson-48",
         "lesson_group.key": "",
@@ -10884,9 +10884,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "New Poetry Project",
+        "level.key": "Poetry Project",
         "script_level.level_keys": [
-          "New Poetry Project"
+          "Poetry Project"
         ],
         "lesson.key": "lesson-48",
         "lesson_group.key": "",
