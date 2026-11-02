@@ -145,11 +145,12 @@ const APPLICATION_ALIASES = {
   '@cdoide': p('src/weblab2/CDOIDE'),
   '@cdo/generated-scripts': p('generated-scripts'),
   '@codebridge': p('src/codebridge'),
-  // Prevent webpack from including linked npm dependencies' version of React and react-dom.
+  // Prevent webpack from including linked npm dependencies' version of React, react-dom and react-router-dom.
   // In other words, only bundle one copy of each (the one specified in the file)
   // and not the one specified by linked dependencies.
   react: p('node_modules/react'),
   'react-dom': p('node_modules/react-dom'),
+  'react-router-dom': p('node_modules/react-router-dom'),
 };
 
 const LOCALE_ALIASES = {
