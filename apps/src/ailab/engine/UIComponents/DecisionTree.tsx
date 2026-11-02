@@ -1,4 +1,5 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {faCircleCheck} from '@fortawesome/free-solid-svg-icons/faCircleCheck';
+import {faCircleXmark} from '@fortawesome/free-solid-svg-icons/faCircleXmark';
 import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React, {
@@ -110,9 +111,23 @@ const KeyHint = ({id, shown, children}: KeyHintProps) => (
   </Typography>
 );
 
-const GRADE_ICONS: Record<Grade, string> = {
-  correct: 'circle-check',
-  incorrect: 'circle-xmark',
+const GRADE_ICONS = {
+  correct: faCircleCheck,
+  incorrect: faCircleXmark,
+};
+
+// SVG rather than the icon font: a saved image of the tree cannot load fonts.
+const GradeIcon = ({grade}: {grade: Grade}) => {
+  const [width, height, , , path] = GRADE_ICONS[grade].icon;
+  return (
+    <svg
+      viewBox={`0 0 ${width} ${height}`}
+      aria-hidden="true"
+      className={styles.gradeIcon}
+    >
+      <path fill="currentColor" d={path as string} />
+    </svg>
+  );
 };
 
 interface GradeCountProps {
@@ -122,12 +137,7 @@ interface GradeCountProps {
 
 const GradeCount = ({grade, count}: GradeCountProps) => (
   <span className={styles[grade]}>
-    <FontAwesomeV6Icon
-      iconName={GRADE_ICONS[grade]}
-      iconStyle="solid"
-      className={styles.gradeIcon}
-      aria-hidden="true"
-    />
+    <GradeIcon grade={grade} />
     {count}
     <span className={appStyles.visuallyHidden}> {grade} </span>
   </span>
