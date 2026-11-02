@@ -1,0 +1,42 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-10-31T21:52:23.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "**It learned from lots of pictures**\n\nBefore you ever used it, the AI was **trained** on many example pictures, so it learned what usually goes with words like these.",
+        "imageUrl": "https://images.code.org/a72d7ec5a0b79c2bd5214798ca283106-01-training-pictures.png",
+        "key": "HoAI26-How-it-was-made-78ee9aae-3acf-4a21-9cab-5a3b723caa44"
+      },
+      {
+        "text": "**Your words steer what the AI makes**\n\nThe AI starts with some instructions, then adds your words. Change your words, change your sprite. ",
+        "imageUrl": "https://images.code.org/3f1f7b14411154ae53f9e9e750055777-02-words-steer.png",
+        "key": "HoAI26-How-it-was-made-3c54033c-bf11-4782-af0b-f045173629b2"
+      },
+      {
+        "text": "**It predicts each pixel**\n\nStep by step, it adjusts the colors to better fit your words, until a picture appears. \n",
+        "imageUrl": "https://images.code.org/9e1fc4e683965b441f26e73306ef6816-03-noise-to-picture.png",
+        "key": "HoAI26-How-it-was-made-30a7570c-df6c-44e9-9ace-1ffb8fc53cbb"
+      },
+      {
+        "text": "**Every Generate is a new guess**\n\ndf\nClick Generate again and you get something different. ",
+        "imageUrl": "https://images.code.org/69f076c2a5a127251dfb275f2e5b5ca1-04-new-guess.png",
+        "key": "HoAI26-How-it-was-made-4ea083a6-5ba7-4661-8437-d43542533bd5"
+      },
+      {
+        "text": "**Evaluate what the AI made**\n\nDoes the result match what you asked for? Look closely, then rate it.\n",
+        "imageUrl": "https://images.code.org/5e01580230219d80cc2b4607a5935394-05-check-and-rate.png",
+        "key": "HoAI26-How-it-was-made-d59cfeb3-e77e-40bf-9d5b-2e9873b8763a"
+      }
+    ],
+    "use_links": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-10-31 21:57:15 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-31 22:22:15 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>
