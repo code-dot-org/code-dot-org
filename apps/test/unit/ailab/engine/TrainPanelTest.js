@@ -1,10 +1,12 @@
-import {act, screen} from '@testing-library/react';
+import {act, fireEvent, screen} from '@testing-library/react';
 import {createElement} from 'react';
 
 import I18n from '@cdo/apps/ailab/engine/i18n';
+import {resetState} from '@cdo/apps/ailab/engine/redux';
+import {store as storeSingleton} from '@cdo/apps/ailab/engine/store';
 import TrainPanel from '@cdo/apps/ailab/engine/UIComponents/TrainPanel';
 
-import {levelProject, levelStore} from './levelStore';
+import {levelProject, levelStore, seedLevel} from './levelStore';
 import {renderWithProviders, runTraining} from './renderWithProviders';
 
 function renderPanel({trained = false, mode = {}} = {}) {
@@ -64,5 +66,42 @@ describe('TrainPanel', () => {
       mode: {pretrained: true, hideSelectLabel: true, lockFeatures: true},
     });
     expect(trainButton()).toBeNull();
+  });
+});
+
+describe('TrainPanel training a model', () => {
+  beforeAll(() => {
+    I18n.initI18n();
+  });
+  beforeEach(() => jest.useFakeTimers());
+  afterEach(() => jest.useRealTimers());
+
+  // Clicking Train model goes through useTrainingRun, which trains the store singleton.
+  function renderOnSingleton() {
+    storeSingleton.dispatch(resetState());
+    seedLevel(storeSingleton, {});
+    return renderWithProviders(createElement(TrainPanel), {
+      store: storeSingleton,
+      project: levelProject(),
+    });
+  }
+
+  test('shows it is training before training starts', () => {
+    const {trainingData} = renderOnSingleton();
+    fireEvent.click(trainButton());
+
+    expect(screen.getByRole('button', {name: 'Training…'}).disabled).toBe(true);
+    expect(screen.getByRole('progressbar', {name: 'Training'})).toBeTruthy();
+    expect(trainingData().trainedModel).toBeUndefined();
+    expect(storeSingleton.getState().trainingModalStep).toBeUndefined();
+  });
+
+  test('trains and opens the training modal after the next frame', () => {
+    const {trainingData} = renderOnSingleton();
+    fireEvent.click(trainButton());
+    act(() => jest.runAllTimers());
+
+    expect(trainingData().trainedModel).toBeDefined();
+    expect(storeSingleton.getState().trainingModalStep).toBe('training');
   });
 });

@@ -19,6 +19,11 @@ environment; see `UI_TEST_SEED_TASKS` in `dashboard/lib/tasks/seed.rake`. It
 seeds UI test levels, needed by ui-test- units, and standalone project levels,
 which back urls like https://test-studio.code.org/projects/applab/.
 
+Seeding this tree omits production course offerings, courses, units, and levels,
+with the exception of deprecated blockly levels and standalone project levels
+which are seeded in every environment. Omitting production levels in particular
+saves considerable seed time in test environments.
+
 ## Cached units
 
 A unit whose level pages should be publicly cacheable needs an entry in
