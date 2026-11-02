@@ -1,7 +1,7 @@
 # Plan: compile rules, actors and cameras from their data
 
-STATUS: BUILT, October 2026, but for 5c's steps 5 and 6, which are put off
-as a cleanup (below).
+STATUS: BUILT, October 2026, but for 5c's step 6, which is put off as a
+cleanup (below). Step 5 was built in November 2026.
 
 A rule and an actor are data, edited in their editors (RULE_EDITOR_PLAN.md,
 ACTORS_AS_DATA_PLAN.md), and a camera is data on a Viewport. The compiler still
@@ -205,13 +205,43 @@ fixtures are written as rows and folded. In order, each its own commit:
    a rule, and `mapWorkspaces` writes a rule it rewrote back as data. The
    readers that walked the view unasked — `rulesInScope`, `standInBlocks`
    — view it themselves.
-5. LATER. Actors compile from data: the compiler and `parseActorOwnMeta`
-   read `traits` and `members`.
+5. BUILT, November 2026. Actors compile from data. The compiler folds an
+   actor written in rows first, as `parseRuleMeta` does a rule, and lays
+   the data out with `actorSheet`. What the actor is — acts like, is data,
+   its animations, its traits, its blocks and events — is written from the
+   data. Only what generates as code is loaded as blocks: the still
+   picture, the values, the effects that are on, the drawing and the step,
+   under a `define actor` root, with the handlers beside it and each
+   block's body under its page's head. `parseActorOwnMeta` reads
+   `properties`, `members` and `actsLike` (`actorOwnMeta`), and the walk
+   over a `define actor` chain is gone.
+
+   All 460 actors the repository builds — every scenario's, every
+   lesson's, each stock actor imported alone — have the same own meta as
+   before. They compile to the same code but for two differences. Ids
+   Blockly mints for a block saved without one are random on every load,
+   so they differ between any two runs. And an actor still written in rows
+   compiles in the data's order, as it would once folded: the still
+   picture and the animations come before the traits. Those are the stock
+   shelf's rows, which `importStockActor` writes, and a few fixtures'.
+   Seen in the browser: Meteors, Jetpack and the interface kit run, with
+   no errors.
+
+   One reading went: a property saved before properties had an access
+   field was read as writable by the walk. The fold drops one without the
+   field, and nothing in the repository lacks it.
+
+   The rows the compiler no longer generates — `acts like`, `is data`, the
+   animations row, `show as`, `define property`, `use trait` under an actor
+   — are still defined blocks. Whether anything still loads them into a
+   live workspace is to be found before they go, as the rule's went in
+   step 8.
+
 6. LATER. Actors are written as data: the stock actors, the starter
    project, the lessons, the fixtures and the enhancers.
 
-   Neither is needed for the blocks to go. The compiler (`actorSheet`) and
-   `parseActorOwnMeta` walk an actor's rows as JSON and never load them
+   Neither was needed for the blocks to go: the compiler and
+   `parseActorOwnMeta` walked an actor's rows as JSON and never loaded them
    into a workspace, and the rows are what step 8 keeps as the view. Both
    are a cleanup of the round trip, worth doing on their own account.
 

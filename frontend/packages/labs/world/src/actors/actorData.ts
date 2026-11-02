@@ -7,12 +7,12 @@
 // and what it DOES as an event workspace, whose roots are its handlers and its
 // code (its drawing, its every-frame work).
 //
-// The rest of the lab reads actors as `define actor` workspaces, and goes on
-// doing so: `actorView` turns the data back into the workspace it stands for,
-// and `foldActor` turns any such workspace into data. Neither is ever saved
-// as the other's shape; the view is what the compiler and the readers see,
-// and a writer edits the view and folds it back. Both are pure, and a fold
-// loses nothing: a row it cannot say as data is kept as code.
+// The compiler reads the data (`blockly/actorSheet`). Much of the rest of the
+// lab reads actors as `define actor` workspaces: `actorView` turns the data
+// back into the workspace it stands for, and `foldActor` turns any such
+// workspace into data. Neither is ever saved as the other's shape; a writer
+// edits the view and folds it back. Both are pure, and a fold loses nothing:
+// a row it cannot say as data is kept as code.
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
@@ -348,7 +348,8 @@ function readValue(row: Block): ActorValue | undefined {
   return undefined;
 }
 
-function writeValue(value: ActorValue): Block {
+/** The `set` row a value is, on this actor. */
+export function writeValue(value: ActorValue): Block {
   const actor = {block: {type: THIS_ACTOR}};
   const inputs =
     value.type === 'vector'
@@ -465,7 +466,8 @@ function readEffect(row: Block): ActorEffect | undefined {
   };
 }
 
-const writeEffect = (effect: ActorEffect): Block =>
+/** The `add effect` row an effect is. */
+export const writeEffect = (effect: ActorEffect): Block =>
   effect.row ?? {type: ADD_EFFECT, fields: {EFFECT: effect.effect}};
 
 const MEMBER_ROWS = {block: 'world_rule_block', event: 'world_rule_event'};
@@ -929,6 +931,23 @@ export function viewOf(contents: string): string {
   return isActorData(parsed)
     ? JSON.stringify(actorView(parsed), null, 2)
     : contents;
+}
+
+/**
+ * The data the contents hold, whatever their shape: a data-shaped file as it
+ * is, a `define actor` workspace folded, and nothing for anything else.
+ */
+export function actorDataOf(contents: string): ActorData | undefined {
+  let parsed: unknown;
+  try {
+    parsed = JSON.parse(contents);
+  } catch {
+    return undefined;
+  }
+  if (isActorData(parsed)) {
+    return parsed;
+  }
+  return isObject(parsed) ? foldActor(parsed) : undefined;
 }
 
 /**

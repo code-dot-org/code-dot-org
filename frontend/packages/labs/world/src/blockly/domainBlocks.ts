@@ -42,6 +42,7 @@ import {
   TEXT_ANCHORS,
   type PropertyType,
 } from '../engine';
+import type {Timeline} from '../engine/core/keyframes';
 import {DEFAULT_LAYER_ID} from '../engine/core/Layer';
 import {FILE_ICONS} from '../fileIcons';
 import {MAIN_SCREEN_PATH} from '../mainWorld';
@@ -635,12 +636,9 @@ const worldActorIsData = defineBlock({
  * (specs/ANIMATION_PLAN.md, step 3).
  *
  * Never in a toolbox: the timelines are made in the Actor Editor and kept as
- * the actor's data, and this row is only how they reach the compiler, in
- * the `define actor` the data stands for (`actors/actorData`). A sprite key
- * naming one cell of a sheet (`coin.png#3`) is resolved here to the
- * rectangle, as `set sprite`'s is, since the engine is told only
- * rectangles; an effect track's file is imported, since switching an effect
- * on needs its graph.
+ * the actor's data, and this row is how they appear in the `define actor`
+ * the data stands for (`actors/actorData`). The compiler writes them from
+ * the data (`animationsCode`).
  */
 const worldActorAnimations = defineBlock({
   type: 'world_actor_animations',
@@ -653,52 +651,65 @@ const worldActorAnimations = defineBlock({
   tooltip: 'What this kind’s animations are, made in the Actor Editor.',
   generator: {
     javascript(block, generator) {
-      const animations = block.animations_ ?? {};
-      const effects = new Set<string>();
-      const resolved = Object.fromEntries(
-        Object.entries(animations).map(([name, timeline]) => [
-          name,
-          {
-            ...timeline,
-            tracks: Object.fromEntries(
-              Object.entries(timeline.tracks).map(([property, track]) => {
-                if (property.startsWith('effect:')) {
-                  effects.add(property.slice('effect:'.length));
-                }
-                return [
-                  property,
-                  property === 'sprite'
-                    ? track.map(key => ({
-                        ...key,
-                        value: spriteKeyValue(key.value),
-                      }))
-                    : track,
-                ];
-              }),
-            ),
-          },
-        ]),
-      );
-      const documents = [...effects].map(path => {
-        addImport(
-          generator,
-          `mod:${path}`,
-          `import ${importVar(path)} from ${str(path)};`,
-        );
-        return `${str(path)}: {document: ${importVar(path)}}`;
-      });
-      const play =
-        'Main' in animations
-          ? `WorldLab.playAnimation(actor, ${str('Main')});\n`
-          : '';
-      return (
-        `actor.useAnimations(${JSON.stringify(resolved)}, {${documents.join(
-          ', ',
-        )}});\n` + play
-      );
+      return animationsCode(block.animations_ ?? {}, generator);
     },
   },
 });
+
+/**
+ * An actor's animations declared on its builder, and its Main played. A
+ * sprite key naming one cell of a sheet (`coin.png#3`) is resolved here to
+ * the rectangle, as `set sprite`'s is, since the engine is told only
+ * rectangles; an effect track's file is imported, since switching an effect
+ * on needs its graph.
+ */
+export function animationsCode(
+  animations: Record<string, Timeline>,
+  generator: unknown,
+): string {
+  const effects = new Set<string>();
+  const resolved = Object.fromEntries(
+    Object.entries(animations).map(([name, timeline]) => [
+      name,
+      {
+        ...timeline,
+        tracks: Object.fromEntries(
+          Object.entries(timeline.tracks).map(([property, track]) => {
+            if (property.startsWith('effect:')) {
+              effects.add(property.slice('effect:'.length));
+            }
+            return [
+              property,
+              property === 'sprite'
+                ? track.map(key => ({
+                    ...key,
+                    value: spriteKeyValue(key.value),
+                  }))
+                : track,
+            ];
+          }),
+        ),
+      },
+    ]),
+  );
+  const documents = [...effects].map(path => {
+    addImport(
+      generator,
+      `mod:${path}`,
+      `import ${importVar(path)} from ${str(path)};`,
+    );
+    return `${str(path)}: {document: ${importVar(path)}}`;
+  });
+  const play =
+    'Main' in animations
+      ? `WorldLab.playAnimation(actor, ${str('Main')});\n`
+      : '';
+  return (
+    `actor.useAnimations(${JSON.stringify(resolved)}, {${documents.join(
+      ', ',
+    )}});\n` + play
+  );
+}
 
 /**
  * A sprite key as the engine takes one: a file, or a file and a rectangle.
@@ -732,26 +743,38 @@ const worldActsLike = defineBlock({
     'kind. Rows below this one override what they name.',
   generator: {
     javascript(block, generator) {
-      const actor = block.getFieldValue('ACTOR');
-      // Nothing chosen. The silence every other unfinished dropdown keeps.
-      if (!actor) {
-        return '';
-      }
-      // ITSELF, which the dropdown does not offer and a saved file may hold —
-      // an actor renamed into the place of the one it acted like, say. The
-      // import would be a module importing its own default export.
-      if (actor === editingActorModule(block)) {
-        return '';
-      }
-      addImport(
+      return actsLikeCode(
+        block.getFieldValue('ACTOR'),
+        editingActorModule(block),
         generator,
-        `mod:${actor}`,
-        `import ${importVar(actor)} from ${str(actor)};`,
       );
-      return `actor.actsLike(${importVar(actor)});\n`;
     },
   },
 });
+
+/** `actor.actsLike`, importing the kind; `self` is the module it is written in. */
+export function actsLikeCode(
+  actor: string | undefined,
+  self: string | undefined,
+  generator: unknown,
+): string {
+  // Nothing chosen. The silence every other unfinished dropdown keeps.
+  if (!actor) {
+    return '';
+  }
+  // ITSELF, which the dropdown does not offer and a saved file may hold —
+  // an actor renamed into the place of the one it acted like, say. The
+  // import would be a module importing its own default export.
+  if (actor === self) {
+    return '';
+  }
+  addImport(
+    generator,
+    `mod:${actor}`,
+    `import ${importVar(actor)} from ${str(actor)};`,
+  );
+  return `actor.actsLike(${importVar(actor)});\n`;
+}
 
 /** How many number sockets each effect parameter type occupies. */
 /**

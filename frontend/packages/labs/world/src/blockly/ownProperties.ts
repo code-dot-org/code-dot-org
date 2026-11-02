@@ -34,12 +34,15 @@
 // deleting the actor cannot dangle a reference somewhere else. Widening this
 // later is additive; narrowing it would not be, which is why it starts here.
 
-import {viewOf} from '../actors/actorData';
+import {
+  actorDataOf,
+  type ActorData,
+  type ActorMember,
+} from '../actors/actorData';
 import type {PropertyType} from '../engine/core/types';
 
 import type {ParamType} from './enums';
 import type {SocketState} from './extensions/blockDesigner';
-import {BLOCK_ACCESS_FIELD, PRIVATE} from './extensions/blockVisibility';
 import {
   designedName,
   propertyDefault,
@@ -49,7 +52,6 @@ import {
   type ActionMeta,
   type EventMeta,
   type MemberPart,
-  type MemberRef,
   type PropertyMeta,
 } from './ruleMeta';
 import {
@@ -58,40 +60,18 @@ import {
   type ScreenData,
 } from './screenData';
 
-/** A block as it appears in a serialized workspace. */
-interface ActorBlock {
+/** One piece of a designed signature, as a member's data holds it. */
+type DesignedPart = {
+  kind?: string;
+  text?: string;
+  var?: string;
+  /** A value's name, for one that names no variable. */
+  name?: string;
   type?: string;
-  fields?: Record<string, unknown>;
-  next?: {block?: ActorBlock};
-  /** A `define block`'s designed signature, as the designer mutator saved it. */
-  extraState?: {
-    parts?: ReadonlyArray<{
-      kind?: string;
-      text?: string;
-      var?: string;
-      /** A value's name, for one that names no variable (`actors/actorData`). */
-      name?: string;
-      type?: string;
-      /** What a call site starts with — a value, or the whole block. */
-      default?: unknown;
-      shadow?: SocketState;
-    }>;
-  };
-}
-
-const field = (block: ActorBlock, name: string): string =>
-  typeof block.fields?.[name] === 'string'
-    ? (block.fields[name] as string)
-    : '';
-
-/** The blocks chained below one, in order — a `define actor`'s body. */
-function chain(from: ActorBlock | undefined): ActorBlock[] {
-  const blocks: ActorBlock[] = [];
-  for (let at = from?.next?.block; at; at = at.next?.block) {
-    blocks.push(at);
-  }
-  return blocks;
-}
+  /** What a call site starts with — a value, or the whole block. */
+  default?: unknown;
+  shadow?: SocketState;
+};
 
 /** What an actor's own declarations amount to. */
 export interface OwnMeta {
@@ -160,29 +140,19 @@ export interface OwnMeta {
 }
 
 /**
- * An actor file's own property declarations.
+ * An actor file's own declarations, read from its data, which a file
+ * written in rows is folded to first (`actors/actorData`).
  *
- * Returns undefined for a file with no `define actor` — mid-edit, or not an
- * actor at all — matching `parseRuleMeta`, which a caller already handles. An
- * actor with no declarations returns a meta with none rather than undefined, so
- * "no properties" and "not parseable" stay distinguishable.
+ * Undefined for contents that are no actor — mid-edit, or not one at all —
+ * matching `parseRuleMeta`. An actor with no declarations has a meta with
+ * none, so "no properties" and "not parseable" stay apart.
  */
 export function parseActorOwnMeta(
   modulePath: string,
   contents: string,
 ): OwnMeta | undefined {
-  return declarationsIn(
-    modulePath,
-    // Either shape: a data-shaped actor is read as the rows it stands for
-    // (`actors/actorData`).
-    viewOf(contents),
-    'world_actor',
-    'actor',
-    'Actor',
-    // The only root that may hold a `define block` or a `define event`, and so
-    // the only reader that asks for either — see `declarationsFrom`.
-    true,
-  );
+  const data = actorDataOf(contents);
+  return data ? actorOwnMeta(modulePath, data) : undefined;
 }
 
 /**
@@ -284,65 +254,19 @@ const vectorText = (text: unknown): {x: number; y: number} | undefined => {
   return Number.isFinite(x) && Number.isFinite(y) ? {x, y} : undefined;
 };
 
-/** The walk both share: a root's chain, and every declaration in it. */
-function declarationsIn(
-  modulePath: string,
-  contents: string,
-  rootType: string,
-  scope: 'actor' | 'world',
-  fallbackName: string,
-  actorFile = false,
-): OwnMeta | undefined {
-  let root: ActorBlock | undefined;
+/** What an actor's data declares. */
+export function actorOwnMeta(modulePath: string, data: ActorData): OwnMeta {
+  const name = data.name || 'Actor';
+  // A designed member's values are workspace variables, held by id.
   const variables = new Map<string, string>();
-  try {
-    const parsed = JSON.parse(contents) as {
-      blocks?: {blocks?: ActorBlock[]};
-      variables?: ReadonlyArray<{id?: string; name?: string}>;
-    };
-    // A designed block's parameters are workspace variables, and what the
-    // mutator saved is their ids — the same resolution `parseRuleMeta` does.
-    for (const variable of parsed.variables ?? []) {
-      if (variable.id) {
-        variables.set(variable.id, variable.name ?? variable.id);
-      }
+  for (const variable of (data.blocks?.variables ?? []) as Array<{
+    id?: string;
+    name?: string;
+  }>) {
+    if (variable?.id) {
+      variables.set(variable.id, variable.name ?? variable.id);
     }
-    root = (parsed.blocks?.blocks ?? []).find(b => b?.type === rootType);
-  } catch {
-    return undefined; // mid-edit / not JSON
   }
-  if (!root) {
-    return undefined;
-  }
-  return declarationsFrom(
-    modulePath,
-    root,
-    scope,
-    fallbackName,
-    variables,
-    actorFile,
-  );
-}
-
-/**
- * Everything one root declares, given the root itself.
- *
- * @param variables the workspace's variable map, id → name. A designed block's
- *   parameters are variables, and their ids are what the mutator saved; without
- *   this every parameter would be called by its id.
- * @param actorFile whether this root is an `.actor` file's `define actor`,
- *   which is the only root a `define block` or a `define event` may be
- *   written under: a `.world` is not offered the blocks at all (`ROOT_HOMES`).
- */
-function declarationsFrom(
-  modulePath: string,
-  root: ActorBlock,
-  scope: 'actor' | 'world',
-  fallbackName: string,
-  variables: ReadonlyMap<string, string> = new Map(),
-  actorFile = false,
-): OwnMeta | undefined {
-  const name = field(root, 'NAME') || fallbackName;
   const properties: PropertyMeta[] = [];
   const actions: ActionMeta[] = [];
   const events: EventMeta[] = [];
@@ -350,107 +274,64 @@ function declarationsFrom(
   const namedBlocks = new Set<string>();
   const namedEvents = new Set<string>();
 
-  let actsLike: string | undefined;
+  for (const member of data.members ?? []) {
+    // First wins, for members as for properties: two designed to read the
+    // same way would mint one block type twice.
+    if (member.kind === 'event') {
+      const declared = designedEventOf(
+        member.parts,
+        modulePath,
+        name,
+        variables,
+      );
+      if (declared && !namedEvents.has(declared.id)) {
+        namedEvents.add(declared.id);
+        events.push(declared);
+      }
+      continue;
+    }
+    const declared = designedBlock(member, modulePath, name, variables);
+    if (declared && !namedBlocks.has(declared.id)) {
+      namedBlocks.add(declared.id);
+      actions.push(declared);
+    }
+  }
 
-  for (const block of chain(root)) {
-    if (block.type === 'world_acts_like') {
-      const named = field(block, 'ACTOR');
-      if (named && named !== modulePath) {
-        actsLike = named;
-      }
-      continue;
-    }
-    if (block.type === 'world_rule_event') {
-      // AN ACTOR'S, or a WORLD'S. An actor's event is about a subject — the
-      // hat takes one and the emit names it. A world's has none: it is the
-      // app's own vocabulary, the words its maps raise, and the hat registers
-      // on the world exactly as a map's used to (specs/MAP_EVENTS_PLAN.md).
-      //
-      // Nothing else declares one. A rule's go through `parseRuleMeta`, and a
-      // `.map` through `parseMapOwnMeta`, which walks top blocks rather than
-      // a root because a map has none to walk under — yet.
-      if (actorFile || scope === 'world') {
-        const declared = designedEvent(
-          block,
-          modulePath,
-          name,
-          variables,
-          actorFile ? undefined : 'world',
-        );
-        // First wins, as for the rest: two events designed to read the same
-        // way are one hat minted twice, and which one a handler was written
-        // for would depend on registration order.
-        if (declared && !namedEvents.has(declared.id)) {
-          namedEvents.add(declared.id);
-          events.push(declared);
-        }
-      }
-      continue;
-    }
-    if (block.type === 'world_rule_block') {
-      if (actorFile) {
-        const declared = designedBlock(block, modulePath, name, variables);
-        // First wins, as for properties: two blocks designed to read the same
-        // way would mint one block type twice, and which one a call site meant
-        // would depend on registration order.
-        if (declared && !namedBlocks.has(declared.id)) {
-          namedBlocks.add(declared.id);
-          actions.push(declared);
-        }
-      }
-      continue;
-    }
-    if (block.type !== 'world_rule_property') {
-      continue;
-    }
-    const declared = field(block, 'NAME');
+  for (const property of data.properties ?? []) {
+    const declared = property.name;
     if (!declared) {
       continue; // an unnamed declaration declares nothing
     }
     const id = slug(declared);
-    // First wins, as elsewhere: a duplicate would give one name two slots, and
-    // which one a get block read would depend on generation order.
     if (taken.has(id)) {
       continue;
     }
     taken.add(id);
-
-    const declaredType = field(block, 'TYPE');
     const type = (
-      PROPERTY_TYPES.has(declaredType) ? declaredType : 'number'
+      PROPERTY_TYPES.has(property.type) ? property.type : 'number'
     ) as PropertyType;
-    const ref: MemberRef = {
-      source: 'project',
-      exportName: `${pascal(declared)}Property`,
-      // The declaring actor or world, which is what the block type is keyed
-      // from — and `own` says so, because it is NOT a rule anyone can look up.
-      ruleName: name,
-      modulePath,
-      own: true,
-    };
-
     properties.push({
       id,
       name: declared,
       type,
-      default: propertyDefault(
-        type,
-        // Raw, not `field()`: a vector's default is an object, not a string.
-        block.fields?.DEFAULT,
-        block.fields?.DEFAULT_Y,
-      ),
-      // Meaningful here, and not the same no-op it would be if these were
-      // visible elsewhere. An actor's declaring scope is a DECLARATION, not a
-      // body — there is nowhere in it to run a `set` — so read-only means no
-      // setter is offered at all: a per-kind constant, like a max health.
-      readonly: field(block, 'ACCESS') === 'readonly',
-      scope,
-      // No owning trait: nothing elects these, and the `ref` already names the
-      // actor and the file, which is the whole of where they come from.
-      ref,
+      default: propertyDefault(type, property.value, property.valueY),
+      // A per-kind constant, like a max health: no setter is offered at all.
+      readonly: property.access === 'readonly',
+      scope: 'actor',
+      // No owning trait: the ref names the actor and the file, and `own`
+      // says it is no rule anyone can look up.
+      ref: {
+        source: 'project',
+        exportName: `${pascal(declared)}Property`,
+        ruleName: name,
+        modulePath,
+        own: true,
+      },
     });
   }
 
+  const actsLike =
+    data.actsLike && data.actsLike !== modulePath ? data.actsLike : undefined;
   return {
     modulePath,
     name,
@@ -462,12 +343,10 @@ function declarationsFrom(
 }
 
 /**
- * One `define block` in an actor's body, as the metadata its call site is
- * minted from.
+ * One block an actor adds, as the metadata its call site is minted from.
  *
- * The same reading `parseRuleMeta` gives the same block (`addDesignedBlock`),
- * and deliberately so: it is one block with one meaning, and where it sits
- * decides whose it is. What differs is the REF — `own`, naming the file rather
+ * The same reading `parseRuleMeta` gives a rule's (`addDesignedBlock`), and
+ * deliberately so: it is one kind of member with one meaning. What differs is the REF — `own`, naming the file rather
  * than a rule — which is exactly how an own property differs from a rule's.
  *
  * Returns nothing for a block that says it REPORTS something. That form wants
@@ -475,16 +354,15 @@ function declarationsFrom(
  * this one; the block wears a warning saying so, so it is not silent.
  */
 function designedBlock(
-  block: ActorBlock,
+  member: ActorMember,
   modulePath: string,
   actorName: string,
   variables: ReadonlyMap<string, string>,
 ): ActionMeta | undefined {
-  const returns = field(block, 'RETURNS');
-  if (returns && returns !== 'none') {
+  if (member.returns) {
     return undefined;
   }
-  const raw = block.extraState?.parts ?? [];
+  const raw = member.parts as DesignedPart[];
   const parts: MemberPart[] = raw.flatMap((part): MemberPart[] => {
     if (part.kind === 'param') {
       return [
@@ -514,12 +392,9 @@ function designedBlock(
       )
       .map(part => ({name: part.name, type: part.type})),
     parts,
-    description: field(block, 'DESCRIPTION') || undefined,
-    // The eye: shut, and only this file's own drawer offers the block. Absent
-    // reads as SHARED, which is every block written before the eye existed
-    // and what a reader expects of one that says nothing
-    // (`extensions/blockVisibility`).
-    shared: field(block, BLOCK_ACCESS_FIELD) !== PRIVATE,
+    description: member.description || undefined,
+    // The eye shut: only this file's own drawer offers the block.
+    shared: !member.hidden,
     // An actor's, so the call site takes an actor socket and the body is
     // handed one — the same scope a trait's action has.
     scope: 'actor',
@@ -537,38 +412,11 @@ function designedBlock(
 }
 
 /**
- * One `define event` in an actor's body, as the metadata its hat and its
- * `emit` block are minted from.
- *
- * `parseRuleMeta.addEvent`'s reading of the same block, with two differences
- * and no others. The REF is `own` and names the file, exactly as an own
- * property's and an own action's do. And the SCOPE is always `actor`: a rule
- * has a level above its traits where an event is the world's, and a kind of
- * actor has no such level — whatever it declares happened to one of them.
- *
- * A parameter defaults to a string called `choice`, matching the rule side,
- * because the common designed event is one that carries a choice for the hat
- * to filter on (specs/ENUMS.md).
+ * One event an actor or a screen declares, as the metadata its hat and its
+ * `emit` block are minted from, read from its designed parts.
  */
-function designedEvent(
-  block: ActorBlock,
-  modulePath: string,
-  actorName: string,
-  variables: ReadonlyMap<string, string>,
-  scope: 'actor' | 'world' = 'actor',
-): EventMeta | undefined {
-  return designedEventOf(
-    block.extraState?.parts ?? [],
-    modulePath,
-    actorName,
-    variables,
-    scope,
-  );
-}
-
-/** `designedEvent`, of the designed parts themselves. */
 function designedEventOf(
-  raw: NonNullable<NonNullable<ActorBlock['extraState']>['parts']>,
+  raw: readonly DesignedPart[],
   modulePath: string,
   actorName: string,
   variables: ReadonlyMap<string, string>,

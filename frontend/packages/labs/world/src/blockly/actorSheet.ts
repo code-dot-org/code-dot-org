@@ -1,124 +1,137 @@
-// An actor, laid out to be compiled (specs/COMPILE_FROM_DATA_PLAN.md, step 2).
+// An actor, laid out to be compiled from its data
+// (specs/COMPILE_FROM_DATA_PLAN.md, 5c step 5).
 //
-// The rows of its `define actor` generate as they always have, but for three
-// kinds, which are said directly (`BlocklyGenerator.generateActor`): a trait
-// it uses, and a block or an event it adds. Those come out of the chain, and
-// a block's body goes under its page's head (`memberHead`), so nothing loads
-// them as blocks.
+// What the actor is — the kind it acts like, whether it is data, its
+// animations, its traits, the blocks and events it adds — is said from the
+// data (`BlocklyGenerator.actorCode`). What generates as code is loaded as
+// blocks: its still picture, the values set on it, its effects and its code
+// rows, chained under a `define actor` root where `actor` is the builder;
+// its handlers beside it; and each block's body under its page's head
+// (`memberHead`).
 
-import type {Block} from '../actors/actorData';
+import {
+  CODE_ROWS,
+  MAIN_ANIMATION,
+  stillSpriteOf,
+  writeEffect,
+  writeValue,
+  type ActorData,
+  type Block,
+} from '../actors/actorData';
+import type {Timeline} from '../engine/core/keyframes';
 
 import {MEMBER_HEAD} from './bodySurfaces';
 
 const ROOT = 'world_actor';
-const USE_TRAIT = 'world_use_trait';
-const DEFINE_BLOCK = 'world_rule_block';
-const DEFINE_EVENT = 'world_rule_event';
 
 type Part = {kind?: string; text?: string; var?: string};
 
-/** One piece of the definition, in the order its rows are. */
+/** One piece of the definition, in the order its code is written. */
 export type ActorPiece =
   | {kind: 'row'}
+  | {kind: 'actsLike'; actor: string}
+  | {kind: 'isData'}
+  | {kind: 'animations'; animations: Record<string, Timeline>}
   | {kind: 'trait'; trait: string}
   | {kind: 'event'; parts: Part[]}
   | {kind: 'block'; parts: Part[]; returns?: string; head?: string};
 
 export interface ActorSheet {
-  /** The view with those rows out of the chain, and each body under a head. */
+  /** What is loaded: the root and its rows, the handlers, and the heads. */
   workspace: Record<string, unknown>;
-  /** Empty for a file with no `define actor`, which compiles as it is. */
   pieces: ActorPiece[];
 }
 
-const isObject = (value: unknown): value is Record<string, unknown> =>
-  Boolean(value) && typeof value === 'object' && !Array.isArray(value);
-
-const partsOf = (row: Block): Part[] =>
-  isObject(row.extraState) && Array.isArray(row.extraState.parts)
-    ? (row.extraState.parts as Part[])
-    : [];
-
-const withoutNext = (row: Block): Block =>
+const alone = (row: Block): Block =>
   Object.fromEntries(
-    Object.entries(row).filter(([key]) => key !== 'next'),
+    Object.entries(row).filter(([key]) => !['next', 'x', 'y'].includes(key)),
   ) as Block;
 
-/** What a `define block`'s `do` holds. */
-const bodyOf = (row: Block): Block | undefined => {
-  const inputs = isObject(row.inputs) ? row.inputs : {};
-  return isObject(inputs.DO) && isObject(inputs.DO.block)
-    ? (inputs.DO.block as Block)
-    : undefined;
-};
-
-/** An actor's view, as the compiler loads it. */
-export function actorSheet(view: Record<string, unknown>): ActorSheet {
-  const blocks = isObject(view.blocks) ? view.blocks : {};
-  const roots = (Array.isArray(blocks.blocks) ? blocks.blocks : []) as Block[];
-  const root = roots.find(one => one.type === ROOT);
-  if (!root) {
-    return {workspace: view, pieces: []};
-  }
+/** An actor's data, as the compiler loads and writes it. */
+export function actorSheet(data: ActorData): ActorSheet {
   const pieces: ActorPiece[] = [];
-  const kept: Block[] = [];
+  const rows: Block[] = [];
   const heads: Block[] = [];
-  for (
-    let at: unknown = isObject(root.next) ? root.next.block : undefined;
-    isObject(at);
-    at = isObject(at.next) ? at.next.block : undefined
-  ) {
-    const row = at as Block;
-    const fields = isObject(row.fields) ? row.fields : {};
-    if (row.type === USE_TRAIT) {
-      pieces.push({kind: 'trait', trait: String(fields.TRAIT ?? '')});
-    } else if (row.type === DEFINE_EVENT) {
-      pieces.push({kind: 'event', parts: partsOf(row)});
-    } else if (row.type === DEFINE_BLOCK) {
-      const returns =
-        typeof fields.RETURNS === 'string' ? fields.RETURNS : undefined;
-      const body = bodyOf(row);
-      // A block that reports something says so on its face and compiles to
-      // nothing (`actorBlockStatementOnly`), so its body is never generated.
-      const reports = Boolean(returns && returns !== 'none');
-      const head = reports ? undefined : `head-${heads.length}`;
-      if (head) {
-        heads.push({
-          type: MEMBER_HEAD,
-          id: head,
-          x: 20,
-          y: 20,
-          extraState: {parts: partsOf(row)},
-          ...(body ? {next: {block: body}} : {}),
-        });
-      }
-      pieces.push({
-        kind: 'block',
-        parts: partsOf(row),
-        ...(returns === undefined ? {} : {returns}),
-        ...(head ? {head} : {}),
-      });
-    } else {
-      kept.push(withoutNext(row));
-      pieces.push({kind: 'row'});
-    }
+  const row = (block: Block) => {
+    rows.push(alone(block));
+    pieces.push({kind: 'row'});
+  };
+
+  if (data.actsLike !== undefined) {
+    pieces.push({kind: 'actsLike', actor: data.actsLike});
   }
-  const chain = kept.reduceRight<Block | undefined>(
-    (below, row) => (below ? {...row, next: {block: below}} : row),
+  if (data.isData) {
+    pieces.push({kind: 'isData'});
+  }
+  // A still Main is the `set sprite` it always was; anything more is played.
+  const animations = {...data.animations};
+  const still = stillSpriteOf(animations[MAIN_ANIMATION]);
+  if (still !== undefined) {
+    delete animations[MAIN_ANIMATION];
+  }
+  if (Object.keys(animations).length) {
+    pieces.push({kind: 'animations', animations});
+  }
+  if (still !== undefined) {
+    row({type: 'world_set_sprite', fields: {SPRITE: still}});
+  }
+  for (const trait of data.traits ?? []) {
+    pieces.push({kind: 'trait', trait});
+  }
+  (data.values ?? []).forEach(value => row(writeValue(value)));
+  (data.effects ?? [])
+    .filter(effect => effect.on)
+    .forEach(effect => row(writeEffect(effect)));
+  for (const member of data.members ?? []) {
+    const parts = member.parts as Part[];
+    if (member.kind === 'event') {
+      pieces.push({kind: 'event', parts});
+      continue;
+    }
+    // A block that reports something compiles to nothing yet
+    // (`actorBlockStatementOnly`), so its body is never generated.
+    const head = member.returns ? undefined : `head-${heads.length}`;
+    if (head) {
+      heads.push({
+        type: MEMBER_HEAD,
+        id: head,
+        x: 20,
+        y: 20,
+        extraState: {parts},
+        ...(member.body ? {next: {block: member.body}} : {}),
+      });
+    }
+    pieces.push({
+      kind: 'block',
+      parts,
+      ...(member.returns === undefined ? {} : {returns: member.returns}),
+      ...(head ? {head} : {}),
+    });
+  }
+  const roots = (data.blocks?.blocks?.blocks ?? []) as Block[];
+  const isCode = (root: Block) =>
+    typeof root.type === 'string' && CODE_ROWS.has(root.type);
+  roots.filter(isCode).forEach(row);
+
+  const chain = rows.reduceRight<Block | undefined>(
+    (below, one) => (below ? {...one, next: {block: below}} : one),
     undefined,
   );
-  const bare = withoutNext(root);
   return {
     workspace: {
-      ...view,
+      ...data.blocks,
       blocks: {
-        ...blocks,
+        languageVersion: 0,
+        ...data.blocks?.blocks,
         blocks: [
-          ...roots.map(one =>
-            one === root
-              ? {...bare, ...(chain ? {next: {block: chain}} : {})}
-              : one,
-          ),
+          {
+            type: ROOT,
+            x: 20,
+            y: 20,
+            fields: {NAME: data.name},
+            ...(chain ? {next: {block: chain}} : {}),
+          },
+          ...roots.filter(root => !isCode(root)),
           ...heads,
         ],
       },

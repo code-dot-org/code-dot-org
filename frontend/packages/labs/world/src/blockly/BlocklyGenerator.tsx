@@ -15,7 +15,7 @@ import {
   useBlocklyContext,
 } from '@code-dot-org/blockly';
 
-import {viewOf} from '../actors/actorData';
+import {actorDataOf} from '../actors/actorData';
 import {ruleBodySheet} from '../rules/ruleBodies';
 import {asRuleData, isRuleData} from '../rules/ruleData';
 import {TILE_SIZE} from '../runtime/viewport';
@@ -31,6 +31,8 @@ import {
 import styles from './blocklyGenerator.module.css';
 import {MEMBER_HEAD} from './bodySurfaces';
 import {
+  actsLikeCode,
+  animationsCode,
   buildDomainPalette,
   importVar,
   str,
@@ -371,14 +373,15 @@ const SCREEN_KEYS: ReadonlySet<string> = new Set([
  * workspace holds the hats (`assembleWorldModule`).
  */
 /**
- * A `define actor` and its rows: each row generated where it stands, and a
- * trait it uses or a block or event it adds said here (`actorSheet`).
+ * An actor from its data: each row loaded under its `define actor` generated
+ * where it stands, and the rest said here (`actorSheet`).
  */
 function actorCode(
   generator: JavascriptGenerator,
   workspace: Blockly.Workspace,
   root: Blockly.Block,
   pieces: readonly ActorPiece[],
+  modulePath: string,
 ): string {
   const asString = (code: string | [string, number]): string =>
     Array.isArray(code) ? code[0] : code;
@@ -398,6 +401,12 @@ function actorCode(
     if (piece.kind === 'row') {
       code += row ? asString(generator.blockToCode(row, true)) : '';
       row = row?.getNextBlock() ?? null;
+    } else if (piece.kind === 'actsLike') {
+      code += actsLikeCode(piece.actor, modulePath, generator);
+    } else if (piece.kind === 'isData') {
+      code += 'actor.isData();\n';
+    } else if (piece.kind === 'animations') {
+      code += animationsCode(piece.animations, generator);
     } else if (piece.kind === 'trait') {
       code += traitCode(generator, piece.trait);
     } else if (piece.kind === 'event') {
@@ -756,11 +765,6 @@ export const BlocklyGenerator = forwardRef<
         }
         // Ours, not whoever's the open editor last registered (`driverRef`).
         driverRef.current?.setBlocks(blocks);
-        // An actor in either shape: a data-shaped one compiles as the
-        // `define actor` it stands for (`actors/actorData`).
-        if (fileKindOf(path) === 'actor') {
-          contents = viewOf(contents);
-        }
         const workspace = (headlessRef.current ??= new Blockly.Workspace());
         // Tag this workspace so a renderer-dependent mutator (the params
         // `+`/`−`) skips its visual rebuild here — it has no renderer to draw
@@ -801,10 +805,11 @@ export const BlocklyGenerator = forwardRef<
         }
         workspace.clear();
         const parsed = contents.trim() ? JSON.parse(contents) : {};
-        // An actor with its traits and members out of its rows, which are
-        // said directly (`actorSheet`).
-        const sheet =
-          fileKindOf(path) === 'actor' ? actorSheet(parsed) : undefined;
+        // An actor from its data, folded first if written in rows; one with
+        // no `define actor` compiles as it is.
+        const data =
+          fileKindOf(path) === 'actor' ? actorDataOf(contents) : undefined;
+        const sheet = data ? actorSheet(data) : undefined;
         Blockly.serialization.workspaces.load(
           sheet?.workspace ?? parsed,
           workspace,
@@ -868,7 +873,13 @@ export const BlocklyGenerator = forwardRef<
           id: block.id,
           code:
             sheet && block.type === 'world_actor'
-              ? actorCode(generator, workspace, block, sheet.pieces)
+              ? actorCode(
+                  generator,
+                  workspace,
+                  block,
+                  sheet.pieces,
+                  path!.replace(/\.actor$/, ''),
+                )
               : asString(
                   generator.blockToCode(
                     block,

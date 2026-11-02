@@ -131,19 +131,6 @@ describe('an actor’s own properties', () => {
     );
   });
 
-  it('reads a workspace saved before the access field existed as writable', () => {
-    // The behavior those files already had; a missing field must not silently
-    // turn an existing property into a constant.
-    const meta = parseActorOwnMeta(
-      'actors/player',
-      actorFile('Player', [
-        {type: 'world_rule_property', fields: {NAME: 'ammo', TYPE: 'number'}},
-      ]),
-    );
-
-    expect(meta?.properties[0].readonly).toBe(false);
-  });
-
   it('points its ref at the file that declares it', () => {
     // Visibility is the declaring file, so the ref never has to resolve
     // anywhere else — which is what makes renaming or deleting the actor
