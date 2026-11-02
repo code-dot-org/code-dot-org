@@ -13,7 +13,7 @@ import {BUILTIN_RULE_META} from '../../blockly/builtinMeta';
 import {parseActorOwnMeta} from '../../blockly/ownProperties';
 import {parseRuleMeta} from '../../blockly/ruleMeta';
 import {STOCK_RULES} from '../../rules/stock';
-import {viewOf} from '../actorData';
+import {viewOf, type ActorData} from '../actorData';
 import {STOCK_ACTORS as SHELF} from '../stock';
 import {buttonActor as button} from '../stock/button';
 import {healthBarActor as healthBar} from '../stock/healthBar';
@@ -442,38 +442,16 @@ describe('where a stock actor’s blocks sit', () => {
   // is that the order survives, because the tidy reads it off these numbers
   // and has nothing else to go on.
 
-  /** Every top-level block's corner, as the file stores it. */
+  /** Every root of the actor's code, as the file stores it. */
   const corners = (contents: string) =>
-    (
-      JSON.parse(contents) as {
-        blocks?: {blocks?: Array<{type?: string; x?: number; y?: number}>};
-      }
-    ).blocks?.blocks ?? [];
-
-  it('puts the definition above every handler', () => {
-    for (const actor of STOCK_ACTORS) {
-      const top = corners(actor.contents);
-      const root = top.find(one => one.type === 'world_actor');
-      const handlers = top.filter(one => one.type !== 'world_actor');
-      if (!root || handlers.length === 0) {
-        continue;
-      }
-      for (const handler of handlers) {
-        // Strictly, not merely no lower: the tidy sorts by y, and a tie would
-        // put the definition wherever the array happened to hold it.
-        expect(
-          (handler.y ?? 0) > (root.y ?? 0),
-          `${actor.id}: a handler is level with the definition`,
-        ).toBe(true);
-      }
-    }
-  });
+    ((JSON.parse(contents) as ActorData).blocks?.blocks?.blocks ??
+      []) as Array<{
+      y?: number;
+    }>;
 
   it('keeps the handlers in the order they are written in', () => {
-    for (const actor of STOCK_ACTORS) {
-      const handlers = corners(actor.contents).filter(
-        one => one.type !== 'world_actor',
-      );
+    for (const actor of SHELF) {
+      const handlers = corners(actor.contents);
       for (let index = 1; index < handlers.length; index += 1) {
         expect(
           (handlers[index].y ?? 0) > (handlers[index - 1].y ?? 0),
@@ -488,7 +466,7 @@ describe('where a stock actor’s blocks sit', () => {
     // alone unless its blocks sit on top of one another, so a stock actor that
     // laid itself out neatly enough would never be measured at all, and would
     // open in whatever this file had guessed.
-    for (const actor of STOCK_ACTORS) {
+    for (const actor of SHELF) {
       const top = corners(actor.contents);
       if (top.length < 2) {
         continue;

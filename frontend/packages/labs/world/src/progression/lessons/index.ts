@@ -18,6 +18,7 @@
 // What is written is milestone 4 of specs/PROGRESSION_UI.md and then some: all
 // six FOUNDATIONS, and Arcade, Story and Making whole after them.
 
+import {writeProperty} from '../../actors/actorData';
 import {climbArrowsHandlers} from '../../actors/enhance/climbArrows';
 import {LABEL_PROPERTIES} from '../../actors/stock/label';
 import {
@@ -1564,7 +1565,7 @@ const layers: WorldScenario = {
           // the Label FILE — this project has none — so it declares what a
           // Label declares (`actors/stock/label`).
           rows: [
-            ...LABEL_PROPERTIES,
+            ...LABEL_PROPERTIES.map(writeProperty),
             showAs('text'),
             setText('TextProperty', words('SCORE 0'), SCORE_OWNER),
           ],

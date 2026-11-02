@@ -21,29 +21,28 @@
 // IT IS NOT A BUTTON, any more than a Button is a Label: `any ⟨Button⟩` does
 // not find it. What they share is what they can do, which is the traits.
 
+import {actorDocument} from '../actorDocument';
+
 import {labelHalf, labelSizeOf} from './label';
 import {LOOK, RADIUS, RING_INSET, RING_WIDTH, ringRadius} from './look';
 import {
-  actorFile,
-  actsLike,
   chain,
   corner,
-  defineEvent,
-  defineProperty,
+  drawingRow,
   drawParagraph,
+  event,
   fill,
+  labelValue,
   me,
   noFill,
   noOutline,
   num,
   outline,
+  property,
   rectangle,
-  setText,
-  showAs,
   swatch,
   textOf,
   useStyle,
-  words,
 } from './workspace';
 
 /** The Toggle's own blocks are keyed by its file (`blockly/ownProperties`). */
@@ -99,44 +98,21 @@ const circle = (x: object, y: object, radius: number) => ({
   inputs: {X: x, Y: y, RADIUS: num(radius)},
 });
 
-export const toggleActor = actorFile(
-  'Toggle',
-  [
-    // FIRST, so everything below overrides it: the words, the anchor, and
-    // the face this paints instead of the Button's.
-    actsLike('actors/button'),
-    defineProperty('boolean', 'on', 'false'),
-    defineEvent('turned on'),
-    defineEvent('turned off'),
-    showAs('toggle'),
+export const toggleActor = actorDocument({
+  name: 'Toggle',
+  // FIRST, so everything below overrides it: the words, the anchor, and
+  // the face this paints instead of the Button's.
+  actsLike: 'actors/button',
+  icon: 'toggle',
+  properties: [property('boolean', 'on', 'false')],
+  values: [
     // The caption sits to the left of the switch, so it reads from the left.
-    setText('TextAnchorProperty', words('left')),
-    setText('TextProperty', words('Toggle')),
+    labelValue('TextAnchorProperty', {type: 'string', value: 'left'}),
+    labelValue('TextProperty', {type: 'string', value: 'Toggle'}),
   ],
-  {
-    handlers: [
-      // The click the Button raises — from the mouse, or from Enter — flips
-      // the property and says which way it went. The Button's own handlers
-      // came across with `acts like`, so nothing here takes the focus or
-      // hears Enter.
-      {
-        type: 'world_on_Mouse_IsClickedWithEvent',
-        fields: {FILTER0: ''},
-        next: {
-          block: chain([
-            {
-              type: `world_set_${OWN}_OnProperty`,
-              inputs: {
-                ACTOR: me(),
-                VALUE: {block: {type: 'logic_negate', inputs: {BOOL: on()}}},
-              },
-            },
-            either(on(), [emit('TurnedOn')], [emit('TurnedOff')]),
-          ]),
-        },
-      },
-    ],
-    drawing: {
+  members: [event('turned on'), event('turned off')],
+  code: [
+    drawingRow({
       width: width(),
       height: height(),
       commands: [
@@ -208,6 +184,26 @@ export const toggleActor = actorFile(
           ),
         ]),
       ],
+    }),
+    // The click the Button raises — from the mouse, or from Enter — flips
+    // the property and says which way it went. The Button's own handlers
+    // came across with `acts like`, so nothing here takes the focus or
+    // hears Enter.
+    {
+      type: 'world_on_Mouse_IsClickedWithEvent',
+      fields: {FILTER0: ''},
+      next: {
+        block: chain([
+          {
+            type: `world_set_${OWN}_OnProperty`,
+            inputs: {
+              ACTOR: me(),
+              VALUE: {block: {type: 'logic_negate', inputs: {BOOL: on()}}},
+            },
+          },
+          either(on(), [emit('TurnedOn')], [emit('TurnedOff')]),
+        ]),
+      },
     },
-  },
-);
+  ],
+});

@@ -29,20 +29,20 @@
 // lines is centered as a block, which the painter already does for any anchor
 // that is vertically middled.
 
+import type {ActorProperty, ActorValue} from '../actorData';
+import {actorDocument} from '../actorDocument';
+
 import {LOOK} from './look';
 import {
-  actorFile,
-  defineProperty,
+  drawingRow,
+  labelValue,
+  property,
   drawParagraph,
   fill,
   me,
-  setText,
-  showAs,
   swatch,
   textOf,
   useStyle,
-  useTrait,
-  words,
 } from './workspace';
 
 /** How big a Label is unless a project says otherwise. */
@@ -78,14 +78,14 @@ export const labelHalf = (of: object) => ({
 });
 
 /**
- * The box a Label draws in, as rows.
+ * The properties a Label declares: its words and how they look.
  *
  * EXPORTED, because a world may define a Label of its own rather than import
  * the file — a single-world project has no actor files to act like — and the
  * two tellings must declare the same properties or they are two different
  * Labels. The same bargain `PROGRESS_BAR_PROPERTIES` strikes one file over.
  */
-export const LABEL_PROPERTIES = [
+export const LABEL_PROPERTIES: ActorProperty[] = [
   // THE WORDS AND HOW THEY LOOK. These were the Writing rule's — four
   // properties and no behavior of any kind, which is a file and a shelf row
   // standing between a learner and four declarations they can read in the
@@ -97,8 +97,8 @@ export const LABEL_PROPERTIES = [
   // The size is in pixels, like every other size in the lab; only rates are in
   // units per second. The anchor is the one whose absence reads as a bug — a
   // score anchored left grows to the right and off the screen.
-  defineProperty('string', 'text', ''),
-  defineProperty('number', 'text size', '12'),
+  property('string', 'text', ''),
+  property('number', 'text size', '12'),
   // EMPTY, NOT WHITE, and the difference is the whole of how a theme reaches
   // a caption. `#ffffff` is not a choice anybody made, and the row that reads
   // this property overrode whatever the actor's class had just set — so a
@@ -108,40 +108,43 @@ export const LABEL_PROPERTIES = [
   //
   // A project with NO theme is unchanged: the pen's own default fill is
   // `#ffffff`, which is exactly what this default used to be.
-  defineProperty('color', 'text color', ''),
-  defineProperty('string', 'text anchor', 'center'),
+  property('color', 'text color', ''),
+  property('string', 'text anchor', 'center'),
 ];
 
 /** `set ⟨width|height⟩ of this actor to ⟨n⟩` — the trait's, not the Label's. */
-export const setBox = (name: 'Width' | 'Height', value: number) => ({
-  type: `world_set_Boxed_${name}Property`,
-  inputs: {
-    ACTOR: me(),
-    VALUE: {shadow: {type: 'math_number', fields: {NUM: value}}},
-  },
+export const boxValue = (
+  name: 'Width' | 'Height',
+  value: number,
+): ActorValue => ({
+  setter: `world_set_Boxed_${name}Property`,
+  type: 'number',
+  value,
 });
 
-export const labelActor = actorFile(
-  'Label',
-  [
-    ...LABEL_PROPERTIES,
+export const labelActor = actorDocument({
+  name: 'Label',
+  icon: 'text',
+  properties: LABEL_PROPERTIES,
+  traits: [
     // The box, elected rather than declared — and elected HERE, so the eight
     // kinds that act like a Label get it without each saying so
     // (specs/BOXES_PLAN.md).
-    useTrait('Boxed#HasABoxTrait'),
+    'Boxed#HasABoxTrait',
     // …and which theme it is painted out of, when it is not the world's
     // (specs/STYLES_PLAN.md). Elected by the same kinds for the same reason:
     // an inspector cannot ask a Coin what its theme is.
-    useTrait('Styled#HasAStyleTrait'),
-    setBox('Width', WIDTH),
-    setBox('Height', HEIGHT),
-    showAs('text'),
+    'Styled#HasAStyleTrait',
+  ],
+  values: [
+    boxValue('Width', WIDTH),
+    boxValue('Height', HEIGHT),
     // A default, so a Label dragged onto a map is visible before anybody has
     // typed anything into it — and so the picker has a picture to show.
-    setText('TextProperty', words('Label')),
+    labelValue('TextProperty', {type: 'string', value: 'Label'}),
   ],
-  {
-    drawing: {
+  code: [
+    drawingRow({
       width: labelSizeOf('Width'),
       height: labelSizeOf('Height'),
       commands: [
@@ -161,6 +164,6 @@ export const labelActor = actorFile(
           labelSizeOf('Width'),
         ),
       ],
-    },
-  },
-);
+    }),
+  ],
+});

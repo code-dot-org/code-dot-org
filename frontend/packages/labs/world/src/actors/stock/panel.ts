@@ -24,24 +24,22 @@
 // child, and any actor may be one. What a Panel adds is a picture that reads
 // as somewhere to put things.
 
-import {labelHalf, labelSizeOf} from './label';
+import {actorDocument} from '../actorDocument';
+
+import {boxValue, labelHalf, labelSizeOf} from './label';
 import {BORDER, LOOK, RADIUS} from './look';
 import {
-  actorFile,
-  actsLike,
   corner,
+  drawingRow,
   drawParagraph,
   fill,
-  me,
+  labelValue,
   noOutline,
   outline,
   rectangle,
-  setText,
-  showAs,
   swatch,
   textOf,
   useStyle,
-  words,
 } from './workspace';
 
 /** How big a Panel is unless a project says otherwise: room for a form. */
@@ -51,29 +49,20 @@ const HEIGHT = 160;
 const width = () => labelSizeOf('Width');
 const height = () => labelSizeOf('Height');
 
-/** `set ⟨width|height⟩ of this actor to ⟨n⟩` — the Label's slot, resized. */
-const sized = (name: 'Width' | 'Height', value: number) => ({
-  type: `world_set_Boxed_${name}Property`,
-  inputs: {
-    ACTOR: me(),
-    VALUE: {shadow: {type: 'math_number', fields: {NUM: value}}},
-  },
-});
-
-export const panelActor = actorFile(
-  'Panel',
-  [
-    // FIRST, so everything below overrides it: the size, the empty words,
-    // and the face this paints instead of the Label's plain one.
-    actsLike('actors/label'),
-    showAs('panel'),
-    sized('Width', WIDTH),
-    sized('Height', HEIGHT),
+export const panelActor = actorDocument({
+  name: 'Panel',
+  // FIRST, so everything below overrides it: the size, the empty words,
+  // and the face this paints instead of the Label's plain one.
+  actsLike: 'actors/label',
+  icon: 'panel',
+  values: [
+    boxValue('Width', WIDTH),
+    boxValue('Height', HEIGHT),
     // No words, on purpose — the Label it acts like says "Label".
-    setText('TextProperty', words('')),
+    labelValue('TextProperty', {type: 'string', value: ''}),
   ],
-  {
-    drawing: {
+  code: [
+    drawingRow({
       width: width(),
       height: height(),
       commands: [
@@ -98,6 +87,6 @@ export const panelActor = actorFile(
         fill(textOf('TextColorProperty')),
         drawParagraph(labelHalf(width()), labelHalf(height()), width()),
       ],
-    },
-  },
-);
+    }),
+  ],
+});

@@ -387,7 +387,7 @@ function readProperty(row: Block): ActorProperty | undefined {
   };
 }
 
-const writeProperty = (property: ActorProperty): Block => ({
+export const writeProperty = (property: ActorProperty): Block => ({
   type: 'world_rule_property',
   fields: {
     TYPE: property.type,

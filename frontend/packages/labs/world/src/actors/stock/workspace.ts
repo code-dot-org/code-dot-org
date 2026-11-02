@@ -14,8 +14,17 @@
 import {stockAnimation} from '../../appearance/stock';
 import {pascal, STARTS_EMPTY} from '../../blockly/ruleMeta';
 import {pathSlug} from '../../blockly/ruleRegistry';
+import type {Timeline} from '../../engine/core/keyframes';
 import {MAIN_SCREEN_PATH} from '../../mainWorld';
-import {ANIMATIONS_ROW, asActorData} from '../actorData';
+import {
+  ANIMATIONS_ROW,
+  asActorData,
+  type ActorLiteral,
+  type ActorMember,
+  type ActorProperty,
+  type ActorValue,
+  type Block,
+} from '../actorData';
 
 /**
  * How far apart a stock actor's handlers are listed.
@@ -224,6 +233,83 @@ export const defineEvent = (...parts: Array<string | BlockParam>) => ({
         : {kind: 'param', name: part.name, type: part.type, var: part.id},
     ),
   },
+});
+
+// ── The same, as data (`actorDocument`) ─────────────────────────────────
+
+/** A property this kind keeps: `define property`, as data. */
+export const property = (
+  type: string,
+  name: string,
+  value?: string,
+  opts: {readonly?: boolean} = {},
+): ActorProperty => ({
+  name,
+  type,
+  access: opts.readonly ? 'readonly' : 'writable',
+  // None for a type that starts empty, which has no default to state.
+  ...(value === undefined || STARTS_EMPTY.has(type) ? {} : {value}),
+});
+
+/** `set ⟨name⟩ of this actor to ⟨literal⟩`, as data, for a Label's four. */
+export const labelValue = (
+  exportName: string,
+  literal: ActorLiteral,
+  own: string = LABEL_OWNER,
+): ActorValue => ({setter: `world_set_${own}_${exportName}`, ...literal});
+
+/** The library's timelines, by the names the actor keeps them under. */
+export const stockAnimations = (
+  byName: Record<string, string>,
+): Record<string, Timeline> =>
+  Object.fromEntries(
+    Object.entries(byName).map(([name, id]) => {
+      const stock = stockAnimation(id);
+      if (!stock) {
+        throw new Error(`no stock animation named "${id}"`);
+      }
+      return [name, stock.timeline];
+    }),
+  );
+
+/** `define event`, as data: its words and the values it carries. */
+export const event = (
+  ...parts: Array<string | BlockParam>
+): Omit<ActorMember, 'id'> => ({
+  kind: 'event',
+  parts: parts.map(part =>
+    typeof part === 'string'
+      ? {kind: 'label' as const, text: part}
+      : {
+          kind: 'param' as const,
+          name: part.name,
+          type: part.type,
+          var: part.id,
+        },
+  ),
+});
+
+/** `define block`, as data (`defineBlock`). */
+export const block = (spec: {
+  say: ReadonlyArray<string | BlockParam>;
+  description: string;
+  private?: boolean;
+  body: object[];
+}): Omit<ActorMember, 'id'> => ({
+  kind: 'block',
+  parts: spec.say.map(part =>
+    typeof part === 'string'
+      ? {kind: 'label' as const, text: part}
+      : {
+          kind: 'param' as const,
+          type: part.type,
+          var: part.id,
+          name: part.name,
+        },
+  ),
+  ...(spec.description ? {description: spec.description} : {}),
+  ...(spec.private ? {hidden: true as const} : {}),
+  ...(spec.body.length ? {body: chain(spec.body) as Block} : {}),
 });
 
 /** A `define block` parameter: a workspace variable the body reads. */

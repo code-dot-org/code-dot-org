@@ -32,7 +32,9 @@
 // IT CAN BE REACHED WITHOUT A MOUSE: Enter opens it and chooses the
 // highlighted row, and the arrows move the highlight while it is open.
 
-import {labelHalf, labelSizeOf} from './label';
+import {actorDocument} from '../actorDocument';
+
+import {boxValue, labelHalf, labelSizeOf} from './label';
 import {
   BORDER,
   LOOK,
@@ -43,30 +45,27 @@ import {
   SHADOW_OVER,
 } from './look';
 import {
-  actorFile,
-  actsLike,
   alongX,
   alongY,
   chain,
   corner,
-  defineEvent,
-  defineProperty,
+  drawingRow,
+  event,
   fill,
+  labelValue,
   me,
   noFill,
   noOutline,
   noShadow,
   num,
   outline,
+  property,
   rectangle,
   setText,
   shadow,
-  showAs,
   swatch,
   textOf,
   useStyle,
-  useTrait,
-  words,
 } from './workspace';
 
 const OWN = 'ActorsDropdown';
@@ -288,100 +287,40 @@ const rowMiddle = (n: object) =>
     arithmetic('MULTIPLY', arithmetic('MINUS', n, num(1)), num(ROW)),
   );
 
-export const dropdownActor = actorFile(
-  'Dropdown',
-  [
-    // FIRST, so everything below overrides it: the size, the anchor, the
-    // choices and the face this paints.
-    actsLike('actors/label'),
-    defineProperty('words', 'choices'),
-    defineProperty('boolean', 'open', 'false'),
-    defineProperty('number', 'highlighted', '1'),
-    defineEvent('chosen'),
+export const dropdownActor = actorDocument({
+  name: 'Dropdown',
+  // FIRST, so everything below overrides it: the size, the anchor, the
+  // choices and the face this paints.
+  actsLike: 'actors/label',
+  icon: 'dropdown',
+  traits: [
     // A click on it, and every press anywhere, so it can close.
-    useTrait('Mouse#CanBeClickedTrait'),
-    useTrait('Mouse#TakesMouseInputTrait'),
-    useTrait('Tab Navigation#CanBeFocusedTrait'),
-    useTrait('Input#TakesKeyboardInputTrait'),
-    showAs('dropdown'),
-    set('WidthProperty', num(WIDTH), 'Boxed'),
-    setHeight(num(ROW)),
-    setText('TextAnchorProperty', words('left')),
+    'Mouse#CanBeClickedTrait',
+    'Mouse#TakesMouseInputTrait',
+    'Tab Navigation#CanBeFocusedTrait',
+    'Input#TakesKeyboardInputTrait',
+  ],
+  properties: [
+    property('words', 'choices'),
+    property('boolean', 'open', 'false'),
+    property('number', 'highlighted', '1'),
+  ],
+  values: [
+    boxValue('Width', WIDTH),
+    boxValue('Height', ROW),
+    labelValue('TextAnchorProperty', {type: 'string', value: 'left'}),
     // Three placeholders, so a Dropdown dragged onto a map has something
     // to open; a project replaces them.
-    set('ChoicesProperty', {
-      block: {
-        type: 'lists_create_with',
-        extraState: {itemCount: 3},
-        inputs: {
-          ADD0: {block: {type: 'text', fields: {TEXT: 'ONE'}}},
-          ADD1: {block: {type: 'text', fields: {TEXT: 'TWO'}}},
-          ADD2: {block: {type: 'text', fields: {TEXT: 'THREE'}}},
-        },
-      },
-    }),
-    setText('TextProperty', words('ONE')),
+    {
+      setter: `world_set_${OWN}_ChoicesProperty`,
+      type: 'list',
+      value: ['ONE', 'TWO', 'THREE'],
+    },
+    labelValue('TextProperty', {type: 'string', value: 'ONE'}),
   ],
-  {
-    variables: [ROW_VARIABLE],
-    handlers: [
-      // A click: on a row, that is the choice and the menu closes; on the
-      // face, it opens or closes. The keyboard comes here either way.
-      {
-        type: 'world_on_Mouse_IsClickedWithEvent',
-        fields: {FILTER0: ''},
-        next: {
-          block: chain([
-            {
-              type: 'world_do_TabNavigation_TakeTheFocusAction',
-              inputs: {ACTOR: me()},
-            },
-            either(open(), [choose(rowUnderPointer), ...closeUp()], openUp()),
-          ]),
-        },
-      },
-      // A press anywhere else closes an open menu. The Mouse rule announces
-      // this before the click, to everything that takes mouse input.
-      {
-        type: 'world_on_Mouse_PressesMouseButtonEvent',
-        fields: {FILTER0: ''},
-        next: {
-          block: either(both(open(), not(pointerInside())), closeUp()),
-        },
-      },
-      // Enter: open, or choose the highlighted row and close.
-      {
-        type: 'world_on_Input_PressesEvent',
-        fields: {FILTER0: 'enter'},
-        next: {
-          block: either(focused(), [
-            either(open(), [choose(highlighted), ...closeUp()], openUp()),
-          ]),
-        },
-      },
-      // The arrows move the highlight while it is open.
-      ...(['up arrow', 'down arrow'] as const).map(key => ({
-        type: 'world_on_Input_PressesEvent',
-        fields: {FILTER0: key},
-        next: {
-          block: either(both(focused(), open()), [
-            set(
-              'HighlightedProperty',
-              clamp(
-                arithmetic(
-                  'ADD',
-                  highlighted(),
-                  num(key === 'up arrow' ? -1 : 1),
-                ),
-                num(1),
-                count(),
-              ),
-            ),
-          ]),
-        },
-      })),
-    ],
-    drawing: {
+  members: [event('chosen')],
+  code: [
+    drawingRow({
       width: width(),
       height: height(),
       commands: [
@@ -459,6 +398,62 @@ export const dropdownActor = actorFile(
           ),
         ]),
       ],
+    }),
+    // A click: on a row, that is the choice and the menu closes; on the
+    // face, it opens or closes. The keyboard comes here either way.
+    {
+      type: 'world_on_Mouse_IsClickedWithEvent',
+      fields: {FILTER0: ''},
+      next: {
+        block: chain([
+          {
+            type: 'world_do_TabNavigation_TakeTheFocusAction',
+            inputs: {ACTOR: me()},
+          },
+          either(open(), [choose(rowUnderPointer), ...closeUp()], openUp()),
+        ]),
+      },
     },
-  },
-);
+    // A press anywhere else closes an open menu. The Mouse rule announces
+    // this before the click, to everything that takes mouse input.
+    {
+      type: 'world_on_Mouse_PressesMouseButtonEvent',
+      fields: {FILTER0: ''},
+      next: {
+        block: either(both(open(), not(pointerInside())), closeUp()),
+      },
+    },
+    // Enter: open, or choose the highlighted row and close.
+    {
+      type: 'world_on_Input_PressesEvent',
+      fields: {FILTER0: 'enter'},
+      next: {
+        block: either(focused(), [
+          either(open(), [choose(highlighted), ...closeUp()], openUp()),
+        ]),
+      },
+    },
+    // The arrows move the highlight while it is open.
+    ...(['up arrow', 'down arrow'] as const).map(key => ({
+      type: 'world_on_Input_PressesEvent',
+      fields: {FILTER0: key},
+      next: {
+        block: either(both(focused(), open()), [
+          set(
+            'HighlightedProperty',
+            clamp(
+              arithmetic(
+                'ADD',
+                highlighted(),
+                num(key === 'up arrow' ? -1 : 1),
+              ),
+              num(1),
+              count(),
+            ),
+          ),
+        ]),
+      },
+    })),
+  ],
+  variables: [ROW_VARIABLE],
+});

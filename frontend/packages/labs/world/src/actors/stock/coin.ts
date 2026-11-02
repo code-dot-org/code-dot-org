@@ -16,12 +16,15 @@
 // project — which is exactly where the starter puts it. A Coin that awarded
 // itself ten points would decide that for every game that imported one.
 
-import {actorFile, looksLike, useTrait} from './workspace';
+import {actorDocument} from '../actorDocument';
+
+import {stockAnimations} from './workspace';
 
 /** The animation this plays, and so the one the import must bring. */
 export const COIN_ANIMATION = 'coinSpin';
 
-export const coinActor = actorFile('Coin', [
-  looksLike(COIN_ANIMATION),
-  useTrait('Collection#CanBeCollectedTrait'),
-]);
+export const coinActor = actorDocument({
+  name: 'Coin',
+  animations: stockAnimations({Main: COIN_ANIMATION}),
+  traits: ['Collection#CanBeCollectedTrait'],
+});

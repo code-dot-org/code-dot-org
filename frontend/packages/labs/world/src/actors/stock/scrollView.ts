@@ -24,24 +24,23 @@
 // moves over what it holds. A list whose rows are actors is this with rows
 // for children, and the choosing is theirs.
 
+import {actorDocument} from '../actorDocument';
+
+import {boxValue} from './label';
 import {BORDER, LOOK, RADIUS_BAR, RADIUS_TIGHT} from './look';
 import {
-  actorFile,
-  actsLike,
   chain,
   corner,
+  drawingRow,
   fill,
+  labelValue,
   me,
   noOutline,
   num,
   outline,
   rectangle,
-  setText,
-  showAs,
   swatch,
   useStyle,
-  useTrait,
-  words,
 } from './workspace';
 
 /** How big a Scroll View is unless a project says otherwise. */
@@ -63,14 +62,6 @@ const width = () => read(OWN, 'WidthProperty');
 const height = () => read(OWN, 'HeightProperty');
 const scroll = () => read(VIEW, 'ScrollProperty');
 const content = () => read(VIEW, 'ContentProperty');
-
-const sized = (name: 'Width' | 'Height', value: number) => ({
-  type: `world_set_Boxed_${name}Property`,
-  inputs: {
-    ACTOR: me(),
-    VALUE: {shadow: {type: 'math_number', fields: {NUM: value}}},
-  },
-});
 
 /** `⟨a⟩ ⟨op⟩ ⟨b⟩` over vectors, and the same over numbers. */
 const vector = (a: object, op: string, b: object) => ({
@@ -149,81 +140,30 @@ const thumbTop = () =>
 const thumbHeight = () =>
   maths(maths(height(), 'DIVIDE', axis(content(), 'y')), 'MULTIPLY', height());
 
-export const scrollViewActor = actorFile(
-  'Scroll View',
-  [
-    actsLike('actors/label'),
-    useTrait('Scrolling#ScrollsTrait'),
-    useTrait('Gestures#TakesGesturesTrait'),
+export const scrollViewActor = actorDocument({
+  name: 'Scroll View',
+  actsLike: 'actors/label',
+  icon: 'scroll',
+  traits: [
+    'Scrolling#ScrollsTrait',
+    'Gestures#TakesGesturesTrait',
     // …and the click, which is a SEPARATE election from the drag: the Mouse
     // rule raises `is clicked with` only on actors that elected Can Be
     // Clicked, so without this the click that should bring the keyboard here
     // never happened and the arrows went on moving whatever had it before.
-    useTrait('Mouse#CanBeClickedTrait'),
+    'Mouse#CanBeClickedTrait',
     // …and the wheel, which is what a window onto something taller is FOR.
-    useTrait('Mouse#CanBeScrolledTrait'),
-    useTrait('Tab Navigation#CanBeFocusedTrait'),
-    useTrait('Input#TakesKeyboardInputTrait'),
-    showAs('scroll'),
-    sized('Width', WIDTH),
-    sized('Height', HEIGHT),
-    setText('TextProperty', words('')),
+    'Mouse#CanBeScrolledTrait',
+    'Tab Navigation#CanBeFocusedTrait',
+    'Input#TakesKeyboardInputTrait',
   ],
-  {
-    handlers: [
-      // Clicking it brings the keyboard, so the arrows move THIS rather than
-      // whatever had the focus before.
-      {
-        type: 'world_on_Mouse_IsClickedWithEvent',
-        fields: {FILTER0: ''},
-        next: {
-          block: chain([
-            {
-              type: 'world_do_TabNavigation_TakeTheFocusAction',
-              inputs: {ACTOR: me()},
-            },
-          ]),
-        },
-      },
-      // A finger on the page. SUBTRACTED, because a drag carries the content
-      // with it: pulling up moves the window down the page.
-      {
-        type: 'world_on_Gestures_IsDraggedByEvent',
-        next: {
-          block: chain([
-            scrollTo(
-              vector(scroll(), 'SUBTRACT', {
-                block: {type: 'world_event_value'},
-              }),
-            ),
-          ]),
-        },
-      },
-      // The wheel, which is the drag said the other way round: a drag carries
-      // the content with the finger and is subtracted, a wheel pushes it away
-      // and is added. Both are pixels, and `scrollTo` clamps either into the
-      // content the engine has already measured.
-      {
-        type: 'world_on_Mouse_IsScrolledByEvent',
-        next: {
-          block: scrollTo(
-            point(
-              axis(scroll(), 'x'),
-              maths(axis(scroll(), 'y'), 'ADD', {
-                block: {type: 'world_event_value'},
-              }),
-            ),
-          ),
-        },
-      },
-      ...['up arrow', 'down arrow', 'page up', 'page down'].flatMap(
-        (key, at) => {
-          const pixels = [-STEP, STEP, -HEIGHT, HEIGHT][at];
-          return [onKey(key, pixels), onKey(key, pixels, 'Repeats')];
-        },
-      ),
-    ],
-    drawing: {
+  values: [
+    boxValue('Width', WIDTH),
+    boxValue('Height', HEIGHT),
+    labelValue('TextProperty', {type: 'string', value: ''}),
+  ],
+  code: [
+    drawingRow({
       width: width(),
       height: height(),
       commands: [
@@ -255,6 +195,55 @@ export const scrollViewActor = actorFile(
           thumbHeight(),
         ),
       ],
+    }),
+    // Clicking it brings the keyboard, so the arrows move THIS rather than
+    // whatever had the focus before.
+    {
+      type: 'world_on_Mouse_IsClickedWithEvent',
+      fields: {FILTER0: ''},
+      next: {
+        block: chain([
+          {
+            type: 'world_do_TabNavigation_TakeTheFocusAction',
+            inputs: {ACTOR: me()},
+          },
+        ]),
+      },
     },
-  },
-);
+    // A finger on the page. SUBTRACTED, because a drag carries the content
+    // with it: pulling up moves the window down the page.
+    {
+      type: 'world_on_Gestures_IsDraggedByEvent',
+      next: {
+        block: chain([
+          scrollTo(
+            vector(scroll(), 'SUBTRACT', {
+              block: {type: 'world_event_value'},
+            }),
+          ),
+        ]),
+      },
+    },
+    // The wheel, which is the drag said the other way round: a drag carries
+    // the content with the finger and is subtracted, a wheel pushes it away
+    // and is added. Both are pixels, and `scrollTo` clamps either into the
+    // content the engine has already measured.
+    {
+      type: 'world_on_Mouse_IsScrolledByEvent',
+      next: {
+        block: scrollTo(
+          point(
+            axis(scroll(), 'x'),
+            maths(axis(scroll(), 'y'), 'ADD', {
+              block: {type: 'world_event_value'},
+            }),
+          ),
+        ),
+      },
+    },
+    ...['up arrow', 'down arrow', 'page up', 'page down'].flatMap((key, at) => {
+      const pixels = [-STEP, STEP, -HEIGHT, HEIGHT][at];
+      return [onKey(key, pixels), onKey(key, pixels, 'Repeats')];
+    }),
+  ],
+});

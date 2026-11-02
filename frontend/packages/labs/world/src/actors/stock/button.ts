@@ -31,15 +31,17 @@
 // fire from the keyboard, which is right — a context menu is not a thing Enter
 // asks for.
 
-import {labelHalf, labelSizeOf} from './label';
+import {actorDocument} from '../actorDocument';
+
+import {boxValue, labelHalf, labelSizeOf} from './label';
 import {LOOK, RADIUS, RING_INSET, RING_WIDTH, ringRadius, SHADOW} from './look';
 import {
-  actorFile,
-  actsLike,
   chain,
   corner,
+  drawingRow,
   drawParagraph,
   fill,
+  labelValue,
   me,
   noFill,
   noOutline,
@@ -47,15 +49,11 @@ import {
   num,
   outline,
   rectangle,
-  setText,
   shadow,
-  showAs,
   swatch,
   textOf,
   useStyle,
-  useTrait,
   weight,
-  words,
 } from './workspace';
 
 /** Taller than a Label, because a face wants room around the word. */
@@ -95,15 +93,16 @@ const onlyIf = (test: object, body: object[]) => ({
   inputs: {IF0: test, DO0: {block: chain(body)}},
 });
 
-export const buttonActor = actorFile(
-  'Button',
-  [
-    // FIRST, so everything below overrides it: the height, the word, and the
-    // face this paints instead of the Label's plain one.
-    actsLike('actors/label'),
+export const buttonActor = actorDocument({
+  name: 'Button',
+  // FIRST, so everything below overrides it: the height, the word, and the
+  // face this paints instead of the Label's plain one.
+  actsLike: 'actors/label',
+  icon: 'button',
+  traits: [
     // The whole of what makes it pressable. `is clicked with ⟨button⟩` is
     // raised on this actor alone, so a handler needs no hit test of its own.
-    useTrait('Mouse#CanBeClickedTrait'),
+    'Mouse#CanBeClickedTrait',
     // …and the whole of what makes it look pressed while you hold it, which
     // is the plainest thing this kit was missing: a Button held down was
     // pixel-identical to one at rest.
@@ -114,62 +113,18 @@ export const buttonActor = actorFile(
     // granularity for "am I the one being held". Gestures keeps `being
     // pressed` per actor, set only for those UNDER the pointer when the
     // button went down, and it turns with the actor (specs/GESTURES_PLAN.md).
-    useTrait('Gestures#TakesGesturesTrait'),
+    'Gestures#TakesGesturesTrait',
     // …and the whole of what makes it reachable: the keyboard can be moved to
     // it, and it hears the key that presses it.
-    useTrait('Tab Navigation#CanBeFocusedTrait'),
-    useTrait('Input#TakesKeyboardInputTrait'),
-    showAs('button'),
-    {
-      type: 'world_set_Boxed_HeightProperty',
-      inputs: {
-        ACTOR: me(),
-        VALUE: {shadow: {type: 'math_number', fields: {NUM: HEIGHT}}},
-      },
-    },
-    setText('TextProperty', words('Button')),
+    'Tab Navigation#CanBeFocusedTrait',
+    'Input#TakesKeyboardInputTrait',
   ],
-  {
-    handlers: [
-      // A click brings the keyboard here, the way clicking a button on a page
-      // does. `take the focus` releases whoever had it and does nothing when
-      // this actor already has it, so the click that presses a focused button
-      // raises nothing extra (`rules/tabNavigation`).
-      {
-        type: 'world_on_Mouse_IsClickedWithEvent',
-        fields: {FILTER0: ''},
-        next: {
-          block: {
-            type: 'world_do_TabNavigation_TakeTheFocusAction',
-            inputs: {ACTOR: me()},
-          },
-        },
-      },
-      // …and Enter presses it, but only the one the keyboard is on. Every
-      // button hears every key — that is what the trait means — so without the
-      // guard one press would click every button on the screen.
-      {
-        type: 'world_on_Input_PressesEvent',
-        fields: {FILTER0: 'enter'},
-        next: {
-          block: onlyIf(focused(), [
-            {
-              type: 'world_emit_Mouse_IsClickedWithEvent',
-              inputs: {
-                VALUE: {
-                  block: {
-                    type: 'world_choice_Engine_MouseButton',
-                    fields: {VALUE: 'left'},
-                  },
-                },
-                ACTOR: me(),
-              },
-            },
-          ]),
-        },
-      },
-    ],
-    drawing: {
+  values: [
+    boxValue('Height', HEIGHT),
+    labelValue('TextProperty', {type: 'string', value: 'Button'}),
+  ],
+  code: [
+    drawingRow({
       width: width(),
       height: height(),
       commands: [
@@ -235,6 +190,43 @@ export const buttonActor = actorFile(
           ),
         ]),
       ],
+    }),
+    // A click brings the keyboard here, the way clicking a button on a page
+    // does. `take the focus` releases whoever had it and does nothing when
+    // this actor already has it, so the click that presses a focused button
+    // raises nothing extra (`rules/tabNavigation`).
+    {
+      type: 'world_on_Mouse_IsClickedWithEvent',
+      fields: {FILTER0: ''},
+      next: {
+        block: {
+          type: 'world_do_TabNavigation_TakeTheFocusAction',
+          inputs: {ACTOR: me()},
+        },
+      },
     },
-  },
-);
+    // …and Enter presses it, but only the one the keyboard is on. Every
+    // button hears every key — that is what the trait means — so without the
+    // guard one press would click every button on the screen.
+    {
+      type: 'world_on_Input_PressesEvent',
+      fields: {FILTER0: 'enter'},
+      next: {
+        block: onlyIf(focused(), [
+          {
+            type: 'world_emit_Mouse_IsClickedWithEvent',
+            inputs: {
+              VALUE: {
+                block: {
+                  type: 'world_choice_Engine_MouseButton',
+                  fields: {VALUE: 'left'},
+                },
+              },
+              ACTOR: me(),
+            },
+          },
+        ]),
+      },
+    },
+  ],
+});

@@ -19,28 +19,24 @@
 // its top-left grows downward as the words arrive, which is what reading looks
 // like.
 
+import {actorDocument} from '../actorDocument';
 import {typewriterFor} from '../typewriter';
 
-import {labelSizeOf} from './label';
+import {boxValue, labelSizeOf} from './label';
 import {BORDER, LOOK, RADIUS, SHADOW_OVER} from './look';
 import {
-  actorFile,
-  actsLike,
   corner,
+  drawingRow,
   drawParagraph,
   fill,
-  me,
+  labelValue,
   noOutline,
   outline,
   rectangle,
-  setText,
   shadow,
-  showAs,
   swatch,
   textOf,
   useStyle,
-  useTrait,
-  words,
 } from './workspace';
 
 /** Most of the width of a 320-pixel screen, and a third of its height. */
@@ -51,14 +47,6 @@ const HEIGHT = 96;
 const width = () => labelSizeOf('Width');
 const height = () => labelSizeOf('Height');
 
-/** `set ⟨width⟩ of this actor to ⟨n⟩` — a box bigger than a Label's. */
-const setSize = (name: 'Width' | 'Height', value: number) => ({
-  type: `world_set_Boxed_${name}Property`,
-  inputs: {
-    ACTOR: me(),
-    VALUE: {shadow: {type: 'math_number', fields: {NUM: value}}},
-  },
-});
 /** Room either side of the words, so nothing is read off the edge of the panel. */
 const MARGIN = 12;
 
@@ -77,33 +65,33 @@ const inset = (of: object) => ({
 /** Its own file, which is what its blocks are named after. */
 const typewriter = typewriterFor('actors/speechBox');
 
-export const speechBoxActor = actorFile(
-  'Speech Box',
-  [
-    // A LABEL WITH A PANEL BEHIND IT, said in a row: the words, their size and
-    // color, and the box they are laid into all come across
-    // (`ActorBuilder.actsLike`). It is not one of `any ⟨Label⟩` afterwards —
-    // a kind is never inherited — which is right, since a scene addressing its
-    // labels should not be addressing its dialogue.
-    actsLike('actors/label'),
-    useTrait('Time#HasATimerTrait'),
-    showAs('speech'),
-    setSize('Width', WIDTH),
-    setSize('Height', HEIGHT),
-    ...typewriter.rows,
+export const speechBoxActor = actorDocument({
+  name: 'Speech Box',
+  // A LABEL WITH A PANEL BEHIND IT, said in a row: the words, their size and
+  // color, and the box they are laid into all come across
+  // (`ActorBuilder.actsLike`). It is not one of `any ⟨Label⟩` afterwards —
+  // a kind is never inherited — which is right, since a scene addressing its
+  // labels should not be addressing its dialogue.
+  actsLike: 'actors/label',
+  icon: 'speech',
+  traits: ['Time#HasATimerTrait'],
+  properties: typewriter.properties,
+  values: [
+    boxValue('Width', WIDTH),
+    boxValue('Height', HEIGHT),
+    ...typewriter.values,
     // Anchored at the top left, because a box fills downward as it is read. A
     // centered one would jump about as each line arrived.
-    setText('TextAnchorProperty', words('top left')),
+    labelValue('TextAnchorProperty', {type: 'string', value: 'top left'}),
     // A default, so a box dragged onto a map says something before anybody has
     // typed anything into it — and so the picker has a picture to show. It
     // survives the first frame because the typewriter's timer is stopped until
     // something is said.
-    setText('TextProperty', words('Once upon a time…')),
+    labelValue('TextProperty', {type: 'string', value: 'Once upon a time…'}),
   ],
-  {
-    variables: typewriter.variables,
-    handlers: [typewriter.handler],
-    drawing: {
+  members: typewriter.members,
+  code: [
+    drawingRow({
       width: width(),
       height: height(),
       commands: [
@@ -137,6 +125,8 @@ export const speechBoxActor = actorFile(
         // happens to name: a wider box is a wider column.
         drawParagraph(MARGIN, MARGIN, inset(width())),
       ],
-    },
-  },
-);
+    }),
+    typewriter.handler,
+  ],
+  variables: typewriter.variables,
+});

@@ -16,13 +16,13 @@
 // cannot pass THROUGH. A platform wants both, and a one-way platform — a thing
 // this lab can express — is the first with only the one.
 
-import {actorFile, setSprite, useTrait} from './workspace';
+import {actorDocument} from '../actorDocument';
 
 /** The picture, and so the sprite the import must bring. */
 export const GROUND_SPRITE = 'ground';
 
-export const groundActor = actorFile('Ground', [
-  useTrait('Gravity#ActsAsGroundTrait'),
-  useTrait('Solid Bodies#SolidTrait'),
-  setSprite(`${GROUND_SPRITE}.png`),
-]);
+export const groundActor = actorDocument({
+  name: 'Ground',
+  traits: ['Gravity#ActsAsGroundTrait', 'Solid Bodies#SolidTrait'],
+  sprite: `${GROUND_SPRITE}.png`,
+});

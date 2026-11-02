@@ -26,15 +26,16 @@
 // thing to catch with a pointer: the canvas is the actor's click box, and a
 // slider is as big as it says it is, like a Label.
 
-import {setBox} from './label';
+import {actorDocument} from '../actorDocument';
+
+import {boxValue} from './label';
 import {LOOK, RADIUS_BAR, RING_INSET, RING_WIDTH, ringRadius} from './look';
 import {
-  actorFile,
-  actsLike,
   alongX,
   chain,
   corner,
-  defineEvent,
+  drawingRow,
+  event,
   fill,
   me,
   noFill,
@@ -42,10 +43,8 @@ import {
   num,
   outline,
   rectangle,
-  showAs,
   swatch,
   useStyle,
-  useTrait,
 } from './workspace';
 
 /** The Slider's own blocks are keyed by its file (`blockly/ownProperties`). */
@@ -167,55 +166,37 @@ const knobX = () =>
     arithmetic('MULTIPLY', less(width(), KNOB * 2), fraction()),
   );
 
-export const sliderActor = actorFile(
-  'Slider',
-  [
-    // FIRST, so everything below overrides it: the fraction, and the face
-    // this paints instead of the bar's.
-    actsLike('actors/progressBar'),
+export const sliderActor = actorDocument({
+  name: 'Slider',
+  // FIRST, so everything below overrides it: the fraction, and the face
+  // this paints instead of the bar's.
+  actsLike: 'actors/progressBar',
+  icon: 'slider',
+  traits: [
     // The box, elected rather than declared. A Slider acts like a Progress
     // Bar, which has no box of its own, so this is the one other kind that
     // says it itself (specs/BOXES_PLAN.md).
-    useTrait('Boxed#HasABoxTrait'),
+    'Boxed#HasABoxTrait',
     // …and which theme it is painted out of, when it is not the world's
     // (specs/STYLES_PLAN.md). Elected by the same kinds for the same reason:
     // an inspector cannot ask a Coin what its theme is.
-    useTrait('Styled#HasAStyleTrait'),
-    setBox('Width', WIDTH),
-    setBox('Height', HEIGHT),
-    defineEvent('changed'),
-    useTrait('Mouse#CanBeClickedTrait'),
+    'Styled#HasAStyleTrait',
+    'Mouse#CanBeClickedTrait',
     // …and the gestures that begin on it, which is how the knob follows a
     // finger that has slid off the end of the track.
-    useTrait('Gestures#TakesGesturesTrait'),
-    useTrait('Tab Navigation#CanBeFocusedTrait'),
-    useTrait('Input#TakesKeyboardInputTrait'),
-    showAs('slider'),
-    // Halfway, which is where a volume starts; a bar starts full.
-    setFraction(num(0.5)),
+    'Gestures#TakesGesturesTrait',
+    'Tab Navigation#CanBeFocusedTrait',
+    'Input#TakesKeyboardInputTrait',
   ],
-  {
-    handlers: [
-      // A press on it: the keyboard comes here, and the fraction jumps to
-      // where the press landed.
-      {
-        type: 'world_on_Mouse_IsClickedWithEvent',
-        fields: {FILTER0: ''},
-        next: {
-          block: chain([takeFocus(), moveTo(fractionAtPointer)]),
-        },
-      },
-      // …and every frame the finger moves after it. The event carries how far
-      // it moved, which this does not need — where it IS is the whole answer,
-      // and `mouse position` is where that lives.
-      {
-        type: 'world_on_Gestures_IsDraggedByEvent',
-        next: {block: chain([moveTo(fractionAtPointer)])},
-      },
-      onKey('left arrow', -STEP),
-      onKey('right arrow', STEP),
-    ],
-    drawing: {
+  values: [
+    boxValue('Width', WIDTH),
+    boxValue('Height', HEIGHT),
+    // Halfway, which is where a volume starts; a bar starts full.
+    {setter: `world_set_${BAR}_FractionProperty`, type: 'number', value: 0.5},
+  ],
+  members: [event('changed')],
+  code: [
+    drawingRow({
       width: width(),
       height: height(),
       commands: [
@@ -254,6 +235,24 @@ export const sliderActor = actorFile(
           ),
         ]),
       ],
+    }),
+    // A press on it: the keyboard comes here, and the fraction jumps to
+    // where the press landed.
+    {
+      type: 'world_on_Mouse_IsClickedWithEvent',
+      fields: {FILTER0: ''},
+      next: {
+        block: chain([takeFocus(), moveTo(fractionAtPointer)]),
+      },
     },
-  },
-);
+    // …and every frame the finger moves after it. The event carries how far
+    // it moved, which this does not need — where it IS is the whole answer,
+    // and `mouse position` is where that lives.
+    {
+      type: 'world_on_Gestures_IsDraggedByEvent',
+      next: {block: chain([moveTo(fractionAtPointer)])},
+    },
+    onKey('left arrow', -STEP),
+    onKey('right arrow', STEP),
+  ],
+});

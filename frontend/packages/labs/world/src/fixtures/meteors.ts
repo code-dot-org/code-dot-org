@@ -33,18 +33,16 @@
 // velocity turned two ways, which is sayable now. It is left out so the file
 // stays readable, not because it cannot be said.
 
+import {actorDocument} from '../actors/actorDocument';
 import {
   gameScreen,
   stack,
   starterSprites,
-  useTrait,
   type ProjectSpec,
 } from '../constants';
 import {} from '../rules/stock';
 import {referenceToStock} from '../rules/ruleReference';
 import {TILE_SIZE, VIEWPORT_TILES} from '../runtime/viewport';
-
-import {setNumber} from './breakout';
 
 /** The middle of tile `index`, the same grid the other scenarios use. */
 export const at = (index: number) => index * TILE_SIZE + TILE_SIZE / 2;
@@ -58,205 +56,178 @@ export const number = (value: number) => ({
 
 export const BALL_VAR = {id: 'meteorsBallVar', name: 'ball', type: 'Actor'};
 
-const SHIP_ACTOR = JSON.stringify({
+const SHIP_ACTOR = actorDocument({
+  name: 'Ship',
+  traits: [
+    'Arrow Drive#DrivenByArrowKeysTrait',
+    'Input#TakesKeyboardInputTrait',
+    'Screen Wrap#WrapsAcrossTrait',
+    'Screen Wrap#WrapsDownTrait',
+    'Zapping#ZapsTrait',
+    // So a meteor can be noticed running into it.
+    'Collisions#CanCollideTrait',
+  ],
+  sprite: 'ship.png',
   variables: [BALL_VAR],
-  blocks: {
-    blocks: [
-      {
-        type: 'world_actor',
-        x: 20,
-        y: 20,
-        fields: {NAME: 'Ship'},
-        next: {
-          block: stack([
-            useTrait('Arrow Drive#DrivenByArrowKeysTrait'),
-            useTrait('Input#TakesKeyboardInputTrait'),
-            useTrait('Screen Wrap#WrapsAcrossTrait'),
-            useTrait('Screen Wrap#WrapsDownTrait'),
-            useTrait('Zapping#ZapsTrait'),
-            // So a meteor can be noticed running into it.
-            useTrait('Collisions#CanCollideTrait'),
-            {type: 'world_set_sprite', fields: {SPRITE: 'ship.png'}},
-          ]),
+  code: [
+    // Asking to zap is not zapping: the cooldown decides (rules/zaps).
+    {
+      type: 'world_on_Input_PressesEvent',
+      fields: {FILTER0: 'space'},
+      x: 20,
+      y: 300,
+      next: {
+        block: {
+          type: 'world_do_Zapping_MakeZapAction',
+          inputs: {VALUE: me()},
         },
       },
-      // Asking to zap is not zapping: the cooldown decides (rules/zaps).
-      {
-        type: 'world_on_Input_PressesEvent',
-        fields: {FILTER0: 'space'},
-        x: 20,
-        y: 300,
-        next: {
-          block: {
-            type: 'world_do_Zapping_MakeZapAction',
-            inputs: {VALUE: me()},
-          },
-        },
-      },
-      // …and this is what a zap SENDS, which is the project's business.
-      {
-        type: 'world_on_Zapping_ZapsEvent',
-        x: 20,
-        y: 440,
-        next: {
-          block: {
-            type: 'world_add_actor',
-            fields: {ACTOR: 'actors/energyBall', NAMED: 'named', VAR: BALL_VAR},
-            extraState: {named: true},
-            inputs: {
-              DO: {
-                block: stack([
-                  {
-                    type: 'world_set_position',
-                    inputs: {
-                      ACTOR: {
-                        block: {
-                          type: 'variables_get_Actor',
-                          fields: {VAR: BALL_VAR},
-                        },
+    },
+    // …and this is what a zap SENDS, which is the project's business.
+    {
+      type: 'world_on_Zapping_ZapsEvent',
+      x: 20,
+      y: 440,
+      next: {
+        block: {
+          type: 'world_add_actor',
+          fields: {ACTOR: 'actors/energyBall', NAMED: 'named', VAR: BALL_VAR},
+          extraState: {named: true},
+          inputs: {
+            DO: {
+              block: stack([
+                {
+                  type: 'world_set_position',
+                  inputs: {
+                    ACTOR: {
+                      block: {
+                        type: 'variables_get_Actor',
+                        fields: {VAR: BALL_VAR},
                       },
-                      X: {
-                        block: {
-                          type: 'world_get_Space_PositionProperty',
-                          fields: {COMPONENT: 'x'},
-                          inputs: {ACTOR: me()},
-                        },
+                    },
+                    X: {
+                      block: {
+                        type: 'world_get_Space_PositionProperty',
+                        fields: {COMPONENT: 'x'},
+                        inputs: {ACTOR: me()},
                       },
-                      Y: {
-                        block: {
-                          type: 'world_get_Space_PositionProperty',
-                          fields: {COMPONENT: 'y'},
-                          inputs: {ACTOR: me()},
-                        },
+                    },
+                    Y: {
+                      block: {
+                        type: 'world_get_Space_PositionProperty',
+                        fields: {COMPONENT: 'y'},
+                        inputs: {ACTOR: me()},
                       },
                     },
                   },
-                  {
-                    type: 'world_set_Physics_VelocityProperty',
-                    inputs: {
-                      ACTOR: {
-                        block: {
-                          type: 'variables_get_Actor',
-                          fields: {VAR: BALL_VAR},
-                        },
+                },
+                {
+                  type: 'world_set_Physics_VelocityProperty',
+                  inputs: {
+                    ACTOR: {
+                      block: {
+                        type: 'variables_get_Actor',
+                        fields: {VAR: BALL_VAR},
                       },
-                      VALUE: {
-                        block: {
-                          type: 'world_vector_rotate',
-                          inputs: {
-                            VECTOR: {
-                              block: {
-                                type: 'world_vector',
-                                fields: {VECTOR: {x: 0, y: -6}},
-                              },
+                    },
+                    VALUE: {
+                      block: {
+                        type: 'world_vector_rotate',
+                        inputs: {
+                          VECTOR: {
+                            block: {
+                              type: 'world_vector',
+                              fields: {VECTOR: {x: 0, y: -6}},
                             },
-                            DEGREES: {
-                              block: {
-                                type: 'world_get_Space_RotationProperty',
-                                inputs: {ACTOR: me()},
-                              },
+                          },
+                          DEGREES: {
+                            block: {
+                              type: 'world_get_Space_RotationProperty',
+                              inputs: {ACTOR: me()},
                             },
                           },
                         },
                       },
                     },
                   },
-                ]),
-              },
+                },
+              ]),
             },
           },
         },
       },
-      // Running into a rock. Said and not acted on — see the header.
-      {
-        type: 'world_on_Collisions_StartsTouchingEvent',
-        fields: {FILTER0: 'actors/meteor'},
-        x: 520,
-        y: 300,
-        next: {
-          block: {
+    },
+    // Running into a rock. Said and not acted on — see the header.
+    {
+      type: 'world_on_Collisions_StartsTouchingEvent',
+      fields: {FILTER0: 'actors/meteor'},
+      x: 520,
+      y: 300,
+      next: {
+        block: {
+          type: 'world_print',
+          inputs: {
+            VALUE: {shadow: {type: 'text', fields: {TEXT: 'Ship lost!'}}},
+          },
+        },
+      },
+    },
+  ],
+});
+
+const SHOT_ACTOR = actorDocument({
+  name: 'Energy Ball',
+  traits: [
+    'Physics#CanMoveTrait',
+    'Collisions#CanCollideTrait',
+    // The other half of spawning: without it the world fills up.
+    'Expiry#ExpiresTrait',
+  ],
+  values: [
+    {setter: 'world_set_Expiry_LifetimeProperty', type: 'number', value: 1.2},
+  ],
+  sprite: 'energyBall.png',
+});
+
+const METEOR_ACTOR = actorDocument({
+  name: 'Meteor',
+  traits: [
+    'Physics#CanMoveTrait',
+    'Screen Wrap#WrapsAcrossTrait',
+    'Screen Wrap#WrapsDownTrait',
+    'Collisions#CanCollideTrait',
+  ],
+  // The stock asteroid drawing, under its own name: a picture is a file the
+  // project holds, and it is the same file in any project that imports it,
+  // whatever the actor drawing it is called.
+  sprite: 'asteroid.png',
+  code: [
+    // `object actor` is the other side of the contact — the ball — so
+    // both go, and one zap does not clear the whole field.
+    {
+      type: 'world_on_Collisions_StartsTouchingEvent',
+      fields: {FILTER0: 'actors/energyBall'},
+      x: 20,
+      y: 300,
+      next: {
+        block: stack([
+          {
             type: 'world_print',
             inputs: {
-              VALUE: {shadow: {type: 'text', fields: {TEXT: 'Ship lost!'}}},
-            },
-          },
-        },
-      },
-    ],
-  },
-});
-
-const SHOT_ACTOR = JSON.stringify({
-  blocks: {
-    blocks: [
-      {
-        type: 'world_actor',
-        x: 20,
-        y: 20,
-        fields: {NAME: 'Energy Ball'},
-        next: {
-          block: stack([
-            useTrait('Physics#CanMoveTrait'),
-            useTrait('Collisions#CanCollideTrait'),
-            // The other half of spawning: without it the world fills up.
-            useTrait('Expiry#ExpiresTrait'),
-            setNumber('world_set_Expiry_LifetimeProperty', 1.2),
-            {type: 'world_set_sprite', fields: {SPRITE: 'energyBall.png'}},
-          ]),
-        },
-      },
-    ],
-  },
-});
-
-const METEOR_ACTOR = JSON.stringify({
-  blocks: {
-    blocks: [
-      {
-        type: 'world_actor',
-        x: 20,
-        y: 20,
-        fields: {NAME: 'Meteor'},
-        next: {
-          block: stack([
-            useTrait('Physics#CanMoveTrait'),
-            useTrait('Screen Wrap#WrapsAcrossTrait'),
-            useTrait('Screen Wrap#WrapsDownTrait'),
-            useTrait('Collisions#CanCollideTrait'),
-            // The stock asteroid drawing, under its own name: a picture is a
-            // file the project holds, and it is the same file in any project
-            // that imports it, whatever the actor drawing it is called.
-            {type: 'world_set_sprite', fields: {SPRITE: 'asteroid.png'}},
-          ]),
-        },
-      },
-      // `object actor` is the other side of the contact — the ball — so
-      // both go, and one zap does not clear the whole field.
-      {
-        type: 'world_on_Collisions_StartsTouchingEvent',
-        fields: {FILTER0: 'actors/energyBall'},
-        x: 20,
-        y: 300,
-        next: {
-          block: stack([
-            {
-              type: 'world_print',
-              inputs: {
-                VALUE: {
-                  shadow: {type: 'text', fields: {TEXT: 'Rock broken up!'}},
-                },
+              VALUE: {
+                shadow: {type: 'text', fields: {TEXT: 'Rock broken up!'}},
               },
             },
-            {
-              type: 'world_remove_actor',
-              inputs: {ACTOR: {block: {type: 'world_object_actor'}}},
-            },
-            {type: 'world_remove_actor', inputs: {ACTOR: me()}},
-          ]),
-        },
+          },
+          {
+            type: 'world_remove_actor',
+            inputs: {ACTOR: {block: {type: 'world_object_actor'}}},
+          },
+          {type: 'world_remove_actor', inputs: {ACTOR: me()}},
+        ]),
       },
-    ],
-  },
+    },
+  ],
 });
 
 /**

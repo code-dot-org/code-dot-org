@@ -29,18 +29,19 @@
 // along y, and rotation is already every actor's, so there is no direction to
 // choose here.
 
-import {setBox} from './label';
+import type {ActorProperty} from '../actorData';
+import {actorDocument} from '../actorDocument';
+
+import {boxValue} from './label';
 import {RADIUS_BAR} from './look';
 import {
-  actorFile,
   corner,
+  drawingRow,
   useStyle,
-  defineProperty,
+  property,
   fill,
   me,
   num,
-  showAs,
-  useTrait,
 } from './workspace';
 
 /** How big a bar is unless a project says otherwise. */
@@ -65,7 +66,7 @@ const height = () => box('Height');
  * What a bar is made of: how far along it is, and the two colors it is drawn
  * in.
  *
- * EXPORTED as rows, because a project may declare a bar of its OWN rather than
+ * EXPORTED, because a project may declare a bar of its OWN rather than
  * import this file, and the two tellings must
  * declare the same three properties or they are two different bars — the same
  * bargain `HEALTH_BAR_SUBJECT` strikes one file over.
@@ -75,10 +76,10 @@ const height = () => box('Height');
  * because health is what most learners put in the first one they make; the
  * track is dark, so an empty bar still reads as a bar with nothing in it.
  */
-export const PROGRESS_BAR_PROPERTIES = [
-  defineProperty('number', 'fraction', '1'),
-  defineProperty('color', 'bar color', '#e04040'),
-  defineProperty('color', 'track color', '#301820'),
+export const PROGRESS_BAR_PROPERTIES: ActorProperty[] = [
+  property('number', 'fraction', '1'),
+  property('color', 'bar color', '#e04040'),
+  property('color', 'track color', '#301820'),
 ];
 
 /**
@@ -149,21 +150,20 @@ export const progressBarDrawing = (own = 'ActorsProgressBar') => ({
   ],
 });
 
-export const progressBarActor = actorFile(
-  'Progress Bar',
-  [
-    ...PROGRESS_BAR_PROPERTIES,
+export const progressBarActor = actorDocument({
+  name: 'Progress Bar',
+  icon: 'bar',
+  properties: PROGRESS_BAR_PROPERTIES,
+  traits: [
     // The box, elected here so everything that ACTS LIKE a bar — the Health
     // Bar, the jetpack's fuel — gets it too (`ActorBuilder.actsLike` copies
     // the traits).
-    useTrait('Boxed#HasABoxTrait'),
+    'Boxed#HasABoxTrait',
     // …and which theme it is painted out of, when it is not the world's
     // (specs/STYLES_PLAN.md). Elected by the same kinds for the same reason:
     // an inspector cannot ask a Coin what its theme is.
-    useTrait('Styled#HasAStyleTrait'),
-    setBox('Width', WIDTH),
-    setBox('Height', HEIGHT),
-    showAs('bar'),
+    'Styled#HasAStyleTrait',
   ],
-  {drawing: progressBarDrawing()},
-);
+  values: [boxValue('Width', WIDTH), boxValue('Height', HEIGHT)],
+  code: [drawingRow(progressBarDrawing())],
+});

@@ -46,23 +46,19 @@
 // its fraction then, since nothing has happened to the subject yet; a bar
 // pointed at nobody stays as it was last drawn, which is full.
 
-import {actorFile, actsLike, me, showAs} from './workspace';
+import type {ActorProperty} from '../actorData';
+import {actorDocument} from '../actorDocument';
+
+import {me, property} from './workspace';
 
 /**
- * The `define property` this bar keeps: the actor it is about.
+ * The property this bar keeps: the actor it is about.
  *
  * Exported with the drawing below, because a project may declare this actor
  * itself rather than importing the file, and the two must declare the same
  * property or they are two different bars.
  */
-export const HEALTH_BAR_SUBJECT = {
-  type: 'world_rule_property',
-  fields: {
-    TYPE: 'actor',
-    ACCESS: 'writable',
-    NAME: 'subject',
-  },
-};
+export const HEALTH_BAR_SUBJECT: ActorProperty = property('actor', 'subject');
 
 /** `health of ⟨subject actor⟩ ÷ most health of ⟨subject actor⟩`. */
 const healthLeft = () => {
@@ -96,26 +92,22 @@ export const healthBarHears = (event: string, subjectGetType: string) => ({
   },
 });
 
-export const healthBarActor = actorFile(
-  'Health Bar',
-  [
-    // FIRST, so everything below overrides it rather than the other way about —
-    // that is what reading a file downwards means, and what lets a bar that
-    // wanted its own picture simply say so underneath.
-    actsLike('actors/progressBar'),
-    HEALTH_BAR_SUBJECT,
-    showAs('health'),
+export const healthBarActor = actorDocument({
+  name: 'Health Bar',
+  // FIRST, so everything below overrides it rather than the other way about —
+  // that is what reading a file downwards means, and what lets a bar that
+  // wanted its own picture simply say so underneath.
+  actsLike: 'actors/progressBar',
+  icon: 'health',
+  properties: [HEALTH_BAR_SUBJECT],
+  code: [
+    healthBarHears(
+      'IsDamagedEvent',
+      'world_get_ActorsHealthBar_SubjectProperty',
+    ),
+    healthBarHears(
+      'IsHealedEvent',
+      'world_get_ActorsHealthBar_SubjectProperty',
+    ),
   ],
-  {
-    handlers: [
-      healthBarHears(
-        'IsDamagedEvent',
-        'world_get_ActorsHealthBar_SubjectProperty',
-      ),
-      healthBarHears(
-        'IsHealedEvent',
-        'world_get_ActorsHealthBar_SubjectProperty',
-      ),
-    ],
-  },
-);
+});

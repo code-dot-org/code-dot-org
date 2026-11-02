@@ -29,33 +29,31 @@
 // windowful, Enter chooses and Delete removes. The ring is drawn INSIDE the
 // face, because outside is clipped away.
 
-import {labelHalf, labelSizeOf} from './label';
+import {actorDocument} from '../actorDocument';
+
+import {boxValue, labelHalf, labelSizeOf} from './label';
 import {BORDER, LOOK, RADIUS, RING_INSET, RING_WIDTH, ringRadius} from './look';
 import {
-  actorFile,
-  actsLike,
   alongY,
+  block,
   type BlockParam,
   chain,
   corner,
-  defineBlock,
-  defineEvent,
-  defineProperty,
+  drawingRow,
+  event,
   fill,
+  labelValue,
   me,
   noFill,
   noOutline,
   num,
   outline,
   paramValue,
+  property,
   rectangle,
-  setText,
-  showAs,
   swatch,
   textOf,
   useStyle,
-  useTrait,
-  words,
 } from './workspace';
 
 const OWN = 'ActorsList';
@@ -429,17 +427,49 @@ const drawWords = (text: object, y: object) => ({
   },
 });
 
-export const listActor = actorFile(
-  'List',
-  [
-    // FIRST, so everything below overrides it: the size, the anchor and the
-    // colours this paints with.
-    actsLike('actors/label'),
-    defineProperty('words', 'items'),
+export const listActor = actorDocument({
+  name: 'List',
+  // FIRST, so everything below overrides it: the size, the anchor and the
+  // colours this paints with.
+  actsLike: 'actors/label',
+  icon: 'list',
+  traits: [
+    'Mouse#CanBeClickedTrait',
+    // …and the WHEEL, which is a trait of its own: a thing you scroll is not a
+    // thing you click, and a Button electing this would swallow the page's
+    // scroll to no purpose (specs/UI_ACTORS.md).
+    'Mouse#CanBeScrolledTrait',
+    // …and the drag that scrolls it, which is the whole reason this actor
+    // could not exist before (specs/GESTURES_PLAN.md).
+    'Gestures#TakesGesturesTrait',
+    'Tab Navigation#CanBeFocusedTrait',
+    'Input#TakesKeyboardInputTrait',
+  ],
+  properties: [
+    property('words', 'items'),
+    property('number', 'scroll', '0'),
+    property('number', 'highlighted', '1'),
+    // Whether a row may be taken out. FALSE unless a project says otherwise:
+    // a list of answers is not one a player should be able to empty.
+    property('boolean', 'can remove', 'false'),
+  ],
+  values: [
+    boxValue('Width', WIDTH),
+    boxValue('Height', HEIGHT),
+    labelValue('TextAnchorProperty', {type: 'string', value: 'left'}),
+    // Placeholders, so a List dragged onto a map has something to show; a
+    // project replaces them.
+    {
+      setter: `world_set_${OWN}_ItemsProperty`,
+      type: 'list',
+      value: ['ONE', 'TWO', 'THREE'],
+    },
+  ],
+  members: [
     // What a swipe and Delete both do, said once. Its row is a PARAMETER, so
     // `which row is the pointer over` is worked out at the call site instead
     // of five times inside the body.
-    defineBlock({
+    block({
       private: true,
       say: ['move the highlight by', MOVED_BY],
       description:
@@ -447,7 +477,7 @@ export const listActor = actorFile(
         'bringing the window to it.',
       body: moveBody(),
     }),
-    defineBlock({
+    block({
       private: true,
       say: ['take out row', TAKEN],
       description:
@@ -455,7 +485,7 @@ export const listActor = actorFile(
         'such a row — saying which word went, before it goes.',
       body: [removeBody()],
     }),
-    defineBlock({
+    block({
       private: true,
       say: ['choose row', CHOSEN],
       description:
@@ -463,146 +493,11 @@ export const listActor = actorFile(
         'and saying which word was chosen.',
       body: [chooseBody()],
     }),
-    defineProperty('number', 'scroll', '0'),
-    defineProperty('number', 'highlighted', '1'),
-    // Whether a row may be taken out. FALSE unless a project says otherwise:
-    // a list of answers is not one a player should be able to empty.
-    defineProperty('boolean', 'can remove', 'false'),
-    defineEvent('is chosen', WORD, 'at', PLACE),
-    defineEvent('loses', WORD, 'at', PLACE),
-    useTrait('Mouse#CanBeClickedTrait'),
-    // …and the WHEEL, which is a trait of its own: a thing you scroll is not a
-    // thing you click, and a Button electing this would swallow the page's
-    // scroll to no purpose (specs/UI_ACTORS.md).
-    useTrait('Mouse#CanBeScrolledTrait'),
-    // …and the drag that scrolls it, which is the whole reason this actor
-    // could not exist before (specs/GESTURES_PLAN.md).
-    useTrait('Gestures#TakesGesturesTrait'),
-    useTrait('Tab Navigation#CanBeFocusedTrait'),
-    useTrait('Input#TakesKeyboardInputTrait'),
-    showAs('list'),
-    set('WidthProperty', num(WIDTH), 'Boxed'),
-    set('HeightProperty', num(HEIGHT), 'Boxed'),
-    setText('TextAnchorProperty', words('left')),
-    // Placeholders, so a List dragged onto a map has something to show; a
-    // project replaces them.
-    set('ItemsProperty', {
-      block: {
-        type: 'lists_create_with',
-        extraState: {itemCount: 3},
-        inputs: {
-          ADD0: {block: {type: 'text', fields: {TEXT: 'ONE'}}},
-          ADD1: {block: {type: 'text', fields: {TEXT: 'TWO'}}},
-          ADD2: {block: {type: 'text', fields: {TEXT: 'THREE'}}},
-        },
-      },
-    }),
+    event('is chosen', WORD, 'at', PLACE),
+    event('loses', WORD, 'at', PLACE),
   ],
-  {
-    variables: [
-      ROW_VARIABLE,
-      asVariable(MOVEMENT),
-      asVariable(BY),
-      asVariable(TAKEN),
-      asVariable(CHOSEN),
-      asVariable(MOVED_BY),
-      asVariable(WORD),
-      asVariable(PLACE),
-    ],
-    handlers: [
-      // A click chooses the row it landed on, and brings the keyboard here.
-      {
-        type: 'world_on_Mouse_IsClickedWithEvent',
-        fields: {FILTER0: ''},
-        next: {
-          block: chain([
-            {
-              type: 'world_do_TabNavigation_TakeTheFocusAction',
-              inputs: {ACTOR: me()},
-            },
-            chooseRow(rowUnderPointer()),
-          ]),
-        },
-      },
-      // A drag moves the window the other way, which is what makes the
-      // content feel stuck to the finger.
-      // The wheel, which is the drag said another way: both are a distance in
-      // pixels, and `scrollTo` clamps either to the ends of the list. The sign
-      // differs because they are opposite idioms — a drag carries the content
-      // with the finger, a wheel pushes it away.
-      {
-        type: 'world_on_Mouse_IsScrolledByEvent',
-        fields: {LOCAL0: {id: BY.id, name: BY.name, type: BY.binds}},
-        next: {
-          block: scrollTo(arithmetic('ADD', scroll(), paramValue(BY))),
-        },
-      },
-      {
-        type: 'world_on_Gestures_IsDraggedByEvent',
-        fields: {
-          LOCAL0: {id: MOVEMENT.id, name: MOVEMENT.name, type: MOVEMENT.binds},
-        },
-        next: {
-          block: chain([
-            scrollTo(
-              arithmetic('MINUS', scroll(), {
-                block: {
-                  type: 'world_vector_component',
-                  fields: {COMPONENT: 'y'},
-                  inputs: {VEC: paramValue(MOVEMENT)},
-                },
-              }),
-            ),
-          ]),
-        },
-      },
-      // A swipe takes the row it began on out — the phone idiom, and the
-      // first thing in the lab to use the swipe event. Either way sideways:
-      // which way a row is flicked is not a second meaning.
-      ...(['left', 'right'] as const).map(way => ({
-        type: 'world_on_Gestures_IsSwipedEvent',
-        fields: {FILTER0: way},
-        next: {block: takeOutRow(rowUnderPointer())},
-      })),
-      // …and Delete does it from the keyboard, on the highlighted row.
-      {
-        type: 'world_on_Input_PressesEvent',
-        fields: {FILTER0: 'delete'},
-        next: {block: either(focused(), [takeOutRow(highlighted())])},
-      },
-      // Enter chooses whatever the highlight is on.
-      {
-        type: 'world_on_Input_PressesEvent',
-        fields: {FILTER0: 'enter'},
-        next: {block: either(focused(), [chooseRow(highlighted())])},
-      },
-      // The arrows move it by one, the page keys by a windowful — the only
-      // thing that makes a long list bearable without a pointer.
-      //
-      // TWICE OVER, on the press AND on the repeat. Holding an arrow should
-      // walk the list the way holding it walks a text caret, and a key held
-      // raises `presses` exactly once — so a hat on the press alone moves one
-      // row however long the key is down (specs/UI_ACTORS.md).
-      ...(
-        [
-          ['up arrow', () => num(-1)],
-          ['down arrow', () => num(1)],
-          // A WINDOWFUL, which is what the box holds rather than what the
-          // default box holds — the same correction as `rowsShown` above.
-          ['page up', () => arithmetic('MULTIPLY', rowsShown(), num(-1))],
-          ['page down', () => rowsShown()],
-        ] as const
-      ).flatMap(([key, by]) =>
-        ['world_on_Input_PressesEvent', 'world_on_Input_RepeatsEvent'].map(
-          hat => ({
-            type: hat,
-            fields: {FILTER0: key},
-            next: {block: either(focused(), [moveHighlight(by())])},
-          }),
-        ),
-      ),
-    ],
-    drawing: {
+  code: [
+    drawingRow({
       width: width(),
       height: height(),
       commands: [
@@ -662,6 +557,107 @@ export const listActor = actorFile(
           ),
         ]),
       ],
+    }),
+    // A click chooses the row it landed on, and brings the keyboard here.
+    {
+      type: 'world_on_Mouse_IsClickedWithEvent',
+      fields: {FILTER0: ''},
+      next: {
+        block: chain([
+          {
+            type: 'world_do_TabNavigation_TakeTheFocusAction',
+            inputs: {ACTOR: me()},
+          },
+          chooseRow(rowUnderPointer()),
+        ]),
+      },
     },
-  },
-);
+    // A drag moves the window the other way, which is what makes the
+    // content feel stuck to the finger.
+    // The wheel, which is the drag said another way: both are a distance in
+    // pixels, and `scrollTo` clamps either to the ends of the list. The sign
+    // differs because they are opposite idioms — a drag carries the content
+    // with the finger, a wheel pushes it away.
+    {
+      type: 'world_on_Mouse_IsScrolledByEvent',
+      fields: {LOCAL0: {id: BY.id, name: BY.name, type: BY.binds}},
+      next: {
+        block: scrollTo(arithmetic('ADD', scroll(), paramValue(BY))),
+      },
+    },
+    {
+      type: 'world_on_Gestures_IsDraggedByEvent',
+      fields: {
+        LOCAL0: {id: MOVEMENT.id, name: MOVEMENT.name, type: MOVEMENT.binds},
+      },
+      next: {
+        block: chain([
+          scrollTo(
+            arithmetic('MINUS', scroll(), {
+              block: {
+                type: 'world_vector_component',
+                fields: {COMPONENT: 'y'},
+                inputs: {VEC: paramValue(MOVEMENT)},
+              },
+            }),
+          ),
+        ]),
+      },
+    },
+    // A swipe takes the row it began on out — the phone idiom, and the
+    // first thing in the lab to use the swipe event. Either way sideways:
+    // which way a row is flicked is not a second meaning.
+    ...(['left', 'right'] as const).map(way => ({
+      type: 'world_on_Gestures_IsSwipedEvent',
+      fields: {FILTER0: way},
+      next: {block: takeOutRow(rowUnderPointer())},
+    })),
+    // …and Delete does it from the keyboard, on the highlighted row.
+    {
+      type: 'world_on_Input_PressesEvent',
+      fields: {FILTER0: 'delete'},
+      next: {block: either(focused(), [takeOutRow(highlighted())])},
+    },
+    // Enter chooses whatever the highlight is on.
+    {
+      type: 'world_on_Input_PressesEvent',
+      fields: {FILTER0: 'enter'},
+      next: {block: either(focused(), [chooseRow(highlighted())])},
+    },
+    // The arrows move it by one, the page keys by a windowful — the only
+    // thing that makes a long list bearable without a pointer.
+    //
+    // TWICE OVER, on the press AND on the repeat. Holding an arrow should
+    // walk the list the way holding it walks a text caret, and a key held
+    // raises `presses` exactly once — so a hat on the press alone moves one
+    // row however long the key is down (specs/UI_ACTORS.md).
+    ...(
+      [
+        ['up arrow', () => num(-1)],
+        ['down arrow', () => num(1)],
+        // A WINDOWFUL, which is what the box holds rather than what the
+        // default box holds — the same correction as `rowsShown` above.
+        ['page up', () => arithmetic('MULTIPLY', rowsShown(), num(-1))],
+        ['page down', () => rowsShown()],
+      ] as const
+    ).flatMap(([key, by]) =>
+      ['world_on_Input_PressesEvent', 'world_on_Input_RepeatsEvent'].map(
+        hat => ({
+          type: hat,
+          fields: {FILTER0: key},
+          next: {block: either(focused(), [moveHighlight(by())])},
+        }),
+      ),
+    ),
+  ],
+  variables: [
+    ROW_VARIABLE,
+    asVariable(MOVEMENT),
+    asVariable(BY),
+    asVariable(TAKEN),
+    asVariable(CHOSEN),
+    asVariable(MOVED_BY),
+    asVariable(WORD),
+    asVariable(PLACE),
+  ],
+});

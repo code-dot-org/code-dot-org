@@ -66,31 +66,30 @@
 // the caret is off the right, or there is slack at the right and the words
 // should come back.
 
-import {labelHalf, labelSizeOf} from './label';
+import {actorDocument} from '../actorDocument';
+
+import {boxValue, labelHalf, labelSizeOf} from './label';
 import {BORDER, LOOK, RADIUS_TIGHT} from './look';
 import {
-  actorFile,
-  actsLike,
   alongX,
   chain,
   corner,
-  defineEvent,
-  defineProperty,
+  drawingRow,
   drawParagraph,
+  event,
   fill,
   joined,
+  labelValue,
   me,
   noOutline,
   num,
   outline,
+  property,
   rectangle,
   setText,
-  showAs,
   swatch,
   textOf,
   useStyle,
-  useTrait,
-  words,
 } from './workspace';
 
 /** Wider and shallower than a Label: a field is a line, not a paragraph. */
@@ -525,147 +524,61 @@ const onKeyHeld = (key: string, body: () => object) =>
     next: {block: body()},
   }));
 
-export const textInputActor = actorFile(
-  'Text Input',
-  [
-    actsLike('actors/label'),
+export const textInputActor = actorDocument({
+  name: 'Text Input',
+  actsLike: 'actors/label',
+  icon: 'input',
+  traits: [
     // What was typed, rather than which keys are down.
-    useTrait('Input#TakesKeyboardInputTrait'),
+    'Input#TakesKeyboardInputTrait',
     // A click on THIS one, so it knows to take over. It no longer needs to
     // hear every OTHER click: `take the focus` releases whoever had it.
-    useTrait('Mouse#CanBeClickedTrait'),
+    'Mouse#CanBeClickedTrait',
     // …and the keyboard's way around the interface, which is where `focused`
     // comes from and how Tab reaches this field at all.
-    useTrait('Tab Navigation#CanBeFocusedTrait'),
-    showAs('input'),
+    'Tab Navigation#CanBeFocusedTrait',
+  ],
+  properties: [
     // WHERE THE TYPING GOES, counted in characters before it. Everything else
     // about editing is arithmetic on this: typing inserts here, backspace
     // takes the character before it, and the arrows move it.
-    defineProperty('number', 'caret', '0'),
+    property('number', 'caret', '0'),
     // …and how far left the words are pushed so it stays in the box. Kept by
     // the step below, read twice by the drawing.
-    defineProperty('number', 'scroll', '0'),
+    property('number', 'scroll', '0'),
     // WHAT BELONGS IN IT, said in the field rather than beside it. Drawn
     // while the field is empty and gone the moment anything is typed — it is
     // never the text, because a hint the first keystroke has to delete is the
     // bug this file avoided by shipping empty (specs/FIELDS_PLAN.md).
-    defineProperty('string', 'hint', ''),
+    property('string', 'hint', ''),
     // …and the one KIND worth having. A number is what an app asks for that a
     // word is not: a quantity, an amount, how many. Anything else a field
     // might restrict is a vocabulary this does not invent.
-    defineProperty('boolean', 'only numbers', 'false'),
+    property('boolean', 'only numbers', 'false'),
     // …and whether somebody has decided the answer is wrong. A PROJECT's
     // word: the field has no idea what an email is, and what it owns is
     // saying so once somebody has decided.
-    defineProperty('boolean', 'looks wrong', 'false'),
-    defineEvent('changed'),
-    // Enter, while this field is listening — a form's submit, and the
-    // keyboard half of the button beside it.
-    defineEvent('is done'),
-    {
-      type: 'world_set_Boxed_HeightProperty',
-      inputs: {
-        ACTOR: me(),
-        VALUE: {shadow: {type: 'math_number', fields: {NUM: HEIGHT}}},
-      },
-    },
+    property('boolean', 'looks wrong', 'false'),
+  ],
+  values: [
+    boxValue('Height', HEIGHT),
     // A field's words start at its left edge and grow rightwards, where a
     // Label's are centered: what has been typed should not shuffle sideways as
     // it is typed.
-    setText('TextAnchorProperty', words('left')),
+    labelValue('TextAnchorProperty', {type: 'string', value: 'left'}),
     // EMPTY, where a Label ships saying "Label": a field with words in it that
     // nobody typed is a field whose first keystroke has to delete them.
-    setText('TextProperty', words('')),
-    slidesToShowTheCaret(),
+    labelValue('TextProperty', {type: 'string', value: ''}),
   ],
-  {
-    handlers: [
-      // A click chooses this field AND says where in it. Two statements for
-      // two questions: which control the keyboard goes to, and where in this
-      // one the next letter lands.
-      {
-        type: 'world_on_Mouse_IsClickedWithEvent',
-        fields: {FILTER0: ''},
-        next: {
-          block: chain([takeFocus(), ...placesTheCaret()]),
-        },
-      },
-      // A character, inserted where the bar is — not appended. Appending is
-      // what a field does until somebody clicks into the middle of what they
-      // typed, which is the first thing anybody does after a typo.
-      {
-        type: 'world_on_Input_TypesEvent',
-        next: {
-          block: onlyIf(both(focused(), takes()), [
-            setText(
-              'TextProperty',
-              joined([
-                upTo(caretAt()),
-                {block: {type: 'world_event_value'}},
-                from(sum('ADD', caretAt(), num(1))),
-              ]),
-            ),
-            setCaret(sum('ADD', caretAt(), num(1))),
-            emitChanged(),
-          ]),
-        },
-      },
-      // …and backspace, which makes no character and so is a KEY. It takes the
-      // one BEFORE the bar and moves the bar back over the gap.
-      ...onKeyHeld('backspace', () =>
-        onlyIf(both(focused(), compare('GT', caretAt(), num(0))), [
-          setText(
-            'TextProperty',
-            joined([
-              upTo(sum('MINUS', caretAt(), num(1))),
-              from(sum('ADD', caretAt(), num(1))),
-            ]),
-          ),
-          setCaret(sum('MINUS', caretAt(), num(1))),
-          emitChanged(),
-        ]),
-      ),
-      // …and delete, which is the same edit read the other way: it takes the
-      // character AFTER the bar and leaves the bar where it is.
-      ...onKeyHeld('delete', () =>
-        onlyIf(both(focused(), compare('LT', caretAt(), length())), [
-          setText(
-            'TextProperty',
-            joined([upTo(caretAt()), from(sum('ADD', caretAt(), num(2)))]),
-          ),
-          emitChanged(),
-        ]),
-      ),
-      // Enter says the answer is finished. It changes nothing: what happens
-      // after a form is submitted is the project's, and a field that emptied
-      // itself would take the answer away before a handler could read it.
-      {
-        type: 'world_on_Input_PressesEvent',
-        fields: {FILTER0: 'enter'},
-        next: {
-          block: onlyIf(focused(), [
-            {
-              type: `world_emit_${OWN}_IsDoneEvent`,
-              inputs: {ACTOR: me()},
-            },
-          ]),
-        },
-      },
-      // The arrows walk the bar. They do not wrap and they do not run off
-      // either end: a caret at the start that answered a left arrow by going
-      // negative would put every later sum out by one, silently.
-      ...onKeyHeld('left arrow', () =>
-        onlyIf(both(focused(), compare('GT', caretAt(), num(0))), [
-          setCaret(sum('MINUS', caretAt(), num(1))),
-        ]),
-      ),
-      ...onKeyHeld('right arrow', () =>
-        onlyIf(both(focused(), compare('LT', caretAt(), length())), [
-          setCaret(sum('ADD', caretAt(), num(1))),
-        ]),
-      ),
-    ],
-    drawing: {
+  members: [
+    event('changed'),
+    // Enter, while this field is listening — a form's submit, and the
+    // keyboard half of the button beside it.
+    event('is done'),
+  ],
+  code: [
+    slidesToShowTheCaret(),
+    drawingRow({
       width: width(),
       height: height(),
       commands: [
@@ -723,6 +636,90 @@ export const textInputActor = actorFile(
           ),
         ]),
       ],
+    }),
+    // A click chooses this field AND says where in it. Two statements for
+    // two questions: which control the keyboard goes to, and where in this
+    // one the next letter lands.
+    {
+      type: 'world_on_Mouse_IsClickedWithEvent',
+      fields: {FILTER0: ''},
+      next: {
+        block: chain([takeFocus(), ...placesTheCaret()]),
+      },
     },
-  },
-);
+    // A character, inserted where the bar is — not appended. Appending is
+    // what a field does until somebody clicks into the middle of what they
+    // typed, which is the first thing anybody does after a typo.
+    {
+      type: 'world_on_Input_TypesEvent',
+      next: {
+        block: onlyIf(both(focused(), takes()), [
+          setText(
+            'TextProperty',
+            joined([
+              upTo(caretAt()),
+              {block: {type: 'world_event_value'}},
+              from(sum('ADD', caretAt(), num(1))),
+            ]),
+          ),
+          setCaret(sum('ADD', caretAt(), num(1))),
+          emitChanged(),
+        ]),
+      },
+    },
+    // …and backspace, which makes no character and so is a KEY. It takes the
+    // one BEFORE the bar and moves the bar back over the gap.
+    ...onKeyHeld('backspace', () =>
+      onlyIf(both(focused(), compare('GT', caretAt(), num(0))), [
+        setText(
+          'TextProperty',
+          joined([
+            upTo(sum('MINUS', caretAt(), num(1))),
+            from(sum('ADD', caretAt(), num(1))),
+          ]),
+        ),
+        setCaret(sum('MINUS', caretAt(), num(1))),
+        emitChanged(),
+      ]),
+    ),
+    // …and delete, which is the same edit read the other way: it takes the
+    // character AFTER the bar and leaves the bar where it is.
+    ...onKeyHeld('delete', () =>
+      onlyIf(both(focused(), compare('LT', caretAt(), length())), [
+        setText(
+          'TextProperty',
+          joined([upTo(caretAt()), from(sum('ADD', caretAt(), num(2)))]),
+        ),
+        emitChanged(),
+      ]),
+    ),
+    // Enter says the answer is finished. It changes nothing: what happens
+    // after a form is submitted is the project's, and a field that emptied
+    // itself would take the answer away before a handler could read it.
+    {
+      type: 'world_on_Input_PressesEvent',
+      fields: {FILTER0: 'enter'},
+      next: {
+        block: onlyIf(focused(), [
+          {
+            type: `world_emit_${OWN}_IsDoneEvent`,
+            inputs: {ACTOR: me()},
+          },
+        ]),
+      },
+    },
+    // The arrows walk the bar. They do not wrap and they do not run off
+    // either end: a caret at the start that answered a left arrow by going
+    // negative would put every later sum out by one, silently.
+    ...onKeyHeld('left arrow', () =>
+      onlyIf(both(focused(), compare('GT', caretAt(), num(0))), [
+        setCaret(sum('MINUS', caretAt(), num(1))),
+      ]),
+    ),
+    ...onKeyHeld('right arrow', () =>
+      onlyIf(both(focused(), compare('LT', caretAt(), length())), [
+        setCaret(sum('ADD', caretAt(), num(1))),
+      ]),
+    ),
+  ],
+});

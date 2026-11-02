@@ -22,26 +22,20 @@
 // their own, shared across files the way an actor is; until then, one written
 // here is a definition nothing can name.
 
-import {actorFile, actsLike, num, showAs} from './workspace';
+import {actorDocument} from '../actorDocument';
 
 /** The picture it shows until a project gives it a face of its own. */
 export const PORTRAIT_SPRITE = 'player';
 
-/** `set opacity of ⟨this actor⟩ to ⟨value⟩`. */
-const opacity = (value: number) => ({
-  type: 'world_set_Appearance_OpacityProperty',
-  inputs: {
-    ACTOR: {block: {type: 'world_this_actor'}},
-    VALUE: num(value),
-  },
-});
-
-export const portraitActor = actorFile('Portrait', [
+export const portraitActor = actorDocument({
+  name: 'Portrait',
   // AN IMAGE, which is a picture drawn into a box: the face is its
   // `picture`, chosen per placement (specs/ACTORS_AS_DATA_PLAN.md, step 4).
   // It was a sprite, which an interface actor no longer wears.
-  actsLike('actors/image'),
-  showAs('portrait'),
-  // Off screen until it is asked for.
-  opacity(0),
-]);
+  actsLike: 'actors/image',
+  icon: 'portrait',
+  values: [
+    // Off screen until it is asked for.
+    {setter: 'world_set_Appearance_OpacityProperty', type: 'number', value: 0},
+  ],
+});

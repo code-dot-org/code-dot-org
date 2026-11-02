@@ -17,36 +17,33 @@
 // decoy. Damage is dealt by one actor and felt by another (`enhance/
 // dealsDamage`): a player with no health walks through one unharmed.
 
-import {
-  actorFile,
-  fill,
-  me,
-  num,
-  rectangle,
-  swatch,
-  useTrait,
-} from './workspace';
+import {actorDocument} from '../actorDocument';
+
+import {drawingRow, fill, rectangle, swatch} from './workspace';
 
 /** How long a shot lives, in seconds. Long enough to cross a screen. */
 const LIFETIME = 3;
 
-export const shotActor = actorFile(
-  'Shot',
-  [
-    useTrait('Physics#CanMoveTrait'),
-    useTrait('Collisions#CanCollideTrait'),
-    useTrait('Expiry#ExpiresTrait'),
-    useTrait('Health#DealsDamageTrait'),
+export const shotActor = actorDocument({
+  name: 'Shot',
+  traits: [
+    'Physics#CanMoveTrait',
+    'Collisions#CanCollideTrait',
+    'Expiry#ExpiresTrait',
+    'Health#DealsDamageTrait',
+  ],
+  values: [
     {
-      type: 'world_set_Expiry_LifetimeProperty',
-      inputs: {ACTOR: me(), VALUE: num(LIFETIME)},
+      setter: 'world_set_Expiry_LifetimeProperty',
+      type: 'number',
+      value: LIFETIME,
     },
   ],
-  {
-    drawing: {
+  code: [
+    drawingRow({
       width: 8,
       height: 8,
       commands: [fill(swatch('#ffd23f')), rectangle(0, 0, 8, 8)],
-    },
-  },
-);
+    }),
+  ],
+});

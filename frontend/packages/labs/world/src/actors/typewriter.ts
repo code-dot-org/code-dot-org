@@ -45,12 +45,21 @@
 import {pathSlug} from '../blockly/ruleRegistry';
 
 import {
+  writeMember,
+  writeProperty,
+  writeValue,
+  type ActorMember,
+  type ActorProperty,
+  type ActorValue,
+  type Block,
+} from './actorData';
+import {
+  block,
   chain,
-  defineBlock,
-  defineEvent,
-  defineProperty,
+  event,
   me,
   paramValue,
+  property,
   setText,
   textOf,
   type BlockParam,
@@ -139,10 +148,15 @@ const onlyIf = (test: object, body: object[]) => ({
 
 /** What a typewriter is, for the file that will hold it. */
 export interface Typewriter {
-  /** Rows for the `define actor` chain, in reading order. */
+  /** What it declares: two properties, its event and its two blocks. */
+  properties: ActorProperty[];
+  members: Array<Omit<ActorMember, 'id'>>;
+  /** …and the timer it starts stopped. */
+  values: ActorValue[];
+  /** The same as `define actor` rows, for an enhancement that writes rows. */
   rows: object[];
   /** `when ⟨this actor⟩'s timer fires` — a hat, and so a root of its own. */
-  handler: object;
+  handler: Block;
   /** The workspace variable `say ⟨words⟩` binds its parameter to. */
   variables: ReadonlyArray<{id: string; name: string; type: string}>;
   /** The block type of `say ⟨words⟩`'s call site, for a caller that names it. */
@@ -159,6 +173,23 @@ export interface Typewriter {
  * chances to disagree with the palette about what a block is called.
  */
 export function typewriterFor(modulePath: string): Typewriter {
+  const declared = typewriterData(modulePath);
+  return {
+    ...declared,
+    rows: [
+      ...declared.properties.map(writeProperty),
+      // Unnumbered, as a row written by hand is: the fold numbers it.
+      ...declared.members.map(member => {
+        const row = writeMember({...member, id: ''});
+        delete row.id;
+        return row;
+      }),
+      ...declared.values.map(writeValue),
+    ],
+  };
+}
+
+function typewriterData(modulePath: string): Omit<Typewriter, 'rows'> {
   const own = pathSlug(modulePath);
   /** `⟨the whole line⟩ of this actor`. */
   const wholeLine = () => ({
@@ -188,19 +219,21 @@ export function typewriterFor(modulePath: string): Typewriter {
         type: TYPEWRITER_WORDS.binds,
       },
     ],
-    rows: [
+    properties: [
       // The line being said. READ-ONLY: `say` is how a new one arrives, and it
       // clears what is showing in the same breath. Settable on its own, a
       // second line shorter than the first was never drawn at all — the actor
       // went on showing the line before, which is what the first scene with
       // two lines in it found.
-      defineProperty('string', 'the whole line', '', {readonly: true}),
+      property('string', 'the whole line', '', {readonly: true}),
       // Reading pace. Read when a line STARTS, because `say` is what turns it
       // into the timer's period; changing it mid-sentence takes effect on the
       // next thing said.
-      defineProperty('number', 'letters a second', String(PACE)),
-      defineEvent('finishes revealing'),
-      defineBlock({
+      property('number', 'letters a second', String(PACE)),
+    ],
+    members: [
+      event('finishes revealing'),
+      block({
         say: ['say', TYPEWRITER_WORDS],
         description:
           'Say a new line, from the beginning. The words arrive at reading pace.',
@@ -230,7 +263,7 @@ export function typewriterFor(modulePath: string): Typewriter {
           setTyping(true),
         ],
       }),
-      defineBlock({
+      block({
         say: ['show all of it'],
         description:
           'Skip to the end of the line — for a reader who has read it faster than it is arriving.',
@@ -245,10 +278,16 @@ export function typewriterFor(modulePath: string): Typewriter {
           ]),
         ],
       }),
+    ],
+    values: [
       // STOPPED UNTIL SOMETHING IS SAID. A timer runs by default and fires on
       // its first frame, which would type whatever the actor already says out
       // of an empty `the whole line` and leave it blank.
-      setTyping(false),
+      {
+        setter: 'world_set_Time_TimerRunsProperty',
+        type: 'boolean',
+        value: false,
+      },
     ],
     handler: {
       // One letter per firing. The whole of the typewriter.

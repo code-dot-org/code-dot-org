@@ -68,33 +68,32 @@
 // shorter line means a smaller caret offset, which brings the upper bound —
 // and the words — back with it.
 
-import {labelHalf, labelSizeOf} from './label';
+import {actorDocument} from '../actorDocument';
+
+import {boxValue, labelHalf, labelSizeOf} from './label';
 import {BORDER, LOOK, RADIUS_TIGHT} from './look';
 import {
-  actorFile,
-  actsLike,
   alongX,
   alongY,
+  block,
   chain,
   corner,
-  defineBlock,
-  defineEvent,
-  defineProperty,
+  drawingRow,
   drawParagraph,
+  event,
   fill,
   joined,
+  labelValue,
   me,
   noOutline,
   num,
   outline,
+  property,
   rectangle,
   setText,
-  showAs,
   swatch,
   textOf,
   useStyle,
-  useTrait,
-  words,
 } from './workspace';
 
 const OWN = 'ActorsTextArea';
@@ -553,12 +552,42 @@ const key = (name: string, body: object) => ({
   next: {block: body},
 });
 
-export const textAreaActor = actorFile(
-  'Text Area',
-  [
-    actsLike('actors/label'),
+export const textAreaActor = actorDocument({
+  name: 'Text Area',
+  actsLike: 'actors/label',
+  icon: 'paragraph',
+  traits: [
+    'Input#TakesKeyboardInputTrait',
+    'Mouse#CanBeClickedTrait',
+    // …and the wheel, now that there is something to scroll.
+    'Mouse#CanBeScrolledTrait',
+    'Tab Navigation#CanBeFocusedTrait',
+  ],
+  properties: [
+    property('number', 'caret', '0'),
+    // How far down the words the box is looking, in pixels. Kept in pixels
+    // and not in lines for the reason the List keeps its in pixels: a drag is
+    // a distance, and rounding one to whole lines makes a slow drag do
+    // nothing and a fast one jump.
+    property('number', 'scroll', '0'),
+    // …and how far ACROSS them, which is the Text Input's `scroll` by another
+    // name: a line longer than the box has to slide to keep the bar in view.
+    // Called `slide` because `scroll` is taken by the other axis, and a
+    // control with `scroll` and `scroll x` reads as though one of them were a
+    // vector that is not.
+    property('number', 'slide', '0'),
+  ],
+  values: [
+    boxValue('Width', WIDTH),
+    boxValue('Height', HEIGHT),
+    // From the top-left corner, since a paragraph grows down from its first
+    // line and the caret is placed by counting from it.
+    labelValue('TextAnchorProperty', {type: 'string', value: 'top left'}),
+    labelValue('TextProperty', {type: 'string', value: ''}),
+  ],
+  members: [
     // What every key hat and the click do after moving the bar, said once.
-    defineBlock({
+    block({
       // THIS KIND'S OWN WORK, in nobody else's toolbox. A file that does not
       // know what a caret is can mean nothing by it.
       private: true,
@@ -578,7 +607,7 @@ export const textAreaActor = actorFile(
     // does two things, and it now says the two things. The walks are a click
     // away, in the definition beside the others, rather than in the way of
     // anyone reading what a click DOES.
-    defineBlock({
+    block({
       private: true,
       say: [PLACE_THE_BAR],
       description:
@@ -586,121 +615,10 @@ export const textAreaActor = actorFile(
         'letter along that line, and then bring it into view.',
       body: placesTheCaret(),
     }),
-    useTrait('Input#TakesKeyboardInputTrait'),
-    useTrait('Mouse#CanBeClickedTrait'),
-    // …and the wheel, now that there is something to scroll.
-    useTrait('Mouse#CanBeScrolledTrait'),
-    useTrait('Tab Navigation#CanBeFocusedTrait'),
-    showAs('paragraph'),
-    defineProperty('number', 'caret', '0'),
-    // How far down the words the box is looking, in pixels. Kept in pixels
-    // and not in lines for the reason the List keeps its in pixels: a drag is
-    // a distance, and rounding one to whole lines makes a slow drag do
-    // nothing and a fast one jump.
-    defineProperty('number', 'scroll', '0'),
-    // …and how far ACROSS them, which is the Text Input's `scroll` by another
-    // name: a line longer than the box has to slide to keep the bar in view.
-    // Called `slide` because `scroll` is taken by the other axis, and a
-    // control with `scroll` and `scroll x` reads as though one of them were a
-    // vector that is not.
-    defineProperty('number', 'slide', '0'),
-    defineEvent('changed'),
-    {
-      type: 'world_set_Boxed_WidthProperty',
-      inputs: {
-        ACTOR: me(),
-        VALUE: {shadow: {type: 'math_number', fields: {NUM: WIDTH}}},
-      },
-    },
-    {
-      type: 'world_set_Boxed_HeightProperty',
-      inputs: {
-        ACTOR: me(),
-        VALUE: {shadow: {type: 'math_number', fields: {NUM: HEIGHT}}},
-      },
-    },
-    // From the top-left corner, since a paragraph grows down from its first
-    // line and the caret is placed by counting from it.
-    setText('TextAnchorProperty', words('top left')),
-    setText('TextProperty', words('')),
+    event('changed'),
   ],
-  {
-    handlers: [
-      // The wheel, which reads the words without moving the bar — the one
-      // way to look further down a paragraph than you are typing in.
-      {
-        type: 'world_on_Mouse_IsScrolledByEvent',
-        next: {
-          block: scrollTo(
-            sum('ADD', scroll(), {block: {type: 'world_event_value'}}),
-          ),
-        },
-      },
-      // A click chooses this area, and puts the bar at the end.
-      {
-        type: 'world_on_Mouse_IsClickedWithEvent',
-        fields: {FILTER0: ''},
-        next: {block: chain([takeFocus(), placeTheBar()])},
-      },
-      // A character goes in at the bar.
-      {
-        type: 'world_on_Input_TypesEvent',
-        next: {
-          block: onlyIf(
-            focused(),
-            insert({block: {type: 'world_event_value'}}),
-          ),
-        },
-      },
-      // …and so does a line: Enter is the one key that adds to the words.
-      key('enter', onlyIf(focused(), insert(NEWLINE()))),
-      key(
-        'backspace',
-        onlyIf(both(focused(), compare('GT', caretAt(), num(0))), [
-          setText(
-            'TextProperty',
-            joined([
-              upTo(sum('MINUS', caretAt(), num(1))),
-              from(sum('ADD', caretAt(), num(1))),
-            ]),
-          ),
-          setCaret(sum('MINUS', caretAt(), num(1))),
-          keepInView(),
-          emitChanged(),
-        ]),
-      ),
-      key(
-        'delete',
-        onlyIf(both(focused(), compare('LT', caretAt(), length())), [
-          setText(
-            'TextProperty',
-            joined([before(), from(sum('ADD', caretAt(), num(2)))]),
-          ),
-          // The caret has not moved, but the words below it have — a delete
-          // that joins two lines makes the paragraph shorter, and a window
-          // parked at the old bottom would be past the new one.
-          keepInView(),
-          emitChanged(),
-        ]),
-      ),
-      key(
-        'left arrow',
-        onlyIf(both(focused(), compare('GT', caretAt(), num(0))), [
-          setCaret(sum('MINUS', caretAt(), num(1))),
-          keepInView(),
-        ]),
-      ),
-      key(
-        'right arrow',
-        onlyIf(both(focused(), compare('LT', caretAt(), length())), [
-          setCaret(sum('ADD', caretAt(), num(1))),
-          keepInView(),
-        ]),
-      ),
-      key('up arrow', lineAbove()),
-      key('down arrow', lineBelow()),
-    ],
-    drawing: {
+  code: [
+    drawingRow({
       width: width(),
       height: height(),
       commands: [
@@ -741,6 +659,76 @@ export const textAreaActor = actorFile(
           ),
         ]),
       ],
+    }),
+    // The wheel, which reads the words without moving the bar — the one
+    // way to look further down a paragraph than you are typing in.
+    {
+      type: 'world_on_Mouse_IsScrolledByEvent',
+      next: {
+        block: scrollTo(
+          sum('ADD', scroll(), {block: {type: 'world_event_value'}}),
+        ),
+      },
     },
-  },
-);
+    // A click chooses this area, and puts the bar at the end.
+    {
+      type: 'world_on_Mouse_IsClickedWithEvent',
+      fields: {FILTER0: ''},
+      next: {block: chain([takeFocus(), placeTheBar()])},
+    },
+    // A character goes in at the bar.
+    {
+      type: 'world_on_Input_TypesEvent',
+      next: {
+        block: onlyIf(focused(), insert({block: {type: 'world_event_value'}})),
+      },
+    },
+    // …and so does a line: Enter is the one key that adds to the words.
+    key('enter', onlyIf(focused(), insert(NEWLINE()))),
+    key(
+      'backspace',
+      onlyIf(both(focused(), compare('GT', caretAt(), num(0))), [
+        setText(
+          'TextProperty',
+          joined([
+            upTo(sum('MINUS', caretAt(), num(1))),
+            from(sum('ADD', caretAt(), num(1))),
+          ]),
+        ),
+        setCaret(sum('MINUS', caretAt(), num(1))),
+        keepInView(),
+        emitChanged(),
+      ]),
+    ),
+    key(
+      'delete',
+      onlyIf(both(focused(), compare('LT', caretAt(), length())), [
+        setText(
+          'TextProperty',
+          joined([before(), from(sum('ADD', caretAt(), num(2)))]),
+        ),
+        // The caret has not moved, but the words below it have — a delete
+        // that joins two lines makes the paragraph shorter, and a window
+        // parked at the old bottom would be past the new one.
+        keepInView(),
+        emitChanged(),
+      ]),
+    ),
+    key(
+      'left arrow',
+      onlyIf(both(focused(), compare('GT', caretAt(), num(0))), [
+        setCaret(sum('MINUS', caretAt(), num(1))),
+        keepInView(),
+      ]),
+    ),
+    key(
+      'right arrow',
+      onlyIf(both(focused(), compare('LT', caretAt(), length())), [
+        setCaret(sum('ADD', caretAt(), num(1))),
+        keepInView(),
+      ]),
+    ),
+    key('up arrow', lineAbove()),
+    key('down arrow', lineBelow()),
+  ],
+});

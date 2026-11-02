@@ -28,7 +28,9 @@
 // rather than neutral. A control scheme is what a player IS; what jumping is
 // FOR is still the game's.
 
-import {actorFile, looksLike, onKey, useTrait} from './workspace';
+import {actorDocument} from '../actorDocument';
+
+import {onKey, stockAnimations} from './workspace';
 
 /** The animation this plays, and so the one the import must bring. */
 export const PLAYER_ANIMATION = 'playerWalk';
@@ -39,20 +41,20 @@ const jump = {
   inputs: {VALUE: {block: {type: 'world_this_actor'}}},
 };
 
-export const playerActor = actorFile(
-  'Platformer Player',
-  [
+export const playerActor = actorDocument({
+  name: 'Platformer Player',
+  traits: [
     // Jumping, which brings being pulled down with it.
-    useTrait('Jumping#JumpsTrait'),
+    'Jumping#JumpsTrait',
     // Walking. Across only: down is for a top-down game, and a platformer that
     // elected it would let the player fly.
-    useTrait('Arrow Keys#MovesAcrossTrait'),
+    'Arrow Keys#MovesAcrossTrait',
     // Hearing the keyboard is something an actor ELECTS. The world's own key
     // events are raised once a frame whatever is in it; this trait is what
     // makes `rules/input` also tell THIS actor, and it is why that broadcast
     // walks one player rather than every coin.
-    useTrait('Input#TakesKeyboardInputTrait'),
-    looksLike(PLAYER_ANIMATION),
+    'Input#TakesKeyboardInputTrait',
   ],
-  {handlers: [onKey('space', [jump])]},
-);
+  animations: stockAnimations({Main: PLAYER_ANIMATION}),
+  code: [onKey('space', [jump])],
+});

@@ -3,8 +3,8 @@
 
 import {describe, expect, it} from 'vitest';
 
+import {actorDocument} from '../actors/actorDocument';
 import {HEALTH_BAR_SUBJECT} from '../actors/stock/healthBar';
-import {actorFile, actsLike, showAs} from '../actors/stock/workspace';
 import {DEFAULT_PROJECT} from '../constants';
 import type {Actor, GameEvent} from '../engine';
 import {projectFiles} from '../runtime/projectFiles';
@@ -69,12 +69,17 @@ const project = () => {
   return {
     ...files,
     'maps/main.map': JSON.stringify(level),
-    'actors/healthBar.actor': actorFile(
-      'Health Bar',
-      [actsLike('actors/progressBar'), HEALTH_BAR_SUBJECT, showAs('health')],
-      {handlers: [HEARS_DAMAGE]},
-    ),
-    'actors/bigBar.actor': actorFile('Big Bar', [actsLike('actors/healthBar')]),
+    'actors/healthBar.actor': actorDocument({
+      name: 'Health Bar',
+      actsLike: 'actors/progressBar',
+      icon: 'health',
+      properties: [HEALTH_BAR_SUBJECT],
+      code: [HEARS_DAMAGE],
+    }),
+    'actors/bigBar.actor': actorDocument({
+      name: 'Big Bar',
+      actsLike: 'actors/healthBar',
+    }),
   };
 };
 

@@ -28,16 +28,11 @@
 // offered a sprite. A drawing is drawn into its own canvas, which also clips
 // it, so a crop is one more way to fit and is left for when it is asked for.
 
-import {setBox} from './label';
+import {actorDocument} from '../actorDocument';
+
+import {boxValue} from './label';
 import {PORTRAIT_SPRITE} from './portrait';
-import {
-  actorFile,
-  defineProperty,
-  me,
-  useTrait,
-  num,
-  showAs,
-} from './workspace';
+import {drawingRow, me, num, property} from './workspace';
 
 /** How big an Image is unless a project says otherwise. */
 const WIDTH = 64;
@@ -71,36 +66,37 @@ const drawn = (fit: 'fit' | 'stretch') => ({
   },
 });
 
-export const imageActor = actorFile(
-  'Image',
-  [
-    // NOT `acts like a Label`, which every other boxed interface actor is.
-    // It has no words, and a Label's drawing would be a second picture
-    // under its own. It is a picture with a box round it.
-    //
-    // THE BOX IS STILL SHARED, though: `Has a Box` is a trait every
-    // interface kind elects, and an Image not being a Label is no reason for
-    // it to invent a second `width` (specs/BOXES_PLAN.md).
-    showAs('image'),
-    useTrait('Boxed#HasABoxTrait'),
+export const imageActor = actorDocument({
+  name: 'Image',
+  // NOT `acts like a Label`, which every other boxed interface actor is.
+  // It has no words, and a Label's drawing would be a second picture
+  // under its own. It is a picture with a box round it.
+  //
+  // THE BOX IS STILL SHARED, though: `Has a Box` is a trait every
+  // interface kind elects, and an Image not being a Label is no reason for
+  // it to invent a second `width` (specs/BOXES_PLAN.md).
+  icon: 'image',
+  traits: [
+    'Boxed#HasABoxTrait',
     // …and which theme it is painted out of, when it is not the world's
     // (specs/STYLES_PLAN.md). Elected by the same kinds for the same reason:
     // an inspector cannot ask a Coin what its theme is.
-    useTrait('Styled#HasAStyleTrait'),
-    setBox('Width', WIDTH),
-    setBox('Height', HEIGHT),
+    'Styled#HasAStyleTrait',
+  ],
+  properties: [
     // What it shows, chosen per placement from the project's pictures; one
     // to start with, so an Image placed in the map editor is something you
     // can see and move before you have chosen.
-    defineProperty('picture', 'picture', `${PORTRAIT_SPRITE}.png`),
+    property('picture', 'picture', `${PORTRAIT_SPRITE}.png`),
     // Fill the box exactly and distort, or fit inside it and keep the
     // picture's shape. A boolean rather than a choice of words because an
     // actor's own properties have no enum type, and two answers do not need
     // one (`blockly/ruleMeta`, PROPERTY_TYPES).
-    defineProperty('boolean', 'stretches', 'FALSE'),
+    property('boolean', 'stretches', 'FALSE'),
   ],
-  {
-    drawing: {
+  values: [boxValue('Width', WIDTH), boxValue('Height', HEIGHT)],
+  code: [
+    drawingRow({
       width: box('Width'),
       height: box('Height'),
       commands: [
@@ -114,6 +110,6 @@ export const imageActor = actorFile(
           },
         },
       ],
-    },
-  },
-);
+    }),
+  ],
+});
