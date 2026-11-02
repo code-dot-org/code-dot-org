@@ -204,6 +204,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.rerunAfterExecute_ = false;
     this.runId_ = 0;
     this.aiSetters_ = new Map();
+    this.aiPending_ = new Set();
     // True from a jump trigger until the target runs; repeat triggers are
     // ignored meanwhile.
     this.sceneJumpInFlight_ = false;
@@ -699,29 +700,34 @@ export default class SpriteLab2Engine extends SpriteLab {
     };
     const runId = ++this.runId_;
     this.aiSetters_ = new Map();
+    // One request per variable at a time, to avoid a flood of requests at once.
+    const pending = (this.aiPending_ = new Set());
     library.commands.askAI = (promptText, variableName, setterCallback) => {
-      if (!this.canAskAi_()) {
+      if (!this.canAskAi_() || pending.has(variableName)) {
         return;
       }
+      pending.add(variableName);
       this.registerAiAnswer_(library, variableName, setterCallback);
-      askAiText(String(promptText ?? '')).then(
-        text => {
-          if (this.destroyed_ || runId !== this.runId_) {
-            return;
+      askAiText(String(promptText ?? ''))
+        .then(
+          text => {
+            if (this.destroyed_ || runId !== this.runId_) {
+              return;
+            }
+            this.deliverAiAnswer_(library, variableName, text);
+          },
+          error => {
+            if (this.destroyed_ || runId !== this.runId_) {
+              return;
+            }
+            console.warn(
+              error instanceof AskAiError
+                ? `SpriteLab2: the ask AI block's ${error.phase} did not pass the safety check.`
+                : `SpriteLab2: the ask AI block got no answer (${error.message}).`
+            );
           }
-          this.deliverAiAnswer_(library, variableName, text);
-        },
-        error => {
-          if (this.destroyed_ || runId !== this.runId_) {
-            return;
-          }
-          console.warn(
-            error instanceof AskAiError
-              ? `SpriteLab2: the ask AI block's ${error.phase} did not pass the safety check.`
-              : `SpriteLab2: the ask AI block got no answer (${error.message}).`
-          );
-        }
-      );
+        )
+        .finally(() => pending.delete(variableName));
     };
     return library;
   }
