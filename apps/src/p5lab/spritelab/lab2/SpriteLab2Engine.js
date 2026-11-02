@@ -202,9 +202,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     // behind must not start a program in it.
     this.destroyed_ = false;
     this.rerunAfterExecute_ = false;
-    // Bumped per run, so an AI answer in flight when the program restarts
-    // is dropped instead of writing into the new run's variables.
-    this.askAiRunId_ = 0;
+    this.runId_ = 0;
     // True from a jump trigger until the target runs; repeat triggers are
     // ignored meanwhile.
     this.sceneJumpInFlight_ = false;
@@ -698,8 +696,7 @@ export default class SpriteLab2Engine extends SpriteLab {
         choices.length ? choices : undefined
       );
     };
-    // Answers from a previous run must not land in this one's variables.
-    const askAiRun = ++this.askAiRunId_;
+    const runId = ++this.runId_;
     library.commands.askAI = (promptText, variableName, setterCallback) => {
       if (!this.canAskAi_()) {
         return;
@@ -709,13 +706,13 @@ export default class SpriteLab2Engine extends SpriteLab {
       library.registerPrompt(promptText, variableName, setterCallback);
       askAiText(String(promptText ?? '')).then(
         text => {
-          if (this.destroyed_ || askAiRun !== this.askAiRunId_) {
+          if (this.destroyed_ || runId !== this.runId_) {
             return;
           }
           this.deliverAiAnswer_(library, variableName, text);
         },
         error => {
-          if (this.destroyed_ || askAiRun !== this.askAiRunId_) {
+          if (this.destroyed_ || runId !== this.runId_) {
             return;
           }
           // registerPrompt counted this one, and nothing will answer it now.
