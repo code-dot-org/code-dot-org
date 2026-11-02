@@ -1,8 +1,8 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDom from 'react-dom';
 
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 $(document).ready(() => {
   $('#markdown.teacher.hide-as-student > .markdown-container').each(
@@ -17,7 +17,7 @@ $(document).ready(() => {
         allowEmbeds: container.dataset.allowEmbeds === 'true',
       };
 
-      ReactDom.render(
+      createReactRoot(
         React.createElement(SafeMarkdown, props, null),
         container
       );

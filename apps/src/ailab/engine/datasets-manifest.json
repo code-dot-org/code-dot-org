@@ -1,10 +1,139 @@
 {
   "datasets": [
     {
+      "id": "SC1-L06-playlist-a-base",
+      "name": "Playlist Bot A",
+      "path": "datasets/SC1-L06-playlist-a-base.csv",
+      "metadataPath": "datasets/SC1-L06-playlist-a-base.json",
+      "isToy": true,
+      "rowCount": 10
+    },
+    {
+      "id": "SC1-L06-playlist-b-base",
+      "name": "Playlist Bot B",
+      "path": "datasets/SC1-L06-playlist-b-base.csv",
+      "metadataPath": "datasets/SC1-L06-playlist-b-base.json",
+      "isToy": true,
+      "rowCount": 20
+    },  
+    {
+      "id": "SC1-L08-marketing-base",
+      "name": "Movie Clips",
+      "path": "datasets/SC1-L08-marketing-base.csv",
+      "metadataPath": "datasets/SC1-L08-marketing-base.json",
+      "isToy": true,
+      "rowCount": 85
+    },
+    {
+      "id": "SC1-L08-marketing-add-bts-hits",
+      "name": "Behind-the-Scenes Clips",
+      "path": "datasets/SC1-L08-marketing-add-bts-hits.csv",
+      "metadataPath": "datasets/SC1-L08-marketing-add-bts-hits.json",
+      "isToy": true,
+      "rowCount": 89
+    },
+    {
+      "id": "SC1-L08-marketing-remove-old-bts",
+      "name": "Recent Clips",
+      "path": "datasets/SC1-L08-marketing-remove-old-bts.csv",
+      "metadataPath": "datasets/SC1-L08-marketing-remove-old-bts.json",
+      "isToy": true,
+      "rowCount": 81
+    },
+    {
+      "id": "SC1-L08-marketing-add-interviews",
+      "name": "Interview Clips",
+      "path": "datasets/SC1-L08-marketing-add-interviews.csv",
+      "metadataPath": "datasets/SC1-L08-marketing-add-interviews.json",
+      "isToy": true,
+      "rowCount": 89
+    },
+    {
+      "id": "SC1-L08-marketing-add-new-actor-hits",
+      "name": "New Actor Clips",
+      "path": "datasets/SC1-L08-marketing-add-new-actor-hits.csv",
+      "metadataPath": "datasets/SC1-L08-marketing-add-new-actor-hits.json",
+      "isToy": true,
+      "rowCount": 89
+    },
+    {
+      "id": "SC1-L04-waterhole-west-cameras",
+      "name": "Camera Trap Records",
+      "path": "datasets/SC1-L04-waterhole-west-cameras.csv",
+      "metadataPath": "datasets/SC1-L04-waterhole-west-cameras.json",
+      "isToy": true,
+      "rowCount": 80
+    },
+    {
+      "id": "SC1-L04-waterhole-ranger-patrols",
+      "name": "Ranger Patrol Records",
+      "path": "datasets/SC1-L04-waterhole-ranger-patrols.csv",
+      "metadataPath": "datasets/SC1-L04-waterhole-ranger-patrols.json",
+      "isToy": true,
+      "rowCount": 100
+    },
+    {
+      "id": "SC1-L04-waterhole-north-cameras",
+      "name": "North Camera Records",
+      "path": "datasets/SC1-L04-waterhole-north-cameras.csv",
+      "metadataPath": "datasets/SC1-L04-waterhole-north-cameras.json",
+      "isToy": true,
+      "rowCount": 80
+    },
+    {
+      "id": "SC1-L04-waterhole-south-cameras",
+      "name": "South Camera Records",
+      "path": "datasets/SC1-L04-waterhole-south-cameras.csv",
+      "metadataPath": "datasets/SC1-L04-waterhole-south-cameras.json",
+      "isToy": true,
+      "rowCount": 80
+    },
+    {
+      "id": "SC1-L04-waterhole-lake-cameras",
+      "name": "Lake Camera Records",
+      "path": "datasets/SC1-L04-waterhole-lake-cameras.csv",
+      "metadataPath": "datasets/SC1-L04-waterhole-lake-cameras.json",
+      "isToy": true,
+      "rowCount": 100
+    },
+    {
+      "id": "SC1-L07-previs-base",
+      "name": "Amazon Future Engineer - Previsualization",
+      "path": "datasets/SC1-L07-previs-base.csv",
+      "metadataPath": "datasets/SC1-L07-previs-base.json",
+      "isToy": true,
+      "rowCount": 79
+    },
+    {
+      "id": "SC1-L07-previs-variant-budget",
+      "name": "Amazon Future Engineer - Previsualization",
+      "path": "datasets/SC1-L07-previs-variant-budget.csv",
+      "metadataPath": "datasets/SC1-L07-previs-variant-budget.json",
+      "isToy": true,
+      "rowCount": 79
+    },
+    {
+      "id": "SC1-L07-previs-variant-famous-actor",
+      "name": "Amazon Future Engineer - Previsualization",
+      "path": "datasets/SC1-L07-previs-variant-famous-actor.csv",
+      "metadataPath": "datasets/SC1-L07-previs-variant-famous-actor.json",
+      "isToy": true,
+      "rowCount": 79
+    },
+    {
+      "id": "SC1-L07-previs-variant-filmed-again",
+      "name": "Amazon Future Engineer - Previsualization",
+      "path": "datasets/SC1-L07-previs-variant-filmed-again.csv",
+      "metadataPath": "datasets/SC1-L07-previs-variant-filmed-again.json",
+      "isToy": true,
+      "rowCount": 79
+    },
+    {
       "id": "smart_room_training",
       "name": "Smart Room Training",
       "path": "datasets/smart_room_training.csv",
       "metadataPath": "datasets/smart_room_training.json",
+      "isToy": true,
       "rowCount": 6
     },
     {

@@ -343,7 +343,7 @@ Dashboard::Application.routes.draw do
 
     resources :p, path: '/p/', only: [:index] do
       collection do
-        ProjectsController::STANDALONE_PROJECTS.each do |key, value|
+        Policies::StandaloneProjects.all.each do |key, value|
           get '/' + key.to_s, to: 'projects#redirect_legacy', key: value[:name], as: key.to_s
         end
         get '/', to: redirect('/projects')
@@ -368,7 +368,7 @@ Dashboard::Application.routes.draw do
 
     resources :projects, path: '/projects/', only: [:index] do
       collection do
-        ProjectsController::STANDALONE_PROJECTS.each do |key, _|
+        Policies::StandaloneProjects.all.each do |key, _|
           get "/#{key}", to: 'projects#load', key: key.to_s, as: "#{key}_project"
           get "/#{key}/new", to: 'projects#create_new', key: key.to_s, as: "#{key}_project_create_new"
 
@@ -1125,7 +1125,8 @@ Dashboard::Application.routes.draw do
     # Mutating actions kept out of the GET wildcard below: a GET would skip
     # CSRF verification.
     api_post_only_methods = [:import_classlink_classroom]
-    api_methods -= api_post_only_methods
+    api_explicitly_routed_methods = [:mass_progress_reset]
+    api_methods -= api_post_only_methods + api_explicitly_routed_methods
 
     namespace :dashboardapi, module: :api do
       api_methods.each do |action|
@@ -1146,6 +1147,7 @@ Dashboard::Application.routes.draw do
     get '/dashboardapi/script_standards/:script', to: 'api#script_standards'
     get '/api/teacher_panel_progress/:section_id', to: 'api#teacher_panel_progress'
     get '/api/teacher_panel_section', to: 'api#teacher_panel_section'
+    post '/api/mass_progress_reset', to: 'api#mass_progress_reset'
     get '/dashboardapi/section_level_progress/:section_id', to: 'api#section_level_progress', as: 'section_level_progress'
     get '/api/user_progress/:script', to: 'api#user_progress', as: 'user_progress'
     get '/api/user_app_options/:script/:lesson_position/:level_position/:level', to: 'api#user_app_options', as: 'user_app_options'
@@ -1532,7 +1534,11 @@ Dashboard::Application.routes.draw do
     resources :aidiff_artifacts, only: [:index, :create]
 
     resources :user_practice_problem_attempts, only: [:index, :update, :create, :show]
-    resources :practice_problems, only: [:index, :show]
+    resources :practice_problems, only: [:index, :show, :create, :update, :destroy] do
+      collection do
+        post 'generate'
+      end
+    end
 
     resources :quiz_attempts, only: [:index, :create, :update]
     resource :adaptive_progress, controller: :adaptive_progress, only: [:show] do

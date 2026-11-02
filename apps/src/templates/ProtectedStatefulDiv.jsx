@@ -1,6 +1,5 @@
 import _ from 'lodash';
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 /**
@@ -50,17 +49,11 @@ class ProtectedStatefulDiv extends React.Component {
   render() {
     return (
       <div
-        {..._.omit(this.props, [
-          'contentFunction',
-          'radiumConfigContext',
-          'styleKeeperContext',
-          'canUpdate',
-          'canUnmount',
-        ])}
+        {..._.omit(this.props, ['contentFunction', 'canUpdate', 'canUnmount'])}
         ref="root"
       />
     );
   }
 }
 
-export default Radium(ProtectedStatefulDiv);
+export default ProtectedStatefulDiv;

@@ -1,8 +1,7 @@
 <%
   PRODUCTION_DB_CLUSTER_ID = 'autoscale-prod-cluster'.freeze
-  # If an adhoc environment is using MySQL server installed on the app server EC2 Instance instead of an AWS RDS Cluster
-  # use default credentials and hostname.
-  MYSQL_DAEMON_DEFAULT_CREDENTIALS = '{"username":"root", "password":""}'.freeze
+  # The admin credential that the Chef `cdo-mysql::server` recipe configures `mysqld` to use.
+  MYSQL_DAEMON_ADMIN_CREDENTIAL = '{"username":"root", "password":""}'.freeze
   MYSQL_DAEMON_HOSTNAME = 'localhost'.freeze
   MYSQL_DAEMON_PORT = '3306'.freeze
   DATABASE_CONFIGURATION = {
@@ -49,36 +48,28 @@
         PasswordLength: 10
         ExcludePunctuation: True
 <% else -%>
-      SecretString: '<%=MYSQL_DAEMON_DEFAULT_CREDENTIALS %>'
+      SecretString: '<%=MYSQL_DAEMON_ADMIN_CREDENTIAL %>'
 <% end -%>
   DatabaseSecretWriter:
     Type: AWS::SecretsManager::Secret
     Properties:
       Name: !Sub "CfnStack/${AWS::StackName}/db_credential_writer"
       Description: !Sub "Database credentials for ${AWS::StackName} writer user."
-<% if database -%>
       GenerateSecretString:
         SecretStringTemplate: '{"username": "writer"}'
         GenerateStringKey: password
         PasswordLength: 10
         ExcludePunctuation: True
-<% else -%>
-      SecretString: '<%=MYSQL_DAEMON_DEFAULT_CREDENTIALS %>'
-<% end -%>
   DatabaseSecretReader:
     Type: AWS::SecretsManager::Secret
     Properties:
       Name: !Sub "CfnStack/${AWS::StackName}/db_credential_reader"
       Description: !Sub "Database credentials for ${AWS::StackName} reader user."
-<% if database -%>
       GenerateSecretString:
         SecretStringTemplate: '{"username": "reader"}'
         GenerateStringKey: password
         PasswordLength: 10
         ExcludePunctuation: True
-<% else -%>
-      SecretString: '<%=MYSQL_DAEMON_DEFAULT_CREDENTIALS %>'
-<% end -%>
 
 # Publish identifiers for database Resources provisioned in this template to Secrets, so the values can dynamically
 # populate CDO.* application configuration settings.

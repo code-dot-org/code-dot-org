@@ -22,8 +22,10 @@ import I18n from '@cdo/apps/ailab/engine/i18n';
 
 import {
   classificationState,
+  classificationRows,
   allNumericalState,
-  regressionState,
+  allNumericalRows,
+  regressionColumnTypes,
   premadeDatasetState,
   premadeDatasetColumnNameLocalized,
   mosquitoCountMax,
@@ -112,7 +114,7 @@ describe('dataColumnsFor', () => {
 describe('filter columns by datatype', () => {
   test('filter numerical columns', async () => {
     const result = filterColumnsByType(
-      regressionState.columnsByDataType,
+      regressionColumnTypes,
       ColumnTypes.NUMERICAL
     );
     expect(result).toEqual(['height']);
@@ -120,7 +122,7 @@ describe('filter columns by datatype', () => {
 
   test('filter categorical columns', async () => {
     const result = filterColumnsByType(
-      regressionState.columnsByDataType,
+      regressionColumnTypes,
       ColumnTypes.CATEGORICAL
     );
     expect(result).toEqual(['sun']);
@@ -128,10 +130,7 @@ describe('filter columns by datatype', () => {
 });
 
 describe('unique options', () => {
-  const uniqueOptions = getUniqueOptions(
-    classificationState.data,
-    'temp'
-  ).sort();
+  const uniqueOptions = getUniqueOptions(classificationRows, 'temp').sort();
 
   test('get unique options', async () => {
     expect(uniqueOptions).toEqual(['cool', 'hot', 'mild']);
@@ -151,19 +150,25 @@ describe('unique options', () => {
 
 describe('isColumnReadOnly', () => {
   test('column is readOnly', async () => {
-    const result = isColumnReadOnly(premadeDatasetState.metadata, 'batCount');
+    const result = isColumnReadOnly(
+      premadeDatasetState.dataset.metadata,
+      'batCount'
+    );
     expect(result).toBe(true);
   });
 
   test('column is not readOnly', async () => {
-    const result = isColumnReadOnly(allNumericalState.metadata, 'batCount');
+    const result = isColumnReadOnly(
+      allNumericalState.dataset.metadata,
+      'batCount'
+    );
     expect(result).toBe(false);
   });
 });
 
 describe('extrema', () => {
   test('getExtrema', async () => {
-    const result = getExtrema(allNumericalState.data, 'mosquitoCount');
+    const result = getExtrema(allNumericalRows, 'mosquitoCount');
     expect(result.max).toBe(mosquitoCountMax);
     expect(result.min).toBe(mosquitoCountMin);
     expect(result.range).toBe(mosquitoCountMax - mosquitoCountMin);
@@ -186,12 +191,12 @@ describe('getDecimalPlaces', () => {
 
 describe('containsOnlyNumbers', () => {
   test('contains only numbers', async () => {
-    const result = containsOnlyNumbers(allNumericalState.data, 'mosquitoCount');
+    const result = containsOnlyNumbers(allNumericalRows, 'mosquitoCount');
     expect(result).toBe(true);
   });
 
   test('contains a string', async () => {
-    const result = containsOnlyNumbers(classificationState.data, 'play');
+    const result = containsOnlyNumbers(classificationRows, 'play');
     expect(result).toBe(false);
   });
 });
@@ -200,7 +205,7 @@ describe('getColumnDescription', () => {
   test('gets description from metadata', async () => {
     const result = getColumnDescription(
       'mosquitoCount',
-      premadeDatasetState.metadata,
+      premadeDatasetState.dataset.metadata,
       {}
     );
     expect(result).toEqual(mosquitoDescription);
@@ -211,7 +216,7 @@ describe('getColumnDescription', () => {
     I18n.initI18n(premadeDatasetTranslations);
     const result = getColumnDescription(
       'mosquitoCount',
-      premadeDatasetState.metadata,
+      premadeDatasetState.dataset.metadata,
       {}
     );
     expect(result).toEqual('mosquitoCount description');

@@ -1,6 +1,7 @@
 import * as BlocklyCore from 'blockly/core';
 
 import {
+  reserveRoom,
   ensureRoom,
   makeRoom,
   quietsBump,
@@ -242,6 +243,69 @@ describe('stackRoom', () => {
         STACK_ROOM_EVENT_GROUP
       );
       expect(BlocklyCore.Events.setRecordUndo).toHaveBeenCalledWith(false);
+    });
+
+    it('keeps reserved room under its stack until the stack holds the block', async () => {
+      const stackOf = (
+        id: string,
+        y: number,
+        type: string,
+        data: string | undefined,
+        held: string[]
+      ) =>
+        Object.assign(block(id, y, 50), {
+          type,
+          data,
+          getDescendants: () => held.map(t => ({type: t})),
+        });
+      const blocks = [
+        stackOf('run', 0, 'spritelab2_whenRun', undefined, [
+          'spritelab2_whenRun',
+        ]),
+        stackOf('touch', 60, 'gamelab_checkTouching', 'treasure-touch', [
+          'gamelab_checkTouching',
+        ]),
+        stackOf('other', 120, 'gamelab_checkTouching', 'friend-touch', [
+          'gamelab_checkTouching',
+        ]),
+        stackOf('last', 180, 'spritelab2_whenRun', undefined, [
+          'spritelab2_whenRun',
+        ]),
+      ];
+      const workspace = {
+        rendered: true,
+        isDragging: () => false,
+        getTopBlocks: () => blocks,
+      } as unknown as BlocklyCore.WorkspaceSvg;
+      reserveRoom(workspace, {
+        attachTo: 'gamelab_checkTouching',
+        data: 'treasure-touch',
+        type: 'spritelab2_goToScene',
+        height: 40,
+      });
+      ensureRoom(workspace);
+      await flush();
+      await flush();
+      // Only the tagged stack keeps room: the one under it sits 40 lower
+      // than the gap alone would put it.
+      const touchTop = 50 + STACK_GAP_PX;
+      const otherTop = touchTop + 50 + 40 + STACK_GAP_PX;
+      expect(blocks.map(b => b.y)).toEqual([
+        0,
+        touchTop,
+        otherTop,
+        otherTop + 50 + STACK_GAP_PX,
+      ]);
+      // Once the block is in the stack, the room closes.
+      blocks[1].getDescendants = () => [
+        {type: 'gamelab_checkTouching'},
+        {type: 'spritelab2_goToScene'},
+      ];
+      blocks.forEach((b, i) => (b.y = i * 60));
+      ensureRoom(workspace);
+      await flush();
+      await flush();
+      expect(blocks[2].y).toBe(touchTop + 50 + STACK_GAP_PX);
     });
 
     it('does nothing mid-drag', async () => {

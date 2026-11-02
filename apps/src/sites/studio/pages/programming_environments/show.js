@@ -27,9 +27,6 @@ $(document).ready(() => {
         programmingEnvironment={programmingEnvironment}
       />
     </PageContainer>,
-    document.getElementById('container'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.getElementById('container')
   );
 });

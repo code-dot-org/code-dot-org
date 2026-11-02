@@ -102,6 +102,9 @@ Resources:
             Condition:
               StringEquals:
                 secretsmanager:VersionStage: AWSCURRENT
+          - Effect: Allow
+            Action: 'secretsmanager:BatchGetSecretValue'
+            Resource: '*'
           # Read-only access to bootstrap scripts.
           - Effect: Allow
             Action: 's3:GetObject'

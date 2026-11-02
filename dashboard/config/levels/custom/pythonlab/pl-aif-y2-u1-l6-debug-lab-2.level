@@ -1,0 +1,49 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-10-27T19:25:58.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "position = \"5\"\n    \nprint(f\"📍 Currently at: {position}\")\n\n# Move right\nposition = position + 1\nprint(f\"📍 Currently at: {position}\")\n\n# Move right\nposition = position + 1\nprint(f\"📍 Currently at: {position}\")\n\n# Move left\nposition = position - 1\nprint(f\"📍 Currently at: {position}\")",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "long_instructions": "In Lesson 9, this lab throws a runtime error, the code runs partway, then crashes, different from the last level's syntax error and the earlier song example's silent logic error. \r\n\r\nYou’re a QA engineer testing a program for a robot vacuum cleaner. The program keeps track of a number representing where it is. The program updates the number to move right or left, but there’s a bug.\r\n\r\n**Do This**\r\n\r\n1. Try to run the code!\r\n2. Read the error message. Use the error message to identify the bug in the program.\r\n3. Fix the bug and run the program again.\r\n\r\n**💻 Coding Tip**\r\n\r\nIf you’re having trouble understanding an error message, you can copy the message into the AI Tutor to ask for help.\r\n\r\n---\r\n\r\nReflection: Of the three bug types your students will see in this lesson, syntax, runtime, and logic, which do you expect will be hardest for them to debug, and why?\r\n\r\n::: details [**See a solution**]\r\n```\r\n# Use an int instead of a string\r\nposition = 5\r\n    \r\nprint(f\"📍 Currently at: {position}\")\r\n\r\n# Move right\r\nposition = position + 1\r\nprint(f\"📍 Currently at: {position}\")\r\n\r\n# Move right\r\nposition = position + 1\r\nprint(f\"📍 Currently at: {position}\")\r\n\r\n# Move left\r\nposition = position - 1\r\nprint(f\"📍 Currently at: {position}\")\r\n```\r\n:::\r\n",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "debug",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMoIXcAJHr7b3ZTa\nNR78evAJmDd0eXoMuU7COFQFXLThDUUdzCuDG7gJONiHt8RjHQvXrfLRkqQX\naCUV6L3YUayREEsL8IHvftW2/45QHzpA1hFMZnTN06kaMjMIvSpOGGeZ9n0a\nZ7Eg5pdYHKI8MZHVCfoEme8RZ5CNCQ7c9SdYqpWBrITwpcnyY7BNRyufve9A\nk2Gol4RrxoQAMFPwzOHmoyAYgHV9CoNncMTGbEwPxbqnlJ8bzYn0taLMHkHY\n7BYhYBjn1gmkv6N9lQ/W3Vmq0I/LBh5UBwXNoYDhu4m/UyHgUAHGRJxJ/f9M\nHUxcYbyq4oCTn9fMUh8G84IZ+eTNgrhrmMqDeqvejjgqDT4hXtCgfhfBRbLj\ntSzlsKIjYaM8nAfMvNFj+nYWQK2sXDvHmJBGpnIMMjzP8tpUeOQLKbHgpet+\nIkN57lMu73JVQMm/SEINeGe7KjEbrFlahQ0x8XncJsBibLdxlGhhKIJ4nVH0\nWJr7JE2Ww/fzl/KUAHisbYQ8Zticc6G/n4RyrC8gSBg19S7icJeHK8WocBUJ\nj2qMZWMZw+ketksfbHRzrVI=\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-10-27T19:25:58.263+00:00\",\"changed\":[\"cloned from \\\"aif-y2-logic-based-ai-lesson9-level2-2026\\\"\"],\"cloned_from\":\"aif-y2-logic-based-ai-lesson9-level2-2026\"},{\"changed_at\":\"2026-10-27 19:28:55 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-10-27 19:29:40 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-10-27 19:31:42 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+}]]></config>
+</Pythonlab>

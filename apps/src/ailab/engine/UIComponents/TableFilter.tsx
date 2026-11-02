@@ -6,6 +6,7 @@ import {flushSync} from 'react-dom';
 
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {useAppSelector} from '../hooks';
+import {getDatasetId} from '../selectors';
 import type {ColumnId, TableView} from '../types';
 
 import {PREDICTION_COLUMN_NAME} from './RowsTableHeader';
@@ -20,7 +21,7 @@ interface TableFilterProps {
 }
 
 const TableFilter = ({view, menuAlign = 'right'}: TableFilterProps) => {
-  const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
+  const datasetId = useAppSelector(state => getDatasetId(state) || 'unknown');
   const anchorRef = useRef<HTMLDivElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
   const doneRef = useRef<HTMLButtonElement>(null);

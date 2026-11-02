@@ -3,6 +3,7 @@
 // for the set on show.
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useState} from 'react';
 
@@ -230,15 +231,17 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
                 <WordText word={word} />
               </button>
             )}
-            <button
-              type="button"
+            <MuiIconButton
+              variant="contained"
+              color="secondary"
+              size="extraSmall"
               className={styles.remove}
               aria-label={`Remove ${word.text}`}
               disabled={disabled}
               onClick={() => choose(s.id, undefined)}
             >
               <FontAwesomeV6Icon iconName="xmark" aria-hidden />
-            </button>
+            </MuiIconButton>
           </WordChip>,
         ];
       }
@@ -269,15 +272,17 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
       </div>
       <div className={styles.carouselBox}>
         <div className={styles.carousel}>
-          <button
-            type="button"
+          <MuiIconButton
+            variant="text"
+            color="tertiary"
+            size="medium"
             className={classNames(styles.arrow, oneSet && styles.navHidden)}
             aria-label="Previous words"
             disabled={!canMove || index === 0}
             onClick={() => goTo(Math.max(0, index - 1))}
           >
             <FontAwesomeV6Icon iconName="chevron-left" aria-hidden />
-          </button>
+          </MuiIconButton>
           {/* Every set is laid out in one cell; only the one on show is
               visible. */}
           <div className={styles.sets}>
@@ -337,15 +342,17 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
               );
             })}
           </div>
-          <button
-            type="button"
+          <MuiIconButton
+            variant="text"
+            color="tertiary"
+            size="medium"
             className={classNames(styles.arrow, oneSet && styles.navHidden)}
             aria-label="Next words"
             disabled={!canMove || index >= lastAvailable}
             onClick={() => goTo(Math.min(lastAvailable, index + 1))}
           >
             <FontAwesomeV6Icon iconName="chevron-right" aria-hidden />
-          </button>
+          </MuiIconButton>
         </div>
         <div className={styles.dotsRow}>
           <div className={classNames(styles.dots, oneSet && styles.navHidden)}>

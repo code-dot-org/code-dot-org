@@ -22,9 +22,6 @@ $(document).ready(function () {
       studentId={studentId}
       usState={usState}
     />,
-    element,
-    {
-      legacyReactDomRender: true,
-    }
+    element
   );
 });

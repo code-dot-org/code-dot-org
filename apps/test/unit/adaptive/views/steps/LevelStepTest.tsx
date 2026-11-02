@@ -14,6 +14,10 @@ import {
   stubRedux,
 } from '@cdo/apps/redux';
 
+let mockProgress: {steps: {[stepId: string]: {status?: string}}} = {
+  steps: {},
+};
+
 jest.mock('@cdo/apps/adaptive/views/PathwayContext', () => ({
   usePathwayContext: () => ({
     pathway: {
@@ -23,7 +27,7 @@ jest.mock('@cdo/apps/adaptive/views/PathwayContext', () => ({
     },
     checkpoint: {id: 'ck', title: 'CK', steps: []},
     statusMap: {},
-    progress: {steps: {}},
+    progress: mockProgress,
     saveGeneratedInstructions: jest.fn(),
     aiContext: undefined,
   }),
@@ -44,17 +48,30 @@ jest.mock('@cdo/apps/adaptive/project/projectInfo', () => ({
   projectInfoFromChannel: () => ({name: undefined, description: undefined}),
 }));
 
+// Mutable per test; reset to a loaded, editable, never-saved project.
+const sourcesState = {
+  isLoading: false,
+  isEditable: true,
+  hasEdited: false,
+  hasSavedSources: false,
+  currentSources: {source: ''},
+  channel: undefined as unknown,
+  projectManager: null as unknown,
+  loadError: undefined,
+  updateSources: jest.fn(),
+};
+const baseSourcesState = {...sourcesState};
 jest.mock('@cdo/apps/lab2/hooks/useSources', () => ({
   __esModule: true,
-  default: () => ({
-    isLoading: false,
-    isEditable: true,
-    hasEdited: false,
-    currentSources: {source: ''},
-    channel: undefined,
-    projectManager: null,
-    loadError: undefined,
-  }),
+  default: () => sourcesState,
+}));
+
+const generateCalls: {shouldGenerate: boolean | undefined}[] = [];
+jest.mock('@cdo/apps/adaptive/views/steps/useGenerateProject', () => ({
+  useGenerateProject: (options: {shouldGenerate: boolean | undefined}) => {
+    generateCalls.push({shouldGenerate: options.shouldGenerate});
+    return {isResolved: options.shouldGenerate === false};
+  },
 }));
 
 jest.mock('@cdo/apps/lab2/Lab2Registry', () => ({
@@ -80,16 +97,28 @@ jest.mock('@cdo/apps/lab2/redux/lab2ProjectRedux', () => ({
 // body would be uninitialized when the factory runs.
 jest.mock('../../../../../lab2EntryPoints', () => {
   const React = require('react');
-  // Renders the hideNonInstructionTabs flag as visible text for assertion.
+  // Renders the flags under test as visible text for assertion.
   function TestView({
     levelProperties,
   }: {
-    levelProperties: {hideNonInstructionTabs?: boolean};
+    levelProperties: {
+      hideNonInstructionTabs?: boolean;
+      spotlightInstructions?: boolean;
+    };
   }) {
     return React.createElement(
-      'p',
+      'div',
       null,
-      `hide tabs: ${String(levelProperties?.hideNonInstructionTabs)}`
+      React.createElement(
+        'p',
+        null,
+        `hide tabs: ${String(levelProperties?.hideNonInstructionTabs)}`
+      ),
+      React.createElement(
+        'p',
+        null,
+        `spotlight: ${String(levelProperties?.spotlightInstructions)}`
+      )
     );
   }
   return {lab2EntryPoints: {weblab2: {view: TestView}}};
@@ -128,8 +157,11 @@ describe('LevelStep (LevelPlayer)', () => {
   });
 
   afterEach(() => {
+    mockProgress = {steps: {}};
     restoreRedux();
     jest.clearAllMocks();
+    Object.assign(sourcesState, baseSourcesState);
+    generateCalls.length = 0;
   });
 
   function renderStep(step = makeLevelStep()) {
@@ -147,5 +179,73 @@ describe('LevelStep (LevelPlayer)', () => {
   it('sets hideNonInstructionTabs on viewProperties passed to the lab view', () => {
     renderStep();
     expect(screen.getByText('hide tabs: true')).toBeInTheDocument();
+  });
+
+  it('spotlights the instructions on a step with no progress', () => {
+    renderStep();
+    expect(screen.getByText('spotlight: true')).toBeInTheDocument();
+  });
+
+  it('does not spotlight the instructions on a step already started', () => {
+    mockProgress = {steps: {'step-1': {status: 'started'}}};
+    renderStep();
+    expect(screen.getByText('spotlight: false')).toBeInTheDocument();
+  });
+
+  describe('generating the project', () => {
+    const projectStep = () =>
+      ({
+        ...makeLevelStep(),
+        project: true,
+        projectPrompt: 'A one-page site.',
+      } as LevelStepContent);
+    const lastDecision = () => generateCalls[generateCalls.length - 1];
+    const loaded = () => {
+      sourcesState.channel = {id: 'c', labConfig: {}};
+      sourcesState.projectManager = {};
+    };
+
+    it('never generates on a step without a project prompt', () => {
+      renderStep();
+      expect(lastDecision()).toEqual({shouldGenerate: false});
+      expect(screen.getByText('hide tabs: true')).toBeInTheDocument();
+    });
+
+    it('does not decide until the project has loaded, and waits for it', () => {
+      sourcesState.isLoading = true;
+      renderStep(projectStep());
+      expect(lastDecision()).toEqual({shouldGenerate: undefined});
+      expect(screen.getByText('Loading...')).toBeInTheDocument();
+    });
+
+    it('generates for the owner on a project with nothing saved and nothing generated', () => {
+      loaded();
+      renderStep(projectStep());
+      expect(lastDecision()).toEqual({shouldGenerate: true});
+    });
+
+    it('does not generate over saved work', () => {
+      loaded();
+      sourcesState.hasSavedSources = true;
+      renderStep(projectStep());
+      expect(lastDecision()).toEqual({shouldGenerate: false});
+    });
+
+    it('does not generate twice', () => {
+      loaded();
+      sourcesState.channel = {
+        id: 'c',
+        labConfig: {adaptive: {generationTraceId: 'ab'.repeat(16)}},
+      };
+      renderStep(projectStep());
+      expect(lastDecision()).toEqual({shouldGenerate: false});
+    });
+
+    it('does not generate for anyone but the owner', () => {
+      loaded();
+      sourcesState.isEditable = false;
+      renderStep(projectStep());
+      expect(lastDecision()).toEqual({shouldGenerate: false});
+    });
   });
 });

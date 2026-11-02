@@ -143,8 +143,8 @@ class QuizQuestion < ApplicationRecord
   end
 
   # Whether response_data holds an answer, as opposed to a skip.
-  def answered?(response_data)
-    raise NotImplementedError, "#{self.class.name} must implement answered?"
+  def response_answered?(response_data)
+    raise NotImplementedError, "#{self.class.name} must implement response_answered?"
   end
 
   # Builds `content` from question builder request params.

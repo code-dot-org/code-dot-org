@@ -178,6 +178,11 @@ $band-inset: 8px;
   border-radius: 6px;
 }
 
+.animationPending {
+  aspect-ratio: 4 / 3;
+  border: 2px dashed var(--borders-neutral-primary);
+}
+
 .infoText {
   flex: 1;
   min-width: 0;
