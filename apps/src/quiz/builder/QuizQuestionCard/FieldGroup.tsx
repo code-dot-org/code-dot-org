@@ -1,6 +1,6 @@
 import {Typography} from '@mui/material';
 import classNames from 'classnames';
-import React, {useId} from 'react';
+import React from 'react';
 
 import styles from './quiz-question-card.module.scss';
 
@@ -10,25 +10,19 @@ interface FieldGroupProps {
   children: React.ReactNode;
 }
 
-// A fieldset legend hangs on the border and throws off label/field spacing.
 const FieldGroup: React.FunctionComponent<FieldGroupProps> = ({
   label,
   className,
   children,
-}) => {
-  const labelId = useId();
-  return (
-    <div
-      role="group"
-      aria-labelledby={labelId}
-      className={classNames(styles.field, className)}
-    >
-      <Typography id={labelId} variant="label3" component="span">
+}) => (
+  <fieldset className={classNames(styles.fieldGroup, className)}>
+    <legend className={styles.fieldGroupLabel}>
+      <Typography variant="label3" component="span">
         {label}
       </Typography>
-      {children}
-    </div>
-  );
-};
+    </legend>
+    {children}
+  </fieldset>
+);
 
 export default FieldGroup;
