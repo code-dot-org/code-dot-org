@@ -10,9 +10,11 @@ landing page, every studio.code.org page, `window.open` and `target=_blank`.
 Pages therefore share one browser session, so sessionStorage, session cookies
 and localStorage carry across every page load. It lists the Amazon Fire Kids
 Content Library, the 10 curricula in Studio's `src/config/curricula.ts`, as
-cards laid out like the course catalog's (`CurriculumCatalogCard` in `apps/`),
-with the catalog's images, descriptions, topics, grades and durations; tapping
-one navigates the app's WebView to that curriculum's studio.code.org URL.
+cards drawn to the "Amazon Fire Kids Screen" design in Figma: image, category,
+title and ages, all ten on one screen, five to a row. On a landscape tablet
+wider than a Fire HD 8 the root font size grows with the screen, so a Fire
+HD 10 shows the same screen larger, as the design does. Tapping a card
+navigates the app's WebView to that curriculum's studio.code.org URL.
 Only studio.code.org, the one host in `server.allowNavigation`
 (`capacitor.config.ts`), opens inside the app. `MainActivity.kt` ignores
 links to any other host, support.code.org and code.org included, because
@@ -31,7 +33,9 @@ web. YouTube is unreachable so that video levels use Code.org's own player,
 which has no "Watch on YouTube" link. Android Back steps back through page
 history and exits from the landing page.
 
-The app runs in landscape only (`screenOrientation` in `AndroidManifest.xml`).
+The app runs in landscape only (`screenOrientation` in `AndroidManifest.xml`)
+and hides the status bar, as the design does; a swipe from the top edge shows
+it for a moment.
 
 `res/raw/hide_site_chrome.js` runs in every studio.code.org page the app loads
 and applies "Elements to Hide in the Wrapper", whose item numbers its comments
@@ -42,8 +46,8 @@ hidden; and New project, sign-in, help, the menu,
 Share, Remix and "I finished!" are made invisible but keep their space, so
 the lesson navigation stays centered. It also hides the footers and their
 language selector, Download Video links, sharing after the last level, the
-"Need help?" videos, the cookie banner, the translation widget and the
-unsupported-browser warning. It
+"Need help?" videos, the cookie banner, the translation widget, the
+"You are not signed in" callout and the unsupported-browser warning. It
 answers the Dance Party age prompt as under 13, and provides a silent
 `speechSynthesis`, which Android's WebView lacks and Lab2 labs need to load,
 and the few newer JavaScript functions the site calls that WebViews before
@@ -57,8 +61,8 @@ Finishing a curriculum leads to a certificate page, which asks for a name and
 offers sharing. `MainActivity.kt` intercepts it instead, returns to the
 landing page and opens `#finished=<course>` there, taking the course from the
 certificate URL. The landing page then congratulates the child and offers
-Try again, which resets the session (below) and opens the curriculum's first
-level, and Choose another curriculum, which returns to the list. The app opens the fragment itself
+Try again, which forgets that curriculum's progress (below) and opens its
+first level, and Choose another curriculum, which returns to the list. The app opens the fragment itself
 rather than the page pushing it, because Chromium's Back skips history
 entries a page adds without a tap, and Back would then leave the app.
 
@@ -84,8 +88,8 @@ A fresh start reopens the last studio.code.org page shown, on top of the
 landing page, so a child continues where they left off; returning to the
 landing page clears it.
 
-While a page loads, the launch screen covers the window with a spinner below
-the wordmark: on a fresh start that resumes a page, when a curriculum is
+While a page loads, a loading screen covers the window: the wordmark and a
+spinner on the landing page's grey background. It shows on a fresh start that resumes a page, when a curriculum is
 tapped, and after Try again. Many pages fetch their content and render it
 after the load event, so it goes once the page script finds the page loaded,
 with no studio.code.org request open and unchanged for half a second (or five
@@ -117,17 +121,37 @@ after a restart. Opening Sprite Lab, Dance Party or Music Lab, whose
 `/projects/<lab>` link makes the server create a project on every visit,
 reopens the last project the child edited in that lab instead.
 
-"Try again" resets the session: it erases every cookie except the language
-and zoom, all site storage, and the remembered page and projects. A cookie
-the reset changes tells the next page to empty sessionStorage, which
-outlives the reset in the WebView.
+Try again resets one course: it opens
+`/codeai-app/reset?course=<course>&next=<first level>`, which `MainActivity.kt`
+handles by setting a short-lived `codeai_reset_course` cookie, and the next
+page's script removes that course's entries from what `clientState.js` keeps
+in sessionStorage (`progress` and `source_<course>_<level>`) and from the
+`progress` cookie of `ClientState` (`dashboard/lib/client_state.rb`), before
+the site's scripts read them. Other courses and projects stay. The same link
+without `course` resets everything: it erases every cookie except the
+language and zoom, all site storage, and the remembered page and projects,
+and a cookie the reset changes tells the next page to empty sessionStorage,
+which outlives the reset in the WebView.
 
-Debug builds add zoom out and zoom in to the right of the site header, where
-the invisible sign-in and menu keep their space, drawn like the site's own
-header buttons. They zoom as a browser does, reflowing the page, by setting each
-page's viewport, which the WebView honors in wide-viewport mode; the old labs
-set their own viewport, so the page script reapplies its own whenever the
-page changes it. Release builds show every page at 100%.
+A signed-out child's progress is only in sessionStorage, so the server's
+next-level route (`script_levels#next`, behind Continue on a unit's overview)
+always answers with the first level. The page script finds the first level
+not yet passed from `/api/script_structure` and that progress instead: when
+Continue is tapped, and when the landing page opens a curriculum that starts
+on a level, which it marks with `?codeai_resume`.
+
+Debug builds add controls to the right of the site header, where the
+invisible sign-in and menu keep their space, drawn like the site's own header
+buttons and as far from the right edge as the logo is from the left: Reset
+course (course pages only), Show hidden elements, and zoom out and zoom in,
+with the level between them when it is not 100%. Zoom works as a browser's
+does, reflowing the page, by setting each page's viewport, which the WebView
+honors in wide-viewport mode; the old labs set their own viewport, so the page
+script reapplies its own whenever the page changes it. Show hidden elements
+outlines everything the page script hides and shows it, and swaps the header
+controls for one floating button that hides them again; the choice lasts
+across pages. Release builds show every page at 100%, with nothing hidden
+shown.
 
 `AssetCache.kt` keeps images.code.org images, which include the launcher's
 catalog images, and the Font Awesome files that `injectFontAwesome()` from
@@ -138,8 +162,8 @@ content hash or a version in every path, so a stored copy never goes stale.
 dsco.code.org allows its fonts to be used by studio.code.org but not by the
 landing page's local origin; the stored copies allow both.
 
-The launcher bundles only Geist and Barlow, in their Latin subsets as WOFF2,
-about 0.3MB. Studio's `vite.mobile.config.ts` drops the rest of the brand fonts and
+The launcher bundles only Geist, Barlow and Space Grotesk, its headings' and
+card titles' font, in their Latin subsets as WOFF2, about 0.3MB. Studio's `vite.mobile.config.ts` drops the rest of the brand fonts and
 the per-language fonts `@code-dot-org/fonts` would otherwise add, about 21MB.
 Since they are local, text waits for them rather than being drawn in a
 fallback font and redrawn, and the landing page preloads the weights it uses.
@@ -151,6 +175,18 @@ The app appends `CodeAIApp/<version> (android; amazon-kids)` to the WebView's
 User-Agent, so every request it makes to studio.code.org — pages, API calls
 and iframes — identifies the app. Rails can test for it with
 `request.user_agent.to_s.include?('CodeAIApp/')` to choose a mobile layout.
+Where the WebView supports it, the app also adds a `CodeAIApp` brand to
+`navigator.userAgentData` and the `Sec-CH-UA` headers.
+
+The site's Statsig stable ID, which is also the anonymous user ID for
+signed-out progress, is this device's: `MainActivity.kt` derives a version 4
+UUID from `ANDROID_ID` with HMAC-SHA256. On each launch, when OneTrust's
+saved consent (`OptanonConsent`) allows performance cookies, it sets the
+`statsig_stable_id` cookie to that ID before any page loads; with no saved
+choice yet, or a refusal, the cookie is left to the site, which creates it
+only with consent. The page script gives every write of the cookie the
+device's value and a year's lifetime. The ID lasts across updates,
+reinstalls signed with the same key and resets, until a factory reset.
 
 The native code in `android/app/src/main/kotlin` is Kotlin.
 Building needs JDK 21 and the Android SDK (platform 36); Gradle fetches the
@@ -158,9 +194,11 @@ Kotlin compiler. From this directory:
 
 ```bash
 yarn android:sync     # build Studio's mobile output and copy it into android/
-cd android && ./gradlew assembleDebug   # app/build/outputs/apk/debug/codeai-0.2.0-debug.apk
-cd android && ./gradlew testDebugUnitTest   # SitePolicy and PageInjector, on the JVM with Robolectric
+cd android && ./gradlew assembleDebug   # app/build/outputs/apk/debug/codeai-0.3.0-debug.apk
+cd android && ./gradlew testDebugUnitTest   # SitePolicy, PageInjector and the launcher scale, on the JVM with Robolectric
 yarn android:open     # or open the project in Android Studio
 ```
 
 `yarn dev` serves the landing page in a browser.
+
+[CHANGELOG.md](CHANGELOG.md) lists what changed in each version.

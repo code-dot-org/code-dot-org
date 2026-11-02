@@ -1,5 +1,6 @@
 package org.codeai
 
+import android.annotation.SuppressLint
 import android.content.SharedPreferences
 import android.content.res.Configuration
 import android.graphics.Color
@@ -8,6 +9,7 @@ import android.net.Network
 import android.net.Uri
 import android.os.Bundle
 import android.os.SystemClock
+import android.provider.Settings
 import android.view.ActionMode
 import android.view.View
 import android.view.ViewGroup
@@ -25,9 +27,11 @@ import androidx.activity.enableEdgeToEdge
 import androidx.core.content.edit
 import androidx.core.net.toUri
 import androidx.core.view.ViewCompat
+import androidx.core.view.WindowCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.WindowInsetsControllerCompat
 import androidx.core.view.get
 import androidx.core.view.size
-import androidx.core.view.WindowInsetsCompat
 import androidx.webkit.UserAgentMetadata
 import androidx.webkit.WebSettingsCompat
 import androidx.webkit.WebViewFeature
@@ -36,6 +40,7 @@ import com.getcapacitor.BridgeWebViewClient
 import com.getcapacitor.WebViewListener
 import org.codeai.SitePolicy.HOME_URL
 import org.codeai.SitePolicy.SITE_ORIGIN
+import org.json.JSONObject
 
 /**
  * Hosts the landing page and the curricula it opens in one WebView. The
@@ -69,6 +74,7 @@ class MainActivity : BridgeActivity() {
         SitePolicy.pinLocale()
         super.onCreate(savedInstanceState)
         CookieManager.getInstance().setCookie(SITE_ORIGIN, SitePolicy.LOCALE_COOKIE)
+        setStableIdCookie()
         val webView = bridge.webView
         // The first page is the bundled landing page, so no network request
         // has gone out before this runs.
@@ -94,8 +100,10 @@ class MainActivity : BridgeActivity() {
             showLoadingCover()
         }
 
-        // The page script offers zoom in debug builds only.
+        // The page script offers zoom in debug builds only, and gives the
+        // site's Statsig stable ID cookie this device's value.
         hideSiteChrome = "var codeaiDebugBuild = ${BuildConfig.DEBUG};\n" +
+            "var codeaiStableId = ${JSONObject.quote(deviceStableId() ?: "")};\n" +
             resources.openRawResource(R.raw.hide_site_chrome)
                 .use { it.readBytes().toString(Charsets.UTF_8) }
         val pageInjector = PageInjector(
@@ -126,6 +134,11 @@ class MainActivity : BridgeActivity() {
             }
 
             override fun shouldOverrideUrlLoading(view: WebView, request: WebResourceRequest): Boolean {
+                // Only the page itself goes home, resets, finishes or leaves the
+                // site; an iframe, which may be another site's, navigates in place.
+                if (!request.isForMainFrame) {
+                    return false
+                }
                 val url = request.url
                 // The WebView ignores navigation started inside this
                 // callback, so go home once it has returned.
@@ -138,7 +151,10 @@ class MainActivity : BridgeActivity() {
                     if (next != null) {
                         showLoadingCover()
                     }
-                    view.post { resetSession(next) }
+                    val course = SitePolicy.resetCourse(url)
+                    view.post {
+                        if (course != null) resetCourse(course, next) else resetSession(next)
+                    }
                     return true
                 }
                 if (SitePolicy.isCertificatePage(url)) {
@@ -168,8 +184,8 @@ class MainActivity : BridgeActivity() {
                 }
                 // Amazon Kids+ allows no links out of its environment. Capacitor
                 // would open other hosts in the system browser; ignore them
-                // instead, and let iframes navigate in place.
-                return request.isForMainFrame
+                // instead.
+                return true
             }
 
             // Also called for history.pushState, so in-page navigation counts.
@@ -241,6 +257,12 @@ class MainActivity : BridgeActivity() {
             SystemBarStyle.dark(Color.TRANSPARENT),
             SystemBarStyle.dark(Color.TRANSPARENT),
         )
+        // The design has no status bar: the app header starts at the top of
+        // the screen. A swipe from the top edge shows it for a moment.
+        WindowCompat.getInsetsController(window, window.decorView).apply {
+            systemBarsBehavior = WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
+            hide(WindowInsetsCompat.Type.statusBars())
+        }
         ViewCompat.setOnApplyWindowInsetsListener(findViewById<View>(R.id.app_root)) { view, insets ->
             val bars = insets.getInsets(
                 WindowInsetsCompat.Type.systemBars()
@@ -273,13 +295,58 @@ class MainActivity : BridgeActivity() {
         if (loadingCover != null) {
             return
         }
-        val content = findViewById<ViewGroup>(android.R.id.content)
-        val cover = layoutInflater.inflate(R.layout.loading_cover, content, false)
-        cover.findViewById<View>(R.id.loading_cover_logo).setOnClickListener { cancelLoading() }
-        content.addView(cover)
+        // Inside the root's system-bar padding, so its header sits where the
+        // page's does and the bars keep the root's purple.
+        val root = findViewById<ViewGroup>(R.id.app_root)
+        val cover = layoutInflater.inflate(R.layout.loading_cover, root, false)
+        val home = cover.findViewById<View>(R.id.loading_cover_logo)
+        home.setOnClickListener { cancelLoading() }
+        root.addView(cover)
         loadingCover = cover
+        setPageCovered(true)
+        // Keyboard focus starts on the home control; screen readers move into
+        // the cover's pane on their own, the page having left their reach.
+        home.post { home.requestFocus() }
         cover.postDelayed({ hideLoadingCover(cover) }, LOADING_COVER_TIMEOUT_MS)
     }
+
+    // Where the saved consent allows it, the first page's request and the
+    // site's scripts find this device's stable ID from the start. With no
+    // saved choice yet, or a refusal, the cookie is left to the site, which
+    // creates it only with consent; the page script then gives it this value.
+    private fun setStableIdCookie() {
+        val cookies = CookieManager.getInstance()
+        if (!SitePolicy.consentAllowsStableId(cookies.getCookie(SITE_ORIGIN))) {
+            return
+        }
+        deviceStableId()?.let { cookies.setCookie(SITE_ORIGIN, SitePolicy.stableIdCookie(it)) }
+    }
+
+    // ANDROID_ID lasts until a factory reset and is this app's own (it differs
+    // per signing key); only a hash of it reaches the site.
+    @SuppressLint("HardwareIds")
+    private fun deviceStableId(): String? =
+        Settings.Secure.getString(contentResolver, Settings.Secure.ANDROID_ID)
+            ?.takeIf { it.isNotEmpty() }
+            ?.let(SitePolicy::deviceStableId)
+
+    // The cover takes touches, and while it shows, screen readers and
+    // keyboards reach only it too: the WebView and the page in it leave the
+    // accessibility tree and cannot take focus.
+    private fun setPageCovered(covered: Boolean) {
+        val webView = bridge.webView
+        if (covered) {
+            webView.importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_NO_HIDE_DESCENDANTS
+            webView.descendantFocusability = ViewGroup.FOCUS_BLOCK_DESCENDANTS
+            webView.isFocusable = false
+            webView.clearFocus()
+        } else {
+            webView.importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_AUTO
+            webView.descendantFocusability = ViewGroup.FOCUS_BEFORE_DESCENDANTS
+            webView.isFocusable = true
+        }
+    }
+
 
     // The cover's logo, like the site's, returns to the landing page: the
     // page loading underneath and any page queued after it are dropped. The
@@ -323,6 +390,7 @@ class MainActivity : BridgeActivity() {
             return
         }
         loadingCover = null
+        setPageCovered(false)
         cover.animate()
             .alpha(0f)
             .setDuration(LOADING_COVER_FADE_MS)
@@ -392,16 +460,36 @@ class MainActivity : BridgeActivity() {
     }
 
     /**
+     * Forgets one course's progress, as Try again asks, then opens [next]
+     * above the landing page. The progress lives in sessionStorage and the
+     * progress cookie, which only a page can edit, so the page script clears
+     * the course this cookie names before the site's scripts read either.
+     * Projects and other courses stay.
+     */
+    private fun resetCourse(course: String, next: String?) {
+        val cookies = CookieManager.getInstance()
+        cookies.setCookie(
+            SITE_ORIGIN,
+            "${SitePolicy.RESET_COURSE_COOKIE_NAME}=$course; ${SitePolicy.RESET_COURSE_COOKIE_ATTRIBUTES}",
+        )
+        cookies.flush()
+        pendingLandingUrl = next
+        bridge.webView.post { goHome() }
+    }
+
+    /**
      * Forgets everything the site keeps for this signed-out child, then
      * returns to the landing page, or opens [next] above it. Progress and
      * projects belong to the session cookie, the storage_id cookie and site
-     * storage; the remembered pages are in prefs. Only the zoom is kept.
+     * storage; the remembered pages are in prefs. Only the zoom and the
+     * device's stable ID are kept.
      */
     private fun resetSession(next: String?) {
         val cookies = CookieManager.getInstance()
         val zoom = SitePolicy.cookieValue(cookies.getCookie(SITE_ORIGIN), SitePolicy.ZOOM_COOKIE_NAME)
         cookies.removeAllCookies {
             cookies.setCookie(SITE_ORIGIN, SitePolicy.LOCALE_COOKIE)
+            setStableIdCookie()
             zoom?.let {
                 cookies.setCookie(
                     SITE_ORIGIN,

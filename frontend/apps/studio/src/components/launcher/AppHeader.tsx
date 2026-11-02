@@ -13,13 +13,22 @@ const PRIVACY_POLICY_URL = 'https://code.org/privacy';
 const PRIVACY_POLICY_TEXT = 'code.org/privacy';
 const COPIED_MS = 2000;
 
-/** The app's purple bar. The logo is the page heading unless the page has its own. */
-export default function AppHeader({logoIsHeading}: {logoIsHeading: boolean}) {
+interface AppHeaderProps {
+  /** The logo is the page heading unless the page has its own. */
+  logoIsHeading: boolean;
+  showPrivacyPolicy?: boolean;
+}
+
+/** The app's purple bar. */
+export default function AppHeader({
+  logoIsHeading,
+  showPrivacyPolicy = false,
+}: AppHeaderProps) {
   const logo = <img className={styles.logo} src={CodeAILogo} alt="CodeAI" />;
   return (
     <header className={styles.header}>
       {logoIsHeading ? <h1 className={styles.logoHeading}>{logo}</h1> : logo}
-      <PrivacyPolicy />
+      {showPrivacyPolicy && <PrivacyPolicy />}
     </header>
   );
 }

@@ -3,8 +3,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 256px;
-  height: 140px;
+  width: 16rem;
+  height: 8.75rem;
   margin-bottom: var(--spacing-p-m);
   overflow: hidden;
   border-radius: var(--shape-md);
@@ -19,7 +19,7 @@
 
 .imageContain img {
   width: auto;
-  height: 96px;
+  height: 6rem;
   object-fit: contain;
 }
 

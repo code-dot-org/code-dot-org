@@ -12,7 +12,9 @@ import {isMobileBuild} from '@/config/buildMode';
 import {
   CURRICULA,
   curriculumForCourse,
+  courseOf,
   firstLevelUrl,
+  launchUrl,
   type Curriculum,
 } from '@/config/curricula';
 
@@ -20,7 +22,8 @@ import {
 // certificate page; the course is empty when unknown.
 const FINISHED_FRAGMENT = 'finished=';
 // MainActivity.kt handles this link and never loads it: it erases the
-// session's progress and projects, then opens ?next= above the landing page.
+// progress of ?course=, keeping other courses and projects, then opens ?next=
+// above the landing page.
 const RESET_URL = 'https://studio.code.org/codeai-app/reset';
 
 // The icon font arrives only after the Font Awesome stylesheets load, so the
@@ -53,12 +56,19 @@ function iconsReady(): Promise<unknown> {
 }
 
 function openCurriculum(curriculum: Curriculum) {
-  window.location.assign(curriculum.url);
+  window.location.assign(launchUrl(curriculum));
 }
 
 function tryAgain(curriculum: Curriculum) {
-  const next = encodeURIComponent(firstLevelUrl(curriculum));
-  window.location.assign(`${RESET_URL}?next=${next}`);
+  const course = courseOf(curriculum);
+  if (!course) {
+    window.location.assign(firstLevelUrl(curriculum));
+    return;
+  }
+  const url = new URL(RESET_URL);
+  url.searchParams.set('course', course);
+  url.searchParams.set('next', firstLevelUrl(curriculum));
+  window.location.assign(url.toString());
 }
 
 function finishedCourseIn(hash: string): string | null {

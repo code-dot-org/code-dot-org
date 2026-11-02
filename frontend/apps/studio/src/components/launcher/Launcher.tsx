@@ -21,7 +21,7 @@ export default function Launcher({curricula, onOpen}: LauncherProps) {
   return (
     <div className={styles.launcher}>
       {/* Card titles are h2. */}
-      <AppHeader logoIsHeading />
+      <AppHeader logoIsHeading showPrivacyPolicy />
       <main className={styles.main}>
         <ul className={styles.grid}>
           {curricula.map(curriculum => (
@@ -41,13 +41,13 @@ interface CurriculumCardProps {
 }
 
 /**
- * A card laid out like the course catalog's (CurriculumCatalogCard in apps/):
- * image, topic tags, title, description, grades, duration and Try Now. Try
- * Now is the card's one interactive element; its tap area is stretched over
- * the whole card in CSS, so a tap anywhere opens the curriculum.
+ * A card as the "Amazon Fire Kids Screen" design draws it: image, category,
+ * title, ages and Try Now. Try Now is the card's one interactive element; its
+ * tap area is stretched over the whole card in CSS, so a tap anywhere opens
+ * the curriculum.
  */
 function CurriculumCard({curriculum, onOpen}: CurriculumCardProps) {
-  const {title, description, image, topics, grades, duration} = curriculum;
+  const {title, image, category, ages} = curriculum;
   const [imageFailed, setImageFailed] = useState(false);
 
   return (
@@ -67,32 +67,20 @@ function CurriculumCard({curriculum, onOpen}: CurriculumCardProps) {
         )}
       </div>
       <div className={styles.info}>
-        <Tags
-          className={styles.tags}
-          tagsList={tagsFor(topics, curriculum.id)}
-        />
-        <Typography variant="h4" component="h2" className={styles.title}>
+        <Tags className={styles.tags} size="s" tagsList={[{label: category}]} />
+        <Typography variant="h6" component="h2" className={styles.title}>
           {title}
         </Typography>
-        <Typography variant="body3" className={styles.description}>
-          {description}
-        </Typography>
-        <div className={styles.aspect}>
+        <div className={styles.ages}>
           <FontAwesomeV6Icon iconName="user" iconStyle="solid" />
-          <p>{gradeLabel(grades)}</p>
+          <p>Ages {ages}</p>
         </div>
-        {duration && (
-          <div className={styles.aspect}>
-            <FontAwesomeV6Icon iconName="clock" iconStyle="solid" />
-            <p>Duration: {duration}</p>
-          </div>
-        )}
         <Button
           variant="contained"
           color="primary"
-          size="medium"
+          size="extraSmall"
           className={styles.tryNow}
-          aria-label={`Try ${title} now`}
+          aria-label={`Try Now: ${title}`}
           onClick={() => onOpen(curriculum)}
         >
           Try Now
@@ -100,27 +88,4 @@ function CurriculumCard({curriculum, onOpen}: CurriculumCardProps) {
       </div>
     </div>
   );
-}
-
-/** The catalog shows the first topic and a "+N" tag holding the rest. */
-function tagsFor(topics: string[], id: string) {
-  if (topics.length === 0) {
-    return [];
-  }
-  const [first, ...rest] = topics;
-  const tags = [
-    {label: first, tooltipContent: first, tooltipId: `${id}-topic`},
-  ];
-  if (rest.length > 0) {
-    tags.push({
-      label: `+${rest.length}`,
-      tooltipContent: rest.join(', '),
-      tooltipId: `${id}-more-topics`,
-    });
-  }
-  return tags;
-}
-
-function gradeLabel(grades: string) {
-  return grades.includes('-') ? `Grades: ${grades}` : `Grade: ${grades}`;
 }

@@ -54,6 +54,27 @@ describe('/launcher in the mobile build', () => {
     expect(fetchAuthOutcome).not.toHaveBeenCalled();
   });
 
+  it('should reset only finished course from Try again', async () => {
+    const assign = vi.fn();
+    vi.spyOn(window, 'location', 'get').mockReturnValue({
+      ...window.location,
+      assign,
+    });
+    renderApp(['/launcher#finished=oceans']);
+    await userEvent.click(
+      await screen.findByRole('button', {name: 'Try again'}),
+    );
+    const reset = new URL(assign.mock.calls[0][0]);
+    expect(reset.origin + reset.pathname).toBe(
+      'https://studio.code.org/codeai-app/reset',
+    );
+    expect(reset.searchParams.get('course')).toBe('oceans');
+    expect(reset.searchParams.get('next')).toBe(
+      'https://studio.code.org/courses/oceans/units/1/lessons/1/levels/1',
+    );
+    vi.restoreAllMocks();
+  });
+
   it('should return to the launcher from Choose another curriculum', async () => {
     renderApp(['/launcher', '/launcher#finished=oceans']);
     await userEvent.click(

@@ -5,5 +5,6 @@
     <string name="package_name">org.codeai</string>
     <string name="custom_url_scheme">org.codeai</string>
     <string name="go_home">CodeAI home</string>
+    <string name="loading">Loading</string>
 </resources>
 

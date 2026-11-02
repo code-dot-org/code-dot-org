@@ -52,6 +52,58 @@ class SitePolicyTest {
     }
 
     @Test
+    fun resetCourse_onlyWellFormedCourseName() {
+        val reset = "https://studio.code.org/codeai-app/reset"
+        assertEquals("oceans", SitePolicy.resetCourse(uri("$reset?course=oceans&next=x")))
+        assertEquals("pre-express-2025", SitePolicy.resetCourse(uri("$reset?course=pre-express-2025")))
+        assertNull(SitePolicy.resetCourse(uri(reset)))
+        assertNull(SitePolicy.resetCourse(uri("$reset?course=")))
+        assertNull(SitePolicy.resetCourse(uri("$reset?course=a%3Bb%3Dc")))
+    }
+
+    @Test
+    fun deviceStableId_sameForSameDevice() {
+        assertEquals(SitePolicy.deviceStableId("9774d56d682e549c"), SitePolicy.deviceStableId("9774d56d682e549c"))
+    }
+
+    @Test
+    fun deviceStableId_differsAcrossDevices() {
+        assertFalse(SitePolicy.deviceStableId("9774d56d682e549c") == SitePolicy.deviceStableId("9774d56d682e549d"))
+    }
+
+    @Test
+    fun deviceStableId_matchesSiteStableIdPattern() {
+        val pattern = Regex("[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}")
+        assertTrue(pattern.matches(SitePolicy.deviceStableId("9774d56d682e549c")))
+        assertFalse(SitePolicy.deviceStableId("9774d56d682e549c").contains("9774d56d682e549c"))
+    }
+
+    @Test
+    fun stableIdCookie_usesSiteDomainAndPath() {
+        val cookie = SitePolicy.stableIdCookie("397871dc-01af-4c72-a036-ae7c0fcbc5b3")
+        assertTrue(cookie, cookie.startsWith("statsig_stable_id=397871dc-01af-4c72-a036-ae7c0fcbc5b3; "))
+        assertTrue(cookie, cookie.contains("Domain=.code.org; Path=/;"))
+    }
+
+    @Test
+    fun isAllowedOrigin_onlyDefaultPort() {
+        assertTrue(SitePolicy.isAllowedOrigin(uri("https://studio.code.org:443/courses/oceans")))
+        assertFalse(SitePolicy.isAllowedOrigin(uri("https://studio.code.org:8443/courses/oceans")))
+        assertFalse(SitePolicy.isResetUrl(uri("https://studio.code.org:8443/codeai-app/reset")))
+        assertTrue(SitePolicy.isResetUrl(uri("https://studio.code.org:443/codeai-app/reset")))
+    }
+
+    @Test
+    fun consentAllowsStableId_onlyWithPerformanceConsent() {
+        val granted = "OptanonConsent=isGpcEnabled=0&datestamp=Mon+Nov+02+2026&groups=C0001%3A1%2CC0002%3A1%2CC0003%3A0"
+        val refused = "OptanonConsent=isGpcEnabled=0&groups=C0001%3A1%2CC0002%3A0"
+        assertTrue(SitePolicy.consentAllowsStableId("a=1; $granted"))
+        assertFalse(SitePolicy.consentAllowsStableId("a=1; $refused"))
+        assertFalse(SitePolicy.consentAllowsStableId("a=1; language_=en-US"))
+        assertFalse(SitePolicy.consentAllowsStableId(null))
+    }
+
+    @Test
     fun isBlockedHost_youTubeAndItsSubdomains() {
         assertTrue(SitePolicy.isBlockedHost(uri("https://www.youtube.com/watch?v=x")))
         assertTrue(SitePolicy.isBlockedHost(uri("https://youtu.be/x")))

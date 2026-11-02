@@ -57,8 +57,9 @@ describe('/offline in the mobile build', () => {
       await screen.findByRole('heading', {name: 'No internet connection'}),
     ).toBeInTheDocument();
     expect(screen.getByRole('alert')).toHaveTextContent(
-      'Check that Wi-Fi is on, or ask a grown-up for help.',
+      'Check that the Wi-Fi is on, or ask a grown-up for help.',
     );
+    expect(screen.getByText(/Privacy Policy/)).toBeInTheDocument();
     expect(fetchAuthOutcome).not.toHaveBeenCalled();
   });
 

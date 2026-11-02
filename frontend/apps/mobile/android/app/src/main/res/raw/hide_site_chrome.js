@@ -158,8 +158,17 @@
   // year's lifetime here; one that already has a lifetime, such as the site
   // removing it without consent, passes unchanged. Each page also renews the
   // cookie it finds, so the year counts from the last visit.
+  //
+  // Where the cookie exists, consent allowed it, and it carries this device's
+  // ID: MainActivity.kt derives codeaiStableId from ANDROID_ID, so events and
+  // anonymous progress keep one ID across updates, reinstalls and resets.
   var STABLE_ID_COOKIE = 'statsig_stable_id';
   var STABLE_ID_MAX_AGE_S = 365 * 24 * 60 * 60;
+  var DEVICE_STABLE_ID =
+    typeof codeaiStableId === 'string' &&
+    /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$/.test(codeaiStableId)
+      ? codeaiStableId
+      : '';
   var cookieProperty = Object.getOwnPropertyDescriptor(Document.prototype, 'cookie');
   if (cookieProperty && cookieProperty.set) {
     Object.defineProperty(document, 'cookie', {
@@ -169,20 +178,28 @@
       },
       set: function (value) {
         var text = String(value);
-        if (
-          text.indexOf(STABLE_ID_COOKIE + '=') === 0 &&
-          !/;\s*(expires|max-age)=/i.test(text)
-        ) {
-          text += '; max-age=' + STABLE_ID_MAX_AGE_S;
+        if (text.indexOf(STABLE_ID_COOKIE + '=') === 0) {
+          var written = text.slice(STABLE_ID_COOKIE.length + 1).split(';')[0];
+          // An empty value is a removal, which passes as it is.
+          if (DEVICE_STABLE_ID && written && written !== DEVICE_STABLE_ID) {
+            text =
+              STABLE_ID_COOKIE +
+              '=' +
+              DEVICE_STABLE_ID +
+              text.slice(STABLE_ID_COOKIE.length + 1 + written.length);
+          }
+          if (!/;\s*(expires|max-age)=/i.test(text)) {
+            text += '; max-age=' + STABLE_ID_MAX_AGE_S;
+          }
         }
         cookieProperty.set.call(this, text);
       },
     });
   }
 
-  // Renews only the stable ID cookie's expiry and keeps the domain, path and
-  // other attributes the site gave it; the Cookie Store API reports those,
-  // document.cookie does not.
+  // Renews only the stable ID cookie's expiry, and gives it the device's value,
+  // keeping the domain, path and other attributes the site gave it; the
+  // Cookie Store API reports those, document.cookie does not.
   if (window.cookieStore) {
     window.cookieStore
       .get(STABLE_ID_COOKIE)
@@ -192,7 +209,7 @@
         }
         return window.cookieStore.set({
           name: cookie.name,
-          value: cookie.value,
+          value: DEVICE_STABLE_ID || cookie.value,
           domain: cookie.domain,
           path: cookie.path,
           sameSite: cookie.sameSite,
@@ -210,6 +227,8 @@
   // with empty sessionStorage too, since the WebView's copy outlives the reset.
   var SESSION_COPY_KEY = 'codeai_session';
   var RESET_KEY = 'codeai_reset';
+  // Try again resets one course: MainActivity.kt names it in this cookie.
+  var RESET_COURSE_COOKIE = 'codeai_reset_course';
   var storageMethods = Storage.prototype;
   var originalSetItem = storageMethods.setItem;
   var originalRemoveItem = storageMethods.removeItem;
@@ -228,6 +247,55 @@
       originalSetItem.call(window.localStorage, SESSION_COPY_KEY, JSON.stringify(copy));
     } catch (e) {
       // Storage full or unavailable: progress lasts until the app closes.
+    }
+  }
+
+  // Forgets a course's signed-out progress where clientState.js keeps it:
+  // results per level under "progress", code per level under
+  // "source_<course>_<level>", and, for the server's choice of the next level,
+  // the progress cookie of ClientState (dashboard/lib/client_state.rb). Both
+  // hold a map from course to level results.
+  function resetCourse(session, course) {
+    try {
+      var progress = JSON.parse(session.getItem('progress') || '{}');
+      if (progress && progress[course]) {
+        delete progress[course];
+        originalSetItem.call(session, 'progress', JSON.stringify(progress));
+      }
+    } catch (e) {
+      // Malformed progress: clientState.js ignores it too.
+    }
+    var prefix = 'source_' + course + '_';
+    for (var i = session.length - 1; i >= 0; i--) {
+      var key = session.key(i);
+      if (key !== null && key.indexOf(prefix) === 0) {
+        originalRemoveItem.call(session, key);
+      }
+    }
+    // The cookie is rewritten with the attributes Rails gave it, which only
+    // the Cookie Store API reports.
+    if (window.cookieStore) {
+      window.cookieStore
+        .get('progress')
+        .then(function (cookie) {
+          if (!cookie) {
+            return;
+          }
+          var levels = JSON.parse(decodeURIComponent(cookie.value.replace(/\+/g, ' ')));
+          if (!levels || !levels[course]) {
+            return;
+          }
+          delete levels[course];
+          return window.cookieStore.set({
+            name: cookie.name,
+            value: encodeURIComponent(JSON.stringify(levels)),
+            domain: cookie.domain,
+            path: cookie.path,
+            sameSite: cookie.sameSite,
+            expires: cookie.expires,
+          });
+        })
+        .catch(function () {});
     }
   }
 
@@ -251,6 +319,11 @@
       originalClear.call(session);
       originalSetItem.call(session, RESET_KEY, resetMark);
     }
+    var resetCourseName = cookieValue(RESET_COURSE_COOKIE);
+    if (resetCourseName) {
+      resetCourse(session, resetCourseName);
+      document.cookie = RESET_COURSE_COOKIE + '=; path=/; max-age=0; secure; samesite=lax';
+    }
     storageMethods.setItem = function () {
       originalSetItem.apply(this, arguments);
       scheduleCopy(this);
@@ -269,6 +342,100 @@
   } catch (e) {
     // Storage unavailable: the site runs as in a browser.
   }
+
+  // A signed-out child's progress is only in sessionStorage, so the server's
+  // "next level" route (script_levels#next, behind Continue on a unit's
+  // overview) always answers with the first level. The app finds the first
+  // level not yet passed itself, as Continue does for a signed-in student.
+  var RESUME_PARAM = 'codeai_resume';
+  // TestResults.MINIMUM_PASS_RESULT in apps/src/constants.js.
+  var MINIMUM_PASS_RESULT = 20;
+  var NEXT_PATH = /^\/(?:courses\/([A-Za-z0-9_-]+)\/units\/(\d+)|s\/([A-Za-z0-9_-]+))\/next\/?$/;
+
+  // Resolves to the URL of the unit's first level not yet passed, or null
+  // when every level is passed or the unit cannot be read.
+  function firstUnpassedLevel(structure) {
+    return fetch(structure, {credentials: 'same-origin'})
+      .then(function (response) {
+        return response.ok ? response.json() : null;
+      })
+      .then(function (unit) {
+        if (!unit) {
+          return null;
+        }
+        var results = {};
+        try {
+          results = JSON.parse(window.sessionStorage.getItem('progress') || '{}')[unit.name] || {};
+        } catch (e) {
+          // Malformed progress: nothing counts as passed.
+        }
+        var next = null;
+        (unit.lessons || []).some(function (lesson) {
+          return (lesson.levels || []).some(function (level) {
+            var passed = (level.ids || []).some(function (id) {
+              return (results[id] || 0) >= MINIMUM_PASS_RESULT;
+            });
+            if (level.bonus || passed || !level.url || !sameOrigin(level.url)) {
+              return false;
+            }
+            next = level.url;
+            return true;
+          });
+        });
+        return next;
+      })
+      .catch(function () {
+        return null;
+      });
+  }
+
+  // The landing page opens a course that starts on a level with
+  // ?codeai_resume; the child goes on to the first level not yet passed.
+  function resumeCourse() {
+    var url = new URL(window.location.href);
+    if (!url.searchParams.has(RESUME_PARAM)) {
+      return;
+    }
+    url.searchParams.delete(RESUME_PARAM);
+    window.history.replaceState(window.history.state, '', url.toString());
+    var page = pageCourse();
+    if (!page) {
+      return;
+    }
+    firstUnpassedLevel(page.structure).then(function (next) {
+      if (next && new URL(next, window.location.href).pathname !== window.location.pathname) {
+        window.location.replace(next);
+      }
+    });
+  }
+
+  resumeCourse();
+
+  // Continue on a unit's overview links to the server's next-level route.
+  document.addEventListener(
+    'click',
+    function (event) {
+      var link = event.target.closest && event.target.closest('a[href]');
+      if (!link || event.defaultPrevented) {
+        return;
+      }
+      var url = new URL(link.href, window.location.href);
+      var match = url.origin === window.location.origin && url.pathname.match(NEXT_PATH);
+      if (!match) {
+        return;
+      }
+      event.preventDefault();
+      var structure = match[1]
+        ? '/api/script_structure/courses/' + match[1] + '/units/' + match[2]
+        : '/api/script_structure/' + match[3];
+      firstUnpassedLevel(structure).then(function (next) {
+        // Every level passed: the server's route knows where a finished
+        // unit goes.
+        window.location.assign(next || url.toString());
+      });
+    },
+    true,
+  );
 
   // Page zoom as a browser does it: the layout narrows and everything is
   // drawn larger, so the page reflows and taps land where they look. The
@@ -390,6 +557,8 @@
   var STYLE_ID = 'codeai-app-style';
   // The header's zoom controls, in debug builds.
   var CONTROLS_ID = 'codeai-site-controls';
+  // The floating button that hides them again, in debug builds.
+  var HIDE_AGAIN_ID = 'codeai-hide-again';
   var REMOVED_ID = 'localize-widget';
 
   // Removed from the layout.
@@ -411,6 +580,9 @@
     '.sharing-content',
     // 8. "Need help?" videos and hints beside the lab.
     '#reference_area',
+    // "You are not signed in" callout on a course's levels: the app has no
+    // sign-in, and its links lead to sign-in and sign-up.
+    '.signin_callout_wrapper',
     // Links off studio.code.org, such as Get help: Amazon Kids+ allows no
     // links out of the app, so MainActivity.kt ignores them and they would
     // do nothing. Relative links stay on the site; other schemes, such as
@@ -477,6 +649,33 @@
       .join(', ');
   }
 
+  // Debug builds can show what HIDDEN and INVISIBLE take away: the class on
+  // <html> switches those rules off and outlines what they would hide.
+  var SHOWING_HIDDEN_CLASS = 'codeai-show-hidden';
+  var SHOWING_HIDDEN_KEY = 'codeai_show_hidden';
+
+  function hidingSelectorList(selectors) {
+    return selectorList(
+      selectors.map(function (selector) {
+        return ':not(.' + SHOWING_HIDDEN_CLASS + ') ' + selector;
+      }),
+    ).replace(/html:not\(#codeai-app\) :not/g, 'html:not(#codeai-app):not');
+  }
+
+  function showingHidden() {
+    return document.documentElement.classList.contains(SHOWING_HIDDEN_CLASS);
+  }
+
+  if (DEBUG_BUILD) {
+    try {
+      if (window.localStorage.getItem(SHOWING_HIDDEN_KEY) === '1') {
+        document.documentElement.classList.add(SHOWING_HIDDEN_CLASS);
+      }
+    } catch (e) {
+      // Storage unavailable: the page starts with them hidden.
+    }
+  }
+
   // Laid over the right of .header_right, in the space its invisible sign-in
   // and menu keep, and drawn like the site's own header buttons (.header_button:
   // Rename, Share, Remix). The page has the CodeAI tokens and Font Awesome.
@@ -485,12 +684,38 @@
     ' position: absolute; top: 50%; right: var(--spacing-p-xs);' +
     ' display: flex; align-items: center; gap: var(--spacing-p-xxs);' +
     ' transform: translateY(-50%); }' +
+    ' #' + CONTROLS_ID + ' span {' +
+    ' color: var(--text-neutral-white-fixed); font-size: var(--font-size-body-sm);' +
+    ' font-variant-numeric: tabular-nums; }' +
+    ' #' + CONTROLS_ID + ' span[hidden] { display: none; }' +
     ' #' + CONTROLS_ID + ' button {' +
     ' height: 2rem; padding: 0 var(--spacing-p-xs); margin: 0;' +
     ' border: 1px solid var(--borders-neutral-white-fixed);' +
     ' border-radius: var(--shape-md); background-color: transparent;' +
     ' color: var(--text-neutral-white-fixed); font-size: var(--font-size-body-sm);' +
     ' line-height: 1; cursor: pointer; }' +
+    // While hidden elements show, the header's own items take this space back:
+    // the controls step aside, and one floating button hides the elements
+    // again and brings the controls back.
+    ' html.' +
+    SHOWING_HIDDEN_CLASS +
+    ' #' +
+    CONTROLS_ID +
+    ' { display: none; }' +
+    ' #' +
+    HIDE_AGAIN_ID +
+    ' { display: none; position: fixed; right: var(--spacing-p-xs);' +
+    ' bottom: var(--spacing-p-xs); z-index: 2147483647; width: 3rem; height: 3rem;' +
+    ' align-items: center; justify-content: center; padding: 0; margin: 0;' +
+    ' border: 2px solid var(--borders-neutral-white-fixed); border-radius: 50%;' +
+    ' background-color: var(--background-brand-purple-primary-fixed);' +
+    ' color: var(--text-neutral-white-fixed); font-size: 1.25rem; cursor: pointer;' +
+    ' box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4); }' +
+    ' html.' +
+    SHOWING_HIDDEN_CLASS +
+    ' #' +
+    HIDE_AGAIN_ID +
+    ' { display: flex; }' +
     ' #' + CONTROLS_ID + ' button:hover { background-color: var(--neutral-white-alpha-20); }' +
     ' #' + CONTROLS_ID + ' button:active { background-color: var(--neutral-white-alpha-30); }' +
     ' #' + CONTROLS_ID + ' button:focus-visible {' +
@@ -499,9 +724,9 @@
     ' background-color: transparent; opacity: 0.5; cursor: default; }';
 
   var CSS =
-    selectorList(HIDDEN) +
+    hidingSelectorList(HIDDEN) +
     ' { display: none !important; } ' +
-    selectorList(
+    hidingSelectorList(
       INVISIBLE.concat(
         INVISIBLE.map(function (selector) {
           return selector + ' *';
@@ -509,6 +734,14 @@
       ),
     ) +
     ' { visibility: hidden !important; pointer-events: none !important; }' +
+    // removeWidgets() hides the unsupported-browser warning itself; the
+    // sign-in callout's wrapper has no size, so its popover is outlined.
+    HIDDEN.concat(INVISIBLE, ['#unsupported-browser', '.signin_callout_wrapper > * > *'])
+      .map(function (selector) {
+        return 'html.' + SHOWING_HIDDEN_CLASS + ' ' + selector;
+      })
+      .join(', ') +
+    ' { outline: 2px dashed #e5007e !important; outline-offset: -2px; }' +
     // The header controls sit over the right of this, in the space the
     // invisible items keep.
     selectorList(['.header_right']) +
@@ -535,25 +768,142 @@
   }
 
   function removeWidgets() {
+    var showing = showingHidden();
     var widget = document.getElementById(REMOVED_ID);
-    if (widget) {
+    if (widget && !showing) {
       widget.parentNode.removeChild(widget);
     }
     // Shown on WebViews the site does not support, including Fire OS 8's
     // Chromium 124. It covers the header and links out of the app. The banner
     // holds other warnings too, so it is hidden only while it carries this one.
+    // A debug build showing hidden elements puts it below the header instead,
+    // so the header's own items show.
     var unsupported = document.getElementById('unsupported-browser');
     if (unsupported) {
       var banner = unsupported.closest('#warning-banner') || unsupported;
-      banner.style.setProperty('display', 'none', 'important');
+      var header = document.querySelector('.header-wrapper');
+      if (showing) {
+        banner.style.removeProperty('display');
+        if (header) {
+          banner.style.setProperty('top', header.offsetHeight + 'px');
+        }
+      } else {
+        banner.style.setProperty('display', 'none', 'important');
+        banner.style.removeProperty('top');
+      }
     }
   }
 
+
   var controls = null;
+
+  // The course a course page belongs to, as the launcher's courseOf names it,
+  // the first level Reset course reopens and where the unit's levels are
+  // listed; null elsewhere, such as on /projects/ pages.
+  function pageCourse() {
+    var path = window.location.pathname;
+    var match = path.match(/^\/courses\/([A-Za-z0-9_-]+)\/units\/(\d+)/);
+    if (match) {
+      return {
+        course: match[1],
+        start: '/courses/' + match[1] + '/units/' + match[2] + '/lessons/1/levels/1',
+        structure: '/api/script_structure/courses/' + match[1] + '/units/' + match[2],
+      };
+    }
+    match = path.match(/^\/s\/([A-Za-z0-9_-]+)/);
+    if (match) {
+      return {
+        course: match[1],
+        start: '/s/' + match[1] + '/lessons/1/levels/1',
+        structure: '/api/script_structure/' + match[1],
+      };
+    }
+    // A course of its own levels, such as /flappy/1.
+    match = path.match(/^\/(?!projects\/)([A-Za-z0-9_-]+)\/\d+\/?$/);
+    if (match) {
+      return {
+        course: match[1],
+        start: '/' + match[1] + '/1',
+        structure: '/api/script_structure/' + match[1],
+      };
+    }
+    return null;
+  }
+
+  // Shows, or hides again, what the app hides on site pages; the choice lasts
+  // across pages. The translation widget, removed rather than hidden, comes
+  // back on the next page.
+  function setShowingHidden(showing) {
+    document.documentElement.classList.toggle(SHOWING_HIDDEN_CLASS, showing);
+    try {
+      if (showing) {
+        window.localStorage.setItem(SHOWING_HIDDEN_KEY, '1');
+      } else {
+        window.localStorage.removeItem(SHOWING_HIDDEN_KEY);
+      }
+    } catch (e) {
+      // Storage unavailable: the choice lasts until the page changes.
+    }
+    apply();
+  }
+
+  function showHiddenButton() {
+    var button = document.createElement('button');
+    button.type = 'button';
+    button.setAttribute('data-show-hidden', '');
+    button.setAttribute('aria-label', 'Show hidden elements');
+    button.title = 'Show hidden elements';
+    button.innerHTML = '<i class="fa-solid fa-eye" aria-hidden="true"></i>';
+    button.addEventListener('click', function () {
+      setShowingHidden(true);
+    });
+    return button;
+  }
+
+  var hideAgainButton = null;
+
+  // The one control while hidden elements show, floating over the page.
+  function ensureHideAgainButton() {
+    if (hideAgainButton === null) {
+      hideAgainButton = document.createElement('button');
+      hideAgainButton.id = HIDE_AGAIN_ID;
+      hideAgainButton.type = 'button';
+      hideAgainButton.setAttribute('aria-label', 'Hide elements again');
+      hideAgainButton.title = 'Hide elements again';
+      hideAgainButton.innerHTML = '<i class="fa-solid fa-eye-slash" aria-hidden="true"></i>';
+      hideAgainButton.addEventListener('click', function () {
+        setShowingHidden(false);
+      });
+    }
+    if (document.body && hideAgainButton.parentElement !== document.body) {
+      document.body.appendChild(hideAgainButton);
+    }
+  }
+
+  // Forgets this course's progress and reopens its first level, as Try
+  // again on the landing page does; MainActivity.kt handles the link.
+  function resetCourseButton(page) {
+    var button = document.createElement('button');
+    button.type = 'button';
+    button.setAttribute('data-reset', '');
+    button.setAttribute('aria-label', 'Reset course');
+    button.title = 'Reset course';
+    button.innerHTML = '<i class="fa-solid fa-eraser" aria-hidden="true"></i>';
+    button.addEventListener('click', function () {
+      window.location.href =
+        window.location.origin +
+        '/codeai-app/reset?course=' +
+        encodeURIComponent(page.course) +
+        '&next=' +
+        encodeURIComponent(window.location.origin + page.start);
+    });
+    return button;
+  }
 
   function zoomButton(label, icon, step) {
     var button = document.createElement('button');
     button.type = 'button';
+    button.setAttribute('data-zoom', '');
     button.setAttribute('data-label', label);
     button.innerHTML = '<i class="fa-solid fa-' + icon + '" aria-hidden="true"></i>';
     button.addEventListener('click', function () {
@@ -566,7 +916,10 @@
 
   function refreshControls() {
     var index = ZOOM_LEVELS.indexOf(zoomLevel());
-    var buttons = controls.children;
+    var level = controls.querySelector('span');
+    level.textContent = zoomLevel() + '%';
+    level.hidden = zoomLevel() === 100;
+    var buttons = controls.querySelectorAll('button[data-zoom]');
     for (var i = 0; i < buttons.length; i++) {
       var label = buttons[i].getAttribute('data-label') + ' (' + zoomLevel() + '%)';
       buttons[i].setAttribute('aria-label', label);
@@ -584,15 +937,47 @@
     if (controls === null) {
       controls = document.createElement('div');
       controls.id = CONTROLS_ID;
+      // The level between the buttons, shown only when it is not 100%; the
+      // buttons' labels say it to screen readers.
+      var level = document.createElement('span');
+      level.setAttribute('aria-hidden', 'true');
+      var page = pageCourse();
+      if (page) {
+        controls.appendChild(resetCourseButton(page));
+      }
+      controls.appendChild(showHiddenButton());
       controls.appendChild(zoomButton('Zoom out', 'magnifying-glass-minus', -1));
+      controls.appendChild(level);
       controls.appendChild(zoomButton('Zoom in', 'magnifying-glass-plus', 1));
       refreshControls();
     }
     var headerRight = document.querySelector('.header_right');
     if (headerRight && controls.parentElement !== headerRight) {
       headerRight.appendChild(controls);
+      alignControls();
     }
+    ensureHideAgainButton();
   }
+
+  // The controls' right gap matches the logo's left one. The site pads the
+  // header's two sides differently, so both are measured, not assumed.
+  function alignControls() {
+    var logo = document.getElementById('logo_home_link');
+    var headerRight = controls && controls.parentElement;
+    if (!logo || !headerRight) {
+      return;
+    }
+    var rightInset =
+      document.documentElement.clientWidth - headerRight.getBoundingClientRect().right;
+    var inset = logo.getBoundingClientRect().left - rightInset;
+    controls.style.right = Math.max(0, inset) + 'px';
+  }
+
+  window.addEventListener('resize', function () {
+    if (DEBUG_BUILD) {
+      alignControls();
+    }
+  });
 
   // Runs on every DOM change, so each step is a lookup or a no-op.
   function apply() {

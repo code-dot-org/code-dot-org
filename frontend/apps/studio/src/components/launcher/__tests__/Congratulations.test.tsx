@@ -36,6 +36,17 @@ describe('Congratulations', () => {
     expect(onChooseAnother).toHaveBeenCalledTimes(1);
   });
 
+  it('leaves privacy policy to launcher and offline headers', () => {
+    render(
+      <Congratulations
+        curriculum={oceans}
+        onTryAgain={vi.fn()}
+        onChooseAnother={vi.fn()}
+      />,
+    );
+    expect(screen.queryByText(/Privacy Policy/)).not.toBeInTheDocument();
+  });
+
   it('offers only another curriculum when the curriculum is unknown', () => {
     render(
       <Congratulations

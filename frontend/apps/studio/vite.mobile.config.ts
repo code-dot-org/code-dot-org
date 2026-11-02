@@ -8,7 +8,8 @@ const LOCALE_FONTS = /^@code-dot-org\/fonts\/locales\//;
 const NO_LOCALE_FONTS = '\0no-locale-fonts';
 const BRAND_FONTS = /\/fonts\/dist\/brands\/[^/]+\/index\.css$/;
 const FONT_FACE = /@font-face\s*\{[^}]*\}/g;
-const KEPT_FAMILY = /font-family:\s*["']?(Geist|Barlow Semi Condensed)/;
+const KEPT_FAMILY =
+  /font-family:\s*["']?(Geist|Barlow Semi Condensed|Space Grotesk)/;
 const LATIN_SUBSET = /-latin-(?!ext-)/;
 const WOFF_FALLBACK = /,\s*url\([^)]*\.woff["']?\)\s*format\(["']?woff["']?\)/g;
 const FONT_DISPLAY = /font-display:\s*swap/;
@@ -18,9 +19,9 @@ const PRELOADED_FONT = /^assets\/geist-latin-(400|600|700)-normal-.*\.woff2$/;
 // The launcher is en-US only, and the build copies every font a stylesheet
 // names. @code-dot-org/fonts can import a stylesheet per language (about 19MB
 // of fonts), though nothing here calls the importer. Of the brand fonts only
-// Geist and Barlow stay, in their Latin subsets and as WOFF2 alone: Noto Sans
-// fills in only characters Geist lacks, and Space Grotesk only the letter
-// shown when a curriculum's image fails, which falls back to Geist.
+// Geist, Barlow and Space Grotesk, the headings' and card titles' font, stay,
+// in their Latin subsets and as WOFF2 alone: Noto Sans fills in only
+// characters Geist lacks.
 //
 // The fonts are local files, so text waits for them instead of being drawn
 // in a fallback first and redrawn, and the page preloads the ones it uses so

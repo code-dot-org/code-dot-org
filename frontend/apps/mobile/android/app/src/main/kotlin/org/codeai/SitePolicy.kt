@@ -3,7 +3,10 @@ package org.codeai
 import android.net.Uri
 import android.os.LocaleList
 import android.util.Base64
+import java.net.URLDecoder
 import java.util.Locale
+import javax.crypto.Mac
+import javax.crypto.spec.SecretKeySpec
 
 /** Which studio.code.org pages the app shows and how it treats them. */
 internal object SitePolicy {
@@ -17,6 +20,7 @@ internal object SitePolicy {
     const val HOME_URL = "$SITE_ORIGIN/codeai-app/home"
     // The header's Reset button and the landing page's Try again link here,
     // handled like HOME_URL; ?next= names a studio.code.org page to open after.
+    // With ?course=, only that course's progress is forgotten.
     private const val RESET_PATH = "/codeai-app/reset"
 
     // Set by the page script and kept across a reset: the child's page zoom.
@@ -24,6 +28,10 @@ internal object SitePolicy {
     // Changed by every reset; the page script then clears sessionStorage,
     // which lives in the WebView rather than on disk.
     const val RESET_COOKIE_NAME = "codeai_reset"
+    // Names the course whose progress the next page's script clears, then
+    // deletes; it lasts minutes, in case no page loads.
+    const val RESET_COURSE_COOKIE_NAME = "codeai_reset_course"
+    const val RESET_COURSE_COOKIE_ATTRIBUTES = "Path=/; Max-Age=600; Secure; SameSite=Lax"
     const val COOKIE_ATTRIBUTES = "Path=/; Max-Age=315569520; Secure; SameSite=Lax"
 
     // Appended to the WebView's User-Agent, so the server can tell every
@@ -61,6 +69,50 @@ internal object SitePolicy {
     fun userAgentToken(versionName: String): String =
         "$USER_AGENT_PRODUCT/$versionName ($PLATFORM; $EDITION)"
 
+    // Keys the hash that turns ANDROID_ID into the site's stable ID, so the
+    // value is this app's own and does not reveal ANDROID_ID.
+    private const val STABLE_ID_KEY = "org.codeai.statsig_stable_id"
+
+    // The site's Statsig stable ID cookie (statsigHelpers.js in apps/), set
+    // with the site's own domain and path so it is the same cookie.
+    const val STABLE_ID_COOKIE_NAME = "statsig_stable_id"
+
+    // OneTrust's saved choice, and the category Statsig's cookie needs:
+    // performance (C0002), as consentAllowsStatsigCookie() in
+    // apps/src/metrics/statsigHelpers.js reads it.
+    const val CONSENT_COOKIE_NAME = "OptanonConsent"
+    private const val STATSIG_CONSENT_GROUP = "C0002:1"
+
+    /** Whether the saved consent in [cookieHeader] allows the stable ID cookie. */
+    fun consentAllowsStableId(cookieHeader: String?): Boolean {
+        val consent = cookieValue(cookieHeader, CONSENT_COOKIE_NAME) ?: return false
+        val groups = consent.split('&')
+            .firstOrNull { it.startsWith("groups=") }
+            ?.let { URLDecoder.decode(it.removePrefix("groups="), "UTF-8") }
+            ?: return false
+        return groups.split(',').any { it.trim() == STATSIG_CONSENT_GROUP }
+    }
+
+    fun stableIdCookie(id: String): String =
+        "$STABLE_ID_COOKIE_NAME=$id; Domain=.code.org; Path=/; Max-Age=31536000; Secure; SameSite=Lax"
+
+    /**
+     * The device's Statsig stable ID: the same on every launch, update and
+     * reinstall signed with the same key, until a factory reset changes
+     * [androidId]. Shaped as a version 4 UUID, the only form the site and
+     * server accept (STATSIG_STABLE_ID_PATTERN in lib/cdo/shared_constants.rb).
+     */
+    fun deviceStableId(androidId: String): String {
+        val mac = Mac.getInstance("HmacSHA256")
+        mac.init(SecretKeySpec(STABLE_ID_KEY.toByteArray(), "HmacSHA256"))
+        val bytes = mac.doFinal(androidId.toByteArray()).copyOf(16)
+        bytes[6] = (bytes[6].toInt() and 0x0f or 0x40).toByte()
+        bytes[8] = (bytes[8].toInt() and 0x3f or 0x80).toByte()
+        val hex = bytes.joinToString("") { "%02x".format(it) }
+        return "${hex.substring(0, 8)}-${hex.substring(8, 12)}-${hex.substring(12, 16)}-" +
+            "${hex.substring(16, 20)}-${hex.substring(20)}"
+    }
+
     // The WebView takes Accept-Language and navigator.language from the
     // default locale when it is created, and the system resets the default
     // when the device language changes.
@@ -79,6 +131,9 @@ internal object SitePolicy {
     }
 
     fun isResetUrl(url: Uri): Boolean = origin(url) == SITE_ORIGIN && url.path == RESET_PATH
+
+    /** The course a reset link names, or null when it names none or a malformed one. */
+    fun resetCourse(url: Uri): String? = url.getQueryParameter("course")?.takeIf { COURSE_NAME.matches(it) }
 
     fun isHomeLink(url: Uri): Boolean = url.toString() == HOME_URL
 
@@ -136,5 +191,15 @@ internal object SitePolicy {
         return course?.takeIf { COURSE_NAME.matches(it) } ?: ""
     }
 
-    private fun origin(url: Uri) = "${url.scheme}://${url.host}"
+    // As a browser compares origins: an omitted port and the scheme's default
+    // are the same, any other port is another origin.
+    private fun origin(url: Uri): String {
+        val default = when (url.scheme) {
+            "https" -> 443
+            "http" -> 80
+            else -> -1
+        }
+        val port = url.port.takeIf { it != -1 && it != default }?.let { ":$it" } ?: ""
+        return "${url.scheme}://${url.host}$port"
+    }
 }

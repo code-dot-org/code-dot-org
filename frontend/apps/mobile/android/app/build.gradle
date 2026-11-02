@@ -8,8 +8,8 @@ android {
         applicationId "org.codeai"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 2
-        versionName "0.2.0"
+        versionCode 3
+        versionName "0.3.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         // Amazon Kids+ requires 64-bit ARM for its Android 16 tablets. The app
         // ships no native code of its own; this filters bundled libraries.
@@ -38,7 +38,7 @@ android {
 }
 
 // Names the build output codeai-<version>-<build type>.apk, e.g.
-// codeai-0.2.0-debug.apk. Follows android {}, which sets the version.
+// codeai-0.3.0-debug.apk. Follows android {}, which sets the version.
 base {
     archivesName = "codeai-${android.defaultConfig.versionName}"
 }

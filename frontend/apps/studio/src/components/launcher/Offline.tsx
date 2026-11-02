@@ -18,7 +18,7 @@ interface OfflineProps {
 export default function Offline({onTryAgain, onBack}: OfflineProps) {
   return (
     <div className={screen.page}>
-      <AppHeader logoIsHeading />
+      <AppHeader logoIsHeading showPrivacyPolicy />
       <main className={screen.main}>
         <FontAwesomeV6Icon
           iconName="wifi-slash"
@@ -27,7 +27,8 @@ export default function Offline({onTryAgain, onBack}: OfflineProps) {
         />
         <ErrorPage
           title="No internet connection"
-          description="Check that Wi-Fi is on, or ask a grown-up for help."
+          titleVariant="h2"
+          description="Check that the Wi-Fi is on, or ask a grown-up for help."
           actions={
             <div className={screen.actions}>
               <Button
