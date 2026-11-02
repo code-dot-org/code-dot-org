@@ -35,6 +35,16 @@ module ApplicationHelper
     end
   end
 
+  # user_type for analytics. Cached unit pages disable the session, so
+  # current_user is nil even when signed in; fall back to the _user_type cookie.
+  # Map its under-13 'student_y' to 'student' to match the signed-in value.
+  def analytics_user_type
+    return current_user.user_type if user_signed_in?
+
+    cookie_user_type = cookies[environment_specific_cookie_name('_user_type')]
+    cookie_user_type == 'student_y' ? User::TYPE_STUDENT : cookie_user_type.presence
+  end
+
   def age_options
     User::AGE_DROPDOWN_OPTIONS.map do |age|
       [age, age]
