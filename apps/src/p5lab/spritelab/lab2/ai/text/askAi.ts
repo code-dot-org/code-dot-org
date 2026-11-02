@@ -91,7 +91,7 @@ async function requestAnswer(prompt: string): Promise<string> {
       model: getModel(AiChatModelIds.GEMINI_2_5_FLASH),
       system: SYSTEM_PROMPT,
       prompt,
-      temperature: 0.7,
+      temperature: 1,
     },
     {phase: 'generation', aichatContext: aichatContext()}
   );
