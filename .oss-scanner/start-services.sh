@@ -7,10 +7,9 @@
 #   .oss-scanner/start-services.sh --reset  also drop and reload the test schemas
 #
 # What it sets up (all local, no secrets, RAILS_ENV=test as in the image):
-#   - MySQL 8.0 on /var/run/mysqld/mysqld.sock and 127.0.0.1:3306, user root
-#     with an empty password (what config/test.yml.erb expects: mysql://root@localhost/),
-#     and the `writer` and `reader` users config/test.yml.erb names for the
-#     replica and reporting connections
+#   - MySQL 8.0 on /var/run/mysqld/mysqld.sock and 127.0.0.1:3306: root with
+#     an empty password (the admin credential in config/test.yml.erb), and
+#     the password-less `writer` and `reader` users Rails connects as
 #   - dashboard_test   <- `rails db:test:prepare`, as CI does: schema.rb, test
 #                         fixtures and `seed:test` (no curriculum content)
 #   - pegasus_test     <- pegasus/migrations       (Sequel migrations)
