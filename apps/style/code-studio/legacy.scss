@@ -3675,22 +3675,16 @@ h5.dialog-title {
   font-size: 20px;
 }
 
-#ok-button {
+// DialogButtons renders an MUI #ok-button; LegacyDialogContents a plain one.
+#ok-button:not(.MuiButton-root) {
   background-color: $orange;
   border: 1px solid $orange;
   color: $white;
   min-width: 100px;
 }
 
-#again-button, #cancel-button {
+#cancel-button {
   background-color: $green;
-  color: $white;
-  margin-left: 0;
-  margin-right: 10px;
-}
-
-#continue-button {
-  background-color: $orange;
   color: $white;
   margin-left: 0;
   margin-right: 10px;
@@ -3901,25 +3895,6 @@ button {
   font-size: large;
   background-color: $lightest_gray;
   color: $black;
-}
-button.launch {
-  border: 1px solid $orange;
-  background-color: $orange;
-  color: $white;
-  font-size: large;
-  min-width: 96px;
-  margin-left: 0;
-  margin-right: 10px;
-
-  /* Can't use "text-align: start" due to IE. */
-  text-align: left;
-}
-html[dir="RTL"] button.launch {
-  text-align: right;
-}
-button.launch>img {
-  opacity: 1;
-  vertical-align: text-bottom;
 }
 button>img {
   opacity: 0.6;

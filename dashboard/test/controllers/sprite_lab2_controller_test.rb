@@ -31,7 +31,23 @@ class SpriteLab2ControllerTest < ActionController::TestCase
     assert_equal 1, scenes.length
     assert_equal 'story-scene', scenes.first['sceneId']
     assert_equal 'Story', scenes.first['sceneName']
-    assert_equal @student.name, scenes.first['ownerName']
+    assert_equal @student.short_name, scenes.first['ownerName']
+  end
+
+  test 'adds a last initial when two classmates share a first name' do
+    alex_smith = create(:student, name: 'Alex Smith')
+    alex_jones = create(:student, name: 'Alex', family_name: 'Jones')
+    [alex_smith, alex_jones].each do |student|
+      create(:follower, student_user: student, user: @teacher)
+      stub_scenes channel_for(create_storage_id_for_user(student.id), @script.id)
+    end
+
+    sign_in @teacher
+    get :section_scenes, params: {level_id: @level.id, script_id: @script.id}
+
+    assert_response :success
+    owner_names = JSON.parse(response.body)['scenes'].map {|scene| scene['ownerName']}
+    assert_equal ['Alex J.', 'Alex S.'], owner_names.sort
   end
 
   test 'refuses a request with no script id' do

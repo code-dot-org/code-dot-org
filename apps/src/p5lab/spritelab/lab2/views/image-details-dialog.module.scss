@@ -12,7 +12,7 @@
 .dialogHost {
   display: contents;
 
-  // The host carries data-theme; the chrome colors follow it.
+  // The chrome's palette, on the page's tokens.
   @include chrome.theme;
 }
 
@@ -120,8 +120,8 @@
   left: 8px;
   padding: 2px 8px;
   border-radius: 4px;
-  background: rgb(0 0 0 / 45%);
-  color: #fff;
+  background: color-mix(in srgb, var(--neutral-base-true-black) 45%, transparent);
+  color: var(--text-neutral-white-fixed);
   font-size: 13px;
   // The page gives every span user-select: text.
   user-select: none;
@@ -220,13 +220,6 @@
   @include chrome.footer;
 
   font-size: 14px;
-
-  button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-  }
 }
 
 .footerLeft {
@@ -234,33 +227,6 @@
   align-items: center;
   gap: 10px;
   margin-right: auto;
-}
-
-.button {
-  @include chrome.plain-button;
-}
-
-.primaryButton {
-  @include chrome.plain-button;
-  @include chrome.primary-button;
-}
-
-.dangerButton {
-  @include chrome.plain-button;
-  @include chrome.danger-button;
-}
-
-.iconButton {
-  @include chrome.plain-button;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 30px;
-  height: 30px;
-  padding: 0;
-  border-color: transparent;
-  flex-shrink: 0;
 }
 
 // --- Generate view ---

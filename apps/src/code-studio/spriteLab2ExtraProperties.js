@@ -19,8 +19,12 @@ export const RAW_EDITABLE_PROPERTIES = [
   'image_role_defaults',
   'level_mode',
   'pinned_scene',
+  'extra_scene',
   'add_blocks',
   'world_start_pattern',
+  'starter_images',
+  'callouts',
+  'no_project',
 ];
 
 // level_properties camelizes property names; saves use the stored

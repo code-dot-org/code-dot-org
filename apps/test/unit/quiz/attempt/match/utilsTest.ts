@@ -1,17 +1,8 @@
 import {
-  arePaired,
+  findPartner,
   pairTogether,
-  partnerOf,
-  removePair,
+  unpairItem,
 } from '@cdo/apps/quiz/attempt/match/utils';
-
-describe('arePaired', () => {
-  it('is true only for an existing pair, in [start, end] order', () => {
-    expect(arePaired([['a', 'x']], ['a', 'x'])).toBe(true);
-    expect(arePaired([['a', 'x']], ['a', 'y'])).toBe(false);
-    expect(arePaired([['a', 'x']], ['x', 'a'])).toBe(false);
-  });
-});
 
 describe('pairTogether', () => {
   it('adds a new pair', () => {
@@ -31,29 +22,31 @@ describe('pairTogether', () => {
   });
 });
 
-describe('removePair', () => {
-  it('removes only that pair', () => {
-    expect(
-      removePair(
-        [
-          ['a', 'x'],
-          ['b', 'y'],
-        ],
-        ['a', 'x']
-      )
-    ).toEqual([['b', 'y']]);
+describe('unpairItem', () => {
+  const pairs: [string, string][] = [
+    ['a', 'x'],
+    ['b', 'y'],
+  ];
+
+  it("removes the item's pair, from either column", () => {
+    expect(unpairItem(pairs, 'a')).toEqual([['b', 'y']]);
+    expect(unpairItem(pairs, 'y')).toEqual([['a', 'x']]);
+  });
+
+  it('leaves the pairs alone for an unpaired item', () => {
+    expect(unpairItem(pairs, 'c')).toEqual(pairs);
   });
 });
 
-describe('partnerOf', () => {
+describe('findPartner', () => {
   const pairs: [string, string][] = [['a', 'x']];
 
   it('finds the partner from either side', () => {
-    expect(partnerOf(pairs, 'a')).toBe('x');
-    expect(partnerOf(pairs, 'x')).toBe('a');
+    expect(findPartner(pairs, 'a')).toBe('x');
+    expect(findPartner(pairs, 'x')).toBe('a');
   });
 
   it('is undefined for an unpaired item', () => {
-    expect(partnerOf(pairs, 'b')).toBeUndefined();
+    expect(findPartner(pairs, 'b')).toBeUndefined();
   });
 });

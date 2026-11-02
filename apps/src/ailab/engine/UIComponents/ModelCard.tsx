@@ -10,6 +10,7 @@ import {getLocalizedValue} from '../helpers/valueDetails';
 import {deepEqual, shallowEqual, useAppSelector} from '../hooks';
 import I18n from '../i18n';
 import {useProject} from '../ProjectContext';
+import {getDatasetId} from '../selectors';
 import {getLabelToSave, getFeaturesToSave} from '../selectors/saveSelectors';
 import type {ModelCardColumn} from '../types';
 
@@ -36,7 +37,7 @@ const ModelCard = () => {
     deepEqual
   );
   const datasetDetails = useAppSelector(getDatasetDetails, shallowEqual);
-  const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
+  const datasetId = useAppSelector(state => getDatasetId(state) || 'unknown');
   const localizedLabel = getLocalizedColumnName(datasetDetails.name, label.id);
   const localizedFeatures = selectedFeatures.map(feature =>
     getLocalizedColumnName(datasetDetails.name, feature)

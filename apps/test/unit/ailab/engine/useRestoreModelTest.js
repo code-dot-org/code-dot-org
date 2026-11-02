@@ -13,15 +13,14 @@ import {hasCurrentTrainingResult} from '@cdo/apps/ailab/engine/helpers/navigatio
 import I18n from '@cdo/apps/ailab/engine/i18n';
 import {
   resetState,
-  setColumnsByDataType,
   setCurrentPanel,
-  setImportedData,
   setMode,
 } from '@cdo/apps/ailab/engine/redux';
 import {store} from '@cdo/apps/ailab/engine/store';
 import train from '@cdo/apps/ailab/engine/train';
 import {defaultProject} from '@cdo/apps/ailab/engine/types';
 
+import {seedDataset} from './levelStore';
 import {renderWithProviders, runTraining} from './renderWithProviders';
 
 jest.mock('@cdo/apps/ailab/engine/csvReaderWrapper');
@@ -40,19 +39,24 @@ const COLUMNS = {
 };
 
 beforeEach(() => {
+  jest.useFakeTimers();
   I18n.initI18n();
   store.dispatch(resetState());
   // A reset leaves the mode alone, so one level's would outlive its tests.
   store.dispatch(setMode(undefined));
   train.reset();
-  store.dispatch(setImportedData(DATA, false));
-  ['temperature', 'cost', 'rain'].forEach(column =>
-    store.dispatch(setColumnsByDataType(column, ColumnTypes.NUMERICAL))
-  );
+  seedDataset(store, DATA, {
+    temperature: ColumnTypes.NUMERICAL,
+    cost: ColumnTypes.NUMERICAL,
+    rain: ColumnTypes.NUMERICAL,
+  });
   store.dispatch(setCurrentPanel('datasetView'));
 });
 
-afterEach(() => I18n.reset());
+afterEach(() => {
+  I18n.reset();
+  jest.useRealTimers();
+});
 
 // What the lab would have saved after the student trained once.
 function savedAfterTraining() {
@@ -73,6 +77,8 @@ function openLab(saved) {
     {store}
   );
   act(() => rendered.projectActions().openProject(saved));
+  // A pretrained level starts training once the loading overlay has painted.
+  act(() => jest.runAllTimers());
   return rendered;
 }
 

@@ -34,10 +34,12 @@ import {isAdaptiveAiEnabled} from '../../ai/generate';
 import {buildTutorContext} from '../../ai/tutorContext';
 import {workAdapterFor} from '../../ai/validation/adapters';
 import {latestValidation} from '../../progress/model';
+import {generationTraceId} from '../../project/projectGeneration';
 import {projectInfoFromChannel} from '../../project/projectInfo';
 import {LevelStep as LevelStepContent} from '../../types';
 import {usePathwayContext} from '../PathwayContext';
 
+import {useGenerateProject} from './useGenerateProject';
 import {useStepInstructions} from './useStepInstructions';
 import {useStepValidation} from './useStepValidation';
 
@@ -108,7 +110,16 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
   onComplete,
 }) => {
   const {levelProperties} = step;
-  const {currentSources, channel, projectManager, loadError} = useSources({
+  const {
+    currentSources,
+    channel,
+    projectManager,
+    loadError,
+    isLoading,
+    isEditable,
+    hasSavedSources,
+    updateSources,
+  } = useSources({
     levelProperties,
     defaultSources: EMPTY_SOURCES,
   });
@@ -122,19 +133,45 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
     recordValidation,
     aiContext,
   } = usePathwayContext();
+  // Read on mount, before StepPlayer's start of this visit gives it a status.
+  const [firstVisit] = useState(() => !progress.steps[step.id]?.status);
   // Keyed on the project's strings, not the channel, which changes on every save.
   const {name: projectName, description: projectDescription} =
     projectInfoFromChannel(step.project ? channel : undefined);
+  // A step with a project prompt generates the student's first version of
+  // the project before anything else reads it: once, for the owner, on a
+  // project with nothing saved and nothing generated. Unknown until loaded.
+  const isProjectLoaded =
+    !isLoading && currentSources !== undefined && !!channel && !!projectManager;
+  const shouldGenerateProject =
+    !step.project || !step.projectPrompt
+      ? false
+      : !isProjectLoaded
+      ? undefined
+      : isEditable && !hasSavedSources && !generationTraceId(channel);
+  const {isResolved: projectReady} = useGenerateProject({
+    shouldGenerate: shouldGenerateProject,
+    pathway,
+    checkpoint,
+    step,
+    progress,
+    projectInfo: {name: projectName, description: projectDescription},
+    aichatContext: aiContext,
+    sources: currentSources,
+    channel,
+    projectManager,
+    updateSources,
+  });
   // Instructions: the step's own or the level's, or for a project step with
   // a prompt, generated around the student's project. The lab waits until
   // they are resolved, so it never mounts with text that is about to change.
   const generatedInstructions = progress.steps[step.id]?.generatedInstructions;
-  const {instructions, isResolved} = useStepInstructions({
+  const {instructions, isResolved: instructionsReady} = useStepInstructions({
     pathway,
     checkpoint,
     step,
     projectInfo: {name: projectName, description: projectDescription},
-    sources: currentSources,
+    sources: projectReady ? currentSources : undefined,
     authoredInstructions: step.instructions ?? levelProperties.longInstructions,
     generatedInstructions,
     saveGeneratedInstructions,
@@ -168,8 +205,9 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
   });
   // Assemble the level properties to provide to the lab: the level's own, plus
   // adaptive-specific overrides: step-specific instructions, always hide share
-  // and remix, and pathway-specific tutor context that gets appendd to the level
-  // system prompt.
+  // and remix, spotlight the instructions on a first visit in place of the
+  // lab's product tours, and pathway-specific tutor context that gets appendd
+  // to the level system prompt.
   const viewProperties = useMemo<LevelProperties>(() => {
     const context = buildTutorContext({
       pathway,
@@ -188,6 +226,8 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
       ...levelProperties,
       hideShareAndRemix: true,
       hideNonInstructionTabs: true,
+      spotlightInstructions: firstVisit,
+      disableProductTours: true,
       longInstructions: instructions,
       levelSystemPrompt: own ? `${own}\n\n${context}` : context,
     };
@@ -201,6 +241,7 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
     projectDescription,
     instructions,
     latestValidationAttempt,
+    firstVisit,
   ]);
 
   // The lab's own Continue button advances the step. A step whose work is
@@ -261,10 +302,12 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
   const ready =
     currentSources !== undefined &&
     (!projectManager || registered) &&
-    isResolved;
-  // Resolving instructions can take a model call; say so instead of "slow".
+    projectReady &&
+    instructionsReady;
+  // The project and the instructions can each take a model call; say so
+  // instead of "slow".
   const loadingText =
-    currentSources !== undefined && !isResolved
+    currentSources !== undefined && !(projectReady && instructionsReady)
       ? 'Preparing your workspace...'
       : undefined;
   return (

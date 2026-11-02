@@ -7,6 +7,7 @@ import {
   getUniqueOptions,
   getExtrema,
   getColumnDescription,
+  idColumnOf,
   selectableColumns,
 } from './helpers/columnDetails';
 import {arrayIntersection} from './helpers/utils';
@@ -18,10 +19,18 @@ import type {
   TrainedModelDetailsSave,
 } from './types';
 
-export const getData = (state: RootState): DataRow[] => state.data;
+// Static constants used as values when the dataset is not loaded.
+// Use these rather than a fresh [] or {} to ensure reference equality.
+const NO_ROWS: DataRow[] = Object.freeze([]) as unknown as DataRow[];
+const NO_COLUMN_TYPES: Record<string, string> = Object.freeze({});
+const NO_METADATA: Metadata = Object.freeze({card: Object.freeze({})});
+
+export const getData = (state: RootState): DataRow[] =>
+  state.dataset?.rows ?? NO_ROWS;
 export const getColumnsByDataType = (
   state: RootState
-): Record<string, string> => state.columnsByDataType;
+): Record<string, string> =>
+  state.dataset?.columnsByDataType ?? NO_COLUMN_TYPES;
 // Reselect passes a selector's extra arguments to every input selector, so
 // taking the project here gives it to everything derived below.
 const getSelectedFeatures = (
@@ -32,9 +41,13 @@ export const getLabelColumn = (
   _state: RootState,
   project: AilabProject
 ): string | undefined => project.labelColumn;
-export const getMetadata = (state: RootState): Metadata => state.metadata;
+export const getMetadata = (state: RootState): Metadata =>
+  state.dataset?.metadata ?? NO_METADATA;
 export const getDatasetId = (state: RootState): string | undefined =>
-  state.metadata && state.metadata.name;
+  state.dataset?.metadata.name;
+export const getRemovedRowsCount = (state: RootState): number =>
+  state.dataset?.removedRowsCount ?? 0;
+
 export const getTrainedModelDetails = (
   state: RootState
 ): TrainedModelDetailsSave => state.trainedModelDetails;
@@ -91,24 +104,13 @@ export const getSelectedNumericalFeatures = createSelector(
   }
 );
 
-// A dataset can drop or rename the column a level names.
 export const getIdColumn = createSelector(
   [
     getData,
     (state: RootState) => state.mode?.idColumn,
-    (state: RootState) => state.metadata.defaultIdColumn,
+    (state: RootState) => getMetadata(state).defaultIdColumn,
   ],
-  (
-    data: DataRow[],
-    levelIdColumn: string | null | undefined,
-    defaultIdColumn: string | undefined
-  ): string | undefined => {
-    const idColumn =
-      levelIdColumn === null ? undefined : levelIdColumn ?? defaultIdColumn;
-    return idColumn !== undefined && Object.hasOwn(data[0] ?? {}, idColumn)
-      ? idColumn
-      : undefined;
-  }
+  idColumnOf
 );
 
 export const getTrainableColumns = createSelector(

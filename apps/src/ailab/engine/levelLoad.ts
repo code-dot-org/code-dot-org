@@ -7,9 +7,9 @@ import {
   setMode,
   setCurrentPanel,
   setSelectedCSV,
-  setSelectedJSON,
   setSelectedName,
   setReserveLocation,
+  setDatasetLayout,
   resetState,
 } from './redux';
 import {store} from './store';
@@ -35,6 +35,7 @@ const processMode = (mode: Mode | undefined): void => {
     ? TestDataLocations.END
     : TestDataLocations.RANDOM;
   store.dispatch(setReserveLocation(reserveLocation));
+  store.dispatch(setDatasetLayout(mode?.defaultCardView ? 'cards' : 'table'));
 
   const onlyDatasetId =
     mode?.datasets?.length === 1 ? mode.datasets[0] : undefined;
@@ -51,7 +52,6 @@ const processMode = (mode: Mode | undefined): void => {
 
   store.dispatch(setSelectedName(item.name));
   store.dispatch(setSelectedCSV(assetPath + item.path));
-  store.dispatch(setSelectedJSON(assetPath + item.metadataPath));
   loadDataset(assetPath + item.path, assetPath + item.metadataPath);
 
   store.dispatch(setCurrentPanel('datasetView'));

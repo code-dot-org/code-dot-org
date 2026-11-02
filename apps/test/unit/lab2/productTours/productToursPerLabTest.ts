@@ -228,6 +228,21 @@ describe('isTourAvailableOnLevel', () => {
       ).toBe(true);
     });
 
+    it('returns false for every tour when disableProductTours is set', () => {
+      expect(
+        isTourAvailableOnLevel(
+          ProductTour.Weblab2Intro,
+          makeLevelProperties('weblab2', {disableProductTours: true})
+        )
+      ).toBe(false);
+      expect(
+        isTourEnabledOnLevel(
+          ProductTour.Weblab2Intro,
+          makeLevelProperties('weblab2', {disableProductTours: true})
+        )
+      ).toBe(false);
+    });
+
     it('ignores productTours field — availability is independent of level tour list', () => {
       // isTourAvailableOnLevel does not gate on productTours.
       expect(

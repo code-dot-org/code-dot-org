@@ -1,6 +1,6 @@
 import {z} from 'zod';
 
-import {generate} from '@cdo/apps/adaptive/ai/generate';
+import {generate, moderateInput} from '@cdo/apps/adaptive/ai/generate';
 import {startTrace} from '@cdo/apps/adaptive/ai/langfuse/trace';
 import {AichatContext} from '@cdo/apps/aichat/types';
 import {generateText} from '@cdo/apps/aiGateway';
@@ -127,5 +127,42 @@ describe('generate', () => {
       outcome: 'error',
       errorMessage: 'boom',
     });
+  });
+});
+
+describe('moderateInput', () => {
+  beforeEach(() => jest.clearAllMocks());
+
+  it('is ok when the judge clears the text, asked with the shell context', async () => {
+    mockGenerateText.mockResolvedValue({output: {classification: 'OK'}});
+
+    await expect(moderateInput('a site about dogs', context)).resolves.toBe(
+      'ok'
+    );
+    expect(mockGenerateText.mock.calls[0][0].prompt).toContain(
+      'a site about dogs'
+    );
+    expect(mockGenerateText.mock.calls[0][1]).toEqual({
+      phase: 'input_filter',
+      aichatContext: context,
+    });
+  });
+
+  it('is flagged when the judge does not clear the text', async () => {
+    mockGenerateText.mockResolvedValue({
+      output: {classification: 'INAPPROPRIATE'},
+    });
+
+    await expect(moderateInput('bad text', context)).resolves.toBe('flagged');
+  });
+
+  it('is an error, and reported, when the judge fails or answers nonsense', async () => {
+    mockGenerateText.mockRejectedValue(new Error('gateway down'));
+    await expect(moderateInput('text', context)).resolves.toBe('error');
+
+    mockGenerateText.mockResolvedValue({output: {classification: 'MAYBE'}});
+    await expect(moderateInput('text', context)).resolves.toBe('error');
+
+    expect(mockLogError).toHaveBeenCalledTimes(2);
   });
 });

@@ -2,6 +2,7 @@
   Functions for logging analytics metrics.
 */
 import type {RootState} from '../redux';
+import {getDatasetId} from '../selectors';
 import {getTrainerId} from '../trainers/ids';
 import type {AilabProject} from '../types';
 
@@ -14,7 +15,7 @@ function getModelMetrics(
 ): Record<string, unknown> {
   const modelMetrics: Record<string, unknown> = {};
   modelMetrics.userUploaded = isUserUploadedDataset(state);
-  modelMetrics.datasetName = state.metadata.name;
+  modelMetrics.datasetName = getDatasetId(state);
   modelMetrics.features = project.selectedFeatures;
   modelMetrics.label = project.labelColumn;
   modelMetrics.accuracy = getPercentCorrect(state, project);

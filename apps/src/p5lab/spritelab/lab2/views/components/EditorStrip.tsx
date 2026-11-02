@@ -20,18 +20,13 @@ interface EditorStripProps {
   editor?: Editor;
   onChange?: (editor: Editor) => void;
   editors?: Editor[];
-  disabledEditors?: Partial<Record<Editor, string>>;
+  disabledEditors?: Editor[];
   /** The name in the middle; the open editor's unless given. */
   title?: string;
-  /** The switch at the bar's start instead of its end. */
+  /** The switch at the bar's start instead of its end; undo and redo
+      sit across from it either way. */
   switchAtStart?: boolean;
-  /** Leads the bar's start cell. */
-  start?: React.ReactNode;
-  /** Closes the bar's end cell. */
-  end?: React.ReactNode;
   history?: EditHistory;
-  /** Undo and redo beside the switch at the end, not across from it. */
-  historyAtEnd?: boolean;
   /** Room kept clear of the preview's column. */
   style?: React.CSSProperties;
 }
@@ -47,10 +42,7 @@ const EditorStrip: React.FunctionComponent<EditorStripProps> = ({
   disabledEditors,
   title,
   switchAtStart = false,
-  start,
-  end,
   history,
-  historyAtEnd = false,
   style,
 }) => {
   // Takes focus from a button that its own click disables.
@@ -97,33 +89,11 @@ const EditorStrip: React.FunctionComponent<EditorStripProps> = ({
       disabledEditors={disabledEditors}
     />
   );
-  // The history sits across from the switch unless asked to join it.
-  const startNodes = switchAtStart ? (
-    <>
-      {start}
-      {switchNode}
-    </>
-  ) : (
-    <>
-      {start}
-      {!historyAtEnd && historyNode}
-    </>
-  );
-  const endNodes = switchAtStart ? (
-    <>
-      {historyNode}
-      {end}
-    </>
-  ) : (
-    <>
-      {historyAtEnd && historyNode}
-      {switchNode}
-      {end}
-    </>
-  );
   return (
     <div className={moduleStyles.editorStrip} style={style}>
-      <div className={moduleStyles.editorStripStart}>{startNodes}</div>
+      <div className={moduleStyles.editorStripStart}>
+        {switchAtStart ? switchNode : historyNode}
+      </div>
       <MuiTypography
         component="h2"
         variant="overline2"
@@ -131,7 +101,9 @@ const EditorStrip: React.FunctionComponent<EditorStripProps> = ({
       >
         {title ?? (editor === 'Code' ? 'Workspace' : editor)}
       </MuiTypography>
-      <div className={moduleStyles.editorStripEnd}>{endNodes}</div>
+      <div className={moduleStyles.editorStripEnd}>
+        {switchAtStart ? historyNode : switchNode}
+      </div>
     </div>
   );
 };

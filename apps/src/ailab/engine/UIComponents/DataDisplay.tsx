@@ -8,7 +8,7 @@ import {withIdColumnFirst} from '../helpers/columnDetails';
 import {rowCountText} from '../helpers/utils';
 import {useAppDispatch, useAppSelector} from '../hooks';
 import {setDatasetLayout} from '../redux';
-import {getIdColumn} from '../selectors';
+import {getData, getIdColumn} from '../selectors';
 import {useDatasetTableView} from '../useDatasetTableView';
 
 import DatasetCardDeck from './DatasetCardDeck';
@@ -19,7 +19,7 @@ import styles from './dataDisplay.module.scss';
 
 const DataDisplay = () => {
   const dispatch = useAppDispatch();
-  const data = useAppSelector(state => state.data);
+  const data = useAppSelector(getData);
   const datasetName = useAppSelector(state => state.name);
   const datasetLayout = useAppSelector(state => state.datasetLayout);
   const idColumn = useAppSelector(getIdColumn);

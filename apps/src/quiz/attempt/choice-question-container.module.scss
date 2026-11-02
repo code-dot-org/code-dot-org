@@ -1,0 +1,73 @@
+.choices {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.option {
+  align-items: center;
+  width: 100%;
+  min-height: 46px;
+  padding: 10px 14px 10px 12px;
+  background: var(--background-neutral-secondary);
+  border: 1px solid var(--border-neutral-primary);
+  border-radius: var(--shape-sm);
+}
+
+.optionSelected {
+  background: var(--background-brand-light);
+  border-color: var(--border-brand-light);
+}
+
+// Graded rows have no interaction states.
+.option:not(.optionCorrect, .optionIncorrect) {
+  &:hover,
+  &:active {
+    border-color: var(--border-neutral-secondary);
+  }
+
+  &.optionSelected:hover,
+  &.optionSelected:active {
+    border-color: var(--border-brand-mid);
+  }
+
+  &:has(input:focus-visible) {
+    box-shadow:
+      0 0 0 2px var(--background-neutral-primary),
+      0 0 0 4px var(--border-focused-primary);
+  }
+}
+
+// After .optionSelected so a graded pick overrides its purple.
+.optionCorrect {
+  background: var(--background-success-light);
+  border-color: var(--border-success-mid);
+
+  .statusIcon {
+    color: var(--text-success-primary);
+  }
+}
+
+.optionIncorrect {
+  background: var(--background-error-light);
+  border-color: var(--border-error-mid);
+
+  .statusIcon {
+    color: var(--text-error-primary);
+  }
+}
+
+.statusIcon {
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}

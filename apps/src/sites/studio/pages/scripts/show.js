@@ -155,10 +155,7 @@ function initPage() {
         showAiAssessmentsAnnouncement={showAiAssessmentsAnnouncement}
       />
     </Provider>,
-    mountPoint,
-    {
-      legacyReactDomRender: true,
-    }
+    mountPoint
   );
 
   resumeReviewSyllabusOnboardingTour();
@@ -211,10 +208,7 @@ function displayDifferentiationChat(scriptData) {
           scriptName={scriptData.name}
         />
       </Provider>,
-      aiDiffFabMountPoint,
-      {
-        legacyReactDomRender: true,
-      }
+      aiDiffFabMountPoint
     );
   }
 }

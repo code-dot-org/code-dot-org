@@ -22,24 +22,6 @@ $panel-inset: 6px;
   }
 }
 
-.promptLink {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 4px 8px;
-  border: 0;
-  border-radius: 6px;
-  background: transparent;
-  color: var(--text-neutral-primary);
-  font: inherit;
-  font-size: 14px;
-  cursor: pointer;
-
-  &:hover:not(:disabled) {
-    background-color: var(--background-neutral-primary);
-  }
-}
-
 // Above the link, in the frame's bottom right corner. Doubled to outrank
 // the component's own width and margin.
 .promptPopover.promptPopover {
@@ -77,25 +59,7 @@ $panel-inset: 6px;
   }
 
   .promptTabs {
-    display: flex;
-    gap: 6px;
     align-self: stretch;
-  }
-
-  .promptTab {
-    padding: 4px 12px;
-    border: 1px solid var(--text-neutral-primary);
-    border-radius: 999px;
-    background: transparent;
-    color: inherit;
-    font: inherit;
-    font-size: 13px;
-    cursor: pointer;
-
-    &[aria-selected='true'] {
-      background-color: var(--text-neutral-primary);
-      color: var(--background-neutral-primary);
-    }
   }
 
   .promptNote {

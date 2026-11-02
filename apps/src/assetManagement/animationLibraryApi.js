@@ -1,15 +1,32 @@
+import {getJsLocaleCandidates} from '@cdo/apps/util/locale';
 import {createUuid} from '@cdo/apps/utils';
 
-/* Returns the animation manifest of either GameLab or SpriteLab in the specified locale
+/* Returns the animation manifest of either GameLab or SpriteLab in the first
+ * of the specified locale, its fallback, and the default locale that has one
+ *
  * @param appType {String} "gamelab" or "spritelab"
  * @param locale {String} language locale, defaults to 'en_us'
  */
-export function getManifest(appType, locale = 'en_us') {
-  return fetch(`/api/v1/animation-library/manifest/${appType}/${locale}`)
-    .then(response => response.json())
-    .catch(err => {
-      return Promise.reject(err);
-    });
+export async function getManifest(appType, locale = 'en_us') {
+  for (const manifestLocale of getJsLocaleCandidates(locale)) {
+    const response = await fetch(
+      `/api/v1/animation-library/manifest/${appType}/${manifestLocale}`
+    );
+
+    if (response.ok) {
+      return response.json();
+    } else if (response.status === 404) {
+      console.warn(
+        `No ${appType} animation manifest for locale ${manifestLocale}`
+      );
+    } else {
+      throw new Error(
+        `Failed to load ${appType} animation manifest for locale ${manifestLocale}: ${response.status}`
+      );
+    }
+  }
+
+  throw new Error(`No ${appType} animation manifest for locale ${locale}`);
 }
 
 /* Returns the metadata for a specific animation library file

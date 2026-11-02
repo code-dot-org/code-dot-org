@@ -1,7 +1,12 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button} from '@mui/material';
 import classNames from 'classnames';
-import React, {type CSSProperties, type ReactNode, useEffect} from 'react';
+import React, {
+  type CSSProperties,
+  type ReactNode,
+  useEffect,
+  useLayoutEffect,
+} from 'react';
 
 import {colors} from './constants';
 import {reportPanelView} from './helpers/metrics';
@@ -19,6 +24,7 @@ import {
   saveModel,
   setCurrentPanel,
 } from './redux';
+import {getData} from './selectors';
 import {useTrainingData} from './TrainingDataContext';
 import type {
   InstructionsKey,
@@ -30,6 +36,7 @@ import type {
 import ColumnAnalysis from './UIComponents/ColumnAnalysis';
 import DataCard from './UIComponents/DataCard';
 import DataDisplay from './UIComponents/DataDisplay';
+import EmptyState from './UIComponents/EmptyState';
 import ModelCard from './UIComponents/ModelCard';
 import Results from './UIComponents/Results';
 import SaveModel from './UIComponents/SaveModel';
@@ -230,6 +237,8 @@ export interface AppProps {
   onStartOver?: () => void;
   /** Optional callback invoked with the accuracy of each newly trained model. */
   onTrained?: (accuracy: number) => void;
+  /** Optional callback invoked with whether the lab is loading its dataset, a saved project, or a pretrained model. */
+  onLoadingChange?: (isLoading: boolean) => void;
 }
 
 // getPanelButtons builds a fresh {prev, next} each call (and reads I18n for
@@ -244,6 +253,7 @@ const App = ({
   setInstructionsKey,
   onStartOver,
   onTrained,
+  onLoadingChange,
 }: AppProps) => {
   const dispatch = useAppDispatch();
   const {project, isProjectLoading} = useProject();
@@ -264,10 +274,11 @@ const App = ({
   const hasNavigation = !!(panelButtons.prev || panelButtons.next);
 
   const restoringModel = useRestoreModel();
-  usePretrainOnLoad(restoringModel);
+  const pretraining = usePretrainOnLoad(restoringModel);
 
   const datasetPending = useAppSelector(
-    state => !!state.csvfile && state.data.length === 0 && !state.invalidData
+    state =>
+      !!state.csvfile && getData(state).length === 0 && !state.invalidData
   );
   /*
     Datasets load while on the select dataset panel, don't hide that panel
@@ -276,6 +287,17 @@ const App = ({
   const loading =
     currentPanel !== 'selectDataset' &&
     (datasetPending || isProjectLoading || restoringModel);
+  // The picker reports its own failures.
+  const datasetFailed = useAppSelector(
+    state =>
+      state.currentPanel !== 'selectDataset' &&
+      state.invalidData === 'loadFailed'
+  );
+
+  // A layout effect, so the consumer's overlay is up before the browser paints.
+  useLayoutEffect(() => {
+    onLoadingChange?.(loading || pretraining);
+  }, [onLoadingChange, loading, pretraining]);
 
   // Notify the consumer of instructions key changes when they occur.
   useEffect(() => {
@@ -300,7 +322,22 @@ const App = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [latestResult]);
 
-  // TODO: don't load forever if the dataset fails to load.
+  if (datasetFailed) {
+    return (
+      <div className={styles.app} style={colorVariables}>
+        <BodyContainer flush>
+          <div className={styles.panelRow} role="alert">
+            <EmptyState
+              iconName="triangle-exclamation"
+              title="Dataset could not be loaded"
+              message="Reload the page to try again."
+            />
+          </div>
+        </BodyContainer>
+      </div>
+    );
+  }
+
   if (loading) {
     return <div className={styles.app} style={colorVariables} />;
   }

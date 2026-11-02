@@ -258,7 +258,7 @@ module LevelsHelper
     # and get the backpack channel token if it exists.
     # Backpack is used in lab2 apps also but app_options is only used by legacy labs.
     backpack_enabled = !!(@level.is_a?(Javalab) &&
-      (ProjectsController::STANDALONE_PROJECTS["javalab"]["name"] != @level.name) &&
+      (Policies::StandaloneProjects.all["javalab"]["name"] != @level.name) &&
       (@user || current_user))
 
     view_options(backpack_enabled: backpack_enabled)
