@@ -45,16 +45,12 @@ describe('askAiText', () => {
 
   it('judges the question, then the answer', async () => {
     await askAiText('why did the cat nap?');
-    expect(isTextSafe).toHaveBeenNthCalledWith(
-      1,
-      'why did the cat nap?',
-      'input_filter'
-    );
-    expect(isTextSafe).toHaveBeenNthCalledWith(
-      2,
+    const [first, second] = isTextSafe.mock.calls;
+    expect(first.slice(0, 2)).toEqual(['why did the cat nap?', 'input_filter']);
+    expect(second.slice(0, 2)).toEqual([
       'Because it was tired.',
-      'output_filter'
-    );
+      'output_filter',
+    ]);
   });
 
   it('sends its own client type, not the lab ambient one', async () => {
@@ -64,6 +60,16 @@ describe('askAiText', () => {
       AiChatClientTypes.SPRITELAB_ASK_AI
     );
     expect(extra.aichatContext.currentLevelId).toBe(7);
+  });
+
+  // Left out, each judge falls back to the lab's ambient FLOW_LAB context,
+  // which the server trusts — bypassing the levelbuilder gate.
+  it('gives both safety judges the same client type', async () => {
+    await askAiText('hello');
+    expect(isTextSafe).toHaveBeenCalledTimes(2);
+    isTextSafe.mock.calls.forEach(([, , , context]) => {
+      expect(context?.clientType).toBe(AiChatClientTypes.SPRITELAB_ASK_AI);
+    });
   });
 
   it('throws with the prompt phase when the question is flagged', async () => {

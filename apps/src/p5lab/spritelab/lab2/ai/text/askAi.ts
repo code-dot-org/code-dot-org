@@ -115,7 +115,7 @@ export async function askAiText(prompt: string): Promise<string> {
 
   const [verdict, answer] = await withTimeout(
     Promise.allSettled([
-      isTextSafe(question, 'input_filter'),
+      isTextSafe(question, 'input_filter', undefined, aichatContext()),
       requestAnswer(question),
     ]),
     ASK_AI_TIMEOUT_MS
@@ -140,7 +140,7 @@ export async function askAiText(prompt: string): Promise<string> {
     throw new Error('The AI answer came back empty.');
   }
 
-  if (!(await isTextSafe(text, 'output_filter'))) {
+  if (!(await isTextSafe(text, 'output_filter', undefined, aichatContext()))) {
     count('answer_flagged');
     throw new AskAiError('answer');
   }
