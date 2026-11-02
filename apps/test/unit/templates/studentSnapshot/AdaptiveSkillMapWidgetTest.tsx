@@ -93,12 +93,13 @@ describe('AdaptiveSkillMapWidget', () => {
     expect(HttpClient.fetchJson).not.toHaveBeenCalled();
   });
 
-  it('shows a spinner while loading', () => {
+  it('renders nothing while loading', () => {
     HttpClient.fetchJson.mockReturnValue(new Promise(() => {}));
 
-    renderWidget();
+    const {container} = renderWidget();
 
-    expect(document.getElementById('uitest-spinner')).toBeInTheDocument();
+    expect(container).toBeEmptyDOMElement();
+    expect(HttpClient.fetchJson).toHaveBeenCalled();
   });
 
   it("shows each checkpoint in the student's status", async () => {
@@ -110,13 +111,13 @@ describe('AdaptiveSkillMapWidget', () => {
       '/student_snapshots/units/1/lessons/2/students/3/adaptive'
     );
     expect(
-      await screen.findByRole('button', {name: 'Checkpoint intro: Complete'})
+      await screen.findByRole('img', {name: 'Checkpoint intro: Complete'})
     ).toBeInTheDocument();
     expect(
-      screen.getByRole('button', {name: 'Checkpoint a: In progress'})
+      screen.getByRole('img', {name: 'Checkpoint a: In progress'})
     ).toBeInTheDocument();
     expect(
-      screen.getByRole('button', {name: 'Checkpoint b: Locked'})
+      screen.getByRole('img', {name: 'Checkpoint b: Locked'})
     ).toBeInTheDocument();
   });
 
@@ -146,7 +147,7 @@ describe('AdaptiveSkillMapWidget', () => {
 
     renderWidget();
 
-    await screen.findByRole('button', {name: 'Checkpoint intro: Complete'});
+    await screen.findByRole('img', {name: 'Checkpoint intro: Complete'});
     // Only the destinations layout draws a destination's title.
     expect(screen.queryByText('Outpost')).not.toBeInTheDocument();
   });
@@ -252,7 +253,7 @@ describe('AdaptiveSkillMapWidget', () => {
         });
       respondWith({pathway: PATHWAY, progress: PROGRESS});
       renderWidget();
-      const root = await screen.findByRole('button', {
+      const root = await screen.findByRole('img', {
         name: 'Checkpoint intro: Complete',
       });
 
@@ -265,7 +266,7 @@ describe('AdaptiveSkillMapWidget', () => {
   it('does nothing when a checkpoint is pressed', async () => {
     respondWith({pathway: PATHWAY, progress: PROGRESS});
     renderWidget();
-    const node = await screen.findByRole('button', {
+    const node = await screen.findByRole('img', {
       name: 'Checkpoint a: In progress',
     });
     const before = document.body.innerHTML;
@@ -273,6 +274,9 @@ describe('AdaptiveSkillMapWidget', () => {
     fireEvent.click(node);
 
     await waitFor(() => expect(document.body.innerHTML).toBe(before));
+    expect(
+      screen.queryByRole('button', {name: /^Checkpoint/})
+    ).not.toBeInTheDocument();
     expect(HttpClient.fetchJson).toHaveBeenCalledTimes(1);
     expect(window.location.pathname).toBe('/');
   });

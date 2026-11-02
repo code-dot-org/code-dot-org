@@ -40,8 +40,6 @@ const getAdaptiveSnapshot = (
     `/student_snapshots/units/${unitId}/lessons/${lessonId}/students/${studentId}/adaptive`
   ).then(response => response.value);
 
-const noop = () => {};
-
 // Percentages of the size at which the map fills the widget's width. Below
 // 100 the map is narrower than the widget and centered in it.
 const ZOOM_PERCENTAGES = [25, 50, 75, 100, 150, 200];
@@ -80,7 +78,6 @@ const SkillMap: React.FC<{
         statusMap={statusMap}
         settings={settings}
         fit="width"
-        onSelect={noop}
       />
     </MapZoom>
   );
@@ -135,11 +132,11 @@ const AdaptiveSkillMapWidget: React.FC<AdaptiveSkillMapWidgetProps> = ({
     [loaded?.progress]
   );
 
-  if (!hasAdaptiveLevel) {
+  const hasStudent = !!selectedStudentId;
+  if (!hasAdaptiveLevel || (hasStudent && fetched.state === 'loading')) {
     return null;
   }
 
-  const hasStudent = !!selectedStudentId;
   let content: React.ReactNode;
   if (!hasStudent) {
     content = <Message text="Select a student to see their skill map." />;
@@ -150,12 +147,7 @@ const AdaptiveSkillMapWidget: React.FC<AdaptiveSkillMapWidgetProps> = ({
   }
 
   return (
-    <WidgetTemplate
-      widgetName="Skill Map"
-      gridWidth={2}
-      gridHeight={2}
-      loading={hasStudent && fetched.state === 'loading'}
-    >
+    <WidgetTemplate widgetName="Skill Map" gridWidth={2} gridHeight={3}>
       {content}
     </WidgetTemplate>
   );

@@ -30,7 +30,7 @@ interface MapNodeProps {
   above?: React.ReactNode;
   /** Rendered after the circle. */
   children?: React.ReactNode;
-  onSelect: (id: string) => void;
+  onSelect?: (id: string) => void;
   tourId?: string;
 }
 
@@ -57,17 +57,29 @@ const MapNode: React.FunctionComponent<MapNodeProps> = ({
     style={{left: position.x, top: position.y - circleTop, width}}
   >
     {above}
-    <button
-      type="button"
-      id={tourId}
-      className={styles.circle}
-      data-checkpoint-id={checkpoint.id}
-      onClick={() => onSelect(checkpoint.id)}
-      aria-label={`${checkpoint.title}: ${STATUS_LABELS[status]}`}
-      aria-pressed={focusId === checkpoint.id}
-    >
-      <FontAwesomeV6Icon iconName={ICONS[status]} />
-    </button>
+    {onSelect ? (
+      <button
+        type="button"
+        id={tourId}
+        className={styles.circle}
+        data-checkpoint-id={checkpoint.id}
+        onClick={() => onSelect(checkpoint.id)}
+        aria-label={`${checkpoint.title}: ${STATUS_LABELS[status]}`}
+        aria-pressed={focusId === checkpoint.id}
+      >
+        <FontAwesomeV6Icon iconName={ICONS[status]} />
+      </button>
+    ) : (
+      <div
+        id={tourId}
+        className={styles.circle}
+        data-checkpoint-id={checkpoint.id}
+        role="img"
+        aria-label={`${checkpoint.title}: ${STATUS_LABELS[status]}`}
+      >
+        <FontAwesomeV6Icon iconName={ICONS[status]} />
+      </div>
+    )}
     {children}
   </div>
 );
