@@ -151,15 +151,26 @@ class SessionsControllerTest < ActionController::TestCase
     assert_equal cookies[Cdo::AnonUserId::KEY], anon_user_id
   end
 
-  test 'signing in user ignores Statsig stable ID' do
+  test 'signing in user reuses Statsig stable ID without anon_user_id cookie' do
     stable_id = SecureRandom.uuid
     session[:statsig_stable_id] = stable_id
-    request.cookies[SharedConstants::STATSIG_STABLE_ID_KEY] = stable_id
     user = create(:user)
 
     create_session_for_user(user)
 
-    refute_equal stable_id, SignIn.find_by!(user_id: user.id).anon_user_id
+    assert_equal stable_id, SignIn.find_by!(user_id: user.id).anon_user_id
+    assert_equal stable_id, cookies[Cdo::AnonUserId::KEY]
+  end
+
+  test 'signing in user prefers anon_user_id cookie over Statsig stable ID' do
+    anon_user_id = Cdo::AnonUserId.generate
+    request.cookies[Cdo::AnonUserId::KEY] = anon_user_id
+    request.cookies[SharedConstants::STATSIG_STABLE_ID_KEY] = SecureRandom.uuid
+    user = create(:user)
+
+    create_session_for_user(user)
+
+    assert_equal anon_user_id, SignIn.find_by!(user_id: user.id).anon_user_id
   end
 
   test 'failed signin does not create SignIn' do

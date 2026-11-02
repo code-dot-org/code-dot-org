@@ -62,13 +62,27 @@ class LegacyAPIsTest < ActionDispatch::IntegrationTest
         _(response.headers['Set-Cookie'].to_s).wont_include '_learn_session_test='
       end
 
-      it 'does not record Statsig stable ID as anon_user_id' do
+      it 'records Statsig stable ID as anon_user_id without anon_user_id cookie' do
         stable_id = SecureRandom.uuid
         cookies[SharedConstants::STATSIG_STABLE_ID_KEY] = stable_id
 
         get '/v3/channels'
 
         must_respond_with :success
+        _(user_storage_ids_table.where(anon_user_id: stable_id).count).must_equal 1
+        _(cookies[Cdo::AnonUserId::KEY]).must_equal stable_id
+      end
+
+      it 'records anon_user_id cookie over Statsig stable ID' do
+        anon_user_id = Cdo::AnonUserId.generate
+        stable_id = SecureRandom.uuid
+        cookies[Cdo::AnonUserId::KEY] = anon_user_id
+        cookies[SharedConstants::STATSIG_STABLE_ID_KEY] = stable_id
+
+        get '/v3/channels'
+
+        must_respond_with :success
+        _(user_storage_ids_table.where(anon_user_id:).count).must_equal 1
         _(user_storage_ids_table.where(anon_user_id: stable_id).count).must_equal 0
       end
     end

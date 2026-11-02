@@ -128,7 +128,10 @@ module Cdo
       anon_user_id = cookies[Cdo::AnonUserId::KEY]
       return anon_user_id if Cdo::AnonUserId.valid?(anon_user_id)
 
-      anon_user_id = Cdo::AnonUserId.generate
+      # The Statsig stable ID used to be the anonymous user ID, so reusing an existing one keeps
+      # the visitor's earlier anonymous records linked to them instead of starting a new user.
+      anon_user_id = existing_statsig_stable_id
+      anon_user_id = Cdo::AnonUserId.generate unless Cdo::AnonUserId.valid?(anon_user_id)
 
       jar = respond_to?(:cookie_jar) ? cookie_jar : ActionDispatch::Request.new(env).cookie_jar
       jar[Cdo::AnonUserId::KEY] = {

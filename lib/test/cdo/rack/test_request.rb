@@ -326,16 +326,57 @@ class RequestTest
       assert_equal 1, set_cookie_header(request).scan(Cdo::AnonUserId::KEY).size
     end
 
-    def test_anon_user_id_is_independent_from_statsig_stable_id
+    def test_anon_user_id_reuses_statsig_stable_id_cookie
       stable_id = SecureRandom.uuid
       request = request_with_cookies(SharedConstants::STATSIG_STABLE_ID_KEY => stable_id)
 
-      refute_equal stable_id, request.anon_user_id
+      assert_equal stable_id, request.anon_user_id
+      assert_includes set_cookie_header(request), "#{Cdo::AnonUserId::KEY}=#{stable_id};"
+    end
+
+    def test_anon_user_id_reuses_statsig_stable_id_from_session
+      stable_id = SecureRandom.uuid
+      session = {SharedConstants::STATSIG_STABLE_ID_KEY => stable_id}
+      session.expects(:[]=).never
+      request = request_with_cookies
+      request.env['rack.session'] = session
+
+      assert_equal stable_id, request.anon_user_id
+      assert_includes set_cookie_header(request), "#{Cdo::AnonUserId::KEY}=#{stable_id};"
+    end
+
+    def test_anon_user_id_prefers_its_cookie_over_statsig_stable_id
+      anon_user_id = Cdo::AnonUserId.generate
+      request = request_with_cookies(Cdo::AnonUserId::KEY => anon_user_id, SharedConstants::STATSIG_STABLE_ID_KEY => SecureRandom.uuid)
+
+      assert_equal anon_user_id, request.anon_user_id
+      assert_nil set_cookie_header(request)
+    end
+
+    def test_anon_user_id_generates_id_for_invalid_statsig_stable_id
+      invalid_id = '<html>blocked</html>'
+      request = request_with_cookies(SharedConstants::STATSIG_STABLE_ID_KEY => invalid_id)
+      request.env['rack.session'] = {SharedConstants::STATSIG_STABLE_ID_KEY => invalid_id}
+
+      anon_user_id = request.anon_user_id
+
+      assert Cdo::AnonUserId.valid?(anon_user_id)
+      refute_equal invalid_id, anon_user_id
+    end
+
+    # Writing the session would create it in Redis.
+    def test_anon_user_id_does_not_write_session
+      session = {}
+      session.expects(:[]=).never
+      request = request_with_cookies
+      request.env['rack.session'] = session
+
+      assert Cdo::AnonUserId.valid?(request.anon_user_id)
     end
 
     # Any access to the session would load it from Redis.
-    def test_anon_user_id_does_not_touch_session
-      request = request_with_cookies
+    def test_anon_user_id_does_not_touch_session_with_its_cookie
+      request = request_with_cookies(Cdo::AnonUserId::KEY => Cdo::AnonUserId.generate)
       request.env['rack.session'] = mock('session')
 
       assert Cdo::AnonUserId.valid?(request.anon_user_id)
