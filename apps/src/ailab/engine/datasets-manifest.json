@@ -1,6 +1,22 @@
 {
   "datasets": [
     {
+      "id": "SC1-L06-playlist-a-base",
+      "name": "Playlist Bot A",
+      "path": "datasets/SC1-L06-playlist-a-base.csv",
+      "metadataPath": "datasets/SC1-L06-playlist-a-base.json",
+      "isToy": true,
+      "rowCount": 10
+    },
+    {
+      "id": "SC1-L06-playlist-b-base",
+      "name": "Playlist Bot B",
+      "path": "datasets/SC1-L06-playlist-b-base.csv",
+      "metadataPath": "datasets/SC1-L06-playlist-b-base.json",
+      "isToy": true,
+      "rowCount": 20
+    },  
+    {
       "id": "SC1-L08-marketing-base",
       "name": "Movie Clips",
       "path": "datasets/SC1-L08-marketing-base.csv",
