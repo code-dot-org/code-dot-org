@@ -37,6 +37,16 @@ module UserPermissionGrantee
     permissions.delete permission if permission
   end
 
+  # Sessions slide forward on each request, so without this an active privileged
+  # user never signs in again and current_sign_in_at stops measuring activity.
+  PRIVILEGED_SIGN_IN_MAX_AGE = 30.days
+
+  # Nil means the session was started with bypass_sign_in, which does not track sign-ins.
+  def privileged_sign_in_expired?
+    return false unless current_sign_in_at&.before?(PRIVILEGED_SIGN_IN_MAX_AGE.ago)
+    !!admin || levelbuilder?
+  end
+
   # Revokes all escalated permissions associated with the user,
   # including admin status and any granted UserPermissions.
   def revoke_all_permissions

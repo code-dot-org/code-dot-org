@@ -16,6 +16,7 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
+  before_action :expire_privileged_sign_in, if: :current_user
   before_action :handle_cap_lockout, :assert_lms_landing_policy, if: :current_user
 
   # this is needed to avoid devise breaking on email param
@@ -371,6 +372,18 @@ class ApplicationController < ActionController::Base
       session.delete(:sign_up_uid)
       session.delete(:sign_up_type)
     end
+  end
+
+  # Only page loads are interrupted, so an editor's pending API calls and saves still succeed.
+  # Browsers send Accept: text/html for navigations; fetch() sends */*.
+  protected def expire_privileged_sign_in
+    return if devise_controller?
+    return unless request.get? && request.headers['Accept'].to_s.include?('text/html')
+    return unless current_user.privileged_sign_in_expired?
+
+    store_location_for(:user, request.fullpath)
+    sign_out current_user
+    redirect_to new_user_session_path
   end
 
   # Check that the user is compliant with the Child Account Policy. If they
