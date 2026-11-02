@@ -5,7 +5,9 @@
  * Usage (from component-library package):
  *
  *   cd frontend/packages/component-library
- *   yarn codemod:buttons -- ../../apps/src/templates/curriculumCatalog/*.jsx
+ *   TS_NODE_TRANSPILE_ONLY=true yarn jscodeshift -t ./codemods/button-to-mui-button.ts \
+ *     --parser=tsx --extensions=js,jsx,ts,tsx --require ts-node/register \
+ *     ../../../apps/src/templates/curriculumCatalog/*.jsx
  *
  * This codemod uses the shared `transformButtonPropsCore` logic from
  * `src/button/buttonPropsToMuiCore.ts` to compute MUI `variant`/`color`/`size`,
