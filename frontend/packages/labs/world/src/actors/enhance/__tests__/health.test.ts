@@ -12,6 +12,7 @@ import {compileProject} from '../../../__tests__/support/compileProject';
 import {PositionProperty} from '../../../engine';
 import {EMPTY_WORLD_PROJECT} from '../../../fixtures/scenarios';
 import {fileIdAt, projectFiles} from '../../../runtime/projectFiles';
+import {isDataShaped, viewOf} from '../../actorData';
 import {importedContents, importStockActor} from '../../importStockActor';
 import {stockActorById} from '../../stock';
 import {healthEnhancement} from '../health';
@@ -54,6 +55,9 @@ describe('the health enhancement, as edits', () => {
     expect(at(after, 'actors/healthBar.actor')).toBe(
       importedContents(stockActorById('healthBar')!),
     );
+    // As data, as is the bar it acts like, so the Actor Editor opens both.
+    expect(isDataShaped(at(after, 'actors/healthBar.actor'))).toBe(true);
+    expect(isDataShaped(at(after, 'actors/progressBar.actor'))).toBe(true);
   });
 
   it('makes the actor bring its own bar, and leaves the world alone', () => {
@@ -81,10 +85,9 @@ describe('the health enhancement, as edits', () => {
   });
 
   it('gives the actor a property to remember its bar in, and no remover', () => {
-    const actor = at(
-      healthEnhancement.apply(withPlayer(), PLAYER),
-      'actors/player.actor',
-    )!;
+    const actor = viewOf(
+      at(healthEnhancement.apply(withPlayer(), PLAYER), 'actors/player.actor')!,
+    );
 
     // A property to remember it in, because `as ⟨bar⟩` is a block scope. No
     // handler takes the bar away: a child goes with its parent

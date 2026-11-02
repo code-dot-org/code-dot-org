@@ -25,12 +25,12 @@ handler, which runs once the instance exists and before it is first drawn.
   shown nowhere: not in the panel, not in the Code view.
 - **The Code view** of a data-shaped actor shows its handlers and code rows
   as roots, and no `define actor` (`blockly/codeRoots`).
-- **Blocks-shaped files.** `ActorFileEditor` opens an actor whose contents
-  are not data in the blocks editor, `define actor` and all. Scenarios and
-  the starter project are folded where they are loaded (`WORLD_SCENARIOS`,
-  `DEFAULT_PROJECT`); stock actors, new actors and enhanced ones are written
-  as data. Lessons are not folded: every lesson's actors are `define actor`
-  workspaces but one (`look/animation`'s Hero, ANIMATION_PLAN.md step 9).
+- **Blocks-shaped files.** The Actor Editor opens only data; an actor whose
+  contents are not data cannot be read there. Every actor the lab ships or
+  teaches with is stored as data (`actorData.test`). The stock actors
+  store their fold (`stock/workspace.actorFile`); scenarios, the starter
+  project and the lessons are folded where they are listed
+  (`WORLD_SCENARIOS`, `DEFAULT_PROJECT`, `lessons/support`).
 - **The panel** edits purpose, traits, Self, values, effects and looks. Acts
   like, is a record and the icon are data with no field: the creation wizard
   and the enhancements set them. It offers the same looks whatever the actor

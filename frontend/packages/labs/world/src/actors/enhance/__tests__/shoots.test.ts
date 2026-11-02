@@ -19,6 +19,7 @@ import {PositionProperty, type World} from '../../../engine';
 import {keyName} from '../../../engine/core/keys';
 import {EMPTY_WORLD_PROJECT} from '../../../fixtures/scenarios';
 import {fileIdAt, projectFiles} from '../../../runtime/projectFiles';
+import {viewOf} from '../../actorData';
 import {importStockActor} from '../../importStockActor';
 import {stockActorById} from '../../stock';
 import {shootsEnhancement as shoots} from '../shoots';
@@ -69,7 +70,9 @@ describe('the shooting row, as edits', () => {
     // A block naming a variable the workspace has not declared loads with a
     // variable Blockly has never heard of, and the body's getter resolves to
     // nothing — which compiles, and stands still.
-    const workspace = JSON.parse(at(armed(), 'actors/player.actor')!) as {
+    const workspace = JSON.parse(
+      viewOf(at(armed(), 'actors/player.actor')!),
+    ) as {
       variables?: Array<{id?: string; name?: string; type?: string}>;
     };
 

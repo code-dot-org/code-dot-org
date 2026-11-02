@@ -37,7 +37,7 @@ import {
   wears,
 } from './actorPatch';
 import type {Enhancement, EnhanceTarget} from './enhancements';
-import {addRoot, down, rootsOf, type BlockJson} from './patch';
+import {addRoot, changeRoots, down, rootsOf, type BlockJson} from './patch';
 
 const CREATED_HAT = 'world_on_Space_CreatedEvent';
 
@@ -135,18 +135,16 @@ export const huntRow = (spec: HuntSpec): Enhancement => {
     _target: EnhanceTarget,
     actor: string,
   ): string => {
-    const workspace = JSON.parse(contents) as {blocks?: {blocks?: BlockJson[]}};
-    for (const root of workspace.blocks?.blocks ?? []) {
+    return changeRoots(contents, root => {
       if (!isOurs()(root)) {
-        continue;
+        return;
       }
       for (const row of down(root)) {
         if (row.type === spec.property) {
           row.inputs = {...row.inputs, VALUE: valueFor(spec, actor)};
         }
       }
-    }
-    return JSON.stringify(workspace, null, 2);
+    });
   };
 
   return {

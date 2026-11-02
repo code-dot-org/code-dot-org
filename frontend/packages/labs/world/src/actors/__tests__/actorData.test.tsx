@@ -10,7 +10,11 @@ import BlocklyGenerator, {
 import {refreshProjectDropdowns} from '../../blockly/projectDropdowns';
 import {projectOwnMetas, projectRuleMetas} from '../../blockly/projectModules';
 import {registerProjectRules} from '../../blockly/ruleRegistry';
-import {SCENARIOS_AS_WRITTEN as WORLD_SCENARIOS} from '../../fixtures/scenarios';
+import {DEFAULT_PROJECT} from '../../constants';
+import {
+  SCENARIOS_AS_WRITTEN as WORLD_SCENARIOS,
+  WORLD_SCENARIOS as SCENARIOS,
+} from '../../fixtures/scenarios';
 import {LESSONS} from '../../progression/lessons';
 import {projectFiles} from '../../runtime/projectFiles';
 import {
@@ -19,13 +23,14 @@ import {
   foldActor,
   CREATED_HAT,
   isActorData,
+  isDataShaped,
   memberName,
   viewOf,
   type ActorData,
 } from '../actorData';
 import {STOCK_ACTORS} from '../stock';
 import {
-  actorFile,
+  actorRows,
   defineProperty,
   setText,
   swatch,
@@ -63,7 +68,7 @@ const lines = (code: string): string[] =>
 
 describe('an actor folded into data', () => {
   it('says what the actor is as keys, and keeps its code as roots', () => {
-    const contents = actorFile(
+    const contents = actorRows(
       'Badge',
       [
         useTrait('Gravity#AffectedByGravityTrait'),
@@ -119,7 +124,7 @@ describe('an actor folded into data', () => {
       },
     };
     const data = fold(
-      actorFile('Odd', [
+      actorRows('Odd', [
         {type: 'world_set_sprite', fields: {SPRITE: 'a.png'}},
         {type: 'world_set_sprite', fields: {SPRITE: 'b.png'}},
         computed,
@@ -140,7 +145,7 @@ describe('an actor folded into data', () => {
 
   it('puts them first in the creation handler it already has', () => {
     const workspace = JSON.parse(
-      actorFile('Odd', [
+      actorRows('Odd', [
         {type: 'world_set_sprite', fields: {SPRITE: 'a.png'}},
         {type: 'world_set_sprite', fields: {SPRITE: 'b.png'}},
       ]),
@@ -168,7 +173,7 @@ describe('an actor folded into data', () => {
     // A second `acts like` says nothing the first does not, and means
     // nothing in a handler.
     const data = fold(
-      actorFile('Odd', [
+      actorRows('Odd', [
         {type: 'world_acts_like', fields: {ACTOR: 'actors/label'}},
         {type: 'world_acts_like', fields: {ACTOR: 'actors/panel'}},
       ]),
@@ -179,7 +184,7 @@ describe('an actor folded into data', () => {
 
   it('keeps a picture value as data, and writes it back', () => {
     const data = fold(
-      actorFile('Card', [
+      actorRows('Card', [
         {
           type: 'world_set_Card_FaceProperty',
           inputs: {
@@ -207,7 +212,7 @@ describe('an actor folded into data', () => {
 
   it('keeps the keys beside the workspace', () => {
     const file = {
-      ...(JSON.parse(actorFile('Tag', [])) as object),
+      ...(JSON.parse(actorRows('Tag', [])) as object),
       for: 'interface',
       extra: 1,
     };
@@ -218,7 +223,7 @@ describe('an actor folded into data', () => {
   });
 
   it('turns either shape into the other, and leaves each alone', () => {
-    const contents = actorFile('Tag', [
+    const contents = actorRows('Tag', [
       useTrait('Gravity#AffectedByGravityTrait'),
     ]);
     const data = asActorData(contents);
@@ -232,7 +237,9 @@ describe('an actor folded into data', () => {
 
 describe('an actor’s own blocks and events, folded', () => {
   const stock = (id: string) =>
-    fold(STOCK_ACTORS.find(actor => actor.id === id)!.contents);
+    JSON.parse(
+      STOCK_ACTORS.find(actor => actor.id === id)!.contents,
+    ) as ActorData;
   const codeTypes = (data: ActorData) =>
     (data.blocks?.blocks?.blocks ?? []).map(root => root.type);
 
@@ -303,7 +310,7 @@ describe('an actor’s own blocks and events, folded', () => {
     // It compiles to nothing in an actor yet (`actorSheet`), but the data
     // says it, so nothing an actor's code holds is a `define block`.
     const data = fold(
-      actorFile('Asker', [
+      actorRows('Asker', [
         {
           type: 'world_rule_block',
           fields: {RETURNS: 'number', DESCRIPTION: '', ACCESS: 'shared'},
@@ -349,6 +356,29 @@ const PROJECTS: Array<[string, Record<string, string>]> = [
   ),
 ];
 
+describe('every actor the lab ships or teaches with', () => {
+  const stored: Array<[string, Record<string, string>]> = [
+    PROJECTS[0],
+    ['default', projectFiles(DEFAULT_PROJECT.source)],
+    ...Object.entries(SCENARIOS).map(
+      ([tag, scenario]) =>
+        [`scenario ${tag}`, projectFiles(scenario.source)] as [
+          string,
+          Record<string, string>,
+        ],
+    ),
+    ...PROJECTS.filter(([tag]) => tag.startsWith('lesson ')),
+  ];
+
+  it.each(stored)('%s is stored as data', (_, files) => {
+    for (const [path, held] of Object.entries(files)) {
+      if (path.endsWith('.actor')) {
+        expect(isDataShaped(held), path).toBe(true);
+      }
+    }
+  });
+});
+
 describe('every actor, folded and viewed again', () => {
   it.each(PROJECTS)('%s compiles to the same lines', async (_, files) => {
     refreshProjectDropdowns(files, [], {}, []);
@@ -369,7 +399,7 @@ describe('every actor, folded and viewed again', () => {
       if (!path.endsWith('.actor')) {
         continue;
       }
-      // One written as data (`look/animation`'s Hero) starts from its view.
+      // Stored as data, so it starts from its view.
       const held = JSON.parse(written) as unknown;
       const contents = isActorData(held)
         ? JSON.stringify(actorView(held))

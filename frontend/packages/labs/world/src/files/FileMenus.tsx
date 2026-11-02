@@ -55,7 +55,7 @@ import {setActorCreateHandler} from '../actors/create/actorCreate';
 import {ActorCreator, type ActorDraft} from '../actors/create/ActorCreator';
 import {lookOf, withLook, withScale} from '../actors/create/actorLook';
 import {newActorFile} from '../actors/create/newActor';
-import {importStockActorAsData} from '../actors/importStockActor';
+import {importStockActor} from '../actors/importStockActor';
 import {STOCK_ACTORS, stockActorById} from '../actors/stock';
 import {offersActor, useAppBuilder} from '../appBuilder';
 import {chooseImageGenerator} from '../appearance/generate/chooseImageGenerator';
@@ -507,7 +507,7 @@ export const FileMenus = () => {
         // "Gold Piece" and move every reference with it. So: whether the actor
         // file was there BEFORE decides which act this is.
         const had = fileIdAt(from, `${ACTORS_FOLDER}/${stock.id}.actor`);
-        const imported = importStockActorAsData(from, stock);
+        const imported = importStockActor(from, stock);
         const id = fileIdAt(imported.source, `${imported.path}.actor`);
         const file = id ? imported.source.files[id] : undefined;
         if (!file) {

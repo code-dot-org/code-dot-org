@@ -150,9 +150,10 @@ BUILT. `throughView` (in `actorData`) makes a change written for rows to
 contents of either shape. `withLook`, `withScale` and `lookOf` go through
 it; the wizard writes with those, a clone renames the data's own `name`,
 and an import writes its stock file, so the wizard needed nothing more.
-The enhancements are wrapped once, where their groups are listed
-(`enhance/throughTheView`): each is asked and applied with the project's
-data-shaped actors in their view, and an actor it wrote to is folded back.
+The enhancements read and write an actor through its view where they
+edit one (`enhance/patch`): what they write to a data-shaped actor is
+folded back. Until November 2026 a wrapper did this around each
+enhancement where their groups are listed (`throughTheView`).
 `mapWorkspaces` views and folds a data-shaped actor; `animationPlayedIn`
 and `actorUses` read its view. A test gives every actor enhancement to
 each of the starter's actors in both shapes and finds the same change

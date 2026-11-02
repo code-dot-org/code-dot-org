@@ -95,7 +95,6 @@ import {
   takenByAnyPadEnhancement,
   usesTeleportPadsEnhancement,
 } from './teleport';
-import {throughTheView} from './throughTheView';
 import {topDownControlsEnhancement} from './topDownControls';
 import {typesOutTextEnhancement} from './typesOutText';
 import {wrapsAcrossEnhancement, wrapsDownEnhancement} from './wraps';
@@ -360,16 +359,13 @@ const PURPOSES: Readonly<Record<string, OfferedTo>> = {
   scoreboard: 'both',
 };
 
-/**
- * The groups, each enhancement made to work on an actor of either shape: it
- * is written against `define actor` rows, and is asked and applied through a
- * data-shaped actor's view (`throughTheView`, specs/ACTOR_EDITOR_PLAN.md).
- */
+/** The groups, each enhancement with what it is for. */
 export const GROUPS: readonly EnhancementGroup[] = AS_WRITTEN.map(group => ({
   ...group,
-  members: group.members.map(one =>
-    throughTheView({...one, for: PURPOSES[one.id] ?? 'game'}),
-  ),
+  members: group.members.map(one => ({
+    ...one,
+    for: PURPOSES[one.id] ?? 'game',
+  })),
 }));
 
 export const ENHANCEMENTS: readonly Enhancement[] = GROUPS.flatMap(

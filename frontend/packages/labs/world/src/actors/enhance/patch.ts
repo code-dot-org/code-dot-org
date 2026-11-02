@@ -19,6 +19,11 @@
 // cannot see what changed will do it again. Each of these asks whether the row
 // is already there and does nothing if it is, so the second time is a no-op
 // rather than a duplicate trait and a second bar.
+//
+// AN ACTOR IS DATA, and these read and write its view (`actors/actorData`):
+// what is written to a data-shaped file is folded back into data.
+
+import {asActorData, isDataShaped, viewOf} from '../actorData';
 
 /** A Blockly workspace as it is stored: `{variables?, blocks: {blocks: []}}`. */
 interface Workspace {
@@ -38,7 +43,13 @@ export interface BlockJson {
 }
 
 const parse = (contents: string): Workspace =>
-  (JSON.parse(contents || '{}') as Workspace) ?? {};
+  (JSON.parse(viewOf(contents || '{}')) as Workspace) ?? {};
+
+/** The workspace written back in the shape the contents had. */
+const written = (contents: string, workspace: Workspace): string => {
+  const next = JSON.stringify(workspace, null, 2);
+  return isDataShaped(contents) ? asActorData(next, contents) : next;
+};
 
 const roots = (workspace: Workspace): BlockJson[] =>
   workspace.blocks?.blocks ?? [];
@@ -100,17 +111,13 @@ export function addRoot(contents: string, block: BlockJson): string {
     (bottom, root) => Math.max(bottom, Number(root.y ?? 0)),
     0,
   );
-  return JSON.stringify(
-    {
-      ...workspace,
-      blocks: {
-        ...workspace.blocks,
-        blocks: [...roots(workspace), {...block, x: 20, y: lowest + 220}],
-      },
+  return written(contents, {
+    ...workspace,
+    blocks: {
+      ...workspace.blocks,
+      blocks: [...roots(workspace), {...block, x: 20, y: lowest + 220}],
     },
-    null,
-    2,
-  );
+  });
 }
 
 /**
@@ -128,11 +135,20 @@ export function withVariable(contents: string, variable: object): string {
   );
   return already
     ? contents
-    : JSON.stringify(
-        {...workspace, variables: [...(workspace.variables ?? []), variable]},
-        null,
-        2,
-      );
+    : written(contents, {
+        ...workspace,
+        variables: [...(workspace.variables ?? []), variable],
+      });
+}
+
+/** The file with each of its top-level blocks changed in place by `change`. */
+export function changeRoots(
+  contents: string,
+  change: (root: BlockJson) => void,
+): string {
+  const workspace = parse(contents);
+  roots(workspace).forEach(change);
+  return written(contents, workspace);
 }
 
 /** The file's top-level blocks, for a caller that wants to look at all of them. */
@@ -190,14 +206,10 @@ export function append(
       ),
   };
 
-  return JSON.stringify(
-    {
-      ...workspace,
-      ...(variables.length
-        ? {variables: [...(workspace.variables ?? []), ...variables]}
-        : {}),
-    },
-    null,
-    2,
-  );
+  return written(contents, {
+    ...workspace,
+    ...(variables.length
+      ? {variables: [...(workspace.variables ?? []), ...variables]}
+      : {}),
+  });
 }

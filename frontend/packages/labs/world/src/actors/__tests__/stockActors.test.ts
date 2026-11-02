@@ -13,11 +13,22 @@ import {BUILTIN_RULE_META} from '../../blockly/builtinMeta';
 import {parseActorOwnMeta} from '../../blockly/ownProperties';
 import {parseRuleMeta} from '../../blockly/ruleMeta';
 import {STOCK_RULES} from '../../rules/stock';
-import {STOCK_ACTORS} from '../stock';
-import {buttonActor} from '../stock/button';
-import {healthBarActor} from '../stock/healthBar';
-import {labelActor} from '../stock/label';
-import {progressBarActor} from '../stock/progressBar';
+import {viewOf} from '../actorData';
+import {STOCK_ACTORS as SHELF} from '../stock';
+import {buttonActor as button} from '../stock/button';
+import {healthBarActor as healthBar} from '../stock/healthBar';
+import {labelActor as label} from '../stock/label';
+import {progressBarActor as progressBar} from '../stock/progressBar';
+
+// Each read as the rows it is written in (`stock/workspace`).
+const STOCK_ACTORS = SHELF.map(actor => ({
+  ...actor,
+  contents: viewOf(actor.contents),
+}));
+const buttonActor = viewOf(button);
+const healthBarActor = viewOf(healthBar);
+const labelActor = viewOf(label);
+const progressBarActor = viewOf(progressBar);
 
 /** The top-level blocks a file holds. */
 const roots = (contents: string) =>

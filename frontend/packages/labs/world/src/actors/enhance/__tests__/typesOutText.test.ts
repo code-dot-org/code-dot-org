@@ -14,6 +14,7 @@ import {describe, expect, it} from 'vitest';
 import {compileProject} from '../../../__tests__/support/compileProject';
 import {EMPTY_WORLD_PROJECT} from '../../../fixtures/scenarios';
 import {fileIdAt, projectFiles} from '../../../runtime/projectFiles';
+import {viewOf} from '../../actorData';
 import {importStockActor} from '../../importStockActor';
 import {stockActorById} from '../../stock';
 import {typesOutTextEnhancement as typesOut} from '../typesOutText';
@@ -38,7 +39,7 @@ const at = (source: ReturnType<typeof withLabel>, path: string) => {
 describe('the types-out-text enhancement, as edits', () => {
   it('writes the declarations, the handler and the words it needs', () => {
     const after = typesOut.apply(withLabel(), LABEL);
-    const label = at(after, 'actors/label.actor')!;
+    const label = viewOf(at(after, 'actors/label.actor')!);
 
     // The line it is saying, and the pace — declared under the Label's own
     // `define actor`, so their block types carry `actors/label`.

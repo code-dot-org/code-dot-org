@@ -7,7 +7,6 @@
 // starts with one, 96 by 32, and a drawing as big as its box, a panel the
 // learner can draw over.
 
-import {asActorData} from '../actorData';
 import {withPurpose, type PaletteTab} from '../actorPurpose';
 import {labelSizeOf} from '../stock/label';
 import {BORDER, LOOK, RADIUS_TIGHT} from '../stock/look';
@@ -36,32 +35,30 @@ const boxed = (name: 'Width' | 'Height', value: number) => ({
 /** The file an actor made from nothing starts as, for `purpose`. */
 export function newActorFile(name: string, purpose: PaletteTab): string {
   if (purpose === 'game') {
-    return withPurpose(asActorData(actorFile(name, [])), 'game');
+    return withPurpose(actorFile(name, []), 'game');
   }
   const width = () => labelSizeOf('Width');
   const height = () => labelSizeOf('Height');
   return withPurpose(
-    asActorData(
-      actorFile(
-        name,
-        [
-          useTrait('Boxed#HasABoxTrait'),
-          boxed('Width', NEW_INTERFACE_BOX.width),
-          boxed('Height', NEW_INTERFACE_BOX.height),
-        ],
-        {
-          drawing: {
-            width: width(),
-            height: height(),
-            commands: [
-              fill(swatch(LOOK.field)),
-              outline(swatch(LOOK.primaryStrong), BORDER),
-              corner(RADIUS_TIGHT),
-              rectangle(0, 0, width(), height()),
-            ],
-          },
+    actorFile(
+      name,
+      [
+        useTrait('Boxed#HasABoxTrait'),
+        boxed('Width', NEW_INTERFACE_BOX.width),
+        boxed('Height', NEW_INTERFACE_BOX.height),
+      ],
+      {
+        drawing: {
+          width: width(),
+          height: height(),
+          commands: [
+            fill(swatch(LOOK.field)),
+            outline(swatch(LOOK.primaryStrong), BORDER),
+            corner(RADIUS_TIGHT),
+            rectangle(0, 0, width(), height()),
+          ],
         },
-      ),
+      },
     ),
     'interface',
   );

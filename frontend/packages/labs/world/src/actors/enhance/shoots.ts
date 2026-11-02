@@ -54,7 +54,14 @@ import {fileIdAt} from '../../runtime/projectFiles';
 import {actorChoices, targetOf} from './actorChoices';
 import {edit, electTraits, fileOf, importRules, me, wears} from './actorPatch';
 import type {Enhancement, EnhanceTarget} from './enhancements';
-import {addRoot, down, rootsOf, withVariable, type BlockJson} from './patch';
+import {
+  addRoot,
+  changeRoots,
+  down,
+  rootsOf,
+  withVariable,
+  type BlockJson,
+} from './patch';
 
 export const ZAPS = 'Zapping#ZapsTrait';
 const KEYBOARD = 'Input#TakesKeyboardInputTrait';
@@ -186,20 +193,17 @@ export const resend = (
   contents: string,
   target: EnhanceTarget,
   answer: string,
-): string => {
-  const workspace = JSON.parse(contents) as {blocks?: {blocks?: BlockJson[]}};
-  for (const root of workspace.blocks?.blocks ?? []) {
+): string =>
+  changeRoots(contents, root => {
     if (!isOurs(target, ZAPPED, ADD)(root)) {
-      continue;
+      return;
     }
     for (const row of down(root)) {
       if (row.type === ADD) {
         row.fields = {...row.fields, ACTOR: answer};
       }
     }
-  }
-  return JSON.stringify(workspace, null, 2);
-};
+  });
 
 export const shootsEnhancement: Enhancement = {
   id: 'shoots',

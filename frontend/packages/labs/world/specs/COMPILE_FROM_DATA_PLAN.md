@@ -1,7 +1,6 @@
 # Plan: compile rules, actors and cameras from their data
 
-STATUS: BUILT, October 2026, but for 5c's step 6, which is put off as a
-cleanup (below). Step 5 was built in November 2026.
+STATUS: BUILT, October and November 2026.
 
 A rule and an actor are data, edited in their editors (RULE_EDITOR_PLAN.md,
 ACTORS_AS_DATA_PLAN.md), and a camera is data on a Viewport. The compiler still
@@ -243,13 +242,20 @@ as` was still offered in an actor's Actor drawer, where it did nothing,
    since the icon is the data's (`ActorIconPicker`). Their names join the
    view's rows (`viewRows`), which the view writes and the folds read.
 
-6. LATER. Actors are written as data: the stock actors, the starter
-   project, the lessons, the fixtures and the enhancers.
-
-   Neither was needed for the blocks to go: the compiler and
-   `parseActorOwnMeta` walked an actor's rows as JSON and never loaded them
-   into a workspace, and the rows are what step 8 keeps as the view. Both
-   are a cleanup of the round trip, worth doing on their own account.
+6. BUILT, November 2026. Actors are stored as data. The stock actors are
+   written as rows with the helpers in `stock/workspace` and store their
+   fold, as the rule DSL does (step 3), so an import writes data, a parent
+   it brings included; `importStockActorAsData` is gone. Before, the
+   health and scoreboard enhancements and a map's import wrote their stock
+   actors as rows, which the Actor Editor cannot open. Scenarios, the
+   starter project and the lessons were already folded where they are
+   listed, and stay so: their fixtures run to thousands of lines of rows,
+   and rewriting them as data literals buys nothing a reader sees. The
+   enhancements read and write an actor through its view in the patch
+   layer (`enhance/patch`), not through a wrapper around each one, so one
+   called directly works on data. All 489 actors the repository builds
+   hold the same data as before, and a test holds every one to being
+   stored as data (`actorData.test`).
 
 7. BUILT. The two places that loaded these blocks into a live workspace. A
    tile pictures a rule with no verb by a hat or a getter of its own, not

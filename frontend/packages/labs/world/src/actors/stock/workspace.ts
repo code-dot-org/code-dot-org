@@ -1,4 +1,6 @@
-// Building a stock `.actor` file, which is an ordinary Blockly workspace.
+// Building a stock `.actor` file. It is written here as `define actor` rows,
+// with the helpers below, and stored as the data they fold to
+// (`actors/actorData`), as the rule DSL stores a rule's.
 //
 // The stock RULES are generated from `scripts/rules/*.mjs`, because a rule runs
 // to hundreds of blocks and hand-written JSON at that size is unreadable and
@@ -13,7 +15,7 @@ import {stockAnimation} from '../../appearance/stock';
 import {pascal, STARTS_EMPTY} from '../../blockly/ruleMeta';
 import {pathSlug} from '../../blockly/ruleRegistry';
 import {MAIN_SCREEN_PATH} from '../../mainWorld';
-import {ANIMATIONS_ROW} from '../actorData';
+import {ANIMATIONS_ROW, asActorData} from '../actorData';
 
 /**
  * How far apart a stock actor's handlers are listed.
@@ -338,23 +340,17 @@ export interface ActorExtras {
 }
 
 /**
- * A stock actor's file: the definition, and whatever sits beside it.
- *
- * A HANDLER IS A SEPARATE ROOT; THE DRAWING IS NOT. A hat takes no previous
- * connection, and `DisableOrphansPlugin` disables a top-level block that has
- * one along with everything below it — so a handler sits beside the `define
- * actor` rather than in it.
- *
- * `each frame` and `define drawing` were both roots here for that reason and
- * are both rows now (`domainBlocks`): the reason a hat cannot chain does not
- * apply to a block that takes a previous connection quite happily, and one
- * shape per block is worth more than the layout was.
- *
- * An actor with neither is a `define actor` alone, which is the same one root
- * the starter project's own actors are — and byte-for-byte the same JSON, so
- * the two can be the same file (see `constants.ts`).
+ * A stock actor's file, as data: the definition's rows, its drawing, and the
+ * handlers beside it.
  */
 export const actorFile = (
+  name: string,
+  rows: object[],
+  extras: ActorExtras = {},
+): string => asActorData(actorRows(name, rows, extras));
+
+/** The same file as `define actor` rows, which `actorFile` stores the fold of. */
+export const actorRows = (
   name: string,
   rows: object[],
   extras: ActorExtras = {},

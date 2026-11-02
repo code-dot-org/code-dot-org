@@ -81,7 +81,7 @@ export interface StockActor {
    * (`actorPurpose`). Written into the file on import.
    */
   for: ActorPurpose;
-  /** The `.actor` workspace JSON, copied on import. */
+  /** The `.actor` file, as data, copied on import. */
   contents: string;
 }
 
