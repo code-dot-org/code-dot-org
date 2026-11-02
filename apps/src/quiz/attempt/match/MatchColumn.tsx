@@ -2,29 +2,21 @@ import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
-import {MatchPairs, MatchSets, MatchSide} from './types';
-import {
-  findPartner,
-  itemsInColumn,
-  letterOf,
-  getItemText,
-  pairStatus,
-} from './utils';
+import {MarkedPair, MatchSets, MatchSide} from './types';
+import {itemsInColumn, letterOf, getItemText} from './utils';
 
 import styles from './match-question-container.module.scss';
 
 interface MatchColumnProps {
   matchSets: MatchSets;
   side: MatchSide;
-  pairs: MatchPairs;
+  pairs: MarkedPair[];
   selectedId: string | undefined;
   // Omit for read-only cards, which aren't buttons.
   onClickItem?: (id: string) => void;
   // Receives each item's dot, which MatchBoard draws lines to.
   dotRef: (id: string, element: HTMLElement | null) => void;
   disabled?: boolean;
-  // Marks each paired card as correct or incorrect.
-  correctPairs?: MatchPairs;
   isAnswerKey?: boolean;
 }
 
@@ -36,7 +28,6 @@ const MatchColumn: React.FunctionComponent<MatchColumnProps> = ({
   onClickItem,
   dotRef,
   disabled,
-  correctPairs,
   isAnswerKey,
 }) => {
   const ColumnTag = onClickItem ? 'div' : 'ul';
@@ -46,13 +37,10 @@ const MatchColumn: React.FunctionComponent<MatchColumnProps> = ({
       role={onClickItem ? undefined : 'list'}
     >
       {itemsInColumn(matchSets, side).map(item => {
-        const partnerId = findPartner(pairs, item.id);
+        const pair = pairs.find(({ids}) => ids.includes(item.id));
+        const partnerId = pair?.ids.find(id => id !== item.id);
+        const status = pair?.status;
         const isSelected = selectedId === item.id;
-        const status = isAnswerKey
-          ? partnerId
-            ? 'correct'
-            : undefined
-          : correctPairs && pairStatus(pairs, correctPairs, item.id);
         // An end item shows its partner's letter once paired.
         const letter =
           side === 'start'

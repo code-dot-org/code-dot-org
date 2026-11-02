@@ -1,9 +1,15 @@
 import classNames from 'classnames';
-import React, {useLayoutEffect, useRef, useState} from 'react';
+import React, {useLayoutEffect, useMemo, useRef, useState} from 'react';
 
 import MatchColumn from './MatchColumn';
-import {MatchPairs, MatchSelection, MatchSets, MatchSide} from './types';
-import {PairStatus, pairStatus} from './utils';
+import {
+  MatchPairs,
+  MatchSelection,
+  MatchSets,
+  MatchSide,
+  PairStatus,
+} from './types';
+import {markPairs} from './utils';
 
 import styles from './match-question-container.module.scss';
 
@@ -60,6 +66,11 @@ const MatchBoard: React.FunctionComponent<MatchBoardProps> = ({
   const [lines, setLines] = useState<Line[]>([]);
   const boardRef = useRef<HTMLDivElement>(null);
   const dotRefs = useRef(new Map<string, HTMLElement>());
+  // Memoized, since the line measurement below reruns when it changes.
+  const markedPairs = useMemo(
+    () => markPairs(pairs, correctPairs, isAnswerKey),
+    [pairs, correctPairs, isAnswerKey]
+  );
 
   // Measured after layout, and again whenever a card changes size, since
   // the line endpoints are wherever the dots actually render.
@@ -80,7 +91,7 @@ const MatchBoard: React.FunctionComponent<MatchBoardProps> = ({
           : null;
       };
       setLines(
-        pairs.flatMap(([startId, endId]) => {
+        markedPairs.flatMap(({ids: [startId, endId], status}) => {
           const start = centerOf(startId);
           const end = centerOf(endId);
           return start && end
@@ -88,9 +99,7 @@ const MatchBoard: React.FunctionComponent<MatchBoardProps> = ({
                 {
                   key: `${startId}:${endId}`,
                   path: curvePath(start, end),
-                  status: isAnswerKey
-                    ? 'correct'
-                    : correctPairs && pairStatus(pairs, correctPairs, startId),
+                  status,
                 },
               ]
             : [];
@@ -107,7 +116,7 @@ const MatchBoard: React.FunctionComponent<MatchBoardProps> = ({
       .querySelectorAll(`.${styles.card}`)
       .forEach(card => observer.observe(card));
     return () => observer.disconnect();
-  }, [pairs, matchSets, correctPairs, isAnswerKey]);
+  }, [markedPairs, matchSets]);
 
   const dotRef = (id: string, element: HTMLElement | null) => {
     if (element) {
@@ -143,12 +152,11 @@ const MatchBoard: React.FunctionComponent<MatchBoardProps> = ({
           key={side}
           matchSets={matchSets}
           side={side}
-          pairs={pairs}
+          pairs={markedPairs}
           selectedId={selection[side]}
           onClickItem={onClickItem && (id => onClickItem(side, id))}
           dotRef={dotRef}
           disabled={disabled}
-          correctPairs={correctPairs}
           isAnswerKey={isAnswerKey}
         />
       ))}

@@ -1,7 +1,13 @@
 import {QuizQuestionItem} from '@cdo/apps/quiz/types';
 import {formatChoiceLetter} from '@cdo/apps/quiz/utils';
 
-import {MatchPairs, MatchSets, MatchSide} from './types';
+import {
+  MarkedPair,
+  MatchPairs,
+  MatchSets,
+  MatchSide,
+  PairStatus,
+} from './types';
 
 // A constant, so MatchBoard's line measurement doesn't rerun every render.
 export const NO_MATCH_SETS: MatchSets = [[], []];
@@ -42,20 +48,26 @@ export function findPartner(pairs: MatchPairs, id: string): string | undefined {
   return undefined;
 }
 
-export type PairStatus = 'correct' | 'incorrect';
-
-// Undefined for an unpaired item, which has no pair to mark.
 export function pairStatus(
-  pairs: MatchPairs,
   correctPairs: MatchPairs,
-  id: string
-): PairStatus | undefined {
-  const answeredPartnerId = findPartner(pairs, id);
-  if (!answeredPartnerId) {
-    return undefined;
-  }
-  const correctPartnerId = findPartner(correctPairs, id);
-  return answeredPartnerId === correctPartnerId ? 'correct' : 'incorrect';
+  [a, b]: [string, string]
+): PairStatus {
+  return correctPairs.some(pair => pair.includes(a) && pair.includes(b))
+    ? 'correct'
+    : 'incorrect';
+}
+
+export function markPairs(
+  pairs: MatchPairs,
+  correctPairs: MatchPairs | undefined,
+  isAnswerKey: boolean | undefined
+): MarkedPair[] {
+  return pairs.map(ids => ({
+    ids,
+    status: isAnswerKey
+      ? 'correct'
+      : correctPairs && pairStatus(correctPairs, ids),
+  }));
 }
 
 // Each start item has a letter by position.
