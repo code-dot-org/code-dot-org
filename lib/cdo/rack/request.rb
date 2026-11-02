@@ -118,19 +118,29 @@ module Cdo
     #
     # @return [String] the anonymous (signed-out) user ID in UUID v4 format
     def statsig_stable_id
-      existing_statsig_stable_id || (session[SharedConstants::STATSIG_STABLE_ID_KEY] = Cdo::AnonUserId.generate)
+      existing_statsig_stable_id || (session[SharedConstants::STATSIG_STABLE_ID_KEY] = SecureRandom.uuid)
     end
 
     # Anonymous (signed-out) user ID for our own records, such as anonymous level progress.
     #
-    # It reuses the Statsig stable ID, which already handles OneTrust consent, its cookie and the session.
-    # It is a separate method because our records need a stable anonymous identity, not Statsig as such:
-    # Statsig is only where the ID comes from today. Callers use this method, never statsig_stable_id,
-    # so if Statsig is removed or replaced, only this method changes, not every caller.
-    #
     # @return [String] the anonymous (signed-out) user ID in UUID v4 format
     def anon_user_id
-      statsig_stable_id
+      anon_user_id = cookies[Cdo::AnonUserId::KEY]
+      return anon_user_id if Cdo::AnonUserId.valid?(anon_user_id)
+
+      anon_user_id = Cdo::AnonUserId.generate
+
+      jar = respond_to?(:cookie_jar) ? cookie_jar : ActionDispatch::Request.new(env).cookie_jar
+      jar[Cdo::AnonUserId::KEY] = {
+        value: anon_user_id,
+        domain: shared_cookie_domain,
+        expires: nil,
+        same_site: :lax,
+        secure: ssl?,
+        httponly: true,
+      }
+
+      cookies[Cdo::AnonUserId::KEY] = anon_user_id
     end
 
     def user

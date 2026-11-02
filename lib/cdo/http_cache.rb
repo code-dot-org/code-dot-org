@@ -1,4 +1,5 @@
 require 'cdo/i18n'
+require 'cdo/anon_user_id'
 
 # HTTP Cache configuration.
 
@@ -149,6 +150,7 @@ class HttpCache
       'remember_user_token',
       '__profilin', # Used by rack-mini-profiler
       'statsig_stable_id',
+      Cdo::AnonUserId::KEY,
       session_key,
       storage_id,
       'sign_up_user_type',
