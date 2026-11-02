@@ -8,10 +8,10 @@ ARG DEPS_IMAGE=ghcr.io/code-dot-org/cdo-deps:latest
 
 FROM ${DEPS_IMAGE}
 
-# cdo-deps ships python/ and the engine gemspecs, and COPY merges rather than
-# replaces, so a file deleted upstream would survive from the parent image.
-# Drop both trees first; the COPY below restores them from this checkout.
-RUN rm -rf python dashboard/engines
+# cdo-deps ships the engine gemspecs, and COPY merges rather than replaces, so
+# a file deleted upstream would survive from the parent image. Drop the tree
+# first; the COPY below restores it from this checkout.
+RUN rm -rf dashboard/engines
 
 # The source slice is defined by Dockerfile.dockerignore.
 COPY --chown=1000:1000 . .

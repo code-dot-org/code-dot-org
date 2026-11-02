@@ -92,3 +92,15 @@ address.
 
 For image details, see the [Dockerfile](Dockerfile),
 [compose file](compose.yaml), and [smoke test](smoke-test.sh).
+
+## Where uv comes from
+
+uv comes from Astral's own registry image, copied in with `COPY --from`, the
+primary method in [their Docker
+guide](https://docs.astral.sh/uv/guides/integration/docker/). It is pinned by
+tag *and* digest, so the reference cannot move even if the tag is republished,
+and it is written out on the `FROM` line rather than assembled from an `ARG`:
+dependabot reads `FROM` lines and cannot resolve `ARG`s, so a literal is what
+gets bumped (`.github/dependabot.yml` globs `/docker/*`, so new images need no
+edit there). That limitation is why `NODE_VERSION` and `NODE_KEYS_REF` are
+bumped by hand.
