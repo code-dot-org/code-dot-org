@@ -587,6 +587,11 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   const underFrame = showingResult && chosenPicture && (
     <BehindTheScenes
       sent={chosenPicture.sent}
+      picture={{
+        src: chosenPicture.dataURI,
+        pixelated: !!chosenPicture.result.pixelGridSize,
+        sheet,
+      }}
       disabled={busy}
       compact={compactBehindTheScenes}
     />
