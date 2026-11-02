@@ -81,12 +81,23 @@ creature is 8 sets of 5 pictures:
 A run skips what is already drawn and checked, so it can be stopped and run
 again. Failed requests are listed at the end and drawn on the next run.
 
-The images are Gemini's, `gemini-3.1-flash-image` through
-`google_gemini_ai_tutor_api_key`, as the lab draws a live picture.
-`--provider openai` draws with `gpt-image-1` instead, and `--model` and
-`--key` override either. The lab keys a cached set on the colour its prompt
-names, so the tree is drawn on that colour; OpenAI's `--transparent` is for
-experiments only.
+The images are drawn by `gemini-3.1-flash-image` on Vertex AI, where the AI
+Gateway draws a live picture. The gateway's own credential is a service
+account Cloudflare holds and never hands out, so the script uses ours:
+`google_vertex_ai_tutor_service_account_key`, the one Rails' AI Tutor calls
+Vertex with. The project it bills is the key's `project_id`, and each run
+prints it. To draw in the gateway's project (`ai-tutor-dev-463216`, in
+`~/ai-gateway/wrangler.jsonc`), the key must belong to it; check with
+
+```
+bundle exec ruby -e 'require_relative "deployment"; puts CDO.google_vertex_ai_tutor_service_account_key["project_id"]'
+```
+
+`--key` names another service account key. `--provider gemini` draws with
+the same model through the Gemini API and `google_gemini_ai_tutor_api_key`;
+`--provider openai` draws with `gpt-image-1`. The lab keys a cached set on
+the colour its prompt names, so the tree is drawn on that colour; OpenAI's
+`--transparent` is for experiments only.
 
 ## Moderation
 
@@ -98,7 +109,8 @@ it gets. They mirror the lab's live checks (`imageSafety.ts`):
   generated image. It needs the `azure_ai_content_safety_key` and
   `azure_ai_content_safety_endpoint` config.
 - **`--judge`** adds aichat's LLM judges on `gemini-2.5-flash`, with the
-  lab's own instructions: one on every frame, and one on each distinct
+  lab's own instructions, on the drawing provider's Google route (Vertex
+  when drawing with OpenAI): one on every frame, and one on each distinct
   prompt before anything is drawn. A prompt it refuses is never drawn or
   published, on any later run too; verdicts are kept in
   `prompt_verdicts.json`.
