@@ -164,6 +164,10 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     []
   );
   const wordLayout = useMemo(() => readWordLayout(), []);
+  // While a picture is being made the list holds still: choosing another
+  // image would unmount the scene and throw the picture away, after it has
+  // been counted against the level's limit.
+  const [busy, setBusy] = useState(false);
   // Animated is on until the student turns it off, and stays as they left
   // it from image to image; no image or level turns it off for them.
   const [animated, setAnimated] = useState(true);
@@ -229,6 +233,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
         <EditorStrip title="AI" />
       </div>
       <ImageList
+        disabled={busy}
         images={images}
         draft={draft}
         chosenId={chosenId}
@@ -268,6 +273,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
           generationsLeft={generationsLeft}
           verdictRequired={verdictRequired}
           onGenerateStart={onGenerate}
+          onBusyChange={setBusy}
           onKeep={handleKeep}
           keepOnResult
           wordLayout={wordLayout}

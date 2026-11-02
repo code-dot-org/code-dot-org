@@ -181,6 +181,9 @@ interface SentenceSceneProps {
   onKeep?: (result: GeneratedImageResult) => Promise<void> | void;
   /** A generation request is leaving. */
   onGenerateStart?: () => void;
+  /** The scene is making or keeping a picture, or has stopped; a host can
+      hold its other controls still meanwhile. */
+  onBusyChange?: (busy: boolean) => void;
   /** Analytics: which surface generated. */
   method?: string;
   /** The level requires the student to rate each generated picture before
@@ -216,6 +219,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   onAnimatedChange,
   onKeep,
   onGenerateStart,
+  onBusyChange,
   method = 'scene',
   verdictRequired,
   onAwaitingVerdict,
@@ -533,6 +537,9 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
 
   const generating = mode === 'generating';
   const busy = generating || saving;
+  useEffect(() => {
+    onBusyChange?.(busy);
+  }, [busy, onBusyChange]);
   const menus = useWordMenus({
     sentence,
     choices,
