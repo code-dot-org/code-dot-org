@@ -8,7 +8,7 @@ describe('blankPaintSpec', () => {
     const spec = blankPaintSpec('sprite', 'pixel');
     // 1024/16 logical pixels, one canvas pixel each.
     expect(spec.pixelGridSize).toBe(1);
-    expect(spec.size).toBe(64);
+    expect(spec.size).toBe(32);
   });
 
   it('gives pixel backgrounds the finer per-type grid', () => {

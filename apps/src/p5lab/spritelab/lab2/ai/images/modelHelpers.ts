@@ -56,11 +56,12 @@ export function imageProviderOptions(imageSize: ImageSize) {
 // detection falls back to the same value — what we ask for and what we
 // assume can't drift apart.
 export const MODEL_OUTPUT_PX = 1024;
-// Backgrounds carry a whole scene, so they get a finer grid than sprites
-// and blocks; finer still would sit at detection's 4px floor.
+// Sprites and blocks are 32x32 pictures: chunky enough to read as pixel art
+// and to be drawn on by hand. Backgrounds carry a whole scene, so they get
+// a finer grid; finer still would sit at detection's 4px floor.
 export const ASSUMED_BLOCK: Record<ImageType, number> = {
-  sprite: 16,
-  block: 16,
+  sprite: 32,
+  block: 32,
   background: 8,
 };
 
