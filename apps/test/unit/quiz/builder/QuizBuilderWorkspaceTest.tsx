@@ -110,6 +110,12 @@ describe('QuizBuilderWorkspace', () => {
     expect(screen.queryByText('1 attempt')).not.toBeInTheDocument();
   });
 
+  it('omits the time limit from the workspace header for an untimed quiz', () => {
+    renderWorkspace();
+    expect(screen.queryByText(/minute/)).not.toBeInTheDocument();
+    expect(screen.getByText('1 attempt')).toBeInTheDocument();
+  });
+
   it('shows an empty message when the quiz has no questions', () => {
     renderWorkspace();
     expect(

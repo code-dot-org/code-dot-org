@@ -1,6 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Typography} from '@mui/material';
-import classNames from 'classnames';
 import React from 'react';
 
 import {pluralize} from './utils';
@@ -11,7 +10,6 @@ interface QuizMetadataListProps {
   questionCount: number;
   timeLimitMinutes?: number;
   allowMultipleAttempts: boolean;
-  className?: string;
   iconClassName?: string;
 }
 
@@ -19,7 +17,6 @@ const QuizMetadataList: React.FunctionComponent<QuizMetadataListProps> = ({
   questionCount,
   timeLimitMinutes,
   allowMultipleAttempts,
-  className,
   iconClassName,
 }) => {
   const items = [
@@ -34,10 +31,7 @@ const QuizMetadataList: React.FunctionComponent<QuizMetadataListProps> = ({
   ];
 
   return (
-    <ul
-      className={classNames(styles.list, className)}
-      aria-label="Quiz details"
-    >
+    <ul className={styles.list} aria-label="Quiz details">
       {items.map(({icon, text}) => (
         <li key={icon} className={styles.item}>
           <FontAwesomeV6Icon
