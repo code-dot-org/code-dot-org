@@ -100,7 +100,7 @@ function renderTab(
 
 const pressed = () =>
   screen
-    .getAllByRole('button', {pressed: true})
+    .queryAllByRole('button', {pressed: true})
     .map(button => button.getAttribute('aria-label'));
 
 describe('ImagesTab', () => {
@@ -114,18 +114,29 @@ describe('ImagesTab', () => {
   it('opens a level about one image on the place it will go, and lands it there', async () => {
     propsByKey.k1 = {name: 'Background 1', categories: ['backgrounds']};
     renderTab({lockedImageType: 'sprite', imageRole: 'hero'});
+    // No slot until the plus is pressed and the level's kind picked; the
+    // other kinds are shown but off, as practice for free play.
+    expect(pressed()).toEqual([]);
+    expect(screen.getByText('Press + to make a character.')).toBeTruthy();
+    fireEvent.click(screen.getByRole('button', {name: 'New image'}));
+    expect(
+      (screen.getByRole('button', {name: 'Background'}) as HTMLButtonElement)
+        .disabled
+    ).toBe(true);
+    fireEvent.click(screen.getByRole('button', {name: 'Character'}));
     expect(pressed()).toEqual(['New character']);
     expect(screen.getByRole('img', {name: 'No picture yet'})).toBeTruthy();
-    expect(screen.queryByRole('button', {name: 'New image'})).toBeNull();
     acceptGenerated.mockImplementation(async () => {
       propsByKey.k2 = {name: 'Sprite 1', categories: [], role: 'hero'};
       return 'k2';
     });
     await act(async () => {
-      fireEvent.click(screen.getByRole('button', {name: /^land sprite$/}));
+      fireEvent.click(
+        screen.getByRole('button', {name: /^land sprite character$/})
+      );
     });
     expect(acceptGenerated).toHaveBeenCalledWith(
-      {key: null, imageType: 'sprite', subject: undefined},
+      {key: null, imageType: 'sprite', subject: 'character'},
       expect.objectContaining({filename: 'made.png'})
     );
     expect(pressed()).toEqual(['Sprite 1']);

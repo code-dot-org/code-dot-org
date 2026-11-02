@@ -101,6 +101,28 @@ describe('ImageList', () => {
     expect(document.querySelector('[class~="open"]')).toBeNull();
   });
 
+  it("turns every kind but the level's off in the menu", () => {
+    render(
+      <ImageList
+        images={images}
+        draft={null}
+        chosenId={null}
+        onChoose={jest.fn()}
+        onNew={jest.fn()}
+        newKind={{imageType: 'sprite', subject: 'object'}}
+      />
+    );
+    fireEvent.click(screen.getByRole('button', {name: 'New image'}));
+    const off = (name: string) =>
+      (screen.getByRole('button', {name}) as HTMLButtonElement).disabled;
+    expect(['Character', 'Background', 'Object', 'Block'].map(off)).toEqual([
+      true,
+      true,
+      false,
+      true,
+    ]);
+  });
+
   it('deletes the chosen image only after asking', () => {
     const onDelete = jest.fn();
     render(

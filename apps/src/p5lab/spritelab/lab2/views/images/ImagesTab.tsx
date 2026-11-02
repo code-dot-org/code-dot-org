@@ -12,14 +12,14 @@ import {
   GeneratedImageResult,
   UploadImageFunction,
 } from '../../ai/images/imageGeneration';
-import {ImageSubject, ImageType} from '../../ai/images/types';
+import {imageKindLabel, ImageSubject, ImageType} from '../../ai/images/types';
 import {onTrimsUpdated, trimAnimationListImages} from '../../imageTrim';
 import {DEFAULT_IMAGE_STYLE} from '../../levelMode';
 import {BACKGROUND_GROUND_COLOR, blankPaintImage} from '../../paintBlank';
 import SentenceScene from '../sentence/SentenceScene';
 
 import ImageFrame from './ImageFrame';
-import ImageList, {DraftEntry} from './ImageList';
+import ImageList, {DraftEntry, NewImageKind} from './ImageList';
 import MakePane from './MakePane';
 import {listProjectImages, ProjectImage} from './projectImages';
 import useImageWriter, {ImageTarget} from './useImageWriter';
@@ -100,30 +100,22 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     [startSession]
   );
 
-  // Where the tab opens: a level about one image opens on that image, or on
-  // the place it will go; otherwise on the first image, if any.
-  const imagesRef = useRef(images);
-  imagesRef.current = images;
+  // The level's own image, on a level about one image.
+  const ownImage = lockedImageType
+    ? imageRole
+      ? images.find(image => image.props.role === imageRole)
+      : images.find(image => image.imageType === lockedImageType)
+    : undefined;
+  // Where the tab opens: a level about one image opens on that image when
+  // it exists, and otherwise waits for the plus, as free play does; free
+  // play opens on the first image, if any.
+  const openOnRef = useRef(lockedImageType ? ownImage : images[0]);
   useEffect(() => {
-    const current = imagesRef.current;
-    if (!lockedImageType) {
-      setChosenId(current[0]?.key ?? null);
-      return;
-    }
-    const own = imageRole
-      ? current.find(image => image.props.role === imageRole)
-      : current.find(image => image.imageType === lockedImageType);
-    if (own) {
-      setChosenId(own.key);
-    } else {
-      startDraft(lockedImageType, lockedImageSubject);
-    }
-    // Once, as the tab mounts.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    setChosenId(openOnRef.current?.key ?? null);
   }, []);
 
   // A chosen image that is gone (deleted) gives way to the first image
-  // left, or to a fresh draft on a level about one image.
+  // left, or to nothing.
   useEffect(() => {
     if (
       chosenId === null ||
@@ -132,22 +124,8 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     ) {
       return;
     }
-    if (images[0]) {
-      startSession(images[0].key);
-    } else if (lockedImageType) {
-      startDraft(lockedImageType, lockedImageSubject);
-    } else {
-      startSession(null);
-    }
-  }, [
-    chosenId,
-    draft,
-    images,
-    lockedImageType,
-    lockedImageSubject,
-    startSession,
-    startDraft,
-  ]);
+    startSession(images[0]?.key ?? null);
+  }, [chosenId, draft, images, startSession]);
 
   const chosenImage: ProjectImage | null =
     images.find(image => image.key === chosenId) ?? null;
@@ -211,6 +189,19 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     !!editingOffered && !!kind && !chosenImage?.sheet && !painting;
 
   const deleteOffered = !!editingOffered;
+  // A level about one image offers the plus until that image exists, with
+  // only its own kind on; free play offers every kind, always.
+  const lockedKind: NewImageKind | undefined = lockedImageType
+    ? {
+        imageType: lockedImageType,
+        subject: lockedImageType === 'sprite' ? lockedImageSubject : undefined,
+      }
+    : undefined;
+  const newOffered = !!editingOffered || (!!lockedKind && !ownImage);
+  const lockedKindLabel = lockedKind
+    ? imageKindLabel(lockedKind.imageType, lockedKind.subject).toLowerCase()
+    : '';
+  const kindArticle = /^[aeiou]/.test(lockedKindLabel) ? 'an' : 'a';
   const paneWidthPx = paneWidth || DEFAULT_PANE_WIDTH;
 
   return (
@@ -230,10 +221,11 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
           startSession(id);
         }}
         onNew={
-          editingOffered
+          newOffered
             ? kind => startDraft(kind.imageType, kind.subject)
             : undefined
         }
+        newKind={lockedKind}
         onDelete={deleteOffered ? writer.deleteImage : undefined}
       />
       {kind ? (
@@ -288,8 +280,10 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
             aria-label="Make your picture"
           >
             <p className={styles.headline}>
-              {editingOffered
-                ? 'Press + to make an image.'
+              {newOffered
+                ? `Press + to make ${lockedKind ? kindArticle : 'an'} ${
+                    lockedKind ? lockedKindLabel : 'image'
+                  }.`
                 : 'This level has no images to make.'}
             </p>
           </section>

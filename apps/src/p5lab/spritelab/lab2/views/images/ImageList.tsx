@@ -21,6 +21,12 @@ export interface NewImageKind {
   subject?: ImageSubject;
 }
 
+/** Two kinds are the same when their images would be. */
+const sameKind = (a: NewImageKind, b: NewImageKind) =>
+  a.imageType === b.imageType &&
+  (a.imageType !== 'sprite' ||
+    (a.subject ?? 'character') === (b.subject ?? 'character'));
+
 /** The kinds the plus offers, in the menu's order. */
 const NEW_KINDS: {label: string; iconName: string; kind: NewImageKind}[] = [
   {
@@ -70,6 +76,9 @@ interface ImageListProps {
   /** The plus: a new image of the kind picked under it, offered where the
       level lets students add. */
   onNew?: (kind: NewImageKind) => void;
+  /** The one kind the level lets students make; the menu's other kinds
+      are shown but off, so the plus works as it does in free play. */
+  newKind?: NewImageKind;
   /** Delete the chosen image; absent where images cannot be deleted. */
   onDelete?: (key: string) => void;
 }
@@ -80,6 +89,7 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
   chosenId,
   onChoose,
   onNew,
+  newKind,
   onDelete,
 }) => {
   // Delete asks once; a new choice withdraws the question.
@@ -126,6 +136,7 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
               value: label,
               label,
               icon: {iconName},
+              isOptionDisabled: !!newKind && !sameKind(kind, newKind),
               onClick: () => {
                 setMenuKey(k => k + 1);
                 onNew(kind);
