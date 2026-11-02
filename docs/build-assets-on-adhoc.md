@@ -36,6 +36,7 @@
     - Update schema cache file (only on non-prod environments) `bundle exec rake db:schema:cache:dump` and `bundle exec rake db:round_trip_schema_cache`
     - Seed dashboard `bundle exec rake seed:default`
       - `dashboard/lib/tasks/seed.rake`
+      - On adhoc this seeds only the UI test curriculum partition (`dashboard/test/ui/config`), not production courses. Put any level you want to test on adhoc into a ui-test- unit. If you need production courses on adhoc, run `cd dashboard && bundle exec rake seed:production` after the install finishes.
       - Can skip this on development env by setting `skip_seed_all: true` in locals.yml
     - Clean dashboard asset `bunlde exec rake assets:clean`
     - Precompile dashboard assets `bundle exec rake assets:precompile`
