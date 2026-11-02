@@ -260,20 +260,6 @@ describe('QuizBuilderWorkspace', () => {
     ).toBeInTheDocument();
   });
 
-  it('explains why the create button is disabled by a pending question', () => {
-    renderWorkspace({questions: [question({id: -1})]});
-    expect(
-      screen.getByText('Save or remove your new question first.')
-    ).toBeInTheDocument();
-  });
-
-  it('does not show the pending-question hint otherwise', () => {
-    renderWorkspace({questions: [question()]});
-    expect(
-      screen.queryByText('Save or remove your new question first.')
-    ).toBeNull();
-  });
-
   it('renders a server error', () => {
     renderWorkspace({error: 'Something went wrong.'});
     expect(screen.getByRole('alert')).toHaveTextContent(

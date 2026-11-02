@@ -17,7 +17,6 @@ interface QuizPageBlockProps {
   questionCount: number;
   onCreate: (type: QuizQuestionType) => void;
   createDisabledReason?: string;
-  hint?: string;
   // One <li> per question.
   children?: React.ReactNode;
 }
@@ -27,7 +26,6 @@ const QuizPageBlock: React.FunctionComponent<QuizPageBlockProps> = ({
   questionCount,
   onCreate,
   createDisabledReason,
-  hint,
   children,
 }) => {
   const [collapsed, setCollapsed] = useState(false);
@@ -140,11 +138,6 @@ const QuizPageBlock: React.FunctionComponent<QuizPageBlockProps> = ({
                   disabledReason={createDisabledReason}
                 />
               </div>
-              {hint && (
-                <Typography variant="body3" className={styles.hint}>
-                  {hint}
-                </Typography>
-              )}
             </>
           )}
         </div>

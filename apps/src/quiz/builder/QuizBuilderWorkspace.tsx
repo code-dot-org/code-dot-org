@@ -121,11 +121,6 @@ const QuizBuilderWorkspace: React.FunctionComponent<
             questionCount={pageQuestions.length}
             onCreate={type => handleCreate(page, type)}
             createDisabledReason={createDisabledReason}
-            hint={
-              pageQuestions.some(question => isPendingQuestionId(question.id))
-                ? UNSAVED_QUESTION_REASON
-                : undefined
-            }
           >
             {pageQuestions.map(question => (
               <li key={question.id}>
