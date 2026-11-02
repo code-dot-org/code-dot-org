@@ -17,7 +17,9 @@ import {onTrimsUpdated, trimAnimationListImages} from '../../imageTrim';
 import {DEFAULT_IMAGE_STYLE} from '../../levelMode';
 import {BACKGROUND_GROUND_COLOR, blankPaintImage} from '../../paintBlank';
 import EditorStrip from '../components/EditorStrip';
+import BehindTheScenes from '../sentence/BehindTheScenes';
 import SentenceScene from '../sentence/SentenceScene';
+import {sentPromptsFor} from '../sentence/sentPrompts';
 import {readWordLayout} from '../sentence/wordLayout';
 
 import ImageFrame from './ImageFrame';
@@ -226,6 +228,28 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     : '';
   const kindArticle = /^[aeiou]/.test(lockedKindLabel) ? 'an' : 'a';
   const paneWidthPx = paneWidth || DEFAULT_PANE_WIDTH;
+  // An AI-made image opened again offers the way behind the scenes too,
+  // rebuilt from what the image remembers of its making.
+  const generation = chosenImage?.props.generation;
+  const reopenedBehindTheScenes = generation && (
+    <BehindTheScenes
+      sent={sentPromptsFor(
+        generation.prompt,
+        {
+          imageType: generation.imageType,
+          subject: generation.subject,
+          style: generation.style,
+          seed: generation.seed,
+          temperature: generation.temperature,
+          pixelGrid: generation.pixelGrid,
+        },
+        generation.style,
+        !!chosenImage?.sheet,
+        generation.bodyPlan
+      )}
+      disabled={busy}
+    />
+  );
 
   return (
     <div className={styles.tab}>
@@ -294,14 +318,14 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                   parts.mode === 'generating' ? (
                     <div className={styles.underSteps}>{parts.progress}</div>
                   ) : (
-                    parts.underFrame
+                    parts.underFrame || reopenedBehindTheScenes
                   )
                 }
               />
               <MakePane
                 parts={parts}
                 width={paneWidthPx}
-                overwriteWarns={!!chosenImage && !chosenImage.props.generation}
+                replaces={!!chosenImage}
                 regenerate={!!chosenImage?.props.generation}
                 onDraw={
                   drawOffered
