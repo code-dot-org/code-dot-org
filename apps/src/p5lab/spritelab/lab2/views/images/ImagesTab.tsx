@@ -164,6 +164,9 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     []
   );
   const wordLayout = useMemo(() => readWordLayout(), []);
+  // Animated is on until the student turns it off, and stays as they left
+  // it from image to image; no image or level turns it off for them.
+  const [animated, setAnimated] = useState(true);
   const handleKeep = useCallback(
     (result: GeneratedImageResult) => {
       const target: ImageTarget = {
@@ -260,7 +263,8 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
               choices: chosenImage.props.generation.choices,
             }
           }
-          initialAnimated={!chosenImage || !!chosenImage.sheet}
+          initialAnimated={animated}
+          onAnimatedChange={setAnimated}
           generationsLeft={generationsLeft}
           verdictRequired={verdictRequired}
           onGenerateStart={onGenerate}

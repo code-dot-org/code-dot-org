@@ -175,6 +175,8 @@ interface SentenceSceneProps {
   initialChoices?: SavedChoices;
   /** Where the Animated box starts; ticked unless given. */
   initialAnimated?: boolean;
+  /** The student ticked or unticked Animated. */
+  onAnimatedChange?: (animated: boolean) => void;
   /** Keep a made picture; the level's own saving when unset. */
   onKeep?: (result: GeneratedImageResult) => Promise<void> | void;
   /** A generation request is leaving. */
@@ -211,6 +213,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   typeChoice,
   initialChoices,
   initialAnimated = true,
+  onAnimatedChange,
   onKeep,
   onGenerateStart,
   method = 'scene',
@@ -695,7 +698,10 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       size="s"
       checked={animated}
       disabled={busy}
-      onChange={e => setAnimated(e.target.checked)}
+      onChange={e => {
+        setAnimated(e.target.checked);
+        onAnimatedChange?.(e.target.checked);
+      }}
     />
   );
   const progressNode = generating && (

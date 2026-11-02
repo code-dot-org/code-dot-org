@@ -13,16 +13,24 @@ jest.mock(
       imageType,
       imageSubject,
       typeChoice,
+      initialAnimated,
+      onAnimatedChange,
       onKeep,
       layout,
     }: {
       imageType: string;
       imageSubject?: string;
       typeChoice?: boolean;
+      initialAnimated?: boolean;
+      onAnimatedChange?: (animated: boolean) => void;
       onKeep: (result: unknown) => void;
       layout: (parts: unknown) => React.ReactNode;
     }) => (
       <div>
+        <span>animated {String(initialAnimated)}</span>
+        <button type="button" onClick={() => onAnimatedChange?.(false)}>
+          animated off
+        </button>
         <button
           type="button"
           onClick={() =>
@@ -211,6 +219,15 @@ describe('ImagesTab', () => {
     );
     expect(screen.getByRole('button', {name: 'Sprite 2'})).toBeTruthy();
     expect(pressed()).toEqual(['Sprite 1']);
+  it('leaves Animated on until the student turns it off, and keeps their choice', () => {
+    propsByKey.k1 = {name: 'Sprite 1', categories: []};
+    propsByKey.k2 = {name: 'Sprite 2', categories: []};
+    renderTab({editingOffered: true});
+    // A plain image does not turn it off.
+    expect(screen.getByText('animated true')).toBeTruthy();
+    fireEvent.click(screen.getByRole('button', {name: 'animated off'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Sprite 2'}));
+    expect(screen.getByText('animated false')).toBeTruthy();
   });
 
   it('deletes through the list and moves on to the next image', () => {
