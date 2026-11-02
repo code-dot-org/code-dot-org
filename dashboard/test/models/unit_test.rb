@@ -159,6 +159,12 @@ class UnitTest < ActiveSupport::TestCase
     assert unit.get_script_level_by_relative_position_and_puzzle_position(11, 1, false).nil?
   end
 
+  test 'unit_cache_from_db reads curriculum from a reader database instance' do
+    ReadReplicaHelper.expects(:read_curriculum).yields.returns({})
+
+    Unit.unit_cache_from_db
+  end
+
   test 'get_from_cache uses cache' do
     # We test the cache using name lookups...
     flappy = create(:unit, name: 'flappy')

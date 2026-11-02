@@ -5,6 +5,15 @@ module ReadReplicaHelper
     ActiveRecord::Base.include GatekeeperReadReplica
   end
 
+  # Read curriculum (units, lessons, levels and their associations) from a reader database instance.
+  #
+  # Levelbuilder is the one deployment that writes curriculum, and an author must read back what they just wrote, so
+  # replication lag there would show them stale content.
+  def self.read_curriculum(&block)
+    return yield if Rails.application.config.levelbuilder_mode
+    ActiveRecord::Base.connected_to(role: :reading, &block)
+  end
+
   # Wrap ActiveRecord::ConnectionHandling methods in Gatekeeper flag to allow
   # dynamic control over offloading queries to the read pool.
   module GatekeeperReadReplica

@@ -437,11 +437,17 @@ class Unit < ApplicationRecord
     Rails.cache.read UNIT_CACHE_KEY
   end
 
+  # `find_each` preloads the associations once per batch of units, and each preload names every id in the batch, so a
+  # sweep issues a handful of statements that run to hundreds of kilobytes. Anything past 16KB makes RDS Proxy pin the
+  # session to one database instance connection for the rest of that session, and this sweep runs while a worker is
+  # warming its cache, so the pin would cost the worker a connection before it serves its first request.
   def self.unit_cache_from_db
-    {}.tap do |cache|
-      Unit.with_associated_models.find_each do |unit|
-        cache[unit.name] = unit
-        cache[unit.id.to_s] = unit
+    ReadReplicaHelper.read_curriculum do
+      {}.tap do |cache|
+        Unit.with_associated_models.find_each do |unit|
+          cache[unit.name] = unit
+          cache[unit.id.to_s] = unit
+        end
       end
     end
   end
