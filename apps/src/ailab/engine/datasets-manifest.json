@@ -1,6 +1,46 @@
 {
   "datasets": [
     {
+      "id": "SC1-L08-marketing-base",
+      "name": "Movie Clips",
+      "path": "datasets/SC1-L08-marketing-base.csv",
+      "metadataPath": "datasets/SC1-L08-marketing-base.json",
+      "isToy": true,
+      "rowCount": 85
+    },
+    {
+      "id": "SC1-L08-marketing-add-bts-hits",
+      "name": "Behind-the-Scenes Clips",
+      "path": "datasets/SC1-L08-marketing-add-bts-hits.csv",
+      "metadataPath": "datasets/SC1-L08-marketing-add-bts-hits.json",
+      "isToy": true,
+      "rowCount": 89
+    },
+    {
+      "id": "SC1-L08-marketing-remove-old-bts",
+      "name": "Recent Clips",
+      "path": "datasets/SC1-L08-marketing-remove-old-bts.csv",
+      "metadataPath": "datasets/SC1-L08-marketing-remove-old-bts.json",
+      "isToy": true,
+      "rowCount": 81
+    },
+    {
+      "id": "SC1-L08-marketing-add-interviews",
+      "name": "Interview Clips",
+      "path": "datasets/SC1-L08-marketing-add-interviews.csv",
+      "metadataPath": "datasets/SC1-L08-marketing-add-interviews.json",
+      "isToy": true,
+      "rowCount": 89
+    },
+    {
+      "id": "SC1-L08-marketing-add-new-actor-hits",
+      "name": "New Actor Clips",
+      "path": "datasets/SC1-L08-marketing-add-new-actor-hits.csv",
+      "metadataPath": "datasets/SC1-L08-marketing-add-new-actor-hits.json",
+      "isToy": true,
+      "rowCount": 89
+    },
+    {
       "id": "SC1-L04-waterhole-west-cameras",
       "name": "Camera Trap Records",
       "path": "datasets/SC1-L04-waterhole-west-cameras.csv",
