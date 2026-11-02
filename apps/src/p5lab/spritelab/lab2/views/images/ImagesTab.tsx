@@ -79,8 +79,6 @@ interface ImagesTabProps {
 const DRAFT_ID = 'draft';
 // The pane's width before the preview column has reported its own.
 export const DEFAULT_PANE_WIDTH = 280;
-// A drawing left alone this long saves itself.
-const IDLE_SAVE_MS = 20_000;
 // A pause this long after a stroke saves what is drawn, so the image is the
 // project's as it is drawn: the list's tile, the World palette and the next
 // run all follow it.
@@ -431,10 +429,13 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     setWordsAsked(false);
   }, [chosenId, active]);
   const ownWorkPane = ownWork && !wordsAsked && editedMode() === 'pane';
-  const paintsOwnWork = ownWork && !wordsAsked && editedMode() === 'paint';
+  // Free play paints own work in place, with the words beside the tools;
+  // a level about one image keeps Edit this image and Done.
+  const paintsOwnWork =
+    ownWork && !wordsAsked && editedMode() === 'paint' && !!editingOffered;
   const drawOffered = !!kind && !chosenImage?.sheet && !drawing;
   // Own work opens in the paint tools by itself, and again on return to
-  // the tab; Replace image is the one way out.
+  // the tab.
   const chosenKey = chosenImage?.key;
   const chosenHasSrc = !!chosenImage?.src && !chosenImage.sheet;
   const kindType = kind?.imageType;
@@ -459,6 +460,21 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     kindSubject,
     startDrawing,
   ]);
+  // A picture landing over what is being painted (the image, or a blank)
+  // makes the picture the pixels; the tools close without saving the old
+  // ones over it.
+  const landedOverPainting =
+    !!drawing &&
+    paintsOwnWork === false &&
+    editedMode() === 'paint' &&
+    !!editingOffered &&
+    !!chosenImage?.props.generation &&
+    (drawing.target.key === chosenImage.key || drawing.target.key === null);
+  useEffect(() => {
+    if (landedOverPainting) {
+      stopDrawing();
+    }
+  }, [landedOverPainting, stopDrawing]);
 
   const deleteOffered = !!editingOffered;
   // A level about one image offers the plus until that image exists, with
@@ -538,75 +554,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
         newKind={lockedKind}
         onDelete={deleteOffered ? writer.deleteImage : undefined}
       />
-      {drawing && kind ? (
-        <PixelEditor
-          imageUrl={drawing.imageUrl}
-          knownPixelGrid={drawing.pixelGridSize}
-          initialRecentColors={drawing.recentColors}
-          opaqueGround={
-            drawing.target.imageType === 'background'
-              ? BACKGROUND_GROUND_COLOR
-              : undefined
-          }
-          tools={limitedTools ? PAINT_TOOLS : FREEPLAY_TOOLS}
-          palette={limitedTools ? PAINT_COLORS : undefined}
-          brushSizes={limitedTools ? PAINT_BRUSH_SIZES : FREEPLAY_BRUSH_SIZES}
-          toolbarGroups={limitedTools ? PAINT_TOOLBAR : FREEPLAY_TOOLBAR}
-          fit="container"
-          toolbarLayout="row"
-          hostUndoRedo
-          onHistoryChange={onDrawingHistory}
-          canvasClassName={styles.paintCanvas}
-          onEdit={noteStroke}
-          onSave={handleDrawingSave}
-        >
-          {parts => {
-            saveRef.current = parts.save;
-            return (
-              <>
-                <ImageFrame
-                  image={null}
-                  workspaceClassName={styles.paintFrame}
-                  above={parts.toolbar}
-                  live={
-                    <div className={styles.paintStack}>
-                      {parts.canvas}
-                      {/* The frame's own picture covers the canvas until
-                          the editor has decoded it, so a switch never
-                          shows a blank. */}
-                      {!parts.ready && (
-                        <img
-                          src={drawing.imageUrl}
-                          alt=""
-                          className={classNames(
-                            styles.paintPlaceholder,
-                            drawing.pixelGridSize && styles.pixelArt
-                          )}
-                        />
-                      )}
-                    </div>
-                  }
-                />
-                <DrawPane
-                  width={paneWidthPx}
-                  kind={kind}
-                  editing={!!drawing.target.key}
-                  edited={parts.edited}
-                  paints={editedMode() === 'paint'}
-                  headline={
-                    chosenImage?.props.edited ? 'Your edited image' : undefined
-                  }
-                  onDone={finishDrawing}
-                  onReplace={() => {
-                    finishDrawing();
-                    setWordsAsked(true);
-                  }}
-                />
-              </>
-            );
-          }}
-        </PixelEditor>
-      ) : kind ? (
+      {kind ? (
         <SentenceScene
           key={session}
           imageType={kind.imageType}
@@ -629,65 +577,139 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
           wordLayout={wordLayout}
           singleStep
           method="tab"
-          layout={parts => (
-            <>
+          layout={parts => {
+            const generating = parts.mode === 'generating';
+            const frame = (live?: React.ReactNode, above?: React.ReactNode) => (
               <ImageFrame
                 image={chosenImage}
-                live={
-                  parts.mode === 'generating' || parts.frameFilled
-                    ? parts.frame
-                    : undefined
-                }
-                generating={parts.mode === 'generating'}
+                workspaceClassName={live ? styles.paintFrame : undefined}
+                above={above}
+                live={generating || parts.frameFilled ? parts.frame : live}
+                generating={generating}
                 beside={parts.alternatives}
                 under={
-                  parts.mode === 'generating' ? (
+                  generating ? (
                     <div className={styles.underSteps}>{parts.progress}</div>
                   ) : (
                     parts.underFrame || reopenedBehindTheScenes
                   )
                 }
               />
-              {ownWorkPane && chosenImage ? (
-                <OwnWorkPane
-                  width={paneWidthPx}
-                  edited={!!chosenImage.props.edited}
-                  disabled={parts.busy}
-                  onGenerate={() => setWordsAsked(true)}
-                  onDraw={
-                    drawOffered
-                      ? () =>
-                          startDrawing({
-                            key: chosenImage.key,
-                            imageType: parts.draft.imageType,
-                            subject: parts.draft.subject,
-                          })
+            );
+            const words = (
+              <MakePane
+                parts={parts}
+                width={paneWidthPx}
+                replaces={!!chosenImage}
+                regenerate={!!chosenImage?.props.generation}
+                onDraw={
+                  drawOffered
+                    ? () => {
+                        setWordsAsked(false);
+                        startDrawing({
+                          key: chosenImage?.key ?? null,
+                          imageType: parts.draft.imageType,
+                          subject: parts.draft.subject,
+                        });
+                      }
+                    : undefined
+                }
+                drawLabel={chosenImage ? 'Edit this image' : 'Draw my own'}
+              />
+            );
+            if (drawing) {
+              return (
+                <PixelEditor
+                  imageUrl={drawing.imageUrl}
+                  knownPixelGrid={drawing.pixelGridSize}
+                  initialRecentColors={drawing.recentColors}
+                  opaqueGround={
+                    drawing.target.imageType === 'background'
+                      ? BACKGROUND_GROUND_COLOR
                       : undefined
                   }
-                />
-              ) : (
-                <MakePane
-                  parts={parts}
-                  width={paneWidthPx}
-                  replaces={!!chosenImage}
-                  regenerate={!!chosenImage?.props.generation}
-                  onDraw={
-                    drawOffered
-                      ? () => {
-                          setWordsAsked(false);
-                          startDrawing({
-                            key: chosenImage?.key ?? null,
-                            imageType: parts.draft.imageType,
-                            subject: parts.draft.subject,
-                          });
-                        }
-                      : undefined
+                  tools={limitedTools ? PAINT_TOOLS : FREEPLAY_TOOLS}
+                  palette={limitedTools ? PAINT_COLORS : undefined}
+                  brushSizes={
+                    limitedTools ? PAINT_BRUSH_SIZES : FREEPLAY_BRUSH_SIZES
                   }
-                  drawLabel={chosenImage ? 'Edit this image' : 'Draw my own'}
-                />
-              )}
-            </>
-          )}
+                  toolbarGroups={
+                    limitedTools ? PAINT_TOOLBAR : FREEPLAY_TOOLBAR
+                  }
+                  fit="container"
+                  toolbarLayout="row"
+                  hostUndoRedo
+                  onHistoryChange={onDrawingHistory}
+                  canvasClassName={styles.paintCanvas}
+                  onEdit={noteStroke}
+                  onSave={handleDrawingSave}
+                >
+                  {editor => {
+                    saveRef.current = editor.save;
+                    return (
+                      <>
+                        {frame(
+                          <div className={styles.paintStack}>
+                            {editor.canvas}
+                            {/* The frame's own picture covers the canvas
+                                until the editor has decoded it, so a
+                                switch never shows a blank. */}
+                            {!editor.ready && (
+                              <img
+                                src={drawing.imageUrl}
+                                alt=""
+                                className={classNames(
+                                  styles.paintPlaceholder,
+                                  drawing.pixelGridSize && styles.pixelArt
+                                )}
+                              />
+                            )}
+                          </div>,
+                          editor.toolbar
+                        )}
+                        {editingOffered && editedMode() === 'paint' ? (
+                          words
+                        ) : (
+                          <DrawPane
+                            width={paneWidthPx}
+                            kind={kind}
+                            editing={!!drawing.target.key}
+                            edited={editor.edited}
+                            onDone={finishDrawing}
+                          />
+                        )}
+                      </>
+                    );
+                  }}
+                </PixelEditor>
+              );
+            }
+            return (
+              <>
+                {frame()}
+                {ownWorkPane && chosenImage ? (
+                  <OwnWorkPane
+                    width={paneWidthPx}
+                    edited={!!chosenImage.props.edited}
+                    disabled={parts.busy}
+                    onGenerate={() => setWordsAsked(true)}
+                    onDraw={
+                      drawOffered
+                        ? () =>
+                            startDrawing({
+                              key: chosenImage.key,
+                              imageType: parts.draft.imageType,
+                              subject: parts.draft.subject,
+                            })
+                        : undefined
+                    }
+                  />
+                ) : (
+                  words
+                )}
+              </>
+            );
+          }}
         />
       ) : (
         <>

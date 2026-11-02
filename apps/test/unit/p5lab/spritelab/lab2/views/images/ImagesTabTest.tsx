@@ -482,7 +482,7 @@ describe('ImagesTab', () => {
     expect(screen.getByText('Your edited image')).toBeTruthy();
   });
 
-  it('shows own work in the paint tools, with Replace image the way to the words', async () => {
+  it('paints own work in place in free play, the words beside the tools', async () => {
     delete params['images-edited'];
     propsByKey.k1 = {
       name: 'Sprite 1',
@@ -496,39 +496,51 @@ describe('ImagesTab', () => {
       generation: {imageType: 'sprite', prompt: 'A cat'},
     };
     renderTab({editingOffered: true});
-    // The edited image opens in the tools: no Done, no words.
+    // The edited image opens in the tools, with the words beside them and
+    // nothing to finish.
     expect(screen.getByText('canvas')).toBeTruthy();
-    expect(screen.getByText('Your edited image')).toBeTruthy();
-    expect(screen.queryByRole('button', {name: /^Done/})).toBeNull();
-    expect(screen.queryByText('words')).toBeNull();
-    // Replace image: the tools close and the words come back, with Edit
-    // this image the way back to the tools.
-    await act(async () => {
-      fireEvent.click(screen.getByRole('button', {name: 'Replace image'}));
-    });
-    expect(screen.queryByText('canvas')).toBeNull();
     expect(screen.getByText('words')).toBeTruthy();
-    fireEvent.click(screen.getByRole('button', {name: 'Edit this image'}));
-    expect(screen.getByText('canvas')).toBeTruthy();
-    // The made image is shown as a picture with its words, as before.
+    expect(screen.queryByRole('button', {name: /^Done/})).toBeNull();
+    expect(screen.queryByRole('button', {name: 'Edit this image'})).toBeNull();
+    // The made image is a picture with its words, as before.
     await act(async () => {
       fireEvent.click(screen.getByRole('button', {name: 'Sprite 2'}));
     });
     expect(screen.queryByText('canvas')).toBeNull();
     expect(screen.getByText('words')).toBeTruthy();
+    expect(screen.getByRole('button', {name: 'Edit this image'})).toBeTruthy();
   });
 
-  it('keeps the tools open when drawing a blank, with no Done', () => {
+  it('keeps the tools and the words open while a blank is drawn in free play', () => {
     delete params['images-edited'];
     renderTab({editingOffered: true});
     fireEvent.click(screen.getByRole('button', {name: 'New image'}));
     fireEvent.click(screen.getByRole('button', {name: 'Character'}));
     fireEvent.click(screen.getByRole('button', {name: 'Draw my own'}));
     expect(screen.getByText('canvas')).toBeTruthy();
+    expect(screen.getByText('words')).toBeTruthy();
     expect(screen.queryByRole('button', {name: /^Done/})).toBeNull();
-    expect(
-      screen.getByRole('button', {name: 'Use words instead'})
-    ).toBeTruthy();
+  });
+
+  it('keeps Edit this image and Done on a level about one image', async () => {
+    delete params['images-edited'];
+    propsByKey.k1 = {
+      name: 'Sprite 1',
+      categories: [],
+      role: 'hero',
+      edited: true,
+      sourceUrl: 'sprite1.png',
+    };
+    renderTab({lockedImageType: 'sprite', imageRole: 'hero'});
+    expect(screen.queryByText('canvas')).toBeNull();
+    fireEvent.click(screen.getByRole('button', {name: 'Edit this image'}));
+    expect(screen.getByText('canvas')).toBeTruthy();
+    expect(screen.queryByText('words')).toBeNull();
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', {name: 'Done editing'}));
+    });
+    expect(screen.queryByText('canvas')).toBeNull();
+    expect(screen.getByText('words')).toBeTruthy();
   });
 
   it('keeps the words under an edited image when the parameter asks', () => {
