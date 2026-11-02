@@ -387,6 +387,11 @@ button.chipWord {
   gap: 8px;
   margin: 0;
   min-height: 44px;
+  // Its own stacking context: the browser paints a drag ghost from the
+  // dragged element's nearest stacking context, clipped to the element's
+  // box, so without this the ghost carries the word box's white corners.
+  // The hover lift's transform used to do this by accident.
+  isolation: isolate;
   border: 1px solid var(--borders-neutral-primary);
   border-radius: 999px;
   background: var(--background-neutral-primary);
