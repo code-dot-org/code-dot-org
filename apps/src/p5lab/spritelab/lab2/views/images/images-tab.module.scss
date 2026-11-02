@@ -127,15 +127,22 @@ $pad: 16px;
   overflow: hidden;
 
   // The whole tile grows a little, frame, checker and picture together,
-  // to just inside where the chosen ring stands; nothing is cropped.
+  // to just inside where the chosen ring stands; nothing is cropped, and
+  // the ring, on the slot, stays put.
   &:hover:not(:disabled) {
-    transform: scale(1.08);
+    transform: scale(1.06);
   }
 }
 
-// The chosen tile: a ring standing off the tile, so the image keeps its
-// own edge.
-.tileChosen {
+// Each tile sits in a slot of its own size; the slot wears the chosen
+// ring, so the ring holds still while the tile grows inside it.
+.tileSlot {
+  width: $tile-px;
+  height: $tile-px;
+  border-radius: 6px;
+}
+
+.tileSlotChosen {
   outline: 2px solid var(--borders-brand-teal-primary);
   outline-offset: 3px;
 }

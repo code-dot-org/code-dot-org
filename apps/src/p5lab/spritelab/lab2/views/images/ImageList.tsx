@@ -169,44 +169,51 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
               {own.map(image => {
                 const chosen = image.key === chosenId;
                 return (
-                  <button
+                  <div
                     key={image.key}
-                    type="button"
                     className={classNames(
-                      styles.tile,
-                      chosen && styles.tileChosen
+                      styles.tileSlot,
+                      chosen && styles.tileSlotChosen
                     )}
-                    aria-pressed={chosen}
-                    aria-label={image.name || 'image'}
-                    onClick={() => onChoose(image.key)}
                   >
-                    {image.thumb && (
-                      <img
-                        src={image.thumb}
-                        alt=""
-                        className={classNames(
-                          image.pixelated && styles.pixelArt
-                        )}
-                      />
-                    )}
-                  </button>
+                    <button
+                      type="button"
+                      className={styles.tile}
+                      aria-pressed={chosen}
+                      aria-label={image.name || 'image'}
+                      onClick={() => onChoose(image.key)}
+                    >
+                      {image.thumb && (
+                        <img
+                          src={image.thumb}
+                          alt=""
+                          className={classNames(
+                            image.pixelated && styles.pixelArt
+                          )}
+                        />
+                      )}
+                    </button>
+                  </div>
                 );
               })}
               {ownDraft && (
-                <button
-                  type="button"
+                <div
                   className={classNames(
-                    styles.tile,
-                    styles.tileDraft,
-                    ownDraft.id === chosenId && styles.tileChosen
+                    styles.tileSlot,
+                    ownDraft.id === chosenId && styles.tileSlotChosen
                   )}
-                  aria-pressed={ownDraft.id === chosenId}
-                  aria-label={`New ${imageKindLabel(
-                    ownDraft.imageType,
-                    ownDraft.subject
-                  ).toLowerCase()}`}
-                  onClick={() => onChoose(ownDraft.id)}
-                />
+                >
+                  <button
+                    type="button"
+                    className={classNames(styles.tile, styles.tileDraft)}
+                    aria-pressed={ownDraft.id === chosenId}
+                    aria-label={`New ${imageKindLabel(
+                      ownDraft.imageType,
+                      ownDraft.subject
+                    ).toLowerCase()}`}
+                    onClick={() => onChoose(ownDraft.id)}
+                  />
+                </div>
               )}
             </React.Fragment>
           );
