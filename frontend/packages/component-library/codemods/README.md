@@ -4,19 +4,6 @@ This directory contains automated code transformation scripts (codemods) for mig
 
 ## Available Codemods
 
-### `button-to-mui-button.ts`
-
-Transforms `Button` and `LinkButton` components from `@code-dot-org/component-library/button` to MUI's `Button` and `IconButton` components.
-
-**What it does:**
-
-- Replaces `<Button>` and `<LinkButton>` with `<MuiButton>` and `<MuiIconButton>`
-- Transforms props to MUI-compatible props (e.g., `buttonStyle` → `variant`, `buttonColor` → `color`)
-- Handles icon props (`iconLeft`, `iconRight`, `icon`) and converts them to MUI's `startIcon`/`endIcon` or children
-- Preserves pending state, analytics callbacks, and other custom props
-- Updates imports automatically
-- Handles both regular buttons and icon-only buttons
-
 ### `dialog-to-mui-dialog.ts`
 
 Moves `Dialog` and `CustomDialog` imports from `@code-dot-org/component-library/dialog` to `MuiDialog` and `MuiCustomDialog`. The props are unchanged, so only imports and `jest.mock` factories change. See `src/dialog/DIALOG_MIGRATION_TO_MUI.md`.
@@ -61,7 +48,7 @@ The codemod will show:
 
 - Number of files processed
 - Number of files modified
-- Number of files unmodified (no Button/LinkButton found)
+- Number of files unmodified (nothing to rewrite)
 - Number of errors (if any)
 - Processing time
 
@@ -89,21 +76,3 @@ Time elapsed: 0.971seconds
 4. **Manual fixes may be needed**: Some edge cases or complex prop expressions might require manual adjustment.
 
 5. **Git workflow**: Consider running the codemod on a feature branch and creating a separate commit for the automated changes.
-
-## How It Works
-
-The codemod uses:
-
-- **jscodeshift**: For parsing and transforming JavaScript/TypeScript code
-- **ts-node**: For running TypeScript codemod files
-- **Shared logic**: The codemod imports `transformButtonPropsCore` from `src/button/buttonPropsToMuiCore.ts` to ensure consistent prop transformation logic between runtime and codemod
-
-The transformation process:
-
-1. Parses the source file into an AST (Abstract Syntax Tree)
-2. Finds all `Button` and `LinkButton` imports and usages
-3. Extracts props from JSX attributes
-4. Transforms props using the shared core logic
-5. Reconstructs JSX with `MuiButton`/`MuiIconButton` and transformed props
-6. Updates imports to use MUI components
-7. Writes the transformed code back to the file
