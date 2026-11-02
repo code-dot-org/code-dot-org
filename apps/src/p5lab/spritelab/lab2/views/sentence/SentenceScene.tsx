@@ -411,8 +411,10 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     [chosenPicture, imageType, persist]
   );
 
+  // The reasons end the rating: the strip goes once they are given.
   const explain = useCallback(
     (reasons: string[]) => {
+      setRatingDismissed(true);
       analyticsReporter.sendEvent(
         EVENTS.HOAI2026_IMAGE_VERDICT_REASON,
         {

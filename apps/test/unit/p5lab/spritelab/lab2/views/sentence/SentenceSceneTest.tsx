@@ -201,6 +201,10 @@ describe('SentenceScene', () => {
       expect.objectContaining({reasons: ['mismatch', 'colors']}),
       true
     );
+    // The reasons end the rating: its strip is gone.
+    expect(
+      screen.queryByRole('group', {name: 'How did the AI do?'})
+    ).toBeNull();
   });
 
   it('puts the rating away unanswered on Dismiss, until the next picture', async () => {
