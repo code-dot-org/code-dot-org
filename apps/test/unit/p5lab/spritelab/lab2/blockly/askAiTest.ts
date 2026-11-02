@@ -31,6 +31,18 @@ describe('spritelab2_askAI', () => {
     );
   });
 
+  // function (val) {val = val;} assigns the parameter, not the variable.
+  it('does not let a variable named val shadow itself', () => {
+    const code = askAi.generator(
+      blockWithVar({type: 'variables_get'}) as never,
+      {...javascript, blockToCode: () => ['val', 0]} as never
+    );
+    expect(code).toBe(
+      "askAI('why is the sky blue?', 'val', " +
+        'function (__val) {val = __val;});\n'
+    );
+  });
+
   it('generates nothing without a variable to answer into', () => {
     expect(
       askAi.generator(blockWithVar(null) as never, javascript as never)

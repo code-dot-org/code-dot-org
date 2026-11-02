@@ -29,7 +29,9 @@ const generator: GeneratorFunction = (block, javascript) => {
   }
   const varName = javascript.blockToCode(target)[0];
   const prompt = javascript.valueToCode(block, 'PROMPT', Order.NONE) || "''";
-  return `askAI(${prompt}, '${varName}', function (val) {${varName} = val;});\n`;
+  // Ensure the parameter does not shadow the student-provided variable (if it were named 'val').
+  const param = varName === 'val' ? '__val' : 'val';
+  return `askAI(${prompt}, '${varName}', function (${param}) {${varName} = ${param};});\n`;
 };
 
 export default {definition, generator};
