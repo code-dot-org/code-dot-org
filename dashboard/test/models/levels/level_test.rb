@@ -348,19 +348,21 @@ class LevelTest < ActiveSupport::TestCase
     assert_includes(level.related_videos, level.concepts.second.related_video)
   end
 
+  # A fixture rather than a production level file: CI checks out the repo
+  # without config/levels (sparse-patterns/no-production-curriculum).
   test 'update custom level from file' do
-    LevelLoader.import_levels 'config/levels/custom/maze/K-1 Bee 2.level'
-    level = Level.find_by_name('K-1 Bee 2')
+    LevelLoader.import_levels 'test/fixtures/levels/Bee Fixture.level'
+    level = Level.find_by_name('Bee Fixture')
     assert_equal 'bee', level.skin
     assert_equal '[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,1,0,-1,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]',
       level.properties['initial_dirt']
   end
 
   test 'creating custom level from file sets level_concept_difficulty' do
-    Level.find_by_name('K-1 Bee 2')&.destroy
-    assert_nil Level.find_by_name('K-1 Bee 2')
-    LevelLoader.import_levels 'config/levels/custom/maze/K-1 Bee 2.level'
-    level = Level.find_by_name('K-1 Bee 2')
+    Level.find_by_name('Bee Fixture')&.destroy
+    assert_nil Level.find_by_name('Bee Fixture')
+    LevelLoader.import_levels 'test/fixtures/levels/Bee Fixture.level'
+    level = Level.find_by_name('Bee Fixture')
     refute_nil level
 
     assert_equal 3, level.level_concept_difficulty.sequencing
@@ -429,6 +431,8 @@ class LevelTest < ActiveSupport::TestCase
   test 'updating maze level updates it in levelbuilder mode' do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     File.expects(:write).once
+    # Mocked too, or the test creates config/levels/custom/maze for real.
+    FileUtils.expects(:mkdir_p).once
 
     update_maze
   end
@@ -447,6 +451,7 @@ class LevelTest < ActiveSupport::TestCase
   test 'creating maze level creates it in levelbuilder mode' do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     File.expects(:write).once
+    FileUtils.expects(:mkdir_p).once
 
     create_maze
   end

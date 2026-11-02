@@ -7,8 +7,9 @@
 
 source docker/ci/scripts/prepare_ci_env.sh
 
-# Skip rake install in ui pipeline. This is safe because we've already run rake install
-# in the cache-staging-build pipeline, and the ui pipeline re-uses that cache.
+# The ui pipeline builds from a fresh clone (see the checkout step in
+# .drone.yml), so nothing has run rake install for it yet.
+bundle exec rake install
 
 # Ensure non-root `writer` and `reader` SQL users are provisioned and have the latest permissions applied from the
 # current feature branch. The cache cannot carry forward the restored MySQL data directory, which holds the users and

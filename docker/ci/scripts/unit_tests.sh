@@ -13,7 +13,11 @@ bundle exec rake install
 # that we give a clear error message for any zeitwerk issues that would block
 # application load.
 bundle exec rake lint:zeitwerk
-bundle exec ruby tools/hooks/lint.rb origin/$CI_BASE_BRANCH $CI_HEAD_BRANCH
 
 bundle exec rake build
+
+# After rake build: eslint and the frontend linters come from the node_modules
+# it installs, and nothing before it has installed them from a fresh clone.
+bundle exec ruby tools/hooks/lint.rb origin/$CI_BASE_BRANCH $CI_HEAD_BRANCH
+
 bundle exec rake ci:run_unit_tests

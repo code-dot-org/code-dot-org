@@ -1,0 +1,11 @@
+# Everything except the production curriculum partition; see
+# dashboard/config/PARTITIONS.md. Non-cone git sparse-checkout patterns,
+# applied by bin/sparse-checkout no-production-curriculum. The UI test and
+# standalone project partitions live outside these trees and stay checked out.
+/*
+/**/*
+!dashboard/config/levels/**
+!dashboard/config/scripts/**
+!dashboard/config/scripts_json/**
+!dashboard/config/courses/**
+!dashboard/config/course_offerings/**
