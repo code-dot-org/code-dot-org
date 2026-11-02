@@ -297,6 +297,21 @@ describe('EditAilabMode', () => {
     expect(JSON.parse(savedMode())).toEqual({trainer: 'knn'});
   });
 
+  it('saves the default card view', () => {
+    const savedMode = renderEditor('{"defaultCardView": true}');
+    const cards = screen.getByRole('checkbox', {
+      name: 'Show the dataset as cards instead of a table by default',
+    });
+    expect(cards).toBeChecked();
+    expect(JSON.parse(savedMode())).toEqual({
+      defaultCardView: true,
+      trainer: 'knn',
+    });
+
+    fireEvent.click(cards);
+    expect(JSON.parse(savedMode())).toEqual({trainer: 'knn'});
+  });
+
   it('removes a key when its field is cleared', () => {
     const savedMode = renderEditor('{"hideSave": true, "requireAccuracy": 70}');
     fireEvent.click(

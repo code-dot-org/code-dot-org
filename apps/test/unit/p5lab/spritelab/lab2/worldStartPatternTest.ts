@@ -5,7 +5,6 @@ import {
   WorldCell,
 } from '@cdo/apps/p5lab/spritelab/lab2/world';
 import {
-  chooseStartPattern,
   paintPattern,
   patternCells,
 } from '@cdo/apps/p5lab/spritelab/lab2/worldStartPattern';
@@ -175,45 +174,5 @@ describe('paintPattern', () => {
     const rows = painted.grid.filter(cells => cells.some(Boolean)).length;
     expect(rows).toBe(10);
     expect(painted.grid[0].filter(Boolean)).toHaveLength(10);
-  });
-});
-
-describe('chooseStartPattern', () => {
-  const one = ['..S.', 'BBBB'];
-  const layouts = [
-    ['A...', 'BBBB'],
-    ['.B..', 'BBBB'],
-    ['..C.', 'BBBB'],
-  ];
-  const inProject = {hasProject: true, roll: 0.5};
-
-  it('passes a single pattern through', () => {
-    expect(chooseStartPattern(one, inProject)).toBe(one);
-    expect(chooseStartPattern(undefined, inProject)).toBeUndefined();
-    expect(chooseStartPattern([], inProject)).toBeUndefined();
-  });
-
-  it('picks the layout the roll lands on', () => {
-    const pick = (roll: number) =>
-      chooseStartPattern(layouts, {hasProject: true, roll});
-    expect(pick(0)).toBe(layouts[0]);
-    expect(pick(0.34)).toBe(layouts[1]);
-    expect(pick(0.99)).toBe(layouts[2]);
-    expect(pick(1)).toBe(layouts[2]);
-  });
-
-  it('takes a named layout over the roll, within range', () => {
-    expect(chooseStartPattern(layouts, {...inProject, override: 2})).toBe(
-      layouts[2]
-    );
-    expect(chooseStartPattern(layouts, {...inProject, override: 7})).toBe(
-      layouts[1]
-    );
-  });
-
-  it('takes the first layout with no project', () => {
-    expect(chooseStartPattern(layouts, {hasProject: false, roll: 0.9})).toBe(
-      layouts[0]
-    );
   });
 });

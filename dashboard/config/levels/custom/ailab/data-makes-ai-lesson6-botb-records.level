@@ -8,10 +8,11 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "mode": "{\r\n  \"trainer\": \"knn\"\r\n}",
+    "mode": "{\r\n  \"trainer\": \"decisionTree\",\r\n  \"hideTestingView\": true,\r\n  \"reserveLastRows\": true\r\n}",
     "uses_lab2": "true",
-    "teacher_markdown": "- Sort the records by Before 2000.\r\n- Count the songs in each group.\r\n- Count the Bangers in each group.\r\n- Write the four counts in your guide."
+    "teacher_markdown": "- Sort the records by Before 2000.\r\n- Count the songs in each group.\r\n- Count the Bangers in each group.\r\n- Write the four counts in your guide.",
+    "dynamic_instructions": "{\r\n  \"datasetView\": \"- Click the sort button on the **Before 2025** column. The No records and the Yes records line up in two groups.\\n- Click **Filter**, choose **Before 2025**, check **Yes**, and click **Done**. The number next to **Dataset** shows how many records came out before 2025. Count the Bangers.\\n- Click the **Before 2025: Yes** filter to bring back the checkboxes. Uncheck **Yes**, check **No**, and click **Done**. Count the records and the Bangers again.\\n- Click the **×** on the filter to clear it.\\n- Write the four counts in your guide. Circle balanced or unbalanced, and write one reason using your counts.\"\r\n}"
   },
-  "audit_log": "[{\"changed_at\":\"2026-10-28T22:04:06.935+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-lesson6-bota-answer\\\"\"],\"cloned_from\":\"data-makes-ai-lesson6-bota-answer\"},{\"changed_at\":\"2026-10-28 22:04:44 +0000\",\"changed\":[],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-10-28T22:04:06.935+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-lesson6-bota-answer\\\"\"],\"cloned_from\":\"data-makes-ai-lesson6-bota-answer\"},{\"changed_at\":\"2026-10-28 22:04:44 +0000\",\"changed\":[],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-30 23:56:14 +0000\",\"changed\":[\"mode\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]"
 }]]></config>
 </Ailab>

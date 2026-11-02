@@ -2,7 +2,6 @@ require 'net/http'
 require 'uri'
 require 'json'
 require 'aws-sdk-pricing'
-require 'active_support'
 require 'active_support/core_ext/integer/time'
 require 'observability/errors'
 

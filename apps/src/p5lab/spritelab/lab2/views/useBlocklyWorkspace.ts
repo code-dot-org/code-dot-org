@@ -18,6 +18,7 @@ import {START_SOURCES, TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 
 import {withoutBlockTypes} from '../blockCatalog';
+import {lockBlocks, withoutLocks} from '../blockLocks';
 import PlaceholderPreviewer from '../blockly/placeholderPreviewer';
 import {installSharedBlocks} from '../blockly/setup';
 import {getCompleteToolboxDefinition} from '../blockly/toolbox/completeToolbox';
@@ -58,8 +59,16 @@ interface UseBlocklyWorkspaceResult {
   getToolboxDefinition: () => BlocklyCore.utils.toolbox.ToolboxInfo | null;
   /** Re-render the toolbox, so flyout dropdowns show data fetched since. */
   refreshToolbox: (definition?: BlocklyCore.utils.toolbox.ToolboxInfo) => void;
-  /** Load code into the workspace. */
-  loadCode: (source: WorkspaceSerialization) => void;
+  /** Load code into the workspace. With `lock`, every loaded block is made
+      undeletable except the stacks `isOwnStack` claims as the level's own
+      (blockLocks.ts). */
+  loadCode: (
+    source: WorkspaceSerialization,
+    options?: {
+      lock?: boolean;
+      isOwnStack?: (top: BlocklyCore.Block) => boolean;
+    }
+  ) => void;
   /**
    * Register the change listeners:
    * - onWorkspaceChange fires with the serialized workspace after a user edit.
@@ -218,9 +227,15 @@ export default function useBlocklyWorkspace({
       if (workspaceRef.current.isDragging()) {
         return;
       }
-      const serialized = Blockly.serialization.workspaces.save(
+      let serialized = Blockly.serialization.workspaces.save(
         workspaceRef.current
       ) as WorkspaceSerialization;
+      // A levelbuilder editing the level authors its locks, so they are kept.
+      // For a student the locks come from the level, not from the saved
+      // project, so any saved ones are stripped.
+      if (!isToolboxMode && !isStartMode) {
+        serialized = withoutLocks(serialized);
+      }
       currentBlocksRef.current = serialized;
       onWorkspaceChangeRef.current(serialized);
     };
@@ -280,22 +295,34 @@ export default function useBlocklyWorkspace({
     []
   );
 
-  const loadCode = useCallback((source: WorkspaceSerialization) => {
-    const workspace = workspaceRef.current;
-    if (!workspace) {
-      return;
-    }
-    pendingLoadsRef.current++;
-    try {
-      loadBlocksToWorkspace(workspace, JSON.stringify(source));
-      // Update ref here (instead of in change listener) since callers may read this synchronously.
-      currentBlocksRef.current = source;
-    } catch (e) {
-      // Decrement the counter if there was an error.
-      pendingLoadsRef.current--;
-      throw e;
-    }
-  }, []);
+  const loadCode = useCallback(
+    (
+      source: WorkspaceSerialization,
+      options?: {
+        lock?: boolean;
+        isOwnStack?: (top: BlocklyCore.Block) => boolean;
+      }
+    ) => {
+      const workspace = workspaceRef.current;
+      if (!workspace) {
+        return;
+      }
+      pendingLoadsRef.current++;
+      try {
+        loadBlocksToWorkspace(workspace, JSON.stringify(source));
+        if (options?.lock) {
+          lockBlocks(workspace, options.isOwnStack);
+        }
+        // Update ref here (instead of in change listener) since callers may read this synchronously.
+        currentBlocksRef.current = source;
+      } catch (e) {
+        // Decrement the counter if there was an error.
+        pendingLoadsRef.current--;
+        throw e;
+      }
+    },
+    []
+  );
 
   const getCurrentBlocks = useCallback(() => currentBlocksRef.current, []);
 

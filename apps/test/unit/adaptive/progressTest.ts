@@ -3,9 +3,11 @@ import {act, renderHook} from '@testing-library/react-hooks';
 import {
   EMPTY_PROGRESS,
   Progress,
+  isComplete,
   latestValidation,
   stepIdToResume,
   useProgress,
+  visibleSteps,
 } from '@cdo/apps/adaptive/progress';
 import {ProgressStore} from '@cdo/apps/adaptive/progress/progressStore';
 import {computeEvidence} from '@cdo/apps/adaptive/routing/evidence';
@@ -145,6 +147,72 @@ describe('stepIdToResume', () => {
         two: {status: 'started', timeSpent: 0},
       })
     ).toBe('two');
+  });
+});
+
+describe('visibleSteps', () => {
+  const ask: Step = {
+    id: 'ask',
+    title: 'Ask',
+    kind: 'questions',
+    questions: [
+      {
+        id: 1,
+        type: 'MultipleChoiceQuestion',
+        questionName: 'ask',
+        questionTitle: 'Which?',
+        choices: [
+          {id: 'a', text: 'A'},
+          {id: 'b', text: 'B'},
+        ],
+      },
+    ],
+  };
+  const branch = (id: string, choiceId: string): Step => ({
+    ...panels(id),
+    showIf: {stepId: 'ask', questionId: 1, choiceId},
+  });
+  const cp = checkpoint('branchy', undefined, [
+    ask,
+    branch('if-a', 'a'),
+    branch('if-b', 'b'),
+    panels('after'),
+  ]);
+  const answered = (...answers: {answerId: string}[]) => ({
+    steps: {ask: {timeSpent: 0, answers: {1: answers}}},
+  });
+  const ids = (progress: Progress) => visibleSteps(cp, progress).map(s => s.id);
+
+  it('hides every branch until its question is answered', () => {
+    expect(ids(EMPTY_PROGRESS)).toEqual(['ask', 'after']);
+  });
+
+  it('shows the branch of the latest answer', () => {
+    expect(ids(answered({answerId: 'a'}))).toEqual(['ask', 'if-a', 'after']);
+    expect(ids(answered({answerId: 'a'}, {answerId: 'b'}))).toEqual([
+      'ask',
+      'if-b',
+      'after',
+    ]);
+  });
+
+  it('resumes and completes over visible steps only', () => {
+    const done = {status: 'complete' as const, timeSpent: 1};
+    expect(
+      stepIdToResume(cp, {
+        steps: {
+          ...answered({answerId: 'b'}).steps,
+          ask: {...done, answers: {1: [{answerId: 'b'}]}},
+        },
+      })
+    ).toBe('if-b');
+    const last = checkpoint('tail', undefined, [ask, branch('if-a', 'a')]);
+    expect(isComplete(last, {steps: {ask: done}})).toBe(true);
+    expect(
+      isComplete(last, {
+        steps: {ask: {...done, answers: {1: [{answerId: 'a'}]}}},
+      })
+    ).toBe(false);
   });
 });
 
