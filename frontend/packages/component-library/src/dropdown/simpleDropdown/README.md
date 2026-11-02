@@ -10,6 +10,7 @@ This package exports one styled React component: [SimpleDropdown](SimpleDropdown
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 ```
 
-For guidelines on how to use these components and the features they offer, [visit Storybook](https://code-dot-org.github.io/dsco_)
-(link to be updated once code-dot-org storybook will be public.).
-Or run storybook locally and go to [Design System / Simple Dropdown](http://localhost:9001/?path=/docs/designsystem-dropdown-simple-dropdown--default-dropdown).
+For guidelines on how to use these components and the features they
+offer, [visit Storybook](https://code-dot-org.github.io/code-dot-org/component-library-storybook/?path=/docs/designsystem-dropdown-simple-dropdown--docs).
+Or run storybook locally and go
+to [DesignSystem / Dropdown / Simple Dropdown](http://localhost:6006/?path=/docs/designsystem-dropdown-simple-dropdown--docs).

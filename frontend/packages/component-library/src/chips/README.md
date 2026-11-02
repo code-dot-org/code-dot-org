@@ -13,6 +13,7 @@ import {Chips} from '@code-dot-org/component-library/chips';
 import Chips from '@code-dot-org/component-library/chips';
 ```
 
-For guidelines on how to use these components and the features they offer, [visit Storybook](https://code-dot-org.github.io/dsco_)
-(link to be updated once code-dot-org storybook will be public.).
-Or run storybook locally and go to [DesignSystem / Chip Component](http://localhost:9001/?path=/story/designsystem-radio-button-component--default-radio-button).
+For guidelines on how to use these components and the features they
+offer, [visit Storybook](https://code-dot-org.github.io/code-dot-org/component-library-storybook/?path=/docs/designsystem-chips--docs).
+Or run storybook locally and go
+to [DesignSystem / Chips](http://localhost:6006/?path=/docs/designsystem-chips--docs).

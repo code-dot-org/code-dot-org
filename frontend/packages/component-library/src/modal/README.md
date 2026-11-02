@@ -10,7 +10,6 @@ import Modal, {ModalProps} from '@code-dot-org/component-library/modal';
 ```
 
 For guidelines on how to use this component and the features it
-offers, [visit Storybook](https://code-dot-org.github.io/dsco_)
-(link to be updated once code-dot-org storybook will be public.).
+offers, [visit Storybook](https://code-dot-org.github.io/code-dot-org/component-library-storybook/?path=/docs/designsystem-modal--docs).
 Or run storybook locally and go
-to [DesignSystem / Dialog Component](http://localhost:9001/?path=/docs/designsystem-wip-modal--docs).
+to [DesignSystem / Modal](http://localhost:6006/?path=/docs/designsystem-modal--docs).

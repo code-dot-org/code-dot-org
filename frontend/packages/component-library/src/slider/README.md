@@ -9,7 +9,6 @@ import Slider from '@code-dot-org/component-library/slider';
 ```
 
 For guidelines on how to use these components and the features they
-offer, [visit Storybook](https://code-dot-org.github.io/dsco_)
-(link to be updated once code-dot-org storybook will be public.).
+offer, [visit Storybook](https://code-dot-org.github.io/code-dot-org/component-library-storybook/?path=/docs/designsystem-slider--docs).
 Or run storybook locally and go
-to [Design System / Slider](http://localhost:9001/?path=/story/designsystem-slider--default-slider).
+to [DesignSystem / Slider](http://localhost:6006/?path=/docs/designsystem-slider--docs).

@@ -57,12 +57,7 @@ yarn run dev
 ```
 
 This mode also generates the TypeScript declaration files, which generally take upwards of 20 seconds but is necessary
-for cross-project development. To skip TypeScript declaration generation (for example, when locally developing
-components without the need to cross-reference):
-
-```bash
-yarn run dev:fast
-```
+for cross-project development.
 
 ## Usage
 
@@ -100,8 +95,9 @@ const Example = () => {
 - `onChange` — Handles the checkbox change event.
 - `label` — Text label displayed next to the checkbox.
 
-> **Note:** Some components like `Button`, `LinkButton`, `Typography`, and `Breadcrumbs` have been migrated to MUI.
-> Use their MUI equivalents from `@mui/material` instead. See [MIGRATION_STATUS.md](MIGRATION_STATUS.md) for details.
+> **Note:** Several components have been migrated to MUI and their DSCO versions are deprecated. Which ones, and where
+> to import each replacement from, is in [MIGRATION_STATUS.md](MIGRATION_STATUS.md) and the
+> [design-system skill](../../../.agents/skills/design-system/SKILL.md).
 
 ### Example with `Alert`
 
@@ -208,7 +204,7 @@ export interface AlertProps extends HTMLAttributes<HTMLDivElement> {
 
   - Naming – Keep names descriptive and consistent with other components.
   - Structure – Organize files in the same way as other components in the library.
-  - Testing – Follow existing test patterns using Jest, RTL and @testing-library/user-event..
+  - Testing – Follow existing test patterns using Vitest, RTL and @testing-library/user-event.
   - Stories – Ensure the component has a Storybook entry with usage examples.
   - Styles – Use existing mixins and variables from primitiveColors.css and colors.css.
 
@@ -244,6 +240,9 @@ custom styles will be applied correctly (if hesitant - please read [MDN Specific
 #### ✅ Recommended Approaches: Using SCSS Modules
 
 ##### You can define custom styles in a SCSS module and apply them using a parent element or directly on the component.
+
+The examples below use the DSCO `Heading1`, which is deprecated along with the rest of DSCO Typography. New code uses
+MUI `Typography`; the override techniques are the same.
 
 **Example: Overwriting via parent element style**
 
@@ -335,7 +334,7 @@ h1 {
 
 ## Testing
 
-We use Jest, RTL and @testing-library/user-event for unit tests. Each component should have a corresponding test file that covers
+We use Vitest, RTL and @testing-library/user-event for unit tests. Each component should have a corresponding test file that covers
 all possible use cases and edge cases. Where RTL is not enough, we use
 [Storybook Play Function](https://storybook.js.org/docs/writing-stories/play-function) for visual tests.
 We follow [RTL testing approach](https://kentcdodds.com/blog/testing-implementation-details), testing components how
@@ -345,7 +344,7 @@ On top of that, we have linting rules to ensure code quality, of course.
 
 You can run the tests using the following commands:
 
-1. Run jest unit tests:
+1. Run Vitest unit tests:
 
    ```bash
    yarn test
@@ -414,7 +413,7 @@ github issues or any other means of communication.
   see [Styling](#styling).
 
 - **How do I test a component?**  
-  Use Jest, RTL and @testing-library/user-event for unit tests. For more details see [Testing](#testing).
+  Use Vitest, RTL and @testing-library/user-event for unit tests. For more details see [Testing](#testing).
 
 ## Changelog
 
