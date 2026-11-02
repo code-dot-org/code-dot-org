@@ -250,4 +250,11 @@ describe('AilabWorkspace', () => {
       validationTooltip: 'Train a model with at least 70% accuracy',
     });
   });
+
+  it('shows a Backpack that takes no files into the lab', () => {
+    renderLevel('3');
+    expect(
+      jest.mocked(ResourcePanel).mock.lastCall?.[0].backpackProps
+    ).toMatchObject({supportedFileTypes: []});
+  });
 });
