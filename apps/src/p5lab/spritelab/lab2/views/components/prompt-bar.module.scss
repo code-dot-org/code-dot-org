@@ -44,3 +44,29 @@
 .submitButton {
   margin: 0;
 }
+
+.choices {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 1fr);
+  gap: 8px;
+}
+
+.choiceButton {
+  min-width: 0;
+  margin: 0;
+}
+
+.choiceLabel {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Keep disabled button text visible, as buttons are disabled
+// while in preview mode.
+.promptBar .submitButton:disabled,
+.promptBar .choiceButton:disabled {
+  color: var(--text-neutral-tertiary);
+}
