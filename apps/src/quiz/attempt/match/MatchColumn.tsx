@@ -25,7 +25,6 @@ interface MatchColumnProps {
   disabled?: boolean;
   // Marks each paired card as correct or incorrect.
   correctPairs?: MatchPairs;
-  // Marks every paired card correct, without saying so in its hidden text.
   isAnswerKey?: boolean;
 }
 
@@ -96,6 +95,7 @@ const MatchColumn: React.FunctionComponent<MatchColumnProps> = ({
                 {partnerId
                   ? `, matched with ${getItemText(matchSets, partnerId)}`
                   : ', not matched'}
+                {/* The answer key's board name already says its pairs are correct. */}
                 {status && !isAnswerKey && `, ${status}`}
               </span>
             </li>

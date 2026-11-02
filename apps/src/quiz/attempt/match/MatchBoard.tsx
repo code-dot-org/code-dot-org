@@ -19,8 +19,6 @@ export interface MatchBoardProps {
   disabled?: boolean;
   // Marks each pair in pairs as correct or incorrect.
   correctPairs?: MatchPairs;
-  // Shows pairs as the answer key: marked correct, but not announced as such,
-  // since the board's name already says so.
   isAnswerKey?: boolean;
   describedBy?: string;
 }
