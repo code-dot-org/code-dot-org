@@ -2,15 +2,15 @@ import {type ReactFlowInstance} from '@xyflow/react';
 import {toBlob} from 'html-to-image';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {getExportStyleProperties} from '@cdo/apps/util/imageExport/getExportStyleProperties';
+import {getFontEmbedCss} from '@cdo/apps/util/imageExport/getFontEmbedCss';
+import {inlineSvgStylesForExport} from '@cdo/apps/util/imageExport/inlineSvgStylesForExport';
 
 import {SKETCHLAB_CONTAINER_CLASS} from '../components/ReactFlowCanvas';
 import {REACT_FLOW_SELECTOR} from '../reactFlowSelectors';
 
 import {computeExportDimensions} from './computeExportDimensions';
 import {getCanvasBounds} from './getCanvasBounds';
-import {getExportStyleProperties} from './getExportStyleProperties';
-import {getSketchFontEmbedCss} from './getSketchFontEmbedCss';
-import {inlineSvgStylesForExport} from './inlineSvgStylesForExport';
 import {SketchCaptureError} from './SketchCaptureError';
 
 const EXPORT_PADDING_PX = 10;
@@ -81,7 +81,7 @@ const captureSketch = async (
 
   const renderBlob = async () => {
     // Supplying this stops html-to-image from inlining every font the page declares.
-    const fontEmbedCSS = await getSketchFontEmbedCss(viewport);
+    const fontEmbedCSS = await getFontEmbedCss(viewport);
     return toBlob(viewport, {
       backgroundColor,
       fontEmbedCSS,

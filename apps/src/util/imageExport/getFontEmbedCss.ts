@@ -1,9 +1,9 @@
 import HttpClient from '@cdo/apps/util/HttpClient';
 
-// Builds the `fontEmbedCSS` we hand to html-to-image when exporting a sketch.
+// Builds the `fontEmbedCSS` we hand to html-to-image when exporting an element.
 // By default, html-to-image inlines every font it finds on the page as base64,
 // which can get very large.
-// Instead we inline only the faces the sketch actually draws with, from
+// Instead we inline only the faces the element actually draws with, from
 // stylesheets we are allowed to read. Any other fonts will fall back to OS fonts.
 //
 // For each piece of text we embed the first family in its font stack that is readable
@@ -173,12 +173,10 @@ const inlineFontFaceRule = async (
   );
 };
 
-// Resolves to CSS declaring the sketch's web font faces with their files
+// Resolves to CSS declaring the element's web font faces with their files
 // inlined, or to an empty string when there is nothing to embed -- which tells
 // html-to-image to skip its own font handling entirely.
-export const getSketchFontEmbedCss = async (
-  root: HTMLElement
-): Promise<string> => {
+export const getFontEmbedCss = async (root: HTMLElement): Promise<string> => {
   const byFamily = readCandidatesByFamily();
   if (byFamily.size === 0) {
     return '';
