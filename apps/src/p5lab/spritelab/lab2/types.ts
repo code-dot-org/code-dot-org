@@ -46,6 +46,9 @@ export interface SerializedAnimationProps {
   /** Whether a sprite is a character or an object. Stored on its own, not
       only inside `generation`, because a hand edit clears `generation`. */
   subject?: ImageSubject;
+  /** True once the student has drawn on the pixels; false while they are
+      exactly what the prompt produced. */
+  edited?: boolean;
   /** Present on AI-generated images. */
   generation?: ImageGenerationMetadata;
   /** Present on a character set: where each pose lives in the sheet. */

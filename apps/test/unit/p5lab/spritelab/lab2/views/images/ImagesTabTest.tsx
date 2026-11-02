@@ -136,6 +136,10 @@ jest.mock('@cdo/apps/util/reduxHooks', () => ({
     select({animationList: animationList(), lab: {}}),
   useAppDispatch: () => jest.fn(),
 }));
+const params: Record<string, string> = {};
+jest.mock('@cdo/apps/code-studio/utils', () => ({
+  queryParams: (name: string) => params[name],
+}));
 jest.mock('@cdo/apps/p5lab/spritelab/lab2/imageTrim', () => ({
   onTrimsUpdated: () => () => undefined,
   trimAnimationListImages: () => undefined,
@@ -172,6 +176,7 @@ const pressed = () =>
 describe('ImagesTab', () => {
   beforeEach(() => {
     Object.keys(propsByKey).forEach(key => delete propsByKey[key]);
+    Object.keys(params).forEach(key => delete params[key]);
     acceptGenerated.mockReset();
     saveEdited.mockReset();
     deleteImage.mockReset();
@@ -436,6 +441,37 @@ describe('ImagesTab', () => {
     });
     expect(saveEdited).toHaveBeenCalledTimes(2);
     expect(screen.queryByText('canvas')).toBeNull();
+  });
+
+  it("guards an image that is the student's own work, until Generate new image", () => {
+    propsByKey.k1 = {name: 'Sprite 1', categories: [], edited: true};
+    propsByKey.k2 = {
+      name: 'Sprite 2',
+      categories: [],
+      generation: {imageType: 'sprite', prompt: 'A cat'},
+    };
+    renderTab({editingOffered: true});
+    // The edited image: its own pane, no words.
+    expect(screen.getByText('Your edited image')).toBeTruthy();
+    expect(screen.queryByText('words')).toBeNull();
+    expect(screen.getByRole('button', {name: 'Edit this image'})).toBeTruthy();
+    fireEvent.click(screen.getByRole('button', {name: 'Generate new image'}));
+    expect(screen.getByText('words')).toBeTruthy();
+    expect(screen.queryByText('Your edited image')).toBeNull();
+    // The made image has its words from the start; back on the edited
+    // one, the guard is up again.
+    fireEvent.click(screen.getByRole('button', {name: 'Sprite 2'}));
+    expect(screen.getByText('words')).toBeTruthy();
+    fireEvent.click(screen.getByRole('button', {name: 'Sprite 1'}));
+    expect(screen.getByText('Your edited image')).toBeTruthy();
+  });
+
+  it('keeps the words under an edited image when the parameter asks', () => {
+    params['images-edited'] = 'generate';
+    propsByKey.k1 = {name: 'Sprite 1', categories: [], edited: true};
+    renderTab({editingOffered: true});
+    expect(screen.getByText('words')).toBeTruthy();
+    expect(screen.queryByText('Your edited image')).toBeNull();
   });
 
   it('edits an image with the few tools before free play, saving when the tab is left', async () => {

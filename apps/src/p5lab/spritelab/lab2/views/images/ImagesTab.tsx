@@ -6,6 +6,7 @@
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import PixelEditor, {
   PixelEditorSaveMeta,
 } from '@cdo/apps/pixelEditor/PixelEditor';
@@ -38,6 +39,7 @@ import DrawPane from './DrawPane';
 import ImageFrame from './ImageFrame';
 import ImageList, {DraftEntry, NewImageKind} from './ImageList';
 import MakePane from './MakePane';
+import OwnWorkPane from './OwnWorkPane';
 import {listProjectImages, ProjectImage} from './projectImages';
 import BehindTheScenes from './teaching/BehindTheScenes';
 import useImageWriter, {ImageTarget} from './useImageWriter';
@@ -87,6 +89,12 @@ const STROKE_SAVE_MS = 800;
 // goes up at most this often, and when the drawing is done. The project's
 // own saving has a throttle of its own.
 const UPLOAD_GAP_MS = 5000;
+
+/** `?images-edited=generate` keeps the words under an image the student
+    drew on, as before, instead of the pane that guards that work. */
+function editedKeepsWords(): boolean {
+  return queryParams('images-edited') === 'generate';
+}
 
 /** A drawing in progress: what it writes to, and what the editor opened. */
 interface Drawing {
@@ -387,6 +395,15 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   // Free play has every tool; a level before it keeps the few that draw.
   const limitedTools = !editingOffered;
   // Character sets are sheets of frames; the editor paints one image.
+  // An image that is the student's own work (no prompt made its pixels)
+  // keeps the words that would replace it out of the way until Generate
+  // new image asks for them; the choice is per image.
+  const ownWork = !!chosenImage && !chosenImage.props.generation;
+  const [wordsAsked, setWordsAsked] = useState(false);
+  useEffect(() => {
+    setWordsAsked(false);
+  }, [chosenId]);
+  const ownWorkPane = ownWork && !wordsAsked && !editedKeepsWords();
   const drawOffered = !!kind && !chosenImage?.sheet && !drawing;
 
   const deleteOffered = !!editingOffered;
@@ -569,23 +586,42 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                   )
                 }
               />
-              <MakePane
-                parts={parts}
-                width={paneWidthPx}
-                replaces={!!chosenImage}
-                regenerate={!!chosenImage?.props.generation}
-                onDraw={
-                  drawOffered
-                    ? () =>
-                        startDrawing({
-                          key: chosenImage?.key ?? null,
-                          imageType: parts.draft.imageType,
-                          subject: parts.draft.subject,
-                        })
-                    : undefined
-                }
-                drawLabel={chosenImage ? 'Edit this image' : 'Draw my own'}
-              />
+              {ownWorkPane && chosenImage ? (
+                <OwnWorkPane
+                  width={paneWidthPx}
+                  edited={!!chosenImage.props.edited}
+                  disabled={parts.busy}
+                  onGenerate={() => setWordsAsked(true)}
+                  onDraw={
+                    drawOffered
+                      ? () =>
+                          startDrawing({
+                            key: chosenImage.key,
+                            imageType: parts.draft.imageType,
+                            subject: parts.draft.subject,
+                          })
+                      : undefined
+                  }
+                />
+              ) : (
+                <MakePane
+                  parts={parts}
+                  width={paneWidthPx}
+                  replaces={!!chosenImage}
+                  regenerate={!!chosenImage?.props.generation}
+                  onDraw={
+                    drawOffered
+                      ? () =>
+                          startDrawing({
+                            key: chosenImage?.key ?? null,
+                            imageType: parts.draft.imageType,
+                            subject: parts.draft.subject,
+                          })
+                      : undefined
+                  }
+                  drawLabel={chosenImage ? 'Edit this image' : 'Draw my own'}
+                />
+              )}
             </>
           )}
         />
