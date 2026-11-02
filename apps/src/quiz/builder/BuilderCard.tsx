@@ -2,7 +2,7 @@ import Alert from '@code-dot-org/component-library/alert';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button, IconButton, Tooltip, Typography} from '@mui/material';
 import classNames from 'classnames';
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useEffect, useRef} from 'react';
 
 import UnsavedBadge from './UnsavedBadge';
 
@@ -26,7 +26,7 @@ export interface BuilderCardProps {
   onRemove: () => void;
   // When set, Remove looks disabled but stays focusable to show this tooltip.
   cannotRemoveReason?: string;
-  // A question inside a page: tighter corners, a clamped name, and a trash button while collapsed.
+  // A question inside a page: tighter corners and a clamped name.
   nested?: boolean;
   neverSaved?: boolean;
   children: React.ReactNode;
@@ -54,7 +54,6 @@ const BuilderCard: React.FunctionComponent<BuilderCardProps> = ({
   const isBusy = isSaving || isRemoving;
   const toggleButtonRef = useRef<HTMLButtonElement>(null);
   const wasExpanded = useRef(isExpanded);
-  const [hoverSuppressed, setHoverSuppressed] = useState(false);
 
   // Collapsing after a save unmounts the focused Save button.
   useEffect(() => {
@@ -64,22 +63,13 @@ const BuilderCard: React.FunctionComponent<BuilderCardProps> = ({
     if (wasExpanded.current && !isExpanded && focusLost) {
       toggleButtonRef.current?.focus();
     }
-    // The pointer is still over the card, so the trash would reappear under it.
-    if (wasExpanded.current && !isExpanded) {
-      setHoverSuppressed(true);
-    }
     wasExpanded.current = isExpanded;
   }, [isExpanded]);
 
   return (
     <div
-      className={classNames(
-        styles.card,
-        nested && styles.cardNested,
-        hoverSuppressed && styles.hoverSuppressed
-      )}
+      className={classNames(styles.card, nested && styles.cardNested)}
       data-dirty={isDirty || undefined}
-      onPointerLeave={() => setHoverSuppressed(false)}
     >
       <div className={classNames(rowStyles.header, styles.header)}>
         <div className={styles.leading}>
@@ -112,28 +102,6 @@ const BuilderCard: React.FunctionComponent<BuilderCardProps> = ({
           </div>
         </div>
         <div className={rowStyles.actions}>
-          {nested && !isExpanded && (
-            <span className={styles.hoverAction}>
-              <Tooltip
-                title={neverSaved ? 'Discard question' : 'Remove from quiz'}
-              >
-                <IconButton
-                  aria-label={
-                    neverSaved ? 'Discard question' : 'Remove from quiz'
-                  }
-                  size="extraSmall"
-                  variant="text"
-                  color="error"
-                  type="button"
-                  disabled={isBusy}
-                  loading={isRemoving}
-                  onClick={onRemove}
-                >
-                  <FontAwesomeV6Icon iconName="trash" />
-                </IconButton>
-              </Tooltip>
-            </span>
-          )}
           {isDirty && <UnsavedBadge label="Unsaved changes" />}
           <IconButton
             ref={toggleButtonRef}

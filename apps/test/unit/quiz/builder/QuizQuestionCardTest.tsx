@@ -229,18 +229,6 @@ describe('QuizQuestionCard', () => {
     expect(onRemove).toHaveBeenCalledWith(7);
   });
 
-  it('removes from the collapsed row without expanding', async () => {
-    const {onRemove} = renderCard();
-
-    await act(async () => {
-      fireEvent.click(
-        screen.getByRole('button', {name: 'Remove from quiz', hidden: true})
-      );
-    });
-    expect(onRemove).toHaveBeenCalledWith(7);
-    expect(screen.queryByRole('tab', {name: 'Question'})).toBeNull();
-  });
-
   describe('a pending (not yet saved) question', () => {
     const PENDING_QUESTION: QuizBuilderQuestion = {
       ...MULTIPLE_CHOICE_QUESTION,
@@ -282,18 +270,6 @@ describe('QuizQuestionCard', () => {
         fireEvent.click(screen.getByRole('button', {name: 'Discard'}));
       });
       expect(onRemove).toHaveBeenCalledWith(-1);
-    });
-
-    it('discards from the collapsed row without expanding', async () => {
-      const {onRemove} = renderCard({question: PENDING_QUESTION});
-
-      await act(async () => {
-        fireEvent.click(
-          screen.getByRole('button', {name: 'Discard question', hidden: true})
-        );
-      });
-      expect(onRemove).toHaveBeenCalledWith(-1);
-      expect(screen.queryByRole('tab', {name: 'Question'})).toBeNull();
     });
   });
 

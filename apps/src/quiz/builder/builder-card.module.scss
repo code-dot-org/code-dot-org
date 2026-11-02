@@ -40,16 +40,6 @@
   text-overflow: ellipsis;
 }
 
-.hoverAction {
-  display: none;
-}
-
-.card:hover:not(.hoverSuppressed) .hoverAction,
-.card:not(.hoverSuppressed):has(.header :focus-visible) .hoverAction,
-.hoverAction:focus-within {
-  display: flex;
-}
-
 .saveError {
   padding: 8px 10px 10px;
   background: var(--background-neutral-primary);
