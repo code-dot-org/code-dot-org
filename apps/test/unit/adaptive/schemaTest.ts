@@ -242,6 +242,22 @@ describe('parsePathway', () => {
     expect(problemsOf(raw)).toHaveLength(1);
   });
 
+  it('accepts a markdown step with its own button label', () => {
+    const raw = served();
+    raw.checkpoints[0].steps.push({
+      id: 'card',
+      title: 'Card',
+      kind: 'markdown',
+      markdown: '## Welcome\n\nA note.',
+      continueLabel: 'Start',
+    });
+    expect(problemsOf(raw)).toEqual([]);
+    expect(parsePathway(raw).checkpoints[0].steps.at(-1)).toMatchObject({
+      kind: 'markdown',
+      continueLabel: 'Start',
+    });
+  });
+
   it('accepts a video step with resolved URLs', () => {
     const raw = served();
     const watch = raw.checkpoints[0].steps[2];
@@ -445,6 +461,59 @@ describe('findReferenceProblems', () => {
     expect(problemsOf(raw)).toEqual([
       "checkpoints: question id '1' is used more than once",
     ]);
+  });
+
+  describe('showIf', () => {
+    // A survey question in the intro, followed by the step under test.
+    const branched = (showIf: {
+      stepId: string;
+      questionId: number;
+      choiceId: string;
+    }): Raw => {
+      const raw = served();
+      const question = questionOf(raw);
+      if (question.type !== 'MultipleChoiceQuestion') throw new Error();
+      delete question.correctChoiceId;
+      raw.checkpoints[0].steps.push({...panels('branch'), showIf});
+      return raw;
+    };
+    const where = 'checkpoints.intro.steps.branch.showIf';
+
+    it('accepts a condition on an earlier choice', () => {
+      expect(
+        problemsOf(branched({stepId: 'quiz', questionId: 1, choiceId: 'b'}))
+      ).toEqual([]);
+    });
+
+    it('flags a step that is not earlier in the checkpoint', () => {
+      expect(
+        problemsOf(
+          branched({stepId: 'css-intro', questionId: 1, choiceId: 'a'})
+        )
+      ).toEqual([
+        `${where}: 'css-intro' is not an earlier step in the checkpoint`,
+      ]);
+      expect(
+        problemsOf(branched({stepId: 'branch', questionId: 1, choiceId: 'a'}))
+      ).toEqual([
+        `${where}: 'branch' is not an earlier step in the checkpoint`,
+      ]);
+    });
+
+    it('flags a step with no questions and a question it does not have', () => {
+      expect(
+        problemsOf(branched({stepId: 'welcome', questionId: 1, choiceId: 'a'}))
+      ).toEqual([`${where}: 'welcome' is not a questions step`]);
+      expect(
+        problemsOf(branched({stepId: 'quiz', questionId: 7, choiceId: 'a'}))
+      ).toEqual([`${where}: 'quiz' has no multiple choice question 7`]);
+    });
+
+    it('flags a choice the question lacks', () => {
+      expect(
+        problemsOf(branched({stepId: 'quiz', questionId: 1, choiceId: 'z'}))
+      ).toEqual([`${where}: 'z' is not one of question 1's choices`]);
+    });
   });
 
   it('flags a choice id used twice in one question, once', () => {

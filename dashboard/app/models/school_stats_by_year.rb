@@ -97,7 +97,7 @@ class SchoolStatsByYear < ApplicationRecord
     STATUS_REOPENED = '8-Reopened'.freeze
   ].freeze
 
-  self.primary_keys = :school_id, :school_year
+  self.primary_key = [:school_id, :school_year]
 
   belongs_to :school, optional: true
 
@@ -117,7 +117,7 @@ class SchoolStatsByYear < ApplicationRecord
     ActiveRecord::Base.transaction do
       CSV.read(filename, **options).each do |row|
         parsed = yield row
-        loaded = find_by(primary_keys.map(&:to_sym).index_with {|k| parsed[k]})
+        loaded = find_by(primary_key.map(&:to_sym).index_with {|k| parsed[k]})
         if loaded.nil?
           begin
             SchoolStatsByYear.new(parsed).save!

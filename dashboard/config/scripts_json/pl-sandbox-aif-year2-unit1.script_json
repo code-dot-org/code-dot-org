@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-10-29 15:34:01 UTC",
+    "serialized_at": "2026-10-30 14:58:16 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -339,7 +339,8 @@
       "key": "60fcf5d5-59cd-4a3c-814c-ecfec8d553b4",
       "position": 1,
       "properties": {
-        "name": "Debugging Intelligent Systems"
+        "name": "Debugging Intelligent Systems",
+        "progression_name": "Debugging Intelligent Systems"
       },
       "seeding_key": {
         "activity_section.key": "60fcf5d5-59cd-4a3c-814c-ecfec8d553b4",
@@ -350,7 +351,8 @@
       "key": "7f8463db-8525-4fd6-9f55-214178558c53",
       "position": 2,
       "properties": {
-        "name": "Systems Autocomplete"
+        "name": "Systems Autocomplete",
+        "progression_name": "Systems Autocomplete"
       },
       "seeding_key": {
         "activity_section.key": "7f8463db-8525-4fd6-9f55-214178558c53",
@@ -361,7 +363,8 @@
       "key": "8cbe802c-b59c-41cd-856a-0ae87809f9e2",
       "position": 3,
       "properties": {
-        "name": "Decision trees "
+        "name": "Decision trees ",
+        "progression_name": "Decision Trees"
       },
       "seeding_key": {
         "activity_section.key": "8cbe802c-b59c-41cd-856a-0ae87809f9e2",
@@ -372,7 +375,8 @@
       "key": "77e94300-8d26-4768-a46e-533387cf7bba",
       "position": 4,
       "properties": {
-        "name": "Limits of logic-based AI"
+        "name": "Limits of logic-based AI",
+        "progression_name": "Limits of Logic-Based AI"
       },
       "seeding_key": {
         "activity_section.key": "77e94300-8d26-4768-a46e-533387cf7bba",
@@ -1382,6 +1386,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Debugging Intelligent Systems"
       },
       "bonus": false,
       "seeding_key": {
@@ -1403,6 +1408,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Debugging Intelligent Systems"
       },
       "bonus": false,
       "seeding_key": {
@@ -1424,6 +1430,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "Debugging Intelligent Systems"
       },
       "bonus": false,
       "seeding_key": {
@@ -1445,6 +1452,7 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "progression": "Debugging Intelligent Systems"
       },
       "bonus": false,
       "seeding_key": {
@@ -1466,6 +1474,7 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "progression": "Debugging Intelligent Systems"
       },
       "bonus": false,
       "seeding_key": {
@@ -1487,6 +1496,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Systems Autocomplete"
       },
       "bonus": false,
       "seeding_key": {
@@ -1508,6 +1518,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Decision Trees"
       },
       "bonus": false,
       "seeding_key": {
@@ -1529,6 +1540,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Decision Trees"
       },
       "bonus": false,
       "seeding_key": {
@@ -1550,6 +1562,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "Decision Trees"
       },
       "bonus": false,
       "seeding_key": {
@@ -1571,6 +1584,7 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "progression": "Decision Trees"
       },
       "bonus": false,
       "seeding_key": {
@@ -1592,6 +1606,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Limits of Logic-Based AI"
       },
       "bonus": false,
       "seeding_key": {
@@ -1613,6 +1628,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Limits of Logic-Based AI"
       },
       "bonus": false,
       "seeding_key": {

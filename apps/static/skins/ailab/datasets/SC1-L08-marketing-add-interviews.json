@@ -1,0 +1,57 @@
+{
+  "name": "SC1-L08-marketing-add-interviews",
+  "card": {
+    "description": "Video clips a movie studio posted online, described by what kind of clip each one is and what is in it. Each clip is labeled Hit if it got a high like ratio after it was posted, or Meh if it did not. This version adds four more interviews with famous actors.",
+    "source": "Created for AI Discoveries, Lesson 8",
+    "lastUpdated": "2026",
+    "context": {
+      "createdBy": "Code.org AI Discoveries",
+      "potentialUses": "Train a model that predicts whether a new clip will be a hit before the marketing team posts it.",
+      "potentialMisuses": "These labels show how past clips did, not how new kinds of clips will do. Be careful trusting this model for clips that are very different from the ones in this data."
+    }
+  },
+  "defaultLabelColumn": "Result",
+  "defaultIdColumn": "Clip",
+  "fields": [
+    {
+      "type": "categorical",
+      "id": "Clip",
+      "description": "A short description of a video clip the studio posted."
+    },
+    {
+      "type": "categorical",
+      "id": "Clip Type",
+      "description": "What kind of clip it is. (Trailer, Blooper, Interview, or Behind the Scenes)"
+    },
+    {
+      "type": "categorical",
+      "id": "Length",
+      "description": "Is the clip short or long? (Short or Long)"
+    },
+    {
+      "type": "categorical",
+      "id": "Famous Actor",
+      "description": "Is a famous actor in the clip? (Yes or No)"
+    },
+    {
+      "type": "categorical",
+      "id": "Funny",
+      "description": "Is the clip meant to be funny? (Yes or No)"
+    },
+    {
+      "type": "categorical",
+      "id": "Has Music",
+      "description": "Does the clip have music playing? (Yes or No)"
+    },
+    {
+      "type": "categorical",
+      "id": "Posted on Weekend",
+      "description": "Was the clip posted on a Saturday or Sunday? (Yes or No)"
+    },
+    {
+      "type": "categorical",
+      "id": "Result",
+      "description": "Did the clip get a high like ratio after it was posted? (Hit or Meh)"
+    }
+  ]
+}

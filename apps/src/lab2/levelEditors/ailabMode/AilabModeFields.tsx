@@ -50,6 +50,10 @@ interface AilabModeFieldsProps {
 const BOOLEAN_FIELDS: {key: BooleanModeKey; label: string}[] = [
   {key: 'hideSave', label: 'Hide the save model step'},
   {
+    key: 'defaultCardView',
+    label: 'Show the dataset as cards instead of a table by default',
+  },
+  {
     key: 'hideColumnClicking',
     label: 'Disable clicking and highlighting columns in the data table',
   },

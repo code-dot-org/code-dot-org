@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "published": true,
   "game_id": 64,
-  "created_at": "2026-10-28T00:00:00.000Z",
+  "created_at": "2026-10-30T09:28:03.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -117,7 +117,7 @@
       "title": "**Collected?**",
       "items": [
         {
-          "text": "Drag **burst**, **play sound**, **say** or **set zoom** onto the dotted outline under **when touches**.",
+          "text": "Choose a block to drag into the dotted outline under **when touches**.",
           "check": {
             "kind": "block",
             "type": [
@@ -130,7 +130,7 @@
           }
         },
         {
-          "text": "Click **Play** and collect the treasure.",
+          "text": "Click Play, then run and jump to your object.",
           "check": {
             "kind": "reach",
             "role": "treasure"
@@ -138,8 +138,36 @@
         }
       ]
     },
-    "long_instructions": "# Collected?\nDrag **burst**, **play sound**, **say** or **set zoom** onto the dotted outline under **when touches**. Then click **Play** and collect the treasure.",
-    "header_label": "Collected?"
+    "long_instructions": "# Collected?\r\nWhen your player **touches** your object, something can happen. \r\n\r\nThis is called an **event**.",
+    "header_label": "Collected?",
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "use_modal_function_editor": "false",
+    "disable_if_else_editing": "false",
+    "include_shared_functions": "false",
+    "free_play": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "validation_enabled": "false",
+    "hide_animation_mode": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "use_default_sprites": "false",
+    "mini_toolbox": "false",
+    "hide_pause_button": "false",
+    "enable_big_playspace": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-01 17:17:28 +0000\",\"changed\":[\"objectives\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-01 17:17:30 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-01 17:17:31 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
+  "level_concept_difficulty": {
   }
 }]]></config>
+  <blocks/>
 </GamelabJr>
