@@ -3,6 +3,7 @@ import {formatChoiceLetter} from '@cdo/apps/quiz/utils';
 
 import {
   MarkedPair,
+  MatchPair,
   MatchPairs,
   MatchSets,
   MatchSide,
@@ -23,7 +24,7 @@ export function itemsInColumn(
 // each item has at most one partner.
 export function pairTogether(
   pairs: MatchPairs,
-  [startId, endId]: [string, string]
+  [startId, endId]: MatchPair
 ): MatchPairs {
   return [
     ...pairs.filter(([start, end]) => start !== startId && end !== endId),
@@ -50,7 +51,7 @@ export function findPartner(pairs: MatchPairs, id: string): string | undefined {
 
 export function pairStatus(
   correctPairs: MatchPairs,
-  [a, b]: [string, string]
+  [a, b]: MatchPair
 ): PairStatus {
   return correctPairs.some(pair => pair.includes(a) && pair.includes(b))
     ? 'correct'
