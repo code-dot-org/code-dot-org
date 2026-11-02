@@ -25,6 +25,14 @@ jest.mock('@cdo/apps/lab2/redux/lab2ProjectReduxThunks', () => ({
   setAndSaveSource: (...args: unknown[]) => mockSetAndSaveSource(...args),
 }));
 
+// Unique per test: earlier tests' managers still listen for window messages.
+let mockRunId = '';
+let runCount = 0;
+jest.mock('@cdo/apps/utils', () => ({
+  ...jest.requireActual('@cdo/apps/utils'),
+  createUuid: () => mockRunId,
+}));
+
 jest.mock('@cdo/apps/lab2/Lab2Registry', () => ({
   getInstance: () => ({
     getMetricsReporter: () => ({
@@ -147,21 +155,41 @@ describe('pyodideSandboxManager', () => {
     const sendUpdatedSource = () =>
       window.dispatchEvent(
         new MessageEvent('message', {
-          data: {type: 'updated_source', message: {files: {}}, id: '1'},
+          data: {type: 'updated_source', message: {files: {}}, id: mockRunId},
           origin: SANDBOX_ORIGIN,
         })
       );
-    it('saves the source the program left behind', () => {
-      loadManager();
+
+    // Registers a run as the Run button does, once the sandbox is ready.
+    const startRun = async () => {
+      mockRunId = `run-${++runCount}`;
+      const manager = loadManager();
+      sendSandboxReady();
+      manager.asyncRun('print(1)', {files: {}, folders: {}});
+      await Promise.resolve();
+      return manager;
+    };
+
+    it('saves the source a running program left behind', async () => {
+      await startRun();
 
       sendUpdatedSource();
 
       expect(mockSetAndSaveSource).toHaveBeenCalled();
     });
 
-    it('does not save while an AI Tutor version is under review', () => {
-      loadManager();
+    it('does not save while an AI Tutor version is under review', async () => {
+      await startRun();
       mockViewingAiTutorVersion = true;
+
+      sendUpdatedSource();
+
+      expect(mockSetAndSaveSource).not.toHaveBeenCalled();
+    });
+
+    it('does not save the source of a run that was stopped', async () => {
+      const manager = await startRun();
+      manager.restartPyodideIfProgramIsRunning();
 
       sendUpdatedSource();
 

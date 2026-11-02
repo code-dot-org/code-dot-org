@@ -11,7 +11,10 @@ import lab from '@cdo/apps/lab2/lab2Redux';
 import lab2Project, {
   setViewingAiTutorVersion,
 } from '@cdo/apps/lab2/redux/lab2ProjectRedux';
-import lab2System from '@cdo/apps/lab2/redux/systemRedux';
+import lab2System, {
+  setIsRunning,
+  setIsValidating,
+} from '@cdo/apps/lab2/redux/systemRedux';
 import {LevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
 import {PythonlabView} from '@cdo/apps/pythonlab';
 import {STANDALONE_NEIGHBORHOOD_PROJECT} from '@cdo/apps/pythonlab/constants';
@@ -129,18 +132,29 @@ describe('PythonLabView', () => {
     expect(props.enableUserAddedSelectionContext).toBe(false);
   });
 
-  it('stops a running program when an AI Tutor review starts or ends', () => {
+  it('stops a running program when an AI Tutor review starts', () => {
+    renderDefault(defaultLevelProperties, undefined);
+    jest.mocked(restartPyodideIfProgramIsRunning).mockClear();
+    store.dispatch(setIsRunning(true));
+    store.dispatch(setIsValidating(true));
+
+    act(() => {
+      store.dispatch(setViewingAiTutorVersion(true));
+    });
+
+    expect(restartPyodideIfProgramIsRunning).toHaveBeenCalledTimes(1);
+    expect(store.getState().lab2System.isRunning).toBe(false);
+    expect(store.getState().lab2System.isValidating).toBe(false);
+  });
+
+  it('does nothing when no program is running as a review starts', () => {
     renderDefault(defaultLevelProperties, undefined);
     jest.mocked(restartPyodideIfProgramIsRunning).mockClear();
 
     act(() => {
       store.dispatch(setViewingAiTutorVersion(true));
     });
-    expect(restartPyodideIfProgramIsRunning).toHaveBeenCalledTimes(1);
 
-    act(() => {
-      store.dispatch(setViewingAiTutorVersion(false));
-    });
-    expect(restartPyodideIfProgramIsRunning).toHaveBeenCalledTimes(2);
+    expect(restartPyodideIfProgramIsRunning).not.toHaveBeenCalled();
   });
 });

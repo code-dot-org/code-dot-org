@@ -1,6 +1,8 @@
 import {renderHook} from '@testing-library/react-hooks';
 
 import {useSharedAiTutorResponseSchemaSettings} from '@cdo/apps/aiTutor/hooks/useSharedAiTutorResponseSchemaSettings';
+import {setProjectSourceBeforeAiTutorVersion} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
+import {MultiFileSource} from '@cdo/apps/lab2/types';
 import * as pythonlab from '@cdo/apps/pythonlab/helpers/aiTutorStructuredResponseHelper';
 import * as weblab2 from '@cdo/apps/weblab2/helpers/aiTutorStructuredResponseHelper';
 
@@ -102,6 +104,38 @@ describe('useSharedAiTutorResponseSchemaSettings', () => {
     expect(dispatched).toContain('lab2Project/setViewingAiTutorVersion');
     expect(dispatched).toContain('lab2Project/setSource');
     expect(mockOnAiTutorVersionLoaded).toHaveBeenCalledTimes(1);
+  });
+
+  it('onResponse merges with the project as it is when the answer arrives', () => {
+    const {result, rerender} = renderHook(
+      ({src}) =>
+        useSharedAiTutorResponseSchemaSettings({
+          ...weblab2Options(),
+          source: src as MultiFileSource,
+        }),
+      {initialProps: {src: source}}
+    );
+    const onResponseAtSend = result.current.onResponse!;
+    const editedSource = {
+      ...source,
+      files: {
+        ...source.files,
+        '2': {
+          id: '2',
+          name: 'notes.txt',
+          contents: 'added later',
+          folderId: '0',
+        },
+      },
+    };
+    rerender({src: editedSource});
+
+    onResponseAtSend(acceptRejectResponse);
+
+    const dispatched = mockDispatch.mock.calls.map(([action]) => action);
+    expect(dispatched).toContainEqual(
+      setProjectSourceBeforeAiTutorVersion(editedSource)
+    );
   });
 
   it('onResponse ignores a response with no code to review', () => {

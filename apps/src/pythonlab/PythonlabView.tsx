@@ -17,6 +17,7 @@ import TestResultValidator from '@cdo/apps/lab2/progress/TestResultValidator';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {changeProjectType} from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
 import {submitPredictResponse} from '@cdo/apps/lab2/redux/predictLevelRedux';
+import {setIsRunning, setIsValidating} from '@cdo/apps/lab2/redux/systemRedux';
 import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import pythonlabI18n from '@cdo/apps/pythonlab/locale';
@@ -24,6 +25,7 @@ import {
   restartPyodideIfProgramIsRunning,
   sendInput,
 } from '@cdo/apps/pythonlab/pyodideManager';
+import {getStore} from '@cdo/apps/redux';
 import {
   AppDispatch,
   useAppDispatch,
@@ -206,10 +208,15 @@ const PythonlabView: React.FunctionComponent<
   );
 
   // A run that spans the start or end of an AI Tutor review would save the
-  // wrong code when it finishes.
+  // wrong code when it finishes, so stop it as the Stop button does.
   useEffect(() => {
-    restartPyodideIfProgramIsRunning();
-  }, [isAiTutorVersion]);
+    const {isRunning, isValidating} = getStore().getState().lab2System;
+    if (isRunning || isValidating) {
+      stopPythonCode();
+      dispatch(setIsRunning(false));
+      dispatch(setIsValidating(false));
+    }
+  }, [dispatch, isAiTutorVersion]);
 
   useEffect(() => {
     if (isAiTutorVisible) {
