@@ -426,7 +426,7 @@ namespace :seed do
   # It is a separate task name rather than reusing :callouts because rake runs a
   # task once per process, at the first position it appears in: when development
   # seeds both lists, reusing :callouts here would deduplicate to its earlier
-  # FULL_SEED_TASKS position, ahead of the units.
+  # PRODUCTION_SEED_TASKS position, ahead of the units.
   timed_task_with_logging callouts_ui_tests: :environment do
     Callout.seed_all
   end
@@ -594,7 +594,7 @@ namespace :seed do
     AiRubricConfig.validate_ai_config
   end
 
-  FULL_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts, :json_videos, :practice_problems, :courses, :reference_guides, :data_docs, :jit_pl_concepts, :callouts, :school_districts, :schools, :census_summaries, :secret_words, :secret_pictures, :foorms, :datablock_storage, :validate_ai_rubrics].freeze
+  PRODUCTION_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts, :json_videos, :practice_problems, :courses, :reference_guides, :data_docs, :jit_pl_concepts, :callouts, :school_districts, :schools, :census_summaries, :secret_words, :secret_pictures, :foorms, :datablock_storage, :validate_ai_rubrics].freeze
   UI_TEST_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts_ui_tests, :courses_ui_tests, :jit_pl_concepts, :reseed_scripts_ui_tests, :json_videos_ui_tests, :callouts_ui_tests, :school_districts, :schools, :secret_words, :secret_pictures, :datablock_storage].freeze
   ADHOC_SEED_TASKS = [:check_migrations, :videos, :concepts, :course_offerings_adhoc, :scripts_adhoc, :courses_adhoc, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :datablock_storage].freeze
 
@@ -607,14 +607,14 @@ namespace :seed do
     case rack_env
     when :test then UI_TEST_SEED_TASKS
     when :adhoc then ADHOC_SEED_TASKS
-    when :development then FULL_SEED_TASKS + UI_TEST_SEED_TASKS
-    else FULL_SEED_TASKS
+    when :development then PRODUCTION_SEED_TASKS + UI_TEST_SEED_TASKS
+    else PRODUCTION_SEED_TASKS
     end
 
   desc "seed the data needed for this type of environment by default"
   timed_task_with_logging default: DEFAULT_SEED_TASKS
-  desc "seed all dashboard data"
-  timed_task_with_logging all: FULL_SEED_TASKS
+  desc "seed production curriculum content, and everything else production seeds"
+  timed_task_with_logging production: PRODUCTION_SEED_TASKS
   timed_task_with_logging ui_test: UI_TEST_SEED_TASKS
 
   desc "seed only dashboard data required for tests"

@@ -61,8 +61,8 @@ use_my_studio: true
 #lazy_load_i18n: true
 
 
-# Whether to skip the slow `rake seed:all` command during `rake build`.
-# Until you manually run `rake seed:all` or disable this flag, you won't
+# Whether to skip the slow `rake seed:default` command during `rake build`.
+# Until you manually run `rake seed:default` or disable this flag, you won't
 # see changes to: videos, concepts, levels, scripts, trophies, prize providers,
 # callouts, hints, secret words, or secret pictures.
 #skip_seed_all: true

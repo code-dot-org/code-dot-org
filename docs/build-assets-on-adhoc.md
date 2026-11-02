@@ -34,7 +34,7 @@
     - Migrate database `bundle exec rake db:setup_or_migrate`
       - `dashboard/lib/tasks/setup_or_migrate.rake`
     - Update schema cache file (only on non-prod environments) `bundle exec rake db:schema:cache:dump` and `bundle exec rake db:round_trip_schema_cache`
-    - Seed dashboard `bundle exec rake seed:all`
+    - Seed dashboard `bundle exec rake seed:default`
       - `dashboard/lib/tasks/seed.rake`
       - Can skip this on development env by setting `skip_seed_all: true` in locals.yml
     - Clean dashboard asset `bunlde exec rake assets:clean`
@@ -94,4 +94,4 @@
   - Go to `dashboard/lib/tasks/seed.rake` to see how that table is seeded. It could be seeded from a CSV or S3.
   - Edit the seed CSV file to remove conflicting rows. Make a backup of the file first.
 - Option 2: Skip seeding
-  - Edit `lib/rake/build.rake` -> task dashboard -> comment out `seed:all` call
+  - Edit `lib/rake/build.rake` -> task dashboard -> comment out `seed:default` call
