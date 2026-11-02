@@ -43,9 +43,9 @@
 
 .sentence {
   margin: 0;
-  min-height: 48px;
-  font-size: 22px;
-  line-height: 2;
+  min-height: 44px;
+  font-size: 16px;
+  line-height: 1.5;
   color: var(--text-neutral-primary);
 }
 
@@ -115,9 +115,11 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  margin: 0 2px;
-  padding: 3px 24px 3px 4px;
+  // The vertical margin is the room between the sentence's lines.
+  margin: 6px 2px;
+  padding: 4px 26px 4px 6px;
   border-radius: 999px;
+  font-weight: 600;
   line-height: 1.4;
   background-color: var(--hue);
   color: var(--hue-text);
@@ -237,12 +239,6 @@ button.chipWord {
 }
 
 @media (max-height: 800px) {
-  .sentence {
-    min-height: 40px;
-    font-size: 19px;
-    line-height: 1.9;
-  }
-
   .carouselBox {
     gap: 0;
     padding: 4px 4px 6px;
@@ -288,7 +284,7 @@ button.chipWord {
 }
 
 .cluster {
-  padding: 10px 0;
+  padding: 14px 0;
 
   & + & {
     border-top: 1px solid var(--border-neutral-secondary);
@@ -386,7 +382,7 @@ button.chipWord {
   align-items: center;
   gap: 8px;
   margin: 0;
-  min-height: 44px;
+  min-height: 40px;
   // Its own stacking context: the browser paints a drag ghost from the
   // dragged element's nearest stacking context, clipped to the element's
   // box, so without this the ghost carries the word box's white corners.
@@ -397,8 +393,8 @@ button.chipWord {
   background: var(--background-neutral-primary);
   color: var(--text-neutral-primary);
   font: inherit;
-  font-size: 17px;
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 600;
   padding: 4px 16px 4px 10px;
   cursor: grab;
   transition:
@@ -436,11 +432,10 @@ button.chipWord {
   }
 }
 
-// Outranks the hover above: the picked word in its slot's color.
+// Outranks the hover above: the picked word is dimmed in the list, as if
+// used up, though a press still takes it back out of the sentence.
 .word.chosen {
-  border-color: var(--hue-line);
-  background-color: var(--hue);
-  color: var(--hue-text);
+  opacity: 0.4;
 }
 
 @media (prefers-reduced-motion: reduce) {

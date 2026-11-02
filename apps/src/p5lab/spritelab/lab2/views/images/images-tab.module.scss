@@ -442,8 +442,6 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
 .drawButton.drawButton {
   border-color: var(--border-neutral-secondary);
   color: var(--text-neutral-secondary);
-  font-size: 13px;
-  font-weight: 500;
 
   &:hover {
     border-color: var(--text-neutral-primary);
@@ -558,7 +556,7 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
 // The pane's first row: the headline, and the way behind the scenes.
 .paneHeader {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   gap: 8px;
 }
