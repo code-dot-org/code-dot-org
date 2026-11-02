@@ -183,14 +183,15 @@ button.chipWord {
 }
 
 // Where the word from the set on show would land.
+// The blank: a dashed white outline over a lighter wash of the panel.
 .placeholder {
   min-width: 80px;
   min-height: 1.5em;
   padding-right: 14px;
-  background: transparent;
-  border: 2px dashed var(--borders-neutral-primary);
+  background: var(--neutral-white-alpha-20);
+  border: 2px dashed var(--neutral-base-white);
   box-shadow: none;
-  opacity: 0.8;
+  opacity: 0.9;
   animation: slot-pulse 1.6s ease-in-out infinite;
 }
 
