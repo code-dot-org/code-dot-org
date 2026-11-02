@@ -101,6 +101,80 @@
                   }
                 }
               }
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_setPrompt",
+              "inputs": {
+                "QUESTION": {
+                  "shadow": {
+                    "type": "text",
+                    "fields": {
+                      "TEXT": ""
+                    }
+                  }
+                },
+                "VAR": {
+                  "block": {
+                    "type": "variables_get",
+                    "movable": false,
+                    "fields": {
+                      "VAR": {
+                        "name": "answer"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_setPromptWithChoices",
+              "inputs": {
+                "QUESTION": {
+                  "shadow": {
+                    "type": "text",
+                    "fields": {
+                      "TEXT": ""
+                    }
+                  }
+                },
+                "VAR": {
+                  "block": {
+                    "type": "variables_get",
+                    "movable": false,
+                    "fields": {
+                      "VAR": {
+                        "name": "answer"
+                      }
+                    }
+                  }
+                },
+                "A": {
+                  "shadow": {
+                    "type": "text",
+                    "fields": {
+                      "TEXT": "choice 1"
+                    }
+                  }
+                },
+                "B": {
+                  "shadow": {
+                    "type": "text",
+                    "fields": {
+                      "TEXT": "choice 2"
+                    }
+                  }
+                },
+                "C": {
+                  "shadow": {
+                    "type": "text",
+                    "fields": {
+                      "TEXT": "choice 3"
+                    }
+                  }
+                }
+              }
             }
           ]
         },
@@ -258,6 +332,28 @@
                   }
                 }
               }
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_setProp",
+              "fields": {
+                "PROPERTY": "\"scale\""
+              },
+              "inputs": {
+                "SPRITE": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation"
+                  }
+                },
+                "VAL": {
+                  "shadow": {
+                    "type": "math_number",
+                    "fields": {
+                      "NUM": 100
+                    }
+                  }
+                }
+              }
             }
           ]
         },
@@ -305,6 +401,23 @@
                     "type": "math_number",
                     "fields": {
                       "NUM": 3
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_whenPromptAnswered",
+              "inputs": {
+                "VAR": {
+                  "block": {
+                    "type": "variables_get",
+                    "movable": false,
+                    "fields": {
+                      "VAR": {
+                        "name": "answer"
+                      }
                     }
                   }
                 }

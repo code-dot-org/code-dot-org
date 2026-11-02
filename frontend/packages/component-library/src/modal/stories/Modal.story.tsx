@@ -1,8 +1,7 @@
+import {Button} from '@mui/material';
 import {Meta, StoryFn} from '@storybook/react-vite';
 import {useState} from 'react';
 import {expect, userEvent, within} from 'storybook/test';
-
-import {Button} from '@/button';
 
 import Modal, {ModalProps} from './../index';
 
@@ -19,7 +18,9 @@ const SingleTemplate: StoryFn<ModalProps> = args => {
 
   return (
     <div>
-      <Button onClick={() => setIsOpen(true)} text="Open Modal" />
+      <Button variant="contained" onClick={() => setIsOpen(true)}>
+        Open Modal
+      </Button>
       {isOpen && (
         <Modal
           {...args}
@@ -56,11 +57,13 @@ const MultipleTemplate: StoryFn<{
         {args.components?.map((componentArg, index) => (
           <div key={index}>
             <Button
+              variant="contained"
               onClick={() =>
                 setValues({...values, [`${index}${componentArg.title}`]: true})
               }
-              text={`Open ${componentArg.title}`}
-            />
+            >
+              {`Open ${componentArg.title}`}
+            </Button>
             {values[`${index}${componentArg.title}`] && (
               <Modal
                 {...componentArg}
@@ -253,7 +256,9 @@ ModalWithCustomBottomContent.args = {
     ' actions or information.',
   customBottomContent: (
     <div style={{textAlign: 'center'}}>
-      <Button text="Custom button" onClick={() => null} />
+      <Button variant="contained" onClick={() => null}>
+        Custom button
+      </Button>
     </div>
   ),
   primaryButtonProps: {

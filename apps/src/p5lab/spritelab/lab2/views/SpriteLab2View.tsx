@@ -1272,11 +1272,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   }, [dispatch, getCode, requestThumbnail]);
 
   const activePrompt = useAppSelector(state => state.spriteLab2.prompt);
-  const handlePromptAnswer = useCallback(
-    (variableName: string, value: string) =>
-      engineRef.current?.onPromptAnswer(variableName, value),
-    []
-  );
 
   // Debounce re-runs so we don't restart the program on every keystroke/drag.
   const runTimer = useRef<number>();
@@ -2066,6 +2061,16 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       if (isPointerClick(event)) {
         event.currentTarget.blur();
       } else {
+        playspaceRef.current?.focus({preventScroll: true});
+      }
+    },
+    []
+  );
+  // Same hand-off for the prompt, whose controls unmount once answered.
+  const handlePromptAnswer = useCallback(
+    (variableName: string, value: string, fromKeyboard: boolean) => {
+      engineRef.current?.onPromptAnswer(variableName, value);
+      if (fromKeyboard) {
         playspaceRef.current?.focus({preventScroll: true});
       }
     },
