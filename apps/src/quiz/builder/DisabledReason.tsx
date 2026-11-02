@@ -8,6 +8,7 @@ export const ariaDisabledProps = (reason?: string) =>
   reason
     ? {
         'aria-disabled': true,
+        'aria-description': reason,
         className: buttonClasses.disabled,
         // Also replaces ActionDropdown's toggle, so its menu stays shut.
         onClick: () => {},
