@@ -227,6 +227,8 @@ describe('ImagesTab', () => {
     );
     expect(screen.getByRole('button', {name: 'Sprite 2'})).toBeTruthy();
     expect(pressed()).toEqual(['Sprite 1']);
+  });
+
   it('leaves Animated on until the student turns it off, and keeps their choice', () => {
     propsByKey.k1 = {name: 'Sprite 1', categories: []};
     propsByKey.k2 = {name: 'Sprite 2', categories: []};
