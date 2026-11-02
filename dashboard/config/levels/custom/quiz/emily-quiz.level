@@ -1,0 +1,30 @@
+<Quiz>
+  <config><![CDATA[{
+  "game_id": 76,
+  "created_at": "2026-10-19T17:18:00.000Z",
+  "level_num": "custom",
+  "user_id": 10263,
+  "properties": {
+    "show_correctness": true,
+    "reveal_answer_explanation": true,
+    "purpose": "exam_simulation",
+    "allow_multiple_attempts": true,
+    "show_questions_after_submit": true,
+    "display_name": "Exam simulation mock-up ",
+    "show_intro_screen": true
+  },
+  "published": true,
+  "placements": [
+    {
+      "page": 1,
+      "position": 1,
+      "question_key": "723f115d-0bb5-469b-a01c-1d024ae5b730"
+    },
+    {
+      "page": 1,
+      "position": 2,
+      "question_key": "42147734-6425-4299-8724-133148b2f261"
+    }
+  ]
+}]]></config>
+</Quiz>

@@ -1,0 +1,13 @@
+name 'aif-y2-making-predictions-lesson12-level6-2026'
+display_name 'Predicting, Evaluating, and Iterating'
+description 'Choose the problem you are solving.'
+
+sublevels
+level 'aif-y2-making-predictions-lesson12-level6-choice1-2026'
+level 'aif-y2-making-predictions-lesson12-level6-choice2-2026'
+level 'aif-y2-making-predictions-lesson12-level6-choice3-2026'
+level 'aif-y2-making-predictions-lesson12-level6-choice4-2026'
+
+uses_lab2
+
+navigation_type 'next_level'

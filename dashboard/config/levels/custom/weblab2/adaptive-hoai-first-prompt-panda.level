@@ -10,17 +10,26 @@
         "1": {
           "id": "1",
           "name": "index.html",
-          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <title>Pandas</title>\n  </head>\n  <body>\n    <h1>Pandas</h1>\n    <p>Pandas are bears that live in the mountain forests of China.</p>\n    <p>They have black and white fur.</p>\n    <h2>Panda Facts</h2>\n    <ul>\n      <li>Pandas eat bamboo.</li>\n      <li>Pandas can eat for up to 14 hours a day.</li>\n      <li>Baby pandas are very small when they are born.</li>\n    </ul>\n    <button>Learn More</button>\n  </body>\n</html>\n",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <title>Pandas</title>\n    <link rel=\"stylesheet\" href=\"style.css\" />\n  </head>\n  <body>\n    <h1>Pandas</h1>\n    <p>Pandas are bears that live in the mountain forests of China.</p>\n    <p>They have black and white fur.</p>\n    <h2>Panda Facts</h2>\n    <ul>\n      <li>Pandas eat bamboo.</li>\n      <li>Pandas can eat for up to 14 hours a day.</li>\n      <li>Baby pandas are very small when they are born.</li>\n    </ul>\n    <button>Learn More</button>\n  </body>\n</html>\n",
           "folderId": "0",
           "active": true
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "contents": "",
+          "folderId": "0",
+          "active": false
         }
       },
       "openFiles": [
-        "1"
+        "1",
+        "2"
       ]
     },
     "hide_share_and_remix": true,
-    "long_instructions": "Someone named Sam wrote this prompt for a panda fan page:\n\n*“Make a website about pandas.”*\n\nRun the page to see what it built. Sam is not happy with it.\n\n*After run:*\n\nPick one thing you’d change. Then write a better prompt for Sam. Name the part you’re changing and add at least two details, like a color, a tone, or something pandas do."
+    "initial_view_mode": "preview",
+    "long_instructions": "Someone named Sam wrote this prompt for a panda fan page:\n\n*“Make a website about pandas.”*\n\nLook at the preview to see what it built. Sam is not happy with it.\n\n*Then:*\n\nPick one thing you’d change. Then write a better prompt for Sam. Name the part you’re changing and add at least two details, like a color, a tone, or something pandas do."
   },
   "published": true
 }]]></config>

@@ -23,9 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
     <Provider store={store}>
       <InitialSectionCreationInterstitial />
     </Provider>,
-    mountPoint,
-    {
-      legacyReactDomRender: true,
-    }
+    mountPoint
   );
 });

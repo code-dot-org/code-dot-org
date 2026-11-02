@@ -27,16 +27,12 @@ class TTSSafe < Redcarpet::Render::StripDown
   end
 end
 
-TTSSafeRenderer = Redcarpet::Markdown.new(TTSSafe)
-
-TTSSafeScrubber = Rails::Html::TargetScrubber.new
-TTSSafeScrubber.tags = ['xml']
-
 module TextToSpeech
   extend ActiveSupport::Concern
 
   TTS_BUCKET = 'cdo-tts'.freeze
   UPDATED_TTS_PATH_DCDO_KEY = 'updated_tts_path'.freeze
+  ACAPELA_GENERATION_DCDO_KEY = 'acapela_tts_generation'.freeze
 
   # Pull the VOICES out of the SharedConstants (updating the locale keys to
   # match the expectation of the I18n gem since these locale keys are using
@@ -59,6 +55,16 @@ module TextToSpeech
       tts_short_instructions_override
       tts_long_instructions_override
     )
+  end
+
+  def self.tts_safe_renderer
+    @@tts_safe_renderer ||= Redcarpet::Markdown.new(TTSSafe)
+  end
+
+  def self.tts_safe_scrubber
+    @@tts_safe_scrubber ||= Rails::Html::TargetScrubber.new.tap do |scrubber|
+      scrubber.tags = ['xml']
+    end
   end
 
   def self.locale_supported?(locale)
@@ -88,7 +94,13 @@ module TextToSpeech
     end
   end
 
+  # Each Acapela request is billed, so generation stays off unless DCDO enables it.
+  def self.acapela_enabled?
+    DCDO.get(ACAPELA_GENERATION_DCDO_KEY, false)
+  end
+
   def self.tts_upload_to_s3(text, key, name, filename, context = nil, locale: I18n.locale)
+    return unless TextToSpeech.acapela_enabled?
     return if text.blank?
     return if CDO.acapela_login.blank? || CDO.acapela_storage_app.blank? || CDO.acapela_storage_password.blank?
     return if AWS::S3.cached_exists_in_bucket?(TTS_BUCKET, filename)
@@ -128,8 +140,8 @@ module TextToSpeech
     #
     # To avoid this, we use a targeted Loofah scrubber to prune any XML blocks
     # and only XML blocks before passing the result through Redcarpet
-    text = Loofah.fragment(text).scrub!(TTSSafeScrubber).scrub!(:prune).to_s
-    TTSSafeRenderer.render(text)
+    text = Loofah.fragment(text).scrub!(tts_safe_scrubber).scrub!(:prune).to_s
+    tts_safe_renderer.render(text)
   end
 
   def tts_upload_to_s3(text, key, metric_context = nil, locale: I18n.locale)

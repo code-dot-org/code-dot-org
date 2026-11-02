@@ -4,8 +4,8 @@ class ApplicationRecord < ActiveRecord::Base
   include DataClassification
 
   connects_to database: {
-    writing: Policies::ActiveRecordRoles.get_writing_role_name,
-    reading: Policies::ActiveRecordRoles.get_reading_role_name,
-    reporting: Policies::ActiveRecordRoles.get_reporting_role_name,
+    writing: :primary,
+    reading: :primary_replica,
+    reporting: :primary_reporting,
   }
 end

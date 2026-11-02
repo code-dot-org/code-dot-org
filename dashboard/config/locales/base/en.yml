@@ -166,10 +166,14 @@ en:
     need_unlock: "Didn't receive unlock instructions?"
     not_linked: "Sorry, your Code.org account is not linked to %{provider}. You'll have to sign in by typing your password below."
     use_clever: "Sorry, your Code.org account is not linked to %{provider}. Please sign in through your Clever Portal instead."
+    sso_login_nudge: "It looks like you normally sign in with %{provider}. Please use the %{provider} sign-in button instead of entering a password."
+    lti_login_nudge: "It looks like you normally sign in through %{platform}. Please launch CodeAI from %{platform} to sign in."
+    lti_login_nudge_default_platform: "your learning management system (LMS)"
     invalid_provider: "Sorry, %{provider} accounts cannot be linked to Code.org accounts."
     migration_required: "Sorry, we cannot connect or disconnect accounts that are still using the old account experience. Please update to the new account experience."
     unable_to_connect_provider: "Unable to connect your Code.org account to your %{provider} account. Please try again."
     disconnect_successful: "Success! We have disconnected the external account from your Code.org account."
+    disconnect_failed: "Sorry, we could not disconnect the external account from your Code.org account. Please contact support if you need help."
     already_in_use: "Your %{provider} account is already connected to another Code.org account."
     already_linked: "Your %{provider} account is already linked to your Code.org account."
     parental_permission_required: "Uh oh! You must obtain parental permission before creating a linked account. Please log in to the account you are trying to link and obtain parental consent."
@@ -1392,6 +1396,7 @@ en:
   courses_category: 'Full Courses'
   course_offering:
     headers:
+      recommended: 'Recommended'
       favorites: 'Favorites'
       labs_and_skills: 'Labs and Skills'
       minecraft: 'Minecraft'

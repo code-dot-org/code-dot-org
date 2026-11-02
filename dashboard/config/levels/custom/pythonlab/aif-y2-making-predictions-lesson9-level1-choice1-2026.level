@@ -1,0 +1,51 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-10-13T18:13:09.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Chlorine Levels",
+    "long_instructions": "You are trying to determine whether splitting water samples based on whether their chlorine levels are over 4 mg/L will be effective at classifying water sample risk. To do this, you want to calculate the impurity of the group of water samples with high chlorine levels.\r\n\r\n**☑️ Do This:**\r\n\r\n1. Count how many samples are high risk when `chlorine` is greater than 4. Store that value in a variable called `high_risk`.\r\n2. Count how many samples are low risk when `chlorine` is greater than 4. Store that value in a variable  called `low_risk`.\r\n3. Calculate the impurity of the group. Remember that impurity can be computed by taking 1 and subtracting the squares of the proportions of each group (high risk and low risk).\r\n\r\n**💻 Coding Tip**\r\n\r\n`samples` is a list of dictionaries. You might find it helpful to write a loop that iterates over the list and checks the values in each dictionary.\r\n\r\nYou can square a value using `x**2`:\r\n\r\n```python\r\nx**2\r\n```",
+    "bubble_choice_description": "Determine whether chlorine levels can help classify water sample risk.",
+    "thumbnail_url": "https://images.code.org/d9c7085bd24e0eb01952f1a82771f2c3-cleaning-product.png",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "samples = [\n  {\"chlorine\": 4.2, \"pH\": 7.8, \"risk\": \"high\"},\n  {\"chlorine\": 4.6, \"pH\": 7.9, \"risk\": \"high\"},\n  {\"chlorine\": 5.1, \"pH\": 7.6, \"risk\": \"high\"},\n  {\"chlorine\": 4.9, \"pH\": 8.1, \"risk\": \"high\"},\n  {\"chlorine\": 5.4, \"pH\": 7.7, \"risk\": \"high\"},\n  {\"chlorine\": 4.1, \"pH\": 7.6, \"risk\": \"low\"},\n  {\"chlorine\": 4.2, \"pH\": 7.2, \"risk\": \"high\"},\n  {\"chlorine\": 4.8, \"pH\": 7.1, \"risk\": \"high\"},\n  {\"chlorine\": 5.3, \"pH\": 6.9, \"risk\": \"high\"},\n  {\"chlorine\": 4.3, \"pH\": 7.3, \"risk\": \"low\"},\n  {\"chlorine\": 3.6, \"pH\": 8.2, \"risk\": \"high\"},\n  {\"chlorine\": 2.8, \"pH\": 7.7, \"risk\": \"low\"},\n  {\"chlorine\": 3.1, \"pH\": 7.9, \"risk\": \"low\"},\n  {\"chlorine\": 1.9, \"pH\": 7.6, \"risk\": \"low\"},\n  {\"chlorine\": 0.4, \"pH\": 6.8, \"risk\": \"high\"},\n  {\"chlorine\": 3.8, \"pH\": 7.4, \"risk\": \"high\"},\n  {\"chlorine\": 0.9, \"pH\": 6.5, \"risk\": \"high\"},\n  {\"chlorine\": 2.1, \"pH\": 7.2, \"risk\": \"low\"},\n  {\"chlorine\": 1.6, \"pH\": 7.4, \"risk\": \"low\"},\n  {\"chlorine\": 2.5, \"pH\": 7.0, \"risk\": \"low\"},\n  {\"chlorine\": 3.0, \"pH\": 7.3, \"risk\": \"low\"},\n  {\"chlorine\": 1.8, \"pH\": 6.9, \"risk\": \"low\"},\n  {\"chlorine\": 2.3, \"pH\": 7.1, \"risk\": \"low\"},\n  {\"chlorine\": 2.9, \"pH\": 7.4, \"risk\": \"low\"},\n  {\"chlorine\": 1.4, \"pH\": 7.2, \"risk\": \"low\"},\n  {\"chlorine\": 2.6, \"pH\": 6.8, \"risk\": \"low\"},\n  {\"chlorine\": 3.3, \"pH\": 7.3, \"risk\": \"low\"},\n  {\"chlorine\": 2.0, \"pH\": 6.7, \"risk\": \"low\"},\n  {\"chlorine\": 1.2, \"pH\": 7.0, \"risk\": \"low\"},\n  {\"chlorine\": 3.5, \"pH\": 7.1, \"risk\": \"low\"},\n]\n\n# TODO 1 and TODO 2: Compute values for high_risk and low_risk when chlorine is greater than 4\nhigh_risk = 0\nlow_risk = 0\n\ntotal = high_risk + low_risk\n\nhigh_proportion = high_risk / total\nlow_proportion = low_risk / total\n\n# TODO 3: Compute impurity\nimpurity = 0\n\nprint(f\"Impurity for high chlorine group: {round(impurity, 2)}\")",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n0aey/x8EhSrp8w==\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-13 18:13:24 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-10-13 18:13:49 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>

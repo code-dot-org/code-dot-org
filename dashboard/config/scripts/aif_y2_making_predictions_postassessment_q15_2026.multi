@@ -1,0 +1,16 @@
+name 'aif-y2-making-predictions-postassessment-q15-2026'
+
+wrong "Feature scaling removes outliers so that they don't affect which neighbors are closest"
+wrong 'Feature scaling makes sure the classifier does not overfit on training data'
+wrong 'Feature scaling makes sure that each data point has the same number of features'
+right 'Feature scaling makes sure all features can be relevant when comparing distances'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Why is feature scaling important for a nearest-neighbor classifier?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 12: Classification Project
+MARKDOWN

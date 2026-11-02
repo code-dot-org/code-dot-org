@@ -1,0 +1,19 @@
+.panel {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+  gap: 8px;
+  padding-top: 10px;
+}
+
+.text {
+  margin: 0;
+  color: var(--text-neutral-primary);
+}
+
+.rowCount {
+  padding-inline-end: 4px;
+  white-space: nowrap;
+  color: var(--text-neutral-primary);
+}

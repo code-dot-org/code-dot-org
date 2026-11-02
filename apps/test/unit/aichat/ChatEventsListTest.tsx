@@ -1,4 +1,4 @@
-import {render, screen, waitFor} from '@testing-library/react';
+import {fireEvent, render, screen, waitFor} from '@testing-library/react';
 import React from 'react';
 
 import '@testing-library/jest-dom';
@@ -23,6 +23,34 @@ jest.mock('@cdo/apps/aichat/views/WaitingAnimation', () => {
     shouldDisplay ? React.createElement('div', null, mockWaitingText) : null;
   return {__esModule: true, default: Waiting, WaitingAnimation: Waiting};
 });
+
+const mockUnrenderableText = 'This event cannot render';
+const mockLogError = jest.fn();
+
+jest.mock('@cdo/apps/aichat/views/ChatEventView', () => {
+  const React = require('react');
+  const ActualChatEventView = jest.requireActual(
+    '@cdo/apps/aichat/views/ChatEventView'
+  ).default;
+  const ChatEventView = React.forwardRef(
+    (props: {event: {chatMessageText?: string}}, ref: unknown) => {
+      if (props.event.chatMessageText === mockUnrenderableText) {
+        throw new Error('render failed');
+      }
+      return React.createElement(ActualChatEventView, {...props, ref});
+    }
+  );
+  return {__esModule: true, default: ChatEventView};
+});
+
+jest.mock('@cdo/apps/lab2/Lab2Registry', () => ({
+  __esModule: true,
+  default: {
+    getInstance: () => ({
+      getMetricsReporter: () => ({logError: mockLogError}),
+    }),
+  },
+}));
 
 // Mock redux hooks to avoid real store; only selector value matters here
 let mockPending = false;
@@ -96,6 +124,69 @@ describe('ChatEventsList', () => {
     expect(
       screen.getByLabelText(commonI18n.aiChatMessageBot())
     ).toHaveTextContent('Hi! How can I help?');
+  });
+
+  it('replaces an event that fails to render and keeps the rest', () => {
+    jest.spyOn(console, 'error').mockImplementation(() => {});
+    const events: CompletedChatMessage[] = [
+      {
+        timestamp: Date.now() - 1000,
+        chatMessageText: mockUnrenderableText,
+        role: Role.ASSISTANT,
+        status: AiInteractionStatus.OK,
+        requestId: 1,
+      },
+      {
+        timestamp: Date.now(),
+        chatMessageText: 'Still here',
+        role: Role.ASSISTANT,
+        status: AiInteractionStatus.OK,
+        requestId: 2,
+      },
+    ];
+
+    render(<ChatEventsList events={events} />);
+
+    expect(
+      screen.getByText('This message could not be displayed.')
+    ).toBeInTheDocument();
+    expect(
+      screen.getByLabelText(commonI18n.aiChatMessageBot())
+    ).toHaveTextContent('Still here');
+    expect(mockLogError).toHaveBeenCalledWith(
+      'Chat event failed to render',
+      expect.objectContaining({message: 'render failed'}),
+      expect.objectContaining({componentStack: expect.any(String)})
+    );
+    jest.mocked(console.error).mockRestore();
+  });
+
+  it('lets keyboard users reach a final event that failed to render', () => {
+    jest.spyOn(console, 'error').mockImplementation(() => {});
+    const events: CompletedChatMessage[] = [
+      {
+        timestamp: Date.now(),
+        chatMessageText: mockUnrenderableText,
+        role: Role.ASSISTANT,
+        status: AiInteractionStatus.OK,
+        requestId: 1,
+      },
+    ];
+
+    render(<ChatEventsList events={events} />);
+    const chatHistory = screen.getByLabelText(
+      'Chat history: press Enter to navigate, Escape to exit'
+    );
+    const placeholder = screen
+      .getByText('This message could not be displayed.')
+      .closest('[tabindex]');
+
+    fireEvent.keyDown(chatHistory, {key: 'Enter'});
+    expect(placeholder).toHaveFocus();
+
+    fireEvent.keyDown(placeholder!, {key: 'Escape'});
+    expect(chatHistory).toHaveFocus();
+    jest.mocked(console.error).mockRestore();
   });
 
   it('shows waiting animation when a chat message is pending', async () => {

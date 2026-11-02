@@ -38,7 +38,8 @@ $default-spacing: 2px;
   display: flex;
   flex-direction: row;
   min-height: $work-area-min-height;
-  overflow: hidden;
+  // Let Blockly dropdowns overlap the timeline instead of being clipped.
+  overflow: visible;
 
   &.toolboxMode {
     max-height: 100%; // Allow the work area to take full height
@@ -103,7 +104,8 @@ $default-spacing: 2px;
 
 .blocklyArea {
   border-radius: $default-border-radius;
-  overflow: hidden;
+  overflow: visible;
+  min-width: 0;
   flex: 1;
   position: relative;
 }

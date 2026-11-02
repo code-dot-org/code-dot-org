@@ -1,0 +1,55 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-10-13T01:18:14.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Box Office",
+    "long_instructions": "You’re building a multiple linear regression model that predicts how well a new movie will perform on opening weekend (in millions of dollars) based on two variables: the movie’s marketing budget (in millions of dollars) and the number of social media posts people have made about the movie (in thousands of posts). You have the following training data:\r\n\r\n---\r\n\r\n| Budget | Posts | Opening Weekend |\r\n| - | - | - |\r\n| $5 million | 15 thousand | $6 million |\r\n| $15 million | 20 thousand | $20 million |\r\n| $25 million | 90 thousand | $38 million |\r\n| $40 million | 150 thousand | $68 million |\r\n| $45 million | 20 thousand | $15 million |\r\n\r\n---\r\n\r\n**☑️ Do This:**\r\n\r\n1. The first training data example has already been added to the `inputs` list. Add the remaining training data examples to the `inputs` list.\r\n2. The first training data example has already been added to the `outputs` list. Add the remaining training data examples to the `outputs` list.\r\n3. Train the model based on the training data inputs and outputs.\r\n4. Run the code and make some predictions. Check that they seem reasonable based on your training data.\r\n\r\n**💻 Coding Tip**\r\n\r\nTo train a linear regression model with `scikit-learn`, recall that you can use code like:\r\n\r\n```python\r\nmodel.fit(x, y)\r\n```\r\n\r\nwhere `x` represents the inputs and `y` represents the outputs.\r\n",
+    "bubble_choice_description": "Predict how well a new movie will perform on opening weekend.",
+    "thumbnail_url": "https://images.code.org/dac81c7527f0d7a1120f2bf8be4764a4-box-office.jpg",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "debug",
+        "documentation",
+        "explainCode",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "from sklearn.linear_model import LinearRegression\n\n# Input features: [marketing_budget, social_media_posts]\n# TODO 1: Add the remaining training data inputs\ninputs = [[5, 15]]\n\n# Output: opening weekend box office revenue\n# TODO 2: Add the remaining training data outputs\noutputs = [6]\n\nmodel = LinearRegression()\n\n# TODO 3: Fit the model to the inputs and outputs\n\n# Make a prediction for a new movie\nmarketing = int(input(\"Enter marketing budget (in millions of dollars): \"))\nsocial_media = int(input(\"Enter number of social media posts (in thousands): \"))\nprediction = model.predict([[marketing, social_media]])\n\nprint(\"Predicted opening weekend (in millions of dollars):\", round(prediction[0]))",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMr4oQ9DVxiTMJbx\n4Al4X1wVMJMSypbEsk59VLEUEA0uLo8FMG0lOzYZ8bwGt+pkOwDDUiKDdflD\nmrF/CD0avk16NQpNOPxP1EpPHDbJcvz7yUeesGhFvknst178n3MDg3dID6Bw\nBPuMxVwx9RM2fOKGxZOaqcfl4Nbeakd59XJnRMk0NUYYUv3QQkPizAAcTAID\nyj/KhVK47Op1Zo2qJRnsIcPxQqV4q5RlXPbtIWlDp2xV4AJWY7wdhl04ApaM\nEW0XmtI53lu2cVJbHIcs2btXw86FcZKylJvdKEJh9BMPQnmE75YGd4PrQxsq\n59/oNyl8ovMl5TWM1rpiM1bVRV1ENhtXylEBRrEwT/AN8moqEdqejcUfNHaQ\n/abxoWVNfHU8fUJwXHdITYTtQUgD9sygGcmkEy1xzPEqDG4Oh6ZB/SjDRIAW\n/hKQrXQPPLExJsemm3IdNgG7PiApxNhSaw7kwWM31kVDICPZvbI/cPfP0+op\ng4eQ1M+gf/mrwVoGUcE1vSmMWRjgaMRyvs7ALtqjPrH0IDTVw/uchPVsVX63\nYS76hAnL0343rn4XRq0F94fyGVsmnscQQJYKhPT58BvHn7KVi7on6tjigqVu\n0QwX6IEAwTQS+m1ztKqnTpX4ILFZOc6XxR1AdMJt6Du17Rd38QE6D3ogguYT\n2pAKrkwsIAFw7ZK6Wzs1RHNdQZLH6E+C1riD9kheCyH2oDLM8cw64z9GEwEU\nJY9ak+lXf543H4KaMhX8SJwUIopnAYRI9fuNeTF+XhosSWdnMKRk3lc/ZbG4\njbk30fvmNmTxmvsAr/WVAGGwK6G/Z/vkbP+9gz1I2ZCAIMz1p1G2kBnFnb4J\nuaYvPI9xEq94MwxVeAheJo/8vhPcy2Dh7UTO5OBIqGalDSNOU3IJqwJ27hpm\nqK2TSd999Q+47InyGi7U1zkUmYbMRmLkAcHCwyaYvuokSRqZ+f8z1nkOUrbr\n5iblr5BF\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-13 01:25:48 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-13 01:26:10 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-13 01:26:46 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-13 01:27:19 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

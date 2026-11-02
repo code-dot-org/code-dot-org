@@ -2768,6 +2768,35 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal 'new answer', by_user[both_student.id].level_source.data
   end
 
+  test 'summary view with level_id loads a BubbleChoice sublevel and its responses' do
+    sublevel = create(:free_response)
+    bubble_choice = create(:bubble_choice_level, sublevels: [sublevel])
+    unit = create(:script, :in_single_unit_course)
+    lesson_group = create(:lesson_group, script: unit)
+    lesson = create(:lesson, script: unit, lesson_group: lesson_group, absolute_position: 1, relative_position: '1')
+    script_level = create(:script_level, script: unit, lesson: lesson, levels: [bubble_choice])
+
+    source = create(:level_source, level: sublevel, data: 'student answer')
+    create(:user_level, user: @student, level: sublevel, script: unit, level_source: source)
+
+    sign_in @teacher
+    get :show, params: {
+      course_course_name: unit.reload.original_unit_group.name,
+      unit_position: 1,
+      lesson_position: 1,
+      id: script_level.position,
+      view: 'summary',
+      level_id: sublevel.id
+    }
+    assert_response :success
+    assert_equal sublevel, assigns(:level)
+    responses = assigns(:responses)
+    assert_equal 1, responses.length
+    assert_equal 1, responses.first.length
+    assert_equal @student.id, responses.first.first.user_id
+    assert_equal 'student answer', responses.first.first.level_source.data
+  end
+
   # Teacher-only content gating. Two consumers of a level's teacher_markdown
   # defer to Policies::InlineAnswer.visible_for_script_level?: LevelsHelper
   # sets appOptions['teacherMarkdown'] at the top level of the options hash,

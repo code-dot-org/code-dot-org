@@ -1,7 +1,7 @@
 {
   "key": "interactive-games-animations",
   "display_name": "Interactive Animations and Games",
-  "is_featured": false,
+  "is_featured": true,
   "assignable": true,
   "curriculum_type": "Standalone Unit",
   "marketing_initiative": "AID",

@@ -20,6 +20,7 @@ module Observability
 
       ::Sentry.init do |config|
         config.dsn = CDO.dashboard_sentry_dsn
+        config.release = GitUtils.git_revision
         # Explicitly disable PII collection per privacy policy.
         # Sentry defaults this to false, but we set it explicitly to make the
         # intent clear.

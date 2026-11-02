@@ -22,6 +22,7 @@ import {getValidationFromSource, RunType} from '../codebridge';
 import PythonValidationTracker from './progress/PythonValidationTracker';
 import {asyncRun, restartPyodideIfProgramIsRunning} from './pyodideManager';
 import {runStudentTests, runValidationTests} from './pythonHelpers/scripts';
+import {describeTheaterOutput} from './theaterDescription';
 
 const appName = 'pythonlab';
 
@@ -68,6 +69,7 @@ export async function handleRunClick(
     }
     if (isTheaterLevel()) {
       resetTheaterIfNoOutput();
+      describeTheaterOutput(source);
     }
   }
 }

@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-08-17 14:41:57 UTC",
+    "serialized_at": "2026-10-19 16:17:06 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -62,6 +62,21 @@
         "lesson_group.key": "",
         "script.name": "jamila-sandbox"
       }
+    },
+    {
+      "key": "lesson-3",
+      "name": "assessments",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "jamila-sandbox"
+      }
     }
   ],
   "lesson_activities": [
@@ -76,6 +91,18 @@
         "lesson_group.key": "",
         "script.name": "jamila-sandbox"
       }
+    },
+    {
+      "key": "20760883-0653-438b-b508-e87b8c7db029",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "20760883-0653-438b-b508-e87b8c7db029",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "jamila-sandbox"
+      }
     }
   ],
   "activity_sections": [
@@ -87,6 +114,16 @@
       "seeding_key": {
         "activity_section.key": "6a9f34b5-e3c5-4449-a728-849ebaebc6d3",
         "lesson_activity.key": "029dec75-ce2b-4e98-a23e-831f338853b7"
+      }
+    },
+    {
+      "key": "041fdee9-d278-4d96-baac-2720b9eef26c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "041fdee9-d278-4d96-baac-2720b9eef26c",
+        "lesson_activity.key": "20760883-0653-438b-b508-e87b8c7db029"
       }
     }
   ],
@@ -216,6 +253,27 @@
       "level_keys": [
         "test-generate-lesson-level4"
       ]
+    },
+    {
+      "chapter": 7,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "jamila-test-quiz"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "jamila-sandbox",
+        "activity_section.key": "041fdee9-d278-4d96-baac-2720b9eef26c"
+      },
+      "level_keys": [
+        "jamila-test-quiz"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -289,6 +347,18 @@
         "lesson_group.key": "",
         "script.name": "jamila-sandbox",
         "activity_section.key": "6a9f34b5-e3c5-4449-a728-849ebaebc6d3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "jamila-test-quiz",
+        "script_level.level_keys": [
+          "jamila-test-quiz"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "jamila-sandbox",
+        "activity_section.key": "041fdee9-d278-4d96-baac-2720b9eef26c"
       }
     }
   ],

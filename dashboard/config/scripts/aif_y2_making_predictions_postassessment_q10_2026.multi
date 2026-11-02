@@ -1,0 +1,16 @@
+name 'aif-y2-making-predictions-postassessment-q10-2026'
+
+wrong 'The model used 8 neighbors to make its predictions'
+wrong "The model's predictions were on average 0.8 units from the actual values"
+right 'The model classified 80% of the test examples correctly'
+wrong 'The model is 80% sure of each prediction it makes'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+A program prints `Model Accuracy: 0.8` after testing a classifier. What does that tell you?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 7: Nearest-Neighbor Classification
+MARKDOWN

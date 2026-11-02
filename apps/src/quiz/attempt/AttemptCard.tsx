@@ -5,34 +5,49 @@ import styles from './attempt-card.module.scss';
 
 export interface AttemptCardProps {
   label?: string;
+  // Result status tag shown at the end of the label line once attempt is submitted.
+  statusTag?: React.ReactNode;
   title: string;
   description?: React.ReactNode;
   children?: React.ReactNode;
   // A bordered row between the body and the footer.
   beforeFooterBorderedRow?: React.ReactNode;
   footer?: React.ReactNode;
+  // For moving focus to this card's heading.
+  headingRef?: React.Ref<HTMLHeadingElement>;
 }
 
 // Shared card shell for the intro screen and every question type.
 const AttemptCard: React.FunctionComponent<AttemptCardProps> = ({
   label,
+  statusTag,
   title,
   description,
   children,
   beforeFooterBorderedRow,
   footer,
+  headingRef,
 }) => (
   <div className={styles.card}>
     <div className={styles.content}>
       <div className={styles.headerRow}>
         <div className={styles.header}>
-          {label && (
-            <Typography variant="overline2" className={styles.label}>
-              {label}
-            </Typography>
+          {(label || statusTag) && (
+            <div className={styles.labelRow}>
+              {label && (
+                <Typography variant="overline2" className={styles.label}>
+                  {label}
+                </Typography>
+              )}
+              {statusTag && <div className={styles.statusTag}>{statusTag}</div>}
+            </div>
           )}
-          {/* Lets a page-change handler focus this heading programmatically. */}
-          <Typography variant="h4" component="h2" tabIndex={-1}>
+          <Typography
+            ref={headingRef}
+            variant="h4"
+            component="h2"
+            tabIndex={-1}
+          >
             {title}
           </Typography>
         </div>

@@ -248,7 +248,8 @@ test.describe('Maze, Frozen, and Minecraft:Agent tutorials in various languages'
    * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/foundations/i18n.feature "Translated function names in Portuguese"
    */
-  test('Translated function names in Portuguese', async ({page}) => {
+  // Fails on the test server due to a file caching bug
+  test.fixme('Translated function names in Portuguese', async ({page}) => {
     const lab = new LegacyBlocklyLab(page);
     await lab.gotoLevel({
       course: 'ui-test-level-i18n',

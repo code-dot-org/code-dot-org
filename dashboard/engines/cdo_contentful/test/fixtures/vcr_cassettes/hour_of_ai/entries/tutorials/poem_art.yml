@@ -1,0 +1,64 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://preview.contentful.com/spaces/hwu8vzk5v0g2/environments/master/entries?content_type=activity&fields.tutorialID=poem_art&limit=1&locale=en-US&order&skip=0
+    body:
+      encoding: UTF-8
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - close
+      Date:
+      - Wed, 07 Oct 2026 18:33:51 GMT
+      Content-Type:
+      - application/vnd.contentful.delivery.v1+json
+      Access-Control-Allow-Methods:
+      - GET,HEAD,OPTIONS
+      X-Contentful-Ratelimit-Second-Limit:
+      - '20'
+      Cf-Environment-Uuid:
+      - 1243d419-035a-4426-83d1-d204391ad323
+      Server-Timing:
+      - total;dur=93, total;dur=168
+      Content-Encoding:
+      - gzip
+      Etag:
+      - W/"16010305691952636979"
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - Contentful
+      X-Contentful-Request-Id:
+      - e80bacb3-e702-4062-ae35-eb40414c0b53
+      Contentful-Api:
+      - cpa
+      X-Cache:
+      - MISS
+      Age:
+      - '0'
+      Access-Control-Max-Age:
+      - '1728000'
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Accept,Accept-Language,Authorization,Cache-Control,Content-Length,Content-Range,Content-Type,Destination,Dnt,Expires,If-Match,If-Modified-Since,If-None-Match,Keep-Alive,Last-Modified,Origin,Pragma,Range,User-Agent,X-Contentful-Content-Type,X-Contentful-Enable-Alpha-Feature,X-Contentful-Extensions-Sourcemap,X-Contentful-Organization,X-Contentful-Personal-Intercept,X-Contentful-Resource-Resolution,X-Contentful-Skip-Transformation,X-Contentful-User-Agent,X-Contentful-Version,X-Http-Method-Override,X-Mx-Reqtoken,X-Requested-With
+      Access-Control-Expose-Headers:
+      - Etag
+      X-Served-By:
+      - cache-bfi-krnt7300067-BFI
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        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
+  recorded_at: Wed, 07 Oct 2026 18:33:51 GMT
+recorded_with: VCR 6.2.0

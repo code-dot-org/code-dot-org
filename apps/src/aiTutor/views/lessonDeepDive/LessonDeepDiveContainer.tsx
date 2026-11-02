@@ -1,6 +1,8 @@
 import {
+  FizzyButton,
   LessonSummaryCard,
   LevelsAttemptedBox,
+  NextStepPicker,
   PreSkillsCheck,
   TimeSpentBox,
   TutorSummaryBox,
@@ -14,8 +16,6 @@ import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {LessonObjectiveReflectionValues} from '@cdo/generated-scripts/sharedConstants';
 
-import FizzyButton from './FizzyButton';
-import NextStepPicker from './NextStepPicker';
 import ReflectionBox from './Reflection/ReflectionBox';
 import InterventionBox from './ReviewModalities/InterventionBox';
 import SkillsCheck from './SkillsCheck/SkillsCheck';

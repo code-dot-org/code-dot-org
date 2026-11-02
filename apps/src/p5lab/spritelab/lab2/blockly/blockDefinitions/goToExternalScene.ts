@@ -7,8 +7,13 @@ export const GO_TO_EXTERNAL_SCENE_BLOCK_TYPE = 'spritelab2_goToExternalScene';
 
 const definition: BlockJson = {
   type: GO_TO_EXTERNAL_SCENE_BLOCK_TYPE,
-  message0: 'go to external scene %1',
-  args0: [{type: FIELD_EXTERNAL_SCENE_DROPDOWN_TYPE, name: 'SCENE'}],
+  message0: 'go to external scene %1 %2',
+  args0: [
+    // Row break: the destination on its own row keeps the block narrow.
+    {type: 'input_dummy', name: 'ROW_BREAK'},
+    {type: FIELD_EXTERNAL_SCENE_DROPDOWN_TYPE, name: 'SCENE'},
+  ],
+  inputsInline: false,
   previousStatement: null,
   nextStatement: null,
   style: BlockStyles.DEFAULT,

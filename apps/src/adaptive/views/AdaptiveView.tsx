@@ -49,28 +49,19 @@ function parseLevelContent(properties: AdaptiveLevelProperties): Parsed {
 const AdaptiveView: React.FunctionComponent<
   LabProps<AdaptiveLevelProperties>
 > = ({levelProperties}) => {
-  const userId = useAppSelector(state => state.currentUser.userId);
   const scriptId = useAppSelector(state => state.progress.scriptId);
   const parsed = useMemo(
     () => parseLevelContent(levelProperties),
     [levelProperties]
   );
-  const pathwayId = parsed.pathway?.id;
-
-  // The UserLevel triple plus the content id, so a server store can take
-  // over record for record.
+  // Progress is kept per unit, so the level plays only from one.
   const progressKey = useMemo<ProgressKey | undefined>(
-    () =>
-      pathwayId === undefined
-        ? undefined
-        : {
-            userId: userId ?? null,
-            scriptId: scriptId ?? null,
-            levelId: levelProperties.id,
-            pathwayId,
-          },
-    [userId, scriptId, levelProperties.id, pathwayId]
+    () => (scriptId ? {scriptId, levelId: levelProperties.id} : undefined),
+    [scriptId, levelProperties.id]
   );
+  const problems =
+    parsed.problems ??
+    (progressKey ? [] : ['this level can only be played from a unit']);
 
   if (!parsed.pathway || !progressKey) {
     return (
@@ -78,7 +69,7 @@ const AdaptiveView: React.FunctionComponent<
         <h1>Adaptive: {levelProperties.adaptiveId ?? levelProperties.name}</h1>
         <h2>Content problems</h2>
         <ul>
-          {parsed.problems?.map(problem => (
+          {problems.map(problem => (
             <li key={problem}>
               <code>{problem}</code>
             </li>

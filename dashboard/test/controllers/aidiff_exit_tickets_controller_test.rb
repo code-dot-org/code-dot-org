@@ -16,8 +16,6 @@ class AidiffExitTicketsControllerTest < ActionController::TestCase
     @teacher = create(:teacher)
 
     create(:single_user_experiment, min_user_id: @teacher.id, name: 'ai-differentiation')
-    create(:single_user_experiment, min_user_id: @teacher_sans_experiment.id, name: 'ai-differentiation')
-    create(:single_user_experiment, min_user_id: @teacher.id, name: 'ai-artifact')
   end
 
   test "index redirects to signin when teacher not signed in" do

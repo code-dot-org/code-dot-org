@@ -7,8 +7,10 @@ import MiniApp from '@cdo/apps/miniApps/MiniApp';
 
 import {
   InputMessage,
+  SceneDescription,
   THEATER_AUDIO_ID,
   THEATER_IMAGE_ID,
+  TheaterDescription,
   TheaterSignalType,
 } from './constants';
 
@@ -20,10 +22,17 @@ interface TheaterSignal {
     prompt?: string;
     // Only provided with VISUAL_URL, and only from a host that knows how long its gif runs (python).
     durationMs?: number;
+    // Only provided with DESCRIPTION.
+    summary?: string;
+    transcript?: string;
   };
 }
 
 type MediaLoadErrorCallback = (type: 'video' | 'audio') => void;
+
+type DescriptionChangeCallback = (
+  description: TheaterDescription | null
+) => void;
 
 type UploadCallback = (this: XMLHttpRequest, event: ProgressEvent) => void;
 
@@ -102,6 +111,7 @@ export default class Theater extends MiniApp {
   ) => void;
   private readonly onOutputVisibleChange?: (isVisible: boolean) => void;
   private readonly onMediaLoadError?: MediaLoadErrorCallback;
+  private readonly onDescriptionChange?: DescriptionChangeCallback;
   // Playback starts once both the visual and the audio are ready, where ready
   // audio means a loaded track or the NO_AUDIO signal. Each signal clears its
   // own flag, so a second publish waits for its own media instead of riding on
@@ -120,6 +130,9 @@ export default class Theater extends MiniApp {
   private playbackWaiters: Array<() => void>;
   private readonly imageSource: TrackedSource;
   private readonly audioSource: TrackedSource;
+  // Bumped on reset and on each describe(), so a late answer is dropped.
+  private descriptionGeneration: number;
+  private packageDescription: SceneDescription | null;
 
   constructor(
     onOutputMessage: (message: string) => void,
@@ -128,7 +141,8 @@ export default class Theater extends MiniApp {
     closePhotoPrompter: () => void,
     onJavabuilderMessage: (messageType: string, message: InputMessage) => void,
     onOutputVisibleChange?: (isVisible: boolean) => void,
-    onMediaLoadError?: MediaLoadErrorCallback
+    onMediaLoadError?: MediaLoadErrorCallback,
+    onDescriptionChange?: DescriptionChangeCallback
   ) {
     super();
     this.onOutputMessage = onOutputMessage;
@@ -138,6 +152,9 @@ export default class Theater extends MiniApp {
     this.onJavabuilderMessage = onJavabuilderMessage;
     this.onOutputVisibleChange = onOutputVisibleChange;
     this.onMediaLoadError = onMediaLoadError;
+    this.onDescriptionChange = onDescriptionChange;
+    this.descriptionGeneration = 0;
+    this.packageDescription = null;
     this.isVisualLoaded = false;
     this.isAudioReady = false;
     this.prompterUploadUrl = null;
@@ -194,6 +211,12 @@ export default class Theater extends MiniApp {
         // Open the photo prompter
         this.prompterUploadUrl = data.detail.uploadUrl || null;
         this.openPhotoPrompter(data.detail.prompt);
+        break;
+      }
+      case TheaterSignalType.DESCRIPTION: {
+        this.packageDescription = data.detail.summary
+          ? {summary: data.detail.summary, transcript: data.detail.transcript}
+          : null;
         break;
       }
       case TheaterSignalType.NO_AUDIO: {
@@ -340,6 +363,53 @@ export default class Theater extends MiniApp {
     this.isAudioPlaying = false;
     this.isVisualPlaying = false;
     this.settlePlayback();
+    this.clearDescription();
+  }
+
+  getPackageDescription() {
+    return this.packageDescription;
+  }
+
+  // Announces the AI description; the package's own if that fails or is absent.
+  describe(description?: Promise<string>) {
+    const generation = ++this.descriptionGeneration;
+    const isCurrent = () => generation === this.descriptionGeneration;
+    if (!description) {
+      this.publishPackageDescription();
+      return;
+    }
+    this.onDescriptionChange?.({status: 'pending'});
+    description.then(
+      text => {
+        if (isCurrent()) {
+          this.onDescriptionChange?.({status: 'ready', summary: text});
+        }
+      },
+      () => {
+        if (isCurrent()) {
+          this.publishPackageDescription();
+        }
+      }
+    );
+  }
+
+  private publishPackageDescription() {
+    const description = this.packageDescription;
+    this.onDescriptionChange?.(
+      description
+        ? {
+            status: 'ready',
+            summary: description.summary,
+            detail: description.transcript,
+          }
+        : {status: 'unavailable'}
+    );
+  }
+
+  private clearDescription() {
+    this.descriptionGeneration++;
+    this.packageDescription = null;
+    this.onDescriptionChange?.(null);
   }
 
   private clearPlaybackTimer() {

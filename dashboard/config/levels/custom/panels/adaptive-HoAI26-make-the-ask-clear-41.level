@@ -1,0 +1,45 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-10-16T21:44:01.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "panels": [
+      {
+        "key": "adaptive-HoAI26-make-the-ask-clear-41-dcc4456d-fb5e-4458-8425-822f4ae00b38",
+        "text": "### What happens next?\n“Click here” gives few clues. \n\nA **call-to-action** should name the next step.",
+        "imageUrl": "https://images.code.org/9ae72478984d51a1a4f7f50585de7321-exec-72fc7316-b4bd-4972-947e-3baee0863e80.png",
+        "layout": "text-top-right",
+        "fadeInOverPrevious": true
+      },
+      {
+        "key": "adaptive-HoAI26-make-the-ask-clear-41-be68f628-41fd-4b16-9687-cbdc2f0b844b",
+        "text": "### Name the action.\n“Find my club” tells visitors what to do and what to expect.",
+        "imageUrl": "https://images.code.org/9e90e3037f40a4e2a152bd6f99535875-exec-b49c01e4-6ac8-468f-baa6-f684f8c7533d.png",
+        "layout": "text-top-right",
+        "fadeInOverPrevious": true
+      },
+      {
+        "key": "adaptive-HoAI26-make-the-ask-clear-41-90457403-06f2-42a5-b0b5-744d20b9b404",
+        "text": "### Put it where it helps.\nPlace the **call-to-action** where visitors are ready to act.",
+        "imageUrl": "https://images.code.org/ae9b640fd4cc994969d70553fed68526-exec-677f668b-e17b-4764-ab0c-a4a82fc95742.png",
+        "layout": "text-top-right",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Try it on your site.\nChoose what visitors should do next. \n\nAsk AI to add a **call-to-action** that clearly names that action.",
+        "imageUrl": "https://images.code.org/79ea2907e35cf7577f270b5924178411-exec-83be5833-e361-4cc5-b12b-34eac81465f0.png",
+        "key": "adaptive-HoAI26-make-the-ask-clear-41-5e12a9f4-ad4e-4b30-a0b9-3b4bba4fa2d5",
+        "fadeInOverPrevious": true
+      }
+    ],
+    "generate_outline": "Understand how to create clear calls-to-action. Learn why 'Click here' is vague, and how to make buttons clear with a verb and a next step, placing them where eyes naturally land.",
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "use_links": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-10-16 21:44:37 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-16 21:44:38 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-21 02:45:12 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-21 02:45:54 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>
