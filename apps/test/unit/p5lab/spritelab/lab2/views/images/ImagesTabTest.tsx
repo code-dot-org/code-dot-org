@@ -176,6 +176,36 @@ describe('ImagesTab', () => {
     expect(screen.getByText('This level has no images to make.')).toBeTruthy();
   });
 
+  it('keeps the image the student moved to while a new picture was landing', async () => {
+    propsByKey.k1 = {name: 'Sprite 1', categories: []};
+    const {rerender} = renderTab({editingOffered: true});
+    fireEvent.click(screen.getByRole('button', {name: 'New image'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Character'}));
+    let finish: (key: string) => void = () => {};
+    acceptGenerated.mockImplementation(
+      () =>
+        new Promise<string>(resolve => {
+          finish = key => {
+            propsByKey.k2 = {name: 'Sprite 2', categories: []};
+            resolve(key);
+          };
+        })
+    );
+    fireEvent.click(screen.getByRole('button', {name: /^land sprite/}));
+    fireEvent.click(screen.getByRole('button', {name: 'Sprite 1'}));
+    expect(pressed()).toEqual(['Sprite 1']);
+    await act(async () => {
+      finish('k2');
+    });
+    // The student's choice stands. (The store would prompt the next render
+    // outside this test.)
+    rerender(
+      <ImagesTab onDeleteImage={jest.fn()} paneWidth={280} editingOffered />
+    );
+    expect(screen.getByRole('button', {name: 'Sprite 2'})).toBeTruthy();
+    expect(pressed()).toEqual(['Sprite 1']);
+  });
+
   it('deletes through the list and moves on to the next image', () => {
     propsByKey.k1 = {name: 'Sprite 1', categories: []};
     propsByKey.k2 = {name: 'Sprite 2', categories: []};

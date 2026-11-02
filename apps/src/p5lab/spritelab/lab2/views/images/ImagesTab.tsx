@@ -145,8 +145,12 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     async (target: ImageTarget, write: () => Promise<string>) => {
       const key = await write();
       if (!target.key) {
+        // The student may have moved to another image while the write was
+        // out; only a draft still chosen becomes the new image's tile. The
+        // choice moves before the draft goes, so no render sees a chosen
+        // draft that no longer exists.
+        setChosenId(id => (id === DRAFT_ID ? key : id));
         setDraft(null);
-        setChosenId(key);
       }
     },
     []
