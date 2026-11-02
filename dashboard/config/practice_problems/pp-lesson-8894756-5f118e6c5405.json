@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894756-5f118e6c5405",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "Which of the following prompts is likely to get the most accurate response from an AI?",
+  "solution": [
+    {
+      "option": "Tell me about dogs.",
+      "correct": false
+    },
+    {
+      "option": "What are the key characteristics of Golden Retrievers?",
+      "correct": true
+    },
+    {
+      "option": "Animals are cool.",
+      "correct": false
+    },
+    {
+      "option": "List some pets.",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "d1f16775-1eca-4dc4-96f7-9947befe720d"
+  ]
+}

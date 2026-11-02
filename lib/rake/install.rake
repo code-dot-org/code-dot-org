@@ -44,6 +44,9 @@ namespace :install do
         RakeUtils.bundle_install
         RakeUtils.python_venv_install
 
+        # Provision writer and reader SQL users on systems not provisioned via CloudFormation.
+        RakeUtils.rake_stream_output 'db:provision_sql_users'
+
         if ENV['CI']
           if ENV['CI_JOB'] == 'unit_tests'
             # Prepare for dashboard unit tests to run.
@@ -58,9 +61,6 @@ namespace :install do
         else
           RakeUtils.rake_stream_output 'dashboard:setup_db', ([:adhoc, :development].include?(rack_env) ? '--trace' : nil)
         end
-
-        # Provision writer and reader SQL users on systems not provisioned via CloudFormation.
-        RakeUtils.rake_stream_output 'db:provision_sql_users'
       end
     end
   end

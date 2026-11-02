@@ -14,6 +14,7 @@ import styles from './mapBoard.module.scss';
 // On-screen scale of the board when zoomed onto a checkpoint, whatever the
 // fit shrank it to, unless the viewer had already zoomed in further.
 const FOCUS_SCALE = 2;
+const TOUR_FOCUS_SCALE = 1.75;
 
 interface MapBoardProps {
   layout: MapLayout;
@@ -24,6 +25,7 @@ interface MapBoardProps {
   focus?: NodePosition;
   /** See MapProps. */
   fit?: MapFit;
+  tourFocus?: {x: number; y: number};
   children: React.ReactNode;
 }
 
@@ -41,6 +43,7 @@ const MapBoard: React.FunctionComponent<MapBoardProps> = ({
   statusMap,
   focus,
   fit: fitTo = 'whole',
+  tourFocus,
   children,
 }) => {
   const [fitRef, space] = useElementSize<HTMLDivElement>();
@@ -60,13 +63,17 @@ const MapBoard: React.FunctionComponent<MapBoardProps> = ({
   const fitTop = byWidth
     ? 0
     : Math.max(0, (space.height - layout.height * fit) / 2);
-  const focusScale = Math.max(1, FOCUS_SCALE / (fit * outer.zoom));
-  // How far, in board units, the focused checkpoint is from the center of
-  // the view.
-  const shift = focus
+  const effectiveFocus = focus ?? tourFocus;
+  const focusScale = Math.max(
+    1,
+    (focus ? FOCUS_SCALE : TOUR_FOCUS_SCALE) / (fit * outer.zoom)
+  );
+  // How far, in board units, the focused point is from the center of the
+  // view.
+  const shift = effectiveFocus
     ? {
-        x: (center.x - fitLeft) / fit - focus.x,
-        y: (center.y - fitTop) / fit - focus.y,
+        x: (center.x - fitLeft) / fit - effectiveFocus.x,
+        y: (center.y - fitTop) / fit - effectiveFocus.y,
       }
     : {x: 0, y: 0};
   const board = (
@@ -83,8 +90,8 @@ const MapBoard: React.FunctionComponent<MapBoardProps> = ({
       <div
         className={styles.zoom}
         style={
-          focus && {
-            transformOrigin: `${focus.x}px ${focus.y}px`,
+          effectiveFocus && {
+            transformOrigin: `${effectiveFocus.x}px ${effectiveFocus.y}px`,
             transform: `translate(${shift.x}px, ${shift.y}px) scale(${focusScale})`,
           }
         }
@@ -117,6 +124,7 @@ const MapBoard: React.FunctionComponent<MapBoardProps> = ({
   return (
     <div
       ref={fitRef}
+      id="adaptive-tour-map-canvas"
       className={classNames(styles.fit, byWidth && styles.byWidth)}
       // The board's own box keeps its unscaled size, so this one sets the height.
       style={byWidth ? {height: Math.floor(layout.height * fit)} : undefined}

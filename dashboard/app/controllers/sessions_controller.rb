@@ -1,4 +1,5 @@
 require 'policies/child_account'
+require 'policies/lti'
 
 class SessionsController < Devise::SessionsController
   include UsersHelper
@@ -23,6 +24,7 @@ class SessionsController < Devise::SessionsController
         @email = params[:email]
       end
     end
+    nudge_toward_sso if DCDO.get('sso_nudge_enabled', false) && failed_password_login?
     super
   end
 
@@ -114,6 +116,67 @@ class SessionsController < Devise::SessionsController
 
     @permission_status = current_user.cap_status
     @in_section = current_user.sections_as_student.present?
+  end
+
+  # True when `new` is rendering because the login form was just rejected.
+  #
+  # A failed POST to `create` does not redirect back to the sign-in page.
+  # Devise's failure app instead calls `new` within the same request: the
+  # method is still POST, the submitted email and password are still in
+  # params, and flash.now already holds "Invalid email or password". The
+  # warden `recall` option is what marks that in-request handoff; a plain
+  # visit to the sign-in page is a GET and has no such option.
+  private def failed_password_login?
+    request.post? && request.env['warden.options']&.dig(:recall).present?
+  end
+
+  # Users whose account signs in through an SSO provider often try the
+  # password form anyway, fail, and end up asking support for a password
+  # reset. Replace the generic failure alert with a pointer at the provider
+  # they already have.
+  private def nudge_toward_sso
+    sso_option = sso_option_for_submitted_login
+    return unless sso_option
+
+    flash.now[:alert] =
+      if sso_option.lti?
+        I18n.t 'auth.lti_login_nudge', platform: lms_display_name(sso_option)
+      else
+        provider = I18n.t "auth.#{sso_option.credential_type}", default: sso_option.credential_type
+        I18n.t 'auth.sso_login_nudge', provider: provider
+      end
+  end
+
+  # The form submits either `hashed_email` (hashed client-side) or `login`,
+  # which may be a username or a cleartext email. A username never matches
+  # an auth option's hashed_email, so it falls through to nil.
+  #
+  # Providers in UNTRUSTED_EMAIL_CREDENTIAL_TYPES do not guarantee an email
+  # belongs to one person, so the same hashed_email can sit on options owned
+  # by different users. Nudging then could point at a provider someone else
+  # used, so the nudge is only given when every match belongs to one user.
+  private def sso_option_for_submitted_login
+    submitted = params[:user] || {}
+    hashed_email = submitted[:hashed_email].presence
+    hashed_email ||= AuthenticationOption.hash_email(submitted[:login].strip) if submitted[:login].present?
+    return if hashed_email.blank?
+
+    options = AuthenticationOption.
+      where(hashed_email: hashed_email).
+      where.not(credential_type: AuthenticationOption::EMAIL).
+      order(updated_at: :desc).
+      to_a
+    return unless options.map(&:user_id).uniq.one?
+
+    options.first
+  end
+
+  # Find the human-readable name for the LMS based on the issuer
+  # from the authentication_id.
+  private def lms_display_name(lti_option)
+    issuer = lti_option.lti_issuer
+    Policies::Lti.find_platform_by_issuer(issuer)&.dig(:name) ||
+      I18n.t('auth.lti_login_nudge_default_platform')
   end
 
   # Override default Devise sign_out path method

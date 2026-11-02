@@ -11,6 +11,7 @@ import reducer, {
   stepPredictionByHand,
   setMode,
   setReserveLocation,
+  setDatasetLayout,
   setDatasetLoaded,
   setSelectedCSV,
   resetState,
@@ -200,6 +201,11 @@ describe('ailab reducer', () => {
       const enabled = reducer(initialState, setInstructionsEnabled(true));
       const next = reducer(enabled, resetState());
       expect(next.instructionsEnabled).toBe(true);
+    });
+
+    test('preserves the dataset layout through reset', () => {
+      const cards = reducer(initialState, setDatasetLayout('cards'));
+      expect(reducer(cards, resetState()).datasetLayout).toBe('cards');
     });
   });
 

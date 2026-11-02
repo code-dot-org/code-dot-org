@@ -22,6 +22,7 @@ export interface MapProps {
   /** Defaults to 'whole'. */
   fit?: MapFit;
   onSelect: (id: string) => void;
+  tourFocusIds?: string[];
 }
 
 interface MapViewProps extends MapProps {

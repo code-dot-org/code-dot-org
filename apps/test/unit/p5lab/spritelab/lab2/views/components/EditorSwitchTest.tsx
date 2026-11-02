@@ -12,23 +12,21 @@ describe('EditorSwitch', () => {
     expect(code.getAttribute('aria-pressed')).toBe('true');
     expect(world.getAttribute('aria-pressed')).toBe('false');
     fireEvent.click(world);
-    expect(onChange).toHaveBeenCalledWith('World', expect.anything());
+    expect(onChange).toHaveBeenCalledWith('World');
   });
 
-  it('disables an editor not on offer, with its reason on hover', () => {
+  it('disables an editor not on offer', () => {
     render(
       <EditorSwitch
         value="Code"
         onChange={jest.fn()}
-        disabledEditors={{World: 'A story scene has no world.'}}
+        disabledEditors={['World']}
       />
     );
     const world = screen.getByRole('button', {name: 'World'});
     expect((world as HTMLButtonElement).disabled).toBe(true);
-    expect(world.getAttribute('title')).toBe('A story scene has no world.');
     const code = screen.getByRole('button', {name: 'Code'});
     expect((code as HTMLButtonElement).disabled).toBe(false);
-    expect(code.getAttribute('title')).toBeNull();
   });
 
   it('offers the editors it is given, in order', () => {

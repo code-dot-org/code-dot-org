@@ -1,3 +1,5 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
@@ -5,8 +7,6 @@ import {getStore} from '@cdo/apps/redux';
 import msg from '@cdo/locale';
 
 import Lightbulb from '../templates/Lightbulb';
-
-import LegacyButton from './LegacyButton';
 
 export default class DialogButtons extends Component {
   static propTypes = {
@@ -38,67 +38,69 @@ export default class DialogButtons extends Component {
     if (this.props.ok) {
       okButton = (
         <div className="farSide">
-          <LegacyButton type="primary" id="ok-button">
+          <MuiButton variant="contained" color="primary" id="ok-button">
             {msg.dialogOK()}
-          </LegacyButton>
+          </MuiButton>
         </div>
       );
     }
 
     if (cancelText) {
       cancelButton = (
-        <LegacyButton
-          type={isDangerCancel ? 'danger' : 'cancel'}
+        <MuiButton
+          {...(isDangerCancel
+            ? {variant: 'contained', color: 'error'}
+            : {variant: 'outlined', color: 'secondary'})}
           id="again-button"
         >
           {cancelText}
-        </LegacyButton>
+        </MuiButton>
       );
     }
 
     if (this.props.confirmText) {
       confirmButton = (
-        <LegacyButton
-          type="primary"
+        <MuiButton
+          variant="contained"
+          color="primary"
           id="confirm-button"
-          className="launch"
           style={styles.confirmButton}
         >
           {this.props.confirmText}
-        </LegacyButton>
+        </MuiButton>
       );
     }
 
     if (this.props.tryAgain) {
       if (this.props.isK1 && !this.props.freePlay) {
         againButton = (
-          <LegacyButton
-            type="cancel"
+          <MuiButton
+            variant="outlined"
+            color="secondary"
             size="large"
-            style={styles.againButtonFormerArrowBtn}
             id="again-button"
-            className="launch"
           >
             {this.props.tryAgain}
-          </LegacyButton>
+          </MuiButton>
         );
       } else {
         if (this.props.shouldPromptForHint) {
           hintButton = (
-            <LegacyButton
-              type="default"
+            <MuiButton
+              variant="outlined"
+              color="secondary"
               id="hint-request-button"
               style={styles.hintButton}
             >
               <Lightbulb size={32} style={styles.lightbulb} />
               {msg.hintRequest()}
-            </LegacyButton>
+            </MuiButton>
           );
         }
         againButton = (
-          <LegacyButton type="cancel" id="again-button" className="launch">
+          <MuiButton variant="outlined" color="secondary" id="again-button">
             {this.props.tryAgain}
-          </LegacyButton>
+          </MuiButton>
         );
       }
     }
@@ -106,25 +108,30 @@ export default class DialogButtons extends Component {
     if (this.props.nextLevel) {
       nextButton =
         this.props.isK1 && !this.props.freePlay ? (
-          <LegacyButton
-            type="legacyPrimary"
+          <MuiButton
+            variant="contained"
+            color="primary"
             size="large"
-            arrow={isRtl ? 'left' : 'right'}
+            endIcon={
+              <FontAwesomeV6Icon
+                iconName={isRtl ? 'chevron-left' : 'chevron-right'}
+                iconStyle="solid"
+              />
+            }
             id="continue-button"
-            className="launch"
             style={isRtl ? styles.nextButtonRtl : styles.nextButton}
           >
             {this.props.continueText}
-          </LegacyButton>
+          </MuiButton>
         ) : (
-          <LegacyButton
-            type="legacyPrimary"
+          <MuiButton
+            variant="contained"
+            color="primary"
             id="continue-button"
-            className="launch"
             style={isRtl ? styles.nextButtonRtl : styles.nextButton}
           >
             {this.props.continueText}
-          </LegacyButton>
+          </MuiButton>
         );
     }
 
@@ -156,8 +163,5 @@ const styles = {
   },
   hintButton: {
     marginRight: 10,
-  },
-  againButtonFormerArrowBtn: {
-    marginTop: 25.5,
   },
 };

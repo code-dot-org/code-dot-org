@@ -33,6 +33,11 @@
   }
 }
 
+// Nested to outrank ChatMessage's own background, whatever the bundle order.
+.instructionsScrollArea .instructionsMessage {
+  background-color: var(--background-neutral-secondary);
+}
+
 .scrollFade {
   position: absolute;
   right: 0;
