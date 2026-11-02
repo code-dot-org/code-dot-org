@@ -17,7 +17,7 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
     DCDO.stubs(:get).with('lesson-deep-dive-enabled', true).returns(true)
     DCDO.stubs(:get).with('spritelab-lab2-ask-ai-enabled', true).returns(true)
     stub_turnstile_enforcement_mode(AiGatewayAuthController::TURNSTILE_ENFORCEMENT_MODE_DEFAULT)
-    DCDO.stubs(:get).with('ai_gateway_enforces_blocked_providers', anything).returns(false)
+    DCDO.stubs(:get).with('ai_gateway_fallback_is_enabled', anything).returns(false)
     stub_environment_key_enabled(false)
     @params = {
       aichatContext: {
@@ -53,10 +53,10 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
     assert_equal @authorized_teacher.user_type, body['user_type']
   end
 
-  test 'mints a token for a blocked user once the gateway enforces the block, stamping the blocked providers' do
+  test 'mints a token for a blocked user once the gateway fallback is enabled, stamping the blocked providers' do
     sign_in(@authorized_teacher)
     User.any_instance.stubs(:blocked_aichat_providers).returns(SharedConstants::AI_CHAT_US_ONLY_PROVIDERS)
-    DCDO.stubs(:get).with('ai_gateway_enforces_blocked_providers', anything).returns(true)
+    DCDO.stubs(:get).with('ai_gateway_fallback_is_enabled', anything).returns(true)
     payload = stub_jwt_encode
 
     post :get_access_token, params: @params, as: :json
