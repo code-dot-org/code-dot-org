@@ -14,7 +14,7 @@ import styles from './match-answer.module.scss';
 type MatchResult = QuizQuestionResult & MatchQuestionResponse;
 
 // A submitted match question: the pairs as made, read-only. With the answer
-// key revealed, each pair is marked, and a wrong answer is followed by the
+// key revealed, each pair is marked, and only a wrong answer is followed by the
 // correct one. Note that this is different from other question types,
 // where correct answers are typically shown inline with the submission.
 const MatchAnswer: React.FunctionComponent<{
