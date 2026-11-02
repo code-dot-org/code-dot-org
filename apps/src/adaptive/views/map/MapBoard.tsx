@@ -1,5 +1,7 @@
 import classNames from 'classnames';
-import React, {useContext} from 'react';
+import React, {useContext, useRef} from 'react';
+
+import useElementSize from '@cdo/apps/util/hooks/useElementSize';
 
 import {CheckpointStatusMap} from '../../progress';
 
@@ -7,7 +9,6 @@ import {DrawnEdge} from './layout/busRoutes';
 import {MapLayout, NodePosition} from './layout/types';
 import {MapFit} from './MapView';
 import {MapZoomContext} from './MapZoom';
-import {useElementSize} from './useElementSize';
 
 import styles from './mapBoard.module.scss';
 
@@ -46,23 +47,24 @@ const MapBoard: React.FunctionComponent<MapBoardProps> = ({
   tourFocus,
   children,
 }) => {
-  const [fitRef, space] = useElementSize<HTMLDivElement>();
+  const fitRef = useRef<HTMLDivElement>(null);
+  const [spaceWidth, spaceHeight] = useElementSize(fitRef);
   // The board fills the zoomed content, so they share coordinates.
   const outer = useContext(MapZoomContext);
-  const center = outer.center || {x: space.width / 2, y: space.height / 2};
+  const center = outer.center || {x: spaceWidth / 2, y: spaceHeight / 2};
   const byWidth = fitTo === 'width';
-  const widthFit = space.width ? space.width / layout.width : 1;
+  const widthFit = spaceWidth ? spaceWidth / layout.width : 1;
   const fit = byWidth
     ? widthFit
-    : space.width
-    ? Math.min(1, widthFit, space.height / layout.height)
+    : spaceWidth
+    ? Math.min(1, widthFit, spaceHeight / layout.height)
     : 1;
   const fitLeft = byWidth
     ? 0
-    : Math.max(0, (space.width - layout.width * fit) / 2);
+    : Math.max(0, (spaceWidth - layout.width * fit) / 2);
   const fitTop = byWidth
     ? 0
-    : Math.max(0, (space.height - layout.height * fit) / 2);
+    : Math.max(0, (spaceHeight - layout.height * fit) / 2);
   const effectiveFocus = focus ?? tourFocus;
   const focusScale = Math.max(
     1,
