@@ -67,7 +67,6 @@ namespace :build do
       ChatClient.log 'Installing <b>dashboard</b> python dependencies'
       RakeUtils.python_venv_install
 
-      # Provision writer and reader SQL users on systems not provisioned via CloudFormation.
       ChatClient.log 'Provisioning <b>dashboard</b> SQL users...'
       RakeUtils.rake 'db:provision_sql_users'
 
