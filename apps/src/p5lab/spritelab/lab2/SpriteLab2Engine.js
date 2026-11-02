@@ -701,9 +701,7 @@ export default class SpriteLab2Engine extends SpriteLab {
       if (!this.canAskAi_()) {
         return;
       }
-      // Register under the variable name to enable the 'When <variable> answered' block
-      // to respond when the AI answer is available.
-      library.registerPrompt(promptText, variableName, setterCallback);
+      this.registerAiAnswer_(library, variableName, setterCallback);
       askAiText(String(promptText ?? '')).then(
         text => {
           if (this.destroyed_ || runId !== this.runId_) {
@@ -715,7 +713,6 @@ export default class SpriteLab2Engine extends SpriteLab {
           if (this.destroyed_ || runId !== this.runId_) {
             return;
           }
-          library.numActivePrompts--;
           console.warn(
             error instanceof AskAiError
               ? `SpriteLab2: the ask AI block's ${error.phase} did not pass the safety check.`
@@ -727,8 +724,25 @@ export default class SpriteLab2Engine extends SpriteLab {
     return library;
   }
 
+  registerAiAnswer_(library, variableName, setterCallback) {
+    if (!variableName) {
+      return;
+    }
+    if (library.promptVars[variableName] === undefined) {
+      library.promptVars[variableName] = null;
+    }
+    if (!library.userInputEventCallbacks[variableName]) {
+      library.userInputEventCallbacks[variableName] = {
+        setterCallbacks: [],
+        userCallbacks: [],
+      };
+    }
+    library.userInputEventCallbacks[variableName].setterCallbacks.push(
+      setterCallback
+    );
+  }
+
   deliverAiAnswer_(library, variableName, text) {
-    library.numActivePrompts--;
     library.promptVars[variableName] = text;
     const callbacks = library.userInputEventCallbacks[variableName];
     if (!callbacks) {
