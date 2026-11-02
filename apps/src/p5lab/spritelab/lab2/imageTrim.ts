@@ -298,20 +298,30 @@ export function filterAnimationsToNames(
  * keepNames lists every name in the project, so that a scene-scoped
  * subset doesn't prune thumbnails of images other scenes still use — a
  * thumbnail is only dropped for a name absent from the whole project.
+ *
+ * thumbnails: false leaves the thumbnail cache alone. The cache is keyed
+ * by name and shows this project's images in the editor; a classmate's
+ * list (an external scene) can use the same names and would overwrite
+ * them.
  */
 export async function trimAnimationListImages(
   list: RuntimeAnimationList,
-  keepNames?: Set<string>
+  {
+    keepNames,
+    thumbnails = true,
+  }: {keepNames?: Set<string>; thumbnails?: boolean} = {}
 ): Promise<RuntimeAnimationList> {
   const propsByKey: RuntimeAnimationList['propsByKey'] = {};
   let newTrims = false;
   // Drop cached trims for names absent from the list: a deleted image's
   // thumbnail must not resurface when a new image takes the same name.
   const currentNames = keepNames || animationNames(list);
-  for (const name of thumbByName.keys()) {
-    if (!currentNames.has(name)) {
-      thumbByName.delete(name);
-      newTrims = true;
+  if (thumbnails) {
+    for (const name of thumbByName.keys()) {
+      if (!currentNames.has(name)) {
+        thumbByName.delete(name);
+        newTrims = true;
+      }
     }
   }
   const noteThumb = (name: string | undefined, thumb: string) => {
@@ -331,7 +341,7 @@ export async function trimAnimationListImages(
         BACKGROUNDS_CATEGORY
       );
       if (isBackground || !props.dataURI) {
-        if (isBackground && props.dataURI) {
+        if (isBackground && props.dataURI && thumbnails) {
           noteThumb(
             props.name,
             await thumbnailFromDataURI(props.dataURI, pixelated)
@@ -348,7 +358,9 @@ export async function trimAnimationListImages(
         : props.trimmed
         ? props.dataURI
         : await trimTransparentBorder(props.dataURI);
-      noteThumb(props.name, await thumbnailFromDataURI(trimmed, pixelated));
+      if (thumbnails) {
+        noteThumb(props.name, await thumbnailFromDataURI(trimmed, pixelated));
+      }
       propsByKey[key] = isSheet ? props : {...props, dataURI: trimmed};
     })
   );

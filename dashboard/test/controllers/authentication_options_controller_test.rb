@@ -23,7 +23,7 @@ class AuthenticationOptionsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'disconnect: if the removed AuthenticationOption was primary and a replacement is available, replaces it' do
-    email = 'example@gmail.com'
+    email = random_email
     teacher = create(:teacher)
     google_option = create(:google_authentication_option, user: teacher, email: email)
     facebook_option = create(:facebook_authentication_option, user: teacher, email: email)
@@ -49,7 +49,7 @@ class AuthenticationOptionsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'disconnect: if the removed AuthenticationOption was primary and no replacement is available, creates one' do
-    email = 'example@gmail.com'
+    email = random_email
     teacher = create(:teacher)
     google_option = create(:google_authentication_option, user: teacher, email: email)
     teacher.update(primary_contact_info: google_option)
@@ -79,8 +79,8 @@ class AuthenticationOptionsControllerTest < ActionDispatch::IntegrationTest
 
   test 'disconnect: removes every ClassLink option when one of them is disconnected' do
     teacher = create(:teacher)
-    v1_option = create_versioned_option(teacher, AuthenticationOption::CLASSLINK, version: nil, authentication_id: '12345678')
-    v2_option = create_versioned_option(teacher, AuthenticationOption::CLASSLINK, version: AuthenticationOption::Classlink::VERSION[:v2], authentication_id: 'tenant|sourced')
+    v1_option = create_versioned_option(teacher, AuthenticationOption::CLASSLINK, version: nil, authentication_id: classlink_v1_id)
+    v2_option = create_versioned_option(teacher, AuthenticationOption::CLASSLINK, version: AuthenticationOption::Classlink::VERSION[:v2], authentication_id: classlink_v2_id)
     google_option = create(:google_authentication_option, user: teacher, email: teacher.email)
     teacher.reload
 
@@ -100,10 +100,10 @@ class AuthenticationOptionsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'disconnect: replaces primary_contact_info when it was a hidden ClassLink option' do
-    email = 'example@gmail.com'
+    email = random_email
     teacher = create(:teacher, email: email)
-    v1_option = create_versioned_option(teacher, AuthenticationOption::CLASSLINK, version: nil, authentication_id: '12345678')
-    v2_option = create_versioned_option(teacher, AuthenticationOption::CLASSLINK, version: AuthenticationOption::Classlink::VERSION[:v2], authentication_id: 'tenant|sourced')
+    v1_option = create_versioned_option(teacher, AuthenticationOption::CLASSLINK, version: nil, authentication_id: classlink_v1_id)
+    v2_option = create_versioned_option(teacher, AuthenticationOption::CLASSLINK, version: AuthenticationOption::Classlink::VERSION[:v2], authentication_id: classlink_v2_id)
     teacher.update(primary_contact_info: v1_option)
     teacher.reload
 
@@ -127,9 +127,9 @@ class AuthenticationOptionsControllerTest < ActionDispatch::IntegrationTest
 
   test 'disconnect: removes every Clever option when one of them is disconnected' do
     teacher = create(:teacher)
-    pre_v3_option = create_versioned_option(teacher, AuthenticationOption::CLEVER, version: nil, authentication_id: 'clever-v2-id')
-    v3_option = create_versioned_option(teacher, AuthenticationOption::CLEVER, version: AuthenticationOption::Clever::VERSION[:v3], authentication_id: 'clever-v3-id')
-    classlink_option = create_versioned_option(teacher, AuthenticationOption::CLASSLINK, version: nil, authentication_id: '12345678')
+    pre_v3_option = create_versioned_option(teacher, AuthenticationOption::CLEVER, version: nil, authentication_id: SecureRandom.uuid)
+    v3_option = create_versioned_option(teacher, AuthenticationOption::CLEVER, version: AuthenticationOption::Clever::VERSION[:v3], authentication_id: SecureRandom.uuid)
+    classlink_option = create_versioned_option(teacher, AuthenticationOption::CLASSLINK, version: nil, authentication_id: classlink_v1_id)
     teacher.reload
 
     sign_in teacher
@@ -145,7 +145,7 @@ class AuthenticationOptionsControllerTest < ActionDispatch::IntegrationTest
 
   test 'disconnect: leaves other providers alone when disconnecting a Google option' do
     teacher = create(:teacher)
-    classlink_option = create_versioned_option(teacher, AuthenticationOption::CLASSLINK, version: nil, authentication_id: '12345678')
+    classlink_option = create_versioned_option(teacher, AuthenticationOption::CLASSLINK, version: nil, authentication_id: classlink_v1_id)
     google_option = create(:google_authentication_option, user: teacher, email: teacher.email)
     teacher.reload
 
@@ -156,6 +156,86 @@ class AuthenticationOptionsControllerTest < ActionDispatch::IntegrationTest
     teacher.reload
     refute_includes teacher.authentication_options, google_option
     assert_includes teacher.authentication_options, classlink_option
+  end
+
+  test 'disconnect: a ClassLink student with no email falls back to a remaining option as primary' do
+    student = create(:student, :without_email_auth_option)
+    pre_v2_option = create_blank_email_option(student, AuthenticationOption::CLASSLINK, version: nil)
+    v2_option = create_blank_email_option(student, AuthenticationOption::CLASSLINK, version: AuthenticationOption::Classlink::VERSION[:v2])
+    google_option = create(:google_authentication_option, user: student, email: random_email)
+    student.update!(primary_contact_info: v2_option)
+    blank_email_option_for_another_user
+    student.reload
+
+    # Preconditions
+    assert_equal '', v2_option.hashed_email
+    assert_equal v2_option, student.primary_contact_info
+
+    sign_in student
+    post "/users/auth/#{v2_option.id}/disconnect"
+    assert_includes(flash[:notice], "Success!")
+    assert_response :redirect
+
+    student.reload
+    refute_includes student.authentication_options, pre_v2_option
+    refute_includes student.authentication_options, v2_option
+    assert_equal [google_option], student.authentication_options.to_a
+    assert_equal google_option, student.primary_contact_info
+  end
+
+  test 'disconnect: a Clever student with no email and a single Clever option falls back to a remaining option as primary' do
+    student = create(:student, :without_email_auth_option)
+    clever_option = create_blank_email_option(student, AuthenticationOption::CLEVER, version: AuthenticationOption::Clever::VERSION[:v3])
+    google_option = create(:google_authentication_option, user: student, email: random_email)
+    student.update!(primary_contact_info: clever_option)
+    blank_email_option_for_another_user
+    student.reload
+
+    sign_in student
+    post "/users/auth/#{clever_option.id}/disconnect"
+    assert_includes(flash[:notice], "Success!")
+    assert_response :redirect
+
+    student.reload
+    assert_equal [google_option], student.authentication_options.to_a
+    assert_equal google_option, student.primary_contact_info
+  end
+
+  test 'disconnect: a Clever student with no email and no other option is left without a primary_contact_info' do
+    student = create(:student, :without_email_auth_option)
+    clever_option = create_blank_email_option(student, AuthenticationOption::CLEVER, version: AuthenticationOption::Clever::VERSION[:v3])
+    student.update!(primary_contact_info: clever_option)
+    blank_email_option_for_another_user
+    student.reload
+
+    sign_in student
+    post "/users/auth/#{clever_option.id}/disconnect"
+    assert_includes(flash[:notice], "Success!")
+    assert_response :redirect
+
+    student.reload
+    assert_empty student.authentication_options
+    assert_nil student.primary_contact_info
+  end
+
+  test 'disconnect: keeps every option and shows an alert when the replacement email option is already taken' do
+    email = random_email
+    create(:teacher, email: email)
+    teacher = create(:teacher)
+    clever_option = create_versioned_option(teacher, AuthenticationOption::CLEVER, version: AuthenticationOption::Clever::VERSION[:v3], authentication_id: SecureRandom.uuid, email: email)
+    teacher.update!(primary_contact_info: clever_option)
+    teacher.reload
+    options_before = teacher.authentication_options.to_a
+
+    sign_in teacher
+    post "/users/auth/#{clever_option.id}/disconnect"
+    assert_equal I18n.t('auth.disconnect_failed'), flash[:alert]
+    assert_nil flash[:notice]
+    assert_redirected_to edit_user_registration_path
+
+    teacher.reload
+    assert_equal options_before.sort_by(&:id), teacher.authentication_options.sort_by(&:id)
+    assert_equal clever_option, teacher.primary_contact_info
   end
 
   test 'disconnect: returns not_found if the AuthenticationOption does not exist' do
@@ -179,15 +259,50 @@ class AuthenticationOptionsControllerTest < ActionDispatch::IntegrationTest
     end
   end
 
-  private def create_versioned_option(user, credential_type, version:, authentication_id:)
+  private def create_versioned_option(user, credential_type, version:, authentication_id:, email: user.email)
     create(
       :authentication_option,
       user: user,
-      email: user.email,
-      hashed_email: user.hashed_email,
+      email: email,
+      hashed_email: User.hash_email(email),
       credential_type: credential_type,
       authentication_id: authentication_id,
       version: version
     )
+  end
+
+  # Create an auth option with blank email and hashed email to simulate
+  # ClassLink or Clever sign-ups, or an email auth option created to match an email
+  # address from Clever or Classlink.
+  private def create_blank_email_option(user, credential_type, version:)
+    create(
+      :authentication_option,
+      user: user,
+      email: '',
+      hashed_email: '',
+      credential_type: credential_type,
+      authentication_id: SecureRandom.uuid,
+      version: version
+    )
+  end
+
+  # The EMAIL option with a blank authentication_id that a disconnect used to
+  # synthesize for students without an email. Only one can exist per database,
+  # so reuse one left behind by an earlier test run rather than fail creating it.
+  private def blank_email_option_for_another_user
+    AuthenticationOption.find_by(credential_type: AuthenticationOption::EMAIL, authentication_id: '') ||
+      create(:authentication_option, user: create(:student, :without_email_auth_option), email: '', hashed_email: '')
+  end
+
+  private def random_email
+    "#{SecureRandom.uuid}@example.com"
+  end
+
+  private def classlink_v1_id
+    rand(10_000_000..99_999_999).to_s
+  end
+
+  private def classlink_v2_id
+    "#{SecureRandom.uuid}|#{SecureRandom.uuid}"
   end
 end

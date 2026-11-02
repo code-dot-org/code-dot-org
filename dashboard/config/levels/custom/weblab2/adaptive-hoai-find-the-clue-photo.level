@@ -20,6 +20,16 @@
           "contents": "body {\n  font-family: system-ui, Arial, sans-serif;\n  background: #fff4c7;\n  color: #1d3b53;\n  text-align: center;\n  padding: 50px 20px;\n}\n\nh1 {\n  font-size: 2.6rem;\n  margin-bottom: 8px;\n}\n\np {\n  font-size: 1.2rem;\n}\n\nimg {\n  width: 100%;\n  max-width: 480px;\n  border-radius: 16px;\n  margin-top: 20px;\n}\n",
           "folderId": "0",
           "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "skateboard-photo.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "https://images.code.org/89bd6c4a63f3f7a3718fe4d734cf84d1-skateboard-photo.jpg",
+          "type": "starter",
+          "active": false
         }
       },
       "openFiles": [
@@ -28,7 +38,7 @@
       ]
     },
     "hide_share_and_remix": true,
-    "long_instructions": "**Do This**\n\n1.  Run the page. The photo is missing.\n2.  Ask the AI for help. Tell it what’s wrong.\n3.  Run the page again. Is the photo there?\n\nHere’s what the page is telling you: skateboard-photo.jpeg 404 (Not Found)"
+    "long_instructions": "**Do This**\n\n1.  Look at the preview. The photo is missing.\n2.  Ask the AI for help. Tell it what’s wrong.\n3.  Check the preview again. Is the photo there?\n\nHere’s what the page is telling you: skateboard-photo.jpeg 404 (Not Found)"
   },
   "published": true
 }]]></config>

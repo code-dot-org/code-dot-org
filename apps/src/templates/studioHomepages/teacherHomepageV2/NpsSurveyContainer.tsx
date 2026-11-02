@@ -1,5 +1,6 @@
 import React, {useMemo} from 'react';
 
+import HttpClient from '@cdo/apps/util/HttpClient';
 import loadable from '@cdo/apps/util/loadable';
 
 const LoadableFoorm = loadable(
@@ -96,6 +97,24 @@ interface NpsSurveyContainerProps {
   NPSProps: string;
   onCompleteCallback: () => void;
 }
+
+// Like any submission, this keeps the server from offering the survey again.
+export const submitNpsSurveyDismissal = (npsProps: string) => {
+  const {formName, formVersion, submitApi, submitParams}: SurveyPropsInterface =
+    JSON.parse(npsProps);
+  return HttpClient.post(
+    submitApi,
+    JSON.stringify({
+      ...submitParams,
+      // A string, matching the form-encoded answers Foorm itself submits.
+      answers: {nps_value: '-1'},
+      form_name: formName,
+      form_version: formVersion,
+    }),
+    true,
+    {'Content-Type': 'application/json'}
+  );
+};
 
 const NpsSurveyContainer: React.FC<NpsSurveyContainerProps> = ({
   NPSProps,

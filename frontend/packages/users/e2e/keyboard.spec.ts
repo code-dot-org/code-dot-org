@@ -34,6 +34,21 @@ test('the Integrations tab is hidden from an account that cannot manage linked a
   await expect(page.getByRole('tab', {name: 'Integrations'})).toHaveCount(0);
 });
 
+test('a disconnect blocked for want of another login says why', async ({
+  page,
+}) => {
+  await gotoLoaded(page, 'lti-only-teacher');
+  await page.getByRole('tab', {name: 'Integrations'}).click();
+
+  const disconnect = page.getByRole('button', {
+    name: /^disconnect powerschool/i,
+  });
+  await expect(disconnect).toBeDisabled();
+  await expect(disconnect).toHaveAccessibleDescription(
+    /add a password or another linked account/,
+  );
+});
+
 test('Save button submits on Enter when focused', async ({page}) => {
   await gotoLoaded(page);
   await page.getByLabel(/Display name/).fill('Grace');

@@ -118,6 +118,7 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "stubSecrets": {"type": "boolean"},
         "mounts": {
           "type": "object",
           "additionalProperties": false,
@@ -134,6 +135,18 @@
               }
             }
           }
+        }
+      }
+    },
+    "serviceAccount": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "create": {"type": "boolean"},
+        "name": {"type": "string", "minLength": 1},
+        "annotations": {
+          "type": "object",
+          "additionalProperties": {"type": "string"}
         }
       }
     },

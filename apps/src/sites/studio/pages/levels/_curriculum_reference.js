@@ -23,10 +23,7 @@ $(document).ready(() => {
         <h1>{referenceGuide.display_name}</h1>
         <ReferenceGuide referenceGuide={referenceGuide} />
       </>,
-      refGuideElement,
-      {
-        legacyReactDomRender: true,
-      }
+      refGuideElement
     );
   }
 

@@ -1,0 +1,18 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2026-10-20T19:16:24.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "skip_dialog": true,
+    "skip_sound": true,
+    "long_instructions": "Imagine you have a collection of various objects. What different features could you use to sort these objects into groups?",
+    "placeholder": "List potential sorting features...",
+    "encrypted_solution": "OzCWOq9Fb9sWWeJ86BL0gi68rcuUgbIctL/X9cE78wREKFqXnxXurI6tDQNB\nG43tIs/nb+h1K29xP7AojE7S3yzu4EcKic0taUCDAbplD3ETbuq9N7pIGXaq\nEougf2n7zvRA5Ob5UlSiWl3QpPhDQE4Jo4QM6bPzpAwqVqBJX1Om/1CRZgg+\nQmbAmGl5PXPl4KcJAbpyPQ3CfyBDIiJ1LP/hxrMpV4zB/VcrIVIomrRueh43\n7JPo+DpNUI4Nx61tlVMsHJk+wixiDJ9KhclFUHeKgwbxNFVF3S5fXbUhKDRz\nzAO33MSH3uEKSPJOYlaGx1hp9kiGrBsm4Og/xRRn/Q==\n",
+    "generate_outline": "Look at this group of objects and name features they could be sorted by"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-20 19:16:30 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-20 19:16:51 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-20 19:16:51 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-20 19:16:51 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</FreeResponse>

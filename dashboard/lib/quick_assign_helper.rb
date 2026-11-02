@@ -12,8 +12,8 @@ module QuickAssignHelper
     offerings[:elementary] = group_grade_level_offerings(assignable_elementary_offerings, user, locale)
     offerings[:middle] = group_grade_level_offerings(assignable_middle_offerings, user, locale)
     offerings[:high] = group_grade_level_offerings(assignable_high_offerings, user, locale)
-    offerings[:hoc] = group_hoc_and_pl_offerings(assignable_hoc_offerings, user, locale)
-    offerings[:hoai] = group_hoc_and_pl_offerings(assignable_hoai_offerings, user, locale)
+    offerings[:hoc] = group_hoc_and_pl_offerings(assignable_hoc_offerings, user, locale, recommend_featured: false)
+    offerings[:hoai] = group_hoc_and_pl_offerings(assignable_hoai_offerings, user, locale, recommend_featured: false)
 
     unless participant_type == Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student
       # Courses with a participant_audience of student are shown in other places
@@ -30,15 +30,17 @@ module QuickAssignHelper
 
   # We want to organize the course offerings in a very specific format.
   # In particular, we want to group by curriculum_type then header within each curriculum_type.
-  # The headers within each curriculum_type will be sorted alphabetically.
+  # The headers within each curriculum_type will be sorted alphabetically, except for
+  # "Recommended", "Favorites" and "Year Long", which are forced to the front. See compare_headers.
   # The offerings within a header will be sorted alphabetically by display_name.
-  # Any course_offerings that do not have a curriculum_type and a header will be ignored.
+  # Any course_offerings that do not have a curriculum_type and a header will be ignored,
+  # whether or not they are featured. See header_for.
   def self.group_grade_level_offerings(course_offerings, user, locale)
     data = {}
     course_offerings.each do |co|
       next if co.header.blank? || co.curriculum_type.blank?
 
-      header = localized_header(co.header)
+      header = header_for(co)
 
       data[co.curriculum_type] ||= {}
       data[co.curriculum_type][header] ||= []
@@ -56,8 +58,20 @@ module QuickAssignHelper
     data
   end
 
-  # Helper function to compare headers so that "Favorites" (hoc) and "Year Long" are always first
+  # A featured course offering is grouped under "Recommended" instead of the header it was
+  # assigned, not in addition to it, so it is listed exactly once. Featuring an offering
+  # only promotes it within quick assign; it does not make a headerless offering visible,
+  # because callers drop those before getting here.
+  def self.header_for(course_offering)
+    return localized_header('recommended') if course_offering.is_featured?
+    localized_header(course_offering.header)
+  end
+
+  # Helper function to compare headers so that "Recommended" is always first, followed by
+  # "Favorites" (hoc) and "Year Long"
   def self.compare_headers(h1, h2)
+    return -1 if h1 == localized_header('recommended')
+    return 1 if h2 == localized_header('recommended')
     return -1 if h1 == localized_header('favorites') || h1 == localized_header('year_long')
     return 1 if h2 == localized_header('favorites') || h2 == localized_header('year_long')
     h1 <=> h2
@@ -66,13 +80,16 @@ module QuickAssignHelper
   # We want to organize the course offerings by their headers then sort those headers
   # according to the logic in compare_headers above
   # The offerings within a header will be sorted alphabetically by display_name.
-  # Any course_offerings that do not have a header will be ignored.
-  def self.group_hoc_and_pl_offerings(course_offerings, user, locale)
+  # Any course_offerings that do not have a header will be ignored, whether or not they
+  # are featured. See header_for.
+  # With recommend_featured: false, as for HoC and HoAI, is_featured is ignored and every
+  # offering stays under its own header.
+  def self.group_hoc_and_pl_offerings(course_offerings, user, locale, recommend_featured: true)
     data = {}
     course_offerings.each do |co|
       next if co.header.blank?
 
-      header = localized_header(co.header)
+      header = recommend_featured ? header_for(co) : localized_header(co.header)
       data[header] ||= []
       data[header].append(co.summarize_for_quick_assign(user, locale))
     end

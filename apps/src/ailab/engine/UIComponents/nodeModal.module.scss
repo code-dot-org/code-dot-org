@@ -1,0 +1,54 @@
+@use '../sharedMixins' as mixins;
+
+.dialog {
+  @include mixins.modal;
+}
+
+.titleRow {
+  @include mixins.modal-title-row;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 20px;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 20px 24px 24px;
+}
+
+.rowsTabs {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.panels {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+
+  > [role='tabpanel']:not([hidden]) {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-height: 0;
+  }
+}
+
+.tabRow {
+  @include mixins.modal-tabs;
+
+  // Primary tabs read these tokens for the selected tab.
+  --text-neutral-primary: var(--text-selected-primary-inverse);
+  --borders-brand-teal-primary: var(--border-selected-primary);
+
+  box-shadow: inset 0 -1px 0 var(--border-neutral-primary);
+}
+
+.actionRow {
+  @include mixins.modal-action-row;
+}

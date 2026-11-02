@@ -13,6 +13,7 @@ import buildCSSContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/buil
 import buildHTMLContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/buildHTML.md';
 import buildJavaScriptContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/buildJavaScript.md';
 import buildJSONContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/buildJSON.md';
+import buildPageContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/buildPage.md';
 import debugContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/debug.md';
 import documentationContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/documentation.md';
 import exampleContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/example.md';
@@ -24,6 +25,7 @@ import askTrigger from '@cdo/apps/weblab2/prompts/answerTypeTriggers/ask.md';
 import buildCSSTrigger from '@cdo/apps/weblab2/prompts/answerTypeTriggers/buildCSS.md';
 import buildHTMLTrigger from '@cdo/apps/weblab2/prompts/answerTypeTriggers/buildHTML.md';
 import buildJavaScriptTrigger from '@cdo/apps/weblab2/prompts/answerTypeTriggers/buildJavaScript.md';
+import buildPageTrigger from '@cdo/apps/weblab2/prompts/answerTypeTriggers/buildPage.md';
 import documentationTrigger from '@cdo/apps/weblab2/prompts/answerTypeTriggers/documentation.md';
 import explainCodeTrigger from '@cdo/apps/weblab2/prompts/answerTypeTriggers/explainCode.md';
 import hintTrigger from '@cdo/apps/weblab2/prompts/answerTypeTriggers/hint.md';
@@ -36,6 +38,7 @@ export const ANSWER_TYPE_TRIGGERS: Record<AiTutorAnswerType, string> = {
   buildHTML: buildHTMLTrigger,
   buildJavaScript: buildJavaScriptTrigger,
   buildJSON: buildJSONTrigger,
+  buildPage: buildPageTrigger,
   debug: debugTrigger,
   documentation: documentationTrigger,
   example: exampleTrigger,
@@ -53,6 +56,7 @@ export const ANSWER_TYPE_CONTRACTS: Record<AiTutorAnswerType, string> = {
   buildHTML: buildHTMLContract,
   buildJavaScript: buildJavaScriptContract,
   buildJSON: buildJSONContract,
+  buildPage: buildPageContract,
   debug: debugContract,
   documentation: documentationContract,
   example: exampleContract,

@@ -98,6 +98,9 @@ export function isTourAvailableOnLevel(
   tour: ProductTour,
   levelProperties: LevelProperties
 ): boolean {
+  if (levelProperties.disableProductTours) {
+    return false;
+  }
   const isAvailableForLab = ToursPerLab[
     levelProperties.appName as AppName
   ]?.some(config => config.name === tour);

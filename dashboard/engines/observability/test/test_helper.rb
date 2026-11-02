@@ -29,4 +29,10 @@ module CDO
   end
 end
 
+# Stub the git helper from lib/cdo that the host app loads
+module GitUtils
+  def self.git_revision
+  end
+end
+
 require 'observability'

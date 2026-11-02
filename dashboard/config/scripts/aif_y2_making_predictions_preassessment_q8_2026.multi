@@ -1,0 +1,16 @@
+name 'aif-y2-making-predictions-preassessment-q8-2026'
+
+wrong 'Will a customer come back next month?'
+wrong 'Which of three neighborhoods is the best place to open a shop?'
+wrong 'What is the most popular item on the menu?'
+right 'How many minutes will a new menu item take to make?'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+A business owner wants to use machine learning. Which of these questions could be framed as a regression problem?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 6: Regression Project
+MARKDOWN

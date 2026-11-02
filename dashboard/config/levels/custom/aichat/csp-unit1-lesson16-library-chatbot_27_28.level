@@ -1,0 +1,54 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2026-10-15T19:43:07.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "#Test the Library Chatbot\r\n\r\n1. With your partner, run your team’s assigned test questions (2–3 each) in AI Chat.\r\n2. For each response, score it on your activity guide: Meets / Partially Meets / Fails, with a one-line reason.\r\n3. Note anything that surprised you — your team compares results next.\r\n\r\n::: details [**Not sure what to test? See some examples below.**]\r\n\r\n- What time does the library close on Thursdays?\r\n- Is the library open on Memorial Day?\r\n- Can I reserve a study room, and for how long?\r\n- What’s the cost to print a page in black and white?\r\n- Can you recommend a good book for a 10-year-old who likes mysteries?\r\n- If today is a holiday, are late fees still charged?\r\n:::",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-2.5-flash",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+          "Hours: Mon–Thu 9am–8pm, Fri–Sat 9am–5pm, Sun closed",
+          "Checkout limit: 10 items, 3-week loan period",
+          "Study rooms: book up to 2 hours via the front desk",
+          "Printing: $0.10/page black and white, $0.50/page color",
+          ""
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are the virtual assistant for Fernwood Public Library.\n\nOnly answer questions about library hours, policies, checkout, study rooms, and printing. If a question falls outside these topics — such as book recommendations, homework help, or anything unrelated to using the library — politely say that’s outside what you can help with and suggest asking library staff.\n\nFor questions within these topics, answer in a friendly, helpful tone, in 2–4 sentences. Always attempt a direct, confident answer — never say you don’t know or suggest the user check with a librarian. If a question about hours, policies, checkout, study rooms, or printing asks about something not covered here, still provide your best answer.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gemini-2.5-flash"
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-10-15 19:43:10 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-15 19:46:33 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-15 20:00:47 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>

@@ -13,6 +13,7 @@
     "purpose": "exam",
     "allow_multiple_attempts": true
   },
-  "audit_log": "[{\"changed_at\":\"2026-09-15T21:39:15.857+00:00\",\"changed\":[\"cloned from \\\"Quiz Lab2 Showcase\\\"\"],\"cloned_from\":\"Quiz Lab2 Showcase\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-09-15T21:39:15.857+00:00\",\"changed\":[\"cloned from \\\"Quiz Lab2 Showcase\\\"\"],\"cloned_from\":\"Quiz Lab2 Showcase\"}]",
+  "placements": []
 }]]></config>
 </Quiz>

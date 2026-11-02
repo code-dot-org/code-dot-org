@@ -1,7 +1,7 @@
 {
   "key": "ai-discoveries",
   "display_name": "AI Discoveries",
-  "is_featured": false,
+  "is_featured": true,
   "assignable": true,
   "curriculum_type": "Course",
   "marketing_initiative": "AID",

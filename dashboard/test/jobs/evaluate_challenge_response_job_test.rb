@@ -77,6 +77,34 @@ class EvaluateChallengeResponseJobTest < ActiveJob::TestCase
     _(challenge_response.reload.evaluation_status).must_equal 'profanity_violation'
   end
 
+  it 'records feedback_violation and stores no evaluation when the feedback has PII' do
+    stub_filters_pass
+    failure = ShareFailure.new(ShareFiltering::FailureType::EMAIL, 'kid@example.com')
+    ShareFiltering.stubs(:find_pii_failure).with(EVALUATION['student_feedback']).returns(failure)
+    stub_openai
+
+    EvaluateChallengeResponseJob.perform_now(challenge_response_id: challenge_response.id)
+
+    challenge_response.reload
+    _(challenge_response.evaluation_status).must_equal 'feedback_violation'
+    _(challenge_response.student_feedback).must_be_nil
+    _(challenge_response.evaluation_result).must_be_nil
+  end
+
+  it 'records feedback_violation and stores no evaluation when the feedback has profanity' do
+    stub_filters_pass
+    failure = ShareFailure.new(ShareFiltering::FailureType::PROFANITY, 'darn')
+    ShareFiltering.stubs(:find_profanity_failure).with(EVALUATION['student_feedback'], 'en').returns(failure)
+    stub_openai
+
+    EvaluateChallengeResponseJob.perform_now(challenge_response_id: challenge_response.id)
+
+    challenge_response.reload
+    _(challenge_response.evaluation_status).must_equal 'feedback_violation'
+    _(challenge_response.student_feedback).must_be_nil
+    _(challenge_response.evaluation_result).must_be_nil
+  end
+
   it 'records failure and raises when OpenAI returns a non-200' do
     stub_filters_pass
     stub_openai(code: 500)

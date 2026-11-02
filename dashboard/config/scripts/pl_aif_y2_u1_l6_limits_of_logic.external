@@ -1,0 +1,70 @@
+name 'pl-aif-y2-u1-l6-limits-of-logic'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Limits of Logic-Based AI
+
+Every system built so far this unit, the chatbot, the thermostat, the decision tree, shares something in common: it's built on rules a human could write down in words.
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+  <div style="font-size: 16px; line-height: 1.5;">
+    <strong>&#128214; Logic-based AI:</strong> AI built on rules humans can describe in words.
+  </div>
+</div>
+
+That same strength is also the limit. Three specific ways it breaks down:
+
+## Limit 1: Tacit Knowledge
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+  <div style="font-size: 16px; line-height: 1.5;">
+    <strong>&#128214; Tacit knowledge:</strong> knowledge that is gained through experience and is difficult to put into words.
+  </div>
+</div>
+
+Some problems, telling a real face from an uncanny-valley robot, for instance, rely on knowledge humans have but can't fully articulate as a rule. If you can't write it down, you can't code it as a rule.
+
+## Limit 2: Many Possibilities
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+  <div style="font-size: 16px; line-height: 1.5;">
+    <strong>&#128214; Combinatorial explosion:</strong> when a problem has too many possibilities to cover with rules.
+  </div>
+</div>
+
+Watch this chatbot's rules grow as it tries to handle more real questions about library hours:
+
+<div style="border-radius: 10px; overflow: hidden; margin: 12px 0 16px 0; border: 1px solid #E4E2F8;">
+  <div style="background-color: #1F1976; padding: 16px 20px; font-family: 'Consolas', 'Courier New', monospace; font-size: 16px; color: #E4E2F8; line-height: 1.8;">
+if "library" in question:<br>
+&nbsp;&nbsp;if "close" in question or "closing" in question:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if "holiday" in question or "new year's" in question or "4th of july" in question or &hellip;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("The library is closed on holidays")<br>
+&nbsp;&nbsp;&nbsp;&nbsp;else:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("The library closes at 10pm")<br>
+&nbsp;&nbsp;else:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print("I don't understand")<br>
+else:<br>
+&nbsp;&nbsp;print("I don't understand")
+  </div>
+</div>
+
+That <code style="font-size:16px;">or &hellip;</code> never actually ends. Every new holiday, every new phrasing, needs its own rule, forever. Some problems could technically be solved with rules, there are just too many rules to be practical.
+
+## Limit 3: Unexpected Inputs
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+  <div style="font-size: 16px; line-height: 1.5;">
+    <strong>&#128214; Brittleness:</strong> the tendency for a system to fail in unexpected situations.
+  </div>
+</div>
+
+Rules written for the inputs you expected can fail completely on an input you didn't. A rule-based system has no way to generalize to something it was never explicitly told to handle.
+
+<div style="background-color: #D5EFFF; border-radius: 10px; padding: 16px 18px; margin-top: 20px;">
+  <div style="font-size: 16px; color: #06338D; line-height: 1.6;">
+    <strong>&#8505; Why this matters for AI-901:</strong> these three limits are precisely why machine learning exists. Unit 2 picks up right here, systems that learn patterns from data instead of requiring every rule spelled out by hand, handling tacit knowledge, complexity, and unexpected inputs in a fundamentally different way than what you've taught so far.
+  </div>
+</div>
+MARKDOWN

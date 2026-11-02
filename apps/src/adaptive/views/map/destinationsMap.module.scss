@@ -1,0 +1,62 @@
+// A destination group's box, its title in the top corner on the outer side.
+.destination {
+  position: absolute;
+  z-index: 0;
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 16px;
+  background: var(--background-neutral-primary);
+}
+
+.destinationTitle {
+  position: absolute;
+  top: 10px;
+  left: 14px;
+  color: var(--text-neutral-primary);
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.destinationRight .destinationTitle {
+  right: 14px;
+  left: auto;
+}
+
+// A destination member's title sits beside its circle, on the outer side;
+// any other title sits below it, two lines at most.
+// Titles clear the 10px focus ring around the circle.
+.labelBelow {
+  position: relative;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  margin-top: 14px;
+  padding: 0 2px;
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.15;
+  text-align: center;
+}
+
+.labelLeft,
+.labelRight {
+  position: absolute;
+  top: 50%;
+  width: 110px;
+  margin: 0;
+  transform: translateY(-50%);
+}
+
+.labelLeft {
+  right: calc(50% + 50px);
+  text-align: right;
+}
+
+.labelRight {
+  left: calc(50% + 50px);
+  text-align: left;
+}
+

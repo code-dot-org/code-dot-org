@@ -70,7 +70,13 @@ spec:
     metadata:
       labels:
         {{ .labels | nindent 8 }}
+      annotations:
+        # Hashing the ServiceAccount annotations here ensures that a change
+        # to the annotations triggers a rolling update of the pods.
+        checksum/serviceaccount: {{ .Values.serviceAccount.annotations | toJson | sha256sum }}
     spec:
+      serviceAccountName: {{ .Values.serviceAccount.name }}
+      automountServiceAccountToken: false
       containers:
       - name: {{ .shortName | default "dashboard" }}
         image: "{{ .Values.image }}"
@@ -199,6 +205,12 @@ spec:
             claimName: {{ include "cdo.fullname" (merge (dict "component" "dot-config-gcloud") .) }}
         {{- end }}
             
+      # Production must never run as root. user.uid and user.gid are chart-wide
+      # and other environments (including local dev) set them to 0 on purpose,
+      # so gate on RAILS_ENV and refuse the render rather than trust the values.
+      {{- if and (or (eq (toString .Values.RAILS_ENV) "production") (eq (toString $railsEnv) "production")) (or (eq (int .Values.user.uid) 0) (eq (int .Values.user.gid) 0)) }}
+      {{- fail (printf "%s: RAILS_ENV=production must not run as root, but user.uid=%v user.gid=%v. Remove the user.uid/user.gid override from the production values (k8s-gitops: apps/codeai/envTypes/production.values.yaml, apps/codeai/deployments/production/values.yaml)." .name .Values.user.uid .Values.user.gid) }}
+      {{- end }}
       securityContext:
         runAsUser: {{ .Values.user.uid }}
         runAsGroup: {{ .Values.user.gid }}

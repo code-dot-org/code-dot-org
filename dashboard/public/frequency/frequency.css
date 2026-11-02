@@ -177,3 +177,17 @@
 .nav-tabs > li > a:hover {
   color: #555555;
 }
+
+#finished {
+  margin-bottom: 10px;
+}
+
+#continue-button {
+  background-color: #ffa400;
+  border: 1px solid #ffa400;
+  color: white;
+  margin-left: 0;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  text-align: center;
+}

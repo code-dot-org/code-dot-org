@@ -1,6 +1,6 @@
 import {Box, Button, Typography} from '@mui/material';
 import {visuallyHidden} from '@mui/utils';
-import {useId, type ReactNode} from 'react';
+import {useId, useState, type ReactNode} from 'react';
 
 import Alert from '@code-dot-org/component-library/alert';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
@@ -12,6 +12,7 @@ import {CapLinks} from '@code-dot-org/shared-constants';
 
 import AccountLinkForm from '../components/AccountLinkForm';
 import LinkedAccountRow from '../components/LinkedAccountRow';
+import UnlinkLmsAccountModal from '../components/UnlinkLmsAccountModal';
 import {
   linkedAccountName,
   linkedAccountProvider,
@@ -19,6 +20,7 @@ import {
 } from '../util/linkedAccountProviders';
 import {
   connectedAccounts,
+  disconnectBlockedMessage,
   isConnectLocked,
   lockedConnectMessage,
   LTI_PROVIDER,
@@ -51,19 +53,69 @@ function Group({
 
 function ConnectedAccount({
   option,
-  lmsName,
+  settings,
 }: {
   option: AuthenticationOptionSummary;
-  lmsName: string | null;
+  settings: UserSettings;
 }) {
+  const {lmsName} = settings.integrations;
+  const [unlinkOpen, setUnlinkOpen] = useState(false);
+  const noteId = useId();
+  const isLti = option.credentialType === LTI_PROVIDER;
+  const name = linkedAccountName(option.credentialType, lmsName);
+  const blockedMessage = disconnectBlockedMessage(
+    option,
+    settings,
+    settings.integrations,
+  );
+  const disconnect = (
+    <Button
+      type={isLti ? 'button' : 'submit'}
+      variant="outlined"
+      color="tertiary"
+      size="small"
+      disabled={!!blockedMessage}
+      aria-describedby={blockedMessage ? noteId : undefined}
+      onClick={isLti ? () => setUnlinkOpen(true) : undefined}
+    >
+      Disconnect
+      <Box component="span" sx={visuallyHidden}>
+        {` ${name}`}
+      </Box>
+    </Button>
+  );
+
   return (
-    <LinkedAccountRow
-      credentialType={option.credentialType}
-      lmsName={lmsName}
-      name={linkedAccountName(option.credentialType, lmsName)}
-      email={option.email}
-      learnMoreUrl={linkedAccountProvider(option.credentialType)?.learnMoreUrl}
-    />
+    <>
+      <LinkedAccountRow
+        credentialType={option.credentialType}
+        lmsName={lmsName}
+        name={name}
+        email={option.email}
+        learnMoreUrl={
+          linkedAccountProvider(option.credentialType)?.learnMoreUrl
+        }
+        note={blockedMessage}
+        noteId={noteId}
+        action={
+          isLti ? (
+            disconnect
+          ) : (
+            <AccountLinkForm action={`/users/auth/${option.id}/disconnect`}>
+              {disconnect}
+            </AccountLinkForm>
+          )
+        }
+      />
+      {isLti && (
+        <UnlinkLmsAccountModal
+          open={unlinkOpen}
+          onClose={() => setUnlinkOpen(false)}
+          lmsName={name}
+          authenticationOptionId={option.id}
+        />
+      )}
+    </>
   );
 }
 
@@ -143,7 +195,7 @@ export default function LinkedAccounts({settings}: {settings: UserSettings}) {
             <ConnectedAccount
               key={option.id}
               option={option}
-              lmsName={settings.integrations.lmsName}
+              settings={settings}
             />
           ))}
         </Group>

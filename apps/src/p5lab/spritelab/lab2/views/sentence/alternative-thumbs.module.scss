@@ -1,0 +1,69 @@
+@use "../checkerboard";
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex: none;
+  gap: 8px;
+  max-height: 100%;
+  overflow-y: auto;
+  // Room for the ring and the hover growth.
+  padding: 4px;
+  margin: -4px;
+}
+
+// The tile's checkerboard shows the picture's transparency, as the frame
+// does.
+.button {
+  flex: none;
+  padding: 0;
+  border: 2px solid var(--border-neutral-secondary);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: transparent;
+  cursor: pointer;
+  line-height: 0;
+  transition:
+    transform 0.15s ease-out,
+    border-color 0.15s ease-out;
+
+  @include checkerboard.checkerboard(
+    12px,
+    var(--neutral-gray-10),
+    var(--neutral-base-white)
+  );
+
+  &:hover:not(:disabled),
+  &:focus-visible {
+    border-color: var(--text-neutral-primary);
+    transform: scale(1.08);
+  }
+
+  &:disabled {
+    cursor: default;
+    opacity: 0.6;
+  }
+}
+
+// The one in the frame: a brand ring, held through hover.
+.button.chosen,
+.button.chosen:hover:not(:disabled) {
+  border-color: var(--border-brand-primary);
+  box-shadow: 0 0 0 2px var(--border-brand-primary);
+  transform: none;
+  cursor: default;
+}
+
+.tile {
+  display: block;
+}
+
+.pixelArt {
+  image-rendering: pixelated;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button {
+    transition: none;
+  }
+}

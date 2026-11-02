@@ -11,14 +11,24 @@ import moduleStyles from '../scene-dropdown.module.scss';
 export const GO_TO_SCENE_BLOCK_TYPE = 'spritelab2_goToScene';
 export const FIELD_SCENE_DROPDOWN_TYPE = 'field_spritelab2_scene';
 
+// The scene whose code is being edited (the lab's active scene). The menu
+// leaves it out, since a jump from a scene to itself would only restart it.
+let activeSceneId: string | null = null;
+
+export function setSceneMenuActiveId(id: string | null): void {
+  activeSceneId = id;
+}
+
 // Dropdown options: [friendly name, scene id]. The id is the saved value.
 // Reads the redux mirror so the menu stays current as scenes are added.
 function sceneMenuOptions(): [string, string][] {
-  const scenes = getStore().getState().spriteLab2?.scenes || [];
-  if (scenes.length === 0) {
+  const scenes: {id: string; name: string}[] =
+    getStore().getState().spriteLab2?.scenes || [];
+  const others = scenes.filter(s => s.id !== activeSceneId);
+  if (others.length === 0) {
     return [['no scenes', '']];
   }
-  return scenes.map((s: {id: string; name: string}) => [s.name, s.id]);
+  return others.map(s => [s.name, s.id]);
 }
 
 // Scene id → the picture the scene picker shows for it, when it has one.

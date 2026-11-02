@@ -1,11 +1,13 @@
 <Weblab2>
   <config><![CDATA[{
+  "published": true,
   "game_id": 74,
-  "created_at": "2026-10-10T00:53:29.000Z",
+  "created_at": "2026-10-13T09:33:55.000Z",
   "level_num": "custom",
   "properties": {
     "start_sources": {
-      "folders": {},
+      "folders": {
+      },
       "files": {
         "1": {
           "id": "1",
@@ -35,9 +37,43 @@
         "3"
       ]
     },
-    "hide_share_and_remix": true,
-    "long_instructions": "**Do This**\n\nThis page has three problems. Fix each one in the right file.\n\n1.  The heading has a typo.\n2.  The button is gray. Make it pink.\n3.  The button’s message says “Error.” Change it to “Booked!”\n\nRun your page after each fix to check it."
+    "hide_share_and_remix": "true",
+    "long_instructions": "**Do This**\r\n\r\nThis page has three problems. Fix each one in the right file.\r\n\r\n1.  The heading has a typo.\r\n2.  The button is gray. Make it pink.\r\n3.  The button’s message says “Error.” Change it to “Booked!”\r\n\r\nCheck the preview after each fix.",
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "require_edit_to_continue": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML",
+        "buildCSS",
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode",
+        "testCase"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
   },
-  "published": true
+  "audit_log": "[{\"changed_at\":\"2026-10-19 21:08:34 +0000\",\"changed\":[\"hide_share_and_remix\",\"long_instructions\"],\"changed_by_id\":19429,\"changed_by_email\":\"liam.fryemason+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>

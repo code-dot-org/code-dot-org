@@ -1,0 +1,35 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-10-15T23:22:35.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "**AI finds patterns that repeat across its training data.**\n\nWhy would repeating patterns be useful for making something new?",
+        "imageUrl": "https://images.code.org/431ce5af7a0df86f3b1bf17c903cdbde-Lavender slab with green dots.png",
+        "key": "adaptive-test-debug-panel-935f641d-7a93-44e8-81ce-6ded8f68ea2e",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "For example, this training data includes many different cats.\n\nColors and markings vary, but some features repeat.\n\n**AI learns shared patterns, like pointed ears.**\n",
+        "imageUrl": "https://images.code.org/25d4d40709b6999fdd996b2f4af4732a-Black Cat Silhouette Among Colorful Tiles.png",
+        "key": "adaptive-test-debug-panel-b1f698e8-6cee-47e4-9b38-59e7d8253e5b",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "AI uses your prompt and patterns it learned to make a new image.\n\n---\n\n**Something to think about:** Who chooses the training data, and what might be missing from it?",
+        "imageUrl": "https://images.code.org/1f43132bffedad336662e28ab8fd0e8a-Prompt plus learned patterns_ a new cat.png",
+        "key": "adaptive-test-debug-panel-5b46df30-8529-4368-84d7-7e9d4c52c78c",
+        "fadeInOverPrevious": true
+      }
+    ],
+    "use_links": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-10-15T23:22:35.418+00:00\",\"changed\":[\"cloned from \\\"HoAI26-training-data-animations\\\"\"],\"cloned_from\":\"HoAI26-training-data-animations\"},{\"changed_at\":\"2026-10-15 23:25:56 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-15 23:33:05 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>

@@ -1,0 +1,11 @@
+name 'csp_unit1_lesson2_cfu1_dev_27_28'
+title 'Matching Assessment: Vocabulary'
+description 'Match term with the example'
+question 'Input'
+question 'Output'
+question 'User Interface'
+answer 'The user clicks a button'
+answer 'A song is played'
+answer 'A screen with buttons, images, and text'
+
+allow_multiple_attempts true

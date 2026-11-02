@@ -10,14 +10,24 @@ import styles from './summary-entry-point.module.scss';
 
 const SUMMARY_PATH = '/summary';
 
-const SummaryEntryPoint = ({scriptData, students, selectedSection}) => {
+const SummaryEntryPoint = ({
+  scriptData,
+  students,
+  selectedSection,
+  currentLevelId,
+}) => {
   // If viewing the page as Participant, be sure to rewrite the link URL
   // to view as Instructor, so we don't just get redirected back.
-  const params = document.location.search.replace(
+  let params = document.location.search.replace(
     `viewAs=${ViewType.Participant}`,
     `viewAs=${ViewType.Instructor}`
   );
-  const summaryUrl = document.location.pathname + SUMMARY_PATH + params;
+  const isOnSubLevel = /\/sublevel\/\d+/.test(document.location.pathname);
+  if (isOnSubLevel && currentLevelId) {
+    params += (params ? '&' : '?') + `level_id=${currentLevelId}`;
+  }
+  const pathname = document.location.pathname.replace(/\/sublevel\/\d+$/, '');
+  const summaryUrl = pathname + SUMMARY_PATH + params;
 
   let className = styles.summaryEntryPoint;
   if (!scriptData.is_contained_level) {
@@ -83,6 +93,7 @@ SummaryEntryPoint.propTypes = {
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
   }),
+  currentLevelId: PropTypes.number,
 };
 
 export default connect(
@@ -93,5 +104,6 @@ export default connect(
     students: state.teacherSections.selectedStudents,
     selectedSection:
       state.teacherSections.sections[state.teacherSections.selectedSectionId],
+    currentLevelId: state.progress?.currentLevelId,
   })
 )(SummaryEntryPoint);

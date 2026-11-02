@@ -15,11 +15,27 @@ class ChallengesControllerTest < ActionController::TestCase
   let(:response_json) {JSON.parse(response.body)}
   let(:response_ids) {response_json.map {|c| c['id']}}
 
+  before do
+    User.any_instance.stubs(:can_use_lesson_deep_dive?).returns(true)
+  end
+
   describe 'GET #index' do
     context 'when not signed in' do
       it 'redirects to sign in' do
         get :index
         assert_redirected_to_sign_in
+      end
+    end
+
+    context 'when signed in without lesson deep dive access' do
+      before do
+        User.any_instance.stubs(:can_use_lesson_deep_dive?).returns(false)
+        sign_in user
+      end
+
+      it 'is forbidden' do
+        get :index
+        assert_response :forbidden
       end
     end
 

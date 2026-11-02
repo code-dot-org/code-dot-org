@@ -25,8 +25,6 @@ class ApplicationController < ActionController::Base
 
   before_action :clear_sign_up_session_vars
 
-  before_action :initialize_statsig_stable_id
-
   before_action :persist_brand_params
 
   around_action :with_global_current_user
@@ -447,10 +445,6 @@ class ApplicationController < ActionController::Base
     redirect_to lti_v1_account_linking_landing_path
   end
 
-  protected def initialize_statsig_stable_id
-    request.statsig_stable_id
-  end
-
   private def pairing_still_enabled
     session[:pairing_section_id] && Section.find(session[:pairing_section_id]).pairing_allowed
   end
@@ -467,5 +461,13 @@ class ApplicationController < ActionController::Base
     super
     payload[:user_id] = current_user&.id
     payload[:admin_id] = session[:admin_id] if session[:assumed_identity]
+  end
+
+  # Rails' open-redirect protection only trusts the request's own host. This override
+  # allows URLs from the root code.org domain instead of just the studio subdomain.
+  private def _url_host_allowed?(url)
+    super || URI(url.to_s).host == URI(CDO.code_org_url).host
+  rescue ArgumentError, URI::Error
+    false
   end
 end

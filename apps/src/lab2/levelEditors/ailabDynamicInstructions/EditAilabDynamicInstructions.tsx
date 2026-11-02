@@ -1,6 +1,7 @@
-import type {InstructionsKey} from '@code-dot-org/ailab';
 import {Typography} from '@mui/material';
 import React, {useEffect, useRef, useState} from 'react';
+
+import type {InstructionsKey} from '@cdo/apps/ailab/engine';
 
 import {parseJsonObject, serializeJsonObject} from '../jsonUtils';
 

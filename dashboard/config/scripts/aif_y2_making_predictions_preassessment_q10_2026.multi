@@ -1,0 +1,20 @@
+name 'aif-y2-making-predictions-preassessment-q10-2026'
+
+wrong "The model's predictions for the test inputs"
+wrong 'The number of neighbors the model uses'
+right 'The fraction of the test examples the model classified correctly'
+wrong 'The distance from each test input to its nearest neighbor'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+A trained classifier runs this line. What does it return?
+
+```python
+accuracy = model.score(test_inputs, test_outputs)
+```
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 7: Nearest-Neighbor Classification
+MARKDOWN

@@ -1,0 +1,36 @@
+name 'csp-unit2-lesson11-cfu1_27_28'
+title 'Check your understanding'
+
+wrong '`home` only'
+right '`home`, then `dinner`'
+wrong '`movies`, then `dinner`'
+wrong '`movies`, `home`, then `dinner`'
+allow_multiple_attempts false
+
+
+markdown <<MARKDOWN
+A program checks the time. Given `time = 9`, what does this code print?
+
+```
+time = 9
+if time < 8:
+  print(“movies”)
+else:
+  print(“home”)
+if time < 10:
+  print(“dinner”)
+```
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Teacher solution and distractor rationale:
+
+Expected output: two lines, `home` and then `dinner`.
+
+- `home`, then `dinner` (correct): The first if/else is one decision. time < 8 is False, so only the else branch runs and prints home. The second if is a separate decision. time < 10 is True, so it also runs and prints dinner. Separate if statements are separate decisions, and more than one can run.
+- `home` only: The most likely misconception. A student treats the second if as part of the first decision, so they stop after one path runs. Only the if/else is one decision with one path.
+- `movies`, then `dinner`: A student misreads time < 8 as True for 9, then correctly runs the second if. Check that they evaluate each condition with the actual value.
+- `movies`, `home`, then `dinner`: A student thinks both the if branch and the else branch run. An if/else runs exactly one branch.
+
+This is the idea the Museum Ticket Generator in the next lesson relies on: separate if statements can both run, and the order of the rules decides the result.
+MARKDOWN

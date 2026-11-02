@@ -6,7 +6,7 @@
   "properties": {
     "project_template_level_name": "adaptive-hoai-template",
     "hide_share_and_remix": true,
-    "long_instructions": "1.  Find one small thing on your page to fix, like a word, or a color.\n2.  Change it yourself in the code.\n3.  Run your page to check your fix.\n\nWas editing faster than asking the AI?"
+    "long_instructions": "1.  Find one small thing on your page to fix, like a word, or a color.\n2.  Change it yourself in the code.\n3.  Look at the preview to check your fix.\n\nWas editing faster than asking the AI?"
   },
   "published": true
 }]]></config>

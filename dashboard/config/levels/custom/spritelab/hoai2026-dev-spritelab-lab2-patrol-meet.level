@@ -36,22 +36,55 @@
       "name": "Platformer",
       "type": "platform"
     },
-    "guide_steps": [
-      {
-        "text": "**Go and meet them.** The **when touches** event is ready for your player and your second character. Drag a **say** block onto the dotted outline for a hello, or **restart scene** to send your player back to the start. Click **Play**."
-      },
-      {
-        "text": "**Your world has company.** Click **Continue**.",
-        "showContinue": true,
-        "after": {
-          "tab": "Play"
+    "objectives": {
+      "title": "**Go and meet them**",
+      "items": [
+        {
+          "text": "Drag **when touches** into the workspace, then **say** or **restart scene** under it.",
+          "check": {
+            "kind": "block",
+            "type": [
+              "gamelab_spriteSay",
+              "spritelab2_restartScene",
+              "spritelab2_burst",
+              "spritelab2_playSound"
+            ],
+            "data": "patrol-touch"
+          }
+        },
+        {
+          "text": "Click **Play** and go meet them.",
+          "check": {
+            "kind": "reach",
+            "role": "friend"
+          }
         }
-      }
-    ],
-    "long_instructions": "# Go and meet them\nDrag a **say** block onto the dotted outline under **when touches** for a hello, or **restart scene** to send your player back to the start.",
+      ]
+    },
+    "long_instructions": "# Go and meet them\nDrag **when touches** into the workspace, then a **say** block under it for a hello, or **restart scene** to send your player back to the start.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [
+        {
+          "kind": "block",
+          "type": "gamelab_checkTouching",
+          "fields": {
+            "CONDITION": "\"when\""
+          },
+          "inputs": {
+            "SPRITE1": {
+              "shadow": {
+                "type": "gamelab_allSpritesWithAnimation"
+              }
+            },
+            "SPRITE2": {
+              "shadow": {
+                "type": "gamelab_allSpritesWithAnimation"
+              }
+            }
+          },
+          "data": "patrol-touch"
+        },
         {
           "kind": "block",
           "type": "gamelab_spriteSay",
@@ -69,50 +102,17 @@
         {
           "kind": "block",
           "type": "spritelab2_restartScene"
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_burst"
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_playSound"
         }
       ]
     },
-    "add_blocks": [
-      {
-        "type": "gamelab_checkTouching",
-        "data": "patrol-touch",
-        "fields": {
-          "CONDITION": "\"when\""
-        },
-        "inputs": {
-          "SPRITE1": {
-            "shadow": {
-              "type": "gamelab_allSpritesWithAnimation"
-            }
-          },
-          "SPRITE2": {
-            "shadow": {
-              "type": "gamelab_allSpritesWithAnimation"
-            }
-          }
-        },
-        "next": {
-          "shadow": {
-            "type": "spritelab2_placeholder",
-            "extraState": {
-              "like": {
-                "type": "gamelab_spriteSay",
-                "fields": {
-                  "SPEECH": "Hello!"
-                },
-                "inputs": {
-                  "SPRITE": {
-                    "shadow": {
-                      "type": "gamelab_allSpritesWithAnimation"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    ],
     "header_label": "Make a platformer"
   }
 }]]></config>

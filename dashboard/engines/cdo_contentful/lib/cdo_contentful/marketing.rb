@@ -6,9 +6,7 @@ module CdoContentful
 
     self.config = ActiveSupport::OrderedOptions.new.tap do |config|
       config.client = ActiveSupport::OrderedOptions.new.tap do |client|
-        client.space = '90t6bu6vlf76'
         client.access_token = nil
-        client.api_url = 'cdn.contentful.com'
       end
     end.freeze
 

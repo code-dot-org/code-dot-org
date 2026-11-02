@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
+import {getJsLocaleCandidates} from '@cdo/apps/util/locale';
+
 import {editAnimation, removePendingFramesAction} from '../redux/animationList';
 import {show, Goal} from '../redux/animationPicker';
 import * as shapes from '../shapes';
@@ -61,12 +63,42 @@ class PiskelEditor extends React.Component {
     this.piskel.onStateSaved(this.onAnimationSaved);
     this.piskel.onAddFrame(this.onAddFrame);
 
-    this.iframe.contentWindow.piskel_locale = this.props.localeCode;
+    this.setPiskelLocale_();
   }
 
   componentWillUnmount() {
     this.piskel.detachFromPiskel();
     this.piskel = undefined;
+  }
+
+  /**
+   * Sets window.piskel_locale for Piskel to the first of localeCode,
+   * its fallback, and the default locale that Piskel has strings for;
+   * Piskel crashes on startup otherwise.
+   * Resolved on read, since piskel_locales is defined by Piskel's own bundle.
+   * @private
+   */
+  setPiskelLocale_() {
+    const {localeCode} = this.props;
+
+    const win = this.iframe.contentWindow;
+    const locales = getJsLocaleCandidates(localeCode);
+
+    let piskelLocale;
+    Object.defineProperty(win, 'piskel_locale', {
+      configurable: true,
+      get: () => {
+        if (!piskelLocale) {
+          piskelLocale = locales.find(locale => win.piskel_locales?.[locale]);
+
+          if (piskelLocale !== localeCode) {
+            console.warn(`No Piskel strings for locale ${localeCode}`);
+          }
+        }
+
+        return piskelLocale;
+      },
+    });
   }
 
   UNSAFE_componentWillReceiveProps(newProps) {
@@ -219,6 +251,9 @@ class PiskelEditor extends React.Component {
     );
   }
 }
+
+export const UnconnectedPiskelEditor = PiskelEditor;
+
 export default connect(
   state => ({
     currentAnimation: state.animationTab.currentAnimations[state.interfaceMode],

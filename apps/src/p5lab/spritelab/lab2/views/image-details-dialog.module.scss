@@ -12,71 +12,16 @@
 .dialogHost {
   display: contents;
 
-  // The host carries data-theme; the chrome colors follow it.
+  // The chrome's palette, on the page's tokens.
   @include chrome.theme;
 }
 
 .dialogHost .dialog {
   @include chrome.panel;
 
-  // One width for both views; the panel's max-width still shrinks it on
-  // narrow browsers.
+  // The details view's width (.dialogWide is the sentence view's); the
+  // panel's max-width still shrinks it on narrow browsers.
   width: 850px;
-}
-
-// No modal entrance and no card chrome. The painted panel color (the
-// alternatives ring gap) must match the lab's ground, not the card's.
-.dialogHost .imageLevelPanel {
-  animation: none;
-  border: none;
-  border-radius: 0;
-  background: transparent;
-  box-shadow: none;
-
-  --dialog-panel-bg: var(--background-neutral-primary);
-
-  // Two columns: the pane on the left spans both rows; the details and the
-  // footer stack on the right with the footer at the bottom, so Generate
-  // ends level with the image. The body's usual padding and column are
-  // dropped in favor of the grid.
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  grid-template-rows: minmax(0, 1fr) auto;
-  gap: 16px 20px;
-  padding: 16px;
-
-  .body {
-    display: contents;
-  }
-
-  .detailsPane {
-    grid-column: 2;
-  }
-
-  .footer {
-    grid-column: 2;
-    grid-row: 2;
-    align-self: end;
-    padding: 0;
-    border-top: none;
-  }
-
-  // The image sits on the stage itself: no frame, and no checkerboard (that
-  // is for the dialog, whose opaque panel would otherwise hide transparency).
-  // The pane sets the row's height, so it follows the screen: 290px is the
-  // header, paddings, footer and the guide pinned below; 512px shows a
-  // 1024px image at full resolution on a 2x display.
-  .imagePane {
-    grid-row: 1 / -1;
-    width: clamp(220px, calc(100vh - 290px), 512px);
-    height: clamp(220px, calc(100vh - 290px), 512px);
-    border: none;
-  }
-
-  .imagePaneChecker {
-    background-color: transparent;
-    background-image: none;
-  }
 }
 
 .dialogHost .dialog :focus-visible {
@@ -175,8 +120,8 @@
   left: 8px;
   padding: 2px 8px;
   border-radius: 4px;
-  background: rgb(0 0 0 / 45%);
-  color: #fff;
+  background: color-mix(in srgb, var(--neutral-base-true-black) 45%, transparent);
+  color: var(--text-neutral-white-fixed);
   font-size: 13px;
   // The page gives every span user-select: text.
   user-select: none;
@@ -275,13 +220,6 @@
   @include chrome.footer;
 
   font-size: 14px;
-
-  button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-  }
 }
 
 .footerLeft {
@@ -291,39 +229,11 @@
   margin-right: auto;
 }
 
-.button {
-  @include chrome.plain-button;
-}
-
-.primaryButton {
-  @include chrome.plain-button;
-  @include chrome.primary-button;
-}
-
-.dangerButton {
-  @include chrome.plain-button;
-  @include chrome.danger-button;
-}
-
-.iconButton {
-  @include chrome.plain-button;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 30px;
-  height: 30px;
-  padding: 0;
-  border-color: transparent;
-  flex-shrink: 0;
-}
-
 // --- Generate view ---
 
-// Hosts the transplanted guide Adlib (it brings its own dark panel and
-// glowing border); the native fieldset disable dims it while typed text
-// has precedence.
-.adlibGroup {
+// Hosts the sentence's word menus; the native fieldset disable dims them
+// while typed text has precedence.
+.wordMenusGroup {
   min-width: 0;
   margin: 0;
   padding: 0;
@@ -405,41 +315,6 @@
   // remap the variable it reads to our secondary text (the greyed radio
   // circle still marks the option disabled).
   --text-neutral-disabled: var(--dialog-text-secondary);
-}
-
-// A Style option is taller than its text, so its radio, swatch and label
-// center on the row; the design system aligns a radio row to the top.
-.styleOption {
-  align-items: center;
-
-  i {
-    margin-top: 0;
-  }
-}
-
-// A Style option's sample: a swatch tile between the radio and the label,
-// the same size on both rows so the labels line up.
-.styleSwatch {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex: none;
-  box-sizing: border-box;
-  width: 40px;
-  height: 40px;
-  border: 1px solid var(--dialog-control-border);
-  border-radius: 6px;
-  background: var(--dialog-control-bg);
-
-  // Drawn at 64px for exactly 2x; the pixel star keeps its hard edges.
-  img {
-    width: 32px;
-    height: 32px;
-
-    &.pixelArt {
-      image-rendering: pixelated;
-    }
-  }
 }
 
 // Wears .radioGroup's bordered look; this only fits the slider, which the
@@ -575,4 +450,81 @@
 .generateProgress {
   font-size: 13px;
   opacity: 0.8;
+}
+
+// --- Sentence view ---
+
+// Room for the word menus beside a larger picture; the panel's max-width
+// still shrinks it on narrow browsers.
+$sentence-dialog-width: 970px;
+// The pane gives way on a short window. The dialog keeps 32px from the
+// window's edges, its header, body padding and footer take 134px, and
+// Behind the scenes under the pane takes 40px; all of it fits a 605px
+// window with a little to spare.
+$sentence-pane-size: min(420px, calc(100vh - 220px));
+
+.dialogHost .dialogWide {
+  width: $sentence-dialog-width;
+}
+
+// The session's pictures, as tall as the pane, closer to it than the
+// body's gap.
+.alternativesColumn {
+  flex: none;
+  display: flex;
+  max-height: $sentence-pane-size;
+  margin-right: -8px;
+}
+
+// The picture's column: the pane, and Behind the scenes close under it.
+.sentenceColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex-shrink: 0;
+  width: $sentence-pane-size;
+
+  .imagePane {
+    width: $sentence-pane-size;
+    height: $sentence-pane-size;
+  }
+}
+
+.sentencePanel {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  flex: 1;
+  min-width: 0;
+  // As tall as the pane, no taller for Behind the scenes under it, so a
+  // row held at the panel's bottom ends even with the picture.
+  align-self: flex-start;
+  min-height: $sentence-pane-size;
+  box-sizing: border-box;
+
+  // Focus lands here on a mode change; the panel's edge is not the cue.
+  &:focus {
+    outline: none;
+  }
+}
+
+// The question about the picture, held at the panel's bottom.
+.sentenceVerdict {
+  margin-top: auto;
+}
+
+// The line above the sentence: what the student is doing, with the kind
+// as a dropdown in the line when it is theirs to pick.
+.sentenceHeadline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 6px;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.sentenceType {
+  display: inline-flex;
 }

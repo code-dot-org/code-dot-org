@@ -213,9 +213,8 @@ export const StudentSignedIn: Story = {
 
 // Resting-state guards, each a flat assert, ending with no menu open:
 //  - target size (WCAG 2.5.8 AA): every control is at least 24x24px.
-//  - pill geometry: New project + Account triggers are 32px/0.5rem radius,
-//    matching the Rails header's `.header_button` under codeai-brand
-//    (dashboard/app/assets/stylesheets/application.scss); Help's "?" glyph
+//  - pill geometry: New project + Account triggers are 32px tall. Radius is the
+//    button theme's `--shape-sm`. Help's "?" glyph
 //    grows to 24px while its own box keeps the Rails header's 38px invisible
 //    hit target (it never carries `.header_button`).
 //  - hover colors: hovered New project + Account stay brand-white (label, icon,
@@ -251,7 +250,7 @@ export const TeacherSignedIn: Story = {
     for (const trigger of [newProject, account]) {
       const styles = getComputedStyle(trigger);
       expect(styles.height).toBe('32px');
-      expect(styles.borderRadius).toBe('8px'); // 0.5rem
+      expect(styles.borderRadius).toBe('6px');
     }
     expect(getComputedStyle(help.querySelector('i')!).fontSize).toBe('24px');
 
@@ -405,7 +404,7 @@ export const SignedOutMarketingNav: Story = {
 
     const signIn = canvas.getByRole('link', {name: 'Sign in'});
     expect(getComputedStyle(signIn).height).toBe('32px');
-    expect(getComputedStyle(signIn).borderRadius).toBe('8px');
+    expect(getComputedStyle(signIn).borderRadius).toBe('6px');
   },
 };
 

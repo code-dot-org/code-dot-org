@@ -1,5 +1,4 @@
-import {LAB2_INSTRUCTIONS, type InstructionsKey} from '@code-dot-org/ailab';
-
+import {LAB2_INSTRUCTIONS, type InstructionsKey} from '@cdo/apps/ailab/engine';
 import ailabI18n from '@cdo/apps/ailab/locale';
 
 const legacyStrings = ailabI18n as Partial<Record<string, () => string>>;

@@ -4,7 +4,9 @@ import {Provider} from 'react-redux';
 
 import {registerReducers, restoreRedux, stubRedux} from '@cdo/apps/redux';
 import unitSelection, {setUnit} from '@cdo/apps/redux/unitSelectionRedux';
-import currentUser from '@cdo/apps/templates/currentUserRedux';
+import currentUser, {
+  setInitialData,
+} from '@cdo/apps/templates/currentUserRedux';
 import * as sectionProgressLoader from '@cdo/apps/templates/sectionProgressV2/sectionProgressLoader';
 import sectionProgress, {
   startLoadingProgress,
@@ -15,6 +17,7 @@ import teacherSections, {
   setStudentsForCurrentSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import experiments from '@cdo/apps/util/experiments';
+import {AiChatAccessLevels} from '@cdo/generated-scripts/sharedConstants';
 
 import {createStore} from './sectionProgressTestHelpers';
 
@@ -115,6 +118,9 @@ describe('SectionProgressV2', () => {
 
   it('shows the gallery link button when lesson-tutor-challenge is enabled', () => {
     experiments.isEnabledAllowingQueryString = jest.fn(() => true);
+    store.dispatch(
+      setInitialData({id: 1, ai_chat_access_level: AiChatAccessLevels.ENABLED})
+    );
     // scriptId must match the test helper's script id (2) so unitData resolves.
     store.dispatch(setUnit(2, 99));
     renderDefault();
@@ -127,6 +133,24 @@ describe('SectionProgressV2', () => {
 
   it('hides the gallery link button when lesson-tutor-challenge is disabled', () => {
     experiments.isEnabledAllowingQueryString = jest.fn(() => false);
+    store.dispatch(setUnit(2, 99));
+    renderDefault();
+
+    expect(
+      screen.queryByRole('link', {
+        name: /Review extension activities/,
+      })
+    ).toBeNull();
+  });
+
+  it('hides the gallery link button without AI chat access enabled', () => {
+    experiments.isEnabledAllowingQueryString = jest.fn(() => true);
+    store.dispatch(
+      setInitialData({
+        id: 1,
+        ai_chat_access_level: AiChatAccessLevels.ESSENTIAL_ONLY,
+      })
+    );
     store.dispatch(setUnit(2, 99));
     renderDefault();
 

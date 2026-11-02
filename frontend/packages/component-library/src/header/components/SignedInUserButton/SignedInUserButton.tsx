@@ -64,6 +64,7 @@ const SignedInUserButton: FunctionComponent<SignedInUserButtonProps> = ({
         aria-expanded={open}
         aria-controls={open ? menuId : undefined}
         color="inherit"
+        size="small"
         disableElevation
         onClick={event => setAnchorEl(event.currentTarget)}
         endIcon={

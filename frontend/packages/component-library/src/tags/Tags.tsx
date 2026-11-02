@@ -43,13 +43,23 @@ const Tags: FunctionComponent<TagsProps> = ({
     data-testid="tags"
   >
     {tagsList.map(
-      ({key, tooltipId, label, tooltipContent, ariaLabel, icon, ...props}) => (
+      ({
+        key,
+        tooltipId,
+        label,
+        tooltipContent,
+        ariaLabel,
+        icon,
+        color,
+        ...props
+      }) => (
         <Tag
           key={key ?? tooltipId ?? label}
           tooltipId={tooltipId}
           label={label}
           ariaLabel={ariaLabel}
           icon={icon}
+          color={color}
           tooltipContent={tooltipContent}
           {...props}
         />

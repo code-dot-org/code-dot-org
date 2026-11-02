@@ -1,13 +1,43 @@
 <Quiz>
   <config><![CDATA[{
-  "published": true,
   "game_id": 76,
-  "created_at": "2026-09-02T20:17:07.000Z",
+  "created_at": "2026-09-07T09:38:47.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
-    "encrypted": "false"
+    "encrypted": "false",
+    "purpose": "practice",
+    "allow_multiple_attempts": true,
+    "display_name": "Basic CS concepts",
+    "show_intro_screen": true,
+    "custom_intro_text": "This practice quiz covers basic computer science concepts.",
+    "show_correctness": true,
+    "show_questions_after_submit": true,
+    "reveal_answer_explanation": true
   },
-  "audit_log": "[{\"changed_at\":\"2026-09-02 20:17:25 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-02 20:17:25 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"}]",
+  "placements": [
+    {
+      "page": 1,
+      "position": 1,
+      "question_key": "88679d91-fa33-44f2-a013-b710c1e08ce5"
+    },
+    {
+      "page": 1,
+      "position": 2,
+      "question_key": "f70fbd21-8459-4655-88ee-731c78acc9dc"
+    },
+    {
+      "page": 1,
+      "position": 3,
+      "question_key": "af821674-b235-4233-9213-237782f1de88"
+    },
+    {
+      "page": 2,
+      "position": 4,
+      "question_key": "b91ddfcf-5136-46e8-893a-fb59e178951a"
+    }
+  ]
 }]]></config>
 </Quiz>

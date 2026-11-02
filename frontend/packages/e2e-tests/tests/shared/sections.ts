@@ -34,6 +34,39 @@ export async function createSection(
   return {sectionCode, sectionUrl: `/join/${sectionCode}`};
 }
 
+export type AiChatAccessLevel = 'enabled' | 'essential_only' | 'disabled';
+
+/**
+ * Set a section's AI chat access level under its teacher's session. A student
+ * gets the level only if one of their teachers can access AI chat.
+ */
+export async function setSectionAiChatAccessLevel(
+  page: Page,
+  sectionId: number,
+  level: AiChatAccessLevel,
+): Promise<void> {
+  const {ok, status} = await requestWithCsrf(
+    page,
+    'POST',
+    `/api/v1/sections/${sectionId}/ai_chat_access_level`,
+    {ai_chat_access_level: level},
+  );
+  if (!ok) {
+    throw new Error(`ai_chat_access_level POST failed: ${status}`);
+  }
+}
+
+/**
+ * An onSectionCreated hook for createTeacherAssociatedStudent that sets the
+ * new section's AI chat access level.
+ */
+export function setAiChatAccessLevelOnCreate(
+  page: Page,
+  level: AiChatAccessLevel,
+): (section: {id: number}) => Promise<void> {
+  return ({id}) => setSectionAiChatAccessLevel(page, id, level);
+}
+
 /**
  * Join a section through the UI rather than POST /join, so the real
  * enrollment flow runs. The joining account's session must already be current.

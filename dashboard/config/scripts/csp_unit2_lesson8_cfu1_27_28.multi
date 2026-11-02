@@ -1,0 +1,18 @@
+name 'csp-unit2-lesson8-cfu1_27_28'
+title 'Check Your Understanding'
+description ''
+question 'A streaming service lets you watch a show if you have a premium account, or it\’s within the show\’s free-preview window. Given `has_premium` and `in_preview_window`, which expression correctly decides whether someone can watch?'
+wrong '`has_premium and in_preview_window`'
+right '`has_premium or in_preview_window`'
+wrong '`not has_premium and in_preview_window`'
+wrong '`has_premium or not in_preview_window`'
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Teacher solution and distractor rationale:
+
+- `has_premium and in_preview_window`: Requires both conditions at once, which would incorrectly deny a premium user who’s outside the preview window — too restrictive for an “or” decision.
+- `has_premium or in_preview_window`: (correct): The scenario’s own wording — “or” — means either condition alone is enough.
+- `not has_premium and in_preview_window`: Backwards — this only grants access to non-premium users during the preview window, and denies every premium user outright.
+- `has_premium or not in_preview_window`: Grants access in almost every case (true unless someone is premium and the window is closed) — overly permissive, and doesn’t match the described decision at all.
+MARKDOWN

@@ -5,7 +5,11 @@ import {MARKETING_AUDIENCE} from '@cdo/apps/templates/sectionsRefresh/Curriculum
 import QuickAssignTableHocPl from '@cdo/apps/templates/sectionsRefresh/QuickAssignTableHocPl';
 import i18n from '@cdo/locale';
 
-import {hocCourseOfferings, plCourseOfferings} from './CourseOfferingsTestData';
+import {
+  hocCourseOfferings,
+  plCourseOfferings,
+  plCourseOfferingsWithRecommended,
+} from './CourseOfferingsTestData';
 
 const DEFAULT_PROPS = {
   courseOfferings: hocCourseOfferings,
@@ -41,6 +45,21 @@ describe('QuickAssignTable', () => {
     expect(wrapper.find('table').at(0).contains('Popular Media')).toBe(true);
     // Fifth header displays in table 1
     expect(wrapper.find('table').at(1).contains('Sports')).toBe(true);
+  });
+
+  it('renders a Recommended header at the top of the first column', () => {
+    const wrapper = setUp(MARKETING_AUDIENCE.PL, {
+      courseOfferings: plCourseOfferingsWithRecommended,
+    });
+    expect(wrapper.find('table').length).toBe(3);
+    // 'Recommended' sorts first, so it takes table 0 and pushes the others right.
+    expect(wrapper.find('table').at(0).contains('Recommended')).toBe(true);
+    expect(
+      wrapper
+        .find('table')
+        .at(1)
+        .contains('6–12 Virtual Academic Year Workshops')
+    ).toBe(true);
   });
 
   it('renders Professional Learning as the first and only table/column header', () => {

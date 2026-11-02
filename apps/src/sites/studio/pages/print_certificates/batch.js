@@ -9,9 +9,6 @@ $(document).ready(function () {
   const {imageUrls} = certificateData;
   createReactRoot(
     <PrintCertificateBatch imageUrls={imageUrls} />,
-    document.getElementById('print-certificate-batch'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.getElementById('print-certificate-batch')
   );
 });

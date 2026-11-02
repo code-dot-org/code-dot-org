@@ -16,7 +16,7 @@
     "csd2-web-lab-update-2025",
     "6-12-aif-s2-unit5",
     "6-12-aif-s2-unit6",
-    "6-12-aid-thinking-critically-about-ai-2026",
+    "scottsdale-levelbuilder-exploration",
     "sample-aid-sc2-unit-generation",
     "ai-history",
     "foundations-of-ai-programming-js",
@@ -26,7 +26,9 @@
     "ai-powered-threats-and-defenses-2026-dev",
     "insights-from-data-and-ai-2026-dev",
     "foundations-of-ai-programming-2026-dev",
-    "scottsdale-levelbuilder-exploration"
+    "6-12-aid-thinking-critically-about-ai-2026",
+    "6-12-aid-data-makes-ai-2026",
+    "6-12-aid-ai-in-your-program-2026"
   ],
   "original_script_names": [
     "6-12-intro-to-programming-python",
@@ -54,7 +56,9 @@
     "ai-powered-threats-and-defenses-2026-dev",
     "insights-from-data-and-ai-2026-dev",
     "foundations-of-ai-programming-2026-dev",
-    "scottsdale-levelbuilder-exploration"
+    "scottsdale-levelbuilder-exploration",
+    "6-12-aid-data-makes-ai-2026",
+    "6-12-aid-ai-in-your-program-2026"
   ],
   "published_state": "in_development",
   "instruction_type": "teacher_led",

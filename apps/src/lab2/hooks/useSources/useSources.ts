@@ -2,19 +2,12 @@ import {isEqual} from 'lodash';
 import {useCallback, useEffect, useRef, useState} from 'react';
 
 import {clearHeader} from '@cdo/apps/code-studio/headerRedux';
-import {
-  INITIAL_VERSION_ID,
-  START_SOURCES,
-  TOOLBOX_BLOCKS,
-} from '@cdo/apps/lab2/constants';
+import {INITIAL_VERSION_ID} from '@cdo/apps/lab2/constants';
 import {setChannel as setChannelAction} from '@cdo/apps/lab2/lab2Redux';
 import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
 import ProjectManagerFactory from '@cdo/apps/lab2/projects/ProjectManagerFactory';
 import {getSourcesStoreForApp} from '@cdo/apps/lab2/projects/sourcesStoreForApp';
-import {
-  getAppOptionsEditBlocks,
-  getAppOptionsEditingExemplar,
-} from '@cdo/apps/lab2/projects/utils';
+import {getIsLevelEditMode} from '@cdo/apps/lab2/projects/utils';
 import type {
   Channel,
   LevelProperties,
@@ -29,10 +22,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import configureHeader from './configureHeader';
 import setProjectCallbacks from './setProjectCallbacks';
 
-const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
-const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
-const isLevelEditMode =
-  isStartMode || isToolboxMode || !!getAppOptionsEditingExemplar();
+const isLevelEditMode = getIsLevelEditMode();
 
 export interface UseSourcesInput<T extends ProjectSources> {
   /** Level properties for the current level */
@@ -62,6 +52,8 @@ export interface UseSourcesOutput<T extends ProjectSources> {
   isEditable: boolean;
   /** If the user has updated sources since the level loaded. */
   hasEdited: boolean;
+  /** If the project had saved sources when it loaded. False until then, and for a project never saved. */
+  hasSavedSources: boolean;
   /** The current project sources. */
   currentSources: T | undefined;
   /** The project channel as last loaded or saved. */
@@ -129,6 +121,10 @@ export default function useSources<T extends ProjectSources>({
   // Synchronous mirror of currentSources: written concurrently with
   // setCurrentSources so updater-form updates and getSources always see the latest value.
   const currentSourcesRef = useRef<T>();
+  // Set while the current load runs. A load clears the sources before the
+  // view that showed them has re-rendered, so a view effect can still write
+  // in between; such a write has nothing to land on and is dropped.
+  const loadPending = useRef(false);
   const setSources = useCallback((sources: T | undefined) => {
     currentSourcesRef.current = sources;
     setCurrentSources(sources);
@@ -136,6 +132,7 @@ export default function useSources<T extends ProjectSources>({
   const [versionList, setVersionList] = useState<ProjectVersion[]>([]);
   const [currentVersion, setCurrentVersion] = useState<string>();
   const [hasEdited, setHasEdited] = useState(false);
+  const [hasSavedSources, setHasSavedSources] = useState(false);
   const [loadError, setLoadError] = useState<Error>();
   const [channel, setChannel] = useState<Channel>();
 
@@ -181,18 +178,25 @@ export default function useSources<T extends ProjectSources>({
     // resurrect the previous level's sources or double-attach callbacks.
     async (isCancelled: () => boolean = () => false) => {
       const {usesProjects, id, isProjectLevel} = levelProperties;
-      if (!usesProjects) {
-        return;
-      }
       // Clear out existing data.
       setSources(undefined);
       setVersionList([]);
       setCurrentVersion(undefined);
       setHasEdited(false);
+      setHasSavedSources(false);
       setLoadError(undefined);
       setChannel(undefined);
       await projectManagerRef.current?.cleanUp();
       if (isCancelled()) return;
+      // A level that uses no project has nothing to load; the lab supplies
+      // its sources, and nothing is saved. Level edit mode goes on to load
+      // the level's own sources below, as it does for any level, so a
+      // levelbuilder can edit them.
+      if (!usesProjects && !isLevelEditMode) {
+        projectManagerRef.current = null;
+        dispatch(setChannelAction(undefined));
+        return;
+      }
 
       // Set up new Project Manager, unless we're in level edit mode.
       if (!isLevelEditMode) {
@@ -227,6 +231,7 @@ export default function useSources<T extends ProjectSources>({
       // Some components (including non-Lab2 areas like the header) read state.lab.channel directly
       // so we need to set it here. Prefer to read channel from this hook via the consuming lab within lab components.
       dispatch(setChannelAction(projectAndSources?.channel));
+      setHasSavedSources(projectAndSources?.sources !== undefined);
       setSources(
         getInitialSources(
           levelProperties,
@@ -277,6 +282,7 @@ export default function useSources<T extends ProjectSources>({
       // drop each other's fields.
       const prevSources = currentSourcesRef.current;
       if (prevSources === undefined) {
+        if (loadPending.current) return;
         throw new Error('updateSources called before sources loaded');
       }
       const newSources =
@@ -370,15 +376,20 @@ export default function useSources<T extends ProjectSources>({
   useEffect(() => {
     let cancelled = false;
     setIsLoading(true);
+    loadPending.current = true;
     loadProject(() => cancelled)
       .catch(error => {
         if (!cancelled) setLoadError(error);
       })
       .finally(() => {
-        if (!cancelled) setIsLoading(false);
+        if (!cancelled) {
+          loadPending.current = false;
+          setIsLoading(false);
+        }
       });
     return () => {
       cancelled = true;
+      loadPending.current = false;
     };
   }, [loadProject]);
 
@@ -404,6 +415,7 @@ export default function useSources<T extends ProjectSources>({
     isLoading,
     isEditable,
     hasEdited,
+    hasSavedSources,
     currentSources,
     channel,
     projectManager: projectManagerRef.current,

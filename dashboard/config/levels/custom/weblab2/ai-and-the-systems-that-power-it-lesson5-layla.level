@@ -1,12 +1,13 @@
 <Weblab2>
   <config><![CDATA[{
+  "published": true,
   "game_id": 74,
   "created_at": "2026-09-18T17:29:13.000Z",
   "level_num": "custom",
   "user_id": 18603,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "# ScriptCheck Software Optimization\r\n\r\nLaye needs help troubleshooting and optimizing the ScriptCheck software she is using.\r\n\r\nRead the directions on the tablet displayed.",
+    "long_instructions": "# ScriptCheck Software Optimization\r\n\r\nLayla needs help troubleshooting and optimizing the ScriptCheck software she is using.\r\n\r\nRead the directions on the tablet displayed.",
     "offer_browser_tts": "false",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
@@ -104,7 +105,6 @@
     "bubble_choice_description": "Help Layla to optimize the ScriptCheck software that helps her enter prescription information into her system..",
     "thumbnail_url": "https://images.code.org/7e29932125f793b5c79f17468e46439a-layla-aif-career-journey-layla-title-card-l5-2.png"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-09-18T17:29:13.802+00:00\",\"changed\":[\"cloned from \\\"ai-and-the-systems-that-power-it-lesson5-marcus\\\"\"],\"cloned_from\":\"ai-and-the-systems-that-power-it-lesson5-marcus\"},{\"changed_at\":\"2026-09-18 17:29:36 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-22 14:43:29 +0000\",\"changed\":[\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-22 14:46:45 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-22 19:56:02 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-22 20:21:08 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-22 21:26:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-09-18T17:29:13.802+00:00\",\"changed\":[\"cloned from \\\"ai-and-the-systems-that-power-it-lesson5-marcus\\\"\"],\"cloned_from\":\"ai-and-the-systems-that-power-it-lesson5-marcus\"},{\"changed_at\":\"2026-09-18 17:29:36 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-22 14:43:29 +0000\",\"changed\":[\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-22 14:46:45 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-22 19:56:02 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-22 20:21:08 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-22 21:26:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-23 18:11:06 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
 }]]></config>
 </Weblab2>

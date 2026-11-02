@@ -1,0 +1,45 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-10-16T21:50:27.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "panels": [
+      {
+        "key": "adaptive-HoAI26-show-it-off-54-cf6f9859-cfe3-4437-a266-0bfc2466d90d",
+        "text": "Remember all the changes you've made? Let's take a look back at your project's journey.",
+        "imageUrl": "https://images.code.org/0d1e1113611b51a03ceb029b3445ae38-adaptive-HoAI26-show-it-off-54-panel-1-4ae0e271-2bfb-4feb-bef7-c059a00abc2a.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "adaptive-HoAI26-show-it-off-54-1c7be411-eeb7-41d7-9477-03003dc86958",
+        "text": "You can use a slider to replay how your web page changed over time, from your first prompt to your latest edits.",
+        "imageUrl": "https://images.code.org/693314a641f65910d974856a033aed23-adaptive-HoAI26-show-it-off-54-panel-2-3289cac7-7162-4d50-ab9c-82269d515ce2.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "adaptive-HoAI26-show-it-off-54-904fb4bc-e463-43b0-b8fe-bff1afc5b286",
+        "text": "Along the way, you earned special badges for mastering new web development skills!",
+        "imageUrl": "https://images.code.org/09450807f161421c79582ba4ac024f61-adaptive-HoAI26-show-it-off-54-panel-3-ac4b49f9-0044-452f-b686-d7d8e44a1d64.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "adaptive-HoAI26-show-it-off-54-da5a5c90-fbb9-429e-b995-0baf560fb9f0",
+        "text": "Like the 'Page Namer' badge, for when you first identified a page part by its proper name.",
+        "imageUrl": "https://images.code.org/6a2ddfb0f81617574cde86c432bf54b9-adaptive-HoAI26-show-it-off-54-panel-4-a219fc85-4267-4ae7-8e68-e103f1a416e1.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "adaptive-HoAI26-show-it-off-54-33ce18c0-f3ba-46c0-92d7-fc5a6c835ad5",
+        "text": "Or the 'Fix Checker' badge, when you successfully confirmed a bug fix!",
+        "imageUrl": "https://images.code.org/493cdc53995bfa4df6a94438b3ebc50b-adaptive-HoAI26-show-it-off-54-panel-5-e6e5d35a-b9a3-41b7-8e41-2e73846216dc.png",
+        "layout": "text-top-left"
+      }
+    ],
+    "generate_outline": "Review your work in a time-lapse replay of your site's development. Use a slider to move through different versions and see badges pop up as you achieved milestones like naming page parts or fixing bugs."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-16 21:51:11 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-16 21:51:11 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>
