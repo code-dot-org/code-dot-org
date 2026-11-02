@@ -17,6 +17,10 @@ export const FRAME_LABELS: readonly string[] = [
 
 /** The frame a set is drawn from, and so the one editing opens on. */
 export const BASE_FRAME = 1;
+/** The frames as the row shows them: the standing frame first, since it is
+    the one the set was drawn from and the one editing opens on, then the
+    strip's order. */
+export const FRAME_ROW_ORDER: readonly number[] = [1, 0, 2, 3, 4];
 
 export interface FrameSize {
   x: number;

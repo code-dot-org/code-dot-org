@@ -4,7 +4,7 @@
 import classNames from 'classnames';
 import React, {useEffect, useRef} from 'react';
 
-import {FRAME_LABELS, FrameSize} from './frames';
+import {FRAME_LABELS, FRAME_ROW_ORDER, FrameSize} from './frames';
 
 import styles from './images-tab.module.scss';
 
@@ -68,7 +68,10 @@ const FrameRow: React.FunctionComponent<FrameRowProps> = ({
   disabled,
 }) => (
   <div className={styles.frameStrip} role="group" aria-label="Frames">
-    {Array.from({length: count}, (_, index) => {
+    {(count === FRAME_ROW_ORDER.length
+      ? FRAME_ROW_ORDER
+      : Array.from({length: count}, (_, i) => i)
+    ).map(index => {
       const label = FRAME_LABELS[index] ?? `Frame ${index + 1}`;
       const chosen = index === selected;
       return (

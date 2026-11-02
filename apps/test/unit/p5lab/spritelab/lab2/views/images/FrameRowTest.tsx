@@ -19,7 +19,7 @@ describe('FrameRow', () => {
       screen
         .getAllByRole('button')
         .map(button => button.getAttribute('aria-label'))
-    ).toEqual(['Idle', 'Standing', 'Walk', 'Jump up', 'Jump down']);
+    ).toEqual(['Standing', 'Idle', 'Walk', 'Jump up', 'Jump down']);
     expect(screen.getByRole('button', {name: 'Standing'})).toHaveAttribute(
       'aria-pressed',
       'true'
