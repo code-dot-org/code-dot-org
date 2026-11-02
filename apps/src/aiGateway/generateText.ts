@@ -12,6 +12,11 @@ import {
   type CurrentGatewayGenerateTextResponse,
 } from './contract/gatewaySchemas';
 import {reportGatewayError} from './logHelper';
+import {
+  recordGatewayRequestError,
+  recordGatewayRequestOk,
+  recordTokenNotIssued,
+} from './requestMetric';
 import {AI_GATEWAY_URL, fetchAccessToken, getModelString} from './shared';
 import {
   fetchTurnstileToken,
@@ -128,9 +133,13 @@ const generateTextThroughGateway = async <
       // Turnstile mode that decides whether a challenge is needed at all. The
       // manager pre-fetches a token after every delivery, so only the first
       // call of a session waits on a challenge here.
-      const {token, turnstileEnforcementMode} = await fetchAccessToken(
-        aichatContext
+      const access = await fetchAccessToken(aichatContext).catch(
+        (error: unknown) => {
+          recordTokenNotIssued();
+          throw error;
+        }
       );
+      const {token, turnstileEnforcementMode} = access;
       const turnstileToken = await fetchTurnstileToken(
         turnstileEnforcementMode
       );
@@ -147,7 +156,11 @@ const generateTextThroughGateway = async <
         JSON.stringify({...payload, token}),
         false,
         headers
-      );
+      ).catch(async (error: unknown) => {
+        await recordGatewayRequestError(access.signingKey, error);
+        throw error;
+      });
+      recordGatewayRequestOk(access.signingKey);
 
       const rawResponse = await response.json();
       const parseResult =

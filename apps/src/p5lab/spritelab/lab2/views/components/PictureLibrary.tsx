@@ -1,4 +1,3 @@
-import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import classNames from 'classnames';
@@ -74,11 +73,6 @@ const PictureLibrary: React.FunctionComponent<PictureLibraryProps> = ({
   onDelete,
   jumboSide = 'right',
 }) => {
-  // The jumbo is the image dialog's pane, whose chrome colors follow the
-  // theme it is given.
-  // Without a provider (tests) the pane keeps the light chrome.
-  const {theme} = useTheme(true);
-  const mode = theme === 'Dark' ? 'dark' : 'light';
   // Delete asks once; a new choice withdraws the question.
   const [confirmingDelete, setConfirmingDelete] = useState(false);
   useEffect(() => setConfirmingDelete(false), [chosenKey]);
@@ -152,7 +146,6 @@ const PictureLibrary: React.FunctionComponent<PictureLibraryProps> = ({
             where the picture can be painted, a plain pane otherwise. */}
         <div
           className={classNames(dialogStyles.dialogHost, moduleStyles.jumbo)}
-          data-theme={mode}
           style={{'--jumbo-side': `${jumboPx ?? 0}px`} as React.CSSProperties}
         >
           {chosen && onPaint ? (

@@ -1,18 +1,20 @@
 import classNames from 'classnames';
-import React from 'react';
+import React, {useContext} from 'react';
 
 import {CheckpointStatusMap} from '../../progress/model';
 
 import {DrawnEdge} from './layout/busRoutes';
 import {MapLayout, NodePosition} from './layout/types';
 import {MapFit} from './MapView';
+import {MapZoomContext} from './MapZoom';
 import {useElementSize} from './useElementSize';
 
 import styles from './mapBoard.module.scss';
 
-// On-screen scale of the board when zoomed onto a checkpoint, whatever
-// the fit shrank it to.
+// On-screen scale of the board when zoomed onto a checkpoint, whatever the
+// fit shrank it to, unless the viewer had already zoomed in further.
 const FOCUS_SCALE = 2;
+const TOUR_FOCUS_SCALE = 1.75;
 
 interface MapBoardProps {
   layout: MapLayout;
@@ -23,6 +25,7 @@ interface MapBoardProps {
   focus?: NodePosition;
   /** See MapProps. */
   fit?: MapFit;
+  tourFocus?: {x: number; y: number};
   children: React.ReactNode;
 }
 
@@ -30,7 +33,7 @@ interface MapBoardProps {
  * The board a map draws on, at the layout's size, shrunk until it fits the
  * space it is given and centered in it; fitted to the width, scaled to the
  * space's width and as tall as that makes it. Zoomed onto a checkpoint, the
- * board scales up about it and slides so it sits at the center of that space,
+ * board scales up about it and slides so it sits at the center of the view,
  * title and all. Lines go under the children; a line is active once any
  * edge it carries starts from a finished checkpoint.
  */
@@ -40,9 +43,13 @@ const MapBoard: React.FunctionComponent<MapBoardProps> = ({
   statusMap,
   focus,
   fit: fitTo = 'whole',
+  tourFocus,
   children,
 }) => {
   const [fitRef, space] = useElementSize<HTMLDivElement>();
+  // The board fills the zoomed content, so they share coordinates.
+  const outer = useContext(MapZoomContext);
+  const center = outer.center || {x: space.width / 2, y: space.height / 2};
   const byWidth = fitTo === 'width';
   const widthFit = space.width ? space.width / layout.width : 1;
   const fit = byWidth
@@ -56,12 +63,17 @@ const MapBoard: React.FunctionComponent<MapBoardProps> = ({
   const fitTop = byWidth
     ? 0
     : Math.max(0, (space.height - layout.height * fit) / 2);
-  // How far, in board units, the focused checkpoint is from the center of
-  // the space.
-  const shift = focus
+  const effectiveFocus = focus ?? tourFocus;
+  const focusScale = Math.max(
+    1,
+    (focus ? FOCUS_SCALE : TOUR_FOCUS_SCALE) / (fit * outer.zoom)
+  );
+  // How far, in board units, the focused point is from the center of the
+  // view.
+  const shift = effectiveFocus
     ? {
-        x: (space.width / 2 - fitLeft) / fit - focus.x,
-        y: (space.height / 2 - fitTop) / fit - focus.y,
+        x: (center.x - fitLeft) / fit - effectiveFocus.x,
+        y: (center.y - fitTop) / fit - effectiveFocus.y,
       }
     : {x: 0, y: 0};
   const board = (
@@ -78,11 +90,9 @@ const MapBoard: React.FunctionComponent<MapBoardProps> = ({
       <div
         className={styles.zoom}
         style={
-          focus && {
-            transformOrigin: `${focus.x}px ${focus.y}px`,
-            transform: `translate(${shift.x}px, ${shift.y}px) scale(${
-              FOCUS_SCALE / fit
-            })`,
+          effectiveFocus && {
+            transformOrigin: `${effectiveFocus.x}px ${effectiveFocus.y}px`,
+            transform: `translate(${shift.x}px, ${shift.y}px) scale(${focusScale})`,
           }
         }
       >
@@ -114,6 +124,7 @@ const MapBoard: React.FunctionComponent<MapBoardProps> = ({
   return (
     <div
       ref={fitRef}
+      id="adaptive-tour-map-canvas"
       className={classNames(styles.fit, byWidth && styles.byWidth)}
       // The board's own box keeps its unscaled size, so this one sets the height.
       style={byWidth ? {height: Math.floor(layout.height * fit)} : undefined}

@@ -1,7 +1,7 @@
 // Checks the schemas alone cannot make: skill references, checkpoint graph
-// shape, question and choice ids, each level played by at most one step, and whether
-// each level step's `project` flag agrees with the level the server resolved
-// for it.
+// shape, question and choice ids, branch conditions, each level played by at
+// most one step, and whether each level step's `project` flag agrees with the
+// level the server resolved for it.
 
 import {z} from 'zod';
 
@@ -20,6 +20,7 @@ export function findReferenceProblems(pathway: Pathway): string[] {
     ...findSkillProblems(pathway),
     ...findCheckpointProblems(pathway),
     ...findQuestionProblems(pathway),
+    ...findBranchProblems(pathway),
     ...findLevelReuseProblems(pathway),
     ...findLevelStepProblems(pathway),
     ...findEvidenceProblems(pathway),
@@ -70,6 +71,48 @@ function findQuestionProblems(pathway: Pathway): string[] {
 }
 
 /**
+ * Detects branch conditions that can never be met: `showIf` must name an
+ * earlier questions step in the same checkpoint, a multiple choice question
+ * in it, and one of that question's choices.
+ */
+function findBranchProblems(pathway: Pathway): string[] {
+  const problems: string[] = [];
+  for (const checkpoint of pathway.checkpoints) {
+    checkpoint.steps.forEach((step, index) => {
+      if (!step.showIf) return;
+      const where = `checkpoints.${checkpoint.id}.steps.${step.id}.showIf`;
+      const {stepId, questionId, choiceId} = step.showIf;
+      const target = checkpoint.steps
+        .slice(0, index)
+        .find(earlier => earlier.id === stepId);
+      if (!target) {
+        problems.push(
+          `${where}: '${stepId}' is not an earlier step in the checkpoint`
+        );
+        return;
+      }
+      if (target.kind !== 'questions') {
+        problems.push(`${where}: '${stepId}' is not a questions step`);
+        return;
+      }
+      const question = target.questions.find(q => q.id === questionId);
+      if (!question || question.type !== 'MultipleChoiceQuestion') {
+        problems.push(
+          `${where}: '${stepId}' has no multiple choice question ${questionId}`
+        );
+        return;
+      }
+      if (!question.choices.some(c => c.id === choiceId)) {
+        problems.push(
+          `${where}: '${choiceId}' is not one of question ${questionId}'s choices`
+        );
+      }
+    });
+  }
+  return problems;
+}
+
+/**
  * Detects a level played by more than one step, or by a step and the project
  * view: level steps must be unique and must not name the project template.
  */
@@ -103,7 +146,8 @@ function findLevelReuseProblems(pathway: Pathway): string[] {
  * Detects level steps whose `project` flag disagrees with their level: a
  * project step's level must share the pathway's project template, and a
  * sandbox step's must not (skipped when the level did not resolve), and
- * sandbox steps that ask for generated instructions or validation.
+ * sandbox steps that ask for generated instructions, a generated project or
+ * validation.
  */
 function findLevelStepProblems(pathway: Pathway): string[] {
   const problems: string[] = [];
@@ -115,6 +159,11 @@ function findLevelStepProblems(pathway: Pathway): string[] {
       if (step.instructionsPrompt && !step.project) {
         problems.push(
           `${where}: instructionsPrompt needs the student's project, so the step must be marked project`
+        );
+      }
+      if (step.projectPrompt && !step.project) {
+        problems.push(
+          `${where}: projectPrompt builds the student's project, so the step must be marked project`
         );
       }
       if (step.validation && !step.project) {

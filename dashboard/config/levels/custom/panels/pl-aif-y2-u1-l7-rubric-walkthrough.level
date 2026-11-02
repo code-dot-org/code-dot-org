@@ -1,0 +1,54 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-10-28T15:54:24.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "panels": [
+      {
+        "text": "## What’s Being Graded\n**Four criteria:** \n- Computational Thinking\n- Python Programming\n- Documentation\n- Reflection\n\nA student can write perfectly working code and still lose points on documentation or reflection, this isn’t just a “does it run” rubric. \n",
+        "imageUrl": "https://images.code.org/72d5fdcbf02084b8845ddffda3ed644f-CodeAI skills in four cards.png",
+        "key": "sp-pl-DS-SpreadsheetVocab-23803e7b-4230-4c32-ac36-59aaf29309ce",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": " ## Computational Thinking\nThe top mark requires conditional logic in at least **four** different questions, each one creating a real branch in the tree. \n\nThree correct-but-fewer questions is “Convincing,” not “Extensive.” \n\nA tree with only one real branching question, no matter how polished the code, caps out at “Limited.” \n",
+        "imageUrl": "https://images.code.org/25b7f63ef117e854c1d0abf8b1b3b5fe-Computational Thinking Tree Card.png",
+        "key": "sp-pl-DS-pythonLab_tour-e31a5299-fb7b-4695-ac1f-5a80498a9378",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Python Programming\nLooks for properly structured, correctly nested conditionals, function calls, and variables, together. \n\nA program with correct logic but flat, unnested if statements where nesting was needed won’t hit the top mark, structure matters as much as correctness. \n",
+        "imageUrl": "https://images.code.org/9ae3c22bf66dc2c8644ffb9ac1a50c85-Python Programming_ Indentation Ladder.png",
+        "key": "sp-pl-DS-pythonLab_tour-62a7ff61-8b6a-4901-8cb3-26fcd990f873",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Documentation\nThis one’s easy to overlook when you’re scanning for working code: comments explaining why a question was asked, not just what the code does, plus descriptive variable names throughout. \n\nA student can nail the logic and still lose real points here if their code is uncommented or their variables are named `a`, `b`, `c`. \n",
+        "imageUrl": "https://images.code.org/a09dac8ebd769fc9ed2a13c64bc29082-Rain logic in a documentation card.png",
+        "key": "pl-sandbox-aif2-U1-weblab-panels_10-f545a3f8-80df-47e7-a398-659a35ae4b5b",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Reflection\nNot “did they write something,” but whether they identify real strengths and limitations of their own rule-based logic. \n\nA reflection that only praises the project, or only picks at it, caps at “Convincing.” \n",
+        "imageUrl": "https://images.code.org/e4ee17a3c013d000863de74ba8a4da10-Reflection_ strengths and limitations.png",
+        "key": "pl-sandbox-aif2-U1-weblab-panels_10_2026-31887a3d-5ad5-424f-a333-ceecdb0181f9",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## What a Strong Tree Looks Like\nThe example tree: \"Is it raining?\" splits into reading preferences (book or game) on one side, \"Is it hot?\" on the other, which further splits into biking preferences (bike or walk) versus swimming. \n\nSix final activities total, from only three actual questions. That's the shape to look for: a few good questions, each one meaningfully splitting the possibilities, not just a long checklist.\n",
+        "imageUrl": "https://images.code.org/22528e05e452a3a2b1cf907ccaf0735d-Weather and activity decision tree.png",
+        "key": "pl-sandbox-aif2-U1-weblab-panels_10_2026-f9a89711-4b6e-4fbc-ae64-71f41573296a",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "name_suffix": "_2026",
+    "offer_browser_tts": "false",
+    "use_links": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-10-28T15:54:24.954+00:00\",\"changed\":[\"cloned from \\\"pl-aif-y2-u1-l2-ai-history\\\"\"],\"cloned_from\":\"pl-aif-y2-u1-l2-ai-history\"},{\"changed_at\":\"2026-10-28 16:38:58 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-10-28 16:44:59 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-10-28 16:51:42 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+}]]></config>
+</Panels>

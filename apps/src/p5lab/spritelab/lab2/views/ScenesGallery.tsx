@@ -15,7 +15,6 @@ import {getRunButtonSx} from '@cdo/apps/templates/runButtonSx';
 
 import {SceneMetadata} from '../redux/spriteLab2Redux';
 import {SceneLink} from '../sceneLinks';
-import {SceneType} from '../types';
 
 import NewSceneDialog, {SCENE_NAME_MAX_LENGTH} from './NewSceneDialog';
 import ScenePicture from './ScenePicture';
@@ -222,7 +221,7 @@ interface ScenesGalleryProps {
   /** Which scenes' code jumps to which, drawn as arrows between cards. */
   links?: SceneLink[];
   onOpenScene: (sceneId: string) => void;
-  onCreateScene: (name: string, type: SceneType) => void;
+  onCreateScene: (name: string) => void;
   onRenameScene: (sceneId: string, name: string) => void;
   onDeleteScene: (sceneId: string) => void;
   onMakeStartScene: (sceneId: string) => void;

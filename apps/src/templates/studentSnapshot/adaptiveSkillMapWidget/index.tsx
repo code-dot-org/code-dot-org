@@ -42,10 +42,10 @@ const getAdaptiveSnapshot = (
 
 const noop = () => {};
 
-// Multiples of the scale at which the map fills the widget's width. Below 1
-// the map is narrower than the widget and centered in it.
-const ZOOM_LEVELS = [0.25, 0.5, 0.75, 1, 1.5, 2];
-const START_ZOOM = ZOOM_LEVELS.indexOf(0.75);
+// Percentages of the size at which the map fills the widget's width. Below
+// 100 the map is narrower than the widget and centered in it.
+const ZOOM_PERCENTAGES = [25, 50, 75, 100, 150, 200];
+const START_ZOOM = ZOOM_PERCENTAGES.indexOf(75);
 
 const parseOrUndefined = (raw: unknown): Pathway | undefined => {
   if (!raw) return undefined;
@@ -68,7 +68,7 @@ const SkillMap: React.FC<{
   const startId = pathway.checkpoints.find(c => !c.requires?.length)?.id;
   return (
     <MapZoom
-      levels={ZOOM_LEVELS}
+      zoomPercentages={ZOOM_PERCENTAGES}
       startLevel={START_ZOOM}
       fit="width"
       startId={startId}

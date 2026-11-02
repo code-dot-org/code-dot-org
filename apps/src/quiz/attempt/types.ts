@@ -48,6 +48,12 @@ export function isFreeResponseResponse(
   return response.questionType === 'FreeResponseQuestion';
 }
 
+export function isMatchResponse(
+  response: QuizQuestionResponse
+): response is MatchQuestionResponse {
+  return response.questionType === 'MatchQuestion';
+}
+
 // How a choice is marked in a submitted question's results.
 export type ChoiceResultStatus =
   | 'correct'
@@ -57,6 +63,8 @@ export type ChoiceResultStatus =
 
 export type QuizQuestionResult = QuizQuestionResponse & {
   quizQuestionId: number;
+  // Absent before submission.
+  answered?: boolean;
   correct: boolean | null;
   explanation: string | null;
   // The answer key, by question type; null when hidden.

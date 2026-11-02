@@ -1,11 +1,15 @@
+import {QuizQuestionItem} from '@cdo/apps/quiz/types';
 import {formatChoiceLetter} from '@cdo/apps/quiz/utils';
 
-import {MatchItem, MatchPairs, MatchSets, MatchSide} from './types';
+import {MatchPairs, MatchSets, MatchSide} from './types';
+
+// A constant, so MatchBoard's line measurement doesn't rerun every render.
+export const NO_MATCH_SETS: MatchSets = [[], []];
 
 export function itemsInColumn(
   matchSets: MatchSets,
   side: MatchSide
-): MatchItem[] {
+): QuizQuestionItem[] {
   return matchSets[side === 'start' ? 0 : 1];
 }
 

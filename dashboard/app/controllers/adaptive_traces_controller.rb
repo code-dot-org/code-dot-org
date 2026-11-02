@@ -4,7 +4,7 @@
 class AdaptiveTracesController < ApplicationController
   before_action :authenticate_user!
 
-  TRACE_NAMES = %w[adaptive-instructions adaptive-validation].freeze
+  TRACE_NAMES = %w[adaptive-instructions adaptive-validation adaptive-project].freeze
   OUTCOMES = %w[success schema_mismatch error].freeze
   # Unknown metadata keys are dropped rather than refused, so a client ahead of
   # or behind this list still gets its trace recorded.

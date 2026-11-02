@@ -447,6 +447,59 @@ describe('findReferenceProblems', () => {
     ]);
   });
 
+  describe('showIf', () => {
+    // A survey question in the intro, followed by the step under test.
+    const branched = (showIf: {
+      stepId: string;
+      questionId: number;
+      choiceId: string;
+    }): Raw => {
+      const raw = served();
+      const question = questionOf(raw);
+      if (question.type !== 'MultipleChoiceQuestion') throw new Error();
+      delete question.correctChoiceId;
+      raw.checkpoints[0].steps.push({...panels('branch'), showIf});
+      return raw;
+    };
+    const where = 'checkpoints.intro.steps.branch.showIf';
+
+    it('accepts a condition on an earlier choice', () => {
+      expect(
+        problemsOf(branched({stepId: 'quiz', questionId: 1, choiceId: 'b'}))
+      ).toEqual([]);
+    });
+
+    it('flags a step that is not earlier in the checkpoint', () => {
+      expect(
+        problemsOf(
+          branched({stepId: 'css-intro', questionId: 1, choiceId: 'a'})
+        )
+      ).toEqual([
+        `${where}: 'css-intro' is not an earlier step in the checkpoint`,
+      ]);
+      expect(
+        problemsOf(branched({stepId: 'branch', questionId: 1, choiceId: 'a'}))
+      ).toEqual([
+        `${where}: 'branch' is not an earlier step in the checkpoint`,
+      ]);
+    });
+
+    it('flags a step with no questions and a question it does not have', () => {
+      expect(
+        problemsOf(branched({stepId: 'welcome', questionId: 1, choiceId: 'a'}))
+      ).toEqual([`${where}: 'welcome' is not a questions step`]);
+      expect(
+        problemsOf(branched({stepId: 'quiz', questionId: 7, choiceId: 'a'}))
+      ).toEqual([`${where}: 'quiz' has no multiple choice question 7`]);
+    });
+
+    it('flags a choice the question lacks', () => {
+      expect(
+        problemsOf(branched({stepId: 'quiz', questionId: 1, choiceId: 'z'}))
+      ).toEqual([`${where}: 'z' is not one of question 1's choices`]);
+    });
+  });
+
   it('flags a choice id used twice in one question, once', () => {
     const raw = served();
     Object.assign(questionOf(raw), {
@@ -541,6 +594,24 @@ describe('findReferenceProblems', () => {
     const build = raw.checkpoints[1].steps[0];
     if (build.kind !== 'level') throw new Error('fixture changed');
     build.instructionsPrompt = 'Make it personal.';
+    expect(problemsOf(raw)).toEqual([]);
+  });
+
+  it('flags a project prompt on a sandbox step', () => {
+    const raw = served();
+    const practice = raw.checkpoints[1].steps[1];
+    if (practice.kind !== 'level') throw new Error('fixture changed');
+    practice.projectPrompt = 'A one-page site.';
+    expect(problemsOf(raw)).toEqual([
+      "checkpoints.basics.steps.practice: projectPrompt builds the student's project, so the step must be marked project",
+    ]);
+  });
+
+  it('accepts a project prompt on a project step', () => {
+    const raw = served();
+    const build = raw.checkpoints[1].steps[0];
+    if (build.kind !== 'level') throw new Error('fixture changed');
+    build.projectPrompt = 'A one-page site.';
     expect(problemsOf(raw)).toEqual([]);
   });
 

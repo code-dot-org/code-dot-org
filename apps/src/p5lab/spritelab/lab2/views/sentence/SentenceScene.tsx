@@ -89,7 +89,7 @@ const PAINT_COLORS: readonly PaletteColor[] = [
 // One brush, the finest on the pixel grid.
 const PAINT_BRUSH_SIZES: readonly number[] = [1];
 
-interface Made {
+interface GeneratedPicture {
   /** The result's filename, unique per generation. */
   id: string;
   result: GeneratedImageResult;
@@ -129,6 +129,10 @@ export interface SentenceSceneParts {
   fact: React.ReactNode;
   /** The question and the thumbs, once there is a picture. */
   verdict: React.ReactNode;
+  /** Some levels require the student's verdict on whether the generated
+      picture is good or bad before it can be kept; true while that verdict
+      is still owed. */
+  awaitingVerdict: boolean;
   /** The level's generations are used up: Generate stays off. */
   exhausted: boolean;
   generate: () => void;
@@ -150,9 +154,6 @@ interface SentenceSceneProps {
   instructions?: string;
   /** What the panel reads instead once a picture is made. */
   resultInstructions?: string;
-  /** Instructions while the student draws, in place of `instructions`,
-      which never shows then. */
-  paintInstructions?: string;
   /** Generations the student has left; Generate goes off at none. */
   generationsLeft?: number;
   /** Offer the read-aloud button on the instructions. */
@@ -166,6 +167,12 @@ interface SentenceSceneProps {
   onGenerateStart?: () => void;
   /** Analytics: which surface generated. */
   method?: string;
+  /** The level requires the student to rate each generated picture before
+      keeping it (a `rated` objective). Most levels do not. */
+  verdictRequired?: boolean;
+  /** Called whenever awaitingVerdict changes, so the owner can hold the
+      dialog open until the rating is in. */
+  onAwaitingVerdict?: (awaiting: boolean) => void;
   /** Lay the parts out instead of the level's two halves. */
   layout?: (parts: SentenceSceneParts) => React.ReactNode;
 }
@@ -178,13 +185,14 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   uploadImage,
   instructions,
   resultInstructions,
-  paintInstructions,
   generationsLeft,
   showTts,
   typeChoice,
   onKeep,
   onGenerateStart,
   method = 'scene',
+  verdictRequired,
+  onAwaitingVerdict,
   layout,
 }) => {
   const dispatch = useAppDispatch();
@@ -205,13 +213,21 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   const [mode, setMode] = useState<Mode>('edit');
   // Every picture made this session; the chosen one shows in the frame
   // and is what Keep saves.
-  const [history, setHistory] = useState<Made[]>([]);
+  const [history, setHistory] = useState<GeneratedPicture[]>([]);
   const [chosenId, setChosenId] = useState<string | null>(null);
-  const made = history.find(m => m.id === chosenId) ?? null;
-  // The picture just made plays the reveal and takes the question about
-  // it; one swapped back in does neither.
+  const chosenPicture = history.find(m => m.id === chosenId) ?? null;
+  // freshId marks the picture just generated: it plays the reveal and gets
+  // the rating question. A picture swapped back in from the strip does
+  // neither.
   const [freshId, setFreshId] = useState<string | null>(null);
   const [verdict, setVerdict] = useState<Verdict | null>(null);
+  const awaitingVerdict =
+    !!verdictRequired && mode === 'result' && !!chosenPicture && !verdict;
+  useEffect(() => {
+    onAwaitingVerdict?.(awaitingVerdict);
+  }, [awaitingVerdict, onAwaitingVerdict]);
+  // On unmount, tell the owner that no rating is pending any more.
+  useEffect(() => () => onAwaitingVerdict?.(false), [onAwaitingVerdict]);
   const [reason, setReason] = useState<VerdictReason | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [fact, setFact] = useState<string | null>(null);
@@ -292,7 +308,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       if (run !== runRef.current) {
         return;
       }
-      const entry: Made = {
+      const entry: GeneratedPicture = {
         id: result.filename,
         result,
         dataURI: bytesToDataURI(result.uint8Array, result.mediaType),
@@ -333,15 +349,23 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   ]);
 
   const keep = useCallback(async () => {
-    if (!made) {
+    if (!chosenPicture || awaitingVerdict) {
       return;
     }
     setSaving(true);
+    // A verdict, when given, is saved in the image's generation metadata,
+    // which travels with the project.
+    const result = verdict
+      ? {
+          ...chosenPicture.result,
+          generation: {...chosenPicture.result.generation, verdict},
+        }
+      : chosenPicture.result;
     try {
       if (onKeep) {
-        await onKeep(made.result);
+        await onKeep(result);
       } else {
-        await saveGeneratedImage(dispatch, made.result, {
+        await saveGeneratedImage(dispatch, result, {
           uploadImage,
           imageType,
           imageRole,
@@ -355,7 +379,16 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       // On the last level with no finish URL, the lesson does not move on.
       setSaving(false);
     }
-  }, [made, onKeep, dispatch, uploadImage, imageType, imageRole]);
+  }, [
+    chosenPicture,
+    awaitingVerdict,
+    verdict,
+    onKeep,
+    dispatch,
+    uploadImage,
+    imageType,
+    imageRole,
+  ]);
 
   const startPaint = useCallback(() => {
     setError(null);
@@ -403,13 +436,13 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         EVENTS.HOAI2026_IMAGE_VERDICT,
         {
           verdict: next,
-          promptText: made ? promptText(sentence, choices) : undefined,
+          promptText: chosenPicture ? promptText(sentence, choices) : undefined,
           imageType,
         },
         true
       );
     },
-    [made, sentence, choices, imageType]
+    [chosenPicture, sentence, choices, imageType]
   );
 
   const explain = useCallback(
@@ -419,25 +452,28 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         EVENTS.HOAI2026_IMAGE_VERDICT_REASON,
         {
           reason: next,
-          promptText: made ? promptText(sentence, choices) : undefined,
+          promptText: chosenPicture ? promptText(sentence, choices) : undefined,
           imageType,
         },
         true
       );
     },
-    [made, sentence, choices, imageType]
+    [chosenPicture, sentence, choices, imageType]
   );
 
-  // Another picture into the frame; a swap plays no reveal and ends the
-  // question.
+  // Put another picture from the strip into the frame. A swap plays no
+  // reveal, and a verdict given so far was for the previous picture, so it
+  // is cleared.
   const choosePicture = useCallback((id: string) => {
     setChosenId(id);
     setFreshId(null);
+    setVerdict(null);
+    setReason(null);
   }, []);
 
   const generating = mode === 'generating';
   const busy = generating || saving;
-  const showingResult = mode === 'result' && !!made;
+  const showingResult = mode === 'result' && !!chosenPicture;
   const canGenerate = complete && !busy && !exhausted;
 
   // The control that changed the mode unmounts with it, so focus moves to
@@ -457,15 +493,15 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     ? 'Your picture is ready.'
     : '';
 
-  // The steps have the panel while a picture is made, and the level's
-  // instructions ask for a prompt, so drawing shows its own or none.
-  const instructionsText = generating
-    ? undefined
-    : mode === 'paint'
-    ? paintInstructions
-    : showingResult && resultInstructions
-    ? resultInstructions
-    : instructions;
+  // No instructions text while generating, when the progress steps use the
+  // panel, or while painting, since the level's instructions ask for a
+  // prompt and do not apply to drawing.
+  const instructionsText =
+    generating || mode === 'paint'
+      ? undefined
+      : showingResult && resultInstructions
+      ? resultInstructions
+      : instructions;
   const instructionsBlock = instructionsText && (
     <MainInstructionsContent
       instructionsText={instructionsText}
@@ -479,11 +515,11 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     </MuiTypography>
   );
   const sheet =
-    made?.result.frames?.poses && made.result.frames
+    chosenPicture?.result.frames?.poses && chosenPicture.result.frames
       ? {
-          src: made.dataURI,
-          frameSize: made.result.frames.frameSize,
-          poses: made.result.frames.poses,
+          src: chosenPicture.dataURI,
+          frameSize: chosenPicture.result.frames.frameSize,
+          poses: chosenPicture.result.frames.poses,
         }
       : null;
 
@@ -612,27 +648,27 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     <div className={styles.generating}>
       <PixelShuffle />
     </div>
-  ) : made ? (
+  ) : chosenPicture ? (
     <>
       {sheet ? (
         <AnimatedSheetPreview {...sheet} />
       ) : (
         <img
-          src={made.dataURI}
-          alt={made.prompt}
+          src={chosenPicture.dataURI}
+          alt={chosenPicture.prompt}
           className={classNames(
             styles.preview,
-            made.result.pixelGridSize && styles.pixelArt
+            chosenPicture.result.pixelGridSize && styles.pixelArt
           )}
         />
       )}
       {/* Keyed by picture, so each new one remounts and plays the reveal
           once. */}
-      {made.id === freshId && (
+      {chosenPicture.id === freshId && (
         <>
           <PixelReveal
-            key={`reveal-${made.id}`}
-            src={made.dataURI}
+            key={`reveal-${chosenPicture.id}`}
+            src={chosenPicture.dataURI}
             crop={
               sheet
                 ? {
@@ -644,14 +680,14 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
                 : undefined
             }
           />
-          <SparkleBurst key={`burst-${made.id}`} />
+          <SparkleBurst key={`burst-${chosenPicture.id}`} />
         </>
       )}
     </>
   ) : null;
 
-  const underFrame = showingResult && made && (
-    <BehindTheScenes sent={made.sent} disabled={busy} />
+  const underFrame = showingResult && chosenPicture && (
+    <BehindTheScenes sent={chosenPicture.sent} disabled={busy} />
   );
   // Stays through editing and generating, so the frame does not shift.
   const alternativesNode = mode !== 'paint' && history.length > 1 && (
@@ -673,12 +709,14 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       disabled={busy}
     />
   );
-  // Asked of the picture just made, while it is in the frame; boxed in a
-  // host's own panel, plain among the level's buttons.
+  // The rating question. It is asked of the picture just generated while it
+  // is in the frame, or of any picture in the frame when the level requires
+  // a rating on every picture. `boxed` draws it in its own panel for a host
+  // that lays the parts out; otherwise it sits plain among the buttons.
   const verdictRow = (boxed: boolean) =>
     showingResult &&
-    made &&
-    made.id === freshId && (
+    chosenPicture &&
+    (chosenPicture.id === freshId || verdictRequired) && (
       <VerdictRow
         verdict={verdict}
         onJudge={judge}
@@ -712,7 +750,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
           complete,
           panelRef,
           frame,
-          frameFilled: !!made && !generating,
+          frameFilled: !!chosenPicture && !generating,
           underFrame,
           alternatives: alternativesNode,
           status: statusNode,
@@ -722,6 +760,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
           progress: progressNode,
           fact: factNode,
           verdict: verdictRow(true),
+          awaitingVerdict,
           exhausted,
           generate,
           changeWords,
@@ -735,7 +774,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   return (
     <SentenceSceneLayout
       frameClassName={classNames(
-        made && !generating && styles.imageFrameFilled
+        chosenPicture && !generating && styles.imageFrameFilled
       )}
       beside={alternativesNode}
       frame={frame}
@@ -748,13 +787,14 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       {statusNode}
       {instructionsBlock}
       {sentenceNode}
-      {showingResult && made ? (
+      {showingResult && chosenPicture ? (
         <ResultActions
           verdict={verdictRow(false)}
           onChangeWords={changeWords}
           onGenerateAgain={generate}
           onContinue={keep}
           disabled={busy}
+          continueDisabled={awaitingVerdict}
           regenerateDisabled={exhausted}
         />
       ) : generating ? (

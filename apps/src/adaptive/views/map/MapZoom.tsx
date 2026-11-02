@@ -1,5 +1,11 @@
 import classNames from 'classnames';
-import React, {useEffect, useLayoutEffect, useRef, useState} from 'react';
+import React, {
+  createContext,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from 'react';
 
 import {MapFit} from './MapView';
 import {useElementSize} from './useElementSize';
@@ -8,20 +14,60 @@ import ZoomControls from './ZoomControls';
 import styles from './mapZoom.module.scss';
 
 interface MapZoomProps {
-  /** Multiples of the map's fitted size to step through, smallest first. */
-  levels: readonly number[];
-  /** Index into levels the map opens at and the reset button returns to. */
+  /** Percentages of the map's fitted size to step through, smallest first. */
+  zoomPercentages: readonly number[];
+  /** Index into zoomPercentages the map opens at and the reset button returns to. */
   startLevel: number;
   /** The fit of the map inside; 'whole' gives it the view's height to fill. */
   fit: MapFit;
   /** Checkpoint centered in the view until the viewer moves the map. */
   startId?: string;
-  /** Holds the map at the start level and hides the controls. */
+  /** Holds the map where it is and hides the controls. */
   disabled?: boolean;
   className?: string;
   /** Places the controls, which have no position of their own. */
   controlsClassName?: string;
   children: React.ReactNode;
+}
+
+export interface MapZoomState {
+  zoom: number;
+  /** The point of the unscaled content at the center of the view. */
+  center?: {x: number; y: number};
+}
+
+export const MapZoomContext = createContext<MapZoomState>({zoom: 1});
+
+const ZOOM_MS = 250;
+
+/**
+ * The zoom eased toward target a frame at a time, evenly in ratio so each
+ * doubling takes as long as the last; at once when motion is reduced.
+ */
+function useEasedZoom(target: number): number {
+  const [zoom, setZoom] = useState(target);
+  const current = useRef(target);
+  useEffect(() => {
+    const from = current.current;
+    if (from === target) return;
+    const show = (value: number) => {
+      current.current = value;
+      setZoom(value);
+    };
+    if (window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) {
+      show(target);
+      return;
+    }
+    const start = performance.now();
+    let frame = requestAnimationFrame(function step(now) {
+      const t = Math.min(1, (now - start) / ZOOM_MS);
+      const eased = 1 - (1 - t) ** 3;
+      show(t === 1 ? target : from * (target / from) ** eased);
+      if (t < 1) frame = requestAnimationFrame(step);
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [target]);
+  return zoom;
 }
 
 /**
@@ -30,7 +76,7 @@ interface MapZoomProps {
  * centered in it, and zooming keeps the point at the center of the view.
  */
 const MapZoom: React.FunctionComponent<MapZoomProps> = ({
-  levels,
+  zoomPercentages,
   startLevel,
   fit,
   startId,
@@ -43,13 +89,21 @@ const MapZoom: React.FunctionComponent<MapZoomProps> = ({
   const [viewRef, view] = useElementSize<HTMLDivElement>();
   const [contentRef, content] = useElementSize<HTMLDivElement>();
   const moved = useRef(false);
-  const zoom = levels[disabled ? startLevel : level];
+  const zoom = useEasedZoom(zoomPercentages[level] / 100);
   const left = Math.max(0, (view.width - content.width * zoom) / 2);
   const top = Math.max(0, (view.height - content.height * zoom) / 2);
-
-  useEffect(() => {
-    if (disabled) setLevel(startLevel);
-  }, [disabled, startLevel]);
+  // Read in render: scrolling does not render, and a disabled view cannot
+  // scroll, so this holds for as long as it is disabled.
+  const element = viewRef.current;
+  const state: MapZoomState = {
+    zoom,
+    center: element
+      ? {
+          x: (element.scrollLeft + element.clientWidth / 2 - left) / zoom,
+          y: (element.scrollTop + element.clientHeight / 2 - top) / zoom,
+        }
+      : undefined,
+  };
 
   const last = useRef({zoom, left, top});
   useLayoutEffect(() => {
@@ -98,7 +152,7 @@ const MapZoom: React.FunctionComponent<MapZoomProps> = ({
     <div className={classNames(styles.mapZoom, className)}>
       {!disabled && (
         <ZoomControls
-          levels={levels}
+          zoomPercentages={zoomPercentages}
           level={level}
           resetLevel={startLevel}
           onChange={next => {
@@ -135,7 +189,9 @@ const MapZoom: React.FunctionComponent<MapZoomProps> = ({
               transform: zoom === 1 ? undefined : `scale(${zoom})`,
             }}
           >
-            {children}
+            <MapZoomContext.Provider value={state}>
+              {children}
+            </MapZoomContext.Provider>
           </div>
         </div>
       </div>
