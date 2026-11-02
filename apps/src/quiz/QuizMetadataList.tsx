@@ -41,7 +41,11 @@ const QuizMetadataList: React.FunctionComponent<QuizMetadataListProps> = ({
     >
       {items.map(({icon, text}) => (
         <li key={icon} className={styles.item}>
-          <FontAwesomeV6Icon iconName={icon} className={iconClassName} />
+          <FontAwesomeV6Icon
+            iconName={icon}
+            className={iconClassName}
+            aria-hidden
+          />
           <Typography variant="body3" component="span">
             {text}
           </Typography>
