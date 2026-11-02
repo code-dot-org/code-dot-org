@@ -20,6 +20,7 @@ const TreeMap: React.FunctionComponent<MapProps> = ({
   pathway,
   statusMap,
   focusId,
+  fit,
   onSelect,
   tourFocusIds,
 }) => {
@@ -66,6 +67,7 @@ const TreeMap: React.FunctionComponent<MapProps> = ({
       lines={lines}
       statusMap={statusMap}
       focus={focusId ? layout.nodes[focusId] : undefined}
+      fit={fit}
       tourFocus={tourFocus}
     >
       {pathway.checkpoints.map(checkpoint => (

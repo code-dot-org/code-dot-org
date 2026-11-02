@@ -63,6 +63,7 @@ const DestinationsMap: React.FunctionComponent<DestinationsMapProps> = ({
   statusMap,
   turns,
   focusId,
+  fit,
   onSelect,
   tourFocusIds,
 }) => {
@@ -100,6 +101,7 @@ const DestinationsMap: React.FunctionComponent<DestinationsMapProps> = ({
       lines={lines}
       statusMap={statusMap}
       focus={focusId ? layout.nodes[focusId] : undefined}
+      fit={fit}
       tourFocus={tourFocus}
     >
       {boxes.map(box => (
