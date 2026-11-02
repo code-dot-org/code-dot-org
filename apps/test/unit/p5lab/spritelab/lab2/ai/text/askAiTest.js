@@ -2,6 +2,7 @@ import {isTextSafe} from '@cdo/apps/aichat/api/client/helpers/safetyHelpers';
 import {generateText} from '@cdo/apps/aiGateway';
 import DCDO from '@cdo/apps/dcdo';
 import {
+  ASK_AI_TIMEOUT_MS,
   askAiText,
   AskAiError,
   cleanAnswer,
@@ -70,6 +71,20 @@ describe('askAiText', () => {
     isTextSafe.mock.calls.forEach(([, , , context]) => {
       expect(context?.clientType).toBe(AiChatClientTypes.SPRITELAB_ASK_AI);
     });
+  });
+
+  // Left unbounded, the block waits forever and the engine never gets to
+  // decrement numActivePrompts or warn.
+  it('times out when the output judge never settles', async () => {
+    jest.useFakeTimers();
+    isTextSafe
+      .mockResolvedValueOnce(true)
+      .mockReturnValueOnce(new Promise(() => {}));
+    const pending = askAiText('hello');
+    const settled = expect(pending).rejects.toThrow('too long');
+    await jest.advanceTimersByTimeAsync(ASK_AI_TIMEOUT_MS + 1);
+    await settled;
+    jest.useRealTimers();
   });
 
   it('throws with the prompt phase when the question is flagged', async () => {

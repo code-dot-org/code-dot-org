@@ -113,12 +113,15 @@ export async function askAiText(prompt: string): Promise<string> {
     throw new Error('The ask AI block is turned off.');
   }
 
+  const deadline = Date.now() + ASK_AI_TIMEOUT_MS;
+  const remaining = () => Math.max(0, deadline - Date.now());
+
   const [verdict, answer] = await withTimeout(
     Promise.allSettled([
       isTextSafe(question, 'input_filter', undefined, aichatContext()),
       requestAnswer(question),
     ]),
-    ASK_AI_TIMEOUT_MS
+    remaining()
   );
 
   if (verdict.status === 'rejected') {
@@ -140,7 +143,11 @@ export async function askAiText(prompt: string): Promise<string> {
     throw new Error('The AI answer came back empty.');
   }
 
-  if (!(await isTextSafe(text, 'output_filter', undefined, aichatContext()))) {
+  const safe = await withTimeout(
+    isTextSafe(text, 'output_filter', undefined, aichatContext()),
+    remaining()
+  );
+  if (!safe) {
     count('answer_flagged');
     throw new AskAiError('answer');
   }
