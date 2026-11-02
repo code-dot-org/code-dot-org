@@ -12,9 +12,8 @@ import {STOCK_ACTORS} from '../../actors/stock';
 import {buttonActor} from '../../actors/stock/button';
 import {labelActor} from '../../actors/stock/label';
 import {projectActorIcons} from '../actorIconMeta';
-import {ACTOR_ICON_OPTIONS, actorIconImage} from '../actorIcons';
+import {ACTOR_ICONS, actorIconImage} from '../actorIcons';
 import {setActorIcons, setActorThumbnails} from '../actorThumbnails';
-import {buildDomainPalette} from '../domainBlocks';
 import {actorFieldOptions, setProjectActors} from '../moduleOptions';
 
 /** A one-pixel PNG, standing in for a thumbnail the sandbox rendered. */
@@ -115,7 +114,7 @@ describe('the icons themselves', () => {
   it('are self-contained SVG data URIs', () => {
     // An image, because Blockly's option is `{src, width, height, alt}` — and
     // SVG so it is crisp at any size with no font to load.
-    for (const [, name] of ACTOR_ICON_OPTIONS) {
+    for (const name of Object.keys(ACTOR_ICONS)) {
       const uri = actorIconImage(name)!;
       expect(uri.startsWith('data:image/svg+xml,')).toBe(true);
       const svg = decodeURIComponent(uri.slice('data:image/svg+xml,'.length));
@@ -124,28 +123,6 @@ describe('the icons themselves', () => {
       expect(svg).toContain('<rect');
       expect(svg).toMatch(/<path fill="#ffffff" d="[^"]+"/);
     }
-  });
-});
-
-describe('the block', () => {
-  const block = () =>
-    buildDomainPalette([]).blocks.find(
-      candidate => candidate.type === 'world_show_as',
-    ) as {generator: {javascript: () => unknown}} | undefined;
-
-  it('is offered beside the rows an actor already carries', () => {
-    const actor = (
-      buildDomainPalette([], {fileKind: 'actor'}).toolbox as Array<{
-        name?: string;
-        blocks?: unknown[];
-      }>
-    ).find(category => category.name === 'Actor');
-
-    expect(actor?.blocks).toContain('world_show_as');
-  });
-
-  it('generates nothing, because a running game has no pickers', () => {
-    expect(String(block()!.generator.javascript())).toBe('');
   });
 });
 

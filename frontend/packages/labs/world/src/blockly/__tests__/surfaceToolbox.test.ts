@@ -37,8 +37,7 @@ const names = (toolbox: Toolbox): string[] =>
 
 describe('a body surface', () => {
   it('offers no declaration, in any drawer that offered one', () => {
-    // `world_rule_property` is in Actor, World and Rule; `world_rule_block` in
-    // Actor and Rule. A filter that only looked at the Rule category would
+    // `world_trait_step` is in Actor and Rule. A filter that only looked at the Rule category would
     // pass a test that only looked at the Rule category.
     const body = offered(toolboxForSurface(palette(), 'body'));
 
@@ -97,7 +96,7 @@ describe('what filtering must not break', () => {
     const toolbox = [
       category('Rule', [
         {kind: 'label', text: 'Declarations'},
-        'world_rule_property',
+        'world_trait_step',
         'world_return',
       ]),
     ] as Toolbox;
@@ -109,10 +108,7 @@ describe('what filtering must not break', () => {
 
   it('drops a drawer with nothing left in it', () => {
     const toolbox = [
-      category('Only Declarations', [
-        'world_rule_property',
-        'world_trait_step',
-      ]),
+      category('Only Declarations', ['world_trait_step']),
       category('Something', ['world_add_trait']),
     ] as Toolbox;
 
@@ -126,7 +122,7 @@ describe('what filtering must not break', () => {
       name: 'Variables',
       key: 'VARIABLE',
       onLoad: () => [],
-      blocks: ['world_rule_property'],
+      blocks: ['world_trait_step'],
     } as unknown as ToolboxCategory;
 
     expect(names(toolboxForSurface([dynamic] as Toolbox, 'body'))).toEqual([

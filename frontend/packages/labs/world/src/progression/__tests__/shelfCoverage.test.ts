@@ -49,7 +49,6 @@ const NOT_TAUGHT: Record<string, readonly string[]> = {
   Actor: [
     'world_remove_trait',
     'world_remove_effect',
-    'world_show_as',
     'world_actor_kind',
     'world_ordered_actors',
     'world_take_actors',

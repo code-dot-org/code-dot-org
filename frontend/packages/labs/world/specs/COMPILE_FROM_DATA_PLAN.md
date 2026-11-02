@@ -145,9 +145,10 @@ them from the compiler are two different jobs, done in that order.
 
 The rule's step blocks are `world_rule_step_in` and `world_rule_step_tick`.
 `world_trait_step` is `each frame`, which stays: an actor's code holds it.
-`define property` and `define event` stay: a world's own properties and
-events are rows under `define world` (`screenData`). `define drawing`
-stays. `define actor` stays as the compiler's root for an actor's rows.
+`define property` was kept for a world's own properties, written as rows
+under `define world`; it went once the world was data (step 5, below).
+`define drawing` stays. `define actor` stays as the compiler's root for an
+actor's rows.
 
 #### 5a. `define camera` goes — BUILT
 
@@ -231,11 +232,16 @@ fixtures are written as rows and folded. In order, each its own commit:
    field was read as writable by the walk. The fold drops one without the
    field, and nothing in the repository lacks it.
 
-   The rows the compiler no longer generates — `acts like`, `is data`, the
-   animations row, `show as`, `define property`, `use trait` under an actor
-   — are still defined blocks. Whether anything still loads them into a
-   live workspace is to be found before they go, as the rule's went in
-   step 8.
+   The rows the compiler no longer generates went after it, in November
+   2026: `acts like`, `is data`, the animations row, `show as` and `define
+property`, with the animations row's mutator, the property designer and
+   its preview field, the `acts like` dropdown and the two warnings that
+   only these carried. Nothing loaded them: the Actor Editor loads only an
+   actor's code, which the fold never leaves one in; a rule and the Main
+   Screen are data; the compiler loads only the rows it generates. `show
+as` was still offered in an actor's Actor drawer, where it did nothing,
+   since the icon is the data's (`ActorIconPicker`). Their names join the
+   view's rows (`viewRows`), which the view writes and the folds read.
 
 6. LATER. Actors are written as data: the stock actors, the starter
    project, the lessons, the fixtures and the enhancers.
@@ -260,8 +266,8 @@ choices`, with the `use rule` dropdown, the `use trait` dropdown and the
    rows a view is written in (`viewRows`), which the folds read — for a
    file written in blocks and for the tutor, which proposes rules in blocks
    — and the walks over a project's blocks read. Nothing defines them, and
-   the stand-ins leave them alone. `define property`, `define event`, `each
-frame` and `define actor` stay.
+   the stand-ins leave them alone. `each frame` and `define actor` stay;
+   `define property` went with the actor's rows (step 5).
 
 ## Open
 

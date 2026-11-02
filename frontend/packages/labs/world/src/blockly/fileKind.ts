@@ -64,15 +64,6 @@ export const isMapKind = (kind: FileKind | undefined): boolean =>
  */
 export const ROOT_HOMES: ReadonlyMap<string, ReadonlySet<FileKind>> = new Map([
   ['world_actor', new Set<FileKind>(['actor'])],
-  // `acts like` names another ACTOR's module, so it belongs in the file that
-  // defines one and nowhere else.
-  //
-  // IT USED TO BE OFFERED IN A `.world` TOO, so that it could be a row under
-  // a world's own `define actor` — which is the same dead reason read the
-  // other way round, an ALLOWANCE for a position that cannot exist. A world
-  // has no actor definition for it to sit in, so the block was offered in a
-  // file that could do nothing with it.
-  ['world_acts_like', new Set<FileKind>(['actor'])],
   // `each frame` reads two ways, and both are the same sentence about
   // whoever owns it: chained under a `define trait` it is one of that trait's
   // members; chained under an `.actor` file's `define actor` it is work that

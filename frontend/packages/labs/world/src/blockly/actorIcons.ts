@@ -102,11 +102,6 @@ export const ACTOR_ICONS: Readonly<Record<string, string>> = {
   paragraph: tile(paragraph),
 };
 
-/** The dropdown's rows, in the order an interface is usually built. */
-export const ACTOR_ICON_OPTIONS: Array<[string, string]> = Object.keys(
-  ACTOR_ICONS,
-).map(name => [name, name]);
-
 /** The data URI for an elected icon, or undefined for a name nothing draws. */
 export const actorIconImage = (name: string): string | undefined =>
   ACTOR_ICONS[name];

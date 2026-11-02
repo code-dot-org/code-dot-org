@@ -18,6 +18,12 @@ export const VIEW_ROWS: ReadonlySet<string> = new Set([
   'world_rule_step_tick',
   'world_rule_block',
   'world_rule_event',
+  // …and the rows of an actor's view that the data says (`actorView`).
+  'world_acts_like',
+  'world_actor_is_data',
+  'world_actor_animations',
+  'world_show_as',
+  'world_rule_property',
   // …and the root a lesson, a fixture or a test writes its world under,
   // which the converter reads (`lessons/asScreen`).
   'world_world',

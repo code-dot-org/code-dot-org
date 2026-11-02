@@ -651,8 +651,8 @@ They are the same MECHANISM, and that is the claim this document opens with.
 Being a separate category is a fact about how they are found, not about what
 they are.
 
-**They wear Font Awesome glyphs**, which is already built: `show as ⟨icon⟩` is
-a row in the file and `blockly/actorIcons` inlines the glyph as an SVG data URI
+**They wear Font Awesome glyphs**, which is already built: the icon is the
+actor's `icon`, kept in its file, and `blockly/actorIcons` inlines the glyph as an SVG data URI
 (see "The icon", below). The vocabulary is `text`, `speech`, `button`, `bar`,
 `health`, `panel` and `input` — the last two reserved before there was anything
 wearing them, which is the set this page is about finishing.
@@ -952,9 +952,7 @@ that declares nothing keeps exactly today's behavior, so a learner never has to
 meet the idea.
 
 ```
-define actor named ⟨Label⟩
-  use trait ⟨Shows Text⟩
-  show as ⟨text icon⟩
+{"type": "actor", "name": "Label", "traits": ["…Shows Text…"], "icon": "text"}
 ```
 
 **It lives in the FILE**, which is forced rather than chosen: importing a stock
@@ -962,10 +960,10 @@ actor copies the workspace into the learner's project and leaves the catalogue
 entry behind, so an `icon` field on `StockActor` would vanish at exactly the
 moment it was wanted. The same constraint that put `Shows Text` on a rule.
 
-A ROW rather than a field on `define actor`, for the reason VIEWPORT.md rejected
-a layer dropdown on every placement block: a field puts an authoring decision on
-the first block a learner ever touches. Generating nothing, read by the walk that
-already reads a file's own declarations (`ownProperties`).
+It is chosen in the Actor Editor (`ActorIconPicker`), generates nothing, and is
+read from the actor's data (`actorIconMeta`). It was a `show as` row under
+`define actor` until actors became data; the row is now only a name in the
+view (`viewRows`).
 
 **An SVG data URI, not an icon component.** Blockly's dropdown option is
 `{src, width, height, alt}`, so on the surface that needs this most an icon has

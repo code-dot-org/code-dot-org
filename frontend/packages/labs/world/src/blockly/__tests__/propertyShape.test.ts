@@ -1,13 +1,6 @@
-// `define property`, and the one description of what it makes.
-//
-// A property makes two blocks — a getter and a setter — and three things now
-// build from the same account of them: the real `set …` block, the real `get …`
-// block, and the two drawings on the face of the `define property` that
-// declared it (`FieldPropertyPreview`). If they can drift, the definition shows
-// a learner a block they will not get, which is the failure the drawing was
-// added to prevent.
-//
-// So these pin the shape itself, and then pin the generated blocks AGAINST it.
+// A property, and the one description of the getter and setter it makes
+// (`propertyShape`). These pin the shape itself, and then pin the generated
+// blocks against it.
 
 import {describe, expect, it} from 'vitest';
 

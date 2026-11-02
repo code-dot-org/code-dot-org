@@ -725,13 +725,6 @@ export const actorOptionsExtension = liveDropdown(
   actorFieldOptions,
 );
 
-/** …and the narrower list `acts like` offers (`actorParentOptions`). */
-export const actorParentOptionsExtension = liveDropdown(
-  'world_actor_parent_options',
-  'ACTOR',
-  actorParentOptions,
-);
-
 /**
  * The same list plus an `(import…)` row, for the two blocks that PLACE an actor.
  *

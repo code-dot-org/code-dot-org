@@ -8,16 +8,14 @@ import {ACTOR_INPUT_EXTENSION} from '../actorInput';
 import {COLOUR_CHECK} from '../colorCheck';
 import {installColorMessages} from '../colorMessages';
 import {
+  animationsCode,
   buildDomainPalette,
   DOMAIN_BLOCKS,
   DOMAIN_TOOLBOX,
   ROOT_BLOCK_TYPES,
   worldModulePrologue,
 } from '../domainBlocks';
-import {
-  RUNTIME_ACTOR_EXTENSION,
-  TRAIT_CONTEXT_EXTENSION,
-} from '../extensions/actorContext';
+import {RUNTIME_ACTOR_EXTENSION} from '../extensions/actorContext';
 import {paramSockets} from '../extensions/effectParamsMutator';
 import {RGBA_PREVIEW_EXTENSION} from '../extensions/rgbaPreview';
 import {WORLD_CONTEXT_EXTENSION} from '../extensions/worldContext';
@@ -2481,15 +2479,14 @@ describe('world block generators', () => {
   });
 
   it('declares an actor\u2019s animations on its kind, and plays its Main', () => {
-    // The row the data's view writes (`actors/actorData`): no toolbox offers
-    // it, and its state is the timelines (specs/ANIMATION_PLAN.md).
+    // Written from the actor's data (specs/ANIMATION_PLAN.md).
     setProjectGrids(
       {'coin.png': {type: 'sheet', cell: {width: 16, height: 16}}},
       {'coin.png': {width: 48, height: 16}},
     );
     const definitions: Record<string, string> = {};
-    const block = {
-      animations_: {
+    const code = animationsCode(
+      {
         Main: {
           loop: true,
           tracks: {
@@ -2498,12 +2495,8 @@ describe('world block generators', () => {
           },
         },
       },
-    };
-    const code = generatorFor('world_actor_animations')(
-      block as never,
-      {definitions_: definitions} as never,
-      {} as never,
-    ) as string;
+      {definitions_: definitions},
+    );
     // A cell is resolved to its rectangle, as `set sprite`'s is…
     expect(code).toContain(
       '"value":{"sprite":"coin.png","cell":{"x":32,"y":0,"width":16,"height":16}}',
@@ -2744,20 +2737,6 @@ describe('buildDomainPalette (project rule blocks)', () => {
 });
 
 describe('rule authoring blocks (`.rule` files)', () => {
-  const AUTHORING = ['world_rule_property'];
-
-  it('registers the declaration blocks with no-op generators', () => {
-    for (const type of AUTHORING) {
-      const block = DOMAIN_BLOCKS.find(b => b.type === type);
-      expect(block, type).toBeDefined();
-      // No JavaScript generator of their own — a `.rule` is codegen'd from its
-      // parsed metadata (ruleMetaToModule), not block-by-block.
-      expect(
-        block!.generator.javascript({} as never, {} as never, {} as never),
-      ).toBe('');
-    }
-  });
-
   it('offers a Rule toolbox category of what only a body says', () => {
     // What a rule declares is its data, made in the Rule Editor
     // (specs/RULE_EDITOR_PLAN.md); its drawer holds what a body needs.
@@ -2904,7 +2883,6 @@ describe('builder-context warnings', () => {
     // Guarding it either way would warn about correct programs.
     const names = extensionsOf('world_add_effect');
     expect(names).not.toContain(RUNTIME_ACTOR_EXTENSION);
-    expect(names).not.toContain(TRAIT_CONTEXT_EXTENSION);
 
     const worldNames = extensionsOf('world_add_world_effect');
     // …but `world` must still be bound to something.
@@ -2919,7 +2897,6 @@ describe('builder-context warnings', () => {
     for (const type of ['world_set_sprite', 'world_set_position']) {
       const names = extensionsOf(type);
       expect(names).not.toContain(RUNTIME_ACTOR_EXTENSION);
-      expect(names).not.toContain(TRAIT_CONTEXT_EXTENSION);
     }
   });
 });

@@ -8,19 +8,7 @@
 // `import * as WorldLab from 'world-lab'`, so no per-block import analysis is
 // needed; the compiler rewrites `world-lab` to the self-hosted engine.
 
-import type {Block, BlockSvg, Field, FieldDropdown} from 'blockly';
-// From `blockly/core`, NOT `blockly`: the bundle entry point re-installs the
-// default English messages, which puts `colour` back on every color block after
-// `installColorMessages` has spelled them the lab's way
-// (`blockly/colorMessages`). A type-only import of the same names is free; a
-// value import is not.
-import {
-  Events,
-  FieldDropdown as FieldDropdownClass,
-  FieldLabel,
-  FieldNumber,
-  FieldTextInput,
-} from 'blockly/core';
+import type {Block} from 'blockly';
 import {Order, type JavascriptGenerator} from 'blockly/javascript';
 
 import {
@@ -50,8 +38,6 @@ import {VIEWPORT_TILES} from '../runtime/viewport';
 import {IMPORT_SOUND_VALUE} from '../sound/soundImport';
 
 import {actorPictureExtension, registerKindFilter} from './actorAbout';
-import {SHOW_AS} from './actorIconMeta';
-import {ACTOR_ICON_OPTIONS} from './actorIcons';
 import {actorInputExtension, cameraInputExtension} from './actorInput';
 import {animationOptions, animationOptionsExtension} from './animationOptions';
 import {MEMBER_HEAD, STEP_HEAD} from './bodySurfaces';
@@ -59,7 +45,6 @@ import {BUILTIN_RULE_META} from './builtinMeta';
 import {COLOUR_CHECK} from './colorCheck';
 import {installColorMessages} from './colorMessages';
 import {END_ROW, ROW_PART, settledParts} from './designParts';
-import {editingActorModule} from './editingRule';
 import {
   allEnums,
   BUTTON_ENUM,
@@ -84,12 +69,7 @@ import {
   THIS_FIELD,
   THIS_INPUT,
 } from './eventSubject';
-import {actorAnimationsMutator} from './extensions/actorAnimations';
-import {
-  actorContextExtension,
-  runtimeActorExtension,
-  traitContextExtension,
-} from './extensions/actorContext';
+import {runtimeActorExtension} from './extensions/actorContext';
 import {actorImportFieldExtension} from './extensions/actorImportField';
 import {
   addActorNameExtension,
@@ -128,23 +108,12 @@ import {spritePickExtension} from './extensions/spritePickField';
 import {traitTooltipExtension} from './extensions/traitTooltip';
 import {worldContextExtension} from './extensions/worldContext';
 import {EVENT_LOCAL_FIELD, localFieldName} from './fields/eventLocal';
-import fieldAnglePlugin, {fieldAngleArg} from './fields/FieldAngle';
-import {
-  FieldColorPicker,
-  installColorPickerField,
-} from './fields/FieldColorPicker';
+import {fieldAngleArg} from './fields/FieldAngle';
+import {installColorPickerField} from './fields/FieldColorPicker';
 import {FieldMarkdown} from './fields/FieldMarkdown';
-import {
-  FieldPropertyPreview,
-  type BlockDrawing,
-} from './fields/FieldPropertyPreview';
 import {fieldSliderArg} from './fields/FieldSlider';
-import fieldVectorPlugin, {
-  fieldVectorArg,
-  type VectorValue,
-} from './fields/FieldVector';
+import {fieldVectorArg, type VectorValue} from './fields/FieldVector';
 import {VARIABLE_NAME_FIELD} from './fields/variableName';
-import {visibilityEye} from './fields/visibilityEye';
 import {ROOT_HOMES, type FileKind} from './fileKind';
 import {
   DEFAULT_PARALLAX,
@@ -159,8 +128,6 @@ import {registerManyActorBlock, yieldsMany} from './manyActors';
 import {memberHead} from './memberHead';
 import {
   actorFieldOptions,
-  actorParentOptions,
-  actorParentOptionsExtension,
   type DropdownOptions,
   actorImportOptionsExtension,
   actorOptionsExtension,
@@ -196,13 +163,7 @@ import {
 } from './moduleOptions';
 import {type OwnMeta} from './ownProperties';
 import {phaseOptions, phaseOptionsExtension} from './phaseOptions';
-import {
-  inHand,
-  propertyDefault,
-  STARTS_EMPTY,
-  PROPERTY_TYPES,
-  slug,
-} from './ruleMeta';
+import {inHand, slug} from './ruleMeta';
 import type {
   ActionMeta,
   EventMeta,
@@ -456,13 +417,6 @@ const memberKey = memberLocalName;
  * points at a file where "actorsplayer" is a mangle.
  */
 /**
- * A point's second axis, which is the one type whose default takes two fields.
- * Named here because it is read where a declaration is generated and written
- * where `define property` is built, a few thousand lines apart.
- */
-const DEFAULT_Y_FIELD = 'DEFAULT_Y';
-
-/**
  * A module path as a block-type segment: `actors/player` → `ActorsPlayer`.
  *
  * Exported because renaming an actor's FILE changes it, and every block type
@@ -574,89 +528,6 @@ const worldActor = defineBlock({
 });
 
 /**
- * `acts like ⟨Progress Bar⟩` — this kind of actor, and everything another one
- * is.
- *
- * The subclassing row, and the smallest thing it could be: one dropdown, one
- * builder call. What comes across is the other kind's DESCRIPTION — its traits,
- * its properties' slots, its per-frame work, its picture, its handlers
- * (`ActorBuilder.actsLike`). What does not is its identity: `is a ⟨Progress
- * Bar⟩` asks what an instance was placed FROM, so a Health Bar that acts like
- * one is not among `any ⟨Progress Bar⟩`. It qualifies under every trait
- * relationship instead.
- *
- * WHERE IT SITS DECIDES NOTHING, unusually for a row here — it means the same
- * in an `.actor` file and inside a world's own `define actor`, because both
- * bind `actor` to a builder and neither declaration is an `export const`. That
- * is what separates it from `define block`, which is refused in a world.
- *
- * ROWS BELOW IT HAVE THE LAST WORD. A `set` after it overrides an inherited
- * default and a `define drawing` after it replaces the inherited picture,
- * because that is what reading a file downwards should mean. The builder says
- * how; this only has to be a row.
- */
-/**
- * `is data` — a kind that is a RECORD and not a thing on the screen.
- *
- * A todo, a contact, the state of a saved game: named fields a project keeps,
- * with nowhere to be. Saying this suppresses the position and the appearance
- * every actor is otherwise given, so it is not drawn, is in no search over
- * places, and is hit-tested by nothing — while still having its properties,
- * its events, its steps and its place in `all actors`, which is how a project
- * finds its records (specs/RECORDS_PLAN.md).
- *
- * A DECLARATION, NOT AN OMISSION, which is the whole of why it exists. An
- * actor with no positional trait was the ordinary case once and was taken
- * away on purpose: a forgotten `use trait` row gave an actor that existed and
- * could not be seen, which reads as a bug rather than a decision. Forgetting
- * a row still gives a normal actor; only saying this gives one with no place.
- */
-const worldActorIsData = defineBlock({
-  type: 'world_actor_is_data',
-  message0: 'is data',
-  previousStatement: true,
-  nextStatement: true,
-  // Under `define actor`, where `actor` is the builder — the same home and
-  // the same warning `acts like` has.
-  extensions: [traitContextExtension],
-  style: 'behavior_blocks',
-  tooltip:
-    'This kind is a record, not something on the screen: it has fields and ' +
-    'no place. It is not drawn and cannot be clicked, and everything that ' +
-    'reads or writes its properties still works.',
-  generator: {
-    javascript() {
-      return 'actor.isData();\n';
-    },
-  },
-});
-
-/**
- * An actor's animations, declared, and its Main played
- * (specs/ANIMATION_PLAN.md, step 3).
- *
- * Never in a toolbox: the timelines are made in the Actor Editor and kept as
- * the actor's data, and this row is how they appear in the `define actor`
- * the data stands for (`actors/actorData`). The compiler writes them from
- * the data (`animationsCode`).
- */
-const worldActorAnimations = defineBlock({
-  type: 'world_actor_animations',
-  message0: 'animations',
-  previousStatement: true,
-  nextStatement: true,
-  mutator: actorAnimationsMutator,
-  extensions: [traitContextExtension],
-  style: 'sprite_blocks',
-  tooltip: 'What this kind’s animations are, made in the Actor Editor.',
-  generator: {
-    javascript(block, generator) {
-      return animationsCode(block.animations_ ?? {}, generator);
-    },
-  },
-});
-
-/**
  * An actor's animations declared on its builder, and its Main played. A
  * sprite key naming one cell of a sheet (`coin.png#3`) is resolved here to
  * the rectangle, as `set sprite`'s is, since the engine is told only
@@ -723,36 +594,6 @@ const spriteKeyValue = (value: unknown) => {
   return cell ? {sprite: parseSpriteRef(value).sprite, cell} : value;
 };
 
-const worldActsLike = defineBlock({
-  type: 'world_acts_like',
-  message0: 'acts like %1',
-  args0: [{type: 'field_dropdown', name: 'ACTOR', options: actorParentOptions}],
-  previousStatement: true,
-  nextStatement: true,
-  extensions: [
-    actorParentOptionsExtension,
-    // `actsLike` is a builder method, so this belongs under `define actor` —
-    // the same home, and the same warning, `use trait` has.
-    traitContextExtension,
-    openSourceButtonExtension,
-  ],
-  style: 'behavior_blocks',
-  tooltip:
-    'Be everything another kind of actor is — its traits, its properties, ' +
-    'what it does each frame and what it looks like — and go on being this ' +
-    'kind. Rows below this one override what they name.',
-  generator: {
-    javascript(block, generator) {
-      return actsLikeCode(
-        block.getFieldValue('ACTOR'),
-        editingActorModule(block),
-        generator,
-      );
-    },
-  },
-});
-
-/** `actor.actsLike`, importing the kind; `self` is the module it is written in. */
 export function actsLikeCode(
   actor: string | undefined,
   self: string | undefined,
@@ -2824,13 +2665,8 @@ const valueStyle = (type: PropertyType): string =>
           : 'math_blocks';
 
 /**
- * What a property is, said in the least a block can be built from.
- *
- * Not `PropertyMeta`, which carries a `ref` — where the declaration lives and
- * what to import. A `define property` block being edited has a name, a type and
- * a default and nothing else yet, and it draws the same two blocks
- * (`FieldPropertyPreview`), so the shape below is stated in terms of what both
- * callers actually have.
+ * What a property is, said in the least a block can be built from: not
+ * `PropertyMeta`, which also carries where the declaration lives.
  */
 export interface PropertyShapeInput {
   readonly name: string;
@@ -7768,31 +7604,6 @@ registerValueShadows('world_set_background_color', [
 // carry no JavaScript generator of their own (a `.rule` never hits `blockToCode`).
 const noGenerator = {javascript: () => ''};
 
-const PROPERTY_TYPE_OPTIONS: Array<[string, string]> = [
-  ['number', 'number'],
-  // A number said as a direction: the same value, edited on a dial.
-  ['angle', 'angle'],
-  ['boolean', 'boolean'],
-  ['string', 'string'],
-  ['color', 'color'],
-  ['picture', 'picture'],
-  ['vector', 'vector'],
-  ['point', 'point'],
-  // Actors — what a rule works out about who is where: a contact set, a group.
-  // Read-only in practice (the rule that fills it owns it) and never carried
-  // across a hot reload (specs/COLLISION.md).
-  // ONE actor: a camera's actor to follow. Before the list, because it is the
-  // simpler thing and the one a learner reaches for more often.
-  ['actor', 'actor'],
-  ['actors', 'actors'],
-  // Lists of plain values, which the actor list above is not: these are
-  // carried across a hot reload and patched live, because a number has no
-  // world inside it (specs/LISTS.md).
-  ['numbers', 'numbers'],
-  ['words', 'words'],
-  ['vectors', 'vectors'],
-];
-
 /**
  * `define map ⟨Write⟩` — the root a map's workspace never had.
  *
@@ -7826,430 +7637,6 @@ const worldMap = defineBlock({
   tooltip:
     'Name this map. What it places is on the canvas beside this, and what it ' +
     'does is in the hats below.',
-  generator: noGenerator,
-});
-
-// The names the pieces of a `define property` go by. `ACCESS` used to be a
-// dropdown reading "property" / "read-only property"; it is the eye now, and
-// keeps the name and both of its values so that every `.rule` and `.actor`
-// already written still loads.
-const PROPERTY_ACCESS_FIELD = 'ACCESS';
-const WRITABLE = 'writable';
-const READONLY = 'readonly';
-const DEFAULT_FIELD = 'DEFAULT';
-/**
- * The words `with default`, as a field rather than as part of `message0`.
- *
- * Because the types that have no default to state must not say the words
- * either: an actor property and every list property start empty and there is
- * nothing a learner could type that would be otherwise (`propertyDefault`), so
- * the row ends after the name.
- */
-const WITH_DEFAULT_LABEL = 'WITH_DEFAULT';
-/** The labels that make a point's two number fields read as an x and a y. */
-const DEFAULT_X_LABEL = 'DEFAULT_X_LABEL';
-const DEFAULT_Y_LABEL = 'DEFAULT_Y_LABEL';
-/** The rows the previews hang off, and the fields that draw them. */
-const GET_PREVIEW_ROW = 'GET_PREVIEW_ROW';
-const SET_PREVIEW_ROW = 'SET_PREVIEW_ROW';
-const GET_PREVIEW_FIELD = 'GET_PREVIEW';
-const SET_PREVIEW_FIELD = 'SET_PREVIEW';
-
-/**
- * What the block is a property OF, read from where it sits.
- *
- * Placement decides it, exactly as it decides what `ownProperties` makes of
- * the same block: an `.actor` file's own property is that kind of actor's,
- * and a world's own is the world's.
- */
-const propertyScopeOf = (block: Block): MemberScope =>
-  block.getRootBlock()?.type === 'world_actor' ? 'actor' : 'world';
-
-/** The property a `define property` block currently describes. */
-const propertyOn = (block: Block): PropertyShapeInput => {
-  const declared = String(block.getFieldValue('TYPE') ?? 'number');
-  const type = (
-    PROPERTY_TYPES.has(declared) ? declared : 'number'
-  ) as PropertyType;
-  return {
-    name: String(block.getFieldValue('NAME') ?? '').trim(),
-    type,
-    // Read exactly as `parseRuleMeta` reads it, so what is drawn starts with
-    // the same value the real block will be seeded with.
-    default: propertyDefault(
-      type,
-      block.getFieldValue('DEFAULT'),
-      block.getFieldValue(DEFAULT_Y_FIELD),
-    ),
-    scope: propertyScopeOf(block),
-  };
-};
-
-/**
- * How the `with default` slot is edited, which is a fact about the TYPE.
- *
- * `text` is a box to type into and covers every single-value type. The two
- * two-number types get the editors their SETTERS get, so that what a learner
- * types on the definition and what they type on the block it makes are the same
- * control: the arrow grid for a vector (`world_vector`), an x and a y for a
- * point (two number sockets).
- */
-type DefaultShape =
-  | 'none'
-  | 'text'
-  | 'angle'
-  | 'vector'
-  | 'point'
-  | 'color'
-  | 'boolean';
-
-const DEFAULT_SHAPES: Readonly<Record<string, DefaultShape>> = {
-  angle: 'angle',
-  vector: 'vector',
-  point: 'point',
-  color: 'color',
-  boolean: 'boolean',
-  // Nothing to say. An actor property and every list property start empty —
-  // that is what `propertyDefault` answers for them whatever is written down —
-  // so the block does not ask, and does not save an answer either. From the
-  // one list of them, so that what writes a default and what offers a field
-  // for one cannot disagree (`ruleMeta.STARTS_EMPTY`).
-  ...Object.fromEntries(
-    [...STARTS_EMPTY].map(type => [type, 'none' as DefaultShape]),
-  ),
-};
-
-/** `text` is a box to type into: a number, a word, anything single. */
-const defaultShapeFor = (type: string): DefaultShape =>
-  DEFAULT_SHAPES[type] ?? 'text';
-
-/** What a boolean default may be, in the order the two read. */
-const BOOLEAN_OPTIONS: Array<[string, string]> = [
-  ['true', 'true'],
-  ['false', 'false'],
-];
-
-/**
- * A boolean property's default: `true` or `false`, from anything at all.
- *
- * A DROPDOWN IS THE ONE STRICT READER of this value and the strictness bought
- * nothing. Blockly checks a value against the options BEFORE any validator of
- * ours runs, so a stored `FALSE` — or an empty default, which is every
- * property that never stated one — was refused with "Cannot set the
- * dropdown's value to an unavailable option" and the field kept whatever it
- * already had. The console said so; the file did not, and the next save wrote
- * the field's value back. Notes' `saved` defaults TRUE and would have been
- * quietly written down as false.
- *
- * Everything downstream is already this lenient: `ruleMeta.propertyDefault`
- * lowercases and calls anything but `true` false, which is what makes the
- * runtime right while the editor complained. So this asks THAT, rather than
- * deciding again.
- */
-class BooleanDefaultField extends FieldDropdownClass {
-  // Both of Blockly's overloads, restated: collapsing them to one changes the
-  // field's value type and `appendField` stops accepting it.
-  protected override doClassValidation_(
-    newValue: string,
-  ): string | null | undefined;
-  protected override doClassValidation_(newValue?: string): string | null;
-  protected override doClassValidation_(newValue?: string): string | null {
-    return truthOf(newValue);
-  }
-}
-
-/**
- * What the RUNTIME makes of a stored boolean default, said as a field value.
- *
- * Through `propertyDefault` rather than beside it, so the two cannot drift:
- * the bug this fixes was the editor and the runtime disagreeing about one
- * string, and a second implementation of the same rule is how that happens
- * again.
- */
-const truthOf = (value: unknown): 'true' | 'false' =>
-  propertyDefault('boolean', value) ? 'true' : 'false';
-
-/** The vector field's class, for the one place that builds one by hand. */
-const VectorField = fieldVectorPlugin.field as new (
-  value: VectorValue,
-) => Field;
-
-/**
- * The color field, under the type `appendField` and `instanceof` both take.
- *
- * The same class every other color in the lab uses, so a property's default is
- * picked from the same swatches as the value that will be set into it.
- */
-const ColorField = FieldColorPicker as unknown as new (value: string) => Field;
-
-/** The angle field's class, built by the same plugin factory as the vector's. */
-const AngleField = fieldAnglePlugin.field as new (value: number) => Field;
-
-/**
- * Whether a field is one of these, asked so that TypeScript learns nothing.
- *
- * The plugin-built fields are typed as the base `Field`, so a failed
- * `instanceof` against one narrows what is left to `null` and every test after
- * it stops compiling. Behind a call there is nothing to narrow.
- */
-const isFieldOf = (
-  field: Field | null,
-  kind: new (...args: never[]) => Field,
-): boolean => field !== null && field instanceof kind;
-
-/**
- * Put the right editor in the `with default` slot, carrying the value across.
- *
- * The fields are REPLACED rather than hidden, so nothing a file does not use is
- * written into it: a number property saves `DEFAULT: "0"` exactly as before, and
- * only a point ever writes a `DEFAULT_Y`.
- *
- * Carrying matters because the swap can happen after a value has landed. Blockly
- * applies a saved block's fields in the order the file lists them (core's
- * `blocks.ts`), and the saver writes them in on-block order — TYPE first, DEFAULT
- * third — so the ordinary path reshapes before the default arrives. A file
- * written by hand need not be in that order, and there the old field has already
- * taken the value; converting it here is what makes the two orders agree.
- */
-function shapeDefaultField(block: Block, type: string): void {
-  const row = block.inputList[0];
-  const wanted = defaultShapeFor(type);
-  const held = block.getFieldValue(DEFAULT_FIELD);
-  const heldY = block.getFieldValue(DEFAULT_Y_FIELD);
-  const at = block.getField(DEFAULT_FIELD);
-  const current: DefaultShape =
-    block.getField(DEFAULT_Y_FIELD) !== null
-      ? 'point'
-      : at === null
-        ? 'none'
-        : at instanceof FieldColorPicker
-          ? 'color'
-          : at instanceof FieldDropdownClass
-            ? 'boolean'
-            : isFieldOf(at, AngleField)
-              ? 'angle'
-              : isFieldOf(at, VectorField)
-                ? 'vector'
-                : 'text';
-  if (!row || current === wanted) {
-    return;
-  }
-  // Two ways of reading what is there, because the slot being left and the
-  // slot being entered need not agree about what a value is. A number and a
-  // point can trade; a color and a word are both text; nothing sensible
-  // survives between the two groups, and 0 or white is what arrives then.
-  const carried = propertyDefault(
-    current === 'vector' ? 'vector' : current === 'point' ? 'point' : 'number',
-    held,
-    heldY,
-  ) as number | {x: number; y: number};
-  const point =
-    typeof carried === 'number'
-      ? {x: carried, y: 0}
-      : {x: carried.x, y: carried.y};
-  const text =
-    current === 'vector' || current === 'point'
-      ? String(point.x)
-      : current === 'none'
-        ? '0' // a property that had no default to state starts at nothing
-        : String(held ?? '');
-  for (const name of [
-    WITH_DEFAULT_LABEL,
-    DEFAULT_X_LABEL,
-    DEFAULT_FIELD,
-    DEFAULT_Y_LABEL,
-    DEFAULT_Y_FIELD,
-  ]) {
-    if (block.getField(name)) {
-      row.removeField(name);
-    }
-  }
-  if (wanted === 'none') {
-    return;
-  }
-  // Appended, not inserted: the default is the last thing on the row, after the
-  // type and the name that `define %1 %2` puts there.
-  row.appendField(new FieldLabel('with default'), WITH_DEFAULT_LABEL);
-  if (wanted === 'angle') {
-    row.appendField(new AngleField(Number(text) || 0), DEFAULT_FIELD);
-  } else if (wanted === 'color') {
-    row.appendField(new ColorField(text), DEFAULT_FIELD);
-  } else if (wanted === 'boolean') {
-    // Lenient about what it is GIVEN, for the reasons on the class: a value
-    // the options do not hold would otherwise be refused and the field left
-    // showing something the file does not say.
-    const truth = new BooleanDefaultField(BOOLEAN_OPTIONS);
-    truth.setValue(truthOf(text));
-    row.appendField(truth, DEFAULT_FIELD);
-  } else if (wanted === 'vector') {
-    row.appendField(new VectorField(point), DEFAULT_FIELD);
-  } else if (wanted === 'point') {
-    row
-      .appendField(new FieldLabel('x'), DEFAULT_X_LABEL)
-      .appendField(new FieldNumber(point.x), DEFAULT_FIELD)
-      .appendField(new FieldLabel('y'), DEFAULT_Y_LABEL)
-      .appendField(new FieldNumber(point.y), DEFAULT_Y_FIELD);
-  } else {
-    row.appendField(new FieldTextInput(text), DEFAULT_FIELD);
-  }
-}
-
-/** One of the two drawings, from the shared shape. */
-const propertyDrawing = (
-  shape: PropertyBlockShape,
-  muted = false,
-): BlockDrawing => ({
-  definition: {
-    message0: shape.message0,
-    args0: shape.args0,
-    inputsInline: true,
-    ...(shape.output === undefined
-      ? {previousStatement: null, nextStatement: null}
-      : {output: shape.output}),
-    style: shape.style,
-  },
-  shadows: shape.shadows,
-  subject: shape.subject,
-  muted,
-});
-
-const PROPERTY_DESIGNER_EXTENSION = 'world_property_designer';
-
-/**
- * Draw the two blocks a `define property` makes, and let the eye decide whether
- * the second one leaves the file.
- *
- * The same bargain `define block` and `define event` struck (`blockDesigner`):
- * a definition should look like the thing defined. A property makes a getter
- * and a setter, so both are drawn, from the one description the real blocks are
- * built from (`propertyShape`) — a preview that described them in its own words
- * would be right until the first time one of them changed.
- *
- * READ-ONLY IS A FACT ABOUT THE SETTER, which is why the eye sits beside it. A
- * property a step owns — gravity's "falling", which its landing step sets and
- * nothing else may — must not grow a `set` block anyone else can reach:
- * offering one invites a learner to write a value the next tick overwrites,
- * which looks like the block is broken. The setter still EXISTS, and the rule
- * that declared it still uses it, so it is still drawn — faded, which is what
- * "not offered outside here" looks like.
- */
-const propertyDesignerExtension = defineExtension(PROPERTY_DESIGNER_EXTENSION, {
-  extension() {
-    const block = this as unknown as Block & {
-      // `rebuildDesign_`, and not a name of its own: `refreshBlockDesigns`
-      // sweeps a workspace for exactly this method after a load made with
-      // events OFF, which is most of them here — the surface swap and every
-      // reload after a rename silence Blockly so the file is not written back.
-      // Unswept, a saved property came back drawn as the `strength` its fields
-      // default to, because Blockly's serializer applies fields AFTER an
-      // extension has run.
-      rebuildDesign_: () => void;
-    };
-    const svg = block as unknown as BlockSvg;
-
-    // The eye, made once. Shared with `define block`, which asks the same
-    // question about the same kind of declaration (`fields/visibilityEye`).
-    const eye = visibilityEye(WRITABLE, READONLY);
-
-    block.rebuildDesign_ = () => {
-      // The editor first, so what is read below is read from the right field.
-      shapeDefaultField(block, String(block.getFieldValue('TYPE') ?? ''));
-      const property = propertyOn(block);
-      const readonly = block.getFieldValue(PROPERTY_ACCESS_FIELD) === READONLY;
-      eye.sync();
-      const get = block.getField(
-        GET_PREVIEW_FIELD,
-      ) as FieldPropertyPreview | null;
-      const set = block.getField(
-        SET_PREVIEW_FIELD,
-      ) as FieldPropertyPreview | null;
-      // Nothing to draw for a property with no name: the blocks it would make
-      // would read `set  of ⟨this actor⟩`, which is not a picture of anything.
-      const shape = property.name ? propertyShape(property) : undefined;
-      get?.setDrawing(shape ? propertyDrawing(shape.get) : null);
-      set?.setDrawing(shape ? propertyDrawing(shape.set, readonly) : null);
-    };
-
-    const getPreview = new FieldPropertyPreview();
-    const setPreview = new FieldPropertyPreview();
-    block
-      .appendDummyInput(GET_PREVIEW_ROW)
-      .appendField(getPreview, GET_PREVIEW_FIELD);
-    block
-      .appendDummyInput(SET_PREVIEW_ROW)
-      .appendField(eye.field, PROPERTY_ACCESS_FIELD)
-      .appendField(setPreview, SET_PREVIEW_FIELD);
-    eye.field.setTooltip(
-      'Whether the "set" block below is offered anywhere else. Turn it off ' +
-        'for a value the file declaring it works out for itself — a learner ' +
-        'given a setter for one of those writes a value the next tick ' +
-        'overwrites, and the block looks broken.',
-    );
-
-    // ON THE VALIDATOR, which is what makes a saved block come back right.
-    // A validator runs INSIDE `setValue`, so the slot is reshaped while
-    // Blockly is still applying the file's fields — before it reaches
-    // `DEFAULT`, which the saver always writes after `TYPE`. The change event
-    // that `rebuildDesign_` listens for is fired asynchronously and would
-    // arrive far too late for that (`Events.fire`).
-    (block.getField('TYPE') as FieldDropdown | null)?.setValidator(value => {
-      shapeDefaultField(block, String(value));
-      return undefined;
-    });
-
-    block.rebuildDesign_();
-
-    let wasScope = propertyScopeOf(block);
-    block.setOnChange(event => {
-      const mine =
-        event.type === Events.BLOCK_CHANGE &&
-        (event as Events.BlockChange).blockId === block.id;
-      // Where it sits decides whose property it is, and so whether the drawn
-      // blocks take a subject at all. Compared rather than redrawn on every
-      // move: a declaration is dragged around plenty without changing owner.
-      const scope = propertyScopeOf(block);
-      const movedOwner = scope !== wasScope;
-      wasScope = scope;
-      if (
-        mine ||
-        movedOwner ||
-        // Blockly's serializer applies fields AFTER extensions run, so the
-        // drawing built above was drawn against the block's defaults. Every
-        // saved property came back drawn as `strength` until this.
-        event.type === Events.FINISHED_LOADING
-      ) {
-        block.rebuildDesign_();
-        svg.queueRender?.();
-      }
-    });
-  },
-});
-
-const worldRuleProperty = defineBlock({
-  type: 'world_rule_property',
-  // A DEFINITION, styled and colored like the other definitions — `define
-  // rule`, `define trait`, `define block`, `define event` — with the blocks it
-  // makes drawn on its own face by the extension below.
-  // The default is NOT here: what it is edited by, and whether it is asked for
-  // at all, are facts about the TYPE, so the extension below puts the words and
-  // the editor on the end of this row (`shapeDefaultField`).
-  message0: 'define %1 %2',
-  args0: [
-    {type: 'field_dropdown', name: 'TYPE', options: PROPERTY_TYPE_OPTIONS},
-    {type: 'field_input', name: 'NAME', text: 'strength'},
-  ],
-  // NOT inline: the two drawings are rows under the declaration, the way
-  // `define block` puts the block it makes under its own signature. Inline put
-  // the declaration, the getter, the eye and the setter on one line, which ran
-  // off the side of the workspace and read as four unrelated things.
-  previousStatement: true,
-  nextStatement: true,
-  extensions: [propertyDesignerExtension],
-  style: 'setup_blocks',
-  tooltip:
-    'Define a property — a world property at the rule level, an actor property ' +
-    'inside a "define trait". The two blocks below it are what it makes; the ' +
-    'eye says whether the "set" one is offered outside this file.',
   generator: noGenerator,
 });
 
@@ -8452,37 +7839,6 @@ const worldTraitStep = defineBlock({
       );
     },
   },
-});
-
-/**
- * `show as ⟨text⟩` — the symbol a picker draws this actor with.
- *
- * The third of three tiers (specs/UI_ACTORS.md): the picture where there is
- * room for it, this where there is not, and the actor's name when there is no
- * picture at all. Declaring nothing keeps what a project already does, so this
- * is a thing to reach for rather than a thing to know.
- *
- * WHAT IT IS FOR is an actor whose appearance is CONTENT-DEPENDENT — a Label
- * looks like whatever this one happens to say, so at 24 pixels every Label in
- * the project is the same smudge and none of them is identifiable. A symbol
- * says what the kind IS, which is the question a picker asks.
- *
- * It generates nothing. Where an actor is shown is the editor's business, and
- * the running game has no pickers in it.
- */
-const worldShowAs = defineBlock({
-  type: SHOW_AS,
-  message0: 'show as %1',
-  args0: [{type: 'field_dropdown', name: 'ICON', options: ACTOR_ICON_OPTIONS}],
-  previousStatement: true,
-  nextStatement: true,
-  extensions: [actorContextExtension],
-  style: 'sprite_blocks',
-  tooltip:
-    'Pick the symbol that stands for this kind of actor where it is too ' +
-    'small to draw — a dropdown of actors, for one. Leave it off and the ' +
-    'picture is used.',
-  generator: noGenerator,
 });
 
 // ── Drawing (specs/DRAWING.md) ───────────────────────────────────────────────
@@ -10403,7 +9759,6 @@ const worldRemoveCameraTrait = traitMutation({
 
 export const DOMAIN_BLOCKS = [
   worldActor,
-  worldActsLike,
   worldForEachTyped,
   worldText,
   worldAsText,
@@ -10520,8 +9875,6 @@ export const DOMAIN_BLOCKS = [
   worldRemoveActor,
   worldPauseGame,
   worldSaveMemory,
-  worldActorIsData,
-  worldActorAnimations,
   worldRememberActors,
   worldRecallActors,
   worldRecallMemory,
@@ -10529,13 +9882,11 @@ export const DOMAIN_BLOCKS = [
   worldResumeGame,
   worldGameIsPaused,
   worldLoadMap,
-  worldRuleProperty,
   memberHead,
   stepHead,
   worldDoc,
   worldReturn,
   worldTraitStep,
-  worldShowAs,
   worldCountWith,
   // Actor lists as values: filtering, ordering, and taking from one
   // (specs/ACTOR_LISTS.md).
@@ -10706,9 +10057,6 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // `remove` is runtime-only (there is nothing to un-declare).
       'world_add_effect',
       'world_remove_effect',
-      // What a picker draws this kind with, when it is too small for the
-      // picture (specs/UI_ACTORS.md).
-      SHOW_AS,
       'world_this_actor',
       // The 'any of this kind' counterpart, for a world file naming several.
       'world_actor_kind',
@@ -11557,9 +10905,6 @@ function generateRulePalette(
  */
 export const ESTABLISHED_ELSEWHERE: ReadonlySet<string> = new Set([
   'world_actor',
-  'world_rule_property',
-  'world_acts_like',
-  'world_actor_is_data',
   'world_set_map_size',
   'world_set_view_size',
   'world_layer_parallax',

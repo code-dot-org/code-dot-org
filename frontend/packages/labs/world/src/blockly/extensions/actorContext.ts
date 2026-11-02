@@ -57,38 +57,9 @@ export function inBuilderContext(
   return false;
 }
 
-/** Build an extension that warns outside the given roots. */
-function builderContextExtension(
-  name: string,
-  roots: readonly string[],
-  warning: string,
-): Extension {
-  return defineExtension(name, {
-    extension() {
-      addOnChange(this, function (this: Block, event: Blockly.Events.Abstract) {
-        // Re-check when the block's place in the tree could have changed; skip
-        // flyout blocks, pure UI events, and transient mid-drag states.
-        const workspace = this.workspace as Blockly.WorkspaceSvg;
-        if (this.isInFlyout || event.isUiEvent || workspace?.isDragging?.()) {
-          return;
-        }
-        // Namespaced so it coexists with any other warning on the block.
-        this.setWarningText(
-          inBuilderContext(this, roots) ? null : localizeText(warning),
-          name,
-        );
-      });
-    },
-  });
-}
-
 export const RUNTIME_ACTOR_EXTENSION = 'world_needs_live_actor';
 
-/**
- * Build an extension that warns INSIDE the given roots — the inverse of
- * {@link builderContextExtension}, for blocks that need a live object where
- * those roots supply a builder.
- */
+/** Build an extension that warns INSIDE the given roots, where a builder is what its code would call. */
 function runtimeContextExtension(
   name: string,
   roots: readonly string[],
@@ -131,28 +102,4 @@ export const runtimeActorExtension = runtimeContextExtension(
   RUNTIME_ACTOR_EXTENSION,
   ['world_actor'],
   'This happens while the game runs. Try placing it inside an event, not under "define actor".',
-);
-
-export const SHOW_AS_CONTEXT_EXTENSION = 'world_needs_actor_context';
-
-/**
- * For `show as`, which has ONE home and would say nothing anywhere else.
- *
- * It is read off the file by a walk over `define actor` roots
- * (`actorIconMeta`), so a row that has drifted out of one is not merely inert —
- * nothing will ever look at it. A block that says nothing has to say so.
- */
-export const actorContextExtension = builderContextExtension(
-  SHOW_AS_CONTEXT_EXTENSION,
-  ['world_actor'],
-  'This says how a picker draws this kind of actor. Chain it under "define actor".',
-);
-
-export const TRAIT_CONTEXT_EXTENSION = 'world_needs_trait_context';
-
-/** For the rows that describe a kind: only `define actor` holds them. */
-export const traitContextExtension = builderContextExtension(
-  TRAIT_CONTEXT_EXTENSION,
-  ['world_actor'],
-  'This is part of describing an actor. Try placing it under "define actor".',
 );

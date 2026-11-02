@@ -38,15 +38,12 @@ export type Surface = 'interface' | 'body' | 'drawing';
 /**
  * Blocks that say what a rule OFFERS.
  *
- * Each is a declaration: it adds a property or a step to whatever it is
+ * A declaration: it adds a step to whatever it is
  * written in. None can appear inside an
  * implementation — a body is statements, and these are the things statements
  * get attached to.
  */
-const DECLARATIONS: ReadonlySet<string> = new Set([
-  'world_rule_property',
-  'world_trait_step',
-]);
+const DECLARATIONS: ReadonlySet<string> = new Set(['world_trait_step']);
 
 /**
  * Blocks that only mean anything inside an implementation.
