@@ -15,14 +15,20 @@ import {
   sortableKeyboardCoordinates,
   verticalListSortingStrategy,
 } from '@dnd-kit/sortable';
-import React, {FC, useState} from 'react';
+import {
+  type Dispatch,
+  type FC,
+  type SetStateAction,
+  useCallback,
+  useState,
+} from 'react';
 
 import {
   MatchSolution,
   MultiSolution,
   PracticeProblem,
   ScrambleSolution,
-} from '@cdo/apps/aiTutor/views/lessonDeepDive/types';
+} from '../../types';
 
 import {SortableOptionCard} from './SortableOptionCard';
 
@@ -32,12 +38,10 @@ import styles from './question.module.scss';
 interface PracticeMatchProps {
   problem: PracticeProblem;
   submitted: boolean;
-  submitCallback: React.Dispatch<React.SetStateAction<boolean>>;
-  correctCallback: React.Dispatch<React.SetStateAction<boolean>>;
-  studentAnswerCallback: React.Dispatch<
-    React.SetStateAction<
-      (MultiSolution | ScrambleSolution | MatchSolution)[] | null
-    >
+  submitCallback: Dispatch<SetStateAction<boolean>>;
+  correctCallback: Dispatch<SetStateAction<boolean>>;
+  studentAnswerCallback: Dispatch<
+    SetStateAction<(MultiSolution | ScrambleSolution | MatchSolution)[] | null>
   >;
 }
 
@@ -51,10 +55,10 @@ const PracticeMatch: FC<PracticeMatchProps> = ({
   const solutions = problem.solution.map(s => ({...s})) as MatchSolution[];
 
   const [sortableOptions, setSortableOptions] = useState<string[]>(
-    solutions.map(s => s.option).sort(() => Math.random() - 0.5)
+    solutions.map(s => s.option).sort(() => Math.random() - 0.5),
   );
   const [sortableMatches, setSortableMatches] = useState<string[]>(
-    solutions.map(s => s.correct).sort(() => Math.random() - 0.5)
+    solutions.map(s => s.correct).sort(() => Math.random() - 0.5),
   );
 
   const isCorrect = () => {
@@ -62,7 +66,7 @@ const PracticeMatch: FC<PracticeMatchProps> = ({
       if (
         solutions.find(
           ({option, correct}) =>
-            option === sortableOptions[i] && correct === sortableMatches[i]
+            option === sortableOptions[i] && correct === sortableMatches[i],
         ) === undefined
       ) {
         return false;
@@ -71,10 +75,7 @@ const PracticeMatch: FC<PracticeMatchProps> = ({
     return true;
   };
 
-  function moveOption(
-    active: Active,
-    over: Over
-  ): React.SetStateAction<string[]> {
+  function moveOption(active: Active, over: Over): SetStateAction<string[]> {
     return items => {
       const oldIndex = items.indexOf(active.id as string);
       const newIndex = items.indexOf(over.id as string);
@@ -84,27 +85,27 @@ const PracticeMatch: FC<PracticeMatchProps> = ({
 
   const sensors = useSensors(
     useSensor(PointerSensor, {activationConstraint: {distance: 10}}),
-    useSensor(KeyboardSensor, {coordinateGetter: sortableKeyboardCoordinates})
+    useSensor(KeyboardSensor, {coordinateGetter: sortableKeyboardCoordinates}),
   );
 
-  const handleDragEndOption = React.useCallback(
+  const handleDragEndOption = useCallback(
     (event: DragEndEvent) => {
       const {active, over} = event;
       if (over && active.id !== over.id && !submitted) {
         setSortableOptions(moveOption(active, over));
       }
     },
-    [setSortableOptions, submitted]
+    [setSortableOptions, submitted],
   );
 
-  const handleDragEndMatch = React.useCallback(
+  const handleDragEndMatch = useCallback(
     (event: DragEndEvent) => {
       const {active, over} = event;
       if (over && active.id !== over.id && !submitted) {
         setSortableMatches(moveOption(active, over));
       }
     },
-    [setSortableMatches, submitted]
+    [setSortableMatches, submitted],
   );
 
   return (
@@ -129,7 +130,7 @@ const PracticeMatch: FC<PracticeMatchProps> = ({
                   correct={
                     solutions.find(
                       ({option, correct}) =>
-                        option === opt && correct === sortableMatches[index]
+                        option === opt && correct === sortableMatches[index],
                     ) !== undefined
                   }
                   showAnswer={submitted}
@@ -157,7 +158,7 @@ const PracticeMatch: FC<PracticeMatchProps> = ({
                   correct={
                     solutions.find(
                       ({option, correct}) =>
-                        option === sortableOptions[index] && correct === corr
+                        option === sortableOptions[index] && correct === corr,
                     ) !== undefined
                   }
                   showAnswer={submitted}
@@ -178,7 +179,7 @@ const PracticeMatch: FC<PracticeMatchProps> = ({
             sortableOptions.map((opt, index) => ({
               option: opt,
               correct: sortableMatches[index],
-            }))
+            })),
           );
         }}
       >
