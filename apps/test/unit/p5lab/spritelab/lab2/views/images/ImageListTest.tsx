@@ -31,7 +31,7 @@ describe('ImageList', () => {
     );
     expect(
       screen.getAllByRole('heading', {level: 4}).map(h => h.textContent)
-    ).toEqual(['Characters', 'Objects', 'Backgrounds']);
+    ).toEqual(['Characters', 'Backgrounds', 'Objects']);
     expect(screen.getByRole('heading', {level: 3}).textContent).toBe(
       'Your images'
     );
@@ -45,10 +45,10 @@ describe('ImageList', () => {
       'Characters',
       'Sprite 1',
       'Sprite 2',
-      'Objects',
-      'New object',
       'Backgrounds',
       'Background 1',
+      'Objects',
+      'New object',
     ]);
   });
 

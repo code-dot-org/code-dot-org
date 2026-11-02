@@ -43,12 +43,12 @@ const NEW_KINDS: {label: string; iconName: string; kind: NewImageKind}[] = [
   {label: 'Block', iconName: 'cube', kind: {imageType: 'block'}},
 ];
 
-/** The list's kinds, in the order they are listed. */
+/** The list's kinds, in the order they are listed: the plus menu's order. */
 type KindId = 'character' | 'object' | 'background' | 'block';
 const KINDS: {id: KindId; title: string}[] = [
   {id: 'character', title: 'Characters'},
-  {id: 'object', title: 'Objects'},
   {id: 'background', title: 'Backgrounds'},
+  {id: 'object', title: 'Objects'},
   {id: 'block', title: 'Blocks'},
 ];
 const kindOf = (imageType: ImageType, subject?: ImageSubject): KindId =>
