@@ -261,9 +261,14 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
       refute JSON.parse(response.body)['is_signed_in']
     end
 
-    it 'does not interrupt API requests' do
-      get api_v1_users_current_path
+    it 'does not interrupt fetch requests' do
+      get api_v1_users_current_path, headers: {'Accept' => '*/*'}
       assert JSON.parse(response.body)['is_signed_in']
+    end
+
+    it 'does not interrupt jQuery requests for HTML' do
+      get root_path, headers: page_load, xhr: true
+      refute_redirect_to new_user_session_path
     end
 
     it 'keeps a recent sign-in' do

@@ -375,10 +375,10 @@ class ApplicationController < ActionController::Base
   end
 
   # Only page loads are interrupted, so an editor's pending API calls and saves still succeed.
-  # Browsers send Accept: text/html for navigations; fetch() sends */*.
+  # Browsers send Accept: text/html for navigations; fetch() sends */*, and jQuery sets X-Requested-With.
   protected def expire_privileged_sign_in
     return if devise_controller?
-    return unless request.get? && request.headers['Accept'].to_s.include?('text/html')
+    return unless request.get? && !request.xhr? && request.headers['Accept'].to_s.include?('text/html')
     return unless current_user.privileged_sign_in_expired?
 
     store_location_for(:user, request.fullpath)
