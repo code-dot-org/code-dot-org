@@ -451,15 +451,22 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     () => new Set(chosenBlocks ?? []),
     [chosenBlocks]
   );
+  // Catalog blocks the student has yet to add.
+  const heldBackBlocks = useMemo(
+    () => heldBackBlockTypes(catalog, chosenBlocks),
+    [catalog, chosenBlocks]
+  );
   const isLevelbuilder = useAppSelector(state =>
     state.lab.permissions?.includes(PERMISSIONS.LEVELBUILDER)
   );
-  // Permissions arrive after mount, so the AI blocks are
-  // hidden until the fetch says otherwise.
-  const hiddenBlockTypes = useMemo(() => {
-    const held = heldBackBlockTypes(catalog, chosenBlocks);
-    return isLevelbuilder ? held : new Set([...held, ...AI_BLOCK_TYPES]);
-  }, [catalog, chosenBlocks, isLevelbuilder]);
+  // Everything the toolbox leaves out.
+  const hiddenBlockTypes = useMemo(
+    () =>
+      isLevelbuilder
+        ? heldBackBlocks
+        : new Set([...heldBackBlocks, ...AI_BLOCK_TYPES]),
+    [heldBackBlocks, isLevelbuilder]
+  );
   const [showBlockCatalog, setShowBlockCatalog] = useState(false);
   // Dismissing the catalog, not opening it, is what counts as seen: an
   // opening cut short (a Start Over that leaves the level, a reload) comes
@@ -2391,7 +2398,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                   activeTab === 'Code' &&
                   catalogOffered && (
                     <DiscoverBlocksButton
-                      remaining={hiddenBlockTypes.size}
+                      remaining={heldBackBlocks.size}
                       className={moduleStyles.barButton}
                       onClick={openBlockCatalog}
                     />
