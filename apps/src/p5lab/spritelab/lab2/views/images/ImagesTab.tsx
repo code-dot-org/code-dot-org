@@ -79,6 +79,14 @@ const DRAFT_ID = 'draft';
 export const DEFAULT_PANE_WIDTH = 280;
 // A drawing left alone this long saves itself.
 const IDLE_SAVE_MS = 20_000;
+// A pause this long after a stroke saves what is drawn, so the image is the
+// project's as it is drawn: the list's tile, the World palette and the next
+// run all follow it.
+const STROKE_SAVE_MS = 800;
+// A pause's save writes the pixels into the project; the file behind them
+// goes up at most this often, and when the drawing is done. The project's
+// own saving has a throttle of its own.
+const UPLOAD_GAP_MS = 5000;
 
 /** A drawing in progress: what it writes to, and what the editor opened. */
 interface Drawing {
@@ -181,8 +189,15 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   chosenKeyRef.current = chosenImage?.key ?? null;
   const landedRef = useRef(onImageLanded);
   landedRef.current = onImageLanded;
+  // `settled`: the picture is at rest, worth a project save of its own; a
+  // stroke's save in the middle of a drawing leaves that to the project's
+  // own clock.
   const land = useCallback(
-    async (target: ImageTarget, write: () => Promise<string>) => {
+    async (
+      target: ImageTarget,
+      write: () => Promise<string>,
+      settled = true
+    ) => {
       const key = await write();
       if (!target.key) {
         // The student may have moved to another image while the write was
@@ -192,7 +207,9 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
         setChosenId(id => (id === DRAFT_ID ? key : id));
         setDraft(null);
       }
-      landedRef.current?.();
+      if (settled || !target.key) {
+        landedRef.current?.();
+      }
       return key;
     },
     []
@@ -218,16 +235,26 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   );
 
   // Drawing: the pixel editor in the frame, on the image or a blank. The
-  // drawing saves itself on Done, when left alone a while, and when the
+  // drawing saves itself a pause after each stroke, on Done, and when the
   // tab is left; a blank with no stroke yet is nothing to save.
   const [drawing, setDrawing] = useState<Drawing | null>(null);
-  const [saving, setSaving] = useState(false);
   const drawingRef = useRef(drawing);
   drawingRef.current = drawing;
   // Strokes since the last save, and the save the editor hands out.
   const dirtyRef = useRef(false);
   const saveRef = useRef<(() => void) | null>(null);
   const idleTimerRef = useRef<number>();
+  // One save in flight at a time. A save asked for meanwhile waits as the
+  // pending one; each carries the whole picture, so only the latest matters.
+  const inFlightRef = useRef(false);
+  const pendingRef = useRef<{
+    dataURI: string;
+    meta: PixelEditorSaveMeta;
+  } | null>(null);
+  // When the drawing's file last went up, and whether pixels saved since
+  // are still owed to it.
+  const lastUploadRef = useRef(0);
+  const uploadOwedRef = useRef(false);
   const leaveAfterSaveRef = useRef(false);
   const clearIdleTimer = () => {
     window.clearTimeout(idleTimerRef.current);
@@ -236,6 +263,9 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   const stopDrawing = useCallback(() => {
     clearIdleTimer();
     dirtyRef.current = false;
+    pendingRef.current = null;
+    lastUploadRef.current = 0;
+    uploadOwedRef.current = false;
     saveRef.current = null;
     leaveAfterSaveRef.current = false;
     setDrawing(null);
@@ -280,34 +310,68 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
       if (dirtyRef.current) {
         saveRef.current?.();
       }
-    }, IDLE_SAVE_MS);
+    }, STROKE_SAVE_MS);
   }, []);
+  // `current` is the drawing as the save knows it: the state, or for a
+  // pending save what the save before it made, since React may not have
+  // rendered that yet.
+  const runSave = useCallback(
+    async (dataURI: string, meta: PixelEditorSaveMeta, current: Drawing) => {
+      inFlightRef.current = true;
+      let saved = current;
+      try {
+        const settled =
+          leaveAfterSaveRef.current && !pendingRef.current && !dirtyRef.current;
+        // A new image needs its file; after that the file follows every few
+        // seconds, and when the drawing is done.
+        const upload =
+          !current.target.key ||
+          settled ||
+          Date.now() - lastUploadRef.current >= UPLOAD_GAP_MS;
+        const key = await land(
+          current.target,
+          () => writer.saveEdited(current.target, dataURI, meta, {upload}),
+          settled
+        );
+        if (upload) {
+          lastUploadRef.current = Date.now();
+        }
+        uploadOwedRef.current = !upload;
+        // A blank that was saved is an image now: later saves replace it.
+        saved = {...current, target: {...current.target, key}};
+        setDrawing(d => d && {...d, target: {...d.target, key}});
+      } finally {
+        inFlightRef.current = false;
+      }
+      const pending = pendingRef.current;
+      if (pending) {
+        pendingRef.current = null;
+        await runSave(pending.dataURI, pending.meta, saved);
+      } else if (leaveAfterSaveRef.current) {
+        stopDrawing();
+      }
+    },
+    [land, writer, stopDrawing]
+  );
   const handleDrawingSave = useCallback(
-    async (dataURI: string, meta: PixelEditorSaveMeta) => {
+    (dataURI: string, meta: PixelEditorSaveMeta) => {
       const current = drawingRef.current;
       if (!current) {
         return;
       }
       clearIdleTimer();
       dirtyRef.current = false;
-      setSaving(true);
-      try {
-        const key = await land(current.target, () =>
-          writer.saveEdited(current.target, dataURI, meta)
-        );
-        // A blank that was saved is an image now: later saves replace it.
-        setDrawing(d => d && {...d, target: {...d.target, key}});
-      } finally {
-        setSaving(false);
+      if (inFlightRef.current) {
+        pendingRef.current = {dataURI, meta};
+        return;
       }
-      if (leaveAfterSaveRef.current) {
-        stopDrawing();
-      }
+      runSave(dataURI, meta, current);
     },
-    [land, writer, stopDrawing]
+    [runSave]
   );
+  // Done: what is drawn goes up, including pixels a pause's save kept local.
   const finishDrawing = useCallback(() => {
-    if (dirtyRef.current) {
+    if (dirtyRef.current || uploadOwedRef.current) {
       leaveAfterSaveRef.current = true;
       saveRef.current?.();
     } else {
@@ -457,7 +521,6 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                   kind={kind}
                   editing={!!drawing.target.key}
                   edited={parts.edited}
-                  saving={saving}
                   onDone={finishDrawing}
                 />
               </>

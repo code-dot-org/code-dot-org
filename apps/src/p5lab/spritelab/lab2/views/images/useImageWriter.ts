@@ -68,11 +68,14 @@ export interface ImageWriter {
     result: GeneratedImageResult
   ) => Promise<string>;
   /** Stores drawn pixels as the target image's pixels and resolves with
-      its key, as acceptGenerated does. */
+      its key, as acceptGenerated does. With `upload` false the pixels are
+      stored in the project only and no file is uploaded; a new image is
+      always uploaded, since it has no file yet. */
   saveEdited: (
     target: ImageTarget,
     dataURI: string,
-    meta: PixelEditorSaveMeta
+    meta: PixelEditorSaveMeta,
+    options?: {upload?: boolean}
   ) => Promise<string>;
   deleteImage: (key: string) => void;
   /** Deletes the session's uploaded files that no image points at any
@@ -177,18 +180,26 @@ export default function useImageWriter({
   );
 
   const saveEdited = useCallback(
-    async (target: ImageTarget, dataURI: string, meta: PixelEditorSaveMeta) => {
+    async (
+      target: ImageTarget,
+      dataURI: string,
+      meta: PixelEditorSaveMeta,
+      {upload = true}: {upload?: boolean} = {}
+    ) => {
       const existing = target.key ? propsOf(target.key) : undefined;
       const safeName = (existing?.name || 'image')
         .toLowerCase()
         .replace(/[^a-z0-9]+/g, '_');
-      const sourceUrl = await uploadOrEmbed(
-        uploadImage,
-        `${safeName}_${Date.now()}.png`,
-        dataURIToBytes(dataURI),
-        'image/png',
-        dataURI
-      );
+      const sourceUrl =
+        upload || !existing
+          ? await uploadOrEmbed(
+              uploadImage,
+              `${safeName}_${Date.now()}.png`,
+              dataURIToBytes(dataURI),
+              'image/png',
+              dataURI
+            )
+          : undefined;
       recordSessionUrl(sourceUrl);
       const frameSize = await measuredSize(dataURI);
       // Keep the subject: the edit clears `generation`, where an older image
@@ -196,7 +207,7 @@ export default function useImageWriter({
       const subject =
         existing?.subject ?? existing?.generation?.subject ?? target.subject;
       return write(target, {
-        sourceUrl,
+        ...(sourceUrl && {sourceUrl}),
         dataURI,
         ...(subject && {subject}),
         // An edited character set keeps its frame grid (the editor hands

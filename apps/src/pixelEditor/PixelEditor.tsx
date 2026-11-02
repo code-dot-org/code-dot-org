@@ -160,7 +160,8 @@ export interface PixelEditorProps {
   // to avoid a scrim gap.
   onReady?: () => void;
   onSave: (dataURI: string, meta: PixelEditorSaveMeta) => void;
-  // Fires as each stroke lands, for a host that saves on its own clock.
+  // Fires as each stroke lands, and on undo and redo, for a host that saves
+  // on its own clock.
   onEdit?: () => void;
   // The tools to offer, in TOOLS order; all of them when absent. Shortcuts
   // for tools left out do nothing.
@@ -497,6 +498,8 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
     restoreSnapshot(previous);
     repaint();
     setHistoryVersion(v => v + 1);
+    // What the host saves changed, as it does on a stroke.
+    onEditRef.current?.();
   }, [currentPixels, restoreSnapshot, repaint]);
 
   const redo = useCallback(() => {
@@ -511,6 +514,7 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
     restoreSnapshot(next);
     repaint();
     setHistoryVersion(v => v + 1);
+    onEditRef.current?.();
   }, [currentPixels, restoreSnapshot, repaint]);
   // Refs so the window keydown listener below can stay mounted once.
   const undoRef = useRef(undo);

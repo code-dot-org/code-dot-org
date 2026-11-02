@@ -349,11 +349,93 @@ describe('ImagesTab', () => {
     expect(saveEdited).toHaveBeenCalledWith(
       {key: null, imageType: 'sprite', subject: 'character'},
       'data:png',
-      {pixelGridSize: 1}
+      {pixelGridSize: 1},
+      {upload: true}
     );
     expect(screen.queryByText('canvas')).toBeNull();
     expect(pressed()).toEqual(['Sprite 1']);
     expect(onDrawingHistory).toHaveBeenLastCalledWith(null);
+  });
+
+  it("saves a pause after each stroke, so the image is the project's as it is drawn", async () => {
+    jest.useFakeTimers();
+    const onImageLanded = jest.fn();
+    renderTab({editingOffered: true, onImageLanded});
+    fireEvent.click(screen.getByRole('button', {name: 'New image'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Character'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Draw my own'}));
+    saveEdited.mockImplementation(async () => {
+      propsByKey.k1 = {name: 'Sprite 1', categories: []};
+      return 'k1';
+    });
+    fireEvent.click(screen.getByRole('button', {name: 'stroke'}));
+    expect(saveEdited).not.toHaveBeenCalled();
+    await act(async () => {
+      jest.advanceTimersByTime(800);
+    });
+    // The blank became an image, file and all, and the tools stayed open
+    // on it.
+    expect(saveEdited).toHaveBeenCalledTimes(1);
+    expect(saveEdited.mock.calls[0][0]).toEqual({
+      key: null,
+      imageType: 'sprite',
+      subject: 'character',
+    });
+    expect(saveEdited.mock.calls[0][3]).toEqual({upload: true});
+    expect(onImageLanded).toHaveBeenCalledTimes(1);
+    expect(screen.getByText('canvas')).toBeTruthy();
+    expect(pressed()).toEqual(['Sprite 1']);
+    // The next pause saves onto that image, pixels only, with no project
+    // save of its own.
+    fireEvent.click(screen.getByRole('button', {name: 'stroke'}));
+    await act(async () => {
+      jest.advanceTimersByTime(800);
+    });
+    expect(saveEdited).toHaveBeenCalledTimes(2);
+    expect(saveEdited.mock.calls[1][0]).toEqual({
+      key: 'k1',
+      imageType: 'sprite',
+      subject: 'character',
+    });
+    expect(saveEdited.mock.calls[1][3]).toEqual({upload: false});
+    expect(onImageLanded).toHaveBeenCalledTimes(1);
+    // Done sends the file those pixels are owed, and the project saves.
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', {name: 'Done editing'}));
+    });
+    expect(saveEdited).toHaveBeenCalledTimes(3);
+    expect(saveEdited.mock.calls[2][3]).toEqual({upload: true});
+    expect(onImageLanded).toHaveBeenCalledTimes(2);
+    expect(screen.queryByText('canvas')).toBeNull();
+    jest.useRealTimers();
+  });
+
+  it('keeps a stroke made while a save is in flight, saving it after', async () => {
+    propsByKey.k1 = {name: 'Sprite 1', categories: [], role: 'hero'};
+    renderTab({lockedImageType: 'sprite', imageRole: 'hero'});
+    fireEvent.click(screen.getByRole('button', {name: 'Edit this image'}));
+    let finishFirst: (key: string) => void = () => {};
+    saveEdited.mockImplementationOnce(
+      () => new Promise<string>(resolve => (finishFirst = resolve))
+    );
+    saveEdited.mockResolvedValue('k1');
+    fireEvent.click(screen.getByRole('button', {name: 'stroke'}));
+    act(() => {
+      fireEvent.click(screen.getByRole('button', {name: 'Done editing'}));
+    });
+    expect(saveEdited).toHaveBeenCalledTimes(1);
+    // Another stroke and Done while the first save is out: it waits.
+    fireEvent.click(screen.getByRole('button', {name: 'stroke'}));
+    act(() => {
+      fireEvent.click(screen.getByRole('button', {name: 'Done editing'}));
+    });
+    expect(saveEdited).toHaveBeenCalledTimes(1);
+    expect(screen.getByText('canvas')).toBeTruthy();
+    await act(async () => {
+      finishFirst('k1');
+    });
+    expect(saveEdited).toHaveBeenCalledTimes(2);
+    expect(screen.queryByText('canvas')).toBeNull();
   });
 
   it('edits an image with the few tools before free play, saving when the tab is left', async () => {

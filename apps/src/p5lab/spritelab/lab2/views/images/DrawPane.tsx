@@ -18,7 +18,6 @@ interface DrawPaneProps {
   editing: boolean;
   /** A stroke has landed since the drawing opened. */
   edited: boolean;
-  saving: boolean;
   /** Keep what is drawn and leave the tools. */
   onDone: () => void;
 }
@@ -28,7 +27,6 @@ const DrawPane: React.FunctionComponent<DrawPaneProps> = ({
   kind,
   editing,
   edited,
-  saving,
   onDone,
 }) => {
   const kindLabel = imageKindLabel(kind.imageType, kind.subject).toLowerCase();
@@ -47,7 +45,7 @@ const DrawPane: React.FunctionComponent<DrawPaneProps> = ({
           color="primary"
           className={styles.generateButton}
           startIcon={<FontAwesomeV6Icon iconName="check" aria-hidden />}
-          disabled={saving || (!editing && !edited)}
+          disabled={!editing && !edited}
           onClick={onDone}
         >
           {editing ? 'Done editing' : 'Done drawing'}
