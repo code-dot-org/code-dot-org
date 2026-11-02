@@ -87,7 +87,14 @@ const QuizBuilderWorkspace: React.FunctionComponent<
   } else if (isEmptyQuiz) {
     outline = (
       <div className={styles.emptyQuiz}>
-        <Typography variant="h6" component="h2" className={styles.title}>
+        <span className={styles.emptyQuizIcon} aria-hidden>
+          <FontAwesomeV6Icon iconName="clipboard-question" iconStyle="solid" />
+        </span>
+        <Typography
+          variant="body1"
+          component="h2"
+          className={styles.emptyQuizTitle}
+        >
           This quiz is empty
         </Typography>
         <Typography
