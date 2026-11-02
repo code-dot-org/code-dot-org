@@ -9,7 +9,7 @@ import {
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {MODEL_OUTPUT_PX} from '../../ai/images/modelHelpers';
-import {AnimationPoses} from '../../characterAnimations';
+import {AnimationPoses, stripCellOrigin} from '../../characterAnimations';
 
 import {ImageProps} from './projectImages';
 
@@ -41,7 +41,12 @@ async function cropStandingFrame(
   if (!ctx) {
     return dataURI;
   }
-  ctx.drawImage(img, -standingFrameIndex(poses) * frameSize.x, 0);
+  const origin = stripCellOrigin(
+    img.naturalWidth,
+    frameSize,
+    standingFrameIndex(poses)
+  );
+  ctx.drawImage(img, -origin.x, -origin.y);
   return canvas.toDataURL('image/png');
 }
 

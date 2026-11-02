@@ -2,6 +2,7 @@
 // header: a typed prompt, a coarser grid, and the current picture as the
 // starting point.
 
+import Checkbox from '@code-dot-org/component-library/checkbox';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Popover from '@code-dot-org/component-library/popover';
@@ -77,6 +78,8 @@ const AdvancedPopover: React.FunctionComponent<AdvancedPopoverProps> = ({
           className={styles.advancedPopover}
           onClose={() => setOpen(false)}
         >
+          {/* The component library has no multi-line text field; a typed
+              prompt needs the room, so this stays a plain textarea. */}
           <label className={styles.advancedField}>
             <span>Prompt (instead of the words)</span>
             <textarea
@@ -102,15 +105,15 @@ const AdvancedPopover: React.FunctionComponent<AdvancedPopoverProps> = ({
             selectedValue={String(settings.pixelScale)}
             onChange={e => set({pixelScale: Number(e.target.value)})}
           />
-          <label className={styles.advancedField}>
-            <input
-              type="checkbox"
-              checked={settings.startFrom && hasImage}
-              disabled={!hasImage}
-              onChange={e => set({startFrom: e.target.checked})}
-            />
-            <span>Start from this image (the prompt modifies it)</span>
-          </label>
+          <Checkbox
+            name="images-advanced-start-from"
+            label="Start from this image (the prompt modifies it)"
+            size="s"
+            className={styles.advancedField}
+            checked={settings.startFrom && hasImage}
+            disabled={!hasImage}
+            onChange={e => set({startFrom: e.target.checked})}
+          />
         </Popover>
       )}
     </div>

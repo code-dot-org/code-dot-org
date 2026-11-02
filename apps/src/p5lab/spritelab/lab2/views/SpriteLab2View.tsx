@@ -1070,7 +1070,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // only a sourceUrl (dataURIs load async) and the engine can't draw
   // unloaded images (costume/background commands no-op on unknown names —
   // a blank playspace until the next run). Thumbnails self-heal without
-  // this: GenerateImagePane re-trims on every list change. Kept in a ref
+  // this: the Images tab re-trims on every list change. Kept in a ref
   // (not effect cleanup): the reseed effect's deps churn on every animation
   // write, which would cancel a pending watcher mid-load.
   const cancelRerunWatchRef = useRef<() => void>();

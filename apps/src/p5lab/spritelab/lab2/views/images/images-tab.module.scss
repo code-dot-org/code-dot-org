@@ -693,19 +693,16 @@ $frame-strip-width: $strip-frames * $frame-tile-width + $frame-strip-gaps;
   z-index: 2;
 }
 
-.advancedField {
+.advancedField.advancedField {
   display: flex;
   flex-direction: column;
   gap: 6px;
   margin: 12px 0;
   font-size: 14px;
-
-  input[type='checkbox'] + span {
-    display: inline;
-  }
 }
 
-.advancedField:has(input[type='checkbox']) {
+// The checkbox row: the design system's label, box and text in a row.
+.advancedField.advancedField:has(input[type='checkbox']) {
   flex-direction: row;
   align-items: center;
   gap: 8px;
