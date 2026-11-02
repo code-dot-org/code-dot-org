@@ -424,9 +424,10 @@ namespace :seed do
   # the UI test seed needs its own callout pass, after those units exist.
   #
   # It is a separate task name rather than reusing :callouts because rake runs a
-  # task once per process, at the first position it appears in: when development
-  # seeds both lists, reusing :callouts here would deduplicate to its earlier
-  # PRODUCTION_SEED_TASKS position, ahead of the units.
+  # task once per process, at the first position it appears in: a process that
+  # seeds both lists, such as `rake seed:production seed:ui_test`, would
+  # otherwise run :callouts only at its earlier PRODUCTION_SEED_TASKS position,
+  # ahead of the units.
   timed_task_with_logging callouts_ui_tests: :environment do
     Callout.seed_all
   end
@@ -598,16 +599,14 @@ namespace :seed do
   UI_TEST_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts_ui_tests, :courses_ui_tests, :jit_pl_concepts, :reseed_scripts_ui_tests, :json_videos_ui_tests, :callouts_ui_tests, :school_districts, :schools, :secret_words, :secret_pictures, :datablock_storage].freeze
   ADHOC_SEED_TASKS = [:check_migrations, :videos, :concepts, :course_offerings_adhoc, :scripts_adhoc, :courses_adhoc, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :datablock_storage].freeze
 
-  # Development seeds the UI test tree on top of production content, so that a
-  # development machine can run UI tests without a separate manual seed. Rake
-  # runs each task once per process, so the two lists' shared tasks are seeded
-  # once and only the UI test tasks are added; see callouts_ui_tests for the one
-  # task that has to run in both lists.
+  # Development seeds only the UI test partition, which is enough to run the UI
+  # tests and the labs. Production content is seeded on demand with
+  # `rake seed:production`.
   DEFAULT_SEED_TASKS =
     case rack_env
     when :test then UI_TEST_SEED_TASKS
     when :adhoc then ADHOC_SEED_TASKS
-    when :development then PRODUCTION_SEED_TASKS + UI_TEST_SEED_TASKS
+    when :development then UI_TEST_SEED_TASKS
     else PRODUCTION_SEED_TASKS
     end
 
