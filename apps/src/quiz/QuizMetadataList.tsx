@@ -9,7 +9,6 @@ import styles from './quiz-metadata-list.module.scss';
 
 interface QuizMetadataListProps {
   questionCount: number;
-  // Omit for an untimed quiz.
   timeLimitMinutes?: number;
   allowMultipleAttempts: boolean;
   className?: string;
