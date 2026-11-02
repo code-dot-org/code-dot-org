@@ -20,9 +20,9 @@ import type {Mode} from './types';
  */
 export const loadLevel = function (mode?: Mode): void {
   invalidatePendingDatasetLoads();
+  store.dispatch(setMode(mode));
   store.dispatch(resetState());
   train.reset();
-  store.dispatch(setMode(mode));
   processMode(mode);
 };
 

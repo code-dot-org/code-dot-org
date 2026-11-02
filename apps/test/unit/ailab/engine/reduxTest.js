@@ -201,6 +201,12 @@ describe('ailab reducer', () => {
       const next = reducer(enabled, resetState());
       expect(next.instructionsEnabled).toBe(true);
     });
+
+    test("opens the dataset in the mode's default layout", () => {
+      expect(reducer(initialState, resetState()).datasetLayout).toBe('table');
+      const cards = reducer(initialState, setMode({defaultCardView: true}));
+      expect(reducer(cards, resetState()).datasetLayout).toBe('cards');
+    });
   });
 
   describe('instructionsKey selection', () => {

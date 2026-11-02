@@ -18,7 +18,8 @@ export type BooleanModeKey =
   | 'hideTestingView'
   | 'hideSave'
   | 'reserveLastRows'
-  | 'hideColumnClicking';
+  | 'hideColumnClicking'
+  | 'defaultCardView';
 
 export const BOOLEAN_MODE_KEYS: BooleanModeKey[] = [
   'hideSelectLabel',
@@ -29,6 +30,7 @@ export const BOOLEAN_MODE_KEYS: BooleanModeKey[] = [
   'hideSave',
   'hideColumnClicking',
   'reserveLastRows',
+  'defaultCardView',
 ];
 
 export const TRAINER_FAMILIES = ['knn', 'decisionTree'];
