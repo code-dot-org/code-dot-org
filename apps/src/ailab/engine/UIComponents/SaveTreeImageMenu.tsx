@@ -9,18 +9,25 @@ import React, {type RefObject, useState} from 'react';
 
 import {captureTreeImage, downloadImage} from '../helpers/treeImage';
 
+export type SaveImageToBackpack = (
+  image: Blob,
+  baseName: string
+) => Promise<void>;
+
 const LABEL = 'Save image';
 const SAVE_ERROR = "Couldn't save an image of your tree. Please try again.";
 
 interface SaveTreeImageMenuProps {
   treeRef: RefObject<HTMLElement>;
   baseName: string;
+  saveToBackpack?: SaveImageToBackpack;
   tabbable: boolean;
 }
 
 const SaveTreeImageMenu = ({
   treeRef,
   baseName,
+  saveToBackpack,
   tabbable,
 }: SaveTreeImageMenuProps) => {
   const showToast = useToast();
@@ -48,6 +55,14 @@ const SaveTreeImageMenu = ({
         saveImage(image => downloadImage(image, `${baseName}.png`)),
     },
   ];
+  if (saveToBackpack) {
+    options.push({
+      value: 'backpack',
+      label: 'Save to Backpack',
+      icon: {iconName: 'backpack'},
+      onClick: () => saveImage(image => saveToBackpack(image, baseName)),
+    });
+  }
 
   return (
     <Tooltip title={LABEL} placement="right">

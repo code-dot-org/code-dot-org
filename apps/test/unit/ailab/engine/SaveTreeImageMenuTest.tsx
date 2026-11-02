@@ -6,7 +6,9 @@ import {
   captureTreeImage,
   downloadImage,
 } from '@cdo/apps/ailab/engine/helpers/treeImage';
-import SaveTreeImageMenu from '@cdo/apps/ailab/engine/UIComponents/SaveTreeImageMenu';
+import SaveTreeImageMenu, {
+  type SaveImageToBackpack,
+} from '@cdo/apps/ailab/engine/UIComponents/SaveTreeImageMenu';
 
 import {withTheme} from './renderWithProviders';
 
@@ -18,13 +20,18 @@ jest.mock('@cdo/apps/ailab/engine/helpers/treeImage', () => ({
 const mockCapture = jest.mocked(captureTreeImage);
 const image = new Blob(['png'], {type: 'image/png'});
 
-function renderMenu() {
+function renderMenu(saveToBackpack?: SaveImageToBackpack) {
   const treeRef = createRef<HTMLDivElement>();
   render(
     withTheme(
       <ToastProvider>
         <div ref={treeRef} />
-        <SaveTreeImageMenu treeRef={treeRef} baseName="zoo-tree" tabbable />
+        <SaveTreeImageMenu
+          treeRef={treeRef}
+          baseName="zoo-tree"
+          saveToBackpack={saveToBackpack}
+          tabbable
+        />
       </ToastProvider>
     )
   );
@@ -53,6 +60,20 @@ describe('SaveTreeImageMenu', () => {
 
     expect(mockCapture).toHaveBeenCalledWith(treeRef.current);
     expect(downloadImage).toHaveBeenCalledWith(image, 'zoo-tree.png');
+  });
+
+  it('offers the Backpack only when the host can save there', () => {
+    renderMenu();
+    expect(option('Save to Backpack')).toBeNull();
+  });
+
+  it('hands the image to the Backpack under the base name', async () => {
+    const saveToBackpack = jest.fn().mockResolvedValue(undefined);
+    renderMenu(saveToBackpack);
+
+    await choose('Save to Backpack');
+
+    expect(saveToBackpack).toHaveBeenCalledWith(image, 'zoo-tree');
   });
 
   it('holds off a second save until the first finishes', async () => {
