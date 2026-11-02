@@ -18,9 +18,11 @@ interface MarkdownStepProps {
   onComplete: () => void;
 }
 
-// A lone newline is a line break, so the card reads as authored.
+// A lone newline is a line break, so the card reads as authored. No
+// lookaround: Safari before 16.4 cannot parse it, and a bad regex literal
+// fails the whole module.
 const withLineBreaks = (markdown: string) =>
-  markdown.replace(/(?<!\n)\n(?!\n)/g, '  \n');
+  markdown.replace(/\n+/g, run => (run.length === 1 ? '  \n' : run));
 
 const MarkdownStep: React.FunctionComponent<MarkdownStepProps> = ({
   step,
@@ -34,14 +36,16 @@ const MarkdownStep: React.FunctionComponent<MarkdownStepProps> = ({
     [hostWidth, hostHeight]
   );
 
+  // The canvas mounts once the host is measured, so focus waits for that.
+  const ready = hostWidth > 0;
   const canvasRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
-    canvasRef.current?.focus();
-  }, []);
+    if (ready) canvasRef.current?.focus();
+  }, [ready]);
 
   return (
     <div ref={host} className={styles.markdownHost}>
-      {hostWidth > 0 && (
+      {ready && (
         <>
           <div
             className={styles.markdownCanvas}
