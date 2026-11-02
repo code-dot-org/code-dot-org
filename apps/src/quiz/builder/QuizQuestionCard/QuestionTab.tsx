@@ -55,7 +55,7 @@ const QuestionTab: React.FunctionComponent<QuestionTabProps> = ({
           label="Internal name*"
           size="s"
           color="gray"
-          className={styles.fullWidthField}
+          className={builderCommonStyles.fullWidthField}
           value={draft.questionName}
           onChange={e => onChange({...draft, questionName: e.target.value})}
           disabled={disabled}
@@ -73,7 +73,7 @@ const QuestionTab: React.FunctionComponent<QuestionTabProps> = ({
           label="Question title*"
           size="s"
           color="gray"
-          className={styles.fullWidthField}
+          className={builderCommonStyles.fullWidthField}
           value={draft.questionTitle}
           onChange={e => onChange({...draft, questionTitle: e.target.value})}
           disabled={disabled}
@@ -90,7 +90,7 @@ const QuestionTab: React.FunctionComponent<QuestionTabProps> = ({
           label="Description (optional)"
           size="s"
           color="gray"
-          className={styles.fullWidthField}
+          className={builderCommonStyles.fullWidthField}
         >
           <textarea
             className={builderCommonStyles.textarea}

@@ -27,7 +27,6 @@
   align-items: center;
   gap: 6px;
   width: 100%;
-  overflow: hidden;
   padding: 8px;
   border: 1px solid var(--border-neutral-primary);
   border-radius: var(--shape-sm);
@@ -68,18 +67,6 @@
   // DSCO radios/checkboxes offset the glyph for labeled rows; this slot has no label.
   i {
     margin-top: 0 !important;
-  }
-}
-
-// FormFieldWrapper aligns its children to flex-start, so the input needs its own width.
-.fullWidthField {
-  width: 100%;
-  min-width: 0;
-  max-width: 100%;
-
-  input,
-  textarea {
-    width: 100%;
   }
 }
 

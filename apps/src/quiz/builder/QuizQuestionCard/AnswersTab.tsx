@@ -6,7 +6,6 @@ import {isChoiceQuestionDraft, isMatchDraft, QuizQuestionDraft} from '../types';
 import ChoicesEditor from './ChoicesEditor';
 import PairsEditor from './PairsEditor';
 
-import styles from './quiz-question-card.module.scss';
 import builderCommonStyles from '../builder-common.module.scss';
 
 interface AnswersTabProps {
@@ -32,7 +31,7 @@ const AnswersTab: React.FunctionComponent<AnswersTabProps> = ({
       label="Answer explanation (optional)"
       size="s"
       color="gray"
-      className={styles.fullWidthField}
+      className={builderCommonStyles.fullWidthField}
     >
       <textarea
         className={builderCommonStyles.textarea}

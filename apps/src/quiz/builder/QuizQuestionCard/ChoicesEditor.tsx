@@ -14,6 +14,7 @@ import {ChoiceQuestionDraft, isMultipleSelectDraft} from '../types';
 import FieldGroup from './FieldGroup';
 
 import styles from './quiz-question-card.module.scss';
+import builderCommonStyles from '../builder-common.module.scss';
 
 // ChoiceQuestion#validate_choices rejects fewer than 2 choices.
 const MIN_CHOICES = 2;
@@ -149,7 +150,7 @@ const ChoicesEditor: React.FunctionComponent<ChoicesEditorProps> = ({
                     size="s"
                     color="gray"
                     className={classNames(
-                      styles.fullWidthField,
+                      builderCommonStyles.fullWidthField,
                       styles.optionText
                     )}
                     value={choice.text}
