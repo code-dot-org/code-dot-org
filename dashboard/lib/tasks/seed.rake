@@ -82,74 +82,6 @@ namespace :seed do
   # Every unit the UI tests need now lives in the UI test curriculum tree.
   UI_TEST_SCRIPTS = Dir.glob("#{CURRICULUM_CONTENT_DIR}/test/ui/config/scripts_json/*.script_json").sort.freeze
 
-  # To improve adhoc start time, we only seed the most recent year of our common curriculum
-  # Each year we should update this list and :courses_adhoc
-  MOST_RECENT_ADHOC_SCRIPTS = %w(
-    coursea-2024
-    courseb-2024
-    coursec-2024
-    coursed-2024
-    coursee-2024
-    coursef-2024
-    csd1-2024
-    csd2-2024
-    csd3-2024
-    csd4-2024
-    csd5-2024
-    csd6a-2024
-    csd6b-2024
-    csd7-2024
-    csd-post-survey-2024
-    interactive-games-animations-2024
-    focus-on-creativity3-2024
-    focus-on-coding3-2024
-    csp1-2024
-    csp2-2024
-    csp3-2024
-    csp4-2024
-    csp5-2024
-    csp6-2024
-    csp7-2024
-    csp8-2024
-    csp9-2024
-    csp10-2024
-    csp-post-survey-2024
-    csa1-2024
-    csa2-2024
-    csa3-2024
-    csa4-2024
-    csa5-2024
-    csa6-2024
-    csa7-2024
-    csa8-2024
-    csa9-2024
-    csa-postap-se-and-computer-vision-2024
-  ).map {|script| "#{CURRICULUM_CONTENT_DIR}/config/scripts_json/#{script}.script_json"}.freeze
-  ADHOC_SCRIPTS = MOST_RECENT_ADHOC_SCRIPTS + %w(
-    allthehiddenthings
-    allthelessonplans
-    alltheplcthings
-    alltheselfpacedplthings
-    allthethings
-    allthettsthings
-    artist
-    dance
-    events
-    flappy
-    frozen
-    hero
-    hourofcode
-    infinity
-    mc
-    minecraft
-    playlab
-    starwars
-    starwarsblocks
-    step
-    oceans
-    sports
-  ).map {|script| "#{CURRICULUM_CONTENT_DIR}/config/scripts_json/#{script}.script_json"}.freeze
-
   # Update scripts in the database from their file definitions.
   #
   # @param [Hash] opts the options to update the scripts with.
@@ -248,10 +180,6 @@ namespace :seed do
     update_scripts(script_files: UI_TEST_SCRIPTS, incremental: true)
   end
 
-  timed_task_with_logging scripts_adhoc: get_scripts_dependencies do
-    update_scripts(script_files: ADHOC_SCRIPTS)
-  end
-
   timed_task_with_logging courses: :environment do
     Dir.glob(UnitGroup.file_path('**', CURRICULUM_CONTENT_PATHNAME)).sort.map do |path|
       UnitGroup.load_from_path(path)
@@ -262,19 +190,6 @@ namespace :seed do
     # Every course the UI tests need now lives in the UI test curriculum tree.
     Dir.glob("#{CURRICULUM_CONTENT_DIR}/test/ui/config/courses/*.course").sort.each do |path|
       UnitGroup.load_from_path(path)
-    end
-  end
-
-  timed_task_with_logging courses_adhoc: :environment do
-    # seed those courses that are best to test on adhoc for the most current year
-    %w(
-      allthethingscourse
-      csp-2024
-      csd-2024
-      csa-2024
-      original-allthethings-course
-    ).each do |course_name|
-      UnitGroup.load_from_path("#{CURRICULUM_CONTENT_DIR}/config/courses/#{course_name}.course")
     end
   end
 
@@ -442,12 +357,6 @@ namespace :seed do
     end
   end
 
-  timed_task_with_logging course_offerings_adhoc: :environment do
-    %w(csp csa csd coursea courseb coursec coursed coursee coursef).each do |course_offering_name|
-      CourseOffering.seed_record("#{CURRICULUM_CONTENT_DIR}/config/course_offerings/#{course_offering_name}.json")
-    end
-  end
-
   timed_task_with_logging reference_guides: :environment do
     ReferenceGuide.seed_all(CURRICULUM_CONTENT_PATHNAME)
   end
@@ -597,15 +506,14 @@ namespace :seed do
 
   PRODUCTION_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts, :json_videos, :practice_problems, :courses, :reference_guides, :data_docs, :jit_pl_concepts, :callouts, :school_districts, :schools, :census_summaries, :secret_words, :secret_pictures, :foorms, :datablock_storage, :validate_ai_rubrics].freeze
   UI_TEST_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts_ui_tests, :courses_ui_tests, :jit_pl_concepts, :reseed_scripts_ui_tests, :json_videos_ui_tests, :callouts_ui_tests, :school_districts, :schools, :secret_words, :secret_pictures, :datablock_storage].freeze
-  ADHOC_SEED_TASKS = [:check_migrations, :videos, :concepts, :course_offerings_adhoc, :scripts_adhoc, :courses_adhoc, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :datablock_storage].freeze
 
-  # Development seeds only the UI test partition, which is enough to run the UI
-  # tests and the labs. Production content is seeded on demand with
+  # Development and adhoc seed only the UI test partition, which is enough to
+  # run the UI tests and the labs. Production content is seeded on demand with
   # `rake seed:production`.
   DEFAULT_SEED_TASKS =
     case rack_env
     when :test then UI_TEST_SEED_TASKS
-    when :adhoc then ADHOC_SEED_TASKS
+    when :adhoc then UI_TEST_SEED_TASKS
     when :development then UI_TEST_SEED_TASKS
     else PRODUCTION_SEED_TASKS
     end
