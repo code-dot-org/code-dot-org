@@ -35,6 +35,7 @@ export interface Mode {
   hideInstructionsOverlay?: boolean;
   reserveLastRows?: boolean;
   hideColumnClicking?: boolean;
+  defaultCardView?: boolean;
 }
 
 export interface ResultsData {
