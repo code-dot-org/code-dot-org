@@ -1,7 +1,6 @@
 // Text answers for the "ask AI" block. The student's question and the
 // model's reply each face a safety judge, and the question is judged
-// alongside generation rather than before it, so a safe question pays
-// nothing for the check. Both judges fail closed.
+// alongside generation rather than before.
 
 import * as Observability from '@code-dot-org/core/plugins/observability';
 
@@ -16,20 +15,16 @@ import {
   AiChatModelIds,
 } from '@cdo/generated-scripts/sharedConstants';
 
-// Kill switch for the whole block, read the way the image pipeline reads
-// its own: only an explicit false turns it off.
 const ASK_AI_DCDO_KEY = 'spritelab-lab2-ask-ai-enabled';
 
-// Sentry metric name; the tests pin the string independently.
 const ASK_AI_METRIC = 'spritelab-lab2.ask_ai';
 
-/** Past this the block gives up and leaves the variable alone. */
 export const ASK_AI_TIMEOUT_MS = 15000;
 
 export const MAX_PROMPT_CHARACTERS = 1000;
 
-// Asked of the model, not enforced here: the answer is a variable, and only
-// some of the places it can go (the say bubble) have a length limit.
+// The say bubble limits to 150 characters, which is the most common
+// place to put the answer.
 export const MAX_ANSWER_CHARACTERS = 150;
 
 export const SYSTEM_PROMPT = `You answer questions for a student building a game in a block-based programming class.
@@ -45,7 +40,6 @@ export function isAskAiEnabled(): boolean {
   return DCDO.get(ASK_AI_DCDO_KEY, true) !== false;
 }
 
-/** Thrown when the question or the answer fails a safety check. */
 export class AskAiError extends Error {
   constructor(public readonly phase: 'prompt' | 'answer') {
     super(
@@ -85,8 +79,6 @@ function aichatContext() {
   const state = getStore().getState();
   const currentLevelId = state.progress.currentLevelId;
   return {
-    // Not the lab's ambient flow-lab context: that client type is trusted
-    // server-side, which would leave the levelbuilder check to the browser.
     clientType: AiChatClientTypes.SPRITELAB_ASK_AI,
     currentLevelId: currentLevelId ? parseInt(currentLevelId, 10) : null,
     scriptId: state.progress.scriptId ?? null,
@@ -122,8 +114,6 @@ export async function askAiText(prompt: string): Promise<string> {
     throw new Error('The ask AI block is turned off.');
   }
 
-  // Both promises are settled by the allSettled below, so neither can
-  // reject unobserved.
   const [verdict, answer] = await withTimeout(
     Promise.allSettled([
       isTextSafe(question, 'input_filter'),

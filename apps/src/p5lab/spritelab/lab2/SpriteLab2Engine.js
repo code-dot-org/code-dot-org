@@ -701,8 +701,8 @@ export default class SpriteLab2Engine extends SpriteLab {
       if (!this.canAskAi_()) {
         return;
       }
-      // Registering under the variable name is what lets "when <variable>
-      // answered" wait on an AI answer the same way it waits on a prompt.
+      // Register under the variable name to enable the 'When <variable> answered' block
+      // to respond when the AI answer is available.
       library.registerPrompt(promptText, variableName, setterCallback);
       askAiText(String(promptText ?? '')).then(
         text => {
@@ -715,9 +715,7 @@ export default class SpriteLab2Engine extends SpriteLab {
           if (this.destroyed_ || runId !== this.runId_) {
             return;
           }
-          // registerPrompt counted this one, and nothing will answer it now.
           library.numActivePrompts--;
-          // The variable keeps whatever it had: a refusal is not an answer.
           console.warn(
             error instanceof AskAiError
               ? `SpriteLab2: the ask AI block's ${error.phase} did not pass the safety check.`
@@ -729,11 +727,6 @@ export default class SpriteLab2Engine extends SpriteLab {
     return library;
   }
 
-  /**
-   * Hand an answer to the blocks waiting on `variableName`. CoreLibrary's
-   * onPromptAnswer would read "3 cats walk into a bar" as the number 3; an
-   * AI answer is prose, so it is delivered as written.
-   */
   deliverAiAnswer_(library, variableName, text) {
     library.numActivePrompts--;
     library.promptVars[variableName] = text;
@@ -741,7 +734,6 @@ export default class SpriteLab2Engine extends SpriteLab {
     if (!callbacks) {
       return;
     }
-    // Setter first: a user callback reads the variable it sets.
     callbacks.setterCallbacks.forEach(callback => callback(text));
     callbacks.userCallbacks.forEach(callback => callback());
   }

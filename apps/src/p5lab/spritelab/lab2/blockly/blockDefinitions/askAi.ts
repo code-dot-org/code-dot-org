@@ -8,16 +8,13 @@ export const ASK_AI_BLOCK_TYPE = 'spritelab2_askAI';
 /**
  * Send a question to a language model and put the answer in a variable.
  * The answer takes a second or more to arrive, so the variable stays empty
- * until it does; the "when AI answers" hat is how a program waits for it.
+ * until it does; the "when AI answers" block is how a program waits for it.
  */
 const definition: BlockJson = {
   type: ASK_AI_BLOCK_TYPE,
-  // Two rows, the variable on its own, wording after the classic prompt
-  // block ("prompt user ... for variable ...").
   message0: 'ask AI %1',
   args0: [{type: 'input_value', name: 'PROMPT', check: 'String'}],
   message1: 'for variable %1',
-  // No type check: a variables_get block reports no output type.
   args1: [{type: 'input_value', name: 'VAR'}],
   inputsInline: false,
   previousStatement: null,

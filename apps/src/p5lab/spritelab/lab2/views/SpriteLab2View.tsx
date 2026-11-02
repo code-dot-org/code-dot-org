@@ -202,8 +202,6 @@ const PICTURES_DRAWER_ID = 'spritelab2-pictures';
 // On hover over a control a level withholds.
 const LOCKED_REASON = 'Unlocks later in the lesson.';
 
-// Levelbuilders only, for now. The gateway enforces this too; hiding the
-// block keeps a student from dragging out one that could only fail.
 const AI_BLOCK_TYPES = [ASK_AI_BLOCK_TYPE];
 
 const DEFAULT_SCENE_SOURCE = defaultSources.source;
@@ -453,11 +451,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     () => new Set(chosenBlocks ?? []),
     [chosenBlocks]
   );
-  // Permissions arrive after mount and start empty, so the AI blocks are
-  // hidden until the fetch says otherwise rather than the other way round.
   const isLevelbuilder = useAppSelector(state =>
     state.lab.permissions?.includes(PERMISSIONS.LEVELBUILDER)
   );
+  // Permissions arrive after mount, so the AI blocks are
+  // hidden until the fetch says otherwise.
   const hiddenBlockTypes = useMemo(() => {
     const held = heldBackBlockTypes(catalog, chosenBlocks);
     return isLevelbuilder ? held : new Set([...held, ...AI_BLOCK_TYPES]);
