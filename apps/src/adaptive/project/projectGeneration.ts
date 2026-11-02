@@ -9,7 +9,7 @@ import {
   ProjectSources,
 } from '@cdo/apps/lab2/types';
 
-import {Progress} from '../progress/model';
+import {Progress, visibleSteps} from '../progress/model';
 import {Pathway} from '../types';
 
 import {isMultiFile} from './summarizeProjectFiles';
@@ -28,14 +28,17 @@ export interface GeneratedFile {
 /** The channel key holding the trace a project was generated under. */
 export const GENERATION_TRACE_KEY = 'generationTraceId';
 
-/** Every free response answer so far, in pathway order, under its question. */
+/**
+ * Every free response answer so far, in pathway order, under its question.
+ * Steps the student's answers hide are left out.
+ */
 export function freeResponseAnswers(
   pathway: Pathway,
   progress: Progress
 ): AnsweredQuestion[] {
   const answered: AnsweredQuestion[] = [];
   for (const checkpoint of pathway.checkpoints) {
-    for (const step of checkpoint.steps) {
+    for (const step of visibleSteps(checkpoint, progress)) {
       if (step.kind !== 'questions') continue;
       const answers = progress.steps[step.id]?.answers;
       if (!answers) continue;
