@@ -10,6 +10,7 @@ import {checkpointStepFromUrl, updateUrl} from '../checkpointUrl';
 import {usePathwayContext} from '../PathwayContext';
 
 import LevelStep from './LevelStep';
+import MarkdownStep from './MarkdownStep';
 import PanelsStep from './PanelsStep';
 import QuestionsStep from './QuestionsStep';
 import VideoStep from './VideoStep';
@@ -185,6 +186,15 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
             step={step}
             answers={progress.steps[step.id]?.answers ?? NO_ANSWERS}
             onSaveAnswers={saveAnswers}
+            onComplete={advance}
+          />
+        );
+      case 'markdown':
+        return (
+          <MarkdownStep
+            key={step.id}
+            step={step}
+            continueLabel={continueLabel}
             onComplete={advance}
           />
         );

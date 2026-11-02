@@ -25,7 +25,11 @@ export const STATUS_LABELS: {[status in CheckpointStatus]: string} = {
 /** Each checkpoint's status, by checkpoint id. */
 export type CheckpointStatusMap = {[checkpointId: string]: CheckpointStatus};
 
-/** One submitted answer. isCorrect is absent for a survey question; text is set for free-response questions. */
+/**
+ * One submitted answer. isCorrect is absent for a survey question; text is
+ * set for a free response question and for a typed answer to a multiple
+ * choice question, whose answerId is then OTHER_CHOICE_ID.
+ */
 export interface Answer {
   answerId: string;
   isCorrect?: boolean;
