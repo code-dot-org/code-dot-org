@@ -44,28 +44,36 @@ VARIANTS = 3
 STYLES = %w[pixel smooth]
 
 # The image services this script can ask (override with --provider).
-# 'gemini' is what the lab itself generates with, through the AI Gateway.
-PROVIDERS = %w[gemini openai]
-DEFAULT_PROVIDER = 'gemini'
+# 'vertex' is Gemini on Vertex AI, where the AI Gateway draws the lab's live
+# pictures; 'gemini' is the same model through the Gemini API.
+PROVIDERS = %w[vertex gemini openai]
+DEFAULT_PROVIDER = 'vertex'
+
+# The providers that are Gemini, by either of Google's routes (google.rb).
+GOOGLE_PROVIDERS = %w[vertex gemini].freeze
 
 # OpenAI image endpoints
 OPENAI_GENERATIONS_URL = 'https://api.openai.com/v1/images/generations'
 OPENAI_EDITS_URL = 'https://api.openai.com/v1/images/edits'
 
-# Gemini generates, edits and judges through one endpoint; %{model} is the
-# model id.
+# Gemini generates, edits and judges through one endpoint on each route;
+# %{model} is the model id, and %{project} the service account's project.
 GEMINI_URL = 'https://generativelanguage.googleapis.com/v1beta/models/%{model}:generateContent'
+VERTEX_URL = 'https://aiplatform.googleapis.com/v1/projects/%{project}/locations/global/publishers/google/models/%{model}:generateContent'
 
 # Default model per provider (override with --model). Gemini's comes from
 # the shared constants the lab's image model is named in, so the two track.
 DEFAULT_MODELS = {
+  'vertex' => SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_3_1_FLASH_IMAGE],
   'gemini' => SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_3_1_FLASH_IMAGE],
   'openai' => 'gpt-image-1',
 }.freeze
 
 # The config key each provider's credentials come from (override with
-# --key). The safety judges run on Gemini whatever draws the images.
+# --key): a service account key for Vertex, an API key otherwise. The tutor
+# service account is the one Rails' AI Tutor calls Vertex with.
 API_KEY_NAMES = {
+  'vertex' => 'google_vertex_ai_tutor_service_account_key',
   'gemini' => 'google_gemini_ai_tutor_api_key',
   'openai' => 'openai_student_learning_api_key',
 }.freeze
@@ -74,6 +82,10 @@ API_KEY_NAMES = {
 # lab keys a cached set on the colour chooseKeyColor() names in its prompt,
 # so a published image must be drawn on that colour as a live one is.
 TRANSPARENT_PROVIDERS = %w[openai].freeze
+
+# The safety judges run on Gemini whatever draws the images: on the drawing
+# provider's route when it is Google's, else on this one.
+DEFAULT_JUDGE_PROVIDER = 'vertex'
 
 # Gemini's output size, matching SINGLE_IMAGE_SIZE in modelHelpers.ts.
 GEMINI_IMAGE_SIZE = '1K'

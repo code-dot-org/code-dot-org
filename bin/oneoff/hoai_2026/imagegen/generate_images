@@ -54,6 +54,7 @@ require 'optparse'
 require 'parallel'
 require 'ruby-progressbar'
 
+require_relative 'google'
 require_relative 'imagegen'
 require_relative 'image_validation'
 require_relative 'moderation'
@@ -289,7 +290,8 @@ objects = jobs.flat_map do |job|
 end
 objects = objects.first(options[:limit]) if options[:limit]
 
-def api_key(key_name)
+# An API key, or for Vertex a service account key.
+def credential(key_name)
   key = CDO.send(key_name)
   raise "Error: config key '#{key_name}' is not set" if key.nil? || key.to_s.empty?
   key
@@ -327,7 +329,7 @@ def image_from(response)
 end
 
 def request_openai_image(options, job, frame, reference)
-  headers = {'Authorization' => "Bearer #{api_key(options[:key_name])}"}
+  headers = {'Authorization' => "Bearer #{credential(options[:key_name])}"}
   params = {
     model: options[:model],
     prompt: frame_prompt(options, job, frame),
@@ -354,13 +356,14 @@ def request_openai_image(options, job, frame, reference)
   image_from(response) {|body| body.dig('data', 0, 'b64_json')}
 end
 
-# One Gemini generateContent call. A reference image goes ahead of the text,
-# as requestImage() in imageGeneration.ts sends it.
-def request_gemini_image(options, job, frame, reference, seed)
+# One Gemini generateContent call, on Vertex or the Gemini API. A reference
+# image goes ahead of the text, as requestImage() in imageGeneration.ts
+# sends it.
+def request_google_image(options, job, frame, reference, seed)
   parts = []
   if reference
     mime = reference.b.start_with?(PNG_SIGNATURE) ? 'image/png' : 'image/jpeg'
-    parts << {inline_data: {mime_type: mime, data: Base64.strict_encode64(reference)}}
+    parts << {inlineData: {mimeType: mime, data: Base64.strict_encode64(reference)}}
   end
   parts << {text: frame_prompt(options, job, frame)}
 
@@ -374,12 +377,7 @@ def request_gemini_image(options, job, frame, reference, seed)
     }.compact,
   }
 
-  response = HTTParty.post(
-    format(GEMINI_URL, model: options[:model]),
-    headers: {'Content-Type' => 'application/json', 'x-goog-api-key' => api_key(options[:key_name])},
-    body: JSON.generate(body),
-    timeout: 300
-  )
+  response = options[:google].generate_content(options[:model], body, timeout: 300)
 
   # A thinking image model emits interim drafts ahead of the final render,
   # so the last image part is the one to keep (imageGeneration.ts does the
@@ -396,12 +394,12 @@ def request_image(options, job, frame, reference, seed)
   attempts = 0
   begin
     attempts += 1
-    if options[:provider] == 'gemini'
-      request_gemini_image(options, job, frame, reference, seed)
+    if GOOGLE_PROVIDERS.include?(options[:provider])
+      request_google_image(options, job, frame, reference, seed)
     else
       request_openai_image(options, job, frame, reference)
     end
-  rescue Net::ReadTimeout, Net::OpenTimeout, Errno::ECONNRESET, RetryableImageRequestError => exception
+  rescue Net::ReadTimeout, Net::OpenTimeout, Errno::ECONNRESET, Errno::EPIPE, EOFError, RetryableImageRequestError => exception
     raise ImageRequestError, exception.message if attempts >= MAX_ATTEMPTS
     sleep(3 * attempts)
     retry
@@ -426,7 +424,8 @@ def fresh_record(options, job, variant)
     'provider' => options[:provider],
     'model' => options[:model],
     'quality' => options[:quality],
-    'temperature' => options[:provider] == 'gemini' ? options[:temperature] : nil,
+    'project' => options[:project],
+    'temperature' => GOOGLE_PROVIDERS.include?(options[:provider]) ? options[:temperature] : nil,
     'frames' => job['frames'].map do |frame|
       {'name' => frame['name'], 'file' => frame_file(job, variant, frame['name']), 'prompt' => frame_prompt(options, job, frame)}
     end,
@@ -489,7 +488,7 @@ def process_variant(options, moderator, prompt_checks, job, variant)
       outcome = :drawn
       if missing.length == job['frames'].length
         record = fresh_record(options, job, variant).merge(record.slice('history', 'redraws', 'promptCheck'))
-        record['seed'] = rand(2**31) if options[:provider] == 'gemini'
+        record['seed'] = rand(2**31) if GOOGLE_PROVIDERS.include?(options[:provider])
       end
       # A pose drawn in this run is referenced by the base as the model
       # returned it, as generateCharacterSet() does; a base from an earlier
@@ -548,8 +547,26 @@ rescue ImageRequestError, Magick::ImageMagickError => exception
   "#{record_path(job, variant)}: #{exception.message}"
 end
 
-# Azure has its own credentials; the judges run on Gemini.
-moderator = Moderator.new(options[:judge] ? api_key(API_KEY_NAMES['gemini']) : nil)
+# Credentials are read only by a run that draws or judges; listing and
+# publishing need none.
+drawing = !options[:just_upload] && !options[:just_save_prompt]
+if drawing && GOOGLE_PROVIDERS.include?(options[:provider])
+  options[:google] = GoogleGenerative.new(options[:provider], credential(options[:key_name]))
+  options[:project] = options[:google].project
+end
+if drawing
+  puts
+  puts "Drawing with #{options[:model]} on #{options[:project] ? "Vertex AI project #{options[:project]}" : options[:provider]}."
+end
+
+# Azure has its own credentials; the judges run on Gemini, on the drawing
+# provider's route when it is Google's.
+judge_google = nil
+if options[:judge] && !options[:just_upload]
+  judge_google = options[:google] ||
+    GoogleGenerative.new(DEFAULT_JUDGE_PROVIDER, credential(API_KEY_NAMES[DEFAULT_JUDGE_PROVIDER]))
+end
+moderator = Moderator.new(judge_google)
 
 # Each distinct prompt is judged once, and a flagged one is never drawn or
 # published. Verdicts already on file apply to every run, judged or not:

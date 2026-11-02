@@ -10,7 +10,6 @@
 # nothing that lacks a passing verdict is published.
 
 require 'base64'
-require 'httparty'
 require 'json'
 require 'stringio'
 
@@ -19,8 +18,9 @@ require 'cdo/image_moderation'
 require_relative 'constants'
 
 class Moderator
-  def initialize(api_key)
-    @api_key = api_key
+  # google: the GoogleGenerative the judges call, or nil without --judge.
+  def initialize(google)
+    @google = google
   end
 
   # The judges' instructions, as the lab words them (safetyPrompts.ts).
@@ -51,7 +51,7 @@ class Moderator
   def judge_image(png)
     judge([
             {text: safety_prompts['image']},
-            {inline_data: {mime_type: 'image/png', data: Base64.strict_encode64(png)}},
+            {inlineData: {mimeType: 'image/png', data: Base64.strict_encode64(png)}},
           ]
 )
   end
@@ -76,12 +76,7 @@ class Moderator
     attempts = 0
     begin
       attempts += 1
-      response = HTTParty.post(
-        format(GEMINI_URL, model: JUDGE_MODEL),
-        headers: {'Content-Type' => 'application/json', 'x-goog-api-key' => @api_key},
-        body: JSON.generate(body),
-        timeout: 120
-      )
+      response = @google.generate_content(JUDGE_MODEL, body, timeout: 120)
       raise RetryableImageRequestError, "HTTP #{response.code}" if response.code == 429 || response.code >= 500
       return {'verdict' => 'error', 'reason' => "HTTP #{response.code}"} unless response.success?
 
@@ -93,7 +88,7 @@ class Moderator
       when 'INAPPROPRIATE' then {'verdict' => 'flagged'}
       else {'verdict' => 'error', 'reason' => "classification #{classification.inspect}"}
       end
-    rescue Net::ReadTimeout, Net::OpenTimeout, Errno::ECONNRESET, RetryableImageRequestError => exception
+    rescue Net::ReadTimeout, Net::OpenTimeout, Errno::ECONNRESET, Errno::EPIPE, EOFError, RetryableImageRequestError => exception
       return {'verdict' => 'error', 'reason' => exception.message} if attempts >= MAX_ATTEMPTS
       sleep(3 * attempts)
       retry
