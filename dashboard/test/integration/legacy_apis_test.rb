@@ -86,6 +86,17 @@ class LegacyAPIsTest < ActionDispatch::IntegrationTest
         _(user_storage_ids_table.where(anon_user_id: stable_id).count).must_equal 0
       end
     end
+
+    describe 'POST /v3/channels' do
+      it 'stores new anon_user_id in cookie jar of project owner' do
+        post '/v3/channels', params: {hello: 'world'}.to_json, headers: {'CONTENT_TYPE' => 'application/json;charset=utf-8'}
+
+        anon_user_id = cookies[Cdo::AnonUserId::KEY]
+        _(anon_user_id).must_match Cdo::AnonUserId::FORMAT
+        _(response.headers['Set-Cookie'].to_s).must_match(/#{Cdo::AnonUserId::KEY}=#{anon_user_id}; .*HttpOnly; SameSite=Lax/)
+        _(user_storage_ids_table.where(id: get_storage_id).get(:anon_user_id)).must_equal anon_user_id
+      end
+    end
   end
 
   describe 'SharedResources' do

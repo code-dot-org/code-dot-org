@@ -133,15 +133,18 @@ module Cdo
       anon_user_id = existing_statsig_stable_id
       anon_user_id = Cdo::AnonUserId.generate unless Cdo::AnonUserId.valid?(anon_user_id)
 
-      jar = respond_to?(:cookie_jar) ? cookie_jar : ActionDispatch::Request.new(env).cookie_jar
-      jar[Cdo::AnonUserId::KEY] = {
-        value: anon_user_id,
-        domain: shared_cookie_domain,
-        expires: nil,
-        same_site: :lax,
-        secure: ssl?,
-        httponly: true,
-      }
+      # Rails keeps one cookie jar per request in env, and ActionDispatch::Cookies writes it to the response,
+      # also for the legacy Rack APIs. Standalone Rack apps, such as the legacy API tests, have no jar.
+      if defined?(ActionDispatch::Cookies)
+        ActionDispatch::Request.new(env).cookie_jar[Cdo::AnonUserId::KEY] = {
+          value: anon_user_id,
+          domain: shared_cookie_domain,
+          path: '/',
+          same_site: :lax,
+          secure: ssl?,
+          httponly: true,
+        }
+      end
 
       cookies[Cdo::AnonUserId::KEY] = anon_user_id
     end
