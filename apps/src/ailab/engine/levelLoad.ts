@@ -9,6 +9,7 @@ import {
   setSelectedCSV,
   setSelectedName,
   setReserveLocation,
+  setDatasetLayout,
   resetState,
 } from './redux';
 import {store} from './store';
@@ -20,9 +21,9 @@ import type {Mode} from './types';
  */
 export const loadLevel = function (mode?: Mode): void {
   invalidatePendingDatasetLoads();
-  store.dispatch(setMode(mode));
   store.dispatch(resetState());
   train.reset();
+  store.dispatch(setMode(mode));
   processMode(mode);
 };
 
@@ -34,6 +35,7 @@ const processMode = (mode: Mode | undefined): void => {
     ? TestDataLocations.END
     : TestDataLocations.RANDOM;
   store.dispatch(setReserveLocation(reserveLocation));
+  store.dispatch(setDatasetLayout(mode?.defaultCardView ? 'cards' : 'table'));
 
   const onlyDatasetId =
     mode?.datasets?.length === 1 ? mode.datasets[0] : undefined;

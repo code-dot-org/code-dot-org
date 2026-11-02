@@ -11,6 +11,7 @@ import reducer, {
   stepPredictionByHand,
   setMode,
   setReserveLocation,
+  setDatasetLayout,
   setDatasetLoaded,
   setSelectedCSV,
   resetState,
@@ -202,9 +203,8 @@ describe('ailab reducer', () => {
       expect(next.instructionsEnabled).toBe(true);
     });
 
-    test("opens the dataset in the mode's default layout", () => {
-      expect(reducer(initialState, resetState()).datasetLayout).toBe('table');
-      const cards = reducer(initialState, setMode({defaultCardView: true}));
+    test('preserves the dataset layout through reset', () => {
+      const cards = reducer(initialState, setDatasetLayout('cards'));
       expect(reducer(cards, resetState()).datasetLayout).toBe('cards');
     });
   });
