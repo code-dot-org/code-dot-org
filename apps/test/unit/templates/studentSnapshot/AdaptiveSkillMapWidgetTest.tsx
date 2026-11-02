@@ -157,22 +157,22 @@ describe('AdaptiveSkillMapWidget', () => {
     renderWidget();
     const zoomIn = await screen.findByRole('button', {name: 'Zoom in'});
     const zoomOut = screen.getByRole('button', {name: 'Zoom out'});
-    const reset = screen.getByRole('button', {name: 'Reset zoom'});
+    const reset = () => screen.queryByRole('button', {name: 'Reset zoom'});
 
-    expect(reset).toBeDisabled();
+    expect(reset()).not.toBeInTheDocument();
     expect(zoomOut).toBeEnabled();
 
     fireEvent.click(zoomIn);
-    expect(reset).toBeEnabled();
+    expect(reset()).toBeInTheDocument();
 
-    fireEvent.click(reset);
-    expect(reset).toBeDisabled();
+    fireEvent.click(reset()!);
+    expect(reset()).not.toBeInTheDocument();
 
     fireEvent.click(zoomOut);
-    expect(reset).toBeEnabled();
+    expect(reset()).toBeInTheDocument();
 
     fireEvent.click(zoomIn);
-    expect(reset).toBeDisabled();
+    expect(reset()).not.toBeInTheDocument();
   });
 
   it('stops zooming out at a quarter of the width', async () => {
