@@ -547,13 +547,14 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   text-align: left;
 }
 
-// A row is a label around its checkbox; the box is hidden and the row
-// shows the state: a tint and a check when picked, a ring on focus.
-.reasonRow {
-  position: relative;
+// A row is the design system's checkbox label, full width, with a tint
+// and a brand border when picked. Its own box and label text stay; the
+// row only changes what surrounds them.
+.reasonRow.reasonRow {
   display: flex;
   align-items: center;
-  gap: 10px;
+  width: 100%;
+  box-sizing: border-box;
   padding: 14px 16px;
   border: 1px solid var(--borders-neutral-primary);
   border-radius: 8px;
@@ -567,34 +568,11 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   &:hover {
     border-color: var(--borders-neutral-strong);
   }
-
-  &:has(:focus-visible) {
-    outline: 2px solid var(--borders-brand-teal-primary);
-    outline-offset: 2px;
-  }
 }
 
-.reasonRowPicked {
+.reasonRowPicked.reasonRowPicked {
   border-color: var(--borders-brand-teal-primary);
   background-color: var(--background-brand-light);
-  color: var(--text-brand-primary);
-}
-
-.reasonInput {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: 0;
-  opacity: 0;
-  pointer-events: none;
-}
-
-// Holds the check's room, so the text does not shift when it lands.
-.reasonCheck {
-  display: inline-flex;
-  flex: none;
-  width: 20px;
-  justify-content: center;
   color: var(--text-brand-primary);
 }
 

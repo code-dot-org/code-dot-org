@@ -5,7 +5,7 @@ import {MuiDialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
 import {Verdict} from '../sentence/ResultActions';
 
@@ -18,6 +18,8 @@ interface RatingBarProps {
   onJudge: (verdict: Verdict) => void;
   /** The reasons picked for the verdict, when the question is done. */
   onReasons: (reasons: string[]) => void;
+  /** The question opened or closed, for a host that waits on it. */
+  onAsking?: (open: boolean) => void;
   disabled?: boolean;
 }
 
@@ -48,10 +50,14 @@ const RatingBar: React.FunctionComponent<RatingBarProps> = ({
   verdict,
   onJudge,
   onReasons,
+  onAsking,
   disabled,
 }) => {
   // The question opens with the thumb and closes with Done.
   const [asking, setAsking] = useState<Verdict | null>(null);
+  useEffect(() => {
+    onAsking?.(!!asking);
+  }, [asking, onAsking]);
   const [picked, setPicked] = useState<string[]>([]);
   const judge = (next: Verdict) => {
     onJudge(next);

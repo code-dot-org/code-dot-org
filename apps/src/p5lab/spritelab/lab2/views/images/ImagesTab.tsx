@@ -224,6 +224,29 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   const toldRef = useRef(false);
   const learningTimerRef = useRef<number>();
   useEffect(() => () => window.clearTimeout(learningTimerRef.current), []);
+  // The story waits for a quiet moment: this tab in view, and no rating
+  // question open. Until then it is held here.
+  const activeRef = useRef(active);
+  const askingRef = useRef(false);
+  const heldStoryRef = useRef<(() => void) | null>(null);
+  const tellHeldStory = useCallback(() => {
+    const tell = heldStoryRef.current;
+    if (tell && activeRef.current && !askingRef.current) {
+      heldStoryRef.current = null;
+      tell();
+    }
+  }, []);
+  useEffect(() => {
+    activeRef.current = active;
+    tellHeldStory();
+  }, [active, tellHeldStory]);
+  const handleAsking = useCallback(
+    (open: boolean) => {
+      askingRef.current = open;
+      tellHeldStory();
+    },
+    [tellHeldStory]
+  );
   const offerLearning = useCallback(
     (result: GeneratedImageResult) => {
       const {imageType, subject} = result.generation;
@@ -240,16 +263,16 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
       const crop = result.frames
         ? {width: result.frames.frameSize.x, height: result.frames.frameSize.y}
         : undefined;
-      learningTimerRef.current = window.setTimeout(
-        () =>
+      learningTimerRef.current = window.setTimeout(() => {
+        heldStoryRef.current = () =>
           setLearning({
             picture: {src, crop},
             prompt: result.generation.prompt,
-          }),
-        LEARNING_DELAY_MS
-      );
+          });
+        tellHeldStory();
+      }, LEARNING_DELAY_MS);
     },
-    [lockedImageType]
+    [lockedImageType, tellHeldStory]
   );
   // Once per picture: a verdict's second keep must not tell it again.
   const keptRef = useRef<string | null>(null);
@@ -511,6 +534,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                       verdict={parts.rating.verdict}
                       onJudge={parts.rating.judge}
                       onReasons={parts.rating.explain}
+                      onAsking={handleAsking}
                       disabled={parts.busy}
                     />
                   )

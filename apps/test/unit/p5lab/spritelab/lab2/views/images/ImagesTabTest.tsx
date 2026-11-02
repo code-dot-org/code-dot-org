@@ -711,6 +711,46 @@ describe('ImagesTab', () => {
     jest.useRealTimers();
   });
 
+  it('holds the story while the tab is away, and tells it on return', async () => {
+    jest.useFakeTimers();
+    const {rerender} = renderTab({
+      lockedImageType: 'sprite',
+      imageRole: 'hero',
+    });
+    fireEvent.click(screen.getByRole('button', {name: 'New image'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Character'}));
+    acceptGenerated.mockImplementation(async () => {
+      propsByKey.k2 = {name: 'Sprite 1', categories: [], role: 'hero'};
+      return 'k2';
+    });
+    await act(async () => {
+      fireEvent.click(
+        screen.getByRole('button', {name: /^land sprite character$/})
+      );
+    });
+    const away = (active: boolean) =>
+      rerender(
+        <ImagesTab
+          onDeleteImage={jest.fn()}
+          paneWidth={280}
+          lockedImageType="sprite"
+          imageRole="hero"
+          active={active}
+        />
+      );
+    away(false);
+    act(() => {
+      jest.advanceTimersByTime(2000);
+    });
+    // Not over another tab.
+    expect(screen.queryByRole('alertdialog')).toBeNull();
+    away(true);
+    expect(
+      screen.getByRole('alertdialog', {name: 'How AI made your image'})
+    ).toBeTruthy();
+    jest.useRealTimers();
+  });
+
   it('tells the story after every picture when the parameter asks', async () => {
     jest.useFakeTimers();
     params.learning = 'always';

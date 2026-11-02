@@ -1,7 +1,7 @@
-// A list of reasons to pick any of: full-width rows, the picked ones
-// marked with a check. Checkboxes underneath, styled as rows.
+// A list of reasons to pick any of: the design system's checkboxes, each
+// laid out as a full-width row that tints when picked.
 
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import Checkbox from '@code-dot-org/component-library/checkbox';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -24,32 +24,25 @@ const ReasonOptions: React.FunctionComponent<ReasonOptionsProps> = ({
     {options.map(option => {
       const picked = values.includes(option.value);
       return (
-        <label
+        <Checkbox
           key={option.value}
+          name={name}
+          value={option.value}
+          label={option.label}
+          size="m"
+          checked={picked}
           className={classNames(
             styles.reasonRow,
             picked && styles.reasonRowPicked
           )}
-        >
-          <input
-            type="checkbox"
-            name={name}
-            value={option.value}
-            checked={picked}
-            className={styles.reasonInput}
-            onChange={e =>
-              onChange(
-                e.target.checked
-                  ? [...values, option.value]
-                  : values.filter(v => v !== option.value)
-              )
-            }
-          />
-          <span className={styles.reasonCheck} aria-hidden>
-            {picked && <FontAwesomeV6Icon iconName="check" iconStyle="solid" />}
-          </span>
-          {option.label}
-        </label>
+          onChange={e =>
+            onChange(
+              e.target.checked
+                ? [...values, option.value]
+                : values.filter(v => v !== option.value)
+            )
+          }
+        />
       );
     })}
   </div>
