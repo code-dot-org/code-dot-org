@@ -331,7 +331,7 @@ describe('ImagesTab', () => {
     fireEvent.click(screen.getByRole('button', {name: 'New image'}));
     fireEvent.click(screen.getByRole('button', {name: 'Character'}));
     fireEvent.click(screen.getByRole('button', {name: 'Draw my own'}));
-    expect(screen.getByText('all tools')).toBeTruthy();
+    expect(screen.getByText('4 tools')).toBeTruthy();
     expect(screen.getByText('toolbar')).toBeTruthy();
     const done = screen.getByRole('button', {name: 'Done drawing'});
     expect((done as HTMLButtonElement).disabled).toBe(true);

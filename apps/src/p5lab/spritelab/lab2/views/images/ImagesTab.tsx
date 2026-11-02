@@ -22,8 +22,12 @@ import {BACKGROUND_GROUND_COLOR, blankPaintImage} from '../../paintBlank';
 import EditorStrip from '../components/EditorStrip';
 import EditorStrip, {EditHistory} from '../components/EditorStrip';
 import {
+  FREEPLAY_BRUSH_SIZES,
+  FREEPLAY_TOOLBAR,
+  FREEPLAY_TOOLS,
   PAINT_BRUSH_SIZES,
   PAINT_COLORS,
+  PAINT_TOOLBAR,
   PAINT_TOOLS,
 } from '../sentence/paintTools';
 import SentenceScene from '../sentence/SentenceScene';
@@ -409,9 +413,10 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
               ? BACKGROUND_GROUND_COLOR
               : undefined
           }
-          tools={limitedTools ? PAINT_TOOLS : undefined}
+          tools={limitedTools ? PAINT_TOOLS : FREEPLAY_TOOLS}
           palette={limitedTools ? PAINT_COLORS : undefined}
-          brushSizes={limitedTools ? PAINT_BRUSH_SIZES : undefined}
+          brushSizes={limitedTools ? PAINT_BRUSH_SIZES : FREEPLAY_BRUSH_SIZES}
+          toolbarGroups={limitedTools ? PAINT_TOOLBAR : FREEPLAY_TOOLBAR}
           fit="container"
           toolbarLayout="row"
           hostUndoRedo

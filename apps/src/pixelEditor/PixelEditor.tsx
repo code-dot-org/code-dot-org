@@ -138,6 +138,9 @@ export interface PaletteColor {
   rgba: RGBA;
 }
 
+/** One place in a host's toolbar layout. */
+export type ToolbarItem = PixelTool | 'sizes' | 'color';
+
 export interface PixelEditorProps {
   // The image to edit (dataURI or URL; must be canvas-readable).
   imageUrl: string;
@@ -180,6 +183,10 @@ export interface PixelEditorProps {
   // The brush sizes to offer, in BRUSH_SIZES order; all four when absent.
   // The editor opens on the first; one alone shows no size buttons.
   brushSizes?: readonly number[];
+  // The toolbar as the host lays it out: groups of tool ids, 'sizes' (the
+  // brush sizes) and 'color' (the swatches or the picker), a divider
+  // between groups. Absent, the toolbar is the editor's own arrangement.
+  toolbarGroups?: readonly (readonly ToolbarItem[])[];
   // The host lays the parts out, inside the editor's theme host.
   children: (parts: PixelEditorParts) => React.ReactNode;
 }
@@ -209,6 +216,7 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
   canvasClassName,
   palette,
   brushSizes,
+  toolbarGroups,
   children,
 }) => {
   const themeMode = useThemeMode();
@@ -1388,6 +1396,58 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
     />
   );
 
+  const toolButton = (t: (typeof TOOLS)[number], index: number) => (
+    <PixelTooltip
+      key={t.id}
+      tooltipId={`pixel-tool-${t.id}-tooltip`}
+      text={toolTitle(t)}
+      fromLeftColumn={column && index % 2 === 0}
+    >
+      <button
+        type="button"
+        aria-label={toolTitle(t)}
+        aria-pressed={tool === t.id}
+        className={classNames(
+          moduleStyles.toolButton,
+          tool === t.id && moduleStyles.toolActive
+        )}
+        onClick={() => setTool(t.id)}
+      >
+        {t.icon}
+      </button>
+    </PixelTooltip>
+  );
+  const sizeButton = (size: number, index: number) => (
+    <PixelTooltip
+      key={size}
+      tooltipId={`pixel-brush-${size}-tooltip`}
+      text={`Brush size ${size} (${index + 1})`}
+      fromLeftColumn={column && index % 2 === 0}
+    >
+      <button
+        type="button"
+        aria-label={`Brush size ${size} (${index + 1})`}
+        aria-pressed={brushSize === size}
+        className={classNames(
+          moduleStyles.toolButton,
+          brushSize === size && moduleStyles.toolActive
+        )}
+        onClick={() => setBrushSize(size)}
+      >
+        <span
+          className={classNames(
+            moduleStyles.brushDot,
+            pixelMode && moduleStyles.brushDotSquare
+          )}
+          style={{
+            width: brushDotPx(size),
+            height: brushDotPx(size),
+          }}
+        />
+      </button>
+    </PixelTooltip>
+  );
+
   const parts: PixelEditorParts = {
     themeMode,
     ready: loaded || loadError,
@@ -1403,67 +1463,43 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
           !column && moduleStyles.toolbarRow
         )}
       >
-        <div className={moduleStyles.toolGrid}>
-          {shownTools.map((t, index) => (
-            <PixelTooltip
-              key={t.id}
-              tooltipId={`pixel-tool-${t.id}-tooltip`}
-              text={toolTitle(t)}
-              fromLeftColumn={column && index % 2 === 0}
-            >
-              <button
-                type="button"
-                aria-label={toolTitle(t)}
-                aria-pressed={tool === t.id}
-                className={classNames(
-                  moduleStyles.toolButton,
-                  tool === t.id && moduleStyles.toolActive
-                )}
-                onClick={() => setTool(t.id)}
-              >
-                {t.icon}
-              </button>
-            </PixelTooltip>
-          ))}
-          {brushChoice && <div className={moduleStyles.toolbarDivider} />}
-          {brushChoice &&
-            shownBrushSizes.map((size, index) => (
-              <PixelTooltip
-                key={size}
-                tooltipId={`pixel-brush-${size}-tooltip`}
-                text={`Brush size ${size} (${index + 1})`}
-                fromLeftColumn={column && index % 2 === 0}
-              >
-                <button
-                  type="button"
-                  aria-label={`Brush size ${size} (${index + 1})`}
-                  aria-pressed={brushSize === size}
-                  className={classNames(
-                    moduleStyles.toolButton,
-                    brushSize === size && moduleStyles.toolActive
-                  )}
-                  onClick={() => setBrushSize(size)}
-                >
-                  <span
-                    className={classNames(
-                      moduleStyles.brushDot,
-                      pixelMode && moduleStyles.brushDotSquare
-                    )}
-                    style={{
-                      width: brushDotPx(size),
-                      height: brushDotPx(size),
-                    }}
-                  />
-                </button>
-              </PixelTooltip>
+        {toolbarGroups ? (
+          <div className={moduleStyles.toolGrid}>
+            {toolbarGroups.map((group, g) => (
+              <React.Fragment key={g}>
+                {g > 0 && <div className={moduleStyles.toolbarDivider} />}
+                {group.map(item => {
+                  if (item === 'sizes') {
+                    return brushChoice ? shownBrushSizes.map(sizeButton) : null;
+                  }
+                  if (item === 'color') {
+                    return (
+                      <div key="color" className={moduleStyles.colorInline}>
+                        {colorControl}
+                      </div>
+                    );
+                  }
+                  const index = shownTools.findIndex(t => t.id === item);
+                  return index < 0
+                    ? null
+                    : toolButton(shownTools[index], index);
+                })}
+              </React.Fragment>
             ))}
-          {column && (
-            <>
-              <div className={moduleStyles.toolbarDivider} />
-              {colorControl}
-            </>
-          )}
-        </div>
+          </div>
+        ) : (
+          <div className={moduleStyles.toolGrid}>
+            {shownTools.map(toolButton)}
+            {brushChoice && <div className={moduleStyles.toolbarDivider} />}
+            {brushChoice && shownBrushSizes.map(sizeButton)}
+            {column && (
+              <>
+                <div className={moduleStyles.toolbarDivider} />
+                {colorControl}
+              </>
+            )}
+          </div>
+        )}
         {!hostUndoRedo && (
           <div className={moduleStyles.historyRow}>
             <PixelTooltip
@@ -1497,7 +1533,9 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
             </PixelTooltip>
           </div>
         )}
-        {!column && <div className={moduleStyles.colorRow}>{colorControl}</div>}
+        {!column && !toolbarGroups && (
+          <div className={moduleStyles.colorRow}>{colorControl}</div>
+        )}
       </div>
     ),
     canvas: (
