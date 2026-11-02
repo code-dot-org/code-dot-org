@@ -95,7 +95,8 @@ export async function performClientApiChatCompletion(
 
   if (
     status === AiRequestExecutionStatus.MODEL_PROFANITY ||
-    status === AiRequestExecutionStatus.MODEL_IMAGE_FLAGGED
+    status === AiRequestExecutionStatus.MODEL_IMAGE_FLAGGED ||
+    status === AiRequestExecutionStatus.MODEL_CONTENT_FILTERED
   ) {
     return [
       {...updatedUserMessage, status: AiInteractionStatus.ERROR},

@@ -39,6 +39,7 @@ const COLUMNS = {
 };
 
 beforeEach(() => {
+  jest.useFakeTimers();
   I18n.initI18n();
   store.dispatch(resetState());
   // A reset leaves the mode alone, so one level's would outlive its tests.
@@ -52,7 +53,10 @@ beforeEach(() => {
   store.dispatch(setCurrentPanel('datasetView'));
 });
 
-afterEach(() => I18n.reset());
+afterEach(() => {
+  I18n.reset();
+  jest.useRealTimers();
+});
 
 // What the lab would have saved after the student trained once.
 function savedAfterTraining() {
@@ -73,6 +77,8 @@ function openLab(saved) {
     {store}
   );
   act(() => rendered.projectActions().openProject(saved));
+  // A pretrained level starts training once the loading overlay has painted.
+  act(() => jest.runAllTimers());
   return rendered;
 }
 

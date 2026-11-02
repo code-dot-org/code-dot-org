@@ -42,7 +42,7 @@ class MatchQuestion < QuizQuestion
   end
 
   # response_data shape: {"pairs" => [["k3f", "9qz"], ...]}
-  def answered?(response_data)
+  def response_answered?(response_data)
     response_data['pairs'].is_a?(Array) && response_data['pairs'].any?
   end
 

@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import {type AilabProject} from '@cdo/apps/ailab/engine';
 import useSources from '@cdo/apps/lab2/hooks/useSources';
@@ -13,11 +13,14 @@ import {AilabLevelProperties} from '../types';
 
 import AilabWorkspace from './AilabWorkspace';
 
+import styles from './ailab-view.module.scss';
+
 const AilabView: React.FC<LabProps<AilabLevelProperties>> = ({
   levelProperties,
 }) => {
   const dispatch = useAppDispatch();
   const [reinitializedCount, setReinitializedCount] = useState(0);
+  const [isWorkspaceLoading, setIsWorkspaceLoading] = useState(false);
   const handleReinitialize = useCallback(
     () => setReinitializedCount(count => count + 1),
     []
@@ -57,20 +60,32 @@ const AilabView: React.FC<LabProps<AilabLevelProperties>> = ({
     [updateSources]
   );
 
-  if (!currentSources) {
-    return <Loading isLoading={true} />;
-  }
+  const isLoading = !currentSources || isWorkspaceLoading;
+  const workspaceRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (workspaceRef.current) {
+      workspaceRef.current.inert = isLoading;
+    }
+  }, [isLoading]);
 
   return (
-    <AilabWorkspace
-      key={reinitializedCount}
-      levelProperties={levelProperties}
-      hasEdited={hasEdited}
-      savedSource={currentSources.source}
-      save={save}
-      startOver={startOver}
-      projectManager={projectManager}
-    />
+    <>
+      {currentSources && (
+        <div ref={workspaceRef} className={styles.loadingGate}>
+          <AilabWorkspace
+            key={reinitializedCount}
+            levelProperties={levelProperties}
+            hasEdited={hasEdited}
+            savedSource={currentSources.source}
+            save={save}
+            startOver={startOver}
+            projectManager={projectManager}
+            onLoadingChange={setIsWorkspaceLoading}
+          />
+        </div>
+      )}
+      <Loading isLoading={isLoading} />
+    </>
   );
 };
 

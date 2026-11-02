@@ -1,6 +1,3 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Typography} from '@mui/material';
-import classNames from 'classnames';
 import React from 'react';
 
 import {QuizQuestionSummary} from '../types';
@@ -12,8 +9,6 @@ import {
   MultipleSelectQuestionResponse,
   QuizQuestionResult,
 } from './types';
-
-import styles from './multiple-select-answer.module.scss';
 
 type MultipleSelectResult = QuizQuestionResult & MultipleSelectQuestionResponse;
 
@@ -74,29 +69,7 @@ const MultipleSelectAnswer: React.FunctionComponent<{
     };
   });
 
-  return (
-    <>
-      <ChoiceAnswer indicator="checkbox" choices={choices} />
-      {result.correct !== null && !correctChoiceIds && (
-        <Typography
-          variant="body3"
-          component="p"
-          className={classNames(
-            styles.overallResult,
-            result.correct
-              ? styles.overallResultCorrect
-              : styles.overallResultIncorrect
-          )}
-        >
-          <FontAwesomeV6Icon
-            iconName={result.correct ? 'check' : 'xmark'}
-            iconStyle="solid"
-          />
-          {answerLabel} is {result.correct ? 'correct' : 'incorrect'}
-        </Typography>
-      )}
-    </>
-  );
+  return <ChoiceAnswer indicator="checkbox" choices={choices} />;
 };
 
 export default MultipleSelectAnswer;
