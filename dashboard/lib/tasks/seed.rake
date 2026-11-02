@@ -514,10 +514,11 @@ namespace :seed do
 
   desc "seed the data needed for this type of environment by default"
   timed_task_with_logging default: DEFAULT_SEED_TASKS
-  desc "seed production curriculum content, and everything else production seeds"
+  desc "seed all production curriculum content"
   timed_task_with_logging production: PRODUCTION_SEED_TASKS
+  desc "seed only content needed for UI tests"
   timed_task_with_logging ui_test: UI_TEST_SEED_TASKS
 
-  desc "seed only dashboard data required for tests"
+  desc "seed only dashboard data required for unit tests"
   timed_task_with_logging test: [:check_migrations, :videos, :games, :concepts, :standalone_project_levels, :secret_words, :secret_pictures, :school_districts, :schools, :standards, :foorms]
 end
