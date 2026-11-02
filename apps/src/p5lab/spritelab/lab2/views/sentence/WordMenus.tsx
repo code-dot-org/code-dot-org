@@ -35,10 +35,10 @@ interface WordMenusProps {
   layout?: WordLayout;
 }
 
-// An emoji is about this many letters wide.
-const EMOJI_WIDTH_IN_LETTERS = 2;
+// An icon or a color dot is about this many letters wide.
+const ICON_WIDTH_IN_LETTERS = 2;
 const wordWidth = (w: Word) =>
-  w.text.length + (w.emoji ? EMOJI_WIDTH_IN_LETTERS : 0);
+  w.text.length + (w.icon || w.color ? ICON_WIDTH_IN_LETTERS : 0);
 
 // How many sets, in carousel order, the sentence keeps height for.
 const RESERVED_SETS = 4;

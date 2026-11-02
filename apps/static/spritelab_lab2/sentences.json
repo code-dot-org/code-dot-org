@@ -4,436 +4,436 @@
       {
         "id": "blob",
         "text": "blob",
-        "emoji": "🟢"
+        "icon": "splotch"
       },
       {
         "id": "robot",
         "text": "robot",
-        "emoji": "🤖"
+        "icon": "robot"
       },
       {
         "id": "dragon",
         "text": "dragon",
-        "emoji": "🐉",
+        "icon": "dragon",
         "bodyPlan": "quadruped"
       },
       {
         "id": "cat",
         "text": "cat",
-        "emoji": "🐱",
+        "icon": "cat",
         "bodyPlan": "quadruped"
       },
       {
         "id": "monster",
         "text": "monster",
-        "emoji": "👾"
+        "icon": "alien-8bit"
       },
       {
         "id": "wizard",
         "text": "wizard",
-        "emoji": "🧙"
+        "icon": "hat-wizard"
       },
       {
         "id": "penguin",
         "text": "penguin",
-        "emoji": "🐧",
+        "icon": "kiwi-bird",
         "bodyPlan": "bird"
       },
       {
         "id": "witch",
         "text": "witch",
-        "emoji": "🧹"
+        "icon": "hat-witch"
       }
     ],
     "adjectives": [
       {
         "id": "brave",
         "text": "brave",
-        "emoji": "💪"
+        "icon": "hand-fist"
       },
       {
         "id": "sparkly",
         "text": "sparkly",
-        "emoji": "✨"
+        "icon": "sparkles"
       },
       {
         "id": "grumpy",
         "text": "grumpy",
-        "emoji": "😠"
+        "icon": "face-angry"
       },
       {
         "id": "friendly",
         "text": "friendly",
-        "emoji": "😊"
+        "icon": "face-smile"
       },
       {
         "id": "cute",
         "text": "cute",
-        "emoji": "🥰"
+        "icon": "face-smile-hearts"
       },
       {
         "id": "sleepy",
         "text": "sleepy",
-        "emoji": "😴"
+        "icon": "face-sleeping"
       },
       {
         "id": "tiny",
         "text": "tiny",
-        "emoji": "🐜"
+        "icon": "bug"
       }
     ],
     "clothing": [
       {
         "id": "hat",
         "text": "hat",
-        "emoji": "🎩"
+        "icon": "hat-cowboy"
       },
       {
         "id": "crown",
         "text": "crown",
-        "emoji": "👑"
+        "icon": "crown"
       },
       {
         "id": "cape",
         "text": "cape",
-        "emoji": "🦸"
+        "icon": "shirt"
       },
       {
         "id": "scarf",
         "text": "scarf",
-        "emoji": "🧣"
+        "icon": "scarf"
       },
       {
         "id": "boots",
         "text": "boots",
-        "emoji": "👢"
+        "icon": "boot"
       },
       {
         "id": "glasses",
         "text": "glasses",
-        "emoji": "👓"
+        "icon": "glasses"
       }
     ],
     "objects": [
       {
         "id": "key",
         "text": "key",
-        "emoji": "🔑"
+        "icon": "key"
       },
       {
         "id": "gem",
         "text": "gem",
-        "emoji": "💎"
+        "icon": "gem"
       },
       {
         "id": "coin",
         "text": "coin",
-        "emoji": "🪙"
+        "icon": "coin"
       },
       {
         "id": "apple",
         "text": "apple",
-        "emoji": "🍎"
+        "icon": "apple-whole"
       },
       {
         "id": "star",
         "text": "star",
-        "emoji": "⭐"
+        "icon": "star"
       },
       {
         "id": "potion",
         "text": "potion",
-        "emoji": "🧪"
+        "icon": "flask"
       }
     ],
     "placeMoods": [
       {
         "id": "sunny",
         "text": "sunny",
-        "emoji": "☀️"
+        "icon": "sun"
       },
       {
         "id": "misty",
         "text": "misty",
-        "emoji": "🌫️"
+        "icon": "cloud-fog"
       },
       {
         "id": "frozen",
         "text": "frozen",
-        "emoji": "❄️"
+        "icon": "snowflake"
       },
       {
         "id": "spooky",
         "text": "spooky",
-        "emoji": "👻"
+        "icon": "ghost"
       },
       {
         "id": "peaceful",
         "text": "peaceful",
-        "emoji": "🕊️"
+        "icon": "dove"
       }
     ],
     "places": [
       {
         "id": "forest",
         "text": "forest",
-        "emoji": "🌲"
+        "icon": "trees"
       },
       {
         "id": "cave",
         "text": "cave",
-        "emoji": "🕳️"
+        "icon": "dungeon"
       },
       {
         "id": "beach",
         "text": "beach",
-        "emoji": "🏖️"
+        "icon": "umbrella-beach"
       },
       {
         "id": "castle",
         "text": "castle",
-        "emoji": "🏰"
+        "icon": "castle"
       },
       {
         "id": "city",
         "text": "city",
-        "emoji": "🏙️"
+        "icon": "city"
       },
       {
         "id": "jungle",
         "text": "jungle",
-        "emoji": "🌴"
+        "icon": "tree-palm"
       }
     ],
     "expressions": [
       {
         "id": "cheerful",
         "text": "cheerful",
-        "emoji": "😄"
+        "icon": "face-laugh"
       },
       {
         "id": "curious",
         "text": "curious",
-        "emoji": "🤔"
+        "icon": "face-thinking"
       },
       {
         "id": "surprised",
         "text": "surprised",
-        "emoji": "😮"
+        "icon": "face-surprise"
       },
       {
         "id": "shy",
         "text": "shy",
-        "emoji": "😳"
+        "icon": "face-flushed"
       },
       {
         "id": "proud",
         "text": "proud",
-        "emoji": "😌"
+        "icon": "face-smile-relaxed"
       },
       {
         "id": "silly",
         "text": "silly",
-        "emoji": "🤪"
+        "icon": "face-grin-tongue-wink"
       }
     ],
     "times": [
       {
         "id": "sunrise",
         "text": "sunrise",
-        "emoji": "🌅"
+        "icon": "sunrise"
       },
       {
         "id": "noon",
         "text": "noon",
-        "emoji": "🕛"
+        "icon": "clock-twelve"
       },
       {
         "id": "sunset",
         "text": "sunset",
-        "emoji": "🌇"
+        "icon": "sunset"
       },
       {
         "id": "night",
         "text": "night",
-        "emoji": "🌙"
+        "icon": "moon"
       }
     ],
     "placeDetails": [
       {
         "id": "glowing-mushrooms",
         "text": "glowing mushrooms",
-        "emoji": "🍄"
+        "icon": "mushroom"
       },
       {
         "id": "floating-lanterns",
         "text": "floating lanterns",
-        "emoji": "🏮"
+        "icon": "lamp"
       },
       {
         "id": "distant-mountains",
         "text": "distant mountains",
-        "emoji": "🏔️"
+        "icon": "mountains"
       },
       {
         "id": "falling-leaves",
         "text": "falling leaves",
-        "emoji": "🍂"
+        "icon": "leaf"
       },
       {
         "id": "twinkling-lights",
         "text": "twinkling lights",
-        "emoji": "✨"
+        "icon": "lights-holiday"
       },
       {
         "id": "drifting-fog",
         "text": "drifting fog",
-        "emoji": "🌁"
+        "icon": "smog"
       }
     ],
     "blockMaterials": [
       {
         "id": "stone",
         "text": "stone",
-        "emoji": "🪨"
+        "icon": "mountain"
       },
       {
         "id": "wood",
         "text": "wood",
-        "emoji": "🪵"
+        "icon": "tree"
       },
       {
         "id": "ice",
         "text": "ice",
-        "emoji": "🧊"
+        "icon": "icicles"
       },
       {
         "id": "gold",
         "text": "gold",
-        "emoji": "🪙"
+        "icon": "coins"
       },
       {
         "id": "lava",
         "text": "lava",
-        "emoji": "🌋"
+        "icon": "volcano"
       },
       {
         "id": "grass",
         "text": "grass",
-        "emoji": "🌿"
+        "icon": "seedling"
       }
     ],
     "blockDetails": [
       {
         "id": "glowing-cracks",
         "text": "glowing cracks",
-        "emoji": "✨"
+        "icon": "bolt"
       },
       {
         "id": "tiny-gems",
         "text": "tiny gems",
-        "emoji": "💎"
+        "icon": "gem"
       },
       {
         "id": "moss-on-top",
         "text": "moss on top",
-        "emoji": "🍀"
+        "icon": "clover"
       },
       {
         "id": "metal-bolts",
         "text": "metal bolts",
-        "emoji": "🔩"
+        "icon": "gear"
       },
       {
         "id": "carved-patterns",
         "text": "carved patterns",
-        "emoji": "🔷"
+        "icon": "diamond"
       }
     ],
     "treasureLooks": [
       {
         "id": "shiny",
         "text": "shiny",
-        "emoji": "✨"
+        "icon": "sparkles"
       },
       {
         "id": "glowing",
         "text": "glowing",
-        "emoji": "🔆"
+        "icon": "lightbulb"
       },
       {
         "id": "golden",
         "text": "golden",
-        "emoji": "🟡"
+        "color": "#e3b341"
       },
       {
         "id": "ancient",
         "text": "ancient",
-        "emoji": "🏺"
+        "icon": "scroll-old"
       },
       {
         "id": "rainbow",
         "text": "rainbow",
-        "emoji": "🌈"
+        "icon": "rainbow"
       },
       {
         "id": "tiny",
         "text": "tiny",
-        "emoji": "🐜"
+        "icon": "bug"
       }
     ],
     "treasures": [
       {
         "id": "gem",
         "text": "gem",
-        "emoji": "💎"
+        "icon": "gem"
       },
       {
         "id": "crystal",
         "text": "crystal",
-        "emoji": "🔮"
+        "icon": "crystal-ball"
       },
       {
         "id": "coin",
         "text": "coin",
-        "emoji": "🪙"
+        "icon": "coin"
       },
       {
         "id": "star",
         "text": "star",
-        "emoji": "⭐"
+        "icon": "star"
       },
       {
         "id": "key",
         "text": "key",
-        "emoji": "🗝️"
+        "icon": "key-skeleton"
       },
       {
         "id": "crown",
         "text": "crown",
-        "emoji": "👑"
+        "icon": "crown"
       }
     ],
     "treasureDetails": [
       {
         "id": "a-glow",
         "text": "a glow",
-        "emoji": "💡"
+        "icon": "lightbulb"
       },
       {
         "id": "tiny-sparkles",
         "text": "tiny sparkles",
-        "emoji": "✨"
+        "icon": "sparkles"
       },
       {
         "id": "a-ribbon",
         "text": "a ribbon",
-        "emoji": "🎀"
+        "icon": "ribbon"
       },
       {
         "id": "a-crack",
         "text": "a crack",
-        "emoji": "⚡"
+        "icon": "bolt"
       }
     ]
   },

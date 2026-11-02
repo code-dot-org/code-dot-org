@@ -397,6 +397,18 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   background-color: var(--background-neutral-primary);
 }
 
+// The sentence on a brand panel, its text white on the brand color.
+.sentencePanel {
+  padding: 12px 16px;
+  border-radius: 12px;
+  background-color: var(--background-brand-primary);
+  color: var(--neutral-base-white);
+
+  p {
+    color: inherit;
+  }
+}
+
 .headline {
   margin: 0;
   font-size: 16px;

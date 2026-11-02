@@ -52,7 +52,7 @@ const Harness: React.FunctionComponent<{
   );
 };
 
-// The sentence as read: without the emoji and blanks that are hidden
+// The sentence as read: without the icons and blanks that are hidden
 // from the accessible tree.
 const sentenceText = () => {
   const p = (document.querySelector('p') as HTMLElement).cloneNode(
@@ -121,8 +121,9 @@ describe('WordMenus', () => {
   it('lays out a hidden longest sentence beside the real one', () => {
     render(<Harness initial={{creature: 'cat'}} />);
     const ghost = document.querySelector('p[aria-hidden]') as HTMLElement;
+    // The icons carry no text; the longest words by width are picked.
     expect(ghost.textContent?.replace(/\s+/g, ' ')).toBe(
-      'A 😊friendly 👾monster wearing a 👓glasses.'
+      'A friendly monster wearing a glasses.'
     );
     expect(sentenceText()).toBe('A cat.');
   });

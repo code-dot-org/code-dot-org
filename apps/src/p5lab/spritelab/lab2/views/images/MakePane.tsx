@@ -86,7 +86,7 @@ const MakePane: React.FunctionComponent<MakePaneProps> = ({
           </span>
         </div>
       )}
-      {parts.sentence}
+      <div className={styles.sentencePanel}>{parts.sentence}</div>
       {/* The words scroll in a frame of their own between the pinned
           sentence and the Animated switch. */}
       <div className={styles.paneScroll}>

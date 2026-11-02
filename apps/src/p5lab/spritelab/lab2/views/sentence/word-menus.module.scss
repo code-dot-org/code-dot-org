@@ -139,16 +139,19 @@
   }
 }
 
-.emojiBadge {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 1.5em;
-  height: 1.5em;
+// The icon beside a word, in the word's own color; a plain color is a dot.
+.wordIcon {
+  flex: none;
+  width: 1.25em;
+  font-size: 0.95em;
+  text-align: center;
+}
+
+.colorDot {
+  flex: none;
+  width: 0.9em;
+  height: 0.9em;
   border-radius: 50%;
-  background: var(--neutral-white-alpha-80);
-  font-size: 0.85em;
-  line-height: 1;
 }
 
 .keepTogether {
@@ -404,12 +407,6 @@ button.chipWord {
   // over the hover and press ones.
   animation: word-pop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
   animation-delay: calc(var(--i) * 35ms);
-
-  // The emoji sits plain beside the word, no badge.
-  .emojiBadge {
-    background: transparent;
-    color: inherit;
-  }
 
   &:hover:not(:disabled, .chosen) {
     background: var(--background-neutral-secondary);
