@@ -303,7 +303,8 @@ describe('SentenceScene', () => {
     expect(generateImage).toHaveBeenCalledTimes(1);
     expect(generateImage.mock.calls[0][0]).toBe('a tiny robot');
     expect(generateImage.mock.calls[0][1]).toMatchObject({
-      pixelGrid: 32,
+      // Half the sprite's 32x32 grid.
+      pixelGrid: 16,
       inputImageDataURI: 'data:image/png;base64,abc',
     });
     expect(sendEvent).toHaveBeenCalledWith(
