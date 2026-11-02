@@ -203,6 +203,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.destroyed_ = false;
     this.rerunAfterExecute_ = false;
     this.runId_ = 0;
+    this.aiSetters_ = new Map();
     // True from a jump trigger until the target runs; repeat triggers are
     // ignored meanwhile.
     this.sceneJumpInFlight_ = false;
@@ -697,6 +698,7 @@ export default class SpriteLab2Engine extends SpriteLab {
       );
     };
     const runId = ++this.runId_;
+    this.aiSetters_ = new Map();
     library.commands.askAI = (promptText, variableName, setterCallback) => {
       if (!this.canAskAi_()) {
         return;
@@ -731,25 +733,15 @@ export default class SpriteLab2Engine extends SpriteLab {
     if (library.promptVars[variableName] === undefined) {
       library.promptVars[variableName] = null;
     }
-    if (!library.userInputEventCallbacks[variableName]) {
-      library.userInputEventCallbacks[variableName] = {
-        setterCallbacks: [],
-        userCallbacks: [],
-      };
-    }
-    library.userInputEventCallbacks[variableName].setterCallbacks.push(
-      setterCallback
-    );
+    this.aiSetters_.set(variableName, setterCallback);
   }
 
   deliverAiAnswer_(library, variableName, text) {
     library.promptVars[variableName] = text;
-    const callbacks = library.userInputEventCallbacks[variableName];
-    if (!callbacks) {
-      return;
-    }
-    callbacks.setterCallbacks.forEach(callback => callback(text));
-    callbacks.userCallbacks.forEach(callback => callback());
+    this.aiSetters_.get(variableName)?.(text);
+    library.userInputEventCallbacks[variableName]?.userCallbacks.forEach(
+      callback => callback()
+    );
   }
 
   // Mirrors the gateway's own check (User::AiAccessible), so a request it
