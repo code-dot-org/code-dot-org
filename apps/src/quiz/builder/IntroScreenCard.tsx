@@ -29,9 +29,6 @@ const IntroScreenCard: React.FunctionComponent<IntroScreenCardProps> = ({
   const [error, setError] = useState<string | null>(null);
   const isBusy = isSaving || isRemoving;
   const isDirty = draft !== customIntroText;
-  const peek =
-    draft.trim().split('\n')[0] ||
-    'Tell learners what to expect before they begin.';
 
   useEffect(() => {
     setDraft(customIntroText);
@@ -67,7 +64,7 @@ const IntroScreenCard: React.FunctionComponent<IntroScreenCardProps> = ({
     <BuilderCard
       iconName="hand-wave"
       name="Intro Screen"
-      preview={peek}
+      preview={draft}
       itemLabel="intro screen"
       isExpanded={isExpanded}
       onExpandedChange={setIsExpanded}
