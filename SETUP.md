@@ -67,13 +67,9 @@ You can do Code.org development using macOS, Ubuntu, or Windows (running Ubuntu 
 
 1. `bundle exec rake install`
     <details>
-        <summary>This will take a while</summary>
-        The most expensive are the "seeding" tasks, where your local DB is populated from data in the repository. Some of the seeding rake tasks can take several minutes, but they should at least print out progress as they go.
-    </details>
-    <details>
         <summary>About curriculum content: UI test courses by default, production courses on request</summary>
-        By default, development seeds only the UI test curriculum in <code>dashboard/test/ui/config</code>, which is enough to run every lab and the UI tests. Prefer a <code>ui-test-</code> course when you need a course to try something in, and put any level you want to test locally or on an adhoc into one of them.
-        If you need production courses locally, seed them on top with <code>cd dashboard && bundle exec rake seed:production</code>. This can take 30 minutes or more; the longest task, <code>seed:scripts</code>, prints progress as it goes. Rerun it to pick up content changes, since <code>rake build</code> does not reseed production content in development.
+        By default, development seeds only the UI test curriculum in <code>dashboard/test/ui/config</code>, which is enough to run every lab and the UI tests. Creating and seeding the database this way takes about five minutes. Prefer a <code>ui-test-</code> course when you need a course to try something in, and put any level you want to test locally or on an adhoc into one of them.
+        If you need production courses locally, seed them on top with <code>cd dashboard && bundle exec rake seed:production</code>. That takes about an hour and prints progress as it goes. Rerun it to pick up content changes, since <code>rake build</code> does not reseed production content in development.
     </details>
     <details>
         <summary>If <code>bundle exec rake install</code> is interrupted before finishing...</summary>
