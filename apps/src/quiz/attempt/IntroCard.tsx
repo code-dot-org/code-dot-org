@@ -4,6 +4,8 @@ import React from 'react';
 
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
+import {attemptsLabel, pluralize} from '../utils';
+
 import AttemptCard from './AttemptCard';
 
 import styles from './intro-card.module.scss';
@@ -18,9 +20,6 @@ export interface IntroCardProps {
   onBegin: () => void;
   headingRef?: React.Ref<HTMLHeadingElement>;
 }
-
-const pluralize = (count: number, noun: string) =>
-  `${count} ${noun}${count === 1 ? '' : 's'}`;
 
 // Shown before an attempt begins - what the quiz is and what to expect.
 const IntroCard: React.FunctionComponent<IntroCardProps> = ({
@@ -39,7 +38,7 @@ const IntroCard: React.FunctionComponent<IntroCardProps> = ({
       : []),
     {
       icon: 'bullseye-arrow',
-      text: allowMultipleAttempts ? 'Unlimited attempts' : '1 attempt',
+      text: attemptsLabel(allowMultipleAttempts),
     },
   ];
 
