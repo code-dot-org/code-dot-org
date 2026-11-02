@@ -125,6 +125,8 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
     }
   };
 
+  const neverSaved = isPendingQuestionId(question.id);
+
   const handleDiscard = () => {
     setDraft(toDraft(question));
   };
@@ -148,8 +150,10 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
       isRemoving={isRemoving}
       error={error}
       onSave={handleSave}
-      onDiscard={handleDiscard}
+      onDiscard={neverSaved ? handleRemove : handleDiscard}
       onRemove={handleRemove}
+      nested
+      neverSaved={neverSaved}
     >
       <Tabs
         name={`question-${question.id}-tabs`}

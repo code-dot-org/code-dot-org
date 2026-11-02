@@ -32,6 +32,13 @@ describe('IntroScreenCard', () => {
     expect(screen.queryByRole('textbox')).not.toBeInTheDocument();
   });
 
+  it('uses fallback peek copy when the intro has no content', () => {
+    renderCard({customIntroText: ''});
+    expect(
+      screen.getByText('Tell learners what to expect before they begin.')
+    ).toBeInTheDocument();
+  });
+
   it('edits the content in a textarea and saves it as customIntroText, then collapses', async () => {
     const {onSave} = renderCard();
     expand();
