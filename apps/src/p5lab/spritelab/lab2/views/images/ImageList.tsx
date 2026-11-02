@@ -1,6 +1,7 @@
 // The tab's left column: every image of the project as a tile, the one
 // being worked on marked, with the way to add one and to delete one.
 
+import {MuiDialog} from '@code-dot-org/component-library/dialog';
 import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {
@@ -11,7 +12,6 @@ import classNames from 'classnames';
 import React, {useEffect, useState} from 'react';
 
 import {imageKindLabel, ImageSubject, ImageType} from '../../ai/images/types';
-import LabDialog from '../LabDialog';
 
 import {ProjectImage} from './projectImages';
 
@@ -233,8 +233,25 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
         </div>
       )}
       {confirming && chosenImage && (
-        <LabDialog
+        <MuiDialog
           title="Delete this image?"
+          customContent={
+            <div className={styles.deleteLead}>
+              {chosenImage.thumb && (
+                <img
+                  src={chosenImage.thumb}
+                  alt=""
+                  className={classNames(
+                    styles.deleteThumb,
+                    chosenImage.pixelated && styles.pixelArt
+                  )}
+                />
+              )}
+              <p id="dsco-dialog-description" className={styles.deleteText}>
+                It goes from your project, and from any scene using it.
+              </p>
+            </div>
+          }
           onClose={() => setConfirming(false)}
           secondaryButtonProps={{
             children: 'Cancel',
@@ -248,23 +265,7 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
               onDelete?.(chosenImage.key);
             },
           }}
-        >
-          <div className={styles.deleteLead}>
-            {chosenImage.thumb && (
-              <img
-                src={chosenImage.thumb}
-                alt=""
-                className={classNames(
-                  styles.deleteThumb,
-                  chosenImage.pixelated && styles.pixelArt
-                )}
-              />
-            )}
-            <p id="dsco-dialog-description" className={styles.deleteText}>
-              It goes from your project, and from any scene using it.
-            </p>
-          </div>
-        </LabDialog>
+        />
       )}
     </section>
   );
