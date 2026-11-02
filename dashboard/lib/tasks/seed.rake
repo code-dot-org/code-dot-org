@@ -507,16 +507,10 @@ namespace :seed do
   PRODUCTION_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts, :json_videos, :practice_problems, :courses, :reference_guides, :data_docs, :jit_pl_concepts, :callouts, :school_districts, :schools, :census_summaries, :secret_words, :secret_pictures, :foorms, :datablock_storage, :validate_ai_rubrics].freeze
   UI_TEST_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts_ui_tests, :courses_ui_tests, :jit_pl_concepts, :reseed_scripts_ui_tests, :json_videos_ui_tests, :callouts_ui_tests, :school_districts, :schools, :secret_words, :secret_pictures, :datablock_storage].freeze
 
-  # Development and adhoc seed only the UI test partition, which is enough to
-  # run the UI tests and the labs. Production content is seeded on demand with
-  # `rake seed:production`.
-  DEFAULT_SEED_TASKS =
-    case rack_env
-    when :test then UI_TEST_SEED_TASKS
-    when :adhoc then UI_TEST_SEED_TASKS
-    when :development then UI_TEST_SEED_TASKS
-    else PRODUCTION_SEED_TASKS
-    end
+  # Only the environments that serve production curriculum seed it. The rest
+  # seed the UI test partition, which is enough to run the UI tests and the
+  # labs, and get production content on demand from `rake seed:production`.
+  DEFAULT_SEED_TASKS = [:staging, :levelbuilder, :production].include?(rack_env) ? PRODUCTION_SEED_TASKS : UI_TEST_SEED_TASKS
 
   desc "seed the data needed for this type of environment by default"
   timed_task_with_logging default: DEFAULT_SEED_TASKS
