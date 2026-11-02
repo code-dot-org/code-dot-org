@@ -4,7 +4,6 @@ require 'test_helper'
 # environment. Read splitting used to be conditional: `primary_replica` was omitted wherever the reader and writer
 # credentials matched, which silently left local development, continuous integration builds and adhocs without one.
 class DatabaseConfigurationTest < ActiveSupport::TestCase
-  # `include_hidden` rather than the `include_replicas` kwarg it replaced, which is deprecated in Rails 7.0.
   CONFIGS = ActiveRecord::Base.configurations.configs_for(env_name: Rails.env, include_hidden: true).freeze
 
   test 'declares every database ApplicationRecord connects to' do
