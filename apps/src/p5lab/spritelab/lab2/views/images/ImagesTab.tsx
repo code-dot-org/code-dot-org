@@ -459,7 +459,6 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                   edited={parts.edited}
                   saving={saving}
                   onDone={finishDrawing}
-                  onCancel={stopDrawing}
                 />
               </>
             );
