@@ -80,7 +80,6 @@ export function canRequestTheaterDescription(): boolean {
   const appName = lab.levelProperties?.appName;
   return (
     !!appName &&
-    // Descriptions always go through the gateway, so its fallback serves them.
     (isAiGatewayFallbackEnabled() ||
       !isAiChatModelBlocked(
         THEATER_DESCRIPTIONS_MODEL_ID,
