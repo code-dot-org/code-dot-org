@@ -90,10 +90,15 @@ const STROKE_SAVE_MS = 800;
 // own saving has a throttle of its own.
 const UPLOAD_GAP_MS = 5000;
 
-/** `?images-edited=generate` keeps the words under an image the student
-    drew on, as before, instead of the pane that guards that work. */
-function editedKeepsWords(): boolean {
-  return queryParams('images-edited') === 'generate';
+/** How an image the student drew on is shown. By default it opens in the
+    paint tools, as the work it is, with Replace image the way to the
+    words. `?images-edited=pane` shows a pane with Replace image and Edit
+    this image instead; `?images-edited=generate` keeps the words under
+    it, as before either. */
+type EditedMode = 'paint' | 'pane' | 'generate';
+function editedMode(): EditedMode {
+  const value = queryParams('images-edited');
+  return value === 'pane' || value === 'generate' ? value : 'paint';
 }
 
 /** A drawing in progress: what it writes to, and what the editor opened. */
@@ -425,8 +430,35 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   useEffect(() => {
     setWordsAsked(false);
   }, [chosenId, active]);
-  const ownWorkPane = ownWork && !wordsAsked && !editedKeepsWords();
+  const ownWorkPane = ownWork && !wordsAsked && editedMode() === 'pane';
+  const paintsOwnWork = ownWork && !wordsAsked && editedMode() === 'paint';
   const drawOffered = !!kind && !chosenImage?.sheet && !drawing;
+  // Own work opens in the paint tools by itself, and again on return to
+  // the tab; Replace image is the one way out.
+  const chosenKey = chosenImage?.key;
+  const chosenHasSrc = !!chosenImage?.src && !chosenImage.sheet;
+  const kindType = kind?.imageType;
+  const kindSubject = kind?.subject;
+  useEffect(() => {
+    if (
+      paintsOwnWork &&
+      active &&
+      !drawingRef.current &&
+      chosenKey &&
+      chosenHasSrc &&
+      kindType
+    ) {
+      startDrawing({key: chosenKey, imageType: kindType, subject: kindSubject});
+    }
+  }, [
+    paintsOwnWork,
+    active,
+    chosenKey,
+    chosenHasSrc,
+    kindType,
+    kindSubject,
+    startDrawing,
+  ]);
 
   const deleteOffered = !!editingOffered;
   // A level about one image offers the plus until that image exists, with
@@ -560,7 +592,15 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                   kind={kind}
                   editing={!!drawing.target.key}
                   edited={parts.edited}
+                  paints={editedMode() === 'paint'}
+                  headline={
+                    chosenImage?.props.edited ? 'Your edited image' : undefined
+                  }
                   onDone={finishDrawing}
+                  onReplace={() => {
+                    finishDrawing();
+                    setWordsAsked(true);
+                  }}
                 />
               </>
             );
@@ -633,12 +673,14 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                   regenerate={!!chosenImage?.props.generation}
                   onDraw={
                     drawOffered
-                      ? () =>
+                      ? () => {
+                          setWordsAsked(false);
                           startDrawing({
                             key: chosenImage?.key ?? null,
                             imageType: parts.draft.imageType,
                             subject: parts.draft.subject,
-                          })
+                          });
+                        }
                       : undefined
                   }
                   drawLabel={chosenImage ? 'Edit this image' : 'Draw my own'}

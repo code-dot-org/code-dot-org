@@ -177,6 +177,9 @@ describe('ImagesTab', () => {
   beforeEach(() => {
     Object.keys(propsByKey).forEach(key => delete propsByKey[key]);
     Object.keys(params).forEach(key => delete params[key]);
+    // The older own-work pane, which most of these tests were written
+    // against; the paint-first default has tests of its own.
+    params['images-edited'] = 'pane';
     acceptGenerated.mockReset();
     saveEdited.mockReset();
     deleteImage.mockReset();
@@ -477,6 +480,55 @@ describe('ImagesTab', () => {
     expect(screen.getByText('words')).toBeTruthy();
     fireEvent.click(screen.getByRole('button', {name: 'Sprite 1'}));
     expect(screen.getByText('Your edited image')).toBeTruthy();
+  });
+
+  it('shows own work in the paint tools, with Replace image the way to the words', async () => {
+    delete params['images-edited'];
+    propsByKey.k1 = {
+      name: 'Sprite 1',
+      categories: [],
+      edited: true,
+      sourceUrl: 'sprite1.png',
+    };
+    propsByKey.k2 = {
+      name: 'Sprite 2',
+      categories: [],
+      generation: {imageType: 'sprite', prompt: 'A cat'},
+    };
+    renderTab({editingOffered: true});
+    // The edited image opens in the tools: no Done, no words.
+    expect(screen.getByText('canvas')).toBeTruthy();
+    expect(screen.getByText('Your edited image')).toBeTruthy();
+    expect(screen.queryByRole('button', {name: /^Done/})).toBeNull();
+    expect(screen.queryByText('words')).toBeNull();
+    // Replace image: the tools close and the words come back, with Edit
+    // this image the way back to the tools.
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', {name: 'Replace image'}));
+    });
+    expect(screen.queryByText('canvas')).toBeNull();
+    expect(screen.getByText('words')).toBeTruthy();
+    fireEvent.click(screen.getByRole('button', {name: 'Edit this image'}));
+    expect(screen.getByText('canvas')).toBeTruthy();
+    // The made image is shown as a picture with its words, as before.
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', {name: 'Sprite 2'}));
+    });
+    expect(screen.queryByText('canvas')).toBeNull();
+    expect(screen.getByText('words')).toBeTruthy();
+  });
+
+  it('keeps the tools open when drawing a blank, with no Done', () => {
+    delete params['images-edited'];
+    renderTab({editingOffered: true});
+    fireEvent.click(screen.getByRole('button', {name: 'New image'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Character'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Draw my own'}));
+    expect(screen.getByText('canvas')).toBeTruthy();
+    expect(screen.queryByRole('button', {name: /^Done/})).toBeNull();
+    expect(
+      screen.getByRole('button', {name: 'Use words instead'})
+    ).toBeTruthy();
   });
 
   it('keeps the words under an edited image when the parameter asks', () => {
