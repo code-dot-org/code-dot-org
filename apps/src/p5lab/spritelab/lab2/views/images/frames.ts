@@ -6,6 +6,7 @@ import {toImage} from '@cdo/apps/imageUtils';
 import {
   CHARACTER_STRIP_BASE_FRAME,
   CHARACTER_STRIP_FRAME_COUNT,
+  stripCellOrigin,
 } from '../../characterAnimations';
 
 /** What each frame of the strip shows, in strip order (see
@@ -30,18 +31,12 @@ export interface FrameSize {
   y: number;
 }
 
-/** Frames are cut the way the engine cuts them: cells row by row, wrapping
-    at the image width. */
 function cellOrigin(
   image: HTMLImageElement,
   frameSize: FrameSize,
   index: number
 ): {x: number; y: number} {
-  const columns = Math.max(1, Math.floor(image.naturalWidth / frameSize.x));
-  return {
-    x: (index % columns) * frameSize.x,
-    y: Math.floor(index / columns) * frameSize.y,
-  };
+  return stripCellOrigin(image.naturalWidth, frameSize, index);
 }
 
 /** One frame of the strip as a PNG data URI. */

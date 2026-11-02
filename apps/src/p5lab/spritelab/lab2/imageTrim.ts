@@ -10,7 +10,10 @@ import {
   upscaleImageNearest,
 } from '@cdo/apps/pixelEditor/pixelArt';
 
-import {CHARACTER_STRIP_BASE_FRAME} from './characterAnimations';
+import {
+  CHARACTER_STRIP_BASE_FRAME,
+  stripCellOrigin,
+} from './characterAnimations';
 import {
   BACKGROUNDS_CATEGORY,
   RuntimeAnimationList,
@@ -285,18 +288,13 @@ function frameThumbnail(
           const canvas = document.createElement('canvas');
           canvas.width = frameSize.x;
           canvas.height = frameSize.y;
-          // Cells row by row, wrapping at the image width, as the engine
-          // cuts them.
-          const columns = Math.max(
-            1,
-            Math.floor(img.naturalWidth / frameSize.x)
-          );
+          const origin = stripCellOrigin(img.naturalWidth, frameSize, index);
           canvas
             .getContext('2d')
             ?.drawImage(
               img,
-              (index % columns) * frameSize.x,
-              Math.floor(index / columns) * frameSize.y,
+              origin.x,
+              origin.y,
               frameSize.x,
               frameSize.y,
               0,

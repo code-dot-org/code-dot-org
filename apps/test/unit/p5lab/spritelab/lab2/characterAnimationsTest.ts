@@ -1,4 +1,5 @@
 import {
+  stripCellOrigin,
   AnimationPoses,
   CHARACTER_POSE_ORDER,
   CHARACTER_STRIP_FRAME_COUNT,
@@ -174,5 +175,20 @@ describe('SpriteLab2 characterAnimations', () => {
     expect(CHARACTER_STRIP_POSES['jump-right']!.start).toBe(
       walk.start + walk.count
     );
+  });
+});
+
+describe('stripCellOrigin', () => {
+  const frame = {x: 64, y: 64};
+  it('walks one row of cells left to right', () => {
+    expect(stripCellOrigin(320, frame, 0)).toEqual({x: 0, y: 0});
+    expect(stripCellOrigin(320, frame, 4)).toEqual({x: 256, y: 0});
+  });
+  it('wraps to the next row at the image width', () => {
+    expect(stripCellOrigin(128, frame, 2)).toEqual({x: 0, y: 64});
+    expect(stripCellOrigin(128, frame, 3)).toEqual({x: 64, y: 64});
+  });
+  it('treats an image narrower than a cell as one column', () => {
+    expect(stripCellOrigin(32, frame, 1)).toEqual({x: 0, y: 64});
   });
 });

@@ -62,6 +62,22 @@ export const CHARACTER_STRIP_BASE_FRAME =
   CHARACTER_STRIP_POSES['stand-right']!.count -
   1;
 
+/** Where frame `index` of a strip sits: cells row by row, wrapping at the
+    image width, as the engine cuts them. Every reader of a strip (the
+    frame row, the tile, the editor, the model's start image) cuts through
+    here, so they agree. */
+export function stripCellOrigin(
+  imageWidth: number,
+  frameSize: {x: number; y: number},
+  index: number
+): {x: number; y: number} {
+  const columns = Math.max(1, Math.floor(imageWidth / frameSize.x));
+  return {
+    x: (index % columns) * frameSize.x,
+    y: Math.floor(index / columns) * frameSize.y,
+  };
+}
+
 /** Right first: the left-facing frames are mirrored from the right ones. */
 export const CHARACTER_FACINGS: CharacterFacing[] = ['right', 'left'];
 

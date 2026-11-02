@@ -4,6 +4,8 @@
 import classNames from 'classnames';
 import React, {useEffect, useRef} from 'react';
 
+import {stripCellOrigin} from '../../characterAnimations';
+
 import {FRAME_LABELS, FRAME_ROW_ORDER, FrameSize} from './frames';
 
 import styles from './images-tab.module.scss';
@@ -35,14 +37,18 @@ const FrameTile: React.FunctionComponent<{
       if (cancelled) {
         return;
       }
-      const columns = Math.max(1, Math.floor(image.naturalWidth / frameSize.x));
+      const origin = stripCellOrigin(
+        image.naturalWidth,
+        {x: frameSize.x, y: frameSize.y},
+        index
+      );
       canvas.width = frameSize.x;
       canvas.height = frameSize.y;
       const ctx = canvas.getContext('2d');
       ctx?.drawImage(
         image,
-        (index % columns) * frameSize.x,
-        Math.floor(index / columns) * frameSize.y,
+        origin.x,
+        origin.y,
         frameSize.x,
         frameSize.y,
         0,
