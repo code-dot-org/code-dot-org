@@ -590,7 +590,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       picture={{
         src: chosenPicture.dataURI,
         pixelated: !!chosenPicture.result.pixelGridSize,
-        sheet,
+        sheet: sheet && {frameSize: sheet.frameSize},
       }}
       disabled={busy}
       compact={compactBehindTheScenes}

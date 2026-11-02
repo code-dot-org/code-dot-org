@@ -9,8 +9,6 @@ import {Button as MuiButton, IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {useState} from 'react';
 
-import AnimatedSheetPreview from '../AnimatedSheetPreview';
-
 import {POSE_MARK, SentPrompts} from '../../sentence/sentPrompts';
 
 import styles from './behind-the-scenes.module.scss';
@@ -24,12 +22,12 @@ type View = (typeof VIEWS)[number][0];
 // Pose names as students read them.
 const POSE_NAMES: Record<string, string> = {idling: 'standing'};
 
-/** The picture the words made, shown beside them. */
+/** The picture the words made, shown small beside them. */
 export interface BehindTheScenesPicture {
   src: string;
   pixelated?: boolean;
-  /** A character set: its frames cycle instead of the whole strip. */
-  sheet?: React.ComponentProps<typeof AnimatedSheetPreview> | null;
+  /** A character set: the strip's first frame stands for it, still. */
+  sheet?: {frameSize: {x: number; y: number}} | null;
 }
 
 interface BehindTheScenesProps {
@@ -116,40 +114,42 @@ const BehindTheScenes: React.FunctionComponent<BehindTheScenesProps> = ({
           className={styles.dialog}
           customContent={
             <div className={styles.body}>
-              {picture && (
-                <div
-                  className={classNames(
-                    styles.picture,
-                    picture.pixelated && styles.pixelArt
-                  )}
-                >
-                  {picture.sheet ? (
-                    <AnimatedSheetPreview {...picture.sheet} />
-                  ) : (
-                    <img src={picture.src} alt="" />
-                  )}
-                </div>
-              )}
-              <div className={styles.words}>
+              <div className={styles.lead}>
+                {picture && (
+                  <div
+                    className={classNames(
+                      styles.thumb,
+                      picture.pixelated && styles.pixelArt
+                    )}
+                    style={{
+                      backgroundImage: `url(${picture.src})`,
+                      // A strip's first frame fills the box; the rest lies
+                      // off its right edge.
+                      backgroundSize: picture.sheet ? 'auto 100%' : 'contain',
+                    }}
+                    aria-hidden
+                  />
+                )}
                 <p id="dsco-dialog-description" className={styles.intro}>
                   We sent the AI these words. It made a picture to match them.
                   The first sentence is yours; the rest is what the lab adds
                   every time.
                 </p>
-                {sent.poses && (
-                  <SegmentedButtons
-                    size="s"
-                    className={styles.views}
-                    buttons={VIEWS.map(([value, label]) => ({value, label}))}
-                    selectedButtonValue={view}
-                    onChange={value => setView(value as View)}
-                  />
-                )}
-                {/* A scrolling box; the browser lets the keyboard reach it. */}
-                <div className={styles.promptFrame}>{words}</div>
               </div>
+              {sent.poses && (
+                <SegmentedButtons
+                  size="s"
+                  className={styles.views}
+                  buttons={VIEWS.map(([value, label]) => ({value, label}))}
+                  selectedButtonValue={view}
+                  onChange={value => setView(value as View)}
+                />
+              )}
+              {/* A scrolling box; the browser lets the keyboard reach it. */}
+              <div className={styles.promptFrame}>{words}</div>
             </div>
           }
+          onClose={() => setOpen(false)}
           primaryButtonProps={{
             children: 'Got it',
             onClick: () => setOpen(false),

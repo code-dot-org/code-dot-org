@@ -25,12 +25,20 @@ describe('BehindTheScenes', () => {
     const dialog = screen.getByRole('alertdialog');
     expect(dialog.textContent).toContain('Behind the scenes');
     expect(screen.getByText(/^A cat\. /).textContent).toContain('pixel');
-    expect(dialog.querySelector('img')?.getAttribute('src')).toBe(
-      'data:image/png;base64,AA=='
-    );
+    expect(
+      (dialog.querySelector('[class*="thumb"]') as HTMLElement).style
+        .backgroundImage
+    ).toContain('data:image/png;base64,AA==');
     // One picture: no second view to switch to.
     expect(screen.queryByRole('button', {name: 'Other poses'})).toBeNull();
     fireEvent.click(screen.getByRole('button', {name: 'Got it'}));
+    expect(screen.queryByRole('alertdialog')).toBeNull();
+  });
+
+  it('closes on the corner x as well', () => {
+    renderBehind({sent: sentPromptsFor('A cat', OPTIONS, 'pixel', false)});
+    fireEvent.click(screen.getByRole('button', {name: 'Behind the scenes'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Close dialog'}));
     expect(screen.queryByRole('alertdialog')).toBeNull();
   });
 
