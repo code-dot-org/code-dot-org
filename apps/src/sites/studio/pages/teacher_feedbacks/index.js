@@ -16,9 +16,6 @@ function showFeedback() {
     <Provider store={getStore()}>
       <AllFeedbacks feedbacksByLevel={feedbackData.all_feedbacks_by_level} />
     </Provider>,
-    document.getElementById('feedback-container'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.getElementById('feedback-container')
   );
 }

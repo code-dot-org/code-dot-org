@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-10-26 21:34:49 UTC",
+    "serialized_at": "2026-10-29 23:09:03 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -36,7 +36,7 @@
   "lessons": [
     {
       "key": "lesson-1",
-      "name": "Lesson 1",
+      "name": "AI Foundations CCSD Staff-Development Day Workshop",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -45,6 +45,21 @@
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ccsd-aif-workshop"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Unit 6 Project",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "ccsd-aif-workshop"
       }
@@ -62,18 +77,128 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "ccsd-aif-workshop"
       }
+    },
+    {
+      "key": "d3a28fc5-d094-4b55-851d-d5491074a5b9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d3a28fc5-d094-4b55-851d-d5491074a5b9",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ccsd-aif-workshop"
+      }
     }
   ],
   "activity_sections": [
     {
-      "key": "9f930dda-dd5d-494f-a9ed-fcf9136def13",
+      "key": "7d240f69-60ee-428c-8fd8-3b9a276cd24a",
       "position": 1,
       "properties": {
-        "progression_name": "U1L9"
+        "progression_name": "Semester 1 Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "7d240f69-60ee-428c-8fd8-3b9a276cd24a",
+        "lesson_activity.key": "e786d756-ec98-4cef-98d1-672a3c52c33b"
+      }
+    },
+    {
+      "key": "9f930dda-dd5d-494f-a9ed-fcf9136def13",
+      "position": 2,
+      "properties": {
+        "progression_name": "U1L5: Uncovering Contradictions - Try Your Own"
       },
       "seeding_key": {
         "activity_section.key": "9f930dda-dd5d-494f-a9ed-fcf9136def13",
         "lesson_activity.key": "e786d756-ec98-4cef-98d1-672a3c52c33b"
+      }
+    },
+    {
+      "key": "9bbcd3b2-5434-4551-b79c-31dcdf0be86b",
+      "position": 3,
+      "properties": {
+        "progression_name": "U2L2: Investigating Computer Hardware"
+      },
+      "seeding_key": {
+        "activity_section.key": "9bbcd3b2-5434-4551-b79c-31dcdf0be86b",
+        "lesson_activity.key": "e786d756-ec98-4cef-98d1-672a3c52c33b"
+      }
+    },
+    {
+      "key": "609592a0-5f2f-4c32-9c4a-ac569cf078b5",
+      "position": 4,
+      "properties": {
+        "progression_name": "U3L3: Identify, Defend, Reflect!"
+      },
+      "seeding_key": {
+        "activity_section.key": "609592a0-5f2f-4c32-9c4a-ac569cf078b5",
+        "lesson_activity.key": "e786d756-ec98-4cef-98d1-672a3c52c33b"
+      }
+    },
+    {
+      "key": "0276fbd8-783e-4f45-944e-40db86048cc1",
+      "position": 5,
+      "properties": {
+        "progression_name": "U4L4: Create a Script for a Deep Fake"
+      },
+      "seeding_key": {
+        "activity_section.key": "0276fbd8-783e-4f45-944e-40db86048cc1",
+        "lesson_activity.key": "e786d756-ec98-4cef-98d1-672a3c52c33b"
+      }
+    },
+    {
+      "key": "663748c0-7a8b-4982-a34c-047414f4768f",
+      "position": 6,
+      "properties": {
+        "progression_name": "U5L2: Analyze Data with AI"
+      },
+      "seeding_key": {
+        "activity_section.key": "663748c0-7a8b-4982-a34c-047414f4768f",
+        "lesson_activity.key": "e786d756-ec98-4cef-98d1-672a3c52c33b"
+      }
+    },
+    {
+      "key": "4477199f-8053-42fb-bdda-e646524b71d8",
+      "position": 7,
+      "properties": {
+        "progression_name": "U6L11: From Wireframes to Layouts"
+      },
+      "seeding_key": {
+        "activity_section.key": "4477199f-8053-42fb-bdda-e646524b71d8",
+        "lesson_activity.key": "e786d756-ec98-4cef-98d1-672a3c52c33b"
+      }
+    },
+    {
+      "key": "2d6b8836-c81b-4471-980f-36a671e4c6ac",
+      "position": 8,
+      "properties": {
+        "progression_name": "Semester 1 & 2 Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "2d6b8836-c81b-4471-980f-36a671e4c6ac",
+        "lesson_activity.key": "e786d756-ec98-4cef-98d1-672a3c52c33b"
+      }
+    },
+    {
+      "key": "e184cfe4-0637-409a-83b4-96a4f4d8f409",
+      "position": 9,
+      "properties": {
+        "progression_name": "Course Resources & Links"
+      },
+      "seeding_key": {
+        "activity_section.key": "e184cfe4-0637-409a-83b4-96a4f4d8f409",
+        "lesson_activity.key": "e786d756-ec98-4cef-98d1-672a3c52c33b"
+      }
+    },
+    {
+      "key": "6a067e2c-b1c9-4591-a5f4-605c565ea594",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "6a067e2c-b1c9-4591-a5f4-605c565ea594",
+        "lesson_activity.key": "d3a28fc5-d094-4b55-851d-d5491074a5b9"
       }
     }
   ],
@@ -84,12 +209,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "U1L9"
+        "progression": "U1L5: Uncovering Contradictions - Try Your Own"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ccsd-aif-workshop-U1"
+          "ccsd-aif-workshop-u1l5l5"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "lessonGroup-2",
@@ -97,21 +222,593 @@
         "activity_section.key": "9f930dda-dd5d-494f-a9ed-fcf9136def13"
       },
       "level_keys": [
-        "ccsd-aif-workshop-U1"
+        "ccsd-aif-workshop-u1l5l5"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "U2L2: Investigating Computer Hardware"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ccsd-aif-workshop-u2-l2-l1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ccsd-aif-workshop",
+        "activity_section.key": "9bbcd3b2-5434-4551-b79c-31dcdf0be86b"
+      },
+      "level_keys": [
+        "ccsd-aif-workshop-u2-l2-l1"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "U3L3: Identify, Defend, Reflect!"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ccsd-aif-workshop-U3"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ccsd-aif-workshop",
+        "activity_section.key": "609592a0-5f2f-4c32-9c4a-ac569cf078b5"
+      },
+      "level_keys": [
+        "ccsd-aif-workshop-U3"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "U4L4: Create a Script for a Deep Fake"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ccsd-aif-workshop-u4-l4-l5"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ccsd-aif-workshop",
+        "activity_section.key": "0276fbd8-783e-4f45-944e-40db86048cc1"
+      },
+      "level_keys": [
+        "ccsd-aif-workshop-u4-l4-l5"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "U5L2: Analyze Data with AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ccsd-aif-workshop-u5-l2-l1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ccsd-aif-workshop",
+        "activity_section.key": "663748c0-7a8b-4982-a34c-047414f4768f"
+      },
+      "level_keys": [
+        "ccsd-aif-workshop-u5-l2-l1"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "U5L2: Analyze Data with AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ccsd-aif-workshop-u5-l2-l2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ccsd-aif-workshop",
+        "activity_section.key": "663748c0-7a8b-4982-a34c-047414f4768f"
+      },
+      "level_keys": [
+        "ccsd-aif-workshop-u5-l2-l2"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "U5L2: Analyze Data with AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ccsd-aif-workshop-u5-l2-l3"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ccsd-aif-workshop",
+        "activity_section.key": "663748c0-7a8b-4982-a34c-047414f4768f"
+      },
+      "level_keys": [
+        "ccsd-aif-workshop-u5-l2-l3"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "U5L2: Analyze Data with AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ccsd-aif-workshop-u5-l2-l4"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ccsd-aif-workshop",
+        "activity_section.key": "663748c0-7a8b-4982-a34c-047414f4768f"
+      },
+      "level_keys": [
+        "ccsd-aif-workshop-u5-l2-l4"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "U6L11: From Wireframes to Layouts"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ccsd-aif-workshop-u6-l11-l1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ccsd-aif-workshop",
+        "activity_section.key": "4477199f-8053-42fb-bdda-e646524b71d8"
+      },
+      "level_keys": [
+        "ccsd-aif-workshop-u6-l11-l1"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Semester 1 & 2 Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ccsd-aif-workshop-u1-overview"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ccsd-aif-workshop",
+        "activity_section.key": "2d6b8836-c81b-4471-980f-36a671e4c6ac"
+      },
+      "level_keys": [
+        "ccsd-aif-workshop-u1-overview"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Semester 1 & 2 Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ccsd-aif-workshop-u2-overview"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ccsd-aif-workshop",
+        "activity_section.key": "2d6b8836-c81b-4471-980f-36a671e4c6ac"
+      },
+      "level_keys": [
+        "ccsd-aif-workshop-u2-overview"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Resources & Links"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ccsd-aif-workshop-course-link"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ccsd-aif-workshop",
+        "activity_section.key": "e184cfe4-0637-409a-83b4-96a4f4d8f409"
+      },
+      "level_keys": [
+        "ccsd-aif-workshop-course-link"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson13-weblab-template-test_2026"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ccsd-aif-workshop",
+        "activity_section.key": "6a067e2c-b1c9-4591-a5f4-605c565ea594"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson13-weblab-template-test_2026"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson13-brandkit_2026"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ccsd-aif-workshop",
+        "activity_section.key": "6a067e2c-b1c9-4591-a5f4-605c565ea594"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson13-brandkit_2026"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson13-sitemap_2026"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ccsd-aif-workshop",
+        "activity_section.key": "6a067e2c-b1c9-4591-a5f4-605c565ea594"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson13-sitemap_2026"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson13-level1_2026"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ccsd-aif-workshop",
+        "activity_section.key": "6a067e2c-b1c9-4591-a5f4-605c565ea594"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson13-level1_2026"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson13-level2_2026"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ccsd-aif-workshop",
+        "activity_section.key": "6a067e2c-b1c9-4591-a5f4-605c565ea594"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson13-level2_2026"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson13-level4_2026"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ccsd-aif-workshop",
+        "activity_section.key": "6a067e2c-b1c9-4591-a5f4-605c565ea594"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson13-level4_2026"
       ]
     }
   ],
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "ccsd-aif-workshop-U1",
+        "level.key": "ccsd-aif-workshop-u1l5l5",
         "script_level.level_keys": [
-          "ccsd-aif-workshop-U1"
+          "ccsd-aif-workshop-u1l5l5"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "ccsd-aif-workshop",
         "activity_section.key": "9f930dda-dd5d-494f-a9ed-fcf9136def13"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ccsd-aif-workshop-u2-l2-l1",
+        "script_level.level_keys": [
+          "ccsd-aif-workshop-u2-l2-l1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ccsd-aif-workshop",
+        "activity_section.key": "9bbcd3b2-5434-4551-b79c-31dcdf0be86b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ccsd-aif-workshop-U3",
+        "script_level.level_keys": [
+          "ccsd-aif-workshop-U3"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ccsd-aif-workshop",
+        "activity_section.key": "609592a0-5f2f-4c32-9c4a-ac569cf078b5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ccsd-aif-workshop-u4-l4-l5",
+        "script_level.level_keys": [
+          "ccsd-aif-workshop-u4-l4-l5"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ccsd-aif-workshop",
+        "activity_section.key": "0276fbd8-783e-4f45-944e-40db86048cc1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ccsd-aif-workshop-u5-l2-l1",
+        "script_level.level_keys": [
+          "ccsd-aif-workshop-u5-l2-l1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ccsd-aif-workshop",
+        "activity_section.key": "663748c0-7a8b-4982-a34c-047414f4768f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ccsd-aif-workshop-u5-l2-l2",
+        "script_level.level_keys": [
+          "ccsd-aif-workshop-u5-l2-l2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ccsd-aif-workshop",
+        "activity_section.key": "663748c0-7a8b-4982-a34c-047414f4768f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ccsd-aif-workshop-u5-l2-l3",
+        "script_level.level_keys": [
+          "ccsd-aif-workshop-u5-l2-l3"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ccsd-aif-workshop",
+        "activity_section.key": "663748c0-7a8b-4982-a34c-047414f4768f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ccsd-aif-workshop-u5-l2-l4",
+        "script_level.level_keys": [
+          "ccsd-aif-workshop-u5-l2-l4"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ccsd-aif-workshop",
+        "activity_section.key": "663748c0-7a8b-4982-a34c-047414f4768f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ccsd-aif-workshop-u6-l11-l1",
+        "script_level.level_keys": [
+          "ccsd-aif-workshop-u6-l11-l1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ccsd-aif-workshop",
+        "activity_section.key": "4477199f-8053-42fb-bdda-e646524b71d8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ccsd-aif-workshop-u1-overview",
+        "script_level.level_keys": [
+          "ccsd-aif-workshop-u1-overview"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ccsd-aif-workshop",
+        "activity_section.key": "2d6b8836-c81b-4471-980f-36a671e4c6ac"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ccsd-aif-workshop-u2-overview",
+        "script_level.level_keys": [
+          "ccsd-aif-workshop-u2-overview"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ccsd-aif-workshop",
+        "activity_section.key": "2d6b8836-c81b-4471-980f-36a671e4c6ac"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ccsd-aif-workshop-course-link",
+        "script_level.level_keys": [
+          "ccsd-aif-workshop-course-link"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ccsd-aif-workshop",
+        "activity_section.key": "e184cfe4-0637-409a-83b4-96a4f4d8f409"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson13-weblab-template-test_2026",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson13-weblab-template-test_2026"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ccsd-aif-workshop",
+        "activity_section.key": "6a067e2c-b1c9-4591-a5f4-605c565ea594"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson13-brandkit_2026",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson13-brandkit_2026"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ccsd-aif-workshop",
+        "activity_section.key": "6a067e2c-b1c9-4591-a5f4-605c565ea594"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson13-sitemap_2026",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson13-sitemap_2026"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ccsd-aif-workshop",
+        "activity_section.key": "6a067e2c-b1c9-4591-a5f4-605c565ea594"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson13-level1_2026",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson13-level1_2026"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ccsd-aif-workshop",
+        "activity_section.key": "6a067e2c-b1c9-4591-a5f4-605c565ea594"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson13-level2_2026",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson13-level2_2026"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ccsd-aif-workshop",
+        "activity_section.key": "6a067e2c-b1c9-4591-a5f4-605c565ea594"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson13-level4_2026",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson13-level4_2026"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ccsd-aif-workshop",
+        "activity_section.key": "6a067e2c-b1c9-4591-a5f4-605c565ea594"
       }
     }
   ],

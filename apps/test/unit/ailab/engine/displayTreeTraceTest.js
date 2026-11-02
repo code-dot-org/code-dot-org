@@ -11,6 +11,7 @@ import {
 } from '@cdo/apps/ailab/engine/helpers/displayTreeTrace';
 import {getConvertedPredictedLabel} from '@cdo/apps/ailab/engine/helpers/valueConversion';
 import {playPredictionStep, setTestData} from '@cdo/apps/ailab/engine/redux';
+import {getData} from '@cdo/apps/ailab/engine/selectors';
 import {
   getDisplayTree,
   getDisplayTreeCounts,
@@ -34,7 +35,7 @@ describe('traceDisplayTree on a shipped dataset', () => {
 
     rowTraces(state, project, trainedModel).forEach(
       ({path, steps}, rowIndex) => {
-        const row = state.data[rowIndex];
+        const row = getData(state)[rowIndex];
 
         expect(steps.length).toBeGreaterThan(0);
         expect(path).toHaveLength(steps.length + 1);
@@ -287,7 +288,7 @@ describe('getPredictionTrace', () => {
 
   test('is the trace of the values the student predicted with', () => {
     const {state, project, trainedModel} = trainDataset('zoo', zooOptions);
-    const row = state.data[0];
+    const row = getData(state)[0];
     expect(getPredictionTrace(state, project, trainedModel)).toBeUndefined();
 
     const predicted = predictWith(

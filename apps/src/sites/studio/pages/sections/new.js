@@ -31,10 +31,7 @@ $(document).ready(() => {
         />
       </Provider>
     </div>,
-    document.getElementById('form'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.getElementById('form')
   );
   resumeCreateSectionOnboardingTour();
   displayDifferentiationChat();

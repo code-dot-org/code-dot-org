@@ -2,24 +2,25 @@ import {act, fireEvent, screen} from '@testing-library/react';
 import {createElement} from 'react';
 import {createStore} from 'redux';
 
-import {parseCSV} from '@cdo/apps/ailab/engine/csvReaderWrapper';
 import {getAvailableDatasets} from '@cdo/apps/ailab/engine/datasetManifest';
 import I18n from '@cdo/apps/ailab/engine/i18n';
+import {loadUploadedDataset} from '@cdo/apps/ailab/engine/loadDataset';
 import rootReducer, {
   setInvalidData,
+  setMode,
   setSelectedCSV,
 } from '@cdo/apps/ailab/engine/redux';
 import SelectDataset from '@cdo/apps/ailab/engine/UIComponents/SelectDataset';
 
 import {renderWithProviders} from './renderWithProviders';
 
-jest.mock('@cdo/apps/ailab/engine/csvReaderWrapper');
 jest.mock('@cdo/apps/ailab/engine/loadDataset');
 
 const UPLOAD_NAME = 'mydataset.csv';
 
-function renderPicker(csvfile) {
+function renderPicker(csvfile, mode) {
   const store = createStore(rootReducer);
+  store.dispatch(setMode(mode));
   if (csvfile) {
     store.dispatch(setSelectedCSV(csvfile));
   }
@@ -55,7 +56,7 @@ describe('SelectDataset', () => {
       target: {files: [file]},
     });
     expect(store.getState().csvfile).toBe(file);
-    expect(parseCSV).toHaveBeenCalledWith(file, false, true);
+    expect(loadUploadedDataset).toHaveBeenCalledWith(file);
     expect(chip().getAttribute('aria-pressed')).toBe('true');
   });
 
@@ -72,7 +73,7 @@ describe('SelectDataset', () => {
     clickFirstTile();
     fireEvent.click(chip());
     expect(store.getState().csvfile).toBe(file);
-    expect(parseCSV).toHaveBeenCalledWith(file, false, true);
+    expect(loadUploadedDataset).toHaveBeenCalledWith(file);
   });
 
   test('clears the selected upload on remove', () => {
@@ -100,5 +101,29 @@ describe('SelectDataset', () => {
     expect(removeButton()).toBeNull();
     clickFirstTile();
     expect(removeButton()).toBeNull();
+  });
+
+  test('reports a failed load in a level that offers no upload', () => {
+    const datasets = getAvailableDatasets()
+      .slice(0, 2)
+      .map(dataset => dataset.id);
+    const {store} = renderPicker('datasets/songs.csv', {datasets});
+    expect(screen.queryByRole('button', {name: /^Upload/})).toBeNull();
+    act(() => store.dispatch(setInvalidData('loadFailed')));
+    expect(screen.getByRole('alert').textContent).toBe(
+      'This dataset could not be loaded. Try another one.'
+    );
+  });
+
+  test('keeps a valid upload when one of our datasets fails', () => {
+    const {store} = renderPicker(new File(['a,b\n1,2'], UPLOAD_NAME));
+    clickFirstTile();
+    act(() => store.dispatch(setInvalidData('loadFailed')));
+    expect(chip().getAttribute('aria-pressed')).toBe('false');
+
+    fireEvent.click(
+      screen.getByText(getAvailableDatasets()[1].name).closest('button')
+    );
+    expect(chip()).toBeTruthy();
   });
 });

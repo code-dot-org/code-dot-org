@@ -1,16 +1,15 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import RadioButton from '@code-dot-org/component-library/radioButton';
-import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
 import {QuizQuestionSummary} from '../types';
-import {formatChoiceLetter} from '../utils';
 
 import AttemptCard from './AttemptCard';
+import ChoiceLabel from './ChoiceLabel';
 import QuestionDescription from './QuestionDescription';
 
-import styles from './multi-choice-question-container.module.scss';
+import styles from './choice-question-container.module.scss';
 
 export interface MultiChoiceQuestionContainerProps {
   question: Omit<QuizQuestionSummary, 'page'>;
@@ -69,12 +68,7 @@ const MultiChoiceQuestionContainer: React.FunctionComponent<
                 styles.optionIncorrect
             )}
           >
-            <Typography variant="body2" component="span">
-              <span className={styles.optionLetter}>
-                {formatChoiceLetter(index)}.
-              </span>{' '}
-              {choice.text}
-            </Typography>
+            <ChoiceLabel index={index} text={choice.text} />
             {isSelected && selectedChoiceStatus && (
               <>
                 <FontAwesomeV6Icon

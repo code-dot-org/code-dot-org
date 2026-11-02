@@ -47,6 +47,7 @@ import type {DisplayTreeNodeCounts} from '../helpers/displayTreeTrace';
 import {useAppDispatch, useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
 import {setPredictionPlaying} from '../redux';
+import {getDatasetId} from '../selectors';
 import {
   getDisplayTree,
   getDisplayTreeCounts,
@@ -176,7 +177,7 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
   const counts = useAppSelector(state =>
     getDisplayTreeCounts(state, project, trainedModel)
   );
-  const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
+  const datasetId = useAppSelector(state => getDatasetId(state) || 'unknown');
   const layout = useMemo(
     () =>
       tree

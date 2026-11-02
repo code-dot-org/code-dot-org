@@ -5,7 +5,7 @@ import {getColumnRole, getLocalizedColumnName} from '../helpers/columnDetails';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
-import {getIdColumn} from '../selectors';
+import {getDatasetId, getIdColumn} from '../selectors';
 import type {DataRow} from '../types';
 
 import styles from './datasetRowCard.module.scss';
@@ -18,7 +18,7 @@ interface DatasetRowCardProps {
 }
 
 const DatasetRowCard = ({isCurrent, rowNumber, row}: DatasetRowCardProps) => {
-  const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
+  const datasetId = useAppSelector(state => getDatasetId(state) || 'unknown');
   const idColumn = useAppSelector(getIdColumn);
   const name =
     idColumn && row[idColumn] !== ''

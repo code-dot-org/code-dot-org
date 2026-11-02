@@ -1,14 +1,12 @@
 import fs from 'fs';
 import path from 'path';
 
-import {parseCSV} from '@cdo/apps/ailab/engine/csvReaderWrapper';
+import {parseCsvText} from '@cdo/apps/ailab/engine/csvReaderWrapper';
 import {
   getRawDatasets,
   localizeDatasets,
 } from '@cdo/apps/ailab/engine/datasetManifest';
 import I18n from '@cdo/apps/ailab/engine/i18n';
-import {resetState} from '@cdo/apps/ailab/engine/redux';
-import {store} from '@cdo/apps/ailab/engine/store';
 
 import {
   premadeDatasets,
@@ -45,9 +43,7 @@ describe('datasetManifest rowCount', () => {
     '%s matches the rows its CSV loads',
     async (_id, dataset) => {
       const csv = fs.readFileSync(path.join(assetDir, dataset.path), 'utf8');
-      store.dispatch(resetState());
-      await parseCSV(csv, false, false);
-      expect(store.getState().data.length).toBe(dataset.rowCount);
+      expect(parseCsvText(csv).rows.length).toBe(dataset.rowCount);
     }
   );
 });

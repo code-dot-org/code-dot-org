@@ -3017,6 +3017,14 @@ class UserTest < ActiveSupport::TestCase
     refute student.reload.sharing_disabled
   end
 
+  test 'teachers cannot have sharing disabled' do
+    teacher = create(:teacher, sharing_disabled: true)
+    refute teacher.reload.sharing_disabled
+
+    teacher.update!(sharing_disabled: true)
+    refute teacher.reload.sharing_disabled
+  end
+
   test 'students share setting updates after turning 13 if they are in no sections' do
     # create a birthday 12 years ago
     birthday = Time.zone.today - (12 * 365)

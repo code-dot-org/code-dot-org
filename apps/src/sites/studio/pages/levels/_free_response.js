@@ -24,10 +24,7 @@ $(document).ready(() => {
           <SummaryEntryPoint scriptData={scriptData} />
         </InstructorsOnly>
       </Provider>,
-      container,
-      {
-        legacyReactDomRender: true,
-      }
+      container
     );
   });
 
@@ -39,10 +36,7 @@ $(document).ready(() => {
 
     createReactRoot(
       React.createElement(SafeMarkdown, container.dataset, null),
-      container,
-      {
-        legacyReactDomRender: true,
-      }
+      container
     );
   });
 
@@ -62,10 +56,7 @@ $(document).ready(() => {
         showUnderageWarning={!appOptions.is13Plus}
         {...attachmentsProps}
       />,
-      attachmentsMountPoint,
-      {
-        legacyReactDomRender: true,
-      }
+      attachmentsMountPoint
     );
   }
 });

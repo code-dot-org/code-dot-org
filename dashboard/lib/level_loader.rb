@@ -1,11 +1,10 @@
 require 'set'
 
 class LevelLoader
-  # Top-level entry point, called by rake seed:custom_levels and
-  # seed:custom_levels_ui_tests. With a level_name, the partition is chosen by
-  # the name's "UI Test " prefix; without one, `partition` picks which
-  # partition's levels to load (:production or :ui_test). See
-  # dashboard/test/ui/config/README.md.
+  # Top-level entry point. With a level_name, the partition is chosen by the
+  # name; without one, `partition` picks which partition's levels to load (a
+  # Policies::LevelFiles::LEVELS_SUBDIR key). See
+  # dashboard/config/PARTITIONS.md.
   def self.load_custom_levels(level_name, root_dir, partition: nil)
     import_levels(Policies::LevelFiles.level_file_glob(level_name, root_dir, partition: partition), level_name: level_name)
   end
@@ -38,17 +37,19 @@ class LevelLoader
       return
     end
 
-    # A file must sit in the tree its level name selects, or seeding the
-    # other tree would quietly pick it up; see
-    # dashboard/test/ui/config/README.md.
-    misfiled = level_file_paths.reject do |path|
-      name = Policies::LevelFiles.level_name_from_path(path)
-      Policies::LevelFiles.partition_for_name(name) == Policies::LevelFiles.partition_for_path(path)
+    # A file must sit in the tree its level name selects, or seeding another
+    # tree would quietly pick it up; see dashboard/config/PARTITIONS.md.
+    subdirs = Policies::LevelFiles::LEVELS_SUBDIR
+    misfiled = level_file_paths.filter_map do |path|
+      from = Policies::LevelFiles.partition_for_path(path)
+      to = Policies::LevelFiles.partition_for_name(Policies::LevelFiles.level_name_from_path(path))
+      "git mv #{path.dump} #{path.sub(subdirs[from], subdirs[to]).dump}" unless from == to
     end
     if misfiled.any?
-      raise "level files misfiled: \"UI Test \" levels belong under " \
-        "#{Policies::LevelFiles::LEVELS_SUBDIR[:ui_test]}, all others under " \
-        "#{Policies::LevelFiles::LEVELS_SUBDIR[:production]}. Misfiled: #{misfiled.join(', ')}"
+      raise "level files misfiled: \"UI Test \" levels belong under #{subdirs[:ui_test_curriculum]}, " \
+        "standalone project levels (\"New ... Project\", \"... Subproject\") under " \
+        "#{subdirs[:standalone_projects]}, all others under #{subdirs[:production_curriculum]}. " \
+        "To fix:\n#{misfiled.join("\n")}"
     end
 
     # Use a transaction because loading levels requires two separate imports.

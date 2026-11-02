@@ -1,0 +1,28 @@
+@keyframes spotlight-in {
+  from {
+    opacity: 0;
+  }
+}
+
+.spotlight {
+  position: fixed;
+  // Below MUI dialogs (1300), so a dialog opened over it stays usable.
+  z-index: 1250;
+  border-radius: 4px;
+  // The spread covers the viewport from wherever the target sits.
+  box-shadow: 0 0 0 100vmax rgb(0 0 0 / 0.5);
+  pointer-events: none;
+  animation: spotlight-in 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.fading {
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spotlight {
+    animation: none;
+    transition: none;
+  }
+}

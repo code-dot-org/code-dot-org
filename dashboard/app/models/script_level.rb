@@ -66,6 +66,7 @@ class ScriptLevel < ApplicationRecord
   belongs_to :activity_section, optional: true
 
   has_and_belongs_to_many :levels
+  has_and_belongs_to_many :objectives
   has_many :callouts, inverse_of: :script_level
   has_many :levels_script_levels # join table. we need this association for seeding logic
 
@@ -95,7 +96,12 @@ class ScriptLevel < ApplicationRecord
   end
 
   # A unit and the levels it references must be on the same side of the
-  # "UI Test " partition. See dashboard/test/ui/config/README.md.
+  # "UI Test " partition. See dashboard/config/PARTITIONS.md.
+  #
+  # For now, the rule is not enforced between the standalone projects partition
+  # and the production partition, because there are still some production units
+  # containing standalone project levels. Once the data is cleaned up, this rule
+  # can be enforced across all partitions.
   def levels_stay_within_ui_test_partition
     offending = cross_partition_level_keys(level_keys || [])
     return if offending.empty?

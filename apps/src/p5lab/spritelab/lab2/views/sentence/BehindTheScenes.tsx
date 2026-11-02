@@ -3,7 +3,11 @@
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Popover from '@code-dot-org/component-library/popover';
+import Tabs from '@code-dot-org/component-library/tabs';
+import {Button as MuiButton} from '@mui/material';
 import React, {useLayoutEffect, useRef, useState} from 'react';
+
+import useThemeMode from '@cdo/apps/pixelEditor/useThemeMode';
 
 import {POSE_MARK, SentPrompts} from './sentPrompts';
 
@@ -33,6 +37,7 @@ const BehindTheScenes: React.FunctionComponent<BehindTheScenesProps> = ({
   disabled,
 }) => {
   const [open, setOpen] = useState(false);
+  const mode = useThemeMode();
   const [tab, setTab] = useState<Tab>('picture');
   const linkRef = useRef<HTMLButtonElement>(null);
   const rowRef = useRef<HTMLDivElement>(null);
@@ -41,6 +46,7 @@ const BehindTheScenes: React.FunctionComponent<BehindTheScenesProps> = ({
     setOpen(false);
     linkRef.current?.focus();
   };
+  // The tabs component has no arrow keys of its own.
   const onTabKeyDown = (e: React.KeyboardEvent) => {
     if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') {
       return;
@@ -100,10 +106,12 @@ const BehindTheScenes: React.FunctionComponent<BehindTheScenesProps> = ({
             } as React.CSSProperties)
       }
     >
-      <button
-        type="button"
+      <MuiButton
+        variant="text"
+        color="tertiary"
+        size="small"
         ref={linkRef}
-        className={styles.promptLink}
+        startIcon={<FontAwesomeV6Icon iconName="circle-info" aria-hidden />}
         aria-expanded={open}
         aria-controls={open ? PANEL_ID : undefined}
         disabled={disabled}
@@ -112,9 +120,8 @@ const BehindTheScenes: React.FunctionComponent<BehindTheScenesProps> = ({
           setOpen(current => !current);
         }}
       >
-        <FontAwesomeV6Icon iconName="circle-info" aria-hidden />
         {TITLE}
-      </button>
+      </MuiButton>
       {open && (
         <Popover
           id={PANEL_ID}
@@ -127,32 +134,28 @@ const BehindTheScenes: React.FunctionComponent<BehindTheScenesProps> = ({
           onClose={close}
         >
           {sent.poses && (
-            <div
-              className={styles.promptTabs}
-              role="tablist"
-              aria-label="Which words"
-            >
-              {TABS.map(([id, label]) => (
-                <button
-                  key={id}
-                  type="button"
-                  role="tab"
-                  id={`sentence-prompt-tab-${id}`}
-                  aria-selected={tab === id}
-                  aria-controls="sentence-prompt-panel"
-                  tabIndex={tab === id ? 0 : -1}
-                  className={styles.promptTab}
-                  onClick={() => setTab(id)}
-                  onKeyDown={onTabKeyDown}
-                >
-                  {label}
-                </button>
-              ))}
+            <div onKeyDown={onTabKeyDown}>
+              <Tabs
+                // Its ids: sentence-prompt-tab-<value> and -panel-<value>.
+                name="sentence-prompt"
+                size="s"
+                mode={mode}
+                tabListAriaLabel="Which words"
+                hidePanels
+                tabsContainerClassName={styles.promptTabs}
+                defaultSelectedTabValue={tab}
+                onChange={value => setTab(value as Tab)}
+                tabs={TABS.map(([id, label]) => ({
+                  value: id,
+                  text: label,
+                  tabContent: null,
+                }))}
+              />
             </div>
           )}
           {sent.poses && tab === 'poses' ? (
             <div
-              id="sentence-prompt-panel"
+              id="sentence-prompt-panel-poses"
               className={styles.promptText}
               role="tabpanel"
               aria-labelledby="sentence-prompt-tab-poses"
@@ -187,7 +190,7 @@ const BehindTheScenes: React.FunctionComponent<BehindTheScenesProps> = ({
             </div>
           ) : (
             <p
-              id="sentence-prompt-panel"
+              id="sentence-prompt-panel-picture"
               className={styles.promptText}
               role={sent.poses ? 'tabpanel' : undefined}
               aria-labelledby={

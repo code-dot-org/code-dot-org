@@ -8,6 +8,10 @@
 # - {String|nil} :default_image_url If present, set this as the thumbnail image
 #   url when creating a project of this type.
 # - {Boolean|nil} :i18n If present, include this level in the i18n sync
+#
+# The engineer must set level.is_project_level via `"is_project_level": true` in
+# a .level file, or `standalone` in a BubbleChoice DSL file. Levelbuilder has no
+# field for it.
 adaptations:
   name: New Adaptations Project
 artist:

@@ -103,7 +103,8 @@ function findLevelReuseProblems(pathway: Pathway): string[] {
  * Detects level steps whose `project` flag disagrees with their level: a
  * project step's level must share the pathway's project template, and a
  * sandbox step's must not (skipped when the level did not resolve), and
- * sandbox steps that ask for generated instructions or validation.
+ * sandbox steps that ask for generated instructions, a generated project or
+ * validation.
  */
 function findLevelStepProblems(pathway: Pathway): string[] {
   const problems: string[] = [];
@@ -115,6 +116,11 @@ function findLevelStepProblems(pathway: Pathway): string[] {
       if (step.instructionsPrompt && !step.project) {
         problems.push(
           `${where}: instructionsPrompt needs the student's project, so the step must be marked project`
+        );
+      }
+      if (step.projectPrompt && !step.project) {
+        problems.push(
+          `${where}: projectPrompt builds the student's project, so the step must be marked project`
         );
       }
       if (step.validation && !step.project) {

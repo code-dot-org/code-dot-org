@@ -4,6 +4,7 @@ import {
   getDisplayTreePath,
   thresholdText,
 } from '@cdo/apps/ailab/engine/helpers/displayTree';
+import {getData} from '@cdo/apps/ailab/engine/selectors';
 import {getDisplayTree} from '@cdo/apps/ailab/engine/selectors/visualizationSelectors';
 
 import {modelPredictions, rowTraces, trainDataset} from './trainedDataset';
@@ -43,7 +44,7 @@ describe('getDisplayTree on shipped datasets', () => {
 
       expect(tree).toBeDefined();
       expect(countQuestions(tree)).toBeGreaterThan(0);
-      expect(state.data.map(row => routeByLabels(tree, row))).toEqual(
+      expect(getData(state).map(row => routeByLabels(tree, row))).toEqual(
         traces.map(trace => trace.path)
       );
       expect(traces.map(trace => trace.prediction)).toEqual(

@@ -4,40 +4,47 @@ import MessageFormat from 'messageformat';
 
 import {defaultProject} from '@cdo/apps/ailab/engine/types';
 
+const withDataset = (rows, columnsByDataType, metadata = {card: {}}) => ({
+  dataset: {rows, metadata, columnsByDataType, removedRowsCount: 0},
+});
+
+export const regressionRows = [
+  {
+    sun: 'high',
+    height: 3.8,
+  },
+  {
+    sun: 'high',
+    height: 3.9,
+  },
+  {
+    sun: 'medium',
+    height: 2.6,
+  },
+  {
+    sun: 'medium',
+    height: 2.5,
+  },
+  {
+    sun: 'low',
+    height: 0.9,
+  },
+  {
+    sun: 'low',
+    height: 1.6,
+  },
+];
+
+export const regressionColumnTypes = {
+  height: 'numerical',
+  sun: 'categorical',
+};
+
 export const regressionState = {
-  data: [
-    {
-      sun: 'high',
-      height: 3.8,
-    },
-    {
-      sun: 'high',
-      height: 3.9,
-    },
-    {
-      sun: 'medium',
-      height: 2.6,
-    },
-    {
-      sun: 'medium',
-      height: 2.5,
-    },
-    {
-      sun: 'low',
-      height: 0.9,
-    },
-    {
-      sun: 'low',
-      height: 1.6,
-    },
-  ],
+  ...withDataset(regressionRows, regressionColumnTypes),
   accuracyCheckPredictedLabels: [4.0, 3.75, 2.63, 2.46, 1.6, 1.0],
   accuracyCheckLabels: [5.9, 3.8, 2.6, 2.5, 1.6, 0.7],
   accuracyCheckExamples: [[2], [2], [1], [1], [0], [0]],
-  columnsByDataType: {
-    height: 'numerical',
-    sun: 'categorical',
-  },
   featureNumberKey: {
     sun: {
       low: 0,
@@ -47,45 +54,48 @@ export const regressionState = {
   },
 };
 
-export const classificationState = {
-  data: [
-    {
-      weather: 'sunny',
-      temp: 'hot',
-      play: 'no',
-    },
-    {
-      weather: 'overcast',
-      temp: 'hot',
-      play: 'yes',
-    },
-    {
-      weather: 'overcast',
-      temp: 'mild',
-      play: 'yes',
-    },
-    {
-      weather: 'overcast',
-      temp: 'cool',
-      play: 'yes',
-    },
-    {
-      weather: 'rainy',
-      temp: 'mild',
-      play: 'yes',
-    },
-    {
-      weather: 'rainy',
-      temp: 'cool',
-      play: 'no',
-    },
-  ],
-  currentColumn: 'temp',
-  columnsByDataType: {
-    weather: 'categorical',
-    temp: 'categorical',
-    play: 'categorical',
+export const classificationRows = [
+  {
+    weather: 'sunny',
+    temp: 'hot',
+    play: 'no',
   },
+  {
+    weather: 'overcast',
+    temp: 'hot',
+    play: 'yes',
+  },
+  {
+    weather: 'overcast',
+    temp: 'mild',
+    play: 'yes',
+  },
+  {
+    weather: 'overcast',
+    temp: 'cool',
+    play: 'yes',
+  },
+  {
+    weather: 'rainy',
+    temp: 'mild',
+    play: 'yes',
+  },
+  {
+    weather: 'rainy',
+    temp: 'cool',
+    play: 'no',
+  },
+];
+
+export const classificationColumnTypes = {
+  weather: 'categorical',
+  temp: 'categorical',
+  play: 'categorical',
+};
+
+export const classificationState = {
+  ...withDataset(classificationRows, classificationColumnTypes),
+  currentColumn: 'temp',
   accuracyCheckLabels: [1, 0, 0, 0, 0, 1],
   accuracyCheckExamples: [
     [0, 2],
@@ -119,42 +129,45 @@ export const batCountMin = 40;
 export const mosquitoCountMax = 10;
 export const mosquitoCountMin = 1;
 
-export const allNumericalState = {
-  data: [
-    {
-      batCount: batCountMax,
-      mosquitoCount: mosquitoCountMin,
-    },
-    {
-      batCount: 90,
-      mosquitoCount: 2,
-    },
-    {
-      batCount: 80,
-      mosquitoCount: 3,
-    },
-    {
-      batCount: 70,
-      mosquitoCount: 4,
-    },
-    {
-      batCount: 60,
-      mosquitoCount: 5,
-    },
-    {
-      batCount: 50,
-      mosquitoCount: 6,
-    },
-    {
-      batCount: batCountMin,
-      mosquitoCount: mosquitoCountMax,
-    },
-  ],
-  currentColumn: 'batCount',
-  columnsByDataType: {
-    batCount: 'numerical',
-    mosquitoCount: 'numerical',
+export const allNumericalRows = [
+  {
+    batCount: batCountMax,
+    mosquitoCount: mosquitoCountMin,
   },
+  {
+    batCount: 90,
+    mosquitoCount: 2,
+  },
+  {
+    batCount: 80,
+    mosquitoCount: 3,
+  },
+  {
+    batCount: 70,
+    mosquitoCount: 4,
+  },
+  {
+    batCount: 60,
+    mosquitoCount: 5,
+  },
+  {
+    batCount: 50,
+    mosquitoCount: 6,
+  },
+  {
+    batCount: batCountMin,
+    mosquitoCount: mosquitoCountMax,
+  },
+];
+
+export const allNumericalColumnTypes = {
+  batCount: 'numerical',
+  mosquitoCount: 'numerical',
+};
+
+export const allNumericalState = {
+  ...withDataset(allNumericalRows, allNumericalColumnTypes),
+  currentColumn: 'batCount',
 };
 
 export const premadeDatasetId = 'bats_eat_mozzies';
@@ -176,8 +189,7 @@ export const batDatasetMisusesLocalized =
 
 export const premadeDatasetState = {
   ...allNumericalState,
-  csvfile: 'bats-eat-mozzies.csv',
-  metadata: {
+  ...withDataset(allNumericalRows, allNumericalColumnTypes, {
     name: premadeDatasetId,
     card: {
       description: batDatasetDescription,
@@ -199,7 +211,8 @@ export const premadeDatasetState = {
         description: 'How many bats there are.',
       },
     ],
-  },
+  }),
+  csvfile: 'bats-eat-mozzies.csv',
 };
 
 export const premadeDatasetTranslations = new MessageFormat('en').compile({

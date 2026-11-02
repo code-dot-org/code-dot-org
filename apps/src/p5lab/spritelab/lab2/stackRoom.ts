@@ -64,9 +64,73 @@ function isStack(block: BlocklyCore.Block): boolean {
   return !block.outputConnection;
 }
 
-function stackBox(block: BlocklyCore.BlockSvg): StackBox {
+/** Empty room a level keeps under the stack whose top block is `attachTo`
+    (carrying `data`, when set), for a block of `type` the student has not
+    yet attached. */
+export interface ReservedRoom {
+  attachTo: string;
+  data?: string;
+  type: string;
+  /** The block's rendered height, in workspace pixels. */
+  height: number;
+}
+const reservations = new WeakMap<BlocklyCore.WorkspaceSvg, ReservedRoom[]>();
+
+/** Reserve room under a stack. A reservation for the same stack and block
+    type replaces the earlier one; the next add-blocks pass applies it. */
+export function reserveRoom(
+  workspace: BlocklyCore.WorkspaceSvg,
+  room: ReservedRoom
+): void {
+  const kept = (reservations.get(workspace) ?? []).filter(
+    r =>
+      r.attachTo !== room.attachTo ||
+      r.data !== room.data ||
+      r.type !== room.type
+  );
+  reservations.set(workspace, [...kept, room]);
+}
+
+/** Drop every reservation. Rooms belong to a level, and the workspace is
+    reused across levels. */
+export function clearRoom(workspace: BlocklyCore.WorkspaceSvg): void {
+  reservations.delete(workspace);
+}
+
+// The room reserved under a stack, while it still lacks the block.
+function reservedBelow(
+  workspace: BlocklyCore.WorkspaceSvg,
+  top: BlocklyCore.BlockSvg
+): number {
+  const rooms = reservations.get(workspace);
+  if (!rooms?.length) {
+    return 0;
+  }
+  // A placeholder of the type is an outline, not the block.
+  const held = new Set(
+    top
+      .getDescendants(false)
+      .filter(b => !b.isShadow?.())
+      .map(b => b.type)
+  );
+  return rooms
+    .filter(
+      r =>
+        r.attachTo === top.type &&
+        (r.data === undefined || r.data === top.data) &&
+        !held.has(r.type)
+    )
+    .reduce((sum, r) => sum + r.height, 0);
+}
+
+function stackBox(
+  workspace: BlocklyCore.WorkspaceSvg,
+  block: BlocklyCore.BlockSvg
+): StackBox {
+  const box = measureStack(block);
   return {
-    ...measureStack(block),
+    ...box,
+    height: box.height + reservedBelow(workspace, block),
     fixed: !block.isMovable(),
     moveBy: (dx, dy) => block.moveBy(dx, dy),
   };
@@ -101,7 +165,10 @@ export function ensureRoom(workspace: BlocklyCore.WorkspaceSvg): void {
     if (workspace.isDragging() || !workspace.rendered) {
       return;
     }
-    const stacks = workspace.getTopBlocks(false).filter(isStack).map(stackBox);
+    const stacks = workspace
+      .getTopBlocks(false)
+      .filter(isStack)
+      .map(block => stackBox(workspace, block));
     tidy(() => makeRoom(stacks, STACK_GAP_PX));
   });
 }

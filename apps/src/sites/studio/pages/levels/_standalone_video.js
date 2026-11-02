@@ -1,13 +1,14 @@
 import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
-import ReactDom from 'react-dom';
+import {flushSync} from 'react-dom';
 
 import {registerGetResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {onContinue} from '@cdo/apps/code-studio/levels/postOnContinue';
 import {createVideoWithFallback} from '@cdo/apps/code-studio/videos';
 import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/metrics/analyticsUtils';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {
@@ -65,9 +66,12 @@ $(document).ready(() => {
       return;
     }
 
-    ReactDom.render(
-      React.createElement(SafeMarkdown, container.dataset, null),
-      container
+    // Synchronous so that onResize below measures the rendered markdown.
+    flushSync(() =>
+      createReactRoot(
+        React.createElement(SafeMarkdown, container.dataset, null),
+        container
+      )
     );
   });
 

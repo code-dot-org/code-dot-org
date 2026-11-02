@@ -7,7 +7,7 @@ import {createUuid} from '@cdo/apps/utils';
 import defaultSources from '../defaultSources.json';
 import {setActiveTab, Tab} from '../redux/spriteLab2Redux';
 import {deleteProjectAsset} from '../sceneThumbnails';
-import {Scene, SceneType, Sources} from '../types';
+import {Scene, Sources} from '../types';
 
 interface SceneEditingOptions {
   scenes: Scene[];
@@ -21,9 +21,9 @@ interface SceneEditingOptions {
 
 export interface SceneEditing {
   /** Make the scene current; from outside the scene tabs, also return to
-      the scene tab last edited in (World only if the scene has one). */
+      the scene tab last edited in. */
   selectScene: (sceneId: string) => void;
-  createScene: (name: string, type: SceneType) => void;
+  createScene: (name: string) => void;
   renameScene: (sceneId: string, name: string) => void;
   /** Never the last scene (the gallery offers no delete for it). */
   deleteScene: (sceneId: string) => void;
@@ -60,22 +60,19 @@ export default function useSceneEditing({
       }
       setActiveSceneId(sceneId);
       if (activeTab !== 'Code' && activeTab !== 'World') {
-        const target =
-          lastSceneTabRef.current === 'World' && scene.type !== 'story'
-            ? 'World'
-            : 'Code';
-        dispatch(setActiveTab(target));
+        dispatch(
+          setActiveTab(lastSceneTabRef.current === 'World' ? 'World' : 'Code')
+        );
       }
     },
     [scenes, activeTab, setActiveSceneId, dispatch]
   );
 
   const createScene = useCallback(
-    (name: string, type: SceneType) => {
+    (name: string) => {
       const scene: Scene = {
         id: createUuid(),
         name,
-        type,
         source: defaultSources.source,
       };
       updateSources(prev => ({...prev, scenes: [...getScenes(prev), scene]}));

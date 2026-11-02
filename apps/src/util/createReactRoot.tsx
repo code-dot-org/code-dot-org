@@ -64,3 +64,18 @@ export function createReactRoot(
 
   root.render(wrappedComponent);
 }
+
+/**
+ * Unmounts a tree rendered by createReactRoot into container.
+ *
+ * ReactDOM.unmountComponentAtNode does nothing to a createRoot container.
+ */
+export function unmountReactRoot(container: Element): void {
+  const root = rootsByContainer.get(container);
+  if (!root) {
+    ReactDOM.unmountComponentAtNode(container);
+    return;
+  }
+  root.unmount();
+  rootsByContainer.delete(container);
+}

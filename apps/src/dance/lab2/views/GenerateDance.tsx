@@ -3,6 +3,7 @@ import {Button as MuiButton} from '@mui/material';
 import * as BlocklyCore from 'blockly/core';
 import {sample} from 'lodash';
 import React, {useCallback, useEffect, useState} from 'react';
+import {flushSync} from 'react-dom';
 
 import {BlockDefinition, WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import {useParentLevelProperties} from '@cdo/apps/bubbleChoice/customModes/MusicDanceAi/ParentLevelPropertiesContext';
@@ -174,7 +175,11 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
       );
       await new Promise(res => setTimeout(res, remainingDelayDuration));
 
-      updateSources({workspaceSerialization, flyoutDefinition});
+      // Synchronous so the workspace holds the generated blocks before
+      // runProgram compiles and saves it.
+      flushSync(() =>
+        updateSources({workspaceSerialization, flyoutDefinition})
+      );
       onFlyoutGenerated(flyoutDefinition);
       runProgram();
 

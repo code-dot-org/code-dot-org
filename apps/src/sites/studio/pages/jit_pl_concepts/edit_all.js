@@ -9,9 +9,6 @@ $(() => {
 
   createReactRoot(
     <JitPlConceptEditAll jitPlConcepts={jitPlConcepts} />,
-    document.getElementById('edit-all-jit-pl-concepts'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.getElementById('edit-all-jit-pl-concepts')
   );
 });
