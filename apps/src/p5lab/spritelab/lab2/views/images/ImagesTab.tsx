@@ -278,6 +278,18 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     setDrawing(null);
   }, []);
   useEffect(() => clearIdleTimer, []);
+  // Leaving the level mid-drawing (the panel's Continue, or navigation)
+  // unmounts the tab with no Done: whatever the picture is owed goes up
+  // now, from the editor's canvas while it still exists.
+  useEffect(
+    () => () => {
+      if (drawingRef.current && (dirtyRef.current || uploadOwedRef.current)) {
+        leaveAfterSaveRef.current = true;
+        saveRef.current?.();
+      }
+    },
+    []
+  );
   // The host's undo and redo go once the drawing ends, or the tab goes; a
   // change of picture within one drawing keeps them.
   const drawingOpen = !!drawing;
@@ -347,6 +359,16 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
         // A blank that was saved is an image now: later saves replace it.
         saved = {...current, target: {...current.target, key}};
         setDrawing(d => d && {...d, target: {...d.target, key}});
+      } catch {
+        // The picture is still on the canvas. It is marked unsaved, so the
+        // next pause, Done or leaving the tab tries again from the canvas
+        // as it is then; a pending save would only carry older pixels.
+        dirtyRef.current = true;
+        uploadOwedRef.current = true;
+        pendingRef.current = null;
+        leaveAfterSaveRef.current = false;
+        inFlightRef.current = false;
+        return;
       } finally {
         inFlightRef.current = false;
       }

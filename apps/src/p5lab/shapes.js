@@ -141,6 +141,7 @@ function getSerializedAnimationProps(animation) {
     'recentColors',
     'trimmed',
     'generation',
+    'edited',
     'poses',
   ]);
 }
