@@ -1,0 +1,152 @@
+#!/usr/bin/env ruby
+
+# A local web page for reviewing what generate_images drew: every filling of
+# every sentence, its variants side by side, read from the local tree or
+# from either bucket, with each variant's moderation verdicts.
+#
+# A reviewer approves or rejects a variant. The verdict is written to the
+# variant's record, which generate_images reads: a rejected variant is
+# drawn again on the next run, and --production publishes only approved
+# ones. An approval belongs to the drawing it was given to, so a redrawn
+# variant needs reviewing again.
+#
+#   ./bin/oneoff/hoai_2026/imagegen/review_images
+#
+# then open http://localhost:4567. It listens on localhost only.
+
+# First: sets up bundler, so the gems below resolve from the Gemfile.
+require_relative '../../../../deployment'
+
+require 'optparse'
+require 'sinatra/base'
+require 'webrick'
+
+require_relative 'imagegen'
+
+options = {port: 4567, sentences: nil}
+OptionParser.new do |opts|
+  opts.banner = <<~BANNER
+    Usage: #{File.basename(__FILE__)} [options]
+
+    Serves a page for reviewing the images generate_images drew.
+
+    Options:
+  BANNER
+
+  opts.on('--port PORT', 'Listens on this port. Defaults to 4567.') {|port| options[:port] = port.to_i}
+  opts.on('--sentences FILE', 'Reads the words from FILE instead of the pinned sentences.json.') do |file|
+    options[:sentences] = File.expand_path(file)
+  end
+  opts.on('-h', '--help', 'Prints this help message') do
+    puts opts
+    exit
+  end
+end.parse!
+
+puts 'Building prompts with dump_prompts.ts...'
+JOBS_BY_SENTENCE = load_jobs(*(options[:sentences] ? ['--sentences', options[:sentences]] : [])).
+  group_by {|job| job['sentenceId']}.freeze
+
+def job_for(sentence_id, word_ids, style)
+  (JOBS_BY_SENTENCE[sentence_id] || []).find {|job| job['wordIds'] == word_ids && job['style'] == style}
+end
+
+# An approval counts only for the drawing it was given to.
+def review_for(record)
+  review = record&.dig('review')
+  return nil unless review
+  review.merge('current' => review['drawnAt'] == record['drawnAt'])
+end
+
+def variant_state(job, variant)
+  record = read_record(job, variant)
+  {
+    variant: variant,
+    files: job['frames'].to_h {|frame| [frame['name'], frame_file(job, variant, frame['name'])]},
+    local: frames_present(job, variant).length == job['frames'].length,
+    moderation: record&.dig('abandoned') ? 'abandoned' : moderation_summary(record, require_judge: false),
+    checks: (record&.dig('frames') || []).to_h {|frame| [frame['name'], frame['checks']]},
+    promptCheck: record&.dig('promptCheck'),
+    review: review_for(record),
+    redraws: record&.dig('redraws').to_i,
+    provider: record&.dig('provider'),
+    model: record&.dig('model'),
+    seed: record&.dig('seed'),
+  }
+end
+
+class ReviewApp < Sinatra::Base
+  set :bind, '127.0.0.1'
+  set :server, 'webrick'
+
+  get '/' do
+    send_file File.join(SCRIPT_PATH, 'review', 'index.html')
+  end
+
+  get '/api/config' do
+    content_type :json
+    JSON.generate(
+      version: CACHE_VERSION,
+      variants: VARIANTS,
+      sentences: JOBS_BY_SENTENCE.keys,
+      sources: {'local' => '/local/'}.merge(PUBLIC_URLS)
+    )
+  end
+
+  get '/api/jobs' do
+    content_type :json
+    jobs = JOBS_BY_SENTENCE[params['sentence']] || halt(404, JSON.generate({error: 'no such sentence'}))
+    fillings = jobs.map do |job|
+      {
+        sentenceId: job['sentenceId'],
+        slots: job['slots'],
+        wordIds: job['wordIds'],
+        style: job['style'],
+        prompt: job['prompt'],
+        animated: job['animated'],
+        folder: job_folder(job),
+        frames: job['frames'].map {|frame| frame['name']},
+        variants: Array.new(VARIANTS) {|variant| variant_state(job, variant)},
+      }
+    end
+    JSON.generate(fillings)
+  end
+
+  post '/api/review' do
+    content_type :json
+    body = JSON.parse(request.body.read)
+    job = job_for(body['sentenceId'], body['wordIds'], body['style']) || halt(404, JSON.generate({error: 'no such filling'}))
+    variant = Integer(body['variant'])
+    halt 400, JSON.generate({error: 'bad variant'}) unless variant.between?(0, VARIANTS - 1)
+
+    record = read_record(job, variant) || {
+      'sentenceId' => job['sentenceId'], 'wordIds' => job['wordIds'], 'variant' => variant,
+    }
+    if body['verdict'].nil?
+      record.delete('review')
+    else
+      halt 400, JSON.generate({error: 'bad verdict'}) unless %w[approved rejected].include?(body['verdict'])
+      record['review'] = {
+        'verdict' => body['verdict'],
+        'note' => body['note'].to_s.strip,
+        'source' => body['source'],
+        'drawnAt' => record['drawnAt'],
+        'at' => Time.now.utc.iso8601,
+      }.reject {|_, value| value.nil? || value == ''}
+    end
+    write_record(job, variant, record)
+    JSON.generate(variant_state(job, variant))
+  end
+
+  # The local tree, and nothing outside it.
+  get '/local/*' do
+    root = File.realpath(output_path)
+    path = File.expand_path(params['splat'].first, root)
+    halt 404 unless path.start_with?("#{root}/") && File.file?(path)
+    cache_control :no_store
+    send_file path, type: 'image/png'
+  end
+end
+
+puts "Reviewing #{JOBS_BY_SENTENCE.values.sum(&:length)} fillings at http://localhost:#{options[:port]}"
+ReviewApp.run!(port: options[:port])

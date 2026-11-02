@@ -1,76 +1,47 @@
 #!/usr/bin/env ruby
 
-# This script generates images for the HoAI 2026 Sprite Lab image levels.
+# This script pre-generates the images for the Hour of AI 2026 Sprite Lab
+# image levels, for the lab's image cache (imageCache.ts in apps/).
 #
-# The levels offer an 'Adlib'-style form: a sentence template with a
-# dropdown per slot (apps/static/spritelab_lab2/imageAdlibManifest.json).
-# This script generates an image for every combination of choices, in each
-# style, so the variety can be reviewed and the results cached for playtests
-# or for when the AI service is down or costly.
+# A student describes an image by filling a sentence with words: "A
+# [adjective] [creature] wearing a [clothing]". This script draws every way
+# each sentence can be filled, VARIANTS times, checks each drawing with the
+# same moderation the lab applies to a live one, and publishes the ones that
+# pass to the tree the lab reads from.
 #
 # PROMPTS:
 #
-# The prompts are not built here. dump_prompts.ts imports the prompt
-# builders from apps/ and prints one job per line; this script runs it via
-# `npx tsx`, so the text sent matches what the lab would send. It needs
-# Node 18 or newer.
+# The prompts are not built here. dump_prompts.ts imports the lab's prompt
+# builders and prints one job per filled sentence; this script runs it via
+# `npx tsx`, so the words the model gets are the lab's. It needs Node 18 or
+# newer. The words come from sentences.json beside this script, a pinned
+# copy of the lab's: see README.md.
 #
-# PROVIDERS:
+# MODERATION:
 #
-# --provider picks the image service: 'openai' (the default) or 'gemini',
-# which is what the lab itself generates with through the AI Gateway. They
-# differ in two ways that reach the output, both handled here: only OpenAI
-# returns a transparent background, and only Gemini takes a seed.
-#
-# API KEY:
-#
-# Each provider has a config key, overridable with --key:
-# 'openai_student_learning_api_key' and 'google_gemini_ai_tutor_api_key'.
+# The lab runs no safety check on a cached image, so this script is the only
+# one an image gets. Azure AI Content Safety checks every frame, always;
+# --judge adds aichat's LLM judges, on every frame and every prompt. A
+# flagged variant is redrawn up to MAX_REDRAWS times, then left out. Nothing
+# without a passing verdict is published.
 #
 # USAGE:
 #
-# Generate ALL ungenerated content (a great deal of it; see --list-ids):
+# See the words, and the size of a run:
+#
+# ./bin/oneoff/hoai_2026/imagegen/generate_images --list-words
+# ./bin/oneoff/hoai_2026/imagegen/generate_images --list-sentences
+#
+# Draw and check everything not yet drawn (thousands of requests):
 #
 # ./bin/oneoff/hoai_2026/imagegen/generate_images
 #
-# Remove any output in the image_output path next to this script in order
-# to regenerate it in the following invocation.
+# Review with review_images, then publish: --no-dry-run to the devel
+# bucket, then --no-dry-run --production, which publishes only variants
+# approved in review.
 #
-# You can validate the output with the validate_images script. If you
-# supply --delete to that script, it will remove any offending output so
-# you can run this script again to regenerate only those images.
-#
-# Nothing gets uploaded until --no-dry-run is specified.
-#
-# Nothing gets uploaded to the production bucket until --production is
-# specified. Otherwise it goes to the 'cdo-curriculum-devel' bucket.
-#
-# To only upload the files that have been generated, use the
-# --just-upload option.
-#
-# NOTES:
-#
-# Files are the raw model output, before the lab's background removal,
-# cropping and pixel-grid normalization: the lab is meant to run that
-# pipeline on a cached image as it does on a live one.
-#
-# A file is named for the format its bytes are, which is not always a PNG:
-# Gemini returns a JPEG as readily, and the lab reads either.
-#
-# A character sprite can also be made as an animated set (the student
-# form's 'Generate animation'): a base image, then four poses that each send
-# the base image back as a reference. These cost five requests each and are
-# off by default; see --produce-animations.
-#
-# On OpenAI, sprites and blocks are asked for a transparent background
-# (background: 'transparent') rather than the flat key color the lab erases
-# after a generation; see --no-transparent. Gemini cannot return an alpha
-# channel, so it always gets the key-color prompts. Backgrounds fill their
-# frame and are always opaque.
-#
-# Gemini records the seed each image was drawn with, and a set offsets it
-# per frame as the lab does, so a cached image can be asked for again. The
-# OpenAI image API takes no seed, so an OpenAI image records none.
+# Nothing in this script deletes an image. A variant that is redrawn, after
+# moderation flags it or review rejects it, moves to image_attic first.
 
 # First: sets up bundler, so the gems below resolve from the Gemfile.
 require_relative '../../../../deployment'
@@ -78,206 +49,151 @@ require 'cdo/aws/s3'
 
 require 'base64'
 require 'benchmark'
-require 'fileutils'
 require 'httparty'
-require 'json'
-require 'open3'
 require 'optparse'
 require 'parallel'
 require 'ruby-progressbar'
 
-require_relative 'constants'
+require_relative 'imagegen'
 require_relative 'image_validation'
+require_relative 'moderation'
 
-# Raised for a request that should not be retried.
-class ImageRequestError < StandardError; end
-
-# Raised for a request worth another attempt.
-class RetryableImageRequestError < StandardError; end
-
-# Parse options
 options = {
-  ids: [],
+  allow_gaps: false,
+  choices: {},
   dry_run: true,
   filter: '',
+  ids: [],
   jobs: JOBS,
+  judge: false,
   just_save_prompt: false,
   just_upload: false,
-  limit: nil,
-  list_ids: false,
-  list_words: false,
-  choices: {},
-  provider: DEFAULT_PROVIDER,
-  model: nil,
   key_name: nil,
-  temperature: TEMPERATURE,
-  produce_animations: false,
-  produce_singles: true,
-  sources: [],
-  transparent: true,
+  limit: nil,
+  list_sentences: false,
+  list_words: false,
+  model: nil,
+  moderation: true,
   production: false,
+  provider: DEFAULT_PROVIDER,
   quality: QUALITY,
-  styles: [],
+  redraw_abandoned: false,
+  sentences: nil,
+  temperature: TEMPERATURE,
+  transparent: false,
+  unreviewed: false,
   variants: VARIANTS,
 }
 OptionParser.new do |opts|
   opts.banner = <<~BANNER
     Usage: #{File.basename(__FILE__)} [options]
 
-    This script calls out to OpenAI to produce images for every combination of
-    the adlib choices in the Hour of AI Sprite Lab image levels.
-
-    It can selectively upload the generated images to our curriculum bucket for
-    production use.
+    Draws every way the Hour of AI Sprite Lab sentences can be filled,
+    moderates each drawing, and publishes the ones that pass to the lab's
+    image cache.
 
     Options:
   BANNER
 
-  opts.on('--list-ids',
-          'Just lists the known sentence ids (after filtering) with their job counts and exits.'
-         ) do |list_ids|
-           options[:list_ids] = list_ids
-         end
+  opts.on('--list-words', 'Lists every sentence with the words each slot offers, and exits.') do
+    options[:list_words] = true
+  end
 
-  opts.on('--no-dry-run',
-          'Disables the read-only mode where no changes are written to S3'
-         ) do |no_dry_run|
-           options[:dry_run] = no_dry_run
-         end
+  opts.on('--list-sentences', 'Lists every sentence (after filtering) with its job and image counts, and exits.') do
+    options[:list_sentences] = true
+  end
 
-  opts.on('--production',
-          'Publishes the content into the production bucket.'
-         ) do |production|
-           options[:production] = production
-         end
+  opts.on('-i', '--id SENTENCE', 'Adds a sentence id (e.g. character) to draw. Repeatable; all by default.') do |id|
+    options[:ids] << id
+  end
 
-  opts.on('--just-save-prompt',
-          'Writes each job\'s metadata file, prompts included, without generating images.'
-         ) do |just_save_prompt|
-           options[:just_save_prompt] = just_save_prompt
-         end
-
-  opts.on('--just-upload',
-          'Skips image generation and just uploads'
-         ) do |just_upload|
-           options[:just_upload] = just_upload
-         end
-
-  opts.on('--produce-singles',
-          'Produce single images. Defaults to on.'
-         ) do |produce_singles|
-           options[:produce_singles] = produce_singles
-         end
-
-  opts.on('--no-produce-singles',
-          'Skips producing single images.'
-         ) do |produce_singles|
-           options[:produce_singles] = produce_singles
-         end
-
-  opts.on('--produce-animations',
-          'Produce animated character sets (5 images each). Defaults to off.'
-         ) do |produce_animations|
-           options[:produce_animations] = produce_animations
-         end
-
-  opts.on('--no-produce-animations',
-          'Skips producing animated character sets.'
-         ) do |produce_animations|
-           options[:produce_animations] = produce_animations
-         end
-
-  opts.on('--no-transparent',
-          'Asks sprites and blocks for the lab\'s key-color background instead of a transparent one.'
-         ) do |transparent|
-           options[:transparent] = transparent
-         end
-
-  opts.on('--list-words',
-          'Just lists every sentence (after filtering) with the words each slot offers, and exits.'
-         ) do |list_words|
-           options[:list_words] = list_words
-         end
-
-  opts.on('-i', '--id ID',
-          'Adds the given adlib id (e.g. sprite-simple) or explore sentence id (e.g. character) to the list. If none are specified, uses all of them.'
-         ) do |id|
-           options[:ids] << id
-         end
+  opts.on('-f', '--filter FILTER', 'Keeps only sentence ids containing the given string.') do |filter|
+    options[:filter] = filter
+  end
 
   opts.on('-c', '--choice SLOT=WORD',
-          "Pins one slot to one word, e.g. --choice adjective=brave (#{NO_CHOICE} for an empty optional slot). Repeatable; see --list-words."
+          "Pins one slot to one word id, e.g. --choice adjective=brave (#{EMPTY_WORD_ID} for an empty optional slot). Repeatable; see --list-words."
          ) do |choice|
-           slot, word = choice.split('=', 2)
-           raise "Error: --choice needs SLOT=WORD, got '#{choice}'" if word.nil? || word.empty?
-           options[:choices][slot] = word
-         end
+    slot, word = choice.split('=', 2)
+    raise "Error: --choice needs SLOT=WORD, got '#{choice}'" if word.nil? || word.empty?
+    options[:choices][slot] = word
+  end
 
-  opts.on('-S', '--source SOURCE',
-          "Restricts to one image UI's choices: #{SOURCES.join(' or ')}. Both by default."
-         ) do |source|
-           options[:sources] << source
-         end
+  opts.on('-v', '--variants VARIANTS', "How many variants to draw per filling. Defaults to #{VARIANTS}, all the lab reads.") do |variants|
+    options[:variants] = variants.to_i
+  end
 
-  opts.on('-f', '--filter FILTER',
-          'Filters out only ids containing the given string.'
-         ) do |filter|
-           options[:filter] = filter
-         end
+  opts.on('--limit LIMIT', 'Draws at most this many variants, for trying things out.') do |limit|
+    options[:limit] = limit.to_i
+  end
 
-  opts.on('-s', '--style STYLE',
-          "Adds the given style to the styles list. If none are specified, uses [#{STYLES.join(', ')}]"
-         ) do |style|
-           options[:styles] << style
-         end
+  opts.on('-p', '--provider PROVIDER', "Which image service to ask: #{PROVIDERS.join(' or ')}. Defaults to #{DEFAULT_PROVIDER}.") do |provider|
+    options[:provider] = provider
+  end
 
-  opts.on('-v', '--variants VARIANTS',
-          "Determines the number of variants to produce. Defaults to #{VARIANTS}"
-         ) do |variants|
-           options[:variants] = variants.to_i
-         end
+  opts.on('-m', '--model MODEL', "Sets the image model. Defaults to #{DEFAULT_MODELS.map {|p, m| "#{m} for #{p}"}.join(', ')}.") do |model|
+    options[:model] = model
+  end
 
-  opts.on('-p', '--provider PROVIDER',
-          "Which image service to ask: #{PROVIDERS.join(' or ')}. Defaults to #{DEFAULT_PROVIDER}."
-         ) do |provider|
-           options[:provider] = provider
-         end
+  opts.on('--key NAME', "Sets the config key the image service's credentials come from. Defaults to #{API_KEY_NAMES.map {|p, k| "#{k} for #{p}"}.join(', ')}.") do |key_name|
+    options[:key_name] = key_name
+  end
 
-  opts.on('-m', '--model MODEL',
-          "Sets the image model. Defaults to #{DEFAULT_MODELS.map {|p, m| "#{m} for #{p}"}.join(', ')}."
-         ) do |model|
-           options[:model] = model
-         end
+  opts.on('--temperature TEMPERATURE', "Sampling wildness, for a provider that takes one. Defaults to #{TEMPERATURE}.") do |temperature|
+    options[:temperature] = temperature.to_f
+  end
 
-  opts.on('--key NAME',
-          "Sets the config key the API credentials come from. Defaults to #{API_KEY_NAMES.map {|p, k| "#{k} for #{p}"}.join(', ')}."
-         ) do |key_name|
-           options[:key_name] = key_name
-         end
+  opts.on('-q', '--quality QUALITY', 'OpenAI rendering quality (low, medium, high, auto). Omitted by default.') do |quality|
+    options[:quality] = quality
+  end
 
-  opts.on('--temperature TEMPERATURE',
-          "Sampling wildness, for a provider that takes one. Defaults to #{TEMPERATURE}."
-         ) do |temperature|
-           options[:temperature] = temperature.to_f
-         end
+  opts.on('--transparent', 'Asks OpenAI for a transparent background. The lab keys a cached set on its key colour, so the published tree should not use this.') do
+    options[:transparent] = true
+  end
 
-  opts.on('-q', '--quality QUALITY',
-          'Sets the rendering quality (low, medium, high, auto). Omitted by default.'
-         ) do |quality|
-           options[:quality] = quality
-         end
+  opts.on('--judge', "Also runs aichat's LLM safety judges, on every frame and every prompt.") do
+    options[:judge] = true
+  end
 
-  opts.on('-j', '--jobs JOBS',
-          "Sets the number of concurrent requests. Defaults to #{JOBS}."
-         ) do |jobs|
-           options[:jobs] = jobs.to_i
-         end
+  opts.on('--no-moderation', 'Skips Azure moderation. Nothing unmoderated is published; a later run without this flag checks what was skipped.') do
+    options[:moderation] = false
+  end
 
-  opts.on('--limit LIMIT',
-          'Generates at most this many jobs, for trying things out.'
-         ) do |limit|
-           options[:limit] = limit.to_i
-         end
+  opts.on('--redraw-abandoned', "Tries again the variants moderation flagged #{MAX_REDRAWS + 1} times in a row.") do
+    options[:redraw_abandoned] = true
+  end
+
+  opts.on('-j', '--jobs JOBS', "Sets the number of concurrent requests. Defaults to #{JOBS}.") do |jobs|
+    options[:jobs] = jobs.to_i
+  end
+
+  opts.on('--sentences FILE', 'Reads the words from FILE instead of the pinned sentences.json.') do |file|
+    options[:sentences] = File.expand_path(file)
+  end
+
+  opts.on('--just-save-prompt', "Writes each variant's record, prompts included, without drawing.") do
+    options[:just_save_prompt] = true
+  end
+
+  opts.on('--just-upload', 'Skips drawing and moderation and just uploads.') do
+    options[:just_upload] = true
+  end
+
+  opts.on('--no-dry-run', 'Disables the read-only mode where nothing is written to S3.') do
+    options[:dry_run] = false
+  end
+
+  opts.on('--production', 'Publishes to the production bucket, approved variants only.') do
+    options[:production] = true
+  end
+
+  opts.on('--unreviewed', 'With --production, also publishes variants review has not approved.') do
+    options[:unreviewed] = true
+  end
+
+  opts.on('--allow-gaps', 'With --production, publishes even when a filling has no publishable variant.') do
+    options[:allow_gaps] = true
+  end
 
   opts.on('-h', '--help', 'Prints this help message') do
     puts opts
@@ -285,85 +201,43 @@ OptionParser.new do |opts|
   end
 end.parse!
 
-options[:styles] = STYLES if options[:styles].empty?
-options[:sources] = SOURCES if options[:sources].empty?
-
-unknown_styles = options[:styles] - STYLES
-raise "Error: unknown style(s): #{unknown_styles.join(', ')}" if unknown_styles.any?
-
-unknown_sources = options[:sources] - SOURCES
-raise "Error: unknown source(s): #{unknown_sources.join(', ')}" if unknown_sources.any?
-
 raise "Error: unknown provider '#{options[:provider]}'. Choices: #{PROVIDERS.join(', ')}" unless PROVIDERS.include?(options[:provider])
 
 options[:model] ||= DEFAULT_MODELS[options[:provider]]
 options[:key_name] ||= API_KEY_NAMES[options[:provider]]
 
-# Only OpenAI returns an alpha channel. Asking Gemini for one would send
-# prompts whose background nothing then removes, so the key-color prompts
-# the lab uses are what it gets.
 if options[:transparent] && !TRANSPARENT_PROVIDERS.include?(options[:provider])
   puts
-  puts "Note: #{options[:provider]} cannot return a transparent background;"
-  puts "    : using the key-color prompts the lab erases afterwards."
+  puts "Note: #{options[:provider]} cannot return a transparent background; ignoring --transparent."
   options[:transparent] = false
 end
 
-script_path = File.dirname(__FILE__)
-repo_path = File.expand_path('../../../..', script_path)
-
-# Pull the prompts out of apps/
-node_version = begin
-  `node --version`.strip[/\d+/].to_i
-rescue Errno::ENOENT
-  0
-end
-if node_version < 18
-  raise "Error: dump_prompts.ts needs Node 18 or newer (found #{node_version.zero? ? 'none' : node_version}). Try `nvm use 22`."
+if options[:variants] > VARIANTS
+  puts
+  puts "Note: the lab reads only variants 00 to #{variant_name(VARIANTS - 1)}; the rest are drawn for review only."
 end
 
-def run_dumper(script_path, repo_path, *args)
-  stdout, stderr, status = Open3.capture3(
-    'npx', '--yes', 'tsx', File.join(script_path, 'dump_prompts.ts'), *args,
-    chdir: repo_path
-  )
-  unless status.success?
-    warn stderr
-    raise 'Error: dump_prompts.ts failed'
-  end
-  stdout
-end
+options[:choices].transform_values! {|word| word == 'none' ? EMPTY_WORD_ID : word}
+dumper_args = options[:sentences] ? ['--sentences', options[:sentences]] : []
 
-# Keeps --source, --id and --filter meaning the same thing everywhere.
 def wanted?(options, entry)
-  return false unless options[:sources].include?(entry['source'])
-  return false unless options[:ids].empty? || options[:ids].include?(entry['jobId'])
-  options[:filter].empty? || entry['jobId'].include?(options[:filter])
-end
-
-# --choice pins a slot, so a small batch can vary one slot and hold the
-# rest: --limit alone takes whole combinations in order, which varies the
-# last slot and repeats the first.
-def chosen?(options, job)
-  picked = job['slots'].zip(job['choiceIds']).to_h
-  options[:choices].all? {|slot, word| picked[slot] == word}
+  return false unless options[:ids].empty? || options[:ids].include?(entry['sentenceId'])
+  options[:filter].empty? || entry['sentenceId'].include?(options[:filter])
 end
 
 if options[:list_words]
-  run_dumper(script_path, repo_path, '--catalog').lines.each do |line|
+  run_dumper('--catalog', *dumper_args).lines.each do |line|
     entry = JSON.parse(line)
     next unless wanted?(options, entry)
 
     kind = [entry['imageType'], entry['subject']].compact.join('/')
     puts
-    puts "#{entry['source']}/#{entry['jobId']} (#{kind}#{entry['animated'] ? ', animated' : ''}): #{entry['example']}"
+    puts "#{entry['sentenceId']} (#{kind}#{entry['animated'] ? ', animated' : ''}): #{entry['example']}"
     entry['slots'].each do |slot|
-      # The id is what a path and a --list-ids line carry; the label is what
-      # the student sees, and a word's text can differ from its id.
       words = slot['words'].map do |word|
         word['id'] == word['text'] ? word['id'] : "#{word['id']} (#{word['text']})"
       end
-      words.unshift(NO_CHOICE) unless slot['required']
+      words.unshift(EMPTY_WORD_ID) unless slot['required']
       shown = slot['label'] == slot['id'] ? '' : " (shown as \"#{slot['label']}\")"
       puts "  #{slot['id']}#{shown}, #{words.length} choices: #{words.join(', ')}"
     end
@@ -373,121 +247,52 @@ end
 
 puts
 puts "Building prompts with dump_prompts.ts..."
-stdout = run_dumper(script_path, repo_path)
+jobs = load_jobs(*dumper_args)
 
-prompts_path = File.join(script_path, PROMPTS_FILE)
-puts
-puts "Caching prompts in #{prompts_path}"
-File.write(prompts_path, stdout)
-
-jobs = stdout.lines.map {|line| JSON.parse(line)}
-known_ids = jobs.map {|job| job['jobId']}.uniq
-
-unknown_ids = options[:ids] - known_ids
-raise "Error: unknown id(s): #{unknown_ids.join(', ')}" if unknown_ids.any?
+unknown_ids = options[:ids] - jobs.map {|job| job['sentenceId']}.uniq
+raise "Error: unknown sentence(s): #{unknown_ids.join(', ')}. See --list-words." if unknown_ids.any?
 
 jobs = jobs.filter {|job| wanted?(options, job)}
 
 # A slot or word nobody offers is a typo, not an empty batch.
 unless options[:choices].empty?
-  offered = jobs.flat_map {|job| job['slots'].zip(job['choiceIds'])}.group_by(&:first)
+  offered = jobs.flat_map {|job| job['slots'].zip(job['wordIds'])}.group_by(&:first)
   options[:choices].each do |slot, word|
     pairs = offered[slot]
     raise "Error: no slot '#{slot}' in the chosen sentences. See --list-words." if pairs.nil?
     words = pairs.map(&:last).uniq
-    unless words.include?(word)
-      raise "Error: slot '#{slot}' has no '#{word}'. Choices: #{words.sort.join(', ')}"
-    end
+    raise "Error: slot '#{slot}' has no '#{word}'. Choices: #{words.sort.join(', ')}" unless words.include?(word)
   end
-  jobs = jobs.filter {|job| chosen?(options, job)}
-end
-jobs = jobs.filter {|job| options[:styles].include?(job['style'])}
-# An explore character has no single-picture form (the layout animates
-# every character), so the default of singles only drops those ids
-# entirely. Say so rather than silently listing nothing.
-offered = jobs.map {|job| job['jobId']}.uniq
-jobs = jobs.reject {|job| job['animated']} unless options[:produce_animations]
-jobs = jobs.filter {|job| job['animated']} unless options[:produce_singles]
-dropped = offered - jobs.map {|job| job['jobId']}.uniq
-if dropped.any?
-  reason = options[:produce_animations] ? 'has no animated jobs' : 'is animated only'
-  puts
-  puts "Note: skipping #{dropped.join(', ')}: each #{reason}."
-  puts "    : #{options[:produce_animations] ? 'Drop --no-produce-singles' : 'Add --produce-animations'} to include them."
+  jobs = jobs.filter do |job|
+    picked = job['slots'].zip(job['wordIds']).to_h
+    options[:choices].all? {|slot, word| picked[slot] == word}
+  end
 end
 
 variants = options[:variants]
 
-if options[:list_ids]
+if options[:list_sentences]
   puts
-  puts "Listing ids (#{variants} variants each):"
-  jobs.group_by {|job| [job['source'], job['jobId']]}.each do |(source, id), id_jobs|
-    job = id_jobs.first
-    images = id_jobs.sum {|j| j['frames'].length} * variants
-    puts " - #{source}/#{id}: #{job['slots'].join(' x ')}, #{id_jobs.length * variants} jobs, #{images} images"
+  puts "Listing sentences (#{variants} variants each):"
+  jobs.group_by {|job| job['sentenceId']}.each do |id, sentence_jobs|
+    job = sentence_jobs.first
+    images = sentence_jobs.sum {|j| j['frames'].length} * variants
+    puts " - #{id}: #{job['slots'].join(' x ')}, #{sentence_jobs.length} fillings, #{sentence_jobs.length * variants} variants, #{images} images"
   end
   puts
-  puts "Total: #{jobs.length * variants} jobs, #{jobs.sum {|j| j['frames'].length} * variants} images"
+  puts "Total: #{jobs.length} fillings, #{jobs.length * variants} variants, #{jobs.sum {|j| j['frames'].length} * variants} images"
   exit
 end
 
-# Every job, once per variant
 objects = jobs.flat_map do |job|
   Array.new(variants) {|variant| {job: job, variant: variant}}
 end
 objects = objects.first(options[:limit]) if options[:limit]
 
-output_path = File.join(script_path, OUTPUT_DIRECTORY)
-FileUtils.mkdir_p output_path
-
-# Paths are what the lab will build from the level's choice ids: ids never
-# contain dots, so the dotted file stem is unambiguous.
-def object_directory(object)
-  job = object[:job]
-  File.join(job['source'], job['jobId'], job['style'], *(job['animated'] ? ['animated'] : []))
-end
-
-def object_stem(object)
-  [*object[:job]['choiceIds'], object[:variant].to_s.rjust(2, '0')].join('.')
-end
-
-# A frame's path without its extension: which format a provider returns is
-# known only once it answers (see image_extension).
-def frame_stem(object, frame)
-  File.join(object_directory(object), [object_stem(object), frame['pose']].compact.join('.'))
-end
-
-def frame_path(object, frame, extension)
-  "#{frame_stem(object, frame)}.#{extension}"
-end
-
-# The frame's file as stored, whatever format it came back as, or nil.
-def find_frame(output_path, object, frame)
-  stem = File.join(output_path, frame_stem(object, frame))
-  IMAGE_EXTENSIONS.map {|extension| "#{stem}.#{extension}"}.find {|path| File.exist?(path)}
-end
-
-def metadata_path(object)
-  File.join(object_directory(object), "#{object_stem(object)}.json")
-end
-
-# Gemini accepts a seed and OpenAI's image API does not, so only a Gemini
-# image records one and can be asked for again.
-def seeded?(options)
-  options[:provider] == 'gemini'
-end
-
-def new_seed(options)
-  seeded?(options) ? rand(2**31) : nil
-end
-
-# generateCharacterSet() gives the base the job's seed and each posed frame
-# the seed plus its index, so alike prompts don't collapse into alike
-# drawings.
-def frame_seed(seed, frames, frame)
-  return nil unless seed
-  index = frames.index(frame)
-  frame['reference'] ? seed + index : seed
+def api_key(key_name)
+  key = CDO.send(key_name)
+  raise "Error: config key '#{key_name}' is not set" if key.nil? || key.to_s.empty?
+  key
 end
 
 def transparent?(options, job)
@@ -498,14 +303,16 @@ def frame_prompt(options, job, frame)
   transparent?(options, job) ? frame['transparentPrompt'] : frame['prompt']
 end
 
-def api_key(options)
-  key = CDO.send(options[:key_name])
-  raise "Error: config key '#{options[:key_name]}' is not set" if key.nil? || key.to_s.empty?
-  key
+# generateCharacterSet() gives the base the set's seed and each posed frame
+# the seed plus its index, so alike prompts don't collapse into alike
+# drawings. Only Gemini takes a seed.
+def frame_seed(seed, job, frame)
+  return nil unless seed
+  frame['reference'] ? seed + job['frames'].index(frame) : seed
 end
 
-# Raises for a bad response, and returns the image bytes for a good one.
-def image_from(response, &extract)
+# Raises for a bad response; returns the image bytes for a good one.
+def image_from(response)
   if response.code == 429 || response.code >= 500
     raise RetryableImageRequestError, "HTTP #{response.code}: #{response.body.to_s[0, 200]}"
   end
@@ -516,15 +323,11 @@ def image_from(response, &extract)
 
   b64 = yield(response.parsed_response)
   raise ImageRequestError, 'No image in the response' unless b64
-
-  bytes = Base64.decode64(b64)
-  extension = image_extension(bytes)
-  raise ImageRequestError, "Response is not a #{IMAGE_EXTENSIONS.join(' or ')}" unless extension
-  [bytes, extension]
+  Base64.decode64(b64)
 end
 
-def request_openai_image(options, job, frame, reference_path)
-  headers = {'Authorization' => "Bearer #{api_key(options)}"}
+def request_openai_image(options, job, frame, reference)
+  headers = {'Authorization' => "Bearer #{api_key(options[:key_name])}"}
   params = {
     model: options[:model],
     prompt: frame_prompt(options, job, frame),
@@ -538,12 +341,14 @@ def request_openai_image(options, job, frame, reference_path)
   end
 
   response =
-    if reference_path
-      File.open(reference_path, 'rb') do |image|
-        HTTParty.post(OPENAI_EDITS_URL, headers: headers, multipart: true, body: params.merge(image: image), timeout: 300)
+    if reference
+      io = StringIO.new(reference)
+      def io.path
+        'reference.png'
       end
+      HTTParty.post(OPENAI_EDITS_URL, headers: headers, multipart: true, body: params.merge(image: io), timeout: 300)
     else
-      HTTParty.post(OPENAI_GENERATIONS_URL, headers: headers.merge('Content-Type' => 'application/json'), body: params.to_json, timeout: 300)
+      HTTParty.post(OPENAI_GENERATIONS_URL, headers: headers.merge('Content-Type' => 'application/json'), body: JSON.generate(params), timeout: 300)
     end
 
   image_from(response) {|body| body.dig('data', 0, 'b64_json')}
@@ -551,15 +356,11 @@ end
 
 # One Gemini generateContent call. A reference image goes ahead of the text,
 # as requestImage() in imageGeneration.ts sends it.
-def request_gemini_image(options, job, frame, reference_path, seed)
+def request_gemini_image(options, job, frame, reference, seed)
   parts = []
-  if reference_path
-    parts << {
-      inline_data: {
-        mime_type: 'image/png',
-        data: Base64.strict_encode64(File.binread(reference_path)),
-      },
-    }
+  if reference
+    mime = reference.b.start_with?(PNG_SIGNATURE) ? 'image/png' : 'image/jpeg'
+    parts << {inline_data: {mime_type: mime, data: Base64.strict_encode64(reference)}}
   end
   parts << {text: frame_prompt(options, job, frame)}
 
@@ -573,11 +374,10 @@ def request_gemini_image(options, job, frame, reference_path, seed)
     }.compact,
   }
 
-  url = format(GEMINI_URL, model: options[:model])
   response = HTTParty.post(
-    url,
-    headers: {'Content-Type' => 'application/json', 'x-goog-api-key' => api_key(options)},
-    body: body.to_json,
+    format(GEMINI_URL, model: options[:model]),
+    headers: {'Content-Type' => 'application/json', 'x-goog-api-key' => api_key(options[:key_name])},
+    body: JSON.generate(body),
     timeout: 300
   )
 
@@ -592,14 +392,14 @@ def request_gemini_image(options, job, frame, reference_path, seed)
   end
 end
 
-def request_image(options, job, frame, reference_path, seed)
+def request_image(options, job, frame, reference, seed)
   attempts = 0
   begin
     attempts += 1
     if options[:provider] == 'gemini'
-      request_gemini_image(options, job, frame, reference_path, seed)
+      request_gemini_image(options, job, frame, reference, seed)
     else
-      request_openai_image(options, job, frame, reference_path)
+      request_openai_image(options, job, frame, reference)
     end
   rescue Net::ReadTimeout, Net::OpenTimeout, Errno::ECONNRESET, RetryableImageRequestError => exception
     raise ImageRequestError, exception.message if attempts >= MAX_ATTEMPTS
@@ -608,192 +408,294 @@ def request_image(options, job, frame, reference_path, seed)
   end
 end
 
-def metadata_for(options, object, output_path, generated, seed = nil)
-  job = object[:job]
+# The record a variant starts with: what it is and how it is to be drawn.
+def fresh_record(options, job, variant)
   {
-    source: job['source'],
-    jobId: job['jobId'],
-    imageType: job['imageType'],
-    subject: job['subject'],
-    choices: job['slots'].zip(job['choiceIds']).to_h,
-    prompt: job['prompt'],
-    style: job['style'],
-    pixelGrid: job['pixelGrid'],
-    animated: job['animated'],
-    transparent: transparent?(options, job),
-    keyColor: transparent?(options, job) ? nil : job['keyColor'],
-    bodyPlan: job['bodyPlan'],
-    variant: object[:variant],
-    provider: options[:provider],
-    model: options[:model],
-    quality: options[:quality],
-    temperature: seeded?(options) ? options[:temperature] : nil,
-    seed: seed,
-    generated: generated,
-    frames: job['frames'].map do |frame|
-      stored = find_frame(output_path, object, frame)
-      {
-        pose: frame['pose'],
-        # Named for the format the provider returned, so absent until it
-        # has answered.
-        file: stored && File.basename(stored),
-        prompt: frame_prompt(options, job, frame),
-        reference: frame['reference'],
-        seed: frame_seed(seed, job['frames'], frame),
-      }.compact
+    'sentenceId' => job['sentenceId'],
+    'slots' => job['slots'],
+    'wordIds' => job['wordIds'],
+    'variant' => variant,
+    'prompt' => job['prompt'],
+    'style' => job['style'],
+    'imageType' => job['imageType'],
+    'subject' => job['subject'],
+    'animated' => job['animated'],
+    'bodyPlan' => job['bodyPlan'],
+    'keyColor' => transparent?(options, job) ? nil : job['keyColor'],
+    'transparent' => transparent?(options, job),
+    'provider' => options[:provider],
+    'model' => options[:model],
+    'quality' => options[:quality],
+    'temperature' => options[:provider] == 'gemini' ? options[:temperature] : nil,
+    'frames' => job['frames'].map do |frame|
+      {'name' => frame['name'], 'file' => frame_file(job, variant, frame['name']), 'prompt' => frame_prompt(options, job, frame)}
     end,
+    'history' => [],
   }.compact
 end
 
-puts
-puts "Generating #{objects.length} jobs (#{objects.sum {|o| o[:job]['frames'].length}} images at most)..."
+# Moves the variant's frames to the attic and starts its record over,
+# keeping what happened in its history.
+def retire(options, job, variant, record, reason)
+  moved = move_to_attic(job, variant)
+  history = (record['history'] || []) << {
+    'at' => Time.now.utc.iso8601,
+    'reason' => reason,
+    'seed' => record['seed'],
+    'provider' => record['provider'],
+    'model' => record['model'],
+    'review' => record['review'],
+    'checks' => record['frames']&.to_h {|frame| [frame['name'], frame['checks']]},
+    'movedTo' => moved,
+  }.compact
+  fresh_record(options, job, variant).merge('history' => history, 'redraws' => record['redraws'].to_i)
+end
 
-average = {
-  sum: 0,
-  count: 0,
-}
+# The checks a frame still needs: missing ones, and ones whose service
+# failed last time.
+def needs_check?(frame, name)
+  frame.dig('checks', name).nil? || frame.dig('checks', name, 'verdict') == 'error'
+end
+
+# Draws what a variant lacks, moderates it, redraws what moderation flags,
+# and returns how it ended: :complete, :drawn, :checked, :prompt_only,
+# :abandoned, or an error message.
+def process_variant(options, moderator, prompt_checks, job, variant)
+  record = read_record(job, variant)
+  present = frames_present(job, variant)
+
+  if record&.dig('abandoned') && !options[:redraw_abandoned]
+    return :abandoned
+  end
+
+  record ||= fresh_record(options, job, variant)
+  record.delete('abandoned')
+  if present.any? && review_verdict(record) == 'rejected'
+    record = retire(options, job, variant, record, 'rejected in review')
+  elsif present.any? && !!record['transparent'] != !!transparent?(options, job)
+    record = retire(options, job, variant, record, 'drawn with the other background')
+  end
+  record['promptCheck'] = prompt_checks[job['prompt']] if prompt_checks[job['prompt']]
+
+  if options[:just_save_prompt]
+    write_record(job, variant, record)
+    return :prompt_only
+  end
+
+  outcome = :complete
+  loop do
+    missing = job['frames'].reject {|frame| frame_exists?(job, variant, frame['name'])}
+    if missing.any?
+      outcome = :drawn
+      if missing.length == job['frames'].length
+        record = fresh_record(options, job, variant).merge(record.slice('history', 'redraws', 'promptCheck'))
+        record['seed'] = rand(2**31) if options[:provider] == 'gemini'
+      end
+      # A pose drawn in this run is referenced by the base as the model
+      # returned it, as generateCharacterSet() does; a base from an earlier
+      # run, by its stored PNG.
+      drawn = {}
+      missing.each do |frame|
+        reference = nil
+        if frame['reference']
+          reference = drawn[frame['reference']] ||
+            File.binread(File.join(output_path, frame_path(job, variant, frame['reference'])))
+        end
+        raw = request_image(options, job, frame, reference, frame_seed(record['seed'], job, frame))
+        drawn[frame['name']] = raw
+        path = File.join(output_path, frame_path(job, variant, frame['name']))
+        FileUtils.mkdir_p(File.dirname(path))
+        File.binwrite(path, to_png(raw))
+        entry = record['frames'].find {|f| f['name'] == frame['name']}
+        entry['seed'] = frame_seed(record['seed'], job, frame) if record['seed']
+        entry.delete('checks')
+      end
+      record['drawnAt'] = Time.now.utc.iso8601
+    end
+
+    if options[:moderation]
+      record['frames'].each do |entry|
+        png = nil
+        load_png = -> {png ||= File.binread(File.join(output_path, frame_path(job, variant, entry['name'])))}
+        entry['checks'] ||= {}
+        if needs_check?(entry, 'azure')
+          outcome = :checked if outcome == :complete
+          entry['checks']['azure'] = moderator.azure(load_png.call)
+        end
+        if options[:judge] && needs_check?(entry, 'judge')
+          outcome = :checked if outcome == :complete
+          entry['checks']['judge'] = moderator.judge_image(load_png.call)
+        end
+      end
+    end
+
+    break unless moderation_summary(record, require_judge: options[:judge]) == 'flagged'
+    redraws = record['redraws'].to_i
+    if redraws >= MAX_REDRAWS
+      record = retire(options, job, variant, record, 'flagged by moderation')
+      record['abandoned'] = {'at' => Time.now.utc.iso8601, 'after' => redraws + 1}
+      write_record(job, variant, record)
+      return :abandoned
+    end
+    record = retire(options, job, variant, record, 'flagged by moderation')
+    record['redraws'] = redraws + 1
+  end
+
+  write_record(job, variant, record)
+  outcome
+rescue ImageRequestError, Magick::ImageMagickError => exception
+  write_record(job, variant, record) if record
+  "#{record_path(job, variant)}: #{exception.message}"
+end
+
+# Azure has its own credentials; the judges run on Gemini.
+moderator = Moderator.new(options[:judge] ? api_key(API_KEY_NAMES['gemini']) : nil)
+
+# Each distinct prompt is judged once, and a flagged one is never drawn or
+# published. Verdicts already on file apply to every run, judged or not:
+# --judge only decides whether new prompts get judged.
+verdicts_path = File.join(SCRIPT_PATH, PROMPT_VERDICTS_FILE)
+verdicts = File.exist?(verdicts_path) ? JSON.parse(File.read(verdicts_path)) : {}
+verdict_for = ->(prompt) {verdicts["#{JUDGE_MODEL}\t#{prompt}"]}
+prompts = objects.map {|object| object[:job]['prompt']}.uniq
+if options[:judge] && !options[:just_upload]
+  unjudged = prompts.reject {|prompt| verdict_for.call(prompt) && verdict_for.call(prompt)['verdict'] != 'error'}
+  puts
+  puts "Judging #{unjudged.length} of #{prompts.length} prompts..."
+  judged = Parallel.map(unjudged, in_threads: options[:jobs]) do |prompt|
+    [prompt, moderator.judge_prompt(prompt)]
+  end
+  judged.each {|prompt, verdict| verdicts["#{JUDGE_MODEL}\t#{prompt}"] = verdict}
+  File.write(verdicts_path, JSON.pretty_generate(verdicts)) if judged.any?
+end
+prompt_checks = prompts.filter_map {|prompt| [prompt, verdict_for.call(prompt)] if verdict_for.call(prompt)}.to_h
+
+blocked = prompts.select do |prompt|
+  verdict = prompt_checks.dig(prompt, 'verdict')
+  verdict == 'flagged' || (options[:judge] && verdict != 'ok')
+end
+if blocked.any?
+  puts
+  puts "Not drawing or publishing #{blocked.length} prompt(s) the judge did not pass:"
+  blocked.each {|prompt| puts "  #{prompt_checks.dig(prompt, 'verdict')}: #{prompt}"}
+  objects = objects.reject {|object| blocked.include?(object[:job]['prompt'])}
+end
+
+tally = Hash.new(0)
 failures = []
 
 if options[:just_upload]
-  puts "Note: Not generating. Just using the content in the '#{OUTPUT_DIRECTORY}' directory."
-  puts "    : Remove --just-upload to generate any non-existing content."
+  puts "Note: Not drawing. Just using the content in the '#{OUTPUT_DIRECTORY}' directory."
 else
-  generate_progress_bar = ProgressBar.create(total: objects.size)
+  puts
+  puts "Processing #{objects.length} variants (#{objects.sum {|o| o[:job]['frames'].length}} images at most)..."
+  progress = ProgressBar.create(total: objects.size)
   Parallel.map(objects, in_threads: options[:jobs], finish: lambda do |_, _, result|
-    if result.is_a?(Numeric)
-      average[:sum] += result
-      average[:count] += 1
-    elsif result.is_a?(String)
-      failures << result
-    end
-
-    generate_progress_bar&.increment
+    result.is_a?(String) ? failures << result : tally[result] += 1
+    progress&.increment
   end
   ) do |object|
-    job = object[:job]
-    frames = job['frames']
-    json_path = File.join(output_path, metadata_path(object))
-
-    # Images made with the other background setting are regenerated.
-    recorded = File.exist?(json_path) ? JSON.parse(File.read(json_path)) : {}
-    stale = recorded['generated'] && !!recorded['transparent'] != !!transparent?(options, job)
-
-    next true if !stale && frames.all? {|frame| find_frame(output_path, object, frame)}
-
-    FileUtils.mkdir_p File.dirname(json_path)
-
-    if options[:just_save_prompt]
-      File.write(json_path, JSON.pretty_generate(metadata_for(options, object, output_path, false)))
-      next true
-    end
-
-    # One seed for the whole job, as a character set has one.
-    seed = new_seed(options)
-
-    begin
-      Benchmark.measure do
-        frames.each do |frame|
-          stored = find_frame(output_path, object, frame)
-          next if !stale && stored
-
-          reference_path = nil
-          if frame['reference']
-            reference = frames.find {|f| f['pose'] == frame['reference']}
-            reference_path = find_frame(output_path, object, reference)
-            raise ImageRequestError, "#{frame['pose']}: its reference is missing" unless reference_path
-          end
-
-          bytes, extension = request_image(options, job, frame, reference_path, frame_seed(seed, frames, frame))
-          # A regenerated frame can come back in the other format; the file
-          # it replaces would otherwise linger beside it.
-          File.delete(stored) if stored && File.extname(stored) != ".#{extension}"
-          File.binwrite(File.join(output_path, frame_path(object, frame, extension)), bytes)
-        end
-        File.write(json_path, JSON.pretty_generate(metadata_for(options, object, output_path, true, seed)))
-      end.real
-    rescue ImageRequestError => exception
-      "#{metadata_path(object)}: #{exception.message}"
-    end
+    process_variant(options, moderator, prompt_checks, object[:job], object[:variant])
   end
-  generate_progress_bar&.finish
-end
+  progress&.finish
 
-puts
-puts "Done generating. Average time: #{average[:sum] / (average[:count] > 0 ? average[:count] : 1)} seconds"
-
-if failures.any?
   puts
-  puts "#{failures.length} job(s) failed; run again to retry them:"
-  failures.each {|failure| puts "  #{failure}"}
+  {
+    complete: 'already drawn and checked',
+    drawn: 'drawn',
+    checked: 'checked only',
+    prompt_only: 'records written, not drawn',
+    abandoned: "left out after #{MAX_REDRAWS + 1} flagged drawings (--redraw-abandoned tries again)",
+  }.each {|key, label| puts "#{tally[key].to_s.rjust(6)} #{label}" if tally[key] > 0}
+  if failures.any?
+    puts
+    puts "#{failures.length} variant(s) failed; run again to retry them:"
+    failures.each {|failure| puts "  #{failure}"}
+  end
 end
 
-# We put the things in 'cdo-curriculum-devel' unless we use --production
+exit if options[:just_save_prompt]
+
+# Publishing. A variant is published whole or not at all: the lab finds a
+# variant by its first frame, and a set missing a pose after that is an
+# error to it, not a fallback.
+def publishable(options, job, variant)
+  record = read_record(job, variant)
+  return 'not drawn' unless record
+  return 'abandoned' if record['abandoned']
+
+  missing = job['frames'].reject {|frame| frame_exists?(job, variant, frame['name'])}
+  return "#{missing.length} frame(s) missing" if missing.any?
+
+  job['frames'].each do |frame|
+    error = validate_image(
+      File.join(output_path, frame_path(job, variant, frame['name'])),
+      image_type: job['imageType'],
+      transparent: record['transparent']
+    )
+    return "#{frame['name']}: #{error}" if error
+  end
+
+  summary = moderation_summary(record, require_judge: options[:judge])
+  return "moderation #{summary}" unless summary == 'pass'
+  return 'rejected in review' if review_verdict(record) == 'rejected'
+  return nil unless options[:production] && !options[:unreviewed]
+  return 'not approved in review' unless review_verdict(record) == 'approved'
+  # An approval belongs to the drawing it was given to.
+  return 'approved for an earlier drawing' unless record.dig('review', 'drawnAt') == record['drawnAt']
+  nil
+end
+
 bucket_name = "#{BUCKET_NAME}#{options[:production] ? '' : '-devel'}"
 
 puts
-puts "Uploading to s3://#{bucket_name}..."
+puts "Checking #{objects.length} variants for s3://#{bucket_name}/#{BUCKET_PATH}/..."
 
-unless !options[:dry_run] && options[:production]
-  puts "Note: Development bucket upload. Specify --production to commit to the production bucket for live use"
+reasons = Hash.new(0)
+ready = objects.select do |object|
+  reason = publishable(options, object[:job], object[:variant])
+  reasons[reason] += 1 if reason
+  reason.nil?
 end
 
+gaps = objects.group_by {|object| object[:job]}.select do |_, job_objects|
+  (job_objects & ready).empty?
+end.keys
+
+puts "#{ready.length.to_s.rjust(6)} ready to publish"
+reasons.sort_by {|_, count| -count}.each {|reason, count| puts "#{count.to_s.rjust(6)} held back: #{reason}"}
+if gaps.any?
+  puts
+  puts "#{gaps.length} filling(s) have no publishable variant; the lab treats a missing filling as an error:"
+  gaps.first(10).each {|job| puts "  #{job_folder(job)}"}
+  puts "  ..." if gaps.length > 10
+  if options[:production] && !options[:allow_gaps]
+    puts
+    puts 'Not publishing to production with gaps. Fill them, or pass --allow-gaps.'
+    exit 1
+  end
+end
+
+puts
 if options[:dry_run]
-  puts "Note: Dry run. Not uploading content. Specify --no-dry-run to upload"
+  puts 'Note: Dry run. Not uploading. Specify --no-dry-run to upload.'
+  exit
 end
+puts 'Note: Development bucket. Specify --production to publish for live use.' unless options[:production]
 
-unless options[:just_save_prompt]
-  upload_progress_bar = ProgressBar.create(total: objects.size)
-  Parallel.map(objects, in_threads: options[:jobs], finish: lambda do |_, _, _|
-    upload_progress_bar&.increment
-  end
-  ) do |object|
-    frames = object[:job]['frames']
-    json_path = File.join(output_path, metadata_path(object))
-    image_paths = frames.filter_map do |frame|
-      find_frame(output_path, object, frame)&.delete_prefix("#{output_path}/")
-    end
-
-    # A job uploads whole or not at all: a set missing a pose is useless.
-    # Validated against how the images were made, per the metadata file.
-    metadata = File.exist?(json_path) ? JSON.parse(File.read(json_path)) : nil
-    errors = image_paths.filter_map do |path|
-      error = validate_image(
-        File.join(output_path, path),
-        image_type: object[:job]['imageType'],
-        transparent: metadata&.dig('transparent')
-      )
-      "#{path}: #{error}" if error
-    end
-    missing = frames.length - image_paths.length
-    errors << "#{missing} frame file(s) missing" if missing > 0
-    errors << "#{metadata_path(object)}: missing" unless metadata
-    if errors.any?
-      puts "Not uploading: #{metadata_path(object)}\n        Error: #{errors.join('; ')}"
-      next
-    end
-
-    unless options[:dry_run]
-      image_paths.each do |path|
-        AWS::S3.upload_to_bucket(
-          bucket_name,
-          File.join(BUCKET_PATH, path),
-          File.binread(File.join(output_path, path)),
-          acl: 'public-read',
-          no_random: true,
-          content_type: IMAGE_CONTENT_TYPES[File.extname(path).delete('.')]
-        )
-      end
-      AWS::S3.upload_to_bucket(
-        bucket_name,
-        File.join(BUCKET_PATH, metadata_path(object)),
-        File.read(json_path),
-        acl: 'public-read',
-        no_random: true,
-        content_type: 'application/json'
-      )
-    end
-
-    true
-  end
-  upload_progress_bar&.finish
+files = ready.flat_map do |object|
+  object[:job]['frames'].map {|frame| frame_path(object[:job], object[:variant], frame['name'])}
 end
+progress = ProgressBar.create(total: files.size)
+Parallel.each(files, in_threads: options[:jobs], finish: ->(_, _, _) {progress&.increment}) do |path|
+  AWS::S3.upload_to_bucket(
+    bucket_name,
+    File.join(BUCKET_PATH, path),
+    File.binread(File.join(output_path, path)),
+    acl: 'public-read',
+    no_random: true,
+    content_type: 'image/png'
+  )
+end
+progress&.finish
+puts "Uploaded #{files.length} files for #{ready.length} variants."

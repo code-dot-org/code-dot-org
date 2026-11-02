@@ -1,2 +1,5 @@
 image_output
+image_records
+image_attic
 prompts.jsonl
+prompt_verdicts.json
