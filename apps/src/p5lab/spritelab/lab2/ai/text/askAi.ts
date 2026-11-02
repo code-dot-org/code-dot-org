@@ -119,8 +119,6 @@ export async function askAiText(prompt: string): Promise<string> {
 
   const deadline = Date.now() + ASK_AI_TIMEOUT_MS;
   const remaining = () => Math.max(0, deadline - Date.now());
-  // Counts here rather than at each call site, so a request that times out
-  // or throws is still one metric rather than silence.
   const bounded = <T>(work: Promise<T>): Promise<T> =>
     withTimeout(work, remaining()).catch(error => {
       count(error instanceof AskAiTimeoutError ? 'timeout' : 'error');
