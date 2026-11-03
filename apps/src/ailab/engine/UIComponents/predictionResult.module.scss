@@ -65,7 +65,7 @@ $connector-gap: 2px;
   height: $step-number-size;
   margin-top: $step-number-top;
   border-radius: var(--shape-round);
-  font-weight: var(--font-weight-bold);
+  font-weight: 600;
   background-color: var(--background-neutral-secondary);
   color: var(--text-neutral-quaternary);
   transition:
