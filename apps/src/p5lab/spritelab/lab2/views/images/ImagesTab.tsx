@@ -397,6 +397,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   const generation = chosenImage?.props.generation;
   const reopenedBehindTheScenes = generation && (
     <BehindTheScenes
+      compact
       sent={sentPromptsFor(
         generation.prompt,
         {
@@ -546,11 +547,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                 }
                 generating={generating}
                 note={generating ? parts.tip : undefined}
-                under={
-                  generating
-                    ? undefined
-                    : under || parts.underFrame || reopenedBehindTheScenes
-                }
+                under={generating ? undefined : under}
                 overlay={
                   parts.rating.offered && (
                     <RatingBar
@@ -590,15 +587,21 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                 }
                 drawLabel={chosenImage ? 'Edit this image' : 'Draw my own'}
                 extra={
-                  advancedOffered && (
-                    <AdvancedPopover
-                      imageType={parts.draft.imageType}
-                      settings={advanced}
-                      onChange={setAdvanced}
-                      hasImage={!!chosenImage}
-                      disabled={parts.busy}
-                    />
-                  )
+                  <>
+                    {/* The way behind the scenes lives in this header: the
+                        scene's own for a fresh picture, the image's for one
+                        opened again. */}
+                    {!parts.underFrame && reopenedBehindTheScenes}
+                    {advancedOffered && (
+                      <AdvancedPopover
+                        imageType={parts.draft.imageType}
+                        settings={advanced}
+                        onChange={setAdvanced}
+                        hasImage={!!chosenImage}
+                        disabled={parts.busy}
+                      />
+                    )}
+                  </>
                 }
               />
             );
