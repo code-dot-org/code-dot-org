@@ -137,6 +137,10 @@ module User::LevelProgressable
     sections = sections_as_student
     return false if sections.empty?
 
+    # Archived sections are ignored, matching User#get_participant_hidden_ids.
+    sections = sections.reject(&:hidden)
+    return false if sections.empty?
+
     script_sections = sections.select {|s| s.script.try(:id) == script_level.script.id}
 
     if script_sections.empty?
