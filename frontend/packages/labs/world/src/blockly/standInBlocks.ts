@@ -36,7 +36,7 @@
 import type {BlockArgDefinition, BlockDefinition} from '@code-dot-org/blockly';
 import {Blockly, defineBlock} from '@code-dot-org/blockly';
 
-import {viewOf} from '../actors/actorData';
+import {isActorData, keyRows} from '../actors/actorData';
 import {ruleViewOf} from '../rules/ruleData';
 
 import {missingRuleExtension} from './extensions/missingRule';
@@ -171,9 +171,9 @@ export function standInBlocks(
   contents: readonly string[],
   defined: ReadonlySet<string>,
 ): BlockDefinition[] {
-  // An actor or a rule held as data names its blocks as data; its view names
-  // them as blocks (`actors/actorData`, `rules/ruleData`).
-  contents = contents.map(one => viewOf(ruleViewOf(one)));
+  // A rule held as data names its blocks as data; its view names them as
+  // blocks (`rules/ruleData`).
+  contents = contents.map(one => ruleViewOf(one));
   // A view's own rows are not blocks a file holds (`viewRows`).
   const known = (type: string): boolean =>
     defined.has(type) || type in Blockly.Blocks || VIEW_ROWS.has(type);
@@ -193,8 +193,14 @@ export function standInBlocks(
   };
   for (const source of contents) {
     try {
-      const roots = (JSON.parse(source) as {blocks?: {blocks?: BlockState[]}})
-        .blocks?.blocks;
+      const parsed = JSON.parse(source) as {blocks?: {blocks?: BlockState[]}};
+      // An actor names blocks in its code and in its keys (`keyRows`).
+      const roots = isActorData(parsed)
+        ? [
+            ...((parsed.blocks?.blocks?.blocks ?? []) as BlockState[]),
+            ...(Object.values(keyRows(parsed)).flat() as BlockState[]),
+          ]
+        : parsed.blocks?.blocks;
       for (const root of roots ?? []) {
         // A top-level block is a statement: a hat, or a stack somebody moved
         // aside. Nothing is a value at the root of a workspace.

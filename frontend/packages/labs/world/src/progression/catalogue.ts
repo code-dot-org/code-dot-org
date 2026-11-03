@@ -50,7 +50,7 @@
 // `requires` names a neighbor, that no two tiles share a cell, that every tile
 // is reachable from Origin, and that a region's tiles touch each other.
 
-import {viewOf} from '../actors/actorData';
+import {actorDataOf} from '../actors/actorData';
 import {asRuleData, isRuleData, type RuleData} from '../rules/ruleData';
 import {resolveRuleContents} from '../rules/ruleReference';
 import {stockRule} from '../rules/stock';
@@ -820,11 +820,8 @@ export const TILES: readonly Tile[] = [
         trace: [{seconds: 0.1}],
       },
       inspect: files =>
-        // The Lamp is data; what it declares is read where its view says it
-        // (specs/ACTORS_AS_DATA_PLAN.md, step 5).
-        viewOf(files['actors/lamp.actor'] ?? '').includes(
-          'world_rule_property',
-        ) && gameText(files).includes('world_get_ActorsLamp_'),
+        Boolean(actorDataOf(files['actors/lamp.actor'] ?? '')?.properties) &&
+        gameText(files).includes('world_get_ActorsLamp_'),
       passes: ({samples}) => {
         const said = lastList<string>(samples.said);
         return said.length === 2 && said[0] !== said[1];

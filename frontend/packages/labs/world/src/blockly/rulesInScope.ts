@@ -130,7 +130,7 @@ function* everyBlock(node: unknown): Generator<SavedBlock> {
  *
  * The dropdown stores a trait as its rule's name and the export its own name
  * derives — "Acts as Ground" declared by "Gravity" is `Gravity#ActsAsGround
- * Trait` (`constants.useTrait`) — so the rule is everything before the `#`. A
+ * Trait` — so the rule is everything before the `#`. A
  * value with no `#` names no rule and is skipped rather than guessed at: an
  * empty dropdown reads as `''`, and treating that as a rule called nothing
  * would put every unnamed rule in scope.

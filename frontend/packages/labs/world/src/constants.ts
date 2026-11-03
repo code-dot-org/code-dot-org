@@ -77,20 +77,6 @@ const nextBlock = (block: object, next?: object) =>
 export const stack = (blocks: object[]): object =>
   blocks.reduceRight((next, block) => nextBlock(block, next));
 
-/**
- * `use trait ⟨Rule#Trait⟩` — the row that gives an actor a share of a rule.
- *
- * The dropdown stores a trait as its rule's NAME and the export name its own
- * name derives (`traitOptions`), so "Acts as Ground" declared by the rule named
- * "Gravity" is `Gravity#ActsAsGroundTrait`. Not a module path: the rule is
- * found by name wherever its file sits, and a value that names nothing falls
- * back to the first option rather than failing.
- */
-export const useTrait = (trait: string) => ({
-  type: 'world_use_trait',
-  fields: {TRAIT: trait},
-});
-
 /** `set text of ⟨this actor⟩ to …` — the scoreboard's only verb. */
 const setText = (value: object) => ({
   type: 'world_set_ActorsLabel_TextProperty',

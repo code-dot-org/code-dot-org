@@ -293,7 +293,8 @@ The tests that solve a lesson edit an actor through its view and fold it
 back, as a writer of the view does (`editing`, `editingWorld`,
 `toolboxShelf`'s `declaring`). Doing so found three things. The
 actor-state check read the Lamp's file for `world_rule_property`, which
-a data-shaped file does not say; it reads the Lamp's view. A test that
+a data-shaped file does not say; it read the Lamp's view, and reads its
+`properties` since (COMPILE_FROM_DATA_PLAN.md, 5d, step 4). A test that
 changed "the first row under Stone" found the picture there, the view
 putting rows in a fixed order; it finds the `use trait` row. And the
 fold read a declaration only if it had exactly the one field it needed,

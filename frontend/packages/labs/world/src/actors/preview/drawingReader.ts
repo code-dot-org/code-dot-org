@@ -43,7 +43,7 @@ import {
 } from '../../engine/core/theme';
 import {STYLED} from '../../engine/rules/styled';
 import {MAIN_SCREEN_PATH} from '../../mainWorld';
-import {viewOf} from '../actorData';
+import {isActorData, writeValue, type ActorData} from '../actorData';
 
 /** A block as it sits in a saved workspace — only what is read here. */
 export interface Node {
@@ -167,28 +167,29 @@ const socket = (node: Node, name: string): Node | undefined =>
 
 const field = (node: Node, name: string): unknown => node.fields?.[name];
 
-/** The `define actor` root of an actor file, if it parses. */
-export function defineActorIn(contents: string | undefined): Node | undefined {
+/** The data an actor file holds, if it parses as one. */
+function actorIn(contents: string | undefined): ActorData | undefined {
   if (contents === undefined) {
     return undefined;
   }
   try {
-    return (
-      // Either shape (`actors/actorData`).
-      (
-        (JSON.parse(viewOf(contents)) as {blocks?: {blocks?: Node[]}}).blocks
-          ?.blocks ?? []
-      ).find(root => root.type === 'world_actor')
-    );
+    const held = JSON.parse(contents) as unknown;
+    return isActorData(held) ? held : undefined;
   } catch {
     return undefined; // mid-edit / not JSON, as everywhere else
   }
 }
 
+/** The actor's `define drawing`, a root of its code, if it has one. */
+const drawingOf = (data: ActorData | undefined): Node | undefined =>
+  ((data?.blocks?.blocks?.blocks ?? []) as Node[]).find(
+    root => root.type === 'world_define_drawing',
+  );
+
 /**
  * This actor and everything it acts like, nearest first, as module paths.
  *
- * Read off the FILE, because the `acts like` row is what the generated module
+ * Read off the FILE, because its `actsLike` is what the generated module
  * obeys. `seen` because a cycle is a project that will not load rather than a
  * picture to draw forever.
  */
@@ -201,21 +202,15 @@ export function ancestry(files: Files, actorPath: string): string[] {
     }
     seen.add(at);
     line.push(at);
-    const row: Node | undefined = chain(
-      defineActorIn(files[`${at}.actor`])?.next?.block,
-    ).find(one => one.type === 'world_acts_like');
-    const named: unknown = row?.fields?.ACTOR;
-    at = typeof named === 'string' ? named : undefined;
+    at = actorIn(files[`${at}.actor`])?.actsLike;
   }
   return line;
 }
 
 /** Whether an actor file, or one it acts like, declares a drawing. */
 export function declaresDrawing(files: Files, actorPath: string): boolean {
-  return ancestry(files, actorPath).some(one =>
-    chain(defineActorIn(files[`${one}.actor`])?.next?.block).some(
-      row => row.type === 'world_define_drawing',
-    ),
+  return ancestry(files, actorPath).some(
+    one => drawingOf(actorIn(files[`${one}.actor`])) !== undefined,
   );
 }
 
@@ -426,8 +421,13 @@ class Reading {
  * declaration's empty default. Literals only: a `set` of an expression is
  * work for the running actor.
  */
-function written(root: Node, into: Map<string, unknown>, reading: Reading) {
-  for (const row of chain(root.next?.block)) {
+function written(
+  data: ActorData,
+  into: Map<string, unknown>,
+  reading: Reading,
+) {
+  for (const held of data.values ?? []) {
+    const row = writeValue(held) as Node;
     const parts = WRITE.exec(row.type ?? '');
     const value = socket(row, 'VALUE');
     if (parts && value) {
@@ -525,18 +525,14 @@ export function readDrawing(
   // picture: it acts like a Progress Bar and inherits one, so a reading of
   // this file's own rows alone would draw nothing (`ActorBuilder.actsLike`).
   const lineage = ancestry(files, actorPath);
-  const roots = lineage
-    .map(one => defineActorIn(files[`${one}.actor`]))
-    .filter((root): root is Node => root !== undefined);
+  const actors = lineage
+    .map(one => actorIn(files[`${one}.actor`]))
+    .filter((data): data is ActorData => data !== undefined);
   // The NEAREST drawing wins, which is what the builder does: a child's own
   // `define drawing` replaces an inherited picture, and one that says
-  // nothing keeps it. A ROW under `define actor` (specs/DRAWING.md).
-  const drawing = roots
-    .map(root =>
-      chain(root.next?.block).find(row => row.type === 'world_define_drawing'),
-    )
-    .find(row => row !== undefined);
-  if (!roots.length || !drawing) {
+  // nothing keeps it (specs/DRAWING.md).
+  const drawing = actors.map(drawingOf).find(root => root !== undefined);
+  if (!actors.length || !drawing) {
     return undefined;
   }
   const declarations = declarationsOf(files);
@@ -554,8 +550,8 @@ export function readDrawing(
   const reading = new Reading(set, declarations, measure, theme);
   // Merged from the far end inward, so a child's `set` overrides an inherited
   // one — the order overrides are applied in when the actor is really built.
-  for (const root of [...roots].reverse()) {
-    written(root, set, reading);
+  for (const data of [...actors].reverse()) {
+    written(data, set, reading);
   }
   // …and the placement's, over all of it, which is what an override means.
   for (const [ownerId, values] of Object.entries(overrides)) {

@@ -311,8 +311,13 @@ data the one form. In order, each its own commit:
    reads every actor the repository builds back from its rows unchanged;
    others rename each kind of key. The palette guards read an actor's
    values, effects and block bodies for the blocks it names (`typesIn`).
-4. Readers read the data: `eventChoices`, `drawingReader`,
-   `standInBlocks`, `catalogue`.
+4. BUILT, November 2026. Readers read the data. The kind facts behind
+   the "+" take an actor's `traits` (`eventChoices.traitValuesIn`); the
+   drawing preview follows `actsLike`, finds `define drawing` among the
+   code and reads `values` (`drawingReader`); `standInBlocks` stands in
+   for blocks named in the code and in the key rows; the Lamp's lesson
+   check reads its `properties`. `constants.useTrait`, which nothing
+   called, is gone.
 5. The tutor proposes an actor as data. Then `foldActor`, `actorView`,
    `viewOf`, `asActorData`, `throughView` and the actor half of
    `VIEW_ROWS` go, and a file in rows is one that cannot be read.

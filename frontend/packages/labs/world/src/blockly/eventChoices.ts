@@ -12,7 +12,7 @@
 
 import type {Toolbox, ToolboxCategory} from '@code-dot-org/blockly';
 
-import {viewOf} from '../actors/actorData';
+import {isActorData} from '../actors/actorData';
 
 import {ANY_FIELD, THIS_FIELD} from './eventSubject';
 import {EVENT_LOCAL_FIELD} from './fields/eventLocal';
@@ -250,41 +250,14 @@ export function eventChoicesForKind(
   });
 }
 
-/** A block in a file's JSON, as far as finding `use trait` rows needs. */
-interface JsonBlock {
-  type?: string;
-  fields?: Record<string, unknown>;
-  inputs?: Record<string, {block?: JsonBlock; shadow?: JsonBlock} | undefined>;
-  next?: {block?: JsonBlock};
-}
-
-/** Every `use trait` value an actor file elects, wherever the row sits. */
+/** The traits an actor file elects. */
 export function traitValuesIn(contents: string): string[] {
-  let document: {blocks?: {blocks?: JsonBlock[]}};
   try {
-    // Either shape (`actors/actorData`).
-    document = JSON.parse(viewOf(contents)) as typeof document;
+    const held = JSON.parse(contents) as unknown;
+    return isActorData(held) ? [...(held.traits ?? [])] : [];
   } catch {
     return [];
   }
-  const values: string[] = [];
-  const walk = (block: JsonBlock | undefined) => {
-    if (!block) {
-      return;
-    }
-    if (block.type === 'world_use_trait') {
-      const value = block.fields?.TRAIT;
-      if (typeof value === 'string' && value) {
-        values.push(value);
-      }
-    }
-    for (const held of Object.values(block.inputs ?? {})) {
-      walk(held?.block);
-    }
-    walk(block.next?.block);
-  };
-  (document.blocks?.blocks ?? []).forEach(walk);
-  return values;
 }
 
 /**

@@ -129,7 +129,8 @@ BUILT. The generator views an `.actor` before loading it; so do
 `parseActorOwnMeta`, `projectActorIcons`, `defineActorIn` (the drawing
 preview), the kind facts behind the "+" (`eventChoices`), and
 `standInBlocks`, which has to see a data-shaped actor's setters as blocks
-to stand in for a deleted rule's. `lookOf` reads rows to write them, and
+to stand in for a deleted rule's. The last three read the data since
+(COMPILE_FROM_DATA_PLAN.md, 5d, step 4). `lookOf` reads rows to write them, and
 goes with the writers. A test builds every scenario twice, as it ships and
 with every actor folded into data, and runs a second of each with the same
 random numbers: the two put every actor in the same place.

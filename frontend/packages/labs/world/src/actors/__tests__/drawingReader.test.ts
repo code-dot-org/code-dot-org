@@ -7,6 +7,7 @@ import {describe, expect, it} from 'vitest';
 import type {DrawCommand} from '../../engine/core/drawing';
 import {STOCK_RULES} from '../../rules/stock';
 import {STOCK_STYLES} from '../../styles/stock';
+import {actorDocument} from '../actorDocument';
 import {
   ancestry,
   declarationsOf,
@@ -26,37 +27,24 @@ const SHELF: Files = Object.fromEntries([
 const chain = (rows: Node[]): Node =>
   rows.reduceRight((next, row) => ({...row, next: {block: next}}));
 
-/** An actor file holding one `define drawing` over these rows. */
+/** An actor file whose drawing is these rows. */
 const drawnActor = (
   name: string,
   rows: Node[],
   size: [number, number] = [32, 32],
-  more: Node[] = [],
 ): string =>
-  JSON.stringify({
-    blocks: {
-      blocks: [
-        {
-          type: 'world_actor',
-          fields: {NAME: name},
-          next: {
-            block: chain([
-              ...more,
-              {
-                type: 'world_define_drawing',
-                inputs: {
-                  WIDTH: {block: {type: 'math_number', fields: {NUM: size[0]}}},
-                  HEIGHT: {
-                    block: {type: 'math_number', fields: {NUM: size[1]}},
-                  },
-                  DO: {block: chain(rows)},
-                },
-              },
-            ]),
-          },
+  actorDocument({
+    name,
+    code: [
+      {
+        type: 'world_define_drawing',
+        inputs: {
+          WIDTH: {block: {type: 'math_number', fields: {NUM: size[0]}}},
+          HEIGHT: {block: {type: 'math_number', fields: {NUM: size[1]}}},
+          DO: {block: chain(rows)},
         },
-      ],
-    },
+      },
+    ],
   });
 
 const num = (value: number) => ({
