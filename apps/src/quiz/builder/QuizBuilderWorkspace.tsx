@@ -1,6 +1,6 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button, Typography} from '@mui/material';
-import React, {useMemo, useState} from 'react';
+import React, {useCallback, useMemo, useState} from 'react';
 
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 
@@ -54,6 +54,21 @@ const QuizBuilderWorkspace: React.FunctionComponent<
   // was open before it. A create opens the just-created question straight
   // into editing.
   const [expandedId, setExpandedId] = useState<number | null>(null);
+  const [dirtyIds, setDirtyIds] = useState<ReadonlySet<number>>(new Set());
+  const setQuestionDirty = useCallback((id: number, isDirty: boolean) => {
+    setDirtyIds(prev => {
+      if (prev.has(id) === isDirty) {
+        return prev;
+      }
+      const next = new Set(prev);
+      if (isDirty) {
+        next.add(id);
+      } else {
+        next.delete(id);
+      }
+      return next;
+    });
+  }, []);
   const hasPendingQuestion = questions.some(question =>
     isPendingQuestionId(question.id)
   );
@@ -121,6 +136,9 @@ const QuizBuilderWorkspace: React.FunctionComponent<
             questionCount={pageQuestions.length}
             onCreate={type => handleCreate(page, type)}
             createDisabledReason={createDisabledReason}
+            hasUnsavedQuestion={pageQuestions.some(question =>
+              dirtyIds.has(question.id)
+            )}
           >
             {pageQuestions.map(question => (
               <li key={question.id}>
@@ -133,6 +151,7 @@ const QuizBuilderWorkspace: React.FunctionComponent<
                   error={question.id === errorQuestionId ? error : null}
                   onSave={saveQuestion}
                   onRemove={removeQuestion}
+                  onDirtyChange={setQuestionDirty}
                 />
               </li>
             ))}

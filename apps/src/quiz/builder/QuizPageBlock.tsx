@@ -17,6 +17,7 @@ interface QuizPageBlockProps {
   questionCount: number;
   onCreate: (type: QuizQuestionType) => void;
   createDisabledReason?: string;
+  hasUnsavedQuestion: boolean;
   // One <li> per question.
   children?: React.ReactNode;
 }
@@ -26,6 +27,7 @@ const QuizPageBlock: React.FunctionComponent<QuizPageBlockProps> = ({
   questionCount,
   onCreate,
   createDisabledReason,
+  hasUnsavedQuestion,
   children,
 }) => {
   const [collapsed, setCollapsed] = useState(false);
@@ -75,9 +77,9 @@ const QuizPageBlock: React.FunctionComponent<QuizPageBlockProps> = ({
             </Typography>
           </div>
           <div className={rowStyles.actions}>
-            <span className={styles.unsaved}>
+            {collapsed && hasUnsavedQuestion && (
               <UnsavedBadge label="Page contains an unsaved question" />
-            </span>
+            )}
             <IconButton
               ref={toggleRef}
               aria-label={

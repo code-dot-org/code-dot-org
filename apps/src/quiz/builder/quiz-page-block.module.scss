@@ -63,14 +63,6 @@
   border-radius: var(--shape-lg) var(--shape-lg) 0 0;
 }
 
-.unsaved {
-  display: none;
-}
-
-.page:has(.pageBody[hidden] [data-dirty]) .unsaved {
-  display: flex;
-}
-
 .pageBody {
   display: flex;
   flex-direction: column;

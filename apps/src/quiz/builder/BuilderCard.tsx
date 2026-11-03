@@ -67,10 +67,7 @@ const BuilderCard: React.FunctionComponent<BuilderCardProps> = ({
   }, [isExpanded]);
 
   return (
-    <div
-      className={classNames(styles.card, nested && styles.cardNested)}
-      data-dirty={isDirty || undefined}
-    >
+    <div className={classNames(styles.card, nested && styles.cardNested)}>
       <div className={classNames(rowStyles.header, styles.header)}>
         <div className={styles.leading}>
           <span className={styles.typeIcon} aria-hidden>

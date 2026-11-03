@@ -27,6 +27,7 @@ interface QuizQuestionCardProps {
     payload: QuizQuestionPayload
   ) => Promise<number | undefined>;
   onRemove: (id: number) => Promise<boolean>;
+  onDirtyChange?: (id: number, isDirty: boolean) => void;
 }
 
 function toDraft(question: QuizBuilderQuestion): QuizQuestionDraft {
@@ -87,6 +88,7 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
   error,
   onSave,
   onRemove,
+  onDirtyChange,
 }) => {
   const [draft, setDraft] = useState(() => toDraft(question));
   const [isSaving, setIsSaving] = useState(false);
@@ -115,6 +117,14 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
   useEffect(() => {
     setDraft(toDraft(question));
   }, [question]);
+
+  useEffect(() => {
+    if (!isDirty || !onDirtyChange) {
+      return;
+    }
+    onDirtyChange(question.id, true);
+    return () => onDirtyChange(question.id, false);
+  }, [onDirtyChange, question.id, isDirty]);
 
   const handleSave = async () => {
     setIsSaving(true);

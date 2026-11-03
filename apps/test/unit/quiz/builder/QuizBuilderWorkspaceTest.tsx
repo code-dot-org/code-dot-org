@@ -131,7 +131,6 @@ describe('QuizBuilderWorkspace', () => {
     expect(screen.getByText('1 attempt')).toBeInTheDocument();
   });
 
-
   it('lists each placed question with its name and question title', () => {
     renderWorkspace({
       questions: [
@@ -365,8 +364,7 @@ describe('QuizBuilderWorkspace', () => {
     expect(screen.getByText('JavaScript variable fundamentals')).toBeVisible();
   });
 
-  // The page badge itself is CSS (:has), which jsdom does not apply.
-  it('flags only the page whose question has unsaved edits', () => {
+  it('flags a collapsed page whose question has unsaved edits', () => {
     renderWorkspace({
       questions: [
         question({id: 1, page: 1}),
@@ -379,9 +377,22 @@ describe('QuizBuilderWorkspace', () => {
       {target: {value: 'Edited name'}}
     );
 
-    const pageOf = (name: string) =>
-      screen.getByRole('region', {name}) as HTMLElement;
-    expect(pageOf('Page 1').querySelector('[data-dirty]')).toBeInTheDocument();
-    expect(pageOf('Page 2').querySelector('[data-dirty]')).toBeNull();
+    const badge = 'Page contains an unsaved question';
+    expect(screen.queryByRole('img', {name: badge})).not.toBeInTheDocument();
+
+    fireEvent.click(screen.getByRole('button', {name: 'Collapse Page 1'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Collapse Page 2'}));
+    const pageOf = (name: string) => screen.getByRole('region', {name});
+    expect(
+      within(pageOf('Page 1')).getByRole('img', {name: badge})
+    ).toBeInTheDocument();
+    expect(
+      within(pageOf('Page 2')).queryByRole('img', {name: badge})
+    ).not.toBeInTheDocument();
+
+    fireEvent.click(screen.getByRole('button', {name: 'Expand Page 1'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Discard changes'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Collapse Page 1'}));
+    expect(screen.queryByRole('img', {name: badge})).not.toBeInTheDocument();
   });
 });
