@@ -40,7 +40,7 @@ This is not the only way an identifier can reach Sentry. Anything placed in `con
 
 ### Sentry Releases
 
-During a deploy, the `aws/ci_build` script emits a Sentry release event and annotates the commit hash that was deployed.
+During a deploy, the `aws/ci_build` script emits a Sentry release event and annotates the commit hash that was deployed. The release covers the dashboard, apps and studio projects, since all three ship from the same commit.
 
 ## Testing
 
