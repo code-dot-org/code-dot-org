@@ -4,8 +4,9 @@ import React, {useMemo, useState} from 'react';
 
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 
+import QuizMetadataList from '../QuizMetadataList';
 import {QuizQuestionType} from '../types';
-import {groupByPage} from '../utils';
+import {groupByPage, pluralize} from '../utils';
 
 import CreateQuestionDropdown from './CreateQuestionDropdown';
 import IntroScreenCard from './IntroScreenCard';
@@ -21,7 +22,8 @@ interface QuizBuilderWorkspaceProps {
   quizTitle: string;
   showIntroScreen: boolean;
   customIntroText: string;
-  hasTimeLimit: boolean;
+  timeLimitMinutes?: number;
+  allowMultipleAttempts: boolean;
   onSaveQuizConfig: (fields: Partial<QuizConfigurationData>) => Promise<void>;
 }
 
@@ -34,7 +36,8 @@ const QuizBuilderWorkspace: React.FunctionComponent<
   quizTitle,
   showIntroScreen,
   customIntroText,
-  hasTimeLimit,
+  timeLimitMinutes,
+  allowMultipleAttempts,
   onSaveQuizConfig,
 }) => {
   const {
@@ -97,7 +100,7 @@ const QuizBuilderWorkspace: React.FunctionComponent<
                   className={styles.pageHeaderDot}
                 />
                 <Typography variant="body4" component="span">
-                  {questionCountLabel(pageQuestions.length)}
+                  {pluralize(pageQuestions.length, 'question')}
                 </Typography>
               </div>
               {pageQuestions.length > 0 && (
@@ -160,12 +163,15 @@ const QuizBuilderWorkspace: React.FunctionComponent<
     <PanelContainer id="quiz-workspace" headerContent="Workspace">
       <div className={styles.workspace}>
         <header className={styles.header}>
-          <Typography variant="h5" component="h1">
+          <Typography variant="h2" component="h1" className={styles.title}>
             {quizTitle || 'Untitled quiz'}
           </Typography>
-          <Typography variant="body3">
-            {questionCountLabel(questions.length)}
-          </Typography>
+          <QuizMetadataList
+            questionCount={questions.length}
+            timeLimitMinutes={timeLimitMinutes}
+            allowMultipleAttempts={allowMultipleAttempts}
+            iconClassName={styles.metaIcon}
+          />
         </header>
 
         {/* A question-specific error shows on that question's card instead - see error prop below. */}
@@ -179,7 +185,7 @@ const QuizBuilderWorkspace: React.FunctionComponent<
           <div className={styles.introScreen}>
             <IntroScreenCard
               customIntroText={customIntroText}
-              hasTimeLimit={hasTimeLimit}
+              hasTimeLimit={!!timeLimitMinutes}
               onSave={onSaveQuizConfig}
             />
           </div>
@@ -199,9 +205,5 @@ const QuizBuilderWorkspace: React.FunctionComponent<
     </PanelContainer>
   );
 };
-
-function questionCountLabel(count: number): string {
-  return count === 1 ? '1 question' : `${count} questions`;
-}
 
 export default QuizBuilderWorkspace;

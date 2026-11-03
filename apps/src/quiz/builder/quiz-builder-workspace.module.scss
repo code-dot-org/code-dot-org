@@ -17,7 +17,15 @@
 .header {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 8px;
+}
+
+.title {
+  margin: 0;
+}
+
+.metaIcon {
+  color: var(--text-neutral-quaternary);
 }
 
 .pages {

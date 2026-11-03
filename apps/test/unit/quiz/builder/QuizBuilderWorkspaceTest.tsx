@@ -67,7 +67,7 @@ function renderWorkspace(
       quizTitle="AI Foundations Certification Exam"
       showIntroScreen={false}
       customIntroText=""
-      hasTimeLimit={false}
+      allowMultipleAttempts={false}
       onSaveQuizConfig={jest.fn()}
       {...propOverrides}
     />
@@ -101,6 +101,19 @@ describe('QuizBuilderWorkspace', () => {
   it('shows a loading message while questions load', () => {
     renderWorkspace({isLoading: true});
     expect(screen.getByText('Loading questions…')).toBeInTheDocument();
+  });
+
+  it('shows time limit and unlimited attempts in the workspace header', () => {
+    renderWorkspace({}, {timeLimitMinutes: 45, allowMultipleAttempts: true});
+    expect(screen.getByText('45 minutes')).toBeInTheDocument();
+    expect(screen.getByText('Unlimited attempts')).toBeInTheDocument();
+    expect(screen.queryByText('1 attempt')).not.toBeInTheDocument();
+  });
+
+  it('omits the time limit from the workspace header for an untimed quiz', () => {
+    renderWorkspace();
+    expect(screen.queryByText(/minute/)).not.toBeInTheDocument();
+    expect(screen.getByText('1 attempt')).toBeInTheDocument();
   });
 
   it('shows an empty message when the quiz has no questions', () => {
