@@ -1,5 +1,4 @@
 require 'policies/lti'
-require 'authentication_option'
 
 class Queries::Lti
   def self.get_user(id_token)
