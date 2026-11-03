@@ -1,4 +1,5 @@
 import {
+  drawStripCell,
   stripCellOrigin,
   AnimationPoses,
   CHARACTER_POSE_ORDER,
@@ -156,6 +157,23 @@ describe('SpriteLab2 characterAnimations', () => {
     // Gravity pointing up: rising is moving down.
     expect(jumpFrame(5, -0.75)).toBe(0);
     expect(jumpFrame(-3, -0.75)).toBe(1);
+  });
+
+  it('cuts one cell of a strip into a canvas of its size', () => {
+    const drawImage = jest.fn();
+    const getContext = (() =>
+      ({
+        drawImage,
+      } as unknown as CanvasRenderingContext2D)) as unknown as typeof HTMLCanvasElement.prototype.getContext;
+    jest
+      .spyOn(HTMLCanvasElement.prototype, 'getContext')
+      .mockImplementation(getContext);
+    const image = {naturalWidth: 96} as HTMLImageElement;
+    const cell = drawStripCell(image, {x: 32, y: 48}, 4);
+    expect([cell.width, cell.height]).toEqual([32, 48]);
+    // Index 4 of a three-column strip: second row, second column.
+    expect(drawImage).toHaveBeenCalledWith(image, 32, 48, 32, 48, 0, 0, 32, 48);
+    jest.restoreAllMocks();
   });
 
   it('the strip: ranges fit, and the standing frame is shared', () => {

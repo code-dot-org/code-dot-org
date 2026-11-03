@@ -6,6 +6,7 @@ import {toImage} from '@cdo/apps/imageUtils';
 import {
   CHARACTER_STRIP_BASE_FRAME,
   CHARACTER_STRIP_FRAME_COUNT,
+  drawStripCell,
   stripCellOrigin,
 } from '../../characterAnimations';
 
@@ -46,26 +47,7 @@ export async function cutFrame(
   index: number
 ): Promise<string> {
   const image = await toImage(sheetSrc);
-  const canvas = document.createElement('canvas');
-  canvas.width = frameSize.x;
-  canvas.height = frameSize.y;
-  const ctx = canvas.getContext('2d');
-  if (!ctx) {
-    throw new Error('No canvas context');
-  }
-  const {x, y} = cellOrigin(image, frameSize, index);
-  ctx.drawImage(
-    image,
-    x,
-    y,
-    frameSize.x,
-    frameSize.y,
-    0,
-    0,
-    frameSize.x,
-    frameSize.y
-  );
-  return canvas.toDataURL('image/png');
+  return drawStripCell(image, frameSize, index).toDataURL('image/png');
 }
 
 /** The strip with one frame replaced by drawn pixels, as a PNG data URI.

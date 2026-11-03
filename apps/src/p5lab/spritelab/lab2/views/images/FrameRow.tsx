@@ -4,7 +4,7 @@
 import classNames from 'classnames';
 import React, {useEffect, useRef} from 'react';
 
-import {stripCellOrigin} from '../../characterAnimations';
+import {drawStripCell} from '../../characterAnimations';
 
 import {FRAME_LABELS, FRAME_ROW_ORDER, FrameSize} from './frames';
 
@@ -37,25 +37,7 @@ const FrameTile: React.FunctionComponent<{
       if (cancelled) {
         return;
       }
-      const origin = stripCellOrigin(
-        image.naturalWidth,
-        {x: frameSize.x, y: frameSize.y},
-        index
-      );
-      canvas.width = frameSize.x;
-      canvas.height = frameSize.y;
-      const ctx = canvas.getContext('2d');
-      ctx?.drawImage(
-        image,
-        origin.x,
-        origin.y,
-        frameSize.x,
-        frameSize.y,
-        0,
-        0,
-        frameSize.x,
-        frameSize.y
-      );
+      drawStripCell(image, {x: frameSize.x, y: frameSize.y}, index, canvas);
     };
     image.src = sheetSrc;
     return () => {

@@ -10,10 +10,7 @@ import {
   upscaleImageNearest,
 } from '@cdo/apps/pixelEditor/pixelArt';
 
-import {
-  CHARACTER_STRIP_BASE_FRAME,
-  stripCellOrigin,
-} from './characterAnimations';
+import {CHARACTER_STRIP_BASE_FRAME, drawStripCell} from './characterAnimations';
 import {
   BACKGROUNDS_CATEGORY,
   RuntimeAnimationList,
@@ -285,24 +282,7 @@ function frameThumbnail(
       const img = new Image();
       img.onload = () => {
         try {
-          const canvas = document.createElement('canvas');
-          canvas.width = frameSize.x;
-          canvas.height = frameSize.y;
-          const origin = stripCellOrigin(img.naturalWidth, frameSize, index);
-          canvas
-            .getContext('2d')
-            ?.drawImage(
-              img,
-              origin.x,
-              origin.y,
-              frameSize.x,
-              frameSize.y,
-              0,
-              0,
-              frameSize.x,
-              frameSize.y
-            );
-          resolve(canvas.toDataURL('image/png'));
+          resolve(drawStripCell(img, frameSize, index).toDataURL('image/png'));
         } catch (e) {
           resolve(source);
         }

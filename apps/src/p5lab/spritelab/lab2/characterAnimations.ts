@@ -78,6 +78,33 @@ export function stripCellOrigin(
   };
 }
 
+/** Frame `index` of a strip drawn into `into`, a canvas of one cell: the
+    one place a cell is cut, so every reader gets the same pixels. */
+export function drawStripCell(
+  image: HTMLImageElement,
+  frameSize: {x: number; y: number},
+  index: number,
+  into: HTMLCanvasElement = document.createElement('canvas')
+): HTMLCanvasElement {
+  into.width = frameSize.x;
+  into.height = frameSize.y;
+  const {x, y} = stripCellOrigin(image.naturalWidth, frameSize, index);
+  into
+    .getContext('2d')
+    ?.drawImage(
+      image,
+      x,
+      y,
+      frameSize.x,
+      frameSize.y,
+      0,
+      0,
+      frameSize.x,
+      frameSize.y
+    );
+  return into;
+}
+
 /** Right first: the left-facing frames are mirrored from the right ones. */
 export const CHARACTER_FACINGS: CharacterFacing[] = ['right', 'left'];
 
