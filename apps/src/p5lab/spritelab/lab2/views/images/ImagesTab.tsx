@@ -40,7 +40,7 @@ import ImageFrame from './ImageFrame';
 import ImageList, {DraftEntry, NewImageKind} from './ImageList';
 import MakePane from './MakePane';
 import OwnWorkPane from './OwnWorkPane';
-import {listProjectImages, ProjectImage} from './projectImages';
+import {ImageProps, listProjectImages, ProjectImage} from './projectImages';
 import BehindTheScenes from './teaching/BehindTheScenes';
 import useImageWriter, {ImageTarget} from './useImageWriter';
 
@@ -302,11 +302,15 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     }
     return () => onDrawingHistory?.(null);
   }, [drawingOpen, onDrawingHistory]);
+  // The making the image had when the tools opened: a different one
+  // arriving means a picture landed over the painting.
+  const drawingGenerationRef = useRef<ImageProps['generation']>();
   const startDrawing = useCallback(
     (target: ImageTarget) => {
       const existing = target.key
         ? images.find(image => image.key === target.key)
         : undefined;
+      drawingGenerationRef.current = existing?.props.generation;
       if (existing?.src) {
         setDrawing({
           target,
@@ -465,10 +469,10 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   // ones over it.
   const landedOverPainting =
     !!drawing &&
-    paintsOwnWork === false &&
     editedMode() === 'paint' &&
     !!editingOffered &&
     !!chosenImage?.props.generation &&
+    chosenImage.props.generation !== drawingGenerationRef.current &&
     (drawing.target.key === chosenImage.key || drawing.target.key === null);
   useEffect(() => {
     if (landedOverPainting) {

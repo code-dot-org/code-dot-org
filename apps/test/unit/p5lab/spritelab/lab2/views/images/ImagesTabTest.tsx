@@ -511,6 +511,22 @@ describe('ImagesTab', () => {
     expect(screen.getByRole('button', {name: 'Edit this image'})).toBeTruthy();
   });
 
+  it('opens the tools on an AI-made picture in free play with Edit this image', () => {
+    delete params['images-edited'];
+    propsByKey.k1 = {
+      name: 'Sprite 1',
+      categories: [],
+      sourceUrl: 'sprite1.png',
+      generation: {imageType: 'sprite', prompt: 'A cat'},
+    };
+    renderTab({editingOffered: true});
+    expect(screen.queryByText('canvas')).toBeNull();
+    fireEvent.click(screen.getByRole('button', {name: 'Edit this image'}));
+    // The tools stay open: the picture's making is the one they opened on.
+    expect(screen.getByText('canvas')).toBeTruthy();
+    expect(screen.getByText('words')).toBeTruthy();
+  });
+
   it('keeps the tools and the words open while a blank is drawn in free play', () => {
     delete params['images-edited'];
     renderTab({editingOffered: true});
