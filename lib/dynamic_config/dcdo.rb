@@ -75,6 +75,8 @@ class DCDO < DynamicConfigBase
       # Controls whether Sprite Lab in Lab2's image generation runs the prompt and
       # picture LLM safety judges. Azure image moderation still runs when this is false.
       'spritelab-lab2-image-safety-enabled': DCDO.get('spritelab-lab2-image-safety-enabled', true),
+      # Sprite Lab in Lab2's "ask AI" block; also gates the access token server-side.
+      'spritelab-lab2-ask-ai-enabled': DCDO.get('spritelab-lab2-ask-ai-enabled', true),
       'frontend-observability-enabled': DCDO.get('frontend-observability-enabled', false),
       'browser-events-enabled': DCDO.get('browser-events-enabled', true),
       'onboarding-enabled': DCDO.get('onboarding-enabled', false),
