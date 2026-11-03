@@ -21,9 +21,6 @@ $(document).ready(function () {
         aiPromptModificationInput.val(newInstructions)
       }
     />,
-    document.getElementById('ai-evaluation-settings-editor'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.getElementById('ai-evaluation-settings-editor')
   );
 });

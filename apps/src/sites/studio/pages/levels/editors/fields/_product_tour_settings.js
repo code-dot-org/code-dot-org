@@ -14,9 +14,6 @@ $(document).ready(function () {
       initialSettings={initialSettings}
       appName={appName}
     />,
-    document.getElementById('product-tour-settings-editor'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.getElementById('product-tour-settings-editor')
   );
 });

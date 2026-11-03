@@ -10,9 +10,6 @@ $(document).ready(function () {
 
   createReactRoot(
     <EditStarterAssets levelName={levelName} />,
-    document.getElementById('starter-assets-editor'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.getElementById('starter-assets-editor')
   );
 });
