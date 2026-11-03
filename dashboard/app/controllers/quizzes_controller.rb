@@ -22,6 +22,8 @@ class QuizzesController < ApplicationController
     published_usage = QuizQuestion.published_unit_usage(question_ids)
 
     render json: quiz_configuration_json(@level).merge(
+      version: quiz_version(@level),
+      usedInPublishedUnit: @level.used_in_published_unit?,
       questions: placements.map do |placement|
         question = placement.quiz_question
         quiz_question_json(
@@ -42,11 +44,39 @@ class QuizzesController < ApplicationController
   # accepts PATCH as well as PUT, and because the frontend's config tabs
   # each only ever send the fields for their own tab. An explicit null
   # still clears a field.
+  #
+  # placements (with optional deleteQuestionIds) replaces the quiz's
+  # questions. It requires the version from show, and a stale one is
+  # refused with 409.
   def update
-    @level.update!(present_configuration_updates)
-    render json: quiz_configuration_json(@level)
+    # requires_new: a unit test's own transaction would otherwise absorb this
+    # one, so a failed save would not roll back.
+    @level.with_lock(requires_new: true) do
+      if params.key?(:placements)
+        raise StaleQuizError unless params[:version].to_s == quiz_version(@level).to_s
+        @level.replace_placements!(placement_params, delete_question_ids: delete_question_ids_param)
+      end
+      @level.assign_attributes(present_configuration_updates)
+      # Whole seconds, matching the column, so the version returned is the one stored.
+      @level.updated_at = Time.current.change(usec: 0)
+      @level.save!
+    end
+
+    json = quiz_configuration_json(@level).merge(version: quiz_version(@level))
+    if params.key?(:placements)
+      json[:placements] = @level.placements.map {|p| {quizQuestionId: p.quiz_question_id, page: p.page, position: p.position}}
+    end
+    render json: json
+  rescue StaleQuizError => exception
+    render status: :conflict, json: {error: exception.message}
   rescue StandardError => exception
     render status: :bad_request, json: {error: exception.message}
+  end
+
+  class StaleQuizError < StandardError
+    def initialize(msg = 'This quiz was changed somewhere else. Reload to see the latest version.')
+      super
+    end
   end
 
   # (wire param => [model attribute, caster]). caster defaults to a plain
@@ -74,6 +104,25 @@ class QuizzesController < ApplicationController
       next unless quiz_configuration_params.key?(wire_key)
       updates[attr] = caster.call(quiz_configuration_params[wire_key])
     end
+  end
+
+  private def quiz_version(quiz)
+    quiz.updated_at.to_i
+  end
+
+  # Raises on a missing or non-integer field, which update reports as 400.
+  private def placement_params
+    params.fetch(:placements, []).map do |entry|
+      {
+        quiz_question_id: Integer(entry[:quizQuestionId]),
+        page: Integer(entry[:page]),
+        position: Integer(entry[:position]),
+      }
+    end
+  end
+
+  private def delete_question_ids_param
+    params.fetch(:deleteQuestionIds, []).map {|id| Integer(id)}
   end
 
   private def quiz_configuration_params

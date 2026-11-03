@@ -471,7 +471,7 @@ Dashboard::Application.routes.draw do
       end
     end
 
-    resources :quiz_questions, only: [:index, :show, :update] do
+    resources :quiz_questions, only: [:index, :show, :create, :update] do
       collection do
         get 'course_unit_search'
       end
