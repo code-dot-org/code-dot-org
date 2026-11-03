@@ -276,6 +276,49 @@ describe('NavigationArea', () => {
       );
       expect(screen.getByRole('button')).toHaveTextContent('Submit');
     });
+
+    describe('with a prompt box', () => {
+      const prompt = {
+        heading: 'Stuck or want to get better at something?',
+        body: 'Practice a skill on your skill map, then come back.',
+      };
+
+      it('renders the heading and body text', () => {
+        renderWithHost({
+          label: 'Practice skills',
+          enabled: true,
+          onContinue: jest.fn(),
+          prompt,
+        });
+        expect(screen.getByText(prompt.heading)).toBeInTheDocument();
+        expect(screen.getByText(prompt.body)).toBeInTheDocument();
+      });
+
+      it('still renders the button inside the prompt box', () => {
+        renderWithHost({
+          label: 'Practice skills',
+          enabled: true,
+          onContinue: jest.fn(),
+          prompt,
+        });
+        expect(screen.getByRole('button')).toHaveTextContent('Practice skills');
+      });
+
+      it('calls onContinue when the button is clicked', () => {
+        const onContinue = jest.fn();
+        renderWithHost({enabled: true, onContinue, prompt});
+
+        fireEvent.click(screen.getByRole('button'));
+
+        expect(onContinue).toHaveBeenCalledTimes(1);
+      });
+
+      it('does not render heading or body text without a prompt', () => {
+        renderWithHost({enabled: true, onContinue: jest.fn()});
+        expect(screen.queryByText(prompt.heading)).toBeNull();
+        expect(screen.queryByText(prompt.body)).toBeNull();
+      });
+    });
   });
 
   describe('continuing without external navigation', () => {

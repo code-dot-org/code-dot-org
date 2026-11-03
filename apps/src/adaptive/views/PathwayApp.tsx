@@ -12,7 +12,7 @@ import {
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import Loading from '@cdo/apps/lab2/views/Loading';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {isAdaptiveAiEnabled} from '../ai/generate';
@@ -36,6 +36,7 @@ import {nextCheckpoint} from '../routing/route';
 import {Checkpoint, Pathway, Step} from '../types';
 
 import AdaptiveHeader from './AdaptiveHeader';
+import AdaptiveTabBar from './AdaptiveTabBar';
 import {checkpointStepFromUrl, clearUrl} from './checkpointUrl';
 import MapScreen from './MapScreen';
 import {PathwayContext} from './PathwayContext';
@@ -201,6 +202,9 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
   saveAnswers,
 }) => {
   const dispatch = useAppDispatch();
+  const projectName = useAppSelector(
+    state => state.lab.channel?.name || undefined
+  );
   const [view, setView] = useState<View>(
     initialCheckpointId
       ? {kind: 'step', checkpointId: initialCheckpointId, stepId: initialStepId}
@@ -310,7 +314,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
     dispatch(sendStartedReportIfNotStarted('adaptive'));
     setView({kind: 'project'});
   };
-  const openProjectFrom = (source: 'mapHeader' | 'projectCard') => {
+  const openProjectFrom = (source: 'mapHeader' | 'mapTab') => {
     sendFinalProjectClicked(source, statusMap);
     openProject();
   };
@@ -382,23 +386,24 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
         routeAfterCompletion: !!checkpoint.routeAfterCompletion,
       });
     };
+    const goToMap = () => {
+      clearUrl();
+      setView({kind: 'map'});
+    };
     return (
       <div className={styles.app}>
         <PathwayContext.Provider value={pathwayContext}>
           <StepPlayer
             key={checkpoint.id}
             checkpoint={checkpoint}
-            finishLabel={isProject ? 'Back to map' : undefined}
+            finishLabel={isProject ? 'Practice skills' : undefined}
             headerTitle={isProject ? checkpoint.title : undefined}
             initialStepId={view.kind === 'step' ? view.stepId : undefined}
             onStartStep={startStep}
             onCompleteStep={completeStepInCheckpoint}
             onLeaveStep={leaveStep}
             onSaveAnswers={saveAnswers}
-            onExit={() => {
-              clearUrl();
-              setView({kind: 'map'});
-            }}
+            onExit={goToMap}
             onFinish={() => {
               clearUrl();
               setView({
@@ -407,6 +412,15 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
               });
             }}
             onFinishPathway={isProject ? undefined : openProject}
+            activeTab={isProject ? 'project' : undefined}
+            onTabChange={
+              isProject
+                ? tab => {
+                    if (tab === 'map') goToMap();
+                  }
+                : undefined
+            }
+            projectName={isProject ? projectName : undefined}
           />
         </PathwayContext.Provider>
       </div>
@@ -422,6 +436,13 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
       <AdaptiveHeader
         title={`Skill Tree: ${pathway.title}`}
         onFinish={() => openProjectFrom('mapHeader')}
+      />
+      <AdaptiveTabBar
+        activeTab="map"
+        onTabChange={tab => {
+          if (tab === 'project') openProjectFrom('mapTab');
+        }}
+        projectName={projectName}
       />
       <MapScreen
         pathway={pathway}
@@ -439,7 +460,6 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
             stepId: cp ? stepIdToResume(cp, progress) : undefined,
           });
         }}
-        onWorkOnProject={() => openProjectFrom('projectCard')}
         hasSkippedCheckpoints={hasSkippedCheckpoints}
       />
     </div>

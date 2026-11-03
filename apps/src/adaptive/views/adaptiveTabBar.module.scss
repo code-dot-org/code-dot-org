@@ -1,0 +1,20 @@
+.tabBar {
+  flex: none;
+  border-bottom: 1px solid var(--borders-neutral-primary);
+  background: var(--background-neutral-primary);
+
+  :global(.MuiTabs-indicator) {
+    background-color: var(--border-brand-primary);
+  }
+}
+
+.tab {
+  // Override MUI defaults so the tab fits the ~44px strip height.
+  min-height: 44px !important;
+  padding-block: 0 !important;
+  padding-inline: 16px !important;
+  gap: 8px;
+  text-transform: none !important;
+  // Keep color identical for both states; MUI's .Mui-selected normally recolors.
+  color: var(--text-neutral-secondary) !important;
+}

@@ -49,7 +49,7 @@ export function statusCounts(statusMap: CheckpointStatusMap) {
   };
 }
 
-export type FinalProjectSource = 'mapHeader' | 'projectCard' | 'stepHeader';
+export type FinalProjectSource = 'mapHeader' | 'mapTab' | 'stepHeader';
 
 export function sendFinalProjectClicked(
   source: FinalProjectSource,

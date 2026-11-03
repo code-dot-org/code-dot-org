@@ -285,8 +285,14 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
         : 'Continue unlocks once your work on this step meets its goal.',
       endIcon: <FontAwesomeV6Icon iconName="arrow-right" iconStyle="solid" />,
       onContinue: onComplete,
+      prompt: step.project
+        ? {
+            heading: 'Stuck or want to get better at something?',
+            body: 'Practice a skill on your skill map, then come back.',
+          }
+        : undefined,
     }),
-    [continueLabel, checked, onComplete]
+    [continueLabel, checked, onComplete, step.project]
   );
 
   // Stands in for ProjectContainer's level-change reset, which steps bypass.
