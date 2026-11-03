@@ -1,5 +1,5 @@
 import {Pathway} from '@cdo/apps/adaptive/types';
-import {skillProgress} from '@cdo/apps/adaptive/views/map/groupProgress';
+import {getSkillProgress} from '@cdo/apps/adaptive/views/map/groupProgress';
 
 const pathway = {
   skills: {
@@ -14,10 +14,10 @@ const pathway = {
   ],
 } as unknown as Pathway;
 
-describe('skillProgress', () => {
+describe('getSkillProgress', () => {
   it('counts complete and skipped checkpoints per skill, in the pathway order', () => {
     expect(
-      skillProgress(pathway, {
+      getSkillProgress(pathway, {
         intro: 'complete',
         s1: 'complete',
         s2: 'skipped',

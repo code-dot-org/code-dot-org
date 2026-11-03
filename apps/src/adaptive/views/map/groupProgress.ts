@@ -18,7 +18,7 @@ const isDone = (status: string | undefined) =>
  * Each skill with how many of the checkpoints developing it are done, in
  * the pathway's order.
  */
-export function skillProgress(
+export function getSkillProgress(
   pathway: Pathway,
   statusMap: CheckpointStatusMap
 ): GroupProgress[] {

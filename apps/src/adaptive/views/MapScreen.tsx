@@ -14,7 +14,7 @@ import {PathwayEvidence} from '../routing/evidence';
 import {Pathway} from '../types';
 
 import CheckpointCard from './CheckpointCard';
-import {skillProgress} from './map/groupProgress';
+import {getSkillProgress} from './map/groupProgress';
 import {resolveMapSettings} from './map/mapSettings';
 import MapView from './map/MapView';
 import MapZoom from './map/MapZoom';
@@ -71,8 +71,8 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
   onWorkOnProject,
   hasSkippedCheckpoints,
 }) => {
-  const skills = useMemo(
-    () => skillProgress(pathway, statusMap),
+  const skillProgress = useMemo(
+    () => getSkillProgress(pathway, statusMap),
     [pathway, statusMap]
   );
   const {theme, setTheme} = useTheme();
@@ -189,7 +189,7 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
       />
       <header className={styles.mapBar}>
         <MuiTypography variant="strong">{pathway.title}</MuiTypography>
-        <MapStats skills={skills} timeSpentSeconds={timeSpentSeconds} />
+        <MapStats skills={skillProgress} timeSpentSeconds={timeSpentSeconds} />
       </header>
       <div className={styles.mapBody}>
         <div
