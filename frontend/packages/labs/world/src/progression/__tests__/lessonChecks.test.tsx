@@ -27,6 +27,7 @@ import {
   withMainAnimation,
   type ActorData,
   type ActorMember,
+  type ActorProperty,
   type Block,
 } from '../../actors/actorData';
 import {climbArrowsHandlers} from '../../actors/enhance/climbArrows';
@@ -38,6 +39,7 @@ import {
   importStockSprite,
 } from '../../appearance/importStock';
 import {stockAnimation, stockSprite} from '../../appearance/stock';
+import type {ScreenProperty} from '../../blockly/screenData';
 import {importStockEffect} from '../../effect/importStockEffect';
 import {stockEffect} from '../../effect/stock';
 import {seedFor} from '../../files/newThing';
@@ -53,8 +55,6 @@ import {LESSONS} from '../lessons';
 import type {MainCameraSettings} from '../lessons/worlds';
 import {actorPath} from '../lessons/worlds';
 import type {TileId} from '../types';
-
-import {withWorld, worldOf} from './support/worldView';
 
 /**
  * Play a tile's check against a project and say whether it passes.
@@ -82,15 +82,17 @@ const check = async (id: TileId, source: MultiFileSource) => {
  * By NAME rather than by id: a project's file ids are numbers assigned in
  * order, and a test that named one would be a test about `buildProject`.
  *
- * `main.world` IS THE WORLD AND ITS ACTORS TOGETHER. Every actor is a file
- * of its own, and a lesson shows them as tabs beside the world; an edit the
+ * `GAME` IS THE MAIN SCREEN AND ITS ACTORS TOGETHER. Every actor is a file
+ * of its own, and a lesson shows them as tabs beside the screen; an edit the
  * instructions describe as "add this to the Hero" is an edit to `hero.actor`.
- * These tests were written when the Hero was a root in the world, and they
- * still say so: asked for `main.world`, this hands the change one workspace
- * holding the world's roots and every actor file's, and files each root back
- * where it came from. A root the change adds goes to the world — unless it is
- * a `define actor`, which becomes a file, named the way `worldFile` names one.
+ * Asked for `GAME`, or for an actor's file, this hands the change one
+ * workspace (`GameView`) and files each root back where it came from. A root
+ * the change adds goes to the screen — unless it is a `define actor`, which
+ * becomes a file.
  */
+/** What `editing` is asked for to edit the game (`GameView`). */
+const GAME = 'the game';
+
 const editing = (
   source: MultiFileSource,
   name: string,
@@ -105,9 +107,9 @@ const editing = (
     }
     return changed;
   };
-  // An actor is edited where its lesson shows it, among the world's roots.
-  if (name === 'main.world' || name.endsWith('.actor')) {
-    return editingWorld(source, change);
+  // An actor is edited where its lesson shows it, beside the screen's roots.
+  if (name === GAME || name.endsWith('.actor')) {
+    return editingGame(source, change);
   }
   const entry = Object.entries(source.files).find(
     ([, file]) => file.name === name,
@@ -129,6 +131,8 @@ const editing = (
     },
   };
 };
+
+const SCREEN_LOADS = 'world_on_screen_loads';
 
 /** Where a merged root came from, stamped on it for the way back. */
 const FROM = '__from';
@@ -230,46 +234,96 @@ const place = (
   }
 };
 
-const editingWorld = (
+/**
+ * The game as one workspace, which is what `editing` hands a change to `GAME`:
+ *
+ *  - `blocks`: the Main Screen's code, `when this screen loads` first and its
+ *    handlers after; then each actor file as a `define actor` holding its
+ *    data, its code chained under it, and its handlers beside it (`actorIn`);
+ *  - `screen`: the rest of the Main Screen — its properties, events, rules
+ *    and placements, among them the Game Viewport and its camera;
+ *  - `map`: `main.map`, the level, when the game has one.
+ */
+interface GameView {
+  blocks: {blocks: Row[]};
+  variables?: unknown[];
+  screen: Record<string, unknown> & {actors?: Array<Record<string, unknown>>};
+  map?: Record<string, unknown>;
+}
+
+/** Declare a property of the Main Screen's own, as its inspector does. */
+const declaring = (view: GameView, property: ScreenProperty): void => {
+  view.screen.properties = [
+    ...((view.screen.properties as ScreenProperty[] | undefined) ?? []),
+    property,
+  ];
+};
+
+/** Take the Main Screen's own property called `name` away. */
+const undeclaring = (view: GameView, name: string): void => {
+  const held = (view.screen.properties as ScreenProperty[] | undefined) ?? [];
+  if (!held.some(one => one.name === name)) {
+    throw new Error(`the Main Screen has no property called ${name}`);
+  }
+  view.screen.properties = held.filter(one => one.name !== name);
+};
+
+const editingGame = (
   source: MultiFileSource,
   change: (contents: string) => string,
 ): MultiFileSource => {
-  const actors = Object.entries(source.files).filter(([, file]) =>
-    file.name.endsWith('.actor'),
-  );
+  const entries = Object.entries(source.files);
+  const named = (name: string) =>
+    entries.find(([, file]) => file.name === name);
+  const screenFile = named('main.screen');
+  const mapFile = named('main.map');
+  if (!screenFile) {
+    throw new Error('no file called main.screen');
+  }
+  const actors = entries.filter(([, file]) => file.name.endsWith('.actor'));
 
-  type Parsed = {blocks: {blocks: Row[]}; [key: string]: unknown};
-  const parse = (contents: string) => JSON.parse(contents) as Parsed;
-  // The screen and its map, seen as the world they were made from
-  // (`support/worldView`).
-  const merged = parse(worldOf(source));
-  // Each actor as a `define actor` holding its data, its code chained under
-  // it and its handlers beside it, which is what these edits are written
-  // against (`actorIn`).
+  const {blocks: code, ...screen} = JSON.parse(screenFile[1].contents) as {
+    blocks?: {blocks?: {blocks?: Row[]}; variables?: unknown[]};
+  } & GameView['screen'];
+  const screenRoots = (code?.blocks?.blocks ?? []).map(
+    root => ({...root, x: undefined, y: undefined}) as Row,
+  );
+  const view: GameView = {
+    blocks: {
+      blocks: [
+        ...screenRoots.filter(root => root.type === SCREEN_LOADS),
+        ...screenRoots.filter(root => root.type !== SCREEN_LOADS),
+      ],
+    },
+    ...(code?.variables ? {variables: code.variables} : {}),
+    screen,
+    ...(mapFile ? {map: JSON.parse(mapFile[1].contents)} : {}),
+  };
   for (const [id, file] of actors) {
     const data = JSON.parse(file.contents) as ActorData;
     const roots = (data.blocks?.blocks?.blocks ?? []) as Row[];
-    const code = roots.filter(root => CODE_ROWS.has(root.type ?? ''));
-    merged.blocks.blocks.push(
+    const actorCode = roots.filter(root => CODE_ROWS.has(root.type ?? ''));
+    view.blocks.blocks.push(
       {
         type: 'world_actor',
         fields: {NAME: data.name},
         [FROM]: id,
         [DATA]: data,
-        ...chainOf(code),
+        ...chainOf(actorCode),
       } as Row,
       ...roots
-        .filter(root => !code.includes(root))
+        .filter(root => !actorCode.includes(root))
         .map(root => ({...root, [FROM]: id}) as Row),
     );
   }
 
-  // Pretty-printed, as the lesson wrote it: some edits are string edits on
+  // Pretty-printed, as a lesson's files are: some edits are string edits on
   // the JSON as a learner would see it (`"x": 60`).
-  const changed = parse(change(JSON.stringify(merged, null, 2)));
+  const changed = JSON.parse(change(JSON.stringify(view, null, 2))) as GameView;
   const files = {...source.files};
   const roots = new Map<string, Row[]>();
-  const worldRoots: Row[] = [];
+  const handlers: Row[] = [];
+  const loads: Row[] = [];
   const defined = new Map<string, Row>();
   for (const root of changed.blocks.blocks) {
     const from = (root as Record<string, unknown>)[FROM];
@@ -299,8 +353,10 @@ const editingWorld = (
         ),
         folderId: folderId ?? '0',
       };
+    } else if (root.type === SCREEN_LOADS) {
+      loads.push(root);
     } else {
-      worldRoots.push(root);
+      handlers.push(root);
     }
   }
   for (const [id, file] of actors) {
@@ -312,8 +368,33 @@ const editingWorld = (
         : file.contents,
     };
   }
-  const world = JSON.stringify({...changed, blocks: {blocks: worldRoots}});
-  return withWorld({...source, files}, world);
+  // Where `screenFile` puts them: handlers, then what runs on load.
+  const blocks = [...handlers, ...loads].map((root, at) => ({
+    ...root,
+    x: 20,
+    y: 20 + at * 200,
+  }));
+  files[screenFile[0]] = {
+    ...screenFile[1],
+    contents: JSON.stringify(
+      {
+        ...changed.screen,
+        blocks: {
+          blocks: {languageVersion: 0, blocks},
+          ...(changed.variables ? {variables: changed.variables} : {}),
+        },
+      },
+      null,
+      2,
+    ),
+  };
+  if (mapFile && changed.map) {
+    files[mapFile[0]] = {
+      ...mapFile[1],
+      contents: JSON.stringify(changed.map, null, 2),
+    };
+  }
+  return {...source, files};
 };
 
 /**
@@ -363,6 +444,13 @@ const under = (actor: Row, row: Row): void => {
     return;
   }
   actor.next = {block: {...row, ...(actor.next ? {next: actor.next} : {})}};
+};
+
+/** Declare a property of an actor's own, as the Actor Editor does. */
+const ownProperty = (actor: Row, property: ActorProperty): void => {
+  const held = actor as Record<string, unknown>;
+  const data = held[DATA] as ActorData;
+  held[DATA] = {...data, properties: [...(data.properties ?? []), property]};
 };
 
 /** The first row of a type in a definition's chain. */
@@ -459,10 +547,10 @@ describe('the gravity lesson’s check', () => {
 
   it('accepts the project once the lesson is done', async () => {
     const solved = editing(
-      editing(lesson.source, 'main.world', contents =>
+      editing(lesson.source, GAME, contents =>
         electing(contents, 'Gravity#AffectedByGravityTrait', 'Hero'),
       ),
-      'main.world',
+      GAME,
       contents => electing(contents, 'Gravity#ActsAsGroundTrait', 'Ground'),
     );
     const {passes, result} = await check('motion/gravity', solved);
@@ -499,7 +587,7 @@ describe('the gravity lesson’s check', () => {
     // Step one of the instructions without step two: it falls, and it keeps
     // falling straight through the floor. The check has to be able to tell the
     // difference between falling and LANDING, and one sample at the end cannot.
-    const half = editing(lesson.source, 'main.world', contents =>
+    const half = editing(lesson.source, GAME, contents =>
       electing(contents, 'Gravity#AffectedByGravityTrait', 'Hero'),
     );
     const {passes} = await check('motion/gravity', half);
@@ -518,7 +606,7 @@ describe('the first world lesson’s check', () => {
   it('accepts a second Hero placed on the map', async () => {
     // How the lesson is told (specs/PILOT_PLAN.md): a click on the palette
     // and a click on the map, which is one more entry in the world's `map`.
-    const solved = editing(lesson.source, 'main.world', contents => {
+    const solved = editing(lesson.source, GAME, contents => {
       const file = JSON.parse(contents) as {
         map: {actors: Array<Record<string, unknown>>};
       };
@@ -537,10 +625,10 @@ describe('the first world lesson’s check', () => {
   it('accepts one added by a block, from the World view', async () => {
     // The view is never locked, and `add actor` is one of the seven blocks
     // its toolbox holds: a learner who does it there has done it.
-    const solved = editing(lesson.source, 'main.world', contents => {
+    const solved = editing(lesson.source, GAME, contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       const world = workspace.blocks.blocks.find(
-        block => block.type === 'world_world',
+        block => block.type === SCREEN_LOADS,
       )!;
       under(world, {
         type: 'world_add_actor',
@@ -565,7 +653,7 @@ describe('the speed lesson’s check', () => {
   });
 
   it('refuses a Hero that has a speed and still has the handler', async () => {
-    const half = editing(lesson.source, 'main.world', contents =>
+    const half = editing(lesson.source, GAME, contents =>
       electing(contents, 'Physics#CanMoveTrait', 'Hero'),
     );
     const {passes} = await check('motion/speed', half);
@@ -576,7 +664,7 @@ describe('the speed lesson’s check', () => {
     // How the lesson is told now (specs/INPUT_MOTION_PLAN.md): electing is a
     // row in the Hero's file, and the speed is the Hero's own, typed into
     // the map's inspector rather than set by a block.
-    const elected = editing(lesson.source, 'main.world', contents => {
+    const elected = editing(lesson.source, GAME, contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       without(actorIn(workspace, 'Hero'), 'world_trait_step');
       return electing(
@@ -585,7 +673,7 @@ describe('the speed lesson’s check', () => {
         'Hero',
       );
     });
-    const solved = editing(elected, 'main.world', contents => {
+    const solved = editing(elected, GAME, contents => {
       const file = JSON.parse(contents) as {
         map: {actors: Array<{properties: Record<string, unknown>}>};
       };
@@ -598,7 +686,7 @@ describe('the speed lesson’s check', () => {
   });
 
   it('accepts a Hero that moves because it has a speed', async () => {
-    const solved = editing(lesson.source, 'main.world', contents => {
+    const solved = editing(lesson.source, GAME, contents => {
       // Drop the `each frame` that shuffles it along — a row of the Hero's,
       // like every other — and elect Physics instead, with a speed to start
       // it off.
@@ -631,7 +719,7 @@ describe('the position lesson’s check', () => {
       {x: 272, y: 272},
       {x: 160, y: 160},
     ];
-    const solved = editing(lesson.source, 'main.world', contents => {
+    const solved = editing(lesson.source, GAME, contents => {
       const file = JSON.parse(contents) as {
         map: {
           actors: Array<{properties: {positional: {position: object}}}>;
@@ -663,7 +751,7 @@ describe('the sprite lesson’s check', () => {
       lesson.source,
       stockSprite('player')!,
     ).source;
-    const solved = editing(withSprite, 'main.world', contents => {
+    const solved = editing(withSprite, GAME, contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       under(actorIn(workspace, 'Hero'), {
         type: 'world_set_sprite',
@@ -704,7 +792,7 @@ describe('the arrow keys lesson’s check', () => {
   // Step four of the lesson, left that way: the Moves Down row pulled out and
   // never snapped back. A check that stopped at "it moved" would not notice.
   it('refuses a Hero that only walks across', async () => {
-    const half = editing(lesson.source, 'main.world', contents =>
+    const half = editing(lesson.source, GAME, contents =>
       electing(contents, 'Arrow Keys#MovesAcrossTrait', 'Hero'),
     );
     const {passes} = await check('input/arrows', half);
@@ -712,7 +800,7 @@ describe('the arrow keys lesson’s check', () => {
   });
 
   it('accepts a Hero that walks in both directions', async () => {
-    const solved = editing(lesson.source, 'main.world', contents =>
+    const solved = editing(lesson.source, GAME, contents =>
       electing(
         electing(contents, 'Arrow Keys#MovesAcrossTrait', 'Hero'),
         'Arrow Keys#MovesDownTrait',
@@ -729,7 +817,7 @@ describe('the flier lesson’s check', () => {
   const lesson = LESSONS['platformer/flier'];
 
   /** The two edits the lesson asks for, and nothing else. */
-  const flapping = editing(lesson.source, 'main.world', contents =>
+  const flapping = editing(lesson.source, GAME, contents =>
     contents
       .replaceAll('Steering#ChasesTrait', 'Flapping#FlapsAndGlidesTrait')
       .replaceAll(
@@ -757,7 +845,7 @@ describe('the pads lesson’s check', () => {
   const lesson = LESSONS['platformer/pads'];
 
   /** The one edit the lesson asks for: the far pad, painted the near one's red. */
-  const linked = editing(lesson.source, 'main.world', contents =>
+  const linked = editing(lesson.source, GAME, contents =>
     contents.replaceAll('#3f7fe0', '#e0484a'),
   );
 
@@ -780,7 +868,7 @@ describe('the walls lesson’s check', () => {
   const lesson = LESSONS['platformer/walls'];
 
   /** The one edit the lesson asks for: the wall, painted the plate's green. */
-  const matched = editing(lesson.source, 'main.world', contents =>
+  const matched = editing(lesson.source, GAME, contents =>
     contents.replaceAll('#e0484a', '#3fbf6a'),
   );
 
@@ -802,7 +890,7 @@ describe('the digging lesson’s check', () => {
   const lesson = LESSONS['platformer/digging'];
 
   /** The one edit the lesson asks for: soil that says it can be dug. */
-  const diggable = editing(lesson.source, 'main.world', contents => {
+  const diggable = editing(lesson.source, GAME, contents => {
     const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
     under(actorIn(workspace, 'Soil'), {
       type: 'world_use_trait',
@@ -854,10 +942,8 @@ describe('every lesson that has a check', () => {
  */
 const rebody = (contents: string, body: Row): string => {
   const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
-  // The HAT: a world's roots are the world, the actors it defines and the
-  // handlers, and the first two have a `next` of their own.
-  const handler = workspace.blocks.blocks.find(block =>
-    block.type?.startsWith('world_on_'),
+  const handler = workspace.blocks.blocks.find(
+    block => block.type?.startsWith('world_on_') && block.type !== SCREEN_LOADS,
   );
   if (!handler) {
     throw new Error('no handler to give a body to');
@@ -900,7 +986,7 @@ describe('the key-press lesson’s check', () => {
   });
 
   it('accepts one that says a thing per press', async () => {
-    const solved = editing(lesson.source, 'main.world', contents =>
+    const solved = editing(lesson.source, GAME, contents =>
       saying(electing(contents, 'Input#TakesKeyboardInputTrait', 'Hero'), {
         type: 'world_on_Input_PressesEvent',
         fields: {
@@ -919,7 +1005,7 @@ describe('the key-press lesson’s check', () => {
     // Step five: the filter comes off and the print says what the event
     // carried. The script only ever presses space, so the count is the same
     // two — what changed is that the handler is now told which key it was.
-    const anyKeyAt = editing(lesson.source, 'main.world', contents => {
+    const anyKeyAt = editing(lesson.source, GAME, contents => {
       const workspace = JSON.parse(
         electing(contents, 'Input#TakesKeyboardInputTrait', 'Hero'),
       ) as {blocks: {blocks: Row[]}};
@@ -946,7 +1032,7 @@ describe('the key-press lesson’s check', () => {
   // The lesson's whole point: a handler that ran while the key was HELD would
   // say ninety things during the first stretch rather than one.
   it('refuses something that speaks every frame', async () => {
-    const chatty = editing(lesson.source, 'main.world', contents => {
+    const chatty = editing(lesson.source, GAME, contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       under(actorIn(workspace, 'Hero'), {
         type: 'world_trait_step',
@@ -977,7 +1063,7 @@ describe('the click lesson’s check', () => {
   });
 
   it('accepts one that answers its own clicks and no others', async () => {
-    const solved = editing(lesson.source, 'main.world', contents =>
+    const solved = editing(lesson.source, GAME, contents =>
       saying(electing(contents, 'Mouse#CanBeClickedTrait', 'Target'), {
         // `IsClickedWith`, and the empty filter means "any button" — the block
         // is "when ⟨Target⟩ is clicked with ⟨any⟩".
@@ -1022,7 +1108,7 @@ describe('the two-hands lesson’s check', () => {
   it('accepts it once the walking row is deleted', async () => {
     // Step three: the row that elects Moves Across comes out, by hand,
     // because Enhance only ever adds (specs/INPUT_MOTION_PLAN.md).
-    const solved = editing(driving(), 'main.world', contents => {
+    const solved = editing(driving(), GAME, contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       without(actorIn(workspace, 'Ship'), 'world_use_trait');
       return JSON.stringify(workspace);
@@ -1036,7 +1122,7 @@ describe('the two-hands lesson’s check', () => {
   });
 
   it('accepts one that turns and thrusts', async () => {
-    const solved = editing(lesson.source, 'main.world', contents =>
+    const solved = editing(lesson.source, GAME, contents =>
       electing(
         // Take the walking off first: two rules over four keys is the mistake
         // the lesson warns about, and the check has to notice it.
@@ -1063,7 +1149,7 @@ describe('the shove lesson’s check', () => {
   });
 
   it('accepts one that is shoved and coasts', async () => {
-    const solved = editing(lesson.source, 'main.world', contents =>
+    const solved = editing(lesson.source, GAME, contents =>
       // `VALUE`, not `FORCE`: a single-parameter action names its socket by
       // position rather than by the parameter's own name, and the block reads
       // "apply force ⟨VALUE⟩ on ⟨ACTOR⟩". Guessed twice and dumped once — the
@@ -1088,7 +1174,7 @@ describe('the shove lesson’s check', () => {
   // does not. Moving the Ball by place passes "it moved" and fails "it is still
   // moving", which is the half the check is really about.
   it('refuses a Ball moved by place, which stops the moment you let go', async () => {
-    const byPlace = editing(lesson.source, 'main.world', contents =>
+    const byPlace = editing(lesson.source, GAME, contents =>
       rebody(contents, {
         type: 'world_set_position',
         inputs: {
@@ -1113,7 +1199,7 @@ describe('the units lesson’s check', () => {
 
   /** The Ball's own speed, which is what the lesson's inspector changes. */
   const goingAt = (across: number) =>
-    editing(lesson.source, 'main.world', contents => {
+    editing(lesson.source, GAME, contents => {
       const file = JSON.parse(contents) as {
         map: {actors: Array<{properties: {Can_Move: {velocity: {x: number}}}}>};
       };
@@ -1147,7 +1233,7 @@ describe('the drag lesson’s check', () => {
   });
 
   it('accepts one that coasts to a stop', async () => {
-    const solved = editing(lesson.source, 'main.world', contents =>
+    const solved = editing(lesson.source, GAME, contents =>
       electing(contents, 'Drag#SlowsDownTrait', 'Ball'),
     );
     const {passes, result} = await check('motion/drag', solved);
@@ -1165,7 +1251,7 @@ describe('the tween lesson’s check', () => {
   });
 
   it('accepts a Door that travels', async () => {
-    const solved = editing(lesson.source, 'main.world', contents => {
+    const solved = editing(lesson.source, GAME, contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       appendRows(workspace, [
         {
@@ -1203,7 +1289,7 @@ describe('the tween lesson’s check', () => {
   // `set position` puts the Door there in one frame, which is a jump and not
   // an opening.
   it('refuses a Door that is simply put in the other place', async () => {
-    const jumped = editing(lesson.source, 'main.world', contents => {
+    const jumped = editing(lesson.source, GAME, contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       const [door] = placementsOf(workspace, actorPath('door'));
       override(door, 'positional', 'position', {x: 256, y: 160});
@@ -1275,7 +1361,7 @@ describe('the if lesson’s check', () => {
   });
 
   it('accepts one that stops at the middle', async () => {
-    const solved = editing(lesson.source, 'main.world', contents =>
+    const solved = editing(lesson.source, GAME, contents =>
       eachFrame(contents, {
         type: 'controls_if',
         inputs: {IF0: past('x', 160), DO0: {block: HALT}},
@@ -1289,7 +1375,7 @@ describe('the if lesson’s check', () => {
   // The false pass, written down and then tested: stopping unconditionally
   // stops it where it started, which is not the middle of anything.
   it('refuses one that never starts', async () => {
-    const halted = editing(lesson.source, 'main.world', contents =>
+    const halted = editing(lesson.source, GAME, contents =>
       eachFrame(contents, HALT),
     );
     const {passes} = await check('logic/if', halted);
@@ -1306,7 +1392,7 @@ describe('the collision lesson’s check', () => {
   });
 
   it('accepts one stopped by a Wall that says it is solid', async () => {
-    const solved = editing(lesson.source, 'main.world', contents =>
+    const solved = editing(lesson.source, GAME, contents =>
       electing(contents, 'Solid Bodies#SolidTrait', 'Wall'),
     );
     const {passes, result} = await check('logic/collision', solved);
@@ -1324,7 +1410,7 @@ describe('the and-or lesson’s check', () => {
   });
 
   it('accepts two conditions joined by and', async () => {
-    const solved = editing(lesson.source, 'main.world', contents => {
+    const solved = editing(lesson.source, GAME, contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       // A row of the Ball's now, not a root: `rowOf` walks the definition's
       // chain rather than the file's roots.
@@ -1347,7 +1433,7 @@ describe('the and-or lesson’s check', () => {
   // The mistake the lesson is about: `or` is true for both Balls, so both stop
   // and the high one never leaves.
   it('refuses two conditions joined by or', async () => {
-    const wrong = editing(lesson.source, 'main.world', contents => {
+    const wrong = editing(lesson.source, GAME, contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       // A row of the Ball's now, not a root: `rowOf` walks the definition's
       // chain rather than the file's roots.
@@ -1378,7 +1464,7 @@ describe('the kinds lesson’s check', () => {
   });
 
   it('accepts one handler that asks what it touched', async () => {
-    const solved = editing(lesson.source, 'main.world', contents => {
+    const solved = editing(lesson.source, GAME, contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       const handler = workspace.blocks.blocks.find(
         block => block.type === 'world_on_Collisions_StartsTouchingEvent',
@@ -1416,7 +1502,7 @@ describe('the kinds lesson’s check', () => {
   // Asking the wrong question: `is a Coin` twice says "money" for the Spike as
   // well, so both lines match and the check refuses it.
   it('refuses a handler that asks the same question twice', async () => {
-    const wrong = editing(lesson.source, 'main.world', contents => {
+    const wrong = editing(lesson.source, GAME, contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       const handler = workspace.blocks.blocks.find(
         block => block.type === 'world_on_Collisions_StartsTouchingEvent',
@@ -1452,7 +1538,7 @@ describe('the kinds lesson’s check', () => {
   });
 });
 
-/** A world's rows, walked from the `define world` block. */
+/** The rows the Main Screen runs as it loads, in order. */
 const rowsOf = (workspace: {blocks: {blocks: Row[]}}): Row[] => {
   const rows: Row[] = [];
   let row = workspace.blocks.blocks[0].next?.block;
@@ -1541,6 +1627,24 @@ const override = (
   };
 };
 
+// Every edit below is made through `editingGame`, so a view that changed a
+// lesson on the way back would change what every check is run against.
+describe.each(Object.keys(LESSONS))('the %s lesson, as one workspace', id => {
+  it('is the same files when written back unedited', () => {
+    const source = LESSONS[id as keyof typeof LESSONS].source;
+    const parsed = (of: MultiFileSource) =>
+      Object.fromEntries(
+        Object.entries(of.files).map(([key, file]) => [
+          key,
+          {...file, contents: JSON.parse(file.contents || 'null')},
+        ]),
+      );
+    expect(parsed(editingGame(source, contents => contents))).toEqual(
+      parsed(source),
+    );
+  });
+});
+
 describe('the variable lesson’s check', () => {
   const lesson = LESSONS['memory/variable'];
 
@@ -1550,7 +1654,7 @@ describe('the variable lesson’s check', () => {
   });
 
   it('accepts a gap that has been given a name', async () => {
-    const solved = editing(lesson.source, 'main.world', contents => {
+    const solved = editing(lesson.source, GAME, contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       const gap = {id: 'gap', name: 'gap', type: 'Number'};
       const read = () => ({
@@ -1599,7 +1703,7 @@ describe('the variable lesson’s check', () => {
   // Naming a value and reading it once is a longer way of writing the number,
   // which is exactly the false pass this check was written down against.
   it('refuses a name that is only read once', async () => {
-    const once = editing(lesson.source, 'main.world', contents => {
+    const once = editing(lesson.source, GAME, contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       const gap = {id: 'gap', name: 'gap', type: 'Number'};
       const rows = rowsOf(workspace);
@@ -1630,7 +1734,7 @@ describe('the loop lesson’s check', () => {
   });
 
   it('accepts one loop over all of them', async () => {
-    const solved = editing(lesson.source, 'main.world', contents => {
+    const solved = editing(lesson.source, GAME, contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       const coin = {id: 'c', name: 'coin', type: 'Actor'};
       const rows = rowsOf(workspace);
@@ -1664,7 +1768,7 @@ describe('the loop lesson’s check', () => {
   // Six blocks change all six Coins too. The shape half is what asks for the
   // loop, and it is the lesson — the outcome is identical either way.
   it('refuses six blocks that do the same thing', async () => {
-    const byHand = editing(lesson.source, 'main.world', contents => {
+    const byHand = editing(lesson.source, GAME, contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       for (const row of rowsOf(workspace)) {
         const place = inSocket(row, 'DO');
@@ -1740,8 +1844,8 @@ describe('the world-state lesson’s check', () => {
   });
 
   it('accepts one number both of them read', async () => {
-    const solved = editing(lesson.source, 'main.world', contents => {
-      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+    const solved = editing(lesson.source, GAME, contents => {
+      const workspace = JSON.parse(contents) as GameView;
       const lives = () => ({
         block: {type: 'world_get_ScreensMain_LivesProperty'},
       });
@@ -1753,19 +1857,8 @@ describe('the world-state lesson’s check', () => {
           text.inputs!.VALUE = joined('Lives: ', lives());
         }
       }
-      // …and the declaration itself, above everything that reads it.
-      workspace.blocks.blocks[0].next = {
-        block: {
-          type: 'world_rule_property',
-          fields: {
-            TYPE: 'number',
-            ACCESS: 'writable',
-            NAME: 'lives',
-            DEFAULT: '3',
-          },
-          next: workspace.blocks.blocks[0].next,
-        },
-      };
+      // …and the declaration itself.
+      declaring(workspace, {name: 'lives', type: 'number', value: '3'});
       return JSON.stringify(workspace);
     });
     const {passes, result} = await check('memory/world-state', solved);
@@ -1776,7 +1869,7 @@ describe('the world-state lesson’s check', () => {
   // Two Labels agree the moment you type the same words into both, and that is
   // not one number — it is two copies that have not drifted apart YET.
   it('refuses the same words typed into both', async () => {
-    const byHand = editing(lesson.source, 'main.world', contents =>
+    const byHand = editing(lesson.source, GAME, contents =>
       contents.replace('Lives: 2', 'Lives: 3'),
     );
     // The world really does agree with itself…
@@ -1800,10 +1893,9 @@ describe('the actor-state lesson’s check', () => {
 
   /** The world with each Lamp given its own number, as the lesson says. */
   const worldWithOwnIds = (contents: string): string => {
-    const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
-    // The world's own `id` goes: step 4 of the lesson, and nothing needs it.
-    const declaration = workspace.blocks.blocks[0].next!.block!;
-    workspace.blocks.blocks[0].next = declaration.next;
+    const workspace = JSON.parse(contents) as GameView;
+    // The screen's own `id` goes: step 4 of the lesson, and nothing needs it.
+    undeclaring(workspace, 'id');
     rowsOf(workspace).forEach((row, index) => {
       const [place, text] = bodyOf(row);
       place.next = {
@@ -1829,18 +1921,15 @@ describe('the actor-state lesson’s check', () => {
   it('accepts a number each Lamp holds for itself', async () => {
     const declared = editing(lesson.source, 'lamp.actor', contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
-      under(actorIn(workspace, 'Lamp'), {
-        type: 'world_rule_property',
-        fields: {
-          TYPE: 'number',
-          ACCESS: 'writable',
-          NAME: 'id',
-          DEFAULT: '1',
-        },
+      ownProperty(actorIn(workspace, 'Lamp'), {
+        name: 'id',
+        type: 'number',
+        access: 'writable',
+        value: '1',
       });
       return JSON.stringify(workspace);
     });
-    const solved = editing(declared, 'main.world', worldWithOwnIds);
+    const solved = editing(declared, GAME, worldWithOwnIds);
     const {passes, result} = await check('memory/actor-state', solved);
     expect(result.error).toBeUndefined();
     expect(passes).toBe(true);
@@ -1851,18 +1940,18 @@ describe('the actor-state lesson’s check', () => {
   // Labels differ. What it leaves behind is nothing — no Lamp holds a number,
   // and nothing can ask one afterwards.
   it('refuses the world’s number set twice', async () => {
-    const twice = editing(lesson.source, 'main.world', contents => {
+    const twice = editing(lesson.source, GAME, contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       // Between the two `add actor` rows: the first Lamp is built while the
-      // number is 1, the second while it is 2. rows[0] is the declaration.
+      // number is 1, the second while it is 2.
       const rows = rowsOf(workspace);
-      rows[1].next = {
+      rows[0].next = {
         block: {
           type: 'world_set_ScreensMain_IdProperty',
           inputs: {
             VALUE: {shadow: {type: 'math_number', fields: {NUM: 2}}},
           },
-          next: {block: rows[2]},
+          next: {block: rows[1]},
         },
       };
       return JSON.stringify(workspace);
@@ -1887,18 +1976,19 @@ describe('the score lesson’s check', () => {
     expect(passes).toBe(false);
   });
 
-  /** The world with Scoring doing the counting, as the instructions say. */
+  /** The game with Scoring doing the counting, as the instructions say. */
   const swapped = (contents: string): string => {
-    const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
-    // `define number counted` goes, and `set target score` takes its place.
-    const declaration = workspace.blocks.blocks[0].next!.block!;
-    workspace.blocks.blocks[0].next = {
-      block: {
-        type: 'world_set_Scoring_TargetScoreProperty',
-        inputs: {VALUE: {shadow: {type: 'math_number', fields: {NUM: 5}}}},
-        next: declaration.next,
+    const workspace = JSON.parse(contents) as GameView;
+    // The screen's `counted` goes, and Scoring's target score is set where
+    // the screen's inspector sets a rule's.
+    undeclaring(workspace, 'counted');
+    workspace.screen.rules = [
+      {
+        setter: 'world_set_Scoring_TargetScoreProperty',
+        type: 'number',
+        value: '5',
       },
-    };
+    ];
     // The click handler adds to the score and says nothing…
     const clicks = workspace.blocks.blocks.find(
       block => block.type === 'world_on_Mouse_IsPressedEvent',
@@ -1926,7 +2016,7 @@ describe('the score lesson’s check', () => {
 
   it('accepts the swap for the rule that already had it', async () => {
     const scored = importStockRule(lesson.source, stockRule('score')!).source;
-    const solved = editing(scored, 'main.world', swapped);
+    const solved = editing(scored, GAME, swapped);
     const {passes, result} = await check('memory/score', solved);
     expect(result.error).toBeUndefined();
     // Once, at five — not six times, and not at six.
@@ -1944,7 +2034,7 @@ describe('the drawing lesson’s check', () => {
   });
 
   it('accepts a width that reads the Bar', async () => {
-    const solved = editing(lesson.source, 'main.world', contents => {
+    const solved = editing(lesson.source, GAME, contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       // The green rectangle is the second `draw rectangle` in the drawing,
       // and its width is the number the lesson replaces.
@@ -1990,7 +2080,7 @@ describe('the backdrop lesson’s check', () => {
     // How the lesson is told now (specs/LOOK_PLAN.md): the three steps are
     // the layer inspector's three controls, and the generator hoists a main
     // map's layer into the world's declaration, slots and all.
-    const solved = editing(lesson.source, 'main.world', contents => {
+    const solved = editing(lesson.source, GAME, contents => {
       const file = JSON.parse(contents) as {map: Record<string, unknown>};
       file.map.layers = [
         {
@@ -2010,7 +2100,7 @@ describe('the backdrop lesson’s check', () => {
   });
 
   it('refuses a backdrop set on the layer but never tiled', async () => {
-    const half = editing(lesson.source, 'main.world', contents => {
+    const half = editing(lesson.source, GAME, contents => {
       const file = JSON.parse(contents) as {map: Record<string, unknown>};
       file.map.layers = [
         {id: 'main', background: {sprite: 'meadow.png', offset: {x: 40, y: 0}}},
@@ -2022,7 +2112,7 @@ describe('the backdrop lesson’s check', () => {
   });
 
   it('accepts one that is set, tiled and slid', async () => {
-    const solved = editing(lesson.source, 'main.world', contents => {
+    const solved = editing(lesson.source, GAME, contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       const world = workspace.blocks.blocks[0];
       // Above the actor, which is where a learner drops them: the three blocks
@@ -2065,7 +2155,7 @@ describe('the backdrop lesson’s check', () => {
   // Each of the three on its own is not the lesson, and the check says so: a
   // backdrop that is set but not tiled is step two of four.
   it('refuses a backdrop that is only set', async () => {
-    const half = editing(lesson.source, 'main.world', contents => {
+    const half = editing(lesson.source, GAME, contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       const world = workspace.blocks.blocks[0];
       world.next = {
@@ -2138,7 +2228,7 @@ describe('the effect lesson’s check', () => {
   /** What importing an effect and playing it comes to. */
   const playing = (where: 'coin' | 'both') => {
     const imported = importStockEffect(lesson.source, stockEffect('tint')!);
-    return editing(imported.source, 'main.world', contents => {
+    return editing(imported.source, GAME, contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       under(actorIn(workspace, 'Coin'), {
         type: 'world_add_effect',
@@ -2176,7 +2266,7 @@ describe('the edges lesson’s check', () => {
 
   /** The Ball, with the traits a learner elected. */
   const electing2 = (traits: readonly string[]) =>
-    editing(lesson.source, 'main.world', contents =>
+    editing(lesson.source, GAME, contents =>
       traits.reduce(
         (workspace, trait) => electing(workspace, trait, 'Ball'),
         contents,
@@ -2224,7 +2314,7 @@ describe('the map lesson’s check', () => {
 
   /** The room, painted — which is an edit to the world's main map. */
   const painted = (rows: number) =>
-    editing(lesson.source, 'main.world', contents => {
+    editing(lesson.source, GAME, contents => {
       const workspace = JSON.parse(contents) as {
         map: {actors: Array<{type: string; id: string}>};
       };
@@ -2263,21 +2353,22 @@ describe('the map lesson’s check', () => {
 });
 
 /**
- * The world's main camera, edited as the map editor edits it: its traits and
- * values live on the main map, not in blocks (`placementCameras`).
+ * The Game Viewport's camera, edited as the map editor edits it: its traits
+ * and values live on the placement, not in blocks (`placementCameras`).
  */
 const withMainCamera = (
   source: Parameters<typeof editing>[0],
   change: (camera: MainCameraSettings) => MainCameraSettings,
 ) =>
-  editing(source, 'main.world', contents => {
-    const file = JSON.parse(contents) as {
-      map: {mainCamera?: MainCameraSettings};
-    };
-    file.map.mainCamera = change(
-      file.map.mainCamera ?? {traits: [], values: []},
-    );
-    return JSON.stringify(file);
+  editing(source, GAME, contents => {
+    const view = JSON.parse(contents) as GameView;
+    const game = view.screen.actors!.find(one => one.id === 'Game')!;
+    const camera = (game.camera ?? {
+      traits: [],
+      values: [],
+    }) as MainCameraSettings;
+    game.camera = {...camera, ...change(camera)};
+    return JSON.stringify(view);
   });
 
 describe('the camera lesson’s check', () => {
@@ -2474,8 +2565,8 @@ describe('the layers lesson’s check', () => {
     expect(spaces('actors/hill')).toEqual(['world']);
   });
 
-  it('follows a Hero who is on the map, from a camera under `define world`', async () => {
-    // The camera is told whom to follow as the world is built. The Hero is a
+  it('follows a Hero who is on the map, from the Game Viewport’s camera', async () => {
+    // The camera is told whom to follow as the level is built. The Hero is a
     // placement, and the map is loaded before the rows, so there is a Hero to
     // be told about (specs/MAP_BEFORE_ROWS_PLAN.md). Loaded after them, the
     // camera followed nobody and the view never moved.
@@ -2663,7 +2754,7 @@ describe('the placement-script lesson’s check', () => {
 
   /** The lesson done, with a knob for what each Button's script says. */
   const scripted = (red: string, blue: string, keepWorldHat = false) =>
-    editing(lesson.source, 'main.world', contents => {
+    editing(lesson.source, GAME, contents => {
       const file = JSON.parse(contents) as {
         blocks: {blocks: Row[]};
         map: {actors: Placement[]};
@@ -2707,7 +2798,7 @@ describe('the placement-script lesson’s check', () => {
   it('refuses one handler that copies the clicked Button’s words', async () => {
     // The near-miss the tile names: it WORKS, from the world, with no script
     // anywhere — so the run passes and the shape half is what refuses it.
-    const source = editing(lesson.source, 'main.world', contents => {
+    const source = editing(lesson.source, GAME, contents => {
       const file = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       const hat = file.blocks.blocks.find(
         root => root.type === 'world_on_Mouse_IsClickedWithEvent',
@@ -2732,7 +2823,7 @@ describe('the surfaces lesson’s check', () => {
 
   /** The lesson done, or any part of it: one `use trait` per named actor. */
   const acting = (traits: Record<string, string>) =>
-    editing(lesson.source, 'main.world', contents => {
+    editing(lesson.source, GAME, contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       for (const [actor, trait] of Object.entries(traits)) {
         under(actorIn(workspace, actor), {
@@ -2788,7 +2879,7 @@ describe('the enemy lesson’s check', () => {
 
   /** The Ball given a trait, whichever one. */
   const rolling = (trait: string) =>
-    editing(lesson.source, 'main.world', contents => {
+    editing(lesson.source, GAME, contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       under(actorIn(workspace, 'Ball'), {
         type: 'world_use_trait',
@@ -2832,7 +2923,7 @@ describe('the hunter lesson’s check', () => {
 
   /** The lesson done: Chases swapped for Prowls, and the quarry re-pointed. */
   const prowling = () =>
-    editing(lesson.source, 'main.world', contents => {
+    editing(lesson.source, GAME, contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       // The trait and the setter, which the lesson names as two edits: the
       // trait is the Robot's data, and the setter is in its code, so this
@@ -2900,7 +2991,7 @@ describe('the ladder lesson’s check', () => {
     ladderTraits: string[],
     arrows = false,
   ) =>
-    editing(lesson.source, 'main.world', contents => {
+    editing(lesson.source, GAME, contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       for (const trait of heroTraits) {
         under(actorIn(workspace, 'Hero'), {
@@ -2969,7 +3060,7 @@ describe('the jetpack lesson’s check', () => {
 
   /** The Hero given the trait, and the switch on the two moments a key gives. */
   const flying = () =>
-    editing(lesson.source, 'main.world', contents => {
+    editing(lesson.source, GAME, contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       under(actorIn(workspace, 'Hero'), {
         type: 'world_use_trait',
@@ -3005,7 +3096,7 @@ describe('the jetpack lesson’s check', () => {
 
   /** …and the other way of clearing the ledge, which is not the lesson. */
   const strongerJump = () =>
-    editing(lesson.source, 'main.world', contents => {
+    editing(lesson.source, GAME, contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       under(actorIn(workspace, 'Hero'), {
         type: 'world_set_Jumping_JumpStrengthProperty',
@@ -3046,7 +3137,7 @@ describe('the jump lesson’s check', () => {
 
   /** The Hero given the trait, the action, and however many jumps. */
   const jumping = (allowed?: number) =>
-    editing(lesson.source, 'main.world', contents => {
+    editing(lesson.source, GAME, contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       under(actorIn(workspace, 'Hero'), {
         type: 'world_use_trait',
@@ -3107,7 +3198,7 @@ describe('the pickups lesson’s check', () => {
   });
 
   it('accepts the two abilities, one on each side', async () => {
-    const solved = editing(lesson.source, 'main.world', contents =>
+    const solved = editing(lesson.source, GAME, contents =>
       electing(
         electing(contents, 'Collection#CollectsTrait', 'Hero'),
         'Collection#CanBeCollectedTrait',
@@ -3122,7 +3213,7 @@ describe('the pickups lesson’s check', () => {
   // One side is not a pair: a Hero that collects and coins that cannot be
   // collected walks through them exactly as before.
   it('refuses only the Hero electing', async () => {
-    const half = editing(lesson.source, 'main.world', contents =>
+    const half = editing(lesson.source, GAME, contents =>
       electing(contents, 'Collection#CollectsTrait', 'Hero'),
     );
     const {passes} = await check('platformer/pickups', half);
@@ -3139,7 +3230,7 @@ describe('the hazards lesson’s check', () => {
   });
 
   it('accepts the two abilities, one on each side', async () => {
-    const solved = editing(lesson.source, 'main.world', contents =>
+    const solved = editing(lesson.source, GAME, contents =>
       electing(
         electing(contents, 'Health#HasHealthTrait', 'Hero'),
         'Health#DealsDamageTrait',
@@ -3154,7 +3245,7 @@ describe('the hazards lesson’s check', () => {
   // A Hero that can be hurt and a Spike that hurts nobody: the pair is what
   // does it, and one half of a pair does nothing at all.
   it('refuses a Hero with health and a harmless spike', async () => {
-    const half = editing(lesson.source, 'main.world', contents =>
+    const half = editing(lesson.source, GAME, contents =>
       electing(contents, 'Health#HasHealthTrait', 'Hero'),
     );
     const {passes} = await check('platformer/hazards', half);
@@ -3167,7 +3258,7 @@ describe('the level lesson’s check', () => {
 
   /** `when ⟨any Hero⟩ starts touching → …`, with or without the question. */
   const winning = (asking: boolean) =>
-    editing(lesson.source, 'main.world', contents => {
+    editing(lesson.source, GAME, contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       const win: Row = {
         type: 'world_set_ScreensMain_WonProperty',
@@ -3225,7 +3316,7 @@ describe('the bounce lesson’s check', () => {
 
   /** The Wall given a bounciness, where a kind's properties are set. */
   const bouncy = (amount: number) =>
-    editing(lesson.source, 'main.world', contents => {
+    editing(lesson.source, GAME, contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       under(actorIn(workspace, 'Wall'), {
         type: 'world_set_SolidBodies_BouncinessProperty',
@@ -3267,7 +3358,7 @@ describe('the paddle lesson’s check', () => {
   });
 
   it('accepts the rule that knows how wide it is', async () => {
-    const solved = editing(lesson.source, 'main.world', contents => {
+    const solved = editing(lesson.source, GAME, contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       const paddle = actorIn(workspace, 'Paddle');
       without(paddle, 'world_trait_step');
@@ -3290,7 +3381,7 @@ describe('the zapping lesson’s check', () => {
 
   /** The recharge in front of the spawn, and optionally a lifetime behind. */
   const armed = (lifetime?: number) =>
-    editing(lesson.source, 'main.world', contents => {
+    editing(lesson.source, GAME, contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       under(actorIn(workspace, 'Ship'), {
         type: 'world_use_trait',
@@ -3356,7 +3447,7 @@ describe('the bricks lesson’s check', () => {
 
   /** The ending, asked where the lesson says to ask it — or on any Brick. */
   const ending = (options: {counting: boolean; where: 'frame' | 'handler'}) =>
-    editing(lesson.source, 'main.world', contents => {
+    editing(lesson.source, GAME, contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       const done: Row = {
         type: 'controls_if',
@@ -3443,7 +3534,7 @@ describe('the waves lesson’s check', () => {
 
   /** The timer handler, told to shrink its own period — or to send two. */
   const harder = (how: 'sooner' | 'more') =>
-    editing(lesson.source, 'main.world', contents => {
+    editing(lesson.source, GAME, contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       const hat = workspace.blocks.blocks.find(
         block => block.type === 'world_on_Time_TimerFiresEvent',
@@ -3513,7 +3604,7 @@ describe('the words lesson’s check', () => {
       lesson.source,
       stockActorById('speechBox')!,
     ).source;
-    const solved = editing(withBox, 'main.world', contents => {
+    const solved = editing(withBox, GAME, contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       // The Label taken off the map and a Speech Box put down, saying what
       // it said.
@@ -3534,7 +3625,7 @@ describe('the reveal lesson’s check', () => {
 
   /** The Box told to reveal, and optionally to answer a click. */
   const revealing = (skip: boolean) =>
-    editing(lesson.source, 'main.world', contents => {
+    editing(lesson.source, GAME, contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       const [box] = placementsOf(workspace, 'actors/speechBox');
       const line = String(box.properties?.Label?.text);
@@ -3609,7 +3700,7 @@ describe('the script lesson’s check', () => {
   });
 
   it('accepts a cursor with three lines under it', async () => {
-    const solved = editing(lesson.source, 'main.world', contents => {
+    const solved = editing(lesson.source, GAME, contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       const add = workspace.blocks.blocks[0].next!.block!;
       const body = inSocket(add, 'DO')!;
@@ -3692,7 +3783,7 @@ describe('the choice lesson’s check', () => {
 
   /** The Buttons wired to the cursor, with or without a memory. */
   const branching = (remembering: boolean) =>
-    editing(lesson.source, 'main.world', contents => {
+    editing(lesson.source, GAME, contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       const box = () => ({
         block: {
@@ -3774,7 +3865,7 @@ describe('the scene lesson’s check', () => {
 
   /** Staging hung off each line of the script. */
   const staged = (options: {faces: boolean; places: boolean}) =>
-    editing(lesson.source, 'main.world', contents => {
+    editing(lesson.source, GAME, contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       const portrait = () => ({
         block: {
@@ -3863,7 +3954,7 @@ describe('the crowd lesson’s check', () => {
 
   /** The click, made a hundred times over — moving, or standing still. */
   const hundred = (moving: boolean) =>
-    editing(lesson.source, 'main.world', contents => {
+    editing(lesson.source, GAME, contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       const hat = workspace.blocks.blocks.find(
         block => block.type === 'world_on_Mouse_IsPressedEvent',
@@ -3919,7 +4010,7 @@ describe('the steering lesson’s check', () => {
 
   /** Both traits elected and pointed at the Player — or a hand-aimed walk. */
   const aimed = (how: 'both' | 'chase' | 'byhand') =>
-    editing(lesson.source, 'main.world', contents => {
+    editing(lesson.source, GAME, contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       const rows: Row[] = [];
       if (how === 'byhand') {
@@ -4052,7 +4143,7 @@ describe('the rule-property lesson’s check', () => {
     if (!options.setting) {
       return declared;
     }
-    return editing(declared, 'main.world', contents => {
+    return editing(declared, GAME, contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       // One Leaf blown harder, from the map inspector.
       const [leaf] = placementsOf(workspace, actorPath('leaf'));
@@ -4091,7 +4182,7 @@ describe('the grid lesson’s check', () => {
 
   /** Stepping instead of sliding, with or without walls that fill a tile. */
   const stepping = (walls: boolean) =>
-    editing(lesson.source, 'main.world', contents => {
+    editing(lesson.source, GAME, contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       const player = actorIn(workspace, 'Player');
       without(player, 'world_use_trait');
@@ -4157,7 +4248,7 @@ describe('the push lesson’s check', () => {
   });
 
   it('accepts one word added to the Crate', async () => {
-    const solved = editing(lesson.source, 'main.world', contents =>
+    const solved = editing(lesson.source, GAME, contents =>
       electing(contents, 'Grid#CanBePushedTrait', 'Crate'),
     );
     const {passes, result} = await check('puzzle/push', solved);
@@ -4168,7 +4259,7 @@ describe('the push lesson’s check', () => {
   // The other way to make the Player move: take the Crate out of the way
   // entirely, which walks over it and pushes nothing.
   it('refuses a crate that no longer fills its tile', async () => {
-    const walkedOver = editing(lesson.source, 'main.world', contents => {
+    const walkedOver = editing(lesson.source, GAME, contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       without(actorIn(workspace, 'Crate'), 'world_use_trait');
       return JSON.stringify(workspace);
@@ -4187,7 +4278,7 @@ describe('the people lesson’s check', () => {
   });
 
   it('accepts a name that is a relationship', async () => {
-    const solved = editing(lesson.source, 'main.world', contents => {
+    const solved = editing(lesson.source, GAME, contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       const [label] = placementsOf(workspace, 'actors/label');
       const me = () => ({block: {type: 'world_this_actor'}});
@@ -4237,7 +4328,7 @@ describe('the errand lesson’s check', () => {
 
   /** The fraction worked out on each pickup — divided, or counted up. */
   const reporting = (dividing: boolean) =>
-    editing(lesson.source, 'main.world', contents => {
+    editing(lesson.source, GAME, contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       const me = () => ({block: {type: 'world_this_actor'}});
       const held: Row = {
@@ -4321,7 +4412,7 @@ describe('the change lesson’s check', () => {
   // and it leaves the library's rule exactly as it was — which is what the
   // shape half reads.
   it('refuses the same beat set from the world', async () => {
-    const fromOutside = editing(lesson.source, 'main.world', contents => {
+    const fromOutside = editing(lesson.source, GAME, contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       const [guard] = placementsOf(workspace, actorPath('guard'));
       override(guard, 'Patrols_Across', 'across_time', 0.5);
@@ -4383,7 +4474,7 @@ describe('the own-trait lesson’s check', () => {
       ];
       return JSON.stringify(workspace);
     });
-    const solved = editing(declared, 'main.world', contents => {
+    const solved = editing(declared, GAME, contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       // The Stone elects the OTHER one, which is the whole of the change.
       const stone = actorIn(workspace, 'Stone') as Record<string, unknown>;
@@ -4411,7 +4502,7 @@ describe('the own-rule lesson’s check', () => {
   /** The bob moved into a `.rule`, for one actor or for both. */
   const shared = (both: boolean) => {
     let step: Row | undefined;
-    const world = editing(lesson.source, 'main.world', contents => {
+    const world = editing(lesson.source, GAME, contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       for (const name of both ? ['Fish', 'Bird'] : ['Fish']) {
         const actor = actorIn(workspace, name);
@@ -4531,25 +4622,16 @@ describe('the big-world lesson’s check', () => {
 
   /** The camera, the backdrop, or both — which is the lesson. */
   const assembled = (options: {camera: boolean; sky: boolean}) => {
-    const sky = editing(lesson.source, 'main.world', contents => {
-      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
-      const rows = rowsOf(workspace);
-      if (options.sky) {
-        rows[rows.length - 1].next = {
-          block: {
-            type: 'world_set_background',
-            fields: {BACKGROUND: 'meadow.png'},
-            next: {
-              block: {
-                type: 'world_set_background_repeat',
-                fields: {REPEAT: 'true'},
-              },
-            },
-          },
-        };
-      }
-      return JSON.stringify(workspace);
-    });
+    const sky = options.sky
+      ? editing(lesson.source, GAME, contents => {
+          const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+          appendRows(workspace, [
+            {type: 'world_set_background', fields: {BACKGROUND: 'meadow.png'}},
+            {type: 'world_set_background_repeat', fields: {REPEAT: 'true'}},
+          ]);
+          return JSON.stringify(workspace);
+        })
+      : lesson.source;
     // The camera as the map editor makes it: the main camera's, on the map.
     return options.camera
       ? withMainCamera(sky, () => ({
@@ -4596,14 +4678,18 @@ describe('the big-world lesson’s check', () => {
 describe('the read lesson’s check', () => {
   const lesson = LESSONS['making/read'];
 
-  /** The answer written into the world's own property. */
+  /** The answer written into the Main Screen's own property. */
   const answering = (answer: string) =>
-    editing(lesson.source, 'main.world', contents =>
-      contents.replace(
-        /("NAME": "how hard it pulls",\s*"DEFAULT": ")[^"]*/,
-        `$1${answer}`,
-      ),
-    );
+    editing(lesson.source, GAME, contents => {
+      const view = JSON.parse(contents) as GameView;
+      undeclaring(view, 'how hard it pulls');
+      declaring(view, {
+        name: 'how hard it pulls',
+        type: 'number',
+        value: answer,
+      });
+      return JSON.stringify(view);
+    });
 
   it('refuses a world that has not looked', async () => {
     const {passes} = await check('making/read', lesson.source);
@@ -4766,7 +4852,7 @@ describe('the moving-ground lesson’s check', () => {
 
   /** The pair, or half of it — which is the lesson. */
   const carrying = (who: 'both' | 'platform' | 'hero') =>
-    editing(lesson.source, 'main.world', contents => {
+    editing(lesson.source, GAME, contents => {
       let workspace = contents;
       if (who !== 'hero') {
         workspace = electing(workspace, 'Carrying#CarriesTrait', 'Platform');
@@ -4804,7 +4890,7 @@ describe('the goal lesson’s check', () => {
 
   /** Counting the crates on marks, with or without the leaving half. */
   const counting = (options: {down: boolean; win: boolean}) =>
-    editing(lesson.source, 'main.world', contents => {
+    editing(lesson.source, GAME, contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       const scoring = (by: number): Row => ({
         type: 'world_do_Scoring_AddToTheScoreAction',
@@ -4879,7 +4965,7 @@ describe('the undo lesson’s check', () => {
 
   /** The lesson done, with a knob for each of the two ways to half-do it. */
   const undoing = (options: {crate: boolean; before: boolean}) =>
-    editing(lesson.source, 'main.world', contents => {
+    editing(lesson.source, GAME, contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       const remembers = (name: string) =>
         under(actorIn(workspace, name), {
@@ -4964,7 +5050,7 @@ describe('the turns lesson’s check', () => {
    * project says a turn happened — on the move given, or on the key asked for.
    */
   const takingTurns = (options: {onTheStep: boolean}) =>
-    editing(lesson.source, 'main.world', contents => {
+    editing(lesson.source, GAME, contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       const enemy = actorIn(workspace, 'Enemy');
       // Both `use trait` rows go — Grid's is put back below, Time's is what
@@ -5032,7 +5118,7 @@ describe('the neighborhood lesson’s check', () => {
 
   /** The lesson done: the second loop asks for the Dots near the Walker. */
   const looking = (reach: number) =>
-    editing(lesson.source, 'main.world', contents => {
+    editing(lesson.source, GAME, contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       const step = rowOf(actorIn(workspace, 'Walker'), 'world_trait_step');
       const second = step.inputs!.DO!.block!.next!.block!;
@@ -5155,7 +5241,7 @@ describe('the flocking lesson’s check', () => {
    * the three rules out, and starting the Boids off already agreeing.
    */
   const flocking = (options: {rules: Row[]; aligned?: boolean}) =>
-    editing(lesson.source, 'main.world', contents => {
+    editing(lesson.source, GAME, contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       const step = rowOf(actorIn(workspace, 'Boid'), 'world_trait_step');
       const second = step.inputs!.DO!.block!.next!.block!;
@@ -5212,20 +5298,9 @@ describe('the dials lesson’s check', () => {
 
   /** The lesson done: a dial declared, and — if `read` — the 30 replaced. */
   const dialled = (read: boolean) =>
-    editing(lesson.source, 'main.world', contents => {
-      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
-      const world = workspace.blocks.blocks.find(
-        block => block.type === 'world_world',
-      )!;
-      under(world, {
-        type: 'world_rule_property',
-        fields: {
-          TYPE: 'number',
-          ACCESS: 'writable',
-          NAME: 'too close',
-          DEFAULT: '30',
-        },
-      });
+    editing(lesson.source, GAME, contents => {
+      const workspace = JSON.parse(contents) as GameView;
+      declaring(workspace, {name: 'too close', type: 'number', value: '30'});
       if (read) {
         const step = rowOf(actorIn(workspace, 'Boid'), 'world_trait_step');
         const crowding = step.inputs!.DO!.block!;
@@ -5264,7 +5339,7 @@ describe('the key lesson’s check', () => {
 
   /** The lesson done, with a knob for the key that is never spent. */
   const carrying = (options: {spend: boolean}) =>
-    editing(lesson.source, 'main.world', contents => {
+    editing(lesson.source, GAME, contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       const open: Row = {
         type: 'world_remove_actor',
@@ -5345,7 +5420,7 @@ describe('the key lesson’s check', () => {
     // A rule that answered it again would be a private vocabulary beside the
     // public one — and a claim like that is exactly the sort that rots quietly,
     // so it is run rather than asserted.
-    const counting = editing(lesson.source, 'main.world', contents => {
+    const counting = editing(lesson.source, GAME, contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       workspace.blocks.blocks.push({
         type: 'world_on_Collection_CollectsEvent',
@@ -5402,7 +5477,7 @@ describe('the two-rooms lesson’s check', () => {
 
   /** The door's handler, with knobs for the two ways to get it wrong. */
   const doorway = (body: Row) =>
-    editing(lesson.source, 'main.world', contents => {
+    editing(lesson.source, GAME, contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       workspace.blocks.blocks.push({
         type: 'world_on_Collisions_StartsTouchingEvent',
@@ -5461,10 +5536,10 @@ describe('the list lesson’s check', () => {
 
   /** The lesson done: the words in a list, and one loop that makes the notes. */
   const walking = (words: string[]) =>
-    editing(lesson.source, 'main.world', contents => {
+    editing(lesson.source, GAME, contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       const world = workspace.blocks.blocks.find(
-        block => block.type === 'world_world',
+        block => block.type === SCREEN_LOADS,
       )!;
       // The stack that is kept, with the loop's word where the typed one was.
       const kept = world.next!.block!;
@@ -5565,10 +5640,10 @@ describe('the form lesson’s check', () => {
    * sure the check can tell the two apart.
    */
   const ordered = (numbers: readonly number[]) =>
-    editing(lesson.source, 'main.world', contents => {
+    editing(lesson.source, GAME, contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       const world = workspace.blocks.blocks.find(
-        block => block.type === 'world_world',
+        block => block.type === SCREEN_LOADS,
       )!;
       let row: Row | undefined = world.next?.block;
       let at = 0;
