@@ -1,20 +1,11 @@
 # cdo-dev is the development image. It layers on cdo-deps rather than
 # cdo-base. That way the dev and test gems install as a delta over a warm
 # tree, not a full reinstall.
-#
-# The build reads no Ruby source: the Gemfile, lockfile, and gemspecs arrive
-# baked into cdo-deps. The python project files are COPYed so the Python Lab
-# venv can be built here; the source itself arrives at runtime as a mounted
-# volume. Context is the repo root, and the dockerignore admits only those
-# files and the shared node install script:
-#
-#   docker build -f docker/dev/Dockerfile -t cdo-dev:local .
 
 ARG DEPS_IMAGE=ghcr.io/code-dot-org/cdo-deps:latest
 
-# uv from Astral's published image, the method their Docker guide documents.
-# Written out rather than built from an ARG so dependabot can read it, and
-# pinned by digest as well as tag so the reference cannot move under us.
+# uv from Astral's official docker setup.
+# See: https://docs.astral.sh/uv/guides/integration/docker/
 FROM ghcr.io/astral-sh/uv:0.5.18@sha256:e2101b9e627153b8fe4e8a1249cc4194f1b38ece7f28a5a9b8f958e3b560e69c AS uv
 
 FROM ${DEPS_IMAGE}
@@ -122,9 +113,7 @@ RUN --mount=type=cache,id=cdo-dev-bundle-cache,sharing=locked,uid=1000,gid=1000,
   && bundle check \
   && rm -rf ~/.bundle "${BUNDLE_PATH}"/ruby/*/bundler/gems/*/.git
 
-# The Python Lab venv, into /opt/venv, outside the repo mount's shadow.
-# Workspace members install editable against /code-dot-org/python, which the
-# live mounted tree shadows at runtime.
+# The Python Lab virtual env
 COPY --chown=1000:1000 .python-version pyproject.toml uv.lock ./
 COPY --chown=1000:1000 python/ python/
 ENV UV_PROJECT_ENVIRONMENT=/opt/venv
