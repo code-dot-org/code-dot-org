@@ -21,6 +21,7 @@ import {describe, expect, it} from 'vitest';
 import {actorDocument} from '../actors/actorDocument';
 
 import {compileProject} from './support/compileProject';
+import {levelScreen} from './support/levelScreen';
 
 /** Six pixels a character at twelve, which is a font nobody has. */
 const sixPerCharacter = (words: string, size: number) =>
@@ -71,12 +72,11 @@ const SIGN = actorDocument({
   ],
 });
 
-const WORLD = JSON.stringify({
+const WORLD = levelScreen({
   blocks: {
     blocks: [
       {
-        type: 'world_world',
-        fields: {NAME: 'My World'},
+        type: 'world_on_screen_loads',
         next: {
           block: {type: 'world_add_actor', fields: {ACTOR: 'actors/sign'}},
         },
@@ -88,7 +88,7 @@ const WORLD = JSON.stringify({
 const play = async (measure?: (words: string, size: number) => number) => {
   const {world} = await compileProject({
     'actors/sign.actor': SIGN,
-    'worlds/main.world': WORLD,
+    'screens/main.screen': WORLD,
   });
   if (measure) {
     world.useTextMetrics(measure);

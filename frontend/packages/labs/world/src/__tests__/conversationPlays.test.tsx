@@ -14,12 +14,13 @@ import {describe, expect, it} from 'vitest';
 
 import {importStockActor} from '../actors/importStockActor';
 import {stockActorById} from '../actors/stock';
-import {EMPTY_WORLD_PROJECT} from '../fixtures/scenarios';
+import {EMPTY_APP_PROJECT} from '../fixtures/scenarios';
 import {importStockRule} from '../rules/importStockRule';
 import {stockRuleByName} from '../rules/stock';
 import {projectFiles} from '../runtime/projectFiles';
 
 import {compileProject} from './support/compileProject';
+import {levelScreen} from './support/levelScreen';
 
 const me = () => ({block: {type: 'world_this_actor'}});
 const num = (value: number) => ({
@@ -32,14 +33,13 @@ const num = (value: number) => ({
  * `how many lines` is the project's to set, because the project is what holds
  * the lines — a conversation cannot count what it cannot see.
  */
-const WORLD = JSON.stringify({
+const WORLD = levelScreen({
   blocks: {
     blocks: [
       {
-        type: 'world_world',
+        type: 'world_on_screen_loads',
         x: 20,
         y: 20,
-        fields: {NAME: 'My World'},
         next: {
           block: {
             type: 'world_add_actor',
@@ -68,7 +68,7 @@ const WORLD = JSON.stringify({
 
 const project = () => {
   const withLabel = importStockActor(
-    EMPTY_WORLD_PROJECT,
+    EMPTY_APP_PROJECT,
     stockActorById('label')!,
   ).source;
   const imported = importStockRule(
@@ -76,7 +76,7 @@ const project = () => {
     stockRuleByName('Conversation')!,
   ).source;
   const world = Object.values(imported.files).find(
-    file => file.name === 'main.world',
+    file => file.name === 'main.screen',
   )!;
   return projectFiles({
     ...imported,

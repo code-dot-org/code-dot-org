@@ -9,13 +9,14 @@
 import {describe, expect, it} from 'vitest';
 
 import {compileProject} from '../../__tests__/support/compileProject';
+import {levelScreen} from '../../__tests__/support/levelScreen';
 import {
   DrawnOffsetProperty,
   SpriteProperty,
   playAnimation,
   type Actor,
 } from '../../engine';
-import {EMPTY_WORLD_PROJECT} from '../../fixtures/scenarios';
+import {EMPTY_APP_PROJECT} from '../../fixtures/scenarios';
 import {projectFiles} from '../../runtime/projectFiles';
 import {keyRows, type ActorData} from '../actorData';
 
@@ -46,12 +47,11 @@ const BOBBER: ActorData = {
 };
 
 /** A world that places one Bobber. */
-const WORLD = JSON.stringify({
+const WORLD = levelScreen({
   blocks: {
     blocks: [
       {
-        type: 'world_world',
-        fields: {NAME: 'My World'},
+        type: 'world_on_screen_loads',
         next: {
           block: {type: 'world_add_actor', fields: {ACTOR: 'actors/bobber'}},
         },
@@ -62,8 +62,8 @@ const WORLD = JSON.stringify({
 
 const play = async () => {
   const files = {
-    ...projectFiles(EMPTY_WORLD_PROJECT),
-    'worlds/main.world': WORLD,
+    ...projectFiles(EMPTY_APP_PROJECT),
+    'screens/main.screen': WORLD,
     'actors/bobber.actor': JSON.stringify(BOBBER),
   };
   const {world} = await compileProject(files);

@@ -9,7 +9,7 @@ import {describe, expect, it} from 'vitest';
 
 import {compileProject} from '../../../__tests__/support/compileProject';
 import {PositionProperty} from '../../../engine';
-import {EMPTY_WORLD_PROJECT} from '../../../fixtures/scenarios';
+import {EMPTY_APP_PROJECT} from '../../../fixtures/scenarios';
 import {fileIdAt, projectFiles} from '../../../runtime/projectFiles';
 import {importStockActor} from '../../importStockActor';
 import {stockActorById} from '../../stock';
@@ -23,7 +23,7 @@ const PLAYER = {
 
 /** The empty scenario with a Player, a Ground and a Coin in it. */
 const withActors = () => {
-  let source = EMPTY_WORLD_PROJECT;
+  let source = EMPTY_APP_PROJECT;
   for (const id of ['player', 'ground', 'coin']) {
     source = importStockActor(source, stockActorById(id)!).source;
   }
@@ -59,55 +59,32 @@ describe('the collects enhancement, as edits', () => {
 });
 
 describe('the collects enhancement, played', () => {
-  /** `add actor ⟨path⟩` at a place, as a world says it. */
+  /** A placement of `path` at a place, as the screen holds one. */
   const place = (path: string, x: number, y: number) => ({
-    type: 'world_add_actor',
-    fields: {ACTOR: path},
-    inputs: {
-      DO: {
-        block: {
-          type: 'world_set_position',
-          inputs: {
-            ACTOR: {block: {type: 'world_this_actor'}},
-            X: {block: {type: 'math_number', fields: {NUM: x}}},
-            Y: {block: {type: 'math_number', fields: {NUM: y}}},
-          },
-        },
-      },
-    },
+    type: path,
+    id: path.split('/').pop(),
+    properties: {positional: {position: {x, y}}},
   });
 
   /** The enhanced project, with a player standing on a coin. */
   const played = () => {
     const source = collectsEnhancement.apply(withActors(), PLAYER);
-    const worldId = fileIdAt(source, 'worlds/main.world')!;
-    const parsed = JSON.parse(source.files[worldId].contents);
-    const root = parsed.blocks.blocks.find(
-      (block: {type: string}) => block.type === 'world_world',
-    );
+    const screenId = fileIdAt(source, 'screens/main.screen')!;
+    const screen = JSON.parse(source.files[screenId].contents);
     // The coin where the player is, so the two touch on the first frame.
-    // Chained IN FRONT of whatever the enhancements appended, rather than over
-    // it: the scoreboard's layer is a row in this same chain.
-    root.next = {
-      block: {
-        ...place('actors/ground', 100, 200),
-        next: {
-          block: {
-            ...place('actors/coin', 100, 100),
-            next: {
-              block: {...place('actors/player', 100, 100), next: root.next},
-            },
-          },
-        },
-      },
-    };
+    screen.actors = [
+      ...screen.actors,
+      place('actors/ground', 100, 200),
+      place('actors/coin', 100, 100),
+      place('actors/player', 100, 100),
+    ];
     return {
       ...source,
       files: {
         ...source.files,
-        [worldId]: {
-          ...source.files[worldId],
-          contents: JSON.stringify(parsed),
+        [screenId]: {
+          ...source.files[screenId],
+          contents: JSON.stringify(screen),
         },
       },
     };

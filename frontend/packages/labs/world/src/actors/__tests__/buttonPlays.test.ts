@@ -14,8 +14,9 @@
 import {describe, expect, it} from 'vitest';
 
 import {compileProject} from '../../__tests__/support/compileProject';
+import {levelScreen} from '../../__tests__/support/levelScreen';
 import {keyName} from '../../engine/core/keys';
-import {EMPTY_WORLD_PROJECT} from '../../fixtures/scenarios';
+import {EMPTY_APP_PROJECT} from '../../fixtures/scenarios';
 import {projectFiles} from '../../runtime/projectFiles';
 import {importStockActor} from '../importStockActor';
 import {stockActorById} from '../stock';
@@ -46,12 +47,11 @@ const place = (x: number, y: number) => ({
  * it says is which button was pressed, so a keyboard press that reached the
  * wrong one would be visible rather than merely absent.
  */
-const WORLD = JSON.stringify({
+const WORLD = levelScreen({
   blocks: {
     blocks: [
       {
-        type: 'world_world',
-        fields: {NAME: 'My World'},
+        type: 'world_on_screen_loads',
         next: {block: {...place(80, 60), next: {block: place(80, 200)}}},
       },
       {
@@ -80,11 +80,11 @@ const WORLD = JSON.stringify({
 
 const play = async () => {
   const source = importStockActor(
-    EMPTY_WORLD_PROJECT,
+    EMPTY_APP_PROJECT,
     stockActorById('button')!,
   ).source;
   const main = Object.values(source.files).find(
-    file => file.name === 'main.world',
+    file => file.name === 'main.screen',
   )!;
   const {world, modules} = await compileProject(
     projectFiles({

@@ -17,7 +17,7 @@ import {compileProject} from '../../../__tests__/support/compileProject';
 import type {Actor, World} from '../../../engine';
 import * as WorldLab from '../../../engine';
 import {PositionProperty} from '../../../engine';
-import {EMPTY_WORLD_PROJECT} from '../../../fixtures/scenarios';
+import {EMPTY_APP_PROJECT} from '../../../fixtures/scenarios';
 import {pointerFor} from '../../../rules/demos/device';
 import {rgb, type Cell} from '../../../rules/demos/record/strip';
 import {projectFiles} from '../../../runtime/projectFiles';
@@ -27,7 +27,6 @@ import {
   ACTOR_DEMO_SHRINK,
   ACTOR_DEMO_SIZE,
   type ActorDemo,
-  type ActorPlacement,
   type PointerAt,
 } from '../types';
 
@@ -53,23 +52,6 @@ const stockPixels = () =>
   ).stockPixels();
 
 /** `add actor ⟨path⟩`, put at one place — what a world's blocks say. */
-const placeBlock = (path: string, {x, y}: ActorPlacement) => ({
-  type: 'world_add_actor',
-  fields: {ACTOR: path},
-  inputs: {
-    DO: {
-      block: {
-        type: 'world_set_position',
-        inputs: {
-          ACTOR: {block: {type: 'world_this_actor'}},
-          X: {block: {type: 'math_number', fields: {NUM: x}}},
-          Y: {block: {type: 'math_number', fields: {NUM: y}}},
-        },
-      },
-    },
-  },
-});
-
 export interface StagedDemo {
   world: World;
   /** The actor the demo is ABOUT, which is what an assertion talks about. */
@@ -92,7 +74,7 @@ export async function stageActorDemo(
   id: string,
   demo: ActorDemo,
 ): Promise<StagedDemo> {
-  let source = EMPTY_WORLD_PROJECT;
+  let source = EMPTY_APP_PROJECT;
   const paths: Record<string, string> = {};
   for (const actorId of [id, ...(demo.supporting ?? [])]) {
     const stock = stockActorById(actorId);
@@ -104,23 +86,29 @@ export async function stageActorDemo(
     paths[actorId] = imported.path;
   }
 
-  // The placements, innermost last: a `.world` is one chain of blocks, and the
-  // chain is built from the end so each block carries the rest as its `next`.
-  let chain: unknown;
-  for (const placement of [...demo.cast].reverse()) {
-    const path = paths[placement.actor];
+  // Each is placed on the Main Screen, which holds the level: there is no
+  // Viewport, so the demo's frame is the screen's.
+  const taken = new Set<string>();
+  const actors = demo.cast.map(({actor, x, y}) => {
+    const path = paths[actor];
     if (!path) {
-      throw new Error(
-        `actor demo "${id}": "${placement.actor}" is not in the cast`,
-      );
+      throw new Error(`actor demo "${id}": "${actor}" is not in the cast`);
     }
-    chain = chain
-      ? {...placeBlock(path, placement), next: {block: chain}}
-      : placeBlock(path, placement);
-  }
+    const stem = path.split('/').pop()!;
+    let placementId = stem;
+    for (let n = 2; taken.has(placementId); n++) {
+      placementId = `${stem}${n}`;
+    }
+    taken.add(placementId);
+    return {
+      type: path,
+      id: placementId,
+      properties: {positional: {position: {x, y}}},
+    };
+  });
 
   const file = Object.values(source.files).find(
-    one => one.name === 'main.world',
+    one => one.name === 'main.screen',
   )!;
   const staged = {
     ...source,
@@ -128,19 +116,7 @@ export async function stageActorDemo(
       ...source.files,
       [file.id]: {
         ...file,
-        contents: JSON.stringify({
-          blocks: {
-            blocks: [
-              {
-                type: 'world_world',
-                x: 20,
-                y: 20,
-                fields: {NAME: 'Demo'},
-                next: {block: chain},
-              },
-            ],
-          },
-        }),
+        contents: JSON.stringify({type: 'map', name: 'Demo', actors}),
       },
     },
   };

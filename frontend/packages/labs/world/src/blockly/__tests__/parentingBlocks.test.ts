@@ -9,6 +9,7 @@
 import {describe, expect, it} from 'vitest';
 
 import {compileProject} from '../../__tests__/support/compileProject';
+import {levelScreen} from '../../__tests__/support/levelScreen';
 import {WORLD_SCENARIOS} from '../../fixtures/scenarios';
 import {projectFiles} from '../../runtime/projectFiles';
 import {buildDomainPalette, DOMAIN_BLOCKS} from '../domainBlocks';
@@ -142,12 +143,11 @@ describe('a project that parents one actor to another', () => {
   const project = () => {
     const files = {...projectFiles(WORLD_SCENARIOS.interface.source)};
     delete files['screens/main.screen'];
-    files['worlds/main.world'] = JSON.stringify({
+    files['screens/main.screen'] = levelScreen({
       blocks: {
         blocks: [
           {
-            type: 'world_world',
-            fields: {NAME: 'Nested'},
+            type: 'world_on_screen_loads',
             next: {
               block: chain([
                 {

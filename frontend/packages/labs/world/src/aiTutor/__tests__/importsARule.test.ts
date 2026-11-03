@@ -18,13 +18,14 @@
 import {describe, expect, it, vi} from 'vitest';
 
 import {compileProject} from '../../__tests__/support/compileProject';
+import {levelScreen} from '../../__tests__/support/levelScreen';
 import {actorDocument} from '../../actors/actorDocument';
 import {importStockActor} from '../../actors/importStockActor';
 import {stockActorById} from '../../actors/stock';
 import {projectRuleMetas} from '../../blockly/projectModules';
 import {ruleByName} from '../../blockly/ruleRegistry';
 import {anyTraitOptions} from '../../blockly/traitOptions';
-import {EMPTY_WORLD_PROJECT} from '../../fixtures/scenarios';
+import {EMPTY_APP_PROJECT} from '../../fixtures/scenarios';
 import {projectFiles} from '../../runtime/projectFiles';
 import {impliedRules, ruleNamesIn} from '../impliedRules';
 import {
@@ -41,14 +42,13 @@ const PLAYER_THAT_STAYS = actorDocument({
 });
 
 /** A world that places its Player, so a built actor exists to ask about. */
-const WORLD = JSON.stringify({
+const WORLD = levelScreen({
   blocks: {
     blocks: [
       {
-        type: 'world_world',
+        type: 'world_on_screen_loads',
         x: 20,
         y: 20,
-        fields: {NAME: 'My World'},
         next: {
           block: {type: 'world_add_actor', fields: {ACTOR: 'actors/player'}},
         },
@@ -60,11 +60,11 @@ const WORLD = JSON.stringify({
 /** The empty scenario with a Player in it, which is where the question starts. */
 const withAPlayer = () => {
   const source = importStockActor(
-    EMPTY_WORLD_PROJECT,
+    EMPTY_APP_PROJECT,
     stockActorById('player')!,
   ).source;
   const world = Object.values(source.files).find(
-    file => file.name === 'main.world',
+    file => file.name === 'main.screen',
   )!;
   return {
     ...source,

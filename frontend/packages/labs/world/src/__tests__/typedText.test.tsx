@@ -15,6 +15,7 @@ import {describe, expect, it} from 'vitest';
 import {actorDocument} from '../actors/actorDocument';
 
 import {compileProject} from './support/compileProject';
+import {levelScreen} from './support/levelScreen';
 
 const me = () => ({block: {type: 'world_this_actor'}});
 
@@ -60,12 +61,11 @@ const SIGN = actorDocument({
   ],
 });
 
-const WORLD = JSON.stringify({
+const WORLD = levelScreen({
   blocks: {
     blocks: [
       {
-        type: 'world_world',
-        fields: {NAME: 'My World'},
+        type: 'world_on_screen_loads',
         next: {
           block: {type: 'world_add_actor', fields: {ACTOR: 'actors/sign'}},
         },
@@ -77,7 +77,7 @@ const WORLD = JSON.stringify({
 const project = {
   'actors/sign.actor': SIGN,
   'rules/input.rule': '',
-  'worlds/main.world': WORLD,
+  'screens/main.screen': WORLD,
 };
 
 describe('what was typed', () => {

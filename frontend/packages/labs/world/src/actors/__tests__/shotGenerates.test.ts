@@ -5,19 +5,17 @@
 import {describe, expect, it} from 'vitest';
 
 import {compileProject} from '../../__tests__/support/compileProject';
-import {EMPTY_WORLD_PROJECT} from '../../fixtures/scenarios';
+import {levelScreen} from '../../__tests__/support/levelScreen';
+import {EMPTY_APP_PROJECT} from '../../fixtures/scenarios';
 import {projectFiles} from '../../runtime/projectFiles';
 import {importStockActor} from '../importStockActor';
 import {stockActorById} from '../stock';
 
 /** The empty scenario with a Shot imported and one line placing it. */
 const withAShotInIt = () => {
-  const {source} = importStockActor(
-    EMPTY_WORLD_PROJECT,
-    stockActorById('shot')!,
-  );
+  const {source} = importStockActor(EMPTY_APP_PROJECT, stockActorById('shot')!);
   const world = Object.values(source.files).find(
-    file => file.name === 'main.world',
+    file => file.name === 'main.screen',
   )!;
   return {
     ...source,
@@ -25,12 +23,11 @@ const withAShotInIt = () => {
       ...source.files,
       [world.id]: {
         ...world,
-        contents: JSON.stringify({
+        contents: levelScreen({
           blocks: {
             blocks: [
               {
-                type: 'world_world',
-                fields: {NAME: 'My World'},
+                type: 'world_on_screen_loads',
                 next: {
                   block: {
                     type: 'world_add_actor',

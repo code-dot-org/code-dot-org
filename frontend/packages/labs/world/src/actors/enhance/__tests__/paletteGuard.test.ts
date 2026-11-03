@@ -33,7 +33,7 @@ import {
   projectRuleMetas,
 } from '../../../blockly/projectModules';
 import {VIEW_ROWS} from '../../../blockly/viewRows';
-import {EMPTY_WORLD_PROJECT} from '../../../fixtures/scenarios';
+import {EMPTY_APP_PROJECT} from '../../../fixtures/scenarios';
 import {resolveRuleContents} from '../../../rules/ruleReference';
 import {projectFiles} from '../../../runtime/projectFiles';
 import {importStockActor} from '../../importStockActor';
@@ -44,13 +44,13 @@ import {
   type EnhanceTarget,
 } from '../enhancements';
 
-type Source = typeof EMPTY_WORLD_PROJECT;
+type Source = typeof EMPTY_APP_PROJECT;
 
-const WORKSPACE_FILE = /\.(rule|actor|world)$/;
+const WORKSPACE_FILE = /\.(rule|actor|screen)$/;
 
 /** The empty scenario with the named stock actors imported. */
 const withActors = (...ids: string[]): Source => {
-  let source: Source = EMPTY_WORLD_PROJECT;
+  let source: Source = EMPTY_APP_PROJECT;
   for (const id of ids) {
     source = importStockActor(source, stockActorById(id)!).source;
   }
@@ -88,9 +88,9 @@ const paletteOf = (source: Source): Set<string> => {
 /**
  * Whether a row changed any workspace file at all.
  *
- * Contents rather than block types, because for an actor a world defines the
- * whole patch lands in a file that already names most of what it writes — a
- * second `use trait` in the world file is a new row and not a new type.
+ * Contents rather than block types, because a patch can land in a file that
+ * already names most of what it writes — a second `use trait` is a new row and
+ * not a new type.
  */
 const wroteSomething = (before: Source, after: Source): boolean => {
   const was = projectFiles(before);
@@ -226,12 +226,12 @@ describe('the enhancement shelf', () => {
     });
   });
 
-  describe('on a world', () => {
+  describe('on the Main Screen', () => {
     const base = withActors('coin', 'player', 'ground');
     const WORLD = {
       kind: 'world' as const,
-      path: 'worlds/main',
-      name: 'My World',
+      path: 'screens/main',
+      name: 'Main',
     };
 
     it('names only blocks that exist', () => {

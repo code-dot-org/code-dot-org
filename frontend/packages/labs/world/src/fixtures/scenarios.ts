@@ -95,55 +95,9 @@ export interface WorldScenario {
 }
 
 /**
- * An empty project: the folders and one world that does nothing.
- *
- * The folders are there and empty on purpose — the same eight the starter has,
- * because a folder is what gives a file its meaning here (an image under
- * `backgrounds/` is a backdrop, one under `sprites/` is not), and a learner
- * starting from nothing should not have to know that before they can upload a
- * picture.
- */
-const EMPTY_WORLD = JSON.stringify({
-  blocks: {
-    blocks: [{type: 'world_world', x: 20, y: 20, fields: {NAME: 'My World'}}],
-  },
-});
-
-/**
- * …as a world: what a test about an actor or an enhancement writes a few
- * rows into, as a lesson is written. Never a learner's project: it is
- * compiled as the Main Screen it stands for (`__tests__/support/worldAsScreen`).
- */
-const EMPTY_WORLD_SPEC: ProjectSpec = {
-  folders: [
-    'rules',
-    'worlds',
-    'actors',
-    'sprites',
-    'backgrounds',
-    'maps',
-    'effects',
-  ],
-  files: {
-    main: {
-      name: 'main.world',
-      language: 'world',
-      contents: EMPTY_WORLD,
-      folderId: 'worlds',
-      active: true,
-      open: true,
-    },
-  },
-  open: ['main'],
-};
-
-/** The empty project as a world (`EMPTY_WORLD_SPEC`). */
-export const EMPTY_WORLD_PROJECT: MultiFileSource =
-  buildProject(EMPTY_WORLD_SPEC).source;
-
-/**
  * An empty app: a Main Screen with nothing on it and no Viewport, which the
- * two apps write their screens into (specs/SCREEN_MAP_PLAN.md).
+ * two apps write their screens into (specs/SCREEN_MAP_PLAN.md), and a test
+ * about an actor or a rule its level.
  */
 const EMPTY_APP_SPEC: ProjectSpec = {
   folders: [
@@ -175,6 +129,12 @@ export const EMPTY_APP_PROJECT: MultiFileSource =
 /**
  * An empty game: a Main Screen whose Viewport shows an empty level
  * (specs/SCREEN_MAP_PLAN.md). What a learner starting from scratch sees.
+ *
+ * The folders are there and empty on purpose — the same ones the starter
+ * has, because a folder is what gives a file its meaning here (an image under
+ * `backgrounds/` is a backdrop, one under `sprites/` is not), and a learner
+ * starting from nothing should not have to know that before they can upload a
+ * picture.
  */
 const EMPTY_SPEC: ProjectSpec = {
   folders: [

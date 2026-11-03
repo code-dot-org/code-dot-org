@@ -17,6 +17,7 @@ import {actorDocument} from '../actors/actorDocument';
 import {PositionProperty} from '../engine';
 
 import {compileProject} from './support/compileProject';
+import {levelScreen} from './support/levelScreen';
 
 /** `Ball`, with one thing it knows how to do: put itself in the middle. */
 const BALL = actorDocument({
@@ -40,13 +41,12 @@ const BALL = actorDocument({
 });
 
 /** A world that places one and tells it to do the thing. */
-const WORLD = JSON.stringify({
+const WORLD = levelScreen({
   blocks: {
     blocks: [
       {
-        type: 'world_world',
+        type: 'world_on_screen_loads',
         id: 'worldDef',
-        fields: {NAME: 'My World'},
         next: {
           block: {
             type: 'world_add_actor',
@@ -84,7 +84,7 @@ describe('an actor’s own block', () => {
   it('runs where it is called, on the actor it is called for', async () => {
     const {world} = await compileProject({
       'actors/ball.actor': BALL,
-      'worlds/main.world': WORLD,
+      'screens/main.screen': WORLD,
     });
 
     const ball = [...world.actors][0];
@@ -149,7 +149,7 @@ describe('one of an actor’s own blocks calling another', () => {
     // because their own properties needed the same thing.
     const {world} = await compileProject({
       'actors/ball.actor': KICKER,
-      'worlds/main.world': WORLD,
+      'screens/main.screen': WORLD,
     });
 
     const ball = [...world.actors][0];

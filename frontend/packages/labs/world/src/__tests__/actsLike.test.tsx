@@ -18,6 +18,7 @@ import {projectOwnMetas} from '../blockly/projectModules';
 import {IntrinsicSizeProperty} from '../engine/rules/spatial';
 
 import {compileProject} from './support/compileProject';
+import {levelScreen} from './support/levelScreen';
 
 const me = () => ({block: {type: 'world_this_actor'}});
 
@@ -84,12 +85,11 @@ const BAR = actorDocument({
 /** The child: everything the Bar is, and nothing said twice. */
 const FUEL = actorDocument({name: 'Fuel Bar', actsLike: 'actors/bar'});
 
-const WORLD = JSON.stringify({
+const WORLD = levelScreen({
   blocks: {
     blocks: [
       {
-        type: 'world_world',
-        fields: {NAME: 'My World'},
+        type: 'world_on_screen_loads',
         next: {
           block: {
             type: 'world_add_actor',
@@ -110,7 +110,7 @@ const WORLD = JSON.stringify({
 const project = {
   'actors/bar.actor': BAR,
   'actors/fuelBar.actor': FUEL,
-  'worlds/main.world': WORLD,
+  'screens/main.screen': WORLD,
 };
 
 /** The placed actor of a kind, by the module it was placed from. */

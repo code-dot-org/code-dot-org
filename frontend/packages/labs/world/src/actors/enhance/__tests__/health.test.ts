@@ -10,7 +10,7 @@ import {describe, expect, it} from 'vitest';
 
 import {compileProject} from '../../../__tests__/support/compileProject';
 import {PositionProperty} from '../../../engine';
-import {EMPTY_WORLD_PROJECT} from '../../../fixtures/scenarios';
+import {EMPTY_APP_PROJECT} from '../../../fixtures/scenarios';
 import {fileIdAt, projectFiles} from '../../../runtime/projectFiles';
 import {isDataShaped, type ActorData} from '../../actorData';
 import {importedContents, importStockActor} from '../../importStockActor';
@@ -20,7 +20,7 @@ import {healthEnhancement} from '../health';
 /** The empty scenario with a Platformer Player in it, which is the case. */
 const withPlayer = () => {
   const source = importStockActor(
-    EMPTY_WORLD_PROJECT,
+    EMPTY_APP_PROJECT,
     stockActorById('player')!,
   ).source;
   return source;
@@ -79,8 +79,8 @@ describe('the health enhancement, as edits', () => {
     // created rather than the bar being placed.
     expect(actor).toContain('playerBar');
 
-    expect(at(after, 'worlds/main.world')).toBe(
-      at(before, 'worlds/main.world'),
+    expect(at(after, 'screens/main.screen')).toBe(
+      at(before, 'screens/main.screen'),
     );
   });
 
@@ -110,7 +110,9 @@ describe('the health enhancement, as edits', () => {
 
     // Byte for byte: a learner who cannot see what changed will do it again,
     // and the second time must not leave two bars and two traits.
-    expect(at(twice, 'worlds/main.world')).toBe(at(once, 'worlds/main.world'));
+    expect(at(twice, 'screens/main.screen')).toBe(
+      at(once, 'screens/main.screen'),
+    );
     expect(at(twice, 'actors/player.actor')).toBe(
       at(once, 'actors/player.actor'),
     );
@@ -130,47 +132,26 @@ describe('the health enhancement, as edits', () => {
 });
 
 describe('the health enhancement, played', () => {
-  /** `add actor ⟨path⟩` at a place, as a world says it. */
-  const place = (path: string, x: number, y: number) => ({
-    type: 'world_add_actor',
-    fields: {ACTOR: path},
-    inputs: {
-      DO: {
-        block: {
-          type: 'world_set_position',
-          inputs: {
-            ACTOR: {block: {type: 'world_this_actor'}},
-            X: {block: {type: 'math_number', fields: {NUM: x}}},
-            Y: {block: {type: 'math_number', fields: {NUM: y}}},
-          },
-        },
-      },
-    },
-  });
-
   /** The enhanced project, with `count` players placed 100 apart. */
   const enhanced = (count = 1) => {
     const source = healthEnhancement.apply(withPlayer(), PLAYER);
-    const worldId = fileIdAt(source, 'worlds/main.world')!;
-    const world = JSON.parse(source.files[worldId].contents);
-    const root = world.blocks.blocks.find(
-      (block: {type: string}) => block.type === 'world_world',
-    );
-    let chain = root.next;
+    const screenId = fileIdAt(source, 'screens/main.screen')!;
+    const screen = JSON.parse(source.files[screenId].contents);
     for (let at = 0; at < count; at++) {
-      chain = {
-        block: {
-          ...place('actors/player', 100 + at * 100, 100),
-          ...(chain ? {next: chain} : {}),
-        },
-      };
+      screen.actors.push({
+        type: 'actors/player',
+        id: `player${at + 1}`,
+        properties: {positional: {position: {x: 100 + at * 100, y: 100}}},
+      });
     }
-    root.next = chain;
     return {
       ...source,
       files: {
         ...source.files,
-        [worldId]: {...source.files[worldId], contents: JSON.stringify(world)},
+        [screenId]: {
+          ...source.files[screenId],
+          contents: JSON.stringify(screen),
+        },
       },
     };
   };

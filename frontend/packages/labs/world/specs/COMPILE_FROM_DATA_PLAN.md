@@ -415,11 +415,20 @@ In order, each its own commit:
    and import the Viewport, and are the same files as before.
    `asScreenProject` is gone; the converter is called only from test
    support.
-3. The tests. A test writes the screen and map it means, and so does the
-   empty project tests start from (`EMPTY_WORLD_SPEC`) and the actor-demo
-   recorder; the converter in test support (`worldAsScreen`) and the
-   checks' world view go, and the checks edit the screen, the map and the
-   actor files.
+3. The tests. BUILT, November 2026, but for the lesson checks. A test
+   writes its game as a Main Screen with the level on it and no Viewport
+   (`__tests__/support/levelScreen`), starting from the empty app: its
+   rows are the screen's code under `when this screen loads`, and a world
+   property it declared is the screen's. Running every test's `add actor`
+   as code rather than as a placement failed one test, which places two
+   actors and now writes them as placements; so do the enhancement tests
+   that placed their actors, and the actor-demo recorder, whose strips
+   are byte for byte the same. The theme test whose map overrides the
+   game's writes a Game Viewport and `main.map`, since a map's theme
+   overrides nothing on the screen itself. `worldAsScreen`, `asAWorld`
+   and the empty world project are gone. Left: the lesson checks' world
+   view goes, and the checks edit the screen, the map and the actor
+   files.
 4. The converter goes: `asScreen`, `VIEW_ROWS`, and the `define world`
    rows the world view writes (`world_rule_property`, `world_rule_event`
    among them).

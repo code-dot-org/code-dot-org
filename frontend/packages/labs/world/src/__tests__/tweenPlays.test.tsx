@@ -13,6 +13,7 @@ import {OpacityProperty, PositionProperty} from '../engine';
 import {projectFiles} from '../runtime/projectFiles';
 
 import {compileProject} from './support/compileProject';
+import {levelScreen} from './support/levelScreen';
 
 const PLAYER = actorDocument({name: 'Player'});
 
@@ -25,7 +26,7 @@ const PLAYER = actorDocument({name: 'Player'});
  * in the module.
  */
 const world = (seconds = 1) =>
-  JSON.stringify({
+  levelScreen({
     blocks: {
       blocks: [
         {
@@ -51,10 +52,9 @@ const world = (seconds = 1) =>
           },
         },
         {
-          type: 'world_world',
+          type: 'world_on_screen_loads',
           x: 20,
           y: 20,
-          fields: {NAME: 'My World'},
           next: {
             block: {
               type: 'world_add_actor',
@@ -87,21 +87,21 @@ const project = (seconds?: number) =>
       },
       w: {
         id: 'w',
-        name: 'main.world',
-        language: 'world',
+        name: 'main.screen',
+        language: 'screen',
         contents: world(seconds),
-        folderId: 'worlds',
+        folderId: 'screens',
       },
     },
     folders: {
       actors: {id: 'actors', name: 'actors', parentId: '0'},
-      worlds: {id: 'worlds', name: 'worlds', parentId: '0'},
+      screens: {id: 'screens', name: 'screens', parentId: '0'},
     },
     openFiles: [],
   } as never);
 
 /** The same world, but the play block is handed `any ⟨Player⟩` — several. */
-const broadcastWorld = JSON.stringify({
+const broadcastWorld = levelScreen({
   blocks: {
     blocks: [
       {
@@ -124,10 +124,9 @@ const broadcastWorld = JSON.stringify({
         },
       },
       {
-        type: 'world_world',
+        type: 'world_on_screen_loads',
         x: 20,
         y: 20,
-        fields: {NAME: 'My World'},
         next: {
           block: {
             type: 'world_add_actor',
@@ -171,15 +170,15 @@ const broadcast = () =>
       },
       w: {
         id: 'w',
-        name: 'main.world',
-        language: 'world',
+        name: 'main.screen',
+        language: 'screen',
         contents: broadcastWorld,
-        folderId: 'worlds',
+        folderId: 'screens',
       },
     },
     folders: {
       actors: {id: 'actors', name: 'actors', parentId: '0'},
-      worlds: {id: 'worlds', name: 'worlds', parentId: '0'},
+      screens: {id: 'screens', name: 'screens', parentId: '0'},
     },
     openFiles: [],
   } as never);
@@ -259,7 +258,7 @@ describe('a tween defined in a file and played', () => {
 // A character entering a scene moves and fades at once. Before the mouth this
 // was two tweens with two names and two `finishes` events, and a handler
 // waiting for "the entrance is over" had to guess which one to listen to.
-const enterWorld = JSON.stringify({
+const enterWorld = levelScreen({
   blocks: {
     blocks: [
       {
@@ -294,10 +293,9 @@ const enterWorld = JSON.stringify({
         },
       },
       {
-        type: 'world_world',
+        type: 'world_on_screen_loads',
         x: 20,
         y: 20,
-        fields: {NAME: 'My World'},
         next: {
           block: {
             type: 'world_add_actor',
@@ -339,15 +337,15 @@ const entering = () =>
       },
       w: {
         id: 'w',
-        name: 'main.world',
-        language: 'world',
+        name: 'main.screen',
+        language: 'screen',
         contents: enterWorld,
-        folderId: 'worlds',
+        folderId: 'screens',
       },
     },
     folders: {
       actors: {id: 'actors', name: 'actors', parentId: '0'},
-      worlds: {id: 'worlds', name: 'worlds', parentId: '0'},
+      screens: {id: 'screens', name: 'screens', parentId: '0'},
     },
     openFiles: [],
   } as never);
@@ -389,14 +387,13 @@ describe('a tween of two properties at once', () => {
 // What is given up is the end. `a tween finishes` carries the tween's name, so
 // nothing can wait for one of these in particular. That is the trade, and the
 // reason both blocks exist.
-const inlineWorld = JSON.stringify({
+const inlineWorld = levelScreen({
   blocks: {
     blocks: [
       {
-        type: 'world_world',
+        type: 'world_on_screen_loads',
         x: 20,
         y: 20,
-        fields: {NAME: 'My World'},
         next: {
           block: {
             type: 'world_add_actor',
@@ -463,15 +460,15 @@ const inline = () =>
       },
       w: {
         id: 'w',
-        name: 'main.world',
-        language: 'world',
+        name: 'main.screen',
+        language: 'screen',
         contents: inlineWorld,
-        folderId: 'worlds',
+        folderId: 'screens',
       },
     },
     folders: {
       actors: {id: 'actors', name: 'actors', parentId: '0'},
-      worlds: {id: 'worlds', name: 'worlds', parentId: '0'},
+      screens: {id: 'screens', name: 'screens', parentId: '0'},
     },
     openFiles: [],
   } as never);

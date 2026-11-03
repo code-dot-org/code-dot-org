@@ -18,6 +18,7 @@ import {actorDocument} from '../actors/actorDocument';
 import {IntrinsicSizeProperty} from '../engine/rules/spatial';
 
 import {compileProject} from './support/compileProject';
+import {levelScreen} from './support/levelScreen';
 
 const me = () => ({block: {type: 'world_this_actor'}});
 const number = (value: number) => ({
@@ -61,36 +62,20 @@ const PLATE = actorDocument({
   ],
 });
 
-/** `add actor ⟨Plate⟩ do set width of ⟨this actor⟩ to ⟨w⟩`. */
-const place = (width: number) => ({
-  type: 'world_add_actor',
-  fields: {ACTOR: 'actors/plate'},
-  inputs: {
-    DO: {
-      block: {
-        type: 'world_set_ActorsPlate_WidthProperty',
-        inputs: {ACTOR: me(), VALUE: number(width)},
-      },
-    },
-  },
+/** A Plate placed on the screen, its width set on the placement. */
+const placed = (id: string, width: number) => ({
+  type: 'actors/plate',
+  id,
+  properties: {Plate: {width}},
 });
 
 /** Two Plates of one kind, made two different widths. */
-const WORLD = JSON.stringify({
-  blocks: {
-    blocks: [
-      {
-        type: 'world_world',
-        fields: {NAME: 'My World'},
-        next: {
-          block: {...place(100), next: {block: place(20)}},
-        },
-      },
-    ],
-  },
-});
+const SCREEN = levelScreen(
+  {},
+  {actors: [placed('plate', 100), placed('plate2', 20)]},
+);
 
-const project = {'actors/plate.actor': PLATE, 'worlds/main.world': WORLD};
+const project = {'actors/plate.actor': PLATE, 'screens/main.screen': SCREEN};
 
 const sizes = (world: {actors: Iterable<unknown>}) =>
   [...world.actors].map(actor => {
@@ -106,10 +91,9 @@ describe('a drawing sized from the actor', () => {
     // before there was one pair of numbers on the kind and no way to differ.
     const {world} = await compileProject(project);
 
-    // FROM THE START. Written as `add actor ⟨Plate⟩ do set width …`, each is
-    // a placement on the map now (`worldAsScreen`), and a placement's
-    // overrides are applied before the actor is placed, so its size never
-    // lags. The size is asked again wherever the drawing runs, as well.
+    // FROM THE START. A placement's overrides are applied before the actor
+    // is placed, so its size never lags. The size is asked again wherever the
+    // drawing runs, as well.
     expect(sizes(world)).toEqual([
       [100, 12],
       [20, 12],
@@ -177,12 +161,11 @@ describe('a drawing sized from the actor', () => {
     });
     const {world} = await compileProject({
       'actors/chip.actor': fixed,
-      'worlds/main.world': JSON.stringify({
+      'screens/main.screen': levelScreen({
         blocks: {
           blocks: [
             {
-              type: 'world_world',
-              fields: {NAME: 'My World'},
+              type: 'world_on_screen_loads',
               next: {
                 block: {
                   type: 'world_add_actor',

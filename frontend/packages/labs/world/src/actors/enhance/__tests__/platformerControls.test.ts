@@ -9,9 +9,10 @@
 import {describe, expect, it} from 'vitest';
 
 import {compileProject} from '../../../__tests__/support/compileProject';
+import {levelScreen} from '../../../__tests__/support/levelScreen';
 import {PositionProperty, type World} from '../../../engine';
 import {keyName} from '../../../engine/core/keys';
-import {EMPTY_WORLD_PROJECT} from '../../../fixtures/scenarios';
+import {EMPTY_APP_PROJECT} from '../../../fixtures/scenarios';
 import {fileIdAt, projectFiles} from '../../../runtime/projectFiles';
 import {importStockActor} from '../../importStockActor';
 import {stockActorById} from '../../stock';
@@ -26,7 +27,7 @@ const COIN = {
 };
 
 const withCoin = () =>
-  importStockActor(EMPTY_WORLD_PROJECT, stockActorById('coin')!).source;
+  importStockActor(EMPTY_APP_PROJECT, stockActorById('coin')!).source;
 
 const at = (source: ReturnType<typeof withCoin>, path: string) => {
   const id = fileIdAt(source, path);
@@ -109,7 +110,7 @@ describe('the platformer-controls enhancement, as edits', () => {
     // the jump out from under the hat and leaving the hat where it is.
     const player = {kind: 'actor' as const, path: 'actors/player', name: 'P'};
     const withPlayer = importStockActor(
-      EMPTY_WORLD_PROJECT,
+      EMPTY_APP_PROJECT,
       stockActorById('player')!,
     ).source;
     const id = fileIdAt(withPlayer, 'actors/player.actor')!;
@@ -192,7 +193,7 @@ const room = () => {
   let source = platformerControlsEnhancement.apply(withCoin(), COIN);
   source = importStockActor(source, stockActorById('ground')!).source;
   const world = Object.values(source.files).find(
-    file => file.name === 'main.world',
+    file => file.name === 'main.screen',
   )!;
   return {
     ...source,
@@ -200,14 +201,13 @@ const room = () => {
       ...source.files,
       [world.id]: {
         ...world,
-        contents: JSON.stringify({
+        contents: levelScreen({
           blocks: {
             blocks: [
               {
-                type: 'world_world',
+                type: 'world_on_screen_loads',
                 x: 20,
                 y: 20,
-                fields: {NAME: 'My World'},
                 next: {
                   block: {
                     ...place('actors/ground', 160, 300),

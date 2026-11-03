@@ -8,8 +8,9 @@
 import {describe, expect, it} from 'vitest';
 
 import {compileProject} from '../../__tests__/support/compileProject';
+import {levelScreen} from '../../__tests__/support/levelScreen';
 import {ScaleProperty} from '../../engine/rules/spatial';
-import {EMPTY_WORLD_PROJECT} from '../../fixtures/scenarios';
+import {EMPTY_APP_PROJECT} from '../../fixtures/scenarios';
 import {projectFiles} from '../../runtime/projectFiles';
 import {importStockActor} from '../importStockActor';
 import {stockActorById} from '../stock';
@@ -20,12 +21,11 @@ const number = (value: number) => ({
 });
 
 /** One Image, in a box 100 wide and 50 tall. */
-const WORLD = JSON.stringify({
+const WORLD = levelScreen({
   blocks: {
     blocks: [
       {
-        type: 'world_world',
-        fields: {NAME: 'My World'},
+        type: 'world_on_screen_loads',
         next: {
           block: {
             type: 'world_add_actor',
@@ -53,11 +53,11 @@ const WORLD = JSON.stringify({
 
 const play = async () => {
   const source = importStockActor(
-    EMPTY_WORLD_PROJECT,
+    EMPTY_APP_PROJECT,
     stockActorById('image')!,
   ).source;
   const main = Object.values(source.files).find(
-    file => file.name === 'main.world',
+    file => file.name === 'main.screen',
   )!;
   const {world, modules} = await compileProject(
     projectFiles({

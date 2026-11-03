@@ -5,13 +5,14 @@ import {describe, expect, it} from 'vitest';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {compileProject} from '../../__tests__/support/compileProject';
+import {levelScreen} from '../../__tests__/support/levelScreen';
 import {
   type Actor,
   PositionProperty,
   type Property,
   Vector,
 } from '../../engine';
-import {EMPTY_WORLD_PROJECT} from '../../fixtures/scenarios';
+import {EMPTY_APP_PROJECT} from '../../fixtures/scenarios';
 import {projectFiles} from '../../runtime/projectFiles';
 import {importStockActor} from '../importStockActor';
 import {stockActorById} from '../stock';
@@ -28,10 +29,10 @@ const chain = (rows: object[]) =>
 
 /** A world with a Toggle and a Label, the Label saying what the Toggle did. */
 const project = (): MultiFileSource => {
-  let source = EMPTY_WORLD_PROJECT;
+  let source = EMPTY_APP_PROJECT;
   source = importStockActor(source, stockActorById('toggle')!).source;
   const main = Object.values(source.files).find(
-    file => file.name === 'main.world',
+    file => file.name === 'main.screen',
   )!;
   const says = (what: string) => ({
     type: 'world_set_ActorsLabel_TextProperty',
@@ -40,12 +41,11 @@ const project = (): MultiFileSource => {
       VALUE: {block: {type: 'text', fields: {TEXT: what}}},
     },
   });
-  const world = JSON.stringify({
+  const world = levelScreen({
     blocks: {
       blocks: [
         {
-          type: 'world_world',
-          fields: {NAME: 'Switch'},
+          type: 'world_on_screen_loads',
           next: {
             block: chain([
               {

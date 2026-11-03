@@ -13,40 +13,19 @@ import {compileProject} from '../../__tests__/support/compileProject';
 import {importStockActor} from '../../actors/importStockActor';
 import {stockActorById} from '../../actors/stock';
 import type {World} from '../../engine';
-import {EMPTY_WORLD_PROJECT} from '../../fixtures/scenarios';
+import {EMPTY_APP_PROJECT} from '../../fixtures/scenarios';
 import {projectFiles} from '../../runtime/projectFiles';
 import {declareScreenEvents} from '../declareEvents';
 import {importStockMap} from '../importStockMap';
 import {stockMapById} from '../stock';
 
-/** The empty scenario, its world file replaced by a bare Main Screen. */
+/** The empty app, with what the stock dialogs are made of. */
 function emptyScreenProject() {
-  let source = EMPTY_WORLD_PROJECT;
+  let source = EMPTY_APP_PROJECT;
   for (const actor of ['label', 'panel', 'button']) {
     source = importStockActor(source, stockActorById(actor)!).source;
   }
-  const world = Object.values(source.files).find(
-    file => file.name === 'main.world',
-  )!;
-  const files = {...source.files};
-  delete files[world.id];
-  return {
-    ...source,
-    folders: {
-      ...source.folders,
-      screens: {id: 'screens', name: 'screens', parentId: '0'},
-    },
-    files: {
-      ...files,
-      mainScreen: {
-        id: 'mainScreen',
-        name: 'main.screen',
-        language: 'screen',
-        folderId: 'screens',
-        contents: JSON.stringify({type: 'map', name: 'App', actors: []}),
-      },
-    },
-  };
+  return source;
 }
 
 describe('a stock dialog on a Main Screen', () => {
@@ -55,7 +34,7 @@ describe('a stock dialog on a Main Screen', () => {
       emptyScreenProject(),
       stockMapById('confirm')!,
     ).source;
-    const screen = JSON.parse(source.files.mainScreen.contents!) as {
+    const screen = JSON.parse(projectFiles(source)['screens/main.screen']) as {
       events: Array<{name: string}>;
     };
 

@@ -24,6 +24,7 @@ import {projectOwnMetas} from '../blockly/projectModules';
 import {PositionProperty} from '../engine';
 
 import {compileProject} from './support/compileProject';
+import {levelScreen} from './support/levelScreen';
 
 /**
  * A kind with a `speed` and a `go`, both named the same whoever asks.
@@ -61,12 +62,11 @@ const actorNamed = (name: string, speed: number) =>
   });
 
 /** Places one of each and tells each to do its own `go`. */
-const WORLD = JSON.stringify({
+const WORLD = levelScreen({
   blocks: {
     blocks: [
       {
-        type: 'world_world',
-        fields: {NAME: 'My World'},
+        type: 'world_on_screen_loads',
         next: {
           block: {
             type: 'world_add_actor',
@@ -103,7 +103,7 @@ const WORLD = JSON.stringify({
 const project = {
   'actors/foo.actor': actorNamed('Foo', 11),
   'actors/bar.actor': actorNamed('Bar', 22),
-  'worlds/main.world': WORLD,
+  'screens/main.screen': WORLD,
 };
 
 describe('two actors declaring the same names', () => {

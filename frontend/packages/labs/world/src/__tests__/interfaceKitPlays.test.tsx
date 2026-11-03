@@ -10,6 +10,9 @@
 
 import {describe, expect, it} from 'vitest';
 
+import {importStockActor} from '../actors/importStockActor';
+import {stockActorById} from '../actors/stock';
+import {gameScreen} from '../constants';
 import {PositionProperty, Vector, type Actor} from '../engine';
 import {PORTRAIT} from '../fixtures/interfaceKit';
 import {WORLD_SCENARIOS} from '../fixtures/scenarios';
@@ -66,13 +69,12 @@ describe('the theme, through the whole path', () => {
   });
 
   /**
-   * The kit as a WORLD whose main map is the screen, edited by `edit`, and
-   * which uses the screen's theme as its base.
+   * The kit as the level a Game Viewport shows, edited by `edit`, under a
+   * Main Screen that uses the kit's theme as the game's.
    *
-   * A world, because the middle of the cascade is a map's own theme over
+   * A level, because the middle of the cascade is a map's own theme over
    * the game's, and a Main Screen's theme IS the game's: there is nothing
    * above it on the screen for it to override (specs/SCREEN_MAP_PLAN.md).
-   * A world's main map has the world above it.
    */
   const withMainMap = (
     edit: (map: {
@@ -80,29 +82,25 @@ describe('the theme, through the whole path', () => {
       actors: Array<{type: string; properties?: Record<string, unknown>}>;
     }) => void,
   ) => {
-    const files = {...projectFiles(WORLD_SCENARIOS.interface.source)};
+    const files = {
+      ...projectFiles(
+        importStockActor(
+          WORLD_SCENARIOS.interface.source,
+          stockActorById('viewport')!,
+        ).source,
+      ),
+    };
     const {name, theme, ...map} = JSON.parse(
       files['screens/main.screen'],
     ) as Parameters<typeof edit>[0] & {name: string; theme: string};
     delete (map as {blocks?: unknown}).blocks;
     edit(map);
-    delete files['screens/main.screen'];
-    files['worlds/main.world'] = JSON.stringify({
-      blocks: {
-        blocks: [
-          {
-            type: 'world_world',
-            fields: {NAME: name},
-            next: {block: {type: 'world_use_theme', fields: {THEME: theme}}},
-          },
-        ],
-      },
-      map,
-    });
+    files['screens/main.screen'] = gameScreen(name, {theme});
+    files['maps/main.map'] = JSON.stringify(map);
     return files;
   };
 
-  it('lets a MAP override the world, all the way through', async () => {
+  it('lets a MAP override the game, all the way through', async () => {
     // Compiled, not constructed: the field goes into the world's document,
     // the document into a module, the module into `loadMap`, and the load
     // remembers it for every actor it placed. A main map is a map — it

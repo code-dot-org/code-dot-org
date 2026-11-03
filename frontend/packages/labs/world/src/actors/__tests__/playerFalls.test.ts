@@ -14,8 +14,9 @@
 import {describe, expect, it} from 'vitest';
 
 import {compileProject} from '../../__tests__/support/compileProject';
+import {levelScreen} from '../../__tests__/support/levelScreen';
 import {PositionProperty, type World} from '../../engine';
-import {EMPTY_WORLD_PROJECT} from '../../fixtures/scenarios';
+import {EMPTY_APP_PROJECT} from '../../fixtures/scenarios';
 import {projectFiles} from '../../runtime/projectFiles';
 import {importStockActor} from '../importStockActor';
 import {stockActorById} from '../stock';
@@ -43,11 +44,11 @@ const place = (path: string, x: number, y: number) => ({
 
 /** The empty scenario with both actors imported, and a world that places them. */
 const platformer = () => {
-  let source = EMPTY_WORLD_PROJECT;
+  let source = EMPTY_APP_PROJECT;
   source = importStockActor(source, player).source;
   source = importStockActor(source, ground).source;
   const world = Object.values(source.files).find(
-    file => file.name === 'main.world',
+    file => file.name === 'main.screen',
   )!;
   return {
     ...source,
@@ -55,14 +56,13 @@ const platformer = () => {
       ...source.files,
       [world.id]: {
         ...world,
-        contents: JSON.stringify({
+        contents: levelScreen({
           blocks: {
             blocks: [
               {
-                type: 'world_world',
+                type: 'world_on_screen_loads',
                 x: 20,
                 y: 20,
-                fields: {NAME: 'My World'},
                 next: {
                   block: {
                     ...place('actors/ground', 160, 300),
@@ -100,10 +100,10 @@ const play = (world: World, seconds: number) => {
 // as a Player would hold things up whether or not its shelf entry asked for it.
 describe('an imported Ground, with no Player to bring Gravity', () => {
   it('carries both the traits its file elects', async () => {
-    let source = EMPTY_WORLD_PROJECT;
+    let source = EMPTY_APP_PROJECT;
     source = importStockActor(source, ground).source;
     const file = Object.values(source.files).find(
-      one => one.name === 'main.world',
+      one => one.name === 'main.screen',
     )!;
     const placed = {
       ...source,
@@ -111,14 +111,13 @@ describe('an imported Ground, with no Player to bring Gravity', () => {
         ...source.files,
         [file.id]: {
           ...file,
-          contents: JSON.stringify({
+          contents: levelScreen({
             blocks: {
               blocks: [
                 {
-                  type: 'world_world',
+                  type: 'world_on_screen_loads',
                   x: 20,
                   y: 20,
-                  fields: {NAME: 'My World'},
                   next: {block: place('actors/ground', 160, 300)},
                 },
               ],

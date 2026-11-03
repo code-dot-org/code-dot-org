@@ -12,7 +12,8 @@
 import {describe, expect, it} from 'vitest';
 
 import {compileProject} from '../../../__tests__/support/compileProject';
-import {EMPTY_WORLD_PROJECT} from '../../../fixtures/scenarios';
+import {levelScreen} from '../../../__tests__/support/levelScreen';
+import {EMPTY_APP_PROJECT} from '../../../fixtures/scenarios';
 import {fileIdAt, projectFiles} from '../../../runtime/projectFiles';
 import type {ActorData} from '../../actorData';
 import {importStockActor} from '../../importStockActor';
@@ -29,7 +30,7 @@ const LINE = 'The rain had not stopped for three days.';
 
 /** The empty scenario with a Label in it. */
 const withLabel = () =>
-  importStockActor(EMPTY_WORLD_PROJECT, stockActorById('label')!).source;
+  importStockActor(EMPTY_APP_PROJECT, stockActorById('label')!).source;
 
 const at = (source: ReturnType<typeof withLabel>, path: string) => {
   const id = fileIdAt(source, path);
@@ -93,7 +94,7 @@ describe('the types-out-text enhancement, as edits', () => {
     // It ships with the same blocks from the same place (`actors/typewriter`),
     // so offering it again would be offering a second copy of what is there.
     const source = importStockActor(
-      EMPTY_WORLD_PROJECT,
+      EMPTY_APP_PROJECT,
       stockActorById('speechBox')!,
     ).source;
 
@@ -112,7 +113,7 @@ describe('the types-out-text enhancement, as edits', () => {
     // got — a file naming a block nothing defines.
     const source = importStockActor(
       importStockActor(
-        importStockActor(EMPTY_WORLD_PROJECT, stockActorById('coin')!).source,
+        importStockActor(EMPTY_APP_PROJECT, stockActorById('coin')!).source,
         stockActorById('speechBox')!,
       ).source,
       stockActorById('label')!,
@@ -139,12 +140,11 @@ describe('the types-out-text enhancement, as edits', () => {
 
 describe('the types-out-text enhancement, played', () => {
   /** A world that places the enhanced Label and says a line to it. */
-  const WORLD = JSON.stringify({
+  const WORLD = levelScreen({
     blocks: {
       blocks: [
         {
-          type: 'world_world',
-          fields: {NAME: 'My World'},
+          type: 'world_on_screen_loads',
           next: {
             block: {
               type: 'world_add_actor',
@@ -170,7 +170,7 @@ describe('the types-out-text enhancement, played', () => {
   const project = () => {
     const after = typesOut.apply(withLabel(), LABEL);
     const world = Object.values(after.files).find(
-      file => file.name === 'main.world',
+      file => file.name === 'main.screen',
     )!;
     return projectFiles({
       ...after,

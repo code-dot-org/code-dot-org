@@ -7,7 +7,7 @@
 import {fireEvent, render, screen} from '@testing-library/react';
 import {describe, expect, it, vi} from 'vitest';
 
-import {EMPTY_WORLD_PROJECT} from '../../../fixtures/scenarios';
+import {EMPTY_APP_PROJECT} from '../../../fixtures/scenarios';
 import {fileIdAt} from '../../../runtime/projectFiles';
 import {importStockActor} from '../../importStockActor';
 import {stockActorById} from '../../stock';
@@ -20,10 +20,10 @@ const PLAYER = {
   name: 'Platformer Player',
 };
 
-type Source = typeof EMPTY_WORLD_PROJECT;
+type Source = typeof EMPTY_APP_PROJECT;
 
 const withPlayer = (): Source =>
-  importStockActor(EMPTY_WORLD_PROJECT, stockActorById('player')!).source;
+  importStockActor(EMPTY_APP_PROJECT, stockActorById('player')!).source;
 
 const at = (source: Source, path: string) =>
   source.files[fileIdAt(source, path) ?? '']?.contents ?? '';

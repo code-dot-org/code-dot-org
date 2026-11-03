@@ -23,7 +23,7 @@ import {
 } from '../appBuilder';
 import {buildDomainPalette} from '../blockly/domainBlocks';
 import {withoutBlocks} from '../blockly/toolboxFilter';
-import {WORLD_SCENARIOS, EMPTY_WORLD_PROJECT} from '../fixtures/scenarios';
+import {WORLD_SCENARIOS, EMPTY_APP_PROJECT} from '../fixtures/scenarios';
 import {ImportRuleDialog} from '../rules/ImportRuleDialog';
 import {STOCK_RULES} from '../rules/stock';
 import {projectFiles} from '../runtime/projectFiles';
@@ -116,7 +116,7 @@ describe('the app scenarios', () => {
       const missing = [...APP_ACTORS].filter(id => {
         // Where an import into an empty project writes it.
         const {path} = importStockActor(
-          EMPTY_WORLD_PROJECT,
+          EMPTY_APP_PROJECT,
           STOCK_ACTORS.find(actor => actor.id === id)!,
         );
         return !(`${path}.actor` in files);
@@ -161,7 +161,7 @@ describe('the actor library in an app', () => {
 
 describe('withoutBlocks', () => {
   const toolbox = [
-    {name: 'World', blocks: ['world_world', 'world_use_camera']},
+    {name: 'World', blocks: ['world_on_screen_loads', 'world_use_camera']},
     {name: 'Cameras only', blocks: ['world_use_camera']},
     {name: 'Loops', blocks: ['controls_forEach']},
   ];
@@ -170,7 +170,7 @@ describe('withoutBlocks', () => {
     expect(
       withoutBlocks(toolbox as never, new Set(['world_use_camera'])),
     ).toEqual([
-      {name: 'World', blocks: ['world_world']},
+      {name: 'World', blocks: ['world_on_screen_loads']},
       {name: 'Loops', blocks: ['controls_forEach']},
     ]);
   });

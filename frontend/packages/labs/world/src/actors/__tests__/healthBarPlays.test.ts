@@ -13,8 +13,9 @@
 import {describe, expect, it} from 'vitest';
 
 import {compileProject} from '../../__tests__/support/compileProject';
+import {levelScreen} from '../../__tests__/support/levelScreen';
 import {IntrinsicSizeProperty} from '../../engine/rules/spatial';
-import {EMPTY_WORLD_PROJECT} from '../../fixtures/scenarios';
+import {EMPTY_APP_PROJECT} from '../../fixtures/scenarios';
 import {projectFiles} from '../../runtime/projectFiles';
 import {importStockActor} from '../importStockActor';
 import {stockActorById} from '../stock';
@@ -41,9 +42,9 @@ const placeBar = {
 
 /** The empty scenario with a bar imported, placed, and pointed at nobody. */
 const unwired = () => {
-  const source = importStockActor(EMPTY_WORLD_PROJECT, healthBar).source;
+  const source = importStockActor(EMPTY_APP_PROJECT, healthBar).source;
   const world = Object.values(source.files).find(
-    file => file.name === 'main.world',
+    file => file.name === 'main.screen',
   )!;
   return {
     ...source,
@@ -51,14 +52,13 @@ const unwired = () => {
       ...source.files,
       [world.id]: {
         ...world,
-        contents: JSON.stringify({
+        contents: levelScreen({
           blocks: {
             blocks: [
               {
-                type: 'world_world',
+                type: 'world_on_screen_loads',
                 x: 20,
                 y: 20,
-                fields: {NAME: 'My World'},
                 next: {block: placeBar},
               },
             ],

@@ -10,7 +10,7 @@
 // COMPILED AND RUN, because every part of the claim is about generated code
 // meeting the engine. `defineEvent` has to be emitted before the hat that
 // names it (`assembleActorModule`), the `emit` has to reach the same object
-// the hat registered against, and a world that merely imports the actor has to
+// the hat registered against, and a screen that merely imports the actor has to
 // be able to name the event at all. A palette assertion would see none of it.
 
 import {describe, expect, it} from 'vitest';
@@ -20,6 +20,7 @@ import {buildDomainPalette} from '../blockly/domainBlocks';
 import {projectOwnMetas} from '../blockly/projectModules';
 
 import {compileProject} from './support/compileProject';
+import {levelScreen} from './support/levelScreen';
 
 /** `this actor`, in the socket every subject takes. */
 const me = () => ({block: {type: 'world_this_actor'}});
@@ -81,12 +82,11 @@ const BEACON = actorDocument({
   ],
 });
 
-const WORLD = JSON.stringify({
+const WORLD = levelScreen({
   blocks: {
     blocks: [
       {
-        type: 'world_world',
-        fields: {NAME: 'My World'},
+        type: 'world_on_screen_loads',
         next: {
           block: {
             type: 'world_add_actor',
@@ -100,65 +100,55 @@ const WORLD = JSON.stringify({
 
 const project = {
   'actors/beacon.actor': BEACON,
-  'worlds/main.world': WORLD,
+  'screens/main.screen': WORLD,
 };
 
 /**
- * The same beacon, heard by the WORLD instead of by itself.
+ * The same beacon, heard by the Main Screen instead of by itself.
  *
  * The motivating case, and the one the actor's own hat does not prove: the
- * world names an event declared in a file it merely imports, and counts the
- * flashes in a world property of its own. `⟨any Beacon⟩` in the subject socket
- * rather than `this actor` — a `.world` at module scope has no actor, and
- * `kind` is how a hat there says which actors it is about.
+ * screen names an event declared in a file it merely imports, and counts the
+ * flashes in a property of its own. `⟨any Beacon⟩` in the subject socket
+ * rather than `this actor` — a screen's code has no actor, and `kind` is how
+ * a hat there says which actors it is about.
  */
-const WORLD_HEARS = JSON.stringify({
-  blocks: {
-    blocks: [
-      {
-        type: 'world_world',
-        fields: {NAME: 'My World'},
-        next: {
-          block: {
-            type: 'world_rule_property',
-            fields: {
-              TYPE: 'number',
-              ACCESS: 'writable',
-              NAME: 'flashes',
-              DEFAULT: '0',
-            },
-            next: {
-              block: {
-                type: 'world_add_actor',
-                fields: {ACTOR: 'actors/beacon'},
-              },
-            },
+const SCREEN_HEARS = levelScreen(
+  {
+    blocks: {
+      blocks: [
+        {
+          type: 'world_on_screen_loads',
+          next: {
+            block: {type: 'world_add_actor', fields: {ACTOR: 'actors/beacon'}},
           },
         },
-      },
-      {
-        type: 'world_on_ActorsBeacon_FlashesEvent',
-        next: {
-          block: {
-            type: 'world_set_WorldsMain_FlashesProperty',
-            inputs: {
-              VALUE: {
-                block: {
-                  type: 'math_arithmetic',
-                  fields: {OP: 'ADD'},
-                  inputs: {
-                    A: {block: {type: 'world_get_WorldsMain_FlashesProperty'}},
-                    B: {block: {type: 'math_number', fields: {NUM: 1}}},
+        {
+          type: 'world_on_ActorsBeacon_FlashesEvent',
+          next: {
+            block: {
+              type: 'world_set_ScreensMain_FlashesProperty',
+              inputs: {
+                VALUE: {
+                  block: {
+                    type: 'math_arithmetic',
+                    fields: {OP: 'ADD'},
+                    inputs: {
+                      A: {
+                        block: {type: 'world_get_ScreensMain_FlashesProperty'},
+                      },
+                      B: {block: {type: 'math_number', fields: {NUM: 1}}},
+                    },
                   },
                 },
               },
             },
           },
         },
-      },
-    ],
+      ],
+    },
   },
-});
+  {properties: [{name: 'flashes', type: 'number', value: '0'}]},
+);
 
 describe('an actor that declares its own event', () => {
   it('hears what it raises', async () => {
@@ -177,16 +167,16 @@ describe('an actor that declares its own event', () => {
     expect(beacon.get(seen as never)).toBe(3);
   });
 
-  it('is heard by a world that only imports the actor', async () => {
-    // What the event is FOR. The world imports `FlashesEvent as
+  it('is heard by a screen that only imports the actor', async () => {
+    // What the event is FOR. The screen imports `FlashesEvent as
     // ActorsBeacon_FlashesEvent` — the alias every cross-file member gets
     // (`ruleRegistry.memberLocalName`) — and registers against the imported
     // template, whose handlers every instance is made with.
     const {world, modules} = await compileProject({
       'actors/beacon.actor': BEACON,
-      'worlds/main.world': WORLD_HEARS,
+      'screens/main.screen': SCREEN_HEARS,
     });
-    const flashes = modules['worlds/main'].FlashesProperty;
+    const flashes = modules['screens/main'].FlashesProperty;
 
     for (let frame = 0; frame < 3; frame++) {
       world.tick(1 / 60);
@@ -198,7 +188,7 @@ describe('an actor that declares its own event', () => {
   it('exports the event, so anything that imports the actor can name it', async () => {
     // An event declared in an `.actor` file is an `export const`, exactly as
     // an own property is: the whole point of one is that something ELSE hears
-    // it. Module-local, a world's hat would import a name the module does not
+    // it. Module-local, a screen's hat would import a name the module does not
     // offer and the project would not compile.
     const {modules} = await compileProject(project);
 

@@ -9,14 +9,15 @@
 import {describe, expect, it} from 'vitest';
 
 import {compileProject} from '../../__tests__/support/compileProject';
-import {EMPTY_WORLD_PROJECT} from '../../fixtures/scenarios';
+import {levelScreen} from '../../__tests__/support/levelScreen';
+import {EMPTY_APP_PROJECT} from '../../fixtures/scenarios';
 import {projectFiles} from '../../runtime/projectFiles';
 
 /** The empty scenario, with its world saying how much of itself to show. */
 const showing = (columns: number, rows: number) => {
-  const source = EMPTY_WORLD_PROJECT;
+  const source = EMPTY_APP_PROJECT;
   const file = Object.values(source.files).find(
-    one => one.name === 'main.world',
+    one => one.name === 'main.screen',
   )!;
   const tiles = (value: number) => ({
     block: {type: 'math_number', fields: {NUM: value}},
@@ -27,14 +28,13 @@ const showing = (columns: number, rows: number) => {
       ...source.files,
       [file.id]: {
         ...file,
-        contents: JSON.stringify({
+        contents: levelScreen({
           blocks: {
             blocks: [
               {
-                type: 'world_world',
+                type: 'world_on_screen_loads',
                 x: 20,
                 y: 20,
-                fields: {NAME: 'My World'},
                 next: {
                   block: {
                     type: 'world_set_view_size',
@@ -70,7 +70,7 @@ describe('a world that says how much of itself is on screen', () => {
   });
 
   it('leaves a world that says nothing exactly as it was', async () => {
-    const {world} = await compileProject(projectFiles(EMPTY_WORLD_PROJECT));
+    const {world} = await compileProject(projectFiles(EMPTY_APP_PROJECT));
 
     expect(world.viewSize()).toEqual({x: 320, y: 320});
   });

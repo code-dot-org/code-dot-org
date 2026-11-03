@@ -11,9 +11,10 @@ import {describe, expect, it} from 'vitest';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {compileProject} from '../../__tests__/support/compileProject';
+import {levelScreen} from '../../__tests__/support/levelScreen';
 import {RotationProperty, type Actor, type Property} from '../../engine';
 import {KEY_REPEAT_DELAY, KEY_REPEAT_INTERVAL} from '../../engine/core/keys';
-import {EMPTY_WORLD_PROJECT} from '../../fixtures/scenarios';
+import {EMPTY_APP_PROJECT} from '../../fixtures/scenarios';
 import {projectFiles} from '../../runtime/projectFiles';
 import {importStockActor} from '../importStockActor';
 import {stockActorById} from '../stock';
@@ -36,18 +37,17 @@ const project = (
   boxHeight?: number,
   words: readonly string[] = WORDS,
 ): MultiFileSource => {
-  let source = EMPTY_WORLD_PROJECT;
+  let source = EMPTY_APP_PROJECT;
   source = importStockActor(source, stockActorById('list')!).source;
   source = importStockActor(source, stockActorById('label')!).source;
   const main = Object.values(source.files).find(
-    file => file.name === 'main.world',
+    file => file.name === 'main.screen',
   )!;
-  const world = JSON.stringify({
+  const world = levelScreen({
     blocks: {
       blocks: [
         {
-          type: 'world_world',
-          fields: {NAME: 'Menu'},
+          type: 'world_on_screen_loads',
           next: {
             block: chain([
               {

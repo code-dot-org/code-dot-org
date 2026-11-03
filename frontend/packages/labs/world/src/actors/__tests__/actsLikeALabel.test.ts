@@ -13,8 +13,9 @@
 import {describe, expect, it} from 'vitest';
 
 import {compileProject} from '../../__tests__/support/compileProject';
+import {levelScreen} from '../../__tests__/support/levelScreen';
 import {IntrinsicSizeProperty} from '../../engine/rules/spatial';
-import {EMPTY_WORLD_PROJECT} from '../../fixtures/scenarios';
+import {EMPTY_APP_PROJECT} from '../../fixtures/scenarios';
 import {projectFiles} from '../../runtime/projectFiles';
 import {importStockActor} from '../importStockActor';
 import {stockActorById} from '../stock';
@@ -22,11 +23,11 @@ import {stockActorById} from '../stock';
 /** The empty scenario with one stock actor imported and placed. */
 const placed = async (id: string) => {
   const source = importStockActor(
-    EMPTY_WORLD_PROJECT,
+    EMPTY_APP_PROJECT,
     stockActorById(id)!,
   ).source;
   const main = Object.values(source.files).find(
-    file => file.name === 'main.world',
+    file => file.name === 'main.screen',
   )!;
   return compileProject(
     projectFiles({
@@ -35,12 +36,11 @@ const placed = async (id: string) => {
         ...source.files,
         [main.id]: {
           ...main,
-          contents: JSON.stringify({
+          contents: levelScreen({
             blocks: {
               blocks: [
                 {
-                  type: 'world_world',
-                  fields: {NAME: 'My World'},
+                  type: 'world_on_screen_loads',
                   next: {
                     block: {
                       type: 'world_add_actor',

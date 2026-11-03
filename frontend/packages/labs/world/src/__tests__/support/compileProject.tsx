@@ -13,8 +13,8 @@
 //
 // WHAT IT DOES. Populates the registries the generator reads, turns every
 // Blockly file into a module, wraps every data file (`.map`, `.effect`) as one,
-// and evaluates them in dependency order — then hands back the world the
-// `.world` module built.
+// and evaluates them in dependency order — then hands back the world the Main
+// Screen's module built.
 //
 // THE ORDER IS COMPUTED, not written down. Two lists of modules have already
 // drifted apart twice in this package, each time presenting as "Cannot read
@@ -37,8 +37,6 @@ import {
   evaluate,
   type RuleModule,
 } from '../../rules/__tests__/support/compileStockRules';
-
-import {isWorldShaped, worldAsScreen} from './worldAsScreen';
 
 /** `actors/player.actor` → `actors/player`, which is how imports name it. */
 const modulePath = (path: string) => path.replace(/\.[^./]+$/, '');
@@ -72,7 +70,7 @@ function inDependencyOrder(code: Record<string, string>): string[] {
 }
 
 export interface CompiledProject {
-  /** The world the `.world` module built, ticked but not yet run. */
+  /** The world the Main Screen's module built, ticked but not yet run. */
   world: World;
   /** Every module by path, for reaching a rule's traits and properties. */
   modules: Record<string, RuleModule>;
@@ -87,12 +85,8 @@ export interface CompiledProject {
  * map the runtime generates from.
  */
 export async function compileProject(
-  written: Record<string, string>,
+  files: Record<string, string>,
 ): Promise<CompiledProject> {
-  // A test that writes its game as a world is compiled as the screen and map
-  // it stands for (`worldAsScreen`).
-  const fromWorld = isWorldShaped(written);
-  const files = worldAsScreen(written);
   // The registries the generator reads besides each file. Without them a
   // `load map` block emits no `world.define` lines at all, and the world
   // builds with nothing in it — silently, since an empty map is legal.
@@ -158,16 +152,9 @@ export async function compileProject(
     evaluate(code[path], modules, modules[path]);
   }
 
-  // …and its module answers to the world's name, which the test knows it by.
-  if (fromWorld) {
-    modules['worlds/main'] = modules['screens/main'];
-  }
-
-  // The Main Screen's module if the project holds one, else the world's
-  // (`entryFileOf`).
   const built = modules[modulePath(entryFileOf())];
   if (!built) {
-    throw new Error('project has no world module');
+    throw new Error('project has no Main Screen');
   }
   // `getWorld()`, not `instantiate()`. The generated module calls `loadMap` at
   // the top level, which builds the world and memoises it; `instantiate()`

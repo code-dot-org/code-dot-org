@@ -16,10 +16,11 @@ import {describe, expect, it} from 'vitest';
 
 import {importStockActor} from '../actors/importStockActor';
 import {stockActorById} from '../actors/stock';
-import {EMPTY_WORLD_PROJECT} from '../fixtures/scenarios';
+import {EMPTY_APP_PROJECT} from '../fixtures/scenarios';
 import {projectFiles} from '../runtime/projectFiles';
 
 import {compileProject} from './support/compileProject';
+import {levelScreen} from './support/levelScreen';
 
 const me = () => ({block: {type: 'world_this_actor'}});
 
@@ -53,12 +54,11 @@ const number = (value: number) => ({
 });
 
 const worldSaying = (value: object) =>
-  JSON.stringify({
+  levelScreen({
     blocks: {
       blocks: [
         {
-          type: 'world_world',
-          fields: {NAME: 'My World'},
+          type: 'world_on_screen_loads',
           next: {
             block: {
               type: 'world_add_actor',
@@ -81,11 +81,11 @@ const worldSaying = (value: object) =>
 /** The stock Label, placed and told to say `value`. */
 const said = async (value: object) => {
   const source = importStockActor(
-    EMPTY_WORLD_PROJECT,
+    EMPTY_APP_PROJECT,
     stockActorById('label')!,
   ).source;
   const main = Object.values(source.files).find(
-    file => file.name === 'main.world',
+    file => file.name === 'main.screen',
   )!;
   const {world, modules} = await compileProject(
     projectFiles({

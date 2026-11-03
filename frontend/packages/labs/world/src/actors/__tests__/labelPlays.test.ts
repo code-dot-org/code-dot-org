@@ -13,8 +13,9 @@
 import {describe, expect, it} from 'vitest';
 
 import {compileProject} from '../../__tests__/support/compileProject';
+import {levelScreen} from '../../__tests__/support/levelScreen';
 import {IntrinsicSizeProperty} from '../../engine/rules/spatial';
-import {EMPTY_WORLD_PROJECT} from '../../fixtures/scenarios';
+import {EMPTY_APP_PROJECT} from '../../fixtures/scenarios';
 import {projectFiles} from '../../runtime/projectFiles';
 import {importStockActor} from '../importStockActor';
 import {stockActorById} from '../stock';
@@ -40,12 +41,11 @@ const place = (width: number) => ({
 });
 
 /** Two Labels of one kind, made two widths. */
-const WORLD = JSON.stringify({
+const WORLD = levelScreen({
   blocks: {
     blocks: [
       {
-        type: 'world_world',
-        fields: {NAME: 'My World'},
+        type: 'world_on_screen_loads',
         next: {block: {...place(200), next: {block: place(48)}}},
       },
     ],
@@ -53,9 +53,9 @@ const WORLD = JSON.stringify({
 });
 
 const project = () => {
-  const withLabel = importStockActor(EMPTY_WORLD_PROJECT, label).source;
+  const withLabel = importStockActor(EMPTY_APP_PROJECT, label).source;
   const main = Object.values(withLabel.files).find(
-    file => file.name === 'main.world',
+    file => file.name === 'main.screen',
   )!;
   return projectFiles({
     ...withLabel,

@@ -19,10 +19,11 @@ import {describe, expect, it} from 'vitest';
 
 import {importStockActor} from '../actors/importStockActor';
 import {stockActorById} from '../actors/stock';
-import {EMPTY_WORLD_PROJECT} from '../fixtures/scenarios';
+import {EMPTY_APP_PROJECT} from '../fixtures/scenarios';
 import {projectFiles} from '../runtime/projectFiles';
 
 import {compileProject} from './support/compileProject';
+import {levelScreen} from './support/levelScreen';
 
 const speechBox = stockActorById('speechBox')!;
 const LINE = 'The rain had not stopped for three days.';
@@ -35,74 +36,64 @@ const say = {
 };
 
 /**
- * A world that places a box, says a line, and counts the cue.
+ * A screen that places a box, says a line, and counts the cue.
  *
- * The count is a WORLD property, so `finishes revealing` has to cross a file
- * boundary to be seen — the box declares the event, the world names it.
+ * The count is the SCREEN's property, so `finishes revealing` has to cross a
+ * file boundary to be seen — the box declares the event, the screen names it.
  */
-const WORLD = JSON.stringify({
-  blocks: {
-    blocks: [
-      {
-        type: 'world_world',
-        x: 20,
-        y: 20,
-        fields: {NAME: 'My World'},
-        next: {
-          block: {
-            type: 'world_rule_property',
-            fields: {
-              TYPE: 'number',
-              ACCESS: 'writable',
-              NAME: 'cues',
-              DEFAULT: '0',
-            },
-            next: {
-              block: {
-                type: 'world_add_actor',
-                fields: {ACTOR: 'actors/speechBox'},
-                inputs: {DO: {block: say}},
-              },
+const WORLD = levelScreen(
+  {
+    blocks: {
+      blocks: [
+        {
+          type: 'world_on_screen_loads',
+          x: 20,
+          y: 20,
+          next: {
+            block: {
+              type: 'world_add_actor',
+              fields: {ACTOR: 'actors/speechBox'},
+              inputs: {DO: {block: say}},
             },
           },
         },
-      },
-      {
-        type: 'world_on_ActorsSpeechBox_FinishesRevealingEvent',
-        x: 520,
-        y: 20,
-        fields: {SUBJECT: 'actors/speechBox'},
-        next: {
-          block: {
-            type: 'world_set_WorldsMain_CuesProperty',
-            inputs: {
-              VALUE: {
-                block: {
-                  type: 'math_arithmetic',
-                  fields: {OP: 'ADD'},
-                  inputs: {
-                    A: {block: {type: 'world_get_WorldsMain_CuesProperty'}},
-                    B: {block: {type: 'math_number', fields: {NUM: 1}}},
+        {
+          type: 'world_on_ActorsSpeechBox_FinishesRevealingEvent',
+          x: 520,
+          y: 20,
+          fields: {SUBJECT: 'actors/speechBox'},
+          next: {
+            block: {
+              type: 'world_set_ScreensMain_CuesProperty',
+              inputs: {
+                VALUE: {
+                  block: {
+                    type: 'math_arithmetic',
+                    fields: {OP: 'ADD'},
+                    inputs: {
+                      A: {block: {type: 'world_get_ScreensMain_CuesProperty'}},
+                      B: {block: {type: 'math_number', fields: {NUM: 1}}},
+                    },
                   },
                 },
               },
             },
           },
         },
-      },
-    ],
+      ],
+    },
   },
-});
+  {properties: [{name: 'cues', type: 'number', value: '0'}]},
+);
 
 /** A box placed and left alone, for the default it ships with. */
-const QUIET = JSON.stringify({
+const QUIET = levelScreen({
   blocks: {
     blocks: [
       {
-        type: 'world_world',
+        type: 'world_on_screen_loads',
         x: 20,
         y: 20,
-        fields: {NAME: 'My World'},
         next: {
           block: {
             type: 'world_add_actor',
@@ -115,9 +106,9 @@ const QUIET = JSON.stringify({
 });
 
 const project = (world: string) => {
-  const withBox = importStockActor(EMPTY_WORLD_PROJECT, speechBox).source;
+  const withBox = importStockActor(EMPTY_APP_PROJECT, speechBox).source;
   const main = Object.values(withBox.files).find(
-    file => file.name === 'main.world',
+    file => file.name === 'main.screen',
   )!;
   return projectFiles({
     ...withBox,
@@ -144,7 +135,7 @@ describe('a Speech Box saying a line', () => {
   it('arrives a few letters at a time, and stops at the end', async () => {
     const {world, modules} = await compileProject(project(WORLD));
     const text = modules['actors/label'].TextProperty;
-    const cues = modules['worlds/main'].CuesProperty;
+    const cues = modules['screens/main'].CuesProperty;
 
     // Nothing showing before the clock has run: `say` empties `text`, and the
     // first letter waits for the first firing.
@@ -181,7 +172,7 @@ describe('a Speech Box saying a line', () => {
     // second time — which a scene would show as a line advancing twice.
     const {world, modules} = await compileProject(project(WORLD));
     const text = modules['actors/label'].TextProperty;
-    const cues = modules['worlds/main'].CuesProperty;
+    const cues = modules['screens/main'].CuesProperty;
     const showAll = modules['actors/speechBox'].ShowAllOfItAction;
     const box = [...world.actors][0];
 

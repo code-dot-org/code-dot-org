@@ -8,9 +8,10 @@
 import {describe, expect, it} from 'vitest';
 
 import {compileProject} from '../../../__tests__/support/compileProject';
+import {levelScreen} from '../../../__tests__/support/levelScreen';
 import {PositionProperty, type World} from '../../../engine';
 import {keyName} from '../../../engine/core/keys';
-import {EMPTY_WORLD_PROJECT} from '../../../fixtures/scenarios';
+import {EMPTY_APP_PROJECT} from '../../../fixtures/scenarios';
 import {fileIdAt, projectFiles} from '../../../runtime/projectFiles';
 import type {ActorData} from '../../actorData';
 import {importStockActor} from '../../importStockActor';
@@ -19,10 +20,10 @@ import {shootsAtEnhancement as shootsAt} from '../shootsAt';
 
 const COIN = {kind: 'actor' as const, path: 'actors/coin', name: 'Coin'};
 
-type Source = typeof EMPTY_WORLD_PROJECT;
+type Source = typeof EMPTY_APP_PROJECT;
 
 const withActors = (...ids: string[]): Source => {
-  let source: Source = EMPTY_WORLD_PROJECT;
+  let source: Source = EMPTY_APP_PROJECT;
   for (const id of ids) {
     source = importStockActor(source, stockActorById(id)!).source;
   }
@@ -112,7 +113,7 @@ const roomOf = (
   placements: Array<[string, number, number]>,
 ): Source => {
   const world = Object.values(source.files).find(
-    file => file.name === 'main.world',
+    file => file.name === 'main.screen',
   )!;
   const rows = placements.map(([path, x, y]) => place(path, x, y));
   const chain = rows.reduceRight(
@@ -125,12 +126,11 @@ const roomOf = (
       ...source.files,
       [world.id]: {
         ...world,
-        contents: JSON.stringify({
+        contents: levelScreen({
           blocks: {
             blocks: [
               {
-                type: 'world_world',
-                fields: {NAME: 'Room'},
+                type: 'world_on_screen_loads',
                 next: {block: chain},
               },
             ],
