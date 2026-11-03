@@ -35,15 +35,15 @@ added, and `muiAugmentation.ts` does not change: `size`, `color` and
 
 Files (Execute):
 
-| File                                                               | Role                                                               |
-| ------------------------------------------------------------------ | ------------------------------------------------------------------ |
-| `MuiChips.tsx`                                                     | Group, heading, `FormGroup`, one MUI `Chip` per option, validity   |
-| `muiChips.module.scss`                                             | `chip.module.scss` ported, plus the MUI cancellations listed below |
-| `stories/MuiChips.story.tsx`                                       | Twins (see Parity)                                                 |
-| `__tests__/MuiChips.test.tsx`                                      | Legacy tests ported, plus the pins listed below                    |
-| `index.ts`                                                         | Adds the new exports; legacy lines unchanged                       |
-| `Chips.tsx`                                                        | `@deprecated` JSDoc only                                           |
-| `codemods/chips-to-mui-chips.ts`                                   | The codemod                                                        |
+| File                             | Role                                                               |
+| -------------------------------- | ------------------------------------------------------------------ |
+| `MuiChips.tsx`                   | Group, heading, `FormGroup`, one MUI `Chip` per option, validity   |
+| `muiChips.module.scss`           | `chip.module.scss` ported, plus the MUI cancellations listed below |
+| `stories/MuiChips.story.tsx`     | Twins (see Parity)                                                 |
+| `__tests__/MuiChips.test.tsx`    | Legacy tests ported, plus the pins listed below                    |
+| `index.ts`                       | Adds the new exports; legacy lines unchanged                       |
+| `Chips.tsx`                      | `@deprecated` JSDoc only                                           |
+| `codemods/chips-to-mui-chips.ts` | The codemod                                                        |
 
 MUI parts used, from `@mui/material`:
 
