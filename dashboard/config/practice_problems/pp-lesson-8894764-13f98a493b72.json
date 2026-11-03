@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894764-13f98a493b72",
+  "problem_type": "match",
+  "active": true,
+  "problem_text": "Match the following aspects of responsible AI use with their descriptions.",
+  "solution": [
+    {
+      "option": "Transparency",
+      "correct": "Being clear about how AI systems work."
+    },
+    {
+      "option": "Accountability",
+      "correct": "Taking responsibility for AI-generated outcomes."
+    },
+    {
+      "option": "Ethics",
+      "correct": "Considering the moral implications of AI use."
+    },
+    {
+      "option": "Reliability",
+      "correct": "Ensuring AI provides accurate and trustworthy results."
+    }
+  ],
+  "objective_keys": [
+    "7ad545f1-8124-4538-bdf6-e15bf3d9de85"
+  ]
+}

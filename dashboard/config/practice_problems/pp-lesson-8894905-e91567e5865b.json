@@ -1,0 +1,23 @@
+{
+  "key": "pp-lesson-8894905-e91567e5865b",
+  "problem_type": "match",
+  "active": true,
+  "problem_text": "Match the following scenarios to whether AI or humans are more reliable in those contexts.",
+  "solution": [
+    {
+      "option": "AI in data analysis",
+      "correct": "Humans in ethical decision-making"
+    },
+    {
+      "option": "AI in pattern recognition",
+      "correct": "Humans in creative tasks"
+    },
+    {
+      "option": "AI in processing large datasets",
+      "correct": "Humans in personal interactions"
+    }
+  ],
+  "objective_keys": [
+    "ee47e199-1a58-4719-ae9d-fa19221e1598"
+  ]
+}

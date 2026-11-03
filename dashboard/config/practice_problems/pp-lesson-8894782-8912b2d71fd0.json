@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894782-8912b2d71fd0",
+  "problem_type": "multiple_choice_multi_select",
+  "active": true,
+  "problem_text": "Which of the following are necessary components to create an app that uses a machine learning model? (Select all that apply)",
+  "solution": [
+    {
+      "option": "User interface for interaction",
+      "correct": true
+    },
+    {
+      "option": "Machine learning model",
+      "correct": true
+    },
+    {
+      "option": "Cloud storage for data",
+      "correct": false
+    },
+    {
+      "option": "Real-world dataset",
+      "correct": true
+    }
+  ],
+  "objective_keys": [
+    "047829e6-bc2b-4deb-9429-41b6abc9de0e"
+  ]
+}

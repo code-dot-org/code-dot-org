@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-6284601-a7ccad2e25ca",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "What is the main purpose of using an if/else statement in programming?",
+  "solution": [
+    {
+      "option": "To allow the program to choose between two different outcomes.",
+      "correct": true
+    },
+    {
+      "option": "To repeat a block of code multiple times.",
+      "correct": false
+    },
+    {
+      "option": "To declare variables.",
+      "correct": false
+    },
+    {
+      "option": "To stop the execution of a program.",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "1090a91d-2c8e-4bca-b5a8-562db7f1b75a"
+  ]
+}

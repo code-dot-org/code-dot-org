@@ -1,0 +1,23 @@
+{
+  "key": "pp-lesson-6284595-a473035b0276",
+  "problem_type": "match",
+  "active": true,
+  "problem_text": "Match the following terms with their definitions.",
+  "solution": [
+    {
+      "option": "Function",
+      "correct": "A named block of code that performs a task."
+    },
+    {
+      "option": "Calling a function",
+      "correct": "Executing a function to perform its task."
+    },
+    {
+      "option": "Parameter",
+      "correct": "A variable used in a function to accept input."
+    }
+  ],
+  "objective_keys": [
+    "aca6d88c-f0ec-4593-9f86-23e4a477e3c6"
+  ]
+}

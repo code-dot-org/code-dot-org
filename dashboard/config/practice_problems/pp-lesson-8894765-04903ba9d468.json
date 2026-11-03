@@ -1,0 +1,28 @@
+{
+  "key": "pp-lesson-8894765-04903ba9d468",
+  "problem_type": "match",
+  "active": true,
+  "problem_text": "Match the following concepts with their descriptions: 1. AI Capabilities, 2. Human Oversight, 3. Ethical Considerations, 4. Decision-Making.",
+  "solution": [
+    {
+      "option": "AI Capabilities",
+      "correct": "Strengths of AI in processing and analyzing large datasets."
+    },
+    {
+      "option": "Human Oversight",
+      "correct": "The need for humans to supervise AI decisions."
+    },
+    {
+      "option": "Ethical Considerations",
+      "correct": "The moral implications of AI usage."
+    },
+    {
+      "option": "Decision-Making",
+      "correct": "The process of making choices based on AI outputs."
+    }
+  ],
+  "objective_keys": [
+    "153c51bf-4018-4ed9-8949-697ea18dcfe4",
+    "7663596d-71b8-48fe-8dcd-81d66b156015"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-6284592-9574ea90ea8c",
+  "problem_type": "multiple_choice_multi_select",
+  "active": true,
+  "problem_text": "Which of the following are ethical implications related to algorithms? (Select all that apply)",
+  "solution": [
+    {
+      "option": "Bias in decision-making.",
+      "correct": true
+    },
+    {
+      "option": "Efficiency of processing data.",
+      "correct": false
+    },
+    {
+      "option": "Transparency in how decisions are made.",
+      "correct": true
+    },
+    {
+      "option": "Cost reduction in algorithm development.",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "50bf7f07-4de2-4cb3-992e-c3de5943baf5"
+  ]
+}

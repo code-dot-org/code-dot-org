@@ -1,0 +1,23 @@
+{
+  "key": "pp-lesson-8894909-adec8b86e6b7",
+  "problem_type": "match",
+  "active": true,
+  "problem_text": "Match the debugging technique with its description.",
+  "solution": [
+    {
+      "option": "Testing prompts in different formats",
+      "correct": "Experimenting with formatting to see what yields better responses"
+    },
+    {
+      "option": "Analyzing AI outputs",
+      "correct": "Reviewing generated responses to identify issues"
+    },
+    {
+      "option": "Modifying task descriptions",
+      "correct": "Adjusting the task to clarify the expected outcome"
+    }
+  ],
+  "objective_keys": [
+    "b96ea037-b229-4490-bcde-383226614311"
+  ]
+}

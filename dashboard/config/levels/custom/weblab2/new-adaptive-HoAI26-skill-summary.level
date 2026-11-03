@@ -1,0 +1,17 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-11-03T01:31:20.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "require_edit_to_continue": true,
+    "long_instructions": "TODOs:\r\n* Locate the skill summary feature within the Web Lab environment.\r\n* Navigate to view your personalized skill summary.\r\n* Review the skills you have practiced and learned throughout the lesson.\r\n* Find the option to save a share card summarizing your progress.\r\n* Save your skill summary as a share card.",
+    "project_template_level_name": "new-adaptive-HoAI26-template-sample-widgets",
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMqKPLxBIP8ItLgus+8L\nfO0jxR3FbQH2bDql6nvvXmqo8RHZW9cYCCMHvqDLNxix9Yxjj0vhK9REj87g\nV+pWwrWAPZkduCmpMo9TQI/zygmlyaOGmG34twwezzuxuIKK+NaJkYI10s2z\nustIjpm3FynZ1iFECLQjKMBywHHF9kVovPHAu94tvE8Rtu6o1y7QXqsEGhrB\n6sx56Fs2TmHZSW5yb1zJy5y1qp/y0uNMvThJqNgIVQtU/SK4N7/oUV1f+l1t\n1eJuJQjF5qLgtGadWxAQ1/WjH8EfwZ6HZ2b2nQzdo2SmexQt3zJUUEwlhuT6\nx8TDgZALfn9Aw5jLJeMOpBQm03pFj5kTqfa6fw+CRai4ckBg8j9XM0J3NWHM\nSxJ8p8SRytFUYweWm79qyKL4Cb/jomcdhlKAyZNqVLLSXzqmRmjuzTO91CcF\n+NJHY7M830YjgyaYuFmbdana71PWQefPoWXmSBxHmIPov50s5C++jpBWTDow\nJcHbPgmCtp+z0WL38/97TfQjASrFTlAOSXjSYMkTyuGWVJZn9UOprhCv92Nf\nCWiqXnQem3/ytEXww7ENdxUJwq8Amwdi/xikabNVIO0x68d008fSiCCZo/z+\nDSKWJdOWmFG3rBD21WK4GppDhGkgNgjvVVeYjU6xETkNrMP0ouC3Bsh3kCR/\n4Ks0tlZrBAoCqS0KBjkbAcFPjU1AWzXZOWi/R5FEUOX4IqG9tcapqhiOzivs\nydkPJF5nUE9iT0xanZece8wgsy+dAKpLVJdnbu3AwcrbfX+NVE3vzWZXiqZP\njFLaepikd1RpA+hLK/Zlfk8kozw7kppCZFYBinXa2x1l0e1tnBU8pazNeCUt\n+JsMIQNAf9aWW5e8YH1AySxwOumC1SBT3wxQAbUVAjSFOumcN0SCwO35nSfc\niCuMHCuW+BjZ2MgCw0wrfMKDijXthF9ZWCwFmHCo65BOdR/AG7hZOyRKmf55\ntyEZg577Q+q9N0/0BAJtJ19VkjHCT7p3EBbRLEaQ5nBLmJa44oKSbosQVeqi\nmRgWJf/9YbxqOPk58t+vSxKw3glpP80Y64TxLnd+xCx/wyhOrWdn87OX5U/+\nDyJdb0wPXU+1BvMULla/JQL+IP03dbBccxEimJu7wXyLWldmfz+swV/ugO3f\nQ6MnYzTaW+tnGsH7KS8LR0Z5ikaBuj/qvpXzdk7fE5kTfgSeALAxJYSDwzG5\nrWW/GnmnNa7hiRT8CXvorBo0zW/3OI52v2MoUFwksejd3KXMzJid+zZnhPIK\njYLLmX49Vrn4GtVv9F6Fsai7iwT03BAbaoOHuR5H8r3eo+CsUmzAjnC7WA/M\nu/vNo7NhM/ZQySsSwJsK2CQOcM7sudxj5+zPpVUjD4obyZJYYfCdcDP2lB0a\nj7T3BgA4lv4FlWiHmfqsKPCEYcgERXC1Iet/0FcWe23MZh2+tCAIIaHJplbQ\n2Jg6UDo7Gw2VwO6u1sXMryS27sZNbhiSITcTzf22plU1eUI1UGm1YfFvLNj2\nq7jwU61r9W4rBNnjlzC/EwONlKJMLtHe3B/tyka2okgt6zKdmOWV/ak/A+DZ\nYjDFc2Kb3V9vVL6QA6AzrieW3wOBuogzxRg9TceEZYsf9kDRTT3gHZ95CJJE\nGpRn65jEW+QPEU7miuMX6vzDmhTnUXc1K+os7MFw8/NkcU6C\n",
+    "generate_outline": "Practice your skill at seeing what you learned here."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-03 01:31:26 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 01:31:26 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 01:31:29 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 01:31:30 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Weblab2>

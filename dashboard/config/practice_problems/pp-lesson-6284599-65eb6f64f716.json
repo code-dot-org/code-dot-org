@@ -1,0 +1,19 @@
+{
+  "key": "pp-lesson-6284599-65eb6f64f716",
+  "problem_type": "match",
+  "active": true,
+  "problem_text": "Match the vocabulary term to its definition: 1) Bias 2) Ethics",
+  "solution": [
+    {
+      "option": "Bias",
+      "correct": "when our data or the way we analyze it favors certain outcomes over others"
+    },
+    {
+      "option": "Ethics",
+      "correct": "a guide for responsible choices about emerging technologies, ensuring privacy, consent, and safety for everyone"
+    }
+  ],
+  "objective_keys": [
+    "118fb7bc-d8fb-4af2-b93b-82136de8daaf"
+  ]
+}

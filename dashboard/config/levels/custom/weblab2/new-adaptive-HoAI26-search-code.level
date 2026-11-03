@@ -1,0 +1,15 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-11-03T01:12:15.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "require_edit_to_continue": true,
+    "long_instructions": "TODOs:\r\n- Locate the interactive Web Lab widget.\r\n- Examine the sample code displayed within the widget.\r\n- Use the widget's search or navigation tools to find a specific section name in the sample code.\r\n- Identify the line of code that corresponds to that section.\r\n- Understand how different parts of a webpage are represented in code.",
+    "project_template_level_name": "new-adaptive-HoAI26-template-sample-widgets"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-03 01:12:21 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 01:12:21 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Weblab2>

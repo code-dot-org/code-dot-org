@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894772-69cc001163a2",
+  "problem_type": "multiple_choice_multi_select",
+  "active": true,
+  "problem_text": "Which of the following are examples of categorical data? (Select all that apply)",
+  "solution": [
+    {
+      "option": "Types of fruits (e.g., apples, oranges)",
+      "correct": true
+    },
+    {
+      "option": "Colors of vegetables (e.g., green, red)",
+      "correct": true
+    },
+    {
+      "option": "Heights of plants in centimeters",
+      "correct": false
+    },
+    {
+      "option": "Shapes of fruits (e.g., round, elongated)",
+      "correct": true
+    }
+  ],
+  "objective_keys": [
+    "e2cfb3d9-7f1b-40a1-9c56-edf84aea19e7"
+  ]
+}
