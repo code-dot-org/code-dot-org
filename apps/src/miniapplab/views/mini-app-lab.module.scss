@@ -1,0 +1,100 @@
+@use '@cdo/apps/lab2/views/components/layout/variables.scss' as variables;
+
+.lab {
+  // Pinned to the page container: the theme provider's wrapper between
+  // them has no height to inherit.
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-neutral-secondary);
+  color: var(--text-neutral-primary);
+}
+
+.topBar {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 16px;
+  background-color: var(--background-neutral-primary);
+  border-bottom: variables.$default-border;
+}
+
+.title {
+  font-size: 16px;
+  margin: 0;
+}
+
+.topBarRight {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+}
+
+.status {
+  padding: 6px 16px;
+  font-size: 13px;
+  background-color: var(--background-feedback-warning, #fff4d6);
+  border-bottom: variables.$default-border;
+}
+
+.main {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  gap: 8px;
+  padding: 8px;
+}
+
+.screenColumn {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  border: variables.$default-border;
+  border-radius: variables.$default-border-radius;
+  overflow: hidden;
+  background-color: var(--background-neutral-primary);
+}
+
+.screenHolder {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 16px;
+  overflow: auto;
+}
+
+.workColumn {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  border: variables.$default-border;
+  border-radius: variables.$default-border-radius;
+  overflow: hidden;
+  background-color: var(--background-neutral-primary);
+}
+
+.workBody {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+}
+
+.blocklyHolder {
+  position: absolute;
+  inset: 0;
+
+  &.hidden {
+    // Keeps the workspace laid out while the Design tab shows.
+    clip-path: inset(100%);
+  }
+}
+
+.blockly {
+  width: 100%;
+  height: 100%;
+}
