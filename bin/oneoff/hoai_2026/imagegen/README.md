@@ -28,6 +28,12 @@ under it. The copy here is taken from code-dot-org PR 75426, whose word ids
 the published paths must match. While it differs from the lab's file,
 every run says so.
 
+A word's id is a folder in every path, so it is lowercase letters and
+digits only: the word itself, with anything else removed (`outer space` is
+`outerspace`). The dumper refuses any other id. A word's text is what the
+prompt says and may be anything. If the lab settles on other ids for the
+same words, the drawings are still good: rename their folders.
+
 To change the words, edit `sentences.json` here and the lab's copy
 together. Then bump `CACHE_VERSION` in `constants.rb` and
 `IMAGE_CACHE_VERSION` in `imageCache.ts`, so no browser mixes pictures of

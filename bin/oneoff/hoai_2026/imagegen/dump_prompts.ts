@@ -116,6 +116,10 @@ function argValue(flag: string): string | undefined {
   return index >= 0 ? process.argv[index + 1] : undefined;
 }
 
+// A word id is a folder in every cached picture's path, so it is lowercase
+// letters and digits only: "outer space" is outerspace.
+const WORD_ID = /^[a-z0-9]+$/;
+
 /** Mirrors sentenceSlotIds() in sentences.ts. */
 function slotIdsInOrder(segments: Segment[]): string[] {
   const ids: string[] = [];
@@ -150,6 +154,14 @@ function sentencesFrom(manifest: Manifest): Sentence[] {
         if (!words) {
           throw new Error(
             `sentences.json: sentence "${id}" slot "${slotId}" has no words`,
+          );
+        }
+        const bad = words.filter(word => !WORD_ID.test(word.id));
+        if (bad.length) {
+          throw new Error(
+            `sentences.json: sentence "${id}" slot "${slotId}" has word ids ` +
+              `that are not lowercase letters and digits: ` +
+              bad.map(word => JSON.stringify(word.id)).join(', '),
           );
         }
         return {
