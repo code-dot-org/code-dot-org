@@ -2,13 +2,13 @@
 #
 # Table name: objectives_script_levels
 #
-#  objective_id    :integer          not null
 #  script_level_id :integer          not null
+#  objective_id    :integer          not null
 #
 # Indexes
 #
-#  index_objectives_script_levels_on_objective_and_script_level  (objective_id,script_level_id) UNIQUE
-#  index_objectives_script_levels_on_script_level_id             (script_level_id)
+#  index_objectives_script_levels_on_objective_id          (objective_id)
+#  index_objectives_script_levels_on_sl_and_objective_ids  (script_level_id,objective_id) UNIQUE
 #
 class ObjectivesScriptLevel < ApplicationRecord
   belongs_to :objective, optional: true
