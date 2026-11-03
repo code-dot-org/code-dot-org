@@ -196,7 +196,7 @@ fixtures are written as rows and folded. In order, each its own commit:
 2. BUILT. The lessons' and fixtures' rules are written as data.
 3. BUILT. The stock rules are generated as data: the DSL writes the
    workspace and stores its fold, under tsx so it can import the lab's
-   (`yarn build:rules`). All 46 are the data they folded to before, and
+   (`yarn build:rules`); it builds the data itself since (5e, step 1). All 46 are the data they folded to before, and
    the shelf went from 4.6MB to 2.9MB. A reference's version, a hash of the
    contents, changed for every rule; nothing acts on it.
 4. BUILT. `resolveRuleContents` and `projectFiles` hand out data, byte for
@@ -331,7 +331,32 @@ data the one form. In order, each its own commit:
    (`lessonChecks`' `under`, `without`); the tests that wrote actors in
    rows write them with `actorDocument`.
 
-Rules have the same two forms, and follow once actors are done.
+#### 5e. One idiom: a rule is written and edited as data
+
+A rule is stored as data and still has the two forms an actor had: the
+stock rules are written as `define rule` rows by the DSL and folded at
+build time, renames and readers walk its view (`ruleViewOf`,
+`workspaceViewOf`), and what the tutor or a test writes in rows is folded
+where it is read (`asRuleData`, `foldRule`). The Rule Editor already edits
+the data. In order, each its own commit:
+
+1. BUILT, November 2026. Authoring. The DSL (`scripts/rules/dsl.mjs`)
+   builds a rule's data rather than its workspace: a property, a block, an
+   event and a step are data as they are declared, the variables a body
+   binds are given their own ids in the order they were written
+   (`ownBindings`), and nothing is folded. Every generated stock rule is
+   the same file as before, and the build no longer imports the lab. The
+   DSL's `doc` for a second page of prose, which nothing called and the
+   data has no place for, is gone, and so is its layout of the roots.
+2. Renames walk the data: a rule's keys that name something — its uses,
+   its traits' uses, its properties and its members — as the blocks they
+   stand for, beside the bodies, as an actor's are (`keyRows`).
+3. Readers read the data: `parseRuleMeta`, the generator, `ruleDataOf`,
+   `rulesInScope`, `standInBlocks`, `catalogue`.
+4. The tests and the lesson checks write rules as data.
+5. The tutor proposes a rule as data. Then `foldRule`, `ruleView`,
+   `ruleViewOf`, `asRuleData`, `workspaceViewOf` and the rest of
+   `VIEW_ROWS` go, and a rule in rows is one that cannot be read.
 
 ## Open
 

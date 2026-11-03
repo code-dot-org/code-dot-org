@@ -2,9 +2,9 @@
 //
 // What it is for is the rules we maintain in code: the source is a module
 // here, the rule is generated, and the generated file is committed so nothing
-// changes at run time. A rule is written here as the `define rule` workspace
-// it stands for and stored as the data the Rule Editor makes of it
-// (`rules/ruleData.foldRule`), so this runs under tsx, which can import it.
+// changes at run time. A rule is written here as the data the Rule Editor
+// edits (`rules/ruleData`): its uses, properties, blocks, events and steps,
+// and its traits with theirs.
 //
 // The point is not that the source is shorter. It is that the BLOCK TYPES ARE
 // DERIVED. A property's blocks are named from its rule and its export
@@ -13,8 +13,6 @@
 // was a string I guessed and checked by hand while writing the camera rules.
 // Guessing a block type fails loudly; guessing a SOCKET name leaves an empty
 // hole and no error at all. Here, one declaration produces both sides.
-
-import {foldRule} from '../../src/rules/ruleData.ts';
 
 const PASCAL = id =>
   id
@@ -773,30 +771,21 @@ function property(ruleName, traitId, {name, type, value: initial, readonly}) {
     type,
     traitId,
     declaration: {
-      type: 'world_rule_property',
-      // TYPE FIRST, and it matters. `define property` puts the editor for the
-      // default in the slot the TYPE calls for — the arrow grid for a vector,
-      // an x and a y for a point — and Blockly applies a saved block's fields
-      // in the order the file lists them, so the type has to arrive before the
-      // value it decides the shape of.
-      fields: {
-        TYPE: type,
-        ACCESS: readonly ? 'readonly' : 'writable',
-        NAME: name,
-        // A vector is one field holding both axes, the same `{x, y}` its own
-        // `world_vector` literal saves; a point is two number fields, the same
-        // two numbers its setter takes. An actor property and the list types
-        // have NO default field: they start empty whatever is written down, so
-        // the block does not ask and nothing is saved. Everything else is one
-        // value, as text.
-        ...(EMPTY_BY_NATURE.has(type)
-          ? {}
-          : type === 'vector'
-            ? {DEFAULT: {x: initial?.x ?? 0, y: initial?.y ?? 0}}
-            : type === 'point'
-              ? {DEFAULT: initial?.x ?? 0, DEFAULT_Y: initial?.y ?? 0}
-              : {DEFAULT: String(initial ?? '')}),
-      },
+      name,
+      type,
+      access: readonly ? 'readonly' : 'writable',
+      // A vector is one value holding both axes, the same `{x, y}` its own
+      // `world_vector` literal saves; a point is two numbers, the same two its
+      // setter takes. An actor property and the list types have no default:
+      // they start empty whatever is written down. Everything else is one
+      // value, as text.
+      ...(EMPTY_BY_NATURE.has(type)
+        ? {}
+        : type === 'vector'
+          ? {value: {x: initial?.x ?? 0, y: initial?.y ?? 0}}
+          : type === 'point'
+            ? {value: initial?.x ?? 0, valueY: initial?.y ?? 0}
+            : {value: String(initial ?? '')}),
     },
     /** `get <name> of <subject>` — for everything but a point. */
     of: who => withInputs({type: `world_get_${key}`}, {...subject(who)}),
@@ -882,10 +871,10 @@ function declareBlock(ruleSlug, into, variables, spec, scoped) {
   const reports = returns && returns !== 'none';
   const exportName = `${PASCAL(wording)}${reports ? 'Query' : 'Action'}`;
 
+  const does = chain(body(refs));
   into.push({
-    type: 'world_rule_block',
-    fields: {RETURNS: returns, DESCRIPTION: description},
-    extraState: {
+    member: {
+      kind: 'block',
       parts: say.map(part =>
         typeof part === 'string'
           ? {kind: 'label', text: part}
@@ -896,8 +885,10 @@ function declareBlock(ruleSlug, into, variables, spec, scoped) {
               name: part.name,
             },
       ),
+      ...(description ? {description} : {}),
+      ...(reports ? {returns} : {}),
+      ...(does ? {body: does} : {}),
     },
-    inputs: {DO: value(chain(body(refs)))},
   });
 
   /**
@@ -953,7 +944,7 @@ function declareEvent(rule, ruleSlug, into, say, scope, variables) {
     }
     return {kind: 'param', type: part.type, var: id};
   });
-  into.push({type: 'world_rule_event', extraState: {parts}});
+  into.push({member: {kind: 'event', parts}});
   const wording = say
     .filter(part => typeof part === 'string')
     .join(' ')
@@ -979,20 +970,10 @@ function declareEvent(rule, ruleSlug, into, say, scope, variables) {
 
 export function defineRule({name, ability, header, purpose}) {
   const ruleSlug = RULE_SLUG(name);
-  const chainMembers = [];
-  // WHAT THIS RULE IS FOR, at the top of the rule, where a learner opening it
-  // arrives. `header` is the other paragraph and it is not this one: that is a
-  // comment on the generated `.ts`, written for whoever maintains the mechanic,
-  // and it reaches nobody who opens the workspace (specs/NEXT.md §3). This is
-  // the first thing on the surface, before the traits and the properties —
-  // markdown in a `world_doc`, drawn on the page rather than on a block.
-  //
-  // First because a rule's members are a chain and this is a member: pushed
-  // here, at construction, so nothing an author writes afterwards can get in
-  // front of it.
-  if (purpose) {
-    chainMembers.push(doc(purpose));
-  }
+  // What the rule declares, in the order it was written: `{use}`,
+  // `{property}`, `{member}` or `{step}`. The order decides which binding of
+  // a reused variable keeps its id (`ownBindings`).
+  const declared = [];
   const traits = [];
   const variables = [];
 
@@ -1019,22 +1000,9 @@ export function defineRule({name, ability, header, purpose}) {
       return makeLocal(id, varName, type);
     },
 
-    /**
-     * A page of prose among the rule's members.
-     *
-     * `purpose` is the one at the top and is written into every rule; this is
-     * for a second, further down — beside the properties it is about. A rule
-     * that DECLARES rather than does (Progress, Writing) has no step to put an
-     * explanation in, and would otherwise carry none at all.
-     */
-    doc(markdown) {
-      chainMembers.push(doc(markdown));
-      return rule;
-    },
-
     /** `use rule <other>` — by NAME, which is how every reference works. */
     uses(other) {
-      chainMembers.push({type: 'world_use_rule', fields: {RULE: other}});
+      declared.push({use: other});
       return rule;
     },
 
@@ -1046,24 +1014,16 @@ export function defineRule({name, ability, header, purpose}) {
      * block's type is built from — so declaring it here is what makes calling
      * it possible without writing that string down twice.
      */
-    block: spec => declareBlock(ruleSlug, chainMembers, variables, spec, false),
+    block: spec => declareBlock(ruleSlug, declared, variables, spec, false),
 
     /**
      * An event, and the block that raises it.
      *
      * Declared on the RULE it is the world's — raised once, handled with no
-     * actor. Declared under a trait it is that subject's. Where it is chained
-     * decides which, so `event` here and `trait.event` are different members.
+     * actor. Declared under a trait it is that subject's.
      */
     event(say) {
-      return declareEvent(
-        rule,
-        ruleSlug,
-        chainMembers,
-        say,
-        'world',
-        variables,
-      );
+      return declareEvent(rule, ruleSlug, declared, say, 'world', variables);
     },
 
     /**
@@ -1074,7 +1034,7 @@ export function defineRule({name, ability, header, purpose}) {
      */
     property(spec) {
       const made = property(name, undefined, spec);
-      chainMembers.push(made.declaration);
+      declared.push({property: made.declaration});
       return made;
     },
     number: (propName, initial, opts) =>
@@ -1091,23 +1051,17 @@ export function defineRule({name, ability, header, purpose}) {
       rule.property({name: propName, type: 'boolean', value: initial, ...opts}),
 
     /**
-     * A per-tick step of the RULE's own — a top block beside it, not chained
-     * inside, and run once with `(world, delta)` rather than per subject.
+     * Work the RULE does each frame, once with `(world, delta)` rather than
+     * per subject.
      *
      * Where work goes that fits no single actor: reading the keyboard, walking
      * every pair of bodies. A step that IS about one subject belongs under the
      * trait that elects it (`trait.step`), which walks them for you.
      */
     step(stepName, phase, body) {
-      // A MEMBER of the rule, chained with the properties and the blocks it
-      // declares — and its body in a `do` mouth, because a member's `next` is
-      // the member after it. It used to be a root with the body chained below,
-      // which is what a step had to be while that body was hundreds of blocks
-      // long; the body lives on its own surface now.
-      chainMembers.push({
-        type: 'world_rule_step_in',
-        fields: {NAME: stepName, PHASE: phase},
-        ...(body.length ? {inputs: {DO: {block: chain(body)}}} : {}),
+      const does = chain(body);
+      declared.push({
+        step: {name: stepName, phase, ...(does ? {body: does} : {})},
       });
       return rule;
     },
@@ -1119,24 +1073,19 @@ export function defineRule({name, ability, header, purpose}) {
       /** What it is for, in one line: the tooltip wherever it is chosen. */
       let description = '';
       const self = {
-        /** Say what this trait is for — `define trait`'s description. */
+        /** Say what this trait is for — its description. */
         describe(text) {
           description = text;
           return self;
         },
-        /** A page of prose among this trait's members — see `rule.doc`. */
-        doc(markdown) {
-          members.push(doc(markdown));
-          return self;
-        },
         /** What this trait needs, as `<Rule>#<Export>Trait`. */
         uses(dep) {
-          members.push({type: 'world_use_trait', fields: {TRAIT: dep}});
+          members.push({use: dep});
           return self;
         },
         property(spec) {
           const made = property(name, traitId, spec);
-          members.push(made.declaration);
+          members.push({property: made.declaration});
           return made;
         },
         number: (propName, initial, opts) =>
@@ -1216,33 +1165,26 @@ export function defineRule({name, ability, header, purpose}) {
          */
         actor: (propName, opts) =>
           self.property({name: propName, type: 'actor', value: '', ...opts}),
-        /** Runs once a frame for each subject that has this trait. */
         /** A block this trait adds, asked OF whatever elected it. */
         block: spec => declareBlock(ruleSlug, members, variables, spec, true),
         /** An event about whatever elected this trait. */
         event(say) {
           return declareEvent(rule, ruleSlug, members, say, 'actor', variables);
         },
+        /** Runs once a frame for each subject that has this trait. */
         step(stepName, phase, body) {
+          const does = chain(body);
           members.push({
-            type: 'world_trait_step',
-            fields: {PHASE: phase, NAME: stepName},
-            inputs: {DO: value(chain(body))},
+            step: {name: stepName, phase, ...(does ? {body: does} : {})},
           });
           return self;
         },
       };
       traits.push({
-        reference: `${name}#${PASCAL(traitName)}Trait`,
-        root: () => ({
-          type: 'world_rule_trait',
-          fields: {
-            NAME: traitName,
-            ...(subject === 'actor' ? {} : {SUBJECT: subject}),
-            ...(description ? {DESCRIPTION: description} : {}),
-          },
-          ...(members.length ? {next: {block: chain(members)}} : {}),
-        }),
+        name: traitName,
+        subject,
+        description: () => description,
+        members,
       });
       return self;
     },
@@ -1250,23 +1192,58 @@ export function defineRule({name, ability, header, purpose}) {
     /** What another rule names this one's trait by. */
     traitRef: traitName => `${name}#${PASCAL(traitName)}Trait`,
 
-    workspace() {
-      const roots = [
-        {
-          type: 'world_rule',
-          fields: {NAME: name, ABILITY: ability},
-          ...(chainMembers.length ? {next: {block: chain(chainMembers)}} : {}),
-        },
-        ...traits.map(trait => trait.root()),
-      ];
+    /** The rule's data (`rules/ruleData`), as the Rule Editor would save it. */
+    data() {
+      // Copied, so a row reused in two bodies becomes two blocks, each with a
+      // binding of its own (`ownBindings`).
+      const definitions = JSON.parse(
+        JSON.stringify([declared, ...traits.map(trait => trait.members)]),
+      );
+      ownBindings(
+        definitions.flat().flatMap(one => {
+          const body = (one.member ?? one.step)?.body;
+          return body ? [body] : [];
+        }),
+        variables,
+      );
+      // Numbered as the Rule Editor numbers a member it is given: by kind and
+      // place, the rule's first and then each trait's.
+      let made = 0;
+      const listed = entries => {
+        const of = key =>
+          entries.filter(one => key in one).map(one => one[key]);
+        const uses = of('use');
+        const properties = of('property');
+        const members = of('member').map(({kind, ...rest}) => ({
+          id: `${kind}-${made++}`,
+          kind,
+          ...rest,
+        }));
+        const steps = of('step');
+        return {
+          ...(uses.length ? {uses} : {}),
+          ...(properties.length ? {properties} : {}),
+          ...(members.length ? {members} : {}),
+          ...(steps.length ? {steps} : {}),
+        };
+      };
+      const [own, ...theirs] = definitions;
+      const rule = {
+        type: 'rule',
+        name,
+        ability: ability || name,
+        ...(purpose ? {description: purpose} : {}),
+        ...listed(own),
+      };
+      const declaredTraits = traits.map((trait, at) => ({
+        name: trait.name,
+        ...(trait.subject === 'actor' ? {} : {subject: trait.subject}),
+        ...(trait.description() ? {description: trait.description()} : {}),
+        ...listed(theirs[at]),
+      }));
       return {
-        // What Blockly itself writes at the top of a serialized workspace. It
-        // reads it back and a file without one still loads, but a generated
-        // workspace should be the shape the editor would have saved.
-        blocks: {
-          languageVersion: 0,
-          blocks: layout(ownBindings(roots, variables)),
-        },
+        ...rule,
+        ...(declaredTraits.length ? {traits: declaredTraits} : {}),
         ...(variables.length ? {variables} : {}),
       };
     },
@@ -1315,10 +1292,7 @@ export const BINDING_BLOCKS = {
  * id, declared in `variables`, and the readers in its scope follow. A `let`
  * under a binding of its own id joins it and keeps it.
  */
-function ownBindings(roots, variables) {
-  // Through JSON, not `structuredClone`: a row reused in two bodies is one
-  // object, and must become two blocks with a binding each.
-  const trees = JSON.parse(JSON.stringify(roots));
+function ownBindings(bodies, variables) {
   const owned = new Set();
   const fresh = id => {
     let n = 2;
@@ -1366,114 +1340,9 @@ function ownBindings(roots, variables) {
       }
     }
   };
-  for (const root of trees) {
-    walk(root, new Map());
+  for (const body of bodies) {
+    walk(body, new Map());
   }
-  return trees;
-}
-
-// ── Layout ───────────────────────────────────────────────────────────────────
-
-/** A row is about this tall once Blockly has drawn it. Generous on purpose. */
-const ROW = 34;
-/**
- * And the clear space between one root and the next.
- *
- * Was 60, which was not quite enough: `mouse`'s first trait draws thirteen
- * pixels into its second, because a row is an estimate and some rows are
- * taller than the estimate. Nobody had noticed, because nothing measured it
- * until `spikes/rule-surfaces/check-layout.mjs`.
- *
- * Raised rather than made exact. A gap costs a little scrolling; an overlap
- * covers whatever was at the bottom of the block above, which since rules
- * carry prose is usually a sentence.
- */
-const GAP = 84;
-
-/**
- * How tall a page of prose draws, in rows.
- *
- * A `world_doc` is not a row. It is markdown rendered at 320px wide
- * (`FieldMarkdown`), so its height is however far the words wrap — Patrol's
- * three paragraphs come to 346px, which is ten rows where `rows` counted one.
- * Counted as one, the trait roots below were placed on top of it: the layout
- * puts each root under the last, and the last was three hundred pixels shorter
- * than it drew.
- *
- * Estimated rather than measured, because this runs in node with no browser to
- * ask. About 46 characters fit a line at 13px, a line is 19px, a paragraph
- * carries 6px under it, and the field pads 8px each side. Over-counting costs
- * a gap and under-counting costs an overlap, so it rounds up everywhere.
- */
-const CHARS_PER_LINE = 46;
-const LINE = 19;
-const PARAGRAPH_GAP = 6;
-
-function docRows(markdown) {
-  const paragraphs = String(markdown)
-    .split(/\n\s*\n/)
-    .filter(text => text.trim().length > 0);
-  let height = PAD_BOTH;
-  for (const paragraph of paragraphs) {
-    const text = paragraph.replace(/\s+/g, ' ').trim();
-    height += Math.max(1, Math.ceil(text.length / CHARS_PER_LINE)) * LINE;
-    height += PARAGRAPH_GAP;
-  }
-  return Math.ceil(height / ROW);
-}
-
-/** What `FieldMarkdown` leaves around the prose, top and bottom. */
-const PAD_BOTH = 16;
-
-/**
- * How many rows a stack occupies: itself, its statement inputs, and whatever is
- * chained after it. Value inputs sit inline and add none.
- */
-function rows(block) {
-  if (!block || typeof block !== 'object') {
-    return 0;
-  }
-  if (block.type === 'world_doc') {
-    // Plus one for the chrome the block draws around the page.
-    return docRows(block.fields?.DOC ?? '') + 1 + rows(block.next?.block);
-  }
-  let total = 1;
-  for (const [key, held] of Object.entries(block)) {
-    if (key === 'fields' || key === 'extraState') {
-      continue;
-    }
-    if (key === 'next') {
-      total += rows(held.block);
-      continue;
-    }
-    if (key === 'inputs') {
-      for (const [socket, input] of Object.entries(held)) {
-        // Statement sockets stack; a value socket is drawn on the same row.
-        if (/^(DO|ELSE|STACK)/.test(socket)) {
-          total += rows(input.block ?? input.shadow) + 1;
-        }
-      }
-    }
-  }
-  return total;
-}
-
-/**
- * Place each root below the one before it.
- *
- * Hand-authored rules carry the positions the editor gave them when a person
- * dragged the blocks about; a generated one has to work them out, and round
- * numbers are a guess that holds until a rule grows. Measured from the stack's
- * own height, so adding a member pushes what follows down instead of landing
- * on top of it.
- */
-function layout(roots) {
-  let y = 20;
-  return roots.map(root => {
-    const placed = {...root, x: 20, y};
-    y += rows(root) * ROW + GAP;
-    return placed;
-  });
 }
 
 // ── Output ───────────────────────────────────────────────────────────────────
@@ -1490,10 +1359,7 @@ const asLiteral = json =>
 
 /** The `.ts` file that holds one stock rule, as data. */
 export function moduleFor(rule, constName) {
-  const data = foldRule(rule.workspace());
-  if (!data) {
-    throw new Error(`${constName}: a rule the data cannot say whole`);
-  }
+  const data = rule.data();
   return `${rule.header}
 
 /** The \`rules/${constName}.rule\` rule. GENERATED — edit scripts/rules/${constName}.mjs. */

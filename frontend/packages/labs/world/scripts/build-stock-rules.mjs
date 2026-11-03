@@ -3,7 +3,7 @@
 // Source is `scripts/rules/<name>.mjs`; output is `src/rules/stock/<name>.ts`,
 // committed, so nothing changes at run time and a reader still sees what ships.
 // Nothing works backward: editing a generated one means editing its source.
-// Run under tsx (`yarn build:rules`), since the DSL imports the lab's fold.
+// Run with `yarn build:rules`.
 //
 //   yarn build:rules          write them
 //   yarn build:rules --check  fail if any is out of date (CI, pre-commit)
