@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894910-1d7b92d8c148",
+  "problem_type": "match",
+  "active": true,
+  "problem_text": "Match the following strengths and weaknesses to their respective categories: 1. AI can process large amounts of data quickly. 2. Human creativity can bring unique perspectives. 3. AI might lack emotional depth in content. 4. Humans can adapt to nuanced situations better.",
+  "solution": [
+    {
+      "option": "AI can process large amounts of data quickly.",
+      "correct": "Strength"
+    },
+    {
+      "option": "Human creativity can bring unique perspectives.",
+      "correct": "Strength"
+    },
+    {
+      "option": "AI might lack emotional depth in content.",
+      "correct": "Weakness"
+    },
+    {
+      "option": "Humans can adapt to nuanced situations better.",
+      "correct": "Weakness"
+    }
+  ],
+  "objective_keys": [
+    "9c315c39-11ae-477d-8b48-2688a1d95f00"
+  ]
+}

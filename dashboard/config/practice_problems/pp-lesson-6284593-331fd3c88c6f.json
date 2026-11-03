@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-6284593-331fd3c88c6f",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "Which of the following is an example of a valid variable name in Python?",
+  "solution": [
+    {
+      "option": "my_variable",
+      "correct": true
+    },
+    {
+      "option": "MyVariable",
+      "correct": false
+    },
+    {
+      "option": "my-variable",
+      "correct": false
+    },
+    {
+      "option": "my variable",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "02a8d095-cc80-4e95-abd0-964d1f3b2043"
+  ]
+}
