@@ -19,9 +19,12 @@ import {captureTreeImage} from '../helpers/treeImage';
 const LABEL = 'Save image';
 const SAVE_ERROR = "Couldn't save an image of your tree. Please try again.";
 
-// CustomDropdown closes only on a mousedown outside it.
-const closeMenu = () =>
-  document.body.dispatchEvent(new MouseEvent('mousedown', {bubbles: true}));
+// A body mousedown would close every open CustomDropdown, not just this one.
+const closeMenu = (trigger: HTMLButtonElement) => {
+  if (trigger.hasAttribute('data-force-hover')) {
+    trigger.click();
+  }
+};
 
 interface SaveTreeImageMenuProps {
   treeRef: RefObject<HTMLElement>;
@@ -42,7 +45,7 @@ const SaveTreeImageMenu = ({
   useEffect(() => {
     const closeOnPressOutside = ({target}: PointerEvent) => {
       if (!menuRef.current!.contains(target as Node)) {
-        closeMenu();
+        closeMenu(triggerRef.current!);
       }
     };
     document.addEventListener('pointerdown', closeOnPressOutside);
@@ -54,7 +57,7 @@ const SaveTreeImageMenu = ({
     if (event.key !== 'Escape') {
       return;
     }
-    closeMenu();
+    closeMenu(triggerRef.current!);
     const fromMenu = event.target !== triggerRef.current;
     if (fromMenu) {
       event.stopPropagation();
@@ -63,7 +66,7 @@ const SaveTreeImageMenu = ({
   };
 
   const saveImage = async (save: (image: Blob) => void | Promise<void>) => {
-    closeMenu();
+    closeMenu(triggerRef.current!);
     triggerRef.current!.focus();
     try {
       await save(await captureTreeImage(treeRef.current!));

@@ -1,3 +1,4 @@
+import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
 import {ToastProvider} from '@code-dot-org/component-library/toast';
 import {act, fireEvent, render, screen} from '@testing-library/react';
 import React, {createRef} from 'react';
@@ -22,6 +23,19 @@ function renderMenu({onKeyDown = jest.fn()} = {}) {
     withTheme(
       <ToastProvider>
         <div ref={treeRef} role="tree" aria-label="Decision tree" />
+        <ActionDropdown
+          name="other"
+          labelText="Other menu"
+          options={[
+            {
+              value: 'other',
+              label: 'Other option',
+              icon: {iconName: 'check'},
+              onClick: () => {},
+            },
+          ]}
+          triggerButtonProps={{}}
+        />
         <div onKeyDown={onKeyDown}>
           <SaveTreeImageMenu treeRef={treeRef} baseName="zoo-tree" tabbable />
         </div>
@@ -73,6 +87,16 @@ describe('SaveTreeImageMenu', () => {
     fireEvent.pointerDown(screen.getByRole('tree'));
 
     expect(isOpen()).toBe(false);
+  });
+
+  it('leaves other dropdowns open', () => {
+    renderMenu();
+    const otherTrigger = screen.getByRole('button', {name: 'Other menu'});
+    fireEvent.click(otherTrigger);
+
+    fireEvent.pointerDown(option('Other option')!);
+
+    expect(otherTrigger).toHaveAttribute('data-force-hover');
   });
 
   it('keeps Escape in the menu from leaving the tree', () => {
