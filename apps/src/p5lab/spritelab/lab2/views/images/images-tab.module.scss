@@ -1,5 +1,6 @@
 @use '../checkerboard';
 @use '../imageTile' as tile;
+@use '../editor-strip' as strip;
 
 // Three columns: the list, the frame, the pane. The pane's width is set
 // inline to the preview column's; the list takes one to three tiles; the
@@ -9,13 +10,24 @@ $tile-gap: 8px;
 $column-gap: 20px;
 $pad: 16px;
 
+// The tab starts at the top of the editors' strip, which lies over its
+// first two columns; the pane column carries its own header there.
 .tab {
+  position: relative;
   display: flex;
   gap: $column-gap;
   box-sizing: border-box;
   width: 100%;
   height: 100%;
-  padding: $pad;
+  padding: (strip.$height + $pad) $pad $pad;
+}
+
+// The pane's header, the strip's twin, across the top of the pane column.
+.panelHeader {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: strip.$height;
 }
 
 .list {
@@ -246,6 +258,7 @@ $pad: 16px;
   padding-top: 8px;
 }
 
+// The panel's body: flush under its header and to the tab's edges.
 .pane {
   display: flex;
   flex: none;
@@ -253,8 +266,8 @@ $pad: 16px;
   gap: 16px;
   box-sizing: border-box;
   min-height: 0;
+  margin: (-$pad) (-$pad) (-$pad) 0;
   padding: 16px;
-  border-radius: 12px;
   background-color: var(--background-neutral-secondary);
   color: var(--text-neutral-primary);
 

@@ -2399,14 +2399,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 style={clearOfPreview}
               />
             )}
-          {/* The Images tab's pane is a panel of its own, headed where the
-              preview's header sits on the other tabs. */}
-          {editorsShown && activeTab === 'Images' && (
-            <EditorStrip
-              title="AI"
-              style={{left: 'auto', width: paneWidthPx}}
-            />
-          )}
           {editorsShown &&
             (activeTab === 'World' ||
               activeTab === 'Code' ||
@@ -2462,7 +2454,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               className={classNames(
                 moduleStyles.codeTabWrapper,
                 moduleStyles.picturesEditor,
-                editorsShown && moduleStyles.underEditorStrip,
                 (guideUnderPreview
                   ? picturesSlide.parked
                   : activeTab !== 'Images') && moduleStyles.picturesEditorParked

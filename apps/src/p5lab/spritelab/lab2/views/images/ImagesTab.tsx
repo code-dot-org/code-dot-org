@@ -16,6 +16,7 @@ import {imageKindLabel, ImageSubject, ImageType} from '../../ai/images/types';
 import {onTrimsUpdated, trimAnimationListImages} from '../../imageTrim';
 import {DEFAULT_IMAGE_STYLE} from '../../levelMode';
 import {BACKGROUND_GROUND_COLOR, blankPaintImage} from '../../paintBlank';
+import EditorStrip from '../components/EditorStrip';
 import SentenceScene from '../sentence/SentenceScene';
 
 import ImageFrame from './ImageFrame';
@@ -210,6 +211,9 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
 
   return (
     <div className={styles.tab}>
+      <div className={styles.panelHeader} style={{width: paneWidthPx}}>
+        <EditorStrip title="AI" />
+      </div>
       <ImageList
         images={images}
         draft={draft}

@@ -1,6 +1,7 @@
 @use './imageTile' as tile;
 @use '../../../../pixelEditor/dialogChrome' as chrome;
 @use '@cdo/apps/lab2/views/components/layout/variables.scss' as variables;
+@use './editor-strip' as strip;
 
 .labRow {
   display: flex;
@@ -83,7 +84,7 @@ $tab-item-height: 34px;
 }
 
 // The editors start under the strip.
-$editor-strip-height: 41px;
+$editor-strip-height: strip.$height;
 // Above Blockly's category list (z 70) and flyout (z 20), so a menu from a
 // bar opens over them; below its block drag surface (z 80).
 $z-over-blockly: 71;
