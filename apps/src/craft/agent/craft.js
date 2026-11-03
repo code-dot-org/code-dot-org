@@ -8,6 +8,7 @@ import {ThemeProvider} from '@mui/material/styles';
 import Hammer from 'hammerjs';
 import $ from 'jquery';
 import React from 'react';
+import {flushSync} from 'react-dom';
 import {Provider} from 'react-redux';
 
 import {getCodeBlocks, getCode} from '@cdo/apps/blockly/utils';
@@ -403,32 +404,34 @@ export default class Craft {
       hideRunButton: config.level.specialLevelType === 'agentSpawn',
     });
 
-    createReactRoot(
-      <Provider store={getStore()}>
-        <div>
-          <ThemeProvider theme={minecraftMuiTheme}>
-            <AppView
-              upIcon={<img style={{width: '15px'}} src={upButtonImg} alt="" />}
-              downIcon={
-                <img style={{width: '15px'}} src={downButtonImg} alt="" />
-              }
-              visualizationColumn={
-                <CraftVisualizationColumn
-                  showFinishButton={!config.level.isProjectLevel}
-                />
-              }
-              onMount={onMount}
-            />
-            <PlayerSelectionDialog
-              players={[CHARACTER_STEVE, CHARACTER_ALEX]}
-            />
-          </ThemeProvider>
-        </div>
-      </Provider>,
-      document.getElementById(config.containerId),
-      {
-        legacyReactDomRender: true,
-      }
+    // Synchronous: onMount initializes the app before init returns.
+    flushSync(() =>
+      createReactRoot(
+        <Provider store={getStore()}>
+          <div>
+            <ThemeProvider theme={minecraftMuiTheme}>
+              <AppView
+                upIcon={
+                  <img style={{width: '15px'}} src={upButtonImg} alt="" />
+                }
+                downIcon={
+                  <img style={{width: '15px'}} src={downButtonImg} alt="" />
+                }
+                visualizationColumn={
+                  <CraftVisualizationColumn
+                    showFinishButton={!config.level.isProjectLevel}
+                  />
+                }
+                onMount={onMount}
+              />
+              <PlayerSelectionDialog
+                players={[CHARACTER_STEVE, CHARACTER_ALEX]}
+              />
+            </ThemeProvider>
+          </div>
+        </Provider>,
+        document.getElementById(config.containerId)
+      )
     );
   }
 
