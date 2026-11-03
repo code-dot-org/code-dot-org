@@ -6,6 +6,7 @@
 
 import {
   BodyPlan,
+  ImageGenerationMetadata,
   ImageSubject,
   ImageType,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/images/types';
@@ -216,11 +217,10 @@ export function promptText(sentence: Sentence, choices: Choices): string {
 }
 
 /** Choices saved on an image: the sentence they were made in, and the
-    word per slot. */
-export interface SavedChoices {
-  sentenceId?: string;
-  choices: Record<string, string>;
-}
+    word per slot, as the image's generation record stores them. */
+export type SavedChoices = Pick<ImageGenerationMetadata, 'sentenceId'> & {
+  choices: NonNullable<ImageGenerationMetadata['choices']>;
+};
 
 /**
  * Saved choices as this sentence can hold them now: a slot the sentence no

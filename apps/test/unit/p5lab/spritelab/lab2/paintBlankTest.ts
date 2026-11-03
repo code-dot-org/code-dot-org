@@ -6,7 +6,7 @@ import {
 describe('blankPaintSpec', () => {
   it('sizes pixel style on the generation grid, at its logical size', () => {
     const spec = blankPaintSpec('sprite', 'pixel');
-    // 1024/16 logical pixels, one canvas pixel each.
+    // 1024/32 logical pixels, one canvas pixel each.
     expect(spec.pixelGridSize).toBe(1);
     expect(spec.size).toBe(32);
   });
