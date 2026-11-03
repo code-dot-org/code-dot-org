@@ -460,7 +460,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                   generating ? (
                     <div className={styles.underSteps}>{parts.progress}</div>
                   ) : (
-                    under ?? (parts.underFrame || reopenedBehindTheScenes)
+                    under || parts.underFrame || reopenedBehindTheScenes
                   )
                 }
                 overlay={
