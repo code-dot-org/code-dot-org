@@ -189,6 +189,68 @@ class QuizQuestionsControllerTest < ActionController::TestCase
 
   # --- update: in-place vs. fork ---
 
+  # --- create ---
+
+  test "create is forbidden for a non-levelbuilder" do
+    sign_in @teacher
+    post :create, as: :json, params: {type: 'FreeResponseQuestion', questionName: 'Q', questionTitle: 'Why?'}
+    assert_response :forbidden
+  end
+
+  test "create makes a bank question that is on no quiz" do
+    assert_difference 'MultipleChoiceQuestion.count', 1 do
+      assert_no_difference 'QuizQuestionPlacement.count' do
+        post :create, as: :json, params: {
+          type: 'MultipleChoiceQuestion', questionName: 'New one', questionTitle: 'Pick one',
+          choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceId: 'b', explanation: 'Because B.'
+        }
+      end
+    end
+
+    assert_response :created
+    body = JSON.parse(response.body)
+    question = MultipleChoiceQuestion.find(body['id'])
+    assert_equal 'New one', question.name
+    assert_equal 'Because B.', question.explanation
+    assert_nil body['page']
+    refute body['attachedToOtherQuizzes']
+  end
+
+  test "create returns bad_request and creates nothing for an unknown type" do
+    assert_no_difference 'QuizQuestion.count' do
+      post :create, as: :json, params: {type: 'NotARealQuestion', questionName: 'Q', questionTitle: 'Why?'}
+    end
+    assert_response :bad_request
+  end
+
+  test "update edits a question not yet placed on the given quiz" do
+    unplaced = create(:multiple_choice_question)
+
+    put :update, as: :json, params: {
+      id: unplaced.id, quizLevelId: @quiz.id,
+      questionName: 'Renamed', questionTitle: 'Pick one',
+      choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceId: 'a'
+    }
+
+    assert_response :success
+    assert_equal 'Renamed', unplaced.reload.name
+    refute QuizQuestionPlacement.exists?(level: @quiz, quiz_question: unplaced)
+  end
+
+  test "update changes the type of a question not yet placed, deleting the unreferenced original" do
+    unplaced = create(:multiple_choice_question)
+
+    put :update, as: :json, params: {
+      id: unplaced.id, quizLevelId: @quiz.id, type: 'MultipleSelectQuestion',
+      questionName: 'Now multi-select', questionTitle: 'Pick both',
+      choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceIds: ['a', 'b']
+    }
+
+    assert_response :success
+    assert_equal 'MultipleSelectQuestion', JSON.parse(response.body)['type']
+    refute QuizQuestion.exists?(unplaced.id)
+  end
+
   test "update edits the question in place when it's not used in a published unit" do
     put :update, params: {
       id: @question.id, quizLevelId: @quiz.id,

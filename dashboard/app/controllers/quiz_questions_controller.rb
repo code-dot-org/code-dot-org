@@ -67,26 +67,47 @@ class QuizQuestionsController < ApplicationController
     render json: quiz_question_json(question)
   end
 
+  # POST /quiz_questions
+  #
+  # Creates a bank question without a quiz placement.
+  def create
+    question = ActiveRecord::Base.transaction(requires_new: true) do
+      question_class = quiz_question_class
+      question = question_class.create!(
+        key: SecureRandom.uuid,
+        name: quiz_question_params[:questionName],
+        content: question_class.content_from_builder_params(quiz_question_params),
+        explanation: quiz_question_params[:explanation]
+      )
+      question.standards = fetch_quiz_question_standards(quiz_question_params[:standards])
+      question
+    end
+
+    render status: :created, json: quiz_question_json(question)
+  rescue StandardError => exception
+    render status: :bad_request, json: {error: exception.message}
+  end
+
   # PUT /quiz_questions/:id?quizLevelId=
   #
   # Content params follow the type param, or the question's own type if
   # none is given. Only choice types can switch, to each other.
   #
-  # quizLevelId's placement gets repointed at the fork, if any. editMode:
-  # 'fork' forces a fork explicitly; used_in_published_unit? and a type
-  # change also force one. A type change then deletes the original if
+  # quizLevelId's placement, if the question has one, gets repointed at the fork.
+  # editMode: 'fork' forces a fork explicitly; used_in_published_unit? and a type
+  # change also forces one. A type change then deletes the original if
   # nothing else references it.
   def update
     question = QuizQuestion.find(params[:id])
     level = find_quiz_level(params[:quizLevelId])
-    placement = level&.placements&.find_by!(quiz_question_id: question.id)
+    placement = level&.placements&.find_by(quiz_question_id: question.id)
     target_class = quiz_question_params[:type].present? ? quiz_question_class : question.class
     type_changed = target_class != question.class
     if type_changed
       unless question.is_a?(ChoiceQuestion) && target_class.include?(ChoiceQuestion)
         raise ArgumentError, "a #{question.type} can't become a #{target_class.name}"
       end
-      raise ArgumentError, 'changing type requires quizLevelId' unless placement
+      raise ArgumentError, 'changing type requires quizLevelId' unless level
     end
     should_fork = type_changed || question.used_in_published_unit? || quiz_question_params[:editMode] == 'fork'
     target = should_fork ? target_class.new(key: SecureRandom.uuid, fork_parent: question) : question
