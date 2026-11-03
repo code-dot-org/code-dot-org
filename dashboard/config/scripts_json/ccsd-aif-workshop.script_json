@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-10-29 23:09:03 UTC",
+    "serialized_at": "2026-11-02 19:45:48 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -173,7 +173,7 @@
       "key": "2d6b8836-c81b-4471-980f-36a671e4c6ac",
       "position": 8,
       "properties": {
-        "progression_name": "Semester 1 & 2 Overview"
+        "progression_name": "Course Overview & Resources"
       },
       "seeding_key": {
         "activity_section.key": "2d6b8836-c81b-4471-980f-36a671e4c6ac",
@@ -407,7 +407,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Semester 1 & 2 Overview"
+        "progression": "Course Overview & Resources"
       },
       "bonus": false,
       "seeding_key": {
@@ -425,50 +425,6 @@
     },
     {
       "chapter": 11,
-      "position": 11,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Semester 1 & 2 Overview"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ccsd-aif-workshop-u2-overview"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "ccsd-aif-workshop",
-        "activity_section.key": "2d6b8836-c81b-4471-980f-36a671e4c6ac"
-      },
-      "level_keys": [
-        "ccsd-aif-workshop-u2-overview"
-      ]
-    },
-    {
-      "chapter": 12,
-      "position": 12,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Course Resources & Links"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ccsd-aif-workshop-course-link"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "ccsd-aif-workshop",
-        "activity_section.key": "e184cfe4-0637-409a-83b4-96a4f4d8f409"
-      },
-      "level_keys": [
-        "ccsd-aif-workshop-course-link"
-      ]
-    },
-    {
-      "chapter": 13,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -489,7 +445,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 12,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -510,7 +466,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 13,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -531,7 +487,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 14,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -552,7 +508,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 15,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -573,7 +529,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 16,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -713,30 +669,6 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "ccsd-aif-workshop",
         "activity_section.key": "2d6b8836-c81b-4471-980f-36a671e4c6ac"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ccsd-aif-workshop-u2-overview",
-        "script_level.level_keys": [
-          "ccsd-aif-workshop-u2-overview"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "ccsd-aif-workshop",
-        "activity_section.key": "2d6b8836-c81b-4471-980f-36a671e4c6ac"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ccsd-aif-workshop-course-link",
-        "script_level.level_keys": [
-          "ccsd-aif-workshop-course-link"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "ccsd-aif-workshop",
-        "activity_section.key": "e184cfe4-0637-409a-83b4-96a4f4d8f409"
       }
     },
     {

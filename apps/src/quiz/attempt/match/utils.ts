@@ -1,7 +1,14 @@
 import {QuizQuestionItem} from '@cdo/apps/quiz/types';
 import {formatChoiceLetter} from '@cdo/apps/quiz/utils';
 
-import {MatchPairs, MatchSets, MatchSide} from './types';
+import {
+  MarkedPair,
+  MatchPair,
+  MatchPairs,
+  MatchSets,
+  MatchSide,
+  PairStatus,
+} from './types';
 
 // A constant, so MatchBoard's line measurement doesn't rerun every render.
 export const NO_MATCH_SETS: MatchSets = [[], []];
@@ -17,7 +24,7 @@ export function itemsInColumn(
 // each item has at most one partner.
 export function pairTogether(
   pairs: MatchPairs,
-  [startId, endId]: [string, string]
+  [startId, endId]: MatchPair
 ): MatchPairs {
   return [
     ...pairs.filter(([start, end]) => start !== startId && end !== endId),
@@ -40,6 +47,28 @@ export function findPartner(pairs: MatchPairs, id: string): string | undefined {
     }
   }
   return undefined;
+}
+
+export function pairStatus(
+  correctPairs: MatchPairs,
+  [a, b]: MatchPair
+): PairStatus {
+  return correctPairs.some(pair => pair.includes(a) && pair.includes(b))
+    ? 'correct'
+    : 'incorrect';
+}
+
+export function markPairs(
+  pairs: MatchPairs,
+  correctPairs: MatchPairs | undefined,
+  isAnswerKey: boolean | undefined
+): MarkedPair[] {
+  return pairs.map(ids => ({
+    ids,
+    status: isAnswerKey
+      ? 'correct'
+      : correctPairs && pairStatus(correctPairs, ids),
+  }));
 }
 
 // Each start item has a letter by position.

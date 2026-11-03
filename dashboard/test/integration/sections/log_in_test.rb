@@ -10,30 +10,21 @@ class SectionsLogInTest < ActionDispatch::IntegrationTest
     log_in student_a
   end
 
-  it 'assigns new Statsig stable ID' do
-    stable_id_a = session[SharedConstants::STATSIG_STABLE_ID_KEY]
-    _(stable_id_a).must_match /\A#{SharedConstants::STATSIG_STABLE_ID_PATTERN}\z/io
-    _(request.statsig_stable_id).must_equal stable_id_a
-
-    log_in student_b
-
-    stable_id_b = session[SharedConstants::STATSIG_STABLE_ID_KEY]
-    _(stable_id_b).wont_equal stable_id_a
-    _(stable_id_b).must_match /\A#{SharedConstants::STATSIG_STABLE_ID_PATTERN}\z/io
+  it 'does not assign Statsig stable ID' do
+    _(session[SharedConstants::STATSIG_STABLE_ID_KEY]).must_be_nil
   end
 
   it 'assigns new anon_user_id' do
-    stable_id_a = session[SharedConstants::STATSIG_STABLE_ID_KEY]
-    _(stable_id_a).must_match /\A#{SharedConstants::STATSIG_STABLE_ID_PATTERN}\z/io
-
-    _(request.anon_user_id).must_equal stable_id_a
-    _(SignIn.where(user: student_a).last.anon_user_id).must_equal stable_id_a
+    anon_user_id_a = cookies[Cdo::AnonUserId::KEY]
+    _(anon_user_id_a).must_match Cdo::AnonUserId::FORMAT
+    _(SignIn.where(user: student_a).last.anon_user_id).must_equal anon_user_id_a
 
     log_in student_b
 
-    _(request.anon_user_id).wont_equal stable_id_a
-    _(request.anon_user_id).must_match Cdo::AnonUserId::FORMAT
-    _(SignIn.where(user: student_b).last.anon_user_id).must_equal request.anon_user_id
+    anon_user_id_b = cookies[Cdo::AnonUserId::KEY]
+    _(anon_user_id_b).wont_equal anon_user_id_a
+    _(anon_user_id_b).must_match Cdo::AnonUserId::FORMAT
+    _(SignIn.where(user: student_b).last.anon_user_id).must_equal anon_user_id_b
   end
 
   it 'clears pairings of previous student' do
@@ -45,8 +36,8 @@ class SectionsLogInTest < ActionDispatch::IntegrationTest
     _(session[:pairings]).must_be_nil
   end
 
-  it 'keeps session of same student signing in again' do
-    _ {log_in student_a}.wont_change -> {request.statsig_stable_id}
+  it 'keeps anon_user_id of same student signing in again' do
+    _ {log_in student_a}.wont_change -> {cookies[Cdo::AnonUserId::KEY]}
   end
 
   context 'with Statsig cookie of previous student' do
@@ -67,14 +58,11 @@ class SectionsLogInTest < ActionDispatch::IntegrationTest
       _(request.statsig_stable_id).must_match /\A#{SharedConstants::STATSIG_STABLE_ID_PATTERN}\z/io
     end
 
-    it 'records SignIn of next student with new anon_user_id' do
-      _(request.anon_user_id).must_equal stable_id_a
-
+    it 'records SignIn of next student without Statsig stable ID' do
       log_in student_b
 
-      _(request.anon_user_id).wont_equal stable_id_a
-      _(request.anon_user_id).must_match Cdo::AnonUserId::FORMAT
-      _(SignIn.where(user: student_b).last.anon_user_id).must_equal request.anon_user_id
+      _(SignIn.where(user: student_b).last.anon_user_id).wont_equal stable_id_a
+      _(SignIn.where(user: student_b).last.anon_user_id).must_equal cookies[Cdo::AnonUserId::KEY]
     end
   end
 

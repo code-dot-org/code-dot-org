@@ -1,0 +1,23 @@
+{
+  "key": "pp-lesson-8894757-7075e894f381",
+  "problem_type": "match",
+  "active": true,
+  "problem_text": "Match the following terms with their correct descriptions.",
+  "solution": [
+    {
+      "option": "Audience",
+      "correct": "The group of people for whom you are designing."
+    },
+    {
+      "option": "Theme",
+      "correct": "The central topic or idea that guides your design."
+    },
+    {
+      "option": "Decomposition",
+      "correct": "Breaking down complex projects into manageable parts."
+    }
+  ],
+  "objective_keys": [
+    "31098d45-9931-4f13-a712-a60b5cef9c10"
+  ]
+}

@@ -1,4 +1,6 @@
 require_relative '../../test_helper'
+require 'action_dispatch'
+require 'action_dispatch/middleware/cookies'
 require 'cdo/rack/request'
 
 class RequestTest
@@ -137,7 +139,6 @@ class RequestTest
         request.stubs(:cookies).returns(SharedConstants::STATSIG_STABLE_ID_KEY => cookie_id)
 
         assert_equal cookie_id, request.statsig_stable_id
-        assert_equal cookie_id, request.anon_user_id
         assert_equal session_id, session[SharedConstants::STATSIG_STABLE_ID_KEY]
       end
     end
@@ -197,8 +198,6 @@ class RequestTest
       request.stubs(:cookies).returns(cookies)
 
       assert_equal stable_id, request.statsig_stable_id
-      assert_equal stable_id, request.anon_user_id
-
       cookies.delete(SharedConstants::STATSIG_STABLE_ID_KEY)
       session.delete(SharedConstants::STATSIG_STABLE_ID_KEY)
       new_stable_id = request.statsig_stable_id
@@ -206,7 +205,6 @@ class RequestTest
       assert_match /\A#{SharedConstants::STATSIG_STABLE_ID_PATTERN}\z/io, new_stable_id
       refute_equal stable_id, new_stable_id
       assert_equal new_stable_id, request.statsig_stable_id
-      assert_equal new_stable_id, request.anon_user_id
     end
 
     def test_statsig_stable_id_uses_session_for_blank_cookie
@@ -249,16 +247,161 @@ class RequestTest
 
         assert_match /\A#{SharedConstants::STATSIG_STABLE_ID_PATTERN}\z/io, stable_id
         assert_equal stable_id, session[storage_key]
-        assert_equal stable_id, request.anon_user_id
         assert_equal stable_id, MockRequest.new(session).statsig_stable_id
       end
     end
+  end
+end
 
-    def test_anon_user_id_replaces_invalid_session_value
-      request = MockRequest.new(SharedConstants::STATSIG_STABLE_ID_KEY => 'invalid')
+describe Cdo::RequestExtension do
+  describe '#anon_user_id' do
+    let(:anon_user_id) {request.anon_user_id}
+    let(:request) {Rack::Request.new(Rack::MockRequest.env_for(url, 'HTTP_COOKIE' => cookie_header))}
+    let(:url) {'https://studio.code.org/'}
+    let(:cookie_header) {cookies.map {|key, value| "#{key}=#{value}"}.join('; ')}
+    let(:cookies) {{}}
 
-      assert Cdo::AnonUserId.valid?(request.anon_user_id)
-      assert_equal request.statsig_stable_id, request.anon_user_id
+    # The header ActionDispatch::Cookies would write to the response.
+    def set_cookie_header
+      response = Rack::Response.new
+      ActionDispatch::Request.new(request.env).cookie_jar.write(response)
+      response['Set-Cookie']
+    end
+
+    it 'generates UUID v4' do
+      _(anon_user_id).must_match Cdo::AnonUserId::FORMAT
+    end
+
+    it 'sets session cookie' do
+      anon_user_id
+
+      _(set_cookie_header).must_equal "#{Cdo::AnonUserId::KEY}=#{anon_user_id}; domain=code.org; path=/; secure; HttpOnly; SameSite=Lax"
+    end
+
+    it 'sets cookie without expiry' do
+      anon_user_id
+
+      _(set_cookie_header).wont_match(/expires=|max-age=/i)
+    end
+
+    it 'returns same ID for rest of request' do
+      _(request.anon_user_id).must_equal anon_user_id
+      _(Rack::Request.new(request.env).anon_user_id).must_equal anon_user_id
+      _(set_cookie_header.scan(Cdo::AnonUserId::KEY).size).must_equal 1
+    end
+
+    # Writing the session would create it in Redis.
+    it 'does not write session' do
+      session = {}
+      session.expects(:[]=).never
+      request.env['rack.session'] = session
+
+      _(anon_user_id).must_match Cdo::AnonUserId::FORMAT
+    end
+
+    context 'over HTTP' do
+      let(:url) {'http://studio.code.org/'}
+
+      it 'sets cookie without secure flag' do
+        anon_user_id
+
+        _(set_cookie_header).must_equal "#{Cdo::AnonUserId::KEY}=#{anon_user_id}; domain=code.org; path=/; HttpOnly; SameSite=Lax"
+      end
+    end
+
+    context 'with ActionDispatch request' do
+      let(:request) {ActionDispatch::Request.new(Rack::MockRequest.env_for(url))}
+
+      it 'sets cookie in controller cookie jar' do
+        anon_user_id
+
+        _(request.cookie_jar[Cdo::AnonUserId::KEY]).must_equal anon_user_id
+      end
+    end
+
+    context 'when anon_user_id cookie exists' do
+      let(:existing_anon_user_id) {Cdo::AnonUserId.generate}
+      let(:cookies) {{Cdo::AnonUserId::KEY => existing_anon_user_id}}
+
+      it 'returns cookie value' do
+        _(anon_user_id).must_equal existing_anon_user_id
+      end
+
+      it 'does not set cookie' do
+        anon_user_id
+
+        _(set_cookie_header).must_be_nil
+      end
+
+      # Any access to the session would load it from Redis.
+      it 'does not touch session' do
+        request.env['rack.session'] = mock('session')
+
+        _(anon_user_id).must_equal existing_anon_user_id
+      end
+
+      context 'with Statsig stable ID cookie' do
+        let(:cookies) {{Cdo::AnonUserId::KEY => existing_anon_user_id, SharedConstants::STATSIG_STABLE_ID_KEY => SecureRandom.uuid}}
+
+        it 'prefers anon_user_id cookie' do
+          _(anon_user_id).must_equal existing_anon_user_id
+        end
+      end
+    end
+
+    ['', 'invalid', "#{Cdo::AnonUserId.generate}\n"].each do |invalid_id|
+      context "when anon_user_id cookie is #{invalid_id.inspect}" do
+        let(:cookies) {{Cdo::AnonUserId::KEY => invalid_id}}
+
+        it 'replaces it' do
+          _(anon_user_id).must_match Cdo::AnonUserId::FORMAT
+          _(set_cookie_header).must_include "#{Cdo::AnonUserId::KEY}=#{anon_user_id};"
+        end
+      end
+    end
+
+    context 'when Statsig stable ID cookie exists' do
+      let(:stable_id) {SecureRandom.uuid}
+      let(:cookies) {{SharedConstants::STATSIG_STABLE_ID_KEY => stable_id}}
+
+      it 'reuses Statsig stable ID' do
+        _(anon_user_id).must_equal stable_id
+        _(set_cookie_header).must_include "#{Cdo::AnonUserId::KEY}=#{stable_id};"
+      end
+    end
+
+    context 'when Statsig stable ID is in session' do
+      let(:stable_id) {SecureRandom.uuid}
+      let(:session) {{SharedConstants::STATSIG_STABLE_ID_KEY => stable_id}}
+
+      before do
+        request.env['rack.session'] = session
+      end
+
+      it 'reuses Statsig stable ID' do
+        _(anon_user_id).must_equal stable_id
+        _(set_cookie_header).must_include "#{Cdo::AnonUserId::KEY}=#{stable_id};"
+      end
+
+      it 'does not write session' do
+        session.expects(:[]=).never
+
+        _(anon_user_id).must_equal stable_id
+      end
+    end
+
+    context 'when Statsig stable ID is invalid' do
+      let(:invalid_id) {'<html>blocked</html>'}
+      let(:cookies) {{SharedConstants::STATSIG_STABLE_ID_KEY => invalid_id}}
+
+      before do
+        request.env['rack.session'] = {SharedConstants::STATSIG_STABLE_ID_KEY => invalid_id}
+      end
+
+      it 'generates new ID' do
+        _(anon_user_id).must_match Cdo::AnonUserId::FORMAT
+        _(anon_user_id).wont_equal invalid_id
+      end
     end
   end
 end

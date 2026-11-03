@@ -1,0 +1,16 @@
+name 'aif-y2-natural-language-processing-postassessment-q9-2026'
+
+wrong 'The likelihood that an event happens, out of all the possible outcomes'
+wrong 'The likelihood that two events happen at the same time'
+right 'The likelihood that one event happens, given that another event already happened'
+wrong 'A classification algorithm that calculates the probability of a category given its features'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+What is conditional probability?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 8: Naive Bayes
+MARKDOWN

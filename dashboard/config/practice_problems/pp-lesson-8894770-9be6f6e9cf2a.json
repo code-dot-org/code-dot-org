@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894770-9be6f6e9cf2a",
+  "problem_type": "match",
+  "active": true,
+  "problem_text": "Match the AI application with its societal impact.",
+  "solution": [
+    {
+      "option": "Autonomous vehicles",
+      "correct": "Reducing traffic accidents"
+    },
+    {
+      "option": "AI in agriculture",
+      "correct": "Increasing crop yields"
+    },
+    {
+      "option": "Chatbots in customer service",
+      "correct": "Enhancing user experience"
+    },
+    {
+      "option": "AI in education",
+      "correct": "Personalizing learning paths"
+    }
+  ],
+  "objective_keys": [
+    "ee24455c-f121-4590-9546-3aed9f487b17"
+  ]
+}

@@ -1,56 +1,43 @@
 .card {
   display: flex;
   flex-direction: column;
-  border: 1px solid var(--border-neutral-primary);
-  border-radius: var(--shape-sm);
-  background: var(--background-neutral-secondary);
+  box-sizing: border-box;
   overflow: hidden;
+  border: 1px solid var(--border-neutral-primary);
+  border-radius: var(--shape-lg);
+  background: var(--background-neutral-primary);
 }
 
-.header {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 10px;
-  background: var(--background-neutral-primary);
+.cardNested {
+  border-radius: var(--shape-sm);
 }
 
 .header:not(:last-child) {
   border-bottom: 1px solid var(--border-neutral-primary);
 }
 
-.headerPreview {
+.leading {
   display: flex;
+  flex: 1;
   align-items: center;
-  gap: 8px;
-  flex: 1 0 0;
+  gap: 10px;
   min-width: 0;
 }
 
 .typeIcon {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 22px;
   color: var(--text-neutral-quaternary);
 }
 
-.unsavedBadge {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  width: 24px;
-  height: 24px;
-  border: 1px solid var(--border-warning-mid);
-  border-radius: var(--shape-sm);
-  background: var(--background-warning-light);
-  color: var(--text-warning-secondary);
-}
-
-.preview {
-  flex: 1 0 0;
-  min-width: 0;
+.nameClamp {
+  max-width: 42%;
   overflow: hidden;
-  white-space: nowrap;
   text-overflow: ellipsis;
-  color: var(--text-neutral-tertiary);
 }
 
 .saveError {
@@ -63,7 +50,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 6px;
-  padding: 10px;
+  padding: 10px 8px 10px 10px;
   background: var(--background-neutral-primary);
   border-top: 1px solid var(--border-neutral-primary);
 }
@@ -79,4 +66,5 @@
   display: flex;
   align-items: center;
   gap: 6px;
+  margin-left: auto;
 }

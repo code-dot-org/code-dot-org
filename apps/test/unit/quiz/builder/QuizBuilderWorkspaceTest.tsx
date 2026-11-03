@@ -67,7 +67,7 @@ function renderWorkspace(
       quizTitle="AI Foundations Certification Exam"
       showIntroScreen={false}
       customIntroText=""
-      hasTimeLimit={false}
+      allowMultipleAttempts={false}
       onSaveQuizConfig={jest.fn()}
       {...propOverrides}
     />
@@ -103,12 +103,32 @@ describe('QuizBuilderWorkspace', () => {
     expect(screen.getByText('Loading questions…')).toBeInTheDocument();
   });
 
-  it('shows an empty message when the quiz has no questions', () => {
+  it('shows an empty quiz region when the quiz has no questions', () => {
     renderWorkspace();
     expect(
-      screen.getByText('This quiz has no questions yet.')
+      screen.getByRole('heading', {level: 2, name: 'This quiz is empty'})
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText('Start by creating a new question.')
     ).toBeInTheDocument();
     expect(screen.getByText('0 questions')).toBeInTheDocument();
+    expect(screen.getByText('1 attempt')).toBeInTheDocument();
+    expect(
+      screen.queryByRole('button', {name: 'Add page'})
+    ).not.toBeInTheDocument();
+  });
+
+  it('shows time limit and unlimited attempts in the workspace header', () => {
+    renderWorkspace({}, {timeLimitMinutes: 45, allowMultipleAttempts: true});
+    expect(screen.getByText('45 minutes')).toBeInTheDocument();
+    expect(screen.getByText('Unlimited attempts')).toBeInTheDocument();
+    expect(screen.queryByText('1 attempt')).not.toBeInTheDocument();
+  });
+
+  it('omits the time limit from the workspace header for an untimed quiz', () => {
+    renderWorkspace();
+    expect(screen.queryByText(/minute/)).not.toBeInTheDocument();
+    expect(screen.getByText('1 attempt')).toBeInTheDocument();
   });
 
   it('lists each placed question with its name and question title', () => {
@@ -123,9 +143,11 @@ describe('QuizBuilderWorkspace', () => {
       ],
     });
 
-    // Once for the workspace-wide total, once for the page 1 header - both
-    // questions default to page 1.
+    // Once in the header, once on the page card.
     expect(screen.getAllByText('2 questions')).toHaveLength(2);
+    expect(
+      screen.getByRole('heading', {level: 2, name: 'Page 1'})
+    ).toBeInTheDocument();
     expect(
       screen.getByText('JavaScript variable fundamentals')
     ).toBeInTheDocument();
@@ -184,7 +206,7 @@ describe('QuizBuilderWorkspace', () => {
     );
   });
 
-  it('adds an empty page one past the last existing page without creating a question', () => {
+  it('adds an empty page one past the last existing page without creating a question', async () => {
     const addPendingQuestion = jest.fn();
     renderWorkspace({
       questions: [
@@ -197,43 +219,44 @@ describe('QuizBuilderWorkspace', () => {
     fireEvent.click(screen.getByRole('button', {name: 'Add page'}));
     expect(addPendingQuestion).not.toHaveBeenCalled();
     expect(screen.getByText('Page 4')).toBeInTheDocument();
-    expect(screen.getByRole('button', {name: 'Add page'})).toBeDisabled();
+    expect(screen.getByText('This page is empty')).toBeInTheDocument();
+    const addPage = screen.getByRole('button', {name: 'Add page'});
+    expect(addPage).toHaveAttribute('aria-disabled', 'true');
+    fireEvent.mouseOver(addPage);
+    expect(
+      await screen.findByRole('tooltip', {
+        name: 'Create a question on the empty page first.',
+      })
+    ).toBeInTheDocument();
 
     createFromDropdown(2, 'Free response');
     expect(addPendingQuestion).toHaveBeenCalledWith(4, 'FreeResponseQuestion');
   });
 
-  it('disables the create button while questions are still loading', () => {
+  it('hides create actions while questions are still loading', () => {
     renderWorkspace({isLoading: true});
     expect(
-      screen.getByRole('button', {name: 'Create question'})
-    ).toBeDisabled();
+      screen.queryByRole('button', {name: 'Create question'})
+    ).not.toBeInTheDocument();
   });
 
-  it('disables the per-page create and add-page buttons while a pending question already exists', () => {
+  it('disables the per-page create and add-page buttons while a pending question already exists', async () => {
     renderWorkspace({questions: [question({id: -1})]});
-    expect(
-      screen.getByRole('button', {name: 'Create question'})
-    ).toBeDisabled();
-    expect(screen.getByRole('button', {name: 'Add page'})).toBeDisabled();
-  });
+    const createQuestion = screen.getByRole('button', {
+      name: 'Create question',
+    });
+    expect(createQuestion).toHaveAttribute('aria-disabled', 'true');
+    expect(screen.getByRole('button', {name: 'Add page'})).toHaveAttribute(
+      'aria-disabled',
+      'true'
+    );
 
-  it('explains why the create button is disabled by a pending question', () => {
-    renderWorkspace({questions: [question({id: -1})]});
+    fireEvent.mouseOver(createQuestion);
     expect(
-      screen.getByText(
-        'Save or remove your new question before creating another.'
-      )
+      await screen.findByRole('tooltip', {
+        name: 'Save or remove your new question first.',
+      })
     ).toBeInTheDocument();
-  });
-
-  it('does not show the pending-question hint otherwise', () => {
-    renderWorkspace({questions: [question()]});
-    expect(
-      screen.queryByText(
-        'Save or remove your new question before creating another.'
-      )
-    ).toBeNull();
   });
 
   it('renders a server error', () => {
@@ -294,7 +317,7 @@ describe('QuizBuilderWorkspace', () => {
       ],
     });
 
-    const pageLabels = screen.getAllByText(/^Page \d$/);
+    const pageLabels = screen.getAllByRole('heading', {name: /^Page \d$/});
     expect(pageLabels.map(label => label.textContent)).toEqual([
       'Page 1',
       'Page 2',
@@ -315,5 +338,61 @@ describe('QuizBuilderWorkspace', () => {
 
     fireEvent.click(editButtons[1]);
     expect(screen.getAllByRole('tab', {name: 'Question'})).toHaveLength(1);
+  });
+
+  it('collapses a page and expands it again, keeping other pages open', () => {
+    renderWorkspace({
+      questions: [
+        question({id: 1, page: 1}),
+        question({id: 2, page: 2, questionName: 'MVC frameworks'}),
+      ],
+    });
+
+    expect(screen.getByText('JavaScript variable fundamentals')).toBeVisible();
+    expect(screen.getByText('MVC frameworks')).toBeVisible();
+
+    fireEvent.click(screen.getByRole('button', {name: 'Collapse Page 1'}));
+    expect(
+      screen.getByText('JavaScript variable fundamentals')
+    ).not.toBeVisible();
+    expect(screen.getByText('MVC frameworks')).toBeVisible();
+    expect(
+      screen.getByRole('button', {name: 'Expand Page 1'})
+    ).toBeInTheDocument();
+
+    fireEvent.click(screen.getByRole('button', {name: 'Expand Page 1'}));
+    expect(screen.getByText('JavaScript variable fundamentals')).toBeVisible();
+  });
+
+  it('flags a collapsed page whose question has unsaved edits', () => {
+    renderWorkspace({
+      questions: [
+        question({id: 1, page: 1}),
+        question({id: 2, page: 2, questionName: 'MVC frameworks'}),
+      ],
+    });
+    fireEvent.click(screen.getAllByRole('button', {name: 'Edit question'})[0]);
+    fireEvent.change(
+      screen.getByDisplayValue('JavaScript variable fundamentals'),
+      {target: {value: 'Edited name'}}
+    );
+
+    const badge = 'Page contains an unsaved question';
+    expect(screen.queryByRole('img', {name: badge})).not.toBeInTheDocument();
+
+    fireEvent.click(screen.getByRole('button', {name: 'Collapse Page 1'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Collapse Page 2'}));
+    const pageOf = (name: string) => screen.getByRole('region', {name});
+    expect(
+      within(pageOf('Page 1')).getByRole('img', {name: badge})
+    ).toBeInTheDocument();
+    expect(
+      within(pageOf('Page 2')).queryByRole('img', {name: badge})
+    ).not.toBeInTheDocument();
+
+    fireEvent.click(screen.getByRole('button', {name: 'Expand Page 1'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Discard changes'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Collapse Page 1'}));
+    expect(screen.queryByRole('img', {name: badge})).not.toBeInTheDocument();
   });
 });

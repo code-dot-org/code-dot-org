@@ -252,6 +252,25 @@ describe('QuizQuestionCard', () => {
 
       expect(screen.getByLabelText('Internal name*')).toHaveFocus();
     });
+
+    it('hides Remove from quiz and uses Discard to drop the unsaved card', async () => {
+      const {onRemove} = renderCard({
+        question: PENDING_QUESTION,
+        isExpanded: true,
+      });
+
+      expect(
+        screen.queryByRole('button', {name: 'Remove from quiz'})
+      ).toBeNull();
+      expect(
+        screen.queryByRole('button', {name: 'Discard changes'})
+      ).toBeNull();
+
+      await act(async () => {
+        fireEvent.click(screen.getByRole('button', {name: 'Discard'}));
+      });
+      expect(onRemove).toHaveBeenCalledWith(-1);
+    });
   });
 
   it('does not take focus when an existing question opens expanded', () => {

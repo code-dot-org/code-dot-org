@@ -1,63 +1,10 @@
-import {Progress} from '@cdo/apps/adaptive/progress/model';
 import {
   GENERATION_TRACE_KEY,
   applyGeneratedFiles,
-  freeResponseAnswers,
   editableFiles,
   generationTraceId,
 } from '@cdo/apps/adaptive/project/projectGeneration';
-import {Pathway} from '@cdo/apps/adaptive/types';
 import {Channel, ProjectFileType, ProjectSources} from '@cdo/apps/lab2/types';
-
-const pathway: Pathway = {
-  formatVersion: 4,
-  id: 'p',
-  title: 'Build a website',
-  objective: 'Make a site.',
-  project: {templateLevel: 'tmpl', description: 'A site.'},
-  skills: {},
-  checkpoints: [
-    {
-      id: 'intro',
-      title: 'Intro',
-      description: 'Start.',
-      steps: [
-        {
-          id: 'plan',
-          title: 'Plan',
-          kind: 'questions',
-          questions: [
-            {id: 1, type: 'freeResponse', text: 'What will you make?'},
-            {
-              id: 2,
-              type: 'MultipleChoiceQuestion',
-              questionName: 'q2',
-              questionTitle: 'Pick one',
-              choices: [
-                {id: 'a', text: 'A'},
-                {id: 'b', text: 'B'},
-              ],
-            },
-            {id: 3, type: 'freeResponse', text: 'Who is it for?'},
-          ],
-        },
-      ],
-    },
-    {
-      id: 'later',
-      title: 'Later',
-      description: 'More.',
-      steps: [
-        {
-          id: 'more',
-          title: 'More',
-          kind: 'questions',
-          questions: [{id: 4, type: 'freeResponse', text: 'Anything else?'}],
-        },
-      ],
-    },
-  ],
-};
 
 const sources: ProjectSources = {
   source: {
@@ -101,35 +48,6 @@ const sources: ProjectSources = {
     },
   },
 };
-
-describe('freeResponseAnswers', () => {
-  it('lists the latest text of each answered free response question, in pathway order', () => {
-    const progress: Progress = {
-      steps: {
-        more: {timeSpent: 0, answers: {4: [{answerId: 'x', text: 'No'}]}},
-        plan: {
-          timeSpent: 0,
-          answers: {
-            1: [
-              {answerId: 'x', text: 'A cat site'},
-              {answerId: 'y', text: 'A dog site'},
-            ],
-            2: [{answerId: 'a'}],
-            3: [{answerId: 'x', text: '   '}],
-          },
-        },
-      },
-    };
-    expect(freeResponseAnswers(pathway, progress)).toEqual([
-      {question: 'What will you make?', answer: 'A dog site'},
-      {question: 'Anything else?', answer: 'No'},
-    ]);
-  });
-
-  it('is empty with nothing answered', () => {
-    expect(freeResponseAnswers(pathway, {steps: {}})).toEqual([]);
-  });
-});
 
 describe('editableFiles', () => {
   it('lists the files the student edits, locked or not, and no asset or hidden file', () => {

@@ -10,12 +10,6 @@ module WebPurify
   API_ENDPOINT = URI(CDO.webpurify_api_endpoint).freeze
   CHARACTER_LIMIT = 30_000
   REQUEST_LIMIT = 4
-  CONNECTION_OPTIONS = {
-    use_ssl: true,
-    read_timeout: DCDO.get('webpurify_http_read_timeout', 10),
-    open_timeout: DCDO.get('webpurify_tcp_connect_timeout', 5),
-    keep_alive_timeout: DCDO.get('webpurify_http_keep_alive_timeout', 0) # Disable HTTP connection pooling.
-  }
   ISO_639_1_TO_WEBPURIFY = {
     'es' => 'sp',
     'ko' => 'kr',
@@ -29,6 +23,15 @@ module WebPurify
       @text_length = text_length
       super
     end
+  end
+
+  def self.connection_options
+    {
+      use_ssl: true,
+      read_timeout: DCDO.get('webpurify_http_read_timeout', 10),
+      open_timeout: DCDO.get('webpurify_tcp_connect_timeout', 5),
+      keep_alive_timeout: DCDO.get('webpurify_http_keep_alive_timeout', 0) # Disable HTTP connection pooling.
+    }
   end
 
   # Note: If text has a string of text without whitespace longer than CHARACTER_LIMIT,
@@ -79,7 +82,7 @@ module WebPurify
 
     chunks = split_text(text)
     expletives = []
-    Net::HTTP.start(API_ENDPOINT.host, API_ENDPOINT.port, **CONNECTION_OPTIONS) do |http|
+    Net::HTTP.start(API_ENDPOINT.host, API_ENDPOINT.port, **connection_options) do |http|
       chunks.each do |chunk|
         request = Net::HTTP::Post.new(API_ENDPOINT)
         form_data = [
