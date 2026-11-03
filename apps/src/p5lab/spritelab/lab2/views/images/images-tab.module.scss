@@ -42,10 +42,11 @@ $pad: 16px;
   min-height: 0;
 }
 
+// The plus never wraps under the name: a narrow column truncates the
+// name and count instead.
 .listHeader {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
   gap: 4px;
   min-height: 36px;
 }
@@ -53,6 +54,7 @@ $pad: 16px;
 // The name over its count, with the plus at the right.
 .listTitle {
   flex: 1 1 auto;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   gap: 2px;
@@ -61,6 +63,9 @@ $pad: 16px;
 .listName,
 .listCount {
   margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .listCount {
@@ -69,6 +74,7 @@ $pad: 16px;
 
 // The plus: a brand square like a dialog header's icon.
 .newButton {
+  flex: none;
   width: 40px;
   height: 40px;
   border-radius: 8px;
