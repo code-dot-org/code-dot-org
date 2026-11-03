@@ -632,6 +632,34 @@ class LevelProgressableTest < ActiveSupport::TestCase
         _script_level_hidden?.must_equal true
       end
     end
+
+    context 'when an archived section with the same script does not hide the script_level' do
+      let(:active_section) {create(:section, user: teacher, script: script)}
+      let(:archived_section) {create(:section, user: teacher, script: script, hidden: true)}
+
+      before do
+        allow(user).to receive(:sections_as_student).and_return([active_section, archived_section])
+        allow(script_level).to receive(:hidden_for_section?).with(active_section.id).and_return(true)
+        allow(script_level).to receive(:hidden_for_section?).with(archived_section.id).and_return(false)
+      end
+
+      it 'returns true' do
+        _script_level_hidden?.must_equal true
+      end
+    end
+
+    context 'when every section is archived' do
+      let(:archived_section) {create(:section, user: teacher, script: script, hidden: true)}
+
+      before do
+        allow(user).to receive(:sections_as_student).and_return([archived_section])
+        allow(script_level).to receive(:hidden_for_section?).with(archived_section.id).and_return(true)
+      end
+
+      it 'returns false' do
+        _script_level_hidden?.must_equal false
+      end
+    end
   end
 
   describe '#visible_script_levels' do

@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894905-58f48cd27a0a",
+  "problem_type": "multiple_choice_multi_select",
+  "active": true,
+  "problem_text": "Select all scenarios where using AI might not be advisable.",
+  "solution": [
+    {
+      "option": "Making decisions that affect people's lives without human review.",
+      "correct": true
+    },
+    {
+      "option": "Analyzing large datasets for trends.",
+      "correct": false
+    },
+    {
+      "option": "Providing customer service with human oversight.",
+      "correct": false
+    },
+    {
+      "option": "Generating creative content like art or music without feedback.",
+      "correct": true
+    }
+  ],
+  "objective_keys": [
+    "e9d1c4d2-a22e-4fd4-bddd-2137d808871c"
+  ]
+}

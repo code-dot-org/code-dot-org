@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894765-041b848d54cf",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "Which of the following statements best reflects an understanding of AI's capabilities and risks based on your learning throughout the unit?",
+  "solution": [
+    {
+      "option": "AI can completely replace human decision-making in all areas.",
+      "correct": false
+    },
+    {
+      "option": "AI has strengths in data processing but can introduce biases if not supervised by humans.",
+      "correct": true
+    },
+    {
+      "option": "AI is always beneficial and poses no risks.",
+      "correct": false
+    },
+    {
+      "option": "AI is too complex for human understanding and should be avoided.",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "153c51bf-4018-4ed9-8949-697ea18dcfe4"
+  ]
+}

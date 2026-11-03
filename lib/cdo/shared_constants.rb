@@ -902,6 +902,8 @@ module SharedConstants
     THEATER_DESCRIPTION: "theater-description",
     # Levelbuilder curriculum generator pages (lessons/:id/generate and the unit scope).
     CURRICULUM_GENERATOR: "curriculum-generator",
+    # The Sprite Lab 2 "ask AI" block. Levelbuilders only for now.
+    SPRITELAB_ASK_AI: "spritelab-ask-ai",
   }
 
   AI_CHAT_READ_TIMEOUTS = {
@@ -912,6 +914,7 @@ module SharedConstants
     AI_CHAT_CLIENT_TYPES[:ADAPTIVE] => 30,
     AI_CHAT_CLIENT_TYPES[:THEATER_DESCRIPTION] => 30,
     AI_CHAT_CLIENT_TYPES[:CURRICULUM_GENERATOR] => 30,
+    AI_CHAT_CLIENT_TYPES[:SPRITELAB_ASK_AI] => 30,
   }
 
   AICHAT_METRICS_NAMESPACE = 'GenAICurriculum'.freeze

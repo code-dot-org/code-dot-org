@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {TEST_PANEL_WIDTH} from '../constants';
+import {RIGHT_PANEL_WIDTH} from '../constants';
 import {useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
 import {getDisplayTree} from '../selectors/visualizationSelectors';
@@ -27,7 +27,7 @@ const Results = () => {
           <DecisionTree overlay={<TestPanel />} />
         ) : (
           <div className={styles.emptyCanvas}>
-            <div className={styles.overlay} style={{width: TEST_PANEL_WIDTH}}>
+            <div className={styles.overlay} style={{width: RIGHT_PANEL_WIDTH}}>
               <TestPanel />
             </div>
           </div>

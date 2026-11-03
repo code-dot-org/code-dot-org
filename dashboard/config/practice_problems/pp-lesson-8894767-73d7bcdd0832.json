@@ -1,0 +1,23 @@
+{
+  "key": "pp-lesson-8894767-73d7bcdd0832",
+  "problem_type": "match",
+  "active": true,
+  "problem_text": "Match the App Lab features to their purposes: Buttons, Text, Screens.",
+  "solution": [
+    {
+      "option": "Buttons",
+      "correct": "Interactive elements that can be clicked"
+    },
+    {
+      "option": "Text",
+      "correct": "Displays information or instructions"
+    },
+    {
+      "option": "Screens",
+      "correct": "Different views in your app"
+    }
+  ],
+  "objective_keys": [
+    "b97d27b5-33da-4107-aac2-0a83542650c3"
+  ]
+}

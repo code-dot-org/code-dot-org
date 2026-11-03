@@ -79,6 +79,31 @@ it may be on another branch or stale.
 `REPO_REF=<branch>` reads another branch, e.g. one whose schema change has
 not merged yet.
 
+### Levels from levelbuilder
+
+GitHub has a level only after the nightly content scoop. When the user says
+levelbuilder is the source of truth, snapshot it instead; no SSH is needed.
+
+1. The user signs in to https://levelbuilder-studio.code.org in the
+   chrome-devtools browser. Never handle their credentials.
+2. `evaluate_script` with
+   `() => { window.LB_SNAPSHOT_CONFIG = {pathway: '<id>', prefix: '<level name prefix>'} }`,
+   adding `ids: [first, last]` for any level the pathway copies but does
+   not name (multiple choice and free response levels). Then
+   `evaluate_script` with `sourcePath` `$S/lb_fetch.js` and `filePath`
+   under the repo's `dashboard/tmp/`; the tool writes only inside the
+   working directory. Move the file to
+   `source/levelbuilder/<UTC time>/raw.json`.
+3. `python3 -I $S/lb_snapshot.py split <raw.json> <dir>` writes
+   `<dir>/levels/` and `<dir>/pathway.json`;
+   `lb_snapshot.py diff <old dir> <new dir>` compares two snapshots.
+4. Run `repo.py` and the checker with `LEVELS_SNAPSHOT=<dir>/levels`.
+
+`pathway.json` is levelbuilder's copy of the pathway, which the pathway
+editor writes and the scoop carries to staging. A paste replaces it, so
+build from whichever of it and staging is newer, and validate with
+`REPO_REF` set to the branch levelbuilder will run at paste time.
+
 ## Which mode
 
 - No workspace for this pathway yet: **first build** (below).

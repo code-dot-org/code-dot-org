@@ -128,7 +128,7 @@ class SessionsControllerTest < ActionController::TestCase
     frozen_time = Date.parse('1985-10-26 01:20:00')
     anon_user_id = Cdo::AnonUserId.generate
     DateTime.stubs(:now).returns(frozen_time)
-    session[:statsig_stable_id] = anon_user_id
+    request.cookies[Cdo::AnonUserId::KEY] = anon_user_id
     user = create(:user, sign_in_count: 2)
     assert_creates(SignIn) do
       create_session_for_user(user)
@@ -140,15 +140,37 @@ class SessionsControllerTest < ActionController::TestCase
     assert_equal anon_user_id, sign_in.anon_user_id
   end
 
-  test 'signing in user replaces and stores a blank stable ID' do
-    session[:statsig_stable_id] = ''
+  test 'signing in user replaces and stores blank anon_user_id cookie' do
+    request.cookies[Cdo::AnonUserId::KEY] = ''
     user = create(:user)
 
     create_session_for_user(user)
 
     anon_user_id = SignIn.find_by!(user_id: user.id).anon_user_id
     assert Cdo::AnonUserId.valid?(anon_user_id)
-    assert_equal session[:statsig_stable_id], anon_user_id
+    assert_equal cookies[Cdo::AnonUserId::KEY], anon_user_id
+  end
+
+  test 'signing in user reuses Statsig stable ID without anon_user_id cookie' do
+    stable_id = SecureRandom.uuid
+    session[:statsig_stable_id] = stable_id
+    user = create(:user)
+
+    create_session_for_user(user)
+
+    assert_equal stable_id, SignIn.find_by!(user_id: user.id).anon_user_id
+    assert_equal stable_id, cookies[Cdo::AnonUserId::KEY]
+  end
+
+  test 'signing in user prefers anon_user_id cookie over Statsig stable ID' do
+    anon_user_id = Cdo::AnonUserId.generate
+    request.cookies[Cdo::AnonUserId::KEY] = anon_user_id
+    request.cookies[SharedConstants::STATSIG_STABLE_ID_KEY] = SecureRandom.uuid
+    user = create(:user)
+
+    create_session_for_user(user)
+
+    assert_equal anon_user_id, SignIn.find_by!(user_id: user.id).anon_user_id
   end
 
   test 'failed signin does not create SignIn' do

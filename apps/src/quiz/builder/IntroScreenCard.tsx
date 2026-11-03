@@ -82,7 +82,13 @@ const IntroScreenCard: React.FunctionComponent<IntroScreenCardProps> = ({
       }
     >
       <div className={builderCommonStyles.section}>
-        <FormFieldWrapper label="Content" helperMessage="Supports markdown.">
+        <FormFieldWrapper
+          label="Content"
+          size="s"
+          color="gray"
+          helperMessage="Supports markdown."
+          className={builderCommonStyles.fullWidthField}
+        >
           <textarea
             className={builderCommonStyles.textarea}
             name="customIntroText"

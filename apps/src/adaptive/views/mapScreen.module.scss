@@ -28,13 +28,20 @@
   min-width: 0;
   // The board is scaled to fit, and the zoomed board spills past the edges.
   overflow: hidden;
-  padding: 24px;
 }
 
 .mapBack {
   position: absolute;
   top: 24px;
   right: 24px;
+  z-index: 2;
+}
+
+// Inset past the zoomed map's scrollbar gutter.
+.mapZoom {
+  position: absolute;
+  top: 16px;
+  right: 32px;
   z-index: 2;
 }
 
@@ -51,12 +58,4 @@
   scrollbar-gutter: stable;
   border-left: 1px solid var(--borders-neutral-primary);
   background: var(--background-neutral-secondary);
-}
-
-.sideFooter {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-  margin-top: auto;
 }

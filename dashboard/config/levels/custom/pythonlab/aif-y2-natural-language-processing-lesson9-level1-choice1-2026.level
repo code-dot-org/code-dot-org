@@ -1,0 +1,55 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-11-03T00:32:41.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Find bigrams in a sentence from *The Raven* by Edgar Allan Poe.\r\n\r\n**☑️ Do This:**\r\n\r\n- Complete the `get_bigrams` function. Given a list of tokens, the function should return a list of bigrams.\r\n\r\n**💻 Coding Tip**\r\n\r\nRemember you can iterate over the index of every token, except the last one, with a `for` loop.\r\n\r\n```\r\nfor i in range(len(tokens) - 1):\r\n  ...\r\n```\r\n\r\nAlso remember you can create a tuple as follows:\r\n\r\n```\r\n(value1, value2)\r\n```",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "debug",
+        "documentation",
+        "explainCode",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "import re\n\n\ndef get_bigrams(tokens):\n  bigrams = []\n  # TODO: Complete the function to return all the bigrams in a list\n  \t\n  return bigrams\n\n\ndef tokenize(text):\n  return re.findall(r\"\\w+\", text)\n\n\ndef main():\n  text = \"Once upon a midnight dreary, while I pondered, weak and weary\"\n\n  # Tokenize text\n  tokens = tokenize(text)\n\n  # Get bigrams\n  bigrams = get_bigrams(tokens)\n\n  # Print bigrams\n  for bigram in bigrams:\n    print(bigram)\n\n\nmain()",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMpGVBDS7hBxrHa5\ngIXGloHymK5GfLPdt688jdFt7unhGXD/a5tB28nq6+CbkH6xGB85Ywqz2b/8\nxnuMOcYTdWgf+EwdRLmozjyssKoKzfuS4L04W6w+igfAmVel6QXnj4qa78NZ\nkxFiqOIhGcsWpAi/ALhp37lLW880De2rYzZf2Q3XTzxMjV7gORsPpu9BFWEG\nPnksQvIT2F6X+5nCMVBiGE1XyGubRB7fohHq5RXi9QTmvYIIDxdwJCTfEriR\nBnPSEHYUR9dWY4fwtw8SVaQFwA75M7CUdoGDFGQwULc3la4IhN/B7R+4PezT\nfMn4b/eanWipcmxLePOZ+yBPVxUD58qrXRVd7vv6bn3wCOHD+391hzQki1A7\nubzaEUFEhwQi3wuR7qb1dVY9Lfy2z3aOQ33WuJKfxi4KZUs5hjA7Y3/lHiHe\ntsFzHjaZe539pMMkyQ4ZcohFn4fUd6RbisbjzAKPQDf0DfGI+coUN1MW+JRJ\n9lQL4y0pHAITLpuaiujf/y61YNlIcSO4nGlOjTgMJu9n7/p2MzAzfmQUQzw2\nb89u0EmCuHNUUQpLQzsb1lAXvxnbfpsPHk0jQBiUcepub5nYxWdBx+Jgx4u3\nWppk8tsXuDBdHPjtEx66lEgQt90GhGPOtNf0WEYJSpM9fqmnybfwuDHUXITG\nKEgri/sGH1yrito9q7dKG61wh0Ca/VyrDCEcV8PpnAaXNU3STPnIvxYX7mHA\npVrsuIo1PYuxVifpTXiiqNYFk93GamdQtU4=\n",
+    "display_name": "The Raven",
+    "bubble_choice_description": "Find bigrams in a sentence from *The Raven* by Edgar Allan Poe.",
+    "thumbnail_url": "https://images.code.org/74a59dd0c0a7c2329342de1b9c560e5c-raven.jpg"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-03 00:35:00 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-03 00:35:15 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-03 00:36:04 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-03 00:36:33 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-03 00:36:39 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-03 00:36:47 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-03 00:37:08 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-03 00:39:12 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-03 00:43:56 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-03 00:44:08 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

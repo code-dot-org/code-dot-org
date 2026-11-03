@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-6284592-d27e1d10f3ca",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "What is the primary purpose of an algorithm?",
+  "solution": [
+    {
+      "option": "To entertain users with games",
+      "correct": false
+    },
+    {
+      "option": "To provide a set of instructions to accomplish a task",
+      "correct": true
+    },
+    {
+      "option": "To collect data for marketing",
+      "correct": false
+    },
+    {
+      "option": "To display visual content",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "d6223620-43fd-43bb-9eb1-1a6eb17b69d8"
+  ]
+}

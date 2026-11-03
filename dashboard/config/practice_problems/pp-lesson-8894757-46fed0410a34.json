@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894757-46fed0410a34",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "Which of the following best describes the difference between making something and making something for someone?",
+  "solution": [
+    {
+      "option": "Making something is about the creator's intent, while making something for someone involves understanding the audience's needs.",
+      "correct": true
+    },
+    {
+      "option": "Making something is simply creating, while making something for someone is a more complex process.",
+      "correct": false
+    },
+    {
+      "option": "There is no difference; both terms mean the same thing.",
+      "correct": false
+    },
+    {
+      "option": "Making something for someone is always more difficult than simply making something.",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "5a3e8eb7-a56d-4ee6-8e78-5ef38c639b2b"
+  ]
+}

@@ -55,7 +55,7 @@ $overlay-float-min-width: 600px;
 .hints {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  // The 300px Test panel floats only in a canvas at least twice its width.
+  // Leaves the right half of the canvas to the floating Test panel.
   max-width: calc(50cqi - 16px);
 
   .hint {
@@ -239,7 +239,9 @@ $overlay-float-min-width: 600px;
 }
 
 .gradeIcon {
-  font-size: var(--tree-grade-icon-size);
+  flex-shrink: 0;
+  width: var(--tree-grade-icon-size);
+  height: var(--tree-grade-icon-size);
 }
 
 .correct {

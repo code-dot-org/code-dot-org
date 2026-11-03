@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-6284597-75b4ada6682c",
+  "problem_type": "multiple_choice_multi_select",
+  "active": true,
+  "problem_text": "Which of the following conditions could potentially stop a while loop? Select all that apply.",
+  "solution": [
+    {
+      "option": "The Painter runs out of paint (has_paint() returns false)",
+      "correct": true
+    },
+    {
+      "option": "The Painter moves to a new location",
+      "correct": false
+    },
+    {
+      "option": "The Painter checks if it can move (can_move() returns false)",
+      "correct": true
+    },
+    {
+      "option": "The Painter is told to paint",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "60e4e0a7-7045-435e-ba55-32ee4743f1af"
+  ]
+}

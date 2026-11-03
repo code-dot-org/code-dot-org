@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894781-9b2436b6eb67",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "Which of the following best defines artificial intelligence (AI)?",
+  "solution": [
+    {
+      "option": "AI is a technology that enables machines to perform tasks that typically require human intelligence.",
+      "correct": true
+    },
+    {
+      "option": "AI is a type of software that only plays games.",
+      "correct": false
+    },
+    {
+      "option": "AI refers to all types of robots regardless of their function.",
+      "correct": false
+    },
+    {
+      "option": "AI is exclusively used in self-driving cars.",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "502f6981-ddd8-453e-8b74-494d492d4cea"
+  ]
+}

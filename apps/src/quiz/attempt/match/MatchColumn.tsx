@@ -2,21 +2,22 @@ import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
-import {MatchPairs, MatchSets, MatchSide} from './types';
-import {findPartner, itemsInColumn, letterOf, getItemText} from './utils';
+import {MarkedPair, MatchSets, MatchSide} from './types';
+import {itemsInColumn, letterOf, getItemText} from './utils';
 
 import styles from './match-question-container.module.scss';
 
 interface MatchColumnProps {
   matchSets: MatchSets;
   side: MatchSide;
-  pairs: MatchPairs;
+  pairs: MarkedPair[];
   selectedId: string | undefined;
   // Omit for read-only cards, which aren't buttons.
   onClickItem?: (id: string) => void;
   // Receives each item's dot, which MatchBoard draws lines to.
   dotRef: (id: string, element: HTMLElement | null) => void;
   disabled?: boolean;
+  isAnswerKey?: boolean;
 }
 
 const MatchColumn: React.FunctionComponent<MatchColumnProps> = ({
@@ -27,6 +28,7 @@ const MatchColumn: React.FunctionComponent<MatchColumnProps> = ({
   onClickItem,
   dotRef,
   disabled,
+  isAnswerKey,
 }) => {
   const ColumnTag = onClickItem ? 'div' : 'ul';
   return (
@@ -35,7 +37,9 @@ const MatchColumn: React.FunctionComponent<MatchColumnProps> = ({
       role={onClickItem ? undefined : 'list'}
     >
       {itemsInColumn(matchSets, side).map(item => {
-        const partnerId = findPartner(pairs, item.id);
+        const pair = pairs.find(({ids}) => ids.includes(item.id));
+        const partnerId = pair?.ids.find(id => id !== item.id);
+        const status = pair?.status;
         const isSelected = selectedId === item.id;
         // An end item shows its partner's letter once paired.
         const letter =
@@ -46,7 +50,9 @@ const MatchColumn: React.FunctionComponent<MatchColumnProps> = ({
           styles.card,
           side === 'end' && styles.end,
           {
-            [styles.cardActive]: partnerId || isSelected,
+            [styles.cardActive]: (partnerId || isSelected) && !status,
+            [styles.cardCorrect]: status === 'correct',
+            [styles.cardIncorrect]: status === 'incorrect',
           }
         );
         const content = (
@@ -77,6 +83,8 @@ const MatchColumn: React.FunctionComponent<MatchColumnProps> = ({
                 {partnerId
                   ? `, matched with ${getItemText(matchSets, partnerId)}`
                   : ', not matched'}
+                {/* The answer key's board name already says its pairs are correct. */}
+                {status && !isAnswerKey && `, ${status}`}
               </span>
             </li>
           );

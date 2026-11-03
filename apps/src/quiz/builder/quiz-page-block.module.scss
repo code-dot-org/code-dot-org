@@ -1,0 +1,145 @@
+.pageBlock {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+// ActionDropdown does not portal, so this page has to paint above the next one.
+.pageBlock:focus-within {
+  z-index: 1;
+}
+
+// Deck layers are z-index -1. Isolating every page would trap that menu.
+.deck {
+  isolation: isolate;
+}
+
+.page {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border: 1px solid var(--border-neutral-primary);
+  border-radius: var(--shape-lg);
+  background: var(--background-neutral-primary);
+}
+
+.pageDeck {
+  margin-bottom: 10px;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 16px;
+    border: 1px solid var(--border-neutral-primary);
+    border-radius: var(--shape-lg);
+    background: var(--background-neutral-primary);
+  }
+
+  &::before {
+    left: 6px;
+    right: 6px;
+    z-index: -1;
+    transform: translateY(6px);
+  }
+
+  &::after {
+    left: 12px;
+    right: 12px;
+    z-index: -2;
+    transform: translateY(11px);
+  }
+}
+
+.pageHeader {
+  border-bottom: 1px solid transparent;
+  border-radius: var(--shape-lg);
+}
+
+.pageHeaderOpen {
+  border-bottom-color: var(--border-neutral-primary);
+  border-radius: var(--shape-lg) var(--shape-lg) 0 0;
+}
+
+.pageBody {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px;
+  border-radius: 0 0 var(--shape-lg) var(--shape-lg);
+  background: var(--background-neutral-secondary);
+}
+
+// Author `display: flex` otherwise wins over the UA [hidden] rule.
+.pageBody[hidden] {
+  display: none;
+}
+
+.questionList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.questionList > li + li,
+.addQuestionRow {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    width: 1px;
+    height: 8px;
+    background: var(--border-neutral-primary);
+  }
+}
+
+.emptyPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 6px 0 10px;
+  text-align: center;
+}
+
+.emptyPageCopy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.emptyPageTitle {
+  margin: 0;
+  color: var(--text-neutral-primary);
+  font-weight: 600;
+}
+
+.emptyPageHint {
+  margin: 0;
+  color: var(--text-neutral-quaternary);
+}
+
+.addQuestionRow {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 8px 0;
+  border: 1px dashed var(--border-neutral-primary);
+  border-radius: var(--shape-sm);
+  background: var(--background-neutral-secondary);
+}
+
+.addQuestionRow:focus-within {
+  z-index: 1;
+}
