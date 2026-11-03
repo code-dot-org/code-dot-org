@@ -25,7 +25,7 @@ class JSONFileDatastoreAdapter
     load_from_file
     return nil unless @hash.key?(key)
     begin
-      return Oj.load(@hash[key])
+      return Oj.load(@hash[key], mode: :strict)
     rescue => exception
       Observability::Errors.report(exception)
     end
@@ -38,7 +38,7 @@ class JSONFileDatastoreAdapter
     ret = {}
     @hash.each do |k, v|
       begin
-        value = Oj.load(v)
+        value = Oj.load(v, mode: :strict)
       rescue => exception
         Observability::Errors.report(exception)
         nil

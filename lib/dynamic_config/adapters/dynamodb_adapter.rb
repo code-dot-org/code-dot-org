@@ -22,7 +22,7 @@ class DynamoDBAdapter
     )
     return nil if resp.item.nil?
     begin
-      value = Oj.load(resp.item['data-value'])
+      value = Oj.load(resp.item['data-value'], mode: :strict)
     rescue => exception
       Observability::Errors.report(exception)
       value = nil
@@ -61,7 +61,7 @@ class DynamoDBAdapter
       resp.items.each do |item|
         key = item['data-key']
         begin
-          value = Oj.load(item['data-value'])
+          value = Oj.load(item['data-value'], mode: :strict)
         rescue => exception
           Observability::Errors.report(exception)
           value = nil
