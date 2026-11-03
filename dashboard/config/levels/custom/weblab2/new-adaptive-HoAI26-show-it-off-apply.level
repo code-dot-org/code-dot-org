@@ -1,0 +1,17 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-11-03T03:35:29.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "require_edit_to_continue": true,
+    "long_instructions": "TODOs:\r\n- Publish your completed website (your `index.html` and other files).\r\n- Get the unique shareable link for your published site.\r\n- Share this link with your class.",
+    "project_template_level_name": "new-adaptive-HoAI26-template-main-project",
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMqsjbWkeq21MefCT/KT\nabBmQd/B8WbVDpy54BnWeMoiQeJ9VZh7Y5Md4LTDJC7HDBdXNGquCfJlwEE+\nqLwxSswnYdh8GW/q/4Y546UG7zzXEkakvaoZNSgNg512ixE8GVGMlcWkXXxV\nbu9Bj0EJ9R91WUK7/yS8dl+6HmYF0FWzjbY1kLe5AlYgdWWV1LjFTi8fxQvP\n6P92fCgyOZrICLFVjLxFM7WZvR6D0Xf106QXssD43HVkKSOJQVTJxHvSlJCQ\nFPa66GBOXitePldtgcBG2B71ktfU+sCbZFRA8+HrHVVt3GaTUccd8V5oTz8O\nmZIS2XSj10AJsVYaMR9xTcwTb5A+e9bxUlXLh9YIMSeyY7HcRUVQh9htK+Qj\no6LItNivlUEmeqXXUpOle7iGsAABX9ADHSbTpL887fa7TeLkJ930tnqfZc+G\n4gsEDDOd3UmO9kfSXVa+VapPqkAHv2peVyqX5ybNrbuXiErwjAp/hfo9XUw7\nGt2U7T8VLWslFwBmIG3QwuLEfKHKmknrZ6p6d0dY+vqfrDpq6dreWyfyuo1m\nOnehf97q8f/lXp9p8aWF3HjBIOPk+/9bKhxpzLPcFNzYe6ndHSLP8kKeL2c4\nMHmb7uM83rGYwDNGIE/ivtBDKvpYsvJ8/SITHePTeLOR9c6VfHNBIjXG1mWr\nKBE5OI0McnfW/zJCLox9iRuohF/FA5ripVJI4MvYMmRJ2rfVSlHoclwBeQPr\nGlQ7YawkJRxXEJUT9f2YdIs0XM70wKLtTyNpMANDhNqbB8F4vtE/frbUXSra\nJAAZK5KfKMvWBZ7PI7mNCgiKoCSb+P9y8jgTIpfB+IZc3UWbd8zikNj3N5bI\nvd6sIb9dv9ga3yM7KIRUTVgQj/8qUX5Vu3bnJG2ZA2hTl1ow0OMO6i8trgoK\nsVCC6DrfdN6Gy1iuoiYKBjq6naJvQH0YavbboN13xkDiyWHY7/wcEgwwmjQX\nlv9WX8FdeWzRk0/DjnK9P+gjdzpKyCe9hujF2Sl0RDdMoDkqCGJH8z/nQDE3\nOBlJf3fejUYuumNB+eSoLaHVv0oB0ZptQpFnhott4HyVRZ9t+NyRQHoKIkjf\njDE7GvENfoFODMyDSskx8HyyQDDobJvUvFAU+CzpmPhrT+72ue91bC06Cdcq\nbrC7KXK/rhm1Gk3YBKNvtiv9gvcB44Q0nnA8W7iZSBC3ws5BIRailsSdAXLN\nWPtLCFKXRL0CoeLxaj/KFKsFCyPpA4BUjkF2gFcd0gi8lmMm3rvhVtNTwrrv\np1UWbMBJBrRRwNxpZ9OfEQ3VGmaB1RJppFZg+Ki+sExwNW9V+gPlpflVCcrj\ntTmM7vqWkjLARDRWIFlG96n0i89rkuaONE049msrIkbwCkk2fYphs4wW0jKl\ndm3BCmrNQF4+4werLRlhJIeQIQOx4ILO0dIofBBfxCAyURrOJJfgEwzPHa3G\np8nFJaRr0BfLB+xAI6OQCqRKziFVHOZv8vuvpiYEDBfDCjMct4ZozJIhFYVX\nhGQ8aF0AxdAuOFyv/hosZNrWmcezX4AXBzZ0Xvt+4gTD3hQXiSEp4Jx2TPD2\n/UB3a4a00Hf12l8S+QWpmYfsgyChmTyCQQHv8YcqbsPS\n",
+    "generate_outline": "Publish your site and share the link with your class."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-03 03:35:33 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 03:35:33 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 03:35:37 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 03:35:37 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Weblab2>

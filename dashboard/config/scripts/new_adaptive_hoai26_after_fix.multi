@@ -1,0 +1,15 @@
+name 'new-adaptive-HoAI26-after-fix'
+title 'TODO: title'
+description ''
+question 'The AI says it fixed your broken button. You reload the page and it works. What is the most important thing to do next?'
+wrong 'Move on, it works now.'
+wrong 'Click through the rest of the page.'
+wrong 'Ask the AI to confirm everything works.'
+right 'Look for anything new or broken.'
+wrong 'Start over from your first version.'
+
+markdown <<MARKDOWN
+The AI says it fixed your broken button. You reload the page and it works. What is the most important thing to do next?
+MARKDOWN
+
+allow_multiple_attempts true

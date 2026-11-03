@@ -1,0 +1,16 @@
+name 'aif-y2-natural-language-processing-preassessment-q10-2026'
+
+wrong 'It finds the training review sharing the most words with the new one and copies its category'
+right "It uses the review's words to predict how probable each category is, then picks the most probable one"
+wrong 'It asks a chain of yes-or-no questions about the review until it reaches a category'
+wrong 'It counts the positive and negative words from a fixed list and picks the category with more'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+A Naive Bayes classifier has been trained on product reviews labeled positive or negative. How does it decide which category a new review belongs to?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 8: Naive Bayes
+MARKDOWN

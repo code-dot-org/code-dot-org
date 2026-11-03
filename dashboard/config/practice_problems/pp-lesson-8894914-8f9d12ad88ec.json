@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894914-8f9d12ad88ec",
+  "problem_type": "multiple_choice_multi_select",
+  "active": true,
+  "problem_text": "Select all the factors you should consider when evaluating AI outputs.",
+  "solution": [
+    {
+      "option": "Accuracy of the information provided",
+      "correct": true
+    },
+    {
+      "option": "The popularity of the AI tool used",
+      "correct": false
+    },
+    {
+      "option": "Inclusivity of perspectives represented",
+      "correct": true
+    },
+    {
+      "option": "Personal biases of the AI developers",
+      "correct": true
+    }
+  ],
+  "objective_keys": [
+    "2773ac04-48bb-41c3-83d8-055a75b508ab"
+  ]
+}

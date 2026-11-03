@@ -1,0 +1,28 @@
+{
+  "key": "pp-lesson-8894760-9fc4c6bd684c",
+  "problem_type": "multiple_choice_multi_select",
+  "active": true,
+  "problem_text": "Select all factors that can influence the way AI generates images based on a prompt.",
+  "solution": [
+    {
+      "option": "The amount of data the AI has trained on",
+      "correct": true
+    },
+    {
+      "option": "The creativity of the person writing the prompt",
+      "correct": true
+    },
+    {
+      "option": "The emotional state of the AI",
+      "correct": false
+    },
+    {
+      "option": "The clarity and detail of the prompt",
+      "correct": true
+    }
+  ],
+  "objective_keys": [
+    "a27a2703-9d59-4a4e-8b99-86fb1cbb9d04",
+    "b47fe95a-2f69-4b0b-9dbc-85ccd5a4af8c"
+  ]
+}

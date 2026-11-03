@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894907-e0e58f2b6ab3",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "Which of the following best defines AI bias?",
+  "solution": [
+    {
+      "option": "AI bias occurs when an AI system is unfairly influenced by certain data.",
+      "correct": true
+    },
+    {
+      "option": "AI bias is the ability of AI to learn from its mistakes.",
+      "correct": false
+    },
+    {
+      "option": "AI bias refers to the speed of AI processing data.",
+      "correct": false
+    },
+    {
+      "option": "AI bias is when AI systems have no influence on human decision-making.",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "053b2056-bb8c-439b-a86f-8b95536a9e55"
+  ]
+}

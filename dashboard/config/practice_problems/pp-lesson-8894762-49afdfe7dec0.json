@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894762-49afdfe7dec0",
+  "problem_type": "multiple_choice_multi_select",
+  "active": true,
+  "problem_text": "Which of the following are steps you should take to verify AI output? (Select all that apply)",
+  "solution": [
+    {
+      "option": "Consult multiple reliable sources.",
+      "correct": true
+    },
+    {
+      "option": "Assume the first result is correct.",
+      "correct": false
+    },
+    {
+      "option": "Look for author credentials.",
+      "correct": true
+    },
+    {
+      "option": "Ignore the context in which it was generated.",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "c387cc15-526a-4f30-86f2-2f473eb7d2c9"
+  ]
+}

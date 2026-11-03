@@ -102,6 +102,7 @@ const LEVELS = {
 };
 
 const save = jest.fn();
+const onLoadingChange = jest.fn();
 
 const CurrentLevel = () => {
   const {levelProperties} = useLevelProperties();
@@ -113,6 +114,7 @@ const CurrentLevel = () => {
       save={save}
       startOver={jest.fn()}
       projectManager={null}
+      onLoadingChange={onLoadingChange}
     />
   );
 };
@@ -161,6 +163,14 @@ describe('AilabWorkspace', () => {
     renderLevel('1');
     expect(mockEngineContexts.project).toBeDefined();
     expect(mockEngineContexts.trainingData).toBeDefined();
+  });
+
+  it("passes the engine's loading reports on to its host", () => {
+    renderLevel('3');
+    act(() =>
+      mockedAilab.AilabEngine.mock.lastCall?.[0].onLoadingChange?.(true)
+    );
+    expect(onLoadingChange).toHaveBeenLastCalledWith(true);
   });
 
   it('shows no message until a training run misses the minimum', () => {

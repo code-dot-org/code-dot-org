@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894784-282bf809e392",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "Which of the following questions would be most useful for collecting data to train a machine learning model for predicting customer preferences?",
+  "solution": [
+    {
+      "option": "What is your favorite color?",
+      "correct": false
+    },
+    {
+      "option": "How many hours do you spend shopping online each week?",
+      "correct": true
+    },
+    {
+      "option": "Do you like pizza?",
+      "correct": false
+    },
+    {
+      "option": "What is your age?",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "6595b472-6d61-43c7-8d54-726da6e15db8"
+  ]
+}

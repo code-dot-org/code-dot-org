@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-6284602-92321ae6449e",
+  "problem_type": "multiple_choice_multi_select",
+  "active": true,
+  "problem_text": "Which of the following skills are important when applying Python to create your personal design? Select all that apply.",
+  "solution": [
+    {
+      "option": "Understanding how to use loops",
+      "correct": true
+    },
+    {
+      "option": "Knowing how to draw shapes with code",
+      "correct": true
+    },
+    {
+      "option": "Memorizing every Python function",
+      "correct": false
+    },
+    {
+      "option": "Ability to write comments in your code",
+      "correct": true
+    }
+  ],
+  "objective_keys": [
+    "712937fe-29e8-4aa6-9511-000fc3d3d331"
+  ]
+}

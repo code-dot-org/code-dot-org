@@ -1,0 +1,23 @@
+name 'pl-aif-y2-u2-l1-mach-learn-about'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Where Unit 2 Fits
+
+Unit 2 maps onto AI-901 far more directly than Unit 1 did. Classification and regression aren't just useful mental models here, they're core conceptual content the exam actually tests.
+
+<div style="background: #FFFFFF; border: 1px solid #D5EFFF; padding: 18px 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1); margin: 20px 0;">
+  <ul style="list-style-type: disc; padding-left: 20px; font-size: 16px;">
+    <li>Recognizing whether a problem calls for classification or regression is a classic Domain 1 conceptual question, not an implementation detail.</li><br>
+    <li>Evaluation metrics, accuracy, recall, precision, loss, are exactly the kind of "identify AI concepts" territory Domain 1 tests.</li><br>
+    <li>Fairness, safety, and accountability map directly onto AI-901's Responsible AI content within Domain 1.</li>
+  </ul>
+</div>
+
+<div style="background-color: #D5EFFF; border-radius: 10px; padding: 16px 18px;">
+  <div style="font-size: 16px; color: #06338D; line-height: 1.6;">
+    <strong>The takeaway:</strong> if Unit 1 felt like it was building foundations for a test still far away, Unit 2 is where that foundation starts paying off directly. Treat this unit's vocabulary, regression, classification, loss, accuracy, fairness, as exam-relevant language worth reinforcing deliberately, not just teaching for understanding's sake.
+  </div>
+</div>
+MARKDOWN

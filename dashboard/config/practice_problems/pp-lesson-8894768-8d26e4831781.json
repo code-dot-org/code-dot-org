@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894768-8d26e4831781",
+  "problem_type": "match",
+  "active": true,
+  "problem_text": "Match the following terms with their definitions.",
+  "solution": [
+    {
+      "option": "Machine Learning",
+      "correct": "A technique that allows computers to learn from data."
+    },
+    {
+      "option": "Pattern Recognition",
+      "correct": "The identification of regularities in data."
+    },
+    {
+      "option": "Training Data",
+      "correct": "The dataset used to teach a machine learning model."
+    },
+    {
+      "option": "Algorithm",
+      "correct": "A set of rules or instructions for solving a problem."
+    }
+  ],
+  "objective_keys": [
+    "f8c2d4bf-f3fb-4fba-8c66-7a590c29b8cf"
+  ]
+}

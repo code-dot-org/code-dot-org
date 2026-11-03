@@ -1,4 +1,14 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {
+  Match,
+  MatchSolution,
+  MultipleChoice,
+  MultiSolution,
+  PracticeProblem,
+  Scramble,
+  ScrambleSolution,
+  Sort,
+} from '@code-dot-org/lesson-deep-dive';
 import React, {
   FC,
   useCallback,
@@ -35,19 +45,10 @@ import sortJSON from '@cdo/static/tutor/sort_example.json';
 import {useAiTutorModelParameters} from '../../../hooks/useAiTutorModelParameters';
 import {
   LessonDeepDiveData,
-  MatchSolution,
-  MultiSolution,
-  PracticeProblem,
   practiceProblemValidator,
   ReflectionData,
-  ScrambleSolution,
   userPracticeProblemAttemptValidator,
 } from '../types';
-
-import Match from './QuestionTypes/Match';
-import MultipleChoice from './QuestionTypes/MultipleChoice';
-import Scramble from './QuestionTypes/Scramble';
-import Sort from './QuestionTypes/Sort';
 
 import styles from './skills-check.module.scss';
 

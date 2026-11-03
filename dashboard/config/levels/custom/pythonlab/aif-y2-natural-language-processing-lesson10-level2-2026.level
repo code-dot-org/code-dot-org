@@ -1,0 +1,37 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-11-03T01:08:48.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "aif-y2-natural-language-processing-lesson10-2026 + template",
+    "long_instructions": "**☑️ Do This:**\r\n\r\n- Complete the `predict` function. Given a `token`, it should return a random follower of that token.\r\n\r\n**💻 Coding Tip**\r\n\r\nConsider checking if a token is in `model` before retrieving its follower. If a token isn’t in `model`, return a default value.\r\n\r\n```\r\nif token in model:\r\n  # Return random follower\r\nelse:\r\n  # Return \"No prediction\"\r\n```",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "debug",
+        "documentation",
+        "explainCode",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFX9JcY0EP21afMHISj6uVQg4g+59OIzUb4pa2W4J\nrpgF4fJi2rLr0nr8WnSVq0386eA0D+Fr2XW/3W5uJDibTY5B2tN+/+zmVYdK\n0ywgwGDo/2QZiXWxhlB779zbj6oIS+ghFjvfaYZpsv+7tKHJgo/YtEIzNnM9\naX4q5LlE1UgZouwncisWCNCP+KUjAtcX0cn31RGqRw+1B6jVdhZ2fvCiKPwV\nfkkE9OPDS2tL/BPXfhflaa8+H3D3+FK1ljW+Hj3h3y5ydXUHtRA0tww3Ijxk\nce36lM0XNkGn71AMgrsSD8VAO2/D9sTNFdY1oZZUkv/JbrpzMIZM74LAhTn9\nagUZNWIpO2ZZ4RVEHAcpY9Y3IYTeiTlLA5uxz1YMwpug84SHRfrmkohr6A75\nD4LhhrBBwLC2YyO/ZjFc7vfojYbJUA4DV5bI6rX0ZyOKqH3Ezesf3kmfyUIE\nGAVRDYtn9wGwZK97sMNxWaYAAXIbVJsnOyAWTD2aIE6fRnvcjBre6gZedqp3\nENX/hq8nUyEVAHxRzFJUVIBmCEfAQScxKRl+ux6UdIx2JCPi/WgyLgfXO9yQ\nWAC2AOUk3aw5mZNiYOnvuftILcX8EpvMD11w6WHn9EelJTPH+RDD/UweQQb7\nnP8dAgiyaHZNaFAk8MXgcqdjAWI7vmA2ajCn72pdEomJsCrIVyijg8WQltNo\nrtJJYt4kJvvd+/men9yseEtlIv11Em55SLGSjJVdo3TiPH499SqSVj7Tu6ik\no2l8FUQSoji6e6ZiHbwYBnSzl+f5g+4KhylPgKA2hlObMp+KN5Lb5k4v0M14\n3C+E9LfIxuBUvCAxTehpKZkqkAEuwrPUqTNlrk1XhF95DId5VqFX7/1u877f\nJlLwKA13CPP3EgMfWRz+qo544DRpYe3AeMAY/ErbPqkBgQxg4IfoD97gGot4\nH/32z+Svp3ytgohkfCNu+mTl7gTJ2eb+EWaQQbtT5+k2bZjuxLND9XEt7cQz\nNJFWZems4YFtlcgzrK3ST3OR9EH7xZLmnf58Sz+pMnrVOG+/BPDCVKHNxpnU\ntSDucxnZPrSHDV/aFkIYBuX9cXBW8oUbYUDtgjPfinj9h/xZ3kzW/wmHe2+w\nLEKWFnGHLVGgJcvA6+IADS6Zmz6uPyhuYK0nhgKksHfaCUmy8M1ZxIKT/Dl2\nTtPrHbaK2Uvg0/F4K4X9lO0YwLtENY3W0QlK7RRGpjVcbJgz9ytOTZcqb5tu\nMRsT728gs+lR2TXUPZi/AlhHCkfIws99ZLMY+eNOz9z2eiEhTlj/5o2lOr1e\nbhCnSCqmigKxeAfVLDcgz+KxcboR5x2OJcQXY+8jluBV3nZozQbb8kEVeaWO\n9okJrHUDZpiIuPrCHhOZl+mqrT9gLJ8QYzniWTuw5l5eVbjayTCI+zokZNXX\nwbk6Wt5MPLuo0ykfKEy9OHwVcuQIs3KxxTQ7Iynh4iovK4T4sATCj0XCbSCe\naiXpH/g5tyggT4lhr7a7NIJb1yneDPWIxJI3LzCS9aUAUTtGI9v8HKb6I7xA\nZ7xQUjMKfsk9V88A1x0LBaphkS/wrcv48FVu6kv1hDXhaIlfQM3BvUsldnEN\nY6bkmPiSZtfO1PlaloBOBvOt0Be3y5bUKAxy6TigRzNTFbCEun/+VmUBko8A\nfXid5SyWsAXN/qxIh+56VaE+LMpRmjfVzCayMh3XJfc6V7eQmfpCNsjeA3Si\n2gkG9myfm5QvlXxP5jFeBXFmQFXydKLQ+4gBpocvKH05g0KAUkrcNdFCRK/N\nmckXLf0NGWSxe6KaUUEankl3zwUBZnUwtDghoHmUlYZn8iYZlOMCrv7c\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-03 01:10:01 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-03 01:10:22 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

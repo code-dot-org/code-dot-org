@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-6284599-3bfc884a2779",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "Which of the following is an example of how algorithms can be used in daily life?",
+  "solution": [
+    {
+      "option": "Generating personalized movie recommendations",
+      "correct": true
+    },
+    {
+      "option": "Designing a building",
+      "correct": false
+    },
+    {
+      "option": "Creating a painting",
+      "correct": false
+    },
+    {
+      "option": "Writing a novel",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "1de1a9ba-f4d0-4b78-8259-2b9e58f7a7d6"
+  ]
+}

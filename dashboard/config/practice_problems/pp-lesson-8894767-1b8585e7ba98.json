@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894767-1b8585e7ba98",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "Which of the following features in App Lab allows you to create interactive elements that users can click on?",
+  "solution": [
+    {
+      "option": "Buttons",
+      "correct": true
+    },
+    {
+      "option": "Images",
+      "correct": false
+    },
+    {
+      "option": "Text",
+      "correct": false
+    },
+    {
+      "option": "Screens",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "b97d27b5-33da-4107-aac2-0a83542650c3"
+  ]
+}

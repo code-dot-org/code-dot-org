@@ -1,0 +1,42 @@
+{
+  "name": "SC1-L06-playlist-a-base",
+  "card": {
+    "description": "The school's Playlist Bot predicts which songs to play at the dance. Each record is one song. The label is Banger (a song people love to dance to) or Skip (a song to leave out).",
+    "source": "Made-up labels on real song titles (titles, years and guest artists are real; Beat Drop is a judgment call)",
+    "lastUpdated": "2026",
+    "context": {
+      "createdBy": "CodeAI",
+      "potentialUses": "Use the bot's predictions to help choose songs for the school dance.",
+      "potentialMisuses": "It is trained on only 10 songs picked by one person, so it may predict poorly for other songs or schools."
+    }
+  },
+  "defaultLabelColumn": "Label",
+  "defaultIdColumn": "Song",
+  "fields": [
+    {
+      "type": "categorical",
+      "id": "Song",
+      "description": "What is the song called?"
+    },
+    {
+      "type": "categorical",
+      "id": "Before 2025",
+      "description": "Did the song come out before 2025?"
+    },
+    {
+      "type": "categorical",
+      "id": "Guest Artist",
+      "description": "Does the song have a guest singer or rapper?"
+    },
+    {
+      "type": "categorical",
+      "id": "Beat Drop",
+      "description": "Does the song have a beat drop (a moment when the beat gets louder and stronger)?"
+    },
+    {
+      "type": "categorical",
+      "id": "Label",
+      "description": "Banger or Skip? This is what the bot predicts for each song."
+    }
+  ]
+}

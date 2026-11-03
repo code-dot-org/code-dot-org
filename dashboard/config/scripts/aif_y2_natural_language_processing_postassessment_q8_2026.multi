@@ -1,0 +1,16 @@
+name 'aif-y2-natural-language-processing-postassessment-q8-2026'
+
+wrong 'It counts only the nouns in a sentence'
+wrong 'It cannot handle sentences that repeat a word'
+wrong 'It treats the two sentences as different because their words come in a different order'
+right 'It ignores the order of the words, so it cannot tell the two sentences apart'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+The sentences "the dog chased the cat" and "the cat chased the dog" have the same bag of words. What does that show about the bag of words model?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 7: Bag of Words
+MARKDOWN
