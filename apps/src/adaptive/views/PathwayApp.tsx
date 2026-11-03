@@ -18,6 +18,7 @@ import {
   PROJECT_STEP_ID,
   Progress,
   stepIdToResume,
+  totalTimeSpent,
   useProgress,
 } from '../progress';
 import {ProgressKey} from '../progress/progressStore';
@@ -322,6 +323,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
             stepId: cp ? stepIdToResume(cp, progress) : undefined,
           });
         }}
+        timeSpentSeconds={totalTimeSpent(progress)}
         onWorkOnProject={openProject}
         hasSkippedCheckpoints={hasSkippedCheckpoints}
       />
