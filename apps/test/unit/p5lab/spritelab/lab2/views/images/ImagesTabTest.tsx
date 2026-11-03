@@ -55,7 +55,7 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/sentence/SentenceScene', () => {
           onClick={() =>
             onKeep({
               // Unique per picture, as the generator's are.
-              filename: `made-${++made}.png`,
+              filename: `made-${++picturesMade}.png`,
               uint8Array: new Uint8Array([137, 80, 78, 71]),
               mediaType: 'image/png',
               generation: {imageType, subject: imageSubject, prompt: 'A cat'},
@@ -157,7 +157,7 @@ jest.mock('@cdo/apps/imageUtils', () => ({
   },
 }));
 
-let made = 0;
+let picturesMade = 0;
 // Frames are cut and put back without a canvas: the strip is named for
 // what happened to it.
 const cutFrame = jest.fn(
@@ -225,8 +225,8 @@ describe('ImagesTab', () => {
   beforeEach(() => {
     Object.keys(propsByKey).forEach(key => delete propsByKey[key]);
     Object.keys(params).forEach(key => delete params[key]);
-    // The older own-work pane, which most of these tests were written
-    // against; the paint-first default has tests of its own.
+    // These tests use the `pane` presentation of an edited image; the
+    // paint-first default has tests of its own below.
     params['images-edited'] = 'pane';
     acceptGenerated.mockReset();
     saveEdited.mockReset();
