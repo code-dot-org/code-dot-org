@@ -1,0 +1,18 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2026-11-03T04:31:11.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "skip_dialog": true,
+    "skip_sound": true,
+    "long_instructions": "What is your site, who is it for, and what are you proudest of?",
+    "placeholder": "Describe your site, its audience, and what you're proud of...",
+    "encrypted_solution": "AKfp+Dt3J+JbSsFQ87Ewq46AhR9frgsltr4C1mdRu9ObA//641Pt68dAwEKK\nexXWV/fUAyt3N1E4Zl0Lh5krkUAZmjZzz0i/WbHCl9yls0gGIT1dY9FnW9de\niLJW5wiEULuSdol9gGnvFt6sEKcmX96pKgHusx2Gvs5BaW57PT6unbmtiGsy\nFBeS17egkDD5ij67fAsuEb7T52T96hMkMlNJtntqk0STskM/J/pdamqhuE0C\n7wHaK+7YVE+L59MWHkTxtwuEtwQqOrVDkJNdsk40or695o3L8QjcR6jVtyR0\ni2jBwK7ccwk3DYwKVRK4x1KEDEGMn5+e6gK+hJDT8yU+SsqT9JqIf1aBT88u\niGWKoc7WU2vk/DdLY93NO983qLb5RdxUe+MDHBJhm3fILgt7dJQgk67HwBFo\nwHHjbOptNLwYVJax+g2F6YLbshkD\n",
+    "generate_outline": "Describe your completed website, its intended audience, and what aspects of your creation you are most proud of."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-03 04:31:14 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 04:31:14 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 04:31:15 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 04:31:15 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</FreeResponse>

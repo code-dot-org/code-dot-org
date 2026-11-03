@@ -330,6 +330,9 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
       ? pathway.checkpoints.find(c => c.id === view.checkpointId)
       : undefined;
   const playing = view.kind === 'project' ? project : checkpoint;
+  // A review's build request is for the checkpoint it was made in.
+  const [buildRequested, setBuildRequested] = useState(false);
+  useEffect(() => setBuildRequested(false), [playing]);
   // The shell's AI calls run as the adaptive level, not the step's level.
   const aiContext = useMemo<AichatContext>(
     () => ({
@@ -350,6 +353,8 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
         saveGeneratedInstructions,
         recordValidation,
         aiContext,
+        buildRequested,
+        setBuildRequested,
       },
     [
       pathway,
@@ -359,6 +364,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
       saveGeneratedInstructions,
       recordValidation,
       aiContext,
+      buildRequested,
     ]
   );
 

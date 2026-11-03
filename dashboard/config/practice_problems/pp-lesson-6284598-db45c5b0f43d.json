@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-6284598-db45c5b0f43d",
+  "problem_type": "multiple_choice_multi_select",
+  "active": true,
+  "problem_text": "Which of the following are common errors when writing if statements? Select all that apply.",
+  "solution": [
+    {
+      "option": "Missing the colon at the end of the if statement.",
+      "correct": true
+    },
+    {
+      "option": "Using 'if' without a condition.",
+      "correct": true
+    },
+    {
+      "option": "Including too many conditions without using 'and' or 'or'.",
+      "correct": false
+    },
+    {
+      "option": "Correctly indenting the code inside the if statement.",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "ae3bf9e1-0d07-4231-a08a-18b43d3b449c"
+  ]
+}

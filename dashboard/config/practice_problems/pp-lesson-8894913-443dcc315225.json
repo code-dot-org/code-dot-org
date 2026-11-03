@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894913-443dcc315225",
+  "problem_type": "match",
+  "active": true,
+  "problem_text": "Match the AI application with its corresponding community benefit: 1. AI in education 2. AI in public safety 3. AI in transportation 4. AI in environmental monitoring. A. Reducing traffic congestion B. Enhancing learning experiences C. Predicting crime hotspots D. Monitoring wildlife and natural resources.",
+  "solution": [
+    {
+      "option": "AI in education",
+      "correct": "Enhancing learning experiences"
+    },
+    {
+      "option": "AI in public safety",
+      "correct": "Predicting crime hotspots"
+    },
+    {
+      "option": "AI in transportation",
+      "correct": "Reducing traffic congestion"
+    },
+    {
+      "option": "AI in environmental monitoring",
+      "correct": "Monitoring wildlife and natural resources"
+    }
+  ],
+  "objective_keys": [
+    "9f3ab167-b45f-431f-885c-d442f3d3a194"
+  ]
+}

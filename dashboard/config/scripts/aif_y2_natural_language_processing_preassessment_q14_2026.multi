@@ -1,0 +1,16 @@
+name 'aif-y2-natural-language-processing-preassessment-q14-2026'
+
+wrong "Sorting the newspaper's inbox into spam and not spam"
+wrong "Counting how often each word appears in last year's articles"
+wrong 'Finding every article that mentions the chess club'
+right 'Writing a news report about an event it has no record of'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+A school newspaper is deciding which jobs to hand to a text-based AI system. Which job is the system most likely to struggle with?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 11: Limits of Natural Language Processing
+MARKDOWN

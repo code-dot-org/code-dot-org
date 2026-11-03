@@ -1,0 +1,52 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-11-02T21:00:28.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Tokenize the text such that both words and punctuation become tokens.\r\n\r\n**☑️ Do This:**\r\n- Provide an appropriate regular expression as the first argument to `re.findall`.\r\n- Run the program to test your tokenization function.\r\n\r\n**💻 Coding Tip**\r\n\r\nYou’ve already seen a regular expression that can accomplish this task.\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "debug",
+        "documentation",
+        "explainCode",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "import re\n\ntext = \"Our home galaxy is called the Milky Way. \\\nIt's a spiral galaxy with a disk of stars spanning \\\nmore than 100,000 light-years.\"\n\n\ndef tokenize(text):\n  return re.findall(r\"\", text)\n\n\ntokens = tokenize(text)\nprint(tokens)\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMpPcNHEYuAmJuhC\nAmE5UzD9HGhwV5801HnR2RfpNwOsRMth/qST+o6CdaOtdShIEaxgySdSGidG\njvrPzD9GfuiffQkKEvb5UohLhQWHBZdRlentDDVWLSguZzsOgI8c1RLZ/4sX\nqz62VMpvoF70om0QcXwnJ/I550+7msI01M58Z7bMMl5yqa77JLD0nTk4J3t4\nw+MAsnX/MMgG1h8Ax/fawd99DYLx5EhXibKrTH5W40E9JQAopcwJpkAhxTZ8\nk2TpCYv0nNj0MhXF+O8RUI4IbXlf+6nKgPZGOWXxkOA0BT2nESfh1pOGPdpw\nFv+MKgO1DfYgjgA0kw4bpM6eB0i+QFCn+PU+06GSx810uffJEZKUd8W7hOl2\nj4czfHM+QBQ8LKORtYsPpbucRV7weUj7b+ltgAbA9p5H74G30T8uGtdiqrNx\nvM8DqFfgbf1puxyUMY3okGSf4KhqXHp2BYW1\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-02 21:01:29 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-02 21:01:34 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-02 21:01:42 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

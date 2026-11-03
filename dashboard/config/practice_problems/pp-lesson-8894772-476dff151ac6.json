@@ -1,0 +1,19 @@
+{
+  "key": "pp-lesson-8894772-476dff151ac6",
+  "problem_type": "match",
+  "active": true,
+  "problem_text": "Match the term to its definition.",
+  "solution": [
+    {
+      "option": "Categorical Data",
+      "correct": "Data that can be separated into groups"
+    },
+    {
+      "option": "Classification",
+      "correct": "Predicting a category based on other features"
+    }
+  ],
+  "objective_keys": [
+    "e2cfb3d9-7f1b-40a1-9c56-edf84aea19e7"
+  ]
+}

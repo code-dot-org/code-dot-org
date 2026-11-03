@@ -28,9 +28,16 @@ const pathway: Pathway = {
   skills: {},
   checkpoints: [checkpoint],
 };
-const answers = [
-  {question: 'What will you make?', answer: 'A site about my dog Rex.'},
-];
+const plan = {
+  answers: [
+    {
+      slot: 'what',
+      question: 'What will you make?',
+      answer: 'A site about my dog Rex.',
+      typed: true,
+    },
+  ],
+};
 const files = [
   {id: '1', name: 'index.html', contents: '<h1>Hi</h1>', folderId: '0'},
 ];
@@ -47,8 +54,7 @@ describe('buildProjectPrompt', () => {
       pathway,
       checkpoint,
       step,
-      answers,
-      project: {},
+      plan,
       files,
     });
     expect(prompt).toContain(
@@ -59,20 +65,20 @@ describe('buildProjectPrompt', () => {
     );
     expect(prompt).toContain('filename: index.html\n```\n<h1>Hi</h1>\n```');
     expect(prompt).toContain('Objective: Make a site.');
-    expect(prompt).not.toContain('already named');
+    expect(prompt).not.toContain("The student's plan");
   });
 
-  it('tells the model a name the student already gave', () => {
+  it('carries the plan sentence when given one', () => {
     const prompt = buildProjectPrompt({
       pathway,
       checkpoint,
       step,
-      answers,
-      project: {name: 'Rex Rules', description: 'All about Rex.'},
+      plan: {...plan, sentence: 'A site about Rex for me.'},
       files,
     });
-    expect(prompt).toContain('already named the project "Rex Rules"');
-    expect(prompt).toContain('They describe it as: All about Rex.');
+    expect(prompt).toContain(
+      "The student's plan, as they saw it before asking for this build:\nA site about Rex for me."
+    );
   });
 });
 

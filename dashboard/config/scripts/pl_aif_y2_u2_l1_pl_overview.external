@@ -1,0 +1,73 @@
+name 'pl-aif-y2-u2-l1-pl-overview'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<h1>Section 1: Getting Started</h1>
+
+<p>This professional learning module gives you a guided preview of the key concepts and instructional approaches used throughout Unit 2: Machine Learning Fundamentals.</p>
+
+<p>Think of this module as a head start: a chance to build familiarity with the ideas your students will encounter, and to start thinking about how you'll teach them in your classroom. This module highlights important concepts and teaching strategies, but it doesn't replace reviewing individual lesson materials.</p>
+
+---
+
+## What's in this module?
+
+<div style="display: flex; flex-direction: column; gap: 20px; max-width: 900px; margin: 25px auto;">
+
+  <div style="background: #FFFFFF; border: 1px solid #E4E2F8; border-left: 6px solid #4C42CF; padding: 18px 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <h3>Section 1 - Getting Started</h3>
+    <div style="display: inline-block; background-color: #E4E2F8; color: #1F1976; font-size: 13px; font-weight: bold; padding: 4px 10px; border-radius: 10px; margin-bottom: 8px;">You are here</div>
+    <div style="font-size: 16px; line-height: 1.5;">A short orientation to this module, the full curriculum calendar, and where Unit 2 fits with AI-901.</div>
+  </div>
+
+  <div style="background: #E4E2F8; border-left: 6px solid #4C42CF; padding: 18px 20px; border-radius: 10px;">
+    <h3>Section 2 - What Is Machine Learning?</h3>
+    <div style="font-size: 13px; color: #1F1976; margin-bottom: 6px;">Aligns to curriculum Lessons 1-2</div>
+    <div style="font-size: 16px; line-height: 1.5;">The foundational shift from logic-based AI to machine learning, plus probability as the unit's first real tool.</div>
+  </div>
+
+  <div style="background: #FFFFFF; border: 1px solid #E4E2F8; border-left: 6px solid #4C42CF; padding: 18px 20px; border-radius: 10px;">
+    <h3>Section 3 - Making Predictions</h3>
+    <div style="font-size: 13px; color: #555555; margin-bottom: 6px;">Aligns to curriculum Lessons 3-4</div>
+    <div style="font-size: 16px; line-height: 1.5;">Reading data, then the central fork of the whole unit: regression versus classification.</div>
+  </div>
+
+  <div style="background: #E4E2F8; border-left: 6px solid #4C42CF; padding: 18px 20px; border-radius: 10px;">
+    <h3>Section 4 - Regression, Start to Finish</h3>
+    <div style="font-size: 13px; color: #1F1976; margin-bottom: 6px;">Aligns to curriculum Lessons 5-7</div>
+    <div style="font-size: 16px; line-height: 1.5;">Build a regression model, test it with loss, then confront what happens when the training data itself is biased.</div>
+  </div>
+
+  <div style="background: #FFFFFF; border: 1px solid #E4E2F8; border-left: 6px solid #4C42CF; padding: 18px 20px; border-radius: 10px;">
+    <h3>Section 5 - Classification, Start to Finish</h3>
+    <div style="font-size: 13px; color: #555555; margin-bottom: 6px;">Aligns to curriculum Lessons 8-9</div>
+    <div style="font-size: 16px; line-height: 1.5;">Build a classifier with nearest neighbors, then evaluate it with accuracy, recall, and precision.</div>
+  </div>
+
+  <div style="background: #E4E2F8; border-left: 6px solid #4C42CF; padding: 18px 20px; border-radius: 10px;">
+    <h3>Section 6 - Beyond the Basics: Sensing and Responsibility</h3>
+    <div style="font-size: 13px; color: #1F1976; margin-bottom: 6px;">Aligns to curriculum Lessons 10-12</div>
+    <div style="font-size: 16px; line-height: 1.5;">How computers represent images and sound, then the unit turns reflective: fairness, safety, and who's accountable for a model's decisions.</div>
+  </div>
+
+  <div style="background: #FFFFFF; border: 1px solid #E4E2F8; border-left: 6px solid #4C42CF; padding: 18px 20px; border-radius: 10px;">
+    <h3>Section 7 - Bringing It Together</h3>
+    <div style="font-size: 13px; color: #555555; margin-bottom: 6px;">Aligns to curriculum Lesson 13</div>
+    <div style="font-size: 16px; line-height: 1.5;">A 3-day capstone: students build their own image classifier from scratch.</div>
+  </div>
+
+</div>
+
+<hr>
+
+<div style="display: flex; gap: 6px; margin-top: 24px; max-width: 700px;">
+  <div style="flex: 1; text-align: center; background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 13px; padding: 10px 4px; border-radius: 6px;">Section 1</div>
+  <div style="flex: 1; text-align: center; background-color: #FFFFFF; color: #ACA8EA; font-weight: bold; font-size: 13px; padding: 10px 4px; border-radius: 6px; border: 1.5px solid #E4E2F8;">Section 2</div>
+  <div style="flex: 1; text-align: center; background-color: #FFFFFF; color: #ACA8EA; font-weight: bold; font-size: 13px; padding: 10px 4px; border-radius: 6px; border: 1.5px solid #E4E2F8;">Section 3</div>
+  <div style="flex: 1; text-align: center; background-color: #FFFFFF; color: #ACA8EA; font-weight: bold; font-size: 13px; padding: 10px 4px; border-radius: 6px; border: 1.5px solid #E4E2F8;">Section 4</div>
+  <div style="flex: 1; text-align: center; background-color: #FFFFFF; color: #ACA8EA; font-weight: bold; font-size: 13px; padding: 10px 4px; border-radius: 6px; border: 1.5px solid #E4E2F8;">Section 5</div>
+  <div style="flex: 1; text-align: center; background-color: #FFFFFF; color: #ACA8EA; font-weight: bold; font-size: 13px; padding: 10px 4px; border-radius: 6px; border: 1.5px solid #E4E2F8;">Section 6</div>
+  <div style="flex: 1; text-align: center; background-color: #FFFFFF; color: #ACA8EA; font-weight: bold; font-size: 13px; padding: 10px 4px; border-radius: 6px; border: 1.5px solid #E4E2F8;">Section 7</div>
+</div>
+MARKDOWN

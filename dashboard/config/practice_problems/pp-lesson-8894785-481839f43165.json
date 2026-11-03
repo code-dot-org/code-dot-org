@@ -1,0 +1,25 @@
+{
+  "key": "pp-lesson-8894785-481839f43165",
+  "problem_type": "match",
+  "active": true,
+  "problem_text": "Match the action with its description: 1. Download a csv file, 2. Upload a csv file, 3. Analyze data.",
+  "solution": [
+    {
+      "option": "Download a csv file",
+      "correct": "Retrieve data from Google Sheets."
+    },
+    {
+      "option": "Upload a csv file",
+      "correct": "Send the data to AI Lab."
+    },
+    {
+      "option": "Analyze data",
+      "correct": "Review and clean the dataset."
+    }
+  ],
+  "objective_keys": [
+    "ac86a312-f46b-489a-b17f-225b699411fc",
+    "95f617bc-90da-49fa-bc90-e74bf31257a8",
+    "ed494d05-e2f5-4f17-b838-30298f23e684"
+  ]
+}

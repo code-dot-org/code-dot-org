@@ -1,0 +1,16 @@
+name 'aif-y2-natural-language-processing-preassessment-q11-2026'
+
+wrong 'Pairs of words are quicker for a program to count than single words'
+wrong 'Pairs of words remove the need to tokenize the text before counting'
+wrong 'Pairs of words take up less memory to store than the single words do'
+right 'Some meaning lives in the sequence of words, not in the words alone'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+On their own, "ice" and "cream" name two different things; together, "ice cream" names a third. Why might a program look at pairs of neighboring words instead of single words?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 9: N-Grams
+MARKDOWN

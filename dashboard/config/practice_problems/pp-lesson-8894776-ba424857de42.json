@@ -1,0 +1,28 @@
+{
+  "key": "pp-lesson-8894776-ba424857de42",
+  "problem_type": "match",
+  "active": true,
+  "problem_text": "Match the following terms with their correct definitions.",
+  "solution": [
+    {
+      "option": "Model Card",
+      "correct": "A document that provides details about a machine learning model."
+    },
+    {
+      "option": "Data Visualization",
+      "correct": "The graphical representation of data."
+    },
+    {
+      "option": "Feature Iteration",
+      "correct": "The process of refining features used in model training."
+    },
+    {
+      "option": "Machine Learning Model",
+      "correct": "An algorithm that learns from data to make predictions."
+    }
+  ],
+  "objective_keys": [
+    "e89ac192-3d5e-4da7-9bc0-9d039a49cfb8",
+    "caba020f-2495-4cc1-accb-a1b4957c506c"
+  ]
+}

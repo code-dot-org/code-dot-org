@@ -1,0 +1,24 @@
+{
+  "key": "pp-lesson-6284598-5a4521dfdbe2",
+  "problem_type": "match",
+  "active": true,
+  "problem_text": "Match the following terms with their definitions: 1. Conditional Statement 2. If Statement 3. Program Flow",
+  "solution": [
+    {
+      "option": "Conditional Statement",
+      "correct": "A command that runs only if a certain condition is True."
+    },
+    {
+      "option": "If Statement",
+      "correct": "A specific type of conditional statement in Python."
+    },
+    {
+      "option": "Program Flow",
+      "correct": "The order in which instructions are executed in a program."
+    }
+  ],
+  "objective_keys": [
+    "d0c98176-53f4-48ac-b3d3-53daa72a0606",
+    "afb41926-0193-4bf8-8201-b0e78796f246"
+  ]
+}

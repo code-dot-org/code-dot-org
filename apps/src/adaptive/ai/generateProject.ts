@@ -12,12 +12,9 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 
 import {sendAdaptiveEvent, stepProperties} from '../metricsHelpers';
 import {Progress} from '../progress/model';
-import {
-  applyGeneratedFiles,
-  freeResponseAnswers,
-  editableFiles,
-} from '../project/projectGeneration';
-import {Checkpoint, LevelStep, Pathway, PathwayProjectInfo} from '../types';
+import {checkpointPlan} from '../project/plan';
+import {applyGeneratedFiles, editableFiles} from '../project/projectGeneration';
+import {Checkpoint, LevelStep, Pathway} from '../types';
 
 import {generate, isAdaptiveAiEnabled, moderateInput} from './generate';
 import {
@@ -31,8 +28,7 @@ export interface GenerateProjectOptions {
   checkpoint: Checkpoint;
   step: LevelStep;
   progress: Progress;
-  projectInfo: PathwayProjectInfo;
-  /** The project as it stands, which is the template when nothing is saved. */
+  /** What the project is built over: the template, so a rebuild starts clean. */
   sources: ProjectSources;
   /** The shell's own context, not the mounted chat's. */
   aichatContext: AichatContext;
@@ -47,32 +43,29 @@ export interface GeneratedProject {
 }
 
 /**
- * Builds the project a project step asks for. A name or description the
- * student already gave stays theirs; the model's fills whichever is missing.
- * The student's answers are moderated first; the model is never asked about
- * answers that did not clear.
+ * Builds the project a project step asks for, named and described by the
+ * model from the same call. What the student typed is moderated first; the
+ * model is never asked about answers that did not clear.
  */
 export async function generateProject({
   pathway,
   checkpoint,
   step,
   progress,
-  projectInfo,
   sources,
   aichatContext,
 }: GenerateProjectOptions): Promise<GeneratedProject | undefined> {
   if (!step.projectPrompt || !step.project) return undefined;
   if (!isAdaptiveAiEnabled()) return undefined;
-  const answers = freeResponseAnswers(pathway, progress);
+  const plan = checkpointPlan(checkpoint, progress);
   const files = editableFiles(sources);
-  if (answers.length === 0 || files.length === 0) return undefined;
+  if (plan.answers.length === 0 || files.length === 0) return undefined;
 
   const prompt = buildProjectPrompt({
     pathway,
     checkpoint,
     step,
-    answers,
-    project: projectInfo,
+    plan,
     files,
   });
   const startedAt = Date.now();
@@ -83,14 +76,17 @@ export async function generateProject({
       latencyMs: Date.now() - startedAt,
       errorType,
     });
-  const moderation = await moderateInput(
-    answers.map(({answer}) => answer).join('\n\n'),
-    aichatContext
-  );
-  Observability.metrics.count('adaptive.text_moderation', 1, {
-    phase: 'input_filter',
-    result: moderation,
-  });
+  // Only what the student wrote is moderated; a chosen answer is authored text.
+  const typed = plan.answers.filter(a => a.typed).map(a => a.answer);
+  const moderation = typed.length
+    ? await moderateInput(typed.join('\n\n'), aichatContext)
+    : 'ok';
+  if (typed.length) {
+    Observability.metrics.count('adaptive.text_moderation', 1, {
+      phase: 'input_filter',
+      result: moderation,
+    });
+  }
   if (moderation !== 'ok') {
     Lab2Registry.getInstance().getMetricsReporter().logWarning({
       message:
@@ -132,8 +128,8 @@ export async function generateProject({
   }
   sendGenerated();
   return {
-    name: projectInfo.name ?? output.name,
-    description: projectInfo.description ?? output.description,
+    name: output.name,
+    description: output.description,
     sources: seeded,
     traceId,
   };
