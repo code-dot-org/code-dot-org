@@ -1,7 +1,4 @@
-import {
-  freeFileName,
-  saveTreeImageToBackpack,
-} from '@cdo/apps/ailab/lab2/saveTreeImageToBackpack';
+import {saveTreeImageToBackpack} from '@cdo/apps/ailab/lab2/saveTreeImageToBackpack';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {BACKPACK_READ_ERROR} from '@cdo/apps/sharedComponents/backpack/backpackToasts';
@@ -37,19 +34,6 @@ const saveBlobFileMock = (outcome: SaveOutcome) =>
     }
   );
 
-describe('freeFileName', () => {
-  it('uses the plain name while it is free', () => {
-    expect(freeFileName('zoo-tree', ['other.png'])).toBe('zoo-tree.png');
-  });
-
-  it('numbers a copy rather than replace a saved tree', () => {
-    expect(freeFileName('zoo-tree', ['zoo-tree.png'])).toBe('zoo-tree_01.png');
-    expect(freeFileName('zoo-tree', ['zoo-tree.png', 'zoo-tree_01.png'])).toBe(
-      'zoo-tree_02.png'
-    );
-  });
-});
-
 describe('saveTreeImageToBackpack', () => {
   const image = new Blob(['png'], {type: 'image/png'});
   let notify: jest.Mock;
@@ -68,7 +52,7 @@ describe('saveTreeImageToBackpack', () => {
     backpackApi = {
       getFileLists: jest.fn().mockResolvedValue({
         universal: ['zoo-tree.png'],
-        sketchlab: ['zoo-tree_01.png'],
+        sketchlab: ['zoo-tree_1.png'],
       }),
       saveBlobFile: saveBlobFileMock('success'),
     };
@@ -78,19 +62,34 @@ describe('saveTreeImageToBackpack', () => {
     await save();
 
     expect(backpackApi.saveBlobFile).toHaveBeenCalledWith(
-      'zoo-tree_02.png',
+      'zoo-tree_2.png',
       image,
       expect.any(Function),
       expect.any(Function)
     );
     expect(notify.mock.calls).toEqual([
-      ['gray', 'Saving zoo-tree_02.png to your Backpack...'],
-      ['success', 'zoo-tree_02.png saved to your Backpack.'],
+      ['gray', 'Saving zoo-tree_2.png to your Backpack...'],
+      ['success', 'zoo-tree_2.png saved to your Backpack.'],
     ]);
     expect(sendLab2AnalyticsEvent).toHaveBeenCalledWith(
       EVENTS.SAVE_TO_BACKPACK_NEW,
       {fileType: 'png'}
     );
+  });
+
+  it('keeps both trees when a second save starts before the first lands', async () => {
+    const saved = ['zoo-tree.png'];
+    backpackApi.getFileLists = jest.fn(async () => ({universal: [...saved]}));
+    backpackApi.saveBlobFile = jest.fn(
+      async (fileName: string, image: Blob, onError, onSuccess: () => void) => {
+        saved.push(fileName);
+        onSuccess();
+      }
+    );
+
+    await Promise.all([save(), save()]);
+
+    expect(saved).toEqual(['zoo-tree.png', 'zoo-tree_1.png', 'zoo-tree_2.png']);
   });
 
   it('saves nothing when it cannot read the Backpack', async () => {
@@ -104,7 +103,7 @@ describe('saveTreeImageToBackpack', () => {
   });
 
   it.each<SaveOutcome>(['error', 'reject'])(
-    'replaces the progress toast when the save fails (%s)',
+    'replaces the progress toast and logs when the save fails (%s)',
     async outcome => {
       backpackApi.saveBlobFile = saveBlobFileMock(outcome);
 
@@ -112,7 +111,11 @@ describe('saveTreeImageToBackpack', () => {
 
       expect(notify).toHaveBeenLastCalledWith(
         'danger',
-        "Couldn't save zoo-tree_02.png to your Backpack. Please try again."
+        "Couldn't save zoo-tree_2.png to your Backpack. Please try again."
+      );
+      expect(mockMetricsReporter.logError).toHaveBeenCalledWith(
+        'Save to backpack error',
+        expect.any(Error)
       );
       expect(sendLab2AnalyticsEvent).not.toHaveBeenCalled();
     }

@@ -1,3 +1,5 @@
+import {uniqueFileName} from '@codebridge/utils';
+
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -10,30 +12,17 @@ import {
 } from '@cdo/apps/sharedComponents/backpack/backpackToasts';
 import type UnifiedBackpackClientApi from '@cdo/apps/sharedComponents/backpack/UnifiedBackpackClientApi';
 
-// Never replaces a file: a student comparing trees keeps every one they save.
-export const freeFileName = (
-  baseName: string,
-  takenNames: string[]
-): string => {
-  const taken = new Set(takenNames);
-  let fileName = `${baseName}.png`;
-  for (let copy = 1; taken.has(fileName); copy++) {
-    fileName = `${baseName}_${String(copy).padStart(2, '0')}.png`;
-  }
-  return fileName;
-};
+const logError = (message: string, error: unknown) =>
+  Lab2Registry.getInstance()
+    .getMetricsReporter()
+    .logError(message, error as Error);
 
-export const saveTreeImageToBackpack = async (
+const saveUnderFreeName = async (
   backpackApi: UnifiedBackpackClientApi,
   notify: BackpackNotify,
   image: Blob,
   baseName: string
 ) => {
-  const logError = (message: string, error: unknown) =>
-    Lab2Registry.getInstance()
-      .getMetricsReporter()
-      .logError(message, error as Error);
-
   let takenNames: string[];
   try {
     // Writes go to the universal backpack, so a name taken in any backpack collides.
@@ -44,30 +33,40 @@ export const saveTreeImageToBackpack = async (
     return;
   }
 
-  const fileName = freeFileName(baseName, takenNames);
-  const saveError = backpackSaveError(fileName);
+  // Never replaces a file: a student comparing trees keeps every one they save.
+  const fileName = uniqueFileName(`${baseName}.png`, takenNames);
   notifySaving(notify, fileName);
-  await new Promise<void>(resolve => {
-    backpackApi
-      .saveBlobFile(
-        fileName,
-        image,
-        () => {
-          notify('danger', saveError);
-          resolve();
-        },
-        () => {
-          notifySaved(notify, fileName);
-          sendLab2AnalyticsEvent(EVENTS.SAVE_TO_BACKPACK_NEW, {
-            fileType: 'png',
-          });
-          resolve();
-        }
-      )
-      .catch(error => {
-        notify('danger', saveError);
-        logError('Save to backpack error', error);
-        resolve();
-      });
-  });
+  try {
+    await new Promise<void>((resolve, reject) => {
+      backpackApi
+        .saveBlobFile(
+          fileName,
+          image,
+          // A save that fails before it starts reports failure with no error.
+          error =>
+            reject(
+              error ?? new Error(`Could not save ${fileName} to the backpack`)
+            ),
+          resolve
+        )
+        .catch(reject);
+    });
+  } catch (error) {
+    notify('danger', backpackSaveError(fileName));
+    logError('Save to backpack error', error);
+    return;
+  }
+
+  notifySaved(notify, fileName);
+  sendLab2AnalyticsEvent(EVENTS.SAVE_TO_BACKPACK_NEW, {fileType: 'png'});
+};
+
+// A save picks its name from the file list, so it waits for the previous one to land.
+let previousSave = Promise.resolve();
+
+export const saveTreeImageToBackpack = (
+  ...args: Parameters<typeof saveUnderFreeName>
+) => {
+  previousSave = previousSave.then(() => saveUnderFreeName(...args));
+  return previousSave;
 };
