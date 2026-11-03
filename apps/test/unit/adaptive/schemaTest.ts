@@ -258,6 +258,27 @@ describe('parsePathway', () => {
     });
   });
 
+  it('resolves a destination through the declared destinations and flags an unknown one', () => {
+    const raw = served();
+    raw.destinations = {
+      polish: {title: 'Polish', icon: 'palette', color: 'strawberry'},
+    };
+    raw.checkpoints[2].destination = 'polish';
+    expect(problemsOf(raw)).toEqual([]);
+    raw.checkpoints[2].destination = 'shine';
+    expect(problemsOf(raw)).toEqual([
+      "checkpoints.style.destination: unknown destination 'shine'",
+    ]);
+  });
+
+  it('rejects a destination color outside the palette', () => {
+    const raw = served();
+    Object.assign(raw, {
+      destinations: {polish: {title: 'Polish', color: 'pink'}},
+    });
+    expect(problemsOf(raw)[0]).toMatch(/destinations\.polish\.color/);
+  });
+
   it('accepts an icon on a skill', () => {
     const raw = served();
     raw.skills.css.icon = 'message-code';
