@@ -60,11 +60,17 @@ end
 
 def variant_state(job, variant)
   record = read_record(job, variant)
+  present = frames_present(job, variant)
+  # A set drawn with --first-frame is judged on the frames it has.
+  checked = record && record['frames'] ? record.merge('frames' => record['frames'].select {|frame| present.include?(frame['name'])}) : record
   {
     variant: variant,
     files: job['frames'].to_h {|frame| [frame['name'], frame_file(job, variant, frame['name'])]},
-    local: frames_present(job, variant).length == job['frames'].length,
-    moderation: record&.dig('abandoned') ? 'abandoned' : moderation_summary(record, require_judge: false),
+    # Reviewable once the first frame is drawn: --first-frame draws a set's
+    # base alone, to judge before its poses are paid for.
+    local: frame_exists?(job, variant, job['frames'].first['name']),
+    complete: present.length == job['frames'].length,
+    moderation: record&.dig('abandoned') ? 'abandoned' : moderation_summary(checked, require_judge: false),
     checks: (record&.dig('frames') || []).to_h {|frame| [frame['name'], frame['checks']]},
     promptCheck: record&.dig('promptCheck'),
     review: review_for(record),
