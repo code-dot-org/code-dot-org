@@ -7,6 +7,7 @@ import classNames from 'classnames';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import {toImage} from '@cdo/apps/imageUtils';
 import PixelEditor, {
   PixelEditorSaveMeta,
 } from '@cdo/apps/pixelEditor/PixelEditor';
@@ -74,6 +75,17 @@ interface ImagesTabProps {
   /** The drawing's undo and redo, for the host's own buttons; null once
       nothing is being drawn. */
   onDrawingHistory?: (history: EditHistory | null) => void;
+}
+
+/** Loads and decodes a picture so the next element showing it paints at
+    once; a failure is left for the editor to report. */
+async function warmImage(src: string): Promise<void> {
+  try {
+    const image = await toImage(src);
+    await image.decode?.();
+  } catch {
+    // The editor loads the same picture and reports its own failure.
+  }
 }
 
 const DRAFT_ID = 'draft';
@@ -312,7 +324,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   const drawingGenerationRef = useRef<ImageProps['generation']>();
   const drawingIdRef = useRef(0);
   const startDrawing = useCallback(
-    (target: ImageTarget) => {
+    async (target: ImageTarget) => {
       const existing = target.key
         ? images.find(image => image.key === target.key)
         : undefined;
@@ -320,6 +332,10 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
       leaveAfterSaveRef.current = false;
       const id = ++drawingIdRef.current;
       if (existing?.src) {
+        // The tools paint nothing until their own copy of the picture is
+        // decoded; decoded here first, the frame's placeholder shows it
+        // from its first paint, so a switch shows the picture, not white.
+        await warmImage(existing.src);
         setDrawing({
           id,
           target,
@@ -436,7 +452,11 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   // Another image, or a new slot, while a drawing is open: its last pixels
   // go up in the background and the tools close at once, so what comes
   // next shows without waiting on that save.
-  const leaveDrawing = useCallback(() => {
+  // `keep`: the next image's tools are about to take the canvas over, so
+  // the old one stays up until they do, instead of the frame showing the
+  // resting preview for the frames it takes to cut a set's standing frame.
+  // Nothing drawn in that moment is saved: the save hook is gone.
+  const leaveDrawing = useCallback((keep = false) => {
     if (dirtyRef.current || uploadOwedRef.current) {
       leaveAfterSaveRef.current = true;
       saveRef.current?.();
@@ -446,7 +466,9 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     uploadOwedRef.current = false;
     leaveAfterSaveRef.current = false;
     saveRef.current = null;
-    setDrawing(null);
+    if (!keep) {
+      setDrawing(null);
+    }
   }, []);
   // Done: what is drawn goes up, including pixels a pause's save kept local.
   const finishDrawing = useCallback(() => {
@@ -582,23 +604,23 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
           if (id === chosenId) {
             return;
           }
+          // Where the tools open by themselves, open them with the image,
+          // so no frame shows it without them.
+          const next = images.find(image => image.key === id);
+          const drawsNext =
+            !!next?.src &&
+            !next.sheet &&
+            editedMode() === 'paint' &&
+            !!editingOffered;
           if (drawing) {
-            leaveDrawing();
+            leaveDrawing(drawsNext);
           }
           // A draft left for an image holds nothing worth keeping.
           if (id !== DRAFT_ID) {
             setDraft(null);
           }
           startSession(id);
-          // Where the tools open by themselves, open them with the image,
-          // so no frame shows it without them.
-          const next = images.find(image => image.key === id);
-          if (
-            next?.src &&
-            !next.sheet &&
-            editedMode() === 'paint' &&
-            editingOffered
-          ) {
+          if (next && drawsNext) {
             startDrawing({
               key: id,
               imageType: next.imageType,

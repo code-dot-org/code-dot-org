@@ -125,6 +125,9 @@ jest.mock('@cdo/apps/pixelEditor/PixelEditor', () => {
   };
   return {__esModule: true, default: PixelEditorStub};
 });
+jest.mock('@cdo/apps/imageUtils', () => ({
+  toImage: async () => ({naturalWidth: 320, naturalHeight: 64}),
+}));
 
 const propsByKey: Record<string, Record<string, unknown>> = {};
 const animationList = () => ({
@@ -499,7 +502,7 @@ describe('ImagesTab', () => {
     renderTab({editingOffered: true});
     // The edited image opens in the tools, with the words beside them and
     // nothing to finish.
-    expect(screen.getByText('canvas')).toBeTruthy();
+    expect(await screen.findByText('canvas')).toBeTruthy();
     expect(screen.getByText('words')).toBeTruthy();
     expect(screen.queryByRole('button', {name: /^Done/})).toBeNull();
     expect(screen.queryByRole('button', {name: 'Edit this image'})).toBeNull();
@@ -513,7 +516,7 @@ describe('ImagesTab', () => {
     expect(screen.queryByRole('button', {name: 'Edit this image'})).toBeNull();
   });
 
-  it("switches to another image's tools at once, saving the last one behind", () => {
+  it("switches to another image's tools without a gap, saving the last one behind", async () => {
     delete params['images-edited'];
     propsByKey.k1 = {name: 'Sprite 1', categories: [], sourceUrl: 'one.png'};
     propsByKey.k2 = {name: 'Sprite 2', categories: [], sourceUrl: 'two.png'};
@@ -522,11 +525,14 @@ describe('ImagesTab', () => {
       () => new Promise<string>(resolve => (finishFirst = resolve))
     );
     renderTab({editingOffered: true});
-    expect(screen.getByText('canvas')).toBeTruthy();
+    expect(await screen.findByText('canvas')).toBeTruthy();
     fireEvent.click(screen.getByRole('button', {name: 'stroke'}));
-    // The next image: its tools show in the same render, while the first
-    // image's last pixels go up with their file.
+    // The next image: the canvas stays up while its picture is decoded,
+    // then its tools take over, while the first image's last pixels go
+    // up with their file.
     fireEvent.click(screen.getByRole('button', {name: 'Sprite 2'}));
+    expect(screen.getByText('canvas')).toBeTruthy();
+    await act(async () => {});
     expect(screen.getByText('canvas')).toBeTruthy();
     expect(saveEdited).toHaveBeenCalledTimes(1);
     expect(saveEdited.mock.calls[0][0]).toEqual({
@@ -562,7 +568,7 @@ describe('ImagesTab', () => {
     renderTab({lockedImageType: 'sprite', imageRole: 'hero'});
     expect(screen.queryByText('canvas')).toBeNull();
     fireEvent.click(screen.getByRole('button', {name: 'Edit this image'}));
-    expect(screen.getByText('canvas')).toBeTruthy();
+    expect(await screen.findByText('canvas')).toBeTruthy();
     expect(screen.queryByText('words')).toBeNull();
     await act(async () => {
       fireEvent.click(screen.getByRole('button', {name: 'Done editing'}));
