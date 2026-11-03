@@ -64,7 +64,6 @@ const NOT_TAUGHT: Record<string, readonly string[]> = {
     'variables_get_Actor',
     'world_kind_of',
     'world_actor_age',
-    'world_define_drawing',
   ],
   // The world's drawer, and the topics it was split into
   // (specs/TOOLBOX_TOPICS.md): the same blocks the one World drawer hid,

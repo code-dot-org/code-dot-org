@@ -81,7 +81,7 @@ export interface OwnMeta {
    * Things this kind does, by name — `define block` in an `.actor` file.
    *
    * The third declaration a kind may make, after state (`define property`) and
-   * per-frame work (`each frame`): a NAMED thing it does. A rule is still the
+   * per-frame work (its steps): a NAMED thing it does. A rule is still the
    * answer when behavior is shared between kinds, elected, or answerable by
    * `has trait`; this is for when the same six blocks were written twice.
    *

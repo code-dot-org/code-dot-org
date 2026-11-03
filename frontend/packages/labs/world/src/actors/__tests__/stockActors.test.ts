@@ -13,7 +13,7 @@ import {BUILTIN_RULE_META} from '../../blockly/builtinMeta';
 import {parseActorOwnMeta} from '../../blockly/ownProperties';
 import {parseRuleMeta} from '../../blockly/ruleMeta';
 import {STOCK_RULES} from '../../rules/stock';
-import {CODE_ROWS, keyRows, type ActorData} from '../actorData';
+import {keyRows, type ActorData} from '../actorData';
 import {STOCK_ACTORS as SHELF} from '../stock';
 import {buttonActor as button} from '../stock/button';
 import {healthBarActor as healthBar} from '../stock/healthBar';
@@ -60,15 +60,9 @@ const types = (contents: string): string[] =>
 
 describe('every stock actor', () => {
   it('is data, and paints itself only if it has no picture', () => {
-    // Its code is its handlers: no `define actor`, and no drawing or step,
-    // which are data (specs/DRAWING_PAGE_PLAN.md).
+    // Its code is its handlers: no `define actor`.
     for (const actor of STOCK_ACTORS) {
-      const found = roots(actor.data);
-      expect(found).not.toContain('world_actor');
-      expect(
-        found.filter(type => CODE_ROWS.has(type ?? '')),
-        actor.id,
-      ).toEqual([]);
+      expect(roots(actor.data)).not.toContain('world_actor');
 
       // An actor either has a picture or draws one, and never both: an
       // interface actor looks like whatever it says and must paint itself; a

@@ -29,7 +29,6 @@ import {
   type GeneratedBlock,
 } from './assembleActorModule';
 import styles from './blocklyGenerator.module.css';
-import {DRAWING_HEAD, MEMBER_HEAD, STEP_HEAD} from './bodySurfaces';
 import {
   actsLikeCode,
   animationsCode,
@@ -50,6 +49,7 @@ import {
   parseActorOwnMeta,
   type OwnMeta,
 } from './ownProperties';
+import {DRAWING_HEAD, MEMBER_HEAD, STEP_HEAD} from './pageHeads';
 import {
   CAMERA_SETTINGS_ID,
   withCameraSettings,
@@ -745,18 +745,11 @@ export const BlocklyGenerator = forwardRef<
    * This generator's own Blockly driver, captured from inside its provider.
    *
    * A BLOCK DEFINITION IS GLOBAL: `Blockly.Blocks` has one entry per type, and
-   * the last palette registered wins. Two of them differ by file — `each
-   * frame` and `define drawing` are roots in an `.actor` file and chained rows
-   * everywhere else, because a top-level block with a previous connection is
-   * disabled as an orphan (`DisableOrphansPlugin`) — so while an actor file was
-   * the open editor, this generator loaded every `.rule` against a definition
-   * with no previous connection and Blockly refused the trait's `each frame`:
-   * "the block is missing a previous connection". Every rule in the project,
-   * on any edit to an actor, until another file was opened.
-   *
-   * So the generator states its own definitions before it reads a file. It
-   * cannot avoid the divergence — both shapes are wanted, in different files —
-   * but it can stop depending on who registered last.
+   * the last palette registered wins. A palette is built for the file open in
+   * the editor, so the generator states its own definitions before it reads a
+   * file rather than depend on who registered last: a block that once had one
+   * shape in an `.actor` file and another elsewhere made every rule fail to
+   * load while an actor was open.
    */
   const driverRef = useRef<DriverHandle | null>(null);
 

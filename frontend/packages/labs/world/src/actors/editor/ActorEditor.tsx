@@ -7,8 +7,7 @@
 // one press away, as a step on the breadcrumb.
 //
 // THE CODE IS ITS WORKSPACE, AND ONLY THAT. Code opens the file editor over
-// the actor's handlers and code rows, which stand there as roots
-// (`blockly/codeRoots`); what it is stays in the panel, and what is saved
+// the actor's handlers; what it is stays in the panel, and what is saved
 // there goes into the file's workspace with the data left as it was.
 
 import {
@@ -149,9 +148,6 @@ const PREVIEW_SIZE = 192;
 /** Looks like's row for a Main that moves, and for the library's door. */
 const ANIMATED = 'animated:';
 const FROM_LIBRARY = 'library:';
-
-/** The trait that gives an actor a box, and its drawing a box's size. */
-const BOX_TRAIT = 'Boxed#HasABoxTrait';
 
 /** The actor's code workspace, as the file editor is handed a file. */
 const workspaceOf = (contents: string): string =>
@@ -830,8 +826,6 @@ export const ActorEditor = (props: CustomEditorProps) => {
         <div className={styles.codeBlocks}>
           <BlocklyFileEditor
             {...props}
-            actorCode
-            boxed={data?.traits?.includes(BOX_TRAIT) ?? false}
             initialContents={workspaceOf(contents)}
             onChange={next => write(withWorkspace(written.current, next))}
           />

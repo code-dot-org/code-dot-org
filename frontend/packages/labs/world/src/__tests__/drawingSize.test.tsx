@@ -40,26 +40,19 @@ const PLATE = actorDocument({
     {name: 'width', type: 'number', access: 'writable', value: '40'},
     {name: 'height', type: 'number', access: 'writable', value: '12'},
   ],
-  code: [
-    {
-      type: 'world_define_drawing',
+  drawing: {
+    width: own('Width'),
+    height: own('Height'),
+    body: {
+      type: 'world_draw_rectangle',
       inputs: {
+        X: number(0),
+        Y: number(0),
         WIDTH: own('Width'),
         HEIGHT: own('Height'),
-        DO: {
-          block: {
-            type: 'world_draw_rectangle',
-            inputs: {
-              X: number(0),
-              Y: number(0),
-              WIDTH: own('Width'),
-              HEIGHT: own('Height'),
-            },
-          },
-        },
       },
     },
-  ],
+  },
 });
 
 /** A Plate placed on the screen, its width set on the placement. */
@@ -138,26 +131,19 @@ describe('a drawing sized from the actor', () => {
     // fixed size is the block a learner has always dragged out.
     const fixed = actorDocument({
       name: 'Chip',
-      code: [
-        {
-          type: 'world_define_drawing',
+      drawing: {
+        width: {shadow: {type: 'math_number', fields: {NUM: 16}}},
+        height: {shadow: {type: 'math_number', fields: {NUM: 8}}},
+        body: {
+          type: 'world_draw_rectangle',
           inputs: {
-            WIDTH: {shadow: {type: 'math_number', fields: {NUM: 16}}},
-            HEIGHT: {shadow: {type: 'math_number', fields: {NUM: 8}}},
-            DO: {
-              block: {
-                type: 'world_draw_rectangle',
-                inputs: {
-                  X: number(0),
-                  Y: number(0),
-                  WIDTH: number(16),
-                  HEIGHT: number(8),
-                },
-              },
-            },
+            X: number(0),
+            Y: number(0),
+            WIDTH: number(16),
+            HEIGHT: number(8),
           },
         },
-      ],
+      },
     });
     const {world} = await compileProject({
       'actors/chip.actor': fixed,

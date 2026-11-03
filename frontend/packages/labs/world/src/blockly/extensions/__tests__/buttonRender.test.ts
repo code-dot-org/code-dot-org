@@ -26,12 +26,7 @@ import {describe, expect, it} from 'vitest';
 const DIR = 'src/blockly/extensions';
 
 /** The extensions that put a button on a block. */
-const BUTTONS = [
-  'openSourceButton.ts',
-  'enhanceButton.ts',
-  'lessonButton.ts',
-  'bodyButton.ts',
-];
+const BUTTONS = ['openSourceButton.ts', 'enhanceButton.ts', 'lessonButton.ts'];
 
 describe('a button extension', () => {
   it('is still the list this file thinks it is', () => {

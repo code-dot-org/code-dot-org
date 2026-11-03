@@ -557,6 +557,10 @@ opens with the answer and closes with the reasoning.
 
 ## 8. Break a rule into surfaces
 
+SUPERSEDED: a rule's and an actor's members, steps and drawing are data, each
+written on a page of its own (RULE_EDITOR_PLAN.md, DRAWING_PAGE_PLAN.md), and
+the surfaces and the pencil are deleted. Kept as the record.
+
 **The problem, which is three problems.** A heavy rule is slow to open, has
 nowhere to put what its author knows, and shows a learner a wall. Those are
 filed separately above — the weight in §2, the prose in §3 — and they have one

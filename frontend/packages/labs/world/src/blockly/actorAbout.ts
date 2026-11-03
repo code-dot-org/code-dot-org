@@ -188,11 +188,6 @@ export function actorAbout(
       }
       return fileActor(block);
     }
-    // A step says nothing about who elects it, and never can: `this actor` in
-    // a trait's step is whatever holds the trait, in this project and the next.
-    if (type === 'world_trait_step') {
-      return undefined;
-    }
     // A TWEEN IS A FUNCTION OF THE ACTOR IT IS PLAYED ON, not of the actor
     // whose file it sits in — the generator says so in as many words, and
     // `play tween ⟨…⟩ on ⟨who⟩` is what supplies the argument. So `this actor`

@@ -58,7 +58,6 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
     'world_play_tween',
   ],
   'logic/if': [
-    'world_trait_step',
     'controls_if',
     'logic_compare',
     'world_get_Space_PositionProperty',
@@ -148,7 +147,6 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
   'arcade/paddle': [],
   'arcade/zap': [],
   'arcade/bricks': [
-    'world_trait_step',
     'controls_if',
     'logic_compare',
     'world_count_of_kind',

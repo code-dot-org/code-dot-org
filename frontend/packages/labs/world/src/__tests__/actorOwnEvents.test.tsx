@@ -39,19 +39,17 @@ const BEACON = actorDocument({
   properties: [
     {name: 'flashes seen', type: 'number', access: 'writable', value: '0'},
   ],
-  code: [
+  steps: [
     {
-      type: 'world_trait_step',
-      fields: {PHASE: 'act', NAME: 'flash'},
-      inputs: {
-        DO: {
-          block: {
-            type: 'world_emit_ActorsBeacon_FlashesEvent',
-            inputs: {ACTOR: me()},
-          },
-        },
+      name: 'flash',
+      phase: 'act',
+      body: {
+        type: 'world_emit_ActorsBeacon_FlashesEvent',
+        inputs: {ACTOR: me()},
       },
     },
+  ],
+  code: [
     // The hat, a root of its own as every hat is.
     {
       type: 'world_on_ActorsBeacon_FlashesEvent',

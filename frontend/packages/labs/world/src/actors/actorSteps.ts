@@ -3,7 +3,7 @@
 // actor's steps; its name is the id it is defined under
 // (`ActorBuilder.defineStep`), so two may not share one.
 
-import {STEP_HEAD, STEP_HEAD_ID} from '../blockly/bodySurfaces';
+import {STEP_HEAD, STEP_HEAD_ID} from '../blockly/pageHeads';
 import {slug} from '../blockly/ruleMeta';
 import {phasesFor, PHASES} from '../engine/core/phases';
 

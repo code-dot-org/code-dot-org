@@ -120,11 +120,11 @@ describe('what a file may hold, against what its toolbox shows', () => {
   it('keeps a row the shelf has not got to', () => {
     const {toolbox} = buildDomainPalette(RULES, {fileKind: 'actor'});
     const shelved = shelvedToolbox(toolbox, {holds: () => false});
-    expect(typesOffered(shelved).has('world_trait_step')).toBe(false);
+    expect(typesOffered(shelved).has('world_print')).toBe(false);
 
     const actor = fileOf('actor');
     const root = actor.newBlock('world_actor');
-    const row = actor.newBlock('world_trait_step');
+    const row = actor.newBlock('world_print');
     root.nextConnection!.connect(row.previousConnection!);
 
     review(root);
@@ -145,7 +145,7 @@ describe('a root no drawer here offers', () => {
 
   it('is left to the orphan plugin when it is a row, not a root', () => {
     const file = fileOf('screen');
-    const row = file.newBlock('world_trait_step');
+    const row = file.newBlock('world_print');
 
     expect(misplacementOf(row)).toBeUndefined();
   });

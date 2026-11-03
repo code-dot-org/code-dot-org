@@ -281,10 +281,10 @@ const scrollTo = (to: object) => ({
  * sums eight times and the workspace was three and a half times the size of
  * the Text Input's.
  *
- * A `define block` is what this lab already has for that: a named thing a kind
- * does, with its body behind a pencil on a surface of its own, so the file
- * shows the NAME at each of the eight sites and the sums once
- * (`ownProperties.designedBlock`). It is the first stock actor to use one.
+ * An actor's own block is what this lab already has for that: a named thing a
+ * kind does, with its body on a page of its own, so the file shows the NAME
+ * at each of the eight sites and the sums once (`ownProperties.designedBlock`).
+ * It is the first stock actor to use one.
  */
 const KEEP_IN_VIEW = 'keep the caret in view';
 

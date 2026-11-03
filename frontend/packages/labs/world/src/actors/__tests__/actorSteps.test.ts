@@ -2,7 +2,7 @@
 
 import {describe, expect, it} from 'vitest';
 
-import {STEP_HEAD} from '../../blockly/bodySurfaces';
+import {STEP_HEAD} from '../../blockly/pageHeads';
 import type {ActorData} from '../actorData';
 import {
   actorMoment,

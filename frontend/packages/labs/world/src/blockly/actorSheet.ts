@@ -4,13 +4,12 @@
 // What the actor is — the kind it acts like, whether it is data, its
 // animations, its traits, the blocks and events it adds — is said from the
 // data (`BlocklyGenerator.actorCode`). What generates as code is loaded as
-// blocks: its still picture, the values set on it, its effects and its code
-// rows, chained under a `define actor` root where `actor` is the builder;
+// blocks: its still picture, the values set on it and its effects, chained
+// under a `define actor` root where `actor` is the builder;
 // its handlers beside it; and each block's body, its drawing and each of its
 // steps under its page's head (`memberHead`, `drawingHead`, `stepHead`).
 
 import {
-  CODE_ROWS,
   MAIN_ANIMATION,
   stillSpriteOf,
   writeEffect,
@@ -20,7 +19,7 @@ import {
 } from '../actors/actorData';
 import type {Timeline} from '../engine/core/keyframes';
 
-import {DRAWING_HEAD, MEMBER_HEAD, STEP_HEAD} from './bodySurfaces';
+import {DRAWING_HEAD, MEMBER_HEAD, STEP_HEAD} from './pageHeads';
 
 const ROOT = 'world_actor';
 
@@ -139,9 +138,6 @@ export function actorSheet(data: ActorData): ActorSheet {
     });
   }
   const roots = (data.blocks?.blocks?.blocks ?? []) as Block[];
-  const isCode = (root: Block) =>
-    typeof root.type === 'string' && CODE_ROWS.has(root.type);
-  roots.filter(isCode).forEach(row);
 
   const chain = rows.reduceRight<Block | undefined>(
     (below, one) => (below ? {...one, next: {block: below}} : one),
@@ -161,7 +157,7 @@ export function actorSheet(data: ActorData): ActorSheet {
             fields: {NAME: data.name},
             ...(chain ? {next: {block: chain}} : {}),
           },
-          ...roots.filter(root => !isCode(root)),
+          ...roots,
           ...heads,
         ],
       },

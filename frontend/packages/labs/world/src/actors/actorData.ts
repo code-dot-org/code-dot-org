@@ -3,9 +3,9 @@
 //
 // A data-shaped actor file is a document, as a map is: what the actor IS —
 // its traits, its own properties, the values set on it, its look, its icon,
-// what it acts like, the blocks and events it adds to the language — as keys,
-// and what it DOES as an event workspace, whose roots are its handlers and its
-// code (its drawing, its every-frame work).
+// what it acts like, the blocks and events it adds to the language, its
+// drawing and its every-frame steps — as keys, and the events it handles as a
+// workspace whose roots are its handlers.
 //
 // The compiler lays the data out as blocks (`blockly/actorSheet`), and a
 // walk that knows a reference by a block's type and fields reads the keys
@@ -181,15 +181,6 @@ export interface ActorMember {
   returns?: string;
   body?: Block;
 }
-
-/**
- * Rows that are code: what the actor does, rather than what it is. In the
- * data shape each is a root of the workspace.
- */
-export const CODE_ROWS: ReadonlySet<string> = new Set([
-  'world_define_drawing',
-  'world_trait_step',
-]);
 
 const ROOT = 'world_actor';
 

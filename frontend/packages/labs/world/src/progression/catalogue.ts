@@ -307,12 +307,12 @@ export const TILES: readonly Tile[] = [
       },
       // BOTH halves, and the second is why this one has an `inspect` at all:
       // the project the lesson starts with already moves. What makes the lesson
-      // done is that it moves with the hand-written `each frame` gone.
+      // done is that it moves with the hand-written step gone.
       passes: ({samples}) => {
         const [start, after] = samples.hero as Point[][];
         return Boolean(start?.[0]) && Math.abs(after[0].x - start[0].x) > 20;
       },
-      // NOT "no `each frame`". Setting a velocity every frame in `decide` is
+      // NOT "no step". Setting a velocity every frame in `decide` is
       // how the Arrow Keys rule itself moves an actor, and a learner who does
       // the lesson that way has done the lesson. What the lesson replaces is
       // moving by PLACE — so that is what the shape half looks for.
@@ -528,9 +528,8 @@ export const TILES: readonly Tile[] = [
     unlocks: [
       {kind: 'block', type: 'controls_if'},
       {kind: 'block', type: 'logic_compare'},
-      // …and the two blocks the question is asked from and inside: an actor's
-      // own per-frame work, and reading where it is.
-      {kind: 'block', type: 'world_trait_step'},
+      // …and what the question asks: where the actor is. It is asked in a
+      // step, which is made on the actor's Blocks tab.
       {kind: 'block', type: 'world_get_Space_PositionProperty'},
     ],
     check: {
@@ -2144,7 +2143,6 @@ export const TILES: readonly Tile[] = [
     offers: [
       {kind: 'block', type: 'world_count_of_kind'},
       {kind: 'block', type: 'world_all_actors'},
-      {kind: 'block', type: 'world_trait_step'},
       {kind: 'block', type: 'controls_if'},
       {kind: 'block', type: 'logic_compare'},
       {kind: 'block', type: 'math_number'},

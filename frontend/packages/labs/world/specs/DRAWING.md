@@ -1,5 +1,10 @@
 # Drawing: an actor that makes its own picture
 
+SUPERSEDED IN ONE PART (specs/DRAWING_PAGE_PLAN.md): a drawing is the
+actor's data, written on a page of its own under a head that says its size,
+and not a `define drawing` row. `define drawing ⟨w⟩ by ⟨h⟩` below is that
+head. What else is here stands.
+
 ## The problem
 
 An actor's appearance is a reference to an asset it did not make. `frameFor`
@@ -36,11 +41,11 @@ define drawing ⟨64⟩ by ⟨8⟩
   draw rectangle at ⟨0, 0⟩ size ⟨64 × ⟨fraction of this actor⟩, 8⟩
 ```
 
-It is a ROW under `define actor`, in an `.actor` file and in a world alike, and
-its body is on a surface of its own behind the pencil — the same shape `define
-block` and `each frame` have, reached the same way. It needs no field to say
-WHOSE picture it is: it is chained under the actor that owns it, and a local
-actor's body already generates inside a block where `actor` is that builder.
+It is the actor's `drawing`, opened from Edit drawing on its Look tab, and its
+body is on a page of its own under the head — the same shape an actor's block
+and step have. It needs no field to say WHOSE picture it is: it is the
+actor's, and its body generates inside a closure where `actor` is that
+actor.
 
 It had TWO SHAPES until then — a definition root in an `.actor` file, because
 `DisableOrphansPlugin` grays out a top-level block with a previous connection,

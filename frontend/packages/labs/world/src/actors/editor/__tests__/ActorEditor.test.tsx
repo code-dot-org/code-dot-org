@@ -50,19 +50,16 @@ vi.mock('../../../runtime/WorldRuntimeContext', () => ({
 const saved: {
   onChange?: (contents: string) => void;
   contents?: string;
-  actorCode?: boolean;
   memberHead?: {parts: unknown[]};
 } = {};
 vi.mock('../../../blockly/BlocklyFileEditor', () => ({
   BlocklyFileEditor: (props: {
     initialContents: string;
     onChange: (contents: string) => void;
-    actorCode?: boolean;
     memberHead?: {parts: unknown[]};
   }) => {
     saved.onChange = props.onChange;
     saved.contents = props.initialContents;
-    saved.actorCode = props.actorCode;
     saved.memberHead = props.memberHead;
     return <div data-testid="blocks" />;
   },
@@ -482,12 +479,6 @@ describe('the Actor Editor', () => {
       blocks: {blocks: {blocks: []}},
     });
   });
-
-  it('tells the file editor the workspace is an actor’s code', () => {
-    open();
-    fireEvent.click(screen.getByRole('button', {name: 'Code'}));
-    expect(saved.actorCode).toBe(true);
-  });
 });
 
 describe('what it is for (specs/ACTORS_AS_DATA_PLAN.md, step 3)', () => {
@@ -638,7 +629,6 @@ describe('an event or block of its own (specs/ACTOR_BLOCKS_PLAN.md, step 3)', ()
     expect(saved.memberHead?.parts).toEqual([
       {kind: 'label', text: 'do something'},
     ]);
-    expect(saved.actorCode).toBeUndefined();
     // The implementation's workspace is the block, at its head, alone.
     const roots = JSON.parse(saved.contents!).blocks.blocks as Array<{
       type: string;

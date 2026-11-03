@@ -2,7 +2,7 @@
 // head (`drawingHead`) with the sizes in its sockets and the pen and shapes
 // below it, and the actor's variables.
 
-import {DRAWING_HEAD, DRAWING_HEAD_ID} from '../blockly/bodySurfaces';
+import {DRAWING_HEAD, DRAWING_HEAD_ID} from '../blockly/pageHeads';
 
 import {
   actorDataOf,
@@ -14,20 +14,35 @@ import {
 import {withVariables} from './actorSteps';
 import {ancestry} from './preview/drawingReader';
 
-/** A drawing's size before anything asks the actor: what the block always was. */
+/** A drawing's size before anything asks the actor. */
 const side = (): Socket => ({
   shadow: {type: 'math_number', fields: {NUM: 32}},
 });
 
-/** A drawing with nothing drawn yet. */
-export const emptyDrawing = (): ActorDrawing => ({
-  width: side(),
-  height: side(),
+/** The trait that gives an actor a box. */
+const BOX_TRAIT = 'Boxed#HasABoxTrait';
+
+/** `⟨width|height⟩ of this actor`, over the 32 a socket holds when emptied. */
+const boxSide = (name: 'Width' | 'Height'): Socket => ({
+  ...side(),
+  block: {
+    type: `world_get_Boxed_${name}Property`,
+    inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
+  },
 });
+
+/**
+ * A drawing with nothing drawn yet: as big as the actor's box when it has
+ * one, since a box that is resized is a drawing that is redrawn to fit.
+ */
+export const emptyDrawing = (data?: ActorData): ActorDrawing =>
+  data?.traits?.includes(BOX_TRAIT)
+    ? {width: boxSide('Width'), height: boxSide('Height')}
+    : {width: side(), height: side()};
 
 /** The workspace the drawing is written on. */
 export function drawingDocument(data: ActorData): string {
-  const drawing = data.drawing ?? emptyDrawing();
+  const drawing = data.drawing ?? emptyDrawing(data);
   const variables = data.blocks?.variables;
   return JSON.stringify(
     {
@@ -126,7 +141,7 @@ export function inheritedDrawing(
  */
 export function drawOwn(data: ActorData, inherited?: Inherited): ActorData {
   if (!inherited) {
-    return {...data, drawing: emptyDrawing()};
+    return {...data, drawing: emptyDrawing(data)};
   }
   const held = (data.blocks?.variables ?? []) as Array<{id?: string}>;
   const ids = new Set(held.map(one => one.id));

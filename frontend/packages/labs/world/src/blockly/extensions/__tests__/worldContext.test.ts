@@ -41,25 +41,15 @@ describe('inWorldContext', () => {
     expect(inWorldContext(block as never)).toBe(false);
   });
 
-  it('is true inside `each frame`, in both of its homes', () => {
-    // Its closure binds `world` either way — `(world, delta)` under a trait,
-    // `(actor, world, delta)` standing alone in a `.actor` file — and leaving
-    // it out put "we do not know what world we are on yet" on every
-    // world-reading block inside one.
-    expect(
-      inWorldContext(
-        chain(
-          'world_mouse_position',
-          'world_trait_step',
-          'world_rule_trait',
-        ) as never,
-      ),
-    ).toBe(true);
-    expect(
-      inWorldContext(
-        chain('world_mouse_position', 'world_trait_step') as never,
-      ),
-    ).toBe(true);
+  it('is true under the head of a step’s page or a drawing’s', () => {
+    // Each closure binds `world`, and leaving one out put "we do not know
+    // what world we are on yet" on every world-reading block under it.
+    for (const head of ['world_step_head', 'world_drawing_head']) {
+      expect(
+        inWorldContext(chain('world_mouse_position', head) as never),
+        head,
+      ).toBe(true);
+    }
   });
 
   it('is false when floating with no parent', () => {

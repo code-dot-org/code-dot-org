@@ -28,6 +28,7 @@ import * as Blockly from 'blockly/core';
 import {createRef} from 'react';
 import {describe, expect, it} from 'vitest';
 
+import type {Block} from '../../actors/actorData';
 import {actorDocument} from '../../actors/actorDocument';
 import BlocklyGenerator, {
   type BlocklyGeneratorHandle,
@@ -54,18 +55,14 @@ const actorWith = (
 ) =>
   actorDocument({
     name: 'Scribe',
-    code: [
+    steps: [
       {
-        type: 'world_trait_step',
-        fields: {PHASE: 'react', NAME: 'count'},
-        inputs: {
-          DO: {
-            block: rows.reduceRight((next, row) => ({
-              ...(row as object),
-              next: {block: next},
-            })),
-          },
-        },
+        name: 'count',
+        phase: 'react',
+        body: rows.reduceRight((next, row) => ({
+          ...(row as object),
+          next: {block: next},
+        })) as Block,
       },
     ],
     variables,

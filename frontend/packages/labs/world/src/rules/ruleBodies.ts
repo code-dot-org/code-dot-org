@@ -7,7 +7,7 @@
 // and decide only the key a body is filed under (`ruleBodyKey`).
 
 import type {ActorMember, Block} from '../actors/actorData';
-import {MEMBER_HEAD, STEP_HEAD} from '../blockly/bodySurfaces';
+import {MEMBER_HEAD, STEP_HEAD} from '../blockly/pageHeads';
 import {
   designedName,
   ruleBodyKey,

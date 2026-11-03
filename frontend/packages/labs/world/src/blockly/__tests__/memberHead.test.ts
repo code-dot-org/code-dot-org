@@ -8,8 +8,8 @@ import {beforeAll, describe, expect, it} from 'vitest';
 
 import {Blockly} from '@code-dot-org/blockly';
 
-import {MEMBER_HEAD, MEMBER_HEAD_ID} from '../bodySurfaces';
 import {memberHead} from '../memberHead';
+import {MEMBER_HEAD, MEMBER_HEAD_ID} from '../pageHeads';
 import {idsInScope} from '../variableScope';
 
 type Head = Blockly.Block & {fill_: () => void};

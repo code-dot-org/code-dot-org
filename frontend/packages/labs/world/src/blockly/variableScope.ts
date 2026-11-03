@@ -18,7 +18,7 @@
 
 import type {Block, Workspace} from 'blockly';
 
-import {MEMBER_HEAD, memberValueSocket} from './bodySurfaces';
+import {MEMBER_HEAD, memberValueSocket} from './pageHeads';
 import {indexedBlocks, type IndexedBlock} from './workspaceIndex';
 
 /**

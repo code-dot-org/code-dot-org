@@ -31,55 +31,46 @@ const me = () => ({block: {type: 'world_this_actor'}});
 const BAR = actorDocument({
   name: 'Bar',
   properties: [{name: 'ticks', type: 'number', access: 'writable', value: '0'}],
-  code: [
+  steps: [
     {
-      type: 'world_trait_step',
-      fields: {PHASE: 'act', NAME: 'count'},
-      inputs: {
-        DO: {
-          block: {
-            type: 'world_set_ActorsBar_TicksProperty',
-            inputs: {
-              ACTOR: me(),
-              VALUE: {
-                block: {
-                  type: 'math_arithmetic',
-                  fields: {OP: 'ADD'},
-                  inputs: {
-                    A: {
-                      block: {
-                        type: 'world_get_ActorsBar_TicksProperty',
-                        inputs: {ACTOR: me()},
-                      },
-                    },
-                    B: {block: {type: 'math_number', fields: {NUM: 1}}},
+      name: 'count',
+      phase: 'act',
+      body: {
+        type: 'world_set_ActorsBar_TicksProperty',
+        inputs: {
+          ACTOR: me(),
+          VALUE: {
+            block: {
+              type: 'math_arithmetic',
+              fields: {OP: 'ADD'},
+              inputs: {
+                A: {
+                  block: {
+                    type: 'world_get_ActorsBar_TicksProperty',
+                    inputs: {ACTOR: me()},
                   },
                 },
+                B: {block: {type: 'math_number', fields: {NUM: 1}}},
               },
             },
           },
         },
       },
     },
-    {
-      type: 'world_define_drawing',
+  ],
+  drawing: {
+    width: {shadow: {type: 'math_number', fields: {NUM: 40}}},
+    height: {shadow: {type: 'math_number', fields: {NUM: 6}}},
+    body: {
+      type: 'world_draw_rectangle',
       inputs: {
-        WIDTH: {shadow: {type: 'math_number', fields: {NUM: 40}}},
-        HEIGHT: {shadow: {type: 'math_number', fields: {NUM: 6}}},
-        DO: {
-          block: {
-            type: 'world_draw_rectangle',
-            inputs: {
-              X: {block: {type: 'math_number', fields: {NUM: 0}}},
-              Y: {block: {type: 'math_number', fields: {NUM: 0}}},
-              WIDTH: {block: {type: 'math_number', fields: {NUM: 40}}},
-              HEIGHT: {block: {type: 'math_number', fields: {NUM: 6}}},
-            },
-          },
-        },
+        X: {block: {type: 'math_number', fields: {NUM: 0}}},
+        Y: {block: {type: 'math_number', fields: {NUM: 0}}},
+        WIDTH: {block: {type: 'math_number', fields: {NUM: 40}}},
+        HEIGHT: {block: {type: 'math_number', fields: {NUM: 6}}},
       },
     },
-  ],
+  },
 });
 
 /** The child: everything the Bar is, and nothing said twice. */

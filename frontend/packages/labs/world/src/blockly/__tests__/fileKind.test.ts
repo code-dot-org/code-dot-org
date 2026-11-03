@@ -70,62 +70,6 @@ describe('which definition roots a file may hold', () => {
     expect(categoryNames('screen')).not.toContain('Rule');
   });
 
-  it('offers `each frame` wherever there is an owner to name', () => {
-    // Two readings, both the same sentence about whoever owns it: a trait's
-    // member in a `.rule`, and a kind's own work in an `.actor`. A screen
-    // has nothing for a step to be about.
-    expect(offeredTypes('actor')).toContain('world_trait_step');
-    expect(offeredTypes('rule')).toContain('world_trait_step');
-    expect(offeredTypes('screen')).not.toContain('world_trait_step');
-  });
-
-  it('offers `define drawing` to an actor file alone', () => {
-    expect(offeredTypes('actor')).toContain('world_define_drawing');
-    expect(offeredTypes('screen')).not.toContain('world_define_drawing');
-    expect(offeredTypes('rule')).not.toContain('world_define_drawing');
-  });
-
-  it('gives `each frame` one shape, in every kind of file', () => {
-    // It used to have two. A definition root must not have a previous
-    // connection — `DisableOrphansPlugin` reads a top-level block with one as
-    // an orphan and grays it out along with everything under it — so an
-    // `.actor` file got a rootless `each frame` and every other file got the
-    // chaining one. It is a ROW under `define actor` now, in an `.actor` file
-    // as anywhere, so there is nothing left to vary.
-    const shapeIn = (fileKind: FileKind) => {
-      const matches = buildDomainPalette([], {fileKind}).blocks.filter(
-        block => block.type === 'world_trait_step',
-      ) as Array<{previousStatement?: boolean}>;
-      // Exactly one definition per type: two would leave which one lands on
-      // the workspace up to registration order.
-      expect(matches).toHaveLength(1);
-      return matches[0].previousStatement;
-    };
-
-    expect(shapeIn('actor')).toBe(true);
-    expect(shapeIn('rule')).toBe(true);
-    expect(shapeIn('screen')).toBe(true);
-  });
-
-  it('gives `define drawing` one shape too, in every kind of file', () => {
-    // The last block that had two, and it lost them for the same reasons
-    // `each frame` did: `Blockly.Blocks` holds one definition per type for the
-    // whole process, so a shape that varied by file was never local to the
-    // file that wanted it. It is a ROW under `define actor` in both homes now,
-    // with the pen and the shapes on a surface of its own.
-    const shapeIn = (fileKind: FileKind) => {
-      const matches = buildDomainPalette([], {fileKind}).blocks.filter(
-        block => block.type === 'world_define_drawing',
-      ) as Array<{previousStatement?: boolean}>;
-      expect(matches).toHaveLength(1);
-      return matches[0].previousStatement;
-    };
-
-    expect(shapeIn('actor')).toBe(true);
-    expect(shapeIn('rule')).toBe(true);
-    expect(shapeIn('screen')).toBe(true);
-  });
-
   it('does not offer `use rule` to a screen', () => {
     // A game runs the rules the project holds (blockly/projectModules), so
     // the block would be a row that does nothing. It is still OFFERED to a

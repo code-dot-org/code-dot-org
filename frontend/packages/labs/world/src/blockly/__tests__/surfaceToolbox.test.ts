@@ -36,16 +36,13 @@ const names = (toolbox: Toolbox): string[] =>
   (toolbox as ToolboxCategory[]).map(category => category.name);
 
 describe('a body surface', () => {
-  it('offers no declaration, in any drawer that offered one', () => {
-    // `world_trait_step` is in Actor and Rule. A filter that only looked at the Rule category would
-    // pass a test that only looked at the Rule category.
+  it('offers no declaration: each is made on a page of its own', () => {
     const body = offered(toolboxForSurface(palette(), 'body'));
 
     for (const declaration of [
       'world_rule',
       'world_rule_property',
       'world_rule_block',
-      'world_trait_step',
       'world_use_trait',
       'world_rule_step_in',
       'world_rule_event',
@@ -95,24 +92,26 @@ describe('what filtering must not break', () => {
     // they carry no type to judge.
     const toolbox = [
       category('Rule', [
-        {kind: 'label', text: 'Declarations'},
-        'world_trait_step',
+        {kind: 'label', text: 'Implementation'},
         'world_return',
+        'world_add_trait',
       ]),
     ] as Toolbox;
 
     expect(
-      (toolboxForSurface(toolbox, 'body') as ToolboxCategory[])[0].blocks,
-    ).toEqual([{kind: 'label', text: 'Declarations'}, 'world_return']);
+      (toolboxForSurface(toolbox, 'interface') as ToolboxCategory[])[0].blocks,
+    ).toEqual([{kind: 'label', text: 'Implementation'}, 'world_add_trait']);
   });
 
   it('drops a drawer with nothing left in it', () => {
     const toolbox = [
-      category('Only Declarations', ['world_trait_step']),
+      category('Only Bodies', ['world_return']),
       category('Something', ['world_add_trait']),
     ] as Toolbox;
 
-    expect(names(toolboxForSurface(toolbox, 'body'))).toEqual(['Something']);
+    expect(names(toolboxForSurface(toolbox, 'interface'))).toEqual([
+      'Something',
+    ]);
   });
 
   it('keeps a drawer that fills itself when it is opened', () => {
@@ -122,11 +121,11 @@ describe('what filtering must not break', () => {
       name: 'Variables',
       key: 'VARIABLE',
       onLoad: () => [],
-      blocks: ['world_trait_step'],
+      blocks: ['world_return'],
     } as unknown as ToolboxCategory;
 
-    expect(names(toolboxForSurface([dynamic] as Toolbox, 'body'))).toEqual([
-      'Variables',
-    ]);
+    expect(names(toolboxForSurface([dynamic] as Toolbox, 'interface'))).toEqual(
+      ['Variables'],
+    );
   });
 });

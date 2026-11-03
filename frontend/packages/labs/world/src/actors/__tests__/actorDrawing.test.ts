@@ -3,7 +3,7 @@
 
 import {describe, expect, it} from 'vitest';
 
-import {DRAWING_HEAD} from '../../blockly/bodySurfaces';
+import {DRAWING_HEAD} from '../../blockly/pageHeads';
 import type {ActorData} from '../actorData';
 import {
   drawingDocument,
@@ -94,6 +94,20 @@ describe('a drawing inherited', () => {
     expect(own.drawing).toEqual(named.drawing);
     expect(own.drawing).not.toBe(named.drawing);
     expect(own.blocks?.variables).toEqual(stamp.blocks!.variables);
+  });
+
+  it('is a blank drawing as big as the box, for an actor with one', () => {
+    const own = drawOwn({
+      type: 'actor',
+      name: 'Card',
+      traits: ['Boxed#HasABoxTrait'],
+    });
+    expect(own.drawing!.width.block?.type).toBe(
+      'world_get_Boxed_WidthProperty',
+    );
+    expect(own.drawing!.height.block?.type).toBe(
+      'world_get_Boxed_HeightProperty',
+    );
   });
 
   it('is a blank drawing when there is none to copy', () => {

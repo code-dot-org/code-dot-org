@@ -5,8 +5,8 @@
 // them back changed. Parts are edited as they are ARRANGED, breaks that end
 // nothing included; what is written to the data is settled (`designParts`).
 
-import {MEMBER_HEAD, MEMBER_HEAD_ID} from '../../blockly/bodySurfaces';
 import {settledParts} from '../../blockly/designParts';
+import {MEMBER_HEAD, MEMBER_HEAD_ID} from '../../blockly/pageHeads';
 import {designedName} from '../../blockly/ruleMeta';
 import {
   type ActorData,

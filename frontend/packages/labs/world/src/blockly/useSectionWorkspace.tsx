@@ -198,18 +198,11 @@ export interface SectionWorkspaceOptions {
    * every event and passes nothing.
    */
   narrowEvents?: (choices: EventChoice[]) => EventChoice[];
-  /**
-   * What the menu offers besides the events: an actor's code workspace
-   * offers what the actor does — every frame, a block, an event, its drawing
-   * (`codeRoots`).
-   */
-  moreChoices?: readonly EventChoice[];
   isReadOnly: boolean;
   workspaceRef: MutableRefObject<Blockly.WorkspaceSvg | null>;
   /**
-   * Whether the workspace is showing the file's sections now. The file
-   * editor also shows one member's body on the same workspace, which is not
-   * a list of sections and gets none of this.
+   * Whether the workspace is showing the file's sections: not on a page of
+   * one thing's code, which is not a list of sections.
    */
   isShowingSections?: () => boolean;
 }
@@ -219,7 +212,6 @@ export function useSectionWorkspace({
   definitions,
   getToolbox,
   narrowEvents,
-  moreChoices,
   isReadOnly,
   workspaceRef,
   isShowingSections = () => true,
@@ -234,8 +226,8 @@ export function useSectionWorkspace({
   /**
    * Where the layout put each top block, and which the learner has moved
    * since (`tidyLayout.orderKeys`). Seeded from the file as it was saved, and
-   * kept across the editor's reloads — a font arriving or the way Back from
-   * a body surface reloads the blocks, and the order must not come from
+   * kept across the editor's reloads — a font arriving reloads the blocks,
+   * and the order must not come from
    * positions Blockly has had its hands on in between.
    */
   const layoutMemory = useRef<LayoutMemory>({
@@ -354,11 +346,8 @@ export function useSectionWorkspace({
       return [];
     }
     const all = eventChoicesIn(toolboxRef.current(), definitions);
-    return [
-      ...(narrowRef.current ? narrowRef.current(all) : all),
-      ...(moreChoices ?? []),
-    ];
-  }, [addMenu, definitions, moreChoices]);
+    return narrowRef.current ? narrowRef.current(all) : all;
+  }, [addMenu, definitions]);
   /** A section just added, to bring into view once it is laid out. */
   const revealAfterLayout = useRef<string | null>(null);
   /**
@@ -818,12 +807,10 @@ export function useSectionWorkspace({
       if (!workspace) {
         return;
       }
-      // A choice may say what the block holds, not only what it is.
-      const state = eventMenuChoices.find(one => one.type === type)?.state;
       Blockly.Events.setGroup(true);
       try {
         const block = Blockly.serialization.blocks.append(
-          {...state, type, x: COLUMN_X, y} as never,
+          {type, x: COLUMN_X, y} as never,
           workspace,
         );
         revealAfterLayout.current = block.id;

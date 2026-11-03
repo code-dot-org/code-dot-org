@@ -404,9 +404,9 @@ length after that, which a Length field can stretch.
 
 ### Interface Actors
 
-Interface Actors are typically drawn via `define drawing` function. This will
-be simplified since Interface Actors always have a width and height to be
-automatically a `define drawing <width of actor> by <height of actor>`.
+Interface Actors are drawn: each has a drawing, opened from Edit drawing on
+its Look tab. Since an Interface Actor always has a width and height, a new
+drawing starts as `<width of actor> by <height of actor>`.
 
 ## Effect Editor
 

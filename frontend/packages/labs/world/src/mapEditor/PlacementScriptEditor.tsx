@@ -11,7 +11,7 @@
 //
 // A workspace of its own rather than the file editor with a different file:
 // `BlocklyFileEditor` is keyed to a FILE — its palette, its rename machinery,
-// its body surfaces, the singletons it installs — and a placement is a
+// the singletons it installs — and a placement is a
 // subtree of a document that is not a workspace at all. What is shared is
 // what can be: the block definitions, the palette builder, the theme, the
 // localization, the stand-ins for block types nothing defines — and the

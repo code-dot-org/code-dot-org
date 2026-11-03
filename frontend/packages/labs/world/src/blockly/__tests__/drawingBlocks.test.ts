@@ -1,17 +1,15 @@
 // The blocks a drawing is written in (specs/DRAWING.md).
 //
 // Two things are pinned here and they are not the same thing. One is what the
-// blocks GENERATE — `pen.…`, in an `.actor` file, inside a closure that binds
-// it. The other is where they are OFFERED, which is the whole of what keeps a
-// drawing an actor's: `define drawing` is a root with no home outside `.actor`,
-// and the pen it needs goes with it.
+// blocks GENERATE — `pen.…`, inside the closure a drawing binds it in. The
+// other is where they are OFFERED: on an actor's drawing page, and nowhere
+// else.
 
 import {describe, expect, it} from 'vitest';
 
 import {Blockly} from '@code-dot-org/blockly';
 
-import {buildDomainPalette, ROOT_BLOCK_TYPES} from '../domainBlocks';
-import {ROOT_HOMES, type FileKind} from '../fileKind';
+import {buildDomainPalette} from '../domainBlocks';
 import {standInBlocks} from '../standInBlocks';
 import {toolboxForSurface} from '../surfaceToolbox';
 
@@ -41,9 +39,7 @@ const codeFor = (
     blockNamed(type).generator!.javascript(
       {
         getFieldValue: (name: string) => fields[name] ?? null,
-        // CHAINED UNDER A `define actor`, which is what decides whether a
-        // drawing is anything at all (`domainBlocks.worldDefineDrawing`).
-        getParent: () => ({type: 'world_actor', getParent: () => null}),
+        getParent: () => null,
         workspace: {getTopBlocks: () => []},
         getNextBlock: () => null,
       },
@@ -55,76 +51,6 @@ const codeFor = (
       {},
     ),
   );
-
-describe('define drawing', () => {
-  it('binds the pen, and shadows the module’s actor as a step does', () => {
-    // `this actor` compiles to `actor` wherever it is written, so a routine
-    // reading its own state means this one — the same bargain `each frame`
-    // makes in the same file (ActorBuilder.defineStep).
-    //
-    // And `world`, so a drawing may ask about actors other than the one it is
-    // drawing. It reads and never writes, which is what a drawing IS; a health
-    // bar that could only see itself had to be handed the actor it watches, by
-    // a property and a step that existed for no other reason.
-    // …AND THE SIZE IS A CLOSURE EACH, because it is read off the actor. It
-    // was two numbers on the block; an interface actor's is `⟨width⟩ of ⟨this
-    // actor⟩`, so two Buttons of one kind may be two widths
-    // (`ActorDrawing.size`, specs/UI_ACTORS.md). A literal is that same
-    // function answering the same way.
-    const code = codeFor('world_define_drawing', {
-      values: {WIDTH: '64', HEIGHT: 'actor.get(HeightProperty)'},
-      body: 'pen.rectangle(0, 0, 8, 8);\n',
-    });
-
-    expect(code).toBe(
-      // A CLOSURE TAKING BOTH, because a size may ask the world as readily as
-      // the actor: `⟨width of ⟨what it says⟩ at size ⟨12⟩⟩` is a box that fits
-      // its own words, and how wide words are is the world's to answer
-      // (`World.textWidth`). A literal ignores both and costs nothing.
-      'actor.defineDrawing((actor, world) => 64, ' +
-        '(actor, world) => actor.get(HeightProperty), ' +
-        '(actor, pen, world) => {\npen.rectangle(0, 0, 8, 8);\n});\n',
-    );
-  });
-
-  it('has one shape, and is not a definition root', () => {
-    // IT USED TO HAVE TWO, like `each frame` before it: a root in an `.actor`
-    // file, because `DisableOrphansPlugin` greys out a top-level block with a
-    // previous connection, and a chained row in a world's own `define actor`.
-    // `Blockly.Blocks` holds one definition per type for the whole process, so
-    // whoever registered last spoke for all of it — the hazard
-    // `generatorRegistration.test` exists for.
-    //
-    // It is a ROW under `define actor` in both now, with the pen behind its
-    // own pencil, so there is nothing left to vary.
-    const shapeIn = (fileKind: FileKind) => {
-      const matches = buildDomainPalette([], {fileKind}).blocks.filter(
-        block => block.type === 'world_define_drawing',
-      ) as Array<{previousStatement?: boolean; nextStatement?: boolean}>;
-      // Exactly one definition per type: two would leave which one lands on
-      // the workspace up to registration order.
-      expect(matches).toHaveLength(1);
-      return matches[0];
-    };
-
-    for (const kind of ['actor', 'screen'] as const) {
-      expect(shapeIn(kind).previousStatement).toBe(true);
-      expect(shapeIn(kind).nextStatement).toBe(true);
-    }
-    expect(ROOT_BLOCK_TYPES.has('world_define_drawing')).toBe(false);
-  });
-
-  it('lives where an actor is described, and nowhere else', () => {
-    // A drawing belongs to a KIND of actor, and a kind is an actor file.
-    //
-    // Not a rule or a behavior: those are shared mechanics, and how a
-    // particular actor looks is the one thing that is not shared. Not a world
-    // any more either: the actors a world once described for itself are files.
-    expect([...(ROOT_HOMES.get('world_define_drawing') ?? [])]).toEqual([
-      'actor',
-    ]);
-  });
-});
 
 describe('the pen', () => {
   it('sets and unsets each half of the paint', () => {
@@ -309,9 +235,8 @@ describe('the Drawing category', () => {
   });
 
   it('is not shown anywhere else, pen and all', () => {
-    // Filtering by `ROOT_HOMES` alone would drop `define drawing` and leave the
-    // pen behind — ten blocks in a `.screen` that could only ever wear a
-    // warning saying there is nothing to draw on.
+    // Ten blocks in a `.screen` that could only ever wear a warning saying
+    // there is nothing to draw on.
     for (const kind of ['screen', 'rule'] as const) {
       const categories = palette(kind).toolbox as Array<{
         name?: string;

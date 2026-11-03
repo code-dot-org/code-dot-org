@@ -230,47 +230,6 @@ describe('domain block generators', () => {
     expect(code).not.toContain('export default');
   });
 
-  it('an actor’s own `each frame` declares a step on the kind', () => {
-    // The behavior half of an actor's own properties: work a KIND does every
-    // frame, with no rule to do it in (ActorBuilder.defineStep).
-    //
-    // CHAINED UNDER THE `define actor`, which is where an `.actor` file's
-    // steps live — the top of the chain is what says who writes this, and a
-    // step whose chain tops out anywhere else writes nothing.
-    const code = generatorFor('world_trait_step')(
-      {
-        getParent: () => ({type: 'world_actor', getParent: () => null}),
-        workspace: {getTopBlocks: () => []},
-        getFieldValue: (name: string) =>
-          name === 'NAME' ? 'follow the mouse' : 'decide',
-      } as never,
-      {statementToCode: () => '  body;\n'} as never,
-      {} as never,
-    );
-
-    expect(code).toBe(
-      'actor.defineStep("follow_the_mouse", "decide", ' +
-        '(actor, world, delta) => {\n  body;\n});\n',
-    );
-  });
-
-  it('the same block under a trait declares nothing', () => {
-    // There it is one of the trait's members: the rule's module is assembled
-    // from metadata and the body is pulled out by a pass of its own, so
-    // generating here would write it twice.
-    const code = generatorFor('world_trait_step')(
-      {
-        getParent: () => ({type: 'world_rule_trait', getParent: () => null}),
-        workspace: {getTopBlocks: () => []},
-        getFieldValue: () => 'x',
-      } as never,
-      {statementToCode: () => '  body;\n'} as never,
-      {} as never,
-    );
-
-    expect(code).toBe('');
-  });
-
   it('world_set_position reads a Vector from the x/y value sockets', () => {
     // X/Y are value sockets: their code comes from `valueToCode` (a shadow
     // math_number, or a plugged getter/math block). No ACTOR value → `actor`.

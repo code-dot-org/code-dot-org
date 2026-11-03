@@ -9,7 +9,7 @@ import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import type {Block} from '../actors/actorData';
 import {without} from '../actors/editor/memberEdits';
-import {STEP_HEAD, STEP_HEAD_ID} from '../blockly/bodySurfaces';
+import {STEP_HEAD, STEP_HEAD_ID} from '../blockly/pageHeads';
 import {renameMemberInSource} from '../blockly/renameRule';
 import {pascal, slug} from '../blockly/ruleMeta';
 import {phasesFor, PHASES, type PhaseDef} from '../engine/core/phases';

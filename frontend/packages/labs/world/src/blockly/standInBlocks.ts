@@ -39,8 +39,8 @@ import {Blockly, defineBlock} from '@code-dot-org/blockly';
 import {isActorData, writeEffect, writeValue} from '../actors/actorData';
 import {isRuleData, ruleBodies} from '../rules/ruleData';
 
-import {DRAWING_HEAD} from './bodySurfaces';
 import {missingRuleExtension} from './extensions/missingRule';
+import {DRAWING_HEAD} from './pageHeads';
 import {registerStandInRule} from './ruleRegistry';
 
 /** A block as it appears in a serialized workspace — only what is read here. */

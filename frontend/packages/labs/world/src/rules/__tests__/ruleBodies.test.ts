@@ -3,7 +3,7 @@
 
 import {describe, expect, it} from 'vitest';
 
-import {MEMBER_HEAD, STEP_HEAD} from '../../blockly/bodySurfaces';
+import {MEMBER_HEAD, STEP_HEAD} from '../../blockly/pageHeads';
 import {ruleBodyKey} from '../../blockly/ruleMeta';
 import {ruleBodySheet} from '../ruleBodies';
 import type {RuleData} from '../ruleData';

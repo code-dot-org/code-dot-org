@@ -11,7 +11,7 @@ import * as Blockly from 'blockly/core';
 
 import {defineBlock, defineExtension} from '@code-dot-org/blockly';
 
-import {DRAWING_HEAD} from './bodySurfaces';
+import {DRAWING_HEAD} from './pageHeads';
 import {registerValueShadows, valueShadowExtension} from './valueShadow';
 
 /** Fixed in place: the page has one drawing, and it is this. */

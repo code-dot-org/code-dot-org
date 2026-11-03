@@ -1346,7 +1346,7 @@ export class World {
   /**
    * Let an actor KIND contribute its own per-frame steps.
    *
-   * The `each frame` an `.actor` file may declare (blockly/actorMeta), and the
+   * The steps an `.actor` file may declare (`ActorData.steps`), and the
    * counterpart to `defineProperty`: state a kind carries without a rule, and
    * now behavior a kind runs without one. A rule is still what you write when
    * the behavior is shared, elected or answerable — this is for the case where

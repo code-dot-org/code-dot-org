@@ -13,8 +13,8 @@ import type {Block} from 'blockly';
 
 import {Blockly, defineExtension, type Extension} from '@code-dot-org/blockly';
 
-import {DRAWING_HEAD, MEMBER_HEAD, STEP_HEAD} from '../bodySurfaces';
 import {localizeText} from '../localizeBlocks';
+import {DRAWING_HEAD, MEMBER_HEAD, STEP_HEAD} from '../pageHeads';
 
 import {addOnChange} from './onChange';
 
@@ -32,18 +32,11 @@ const WARNING_ID = 'worldContext';
 export function inWorldContext(block: Block): boolean {
   for (let parent = block.getParent(); parent; parent = parent.getParent()) {
     if (
-      // `each frame` binds it in both of its homes: under a
-      // trait its closure is `(world, delta)`, and standing alone in an
-      // `.actor` file it is `(actor, world, delta)`. Missing here, so every
-      // `world`-reading block inside one wore a warning saying it did not know
-      // what world it was on — in a trait step as much as in an actor's.
-      parent.type === 'world_trait_step' ||
-      // …and the head an actor's own block is written under on its page.
+      // The heads a page's body is written under: a block's, a step's
+      // (`(actor, world, delta)` or a trait's `(world, delta)`), and a
+      // drawing's `(actor, pen, world)`, which reads and never writes.
       parent.type === MEMBER_HEAD ||
       parent.type === STEP_HEAD ||
-      // A drawing's closure is `(actor, pen, world)`. It reads and never
-      // writes, which is what a drawing is; asking the world is reading.
-      parent.type === 'world_define_drawing' ||
       parent.type === DRAWING_HEAD ||
       parent.type.startsWith('world_on_')
     ) {

@@ -7,11 +7,10 @@
 // or deleted. Other top blocks (a rule's traits, an actor's handlers) move
 // freely below it.
 //
-// IMPERATIVE, as a body surface's head is (`extensions/bodyOwner`): this is
-// the editor's rule about the block, not the file's. Blockly writes
-// `movable: false` and `deletable: false` into what it saves for a block that
-// has them, so every save takes them back out (`withoutPins`), and the file
-// says what it said before.
+// IMPERATIVE: this is the editor's rule about the block, not the file's.
+// Blockly writes `movable: false` and `deletable: false` into what it saves
+// for a block that has them, so every save takes them back out
+// (`withoutPins`), and the file says what it said before.
 
 import type {Blockly} from '@code-dot-org/blockly';
 

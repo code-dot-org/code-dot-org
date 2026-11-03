@@ -162,7 +162,7 @@ describe('what `this actor` is about', () => {
   it('is nobody in a rule, because a trait says nothing about who elects it', () => {
     // The row that keeps the feature honest: `this actor` in a trait step is a
     // different kind per project, and a picture there would be a guess.
-    const step = {type: 'world_trait_step', fields: {NAME: 'fall'}};
+    const step = {type: 'world_step_head'};
 
     expect(actorAbout(asBlock({parent: step}), 'this')).toBeUndefined();
   });

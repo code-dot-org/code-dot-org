@@ -38,10 +38,9 @@ const DEBOUNCE_MS = 300;
  * breadcrumb stays where it is and a reader can move
  * between files without going back first.
  *
- * FROM THE FILE, NOT FROM A WORKSPACE, and that is not a detail. With a `define
- * block`'s body open the editor's workspace holds that one member's
- * implementation and nothing else (`blockly/bodySurfaces`); the file is the
- * whole actor, and the whole actor is what compiles.
+ * FROM THE FILE, NOT FROM A WORKSPACE: on a block's page the editor's
+ * workspace holds that one block's implementation and nothing else; the file
+ * is the whole actor, and the whole actor is what compiles.
  */
 export const GeneratedCodeView = ({fileId}: {fileId: string}) => {
   const {currentSources} = useSources<MultiFileSource>();
@@ -80,8 +79,7 @@ export const GeneratedCodeView = ({fileId}: {fileId: string}) => {
 
   return (
     <div className={styles.pane}>
-      {/* The same bar a body surface gets, and for the same reason: it says
-          what is in the pane and how to get out of it. */}
+      {/* It says what is in the pane and how to get out of it. */}
       <div className={styles.header}>
         <Button
           variant="text"

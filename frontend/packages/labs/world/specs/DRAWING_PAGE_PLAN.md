@@ -1,6 +1,6 @@
 # Plan: an actor's drawing and its steps are data, each on a page
 
-STATUS: BUILT, November 2026, but for step 5. Follows ACTOR_BLOCKS_PLAN.md, "Not in
+STATUS: BUILT, November 2026. Follows ACTOR_BLOCKS_PLAN.md, "Not in
 this phase", and RULE_EDITOR_PLAN.md, "What stays for now".
 
 An actor's members are data, each written on a page of its own under a
@@ -86,9 +86,18 @@ its handlers and nothing else.
    rows they were, under `define actor`, and reads them back.
 4. **The lesson. BUILT.** The seven lessons that said `define drawing`,
    `each frame` or the pencil say Edit drawing and the Blocks tab.
-5. **The blocks go.** `define drawing` and `each frame`, the pencil and
-   `bodySurfaces`' split and merge, `CODE_ROWS`, and
-   `ACTOR_CODE_CHOICES`. An actor's workspace holds handlers.
+5. **The blocks go. BUILT.** `define drawing` and `each frame` are
+   deleted, with the pencil (`extensions/bodyButton`, `bodyOwner`), the
+   split and merge that kept a file's bodies beside its workspace, and the
+   file editor's mode that showed one body in place of the file. What was
+   left of `bodySurfaces` is the head names, now `pageHeads`. So are
+   `CODE_ROWS`, `codeRoots` and the Code page's add-menu entries for a
+   drawing and a step, `phaseOptions`, and the two lessons' unlocks of
+   `each frame`. An actor's workspace holds handlers. Kept:
+   `world_trait_step` as the name a trait's step is walked as when a rule's
+   references are renamed (`rules/ruleData`), which no block is loaded
+   for. A boxed actor's new drawing still starts as big as its box
+   (`actorDrawing.emptyDrawing`), as the add menu's did.
 
 ## Decided
 

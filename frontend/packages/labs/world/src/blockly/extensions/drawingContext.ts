@@ -4,8 +4,8 @@
 // written where no drawing routine binds `pen` is a ReferenceError the moment
 // the game runs, and a learner reading the block has nothing to tell them so.
 //
-// The list of places that bind it is ONE — `define drawing` — and that is not an
-// oversight waiting to grow. A drawing is pure: it describes how an actor looks
+// The list of places that bind it is ONE — an actor's drawing page, under its
+// head — and that is not an oversight waiting to grow. A drawing is pure: it describes how an actor looks
 // given what it currently is, and nothing else in the language is that
 // (specs/DRAWING.md). If a second home ever appears, it appears here.
 
@@ -13,24 +13,22 @@ import type {Block} from 'blockly';
 
 import {Blockly, defineExtension, type Extension} from '@code-dot-org/blockly';
 
-import {DRAWING_HEAD} from '../bodySurfaces';
 import {localizeText} from '../localizeBlocks';
+import {DRAWING_HEAD} from '../pageHeads';
 
 import {addOnChange} from './onChange';
 
 export const DRAWING_CONTEXT_EXTENSION = 'world_needs_drawing_context';
 
-export const DEFINE_DRAWING = 'world_define_drawing';
-
 const WARNING_TEXT =
-  'There is nothing to draw on here! Try placing this inside a “define ' +
-  'drawing”.';
+  'There is nothing to draw on here! A pen draws on an actor’s drawing, ' +
+  'which Edit drawing on its Look tab opens.';
 const WARNING_ID = 'drawingContext';
 
 /** Whether `pen` is in scope for `block` — that is, whether it is in a drawing. */
 export function inDrawingContext(block: Block): boolean {
   for (let parent = block.getParent(); parent; parent = parent.getParent()) {
-    if (parent.type === DEFINE_DRAWING || parent.type === DRAWING_HEAD) {
+    if (parent.type === DRAWING_HEAD) {
       return true;
     }
   }

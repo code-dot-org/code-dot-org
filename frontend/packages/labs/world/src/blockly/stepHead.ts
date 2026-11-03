@@ -3,16 +3,16 @@
 //
 // A step is a moment of the frame and what is done in it, so its head says
 // the moment — "each frame, during push" — and what it does hangs below.
-// Like a member's head it is made only on the page: the page turns it back
-// into the step's `define step` or `each frame` row, taking what hangs below
-// it and nothing else (`rules/ruleSteps`). Its name and its phase are the
-// page's, above the workspace.
+// Like a member's head it is made only on the page: the page keeps what
+// hangs below it as the step's body, a rule's (`rules/ruleSteps`) or an
+// actor's (`actors/actorSteps`). Its name and its phase are the page's,
+// above the workspace.
 
 import * as Blockly from 'blockly/core';
 
 import {defineBlock, defineExtension} from '@code-dot-org/blockly';
 
-import {STEP_HEAD} from './bodySurfaces';
+import {STEP_HEAD} from './pageHeads';
 
 /** Fixed in place: the page has one step, and it is this. */
 const stepHeadExtension = defineExtension(`${STEP_HEAD}_init`, {

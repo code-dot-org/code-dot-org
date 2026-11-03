@@ -41,35 +41,28 @@ const measured = (text: string) => ({
 /** A Sign as wide as the word it draws, plus a margin either side. */
 const SIGN = actorDocument({
   name: 'Sign',
-  code: [
-    {
-      type: 'world_define_drawing',
-      inputs: {
-        WIDTH: {
-          block: {
-            type: 'math_arithmetic',
-            fields: {OP: 'ADD'},
-            inputs: {
-              A: measured('hello'),
-              B: {shadow: {type: 'math_number', fields: {NUM: 8}}},
-            },
-          },
-        },
-        HEIGHT: {block: {type: 'math_number', fields: {NUM: 16}}},
-        DO: {
-          block: {
-            type: 'world_draw_rectangle',
-            inputs: {
-              X: measured('hello'),
-              Y: {block: {type: 'math_number', fields: {NUM: 0}}},
-              WIDTH: {block: {type: 'math_number', fields: {NUM: 2}}},
-              HEIGHT: {block: {type: 'math_number', fields: {NUM: 16}}},
-            },
-          },
+  drawing: {
+    width: {
+      block: {
+        type: 'math_arithmetic',
+        fields: {OP: 'ADD'},
+        inputs: {
+          A: measured('hello'),
+          B: {shadow: {type: 'math_number', fields: {NUM: 8}}},
         },
       },
     },
-  ],
+    height: {block: {type: 'math_number', fields: {NUM: 16}}},
+    body: {
+      type: 'world_draw_rectangle',
+      inputs: {
+        X: measured('hello'),
+        Y: {block: {type: 'math_number', fields: {NUM: 0}}},
+        WIDTH: {block: {type: 'math_number', fields: {NUM: 2}}},
+        HEIGHT: {block: {type: 'math_number', fields: {NUM: 16}}},
+      },
+    },
+  },
 });
 
 const WORLD = levelScreen({

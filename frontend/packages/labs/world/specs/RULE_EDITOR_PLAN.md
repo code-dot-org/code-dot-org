@@ -301,10 +301,9 @@ compiler reads the view, which loads them without drawing them.
 
 What stays for now:
 
-- **Body surfaces.** An actor's `define drawing` and `each frame` open their
-  bodies on a surface of their own from a pencil, as before; they go when an
-  actor's drawing has a page of its own (ACTOR_BLOCKS_PLAN.md, "Not in this
-  phase").
+- **Body surfaces.** Gone: an actor's drawing and steps are data, each on
+  a page of its own, and the pencil and its surfaces are deleted
+  (DRAWING_PAGE_PLAN.md).
 - **The lessons.** Five lessons in Making unlock define blocks no drawer
   holds, and their tasks say to write rules in blocks. Their checks read a
   rule's view, so they still pass; their words need writing again for the

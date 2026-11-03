@@ -37,37 +37,24 @@ const generate = async (data: ActorData): Promise<string> => {
 };
 
 describe('an actor’s drawing and steps, as data', () => {
-  it('compile as the rows they stand for did', async () => {
-    const asRows = await generate({
-      type: 'actor',
-      name: 'Stamp',
-      blocks: {
-        blocks: {
-          languageVersion: 0,
-          blocks: [
-            {
-              type: 'world_define_drawing',
-              inputs: {WIDTH: widthOfMe, HEIGHT: eight, DO: {block: pen}},
-            },
-            {
-              type: 'world_trait_step',
-              fields: {PHASE: 'react', NAME: 'blink'},
-              inputs: {DO: {block: work}},
-            },
-          ],
-        },
-      },
-    });
-    const asData = await generate({
+  it('compile to the drawing and the step, each closing over the actor', async () => {
+    const js = await generate({
       type: 'actor',
       name: 'Stamp',
       drawing: {width: widthOfMe, height: eight, body: pen},
       steps: [{name: 'blink', phase: 'react', body: work}],
     });
 
-    expect(asData).toContain('actor.defineDrawing((actor, world) => ');
-    expect(asData).toContain('actor.defineStep("blink", "react", ');
-    expect(asData).toBe(asRows);
+    // `actor` is the closure's own in each: `this actor` compiles to it.
+    expect(js).toContain(
+      'actor.defineDrawing((actor, world) => actor.get(WorldLab.WidthProperty), ' +
+        '(actor, world) => 8, (actor, pen, world) => {\n' +
+        "  pen.fill('#ff0000');\n});\n",
+    );
+    expect(js).toContain(
+      'actor.defineStep("blink", "react", (actor, world, delta) => {\n' +
+        '  console.log("hi");\n});\n',
+    );
   });
 
   it('draw and step with nothing below the head', async () => {

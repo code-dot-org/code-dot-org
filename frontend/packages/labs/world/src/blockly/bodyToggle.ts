@@ -2,10 +2,9 @@
 // (specs/LAZY_WORKSPACE_PLAN.md, `lazyBodies`).
 //
 // A chevron at the front of the block's first row: pointing right when the
-// body is held unbuilt, down when it is built. Drawn as a glyph button the
-// way the pencil into a `define block`'s body is (`extensions/bodyButton`),
-// and like it not part of the file: not serialized, and put on and taken off
-// as the block gains or loses a body.
+// body is held unbuilt, down when it is built. A glyph button, and not part
+// of the file: not serialized, and put on and taken off as the block gains or
+// loses a body.
 
 import type {Block, BlockSvg} from 'blockly';
 

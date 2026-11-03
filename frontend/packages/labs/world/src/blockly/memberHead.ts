@@ -30,11 +30,11 @@ import {
   defineMutator,
 } from '@code-dot-org/blockly';
 
-import {MEMBER_HEAD, memberValueSocket} from './bodySurfaces';
 import {settledParts} from './designParts';
 import {bindParams, type BlockPart} from './extensions/blockDesigner';
 import {addOnChange} from './extensions/onChange';
 import {beginGetterDrag} from './fields/dragGetterOut';
+import {MEMBER_HEAD, memberValueSocket} from './pageHeads';
 import {paramFlavour} from './typedVariables';
 
 const MEMBER_HEAD_MUTATOR = 'world_member_head_mutator';

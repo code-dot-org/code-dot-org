@@ -27,7 +27,7 @@ describe('the file’s own definition', () => {
 
   it('is the two definitions, and nothing else', () => {
     expect(['world_actor', 'world_map'].every(isPinnedRoot)).toBe(true);
-    expect(isPinnedRoot('world_trait_step')).toBe(false);
+    expect(isPinnedRoot('world_print')).toBe(false);
   });
 
   it('cannot be moved or deleted, and a handler still can', () => {

@@ -5,9 +5,11 @@ import {describe, expect, it} from 'vitest';
 
 import {stillAnimation, type ActorData} from '../../actors/actorData';
 import {actorSheet} from '../actorSheet';
-import {MEMBER_HEAD} from '../bodySurfaces';
+import {DRAWING_HEAD, MEMBER_HEAD, STEP_HEAD} from '../pageHeads';
 
 const say = {type: 'world_say'};
+const pen = {type: 'world_pen_fill'};
+const eight = {shadow: {type: 'math_number', fields: {NUM: 8}}};
 const nudge = [
   {kind: 'label' as const, text: 'nudge by'},
   {kind: 'param' as const, type: 'number', var: 'v1'},
@@ -48,14 +50,13 @@ const ball: ActorData = {
       returns: 'number',
     },
   ],
+  drawing: {width: eight, height: eight, body: pen},
+  steps: [{name: 'roll', phase: 'act', body: say}],
   blocks: {
     variables: [{id: 'v1', name: 'amount', type: 'Number'}],
     blocks: {
       languageVersion: 0,
-      blocks: [
-        {type: 'world_define_drawing', x: 20, y: 20},
-        {type: 'world_on_Space_CreatedEvent'},
-      ],
+      blocks: [{type: 'world_on_Space_CreatedEvent'}],
     },
   },
 };
@@ -92,7 +93,8 @@ describe('an actor’s sheet', () => {
       'event',
       'block',
       'block',
-      'row',
+      'drawing',
+      'step',
     ]);
     expect(sheet.pieces[0]).toEqual({kind: 'actsLike', actor: 'actors/toy'});
     expect(sheet.pieces[4]).toEqual({
@@ -109,12 +111,11 @@ describe('an actor’s sheet', () => {
     expect(rowsOf(sheet.workspace)[0]).toBe('world_set_sprite');
   });
 
-  it('loads as rows only what is code: picture, values, effects on, code', () => {
+  it('loads as rows only what is code: picture, values, effects on', () => {
     expect(rowsOf(sheet.workspace)).toEqual([
       'world_set_sprite',
       'world_set_Physics_SpeedProperty',
       'world_add_effect',
-      'world_define_drawing',
     ]);
     expect(rootsOf(sheet.workspace)[0]).toMatchObject({
       type: 'world_actor',
@@ -134,6 +135,24 @@ describe('an actor’s sheet', () => {
       }),
     ]);
     expect(sheet.pieces[9]).not.toHaveProperty('head');
+  });
+
+  it('hangs the drawing and each step under a head of its own', () => {
+    const headOf = (at: number) =>
+      rootsOf(sheet.workspace).find(
+        root => root.id === (sheet.pieces[at] as {head: string}).head,
+      );
+    expect(headOf(10)).toMatchObject({
+      type: DRAWING_HEAD,
+      inputs: {WIDTH: eight, HEIGHT: eight},
+      next: {block: pen},
+    });
+    expect(sheet.pieces[11]).toMatchObject({
+      kind: 'step',
+      name: 'roll',
+      phase: 'act',
+    });
+    expect(headOf(11)).toMatchObject({type: STEP_HEAD, next: {block: say}});
   });
 
   it('keeps the handlers beside the actor, and the variables', () => {

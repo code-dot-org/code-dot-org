@@ -1,4 +1,4 @@
-// An actor's `define drawing`, read out of its file and run without the engine.
+// An actor's drawing, read out of its file and run without the engine.
 //
 // The drawing language is a closed vocabulary — a pen, five shapes, and values
 // that are literals, arithmetic or property reads — and a drawing may not SET

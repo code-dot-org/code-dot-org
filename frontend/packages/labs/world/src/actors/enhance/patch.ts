@@ -19,7 +19,6 @@
 // no-op rather than a duplicate trait and a second bar.
 
 import {
-  CODE_ROWS,
   type ActorData,
   type ActorMember,
   type ActorProperty,
@@ -62,10 +61,8 @@ export const hasRoot = (
   matches: (block: BlockJson) => boolean,
 ): boolean => rootsOf(data).some(root => [...down(root)].some(matches));
 
-const isCode = (block: BlockJson): boolean => CODE_ROWS.has(block.type);
-
 /**
- * Add a root: code after the code, a handler after everything.
+ * Add a root, after everything.
  *
  * The editor arranges the roots on open (`tidyLayout`), so the place given
  * is only somewhere clear of the others.
@@ -77,8 +74,7 @@ export function addRoot(data: ActorData, block: BlockJson): ActorData {
     0,
   );
   const placed = {...block, x: 20, y: lowest + 220};
-  const at = isCode(block) ? roots.filter(isCode).length : roots.length;
-  return withRoots(data, [...roots.slice(0, at), placed, ...roots.slice(at)]);
+  return withRoots(data, [...roots, placed]);
 }
 
 /** The data with each root changed in place by `change`, the original untouched. */
