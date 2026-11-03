@@ -9,6 +9,7 @@ import {
   sendAdaptiveStepReport,
   sendStartedReportIfNotStarted,
 } from '@cdo/apps/code-studio/progressRedux';
+import {LevelProperties} from '@cdo/apps/lab2/types';
 import Loading from '@cdo/apps/lab2/views/Loading';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
@@ -40,6 +41,8 @@ type View =
 interface PathwayAppProps {
   pathway: Pathway;
   progressKey: ProgressKey;
+  /** The adaptive level's own properties, for the map's resource rail. */
+  levelProperties: LevelProperties;
 }
 
 /**
@@ -69,6 +72,7 @@ function projectCheckpoint(pathway: Pathway): Checkpoint {
 const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
   pathway,
   progressKey,
+  levelProperties,
 }) => {
   const dispatch = useAppDispatch();
   const reportLevelStep = useCallback(
@@ -128,6 +132,7 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
     <LoadedPathwayApp
       pathway={pathway}
       progressKey={progressKey}
+      levelProperties={levelProperties}
       progress={progress}
       statusMap={statusMap}
       initialCheckpointId={initialCheckpointId}
@@ -153,6 +158,7 @@ type LoadedPathwayAppProps = PathwayAppProps &
 const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
   pathway,
   progressKey,
+  levelProperties,
   progress,
   statusMap,
   initialCheckpointId,
@@ -309,6 +315,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
       />
       <MapScreen
         pathway={pathway}
+        levelProperties={levelProperties}
         statusMap={statusMap}
         evidence={evidence}
         focusId={view.kind === 'map' ? view.focusId : undefined}
