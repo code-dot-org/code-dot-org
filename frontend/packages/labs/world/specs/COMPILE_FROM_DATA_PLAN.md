@@ -201,8 +201,8 @@ fixtures are written as rows and folded. In order, each its own commit:
    contents, changed for every rule; nothing acts on it.
 4. BUILT. `resolveRuleContents` and `projectFiles` hand out data, byte for
    byte the shelf's for a reference. What walks a rule's rows reads it
-   through `workspaceViewOf` (`rewriteWorkspaces`), the view of an actor or
-   a rule, and `mapWorkspaces` writes a rule it rewrote back as data. The
+   through `workspaceViewOf` (`rewriteWorkspaces`), the view of a rule
+   (and of an actor, until 5d, step 3), and `mapWorkspaces` writes a rule it rewrote back as data. The
    readers that walked the view unasked — `rulesInScope`, `standInBlocks`
    — view it themselves.
 5. BUILT, November 2026. Actors compile from data. The compiler folds an
@@ -301,9 +301,16 @@ data the one form. In order, each its own commit:
    wizard's look and scale are a Main animation and a scale value. The
    typewriter's rows, `looksLike`, `animationsRow` and the both-shapes test
    (`throughTheView`) are gone.
-3. Renames rewrite the keys that hold names — `actsLike`, `traits`, a
-   value's setter, an effect's path, a member's `var`s — beside the
-   workspace walk, with a test over the repository's content.
+3. BUILT, November 2026. Renames walk the data. `rewriteWorkspace` walks
+   an actor's code, and its keys that name something as the blocks they
+   stand for (`keyRows`): its name, parent and icon, traits, properties,
+   values, effects, members and animations, read back after
+   (`withKeyRows`). So every rewriter — an actor, a rule, a member, a
+   property or a picture renamed, and where one is used — reaches the data
+   unchanged, and `mapWorkspaces` neither views nor folds an actor. A test
+   reads every actor the repository builds back from its rows unchanged;
+   others rename each kind of key. The palette guards read an actor's
+   values, effects and block bodies for the blocks it names (`typesIn`).
 4. Readers read the data: `eventChoices`, `drawingReader`,
    `standInBlocks`, `catalogue`.
 5. The tutor proposes an actor as data. Then `foldActor`, `actorView`,

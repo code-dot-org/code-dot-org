@@ -681,6 +681,97 @@ export function withLookOf(
   return next;
 }
 
+// ── The keys that hold names ────────────────────────────────────────────
+
+/**
+ * An actor's keys that name something — itself, its parent, its icon, its
+ * traits, properties, values, effects, members and animations — each as the
+ * block that says it, for a walk that knows a reference by a block's type
+ * and fields (`blockly/rewriteWorkspaces`). `withKeyRows` reads them back.
+ */
+export interface KeyRows {
+  name: Block;
+  actsLike?: Block;
+  icon?: Block;
+  traits: Block[];
+  properties: Block[];
+  values: Block[];
+  effects: Block[];
+  members: Block[];
+  animations: Block[];
+}
+
+export const keyRows = (data: ActorData): KeyRows => ({
+  name: {type: ROOT, fields: {NAME: data.name}},
+  ...(data.actsLike === undefined
+    ? {}
+    : {actsLike: {type: 'world_acts_like', fields: {ACTOR: data.actsLike}}}),
+  ...(data.icon === undefined
+    ? {}
+    : {icon: {type: 'world_show_as', fields: {ICON: data.icon}}}),
+  traits: (data.traits ?? []).map(trait => ({
+    type: 'world_use_trait',
+    fields: {TRAIT: trait},
+  })),
+  properties: (data.properties ?? []).map(writeProperty),
+  values: (data.values ?? []).map(writeValue),
+  effects: (data.effects ?? []).map(writeEffect),
+  members: (data.members ?? []).map(writeMember),
+  animations: writeAnimations(data.animations),
+});
+
+/** The data with what its key rows now say; a row it cannot read keeps the key as it was. */
+export function withKeyRows(data: ActorData, rows: KeyRows): ActorData {
+  const field = (row: Block | undefined, name: string, was: string) => {
+    const held = row && fieldsOf(row)[name];
+    return typeof held === 'string' ? held : was;
+  };
+  const next: ActorData = {...data, name: field(rows.name, 'NAME', data.name)};
+  if (data.actsLike !== undefined) {
+    next.actsLike = field(rows.actsLike, 'ACTOR', data.actsLike);
+  }
+  if (data.icon !== undefined) {
+    next.icon = field(rows.icon, 'ICON', data.icon);
+  }
+  if (data.traits) {
+    next.traits = data.traits.map((trait, at) =>
+      field(rows.traits[at], 'TRAIT', trait),
+    );
+  }
+  if (data.properties) {
+    next.properties = data.properties.map(
+      (property, at) => readProperty(rows.properties[at]) ?? property,
+    );
+  }
+  if (data.values) {
+    next.values = data.values.map(
+      (value, at) => readValue(rows.values[at]) ?? value,
+    );
+  }
+  if (data.effects) {
+    next.effects = data.effects.map((effect, at) => {
+      const read = readEffect(rows.effects[at]);
+      return read ? {...read, on: effect.on} : effect;
+    });
+  }
+  if (data.members) {
+    next.members = data.members.map(
+      (member, at) =>
+        readMember(rows.members[at], at, {reports: true}) ?? member,
+    );
+  }
+  if (data.animations) {
+    const animated = rows.animations.find(row => row.type === ANIMATIONS_ROW);
+    const still = rows.animations.find(row => row.type !== ANIMATIONS_ROW);
+    const sprite = still && readLook(still);
+    next.animations = {
+      ...(animated ? readAnimations(animated) : {}),
+      ...(sprite ? {[MAIN_ANIMATION]: stillAnimation(sprite.sprite)} : {}),
+    };
+  }
+  return next;
+}
+
 // ── The fold and the view ───────────────────────────────────────────────
 
 /** A row without the next one, as a root or one of a list holds it. */

@@ -147,9 +147,9 @@ folds it back: renaming an actor, a rule or an animation, and asking where
 an actor is used, then reach the data without knowing its shape.
 
 BUILT. `throughView` (in `actorData`) makes a change written for rows to
-contents of either shape. `mapWorkspaces` views and folds a data-shaped
-actor; `animationPlayedIn` and `actorUses` read its view. A test renames
-a data-shaped actor and finds its own setters renamed inside the data.
+contents of either shape. `mapWorkspaces` viewed and folded a data-shaped
+actor, and `actorUses` read its view, until a walk read the data itself
+(COMPILE_FROM_DATA_PLAN.md, 5d, step 3).
 The enhancements, `withLook`, `withScale` and `lookOf` went through the
 view too, until they edited the data itself (COMPILE_FROM_DATA_PLAN.md,
 5d, step 2); a clone renames the data's own `name`, and an import writes
@@ -197,8 +197,9 @@ is a socket's shadow and that block is what builds them
 (`effectParamsMutator`). The view writes the rows of the ones that are on.
 One that is off adds no row, so a fold of a view would lose it: `asActorData`
 takes the file the view came from and keeps its switched-off effects, and
-every fold of a view (`throughView`, `mapWorkspaces`, the code) passes it. The tab lists them with the switch and the settings (a
-number, a truth value or a color per socket); Add Effect offers the
+every fold of a view (`throughView`, the code) passes it. The tab lists
+them with the switch and the settings (a number, a truth value or a color
+per socket); Add Effect offers the
 project's effects and Import…, which adds the one brought once the project
 holds it (`useAfterImport`). In the browser: Ripple added from the menu and
 switched off, Pulse imported from the shelf with its two settings.

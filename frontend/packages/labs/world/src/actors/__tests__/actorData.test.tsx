@@ -21,8 +21,10 @@ import {
   CREATED_HAT,
   isActorData,
   isDataShaped,
+  keyRows,
   memberName,
   viewOf,
+  withKeyRows,
   type ActorData,
 } from '../actorData';
 import {STOCK_ACTORS} from '../stock';
@@ -415,6 +417,16 @@ describe('every actor the lab ships or teaches with', () => {
     for (const [path, held] of Object.entries(files)) {
       if (path.endsWith('.actor')) {
         expect(isDataShaped(held), path).toBe(true);
+      }
+    }
+  });
+  // A rename walks an actor's keys as the blocks they stand for and reads
+  // them back (`blockly/rewriteWorkspaces`); reading back must lose nothing.
+  it.each(stored)('%s reads every key back from its rows', (_, files) => {
+    for (const [path, held] of Object.entries(files)) {
+      if (path.endsWith('.actor')) {
+        const data = JSON.parse(held) as ActorData;
+        expect(withKeyRows(data, keyRows(data)), path).toEqual(data);
       }
     }
   });

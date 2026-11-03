@@ -9,7 +9,7 @@
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
-import {asActorData, isDataShaped, viewOf} from '../actors/actorData';
+import {isActorData, keyRows, withKeyRows} from '../actors/actorData';
 import {asRuleData, ruleViewOf} from '../rules/ruleData';
 import {resolveRuleContents} from '../rules/ruleReference';
 
@@ -81,7 +81,16 @@ export function rewriteWorkspace(
       walk(child);
     }
   };
-  walk(parsed);
+  // An actor's own keys name things too, and are walked as the blocks they
+  // stand for (`actorData.keyRows`).
+  if (isActorData(parsed)) {
+    const rows = keyRows(parsed);
+    walk(parsed.blocks);
+    walk(rows);
+    parsed = withKeyRows(parsed, rows);
+  } else {
+    walk(parsed);
+  }
 
   return JSON.stringify(parsed) === before
     ? undefined
@@ -89,11 +98,11 @@ export function rewriteWorkspace(
 }
 
 /**
- * A workspace file's contents as the blocks they stand for: a reference as the
- * rule it names, and an actor's or a rule's data as its view.
+ * A workspace file's contents as a walk reads them: a reference as the rule
+ * it names, and a rule's data as its view.
  */
 export const workspaceViewOf = (contents: string): string =>
-  viewOf(ruleViewOf(resolveRuleContents(contents)));
+  ruleViewOf(resolveRuleContents(contents));
 
 /**
  * Apply a per-file rewrite to every saved workspace in the project.
@@ -124,24 +133,16 @@ export function mapWorkspaces(
     if (!WORKSPACE_FILE.test(file.name)) {
       continue;
     }
-    // A data-shaped actor keeps a setter and a trait under keys of its
-    // own, where this walk does not look; its view holds them as blocks,
-    // and what changed there is folded back (`actors/actorData`).
     const held = resolveRuleContents(file.contents);
-    const data = isDataShaped(held);
     // A rule held as data, or as a reference, is read as its view and written
     // back as data (`rules/ruleData`); one written in blocks stays in blocks.
     const ruleView = file.name.endsWith('.rule') ? ruleViewOf(held) : held;
     const ruleData = ruleView !== held;
-    const renamed = rewrite(data ? viewOf(held) : ruleView);
+    const renamed = rewrite(ruleView);
     if (renamed !== undefined) {
       files[id] = {
         ...file,
-        contents: data
-          ? asActorData(renamed, held)
-          : ruleData
-            ? asRuleData(renamed)
-            : renamed,
+        contents: ruleData ? asRuleData(renamed) : renamed,
       };
       changed = true;
     }

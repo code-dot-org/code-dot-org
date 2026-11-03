@@ -23,7 +23,7 @@ import {
 } from '../../blockly/rewriteWorkspaces';
 import {designedName, pascal} from '../../blockly/ruleMeta';
 import {pathSlug} from '../../blockly/ruleRegistry';
-import type {ActorMember} from '../actorData';
+import {isActorData, type ActorMember} from '../actorData';
 
 /** What a member's blocks are named by: `heal by` → `HealByAction`. */
 export const memberKey = (member: ActorMember): string =>
@@ -154,8 +154,10 @@ export function renameMember(
         changed = renameSockets(block.inputs, sockets) || changed;
       }
     });
-    if (before.kind === 'event' && renamed.size && isNode(parsed)) {
-      changed = renameCarried(parsed, hat, renamed) || changed;
+    // An actor's variables are its workspace's, under `blocks`.
+    const document = isActorData(parsed) ? parsed.blocks : parsed;
+    if (before.kind === 'event' && renamed.size && isNode(document)) {
+      changed = renameCarried(document, hat, renamed) || changed;
     }
     return changed ? JSON.stringify(parsed, null, 2) : undefined;
   });

@@ -7,6 +7,13 @@
 // the starter project, `actors/enhance/__tests__/paletteGuard` for what every
 // row on the enhancement shelf writes.
 
+import {
+  isActorData,
+  writeEffect,
+  writeValue,
+  type ActorData,
+} from '../../actors/actorData';
+
 /** A saved block, as much of one as a walk needs to see. */
 interface SavedBlock {
   type?: string;
@@ -20,7 +27,8 @@ interface SavedBlock {
  * Walks the block tree specifically rather than every `type` key in the JSON:
  * a parameter's type is `type` too (`enum:Engine#Key`, `vector`), and so is a
  * variable's, and neither is a block. Contents that are not a workspace at
- * all — an image, a map — walk as nothing.
+ * all — an image, a map — walk as nothing. An actor's data names blocks in
+ * its code, its values' setters, its effects and its blocks' bodies.
  */
 export function typesIn(contents: string): string[] {
   let parsed: {blocks?: {blocks?: SavedBlock[]}};
@@ -44,6 +52,16 @@ export function typesIn(contents: string): string[] {
     visit(block.next?.block);
     visit(block.next?.shadow);
   };
+  if (isActorData(parsed)) {
+    const data: ActorData = parsed;
+    [
+      ...((data.blocks?.blocks?.blocks ?? []) as SavedBlock[]),
+      ...(data.values ?? []).map(writeValue),
+      ...(data.effects ?? []).map(writeEffect),
+      ...(data.members ?? []).flatMap(one => (one.body ? [one.body] : [])),
+    ].forEach(block => visit(block as SavedBlock));
+    return found;
+  }
   (parsed.blocks?.blocks ?? []).forEach(visit);
   return found;
 }

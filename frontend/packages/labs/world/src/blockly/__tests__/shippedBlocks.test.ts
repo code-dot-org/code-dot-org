@@ -21,6 +21,7 @@ import * as Blockly from 'blockly';
 import {describe, expect, it} from 'vitest';
 
 import {typesIn} from '../../__tests__/support/blockTypes';
+import {isActorData} from '../../actors/actorData';
 import {DEFAULT_PROJECT, starterFile} from '../../constants';
 import {projectFiles} from '../../runtime/projectFiles';
 import {buildDomainPalette} from '../domainBlocks';
@@ -28,8 +29,8 @@ import {projectOwnMetas, projectRuleMetas} from '../projectModules';
 import {workspaceViewOf} from '../rewriteWorkspaces';
 import {VIEW_ROWS} from '../viewRows';
 
-// Each actor and rule as the blocks it stands for: data names its rows'
-// types through its view (`workspaceViewOf`).
+// Each rule as the blocks it stands for (`workspaceViewOf`); an actor is read
+// as its data (`typesIn`).
 const files = Object.fromEntries(
   Object.entries(projectFiles(DEFAULT_PROJECT.source)).map(
     ([path, contents]) => [path, workspaceViewOf(contents)],
@@ -49,6 +50,20 @@ const palette = new Set(
 );
 
 const WORKSPACE_FILE = /\.(rule|actor|world)$/;
+
+/** Whether a file names any block: an actor of traits and a picture names none. */
+const namesBlocks = (path: string): boolean => {
+  const held = JSON.parse(files[path]) as unknown;
+  if (!isActorData(held)) {
+    return true;
+  }
+  return Boolean(
+    held.blocks?.blocks?.blocks?.length ||
+      held.values?.length ||
+      held.effects?.length ||
+      held.members?.length,
+  );
+};
 
 describe('the shipped project', () => {
   it('names only blocks that exist', () => {
@@ -81,7 +96,7 @@ describe('the shipped project', () => {
 
     expect(walked.length).toBeGreaterThanOrEqual(7);
     for (const [path, count] of walked) {
-      expect(`${path}: ${count > 0}`).toBe(`${path}: true`);
+      expect(`${path}: ${count > 0}`).toBe(`${path}: ${namesBlocks(path)}`);
     }
     // The deep ones: gravity's steps and the world's own body.
     expect(
