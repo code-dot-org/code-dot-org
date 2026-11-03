@@ -52,7 +52,12 @@ class User
     # levelbuilder server, and levelbuilder on the levelbuilder server, where
     # saving a level runs its text as Ruby.
     private def inactivity_period(privilege)
-      high_risk = privilege == ADMIN ? rack_env?(:production, :levelbuilder) : rack_env?(:levelbuilder)
+      high_risk =
+        case privilege
+        when ADMIN then rack_env?(:production, :levelbuilder)
+        when UserPermission::LEVELBUILDER then rack_env?(:levelbuilder)
+        else false
+        end
       high_risk ? 90.days : 1.year
     end
 
