@@ -84,6 +84,19 @@ creature is 8 sets of 5 pictures:
   -c adjective=brave -c clothing=_
 ```
 
+A character is five pictures, so `--first-frame` draws only each set's
+first frame, its base, to preview characters before paying for the poses.
+Moderation checks the base, a flagged base is redrawn alone, and the review
+page shows the set marked "first frame only" for approving or rejecting. A
+later run without the flag draws the four poses from each stored base and
+its seed; the set is the same drawing, so a review of its base still holds.
+A set with only its base is never published. Three bases per filling of
+every character is 3,042 images, against 15,210 for the full sets:
+
+```
+./bin/oneoff/hoai_2026/imagegen/generate_images -i character --first-frame --judge
+```
+
 A run skips what is already drawn and checked, so it can be stopped and run
 again. Failed requests are listed at the end and drawn on the next run.
 

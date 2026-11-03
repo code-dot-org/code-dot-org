@@ -150,10 +150,11 @@ class ReviewPublisher
   # there, else a copy in the review tree named for when it was drawn.
   private def current_entry(job, variant, record)
     return nil unless record && record['drawnAt']
-    names = job['frames'].map {|frame| frame['name']}
-    return nil unless names.all? {|name| frame_exists?(job, variant, name)}
+    # A set drawn with --first-frame has its base alone; it is shown so.
+    names = job['frames'].map {|frame| frame['name']}.select {|name| frame_exists?(job, variant, name)}
+    return nil unless names.first == job['frames'].first['name']
 
-    published = names.all? do |name|
+    published = names.length == job['frames'].length && names.all? do |name|
       @ledger.holds?("#{BUCKET_PATH}/#{frame_path(job, variant, name)}", record['drawnAt'])
     end
     stamp = compact_time(record['drawnAt'])

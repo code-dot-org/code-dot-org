@@ -215,8 +215,11 @@ function variantCard(job, v, index) {
     img.alt = job.prompt + ', ' + name;
     img.src = imageUrl(job, v.files[name]);
     img.onerror = () => {
-      box.replaceChildren(Object.assign(document.createElement('div'), {className: 'missing', textContent: 'missing'}));
-      // A picture that is not there cannot be judged.
+      const first = name === job.frames[0];
+      box.replaceChildren(Object.assign(document.createElement('div'), {className: 'missing', textContent: first ? 'missing' : 'not drawn'}));
+      // A variant is judged by its first frame: a set drawn with
+      // --first-frame has no poses yet, and can still be judged.
+      if (!first) return;
       card.classList.add('unavailable');
       approve.disabled = true;
       reject.disabled = true;
@@ -230,6 +233,7 @@ function variantCard(job, v, index) {
   meta.className = 'meta';
   meta.append(badge(String(v.variant).padStart(2, '0'), 'plain'));
   if (!v.local) meta.append(badge('not local', 'pending'));
+  else if (job.animated && v.complete === false) meta.append(badge('first frame only', 'pending'));
   meta.append(badge(v.moderation));
   if (v.review) {
     meta.append(badge(v.review.verdict));

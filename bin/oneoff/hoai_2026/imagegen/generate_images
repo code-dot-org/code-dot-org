@@ -65,6 +65,7 @@ options = {
   choices: {},
   dry_run: true,
   filter: '',
+  first_frame: false,
   ids: [],
   jobs: JOBS,
   judge: false,
@@ -120,6 +121,10 @@ OptionParser.new do |opts|
     slot, word = choice.split('=', 2)
     raise "Error: --choice needs SLOT=WORD, got '#{choice}'" if word.nil? || word.empty?
     options[:choices][slot] = word
+  end
+
+  opts.on('--first-frame', "Draws only a character set's first frame, its base, to preview characters before paying for the poses. A later run without it draws the poses from that base.") do
+    options[:first_frame] = true
   end
 
   opts.on('-v', '--variants VARIANTS', "How many variants to draw per filling. Defaults to #{VARIANTS}, all the lab reads.") do |variants|
@@ -285,16 +290,19 @@ end
 
 variants = options[:variants]
 
+# The frames a run draws for a job: all of them, or the first alone.
+frames_drawn = ->(job) {options[:first_frame] ? job['frames'].first(1) : job['frames']}
+
 if options[:list_sentences]
   puts
   puts "Listing sentences (#{variants} variants each):"
   jobs.group_by {|job| job['sentenceId']}.each do |id, sentence_jobs|
     job = sentence_jobs.first
-    images = sentence_jobs.sum {|j| j['frames'].length} * variants
+    images = sentence_jobs.sum {|j| frames_drawn.call(j).length} * variants
     puts " - #{id}: #{job['slots'].join(' x ')}, #{sentence_jobs.length} fillings, #{sentence_jobs.length * variants} variants, #{images} images"
   end
   puts
-  puts "Total: #{jobs.length} fillings, #{jobs.length * variants} variants, #{jobs.sum {|j| j['frames'].length} * variants} images"
+  puts "Total: #{jobs.length} fillings, #{jobs.length * variants} variants, #{jobs.sum {|j| frames_drawn.call(j).length} * variants} images"
   exit
 end
 
@@ -507,10 +515,11 @@ def process_variant(options, moderator, prompt_checks, job, variant)
 
   outcome = :complete
   loop do
-    missing = job['frames'].reject {|frame| frame_exists?(job, variant, frame['name'])}
+    wanted = options[:first_frame] ? job['frames'].first(1) : job['frames']
+    missing = wanted.reject {|frame| frame_exists?(job, variant, frame['name'])}
     if missing.any?
       outcome = :drawn
-      if missing.length == job['frames'].length
+      if job['frames'].none? {|frame| frame_exists?(job, variant, frame['name'])}
         record = fresh_record(options, job, variant).merge(record.slice('history', 'redraws', 'promptCheck'))
         record['seed'] = rand(2**31) if GOOGLE_PROVIDERS.include?(options[:provider])
       end
@@ -533,11 +542,16 @@ def process_variant(options, moderator, prompt_checks, job, variant)
         entry['seed'] = frame_seed(record['seed'], job, frame) if record['seed']
         entry.delete('checks')
       end
-      record['drawnAt'] = Time.now.utc.iso8601(3)
+      # A set is its base: poses drawn later from it are the same drawing,
+      # and a review of the base still holds.
+      record['drawnAt'] = Time.now.utc.iso8601(3) if missing.include?(job['frames'].first)
     end
 
     if options[:moderation]
       record['frames'].each do |entry|
+        # A pose --first-frame left undrawn is checked once it is drawn.
+        next unless frame_exists?(job, variant, entry['name'])
+
         png = nil
         load_png = -> {png ||= File.binread(File.join(output_path, frame_path(job, variant, entry['name'])))}
         entry['checks'] ||= {}
@@ -629,7 +643,7 @@ if options[:just_upload]
   puts "Note: Not drawing. Just using the content in the '#{OUTPUT_DIRECTORY}' directory."
 else
   puts
-  puts "Processing #{objects.length} variants (#{objects.sum {|o| o[:job]['frames'].length}} images at most)..."
+  puts "Processing #{objects.length} variants (#{objects.sum {|o| frames_drawn.call(o[:job]).length}} images at most)..."
   progress = ProgressBar.create(total: objects.size)
   Parallel.map(objects, in_threads: options[:jobs], finish: lambda do |_, _, result|
     result.is_a?(String) ? failures << result : tally[result] += 1
