@@ -119,6 +119,7 @@ interface TreeCanvasProps extends HTMLAttributes<HTMLDivElement> {
   followId?: string;
   overlayRef?: RefObject<HTMLElement>;
   toolbarTabbable?: boolean;
+  tools?: ReactNode;
   hints?: ReactNode;
   children: ReactNode;
 }
@@ -130,6 +131,7 @@ const TreeCanvas = ({
   followId,
   overlayRef,
   toolbarTabbable = true,
+  tools,
   hints,
   className,
   children,
@@ -311,38 +313,36 @@ const TreeCanvas = ({
           </CanvasMoveContext.Provider>
         </div>
       </div>
-      <div
-        ref={toolbarRef}
-        role="group"
-        aria-label="Zoom"
-        className={styles.toolbar}
-      >
-        <ZoomButton
-          label="Zoom in"
-          tabbable={toolbarTabbable}
-          iconName="plus"
-          onClick={() => zoomBy(ZOOM_STEP)}
-        />
-        <ZoomButton
-          label="Zoom out"
-          tabbable={toolbarTabbable}
-          iconName="minus"
-          onClick={() => zoomBy(1 / ZOOM_STEP)}
-        />
-        <ZoomButton
-          label="Zoom to fit"
-          tabbable={toolbarTabbable}
-          iconName="expand"
-          onClick={() => zoomTo(contentRect)}
-        />
-        <ZoomButton
-          label="Zoom to your path"
-          tabbable={toolbarTabbable}
-          iconName="arrows-minimize"
-          onClick={() => pathBounds && zoomTo(pathBounds)}
-          disabled={!pathBounds}
-          disabledHint="Make a prediction to see your path"
-        />
+      <div ref={toolbarRef} className={styles.toolbar}>
+        {tools}
+        <div role="group" aria-label="Zoom" className={styles.toolGroup}>
+          <ZoomButton
+            label="Zoom in"
+            tabbable={toolbarTabbable}
+            iconName="plus"
+            onClick={() => zoomBy(ZOOM_STEP)}
+          />
+          <ZoomButton
+            label="Zoom out"
+            tabbable={toolbarTabbable}
+            iconName="minus"
+            onClick={() => zoomBy(1 / ZOOM_STEP)}
+          />
+          <ZoomButton
+            label="Zoom to fit"
+            tabbable={toolbarTabbable}
+            iconName="expand"
+            onClick={() => zoomTo(contentRect)}
+          />
+          <ZoomButton
+            label="Zoom to your path"
+            tabbable={toolbarTabbable}
+            iconName="arrows-minimize"
+            onClick={() => pathBounds && zoomTo(pathBounds)}
+            disabled={!pathBounds}
+            disabledHint="Make a prediction to see your path"
+          />
+        </div>
       </div>
       {hints && (
         <div ref={hintsRef} className={styles.hints}>
