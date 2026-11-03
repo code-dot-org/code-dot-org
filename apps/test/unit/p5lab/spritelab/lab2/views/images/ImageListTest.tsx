@@ -1,4 +1,4 @@
-import {fireEvent, render, screen} from '@testing-library/react';
+import {act, fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
 
 import ImageList from '@cdo/apps/p5lab/spritelab/lab2/views/images/ImageList';
@@ -52,9 +52,33 @@ describe('ImageList', () => {
     ]);
   });
 
-  it('brings a new slot into view, smoothly', () => {
-    const scrollIntoView = jest.fn();
-    Element.prototype.scrollIntoView = scrollIntoView;
+  it('scrolls the tiles so a new slot shows whole, smoothly', () => {
+    jest.useFakeTimers();
+    const scrollTo = jest.fn();
+    // The tiles box is 300px tall and scrolled to 0; the slot lands at 400.
+    jest
+      .spyOn(HTMLElement.prototype, 'getBoundingClientRect')
+      .mockImplementation(function (this: HTMLElement) {
+        const slot = this.getAttribute('class')?.includes('tileSlot');
+        return (
+          slot
+            ? {top: 400, bottom: 488, left: 0, right: 88, width: 88, height: 88}
+            : {
+                top: 0,
+                bottom: 300,
+                left: 0,
+                right: 300,
+                width: 300,
+                height: 300,
+              }
+        ) as DOMRect;
+      });
+    Object.defineProperty(HTMLElement.prototype, 'clientHeight', {
+      configurable: true,
+      get: () => 300,
+    });
+    HTMLElement.prototype.scrollTo =
+      scrollTo as unknown as typeof HTMLElement.prototype.scrollTo;
     const {rerender} = render(
       <ImageList
         images={[]}
@@ -63,7 +87,6 @@ describe('ImageList', () => {
         onChoose={jest.fn()}
       />
     );
-    expect(scrollIntoView).not.toHaveBeenCalled();
     rerender(
       <ImageList
         images={[]}
@@ -72,10 +95,17 @@ describe('ImageList', () => {
         onChoose={jest.fn()}
       />
     );
-    expect(scrollIntoView).toHaveBeenCalledWith({
-      behavior: 'smooth',
-      block: 'nearest',
+    expect(scrollTo).not.toHaveBeenCalled();
+    act(() => {
+      jest.runOnlyPendingTimers();
     });
+    // Bottom of the slot plus its margin, less the box's height.
+    expect(scrollTo).toHaveBeenCalledWith({
+      top: 488 + 8 - 300,
+      behavior: 'smooth',
+    });
+    jest.restoreAllMocks();
+    jest.useRealTimers();
   });
 
   it('lists the images and the draft, marking the chosen one', () => {

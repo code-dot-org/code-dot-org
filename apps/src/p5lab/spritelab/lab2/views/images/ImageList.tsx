@@ -27,6 +27,9 @@ const sameKind = (a: NewImageKind, b: NewImageKind) =>
   (a.imageType !== 'sprite' ||
     (a.subject ?? 'character') === (b.subject ?? 'character'));
 
+// Room kept around a slot scrolled into view: its ring and its offset.
+const SLOT_SCROLL_MARGIN = 8;
+
 /** The kinds the plus offers, in the menu's order. */
 const NEW_KINDS: {label: string; iconName: string; kind: NewImageKind}[] = [
   {
@@ -98,21 +101,44 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
   // does not share, so a pick would leave the menu open; a remount closes it.
   const [menuKey, setMenuKey] = useState(0);
   useEffect(() => setConfirming(false), [chosenId]);
-  // A new slot may land below the fold of a long list: bring it into view,
-  // smoothly unless the student asked for less motion.
+  // A new slot may land below the fold of a long list: scroll the tiles
+  // so the whole slot shows, ring and all, smoothly unless the student
+  // asked for less motion. A frame after it mounts, so the list has
+  // settled and nothing jumps the scroll back.
+  const tilesRef = useRef<HTMLDivElement>(null);
   const draftRef = useRef<HTMLDivElement>(null);
   const draftId = draft?.id;
   useEffect(() => {
     if (!draftId) {
       return;
     }
-    const reduced = window.matchMedia?.(
-      '(prefers-reduced-motion: reduce)'
-    ).matches;
-    draftRef.current?.scrollIntoView?.({
-      behavior: reduced ? 'auto' : 'smooth',
-      block: 'nearest',
+    const frame = window.requestAnimationFrame(() => {
+      const tiles = tilesRef.current;
+      const slot = draftRef.current;
+      // No box to scroll before layout, or where there is no layout.
+      if (!tiles || !slot || !tiles.clientHeight || !tiles.scrollTo) {
+        return;
+      }
+      const box = tiles.getBoundingClientRect();
+      const rect = slot.getBoundingClientRect();
+      const top = tiles.scrollTop + rect.top - box.top - SLOT_SCROLL_MARGIN;
+      const bottom =
+        tiles.scrollTop + rect.bottom - box.top + SLOT_SCROLL_MARGIN;
+      const target =
+        top < tiles.scrollTop
+          ? top
+          : bottom > tiles.scrollTop + tiles.clientHeight
+          ? bottom - tiles.clientHeight
+          : null;
+      if (target === null) {
+        return;
+      }
+      const reduced = window.matchMedia?.(
+        '(prefers-reduced-motion: reduce)'
+      ).matches;
+      tiles.scrollTo({top: target, behavior: reduced ? 'auto' : 'smooth'});
     });
+    return () => window.cancelAnimationFrame(frame);
   }, [draftId]);
   const chosenImage = images.find(image => image.key === chosenId);
   const deletable = !!onDelete && !!chosenImage;
@@ -161,7 +187,7 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
           />
         )}
       </div>
-      <div className={styles.tiles}>
+      <div ref={tilesRef} className={styles.tiles}>
         {KINDS.map(kind => {
           const own = images.filter(
             image => kindOf(image.imageType, image.subject) === kind.id
