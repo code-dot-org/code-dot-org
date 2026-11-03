@@ -3,7 +3,6 @@
 // right. A picture is the image the moment it lands; there is no dialog and
 // no Keep.
 
-import classNames from 'classnames';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
@@ -41,6 +40,7 @@ import ImageFrame from './ImageFrame';
 import ImageList, {DraftEntry, NewImageKind} from './ImageList';
 import MakePane from './MakePane';
 import OwnWorkPane from './OwnWorkPane';
+import PaintPlaceholder from './PaintPlaceholder';
 import {ImageProps, listProjectImages, ProjectImage} from './projectImages';
 import BehindTheScenes from './teaching/BehindTheScenes';
 import useImageWriter, {ImageTarget} from './useImageWriter';
@@ -77,14 +77,15 @@ interface ImagesTabProps {
   onDrawingHistory?: (history: EditHistory | null) => void;
 }
 
-/** Loads and decodes a picture so the next element showing it paints at
-    once; a failure is left for the editor to report. */
-async function warmImage(src: string): Promise<void> {
+/** Loads and decodes a picture, for the frame to paint at once; a failure
+    is left for the editor, which loads the same picture, to report. */
+async function warmImage(src: string): Promise<HTMLImageElement | undefined> {
   try {
     const image = await toImage(src);
     await image.decode?.();
+    return image;
   } catch {
-    // The editor loads the same picture and reports its own failure.
+    return undefined;
   }
 }
 
@@ -118,6 +119,9 @@ interface Drawing {
   id: number;
   target: ImageTarget;
   imageUrl: string;
+  /** The picture decoded ahead, shown over the canvas until the tools
+      have their own copy. */
+  picture?: HTMLImageElement;
   pixelGridSize?: number;
   recentColors?: PixelEditorSaveMeta['recentColors'];
 }
@@ -333,13 +337,14 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
       const id = ++drawingIdRef.current;
       if (existing?.src) {
         // The tools paint nothing until their own copy of the picture is
-        // decoded; decoded here first, the frame's placeholder shows it
-        // from its first paint, so a switch shows the picture, not white.
-        await warmImage(existing.src);
+        // decoded; decoded here first, the frame shows it from its first
+        // paint, so a switch shows the picture, not white.
+        const picture = await warmImage(existing.src);
         setDrawing({
           id,
           target,
           imageUrl: existing.src,
+          picture,
           pixelGridSize: existing.props.pixelGridSize,
           recentColors: existing.props.recentColors,
         });
@@ -751,13 +756,10 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                                 until the editor has decoded it, so a
                                 switch never shows a blank. */}
                             {!editor.ready && (
-                              <img
+                              <PaintPlaceholder
+                                picture={drawing.picture}
                                 src={drawing.imageUrl}
-                                alt=""
-                                className={classNames(
-                                  styles.paintPlaceholder,
-                                  drawing.pixelGridSize && styles.pixelArt
-                                )}
+                                pixelated={!!drawing.pixelGridSize}
                               />
                             )}
                           </div>,
