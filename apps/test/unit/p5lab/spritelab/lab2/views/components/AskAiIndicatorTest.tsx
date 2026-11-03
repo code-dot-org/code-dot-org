@@ -6,11 +6,11 @@ import AskAiIndicator, {
 } from '@cdo/apps/p5lab/spritelab/lab2/views/components/AskAiIndicator';
 
 describe('AskAiIndicator', () => {
+  // The slot element itself stays, holding the play bar's right column open.
   it('shows nothing when no request is out', () => {
-    const {container} = render(
-      <AskAiIndicator status={null} onFailureExpired={jest.fn()} />
-    );
-    expect(container).toBeEmptyDOMElement();
+    render(<AskAiIndicator status={null} onFailureExpired={jest.fn()} />);
+    expect(screen.queryByRole('status')).toBeNull();
+    expect(screen.queryByRole('alert')).toBeNull();
   });
 
   // role="status" is what announces the wait to a screen reader.

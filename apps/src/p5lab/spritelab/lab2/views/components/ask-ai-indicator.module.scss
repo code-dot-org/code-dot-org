@@ -1,20 +1,27 @@
-// Pinned to the right end of the play bar rather than placed in its flex
-// row, so appearing mid-game cannot shift the buttons under a finger.
+// The play bar's right-hand column. It shares the bar's spare width evenly
+// with the empty column opposite, which keeps the buttons centered; a
+// message too wide for that share grows this column and moves the buttons
+// over rather than being covered by them. No min-width: 0 here, or the
+// column would shrink under its message instead of claiming the room.
+.askAiSlot {
+  display: flex;
+  flex: 1 1 0;
+  align-items: center;
+  justify-content: flex-end;
+}
+
 // Nothing here is clickable, so it leaves the bar's pointer-events alone:
 // the Blockly workspace sits under that strip.
 .askAiIndicator {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  max-width: 50%;
   color: var(--text-neutral-primary);
 }
 
-// The spinner and its label stay on one line; the bar is too short to grow.
 .pending {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  white-space: nowrap;
+}
+
+.spinner {
+  flex-shrink: 0;
 }

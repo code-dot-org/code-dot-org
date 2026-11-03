@@ -37,11 +37,9 @@ const AskAiIndicator: React.FunctionComponent<AskAiIndicatorProps> = ({
     // A fresh failure is a new status object, which restarts the countdown.
   }, [status, failed, onFailureExpired]);
 
-  if (!status) {
-    return null;
-  }
-  if (status.state === 'failed') {
-    return (
+  let alert = null;
+  if (status?.state === 'failed') {
+    alert = (
       <Alert
         className={styles.askAiIndicator}
         type="danger"
@@ -49,22 +47,31 @@ const AskAiIndicator: React.FunctionComponent<AskAiIndicatorProps> = ({
         text={status.message}
       />
     );
+  } else if (status?.state === 'pending') {
+    alert = (
+      <Alert
+        className={styles.askAiIndicator}
+        type="gray"
+        size="xs"
+        // A wait is advisory, so role="status" rather than role="alert".
+        isImmediateImportance={false}
+        text={
+          <span className={styles.pending}>
+            <CircularProgress
+              className={styles.spinner}
+              size={SPINNER_PX}
+              aria-hidden
+            />
+            {PENDING_TEXT}
+          </span>
+        }
+      />
+    );
   }
-  return (
-    <Alert
-      className={styles.askAiIndicator}
-      type="gray"
-      size="xs"
-      // A wait is advisory, so role="status" rather than role="alert".
-      isImmediateImportance={false}
-      text={
-        <span className={styles.pending}>
-          <CircularProgress size={SPINNER_PX} aria-hidden />
-          {PENDING_TEXT}
-        </span>
-      }
-    />
-  );
+
+  // The slot is rendered even when empty: it is the play bar's right-hand
+  // column, and the bar's left spacer sizes itself against it.
+  return <div className={styles.askAiSlot}>{alert}</div>;
 };
 
 export default AskAiIndicator;

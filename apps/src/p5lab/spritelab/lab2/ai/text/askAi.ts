@@ -64,8 +64,8 @@ class AskAiTimeoutError extends Error {
 export function askAiErrorMessage(error: unknown): string {
   if (error instanceof AskAiError) {
     return error.phase === 'prompt'
-      ? 'That question is not allowed. Try asking something else.'
-      : 'That answer is not allowed. Try asking something else.';
+      ? "That prompt isn't appropriate for class."
+      : "The AI's answer didn't pass our safety checks.";
   }
   if (error instanceof AskAiTimeoutError) {
     return 'The AI took too long to answer. Try again.';
