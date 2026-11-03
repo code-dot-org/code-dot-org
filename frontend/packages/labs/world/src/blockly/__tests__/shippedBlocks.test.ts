@@ -28,7 +28,6 @@ import {resolveRuleContents} from '../../rules/ruleReference';
 import {projectFiles} from '../../runtime/projectFiles';
 import {buildDomainPalette} from '../domainBlocks';
 import {projectOwnMetas, projectRuleMetas} from '../projectModules';
-import {VIEW_ROWS} from '../viewRows';
 
 // Each actor and rule as its data (`typesIn`), a rule held as a reference
 // resolved to the rule it names.
@@ -82,11 +81,7 @@ describe('the shipped project', () => {
       for (const type of typesIn(contents)) {
         // Ours, or Blockly's own (`controls_if`, `math_number`, …), which are
         // registered by importing blockly at all.
-        if (
-          !palette.has(type) &&
-          !Blockly.Blocks[type] &&
-          !VIEW_ROWS.has(type)
-        ) {
+        if (!palette.has(type) && !Blockly.Blocks[type]) {
           missing.push(`${path}: ${type}`);
         }
       }

@@ -41,7 +41,6 @@ import {isRuleData, ruleBodies} from '../rules/ruleData';
 
 import {missingRuleExtension} from './extensions/missingRule';
 import {registerStandInRule} from './ruleRegistry';
-import {VIEW_ROWS} from './viewRows';
 
 /** A block as it appears in a serialized workspace — only what is read here. */
 interface BlockState {
@@ -171,9 +170,8 @@ export function standInBlocks(
   contents: readonly string[],
   defined: ReadonlySet<string>,
 ): BlockDefinition[] {
-  // A view's own rows are not blocks a file holds (`viewRows`).
   const known = (type: string): boolean =>
-    defined.has(type) || type in Blockly.Blocks || VIEW_ROWS.has(type);
+    defined.has(type) || type in Blockly.Blocks;
   const wanted = new Map<string, {state: BlockState; shape: Shape}>();
   const visit = (block: BlockState | undefined, shape: Shape): void => {
     if (!block?.type) {

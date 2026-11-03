@@ -387,13 +387,14 @@ types, which no file holds.
 
 #### 5f. One idiom: a game is written as a screen
 
-The lessons, two stock games and some fifty tests still write their game
-under `define world` and convert it when the project is built
-(`lessons/asScreen`, LESSONS_AS_SCREENS_PLAN.md): a literal `add actor`
-becomes a placement, a `define property` row the screen's property, and
-what is left code under `when this screen loads`. No block is defined for
-`define world`; it lives on as the converter's input and as `VIEW_ROWS`.
-In order, each its own commit:
+BUILT, November 2026. The lessons, two stock games and some fifty tests
+wrote their game under `define world` and converted it when the project
+was built (`lessons/asScreen`, LESSONS_AS_SCREENS_PLAN.md): a literal
+`add actor` became a placement, a `define property` row the screen's
+property, and what was left code under `when this screen loads`. No block
+was defined for `define world`; it lived on as the converter's input and
+as `VIEW_ROWS`. Each now writes the screen and map it means, and the
+converter is gone. In order, each its own commit:
 
 1. BUILT, November 2026. The lessons. `screenFile` (`lessons/worlds`)
    writes `main.screen` and `main.map` from a spec that says what each
@@ -415,8 +416,8 @@ In order, each its own commit:
    and import the Viewport, and are the same files as before.
    `asScreenProject` is gone; the converter is called only from test
    support.
-3. The tests. BUILT, November 2026, but for the lesson checks. A test
-   writes its game as a Main Screen with the level on it and no Viewport
+3. BUILT, November 2026. The tests. A test writes its game as a Main
+   Screen with the level on it and no Viewport
    (`__tests__/support/levelScreen`), starting from the empty app: its
    rows are the screen's code under `when this screen loads`, and a world
    property it declared is the screen's. Running every test's `add actor`
@@ -426,12 +427,21 @@ In order, each its own commit:
    are byte for byte the same. The theme test whose map overrides the
    game's writes a Game Viewport and `main.map`, since a map's theme
    overrides nothing on the screen itself. `worldAsScreen`, `asAWorld`
-   and the empty world project are gone. Left: the lesson checks' world
-   view goes, and the checks edit the screen, the map and the actor
-   files.
-4. The converter goes: `asScreen`, `VIEW_ROWS`, and the `define world`
-   rows the world view writes (`world_rule_property`, `world_rule_event`
-   among them).
+   and the empty world project are gone.
+
+   The lesson checks edit the game as one workspace (`GameView` in the
+   checks): the Main Screen's roots and each actor file's, with the
+   screen's data and `main.map` beside them, written back with no
+   converter. A check that declared a world property declares the
+   screen's, and one that set a rule's setting in a row sets it in the
+   screen's `rules`. Every lesson is written back unchanged by the view
+   unedited, and `support/worldView` is gone.
+4. BUILT, November 2026. The converter goes: `asScreen` and `VIEW_ROWS`
+   are deleted, and nothing names `define world` but the unit tests that
+   use `world_world` as any root's type. `world_rule_property` and
+   `world_rule_event` are not the converter's: an actor's and a rule's
+   properties and events are walked as those rows when references are
+   renamed (`keyRows`, `ruleKeyRows`), and they stay with that walk.
 
 ## Open
 

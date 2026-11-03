@@ -64,26 +64,21 @@ color` and a `set` row per rule setting, loads them into the headless
    the spec it was built from — name, rows, handlers, map — and the
    converter sorts the spec rather than a workspace. The lesson checks
    that edit the remembered world move with it.
-5. **LATER. The fixtures.** Tapper and Novel the same way, or written as
-   a screen and a map directly.
-6. **LATER. The test shape.** `EMPTY_WORLD_PROJECT` becomes an empty Main
-   Screen, and the shim reads specs.
+5. **BUILT. The fixtures.** Tapper and Novel are written as a screen and a
+   map directly (COMPILE_FROM_DATA_PLAN.md, 5f).
+6. **BUILT. The test shape.** A test writes a Main Screen into the empty
+   app, and the converter is gone (COMPILE_FROM_DATA_PLAN.md, 5f).
 
-   Steps 4 to 6 are not needed for the block to go. A lesson's, a
-   fixture's and a test's `define world` is JSON the converter reads
-   (`lessons/asScreen`), and nothing loads one into a workspace: its name
-   stays as a row a view is written in (`viewRows`), as the rule blocks'
-   did (COMPILE_FROM_DATA_PLAN.md, step 8). Each is worth doing on its own
-   account. What cannot wait is Tapper's `define layer`, kept as code by
-   the converter (step 8).
+   Steps 4 to 6 were not needed for the block to go: a lesson's, a
+   fixture's and a test's `define world` was JSON a converter read, and
+   nothing loaded one into a workspace.
 
 7. **`define world` goes. BUILT, but for the layers.** The block and its
    generator, `use theme` and `define event` are deleted, with the rules
    button and the event designer that rode on them, `parseWorldOwnMeta`,
    and the entries that named them (`ROOT_HOMES`, `DEFINING_ROOTS`, the
    pinned and named roots, `worldContext`, `addActorName`, the Declarations
-   drawer). `world_world` and `world_rule_event` stay as names a view is
-   written in (`viewRows`). A workspace is the game's code by its mark
+   drawer). A workspace is the game's code by its mark
    alone (`workspaceRoots.definesWorld`); a file with no path compiles as
    an actor's. The tests of the blocks went; the tests of what they did
    read a screen's data (`screenOwnMeta`) or the prologue
@@ -125,8 +120,9 @@ Steps 2 and 3 change no output.
   and Tapper's Interface layer becomes its map's own.
 - **`define event` goes.** A screen's events are data, and the editor will
   make them; a learner's `define event` in a drawer has no place left. Its
-  name stays as a row in an actor's and a rule's view (`viewRows`), and
-  `making/property` stops granting it (step 7).
+  name stays as the row an actor's or a rule's event is walked as when
+  references are renamed (`keyRows`), and `making/property` stops granting
+  it (step 7).
 
 ## Open
 

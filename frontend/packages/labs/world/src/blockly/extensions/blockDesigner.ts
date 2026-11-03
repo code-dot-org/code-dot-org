@@ -1,9 +1,8 @@
 // A designed member's signature (specs/RULE_EDITOR_PLAN.md, step 7).
 //
 // A member's design is data, made on its page (`actors/editor/MemberPage`);
-// `define block` and `define event` are rows of a view and no longer blocks
-// (`viewRows`). What is left here is what a member's head and its call
-// sites read of a signature.
+// `define block` and `define event` are no longer blocks. What is left here
+// is what a member's head and its call sites read of a signature.
 //
 // THE PARTS. A signature is an ordered list of labels and values, the same
 // shape Blockly's own `message0` has: `push %1 toward %2` is "label, param,

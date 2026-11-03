@@ -218,8 +218,9 @@ One commit each, so each fixture's tests move with it.
   until docking puts them on the screen: the bar names the Player by its
   placement, which holds only within one map. The Viewport adds 15KB to a
   new project. A test that wrote a world into the empty project as scratch
-  space now writes it into `EMPTY_WORLD_PROJECT`, which goes when the
-  `.world` shape does. Played in the browser.
+  space wrote it into an empty world project, since gone: a test writes a
+  screen into the empty app (COMPILE_FROM_DATA_PLAN.md, 5f). Played in the
+  browser.
 - 5c. The other games: breakout, meteors, jetpack, tapper, sokoban, novel.
   BUILT for breakout, meteors, jetpack and sokoban, each a Main Screen
   whose Viewport shows `maps/main.map`. Meteors' `add actor` rows became

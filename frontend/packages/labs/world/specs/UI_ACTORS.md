@@ -962,8 +962,7 @@ moment it was wanted. The same constraint that put `Shows Text` on a rule.
 
 It is chosen in the Actor Editor (`ActorIconPicker`), generates nothing, and is
 read from the actor's data (`actorIconMeta`). It was a `show as` row under
-`define actor` until actors became data; the row is now only a name in the
-view (`viewRows`).
+`define actor` until actors became data.
 
 **An SVG data URI, not an icon component.** Blockly's dropdown option is
 `{src, width, height, alt}`, so on the surface that needs this most an icon has

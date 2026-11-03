@@ -6407,8 +6407,7 @@ const actorState: WorldScenario = {
   // which an actor's own file cannot — a `.actor` has no `world` to read, and
   // importing the game that imports it would be a cycle — and step 2 puts a
   // row in each `add actor` body. A row whose value is worked out rather than
-  // typed stays code, under `when this screen loads` in the Main Screen's
-  // (`lessons/asScreen`, specs/LESSONS_AS_SCREENS_PLAN.md).
+  // typed stays code, under `when this screen loads` in the Main Screen's.
   name: 'State an actor carries',
   description: 'Two Lamps that cannot tell each other apart.',
   source: lessonSource({
