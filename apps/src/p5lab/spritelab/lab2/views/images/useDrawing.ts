@@ -6,8 +6,9 @@ import {useCallback, useEffect, useRef, useState} from 'react';
 
 import {toImage} from '@cdo/apps/imageUtils';
 import {
-  CHARACTER_STRIP_BASE_FRAME,
+  AnimationPoses,
   FrameSize,
+  standingFrameIndex,
 } from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
 import {DEFAULT_IMAGE_STYLE} from '@cdo/apps/p5lab/spritelab/lab2/levelMode';
 import {blankPaintImage} from '@cdo/apps/p5lab/spritelab/lab2/paintBlank';
@@ -43,7 +44,13 @@ export interface Drawing {
   pixelGridSize?: number;
   recentColors?: PixelEditorSaveMeta['recentColors'];
   /** A character set: the frame on the canvas is one cell of this strip. */
-  sheet?: {src: string; frameSize: FrameSize; index: number; count: number};
+  sheet?: {
+    src: string;
+    frameSize: FrameSize;
+    poses: AnimationPoses;
+    index: number;
+    count: number;
+  };
 }
 
 /** The parts of the pixel editor this hook uses. */
@@ -72,7 +79,8 @@ export interface DrawingTools {
       painted: a copy of the previous drawing's canvas, or the picture
       decoded ahead. */
   placeholderPicture: HTMLImageElement | HTMLCanvasElement | undefined;
-  startDrawing: (target: ImageTarget) => Promise<void>;
+  /** Opens `target` in the tools, a set on `frame` or its standing frame. */
+  startDrawing: (target: ImageTarget, frame?: number) => Promise<void>;
   /** Leaves the drawing for another image or a new draft: unsaved pixels
       are saved in the background and the tools close at once. With
       `keepCanvasUp` a copy of the canvas stays on screen until the next
@@ -204,7 +212,7 @@ export default function useDrawing({
   }, [drawingOpen, onDrawingHistory]);
 
   const startDrawing = useCallback(
-    async (target: ImageTarget) => {
+    async (target: ImageTarget, frame?: number) => {
       const existing = target.key
         ? images.find(image => image.key === target.key)
         : undefined;
@@ -212,13 +220,10 @@ export default function useDrawing({
       leaveAfterSaveRef.current = false;
       const id = ++drawingIdRef.current;
       if (existing?.sheet) {
-        const {src, frameSize} = existing.sheet;
+        const {src, frameSize, poses} = existing.sheet;
+        const startFrame = frame ?? standingFrameIndex(poses);
         const sheetImage = await toImage(src);
-        const imageUrl = await cutFrame(
-          src,
-          frameSize,
-          CHARACTER_STRIP_BASE_FRAME
-        );
+        const imageUrl = await cutFrame(src, frameSize, startFrame);
         const picture = await decodeImage(imageUrl);
         // A later start owns the tools now.
         if (id !== drawingIdRef.current) {
@@ -234,7 +239,8 @@ export default function useDrawing({
           sheet: {
             src,
             frameSize,
-            index: CHARACTER_STRIP_BASE_FRAME,
+            poses,
+            index: startFrame,
             count: frameCount(sheetImage.naturalWidth, frameSize),
           },
         });

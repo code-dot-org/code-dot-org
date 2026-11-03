@@ -5,6 +5,14 @@
 @use '../sentence/sr-only';
 @use '../../../../../pixelEditor/dialogChrome' as chrome;
 
+// A frame of a set on a canvas, scaled to its box with its pixels sharp.
+@mixin fills-box {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
 // Three columns: the list, the frame, the pane. The pane's width is set
 // inline to the preview column's; the list takes one to three tiles; the
 // frame takes what is left.
@@ -159,8 +167,14 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
 .tile {
   @include tile.image-tile($tile-px);
 
+  position: relative;
   border-radius: 6px;
   overflow: hidden;
+
+  // The chosen set's pose, playing in the tile's box.
+  canvas {
+    @include fills-box;
+  }
 
   // The whole tile grows a little, frame, checker and picture together,
   // to just inside where the chosen ring stands; nothing is cropped, and
@@ -218,6 +232,8 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   align-items: center;
   min-width: 0;
   min-height: 0;
+  // The frame row's tile size is queried against the column, below.
+  container-type: inline-size;
 }
 
 // The frame and, at its left, the session's other pictures.
@@ -344,6 +360,8 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   width: 100%;
   min-height: 48px;
   padding-top: 8px;
+  // Pinned to the column's foot; the spare height goes above it.
+  margin-top: auto;
 }
 
 // The panel's body: flush under its header and to the tab's edges, with
@@ -585,60 +603,104 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   gap: 8px;
 }
 
-// A set's frames under the one being drawn, centered under the preview:
-// the strip spans the slot (which otherwise keeps to the right) and
-// centers its tiles.
+// A set's frames under the big frame, centered: the row spans the slot
+// (which otherwise keeps to the right) and centers its tiles.
+$frame-tile-canvas: 56px;
+$frame-tile-pad: 4px;
+$frame-tile-border: 2px;
+$frame-tile-gap: 6px;
+$frame-group-gap: 14px;
+// A character set's five tiles side by side.
+$frame-tile-edge: $frame-tile-pad + $frame-tile-border;
+$frame-tile-width: $frame-tile-canvas + 2 * $frame-tile-edge;
+$frame-strip-gaps: 2 * $frame-tile-gap + 2 * $frame-group-gap;
+$frame-strip-width: 5 * $frame-tile-width + $frame-strip-gaps;
+
 .frameStrip {
   display: flex;
   flex: 1 1 auto;
   justify-content: center;
-  gap: 10px;
+  align-items: flex-start;
+  gap: $frame-group-gap;
   flex-wrap: wrap;
+}
+
+// One pose's frames under its name.
+.frameGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.frameGroupTitle {
+  color: var(--text-neutral-quaternary);
+  user-select: none;
+}
+
+.frameGroupTiles {
+  display: flex;
+  gap: $frame-tile-gap;
 }
 
 .frameTile {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
   margin: 0;
-  padding: 4px;
-  border: 2px solid var(--borders-neutral-primary);
+  padding: $frame-tile-pad;
+  border: $frame-tile-border solid var(--borders-neutral-primary);
   border-radius: 8px;
   background: transparent;
   color: var(--text-neutral-secondary);
   cursor: pointer;
   box-shadow: none;
-  font-size: 12px;
 
   &:disabled {
     cursor: default;
   }
 }
 
-// The pressed tile is marked by more than color: a filled ground and a bold
-// label.
+// The pressed tile is marked by more than color: a thicker border, which
+// takes its width from the padding so the tile keeps its size.
 .frameTileChosen {
+  padding: $frame-tile-pad - 1px;
+  border-width: $frame-tile-border + 1px;
   border-color: var(--borders-brand-teal-primary);
-  color: var(--text-neutral-primary);
   background: var(--background-neutral-secondary);
-  font-weight: 600;
 }
 
-.frameTileCanvas {
-  width: 56px;
-  height: 56px;
-  image-rendering: pixelated;
+// The tile's picture, one still frame.
+.frameTilePicture {
+  position: relative;
+  display: block;
+  width: $frame-tile-canvas;
+  height: $frame-tile-canvas;
 
   @include checkerboard.checkerboard(
     8px,
     var(--neutral-gray-10),
     var(--neutral-base-white)
   );
+
+  canvas {
+    @include fills-box;
+  }
 }
 
-.frameLabel {
-  white-space: nowrap;
+// A column too narrow for the row of frames gets smaller tiles, so the
+// row keeps to one line and the frame keeps its height.
+@container (max-width: #{$frame-strip-width - 1px}) {
+  .frameStrip {
+    gap: 8px;
+  }
+
+  .frameGroupTiles {
+    gap: 4px;
+  }
+
+  .frameTilePicture {
+    width: 38px;
+    height: 38px;
+  }
 }
 
 .srOnly {

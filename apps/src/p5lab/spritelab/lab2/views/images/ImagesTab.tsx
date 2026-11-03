@@ -6,6 +6,11 @@
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import {
+  CHARACTER_STRIP_FRAME_COUNT,
+  CHARACTER_STRIP_POSES,
+  standingFrameIndex,
+} from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
 import PixelEditor from '@cdo/apps/pixelEditor/PixelEditor';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -32,7 +37,7 @@ import {readWordLayout} from '../sentence/wordLayout';
 
 import DrawPane from './DrawPane';
 import FrameRow from './FrameRow';
-import {FRAME_LABELS} from './frames';
+import {FRAME_LABELS, frameGroups} from './frames';
 import ImageFrame from './ImageFrame';
 import ImageList, {DraftEntry, NewImageKind} from './ImageList';
 import MakePane from './MakePane';
@@ -266,6 +271,14 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     setWordsAsked(false);
   }, [chosenId, active]);
   const ownWorkPane = ownWork && !wordsAsked && editedMode() === 'pane';
+  // The frame of a character set picked in the row under the frame; the
+  // tools open on it, and a pick while they are open is kept for after.
+  const [restFrame, setRestFrame] = useState<number | null>(null);
+  useEffect(() => {
+    setRestFrame(null);
+  }, [chosenId]);
+  const restFrameRef = useRef(restFrame);
+  restFrameRef.current = restFrame;
   // Free play paints every image in place, with the words beside the
   // tools, so the student can draw on it or make a picture over it; a
   // level about one image keeps Edit this image and Done.
@@ -288,7 +301,10 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
       chosenHasSrc &&
       kindType
     ) {
-      startDrawing({key: chosenKey, imageType: kindType, subject: kindSubject});
+      startDrawing(
+        {key: chosenKey, imageType: kindType, subject: kindSubject},
+        restFrameRef.current ?? undefined
+      );
     }
   }, [
     paintsChosen,
@@ -316,6 +332,26 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
       abandonDrawing();
     }
   }, [landedOverPainting, abandonDrawing]);
+
+  // While the tools are open on the chosen set, its frames come from their
+  // copy of the frames image, which holds the unsaved frames. The tools can
+  // still be open on the image chosen before, for the moment the switch
+  // takes.
+  const drawingSheet =
+    drawing && chosenImage && drawing.target.key === chosenImage.key
+      ? drawing.sheet
+      : undefined;
+  const sheet = drawingSheet ?? chosenImage?.sheet;
+  const sheetCount = drawingSheet?.count ?? CHARACTER_STRIP_FRAME_COUNT;
+  const shownFrame =
+    drawingSheet?.index ??
+    restFrame ??
+    standingFrameIndex(sheet?.poses ?? CHARACTER_STRIP_POSES);
+  const shownPose =
+    sheet &&
+    frameGroups(sheet.poses, sheetCount).find(group =>
+      group.frames.includes(shownFrame)
+    )?.key;
 
   const deleteOffered = !!editingOffered;
   // A level about one image offers the plus until that image exists, with
@@ -366,6 +402,11 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
       <ImageList
         disabled={busy}
         images={images}
+        playing={
+          sheet && chosenImage && shownPose
+            ? {key: chosenImage.key, sheet, only: shownPose}
+            : undefined
+        }
         draft={draft}
         chosenId={chosenId}
         onChoose={id => {
@@ -435,15 +476,33 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
           singleStep
           compactBehindTheScenes
           method="tab"
+          stillFrame={shownFrame}
           layout={parts => {
             const generating = parts.mode === 'generating';
+            const frameRow = sheet && (
+              <FrameRow
+                sheetSrc={sheet.src}
+                frameSize={sheet.frameSize}
+                poses={sheet.poses}
+                count={sheetCount}
+                selected={shownFrame}
+                onSelect={index => {
+                  setRestFrame(index);
+                  if (drawingSheet) {
+                    tools.selectFrame(index);
+                  }
+                }}
+                disabled={!drawingSheet && parts.busy}
+              />
+            );
             const frame = (
               live?: React.ReactNode,
               above?: React.ReactNode,
-              under?: React.ReactNode
+              under: React.ReactNode = frameRow
             ) => (
               <ImageFrame
                 image={chosenImage}
+                frame={shownFrame}
                 workspaceClassName={live ? styles.paintFrame : undefined}
                 above={above}
                 live={
@@ -483,11 +542,14 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                   drawOffered
                     ? () => {
                         setWordsAsked(false);
-                        startDrawing({
-                          key: chosenImage?.key ?? null,
-                          imageType: parts.draft.imageType,
-                          subject: parts.draft.subject,
-                        });
+                        startDrawing(
+                          {
+                            key: chosenImage?.key ?? null,
+                            imageType: parts.draft.imageType,
+                            subject: parts.draft.subject,
+                          },
+                          restFrame ?? undefined
+                        );
                       }
                     : undefined
                 }
@@ -544,15 +606,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                           // The tools stay mounted with their drawing while
                           // a picture is made over it, out of sight.
                           generating ? undefined : editor.toolbar,
-                          drawing.sheet && (
-                            <FrameRow
-                              sheetSrc={drawing.sheet.src}
-                              frameSize={drawing.sheet.frameSize}
-                              count={drawing.sheet.count}
-                              selected={drawing.sheet.index}
-                              onSelect={tools.selectFrame}
-                            />
-                          )
+                          frameRow
                         )}
                         {editingOffered && editedMode() === 'paint' ? (
                           words
@@ -588,11 +642,14 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                     onDraw={
                       drawOffered
                         ? () =>
-                            startDrawing({
-                              key: chosenImage.key,
-                              imageType: parts.draft.imageType,
-                              subject: parts.draft.subject,
-                            })
+                            startDrawing(
+                              {
+                                key: chosenImage.key,
+                                imageType: parts.draft.imageType,
+                                subject: parts.draft.subject,
+                              },
+                              restFrame ?? undefined
+                            )
                         : undefined
                     }
                   />

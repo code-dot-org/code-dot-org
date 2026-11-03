@@ -35,6 +35,13 @@ export type AnimationPoses = Partial<Record<PoseKey, PoseRange>>;
 /** Pose order everywhere poses are listed. */
 export const CHARACTER_POSE_ORDER: CharacterPose[] = ['stand', 'walk', 'jump'];
 
+/** Each pose's name as a student reads it. */
+export const CHARACTER_POSE_TITLES: Record<CharacterPose, string> = {
+  stand: 'Idle',
+  walk: 'Walk',
+  jump: 'Jump',
+};
+
 /**
  * The strip a generated set is stored as: one row of five square frames —
  * second idle, standing, mid-stride walk, rising jump, falling jump — all
@@ -55,12 +62,18 @@ export const CHARACTER_STRIP_POSES: AnimationPoses = {
 
 export const CHARACTER_STRIP_FRAME_COUNT = 5;
 
+/** The index of the frame a set was generated from: the last frame of its
+    stand-right pose, or 0 for a set with no such pose. */
+export function standingFrameIndex(poses: AnimationPoses): number {
+  const stand = poses['stand-right'];
+  return stand ? stand.start + stand.count - 1 : 0;
+}
+
 /** The standing frame is the base picture the other poses were drawn
     from. */
-export const CHARACTER_STRIP_BASE_FRAME =
-  CHARACTER_STRIP_POSES['stand-right']!.start +
-  CHARACTER_STRIP_POSES['stand-right']!.count -
-  1;
+export const CHARACTER_STRIP_BASE_FRAME = standingFrameIndex(
+  CHARACTER_STRIP_POSES
+);
 
 /** The size of one frame of a strip, in image pixels. */
 export interface FrameSize {

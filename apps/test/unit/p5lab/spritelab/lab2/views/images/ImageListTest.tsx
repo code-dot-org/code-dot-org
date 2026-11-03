@@ -8,6 +8,7 @@ import {
 } from '@testing-library/react';
 import React from 'react';
 
+import {CHARACTER_STRIP_POSES} from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
 import ImageList from '@cdo/apps/p5lab/spritelab/lab2/views/images/ImageList';
 import {ProjectImage} from '@cdo/apps/p5lab/spritelab/lab2/views/images/projectImages';
 
@@ -143,6 +144,34 @@ describe('ImageList', () => {
     ).toHaveAttribute('aria-pressed', 'true');
     expect(screen.queryByRole('button', {name: 'New image'})).toBeNull();
     expect(screen.queryByRole('button', {name: 'Delete image'})).toBeNull();
+  });
+
+  it("plays a pose in the chosen set's tile, which keeps its name", () => {
+    render(
+      <ImageList
+        images={images}
+        draft={null}
+        chosenId="a"
+        onChoose={jest.fn()}
+        playing={{
+          key: 'a',
+          sheet: {
+            src: 'data:sheet',
+            frameSize: {x: 64, y: 64},
+            poses: CHARACTER_STRIP_POSES,
+          },
+          only: 'walk-right',
+        }}
+      />
+    );
+    const tile = screen.getByRole('button', {name: 'Sprite 1'});
+    expect(
+      tile.querySelector('canvas[aria-label="Animation preview"]')
+    ).toBeTruthy();
+    expect(tile.querySelector('img')).toBeNull();
+    expect(
+      screen.getByRole('button', {name: 'Sprite 2'}).querySelector('img')
+    ).toBeTruthy();
   });
 
   it('chooses on a tile and adds on the plus', async () => {

@@ -35,6 +35,10 @@ import {
   ImageType,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/images/types';
 import {
+  CHARACTER_STRIP_FRAME_COUNT,
+  stripCellOrigin,
+} from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
+import {
   BACKGROUND_GROUND_COLOR,
   blankPaintImage,
 } from '@cdo/apps/p5lab/spritelab/lab2/paintBlank';
@@ -43,6 +47,7 @@ import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import characterOutline from '@cdo/static/spritelab_lab2/character-outline.svg';
 
 import AnimatedSheetPreview from '../AnimatedSheetPreview';
+import StripFrame from '../StripFrame';
 import BehindTheScenes from '../images/teaching/BehindTheScenes';
 
 import AlternativeThumbs from './AlternativeThumbs';
@@ -151,6 +156,8 @@ export interface SentenceSceneParts {
 }
 
 interface SentenceSceneProps {
+  /** A character set shows this frame, still, instead of playing. */
+  stillFrame?: number;
   imageType: ImageType;
   imageSubject?: ImageSubject;
   /** The sentence to build, by id; the image type's own when unset. */
@@ -205,6 +212,7 @@ interface SentenceSceneProps {
 }
 
 const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
+  stillFrame,
   imageType: initialImageType,
   imageSubject: initialImageSubject,
   sentenceId,
@@ -752,7 +760,15 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     </div>
   ) : chosenPicture ? (
     <>
-      {sheet ? (
+      {sheet && stillFrame !== undefined ? (
+        <StripFrame
+          sheetSrc={sheet.src}
+          frameSize={sheet.frameSize}
+          index={stillFrame}
+          className={styles.preview}
+          label={chosenPicture.prompt}
+        />
+      ) : sheet ? (
         <AnimatedSheetPreview {...sheet} />
       ) : (
         <img
@@ -774,8 +790,12 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
             crop={
               sheet
                 ? {
-                    x: 0,
-                    y: 0,
+                    // A generated set's frames stand in one row.
+                    ...stripCellOrigin(
+                      CHARACTER_STRIP_FRAME_COUNT * sheet.frameSize.x,
+                      sheet.frameSize,
+                      stillFrame ?? 0
+                    ),
                     width: sheet.frameSize.x,
                     height: sheet.frameSize.y,
                   }
