@@ -3,14 +3,18 @@
 // that deletes the chosen one.
 
 import {MuiDialog} from '@code-dot-org/component-library/dialog';
-import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {
+  Button as MuiButton,
   IconButton as MuiIconButton,
+  ListItemIcon,
+  ListItemText,
+  Menu as MuiMenu,
+  MenuItem as MuiMenuItem,
   Typography as MuiTypography,
 } from '@mui/material';
 import classNames from 'classnames';
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useEffect, useId, useRef, useState} from 'react';
 
 import {
   imageKindNoun,
@@ -109,10 +113,9 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
 }) => {
   // The delete confirmation is open; changing the chosen image closes it.
   const [confirming, setConfirming] = useState(false);
-  // ActionDropdown's option click closes the menu through a context that
-  // CustomDropdown provides only inside itself, so a pick leaves the menu
-  // open. Changing the key remounts it closed.
-  const [menuKey, setMenuKey] = useState(0);
+  // The kinds menu is open while it has its button to hang from.
+  const [menuButton, setMenuButton] = useState<HTMLElement | null>(null);
+  const menuId = useId();
   useEffect(() => setConfirming(false), [chosenId]);
   // Scroll the tiles box so a new draft slot is fully visible, smoothly
   // unless the student asked for less motion. It runs one animation frame
@@ -176,29 +179,46 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
           </MuiTypography>
         </div>
         {onNew && (
-          <ActionDropdown
-            key={menuKey}
-            name="new-image"
-            labelText="New image"
-            size="m"
-            menuPlacement="right"
-            triggerButtonProps={{
-              variant: 'contained',
-              color: 'primary',
-              className: styles.newButton,
-              children: <FontAwesomeV6Icon iconName="plus" />,
-            }}
-            options={NEW_KINDS.map(({label, iconName, kind}) => ({
-              value: label,
-              label,
-              icon: {iconName},
-              isOptionDisabled: !!newKind && !sameKind(kind, newKind),
-              onClick: () => {
-                setMenuKey(k => k + 1);
-                onNew(kind);
-              },
-            }))}
-          />
+          <>
+            <MuiButton
+              variant="contained"
+              color="primary"
+              className={styles.newButton}
+              aria-label="New image"
+              aria-haspopup="menu"
+              aria-expanded={!!menuButton}
+              aria-controls={menuButton ? menuId : undefined}
+              onClick={event => setMenuButton(event.currentTarget)}
+            >
+              <FontAwesomeV6Icon iconName="plus" />
+            </MuiButton>
+            {/* The menu is rendered at the document's root, so it draws
+                over the panels beside the tab instead of being clipped by
+                the tab's scroll box. */}
+            <MuiMenu
+              id={menuId}
+              anchorEl={menuButton}
+              open={!!menuButton}
+              onClose={() => setMenuButton(null)}
+              anchorOrigin={{vertical: 'bottom', horizontal: 'left'}}
+            >
+              {NEW_KINDS.map(({label, iconName, kind}) => (
+                <MuiMenuItem
+                  key={label}
+                  disabled={!!newKind && !sameKind(kind, newKind)}
+                  onClick={() => {
+                    setMenuButton(null);
+                    onNew(kind);
+                  }}
+                >
+                  <ListItemIcon>
+                    <FontAwesomeV6Icon iconName={iconName} />
+                  </ListItemIcon>
+                  <ListItemText>{label}</ListItemText>
+                </MuiMenuItem>
+              ))}
+            </MuiMenu>
+          </>
         )}
       </div>
       <div ref={tilesRef} className={styles.tiles}>

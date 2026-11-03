@@ -98,9 +98,10 @@ function renderTab(
   );
 }
 
+// `hidden`: an open menu hides the rest of the page from assistive tech.
 const pressed = () =>
   screen
-    .queryAllByRole('button', {pressed: true})
+    .queryAllByRole('button', {pressed: true, hidden: true})
     .map(button => button.getAttribute('aria-label'));
 
 describe('ImagesTab', () => {
@@ -120,10 +121,11 @@ describe('ImagesTab', () => {
     expect(screen.getByText('Press + to make a character.')).toBeTruthy();
     fireEvent.click(screen.getByRole('button', {name: 'New image'}));
     expect(
-      (screen.getByRole('button', {name: 'Background'}) as HTMLButtonElement)
-        .disabled
+      screen
+        .getByRole('menuitem', {name: 'Background'})
+        .getAttribute('aria-disabled') === 'true'
     ).toBe(true);
-    fireEvent.click(screen.getByRole('button', {name: 'Character'}));
+    fireEvent.click(screen.getByRole('menuitem', {name: 'Character'}));
     expect(pressed()).toEqual(['New character']);
     expect(screen.getByRole('img', {name: 'No picture yet'})).toBeTruthy();
     acceptGenerated.mockImplementation(async () => {
@@ -163,7 +165,7 @@ describe('ImagesTab', () => {
     fireEvent.click(screen.getByRole('button', {name: 'New image'}));
     // Nothing is set up until a kind is picked.
     expect(pressed()).toEqual(['Sprite 1']);
-    fireEvent.click(screen.getByRole('button', {name: 'Character'}));
+    fireEvent.click(screen.getByRole('menuitem', {name: 'Character'}));
     expect(pressed()).toEqual(['New character']);
     // The kind is settled by the pick: no Type choice in the scene.
     expect(
@@ -185,7 +187,7 @@ describe('ImagesTab', () => {
     propsByKey.k1 = {name: 'Sprite 1', categories: []};
     const {rerender} = renderTab({editingOffered: true});
     fireEvent.click(screen.getByRole('button', {name: 'New image'}));
-    fireEvent.click(screen.getByRole('button', {name: 'Character'}));
+    fireEvent.click(screen.getByRole('menuitem', {name: 'Character'}));
     let finish: (key: string) => void = () => {};
     acceptGenerated.mockImplementation(
       () =>

@@ -1,4 +1,11 @@
-import {act, fireEvent, render, screen, within} from '@testing-library/react';
+import {
+  act,
+  fireEvent,
+  render,
+  screen,
+  waitFor,
+  within,
+} from '@testing-library/react';
 import React from 'react';
 
 import ImageList from '@cdo/apps/p5lab/spritelab/lab2/views/images/ImageList';
@@ -138,7 +145,7 @@ describe('ImageList', () => {
     expect(screen.queryByRole('button', {name: 'Delete image'})).toBeNull();
   });
 
-  it('chooses on a tile and adds on the plus', () => {
+  it('chooses on a tile and adds on the plus', async () => {
     const onChoose = jest.fn();
     const onNew = jest.fn();
     render(
@@ -154,18 +161,19 @@ describe('ImageList', () => {
     expect(onChoose).toHaveBeenCalledWith('b');
     fireEvent.click(screen.getByRole('button', {name: 'New image'}));
     expect(
-      ['Character', 'Background', 'Object', 'Block'].map(
-        name => !!screen.getByRole('button', {name})
-      )
-    ).toEqual([true, true, true, true]);
-    fireEvent.click(screen.getByRole('button', {name: 'Object'}));
+      screen.getAllByRole('menuitem').map(item => item.textContent)
+    ).toEqual(['Character', 'Background', 'Object', 'Block']);
+    fireEvent.click(screen.getByRole('menuitem', {name: 'Object'}));
     expect(onNew).toHaveBeenCalledWith({
       imageType: 'sprite',
       subject: 'object',
     });
-    // The pick closes the menu. The library marks an open dropdown only by
-    // its class; it sets no aria-expanded.
-    expect(document.querySelector('[class~="open"]')).toBeNull();
+    // The pick closes the menu.
+    await waitFor(() => expect(screen.queryByRole('menu')).toBeNull());
+    expect(screen.getByRole('button', {name: 'New image'})).toHaveAttribute(
+      'aria-expanded',
+      'false'
+    );
   });
 
   it('keeps the choice where the level put it', () => {
@@ -199,7 +207,8 @@ describe('ImageList', () => {
     );
     fireEvent.click(screen.getByRole('button', {name: 'New image'}));
     const off = (name: string) =>
-      (screen.getByRole('button', {name}) as HTMLButtonElement).disabled;
+      screen.getByRole('menuitem', {name}).getAttribute('aria-disabled') ===
+      'true';
     expect(['Character', 'Background', 'Object', 'Block'].map(off)).toEqual([
       true,
       true,
