@@ -1,8 +1,10 @@
-The `update_gatekeeper.sh` script in this directory allows you to update the
-dynamic configuration with one of several predefined configurations defined in
-YAML files.
+The `update_gatekeeper.sh` script in this directory updates the Gatekeeper
+dynamic configuration from a YAML file of rules; `update_dcdo.sh` does the same
+for DCDO. The rule format is documented at the top of
+`lib/dynamic_config/loaders/gatekeeper_loader.rb`.
 
-For example, run the following to cache the HOC 2015 levels only and disable
-milestone posts.
+For example, to load Gatekeeper rules from a file you have written:
 
-    ./update_gatekeeper.sh gatekeeper_hoc2015_cached.yml
+    ./update_gatekeeper.sh my_rules.yml
+
+The only file kept here is `dcdo.yml`, which is empty.

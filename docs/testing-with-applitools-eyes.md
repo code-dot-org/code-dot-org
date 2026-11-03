@@ -4,7 +4,7 @@ Applitools Eyes is a service that lets us upload and compare screenshots of our 
 
 ## Getting an account
 
-Consult the [Getting Started as a Developer at Code.org](https://docs.google.com/document/d/158MiIxJ_1JokzUkw43Wf2bFONPycYoCeXtKEU-ww0Xw/edit) document for details on how to gain access to Sauce Labs.
+Consult the [Getting Started as a Developer at Code.org](https://docs.google.com/document/d/158MiIxJ_1JokzUkw43Wf2bFONPycYoCeXtKEU-ww0Xw/edit) document for details on how to gain access to Applitools Eyes.
 
 ## Add your feature to the eyes file
 
@@ -15,9 +15,10 @@ OR
 add your test to a new `.feature` file, annotating it with `@eyes`
 
 If you need to write an eyes test that is specific to a mobile device, make sure
-it is annotated with `@eyes_mobile` and not `@eyes`.  By default, `@eyes` tests
-will only run against Chrome 33 and `@eyes_mobile` tests will only run against
-iPhone.
+it is annotated with `@eyes_mobile` and not `@eyes`. With `--eyes`, `runner.rb`
+runs `@eyes` tests on desktop browsers and `@eyes_mobile` tests only on mobile
+browsers (iPad, iPhone). Drone and the test server run eyes tests on Chrome
+only, so `@eyes_mobile` tests run only when invoked by hand.
 
 ## Run the test
 
@@ -45,7 +46,9 @@ See the [UI Testing Instructions](../dashboard/test/ui/README.md) for details ab
 
 ## Watch for run on CI and test server deploy
 
-Both on CI In `aws/build.rake`, as part of the test.code.org CI script, the eyes tests will be run (as of writing, currently only against the Chrome 33 browser and iPhone).
+Drone runs `@eyes` tests on Chrome for each PR (`ci:run_ui_tests` in `lib/rake/ci.rake`; skip with the `[skip eyes]` commit tag). The test server runs them during deploy via the `eyes_ui` task in `lib/rake/test.rake`.
+
+Playwright visual tests are separate: the `playwright_eyes` task in `lib/rake/test.rake` runs them on the test server, and Drone runs them as `ci:playwright_eyes`. See [frontend/packages/e2e-tests/README.md](../frontend/packages/e2e-tests/README.md).
 
 Results will show up in the Selenium HTML output when changes occur. You can navigate to the reported URL from there to accept the new baseline.
  
