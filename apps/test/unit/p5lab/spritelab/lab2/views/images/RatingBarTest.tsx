@@ -35,7 +35,8 @@ describe('RatingBar', () => {
     expect(
       screen.getByRole('alertdialog', {name: 'What went wrong?'})
     ).toBeTruthy();
-    expect(screen.queryByRole('button', {name: /close/i})).toBeNull();
+    // The dialog's close button records the picks like Done does.
+    expect(screen.getByRole('button', {name: /close/i})).toBeTruthy();
     fireEvent.click(screen.getByLabelText("Doesn't match my prompt"));
     fireEvent.click(screen.getByLabelText('Not what I expected'));
     fireEvent.click(screen.getByRole('button', {name: 'Done'}));
