@@ -6,6 +6,7 @@ import {
   isComplete,
   latestValidation,
   stepIdToResume,
+  totalTimeSpent,
   useProgress,
   visibleSteps,
 } from '@cdo/apps/adaptive/progress';
@@ -102,6 +103,20 @@ describe('routeStatusMap without evidence', () => {
       steps: {'intro-step': {timeSpent: 0, generatedInstructions}},
     };
     expect(statusMapOf(pathway, progress).intro).toBe('available');
+  });
+});
+
+describe('totalTimeSpent', () => {
+  it('sums the time on every step', () => {
+    expect(totalTimeSpent(EMPTY_PROGRESS)).toBe(0);
+    expect(
+      totalTimeSpent({
+        steps: {
+          a: {timeSpent: 90, status: 'complete'},
+          b: {timeSpent: 30, status: 'started'},
+        },
+      })
+    ).toBe(120);
   });
 });
 

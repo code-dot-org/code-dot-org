@@ -133,6 +133,7 @@ function renderMapScreen(
       evidence={{}}
       onFocus={jest.fn()}
       onStart={jest.fn()}
+      timeSpentSeconds={0}
       onWorkOnProject={jest.fn()}
       hasSkippedCheckpoints={false}
       {...overrides}
@@ -269,6 +270,42 @@ describe('MapScreen tour', () => {
       });
       expect(screen.queryByRole('dialog', {name: 'tour'})).toBeNull();
       expect(localStorage.getItem(SKILL_MAP_TOUR_STORAGE_KEY)).toBe('1');
+    });
+  });
+
+  describe('title bar totals', () => {
+    beforeEach(() => localStorage.setItem(SKILL_MAP_TOUR_STORAGE_KEY, '1'));
+
+    it('shows the time spent in minutes, with hours once past one', () => {
+      const {unmount} = renderMapScreen({timeSpentSeconds: 250});
+      expect(screen.getByLabelText('Time spent: 4m')).toBeTruthy();
+      unmount();
+      renderMapScreen({timeSpentSeconds: 3900});
+      expect(screen.getByLabelText('Time spent: 1h05m')).toBeTruthy();
+    });
+
+    it('shows a ring per skill with its progress', () => {
+      renderMapScreen({
+        pathway: {
+          ...pathway,
+          skills: {
+            build: {
+              id: 'build',
+              title: 'Build',
+              description: 'B.',
+              icon: 'wand',
+            },
+          },
+          checkpoints: pathway.checkpoints.map(c => ({
+            ...c,
+            skillIds: ['build'],
+          })),
+        },
+        statusMap: {'cp-1': 'complete', 'cp-2': 'locked'},
+      });
+      expect(
+        screen.getByLabelText('Build: 1 of 2 checkpoints complete')
+      ).toBeTruthy();
     });
   });
 

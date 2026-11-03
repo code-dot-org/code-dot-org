@@ -14,9 +14,11 @@ import {PathwayEvidence} from '../routing/evidence';
 import {Pathway} from '../types';
 
 import CheckpointCard from './CheckpointCard';
+import {getSkillProgress} from './map/groupProgress';
 import {resolveMapSettings} from './map/mapSettings';
 import MapView from './map/MapView';
 import MapZoom from './map/MapZoom';
+import MapStats from './MapStats';
 import ProjectCard from './ProjectCard';
 
 import styles from './mapScreen.module.scss';
@@ -52,6 +54,8 @@ interface MapScreenProps {
   focusId?: string;
   onFocus: (id: string | undefined) => void;
   onStart: (checkpointId: string) => void;
+  /** Seconds spent on steps so far, for the title bar. */
+  timeSpentSeconds: number;
   onWorkOnProject: () => void;
   hasSkippedCheckpoints: boolean;
 }
@@ -63,9 +67,14 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
   focusId,
   onFocus,
   onStart,
+  timeSpentSeconds,
   onWorkOnProject,
   hasSkippedCheckpoints,
 }) => {
+  const skillProgress = useMemo(
+    () => getSkillProgress(pathway, statusMap),
+    [pathway, statusMap]
+  );
   const {theme, setTheme} = useTheme();
   // The project manager lives only while the map shows, so it never races a
   // step's manager on the same channel.
@@ -180,6 +189,7 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
       />
       <header className={styles.mapBar}>
         <MuiTypography variant="strong">{pathway.title}</MuiTypography>
+        <MapStats skills={skillProgress} timeSpentSeconds={timeSpentSeconds} />
       </header>
       <div className={styles.mapBody}>
         <div
