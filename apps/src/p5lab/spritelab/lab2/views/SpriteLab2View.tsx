@@ -156,8 +156,6 @@ import PromptBar from './components/PromptBar';
 import Sheet from './components/Sheet';
 import WorkspaceSceneBar from './components/WorkspaceSceneBar';
 import DiscoverBlocksButton from './DiscoverBlocksButton';
-import GenerateImagePane from './GenerateImagePane';
-import GenerateSpriteLab from './GenerateSpriteLab';
 import ImagesTab, {DEFAULT_PANE_WIDTH} from './images/ImagesTab';
 import {createNamedAnimation} from './imageSave';
 import {ArrowSet, arrowSetFor, ControlsState} from './playBar';

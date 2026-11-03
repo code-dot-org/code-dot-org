@@ -98,46 +98,19 @@ const MakePane: React.FunctionComponent<MakePaneProps> = ({
       )}
       {parts.animatedChoice}
       <div className={styles.paneBottom}>
-        {confirming ? (
-          <div className={styles.confirm} role="group" aria-label="Replace">
-            <span>Replace your drawing with a new picture?</span>
-            <div className={styles.confirmButtons}>
-              <MuiButton
-                variant="outlined"
-                color="secondary"
-                size="small"
-                onClick={() => setConfirming(false)}
-              >
-                Keep drawing
-              </MuiButton>
-              <MuiButton
-                variant="contained"
-                color="primary"
-                size="small"
-                onClick={() => {
-                  setConfirming(false);
-                  parts.generate();
-                }}
-              >
-                Replace
-              </MuiButton>
-            </div>
-          </div>
-        ) : (
-          <MuiButton
-            variant={regenerate ? 'outlined' : 'contained'}
-            color="primary"
-            startIcon={<FontAwesomeV6Icon iconName="sparkles" aria-hidden />}
-            disabled={!parts.complete || parts.busy || parts.exhausted}
-            onClick={generate}
-          >
-            {generating
-              ? 'Generating…'
-              : result || regenerate
-              ? 'Regenerate'
-              : 'Generate'}
-          </MuiButton>
-        )}
+        <MuiButton
+          variant={result || regenerate ? 'outlined' : 'contained'}
+          color="primary"
+          startIcon={<FontAwesomeV6Icon iconName="sparkles" aria-hidden />}
+          disabled={!parts.complete || parts.busy || parts.exhausted}
+          onClick={generate}
+        >
+          {generating
+            ? 'Generating…'
+            : result || regenerate
+            ? 'Regenerate'
+            : 'Generate'}
+        </MuiButton>
         {onDraw && !generating && !confirming && (
           <MuiButton
             variant="outlined"

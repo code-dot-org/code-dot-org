@@ -545,13 +545,6 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                     : live ?? (parts.frameFilled ? parts.frame : undefined)
                 }
                 generating={generating}
-                beside={parts.alternatives}
-                live={
-                  parts.mode === 'generating' || parts.frameFilled
-                    ? parts.frame
-                    : undefined
-                }
-                generating={parts.mode === 'generating'}
                 under={
                   generating ? (
                     <div className={styles.underSteps}>{parts.progress}</div>
