@@ -175,24 +175,49 @@ namespace :seed do
     end
   end
 
-  SCRIPTS_DEPENDENCIES = [
-    :environment,
-    :check_migrations,
-    :games,
-    :deprecated_blockly_levels,
-    :child_dsls,
-    :quiz_questions,
-    :custom_levels,
-    :standalone_project_levels,
-    :parent_dsls,
-    :code_docs,
-    :blocks,
-    :standards,
-    :shared_blockly_functions,
-    :libraries,
-    :course_offerings,
-    :jit_pl_concepts
-  ].freeze
+  # The tasks to run before seeding the units of the given partition
+  # (:production_curriculum or :ui_test_curriculum); see
+  # dashboard/config/PARTITIONS.md. The order follows from these dependencies:
+  #
+  # - standalone_project_levels must run after games, but does not have an
+  #   ordering dependency on production or ui test levels because there are no
+  #   parent/child level relationships across partitions.
+  # - quiz_questions must run before custom levels, because Quiz levels are
+  #   custom levels and depend on quiz_questions.
+  # - code_docs, blocks, standards, shared_blockly_functions and libraries have
+  #   no ordering constraint against the content tasks in either direction.
+  # - jit_pl_concepts must run after course_offerings, because loading the JIT
+  #   PL course also writes that course's offering file in levelbuilder mode.
+  #   If the two run in the other order, the seed can overwrite
+  #   course_offerings/just-in-time-pl.json with the database's stale copy
+  #   before course_offerings ever reads the file.
+  def get_scripts_dependencies(partition: :production_curriculum)
+    content_dependencies =
+      case partition
+      when :production_curriculum
+        [:child_dsls, :custom_levels, :parent_dsls, :course_offerings]
+      when :ui_test_curriculum
+        [:child_dsls_ui_tests, :custom_levels_ui_tests, :parent_dsls_ui_tests, :course_offerings_ui_tests]
+      else
+        raise "Unknown partition: #{partition}"
+      end
+
+    [
+      :environment,
+      :check_migrations,
+      :games,
+      :deprecated_blockly_levels,
+      :quiz_questions,
+      :standalone_project_levels,
+      :code_docs,
+      :blocks,
+      :standards,
+      :shared_blockly_functions,
+      :libraries,
+      *content_dependencies,
+      :jit_pl_concepts
+    ]
+  end
 
   # Do the minimum amount of work to seed a single script or glob, without
   # seeding levels or other dependencies. For use in development. Examples:
@@ -207,24 +232,11 @@ namespace :seed do
     update_scripts(script_files: script_files)
   end
 
-  timed_task_with_logging scripts: SCRIPTS_DEPENDENCIES do
+  timed_task_with_logging scripts: get_scripts_dependencies do
     update_scripts(incremental: true)
   end
 
-  # Moved course offerings ui test seed after regular course offerings are seeded
-  # because the regular course offerings seed task removes any course_offerings records
-  # left in the database that do not have a corresponding json file in config/course_offerings.
-  # The ui test course offerings must be seeded after so they are not accidentally removed.
-  # UI test scripts also need the "UI Test " levels, seeded after the normal
-  # level tasks in SCRIPTS_DEPENDENCIES; see dashboard/test/ui/config/README.md.
-  UI_TEST_SCRIPTS_DEPENDENCIES = SCRIPTS_DEPENDENCIES + [
-    :child_dsls_ui_tests,
-    :custom_levels_ui_tests,
-    :parent_dsls_ui_tests,
-    :course_offerings_ui_tests,
-  ].freeze
-
-  timed_task_with_logging scripts_ui_tests: UI_TEST_SCRIPTS_DEPENDENCIES do
+  timed_task_with_logging scripts_ui_tests: get_scripts_dependencies(partition: :ui_test_curriculum) do
     update_scripts(script_files: UI_TEST_SCRIPTS, incremental: true)
   end
 
@@ -236,7 +248,7 @@ namespace :seed do
     update_scripts(script_files: UI_TEST_SCRIPTS, incremental: true)
   end
 
-  timed_task_with_logging scripts_adhoc: SCRIPTS_DEPENDENCIES do
+  timed_task_with_logging scripts_adhoc: get_scripts_dependencies do
     update_scripts(script_files: ADHOC_SCRIPTS)
   end
 

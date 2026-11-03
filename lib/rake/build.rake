@@ -67,6 +67,9 @@ namespace :build do
       ChatClient.log 'Installing <b>dashboard</b> python dependencies'
       RakeUtils.python_venv_install
 
+      ChatClient.log 'Provisioning <b>dashboard</b> SQL users...'
+      RakeUtils.rake 'db:provision_sql_users'
+
       if CDO.daemon
         ChatClient.log 'Migrating <b>dashboard</b> database...'
         RakeUtils.rake 'db:setup_or_migrate'
