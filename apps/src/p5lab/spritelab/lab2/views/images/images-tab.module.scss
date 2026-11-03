@@ -1,3 +1,4 @@
+@use 'sass:math';
 @use '../checkerboard';
 @use '../imageTile' as tile;
 @use '../editor-strip' as strip;
@@ -20,6 +21,8 @@ $pad: 16px;
   width: 100%;
   height: 100%;
   padding: (strip.$height + $pad) $pad $pad;
+  // The list's width is queried against the tab, below.
+  container-type: inline-size;
 }
 
 // The pane's header, the strip's twin, across the top of the pane column.
@@ -40,6 +43,16 @@ $pad: 16px;
   // A fifth of the tab: one tile in a narrow window, three in a wide one.
   width: 20%;
   min-height: 0;
+}
+
+// Below the tab width where a fifth holds two tile columns, the list is
+// exactly one column, so the slack goes to the frame instead.
+$two-columns-at: math.div(2 * $tile-px + $tile-gap, 0.2);
+
+@container (max-width: #{$two-columns-at - 1px}) {
+  .list {
+    width: $tile-px;
+  }
 }
 
 // The plus never wraps under the name: a narrow column truncates the
