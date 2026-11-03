@@ -376,10 +376,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
           // so no frame shows it without them.
           const next = images.find(image => image.key === id);
           const drawsNext =
-            !!next?.src &&
-            !next.sheet &&
-            editedMode() === 'paint' &&
-            !!editingOffered;
+            !!next?.src && editedMode() === 'paint' && !!editingOffered;
           if (drawing) {
             leaveDrawing(drawsNext);
           }
