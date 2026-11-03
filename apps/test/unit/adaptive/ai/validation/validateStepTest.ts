@@ -81,7 +81,11 @@ describe('validateStep', () => {
       expect(mockGenerate).not.toHaveBeenCalled()
     );
 
-    const attempt = await validateStep({...options, onJudging});
+    const attempt = await validateStep({
+      ...options,
+      instructionsTraceId: 'trace-0',
+      onJudging,
+    });
 
     expect(onJudging).toHaveBeenCalledTimes(1);
     expect(attempt).toEqual({
@@ -97,6 +101,7 @@ describe('validateStep', () => {
       checkpointId: 'basics',
       stepId: 'build',
       workAt: 1700,
+      instructionsTraceId: 'trace-0',
     });
     expect(call.prompt).toContain('=== index.html ===\n<h1>Bakery</h1>');
     expect(call.prompt).toContain('Student: Add a heading');

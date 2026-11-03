@@ -1,0 +1,51 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-11-03T03:18:13.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "require_edit_to_continue": true,
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "b7393ade-473b-4e3e-adb0-7e8e5fe25d95": {
+          "id": "b7393ade-473b-4e3e-adb0-7e8e5fe25d95",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Broken Feature Page</title>\n    <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n    <h1>Welcome to Our Site</h1>\n    <p>This page should have a working button below that changes the text.</p>\n    <div class=\"feature-box\">\n        <p id=\"message\">Initial message here!</p>\n        <button id=\"actionButton\">CLick Me to chAnge Text</button>\n    </div>\n    <script src=\"script.js\"></script>\n</body>\n</html>",
+          "folderId": "0",
+          "type": "starter",
+          "active": true
+        },
+        "55f104f1-3cd3-4e64-9361-b82d01e7305d": {
+          "id": "55f104f1-3cd3-4e64-9361-b82d01e7305d",
+          "name": "style.css",
+          "contents": "body {\n    font-family: Arial, sans-serif;\n    margin: 20px;\n    background-color: #f8f8f8;\n    color: #333;\n}\n\nh1 {\n    color: #007bff;\n}\n\n.feature-box {\n    border: 1px solid #ccc;\n    padding: 20px;\n    margin-top: 20px;\n    background-color: #fff;\n    border-radius: 8px;\n}\n\n#message {\n    font-size: 1.2em;\n    margin-bottom: 15px;\n    color: #555;\n}\n\n#actionButton {\n    background-color: #f44336; /* Red background, but text is invisible */\n    color: #f44336; /* Text color matches background */\n    padding: 10px 15px;\n    border: none;\n    border-radius: 5px;\n    cursor: pointer;\n    font-size: 0.1em; /* Very small text */\n    opacity: 0.5;\n    text-transform: lowercase; /* Inconsistent capitalization */\n}",
+          "folderId": "0",
+          "type": "starter",
+          "active": false
+        },
+        "18b24fd1-a31c-4a47-bd13-818e859bfd90": {
+          "id": "18b24fd1-a31c-4a47-bd13-818e859bfd90",
+          "name": "script.js",
+          "contents": "document.addEventListener('DOMContentLoaded', () => {\n    const button = document.getElementById('actionButton');\n    const message = document.getElementById('message');\n\n    button.addEventListener('click', () => {\n        // This part is intentionally left broken for the student to report\n        message.textContent = 'Oh dear, this text should have changed properly!';\n        // The script itself works, but the visual aspects of the button are broken\n    });\n});",
+          "folderId": "0",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "b7393ade-473b-4e3e-adb0-7e8e5fe25d95",
+        "55f104f1-3cd3-4e64-9361-b82d01e7305d",
+        "18b24fd1-a31c-4a47-bd13-818e859bfd90"
+      ]
+    },
+    "long_instructions": "TODOs: - Observe the sample page and identify what is broken. - Consider what you expected to see and what actually happened. - Fill out a bug report describing the problem clearly. - Add any clues like the page's current state or specific visual issues.",
+    "encrypted_exemplar_sources": "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\n5KcJw1cWHn6XygjRegACLR/YOw==\n",
+    "generate_outline": "Fill in a report about a sample broken page. Practice reporting a problem clearly."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-03 03:18:24 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 03:18:24 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 03:18:37 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 03:18:37 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Weblab2>

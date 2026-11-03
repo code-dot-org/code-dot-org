@@ -1,0 +1,48 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-11-03T01:04:29.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "require_edit_to_continue": true,
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "cf41902a-f38c-4807-b3bb-de9e711ad3e8": {
+          "id": "cf41902a-f38c-4807-b3bb-de9e711ad3e8",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>My First Site</title>\n    <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n    <h1>Welcome to My Site</h1>\n    <p>This is a basic starter page.</p>\n    <button>Click Me</button>\n    <script src=\"script.js\"></script>\n</body>\n</html>",
+          "folderId": "0",
+          "type": "starter",
+          "active": true
+        },
+        "688cb97c-0859-4e9b-8f05-bea2bb5a98b7": {
+          "id": "688cb97c-0859-4e9b-8f05-bea2bb5a98b7",
+          "name": "style.css",
+          "contents": "body {\n    font-family: sans-serif;\n    margin: 20px;\n    background-color: #f0f0f0;\n    color: #333;\n}\n\nh1 {\n    color: #0056b3;\n}",
+          "folderId": "0",
+          "type": "starter",
+          "active": false
+        },
+        "86e45f85-ab09-43e9-bfa9-0f4d9094ff52": {
+          "id": "86e45f85-ab09-43e9-bfa9-0f4d9094ff52",
+          "name": "script.js",
+          "contents": "document.querySelector('button').addEventListener('click', () => {\n    alert('Button clicked!');\n});\nconsole.log('script.js loaded');",
+          "folderId": "0",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "cf41902a-f38c-4807-b3bb-de9e711ad3e8",
+        "688cb97c-0859-4e9b-8f05-bea2bb5a98b7",
+        "86e45f85-ab09-43e9-bfa9-0f4d9094ff52"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-03 01:04:29 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 01:30:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Weblab2>

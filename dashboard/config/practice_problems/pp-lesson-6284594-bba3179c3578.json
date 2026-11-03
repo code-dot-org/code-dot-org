@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-6284594-bba3179c3578",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "Which of the following correctly uses dot notation to make the Painter turn left?",
+  "solution": [
+    {
+      "option": "Painter.turn_left()",
+      "correct": true
+    },
+    {
+      "option": "turn_left(Painter)",
+      "correct": false
+    },
+    {
+      "option": "Painter:turn_left()",
+      "correct": false
+    },
+    {
+      "option": "turn_left.Painter()",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "191107cd-3b4f-42d3-8327-f86e2ba908d5"
+  ]
+}

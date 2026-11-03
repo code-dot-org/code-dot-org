@@ -1,0 +1,24 @@
+{
+  "key": "pp-lesson-8894771-528cafd17f64",
+  "problem_type": "match",
+  "active": true,
+  "problem_text": "Match the recommendation method to its description: 1. Decision Tree; 2. Random Recommendation; 3. Pattern Recognition.",
+  "solution": [
+    {
+      "option": "1",
+      "correct": "Follows a structured approach to decision-making based on data."
+    },
+    {
+      "option": "2",
+      "correct": "Selects an option without any criteria."
+    },
+    {
+      "option": "3",
+      "correct": "Analyzes data to identify trends and make predictions."
+    }
+  ],
+  "objective_keys": [
+    "24940293-596a-4574-8258-70308014b542",
+    "a16f6adb-5245-453e-87a7-29d19c0ae9fa"
+  ]
+}

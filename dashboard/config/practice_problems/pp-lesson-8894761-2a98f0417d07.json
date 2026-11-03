@@ -1,0 +1,28 @@
+{
+  "key": "pp-lesson-8894761-2a98f0417d07",
+  "problem_type": "match",
+  "active": true,
+  "problem_text": "Match the type of feedback to an appropriate action you should take.",
+  "solution": [
+    {
+      "option": "General suggestions",
+      "correct": "Revise to be more specific"
+    },
+    {
+      "option": "Constructive criticism",
+      "correct": "Evaluate for usefulness"
+    },
+    {
+      "option": "Overly vague feedback",
+      "correct": "Seek clarification"
+    },
+    {
+      "option": "Conflicting advice",
+      "correct": "Decide based on your audience"
+    }
+  ],
+  "objective_keys": [
+    "ab3c0320-90d8-45fb-9936-a6c2dee2a511",
+    "f68eb3c2-1fae-4aa0-bb26-4bb5817b8158"
+  ]
+}
