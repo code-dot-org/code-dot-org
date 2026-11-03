@@ -253,6 +253,15 @@ $pad: 16px;
 }
 
 // Fills the frame even when the stored image is smaller than it.
+// The picture's own box, the frame's full size, centered like the frame.
+.picture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
 .preview {
   width: 100%;
   height: 100%;
