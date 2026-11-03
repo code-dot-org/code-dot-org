@@ -1,142 +1,71 @@
-// What an actor LOOKS like, as the one row that says so.
+// What an actor LOOKS like, and how big it is drawn: the wizard both reads and
+// writes them. A copied Crawler arrives at the picture step already looking
+// like something, so the step opens on that answer rather than on an empty
+// grid. Neither is something every actor has — an interface actor paints
+// itself and must not carry a picture over the top (specs/UI_ACTORS.md) — so
+// "no look" is a real answer rather than a missing one.
 //
-// An actor shows either a still picture or an animation, and each is one row in
-// its `define actor` chain: `set sprite ⟨coin.png⟩` or
-// `play animation ⟨coinSpin⟩`. Neither is a row every actor has — an interface
-// actor paints itself and must not carry a picture over the top
-// (specs/UI_ACTORS.md) — so "no look" is a real answer rather than a missing
-// one.
-//
-// THE WIZARD BOTH READS AND WRITES IT. A copied Crawler arrives at the picture
-// step already looking like something, so the step opens on that answer rather
-// than on an empty grid; changing it has to REPLACE the row rather than append
-// a second, because two rows both saying what an actor looks like is a file
-// where the last one silently wins.
-//
-// A pure transform over a workspace's JSON, like `enhance/patch`: the wizard
+// A pure transform over an actor's data (`actors/actorData`): the wizard
 // builds its actor in a draft source and commits once, so nothing here knows
 // about the project or about React.
 
 import {
-  ANIMATIONS_ROW,
-  isDataShaped,
+  isActorData,
   lookOf as dataLookOf,
-  throughView,
-  viewOf,
+  withLookOf,
+  withMainAnimation,
   type ActorData,
 } from '../actorData';
-import {down, rootsOf, type BlockJson} from '../enhance/patch';
-import {looksLike} from '../stock/workspace';
+import {withValue} from '../enhance/patch';
+import {stockAnimations} from '../stock/workspace';
 
-const SPRITE_ROW = 'world_set_sprite';
-const ANIMATION_ROW = 'world_play_animation';
-const SCALE_ROW = 'world_set_Space_ScaleProperty';
+const SCALE_SETTER = 'world_set_Space_ScaleProperty';
 
 /** What an actor is drawn as. */
 export type ActorLook =
   | {kind: 'sprite'; value: string}
   | {kind: 'animation'; value: string};
 
-/**
- * Whether a row says what an actor looks like: a still picture, a flipbook
- * it plays, or its own animations (`actorData.ANIMATIONS_ROW`).
- */
-const isLook = (block: BlockJson): boolean =>
-  block.type === SPRITE_ROW ||
-  block.type === ANIMATION_ROW ||
-  block.type === ANIMATIONS_ROW;
+/** The data a file holds, or nothing for a file that is not an actor. */
+const dataOf = (contents: string): ActorData | undefined => {
+  try {
+    const held = JSON.parse(contents) as unknown;
+    return isActorData(held) ? held : undefined;
+  } catch {
+    return undefined;
+  }
+};
 
-/** The look a workspace's `define actor` already declares, if it declares one. */
-export function lookOf(file: string): ActorLook | undefined {
-  // A data-shaped actor says it as data: its Main's picture, which a view of
-  // an animated Main has no `set sprite` row for (specs/ANIMATION_PLAN.md).
-  if (isDataShaped(file)) {
-    const look = dataLookOf(JSON.parse(file) as ActorData);
-    return look ? {kind: 'sprite', value: look.sprite} : undefined;
-  }
-  // Either shape (`actors/actorData`).
-  const contents = viewOf(file);
-  for (const root of rootsOf(contents)) {
-    if (root.type !== 'world_actor') {
-      continue;
-    }
-    for (const row of down(root)) {
-      if (row.type === SPRITE_ROW) {
-        return {kind: 'sprite', value: String(row.fields?.SPRITE ?? '')};
-      }
-      if (row.type === ANIMATION_ROW) {
-        return {kind: 'animation', value: String(row.fields?.ANIMATION ?? '')};
-      }
-    }
-  }
-  return undefined;
+/** The file with its data changed, or as it was when it holds none. */
+const changed = (
+  contents: string,
+  change: (data: ActorData) => ActorData,
+): string => {
+  const data = dataOf(contents);
+  return data ? JSON.stringify(change(data), null, 2) : contents;
+};
+
+/**
+ * The look an actor already has: its Main's picture, or the first one an
+ * animated Main shows (specs/ANIMATION_PLAN.md).
+ */
+export function lookOf(contents: string): ActorLook | undefined {
+  const data = dataOf(contents);
+  const look = data && dataLookOf(data);
+  return look ? {kind: 'sprite', value: look.sprite} : undefined;
 }
 
 /**
- * The row a look is written as: a still picture's `set sprite`, or, for an
- * animation from the library, the actor's own Main (`stock/workspace`).
- */
-const rowFor = (look: ActorLook): BlockJson =>
-  look.kind === 'sprite'
-    ? {type: SPRITE_ROW, fields: {SPRITE: look.value}}
-    : (looksLike(look.value) as BlockJson);
-
-/**
- * Make the actor look like this, replacing whatever it looked like.
- *
- * IN PLACE where there is a row already, and appended where there is not. In
- * place matters twice: a second row is a file whose two answers disagree, and
- * an actor that had its picture at the top of its chain should not find it
- * moved to the bottom for having been changed.
- *
- * Returns the contents unchanged when the file has no `define actor` — a
- * workspace with its definition deleted is a project that does not compile,
- * and this is not the thing to notice it (`enhance/patch.append` says the
- * same).
+ * Make the actor look like this, replacing whatever it looked like: a
+ * picture is a still Main, and an animation from the library is its Main.
  */
 export const withLook = (contents: string, look: ActorLook): string =>
-  throughView(contents, rows => lookOnRows(rows, look));
-
-function lookOnRows(contents: string, look: ActorLook): string {
-  const workspace = JSON.parse(contents || '{}') as {
-    blocks?: {blocks?: BlockJson[]};
-  };
-  const root = (workspace.blocks?.blocks ?? []).find(
-    one => one.type === 'world_actor',
+  changed(contents, data =>
+    look.kind === 'sprite'
+      ? withLookOf(data, {sprite: look.value})
+      : withMainAnimation(data, stockAnimations({Main: look.value}).Main),
   );
-  if (!root) {
-    return contents;
-  }
-  const row = rowFor(look);
-  for (const at of down(root)) {
-    const next = at.next?.block;
-    if (next && isLook(next)) {
-      at.next = {block: {...row, ...(next.next ? {next: next.next} : {})}};
-      return JSON.stringify(workspace, null, 2);
-    }
-  }
-  // Nothing to replace: on the end of the chain, which is where every other
-  // row an assistant writes goes (`enhance/patch` says why).
-  let last = root;
-  for (const at of down(root)) {
-    last = at;
-  }
-  last.next = {block: row};
-  return JSON.stringify(workspace, null, 2);
-}
 
-/**
- * Make the actor fill this many tiles, as a row in its own file.
- *
- * ONE TILE WRITES NOTHING. Every actor is one tile by default — that is what
- * fitting a picture to a tile made the unit (specs/ACTOR_SIZE.md) — so a row
- * saying "scale 1 by 1" is a row saying nothing, and a file that opens with
- * one explains something nobody did.
- *
- * Appended, and only once: the learner may change the shape and come back, and
- * two rows setting the scale is a file whose second answer silently wins. The
- * reasoning is `withLook`'s, one property along.
- */
 /**
  * The scale that makes a picture fill the tiles it was asked to fill.
  *
@@ -180,49 +109,25 @@ const scaleFor = (
   };
 };
 
+/**
+ * Make the actor fill this many tiles, replacing the scale it had.
+ *
+ * ONE TILE WRITES NOTHING. Every actor is one tile by default — that is what
+ * fitting a picture to a tile made the unit (specs/ACTOR_SIZE.md) — so a
+ * value saying "scale 1 by 1" says nothing, and an actor that opens with one
+ * explains something nobody did.
+ */
 export const withScale = (
   contents: string,
   shape: {x: number; y: number},
   drawn?: {width?: number; height?: number},
-): string => throughView(contents, rows => scaleOnRows(rows, shape, drawn));
-
-function scaleOnRows(
-  contents: string,
-  shape: {x: number; y: number},
-  drawn?: {width?: number; height?: number},
-): string {
-  if (shape.x === 1 && shape.y === 1) {
-    return contents;
-  }
-  const scale = scaleFor(shape, drawn);
-  const workspace = JSON.parse(contents || '{}') as {
-    blocks?: {blocks?: BlockJson[]};
-  };
-  const root = (workspace.blocks?.blocks ?? []).find(
-    one => one.type === 'world_actor',
-  );
-  if (!root) {
-    return contents;
-  }
-  const row: BlockJson = {
-    type: SCALE_ROW,
-    inputs: {
-      ACTOR: {block: {type: 'world_this_actor'}},
-      X: {block: {type: 'math_number', fields: {NUM: scale.x}}},
-      Y: {block: {type: 'math_number', fields: {NUM: scale.y}}},
-    },
-  };
-  for (const at of down(root)) {
-    const next = at.next?.block;
-    if (next?.type === SCALE_ROW) {
-      at.next = {block: {...row, ...(next.next ? {next: next.next} : {})}};
-      return JSON.stringify(workspace, null, 2);
-    }
-  }
-  let last = root;
-  for (const at of down(root)) {
-    last = at;
-  }
-  last.next = {block: row};
-  return JSON.stringify(workspace, null, 2);
-}
+): string =>
+  shape.x === 1 && shape.y === 1
+    ? contents
+    : changed(contents, data =>
+        withValue(data, {
+          setter: SCALE_SETTER,
+          type: 'vector',
+          value: scaleFor(shape, drawn),
+        }),
+      );

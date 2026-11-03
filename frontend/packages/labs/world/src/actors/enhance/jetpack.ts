@@ -29,11 +29,16 @@
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
-import {fileIdAt} from '../../runtime/projectFiles';
-
-import {edit, electTraits, fileOf, importRules, me, wears} from './actorPatch';
+import {actorAt, editActor, importRules, me} from './actorPatch';
 import type {Enhancement, EnhanceTarget} from './enhancements';
-import {addRoot, down, hasRoot, type BlockJson} from './patch';
+import {
+  addRoot,
+  down,
+  electTraits,
+  hasRoot,
+  wears,
+  type BlockJson,
+} from './patch';
 
 const FLIES = 'Jetpack#FliesWithAJetpackTrait';
 const GRAVITY = 'Gravity#AffectedByGravityTrait';
@@ -105,33 +110,24 @@ export const jetpackEnhancement: Enhancement = {
     'two handlers for the space bar',
   ],
   applied(source: MultiFileSource, target: EnhanceTarget) {
-    const {path, root} = fileOf(target);
-    const id = fileIdAt(source, path);
-    const contents = id ? source.files[id].contents : '';
+    const actor = actorAt(source, target);
     return (
-      TRAITS.every(trait => wears(contents, trait, root)) &&
+      TRAITS.every(trait => wears(actor, trait)) &&
       HANDLERS.every(([hat, action]) =>
-        hasRoot(contents, answers(target, hat, action)),
+        hasRoot(actor, answers(target, hat, action)),
       )
     );
   },
   apply(source: MultiFileSource, target: EnhanceTarget) {
     const current = importRules(source, ['Gravity', 'Jetpack', 'Input']);
-    const {path, root} = fileOf(target);
-    const id = fileIdAt(current, path);
-    return id === undefined
-      ? current
-      : edit(current, id, contents => {
-          let next = electTraits(contents, root, TRAITS);
-          for (const [hat, action] of HANDLERS) {
-            if (!hasRoot(next, answers(target, hat, action))) {
-              // Beside the definition rather than under it: a hat takes no
-              // previous connection, and `DisableOrphansPlugin` grays out a
-              // top-level block that has one, along with everything below it.
-              next = addRoot(next, handler(target, hat, action));
-            }
-          }
-          return next;
-        });
+    return editActor(current, target, data => {
+      let next = electTraits(data, TRAITS);
+      for (const [hat, action] of HANDLERS) {
+        if (!hasRoot(next, answers(target, hat, action))) {
+          next = addRoot(next, handler(target, hat, action));
+        }
+      }
+      return next;
+    });
   },
 };

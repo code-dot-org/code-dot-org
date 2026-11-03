@@ -24,20 +24,20 @@
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
-import {fileIdAt} from '../../runtime/projectFiles';
+import type {ActorData} from '../actorData';
 
 import {actorChoices} from './actorChoices';
-import {
-  edit,
-  electTraits,
-  fileOf,
-  importRules,
-  kindOf,
-  me,
-  wears,
-} from './actorPatch';
+import {actorAt, editActor, importRules, me, kindOf} from './actorPatch';
 import type {Enhancement, EnhanceTarget} from './enhancements';
-import {addRoot, changeRoots, down, rootsOf, type BlockJson} from './patch';
+import {
+  addRoot,
+  changeRoots,
+  down,
+  electTraits,
+  rootsOf,
+  wears,
+  type BlockJson,
+} from './patch';
 
 const CREATED_HAT = 'world_on_Space_CreatedEvent';
 
@@ -112,8 +112,8 @@ export const huntRow = (spec: HuntSpec): Enhancement => {
   };
 
   /** Who that hat currently points at, if the file holds one. */
-  const aimedAt = (contents: string): string | undefined => {
-    for (const root of rootsOf(contents)) {
+  const aimedAt = (data: ActorData | undefined): string | undefined => {
+    for (const root of rootsOf(data)) {
       if (!isOurs()(root)) {
         continue;
       }
@@ -131,11 +131,11 @@ export const huntRow = (spec: HuntSpec): Enhancement => {
 
   /** Aim the hat this wrote somewhere else, in place. */
   const repoint = (
-    contents: string,
+    data: ActorData,
     _target: EnhanceTarget,
     actor: string,
-  ): string => {
-    return changeRoots(contents, root => {
+  ): ActorData => {
+    return changeRoots(data, root => {
       if (!isOurs()(root)) {
         return;
       }
@@ -155,13 +155,11 @@ export const huntRow = (spec: HuntSpec): Enhancement => {
     brings: spec.brings,
     asks: {label: spec.label, options: actorChoices},
     applied(source: MultiFileSource, target: EnhanceTarget, answer?: string) {
-      const {path, root} = fileOf(target);
-      const id = fileIdAt(source, path);
-      const contents = id ? source.files[id].contents : '';
+      const actor = actorAt(source, target);
       return (
-        spec.traits.every(trait => wears(contents, trait, root)) &&
+        spec.traits.every(trait => wears(actor, trait)) &&
         answer !== undefined &&
-        aimedAt(contents) === answer
+        aimedAt(actor) === answer
       );
     },
     apply(source: MultiFileSource, target: EnhanceTarget, answer?: string) {
@@ -169,18 +167,10 @@ export const huntRow = (spec: HuntSpec): Enhancement => {
         return source;
       }
       const current = importRules(source, spec.rules);
-      const {path, root} = fileOf(target);
-      const id = fileIdAt(current, path);
-      if (id === undefined) {
-        return current;
-      }
-      return edit(current, id, contents => {
-        const next = electTraits(contents, root, spec.traits);
+      return editActor(current, target, data => {
+        const next = electTraits(data, spec.traits);
         return aimedAt(next) === undefined
-          ? // Beside the definition rather than under it: a hat takes no
-            // previous connection, and `DisableOrphansPlugin` grays out a
-            // top-level block that has one along with everything below it.
-            addRoot(next, handler(target, answer))
+          ? addRoot(next, handler(target, answer))
           : repoint(next, target, answer);
       });
     },

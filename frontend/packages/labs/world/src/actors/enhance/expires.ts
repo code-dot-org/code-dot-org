@@ -12,10 +12,9 @@
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
-import {fileIdAt} from '../../runtime/projectFiles';
-
-import {edit, electTraits, fileOf, importRules, wears} from './actorPatch';
+import {actorAt, editActor, importRules} from './actorPatch';
 import type {Enhancement, EnhanceTarget} from './enhancements';
+import {electTraits, wears} from './patch';
 
 const EXPIRES = 'Expiry#ExpiresTrait';
 
@@ -27,16 +26,10 @@ export const expiresEnhancement: Enhancement = {
     'Takes this actor out of the world a few seconds after it appears — a bullet, a puff of smoke, a power-up nobody picked up. How long it gets is a block in its file. Anything a game makes over and over wants this, or the room fills up with things nobody can see any more and the game slows down.',
   brings: ['Expires'],
   applied(source: MultiFileSource, target: EnhanceTarget) {
-    const {path, root} = fileOf(target);
-    const id = fileIdAt(source, path);
-    return wears(id ? source.files[id].contents : '', EXPIRES, root);
+    return wears(actorAt(source, target), EXPIRES);
   },
   apply(source: MultiFileSource, target: EnhanceTarget) {
     const current = importRules(source, ['Expiry']);
-    const {path, root} = fileOf(target);
-    const id = fileIdAt(current, path);
-    return id === undefined
-      ? current
-      : edit(current, id, contents => electTraits(contents, root, [EXPIRES]));
+    return editActor(current, target, data => electTraits(data, [EXPIRES]));
   },
 };

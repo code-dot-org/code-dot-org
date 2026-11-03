@@ -147,18 +147,13 @@ folds it back: renaming an actor, a rule or an animation, and asking where
 an actor is used, then reach the data without knowing its shape.
 
 BUILT. `throughView` (in `actorData`) makes a change written for rows to
-contents of either shape. `withLook`, `withScale` and `lookOf` go through
-it; the wizard writes with those, a clone renames the data's own `name`,
-and an import writes its stock file, so the wizard needed nothing more.
-The enhancements read and write an actor through its view where they
-edit one (`enhance/patch`): what they write to a data-shaped actor is
-folded back. Until November 2026 a wrapper did this around each
-enhancement where their groups are listed (`throughTheView`).
-`mapWorkspaces` views and folds a data-shaped actor; `animationPlayedIn`
-and `actorUses` read its view. A test gives every actor enhancement to
-each of the starter's actors in both shapes and finds the same change
-(with the wrapper taken away, 329 of its 330 cases fail); another renames
+contents of either shape. `mapWorkspaces` views and folds a data-shaped
+actor; `animationPlayedIn` and `actorUses` read its view. A test renames
 a data-shaped actor and finds its own setters renamed inside the data.
+The enhancements, `withLook`, `withScale` and `lookOf` went through the
+view too, until they edited the data itself (COMPILE_FROM_DATA_PLAN.md,
+5d, step 2); a clone renames the data's own `name`, and an import writes
+its stock file.
 
 ### 4. The Actor Editor
 
@@ -202,8 +197,7 @@ is a socket's shadow and that block is what builds them
 (`effectParamsMutator`). The view writes the rows of the ones that are on.
 One that is off adds no row, so a fold of a view would lose it: `asActorData`
 takes the file the view came from and keeps its switched-off effects, and
-every fold of a view (`throughView`, the enhancements, `mapWorkspaces`, the
-code) passes it. The tab lists them with the switch and the settings (a
+every fold of a view (`throughView`, `mapWorkspaces`, the code) passes it. The tab lists them with the switch and the settings (a
 number, a truth value or a color per socket); Add Effect offers the
 project's effects and Import…, which adds the one brought once the project
 holds it (`useAfterImport`). In the browser: Ripple added from the menu and

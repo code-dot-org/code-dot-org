@@ -38,16 +38,13 @@
 // already has one, and the two could disagree.
 //
 // EVERY BLOCK TYPE CARRIES THE DECLARING FILE (`ruleRegistry.pathSlug`), which
-// is what keeps one kind's `say` apart from another's — so these rows cannot
+// is what keeps one kind's `say` apart from another's — so these blocks cannot
 // be a constant and are built for a module path instead. The Health Bar's step
 // is parameterised for exactly the same reason.
 
 import {pathSlug} from '../blockly/ruleRegistry';
 
 import {
-  writeMember,
-  writeProperty,
-  writeValue,
   type ActorMember,
   type ActorProperty,
   type ActorValue,
@@ -153,8 +150,6 @@ export interface Typewriter {
   members: Array<Omit<ActorMember, 'id'>>;
   /** …and the timer it starts stopped. */
   values: ActorValue[];
-  /** The same as `define actor` rows, for an enhancement that writes rows. */
-  rows: object[];
   /** `when ⟨this actor⟩'s timer fires` — a hat, and so a root of its own. */
   handler: Block;
   /** The workspace variable `say ⟨words⟩` binds its parameter to. */
@@ -173,23 +168,6 @@ export interface Typewriter {
  * chances to disagree with the palette about what a block is called.
  */
 export function typewriterFor(modulePath: string): Typewriter {
-  const declared = typewriterData(modulePath);
-  return {
-    ...declared,
-    rows: [
-      ...declared.properties.map(writeProperty),
-      // Unnumbered, as a row written by hand is: the fold numbers it.
-      ...declared.members.map(member => {
-        const row = writeMember({...member, id: ''});
-        delete row.id;
-        return row;
-      }),
-      ...declared.values.map(writeValue),
-    ],
-  };
-}
-
-function typewriterData(modulePath: string): Omit<Typewriter, 'rows'> {
   const own = pathSlug(modulePath);
   /** `⟨the whole line⟩ of this actor`. */
   const wholeLine = () => ({

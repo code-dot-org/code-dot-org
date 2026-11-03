@@ -14,7 +14,7 @@ import {describe, expect, it} from 'vitest';
 import {compileProject} from '../../../__tests__/support/compileProject';
 import {EMPTY_WORLD_PROJECT} from '../../../fixtures/scenarios';
 import {fileIdAt, projectFiles} from '../../../runtime/projectFiles';
-import {viewOf} from '../../actorData';
+import type {ActorData} from '../../actorData';
 import {importStockActor} from '../../importStockActor';
 import {stockActorById} from '../../stock';
 import {typesOutTextEnhancement as typesOut} from '../typesOutText';
@@ -39,16 +39,21 @@ const at = (source: ReturnType<typeof withLabel>, path: string) => {
 describe('the types-out-text enhancement, as edits', () => {
   it('writes the declarations, the handler and the words it needs', () => {
     const after = typesOut.apply(withLabel(), LABEL);
-    const label = viewOf(at(after, 'actors/label.actor')!);
+    const label = at(after, 'actors/label.actor')!;
+    const data = JSON.parse(label) as ActorData;
 
-    // The line it is saying, and the pace — declared under the Label's own
-    // `define actor`, so their block types carry `actors/label`.
-    expect(label).toContain('the whole line');
-    expect(label).toContain('letters a second');
+    // The line it is saying, and the pace — declared by the Label itself, so
+    // their block types carry `actors/label`.
+    expect(data.properties?.map(one => one.name)).toEqual(
+      expect.arrayContaining(['the whole line', 'letters a second']),
+    );
     expect(label).toContain('world_get_ActorsLabel_TheWholeLineProperty');
     // …the event, the two blocks, and the hat that advances a letter.
-    expect(label).toContain('world_rule_event');
-    expect(label).toContain('world_rule_block');
+    expect(data.members?.map(one => one.kind).sort()).toEqual([
+      'block',
+      'block',
+      'event',
+    ]);
     expect(label).toContain('world_on_Time_TimerFiresEvent');
     // …and the variable `say ⟨words⟩` binds its parameter to, DECLARED in the
     // workspace's own list. The block names it either way — its id is in the
@@ -56,10 +61,7 @@ describe('the types-out-text enhancement, as edits', () => {
     // pass over the case this is about: without the declaration Blockly loads
     // the block with a variable it has never heard of, and the body's getter
     // resolves to nothing.
-    const workspace = JSON.parse(label) as {
-      variables?: Array<{id?: string; name?: string; type?: string}>;
-    };
-    expect(workspace.variables).toContainEqual({
+    expect(data.blocks?.variables).toContainEqual({
       id: 'typewriter_words',
       name: 'words',
       type: 'String',

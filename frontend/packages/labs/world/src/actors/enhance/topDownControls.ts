@@ -25,10 +25,9 @@
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
-import {fileIdAt} from '../../runtime/projectFiles';
-
-import {edit, electTraits, fileOf, importRules, wears} from './actorPatch';
+import {actorAt, editActor, importRules} from './actorPatch';
 import type {Enhancement, EnhanceTarget} from './enhancements';
+import {electTraits, wears} from './patch';
 
 const ACROSS = 'Arrow Keys#MovesAcrossTrait';
 const DOWN = 'Arrow Keys#MovesDownTrait';
@@ -46,17 +45,11 @@ export const topDownControlsEnhancement: Enhancement = {
     'Gives this actor the controls a game seen from above wants: the left and right arrows move it across, and the up and down arrows move it up and down the screen. Nothing pulls it anywhere — there is no floor in a game seen from above — so an actor with these walks where it is told and stays there. How fast it goes is a block in its file. An actor in a side-on game wants “Walks and jumps like a platformer” instead.',
   brings: ['Moves Across', 'Moves Down', 'Reads the Keyboard'],
   applied(source: MultiFileSource, target: EnhanceTarget) {
-    const {path, root} = fileOf(target);
-    const id = fileIdAt(source, path);
-    const contents = id ? source.files[id].contents : '';
-    return TRAITS.every(trait => wears(contents, trait, root));
+    const actor = actorAt(source, target);
+    return TRAITS.every(trait => wears(actor, trait));
   },
   apply(source: MultiFileSource, target: EnhanceTarget) {
     const current = importRules(source, RULES);
-    const {path, root} = fileOf(target);
-    const id = fileIdAt(current, path);
-    return id === undefined
-      ? current
-      : edit(current, id, contents => electTraits(contents, root, TRAITS));
+    return editActor(current, target, data => electTraits(data, TRAITS));
   },
 };

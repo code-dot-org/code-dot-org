@@ -22,10 +22,9 @@
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
-import {fileIdAt} from '../../runtime/projectFiles';
-
-import {edit, electTraits, fileOf, importRules, wears} from './actorPatch';
+import {actorAt, editActor, importRules} from './actorPatch';
 import type {Enhancement, EnhanceTarget} from './enhancements';
+import {electTraits, wears} from './patch';
 
 const GROUND = 'Gravity#ActsAsGroundTrait';
 const SOLID = 'Solid Bodies#SolidTrait';
@@ -39,17 +38,11 @@ export const holdsThingsUpEnhancement: Enhancement = {
     'Makes this actor something others can stand on — a floor, a ledge, a platform. Anything that falls comes to rest on it instead of dropping past, and nothing walks through it. A platform that should also move takes “Walks a beat” as well.',
   brings: ['Acts as Ground', 'Solid'],
   applied(source: MultiFileSource, target: EnhanceTarget) {
-    const {path, root} = fileOf(target);
-    const id = fileIdAt(source, path);
-    const contents = id ? source.files[id].contents : '';
-    return TRAITS.every(trait => wears(contents, trait, root));
+    const actor = actorAt(source, target);
+    return TRAITS.every(trait => wears(actor, trait));
   },
   apply(source: MultiFileSource, target: EnhanceTarget) {
     const current = importRules(source, ['Gravity', 'Solid Bodies']);
-    const {path, root} = fileOf(target);
-    const id = fileIdAt(current, path);
-    return id === undefined
-      ? current
-      : edit(current, id, contents => electTraits(contents, root, TRAITS));
+    return editActor(current, target, data => electTraits(data, TRAITS));
   },
 };

@@ -13,6 +13,7 @@ import type {
   ImageGenerator,
 } from '../../../appearance/generate/imageGenerator';
 import {stockAnimation} from '../../../appearance/stock';
+import {actorDocument} from '../../actorDocument';
 import {groupsFor} from '../../enhance/enhancements';
 import {ActorCreator} from '../ActorCreator';
 
@@ -35,7 +36,7 @@ const ANIMATIONS = [
  * What the caller would make of these answers, without writing it.
  *
  * A project holding one actor file, which is enough for the abilities step:
- * what those rows read is the actor's own chain (`enhance/EnhancementChecklist`).
+ * what those rows read is the actor's data (`enhance/EnhancementChecklist`).
  */
 const build = vi.fn((draft: {name: string}) => ({
   source: {
@@ -45,11 +46,7 @@ const build = vi.fn((draft: {name: string}) => ({
         id: 'made',
         name: 'chaser.actor',
         language: 'actor',
-        contents: JSON.stringify({
-          blocks: {
-            blocks: [{type: 'world_actor', fields: {NAME: draft.name}}],
-          },
-        }),
+        contents: actorDocument({name: draft.name}),
         folderId: 'f1',
       },
     },
@@ -453,21 +450,9 @@ describe('the abilities step', () => {
             id: 'made',
             name: 'chaser.actor',
             language: 'actor',
-            contents: JSON.stringify({
-              blocks: {
-                blocks: [
-                  {
-                    type: 'world_actor',
-                    fields: {NAME: 'Chaser'},
-                    next: {
-                      block: {
-                        type: 'world_use_trait',
-                        fields: {TRAIT: 'Patrol#PatrolsAcrossTrait'},
-                      },
-                    },
-                  },
-                ],
-              },
+            contents: actorDocument({
+              name: 'Chaser',
+              traits: ['Patrol#PatrolsAcrossTrait'],
             }),
             folderId: 'f1',
           },

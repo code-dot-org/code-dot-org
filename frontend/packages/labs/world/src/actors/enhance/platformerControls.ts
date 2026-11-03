@@ -17,10 +17,9 @@
 //
 // WHAT IT WRITES, all of it in the actor:
 //
-//   actors/<target>.actor    define actor named ⟨…⟩
-//                              use trait ⟨Jumping#Jumps⟩
-//                              use trait ⟨Arrow Keys#Moves Across⟩
-//                              use trait ⟨Input#TakesKeyboardInput⟩
+//   actors/<target>.actor    traits      Jumping#Jumps
+//                                        Arrow Keys#Moves Across
+//                                        Input#TakesKeyboardInput
 //
 //                            when ⟨me⟩ presses ⟨space⟩   make ⟨me⟩ jump
 //
@@ -48,19 +47,21 @@
 // jumps with W, or with the up arrow, changes one field in a file it owns —
 // which is the same bargain `enhance/climbArrows` strikes for the same reason:
 // bindings are exactly the part a game wants to change.
-//
-// ROOTS, NOT ROWS. A hat takes no previous connection, so it sits beside the
-// `define actor` rather than under it (`patch.addRoot`). In a WORLD's own
-// `define actor` the hat is a root of the world and names its subject as
-// `any ⟨kind⟩`, exactly as the neighbours here do.
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
-import {fileIdAt} from '../../runtime/projectFiles';
+import type {ActorData} from '../actorData';
 
-import {edit, electTraits, fileOf, importRules, wears} from './actorPatch';
+import {actorAt, editActor, importRules} from './actorPatch';
 import type {Enhancement, EnhanceTarget} from './enhancements';
-import {addRoot, down, hasRoot, type BlockJson} from './patch';
+import {
+  addRoot,
+  down,
+  electTraits,
+  hasRoot,
+  wears,
+  type BlockJson,
+} from './patch';
 
 /** Jumping, which brings being pulled down with it. */
 const JUMPS = 'Jumping#JumpsTrait';
@@ -134,11 +135,12 @@ const jumpsOnKey =
     );
   };
 
-const jumps = (contents: string): boolean => hasRoot(contents, jumpsOnKey());
+const jumps = (data: ActorData | undefined): boolean =>
+  hasRoot(data, jumpsOnKey());
 
 export const platformerControlsEnhancement: Enhancement = {
   id: 'platformer-controls',
-  // The ACTOR's: every trait and the binding land in its own chain or in a hat
+  // The ACTOR's: every trait and the binding land in its own data or in a hat
   // about it, and no world is touched. Where it stands and what it stands on
   // are the world's, and are the world's whether this is applied or not.
   subject: 'actor',
@@ -152,27 +154,15 @@ export const platformerControlsEnhancement: Enhancement = {
     'Reads the Keyboard',
   ],
   applied(source: MultiFileSource, target: EnhanceTarget) {
-    const {path, root} = fileOf(target);
-    const id = fileIdAt(source, path);
-    const contents = id ? source.files[id].contents : '';
-    return (
-      TRAITS.every(trait => wears(contents, trait, root)) && jumps(contents)
-    );
+    const actor = actorAt(source, target);
+    return TRAITS.every(trait => wears(actor, trait)) && jumps(actor);
   },
   apply(source: MultiFileSource, target: EnhanceTarget) {
     const current = importRules(source, RULES);
 
-    const {path, root} = fileOf(target);
-    const id = fileIdAt(current, path);
-    if (!id) {
-      return current;
-    }
-    return edit(current, id, contents => {
-      let next = electTraits(contents, root, TRAITS);
+    return editActor(current, target, data => {
+      let next = electTraits(data, TRAITS);
       if (!jumps(next)) {
-        // Beside the definition rather than under it: a hat takes no previous
-        // connection, and `DisableOrphansPlugin` grays out a top-level block
-        // that has one along with everything below it.
         next = addRoot(next, platformerJumpHandler());
       }
       return next;

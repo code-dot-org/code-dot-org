@@ -26,12 +26,20 @@
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
-import {fileIdAt} from '../../runtime/projectFiles';
+import type {ActorData, ActorValue} from '../actorData';
 
 import {actorChoices, targetOf} from './actorChoices';
-import {edit, electTraits, fileOf, importRules, me, wears} from './actorPatch';
+import {actorAt, editActor, importRules, me} from './actorPatch';
 import type {Enhancement, EnhanceTarget} from './enhancements';
-import {addRoot, append, holds, withVariable, type BlockJson} from './patch';
+import {
+  addRoot,
+  electTraits,
+  hasRoot,
+  wears,
+  withValue,
+  withVariable,
+  type BlockJson,
+} from './patch';
 import {
   MAKE_ZAP,
   resend,
@@ -52,12 +60,10 @@ const RECHARGE_TIME = 1.5;
 const STEP_NAME = 'fire when ready';
 
 /** `set recharge time of ⟨me⟩ to ⟨1.5⟩`. */
-const recharge = (): BlockJson => ({
-  type: RECHARGE,
-  inputs: {
-    ACTOR: me(),
-    VALUE: {shadow: {type: 'math_number', fields: {NUM: RECHARGE_TIME}}},
-  },
+const recharge = (): ActorValue => ({
+  setter: RECHARGE,
+  type: 'number',
+  value: RECHARGE_TIME,
 });
 
 /** `each frame: make ⟨me⟩ zap` — the asking, which the recharge answers. */
@@ -67,13 +73,9 @@ const firing = (): BlockJson => ({
   inputs: {DO: {block: {type: MAKE_ZAP, inputs: {VALUE: me()}}}},
 });
 
-/** Whether the chain already fires: the `each frame` this row names. */
-const fires = (contents: string, root: {type: string; id?: string}) =>
-  holds(
-    contents,
-    root,
-    row => row.type === STEP && row.fields?.NAME === STEP_NAME,
-  );
+/** Whether the actor already fires: the `each frame` this row names. */
+const fires = (data: ActorData | undefined) =>
+  hasRoot(data, row => row.type === STEP && row.fields?.NAME === STEP_NAME);
 
 export const shootsAtEnhancement: Enhancement = {
   id: 'shoots-at',
@@ -88,14 +90,12 @@ export const shootsAtEnhancement: Enhancement = {
   ],
   asks: {label: 'Sending', options: actorChoices},
   applied(source: MultiFileSource, target: EnhanceTarget, answer?: string) {
-    const {path, root} = fileOf(target);
-    const id = fileIdAt(source, path);
-    const contents = id ? source.files[id].contents : '';
+    const actor = actorAt(source, target);
     return (
-      wears(contents, ZAPS, root) &&
-      fires(contents, root) &&
+      wears(actor, ZAPS) &&
+      fires(actor) &&
       answer !== undefined &&
-      sends(contents, target) === answer
+      sends(actor, target) === answer
     );
   },
   apply(source: MultiFileSource, target: EnhanceTarget, answer?: string) {
@@ -109,30 +109,19 @@ export const shootsAtEnhancement: Enhancement = {
       'Expiry',
     ]);
 
-    const shooter = fileOf(target);
-    const shooterId = fileIdAt(current, shooter.path);
-    if (shooterId !== undefined) {
-      current = edit(current, shooterId, contents => {
-        let next = withVariable(
-          electTraits(contents, shooter.root, [ZAPS]),
-          SHOT_VAR,
-        );
-        if (!fires(next, shooter.root)) {
-          next = append(next, shooter.root, [recharge(), firing()]);
-        }
-        return sends(next, target) === undefined
-          ? addRoot(next, sending(target, answer))
-          : resend(next, target, answer);
-      });
-    }
+    current = editActor(current, target, data => {
+      let next = withVariable(electTraits(data, [ZAPS]), SHOT_VAR);
+      if (!fires(next)) {
+        next = addRoot(withValue(next, recharge()), firing());
+      }
+      return sends(next, target) === undefined
+        ? addRoot(next, sending(target, answer))
+        : resend(next, target, answer);
+    });
 
-    const sent = fileOf(targetOf(answer));
-    const sentId = fileIdAt(current, sent.path);
-    if (sentId !== undefined) {
-      current = edit(current, sentId, contents =>
-        electTraits(contents, sent.root, SHOT_TRAITS),
-      );
-    }
+    current = editActor(current, targetOf(answer), data =>
+      electTraits(data, SHOT_TRAITS),
+    );
     return current;
   },
 };

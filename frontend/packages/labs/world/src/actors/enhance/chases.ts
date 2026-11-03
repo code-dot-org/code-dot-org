@@ -18,8 +18,7 @@
 //
 // WHAT IT WRITES:
 //
-//   actors/<target>.actor    define actor named ⟨…⟩
-//                              use trait ⟨Steering#Chases⟩
+//   actors/<target>.actor    trait       Steering#Chases
 //
 //                            when ⟨this actor⟩ is created:
 //                              set ⟨actor to chase⟩ of ⟨this actor⟩

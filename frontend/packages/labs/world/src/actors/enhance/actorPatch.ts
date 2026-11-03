@@ -1,35 +1,15 @@
-// The four things every actor enhancement does, said once.
-//
-// An enhancement that edits an ACTOR always needs the same four answers: which
-// file holds it and which root defines it, who a hat it adds is about, whether
-// a trait is already elected, and how to rewrite one file without disturbing
-// the rest of the project. `health`, `collects`, `climbArrows` and
-// `platformerControls` each answer them separately, in about forty lines
-// apiece, and the enemy rows would have made seven copies of the same forty.
-//
-// EVERY ROW READS THESE. The four that predated this file carried their own
-// copies for a while, moved across in a commit with no behavior in it.
-//
-// `fileOf` IS A ONE-LINER NOW, and stays: there were two kinds of actor, and
-// a patch asked the question rather than knowing the answer. Every actor is a
-// file, and a row that still asks is a row that will not have to be opened if
-// the answer changes again. Who a handler a row adds is about needs no asking
-// at all: in an actor's own file it is this actor, which an event block says
-// with nothing stored (`blockly/eventSubject`).
+// What every actor enhancement does to the project, said once: find the
+// actor's file, read its data, rewrite it, and copy in the rules its traits
+// come from. What it does to the data is `patch`.
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {importStockRule} from '../../rules/importStockRule';
 import {STOCK_RULES} from '../../rules/stock';
+import {fileIdAt} from '../../runtime/projectFiles';
+import {isActorData, type ActorData} from '../actorData';
 
 import type {EnhanceTarget} from './enhancements';
-import {append, holds, type BlockJson} from './patch';
-
-/** Which root a patch is about — `patch.RootPick`, named for what it picks. */
-export interface ActorRoot {
-  type: string;
-  id?: string;
-}
 
 /** `this actor` — inside a hat, the actor the event fired for. */
 export const me = () => ({block: {type: 'world_this_actor'}});
@@ -39,47 +19,26 @@ export const kindOf = (actor: string) => ({
   block: {type: 'world_actor_kind', fields: {ACTOR: actor}},
 });
 
-/** Which file holds this actor, and which of its roots defines it. */
-export const fileOf = (
-  target: EnhanceTarget,
-): {path: string; root: ActorRoot} => ({
-  path: `${target.path}.actor`,
-  root: {type: 'world_actor'},
-});
+/** The file that holds this actor. */
+export const pathOf = (target: EnhanceTarget): string => `${target.path}.actor`;
 
-/** Whether a `use trait` for `trait` is already in this actor's chain. */
-export const wears = (
-  contents: string,
-  trait: string,
-  root: ActorRoot,
-): boolean =>
-  holds(
-    contents,
-    root,
-    block => block.type === 'world_use_trait' && block.fields?.TRAIT === trait,
-  );
-
-/**
- * Elect the traits this actor has not got, in the order given.
- *
- * Only the missing ones: a learner who already took a trait by hand keeps the
- * row they wrote, in the place they wrote it, and enhancing is a no-op for
- * that part rather than a second identical line (`patch`).
- */
-export const electTraits = (
-  contents: string,
-  root: ActorRoot,
-  traits: readonly string[],
-): string => {
-  let next = contents;
-  for (const trait of traits) {
-    if (!wears(next, trait, root)) {
-      next = append(next, root, [
-        {type: 'world_use_trait', fields: {TRAIT: trait}} as BlockJson,
-      ]);
-    }
+/** The data an actor's file holds, as written. */
+const parsed = (contents: string): ActorData | undefined => {
+  try {
+    const held = JSON.parse(contents) as unknown;
+    return isActorData(held) ? held : undefined;
+  } catch {
+    return undefined;
   }
-  return next;
+};
+
+/** The actor's data, or nothing when the project has no such actor. */
+export const actorAt = (
+  source: MultiFileSource,
+  target: EnhanceTarget,
+): ActorData | undefined => {
+  const id = fileIdAt(source, pathOf(target));
+  return id === undefined ? undefined : parsed(source.files[id].contents);
 };
 
 /**
@@ -102,6 +61,23 @@ export const importRules = (
     }
   }
   return current;
+};
+
+/** Rewrite one actor's data, leaving the rest of the project alone. */
+export const editActor = (
+  source: MultiFileSource,
+  target: EnhanceTarget,
+  change: (data: ActorData) => ActorData,
+): MultiFileSource => {
+  const id = fileIdAt(source, pathOf(target));
+  const data = id === undefined ? undefined : parsed(source.files[id].contents);
+  if (id === undefined || !data) {
+    return source;
+  }
+  const next = change(data);
+  return next === data
+    ? source
+    : edit(source, id, () => JSON.stringify(next, null, 2));
 };
 
 /** Rewrite one file's contents, leaving the rest of the project alone. */

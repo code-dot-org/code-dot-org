@@ -17,10 +17,9 @@
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
-import {fileIdAt} from '../../runtime/projectFiles';
-
-import {edit, electTraits, fileOf, importRules, wears} from './actorPatch';
+import {actorAt, editActor, importRules} from './actorPatch';
 import type {Enhancement, EnhanceTarget} from './enhancements';
+import {electTraits, wears} from './patch';
 
 const DRIVEN = 'Arrow Drive#DrivenByArrowKeysTrait';
 
@@ -32,16 +31,10 @@ export const drivesEnhancement: Enhancement = {
     'Gives this actor a steering wheel instead of a direction: the left and right arrows turn it, and the up arrow pushes it whichever way it is pointing. Let go and it carries on, because nothing stops it — how hard it pushes, how fast it turns, and how much it skates rather than grips are blocks in its file. A spaceship, a car, a boat.',
   brings: ['Driven by Arrow Keys'],
   applied(source: MultiFileSource, target: EnhanceTarget) {
-    const {path, root} = fileOf(target);
-    const id = fileIdAt(source, path);
-    return wears(id ? source.files[id].contents : '', DRIVEN, root);
+    return wears(actorAt(source, target), DRIVEN);
   },
   apply(source: MultiFileSource, target: EnhanceTarget) {
     const current = importRules(source, ['Arrow Drive']);
-    const {path, root} = fileOf(target);
-    const id = fileIdAt(current, path);
-    return id === undefined
-      ? current
-      : edit(current, id, contents => electTraits(contents, root, [DRIVEN]));
+    return editActor(current, target, data => electTraits(data, [DRIVEN]));
   },
 };

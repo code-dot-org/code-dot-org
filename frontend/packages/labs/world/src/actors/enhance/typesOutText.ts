@@ -40,19 +40,21 @@
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
-import {importStockRule} from '../../rules/importStockRule';
-import {STOCK_RULES} from '../../rules/stock';
-import {fileIdAt} from '../../runtime/projectFiles';
+import type {ActorData} from '../actorData';
 import {typewriterFor, TYPEWRITER_TRAITS} from '../typewriter';
 
+import {actorAt, editActor, importRules} from './actorPatch';
 import type {Enhancement, EnhanceTarget} from './enhancements';
-import {addRoot, append, holds, type BlockJson} from './patch';
-
-/** The rule the trait comes from. */
-const RULES = ['Time'];
-
-/** The `define actor` this patch lands under — a file's only one. */
-const ROOT = {type: 'world_actor'};
+import {
+  addRoot,
+  declares,
+  electTraits,
+  withMembers,
+  withProperties,
+  withValue,
+  withVariable,
+  type BlockJson,
+} from './patch';
 
 /** The file whose `text` the typewriter reveals. */
 const LABEL = 'actors/label';
@@ -63,21 +65,8 @@ const LABEL = 'actors/label';
  * `acts like` is where a Button and a Speech Box get their `text` from, and
  * an actor that neither is nor acts like a Label has no `text` to reveal.
  */
-const hasWords = (contents: string, path: string): boolean =>
-  path === LABEL ||
-  holds(
-    contents,
-    ROOT,
-    block => block.type === 'world_acts_like' && block.fields?.ACTOR === LABEL,
-  );
-
-/** Whether a `use trait` for `trait` is already in the actor's chain. */
-const hasTrait = (contents: string, trait: string): boolean =>
-  holds(
-    contents,
-    ROOT,
-    block => block.type === 'world_use_trait' && block.fields?.TRAIT === trait,
-  );
+const hasWords = (data: ActorData | undefined, path: string): boolean =>
+  path === LABEL || data?.actsLike === LABEL;
 
 /**
  * Whether this actor already has a typewriter.
@@ -86,27 +75,8 @@ const hasTrait = (contents: string, trait: string): boolean =>
  * nothing else, where `Shows Text` is elected by half the interface actors and
  * a timer by anything that does something on a beat.
  */
-const hasTypewriter = (contents: string): boolean =>
-  holds(
-    contents,
-    ROOT,
-    block =>
-      block.type === 'world_rule_property' &&
-      block.fields?.NAME === 'the whole line',
-  );
-
-/** Rewrite one file's contents, leaving the rest of the project alone. */
-const edit = (
-  source: MultiFileSource,
-  id: string,
-  change: (contents: string) => string,
-): MultiFileSource => ({
-  ...source,
-  files: {
-    ...source.files,
-    [id]: {...source.files[id], contents: change(source.files[id].contents)},
-  },
-});
+const hasTypewriter = (data: ActorData | undefined): boolean =>
+  declares(data, 'the whole line');
 
 export const typesOutTextEnhancement: Enhancement = {
   id: 'typesOutText',
@@ -120,47 +90,32 @@ export const typesOutTextEnhancement: Enhancement = {
   refuse(source: MultiFileSource, target: EnhanceTarget) {
     // AN ACTOR WITH NOTHING TO SAY. The words are the Label's `text`, and this
     // reveals them a letter at a time; an actor that neither is a Label nor
-    // acts like one has no `text`, and the rows would name a setter for a
-    // property it has not got.
-    const id = fileIdAt(source, `${target.path}.actor`);
-    if (id && !hasWords(source.files[id].contents, target.path)) {
+    // acts like one has no `text`, and the typewriter would name a setter for
+    // a property it has not got.
+    const actor = actorAt(source, target);
+    if (actor && !hasWords(actor, target.path)) {
       return 'This actor has no words to type out. A Label, a Button or a Speech Box has, and so does anything that acts like a Label.';
     }
     return undefined;
   },
   applied(source: MultiFileSource, target: EnhanceTarget) {
-    const id = fileIdAt(source, `${target.path}.actor`);
-    return id ? hasTypewriter(source.files[id].contents) : false;
+    return hasTypewriter(actorAt(source, target));
   },
   apply(source: MultiFileSource, target: EnhanceTarget) {
-    let current = source;
-    for (const name of RULES) {
-      const rule = STOCK_RULES.find(one => one.name === name);
-      if (rule) {
-        current = importStockRule(current, rule).source;
-      }
-    }
-
-    const id = fileIdAt(current, `${target.path}.actor`);
-    if (!id) {
-      return current;
-    }
     const typewriter = typewriterFor(target.path);
-    return edit(current, id, contents => {
-      if (hasTypewriter(contents)) {
-        return contents;
+    return editActor(importRules(source, ['Time']), target, data => {
+      if (hasTypewriter(data)) {
+        return data;
       }
-      const traits = TYPEWRITER_TRAITS.filter(
-        trait => !hasTrait(contents, trait),
-      ).map(trait => ({type: 'world_use_trait', fields: {TRAIT: trait}}));
-      // One append, because `append` walks to the end of the chain each time
-      // and the rows have to arrive in the order they are written above.
-      const next = append(
-        contents,
-        ROOT,
-        [...traits, ...typewriter.rows] as BlockJson[],
-        typewriter.variables,
-      );
+      let next = electTraits(data, TYPEWRITER_TRAITS);
+      next = withProperties(next, typewriter.properties);
+      next = withMembers(next, typewriter.members);
+      for (const value of typewriter.values) {
+        next = withValue(next, value);
+      }
+      for (const variable of typewriter.variables) {
+        next = withVariable(next, variable);
+      }
       return addRoot(next, typewriter.handler as BlockJson);
     });
   },

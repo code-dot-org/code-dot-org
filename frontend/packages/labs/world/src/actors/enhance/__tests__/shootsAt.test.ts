@@ -12,7 +12,7 @@ import {PositionProperty, type World} from '../../../engine';
 import {keyName} from '../../../engine/core/keys';
 import {EMPTY_WORLD_PROJECT} from '../../../fixtures/scenarios';
 import {fileIdAt, projectFiles} from '../../../runtime/projectFiles';
-import {viewOf} from '../../actorData';
+import type {ActorData} from '../../actorData';
 import {importStockActor} from '../../importStockActor';
 import {stockActorById} from '../../stock';
 import {shootsAtEnhancement as shootsAt} from '../shootsAt';
@@ -56,10 +56,10 @@ describe('the shoots-whenever row, as edits', () => {
   });
 
   it('names the shot, and declares the name', () => {
-    const coin = JSON.parse(viewOf(at(armed(), 'actors/coin.actor')!)) as {
-      variables?: Array<{id: string}>;
-    };
-    expect((coin.variables ?? []).map(one => one.id)).toContain('zapping_shot');
+    const coin = JSON.parse(at(armed(), 'actors/coin.actor')!) as ActorData;
+    expect(
+      (coin.blocks?.variables ?? []).map(one => (one as {id: string}).id),
+    ).toContain('zapping_shot');
   });
 
   it('does nothing the second time', () => {

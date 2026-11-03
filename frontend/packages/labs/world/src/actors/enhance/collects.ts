@@ -28,11 +28,11 @@
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
-import {fileIdAt} from '../../runtime/projectFiles';
+import type {ActorData} from '../actorData';
 
-import {edit, electTraits, fileOf, importRules, wears} from './actorPatch';
+import {actorAt, editActor, importRules} from './actorPatch';
 import type {Enhancement, EnhanceTarget} from './enhancements';
-import {addRoot, hasRoot, type BlockJson} from './patch';
+import {addRoot, electTraits, hasRoot, wears, type BlockJson} from './patch';
 
 const COLLECTS = 'Collection#CollectsTrait';
 /** `when ⟨…⟩ collects ⟨any⟩` — the event the Collection rule raises. */
@@ -54,8 +54,8 @@ const handler = (): BlockJson => ({
 });
 
 /** Whether this actor already scores for what it takes. */
-const scores = (contents: string): boolean =>
-  hasRoot(contents, block => block.type === COLLECTS_HAT);
+const scores = (data: ActorData | undefined): boolean =>
+  hasRoot(data, block => block.type === COLLECTS_HAT);
 
 export const collectsEnhancement: Enhancement = {
   id: 'collects',
@@ -67,21 +67,14 @@ export const collectsEnhancement: Enhancement = {
     'Lets this actor pick up anything that can be collected — a Coin, say — and adds ten to the score each time it does. The ten is a block in its file, so change it to whatever a coin is worth in your game.',
   brings: ['Collects Things', 'Keeps Score'],
   applied(source: MultiFileSource, target: EnhanceTarget) {
-    const {path, root} = fileOf(target);
-    const id = fileIdAt(source, path);
-    const contents = id ? source.files[id].contents : '';
-    return wears(contents, COLLECTS, root) && scores(contents);
+    const actor = actorAt(source, target);
+    return wears(actor, COLLECTS) && scores(actor);
   },
   apply(source: MultiFileSource, target: EnhanceTarget) {
     const current = importRules(source, ['Collection', 'Scoring']);
 
-    const {path, root} = fileOf(target);
-    const id = fileIdAt(current, path);
-    if (!id) {
-      return current;
-    }
-    return edit(current, id, contents => {
-      let next = electTraits(contents, root, [COLLECTS]);
+    return editActor(current, target, data => {
+      let next = electTraits(data, [COLLECTS]);
       if (!scores(next)) {
         next = addRoot(next, handler());
       }

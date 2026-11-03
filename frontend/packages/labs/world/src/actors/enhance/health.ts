@@ -11,8 +11,8 @@
 //
 // WHAT IT WRITES, and every line of it lands in the ACTOR:
 //
-//   actors/<target>.actor    define actor property ⟨health bar⟩ (actor)
-//                            use trait ⟨Health#Has Health⟩
+//   actors/<target>.actor    trait       Health#Has Health
+//                            property    ⟨health bar⟩ (actor)
 //
 //                            when ⟨this actor⟩ is created:
 //                              add actor ⟨Health Bar⟩ as ⟨bar⟩ do:
@@ -61,17 +61,18 @@
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {pathSlug} from '../../blockly/domainBlocks';
-import {fileIdAt} from '../../runtime/projectFiles';
+import type {ActorData, ActorProperty} from '../actorData';
 import {importStockActor} from '../importStockActor';
 import {stockActorById} from '../stock';
 
-import {edit, electTraits, fileOf, me, wears} from './actorPatch';
+import {actorAt, editActor, me} from './actorPatch';
 import type {Enhancement, EnhanceTarget} from './enhancements';
 import {
   addRoot,
-  append,
+  electTraits,
   hasRoot,
-  holds,
+  wears,
+  withProperties,
   withVariable,
   type BlockJson,
 } from './patch';
@@ -107,27 +108,11 @@ const named = (variable: object) => ({
 });
 
 /** `define property ⟨health bar⟩` — where the actor remembers what it placed. */
-const declareBar = (): BlockJson => ({
-  type: 'world_rule_property',
-  fields: {
-    TYPE: 'actor',
-    ACCESS: 'writable',
-    NAME: BAR_PROPERTY,
-  },
-});
-
-/** Whether the actor already declares somewhere to keep its bar. */
-const declaresBar = (
-  contents: string,
-  root: {type: string; id?: string},
-): boolean =>
-  holds(
-    contents,
-    root,
-    block =>
-      block.type === 'world_rule_property' &&
-      block.fields?.NAME === BAR_PROPERTY,
-  );
+const BAR: ActorProperty = {
+  name: BAR_PROPERTY,
+  type: 'actor',
+  access: 'writable',
+};
 
 /** `health of ⟨who⟩ ÷ most health of ⟨who⟩`. */
 export const healthLeftOf = (who: () => object) => {
@@ -212,9 +197,12 @@ const handler = (target: EnhanceTarget): BlockJson => {
 };
 
 /** Whether this actor already brings its own bar. */
-const brings = (contents: string, target: EnhanceTarget): boolean => {
+const brings = (
+  data: ActorData | undefined,
+  target: EnhanceTarget,
+): boolean => {
   const {id} = barVariable(target);
-  return hasRoot(contents, block => {
+  return hasRoot(data, block => {
     if (block.type !== 'world_add_actor') {
       return false;
     }
@@ -225,8 +213,8 @@ const brings = (contents: string, target: EnhanceTarget): boolean => {
 
 export const healthEnhancement: Enhancement = {
   id: 'health',
-  // The ACTOR's: every line it writes lands in the actor's own chain or in a
-  // hat about it, and the bar is a companion the actor makes for itself.
+  // The ACTOR's: everything it writes is the actor's own data or a hat about
+  // it, and the bar is a companion the actor makes for itself.
   subject: 'actor',
   name: 'Health, and a bar above it',
   description:
@@ -240,32 +228,24 @@ export const healthEnhancement: Enhancement = {
       : undefined;
   },
   applied(source: MultiFileSource, target: EnhanceTarget) {
-    const {path, root} = fileOf(target);
-    const id = fileIdAt(source, path);
-    const contents = id ? source.files[id].contents : '';
-    return wears(contents, HAS_HEALTH, root) && brings(contents, target);
+    const actor = actorAt(source, target);
+    return wears(actor, HAS_HEALTH) && brings(actor, target);
   },
   apply(source: MultiFileSource, target: EnhanceTarget) {
-    let current = source;
     // The bar brings Health with it; riding along is the engine's own
     // parenting and imports nothing.
-    current = importStockActor(current, stockActorById('healthBar')!).source;
+    const current = importStockActor(
+      source,
+      stockActorById('healthBar')!,
+    ).source;
 
-    const {path, root} = fileOf(target);
-    const targetId = fileIdAt(current, path);
-    if (targetId) {
-      current = edit(current, targetId, contents => {
-        let next = electTraits(contents, root, [HAS_HEALTH]);
-        if (!declaresBar(next, root)) {
-          next = append(next, root, [declareBar()]);
-        }
-        if (!brings(next, target)) {
-          next = addRoot(next, handler(target));
-          next = withVariable(next, barVariable(target));
-        }
-        return next;
-      });
-    }
-    return current;
+    return editActor(current, target, data => {
+      let next = withProperties(electTraits(data, [HAS_HEALTH]), [BAR]);
+      if (!brings(next, target)) {
+        next = addRoot(next, handler(target));
+        next = withVariable(next, barVariable(target));
+      }
+      return next;
+    });
   },
 };

@@ -20,11 +20,10 @@
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
-import {fileIdAt} from '../../runtime/projectFiles';
-
 import {actorChoices, targetOf} from './actorChoices';
-import {edit, electTraits, fileOf, importRules, wears} from './actorPatch';
+import {actorAt, editActor, importRules} from './actorPatch';
 import type {Enhancement, EnhanceTarget} from './enhancements';
+import {electTraits, wears} from './patch';
 
 export const CARRIES = 'Carrying#CarriesTrait';
 export const RIDES = 'Carrying#RidesTrait';
@@ -35,10 +34,7 @@ const rider = (
   _target: EnhanceTarget,
   answer: string,
 ): boolean => {
-  const passenger = targetOf(answer);
-  const {path, root} = fileOf(passenger);
-  const id = fileIdAt(source, path);
-  return wears(id ? source.files[id].contents : '', RIDES, root);
+  return wears(actorAt(source, targetOf(answer)), RIDES);
 };
 
 export const carriesEnhancement: Enhancement = {
@@ -53,9 +49,7 @@ export const carriesEnhancement: Enhancement = {
     options: actorChoices,
   },
   applied(source: MultiFileSource, target: EnhanceTarget, answer?: string) {
-    const {path, root} = fileOf(target);
-    const id = fileIdAt(source, path);
-    const carries = wears(id ? source.files[id].contents : '', CARRIES, root);
+    const carries = wears(actorAt(source, target), CARRIES);
     // BOTH ENDS, where one was named. A platform that carries nobody is a row
     // half done, and saying it is done would leave it that way for good.
     return carries && (answer === undefined || rider(source, target, answer));
@@ -66,21 +60,11 @@ export const carriesEnhancement: Enhancement = {
     }
     let current = importRules(source, ['Carrying']);
 
-    const platform = fileOf(target);
-    const platformId = fileIdAt(current, platform.path);
-    if (platformId !== undefined) {
-      current = edit(current, platformId, contents =>
-        electTraits(contents, platform.root, [CARRIES]),
-      );
-    }
+    current = editActor(current, target, data => electTraits(data, [CARRIES]));
 
-    const passenger = fileOf(targetOf(answer));
-    const passengerId = fileIdAt(current, passenger.path);
-    if (passengerId !== undefined) {
-      current = edit(current, passengerId, contents =>
-        electTraits(contents, passenger.root, [RIDES]),
-      );
-    }
+    current = editActor(current, targetOf(answer), data =>
+      electTraits(data, [RIDES]),
+    );
     return current;
   },
 };

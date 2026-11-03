@@ -15,7 +15,6 @@ import {pathSlug} from '../../blockly/ruleRegistry';
 import type {Timeline} from '../../engine/core/keyframes';
 import {MAIN_SCREEN_PATH} from '../../mainWorld';
 import {
-  ANIMATIONS_ROW,
   type ActorLiteral,
   type ActorMember,
   type ActorProperty,
@@ -88,38 +87,6 @@ export const onKey = (key: string, body: object[]) => ({
   fields: {FILTER0: key},
   ...(body.length ? {next: {block: chain(body)}} : {}),
 });
-
-/**
- * `play animation ⟨name⟩` — one of this actor's own animations, by the name
- * it keeps it under (`animationsRow`).
- */
-export const playAnimation = (name: string) => ({
-  type: 'world_play_animation',
-  fields: {ANIMATION: name},
-});
-
-/**
- * The row that gives an actor its animations, by name, and plays its Main
- * (specs/ANIMATION_PLAN.md): the library's timelines, by their stock ids.
- * The pictures they read come in with the actor (`StockActor.animations`).
- */
-export const animationsRow = (byName: Record<string, string>) => ({
-  type: ANIMATIONS_ROW,
-  extraState: {
-    animations: Object.fromEntries(
-      Object.entries(byName).map(([name, id]) => {
-        const stock = stockAnimation(id);
-        if (!stock) {
-          throw new Error(`no stock animation named "${id}"`);
-        }
-        return [name, stock.timeline];
-      }),
-    ),
-  },
-});
-
-/** An actor that looks like a stock animation: it is its Main. */
-export const looksLike = (id: string) => animationsRow({Main: id});
 
 /** A property this kind keeps: `define property`, as data. */
 export const property = (

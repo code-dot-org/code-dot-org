@@ -23,35 +23,28 @@
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
-import {fileIdAt} from '../../runtime/projectFiles';
-
-import {edit, electTraits, fileOf, importRules, wears} from './actorPatch';
+import {actorAt, editActor, importRules} from './actorPatch';
 import type {Enhancement, EnhanceTarget} from './enhancements';
+import {electTraits, wears} from './patch';
 
 const PATROLS_ACROSS = 'Patrol#PatrolsAcrossTrait';
 
 export const patrolsEnhancement: Enhancement = {
   id: 'patrols',
-  // The ACTOR's: walking a beat is a fact about the thing that walks, and
-  // every line lands in its own chain.
+  // The ACTOR's: walking a beat is a fact about the thing that walks, and it
+  // lands in the walker's own traits.
   subject: 'actor',
   name: 'Walks a beat',
   description:
     'Sets this actor pacing left and right on its own, turning round at the end of each leg — a guard on its beat, a platform on its track. How fast it walks and how long before it turns are blocks in its file, and the length of the beat is the two multiplied. An actor that should go up and down instead takes “Patrols Down”, and one that takes both walks a rectangle.',
   brings: ['Patrols Across'],
   applied(source: MultiFileSource, target: EnhanceTarget) {
-    const {path, root} = fileOf(target);
-    const id = fileIdAt(source, path);
-    return wears(id ? source.files[id].contents : '', PATROLS_ACROSS, root);
+    return wears(actorAt(source, target), PATROLS_ACROSS);
   },
   apply(source: MultiFileSource, target: EnhanceTarget) {
     const current = importRules(source, ['Patrol']);
-    const {path, root} = fileOf(target);
-    const id = fileIdAt(current, path);
-    return id === undefined
-      ? current
-      : edit(current, id, contents =>
-          electTraits(contents, root, [PATROLS_ACROSS]),
-        );
+    return editActor(current, target, data =>
+      electTraits(data, [PATROLS_ACROSS]),
+    );
   },
 };

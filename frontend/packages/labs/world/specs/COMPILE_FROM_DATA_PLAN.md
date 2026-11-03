@@ -250,9 +250,8 @@ as` was still offered in an actor's Actor drawer, where it did nothing,
    actors as rows, which the Actor Editor cannot open. Scenarios, the
    starter project and the lessons were folded where they are listed;
    they are written as data since (5d, step 1). The
-   enhancements read and write an actor through its view in the patch
-   layer (`enhance/patch`), not through a wrapper around each one, so one
-   called directly works on data. All 489 actors the repository builds
+   enhancements read and wrote an actor through its view in the patch
+   layer until they edited the data itself (5d, step 2). All 489 actors the repository builds
    hold the same data as before, and a test holds every one to being
    stored as data (`actorData.test`).
 
@@ -294,8 +293,14 @@ data the one form. In order, each its own commit:
    Nothing folds where a project is listed now: `inDataShape` is gone. All
    589 actor files the repository builds hold the same data as before,
    where their roots sit aside.
-2. Enhancements edit data: `wears`, `electTraits`, a property, a handler,
-   a variable. The typewriter's rows and `looksLike` go with it.
+2. BUILT, November 2026. Enhancements edit data. `enhance/patch` reads
+   and changes an actor's data: its traits, a property, a value (replaced
+   in place, one per setter), its members, a variable, and a root added
+   among the code or after the handlers. `actorPatch` finds an actor's
+   data in the project and writes it back (`actorAt`, `editActor`). The
+   wizard's look and scale are a Main animation and a scale value. The
+   typewriter's rows, `looksLike`, `animationsRow` and the both-shapes test
+   (`throughTheView`) are gone.
 3. Renames rewrite the keys that hold names — `actsLike`, `traits`, a
    value's setter, an effect's path, a member's `var`s — beside the
    workspace walk, with a test over the repository's content.

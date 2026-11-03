@@ -216,7 +216,7 @@ The library's nine animations are timelines (`appearance/stock`): a strip
 is a sprite track of cells with its closing key; a pulse is a drawn-scale
 tween that returns to where it began, so it loops without a seam where the
 frames used to step. An actor that looks like one keeps it as its Main
-(`stock/workspace.looksLike`, `animationsRow`): the stock Coin and Player,
+(`stock/workspace.stockAnimations`): the stock Coin and Player,
 the starter's Ball, Jetpack's Coin, and Jetpack's Pilot, which keeps Fly
 and Climb and plays them by name. Taking one brings only the pictures it
 reads (`importStockAnimation`). The Actor Creator's picture step offers the

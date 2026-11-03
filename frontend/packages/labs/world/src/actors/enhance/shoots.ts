@@ -49,16 +49,18 @@
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
-import {fileIdAt} from '../../runtime/projectFiles';
+import type {ActorData} from '../actorData';
 
 import {actorChoices, targetOf} from './actorChoices';
-import {edit, electTraits, fileOf, importRules, me, wears} from './actorPatch';
+import {actorAt, editActor, importRules, me} from './actorPatch';
 import type {Enhancement, EnhanceTarget} from './enhancements';
 import {
   addRoot,
   changeRoots,
   down,
+  electTraits,
   rootsOf,
+  wears,
   withVariable,
   type BlockJson,
 } from './patch';
@@ -172,10 +174,10 @@ export const isOurs =
 
 /** What the zap handler currently sends, if the file holds one. */
 export const sends = (
-  contents: string,
+  data: ActorData | undefined,
   target: EnhanceTarget,
 ): string | undefined => {
-  for (const root of rootsOf(contents)) {
+  for (const root of rootsOf(data)) {
     if (!isOurs(target, ZAPPED, ADD)(root)) {
       continue;
     }
@@ -190,11 +192,11 @@ export const sends = (
 
 /** Send something else instead, in place — asked again is a change of mind. */
 export const resend = (
-  contents: string,
+  data: ActorData,
   target: EnhanceTarget,
   answer: string,
-): string =>
-  changeRoots(contents, root => {
+): ActorData =>
+  changeRoots(data, root => {
     if (!isOurs(target, ZAPPED, ADD)(root)) {
       return;
     }
@@ -219,14 +221,12 @@ export const shootsEnhancement: Enhancement = {
   ],
   asks: {label: 'Sending', options: actorChoices},
   applied(source: MultiFileSource, target: EnhanceTarget, answer?: string) {
-    const {path, root} = fileOf(target);
-    const id = fileIdAt(source, path);
-    const contents = id ? source.files[id].contents : '';
+    const actor = actorAt(source, target);
     return (
-      SHOOTER_TRAITS.every(trait => wears(contents, trait, root)) &&
-      rootsOf(contents).some(isOurs(target, PRESSES, MAKE_ZAP)) &&
+      SHOOTER_TRAITS.every(trait => wears(actor, trait)) &&
+      rootsOf(actor).some(isOurs(target, PRESSES, MAKE_ZAP)) &&
       answer !== undefined &&
-      sends(contents, target) === answer
+      sends(actor, target) === answer
     );
   },
   apply(source: MultiFileSource, target: EnhanceTarget, answer?: string) {
@@ -241,33 +241,19 @@ export const shootsEnhancement: Enhancement = {
       'Expiry',
     ]);
 
-    const shooter = fileOf(target);
-    const shooterId = fileIdAt(current, shooter.path);
-    if (shooterId !== undefined) {
-      current = edit(current, shooterId, contents => {
-        let next = withVariable(
-          electTraits(contents, shooter.root, SHOOTER_TRAITS),
-          SHOT_VAR,
-        );
-        if (!rootsOf(next).some(isOurs(target, PRESSES, MAKE_ZAP))) {
-          // Beside the definition rather than under it: a hat takes no
-          // previous connection, and `DisableOrphansPlugin` grays out a
-          // top-level block that has one along with everything below it.
-          next = addRoot(next, asking());
-        }
-        return sends(next, target) === undefined
-          ? addRoot(next, sending(target, answer))
-          : resend(next, target, answer);
-      });
-    }
+    current = editActor(current, target, data => {
+      let next = withVariable(electTraits(data, SHOOTER_TRAITS), SHOT_VAR);
+      if (!rootsOf(next).some(isOurs(target, PRESSES, MAKE_ZAP))) {
+        next = addRoot(next, asking());
+      }
+      return sends(next, target) === undefined
+        ? addRoot(next, sending(target, answer))
+        : resend(next, target, answer);
+    });
 
-    const sent = fileOf(targetOf(answer));
-    const sentId = fileIdAt(current, sent.path);
-    if (sentId !== undefined) {
-      current = edit(current, sentId, contents =>
-        electTraits(contents, sent.root, SHOT_TRAITS),
-      );
-    }
+    current = editActor(current, targetOf(answer), data =>
+      electTraits(data, SHOT_TRAITS),
+    );
     return current;
   },
 };

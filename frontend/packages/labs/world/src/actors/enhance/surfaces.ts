@@ -24,11 +24,10 @@
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
-import {fileIdAt} from '../../runtime/projectFiles';
-
 import {actorChoices, targetOf} from './actorChoices';
-import {edit, electTraits, fileOf, importRules, wears} from './actorPatch';
+import {actorAt, editActor, importRules} from './actorPatch';
 import type {Enhancement, EnhanceTarget} from './enhancements';
+import {electTraits, wears} from './patch';
 
 const CONVEYS = 'Surfaces#ConveysTrait';
 const SLIPPERY = 'Surfaces#SlipperyTrait';
@@ -42,20 +41,14 @@ const CALLED: Record<string, string> = {
   [SLOWS]: 'slow going',
 };
 
-const contentsOf = (source: MultiFileSource, target: EnhanceTarget) => {
-  const {path, root} = fileOf(target);
-  const id = fileIdAt(source, path);
-  return {contents: id ? source.files[id].contents : '', root};
-};
-
 /** Whether the walker named by `answer` notices floors at all. */
 const notices = (
   source: MultiFileSource,
   _target: EnhanceTarget,
   answer: string,
 ): boolean => {
-  const {contents, root} = contentsOf(source, targetOf(answer));
-  return wears(contents, STANDS, root);
+  const actor = actorAt(source, targetOf(answer));
+  return wears(actor, STANDS);
 };
 
 /**
@@ -79,8 +72,8 @@ const floorRow = (
     description,
     brings: [name.replace(/^Is /, ''), 'Stands on Surfaces, on the walker'],
     refuse(source: MultiFileSource, target: EnhanceTarget) {
-      const {contents, root} = contentsOf(source, target);
-      const worn = others.find(one => wears(contents, one, root));
+      const actor = actorAt(source, target);
+      const worn = others.find(one => wears(actor, one));
       return worn
         ? `This floor is already ${CALLED[worn]}, and a floor is one kind.`
         : undefined;
@@ -90,9 +83,9 @@ const floorRow = (
       options: actorChoices,
     },
     applied(source: MultiFileSource, target: EnhanceTarget, answer?: string) {
-      const {contents, root} = contentsOf(source, target);
+      const actor = actorAt(source, target);
       return (
-        wears(contents, trait, root) &&
+        wears(actor, trait) &&
         (answer === undefined || notices(source, target, answer))
       );
     },
@@ -102,21 +95,11 @@ const floorRow = (
       }
       let current = importRules(source, ['Surfaces']);
 
-      const floor = fileOf(target);
-      const floorId = fileIdAt(current, floor.path);
-      if (floorId !== undefined) {
-        current = edit(current, floorId, contents =>
-          electTraits(contents, floor.root, [trait]),
-        );
-      }
+      current = editActor(current, target, data => electTraits(data, [trait]));
 
-      const walker = fileOf(targetOf(answer));
-      const walkerId = fileIdAt(current, walker.path);
-      if (walkerId !== undefined) {
-        current = edit(current, walkerId, contents =>
-          electTraits(contents, walker.root, [STANDS]),
-        );
-      }
+      current = editActor(current, targetOf(answer), data =>
+        electTraits(data, [STANDS]),
+      );
       return current;
     },
   };
@@ -157,15 +140,11 @@ export const walksOnSurfacesEnhancement: Enhancement = {
       ),
     ),
   applied(source: MultiFileSource, target: EnhanceTarget) {
-    const {contents, root} = contentsOf(source, target);
-    return wears(contents, STANDS, root);
+    const actor = actorAt(source, target);
+    return wears(actor, STANDS);
   },
   apply(source: MultiFileSource, target: EnhanceTarget) {
     const current = importRules(source, ['Surfaces']);
-    const {path, root} = fileOf(target);
-    const id = fileIdAt(current, path);
-    return id === undefined
-      ? current
-      : edit(current, id, contents => electTraits(contents, root, [STANDS]));
+    return editActor(current, target, data => electTraits(data, [STANDS]));
   },
 };

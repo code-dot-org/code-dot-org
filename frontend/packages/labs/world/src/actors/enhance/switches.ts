@@ -19,10 +19,9 @@
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
-import {fileIdAt} from '../../runtime/projectFiles';
-
-import {edit, electTraits, fileOf, importRules, wears} from './actorPatch';
+import {actorAt, editActor, importRules} from './actorPatch';
 import type {Enhancement, EnhanceTarget} from './enhancements';
+import {electTraits, wears} from './patch';
 
 const SWITCH = 'Switches#IsASwitchTrait';
 const WALL = 'Switches#IsASwitchedWallTrait';
@@ -41,17 +40,11 @@ const switchRow = (
   description,
   brings: [brings],
   applied(source: MultiFileSource, target: EnhanceTarget) {
-    const {path, root} = fileOf(target);
-    const fileId = fileIdAt(source, path);
-    return wears(fileId ? source.files[fileId].contents : '', trait, root);
+    return wears(actorAt(source, target), trait);
   },
   apply(source: MultiFileSource, target: EnhanceTarget) {
     const current = importRules(source, ['Switches']);
-    const {path, root} = fileOf(target);
-    const fileId = fileIdAt(current, path);
-    return fileId === undefined
-      ? current
-      : edit(current, fileId, contents => electTraits(contents, root, [trait]));
+    return editActor(current, target, data => electTraits(data, [trait]));
   },
 });
 

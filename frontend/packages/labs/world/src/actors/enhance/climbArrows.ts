@@ -15,9 +15,8 @@
 //
 // WHAT IT WRITES, all of it in the actor:
 //
-//   actors/<target>.actor    define actor named ⟨…⟩
-//                              use trait ⟨Climbing#Climbs⟩
-//                              use trait ⟨Input#TakesKeyboardInput⟩
+//   actors/<target>.actor    traits      Climbing#Climbs
+//                                        Input#TakesKeyboardInput
 //
 //                            when ⟨me⟩ presses  ⟨up arrow⟩   start ⟨me⟩ climbing up
 //                            when ⟨me⟩ releases ⟨up arrow⟩   stop  ⟨me⟩ climbing up
@@ -48,20 +47,14 @@
 // down, so the two events commute and the rule stops caring when they arrive.
 // The reasoning is in `rules/climb`, which is where it belongs: this file
 // binds keys, and what a release MEANS is the mechanic's business.
-//
-// ROOTS, NOT ROWS. A hat takes no previous connection, so it sits beside the
-// `define actor` rather than under it (`patch.addRoot`) — unlike `each frame`,
-// which is a row. In a WORLD's own `define actor` the hats are roots of the
-// world and name their subject as `any ⟨kind⟩`, exactly as `enhance/health`
-// does for the same reason.
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
-import {fileIdAt} from '../../runtime/projectFiles';
+import type {ActorData} from '../actorData';
 
-import {edit, electTraits, fileOf, importRules, wears} from './actorPatch';
+import {actorAt, editActor, importRules} from './actorPatch';
 import type {Enhancement, EnhanceTarget} from './enhancements';
-import {addRoot, hasRoot, type BlockJson} from './patch';
+import {addRoot, electTraits, hasRoot, wears, type BlockJson} from './patch';
 
 const CLIMBS = 'Climbing#ClimbsTrait';
 const KEYBOARD = 'Input#TakesKeyboardInputTrait';
@@ -145,7 +138,8 @@ const startsAClimb =
     return named === undefined;
   };
 
-const reads = (contents: string): boolean => hasRoot(contents, startsAClimb());
+const reads = (data: ActorData | undefined): boolean =>
+  hasRoot(data, startsAClimb());
 
 export const climbArrowsEnhancement: Enhancement = {
   id: 'climbs-with-arrows',
@@ -155,29 +149,15 @@ export const climbArrowsEnhancement: Enhancement = {
     'Lets this actor climb anything that can be climbed, steered with up and down. The keys are blocks in its file, so change them to whatever your game uses — and an actor that should climb without a keyboard takes the trait and leaves these out.',
   brings: ['Climbs Ladders', 'Reads the Keyboard'],
   applied(source: MultiFileSource, target: EnhanceTarget) {
-    const {path, root} = fileOf(target);
-    const id = fileIdAt(source, path);
-    const contents = id ? source.files[id].contents : '';
-    return (
-      wears(contents, CLIMBS, root) &&
-      wears(contents, KEYBOARD, root) &&
-      reads(contents)
-    );
+    const actor = actorAt(source, target);
+    return wears(actor, CLIMBS) && wears(actor, KEYBOARD) && reads(actor);
   },
   apply(source: MultiFileSource, target: EnhanceTarget) {
     const current = importRules(source, ['Climbing', 'Input']);
 
-    const {path, root} = fileOf(target);
-    const id = fileIdAt(current, path);
-    if (!id) {
-      return current;
-    }
-    return edit(current, id, contents => {
-      let next = electTraits(contents, root, [CLIMBS, KEYBOARD]);
+    return editActor(current, target, data => {
+      let next = electTraits(data, [CLIMBS, KEYBOARD]);
       if (!reads(next)) {
-        // Beside the definition rather than under it: a hat takes no previous
-        // connection, and `DisableOrphansPlugin` grays out a top-level block
-        // that has one along with everything below it.
         for (const hat of climbArrowsHandlers(target)) {
           next = addRoot(next, hat);
         }

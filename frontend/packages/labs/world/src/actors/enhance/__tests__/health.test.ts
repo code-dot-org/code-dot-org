@@ -12,7 +12,7 @@ import {compileProject} from '../../../__tests__/support/compileProject';
 import {PositionProperty} from '../../../engine';
 import {EMPTY_WORLD_PROJECT} from '../../../fixtures/scenarios';
 import {fileIdAt, projectFiles} from '../../../runtime/projectFiles';
-import {isDataShaped, viewOf} from '../../actorData';
+import {isDataShaped, type ActorData} from '../../actorData';
 import {importedContents, importStockActor} from '../../importStockActor';
 import {stockActorById} from '../../stock';
 import {healthEnhancement} from '../health';
@@ -85,15 +85,19 @@ describe('the health enhancement, as edits', () => {
   });
 
   it('gives the actor a property to remember its bar in, and no remover', () => {
-    const actor = viewOf(
-      at(healthEnhancement.apply(withPlayer(), PLAYER), 'actors/player.actor')!,
-    );
+    const actor = at(
+      healthEnhancement.apply(withPlayer(), PLAYER),
+      'actors/player.actor',
+    )!;
 
     // A property to remember it in, because `as ⟨bar⟩` is a block scope. No
     // handler takes the bar away: a child goes with its parent
     // (specs/PARENTING.md), so the one an earlier version wrote is gone.
-    expect(actor).toContain('world_rule_property');
-    expect(actor).toContain('health bar');
+    expect((JSON.parse(actor) as ActorData).properties).toContainEqual({
+      name: 'health bar',
+      type: 'actor',
+      access: 'writable',
+    });
     expect(actor).not.toContain('world_on_Space_RemovedEvent');
     expect(actor).not.toContain('world_remove_actor');
   });

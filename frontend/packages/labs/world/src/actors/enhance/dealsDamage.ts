@@ -25,10 +25,9 @@
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
-import {fileIdAt} from '../../runtime/projectFiles';
-
-import {edit, electTraits, fileOf, importRules, wears} from './actorPatch';
+import {actorAt, editActor, importRules} from './actorPatch';
 import type {Enhancement, EnhanceTarget} from './enhancements';
+import {electTraits, wears} from './patch';
 
 const DEALS_DAMAGE = 'Health#DealsDamageTrait';
 
@@ -40,18 +39,12 @@ export const dealsDamageEnhancement: Enhancement = {
     'Makes this actor damage whatever runs into it — a crawler, a spike, a pool of lava. How much it takes off is a block in its file. Only an actor that has health of its own can feel it, and giving it some is that actor’s business rather than this one’s.',
   brings: ['Deals Damage'],
   applied(source: MultiFileSource, target: EnhanceTarget) {
-    const {path, root} = fileOf(target);
-    const id = fileIdAt(source, path);
-    return wears(id ? source.files[id].contents : '', DEALS_DAMAGE, root);
+    return wears(actorAt(source, target), DEALS_DAMAGE);
   },
   apply(source: MultiFileSource, target: EnhanceTarget) {
     const current = importRules(source, ['Health']);
-    const {path, root} = fileOf(target);
-    const id = fileIdAt(current, path);
-    return id === undefined
-      ? current
-      : edit(current, id, contents =>
-          electTraits(contents, root, [DEALS_DAMAGE]),
-        );
+    return editActor(current, target, data =>
+      electTraits(data, [DEALS_DAMAGE]),
+    );
   },
 };

@@ -24,17 +24,11 @@
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
-import {fileIdAt} from '../../runtime/projectFiles';
+import type {ActorData} from '../actorData';
 
-import {
-  edit,
-  electTraits,
-  fileOf,
-  importRules,
-  wears,
-  type ActorRoot,
-} from './actorPatch';
+import {actorAt, editActor, importRules} from './actorPatch';
 import type {Enhancement, EnhanceTarget} from './enhancements';
+import {electTraits, wears} from './patch';
 
 const FALLS = 'Gravity#AffectedByGravityTrait';
 /** The other way an actor comes to fall: jumping requires being pulled down. */
@@ -49,8 +43,8 @@ const JUMPS = 'Jumping#JumpsTrait';
  * then adding a line if anybody asks. The dialog disables the row, so nothing
  * reachable hit it; a caller that applies without asking first did.
  */
-const fallsAlready = (contents: string, root: ActorRoot): boolean =>
-  wears(contents, FALLS, root) || wears(contents, JUMPS, root);
+const fallsAlready = (data: ActorData | undefined): boolean =>
+  wears(data, FALLS) || wears(data, JUMPS);
 
 export const fallsEnhancement: Enhancement = {
   id: 'falls',
@@ -60,20 +54,12 @@ export const fallsEnhancement: Enhancement = {
     'Pulls this actor down until something solid stops it — a blob that walks the floor, a crate that drops when its ledge goes. It gets no jump and no keys with it: “Walks and jumps like a platformer” is the row for something you steer. Whatever it comes to rest on has to hold things up.',
   brings: ['Affected by Gravity'],
   applied(source: MultiFileSource, target: EnhanceTarget) {
-    const {path, root} = fileOf(target);
-    const id = fileIdAt(source, path);
-    return fallsAlready(id ? source.files[id].contents : '', root);
+    return fallsAlready(actorAt(source, target));
   },
   apply(source: MultiFileSource, target: EnhanceTarget) {
     const current = importRules(source, ['Gravity']);
-    const {path, root} = fileOf(target);
-    const id = fileIdAt(current, path);
-    return id === undefined
-      ? current
-      : edit(current, id, contents =>
-          fallsAlready(contents, root)
-            ? contents
-            : electTraits(contents, root, [FALLS]),
-        );
+    return editActor(current, target, data =>
+      fallsAlready(data) ? data : electTraits(data, [FALLS]),
+    );
   },
 };

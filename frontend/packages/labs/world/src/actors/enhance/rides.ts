@@ -14,11 +14,10 @@
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
-import {fileIdAt} from '../../runtime/projectFiles';
-
-import {edit, electTraits, fileOf, importRules, wears} from './actorPatch';
+import {actorAt, editActor, importRules} from './actorPatch';
 import {CARRIES, RIDES} from './carries';
 import type {Enhancement, EnhanceTarget} from './enhancements';
+import {electTraits, wears} from './patch';
 
 /** Whether anything in the project is a moving platform already. */
 const somethingCarries = (source: MultiFileSource): boolean =>
@@ -35,16 +34,10 @@ export const ridesEnhancement: Enhancement = {
   brings: ['Rides'],
   offered: (source: MultiFileSource) => somethingCarries(source),
   applied(source: MultiFileSource, target: EnhanceTarget) {
-    const {path, root} = fileOf(target);
-    const id = fileIdAt(source, path);
-    return wears(id ? source.files[id].contents : '', RIDES, root);
+    return wears(actorAt(source, target), RIDES);
   },
   apply(source: MultiFileSource, target: EnhanceTarget) {
     const current = importRules(source, ['Carrying']);
-    const {path, root} = fileOf(target);
-    const id = fileIdAt(current, path);
-    return id === undefined
-      ? current
-      : edit(current, id, contents => electTraits(contents, root, [RIDES]));
+    return editActor(current, target, data => electTraits(data, [RIDES]));
   },
 };

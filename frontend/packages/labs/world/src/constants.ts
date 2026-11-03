@@ -871,7 +871,7 @@ export function starterSprites(ids: readonly string[]) {
  * An animation names a strip and reads squares out of it, so an actor given
  * one without its picture plays an animation of nothing — which draws as a
  * black square and says so nowhere. The animation itself is the actor's own
- * (`stock/workspace.animationsRow`); these are the files it needs.
+ * (`stock/workspace.stockAnimations`); these are the files it needs.
  */
 export function starterAnimationPictures(
   ids: readonly string[],

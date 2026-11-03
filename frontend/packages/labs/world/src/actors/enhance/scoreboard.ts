@@ -7,9 +7,9 @@
 //
 // WHAT IT WRITES:
 //
-//   actors/scoreboard.actor  (new) define actor named ⟨Scoreboard⟩
-//                                    …the stock Label's own blocks…
-//                                    use trait ⟨Scoring#Watches the Score⟩
+//   actors/scoreboard.actor  (new) Scoreboard, acting like the Label
+//                                    trait  Scoring#Watches the Score
+//                                    text   ⟨"SCORE 0"⟩
 //                                  when ⟨this actor⟩ sees the score change:
 //                                    set text of ⟨this actor⟩ to
 //                                      join ⟨"SCORE "⟩ ⟨the score⟩
@@ -40,13 +40,14 @@ import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {folderIn} from '../../projectWrite';
 import {fileIdAt} from '../../runtime/projectFiles';
-import {asActorData} from '../actorData';
+import {actorDocument} from '../actorDocument';
 import {importStockActor} from '../importStockActor';
 import {stockActorById} from '../stock';
+import {labelValue} from '../stock/workspace';
 
 import {edit, importRules, me} from './actorPatch';
 import type {Enhancement, EnhanceTarget} from './enhancements';
-import {addRoot, type BlockJson} from './patch';
+import type {BlockJson} from './patch';
 
 /** What makes an actor hear that the score changed. */
 const WATCHES = 'Scoring#WatchesTheScoreTrait';
@@ -148,7 +149,7 @@ const writeBoard = (source: MultiFileSource): MultiFileSource => {
   }
   const placedIn = folderIn(source, 'actors');
   const fileId = getNextFileId(Object.values(placedIn.source.files));
-  // A LABEL THAT WATCHES THE SCORE, said in a row rather than copied out.
+  // A LABEL THAT WATCHES THE SCORE, said as data rather than copied out.
   //
   // It used to be the stock Label's file RENAMED, which worked while `text`
   // belonged to a rule: the same block type meant the same property wherever
@@ -159,45 +160,13 @@ const writeBoard = (source: MultiFileSource): MultiFileSource => {
   // Acting like it is both smaller and correct: the words, their size and
   // color, the box and the picture all come across, and they stay the LABEL's
   // (`ActorBuilder.actsLike`).
-  // Written as rows and stored as data, as every actor is.
-  const contents = asActorData(
-    addRoot(
-      JSON.stringify(
-        {
-          blocks: {
-            blocks: [
-              {
-                type: 'world_actor',
-                x: 20,
-                y: 20,
-                fields: {NAME: BOARD_NAME},
-                next: {
-                  block: {
-                    type: 'world_acts_like',
-                    fields: {ACTOR: 'actors/label'},
-                    next: {
-                      block: {
-                        type: 'world_use_trait',
-                        fields: {TRAIT: WATCHES},
-                        next: {
-                          block: setText(me(), {
-                            shadow: {type: 'text', fields: {TEXT: SEED}},
-                          }),
-                        },
-                      },
-                    },
-                  },
-                },
-              },
-            ],
-          },
-        },
-        null,
-        2,
-      ),
-      watcher(),
-    ),
-  );
+  const contents = actorDocument({
+    name: BOARD_NAME,
+    actsLike: 'actors/label',
+    traits: [WATCHES],
+    values: [labelValue('TextProperty', {type: 'string', value: SEED})],
+    code: [watcher()],
+  });
   return {
     ...placedIn.source,
     files: {

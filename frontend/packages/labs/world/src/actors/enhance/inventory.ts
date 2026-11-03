@@ -19,20 +19,13 @@
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
-import {fileIdAt} from '../../runtime/projectFiles';
-
 import {actorChoices, targetOf} from './actorChoices';
-import {edit, electTraits, fileOf, importRules, wears} from './actorPatch';
+import {actorAt, editActor, importRules} from './actorPatch';
 import type {Enhancement, EnhanceTarget} from './enhancements';
+import {electTraits, wears} from './patch';
 
 const CARRIES = 'Inventory#CarriesTrait';
 const CARRIED = 'Inventory#CanBeCarriedTrait';
-
-const contentsOf = (source: MultiFileSource, target: EnhanceTarget) => {
-  const {path, root} = fileOf(target);
-  const id = fileIdAt(source, path);
-  return {contents: id ? source.files[id].contents : '', root};
-};
 
 export const carriesThingsEnhancement: Enhancement = {
   id: 'carries-things',
@@ -46,15 +39,14 @@ export const carriesThingsEnhancement: Enhancement = {
     options: actorChoices,
   },
   applied(source: MultiFileSource, target: EnhanceTarget, answer?: string) {
-    const {contents, root} = contentsOf(source, target);
-    if (!wears(contents, CARRIES, root)) {
+    const actor = actorAt(source, target);
+    if (!wears(actor, CARRIES)) {
       return false;
     }
     if (answer === undefined) {
       return true;
     }
-    const thing = contentsOf(source, targetOf(answer));
-    return wears(thing.contents, CARRIED, thing.root);
+    return wears(actorAt(source, targetOf(answer)), CARRIED);
   },
   apply(source: MultiFileSource, target: EnhanceTarget, answer?: string) {
     if (answer === undefined) {
@@ -62,21 +54,11 @@ export const carriesThingsEnhancement: Enhancement = {
     }
     let current = importRules(source, ['Inventory']);
 
-    const bag = fileOf(target);
-    const bagId = fileIdAt(current, bag.path);
-    if (bagId !== undefined) {
-      current = edit(current, bagId, contents =>
-        electTraits(contents, bag.root, [CARRIES]),
-      );
-    }
+    current = editActor(current, target, data => electTraits(data, [CARRIES]));
 
-    const thing = fileOf(targetOf(answer));
-    const thingId = fileIdAt(current, thing.path);
-    if (thingId !== undefined) {
-      current = edit(current, thingId, contents =>
-        electTraits(contents, thing.root, [CARRIED]),
-      );
-    }
+    current = editActor(current, targetOf(answer), data =>
+      electTraits(data, [CARRIED]),
+    );
     return current;
   },
 };
@@ -89,15 +71,11 @@ export const canBeCarriedEnhancement: Enhancement = {
     'Lets this actor be put in somebody’s bag: touched, taken, held, and spent later. It names no carrier, so whoever has a bag can pick it up. Different from “Collects things, and scores for them”, where what is picked up becomes a number and cannot be put back down.',
   brings: ['Can Be Carried'],
   applied(source: MultiFileSource, target: EnhanceTarget) {
-    const {contents, root} = contentsOf(source, target);
-    return wears(contents, CARRIED, root);
+    const actor = actorAt(source, target);
+    return wears(actor, CARRIED);
   },
   apply(source: MultiFileSource, target: EnhanceTarget) {
     const current = importRules(source, ['Inventory']);
-    const {path, root} = fileOf(target);
-    const id = fileIdAt(current, path);
-    return id === undefined
-      ? current
-      : edit(current, id, contents => electTraits(contents, root, [CARRIED]));
+    return editActor(current, target, data => electTraits(data, [CARRIED]));
   },
 };

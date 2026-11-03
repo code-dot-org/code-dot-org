@@ -19,11 +19,20 @@
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
-import {fileIdAt} from '../../runtime/projectFiles';
+import type {ActorValue} from '../actorData';
 
-import {edit, electTraits, fileOf, importRules, me, wears} from './actorPatch';
+import {actorAt, editActor, importRules, me} from './actorPatch';
 import type {Enhancement, EnhanceTarget} from './enhancements';
-import {addRoot, append, down, hasRoot, type BlockJson} from './patch';
+import {
+  addRoot,
+  down,
+  electTraits,
+  hasRoot,
+  valueOf,
+  wears,
+  withValue,
+  type BlockJson,
+} from './patch';
 
 const PAD = 'Teleport#IsATeleportPadTrait';
 const TRAVELS = 'Teleport#UsesTeleportPadsTrait';
@@ -34,12 +43,6 @@ const PRESSES = 'world_on_Input_PressesEvent';
 const USE_PAD = 'world_do_Teleport_UseThePadAction';
 const TAKES_ANY = 'world_set_Teleport_TakesAnyPadItTouchesProperty';
 const KEYBOARD = 'Input#TakesKeyboardInputTrait';
-
-const contentsOf = (source: MultiFileSource, target: EnhanceTarget) => {
-  const {path, root} = fileOf(target);
-  const id = fileIdAt(source, path);
-  return {contents: id ? source.files[id].contents : '', root};
-};
 
 /** Whether the project holds anything that is a pad. */
 const somePad = (source: MultiFileSource): boolean =>
@@ -53,16 +56,12 @@ export const isATeleportPadEnhancement: Enhancement = {
     'Makes this actor a pad: a traveller that uses it is moved to another pad of the same colour, however far away it is. Its colour is a block in its file, and the colour is what pairs them — so put two of these in a map and they are two ends of one door. Three of the same colour is a door with three ends, and a traveller takes whichever one it is not standing on.',
   brings: ['Is a Teleport Pad'],
   applied(source: MultiFileSource, target: EnhanceTarget) {
-    const {contents, root} = contentsOf(source, target);
-    return wears(contents, PAD, root);
+    const actor = actorAt(source, target);
+    return wears(actor, PAD);
   },
   apply(source: MultiFileSource, target: EnhanceTarget) {
     const current = importRules(source, ['Teleport']);
-    const {path, root} = fileOf(target);
-    const id = fileIdAt(current, path);
-    return id === undefined
-      ? current
-      : edit(current, id, contents => electTraits(contents, root, [PAD]));
+    return editActor(current, target, data => electTraits(data, [PAD]));
   },
 };
 
@@ -103,39 +102,28 @@ export const usesTeleportPadsEnhancement: Enhancement = {
   brings: ['Uses Teleport Pads', 'Reads the Keyboard', 'a key to press'],
   offered: (source: MultiFileSource) => somePad(source),
   applied(source: MultiFileSource, target: EnhanceTarget) {
-    const {contents, root} = contentsOf(source, target);
+    const actor = actorAt(source, target);
     return (
-      wears(contents, TRAVELS, root) &&
-      wears(contents, KEYBOARD, root) &&
-      hasRoot(contents, usesOnKey())
+      wears(actor, TRAVELS) &&
+      wears(actor, KEYBOARD) &&
+      hasRoot(actor, usesOnKey())
     );
   },
   apply(source: MultiFileSource, target: EnhanceTarget) {
     const current = importRules(source, ['Teleport', 'Input']);
-    const {path, root} = fileOf(target);
-    const id = fileIdAt(current, path);
-    return id === undefined
-      ? current
-      : edit(current, id, contents => {
-          const next = electTraits(contents, root, [TRAVELS, KEYBOARD]);
-          return hasRoot(next, usesOnKey())
-            ? next
-            : // Beside the definition rather than under it: a hat takes no
-              // previous connection, and `DisableOrphansPlugin` grays out a
-              // top-level block that has one along with everything below it.
-              addRoot(next, useHandler());
-        });
+    return editActor(current, target, data => {
+      const next = electTraits(data, [TRAVELS, KEYBOARD]);
+      return hasRoot(next, usesOnKey()) ? next : addRoot(next, useHandler());
+    });
   },
 };
 
-/** `set ⟨takes any pad it touches⟩ of ⟨me⟩ to ⟨true⟩`, under the definition. */
-const takesAnyRow = (): BlockJson => ({
-  type: TAKES_ANY,
-  inputs: {
-    ACTOR: me(),
-    VALUE: {block: {type: 'logic_boolean', fields: {BOOL: 'TRUE'}}},
-  },
-});
+/** `set ⟨takes any pad it touches⟩ of this actor to ⟨true⟩`. */
+const TAKES_ANY_VALUE: ActorValue = {
+  setter: TAKES_ANY,
+  type: 'boolean',
+  value: true,
+};
 
 export const takenByAnyPadEnhancement: Enhancement = {
   id: 'taken-by-any-pad',
@@ -146,20 +134,14 @@ export const takenByAnyPadEnhancement: Enhancement = {
   brings: ['Uses Teleport Pads', 'a line saying it does not choose'],
   offered: (source: MultiFileSource) => somePad(source),
   applied(source: MultiFileSource, target: EnhanceTarget) {
-    const {contents, root} = contentsOf(source, target);
-    return wears(contents, TRAVELS, root) && contents.includes(TAKES_ANY);
+    const actor = actorAt(source, target);
+    return wears(actor, TRAVELS) && valueOf(actor, TAKES_ANY) !== undefined;
   },
   apply(source: MultiFileSource, target: EnhanceTarget) {
     const current = importRules(source, ['Teleport']);
-    const {path, root} = fileOf(target);
-    const id = fileIdAt(current, path);
-    return id === undefined
-      ? current
-      : edit(current, id, contents => {
-          const next = electTraits(contents, root, [TRAVELS]);
-          return next.includes(TAKES_ANY)
-            ? next
-            : append(next, root, [takesAnyRow()]);
-        });
+    return editActor(current, target, data => {
+      const next = electTraits(data, [TRAVELS]);
+      return valueOf(next, TAKES_ANY) ? next : withValue(next, TAKES_ANY_VALUE);
+    });
   },
 };

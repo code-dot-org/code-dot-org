@@ -52,7 +52,7 @@ export interface StockActor {
    */
   requires: readonly string[];
   /**
-   * The stock ANIMATIONS the actor keeps, by id (`stock/workspace.looksLike`).
+   * The stock ANIMATIONS the actor keeps, by id (`stock/workspace.stockAnimations`).
    *
    * The animation is written into the actor; what is brought with it, for the
    * reason the rules are, are the pictures its keys read — an animation of a
