@@ -90,6 +90,27 @@ describe('captureTreeImage', () => {
     expect(edge.hasAttribute('style')).toBe(false);
   });
 
+  it('starts a capture only after the one before it finishes', async () => {
+    let finishFirst: (blob: Blob) => void = () => {};
+    mockToBlob.mockReturnValueOnce(
+      new Promise(resolve => {
+        finishFirst = resolve;
+      })
+    );
+    const second = new Blob(['second']);
+    mockToBlob.mockResolvedValueOnce(second);
+
+    const firstCapture = captureTreeImage(tree);
+    const secondCapture = captureTreeImage(tree);
+    await new Promise(resolve => setTimeout(resolve));
+    expect(mockToBlob).toHaveBeenCalledTimes(1);
+
+    finishFirst(new Blob(['first']));
+    await firstCapture;
+    await expect(secondCapture).resolves.toBe(second);
+    expect(mockToBlob).toHaveBeenCalledTimes(2);
+  });
+
   it('fails when html-to-image produces no image', async () => {
     mockToBlob.mockResolvedValue(null);
 

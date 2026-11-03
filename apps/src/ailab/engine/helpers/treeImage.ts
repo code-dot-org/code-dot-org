@@ -24,8 +24,7 @@ export const treeImageName = (datasetName = ''): string => {
 export const treePixelRatio = (width: number, height: number): number =>
   Math.min(MAX_PIXEL_RATIO, Math.sqrt(MAX_CANVAS_PIXELS / (width * height)));
 
-// Draws the whole tree at its layout size, whatever the canvas is zoomed to.
-export const captureTreeImage = async (tree: HTMLElement): Promise<Blob> => {
+const drawTree = async (tree: HTMLElement): Promise<Blob> => {
   const width = tree.offsetWidth + 2 * PADDING_PX;
   const height = tree.offsetHeight + 2 * PADDING_PX;
   const fontEmbedCSS = await getFontEmbedCss(tree);
@@ -51,11 +50,11 @@ export const captureTreeImage = async (tree: HTMLElement): Promise<Blob> => {
   }
 };
 
-export const downloadImage = (image: Blob, fileName: string) => {
-  const url = URL.createObjectURL(image);
-  const link = document.createElement('a');
-  link.href = url;
-  link.download = fileName;
-  link.click();
-  URL.revokeObjectURL(url);
+let lastCapture: Promise<unknown> = Promise.resolve();
+
+// Overlapping captures would each restore the other's temporary styles as originals.
+export const captureTreeImage = (tree: HTMLElement): Promise<Blob> => {
+  const capture = lastCapture.then(() => drawTree(tree));
+  lastCapture = capture.catch(() => {});
+  return capture;
 };

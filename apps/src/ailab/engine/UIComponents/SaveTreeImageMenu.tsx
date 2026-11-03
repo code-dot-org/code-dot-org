@@ -5,12 +5,23 @@ import {
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {useToast} from '@code-dot-org/component-library/toast';
 import {Tooltip} from '@mui/material';
-import React, {type RefObject, useState} from 'react';
+import React, {
+  type KeyboardEvent,
+  type RefObject,
+  useEffect,
+  useRef,
+} from 'react';
 
-import {captureTreeImage, downloadImage} from '../helpers/treeImage';
+import {downloadBlobAsPng} from '@cdo/apps/imageUtils';
+
+import {captureTreeImage} from '../helpers/treeImage';
 
 const LABEL = 'Save image';
 const SAVE_ERROR = "Couldn't save an image of your tree. Please try again.";
+
+// CustomDropdown keeps its open state private and closes only on a mousedown outside it.
+const closeMenu = () =>
+  document.body.dispatchEvent(new MouseEvent('mousedown', {bubbles: true}));
 
 interface SaveTreeImageMenuProps {
   treeRef: RefObject<HTMLElement>;
@@ -24,18 +35,41 @@ const SaveTreeImageMenu = ({
   tabbable,
 }: SaveTreeImageMenuProps) => {
   const showToast = useToast();
-  // Overlapping captures would each restore the other's temporary styles as originals.
-  const [saving, setSaving] = useState(false);
+  const menuRef = useRef<HTMLSpanElement>(null);
+  const triggerRef = useRef<HTMLButtonElement>(null);
+
+  // d3-zoom stops mousedown on the tree, so a press there never reaches CustomDropdown.
+  useEffect(() => {
+    const closeOnPressOutside = ({target}: PointerEvent) => {
+      if (!menuRef.current!.contains(target as Node)) {
+        closeMenu();
+      }
+    };
+    document.addEventListener('pointerdown', closeOnPressOutside);
+    return () =>
+      document.removeEventListener('pointerdown', closeOnPressOutside);
+  }, []);
+
+  // Escape on the trigger still bubbles, leaving the tree as the zoom buttons do.
+  const closeOnEscape = (event: KeyboardEvent) => {
+    if (event.key !== 'Escape') {
+      return;
+    }
+    closeMenu();
+    if (event.target !== triggerRef.current) {
+      event.stopPropagation();
+      triggerRef.current!.focus();
+    }
+  };
 
   const saveImage = async (save: (image: Blob) => void | Promise<void>) => {
-    setSaving(true);
+    closeMenu();
+    triggerRef.current!.focus();
     try {
       await save(await captureTreeImage(treeRef.current!));
     } catch (error) {
       console.error('AI Lab could not save an image of the tree.', error);
       showToast(SAVE_ERROR, {type: 'danger'});
-    } finally {
-      setSaving(false);
     }
   };
 
@@ -45,21 +79,21 @@ const SaveTreeImageMenu = ({
       label: 'Save to device',
       icon: {iconName: 'download'},
       onClick: () =>
-        saveImage(image => downloadImage(image, `${baseName}.png`)),
+        saveImage(image => downloadBlobAsPng(image, `${baseName}.png`)),
     },
   ];
 
   return (
     <Tooltip title={LABEL} placement="right">
-      <span>
+      <span ref={menuRef} onKeyDown={closeOnEscape}>
         <ActionDropdown
           name="ailab-save-tree-image"
           labelText={LABEL}
           options={options}
           size="xs"
           menuVerticalPlacement="top"
-          disabled={saving}
           triggerButtonProps={{
+            ref: triggerRef,
             color: 'tertiary',
             variant: 'text',
             size: 'extraSmall',

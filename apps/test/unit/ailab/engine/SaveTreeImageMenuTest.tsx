@@ -2,29 +2,29 @@ import {ToastProvider} from '@code-dot-org/component-library/toast';
 import {act, fireEvent, render, screen} from '@testing-library/react';
 import React, {createRef} from 'react';
 
-import {
-  captureTreeImage,
-  downloadImage,
-} from '@cdo/apps/ailab/engine/helpers/treeImage';
+import {captureTreeImage} from '@cdo/apps/ailab/engine/helpers/treeImage';
 import SaveTreeImageMenu from '@cdo/apps/ailab/engine/UIComponents/SaveTreeImageMenu';
+import {downloadBlobAsPng} from '@cdo/apps/imageUtils';
 
 import {withTheme} from './renderWithProviders';
 
 jest.mock('@cdo/apps/ailab/engine/helpers/treeImage', () => ({
   captureTreeImage: jest.fn(),
-  downloadImage: jest.fn(),
 }));
+jest.mock('@cdo/apps/imageUtils', () => ({downloadBlobAsPng: jest.fn()}));
 
 const mockCapture = jest.mocked(captureTreeImage);
 const image = new Blob(['png'], {type: 'image/png'});
 
-function renderMenu() {
+function renderMenu({onKeyDown = jest.fn()} = {}) {
   const treeRef = createRef<HTMLDivElement>();
   render(
     withTheme(
       <ToastProvider>
-        <div ref={treeRef} />
-        <SaveTreeImageMenu treeRef={treeRef} baseName="zoo-tree" tabbable />
+        <div ref={treeRef} role="tree" aria-label="Decision tree" />
+        <div onKeyDown={onKeyDown}>
+          <SaveTreeImageMenu treeRef={treeRef} baseName="zoo-tree" tabbable />
+        </div>
       </ToastProvider>
     )
   );
@@ -33,6 +33,8 @@ function renderMenu() {
 
 const trigger = () => screen.getByRole('button', {name: 'Save image'});
 const option = (name: string) => screen.queryByRole('button', {name});
+// CustomDropdown exposes its open state only through this attribute.
+const isOpen = () => trigger().hasAttribute('data-force-hover');
 
 async function choose(name: string) {
   fireEvent.click(trigger());
@@ -45,6 +47,7 @@ describe('SaveTreeImageMenu', () => {
   beforeEach(() => {
     mockCapture.mockResolvedValue(image);
   });
+  afterEach(() => jest.restoreAllMocks());
 
   it('downloads the tree as a PNG named for the dataset', async () => {
     const treeRef = renderMenu();
@@ -52,23 +55,46 @@ describe('SaveTreeImageMenu', () => {
     await choose('Save to device');
 
     expect(mockCapture).toHaveBeenCalledWith(treeRef.current);
-    expect(downloadImage).toHaveBeenCalledWith(image, 'zoo-tree.png');
+    expect(downloadBlobAsPng).toHaveBeenCalledWith(image, 'zoo-tree.png');
   });
 
-  it('holds off a second save until the first finishes', async () => {
-    let finishCapture: (blob: Blob) => void = () => {};
-    mockCapture.mockReturnValue(
-      new Promise(resolve => {
-        finishCapture = resolve;
-      })
-    );
+  it('closes the menu and returns focus to its button after a choice', async () => {
     renderMenu();
 
     await choose('Save to device');
-    expect(trigger()).toBeDisabled();
 
-    await act(async () => finishCapture(image));
-    expect(trigger()).toBeEnabled();
+    expect(isOpen()).toBe(false);
+    expect(trigger()).toHaveFocus();
+  });
+
+  it('closes when the tree is pressed', () => {
+    renderMenu();
+    fireEvent.click(trigger());
+
+    fireEvent.pointerDown(screen.getByRole('tree'));
+
+    expect(isOpen()).toBe(false);
+  });
+
+  it('keeps Escape in the menu from leaving the tree', () => {
+    const onKeyDown = jest.fn();
+    renderMenu({onKeyDown});
+    fireEvent.click(trigger());
+
+    fireEvent.keyDown(option('Save to device')!, {key: 'Escape'});
+
+    expect(isOpen()).toBe(false);
+    expect(trigger()).toHaveFocus();
+    expect(onKeyDown).not.toHaveBeenCalled();
+  });
+
+  it('lets Escape on its button leave the tree', () => {
+    const onKeyDown = jest.fn();
+    renderMenu({onKeyDown});
+
+    fireEvent.keyDown(trigger(), {key: 'Escape'});
+
+    expect(onKeyDown).toHaveBeenCalled();
   });
 
   it('says so when the image cannot be made', async () => {
@@ -81,6 +107,6 @@ describe('SaveTreeImageMenu', () => {
     expect(
       screen.getByText("Couldn't save an image of your tree. Please try again.")
     ).toBeInTheDocument();
-    expect(downloadImage).not.toHaveBeenCalled();
+    expect(downloadBlobAsPng).not.toHaveBeenCalled();
   });
 });
