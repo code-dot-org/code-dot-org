@@ -318,6 +318,49 @@ below, and are listed last.
 - **Untested**: the white text's contrast on each getter colour, and what a
   screen reader says of a chip inside the hat.
 
+### An actor's drawing and steps on pages (DRAWING_PAGE_PLAN.md)
+
+- **Every frame is a headed list on the Blocks tab**, as Events and Blocks
+  are: each step a list item that says its name and its moment in words
+  ("blink", "each frame, during react"), with Edit and Delete named for it
+  ("Edit blink"). New step opens the new one's page; back puts focus on its
+  Edit; a delete asks first and puts focus on the step that took its
+  place, else New step.
+- **A step's page is the rule's** (`StepPageView`): focus on its heading,
+  the name a labelled field with Enter saving and Escape not, when it runs
+  a labelled dropdown with the moment's summary below in words.
+- **The drawing's page takes focus on its heading** ("Drawing: Ball"),
+  with one sentence under it saying what the size means.
+- **Its size is in sockets on the head**, which only Blockly reaches, as
+  any block's socket is. There is no field outside the workspace for it.
+  (2.1.1 Keyboard holds as far as Blockly's keyboard does.)
+- **The Look tab's drawing controls are buttons and a sentence**: Edit
+  drawing, Draw its own or Draw it, Draw as a ⟨Label⟩, and "Drawn as a
+  Label is." as text. Giving up a drawing and choosing a picture over one
+  ask first.
+- **Draw as a ⟨Label⟩ removes the button that had focus**, so focus moves
+  to Draw its own, which takes its place. Found writing this entry, and
+  closed; seen in the browser. (2.4.3 Focus Order.)
+- **Untested**: no screen reader; the keys only by tests and a headless
+  browser.
+
+### An actor's tweens on pages (TWEENS_AS_DATA_PLAN.md)
+
+- **Tweens is a headed list on the Blocks tab**, after Every frame and in
+  the same component: each tween's name and how long it takes in words
+  ("fade away", "over 1 second"), Edit and Delete named for it. Back from
+  its page puts focus on its Edit; a delete asks first, names the files
+  that play it, and puts focus on the tween that took its place, else New
+  tween.
+- **A tween's page takes focus on its heading** ("Tween: fade away"); its
+  name is a labelled field, Enter saving and Escape not. How long and the
+  curve are on the head, a socket and a Blockly dropdown, reached as any
+  block's are.
+- **`play tween` names another actor's tween by actor and name** ("Pad:
+  fade out"), so two tweens of one name on two actors read apart.
+- **Untested**: no screen reader; the keys only by tests and a headless
+  browser.
+
 ## Not yet done for any phase
 
 - A keyboard-only pass through the shell: the breadcrumb, the palette, the

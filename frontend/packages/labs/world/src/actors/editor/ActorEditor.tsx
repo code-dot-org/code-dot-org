@@ -647,7 +647,17 @@ export const ActorEditor = (props: CustomEditorProps) => {
     const rest = {...data};
     delete rest.drawing;
     edit(rest);
+    // The button pressed is gone; Draw its own takes its place, and focus.
+    setFocusDrawOwn(true);
   };
+  const drawOwnButton = useRef<HTMLButtonElement>(null);
+  const [focusDrawOwn, setFocusDrawOwn] = useState(false);
+  useEffect(() => {
+    if (focusDrawOwn && drawOwnButton.current) {
+      drawOwnButton.current.focus();
+      setFocusDrawOwn(false);
+    }
+  });
 
   const removeOne = async (name: string) => {
     if (
@@ -705,6 +715,7 @@ export const ActorEditor = (props: CustomEditorProps) => {
           )}
           {!isReadOnly && (
             <Button
+              ref={drawOwnButton}
               variant="text"
               size="small"
               startIcon={
