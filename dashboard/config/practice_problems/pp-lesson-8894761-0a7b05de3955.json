@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894761-0a7b05de3955",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "When receiving feedback from an AI reviewer bot on your project, which of the following is the best first step to take?",
+  "solution": [
+    {
+      "option": "Accept all feedback without question.",
+      "correct": false
+    },
+    {
+      "option": "Identify which suggestions align with your project's goals.",
+      "correct": true
+    },
+    {
+      "option": "Ignore the feedback entirely.",
+      "correct": false
+    },
+    {
+      "option": "Ask a friend for their opinion before reviewing the feedback.",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "ab3c0320-90d8-45fb-9936-a6c2dee2a511"
+  ]
+}

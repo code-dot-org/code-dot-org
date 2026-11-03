@@ -1,0 +1,17 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-11-03T01:09:46.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "require_edit_to_continue": true,
+    "long_instructions": "TODOs:\r\n- Use the AI prompt input area.\r\n- Ask the AI to make a change to a specific section of your page.\r\n- Name one section of your page (e.g., 'hero', 'feature cards', 'call-to-action') in your prompt.\r\n- Describe what that named section is for or its purpose.\r\n- Submit your prompt to the AI.\r\n- Inspect your `index.html` and `style.css` files and the live preview for the AI's changes.",
+    "project_template_level_name": "new-adaptive-HoAI26-template-main-project-HoAI26",
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMoTnhOGnyF7ckkKb1Tn\nJo+tNlFh63Q7IYS3hDJXt2OL235Dm9eQTHiZsoum5cIDJXFpYcHtDlHt8z//\ni/mnpa5KJRqBA5P3FKyotDaf+VJOBUke0oOHr7z25C8CQn85Q1RKu4V2wlQf\nq1VuGBZKuXy51Z+wI9l8hpAxvfYF0hqWxkz1uwLhJG06m8t+bqV7k5UvSaOz\noqxsVvUB9DncnQDuKGPOgQ+YMayXs9wiCz0oGvcPx/Zt0gVJLYP7kvKJCviP\noyufhubtjy+/L9B98a6u8KCFyejvR0vt25uHuhE8USFTLxYMQMSu213wKnpj\njpgUbK8WGBZUsy4/b2054x5ebDckMFHap+LWLC+sY5vRhF0KOBeYVOlEjyWp\nUmzeIvM9v0TG0SthcAnI/mI5LVgsE9iV/zf2y30V+dTVVmOZaT0W9895f8lu\n2czf3FcAUaLD42ZVPaBypWVHVdGoYbKr2IMH4rteqQy8dkFJ2bQ5uZzK2cOM\nKFUiWL50KYKybTppDGq5nx8IXPdBQ0RrEC9aNDCLeQPc4GOxm8pr5IIuvVYY\nxgodLGEshlB+H9dwIkCo5D/gXimqEnQZZfyr4DWmc0Sxi2DS4rYIXfIlz4Y3\nE2AgWSfwVZnALhYD91YzItL8RKP8UdGHSlu7zDGwLcORLrJZwufVbbsetchC\nu0fy0keI7whd9G2fZWz3uKPDKmXu9Q8IGHrheL5xwoU+rktRK47xCOoq7319\ngzsaVzptmrq3I0C/uASm+ZV3p3zzfrnb/nkBgV5ioa//qhpREGDI/7okw/Dw\n2qOS9tTGKZx4LyiX9UemI/bas1HLkPCwDNQ0dMmWYxyU0IAUIDlbd2EHSvgN\nNxJdkrgUPk2HV9SN8VW+rkUxUPJigCCk9N8BIi+XFtO04WrnNEgl1u2oDBTt\nzH1DQKsvUmeGNTVxqeRxSktyXUUTvVBrOjr4PrZdYoXodsk2VMVzTX8BXluQ\nYQiFOep1UoqR/mviN8Dil4W9xZqTKJvVtv83L3VbXgWgCHPnpnvwsqwNzyc2\nh5c5rgeKt69zoj2cvRzsWiKZsmP/hx8TrKge79E2MiKDq0hQGsUyHEZ3oiuW\nNuB6gnpTsaCPfgQ6+8Jxh4IRwJiVm8npJjqkBf2PQXFlBjXrWdr8NTMg//mp\n069mWGlvPLu8Su/TSZuHuVo7RiGUuzvHtRPx/HeeWeZfOwTXmEo1Y9G7piLP\nSywNpWN5hQWP0FT3OH/unRLBAnH/1/kq1VBhbDDo+AiWoEXBjWW20hw0trbv\n+D3/y65lQCVV2TCsYKOZbTC7l73E+vxiqsot6YO7UmmKhAYw4AGNbev1ebq0\nAyqQZ2PCQDb+n+Cwk74rH35OVjiHMSRvYWQiYiN0j2R68yC6/tZ7wn5pMxri\noDIEReP48wyEDO27bJ+p4qzfdLI2CO2zvumiW9NgzXM1GfDyU1s+pEj1ow95\n2PXDdhVzg3rWCfFzx4Nfh3+QFdbRKuDwydquEdBgVC3YisTJrKbFrT2/WJUO\nfKsA4L6uiMt2n2SmQeQGE4nZxxZXPxo29SKQZ6X+hkqYMjtjOSB3SrPlZSzW\n8cHuT4DXwUJAdc1QoIQaV5aetFV31slydTufqDWfuRAcjTVzkr8p8+qqCVNR\nA/VSQHdC9N3KHnIRPV72iYuSaQqzwWqrZ383+EUyoN0+Yc83YEQ7JDq3DzE/\n455gc1a1mEKO6Wui2rlZKv5eog+EZXI6KTdUm4lzbDsCkP8G/ckGgIXipjQ2\n6edQhGReOPVCsf6Fa7dj6siSqcPBdnOKI6sLBfPDINi9b8Hx0cn3aHDWCIJ6\nitYkei0MEfpQ+E2opA==\n",
+    "generate_outline": "Apply the skill here by asking for a change that names one section of your page and says what it is for."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-03 01:09:51 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 01:09:51 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 01:09:53 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 01:09:54 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Weblab2>

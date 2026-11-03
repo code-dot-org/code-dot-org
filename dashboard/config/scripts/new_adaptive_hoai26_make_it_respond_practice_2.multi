@@ -1,0 +1,14 @@
+name 'new-adaptive-HoAI26-make-it-respond-practice-2'
+title 'TODO: title'
+description ''
+question 'Which sentence describes a rule for how a page works?'
+wrong 'The button is green.'
+wrong 'The title is at the top.'
+right 'If you click, a message shows.'
+wrong 'The count is 5 now.'
+
+markdown <<MARKDOWN
+Which sentence describes a rule for how a page works?
+MARKDOWN
+
+allow_multiple_attempts true

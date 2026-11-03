@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894764-563330fed229",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "What is the main purpose of building your own feedback tool in this lesson?",
+  "solution": [
+    {
+      "option": "To generate personalized feedback on your work.",
+      "correct": true
+    },
+    {
+      "option": "To create a chatbot for entertainment purposes.",
+      "correct": false
+    },
+    {
+      "option": "To write a report on AI technologies.",
+      "correct": false
+    },
+    {
+      "option": "To compare AI tools from different companies.",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "0e8689e4-f884-4cfc-b95f-94f6b3123bd4"
+  ]
+}

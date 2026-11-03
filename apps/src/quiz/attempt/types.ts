@@ -70,6 +70,7 @@ export type QuizQuestionResult = QuizQuestionResponse & {
   // The answer key, by question type; null when hidden.
   correctChoiceId?: string | null;
   correctChoiceIds?: string[] | null;
+  correctPairs?: [string, string][] | null;
 };
 
 // Unanswered questions are omitted.

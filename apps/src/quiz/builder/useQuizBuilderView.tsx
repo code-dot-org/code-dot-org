@@ -66,7 +66,8 @@ export default function useQuizBuilderView({
         quizTitle={quizConfig.displayName || levelProperties.name}
         showIntroScreen={quizConfig.showIntroScreen}
         customIntroText={quizConfig.customIntroText ?? ''}
-        hasTimeLimit={!!quizConfig.timeLimitMinutes}
+        timeLimitMinutes={quizConfig.timeLimitMinutes}
+        allowMultipleAttempts={quizConfig.allowMultipleAttempts}
         onSaveQuizConfig={saveQuizConfig}
       />
     ),

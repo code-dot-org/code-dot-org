@@ -1,0 +1,61 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-11-03T02:07:13.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "While a decision tree classifier just predicts a category, a Naive Bayes classifier uses probability to predict a category and calculate a probability for how likely the category is correct.\r\n\r\n**☑️ Do This:**\r\n\r\nRun the program and write a new one-sentence product review of your own. Look at what the classifier thinks is the probability that the review is positive or negative.\r\n\r\nTry a few different reviews of your own and come up with at least one of the following:\r\n- A review that the classifier is confident is positive (positive likelihood at least 70%)\r\n- A review that the classifier is confident is negative (negative likelihood at least 70%)\r\n- A review that the classifier is not sure about (both probabilities less than 70%)\r\n- A review that the classifier gets wrong (a positive review that the classifier thinks is negative, or a negative review that the classifier thinks is positive)\r\n\r\nLook at the words that make up your reviews. You’ll answer a question about them in the next level.\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "import csv\n\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.naive_bayes import MultinomialNB\n\nfrom helpers import get_features, get_vector\n\n# Read data\nf = open(\"reviews.csv\")\ndata = list(csv.DictReader(f))\nf.close()\n\n# Compute features and labels for data\nall_features = [get_features(row[\"review\"]) for row in data]\noutputs = [row[\"label\"] for row in data]\n\n\n# Get all unique words in dataset\nvocabulary = []\nfor features in all_features:\n  for word in features:\n    if word not in vocabulary:\n      vocabulary.append(word)\nvocabulary.sort()\n\n# For each input, compute feature values for all words in vocabulary\ninputs = []\nfor features in all_features:\n  inputs.append(get_vector(features, vocabulary))\n\n# Split data into training and testing sets\ntrain_inputs, test_inputs, train_outputs, test_outputs = train_test_split(\n  inputs, outputs, test_size=0.25, random_state=42\n)\n\n# Train model\nmodel = MultinomialNB()\nmodel.fit(train_inputs, train_outputs)\n\n# Test model on a new review\nnew_review = input(\"Enter a new review: \")\nnew_features = get_features(new_review)\nnew_vector = get_vector(new_features, vocabulary)\n\n# Show the model's probability for each label\nprobabilities = model.predict_proba([new_vector])[0]\nfor i in range(len(model.classes_)):\n  label = model.classes_[i]\n  percent = round(probabilities[i] * 100, 1)\n  print(label + \":\", str(percent) + \"%\")",
+          "folderId": "0",
+          "active": true
+        },
+        "1": {
+          "id": "1",
+          "name": "reviews.csv",
+          "contents": "review,label\n\"The headphones are a bit tight, but the sound is perfect.\",positive\n\"I use this lamp every night to study, easy on my eyes.\",positive\nTerrible customer service and the order was wrong.,negative\nArrived late and the box was crushed.,negative\nThe shoes were comfortable for a week and then fell apart.,negative\nThe app keeps crashing so the watch is useless.,negative\nI returned my old mouse for this one and I love it.,positive\nI returned it twice and it still never worked.,negative\n\"Fun for a day, then it broke.\",negative\n\"Super comfortable sneakers, I love wearing them to practice.\",positive\nShipping took a week but the shoes are worth the wait.,positive\n\"I love these headphones, the sound is amazing.\",positive\n\"Cheap plastic, the buttons stopped working.\",negative\nThe speaker sounds great until the battery dies.,negative\nThe backpack is comfortable even when it is full of books.,positive\nI love the color and the fit is perfect.,positive\n\"Took a while to get used to, but now I love it.\",positive\n\"The instructions were confusing, but the desk is great now.\",positive\n\"The cable is too short, total waste.\",negative\n\"Would not recommend, it never worked right.\",negative\n\"Totally worth it, my room looks amazing with these lights.\",positive\n\"Cheap price but great quality, totally worth it.\",positive\nThese earbuds feel cheap and broke after a week.,negative\nSoft grip and the buttons are easy to press.,positive\nThe hoodie is a little big but so soft and comfortable.,positive\nArrived early and I am so happy with it.,positive\nMy little brother and I have so much fun with this game.,positive\n\"Works great, would buy again.\",positive\n\"My favorite game this year, so fun with friends.\",positive\n\"The chair squeaks every time I move, disappointed.\",negative\nThe zipper broke on the first day of school.,negative\n\"The water bottle leaks, returned it the next day.\",negative\n\"I recommend this notebook, the paper feels amazing.\",positive\nThe screen is great but the battery is terrible.,negative\n\"The pens ran out of ink too fast, cheap quality.\",negative\nThe game is fun but full of annoying ads.,negative\nToo expensive and not worth the money.,negative\nThe sound is fine but the headphones are too tight.,negative\n\"Not comfortable at all, my feet hurt after practice.\",negative\n\"Comfortable jacket and it keeps me dry, I recommend it.\",positive\nThe battery lasts all day and the screen is amazing.,positive\nThe backpack strap ripped after a week.,negative\nEasy to clean and still looks new.,positive\n\"Looked amazing online, but the hoodie shrank after one wash.\",negative\n\"The game is hard at first, but it gets really fun.\",positive\n\"I recommend this charger, it is fast and worth it.\",positive\n\"Never got the lights to connect, what a waste.\",negative\nThe speaker is great and perfect for pool parties.,positive\nShipping was fast but the shoes broke after a month.,negative\n\"Easy to set up, but it stopped working after a month.\",negative\nFun colors and the pens write so smooth.,positive\n\"The headphones hurt my ears, not comfortable at all.\",negative\n\"The game crashes every time, so disappointed.\",negative\n\"Fun board game, easy to learn and great for game night.\",positive\n\"Waste of money, the lamp flickers every night.\",negative\nGreat sound for such a small speaker.,positive\nThe camera takes amazing pictures even at night.,positive\nThe controller stopped charging after a month.,negative\nThe keyboard is too loud and some keys stopped working.,negative\n\"The camera is blurry, very disappointed.\",negative\nSuch a comfortable chair for gaming all day.,positive\n\"I wanted to love this phone case, but it cracked and I returned it.\",negative\n\"Best purchase I made this summer, totally worth it.\",positive\nThe charger is fast and works great with my tablet.,positive\n\"Not what I expected, the fabric is scratchy and cheap.\",negative\n\"Great value, I am happy I bought two.\",positive\n\"Disappointed with the battery, it never lasts a full day.\",negative\n\"I was not sure at first, but these shoes are great for running.\",positive\n\"The case is not fancy, but it is perfect for protecting my phone.\",positive\n\"Worth every penny, my backpack still looks great after a whole year.\",positive\n\"The jacket is not waterproof, I got soaked.\",negative\nCheap price and even cheaper quality.,negative\nThe stickers peeled off after a few days.,negative\nMy little brother broke it after one day.,negative\nCute stickers and they are perfect for my laptop.,positive\n\"Happy with this keyboard, typing feels great.\",positive\nReturned it because the size was too big.,negative\n\"Love the design, but it gets way too hot.\",negative\nThe fan is too loud and I never use it.,negative\nIt looks nice but it feels cheap.,negative\nThe mouse stopped clicking after a week.,negative\n\"My mom is so happy with this blender, best gift ever.\",positive\n\"Small, soft, and comfortable, I wear this hoodie every day.\",positive\n\"Way too small, so I returned it.\",negative\n\"Not worth it, the charger stopped working after a week.\",negative\nThe lights look amazing in my room and were easy to hang.,positive\nEasy to set up and a perfect fit for my phone.,positive\n\"Happy with this water bottle, it keeps drinks cold all day.\",positive\n\"Disappointed, the colors look nothing like the picture.\",negative\n\"Best water bottle ever, I would recommend it to anyone.\",positive\nThe case is super bulky and does not fit in my pocket.,negative\nThe mouse is comfortable and perfect for my small hands.,positive\n\"Best earbuds I have owned, they never fall out.\",positive\n\"Terrible game, I never play it anymore.\",negative\n\"Not the cheapest option, but the camera is amazing.\",positive\nThe controller is so fun and easy to use.,positive\n\"The instructions were missing and the desk wobbles, terrible.\",negative\n\"The battery died after two days, total waste of money.\",negative\n\"These socks are soft and warm, perfect for winter.\",positive\n\"My dog loves this toy, best one we have bought.\",positive",
+          "folderId": "0",
+          "active": false
+        },
+        "2": {
+          "id": "2",
+          "name": "helpers.py",
+          "contents": "import re\n\n\ndef tokenize(text):\n    return re.findall(r\"\\w+\", text.lower())\n\n\ndef get_features(text):\n    counts = {}\n    for word in tokenize(text):\n        if word in counts:\n            counts[word] = counts[word] + 1\n        else:\n            counts[word] = 1\n    return counts\n\n\ndef get_vector(features, vocabulary):\n    vector = []\n    for word in vocabulary:\n        if word in features:\n            vector.append(features[word])\n        else:\n            vector.append(0)\n    return vector",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-03 02:07:51 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>

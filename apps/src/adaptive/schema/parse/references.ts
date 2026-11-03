@@ -1,11 +1,13 @@
 // Checks the schemas alone cannot make: skill references, checkpoint graph
-// shape, question and choice ids, branch conditions, each level played by at
-// most one step, and whether each level step's `project` flag agrees with the
-// level the server resolved for it.
+// shape, question and choice ids, branch conditions, plan slots, each level
+// played by at most one step, and whether each level step's `project` flag
+// agrees with the level the server resolved for it.
 
 import {z} from 'zod';
 
 import {pathwaySchema, pathwaySourceSchema} from '../pathway';
+import {planTemplateSlots} from '../planTemplate';
+import {OTHER_CHOICE_ID} from '../question';
 
 // A source has no resolved levels, so its project flags go unchecked.
 type Pathway =
@@ -21,6 +23,7 @@ export function findReferenceProblems(pathway: Pathway): string[] {
     ...findCheckpointProblems(pathway),
     ...findQuestionProblems(pathway),
     ...findBranchProblems(pathway),
+    ...findPlanProblems(pathway),
     ...findLevelReuseProblems(pathway),
     ...findLevelStepProblems(pathway),
     ...findEvidenceProblems(pathway),
@@ -29,7 +32,8 @@ export function findReferenceProblems(pathway: Pathway): string[] {
 
 /**
  * Detects question ids used more than once, and multiple choice questions
- * whose choice ids repeat or whose correct choice is not among them.
+ * whose choice ids repeat, take the typed answer's id, or whose correct
+ * choice is not among them.
  */
 function findQuestionProblems(pathway: Pathway): string[] {
   const problems: string[] = [];
@@ -53,6 +57,11 @@ function findQuestionProblems(pathway: Pathway): string[] {
         for (const id of repeated) {
           problems.push(`${where}: choice id '${id}' is used more than once`);
         }
+        if (choiceIds.has(OTHER_CHOICE_ID)) {
+          problems.push(
+            `${where}: choice id '${OTHER_CHOICE_ID}' is reserved for a typed answer`
+          );
+        }
         const {correctChoiceId} = question;
         if (correctChoiceId !== undefined && !choiceIds.has(correctChoiceId)) {
           problems.push(
@@ -73,7 +82,8 @@ function findQuestionProblems(pathway: Pathway): string[] {
 /**
  * Detects branch conditions that can never be met: `showIf` must name an
  * earlier questions step in the same checkpoint, a multiple choice question
- * in it, and one of that question's choices.
+ * in it, and one of that question's choices, or the typed answer where the
+ * question allows one.
  */
 function findBranchProblems(pathway: Pathway): string[] {
   const problems: string[] = [];
@@ -102,12 +112,54 @@ function findBranchProblems(pathway: Pathway): string[] {
         );
         return;
       }
-      if (!question.choices.some(c => c.id === choiceId)) {
+      const allowed =
+        question.choices.some(c => c.id === choiceId) ||
+        (choiceId === OTHER_CHOICE_ID && !!question.allowOther);
+      if (!allowed) {
         problems.push(
           `${where}: '${choiceId}' is not one of question ${questionId}'s choices`
         );
       }
     });
+  }
+  return problems;
+}
+
+/**
+ * Detects plan slots that do not line up: every slot a checkpoint's plan
+ * template names must be filled by a plan question in the checkpoint, and
+ * every plan question must fill a slot the template names.
+ */
+function findPlanProblems(pathway: Pathway): string[] {
+  const problems: string[] = [];
+  for (const checkpoint of pathway.checkpoints) {
+    const where = `checkpoints.${checkpoint.id}`;
+    const slots = checkpoint.plan
+      ? planTemplateSlots(checkpoint.plan.template)
+      : [];
+    const filled = new Set<string>();
+    for (const step of checkpoint.steps) {
+      if (step.kind !== 'questions') continue;
+      step.questions.forEach((question, index) => {
+        if (!question.plan) return;
+        const at = `${where}.steps.${step.id}.questions.${index}.plan`;
+        if (!checkpoint.plan) {
+          problems.push(`${at}: the checkpoint has no plan template`);
+        } else if (!slots.includes(question.plan)) {
+          problems.push(
+            `${at}: the plan template has no slot '{${question.plan}}'`
+          );
+        }
+        filled.add(question.plan);
+      });
+    }
+    for (const slot of slots) {
+      if (!filled.has(slot)) {
+        problems.push(
+          `${where}.plan.template: no plan question fills '{${slot}}'`
+        );
+      }
+    }
   }
   return problems;
 }
@@ -379,6 +431,7 @@ function findEvidenceProblems(pathway: Pathway): string[] {
           );
         }
         const choiceIds = new Set(question.choices.map(c => c.id));
+        if (question.allowOther) choiceIds.add(OTHER_CHOICE_ID);
         for (const [choiceId, evidenceLevel] of Object.entries(
           measures.evidenceLevels
         )) {

@@ -7,7 +7,17 @@ export type MatchSets = NonNullable<QuizQuestionSummary['matchSets']>;
 export type MatchSide = 'start' | 'end';
 
 // A pair is [start id, end id].
-export type MatchPairs = [string, string][];
+export type MatchPair = [string, string];
+
+export type MatchPairs = MatchPair[];
+
+export type PairStatus = 'correct' | 'incorrect';
+
+// A pair as a board draws it; status is absent when there is no key.
+export interface MarkedPair {
+  ids: MatchPair;
+  status?: PairStatus;
+}
 
 // At most one selected item per column; a pair forms once both are set.
 export type MatchSelection = Partial<Record<MatchSide, string>>;

@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894914-22448058c5fa",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "Which of the following best describes a key step in developing a future prediction using AI?",
+  "solution": [
+    {
+      "option": "Collecting data and conducting research to inform the prediction.",
+      "correct": true
+    },
+    {
+      "option": "Ignoring AI suggestions to rely solely on personal intuition.",
+      "correct": false
+    },
+    {
+      "option": "Only using data from social media without further validation.",
+      "correct": false
+    },
+    {
+      "option": "Making predictions based on popular opinions without research.",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "ab68d50b-9d85-4b9b-a10c-36becf209e7d"
+  ]
+}

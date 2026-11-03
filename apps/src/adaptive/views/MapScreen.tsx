@@ -16,6 +16,7 @@ import {Pathway} from '../types';
 import CheckpointCard from './CheckpointCard';
 import {resolveMapSettings} from './map/mapSettings';
 import MapView from './map/MapView';
+import MapZoom from './map/MapZoom';
 import ProjectCard from './ProjectCard';
 
 import styles from './mapScreen.module.scss';
@@ -33,6 +34,9 @@ import {
 } from './skillMapTourHelpers';
 import {tryGetLocalStorage} from '@cdo/apps/utils';
 /* eslint-enable import/order */
+
+// Percentages of the size at which the whole map fits.
+const ZOOM_PERCENTAGES = [100, 150, 200, 300];
 
 const THEME_ITEMS = [
   {value: 'Light', text: 'Light'},
@@ -194,23 +198,35 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
               &nbsp;Back to map
             </MuiButton>
           )}
-          <MapView
-            pathway={pathway}
-            statusMap={statusMap}
-            settings={mapSettings}
-            focusId={focusId}
-            tourFocusIds={tourFocusIds}
-            onSelect={id => {
-              if (tourEnabled && tourStep === tourStepIndices.pickCheckpoint) {
-                if (statusMap[id] !== 'locked') {
-                  setTourCheckpointId(id);
-                  stepsRef.current?.introJs?.nextStep();
+          <MapZoom
+            zoomPercentages={ZOOM_PERCENTAGES}
+            startLevel={0}
+            fit="whole"
+            // A viewer's zoom would move nodes out from under the tour's spotlight.
+            disabled={!!focusId || tourEnabled}
+            controlsClassName={styles.mapZoom}
+          >
+            <MapView
+              pathway={pathway}
+              statusMap={statusMap}
+              settings={mapSettings}
+              focusId={focusId}
+              tourFocusIds={tourFocusIds}
+              onSelect={id => {
+                if (
+                  tourEnabled &&
+                  tourStep === tourStepIndices.pickCheckpoint
+                ) {
+                  if (statusMap[id] !== 'locked') {
+                    setTourCheckpointId(id);
+                    stepsRef.current?.introJs?.nextStep();
+                  }
+                } else {
+                  onFocus(id === focusId ? undefined : id);
                 }
-              } else {
-                onFocus(id === focusId ? undefined : id);
-              }
-            }}
-          />
+              }}
+            />
+          </MapZoom>
         </div>
         <aside id="adaptive-tour-side" className={styles.side}>
           {focused ? (
