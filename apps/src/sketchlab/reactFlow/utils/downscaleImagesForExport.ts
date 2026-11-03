@@ -1,0 +1,85 @@
+// html-to-image inlines every <img> as base64 at its original resolution, so a
+// sketch can balloon in size with multiple images. Swap each oversized image for one drawn at the
+// size the export will actually show, and put the originals back afterwards.
+
+const JPEG_SOURCE_PATTERN = /^data:image\/jpeg|\.jpe?g(\?|$)/i;
+const JPEG_QUALITY = 0.85;
+
+const downscaledDataUrl = (
+  image: HTMLImageElement,
+  outputScale: number
+): string | undefined => {
+  // offsetWidth is the layout size, unaffected by the canvas zoom transform.
+  const boxWidth = image.offsetWidth * outputScale;
+  const boxHeight = image.offsetHeight * outputScale;
+  const {naturalWidth, naturalHeight} = image;
+  // Only load images that are complete and have non-zero layout and natural sizes.
+  // If we return undefined, html-to-image will fall back to fetching the full file.
+  if (
+    !image.complete ||
+    !boxWidth ||
+    !boxHeight ||
+    !naturalWidth ||
+    !naturalHeight
+  ) {
+    return undefined;
+  }
+
+  const fit = Math.min(boxWidth / naturalWidth, boxHeight / naturalHeight);
+  if (fit >= 1) {
+    return undefined;
+  }
+  const targetWidth = Math.max(1, Math.round(naturalWidth * fit));
+  const targetHeight = Math.max(1, Math.round(naturalHeight * fit));
+  const canvas = document.createElement('canvas');
+  canvas.width = targetWidth;
+  canvas.height = targetHeight;
+  try {
+    const context = canvas.getContext('2d');
+    if (!context) {
+      return undefined;
+    }
+    context.imageSmoothingQuality = 'high';
+    context.drawImage(image, 0, 0, targetWidth, targetHeight);
+    const dataUrl = JPEG_SOURCE_PATTERN.test(image.src)
+      ? canvas.toDataURL('image/jpeg', JPEG_QUALITY)
+      : canvas.toDataURL('image/png');
+    // Safari returns "data:," instead of throwing when it cannot encode the canvas.
+    return dataUrl.startsWith('data:image/') ? dataUrl : undefined;
+  } finally {
+    // Safari holds canvas memory until garbage collection unless the canvas is emptied.
+    canvas.width = 0;
+    canvas.height = 0;
+  }
+};
+
+// Returns a function restoring the sources this replaced.
+export const downscaleImagesForExport = (
+  root: HTMLElement,
+  outputScale: number
+): (() => void) => {
+  const swaps = new Map<
+    HTMLImageElement,
+    {original: string; replacement: string}
+  >();
+  Array.from(root.querySelectorAll('img')).forEach(image => {
+    let replacement: string | undefined;
+    try {
+      replacement = downscaledDataUrl(image, outputScale);
+    } catch (error) {
+      return;
+    }
+    if (replacement) {
+      const original = image.src;
+      image.src = replacement;
+      swaps.set(image, {original, replacement: image.src});
+    }
+  });
+  // A source that changed during the capture was set by the app, so it stays.
+  return () =>
+    swaps.forEach(({original, replacement}, image) => {
+      if (image.src === replacement) {
+        image.src = original;
+      }
+    });
+};

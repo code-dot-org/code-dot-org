@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894782-83b13bb151b6",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "Which of the following is a key step in creating a machine learning model using a real-world dataset?",
+  "solution": [
+    {
+      "option": "Selecting the appropriate dataset",
+      "correct": true
+    },
+    {
+      "option": "Running the app without a model",
+      "correct": false
+    },
+    {
+      "option": "Skipping data preprocessing",
+      "correct": false
+    },
+    {
+      "option": "Using random data",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "1463b646-d0f1-435a-844e-8ce7555f2656"
+  ]
+}

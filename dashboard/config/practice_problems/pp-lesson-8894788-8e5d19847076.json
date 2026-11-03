@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894788-8e5d19847076",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "Which of the following is the first step in the Problem Solving Process when designing an AI app for social good?",
+  "solution": [
+    {
+      "option": "Identifying the problem",
+      "correct": true
+    },
+    {
+      "option": "Evaluating the solution",
+      "correct": false
+    },
+    {
+      "option": "Implementing the solution",
+      "correct": false
+    },
+    {
+      "option": "Testing the app",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "51d391ed-7cba-45f6-88f1-dd3eebdd4797"
+  ]
+}

@@ -3,7 +3,7 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import RadioButton from '@code-dot-org/component-library/radioButton';
 import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import TextField from '@code-dot-org/component-library/textField';
-import {IconButton, Typography} from '@mui/material';
+import {IconButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {useId} from 'react';
 
@@ -11,7 +11,10 @@ import AddItemButton from '../AddItemButton';
 import {QUESTION_TYPE_LABELS_ICONS} from '../constants';
 import {ChoiceQuestionDraft, isMultipleSelectDraft} from '../types';
 
+import FieldGroup from './FieldGroup';
+
 import styles from './quiz-question-card.module.scss';
+import builderCommonStyles from '../builder-common.module.scss';
 
 // ChoiceQuestion#validate_choices rejects fewer than 2 choices.
 const MIN_CHOICES = 2;
@@ -29,22 +32,6 @@ function nextChoiceId(existingIds: string[]): string {
   }
   return String(n);
 }
-
-// Labels a group of controls; each control keeps its own accessible name.
-const FieldGroup: React.FunctionComponent<{
-  label: string;
-  className?: string;
-  children: React.ReactNode;
-}> = ({label, className, children}) => (
-  <fieldset className={classNames(styles.fieldGroup, className)}>
-    <legend className={styles.fieldGroupLabel}>
-      <Typography variant="label3" component="span">
-        {label}
-      </Typography>
-    </legend>
-    {children}
-  </fieldset>
-);
 
 interface ChoicesEditorProps {
   draft: ChoiceQuestionDraft;
@@ -163,7 +150,7 @@ const ChoicesEditor: React.FunctionComponent<ChoicesEditorProps> = ({
                     size="s"
                     color="gray"
                     className={classNames(
-                      styles.fullWidthField,
+                      builderCommonStyles.fullWidthField,
                       styles.optionText
                     )}
                     value={choice.text}
@@ -174,6 +161,7 @@ const ChoicesEditor: React.FunctionComponent<ChoicesEditorProps> = ({
                 <IconButton
                   aria-label="Delete choice"
                   size="small"
+                  variant="text"
                   color="error"
                   type="button"
                   disabled={disabled || draft.choices.length <= MIN_CHOICES}

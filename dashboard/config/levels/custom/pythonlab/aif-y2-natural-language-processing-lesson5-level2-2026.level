@@ -1,0 +1,37 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-11-03T00:06:27.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "aif-y2-natural-language-processing-lesson5-2026 + template",
+    "long_instructions": "Every video got “pan” as its keyword, the most frequent word in each transcript. A good keyword is also rare in the other videos. A term’s tf-idf multiplies its term frequency by its inverse document frequency, the number of videos divided by the number of videos that use the term.\r\n\r\n**☑️ Do This:**\r\n\r\n- Complete `inverse_document_frequency`. Given a term and the list of videos, it should return the number of videos divided by the number of videos whose tokens include the term.\r\n- Update `score` so that it returns the term’s tf-idf.\r\n- Run the program. Each video should now get a keyword of its own.\r\n\r\n**💻 Coding Tip**\r\n\r\nA check such as `\"pan\" in video[\"tokens\"]` tells you whether one video uses a word; your function checks each video for `term`. `len(videos)` is the number of videos. Once your function works, `inverse_document_frequency(\"pan\", videos)` returns `1.0`, because “pan” appears in all three transcripts, and a word found in only one video returns `3.0`.\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "debug",
+        "documentation",
+        "explainCode",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFX9JcY0EP21afMHISj6uVQg4g+59OIzUb4pa2W4J\nrpgF4fJi2rLr0nr8WnSVq0386eA0D+Fr2XW/3W5uJDibTY5sZ1N7w7STZIi4\nGabOyaC2Jp2yrPWcEfVSwVuZdzmYvV7mx5BAP8hPGTna5/79fiAi3leDBeVm\nFyIKpvYXAV2M3mR4wETuu7Epxq2mS3XmLXmiQG+jJTxTNGPjzmkDXZYTeJIK\ncAaJ1PXVhqyjFhw6wceWrKM8PZE/bLIz9tRk3nUdYGJxYEZobwUFY0npPa0d\nztAs87XrSTtDWlYeEoejpKAN3LUW2y+e/+L86Yj9ZhFU/SKRxpLcB01PhZ6t\nCd7pYkDOlC/Ie3yBBsZPpvlR9DoRd/gWrA9qxFsvScZ9O7MnvXQu7w0m0S4I\nsuOHrMqQmks5uENPQE0msdM0bEr6cMMYEY9uG1ABV/gmX54VnLvP4maURhMK\na/kHSbCRl3JAd4DIppNxR3fB13gMuJ+b2ZHhXNQjmTvqtdvOYtFudRwa+ikX\nbnTOZ6Uz7b1Czq6gia0hNoD0a/V9ljmnV2eDk/zfsot4nVACujopSz688jiM\n7k+2hXxzWT1sGhHvoGOp2+1amtUsh6j75RfI04/sy2Ir6ZOFImytjjB0sF4l\nlcK262eowhDqp9EBbEuc0iZISCAl+8CgAcoOSXJpDAAx/0jHPVvpItlM6I83\n+xaIs2opEyD3Hzf9hbu3IO7L18zh6afYAIHOMIdLLUz30kd45T2Ke4LVTuib\nOLK5nbPVNj5blpTCnDYTnKolXw2rtnEihlhkODBY+XT5cGiQBvX+DhGk9jEm\nDxlqDQ8jl0G966MN8B86dOu6D19XmWAdxdTGUu45HX7P7tpxuC/NFhhOXdqK\nxQOznvPdv+d5sYh1pG/5Wyf9cmjz70Qbs8Ec7dFe6uYfI5V/JZSZCnqVpnRE\ntsl/An+OOJJKv07MEwHi0VVPb435ulBZ5KFUgldxuHBcnsQ1pw9ibKNlNRvn\nCvNMYlAvMOWezRe1zHQcdBd6j+ju8N9Z0RYPSD6yz5q1OIl+M0JnFgT/6kGG\nqFGiZjDH7SqEeMbYBJ6ng+peuz0D9b0KB/49yO2e8evmLOgcfc//xXH7Dquy\np2ycHFrtduPo6QL9NNJNGCARqyxhLYSG/EX8T/somRb0KFJJHOehTX+uj8N9\n75JswPm5KM0m/OTZ3b8ZyJw5oYpwiaTHGJZoWrMtHCnccWnPT1+EWKMOiuMx\nZT1oaYMSLVjy+kwmd4Z5eH7Xg6Y4Q1zZDaLstIemPEdVm65EzuJvWSUDzYjF\nbcKpqMN5f09Bne2W39eaP5A6YY9nUDMV2XN/9zwq3Ehd6J/e7Z8s8bhbXTmx\nIQCq/KLzjvzMLbIud5AcWua8vuAJA9799/Fx0qpaINJW9m9RLR7uorUGxCef\n4qSAcOB8GneP2EEF7VVKXUo1QK6Giqe7Lq05e8ccnCuiBu69hhy5UuznnxzX\nkYo1k0HBtHb9yxVZdakevK9oNHr/VOhddfWRd+8WJzG6CFCEyauWM0L7ctjK\nivdS8xJctifvdpvmH1t1tj8WbyaF0mUQaOUnzkjkw6Wz7ny6f5aCBxu72ywz\nYsGsFFXIchmTqlJVC5pJDc73JpOF/gaN45HagqzrG7SBx11QCqycvxfy1ggh\nylZK6dO05WYDe5Bo/XY1sRliwdRDieczkOPyvADNxyxWr5cYeET7mY3ufY5L\nn0RE2pGcfj9P1OXfEfairoylc5lY2K2TVQv/y/wkGJldqyegDWTljiAZU8F4\nR4A12xcPqOrJOEbRzj7H7y/jmNxa1qZuf9aiRv2rxeq5Agt27y0n2wzlL4RL\n1OgVpitrb36gT3MT8LAGaISizsuI/UPk3lYb3I1DnAVGrguPQ7AIWjcdZMpE\nOYMGX/hnUkwDGzZLu6hqGkuPdLP5zHncQ0ZAdX4q89gQl7qMqBSNlIIk93bg\nfEGC3Iqpj5TxKF+ZNc5bKqCCXgWBI5tfUjqv2vBmeHlvkv1ifXgI1TVzrt0M\nPhhslrfjFoEyyXhUxSbXbv8n5VqIWr0yl25kOfcqfjIqH5ym1ZPeNgyfiSP9\nXofyPpZUe8To3jFZkIBgF3Ezj5L7U84t/CcDr28yHgzZOgEzJIwgNgssKmwq\nb334C6mgmlNUr0TnJOUVy/MJbfOI45u85wzVGnwQmy2hK3fpLMhjDwwUAOQT\nDPyrn/PzjbpCPYy8p9Hz8qGan5e5F8PFEn9VZRFQiQMo3NfmuNaV/KwToxRl\nK4ISjBn8uiPYM7DqJDed1DxJCE4wzjwb2oJRk+kNWxSgd8RFcdOq6Bpnv0Rs\nd2yYzAmxXk+BgJYy9tYc1aHqgV6tBcxc1bJIzsXgcTVlmM4YiuKUcFhnaKkY\nCjwwcY4o+anp9yxOUhKsbmVMG8jE7NBuCtB+oMKAgTWJ56SUOF04cGYFUuJb\nPbLJdYjG5LWgnS0cfKZt4KpC1eJfgl/1KEs5wzAli18nk517VtF9QCGNdoIJ\nl4s1TbOtCCQ4nFiHxUIYiY2I5SUOTgI+C0nBMZgX2Nt3LiRw2jXpJbouM1fF\nPuNzbdLFkiKuceLgfXVS4aGKGi3fe32JY0XeiMTzaBOYaJbyaXyWhFBlHyyg\n+9lnlgAdtpkqJbyGH0HcnHbWX8xm7svL7naFnXh3jfLOSZbfy+1k9XssdYYt\nFvgmEG4/cspsHFn+rQNS4mrykE2x/I/GYKD5UlGLU8hangO+Jwa3d22rlOou\nCW0sN8++dUqjIK6qebXmPvLApzgx4AvnngwlUudXdzyTQcnkY/d5LCzjHudi\nADas47s3CLGrwfBIvtaGzRLTR4NLYHoNmsQPmQDVX1BG3N5sbaM4jg0CMyne\nVQ/PFtwlHjw5XYNObjmd6k4C2JASsdPxH/s/FM6rzyf7dwkaDwbSUkps+GxA\nGHF2FdQDyQtyXJp1QAqHfORCXbr7reIun2Frn5e0xO/p4R8e6LDorVcDK+wH\npeBV9EPfljpv0r36Rzf1d9oRC8+FHtApbN0IiI/bL3y3avMuEWtxlvGTofC4\nKenRzGTnkh8qNEL3ZVwCTrw948o/QCLnRDcwd5zKQ6Y/n/EzBHbKl5lK9cff\nbsFlXfbWK0ONR5fS/PDvMgS1M43/K6IfWNkJx4htx/ec9kwDnGAekuLmIM6T\nobdxKDSqDgftHv+Apwr9H8gD6PoYeI4YG+DVz/Z06N8wowPlSKmNVj5xrIFa\n/jFmm2H73Ekj/thQcFPiibljzP9BWy3B9W1jsyqNVTP7kDePzkzeteHuHyKc\nbvcFWU3Lh7FReiedI0POVod6ZnkE6VDBvTf5/CX5JmR2RkdsRwlqvqCQIRQJ\nxUq28A21UngF7Swa2ShKHHAfoKEx8O8EpjXnZ35X5qQb2I+0rWfZjd0r+rOG\nd/RIbgFptTZvmpHBNZYs4q5j2uAToRgu/VjCaDRtJfkDKcM4RK47z33uWY9Q\ngrz9oPtinqJ4pXq5am2wTKqL4sFAHcLTChVIMSc9\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-03 00:11:43 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-03 00:12:05 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

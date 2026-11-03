@@ -20,21 +20,10 @@ import {useBrowserTextToSpeech} from '../sharedComponents/BrowserTextToSpeechWra
 import EnhancedSafeMarkdown from '../templates/EnhancedSafeMarkdown';
 import {commonI18n} from '../types/locale';
 
+import {PANEL_CONTROLS_HEIGHT, fitPanel} from './fitPanel';
 import {DEFAULT_PANEL_LINK_WIDTH, Panel, PanelLink} from './types';
 
 import styles from './panelsView.module.scss';
-
-// Leave a margin to the left and the right of the panels, to the edges
-// of the screen.
-const horizontalMargin = 40;
-
-// Leave a vertical margin above and below the panels, to the edges of the
-// screen.
-const verticalMargin = 50;
-
-// We need room below the panels content for the children passed in.  This area
-// can contain things like a Continue button.
-const childrenAreaHeight = 70;
 
 interface PanelsProps {
   panels: Panel[];
@@ -81,6 +70,7 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
     number | undefined
   >(undefined);
   const [typingDone, setTypingDone] = useState(false);
+  const [buttonVisible, setButtonVisible] = useState(false);
   const {cancel} = useBrowserTextToSpeech();
 
   const contentRef: MutableRefObject<HTMLDivElement | null> = useRef(null);
@@ -88,24 +78,10 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
   const lastPanelStartTime = useRef<number>(Date.now());
   const nextButtonRef = useRef<HTMLButtonElement>(null);
 
-  targetWidth -= horizontalMargin * 2;
-  targetHeight -= verticalMargin * 2 + childrenAreaHeight;
-
-  const [width, height] = useMemo(() => {
-    let width, height;
-
-    // The aspect ratio of the panels.
-    const contentAspectRatio = 16 / 9;
-
-    if (targetWidth / targetHeight > contentAspectRatio) {
-      height = targetHeight;
-      width = contentAspectRatio * height;
-    } else {
-      width = targetWidth;
-      height = width / contentAspectRatio;
-    }
-    return [width, height];
-  }, [targetWidth, targetHeight]);
+  const {width, height} = useMemo(
+    () => fitPanel(targetWidth, targetHeight),
+    [targetWidth, targetHeight]
+  );
 
   const changePanel = useCallback(
     (index: number, source: 'button' | 'bubble') => {
@@ -124,6 +100,11 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
   );
 
   const handleButtonClick = useCallback(() => {
+    // The button's fade-in blocks pointer events only, so a keypress could
+    // otherwise activate it while it is still invisible.
+    if (!buttonVisible) {
+      return;
+    }
     // In link mode the button leaves the level; between-panel navigation
     // goes through links only.
     if (!useLinks && currentPanelIndex < panels.length - 1) {
@@ -138,6 +119,7 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
       onContinue(panels[currentPanelIndex].nextUrl);
     }
   }, [
+    buttonVisible,
     useLinks,
     changePanel,
     panels,
@@ -192,6 +174,12 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
     setTypingDone(false);
   }, [currentPanelIndex, setTypingDone]);
 
+  // Must change only when the container's key does, so the button remounts
+  // and its fade-in replays to set this again.
+  useEffect(() => {
+    setButtonVisible(false);
+  }, [currentPanelIndex, levelId]);
+
   const panel = panels[currentPanelIndex];
   const showTyping =
     panel?.typing || queryParams('panels-show-typing') === 'true';
@@ -203,10 +191,10 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
   const showButton = (!showTyping || typingDone) && buttonEligible;
 
   useEffect(() => {
-    if (showButton) {
+    if (showButton && buttonVisible) {
       nextButtonRef.current?.focus();
     }
-  }, [showButton, currentPanelIndex]);
+  }, [showButton, buttonVisible, currentPanelIndex]);
 
   if (!panel) {
     return null;
@@ -329,7 +317,7 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
       </div>
       <div
         className={styles.childrenArea}
-        style={{width: width, height: childrenAreaHeight}}
+        style={{width: width, height: PANEL_CONTROLS_HEIGHT}}
       >
         {showButton && (
           <MuiButton
@@ -342,6 +330,11 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
             )}
             id="panels-button"
             onClick={handleButtonClick}
+            onAnimationEnd={event => {
+              if (event.target === event.currentTarget) {
+                setButtonVisible(true);
+              }
+            }}
             type="button"
             ref={nextButtonRef}
             key={`button-${currentPanelIndex}`}

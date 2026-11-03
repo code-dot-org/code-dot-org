@@ -1,0 +1,16 @@
+name 'aif-y2-natural-language-processing-preassessment-q15-2026'
+
+wrong 'The words removed from a text before analysis'
+right 'A collection of written material'
+wrong 'A dictionary of words and their counts'
+wrong 'A model that predicts the next word'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+What is a corpus?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 12: Text Corpora
+MARKDOWN

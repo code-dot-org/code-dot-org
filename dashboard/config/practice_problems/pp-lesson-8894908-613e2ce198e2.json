@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894908-613e2ce198e2",
+  "problem_type": "multiple_choice_multi_select",
+  "active": true,
+  "problem_text": "Which of the following strategies can help reduce AI hallucinations? (Select all that apply.)",
+  "solution": [
+    {
+      "option": "Regularly update the training data for the AI.",
+      "correct": true
+    },
+    {
+      "option": "Limit the AI's access to the internet.",
+      "correct": false
+    },
+    {
+      "option": "Implement fact-checking tools alongside AI responses.",
+      "correct": true
+    },
+    {
+      "option": "Encourage user feedback to improve AI accuracy.",
+      "correct": true
+    }
+  ],
+  "objective_keys": [
+    "bc93eee0-d7fd-43c8-838e-e14489b53d4e"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894758-9127ef8de530",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "Which of the following statements best describes how a Large Language Model (LLM) generates text?",
+  "solution": [
+    {
+      "option": "It understands the meaning of the text it generates.",
+      "correct": false
+    },
+    {
+      "option": "It predicts the next word based on patterns from previous text.",
+      "correct": true
+    },
+    {
+      "option": "It creates original ideas without any prior text.",
+      "correct": false
+    },
+    {
+      "option": "It analyzes the emotions behind words to form sentences.",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "b390a6d6-7f12-41e5-94df-5ab64033d684"
+  ]
+}

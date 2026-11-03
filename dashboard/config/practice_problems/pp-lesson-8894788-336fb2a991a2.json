@@ -1,0 +1,31 @@
+{
+  "key": "pp-lesson-8894788-336fb2a991a2",
+  "problem_type": "match",
+  "active": true,
+  "problem_text": "Match each step of the Problem Solving Process with its description.",
+  "solution": [
+    {
+      "option": "Identify the problem",
+      "correct": "Recognizing an issue that needs to be addressed"
+    },
+    {
+      "option": "Research the problem",
+      "correct": "Gathering information about the issue"
+    },
+    {
+      "option": "Develop Solutions",
+      "correct": "Creating potential solutions to the problem"
+    },
+    {
+      "option": "Implement the Solution",
+      "correct": "Putting the chosen solution into action"
+    },
+    {
+      "option": "Evaluate the Solution",
+      "correct": "Assessing the effectiveness of the solution"
+    }
+  ],
+  "objective_keys": [
+    "51d391ed-7cba-45f6-88f1-dd3eebdd4797"
+  ]
+}

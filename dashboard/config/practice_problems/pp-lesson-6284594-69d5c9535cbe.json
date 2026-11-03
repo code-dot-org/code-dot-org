@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-6284594-69d5c9535cbe",
+  "problem_type": "multiple_choice_multi_select",
+  "active": true,
+  "problem_text": "Select all of the following that are considered common syntax errors when using methods.",
+  "solution": [
+    {
+      "option": "Omitting parentheses when calling a method",
+      "correct": true
+    },
+    {
+      "option": "Using a lowercase letter to start a class name",
+      "correct": true
+    },
+    {
+      "option": "Adding an extra comma in a method call",
+      "correct": true
+    },
+    {
+      "option": "Calling a method without defining it first",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "bc8f618c-6812-4f6b-bae0-b7a7d405fd03"
+  ]
+}

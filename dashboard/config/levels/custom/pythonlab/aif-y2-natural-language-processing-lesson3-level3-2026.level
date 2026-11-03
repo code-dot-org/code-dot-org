@@ -1,0 +1,51 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-11-03T00:46:28.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "**☑️ Do This:**\r\n\r\n- Implement the final normalization rule: removing stop words.\r\n- Test your program. It should count four unique entries.\r\n\r\n**💻 Coding Tip**\r\n\r\nOne way to approach this task is to build a list of word tokens that are not stop words. Recall that you can use `not in` to check whether a value is not part of some list.",
+    "offer_browser_tts": "false",
+    "submittable": "true",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "debug",
+        "example",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "import re\n\nentries = [\n  \"Volcanoes\",\n  \"The Volcano Book\",\n  \"volcanoes of the world.\",\n  \"VOLCANOES!\",\n  \"Volcanic Eruptions\",\n  \"volcano book\",\n  \"Volcanoes of the World\",\n  \"volcanoes\",\n  \"VOLCANOES OF THE WORLD\",\n]\n\nSTOP_WORDS = [\"a\", \"an\", \"the\", \"of\", \"and\", \"in\", \"to\"]\n\n\ndef normalize(text):\n  text = text.lower()\n  words = re.findall(r\"\\w+\", text)\n\n  #TODO: Remove stop words\n\n  return text\n\n\n# Count unique entries\nuniques = []\nfor entry in entries:\n  form = normalize(entry)\n  if form not in uniques:\n    uniques.append(form)\n\nprint(\"Entries:\", len(entries))\nprint(\"Unique entries:\", len(uniques))",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMqdZlobMTV8Cbsp\nIqzkJTZeboaLnxi2LsC8mxQQ5P/1kxl7NnTJoiuYMnK04212NeZ3WNDAHlC4\nv//SBu+YHdguWF9dnnPH3o2giFkBiKBR2kI9PowsmNN2oGqxsWP576dkISXZ\nySfiVQ5+HHostnDPZdwiOKSBcTdinR4vjN6ELPiq53u6o5XfeB16msZwAB5V\n1l93TZu6Vvgu07OzKPT6kKWBzUQuVqPCxM/avK4LTvC5KWZkcCFJ5a+amDB5\nBnB4NmOh4MTtXE4b0/qI9xQ9t56Q5L5oLD8YuG+CeIYL39EDo8TlU7VTIttB\nKWKVDG508N1qpwU5m1WtYYAM+G98hYqvIfP0Fnzhx/JGM8hcWbapnRlKUW9s\ntvyrUajTwEtv2XUV514IvaUcgrP1KYTOENr6jDd5p3zs0rJSENRwxqbYE5Bk\nP2khb2lNA3ZcomAaHSx+IREno4cOnSJCCcANI2B0UPoWvACCnPbPxyP55Jy5\n7kkOyKdBEga9WMYlz7e0KwKKD2xKNh08hxAjfq/zXKIZDYV4DbnaAYLpJgg4\nYdeY97rDIV9PZIdhJUlq/WJRk7/uS/L+Qobi2zZUtI3uZNdQEdaZasDHU01z\nfLnm76AYC5UPh2UVZ4WydPpriGjWBOzbQBU1CGoOSO9ig41eP6DG+R1dShQT\nsQE12XRV2ars1KtflndKNkJlAXYNJ9BCRyG4xcZbod6oRZhQbgJ6sVoyt9kn\n0Nn+GeBwxUDDyvlrD3Ss6ihS85E9WrUxL9hWqAbSJ2lgRUYH1DpuJZGeuqha\nn7q8mnD9iCOZyrMulbPYtnOmyHexwOvG8p8rnXthrmDNwa6dEHoAcVpVwhow\n/Ds6grtDPzo8nVtGDDaEteuCbRlsOrkMbz7EEbhGp4W84aNJtxh32/cNoTIP\ncCoj4US6Ln3s63Dx9icYVjGvG0goIP8n5IqO4YPhwKC8xhvfNC+IX7jX3z40\ngZ0Bpqhi6xHT/tJPyRqT/fQB4fogBSlMllIlyVOEoI6KgU1NPdaGjIA/GHY9\n1YGDebiqSOPG\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-03 00:46:53 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-11-03 00:47:02 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-11-03 01:02:09 +0000\",\"changed\":[\"submittable\",\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>

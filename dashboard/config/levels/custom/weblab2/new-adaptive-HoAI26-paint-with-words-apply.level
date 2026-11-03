@@ -1,0 +1,17 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-11-03T03:21:08.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "require_edit_to_continue": true,
+    "long_instructions": "TODOs:\r\n- Recall the current version of your website in `index.html`.\r\n- Choose one specific section of your page to modify.\r\n- Write a prompt describing the desired colors, font (type), and arrangement (layout) for that section.\r\n- Alternatively, write a prompt to change one existing visual detail and state what aspects of the current look to keep.\r\n- Submit your prompt to the AI to update your project's `style.css`.",
+    "project_template_level_name": "new-adaptive-HoAI26-template-main-project",
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMpXkqkzbjabIMMKfKjT\ntBnKZicF8gQUCDm28Q5awI/8eUyl7W8ShkmYCG5k055bZajru8BiE4cKmpms\n/OJk8JlvIe5w7Oy8eoo3mQ9JH4Jla/MczsDp2KXYl5H9n2rlwbjMpO0zMPeO\nl3xP4/qMamQU/5SYttmP8UhW11/83+m5KGskSxP7sennCqWpc5rAVMcgnR2v\nYFfq8KOwJRGZiq5v7q8RfGeryoZair/8LrBKP1JJj1tW3MbV5N3Fbv8j7/Iw\nhZp3A1DKdX3MANIIN2UsTQ7YJyWRRFPaocmcfQHqDL0uPp4gKyzQIDBikMSc\nh00IoC5nQBIwr9EgHAQ74O9QkQkSPhQHKw9/QaQbmY97JULmOci6itKh4r/i\nolhoJat085GUqfofbh8K2a1+zAnJcWx23v2BswcmQ/HzodaSM00tWRyCA10I\nbcA7RkY/jFOhtn9yiONBJFoH9C+NFT4XF5RfpBTGHknSEN23fmGngWCpNB5X\niIdoMQ8VZ1cuZUW/pUDe/9KOyi0HybvrIYk21Z+lOJMVy1DTF7tAA1AmHrAe\nGVWjXXg4nRak7MYWZovzfmJdNNqtKFkU3AJjYd279D7u4qV/xpqwpd9mpRlF\nuiud6p3/tw00bAH3crOkJvpmFu/frBE+ZHygNCNJh/mz/G74BpIrRdtQ/O1O\ndtlzh7awrbz0txjYtAmoCTSqhl92UomLxx1HjEt+wSRxyDRkE/rEPnwLJrDS\nFH5OwPwB0P+Jea0N3cCixt0RmX/XWnJtWO8qrzYWWxNqWFh4dad0RhPhSM9d\n88psB1S70CmQzQ9Y9Y9xj/W82PqLzl0BQqQ6Wg+GGE62LzuSbk08Y+smECYp\nOjNoDjdS41CKr2Gx/blqC2rlmb3C9CxAqoKSwc7JODL4Bi8k7GHcJSZD4E6o\n2Ah/uHCgZA6v7trcpdyxO+2zruMk8/n0eEvMdbpM7U//Kw0smXW1YxuRBcP+\nreegx90DQ02/+ai2/aTwFX369Kh2Jh5CEgGosX1UDveDq95axVokDqCH9Yda\nahAmw7LwhsTGNqEo3dYl05Yc8WPfKE1hvyTdbg5nKbUeEdux/5iLvSAd9I8C\nwg7vVQybJTKuKk/5fwg7Ngn/atRTSf9pAA+AhlivN2ENW75R3tQGVD7mcz56\nZcL95MFQbWp05i+QM8HCzle1hOjMK02HXxyNujGzLksB0aTMF71vqDGamXKF\n6hXydwwskcm5rV9UzNbiQcjjzIRHPCfUqRIXVavFYDzpeHXCVkAQ2zkKlGxc\njJ0cPemmw5mUcbWjUIzb+uhA93nxN8zgFB5WPl/zKpm9IneAnJ1nehrwSpCF\nor5fp+7Km0d64b8H9VD+vKrGNLaj2I9zK/+/2yLQg6PvdQUJXBYGyDqEgx6c\nS4SjtIzqUhSr1U1d5RNaxvkQFqRjit5/Rg0/cI1fUsz9IgSoyxLiXlS9ZhlJ\npjLRQTrAApcD968KyQDYrxuclWEr5/0E/ntEWrPacTcc+EceJP2LLdwO0tJy\nimOURlw2E7A/nXT+qXh+rqFYKq4A/jAtkbuqblYR0csORmRQyi2nOsabRrK+\nzFfpKoGwEEw7DY3PTj0aYPwjiJK+I8fFEeo8wRNzGcssijQyIBVzrq/zGO5O\nhJKMEnoiWebIkw5N9KRFsTFOtbBdCvWxzL6TDXohfvfHsTaA\n",
+    "generate_outline": "Describe the colors, type, and layout of one section of your page. Or, change one thing and say what to keep."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-03 03:21:13 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 03:21:13 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 03:21:18 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 03:21:18 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Weblab2>

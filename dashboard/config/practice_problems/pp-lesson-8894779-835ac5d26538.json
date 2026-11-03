@@ -1,0 +1,19 @@
+{
+  "key": "pp-lesson-8894779-835ac5d26538",
+  "problem_type": "match",
+  "active": true,
+  "problem_text": "Match the type of data with its description.",
+  "solution": [
+    {
+      "option": "Numerical Data",
+      "correct": "Data that can be counted or measured"
+    },
+    {
+      "option": "Categorical Data",
+      "correct": "Data that represents categories"
+    }
+  ],
+  "objective_keys": [
+    "bcd7cc91-6711-47d9-b59d-81f34f61df91"
+  ]
+}

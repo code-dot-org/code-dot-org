@@ -52,7 +52,25 @@ const checkpoint: Checkpoint = {
       id: 'plan',
       title: 'Plan',
       kind: 'questions',
-      questions: [{id: 1, type: 'freeResponse', text: 'What will you make?'}],
+      questions: [
+        {
+          id: 1,
+          type: 'freeResponse',
+          text: 'What will you make?',
+          plan: 'what',
+        },
+        {
+          id: 2,
+          type: 'MultipleChoiceQuestion',
+          questionName: 'feel',
+          questionTitle: 'How should it feel?',
+          choices: [
+            {id: 'a', text: 'Calm'},
+            {id: 'b', text: 'Bold'},
+          ],
+          plan: 'feel',
+        },
+      ],
     },
     step,
   ],
@@ -154,17 +172,6 @@ describe('generateProject', () => {
     expect(mockGenerate.mock.calls[0][0].prompt).toContain('A: Rex');
   });
 
-  it('keeps a name and description the student already gave', async () => {
-    mockGenerate.mockResolvedValue({output, traceId: 't1'});
-    const generated = await resolve({
-      projectInfo: {name: 'Mine', description: 'My own words.'},
-    });
-    expect(generated).toMatchObject({
-      name: 'Mine',
-      description: 'My own words.',
-    });
-  });
-
   it('is nothing without a generated prompt, answers or text files', async () => {
     expect(
       await resolve({step: {...step, projectPrompt: undefined}})
@@ -188,15 +195,48 @@ describe('generateProject', () => {
     expect(mockGenerate).not.toHaveBeenCalled();
   });
 
-  it('moderates the answers before the call and counts the result', async () => {
+  it('keeps a name and description the student already gave', async () => {
     mockGenerate.mockResolvedValue({output, traceId: 't1'});
-    await resolve();
+    const generated = await resolve({
+      projectInfo: {name: 'Mine', description: 'My own words.'},
+    });
+    expect(generated).toMatchObject({
+      name: 'Mine',
+      description: 'My own words.',
+    });
+  });
+
+  it('moderates what the student typed, not what they picked, before the call', async () => {
+    mockGenerate.mockResolvedValue({output, traceId: 't1'});
+    await resolve({
+      progress: {
+        steps: {
+          plan: {
+            timeSpent: 0,
+            answers: {1: [{answerId: 'x', text: 'Rex'}], 2: [{answerId: 'b'}]},
+          },
+        },
+      },
+    });
     expect(mockModerate).toHaveBeenCalledWith('Rex', context);
+    expect(mockGenerate.mock.calls[0][0].prompt).toContain('A: Bold');
     expect(mockCount).toHaveBeenCalledWith('adaptive.text_moderation', 1, {
       phase: 'input_filter',
       result: 'ok',
     });
     expect(mockLogWarning).not.toHaveBeenCalled();
+  });
+
+  it('asks for the project without moderation when every answer was picked', async () => {
+    mockGenerate.mockResolvedValue({output, traceId: 't1'});
+    await resolve({
+      progress: {
+        steps: {plan: {timeSpent: 0, answers: {2: [{answerId: 'a'}]}}},
+      },
+    });
+    expect(mockModerate).not.toHaveBeenCalled();
+    expect(mockCount).not.toHaveBeenCalled();
+    expect(mockGenerate).toHaveBeenCalled();
   });
 
   it.each(['flagged', 'error'])(

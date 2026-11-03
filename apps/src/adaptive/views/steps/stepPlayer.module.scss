@@ -124,3 +124,51 @@
   flex: 1;
   min-height: 0;
 }
+
+// Markdown step: a panel-sized canvas with the text centered vertically,
+// and the button row under it, like the panels view.
+
+.markdownHost {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  min-height: 0;
+  background: var(--background-neutral-secondary);
+}
+
+.markdownCanvas {
+  display: flex;
+  align-items: center;
+  overflow: auto;
+  padding: 40px;
+  border: 1px solid var(--border-neutral-primary);
+  border-radius: var(--shape-lg);
+  background: var(--background-neutral-primary);
+  box-sizing: border-box;
+
+  // Focused on open for screen readers; the ring adds nothing on a card.
+  &:focus {
+    outline: none;
+  }
+}
+
+.markdownBody {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.125rem;
+
+  // The markdown's own wrapper holds the paragraphs.
+  > div > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.markdownActions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
