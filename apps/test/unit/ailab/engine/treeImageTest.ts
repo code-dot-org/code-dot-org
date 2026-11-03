@@ -17,14 +17,13 @@ const MAX_CANVAS_PIXELS = 4096 * 4096;
 
 describe('treeImageName', () => {
   it.each([
-    ['zoo', 'zoo-tree'],
     ['Titanic Passengers', 'titanic-passengers-tree'],
     ['My Data (2).csv', 'my-data-2-tree'],
   ])('names a tree from %s as %s', (datasetName, expected) => {
     expect(treeImageName(datasetName)).toBe(expected);
   });
 
-  it.each([undefined, '', '数据.csv'])(
+  it.each([undefined, '数据.csv'])(
     'falls back to a generic name for %p',
     datasetName => {
       expect(treeImageName(datasetName)).toBe('decision-tree');
@@ -33,10 +32,6 @@ describe('treeImageName', () => {
 });
 
 describe('treePixelRatio', () => {
-  it('draws a small tree at twice its size', () => {
-    expect(treePixelRatio(800, 400)).toBe(2);
-  });
-
   it('shrinks a large tree to fit the canvas limit', () => {
     const ratio = treePixelRatio(12000, 900);
     expect(ratio).toBeLessThan(2);

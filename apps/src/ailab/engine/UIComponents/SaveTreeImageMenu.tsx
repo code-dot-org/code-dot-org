@@ -19,7 +19,7 @@ import {captureTreeImage} from '../helpers/treeImage';
 const LABEL = 'Save image';
 const SAVE_ERROR = "Couldn't save an image of your tree. Please try again.";
 
-// CustomDropdown keeps its open state private and closes only on a mousedown outside it.
+// CustomDropdown closes only on a mousedown outside it.
 const closeMenu = () =>
   document.body.dispatchEvent(new MouseEvent('mousedown', {bubbles: true}));
 
@@ -38,7 +38,7 @@ const SaveTreeImageMenu = ({
   const menuRef = useRef<HTMLSpanElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
 
-  // d3-zoom stops mousedown on the tree, so a press there never reaches CustomDropdown.
+  // d3-zoom stops mousedown on the tree.
   useEffect(() => {
     const closeOnPressOutside = ({target}: PointerEvent) => {
       if (!menuRef.current!.contains(target as Node)) {
@@ -50,13 +50,13 @@ const SaveTreeImageMenu = ({
       document.removeEventListener('pointerdown', closeOnPressOutside);
   }, []);
 
-  // Escape on the trigger still bubbles, leaving the tree as the zoom buttons do.
   const closeOnEscape = (event: KeyboardEvent) => {
     if (event.key !== 'Escape') {
       return;
     }
     closeMenu();
-    if (event.target !== triggerRef.current) {
+    const fromMenu = event.target !== triggerRef.current;
+    if (fromMenu) {
       event.stopPropagation();
       triggerRef.current!.focus();
     }

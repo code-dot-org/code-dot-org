@@ -5,13 +5,10 @@ import {getFontEmbedCss} from '@cdo/apps/util/imageExport/getFontEmbedCss';
 import {inlineSvgStylesForExport} from '@cdo/apps/util/imageExport/inlineSvgStylesForExport';
 
 const PADDING_PX = 24;
-// Twice the layout size keeps labels sharp when a student zooms in on a slide.
 const MAX_PIXEL_RATIO = 2;
-// iOS Safari refuses to draw a canvas with more pixels than this.
-const MAX_CANVAS_PIXELS = 4096 * 4096;
+const IOS_SAFARI_MAX_CANVAS_PIXELS = 4096 * 4096;
 const FALLBACK_NAME = 'decision-tree';
 
-// A Backpack file name may hold only letters, digits, hyphens and underscores.
 export const treeImageName = (datasetName = ''): string => {
   const slug = datasetName
     .replace(/\.csv$/i, '')
@@ -22,7 +19,10 @@ export const treeImageName = (datasetName = ''): string => {
 };
 
 export const treePixelRatio = (width: number, height: number): number =>
-  Math.min(MAX_PIXEL_RATIO, Math.sqrt(MAX_CANVAS_PIXELS / (width * height)));
+  Math.min(
+    MAX_PIXEL_RATIO,
+    Math.sqrt(IOS_SAFARI_MAX_CANVAS_PIXELS / (width * height))
+  );
 
 const drawTree = async (tree: HTMLElement): Promise<Blob> => {
   const width = tree.offsetWidth + 2 * PADDING_PX;

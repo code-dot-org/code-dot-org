@@ -33,7 +33,6 @@ function renderMenu({onKeyDown = jest.fn()} = {}) {
 
 const trigger = () => screen.getByRole('button', {name: 'Save image'});
 const option = (name: string) => screen.queryByRole('button', {name});
-// CustomDropdown exposes its open state only through this attribute.
 const isOpen = () => trigger().hasAttribute('data-force-hover');
 
 async function choose(name: string) {
