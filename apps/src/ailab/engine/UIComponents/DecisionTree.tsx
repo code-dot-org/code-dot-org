@@ -12,7 +12,7 @@ import React, {
   useState,
 } from 'react';
 
-import {TEST_PANEL_WIDTH} from '../constants';
+import {RIGHT_PANEL_WIDTH} from '../constants';
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {
   DISPLAY_TREE_ROOT_ID,
@@ -487,7 +487,7 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
           <div
             ref={overlayRef}
             className={styles.overlay}
-            style={{width: TEST_PANEL_WIDTH}}
+            style={{width: RIGHT_PANEL_WIDTH}}
           >
             {overlay}
           </div>
