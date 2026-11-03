@@ -67,6 +67,42 @@ Resources:
       PreferredMaintenanceWindow: 'mon:22:30-mon:23:00'
       PubliclyAccessible: true
       VpcSecurityGroupIds: [!ImportValue VPC-RedshiftSecurityGroup]
+  # Not yet attached to the cluster. VPC-RedshiftSecurityGroup still admits 5439 from anywhere.
+  RedshiftCloudServicesSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Inbound Redshift connections from approved cloud services.
+      VpcId: !ImportValue VPC
+      SecurityGroupIngress:
+<%
+  {
+    # https://docs.getdbt.com/docs/platform/about-platform/access-regions-ip-addresses (AWS us-east-1, us1)
+    'dbt Cloud' => %w(52.45.144.63 54.81.134.249 52.22.161.231 52.3.77.232 3.214.191.130 34.233.79.135),
+    # https://help.tableau.com/current/pro/desktop/en-us/publish_tableau_online_ip_authorization.htm
+    # (US East pods; our site is us-east-1.online.tableau.com)
+    'Tableau Cloud' => %w(155.226.144.0/22),
+    # https://guide.trevor.io/hc/en-us/articles/6909629928605
+    'Trevor.io' => %w(34.192.37.108 34.192.31.89),
+    'Portable.io' => %w(34.122.15.109),
+    # Listed on each connection's page in Omni, under Settings > Connections.
+    'Omni' => %w(54.172.168.164 52.205.119.255 3.211.115.21 44.199.154.198
+                 54.213.219.131 52.33.167.28 54.213.140.155 34.215.77.3),
+    # https://docs.statsig.com/infrastructure/statsig_ip_ranges (outbound)
+    'Statsig' => %w(20.29.232.235 20.190.14.199 34.138.242.148/30 34.126.186.120/30 34.168.242.172/30 34.38.207.120/30),
+    # https://docs.aws.amazon.com/firehose/latest/dev/controlling-access.html#using-iam-rs-vpc (us-east-1)
+    'Amazon Data Firehose' => %w(52.70.63.192/27),
+  }.each do |service, cidrs|
+    cidrs.each do |cidr|
+-%>
+        - IpProtocol: tcp
+          FromPort: 5439
+          ToPort: 5439
+          CidrIp: <%=cidr.include?('/') ? cidr : "#{cidr}/32"%>
+          Description: <%=service%>
+<%
+    end
+  end
+-%>
 #  Redshift does not yet support configuring a Resource Policy on a Provisioned Cluster. We configure this one policy
 #  manually.
 #  TODO: Move our Redshift datawarehouse to a Serverless and/or implement this via CloudFormation when Provisioned
@@ -129,7 +165,6 @@ Resources:
     cpuUtilization.wait
     cpuUtilization.idle
     cpuUtilization.user
-    cpuUtilization.total
     cpuUtilization.steal
     cpuUtilization.nice
     tasks.total
