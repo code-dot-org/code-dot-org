@@ -50,7 +50,6 @@ import {playCheck} from '../../runtime/playCheck';
 import {projectFiles} from '../../runtime/projectFiles';
 import {tile} from '../index';
 import {LESSONS} from '../lessons';
-import {rememberWorld, worldMadeInto} from '../lessons/asScreen';
 import type {MainCameraSettings} from '../lessons/worlds';
 import {actorPath} from '../lessons/worlds';
 import type {TileId} from '../types';
@@ -95,8 +94,17 @@ const check = async (id: TileId, source: MultiFileSource) => {
 const editing = (
   source: MultiFileSource,
   name: string,
-  change: (contents: string) => string,
+  edit: (contents: string) => string,
 ): MultiFileSource => {
+  // An edit that changes nothing has missed what it was written against, and
+  // a check that refuses the lesson unedited passes it anyway.
+  const change = (contents: string) => {
+    const changed = edit(contents);
+    if (changed === contents) {
+      throw new Error(`an edit to ${name} that changed nothing`);
+    }
+    return changed;
+  };
   // An actor is edited where its lesson shows it, among the world's roots.
   if (name === 'main.world' || name.endsWith('.actor')) {
     return editingWorld(source, change);
@@ -234,7 +242,7 @@ const editingWorld = (
   const parse = (contents: string) => JSON.parse(contents) as Parsed;
   // The screen and its map, seen as the world they were made from
   // (`support/worldView`).
-  const merged = parse(worldMadeInto(source) ?? worldOf(source));
+  const merged = parse(worldOf(source));
   // Each actor as a `define actor` holding its data, its code chained under
   // it and its handlers beside it, which is what these edits are written
   // against (`actorIn`).
@@ -305,7 +313,7 @@ const editingWorld = (
     };
   }
   const world = JSON.stringify({...changed, blocks: {blocks: worldRoots}});
-  return rememberWorld(withWorld({...source, files}, world), world);
+  return withWorld({...source, files}, world);
 };
 
 /**
@@ -1159,13 +1167,8 @@ describe('the tween lesson’s check', () => {
   it('accepts a Door that travels', async () => {
     const solved = editing(lesson.source, 'main.world', contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
-      // Chain the tween onto the end of the world's rows.
-      let row = workspace.blocks.blocks[0].next?.block;
-      while (row?.next?.block) {
-        row = row.next.block;
-      }
-      row!.next = {
-        block: {
+      appendRows(workspace, [
+        {
           type: 'world_play_tween_here',
           fields: {CURVE: 'linear'},
           inputs: {
@@ -1188,7 +1191,7 @@ describe('the tween lesson’s check', () => {
             },
           },
         },
-      };
+      ]);
       return JSON.stringify(workspace);
     });
     const {passes, result} = await check('motion/tween', solved);
@@ -1200,9 +1203,12 @@ describe('the tween lesson’s check', () => {
   // `set position` puts the Door there in one frame, which is a jump and not
   // an opening.
   it('refuses a Door that is simply put in the other place', async () => {
-    const jumped = editing(lesson.source, 'main.world', contents =>
-      contents.replace('"NUM": 64', '"NUM": 256'),
-    );
+    const jumped = editing(lesson.source, 'main.world', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      const [door] = placementsOf(workspace, actorPath('door'));
+      override(door, 'positional', 'position', {x: 256, y: 160});
+      return JSON.stringify(workspace);
+    });
     const {passes} = await check('motion/tween', jumped);
     expect(passes).toBe(false);
   });
@@ -1457,6 +1463,84 @@ const rowsOf = (workspace: {blocks: {blocks: Row[]}}): Row[] => {
   return rows;
 };
 
+/** Rows chained after a world's own: code the Main Screen runs as it loads. */
+const appendRows = (
+  workspace: {blocks: {blocks: Row[]}},
+  rows: readonly Row[],
+): void => {
+  let last: Row = workspace.blocks.blocks[0];
+  while (last.next?.block) {
+    last = last.next.block;
+  }
+  last.next = {
+    block: rows.reduceRight<Row | undefined>(
+      (next, row) => ({...row, ...(next ? {next: {block: next}} : {})}),
+      undefined,
+    ),
+  };
+};
+
+/** A placement on the lesson's level, as `main.map` holds it. */
+interface Placement {
+  type: string;
+  id: string;
+  properties?: Record<string, Record<string, unknown>>;
+}
+
+/** The placements of one kind on the level, in order. */
+const placementsOf = (workspace: object, kind: string): Placement[] =>
+  (workspace as {map: {actors: Placement[]}}).map.actors.filter(
+    one => one.type === kind,
+  );
+
+/**
+ * A placement taken off the level and made in code instead: `add actor` under
+ * the Main Screen's `when this screen loads`, put where it was, its body
+ * `rows`.
+ */
+const asCode = (workspace: object, placement: Placement, rows: Row[]): void => {
+  const map = (workspace as {map: {actors: Placement[]}}).map;
+  map.actors = map.actors.filter(one => one !== placement);
+  const {x, y} = placement.properties?.positional?.position as {
+    x: number;
+    y: number;
+  };
+  const me = {block: {type: 'world_this_actor'}};
+  const number = (n: number) => ({
+    shadow: {type: 'math_number', fields: {NUM: n}},
+  });
+  const body = [
+    {
+      type: 'world_set_position',
+      inputs: {ACTOR: me, X: number(x), Y: number(y)},
+    },
+    ...rows,
+  ].reduceRight<Row | undefined>(
+    (next, row) => ({...row, ...(next ? {next: {block: next}} : {})}),
+    undefined,
+  );
+  appendRows(workspace as {blocks: {blocks: Row[]}}, [
+    {
+      type: 'world_add_actor',
+      fields: {ACTOR: placement.type},
+      inputs: {DO: {block: body}},
+    },
+  ]);
+};
+
+/** A value the map inspector sets on a placement, under the trait it is of. */
+const override = (
+  placement: Placement,
+  owner: string,
+  id: string,
+  value: unknown,
+): void => {
+  placement.properties = {
+    ...placement.properties,
+    [owner]: {...placement.properties?.[owner], [id]: value},
+  };
+};
+
 describe('the variable lesson’s check', () => {
   const lesson = LESSONS['memory/variable'];
 
@@ -1659,7 +1743,7 @@ describe('the world-state lesson’s check', () => {
     const solved = editing(lesson.source, 'main.world', contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       const lives = () => ({
-        block: {type: 'world_get_WorldsMain_LivesProperty'},
+        block: {type: 'world_get_ScreensMain_LivesProperty'},
       });
       for (const row of rowsOf(workspace)) {
         const text = bodyOf(row).find(
@@ -1774,7 +1858,7 @@ describe('the actor-state lesson’s check', () => {
       const rows = rowsOf(workspace);
       rows[1].next = {
         block: {
-          type: 'world_set_WorldsMain_IdProperty',
+          type: 'world_set_ScreensMain_IdProperty',
           inputs: {
             VALUE: {shadow: {type: 'math_number', fields: {NUM: 2}}},
           },
@@ -2980,22 +3064,8 @@ describe('the jump lesson’s check', () => {
         },
       };
       if (allowed !== undefined) {
-        const placement = rowsOf(workspace).find(
-          row => row.fields?.ACTOR === actorPath('hero'),
-        )!;
-        let last = inSocket(placement, 'DO')!;
-        while (last.next?.block) {
-          last = last.next.block;
-        }
-        last.next = {
-          block: {
-            type: 'world_set_Jumping_JumpsAllowedProperty',
-            inputs: {
-              ACTOR: {block: {type: 'world_this_actor'}},
-              VALUE: {shadow: {type: 'math_number', fields: {NUM: allowed}}},
-            },
-          },
-        };
+        const [hero] = placementsOf(workspace, actorPath('hero'));
+        override(hero, 'Jumps', 'jumps_allowed', allowed);
       }
       return JSON.stringify(workspace);
     });
@@ -3100,7 +3170,7 @@ describe('the level lesson’s check', () => {
     editing(lesson.source, 'main.world', contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       const win: Row = {
-        type: 'world_set_WorldsMain_WonProperty',
+        type: 'world_set_ScreensMain_WonProperty',
         inputs: {
           VALUE: {block: {type: 'logic_boolean', fields: {BOOL: 'TRUE'}}},
         },
@@ -3311,7 +3381,7 @@ describe('the bricks lesson’s check', () => {
           },
           DO0: {
             block: {
-              type: 'world_set_WorldsMain_ClearedProperty',
+              type: 'world_set_ScreensMain_ClearedProperty',
               inputs: {
                 VALUE: {block: {type: 'logic_boolean', fields: {BOOL: 'TRUE'}}},
               },
@@ -3445,37 +3515,12 @@ describe('the words lesson’s check', () => {
     ).source;
     const solved = editing(withBox, 'main.world', contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
-      const label = rowsOf(workspace).find(
-        row => row.fields?.ACTOR === 'actors/label',
-      )!;
-      const said = inSocket(inSocket(label, 'DO')!.next!.block!, 'VALUE')!;
-      workspace.blocks.blocks[0].next = {
-        block: {
-          type: 'world_add_actor',
-          fields: {ACTOR: 'actors/speechBox'},
-          inputs: {
-            DO: {
-              block: {
-                type: 'world_set_position',
-                inputs: {
-                  ACTOR: {block: {type: 'world_this_actor'}},
-                  X: {shadow: {type: 'math_number', fields: {NUM: 20}}},
-                  Y: {shadow: {type: 'math_number', fields: {NUM: 200}}},
-                },
-                next: {
-                  block: {
-                    type: 'world_set_ActorsLabel_TextProperty',
-                    inputs: {
-                      ACTOR: {block: {type: 'world_this_actor'}},
-                      VALUE: {shadow: said},
-                    },
-                  },
-                },
-              },
-            },
-          },
-        },
-      };
+      // The Label taken off the map and a Speech Box put down, saying what
+      // it said.
+      const [label] = placementsOf(workspace, 'actors/label');
+      label.type = 'actors/speechBox';
+      label.id = 'speechBox';
+      override(label, 'positional', 'position', {x: 20, y: 200});
       return JSON.stringify(workspace);
     });
     const {passes, result} = await check('story/text', solved);
@@ -3491,24 +3536,33 @@ describe('the reveal lesson’s check', () => {
   const revealing = (skip: boolean) =>
     editing(lesson.source, 'main.world', contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
-      const add = workspace.blocks.blocks[0].next!.block!;
-      const body = inSocket(add, 'DO')!;
-      // `set text ⟨…⟩` becomes `say ⟨…⟩ on ⟨this actor⟩`: showing a line and
-      // saying one are different things, and only the second types it out.
-      for (let at: Row | undefined = body; at; at = at.next?.block) {
-        if (at.type === 'world_set_ActorsLabel_TextProperty') {
-          at.type = 'world_do_ActorsSpeechBox_SayAction';
-          break;
-        }
-      }
-      const electing2 = (trait: string, rest: Row): Row => ({
-        type: 'world_add_trait',
-        fields: {TRAIT: trait},
-        next: {block: rest},
-      });
-      let placed: Row = body;
+      const [box] = placementsOf(workspace, 'actors/speechBox');
+      const line = String(box.properties?.Label?.text);
+      const me = {block: {type: 'world_this_actor'}};
+      // Said rather than set: showing a line and saying one are different
+      // things, and only the second types it out.
+      const said: Row = {
+        type: 'world_do_ActorsSpeechBox_SayAction',
+        inputs: {
+          ACTOR: me,
+          VALUE: {shadow: {type: 'text', fields: {TEXT: line}}},
+        },
+      };
+      asCode(
+        workspace,
+        box,
+        skip
+          ? [
+              {
+                type: 'world_add_trait',
+                fields: {TRAIT: 'Mouse#CanBeClickedTrait'},
+                inputs: {ACTOR: me},
+              },
+              said,
+            ]
+          : [said],
+      );
       if (skip) {
-        placed = electing2('Mouse#CanBeClickedTrait', placed);
         workspace.blocks.blocks.push({
           type: 'world_on_Mouse_IsClickedWithEvent',
           x: 700,
@@ -3521,7 +3575,6 @@ describe('the reveal lesson’s check', () => {
           },
         } as unknown as Row);
       }
-      add.inputs!.DO = {block: placed};
       return JSON.stringify(workspace);
     });
 
@@ -3655,7 +3708,7 @@ describe('the choice lesson’s check', () => {
         },
       });
       const opened: Row = {
-        type: 'world_set_WorldsMain_OpenedTheDoorProperty',
+        type: 'world_set_ScreensMain_OpenedTheDoorProperty',
         inputs: {
           VALUE: {block: {type: 'logic_boolean', fields: {BOOL: 'TRUE'}}},
         },
@@ -3909,13 +3962,7 @@ describe('the steering lesson’s check', () => {
         }
       }
       if (rows.length) {
-        const placed = rowsOf(workspace);
-        placed[placed.length - 1].next = {
-          block: rows.reduceRight((next, row) => ({
-            ...row,
-            next: {block: next},
-          })),
-        };
+        appendRows(workspace, rows);
       }
       return JSON.stringify(workspace);
     });
@@ -4007,20 +4054,9 @@ describe('the rule-property lesson’s check', () => {
     }
     return editing(declared, 'main.world', contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
-      const first = rowsOf(workspace)[0];
-      let last = inSocket(first, 'DO')!;
-      while (last.next?.block) {
-        last = last.next.block;
-      }
-      last.next = {
-        block: {
-          type: 'world_set_Wind_StrengthProperty',
-          inputs: {
-            ACTOR: {block: {type: 'world_this_actor'}},
-            VALUE: {shadow: {type: 'math_number', fields: {NUM: 3}}},
-          },
-        },
-      };
+      // One Leaf blown harder, from the map inspector.
+      const [leaf] = placementsOf(workspace, actorPath('leaf'));
+      override(leaf, 'Blown', 'strength', 3);
       return JSON.stringify(workspace);
     });
   };
@@ -4153,15 +4189,12 @@ describe('the people lesson’s check', () => {
   it('accepts a name that is a relationship', async () => {
     const solved = editing(lesson.source, 'main.world', contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
-      const label = rowsOf(workspace).find(
-        row => row.fields?.ACTOR === 'actors/label',
-      )!;
-      const body = inSocket(label, 'DO')!;
+      const [label] = placementsOf(workspace, 'actors/label');
       const me = () => ({block: {type: 'world_this_actor'}});
-      // One row: the name is already over her head, and a parent keeps a
-      // child where it is (specs/PARENTING.md).
-      label.inputs!.DO = {
-        block: {
+      // One row more than its words: the name is already over her head, and
+      // a parent keeps a child where it is (specs/PARENTING.md).
+      asCode(workspace, label, [
+        {
           type: 'world_set_Space_ParentProperty',
           inputs: {
             ACTOR: me(),
@@ -4172,9 +4205,20 @@ describe('the people lesson’s check', () => {
               },
             },
           },
-          next: {block: body},
         },
-      };
+        {
+          type: 'world_set_ActorsLabel_TextProperty',
+          inputs: {
+            ACTOR: me(),
+            VALUE: {
+              shadow: {
+                type: 'text',
+                fields: {TEXT: String(label.properties?.Label?.text)},
+              },
+            },
+          },
+        },
+      ]);
       return JSON.stringify(workspace);
     });
     const {passes, result} = await check('adventure/people', solved);
@@ -4279,20 +4323,8 @@ describe('the change lesson’s check', () => {
   it('refuses the same beat set from the world', async () => {
     const fromOutside = editing(lesson.source, 'main.world', contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
-      const placed = rowsOf(workspace)[0];
-      let last = inSocket(placed, 'DO')!;
-      while (last.next?.block) {
-        last = last.next.block;
-      }
-      last.next = {
-        block: {
-          type: 'world_set_Patrol_AcrossTimeProperty',
-          inputs: {
-            ACTOR: {block: {type: 'world_this_actor'}},
-            VALUE: {shadow: {type: 'math_number', fields: {NUM: 0.5}}},
-          },
-        },
-      };
+      const [guard] = placementsOf(workspace, actorPath('guard'));
+      override(guard, 'Patrols_Across', 'across_time', 0.5);
       return JSON.stringify(workspace);
     });
     const {passes} = await check('making/change', fromOutside);
@@ -5131,21 +5163,10 @@ describe('the flocking lesson’s check', () => {
         second.inputs!.DO = {block: chained(options.rules)};
       }
       if (options.aligned) {
-        // Every launch velocity in the file, wherever it is nested: the twelve
-        // `add actor` rows each hold one.
-        const sameWay = (node: unknown): void => {
-          if (!node || typeof node !== 'object') {
-            return;
-          }
-          const row = node as Row;
-          if (row.type === 'world_vector') {
-            row.fields = {VECTOR: {x: 0.6, y: 0}};
-          }
-          for (const held of Object.values(node as Record<string, unknown>)) {
-            sameWay(held);
-          }
-        };
-        sameWay(workspace);
+        // Every Boid launched the same way, from the map inspector.
+        for (const boid of placementsOf(workspace, actorPath('boid'))) {
+          override(boid, 'Can_Move', 'velocity', {x: 0.6, y: 0});
+        }
       }
       return JSON.stringify(workspace);
     });
@@ -5209,7 +5230,7 @@ describe('the dials lesson’s check', () => {
         const step = rowOf(actorIn(workspace, 'Boid'), 'world_trait_step');
         const crowding = step.inputs!.DO!.block!;
         crowding.inputs!.SOURCE!.block!.inputs!.DISTANCE = {
-          block: {type: 'world_get_WorldsMain_TooCloseProperty'},
+          block: {type: 'world_get_ScreensMain_TooCloseProperty'},
         };
       }
       return JSON.stringify(workspace);

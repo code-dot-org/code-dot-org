@@ -1,6 +1,6 @@
 // Building a lesson's starting project.
 //
-// A lesson's project is small — a world, an actor or two, and whatever stock
+// A lesson's project is small — a screen and its map, an actor or two, and whatever stock
 // rules and pictures the lesson is about — and it is built the way a LEARNER'S
 // project gets those things: by running the same import functions the dropdowns
 // run (`importStockRule`, `importStockSprite`, `importStockActor`). So a rule's
@@ -13,6 +13,7 @@
 // `backgrounds/` is a backdrop and one under `sprites/` is not — and a learner
 // who wants to upload a picture should not have to know that first.
 
+import {activateFile} from '@code-dot-org/codebridge';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {importStockActor} from '../../actors/importStockActor';
@@ -28,8 +29,7 @@ import {stockMapById} from '../../maps/stock';
 import {importStockRule} from '../../rules/importStockRule';
 import {stockRule} from '../../rules/stock';
 
-import {asScreenProject, rememberWorld} from './asScreen';
-import type {LessonWorld} from './worlds';
+import type {LessonScreen} from './worlds';
 
 /** The eight folders every World project has. */
 export const LESSON_FOLDERS = [
@@ -44,15 +44,15 @@ export const LESSON_FOLDERS = [
 
 export interface LessonSpec {
   /**
-   * The world, as a `define world` workspace — or that and the actor files
-   * beside it, which is what `worldFile` hands over. A lesson is written as a
-   * world and opens as a Main Screen showing `main.map` (`asScreen`).
+   * The Main Screen, the map its Game Viewport shows and the actor files
+   * beside them, as `screenFile` hands them over; or a screen with no level
+   * of its own, whose Viewports show the lesson's `maps`.
    */
-  world: string | LessonWorld;
+  screen: LessonScreen | {screen: string; map?: undefined; actors?: undefined};
   /**
    * Actor files, by stem: `hero` becomes `actors/hero.actor`.
    *
-   * Beside the ones the world spec listed, for an actor written out by hand
+   * Beside the ones the screen spec listed, for an actor written out by hand
    * (`actors/actorDocument`). A stem given both ways is one file,
    * and this one wins.
    */
@@ -83,9 +83,8 @@ export interface LessonSpec {
   stockActors?: readonly string[];
   /**
    * Stock screens to import, by id: `pauseMenu` becomes
-   * `screens/pauseMenu.screen`. Imported once the world is a Main Screen,
-   * whose data declares the events a screen raises
-   * (specs/SCREEN_STACK_PLAN.md).
+   * `screens/pauseMenu.screen`. Imported after the Main Screen, whose data
+   * declares the events a screen raises (specs/SCREEN_STACK_PLAN.md).
    */
   stockScreens?: readonly string[];
 }
@@ -95,20 +94,18 @@ export interface LessonSpec {
  *
  * `main.screen` is the active tab, because a lesson is about the game unless
  * it says otherwise, and the tab a learner lands on is the first thing the
- * lesson says to them. The actors the world spec listed are open beside it,
+ * lesson says to them. The actors the screen spec listed are open beside it,
  * so a learner asked to change the Hero reaches the Hero without a list of
- * files to find it in.
+ * files to find it in, and so is the level, since a lesson on the map is done
+ * there: the screen draws it, but only as a picture (`MapStage`).
  */
 export const lessonSource = (spec: LessonSpec): MultiFileSource => {
-  const world = typeof spec.world === 'string' ? spec.world : spec.world.world;
-  const listed = typeof spec.world === 'string' ? {} : spec.world.actors;
+  const listed = spec.screen.actors ?? {};
   const files: ProjectSpec['files'] = {
     main: {
-      name: 'main.world',
-      language: 'world',
-      contents: world,
-      // A screen once it is converted (`asScreenProject`), and so filed
-      // where the screen will be.
+      name: 'main.screen',
+      language: 'screen',
+      contents: spec.screen.screen,
       folderId: 'screens',
       active: true,
       open: true,
@@ -134,6 +131,15 @@ export const lessonSource = (spec: LessonSpec): MultiFileSource => {
       open: true,
     };
   }
+  if (spec.screen.map !== undefined) {
+    files.level = {
+      name: 'main.map',
+      language: 'map',
+      contents: spec.screen.map,
+      folderId: 'maps',
+      open: true,
+    };
+  }
   for (const [stem, contents] of Object.entries(spec.maps ?? {})) {
     files[stem] = {
       name: `${stem}.map`,
@@ -154,7 +160,12 @@ export const lessonSource = (spec: LessonSpec): MultiFileSource => {
   let source = buildProject({
     folders: [...LESSON_FOLDERS],
     files,
-    open: ['main', ...Object.keys(listed), ...Object.keys(spec.actors ?? {})],
+    open: [
+      'main',
+      ...Object.keys(listed),
+      ...Object.keys(spec.actors ?? {}),
+      ...(spec.screen.map === undefined ? [] : ['level']),
+    ],
   }).source;
 
   // Order is deliberate: an actor may bring a rule, and a rule may already be
@@ -181,16 +192,18 @@ export const lessonSource = (spec: LessonSpec): MultiFileSource => {
       need(stockAnimation(id), 'animation', id),
     ).source;
   }
-  // The world a Main Screen showing a map, as a game is
-  // (specs/LESSONS_AS_SCREENS_PLAN.md), which brings the Viewport.
-  let screen = asScreenProject(source);
+  // The Viewport the Main Screen places.
+  source = importStockActor(
+    source,
+    need(stockActorById('viewport'), 'actor', 'viewport'),
+  ).source;
   for (const id of spec.stockScreens ?? []) {
-    screen = importStockMap(
-      screen,
+    source = importStockMap(
+      source,
       need(stockMapById(id), 'screen', id),
     ).source;
   }
-  return rememberWorld(screen, world);
+  return source;
 };
 
 /** A stock item, or a thrown error naming what was asked for. */
@@ -200,3 +213,15 @@ const need = <T>(found: T | undefined, kind: string, id: string): T => {
   }
   return found;
 };
+
+/**
+ * The project with its level in front: a lesson whose task is on the map
+ * opens there, and one whose work is in blocks on the Main Screen's code
+ * (`levelData.worldView`).
+ */
+export function opensOnTheLevel(source: MultiFileSource): MultiFileSource {
+  const level = Object.values(source.files).find(
+    file => file.name === 'main.map',
+  );
+  return level ? activateFile(source, level.id) : source;
+}

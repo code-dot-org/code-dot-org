@@ -385,6 +385,42 @@ row; and `actorAbout` no longer knows a rule's rows. The rows an actor's
 and a rule's keys are walked as (`keyRows`, `ruleKeyRows`) keep their
 types, which no file holds.
 
+#### 5f. One idiom: a game is written as a screen
+
+The lessons, two stock games and some fifty tests still write their game
+under `define world` and convert it when the project is built
+(`lessons/asScreen`, LESSONS_AS_SCREENS_PLAN.md): a literal `add actor`
+becomes a placement, a `define property` row the screen's property, and
+what is left code under `when this screen loads`. No block is defined for
+`define world`; it lives on as the converter's input and as `VIEW_ROWS`.
+In order, each its own commit:
+
+1. BUILT, November 2026. The lessons. `screenFile` (`lessons/worlds`)
+   writes `main.screen` and `main.map` from a spec that says what each
+   is: `placed` for the level (`placeInMap`, `placedAt`), `properties`,
+   `events`, `rules` and `backgroundColor` for the screen's data, and
+   `loads` for its code. `lessonSource` writes those files and imports
+   the Viewport, and runs no converter. The 79 specs were rewritten by a
+   codemod that took each placement from what the converter had made of
+   it, and every lesson's files are the same as before. adventure/rooms,
+   whose screen has no level of its own, writes its screen out. The
+   lesson checks edit the screen's view as a world (`support/worldView`)
+   rather than the world a lesson was written as, which is gone: a
+   check that set a value in an `add actor` body sets it on the
+   placement, as the inspector would, and one that changed what the
+   body does makes that actor in code. An edit that changes nothing
+   now throws, which caught a check that had been passing on an edit
+   to a number no longer in the file.
+2. The stock games written as worlds, tapper and novel, and the empty
+   world of the scenarios and the actor-demo recorder, written as
+   screens.
+3. The tests. A test writes the screen and map it means; the converter
+   in test support (`worldAsScreen`) and the checks' world view go, and
+   the checks edit the screen, the map and the actor files.
+4. The converter goes: `asScreen`, `VIEW_ROWS`, and the `define world`
+   rows the world view writes (`world_rule_property`, `world_rule_event`
+   among them).
+
 ## Open
 
 - **A world's properties** were the last declarations written as blocks.

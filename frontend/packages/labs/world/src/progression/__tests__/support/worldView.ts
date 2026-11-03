@@ -8,7 +8,6 @@
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
-import {renameReferences} from '../../../files/renameThing';
 import {screenOfWorld} from '../../lessons/asScreen';
 
 type Block = Record<string, unknown> & {type?: string};
@@ -247,19 +246,14 @@ export function withWorld(
     throw new Error('no file called main.screen');
   }
   const made = screenOfWorld(world, source);
-  // …and what an edit names by the world's file, named by the screen's, as
-  // the lesson's own conversion names it (`asScreenProject`).
-  return renameReferences(
-    {
-      ...source,
-      files: {
-        ...source.files,
-        [screen[0]]: {...screen[1], contents: made.screen},
-        ...(map && made.map ? {[map[0]]: {...map[1], contents: made.map}} : {}),
-      },
+  return {
+    ...source,
+    files: {
+      ...source.files,
+      [screen[0]]: {...screen[1], contents: made.screen},
+      ...(map && made.map ? {[map[0]]: {...map[1], contents: made.map}} : {}),
     },
-    {from: 'worlds/main', to: 'screens/main'},
-  );
+  };
 }
 
 /** The project's `main.world`, as these tests write one. */

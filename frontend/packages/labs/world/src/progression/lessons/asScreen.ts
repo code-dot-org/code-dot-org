@@ -1,5 +1,7 @@
-// A lesson's world, written as a game is: a Main Screen whose Viewport
-// shows `main.map` (specs/LESSONS_AS_SCREENS_PLAN.md, step 1).
+// A game written under `define world`, as a Main Screen whose Viewport shows
+// `main.map`. Lessons are written as screens (`worlds.screenFile`); tapper,
+// novel and the tests are still converted here until they are too
+// (specs/COMPILE_FROM_DATA_PLAN.md, step 5f).
 //
 // Each row of `define world` goes where a screen keeps it. An `add actor`
 // whose body says only literals is a placement, and its `set`s that
@@ -8,12 +10,10 @@
 // the map's, and so is a `define layer`, with what its body places with
 // literals on it; a handler is the screen's. A row that says anything else is
 // code a game runs once, so it stays code: under `when this screen loads`,
-// which is always there, empty or not, since it is where a lesson's
-// once-only code is written. A world block acts on the World from the
+// which is always there, empty or not. A world block acts on the World from the
 // screen's code as from any (specs/ONE_WORLD_PLAN.md), so the code acts on the
 // level as it did on the world.
 
-import {activateFile} from '@code-dot-org/codebridge';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {importStockActor} from '../../actors/importStockActor';
@@ -234,8 +234,8 @@ function eventOf(row: Block): ScreenEvent {
   };
 }
 
-/** What a lesson's `main.world` is as a screen and a map. */
-export interface LessonScreen {
+/** What a `main.world` is as a screen and a map. */
+export interface WorldScreen {
   screen: string;
   /** Absent when the world's map was a screen already: it placed a Viewport. */
   map?: string;
@@ -260,7 +260,7 @@ export function screenOfWorld(
      */
     screenIsLevel?: boolean;
   } = {},
-): LessonScreen {
+): WorldScreen {
   const doc = JSON.parse(contents) as {
     blocks?: {blocks?: Block[]};
     variables?: unknown[];
@@ -396,9 +396,8 @@ export function screenOfWorld(
   // Every world block acts on the World, from the screen's code as from any
   // (specs/ONE_WORLD_PLAN.md), so nothing has to be told it is the level.
   const handlers = roots.filter(root => root !== world);
-  // There whether or not the world had code of its own: it is where a
-  // lesson's once-only code is written, as `define world`'s body was, and
-  // no early lesson's toolbox offers either block.
+  // There whether or not the world had code of its own: it is where
+  // once-only code is written, as `define world`'s body was.
   const first = chain(code);
   const loads: Block[] =
     first || !asLevel
@@ -511,34 +510,6 @@ const withoutViewportMaps = (placements: Placement[]): string | undefined => {
 };
 
 /**
- * The `main.world` a converted project was written as, for the check tests,
- * which write a solved lesson as an edit to it (`lessonChecks.test`). Kept
- * by its Main Screen's file, which a project made from a lesson by changing
- * some other file still holds.
- */
-const madeFrom = new WeakMap<object, string>();
-
-const screenOf = (source: MultiFileSource): object | undefined =>
-  Object.values(source.files).find(file => file.name === 'main.screen');
-
-export const worldMadeInto = (source: MultiFileSource): string | undefined => {
-  const screen = screenOf(source);
-  return screen ? madeFrom.get(screen) : undefined;
-};
-
-/** Remember that `source` was made from `world`. */
-export const rememberWorld = (
-  source: MultiFileSource,
-  world: string,
-): MultiFileSource => {
-  const screen = screenOf(source);
-  if (screen) {
-    madeFrom.set(screen, world);
-  }
-  return source;
-};
-
-/**
  * The project with its `main.world` a `main.screen` and a `main.map`, the
  * screen active where the world was, and the Viewport the screen places.
  */
@@ -586,28 +557,11 @@ export function asScreenProject(source: MultiFileSource): MultiFileSource {
           }
         : {}),
     },
-    // The level a tab beside the screen, since a lesson on the map is done
-    // there: the screen draws it, but only as a picture (`MapStage`).
+    // The level a tab beside the screen: the screen draws it, but only as a
+    // picture (`MapStage`).
     openFiles: map ? [...(next.openFiles ?? []), mapId] : next.openFiles,
   };
   // What the world declared for itself is the screen's now, and its blocks
   // are named by the file that declares them.
   return renameReferences(next, {from: 'worlds/main', to: 'screens/main'});
-}
-
-/**
- * The project with its level in front: a lesson whose task is on the map
- * opens there, and one whose work is in blocks on the Main Screen's code
- * (`levelData.worldView`). The world it was written as goes with it.
- */
-export function opensOnTheLevel(source: MultiFileSource): MultiFileSource {
-  const level = Object.values(source.files).find(
-    file => file.name === 'main.map',
-  );
-  if (!level) {
-    return source;
-  }
-  const world = worldMadeInto(source);
-  const next = activateFile(source, level.id);
-  return world === undefined ? next : rememberWorld(next, world);
 }

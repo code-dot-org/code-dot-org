@@ -40,8 +40,7 @@ import type {WorldScenario} from '../../fixtures/scenarios';
 import type {RuleData, RuleTrait} from '../../rules/ruleData';
 import type {LessonProperties, TileId} from '../types';
 
-import {opensOnTheLevel} from './asScreen';
-import {lessonSource} from './support';
+import {lessonSource, opensOnTheLevel} from './support';
 import {
   addActor,
   anyKind,
@@ -49,7 +48,8 @@ import {
   actorPath,
   placeAt,
   placeInMap,
-  worldFile,
+  placedAt,
+  screenFile,
   type ActorSpec,
   type MainCameraSettings,
 } from './worlds';
@@ -96,9 +96,9 @@ const firstWorld: WorldScenario = {
   name: 'First light',
   description: 'A world with one actor in it, and a Run button.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [placeInMap(actorPath('hero'), [placed('Hero', 160, 160)])],
+      placed: [placeInMap(actorPath('hero'), [placed('Hero', 160, 160)])],
       actors: [
         {
           id: 'hero',
@@ -151,9 +151,9 @@ const arrows: WorldScenario = {
   name: 'Make it go',
   description: 'A player that ignores you, and the trait that changes that.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [placeInMap(actorPath('hero'), [placed('Hero', 160, 160)])],
+      placed: [placeInMap(actorPath('hero'), [placed('Hero', 160, 160)])],
       actors: [
         {
           id: 'hero',
@@ -201,9 +201,9 @@ const speed: WorldScenario = {
   name: 'Speed is not a place',
   description: 'Moving by hand every frame, and the rule that replaces it.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [placeInMap(actorPath('hero'), [placed('Hero', 40, 160)])],
+      placed: [placeInMap(actorPath('hero'), [placed('Hero', 40, 160)])],
       actors: [
         {
           id: 'hero',
@@ -296,12 +296,9 @@ const gravity: WorldScenario = {
   name: 'Down',
   description: 'A thing in the air, some ground, and nothing pulling.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [
-        // Directly above the ground, and that is not decoration: at x 160 and
-        // 192 the two 32-pixel sprites overlap by nothing at all, and the Hero
-        // falls past the corner of the floor. The lesson's check found it.
+      placed: [
         placeInMap(actorPath('hero'), [placed('Hero', 160, 40)]),
         placeInMap(actorPath('ground'), [placed('Ground', 160, 272)]),
       ],
@@ -365,9 +362,9 @@ const sprite: WorldScenario = {
   name: 'A picture is a file',
   description: 'An actor drawing a gray box, and the picture it could have.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [placeInMap(actorPath('hero'), [placed('Hero', 160, 160)])],
+      placed: [placeInMap(actorPath('hero'), [placed('Hero', 160, 160)])],
       actors: [
         {
           id: 'hero',
@@ -412,17 +409,6 @@ like everything else.
 
 // ── look/drawing ─────────────────────────────────────────────────────────────
 
-/**
- * `set fraction of ⟨this actor⟩ to ⟨n⟩` — the Bar's own number.
- *
- * The Bar declares it with `define property` in its own file, so the block
- * carries that file (`ruleRegistry.pathSlug`) rather than a rule's name.
- */
-const setFraction = (value: number) => ({
-  type: 'world_set_ActorsBar_FractionProperty',
-  inputs: {ACTOR: me(), VALUE: num(value)},
-});
-
 /** `draw rectangle at x ⟨⟩ y ⟨⟩ size ⟨width⟩ by ⟨⟩`, with any width block. */
 const bar = (width: object) => ({
   type: 'world_draw_rectangle',
@@ -434,11 +420,11 @@ const drawing: WorldScenario = {
   description:
     'Two progress bars that are both full, and one of them should not be.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [
-        addActor(actorPath('bar'), [placeAt(160, 110), setFraction(1)]),
-        addActor(actorPath('bar'), [placeAt(160, 210), setFraction(0.35)]),
+      placed: [
+        placedAt(actorPath('bar'), 'bar', 160, 110, {Bar: {fraction: 1}}),
+        placedAt(actorPath('bar'), 'bar2', 160, 210, {Bar: {fraction: 0.35}}),
       ],
       actors: [
         {
@@ -500,15 +486,10 @@ const background: WorldScenario = {
   description:
     'A world on a flat color, and the picture that belongs behind it.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [
-        {
-          type: 'world_set_background_color',
-          inputs: {COLOR: swatch('#7ec8e3')},
-        },
-        placeInMap(actorPath('hero'), [placed('Hero', 160, 200)]),
-      ],
+      placed: [placeInMap(actorPath('hero'), [placed('Hero', 160, 200)])],
+      backgroundColor: '#7ec8e3',
       actors: [
         {
           id: 'hero',
@@ -554,9 +535,9 @@ const animation: WorldScenario = {
   name: 'Pictures in a row',
   description: 'A Hero that slides along without ever moving its legs.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [addActor(actorPath('hero'), [placeAt(160, 160)])],
+      placed: [placedAt(actorPath('hero'), 'hero', 160, 160)],
       actors: [
         {
           id: 'hero',
@@ -604,16 +585,13 @@ const effect: WorldScenario = {
   description:
     'A world drawn plainly, and the filters that change how it is painted.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [
-        {
-          type: 'world_set_background_color',
-          inputs: {COLOR: swatch('#1b2530')},
-        },
-        addActor(actorPath('hero'), [placeAt(120, 160)]),
-        addActor(actorPath('coin'), [placeAt(220, 160)]),
+      placed: [
+        placedAt(actorPath('hero'), 'hero', 120, 160),
+        placedAt(actorPath('coin'), 'coin', 220, 160),
       ],
+      backgroundColor: '#1b2530',
       actors: [
         {
           id: 'hero',
@@ -663,9 +641,9 @@ const position: WorldScenario = {
   name: 'x and y',
   description: 'Three markers in a heap, and three places to put them.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [
+      placed: [
         placeInMap(actorPath('marker'), [
           placed('Marker', 160, 160),
           placed('Marker2', 160, 160),
@@ -716,9 +694,9 @@ const press: WorldScenario = {
   description:
     'Walking is a key HELD. A jump is a key PRESSED. They are not the same reading.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [addActor(actorPath('hero'), [placeAt(160, 160)])],
+      placed: [placedAt(actorPath('hero'), 'hero', 160, 160)],
       actors: [
         {
           id: 'hero',
@@ -762,9 +740,9 @@ const mouse: WorldScenario = {
   description:
     'A button that does not know it has been pressed, and the trait that tells it.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [addActor(actorPath('target'), [placeAt(160, 160)])],
+      placed: [placedAt(actorPath('target'), 'target', 160, 160)],
       actors: [
         {
           id: 'target',
@@ -821,9 +799,9 @@ const twoHands: WorldScenario = {
   description:
     'The same four keys as a walk, and as a ship. Elect one or the other, never both.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [placeInMap(actorPath('ship'), [placed('Ship', 160, 160)])],
+      placed: [placeInMap(actorPath('ship'), [placed('Ship', 160, 160)])],
       actors: [
         {
           id: 'ship',
@@ -861,17 +839,8 @@ the way it is pointing.
 
 // ── motion/force ─────────────────────────────────────────────────────────────
 
-/** `set velocity of ⟨this actor⟩ to ⟨x, y⟩`, for a world's `add actor` body. */
 /** The Ball three lessons start from: it can move, and it has a picture. */
 const BALL = {traits: ['Physics#CanMoveTrait'], sprite: 'ball.png'};
-
-const setVelocity = (x: number, y: number) => ({
-  type: 'world_set_Physics_VelocityProperty',
-  inputs: {
-    ACTOR: {block: {type: 'world_this_actor'}},
-    VALUE: {block: {type: 'world_vector', fields: {VECTOR: {x, y}}}},
-  },
-});
 
 /**
  * `when ⟨any Ball⟩ hears ⟨key⟩ pressed`, as a root beside the `define world`.
@@ -905,9 +874,9 @@ const force: WorldScenario = {
   description:
     'A ball that says "bang" and does not move, and the block that changes that.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [addActor(actorPath('ball'), [placeAt(64, 160)])],
+      placed: [placedAt(actorPath('ball'), 'ball', 64, 160)],
       actors: [
         {
           id: 'ball',
@@ -951,9 +920,9 @@ const units: WorldScenario = {
   description:
     'A ball traveling far too fast, and the arithmetic that fixes it.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [
+      placed: [
         placeInMap(actorPath('ball'), [
           movingAt('Ball', 16, 160, {x: 60, y: 0}),
         ]),
@@ -998,9 +967,9 @@ const drag: WorldScenario = {
   description:
     'A ball that drifts forever, and the one trait that makes it a car.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [
+      placed: [
         placeInMap(actorPath('ball'), [
           movingAt('Ball', 24, 160, {x: 2.5, y: 0}),
         ]),
@@ -1055,11 +1024,11 @@ const tween: WorldScenario = {
   description:
     'A door that does not open, and the difference between a place and a journey.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [
-        addActor(actorPath('door'), [placeAt(64, 160)]),
-        addActor(actorPath('post'), [placeAt(256, 160)]),
+      placed: [
+        placedAt(actorPath('door'), 'door', 64, 160),
+        placedAt(actorPath('post'), 'post', 256, 160),
       ],
       actors: [
         {
@@ -1117,10 +1086,12 @@ const conditional: WorldScenario = {
   description:
     'A ball that leaves the world, and the block that lets it decide not to.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [
-        addActor(actorPath('ball'), [placeAt(24, 160), setVelocity(1.6, 0)]),
+      placed: [
+        placedAt(actorPath('ball'), 'ball', 24, 160, {
+          Can_Move: {velocity: {x: 1.6, y: 0}},
+        }),
       ],
       actors: [{id: 'ball', name: 'Ball', ...BALL}],
     }),
@@ -1154,11 +1125,13 @@ const collision: WorldScenario = {
   description:
     'A ball that rolls straight through a wall, and the trait that stops it.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [
-        addActor(actorPath('ball'), [placeAt(24, 160), setVelocity(1.6, 0)]),
-        addActor(actorPath('wall'), [placeAt(272, 160)]),
+      placed: [
+        placedAt(actorPath('ball'), 'ball', 24, 160, {
+          Can_Move: {velocity: {x: 1.6, y: 0}},
+        }),
+        placedAt(actorPath('wall'), 'wall', 272, 160),
       ],
       actors: [
         {
@@ -1206,11 +1179,15 @@ const andOr: WorldScenario = {
   description:
     'Two balls, one condition, and the difference between AND and OR.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [
-        addActor(actorPath('ball'), [placeAt(24, 64), setVelocity(1.6, 0)]),
-        addActor(actorPath('ball'), [placeAt(24, 240), setVelocity(1.6, 0)]),
+      placed: [
+        placedAt(actorPath('ball'), 'ball', 24, 64, {
+          Can_Move: {velocity: {x: 1.6, y: 0}},
+        }),
+        placedAt(actorPath('ball'), 'ball2', 24, 240, {
+          Can_Move: {velocity: {x: 1.6, y: 0}},
+        }),
       ],
       actors: [
         {
@@ -1302,12 +1279,14 @@ const kinds: WorldScenario = {
   description:
     'One handler, two kinds of thing, and no way yet to tell them apart.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [
-        addActor(actorPath('ball'), [placeAt(24, 160), setVelocity(1.6, 0)]),
-        addActor(actorPath('coin'), [placeAt(120, 160)]),
-        addActor(actorPath('spike'), [placeAt(230, 160)]),
+      placed: [
+        placedAt(actorPath('ball'), 'ball', 24, 160, {
+          Can_Move: {velocity: {x: 1.6, y: 0}},
+        }),
+        placedAt(actorPath('coin'), 'coin', 120, 160),
+        placedAt(actorPath('spike'), 'spike', 230, 160),
       ],
       actors: [
         {
@@ -1367,17 +1346,15 @@ const map: WorldScenario = {
   name: 'A room drawn, not typed',
   description: 'A floor made of twenty blocks, and the map that replaces them.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [
-        addActor(actorPath('hero'), [placeAt(48, 240)]),
-        // Three tiles, painted by hand and stopping short: the floor the Hero
-        // is standing on runs out, and the lesson is the rest of it.
+      placed: [
         placeInMap(actorPath('ground'), [
           placed('floor0', 16, 304),
           placed('floor1', 48, 304),
           placed('floor2', 80, 304),
         ]),
+        placedAt(actorPath('hero'), 'hero', 48, 240),
       ],
       actors: [
         {
@@ -1430,15 +1407,17 @@ const camera: WorldScenario = {
   description:
     'A room three screens wide, and a view that only ever shows the first.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
       // Three screens across and one down. A world that arranges its own
       // actors is one screen until it says otherwise, and a camera in a
       // one-screen world is a camera that cannot move.
       tiles: [30, 10],
-      rows: [
+      placed: [
         placeInMap(actorPath('ground'), floorAcross(30)),
-        addActor(actorPath('hero'), [placeAt(48, 272), setVelocity(6, 0)]),
+        placedAt(actorPath('hero'), 'hero', 48, 272, {
+          Can_Move: {velocity: {x: 6, y: 0}},
+        }),
       ],
       actors: [
         {
@@ -1506,12 +1485,12 @@ const cameraFeel: WorldScenario = {
   description:
     'A camera that is right, welded to the player, and slightly horrible.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
       tiles: [30, 10],
-      rows: [
+      placed: [
         placeInMap(actorPath('ground'), floorAcross(30)),
-        addActor(actorPath('hero'), [placeAt(160, 272)]),
+        placedAt(actorPath('hero'), 'hero', 160, 272),
       ],
       // Where the last lesson left it.
       mainCamera: followingCamera('hero'),
@@ -1583,23 +1562,17 @@ const layers: WorldScenario = {
   description:
     'A score that scrolls away with the scenery, and the hills that do not lag.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
       tiles: [30, 10],
-      rows: [
+      placed: [
         placeInMap(actorPath('ground'), floorAcross(30)),
-        // Three hills, far apart, so the eye can see whether they keep up —
-        // and standing ON the floor rather than above it: the tiles are centered
-        // at 304 and are 32 tall, so 272 puts a hill's foot on the grass.
-        // ON THE MAP, with the floor: what a layer holds is said by selecting
-        // a thing there, and a thing placed by a block is not there to select.
         placeInMap(actorPath('hill'), [
           placed('Hill1', 80, 272),
           placed('Hill2', 400, 272),
           placed('Hill3', 720, 272),
         ]),
         placeInMap(actorPath('score'), [placed('Score', 60, 30)]),
-        // …and the Hero, whom the main camera follows.
         placeInMap(actorPath('hero'), [placed('Hero', 160, 272)]),
       ],
       mainCamera: followingCamera('hero'),
@@ -1707,9 +1680,9 @@ const placementScript: WorldScenario = {
   description:
     'Two buttons of one kind, and a handler that cannot tell them apart.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [
+      placed: [
         placeInMap('actors/label', [saying('Sign', 160, 80, '…')]),
         placeInMap('actors/button', [
           saying('Red', 96, 200, 'RED'),
@@ -1770,11 +1743,11 @@ const jump: WorldScenario = {
   description:
     'A jump written by hand, which works in mid-air and works forever.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [
+      placed: [
         placeInMap(actorPath('ground'), floorAcross(10)),
-        addActor(actorPath('hero'), [placeAt(160, 272)]),
+        placedAt(actorPath('hero'), 'hero', 160, 272),
       ],
       actors: [
         {
@@ -1846,9 +1819,9 @@ const jetpack: WorldScenario = {
   name: 'A ledge out of reach',
   description: 'A jump that clears three tiles, and a ledge six tiles up.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [
+      placed: [
         placeInMap(actorPath('ground'), [
           ...floorAcross(10),
           // Six tiles up, which no jump in the lab reaches: the default
@@ -1857,7 +1830,7 @@ const jetpack: WorldScenario = {
             placed(`ledge${column}`, column * 32 + 16, 112),
           ),
         ]),
-        addActor(actorPath('hero'), [placeAt(48, 272)]),
+        placedAt(actorPath('hero'), 'hero', 48, 272),
       ],
       actors: [
         {
@@ -1934,28 +1907,23 @@ const ladders: WorldScenario = {
   description:
     'A ledge, a ladder up to it, and a Hero that walks straight through both.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [
+      placed: [
         placeInMap(actorPath('ground'), floorAcross(10)),
-        // The ledge is a ONE-WAY platform — `Acts as Ground` and not Solid,
-        // which the lesson before this one built. It matters here for the
-        // second half: you cannot climb down through something solid.
         placeInMap(
           actorPath('ledge'),
           [4, 5, 6, 7, 8, 9].map(column =>
             placed(`ledge${column}`, column * 32 + 16, 144),
           ),
         ),
-        // …and the ladder, standing on the floor and reaching a rung above
-        // the ledge, so that letting go at the top drops you on to it.
         placeInMap(
           actorPath('ladder'),
           [272, 240, 208, 176, 144, 112].map((y, index) =>
             placed(`rung${index}`, 144, y),
           ),
         ),
-        addActor(actorPath('hero'), [placeAt(144, 272)]),
+        placedAt(actorPath('hero'), 'hero', 144, 272),
       ],
       actors: [
         {
@@ -2046,7 +2014,7 @@ const surfaces: WorldScenario = {
   description:
     'A belt, some ice and some sludge, drawn as three things and behaving as one.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
       // Twelve tiles rather than ten, for the ice. The Hero steps on to it
       // off the sludge, which is to say at a crawl — and a walker that
@@ -2054,9 +2022,7 @@ const surfaces: WorldScenario = {
       // being unable to turn round and then the far edge of it. Four tiles
       // is long enough for the thing the lesson asks you to try.
       tiles: [12, 10],
-      rows: [
-        // The run the Hero walks: ordinary floor, then one stretch of each,
-        // in the order the lesson asks about them.
+      placed: [
         placeInMap(actorPath('ground'), [
           ...[0, 1].map(column =>
             placed(`floor${column}`, column * 32 + 16, 304),
@@ -2083,7 +2049,7 @@ const surfaces: WorldScenario = {
             placed(`ice${column}`, column * 32 + 16, 304),
           ),
         ),
-        addActor(actorPath('hero'), [placeAt(16, 272)]),
+        placedAt(actorPath('hero'), 'hero', 16, 272),
       ],
       actors: [
         {
@@ -2174,9 +2140,9 @@ const pads: WorldScenario = {
   name: 'Two plates and a wall between them',
   description: 'A room cut in half, with a pad on each side and no way round.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [
+      placed: [
         placeInMap(actorPath('ground'), [
           ...floorAcross(10),
           // The wall, floor to ceiling. There is no way round it, which is
@@ -2185,9 +2151,9 @@ const pads: WorldScenario = {
             placed(`wall${y}`, 160, y),
           ),
         ]),
-        addActor(actorPath('here'), [placeAt(64, 288)]),
-        addActor(actorPath('there'), [placeAt(272, 288)]),
-        addActor(actorPath('hero'), [placeAt(48, 272)]),
+        placedAt(actorPath('here'), 'here', 64, 288),
+        placedAt(actorPath('there'), 'there', 272, 288),
+        placedAt(actorPath('hero'), 'hero', 48, 272),
       ],
       actors: [
         {
@@ -2390,16 +2356,16 @@ const walls: WorldScenario = {
   name: 'A wall you can talk out of the way',
   description: 'A corridor with a block across it, and a plate on the floor.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [
+      placed: [
         placeInMap(actorPath('ground'), floorAcross(10)),
         placeInMap(
           actorPath('wall'),
           [176, 208, 240, 272].map(y => placed(`bar${y}`, 208, y)),
         ),
-        addActor(actorPath('plate'), [placeAt(80, 288)]),
-        addActor(actorPath('hero'), [placeAt(32, 272)]),
+        placedAt(actorPath('plate'), 'plate', 80, 288),
+        placedAt(actorPath('hero'), 'hero', 32, 272),
       ],
       actors: [
         {
@@ -2491,12 +2457,9 @@ const digging: WorldScenario = {
   name: 'A floor with no way through it',
   description: 'Two floors, a Hero on the upper one, and nothing joining them.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [
-        // The floor the Hero stands on, which is the one it has to get
-        // through — and a second one below to land on, so that falling is
-        // arriving somewhere rather than leaving the world.
+      placed: [
         placeInMap(
           actorPath('soil'),
           [2, 3, 4, 5, 6, 7].map(column =>
@@ -2504,7 +2467,7 @@ const digging: WorldScenario = {
           ),
         ),
         placeInMap(actorPath('ground'), floorAcross(10)),
-        addActor(actorPath('hero'), [placeAt(112, 240)]),
+        placedAt(actorPath('hero'), 'hero', 112, 240),
       ],
       actors: [
         {
@@ -2629,13 +2592,13 @@ const enemies: WorldScenario = {
   description:
     'A corridor with walls at both ends, and a steel ball sitting in it.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
       // Fourteen tiles rather than ten, and the width is the lesson: a
       // corridor much longer than a patrol's beat is one where turning on a
       // clock and turning on a wall visibly differ.
       tiles: [14, 10],
-      rows: [
+      placed: [
         placeInMap(actorPath('ground'), [
           ...floorAcross(14),
           // Walls at both ends, reaching DOWN TO THE FLOOR — a wall that
@@ -2646,8 +2609,8 @@ const enemies: WorldScenario = {
             placed(`right${y}`, 432, y),
           ]),
         ]),
-        addActor(actorPath('ball'), [placeAt(160, 272)]),
-        addActor(actorPath('hero'), [placeAt(64, 272)]),
+        placedAt(actorPath('ball'), 'ball', 160, 272),
+        placedAt(actorPath('hero'), 'hero', 64, 272),
       ],
       actors: [
         {
@@ -2728,9 +2691,9 @@ const hunter: WorldScenario = {
   name: 'A robot that cannot get up',
   description: 'Two floors, a ladder at one end, and a robot at the other.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [
+      placed: [
         placeInMap(actorPath('ground'), [
           ...floorAcross(10),
           // The upper floor, with the hole at the FAR END from where the
@@ -2754,8 +2717,8 @@ const hunter: WorldScenario = {
             placed(`rung${index}`, 48, y),
           ),
         ),
-        addActor(actorPath('robot'), [placeAt(256, 240)]),
-        addActor(actorPath('hero'), [placeAt(256, 112)]),
+        placedAt(actorPath('robot'), 'robot', 256, 240),
+        placedAt(actorPath('hero'), 'hero', 256, 112),
       ],
       actors: [
         {
@@ -2909,9 +2872,9 @@ const flier: WorldScenario = {
   name: 'A bat you cannot get away from',
   description: 'A ledge with you on it, open air below, and something coming.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [
+      placed: [
         placeInMap(actorPath('ground'), [
           ...floorAcross(10),
           // A ledge to stand on, high and to one side, so that the thing
@@ -2920,8 +2883,8 @@ const flier: WorldScenario = {
             placed(`ledge${column}`, column * 32 + 16, 144),
           ),
         ]),
-        addActor(actorPath('bat'), [placeAt(80, 240)]),
-        addActor(actorPath('hero'), [placeAt(240, 112)]),
+        placedAt(actorPath('bat'), 'bat', 80, 240),
+        placedAt(actorPath('hero'), 'hero', 240, 112),
       ],
       actors: [
         {
@@ -3028,14 +2991,16 @@ const pickups: WorldScenario = {
   name: 'Things worth having',
   description: 'Three coins a Hero walks straight through.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [
+      placed: [
         placeInMap(actorPath('ground'), floorAcross(10)),
-        addActor(actorPath('coin'), [placeAt(100, 272)]),
-        addActor(actorPath('coin'), [placeAt(180, 272)]),
-        addActor(actorPath('coin'), [placeAt(260, 272)]),
-        addActor(actorPath('hero'), [placeAt(30, 272), setVelocity(3, 0)]),
+        placedAt(actorPath('coin'), 'coin', 100, 272),
+        placedAt(actorPath('coin'), 'coin2', 180, 272),
+        placedAt(actorPath('coin'), 'coin3', 260, 272),
+        placedAt(actorPath('hero'), 'hero', 30, 272, {
+          Can_Move: {velocity: {x: 3, y: 0}},
+        }),
       ],
       actors: [
         {
@@ -3089,12 +3054,12 @@ const hazards: WorldScenario = {
   name: 'Something that can hurt you',
   description: 'A Hero walking into a spike, and a spike that does not mind.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [
+      placed: [
         placeInMap(actorPath('ground'), floorAcross(10)),
-        addActor(actorPath('spike'), [placeAt(200, 272)]),
-        addActor(actorPath('hero'), [placeAt(60, 272)]),
+        placedAt(actorPath('spike'), 'spike', 200, 272),
+        placedAt(actorPath('hero'), 'hero', 60, 272),
       ],
       actors: [
         {
@@ -3159,24 +3124,20 @@ const level: WorldScenario = {
   description:
     'Everything from the last four lessons in one world, and nothing to reach.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
       tiles: [20, 10],
-      rows: [
-        declareProperty('boolean', 'won', 'false'),
+      placed: [
         placeInMap(actorPath('ground'), floorAcross(20)),
-        addActor(actorPath('coin'), [placeAt(150, 272)]),
-        addActor(actorPath('coin'), [placeAt(250, 272)]),
-        addActor(actorPath('spike'), [placeAt(360, 272)]),
-        addActor(actorPath('flag'), [placeAt(560, 272)]),
-        addActor(actorPath('hero'), [
-          placeAt(40, 272),
-          {
-            type: 'world_set_ArrowKeys_AcrossSpeedProperty',
-            inputs: {ACTOR: me(), VALUE: num(6)},
-          },
-        ]),
+        placedAt(actorPath('coin'), 'coin', 150, 272),
+        placedAt(actorPath('coin'), 'coin2', 250, 272),
+        placedAt(actorPath('spike'), 'spike', 360, 272),
+        placedAt(actorPath('flag'), 'flag', 560, 272),
+        placedAt(actorPath('hero'), 'hero', 40, 272, {
+          Moves_Across: {across_speed: 6},
+        }),
       ],
+      properties: [declareProperty('boolean', 'won', 'false')],
       mainCamera: followingCamera('hero'),
       actors: [
         {
@@ -3287,11 +3248,13 @@ const bounce: WorldScenario = {
   name: 'Off the wall',
   description: 'A ball in a box that stops the moment it arrives at one.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [
+      placed: [
         placeInMap(actorPath('wall'), wallsRound()),
-        addActor(actorPath('ball'), [placeAt(160, 160), setVelocity(4, 3)]),
+        placedAt(actorPath('ball'), 'ball', 160, 160, {
+          Can_Move: {velocity: {x: 4, y: 3}},
+        }),
       ],
       actors: [
         {
@@ -3354,9 +3317,9 @@ const paddle: WorldScenario = {
   name: 'A thing you steer',
   description: 'A paddle kept on screen by hand, with half of it hanging off.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [addActor(actorPath('paddle'), [placeAt(160, 280)])],
+      placed: [placedAt(actorPath('paddle'), 'paddle', 160, 280)],
       actors: [
         {
           id: 'paddle',
@@ -3443,9 +3406,9 @@ const zap: WorldScenario = {
   name: 'An energy ball is spawned',
   description: 'A ship that zaps sixty times a second and never tidies up.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [addActor(actorPath('ship'), [placeAt(160, 280)])],
+      placed: [placedAt(actorPath('ship'), 'ship', 160, 280)],
       actors: [
         {
           id: 'ship',
@@ -3499,15 +3462,17 @@ const bricks: WorldScenario = {
   description:
     'Three bricks that go one at a time, and a game that never ends.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [
-        declareProperty('boolean', 'cleared', 'false'),
-        addActor(actorPath('brick'), [placeAt(120, 160)]),
-        addActor(actorPath('brick'), [placeAt(200, 160)]),
-        addActor(actorPath('brick'), [placeAt(280, 160)]),
-        addActor(actorPath('ball'), [placeAt(30, 160), setVelocity(4, 0)]),
+      placed: [
+        placedAt(actorPath('brick'), 'brick', 120, 160),
+        placedAt(actorPath('brick'), 'brick2', 200, 160),
+        placedAt(actorPath('brick'), 'brick3', 280, 160),
+        placedAt(actorPath('ball'), 'ball', 30, 160, {
+          Can_Move: {velocity: {x: 4, y: 0}},
+        }),
       ],
+      properties: [declareProperty('boolean', 'cleared', 'false')],
       actors: [
         {
           id: 'ball',
@@ -3568,21 +3533,17 @@ actors**. Ask it after each one goes, and the answer is eventually zero.
 
 // ── arcade/waves ─────────────────────────────────────────────────────────────
 
-/** `set timer period of ⟨this actor⟩ to ⟨…⟩`. */
-const setPeriod = (value: object) => ({
-  type: 'world_set_Time_TimerPeriodProperty',
-  inputs: {ACTOR: me(), VALUE: value},
-});
-
 const waves: WorldScenario = {
   name: 'It gets harder',
   description:
     'A spawner on a timer that sends the same thing at the same rate forever.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [
-        addActor(actorPath('spawner'), [placeAt(160, 20), setPeriod(num(1))]),
+      placed: [
+        placedAt(actorPath('spawner'), 'spawner', 160, 20, {
+          Has_a_Timer: {timer_period: 1},
+        }),
       ],
       actors: [
         {
@@ -3671,13 +3632,10 @@ const storyText: WorldScenario = {
   description:
     'A sentence drawn as one line, running off both edges of the world.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [
-        addActor('actors/label', [
-          placeAt(160, 160),
-          setText('TextProperty', words(LINE)),
-        ]),
+      placed: [
+        placedAt('actors/label', 'label', 160, 160, {Label: {text: LINE}}),
       ],
     }),
     stockActors: ['label'],
@@ -3712,17 +3670,12 @@ const reveal: WorldScenario = {
   description:
     'A line that is simply there, all at once, before anybody has read a word.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [
-        addActor('actors/speechBox', [
-          // The MIDDLE of the world, because a drawing is centered on the actor
-          // that carries it, exactly as a sprite is. A box 280 wide put at 20
-          // read as "20 in from the left" and hung 120 pixels off it, so every
-          // line of dialogue lost its first half.
-          placeAt(160, 200),
-          setText('TextProperty', words(LINE)),
-        ]),
+      placed: [
+        placedAt('actors/speechBox', 'speechBox', 160, 200, {
+          Label: {text: LINE},
+        }),
       ],
     }),
     stockActors: ['speechBox'],
@@ -3762,9 +3715,9 @@ const script: WorldScenario = {
   name: 'A place in a list',
   description: 'One line of dialogue and a click that does nothing.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [
+      loads: [
         addActor('actors/speechBox', [
           // The MIDDLE of the world, because a drawing is centered on the actor
           // that carries it, exactly as a sprite is. A box 280 wide put at 20
@@ -3846,10 +3799,18 @@ const choice: WorldScenario = {
   name: 'A question that matters',
   description: 'A story that asks you something and carries on regardless.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [
-        declareProperty('boolean', 'opened the door', 'false'),
+      placed: [
+        placedAt('actors/button', 'button', 80, 120, {
+          Label: {text: 'Open it'},
+        }),
+        placedAt('actors/button', 'button2', 240, 120, {
+          Label: {text: 'Walk away'},
+        }),
+      ],
+      properties: [declareProperty('boolean', 'opened the door', 'false')],
+      loads: [
         addActor('actors/speechBox', [
           // The MIDDLE of the world, because a drawing is centered on the actor
           // that carries it, exactly as a sprite is. A box 280 wide put at 20
@@ -3883,14 +3844,6 @@ const choice: WorldScenario = {
             'TextProperty',
             words('Somebody at the door. Click to begin.'),
           ),
-        ]),
-        addActor('actors/button', [
-          placeAt(80, 120),
-          setText('TextProperty', words('Open it')),
-        ]),
-        addActor('actors/button', [
-          placeAt(240, 120),
-          setText('TextProperty', words('Walk away')),
         ]),
       ],
       handlers: [
@@ -3965,16 +3918,10 @@ const screenLesson: WorldScenario = {
   // The stock Pause Menu, a screen of its own, imported as a project would
   // import one and shown by nothing yet (specs/SCREEN_STACK_PLAN.md, step 7).
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [
-        // The game's `quit`, which the menu's Quit button raises.
-        {
-          type: 'world_rule_event',
-          extraState: {parts: [{kind: 'label', text: 'quit'}]},
-        },
-        addActor(actorPath('hero'), [placeAt(160, 160)]),
-      ],
+      placed: [placedAt(actorPath('hero'), 'hero', 160, 160)],
+      events: [{name: 'quit'}],
       actors: [
         {
           id: 'hero',
@@ -4092,9 +4039,7 @@ const form: WorldScenario = {
   description:
     'Three fields that tab through themselves in the order somebody happened to add them.',
   source: lessonSource({
-    world: worldFile({
-      // The lesson reads its `add actor` rows, so they stay rows.
-      rowsAsCode: true,
+    screen: screenFile({
       name: 'My World',
       // The prompts first — they are Labels, they hold no keyboard, and the
       // tab order does not know they exist.
@@ -4104,7 +4049,7 @@ const form: WorldScenario = {
       // form, then the town that turned out to belong in the middle. Nobody
       // has said what order they should be VISITED in, and the default is this
       // one.
-      rows: [
+      loads: [
         prompt(100, 'name'),
         prompt(150, 'town'),
         prompt(200, 'colour'),
@@ -4159,14 +4104,11 @@ const scene: WorldScenario = {
   description:
     'Two people talking in an empty gray room, with nobody to look at.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [
-        {
-          type: 'world_set_background_color',
-          inputs: {COLOR: swatch('#2b2b33')},
-        },
-        addActor('actors/portrait', [placeAt(80, 120)]),
+      placed: [placedAt('actors/portrait', 'portrait', 80, 120)],
+      backgroundColor: '#2b2b33',
+      loads: [
         addActor('actors/speechBox', [
           // The MIDDLE of the world, because a drawing is centered on the actor
           // that carries it, exactly as a sprite is. A box 280 wide put at 20
@@ -4278,12 +4220,10 @@ const crowd: WorldScenario = {
   name: 'A hundred of something',
   description: 'One wanderer per click, and no idea what a hundred would cost.',
   source: lessonSource({
-    world: worldFile({
-      // The lesson reads its `add actor` rows, so they stay rows.
-      rowsAsCode: true,
+    screen: screenFile({
       name: 'My World',
       // One to look at before anybody clicks. The rest arrive by the handful.
-      rows: [addActor(actorPath('wanderer'), [placeAt(160, 160), wander()])],
+      loads: [addActor(actorPath('wanderer'), [placeAt(160, 160), wander()])],
       actors: [
         {
           id: 'wanderer',
@@ -4359,12 +4299,12 @@ const steering: WorldScenario = {
   name: 'Toward, and away',
   description: 'Two actors that ought to care where the player is, and do not.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [
-        addActor(actorPath('player'), [placeAt(160, 160)]),
-        addActor(actorPath('chaser'), [placeAt(40, 40)]),
-        addActor(actorPath('fleer'), [placeAt(280, 280)]),
+      placed: [
+        placedAt(actorPath('player'), 'player', 160, 160),
+        placedAt(actorPath('chaser'), 'chaser', 40, 40),
+        placedAt(actorPath('fleer'), 'fleer', 280, 280),
       ],
       actors: [
         {
@@ -4480,11 +4420,11 @@ const ruleProperty: WorldScenario = {
   name: 'A property is a block',
   description: 'A wind that blows everything at exactly the same speed.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [
-        addActor(actorPath('leaf'), [placeAt(40, 100)]),
-        addActor(actorPath('leaf'), [placeAt(40, 220)]),
+      placed: [
+        placedAt(actorPath('leaf'), 'leaf', 40, 100),
+        placedAt(actorPath('leaf'), 'leaf2', 40, 220),
       ],
       actors: [
         {
@@ -4538,11 +4478,11 @@ const grid: WorldScenario = {
   name: 'A step, not a speed',
   description: 'A player that slides about a grid world like a bar of soap.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [
+      placed: [
         placeInMap(actorPath('wall'), wallsRound()),
-        addActor(actorPath('player'), [placeAt(144, 144)]),
+        placedAt(actorPath('player'), 'player', 144, 144),
       ],
       actors: [
         {
@@ -4604,12 +4544,12 @@ const push: WorldScenario = {
   description:
     'A crate that stops you dead, and a rule that already knows what to do.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [
+      placed: [
         placeInMap(actorPath('wall'), wallsRound()),
-        addActor(actorPath('crate'), [placeAt(144, 144)]),
-        addActor(actorPath('player'), [placeAt(240, 144)]),
+        placedAt(actorPath('crate'), 'crate', 144, 144),
+        placedAt(actorPath('player'), 'player', 240, 144),
       ],
       actors: [
         {
@@ -4672,14 +4612,11 @@ const people: WorldScenario = {
   name: 'Somebody who is there',
   description: 'A villager who walks off and leaves their own name behind.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [
-        addActor(actorPath('villager'), [placeAt(80, 160)]),
-        addActor('actors/label', [
-          placeAt(80, 136),
-          setText('TextProperty', words('Mara')),
-        ]),
+      placed: [
+        placedAt(actorPath('villager'), 'villager', 80, 160),
+        placedAt('actors/label', 'label', 80, 136, {Label: {text: 'Mara'}}),
       ],
       actors: [
         {
@@ -4723,22 +4660,17 @@ const errand: WorldScenario = {
   description:
     'Four things to find, and a bar that has no idea how it is going.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [
-        addActor('actors/progressBar', [
-          placeAt(160, 30),
-          // Empty to begin with, which is what "nothing done yet" looks like.
-          {
-            type: 'world_set_ActorsProgressBar_FractionProperty',
-            inputs: {ACTOR: me(), VALUE: num(0)},
-          },
-        ]),
-        addActor(actorPath('token'), [placeAt(80, 200)]),
-        addActor(actorPath('token'), [placeAt(140, 200)]),
-        addActor(actorPath('token'), [placeAt(200, 200)]),
-        addActor(actorPath('token'), [placeAt(260, 200)]),
-        addActor(actorPath('hero'), [placeAt(30, 200)]),
+      placed: [
+        placedAt('actors/progressBar', 'progressBar', 160, 30, {
+          Progress_Bar: {fraction: 0},
+        }),
+        placedAt(actorPath('token'), 'token', 80, 200),
+        placedAt(actorPath('token'), 'token2', 140, 200),
+        placedAt(actorPath('token'), 'token3', 200, 200),
+        placedAt(actorPath('token'), 'token4', 260, 200),
+        placedAt(actorPath('hero'), 'hero', 30, 200),
       ],
       actors: [
         {
@@ -4806,9 +4738,9 @@ const changeRule: WorldScenario = {
   description:
     'A guard on a long, slow beat, and the number that says how long.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [addActor(actorPath('guard'), [placeAt(160, 160)])],
+      placed: [placedAt(actorPath('guard'), 'guard', 160, 160)],
       actors: [
         {
           id: 'guard',
@@ -4857,11 +4789,11 @@ const ownTrait: WorldScenario = {
   name: 'A trait of your own',
   description: 'One weather, two kinds of thing, and the same wind on both.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [
-        addActor(actorPath('leaf'), [placeAt(60, 100)]),
-        addActor(actorPath('stone'), [placeAt(60, 220)]),
+      placed: [
+        placedAt(actorPath('leaf'), 'leaf', 60, 100),
+        placedAt(actorPath('stone'), 'stone', 60, 220),
       ],
       // Both wraps on both of them, so the weather is something a learner can
       // watch rather than something that has already happened. The drift is
@@ -4986,11 +4918,11 @@ const ownRule: WorldScenario = {
   name: 'Shared, without a copy',
   description: 'Two actors doing the same thing, written out twice.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [
-        addActor(actorPath('fish'), [placeAt(100, 160)]),
-        addActor(actorPath('bird'), [placeAt(220, 160)]),
+      placed: [
+        placedAt(actorPath('fish'), 'fish', 100, 160),
+        placedAt(actorPath('bird'), 'bird', 220, 160),
       ],
       actors: [
         {
@@ -5048,17 +4980,14 @@ const bigWorld: WorldScenario = {
   description:
     'A room three screens wide, seen through a window that never moves.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
       tiles: [30, 10],
-      rows: [
-        {
-          type: 'world_set_background_color',
-          inputs: {COLOR: swatch('#101822')},
-        },
+      placed: [
         placeInMap(actorPath('ground'), floorAcross(30)),
-        addActor(actorPath('walker'), [placeAt(60, 272)]),
+        placedAt(actorPath('walker'), 'walker', 60, 272),
       ],
+      backgroundColor: '#101822',
       actors: [
         {
           id: 'walker',
@@ -5110,13 +5039,13 @@ const readRule: WorldScenario = {
   name: 'Open it up',
   description: 'A rule you have used twenty times and never looked inside.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [
-        declareProperty('number', 'how hard it pulls', '0'),
+      placed: [
         placeInMap(actorPath('ground'), floorAcross(10)),
-        addActor(actorPath('hero'), [placeAt(160, 40)]),
+        placedAt(actorPath('hero'), 'hero', 160, 40),
       ],
+      properties: [declareProperty('number', 'how hard it pulls', '0')],
       actors: [
         {
           id: 'hero',
@@ -5239,11 +5168,11 @@ const ownBlock: WorldScenario = {
   name: 'Your own vocabulary',
   description: 'The same sum written out twice, with one number different.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [
-        addActor(actorPath('cork'), [placeAt(100, 160)]),
-        addActor(actorPath('buoy'), [placeAt(220, 160)]),
+      placed: [
+        placedAt(actorPath('cork'), 'cork', 100, 160),
+        placedAt(actorPath('buoy'), 'buoy', 220, 160),
       ],
       actors: [
         {
@@ -5299,12 +5228,12 @@ const movingGround: WorldScenario = {
   description:
     'A platform that goes somewhere, and a player left standing where it was.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [
+      placed: [
         placeInMap(actorPath('ground'), floorAcross(10)),
-        addActor(actorPath('platform'), [placeAt(120, 200)]),
-        addActor(actorPath('hero'), [placeAt(120, 168)]),
+        placedAt(actorPath('platform'), 'platform', 120, 200),
+        placedAt(actorPath('hero'), 'hero', 120, 168),
       ],
       actors: [
         {
@@ -5379,21 +5308,21 @@ const goal: WorldScenario = {
   name: 'Counted, not declared',
   description: 'Two crates, two marks, and a puzzle that cannot be finished.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [
+      placed: [
         placeInMap(actorPath('wall'), wallsRound()),
-        // Two tiles apart, not one: boxes are a tile square, so marks in
-        // touching tiles are both touched by one crate — and a count that
-        // reached two from one crate would win the puzzle on its own.
-        addActor(actorPath('mark'), [placeAt(240, 144)]),
-        addActor(actorPath('mark'), [placeAt(240, 208)]),
-        addActor(actorPath('crate'), [placeAt(144, 144)]),
-        addActor(actorPath('crate'), [placeAt(144, 208)]),
-        addActor(actorPath('player'), [placeAt(80, 144)]),
+        placedAt(actorPath('mark'), 'mark', 240, 144),
+        placedAt(actorPath('mark'), 'mark2', 240, 208),
+        placedAt(actorPath('crate'), 'crate', 144, 144),
+        placedAt(actorPath('crate'), 'crate2', 144, 208),
+        placedAt(actorPath('player'), 'player', 80, 144),
+      ],
+      rules: [
         {
-          type: 'world_set_Scoring_TargetScoreProperty',
-          inputs: {VALUE: num(2)},
+          setter: 'world_set_Scoring_TargetScoreProperty',
+          type: 'number',
+          value: '2',
         },
       ],
       actors: [
@@ -5509,25 +5438,37 @@ const rooms: WorldScenario = {
   name: 'A door to somewhere else',
   description: 'Two rooms in two files, and a door that does nothing.',
   source: lessonSource({
-    world: worldFile({
-      name: 'My World',
-      // The world's own map holds one thing: the window a room is seen
-      // through, the size of the screen, holding room one
-      // (specs/MAP_FIRST.md, "Levels: the Viewport").
-      rows: [
-        placeInMap('actors/viewport', [
-          {
-            id: 'Game',
-            properties: {
-              positional: {position: {x: 160, y: 160}},
-              Label: {text: ''},
-              hasABox: {width: 320, height: 320},
-              showsMap: {map: 'maps/room1'},
+    // The Main Screen holds one thing: the window a room is seen through,
+    // the size of the screen, and the World starts in room one
+    // (specs/MAP_FIRST.md, "Levels: the Viewport").
+    screen: {
+      screen: JSON.stringify(
+        {
+          type: 'map',
+          actors: [
+            {
+              type: 'actors/viewport',
+              id: 'Game',
+              properties: {
+                positional: {position: {x: 160, y: 160}},
+                Label: {text: ''},
+                hasABox: {width: 320, height: 320},
+              },
+            },
+          ],
+          name: 'My World',
+          worldMap: 'maps/room1',
+          blocks: {
+            blocks: {
+              languageVersion: 0,
+              blocks: [{type: 'world_on_screen_loads', x: 20, y: 20}],
             },
           },
-        ]),
-      ],
-    }),
+        },
+        null,
+        2,
+      ),
+    },
     stockActors: ['viewport'],
     actors: {
       player: actorDocument({
@@ -5595,13 +5536,13 @@ const keys: WorldScenario = {
   name: 'A door that wants something',
   description: 'Two locked doors, one key, and no way through either of them.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [
-        addActor(actorPath('key'), [placeAt(40, 160)]),
-        addActor(actorPath('player'), [placeAt(120, 160)]),
-        addActor(actorPath('door'), [placeAt(216, 160)]),
-        addActor(actorPath('door'), [placeAt(288, 160)]),
+      placed: [
+        placedAt(actorPath('key'), 'key', 40, 160),
+        placedAt(actorPath('player'), 'player', 120, 160),
+        placedAt(actorPath('door'), 'door', 216, 160),
+        placedAt(actorPath('door'), 'door2', 288, 160),
       ],
       actors: [
         {
@@ -5748,13 +5689,20 @@ const held = (name: string) => ({
 const flock = () =>
   Array.from({length: 12}, (_unused, index) => {
     const angle = (index * 30 * Math.PI) / 180;
-    return addActor(actorPath('boid'), [
-      placeAt(60 + (index % 4) * 70, 60 + Math.floor(index / 4) * 90),
-      setVelocity(
-        Number((0.6 * Math.cos(angle)).toFixed(3)),
-        Number((0.6 * Math.sin(angle)).toFixed(3)),
-      ),
-    ]);
+    return placedAt(
+      actorPath('boid'),
+      index ? `boid${index + 1}` : 'boid',
+      60 + (index % 4) * 70,
+      60 + Math.floor(index / 4) * 90,
+      {
+        Can_Move: {
+          velocity: {
+            x: Number((0.6 * Math.cos(angle)).toFixed(3)),
+            y: Number((0.6 * Math.sin(angle)).toFixed(3)),
+          },
+        },
+      },
+    );
   });
 
 const emergent: WorldScenario = {
@@ -5762,9 +5710,9 @@ const emergent: WorldScenario = {
   description:
     'Twelve Boids going twelve ways, and two of the three rules that make a flock.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: flock(),
+      placed: flock(),
       actors: [
         {
           id: 'boid',
@@ -5885,9 +5833,9 @@ const dials: WorldScenario = {
   description:
     'A flock that works, and five numbers typed where nobody can turn them.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: flock(),
+      placed: flock(),
       actors: [
         {
           id: 'boid',
@@ -6017,11 +5965,13 @@ const neighbors: WorldScenario = {
   description:
     'Twenty-five Dots, all of them lit, and a question that lights a few.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [
+      placed: [
         placeInMap(actorPath('dot'), dotGrid()),
-        addActor(actorPath('walker'), [placeAt(10, 160), setVelocity(1, 0)]),
+        placedAt(actorPath('walker'), 'walker', 10, 160, {
+          Can_Move: {velocity: {x: 1, y: 0}},
+        }),
       ],
       actors: [
         {
@@ -6093,12 +6043,12 @@ const turns: WorldScenario = {
   name: 'Everybody moves, then the world moves',
   description: 'An enemy on a timer, in a game where nothing else has a clock.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [
+      placed: [
         placeInMap(actorPath('wall'), wallsRound()),
-        addActor(actorPath('enemy'), [placeAt(48, 240)]),
-        addActor(actorPath('player'), [placeAt(80, 144)]),
+        placedAt(actorPath('enemy'), 'enemy', 48, 240),
+        placedAt(actorPath('player'), 'player', 80, 144),
       ],
       actors: [
         {
@@ -6182,16 +6132,13 @@ const undo: WorldScenario = {
   description:
     'A crate that can be pushed one square too far, and never pulled.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [
+      placed: [
         placeInMap(actorPath('wall'), wallsRound()),
-        // One row, and that is the whole puzzle: a crate is pushed and never
-        // pulled, so a player on the left of it can only ever send it further
-        // right. Past the Mark there is no way back except this lesson.
-        addActor(actorPath('mark'), [placeAt(240, 176)]),
-        addActor(actorPath('crate'), [placeAt(144, 176)]),
-        addActor(actorPath('player'), [placeAt(80, 176)]),
+        placedAt(actorPath('mark'), 'mark', 240, 176),
+        placedAt(actorPath('crate'), 'crate', 144, 176),
+        placedAt(actorPath('player'), 'player', 80, 176),
       ],
       actors: [
         {
@@ -6260,10 +6207,12 @@ const edges: WorldScenario = {
   description:
     'A ball that leaves and never comes back, and the two ways to keep it.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [
-        addActor(actorPath('ball'), [placeAt(160, 160), setVelocity(3, 3)]),
+      placed: [
+        placedAt(actorPath('ball'), 'ball', 160, 160, {
+          Can_Move: {velocity: {x: 3, y: 3}},
+        }),
       ],
       actors: [{id: 'ball', name: 'Ball', ...BALL}],
     }),
@@ -6300,11 +6249,9 @@ const variable: WorldScenario = {
   description:
     'Three posts in a row, and the same two numbers written six times.',
   source: lessonSource({
-    world: worldFile({
-      // The lesson reads its `add actor` rows, so they stay rows.
-      rowsAsCode: true,
+    screen: screenFile({
       name: 'My World',
-      rows: [
+      loads: [
         addActor(actorPath('post'), [placeAt(60, 160)]),
         addActor(actorPath('post'), [placeAt(160, 160)]),
         addActor(actorPath('post'), [placeAt(260, 160)]),
@@ -6346,11 +6293,9 @@ const many: WorldScenario = {
   name: 'All of them at once',
   description: 'Six coins and six blocks that do the same thing to them.',
   source: lessonSource({
-    world: worldFile({
-      // The lesson reads its `add actor` rows, so they stay rows.
-      rowsAsCode: true,
+    screen: screenFile({
       name: 'My World',
-      rows: [
+      loads: [
         addActor(actorPath('coin'), [placeAt(60, 80)]),
         addActor(actorPath('coin'), [placeAt(160, 80)]),
         addActor(actorPath('coin'), [placeAt(260, 80)]),
@@ -6396,11 +6341,9 @@ const worldState: WorldScenario = {
   name: 'State the world shares',
   description: 'Two Labels that disagree about how many lives are left.',
   source: lessonSource({
-    world: worldFile({
-      // The lesson reads its `add actor` rows, so they stay rows.
-      rowsAsCode: true,
+    screen: screenFile({
       name: 'My World',
-      rows: [
+      loads: [
         addActor('actors/label', [
           placeAt(90, 110),
           setText('TextProperty', words('Lives: 3')),
@@ -6453,7 +6396,7 @@ const lampName = (number: object) => ({
 });
 
 /** `id` — the number the world keeps, which both Lamps read. */
-const worldsId = () => ({block: {type: 'world_get_WorldsMain_IdProperty'}});
+const worldsId = () => ({block: {type: 'world_get_ScreensMain_IdProperty'}});
 
 const actorState: WorldScenario = {
   // The Lamp is written out by hand rather than through the world spec's
@@ -6469,10 +6412,10 @@ const actorState: WorldScenario = {
   name: 'State an actor carries',
   description: 'Two Lamps that cannot tell each other apart.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [
-        declareProperty('number', 'id', '1'),
+      properties: [declareProperty('number', 'id', '1')],
+      loads: [
         addActor('actors/lamp', [
           placeAt(110, 160),
           setText('TextProperty', lampName(worldsId())),
@@ -6570,11 +6513,9 @@ const listsLesson: WorldScenario = {
   name: 'More than one of something',
   description: 'Three things to remember, remembered three separate times.',
   source: lessonSource({
-    world: worldFile({
-      // The lesson reads its `add actor` rows, so they stay rows.
-      rowsAsCode: true,
+    screen: screenFile({
       name: 'My World',
-      rows: ERRAND.map(word => noteSaying(words(word))),
+      loads: ERRAND.map(word => noteSaying(words(word))),
     }),
     stockActors: ['label'],
   }),
@@ -6605,7 +6546,7 @@ things, or four, or twenty, without changing.
 
 /** `counted`, the world's own tally — the thing this lesson throws away. */
 const counted = () => ({
-  block: {type: 'world_get_WorldsMain_CountedProperty'},
+  block: {type: 'world_get_ScreensMain_CountedProperty'},
 });
 
 const scoreLesson: WorldScenario = {
@@ -6613,12 +6554,10 @@ const scoreLesson: WorldScenario = {
   description:
     'A hand-rolled tally, and a rule that has one with an ending in it.',
   source: lessonSource({
-    world: worldFile({
+    screen: screenFile({
       name: 'My World',
-      rows: [
-        declareProperty('number', 'counted', '0'),
-        addActor(actorPath('target'), [placeAt(160, 160)]),
-      ],
+      placed: [placedAt(actorPath('target'), 'target', 160, 160)],
+      properties: [declareProperty('number', 'counted', '0')],
       actors: [
         {
           id: 'target',
@@ -6634,7 +6573,7 @@ const scoreLesson: WorldScenario = {
           fields: {FILTER0: 'left'},
           next: {
             block: {
-              type: 'world_set_WorldsMain_CountedProperty',
+              type: 'world_set_ScreensMain_CountedProperty',
               inputs: {
                 VALUE: {
                   block: {

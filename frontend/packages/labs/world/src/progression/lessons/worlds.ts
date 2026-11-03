@@ -1,11 +1,9 @@
-// The Blockly a lesson's world is written in.
+// A lesson's game as a game is written: a Main Screen whose Game Viewport
+// shows `main.map`, and the actor files beside them.
 //
-// Small, repetitive shapes — a world with a size and some actors placed in it —
-// which every lesson needs and none of them should spell out. The block types
-// and socket names are not guessable and a wrong one fails quietly, so they are
-// written once here and read from the fixtures that already prove them
-// (`src/fixtures`, and AGENTS.md on dumping the palette before writing a
-// block).
+// The block types and socket names a lesson's code uses are not guessable and
+// a wrong one fails quietly, so the shapes every lesson needs are written once
+// here.
 
 import {
   actorDocument,
@@ -13,6 +11,15 @@ import {
 } from '../../actors/actorDocument';
 import {chain, me, num} from '../../actors/stock/workspace';
 import type {CameraValue} from '../../blockly/placementCameras';
+import type {
+  ScreenEvent,
+  ScreenProperty,
+  ScreenRuleSetting,
+} from '../../blockly/screenData';
+import {gameScreen} from '../../constants';
+import {TILE_SIZE} from '../../runtime/viewport';
+
+const GAME = 'Game';
 
 /** `set position of ⟨this actor⟩ x ⟨…⟩ y ⟨…⟩`, inside an `add actor`. */
 export const placeAt = (x: number, y: number) => ({
@@ -35,10 +42,8 @@ export const addActor = (actor: string, body: object[]) => ({
 /**
  * `actors/<stem>` — how an ACTOR dropdown names an actor, which is by its file.
  *
- * The stem is the `id` the lesson gave its `ActorSpec`, which `worldFile`
- * writes out as `actors/<id>.actor`. It used to be `local:<block id>`, naming
- * a `define actor` the world held among its own roots; every actor is a file
- * now (specs/ENHANCEMENTS.md, the closing note), and the id is the file.
+ * The stem is the `id` the lesson gave its `ActorSpec`, which `screenFile`
+ * writes out as `actors/<id>.actor`.
  */
 export const actorPath = (id: string): string => `actors/${id}`;
 
@@ -50,47 +55,7 @@ export const anyKind = (id: string) => ({
   block: {type: 'world_actor_kind', fields: {ACTOR: actorPath(id)}},
 });
 
-/** A drawing spec as the ROW an actor's chain holds. */
-/**
- * How tall a stack of rows draws, in rows.
- *
- * Blockly lays nothing out for us: a root is placed at the x and y the file
- * says, and two roots at the same y overlap. Nothing here can measure a block,
- * so this counts what stacks — a row, and the rows in a row's `do` — and the
- * caller turns rows into pixels. Values in sockets are not counted: they draw
- * inside the row that holds them.
- *
- * An estimate, and it only has to be generous enough that a lesson does not
- * open with its actors written across its world.
- */
-const rowsTall = (value: unknown): number => {
-  if (Array.isArray(value)) {
-    return value.reduce<number>((total, row) => total + rowsTall(row), 0);
-  }
-  if (typeof value !== 'object' || value === null) {
-    return 0;
-  }
-  const row = value as {
-    type?: unknown;
-    next?: {block?: unknown};
-    inputs?: Record<string, {block?: unknown}>;
-  };
-  const bodies = Object.entries(row.inputs ?? {})
-    .filter(([name]) => name === 'DO')
-    .reduce<number>((total, [, socket]) => total + rowsTall(socket.block), 0);
-  // A row that WRAPS a body draws taller than the rows in it: the C shape has
-  // a lip above and a foot below. Counted as most of another row, because six
-  // `add actor`s undercounted by that lip put the next root on top of them.
-  return 1 + (bodies ? bodies + 0.7 : 0) + rowsTall(row.next?.block);
-};
-
-/** Rows to pixels, with room under a stack for the next root. */
-const PIXELS_PER_ROW = 40;
-const GAP = 60;
-const below = (y: number, rows: number): number =>
-  y + rows * PIXELS_PER_ROW + GAP;
-
-/** An actor a lesson's world places: a file of its own, beside the world. */
+/** An actor a lesson places: a file of its own, beside the screen. */
 export interface ActorSpec extends DataSpec {
   /**
    * The file's stem: `hero` is `actors/hero.actor`.
@@ -111,96 +76,60 @@ export const actorFileOf = (spec: ActorSpec): string =>
     ) as DataSpec,
   );
 
-/**
- * `define ⟨type⟩ property ⟨name⟩ with default ⟨…⟩`.
- *
- * One block in four homes (`blockly/ownProperties`): at a rule's top level it
- * is the world's, inside a `define trait` it is the trait's, and chained under
- * a `define world` or a `define actor` it belongs to that file. The homes are
- * what these lessons are about, so they place it themselves.
- */
+/** A property the Main Screen declares: the game's own, which one copy of. */
 export const declareProperty = (
   type: 'number' | 'text' | 'boolean' | 'color' | 'vector' | 'actor',
   name: string,
   value: string,
-) => ({
-  type: 'world_rule_property',
-  fields: {TYPE: type, ACCESS: 'writable', NAME: name, DEFAULT: value},
-});
+): ScreenProperty => ({name, type, value});
 
-/**
- * A camera a lesson's world starts with: the traits it elects and their
- * values. Written on the world as its main camera, and made the Game
- * Viewport's when the lesson becomes a screen (`asScreen`).
- */
+/** The traits a camera elects and their values (`placementCameras`). */
 export interface MainCameraSettings {
   traits: string[];
   values: CameraValue[];
 }
 
-export interface WorldSpec {
+export interface ScreenSpec {
+  /** The game's name, which the Main Screen holds. */
   name: string;
   /**
-   * Map size in TILES, for a world that wants one — and most do not.
-   *
-   * A world says nothing and gets one screen (`VIEWPORT_TILES`, ten tiles each
-   * way, 320 by 320). That is the right answer for every lesson that has no
-   * camera and no boundary rule, which is all the early ones: `set size of map`
-   * matters when the world is BIGGER than the view, and putting it in a first
-   * lesson is an advanced idea sitting in the way of a simple one.
-   *
-   * It was in all of them at first, out of a half-remembered warning
-   * (AGENTS.md) about a world that arranges its own actors having no bounds. It
-   * has bounds — the viewport's. What it lacks is bounds of its own, which only
-   * something looking past the edge would notice.
+   * The level's size in TILES, for one that wants a size of its own; the rest
+   * are a screen's (`VIEWPORT_TILES`, ten tiles each way). A size matters to a
+   * level bigger than the view, which an early lesson has no use for.
    */
   tiles?: [x: number, y: number];
-  /** What is placed in it, in order. */
-  rows: object[];
+  /** What `main.map` places, in order (`placeInMap`). */
+  placed?: MapRow[];
+  /** The traits and values the Game Viewport's camera elects. */
+  mainCamera?: MainCameraSettings;
+  /** The game's own values (`declareProperty`). */
+  properties?: ScreenProperty[];
+  /** The game's own events, which a screen raises by name. */
+  events?: ScreenEvent[];
+  /** Rule settings that differ from the rules' own. */
+  rules?: ScreenRuleSetting[];
+  backgroundColor?: string;
   /**
-   * The actors this world places, each written out as a file of its own.
-   *
-   * They used to be roots beside the world, so that a lesson was one file: a
-   * sidebar of eleven files argued with a lesson that is about one of them.
-   * What changed is that an actor is a file everywhere in the lab now, and a
-   * lesson reaches it the way a learner does: from the Actor Palette, or as
-   * a file `lessonSource` opens beside the world for every actor listed here.
+   * Code under `when this screen loads`, which is always there, empty or not:
+   * it is where a lesson's once-only code is written.
    */
-  actors?: ActorSpec[];
-  /**
-   * Event handlers the world itself answers, each a ROOT of its own.
-   *
-   * A hat takes no previous connection, and `DisableOrphansPlugin` disables a
-   * top-level block that has one along with everything below it — so a handler
-   * sits beside the `define world` rather than in it, exactly as `actorFile`
-   * places an actor's (specs/DRAWING.md).
-   *
-   * It also runs somewhere else, which is the part that matters when writing a
-   * lesson: a `define world` body is handed a BUILDER, and a handler is handed
-   * the world. A rule's action — `world.act(…)` — is a line only the second can
-   * run, so a lesson that wants one wants a handler.
-   */
+  loads?: object[];
+  /** Hats beside it, each a root of its own. */
   handlers?: object[];
   /**
-   * The traits and values the world's main camera elects, kept on its main
-   * map as the map editor keeps them (`placementCameras`). A lesson's camera
-   * is made in the map editor, so a lesson that starts with one starts with
-   * it there rather than in blocks.
+   * The actors the lesson's level places, each written out as a file of its
+   * own, which `lessonSource` opens beside the screen.
    */
-  mainCamera?: MainCameraSettings;
-  /**
-   * Keep every `add actor` as code rather than placing it on the map: the
-   * lesson reads its rows, or has a learner change them (`asScreen`).
-   */
-  rowsAsCode?: true;
+  actors?: ActorSpec[];
 }
 
-/** A `.world` file. */
-/** What `worldFile` hands a lesson: the world, and the actor files beside it. */
-export interface LessonWorld {
-  /** `main.world`, as a Blockly workspace. */
-  world: string;
-  /** Actor files by stem, in the order the world spec listed them. */
+/** What `screenFile` hands a lesson. */
+export interface LessonScreen {
+  /** `main.screen`: the game's data, its Game Viewport and its code. */
+  screen: string;
+  /** `main.map`: the level the Game Viewport shows. */
+  map: string;
+  /** Actor files by stem, in the order the spec listed them. */
   actors: Record<string, string>;
 }
 
@@ -210,105 +139,83 @@ export interface LessonPlacement {
   properties?: Record<string, Record<string, unknown>>;
 }
 
-const IN_MAP = 'inMainMap';
+/** Many of one kind, placed on `main.map`. */
+export const placeInMap = (
+  kind: string,
+  placements: LessonPlacement[],
+): MapRow => placements.map(placement => ({type: kind, ...placement}));
 
-/**
- * Many of one kind, arranged in the world's MAIN MAP — a row of a lesson's
- * world that is not a block. A world's arrangement is its map
- * (specs/MAP_FIRST.md), so what a lesson places in bulk goes there, and
- * `worldFile` takes these out of the rows before it chains the blocks.
- */
-export const placeInMap = (kind: string, placements: LessonPlacement[]) => ({
-  [IN_MAP]: placements.map(placement => ({type: kind, ...placement})),
-});
+type MapRow = Array<{type: string} & LessonPlacement>;
 
-type MapRow = {[IN_MAP]: Array<{type: string} & LessonPlacement>};
-const isMapRow = (row: object): row is MapRow => IN_MAP in row;
+/** One of a kind on `main.map`, at `x`, `y`, with what else it overrides. */
+export const placedAt = (
+  kind: string,
+  id: string,
+  x: number,
+  y: number,
+  more: Record<string, Record<string, unknown>> = {},
+): MapRow =>
+  placeInMap(kind, [
+    {id, properties: {positional: {position: {x, y}}, ...more}},
+  ]);
 
-/** The rows' placements as one main map, ids kept unique within it. */
-const mainMapOf = (
-  rows: object[],
-  tiles: [x: number, y: number] | undefined,
-  mainCamera: MainCameraSettings | undefined,
-): object | undefined => {
-  const taken = new Set<string>();
-  const actors = rows.filter(isMapRow).flatMap(row =>
-    row[IN_MAP].map(placement => {
-      let id = placement.id;
-      for (let n = 2; taken.has(id); n++) {
-        id = `${placement.id}-${n}`;
-      }
-      taken.add(id);
-      return {...placement, id};
-    }),
-  );
-  if (actors.length === 0 && !mainCamera) {
-    return undefined;
-  }
-  return {
-    type: 'map',
-    ...(mainCamera ? {mainCamera} : {}),
-    // Sized as the world says it is, so the map editor opens on the whole
-    // level rather than on its first screen.
-    ...(tiles
-      ? {
-          size: {width: tiles[0], height: tiles[1]},
-          tile: {width: 32, height: 32},
-        }
-      : {}),
-    actors,
-  };
-};
+const SCREEN_LOADS = 'world_on_screen_loads';
 
-export const worldFile = ({
+export const screenFile = ({
   name,
   tiles,
-  rows,
-  actors,
-  handlers,
+  placed,
   mainCamera,
-  rowsAsCode,
-}: WorldSpec): LessonWorld => {
-  const inside = [
-    ...(tiles
-      ? [
-          {
-            type: 'world_set_map_size',
-            inputs: {X: num(tiles[0]), Y: num(tiles[1])},
-          },
-        ]
-      : []),
-    ...rows.filter(row => !isMapRow(row)),
-  ];
-  // A world that puts nothing in itself is a real thing to start a lesson
-  // from — everything it holds arrives while it runs — and `chain` of nothing
-  // has no first block to hand back.
-  const placed = inside.length ? chain(inside) : undefined;
-  const world = {
-    type: 'world_world',
-    x: 20,
-    y: 20,
-    fields: {NAME: name},
-    ...(placed ? {next: {block: placed}} : {}),
-  };
-  // Laid out down the left, in the order a reader wants them: the world, then
-  // what is in it, then what it does. Stacked by an ESTIMATE of each one's
-  // height (`rowsTall`), because a lesson's world can be two rows or twelve,
-  // and a fixed ladder writes the actors across the world in the second case.
-  let y = below(20, rowsTall(world));
-  const beside = (handlers ?? []).map(root => {
-    const at = {...root, x: 20, y};
-    y = below(y, rowsTall(root));
-    return at;
+  properties,
+  events,
+  rules,
+  backgroundColor,
+  loads,
+  handlers,
+  actors,
+}: ScreenSpec): LessonScreen => {
+  const taken = new Set<string>();
+  const placements = (placed ?? []).flat().map(placement => {
+    if (taken.has(placement.id)) {
+      throw new Error(`two placements called ${placement.id}`);
+    }
+    taken.add(placement.id);
+    return placement;
   });
+  const data = {
+    ...(properties?.length ? {properties} : {}),
+    ...(events?.length ? {events} : {}),
+    ...(rules?.length ? {rules} : {}),
+    ...(backgroundColor ? {backgroundColor} : {}),
+  };
+  const screen = JSON.parse(gameScreen(name, data)) as {
+    actors: Array<Record<string, unknown>>;
+  };
+  if (mainCamera) {
+    const game = screen.actors.find(one => one.id === GAME)!;
+    game.camera = {...mainCamera};
+  }
+  const first = loads?.length ? chain(loads) : undefined;
+  const roots = [
+    ...(handlers ?? []),
+    {type: SCREEN_LOADS, ...(first ? {next: {block: first}} : {})},
+  ].map((root, at) => ({...root, x: 20, y: 20 + at * 200}));
   return {
-    world: JSON.stringify(
+    screen: JSON.stringify(
+      {...screen, blocks: {blocks: {languageVersion: 0, blocks: roots}}},
+      null,
+      2,
+    ),
+    map: JSON.stringify(
       {
-        blocks: {blocks: [world, ...beside]},
-        ...(mainMapOf(rows, tiles, mainCamera)
-          ? {map: mainMapOf(rows, tiles, mainCamera)}
+        type: 'map',
+        ...(tiles
+          ? {
+              size: {width: tiles[0], height: tiles[1]},
+              tile: {width: TILE_SIZE, height: TILE_SIZE},
+            }
           : {}),
-        ...(rowsAsCode ? {rowsAsCode} : {}),
+        actors: placements,
       },
       null,
       2,
