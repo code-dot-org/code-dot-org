@@ -1,5 +1,8 @@
 require 'policies/lti'
 require 'queries/lti'
+require 'user'
+require 'authentication_option'
+require 'sections/section'
 require 'set'
 require 'metrics/events'
 
