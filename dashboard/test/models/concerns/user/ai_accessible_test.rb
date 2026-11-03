@@ -382,6 +382,13 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
       _(user.can_access_aichat_chat_completion?(spritelab_ask_ai, nil)).must_equal true
     end
 
+    it 'returns false for SPRITELAB_ASK_AI when the DCDO kill switch is off' do
+      allow(DCDO).to receive(:get).with("spritelab-lab2-ask-ai-enabled", true).and_return(false)
+      allow(user).to receive(:levelbuilder?).and_return(true)
+      allow(user).to receive(:has_aichat_access?).and_return(true)
+      _(user.can_access_aichat_chat_completion?(spritelab_ask_ai, nil)).must_equal false
+    end
+
     # Sprite Lab 2's ambient client type is trusted; this one must not inherit that.
     it 'returns false for SPRITELAB_ASK_AI for a non-levelbuilder on a trusted client' do
       allow(user).to receive(:trust_chat_client?).and_return(true)
