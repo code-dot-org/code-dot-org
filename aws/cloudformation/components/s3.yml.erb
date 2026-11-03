@@ -6,7 +6,7 @@
     Type: AWS::S3::Bucket
     DeletionPolicy: <%= rack_env?(:adhoc) ? "Delete" : "Retain" %>
     Properties:
-      BucketName: <%=user_content_bucket_name%>
+      BucketName: <%=s3_bucket_namespace%>.user-content
       # To constrain costs, impose a hard limit here. We should consider more proactive cleanup in-platform.
       LifecycleConfiguration:
         Rules:
@@ -24,4 +24,4 @@
         RestrictPublicBuckets: true
       LoggingConfiguration:
         DestinationBucketName: cdo-logs
-        LogFilePrefix: s3/<%=user_content_bucket_name%>/
+        LogFilePrefix: s3/<%=s3_bucket_namespace%>.user-content/
