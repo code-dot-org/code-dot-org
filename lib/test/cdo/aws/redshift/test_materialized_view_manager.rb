@@ -1,3 +1,4 @@
+require 'cdo/aws'
 require_relative '../../../test_helper'
 require_relative '../../../../cdo/aws/redshift/materialized_view_manager'
 require 'erb'

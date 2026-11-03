@@ -1,3 +1,4 @@
+require 'cdo/aws'
 require 'cdo/aws/redshift/client'
 
 module Cdo

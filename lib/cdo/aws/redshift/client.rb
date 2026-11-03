@@ -1,3 +1,4 @@
+require 'cdo/aws'
 require 'aws-sdk-redshiftdataapiservice'
 
 module Cdo
