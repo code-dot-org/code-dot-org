@@ -1,7 +1,7 @@
 import {fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
 
-import RatingBar from '@cdo/apps/p5lab/spritelab/lab2/views/images/RatingBar';
+import RatingBar from '@cdo/apps/p5lab/spritelab/lab2/views/images/teaching/RatingBar';
 
 describe('RatingBar', () => {
   it('says the question is closed when it goes away with the question open', () => {

@@ -7,11 +7,11 @@ import {IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useId, useRef, useState} from 'react';
 
-import {Verdict} from '../sentence/ResultActions';
+import {Verdict} from '../../sentence/ResultActions';
 
 import ReasonOptions, {ReasonOption} from './ReasonOptions';
 
-import styles from './images-tab.module.scss';
+import styles from '../images-tab.module.scss';
 
 interface RatingBarProps {
   verdict: Verdict | null;

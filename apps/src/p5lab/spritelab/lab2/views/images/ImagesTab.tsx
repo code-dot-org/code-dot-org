@@ -9,7 +9,6 @@ import {queryParams} from '@cdo/apps/code-studio/utils';
 import PixelEditor from '@cdo/apps/pixelEditor/PixelEditor';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {bytesToDataURI} from '../../ai/images/encoding';
 import {
   GeneratedImageResult,
   UploadImageFunction,
@@ -34,13 +33,14 @@ import {readWordLayout} from '../sentence/wordLayout';
 import DrawPane from './DrawPane';
 import ImageFrame from './ImageFrame';
 import ImageList, {DraftEntry, NewImageKind} from './ImageList';
-import LearningDialog, {LearningPicture} from './LearningDialog';
 import MakePane from './MakePane';
 import OwnWorkPane from './OwnWorkPane';
 import PaintPlaceholder from './PaintPlaceholder';
 import {listProjectImages, ProjectImage} from './projectImages';
-import RatingBar from './RatingBar';
 import BehindTheScenes from './teaching/BehindTheScenes';
+import LearningDialog from './teaching/LearningDialog';
+import RatingBar from './teaching/RatingBar';
+import useLearningStory from './teaching/useLearningStory';
 import useDrawing from './useDrawing';
 import useImageWriter, {ImageTarget} from './useImageWriter';
 
@@ -90,18 +90,6 @@ function editedMode(): EditedMode {
   const value = queryParams('images-edited');
   return value === 'pane' || value === 'generate' ? value : 'paint';
 }
-
-// The reveal plays out before the story of how the picture was made.
-const LEARNING_DELAY_MS = 1800;
-// The kinds the story is told for.
-const LEARNING_KINDS: ImageType[] = ['sprite', 'background'];
-
-/** `?learning=always` tells the story after every picture, for looking at
-    it. */
-function learningForced(): boolean {
-  return queryParams('learning') === 'always';
-}
-
 
 const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   uploadImage,
@@ -215,65 +203,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   // Animated is on until the student turns it off, and stays as they left
   // it from image to image; no image or level turns it off for them.
   const [animated, setAnimated] = useState(true);
-  // The story of how the picture was made: told once a visit, after the
-  // first picture a level about a character or a background makes.
-  const [learning, setLearning] = useState<{
-    picture: LearningPicture;
-    prompt: string;
-  } | null>(null);
-  const toldRef = useRef(false);
-  const learningTimerRef = useRef<number>();
-  useEffect(() => () => window.clearTimeout(learningTimerRef.current), []);
-  // The story waits for a quiet moment: this tab in view, and no rating
-  // question open. Until then it is held here.
-  const activeRef = useRef(active);
-  const askingRef = useRef(false);
-  const heldStoryRef = useRef<(() => void) | null>(null);
-  const tellHeldStory = useCallback(() => {
-    const tell = heldStoryRef.current;
-    if (tell && activeRef.current && !askingRef.current) {
-      heldStoryRef.current = null;
-      tell();
-    }
-  }, []);
-  useEffect(() => {
-    activeRef.current = active;
-    tellHeldStory();
-  }, [active, tellHeldStory]);
-  const handleAsking = useCallback(
-    (open: boolean) => {
-      askingRef.current = open;
-      tellHeldStory();
-    },
-    [tellHeldStory]
-  );
-  const offerLearning = useCallback(
-    (result: GeneratedImageResult) => {
-      const {imageType, subject} = result.generation;
-      const due =
-        !toldRef.current &&
-        !!lockedImageType &&
-        LEARNING_KINDS.includes(imageType) &&
-        subject !== 'object';
-      if (!due && !learningForced()) {
-        return;
-      }
-      toldRef.current = true;
-      const src = bytesToDataURI(result.uint8Array, result.mediaType);
-      const crop = result.frames
-        ? {width: result.frames.frameSize.x, height: result.frames.frameSize.y}
-        : undefined;
-      learningTimerRef.current = window.setTimeout(() => {
-        heldStoryRef.current = () =>
-          setLearning({
-            picture: {src, crop},
-            prompt: result.generation.prompt,
-          });
-        tellHeldStory();
-      }, LEARNING_DELAY_MS);
-    },
-    [lockedImageType, tellHeldStory]
-  );
+  const learning = useLearningStory({active, lockedImageType});
   // Once per picture: a verdict's second keep must not tell it again.
   const keptRef = useRef<string | null>(null);
   const handleKeep = useCallback(
@@ -287,10 +217,10 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
       keptRef.current = result.filename;
       await land(target, () => writer.acceptGenerated(target, result));
       if (firstKeep) {
-        offerLearning(result);
+        learning.offerStory(result);
       }
     },
-    [writer, land, offerLearning]
+    [writer, land, learning]
   );
 
   const tools = useDrawing({
@@ -532,7 +462,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                       verdict={parts.rating.verdict}
                       onJudge={parts.rating.judge}
                       onReasons={parts.rating.explain}
-                      onAsking={handleAsking}
+                      onAsking={learning.handleAsking}
                       disabled={parts.busy}
                     />
                   )
@@ -673,11 +603,11 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
           </section>
         </>
       )}
-      {learning && (
+      {learning.story && (
         <LearningDialog
-          picture={learning.picture}
-          prompt={learning.prompt}
-          onDone={() => setLearning(null)}
+          picture={learning.story.picture}
+          prompt={learning.story.prompt}
+          onDone={learning.endStory}
         />
       )}
     </div>

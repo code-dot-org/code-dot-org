@@ -1,7 +1,7 @@
 import {fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
 
-import ReasonOptions from '@cdo/apps/p5lab/spritelab/lab2/views/images/ReasonOptions';
+import ReasonOptions from '@cdo/apps/p5lab/spritelab/lab2/views/images/teaching/ReasonOptions';
 
 const options = [
   {value: 'matches', label: 'Matches my prompt'},

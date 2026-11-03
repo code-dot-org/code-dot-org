@@ -5,7 +5,7 @@ import Checkbox from '@code-dot-org/component-library/checkbox';
 import classNames from 'classnames';
 import React from 'react';
 
-import styles from './images-tab.module.scss';
+import styles from '../images-tab.module.scss';
 
 export interface ReasonOption {
   value: string;

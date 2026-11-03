@@ -1,12 +1,15 @@
 import {fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
 
-import LearningDialog from '@cdo/apps/p5lab/spritelab/lab2/views/images/LearningDialog';
+import LearningDialog from '@cdo/apps/p5lab/spritelab/lab2/views/images/teaching/LearningDialog';
 
-jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/images/ChunkyPicture', () => ({
-  __esModule: true,
-  default: () => <canvas data-chunky />,
-}));
+jest.mock(
+  '@cdo/apps/p5lab/spritelab/lab2/views/images/teaching/ChunkyPicture',
+  () => ({
+    __esModule: true,
+    default: () => <canvas data-chunky />,
+  })
+);
 
 describe('LearningDialog', () => {
   it('walks four panels, back and forth, and is done on the last', () => {

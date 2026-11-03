@@ -1,7 +1,7 @@
 import {render, waitFor} from '@testing-library/react';
 import React from 'react';
 
-import ChunkyPicture from '@cdo/apps/p5lab/spritelab/lab2/views/images/ChunkyPicture';
+import ChunkyPicture from '@cdo/apps/p5lab/spritelab/lab2/views/images/teaching/ChunkyPicture';
 
 jest.mock('@cdo/apps/imageUtils', () => ({
   toImage: async () => ({naturalWidth: 64, naturalHeight: 32}),
