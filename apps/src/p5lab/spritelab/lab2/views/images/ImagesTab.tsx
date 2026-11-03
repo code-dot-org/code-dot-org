@@ -101,6 +101,9 @@ function editedMode(): EditedMode {
 
 /** A drawing in progress: what it writes to, and what the editor opened. */
 interface Drawing {
+  /** Tells a save in flight which drawing it belongs to; a later drawing
+      is left alone. */
+  id: number;
   target: ImageTarget;
   imageUrl: string;
   pixelGridSize?: number;
@@ -260,6 +263,8 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   const pendingRef = useRef<{
     dataURI: string;
     meta: PixelEditorSaveMeta;
+    current: Drawing;
+    final: boolean;
   } | null>(null);
   // When the drawing's file last went up, and whether pixels saved since
   // are still owed to it.
@@ -305,14 +310,18 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   // The making the image had when the tools opened: a different one
   // arriving means a picture landed over the painting.
   const drawingGenerationRef = useRef<ImageProps['generation']>();
+  const drawingIdRef = useRef(0);
   const startDrawing = useCallback(
     (target: ImageTarget) => {
       const existing = target.key
         ? images.find(image => image.key === target.key)
         : undefined;
       drawingGenerationRef.current = existing?.props.generation;
+      leaveAfterSaveRef.current = false;
+      const id = ++drawingIdRef.current;
       if (existing?.src) {
         setDrawing({
+          id,
           target,
           imageUrl: existing.src,
           pixelGridSize: existing.props.pixelGridSize,
@@ -322,6 +331,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
       }
       const blank = blankPaintImage(target.imageType, DEFAULT_IMAGE_STYLE);
       setDrawing({
+        id,
         target,
         imageUrl: blank.dataURI,
         pixelGridSize: blank.pixelGridSize,
@@ -341,18 +351,24 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   // `current` is the drawing as the save knows it: the state, or for a
   // pending save what the save before it made, since React may not have
   // rendered that yet.
+  // `final`: the drawing's last save (Done, the tab or another image), so
+  // the file goes up and, if the drawing is still the open one, the tools
+  // close after it.
   const runSave = useCallback(
-    async (dataURI: string, meta: PixelEditorSaveMeta, current: Drawing) => {
+    async (
+      dataURI: string,
+      meta: PixelEditorSaveMeta,
+      current: Drawing,
+      final: boolean
+    ) => {
       inFlightRef.current = true;
       let saved = current;
       try {
-        const settled =
-          leaveAfterSaveRef.current && !pendingRef.current && !dirtyRef.current;
         // A new image needs its file; after that the file follows every few
         // seconds, and when the drawing is done.
         const upload =
           !current.target.key ||
-          settled ||
+          final ||
           Date.now() - lastUploadRef.current >= UPLOAD_GAP_MS;
         const key = await land(
           current.target,
@@ -362,10 +378,14 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
         if (upload) {
           lastUploadRef.current = Date.now();
         }
-        uploadOwedRef.current = !upload;
+        if (drawingRef.current?.id === current.id) {
+          uploadOwedRef.current = !upload;
+        }
         // A blank that was saved is an image now: later saves replace it.
         saved = {...current, target: {...current.target, key}};
-        setDrawing(d => d && {...d, target: {...d.target, key}});
+        setDrawing(d =>
+          d && d.id === current.id ? {...d, target: {...d.target, key}} : d
+        );
       } catch {
         // The picture is still on the canvas. It is marked unsaved, so the
         // next pause, Done or leaving the tab tries again from the canvas
@@ -382,8 +402,15 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
       const pending = pendingRef.current;
       if (pending) {
         pendingRef.current = null;
-        await runSave(pending.dataURI, pending.meta, saved);
-      } else if (leaveAfterSaveRef.current) {
+        // The pending save's drawing, as this save left it if it is the
+        // same one.
+        await runSave(
+          pending.dataURI,
+          pending.meta,
+          pending.current.id === saved.id ? saved : pending.current,
+          pending.final
+        );
+      } else if (final && drawingRef.current?.id === saved.id) {
         stopDrawing();
       }
     },
@@ -397,14 +424,30 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
       }
       clearIdleTimer();
       dirtyRef.current = false;
+      const final = leaveAfterSaveRef.current;
       if (inFlightRef.current) {
-        pendingRef.current = {dataURI, meta};
+        pendingRef.current = {dataURI, meta, current, final};
         return;
       }
-      runSave(dataURI, meta, current);
+      runSave(dataURI, meta, current, final);
     },
     [runSave]
   );
+  // Another image, or a new slot, while a drawing is open: its last pixels
+  // go up in the background and the tools close at once, so what comes
+  // next shows without waiting on that save.
+  const leaveDrawing = useCallback(() => {
+    if (dirtyRef.current || uploadOwedRef.current) {
+      leaveAfterSaveRef.current = true;
+      saveRef.current?.();
+    }
+    clearIdleTimer();
+    dirtyRef.current = false;
+    uploadOwedRef.current = false;
+    leaveAfterSaveRef.current = false;
+    saveRef.current = null;
+    setDrawing(null);
+  }, []);
   // Done: what is drawn goes up, including pixels a pause's save kept local.
   const finishDrawing = useCallback(() => {
     if (dirtyRef.current || uploadOwedRef.current) {
@@ -438,7 +481,9 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   // level about one image keeps Edit this image and Done.
   const paintsChosen =
     !!chosenImage && editedMode() === 'paint' && !!editingOffered;
-  const drawOffered = !!kind && !chosenImage?.sheet && !drawing;
+  // Where the tools open by themselves, no button offers them.
+  const drawOffered =
+    !!kind && !chosenImage?.sheet && !drawing && !paintsChosen;
   // The chosen image opens in the paint tools by itself, again on return
   // to the tab, and again once a picture has landed over it.
   const chosenKey = chosenImage?.key;
@@ -538,19 +583,38 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
             return;
           }
           if (drawing) {
-            finishDrawing();
+            leaveDrawing();
           }
           // A draft left for an image holds nothing worth keeping.
           if (id !== DRAFT_ID) {
             setDraft(null);
           }
           startSession(id);
+          // Where the tools open by themselves, open them with the image,
+          // so no frame shows it without them.
+          const next = images.find(image => image.key === id);
+          if (
+            next?.src &&
+            !next.sheet &&
+            editedMode() === 'paint' &&
+            editingOffered
+          ) {
+            startDrawing({
+              key: id,
+              imageType: next.imageType,
+              subject:
+                next.subject ??
+                (next.imageType === lockedImageType
+                  ? lockedImageSubject
+                  : undefined),
+            });
+          }
         }}
         onNew={
           newOffered
             ? kind => {
                 if (drawing) {
-                  finishDrawing();
+                  leaveDrawing();
                 }
                 startDraft(kind.imageType, kind.subject);
               }
