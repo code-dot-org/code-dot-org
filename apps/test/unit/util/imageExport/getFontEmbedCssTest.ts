@@ -1,5 +1,5 @@
-import {getSketchFontEmbedCss} from '@cdo/apps/sketchlab/reactFlow/utils/getSketchFontEmbedCss';
 import HttpClient, {NetworkError} from '@cdo/apps/util/HttpClient';
+import {getFontEmbedCss} from '@cdo/apps/util/imageExport/getFontEmbedCss';
 
 jest.mock('@cdo/apps/util/HttpClient');
 
@@ -53,7 +53,7 @@ const addStyleSheet = (css: string) => {
 const addTextElement = (
   fontFamily: string,
   inlineStyle = '',
-  text = 'a sketch label'
+  text = 'a label'
 ) => {
   const element = document.createElement('div');
   element.setAttribute('style', `font-family: ${fontFamily}; ${inlineStyle}`);
@@ -66,7 +66,7 @@ const addTextElement = (
 const MAIN_FONT_STACK =
   "Geist, 'Noto Sans', 'Noto Sans Hebrew', 'Noto Sans JP', sans-serif";
 
-describe('getSketchFontEmbedCss', () => {
+describe('getFontEmbedCss', () => {
   beforeAll(() => {
     // jsdom parses @font-face rules but does not expose their constructor.
     if (!('CSSFontFaceRule' in window)) {
@@ -90,11 +90,11 @@ describe('getSketchFontEmbedCss', () => {
     jest.restoreAllMocks();
   });
 
-  it('inlines the font file of a face the sketch draws with', async () => {
+  it('inlines the font file of a face the element draws with', async () => {
     addStyleSheet(fontFace('regular-inline'));
     addTextElement(MAIN_FONT_STACK);
 
-    const css = await getSketchFontEmbedCss(document.body);
+    const css = await getFontEmbedCss(document.body);
 
     expect(css).toContain('font-family: ');
     expect(css).toContain('url(data:font/woff2;base64,AQID)');
@@ -105,7 +105,7 @@ describe('getSketchFontEmbedCss', () => {
     );
   });
 
-  it('leaves out faces at a weight or style the sketch does not use', async () => {
+  it('leaves out faces at a weight or style the element does not use', async () => {
     addStyleSheet(
       fontFace('regular-unused') +
         fontFace('bold-unused', {weight: '700'}) +
@@ -113,7 +113,7 @@ describe('getSketchFontEmbedCss', () => {
     );
     addTextElement(MAIN_FONT_STACK, 'font-weight: 700;');
 
-    await getSketchFontEmbedCss(document.body);
+    await getFontEmbedCss(document.body);
 
     expect(mockGet).toHaveBeenCalledTimes(1);
     expect(mockGet).toHaveBeenCalledWith(
@@ -125,28 +125,28 @@ describe('getSketchFontEmbedCss', () => {
     addStyleSheet(fontFace('variable-range', {weight: '100 900'}));
     addTextElement(MAIN_FONT_STACK, 'font-weight: 500;');
 
-    await getSketchFontEmbedCss(document.body);
+    await getFontEmbedCss(document.body);
 
     expect(mockGet).toHaveBeenCalledTimes(1);
   });
 
-  it('embeds nothing when the sketch only uses OS fonts', async () => {
+  it('embeds nothing when the element only uses OS fonts', async () => {
     addStyleSheet(fontFace('regular-os-fonts'));
     addTextElement("Georgia, 'Times New Roman', serif");
 
-    const css = await getSketchFontEmbedCss(document.body);
+    const css = await getFontEmbedCss(document.body);
 
     expect(css).toBe('');
     expect(mockGet).not.toHaveBeenCalled();
   });
 
-  it('embeds nothing when the sketch has no text', async () => {
+  it('embeds nothing when the element has no text', async () => {
     addStyleSheet(fontFace('regular-no-text'));
     const shape = document.createElement('div');
     shape.setAttribute('style', `font-family: ${MAIN_FONT_STACK}`);
     document.body.appendChild(shape);
 
-    const css = await getSketchFontEmbedCss(document.body);
+    const css = await getFontEmbedCss(document.body);
 
     expect(css).toBe('');
     expect(mockGet).not.toHaveBeenCalled();
@@ -166,7 +166,7 @@ describe('getSketchFontEmbedCss', () => {
         : Promise.resolve(fontResponse([4]))
     );
 
-    const css = await getSketchFontEmbedCss(document.body);
+    const css = await getFontEmbedCss(document.body);
 
     expect(css).toContain('font-weight: 700');
     expect(css).not.toContain('font-weight: 400');
@@ -176,8 +176,8 @@ describe('getSketchFontEmbedCss', () => {
     addStyleSheet(fontFace('cached-file'));
     addTextElement(MAIN_FONT_STACK);
 
-    await getSketchFontEmbedCss(document.body);
-    await getSketchFontEmbedCss(document.body);
+    await getFontEmbedCss(document.body);
+    await getFontEmbedCss(document.body);
 
     expect(mockGet).toHaveBeenCalledTimes(1);
   });
@@ -188,7 +188,7 @@ describe('getSketchFontEmbedCss', () => {
     );
     addTextElement(MAIN_FONT_STACK);
 
-    await getSketchFontEmbedCss(document.body);
+    await getFontEmbedCss(document.body);
 
     expect(mockGet).toHaveBeenCalledTimes(1);
     expect(mockGet).toHaveBeenCalledWith(
@@ -200,7 +200,7 @@ describe('getSketchFontEmbedCss', () => {
     addStyleSheet(fontFace('only-noto', {family: 'Noto Sans'}));
     addTextElement(MAIN_FONT_STACK);
 
-    await getSketchFontEmbedCss(document.body);
+    await getFontEmbedCss(document.body);
 
     expect(mockGet).toHaveBeenCalledTimes(1);
     expect(mockGet).toHaveBeenCalledWith(
@@ -215,7 +215,7 @@ describe('getSketchFontEmbedCss', () => {
     );
     addTextElement(MAIN_FONT_STACK, '', 'latin only');
 
-    await getSketchFontEmbedCss(document.body);
+    await getFontEmbedCss(document.body);
 
     expect(mockGet.mock.calls.map(([url]) => url).sort()).toEqual([
       'http://localhost-studio.code.org/fonts/subset-latin-ext.woff2',
@@ -234,7 +234,7 @@ describe('getSketchFontEmbedCss', () => {
       .spyOn(document, 'styleSheets', 'get')
       .mockReturnValue([crossOrigin] as unknown as StyleSheetList);
 
-    await expect(getSketchFontEmbedCss(document.body)).resolves.toBe('');
+    await expect(getFontEmbedCss(document.body)).resolves.toBe('');
   });
 
   // Deliberately after the spy above: it would see no stylesheets at all if
@@ -245,7 +245,7 @@ describe('getSketchFontEmbedCss', () => {
     );
     addTextElement(MAIN_FONT_STACK);
 
-    const css = await getSketchFontEmbedCss(document.body);
+    const css = await getFontEmbedCss(document.body);
 
     expect(mockGet).toHaveBeenCalledTimes(1);
     expect(mockGet).toHaveBeenCalledWith(

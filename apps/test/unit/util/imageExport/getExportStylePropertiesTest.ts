@@ -1,4 +1,4 @@
-import {getExportStyleProperties} from '@cdo/apps/sketchlab/reactFlow/utils/getExportStyleProperties';
+import {getExportStyleProperties} from '@cdo/apps/util/imageExport/getExportStyleProperties';
 
 const documentProperties = (...names: string[]) =>
   jest
