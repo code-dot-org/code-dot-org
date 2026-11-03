@@ -89,14 +89,13 @@ const BLOCK_PROMPT_CLAUSE =
   'This is one square of solid ground in a side-view platform game: the terrain a character stands on and walks across. Show the material as the surface of that ground, with a flat level top edge and a texture that continues across the square, not as a single object or item sitting inside the square. Compose the artwork to completely fill one large centered square region, edge to edge, so that copies placed side by side connect seamlessly. Leave a clear margin around all four sides of that square in one plain solid flat color that contrasts strongly with the artwork and appears nowhere in it, extending to the image edges. No background scene — just the artwork on that flat color.';
 
 /**
- * Pixel-style output depicts pixel art at ~1024x1024 with one art pixel per
- * ~10-20px block (the model can't emit small canvases). Normalize: detect the
- * block grid and downsample to true logical resolution, which is how the
- * image is stored; the load-time pass (imageTrim.ts) upscales it for the
- * engine. Always: the style choice is the classifier, and the prompt's own
- * block stands in when no grid can be read, so pixel art is never stored at
- * the model's size. The pixelGridSize of 1 recorded on the animation marks
- * it pixel art at its logical size.
+ * The model draws pixel art at about 1024x1024, one art pixel per block of
+ * roughly 10 to 20 image pixels; it cannot emit a small canvas. This
+ * detects that block grid and downsamples so one image pixel is one art
+ * pixel, which is the size the image is stored at. When no grid can be
+ * read, the block size the prompt asked for is used instead, so pixel art
+ * is never stored at the model's size. A pixelGridSize of 1 on the
+ * animation marks it as pixel art stored at its logical size.
  */
 async function normalizePixelArt(
   blob: Blob,

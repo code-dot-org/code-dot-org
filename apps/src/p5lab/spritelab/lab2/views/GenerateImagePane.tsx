@@ -540,8 +540,9 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
     } catch {
       return null;
     }
-    // The model drew this at ~1K; pixel art stored at its logical size goes
-    // back up to that before it is shown to the model again.
+    // The model drew this at about 1024px. Pixel art stored at its logical
+    // size is upscaled back to that size before it is sent to the model as
+    // the reference image.
     if (dataURI && targetProps.pixelGridSize === NATIVE_PIXEL_GRID) {
       dataURI = (
         await upscaleImageNearest(dataURI, (width, height) =>

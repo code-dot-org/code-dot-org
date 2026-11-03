@@ -92,10 +92,9 @@ interface ImageDetailsDialogProps extends ImageFormOptions {
 }
 
 /**
- * The Resolution row's text. Pixel art leads with its logical size — the
- * grid the 1px brush paints on, which is the resolution we treat the image
- * as. Assets stored before pixel art was kept at its logical size carry an
- * upscale, shown in parentheses.
+ * The Resolution row's text. Pixel art leads with its logical size, the grid
+ * the 1px brush paints on. An asset whose pixelGridSize is above 1 is stored
+ * upscaled; its stored size follows in parentheses.
  */
 export function resolutionLabel(
   resolution: {x: number; y: number},

@@ -1333,8 +1333,6 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
       }
       onSave(source.toDataURL('image/png'), meta);
     };
-    // Pixel art is stored at its logical size, one physical px per art
-    // pixel; the grid of 1 is what marks it pixel art.
     finish(
       backing,
       pixelMode
