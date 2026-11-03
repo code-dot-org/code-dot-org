@@ -82,6 +82,36 @@
         "emoji": "🐜"
       }
     ],
+    "objectAdjectives": [
+      {
+        "id": "crystal",
+        "text": "crystal"
+      },
+      {
+        "id": "ancient",
+        "text": "ancient"
+      },
+      {
+        "id": "glowing",
+        "text": "glowing"
+      },
+      {
+        "id": "dangerous",
+        "text": "dangerous"
+      },
+      {
+        "id": "fiery",
+        "text": "fiery"
+      },
+      {
+        "id": "metallic",
+        "text": "metallic"
+      },
+      {
+        "id": "poisonous",
+        "text": "poisonous"
+      }
+    ],
     "clothing": [
       {
         "id": "hat",
@@ -116,9 +146,9 @@
     ],
     "objects": [
       {
-        "id": "key",
-        "text": "key",
-        "emoji": "🔑"
+        "id": "star",
+        "text": "star",
+        "emoji": "⭐"
       },
       {
         "id": "gem",
@@ -126,19 +156,46 @@
         "emoji": "💎"
       },
       {
+        "id": "candy",
+        "text": "candy"
+      },
+      {
         "id": "coin",
         "text": "coin",
         "emoji": "🪙"
       },
       {
-        "id": "apple",
-        "text": "apple",
-        "emoji": "🍎"
+        "id": "key",
+        "text": "key",
+        "emoji": "🔑"
       },
       {
-        "id": "star",
-        "text": "star",
-        "emoji": "⭐"
+        "id": "banana",
+        "text": "banana"
+      },
+      {
+        "id": "heart",
+        "text": "heart"
+      },
+      {
+        "id": "icecream",
+        "text": "ice cream"
+      },
+      {
+        "id": "flower",
+        "text": "flower"
+      },
+      {
+        "id": "gift",
+        "text": "gift"
+      },
+      {
+        "id": "flame",
+        "text": "flame"
+      },
+      {
+        "id": "spikeball",
+        "text": "spikeball"
       },
       {
         "id": "potion",
@@ -497,7 +554,7 @@
       "slots": {
         "adjective": {
           "label": "adjective",
-          "words": "adjectives"
+          "words": "objectAdjectives"
         },
         "thing": {
           "label": "thing",
