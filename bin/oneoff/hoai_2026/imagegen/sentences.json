@@ -2,9 +2,8 @@
   "wordSets": {
     "creatures": [
       {
-        "id": "blob",
-        "text": "blob",
-        "emoji": "🟢"
+        "id": "ghost",
+        "text": "ghost"
       },
       {
         "id": "robot",
@@ -12,26 +11,9 @@
         "emoji": "🤖"
       },
       {
-        "id": "dragon",
-        "text": "dragon",
-        "emoji": "🐉",
+        "id": "axolotl",
+        "text": "axolotl",
         "bodyPlan": "quadruped"
-      },
-      {
-        "id": "cat",
-        "text": "cat",
-        "emoji": "🐱",
-        "bodyPlan": "quadruped"
-      },
-      {
-        "id": "monster",
-        "text": "monster",
-        "emoji": "👾"
-      },
-      {
-        "id": "wizard",
-        "text": "wizard",
-        "emoji": "🧙"
       },
       {
         "id": "penguin",
@@ -40,31 +22,68 @@
         "bodyPlan": "bird"
       },
       {
+        "id": "cat",
+        "text": "cat",
+        "emoji": "🐱",
+        "bodyPlan": "quadruped"
+      },
+      {
+        "id": "dog",
+        "text": "dog",
+        "bodyPlan": "quadruped"
+      },
+      {
         "id": "witch",
         "text": "witch",
         "emoji": "🧹"
+      },
+      {
+        "id": "wizard",
+        "text": "wizard",
+        "emoji": "🧙"
+      },
+      {
+        "id": "unicorn",
+        "text": "unicorn",
+        "bodyPlan": "quadruped"
+      },
+      {
+        "id": "dumpling",
+        "text": "dumpling"
+      },
+      {
+        "id": "blob",
+        "text": "blob",
+        "emoji": "🟢"
+      },
+      {
+        "id": "dragon",
+        "text": "dragon",
+        "emoji": "🐉",
+        "bodyPlan": "quadruped"
+      },
+      {
+        "id": "fox",
+        "text": "fox",
+        "bodyPlan": "quadruped"
       }
     ],
     "adjectives": [
       {
-        "id": "brave",
-        "text": "brave",
-        "emoji": "💪"
+        "id": "robotic",
+        "text": "robotic"
       },
       {
-        "id": "sparkly",
-        "text": "sparkly",
-        "emoji": "✨"
+        "id": "aquatic",
+        "text": "aquatic"
       },
       {
-        "id": "grumpy",
-        "text": "grumpy",
-        "emoji": "😠"
+        "id": "magical",
+        "text": "magical"
       },
       {
-        "id": "friendly",
-        "text": "friendly",
-        "emoji": "😊"
+        "id": "spooky",
+        "text": "spooky"
       },
       {
         "id": "cute",
@@ -72,14 +91,33 @@
         "emoji": "🥰"
       },
       {
-        "id": "sleepy",
-        "text": "sleepy",
-        "emoji": "😴"
+        "id": "grumpy",
+        "text": "grumpy",
+        "emoji": "😠"
       },
       {
-        "id": "tiny",
-        "text": "tiny",
-        "emoji": "🐜"
+        "id": "red",
+        "text": "red"
+      },
+      {
+        "id": "orange",
+        "text": "orange"
+      },
+      {
+        "id": "green",
+        "text": "green"
+      },
+      {
+        "id": "blue",
+        "text": "blue"
+      },
+      {
+        "id": "purple",
+        "text": "purple"
+      },
+      {
+        "id": "pink",
+        "text": "pink"
       }
     ],
     "objectAdjectives": [
@@ -112,36 +150,30 @@
         "text": "poisonous"
       }
     ],
-    "clothing": [
+    "characterItems": [
       {
-        "id": "hat",
-        "text": "hat",
-        "emoji": "🎩"
+        "id": "wand",
+        "text": "a wand"
       },
       {
+        "emoji": "👑",
         "id": "crown",
-        "text": "crown",
-        "emoji": "👑"
+        "text": "a crown"
       },
       {
-        "id": "cape",
-        "text": "cape",
-        "emoji": "🦸"
-      },
-      {
-        "id": "scarf",
-        "text": "scarf",
-        "emoji": "🧣"
-      },
-      {
+        "emoji": "👢",
         "id": "boots",
-        "text": "boots",
-        "emoji": "👢"
+        "text": "boots"
       },
       {
+        "emoji": "🎩",
+        "id": "hat",
+        "text": "a hat"
+      },
+      {
+        "emoji": "👓",
         "id": "glasses",
-        "text": "glasses",
-        "emoji": "👓"
+        "text": "glasses"
       }
     ],
     "objects": [
@@ -604,10 +636,10 @@
         {
           "phrase": [
             {
-              "text": " wearing a "
+              "text": " with "
             },
             {
-              "slot": "clothing"
+              "slot": "item"
             }
           ]
         }
@@ -622,9 +654,9 @@
           "words": "creatures",
           "required": true
         },
-        "clothing": {
-          "label": "clothing",
-          "words": "clothing"
+        "item": {
+          "label": "item",
+          "words": "characterItems"
         }
       }
     },
