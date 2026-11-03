@@ -94,8 +94,6 @@ const EditorStrip: React.FunctionComponent<EditorStripProps> = ({
     <div
       className={classNames(
         moduleStyles.editorStrip,
-        // The editors' strip meets a column header on its side; that
-        // header carries the line, so this strip draws none of its own.
         onChange && moduleStyles.editorStripEditors
       )}
       style={style}

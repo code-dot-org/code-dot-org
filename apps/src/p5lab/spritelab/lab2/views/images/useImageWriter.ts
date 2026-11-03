@@ -1,7 +1,7 @@
-// Writing the Images tab's pictures into the project: a generated or drawn
-// picture becomes an image's pixels the moment it lands, uploads are made
-// once per picture, and the files a session leaves behind are reclaimed
-// when it ends.
+// Writing the Images tab's pictures into the project. A generated or drawn
+// picture becomes an image's pixels as soon as it is ready; each picture is
+// uploaded once; when a session ends, uploaded files that no image points
+// at are deleted.
 
 import {useCallback, useEffect, useRef} from 'react';
 import {AnyAction} from 'redux';
@@ -11,27 +11,32 @@ import {
   deleteAnimation,
   isNameUnique,
 } from '@cdo/apps/p5lab/redux/animationList';
-import {PixelEditorSaveMeta} from '@cdo/apps/pixelEditor/PixelEditor';
-import {getStore} from '@cdo/apps/redux';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
-
-import {bytesToDataURI, dataURIToBytes} from '../../ai/images/encoding';
+import {
+  bytesToDataURI,
+  dataURIToBytes,
+} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/encoding';
 import {
   GeneratedImageResult,
   UploadImageFunction,
-} from '../../ai/images/imageGeneration';
-import {MODEL_OUTPUT_PX} from '../../ai/images/modelHelpers';
-import {ImageSubject, ImageType} from '../../ai/images/types';
-import {categoriesForType} from '../../imageGallery';
-import {nextImageName} from '../../imageReferences';
+} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageGeneration';
+import {MODEL_OUTPUT_PX} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/modelHelpers';
+import {
+  ImageSubject,
+  ImageType,
+} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/types';
+import {categoriesForType} from '@cdo/apps/p5lab/spritelab/lab2/imageGallery';
+import {nextImageName} from '@cdo/apps/p5lab/spritelab/lab2/imageReferences';
 import {
   AnimationPatch,
   createNamedAnimation,
   framesPatch,
   repointAnimation,
   uploadOrEmbed,
-} from '../imageSave';
-import useReclaimAsset from '../useReclaimAsset';
+} from '@cdo/apps/p5lab/spritelab/lab2/views/imageSave';
+import useReclaimAsset from '@cdo/apps/p5lab/spritelab/lab2/views/useReclaimAsset';
+import {PixelEditorSaveMeta} from '@cdo/apps/pixelEditor/PixelEditor';
+import {getStore} from '@cdo/apps/redux';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {ImageProps} from './projectImages';
 
@@ -56,21 +61,23 @@ interface WriterOptions {
 }
 
 export interface ImageWriter {
-  /** A generated picture becomes the target's pixels; resolves to the key
-      it lives under, which is new for a new image. */
+  /** Stores a generated picture as the target image's pixels and resolves
+      with the image's key, a new key for a new image. */
   acceptGenerated: (
     target: ImageTarget,
     result: GeneratedImageResult
   ) => Promise<string>;
-  /** Drawn pixels become the target's; the key, as above. */
+  /** Stores drawn pixels as the target image's pixels and resolves with
+      its key, as acceptGenerated does. */
   saveEdited: (
     target: ImageTarget,
     dataURI: string,
     meta: PixelEditorSaveMeta
   ) => Promise<string>;
   deleteImage: (key: string) => void;
-  /** Reclaim the files the session no longer uses and forget its uploads;
-      a session is one image's run of generations. */
+  /** Deletes the session's uploaded files that no image points at any
+      more, and forgets its uploads. A session is one image's run of
+      generations. */
   endSession: () => void;
 }
 
@@ -90,12 +97,13 @@ export default function useImageWriter({
 }: WriterOptions): ImageWriter {
   const dispatch = useAppDispatch();
   const reclaimAsset = useReclaimAsset();
-  // Uploads by picture, so a picture swapped back in is not uploaded again.
+  // Uploads keyed by the result's filename, so choosing an earlier picture
+  // of the session again reuses its upload.
   const uploadsRef = useRef(new Map<string, Upload>());
-  // Every file the session made or replaced; whichever is unreferenced at
-  // the end is deleted.
+  // Every file the session uploaded or replaced; those no image points at
+  // when the session ends are deleted.
   const sessionUrlsRef = useRef(new Set<string>());
-  const noteUrl = (url?: string) => {
+  const recordSessionUrl = (url?: string) => {
     if (url) {
       sessionUrlsRef.current.add(url);
     }
@@ -111,9 +119,10 @@ export default function useImageWriter({
   const write = useCallback(
     (target: ImageTarget, patch: AnimationPatch): string => {
       if (target.key) {
-        // An image deleted while its save was out stays deleted.
+        // An image deleted while its save was in progress stays deleted:
+        // nothing is written for it.
         if (propsOf(target.key)) {
-          noteUrl(repointAnimation(dispatch, target.key, patch));
+          recordSessionUrl(repointAnimation(dispatch, target.key, patch));
         }
         return target.key;
       }
@@ -149,7 +158,7 @@ export default function useImageWriter({
         );
         upload = {sourceUrl, frameSize: await measuredSize(dataURI)};
         uploadsRef.current.set(result.filename, upload);
-        noteUrl(sourceUrl);
+        recordSessionUrl(sourceUrl);
       }
       return write(target, {
         sourceUrl: upload.sourceUrl,
@@ -180,9 +189,10 @@ export default function useImageWriter({
         'image/png',
         dataURI
       );
-      noteUrl(sourceUrl);
+      recordSessionUrl(sourceUrl);
       const frameSize = await measuredSize(dataURI);
-      // The subject outlives the prompt's record, which the edit drops.
+      // Keep the subject: the edit clears `generation`, where an older image
+      // stored it.
       const subject =
         existing?.subject ?? existing?.generation?.subject ?? target.subject;
       return write(target, {

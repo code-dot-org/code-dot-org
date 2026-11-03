@@ -167,7 +167,7 @@ const GROUPS: {id: GroupId; title: string}[] = [
 /**
  * The Images editor: the project's pictures as a library, the chosen one
  * large. New image opens the dialog; a chosen picture paints straight into
- * the editor; a block's or the palette's pick opens the dialog on its kind.
+ * the editor.
  */
 // Detection runs a full-raster scan (~tens of ms, more on Chromebooks) and
 // the answer never changes for the same pixels, so it is cached across

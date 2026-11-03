@@ -44,6 +44,23 @@ export function imageKindLabel(
   return IMAGE_TYPE_LABELS[imageType];
 }
 
+/** The kind as a common noun in running text: "character", "object". */
+export function imageKindNoun(
+  imageType: ImageType,
+  subject?: ImageSubject
+): string {
+  return imageKindLabel(imageType, subject).toLowerCase();
+}
+
+/** The kind with its article: "a character", "an object". */
+export function imageKindPhrase(
+  imageType: ImageType,
+  subject?: ImageSubject
+): string {
+  const noun = imageKindNoun(imageType, subject);
+  return `${/^[aeiou]/.test(noun) ? 'an' : 'a'} ${noun}`;
+}
+
 /**
  * How an AI-generated image was made, recorded on its animation so a later
  * generation can replay the same roll of randomness or start from the current

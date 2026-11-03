@@ -1,5 +1,6 @@
 // The tab's left column: every image of the project as a tile, the one
-// being worked on marked, with the way to add one and to delete one.
+// being worked on marked, plus the button that adds an image and the button
+// that deletes the chosen one.
 
 import {MuiDialog} from '@code-dot-org/component-library/dialog';
 import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
@@ -11,23 +12,31 @@ import {
 import classNames from 'classnames';
 import React, {useEffect, useRef, useState} from 'react';
 
-import {imageKindLabel, ImageSubject, ImageType} from '../../ai/images/types';
+import {
+  imageKindNoun,
+  ImageSubject,
+  ImageType,
+} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/types';
 
 import {ProjectImage} from './projectImages';
 
-/** A new image's kind, chosen under the plus. */
+import styles from './images-tab.module.scss';
+
+/** A new image's kind, picked from the plus button's menu. */
 export interface NewImageKind {
   imageType: ImageType;
   subject?: ImageSubject;
 }
 
-/** Two kinds are the same when their images would be. */
+/** Two kinds match when they would make the same kind of image: the subject
+    matters only for sprites, and a sprite with no subject is a character. */
 const sameKind = (a: NewImageKind, b: NewImageKind) =>
   a.imageType === b.imageType &&
   (a.imageType !== 'sprite' ||
     (a.subject ?? 'character') === (b.subject ?? 'character'));
 
-// Room kept around a slot scrolled into view: its ring and its offset.
+// Space kept above or below a slot scrolled into view, so its chosen ring,
+// drawn outside the tile, is not clipped.
 const SLOT_SCROLL_MARGIN = 8;
 
 /** The kinds the plus offers, in the menu's order. */
@@ -61,9 +70,8 @@ const kindOf = (imageType: ImageType, subject?: ImageSubject): KindId =>
       : 'character'
     : imageType;
 
-import styles from './images-tab.module.scss';
-
-/** An image not made yet: its tile stands where the image will. */
+/** An image not made yet: its tile holds the place the finished image's
+    tile will take. */
 export interface DraftEntry {
   id: string;
   imageType: ImageType;
@@ -76,14 +84,14 @@ interface ImageListProps {
   /** The chosen image's key, or the draft's id. */
   chosenId: string | null;
   onChoose: (id: string) => void;
-  /** Whether the choice may move to another image.  A level about one
-      image keeps it where it is: the other tiles are shown but off. */
+  /** Whether the choice may move to another image. A level about one image
+      keeps it where it is: the other tiles are listed but disabled. */
   chooseOffered?: boolean;
-  /** The plus: a new image of the kind picked under it, offered where the
-      level lets students add. */
+  /** Called with the kind picked from the plus menu; absent when the level
+      does not let students add images, and the plus is then hidden. */
   onNew?: (kind: NewImageKind) => void;
-  /** The one kind the level lets students make; the menu's other kinds
-      are shown but off, so the plus works as it does in free play. */
+  /** The one kind the level lets students make; the menu disables every
+      other kind. */
   newKind?: NewImageKind;
   /** Delete the chosen image; absent where images cannot be deleted. */
   onDelete?: (key: string) => void;
@@ -99,18 +107,19 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
   newKind,
   onDelete,
 }) => {
-  // Delete asks once; a new choice withdraws the question.
+  // The delete confirmation is open; changing the chosen image closes it.
   const [confirming, setConfirming] = useState(false);
-  // The library's action dropdown closes through a context its own wrapper
-  // does not share, so a pick would leave the menu open; a remount closes it.
+  // ActionDropdown's option click closes the menu through a context that
+  // CustomDropdown provides only inside itself, so a pick leaves the menu
+  // open. Changing the key remounts it closed.
   const [menuKey, setMenuKey] = useState(0);
   useEffect(() => setConfirming(false), [chosenId]);
-  // A new slot may land below the fold of a long list: scroll the tiles
-  // so the whole slot shows, ring and all, smoothly unless the student
-  // asked for less motion. A frame after it mounts, so the list has
-  // settled and nothing jumps the scroll back. Every draft is its own
-  // object under one id, so the scroll follows each new slot, not only
-  // the first after none.
+  // Scroll the tiles box so a new draft slot is fully visible, smoothly
+  // unless the student asked for less motion. It runs one animation frame
+  // after the draft mounts: a scroll in the same frame as the layout change
+  // was undone by the layout. It keys on the draft object, which is new for
+  // every draft although every draft has the same id, so each new slot
+  // scrolls.
   const tilesRef = useRef<HTMLDivElement>(null);
   const draftRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -120,8 +129,8 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
     const frame = window.requestAnimationFrame(() => {
       const tiles = tilesRef.current;
       const slot = draftRef.current;
-      // No box to scroll before layout, or where there is no layout.
-      if (!tiles || !slot || !tiles.clientHeight || !tiles.scrollTo) {
+      // clientHeight is 0 before layout.
+      if (!tiles || !slot || !tiles.clientHeight) {
         return;
       }
       const box = tiles.getBoundingClientRect();
@@ -138,7 +147,7 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
       if (target === null) {
         return;
       }
-      const reduced = window.matchMedia?.(
+      const reduced = window.matchMedia(
         '(prefers-reduced-motion: reduce)'
       ).matches;
       tiles.scrollTo({top: target, behavior: reduced ? 'auto' : 'smooth'});
@@ -194,14 +203,14 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
       </div>
       <div ref={tilesRef} className={styles.tiles}>
         {KINDS.map(kind => {
-          const own = images.filter(
+          const kindImages = images.filter(
             image => kindOf(image.imageType, image.subject) === kind.id
           );
-          const ownDraft =
+          const kindDraft =
             draft && kindOf(draft.imageType, draft.subject) === kind.id
               ? draft
               : null;
-          if (!own.length && !ownDraft) {
+          if (!kindImages.length && !kindDraft) {
             return null;
           }
           return (
@@ -213,31 +222,31 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
               >
                 {kind.title}
               </MuiTypography>
-              {/* First, where the finished image will land: the project
-                  puts new images at the front. */}
-              {ownDraft && (
+              {/* The draft tile goes first because the project puts a new
+                  image at the front of the list. */}
+              {kindDraft && (
                 <div
                   ref={draftRef}
                   className={classNames(
                     styles.tileSlot,
-                    ownDraft.id === chosenId && styles.tileSlotChosen
+                    kindDraft.id === chosenId && styles.tileSlotChosen
                   )}
                 >
                   <button
                     type="button"
                     className={classNames(styles.tile, styles.tileDraft)}
-                    aria-pressed={ownDraft.id === chosenId}
-                    aria-label={`New ${imageKindLabel(
-                      ownDraft.imageType,
-                      ownDraft.subject
-                    ).toLowerCase()}`}
-                    onClick={() => onChoose(ownDraft.id)}
+                    aria-pressed={kindDraft.id === chosenId}
+                    aria-label={`New ${imageKindNoun(
+                      kindDraft.imageType,
+                      kindDraft.subject
+                    )}`}
+                    onClick={() => onChoose(kindDraft.id)}
                   />
                 </div>
               )}
-              {own.map(image => {
+              {kindImages.map(image => {
                 const chosen = image.key === chosenId;
-                const off = !chooseOffered && !chosen;
+                const choiceLocked = !chooseOffered && !chosen;
                 return (
                   <div
                     key={image.key}
@@ -250,8 +259,8 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
                       type="button"
                       className={styles.tile}
                       aria-pressed={chosen}
-                      aria-label={image.name || 'image'}
-                      disabled={off}
+                      aria-label={image.name}
+                      disabled={choiceLocked}
                       onClick={() => onChoose(image.key)}
                     >
                       {image.thumb && (
@@ -292,7 +301,7 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
               {chosenImage.thumb && (
                 <img
                   src={chosenImage.thumb}
-                  alt=""
+                  alt={chosenImage.name}
                   className={classNames(
                     styles.deleteThumb,
                     chosenImage.pixelated && styles.pixelArt
