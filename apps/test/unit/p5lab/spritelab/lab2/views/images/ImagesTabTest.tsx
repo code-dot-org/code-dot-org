@@ -862,6 +862,29 @@ describe('ImagesTab', () => {
     expect(playing()).toBe('jump-right');
   });
 
+  it('opens an AI-made set in the tools on the picked frame too', async () => {
+    propsByKey.k1 = {
+      name: 'Sprite 1',
+      categories: [],
+      role: 'hero',
+      sourceUrl: 'sheet.png',
+      frameSize: {x: 64, y: 64},
+      pixelGridSize: 1,
+      poses: CHARACTER_STRIP_POSES,
+      generation: {imageType: 'sprite', prompt: 'A cat'},
+    };
+    renderTab({lockedImageType: 'sprite', imageRole: 'hero'});
+    fireEvent.click(screen.getByRole('button', {name: 'Jump down'}));
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', {name: 'Edit this image'}));
+    });
+    expect(cutFrame).toHaveBeenCalledWith('sheet.png', {x: 64, y: 64}, 4);
+    expect(screen.getByRole('button', {name: 'Jump down'})).toHaveAttribute(
+      'aria-pressed',
+      'true'
+    );
+  });
+
   it('edits a character set one frame at a time, opening on the standing frame', async () => {
     propsByKey.k1 = {
       name: 'Sprite 1',

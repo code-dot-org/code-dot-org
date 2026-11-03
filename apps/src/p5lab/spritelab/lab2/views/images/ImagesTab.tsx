@@ -551,11 +551,14 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                   drawOffered
                     ? () => {
                         setWordMenusRequested(false);
-                        startDrawing({
-                          key: chosenImage?.key ?? null,
-                          imageType: parts.draft.imageType,
-                          subject: parts.draft.subject,
-                        });
+                        startDrawing(
+                          {
+                            key: chosenImage?.key ?? null,
+                            imageType: parts.draft.imageType,
+                            subject: parts.draft.subject,
+                          },
+                          restFrame ?? undefined
+                        );
                       }
                     : undefined
                 }
