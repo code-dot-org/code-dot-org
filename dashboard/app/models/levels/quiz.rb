@@ -91,6 +91,38 @@ class Quiz < Level
     placements.reset
   end
 
+  # Sets this quiz's placements to the given questions, in the order given,
+  # with pages and positions renumbered from 1. Questions in delete_question_ids
+  # are deleted if nothing else uses them.
+  def replace_placements!(entries, delete_question_ids: [])
+    builder_question_ids = entries.pluck(:quiz_question_id)
+    raise ArgumentError, 'a question is listed more than once' if builder_question_ids.uniq.size != builder_question_ids.size
+    valid_question_ids = QuizQuestion.where(type: QuizQuestion::TYPES, id: builder_question_ids).pluck(:id)
+    raise ArgumentError, "unknown quiz question ids: #{(builder_question_ids - valid_question_ids).sort.join(', ')}" if valid_question_ids.size != builder_question_ids.size
+    saved_question_ids = placements.pluck(:quiz_question_id)
+    removed_ids = saved_question_ids - builder_question_ids
+    raise ArgumentError, 'only questions removed from this quiz can be deleted' unless (delete_question_ids - removed_ids).empty?
+
+    # Maps each page sent to 1..N in the same order, e.g. pages 4, 9 => {4 => 1, 9 => 2}.
+    page_numbers = entries.pluck(:page).uniq.sort.each_with_index.to_h {|page, i| [page, i + 1]}
+    # Counts positions per page.
+    last_position_by_page = Hash.new(0)
+    rows = entries.sort_by {|e| [e[:page], e[:position]]}.map do |entry|
+      page = page_numbers[entry[:page]]
+      {level_id: id, quiz_question_id: entry[:quiz_question_id], page: page, position: last_position_by_page[page] += 1}
+    end
+
+    # delete_all/insert_all! skip QuizQuestionPlacement's after_commit, which
+    # would rewrite the .level file once per placement.
+    QuizQuestionPlacement.where(level_id: id).delete_all
+    QuizQuestionPlacement.insert_all!(rows) if rows.any?
+    placements.reset
+
+    QuizQuestion.where(id: delete_question_ids).find_each do |question|
+      question.destroy! unless question.referenced?
+    end
+  end
+
   def self.create_from_level_builder(params, level_params)
     create!(
       level_params.merge(
@@ -103,6 +135,14 @@ class Quiz < Level
 
   def uses_lab2?
     true
+  end
+
+  # Whether a unit using this quiz is launched or sunsetting.
+  def used_in_published_unit?
+    script_levels.any? do |sl|
+      unit = sl.script
+      unit && (unit.launched? || unit.sunsetting?)
+    end
   end
 
   # Placements are quiz-owned join rows; questions stay shared bank content.
