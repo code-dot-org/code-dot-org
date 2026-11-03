@@ -44,6 +44,21 @@
 $data-table-row-height: 28px;
 $table-action-row-height: 33px;
 
+// For a table container that already draws the table's outer border.
+@mixin data-table-flush-edges {
+  thead tr:first-child > th {
+    border-top-width: 0;
+  }
+
+  tr > :first-child {
+    border-left-width: 0;
+  }
+
+  tr > :last-child {
+    border-right-width: 0;
+  }
+}
+
 @mixin data-table-empty-note {
   margin: 0;
   padding: 10px;
