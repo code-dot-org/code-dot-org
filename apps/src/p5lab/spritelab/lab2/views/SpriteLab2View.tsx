@@ -604,6 +604,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // The room the editors keep clear of the column, on its side.
   const clearOfPreview =
     previewSide === 'left' ? {left: previewWidth} : {right: previewWidth};
+  // The Images tab's pane column, headed AI, at the right: the preview
+  // column's width where one has been measured, else the pane's own.
+  const paneWidthPx = previewWidth || DEFAULT_PANE_WIDTH;
+  const clearOfPane = {right: paneWidthPx};
   // The workspace does not notice its container changing size.
   useEffect(() => {
     const workspace = Blockly.getMainWorkspace?.() as
@@ -2400,7 +2404,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           {editorsShown && activeTab === 'Images' && (
             <EditorStrip
               title="AI"
-              style={{left: 'auto', width: previewWidth || DEFAULT_PANE_WIDTH}}
+              style={{left: 'auto', width: paneWidthPx}}
             />
           )}
           {editorsShown &&
@@ -2418,7 +2422,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                     ? {canUndo, canRedo, undo, redo}
                     : undefined
                 }
-                style={clearOfPreview}
+                style={activeTab === 'Images' ? clearOfPane : clearOfPreview}
               />
             )}
           {/* Kept mounted (clipped) so the workspace survives tab switches;
