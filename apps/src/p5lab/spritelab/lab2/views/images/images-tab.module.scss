@@ -258,7 +258,8 @@ $pad: 16px;
   padding-top: 8px;
 }
 
-// The panel's body: flush under its header and to the tab's edges.
+// The panel's body: flush under its header and to the tab's edges, with
+// the preview column's rule down its left.
 .pane {
   display: flex;
   flex: none;
@@ -268,6 +269,7 @@ $pad: 16px;
   min-height: 0;
   margin: (-$pad) (-$pad) (-$pad) 0;
   padding: 16px;
+  border-left: 1px solid var(--borders-neutral-primary);
   background-color: var(--background-neutral-secondary);
   color: var(--text-neutral-primary);
 
