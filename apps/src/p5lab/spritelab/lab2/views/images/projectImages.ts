@@ -1,37 +1,21 @@
 // The project's images as the Images tab lists them, read from the classic
 // animation-list store.
 
-import {PixelEditorSaveMeta} from '@cdo/apps/pixelEditor/PixelEditor';
-
 import {
-  ImageGenerationMetadata,
   ImageSubject,
   ImageType,
-} from '../../ai/images/types';
-import {AnimationPoses} from '../../characterAnimations';
-import {galleryOrder, imageTypeFromCategories} from '../../imageGallery';
-import {getImageThumbnail} from '../../imageTrim';
+} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/types';
+import {AnimationPoses} from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
+import {
+  galleryOrder,
+  imageTypeFromCategories,
+} from '@cdo/apps/p5lab/spritelab/lab2/imageGallery';
+import {getImageThumbnail} from '@cdo/apps/p5lab/spritelab/lab2/imageTrim';
+import {RuntimeAnimationProps} from '@cdo/apps/p5lab/spritelab/lab2/types';
 
-/** The animation fields the Images tab reads and writes. */
-export interface ImageProps {
-  name?: string;
-  categories?: string[];
-  dataURI?: string;
-  sourceUrl?: string;
-  frameSize?: {x: number; y: number};
-  frameCount?: number;
-  frameDelay?: number;
-  looping?: boolean;
-  poses?: AnimationPoses;
-  pixelGridSize?: number;
-  trimmed?: boolean;
-  generation?: ImageGenerationMetadata;
-  recentColors?: PixelEditorSaveMeta['recentColors'];
-  role?: string;
-  /** What a sprite depicts, kept apart from the prompt's record, which
-      hand-edited pixels drop. */
-  subject?: ImageSubject;
-}
+/** An animation's fields as the Images tab reads them: any may be missing
+    on an image a project saved before the field existed. */
+export type ImageProps = Partial<RuntimeAnimationProps>;
 
 export interface AnimationListState {
   orderedKeys: string[];
@@ -71,7 +55,7 @@ export function listProjectImages(list: AnimationListState): ProjectImage[] {
       {
         key,
         props,
-        name: props.name ?? '',
+        name: props.name || 'image',
         imageType,
         subject:
           imageType === 'sprite'

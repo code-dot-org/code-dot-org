@@ -1,5 +1,4 @@
-// Writing a made or edited picture into the project's animation list,
-// shared by the image dialog and the sentence scene.
+// Writing a made or edited picture into the project's animation list.
 
 import {AnyAction, Dispatch} from 'redux';
 
@@ -13,36 +12,14 @@ import {
   GeneratedImageResult,
   UploadImageFunction,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageGeneration';
-import {
-  ImageGenerationMetadata,
-  ImageSubject,
-} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/types';
-import {AnimationPoses} from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
-import {PixelEditorSaveMeta} from '@cdo/apps/pixelEditor/PixelEditor';
+import {RuntimeAnimationProps} from '@cdo/apps/p5lab/spritelab/lab2/types';
 import {getStore} from '@cdo/apps/redux';
 import {createUuid} from '@cdo/apps/utils';
 
-// The animation fields the save paths write. An explicit `undefined`
-// clears the field (the spread keeps the key).
-export interface AnimationPatch {
-  sourceUrl?: string;
-  dataURI?: string;
-  frameSize?: {x: number; y: number};
-  sourceSize?: {x: number; y: number};
-  frameCount?: number;
-  frameDelay?: number;
-  looping?: boolean;
-  poses?: AnimationPoses;
-  categories?: string[];
-  role?: string;
-  subject?: ImageSubject;
-  pixelGridSize?: number;
-  /** Set wherever an animation's pixels are replaced; a stale true would
-      skip a needed trim. */
-  trimmed?: boolean;
-  generation?: ImageGenerationMetadata;
-  recentColors?: PixelEditorSaveMeta['recentColors'];
-}
+// The animation fields a save may write: any of them but the name, which
+// is set by the create path. An explicit `undefined` clears a field, since
+// the spread keeps the key.
+export type AnimationPatch = Partial<Omit<RuntimeAnimationProps, 'name'>>;
 
 // A plain single-frame picture's playback fields; also what a brand-new
 // animation starts as.
@@ -139,8 +116,8 @@ export function repointAnimation(
       },
     },
   };
-  // The Images tab trims on every list change; a trim here would scan the
-  // repointed image a second time.
+  // No trim here: the views that list images trim on every list change,
+  // and a second trim would scan the image again.
   dispatch({type: SET_INITIAL_ANIMATION_LIST, animationList: updated});
   return current.propsByKey[key]?.sourceUrl;
 }

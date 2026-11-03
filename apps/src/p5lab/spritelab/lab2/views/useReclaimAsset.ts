@@ -1,5 +1,6 @@
 import {useCallback} from 'react';
 
+import {RuntimeAnimationList} from '@cdo/apps/p5lab/spritelab/lab2/types';
 import {getStore} from '@cdo/apps/redux';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -16,9 +17,11 @@ export default function useReclaimAsset(): (url?: string) => void {
       if (!channelId || !url || !url.startsWith(`/v3/assets/${channelId}/`)) {
         return;
       }
-      const stillUsed = Object.values(
-        getStore().getState().animationList.propsByKey
-      ).some(p => (p as {sourceUrl?: string} | undefined)?.sourceUrl === url);
+      // The classic store is untyped; its list has the lab's shape.
+      const list: RuntimeAnimationList = getStore().getState().animationList;
+      const stillUsed = Object.values(list.propsByKey).some(
+        p => p?.sourceUrl === url
+      );
       if (stillUsed) {
         return;
       }

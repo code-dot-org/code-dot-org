@@ -3,7 +3,11 @@ import {BlocklyLevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
 import {RGBA} from '@cdo/apps/pixelEditor/tools';
 
 import {AddBlockEntry} from './addBlocks';
-import {ImageGenerationMetadata, ImageType} from './ai/images/types';
+import {
+  ImageGenerationMetadata,
+  ImageSubject,
+  ImageType,
+} from './ai/images/types';
 import {LevelCallout} from './callouts';
 import {AnimationPoses} from './characterAnimations';
 import {ImageRoleDefaults} from './imageRoleDefaults';
@@ -39,6 +43,9 @@ export interface SerializedAnimationProps {
   trimmed?: boolean;
   /** What the image level that made it was for (level_mode.imageRole). */
   role?: string;
+  /** Whether a sprite is a character or an object. Stored on its own, not
+      only inside `generation`, because a hand edit clears `generation`. */
+  subject?: ImageSubject;
   /** Present on AI-generated images. */
   generation?: ImageGenerationMetadata;
   /** Present on a character set: where each pose lives in the sheet. */
