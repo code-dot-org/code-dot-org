@@ -1,6 +1,7 @@
 # Plan: the Main Screen compiles from its data, and `define world` goes
 
-STATUS: BUILT, October 2026, but for steps 4 to 6, which are later.
+STATUS: BUILT, October and November 2026. Step 4 went another way than
+planned: the lessons were rewritten as screens, and the converter deleted.
 
 SUPERSEDED IN ONE PART (specs/SCREEN_STACK_PLAN.md): the Main Screen is no
 longer the only screen whose data declares values and events. Every screen
@@ -60,18 +61,19 @@ color` and a `set` row per rule setting, loads them into the headless
    stay, and writing their code out again here would be a second copy of
    their generators — the bargain a Viewport camera's starting values made
    (COMPILE_FROM_DATA_PLAN.md, step 4). The 90 modules are the same.
-4. **LATER. Lessons stop writing `define world`.** `worldFile` returns
-   the spec it was built from — name, rows, handlers, map — and the
-   converter sorts the spec rather than a workspace. The lesson checks
-   that edit the remembered world move with it.
+4. **BUILT, differently. Lessons stop writing `define world`.** The plan
+   was for `worldFile` to return a spec the converter sorted. Instead each
+   lesson is written as the screen and map it is, the lesson checks edit
+   the game rather than a world made of it, and the converter is deleted
+   (COMPILE_FROM_DATA_PLAN.md, 5f).
 5. **BUILT. The fixtures.** Tapper and Novel are written as a screen and a
    map directly (COMPILE_FROM_DATA_PLAN.md, 5f).
 6. **BUILT. The test shape.** A test writes a Main Screen into the empty
    app, and the converter is gone (COMPILE_FROM_DATA_PLAN.md, 5f).
 
-   Steps 4 to 6 were not needed for the block to go: a lesson's, a
-   fixture's and a test's `define world` was JSON a converter read, and
-   nothing loaded one into a workspace.
+   Steps 4 to 6 were not needed for the block to go, and step 7 came
+   first: a lesson's, a fixture's and a test's `define world` was JSON a
+   converter read, and nothing loaded one into a workspace.
 
 7. **`define world` goes. BUILT, but for the layers.** The block and its
    generator, `use theme` and `define event` are deleted, with the rules
@@ -113,18 +115,20 @@ Steps 2 and 3 change no output.
 
 ## Decided
 
-- **The lesson format: a spec.** `worldFile` returns its spec and the
-  converter sorts it (step 4). Rewriting 79 lessons as screens and
-  placements by hand buys nothing a reader sees: the rows are Blockly rows
-  by nature, and sorting them into data and code is what the converter is
-  for.
+- **The lesson format: a screen.** Decided first as a spec the converter
+  sorted, on the grounds that rewriting the lessons by hand bought nothing
+  a reader sees. Reversed: a lesson is written as a screen and a map, as
+  every game is, and the converter, with its second way of writing a game,
+  is gone (step 4).
 - **Rule settings stay keyed by their setter.** `world_set_Scoring_…` is
   what the inspector and `screenProperties` write, and step 3 resolves it.
   `{rule, property}` would be a change to the data for no reader.
-- **The tests move to specs through the shim** (step 6), not by rewriting a
-  hundred files. A test that is about the block itself goes with it.
-- **The Main Screen's code keeps the `'world'` kind** (`markCode`): the
-  name is internal, and every reader of it means "the game's own code".
+- **The tests write a Main Screen** (step 6); the shim is gone. A test
+  that was about the block itself went with it.
+- **The Main Screen's code is marked `'game'`** (`markCode`), and its
+  file is kind `screen` (step 9). Only the Main Screen's is marked: every
+  reader of the mark means "the game's own code", which another screen's
+  is not.
 
 - **Layers are the map's.** A layer is data, like a camera: made in the map
   editor and kept in the map (`mainMapLayers.screenLayersOf`), not

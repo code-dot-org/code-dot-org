@@ -436,6 +436,7 @@ converter is gone. In order, each its own commit:
    screen's, and one that set a rule's setting in a row sets it in the
    screen's `rules`. Every lesson is written back unchanged by the view
    unedited, and `support/worldView` is gone.
+
 4. BUILT, November 2026. The converter goes: `asScreen` and `VIEW_ROWS`
    are deleted, and nothing names `define world` but the unit tests that
    use `world_world` as any root's type. `world_rule_property` and
@@ -445,9 +446,10 @@ converter is gone. In order, each its own commit:
 
 ## Open
 
-- **A world's properties** were the last declarations written as blocks.
-  The Main Screen compiles from its data, and `define world` is gone
-  (WORLD_AS_DATA_PLAN.md).
+A world's properties, the last declarations written as blocks, compile
+from the Main Screen's data, and `define world` is gone
+(WORLD_AS_DATA_PLAN.md).
+
 - **Naming a Viewport's camera in code.** `camera ⟨⟩`, `move camera` and
   `look through camera` name a camera by the `define camera` block that
   made it, so after 5a they name the main camera only. A Viewport's stored

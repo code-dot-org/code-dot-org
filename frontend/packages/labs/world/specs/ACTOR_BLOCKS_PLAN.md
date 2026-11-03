@@ -378,7 +378,8 @@ before the page can be reached headless.
   tab, opening its drawing code the same way. The next step, and mostly
   this one's machinery.
 - `define tween` (2): the animation timeline.
-- The world file as data, retiring `define world`.
+- The world file as data, retiring `define world`: done
+  (WORLD_AS_DATA_PLAN.md).
 - A Screen's events, which are data already (`ScreenEvent`) and would take
   the same page.
 - A rule's `define block` and `define event` on this page: done, and the

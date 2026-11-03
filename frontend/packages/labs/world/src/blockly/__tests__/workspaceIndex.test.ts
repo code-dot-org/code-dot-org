@@ -31,13 +31,13 @@ beforeAll(() => {
       message0: 'when this screen loads',
       nextStatement: null,
     },
-    ...['world_define_layer'].map(type => ({
-      type,
-      message0: `${type} %1`,
+    {
+      type: 'named_row',
+      message0: 'named %1',
       args0: [{type: 'field_input', name: 'NAME', text: ''}],
       previousStatement: null,
       nextStatement: null,
-    })),
+    },
     {
       type: 'world_set_map_size',
       message0: 'size %1 %2',
@@ -87,7 +87,7 @@ const FILE = {
         id: 'screen',
         next: {
           block: {
-            type: 'world_define_layer',
+            type: 'named_row',
             id: 'sky',
             fields: {NAME: 'Sky'},
             next: {
