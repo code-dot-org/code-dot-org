@@ -1,5 +1,5 @@
 #!/usr/bin/env bundle exec ruby
-REPO_DIR = File.expand_path('../../../', __FILE__)
+REPO_DIR = File.expand_path('../..', __dir__)
 require_relative "#{REPO_DIR}/lib/cdo/cdo_cli"
 
 class ScaryChangeDetector

@@ -2,7 +2,7 @@ require 'aws-sdk-s3'
 require 'ruby-progressbar'
 require 'optparse'
 require 'parallel'
-require File.expand_path('../../../dashboard/config/environment', __FILE__)
+require File.expand_path('../../dashboard/config/environment', __dir__)
 require_relative '../../lib/cdo/aws/s3'
 require_relative '../../deployment'
 require_relative '../../lib/cdo/cdo_cli'

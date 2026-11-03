@@ -1,6 +1,6 @@
 require_relative 'hooks_utils'
 
-REPO_DIR = File.expand_path('../../../', __FILE__).freeze
+REPO_DIR = File.expand_path('../..', __dir__).freeze
 GITHUB_MAX_FILE_SIZE_BYTES = 100_000_000
 
 def prohibited?(filename)

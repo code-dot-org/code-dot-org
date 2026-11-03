@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-Dir.chdir(File.expand_path('../../../dashboard', __FILE__))
+Dir.chdir(File.expand_path('../../dashboard', __dir__))
 require_relative '../../dashboard/config/environment'
 require 'aws-sdk-rds'
 require 'cdo/chat_client'

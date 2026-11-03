@@ -6,7 +6,7 @@ abort 'Script already running' unless only_one_running?(__FILE__)
 require_relative '../tools/hooks/hooks_utils'
 require 'time'
 
-REPO_DIR = File.expand_path('../../', __FILE__).freeze
+REPO_DIR = File.expand_path('..', __dir__).freeze
 LEVELS_DIR = File.expand_path(REPO_DIR + '/dashboard/config/scripts', __FILE__).freeze
 
 # This file contains the time of the last completed test run, successful or

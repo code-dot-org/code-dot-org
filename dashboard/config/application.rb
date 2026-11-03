@@ -1,4 +1,4 @@
-require File.expand_path('../../../deployment', __FILE__)
+require File.expand_path('../../deployment', __dir__)
 require 'cdo/poste'
 require 'rails/all'
 
