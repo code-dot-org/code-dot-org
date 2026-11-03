@@ -612,7 +612,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const paneWidthPx = previewColumnWidth || DEFAULT_PANE_WIDTH;
   const clearOfPane = {right: paneWidthPx};
   // Free play keeps the instructions out of the way: the panel starts
-  // collapsed to its tab, which expands it again.
+  // collapsed to its tab, which expands it again. The view stays mounted
+  // from level to level, so the level's id is a dependency too.
   const freeplayLevel = isFreeplayMode(levelProperties.levelMode);
   const instructionsCollapsed = useAppSelector(
     state => state.lab2View.isStandaloneCollapsed
@@ -623,7 +624,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     return () => {
       dispatch(setIsStandaloneCollapsed(false));
     };
-  }, [freeplayLevel, dispatch]);
+  }, [freeplayLevel, levelProperties.id, dispatch]);
   // The workspace does not notice its container changing size.
   useEffect(() => {
     const workspace = Blockly.getMainWorkspace?.() as

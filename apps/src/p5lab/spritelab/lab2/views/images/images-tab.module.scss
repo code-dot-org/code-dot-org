@@ -10,6 +10,8 @@ $tile-px: 88px;
 $tile-gap: 8px;
 $column-gap: 20px;
 $pad: 16px;
+// The list's share of the tab's width.
+$list-share: 0.2;
 
 // The tab starts at the top of the editors' strip, which lies over its
 // first two columns; the pane column carries its own header there.
@@ -40,14 +42,14 @@ $pad: 16px;
   gap: 12px;
   min-width: $tile-px;
   max-width: 3 * $tile-px + 2 * $tile-gap;
-  // A fifth of the tab: one tile in a narrow window, three in a wide one.
-  width: 20%;
+  // A share of the tab: one tile in a narrow window, three in a wide one.
+  width: math.percentage($list-share);
   min-height: 0;
 }
 
 // Below the tab width where a fifth holds two tile columns, the list is
 // exactly one column, so the slack goes to the frame instead.
-$two-columns-at: math.div(2 * $tile-px + $tile-gap, 0.2);
+$two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
 
 @container (max-width: #{$two-columns-at - 1px}) {
   .list {
