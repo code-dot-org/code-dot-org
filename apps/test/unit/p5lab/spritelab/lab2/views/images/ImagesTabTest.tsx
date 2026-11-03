@@ -368,7 +368,7 @@ describe('ImagesTab', () => {
     const onDrawingHistory = jest.fn();
     renderTab({editingOffered: true, onDrawingHistory});
     fireEvent.click(screen.getByRole('button', {name: 'New image'}));
-    fireEvent.click(screen.getByRole('button', {name: 'Character'}));
+    fireEvent.click(screen.getByRole('menuitem', {name: 'Character'}));
     fireEvent.click(screen.getByRole('button', {name: 'Draw my own'}));
     expect(screen.getByText('4 tools')).toBeTruthy();
     expect(screen.getByText('toolbar')).toBeTruthy();
@@ -401,7 +401,7 @@ describe('ImagesTab', () => {
     const onImageLanded = jest.fn();
     renderTab({editingOffered: true, onImageLanded});
     fireEvent.click(screen.getByRole('button', {name: 'New image'}));
-    fireEvent.click(screen.getByRole('button', {name: 'Character'}));
+    fireEvent.click(screen.getByRole('menuitem', {name: 'Character'}));
     fireEvent.click(screen.getByRole('button', {name: 'Draw my own'}));
     saveEdited.mockImplementation(async () => {
       propsByKey.k1 = {name: 'Sprite 1', categories: []};
@@ -592,7 +592,7 @@ describe('ImagesTab', () => {
     delete params['images-edited'];
     renderTab({editingOffered: true});
     fireEvent.click(screen.getByRole('button', {name: 'New image'}));
-    fireEvent.click(screen.getByRole('button', {name: 'Character'}));
+    fireEvent.click(screen.getByRole('menuitem', {name: 'Character'}));
     fireEvent.click(screen.getByRole('button', {name: 'Draw my own'}));
     expect(screen.getByText('canvas')).toBeTruthy();
     expect(screen.getByText('words')).toBeTruthy();
