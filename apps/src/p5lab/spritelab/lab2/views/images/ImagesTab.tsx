@@ -820,7 +820,9 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                               />
                             )}
                           </div>,
-                          editor.toolbar
+                          // The tools stay mounted with their drawing while
+                          // a picture is made over it, out of sight.
+                          generating ? undefined : editor.toolbar
                         )}
                         {editingOffered && editedMode() === 'paint' ? (
                           words

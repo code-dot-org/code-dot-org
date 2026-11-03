@@ -5,30 +5,35 @@ import ImagesTab from '@cdo/apps/p5lab/spritelab/lab2/views/images/ImagesTab';
 
 // The scene is stood in for: a button that lands a picture of the kind it
 // was given, so the tab's own moves can be watched.
-jest.mock(
-  '@cdo/apps/p5lab/spritelab/lab2/views/sentence/SentenceScene',
-  () => ({
-    __esModule: true,
-    default: ({
-      imageType,
-      imageSubject,
-      typeChoice,
-      initialAnimated,
-      onAnimatedChange,
-      onBusyChange,
-      onKeep,
-      layout,
-    }: {
-      imageType: string;
-      imageSubject?: string;
-      typeChoice?: boolean;
-      initialAnimated?: boolean;
-      onAnimatedChange?: (animated: boolean) => void;
-      onBusyChange?: (busy: boolean) => void;
-      onKeep: (result: unknown) => void;
-      layout: (parts: unknown) => React.ReactNode;
-    }) => (
+jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/sentence/SentenceScene', () => {
+  const SentenceSceneStub = ({
+    imageType,
+    imageSubject,
+    typeChoice,
+    initialAnimated,
+    onAnimatedChange,
+    onBusyChange,
+    onKeep,
+    layout,
+  }: {
+    imageType: string;
+    imageSubject?: string;
+    typeChoice?: boolean;
+    initialAnimated?: boolean;
+    onAnimatedChange?: (animated: boolean) => void;
+    onBusyChange?: (busy: boolean) => void;
+    onKeep: (result: unknown) => void;
+    layout: (parts: unknown) => React.ReactNode;
+  }) => {
+    const [generating, setGenerating] = React.useState(false);
+    return (
       <div>
+        <button type="button" onClick={() => setGenerating(true)}>
+          generate on
+        </button>
+        <button type="button" onClick={() => setGenerating(false)}>
+          generate off
+        </button>
         <button type="button" onClick={() => onBusyChange?.(true)}>
           busy on
         </button>
@@ -51,11 +56,11 @@ jest.mock(
           land {imageType} {imageSubject ?? ''} {typeChoice ? 'choice' : ''}
         </button>
         {layout({
-          mode: 'edit',
-          busy: false,
+          mode: generating ? 'generating' : 'edit',
+          busy: generating,
           complete: false,
           panelRef: {current: null},
-          frame: null,
+          frame: generating ? <span>spinner</span> : null,
           frameFilled: false,
           underFrame: null,
           alternatives: null,
@@ -74,9 +79,10 @@ jest.mock(
           draft: {imageType, subject: imageSubject, style: 'pixel'},
         })}
       </div>
-    ),
-  })
-);
+    );
+  };
+  return {__esModule: true, default: SentenceSceneStub};
+});
 
 // The pixel editor is stood in for: a stroke button and the parts a host
 // lays out, with save handing back fixed pixels.
@@ -504,6 +510,21 @@ describe('ImagesTab', () => {
     expect(screen.getByText('words')).toBeTruthy();
     fireEvent.click(screen.getByRole('button', {name: 'Sprite 1'}));
     expect(screen.getByText('Your edited image')).toBeTruthy();
+  });
+
+  it('puts the paint tools away while a picture is made over the drawing', async () => {
+    delete params['images-edited'];
+    propsByKey.k1 = {name: 'Sprite 1', categories: [], sourceUrl: 'one.png'};
+    renderTab({editingOffered: true});
+    expect(await screen.findByText('canvas')).toBeTruthy();
+    expect(screen.getByText('toolbar')).toBeTruthy();
+    fireEvent.click(screen.getByRole('button', {name: 'generate on'}));
+    expect(screen.getByText('spinner')).toBeTruthy();
+    expect(screen.queryByText('toolbar')).toBeNull();
+    expect(screen.queryByText('canvas')).toBeNull();
+    fireEvent.click(screen.getByRole('button', {name: 'generate off'}));
+    expect(screen.getByText('toolbar')).toBeTruthy();
+    expect(screen.getByText('canvas')).toBeTruthy();
   });
 
   it('paints every image in place in free play, the words beside the tools', async () => {
