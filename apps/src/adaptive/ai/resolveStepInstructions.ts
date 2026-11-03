@@ -22,6 +22,10 @@ import {
 } from './instructionsPrompt';
 import {ADAPTIVE_MODELS} from './models';
 
+// Saving fresh instructions reruns the caller's effect, which then hits the
+// cache; that hit is the same generation, so it is not reported again.
+let justGeneratedHash: string | undefined;
+
 export interface StepInstructionsOptions {
   pathway: Pathway;
   checkpoint: Checkpoint;
@@ -78,7 +82,8 @@ export async function resolveStepInstructions({
       ...result,
     });
   if (generatedInstructions?.inputsHash === inputsHash) {
-    sendGenerated({cacheHit: true, success: true});
+    if (justGeneratedHash === inputsHash) justGeneratedHash = undefined;
+    else sendGenerated({cacheHit: true, success: true});
     return generatedInstructions.instructions;
   }
 
@@ -119,6 +124,7 @@ export async function resolveStepInstructions({
     });
     return authoredInstructions;
   }
+  justGeneratedHash = inputsHash;
   saveGeneratedInstructions(step.id, {
     instructions: output.instructions,
     inputsHash,
