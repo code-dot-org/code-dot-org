@@ -161,9 +161,7 @@ export interface PixelEditorProps {
   onReady?: () => void;
   onSave: (dataURI: string, meta: PixelEditorSaveMeta) => void;
   // Fires whenever the picture's pixels change: each stamp of a stroke as
-  // it is dragged, a fill, a shape, an undo or a redo. A host that saves on
-  // its own clock restarts that clock on each one, so it saves once the
-  // picture has been still for a moment.
+  // it is dragged, a fill, a shape, an undo or a redo.
   onEdit?: () => void;
   // The tools to offer, in TOOLS order; all of them when absent. Shortcuts
   // for tools left out do nothing.

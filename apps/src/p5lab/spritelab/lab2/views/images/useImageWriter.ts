@@ -60,6 +60,15 @@ interface WriterOptions {
   onDeleteImage: (name: string) => void;
 }
 
+export interface SaveEditedOptions {
+  /** False stores the pixels in the project without uploading the file;
+      a new image is always uploaded, since it has no file yet. */
+  upload?: boolean;
+  /** Called after the upload and before the image is updated; returning
+      false abandons the save, for a drawing a picture replaced meanwhile. */
+  stillWanted?: () => boolean;
+}
+
 export interface ImageWriter {
   /** Stores a generated picture as the target image's pixels and resolves
       with the image's key, a new key for a new image. */
@@ -68,16 +77,12 @@ export interface ImageWriter {
     result: GeneratedImageResult
   ) => Promise<string>;
   /** Stores drawn pixels as the target image's pixels and resolves with
-      its key, as acceptGenerated does. With `upload` false the pixels are
-      stored in the project only and no file is uploaded; a new image is
-      always uploaded, since it has no file yet. `stillWanted`, when given,
-      is called after the upload and before the image is updated; returning
-      false abandons the save, for a drawing a picture replaced meanwhile. */
+      its key, as acceptGenerated does. */
   saveEdited: (
     target: ImageTarget,
     dataURI: string,
     meta: PixelEditorSaveMeta,
-    options?: {upload?: boolean; stillWanted?: () => boolean}
+    options?: SaveEditedOptions
   ) => Promise<string>;
   deleteImage: (key: string) => void;
   /** Deletes the session's uploaded files that no image points at any
@@ -187,10 +192,7 @@ export default function useImageWriter({
       target: ImageTarget,
       dataURI: string,
       meta: PixelEditorSaveMeta,
-      {
-        upload = true,
-        stillWanted,
-      }: {upload?: boolean; stillWanted?: () => boolean} = {}
+      {upload = true, stillWanted}: SaveEditedOptions = {}
     ) => {
       const existing = target.key ? propsOf(target.key) : undefined;
       const safeName = (existing?.name || 'image')

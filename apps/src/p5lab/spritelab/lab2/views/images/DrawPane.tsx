@@ -1,22 +1,26 @@
-// The tab's right column while a picture is drawn: what is being drawn,
-// and the one way out, Done. Strokes are always kept; the editor's undo is
-// the way back.
+// The tab's right column while the student draws: a heading and a Done
+// button. There is no Cancel: strokes are kept as made, and the editor's
+// undo reverses them.
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton} from '@mui/material';
 import React from 'react';
 
-import {imageKindLabel, ImageSubject, ImageType} from '../../ai/images/types';
+import {
+  ImageKind,
+  imageKindNoun,
+} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/types';
 
 import styles from './images-tab.module.scss';
 
 interface DrawPaneProps {
-  /** The pane's width, px: the preview column's. */
+  /** Width in px; it equals the preview column's width so the pane sits
+      under that column's header. */
   width: number;
-  kind: {imageType: ImageType; subject?: ImageSubject};
+  kind: ImageKind;
   /** The drawing is over an image that exists, not a blank. */
   editing: boolean;
-  /** A stroke has landed since the drawing opened. */
+  /** The student has drawn at least one stroke since the tools opened. */
   edited: boolean;
   /** Keep what is drawn and leave the tools. */
   onDone: () => void;
@@ -29,7 +33,7 @@ const DrawPane: React.FunctionComponent<DrawPaneProps> = ({
   edited,
   onDone,
 }) => {
-  const kindLabel = imageKindLabel(kind.imageType, kind.subject).toLowerCase();
+  const kindNoun = imageKindNoun(kind.imageType, kind.subject);
   return (
     <section
       className={styles.pane}
@@ -37,7 +41,7 @@ const DrawPane: React.FunctionComponent<DrawPaneProps> = ({
       aria-label={editing ? 'Edit your picture' : 'Draw your picture'}
     >
       <p className={styles.headline}>
-        {editing ? 'Edit this image.' : `Draw your ${kindLabel}.`}
+        {editing ? 'Edit this image.' : `Draw your ${kindNoun}.`}
       </p>
       <div className={styles.paneBottom}>
         <MuiButton

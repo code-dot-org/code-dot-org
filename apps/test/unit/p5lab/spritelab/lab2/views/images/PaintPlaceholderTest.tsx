@@ -19,6 +19,7 @@ describe('PaintPlaceholder', () => {
     render(<PaintPlaceholder picture={picture} src="data:one" />);
     expect(sized).toEqual([64, 32]);
     expect(drawImage).toHaveBeenCalledWith(picture, 0, 0);
+    // The fallback image is decorative (alt=""), so it has no role to query by.
     expect(document.querySelector('img')).toBeNull();
   });
 

@@ -10,7 +10,8 @@ import React from 'react';
 import styles from './images-tab.module.scss';
 
 interface OwnWorkPaneProps {
-  /** The pane's width, px: the preview column's. */
+  /** Width in px; it equals the preview column's width so the pane sits
+      under that column's header. */
   width: number;
   /** The pixels were drawn on; otherwise the image simply has no prompt. */
   edited: boolean;
