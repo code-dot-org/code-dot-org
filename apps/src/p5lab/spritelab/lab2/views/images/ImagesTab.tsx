@@ -547,14 +547,9 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                 generating={generating}
                 note={generating ? parts.tip : undefined}
                 under={
-                  generating ? (
-                    <div className={styles.underSteps}>{parts.progress}</div>
-                  ) : (
-                    under || parts.underFrame || reopenedBehindTheScenes
-                  )
                   generating
                     ? undefined
-                    : under ?? (parts.underFrame || reopenedBehindTheScenes)
+                    : under || parts.underFrame || reopenedBehindTheScenes
                 }
                 overlay={
                   parts.rating.offered && (
