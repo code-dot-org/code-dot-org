@@ -591,12 +591,8 @@ export function assumePixelGrid(
   };
 }
 
-/**
- * The grid at a pitch decided elsewhere, with this raster's own offsets and
- * confidence. The frames of a character set are edits of one base picture
- * and share its pitch, but each lands on a phase of its own, so the base
- * frame's offsets cannot be sampled across the set.
- */
+/** The grid at a block size decided elsewhere, with this raster's own
+    offsets and confidence. */
 export function gridAtPitch(raster: Raster, size: number): PixelGrid {
   const x = fitOffset(edgeHistogram(raster, 'x'), size);
   const y = fitOffset(edgeHistogram(raster, 'y'), size);
@@ -678,8 +674,10 @@ export function upscaleNearest(raster: Raster, factor: number): Raster {
   return {width: outW, height: outH, data: out};
 }
 
-/** pixelGridSize of pixel art stored at its logical size: one physical px
-    per art pixel. Marks the image pixel art without recording a scale. */
+/**
+ * The pixelGridSize of pixel art stored at its logical size, one image pixel
+ * per art pixel. It marks the image as pixel art without recording a scale.
+ */
 export const NATIVE_PIXEL_GRID = 1;
 
 // Display upscale: aim for roughly CRISP_TARGET_PX on the long side (sharp
@@ -714,7 +712,7 @@ function rasterFromCanvas(canvas: HTMLCanvasElement): Raster {
   return ctx.getImageData(0, 0, canvas.width, canvas.height);
 }
 
-function canvasFromRaster(raster: Raster): HTMLCanvasElement {
+export function canvasFromRaster(raster: Raster): HTMLCanvasElement {
   const canvas = document.createElement('canvas');
   canvas.width = raster.width;
   canvas.height = raster.height;
@@ -732,6 +730,41 @@ function canvasFromRaster(raster: Raster): HTMLCanvasElement {
 }
 
 /**
+ * The pixels of the top-left `width` by `height` region of a loaded image,
+ * or null where no canvas context can be had.
+ */
+export function rasterFromImage(
+  img: HTMLImageElement,
+  width = img.naturalWidth,
+  height = img.naturalHeight
+): Raster | null {
+  const canvas = document.createElement('canvas');
+  canvas.width = width;
+  canvas.height = height;
+  const ctx = canvas.getContext('2d', {willReadFrequently: true});
+  if (!ctx) {
+    return null;
+  }
+  ctx.drawImage(img, 0, 0, width, height, 0, 0, width, height);
+  return ctx.getImageData(0, 0, width, height);
+}
+
+/**
+ * Loads a data URI or URL into an image a canvas may read. CORS is enabled,
+ * since a file served from a CDN would otherwise taint the canvas and make
+ * its pixels unreadable.
+ */
+export function loadImage(source: string): Promise<HTMLImageElement> {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.crossOrigin = 'anonymous';
+    img.onload = () => resolve(img);
+    img.onerror = () => reject(new Error('image failed to load'));
+    img.src = source;
+  });
+}
+
+/**
  * The detected physical px per art pixel of an image — its first frame when
  * frameSize is given — or null when no convincing grid exists. May be
  * fractional (see PixelGrid.sizeX), and is harmonized with the cell count
@@ -744,26 +777,11 @@ export async function detectImageGridSize(
   source: string,
   frameSize?: {x: number; y: number}
 ): Promise<number | null> {
-  const img = await new Promise<HTMLImageElement>((resolve, reject) => {
-    const el = new Image();
-    // Same-origin today; without this, a CDN-served source would taint the
-    // canvas and fail silently.
-    el.crossOrigin = 'anonymous';
-    el.onload = () => resolve(el);
-    el.onerror = () => reject(new Error('image failed to load'));
-    el.src = source;
-  });
+  const img = await loadImage(source);
   const width = frameSize?.x ?? img.naturalWidth;
   const height = frameSize?.y ?? img.naturalHeight;
-  const canvas = document.createElement('canvas');
-  canvas.width = width;
-  canvas.height = height;
-  const ctx = canvas.getContext('2d', {willReadFrequently: true});
-  if (!ctx) {
-    return null;
-  }
-  ctx.drawImage(img, 0, 0, width, height, 0, 0, width, height);
-  const grid = detectPixelGrid(rasterFromCanvas(canvas));
+  const raster = rasterFromImage(img, width, height);
+  const grid = raster && detectPixelGrid(raster);
   if (!grid) {
     return null;
   }
@@ -816,35 +834,28 @@ export async function normalizePixelArtBlob(
  * factorFor picks from its decoded size, as a PNG dataURI. Resolves to the
  * source at factor 1 when the factor is 1 or the image cannot be drawn.
  */
-export function upscaleImageNearest(
+export async function upscaleImageNearest(
   source: string,
   factorFor: (width: number, height: number) => number
 ): Promise<{dataURI: string; factor: number}> {
   const unchanged = {dataURI: source, factor: 1};
-  return new Promise(resolve => {
-    const img = new Image();
-    img.crossOrigin = 'anonymous';
-    img.onload = () => {
-      const factor = Math.floor(factorFor(img.naturalWidth, img.naturalHeight));
-      if (factor <= 1) {
-        return resolve(unchanged);
-      }
-      try {
-        const canvas = document.createElement('canvas');
-        canvas.width = img.naturalWidth * factor;
-        canvas.height = img.naturalHeight * factor;
-        const ctx = canvas.getContext('2d');
-        if (!ctx) {
-          return resolve(unchanged);
-        }
-        ctx.imageSmoothingEnabled = false;
-        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-        resolve({dataURI: canvas.toDataURL('image/png'), factor});
-      } catch {
-        resolve(unchanged);
-      }
-    };
-    img.onerror = () => resolve(unchanged);
-    img.src = source;
-  });
+  try {
+    const img = await loadImage(source);
+    const factor = Math.floor(factorFor(img.naturalWidth, img.naturalHeight));
+    if (factor <= 1) {
+      return unchanged;
+    }
+    const canvas = document.createElement('canvas');
+    canvas.width = img.naturalWidth * factor;
+    canvas.height = img.naturalHeight * factor;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) {
+      return unchanged;
+    }
+    ctx.imageSmoothingEnabled = false;
+    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+    return {dataURI: canvas.toDataURL('image/png'), factor};
+  } catch {
+    return unchanged;
+  }
 }

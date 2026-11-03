@@ -16,11 +16,12 @@ import {
 import {findOpaqueBounds} from '@cdo/apps/p5lab/spritelab/lab2/imageTrim';
 import {
   assumePixelGrid,
+  canvasFromRaster,
   downsampleToGrid,
   gridAtPitch,
   NATIVE_PIXEL_GRID,
+  rasterFromImage,
 } from '@cdo/apps/pixelEditor/pixelArt';
-import {Raster} from '@cdo/apps/pixelEditor/tools';
 import {createUuid} from '@cdo/apps/utils';
 
 import {bytesToDataURI} from './encoding';
@@ -270,26 +271,12 @@ async function composeStrip(
     return {canvas, bounds: findOpaqueBounds(data, width, height, SOLID_ALPHA)};
   });
 
-  const boxes = rasters
-    .map(r => r.bounds)
-    .filter((b): b is NonNullable<typeof b> => b !== null);
-  const grounded = rasters
-    .slice(0, GROUNDED_FRAMES)
-    .map(r => r.bounds)
-    .filter((b): b is NonNullable<typeof b> => b !== null);
-  const crop = boxes.length
-    ? {
-        left: Math.max(0, Math.min(...boxes.map(b => b.left)) - CROP_PAD_PX),
-        top: Math.max(0, Math.min(...boxes.map(b => b.top)) - CROP_PAD_PX),
-        right: Math.min(
-          width - 1,
-          Math.max(...boxes.map(b => b.right)) + CROP_PAD_PX
-        ),
-        bottom: Math.max(
-          ...(grounded.length ? grounded : boxes).map(b => b.bottom)
-        ),
-      }
-    : {left: 0, top: 0, right: width - 1, bottom: height - 1};
+  const crop = contentCrop(
+    rasters.map(r => r.bounds),
+    width,
+    height,
+    CROP_PAD_PX
+  );
   const cropW = crop.right - crop.left + 1;
   const cropH = crop.bottom - crop.top + 1;
   const scale = Math.min(cell / cropW, cell / cropH);
@@ -322,50 +309,54 @@ async function composeStrip(
   return canvasToBlob(strip);
 }
 
-// The strip's standing frame: the base picture every posed frame was drawn
-// from, so its pitch is the set's.
+// Where the standing frame sits in the strip. It is the base picture the
+// other poses were edited from, so its block size is the one the whole set
+// shares.
 const BASE_FRAME_INDEX =
   CHARACTER_STRIP_POSES['stand-right']!.start +
   CHARACTER_STRIP_POSES['stand-right']!.count -
   1;
 
-const rasterOf = (img: HTMLImageElement, width: number, height: number) => {
-  const canvas = document.createElement('canvas');
-  canvas.width = width;
-  canvas.height = height;
-  const ctx = canvas.getContext('2d', {willReadFrequently: true})!;
-  ctx.drawImage(img, 0, 0, width, height);
-  return ctx.getImageData(0, 0, width, height);
-};
-
-const canvasOf = (raster: Raster) => {
-  const canvas = document.createElement('canvas');
-  canvas.width = raster.width;
-  canvas.height = raster.height;
-  canvas
-    .getContext('2d')!
-    .putImageData(
-      new ImageData(
-        new Uint8ClampedArray(raster.data),
-        raster.width,
-        raster.height
-      ),
-      0,
-      0
-    );
-  return canvas;
-};
+type Bounds = NonNullable<ReturnType<typeof findOpaqueBounds>>;
 
 /**
- * The keyed frames of a pixel-style set, each brought to its logical
- * resolution and laid into one strip of square cells, one image pixel per
- * art pixel. The posed frames are edits of the base, so they share its
- * pitch (the same to a hundredth of a pixel across a set, measured on
- * stored sets), but each lands on a phase of its own, so the offset is
- * fitted per frame. The crop is the union of every frame's content, as
- * composeStrip cuts it, and nothing is scaled: the cell is the crop's
- * larger side. A frame a cell smaller than the rest (its phase cost it an
- * edge cell) draws transparent where it ends.
+ * The region of a frame that the strip keeps: the union of every frame's
+ * opaque content, widened by `pad` on the left, top and right. The bottom
+ * comes from the first GROUNDED_FRAMES frames only, so a jumping pose does
+ * not push the floor down. With no opaque content at all, the whole frame.
+ */
+function contentCrop(
+  bounds: (Bounds | null)[],
+  width: number,
+  height: number,
+  pad = 0
+): Bounds {
+  const boxes = bounds.filter((b): b is Bounds => b !== null);
+  const grounded = bounds
+    .slice(0, GROUNDED_FRAMES)
+    .filter((b): b is Bounds => b !== null);
+  if (!boxes.length) {
+    return {left: 0, top: 0, right: width - 1, bottom: height - 1};
+  }
+  return {
+    left: Math.max(0, Math.min(...boxes.map(b => b.left)) - pad),
+    top: Math.max(0, Math.min(...boxes.map(b => b.top)) - pad),
+    right: Math.min(width - 1, Math.max(...boxes.map(b => b.right)) + pad),
+    bottom: Math.max(
+      ...(grounded.length ? grounded : boxes).map(b => b.bottom)
+    ),
+  };
+}
+
+/**
+ * The frames of a pixel-style set as one strip of square cells, one image
+ * pixel per art pixel. Every frame is downsampled to the base frame's block
+ * size: the posed frames are edits of the base and have the same block size,
+ * but the grid can start at a different pixel in each, so the grid offset is
+ * found per frame. The crop is the one composeStrip uses, and nothing is
+ * scaled: the cell is the crop's longer side. A frame whose grid offset
+ * left it one cell narrower than the others is drawn with a transparent
+ * column where it ends.
  */
 async function composePixelStrip(
   frames: Blob[],
@@ -374,33 +365,22 @@ async function composePixelStrip(
   const images = await Promise.all(frames.map(loadImageFromBlob));
   const width = images[0].width;
   const height = images[0].height;
-  const rasters = images.map(img => rasterOf(img, width, height));
+  const rasters = images.map(img => {
+    const raster = rasterFromImage(img, width, height);
+    if (!raster) {
+      throw new Error('No canvas context');
+    }
+    return raster;
+  });
   const pitch = assumePixelGrid(rasters[BASE_FRAME_INDEX], fallbackBlock).sizeX;
   const logical = rasters.map(raster =>
     downsampleToGrid(raster, gridAtPitch(raster, pitch))
   );
-  const boxes = logical
-    .map(r => findOpaqueBounds(r.data, r.width, r.height, SOLID_ALPHA))
-    .filter((b): b is NonNullable<typeof b> => b !== null);
-  const grounded = logical
-    .slice(0, GROUNDED_FRAMES)
-    .map(r => findOpaqueBounds(r.data, r.width, r.height, SOLID_ALPHA))
-    .filter((b): b is NonNullable<typeof b> => b !== null);
-  const crop = boxes.length
-    ? {
-        left: Math.min(...boxes.map(b => b.left)),
-        top: Math.min(...boxes.map(b => b.top)),
-        right: Math.max(...boxes.map(b => b.right)),
-        bottom: Math.max(
-          ...(grounded.length ? grounded : boxes).map(b => b.bottom)
-        ),
-      }
-    : {
-        left: 0,
-        top: 0,
-        right: logical[0].width - 1,
-        bottom: logical[0].height - 1,
-      };
+  const crop = contentCrop(
+    logical.map(r => findOpaqueBounds(r.data, r.width, r.height, SOLID_ALPHA)),
+    logical[0].width,
+    logical[0].height
+  );
   const cropW = crop.right - crop.left + 1;
   const cropH = crop.bottom - crop.top + 1;
   const cell = Math.max(cropW, cropH);
@@ -414,7 +394,7 @@ async function composePixelStrip(
   ctx.imageSmoothingEnabled = false;
   logical.forEach((raster, index) => {
     ctx.drawImage(
-      canvasOf(raster),
+      canvasFromRaster(raster),
       crop.left,
       crop.top,
       cropW,
@@ -548,9 +528,10 @@ export async function generateCharacterSet(
 
   onProgress?.({done: total, total, label: 'assembling', preview});
 
-  // Strip order: the second idle, the base between the ranges that share
-  // it, then the walk and jump frames (CHARACTER_STRIP_POSES).
-  const stripFrames = [posed[0], baseKeyed, ...posed.slice(1)];
+  // The posed frames in strip order, with the base frame at its place
+  // (CHARACTER_STRIP_POSES).
+  const stripFrames = [...posed];
+  stripFrames.splice(BASE_FRAME_INDEX, 0, baseKeyed);
   let cell: number;
   let blob: Blob;
   if (options.style === 'pixel') {
