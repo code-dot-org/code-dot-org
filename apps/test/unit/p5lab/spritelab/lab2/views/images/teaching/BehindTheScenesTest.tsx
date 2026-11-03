@@ -1,5 +1,5 @@
 import {ThemeProvider} from '@code-dot-org/component-library/common/contexts';
-import {fireEvent, render, screen} from '@testing-library/react';
+import {fireEvent, render, screen, within} from '@testing-library/react';
 import React from 'react';
 
 import BehindTheScenes from '@cdo/apps/p5lab/spritelab/lab2/views/images/teaching/BehindTheScenes';
@@ -26,7 +26,7 @@ describe('BehindTheScenes', () => {
     expect(dialog.textContent).toContain('Behind the scenes');
     expect(screen.getByText(/^A cat\. /).textContent).toContain('pixel');
     expect(
-      (dialog.querySelector('[class*="thumb"]') as HTMLElement).style
+      within(dialog).getByRole('img', {name: 'Your picture'}).style
         .backgroundImage
     ).toContain('data:image/png;base64,AA==');
     // One picture: no second view to switch to.
@@ -56,9 +56,13 @@ describe('BehindTheScenes', () => {
       screen.getByText(/^A dragon\. Show the whole character/)
     ).toBeTruthy();
     fireEvent.click(screen.getByRole('button', {name: 'Other poses'}));
-    const frame = screen.getByText('[pose]').closest('div') as HTMLElement;
-    expect(frame.textContent).toContain('standing:');
-    expect(frame.textContent).toContain('walking:');
-    expect(frame.querySelectorAll('li')).toHaveLength(4);
+    const poses = screen.getAllByRole('listitem');
+    expect(poses).toHaveLength(4);
+    expect(poses.map(pose => pose.textContent)).toEqual(
+      expect.arrayContaining([
+        expect.stringContaining('standing:'),
+        expect.stringContaining('walking:'),
+      ])
+    );
   });
 });

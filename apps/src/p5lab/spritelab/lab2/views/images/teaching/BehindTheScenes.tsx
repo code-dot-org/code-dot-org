@@ -1,6 +1,6 @@
-// The way behind a made picture: a button that opens a dialog with the
-// picture and the words the model got, and for a set a second view with the
-// posed frames' words.
+// A Behind the scenes button that opens a dialog showing the picture and
+// the full prompt the model received; for a character set, a second view
+// shows the prompts sent for the other poses.
 
 import {MuiDialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
@@ -8,6 +8,8 @@ import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import {Button as MuiButton, IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {useState} from 'react';
+
+import {FrameSize} from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
 
 import {POSE_MARK, SentPrompts} from '../../sentence/sentPrompts';
 
@@ -26,15 +28,18 @@ const POSE_NAMES: Record<string, string> = {idling: 'standing'};
 export interface BehindTheScenesPicture {
   src: string;
   pixelated?: boolean;
-  /** A character set: the strip's first frame stands for it, still. */
-  sheet?: {frameSize: {x: number; y: number}} | null;
+  /** For a character set the image is a horizontal strip of frames; only
+      its first frame is shown, not animated. */
+  sheet?: {frameSize: FrameSize} | null;
+  /** The prompt, as the thumbnail's name for screen readers. */
+  name?: string;
 }
 
 interface BehindTheScenesProps {
   sent: SentPrompts;
   picture?: BehindTheScenesPicture;
   disabled?: boolean;
-  /** The icon alone, for a header with no room for the words. */
+  /** The icon alone, for a header with no room for the title. */
   compact?: boolean;
 }
 
@@ -46,11 +51,18 @@ const BehindTheScenes: React.FunctionComponent<BehindTheScenesProps> = ({
 }) => {
   const [open, setOpen] = useState(false);
   const [view, setView] = useState<View>('picture');
-  const show = () => {
+  const openDialog = () => {
     setView('picture');
     setOpen(true);
   };
-  const words =
+  const triggerProps = {
+    variant: 'text',
+    color: 'tertiary',
+    size: 'small',
+    disabled,
+    onClick: openDialog,
+  } as const;
+  const promptView =
     sent.poses && view === 'poses' ? (
       <>
         <p className={styles.promptNote}>
@@ -86,24 +98,13 @@ const BehindTheScenes: React.FunctionComponent<BehindTheScenesProps> = ({
   return (
     <>
       {compact ? (
-        <MuiIconButton
-          variant="text"
-          color="tertiary"
-          size="small"
-          aria-label={TITLE}
-          disabled={disabled}
-          onClick={show}
-        >
+        <MuiIconButton {...triggerProps} aria-label={TITLE}>
           <FontAwesomeV6Icon iconName="circle-info" aria-hidden />
         </MuiIconButton>
       ) : (
         <MuiButton
-          variant="text"
-          color="tertiary"
-          size="small"
+          {...triggerProps}
           startIcon={<FontAwesomeV6Icon iconName="circle-info" aria-hidden />}
-          disabled={disabled}
-          onClick={show}
         >
           {TITLE}
         </MuiButton>
@@ -119,15 +120,15 @@ const BehindTheScenes: React.FunctionComponent<BehindTheScenesProps> = ({
                   <div
                     className={classNames(
                       styles.thumb,
-                      picture.pixelated && styles.pixelArt
+                      picture.pixelated && styles.pixelArt,
+                      // The strip is scaled so its first frame fills the
+                      // box; the later frames fall past the box's right
+                      // edge and are clipped.
+                      picture.sheet && styles.thumbStrip
                     )}
-                    style={{
-                      backgroundImage: `url(${picture.src})`,
-                      // A strip's first frame fills the box; the rest lies
-                      // off its right edge.
-                      backgroundSize: picture.sheet ? 'auto 100%' : 'contain',
-                    }}
-                    aria-hidden
+                    style={{backgroundImage: `url(${picture.src})`}}
+                    role="img"
+                    aria-label={picture.name ?? 'Your picture'}
                   />
                 )}
                 <p id="dsco-dialog-description" className={styles.intro}>
@@ -145,8 +146,9 @@ const BehindTheScenes: React.FunctionComponent<BehindTheScenesProps> = ({
                   onChange={value => setView(value as View)}
                 />
               )}
-              {/* A scrolling box; the browser lets the keyboard reach it. */}
-              <div className={styles.promptFrame}>{words}</div>
+              {/* No tabIndex needed: browsers make a scrollable container
+                  keyboard-focusable on their own. */}
+              <div className={styles.promptFrame}>{promptView}</div>
             </div>
           }
           onClose={() => setOpen(false)}

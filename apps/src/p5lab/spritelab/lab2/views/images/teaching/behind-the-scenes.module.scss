@@ -24,6 +24,12 @@
   background-color: var(--background-neutral-secondary);
   background-repeat: no-repeat;
   background-position: left center;
+  background-size: contain;
+}
+
+// A strip is scaled to the box's height so its first frame fills the box.
+.thumbStrip {
+  background-size: auto 100%;
 }
 
 .pixelArt {
