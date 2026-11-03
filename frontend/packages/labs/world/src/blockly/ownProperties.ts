@@ -140,8 +140,7 @@ export interface OwnMeta {
 }
 
 /**
- * An actor file's own declarations, read from its data, which a file
- * written in rows is folded to first (`actors/actorData`).
+ * An actor file's own declarations, read from its data (`actors/actorData`).
  *
  * Undefined for contents that are no actor — mid-edit, or not one at all —
  * matching `parseRuleMeta`. An actor with no declarations has a meta with

@@ -12,6 +12,7 @@
 
 import {describe, expect, it} from 'vitest';
 
+import {actorDocument} from '../actors/actorDocument';
 import {buildDomainPalette} from '../blockly/domainBlocks';
 import {projectOwnMetas} from '../blockly/projectModules';
 import {IntrinsicSizeProperty} from '../engine/rules/spatial';
@@ -26,77 +27,31 @@ const me = () => ({block: {type: 'world_this_actor'}});
  * The three things a builder holds separately — an own property's SLOT, a
  * step, and a drawing — so a child missing any one of them fails differently.
  */
-const BAR = JSON.stringify({
-  blocks: {
-    blocks: [
-      {
-        type: 'world_actor',
-        fields: {NAME: 'Bar'},
-        next: {
+const BAR = actorDocument({
+  name: 'Bar',
+  properties: [{name: 'ticks', type: 'number', access: 'writable', value: '0'}],
+  code: [
+    {
+      type: 'world_trait_step',
+      fields: {PHASE: 'act', NAME: 'count'},
+      inputs: {
+        DO: {
           block: {
-            type: 'world_rule_property',
-            fields: {
-              TYPE: 'number',
-              ACCESS: 'writable',
-              NAME: 'ticks',
-              DEFAULT: '0',
-            },
-            next: {
-              block: {
-                type: 'world_trait_step',
-                fields: {PHASE: 'act', NAME: 'count'},
-                inputs: {
-                  DO: {
-                    block: {
-                      type: 'world_set_ActorsBar_TicksProperty',
-                      inputs: {
-                        ACTOR: me(),
-                        VALUE: {
-                          block: {
-                            type: 'math_arithmetic',
-                            fields: {OP: 'ADD'},
-                            inputs: {
-                              A: {
-                                block: {
-                                  type: 'world_get_ActorsBar_TicksProperty',
-                                  inputs: {ACTOR: me()},
-                                },
-                              },
-                              B: {
-                                block: {
-                                  type: 'math_number',
-                                  fields: {NUM: 1},
-                                },
-                              },
-                            },
-                          },
-                        },
+            type: 'world_set_ActorsBar_TicksProperty',
+            inputs: {
+              ACTOR: me(),
+              VALUE: {
+                block: {
+                  type: 'math_arithmetic',
+                  fields: {OP: 'ADD'},
+                  inputs: {
+                    A: {
+                      block: {
+                        type: 'world_get_ActorsBar_TicksProperty',
+                        inputs: {ACTOR: me()},
                       },
                     },
-                  },
-                },
-                next: {
-                  block: {
-                    type: 'world_define_drawing',
-                    inputs: {
-                      WIDTH: {shadow: {type: 'math_number', fields: {NUM: 40}}},
-                      HEIGHT: {shadow: {type: 'math_number', fields: {NUM: 6}}},
-                      DO: {
-                        block: {
-                          type: 'world_draw_rectangle',
-                          inputs: {
-                            X: {block: {type: 'math_number', fields: {NUM: 0}}},
-                            Y: {block: {type: 'math_number', fields: {NUM: 0}}},
-                            WIDTH: {
-                              block: {type: 'math_number', fields: {NUM: 40}},
-                            },
-                            HEIGHT: {
-                              block: {type: 'math_number', fields: {NUM: 6}},
-                            },
-                          },
-                        },
-                      },
-                    },
+                    B: {block: {type: 'math_number', fields: {NUM: 1}}},
                   },
                 },
               },
@@ -104,24 +59,30 @@ const BAR = JSON.stringify({
           },
         },
       },
-    ],
-  },
+    },
+    {
+      type: 'world_define_drawing',
+      inputs: {
+        WIDTH: {shadow: {type: 'math_number', fields: {NUM: 40}}},
+        HEIGHT: {shadow: {type: 'math_number', fields: {NUM: 6}}},
+        DO: {
+          block: {
+            type: 'world_draw_rectangle',
+            inputs: {
+              X: {block: {type: 'math_number', fields: {NUM: 0}}},
+              Y: {block: {type: 'math_number', fields: {NUM: 0}}},
+              WIDTH: {block: {type: 'math_number', fields: {NUM: 40}}},
+              HEIGHT: {block: {type: 'math_number', fields: {NUM: 6}}},
+            },
+          },
+        },
+      },
+    },
+  ],
 });
 
 /** The child: everything the Bar is, and nothing said twice. */
-const FUEL = JSON.stringify({
-  blocks: {
-    blocks: [
-      {
-        type: 'world_actor',
-        fields: {NAME: 'Fuel Bar'},
-        next: {
-          block: {type: 'world_acts_like', fields: {ACTOR: 'actors/bar'}},
-        },
-      },
-    ],
-  },
-});
+const FUEL = actorDocument({name: 'Fuel Bar', actsLike: 'actors/bar'});
 
 const WORLD = JSON.stringify({
   blocks: {

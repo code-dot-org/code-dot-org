@@ -8,6 +8,7 @@ import {createRef} from 'react';
 import {describe, expect, it} from 'vitest';
 
 import {compileProject} from '../../__tests__/support/compileProject';
+import {actorDocument} from '../../actors/actorDocument';
 import {ViewportTrait} from '../../engine';
 import BlocklyGenerator, {
   type BlocklyGeneratorHandle,
@@ -63,25 +64,11 @@ const LEVEL = JSON.stringify({
     },
   ],
 });
-const COIN = JSON.stringify({
-  blocks: {blocks: [{type: 'world_actor', fields: {NAME: 'Coin'}}]},
-});
+const COIN = actorDocument({name: 'Coin'});
 /** A kind that Shows a Map; its size is the placement's to say. */
-const WINDOW = JSON.stringify({
-  blocks: {
-    blocks: [
-      {
-        type: 'world_actor',
-        fields: {NAME: 'Window'},
-        next: {
-          block: {
-            type: 'world_use_trait',
-            fields: {TRAIT: 'Viewport#ViewportTrait'},
-          },
-        },
-      },
-    ],
-  },
+const WINDOW = actorDocument({
+  name: 'Window',
+  traits: ['Viewport#ViewportTrait'],
 });
 /** A Main Screen with a Viewport on it, and a World that starts with the level. */
 const SCREEN = JSON.stringify({

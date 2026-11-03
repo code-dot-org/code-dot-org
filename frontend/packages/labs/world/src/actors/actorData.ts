@@ -7,14 +7,11 @@
 // and what it DOES as an event workspace, whose roots are its handlers and its
 // code (its drawing, its every-frame work).
 //
-// The compiler reads the data (`blockly/actorSheet`). Much of the rest of the
-// lab reads actors as `define actor` workspaces: `actorView` turns the data
-// back into the workspace it stands for, and `foldActor` turns any such
-// workspace into data. Neither is ever saved as the other's shape; a writer
-// edits the view and folds it back. Both are pure, and a fold loses nothing:
-// a row it cannot say as data is kept as code.
+// The compiler lays the data out as blocks (`blockly/actorSheet`), and a
+// walk that knows a reference by a block's type and fields reads the keys
+// that name something as the blocks they stand for (`keyRows`). A file is
+// written as data and nothing else: one in `define actor` rows cannot be read.
 
-import {WORKSPACE_KEYS} from '../blockly/documentExtras';
 import type {Timeline} from '../engine/core/keyframes';
 
 import type {ActorPurpose} from './actorPurpose';
@@ -170,29 +167,10 @@ export const CODE_ROWS: ReadonlySet<string> = new Set([
 const ROOT = 'world_actor';
 
 /**
- * `when ⟨this actor⟩ is created`: where a row that is neither data nor code
- * goes (specs/ACTORS_AS_DATA_PLAN.md, step 2). It runs once the actor exists
- * and before it is first drawn (`World.settleCreations`).
+ * `when ⟨this actor⟩ is created`: what an actor does on being made. It runs
+ * once the actor exists and before it is first drawn (`World.settleCreations`).
  */
 export const CREATED_HAT = 'world_on_Space_CreatedEvent';
-
-/**
- * Rows that DECLARE something about the kind, which the data says once. One
- * the fold could not take — a second `acts like`, a property it cannot read
- * — says nothing the data does not, and means nothing in a handler, so it
- * is dropped rather than moved there.
- */
-const DECLARATION_ROWS: ReadonlySet<string> = new Set([
-  'world_use_trait',
-  'world_acts_like',
-  'world_actor_is_data',
-  'world_show_as',
-  'world_rule_property',
-  'world_actor_animations',
-  // A block or an event the data cannot read — `readMember` takes any it can.
-  'world_rule_block',
-  'world_rule_event',
-]);
 
 const isObject = (value: unknown): value is Record<string, unknown> =>
   Boolean(value) && typeof value === 'object' && !Array.isArray(value);
@@ -319,7 +297,7 @@ function writeLiteral(literal: ActorLiteral): Record<string, unknown> {
 }
 
 /** `set ⟨member⟩ of this actor to ⟨literal⟩`, as data, or nothing. */
-function readValue(row: Block): ActorValue | undefined {
+export function readValue(row: Block): ActorValue | undefined {
   if (
     typeof row.type !== 'string' ||
     !/^world_set_[A-Za-z0-9]+_.+$/.test(row.type) ||
@@ -362,7 +340,7 @@ export function writeValue(value: ActorValue): Block {
 
 const PROPERTY_FIELDS = ['TYPE', 'ACCESS', 'NAME', 'DEFAULT', 'DEFAULT_Y'];
 
-function readProperty(row: Block): ActorProperty | undefined {
+export function readProperty(row: Block): ActorProperty | undefined {
   const fields = fieldsOf(row);
   if (
     row.type !== 'world_rule_property' ||
@@ -772,342 +750,24 @@ export function withKeyRows(data: ActorData, rows: KeyRows): ActorData {
   return next;
 }
 
-// ── The fold and the view ───────────────────────────────────────────────
+// ── Reading a file ──────────────────────────────────────────────────────
 
-/** A row without the next one, as a root or one of a list holds it. */
-const alone = (row: Block): Block =>
-  Object.fromEntries(
-    Object.entries(row).filter(([key]) => !['next', 'x', 'y'].includes(key)),
-  ) as Block;
-
-/** Rows chained, first at the top. */
-const chained = (rows: readonly Block[]): Block | undefined =>
-  rows.reduceRight<Block | undefined>(
-    (next, row) => (next ? {...row, next: {block: next}} : {...row}),
-    undefined,
-  );
-
-/** The rows under a root, top to bottom. */
-function rowsUnder(root: Block): Block[] {
-  const rows: Block[] = [];
-  let row = (root.next as {block?: Block} | undefined)?.block;
-  while (isObject(row)) {
-    rows.push(row);
-    row = (row.next as {block?: Block} | undefined)?.block;
-  }
-  return rows;
-}
-
-/** The keys a data-shaped file holds beside its workspace. */
-const DATA_KEYS = new Set([
-  'type',
-  'name',
-  'for',
-  'actsLike',
-  'isData',
-  'icon',
-  'animations',
-  'traits',
-  'properties',
-  'values',
-  'effects',
-  'members',
-  'blocks',
-]);
-
-/**
- * The data a `define actor` workspace stands for, or nothing when it holds
- * no `define actor`. Keys beside the workspace (`for`, and any a later
- * reader added) are kept.
- */
-export function foldActor(
-  file: Record<string, unknown>,
-): ActorData | undefined {
-  const roots = ((file.blocks as SavedWorkspace['blocks'])?.blocks ??
-    []) as Block[];
-  const at = roots.findIndex(root => root?.type === ROOT);
-  if (at < 0) {
-    return undefined;
-  }
-  const root = roots[at];
-  const data: ActorData = {
-    type: ACTOR_DOCUMENT,
-    name: String(fieldsOf(root).NAME ?? ''),
-  };
-  const traits: string[] = [];
-  const properties: ActorProperty[] = [];
-  const values: ActorValue[] = [];
-  const effects: ActorEffect[] = [];
-  const members: ActorMember[] = [];
-  // What the actor does on being made: rows that are not data, kept in
-  // order for its `is created` handler.
-  const creation: Block[] = [];
-  const code: Block[] = [];
-  let animations: Record<string, Timeline> | undefined;
-  let sawAnimationsRow = false;
-  for (const row of rowsUnder(root)) {
-    const trait = oneField(row, 'world_use_trait', 'TRAIT');
-    const parent = oneField(row, 'world_acts_like', 'ACTOR');
-    const icon = oneField(row, 'world_show_as', 'ICON');
-    const look = readLook(row);
-    const property = readProperty(row);
-    const value = readValue(row);
-    const effect = readEffect(row);
-    // Reporting or not: one that reports compiles to nothing in an actor
-    // (`actorSheet`), and is held so the data says everything it was written
-    // to say.
-    const member = readMember(row, members.length, {reports: true});
-    if (trait !== undefined) {
-      traits.push(trait);
-    } else if (parent !== undefined && data.actsLike === undefined) {
-      data.actsLike = parent;
-    } else if (
-      row.type === 'world_actor_is_data' &&
-      only(row, ['type', 'next']) &&
-      !data.isData
-    ) {
-      data.isData = true;
-    } else if (icon !== undefined && data.icon === undefined) {
-      data.icon = icon;
-    } else if (readAnimations(row) && !sawAnimationsRow) {
-      // Before or after a still Main's `set sprite`: one set of animations.
-      sawAnimationsRow = true;
-      animations = {...readAnimations(row)!, ...animations};
-    } else if (look && !animations?.[MAIN_ANIMATION]) {
-      // A still picture is the Main animation.
-      animations = {
-        ...animations,
-        [MAIN_ANIMATION]: stillAnimation(look.sprite),
-      };
-    } else if (property) {
-      properties.push(property);
-    } else if (value) {
-      values.push(value);
-    } else if (effect && !effects.some(one => one.effect === effect.effect)) {
-      effects.push(effect);
-    } else if (member && !members.some(one => one.id === member.id)) {
-      members.push(member);
-    } else if (typeof row.type === 'string' && CODE_ROWS.has(row.type)) {
-      code.push(alone(row));
-    } else if (
-      typeof row.type !== 'string' ||
-      !DECLARATION_ROWS.has(row.type)
-    ) {
-      creation.push(alone(row));
-    }
-  }
-  if (animations && Object.keys(animations).length) {
-    data.animations = animations;
-  }
-  if (traits.length) data.traits = traits;
-  if (properties.length) data.properties = properties;
-  if (values.length) data.values = values;
-  if (effects.length) data.effects = effects;
-  if (members.length) data.members = members;
-
-  const workspace: SavedWorkspace = {};
-  const extras: Record<string, unknown> = {};
-  for (const [key, held] of Object.entries(file)) {
-    if (WORKSPACE_KEYS.has(key)) {
-      workspace[key] = held;
-    } else {
-      extras[key] = held;
-    }
-  }
-  const handlers = withCreation(
-    roots.filter((_, index) => index !== at),
-    creation,
-  );
-  workspace.blocks = {
-    ...(file.blocks as SavedWorkspace['blocks']),
-    languageVersion:
-      (file.blocks as SavedWorkspace['blocks'])?.languageVersion ?? 0,
-    // The code first, where the root was, and the handlers after.
-    blocks: [
-      ...code.map((row, index) => ({...row, x: 20, y: 20 + index * 40})),
-      ...handlers,
-    ],
-  };
-  return {...extras, ...data, blocks: workspace};
-}
-
-/**
- * The handlers, with `rows` at the top of the actor's `is created` handler —
- * the one it has, or a new one. First, because under `define actor` they
- * ran before anything a handler did.
- */
-function withCreation(handlers: Block[], rows: readonly Block[]): Block[] {
-  if (rows.length === 0) {
-    return handlers;
-  }
-  const at = handlers.findIndex(root => root.type === CREATED_HAT);
-  const hat = at < 0 ? {type: CREATED_HAT, x: 20, y: 20} : handlers[at];
-  // The rows, chained down onto whatever the handler already did.
-  const first = rows.reduceRight<Block | undefined>(
-    (next, row) => ({...alone(row), ...(next ? {next: {block: next}} : {})}),
-    (hat.next as {block?: Block} | undefined)?.block,
-  );
-  const settled = {...hat, next: {block: first}};
-  return at < 0
-    ? [...handlers, settled]
-    : handlers.map((root, index) => (index === at ? settled : root));
-}
-
-/**
- * The `define actor` workspace the data stands for, as a file holds one:
- * a root whose chain is the definition rows, in a fixed order, then the
- * code; the handlers beside it.
- */
-export function actorView(data: ActorData): Record<string, unknown> {
-  const roots = (data.blocks?.blocks?.blocks ?? []) as Block[];
-  const code = roots.filter(
-    root => typeof root.type === 'string' && CODE_ROWS.has(root.type),
-  );
-  const handlers = roots.filter(root => !code.includes(root));
-  const rows: Block[] = [
-    ...(data.actsLike === undefined
-      ? []
-      : [{type: 'world_acts_like', fields: {ACTOR: data.actsLike}}]),
-    ...(data.isData ? [{type: 'world_actor_is_data'}] : []),
-    ...(data.icon === undefined
-      ? []
-      : [{type: 'world_show_as', fields: {ICON: data.icon}}]),
-    ...writeAnimations(data.animations),
-    ...(data.traits ?? []).map(trait => ({
-      type: 'world_use_trait',
-      fields: {TRAIT: trait},
-    })),
-    ...(data.properties ?? []).map(writeProperty),
-    ...(data.values ?? []).map(writeValue),
-    ...(data.effects ?? []).filter(effect => effect.on).map(writeEffect),
-    ...(data.members ?? []).map(writeMember),
-    ...code.map(alone),
-  ];
-  const first = chained(rows);
-  const root: Block = {
-    type: ROOT,
-    x: 20,
-    y: 20,
-    fields: {NAME: data.name},
-    ...(first ? {next: {block: first}} : {}),
-  };
-  const extras = Object.fromEntries(
-    Object.entries(data).filter(([key]) => !DATA_KEYS.has(key)),
-  );
-  return {
-    ...extras,
-    ...(data.for === undefined ? {} : {for: data.for}),
-    ...data.blocks,
-    blocks: {
-      languageVersion: 0,
-      ...data.blocks?.blocks,
-      blocks: [root, ...handlers],
-    },
-  };
-}
-
-/**
- * The contents as a `define actor` workspace, whatever their shape: the view
- * of a data-shaped file, and any other contents as they are.
- */
-export function viewOf(contents: string): string {
-  let parsed: unknown;
-  try {
-    parsed = JSON.parse(contents);
-  } catch {
-    return contents;
-  }
-  return isActorData(parsed)
-    ? JSON.stringify(actorView(parsed), null, 2)
-    : contents;
-}
-
-/**
- * The data the contents hold, whatever their shape: a data-shaped file as it
- * is, a `define actor` workspace folded, and nothing for anything else.
- */
+/** The data an actor file holds, or nothing for contents that are not one. */
 export function actorDataOf(contents: string): ActorData | undefined {
-  let parsed: unknown;
   try {
-    parsed = JSON.parse(contents);
+    const parsed = JSON.parse(contents) as unknown;
+    return isActorData(parsed) ? parsed : undefined;
   } catch {
     return undefined;
   }
-  if (isActorData(parsed)) {
-    return parsed;
-  }
-  return isObject(parsed) ? foldActor(parsed) : undefined;
 }
 
 /**
- * The contents in the data shape: a `define actor` workspace folded, and a
- * data-shaped file or anything else as it is.
- *
- * `like` is the data-shaped file the workspace was the view of, when it was
- * one. An effect that is off is not in a view, since it adds no row, so the
- * fold takes those from there rather than losing them.
- */
-export function asActorData(contents: string, like?: string): string {
-  let parsed: unknown;
-  try {
-    parsed = JSON.parse(contents);
-  } catch {
-    return contents;
-  }
-  if (!isObject(parsed) || isActorData(parsed)) {
-    return contents;
-  }
-  const data = foldActor(parsed);
-  if (!data) {
-    return contents;
-  }
-  const off = offEffectsOf(like).filter(
-    effect => !(data.effects ?? []).some(one => one.effect === effect.effect),
-  );
-  if (off.length) {
-    data.effects = [...(data.effects ?? []), ...off];
-  }
-  return JSON.stringify(data, null, 2);
-}
-
-/** The effects a data-shaped file holds that are off. */
-function offEffectsOf(contents: string | undefined): ActorEffect[] {
-  if (!isDataShaped(contents)) {
-    return [];
-  }
-  const data = JSON.parse(contents!) as ActorData;
-  return (data.effects ?? []).filter(effect => !effect.on);
-}
-
-/**
- * Whether the contents are data-shaped, asked cheaply: most callers hold
+ * Whether the contents are an actor's data, asked cheaply: most callers hold
  * many files, and only an actor's can be.
  */
 export function isDataShaped(contents: string | undefined): boolean {
-  if (!contents || !/"type":\s*"actor"/.test(contents)) {
-    return false;
-  }
-  try {
-    return isActorData(JSON.parse(contents));
-  } catch {
-    return false;
-  }
-}
-
-/**
- * A change written for `define actor` rows, made to contents of either
- * shape: a data-shaped file is changed through its view and folded back, so
- * it stays data.
- */
-export function throughView(
-  contents: string,
-  change: (rows: string) => string,
-): string {
-  if (!isDataShaped(contents)) {
-    return change(contents);
-  }
-  const changed = change(viewOf(contents));
-  return changed === viewOf(contents)
-    ? contents
-    : asActorData(changed, contents);
+  return Boolean(
+    contents && /"type":\s*"actor"/.test(contents) && actorDataOf(contents),
+  );
 }

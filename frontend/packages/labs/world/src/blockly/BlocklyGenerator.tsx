@@ -805,10 +805,14 @@ export const BlocklyGenerator = forwardRef<
         }
         workspace.clear();
         const parsed = contents.trim() ? JSON.parse(contents) : {};
-        // An actor from its data, folded first if written in rows; one with
-        // no `define actor` compiles as it is.
+        // An actor is its data; a file in `define actor` rows cannot be read.
         const data =
-          fileKindOf(path) === 'actor' ? actorDataOf(contents) : undefined;
+          fileKindOf(path) === 'actor' && contents.trim()
+            ? actorDataOf(contents)
+            : undefined;
+        if (fileKindOf(path) === 'actor' && contents.trim() && !data) {
+          throw new Error(`${path} is not an actor's data`);
+        }
         const sheet = data ? actorSheet(data) : undefined;
         Blockly.serialization.workspaces.load(
           sheet?.workspace ?? parsed,

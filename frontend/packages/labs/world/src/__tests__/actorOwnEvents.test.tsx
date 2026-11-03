@@ -15,6 +15,7 @@
 
 import {describe, expect, it} from 'vitest';
 
+import {actorDocument} from '../actors/actorDocument';
 import {buildDomainPalette} from '../blockly/domainBlocks';
 import {projectOwnMetas} from '../blockly/projectModules';
 
@@ -31,73 +32,53 @@ const me = () => ({block: {type: 'world_this_actor'}});
  * hat registered against — which is what a declaration written twice, or
  * written after the hat, would produce — counts nothing at all.
  */
-const BEACON = JSON.stringify({
-  blocks: {
-    blocks: [
-      {
-        type: 'world_actor',
-        fields: {NAME: 'Beacon'},
-        next: {
+const BEACON = actorDocument({
+  name: 'Beacon',
+  members: [{kind: 'event', parts: [{kind: 'label', text: 'flashes'}]}],
+  properties: [
+    {name: 'flashes seen', type: 'number', access: 'writable', value: '0'},
+  ],
+  code: [
+    {
+      type: 'world_trait_step',
+      fields: {PHASE: 'act', NAME: 'flash'},
+      inputs: {
+        DO: {
           block: {
-            type: 'world_rule_event',
-            extraState: {parts: [{kind: 'label', text: 'flashes'}]},
-            next: {
+            type: 'world_emit_ActorsBeacon_FlashesEvent',
+            inputs: {ACTOR: me()},
+          },
+        },
+      },
+    },
+    // The hat, a root of its own as every hat is.
+    {
+      type: 'world_on_ActorsBeacon_FlashesEvent',
+      next: {
+        block: {
+          type: 'world_set_ActorsBeacon_FlashesSeenProperty',
+          inputs: {
+            ACTOR: me(),
+            VALUE: {
               block: {
-                type: 'world_rule_property',
-                fields: {
-                  TYPE: 'number',
-                  ACCESS: 'writable',
-                  NAME: 'flashes seen',
-                  DEFAULT: '0',
-                },
-                next: {
-                  block: {
-                    type: 'world_trait_step',
-                    fields: {PHASE: 'act', NAME: 'flash'},
-                    inputs: {
-                      DO: {
-                        block: {
-                          type: 'world_emit_ActorsBeacon_FlashesEvent',
-                          inputs: {ACTOR: me()},
-                        },
-                      },
+                type: 'math_arithmetic',
+                fields: {OP: 'ADD', SUBJECT: 'actors/beacon'},
+                inputs: {
+                  A: {
+                    block: {
+                      type: 'world_get_ActorsBeacon_FlashesSeenProperty',
+                      inputs: {ACTOR: me()},
                     },
                   },
+                  B: {block: {type: 'math_number', fields: {NUM: 1}}},
                 },
               },
             },
           },
         },
       },
-      // The hat, a top-level block of its own as every hat is.
-      {
-        type: 'world_on_ActorsBeacon_FlashesEvent',
-        next: {
-          block: {
-            type: 'world_set_ActorsBeacon_FlashesSeenProperty',
-            inputs: {
-              ACTOR: me(),
-              VALUE: {
-                block: {
-                  type: 'math_arithmetic',
-                  fields: {OP: 'ADD', SUBJECT: 'actors/beacon'},
-                  inputs: {
-                    A: {
-                      block: {
-                        type: 'world_get_ActorsBeacon_FlashesSeenProperty',
-                        inputs: {ACTOR: me()},
-                      },
-                    },
-                    B: {block: {type: 'math_number', fields: {NUM: 1}}},
-                  },
-                },
-              },
-            },
-          },
-        },
-      },
-    ],
-  },
+    },
+  ],
 });
 
 const WORLD = JSON.stringify({

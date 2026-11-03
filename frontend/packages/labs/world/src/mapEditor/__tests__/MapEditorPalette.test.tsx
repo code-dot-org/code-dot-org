@@ -11,26 +11,16 @@ import {describe, expect, it, vi} from 'vitest';
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
+import {actorDocument} from '../../actors/actorDocument';
+
 /** The heavy half: a canvas, replaced by nothing. */
 vi.mock('../MapStage', () => ({
   MapStage: () => <div data-testid="stage" />,
 }));
 
-/** A `define actor` root, with a `show as` row when an icon is given. */
+/** An actor, with the icon it shows as when one is given. */
 const actorFile = (name: string, icon?: string) =>
-  JSON.stringify({
-    blocks: {
-      blocks: [
-        {
-          type: 'world_actor',
-          fields: {NAME: name},
-          ...(icon
-            ? {next: {block: {type: 'world_show_as', fields: {ICON: icon}}}}
-            : {}),
-        },
-      ],
-    },
-  });
+  actorDocument({name, ...(icon ? {icon} : {})});
 
 const SOURCE: MultiFileSource = {
   files: {

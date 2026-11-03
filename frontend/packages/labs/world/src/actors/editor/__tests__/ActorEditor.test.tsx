@@ -12,14 +12,13 @@ import {beforeEach, describe, expect, it, vi} from 'vitest';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {WORLD_SCENARIOS} from '../../../fixtures/scenarios';
-import {asActorData, viewOf} from '../../actorData';
 
-// The starter's project, with its Player in the data shape.
+// The starter's project and its Player.
 const STARTER = WORLD_SCENARIOS.simple.source;
 const PLAYER_ID = Object.values(STARTER.files).find(
   file => file.name === 'player.actor',
 )!.id;
-const PLAYER = asActorData(STARTER.files[PLAYER_ID].contents);
+const PLAYER = STARTER.files[PLAYER_ID].contents;
 let SOURCE: MultiFileSource = {
   ...STARTER,
   files: {
@@ -113,7 +112,11 @@ describe('the Actor Editor', () => {
   it('never opens an actor as a define actor', () => {
     // An actor is data and events (specs/ACTORS_AS_DATA_PLAN.md, step 5): a
     // file that is not data is not one it can read, and says so.
-    open(viewOf(PLAYER));
+    open(
+      JSON.stringify({
+        blocks: {blocks: [{type: 'world_actor', fields: {NAME: 'Player'}}]},
+      }),
+    );
     expect(screen.queryByTestId('blocks')).toBeNull();
     expect(screen.getByText(/cannot be read/)).toBeInTheDocument();
   });

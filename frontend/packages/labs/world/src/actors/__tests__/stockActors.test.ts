@@ -13,45 +13,55 @@ import {BUILTIN_RULE_META} from '../../blockly/builtinMeta';
 import {parseActorOwnMeta} from '../../blockly/ownProperties';
 import {parseRuleMeta} from '../../blockly/ruleMeta';
 import {STOCK_RULES} from '../../rules/stock';
-import {viewOf, type ActorData} from '../actorData';
+import {CODE_ROWS, keyRows, type ActorData} from '../actorData';
 import {STOCK_ACTORS as SHELF} from '../stock';
 import {buttonActor as button} from '../stock/button';
 import {healthBarActor as healthBar} from '../stock/healthBar';
 import {labelActor as label} from '../stock/label';
 import {progressBarActor as progressBar} from '../stock/progressBar';
 
-// Each read as the rows it is written in (`stock/workspace`).
+/**
+ * An actor as every block it names: its keys as the blocks they stand for
+ * (`keyRows`), and its code.
+ */
+const asBlocks = (contents: string): string => {
+  const data = JSON.parse(contents) as ActorData;
+  return JSON.stringify({...keyRows(data), code: data.blocks}, null, 2);
+};
+
 const STOCK_ACTORS = SHELF.map(actor => ({
   ...actor,
-  contents: viewOf(actor.contents),
+  data: actor.contents,
+  contents: asBlocks(actor.contents),
 }));
-const buttonActor = viewOf(button);
-const healthBarActor = viewOf(healthBar);
-const labelActor = viewOf(label);
-const progressBarActor = viewOf(progressBar);
+const buttonActor = asBlocks(button);
+const healthBarActor = asBlocks(healthBar);
+const labelActor = asBlocks(label);
+const progressBarActor = asBlocks(progressBar);
 
-/** The top-level blocks a file holds. */
+/** The roots of an actor's code. */
 const roots = (contents: string) =>
-  (
-    JSON.parse(contents) as {blocks: {blocks: Array<{type: string}>}}
-  ).blocks.blocks.map(block => block.type);
+  ((JSON.parse(contents) as ActorData).blocks?.blocks?.blocks ?? []).map(
+    block => block.type,
+  );
 
 /** Every block type in a file, however deeply nested. */
 const types = (contents: string): string[] =>
   [...contents.matchAll(/"type": "([^"]+)"/g)].map(match => match[1]);
 
 describe('every stock actor', () => {
-  it('has one `define actor`, and paints itself only if it has no picture', () => {
-    // A HANDLER HAT IS A SEPARATE ROOT; THE DRAWING IS NOT. A hat takes no
-    // previous connection — `DisableOrphansPlugin` grays out a top-level block
-    // that has one, and everything below it — so it sits beside the definition.
-    // A drawing chains as one of the actor's own rows, which is why this looks
-    // for it in the whole file rather than among the roots (specs/DRAWING.md).
+  it('is data, and paints itself only if it has no picture', () => {
+    // Its code is roots, a drawing among them, before its handlers
+    // (specs/DRAWING.md); no `define actor`.
     for (const actor of STOCK_ACTORS) {
-      const found = roots(actor.contents);
-      expect(found.filter(type => type === 'world_actor')).toHaveLength(1);
-      expect(found[0]).toBe('world_actor');
-      expect(found).not.toContain('world_define_drawing');
+      const found = roots(actor.data);
+      expect(found).not.toContain('world_actor');
+      const code = found.map(type => CODE_ROWS.has(type ?? ''));
+      expect(
+        code.indexOf(false) < 0 ||
+          !code.slice(code.indexOf(false)).includes(true),
+        actor.id,
+      ).toBe(true);
 
       // An actor either has a picture or draws one, and never both: an
       // interface actor looks like whatever it says and must paint itself; a
@@ -166,7 +176,7 @@ describe('every stock actor', () => {
     };
 
     for (const actor of STOCK_ACTORS) {
-      expect(own(actor.id, actor.contents)).toEqual(KEEPS[actor.id] ?? []);
+      expect(own(actor.id, actor.data)).toEqual(KEEPS[actor.id] ?? []);
     }
   });
 
@@ -352,7 +362,7 @@ describe('Progress Bar', () => {
     expect(progressBarActor).toContain('Boxed#HasABoxTrait');
     expect(progressBarActor).toContain('Styled#HasAStyleTrait');
     expect(
-      parseActorOwnMeta('actors/progressBar', progressBarActor)?.properties.map(
+      parseActorOwnMeta('actors/progressBar', progressBar)?.properties.map(
         property => property.id,
       ),
     ).toEqual(['fraction', 'bar_color', 'track_color']);

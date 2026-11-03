@@ -36,7 +36,7 @@
 import type {BlockArgDefinition, BlockDefinition} from '@code-dot-org/blockly';
 import {Blockly, defineBlock} from '@code-dot-org/blockly';
 
-import {isActorData, keyRows} from '../actors/actorData';
+import {isActorData, writeEffect, writeValue} from '../actors/actorData';
 import {ruleViewOf} from '../rules/ruleData';
 
 import {missingRuleExtension} from './extensions/missingRule';
@@ -194,12 +194,17 @@ export function standInBlocks(
   for (const source of contents) {
     try {
       const parsed = JSON.parse(source) as {blocks?: {blocks?: BlockState[]}};
-      // An actor names blocks in its code and in its keys (`keyRows`).
+      // An actor names blocks in its code, its values' setters, its effects
+      // and its blocks' bodies.
       const roots = isActorData(parsed)
-        ? [
-            ...((parsed.blocks?.blocks?.blocks ?? []) as BlockState[]),
-            ...(Object.values(keyRows(parsed)).flat() as BlockState[]),
-          ]
+        ? ([
+            ...(parsed.blocks?.blocks?.blocks ?? []),
+            ...(parsed.values ?? []).map(writeValue),
+            ...(parsed.effects ?? []).map(writeEffect),
+            ...(parsed.members ?? []).flatMap(one =>
+              one.body ? [one.body] : [],
+            ),
+          ] as BlockState[])
         : parsed.blocks?.blocks;
       for (const root of roots ?? []) {
         // A top-level block is a statement: a hat, or a stack somebody moved

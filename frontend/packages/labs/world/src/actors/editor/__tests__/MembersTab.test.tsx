@@ -3,7 +3,8 @@
 import {render, screen, within} from '@testing-library/react';
 import {describe, expect, it, vi} from 'vitest';
 
-import {asActorData, type ActorData} from '../../actorData';
+import type {ActorData} from '../../actorData';
+import {actorDocument} from '../../actorDocument';
 import {STOCK_ACTORS} from '../../stock';
 import {memberPalette, memberReading} from '../memberPalette';
 
@@ -20,7 +21,7 @@ vi.mock('@code-dot-org/blockly', async importOriginal => ({
 const {MembersTab} = await import('../MembersTab');
 
 const stock = (id: string) =>
-  asActorData(STOCK_ACTORS.find(actor => actor.id === id)!.contents);
+  STOCK_ACTORS.find(actor => actor.id === id)!.contents;
 
 const show = (contents: string, props = {}) =>
   render(
@@ -78,11 +79,7 @@ describe('the Blocks tab', () => {
   });
 
   it('says so when there is nothing to show', () => {
-    const contents = asActorData(
-      JSON.stringify({
-        blocks: {blocks: [{type: 'world_actor', fields: {NAME: 'Rock'}}]},
-      }),
-    );
+    const contents = actorDocument({name: 'Rock'});
     show(contents);
 
     expect(screen.getByText(/No events yet/)).toBeInTheDocument();

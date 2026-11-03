@@ -3,7 +3,6 @@
 
 import {describe, expect, it} from 'vitest';
 
-import {viewOf} from '../../actorData';
 import {purposeOf} from '../../actorPurpose';
 import {NEW_INTERFACE_BOX, newActorFile} from '../newActor';
 
@@ -41,7 +40,5 @@ describe('an actor made from nothing', () => {
     expect(drawing.inputs.HEIGHT.block.type).toBe(
       'world_get_Boxed_HeightProperty',
     );
-    // …and its view is a define actor, as every reader wants.
-    expect(viewOf(contents)).toContain('"world_actor"');
   });
 });

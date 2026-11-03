@@ -16,9 +16,10 @@ handler, which runs once the instance exists and before it is first drawn.
 - **The data shape** (`actors/actorData`): name, purpose, acts like, is a
   record, icon, animations, traits, properties, values and effects as keys;
   handlers and code rows (every frame, a block or event of its own, its
-  drawing) as roots of the workspace. `foldActor` turns a `define actor`
-  workspace into data and `actorView` turns data back into the workspace the
-  compiler reads. Neither is saved as the other's shape.
+  drawing) as roots of the workspace. The compiler lays the data out as
+  blocks (`actorSheet`). A file in `define actor` rows cannot be read; the
+  fold and the view that turned one shape into the other are gone
+  (COMPILE_FROM_DATA_PLAN.md, 5d).
 - **Setup.** A row a fold cannot say as data — a `set` of something
   computed, a second `set sprite`, any other statement under the root — is
   kept in `setup` so the fold loses nothing. No shipped actor has one. It is
@@ -85,9 +86,8 @@ handler, which runs once the instance exists and before it is first drawn.
   actor, before any step and before any render. A literal stays data and
   keeps its override. `setup` is deleted.
 - **Every actor file is data.** No blocks-shaped actor is written, loaded or
-  opened. The `define actor` workspace survives only as `actorView`, the
-  compiler's reading of the data, and `world_actor` is never in a toolbox —
-  as the animations row is not.
+  opened. `define actor` survives only as the root of the compiler's sheet
+  (`actorSheet`), and `world_actor` is never in a toolbox.
 - **What an actor is, is in the panel.** Acts like and is a record join the
   panel; the rows that said them leave the toolbox.
 - **An actor is for a game or for an interface, never both.** That is its

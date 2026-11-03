@@ -18,6 +18,8 @@
 
 import {describe, expect, it} from 'vitest';
 
+import {actorDocument} from '../actors/actorDocument';
+
 import {compileProject} from './support/compileProject';
 
 /** Six pixels a character at twelve, which is a font nobody has. */
@@ -36,44 +38,37 @@ const measured = (text: string) => ({
 });
 
 /** A Sign as wide as the word it draws, plus a margin either side. */
-const SIGN = JSON.stringify({
-  blocks: {
-    blocks: [
-      {
-        type: 'world_actor',
-        fields: {NAME: 'Sign'},
-        next: {
+const SIGN = actorDocument({
+  name: 'Sign',
+  code: [
+    {
+      type: 'world_define_drawing',
+      inputs: {
+        WIDTH: {
           block: {
-            type: 'world_define_drawing',
+            type: 'math_arithmetic',
+            fields: {OP: 'ADD'},
             inputs: {
-              WIDTH: {
-                block: {
-                  type: 'math_arithmetic',
-                  fields: {OP: 'ADD'},
-                  inputs: {
-                    A: measured('hello'),
-                    B: {shadow: {type: 'math_number', fields: {NUM: 8}}},
-                  },
-                },
-              },
+              A: measured('hello'),
+              B: {shadow: {type: 'math_number', fields: {NUM: 8}}},
+            },
+          },
+        },
+        HEIGHT: {block: {type: 'math_number', fields: {NUM: 16}}},
+        DO: {
+          block: {
+            type: 'world_draw_rectangle',
+            inputs: {
+              X: measured('hello'),
+              Y: {block: {type: 'math_number', fields: {NUM: 0}}},
+              WIDTH: {block: {type: 'math_number', fields: {NUM: 2}}},
               HEIGHT: {block: {type: 'math_number', fields: {NUM: 16}}},
-              DO: {
-                block: {
-                  type: 'world_draw_rectangle',
-                  inputs: {
-                    X: measured('hello'),
-                    Y: {block: {type: 'math_number', fields: {NUM: 0}}},
-                    WIDTH: {block: {type: 'math_number', fields: {NUM: 2}}},
-                    HEIGHT: {block: {type: 'math_number', fields: {NUM: 16}}},
-                  },
-                },
-              },
             },
           },
         },
       },
-    ],
-  },
+    },
+  ],
 });
 
 const WORLD = JSON.stringify({

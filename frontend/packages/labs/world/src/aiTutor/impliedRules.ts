@@ -21,6 +21,7 @@
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
+import {actorDataOf} from '../actors/actorData';
 import {projectRuleMetas} from '../blockly/projectModules';
 import {stockRuleByName, type StockRule} from '../rules/stock';
 import {projectFiles} from '../runtime/projectFiles';
@@ -39,6 +40,13 @@ export const ruleNamesIn = (contents: string): string[] => {
     // `lastIndex`, and these are module constants reused across calls.
     for (const match of contents.matchAll(new RegExp(pattern))) {
       found.add(match[1]);
+    }
+  }
+  // …and an actor's own traits, which are its data rather than a field.
+  for (const trait of actorDataOf(contents)?.traits ?? []) {
+    const hash = trait.indexOf('#');
+    if (hash > 0) {
+      found.add(trait.slice(0, hash));
     }
   }
   return [...found];

@@ -14,33 +14,22 @@
 
 import {describe, expect, it} from 'vitest';
 
+import {actorDocument} from '../../actors/actorDocument';
 import {buildDomainPalette} from '../domainBlocks';
 import {parseActorOwnMeta} from '../ownProperties';
 
 /** An `.actor` file declaring one block, with the eye as given. */
 const actorFile = (access?: string) =>
-  JSON.stringify({
-    blocks: {
-      blocks: [
-        {
-          type: 'world_actor',
-          fields: {NAME: 'Field'},
-          next: {
-            block: {
-              type: 'world_rule_block',
-              fields: {
-                RETURNS: 'none',
-                DESCRIPTION: 'Put the window where the bar is.',
-                ...(access ? {ACCESS: access} : {}),
-              },
-              extraState: {
-                parts: [{kind: 'label', text: 'keep the caret in view'}],
-              },
-            },
-          },
-        },
-      ],
-    },
+  actorDocument({
+    name: 'Field',
+    members: [
+      {
+        kind: 'block',
+        description: 'Put the window where the bar is.',
+        ...(access === 'private' ? {hidden: true as const} : {}),
+        parts: [{kind: 'label', text: 'keep the caret in view'}],
+      },
+    ],
   });
 
 const CALL = 'world_do_ActorsField_KeepTheCaretInViewAction';

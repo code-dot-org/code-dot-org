@@ -8,6 +8,7 @@
 
 import {beforeEach, describe, expect, it} from 'vitest';
 
+import {actorDocument} from '../../actors/actorDocument';
 import {STOCK_ACTORS} from '../../actors/stock';
 import {buttonActor} from '../../actors/stock/button';
 import {labelActor} from '../../actors/stock/label';
@@ -20,29 +21,9 @@ import {actorFieldOptions, setProjectActors} from '../moduleOptions';
 const PIXEL =
   'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg==';
 
-/** An `.actor` file: a `define actor`, and whatever rows are chained under it. */
-const actorFile = (name: string, rows: object[] = []) =>
-  JSON.stringify({
-    blocks: {
-      blocks: [
-        {
-          type: 'world_actor',
-          fields: {NAME: name},
-          next: {
-            block: rows.reduceRight<object | undefined>(
-              (next, row) => ({...row, ...(next ? {next: {block: next}} : {})}),
-              undefined,
-            ),
-          },
-        },
-      ],
-    },
-  });
-
-const showAs = (icon: string) => ({
-  type: 'world_show_as',
-  fields: {ICON: icon},
-});
+/** An `.actor` file, with the icon it shows as when one is given. */
+const actorFile = (name: string, icon?: string) =>
+  actorDocument({name, ...(icon ? {icon} : {})});
 
 beforeEach(() => {
   setActorIcons({});
@@ -57,7 +38,7 @@ describe('electing an icon', () => {
     // An `.actor` IS one actor and its dropdown value is the module path.
     expect(
       projectActorIcons({
-        'actors/label.actor': actorFile('Label', [showAs('text')]),
+        'actors/label.actor': actorFile('Label', 'text'),
       }),
     ).toEqual({'actors/label': 'text'});
   });

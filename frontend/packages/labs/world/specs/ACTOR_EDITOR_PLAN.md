@@ -94,7 +94,9 @@ not on `this actor`, is code. Both are pure.
 This is what keeps the readers: anything that walks rows reads the view,
 and anything that writes rows edits the view and folds it back. The
 block-shaped file is its own view, so both shapes compile and read the same
-way while the files move over.
+way while the files move over. Once they had, the readers and writers read
+the data, and the view and the fold were deleted
+(COMPILE_FROM_DATA_PLAN.md, 5d).
 
 ## What is being built
 

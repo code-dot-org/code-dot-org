@@ -8,6 +8,7 @@
 
 import {describe, expect, it} from 'vitest';
 
+import {actorDocument} from '../../actors/actorDocument';
 import {
   ActorBuilder,
   PositionProperty,
@@ -233,26 +234,11 @@ describe('renaming', () => {
         ? screen([COUNT], [], name)
         : parseActorOwnMeta(
             path,
-            JSON.stringify({
-              blocks: {
-                blocks: [
-                  {
-                    type: root,
-                    fields: {NAME: name},
-                    next: {
-                      block: {
-                        type: 'world_rule_property',
-                        fields: {
-                          TYPE: 'number',
-                          ACCESS: 'writable',
-                          NAME: 'score',
-                          DEFAULT: '0',
-                        },
-                      },
-                    },
-                  },
-                ],
-              },
+            actorDocument({
+              name,
+              properties: [
+                {name: 'score', type: 'number', access: 'writable', value: '0'},
+              ],
             }),
           )!;
     return buildDomainPalette([], {ownProperties: [meta]})

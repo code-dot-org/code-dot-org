@@ -12,59 +12,41 @@
 
 import {describe, expect, it} from 'vitest';
 
+import {actorDocument} from '../actors/actorDocument';
+
 import {compileProject} from './support/compileProject';
 
 const me = () => ({block: {type: 'world_this_actor'}});
 
 /** A Sign that keeps whatever has been typed at it. */
-const SIGN = JSON.stringify({
-  blocks: {
-    blocks: [
-      {
-        type: 'world_actor',
-        fields: {NAME: 'Sign'},
-        next: {
-          block: {
-            type: 'world_use_trait',
-            fields: {TRAIT: 'Input#TakesKeyboardInputTrait'},
-            next: {
+const SIGN = actorDocument({
+  name: 'Sign',
+  traits: ['Input#TakesKeyboardInputTrait'],
+  properties: [{name: 'typed', type: 'string', access: 'writable', value: ''}],
+  code: [
+    // `when this actor types ⟨…⟩: set typed to ⟨typed⟩ + ⟨“ what ”⟩`
+    {
+      type: 'world_on_Input_TypesEvent',
+      next: {
+        block: {
+          type: 'world_set_ActorsSign_TypedProperty',
+          inputs: {
+            ACTOR: me(),
+            VALUE: {
               block: {
-                type: 'world_rule_property',
-                fields: {
-                  TYPE: 'string',
-                  ACCESS: 'writable',
-                  NAME: 'typed',
-                  DEFAULT: '',
-                },
-              },
-            },
-          },
-        },
-      },
-      // `when this actor types ⟨…⟩: set typed to ⟨typed⟩ + ⟨“ what ”⟩`
-      {
-        type: 'world_on_Input_TypesEvent',
-        next: {
-          block: {
-            type: 'world_set_ActorsSign_TypedProperty',
-            inputs: {
-              ACTOR: me(),
-              VALUE: {
-                block: {
-                  type: 'world_as_text',
-                  inputs: {
-                    VALUE: {
-                      block: {
-                        type: 'world_get_ActorsSign_TypedProperty',
-                        inputs: {ACTOR: me()},
-                      },
+                type: 'world_as_text',
+                inputs: {
+                  VALUE: {
+                    block: {
+                      type: 'world_get_ActorsSign_TypedProperty',
+                      inputs: {ACTOR: me()},
                     },
-                    ADD: {
-                      block: {
-                        type: 'world_as_text',
-                        inputs: {
-                          VALUE: {block: {type: 'world_event_value'}},
-                        },
+                  },
+                  ADD: {
+                    block: {
+                      type: 'world_as_text',
+                      inputs: {
+                        VALUE: {block: {type: 'world_event_value'}},
                       },
                     },
                   },
@@ -74,8 +56,8 @@ const SIGN = JSON.stringify({
           },
         },
       },
-    ],
-  },
+    },
+  ],
 });
 
 const WORLD = JSON.stringify({

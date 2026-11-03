@@ -1,4 +1,4 @@
-// An actor's own properties, as read off its workspace.
+// An actor's own properties, as read off its data.
 //
 // The shorthand that lets a kind of actor remember something without a rule
 // existing to hold it. What these pin is that it really is shorthand: the
@@ -7,35 +7,27 @@
 
 import {describe, expect, it} from 'vitest';
 
+import type {ActorProperty} from '../../actors/actorData';
+import {actorDocument, type ActorSpec} from '../../actors/actorDocument';
 import {buildDomainPalette} from '../domainBlocks';
 import {ownPropertyDeclarations, parseActorOwnMeta} from '../ownProperties';
 
-/** An `.actor` workspace: `define actor` with a chain of blocks below it. */
-const actorFile = (name: string, chain: unknown[] = []): string => {
-  const link = (rest: unknown[]): unknown =>
-    rest.length === 0
-      ? undefined
-      : {...(rest[0] as object), next: {block: link(rest.slice(1))}};
-  return JSON.stringify({
-    blocks: {
-      blocks: [
-        {
-          type: 'world_actor',
-          fields: {NAME: name},
-          ...(chain.length ? {next: {block: link(chain)}} : {}),
-        },
-      ],
-    },
-  });
-};
+/** An `.actor` file declaring these properties. */
+const actorFile = (
+  name: string,
+  properties: ActorProperty[] = [],
+  more: Partial<ActorSpec> = {},
+): string => actorDocument({name, properties, ...more});
 
-const property = (fields: Record<string, string>) => ({
-  type: 'world_rule_property',
-  fields: {TYPE: 'number', ACCESS: 'writable', DEFAULT: '0', ...fields},
+const property = (fields: Record<string, string>): ActorProperty => ({
+  name: fields.NAME ?? '',
+  type: fields.TYPE ?? 'number',
+  access: fields.ACCESS === 'readonly' ? 'readonly' : 'writable',
+  value: fields.DEFAULT ?? '0',
 });
 
 describe('an actor’s own properties', () => {
-  it('reads a declaration out of the actor’s chain', () => {
+  it('reads a declaration out of the actor’s data', () => {
     const meta = parseActorOwnMeta(
       'actors/player',
       actorFile('Player', [property({NAME: 'last fired'})]),
@@ -153,14 +145,20 @@ describe('an actor’s own properties', () => {
     });
   });
 
-  it('ignores everything in the chain that is not a declaration', () => {
+  it('ignores everything in the actor that is not a declaration', () => {
     const meta = parseActorOwnMeta(
       'actors/player',
-      actorFile('Player', [
-        {type: 'world_use_trait', fields: {TRAIT: 'Physics#CanMoveTrait'}},
-        property({NAME: 'last fired'}),
-        {type: 'world_play_animation', fields: {ANIM: 'game'}},
-      ]),
+      actorFile('Player', [property({NAME: 'last fired'})], {
+        traits: ['Physics#CanMoveTrait'],
+        code: [
+          {
+            type: 'world_on_Space_CreatedEvent',
+            next: {
+              block: {type: 'world_play_animation', fields: {ANIM: 'game'}},
+            },
+          },
+        ],
+      }),
     );
 
     expect(meta?.properties.map(p => p.id)).toEqual(['last_fired']);

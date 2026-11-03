@@ -5,12 +5,7 @@ import {describe, expect, it} from 'vitest';
 import type {EffectParameter} from '../../../effect/model/types';
 import {WORLD_SCENARIOS} from '../../../fixtures/scenarios';
 import {projectFiles} from '../../../runtime/projectFiles';
-import {
-  actorView,
-  asActorData,
-  throughView,
-  type ActorData,
-} from '../../actorData';
+import {keyRows, withKeyRows, type ActorData} from '../../actorData';
 import {
   actorTraitChoices,
   addEffect,
@@ -194,27 +189,12 @@ describe('an effect', () => {
     expect(removeEffect(data, 'effects/ripple').effects).toBeUndefined();
   });
 
-  it('is a row of the view while it is on, and kept through a fold while it is off', () => {
+  it('is read back from the block it stands for, on or off', () => {
+    // A rename walks it as its `add effect` block (`keyRows`).
     let data = addEffect(PLAYER, 'effects/ripple', RIPPLE);
-    const rows = (view: ActorData) =>
-      JSON.stringify(actorView(view)).includes('world_add_effect');
-    expect(rows(data)).toBe(true);
-    // The view folds back to the same effect, settings and all.
-    expect(
-      JSON.parse(asActorData(JSON.stringify(actorView(data)))).effects,
-    ).toEqual(data.effects);
-
+    expect(withKeyRows(data, keyRows(data))).toEqual(data);
     data = switchEffect(data, 'effects/ripple', false);
-    expect(rows(data)).toBe(false);
-    const contents = JSON.stringify(data);
-    // A change made through the view keeps it.
-    const renamed = throughView(contents, view =>
-      view.replace('"Player"', '"Hero"'),
-    );
-    expect(JSON.parse(renamed)).toMatchObject({
-      name: 'Hero',
-      effects: [{effect: 'effects/ripple', on: false}],
-    });
+    expect(withKeyRows(data, keyRows(data))).toEqual(data);
   });
 });
 

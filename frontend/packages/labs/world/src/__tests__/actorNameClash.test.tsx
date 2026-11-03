@@ -18,6 +18,7 @@
 
 import {describe, expect, it} from 'vitest';
 
+import {actorDocument} from '../actors/actorDocument';
 import {buildDomainPalette} from '../blockly/domainBlocks';
 import {projectOwnMetas} from '../blockly/projectModules';
 import {PositionProperty} from '../engine';
@@ -32,52 +33,31 @@ import {compileProject} from './support/compileProject';
  * other's, both actors would end up at the same place.
  */
 const actorNamed = (name: string, speed: number) =>
-  JSON.stringify({
-    blocks: {
-      blocks: [
-        {
-          type: 'world_actor',
-          fields: {NAME: name},
-          next: {
-            block: {
-              type: 'world_rule_property',
-              fields: {
-                TYPE: 'number',
-                ACCESS: 'writable',
-                NAME: 'speed',
-                DEFAULT: String(speed),
-              },
-              next: {
-                block: {
-                  type: 'world_rule_block',
-                  fields: {RETURNS: 'none', DESCRIPTION: 'Go.'},
-                  extraState: {parts: [{kind: 'label', text: 'go'}]},
-                  inputs: {
-                    DO: {
-                      block: {
-                        type: 'world_set_position',
-                        inputs: {
-                          ACTOR: {block: {type: 'world_this_actor'}},
-                          X: {
-                            block: {
-                              type: `world_get_Actors${name}_SpeedProperty`,
-                              inputs: {
-                                ACTOR: {block: {type: 'world_this_actor'}},
-                              },
-                            },
-                          },
-                          Y: {block: {type: 'math_number', fields: {NUM: 50}}},
-                        },
-                      },
-                    },
-                  },
-                },
+  actorDocument({
+    name,
+    properties: [
+      {name: 'speed', type: 'number', access: 'writable', value: String(speed)},
+    ],
+    members: [
+      {
+        kind: 'block',
+        description: 'Go.',
+        parts: [{kind: 'label', text: 'go'}],
+        body: {
+          type: 'world_set_position',
+          inputs: {
+            ACTOR: {block: {type: 'world_this_actor'}},
+            X: {
+              block: {
+                type: `world_get_Actors${name}_SpeedProperty`,
+                inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
               },
             },
+            Y: {block: {type: 'math_number', fields: {NUM: 50}}},
           },
         },
-      ],
-    },
+      },
+    ],
   });
 
 /** Places one of each and tells each to do its own `go`. */

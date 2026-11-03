@@ -8,7 +8,6 @@
 import {describe, expect, it} from 'vitest';
 
 import {compileProject} from '../../__tests__/support/compileProject';
-import {viewOf} from '../../actors/actorData';
 import {RotationProperty} from '../../engine';
 import {keyName, KEY_CHOICES} from '../../engine/core/keys';
 import {PositionProperty} from '../../engine/rules/spatial';
@@ -523,49 +522,5 @@ describe('the keys a handler waits for', () => {
     }
 
     expect(wrong).toEqual([]);
-  });
-});
-
-describe('every actor file a scenario ships', () => {
-  /** Each `.actor` in every scenario, as its parsed roots. */
-  const actorFiles = Object.entries(WORLD_SCENARIOS).flatMap(
-    ([tag, scenario]) =>
-      Object.values(scenario.source.files)
-        .filter(file => file.name.endsWith('.actor'))
-        .map(file => ({
-          where: `${tag}/${file.name}`,
-          // As the compiler reads it: a data-shaped actor's view, whose
-          // root its code rows chain under (`actors/actorData`).
-          roots: (JSON.parse(viewOf(file.contents)).blocks?.blocks ??
-            []) as Array<{
-            type: string;
-          }>,
-        })),
-  );
-
-  it('has some, or this is checking nothing', () => {
-    expect(actorFiles.length).toBeGreaterThan(20);
-  });
-
-  it('chains every `each frame` under the `define actor`', () => {
-    // A step left standing on its own is TWO failures at once, and the second
-    // is the quiet one: `DisableOrphansPlugin` grays it out, and its generator
-    // writes nothing because the top of its chain is not a `define actor`
-    // (`domainBlocks.worldTraitStep`). So the actor simply stops doing that
-    // work, and the file still loads and still compiles.
-    const loose = actorFiles.flatMap(({where, roots}) =>
-      roots.some(root => root.type === 'world_trait_step') ? [where] : [],
-    );
-
-    expect(loose).toEqual([]);
-  });
-
-  it('still gives each of them a `define actor` to chain under', () => {
-    // The other half: the fix for the above is not "delete the step".
-    const headless = actorFiles.flatMap(({where, roots}) =>
-      roots.some(root => root.type === 'world_actor') ? [] : [where],
-    );
-
-    expect(headless).toEqual([]);
   });
 });

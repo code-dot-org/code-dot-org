@@ -17,7 +17,7 @@ import {
 } from '../../engine';
 import {EMPTY_WORLD_PROJECT} from '../../fixtures/scenarios';
 import {projectFiles} from '../../runtime/projectFiles';
-import {actorView, type ActorData} from '../actorData';
+import {keyRows, type ActorData} from '../actorData';
 
 /** A Bobber: two pictures in turn, and a hop that lifts it. */
 const BOBBER: ActorData = {
@@ -74,11 +74,10 @@ const play = async () => {
 };
 
 describe('an actor’s animations, played', () => {
-  it('declares them on the kind, in the define actor its data stands for', () => {
-    const view = JSON.stringify(actorView(BOBBER));
-    expect(view).toContain('"type":"world_actor_animations"');
-    // …and not the still picture's row, since Main moves.
-    expect(view).not.toContain('world_set_sprite');
+  it('is walked as the animations block, since Main moves', () => {
+    const rows = JSON.stringify(keyRows(BOBBER).animations);
+    expect(rows).toContain('"type":"world_actor_animations"');
+    expect(rows).not.toContain('world_set_sprite');
   });
 
   it('plays Main from the moment it is made', async () => {
@@ -100,7 +99,7 @@ describe('an actor’s animations, played', () => {
     expect(bobber.get(DrawnOffsetProperty).y).toBeCloseTo(-5);
   });
 
-  it('is a plain set sprite when Main is one still picture', () => {
+  it('is walked as a plain set sprite when Main is one still picture', () => {
     const still: ActorData = {
       type: 'actor',
       name: 'Rock',
@@ -108,8 +107,8 @@ describe('an actor’s animations, played', () => {
         Main: {loop: true, tracks: {sprite: [{at: 0, value: 'rock.png'}]}},
       },
     };
-    const view = JSON.stringify(actorView(still));
-    expect(view).toContain('"SPRITE":"rock.png"');
-    expect(view).not.toContain('world_actor_animations');
+    const rows = JSON.stringify(keyRows(still).animations);
+    expect(rows).toContain('"SPRITE":"rock.png"');
+    expect(rows).not.toContain('world_actor_animations');
   });
 });

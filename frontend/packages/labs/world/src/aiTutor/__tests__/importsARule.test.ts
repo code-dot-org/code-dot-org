@@ -18,6 +18,7 @@
 import {describe, expect, it, vi} from 'vitest';
 
 import {compileProject} from '../../__tests__/support/compileProject';
+import {actorDocument} from '../../actors/actorDocument';
 import {importStockActor} from '../../actors/importStockActor';
 import {stockActorById} from '../../actors/stock';
 import {projectRuleMetas} from '../../blockly/projectModules';
@@ -34,29 +35,9 @@ import {
 import {importableRules} from '../ruleShelf';
 
 /** A Player actor that elects the two traits Boundaries provides. */
-const PLAYER_THAT_STAYS = JSON.stringify({
-  blocks: {
-    blocks: [
-      {
-        type: 'world_actor',
-        x: 20,
-        y: 20,
-        fields: {NAME: 'Player'},
-        next: {
-          block: {
-            type: 'world_use_trait',
-            fields: {TRAIT: 'Boundaries#StaysAcrossTrait'},
-            next: {
-              block: {
-                type: 'world_use_trait',
-                fields: {TRAIT: 'Boundaries#StaysDownTrait'},
-              },
-            },
-          },
-        },
-      },
-    ],
-  },
+const PLAYER_THAT_STAYS = actorDocument({
+  name: 'Player',
+  traits: ['Boundaries#StaysAcrossTrait', 'Boundaries#StaysDownTrait'],
 });
 
 /** A world that places its Player, so a built actor exists to ask about. */
@@ -228,6 +209,23 @@ describe('the offer itself', () => {
 
     expect(workspacesGenerate(withAPlayer(), local, generateAll)).toBe(false);
     quiet.mockRestore();
+  });
+});
+
+describe('an actor the tutor writes in rows', () => {
+  it('does not compile, so the offer is refused', async () => {
+    // An actor is data; one written as `define actor` blocks is a file the
+    // editor cannot open, and the generator the gate runs says so.
+    const rows = JSON.stringify({
+      blocks: {blocks: [{type: 'world_actor', fields: {NAME: 'Player'}}]},
+    });
+    const {source} = proposedProject(withAPlayer(), [
+      {path: 'actors/player.actor', contents: rows},
+    ]);
+
+    await expect(compileProject(projectFiles(source))).rejects.toThrow(
+      /not an actor's data/,
+    );
   });
 });
 

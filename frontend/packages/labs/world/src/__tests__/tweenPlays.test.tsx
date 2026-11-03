@@ -8,16 +8,13 @@
 
 import {describe, expect, it} from 'vitest';
 
+import {actorDocument} from '../actors/actorDocument';
 import {OpacityProperty, PositionProperty} from '../engine';
 import {projectFiles} from '../runtime/projectFiles';
 
 import {compileProject} from './support/compileProject';
 
-const PLAYER = JSON.stringify({
-  blocks: {
-    blocks: [{type: 'world_actor', x: 20, y: 20, fields: {NAME: 'Player'}}],
-  },
-});
+const PLAYER = actorDocument({name: 'Player'});
 
 /**
  * A world that describes a fade, places a Player, and starts the fade on it.

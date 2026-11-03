@@ -318,9 +318,18 @@ data the one form. In order, each its own commit:
    for blocks named in the code and in the key rows; the Lamp's lesson
    check reads its `properties`. `constants.useTrait`, which nothing
    called, is gone.
-5. The tutor proposes an actor as data. Then `foldActor`, `actorView`,
-   `viewOf`, `asActorData`, `throughView` and the actor half of
-   `VIEW_ROWS` go, and a file in rows is one that cannot be read.
+5. BUILT, November 2026. One form. `foldActor`, `actorView`, `viewOf`,
+   `asActorData`, `throughView` and the actor half of `VIEW_ROWS` are
+   gone; `actorDataOf` reads data and nothing else, and the generator
+   refuses an actor file that is not data, so the tutor's gate, which
+   generates what it proposes, refuses one written in rows. The tutor is
+   told an actor is data, and the rules a proposed actor elects are read
+   from its `traits` (`impliedRules`), which read only `TRAIT` fields
+   before. `standInBlocks` stands in for blocks in an actor's code, values,
+   effects and block bodies. The lesson checks edit an actor's data where
+   a learner uses the panel and its code where a learner uses blocks
+   (`lessonChecks`' `under`, `without`); the tests that wrote actors in
+   rows write them with `actorDocument`.
 
 Rules have the same two forms, and follow once actors are done.
 

@@ -17,9 +17,13 @@ import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {compileProject} from '../../__tests__/support/compileProject';
 import {
-  asActorData,
+  CODE_ROWS,
+  CREATED_HAT,
   isActorData,
-  viewOf,
+  readMember,
+  readProperty,
+  readValue,
+  stillAnimation,
   withMainAnimation,
   type ActorData,
   type Block,
@@ -97,7 +101,8 @@ const editing = (
   name: string,
   change: (contents: string) => string,
 ): MultiFileSource => {
-  if (name === 'main.world') {
+  // An actor is edited where its lesson shows it, among the world's roots.
+  if (name === 'main.world' || name.endsWith('.actor')) {
     return editingWorld(source, change);
   }
   const entry = Object.entries(source.files).find(
@@ -107,21 +112,6 @@ const editing = (
     throw new Error(`no file called ${name}`);
   }
   const [id, file] = entry;
-  // An actor is data, and is edited here through the `define actor` it
-  // stands for, folded back after: what a writer of the view does
-  // (`actorData.throughView`, specs/ACTORS_AS_DATA_PLAN.md, step 5).
-  if (name.endsWith('.actor')) {
-    return {
-      ...source,
-      files: {
-        ...source.files,
-        [id]: {
-          ...file,
-          contents: asActorData(change(viewOf(file.contents)), file.contents),
-        },
-      },
-    };
-  }
   // Resolved first, the way the editor resolves one to put it on screen: a
   // rule the learner has not touched is stored as a reference to the library's
   // (rules/ruleReference, specs/NEXT.md §2), and there is nothing in a
@@ -144,6 +134,103 @@ const editing = (
 
 /** Where a merged root came from, stamped on it for the way back. */
 const FROM = '__from';
+/** An actor's data, held on its `define actor` while it is edited. */
+const DATA = '__data';
+
+/** Rows chained under a root, as its `next`. */
+const chainOf = (rows: readonly Row[]): {next?: {block: Row}} => {
+  const first = rows.reduceRight<Row | undefined>(
+    (next, row) => ({
+      ...withoutPlace(row),
+      ...(next ? {next: {block: next}} : {}),
+    }),
+    undefined,
+  );
+  return first ? {next: {block: first}} : {};
+};
+
+/** A row taken off a chain: without where it sat, or the row after it. */
+const withoutPlace = (row: Row): Row =>
+  Object.fromEntries(
+    Object.entries(row).filter(([key]) => !['x', 'y', 'next'].includes(key)),
+  ) as Row;
+
+/**
+ * The data a merged `define actor` stands for: its data, with the code
+ * chained under it and the handlers given, a row the data holds in place
+ * (`place`) and any other row under it code.
+ */
+const dataOf = (root: Row, handlers: readonly Row[]): ActorData => {
+  let data = {
+    ...((root as Record<string, unknown>)[DATA] as ActorData),
+    name: String(root.fields?.NAME ?? ''),
+  };
+  const code: Row[] = [];
+  for (let at = root.next?.block; at; at = at.next?.block) {
+    if (CODE_ROWS.has(at.type ?? '')) {
+      code.push(withoutPlace(at));
+    } else {
+      data = place(data, withoutPlace(at), 'last');
+    }
+  }
+  return {
+    ...data,
+    blocks: {
+      ...data.blocks,
+      blocks: {
+        languageVersion: 0,
+        blocks: [...code, ...handlers].map((one, at) => ({
+          ...one,
+          x: 20,
+          y: 20 + at * 40,
+        })),
+      },
+    },
+  };
+};
+
+/**
+ * A row the Actor Editor would write as data, written into the data: first
+ * among its kind, as `under` chains a row above the rest, or last.
+ */
+const place = (
+  data: ActorData,
+  row: Row,
+  where: 'first' | 'last',
+): ActorData => {
+  const add = <T,>(list: T[] | undefined, one: T): T[] =>
+    where === 'first' ? [one, ...(list ?? [])] : [...(list ?? []), one];
+  const value = readValue(row as Block);
+  const property = readProperty(row as Block);
+  const member = readMember(row as Block, data.members?.length ?? 0);
+  switch (true) {
+    case row.type === 'world_use_trait':
+      return {...data, traits: add(data.traits, String(row.fields?.TRAIT))};
+    case row.type === 'world_acts_like':
+      return {...data, actsLike: String(row.fields?.ACTOR)};
+    case row.type === 'world_set_sprite':
+      return withMainAnimation(
+        data,
+        stillAnimation(String(row.fields?.SPRITE)),
+      );
+    case row.type === 'world_add_effect':
+      return {
+        ...data,
+        effects: add(data.effects, {
+          effect: String(row.fields?.EFFECT),
+          on: true,
+        }),
+      };
+    case property !== undefined:
+      return {...data, properties: add(data.properties, property!)};
+    case value !== undefined:
+      return {...data, values: add(data.values, value!)};
+    case member !== undefined:
+      return {...data, members: add(data.members, member!)};
+    default:
+      throw new Error(`no place in an actor's data for ${row.type}`);
+  }
+};
 
 const editingWorld = (
   source: MultiFileSource,
@@ -158,16 +245,25 @@ const editingWorld = (
   // The screen and its map, seen as the world they were made from
   // (`support/worldView`).
   const merged = parse(worldMadeInto(source) ?? worldOf(source));
-  // Each actor file as it was, so what is not roots — the variables a
-  // designed block's parameters are — goes back with its roots.
-  const parsedActors = new Map<string, Parsed>();
+  // Each actor as a `define actor` holding its data, its code chained under
+  // it and its handlers beside it, which is what these edits are written
+  // against (`actorIn`).
   for (const [id, file] of actors) {
-    // Its `define actor`, which is what these edits are written against.
-    const parsed = parse(viewOf(file.contents));
-    parsedActors.set(id, parsed);
-    for (const root of parsed.blocks.blocks) {
-      merged.blocks.blocks.push({...root, [FROM]: id} as Row);
-    }
+    const data = JSON.parse(file.contents) as ActorData;
+    const roots = (data.blocks?.blocks?.blocks ?? []) as Row[];
+    const code = roots.filter(root => CODE_ROWS.has(root.type ?? ''));
+    merged.blocks.blocks.push(
+      {
+        type: 'world_actor',
+        fields: {NAME: data.name},
+        [FROM]: id,
+        [DATA]: data,
+        ...chainOf(code),
+      } as Row,
+      ...roots
+        .filter(root => !code.includes(root))
+        .map(root => ({...root, [FROM]: id}) as Row),
+    );
   }
 
   // Pretty-printed, as the lesson wrote it: some edits are string edits on
@@ -176,9 +272,12 @@ const editingWorld = (
   const files = {...source.files};
   const roots = new Map<string, Row[]>();
   const worldRoots: Row[] = [];
+  const defined = new Map<string, Row>();
   for (const root of changed.blocks.blocks) {
     const from = (root as Record<string, unknown>)[FROM];
-    if (typeof from === 'string') {
+    if (typeof from === 'string' && root.type === 'world_actor') {
+      defined.set(from, root);
+    } else if (typeof from === 'string') {
       delete (root as Record<string, unknown>)[FROM];
       roots.set(from, [...(roots.get(from) ?? []), root]);
     } else if (root.type === 'world_actor') {
@@ -195,7 +294,11 @@ const editingWorld = (
         id,
         name: `${stem}.actor`,
         language: 'actor',
-        contents: asActorData(JSON.stringify({blocks: {blocks: [root]}})),
+        contents: JSON.stringify(
+          dataOf({...root, [DATA]: {type: 'actor', name}} as Row, []),
+          null,
+          2,
+        ),
         folderId: folderId ?? '0',
       };
     } else {
@@ -203,16 +306,12 @@ const editingWorld = (
     }
   }
   for (const [id, file] of actors) {
+    const root = defined.get(id);
     files[id] = {
       ...file,
-      // …and folded back into data, keeping what the view does not carry.
-      contents: asActorData(
-        JSON.stringify({
-          ...parsedActors.get(id),
-          blocks: {blocks: roots.get(id) ?? []},
-        }),
-        file.contents,
-      ),
+      contents: root
+        ? JSON.stringify(dataOf(root, roots.get(id) ?? []), null, 2)
+        : file.contents,
     };
   }
   const world = JSON.stringify({...changed, blocks: {blocks: worldRoots}});
@@ -255,8 +354,16 @@ const actorIn = (workspace: {blocks: {blocks: Row[]}}, name: string): Row => {
   return actor;
 };
 
-/** Chain a row directly under a definition, above whatever it already holds. */
+/**
+ * Chain a row directly under a definition, above whatever it already holds:
+ * under an actor's, code is chained and anything else goes in its data.
+ */
 const under = (actor: Row, row: Row): void => {
+  const held = actor as Record<string, unknown>;
+  if (held[DATA] && !CODE_ROWS.has(row.type ?? '')) {
+    held[DATA] = place(held[DATA] as ActorData, row, 'first');
+    return;
+  }
   actor.next = {block: {...row, ...(actor.next ? {next: actor.next} : {})}};
 };
 
@@ -270,8 +377,26 @@ const rowOf = (actor: Row, type: string): Row => {
   throw new Error(`no ${type} under ${String(actor.fields?.NAME)}`);
 };
 
-/** Take the first row of a type out of a definition's chain. */
+/**
+ * Take the first row of a type out of a definition's chain, or the first
+ * trait or value of that type out of an actor's data.
+ */
 const without = (actor: Row, type: string): void => {
+  const held = actor as Record<string, unknown>;
+  const data = held[DATA] as ActorData | undefined;
+  if (data && type === 'world_use_trait') {
+    held[DATA] = {...data, traits: (data.traits ?? []).slice(1)};
+    return;
+  }
+  if (data && type.startsWith('world_set_')) {
+    const values = data.values ?? [];
+    const at = values.findIndex(one => one.setter === type);
+    held[DATA] = {
+      ...data,
+      values: values.filter((_, index) => index !== at),
+    };
+    return;
+  }
   let at = actor;
   while (at.next?.block) {
     if (at.next.block.type === type) {
@@ -2635,21 +2760,31 @@ describe('the hunter lesson’s check', () => {
   const prowling = () =>
     editing(lesson.source, 'main.world', contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
-      // The trait and the setter, which the lesson names as two edits and
-      // which live at two depths: the trait is a row beside the others, and
-      // the setter is inside the step that runs it — so this descends.
+      // The trait and the setter, which the lesson names as two edits: the
+      // trait is the Robot's data, and the setter is in its code, so this
+      // descends.
+      const robot = actorIn(workspace, 'Robot') as Record<string, unknown>;
+      const data = robot[DATA] as ActorData;
+      robot[DATA] = {
+        ...data,
+        traits: (data.traits ?? []).map(trait =>
+          trait === 'Steering#ChasesTrait' ? 'Prowling#ProwlsTrait' : trait,
+        ),
+      };
       const swap = (row: Row | undefined) => {
         for (let at = row; at; at = at.next?.block) {
-          if (at.fields?.TRAIT === 'Steering#ChasesTrait') {
-            at.fields = {TRAIT: 'Prowling#ProwlsTrait'};
-          }
           if (at.type === 'world_set_Steering_ActorToChaseProperty') {
             at.type = 'world_set_Prowling_ActorToHuntProperty';
           }
           swap(inSocket(at, 'DO'));
         }
       };
-      swap(actorIn(workspace, 'Robot'));
+      swap(robot as Row);
+      for (const root of workspace.blocks.blocks) {
+        if ((root as Record<string, unknown>)[FROM] === robot[FROM]) {
+          swap(root);
+        }
+      }
       return JSON.stringify(workspace);
     });
 
@@ -3745,15 +3880,24 @@ describe('the steering lesson’s check', () => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       const rows: Row[] = [];
       if (how === 'byhand') {
-        under(actorIn(workspace, 'Chaser'), {
-          type: 'world_set_Physics_VelocityProperty',
-          inputs: {
-            ACTOR: {block: {type: 'world_this_actor'}},
-            VALUE: {
-              block: {type: 'world_vector', fields: {VECTOR: {x: 2, y: 2}}},
+        // When it is made, as the Chaser's own handler.
+        workspace.blocks.blocks.push({
+          type: CREATED_HAT,
+          [FROM]: (actorIn(workspace, 'Chaser') as Record<string, unknown>)[
+            FROM
+          ],
+          next: {
+            block: {
+              type: 'world_set_Physics_VelocityProperty',
+              inputs: {
+                ACTOR: {block: {type: 'world_this_actor'}},
+                VALUE: {
+                  block: {type: 'world_vector', fields: {VECTOR: {x: 2, y: 2}}},
+                },
+              },
             },
           },
-        });
+        } as Row);
       } else {
         under(actorIn(workspace, 'Chaser'), {
           type: 'world_use_trait',
@@ -4244,12 +4388,12 @@ describe('the own-trait lesson’s check', () => {
     const solved = editing(declared, 'main.world', contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       // The Stone elects the OTHER one, which is the whole of the change.
-      // Its `use trait` row, wherever the view puts it among the others.
-      let row = actorIn(workspace, 'Stone').next?.block;
-      while (row && row.type !== 'world_use_trait') {
-        row = row.next?.block;
-      }
-      row!.fields!.TRAIT = 'Weather#SinksTrait';
+      const stone = actorIn(workspace, 'Stone') as Record<string, unknown>;
+      const data = stone[DATA] as ActorData;
+      stone[DATA] = {
+        ...data,
+        traits: ['Weather#SinksTrait', ...(data.traits ?? []).slice(1)],
+      };
       return JSON.stringify(workspace);
     });
     const {passes, result} = await check('making/trait', solved);

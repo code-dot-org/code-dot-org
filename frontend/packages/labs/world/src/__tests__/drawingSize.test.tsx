@@ -14,6 +14,7 @@
 
 import {describe, expect, it} from 'vitest';
 
+import {actorDocument} from '../actors/actorDocument';
 import {IntrinsicSizeProperty} from '../engine/rules/spatial';
 
 import {compileProject} from './support/compileProject';
@@ -32,57 +33,32 @@ const own = (name: string) => ({
 });
 
 /** A kind that is as big as it says it is. */
-const PLATE = JSON.stringify({
-  blocks: {
-    blocks: [
-      {
-        type: 'world_actor',
-        fields: {NAME: 'Plate'},
-        next: {
+const PLATE = actorDocument({
+  name: 'Plate',
+  properties: [
+    {name: 'width', type: 'number', access: 'writable', value: '40'},
+    {name: 'height', type: 'number', access: 'writable', value: '12'},
+  ],
+  code: [
+    {
+      type: 'world_define_drawing',
+      inputs: {
+        WIDTH: own('Width'),
+        HEIGHT: own('Height'),
+        DO: {
           block: {
-            type: 'world_rule_property',
-            fields: {
-              TYPE: 'number',
-              ACCESS: 'writable',
-              NAME: 'width',
-              DEFAULT: '40',
-            },
-            next: {
-              block: {
-                type: 'world_rule_property',
-                fields: {
-                  TYPE: 'number',
-                  ACCESS: 'writable',
-                  NAME: 'height',
-                  DEFAULT: '12',
-                },
-                next: {
-                  block: {
-                    type: 'world_define_drawing',
-                    inputs: {
-                      WIDTH: own('Width'),
-                      HEIGHT: own('Height'),
-                      DO: {
-                        block: {
-                          type: 'world_draw_rectangle',
-                          inputs: {
-                            X: number(0),
-                            Y: number(0),
-                            WIDTH: own('Width'),
-                            HEIGHT: own('Height'),
-                          },
-                        },
-                      },
-                    },
-                  },
-                },
-              },
+            type: 'world_draw_rectangle',
+            inputs: {
+              X: number(0),
+              Y: number(0),
+              WIDTH: own('Width'),
+              HEIGHT: own('Height'),
             },
           },
         },
       },
-    ],
-  },
+    },
+  ],
 });
 
 /** `add actor ⟨Plate⟩ do set width of ⟨this actor⟩ to ⟨w⟩`. */
@@ -176,35 +152,28 @@ describe('a drawing sized from the actor', () => {
   it('still takes a plain number, which is most drawings', async () => {
     // A Coin is 16 by 16 and always will be. The socket holds a shadow, so a
     // fixed size is the block a learner has always dragged out.
-    const fixed = JSON.stringify({
-      blocks: {
-        blocks: [
-          {
-            type: 'world_actor',
-            fields: {NAME: 'Chip'},
-            next: {
+    const fixed = actorDocument({
+      name: 'Chip',
+      code: [
+        {
+          type: 'world_define_drawing',
+          inputs: {
+            WIDTH: {shadow: {type: 'math_number', fields: {NUM: 16}}},
+            HEIGHT: {shadow: {type: 'math_number', fields: {NUM: 8}}},
+            DO: {
               block: {
-                type: 'world_define_drawing',
+                type: 'world_draw_rectangle',
                 inputs: {
-                  WIDTH: {shadow: {type: 'math_number', fields: {NUM: 16}}},
-                  HEIGHT: {shadow: {type: 'math_number', fields: {NUM: 8}}},
-                  DO: {
-                    block: {
-                      type: 'world_draw_rectangle',
-                      inputs: {
-                        X: number(0),
-                        Y: number(0),
-                        WIDTH: number(16),
-                        HEIGHT: number(8),
-                      },
-                    },
-                  },
+                  X: number(0),
+                  Y: number(0),
+                  WIDTH: number(16),
+                  HEIGHT: number(8),
                 },
               },
             },
           },
-        ],
-      },
+        },
+      ],
     });
     const {world} = await compileProject({
       'actors/chip.actor': fixed,

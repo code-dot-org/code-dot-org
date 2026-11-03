@@ -11,7 +11,7 @@
 
 import {describe, expect, it} from 'vitest';
 
-import {asActorData, viewOf} from '../../actors/actorData';
+import type {ActorData} from '../../actors/actorData';
 import {buildDomainPalette} from '../../blockly/domainBlocks';
 import {projectOwnMetas, projectRuleMetas} from '../../blockly/projectModules';
 import {clickableNames, placeNamed} from '../../callouts/places';
@@ -449,8 +449,6 @@ describe('a property the learner just declared', () => {
   // is the one thing a lesson about declaring properties cannot survive.
   const declaring = (id: TileId, path: string, root: string): Set<string> => {
     const files = {...projectFiles(LESSONS[id]!.source)};
-    // An actor is data: declared through its view, and folded back
-    // (specs/ACTORS_AS_DATA_PLAN.md, step 5).
     const written = files[path];
     // A screen declares its values as data, as its inspector writes them
     // (`screenData`).
@@ -465,8 +463,19 @@ describe('a property the learner just declared', () => {
       });
       return offeredIn(id, files);
     }
-    const actor = path.endsWith('.actor');
-    const workspace = JSON.parse(actor ? viewOf(written) : written) as {
+    // An actor declares its properties as data, as its editor writes them.
+    if (path.endsWith('.actor')) {
+      const data = JSON.parse(written) as ActorData;
+      files[path] = JSON.stringify({
+        ...data,
+        properties: [
+          ...(data.properties ?? []),
+          {name: 'lives', type: 'number', access: 'writable', value: '3'},
+        ],
+      });
+      return offeredIn(id, files);
+    }
+    const workspace = JSON.parse(written) as {
       blocks: {blocks: {type?: string; next?: unknown}[]};
     };
     const at = workspace.blocks.blocks.find(block => block.type === root)!;
@@ -482,9 +491,7 @@ describe('a property the learner just declared', () => {
         next: at.next,
       },
     };
-    files[path] = actor
-      ? asActorData(JSON.stringify(workspace), written)
-      : JSON.stringify(workspace);
+    files[path] = JSON.stringify(workspace);
     return offeredIn(id, files);
   };
 

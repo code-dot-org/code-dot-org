@@ -13,44 +13,30 @@
 
 import {describe, expect, it} from 'vitest';
 
+import {actorDocument} from '../actors/actorDocument';
 import {PositionProperty} from '../engine';
 
 import {compileProject} from './support/compileProject';
 
 /** `Ball`, with one thing it knows how to do: put itself in the middle. */
-const BALL = JSON.stringify({
-  blocks: {
-    blocks: [
-      {
-        type: 'world_actor',
-        id: 'ballDef',
-        fields: {NAME: 'Ball'},
-        next: {
-          block: {
-            type: 'world_rule_block',
-            id: 'serveDef',
-            fields: {
-              RETURNS: 'none',
-              DESCRIPTION: 'Put it back where it started.',
-            },
-            extraState: {parts: [{kind: 'label', text: 'serve'}]},
-            inputs: {
-              DO: {
-                block: {
-                  type: 'world_set_position',
-                  inputs: {
-                    ACTOR: {block: {type: 'world_this_actor'}},
-                    X: {block: {type: 'math_number', fields: {NUM: 160}}},
-                    Y: {block: {type: 'math_number', fields: {NUM: 96}}},
-                  },
-                },
-              },
-            },
-          },
+const BALL = actorDocument({
+  name: 'Ball',
+  members: [
+    {
+      id: 'serveDef',
+      kind: 'block',
+      description: 'Put it back where it started.',
+      parts: [{kind: 'label', text: 'serve'}],
+      body: {
+        type: 'world_set_position',
+        inputs: {
+          ACTOR: {block: {type: 'world_this_actor'}},
+          X: {block: {type: 'math_number', fields: {NUM: 160}}},
+          Y: {block: {type: 'math_number', fields: {NUM: 96}}},
         },
       },
-    ],
-  },
+    },
+  ],
 });
 
 /** A world that places one and tells it to do the thing. */
@@ -110,76 +96,48 @@ describe('an actor’s own block', () => {
 });
 
 /** A parameter, and one of the actor's own blocks calling another. */
-const KICKER = JSON.stringify({
+const KICKER = actorDocument({
+  name: 'Ball',
   // A designed parameter IS a workspace variable; the mutator saves its id, and
   // both the closure's signature and the getters in the body resolve it here.
   variables: [{id: 'howFarVar', name: 'how far', type: 'Number'}],
-  blocks: {
-    blocks: [
-      {
-        type: 'world_actor',
-        id: 'ballDef',
-        fields: {NAME: 'Ball'},
-        next: {
-          block: {
-            type: 'world_rule_block',
-            id: 'kickDef',
-            fields: {RETURNS: 'none', DESCRIPTION: 'Send it along the floor.'},
-            extraState: {
-              parts: [
-                {kind: 'label', text: 'kick'},
-                {kind: 'param', var: 'howFarVar', type: 'number'},
-              ],
-            },
-            inputs: {
-              DO: {
-                block: {
-                  type: 'world_set_position',
-                  inputs: {
-                    ACTOR: {block: {type: 'world_this_actor'}},
-                    X: {
-                      block: {
-                        type: 'variables_get_Number',
-                        fields: {
-                          VAR: {
-                            id: 'howFarVar',
-                            name: 'how far',
-                            type: 'Number',
-                          },
-                        },
-                      },
-                    },
-                    Y: {block: {type: 'math_number', fields: {NUM: 96}}},
-                  },
-                },
-              },
-            },
-            next: {
-              block: {
-                type: 'world_rule_block',
-                id: 'serveDef',
-                fields: {RETURNS: 'none', DESCRIPTION: 'Kick it a long way.'},
-                extraState: {parts: [{kind: 'label', text: 'serve'}]},
-                inputs: {
-                  DO: {
-                    block: {
-                      type: 'world_do_ActorsBall_KickAction',
-                      inputs: {
-                        VALUE: {
-                          block: {type: 'math_number', fields: {NUM: 160}},
-                        },
-                        ACTOR: {block: {type: 'world_this_actor'}},
-                      },
-                    },
-                  },
-                },
-              },
+  members: [
+    {
+      id: 'kickDef',
+      kind: 'block',
+      description: 'Send it along the floor.',
+      parts: [
+        {kind: 'label', text: 'kick'},
+        {kind: 'param', var: 'howFarVar', type: 'number'},
+      ],
+      body: {
+        type: 'world_set_position',
+        inputs: {
+          ACTOR: {block: {type: 'world_this_actor'}},
+          X: {
+            block: {
+              type: 'variables_get_Number',
+              fields: {VAR: {id: 'howFarVar', name: 'how far', type: 'Number'}},
             },
           },
+          Y: {block: {type: 'math_number', fields: {NUM: 96}}},
         },
       },
-    ],
-  },
+    },
+    {
+      id: 'serveDef',
+      kind: 'block',
+      description: 'Kick it a long way.',
+      parts: [{kind: 'label', text: 'serve'}],
+      body: {
+        type: 'world_do_ActorsBall_KickAction',
+        inputs: {
+          VALUE: {block: {type: 'math_number', fields: {NUM: 160}}},
+          ACTOR: {block: {type: 'world_this_actor'}},
+        },
+      },
+    },
+  ],
 });
 
 describe('one of an actor’s own blocks calling another', () => {

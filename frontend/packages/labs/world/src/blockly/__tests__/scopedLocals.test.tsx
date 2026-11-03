@@ -28,6 +28,7 @@ import * as Blockly from 'blockly/core';
 import {createRef} from 'react';
 import {describe, expect, it} from 'vitest';
 
+import {actorDocument} from '../../actors/actorDocument';
 import BlocklyGenerator, {
   type BlocklyGeneratorHandle,
 } from '../BlocklyGenerator';
@@ -47,30 +48,26 @@ const number = (value: number) => ({
 });
 
 /** An `.actor` whose per-frame body is `rows`, and the variables it declares. */
-const actorWith = (rows: object[], variables: object[] = [COUNT]) =>
-  JSON.stringify({
-    blocks: {
-      blocks: [
-        {
-          type: 'world_actor',
-          fields: {NAME: 'Scribe'},
-          next: {
-            block: {
-              type: 'world_trait_step',
-              fields: {PHASE: 'react', NAME: 'count'},
-              inputs: {
-                DO: {
-                  block: rows.reduceRight((next, row) => ({
-                    ...(row as object),
-                    next: {block: next},
-                  })),
-                },
-              },
-            },
+const actorWith = (
+  rows: object[],
+  variables: Array<{id: string; name: string; type: string}> = [COUNT],
+) =>
+  actorDocument({
+    name: 'Scribe',
+    code: [
+      {
+        type: 'world_trait_step',
+        fields: {PHASE: 'react', NAME: 'count'},
+        inputs: {
+          DO: {
+            block: rows.reduceRight((next, row) => ({
+              ...(row as object),
+              next: {block: next},
+            })),
           },
         },
-      ],
-    },
+      },
+    ],
     variables,
   });
 

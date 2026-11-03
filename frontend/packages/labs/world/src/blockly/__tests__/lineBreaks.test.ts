@@ -5,13 +5,15 @@
 
 import {describe, expect, it} from 'vitest';
 
+import type {ActorMemberPart} from '../../actors/actorData';
+import {actorDocument} from '../../actors/actorDocument';
 import {endsNothing, settledParts} from '../designParts';
 import {buildDomainPalette} from '../domainBlocks';
 import {parseActorOwnMeta} from '../ownProperties';
 
-const label = (text: string) => ({kind: 'label', text});
-const row = {kind: 'row'};
-const value = (id: string, name: string) => ({
+const label = (text: string): ActorMemberPart => ({kind: 'label', text});
+const row: ActorMemberPart = {kind: 'row'};
+const value = (id: string, name: string): ActorMemberPart => ({
   kind: 'param',
   type: 'number',
   var: id,
@@ -19,26 +21,13 @@ const value = (id: string, name: string) => ({
 });
 
 /** An `.actor` file with one block and one event, each in two lines. */
-const actorFile = (parts: object[]) =>
-  JSON.stringify({
-    blocks: {
-      blocks: [
-        {
-          type: 'world_actor',
-          fields: {NAME: 'Healer'},
-          next: {
-            block: {
-              type: 'world_rule_block',
-              fields: {RETURNS: 'none', DESCRIPTION: '', ACCESS: 'shared'},
-              extraState: {parts},
-              next: {
-                block: {type: 'world_rule_event', extraState: {parts}},
-              },
-            },
-          },
-        },
-      ],
-    },
+const actorFile = (parts: ActorMemberPart[]) =>
+  actorDocument({
+    name: 'Healer',
+    members: [
+      {kind: 'block', parts},
+      {kind: 'event', parts},
+    ],
     variables: [
       {id: 'v1', name: 'amount', type: 'Number'},
       {id: 'v2', name: 'times', type: 'Number'},

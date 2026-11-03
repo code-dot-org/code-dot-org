@@ -8,7 +8,7 @@
 
 import {describe, expect, it} from 'vitest';
 
-import {viewOf} from '../../actors/actorData';
+import type {ActorData} from '../../actors/actorData';
 import {
   clickableNames,
   parsePlaceName,
@@ -23,21 +23,14 @@ const pointing = ids.filter(
   id => clickableNames(LESSONS[id].instructions).length > 0,
 );
 
-/** The names the lesson's actor files declare: `define actor ⟨Hero⟩`. */
+/** The names the lesson's actor files give their actors. */
 const kindsOf = (id: TileId): string[] =>
   Object.entries(projectFiles(LESSONS[id].source))
     .filter(([path]) => path.endsWith('.actor'))
     .flatMap(([, contents]) => {
       try {
-        // An actor is data; its name is read where its view says it.
-        const roots = (
-          JSON.parse(viewOf(contents)) as {
-            blocks?: {blocks?: Array<{type: string; fields?: {NAME?: string}}>};
-          }
-        ).blocks?.blocks;
-        return (roots ?? [])
-          .filter(root => root.type === 'world_actor')
-          .flatMap(root => (root.fields?.NAME ? [root.fields.NAME] : []));
+        const name = (JSON.parse(contents) as ActorData).name;
+        return name ? [name] : [];
       } catch {
         return [];
       }
