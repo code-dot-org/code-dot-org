@@ -9,7 +9,7 @@ import {
   Typography as MuiTypography,
 } from '@mui/material';
 import classNames from 'classnames';
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 
 import {imageKindLabel, ImageSubject, ImageType} from '../../ai/images/types';
 
@@ -98,6 +98,22 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
   // does not share, so a pick would leave the menu open; a remount closes it.
   const [menuKey, setMenuKey] = useState(0);
   useEffect(() => setConfirming(false), [chosenId]);
+  // A new slot may land below the fold of a long list: bring it into view,
+  // smoothly unless the student asked for less motion.
+  const draftRef = useRef<HTMLDivElement>(null);
+  const draftId = draft?.id;
+  useEffect(() => {
+    if (!draftId) {
+      return;
+    }
+    const reduced = window.matchMedia?.(
+      '(prefers-reduced-motion: reduce)'
+    ).matches;
+    draftRef.current?.scrollIntoView?.({
+      behavior: reduced ? 'auto' : 'smooth',
+      block: 'nearest',
+    });
+  }, [draftId]);
   const chosenImage = images.find(image => image.key === chosenId);
   const deletable = !!onDelete && !!chosenImage;
   return (
@@ -170,6 +186,7 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
                   puts new images at the front. */}
               {ownDraft && (
                 <div
+                  ref={draftRef}
                   className={classNames(
                     styles.tileSlot,
                     ownDraft.id === chosenId && styles.tileSlotChosen

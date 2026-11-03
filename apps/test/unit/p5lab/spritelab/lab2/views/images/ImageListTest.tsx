@@ -52,6 +52,32 @@ describe('ImageList', () => {
     ]);
   });
 
+  it('brings a new slot into view, smoothly', () => {
+    const scrollIntoView = jest.fn();
+    Element.prototype.scrollIntoView = scrollIntoView;
+    const {rerender} = render(
+      <ImageList
+        images={[]}
+        draft={null}
+        chosenId={null}
+        onChoose={jest.fn()}
+      />
+    );
+    expect(scrollIntoView).not.toHaveBeenCalled();
+    rerender(
+      <ImageList
+        images={[]}
+        draft={{id: 'draft', imageType: 'sprite', subject: 'character'}}
+        chosenId="draft"
+        onChoose={jest.fn()}
+      />
+    );
+    expect(scrollIntoView).toHaveBeenCalledWith({
+      behavior: 'smooth',
+      block: 'nearest',
+    });
+  });
+
   it('lists the images and the draft, marking the chosen one', () => {
     render(
       <ImageList
