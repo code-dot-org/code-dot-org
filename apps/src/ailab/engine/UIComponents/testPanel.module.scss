@@ -28,6 +28,10 @@
 
 .fields .field {
   @include mixins.full-width-field;
+
+  input {
+    width: 100%;
+  }
 }
 
 .actionRow {
