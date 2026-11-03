@@ -22,8 +22,6 @@ import {PixelEditorSaveMeta} from '@cdo/apps/pixelEditor/PixelEditor';
 import {getStore} from '@cdo/apps/redux';
 import {createUuid} from '@cdo/apps/utils';
 
-import {trimAnimationListImages} from '../imageTrim';
-
 // The animation fields the save paths write. An explicit `undefined`
 // clears the field (the spread keeps the key).
 export interface AnimationPatch {
@@ -141,7 +139,8 @@ export function repointAnimation(
       },
     },
   };
+  // The Images tab trims on every list change; a trim here would scan the
+  // repointed image a second time.
   dispatch({type: SET_INITIAL_ANIMATION_LIST, animationList: updated});
-  trimAnimationListImages(updated);
   return current.propsByKey[key]?.sourceUrl;
 }
