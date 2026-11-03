@@ -4,14 +4,23 @@
 import classNames from 'classnames';
 import React, {useEffect, useRef} from 'react';
 
+import {toImage} from '@cdo/apps/imageUtils';
+
 import styles from './learning-dialog.module.scss';
+
+/** Width and height of the top-left region of a picture to show, so a
+    sprite sheet shows only its first frame. */
+export interface PictureCrop {
+  width: number;
+  height: number;
+}
 
 interface ChunkyPictureProps {
   src: string;
   /** Cells across the picture; the picture's own pixels when unset. */
   cells?: number;
-  /** A sheet's first frame; the whole image when unset. */
-  crop?: {width: number; height: number};
+  /** Unset shows the whole image. */
+  crop?: PictureCrop;
   className?: string;
 }
 
@@ -30,14 +39,14 @@ const ChunkyPicture: React.FunctionComponent<ChunkyPictureProps> = ({
       return;
     }
     let cancelled = false;
-    const image = new Image();
-    image.onload = () => {
+    toImage(src).then(image => {
       if (cancelled) {
         return;
       }
       const width = cropWidth ?? image.naturalWidth;
       const height = cropHeight ?? image.naturalHeight;
-      // Down to the coarse grid, then back up with hard edges.
+      // Shrinking to `cells` pixels across and enlarging back without
+      // smoothing turns each coarse pixel into a flat block.
       const coarse = document.createElement('canvas');
       coarse.width = cells ?? width;
       coarse.height = cells ?? height;
@@ -62,8 +71,7 @@ const ChunkyPicture: React.FunctionComponent<ChunkyPictureProps> = ({
       canvas.height = height;
       ctx.imageSmoothingEnabled = false;
       ctx.drawImage(coarse, 0, 0, width, height);
-    };
-    image.src = src;
+    });
     return () => {
       cancelled = true;
     };

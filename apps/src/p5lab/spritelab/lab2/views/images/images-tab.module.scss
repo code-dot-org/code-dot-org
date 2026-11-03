@@ -2,6 +2,7 @@
 @use '../checkerboard';
 @use '../imageTile' as tile;
 @use '../editor-strip' as strip;
+@use '../sentence/sr-only';
 @use '../../../../../pixelEditor/dialogChrome' as chrome;
 
 // Three columns: the list, the frame, the pane. The pane's width is set
@@ -582,4 +583,8 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   align-items: flex-start;
   justify-content: space-between;
   gap: 8px;
+}
+
+.srOnly {
+  @include sr-only.sr-only;
 }

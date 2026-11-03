@@ -7,20 +7,30 @@ import React from 'react';
 
 import styles from './images-tab.module.scss';
 
+export interface ReasonOption {
+  value: string;
+  label: string;
+}
+
 interface ReasonOptionsProps {
   name: string;
-  options: {value: string; label: string}[];
+  /** The question the reasons answer, read to screen readers as the group's
+      name. */
+  legend: string;
+  options: ReasonOption[];
   values: string[];
   onChange: (values: string[]) => void;
 }
 
 const ReasonOptions: React.FunctionComponent<ReasonOptionsProps> = ({
   name,
+  legend,
   options,
   values,
   onChange,
 }) => (
-  <div className={styles.reasonList}>
+  <fieldset className={styles.reasonList}>
+    <legend className={styles.srOnly}>{legend}</legend>
     {options.map(option => {
       const picked = values.includes(option.value);
       return (
@@ -45,7 +55,7 @@ const ReasonOptions: React.FunctionComponent<ReasonOptionsProps> = ({
         />
       );
     })}
-  </div>
+  </fieldset>
 );
 
 export default ReasonOptions;

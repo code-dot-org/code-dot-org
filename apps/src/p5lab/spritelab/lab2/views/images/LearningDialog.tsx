@@ -3,22 +3,23 @@
 
 import {MuiDialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography as MuiTypography} from '@mui/material';
 import classNames from 'classnames';
 import React, {useState} from 'react';
 
-import ChunkyPicture from './ChunkyPicture';
+import ChunkyPicture, {PictureCrop} from './ChunkyPicture';
 
 import styles from './learning-dialog.module.scss';
 
 export interface LearningPicture {
   src: string;
-  /** A sheet's first frame; the whole image when unset. */
-  crop?: {width: number; height: number};
+  /** Unset shows the whole image. */
+  crop?: PictureCrop;
 }
 
 interface LearningDialogProps {
   picture: LearningPicture;
-  /** The student's words. */
+  /** The prompt the student built. */
   prompt: string;
   onDone: () => void;
 }
@@ -26,8 +27,10 @@ interface LearningDialogProps {
 const TITLE = 'How AI made your image';
 // Cells across the picture at each stage of the guess.
 const GUESS_STAGES = [4, 12] as const;
-// Pictures in the training mosaic.
+// Pictures in the training mosaic, and the delay between one appearing and
+// the next.
 const MOSAIC_CELLS = 12;
+const MOSAIC_STAGGER_MS = 90;
 
 interface PanelContent {
   text: string;
@@ -43,7 +46,11 @@ const PANELS: PanelContent[] = [
           <span
             key={i}
             className={styles.mosaicCell}
-            style={{animationDelay: `${i * 90}ms`}}
+            style={
+              {
+                '--cell-delay': `${i * MOSAIC_STAGGER_MS}ms`,
+              } as React.CSSProperties
+            }
           >
             <FontAwesomeV6Icon iconName="image" />
           </span>
@@ -54,11 +61,11 @@ const PANELS: PanelContent[] = [
   {
     text: 'Then it read your words. Every word nudges the picture one way or another.',
     visual: (_, prompt) => (
-      <p className={styles.words}>
+      <MuiTypography component="p" variant="h5" className={styles.words}>
         <span className={styles.quote}>“</span>
         {prompt}
         <span className={styles.quote}>”</span>
-      </p>
+      </MuiTypography>
     ),
   },
   {
@@ -98,7 +105,7 @@ const LearningDialog: React.FunctionComponent<LearningDialogProps> = ({
   onDone,
 }) => {
   const [index, setIndex] = useState(0);
-  const last = index === PANELS.length - 1;
+  const onLastPanel = index === PANELS.length - 1;
   const panel = PANELS[index];
   return (
     <MuiDialog
@@ -112,7 +119,13 @@ const LearningDialog: React.FunctionComponent<LearningDialogProps> = ({
           </span>
           <div key={index} className={styles.panel}>
             <div className={styles.visual}>{panel.visual(picture, prompt)}</div>
-            <p className={styles.text}>{panel.text}</p>
+            <MuiTypography
+              component="p"
+              variant="body1"
+              className={styles.text}
+            >
+              {panel.text}
+            </MuiTypography>
           </div>
           <div className={styles.dots} aria-hidden>
             {PANELS.map((_, i) => (
@@ -133,8 +146,8 @@ const LearningDialog: React.FunctionComponent<LearningDialogProps> = ({
           : undefined
       }
       primaryButtonProps={{
-        children: last ? 'Got it' : 'Next',
-        onClick: () => (last ? onDone() : setIndex(i => i + 1)),
+        children: onLastPanel ? 'Got it' : 'Next',
+        onClick: () => (onLastPanel ? onDone() : setIndex(i => i + 1)),
       }}
     />
   );

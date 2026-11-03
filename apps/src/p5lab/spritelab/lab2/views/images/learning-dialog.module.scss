@@ -40,12 +40,10 @@
 
 .text {
   margin: 0;
-  font-size: 17px;
-  line-height: 1.5;
   text-align: center;
 }
 
-// Four rows of three pictures, appearing one after another.
+// Three rows of four pictures, each fading in a little after the last.
 .mosaic {
   display: grid;
   grid-template-columns: repeat(4, 56px);
@@ -63,6 +61,7 @@
   border-radius: 8px;
   background-color: var(--background-neutral-secondary);
   animation: cell-in 0.4s ease-out both;
+  animation-delay: var(--cell-delay, 0ms);
 }
 
 @keyframes cell-in {
@@ -78,8 +77,6 @@
 
 .words {
   margin: 0;
-  font-size: 26px;
-  font-weight: 600;
   text-align: center;
 }
 

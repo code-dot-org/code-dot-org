@@ -5,11 +5,11 @@ import {MuiDialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useEffect, useId, useRef, useState} from 'react';
 
 import {Verdict} from '../sentence/ResultActions';
 
-import ReasonOptions from './ReasonOptions';
+import ReasonOptions, {ReasonOption} from './ReasonOptions';
 
 import styles from './images-tab.module.scss';
 
@@ -18,7 +18,8 @@ interface RatingBarProps {
   onJudge: (verdict: Verdict) => void;
   /** The reasons picked for the verdict, when the question is done. */
   onReasons: (reasons: string[]) => void;
-  /** The question opened or closed, for a host that waits on it. */
+  /** Called with true when the reasons dialog opens and false when it
+      closes. */
   onAsking?: (open: boolean) => void;
   disabled?: boolean;
 }
@@ -26,7 +27,7 @@ interface RatingBarProps {
 /** The question and its three answers, by thumb. */
 export const RATING_QUESTIONS: Record<
   Verdict,
-  {question: string; options: {value: string; label: string}[]}
+  {question: string; options: ReasonOption[]}
 > = {
   up: {
     question: 'What did AI do well?',
@@ -53,8 +54,8 @@ const RatingBar: React.FunctionComponent<RatingBarProps> = ({
   onAsking,
   disabled,
 }) => {
-  // The question opens with the thumb and closes with Done. Done may also
-  // take the bar away in the same render, so leaving says closed too.
+  // Done can unmount this bar in the same render that closes the dialog,
+  // so the unmount cleanup also reports it closed.
   const [asking, setAsking] = useState<Verdict | null>(null);
   const onAskingRef = useRef(onAsking);
   onAskingRef.current = onAsking;
@@ -69,14 +70,21 @@ const RatingBar: React.FunctionComponent<RatingBarProps> = ({
     setAsking(next);
   };
   const question = asking && RATING_QUESTIONS[asking];
+  const questionId = useId();
+  // Done, and the dialog's close button and Escape, all record what was
+  // picked: there is no way to leave the question unanswered.
+  const done = () => {
+    onReasons(picked);
+    setAsking(null);
+  };
   return (
     <>
       <div
         className={styles.ratingBar}
         role="group"
-        aria-labelledby="rating-bar-question"
+        aria-labelledby={questionId}
       >
-        <span id="rating-bar-question" className={styles.ratingQuestion}>
+        <span id={questionId} className={styles.ratingQuestion}>
           How did AI do?
         </span>
         <MuiIconButton
@@ -134,19 +142,15 @@ const RatingBar: React.FunctionComponent<RatingBarProps> = ({
               </p>
               <ReasonOptions
                 name="rating-reasons"
+                legend={question.question}
                 options={question.options}
                 values={picked}
                 onChange={setPicked}
               />
             </>
           }
-          primaryButtonProps={{
-            children: 'Done',
-            onClick: () => {
-              onReasons(picked);
-              setAsking(null);
-            },
-          }}
+          onClose={done}
+          primaryButtonProps={{children: 'Done', onClick: done}}
         />
       )}
     </>
