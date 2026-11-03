@@ -83,17 +83,14 @@ function accessTokenCacheKey(aichatContext: AichatContext): string {
   return JSON.stringify(aichatContext, Object.keys(aichatContext).sort());
 }
 
+// The payload is base64url; atob wants base64 but tolerates the missing padding.
 function accessTokenLifetimeMs(token: string): number | undefined {
   try {
-    const segment = token.split('.')[1].replace(/-/g, '+').replace(/_/g, '/');
     const payload = JSON.parse(
-      atob(segment.padEnd(Math.ceil(segment.length / 4) * 4, '='))
-    ) as {issued_at_time?: unknown; expiration_time?: unknown};
-    const {issued_at_time: issuedAt, expiration_time: expiresAt} = payload;
-    if (typeof issuedAt !== 'number' || typeof expiresAt !== 'number') {
-      return undefined;
-    }
-    const lifetimeMs = (expiresAt - issuedAt) * 1000;
+      atob(token.split('.')[1].replace(/-/g, '+').replace(/_/g, '/'))
+    );
+    const lifetimeMs =
+      (payload.expiration_time - payload.issued_at_time) * 1000;
     return lifetimeMs > 0 ? lifetimeMs : undefined;
   } catch {
     return undefined;
