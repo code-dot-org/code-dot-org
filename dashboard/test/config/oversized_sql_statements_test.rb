@@ -8,6 +8,10 @@ class OversizedSqlStatementsTest < ActiveSupport::TestCase
     "DELETE FROM `channel_tokens` WHERE `id` = 1" => 'channel_tokens',
   }.freeze
 
+  teardown do
+    ActiveRecord::Base.connection.rds_proxy_pin_reason = nil
+  end
+
   test 'names the table a write statement targets' do
     WRITES.each do |sql, table|
       assert_equal table, Cdo::OversizedSqlStatements.target_table(sql)
@@ -27,5 +31,23 @@ class OversizedSqlStatementsTest < ActiveSupport::TestCase
   test 'omits its own frames from the reported source' do
     refute_includes Cdo::OversizedSqlStatements.source_frame.to_s,
       Cdo::OversizedSqlStatements::SELF_BASENAME
+  end
+
+  test 'pins the connection that ran an oversized statement' do
+    connection = ActiveRecord::Base.connection
+    connection.rds_proxy_pin_reason = nil
+
+    connection.execute("SELECT '#{'x' * (Cdo::OversizedSqlStatements::LIMIT_BYTES + 1)}'")
+
+    assert_equal Cdo::OversizedSqlStatements::PIN_REASON, connection.rds_proxy_pin_reason
+  end
+
+  test 'leaves the connection unpinned for a statement within the limit' do
+    connection = ActiveRecord::Base.connection
+    connection.rds_proxy_pin_reason = nil
+
+    connection.execute('SELECT 1')
+
+    assert_nil connection.rds_proxy_pin_reason
   end
 end
