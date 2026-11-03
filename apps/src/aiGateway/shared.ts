@@ -1,3 +1,5 @@
+import {AiGatewayAccessTokenLifetimeSeconds} from '@cdo/generated-scripts/sharedConstants';
+
 import AichatContextManager from '../aichat/aichatContextManager';
 import {AichatContext} from '../aichat/types';
 import HttpClient from '../util/HttpClient';
@@ -75,26 +77,12 @@ interface CachedAccessToken extends GatewayAccessToken {
 const cachedAccessTokens = new Map<string, CachedAccessToken>();
 const pendingAccessTokens = new Map<string, Promise<GatewayAccessToken>>();
 
-// 15 s for a long request, plus the 5 s by which Rails backdates issued_at_time.
-export const ACCESS_TOKEN_REUSE_MARGIN_MS = 20_000;
+// A token must outlive the request that carries it, which can be a long generation.
+export const ACCESS_TOKEN_REUSE_MARGIN_MS = 15_000;
 
 // Every field is sent to Rails, so any of them may become a claim.
 function accessTokenCacheKey(aichatContext: AichatContext): string {
   return JSON.stringify(aichatContext, Object.keys(aichatContext).sort());
-}
-
-// The payload is base64url; atob wants base64 but tolerates the missing padding.
-function accessTokenLifetimeMs(token: string): number | undefined {
-  try {
-    const payload = JSON.parse(
-      atob(token.split('.')[1].replace(/-/g, '+').replace(/_/g, '/'))
-    );
-    const lifetimeMs =
-      (payload.expiration_time - payload.issued_at_time) * 1000;
-    return lifetimeMs > 0 ? lifetimeMs : undefined;
-  } catch {
-    return undefined;
-  }
 }
 
 async function fetchAndCacheAccessToken(
@@ -104,13 +92,10 @@ async function fetchAndCacheAccessToken(
   // Read before the request: the token is issued later, so its expiry is never overestimated.
   const requestedAt = Date.now();
   const accessToken = await fetchAccessToken(aichatContext);
-  const lifetimeMs = accessTokenLifetimeMs(accessToken.token);
-  if (lifetimeMs !== undefined) {
-    cachedAccessTokens.set(key, {
-      ...accessToken,
-      expiresAtLocal: requestedAt + lifetimeMs,
-    });
-  }
+  cachedAccessTokens.set(key, {
+    ...accessToken,
+    expiresAtLocal: requestedAt + AiGatewayAccessTokenLifetimeSeconds * 1000,
+  });
   return accessToken;
 }
 

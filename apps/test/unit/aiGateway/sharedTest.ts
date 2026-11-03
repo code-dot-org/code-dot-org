@@ -8,7 +8,10 @@ import {
   invalidateAccessToken,
 } from '@cdo/apps/aiGateway/shared';
 import HttpClient, {NetworkError} from '@cdo/apps/util/HttpClient';
-import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
+import {
+  AiChatClientTypes,
+  AiGatewayAccessTokenLifetimeSeconds,
+} from '@cdo/generated-scripts/sharedConstants';
 
 jest.mock('@cdo/apps/util/HttpClient', () => ({
   ...jest.requireActual('@cdo/apps/util/HttpClient'),
@@ -61,23 +64,6 @@ describe('fetchAccessToken', () => {
   });
 });
 
-const base64url = (value: string) =>
-  btoa(value).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
-
-// Mirrors Rails: issued_at_time is backdated 5 s, expiration_time is 60 s out.
-const makeJwt = (id: number, nowSeconds = Math.floor(Date.now() / 1000)) =>
-  [
-    base64url(JSON.stringify({alg: 'RS256'})),
-    base64url(
-      JSON.stringify({
-        issued_at_time: nowSeconds - 5,
-        expiration_time: nowSeconds + 60,
-        token_id: `id-${id}`,
-      })
-    ),
-    'signature',
-  ].join('.');
-
 const tokenResponse = (token: string) => ({
   json: async () => ({token, turnstileEnforcementMode: 'disabled'}),
 });
@@ -89,7 +75,7 @@ describe('getAccessToken', () => {
     jest.useFakeTimers();
     clearAccessTokenCache();
     issued = 0;
-    mockPost.mockImplementation(async () => tokenResponse(makeJwt(++issued)));
+    mockPost.mockImplementation(async () => tokenResponse(`token-${++issued}`));
     AichatContextManager.setContext(tutorContext);
   });
 
@@ -138,8 +124,8 @@ describe('getAccessToken', () => {
   });
 
   it('fetches a new token once the reuse margin is reached', async () => {
-    // exp - iat is 65 s, so reuse ends 65 s - margin after the request.
-    const reuseMs = 65_000 - ACCESS_TOKEN_REUSE_MARGIN_MS;
+    const reuseMs =
+      AiGatewayAccessTokenLifetimeSeconds * 1000 - ACCESS_TOKEN_REUSE_MARGIN_MS;
     await getAccessToken(tutorContext);
 
     jest.advanceTimersByTime(reuseMs - 1);
@@ -174,17 +160,8 @@ describe('getAccessToken', () => {
     expect(mockPost).toHaveBeenCalledTimes(1);
 
     await expect(getAccessToken(tutorContext)).resolves.toMatchObject({
-      token: makeJwt(1),
+      token: 'token-1',
     });
-    expect(mockPost).toHaveBeenCalledTimes(2);
-  });
-
-  it('does not cache a token whose payload cannot be decoded', async () => {
-    mockPost.mockImplementation(async () => tokenResponse('not-a-jwt'));
-
-    await getAccessToken(tutorContext);
-    await getAccessToken(tutorContext);
-
     expect(mockPost).toHaveBeenCalledTimes(2);
   });
 

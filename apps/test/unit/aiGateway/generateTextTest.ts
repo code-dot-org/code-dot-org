@@ -36,24 +36,6 @@ const aichatContext: AichatContext = {
   channelId: undefined,
 };
 
-const base64url = (value: string) =>
-  btoa(value).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
-
-const makeJwt = (id: number) => {
-  const now = Math.floor(Date.now() / 1000);
-  return [
-    base64url(JSON.stringify({alg: 'RS256'})),
-    base64url(
-      JSON.stringify({
-        issued_at_time: now - 5,
-        expiration_time: now + 60,
-        token_id: `id-${id}`,
-      })
-    ),
-    'signature',
-  ].join('.');
-};
-
 const generate = () =>
   generateTextThroughGateway(
     {model: 'gemini', prompt: 'hello'},
@@ -72,7 +54,7 @@ describe('generateTextThroughGateway access tokens', () => {
     let issued = 0;
     mockPost.mockImplementation(async (url: string) => {
       if (url === '/ai_gateway/access_token') {
-        const token = makeJwt(++issued);
+        const token = `token-${++issued}`;
         return {json: async () => ({token, turnstileEnforcementMode: 'off'})};
       }
       if (url === AI_GATEWAY_URL && gatewayStatus !== 200) {

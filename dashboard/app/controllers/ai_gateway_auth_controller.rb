@@ -55,8 +55,7 @@ class AiGatewayAuthController < ApplicationController
 
     # Set a little in the past to account for time drift
     issued_at_time = (Time.now - 5.seconds).to_i
-    # expire token in 1 minute
-    expiration_time = (Time.now + 1.minute).to_i
+    expiration_time = (Time.now + SharedConstants::AI_GATEWAY_ACCESS_TOKEN_LIFETIME_SECONDS.seconds).to_i
 
     token = JWT.encode(
       {
