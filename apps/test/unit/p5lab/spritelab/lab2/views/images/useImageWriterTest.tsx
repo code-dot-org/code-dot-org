@@ -111,8 +111,32 @@ describe('useImageWriter', () => {
       sourceUrl: '/v3/assets/chan/cat.png',
       frameSize: {x: 64, y: 64},
       role: 'hero',
+      subject: 'character',
       categories: [],
     });
+  });
+
+  it('keeps what an image depicts when an edit drops the prompt', async () => {
+    propsByKey.k1 = {
+      name: 'Sprite 1',
+      sourceUrl: '/v3/assets/chan/old.png',
+      generation: {prompt: 'A key', imageType: 'sprite', subject: 'object'},
+    };
+    const {writer} = renderWriter();
+    await act(async () => {
+      await writer().saveEdited(
+        {key: 'k1', imageType: 'sprite'},
+        'data:image/png;base64,iVBORw0KGgo=',
+        {pixelGridSize: 1, recentColors: []}
+      );
+    });
+    expect(repointAnimation).toHaveBeenCalledTimes(1);
+    const [, , patch] = repointAnimation.mock.calls[0] as unknown as [
+      unknown,
+      string,
+      Record<string, unknown>
+    ];
+    expect(patch).toMatchObject({subject: 'object', generation: undefined});
   });
 
   it('repoints an existing image, uploading each picture once', async () => {

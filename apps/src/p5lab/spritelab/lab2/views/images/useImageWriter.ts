@@ -126,6 +126,7 @@ export default function useImageWriter({
         ...patch,
         categories: categoriesForType(target.imageType),
         ...(imageRole && {role: imageRole}),
+        ...(target.subject && {subject: target.subject}),
       });
     },
     [dispatch, imageRole]
@@ -178,9 +179,13 @@ export default function useImageWriter({
       );
       noteUrl(sourceUrl);
       const frameSize = await measuredSize(dataURI);
+      // The subject outlives the prompt's record, which the edit drops.
+      const subject =
+        existing?.subject ?? existing?.generation?.subject ?? target.subject;
       return write(target, {
         sourceUrl,
         dataURI,
+        ...(subject && {subject}),
         // An edited character set keeps its frame grid (the editor hands
         // back the same canvas); a plain picture takes the measured size.
         ...(existing?.poses

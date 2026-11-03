@@ -28,6 +28,9 @@ export interface ImageProps {
   generation?: ImageGenerationMetadata;
   recentColors?: PixelEditorSaveMeta['recentColors'];
   role?: string;
+  /** What a sprite depicts, kept apart from the prompt's record, which
+      hand-edited pixels drop. */
+  subject?: ImageSubject;
 }
 
 export interface AnimationListState {
@@ -70,7 +73,10 @@ export function listProjectImages(list: AnimationListState): ProjectImage[] {
         props,
         name: props.name ?? '',
         imageType,
-        subject: imageType === 'sprite' ? props.generation?.subject : undefined,
+        subject:
+          imageType === 'sprite'
+            ? props.subject ?? props.generation?.subject
+            : undefined,
         thumb: getImageThumbnail(props.name ?? '') || src,
         src,
         pixelated: !!props.pixelGridSize,

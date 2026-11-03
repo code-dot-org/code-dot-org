@@ -13,7 +13,10 @@ import {
   GeneratedImageResult,
   UploadImageFunction,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageGeneration';
-import {ImageGenerationMetadata} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/types';
+import {
+  ImageGenerationMetadata,
+  ImageSubject,
+} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/types';
 import {AnimationPoses} from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
 import {PixelEditorSaveMeta} from '@cdo/apps/pixelEditor/PixelEditor';
 import {getStore} from '@cdo/apps/redux';
@@ -34,6 +37,7 @@ export interface AnimationPatch {
   poses?: AnimationPoses;
   categories?: string[];
   role?: string;
+  subject?: ImageSubject;
   pixelGridSize?: number;
   /** Set wherever an animation's pixels are replaced; a stale true would
       skip a needed trim. */
